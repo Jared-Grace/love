@@ -1,4 +1,4 @@
-export async function file_overwrite(file_path) {
+export async function file_read(file_path) {
    let fs= await import('fs')
    await fs.promises.readFile(file_path,'utf-8')
 }
