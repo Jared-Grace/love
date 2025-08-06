@@ -13,8 +13,8 @@ export async function function_open(filePath) {
         reject({ stderr });
         return;
       }
-      resolve();
       console.log(`Opened in VS Code: ${filePath}`);
+      resolve();
     });
   });
 }
