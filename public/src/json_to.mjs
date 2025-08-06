@@ -1,1 +1,1 @@
-export function json_from(json){return JSON.parse(json)}
+export function json_to(object){ JSON.stringify(object)}
