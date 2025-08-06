@@ -15,8 +15,8 @@ import { fileURLToPath } from 'url';
     // Import the function module from ./public/
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-    const funcPath = path.resolve(__dirname, 'public','src', funcName + '.mjs');
-    const imported = await import(`file://${funcPath}`);
+    const f_path = path.resolve(__dirname, 'public','src', funcName + '.mjs');
+    const imported = await import(`file://${f_path}`);
     
     const fn = imported.default;
 
