@@ -5,10 +5,9 @@ export async function function_run_prompt() {
       input: process.stdin,
       output: process.stdout,
     });
-
     rl.question("Enter something: ", (answer) => {
-      console.log(`You entered: ${answer}`);
       rl.close();
+      resolve(answer);
     });
   });
 }
