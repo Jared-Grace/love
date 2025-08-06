@@ -11,7 +11,7 @@ try {
   execSync('git add -A', { stdio: 'inherit' });
 
   // Commit with timestamp
-  execSync(`git commit -m "Auto commit at ${timestamp}"`, { stdio: 'inherit' });
+  execSync(`git commit -m "${timestamp}"`, { stdio: 'inherit' });
 
   // Push to the default remote and branch
   execSync('git push', { stdio: 'inherit' });
