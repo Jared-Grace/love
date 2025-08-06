@@ -1,1 +1,1 @@
-export function function_alias_add(){}
+export function function_alias_add(alias,f_name){}
