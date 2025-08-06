@@ -1,1 +1,1 @@
-export function html_new(){}
+export function html_new(){file_overwrite()}
