@@ -1,4 +1,7 @@
-const { execSync } = require('child_process');
+import { execSync } from 'child_process';
+
+
+export default function git_acp() {
 
 // Get current timestamp
 const timestamp = new Date().toISOString(); // e.g., 2025-08-06T12:34:56.789Z
@@ -16,4 +19,5 @@ try {
   console.log('✅ All changes committed and pushed successfully!');
 } catch (err) {
   console.error('❌ Error during Git operation:', err.message);
+}
 }
