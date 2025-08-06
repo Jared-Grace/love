@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
     // Import the function module from ./public/
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-      const path_join_list = [__dirname, 'public', 'src', funcName + '.mjs'];
+      const path_join_list = [__dirname, 'public', 'src', function_name_to_base(funcName)];
     const f_path = path.join(...path_join_list);
     const imported = await import(`file://${f_path}`);
     
@@ -34,3 +34,7 @@ const __dirname = path.dirname(__filename);
     process.exit(1);
   }
 })();
+function function_name_to_base(funcName) {
+    return funcName + '.mjs';
+}
+
