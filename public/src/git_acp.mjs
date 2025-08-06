@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 
 
-export default function git_acp() {
+export function git_acp() {
 
 // Get current timestamp
 const timestamp = new Date().toISOString(); // e.g., 2025-08-06T12:34:56.789Z
