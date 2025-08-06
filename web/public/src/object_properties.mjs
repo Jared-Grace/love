@@ -1,1 +1,1 @@
-export function object_properties(){}
+export function object_properties(obj){return Object.getOwnPropertyNames(obj)}
