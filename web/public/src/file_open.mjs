@@ -1,6 +1,6 @@
 import { exec } from "child_process";
 
-export async function function_open(filePath) {
+export async function file_open(filePath) {
   return await new Promise((resolve, reject) => {
     exec(`code "${filePath}"`, (error, stdout, stderr) => {
       if (error) {
