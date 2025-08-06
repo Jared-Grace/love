@@ -1,1 +1,1 @@
-export function function_imports_missing_add(){}
+export function function_imports_missing_add(f_name){}
