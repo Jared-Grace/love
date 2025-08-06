@@ -1,6 +1,6 @@
 
-import {function_run} from './public/src/function_run.mjs'
+import { function_run_git } from './public/src/function_run_git.mjs';
 (async () => {
   const [, , funcName, ...args] = process.argv;
-  await function_run(funcName, args)
+  await function_run_git(funcName, args)
 })();
