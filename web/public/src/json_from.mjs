@@ -1,1 +1,1 @@
-export function json_from(){}
+export function json_from(json){return JSON.parse(json)}
