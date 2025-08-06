@@ -1,15 +1,15 @@
-import { execSync } from 'child_process';
+import { command_line } from "./command_line.mjs";
 
 
 export function git_acp(message) {
 
   // Stage all changes
-  execSync('git add -A', { stdio: 'inherit' });
+  command_line('git add -A',);
 
   // Commit with timestamp
-  execSync(`git commit -m "${message}"`, { stdio: 'inherit' });
+  command_line(`git commit -m "${message}"`, );
 
   // Push to the default remote and branch
-  execSync('git push', { stdio: 'inherit' });
+  command_line('git push',);
 
 }
