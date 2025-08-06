@@ -23,6 +23,5 @@ export async function function_run(funcName, args) {
     // Await the result of the function with the remaining args
     const result = await fn(...args);
 
-    console.log("✅ Result:", result);
   await git_acp([funcName].concat(args).join(" "));
 }
