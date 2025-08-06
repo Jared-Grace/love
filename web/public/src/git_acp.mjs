@@ -3,9 +3,6 @@ import { execSync } from 'child_process';
 
 export function git_acp(message) {
 
-// Get current timestamp
-const message2= new Date().toISOString(); // e.g., 2025-08-06T12:34:56.789Z
-
 try {
   // Stage all changes
   execSync('git add -A', { stdio: 'inherit' });
