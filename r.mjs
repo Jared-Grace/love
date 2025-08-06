@@ -1,6 +1,8 @@
 // runFunction.js
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+// Simulate __dirname
 (async () => {
   const [, , funcName, ...args] = process.argv;
 
@@ -11,7 +13,9 @@ const path = require('path');
 
   try {
     // Import the function module from ./public/
-    const funcPath = path.resolve(__dirname, 'public', funcName + '.js');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+    const funcPath = path.resolve(__dirname, 'public','src', funcName + '.mjs');
     const imported = await import(`file://${funcPath}`);
     
     const fn = imported.default;
