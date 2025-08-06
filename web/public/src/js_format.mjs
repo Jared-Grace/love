@@ -2,7 +2,7 @@
 
   import prettier from 'prettier';
 import parserBabel from 'prettier/plugins/babel';
-  export async function js_format() {
+  export async function js_format(code) {
 if (false) {
     const prettier = await import('https://esm.sh/prettier@3.2.5');
 const parserBabel = await import('https://esm.sh/prettier@3.2.5/plugins/babel');
@@ -12,5 +12,5 @@ const parserBabel = await import('https://esm.sh/prettier@3.2.5/plugins/babel');
     plugins: [parserBabel],
   });
 
-  console.log(formatted);
+ return formatted
 }
