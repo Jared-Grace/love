@@ -11,8 +11,6 @@ export async function function_run(funcName, args) {
     process.exit(1);
   }
 
-  try {
-    // Import the function module from ./public/
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     let joined = function_name_to_base(funcName);
@@ -31,9 +29,5 @@ export async function function_run(funcName, args) {
     const result = await fn(...args);
 
     console.log("✅ Result:", result);
-  } catch (err) {
-    console.error("❌ Error:", err.message);
-    process.exit(1);
-  }
   await git_acp([funcName].concat(args).join(" "));
 }
