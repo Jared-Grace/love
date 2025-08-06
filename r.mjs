@@ -8,7 +8,7 @@ import {git_acp} from './public/src/git_acp.mjs';
   const [, , funcName, ...args] = process.argv;
 
   await run(funcName,args);
-  await git_acp();
+  await git_acp([funcName].concat(args).join(' '));
 
     async function run(funcName,args) {
         if (!funcName) {
