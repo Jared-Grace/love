@@ -1,6 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import { git_acp } from "./public/src/git_acp.mjs";
+import { git_acp } from "./git_acp.mjs";
+import { function_name_to_base } from "./function_name_to_base.mjs";
 
 export async function function_run(funcName, args) {
   // runFunction.js
@@ -18,7 +19,7 @@ export async function function_run(funcName, args) {
       // Import the function module from ./public/
       const __filename = fileURLToPath(import.meta.url);
       const __dirname = path.dirname(__filename);
-      let joined = function_name_to_path(funcName);
+      let joined = function_name_to_base(funcName);
       const f_path = path.join(...[__dirname, joined]);
       const imported = await import(`file://${f_path}`);
 
