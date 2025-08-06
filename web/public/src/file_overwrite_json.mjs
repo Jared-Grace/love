@@ -1,7 +1,7 @@
-import { file_read } from "./file_read.mjs";
-import { json_from } from "./json_from.mjs";
-export async function file_read_json(file_path) {
-    let json = await file_read(file_path);
-    let data = json_from(json);
-    return data;
+import { file_overwrite } from "./file_overwrite.mjs";
+import { json_to } from "./json_to.mjs";
+export async function file_overwrite_json(file_path,object) {
+    let json = json_to(object);
+await file_overwrite(file_path);
+
 }
