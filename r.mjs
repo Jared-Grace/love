@@ -1,7 +1,7 @@
 // runFunction.js
 import path from 'path';
 import { fileURLToPath } from 'url';
-import git_acp from './public/src/git_acp.mjs';
+import {git_acp} from './public/src/git_acp.mjs';
 
 // Simulate __dirname
 (async () => {
@@ -24,7 +24,7 @@ import git_acp from './public/src/git_acp.mjs';
             const f_path = path.join(...path_join_list);
             const imported = await import(`file://${f_path}`);
 
-            const fn = imported.default;
+            const fn = imported[funcName];
 
             if (typeof fn !== 'function') {
                 throw new Error(`❌ The module "${funcName}" does not export a default function.`);
