@@ -20,8 +20,7 @@ import {git_acp} from './public/src/git_acp.mjs';
             // Import the function module from ./public/
             const __filename = fileURLToPath(import.meta.url);
             const __dirname = path.dirname(__filename);
-            let second=['public', 'src', function_name_to_base(funcName)];
-            let joined=path.join(...second)
+            let joined = function_name_to_path(funcName);
             const f_path = path.join(...[__dirname,joined]);
             const imported = await import(`file://${f_path}`);
 
@@ -41,6 +40,12 @@ import {git_acp} from './public/src/git_acp.mjs';
         }
     }
 })();
+function function_name_to_path(funcName) {
+    let second = ['public', 'src', function_name_to_base(funcName)];
+    let joined = path.join(...second);
+    return joined;
+}
+
 function function_name_to_base(funcName) {
     return funcName + '.mjs';
 }
