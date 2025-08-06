@@ -1,1 +1,1 @@
-export function string_is(){}
+export function string_is(value){return typeof value === 'string'}
