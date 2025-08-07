@@ -5,7 +5,7 @@ import {object_property_set} from "./object_property_set.mjs";
 import {function_alias_add_generic} from "./function_alias_add_generic.mjs";
 import {file_overwrite_json} from "./file_overwrite_json.mjs";
 export async function function_alias_change(alias_old, alias_new) {
-  await function_alias_generic(alias, function lambda(a) {
+  await function_alias_generic(alias_old, function lambda(a) {
     let {exists, aliases, unaliased} = a;
     if (!exists) {
       error();
