@@ -7,7 +7,9 @@ export async function function_type_first(f_name, type) {
   let parsed = await function_parse(f_name);
   let list = list_adder((la) => {
     js_visit_nodes(parsed, (node) => {
-      if (js_node_type(node) === type) {la(node);}
+      if (js_node_type(node) === type) {
+        la(node);
+      }
     });
   });
   return list_first(list);

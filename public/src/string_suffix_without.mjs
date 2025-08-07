@@ -6,5 +6,5 @@ export function string_suffix_without(s, suffix) {
   if (!string_ends_with(s, suffix)) {
     error();
   }
-  return string_slice(s, 0, string_size(s) - string_size(suffix))
+  return string_slice(s, 0, string_size(s) - string_size(suffix));
 }

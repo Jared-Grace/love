@@ -3,7 +3,13 @@ import { list_add } from "./list_add.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { error } from "./error.mjs";
-export function visit_filter_recursive(node, children_get, filter, on_each, stack) {
+export function visit_filter_recursive(
+  node,
+  children_get,
+  filter,
+  on_each,
+  stack,
+) {
   if (!filter(node)) {
     return;
   }
@@ -14,8 +20,8 @@ export function visit_filter_recursive(node, children_get, filter, on_each, stac
     let copy = list_copy(stack);
     visit_filter_recursive(c, children_get, filter, on_each, copy);
   });
- let removed = list_pop(stack);
- if (removed !== node) {
-    error()
- }
+  let removed = list_pop(stack);
+  if (removed !== node) {
+    error();
+  }
 }

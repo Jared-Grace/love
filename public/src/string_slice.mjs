@@ -1,1 +1,3 @@
-export function string_slice(s,a,b){return s.slice(a,b)}
+export function string_slice(s, a, b) {
+  return s.slice(a, b);
+}
