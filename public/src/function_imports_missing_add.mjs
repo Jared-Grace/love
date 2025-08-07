@@ -5,6 +5,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_unique } from "./list_unique.mjs";
 
 export async function function_imports_missing_add(f_name) {
   let parsed = await function_parse(f_name);
@@ -26,6 +27,8 @@ export async function function_imports_missing_add(f_name) {
     let both=[imported,local]
     let mapped=list_map_property(both,'name')
     let unique = list_unique(mapped);
-    console.log(specifier)
+    'the names should be the same'
+    let name = list_single(unique);
+    console.log(name)
   });
 }
