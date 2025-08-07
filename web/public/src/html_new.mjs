@@ -17,4 +17,3 @@ export async function html_new(name) {
 </body>
 </html>`);
 }
-s;
