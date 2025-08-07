@@ -1,1 +1,1 @@
-export function list_filter(){}
+export function list_filter(list, filter){return list.filter(filter)}
