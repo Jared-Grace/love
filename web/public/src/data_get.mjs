@@ -10,11 +10,3 @@ export async function data_get(property_name, value_initial) {
     data
   };
 }
-async function data_all() {
-  const file_path = "data.json";
-  let data = await file_read_json(file_path);
-  return {
-    data,
-    file_path
-  };
-}
