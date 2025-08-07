@@ -4,6 +4,6 @@ import {object_property_set} from "./object_property_set.mjs";
 import {function_alias_add_generic} from "./function_alias_add_generic.mjs";
 import {file_overwrite_json} from "./file_overwrite_json.mjs";
 export async function function_aliases() {
-  let a = await function_alias_add_generic('');
-  return a;
+  let a = await function_alias_add_generic('');let {aliases}=a
+  return aliases;
 }
