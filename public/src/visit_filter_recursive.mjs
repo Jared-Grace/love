@@ -12,7 +12,7 @@ export function visit_filter_recursive(node, children_get, filter, on_each, stac
   let children = children_get(node);
   each(children, (c) => {
     let copy = list_copy(stack);
-    visit_filter(c, children_get, filter, on_each, copy);
+    visit_filter_recursive(c, children_get, filter, on_each, copy);
   });
  let removed = list_pop(stack);
  if (removed !== node) {
