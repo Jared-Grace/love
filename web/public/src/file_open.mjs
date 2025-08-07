@@ -1,16 +1,4 @@
-import { exec } from "child_process";
-
+import {command_line} from './command_line.mjs';
 export async function file_open(filePath) {
-    console.log(filePath)
-  return await new Promise((resolve, reject) => {
-    exec(`code "${filePath}"`, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error opening file: ${error.message}`);
-        reject({ error });
-        return;
-      }
-      console.log(`Opened in VS Code: ${filePath}`);
-      resolve();
-    });
-  });
+  command_line(`code "${filePath}"`);
 }
