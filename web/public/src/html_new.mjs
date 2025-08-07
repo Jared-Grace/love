@@ -1,3 +1,4 @@
+import {file_open} from './file_open.mjs';
 import {folder_public_combine} from './folder_public_combine.mjs';
 import {file_name_html} from './file_name_html.mjs';
 import {folder_public} from './folder_public.mjs';
@@ -16,4 +17,5 @@ export async function html_new(name) {
 
 </body>
 </html>`);
+  file_open(file_path);
 }
