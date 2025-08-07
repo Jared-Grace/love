@@ -1,3 +1,5 @@
-export function each(list,lambda){for(let item of list) {
-    lambda(item)
-}}
+export function each(list, lambda) {
+  for (let item of list) {
+    lambda(item);
+  }
+}
