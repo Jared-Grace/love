@@ -1,3 +1,3 @@
 export function undefined_is(value) {
-    return typeof value === 'undefined';
+  return typeof value === "undefined";
 }

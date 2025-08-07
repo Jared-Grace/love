@@ -1,1 +1,3 @@
-export function list_size(list){return list.length}
+export function list_size(list) {
+  return list.length;
+}

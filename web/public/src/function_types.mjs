@@ -8,6 +8,6 @@ export async function function_types(f_name) {
   return list_adder_unique((la) => {
     js_visit_nodes(parsed, (node) => {
       la(js_node_type(node));
-    })
+    });
   });
 }

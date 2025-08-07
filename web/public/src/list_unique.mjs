@@ -8,5 +8,6 @@ export function list_unique(list) {
     if (!list_includes(unique, item)) {
       list_add(unique, item);
     }
-  });return unique
+  });
+  return unique;
 }

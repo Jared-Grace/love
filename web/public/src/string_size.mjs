@@ -1,1 +1,3 @@
-export function string_size(s){return s.length}
+export function string_size(s) {
+  return s.length;
+}
