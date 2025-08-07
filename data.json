@@ -1,1 +1,1 @@
-{"aliases":{"a":"function_alias_add","c":"function_copy","n":"function_new","i":"npm_install","f":"function_format","p":"noop","ts":"function_types","tf":"function_type_first","o":"function_open","ia":"function_imports_missing_add"}}
+{"aliases":{"a":"function_alias_add","c":"function_copy","n":"function_new","i":"npm_install","f":"function_format","p":"noop","ts":"function_types","tf":"function_type_first","o":"function_open","ia":"function_imports_missing_add","s":"functions_search"}}
