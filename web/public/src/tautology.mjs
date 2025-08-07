@@ -1,1 +1,3 @@
-export function tautology(){return true}
+export function tautology() {
+  return true;
+}

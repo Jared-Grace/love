@@ -1,1 +1,3 @@
-export function list_is(value){return Array.isArray(value)}
+export function list_is(value) {
+  return Array.isArray(value);
+}

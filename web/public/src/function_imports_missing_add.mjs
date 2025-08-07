@@ -19,10 +19,6 @@ export async function function_imports_missing_add(f_name) {
     let statement = js_parse_statement(code);
     list_add_first(body, statement);
   });
-      const f_path = await function_name_to_path(f_name);
-  await file_js_unparse(f_path, parsed)
+  const f_path = await function_name_to_path(f_name);
+  await file_js_unparse(f_path, parsed);
 }
-
-
-
-

@@ -1,1 +1,3 @@
-export function list_insert(array,index, value){array.splice(index, 0, value);}
+export function list_insert(array, index, value) {
+  array.splice(index, 0, value);
+}
