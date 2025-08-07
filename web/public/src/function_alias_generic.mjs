@@ -7,8 +7,3 @@ export async function function_alias_generic(alias, lambda) {
   lambda(a);
   await data_save(a);
 }
-
-async function data_save(a) {
-    let { file_path, data } = a;
-    await file_overwrite_json(file_path, data);
-}
