@@ -12,6 +12,6 @@ export async function function_open(f_name) {
   let {
     data
   }=d
-  object_property_set(data,f_name,f_name)
+  object_property_set(data,property_name,f_name)
   await data_save(d);
 }
