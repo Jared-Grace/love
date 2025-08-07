@@ -1,1 +1,3 @@
-export function folder_public(){}
+export function folder_public() {
+    return "public";
+}
