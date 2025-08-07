@@ -1,8 +1,9 @@
 import { visit } from "./visit.mjs";
 export function visit_filter(node, children_get, filter, on_each) {
-  visit(node, children_get, (n) => {
-    if (filter(n)) {
-      on_each(n);
-    }
-  });
+  if (!filter(n)) {
+    return;
+  }
+  on_each(node);
+  let children = children_get(node);
+  each(children, (c) => visit(c, children_get, on_each));
 }
