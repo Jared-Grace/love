@@ -20,7 +20,7 @@ export async function function_imports_missing_add(f_name) {
     list_add_first(body, statement);
   });
       const f_path = function_name_to_path(f_name);
-  file_js_unparse(f_path, parsed)
+  await file_js_unparse(f_path, parsed)
 }
 
 
