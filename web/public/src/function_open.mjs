@@ -3,9 +3,15 @@ import {data_get} from './data_get.mjs';
 import {function_name_to_path_unalias} from './function_name_to_path_unalias.mjs';
 import {file_open} from "./file_open.mjs";
 import {function_name_to_path} from "./function_name_to_path.mjs";
+import { object_property_set } from './object_property_set.mjs';
 export async function function_open(f_name) {
-  var a = await data_get("aliases", f_name);
   const f_path = await function_name_to_path_unalias(f_name);
   await file_open(f_path);
-  await data_save(a);
+    const property_name = "aliases";
+  var d = await data_get(property_name, null);
+  let {
+    data
+  }=d
+  object_property_set(data,f_name)
+  await data_save(d);
 }
