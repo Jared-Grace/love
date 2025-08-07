@@ -1,4 +1,4 @@
-import { object_property_get } from "./object_property_get.mjs";
-export function js_node_type(n) {
-  return object_property_get(n, "type");
+import { js_node_type } from "./js_node_type.mjs";
+export function js_node_type_is(n,type) {
+  return js_node_type(n) === type;
 }
