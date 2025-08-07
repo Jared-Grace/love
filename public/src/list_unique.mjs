@@ -8,6 +8,5 @@ export function list_unique(list) {
     if (!list_includes(unique, item)) {
       list_add(unique, item);
     }
-    console.log(list_includes(unique, item))
   });return unique
 }
