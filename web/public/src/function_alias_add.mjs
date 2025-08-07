@@ -5,7 +5,7 @@ import {function_alias_add_generic} from "./function_alias_add_generic.mjs";
 import {file_overwrite_json} from "./file_overwrite_json.mjs";
 export async function function_alias_add(alias, f_name) {
   await function_alias_generic(alias, function lambda(a) {
-    let {exists, aliases, file_path, data, unaliased} = a;
+    let {exists, aliases} = a;
     if (exists) {
       error();
     }
