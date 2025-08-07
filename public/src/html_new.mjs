@@ -17,5 +17,5 @@ export async function html_new(name) {
 
 </body>
 </html>`);
-  file_open(file_path);
+  await file_open(file_path);
 }
