@@ -1,1 +1,1 @@
-export function list_includes(list,item){return list.includes(item)}
+export function string_includes(string,item){return string.includes(item)}
