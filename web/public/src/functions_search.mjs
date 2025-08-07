@@ -10,7 +10,7 @@ export async function functions_search(search) {
   let f_names = functions_names();
   let f_names_search = list_filter(f_names, n => string_includes(n, search));
   let result = {};
-  await each_async(f_names_search, async n => {
+   each(f_names_search, n => {
     object_property_set(result, n, function_name_to_path(n));
   });
   return result;
