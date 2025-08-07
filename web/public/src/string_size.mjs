@@ -1,0 +1,1 @@
+export function string_size(s){return s.length}

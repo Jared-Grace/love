@@ -1,1 +1,1 @@
-export function string_starts_with(s,suffix){return s.endsWith(suffix)}
+export function string_ends_with(s,suffix){return s.endsWith(suffix)}
