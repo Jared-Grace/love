@@ -1,4 +1,7 @@
 import { each } from "./each.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_pop } from "./list_pop.mjs";
+import { list_copy } from "./list_copy.mjs";
 export function visit_filter(node, children_get, filter, on_each, stack) {
   if (!filter(n)) {
     return;
