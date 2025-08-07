@@ -3,9 +3,12 @@ export function visit_filter(node, children_get, filter, on_each, stack) {
   if (!filter(n)) {
     return;
   }
-  on_each(node);
+  list_add(stack, c);
+  on_each({ node, stack });
   let children = children_get(node);
   each(children, (c) => {
-    visit_filter(c, children_get, filter, on_each, stack);
+    let copy = list_copy(stack);
+    visit_filter(c, children_get, filter, on_each, copy);
   });
+  removed = list_pop(stack);
 }
