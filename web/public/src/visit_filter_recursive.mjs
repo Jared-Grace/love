@@ -3,7 +3,7 @@ import { list_add } from "./list_add.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { error } from "./error.mjs";
-export function visit_filter(node, children_get, filter, on_each, stack) {
+export function visit_filter_recursive(node, children_get, filter, on_each, stack) {
   if (!filter(node)) {
     return;
   }

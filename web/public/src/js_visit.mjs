@@ -1,4 +1,4 @@
-import { visit } from "./visit.mjs";
+import { visit_filter } from "./visit_filter.mjs";
 import { js_visit_children_get } from "./js_visit_children_get.mjs";
 import { visit_filter } from "./visit_filter.mjs";
 export function js_visit(parsed, on_each) {
