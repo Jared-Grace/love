@@ -1,1 +1,1 @@
-export function list_add(){}
+export function list_add(list,item){list.push(item)}
