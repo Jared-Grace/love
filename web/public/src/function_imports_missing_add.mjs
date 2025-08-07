@@ -14,7 +14,7 @@ export async function function_imports_missing_add(f_name) {
 
 let imports_self = list_concat(imports,[f_name])
 
-  let missing = list_difference(identifiers, imports);
+  let missing = list_difference(identifiers, imports_self);
 
   console.log(missing);
 }
