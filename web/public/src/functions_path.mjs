@@ -2,6 +2,10 @@ import { path_join } from "./path_join.mjs";
 import { folder_public } from "./folder_public.mjs";
 export function functions_path() {
     const second = "src";
-  let joined = path_join([folder_public(), second]);
+  let joined = folder_public_combine(second);
   return joined;
 }
+function folder_public_combine(second) {
+    return path_join([folder_public(), second]);
+}
+
