@@ -6,7 +6,7 @@ import { string_is } from "./string_is.mjs";
 export function js_visit(parsed, on_each) {
     visit(
         parsed,
-        (n) => {
+        function js_visit_children_get(n) {
             if (list_is(n)) {
                 return n;
             }
