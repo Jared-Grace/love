@@ -1,1 +1,1 @@
-export function list_add(list,item){list.push(item)}
+export function list_includes(list,item){list.includes(item)}
