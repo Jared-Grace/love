@@ -5,5 +5,5 @@ export function visit_filter(node, children_get, filter, on_each, stack) {
   }
   on_each(node);
   let children = children_get(node);
-  each(children, (c) => visit_filter(node, children_get, filter, on_each, stack));
+  each(children, (c) => visit_filter(c, children_get, filter, on_each, stack));
 }
