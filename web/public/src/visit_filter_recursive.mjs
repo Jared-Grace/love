@@ -4,7 +4,7 @@ import { list_pop } from "./list_pop.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { error } from "./error.mjs";
 export function visit_filter_recursive(node, children_get, filter, on_each, stack) {
-  if (!filter(node)) {console.log({node})
+  if (!filter(node)) {
     return;
   }
   list_add(stack, node);
