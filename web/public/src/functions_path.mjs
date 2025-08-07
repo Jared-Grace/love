@@ -6,6 +6,3 @@ export function functions_path() {
   let joined = folder_public_combine(second);
   return joined;
 }
-function folder_public_combine(second) {
-  return path_join([folder_public(), second]);
-}
