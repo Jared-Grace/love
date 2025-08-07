@@ -1,1 +1,7 @@
-export function function_types(){}
+import { js_visit } from "./js_visit.mjs";
+import { function_parse } from "./function_parse.mjs";
+
+export async function function_types() {
+  let parsed = await function_parse(f_name);
+  js_visit(parsed, (v) => {});
+}
