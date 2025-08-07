@@ -12,12 +12,10 @@ export async function function_imports_missing_add(f_name) {
   let imports = js_imports(parsed);
   let declaration = js_declaration_single(parsed);
   let identifiers = js_identifiers_names(declaration);
-let imports_self = list_concat(imports,[f_name])
+  let imports_self = list_concat(imports, [f_name]);
   let missing = list_difference(identifiers, imports_self);
 
   let f_names = functions_names();
   let missing_imports = list_intersect(missing, f_names);
   console.log(missing_imports);
 }
-
-
