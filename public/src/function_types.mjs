@@ -3,5 +3,10 @@ import { function_parse } from "./function_parse.mjs";
 
 export async function function_types(f_name) {
   let parsed = await function_parse(f_name);
-  js_visit(parsed, (v) => {let{node}=v});
+  js_visit(parsed, (v) => {
+    let { node } = v;
+    if (!js_node_is(node)) {
+      return;
+    }
+  });
 }
