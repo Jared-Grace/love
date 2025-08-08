@@ -1,3 +1,4 @@
+import {file_write} from './file_write.mjs';
 import {assert_file_exists_not} from './assert_file_exists_not.mjs';
 import {function_open} from './function_open.mjs';
 import {js_code_call} from './js_code_call.mjs';
@@ -10,5 +11,3 @@ export async function function_new(f_name) {
   await file_write(f_path, contents);
   await function_open(f_name);
 }
-
-
