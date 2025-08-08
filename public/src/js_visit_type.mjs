@@ -6,7 +6,7 @@ import {js_node_is} from "./js_node_is.mjs";
 export function js_visit_type(parsed, type, on_each) {
   js_visit(parsed, v => {
     let {node} = v;
-    if (false) log(node);
+    log(node);
     if (js_node_is(node) && js_node_type_is(node, type)) {
       on_each(v);
     }
