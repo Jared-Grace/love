@@ -1,3 +1,4 @@
+import {js_identifiers_names} from './js_identifiers_names.mjs';
 import {list_map_property} from './list_map_property.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
 import {marker} from './marker.mjs';
@@ -17,6 +18,7 @@ export async function marker_call(f_name_call) {
     await function_transform_marker(f_name_current, lambda);
     function lambda(a) {
       let {index, stack2} = marker_next_index(a);
+      js_identifiers_names();
       let args = list_map_property(object_property_get(declaration, 'params'), 'name');
       let code = js_code_call_args(unaliased, args);
       la(code);
