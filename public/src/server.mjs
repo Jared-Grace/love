@@ -4,7 +4,6 @@ import path from "path";
 import {fileURLToPath} from "url";
 import {folder_public} from "./folder_public.mjs";
 export function server() {
-  marker();
   const app = express();
   const port = 3000;
   const __filename = fileURLToPath(import.meta.url);
@@ -13,4 +12,5 @@ export function server() {
   app.listen(port, () => {
     console.log(`Static server running at http://localhost:${port}`);
   });
+  marker();
 }
