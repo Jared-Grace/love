@@ -1,3 +1,4 @@
+import {js_declaration_single} from './js_declaration_single.mjs';
 import {list_intersect} from './list_intersect.mjs';
 import {functions_names} from './functions_names.mjs';
 import {list_difference} from './list_difference.mjs';
@@ -15,4 +16,7 @@ export function js_imports_missing(ast, declaration) {
   let f_names = functions_names();
   let imports_missing = list_intersect(missing, f_names);
   return imports_missing;
+  {
+    let declaration = js_declaration_single(ast);
+  }
 }
