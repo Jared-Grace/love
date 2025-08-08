@@ -1,3 +1,4 @@
+import {function_unparse} from './function_unparse.mjs';
 import {list_add_first} from './list_add_first.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
 import {js_code_call_statement} from './js_code_call_statement.mjs';
@@ -15,5 +16,5 @@ export async function marker_top(f_name) {
   let code = js_code_call_statement(marker.name);
   let parsed = js_parse_statement(code);
   list_add_first(body2, parsed);
-  function_unparse();
+  await function_unparse(f_name, ast);
 }
