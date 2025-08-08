@@ -9,6 +9,7 @@ export function js_parse(code) {
     });
   } catch (e) {
     log(code);
+    log(e);
   }
   return ast;
 }
