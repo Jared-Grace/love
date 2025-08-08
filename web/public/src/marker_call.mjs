@@ -1,3 +1,4 @@
+import {json_to} from './json_to.mjs';
 import {log} from './log.mjs';
 import {list_insert} from './list_insert.mjs';
 import {assert_not} from './assert_not.mjs';
@@ -31,7 +32,7 @@ export async function marker_call(f_name_call) {
       });
       let code = js_code_call_args(unaliased, args);
       let parsed = js_parse_statement(code);
-      log(stack2);
+      log(json_to(parsed));
       list_insert(stack2, parsed, index);
     }
   });
