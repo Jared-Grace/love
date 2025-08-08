@@ -24,6 +24,7 @@ export async function function_transform_marker(f_name, lambda) {
       }
       let {node} = v;
       let {callee} = node;
+    log(callee);
       if (!js_node_type_is(callee, "Identifier")) {
         return;
       }
