@@ -15,6 +15,9 @@ export async function marker_next() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let {index, stack2} = marker_next_index(a);
+      
+    let code = js_code_call_statement(marker.name);
+    let parsed = js_parse_statement(code);
       la(js_unparse(next));
     }
   });
