@@ -1,3 +1,4 @@
+import {list_size_1} from './list_size_1.mjs';
 import {assert} from './assert.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
@@ -17,6 +18,8 @@ export async function marker_assign_replace() {
     function lambda(a) {
       let next = marker_next_get(a);
       assert(js_node_type_is(next, 'VariableDeclaration'));
+      let {declarations} = next;
+      assert(list_size_1(declarations));
       la(next);
     }
   });
