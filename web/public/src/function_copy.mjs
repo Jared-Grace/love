@@ -7,5 +7,6 @@ export async function function_copy(f_name_old, f_name_new) {
   const {f_path: f_path_old} = await function_name_to_path_unalias(f_name_old);
   await file_copy(f_path_old, f_path_new);
   marker();
+  js_identifier_replace(ast, name_from, name_to);
   await file_open(f_path_new);
 }
