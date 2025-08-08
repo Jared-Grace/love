@@ -10,8 +10,5 @@ export async function function_new(f_name) {
   await file_write(f_path, contents);
   await function_open(f_name);
 }
-async function file_write(f_path, contents) {
-    await assert_file_exists_not(f_path);
-    await file_overwrite(f_path, contents);
-}
+
 
