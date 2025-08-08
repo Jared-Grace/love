@@ -21,7 +21,7 @@ export async function marker_assign_replace() {
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
       let declaration = list_single(declarations);
-      la(declarations);
+      la(declaration);
     }
   });
 }
