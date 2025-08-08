@@ -7,7 +7,11 @@ import {file_open} from "./file_open.mjs";
 export async function function_new(f_name) {
   const f_path = function_name_to_path(f_name);
   const contents = "export function " + js_code_call(f_name) + "{}";
-  await assert_file_exists_not(f_path);
-  await file_overwrite(f_path, contents);
+  await file_write(f_path, contents);
   await function_open(f_name);
 }
+async function file_write(f_path, contents) {
+    await assert_file_exists_not(f_path);
+    await file_overwrite(f_path, contents);
+}
+
