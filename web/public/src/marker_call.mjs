@@ -34,6 +34,9 @@ export async function marker_call(f_name_call) {
         return arg_new;
       });
       let code = js_code_call_args(unaliased, mapped);
+      if (object_property_get(declaration,'async')) {
+        code = js_code_await(code);
+      }
       let parsed = js_parse_statement(code);
       la(js_unparse(parsed));
       list_insert(stack2, index, parsed);
@@ -41,3 +44,7 @@ export async function marker_call(f_name_call) {
     }
   });
 }
+function js_code_await(code) {
+    return 'await ' + code;
+}
+
