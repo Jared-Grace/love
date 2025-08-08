@@ -4,5 +4,5 @@ import { function_name_to_path } from "./function_name_to_path.mjs";
 export async function function_parse(f_name) {
   const f_path = await function_name_to_path_unalias(f_name);
   let ast = await file_js_parse(f_path);
-  return ast;
+  return {ast};
 }
