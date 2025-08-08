@@ -1,3 +1,5 @@
+import {js_parse_statement} from './js_parse_statement.mjs';
+import {js_code_call_statement} from './js_code_call_statement.mjs';
 import {marker} from './marker.mjs';
 import {js_code_call} from './js_code_call.mjs';
 import {log} from './log.mjs';
@@ -8,6 +10,7 @@ export async function marker_top(f_name) {
   let declaration = js_declaration_single(ast);
   let {body} = declaration;
   let {body: body2} = body;
-  js_code_call(marker.name);
+  let code = js_code_call_statement(marker.name);
+  let parsed = js_parse_statement(code);
   log(declaration);
 }
