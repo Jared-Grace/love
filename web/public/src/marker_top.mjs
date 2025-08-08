@@ -1,3 +1,5 @@
+import {object_property_get} from './object_property_get.mjs';
+import {data_get} from './data_get.mjs';
 import {function_transform} from "./function_transform.mjs";
 import {function_unparse} from "./function_unparse.mjs";
 import {list_add_first} from "./list_add_first.mjs";
@@ -9,7 +11,11 @@ import {log} from "./log.mjs";
 import {js_declaration_single} from "./js_declaration_single.mjs";
 import {function_parse} from "./function_parse.mjs";
 import {list_add} from "./list_add.mjs";
-export async function marker_top(f_name) {
+export async function marker_top() {
+  const property_name = "function_current";
+  var d = await data_get(property_name, null);
+  let {data} = d;
+  let f_name = object_property_get(data, property_name);
   await function_transform(f_name, lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
