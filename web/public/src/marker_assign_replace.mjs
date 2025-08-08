@@ -1,3 +1,4 @@
+import {js_parse_expression} from './js_parse_expression.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
 import {js_parse} from './js_parse.mjs';
 import {list_single} from './list_single.mjs';
@@ -24,13 +25,11 @@ export async function marker_assign_replace(init_code) {
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
       let declaration = list_single(declarations);
-      let expression = js_parse_expression(init_code);
+      let init = js_parse_expression(init_code);
       la(init);
       return;
-      object_property_set(declaration, 'init', expression);
+      object_property_set(declaration, 'init', init);
       la(js_unparse(next));
     }
   });
 }
-
-
