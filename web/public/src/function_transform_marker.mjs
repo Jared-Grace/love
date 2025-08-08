@@ -1,18 +1,20 @@
-import { error } from "./error.mjs";
-import { list_is } from "./list_is.mjs";
-import { marker } from "./marker.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_node_is } from "./js_node_is.mjs";
-import { list_get_end } from "./list_get_end.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
-import { function_transform } from "./function_transform.mjs";
+import {each} from './each.mjs';
+import {js_type} from './js_type.mjs';
+import {error} from "./error.mjs";
+import {list_is} from "./list_is.mjs";
+import {marker} from "./marker.mjs";
+import {js_node_type_is} from "./js_node_type_is.mjs";
+import {js_node_is} from "./js_node_is.mjs";
+import {list_get_end} from "./list_get_end.mjs";
+import {js_visit_type} from "./js_visit_type.mjs";
+import {function_transform} from "./function_transform.mjs";
 export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
   function lambda_marker(ast) {
     const node_type = "CallExpression";
-    let visitors=js_type(ast, node_type);
-    each(visitors, (v) => {
-      let { stack } = v;
+    let visitors = js_type(ast, node_type);
+    each(visitors, v => {
+      let {stack} = v;
       let stack1 = list_get_end(stack, 1);
       if (!js_node_is(stack1)) {
         return;
@@ -20,12 +22,12 @@ export async function function_transform_marker(f_name, lambda) {
       if (!js_node_type_is(stack1, "ExpressionStatement")) {
         return;
       }
-      let { node } = v;
-      let { callee } = node;
+      let {node} = v;
+      let {callee} = node;
       if (!js_node_type_is(callee, "Identifier")) {
         return;
       }
-      let { name } = callee;
+      let {name} = callee;
       if (name !== marker.name) {
         return;
       }
@@ -35,14 +37,8 @@ export async function function_transform_marker(f_name, lambda) {
       }
       lambda({
         stack2,
-        stack1,
+        stack1
       });
     });
   }
 }
-function js_type(ast, node_type) {
-    return list_adder((la) => {
-        js_visit_type(ast, node_type, la);
-    });
-}
-
