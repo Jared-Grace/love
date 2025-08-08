@@ -5,6 +5,5 @@ export async function function_transform(f_name, lambda) {
   let parsed = await function_parse(f_name);
   let {ast} = parsed;
   lambda(ast);
-  await function_unparse(parsed);
-  if (false) await file_js_unparse(parsed);
+  await file_js_unparse(parsed);
 }
