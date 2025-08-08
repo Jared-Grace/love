@@ -21,9 +21,5 @@ function lambda(ast) {
 }
 }
 
-async function function_transform(f_name, lambda) {
-    let ast = await function_parse(f_name);
-    lambda(ast);
-    await function_unparse(f_name, ast);
-}
+
 
