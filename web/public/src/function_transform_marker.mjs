@@ -1,3 +1,4 @@
+import {log} from './log.mjs';
 import {each} from './each.mjs';
 import {js_type} from './js_type.mjs';
 import {error} from "./error.mjs";
@@ -12,6 +13,7 @@ export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
   function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
+    log(visitors);
     each(visitors, v => {
       let {stack} = v;
       let stack1 = list_get_end(stack, 1);
