@@ -5,4 +5,4 @@ export function promise_is(value) {
     typeof value.then === 'function' &&
     typeof value.catch === 'function'
   );
-}s
+}
