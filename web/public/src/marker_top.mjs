@@ -1,3 +1,4 @@
+import {js_imports_missing_add} from './js_imports_missing_add.mjs';
 import {function_imports_add} from './function_imports_add.mjs';
 import {js_imports_missing} from './js_imports_missing.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
@@ -26,9 +27,7 @@ export async function marker_top() {
     js_imports_missing_add(ast);
   }
 }
-function js_imports_missing_add(ast,) {
-    let declaration = js_declaration_single(ast);
-    let imports_missing = js_imports_missing(ast, declaration);
-    function_imports_add(ast, imports_missing);
+function js_imports_missing_add(ast) {
+  let imports_missing = js_imports_missing(ast);
+  function_imports_add(ast, imports_missing);
 }
-

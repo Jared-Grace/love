@@ -12,8 +12,8 @@ import {list_intersect} from "./list_intersect.mjs";
 import {object_property_get} from "./object_property_get.mjs";
 export async function function_imports_missing(f_name) {
   let parsed = await function_parse_declaration(f_name);
-  let {ast, declaration} = parsed;
-  let imports_missing = js_imports_missing(ast, declaration);
+  let {ast} = parsed;
+  let imports_missing = js_imports_missing(ast);
   return object_merge({
     imports_missing
   }, parsed);
