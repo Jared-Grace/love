@@ -1,3 +1,4 @@
+import {data_function_current_get} from './data_function_current_get.mjs';
 import {object_property_get} from './object_property_get.mjs';
 import {data_get} from './data_get.mjs';
 import {function_transform} from "./function_transform.mjs";
@@ -23,11 +24,3 @@ export async function marker_top() {
     list_add_first(body2, parsed);
   }
 }
-async function data_function_current_get() {
-    const property_name = "function_current";
-    var d = await data_get(property_name, null);
-    let { data } = d;
-    let f_name = object_property_get(data, property_name);
-    return f_name;
-}
-
