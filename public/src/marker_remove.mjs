@@ -1,3 +1,5 @@
+import {log} from './log.mjs';
+import {list_get_end} from './list_get_end.mjs';
 import {js_visit_type} from './js_visit_type.mjs';
 import {list_add_first} from './list_add_first.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
@@ -11,7 +13,8 @@ export async function marker_remove(f_name) {
   function lambda(ast) {
     js_visit_type(ast, 'CallExpression', v => {
       let {stack} = v;
-      let s2=list_get_end(stack, 2);
+      let s2 = list_get_end(stack, 2);
+      log(s2);
     });
   }
 }
