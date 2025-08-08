@@ -33,7 +33,7 @@ export async function marker_call(f_name_call) {
       let code = js_code_call_args(unaliased, args);
       let parsed = js_parse_statement(code);
       log(json_to(parsed));
-      list_insert(stack2, parsed, index);
+      list_insert(stack2, index,parsed);
     }
   });
 }
