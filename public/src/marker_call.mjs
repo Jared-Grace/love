@@ -47,8 +47,9 @@ export async function marker_call(f_name_call) {
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
       let stack_nodes = list_filter(stack, js_node_is);
-      let fds = list_filter(stack, n => js_node_type_is(n, 'FunctionDeclaration'));
+      let fds = list_filter(stack_nodes, n => js_node_type_is(n, 'FunctionDeclaration'));
       let last = list_last(fds);
+      object_property_get(last, 'async', true)
     }
   });
 }
