@@ -17,10 +17,6 @@ export async function function_imports_missing(f_name) {
   let missing = list_difference(identifiers, imports_self);
   let f_names = functions_names();
   let imports_missing = list_intersect(missing, f_names);
-  return {
-    imports_missing,
-    parsed: ast
-  };
   return object_merge({
     imports_missing,
     parsed: ast
