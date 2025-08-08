@@ -29,14 +29,7 @@ export async function marker_call(f_name_call) {
       let existing = js_identifiers_names(ast);
       let args = list_map_property(object_property_get(declaration, "params"), "name");
       let mapped = list_map(args, arg => {
-        let arg_new = null;
-        let attempt = 1;
-        do {
-          const suffix = attempt === 1 ? "" : attempt;
-          arg_new = arg + suffix;
-          attempt++;
-        } while (list_includes(existing, arg_new));
-        list_add(existing, arg_new);
+        let arg_new = js_identifier_unique(existing,arg);
         return arg_new;
       });
       let code = js_code_call_args(unaliased, mapped);
@@ -47,3 +40,15 @@ export async function marker_call(f_name_call) {
     }
   });
 }
+function js_identifier_unique(existing,name) {
+    let result = null;
+    let attempt = 1;
+    do {
+        const suffix = attempt === 1 ? "" : attempt;
+        result = name + suffix;
+        attempt++;
+    } while (list_includes(existing, result));
+    list_add(existing, result);
+    return result;
+}
+
