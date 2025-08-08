@@ -1,3 +1,4 @@
+import {list_single} from './list_single.mjs';
 import {list_size_1} from './list_size_1.mjs';
 import {assert} from './assert.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
@@ -19,7 +20,7 @@ export async function marker_assign_replace() {
       let next = marker_next_get(a);
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
-      assert(list_size_1(declarations));
+      let declaration = list_single(declarations);
       la(declarations);
     }
   });
