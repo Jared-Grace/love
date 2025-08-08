@@ -1,3 +1,4 @@
+import {js_visit_type} from './js_visit_type.mjs';
 import {list_add_first} from './list_add_first.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
 import {js_code_call_statement} from './js_code_call_statement.mjs';
@@ -8,11 +9,8 @@ export async function marker_remove(f_name) {
   marker();
   await function_transform(f_name, lambda);
   function lambda(ast) {
-    let declaration = js_declaration_single(ast);
-    let {body} = declaration;
-    let {body: body2} = body;
-    let code = js_code_call_statement(marker.name);
-    let parsed = js_parse_statement(code);
-    list_add_first(body2, parsed);
+    js_visit_type(ast, 'CallExpression', v => {
+      let {stack} = v;
+    });
   }
 }
