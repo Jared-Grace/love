@@ -1,3 +1,4 @@
+import {integer_to} from './integer_to.mjs';
 import {log} from './log.mjs';
 import {list_insert} from './list_insert.mjs';
 import {list_remove} from './list_remove.mjs';
@@ -11,7 +12,7 @@ export async function marker_down(delta) {
     let {stack2, stack1} = a;
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
-    let index_new = index + delta;
+    let index_new = index + integer_to(delta);
     list_insert(stack2, index_new, stack1);
   }
 }
