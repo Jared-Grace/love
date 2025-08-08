@@ -15,14 +15,14 @@ export async function marker_remove(f_name) {
   function lambda(ast) {
     js_visit_type(ast, 'CallExpression', v => {
       let {stack} = v;
-      let s2 = list_get_end(stack, 2);
-      if (!js_node_is(s2)) {
+      let s1 = list_get_end(stack, 1);
+      if (!js_node_is(s1)) {
         return;
       }
-      if (!js_node_type_is(s2, 'ExpressionStatement')) {
+      if (!js_node_type_is(s1, 'ExpressionStatement')) {
         return;
       }
-      log(s2);
+      log(s1);
     });
   }
 }
