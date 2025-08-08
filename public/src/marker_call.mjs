@@ -1,3 +1,4 @@
+import {js_identifier_unique} from './js_identifier_unique.mjs';
 import {js_imports_missing_add} from './js_imports_missing_add.mjs';
 import {json_to} from "./json_to.mjs";
 import {log} from "./log.mjs";
@@ -29,7 +30,7 @@ export async function marker_call(f_name_call) {
       let existing = js_identifiers_names(ast);
       let args = list_map_property(object_property_get(declaration, "params"), "name");
       let mapped = list_map(args, arg => {
-        let arg_new = js_identifier_unique(existing,arg);
+        let arg_new = js_identifier_unique(existing, arg);
         return arg_new;
       });
       let code = js_code_call_args(unaliased, mapped);
@@ -40,5 +41,3 @@ export async function marker_call(f_name_call) {
     }
   });
 }
-
-
