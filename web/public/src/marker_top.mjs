@@ -2,7 +2,6 @@ import {data_function_current_get} from './data_function_current_get.mjs';
 import {object_property_get} from './object_property_get.mjs';
 import {data_get} from './data_get.mjs';
 import {function_transform} from "./function_transform.mjs";
-import {function_unparse} from "./function_unparse.mjs";
 import {list_add_first} from "./list_add_first.mjs";
 import {js_parse_statement} from "./js_parse_statement.mjs";
 import {js_code_call_statement} from "./js_code_call_statement.mjs";
