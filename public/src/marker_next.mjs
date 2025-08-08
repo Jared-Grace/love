@@ -4,7 +4,7 @@ import {list_remove} from './list_remove.mjs';
 import {function_transform_marker} from './function_transform_marker.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
 import {list_index_of} from './list_index_of.mjs';
-export async function marker_down() {
+export async function marker_next() {
   let f_name = await data_function_current_get();
   return list_adder_async(async la=>{
 
