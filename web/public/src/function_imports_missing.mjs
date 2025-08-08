@@ -1,14 +1,15 @@
-import { function_parse } from "./function_parse.mjs";
-import { js_imports } from "./js_imports.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
-import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { functions_names } from "./functions_names.mjs";
-import { list_intersect } from "./list_intersect.mjs";
-
+import {object_merge} from './object_merge.mjs';
+import {function_parse} from "./function_parse.mjs";
+import {js_imports} from "./js_imports.mjs";
+import {js_declaration_single} from "./js_declaration_single.mjs";
+import {js_identifiers_names} from "./js_identifiers_names.mjs";
+import {list_difference} from "./list_difference.mjs";
+import {list_concat} from "./list_concat.mjs";
+import {functions_names} from "./functions_names.mjs";
+import {list_intersect} from "./list_intersect.mjs";
 export async function function_imports_missing(f_name) {
-  let {ast} = await function_parse(f_name);
+  let p = await function_parse(f_name);
+  let {ast} = p;
   let imports = js_imports(ast);
   let declaration = js_declaration_single(ast);
   let identifiers = js_identifiers_names(declaration);
@@ -16,5 +17,12 @@ export async function function_imports_missing(f_name) {
   let missing = list_difference(identifiers, imports_self);
   let f_names = functions_names();
   let imports_missing = list_intersect(missing, f_names);
-  return { imports_missing, parsed: ast };
+  return {
+    imports_missing,
+    parsed: ast
+  };
+  return object_merge({
+    imports_missing,
+    parsed: ast
+  }, p);
 }
