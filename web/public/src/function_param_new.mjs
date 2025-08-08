@@ -1,1 +1,1 @@
-export function function_param_new(  ){}
+export function function_param_new(f_name){}
