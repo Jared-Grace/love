@@ -17,6 +17,7 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
 export async function marker_call(f_name_call) {
   let { declaration, unaliased } =
     await function_parse_declaration(f_name_call);
@@ -34,11 +35,12 @@ export async function marker_call(f_name_call) {
         let arg_new = null;
         let attempt = 1;
         do {
-          arg_new = attempt === 1 ? "" : attempt;
+            const suffix = attempt === 1 ? "" : attempt;
+          arg_new = arg + (suffix);
           attempt++;
-        } while (list_includes(existing, arg));
-        assert_not(list_includes(existing, arg));
-        return arg;
+        } while (list_includes(existing, arg_new));
+        list_add(existing,arg_new)
+        return arg_new;
       });
       let code = js_code_call_args(unaliased, mapped);
       let parsed = js_parse_statement(code);
