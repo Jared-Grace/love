@@ -1,3 +1,4 @@
+import {js_parse_statement} from './js_parse_statement.mjs';
 import {js_parse} from './js_parse.mjs';
 import {list_single} from './list_single.mjs';
 import {list_size_1} from './list_size_1.mjs';
@@ -23,7 +24,9 @@ export async function marker_assign_replace(init_code) {
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
       let declaration = list_single(declarations);
-      let init = js_parse(init_code);
+      let init = js_parse_statement(init_code);
+      la(init);
+      return;
       object_property_set(declaration, 'init', init);
       la(js_unparse(next));
     }
