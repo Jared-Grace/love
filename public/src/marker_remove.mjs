@@ -7,6 +7,8 @@ import {js_code_call_statement} from './js_code_call_statement.mjs';
 import {js_declaration_single} from './js_declaration_single.mjs';
 import {function_transform} from './function_transform.mjs';
 import {marker} from './marker.mjs';
+import {js_node_is} from './js_node_is.mjs';
+import {js_node_type_is} from './js_node_type_is.mjs';
 export async function marker_remove(f_name) {
   marker();
   await function_transform(f_name, lambda);
@@ -14,6 +16,12 @@ export async function marker_remove(f_name) {
     js_visit_type(ast, 'CallExpression', v => {
       let {stack} = v;
       let s2 = list_get_end(stack, 2);
+      if (!js_node_is(s2)) {
+        return;
+      }
+      if (!js_node_type_is(s2, 'ExpressionStatement')) {
+        return;
+      }
       log(s2);
     });
   }
