@@ -1,3 +1,4 @@
+import {marker_assign_replace} from './marker_assign_replace.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
 import {list_get} from './list_get.mjs';
@@ -8,17 +9,15 @@ import {list_remove} from './list_remove.mjs';
 import {function_transform_marker} from './function_transform_marker.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
 import {list_index_of} from './list_index_of.mjs';
-import { js_node_type_is } from './js_node_type_is.mjs';
+import {js_node_type_is} from './js_node_type_is.mjs';
 export async function marker_assign_replace() {
   let f_name = await data_function_current_get();
   return list_adder_async(async la => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
-      if (!js_node_type_is(next, 'VariableDeclaration')) {
-        error()
-      }
-      la((next));
+      assign(js_node_type_is(next, 'VariableDeclaration'));
+      la(next);
     }
   });
 }
