@@ -18,14 +18,3 @@ export async function function_imports_missing(f_name) {
     imports_missing
   }, parsed);
 }
-function js_imports_missing(ast, declaration) {
-  let imports = js_imports(ast);
-  let identifiers = js_identifiers_names(declaration);
-  let declaration_id = object_property_get(declaration, "id");
-  let name = object_property_get(declaration_id, "name");
-  let imports_self = list_concat(imports, [name]);
-  let missing = list_difference(identifiers, imports_self);
-  let f_names = functions_names();
-  let imports_missing = list_intersect(missing, f_names);
-  return imports_missing;
-}
