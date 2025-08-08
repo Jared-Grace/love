@@ -8,13 +8,13 @@ import { functions_names } from "./functions_names.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 
 export async function function_imports_missing(f_name) {
-  let parsed = await function_parse(f_name);
-  let imports = js_imports(parsed);
-  let declaration = js_declaration_single(parsed);
+  let ast = await function_parse(f_name);
+  let imports = js_imports(ast);
+  let declaration = js_declaration_single(ast);
   let identifiers = js_identifiers_names(declaration);
   let imports_self = list_concat(imports, [f_name]);
   let missing = list_difference(identifiers, imports_self);
   let f_names = functions_names();
   let imports_missing = list_intersect(missing, f_names);
-  return { imports_missing, parsed };
+  return { imports_missing, parsed: ast };
 }
