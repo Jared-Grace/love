@@ -20,4 +20,5 @@ export async function function_imports_missing(f_name) {
   return object_merge({
     imports_missing,
   }, parsed);
+  await function_parse_declaration(f_name);
 }
