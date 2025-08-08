@@ -24,11 +24,17 @@ export async function marker_assign_replace(init_code) {
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
       let declaration = list_single(declarations);
-      let init = js_parse_statement(init_code);
+      let expression = js_parse_expression(init_code);
       la(init);
       return;
-      object_property_set(declaration, 'init', init);
+      object_property_set(declaration, 'init', expression);
       la(js_unparse(next));
     }
   });
 }
+function js_parse_expression(init_code) {
+    let statement = js_parse_statement(init_code);
+    let expression = object_property_get(statement, 'expression');
+    return expression;
+}
+
