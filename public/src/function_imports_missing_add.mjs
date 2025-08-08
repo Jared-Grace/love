@@ -7,7 +7,8 @@ import { list_add_first } from "./list_add_first.mjs";
 import { file_js_unparse } from "./file_js_unparse.mjs";
 import { function_name_to_path } from "./function_name_to_path.mjs";
 export async function function_imports_missing_add(f_name) {
-  let parsed = await function_imports_missing(f_name);  let { imports_missing, ast } = parsed;
+  let parsed = await function_imports_missing(f_name);
+  let { imports_missing, ast } = parsed;
   let { body } = ast;
   each(imports_missing, (import_missing) => {
     let code =
