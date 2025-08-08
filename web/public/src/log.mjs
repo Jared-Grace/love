@@ -1,1 +1,1 @@
-export function log(){}
+export function log(message){console.log(message)}
