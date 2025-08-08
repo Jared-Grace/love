@@ -1,3 +1,4 @@
+import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
 import {list_get} from './list_get.mjs';
 import {list_adder_async} from './list_adder_async.mjs';
@@ -17,11 +18,3 @@ export async function marker_next() {
     }
   });
 }
-function marker_next_get(a) {
-    let { stack2, stack1 } = a;
-    let index = list_index_of(stack2, stack1);
-    let index_new = index + 1;
-    let next = list_get(stack2, index_new);
-    return next;
-}
-
