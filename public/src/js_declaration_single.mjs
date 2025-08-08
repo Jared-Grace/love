@@ -8,8 +8,7 @@ export function js_declaration_single(parsed) {
       let {node} = v;
       la(node);
     });
-  });
-  if (false) log(nameds);
+  });log(nameds);
   let named = list_single(nameds);
   let {declaration} = named;
   return declaration;
