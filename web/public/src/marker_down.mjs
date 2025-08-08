@@ -10,6 +10,7 @@ export async function marker_down() {
     let {stack2, stack1} = a;
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
-    list_insert();
+    let index_new=index+1
+    list_insert(stack2, index_new, stack1);
   }
 }
