@@ -40,15 +40,5 @@ export async function marker_call(f_name_call) {
     }
   });
 }
-function js_identifier_unique(existing,name) {
-    let result = null;
-    let attempt = 1;
-    do {
-        const suffix = attempt === 1 ? "" : attempt;
-        result = name + suffix;
-        attempt++;
-    } while (list_includes(existing, result));
-    list_add(existing, result);
-    return result;
-}
+
 
