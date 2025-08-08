@@ -1,1 +1,3 @@
-export function js_code_parenthesis_open_close(){}
+export function js_code_parenthesis_open_close() {
+    return "()";
+}
