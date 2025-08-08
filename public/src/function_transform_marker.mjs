@@ -9,6 +9,10 @@ import {function_transform} from './function_transform.mjs';
 export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
   function lambda_marker(ast) {
+    list_adder(la=>{
+        
+    js_visit_type(ast, "CallExpression", la)
+    });
     js_visit_type(ast, "CallExpression", v => {
       let {stack} = v;
       let stack1 = list_get_end(stack, 1);
