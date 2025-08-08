@@ -9,6 +9,7 @@ import {js_declaration_single} from './js_declaration_single.mjs';
 import {function_parse} from './function_parse.mjs';
 import {list_add} from './list_add.mjs';
 export async function marker_top(f_name) {
+  marker();
   let ast = await function_parse(f_name);
   let declaration = js_declaration_single(ast);
   let {body} = declaration;
