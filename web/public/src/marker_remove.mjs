@@ -11,6 +11,7 @@ export async function marker_remove(f_name) {
   function lambda(ast) {
     js_visit_type(ast, 'CallExpression', v => {
       let {stack} = v;
+      let s2=list_get_end(stack, 2);
     });
   }
 }
