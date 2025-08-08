@@ -37,7 +37,7 @@ export async function function_transform_marker(f_name, lambda) {
       }
       lambda({
         stack2,
-        stack1
+        stack1,ast
       });
     });
   }
