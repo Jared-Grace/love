@@ -1,3 +1,4 @@
+import {list_insert} from './list_insert.mjs';
 import {assert_not} from './assert_not.mjs';
 import {list_map} from './list_map.mjs';
 import {js_identifiers_names} from './js_identifiers_names.mjs';
@@ -25,15 +26,11 @@ export async function marker_call(f_name_call) {
       let args = list_map_property(object_property_get(declaration, 'params'), 'name');
       args = list_map(args, arg => {
         assert_not(list_includes(existing, arg));
-        return arg
+        return arg;
       });
       let code = js_code_call_args(unaliased, args);
-      la(code);
-      return;
-      {
-        let parsed = js_parse_statement(code);
-        la(js_unparse(next));
-      }
+      let parsed = js_parse_statement(code);
+      list_insert(stack2, parsed, index);
     }
   });
 }
