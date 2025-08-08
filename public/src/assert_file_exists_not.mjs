@@ -1,0 +1,5 @@
+export async function assert_file_exists_not(file_path_new) {
+    if (await file_exists(file_path_new)) {
+        error();
+    }
+}
