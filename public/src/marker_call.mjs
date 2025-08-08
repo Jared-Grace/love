@@ -25,6 +25,7 @@ export async function marker_call(f_name_call) {
       let args = list_map_property(object_property_get(declaration, 'params'), 'name');
       args = list_map(args, arg => {
         assert_not(list_includes(existing, arg));
+        return arg
       });
       let code = js_code_call_args(unaliased, args);
       la(code);
