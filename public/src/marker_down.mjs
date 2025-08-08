@@ -1,3 +1,5 @@
+import {log} from './log.mjs';
+import {marker_down} from './marker_down.mjs';
 import {list_insert} from './list_insert.mjs';
 import {list_remove} from './list_remove.mjs';
 import {function_transform_marker} from './function_transform_marker.mjs';
@@ -10,8 +12,11 @@ export async function marker_down() {
     let {stack2, stack1} = a;
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
-    let index_new=index+1
-    log({index_new,index})
+    let index_new = index + 1;
+    log({
+      index_new,
+      index
+    });
     list_insert(stack2, index_new, stack1);
   }
 }
