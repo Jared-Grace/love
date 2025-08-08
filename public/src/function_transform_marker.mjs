@@ -9,6 +9,7 @@ import {js_node_is} from "./js_node_is.mjs";
 import {list_get_end} from "./list_get_end.mjs";
 import {js_visit_type} from "./js_visit_type.mjs";
 import {function_transform} from "./function_transform.mjs";
+import { object_merge } from './object_merge.mjs';
 export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
   function lambda_marker(ast) {
@@ -35,10 +36,10 @@ export async function function_transform_marker(f_name, lambda) {
       if (!list_is(stack2)) {
         error();
       }
-      lambda({
+      lambda(object_merge({
         stack2,
         stack1,ast
-      });
+      },v));
     });
   }
 }
