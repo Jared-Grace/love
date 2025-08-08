@@ -1,3 +1,4 @@
+import {assert} from './assert.mjs';
 import {marker_assign_replace} from './marker_assign_replace.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
@@ -16,7 +17,7 @@ export async function marker_assign_replace() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
-      assign(js_node_type_is(next, 'VariableDeclaration'));
+      assert(js_node_type_is(next, 'VariableDeclaration'));
       la(next);
     }
   });
