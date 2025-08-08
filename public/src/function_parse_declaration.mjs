@@ -6,7 +6,7 @@ export async function function_parse_declaration(f_name) {
   let {ast} = parsed;
   let declaration = js_declaration_single(ast);
   return object_merge({
-    declaration,
-    parsed
-  });
+    declaration
+  },
+    parsed);
 }

@@ -1,1 +1,1 @@
-export function js_code_wrap_parenthesis(){}
+export function js_code_wrap_parenthesis(inside){return "( " + inside + " )"}
