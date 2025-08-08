@@ -28,10 +28,10 @@ export async function function_transform_marker(f_name, lambda) {
         return;
       }
       let {name} = callee;
+    log(name);
       if (name !== marker.name) {
         return;
       }
-    log(name);
       let stack2 = list_get_end(stack, 2);
       if (!list_is(stack2)) {
         error();
