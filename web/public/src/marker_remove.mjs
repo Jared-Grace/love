@@ -9,6 +9,7 @@ import { function_transform } from "./function_transform.mjs";
 import { marker } from "./marker.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_is } from "./list_is.mjs";
 export async function marker_remove(f_name) {
   marker();
   await function_transform(f_name, lambda);
@@ -32,7 +33,11 @@ export async function marker_remove(f_name) {
         return;
       }
       let s2 = list_get_end(stack, 2);
-      log(s2);
+
+      if (!list_is(s2)) {
+        error();
+      }
+      list_remove(s2, s1);
     });
   }
 }
