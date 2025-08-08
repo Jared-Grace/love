@@ -1,5 +1,4 @@
 import {assert} from './assert.mjs';
-import {marker_assign_replace} from './marker_assign_replace.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
 import {list_get} from './list_get.mjs';
