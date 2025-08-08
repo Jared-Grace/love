@@ -26,8 +26,6 @@ export async function marker_assign_replace(init_code) {
       let {declarations} = next;
       let declaration = list_single(declarations);
       let init = js_parse_expression(init_code);
-      la(init);
-      return;
       object_property_set(declaration, 'init', init);
       la(js_unparse(next));
     }
