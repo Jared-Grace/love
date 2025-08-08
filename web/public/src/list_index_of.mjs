@@ -1,3 +1,7 @@
 export function list_index_of(arr, item) {
-    return arr.indexOf(item);
+  let index = arr.indexOf(item);
+  if (index !== -1) {
+    error();
+  }
+  return index;
 }

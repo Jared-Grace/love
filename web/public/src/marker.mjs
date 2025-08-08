@@ -1,4 +1,4 @@
-import {noop} from './noop.mjs';
+import { noop } from "./noop.mjs";
 export function marker() {
   noop();
 }
