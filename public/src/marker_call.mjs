@@ -1,3 +1,5 @@
+import {assert_not} from './assert_not.mjs';
+import {list_map} from './list_map.mjs';
 import {js_identifiers_names} from './js_identifiers_names.mjs';
 import {list_map_property} from './list_map_property.mjs';
 import {js_parse_statement} from './js_parse_statement.mjs';
@@ -11,19 +13,19 @@ import {list_adder_async} from './list_adder_async.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
 import {marker_next_index} from './marker_next_index.mjs';
 import {object_property_get} from './object_property_get.mjs';
-import { list_includes } from './list_includes.mjs';
+import {list_includes} from './list_includes.mjs';
 export async function marker_call(f_name_call) {
   let {declaration, unaliased} = await function_parse_declaration(f_name_call);
   let f_name_current = await data_function_current_get();
   return list_adder_async(async la => {
     await function_transform_marker(f_name_current, lambda);
     function lambda(a) {
-      let {index, stack2,ast} = marker_next_index(a);
-     let existing=js_identifiers_names(ast);
+      let {index, stack2, ast} = marker_next_index(a);
+      let existing = js_identifiers_names(ast);
       let args = list_map_property(object_property_get(declaration, 'params'), 'name');
-      args=list_map(args,arg=>{
-        assert_not(list_includes(existing,arg))
-      })
+      args = list_map(args, arg => {
+        assert_not(list_includes(existing, arg));
+      });
       let code = js_code_call_args(unaliased, args);
       la(code);
       return;
