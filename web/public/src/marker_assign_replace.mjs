@@ -20,7 +20,7 @@ export async function marker_assign_replace() {
       assert(js_node_type_is(next, 'VariableDeclaration'));
       let {declarations} = next;
       assert(list_size_1(declarations));
-      la(next);
+      la(declarations);
     }
   });
 }
