@@ -22,8 +22,9 @@ export async function marker_remove(f_name) {
       if (!js_node_type_is(s1, 'ExpressionStatement')) {
         return;
       }
+      let {node} = v;
       let s2 = list_get_end(stack, 2);
-      log(s2);
+      log(node);
     });
   }
 }
