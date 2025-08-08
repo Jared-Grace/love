@@ -4,5 +4,8 @@ import {function_parse} from './function_parse.mjs';
 export async function marker_top(f_name) {
   let ast = await function_parse(f_name);
   let declaration = js_declaration_single(ast);
+  let {body} = declaration
+  let {body:body2} = body
+  
   log(declaration);
 }
