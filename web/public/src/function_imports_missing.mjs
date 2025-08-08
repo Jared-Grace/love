@@ -9,10 +9,9 @@ import {list_concat} from "./list_concat.mjs";
 import {functions_names} from "./functions_names.mjs";
 import {list_intersect} from "./list_intersect.mjs";
 export async function function_imports_missing(f_name) {
-  let parsed = await function_parse(f_name);
-  let {ast, unaliased} = parsed;
+  let parsed = await function_parse_declaration(f_name);
+  let {ast, unaliased,declaration} = parsed;
   let imports = js_imports(ast);
-  let declaration = js_declaration_single(ast);
   let identifiers = js_identifiers_names(declaration);
   let imports_self = list_concat(imports, [unaliased]);
   let missing = list_difference(identifiers, imports_self);
@@ -21,5 +20,4 @@ export async function function_imports_missing(f_name) {
   return object_merge({
     imports_missing
   }, parsed);
-  await function_parse_declaration(f_name);
 }
