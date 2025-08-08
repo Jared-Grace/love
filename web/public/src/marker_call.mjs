@@ -1,3 +1,4 @@
+import {js_code_await} from './js_code_await.mjs';
 import {js_identifier_unique} from './js_identifier_unique.mjs';
 import {js_imports_missing_add} from './js_imports_missing_add.mjs';
 import {json_to} from "./json_to.mjs";
@@ -34,7 +35,7 @@ export async function marker_call(f_name_call) {
         return arg_new;
       });
       let code = js_code_call_args(unaliased, mapped);
-      if (object_property_get(declaration,'async')) {
+      if (object_property_get(declaration, 'async')) {
         code = js_code_await(code);
       }
       let parsed = js_parse_statement(code);
@@ -44,7 +45,3 @@ export async function marker_call(f_name_call) {
     }
   });
 }
-function js_code_await(code) {
-    return 'await ' + code;
-}
-
