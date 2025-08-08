@@ -27,7 +27,3 @@ export async function marker_top() {
     js_imports_missing_add(ast);
   }
 }
-function js_imports_missing_add(ast) {
-  let imports_missing = js_imports_missing(ast);
-  function_imports_add(ast, imports_missing);
-}

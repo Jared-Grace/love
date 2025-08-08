@@ -46,6 +46,7 @@ export async function marker_call(f_name_call) {
       let parsed = js_parse_statement(code);
       la(js_unparse(parsed));
       list_insert(stack2, index, parsed);
+    js_imports_missing_add(ast);
     }
   });
 }
