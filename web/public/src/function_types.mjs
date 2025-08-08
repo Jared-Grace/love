@@ -4,9 +4,9 @@ import { js_node_type } from "./js_node_type.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 
 export async function function_types(f_name) {
-  let parsed = await function_parse(f_name);
+  let ast = await function_parse(f_name);
   return list_adder_unique((la) => {
-    js_visit_nodes(parsed, (node) => {
+    js_visit_nodes(ast, (node) => {
       la(js_node_type(node));
     });
   });
