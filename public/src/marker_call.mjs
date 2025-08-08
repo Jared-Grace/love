@@ -1,3 +1,5 @@
+import {list_last} from './list_last.mjs';
+import {list_filter} from './list_filter.mjs';
 import {js_code_await} from './js_code_await.mjs';
 import {js_identifier_unique} from './js_identifier_unique.mjs';
 import {js_imports_missing_add} from './js_imports_missing_add.mjs';
@@ -21,8 +23,8 @@ import {marker_next_index} from "./marker_next_index.mjs";
 import {object_property_get} from "./object_property_get.mjs";
 import {list_includes} from "./list_includes.mjs";
 import {list_add} from "./list_add.mjs";
-import { js_node_is } from './js_node_is.mjs';
-import { js_node_type_is } from './js_node_type_is.mjs';
+import {js_node_is} from './js_node_is.mjs';
+import {js_node_type_is} from './js_node_type_is.mjs';
 export async function marker_call(f_name_call) {
   let {declaration, unaliased} = await function_parse_declaration(f_name_call);
   let f_name_current = await data_function_current_get();
@@ -44,9 +46,9 @@ export async function marker_call(f_name_call) {
       la(js_unparse(parsed));
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
-      let stack_nodes=list_filter(stack, js_node_is)
-      let fds=list_filter(stack, n=> js_node_type_is(n, 'FunctionDeclaration'))
-      let last=list_last(fds)
+      let stack_nodes = list_filter(stack, js_node_is);
+      let fds = list_filter(stack, n => js_node_type_is(n, 'FunctionDeclaration'));
+      let last = list_last(fds);
     }
   });
 }
