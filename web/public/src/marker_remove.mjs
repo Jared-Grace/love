@@ -13,7 +13,6 @@ import {js_node_is} from "./js_node_is.mjs";
 import {js_node_type_is} from "./js_node_type_is.mjs";
 import {list_is} from "./list_is.mjs";
 export async function marker_remove(f_name) {
-  marker();
   await function_transform(f_name, lambda);
   function lambda(ast) {
     js_visit_type(ast, "CallExpression", v => {
