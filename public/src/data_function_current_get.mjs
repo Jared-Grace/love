@@ -1,0 +1,1 @@
+export function data_function_current_get(){}
