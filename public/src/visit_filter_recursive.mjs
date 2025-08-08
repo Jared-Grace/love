@@ -14,11 +14,11 @@ export function visit_filter_recursive(
     return;
   }
   list_add(stack, node);
-  on_each({ node, stack });
+    let copy = list_copy(stack);
+  on_each({ node, stack: copy });
   let children = children_get(node);
   each(children, (c) => {
-    let copy = list_copy(stack);
-    visit_filter_recursive(c, children_get, filter, on_each, copy);
+    visit_filter_recursive(c, children_get, filter, on_each, stack);
   });
   let removed = list_pop(stack);
   if (removed !== node) {
