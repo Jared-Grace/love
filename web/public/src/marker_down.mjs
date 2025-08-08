@@ -1,5 +1,4 @@
 import {log} from './log.mjs';
-import {marker_down} from './marker_down.mjs';
 import {list_insert} from './list_insert.mjs';
 import {list_remove} from './list_remove.mjs';
 import {function_transform_marker} from './function_transform_marker.mjs';
