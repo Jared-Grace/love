@@ -1,1 +1,3 @@
-export function function_dependencies(  ){}
+export function function_dependencies() {
+  marker();
+}
