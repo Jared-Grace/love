@@ -6,7 +6,7 @@ import {folder_public} from "./folder_public.mjs";
 export function server() {
   const app = express();
   marker();
-  const port = 3000;
+  const port = 8080;
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   app.use(express.static(path_join([__dirname, "..", "..", folder_public()])));
