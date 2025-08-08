@@ -1,3 +1,4 @@
+import {object_property_set} from './object_property_set.mjs';
 import {list_last} from './list_last.mjs';
 import {list_filter} from './list_filter.mjs';
 import {js_code_await} from './js_code_await.mjs';
@@ -49,7 +50,7 @@ export async function marker_call(f_name_call) {
       let stack_nodes = list_filter(stack, js_node_is);
       let fds = list_filter(stack_nodes, n => js_node_type_is(n, 'FunctionDeclaration'));
       let last = list_last(fds);
-      object_property_get(last, 'async', true)
+      object_property_set(last, 'async', true);
     }
   });
 }
