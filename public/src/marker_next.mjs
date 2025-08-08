@@ -1,3 +1,4 @@
+import {marker_next_index} from './marker_next_index.mjs';
 import {marker_next_get} from './marker_next_get.mjs';
 import {js_unparse} from './js_unparse.mjs';
 import {list_get} from './list_get.mjs';
@@ -13,7 +14,7 @@ export async function marker_next() {
   return list_adder_async(async la => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let next = marker_next_get(a);
+      let {index, stack2} = marker_next_index(a);
       la(js_unparse(next));
     }
   });
