@@ -16,7 +16,6 @@ export async function function_transform_marker(f_name, lambda) {
     each(visitors, v => {
       let {stack} = v;
       let stack1 = list_get_end(stack, 1);
-    log({stack1});
       if (!js_node_is(stack1)) {
         return;
       }
@@ -25,12 +24,10 @@ export async function function_transform_marker(f_name, lambda) {
       }
       let {node} = v;
       let {callee} = node;
-    log({callee});
       if (!js_node_type_is(callee, "Identifier")) {
         return;
       }
       let {name} = callee;
-    log(name);
       if (name !== marker.name) {
         return;
       }
