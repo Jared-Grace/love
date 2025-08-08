@@ -10,6 +10,7 @@ export async function marker_call() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let index = marker_next_index(a);
+      
       la(js_unparse(next));
     }
   });
