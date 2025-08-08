@@ -16,10 +16,10 @@ export async function marker_call(f_name_call) {
     function lambda(a) {
       let {index, stack2} = marker_next_index(a);
       la(parsed);
-      return;
+      return;{
       let code = js_code_call_args(marker.name);
       let parsed = js_parse_statement(code);
-      la(js_unparse(next));
+      la(js_unparse(next));}
     }
   });
 }
