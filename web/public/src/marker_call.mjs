@@ -21,13 +21,15 @@ import {marker_next_index} from "./marker_next_index.mjs";
 import {object_property_get} from "./object_property_get.mjs";
 import {list_includes} from "./list_includes.mjs";
 import {list_add} from "./list_add.mjs";
+import { js_node_is } from './js_node_is.mjs';
+import { js_node_type_is } from './js_node_type_is.mjs';
 export async function marker_call(f_name_call) {
   let {declaration, unaliased} = await function_parse_declaration(f_name_call);
   let f_name_current = await data_function_current_get();
   return list_adder_async(async la => {
     await function_transform_marker(f_name_current, lambda);
     function lambda(a) {
-      let {index, stack2, ast} = marker_next_index(a);
+      let {index, stack2, ast, stack} = marker_next_index(a);
       let existing = js_identifiers_names(ast);
       let args = list_map_property(object_property_get(declaration, "params"), "name");
       let mapped = list_map(args, arg => {
@@ -42,6 +44,9 @@ export async function marker_call(f_name_call) {
       la(js_unparse(parsed));
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
+      let stack_nodes=list_filter(stack, js_node_is)
+      let fds=list_filter(stack, n=> js_node_type_is(n, 'FunctionDeclaration'))
+      let last=list_last(fds)
     }
   });
 }
