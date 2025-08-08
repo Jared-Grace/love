@@ -1,3 +1,5 @@
+import {function_imports_add} from './function_imports_add.mjs';
+import {js_imports_missing} from './js_imports_missing.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
 import {object_property_get} from './object_property_get.mjs';
 import {data_get} from './data_get.mjs';
@@ -21,5 +23,7 @@ export async function marker_top() {
     let code = js_code_call_statement(marker.name);
     let parsed = js_parse_statement(code);
     list_add_first(body2, parsed);
+    let imports_missing = js_imports_missing(ast, declaration);
+    function_imports_add(ast, imports_missing);
   }
 }
