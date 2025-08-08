@@ -1,1 +1,5 @@
-export function assert(){}
+export function assert(b) {
+  if (!b) {
+    error();
+  }
+}
