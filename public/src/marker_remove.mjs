@@ -1,3 +1,4 @@
+import {data_function_current_get} from './data_function_current_get.mjs';
 import {list_remove} from './list_remove.mjs';
 import {error} from './error.mjs';
 import {log} from "./log.mjs";
@@ -12,7 +13,8 @@ import {marker} from "./marker.mjs";
 import {js_node_is} from "./js_node_is.mjs";
 import {js_node_type_is} from "./js_node_type_is.mjs";
 import {list_is} from "./list_is.mjs";
-export async function marker_remove(f_name) {
+export async function marker_remove() {
+  let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
   function lambda(ast) {
     js_visit_type(ast, "CallExpression", v => {
