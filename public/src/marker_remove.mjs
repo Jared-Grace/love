@@ -23,8 +23,16 @@ export async function marker_remove(f_name) {
         return;
       }
       let {node} = v;
+      let {callee} = node;
+      if (!js_node_type_is(callee, 'Identifier')) {
+        return;
+      }
+      let {name} = callee;
+      if (name !== marker.name) {
+        return;
+      }
       let s2 = list_get_end(stack, 2);
-      log(node);
+      log(s2);
     });
   }
 }
