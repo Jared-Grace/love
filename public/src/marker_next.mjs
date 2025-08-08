@@ -12,11 +12,16 @@ export async function marker_next() {
   return list_adder_async(async la => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let {stack2, stack1} = a;
-      let index = list_index_of(stack2, stack1);
-      let index_new = index + 1;
-      let next = list_get(stack2, index_new);
+      let next = marker_next_get(a);
       la(js_unparse(next));
     }
   });
 }
+function marker_next_get(a) {
+    let { stack2, stack1 } = a;
+    let index = list_index_of(stack2, stack1);
+    let index_new = index + 1;
+    let next = list_get(stack2, index_new);
+    return next;
+}
+
