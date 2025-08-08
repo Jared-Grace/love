@@ -12,11 +12,3 @@ export async function function_imports_missing_add(f_name) {
   function_imports_add(ast, imports_missing);
   await file_js_unparse(parsed);
 }
-function function_imports_add(ast, imports) {
-  let {body} = ast;
-  each(imports, import_ => {
-    let code = "import { " + import_ + " } from './" + function_name_to_base(import_) + "'";
-    let statement = js_parse_statement(code);
-    list_add_first(body, statement);
-  });
-}
