@@ -6,7 +6,8 @@ import {list_concat} from './list_concat.mjs';
 import {object_property_get} from './object_property_get.mjs';
 import {js_identifiers_names} from './js_identifiers_names.mjs';
 import {js_imports} from './js_imports.mjs';
-export function js_imports_missing(ast, declaration) {
+export function js_imports_missing(ast) {
+    let declaration = js_declaration_single(ast);
   let imports = js_imports(ast);
   let identifiers = js_identifiers_names(declaration);
   let declaration_id = object_property_get(declaration, "id");
@@ -16,7 +17,4 @@ export function js_imports_missing(ast, declaration) {
   let f_names = functions_names();
   let imports_missing = list_intersect(missing, f_names);
   return imports_missing;
-  {
-    let declaration = js_declaration_single(ast);
-  }
 }
