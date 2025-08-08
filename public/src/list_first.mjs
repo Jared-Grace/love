@@ -1,3 +1,8 @@
 export function list_first(list) {
-  return list[0];
+    const index = 0;
+  return list_get(list, index);
 }
+function list_get(list, index) {
+    return list[index];
+}
+

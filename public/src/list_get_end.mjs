@@ -1,1 +1,1 @@
-export function list_get_end(){}
+export function list_get_end(stack, index_from_end){}
