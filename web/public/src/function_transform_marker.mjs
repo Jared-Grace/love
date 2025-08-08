@@ -11,8 +11,7 @@ import {function_transform} from "./function_transform.mjs";
 export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
   function lambda_marker(ast) {
-    const node_type = "CallExpression";
-    let visitors = js_type(ast, node_type);
+    let visitors = js_type(ast, "CallExpression");
     each(visitors, v => {
       let {stack} = v;
       let stack1 = list_get_end(stack, 1);
