@@ -7,9 +7,9 @@ import { list_map_property } from "./list_map_property.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 
-export function js_imports(parsed) {
+export function js_imports(ast) {
   return list_adder_unique((la) => {
-    js_visit_type(parsed, "ImportDeclaration", (v) => {
+    js_visit_type(ast, "ImportDeclaration", (v) => {
       let { node } = v;
       let { specifiers, source } = node;
       if (!list_size_1(specifiers)) {
