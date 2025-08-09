@@ -7,5 +7,6 @@ export function js_parse_statement(code) {
   let declaration = list_first(body);
   let {body:block} = declaration;
   let {body:statements} = block;
-  return list_first(statements);
+    const statement = list_first(statements);
+  return statement;
 }
