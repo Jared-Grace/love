@@ -1,3 +1,4 @@
+import {list_unique_reverse} from './list_unique_reverse.mjs';
 import {list_copy_reverse} from './list_copy_reverse.mjs';
 import {list_reverse} from './list_reverse.mjs';
 import {function_run_git} from './function_run_git.mjs';
@@ -9,15 +10,8 @@ export async function function_run_line(line) {
   const [funcName, ...args] = line.split(" ");
   await data_transform("prompts", [], previous => {
     list_add(previous, line);
-    let copy = list_unique_reverse(previous);
-    return copy;
+    let unique = list_unique_reverse(previous);
+    return unique;
   });
   await function_run_git(funcName, args);
 }
-function list_unique_reverse(previous) {
-    let reversed = list_copy_reverse(previous);
-    let copy = list_unique(reversed);
-    list_reverse(copy);
-    return copy;
-}
-
