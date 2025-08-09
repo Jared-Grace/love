@@ -4,6 +4,7 @@ import {list_first} from "./list_first.mjs";
 export function js_parse_statement(code) {
   let import_parsed = js_parse(js_code_declaration('a', code));
   let {body} = import_parsed;
-  let statement = list_first(body);
-  return statement;
+  let declaration = list_first(body);
+  let {body:body_declaration} = declaration;
+  return body_declaration;
 }
