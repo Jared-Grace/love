@@ -12,6 +12,3 @@ export async function function_new(f_name) {
   await file_write(f_path, contents);
   await function_open(f_name);
 }
-function js_code_declaration(f_name) {
-  return "function " + js_code_call(f_name) + "{}";
-}
