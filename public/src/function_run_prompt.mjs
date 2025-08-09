@@ -5,6 +5,6 @@ import {list_add} from "./list_add.mjs";
 export async function function_run_prompt() {
   let line = await command_line_read("");
   const [funcName, ...args] = line.split(" ");
-  if (0) await data_transform("prompts", [], previous => list_add(previous, line));
+await data_transform("prompts", [], previous => list_add(previous, line));
   await function_run_git(funcName, args);
 }
