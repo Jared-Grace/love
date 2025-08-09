@@ -9,12 +9,3 @@ export async function function_run_prompt() {
   let line = await command_line_read("");
   await function_run_line(line);
 }
-async function function_run_line(line) {
-  const [funcName, ...args] = line.split(" ");
-  await data_transform("prompts", [], previous => {
-    list_add(previous, line);
-    previous = list_unique(previous);
-    return previous;
-  });
-  await function_run_git(funcName, args);
-}
