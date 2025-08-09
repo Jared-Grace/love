@@ -1,3 +1,4 @@
+import {function_run_line} from './function_run_line.mjs';
 import {log} from "./log.mjs";
 import {data_transform} from "./data_transform.mjs";
 import {command_line_read} from "./command_line_read.mjs";
@@ -9,12 +10,11 @@ export async function function_run_prompt() {
   await function_run_line(line);
 }
 async function function_run_line(line) {
-    const [funcName, ...args] = line.split(" ");
-    await data_transform("prompts", [], previous => {
-        list_add(previous, line);
-        previous = list_unique(previous);
-        return previous;
-    });
-    await function_run_git(funcName, args);
+  const [funcName, ...args] = line.split(" ");
+  await data_transform("prompts", [], previous => {
+    list_add(previous, line);
+    previous = list_unique(previous);
+    return previous;
+  });
+  await function_run_git(funcName, args);
 }
-
