@@ -5,6 +5,7 @@ export function js_parse_statement(code) {
   let import_parsed = js_parse(js_code_declaration('a', code));
   let {body} = import_parsed;
   let declaration = list_first(body);
-  let {body:body_declaration} = declaration;
-  return body_declaration;
+  let {body:block} = declaration;
+  let {body:statements} = block;
+  return list_first(statements);
 }
