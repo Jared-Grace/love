@@ -6,5 +6,5 @@ export function js_parse_statement(code) {
   let {body} = import_parsed;
   let statement = list_first(body);
   return statement;
-  js_code_declaration('a');
+  js_code_declaration('a', code);
 }
