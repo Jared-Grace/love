@@ -1,3 +1,4 @@
+import {list_copy_reverse} from './list_copy_reverse.mjs';
 import {list_reverse} from './list_reverse.mjs';
 import {function_run_git} from './function_run_git.mjs';
 import {list_unique} from './list_unique.mjs';
@@ -15,7 +16,7 @@ export async function function_run_line(line) {
   await function_run_git(funcName, args);
 }
 function list_copy_reverse(previous) {
-    let copy = list_copy(previous);
-    list_reverse(copy);return copy
+  let copy = list_copy(previous);
+  list_reverse(copy);
+  return copy;
 }
-
