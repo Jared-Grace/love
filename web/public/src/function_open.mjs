@@ -8,8 +8,12 @@ export async function function_open(f_name) {
   const {f_path} = await function_name_to_path_unalias(f_name);
   await file_open(f_path);
   const property_name = "function_current";
-  var d = await data_get(property_name, null);
-  let { data } = d;
-  object_property_set(data, property_name, f_name);
-  await data_save(d);
+  await data_transform(property_name, f_name);
 }
+async function data_transform(property_name, value) {
+    var d = await data_get(property_name, null);
+    let { data } = d;
+    object_property_set(data, property_name, value);
+    await data_save(d);
+}
+
