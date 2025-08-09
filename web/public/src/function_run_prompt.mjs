@@ -7,6 +7,5 @@ export async function function_run_prompt() {
   let line = await command_line_read("");
   const [funcName, ...args] = line.split(" ");
   await data_transform("prompts", [], previous => list_add(previous, line));
-  log('here');
   await function_run_git(funcName, args);
 }
