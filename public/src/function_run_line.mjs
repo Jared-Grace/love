@@ -9,10 +9,15 @@ export async function function_run_line(line) {
   const [funcName, ...args] = line.split(" ");
   await data_transform("prompts", [], previous => {
     list_add(previous, line);
-    let reversed = list_copy_reverse(previous);
-    let copy = list_unique(reversed);
-    list_reverse(copy);
+    let copy = list_unique_reverse(previous);
     return copy;
   });
   await function_run_git(funcName, args);
 }
+function list_unique_reverse(previous) {
+    let reversed = list_copy_reverse(previous);
+    let copy = list_unique(reversed);
+    list_reverse(copy);
+    return copy;
+}
+
