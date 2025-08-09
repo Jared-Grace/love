@@ -1,4 +1,4 @@
 import {marker} from './marker.mjs';
-export function function_dependencies() {
-  marker();
+export async function function_dependencies() {  let parsed = await function_parse(f_name);
+  let {ast} = parsed;
 }
