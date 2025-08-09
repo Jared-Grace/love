@@ -7,6 +7,6 @@ export async function data_transform(property_name, value_initial, value_get) {
   var d = await data_get(property_name, value_initial);
   let {data, value} = d;
   object_property_set(data, property_name, value_get(value));
-  log(d)
+  log({property_name})
   await data_save(d);
 }
