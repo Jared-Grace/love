@@ -56,13 +56,13 @@ export async function marker_call(f_name_call) {
           let skip_count = 1;
           let remaining = list_slice(split,skip_count, list_size(split));
           let lamda_name = js_identifier_unique(existing, lambda);
-          let code = js_code_declaration(lamda_name, "", false);
-          let declaration = js_parse_statement_module(code);
+          let code = js_code_declaration(lamda_name, "", object_property_get(declaration, "async"));
+          let declaration_lambda = js_parse_statement_module(code);
           each(remaining, (p) => {
             let unique = js_identifier_unique(existing, p);
-            js_declaration_param_add(declaration, unique);
+            js_declaration_param_add(declaration_lambda, unique);
           });
-          arg_code = js_unparse(declaration);
+          arg_code = js_unparse(declaration_lambda);
         }
         return arg_code;
       });
