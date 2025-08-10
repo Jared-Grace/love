@@ -4,13 +4,13 @@ import { error } from "./error.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { function_alias_add_generic } from "./function_alias_add_generic.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-export async function function_alias_change(alias_old, alias_new) {
+export async function function_alias_replace(alias_old, f_name) {
   await function_alias_generic(alias_old, function lambda(a) {
-    let { exists, aliases, unaliased } = a;
+    let { exists, aliases } = a;
     if (!exists) {
       error();
     }
     object_property_delete(aliases, alias_old);
-    object_property_set(aliases, alias_new, unaliased);
+    object_property_set(aliases, alias_old, f_name);
   });
 }
