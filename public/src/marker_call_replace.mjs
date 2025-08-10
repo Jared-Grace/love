@@ -27,7 +27,7 @@ export async function marker_call_replace() {
         next=object_property_get(next,'argument')
       }
       
-      la(js_unparse(next));
+      la((next));
       return
       let { declarations } = next;
       let declaration = list_single(declarations);
