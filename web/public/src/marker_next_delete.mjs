@@ -1,3 +1,4 @@
+import { marker_next_index } from "./marker_next_index.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -25,22 +26,8 @@ export async function marker_next_delete(arg_index, code_replacement) {
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let next = marker_next_get(a);
-      if (!js_node_type_is(next, "ExpressionStatement")) {
-        return;
-      }
-      let { expression } = next;
-      if (js_node_type_is(expression, "AwaitExpression")) {
-        expression = object_property_get(expression, "argument");
-      }
-      if (!js_node_type_is(expression, "CallExpression")) {
-        return;
-      }
-      let { arguments: arguments2 } = expression;
-      let arg_index_at = list_get(arguments2, arg_index);
-      let replacement = js_parse_expression(code_replacement);
-      object_replace(arg_index_at, replacement);
-      la(js_unparse(next));
+      let { index, stack2, ast, stack } = marker_next_index(a);
+      list_remove(stack2, index, parsed);
     }
   });
 }
