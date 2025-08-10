@@ -22,7 +22,7 @@ export function js_return_name(ast) {
         name_new = "result";
       }
       let existing = js_identifiers_names(ast);
-      name = js_identifier_unique(existing, name_argument);
+      name = js_identifier_unique(existing, name_new);
     }
   }
   return name;
