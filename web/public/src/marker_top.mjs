@@ -19,10 +19,10 @@ export async function marker_top() {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
   function lambda(ast) {
-    let body2 = js_declaration_single_block_blody(ast);
+    let body = js_declaration_single_block_blody(ast);
     let code = js_code_call_statement(marker.name);
     let parsed = js_parse_statement(code);
-    list_add_first(body2, parsed);
+    list_add_first(body, parsed);
     js_imports_missing_add(ast);
   }
 }
