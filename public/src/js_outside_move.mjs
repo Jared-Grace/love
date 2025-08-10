@@ -7,6 +7,7 @@ import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { function_name_to_path } from "./function_name_to_path.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function js_outside_move(ast) {
   let { body } = ast;
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
@@ -22,4 +23,5 @@ export async function js_outside_move(ast) {
   await each_async(fds, async (fd) => {
     list_remove(body, fd);
   });
+  log(js_unparse(ast))
 }
