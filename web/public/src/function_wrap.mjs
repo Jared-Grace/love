@@ -29,7 +29,6 @@ export async function function_wrap(f_name, f_name_wrapped) {
     let { body: body_block } = body;
     list_add(body_block, js_parse_expression(code));
     js_declaration_asyncify(declaration, declaration_call);
-    let property_name = "params";
-    object_property_from(declaration, property_name, declaration_call);
+    object_property_from(declaration, "params", declaration_call);
   }
 }
