@@ -22,7 +22,7 @@ export async function marker_call_replace(init_code) {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
-      assert(js_node_type_is(next, "VariableDeclaration"));
+      if(js_node_type_is(next, "VariableDeclaration"));
       let { declarations } = next;
       let declaration = list_single(declarations);
       let init = js_parse_expression(init_code);
