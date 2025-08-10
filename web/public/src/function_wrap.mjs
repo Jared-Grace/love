@@ -1,3 +1,4 @@
+import { js_declaration_asyncify } from "./js_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -13,9 +14,14 @@ export async function function_wrap(f_name, f_name_wrapped) {
   await function_new_transform(f_name_wrapped, lambda);
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let code = js_code_call_args_await_maybe(unaliased, arg_names, declaration_call);
-    let declaration=js_declaration_single(ast)
-    let {body}=declaration
-    list_add(body,code)
+    let code = js_code_call_args_await_maybe(
+      unaliased,
+      arg_names,
+      declaration_call,
+    );
+    let declaration = js_declaration_single(ast);
+    let { body } = declaration;
+    list_add(body, code);
+    js_declaration_asyncify(declaration, declaration_call);
   }
 }
