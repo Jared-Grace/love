@@ -40,12 +40,7 @@ export async function marker_call_replace(arg_index, code_replacement) {
       let arg_index_at = list_get(arguments2, arg_index);
       let replacement = js_parse_expression(code_replacement);
       object_replace(arg_index_at, replacement);
-      la(js_unparse(expression));
-      return;
-      let { declarations } = next;
-      let declaration = list_single(declarations);
-      let init = js_parse_expression(init_code);
-      object_property_set(declaration, "init", init);
+      la(js_unparse(next));
     }
   });
 }
