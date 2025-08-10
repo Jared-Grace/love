@@ -8,8 +8,8 @@ import { file_overwrite } from "./file_overwrite.mjs";
 import { function_name_to_path } from "./function_name_to_path.mjs";
 import { file_open } from "./file_open.mjs";
 export async function function_new(f_name) {
-  const f_path = function_name_to_path(f_name);
-  const code_declaration = js_code_declaration(f_name, "", false);
+    const code_declaration = js_code_declaration(f_name, "", false);
+    const f_path = function_name_to_path(f_name);
   const contents = js_code_export(code_declaration);
   await file_write(f_path, contents);
   await function_open(f_name);
