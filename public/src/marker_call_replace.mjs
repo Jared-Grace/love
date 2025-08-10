@@ -1,3 +1,4 @@
+import { integer_to } from "./integer_to.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -18,25 +19,25 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export async function marker_call_replace(arg_index) {
+  arg_index = integer_to(arg_index);
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
-      if(!js_node_type_is(next, "ExpressionStatement")) {
-        return
+      if (!js_node_type_is(next, "ExpressionStatement")) {
+        return;
       }
-      let {expression}=next
-      if(js_node_type_is(expression, "AwaitExpression")) {
-        expression=object_property_get(expression,'argument')
+      let { expression } = next;
+      if (js_node_type_is(expression, "AwaitExpression")) {
+        expression = object_property_get(expression, "argument");
       }
-      if(!js_node_type_is(expression, "CallExpression")) {
-        return
+      if (!js_node_type_is(expression, "CallExpression")) {
+        return;
       }
-      let {arguments:arguments2}=expression
-      
-      la((expression));
-      return
+      let { arguments: arguments2 } = expression;
+      la(expression);
+      return;
       let { declarations } = next;
       let declaration = list_single(declarations);
       let init = js_parse_expression(init_code);
