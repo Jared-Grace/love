@@ -10,5 +10,6 @@ export async function function_auto(f_name) {
     let transforms = [js_outside_move, js_imports_missing_add];
     each(transforms, (t) => t(ast));
   });
+  function_auto_test()
 }
 function function_auto_test() {}
