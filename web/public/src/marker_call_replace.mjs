@@ -23,11 +23,15 @@ export async function marker_call_replace() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
-      if(js_node_type_is(next, "AwaitExpression")) {
-        next=object_property_get(next,'argument')
+      if(!js_node_type_is(next, "ExpressionStatement")) {
+        return
+      }
+      let {expression}=next
+      if(js_node_type_is(expression, "AwaitExpression")) {
+        expression=object_property_get(expression,'argument')
       }
       
-      la((next));
+      la((expression));
       return
       let { declarations } = next;
       let declaration = list_single(declarations);
