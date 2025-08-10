@@ -1,11 +1,13 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { marker } from "./marker.mjs";
 import { log } from "./log.mjs";
-export async function function_param_new(f_name) {
+import { list_add } from "./list_add.mjs";
+export async function function_param_new(f_name, param_name) {
   await function_transform(f_name, (ast) => {
-    marker();
-    let declaration=js_declaration_single(ast);
-    log(declaration)
+    let declaration = js_declaration_single(ast);
+    let { params } = declaration;
+    list_add(params, js_parse_expression(param_name));
   });
 }
