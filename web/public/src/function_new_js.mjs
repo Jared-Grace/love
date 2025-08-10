@@ -11,5 +11,4 @@ export async function function_new_js(f_name_unprefixed) {
     async function lambda2(ast2) {},
   );
   marker();
-  async function lambda(ast) {}
 }
