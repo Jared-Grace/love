@@ -1,4 +1,6 @@
+import { marker } from "./marker.mjs";
 import { function_new } from "./function_new.mjs";
-export function function_new_js(name) {
-  function_new(name);
+export async function function_new_js(name) {
+  marker();
+  await function_new(name);
 }
