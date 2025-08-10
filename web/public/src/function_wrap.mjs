@@ -1,1 +1,1 @@
-export function function_wrap() {}
+export function function_wrap(f_name) {}
