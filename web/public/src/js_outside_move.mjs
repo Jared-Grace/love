@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { function_new_declaration } from "./function_new_declaration.mjs";
@@ -10,6 +11,7 @@ import { function_name_to_path } from "./function_name_to_path.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function js_outside_move(ast) {
   let { body } = ast;
+  log(js_unparse(ast));
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   await each_async(fds, async (fd) => {
     let f_name = js_declaration_name(fd);
@@ -20,8 +22,8 @@ export async function js_outside_move(ast) {
   await each_async(fds, async (fd) => {
     await function_new_declaration(fd);
   });
-  await each_async(fds, async (fd) => {
+  each(fds, (fd) => {
     list_remove(body, fd);
   });
-  log(js_unparse(ast))
+  log(js_unparse(ast));
 }
