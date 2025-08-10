@@ -23,7 +23,5 @@ export async function prompt_previous() {
   let previous = list_last(difference);
   await function_run_line(previous);
 }
-function data_prompts() {
-    return data_value("prompts");
-}
+
 
