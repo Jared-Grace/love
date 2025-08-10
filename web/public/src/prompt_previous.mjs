@@ -12,7 +12,7 @@ import { list_concat } from "./list_concat.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export async function prompt_previous() {
   let inverted = await function_aliases_inverted();
-  let prompts = await data_value("prompts");
+  let prompts = await data_prompts();
   let difference = list_difference(
     prompts,
     list_concat(
@@ -23,3 +23,7 @@ export async function prompt_previous() {
   let previous = list_last(difference);
   await function_run_line(previous);
 }
+function data_prompts() {
+    return data_value("prompts");
+}
+
