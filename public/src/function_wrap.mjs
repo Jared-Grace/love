@@ -1,3 +1,4 @@
+import { js_code_return } from "./js_code_return.mjs";
 import { object_property_from } from "./object_property_from.mjs";
 import { log } from "./log.mjs";
 import { js_declaration_asyncify } from "./js_declaration_asyncify.mjs";
@@ -28,9 +29,9 @@ export async function function_wrap(f_name, f_name_wrapped) {
     let declaration = js_declaration_single(ast);
     let { body } = declaration;
     let { body: body_block } = body;
-    list_add(body_block, js_parse_expression(code));
+    list_add(body_block, js_parse_expression(js_code_return(code)));
     js_declaration_asyncify(declaration, declaration_call);
     object_property_from(declaration, "params", declaration_call);
-    js_imports_missing_add(ast)
+    js_imports_missing_add(ast);
   }
 }
