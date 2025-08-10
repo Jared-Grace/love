@@ -1,3 +1,4 @@
+import { js_return_name } from "./js_return_name.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_stack_declaration_asyncify } from "./js_stack_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -80,7 +81,10 @@ export async function marker_call(f_name_call) {
         declaration,
       );
       let body_block = js_return_name(ast_call);
-
+      if (body_block !== null) {
+        let unique = js_identifier_unique(existing, body_block);
+        code = "let " + unique + " = " + code;
+      }
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
