@@ -1,3 +1,3 @@
-export function list_slice(s, a, b) {
-  return s.slice(a, b);
+export function list_slice(list, a, b) {
+  return list.slice(a, b);
 }
