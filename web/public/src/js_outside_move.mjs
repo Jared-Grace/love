@@ -5,5 +5,6 @@ export async function js_outside_move(ast) {
   let { body } = ast;
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   marker();
-  await each_async(fds, async(fd) => {});
+  await each_async(fds, async(fd) => {
+    await function_new_declaration(declaration);});
 }
