@@ -1,3 +1,4 @@
+import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { log } from "./log.mjs";
 import { list_last } from "./list_last.mjs";
@@ -13,9 +14,10 @@ export function js_return_name(ast) {
     let last = list_last(body_block);
     if (js_node_type_is(last, "ReturnStatement")) {
       let { argument } = last;
+      let existing = js_identifiers_names(ast);
       if (js_node_type_is(argument, "Identifier")) {
         let { name: name_argument } = argument;
-        name = js_identifier_unique();
+        name = js_identifier_unique(existing, name_argument);
       }
     }
   }
