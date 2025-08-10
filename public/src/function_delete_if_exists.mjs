@@ -7,4 +7,5 @@ export async function function_delete_if_exists(n) {
     log("here");
     await function_delete(n);
   }
+    log(n);
 }
