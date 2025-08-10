@@ -13,4 +13,4 @@ export async function function_auto(f_name) {
   });
   function_auto_test();
 }
-function function_auto_test() {}
+function function_auto_test() {log()}
