@@ -54,7 +54,7 @@ export async function marker_call(f_name_call) {
         const lambda = "lambda";
         if (list_first(split) === lambda) {
           let skip_count = 1;
-          let remaining = list_slice(skip_count, list_size(split));
+          let remaining = list_slice(split,skip_count, list_size(split));
           let lamda_name = js_identifier_unique(existing, lambda);
           let code = js_code_declaration(lamda_name, "", false);
           let declaration = js_parse_statement_module(code);
