@@ -1,3 +1,4 @@
+import { js_stack_declaration_asyncify } from "./js_stack_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
@@ -78,16 +79,7 @@ export async function marker_call(f_name_call) {
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
       la(js_unparse(parsed));
-      let stack_nodes = list_filter(stack, js_node_is);
-      let fds = list_filter(stack_nodes, (n) =>
-        js_node_type_is(n, "FunctionDeclaration"),
-      );
-      let last = list_last(fds);
-      object_property_set(
-        last,
-        "async",
-        object_property_get(declaration, "async"),
-      );
+      js_stack_declaration_asyncify(stack, declaration);
     }
   });
 }
