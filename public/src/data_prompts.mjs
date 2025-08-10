@@ -5,6 +5,6 @@ import { list_size } from "./list_size.mjs";
 import { list_slice } from "./list_slice.mjs";
 export async function data_prompts() {
   let prompts = await data_value("prompts");
-  let offset = 10;
+  let offset = 25;
   return list_slice_end(prompts, offset);
 }
