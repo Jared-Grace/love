@@ -1,3 +1,4 @@
+import {function_current_set} from './function_current_set.mjs';
 import {data_transform} from './data_transform.mjs';
 import {data_save} from "./data_save.mjs";
 import {data_get} from "./data_get.mjs";
@@ -11,6 +12,5 @@ export async function function_open(f_name) {
   await function_current_set(f_name);
 }
 async function function_current_set(f_name) {
-    await data_transform("function_current", null, previous => f_name);
+  await data_transform("function_current", null, previous => f_name);
 }
-
