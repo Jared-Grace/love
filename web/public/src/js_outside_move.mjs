@@ -1,4 +1,6 @@
-import { log } from "./log.mjs"
+import { log } from "./log.mjs";
 
-export function js_outside_move( ast ){let {body}=ast
-log(body)}
+export function js_outside_move(ast) {
+  let { body } = ast;
+  log(body);
+}
