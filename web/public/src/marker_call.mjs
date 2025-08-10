@@ -1,3 +1,4 @@
+import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_stack_declaration_asyncify } from "./js_stack_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
@@ -39,8 +40,11 @@ import { list_first } from "./list_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { each } from "./each.mjs";
 export async function marker_call(f_name_call) {
-  let { declaration, unaliased } =
-    await function_parse_declaration(f_name_call);
+  let {
+    declaration,
+    unaliased,
+    ast: ast_call,
+  } = await function_parse_declaration(f_name_call);
   let f_name_current = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name_current, lambda);
@@ -75,6 +79,7 @@ export async function marker_call(f_name_call) {
         args_code,
         declaration,
       );
+      let body_block = js_declaration_single_block_blody(ast_call);
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
