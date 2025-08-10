@@ -1,3 +1,4 @@
+import { data_prompts } from "./data_prompts.mjs";
 import { function_aliases_inverted } from "./function_aliases_inverted.mjs";
 import { object_invert } from "./object_invert.mjs";
 import { function_aliases } from "./function_aliases.mjs";
@@ -23,5 +24,3 @@ export async function prompt_previous() {
   let previous = list_last(difference);
   await function_run_line(previous);
 }
-
-
