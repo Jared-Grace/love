@@ -1,1 +1,1 @@
-export function function_new_js() {}
+export function function_new_js(name) {function_new(name)}
