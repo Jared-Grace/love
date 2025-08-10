@@ -5,5 +5,6 @@ export async function function_param_new(f_name) {
   await function_transform(f_name, (ast) => {
     marker();
     js_declaration_single(parsed);
+    let declaration = js_declaration_single(ast);
   });
 }
