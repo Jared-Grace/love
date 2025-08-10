@@ -1,4 +1,3 @@
-import { function_auto_test } from "./function_auto_test.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
 import { log } from "./log.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
@@ -12,5 +11,4 @@ export async function function_auto(f_name) {
     let transforms = [js_outside_move, js_imports_missing_add];
     await each_async(transforms, async (t) => await t(ast));
   });
-  function_auto_test();
 }
