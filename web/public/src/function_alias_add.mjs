@@ -7,7 +7,7 @@ export async function function_alias_add(alias, f_name) {
   await function_alias_generic(alias, function lambda(a) {
     let { exists, aliases } = a;
     if (exists) {
-      error();
+      error(unaliased);
     }
     object_property_set(aliases, alias, f_name);
   });
