@@ -5,14 +5,14 @@ export async function visit_unique_async(node, children_get, on_each) {
   let found = [];
   await visit_async(
     node,
-    (node) => {
-      let children = children_get();
+    async (node) => {
+      let children = await children_get(node);
       return list_difference(children, found);
     },
-    (v) => {
+    async (v) => {
       let { node } = v;
       list_add(found, node);
-      on_each(v);
+      await on_each(v);
     },
   );
 }
