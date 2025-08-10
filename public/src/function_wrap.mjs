@@ -1,3 +1,4 @@
+import { object_property_from } from "./object_property_from.mjs";
 import { log } from "./log.mjs";
 import { js_declaration_asyncify } from "./js_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -10,6 +11,8 @@ import { function_new } from "./function_new.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
+import { object_property_set } from "./object_property_set.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
@@ -23,8 +26,10 @@ export async function function_wrap(f_name, f_name_wrapped) {
     );
     let declaration = js_declaration_single(ast);
     let { body } = declaration;
-    let { body:body_block } = body;
+    let { body: body_block } = body;
     list_add(body_block, js_parse_expression(code));
     js_declaration_asyncify(declaration, declaration_call);
+    let property_name = "params";
+    object_property_from(declaration, property_name, declaration_call);
   }
 }
