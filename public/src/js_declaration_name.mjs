@@ -1,0 +1,1 @@
+export function js_declaration_name(  ){}
