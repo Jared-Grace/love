@@ -7,7 +7,7 @@ import {object_property_get} from "./object_property_get.mjs";
 export function object_invert(object) {
   let inverted = {};
   each_object(object, (value, key) => {
-    let list = object_property_initialize(inverted, value);
+    let list = object_property_initialize(inverted, value, []);
     list_add(list, key);
   });
   return inverted;
