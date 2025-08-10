@@ -15,6 +15,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
@@ -29,7 +30,7 @@ export async function function_wrap(f_name, f_name_wrapped) {
     let declaration = js_declaration_single(ast);
     let { body } = declaration;
     let { body: body_block } = body;
-    list_add(body_block, js_parse_expression(js_code_return(code)));
+    list_add(body_block, js_parse_statement(js_code_return(code)));
     js_declaration_asyncify(declaration, declaration_call);
     object_property_from(declaration, "params", declaration_call);
     js_imports_missing_add(ast);
