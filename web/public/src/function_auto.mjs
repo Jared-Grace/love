@@ -11,3 +11,4 @@ export async function function_auto(f_name) {
     each(transforms, (t) => t(ast));
   });
 }
+function function_auto_test() {}
