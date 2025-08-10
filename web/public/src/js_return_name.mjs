@@ -4,7 +4,6 @@ export function js_return_name(ast) {
   let body_block = js_declaration_single_block_blody(ast);
   let name = null;
   if (list_empty_not_is(body_block)) {
-    
   }
   return name;
 }
