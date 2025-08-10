@@ -1,1 +1,6 @@
-export function function_aliases_inverted(  ){}
+import {object_invert} from './object_invert.mjs';
+import {function_aliases} from './function_aliases.mjs';
+export async function function_aliases_inverted() {
+  let aliases = await function_aliases();
+  inverted = object_invert(aliases);
+}
