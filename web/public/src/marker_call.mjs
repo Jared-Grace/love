@@ -48,6 +48,7 @@ export async function marker_call(f_name_call) {
         let arg_code = js_identifier_unique(existing, arg_name);
         let split = string_split(arg_name, "$");
         if (list_first(split) === "lambda") {
+            let skip_count=1
           let remaining = list_slice(skip_count, list_size(split));
         }
         if (list_multiple_is(split)) {
