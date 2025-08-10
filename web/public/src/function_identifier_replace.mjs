@@ -6,6 +6,6 @@ export async function function_identifier_replace() {
   await function_transform(f_name, ast => {
     let identifiers = js_identifiers(ast);
     marker();
-    each(list, lambda);
+    each(identifiers, lambda);
   });
 }
