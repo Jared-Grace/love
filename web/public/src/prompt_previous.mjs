@@ -7,7 +7,7 @@ import {list_last} from './list_last.mjs';
 import {list_filter} from './list_filter.mjs';
 import {list_difference} from './list_difference.mjs';
 export async function prompt_previous() {
-  aliases = function_aliases();
+  let aliases = await function_aliases();
   let prompts = await data_value("prompts");
   list_difference(prompts, [prompt_previous.name]);
   let previous = list_last(prompts);
