@@ -1,3 +1,4 @@
+import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
 import { js_code_declaration } from "./js_code_declaration.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_size } from "./list_size.mjs";
@@ -33,6 +34,7 @@ import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
+import { each } from "./each.mjs";
 export async function marker_call(f_name_call) {
   let { declaration, unaliased } =
     await function_parse_declaration(f_name_call);
@@ -56,6 +58,10 @@ export async function marker_call(f_name_call) {
           let lamda_name = js_identifier_unique(existing, lambda);
           let code = js_code_declaration(lamda_name, "", false);
           let declaration = js_parse_statement_module(code);
+          each(remaining, (p) => {
+            let unique = js_identifier_unique(existing, p);
+            js_declaration_param_add(declaration, unique);
+          });
         }
         if (list_multiple_is(split)) {
         }
