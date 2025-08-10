@@ -11,5 +11,5 @@ export function js_stack_declaration_asyncify(stack, declaration) {
     js_node_type_is(n, "FunctionDeclaration"),
   );
   let last = list_last(fds);
-  js_declaration_asyncify(last, declaration);
+  object_property_set(last, "async", object_property_get(last, "async",)||object_property_get(declaration, "async"));
 }
