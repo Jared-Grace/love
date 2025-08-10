@@ -7,6 +7,7 @@ import { list_filter } from "./list_filter.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
 export async function functions_search(search) {
+  terms = string_split(s, ",");
   let f_names = functions_names();
   let f_names_search = list_filter(f_names, (n) => string_includes(n, search));
   let result = {};
