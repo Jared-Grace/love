@@ -11,7 +11,11 @@ export function js_return_name(ast) {
   if (list_empty_not_is(body_block)) {
     let last = list_last(body_block);
     if (js_node_type_is(last, "ReturnStatement")) {
-      log(last);
+      let {argument}=last
+    if (js_node_type_is(argument, "Identifier")) {
+      let {name:name_argument}=argument
+      name
+    }
     }
   }
   return name;
