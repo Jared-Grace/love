@@ -3,6 +3,7 @@ import {function_parse} from "./function_parse.mjs";
 export async function function_transform(f_name, lambda$ast) {
   let parsed = await function_parse(f_name);
   let {ast} = parsed;
-  await lambda$ast(ast);
+  let result=await lambda$ast(ast);
   await file_js_unparse(parsed);
+  return result
 }
