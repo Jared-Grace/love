@@ -62,8 +62,7 @@ export async function marker_call(f_name_call) {
             let unique = js_identifier_unique(existing, p);
             js_declaration_param_add(declaration, unique);
           });
-        }
-        if (list_multiple_is(split)) {
+          arg_code = js_unparse(declaration);
         }
         return arg_code;
       });
