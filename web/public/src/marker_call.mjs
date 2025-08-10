@@ -1,3 +1,4 @@
+import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
 import { js_code_declaration } from "./js_code_declaration.mjs";
 import { list_slice } from "./list_slice.mjs";
@@ -44,19 +45,20 @@ export async function marker_call(f_name_call) {
     function lambda(a) {
       let { index, stack2, ast, stack } = marker_next_index(a);
       let existing = js_identifiers_names(ast);
-      let arg_names = list_map_property(
-        object_property_get(declaration, "params"),
-        "name",
-      );
+      let arg_names = js_declaration_params_names(declaration);
       let args_code = list_map(arg_names, (arg_name) => {
         let arg_code = js_identifier_unique(existing, arg_name);
         let split = string_split(arg_name, "$");
         const lambda = "lambda";
         if (list_first(split) === lambda) {
           let skip_count = 1;
-          let remaining = list_slice(split,skip_count, list_size(split));
+          let remaining = list_slice(split, skip_count, list_size(split));
           let lamda_name = js_identifier_unique(existing, lambda);
-          let code = js_code_declaration(lamda_name, "", object_property_get(declaration, "async"));
+          let code = js_code_declaration(
+            lamda_name,
+            "",
+            object_property_get(declaration, "async"),
+          );
           let declaration_lambda = js_parse_statement_module(code);
           each(remaining, (p) => {
             let unique = js_identifier_unique(existing, p);
