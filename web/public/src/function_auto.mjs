@@ -11,6 +11,6 @@ export async function function_auto(f_name) {
     let transforms = [js_outside_move, js_imports_missing_add];
     await each_async(transforms, async (t) => await t(ast));
   });
-  function_auto_test()
+  function_auto_test();
 }
 function function_auto_test() {}
