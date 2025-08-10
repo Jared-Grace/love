@@ -6,5 +6,6 @@ export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration, unaliased } =
     await function_parse_declaration(f_name_call);
   await function_new_transform(f_name_wrapped, lambda);
-  async function lambda(ast) {}
+  async function lambda(ast) {
+        let arg_names = js_declaration_params_names(declaration);}
 }
