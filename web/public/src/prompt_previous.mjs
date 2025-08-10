@@ -12,8 +12,8 @@ import { list_concat } from './list_concat.mjs';
 export async function prompt_previous() {
   let inverted = await function_aliases_inverted();
   let prompts = await data_value("prompts");
-  list_difference(prompts, list_concat([prompt_previous.name],inverted));
-  let previous = list_last(prompts);
+  let difference=list_difference(prompts, list_concat([prompt_previous.name],inverted));
+  let previous = list_last(difference);
   return previous;
   await function_run_line(previous);
 }
