@@ -9,6 +9,7 @@ import { marker } from "./marker.mjs";
 import { function_new } from "./function_new.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { list_add } from "./list_add.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
@@ -23,7 +24,7 @@ export async function function_wrap(f_name, f_name_wrapped) {
     let declaration = js_declaration_single(ast);
     let { body } = declaration;
     let { body:body_block } = body;
-    list_add(body_block, code);
+    list_add(body_block, js_parse_expression(code));
     js_declaration_asyncify(declaration, declaration_call);
   }
 }
