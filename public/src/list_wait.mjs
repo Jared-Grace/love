@@ -1,1 +1,3 @@
-export function list_wait(  ){}
+export function list_wait(list) {
+    return Promise.all(list);
+}
