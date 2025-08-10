@@ -11,6 +11,3 @@ export async function function_open(f_name) {
   await file_open(f_path);
   await function_current_set(f_name);
 }
-async function function_current_set(f_name) {
-  await data_transform("function_current", null, previous => f_name);
-}
