@@ -1,3 +1,4 @@
+import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
 import { js_code_declaration } from "./js_code_declaration.mjs";
@@ -68,10 +69,11 @@ export async function marker_call(f_name_call) {
         }
         return arg_code;
       });
-      let code = js_code_call_args(unaliased, args_code);
-      if (object_property_get(declaration, "async")) {
-        code = js_code_await(code);
-      }
+      let code = js_code_call_args_await_maybe(
+        unaliased,
+        args_code,
+        declaration,
+      );
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
@@ -81,7 +83,11 @@ export async function marker_call(f_name_call) {
         js_node_type_is(n, "FunctionDeclaration"),
       );
       let last = list_last(fds);
-      object_property_set(last, "async", object_property_get(declaration, "async"));
+      object_property_set(
+        last,
+        "async",
+        object_property_get(declaration, "async"),
+      );
     }
   });
 }
