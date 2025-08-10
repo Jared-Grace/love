@@ -1,1 +1,1 @@
-export function visit_unique_async(  ){}
+export async function visit_async(node, children_get, on_each){await visit_async(node, children_get, on_each)}
