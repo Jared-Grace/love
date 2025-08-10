@@ -1,0 +1,1 @@
+export function function_aliases_inverted(  ){}
