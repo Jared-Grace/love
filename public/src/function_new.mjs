@@ -18,11 +18,5 @@ export async function function_new(f_name) {
 await function_new_declaration(declaration);
   await function_open(f_name);
 }
-async function function_new_declaration(declaration) {
-    let name = js_declaration_name(declaration);
-    const f_path = function_name_to_path(name);
-    let code_declaration = js_unparse(declaration)
-    const contents = js_code_export(code_declaration);
-    await file_write(f_path, contents);
-}
+
 
