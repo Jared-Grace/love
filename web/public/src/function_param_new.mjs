@@ -5,8 +5,8 @@ import { marker } from "./marker.mjs";
 import { log } from "./log.mjs";
 import { list_add } from "./list_add.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
-export async function function_param_new(param_name) {
-    let f_name=await data_function_current_get();
+export async function function_param_new(param_name, f_name) {
+  let f_name = await data_function_current_get();
   await function_transform(f_name, (ast) => {
     let declaration = js_declaration_single(ast);
     let { params } = declaration;
