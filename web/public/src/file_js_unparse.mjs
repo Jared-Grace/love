@@ -3,7 +3,8 @@ import { js_unparse } from "./js_unparse.mjs";
 
 export async function file_js_unparse(parsed) {
     let {f_path, ast, code} = parsed;
-  let code_new = js_unparse(ast);
+  let code_unparsed = js_unparse(ast);
+  let code_new = await js_format(code_unparsed);
   if (code_new===code) {
     return;
   }
