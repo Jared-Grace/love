@@ -8,5 +8,9 @@ import {object_property_set} from "./object_property_set.mjs";
 export async function function_open(f_name) {
   const {f_path} = await function_name_to_path_unalias(f_name);
   await file_open(f_path);
-  await data_transform("function_current", null, previous=>f_name);
+  await function_current_set(f_name);
 }
+async function function_current_set(f_name) {
+    await data_transform("function_current", null, previous => f_name);
+}
+
