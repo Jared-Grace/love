@@ -79,8 +79,8 @@ export async function marker_call(f_name_call) {
         args_code,
         declaration,
       );
-      let body_block = js_declaration_single_block_blody(ast_call);
-      
+      let body_block = js_return_name(ast_call);
+
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
