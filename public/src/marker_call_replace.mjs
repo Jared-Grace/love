@@ -37,7 +37,7 @@ export async function marker_call_replace(arg_index) {
       }
       let { arguments: arguments2 } = expression;
       let arg_index_at=list_get(arguments2,arg_index)
-      la(expression);
+      la(arg_index_at);
       return;
       let { declarations } = next;
       let declaration = list_single(declarations);
