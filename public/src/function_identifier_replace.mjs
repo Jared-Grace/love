@@ -1,3 +1,4 @@
+import {data_function_current_get} from './data_function_current_get.mjs';
 import {object_replace} from './object_replace.mjs';
 import {js_parse_expression} from './js_parse_expression.mjs';
 import {js_identifiers_named} from './js_identifiers_named.mjs';
@@ -8,6 +9,7 @@ import {list_filter} from "./list_filter.mjs";
 import {marker} from "./marker.mjs";
 import {object_property_get} from "./object_property_get.mjs";
 export async function function_identifier_replace(identifier_name, replacement) {
+  let f_name = data_function_current_get();
   await function_transform(f_name, ast => {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     marker();
