@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { string_split } from "./string_split.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -45,9 +46,10 @@ export async function marker_call(f_name_call) {
       let args_code = list_map(arg_names, (arg_name) => {
         let arg_code = js_identifier_unique(existing, arg_name);
         let split = string_split(arg_name, "$");
+        if (list_first(split) === "lambda") {
+          let remaining = list_slice(skip_count, list_size(split));
+        }
         if (list_multiple_is(split)) {
-          if (list_first(split) === "lambda") {
-          }
         }
         return arg_code;
       });
