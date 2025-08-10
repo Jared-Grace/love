@@ -3,11 +3,11 @@ import { function_name_combine } from "./function_name_combine.mjs";
 import { function_identifier_replace } from "./function_identifier_replace.mjs";
 export async function function_identifier_replace_ending_remove(
   identifier_name,
-  suffix_to_add,
+  ending_to_remove,
 ) {
   marker();
   return await function_identifier_replace(
     identifier_name,
-    function_name_combine(identifier_name, suffix_to_add),
+    function_name_combine(identifier_name, ending_to_remove),
   );
 }
