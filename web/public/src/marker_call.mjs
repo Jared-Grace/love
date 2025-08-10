@@ -1,3 +1,4 @@
+import { js_code_declaration } from "./js_code_declaration.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
@@ -48,8 +49,9 @@ export async function marker_call(f_name_call) {
         let arg_code = js_identifier_unique(existing, arg_name);
         let split = string_split(arg_name, "$");
         if (list_first(split) === "lambda") {
-            let skip_count=1
+          let skip_count = 1;
           let remaining = list_slice(skip_count, list_size(split));
+          js_code_declaration();
         }
         if (list_multiple_is(split)) {
         }
