@@ -10,6 +10,4 @@ export async function function_auto(f_name) {
     let transforms = [js_outside_move, js_imports_missing_add];
     each(transforms, (t) => t(ast));
   });
-  return;
-  log();
 }
