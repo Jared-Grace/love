@@ -18,8 +18,3 @@ export function js_imports_missing(ast) {
   let imports_missing = list_intersect(missing, f_names);
   return imports_missing;
 }
-function js_declaration_name(declaration) {
-  let declaration_id = object_property_get(declaration, "id");
-  let name = object_property_get(declaration_id, "name");
-  return name;
-}
