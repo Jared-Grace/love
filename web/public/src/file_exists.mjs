@@ -14,7 +14,6 @@ export async function file_exists(file_path) {
     await access(file_path, constants.F_OK);
     return true;
   } catch (e){
-    log(e)
     return false;
   }
 }
