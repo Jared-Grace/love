@@ -7,11 +7,11 @@ import {list_add} from './list_add.mjs';
 import {data_transform} from './data_transform.mjs';
 import {list_copy} from './list_copy.mjs';
 export async function function_run_line(line) {
-  const [funcName, ...args] = line.split(" ");
+  const [f_name, ...args] = line.split(" ");
   await data_transform("prompts", [], previous => {
     list_add(previous, line);
     let unique = list_unique_reverse(previous);
     return unique;
   });
-  await function_run_git(funcName, args);
+  await function_run_git(f_name, args);
 }
