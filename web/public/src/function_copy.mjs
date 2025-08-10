@@ -8,7 +8,6 @@ export async function function_copy(f_name_old, f_name_new) {
   const {f_path: f_path_old, unaliased: unaliased_old} = await function_name_to_path_unalias(f_name_old);
   const {f_path: f_path_new, unaliased: unaliased_new} = await function_name_to_path_unalias(f_name_new);
   await file_copy(f_path_old, f_path_new);
-  marker();
   await function_transform(unaliased_new, ast => {
     js_identifier_replace(ast, unaliased_old, unaliased_new);
   });
