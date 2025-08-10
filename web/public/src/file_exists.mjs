@@ -1,3 +1,5 @@
+import { log } from "./log.mjs";
+
 export async function file_exists(file_path) {
   let fs = await import("fs");
   let { access } = fs.promises;
@@ -5,7 +7,8 @@ export async function file_exists(file_path) {
   try {
     await access(file_path, constants.F_OK);
     return true;
-  } catch {
+  } catch (e){
+    log(e)
     return false;
   }
 }
