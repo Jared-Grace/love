@@ -32,6 +32,7 @@ import { list_add } from "./list_add.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_first } from "./list_first.mjs";
+import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 export async function marker_call(f_name_call) {
   let { declaration, unaliased } =
     await function_parse_declaration(f_name_call);
@@ -51,7 +52,8 @@ export async function marker_call(f_name_call) {
         if (list_first(split) === "lambda") {
           let skip_count = 1;
           let remaining = list_slice(skip_count, list_size(split));
-          js_code_declaration();
+          let code=js_code_declaration('','',false);
+          let declaration=js_parse_statement_module(code)
         }
         if (list_multiple_is(split)) {
         }
