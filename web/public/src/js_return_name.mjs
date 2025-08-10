@@ -14,11 +14,15 @@ export function js_return_name(ast) {
     let last = list_last(body_block);
     if (js_node_type_is(last, "ReturnStatement")) {
       let { argument } = last;
-      let existing = js_identifiers_names(ast);
+      let name_new = null;
       if (js_node_type_is(argument, "Identifier")) {
         let { name: name_argument } = argument;
-        name = js_identifier_unique(existing, name_argument);
+        name_new = name_argument;
+      } else {
+        name_new = "result";
       }
+      let existing = js_identifiers_names(ast);
+      name = js_identifier_unique(existing, name_argument);
     }
   }
   return name;
