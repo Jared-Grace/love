@@ -28,6 +28,7 @@ import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_first } from "./list_first.mjs";
 export async function marker_call(f_name_call) {
   let { declaration, unaliased } =
     await function_parse_declaration(f_name_call);
@@ -37,18 +38,20 @@ export async function marker_call(f_name_call) {
     function lambda(a) {
       let { index, stack2, ast, stack } = marker_next_index(a);
       let existing = js_identifiers_names(ast);
-      let args = list_map_property(
+      let arg_names = list_map_property(
         object_property_get(declaration, "params"),
         "name",
       );
-      let mapped = list_map(args, (arg) => {
-        let arg_new = js_identifier_unique(existing, arg);
-        let split = string_split(arg, "$");
+      let args_code = list_map(arg_names, (arg_name) => {
+        let arg_code = js_identifier_unique(existing, arg_name);
+        let split = string_split(arg_name, "$");
         if (list_multiple_is(split)) {
+          if (list_first(split) === "lambda") {
+          }
         }
-        return arg_new;
+        return arg_code;
       });
-      let code = js_code_call_args(unaliased, mapped);
+      let code = js_code_call_args(unaliased, args_code);
       if (object_property_get(declaration, "async")) {
         code = js_code_await(code);
       }
