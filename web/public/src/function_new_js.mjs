@@ -6,6 +6,6 @@ import { function_new } from "./function_new.mjs";
 export async function function_new_js(f_name_unprefixed) {
   let combined = function_name_combine("js", f_name_unprefixed);
   marker();
-  await function_new(f_name);
+  await function_new(combined);
   async function lambda(ast) {}
 }
