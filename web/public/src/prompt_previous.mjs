@@ -14,6 +14,6 @@ export async function prompt_previous() {
   let prompts = await data_value("prompts");
   let difference=list_difference(prompts, list_concat([prompt_previous.name],inverted));
   let previous = list_last(difference);
-  return previous;
+  return inverted;
   await function_run_line(previous);
 }
