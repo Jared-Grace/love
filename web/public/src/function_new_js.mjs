@@ -5,7 +5,7 @@ import { marker } from "./marker.mjs";
 import { function_new } from "./function_new.mjs";
 export async function function_new_js(f_name_unprefixed) {
   marker();
-  let combined = function_name_combine(left, f_name_unprefixed);
+  let combined = function_name_combine("js", f_name_unprefixed);
   await function_new_transform(f_name_unprefixed, lambda);
   async function lambda(ast) {}
 }
