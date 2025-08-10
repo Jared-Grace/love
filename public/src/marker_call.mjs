@@ -73,15 +73,15 @@ export async function marker_call(f_name_call) {
         code = js_code_await(code);
       }
       let parsed = js_parse_statement(code);
-      la(js_unparse(parsed));
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
+      la(js_unparse(parsed));
       let stack_nodes = list_filter(stack, js_node_is);
       let fds = list_filter(stack_nodes, (n) =>
         js_node_type_is(n, "FunctionDeclaration"),
       );
       let last = list_last(fds);
-      object_property_set(last, "async", true);
+      object_property_set(last, "async", object_property_get(declaration, "async"));
     }
   });
 }
