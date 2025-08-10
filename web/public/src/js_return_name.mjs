@@ -14,15 +14,12 @@ export function js_return_name(ast) {
     let last = list_last(body_block);
     if (js_node_type_is(last, "ReturnStatement")) {
       let { argument } = last;
-      let name_new = null;
       if (js_node_type_is(argument, "Identifier")) {
         let { name: name_argument } = argument;
-        name_new = name_argument;
+        name = name_argument;
       } else {
-        name_new = "result";
+        name = "result";
       }
-      let existing = js_identifiers_names(ast);
-      name = js_identifier_unique(existing, name_new);
     }
   }
   return name;
