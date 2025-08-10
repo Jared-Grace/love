@@ -1,3 +1,4 @@
+import {object_replace} from './object_replace.mjs';
 import {js_parse_expression} from './js_parse_expression.mjs';
 import {js_identifiers_named} from './js_identifiers_named.mjs';
 import {each} from "./each.mjs";
