@@ -9,7 +9,10 @@ import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
   const file_name = file_name_html(name);
   const file_path = folder_public_combine(file_name);
-  marker();
+  const body = `<script type="module">
+    import { sayHello } from './greetings.js';
+    sayHello('World');
+  </script>`;
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +20,10 @@ export async function html_new(name) {
   <title>${name}</title>
 </head>
 <body>
-
+  ${body}
 </body>
 </html>`;
+  marker();
   await file_write(file_path, contents);
   await file_open(file_path);
 }
