@@ -1,3 +1,4 @@
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -13,6 +14,9 @@ import { js_return_name } from "./js_return_name.mjs";
 import { function_parse } from "./function_parse.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
+import { list_is } from "./list_is.mjs";
+import { list_get } from "./list_get.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = "v";
   let { node } = v;
@@ -28,15 +32,18 @@ export async function js_node_atomize(existing, v) {
       }
     }
   }
-  let stack2=list_get_end(stack,2)
+  let stack2 = list_get_end(stack, 2);
   if (js_node_type_is(stack2, "CallExpression")) {
-    let { callee } = node;
-    if (js_node_type_is(callee, "Identifier")) {
-      let { name } = callee;
-      let { ast: ast_callee } = await function_parse_declaration(name);
-      let return_name = js_return_name(ast_callee);
-      if (return_name !== null) {
-        variable_name = return_name;
+    let stack1 = list_get_end(stack, 1);
+    if (list_is(stack1)) {
+      let { callee } = stack2;
+      if (js_node_type_is(callee, "Identifier")) {
+        let { name } = callee;
+        let { declaration } = await function_parse_declaration(name);
+        let { params } = declaration;
+        let index = list_index_of(stack1, node);
+        let param = list_get(params, index);
+        variable_name = object_property_get(param, "name");
       }
     }
   }
