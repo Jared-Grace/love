@@ -1,3 +1,4 @@
+import { js_marker_insert } from "./js_marker_insert.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 import { function_imports_add } from "./function_imports_add.mjs";
@@ -20,9 +21,7 @@ export async function marker_top() {
   await function_transform(f_name, lambda);
   function lambda(ast) {
     let body = js_declaration_single_block_blody(ast);
-    let code = js_code_call_statement(marker.name);
-    let parsed = js_parse_statement(code);
-    list_add_first(body, parsed);
+    js_marker_insert("1", body, 0);
     js_imports_missing_add(ast);
   }
 }
