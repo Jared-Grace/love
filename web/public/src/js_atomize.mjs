@@ -28,9 +28,9 @@ import { function_parse } from "./function_parse.mjs";
 export async function js_atomize(ast) {
   let existing = js_identifiers(ast);
   let ces = js_type(ast, "CallExpression");
-  marker();
   let vs = js_type(ast, "Identifier");
   await each_async(ces, async (v) => {
+    marker();
     let { node } = v;
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
@@ -40,10 +40,6 @@ export async function js_atomize(ast) {
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
         let { ast: ast_callee } = await function_parse(name);
-        log({
-          name,
-          ast_callee,
-        });
         let return_name = js_return_name(ast_callee);
         if (return_name !== null) {
           variable_name = return_name;
