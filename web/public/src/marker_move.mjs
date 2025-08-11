@@ -1,3 +1,4 @@
+import { list_single } from "./list_single.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
 import { data_marker_current_get } from "./data_marker_current_get.mjs";
 import { log } from "./log.mjs";
@@ -16,11 +17,16 @@ import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
-export async function marker_move(f_name, lambda$a) {
+import { list_filter } from "./list_filter.mjs";
+export async function marker_move(m_name_from, m_name_from_to) {
   let marker_name = await data_marker_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
+    let filtered = list_filter(visitors, (v) =>
+      js_marker_named(v, marker_name),
+    );
+    let marker_v = list_single(filtered);
     await each_async(visitors, async (v) => {
       if (js_marker_named(v, marker_name)) {
         let to = object_merge(
