@@ -13,7 +13,6 @@ export async function html_new(name) {
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
-  marker("1");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +23,7 @@ export async function html_new(name) {
   ${body}
 </body>
 </html>`;
+  marker("1");
   marker("2");
   await assert_file_exists_not(file_path);
   await file_overwrite(file_path, contents);
