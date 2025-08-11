@@ -1,3 +1,6 @@
+import { js_code_let_assign } from "./js_code_let_assign.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { list_index_of_next } from "./list_index_of_next.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
@@ -12,6 +15,7 @@ import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_atomize(ast) {
   marker();
   let existing = js_identifiers(ast);
@@ -24,11 +28,13 @@ export function js_atomize(ast) {
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
       let block_index_next = list_index_of_next(stack, block);
-      let block_body = list_get(stack,block_index_next)
+      let block_body = list_get(stack, block_index_next);
       let block_index_next2 = list_index_of(stack, block_body);
-      let block_body_item = list_get(stack,block_index_next2)
-      let block_body_item_index= list_index_of(block_body, block_body_item)
-
+      let block_body_item = list_get(stack, block_index_next2);
+      let block_body_item_index = list_index_of(block_body, block_body_item);
+      let assign_code = js_code_let_assign(unique, "a");
+      let assign = js_parse_statement(assign_code);
+      log(assign);
       let { body } = block;
     }
   });
