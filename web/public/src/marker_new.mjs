@@ -1,3 +1,4 @@
+import { marker_current_set } from "./marker_current_set.mjs";
 import { js_marker_insert } from "./js_marker_insert.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -23,7 +24,8 @@ export async function marker_new() {
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let { index, stack2 } = marker_next_index(a);
-    let value_string = "2";
-    js_marker_insert(value_string, stack2, index);
+    let name = "2";
+    js_marker_insert(name, stack2, index);
+    marker_current_set(name);
   }
 }
