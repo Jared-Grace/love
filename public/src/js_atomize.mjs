@@ -34,8 +34,8 @@ export async function js_atomize(ast) {
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
-      marker();
       let variable_name = "v";
+      marker();
       let { callee } = node;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
