@@ -2,7 +2,7 @@ let should automatically be added
 
 marker to create if block
 
-marker down rename to marker_delta
+marker_down rename to marker_delta
 
 const should be converted to let
 
