@@ -22,6 +22,13 @@ import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 export async function marker_call_replace(input, code_replacement) {
+  return await marker_call_replace_generic(input, lambda2);
+  function lambda2(replaced) {
+    let replacement = js_parse_expression(code_replacement);
+    object_replace(replaced, replacement);
+  }
+}
+async function marker_call_replace_generic(input, lambda2) {
   let arg_index = integer_to(input);
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
@@ -48,7 +55,6 @@ export async function marker_call_replace(input, code_replacement) {
       }
       let { arguments: arguments2 } = expression;
       let replaced = null;
-      let replacement = js_parse_expression(code_replacement);
       if (input === "c") {
         let { callee } = expression;
         replaced = callee;
@@ -56,9 +62,9 @@ export async function marker_call_replace(input, code_replacement) {
         let arg_index_at = list_get(arguments2, arg_index);
         replaced = arg_index_at;
       }
-      object_replace(replaced, replacement);
-      let {ast}=a
-      js_imports_missing_add(ast)
+      lambda2(replaced);
+      let { ast } = a;
+      js_imports_missing_add(ast);
       la(js_unparse(next));
     }
   });
