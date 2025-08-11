@@ -10,6 +10,7 @@ import { list_get } from "./list_get.mjs";
 import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { list_is } from "./list_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 export function js_atomize(ast) {
   marker();
   let existing = js_identifiers(ast);
@@ -19,7 +20,7 @@ export function js_atomize(ast) {
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
       let unique = js_identifier_unique(existing, "v");
-      let copy = object_copy(node);
+      let copy = object_copy(node)
     }
   });
 }
