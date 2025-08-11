@@ -37,6 +37,8 @@ export async function js_atomize(ast) {
       let variable_name = "v";
       marker();
       marker(2);
+      marker(2);
+      marker(2);
       let { callee } = node;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
