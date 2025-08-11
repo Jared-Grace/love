@@ -1,3 +1,4 @@
+import { js_node_atomize } from "./js_node_atomize.mjs";
 import { list_next } from "./list_next.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_return_name } from "./js_return_name.mjs";
@@ -32,35 +33,7 @@ export async function js_atomize(ast) {
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
-await js_node_atomize(existing, v)
+      await js_node_atomize(existing, v);
     }
   });
-}
-
-async function js_node_atomize(existing, v) {
-          let variable_name = "v";
-    let { node } = v;
-    let { stack } = v;
-    
-      let { callee } = node;
-      if (js_node_type_is(callee, "Identifier")) {
-        let { name } = callee;
-        let { ast: ast_callee } = await function_parse(name);
-        let return_name = js_return_name(ast_callee);
-        if (return_name !== null) {
-          variable_name = return_name;
-        }
-      }
-          let unique = js_identifier_unique(existing, variable_name);
-          let copy = object_copy(node);
-          let block = js_stack_last(stack, "BlockStatement");
-          let block_body = list_next(stack, block);
-          let block_body_item = list_next(stack, block_body);
-          let block_body_item_index = list_index_of(block_body, block_body_item);
-          let assign_code = js_code_let_assign(unique, "a");
-          let assign = js_parse_statement(assign_code);
-          js_declare_init_set(assign, copy);
-          list_insert(block_body, block_body_item_index, assign);
-          let v2 = js_parse_expression(unique);
-          object_replace(node, v2);
 }
