@@ -1,3 +1,4 @@
+import { string_suffix_without } from "./string_suffix_without.mjs";
 import { marker } from "./marker.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { function_identifier_replace } from "./function_identifier_replace.mjs";
