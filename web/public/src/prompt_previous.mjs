@@ -22,6 +22,7 @@ export async function prompt_previous() {
       object_property_get(inverted, prompt_previous.name),
     ),
   );
-  let previous = list_last(difference);log(previous)
- return  await function_run_line(previous);
+  let previous = list_last(difference);
+  log(previous);
+  return await function_run_line(previous);
 }
