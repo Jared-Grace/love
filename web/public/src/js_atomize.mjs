@@ -34,17 +34,19 @@ export async function js_atomize(ast) {
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
       let variable_name = "v";
-      let { callee } = node;
-      if (js_node_type_is(callee, "Identifier")) {
-        let { name } = callee;
-        let { ast: ast_callee } = await function_parse(name);
-        log({
-          name,
-          ast_callee,
-        });
-        let return_name = js_return_name(ast_callee);
-        if (return_name !== null) {
-          variable_name = return_name;
+      if (js_node_type_is(node, "CallExpression")) {
+        let { callee } = node;
+        if (js_node_type_is(callee, "Identifier")) {
+          let { name } = callee;
+          let { ast: ast_callee } = await function_parse(name);
+          log({
+            name,
+            ast_callee,
+          });
+          let return_name = js_return_name(ast_callee);
+          if (return_name !== null) {
+            variable_name = return_name;
+          }
         }
       }
       let unique = js_identifier_unique(existing, variable_name);
