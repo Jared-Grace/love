@@ -15,6 +15,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { object_property_set } from "./object_property_set.mjs";
+import { object_property_delete } from "./object_property_delete.mjs";
 export async function marker_new() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
@@ -24,8 +25,9 @@ export async function marker_new() {
       let value_string='2'
       let parsed_string = js_parse_expression('""');
       object_property_set(parsed_string,'value',value_string)
+      object_property_delete(parsed_string,'raw')
       let code_string = js_unparse(parsed_string)
-      log(code_string);
+      log({code_string});
       let code = js_code_call_args(marker.name, ["2"]);
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
