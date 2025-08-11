@@ -1,3 +1,4 @@
+import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { lists_get } from "./lists_get.mjs";
@@ -39,8 +40,8 @@ export async function marker_expand() {
       const a_names = js_identifiers_to_names(arguments2);
       let { name } = callee;
       let { declaration, ast } = await function_parse_declaration(name);
+      let identifiers = js_identifiers_names(ast);
       let params_names = js_declaration_params_names(declaration);
-      
       each_pair(params_names, a_names, lambda3);
       function lambda3(param_name, a_name) {}
       let body_block = js_declaration_to_block_body(declaration);
