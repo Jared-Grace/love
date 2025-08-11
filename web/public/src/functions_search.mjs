@@ -11,7 +11,7 @@ import { functions_names } from "./functions_names.mjs";
 import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
 export async function functions_search(search) {
   let f_names = functions_names();
-  let f_names_search = search_generic(search, f_names, function_name_to_path);
+  let result = search_generic(search, f_names, function_name_to_path);
 
   return result;
 }
