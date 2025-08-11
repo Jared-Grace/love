@@ -17,7 +17,7 @@ import { list_is } from "./list_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_atomize(ast) {
-  marker();
+  marker(marker());
   let existing = js_identifiers(ast);
   js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
@@ -31,6 +31,7 @@ export function js_atomize(ast) {
       let block_body = list_get(stack, block_index_next);
       let block_index_next2 = list_index_of(stack, block_body);
       let block_body_item = list_get(stack, block_index_next2);
+      log({block_body_item,block_body});
       let block_body_item_index = list_index_of(block_body, block_body_item);
       let assign_code = js_code_let_assign(unique, "a");
       let assign = js_parse_statement(assign_code);
