@@ -1,1 +1,1 @@
-export function js_atomize() {}
+export function js_atomize(ast) {}
