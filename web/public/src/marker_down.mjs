@@ -22,6 +22,8 @@ export async function marker_down(delta) {
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let { stack2, stack1, ast } = a;
+    let next = marker_next_get(a);
+    list_remove(stack2, stack1);
     let vs = list_adder((la) => {
       js_visit(ast, (v) => {
         let { node, stack } = v;
@@ -34,8 +36,6 @@ export async function marker_down(delta) {
         }
       });
     });
-    let next = marker_next_get(a);
-    list_remove(stack2, stack1);
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
     let index_new = next_index + integer_to(delta);
@@ -47,6 +47,8 @@ export async function marker_down(delta) {
       let stack1_v_new = list_get_end(stack, 1);
       let result = list_is(stack1_v_new);
       assert(result);
+      log(stack1_v_new, )
+      log(node)
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, stack1);
     }
