@@ -1,3 +1,4 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -34,6 +35,12 @@ export async function marker_call_replace(input, code_replacement) {
         if (!js_node_type_is(expression, "CallExpression")) {
           return;
         }
+      } else if (js_node_type_is(next, "VariableDeclaration")) {
+        let { declarations } = next;
+        if (list_multiple_is(declarations)) {
+          return;
+        }
+        let declaration = list_single(declarations);
       }
       let { arguments: arguments2 } = expression;
       let replaced = null;
