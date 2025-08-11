@@ -41,6 +41,8 @@ export async function marker_call_replace(input, code_replacement) {
           return;
         }
         let declaration = list_single(declarations);
+        log(declaration)
+        return
       }
       let { arguments: arguments2 } = expression;
       let replaced = null;
