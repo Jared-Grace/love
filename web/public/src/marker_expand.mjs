@@ -33,7 +33,6 @@ export async function marker_expand() {
       let { declaration } = await function_parse_declaration(name);
       let params_names = js_declaration_params_names(declaration);
       let { arguments: arguments2 } = expression;
-      assert(list_all(arguments2, js_identifier_is));
       const a_names = js_identifiers_to_names(arguments2);
       let body_block = js_declaration_to_block_body(declaration);
       la(js_unparse(next));
