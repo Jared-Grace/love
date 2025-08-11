@@ -23,8 +23,12 @@ export function js_atomize(ast) {
       let unique = js_identifier_unique(existing, "v");
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
-      let block_index = list_index(stack, block);
-      let block_index_new = index+1
+      let block_index_next = list_index_of_next(stack, block);
+      let block_body = list_get(stack,block_index_next)
+      let block_index_next2 = list_index_of(stack, block_body);
+      let block_body_item = list_get(stack,block_index_next2)
+      let block_body_item_index= list_index_of(block_body, block_body_item)
+
       let { body } = block;
     }
   });
