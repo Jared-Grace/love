@@ -6,11 +6,9 @@ import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 export function js_atomize(ast) {
   marker();
-  js_visit_type(ast, "BlockStatement", (v) => {
+  js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
-    let { body } = node;
-    each(body, (b) => {
-      log(b);
-    });
+    let { parent } = node;
+    log(parent);
   });
 }
