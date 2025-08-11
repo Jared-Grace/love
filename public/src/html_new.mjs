@@ -26,7 +26,7 @@ export async function html_new(name) {
   ${body}
 </body>
 </html>`;
-  marker("2");
   await file_overwrite(file_path, contents);
+  marker("2");
   await file_open(file_path);
 }
