@@ -16,6 +16,9 @@ import { marker } from "./marker.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
+import { list_insert } from "./list_insert.mjs";
+import { object_replace } from "./object_replace.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_atomize(ast) {
   marker(marker());
   let existing = js_identifiers(ast);
@@ -31,15 +34,12 @@ export function js_atomize(ast) {
       let block_body = list_get(stack, block_index_next);
       let block_index_next2 = list_index_of_next(stack, block_body);
       let block_body_item = list_get(stack, block_index_next2);
-      log({
-        block_body_item,
-        block_body,
-      });
       let block_body_item_index = list_index_of(block_body, block_body_item);
       let assign_code = js_code_let_assign(unique, "a");
       let assign = js_parse_statement(assign_code);
-      log(assign);
-      let { body } = block;
+      js_declare_init_set(assign, copy);
+      list_insert(block_body, block_body_item_index, assign)
+object_replace(node, js_parse_expression(unique))
     }
   });
 }
