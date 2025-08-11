@@ -12,6 +12,9 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { each_async } from "./each_async.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_first } from "./list_first.mjs";
 export async function function_transform_marker(f_name, lambda$a) {
   let marker_name = await data_marker_current_get();
   await function_transform(f_name, lambda_marker);
@@ -33,6 +36,19 @@ export async function function_transform_marker(f_name, lambda$a) {
       }
       let { name } = callee;
       if (name !== marker.name) {
+        return;
+      }
+      let { arguments:arguments2 } = node;
+      if (list_empty_is(arguments2)) {
+        return;
+      }
+      let a_first=list_first(arguments2)
+      
+      if (!js_node_type_is(a_first, "Literal")) {
+        return;
+      }
+      let { value } = a_first;
+      if (value!==marker_name) {
         return;
       }
       let stack2 = list_get_end(stack, 2);
