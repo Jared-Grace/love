@@ -1,3 +1,4 @@
+import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
@@ -9,9 +10,6 @@ export async function function_params_new(param_names_comma) {
   let param_names = string_split(param_names_comma, ",");
   let f_name = await data_function_current_get();
   await function_transform(f_name, (ast) => {
-    let declaration = js_declaration_single(ast);
-    each(param_names, (param_name) =>
-      js_declaration_param_add(declaration, param_name),
-    );
+    js_declaration_single_params_add(ast, param_names);
   });
 }
