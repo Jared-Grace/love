@@ -1,3 +1,4 @@
+import { marker_next_get } from "./marker_next_get.mjs";
 import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { log } from "./log.mjs";
@@ -23,14 +24,17 @@ export async function marker_down(delta) {
         if (js_stack_list_block_is(stack, 1)) {
           la(node);
         } else if (js_stack_list_block_is(stack, 0)) {
-            if (list_empty_is(node)) {
-
-          la(node);
-            }
+          if (list_empty_is(node)) {
+            la(node);
+          }
         }
       });
     });
-    log({nodes,stack1});
+    marker_next_get(a);
+    log({
+      nodes,
+      stack1,
+    });
     return;
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
