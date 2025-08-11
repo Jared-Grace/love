@@ -10,9 +10,7 @@ export async function html_new(name) {
   const file_name = file_name_html(name);
   const file_path = folder_public_combine(file_name);
   marker();
-  await file_write(
-    file_path,
-    `<!DOCTYPE html>
+  let v = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +19,7 @@ export async function html_new(name) {
 <body>
 
 </body>
-</html>`,
-  );
+</html>`;
+  await file_write(file_path, v);
   await file_open(file_path);
 }
