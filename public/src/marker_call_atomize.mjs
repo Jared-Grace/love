@@ -1,3 +1,4 @@
+import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
 import { js_identifiers } from "./js_identifiers.mjs";
 import { marker_call_replace_generic } from "./marker_call_replace_generic.mjs";
@@ -26,13 +27,12 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { list_adder } from "./list_adder.mjs";
-export async function marker_call_atomize(input, code_replacement) {
+export async function marker_call_atomize(input) {
   return await marker_call_replace_generic(input, lambda);
-  function lambda(a) {
+  async function lambda(a) {
     let { replaced, ast } = a;
-    js_visit_match(ast, replaced);
     let existing = js_identifiers(ast);
-    let replacement = js_parse_expression(code_replacement);
-    object_replace(replaced, replacement);
+    let v_match = js_visit_match(ast, replaced);
+    await js_node_atomize(existing, v_match);
   }
 }
