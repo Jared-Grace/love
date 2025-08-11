@@ -1,3 +1,4 @@
+import { assert_file_exists_not } from "./assert_file_exists_not.mjs";
 import { marker } from "./marker.mjs";
 import { file_write } from "./file_write.mjs";
 import { file_open } from "./file_open.mjs";
@@ -7,6 +8,7 @@ import { folder_public } from "./folder_public.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
+  marker("1");
   const file_name = file_name_html(name);
   const file_path = folder_public_combine(file_name);
   const body = `<script type="module">
