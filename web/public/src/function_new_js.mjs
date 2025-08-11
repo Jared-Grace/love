@@ -1,3 +1,4 @@
+import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { function_new_transform } from "./function_new_transform.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -8,5 +9,6 @@ export async function function_new_js(f_name_unprefixed) {
   await function_new(combined);
   let result = await function_transform(combined, async function lambda(ast) {
     marker();
+    js_declaration_single_params_add(ast2, param_names);
   });
 }
