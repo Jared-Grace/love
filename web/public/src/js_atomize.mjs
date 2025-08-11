@@ -22,8 +22,9 @@ export function js_atomize(ast) {
     if (list_is(stack1)) {
       let unique = js_identifier_unique(existing, "v");
       let copy = object_copy(node);
-      let last = js_stack_last(stack, "BlockStatement");
-      let { body } = last;
+      let block = js_stack_last(stack, "BlockStatement");
+      let block_index = list_index(stack, block);
+      let { body } = block;
     }
   });
 }
