@@ -22,7 +22,7 @@ export async function marker_down(delta) {
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let { stack2, stack1, ast } = a;
-    let next = marker_next_get(a);
+    let {next} = marker_next_get(a);
     list_remove(stack2, stack1);
     let vs = list_adder((la) => {
       js_visit(ast, (v) => {
