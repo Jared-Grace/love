@@ -24,6 +24,7 @@ export function js_atomize(ast) {
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
       let block_index = list_index(stack, block);
+      let block_index_new = index+1
       let { body } = block;
     }
   });

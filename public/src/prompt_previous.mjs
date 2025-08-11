@@ -22,5 +22,5 @@ export async function prompt_previous() {
     ),
   );
   let previous = list_last(difference);
-  await function_run_line(previous);
+ return  await function_run_line(previous);
 }
