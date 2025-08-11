@@ -8,9 +8,9 @@ import { folder_public } from "./folder_public.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
-  marker("1");
   const file_name = file_name_html(name);
   const file_path = folder_public_combine(file_name);
+  marker("1");
   const body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
