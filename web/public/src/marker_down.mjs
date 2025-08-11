@@ -11,6 +11,7 @@ import { list_get_end } from "./list_get_end.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { list_is } from "./list_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 export async function marker_down(delta) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
@@ -21,6 +22,11 @@ export async function marker_down(delta) {
         let { node, stack } = v;
         if (js_stack_list_block_is(stack, 1)) {
           la(node);
+        } else if (js_stack_list_block_is(stack, 0)) {
+            if (list_empty_is(node)) {
+
+          la(node);
+            }
         }
       });
     });
