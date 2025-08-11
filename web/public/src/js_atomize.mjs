@@ -6,11 +6,15 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { list_get } from "./list_get.mjs";
 import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
+import { list_is } from "./list_is.mjs";
 export function js_atomize(ast) {
   marker();
   js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
     let { stack } = v;
-    log(list_get_end(stack, 1));
+      const stack1 = list_get_end(stack, 1);
+    if (list_is(stack1)){
+        
+    }
   });
 }
