@@ -1,3 +1,5 @@
+import { list_add } from "./list_add.mjs";
+import { list_get } from "./list_get.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { integer_to } from "./integer_to.mjs";
@@ -17,28 +19,27 @@ export async function marker_down(delta) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack2, stack1, node, ast } = a;
+    let { stack2, stack1, ast } = a;
     let nodes = list_adder((la) => {
       js_visit(ast, (v) => {
         let { node, stack } = v;
         if (js_stack_list_block_is(stack, 1)) {
-          la(node);
+          la(v);
         } else if (js_stack_list_block_is(stack, 0)) {
           if (list_empty_is(node)) {
-            la(node);
+            la(v);
           }
         }
       });
     });
     let next = marker_next_get(a);
-    log({
-      nodes,
-      next,
-    });
-    return;
-    let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
-    let index_new = index + integer_to(delta);
-    list_insert(stack2, index_new, stack1);
+    let next_index = list_index_of(nodes, next);
+    let index_new = next_index + integer_to(delta);
+    let v_new = list_get(nodes, index_new);
+    let { stack, node } = v_new;
+    if (list_is(node) && list_empty_is(node)) {
+      list_add(node, stack1);
+    }
   }
 }
