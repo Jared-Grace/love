@@ -11,5 +11,5 @@ import { data_transform } from "./data_transform.mjs";
 import { list_copy } from "./list_copy.mjs";
 export async function function_run_line(line) {
   let { f_name, args } = await function_run_line_parse(line);
-  await function_run(f_name, args);
+  return await function_run(f_name, args);
 }
