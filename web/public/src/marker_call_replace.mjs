@@ -27,22 +27,23 @@ export async function marker_call_replace(input, code_replacement) {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let next = marker_next_get(a);
+      let expression = null;
       if (js_node_type_is(next, "ExpressionStatement")) {
-        let { expression } = next;
-        if (js_node_type_is(expression, "AwaitExpression")) {
-          expression = object_property_get(expression, "argument");
-        }
-        if (!js_node_type_is(expression, "CallExpression")) {
-          return;
-        }
+        let { expression: expression_next } = next;
+        expression = expression_next;
       } else if (js_node_type_is(next, "VariableDeclaration")) {
         let { declarations } = next;
         if (list_multiple_is(declarations)) {
           return;
         }
         let declaration = list_single(declarations);
-        log(declaration)
-        return
+        expression = object_property_get(declaration, "init");
+      }
+      if (js_node_type_is(expression, "AwaitExpression")) {
+        expression = object_property_get(expression, "argument");
+      }
+      if (!js_node_type_is(expression, "CallExpression")) {
+        return;
       }
       let { arguments: arguments2 } = expression;
       let replaced = null;
