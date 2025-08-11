@@ -10,7 +10,7 @@ export function js_atomize(ast) {
   marker();
   js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
-    let { stack } = node;
+    let { stack } = v;
     log(list_get_end(stack, 1));
   });
 }
