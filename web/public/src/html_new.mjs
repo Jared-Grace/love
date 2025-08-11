@@ -24,6 +24,7 @@ export async function html_new(name) {
 </body>
 </html>`;
   marker();
-  await file_write(file_path, contents);
+  await assert_file_exists_not(file_path);
+  await file_overwrite(file_path, contents);
   await file_open(file_path);
 }

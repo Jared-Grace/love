@@ -57,8 +57,8 @@ export async function marker_expand() {
         js_identifier_replace(ast, param_name, a_name);
       }
       let body_block = js_declaration_to_block_body(declaration);
-      list_remove(stack2, next);
       let { stack2 } = a;
+      list_remove(stack2, next);
       each_reverse(body_block, lambda4);
       function lambda4(item) {
         list_insert(stack2, index, item);
