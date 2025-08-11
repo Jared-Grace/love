@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_declare_init_set } from "./js_declare_init_set.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
@@ -23,9 +24,10 @@ import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
-export function js_atomize(ast) {
+export async function js_atomize(ast) {
   let existing = js_identifiers(ast);
-  js_visit_type(ast, "CallExpression", (v) => {
+  let vs = js_type(ast, "CallExpression");
+  await each_async(vs, async (v) => {
     let { node } = v;
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
@@ -34,7 +36,11 @@ export function js_atomize(ast) {
       let { callee } = node;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
-        let { ast: ast_callee } = function_parse(name);
+        let { ast: ast_callee } = await function_parse(name);
+        log({
+          name,
+          ast_callee,
+        });
         let return_name = js_return_name(ast_callee);
         if (return_name !== null) {
           variable_name = return_name;
