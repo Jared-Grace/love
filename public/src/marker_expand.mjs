@@ -1,3 +1,4 @@
+import { each_reverse } from "./each_reverse.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_intersect } from "./list_intersect.mjs";
@@ -35,7 +36,7 @@ export async function marker_expand() {
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda2);
     async function lambda2(a) {
-      let {next} = marker_next_get(a);
+      let { next, index } = marker_next_get(a);
       let expression = js_statement_call_get(next);
       if (expression === null) {
         return;
@@ -56,11 +57,10 @@ export async function marker_expand() {
         js_identifier_replace(ast, param_name, a_name);
       }
       let body_block = js_declaration_to_block_body(declaration);
-      let {stack2}=a;
-      let reversed = list_copy_reverse(body_block)
-      each(reversed, lambda4)
-            function lambda4(item) {
-                list_insert(stack2, )
+      let { stack2 } = a;
+      each_reverse(body_block, lambda4);
+      function lambda4(item) {
+        list_insert(stack2, index, item);
       }
       let output = js_unparse(next);
       la(output);
