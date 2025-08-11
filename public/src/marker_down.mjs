@@ -14,7 +14,7 @@ export async function marker_down(delta) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack2, stack1, node } = a;
+    let { stack2, stack1, node ,ast} = a;
     let nodes = list_adder((la) => {
       js_visit(ast, (v) => {
         let { node, stack } = v;
