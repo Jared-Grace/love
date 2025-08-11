@@ -20,6 +20,7 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_atomize(ast) {
   let existing = js_identifiers(ast);
   js_visit_type(ast, "CallExpression", (v) => {
@@ -27,6 +28,11 @@ export function js_atomize(ast) {
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
+        let {callee}=node;
+        if (js_node_type_is(callee,'Identifier')) {
+           let {name}=callee
+
+        }
       let unique = js_identifier_unique(existing, "v");
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
