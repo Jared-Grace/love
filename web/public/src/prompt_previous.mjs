@@ -11,6 +11,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { object_property_get } from "./object_property_get.mjs";
+import { log } from "./log.mjs";
 export async function prompt_previous() {
   let inverted = await function_aliases_inverted();
   let prompts = await data_prompts();
@@ -21,6 +22,6 @@ export async function prompt_previous() {
       object_property_get(inverted, prompt_previous.name),
     ),
   );
-  let previous = list_last(difference);
+  let previous = list_last(difference);log(previous)
  return  await function_run_line(previous);
 }
