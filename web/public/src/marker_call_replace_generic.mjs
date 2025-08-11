@@ -18,24 +18,8 @@ export async function marker_call_replace_generic(input, lambda$a) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
       let next = marker_next_get(a);
-      let expression = null;
-      if (js_node_type_is(next, "ExpressionStatement")) {
-        let {expression: expression_next} = next;
-        expression = expression_next;
-      } else if (js_node_type_is(next, "VariableDeclaration")) {
-        let {declarations} = next;
-        if (list_multiple_is(declarations)) {
-          return;
-        }
-        let declaration = list_single(declarations);
-        expression = object_property_get(declaration, "init");
-      }
-      if (js_node_type_is(expression, "AwaitExpression")) {
-        expression = object_property_get(expression, "argument");
-      }
-      if (!js_node_type_is(expression, "CallExpression")) {
-        return;
-      }
+      let expression = js_statement_call_get(next);
+      if (expression===null){return}
       let {arguments: arguments2} = expression;
       let replaced = null;
       if (input === "c") {
@@ -52,3 +36,25 @@ export async function marker_call_replace_generic(input, lambda$a) {
     }
   });
 }
+function js_statement_call_get(next) {
+    let expression = null;
+    if (js_node_type_is(next, "ExpressionStatement")) {
+        let { expression: expression_next } = next;
+        expression = expression_next;
+    } else if (js_node_type_is(next, "VariableDeclaration")) {
+        let { declarations } = next;
+        if (list_multiple_is(declarations)) {
+            return null;
+        }
+        let declaration = list_single(declarations);
+        expression = object_property_get(declaration, "init");
+    }
+    if (js_node_type_is(expression, "AwaitExpression")) {
+        expression = object_property_get(expression, "argument");
+    }
+    if (!js_node_type_is(expression, "CallExpression")) {
+        return null;
+    }
+    return expression;
+}
+
