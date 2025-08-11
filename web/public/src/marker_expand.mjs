@@ -26,6 +26,9 @@ export async function marker_expand() {
       let { callee } = expression;
       let { name } = callee;
       let { declaration } = await function_parse_declaration(name);
+      
+      let { params } = declaration;
+      let { arguments:arguments2 } = expression;
       let body_block = js_declaration_to_block_body(declaration);
       la(js_unparse(next));
     }
