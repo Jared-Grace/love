@@ -16,7 +16,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
   let f_name = await data_function_current_get();
   return list_adder_async(async la => {
     await function_transform_marker(f_name, lambda);
-    function lambda(a) {
+    async function lambda(a) {
       let next = marker_next_get(a);
       let expression = null;
       if (js_node_type_is(next, "ExpressionStatement")) {
@@ -45,7 +45,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
         let arg_index_at = list_get(arguments2, arg_index);
         replaced = arg_index_at;
       }
-      lambda$a(object_merge({replaced},a));
+      await lambda$a(object_merge({replaced},a));
       let {ast} = a;
       js_imports_missing_add(ast);
       la(js_unparse(next));
