@@ -1,3 +1,4 @@
+import { js_declare_init_set } from "./js_declare_init_set.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
@@ -38,8 +39,8 @@ export function js_atomize(ast) {
       let assign_code = js_code_let_assign(unique, "a");
       let assign = js_parse_statement(assign_code);
       js_declare_init_set(assign, copy);
-      list_insert(block_body, block_body_item_index, assign)
-object_replace(node, js_parse_expression(unique))
+      list_insert(block_body, block_body_item_index, assign);
+      object_replace(node, js_parse_expression(unique));
     }
   });
 }
