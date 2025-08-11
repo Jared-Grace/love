@@ -27,14 +27,13 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 export async function js_atomize(ast) {
   let existing = js_identifiers(ast);
-  let vs = js_type(ast, "CallExpression");
-  await each_async(vs, async (v) => {
+  let ces = js_type(ast, "CallExpression");
+  await each_async(ces, async (v) => {
     let { node } = v;
     let { stack } = v;
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
       let variable_name = "v";
-      if (js_node_type_is(node, "CallExpression")) {
         let { callee } = node;
         if (js_node_type_is(callee, "Identifier")) {
           let { name } = callee;
@@ -48,7 +47,6 @@ export async function js_atomize(ast) {
             variable_name = return_name;
           }
         }
-      }
       let unique = js_identifier_unique(existing, variable_name);
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
