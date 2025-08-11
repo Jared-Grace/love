@@ -17,7 +17,7 @@ export async function js_outside_move(ast) {
     let f_path = function_name_to_path(f_name);
     await assert_file_exists_not(f_path);
   });
-  marker();
+  marker("1");
   await each_async(fds, async (fd) => {
     await function_new_declaration(fd);
   });

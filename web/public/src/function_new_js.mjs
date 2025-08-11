@@ -8,7 +8,7 @@ export async function function_new_js(f_name_unprefixed) {
   let combined = function_name_combine("js", f_name_unprefixed);
   await function_new(combined);
   let result = await function_transform(combined, async function lambda(ast) {
-    marker();
+    marker("1");
     js_declaration_single_params_add(ast, ["ast"]);
   });
 }

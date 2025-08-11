@@ -16,7 +16,7 @@ export async function function_identifier_replace(identifier_name, replacement) 
   await function_transform(f_name, ast => {
     let identifiers_named = js_identifiers_named(ast, identifier_name);log(identifier_name)
     assert_not(list_empty_is(identifiers_named));
-    marker();
+    marker("1");
     each(identifiers_named, i => object_replace(i, js_parse_expression(replacement)));
   });
 }

@@ -7,7 +7,7 @@ import { marker } from "./marker.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
 export async function function_auto(f_name) {
-  marker();
+  marker("1");
   await function_transform(f_name, async (ast) => {
     let transforms = [js_outside_move, js_imports_missing_add, js_atomize];
     await each_async(transforms, async (t) => await t(ast));
