@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { js_type } from "./js_type.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -7,6 +8,9 @@ export function js_atomize(ast) {
   marker();
   js_visit_type(ast, "BlockStatement", (v) => {
     let { node } = v;
-    log(node);
+    let { body } = node;
+    each(body, (b) => {
+      log(b);
+    });
   });
 }
