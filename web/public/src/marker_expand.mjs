@@ -1,3 +1,5 @@
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { js_statement_call_get } from "./js_statement_call_get.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_get } from "./list_get.mjs";
@@ -9,15 +11,20 @@ import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { function_parse } from "./function_parse.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
-    function lambda(a) {
+    async function lambda(a) {
       let next = marker_next_get(a);
-      if (js_node_type_is(next,'ExpressionStatement')) {
-        
+      let expression = js_statement_call_get(next);
+      if (expression === null) {
+        return;
       }
+      let { callee } = expression;
+      let { name } = callee;
+      let { declaration } = await function_parse_declaration(name);
       la(js_unparse(next));
     }
   });
