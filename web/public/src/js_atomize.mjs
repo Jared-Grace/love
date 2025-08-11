@@ -21,7 +21,8 @@ import { list_insert } from "./list_insert.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_atomize(ast) {
-  marker(marker());
+  let v = marker();
+  marker(v);
   let existing = js_identifiers(ast);
   js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
@@ -40,7 +41,8 @@ export function js_atomize(ast) {
       let assign = js_parse_statement(assign_code);
       js_declare_init_set(assign, copy);
       list_insert(block_body, block_body_item_index, assign);
-      object_replace(node, js_parse_expression(unique));
+      let v2 = js_parse_expression(unique);
+      object_replace(node, v2);
     }
   });
 }
