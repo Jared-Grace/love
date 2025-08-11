@@ -1,3 +1,4 @@
+import { function_exists } from "./function_exists.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -39,11 +40,13 @@ export async function js_node_atomize(existing, v) {
       let { callee } = stack2;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
-        let { declaration } = await function_parse_declaration(name);
-        let { params } = declaration;
-        let index = list_index_of(stack1, node);
-        let param = list_get(params, index);
-        variable_name = object_property_get(param, "name");
+        if (await function_exists(name)) {
+          let { declaration } = await function_parse_declaration(name);
+          let { params } = declaration;
+          let index = list_index_of(stack1, node);
+          let param = list_get(params, index);
+          variable_name = object_property_get(param, "name");
+        }
       }
     }
   }
