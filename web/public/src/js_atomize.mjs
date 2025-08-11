@@ -51,8 +51,7 @@ export async function js_atomize(ast) {
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
       let block_body = list_next(stack, block);
-      let block_index_next2 = list_index_of_next(stack, block_body);
-      let block_body_item = list_get(stack, block_index_next2);
+      let block_body_item = list_next(stack, block_body);
       let block_body_item_index = list_index_of(block_body, block_body_item);
       let assign_code = js_code_let_assign(unique, "a");
       let assign = js_parse_statement(assign_code);
