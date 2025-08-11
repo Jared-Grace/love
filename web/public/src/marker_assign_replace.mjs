@@ -22,7 +22,7 @@ export async function marker_assign_replace(init_code) {
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let next = marker_next_get(a);
+      let {next} = marker_next_get(a);
       let init = js_parse_expression(init_code);
       js_declare_init_set(next, init);
       la(js_unparse(next));

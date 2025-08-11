@@ -29,12 +29,13 @@ import { assert } from "./assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { error } from "./error.mjs";
+import { each } from "./each.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda2);
     async function lambda2(a) {
-      let next = marker_next_get(a);
+      let {next} = marker_next_get(a);
       let expression = js_statement_call_get(next);
       if (expression === null) {
         return;
@@ -55,6 +56,12 @@ export async function marker_expand() {
         js_identifier_replace(ast, param_name, a_name);
       }
       let body_block = js_declaration_to_block_body(declaration);
+      let {stack2}=a;
+      let reversed = list_copy_reverse(body_block)
+      each(reversed, lambda4)
+            function lambda4(item) {
+                list_insert(stack2, )
+      }
       let output = js_unparse(next);
       la(output);
     }
