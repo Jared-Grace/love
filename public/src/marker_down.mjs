@@ -30,10 +30,10 @@ export async function marker_down(delta) {
         }
       });
     });
-    marker_next_get(a);
+    let next = marker_next_get(a);
     log({
       nodes,
-      stack1,
+      next,
     });
     return;
     let index = list_index_of(stack2, stack1);
