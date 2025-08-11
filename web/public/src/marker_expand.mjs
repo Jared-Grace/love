@@ -1,3 +1,4 @@
+import { each_pair } from "./each_pair.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { lists_get } from "./lists_get.mjs";
 import { each_index } from "./each_index.mjs";
@@ -22,11 +23,12 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 import { assert } from "./assert.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_first } from "./list_first.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
-    await function_transform_marker(f_name, lambda);
-    async function lambda(a) {
+    await function_transform_marker(f_name, lambda2);
+    async function lambda2(a) {
       let next = marker_next_get(a);
       let expression = js_statement_call_get(next);
       if (expression === null) {
@@ -38,11 +40,8 @@ export async function marker_expand() {
       let params_names = js_declaration_params_names(declaration);
       let { arguments: arguments2 } = expression;
       const a_names = js_identifiers_to_names(arguments2);
-      let other_lists = [a_names];
-      each_index(params_names, (item, index) => {
-        let others_items = lists_get(other_lists, index);
-        let items_all = list_concat([item], others_items);
-      });
+      each_pair(params_names, a_names, lambda3);
+      function lambda3(param_name, a_name) {}
       let body_block = js_declaration_to_block_body(declaration);
       let output = js_unparse(next);
       la(output);
