@@ -1,3 +1,4 @@
+import { js_identifiers } from "./js_identifiers.mjs";
 import { marker_call_replace_generic } from "./marker_call_replace_generic.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -25,8 +26,9 @@ import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 export async function marker_call_atomize(input, code_replacement) {
   return await marker_call_replace_generic(input, lambda);
   function lambda(a) {
-    let {replaced,ast}=a
-      let existing = js_identifiers(ast);
+    let { replaced, ast } = a;
+    marker_next_get();
+    let existing = js_identifiers(ast);
     let replacement = js_parse_expression(code_replacement);
     object_replace(replaced, replacement);
   }
