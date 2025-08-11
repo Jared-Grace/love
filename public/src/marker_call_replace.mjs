@@ -46,7 +46,7 @@ export async function marker_call_replace(input, code_replacement) {
         let arg_index_at = list_get(arguments2, arg_index);
         replaced = arg_index_at;
       }
-      object_replace(arg_index_at, replacement);
+      object_replace(replaced, replacement);
       la(js_unparse(next));
     }
   });
