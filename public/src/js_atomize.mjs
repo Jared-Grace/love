@@ -1,3 +1,4 @@
+import { list_next } from "./list_next.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_declare_init_set } from "./js_declare_init_set.mjs";
@@ -49,8 +50,7 @@ export async function js_atomize(ast) {
       let unique = js_identifier_unique(existing, variable_name);
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
-      let block_index_next = list_index_of_next(stack, block);
-      let block_body = list_get(stack, block_index_next);
+      let block_body = list_next(stack, block);
       let block_index_next2 = list_index_of_next(stack, block_body);
       let block_body_item = list_get(stack, block_index_next2);
       let block_body_item_index = list_index_of(block_body, block_body_item);
