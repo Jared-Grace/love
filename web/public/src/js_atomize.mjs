@@ -26,9 +26,9 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 export async function js_atomize(ast) {
-  marker();
   let existing = js_identifiers(ast);
   let ces = js_type(ast, "CallExpression");
+  marker();
   await each_async(ces, async (v) => {
     let { node } = v;
     let { stack } = v;
