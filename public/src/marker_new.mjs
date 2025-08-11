@@ -13,15 +13,16 @@ import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
+import { js_code_call_args } from "./js_code_call_args.mjs";
 export async function marker_new() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let { index, stack2 } = marker_next_index(a);
-      let code = js_code_call_statement(marker.name);
+      let code = js_code_call_args(marker.name, ['2']);
       let parsed = js_parse_statement(code);
-      list_insert(stack2, index, js_parse_expression());
+      list_insert(stack2, index, parsed);
     }
   });
 }
