@@ -1,3 +1,4 @@
+import { marker_call_replace_generic } from "./marker_call_replace_generic.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { integer_to } from "./integer_to.mjs";
@@ -27,45 +28,4 @@ export async function marker_call_replace(input, code_replacement) {
     let replacement = js_parse_expression(code_replacement);
     object_replace(replaced, replacement);
   }
-}
-async function marker_call_replace_generic(input, lambda2) {
-  let arg_index = integer_to(input);
-  let f_name = await data_function_current_get();
-  return list_adder_async(async (la) => {
-    await function_transform_marker(f_name, lambda);
-    function lambda(a) {
-      let next = marker_next_get(a);
-      let expression = null;
-      if (js_node_type_is(next, "ExpressionStatement")) {
-        let { expression: expression_next } = next;
-        expression = expression_next;
-      } else if (js_node_type_is(next, "VariableDeclaration")) {
-        let { declarations } = next;
-        if (list_multiple_is(declarations)) {
-          return;
-        }
-        let declaration = list_single(declarations);
-        expression = object_property_get(declaration, "init");
-      }
-      if (js_node_type_is(expression, "AwaitExpression")) {
-        expression = object_property_get(expression, "argument");
-      }
-      if (!js_node_type_is(expression, "CallExpression")) {
-        return;
-      }
-      let { arguments: arguments2 } = expression;
-      let replaced = null;
-      if (input === "c") {
-        let { callee } = expression;
-        replaced = callee;
-      } else {
-        let arg_index_at = list_get(arguments2, arg_index);
-        replaced = arg_index_at;
-      }
-      lambda2(replaced);
-      let { ast } = a;
-      js_imports_missing_add(ast);
-      la(js_unparse(next));
-    }
-  });
 }
