@@ -29,7 +29,7 @@ export async function js_atomize(ast) {
   let existing = js_identifiers(ast);
   let ces = js_type(ast, "CallExpression");
   marker();
-  let vs = js_type(ast2, node_type);
+  let vs = js_type(ast, node_type);
   await each_async(ces, async (v) => {
     let { node } = v;
     let { stack } = v;
