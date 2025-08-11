@@ -23,6 +23,9 @@ export async function function_transform_marker(f_name, lambda$a) {
     let visitors = js_type(ast, "CallExpression");
     await each_async(visitors, async (v) => {
       if (js_marker_named(v, marker_name)) {
+        let { stack } = v;
+        let stack1 = list_get_end(stack, 1);
+        let stack2 = list_get_end(stack, 2);
         let to = object_merge(
           {
             stack2,
