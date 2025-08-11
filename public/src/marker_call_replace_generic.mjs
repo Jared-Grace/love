@@ -10,6 +10,7 @@ import {function_transform_marker} from './function_transform_marker.mjs';
 import {list_adder_async} from './list_adder_async.mjs';
 import {data_function_current_get} from './data_function_current_get.mjs';
 import {integer_to} from './integer_to.mjs';
+import { object_merge } from './object_merge.mjs';
 export async function marker_call_replace_generic(input, lambda2) {
   let arg_index = integer_to(input);
   let f_name = await data_function_current_get();
@@ -44,7 +45,7 @@ export async function marker_call_replace_generic(input, lambda2) {
         let arg_index_at = list_get(arguments2, arg_index);
         replaced = arg_index_at;
       }
-      lambda2(replaced);
+      lambda2(object_merge({replaced},a));
       let {ast} = a;
       js_imports_missing_add(ast);
       la(js_unparse(next));
