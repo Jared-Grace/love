@@ -21,8 +21,6 @@ import { list_insert } from "./list_insert.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_atomize(ast) {
-  let v = marker();
-  marker(v);
   let existing = js_identifiers(ast);
   js_visit_type(ast, "CallExpression", (v) => {
     let { node } = v;
