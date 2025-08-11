@@ -35,11 +35,12 @@ export async function marker_expand() {
         return;
       }
       let { callee } = expression;
-      let { name } = callee;
-      let { declaration } = await function_parse_declaration(name);
-      let params_names = js_declaration_params_names(declaration);
       let { arguments: arguments2 } = expression;
       const a_names = js_identifiers_to_names(arguments2);
+      let { name } = callee;
+      let { declaration, ast } = await function_parse_declaration(name);
+      let params_names = js_declaration_params_names(declaration);
+      
       each_pair(params_names, a_names, lambda3);
       function lambda3(param_name, a_name) {}
       let body_block = js_declaration_to_block_body(declaration);
