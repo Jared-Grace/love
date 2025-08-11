@@ -29,7 +29,7 @@ export async function function_transform_marker(f_name, lambda$a) {
       if (!js_node_type_is(callee, "Identifier")) {
         return;
       }
-      let {name} = callee;
+      let {name} = callee;log(name)
       if (name !== marker.name) {
         return;
       }
