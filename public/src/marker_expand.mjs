@@ -1,3 +1,4 @@
+import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
@@ -50,7 +51,9 @@ export async function marker_expand() {
       }
       let params_names = js_declaration_params_names(declaration);
       each_pair(params_names, a_names, lambda3);
-      function lambda3(param_name, a_name) {}
+      function lambda3(param_name, a_name) {
+        js_identifier_replace();
+      }
       let body_block = js_declaration_to_block_body(declaration);
       let output = js_unparse(next);
       la(output);
