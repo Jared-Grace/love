@@ -30,7 +30,7 @@ export async function marker_down(delta) {
         }
       });
     });
-    log(nodes);
+    log({nodes,stack1});
     return;
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
