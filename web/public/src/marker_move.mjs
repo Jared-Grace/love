@@ -24,16 +24,18 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_insert } from "./list_insert.mjs";
+import { list_remove } from "./list_remove.mjs";
 export async function marker_move(m_name_from, m_name_to) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let marker_v_from = js_marker_named_ast(ast, m_name_from);
     let a_from = function_transform_marker_arg(marker_v_from, ast);
-    let { next } = marker_next_get(a_from);
+    let { next, stack2: stack2_from } = marker_next_get(a_from);
+    list_remove(stack2_from, next);
     let marker_v_to = js_marker_named_ast(ast, m_name_to);
-    let a_to = function_transform_marker_arg(m_name_to, ast);
-    let { index, stack2 } = marker_next_index(a_to);
-    log(marker_v);
+    let a_to = function_transform_marker_arg(marker_v_to, ast);
+    let { index, stack2: stack2_to } = marker_next_index(a_to);
+    list_insert(stack2_to, index, next);
   }
 }
