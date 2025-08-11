@@ -1,3 +1,6 @@
+import { marker_next_index } from "./marker_next_index.mjs";
+import { marker_next_get } from "./marker_next_get.mjs";
+import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
 import { js_marker_named_ast } from "./js_marker_named_ast.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { list_single } from "./list_single.mjs";
@@ -20,12 +23,17 @@ import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_insert } from "./list_insert.mjs";
 export async function marker_move(m_name_from, m_name_to) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let marker_v_from = js_marker_named_ast(ast, m_name_from);
+    let a_from = function_transform_marker_arg(marker_v_from, ast);
+    let { next } = marker_next_get(a_from);
     let marker_v_to = js_marker_named_ast(ast, m_name_to);
+    let a_to = function_transform_marker_arg(m_name_to, ast);
+    let { index, stack2 } = marker_next_index(a_to);
     log(marker_v);
   }
 }
