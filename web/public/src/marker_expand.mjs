@@ -1,3 +1,5 @@
+import { js_identifier_is } from "./js_identifier_is.mjs";
+import { list_all } from "./list_all.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
@@ -15,6 +17,7 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
+import { assert } from "./assert.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
@@ -30,6 +33,7 @@ export async function marker_expand() {
       let { declaration } = await function_parse_declaration(name);
       let params_names = js_declaration_params_names(declaration);
       let { arguments: arguments2 } = expression;
+      assert(list_all(arguments2, js_identifier_is));
       const a_names = js_identifiers_to_names(arguments2);
       let body_block = js_declaration_to_block_body(declaration);
       la(js_unparse(next));
