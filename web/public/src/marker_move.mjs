@@ -32,8 +32,8 @@ export async function marker_move(m_name_from, m_name_to) {
     let marker_v_from = js_marker_named_ast(ast, m_name_from);
     let a_from = function_transform_marker_arg(marker_v_from, ast);
     let { next } = marker_next_get(a_from);
-    let { stack1, stack2: stack2_from } = a_from;
-    list_remove(stack2_from, stack1);
+    let { stack2: stack2_from } = (a_from);
+    list_remove(stack2_from, next);
     let marker_v_to = js_marker_named_ast(ast, m_name_to);
     let a_to = function_transform_marker_arg(marker_v_to, ast);
     let { index, stack2: stack2_to } = marker_next_index(a_to);
