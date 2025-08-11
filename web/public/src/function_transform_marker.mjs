@@ -10,11 +10,12 @@ import {list_get_end} from "./list_get_end.mjs";
 import {js_visit_type} from "./js_visit_type.mjs";
 import {function_transform} from "./function_transform.mjs";
 import { object_merge } from './object_merge.mjs';
+import { each_async } from './each_async.mjs';
 export async function function_transform_marker(f_name, lambda) {
   await function_transform(f_name, lambda_marker);
-  function lambda_marker(ast) {
+  async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
-    each(visitors, v => {
+    await each_async(visitors, async v => {
       let {stack} = v;
       let stack1 = list_get_end(stack, 1);
       if (!js_node_is(stack1)) {
@@ -36,7 +37,7 @@ export async function function_transform_marker(f_name, lambda) {
       if (!list_is(stack2)) {
         error();
       }
-      lambda(object_merge({
+      await lambda(object_merge({
         stack2,
         stack1,ast
       },v));
