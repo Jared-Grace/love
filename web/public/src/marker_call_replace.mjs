@@ -20,6 +20,7 @@ import { list_index_of } from "./list_index_of.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
+import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 export async function marker_call_replace(input, code_replacement) {
   let arg_index = integer_to(input);
   let f_name = await data_function_current_get();
@@ -56,6 +57,8 @@ export async function marker_call_replace(input, code_replacement) {
         replaced = arg_index_at;
       }
       object_replace(replaced, replacement);
+      let {ast}=a
+      js_imports_missing_add(ast)
       la(js_unparse(next));
     }
   });
