@@ -19,7 +19,10 @@ import { object_property_set } from "./object_property_set.mjs";
 import { object_property_delete } from "./object_property_delete.mjs";
 export async function marker_new() {
   let f_name = await data_function_current_get();
-  return list_adder_async(async (la) => {
+  let markers= list_adder_async(async (la) => {
+    await function_transform_marker(f_name, la);
+  });
+  return markers
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let { index, stack2 } = marker_next_index(a);
@@ -29,5 +32,4 @@ export async function marker_new() {
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
     }
-  });
 }
