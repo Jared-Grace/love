@@ -11,7 +11,7 @@ import {js_visit_type} from "./js_visit_type.mjs";
 import {function_transform} from "./function_transform.mjs";
 import { object_merge } from './object_merge.mjs';
 import { each_async } from './each_async.mjs';
-export async function function_transform_marker(f_name, lambda) {
+export async function function_transform_marker(f_name, lambda$a) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
@@ -37,7 +37,7 @@ export async function function_transform_marker(f_name, lambda) {
       if (!list_is(stack2)) {
         error();
       }
-      await lambda(object_merge({
+      await lambda$a(object_merge({
         stack2,
         stack1,ast
       },v));
