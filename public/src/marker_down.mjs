@@ -15,12 +15,13 @@ import { list_adder } from "./list_adder.mjs";
 import { list_is } from "./list_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export async function marker_down(delta) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let { stack2, stack1, ast } = a;
-    let nodes = list_adder((la) => {
+    let vs = list_adder((la) => {
       js_visit(ast, (v) => {
         let { node, stack } = v;
         if (js_stack_list_block_is(stack, 1)) {
@@ -34,9 +35,10 @@ export async function marker_down(delta) {
     });
     let next = marker_next_get(a);
     list_remove(stack2, stack1);
+    let nodes = list_map_property(vs,'node')
     let next_index = list_index_of(nodes, next);
     let index_new = next_index + integer_to(delta);
-    let v_new = list_get(nodes, index_new);
+    let v_new = list_get(vs, index_new);
     let { stack, node } = v_new;
     if (list_is(node) && list_empty_is(node)) {
       list_add(node, stack1);
