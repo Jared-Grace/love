@@ -25,10 +25,7 @@ export async function marker_new() {
       let { index, stack2 } = marker_next_index(a);
       let value_string = "2";
       let code_string = js_code_string(value_string);
-      log({
-        code_string,
-      });
-      let code = js_code_call_args(marker.name, ["2"]);
+      let code = js_code_call_args(marker.name, [code_string]);
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
     }
