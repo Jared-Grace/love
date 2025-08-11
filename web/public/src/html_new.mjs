@@ -11,6 +11,7 @@ export async function html_new(name) {
   const file_name = file_name_html(name);
   const file_path = folder_public_combine(file_name);
   marker("1");
+  marker("2");
   const body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
