@@ -26,6 +26,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 export async function js_atomize(ast) {
+  marker();
   let existing = js_identifiers(ast);
   let ces = js_type(ast, "CallExpression");
   await each_async(ces, async (v) => {
@@ -34,19 +35,19 @@ export async function js_atomize(ast) {
     const stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
       let variable_name = "v";
-        let { callee } = node;
-        if (js_node_type_is(callee, "Identifier")) {
-          let { name } = callee;
-          let { ast: ast_callee } = await function_parse(name);
-          log({
-            name,
-            ast_callee,
-          });
-          let return_name = js_return_name(ast_callee);
-          if (return_name !== null) {
-            variable_name = return_name;
-          }
+      let { callee } = node;
+      if (js_node_type_is(callee, "Identifier")) {
+        let { name } = callee;
+        let { ast: ast_callee } = await function_parse(name);
+        log({
+          name,
+          ast_callee,
+        });
+        let return_name = js_return_name(ast_callee);
+        if (return_name !== null) {
+          variable_name = return_name;
         }
+      }
       let unique = js_identifier_unique(existing, variable_name);
       let copy = object_copy(node);
       let block = js_stack_last(stack, "BlockStatement");
