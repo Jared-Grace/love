@@ -1,3 +1,4 @@
+import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
@@ -26,9 +27,8 @@ export async function marker_expand() {
       let { callee } = expression;
       let { name } = callee;
       let { declaration } = await function_parse_declaration(name);
-      
-      let { params } = declaration;
-      let { arguments:arguments2 } = expression;
+      let params_names = js_declaration_params_names(declaration);
+      let { arguments: arguments2 } = expression;
       let body_block = js_declaration_to_block_body(declaration);
       la(js_unparse(next));
     }
