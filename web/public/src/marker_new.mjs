@@ -20,7 +20,9 @@ export async function marker_new() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let { index, stack2 } = marker_next_index(a);
-      let code = js_code_call_args(marker.name, ['2']);
+      let parsed_string = js_parse_expression('""');
+      log(parsed_string);
+      let code = js_code_call_args(marker.name, ["2"]);
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
     }
