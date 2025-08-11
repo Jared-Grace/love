@@ -13,7 +13,7 @@ export async function marker_next() {
   return list_adder_async(async la => {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let next = marker_next_get(a);
+      let {next} = marker_next_get(a);
       la(js_unparse(next));
     }
   });
