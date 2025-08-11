@@ -23,8 +23,8 @@ import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 export async function marker_call_replace(input, code_replacement) {
-  return await marker_call_replace_generic(input, lambda2);
-  function lambda2(a) {
+  return await marker_call_replace_generic(input, lambda);
+  function lambda(a) {
     let {replaced}=a
     let replacement = js_parse_expression(code_replacement);
     object_replace(replaced, replacement);
