@@ -1,3 +1,4 @@
+import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { log } from "./log.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -14,19 +15,13 @@ export async function marker_down(delta) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack2, stack1, node ,ast} = a;
+    let { stack2, stack1, node, ast } = a;
     let nodes = list_adder((la) => {
       js_visit(ast, (v) => {
         let { node, stack } = v;
-        let stack1 = list_get_end(stack, 1);
-        if (!list_is(stack1)) {
-          return;
+        if (js_stack_list_block_is(stack, 1)) {
+          la(node);
         }
-        let stack2 = list_get_end(stack, 2);
-        if (!js_node_type_is(stack2, "BlockStatement")) {
-          return;
-        }
-        la(node);
       });
     });
     log(nodes);
