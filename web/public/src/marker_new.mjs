@@ -1,3 +1,4 @@
+import { js_code_string } from "./js_code_string.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { marker } from "./marker.mjs";
 import { js_code_call_statement } from "./js_code_call_statement.mjs";
@@ -22,12 +23,11 @@ export async function marker_new() {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
       let { index, stack2 } = marker_next_index(a);
-      let value_string='2'
-      let parsed_string = js_parse_expression('""');
-      object_property_set(parsed_string,'value',value_string)
-      object_property_delete(parsed_string,'raw')
-      let code_string = js_unparse(parsed_string)
-      log({code_string});
+      let value_string = "2";
+      let code_string = js_code_string(value_string);
+      log({
+        code_string,
+      });
       let code = js_code_call_args(marker.name, ["2"]);
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
