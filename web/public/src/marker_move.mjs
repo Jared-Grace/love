@@ -20,11 +20,12 @@ import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_filter } from "./list_filter.mjs";
-export async function marker_move(m_name_from, m_name_from_to) {
+export async function marker_move(m_name_from, m_name_to) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
-    let marker_v = js_marker_named_ast(ast, m_name_from);
+    let marker_v_from = js_marker_named_ast(ast, m_name_from);
+    let marker_v_to = js_marker_named_ast(ast, m_name_to);
     log(marker_v);
   }
 }
