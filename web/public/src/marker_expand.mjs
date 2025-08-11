@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { lists_get } from "./lists_get.mjs";
 import { each_index } from "./each_index.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
@@ -40,6 +41,7 @@ export async function marker_expand() {
       let other_lists = [a_names];
       each_index(params_names, (item, index) => {
         let others_items = lists_get(other_lists, index);
+        let items_all = list_concat([item], others_items);
       });
       let body_block = js_declaration_to_block_body(declaration);
       let output = js_unparse(next);
