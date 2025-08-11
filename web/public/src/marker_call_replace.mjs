@@ -19,8 +19,8 @@ import { list_index_of } from "./list_index_of.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-export async function marker_call_replace(arg_index, code_replacement) {
-  arg_index = integer_to(arg_index);
+export async function marker_call_replace(input, code_replacement) {
+  let arg_index = integer_to(input);
   let f_name = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name, lambda);
@@ -37,8 +37,15 @@ export async function marker_call_replace(arg_index, code_replacement) {
         return;
       }
       let { arguments: arguments2 } = expression;
-      let arg_index_at = list_get(arguments2, arg_index);
+      let replaced = null;
       let replacement = js_parse_expression(code_replacement);
+      if (input === "c") {
+        let { callee } = expression;
+        replaced = callee;
+      } else {
+        let arg_index_at = list_get(arguments2, arg_index);
+        replaced = arg_index_at;
+      }
       object_replace(arg_index_at, replacement);
       la(js_unparse(next));
     }
