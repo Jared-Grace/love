@@ -9,6 +9,6 @@ export async function function_new_js(f_name_unprefixed) {
   await function_new(combined);
   let result = await function_transform(combined, async function lambda(ast) {
     marker();
-    js_declaration_single_params_add(ast, param_names);
+    js_declaration_single_params_add(ast, ["ast"]);
   });
 }
