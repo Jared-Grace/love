@@ -1,3 +1,4 @@
+import { data_function_current_get } from "./data_function_current_get.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
 import { data_marker_current_get } from "./data_marker_current_get.mjs";
@@ -19,6 +20,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function marker_move(m_name_from, m_name_from_to) {
+  let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
@@ -26,6 +28,6 @@ export async function marker_move(m_name_from, m_name_from_to) {
       js_marker_named(v, m_name_from),
     );
     let marker_v = list_single(filtered);
-    log(marker_v)
+    log(marker_v);
   }
 }
