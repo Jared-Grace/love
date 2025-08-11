@@ -1,3 +1,4 @@
+import { lists_get } from "./lists_get.mjs";
 import { each_index } from "./each_index.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { list_all } from "./list_all.mjs";
@@ -38,10 +39,11 @@ export async function marker_expand() {
       const a_names = js_identifiers_to_names(arguments2);
       let other_lists = [a_names];
       each_index(params_names, (item, index) => {
-        let others_items = list_map(other_lists, (l) => list_get(l, index));
+        let others_items = lists_get(other_lists, index);
       });
       let body_block = js_declaration_to_block_body(declaration);
-      la(js_unparse(next));
+      let output = js_unparse(next);
+      la(output);
     }
   });
 }
