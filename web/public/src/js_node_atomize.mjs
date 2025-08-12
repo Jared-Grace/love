@@ -21,6 +21,8 @@ import { list_is } from "./list_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
+import { assert } from "./assert.mjs";
+import { list_size } from "./list_size.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = "v";
   let { node } = v;
@@ -48,7 +50,7 @@ export async function js_node_atomize(existing, v) {
           let { params } = declaration;
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
-          log(param);
+          assert(equal_by(stack1,params, list_size))
           variable_name = object_property_get(param, "name");
         }
       }
