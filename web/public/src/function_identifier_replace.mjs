@@ -18,7 +18,6 @@ export async function function_identifier_replace(
   let f_name = data_function_current_get();
   await function_transform(f_name, (ast) => {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
-    log(identifier_name);
     let b = list_empty_is(identifiers_named);
     assert_not(b);
     marker("1");
