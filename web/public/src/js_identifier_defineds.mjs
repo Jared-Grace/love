@@ -33,7 +33,7 @@ export function js_identifier_defineds(v) {
               });
             } else if (js_node_type_is(id, "Identifier")) {
               let value = object_property_get(identifiers, "name");
-              la(value);
+              la([value]);
             }
           });
         }
