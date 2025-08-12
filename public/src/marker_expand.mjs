@@ -59,7 +59,13 @@ export async function marker_expand() {
     }
     let body_block = js_declaration_to_block_body(declaration);
     let last = list_last(body_block);
-    js_return_on(last, () => {}, identifier_not);
+    js_return_on(
+      last,
+      () => {
+        list_remove(body_block, last);
+      },
+      identifier_not,
+    );
     let { stack2 } = a;
     list_remove(stack2, next);
     each_reverse(body_block, lambda4);
