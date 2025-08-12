@@ -71,7 +71,6 @@ export async function marker_expand() {
         let { argument } = last;
         let assign = js_declare(unique, argument);
         list_add(body_block, assign);
-        object_property_set(declaration_call, "init", argument);
       },
       noop,
     );
