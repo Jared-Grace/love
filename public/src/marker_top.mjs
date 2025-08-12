@@ -23,7 +23,9 @@ export async function marker_top() {
   function lambda(ast) {
     let body = js_declaration_single_block_blody(ast);
     marker("1");
-    let name = marker_first();
+    let index_value = marker_first_index();
+    let index = string_to(index_value);
+    let name = index;
     js_marker_insert(name, body, 0);
     js_imports_missing_add(ast);
   }
