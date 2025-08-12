@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { js_declarator_init_set } from "./js_declarator_init_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
 import { list_last } from "./list_last.mjs";
@@ -67,6 +68,7 @@ export async function marker_expand() {
       () => {
         list_remove(body_block, last);
         let { argument } = last;
+        object_property_set(declaration_call, "init", argument);
         js_declarator_init_set(declaration_call, argument);
       },
       noop,
