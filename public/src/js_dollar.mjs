@@ -1,3 +1,4 @@
+import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -10,7 +11,9 @@ export function js_dollar(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       if (name === "$i") {
-        let from = js_parse_statement("if ",js_code_wrap_parenthesis("(false)"),"{}");
+        let from = js_parse_statement(
+          "if " + js_code_wrap_parenthesis("(false)") + "{}",
+        );
         object_replace(node, from);
       }
     }
