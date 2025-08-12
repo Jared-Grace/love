@@ -27,6 +27,8 @@ export function js_identifier_defineds(v) {
               let { properties } = id;
               each(properties, (k) => {
                 let keys = list_map_property(k, "key");
+                let names = js_identifiers_to_names(ids);
+                la(names);
               });
             }
           });
