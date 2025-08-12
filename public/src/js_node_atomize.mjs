@@ -50,7 +50,7 @@ export async function js_node_atomize(existing, v) {
           let { params } = declaration;
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
-          assert(equal_by(stack1,params, list_size))
+          assert(equal_by(stack1,params, list_size)) 
           variable_name = object_property_get(param, "name");
         }
       }
