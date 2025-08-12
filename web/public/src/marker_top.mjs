@@ -18,9 +18,9 @@ import { js_declaration_single } from "./js_declaration_single.mjs";
 import { function_parse } from "./function_parse.mjs";
 import { list_add } from "./list_add.mjs";
 export async function marker_top() {
-  marker("1");
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
+  marker("1");
   function lambda(ast) {
     let body = js_declaration_single_block_blody(ast);
     let name = marker_first();
