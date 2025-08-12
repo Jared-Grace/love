@@ -15,7 +15,6 @@ export async function html_new(name) {
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
-  marker("1");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
