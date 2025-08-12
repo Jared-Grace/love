@@ -10,6 +10,7 @@ import { each } from "./each.mjs";
 import { js_stack_filtered } from "./js_stack_filtered.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
 import { object_property_get } from "./object_property_get.mjs";
+import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   let defineds = list_adder_multiple((la) => {
@@ -34,6 +35,8 @@ export function js_identifier_defineds(v) {
             } else if (js_node_type_is(id, "Identifier")) {
               let value = object_property_get(identifiers, "name");
               la([value]);
+            } else {
+              error();
             }
           });
         }
