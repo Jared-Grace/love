@@ -52,6 +52,9 @@ import { list_add } from "./list_add.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { list_get } from "./list_get.mjs";
+import { object_property_get } from "./object_property_get.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_adder_unique } from "./list_adder_unique.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -73,26 +76,40 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add_multiple(body_block, range);
     let { body } = ast;
     list_add(body, declaration);
+    let missing=list_adder_unique(la=>{
+
     js_visit_type(declaration, "Identifier", (v) => {
-      let { stack ,node} = v;
-      let declareds = list_adder_multiple((la) => {
-        let filtered = js_stack_filtered(stack, "BlockStatement");
-        each(filtered, (bs) => {
-          let list = list_next(stack, bs);
-  let item = list_next(stack, list);
-  let index = list_index_of(list, item);
-          each_range(index, (i) => {
-            let list_item = list_get(list, i);
-            if (js_node_type_is(list_item, "VariableDeclaration")) {
-              let { declarations } = list_item;
-              let ids = list_map_property(declarations, "id");
-              let names = js_identifiers_to_names(ids);
-              la(names);
-            }
-          });
-        });
-      });
-      log({declareds,node})
+      let defineds = js_identifier_defineds(v);
+  let { node } = v;
+      let name = object_property_get(node,'name')
+      if (!list_includes(defineds,name)) {
+        la(name)
+      }
     });
+    })
+
+    log(missing)
   }
 }
+function js_identifier_defineds(v) {
+  let { stack } = v;
+  let defineds = list_adder_multiple((la) => {
+    let filtered = js_stack_filtered(stack, "BlockStatement");
+    each(filtered, (bs) => {
+      let list = list_next(stack, bs);
+      let item = list_next(stack, list);
+      let index = list_index_of(list, item);
+      each_range(index, (i) => {
+        let list_item = list_get(list, i);
+        if (js_node_type_is(list_item, "VariableDeclaration")) {
+          let { declarations } = list_item;
+          let ids = list_map_property(declarations, "id");
+          let names = js_identifiers_to_names(ids);
+          la(names);
+        }
+      });
+    });
+  });
+  return defineds;
+}
+
