@@ -10,7 +10,7 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { function_param_new } from "./function_param_new.mjs";
 import { each } from "./each.mjs";
 export async function function_param_swap(f_name, param_name_a, param_name_b) {
-  await function_transform(lambda);
+  await function_transform(f_name,lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let a = js_declaration_param_named(declaration, param_name_a);
