@@ -1,5 +1,3 @@
-import { string_to } from "./string_to.mjs";
-import { marker_first_index } from "./marker_first_index.mjs";
 import { marker_first } from "./marker_first.mjs";
 import { js_marker_insert } from "./js_marker_insert.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
@@ -25,9 +23,7 @@ export async function marker_top() {
   function lambda(ast) {
     let body = js_declaration_single_block_blody(ast);
     marker("1");
-    let index_value = marker_first_index();
-    let index = string_to(index_value);
-    name = index;
+    let name = marker_first();
     js_marker_insert(name, body, 0);
     js_imports_missing_add(ast);
   }
