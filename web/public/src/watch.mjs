@@ -4,7 +4,8 @@ import { import_install } from "./import_install.mjs";
 import { command_line } from "./command_line.mjs";
 export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
-  const watcher = chokidar.watch(functions_path(), {
+  let joined = functions_path();
+  const watcher = chokidar.watch(joined, {
     persistent: true,
     ignoreInitial: true,
   });
