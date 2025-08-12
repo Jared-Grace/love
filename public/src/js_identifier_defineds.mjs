@@ -22,6 +22,12 @@ export function js_identifier_defineds(v) {
         if (js_node_type_is(list_item, "VariableDeclaration")) {
           let { declarations } = list_item;
           let ids = list_map_property(declarations, "id");
+          each(ids, (id) => {
+            if (js_node_type_is(id, "ObjectPattern")) {
+              let { properties } = id;
+              each(properties);
+            }
+          });
           log(ids);
           let names = js_identifiers_to_names(ids);
           la(names);
