@@ -1,4 +1,5 @@
+import { function_name_combine } from "./function_name_combine.mjs";
 import { function_wrap } from "./function_wrap.mjs";
-export async function function_wrap_suffix_add(f_name, f_name_wrapped) {
-  return await function_wrap(f_name, f_name_wrapped);
+export async function function_wrap_suffix_add(f_name, suffix) {
+  return await function_wrap(f_name, function_name_combine(f_name, suffix));
 }
