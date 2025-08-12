@@ -7,7 +7,8 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
-  watcher.on("change", (path) => {
+  watcher.on("change", (path) => { 
+    
     log(path);
   });
   log("here");
