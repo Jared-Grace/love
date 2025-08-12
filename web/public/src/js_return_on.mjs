@@ -5,7 +5,7 @@ export function js_return_on(last, identifier_if, identifier_not) {
     if (js_node_type_is(argument, "Identifier")) {
       identifier_if(argument);
     } else {
-      identifier_not();
+      identifier_not(argument);
     }
   }
 }
