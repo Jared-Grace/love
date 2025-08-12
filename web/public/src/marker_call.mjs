@@ -42,15 +42,15 @@ import { list_first } from "./list_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { each } from "./each.mjs";
 export async function marker_call(f_name_call) {
-  let {
-    declaration,
-    unaliased,
-    ast: ast_call,
-  } = await function_parse_declaration(f_name_call);
   let f_name_current = await data_function_current_get();
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name_current, lambda);
-    function lambda(a) {
+    async function lambda(a) {
+      let {
+        declaration,
+        unaliased,
+        ast: ast_call,
+      } = await function_parse_declaration(f_name_call);
       let { index, stack2, ast, stack } = marker_next_index(a);
       let existing = js_identifiers_names(ast);
       let arg_names = js_declaration_params_names(declaration);
@@ -60,13 +60,11 @@ export async function marker_call(f_name_call) {
         const lambda = "lambda";
         if (list_first(split) === lambda) {
           let skip_count = 1;
-          let remaining = list_slice(split, skip_count, list_size(split));
+          let b = list_size(split);
+          let remaining = list_slice(split, skip_count, b);
           let lamda_name = js_identifier_unique(existing, lambda);
-          let code = js_code_declaration(
-            lamda_name,
-            "",
-            object_property_get(declaration, "async"),
-          );
+          let async_is = object_property_get(declaration, "async");
+          let code = js_code_declaration(lamda_name, "", async_is);
           let declaration_lambda = js_parse_statement_module(code);
           each(remaining, (p) => {
             let unique = js_identifier_unique(existing, p);
@@ -89,7 +87,8 @@ export async function marker_call(f_name_call) {
       let parsed = js_parse_statement(code);
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
-      la(js_unparse(parsed));
+      let output = js_unparse(parsed);
+      la(output);
       js_stack_declaration_asyncify(stack, declaration);
     }
   });
