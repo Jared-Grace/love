@@ -1,3 +1,6 @@
+import { js_node_types } from "./js_node_types.mjs";
+import { js_node_types_includes } from "./js_node_types_includes.mjs";
+import { list_any } from "./list_any.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { js_code_declaration } from "./js_code_declaration.mjs";
 import { list_range } from "./list_range.mjs";
@@ -46,8 +49,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { stack2: stack2_to } = a_to;
     assert(stack2_from === stack2_to);
     let range = list_range(stack2_from, index_from, index_to);
-    log(list_any(range, r=>js_node_types_includes(r, 'AwaitExpression') ));
-    js_node_types(ast)
+    log(list_any(range, (r) => js_node_types_includes(r, "AwaitExpression")));
+    js_node_types(ast);
     const code_declaration = js_code_declaration(f_name_new, "", false);
     let declaration = js_parse_statement_module(code_declaration);
   }
