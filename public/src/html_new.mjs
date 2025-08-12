@@ -13,11 +13,11 @@ export async function html_new(name) {
   let file_path = html_name_to_path(name);
   await assert_file_exists_not(file_path);
   marker("1");
+  marker("2");
   let body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
   await html_overwrite(name, body);
-  marker("2");
   await file_open(file_path);
 }
