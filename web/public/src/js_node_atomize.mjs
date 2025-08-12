@@ -64,6 +64,6 @@ export async function js_node_atomize(existing, v) {
   list_insert(block_body, block_body_item_index, assign);
   let v2 = js_parse_expression(unique);
   let message = js_unparse(v2);
-  if (0) log(message);
+  log(message);
   object_replace(node, v2);
 }
