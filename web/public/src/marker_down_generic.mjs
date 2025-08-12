@@ -1,3 +1,4 @@
+import { list_is_assert } from "./list_is_assert.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { assert } from "./assert.mjs";
 import { list_get_end } from "./list_get_end.mjs";
@@ -49,8 +50,7 @@ export async function marker_down_generic(delta_get) {
       list_add(node, stack1);
     } else {
       let stack1_v_new = list_get_end(stack, 1);
-      let result = list_is(stack1_v_new);
-      assert(result);
+      list_is_assert(stack1_v_new);
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, stack1);
     }
