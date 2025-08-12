@@ -1,3 +1,4 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { list_next } from "./list_next.mjs";
 import { js_stack_filtered } from "./js_stack_filtered.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -72,7 +73,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let bs = list_single(filtered);
         let list = list_next(stack, bs);
         let item = list_next(stack, list);
-        let index = list_index(item);
+        let index = list_index_of(item);
         each_range(index);
       });
     });
