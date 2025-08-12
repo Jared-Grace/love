@@ -19,10 +19,12 @@ import { log } from "./log.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { function_parse } from "./function_parse.mjs";
 import { list_add } from "./list_add.mjs";
+import { js_markers } from "./js_markers.mjs";
 export async function marker_top() {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
   function lambda(ast) {
+    js_markers(ast);
     let body = js_declaration_single_block_blody(ast);
     marker("1");
     let index_value = marker_first_index();
