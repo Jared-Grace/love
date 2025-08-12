@@ -1,3 +1,4 @@
+import { string_empty_not_is } from "./string_empty_not_is.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -5,7 +6,7 @@ export function js_identifier_unique(existing, name) {
   let result = null;
   let attempt = 1;
   do {
-    const suffix = attempt === 1 && string_empty_is(name) ? "" : attempt;
+    const suffix = attempt === 1 && string_empty_not_is(name) ? "" : attempt;
     result = name + suffix;
     attempt++;
   } while (string_empty_is(result) || list_includes(existing, result));
