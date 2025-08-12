@@ -1,3 +1,4 @@
+import { list_adder_async } from "./list_adder_async.mjs";
 import { js_marker_is } from "./js_marker_is.mjs";
 import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
@@ -22,11 +23,13 @@ export async function function_transform_marker_all(f_name, lambda$a) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
-    await each_async(visitors, async (v) => {
-      if (js_marker_is(v)) {
-        let a = function_transform_marker_arg(v, ast);
-        await lambda$a(a);
-      }
+    list_adder_async(async (la) => {
+      await each_async(visitors, async (v) => {
+        if (js_marker_is(v)) {
+          let a = function_transform_marker_arg(v, ast);
+          await lambda$a(a);
+        }
+      });
     });
   }
 }
