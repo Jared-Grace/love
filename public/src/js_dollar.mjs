@@ -12,7 +12,7 @@ export function js_dollar(ast) {
       let { name } = expression;
       if (name === "$i") {
         let from = js_parse_statement(
-          "if " + js_code_wrap_parenthesis("(false)") + "{}",
+          "if " + js_code_wrap_parenthesis("false") + "{}",
         );
         object_replace(node, from);
       }
