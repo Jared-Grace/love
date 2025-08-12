@@ -6,6 +6,8 @@ export function js_dollar(ast) {
     let { node } = v;
     if (js_identifier_is(node)) {
       let { name } = node;
+      if (name === "$i") {
+      }
     }
   });
 }
