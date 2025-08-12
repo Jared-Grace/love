@@ -29,9 +29,7 @@ export async function marker_down_generic(delta_get) {
         if (js_stack_list_block_is(stack, 1)) {
           la(v);
         } else if (js_stack_list_block_is(stack, 0)) {
-          if (list_empty_is(node)) {
-            la(v);
-          }
+          la(v);
         }
       });
     });
