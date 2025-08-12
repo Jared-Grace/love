@@ -70,18 +70,19 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { body } = ast;
     list_add(body, declaration);
     list_adder((la) => {
-      js_visit_type(declaration, "Identififer", (v) => {
+      js_visit_type(declaration, "Identifier", (v) => {
         let { stack } = v;
         let filtered = js_stack_filtered(stack, "BlockStatement");
-        let bs = list_single(filtered);
-        let list = list_next(stack, bs);
-        let item = list_next(stack, list);
-        let index = list_index_of(item);
+        each(filtered, bs=>{
+let list = list_next(stack, bs);
+        let index = list_next_index(stack, list);
         log(index)
         each_range(index, (i) => {
           let list_item = list_get(list, i);
           log(list_item);
         });
+        })
+        
       });
     });
   }
