@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
 import { list_last } from "./list_last.mjs";
@@ -69,6 +70,7 @@ export async function marker_expand() {
         list_remove(body_block, last);
         list_add(body_block, declaration_call);
         let { argument } = last;
+        let assign = js_declare(unique, copy);
         object_property_set(declaration_call, "init", argument);
       },
       noop,
