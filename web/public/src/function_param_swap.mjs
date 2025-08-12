@@ -17,6 +17,5 @@ export async function function_param_swap(param_name_a, param_name_b) {
     let b = js_declaration_param_named(declaration, param_name_b);
     let { params } = declaration;
     list_swap(params, a, b);
-    js_declaration_single_params_add(ast, param_names);
   }
 }
