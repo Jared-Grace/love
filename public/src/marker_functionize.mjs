@@ -1,3 +1,4 @@
+import { list_adder_multiple } from "./list_adder_multiple.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_next_index } from "./list_next_index.mjs";
@@ -72,9 +73,9 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add_multiple(body_block, range);
     let { body } = ast;
     list_add(body, declaration);
-    list_adder_multiple((la) => {
-      js_visit_type(declaration, "Identifier", (v) => {
-        let { stack } = v;
+    js_visit_type(declaration, "Identifier", (v) => {
+      let { stack } = v;
+      let declareds = list_adder_multiple((la) => {
         let filtered = js_stack_filtered(stack, "BlockStatement");
         each(filtered, (bs) => {
           let list = list_next(stack, bs);
@@ -86,6 +87,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
               let { declarations } = item;
               let ids = list_map_property(declarations, "id");
               let names = js_identifiers_to_names(ids);
+              la(names);
             }
             log(item);
           });
