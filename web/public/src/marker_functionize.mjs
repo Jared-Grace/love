@@ -90,6 +90,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
       js_visit_type(declaration, "Identifier", (v) => {
         let defineds = js_identifier_defineds(v);
         let { node } = v;
+        let stack1 = list_get_end(stack2_from, 1);
         let name = object_property_get(node, "name");
         if (!list_includes(defineds, name)) {
           la(name);
