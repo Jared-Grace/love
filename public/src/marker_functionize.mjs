@@ -1,3 +1,5 @@
+import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { list_next_index } from "./list_next_index.mjs";
 import { each_range } from "./each_range.mjs";
 import { range } from "./range.mjs";
@@ -79,8 +81,13 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
           let index = list_next_index(stack, list);
           log(index);
           each_range(index, (i) => {
-            let list_item = list_get(list, i);
-            log(list_item);
+            let item = list_get(list, i);
+            if (js_node_type_is(item, "VariableDeclaration")) {
+              let { declarations } = item;
+              let ids = list_map_property(declarations, "id");
+              let names = js_identifiers_to_names(ids);
+            }
+            log(item);
           });
         });
       });
