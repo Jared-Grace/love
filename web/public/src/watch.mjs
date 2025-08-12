@@ -16,7 +16,7 @@ export async function watch() {
   watcher.on("change", (path) => {
     catch_log(() => {
       let output = command_line(
-        "node g.mjs " + function_auto_path.name + " " + path,
+        "node r.mjs " + function_auto_path.name + " " + path,
       );
       log_keep(output);
     });
