@@ -47,6 +47,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { js_visit } from "./js_visit.mjs";
+import { list_get } from "./list_get.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -76,7 +77,10 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let list = list_next(stack, bs);
         let item = list_next(stack, list);
         let index = list_index_of(item);
-        each_range(index);
+        each_range(index, (i) => {
+          let list_item = list_get(list, i);
+          log(list_item);
+        });
       });
     });
   }
