@@ -1,3 +1,4 @@
+import { js_dollar } from "./js_dollar.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
 import { log } from "./log.mjs";
@@ -12,4 +13,6 @@ export async function function_auto(f_name) {
     let transforms = [js_outside_move, js_atomize];
     await each_async(transforms, async (t) => await t(ast));
   });
+  return;
+  js_dollar;
 }
