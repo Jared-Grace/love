@@ -1,3 +1,4 @@
+import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
@@ -69,7 +70,8 @@ export async function marker_expand() {
       () => {
         list_remove(body_block, last);
         let { argument } = last;
-        let assign = js_declare(unique, argument);
+        let name = js_declaration_name(declaration_call);
+        let assign = js_declare(name, argument);
         list_add(body_block, assign);
       },
       noop,
