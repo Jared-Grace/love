@@ -16,11 +16,10 @@ export async function watch() {
   });
   watcher.on("change", (path) => {
     catch_log(() => {
-      let output = command_line(
-        "node r.mjs " + function_auto_path.name + " " + path,
-      );
+      const f_name = function_auto_path.name;
+      let output = command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
-      git_acp_call(f_name, args);
+      git_acp_call(f_name, [path]);
     });
   });
 }
