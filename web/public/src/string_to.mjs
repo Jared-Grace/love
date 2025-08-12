@@ -1,1 +1,1 @@
-export function string_to() {}
+export function string_to(s) {return s.toString()}
