@@ -1,3 +1,4 @@
+import { list_next } from "./list_next.mjs";
 import { js_stack_filtered } from "./js_stack_filtered.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
@@ -69,6 +70,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let { stack } = v;
         let filtered = js_stack_filtered(stack, "BlockStatement");
         let bs = list_single(filtered);
+        let list = list_next(stack, bs);
       });
     });
   }
