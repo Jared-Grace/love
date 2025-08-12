@@ -25,7 +25,7 @@ export function js_identifier_defineds(v) {
           each(ids, (id) => {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
-              each(properties);
+              each(properties, log);
             }
           });
           log(ids);
