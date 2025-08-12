@@ -1,3 +1,4 @@
+import { function_transform_current } from "./function_transform_current.mjs";
 import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
@@ -8,8 +9,8 @@ import { function_param_new } from "./function_param_new.mjs";
 import { each } from "./each.mjs";
 export async function function_param_move(param_name) {
   let param_names = string_split(param_names_comma, ",");
-  let f_name = await data_function_current_get();
-  await function_transform(f_name, (ast) => {
+  await function_transform_current(lambda);
+  function lambda(ast) {
     js_declaration_single_params_add(ast, param_names);
-  });
+  }
 }
