@@ -24,7 +24,7 @@ export async function marker_top() {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
   function lambda(ast) {
-    js_markers(ast);
+    let markers = js_markers(ast);
     let body = js_declaration_single_block_blody(ast);
     marker("1");
     let index_value = marker_first_index();
