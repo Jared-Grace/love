@@ -1,11 +1,8 @@
+import { catch_log } from "./catch_log.mjs";
 import { log } from "./log.mjs";
 import { command_line } from "./command_line.mjs";
 export function git_push() {
-  try {
-    lambda();
-  } catch (e) {
-    log(e);
-  }
+  catch_log(lambda);
   function lambda() {
     command_line("git push");
   }
