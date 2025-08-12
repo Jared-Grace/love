@@ -5,7 +5,7 @@ export function js_return_atomize(ast) {
   js_visit_type(ast, "ReturnStatement", (v) => {
     let { node } = v;
     js_return_on(node, noop, identifier_not);
-    function identifier_not() {
+    function identifier_not(argument) {
       name = "result";
     }
   });
