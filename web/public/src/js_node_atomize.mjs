@@ -66,4 +66,6 @@ export async function js_node_atomize(existing, v) {
   let message = js_unparse(v2);
   log(message);
   object_replace(node, v2);
+  let message2 = js_unparse(node);
+  log(message2);
 }
