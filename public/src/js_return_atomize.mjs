@@ -8,10 +8,10 @@ import { js_return_on } from "./js_return_on.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { noop } from "./noop.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
-export function js_return_atomize(ast) {
+export async function js_return_atomize(ast) {
   let existing = js_identifiers_names(ast);
   let rs = js_type(ast, "ReturnStatement");
-  each_async(rs, async (v) => {
+  await each_async(rs, async (v) => {
     let { node } = v;
     await js_return_on_async(node, noop, identifier_not);
     async function identifier_not(argument) {
