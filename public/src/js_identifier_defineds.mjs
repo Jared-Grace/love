@@ -31,7 +31,7 @@ export function js_identifier_defineds(v) {
               let names = js_identifiers_to_names(keys);
               la(names);
             } else if (js_node_type_is(id, "Identifier")) {
-              let value = object_property_get(identifiers, "name");
+              let value = object_property_get(id, "name");
               la([value]);
             } else {
               error();
