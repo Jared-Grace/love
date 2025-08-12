@@ -1,3 +1,4 @@
+import { marker_down_generic } from "./marker_down_generic.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
@@ -18,39 +19,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 export async function marker_down(delta) {
-  let f_name = await data_function_current_get();
-  await function_transform_marker(f_name, lambda);
-  function lambda(a) {
-    let { stack2, stack1, ast } = a;
-    let { next } = marker_next_get(a);
-    list_remove(stack2, stack1);
-    let vs = list_adder((la) => {
-      js_visit(ast, (v) => {
-        let { node, stack } = v;
-        if (js_stack_list_block_is(stack, 1)) {
-          la(v);
-        } else if (js_stack_list_block_is(stack, 0)) {
-          if (list_empty_is(node)) {
-            la(v);
-          }
-        }
-      });
-    });
-    let nodes = list_map_property(vs, "node");
-    let next_index = list_index_of(nodes, next);
-    let index_new = next_index + delta_get(vs);
-    let v_new = list_get(vs, index_new);
-    let { stack, node } = v_new;
-    if (list_is(node) && list_empty_is(node)) {
-      list_add(node, stack1);
-    } else {
-      let stack1_v_new = list_get_end(stack, 1);
-      let result = list_is(stack1_v_new);
-      assert(result);
-      let index = list_index_of(stack1_v_new, node);
-      list_insert(stack1_v_new, index, stack1);
-    }
-  }
+  await marker_down_generic(delta_get);
   function delta_get() {
     return integer_to(delta);
   }
