@@ -15,7 +15,6 @@ export async function html_new(name) {
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
-  marker("1");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +26,5 @@ export async function html_new(name) {
 </body>
 </html>`;
   await file_overwrite(file_path, contents);
-  marker("2");
   await file_open(file_path);
 }
