@@ -2,6 +2,7 @@ import { object_replace } from "./object_replace.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
@@ -9,7 +10,8 @@ export function js_dollar(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       if (name === "$i") {
-        object_replace(expression);
+        let from = js_parse_statement("if (false){}");
+        object_replace(node, from);
       }
     }
   });
