@@ -1,3 +1,5 @@
+import { js_return_on } from "./js_return_on.mjs";
+import { list_last } from "./list_last.mjs";
 import { each_reverse } from "./each_reverse.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -56,6 +58,8 @@ export async function marker_expand() {
       js_identifier_replace(ast, param_name, a_name);
     }
     let body_block = js_declaration_to_block_body(declaration);
+    let last = list_last(body_block);
+    js_return_on(last, identifier_if, identifier_not);
     let { stack2 } = a;
     list_remove(stack2, next);
     each_reverse(body_block, lambda4);
