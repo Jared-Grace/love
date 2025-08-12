@@ -1,3 +1,4 @@
+import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -100,6 +101,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let items = list_map(missing, js_parse_expression);
     list_add_multiple(list, items);
     list_remove_multiple(range, stack2_from);
-    js_code_call_args(f_name_new);
+    js_code_call_args_await_maybe(f_name_new, missing, declaration);
   }
 }
