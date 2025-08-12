@@ -26,11 +26,9 @@ export async function function_transform_marker_all(f_name, lambda$a) {
   async function lambda_marker(ast) {
     let markers = js_markers(ast);
     await each_async(markers, async (v) => {
-      if (js_marker_is(v)) {
-        let a = function_transform_marker_arg(v, ast);
-        log(a);
-        await lambda$a(a);
-      }
+      let a = function_transform_marker_arg(v, ast);
+      log(a);
+      await lambda$a(a);
     });
   }
 }
