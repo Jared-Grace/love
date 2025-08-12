@@ -9,7 +9,7 @@ export function js_statement_call_get(next) {
     let { expression: expression_next } = next;
     expression = expression_next;
   } else if (js_node_type_is(next, "VariableDeclaration")) {
-    let { declarations: declarations_next } = next;
+    let { declarations } = next;
     if (list_multiple_is(declarations)) {
       return null;
     }
