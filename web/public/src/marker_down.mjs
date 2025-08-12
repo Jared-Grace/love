@@ -47,8 +47,6 @@ export async function marker_down(delta) {
       let stack1_v_new = list_get_end(stack, 1);
       let result = list_is(stack1_v_new);
       assert(result);
-      log(stack1_v_new);
-      log(node);
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, stack1);
     }
