@@ -1,3 +1,4 @@
+import { js_declarator_init_set } from "./js_declarator_init_set.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -7,5 +8,5 @@ export function js_declare_init_set(vd, init) {
   assert(b);
   let { declarations } = vd;
   let declaration = list_single(declarations);
-  object_property_set(declaration, "init", init);
+  js_declarator_init_set(declaration, init);
 }
