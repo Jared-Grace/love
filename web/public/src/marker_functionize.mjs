@@ -77,6 +77,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let list = list_next(stack, bs);
         let item = list_next(stack, list);
         let index = list_index_of(item);
+        log(index)
         each_range(index, (i) => {
           let list_item = list_get(list, i);
           log(list_item);
