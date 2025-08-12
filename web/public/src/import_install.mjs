@@ -7,7 +7,7 @@ export async function import_install(name) {
       err.code === "ERR_MODULE_NOT_FOUND" ||
       err.code === "MODULE_NOT_FOUND"
     ) {
-      npm_install(name);
+      await npm_install(name);
       return await import(name);
     }
     throw err;

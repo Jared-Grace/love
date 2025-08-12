@@ -1,3 +1,4 @@
+import { catch_log_async } from "./catch_log_async.mjs";
 import { git_acp_call } from "./git_acp_call.mjs";
 import { catch_log } from "./catch_log.mjs";
 import { catch_ignore } from "./catch_ignore.mjs";
@@ -14,11 +15,12 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
-  watcher.on("change", (path) => {
-    catch_log(() => {
+  watcher.on("change", async (path) => {
+    await catch_log_async(async () => {
       const f_name = function_auto_path.name;
       let output = await command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
+      ("not await this on purpose");
       git_acp_call(f_name, [path]);
     });
   });
