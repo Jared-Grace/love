@@ -30,3 +30,16 @@ export async function html_new(name) {
   marker("2");
   await file_open(file_path);
 }
+async function undefined() {
+  let contents = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${name}</title>
+</head>
+<body>
+  ${body}
+</body>
+</html>`;
+  await file_overwrite(file_path, contents);
+}
