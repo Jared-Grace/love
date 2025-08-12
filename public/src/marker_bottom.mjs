@@ -20,7 +20,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 export async function marker_bottom(delta) {
   await marker_down_generic(delta_get);
-  function delta_get() {
+  function delta_get(vs) {
     return integer_to(delta);
   }
 }
