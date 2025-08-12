@@ -27,11 +27,9 @@ export function js_identifier_defineds(v) {
           each(ids, (id) => {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
-              each(properties, (k) => {
-                let keys = list_map_property(k, "key");
-                let names = js_identifiers_to_names(keys);
-                la(names);
-              });
+              let keys = list_map_property(properties, "key");
+              let names = js_identifiers_to_names(keys);
+              la(names);
             } else if (js_node_type_is(id, "Identifier")) {
               let value = object_property_get(identifiers, "name");
               la([value]);
