@@ -13,7 +13,7 @@ export function js_statement_call_get(next) {
     if (list_multiple_is(declarations)) {
       return null;
     }
-    let declaration = list_single(declarations);
+    declaration = list_single(declarations);
     expression = object_property_get(declaration, "init");
   }
   if (js_node_type_is(expression, "AwaitExpression")) {
