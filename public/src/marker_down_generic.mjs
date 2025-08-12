@@ -14,6 +14,7 @@ import { list_remove } from "./list_remove.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
+import { log } from "./log.mjs";
 export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
@@ -37,6 +38,7 @@ export async function marker_down_generic(delta_get) {
     let next_index = list_index_of(nodes, next);
     let index_new = next_index + delta_get(vs);
     let v_new = list_get(vs, index_new);
+    log(v_new);
     let { stack, node } = v_new;
     if (list_is(node) && list_empty_is(node)) {
       list_add(node, stack1);
