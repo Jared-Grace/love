@@ -52,7 +52,7 @@ export async function js_node_atomize(existing, v) {
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
-          if (0) assert(b);
+          assert(b);
           variable_name = object_property_get(param, "name");
         }
       }
