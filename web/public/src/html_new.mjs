@@ -8,10 +8,10 @@ import { folder_public } from "./folder_public.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
-  const file_name = file_name_html(name);
-  const file_path = folder_public_combine(file_name);
+  let file_name = file_name_html(name);
+  let file_path = folder_public_combine(file_name);
   await assert_file_exists_not(file_path);
-  const body = `<script type="module">
+  let body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
