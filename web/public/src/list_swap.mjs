@@ -1,4 +1,8 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { list_replace } from "./list_replace.mjs";
 export function list_swap(list, a, b) {
-  list_replace();
+  let ai = list_index_of(a);
+  let bi = list_index_of(b);
+  list_replace(list, ai, b);
+  list_replace(list, bi, a);
 }
