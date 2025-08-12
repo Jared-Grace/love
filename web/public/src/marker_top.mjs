@@ -29,7 +29,7 @@ export async function marker_top() {
   function lambda(ast) {
     let markers = js_markers(ast);
     let names = list_map(markers, js_marker_name_get);
-    js_identifier_unique();
+    js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
     marker("1");
     let index_value = marker_first_index();
