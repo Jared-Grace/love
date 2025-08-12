@@ -106,6 +106,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let code = js_code_call_args_await_maybe(f_name_new, missing, declaration);
     let parsed = js_parse_statement(code);
     list_insert(stack2_from, index_from, parsed);
-    js_outside_move(ast);
+    await js_outside_move(ast);
   }
 }
