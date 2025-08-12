@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { log } from "./log.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -58,9 +59,7 @@ export async function js_node_atomize(existing, v) {
   let block_body = list_next(stack, block);
   let block_body_item = list_next(stack, block_body);
   let block_body_item_index = list_index_of(block_body, block_body_item);
-  let assign_code = js_code_let_assign(unique, "a");
-  let assign = js_parse_statement(assign_code);
-  js_declare_init_set(assign, copy);
+  let assign = js_declare(unique, copy);
   list_insert(block_body, block_body_item_index, assign);
   let v2 = js_parse_expression(unique);
   object_replace(node, v2);
