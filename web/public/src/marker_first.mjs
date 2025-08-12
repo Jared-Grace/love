@@ -1,7 +1,7 @@
 import { marker_first_index } from "./marker_first_index.mjs";
 import { string_to } from "./string_to.mjs";
 export function marker_first() {
-  let s = marker_first_index();
-  let s2 = string_to(s);
-  return s2;
+  let index_value = marker_first_index();
+  let index = string_to(index_value);
+  return index;
 }
