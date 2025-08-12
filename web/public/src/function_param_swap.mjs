@@ -7,10 +7,11 @@ import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { function_param_new } from "./function_param_new.mjs";
 import { each } from "./each.mjs";
-export async function function_param_move(param_name) {
-  let param_names = string_split(param_names_comma, ",");
+export async function function_param_swap(param_name,param_name_other) {
   await function_transform_current(lambda);
   function lambda(ast) {
+  let declaration = js_declaration_single(ast);
+  let {params} = declaration;
     js_declaration_single_params_add(ast, param_names);
   }
 }
