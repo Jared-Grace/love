@@ -31,11 +31,7 @@ export async function marker_top() {
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
-    marker("1");
-    let index_value = marker_first_index();
-    let index = string_to(index_value);
-    let name = index;
-    js_marker_insert(name, body, 0);
+    js_marker_insert(name_next, body, 0);
     js_imports_missing_add(ast);
   }
 }
