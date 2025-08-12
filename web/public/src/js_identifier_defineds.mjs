@@ -26,7 +26,7 @@ export function js_identifier_defineds(v) {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
               each(properties, (k) => {
-                list_map_property(k);
+                list_map_property(k, "key");
               });
             }
           });
