@@ -37,6 +37,7 @@ import { list_remove } from "./list_remove.mjs";
 import { assert } from "./assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_unparse } from "./js_unparse.mjs";
+import { list_add } from "./list_add.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -53,5 +54,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     js_node_types(ast);
     const code_declaration = js_code_declaration(f_name_new, "", async_is);
     let declaration = js_parse_statement_module(code_declaration);
+    let body=js_declaration_to_block_body(declaration)
+    
   }
 }
