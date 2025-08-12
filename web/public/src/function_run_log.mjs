@@ -4,4 +4,5 @@ export async function function_run_log(funcName, args) {
   let result = await function_run(funcName, args);
   console.log("result:", result);
   return result;
+  log_keep("result:", result); 
 }
