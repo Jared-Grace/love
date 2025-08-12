@@ -11,11 +11,11 @@ export async function html_new(name) {
   let file_name = file_name_html(name);
   let file_path = folder_public_combine(file_name);
   await assert_file_exists_not(file_path);
-  marker("1");
   let body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
+  marker("1");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
