@@ -46,6 +46,7 @@ export async function marker_call(f_name_call) {
   return list_adder_async(async (la) => {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
+      marker("1");
       let {
         declaration,
         unaliased,
@@ -85,6 +86,7 @@ export async function marker_call(f_name_call) {
         code = js_code_let_assign(unique, code);
       }
       let parsed = js_parse_statement(code);
+      marker("2");
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
       let output = js_unparse(parsed);
