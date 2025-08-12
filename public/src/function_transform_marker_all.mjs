@@ -24,7 +24,7 @@ export async function function_transform_marker_all(f_name, lambda$a) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
-    list_filter();
+    let markers = list_filter(visitors, js_marker_is);
     await list_adder_async(async (la) => {
       await each_async(visitors, async (v) => {
         if (js_marker_is(v)) {
