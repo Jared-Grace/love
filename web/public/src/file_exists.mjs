@@ -9,12 +9,14 @@ export async function file_exists(file_path) {
   let fs = await import("fs");
   let { access } = fs.promises;
   let { constants } = fs;
+  let success = null;
   try {
     await lambda();
-    return true;
+    success = true;
   } catch (e) {
-    return false;
+    success = false;
   }
+  return success;
   async function lambda() {
     await access(file_path, constants.F_OK);
   }
