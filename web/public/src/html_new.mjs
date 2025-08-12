@@ -16,11 +16,6 @@ export async function html_new(name) {
     sayHello('World');
   </script>`;
   marker("1");
-  await html_overwrite(name, body, file_path);
-  marker("2");
-  await file_open(file_path);
-}
-async function html_overwrite(name, body, file_path) {
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,4 +27,6 @@ async function html_overwrite(name, body, file_path) {
 </body>
 </html>`;
   await file_overwrite(file_path, contents);
+  marker("2");
+  await file_open(file_path);
 }
