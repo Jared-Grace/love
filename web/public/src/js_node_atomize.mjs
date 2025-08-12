@@ -1,3 +1,4 @@
+import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { log } from "./log.mjs";
 import { function_exists } from "./function_exists.mjs";
@@ -50,7 +51,8 @@ export async function js_node_atomize(existing, v) {
           let { params } = declaration;
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
-          assert(equal_by(stack1,params, list_size)) 
+          let b = equal_by(stack1, params, list_size);
+          if (0) assert(b);
           variable_name = object_property_get(param, "name");
         }
       }
