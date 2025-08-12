@@ -27,10 +27,11 @@ export function js_identifier_defineds(v) {
               let { properties } = id;
               each(properties, (k) => {
                 let keys = list_map_property(k, "key");
-                let names = js_identifiers_to_names(ids);
+                let names = js_identifiers_to_names(keys);
                 la(names);
               });
             } else if (js_node_type_is(id, "Identifier")) {
+              list_map_property(identifiers, "name");
             }
           });
           log(ids);
