@@ -1,5 +1,4 @@
 import { object_property_set } from "./object_property_set.mjs";
-import { js_declarator_init_set } from "./js_declarator_init_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
 import { list_last } from "./list_last.mjs";
 import { each_reverse } from "./each_reverse.mjs";
