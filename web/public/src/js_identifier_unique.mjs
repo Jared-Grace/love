@@ -1,3 +1,4 @@
+import { string_empty_is } from "./string_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 export function js_identifier_unique(existing, name) {
@@ -7,7 +8,7 @@ export function js_identifier_unique(existing, name) {
     const suffix = attempt === 1 ? "" : attempt;
     result = name + suffix;
     attempt++;
-  } while (result === "" || list_includes(existing, result));
+  } while (string_empty_is(result) || list_includes(existing, result));
   list_add(existing, result);
   return result;
 }
