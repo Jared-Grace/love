@@ -1,1 +1,3 @@
-export function import_install() {}
+export async function import_install(name) {
+    await import(name)
+}
