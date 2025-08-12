@@ -1,3 +1,4 @@
+import { assert_message } from "./assert_message.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { log } from "./log.mjs";
@@ -52,7 +53,7 @@ export async function js_node_atomize(existing, v) {
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
-          assert(b);
+          assert_message(b, "param counts must match");
           variable_name = object_property_get(param, "name");
         }
       }
