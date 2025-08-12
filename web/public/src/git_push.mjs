@@ -4,6 +4,6 @@ import { command_line } from "./command_line.mjs";
 export function git_push() {
   catch_log(lambda);
   function lambda() {
-    command_line("git push");
+    await command_line("git push");
   }
 }
