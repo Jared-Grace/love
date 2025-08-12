@@ -33,7 +33,7 @@ import { error } from "./error.mjs";
 import { each } from "./each.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
-  await function_transform_marker(f_name, lambda2);
+  return await function_transform_marker(f_name, lambda2);
   async function lambda2(a) {
     let { next, index } = marker_next_get(a);
     let expression = js_statement_call_get(next);
