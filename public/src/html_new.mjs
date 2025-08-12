@@ -12,6 +12,7 @@ import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
   let file_path = html_name_to_path(name);
   await assert_file_exists_not(file_path);
+  marker("1");
   marker("2");
   let body = `<script type="module">
     import { sayHello } from './greetings.js';
@@ -19,5 +20,4 @@ export async function html_new(name) {
   </script>`;
   await html_overwrite(name, body);
   await file_open(file_path);
-  marker("1");
 }
