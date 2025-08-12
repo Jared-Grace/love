@@ -14,8 +14,11 @@ export function visit_filter_recursive(
     return;
   }
   list_add(stack, node);
-    let copy = list_copy(stack);
-  on_each({ node, stack: copy });
+  let copy = list_copy(stack);
+  on_each({
+    node,
+    stack: copy,
+  });
   let children = children_get(node);
   each(children, (c) => {
     visit_filter_recursive(c, children_get, filter, on_each, stack);
