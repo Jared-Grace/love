@@ -36,8 +36,6 @@ export function js_identifier_defineds(v) {
               la(value);
             }
           });
-          log(ids);
-          let names = js_identifiers_to_names(ids);
         }
       });
     });
