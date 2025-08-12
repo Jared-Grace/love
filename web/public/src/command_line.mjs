@@ -1,8 +1,9 @@
-import { execSync } from "child_process";
-export function command_line(command) {
-  const output = execSync(command, {
+import { exec } from "child_process";
+import { promisify } from "util";
+const execAsync = promisify(exec);
+export async function command_line(command) {
+  const { stdout } = await execAsync(command, {
     encoding: "utf8",
-    stdio: "pipe",
   });
-  return output;
+  return stdout;
 }
