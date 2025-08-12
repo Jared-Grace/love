@@ -69,7 +69,6 @@ export async function marker_expand() {
         list_remove(body_block, last);
         let { argument } = last;
         object_property_set(declaration_call, "init", argument);
-        js_declarator_init_set(declaration_call, argument);
       },
       noop,
     );
