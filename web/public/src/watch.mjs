@@ -17,7 +17,7 @@ export async function watch() {
   watcher.on("change", (path) => {
     catch_log(() => {
       const f_name = function_auto_path.name;
-      let output = command_line("node r.mjs " + f_name + " " + path);
+      let output = await command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
       git_acp_call(f_name, [path]);
     });
