@@ -1,3 +1,4 @@
+import { list_swap } from "./list_swap.mjs";
 import { js_declaration_param_named } from "./js_declaration_param_named.mjs";
 import { function_transform_current } from "./function_transform_current.mjs";
 import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
@@ -14,7 +15,8 @@ export async function function_param_swap(param_name_a, param_name_b) {
     let declaration = js_declaration_single(ast);
     let a = js_declaration_param_named(declaration, param_name_a);
     let b = js_declaration_param_named(declaration, param_name_b);
-  let {params} = declaration;
+    let { params } = declaration;
+    list_swap(params, a, b);
     js_declaration_single_params_add(ast, param_names);
   }
 }
