@@ -13,10 +13,10 @@ export function js_return_atomize(ast) {
   each_async(rs, async (v) => {
     let { node } = v;
     js_return_on(node, noop, identifier_not);
-    function identifier_not(argument) {
+    async function identifier_not(argument) {
       log(argument);
       let v = js_visit_match(ast, argument);
-      js_node_atomize(existing, v);
+      await js_node_atomize(existing, v);
     }
   });
 }
