@@ -79,12 +79,13 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let filtered = js_stack_filtered(stack, "BlockStatement");
         each(filtered, (bs) => {
           let list = list_next(stack, bs);
-          let index = list_next_index(stack, list);
-          log(index);
+  let item = list_next(stack, list);
+  let index = list_index_of(list, item);
+          log({list,index});
           each_range(index, (i) => {
-            let item = list_get(list, i);
-            if (js_node_type_is(item, "VariableDeclaration")) {
-              let { declarations } = item;
+            let list_item = list_get(list, i);
+            if (js_node_type_is(list_item, "VariableDeclaration")) {
+              let { declarations } = list_item;
               let ids = list_map_property(declarations, "id");
               let names = js_identifiers_to_names(ids);
               la(names);
