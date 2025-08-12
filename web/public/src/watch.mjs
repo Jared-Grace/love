@@ -5,6 +5,7 @@ import { function_auto_path } from "./function_auto_path.mjs";
 import { functions_path } from "./functions_path.mjs";
 import { import_install } from "./import_install.mjs";
 import { command_line } from "./command_line.mjs";
+import { log_keep } from "./log_keep.mjs";
 export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
   let joined = functions_path();
@@ -17,7 +18,7 @@ export async function watch() {
       let output = command_line(
         "node g.mjs " + function_auto_path.name + " " + path,
       );
-      log(output);
+      log_keep(output);
     });
   });
 }
