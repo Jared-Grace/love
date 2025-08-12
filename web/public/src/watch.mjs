@@ -1,3 +1,4 @@
+import { catch_log } from "./catch_log.mjs";
 import { catch_ignore } from "./catch_ignore.mjs";
 import { log } from "./log.mjs";
 import { function_auto_path } from "./function_auto_path.mjs";
@@ -12,7 +13,7 @@ export async function watch() {
     ignoreInitial: true,
   });
   watcher.on("change", (path) => {
-    catch_ignore(() => {
+    catch_log(() => {
       let output = command_line(
         "node g.mjs " + function_auto_path.name + " " + path,
       );
