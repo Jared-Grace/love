@@ -24,5 +24,6 @@ export function js_statement_call_get(next) {
   }
   return {
     expression,
+    declaration,
   };
 }
