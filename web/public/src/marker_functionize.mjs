@@ -57,7 +57,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     );
     const code_declaration = js_code_declaration(f_name_new, "", async_is);
     let declaration = js_parse_statement_module(code_declaration);
-    let body = js_declaration_to_block_body(declaration);
-    list_add_multiple(body, range);
+    let body_block = js_declaration_to_block_body(declaration);
+    list_add_multiple(body_block, range);let {body}=ast
+    list_add(body,declaration)
   }
 }
