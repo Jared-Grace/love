@@ -18,6 +18,7 @@ import { list_get_end } from "./list_get_end.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { object_property_get } from "./object_property_get.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = "v";
   let { node } = v;
@@ -61,5 +62,6 @@ export async function js_node_atomize(existing, v) {
   js_declare_init_set(assign, copy);
   list_insert(block_body, block_body_item_index, assign);
   let v2 = js_parse_expression(unique);
+  log(js_unparse(v2))
   object_replace(node, v2);
 }
