@@ -72,7 +72,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add_multiple(body_block, range);
     let { body } = ast;
     list_add(body, declaration);
-    list_adder((la) => {
+    list_adder_multiple((la) => {
       js_visit_type(declaration, "Identifier", (v) => {
         let { stack } = v;
         let filtered = js_stack_filtered(stack, "BlockStatement");
