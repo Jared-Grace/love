@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
 import { js_return_on } from "./js_return_on.mjs";
@@ -10,6 +11,7 @@ export function js_return_atomize(ast) {
     let { node } = v;
     js_return_on(node, noop, identifier_not);
     function identifier_not(argument) {
+      log(argument);
       let v = js_visit_match(ast, argument);
       js_node_atomize(existing, v);
     }
