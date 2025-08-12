@@ -20,8 +20,8 @@ import { list_add } from "./list_add.mjs";
 export async function marker_top() {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
-  marker("1");
   function lambda(ast) {
+    marker("1");
     let body = js_declaration_single_block_blody(ast);
     let name = marker_first();
     js_marker_insert(name, body, 0);
