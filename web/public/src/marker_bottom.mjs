@@ -19,7 +19,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 import { list_index_last } from "./list_index_last.mjs";
-export async function marker_bottom(delta) {
+export async function marker_bottom() {
   await marker_down_generic(delta_get);
   function delta_get(vs) {
     return list_index_last(vs);
