@@ -1,3 +1,5 @@
+import { each_async } from "./each_async.mjs";
+import { js_type } from "./js_type.mjs";
 import { log } from "./log.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
@@ -7,7 +9,8 @@ import { noop } from "./noop.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 export function js_return_atomize(ast) {
   let existing = js_identifiers_names(ast);
-  js_visit_type(ast, "ReturnStatement", (v) => {
+  let rs = js_type(ast, "ReturnStatement");
+  each_async(rs, async (v) => {
     let { node } = v;
     js_return_on(node, noop, identifier_not);
     function identifier_not(argument) {
