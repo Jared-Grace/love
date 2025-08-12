@@ -9,12 +9,9 @@ import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { string_is } from "./string_is.mjs";
 export function js_marker_named(v, marker_name) {
-  let a_first = js_marker_name_get(v);
-  if (marker_name !== null) {
-    let { value } = a_first;
-    if (value !== marker_name) {
-      return false;
-    }
+  let marker_name_actual = js_marker_name_get(v);
+  if (marker_name_actual !== marker_name) {
+    return false;
   }
   return true;
 }
