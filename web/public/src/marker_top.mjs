@@ -24,6 +24,7 @@ import { js_markers } from "./js_markers.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_marker_name_get } from "./js_marker_name_get.mjs";
 export async function marker_top() {
+  marker("1");
   marker("2");
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
