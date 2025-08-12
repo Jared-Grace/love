@@ -6,6 +6,6 @@ export function js_declare_init_set(vd, init) {
   let b = js_node_type_is(vd, "VariableDeclaration");
   assert(b);
   let { declarations } = vd;
-  let declaration = list_single(declarations);
-  object_property_set(declaration, "init", init);
+  let declarators = list_single(declarations);
+  object_property_set(declarators, "init", init);
 }
