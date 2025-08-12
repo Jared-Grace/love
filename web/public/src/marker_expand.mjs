@@ -65,7 +65,8 @@ export async function marker_expand() {
       last,
       () => {
         list_remove(body_block, last);
-        let { argument } = log(declaration_call);
+        let { argument } = last;
+        log(declaration_call);
       },
       noop,
     );
