@@ -26,6 +26,7 @@ export async function function_transform_marker_all(f_name, lambda$a) {
     await list_adder_async(async (la) => {
       await each_async(visitors, async (v) => {
         if (js_marker_is(v)) {
+          la(v);
           let a = function_transform_marker_arg(v, ast);
           await lambda$a(a);
         }
