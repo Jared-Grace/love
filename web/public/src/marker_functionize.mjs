@@ -73,16 +73,15 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
       js_visit_type(declaration, "Identifier", (v) => {
         let { stack } = v;
         let filtered = js_stack_filtered(stack, "BlockStatement");
-        each(filtered, bs=>{
-let list = list_next(stack, bs);
-        let index = list_next_index(stack, list);
-        log(index)
-        each_range(index, (i) => {
-          let list_item = list_get(list, i);
-          log(list_item);
+        each(filtered, (bs) => {
+          let list = list_next(stack, bs);
+          let index = list_next_index(stack, list);
+          log(index);
+          each_range(index, (i) => {
+            let list_item = list_get(list, i);
+            log(list_item);
+          });
         });
-        })
-        
       });
     });
   }
