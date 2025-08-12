@@ -1,11 +1,12 @@
+import { catch_ignore_async } from "./catch_ignore_async.mjs";
 import { catch_ignore } from "./catch_ignore.mjs";
 import { command_line } from "./command_line.mjs";
 import { git_push } from "./git_push.mjs";
-export function git_acp(message) {
+export async function git_acp(message) {
   await command_line("git add -A");
-  catch_ignore(lambda);
-  git_push();
-  function lambda() {
-   await  command_line(`git commit -m "${message}"`);
+  await catch_ignore_async(lambda);
+  await git_push();
+  async function lambda() {
+    await command_line(`git commit -m "${message}"`);
   }
 }
