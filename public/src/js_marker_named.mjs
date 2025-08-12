@@ -6,6 +6,7 @@ import {marker} from './marker.mjs';
 import {js_node_type_is} from './js_node_type_is.mjs';
 import {js_node_is} from './js_node_is.mjs';
 import {list_get_end} from './list_get_end.mjs';
+import { string_is } from './string_is.mjs';
 export function js_marker_named(v, marker_name) {
   let {stack} = v;
   let stack1 = list_get_end(stack, 1);
@@ -32,13 +33,16 @@ export function js_marker_named(v, marker_name) {
   if (!js_node_type_is(a_first, "Literal")) {
     return false;
   }
+  let stack2 = list_get_end(stack, 2);
+  if (!list_is(stack2)) {
+    error();
+  }
+  if ((marker_name) !== null) {
+
   let {value} = a_first;
   if (value !== marker_name) {
     return false;
   }
-  let stack2 = list_get_end(stack, 2);
-  if (!list_is(stack2)) {
-    error();
   }
   return true;
 }

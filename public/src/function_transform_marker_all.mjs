@@ -1,3 +1,4 @@
+import { js_marker_is } from "./js_marker_is.mjs";
 import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
 import { data_marker_current_get } from "./data_marker_current_get.mjs";
@@ -22,8 +23,10 @@ export async function function_transform_marker_all(f_name, lambda$a) {
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
     await each_async(visitors, async (v) => {
-      let a = function_transform_marker_arg(v, ast);
-      await lambda$a(a);
+      if (js_marker_is(v)) {
+        let a = function_transform_marker_arg(v, ast);
+        await lambda$a(a);
+      }
     });
   }
 }
