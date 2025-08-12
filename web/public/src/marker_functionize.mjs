@@ -74,7 +74,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { body } = ast;
     list_add(body, declaration);
     js_visit_type(declaration, "Identifier", (v) => {
-      let { stack } = v;
+      let { stack ,node} = v;
       let declareds = list_adder_multiple((la) => {
         let filtered = js_stack_filtered(stack, "BlockStatement");
         each(filtered, (bs) => {
@@ -89,10 +89,10 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
               let names = js_identifiers_to_names(ids);
               la(names);
             }
-            log(item);
           });
         });
       });
+      log({declareds,node})
     });
   }
 }
