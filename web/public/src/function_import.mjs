@@ -1,9 +1,9 @@
 import { path_join } from "./path_join.mjs";
-import path from "path";
 import { fileURLToPath } from "url";
 import { function_name_to_base } from "./function_name_to_base.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 export async function function_import(f_name) {
+  const path = await import("path");
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   f_name = await function_name_unalias(f_name);
