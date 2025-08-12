@@ -9,6 +9,7 @@ import { list_next } from "./list_next.mjs";
 import { each } from "./each.mjs";
 import { js_stack_filtered } from "./js_stack_filtered.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   let defineds = list_adder_multiple((la) => {
@@ -31,12 +32,12 @@ export function js_identifier_defineds(v) {
                 la(names);
               });
             } else if (js_node_type_is(id, "Identifier")) {
-              list_map_property(identifiers, "name");
+              let value = object_property_get(identifiers, "name");
+              la(value);
             }
           });
           log(ids);
           let names = js_identifiers_to_names(ids);
-          la(names);
         }
       });
     });
