@@ -25,7 +25,9 @@ export function js_identifier_defineds(v) {
           each(ids, (id) => {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
-              each(properties, log);
+              each(propertiesk, (k) => {
+                list_map_property();
+              });
             }
           });
           log(ids);
