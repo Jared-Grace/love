@@ -16,6 +16,7 @@ export async function html_new(name) {
     sayHello('World');
   </script>`;
   marker("1");
+  html_overwrite();
   marker("2");
   await html_overwrite(name, body, file_path);
   await file_open(file_path);
@@ -33,3 +34,4 @@ async function html_overwrite(name, body, file_path) {
 </html>`;
   await file_overwrite(file_path, contents);
 }
+function html_overwrite() {}
