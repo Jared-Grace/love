@@ -25,14 +25,11 @@ export async function function_transform_marker_all(f_name, lambda$a) {
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
     let markers = list_filter(visitors, js_marker_is);
-    await list_adder_async(async (la) => {
-      await each_async(visitors, async (v) => {
-        if (js_marker_is(v)) {
-          la(v);
-          let a = function_transform_marker_arg(v, ast);
-          await lambda$a(a);
-        }
-      });
+    await each_async(markers, async (v) => {
+      if (js_marker_is(v)) {
+        let a = function_transform_marker_arg(v, ast);
+        await lambda$a(a);
+      }
     });
   }
 }
