@@ -41,6 +41,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { stack2: stack2_from } = a_from;
     let { stack2: stack2_to } = a_to;
     assert(stack2_from === stack2_to);
-    list_slice();
+    list_slice(stack2_from,index_from,index_to);
   }
 }
