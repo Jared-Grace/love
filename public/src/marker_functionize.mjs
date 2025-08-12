@@ -46,7 +46,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { stack2: stack2_to } = a_to;
     assert(stack2_from === stack2_to);
     let range = list_range(stack2_from, index_from, index_to);
-    log(list_map(range, js_unparse));
+    log(list_any(range, r=>js_node_types_includes(r, 'AwaitExpression') ));
+    js_node_types(ast)
     const code_declaration = js_code_declaration(f_name_new, "", false);
     let declaration = js_parse_statement_module(code_declaration);
   }
