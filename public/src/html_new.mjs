@@ -16,6 +16,7 @@ export async function html_new(name) {
     sayHello('World');
   </script>`;
   marker("1");
+  marker("2");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
