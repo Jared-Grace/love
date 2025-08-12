@@ -10,9 +10,7 @@ import { each_async } from "./each_async.mjs";
 export async function function_auto(f_name) {
   marker("1");
   await function_transform(f_name, async (ast) => {
-    let transforms = [js_outside_move, js_atomize];
+    let transforms = [js_dollar, js_outside_move, js_atomize];
     await each_async(transforms, async (t) => await t(ast));
   });
-  return;
-  js_dollar;
 }
