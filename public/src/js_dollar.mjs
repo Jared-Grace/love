@@ -5,6 +5,7 @@ export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
     if (js_identifier_is(node)) {
+      let { name } = node;
     }
   });
 }
