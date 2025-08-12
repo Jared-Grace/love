@@ -9,13 +9,13 @@ import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
   let file_name = file_name_html(name);
-  marker("1");
   let file_path = folder_public_combine(file_name);
   await assert_file_exists_not(file_path);
   let body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
   </script>`;
+  marker("1");
   let contents = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@ export async function html_new(name) {
   ${body}
 </body>
 </html>`;
-  await assert_file_exists_not(file_path);
   await file_overwrite(file_path, contents);
+  marker("2");
   await file_open(file_path);
 }
