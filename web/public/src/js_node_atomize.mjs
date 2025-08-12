@@ -48,6 +48,7 @@ export async function js_node_atomize(existing, v) {
           let { params } = declaration;
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
+          log(param);
           variable_name = object_property_get(param, "name");
         }
       }
