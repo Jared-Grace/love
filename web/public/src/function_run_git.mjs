@@ -4,6 +4,6 @@ import { function_run } from "./function_run.mjs";
 export async function function_run_git(f_name, args) {
   let result = await function_run_log(f_name, args);
   let message = [f_name].concat(args).join(" ");
-  await git_acp(message);
+  git_acp(message);
   return result;
 }
