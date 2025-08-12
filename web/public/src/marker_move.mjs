@@ -1,3 +1,4 @@
+import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
@@ -29,13 +30,11 @@ export async function marker_move(m_name_from, m_name_to) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
-    let marker_v_from = js_marker_named_ast(ast, m_name_from);
-    let a_from = function_transform_marker_arg(marker_v_from, ast);
+    let a_from = js_marker_named_ast_arg(ast, m_name_from);
     let { next } = marker_next_get(a_from);
-    let { stack2: stack2_from } = (a_from);
+    let { stack2: stack2_from } = a_from;
     list_remove(stack2_from, next);
-    let marker_v_to = js_marker_named_ast(ast, m_name_to);
-    let a_to = function_transform_marker_arg(marker_v_to, ast);
+    let a_to = js_marker_named_ast_arg(ast, m_name_to);
     let { index, stack2: stack2_to } = marker_next_index(a_to);
     list_insert(stack2_to, index, next);
   }
