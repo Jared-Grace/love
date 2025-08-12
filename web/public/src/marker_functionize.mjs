@@ -1,3 +1,4 @@
+import { list_slice } from "./list_slice.mjs";
 import { marker_previous_index } from "./marker_previous_index.mjs";
 import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
@@ -27,14 +28,19 @@ import { list_first } from "./list_first.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
+import { assert } from "./assert.mjs";
+import { list_map } from "./list_map.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
-    let { index } = marker_previous_index(a_from);
-    let { stack2: stack2_from } = a_from;
+    let { index: index_from } = marker_next_index(a_from);
     let a_to = js_marker_named_ast_arg(ast, m_name_to);
+    let { index: index_to } = marker_previous_index(a_to);
+    let { stack2: stack2_from } = a_from;
     let { stack2: stack2_to } = a_to;
+    assert(stack2_from === stack2_to);
+    list_slice();
   }
 }
