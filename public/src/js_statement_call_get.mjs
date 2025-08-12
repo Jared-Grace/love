@@ -22,5 +22,7 @@ export function js_statement_call_get(next) {
   if (!js_node_type_is(expression, "CallExpression")) {
     return null;
   }
-  return expression;
+  return {
+    expression,
+  };
 }
