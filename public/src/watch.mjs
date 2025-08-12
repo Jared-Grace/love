@@ -12,10 +12,11 @@ export async function watch() {
     ignoreInitial: true,
   });
   watcher.on("change", (path) => {
-    catch_ignore();
-    let output = command_line(
-      "node g.mjs " + function_auto_path.name + " " + path,
-    );
-    log(output);
+    catch_ignore(() => {
+      let output = command_line(
+        "node g.mjs " + function_auto_path.name + " " + path,
+      );
+      log(output);
+    });
   });
 }
