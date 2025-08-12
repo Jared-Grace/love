@@ -76,6 +76,6 @@ export async function marker_expand() {
       list_insert(stack2, index, item);
     }
     let inserted = list_map(body_block, js_unparse);
-    la(inserted);
+    return inserted;
   }
 }
