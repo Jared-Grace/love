@@ -44,7 +44,7 @@ export async function marker_down_generic(delta_get) {
     let v_new = list_get(vs, index_new);
     log(v_new);
     let { stack, node } = v_new;
-    if (list_is(node) && list_empty_is(node)) {
+    if (list_is(node)) {
       list_add(node, stack1);
     } else {
       let stack1_v_new = list_get_end(stack, 1);
