@@ -17,7 +17,7 @@ export async function html_new(name) {
     sayHello('World');
   </script>`;
   marker("1");
-  await html_overwrite(name, body, file_path);
+  await html_overwrite(name, body);
   marker("2");
   await file_open(file_path);
 }
