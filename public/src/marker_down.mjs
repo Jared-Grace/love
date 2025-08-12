@@ -38,7 +38,7 @@ export async function marker_down(delta) {
     });
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
-    let index_new = next_index + integer_to(delta);
+    let index_new = next_index + delta_get(vs);
     let v_new = list_get(vs, index_new);
     let { stack, node } = v_new;
     if (list_is(node) && list_empty_is(node)) {
@@ -50,5 +50,8 @@ export async function marker_down(delta) {
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, stack1);
     }
+  }
+  function delta_get() {
+    return integer_to(delta);
   }
 }
