@@ -1,5 +1,5 @@
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_calls_to_each(ast) {
   let call_name = null;
-  js_visit_type(ast, "BlockStatement", (v) => {});
+  js_visit_type;
 }
