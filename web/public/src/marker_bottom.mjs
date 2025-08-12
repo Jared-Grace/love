@@ -21,7 +21,8 @@ import { assert } from "./assert.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 export async function marker_bottom() {
   await marker_down_generic(delta_get);
-  function delta_get(vs) {
-    return list_index_last(vs);
+  function delta_get(a) {
+    let { vs, next_index } = a;
+    return list_index_last(vs) - next_index;
   }
 }
