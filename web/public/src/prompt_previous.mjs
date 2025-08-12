@@ -25,4 +25,5 @@ export async function prompt_previous() {
   let previous = list_last(difference);
   log(previous);
   return await function_run_line(previous);
+  log_keep(previous);
 }
