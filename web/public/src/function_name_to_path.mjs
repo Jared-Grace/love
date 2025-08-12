@@ -1,3 +1,4 @@
+import { path_join } from "./path_join.mjs";
 import { string_includes } from "./string_includes.mjs";
 import { error } from "./error.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
@@ -10,4 +11,5 @@ export function function_name_to_path(f_name) {
   let second = [functions_path(), function_name_to_base(f_name)];
   let joined = path.join(...second);
   return joined;
+  let joinedd = path_join(second);
 }
