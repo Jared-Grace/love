@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -62,5 +63,7 @@ export async function js_node_atomize(existing, v) {
   js_declare_init_set(assign, copy);
   list_insert(block_body, block_body_item_index, assign);
   let v2 = js_parse_expression(unique);
+  let message = js_unparse(v2);
+  if (0) log(message);
   object_replace(node, v2);
 }
