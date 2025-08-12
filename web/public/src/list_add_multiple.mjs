@@ -1,3 +1,3 @@
-export function list_add_multiple(list, item) {
-  list.push(item);
+export function list_add_multiple(list, items) {
+  list.push(...items);
 }

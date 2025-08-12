@@ -1,3 +1,5 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_node_types } from "./js_node_types.mjs";
 import { js_node_types_includes } from "./js_node_types_includes.mjs";
 import { list_any } from "./list_any.mjs";
@@ -50,11 +52,12 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let { stack2: stack2_to } = a_to;
     assert(stack2_from === stack2_to);
     let range = list_range(stack2_from, index_from, index_to);
-    let async_is=(list_any(range, (r) => js_node_types_includes(r, "AwaitExpression")));
-    js_node_types(ast);
+    let async_is = list_any(range, (r) =>
+      js_node_types_includes(r, "AwaitExpression"),
+    );
     const code_declaration = js_code_declaration(f_name_new, "", async_is);
     let declaration = js_parse_statement_module(code_declaration);
-    let body=js_declaration_to_block_body(declaration)
-    
+    let body = js_declaration_to_block_body(declaration);
+    list_add_multiple(body, range);
   }
 }
