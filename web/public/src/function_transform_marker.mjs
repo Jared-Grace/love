@@ -19,7 +19,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 export async function function_transform_marker(f_name, lambda$a) {
   let marker_name = await data_marker_current_get();
-  return await function_transform(f_name, lambda_marker);
+  await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let visitors = js_type(ast, "CallExpression");
     await each_async(visitors, async (v) => {
