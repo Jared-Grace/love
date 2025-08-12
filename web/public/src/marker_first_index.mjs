@@ -1,3 +1,4 @@
 export function marker_first_index() {
-  return 1;
+  const index = 1;
+  return index;
 }
