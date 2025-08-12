@@ -1,3 +1,4 @@
+import { js_stack_filtered } from "./js_stack_filtered.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_node_types } from "./js_node_types.mjs";
@@ -60,12 +61,15 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     const code_declaration = js_code_declaration(f_name_new, "", async_is);
     let declaration = js_parse_statement_module(code_declaration);
     let body_block = js_declaration_to_block_body(declaration);
-    list_add_multiple(body_block, range);let {body}=ast
-    list_add(body,declaration)
-    list_adder(la=>{
-      js_visit_type(declaration,'Identififer', v=>{
-        let {stack}=v
-      })
-    })
+    list_add_multiple(body_block, range);
+    let { body } = ast;
+    list_add(body, declaration);
+    list_adder((la) => {
+      js_visit_type(declaration, "Identififer", (v) => {
+        let { stack } = v;
+        let filtered = js_stack_filtered(stack, "BlockStatement");
+        let bs = list_single(filtered);
+      });
+    });
   }
 }
