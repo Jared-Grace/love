@@ -15,12 +15,18 @@ export function js_return_name(ast) {
     if (js_node_type_is(last, "ReturnStatement")) {
       let { argument } = last;
       if (js_node_type_is(argument, "Identifier")) {
-        let { name: name_argument } = argument;
-        name = name_argument;
+        identifier_if(argument);
       } else {
-        name = "result";
+        identifier_not();
       }
     }
   }
   return name;
+  function identifier_not() {
+    name = "result";
+  }
+  function identifier_if(argument) {
+    let { name: name_argument } = argument;
+    name = name_argument;
+  }
 }
