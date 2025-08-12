@@ -42,7 +42,6 @@ export async function marker_down_generic(delta_get) {
         next_index,
       });
     let v_new = list_get(vs, index_new);
-    log(vs);
     let { stack, node } = v_new;
     if (list_is(node)) {
       list_add(node, stack1);
