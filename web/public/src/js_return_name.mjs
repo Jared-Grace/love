@@ -1,3 +1,4 @@
+import { js_return_on } from "./js_return_on.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { log } from "./log.mjs";
@@ -12,14 +13,7 @@ export function js_return_name(ast) {
   let name = null;
   if (list_empty_not_is(body_block)) {
     let last = list_last(body_block);
-    if (js_node_type_is(last, "ReturnStatement")) {
-      let { argument } = last;
-      if (js_node_type_is(argument, "Identifier")) {
-        identifier_if(argument);
-      } else {
-        identifier_not();
-      }
-    }
+    js_return_on(last, identifier_if, identifier_not);
   }
   return name;
   function identifier_not() {
