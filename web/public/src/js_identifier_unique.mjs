@@ -5,7 +5,7 @@ export function js_identifier_unique(existing, name) {
   let result = null;
   let attempt = 1;
   do {
-    const suffix = attempt === 1 ? "" : attempt;
+    const suffix = attempt === 1 && string_empty_is(name) ? "" : attempt;
     result = name + suffix;
     attempt++;
   } while (string_empty_is(result) || list_includes(existing, result));
