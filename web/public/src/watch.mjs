@@ -7,6 +7,6 @@ export async function watch() {
     ignoreInitial: true,
   });
   watcher.on("change", (path) => {
-    runMyFunction(path);
+    log(path);
   });
 }
