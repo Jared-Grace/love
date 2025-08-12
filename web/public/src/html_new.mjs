@@ -10,9 +10,9 @@ import { folder_public } from "./folder_public.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
-  marker("1");
   let file_path = html_name_to_path(name);
   await assert_file_exists_not(file_path);
+  marker("1");
   let body = `<script type="module">
     import { sayHello } from './greetings.js';
     sayHello('World');
