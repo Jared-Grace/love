@@ -36,6 +36,7 @@ import { list_first } from "./list_first.mjs";
 import { error } from "./error.mjs";
 import { each } from "./each.mjs";
 import { noop } from "./noop.mjs";
+import { list_add } from "./list_add.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return await function_transform_marker(f_name, lambda2);
@@ -67,6 +68,7 @@ export async function marker_expand() {
       last,
       () => {
         list_remove(body_block, last);
+        list_add(body_block, declaration_call);
         let { argument } = last;
         object_property_set(declaration_call, "init", argument);
       },
