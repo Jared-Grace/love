@@ -1,3 +1,4 @@
+import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { js_identifier_defineds } from "./js_identifier_defineds.mjs";
@@ -97,5 +98,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let list = object_property_get(declaration, "params");
     let items = list_map(missing, js_parse_expression);
     list_add_multiple(list, items);
+    list_remove_multiple(range, stack2_from);
   }
 }
