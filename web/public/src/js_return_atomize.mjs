@@ -8,7 +8,6 @@ export function js_return_atomize(ast) {
     js_return_on(node, noop, identifier_not);
     function identifier_not(argument) {
       let v = js_visit_match(argument);
-      name = "result";
     }
   });
 }
