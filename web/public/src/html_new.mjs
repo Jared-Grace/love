@@ -16,17 +16,7 @@ export async function html_new(name) {
     sayHello('World');
   </script>`;
   marker("1");
-  let contents = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>${name}</title>
-</head>
-<body>
-  ${body}
-</body>
-</html>`;
-  await file_overwrite(file_path, contents);
+  await html_overwrite(name, body, file_path);
   marker("2");
   await file_open(file_path);
 }
