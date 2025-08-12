@@ -33,6 +33,7 @@ import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
 import { error } from "./error.mjs";
 import { each } from "./each.mjs";
+import { noop } from "./noop.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
   return await function_transform_marker(f_name, lambda2);
@@ -65,7 +66,7 @@ export async function marker_expand() {
       () => {
         list_remove(body_block, last);
       },
-      identifier_not,
+      noop,
     );
     let { stack2 } = a;
     list_remove(stack2, next);
