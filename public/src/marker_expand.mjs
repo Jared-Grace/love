@@ -33,38 +33,36 @@ import { error } from "./error.mjs";
 import { each } from "./each.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
-  return list_adder_async(async (la) => {
-    await function_transform_marker(f_name, lambda2);
-    async function lambda2(a) {
-      let { next, index } = marker_next_get(a);
-      let expression = js_statement_call_get(next);
-      if (expression === null) {
-        return;
-      }
-      let { callee } = expression;
-      let { arguments: arguments2 } = expression;
-      const a_names = js_identifiers_to_names(arguments2);
-      let { name } = callee;
-      let { declaration, ast } = await function_parse_declaration(name);
-      let identifiers = js_identifiers_names(ast);
-      let intesection = list_intersect(identifiers, arguments2);
-      if (list_empty_not_is(intesection)) {
-        error("todo");
-      }
-      let params_names = js_declaration_params_names(declaration);
-      each_pair(params_names, a_names, lambda3);
-      function lambda3(param_name, a_name) {
-        js_identifier_replace(ast, param_name, a_name);
-      }
-      let body_block = js_declaration_to_block_body(declaration);
-      let { stack2 } = a;
-      list_remove(stack2, next);
-      each_reverse(body_block, lambda4);
-      function lambda4(item) {
-        list_insert(stack2, index, item);
-      }
-      let inserted = list_map(body_block, js_unparse)
-      la(inserted);
+  await function_transform_marker(f_name, lambda2);
+  async function lambda2(a) {
+    let { next, index } = marker_next_get(a);
+    let expression = js_statement_call_get(next);
+    if (expression === null) {
+      return;
     }
-  });
+    let { callee } = expression;
+    let { arguments: arguments2 } = expression;
+    const a_names = js_identifiers_to_names(arguments2);
+    let { name } = callee;
+    let { declaration, ast } = await function_parse_declaration(name);
+    let identifiers = js_identifiers_names(ast);
+    let intesection = list_intersect(identifiers, arguments2);
+    if (list_empty_not_is(intesection)) {
+      error("todo");
+    }
+    let params_names = js_declaration_params_names(declaration);
+    each_pair(params_names, a_names, lambda3);
+    function lambda3(param_name, a_name) {
+      js_identifier_replace(ast, param_name, a_name);
+    }
+    let body_block = js_declaration_to_block_body(declaration);
+    let { stack2 } = a;
+    list_remove(stack2, next);
+    each_reverse(body_block, lambda4);
+    function lambda4(item) {
+      list_insert(stack2, index, item);
+    }
+    let inserted = list_map(body_block, js_unparse);
+    la(inserted);
+  }
 }
