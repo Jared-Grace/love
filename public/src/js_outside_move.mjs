@@ -1,3 +1,4 @@
+import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -24,4 +25,5 @@ export async function js_outside_move(ast) {
   each(fds, (fd) => {
     list_remove(body, fd);
   });
+  js_imports_missing_add(ast);
 }
