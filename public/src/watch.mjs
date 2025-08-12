@@ -1,3 +1,4 @@
+import { git_acp_call } from "./git_acp_call.mjs";
 import { catch_log } from "./catch_log.mjs";
 import { catch_ignore } from "./catch_ignore.mjs";
 import { log } from "./log.mjs";
@@ -19,6 +20,7 @@ export async function watch() {
         "node r.mjs " + function_auto_path.name + " " + path,
       );
       log_keep(output);
+      git_acp_call(f_name, args);
     });
   });
 }
