@@ -1,3 +1,4 @@
+import { js_declarator_init_set } from "./js_declarator_init_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
 import { list_last } from "./list_last.mjs";
 import { each_reverse } from "./each_reverse.mjs";
@@ -66,7 +67,7 @@ export async function marker_expand() {
       () => {
         list_remove(body_block, last);
         let { argument } = last;
-        log(declaration_call);
+        js_declarator_init_set(declaration_call, argument);
       },
       noop,
     );
