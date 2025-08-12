@@ -43,16 +43,3 @@ async function html_overwrite() {
 </html>`;
   await file_overwrite(file_path, contents);
 }
-async function html_overwrite() {
-  let contents = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>${name}</title>
-</head>
-<body>
-  ${body}
-</body>
-</html>`;
-  await file_overwrite(file_path, contents);
-}
