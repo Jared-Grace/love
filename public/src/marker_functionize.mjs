@@ -40,6 +40,8 @@ import { assert } from "./assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_add } from "./list_add.mjs";
+import { list_adder } from "./list_adder.mjs";
+import { js_visit } from "./js_visit.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -60,5 +62,10 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let body_block = js_declaration_to_block_body(declaration);
     list_add_multiple(body_block, range);let {body}=ast
     list_add(body,declaration)
+    list_adder(la=>{
+      js_visit_type(declaration,'Identififer', v=>{
+        let {stack}=v
+      })
+    })
   }
 }
