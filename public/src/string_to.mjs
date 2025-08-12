@@ -1,3 +1,4 @@
 export function string_to(input) {
-  return input.toString();
+  const s = input.toString();
+  return s;
 }
