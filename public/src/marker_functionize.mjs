@@ -1,3 +1,6 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { js_identifier_defineds } from "./js_identifier_defineds.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -56,6 +59,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
+import { functions_names } from "./functions_names.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -77,40 +81,21 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add_multiple(body_block, range);
     let { body } = ast;
     list_add(body, declaration);
-    let missing=list_adder_unique(la=>{
-
-    js_visit_type(declaration, "Identifier", (v) => {
-      let defineds = js_identifier_defineds(v);
-  let { node } = v;
-      let name = object_property_get(node,'name')
-      if (!list_includes(defineds,name)) {
-        la(name)
-      }
-    });
-    })
-
-    log(missing)
-  }
-}
-function js_identifier_defineds(v) {
-  let { stack } = v;
-  let defineds = list_adder_multiple((la) => {
-    let filtered = js_stack_filtered(stack, "BlockStatement");
-    each(filtered, (bs) => {
-      let list = list_next(stack, bs);
-      let item = list_next(stack, list);
-      let index = list_index_of_next(list, item);
-      each_range(index, (i) => {
-        let list_item = list_get(list, i);
-        if (js_node_type_is(list_item, "VariableDeclaration")) {
-          let { declarations } = list_item;
-          let ids = list_map_property(declarations, "id");
-          let names = js_identifiers_to_names(ids);
-          la(names);
+    let missing = list_adder_unique((la) => {
+      js_visit_type(declaration, "Identifier", (v) => {
+        let defineds = js_identifier_defineds(v);
+        let { node } = v;
+        let name = object_property_get(node, "name");
+        if (!list_includes(defineds, name)) {
+          la(name);
         }
       });
     });
-  });
-  return defineds;
+    list_remove(missing, f_name_new);
+    let other = functions_names();
+    missing = list_difference(missing, other);
+    let list = object_property_get(declaration, "params");
+    let items = list_map(missing, js_parse_expression);
+    list_add_multiple(list, items);
+  }
 }
-
