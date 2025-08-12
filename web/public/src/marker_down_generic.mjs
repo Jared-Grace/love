@@ -36,7 +36,12 @@ export async function marker_down_generic(delta_get) {
     });
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
-    let index_new = next_index + delta_get(vs);
+    let index_new =
+      next_index +
+      delta_get({
+        vs,
+        next_index,
+      });
     let v_new = list_get(vs, index_new);
     log(v_new);
     let { stack, node } = v_new;
