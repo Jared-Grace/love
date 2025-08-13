@@ -34,12 +34,11 @@ export async function js_call_fill(ast) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
         let types = js_types_function();
-        let block = js_stack_last_multiple(stack, types);
-        let previous = list_previous(stack, block);
+        let f = js_stack_last_multiple(stack, types);
         let property_name = "async";
-        let async = object_property_get(previous, property_name);
+        let async = object_property_get(f, property_name);
         if (async_is && !async) {
-          object_property_set(previous, property_name, true);
+          object_property_set(f, property_name, true);
         }
       }
     }
