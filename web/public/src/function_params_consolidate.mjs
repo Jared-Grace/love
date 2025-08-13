@@ -37,5 +37,6 @@ export async function function_params_consolidate(f_name) {
   }
   let result = await function_transform(f_name, lambda);
   let f_names = functions_names();
-  each(list, function lambda4() {});
+  function lambda4() {}
+  each(list, lambda4);
 }
