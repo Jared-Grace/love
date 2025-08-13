@@ -4,7 +4,7 @@ export async function catch_only_async(lambda, message_fragment) {
     await lambda();
   } catch (e) {
     log({
-      A: e.message,
+      A: e,
     });
     if (!e.message.includes(message_fragment)) {
       throw e;
