@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -22,6 +23,7 @@ import { marker_next_index } from "./marker_next_index.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 export async function js_call_new(f_name_call, ast) {
   let f_name_call_unaliased = await function_name_unalias(f_name_call);
+  log(f_name_call_unaliased);
   let {
     declaration,
     unaliased,
