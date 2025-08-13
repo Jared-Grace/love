@@ -20,7 +20,7 @@ export function js_dollar(ast) {
         return;
       }
       let remaining = string_prefix_without(name, "$");
-      log(remaining);
+      log(remaining); 
       if (remaining === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
