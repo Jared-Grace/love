@@ -12,13 +12,11 @@ export async function function_params_consolidate() {
       let expression = js_parse_expression(param_name);
       return {
         type: "Property",
-        start: 577,
-        end: 586,
         method: false,
         shorthand: true,
         computed: false,
-        key: null,
-        value: null,
+        key: expression,
+        value: expression,
         kind: "init",
       };
     }
