@@ -69,7 +69,7 @@ export async function js_dollar(ast) {
       let parsed = js_parse_expression(code);
       object_replace(node, parsed);
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let result = js_identifiers_names(ast2);
+        let existing = js_identifiers_names(ast);
         let unique = js_identifier_unique(existing, property_name);
         let assign = js_declare(unique, init);
       }
