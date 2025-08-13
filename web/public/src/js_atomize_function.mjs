@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { list_next } from "./list_next.mjs";
@@ -34,7 +35,7 @@ export async function js_atomize_function(ast) {
     let { stack } = v;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
-      const stack2 = list_get_end(stack, 2);
+      const stack2 = list_get_end_2(stack);
       await js_node_atomize(existing, v);
     }
   });
