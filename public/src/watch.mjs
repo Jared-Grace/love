@@ -20,11 +20,11 @@ export async function watch() {
   });
   let in_progress = {};
   watcher.on("change", async (path) => {
-    const value = true;
-    if (object_property_exists_equals(path, in_progress, value)) {
-      return;
-    }
     await catch_log_async(async () => {
+      const value = true;
+      if (object_property_exists_equals(path, in_progress, value)) {
+        return;
+      }
       const f_name = function_auto_path.name;
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
