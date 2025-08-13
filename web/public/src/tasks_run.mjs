@@ -6,6 +6,6 @@ export async function tasks_run() {
   let result2 = task_function_name_part();
   let result = await functions_search(result2);
   let properties = object_properties(result);
-  await each_async(list, async function lambda2() {});
+  await each_async(list, async function lambda(item) {});
   return result;
 }
