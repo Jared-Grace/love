@@ -1,3 +1,4 @@
+import { js_types_function } from "./js_types_function.mjs";
 import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
 import { function_types } from "./function_types.mjs";
 import { js_stack_filtered_multiple } from "./js_stack_filtered_multiple.mjs";
@@ -46,7 +47,7 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, lambda2);
     }
-    let types = functions_types();
+    let types = js_types_function();
     function lambda5(v) {
       log(v);
     }
