@@ -1,3 +1,4 @@
+import { js_dollar_g } from "./js_dollar_g.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
@@ -58,20 +59,7 @@ export async function js_dollar(ast) {
       object_replace(stack1, from);
     } else if (second === "a") {
     } else if (second === "g") {
-      let { first: object_name, second: property_name } =
-        list_first_second(remaining);
-      let code_string = await js_code_string(property_name);
-      let code = js_code_call_args(object_property_get.name, [
-        object_name,
-        code_string,
-      ]);
-      let parsed = js_parse_expression(code);
-      object_replace(node, parsed);
-      if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let unique = js_identifier_unique_ast(ast, property_name);
-        let assign = js_declare(unique, parsed);
-        object_replace(stack1, assign);
-      }
+      await js_dollar_g(remaining, node, stack1, ast);
     }
     let message = await js_unparse(ast);
     log(message);
