@@ -1,3 +1,5 @@
+import { each_async } from "./each_async.mjs";
+import { list_adder } from "./list_adder.mjs";
 import { log } from "./log.mjs";
 import { functions_names_includes } from "./functions_names_includes.mjs";
 import { js_call_new } from "./js_call_new.mjs";
@@ -22,7 +24,9 @@ export async function js_call_fill(ast) {
       }
     }
   });
-  log(await js_unparse(a));
   return;
+  log(await js_unparse(a));
+  let vs = list_adder((la) => js_visit(a, la));
+  await each_async(vs, lambda);
   js_call_fill;
 }
