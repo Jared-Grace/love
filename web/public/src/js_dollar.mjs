@@ -60,7 +60,7 @@ export async function js_dollar(ast) {
       object_replace(stack1, from);
     } else if (second === "a") {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let e2 = list_get_end_2(stack2);
+        let stack2 = list_get_end_2(stack);
       }
     } else if (second === "g") {
       await js_dollar_g(remaining, node, stack1, ast);
