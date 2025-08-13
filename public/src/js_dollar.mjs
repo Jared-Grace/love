@@ -34,6 +34,7 @@ import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_next } from "./list_next.mjs";
 export async function js_dollar(ast) {
   async function lambda(v) {
     let { node, stack } = v;
@@ -64,6 +65,7 @@ export async function js_dollar(ast) {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
         let l = list_is(stack2);
         if (l) {
+          let next = list_next(list, item);
         }
       }
     } else if (second === "g") {
