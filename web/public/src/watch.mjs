@@ -22,6 +22,7 @@ export async function watch() {
   watcher.on("change", async (path) => {
     const value = true;
     if (object_property_exists_equals(path, in_progress, value)) {
+      return;
     }
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
