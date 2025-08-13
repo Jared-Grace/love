@@ -8,6 +8,8 @@ import { functions_path } from "./functions_path.mjs";
 import { import_install } from "./import_install.mjs";
 import { command_line } from "./command_line.mjs";
 import { log_keep } from "./log_keep.mjs";
+import { object_property_exists } from "./object_property_exists.mjs";
+import { object_property_equals } from "./object_property_equals.mjs";
 export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
   let joined = functions_path();
@@ -17,7 +19,11 @@ export async function watch() {
   });
   let in_progress = {};
   watcher.on("change", async (path) => {
-    if (false) {
+    const value = true;
+    if (
+      object_property_exists(path) &&
+      object_property_equals(in_progress, path, value)
+    ) {
     }
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
