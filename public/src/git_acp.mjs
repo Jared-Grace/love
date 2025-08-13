@@ -12,7 +12,5 @@ export async function git_acp(message) {
   await git_commit(message);
   ("google gemini suggested this");
   await command_line_git(`pull origin main`);
-  ("chatgpt suggested this");
-  await git_rebase();
   await git_push();
 }
