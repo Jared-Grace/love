@@ -1,3 +1,4 @@
+import { js_atomize_function } from "./js_atomize_function.mjs";
 import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
@@ -29,4 +30,5 @@ export async function function_auto(f_name) {
       await t(ast);
     });
   });
+  [js_atomize_function];
 }
