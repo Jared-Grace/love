@@ -51,6 +51,18 @@ export async function js_dollar(ast) {
       name: "i",
       fn: js_dollar_i,
     },
+    {
+      name: "r",
+      fn: js_dollar_r,
+    },
+    {
+      name: "a",
+      fn: js_dollar_a,
+    },
+    {
+      name: "g",
+      fn: js_dollar_i,
+    },
   ];
   async function lambda(v) {
     let { node, stack } = v;
@@ -89,4 +101,5 @@ export async function js_dollar(ast) {
     }
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
+  return;
 }
