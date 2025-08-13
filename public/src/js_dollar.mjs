@@ -64,6 +64,6 @@ export async function js_dollar(ast) {
       }
     }
   });
-  let message = js_unparse(ast);
+  let message = await js_unparse(ast);
   log(message);
 }
