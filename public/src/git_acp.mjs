@@ -1,3 +1,4 @@
+import { git_rebase } from "./git_rebase.mjs";
 import { git_commit } from "./git_commit.mjs";
 import { catch_only_async } from "./catch_only_async.mjs";
 import { log_keep } from "./log_keep.mjs";
@@ -10,18 +11,6 @@ export async function git_acp(message) {
   await command_line_git("add -A");
   await git_commit(message);
   await command_line_git(`fetch origin main`);
-  try {
-    await command_line_git(
-      "rebase --autostash --no-stat --no-verify origin/main",
-    );
-  } catch (e) {
-    log_keep("Rebase failed, aborting rebase");
-    try {
-      await command_line_git("rebase --abort");
-    } catch (abortErr) {
-      log_keep("No rebase in progress, nothing to abort.");
-    }
-    throw e;
-  }
+  await git_rebase();
   await git_push();
 }
