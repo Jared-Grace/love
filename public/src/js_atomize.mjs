@@ -27,14 +27,16 @@ import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
+import { js_identifiers_names } from "./js_identifiers_names.mjs";
 export async function js_atomize(ast) {
-  let existing = js_identifiers(ast);
+  let existing = js_identifiers_names(ast);
   let ces = js_type(ast, "CallExpression");
-  await each_async(ces, async (v) => {
+  async function lambda(v) {
     let { stack } = v;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
       await js_node_atomize(existing, v);
     }
-  });
+  }
+  await each_async(ces, lambda);
 }
