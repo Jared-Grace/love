@@ -14,6 +14,7 @@ export function js_arrow_blockify(ast) {
     if (nti) {
       object_replace(body, {
         type: "BlockStatement",
+        body: [body],
       });
     }
   });
