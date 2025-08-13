@@ -24,6 +24,7 @@ import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export function js_dollar(ast) {
   js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
@@ -59,6 +60,8 @@ export function js_dollar(ast) {
           code_string,
         ]);
         let parsed = js_parse_expression(code);
+        let message = js_unparse(parsed);
+        log(message);
         object_replace(node, parsed);
       }
     }
