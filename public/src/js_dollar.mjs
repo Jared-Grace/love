@@ -80,7 +80,7 @@ export async function js_dollar(ast) {
               js_identifier_replace(ast, id, replacement);
             }
             each(declarations, lambda2);
-            list_remove_multiple(stack2, [stack1, next]);
+            list_remove_multiple(stack[(stack1, next)], 2);
           }
         }
       }
