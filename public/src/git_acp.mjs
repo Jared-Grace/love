@@ -10,7 +10,9 @@ import { command_line_git } from "./command_line_git.mjs";
 export async function git_acp(message) {
   await command_line_git("add -A");
   await git_commit(message);
+  ("google gemini suggested this");
   await command_line_git(`pull origin main`);
+  ("chatgpt suggested this");
   await git_rebase();
   await git_push();
 }
