@@ -7,5 +7,6 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 export async function function_types() {
   let f_name = await data_function_current_get();
   let { ast } = await function_parse(f_name);
-  return js_node_types(ast);
+  const types = js_node_types(ast);
+  return types;
 }
