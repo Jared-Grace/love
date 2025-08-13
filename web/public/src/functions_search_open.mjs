@@ -5,7 +5,7 @@ import { list_single } from "./list_single.mjs";
 import { object_properties } from "./object_properties.mjs";
 export async function functions_search_open() {
   let result = await functions_search(search);
-  let result2 = object_properties(obj);
-  let f_name = list_single(f_names);
+  let properties = object_properties(result);
+  let f_name = list_single(properties);
   await function_open(f_name);
 }
