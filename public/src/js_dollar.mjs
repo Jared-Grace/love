@@ -73,7 +73,11 @@ export async function js_dollar(ast) {
       let from = js_parse_statement(code);
       object_replace(stack1, from);
     } else if (second === "a") {
-      js_dollar_a(stack1, stack2, ast);
+      js_dollar_a({
+        stack1,
+        stack2,
+        ast,
+      });
     } else if (second === "g") {
       await js_dollar_g({
         remaining,
