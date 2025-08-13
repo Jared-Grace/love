@@ -1,3 +1,4 @@
+import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -40,6 +41,7 @@ export async function js_atomize_function(ast) {
       let type_is = js_node_type_is(stack2, "CallExpression");
       if (type_is) {
         let { node } = v;
+        let name = js_declaration_name(declaration);
         let assign = js_declare(unique, copy);
       }
     }
