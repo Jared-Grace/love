@@ -1,3 +1,4 @@
+import { js_call_new } from "./js_call_new.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -6,6 +7,7 @@ export function js_call_fill(ast) {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
+      js_call_new(f_name_call, ast);
     }
   });
 }
