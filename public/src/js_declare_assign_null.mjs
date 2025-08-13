@@ -1,3 +1,4 @@
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
@@ -14,12 +15,12 @@ export function js_declare_assign_null(ast) {
     let { init } = node;
     if (init === null) {
       let stack3 = list_get_end(stack, 3);
-      let type_is = js_node_type_is(stack3, "ForOfStatement");
-      if (type_is) {
+      let n = js_node_type_not_is(stack3, "ForOfStatement");
+      if (n) {
+        let init_code = js_keyword_null();
+        let value = js_parse_expression(init_code);
+        object_property_set(node, "init", value);
       }
-      let init_code = js_keyword_null();
-      let value = js_parse_expression(init_code);
-      object_property_set(node, "init", value);
     }
   }
   js_visit_type(ast, "VariableDeclarator", lambda);
