@@ -7,11 +7,9 @@ import { git_push } from "./git_push.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 export async function git_acp(message) {
   await command_line_git("add -A");
-  await catch_ignore_async(async function lambda() {
-    await catch_only_async(async function lambda() {
-      await command_line_git(`commit -m "${message}"`);
-    }, "nothing to commit");
-  });
+  await catch_only_async(async function lambda() {
+    await command_line_git(`commit -m "${message}"`);
+  }, "nothing to commit");
   await command_line_git(`fetch origin main`);
   try {
     await command_line_git(
