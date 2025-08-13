@@ -84,7 +84,8 @@ export async function js_dollar(ast) {
               let { name } = id;
               let replacement = object_copy(init);
               let is = js_identifiers_named(ast, name);
-              each(list, function lambda3(item) {});
+              function lambda3(item) {}
+              each(list, lambda3);
             }
             each(declarations, lambda2);
             list_remove_multiple([stack1, next], stack2);
