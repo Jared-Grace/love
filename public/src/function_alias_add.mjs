@@ -1,3 +1,4 @@
+import { list_sort_string_size } from "./list_sort_string_size.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_sort_string } from "./list_sort_string.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
@@ -8,7 +9,7 @@ import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { string_size } from "./string_size.mjs";
 export async function function_alias_add(first, second) {
   let list = [first, second];
-  list_sort_number_mapper(list, string_size);
+  list_sort_string_size(list);
   let [alias, f_name] = list;
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
