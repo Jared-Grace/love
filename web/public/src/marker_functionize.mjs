@@ -66,6 +66,7 @@ import { list_includes } from "./list_includes.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 import { functions_names } from "./functions_names.mjs";
+import { js_node_type } from "./js_node_type.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
@@ -92,14 +93,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let defineds = js_identifier_defineds(v);
         let { node } = v;
         let stack1 = list_get_end(stack2_from, 1);
-        if (js_node_type_is(stack1, "Property")) {
-          log({
-            stack1,
-          });
-          if (object_property_equals(stack1, "key", node)) {
-            return;
-          }
-        }
+        let message = js_node_type(stack1);
+        log(message);
         let name = object_property_get(node, "name");
         if (!list_includes(defineds, name)) {
           la(name);
