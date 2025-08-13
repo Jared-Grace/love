@@ -1,3 +1,3 @@
-export function list_sort_string(types) {
-  types.sort();
+export function list_sort_string(list) {
+  list.sort();
 }
