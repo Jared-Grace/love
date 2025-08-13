@@ -32,7 +32,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 export async function js_dollar(ast) {
-  await js_visit_type_each_async(ast, "Identifier", async function (v) {
+  async function lambda(v) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     let { name } = node;
@@ -57,6 +57,10 @@ export async function js_dollar(ast) {
         let code = js_code_return_empty();
         let from = js_parse_statement(code);
         object_replace(stack1, from);
+      } else if (second === "a") {
+        let code = js_code_return_empty();
+        let from = js_parse_statement(code);
+        object_replace(stack1, from);
       }
     }
     if (second === "g") {
@@ -77,5 +81,6 @@ export async function js_dollar(ast) {
     }
     let message = await js_unparse(ast);
     log(message);
-  });
+  }
+  await js_visit_type_each_async(ast, "Identifier", lambda);
 }
