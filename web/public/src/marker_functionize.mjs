@@ -91,9 +91,14 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let missing = list_adder_unique((la) => {
       js_visit_type(declaration, "Identifier", (v) => {
         let defineds = js_identifier_defineds(v);
-        let { node } = v;
-        let message = object_property_get(node, "name");
-        log(message);
+        let { node,stack } = v;
+        let stack1 = list_get_end(stack, 1);
+        if (js_node_type_is(stack1, "Property")) {
+          log(js_node_type(stack1));
+          if (object_property_equals(stack1, "key", node)) {
+            return;
+          }
+        }
         let name = object_property_get(node, "name");
         if (!list_includes(defineds, name)) {
           la(name);
