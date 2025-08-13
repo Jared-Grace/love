@@ -1,3 +1,4 @@
+import { object_property_exists_assert } from "./object_property_exists_assert.mjs";
 import { list_previous } from "./list_previous.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of_previous } from "./list_index_of_previous.mjs";
@@ -32,8 +33,7 @@ export async function js_call_fill(ast) {
         let block = js_stack_last(stack, "BlockStatement");
         let previous = list_previous(stack, block);
         let property_name = "async";
-        let result = object_property_exists(previous, property_name);
-        assert(result);
+        object_property_exists_assert(previous, property_name);
       }
     }
   }
