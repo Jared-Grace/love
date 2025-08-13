@@ -1,3 +1,4 @@
+import { js_code_string } from "./js_code_string.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -51,7 +52,11 @@ export function js_dollar(ast) {
       } else if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
-        let code = js_code_call_args(object_property_get.name, args_code);
+        let code_string = js_code_string();
+        let code = js_code_call_args(object_property_get.name, [
+          object_name,
+          code_string,
+        ]);
         let parsed = js_parse_expression(code);
         object_replace(node, from);
       }
