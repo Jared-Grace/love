@@ -38,8 +38,8 @@ export async function js_atomize_function(ast) {
       const stack2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack2, "CallExpression");
       if (type_is) {
+        await js_node_atomize(existing, v);
       }
-      await js_node_atomize(existing, v);
     }
   });
 }
