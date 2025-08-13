@@ -1,3 +1,4 @@
+import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_call_insert } from "./js_call_insert.mjs";
 import { error } from "./error.mjs";
@@ -12,6 +13,6 @@ export async function task_new(task_name) {
   await function_new(f_name_task);
   let result = await function_transform(f_name, async function lambda(ast) {
     js_call_insert(f_name, args_code, list, index);
-    js_declaration_to_block_body();
+    let body_block = js_declaration_single_block_blody(ast2);
   });
 }
