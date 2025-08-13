@@ -15,7 +15,7 @@ export function js_let_add(ast) {
       return;
     }
     let { node } = v;
-    log(message);
+    log(node);
     return;
     let assign = js_declare(name, init);
   });
