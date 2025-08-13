@@ -1,3 +1,4 @@
+import { function_name_unalias } from "./function_name_unalias.mjs";
 import { function_current_set } from "./function_current_set.mjs";
 import { task_function_name_part } from "./task_function_name_part.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
@@ -15,6 +16,7 @@ import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   let f_name = await data_function_current_get();
   let result2 = task_function_name_part();
+  let unaliased = await function_name_unalias(f_name2);
   let f_name_task = function_name_combine_multiple([
     f_name,
     result2,
