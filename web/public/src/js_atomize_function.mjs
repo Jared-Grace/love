@@ -42,7 +42,6 @@ export async function js_atomize_function(ast) {
       if (type_is) {
         let { node } = v;
         let name = js_declaration_name(node);
-        let assign = js_declare(name, node);
       }
     }
   });
