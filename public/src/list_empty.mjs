@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 export function list_empty(list) {
-  $st;
+  object_property_set(object, property_name, value);
 }
