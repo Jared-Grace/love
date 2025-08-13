@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { js_dollar_g } from "./js_dollar_g.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
@@ -61,6 +62,7 @@ export async function js_dollar(ast) {
       object_replace(stack1, from);
     } else if (second === "a") {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
+        let includes = list_includes(list, item);
         if (false) {
         }
       }
