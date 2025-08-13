@@ -1,3 +1,4 @@
+import { list_first_second } from "./list_first_second.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_second } from "./list_second.mjs";
 import { string_empty_not_is } from "./string_empty_not_is.mjs";
@@ -26,8 +27,7 @@ export function js_dollar(ast) {
       let { name } = expression;
       const separator = "$";
       let split = string_split(name, separator);
-      let first = list_first(split);
-      let second = list_second(split);
+      let { first, second } = list_first_second(split);
       let ne = string_empty_not_is(first);
       if (ne) {
         return;
