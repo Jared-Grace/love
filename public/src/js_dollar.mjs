@@ -46,6 +46,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_next } from "./list_next.mjs";
 import { list_remove } from "./list_remove.mjs";
 export async function js_dollar(ast) {
+  return;
   let seconds = [
     {
       name: "i",
@@ -64,7 +65,9 @@ export async function js_dollar(ast) {
       fn: js_dollar_i,
     },
   ];
-  async function lambda(v) {
+  async function lambda(v, s) {
+    each(list, function lambda2(item) {});
+    let { name: second_name, fn } = s;
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     let stack2 = list_get_end_2(stack);
@@ -77,25 +80,12 @@ export async function js_dollar(ast) {
       return;
     }
     let remaining = list_skip(split, 2);
-    if (second === "i") {
-      await js_dollar_i({
-        stack1,
-      });
-    } else if (second === "r") {
-      await js_dollar_r({
-        stack1,
-      });
-    } else if (second === "a") {
-      await js_dollar_a({
-        stack1,
-        stack2,
-        ast,
-      });
-    } else if (second === "g") {
-      await js_dollar_g({
+    if (second === second_name) {
+      await fn({
         remaining,
         node,
         stack1,
+        stack2,
         ast,
       });
     }
