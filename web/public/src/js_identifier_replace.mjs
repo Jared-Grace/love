@@ -8,6 +8,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 export function js_identifier_replace(ast, name_from, replacement) {
   let ni = js_node_is(name_from);
   if (ni) {
+    type = "Identifier";
     let type_is = js_node_type_is(node2, type);
     assert(b);
   }
