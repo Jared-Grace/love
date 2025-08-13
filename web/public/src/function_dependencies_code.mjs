@@ -10,7 +10,8 @@ export async function function_dependencies_code(f_name) {
   let ds = await function_dependencies(f_name);
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
-  let mapped2 = list_map_property(waited, 'declaration');
+  let mapped2 = list_map_property(waited, "declaration");
   let mapped3 = list_map(mapped2, js_unparse);
+  let waited2 = list_wait(mapped3);
   return list_join(mapped3, "\n");
 }
