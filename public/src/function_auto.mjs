@@ -29,5 +29,4 @@ export async function function_auto(f_name) {
       await t(ast);
     });
   });
-  [js_function_id_add];
 }
