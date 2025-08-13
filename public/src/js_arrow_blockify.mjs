@@ -16,6 +16,7 @@ export function js_arrow_blockify(ast) {
     if (nti) {
       let copy = object_copy(body);
       let r = js_statement_return("");
+      object_property_set(object, property_name, value);
       object_replace(body, {
         type: "BlockStatement",
         body: [copy],
