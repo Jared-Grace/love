@@ -27,8 +27,13 @@ export async function js_call_fill(ast) {
   });
   return;
   log(await js_unparse(a));
-  await js_visit_each_async(a, (v) => {
+  let current = null;
+  await js_visit_each_async(a, async (v) => {
     let { node } = v;
+    current = a;
+    try {
+      await js_unparse(current);
+    } catch (e) {}
   });
   js_call_fill;
 }
