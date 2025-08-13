@@ -6,9 +6,6 @@ export function js_node_types_is(item, types) {
     let type_is = js_node_type_is(item, type);
     return type_is;
   }
-  log({
-    types,
-  });
   const match = list_any(types, lambda2);
   return match;
 }
