@@ -1,4 +1,3 @@
-import { each } from "./each.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
@@ -36,7 +35,5 @@ export async function function_params_consolidate(f_name) {
     list_add(params, arg_new);
   }
   let result = await function_transform(f_name, lambda);
-  let f_names = functions_names();
-  function lambda4() {}
-  each(f_names, lambda4);
+  let f_names = functions_names();e 
 }
