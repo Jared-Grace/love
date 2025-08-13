@@ -10,10 +10,11 @@ import { function_transform } from "./function_transform.mjs";
 import { marker } from "./marker.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
+import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function function_auto(f_name) {
   marker("1");
   await function_transform(f_name, async (ast) => {
-    let transforms = [js_arrow_to_function,
+    let transforms = [
       js_declare_assign_null,
       js_call_fill,
       js_dollar,
@@ -22,4 +23,4 @@ export async function function_auto(f_name) {
     ];
     await each_async(transforms, async (t) => await t(ast));
   });
-} 
+}
