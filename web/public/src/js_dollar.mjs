@@ -1,3 +1,4 @@
+import { lambda_invoke } from "./lambda_invoke.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_a } from "./js_dollar_a.mjs";
@@ -96,6 +97,5 @@ export async function js_dollar(ast) {
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   return;
-  function lambda3(afters) {}
-  each(afters, lambda3);
+  each(afters, lambda_invoke);
 }
