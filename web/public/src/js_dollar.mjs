@@ -1,3 +1,4 @@
+import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_a } from "./js_dollar_a.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
@@ -62,13 +63,9 @@ export async function js_dollar(ast) {
     }
     let remaining = list_skip(split, 2);
     if (second === "i") {
-      let from = js_parse_statement(
-        js_keyword_if() +
-          " " +
-          js_code_wrap_parenthesis("false") +
-          js_code_braces_empty(),
-      );
-      object_replace(stack1, from);
+      js_dollar_i({
+        stack1,
+      });
     } else if (second === "r") {
       js_dollar_r({
         stack1,
