@@ -18,7 +18,7 @@ export async function js_unparse(ast) {
         return true;
       }
     });
-    let message = json_formnat_to(a);
+    let message = json_formnat_to(current);
     log(message);
     throw e;
   }
