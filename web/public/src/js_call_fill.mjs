@@ -1,3 +1,4 @@
+import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -28,4 +29,5 @@ export async function js_call_fill(ast) {
   return;
   await js_unparse(a);
   js_call_fill;
+  js_visit_type_each_async;
 }
