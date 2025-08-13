@@ -8,5 +8,6 @@ export async function function_types() {
   let f_name = await data_function_current_get();
   let { ast } = await function_parse(f_name);
   const types = js_node_types(ast);
+  types.sort();
   return types;
 }
