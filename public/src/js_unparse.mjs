@@ -18,7 +18,7 @@ export async function js_unparse(ast) {
     await js_visit_each_async(ast, async (v) => {
       let { node } = v;
       try {
-        await js_unparse(node);
+        await js_unparse_inner(node);
       } catch (e) {
         current = a;
         return true;
