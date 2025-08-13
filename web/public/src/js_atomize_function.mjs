@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
@@ -38,7 +39,7 @@ export async function js_atomize_function(ast) {
       const stack2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack2, "CallExpression");
       if (type_is) {
-        await js_node_atomize(existing, v);
+        let assign = js_declare(unique, copy);
       }
     }
   });
