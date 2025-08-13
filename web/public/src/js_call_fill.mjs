@@ -1,3 +1,4 @@
+import { js_stack_last } from "./js_stack_last.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
@@ -22,6 +23,7 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
+        let block = js_stack_last(stack, "BlockStatement");
       }
     }
   }
