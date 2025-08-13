@@ -1,3 +1,4 @@
+import { function_name_unalias } from "./function_name_unalias.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
 import { each_async } from "./each_async.mjs";
@@ -16,7 +17,8 @@ export async function js_call_fill(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      const valid = functions_names_includes(name);
+      let unaliased = await function_name_unalias(name);
+      const valid = functions_names_includes(unaliased);
       if (valid) {
         let s = await js_call_new(name, ast);
         object_replace(node, s);
