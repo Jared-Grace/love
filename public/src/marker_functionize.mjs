@@ -88,7 +88,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add_multiple(body_block, range);
     let { body } = ast;
     list_add(body, declaration);
-    let message = js_unparse(declaration);
     let missing = list_adder_unique((la) => {
       js_visit_type(declaration, "Identifier", (v) => {
         let defineds = js_identifier_defineds(v);
