@@ -59,7 +59,7 @@ export async function js_dollar(ast) {
           object_name,
           code_string,
         ]);
-        let parsed = js_parse_expression(code);
+        let parsed = js_parse_statement(code);
         object_replace(node, parsed);
       }
     }
