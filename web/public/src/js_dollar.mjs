@@ -58,6 +58,8 @@ export async function js_dollar(ast) {
       let from = js_parse_statement(code);
       object_replace(stack1, from);
     } else if (second === "a") {
+      if (js_node_type_is(stack1, "ExpressionStatement")) {
+      }
     } else if (second === "g") {
       await js_dollar_g(remaining, node, stack1, ast);
     }
