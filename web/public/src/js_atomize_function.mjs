@@ -1,3 +1,4 @@
+import { js_block_insert } from "./js_block_insert.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
@@ -42,6 +43,7 @@ export async function js_atomize_function(ast) {
       if (type_is) {
         let { node } = v;
         let name = js_declaration_name(node);
+        js_block_insert(stack, assign);
       }
     }
   });
