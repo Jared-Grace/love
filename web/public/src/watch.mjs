@@ -15,6 +15,7 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
+  let in_progress = {};
   watcher.on("change", async (path) => {
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
