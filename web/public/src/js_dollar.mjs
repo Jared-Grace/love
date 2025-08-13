@@ -57,8 +57,7 @@ export async function js_dollar(ast) {
       let from = js_parse_statement(code);
       object_replace(stack1, from);
     } else if (second === "a") {
-    }
-    if (second === "g") {
+    } else if (second === "g") {
       let { first: object_name, second: property_name } =
         list_first_second(remaining);
       let code_string = await js_code_string(property_name);
