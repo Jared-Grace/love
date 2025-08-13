@@ -14,11 +14,9 @@ export async function function_param_swap(f_name, param_name_a, param_name_b) {
   await function_transform(f_name, lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
-    if (js_declaration_name(declaration) === f_name) {
-      let a = js_declaration_param_named(declaration, param_name_a);
-      let b = js_declaration_param_named(declaration, param_name_b);
-      let { params } = declaration;
-      list_swap(params, a, b);
-    }
+    let a = js_declaration_param_named(declaration, param_name_a);
+    let b = js_declaration_param_named(declaration, param_name_b);
+    let { params } = declaration;
+    list_swap(params, a, b);
   }
 }
