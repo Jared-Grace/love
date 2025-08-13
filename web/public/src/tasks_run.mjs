@@ -8,7 +8,7 @@ export async function tasks_run() {
   let result = await functions_search(result2);
   let properties = object_properties(result);
   await each_async(properties, async function lambda(item) {
-    function_run();
+    let result3 = await function_run(funcName, args);
   });
   return result;
 }
