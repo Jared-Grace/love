@@ -19,12 +19,11 @@ export async function task_new(task_name) {
     result2,
     task_name,
   ]);
+  let f_name2 = await data_function_current_get();
   await function_new(f_name_task);
-  let result = await function_transform(
-    f_name_task,
-    async function lambda(ast) {
-      let body_block = js_declaration_single_block_blody(ast);
-      js_call_insert(todo.name, [], body_block, 0);
-    },
-  );
+  async function lambda(ast) {
+    let body_block = js_declaration_single_block_blody(ast);
+    js_call_insert(todo.name, [], body_block, 0);
+  }
+  let result = await function_transform(f_name_task, lambda);
 }
