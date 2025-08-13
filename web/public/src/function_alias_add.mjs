@@ -5,9 +5,10 @@ import { error } from "./error.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { function_alias_add_generic } from "./function_alias_add_generic.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { string_size } from "./string_size.mjs";
 export async function function_alias_add(first, second) {
   let list = [first, second];
-  list_sort_number_mapper(list);
+  list_sort_number_mapper(list, string_size);
   let [alias, f_name] = list;
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
