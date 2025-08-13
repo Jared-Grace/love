@@ -10,6 +10,7 @@ export function js_identifier_replace(ast, name_from, replacement) {
   let ni = js_node_is(name_from);
   if (ni) {
     js_node_type_is_assert(name_from, "Identifier");
+    let name = object_property_get(name_from, "name");
   }
   function lambda(v) {
     let { node } = v;
