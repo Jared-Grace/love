@@ -1,3 +1,3 @@
-export function list_filter(list, filter) {
-  return list.filter(filter);
+export function list_filter(list, lambda) {
+  return list.filter(lambda);
 }
