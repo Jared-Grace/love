@@ -1,3 +1,4 @@
+import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_a } from "./js_dollar_a.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { js_node_types } from "./js_node_types.mjs";
@@ -69,9 +70,9 @@ export async function js_dollar(ast) {
       );
       object_replace(stack1, from);
     } else if (second === "r") {
-      let code = js_code_return_empty();
-      let from = js_parse_statement(code);
-      object_replace(stack1, from);
+      js_dollar_r({
+        stack1,
+      });
     } else if (second === "a") {
       js_dollar_a({
         stack1,
