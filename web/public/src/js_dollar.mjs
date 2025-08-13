@@ -46,8 +46,7 @@ export function js_dollar(ast) {
         let from = js_parse_statement(code);
         object_replace(node, from);
       } else if (second === "g") {
-        let code = js_code_return_empty();
-        let from = js_parse_statement(code);
+        let { first, second } = list_first_second(split);
         object_replace(node, from);
       }
     }
