@@ -58,7 +58,7 @@ export function js_dollar(ast) {
           code_string,
         ]);
         let parsed = js_parse_expression(code);
-        object_replace(node, from);
+        object_replace(node, parsed);
       }
     }
   });
