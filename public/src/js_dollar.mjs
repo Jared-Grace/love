@@ -8,12 +8,16 @@ import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
+import { string_starts_with } from "./string_starts_with.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
+      if (!string_starts_with(name)) {
+        return;
+      }
       let remaining = string_prefix_without(name, "$");
       if (remaining === "i") {
         let from = js_parse_statement(
