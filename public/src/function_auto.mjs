@@ -14,7 +14,7 @@ import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function function_auto(f_name) {
   marker("1");
   await function_transform(f_name, async (ast) => {
-    let transforms = [
+    let transforms = [ js_arrow_blockify,
       js_declare_assign_null,
       js_call_fill,
       js_dollar,
