@@ -14,10 +14,6 @@ export async function watch() {
   const watcher = chokidar.watch(joined, {
     persistent: true,
     ignoreInitial: true,
-    awaitWriteFinish: {
-      stabilityThreshold: 200,
-      pollInterval: 100,
-    },
   });
   let last = Promise.resolve();
   watcher.on("change", async (path) => {
