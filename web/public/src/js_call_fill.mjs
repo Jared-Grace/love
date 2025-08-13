@@ -11,7 +11,7 @@ export function js_call_fill(ast) {
       let { name } = expression;
       const valid = functions_names_includes(name);
       if (valid) {
-        js_call_new(f_name_call, ast);
+        js_call_new(name, ast);
       }
     }
   });
