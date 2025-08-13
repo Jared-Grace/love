@@ -22,6 +22,7 @@ export function js_let_add(ast) {
     let defineds = js_identifier_defineds(v);
     let includes = list_includes(defineds, name);
     if (includes) {
+      return;
     }
     let assign = js_declare(name, right);
     object_replace(stack1, assign);
