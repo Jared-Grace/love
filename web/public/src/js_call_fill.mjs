@@ -18,7 +18,7 @@ import { object_replace } from "./object_replace.mjs";
 import { assert } from "./assert.mjs";
 export async function js_call_fill(ast) {
   async function lambda(v) {
-    let { node } = v;
+    let { node, stack } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
