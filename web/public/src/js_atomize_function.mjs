@@ -44,7 +44,7 @@ export async function js_atomize_function(ast) {
         let { node } = v;
         let name = js_declaration_name(node);
         let copy = object_copy(node);
-        js_block_insert(stack, assign);
+        js_block_insert(stack, copy);
       }
     }
   });
