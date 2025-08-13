@@ -34,6 +34,7 @@ export async function js_call_fill(ast) {
         let previous = list_previous(stack, block);
         let property_name = "async";
         object_property_exists_assert(previous, property_name);
+        $st;
       }
     }
   }
