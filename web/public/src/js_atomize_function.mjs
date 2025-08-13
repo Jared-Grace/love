@@ -37,7 +37,7 @@ export async function js_atomize_function(ast) {
     if (list_is(stack1)) {
       const stack2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack2, "CallExpression");
-      if (false) {
+      if (type_is) {
       }
       await js_node_atomize(existing, v);
     }
