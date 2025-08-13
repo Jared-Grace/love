@@ -81,6 +81,7 @@ export async function js_dollar(ast) {
           if (type_is) {
             function lambda2(declaration) {
               let { id, init } = declaration;
+              name = id;
               let replacement = object_copy(init);
               let is = js_identifiers_named(ast, "Identififer");
             }
