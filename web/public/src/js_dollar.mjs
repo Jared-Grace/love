@@ -1,3 +1,4 @@
+import { string_prefix_without } from "./string_prefix_without.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_code_braces_empty } from "./js_code_braces_empty.mjs";
 import { js_code_wrap_braces } from "./js_code_wrap_braces.mjs";
@@ -13,6 +14,7 @@ export function js_dollar(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
+      string_prefix_without(name);
       if (name === "$i") {
         let from = js_parse_statement(
           js_keyword_if() +
