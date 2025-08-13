@@ -1,3 +1,4 @@
+import { list_second } from "./list_second.mjs";
 import { string_empty_not_is } from "./string_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
@@ -29,6 +30,7 @@ export function js_dollar(ast) {
       if (ne) {
         return;
       }
+      let second = list_second(list2);
       let remaining = string_prefix_without(name, prefix);
       log(remaining);
       if (remaining === "i") {
