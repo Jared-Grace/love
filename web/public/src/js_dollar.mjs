@@ -28,7 +28,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 export async function js_dollar(ast) {
-  await js_visit_type_each_async(ast, "Identifier", async (v) => {
+  await js_visit_type_each_async(ast, "Identifier", async function (v) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     let { name } = node;
@@ -55,16 +55,18 @@ export async function js_dollar(ast) {
         object_replace(stack1, from);
       }
     } else {
-      if (second === "g") {
-        let { first: object_name, second: property_name } =
-          list_first_second(remaining);
-        let code_string = await js_code_string(property_name);
-        let code = js_code_call_args(object_property_get.name, [
-          object_name,
-          code_string,
-        ]);
-        let parsed = js_parse_expression(code);
-        object_replace(node, parsed);
+      if (js_node_type_is(stack1, "ExpressionStatement")) {
+        if (second === "g") {
+          let { first: object_name, second: property_name } =
+            list_first_second(remaining);
+          let code_string = await js_code_string(property_name);
+          let code = js_code_call_args(object_property_get.name, [
+            object_name,
+            code_string,
+          ]);
+          let parsed = js_parse_expression(code);
+          object_replace(node, parsed);
+        }
       }
     }
     let message = await js_unparse(ast);
