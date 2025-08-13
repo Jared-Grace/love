@@ -25,7 +25,4 @@ export async function js_call_fill(ast) {
       }
     }
   });
-  return;
-  await js_unparse(a);
-  await js_call_fill(ast2);
 }
