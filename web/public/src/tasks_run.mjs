@@ -1,3 +1,4 @@
+import { string_pad } from "./string_pad.mjs";
 import { function_name_separator } from "./function_name_separator.mjs";
 import { function_run } from "./function_run.mjs";
 import { each_async } from "./each_async.mjs";
@@ -7,7 +8,8 @@ import { functions_search } from "./functions_search.mjs";
 export async function tasks_run() {
   let result2 = task_function_name_part();
   let separator = function_name_separator();
-  let result = await functions_search(separator + result2 + separator);
+  let search = string_pad(separator, result2);
+  let result = await functions_search(search);
   let properties = object_properties(result);
   await each_async(properties, async function lambda(item) {
     let result3 = await function_run(item, []);
