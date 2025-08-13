@@ -1,3 +1,4 @@
+import { object_property_exists_equals } from "./object_property_exists_equals.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { git_acp_call } from "./git_acp_call.mjs";
 import { catch_log } from "./catch_log.mjs";
@@ -20,10 +21,7 @@ export async function watch() {
   let in_progress = {};
   watcher.on("change", async (path) => {
     const value = true;
-    if (
-      object_property_exists(path) &&
-      object_property_equals(in_progress, path, value)
-    ) {
+    if (object_property_exists_equals(path, in_progress, value)) {
     }
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
