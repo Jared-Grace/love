@@ -11,11 +11,7 @@ export function js_declare_assign_null(ast) {
     let { node, stack } = v;
     let { init } = node;
     if (init === null) {
-      let e1 = list_get_end_1(stack);
-      let e2 = list_get_end_2(stack);
-      log({
-        stack,
-      });
+      let stack3 = list_get_end(stack, 3);
       if (false) {
       }
       let init_code = js_keyword_null();
