@@ -4,5 +4,5 @@ import { list_single } from "./list_single.mjs";
 export async function functions_search_open() {
   let f_names = functions_names();
   let f_name = list_single(f_names);
-  await function_open(f_name2);
+  await function_open(f_name);
 }
