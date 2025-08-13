@@ -12,7 +12,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
   let a = null;
-  js_visit_type_each_async(ast, "ExpressionStatement", (v) => {
+  js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
