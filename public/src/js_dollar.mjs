@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { js_code_return_empty } from "./js_code_return_empty.mjs";
 import { js_code_return } from "./js_code_return.mjs";
@@ -21,7 +22,8 @@ export function js_dollar(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       const separator = "$";
-      let result = string_split(name, separator);
+      let split = string_split(name, separator);
+      let result = list_first(list);
       let result3 = string_empty_is(result2);
       if (!string_starts_with(name, prefix)) {
         return;
