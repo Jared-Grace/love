@@ -3,6 +3,6 @@ import { object_property_get } from "./object_property_get.mjs";
 import { data_get } from "./data_get.mjs";
 export async function data_function_current_get() {
   const property_name = "function_current";
-  let f_name = await data_property_get(property_name);
-  return f_name;
+  let f_name_current = await data_property_get(property_name);
+  return f_name_current;
 }
