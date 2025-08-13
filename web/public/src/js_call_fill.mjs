@@ -28,7 +28,7 @@ export async function js_call_fill(ast) {
         return;
         let block = js_stack_last(stack, "BlockStatement");
         let result = object_property_exists(object, property_name);
-        assert(b);
+        assert(result);
       }
     }
   }
