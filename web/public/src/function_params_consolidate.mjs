@@ -21,6 +21,10 @@ export async function function_params_consolidate() {
       };
     }
     let properties = list_map(params_names, lambda2);
+    let arg_new = {
+      type: "ObjectPattern",
+      properties,
+    };
   }
   let result = await function_transform(f_name, lambda);
 }
