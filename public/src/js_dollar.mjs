@@ -16,11 +16,12 @@ export function js_dollar(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      if (!string_starts_with(name)) {
+      const prefix = "$";
+      if (!string_starts_with(name, prefix)) {
         return;
       }
-      let remaining = string_prefix_without(name, "$");
-      log(remaining); 
+      let remaining = string_prefix_without(name, prefix);
+      log(remaining);
       if (remaining === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
