@@ -15,6 +15,7 @@ export function js_identifier_defineds(v) {
   let { stack } = v;
   function lambda4(la) {
     let bss = js_stack_filtered(stack, "BlockStatement");
+    each(bss, lambda3);
     function lambda3(bs) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
@@ -42,7 +43,6 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, lambda2);
     }
-    each(bss, lambda3);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
