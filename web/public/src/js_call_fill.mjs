@@ -1,3 +1,4 @@
+import { list_index_of_previous } from "./list_index_of_previous.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -26,6 +27,7 @@ export async function js_call_fill(ast) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
         return;
+        let result2 = list_index_of_previous(list, item);
         let block = js_stack_last(stack, "BlockStatement");
         let result = object_property_exists(object, property_name);
         assert(result);
