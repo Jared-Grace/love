@@ -8,7 +8,7 @@ export function js_function_id_add(ast) {
     let unique = js_identifier_unique_ast(ast, "lambda");
     object_property_set(node, "id", "FunctionDeclaration");
     let id = object_property_get(node, "id");
-    if (false) {
+    if (id === null) {
     }
   });
 }
