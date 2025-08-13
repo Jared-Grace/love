@@ -7,7 +7,8 @@ import { function_alias_add_generic } from "./function_alias_add_generic.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function function_alias_add(first, second) {
   let list = [first, second];
-  let [alias, f_name] = list_sort_number_mapper(list);
+  list_sort_number_mapper(list);
+  let [alias, f_name] = list;
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
