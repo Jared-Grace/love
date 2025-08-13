@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { js_dollar_g } from "./js_dollar_g.mjs";
@@ -69,7 +70,7 @@ export async function js_dollar(ast) {
           let type_is = js_node_type_is(next, "VariableDeclaration");
           let { declarations } = next;
           if (type_is) {
-            log(message);
+            each(list, function lambda2(item) {});
           }
         }
       }
