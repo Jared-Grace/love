@@ -25,8 +25,8 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-export function js_dollar(ast) {
-  js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
+export async function js_dollar(ast) {
+  await js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
