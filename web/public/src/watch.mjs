@@ -19,10 +19,8 @@ export async function watch() {
     log(path);
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
-      let output = await command_line("node r.mjs " + f_name + " " + path);
+      let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
-      ("not await this on purpose");
-      await git_acp_call(watch.name, [path]);
     });
   });
 }
