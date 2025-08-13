@@ -11,6 +11,7 @@ import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
+  log("test");
   let a = null;
   await js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
