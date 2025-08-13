@@ -26,13 +26,13 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
 export async function js_dollar(ast) {
-  "ExpressionStatement";
   await js_visit_type_each_async(ast, "Identifier", async (v) => {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     let { expression } = node;
-    if (js_identifier_is(expression)) {
+    if (js_node_type_is(stack1, "ExpressionStatement")) {
       let { name } = expression;
       const separator = "$";
       let split = string_split(name, separator);
