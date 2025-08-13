@@ -18,6 +18,7 @@ export async function function_auto(f_name) {
     let transforms = [
       js_arrow_blockify,
       js_arrow_to_function,
+      js_function_id_add,
       js_declare_assign_null,
       js_call_fill,
       js_dollar,
