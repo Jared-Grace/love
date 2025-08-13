@@ -14,8 +14,8 @@ import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   let defineds = list_adder_multiple((la) => {
-    let filtered = js_stack_filtered(stack, "BlockStatement");
-    each(filtered, (bs) => {
+    let bss = js_stack_filtered(stack, "BlockStatement");
+    each(bss, (bs) => {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next(list, item);
