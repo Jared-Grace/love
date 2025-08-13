@@ -99,7 +99,12 @@ export async function js_dollar(ast) {
         }
       }
     } else if (second === "g") {
-      await js_dollar_g(remaining, node, stack1, ast);
+      await js_dollar_g({
+        remaining,
+        node,
+        stack1,
+        ast,
+      });
     }
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
