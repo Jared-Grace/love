@@ -20,7 +20,7 @@ export function js_let_add(ast) {
     let { left, right } = node;
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
-    list_includes();
+    let result = list_includes(list, item);
     if (false) {
     }
     let assign = js_declare(name, right);
