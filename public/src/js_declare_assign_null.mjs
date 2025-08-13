@@ -7,7 +7,7 @@ import { js_parse } from "./js_parse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_declare_assign_null(ast) {
   function lambda(v) {
-    let { node } = v;
+    let { node, stack } = v;
     let { init } = node;
     if (init === null) {
       let e1 = list_get_end_1(stack);
