@@ -22,7 +22,7 @@ export async function task_new(task_name) {
   ]);
   let f_name_current = await data_function_current_get();
   await function_new(f_name_task);
-  await function_current_set(f_name2);
+  await function_current_set(f_name_current);
   async function lambda(ast) {
     let body_block = js_declaration_single_block_blody(ast);
     js_call_insert(todo.name, [], body_block, 0);
