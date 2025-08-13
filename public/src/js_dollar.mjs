@@ -56,16 +56,16 @@ export async function js_dollar(ast) {
       }
     }
     if (second === "g") {
+      let { first: object_name, second: property_name } =
+        list_first_second(remaining);
+      let code_string = await js_code_string(property_name);
+      let code = js_code_call_args(object_property_get.name, [
+        object_name,
+        code_string,
+      ]);
+      let parsed = js_parse_expression(code);
+      object_replace(node, parsed);
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let { first: object_name, second: property_name } =
-          list_first_second(remaining);
-        let code_string = await js_code_string(property_name);
-        let code = js_code_call_args(object_property_get.name, [
-          object_name,
-          code_string,
-        ]);
-        let parsed = js_parse_expression(code);
-        object_replace(node, parsed);
       }
     }
     let message = await js_unparse(ast);
