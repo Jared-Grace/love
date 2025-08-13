@@ -1,1 +1,1 @@
-export function function_params_consolidate() {}
+export function function_params_consolidate() {ft}
