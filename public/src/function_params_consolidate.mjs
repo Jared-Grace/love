@@ -7,7 +7,8 @@ export async function function_params_consolidate() {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params_names = js_declaration_params_names(declaration);
-    let result2 = list_map(list, function lambda2(item) {});
+    function lambda2(item) {}
+    let result2 = list_map(list, lambda2);
   }
   let result = await function_transform(f_name, lambda);
 }
