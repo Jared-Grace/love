@@ -68,6 +68,7 @@ export async function js_dollar(ast) {
           let next = list_next(stack2, stack1);
           let type_is = js_node_type_is(next, "VariableDeclaration");
           if (type_is) {
+            log(message);
           }
         }
       }
