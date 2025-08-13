@@ -14,7 +14,7 @@ export function js_declare_assign_null(ast) {
       let e1 = list_get_end_1(stack);
       let e2 = list_get_end_2(stack);
       log({
-        e2,
+        stack,
       });
       if (false) {
       }
