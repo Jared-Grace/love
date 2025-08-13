@@ -9,6 +9,7 @@ export function js_declare_assign_null(ast) {
     let { node } = v;
     let { init } = node;
     if (init === null) {
+      l1
       if (false) {
       }
       let init_code = js_keyword_null();
