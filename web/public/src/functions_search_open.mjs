@@ -3,7 +3,7 @@ import { function_open } from "./function_open.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_single } from "./list_single.mjs";
 import { object_properties } from "./object_properties.mjs";
-export async function functions_search_open() {
+export async function functions_search_open(search) {
   let result = await functions_search(search);
   let properties = object_properties(result);
   let f_name = list_single(properties);
