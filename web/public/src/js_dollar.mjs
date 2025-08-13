@@ -32,7 +32,7 @@ export function js_dollar(ast) {
         );
         object_replace(node, from);
       } else if (remaining === "r") {
-        let code = js_code_return();
+        let code = js_code_return("");
         let from = js_parse_statement(code);
         object_replace(node, from);
       }
