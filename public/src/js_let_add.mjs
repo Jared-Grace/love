@@ -13,6 +13,7 @@ export function js_let_add(ast) {
     if (!type_is) {
       return;
     }
+    let { node } = v;
     let assign = js_declare(name, init);
   });
 }
