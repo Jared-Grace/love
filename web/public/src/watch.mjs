@@ -26,11 +26,11 @@ export async function watch() {
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
-      object_property_set(path, in_progress, value);
+      object_property_set(in_progress, path, value);
       const f_name = function_auto_path.name;
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
-      object_property_set(path, in_progress, false);
+      object_property_set(in_progress, path, false);
     });
   });
 }
