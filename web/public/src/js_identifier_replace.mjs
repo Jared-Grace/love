@@ -9,7 +9,7 @@ export function js_identifier_replace(ast, name_from, replacement) {
   let ni = js_node_is(name_from);
   if (ni) {
     let type = "Identifier";
-    let type_is = js_node_type_is(node2, type);
+    let type_is = js_node_type_is(name_from, type);
     assert(type_is);
   }
   function lambda(v) {
