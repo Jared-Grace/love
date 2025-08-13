@@ -46,7 +46,7 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, lambda2);
     }
-    let types = function_types();
+    let types = functions_types();
     function lambda5(v) {
       log(v);
     }
