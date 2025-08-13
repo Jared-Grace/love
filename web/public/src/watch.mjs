@@ -16,7 +16,6 @@ export async function watch() {
     ignoreInitial: true,
   });
   watcher.on("change", async (path) => {
-    log(path);
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
       let output = await command_line("node g.mjs " + f_name + " " + path);
