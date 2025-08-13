@@ -13,14 +13,18 @@ import { each_async } from "./each_async.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function function_auto(f_name) {
   marker("1");
-  await function_transform(f_name, async (ast) => {
-    let transforms = [ js_arrow_blockify,
+  await function_transform(f_name, async function (ast) {
+    let transforms = [
+      js_arrow_blockify,
+      js_arrow_to_function,
       js_declare_assign_null,
       js_call_fill,
       js_dollar,
       js_outside_move,
       js_atomize,
     ];
-    await each_async(transforms, async (t) => await t(ast));
+    await each_async(transforms, async function (t) {
+      await t(ast);
+    });
   });
 }
