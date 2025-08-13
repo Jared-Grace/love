@@ -20,7 +20,7 @@ export async function js_call_fill(ast) {
       const valid = functions_names_includes(name);
       if (valid) {
         return;
-        let s = js_call_new(name, ast);
+        let s = await js_call_new(name, ast);
         a = s;
         object_replace(node, s);
       }
