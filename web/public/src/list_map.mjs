@@ -1,3 +1,3 @@
-export function list_map(list, mapper) {
-  return list.map(mapper);
+export function list_map(list, lambda$item) {
+  return list.map(lambda$item);
 }
