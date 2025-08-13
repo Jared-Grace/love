@@ -46,6 +46,12 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_next } from "./list_next.mjs";
 import { list_remove } from "./list_remove.mjs";
 export async function js_dollar(ast) {
+  let seconds = [
+    {
+      name: "i",
+      fn: js_dollar_i,
+    },
+  ];
   async function lambda(v) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
