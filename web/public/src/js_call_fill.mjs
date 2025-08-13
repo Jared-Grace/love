@@ -1,3 +1,4 @@
+import { js_types_function } from "./js_types_function.mjs";
 import { js_stack_last_multiple } from "./js_stack_last_multiple.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -32,11 +33,8 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
-        let block = js_stack_last_multiple(stack, [
-          "FunctionExpression",
-          "ArrowFunctionExpression",
-          "FunctionDeclaration",
-        ]);
+        let types = js_types_function();
+        let block = js_stack_last_multiple(stack, types);
         let previous = list_previous(stack, block);
         let property_name = "async";
         let async = object_property_get(previous, property_name);
