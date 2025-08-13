@@ -1,8 +1,10 @@
+import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_function_id_add(ast) {
   js_visit_type(ast, "FunctionDeclaration", function lambda(v) {
     let { node } = v;
+    let unique = js_identifier_unique_ast(ast, property_name);
     object_property_set(node, "id", "FunctionDeclaration");
   });
 }
