@@ -1,3 +1,4 @@
 export function string_split(s, separator) {
-  return s.split(separator);
+  const split = s.split(separator);
+  return split;
 }
