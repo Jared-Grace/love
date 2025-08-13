@@ -25,15 +25,13 @@ export function js_dollar(ast) {
       let { name } = expression;
       const separator = "$";
       let split = string_split(name, separator);
-      let first = list_first(list);
+      let first = list_first(split);
       let ne = string_empty_not_is(first);
       if (ne) {
         return;
       }
-      let second = list_second(list2);
-      let remaining = string_prefix_without(name, prefix);
-      log(remaining);
-      if (remaining === "i") {
+      let second = list_second(split);
+      if (second === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
             " " +
@@ -41,7 +39,7 @@ export function js_dollar(ast) {
             js_code_braces_empty(),
         );
         object_replace(node, from);
-      } else if (remaining === "r") {
+      } else if (remaisecondning === "r") {
         let code = js_code_return_empty();
         let from = js_parse_statement(code);
         object_replace(node, from);
