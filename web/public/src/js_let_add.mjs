@@ -21,5 +21,5 @@ export function js_let_add(ast) {
     object_replace(stack1, assign);
   });
   return;
-  a = 1;
+  let a = 1;
 }
