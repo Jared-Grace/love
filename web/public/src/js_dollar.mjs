@@ -1,3 +1,4 @@
+import { js_dollar_a } from "./js_dollar_a.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { js_node_types } from "./js_node_types.mjs";
 import { object_copy } from "./object_copy.mjs";
@@ -72,32 +73,7 @@ export async function js_dollar(ast) {
       let from = js_parse_statement(code);
       object_replace(stack1, from);
     } else if (second === "a") {
-      if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let l = list_is(stack2);
-        if (l) {
-          let next = list_next(stack2, stack1);
-          let type_is = js_node_type_is(next, "VariableDeclaration");
-          let { declarations } = next;
-          if (type_is) {
-            list_remove_multiple([stack1, next], stack2);
-            function lambda2(declaration) {
-              let { id, init } = declaration;
-              let { name } = id;
-              let is = js_identifiers_named(ast, name);
-              function lambda3(item) {
-                let replacement = object_copy(init);
-                log({
-                  item,
-                  replacement,
-                });
-                object_replace(item, replacement);
-              }
-              each(is, lambda3);
-            }
-            each(declarations, lambda2);
-          }
-        }
-      }
+      js_dollar_a(stack1, stack2, ast);
     } else if (second === "g") {
       await js_dollar_g({
         remaining,
