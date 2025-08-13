@@ -81,7 +81,7 @@ export async function js_dollar(ast) {
             function lambda2(declaration) {
               let { id, init } = declaration;
               let replacement = object_copy(init);
-              is = js_node_types(ast, "Identififer");
+              let is = js_node_types(ast, "Identififer");
             }
             each(declarations, lambda2);
             list_remove_multiple([stack1, next], stack2);
