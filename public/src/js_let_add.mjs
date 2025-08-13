@@ -1,4 +1,4 @@
-import { js_type } from "./js_type.mjs";
+import { js_visit_type } from "./js_visit_type.mjs";
 export function js_let_add(ast) {
-  let vs = js_type(ast2, node_type);
+  js_visit_type(parsed, type, function lambda(v) {});
 }
