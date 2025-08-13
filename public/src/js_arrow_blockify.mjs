@@ -16,10 +16,10 @@ export function js_arrow_blockify(ast) {
     if (nti) {
       let copy = object_copy(body);
       let r = js_statement_return("");
-      object_property_set(r, "argument", value);
+      object_property_set(r, "argument", copy);
       object_replace(body, {
         type: "BlockStatement",
-        body: [copy],
+        body: [r],
       });
     }
   }
