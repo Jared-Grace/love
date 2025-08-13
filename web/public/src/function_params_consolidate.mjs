@@ -8,7 +8,17 @@ export async function function_params_consolidate() {
     let declaration = js_declaration_single(ast);
     let params_names = js_declaration_params_names(declaration);
     function lambda2(item) {
-      return;
+      return {
+        type: "Property",
+        start: 577,
+        end: 586,
+        method: false,
+        shorthand: true,
+        computed: false,
+        key: null,
+        value: null,
+        kind: "init",
+      };
     }
     let result2 = list_map(list, lambda2);
   }
