@@ -6,6 +6,6 @@ export async function js_unparse(ast) {
   let output;
   try {
     output = generate(ast);
-  } catch (e) {}
+  } catch (e) {throw e}
   return output;
 }
