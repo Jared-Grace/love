@@ -29,8 +29,8 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 export async function js_dollar(ast) {
   "ExpressionStatement";
   await js_visit_type_each_async(ast, "Identifier", async (v) => {
-    let { node } = v;
-    let result = list_get_end_1(stack);
+    let { node, stack } = v;
+    let stack1 = list_get_end_1(stack);
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
