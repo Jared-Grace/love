@@ -6,5 +6,5 @@ export async function task_new(task_name) {
   let f_name = await data_function_current_get();
   let f_name_task = function_name_combine(f_name, task_name);
   await function_new(f_name_task);
-  let result = await function_transform(f_name2, async function lambda(ast) {});
+  let result = await function_transform(f_name, async function lambda(ast) {});
 }
