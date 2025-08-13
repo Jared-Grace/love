@@ -19,8 +19,8 @@ export function js_dollar(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      let result = string_split(s, separator);
-      const prefix = "$";
+      const separator = "$";
+      let result = string_split(name, separator);
       if (!string_starts_with(name, prefix)) {
         return;
       }
