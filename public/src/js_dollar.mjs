@@ -39,7 +39,11 @@ export function js_dollar(ast) {
             js_code_braces_empty(),
         );
         object_replace(node, from);
-      } else if (remaisecondning === "r") {
+      } else if (second === "r") {
+        let code = js_code_return_empty();
+        let from = js_parse_statement(code);
+        object_replace(node, from);
+      } else if (second === "r") {
         let code = js_code_return_empty();
         let from = js_parse_statement(code);
         object_replace(node, from);
