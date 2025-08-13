@@ -22,7 +22,7 @@ export async function js_call_fill(ast) {
       }
     }
   });
+  log(await js_unparse(a));
   return;
   js_call_fill;
-  log(await js_unparse(a));
 }
