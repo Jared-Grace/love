@@ -1,3 +1,4 @@
+import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
 import { js_call_fill } from "./js_call_fill.mjs";
 import { js_dollar } from "./js_dollar.mjs";
 import { js_atomize } from "./js_atomize.mjs";
@@ -14,4 +15,6 @@ export async function function_auto(f_name) {
     let transforms = [js_call_fill, js_dollar, js_outside_move, js_atomize];
     await each_async(transforms, async (t) => await t(ast));
   });
+  return;
+  js_declare_assign_null(ast2);
 }
