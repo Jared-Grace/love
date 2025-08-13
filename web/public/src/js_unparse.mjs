@@ -5,7 +5,7 @@ export function js_unparse(ast) {
   try {
     output = generate(ast);
   } catch (e) {
-    import_install();
+    import_install("shift-validator");
   }
   return output;
 }
