@@ -85,7 +85,7 @@ export async function js_dollar(ast) {
               let replacement = object_copy(init);
               let is = js_identifiers_named(ast, name);
               function lambda3(item) {
-                object_replace(to, from2);
+                object_replace(item, replacement);
               }
               each(is, lambda3);
             }
