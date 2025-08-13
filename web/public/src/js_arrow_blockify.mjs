@@ -9,7 +9,7 @@ export function js_arrow_blockify(ast) {
     object_property_set(node, "type", "FunctionDeclaration");
     let body = object_property_get(node, "body");
     const type = "BlockStatement";
-    let nti = js_node_type_not_is(node, type);
+    let nti = js_node_type_not_is(body, type);
     if (nti) {
     }
   });
