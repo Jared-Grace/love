@@ -10,9 +10,9 @@ export function js_call_fill(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       const valid = functions_names_includes(name);
-      if (false) {
+      if (valid) {
+        js_call_new(f_name_call, ast);
       }
-      js_call_new(f_name_call, ast);
     }
   });
 }
