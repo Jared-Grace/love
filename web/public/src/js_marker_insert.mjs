@@ -6,7 +6,9 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 export async function js_marker_insert(name, list, index) {
   let code_string = await js_code_string(name);
-  let code = js_code_call_args_await_maybe(marker.name, [code_string]);
+  const f_name = marker.name;
+  const args_code = [code_string];
+  let code = js_code_call_args_await_maybe(f_name, args_code);
   let parsed = js_parse_statement(code);
   list_insert(list, index, parsed);
 }
