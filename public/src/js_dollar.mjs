@@ -77,7 +77,7 @@ export async function js_dollar(ast) {
               let { id, init } = declaration;
               js_identifier_replace(ast, id, init);
             }
-            each(declarations, log);
+            each(declarations, lambda2);
             list_remove_multiple(stack2, [stack1, next]);
           }
         }
