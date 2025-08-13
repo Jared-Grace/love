@@ -1,3 +1,4 @@
+import { js_node_types } from "./js_node_types.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
@@ -80,7 +81,7 @@ export async function js_dollar(ast) {
             function lambda2(declaration) {
               let { id, init } = declaration;
               let replacement = object_copy(init);
-              js_identifier_replace(ast, id, replacement);
+              js_node_types(ast, "Identififer");
             }
             each(declarations, lambda2);
             list_remove_multiple([stack1, next], stack2);
