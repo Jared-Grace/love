@@ -12,12 +12,14 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { log } from "./log.mjs";
+import { string_split } from "./string_split.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
+      let result = string_split(s, separator);
       const prefix = "$";
       if (!string_starts_with(name, prefix)) {
         return;
