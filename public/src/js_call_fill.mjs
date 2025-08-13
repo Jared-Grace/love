@@ -20,12 +20,13 @@ export async function js_call_fill(ast) {
       const valid = functions_names_includes(name);
       if (valid) {
         let s = await js_call_new(name, ast);
-        a = s;
+        let message = js_unparse(s);
+        log(message);
         object_replace(node, s);
       }
     }
   });
   return;
   await js_unparse(a);
-  js_call_fill;
+  await js_call_fill(ast2);
 }
