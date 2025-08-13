@@ -21,7 +21,8 @@ export async function watch() {
       const f_name = function_auto_path.name;
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
-      $i;
     });
+    return;
+    $i;
   });
 }
