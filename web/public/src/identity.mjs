@@ -1,1 +1,3 @@
-export function identity() {}
+export function identity(a) {
+  return a;
+}
