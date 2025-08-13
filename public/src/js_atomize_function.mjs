@@ -36,6 +36,7 @@ export async function js_atomize_function(ast) {
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
       const stack2 = list_get_end_2(stack);
+      let type_is = js_node_type_is(node, type);
       if (false) {
       }
       await js_node_atomize(existing, v);
