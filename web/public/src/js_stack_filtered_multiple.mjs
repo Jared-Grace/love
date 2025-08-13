@@ -6,7 +6,7 @@ export function js_stack_filtered_multiple(stack, types) {
   function lambda(n) {
     function lambda2(type) {
       let type_is = js_node_type_is(n, type);
-      return;
+      return type_is;
     }
     list_all(types, lambda2);
   }
