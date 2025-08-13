@@ -31,7 +31,6 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
-        return;
         let block = js_stack_last(stack, "BlockStatement");
         let previous = list_previous(stack, block);
         let property_name = "async";
