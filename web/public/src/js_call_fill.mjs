@@ -17,4 +17,5 @@ export function js_call_fill(ast) {
       }
     }
   });
+  return;js_call_fill
 }
