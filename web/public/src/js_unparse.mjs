@@ -1,3 +1,4 @@
+import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
 import { error } from "./error.mjs";
@@ -11,7 +12,7 @@ export async function js_unparse(ast) {
   }
   let output;
   try {
-    output = generate(ast);
+    output = js_unparse_inner(ast);
   } catch (e) {
     log("test");
     let current = null;
