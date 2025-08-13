@@ -88,6 +88,7 @@ export async function js_dollar(ast) {
           stack1,
           stack2,
           ast,
+          afters,
         });
       }
     }
