@@ -25,7 +25,9 @@ export async function js_unparse(ast) {
       }
     });
     let message = json_format_to(current);
-    log(message);
+    log({
+      message,
+    });
     throw e;
   }
   return output;
