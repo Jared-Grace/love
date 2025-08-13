@@ -12,6 +12,8 @@ import { each } from "./each.mjs";
 export async function function_param_swap(f_name, param_name_a, param_name_b) {
   await function_transform(f_name, lambda);
   function lambda(ast) {
+    if (false) {
+    }
     let declaration = js_declaration_single(ast);
     let a = js_declaration_param_named(declaration, param_name_a);
     let b = js_declaration_param_named(declaration, param_name_b);
