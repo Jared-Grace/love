@@ -16,7 +16,7 @@ export function js_dollar_a({ stack1, stack2, ast, afters }) {
       let type_is = js_node_type_is(next, "VariableDeclaration");
       let { declarations } = next;
       if (type_is) {
-        list_add(list, item2);
+        list_add(afters, afters);
         function after() {
           list_remove_multiple([stack1, next], stack2);
           function lambda2(declaration) {
