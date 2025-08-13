@@ -16,7 +16,7 @@ export async function task_new(task_name) {
     f_name_task,
     async function lambda(ast) {
       let body_block = js_declaration_single_block_blody(ast);
-      let code_string = js_code_string("todo");
+      let code_string = await js_code_string("todo");
       js_call_insert(error.name, [code_string], body_block, 0);
     },
   );
