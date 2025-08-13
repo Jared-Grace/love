@@ -13,18 +13,18 @@ import { object_property_get } from "./object_property_get.mjs";
 import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
-  let defineds = list_adder_multiple((la) => {
+  let defineds = list_adder_multiple(function (la) {
     let bss = js_stack_filtered(stack, "BlockStatement");
-    each(bss, (bs) => {
+    each(bss, function (bs) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next(list, item);
-      each_range(index, (i) => {
+      each_range(index, function (i) {
         let list_item = list_get(list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
           let { declarations } = list_item;
           let ids = list_map_property(declarations, "id");
-          each(ids, (id) => {
+          each(ids, function (id) {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
               let values = list_map_property(properties, "value");
