@@ -1,3 +1,4 @@
+import { js_stack_filtered_each } from "./js_stack_filtered_each.mjs";
 import { log } from "./log.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -15,8 +16,7 @@ export function js_identifier_defineds(v) {
   let { stack } = v;
   function lambda4(la) {
     const type = "BlockStatement";
-    let bss = js_stack_filtered(stack, type);
-    each(bss, lambda3);
+    js_stack_filtered_each(stack, type, lambda3);
     function lambda3(bs) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
