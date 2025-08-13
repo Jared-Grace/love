@@ -21,12 +21,12 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 export async function js_call_new(f_name_call, ast) {
-  let result = await function_name_unalias(f_name_call);
+  let f_name_call_unaliased = await function_name_unalias(f_name_call);
   let {
     declaration,
     unaliased,
     ast: ast_call,
-  } = await function_parse_declaration(result);
+  } = await function_parse_declaration(f_name_call_unaliased);
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   let args_code = await list_map_unordered_async(
