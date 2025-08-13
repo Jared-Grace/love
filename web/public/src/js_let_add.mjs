@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { log } from "./log.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
