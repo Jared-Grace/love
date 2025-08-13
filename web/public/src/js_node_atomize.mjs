@@ -33,6 +33,8 @@ export async function js_node_atomize(existing, v) {
     let { callee } = node;
     if (js_node_type_is(callee, "Identifier")) {
       let { name } = callee;
+      if (false) {
+      }
       let { ast: ast_callee } = await function_parse(name);
       let return_name = js_return_name(ast_callee);
       if (return_name !== null) {
