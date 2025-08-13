@@ -71,7 +71,7 @@ export async function js_dollar(ast) {
           let { declarations } = next;
           if (type_is) {
             function lambda2(declaration) {}
-            each(declarations, log);
+            each(declarations, l);
           }
         }
       }
