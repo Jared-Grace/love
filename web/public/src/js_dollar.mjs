@@ -65,7 +65,7 @@ export async function js_dollar(ast) {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
         let l = list_is(stack2);
         if (l) {
-          let next = list_next(list, item);
+          let next = list_next(stack2, stack1);
         }
       }
     } else if (second === "g") {
