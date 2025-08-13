@@ -1,3 +1,4 @@
+import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -9,7 +10,7 @@ export function js_declare_assign_null(ast) {
     let { node } = v;
     let { init } = node;
     if (init === null) {
-      l1
+      let result = list_get_end_1(stack);
       if (false) {
       }
       let init_code = js_keyword_null();
