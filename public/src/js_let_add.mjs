@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { js_identifier_defineds } from "./js_identifier_defineds.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -19,6 +20,7 @@ export function js_let_add(ast) {
     let { left, right } = node;
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
+    list_includes();
     if (false) {
     }
     let assign = js_declare(name, right);
