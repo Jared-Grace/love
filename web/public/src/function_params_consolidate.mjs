@@ -20,7 +20,7 @@ export async function function_params_consolidate() {
         kind: "init",
       };
     }
-    let result2 = list_map(params_names, lambda2);
+    let properties = list_map(params_names, lambda2);
   }
   let result = await function_transform(f_name, lambda);
 }
