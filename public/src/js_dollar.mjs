@@ -45,6 +45,7 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_next } from "./list_next.mjs";
 import { list_remove } from "./list_remove.mjs";
+import { each_async } from "./each_async.mjs";
 export async function js_dollar(ast) {
   return;
   let seconds = [
@@ -65,31 +66,32 @@ export async function js_dollar(ast) {
       fn: js_dollar_i,
     },
   ];
-  async function lambda(v, s) {
-    function lambda2(item) {}
-    each(list, lambda2);
-    let { name: second_name, fn } = s;
-    let { node, stack } = v;
-    let stack1 = list_get_end_1(stack);
-    let stack2 = list_get_end_2(stack);
-    let { name } = node;
-    const separator = "$";
-    let split = string_split(name, separator);
-    let { first, second } = list_first_second(split);
-    let ne = string_empty_not_is(first);
-    if (ne) {
-      return;
+  async function lambda(v) {
+    async function lambda2(s) {
+      let { name: second_name, fn } = s;
+      let { node, stack } = v;
+      let stack1 = list_get_end_1(stack);
+      let stack2 = list_get_end_2(stack);
+      let { name } = node;
+      const separator = "$";
+      let split = string_split(name, separator);
+      let { first, second } = list_first_second(split);
+      let ne = string_empty_not_is(first);
+      if (ne) {
+        return;
+      }
+      let remaining = list_skip(split, 2);
+      if (second === second_name) {
+        await fn({
+          remaining,
+          node,
+          stack1,
+          stack2,
+          ast,
+        });
+      }
     }
-    let remaining = list_skip(split, 2);
-    if (second === second_name) {
-      await fn({
-        remaining,
-        node,
-        stack1,
-        stack2,
-        ast,
-      });
-    }
+    await each_async(seconds, lambda2);
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   return;
