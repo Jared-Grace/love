@@ -1,3 +1,4 @@
+import { string_skip } from "./string_skip.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { string_ends_with } from "./string_ends_with.mjs";
 import { error } from "./error.mjs";
@@ -8,6 +9,5 @@ export function string_prefix_without(s, prefix) {
     error();
   }
   let skipped = string_size(prefix);
-  let b = string_size(prefix);
-  return string_slice(s, skipped, b);
+  return string_skip(s, skipped);
 }
