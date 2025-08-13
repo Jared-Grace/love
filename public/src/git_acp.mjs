@@ -9,5 +9,8 @@ export async function git_acp(message) {
   await catch_ignore_async(async function lambda() {
     await command_line_git(`commit -m "${message}"`);
   });
+  await command_line_git(
+    `rebase --autostash --no-stat --no-verify --no-interactive origin/main`,
+  );
   await git_push();
 }
