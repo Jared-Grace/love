@@ -1,3 +1,4 @@
+import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
 import { assert } from "./assert.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -9,8 +10,7 @@ export function js_identifier_replace(ast, name_from, replacement) {
   let ni = js_node_is(name_from);
   if (ni) {
     let type = "Identifier";
-    let type_is = js_node_type_is(name_from, type);
-    assert(type_is);
+    js_node_type_is_assert(name_from, type);
   }
   function lambda(v) {
     let { node } = v;
