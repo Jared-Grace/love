@@ -1,6 +1,6 @@
-export function list_sort_number_mapper(list) {
+export function list_sort_number_mapper(list, lambda$item) {
   function lambda(a, b) {
-    return a.length - b.length;
+    return lambda$item(a) - lambda$item(b);
   }
   arr.sort(lambda);
 }
