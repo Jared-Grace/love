@@ -28,7 +28,7 @@ export async function js_call_fill(ast) {
         object_replace(node, parsed);
         return;
         let block = js_stack_last(stack, "BlockStatement");
-        let result2 = list_index_of_previous(stack, block);
+        let index_previous = list_index_of_previous(stack, block);
         let result = object_property_exists(object, property_name);
         assert(result);
       }
