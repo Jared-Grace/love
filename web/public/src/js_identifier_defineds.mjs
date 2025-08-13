@@ -48,7 +48,7 @@ export function js_identifier_defineds(v) {
     }
     let types = function_types();
     function lambda5(v) {
-      log(message);
+      log(v);
     }
     js_stack_filtered_multiple_each(stack, types, lambda5);
   }
