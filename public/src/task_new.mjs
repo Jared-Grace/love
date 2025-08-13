@@ -1,3 +1,4 @@
+import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
