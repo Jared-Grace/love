@@ -3,3 +3,4 @@ export function each(list, lambda$item) {
     lambda$item(item);
   }
 }
+ 
