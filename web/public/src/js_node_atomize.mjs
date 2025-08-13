@@ -25,6 +25,8 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { assert } from "./assert.mjs";
 import { list_size } from "./list_size.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { list_includes } from "./list_includes.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = "v";
   let { node } = v;
@@ -33,12 +35,13 @@ export async function js_node_atomize(existing, v) {
     let { callee } = node;
     if (js_node_type_is(callee, "Identifier")) {
       let { name } = callee;
-      if (false) {
-      }
-      let { ast: ast_callee } = await function_parse(name);
-      let return_name = js_return_name(ast_callee);
-      if (return_name !== null) {
-        variable_name = return_name;
+      let list = functions_names();
+      if (list_includes(list, name)) {
+        let { ast: ast_callee } = await function_parse(name);
+        let return_name = js_return_name(ast_callee);
+        if (return_name !== null) {
+          variable_name = return_name;
+        }
       }
     }
   }
