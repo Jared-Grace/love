@@ -9,7 +9,9 @@ export async function js_unparse(ast) {
   } catch (e) {
     let { Validator } = await import_install("shift-validator");
     const validator = new Validator();
-    log(validator);
+    log({
+      validator,
+    });
     const errors = validator.validate(ast);
     if (errors.length > 0) {
       console.error("The AST is invalid. Errors:", errors);
