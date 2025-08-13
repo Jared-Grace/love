@@ -9,5 +9,5 @@ export async function data_transform(property_name, value_initial, value_get) {
   const value = value_get(value_previous);
   object_property_set(data, property_name, value);
   await data_save(d);
-  return;
+  return value;
 }
