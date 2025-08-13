@@ -1,3 +1,4 @@
+import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
 import { js_call_fill } from "./js_call_fill.mjs";
@@ -27,4 +28,5 @@ export async function function_auto(f_name) {
       await t(ast);
     });
   });
+  [js_function_id_add];
 }
