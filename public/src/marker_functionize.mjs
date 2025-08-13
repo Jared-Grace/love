@@ -92,6 +92,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let defineds = js_identifier_defineds(v);
         let { node } = v;
         let stack1 = list_get_end(stack2_from, 1);
+        if (false) {
+        }
         log({
           stack1,
         });
