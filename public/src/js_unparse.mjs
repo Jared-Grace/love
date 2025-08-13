@@ -1,3 +1,4 @@
+import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
@@ -32,4 +33,7 @@ export async function js_unparse(ast) {
     throw e;
   }
   return output;
+  if (!js_visit_filter(ast)) {
+    error();
+  }
 }
