@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_first_second } from "./list_first_second.mjs";
@@ -66,6 +67,7 @@ export async function js_dollar(ast) {
       let parsed = js_parse_expression(code);
       object_replace(node, parsed);
       if (js_node_type_is(stack1, "ExpressionStatement")) {
+        js_declare();
       }
     }
     let message = await js_unparse(ast);
