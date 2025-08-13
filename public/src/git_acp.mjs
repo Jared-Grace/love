@@ -10,5 +10,6 @@ import { command_line_git } from "./command_line_git.mjs";
 export async function git_acp(message) {
   await command_line_git("add -A");
   await git_commit(message);
+  return;
   await git_push();
 }
