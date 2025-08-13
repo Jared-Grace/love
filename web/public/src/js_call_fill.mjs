@@ -25,6 +25,7 @@ export async function js_call_fill(ast) {
       }
     }
   });
+  await js_unparse(a)
   return;
   js_call_fill;
 }
