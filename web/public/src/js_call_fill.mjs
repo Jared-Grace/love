@@ -12,6 +12,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
+import { assert } from "./assert.mjs";
 export async function js_call_fill(ast) {
   async function lambda(v) {
     let { node } = v;
@@ -23,7 +24,9 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
+        return;
         let block = js_stack_last(stack, "BlockStatement");
+        assert(b);
       }
     }
   }
