@@ -9,7 +9,9 @@ export async function function_params_consolidate() {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     marker("1");
-    let params_names = js_declaration_params_names(declaration);
+    let params = js_declaration_params_get(declaration);
+    const params_names = js_identifiers_to_names(params);
+    let params_names = params_names;
     function lambda2(param_name) {
       let expression = js_parse_expression(param_name);
       return {
