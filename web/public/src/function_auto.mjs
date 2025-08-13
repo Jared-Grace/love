@@ -1,3 +1,4 @@
+import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
 import { js_call_fill } from "./js_call_fill.mjs";
 import { js_dollar } from "./js_dollar.mjs";
@@ -21,4 +22,5 @@ export async function function_auto(f_name) {
     ];
     await each_async(transforms, async (t) => await t(ast));
   });
+  [js_arrow_to_function];
 }
