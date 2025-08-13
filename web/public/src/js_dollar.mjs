@@ -24,7 +24,7 @@ export function js_dollar(ast) {
       const separator = "$";
       let split = string_split(name, separator);
       let first = list_first(list);
-      let result3 = string_empty_is(result2);
+      let result3 = string_empty_is(first);
       if (!string_starts_with(name, prefix)) {
         return;
       }
