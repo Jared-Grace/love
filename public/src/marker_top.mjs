@@ -26,12 +26,12 @@ import { js_marker_name_get } from "./js_marker_name_get.mjs";
 export async function marker_top() {
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda);
-  function lambda(ast) {
+  async function lambda(ast) {
     let markers = js_markers(ast);
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
-    js_marker_insert(name_next, body, 0);
+    await js_marker_insert(name_next, body, 0);
     js_imports_missing_add(ast);
   }
 }
