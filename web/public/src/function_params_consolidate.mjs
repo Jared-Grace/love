@@ -9,7 +9,7 @@ export async function function_params_consolidate() {
     let declaration = js_declaration_single(ast);
     let params_names = js_declaration_params_names(declaration);
     function lambda2(param_name) {
-      let expression = js_parse_expression(code_expression);
+      let expression = js_parse_expression(param_name);
       return {
         type: "Property",
         start: 577,
