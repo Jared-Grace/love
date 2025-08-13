@@ -65,6 +65,7 @@ export async function js_dollar(ast) {
       fn: js_dollar_i,
     },
   ];
+  let afters = [];
   async function lambda(v) {
     async function lambda2(s) {
       let { name: second_name, fn } = s;
