@@ -1,1 +1,3 @@
-export function list_empty() {}
+export function list_empty(list) {
+  $st;
+}
