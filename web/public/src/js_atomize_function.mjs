@@ -39,7 +39,7 @@ export async function js_atomize_function(ast) {
       const stack2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack2, "CallExpression");
       if (type_is) {
-        node = v;
+        let { node } = v;
         let assign = js_declare(unique, copy);
       }
     }
