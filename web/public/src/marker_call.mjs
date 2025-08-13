@@ -53,7 +53,7 @@ export async function marker_call(f_name_call) {
       marker("2");
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
-      let output = js_unparse(parsed);
+      let output = await js_unparse(parsed);
       la(output);
       js_stack_declaration_asyncify(stack, declaration);
     }
