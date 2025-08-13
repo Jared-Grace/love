@@ -3,12 +3,10 @@ import { assert } from "./assert.mjs";
 import { marker_first } from "./marker_first.mjs";
 import { marker_current_set } from "./marker_current_set.mjs";
 import { data_transform } from "./data_transform.mjs";
-export async function data_watch_set(f_name) {
-  assert(await function_exists(f_name));
+export async function data_watch_set() {
   function lambda(previous) {
-    return f_name;
+    return true;
   }
-  await data_transform("function_current", null, lambda);
-  let name = marker_first();
+  await data_transform("watch", null, lambda);
   await marker_current_set(name);
 }
