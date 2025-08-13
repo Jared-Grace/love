@@ -8,7 +8,7 @@ import { function_transform } from "./function_transform.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
-export async function function_params_consolidate() {
+export async function function_params_consolidate(f_name) {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
