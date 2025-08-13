@@ -66,7 +66,8 @@ export async function js_dollar(ast) {
     },
   ];
   async function lambda(v, s) {
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     let { name: second_name, fn } = s;
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
