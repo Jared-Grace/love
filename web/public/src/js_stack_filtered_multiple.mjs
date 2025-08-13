@@ -9,8 +9,7 @@ export function js_stack_filtered_multiple(stack, types) {
       let type_is = js_node_type_is(n, type);
       return type_is;
     }
-    return;
-    list_any(types, lambda2);
+    return list_any(types, lambda2);
   }
   let filtered = list_filter(stack, js_node_types_is);
   return filtered;
