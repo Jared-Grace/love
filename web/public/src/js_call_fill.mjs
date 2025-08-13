@@ -11,14 +11,12 @@ import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
-  let a = null;
   await js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
       const valid = functions_names_includes(name);
-      log(name);
       if (valid) {
         let s = await js_call_new(name, ast);
         object_replace(node, s);
