@@ -23,6 +23,7 @@ export async function watch() {
       log_keep(output);
     });
     return;
-    $i;
+    if (false) {
+    }
   });
 }
