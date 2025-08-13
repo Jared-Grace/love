@@ -11,9 +11,10 @@ export async function js_unparse(ast) {
     error();
   }
   if (!js_visit_filter(ast)) {
-    let message = json_format_to({
+    const o = {
       ast,
-    });
+    };
+    let message = json_format_to(o);
     error(message);
   }
   let output;
