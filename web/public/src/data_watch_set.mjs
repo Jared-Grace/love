@@ -6,7 +6,7 @@ import { data_transform } from "./data_transform.mjs";
 export async function data_watch_set(f_name) {
   assert(await function_exists(f_name));
   function lambda(previous) {
-    f_name;
+    return f_name;
   }
   await data_transform("function_current", null, lambda);
   let name = marker_first();
