@@ -10,8 +10,10 @@ export function js_declare_assign_null(ast) {
     let { node } = v;
     let { init } = node;
     if (init === null) {
-      let result = list_get_end_1(stack);
-      log(result);
+      let e1 = list_get_end_1(stack);
+      log({
+        e1,
+      });
       if (false) {
       }
       let init_code = js_keyword_null();
