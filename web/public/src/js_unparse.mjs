@@ -13,6 +13,7 @@ export async function js_unparse(ast) {
   try {
     output = generate(ast);
   } catch (e) {
+    log("test");
     let current = null;
     await js_visit_each_async(ast, async (v) => {
       let { node } = v;
