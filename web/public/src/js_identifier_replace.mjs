@@ -9,8 +9,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 export function js_identifier_replace(ast, name_from, replacement) {
   let ni = js_node_is(name_from);
   if (ni) {
-    let type = "Identifier";
-    js_node_type_is_assert(name_from, type);
+    js_node_type_is_assert(name_from, "Identifier");
   }
   function lambda(v) {
     let { node } = v;
