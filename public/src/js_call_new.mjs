@@ -18,9 +18,9 @@ import {js_declaration_params_names} from './js_declaration_params_names.mjs';
 import {js_identifiers_names} from './js_identifiers_names.mjs';
 import {marker_next_index} from './marker_next_index.mjs';
 import {function_parse_declaration} from './function_parse_declaration.mjs';
-export async function js_call_new(f_name_call, a, arg_name, p) {
+export async function js_call_new(f_name_call, a) {
   let {declaration, unaliased, ast: ast_call} = await function_parse_declaration(f_name_call);
-  let {index, stack2, ast, stack} = marker_next_index(a);
+  let { ast,} = marker_next_index(a);
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   let args_code = list_map(arg_names, arg_name => {
@@ -50,4 +50,5 @@ export async function js_call_new(f_name_call, a, arg_name, p) {
     code = js_code_let_assign(unique, code);
   }
   let parsed = js_parse_statement(code);
+  return parsed;
 }
