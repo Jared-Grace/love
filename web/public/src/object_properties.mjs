@@ -1,3 +1,4 @@
 export function object_properties(obj) {
-  return Object.getOwnPropertyNames(obj);
+  const properties = Object.getOwnPropertyNames(obj);
+  return properties;
 }
