@@ -44,21 +44,19 @@ export async function js_dollar(ast) {
       return;
     }
     let remaining = list_skip(split, 2);
-    if (js_node_type_is(stack1, "ExpressionStatement")) {
-      if (second === "i") {
-        let from = js_parse_statement(
-          js_keyword_if() +
-            " " +
-            js_code_wrap_parenthesis("false") +
-            js_code_braces_empty(),
-        );
-        object_replace(stack1, from);
-      } else if (second === "r") {
-        let code = js_code_return_empty();
-        let from = js_parse_statement(code);
-        object_replace(stack1, from);
-      } else if (second === "a") {
-      }
+    if (second === "i") {
+      let from = js_parse_statement(
+        js_keyword_if() +
+          " " +
+          js_code_wrap_parenthesis("false") +
+          js_code_braces_empty(),
+      );
+      object_replace(stack1, from);
+    } else if (second === "r") {
+      let code = js_code_return_empty();
+      let from = js_parse_statement(code);
+      object_replace(stack1, from);
+    } else if (second === "a") {
     }
     if (second === "g") {
       let { first: object_name, second: property_name } =
