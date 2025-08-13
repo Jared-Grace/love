@@ -8,6 +8,7 @@ export function js_call_fill(ast) {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
+      let { name } = expression;
       const valid = functions_names_includes(name);
       js_call_new(f_name_call, ast);
     }
