@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { object_property_exists_assert } from "./object_property_exists_assert.mjs";
 import { list_previous } from "./list_previous.mjs";
 import { list_get } from "./list_get.mjs";
@@ -34,7 +35,7 @@ export async function js_call_fill(ast) {
         let previous = list_previous(stack, block);
         let property_name = "async";
         object_property_exists_assert(previous, property_name);
-        $st;
+        object_property_set(object, property_name2, value);
       }
     }
   }
