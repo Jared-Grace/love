@@ -31,7 +31,7 @@ export async function function_params_consolidate(f_name) {
       properties,
     };
     list_empty(params);
-    list_add(arg_new);
+    list_add(params, arg_new);
   }
   let result = await function_transform(f_name, lambda);
 }
