@@ -45,7 +45,8 @@ export async function js_atomize_function(ast) {
         let name = js_declaration_name(node);
         let copy = object_copy(node);
         js_block_insert(stack, copy);
-        object_replace(to, from);
+        let expression = js_parse_expression(init_code);
+        object_replace(node);
       }
     }
   });
