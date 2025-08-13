@@ -29,7 +29,7 @@ export async function function_params_consolidate() {
       type: "ObjectPattern",
       properties,
     };
-    list_empty(arg_new);
+    list_empty(params);
   }
   let result = await function_transform(f_name, lambda);
 }
