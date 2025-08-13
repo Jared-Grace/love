@@ -13,7 +13,6 @@ import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
   let a = null;
   await js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
-    log("test");
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
