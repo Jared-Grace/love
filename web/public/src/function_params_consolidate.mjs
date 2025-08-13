@@ -8,7 +8,7 @@ export async function function_params_consolidate() {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params_names = js_declaration_params_names(declaration);
-    function lambda2(item) {
+    function lambda2(param_name) {
       let expression = js_parse_expression(code_expression);
       return {
         type: "Property",
@@ -22,7 +22,7 @@ export async function function_params_consolidate() {
         kind: "init",
       };
     }
-    let result2 = list_map(list, lambda2);
+    let result2 = list_map(params_names, lambda2);
   }
   let result = await function_transform(f_name, lambda);
 }
