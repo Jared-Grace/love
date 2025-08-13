@@ -19,7 +19,7 @@ export async function js_unparse(ast) {
         return true;
       }
     });
-    let message = json_format_to(current); 
+    let message = json_format_to(current);
     log(message);
     throw e;
   }
