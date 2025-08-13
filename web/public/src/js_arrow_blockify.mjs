@@ -7,7 +7,6 @@ import { object_replace } from "./object_replace.mjs";
 export function js_arrow_blockify(ast) {
   js_visit_type(ast, "ArrowFunctionExpression", function lambda(v) {
     let { node } = v;
-    object_property_set(node, "type", "FunctionDeclaration");
     let body = object_property_get(node, "body");
     const type = "BlockStatement";
     let nti = js_node_type_not_is(body, type);
