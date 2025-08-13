@@ -92,11 +92,11 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let defineds = js_identifier_defineds(v);
         let { node } = v;
         let stack1 = list_get_end(stack2_from, 1);
-        if (false) {
+        if (!js_node_type_is(stack1, "ExpressionStatement")) {
+          log({
+            stack1,
+          });
         }
-        log({
-          stack1,
-        });
         if (js_node_type_is(stack1, "Property")) {
           if (object_property_equals(stack1, "key", node)) {
             return;
