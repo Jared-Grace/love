@@ -1,3 +1,4 @@
+import { todo } from "./todo.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -56,7 +57,7 @@ export async function marker_expand() {
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers, arguments2);
     if (list_empty_not_is(intesection)) {
-      error("todo");
+      todo();
     }
     let params_names = js_declaration_params_names(declaration);
     each_pair(params_names, a_names, lambda3);
