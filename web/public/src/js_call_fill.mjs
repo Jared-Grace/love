@@ -18,6 +18,7 @@ export async function js_call_fill(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       const valid = functions_names_includes(name);
+      log(name);
       if (valid) {
         let s = await js_call_new(name, ast);
         let message = await js_unparse(s);
