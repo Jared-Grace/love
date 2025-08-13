@@ -19,7 +19,6 @@ export async function js_call_fill(ast) {
       let { name } = expression;
       const valid = functions_names_includes(name);
       if (valid) {
-        return;
         let s = await js_call_new(name, ast);
         a = s;
         object_replace(node, s);
