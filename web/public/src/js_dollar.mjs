@@ -91,6 +91,7 @@ export async function js_dollar(ast) {
             }
             each(declarations, lambda2);
             list_remove_multiple([stack1, next], stack2);
+            log(message);
           }
         }
       }
