@@ -1,5 +1,5 @@
-export function each(list, lambda) {
-  for (let item of list) {
-    lambda(item);
+export function each(list, lambda$item) {
+  for (let item = null of list) {
+    lambda$item(item);
   }
 }
