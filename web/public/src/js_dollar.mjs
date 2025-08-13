@@ -58,9 +58,6 @@ export async function js_dollar(ast) {
         let from = js_parse_statement(code);
         object_replace(stack1, from);
       } else if (second === "a") {
-        let code = js_code_return_empty();
-        let from = js_parse_statement(code);
-        object_replace(stack1, from);
       }
     }
     if (second === "g") {
