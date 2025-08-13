@@ -74,7 +74,7 @@ export async function js_dollar(ast) {
             function lambda2(declaration) {
               let { id, init } = declaration;
               let { name } = id;
-              js_identifier_replace(ast, name_from, name_to);
+              js_identifier_replace(ast, name, init);
             }
             each(declarations, log);
           }
