@@ -51,7 +51,7 @@ export function js_dollar(ast) {
       } else if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
-        let code = js_code_call_args(object_property_get.get, args_code);
+        let code = js_code_call_args(object_property_get.name, args_code);
         let parsed = js_parse_expression(code);
         object_replace(node, from);
       }
