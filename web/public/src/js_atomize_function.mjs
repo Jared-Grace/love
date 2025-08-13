@@ -34,6 +34,7 @@ export async function js_atomize_function(ast) {
     let { stack } = v;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
+      const stack2 = list_get_end(stack, 2);
       await js_node_atomize(existing, v);
     }
   });
