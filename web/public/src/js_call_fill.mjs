@@ -26,7 +26,6 @@ export async function js_call_fill(ast) {
     }
   });
   return;
-  log(await js_unparse(a));
   let current = null;
   await js_visit_each_async(a, async (v) => {
     let { node } = v;
@@ -37,5 +36,7 @@ export async function js_call_fill(ast) {
       return true;
     }
   });
+  let message = json_formnat_to(a);
+  log(message);
   js_call_fill;
 }
