@@ -22,10 +22,10 @@ import { object_property_delete } from "./object_property_delete.mjs";
 export async function marker_new() {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
-  function lambda(a) {
+  async function lambda(a) {
     let { index, stack2 } = marker_next_index(a);
     let name = "2";
-    js_marker_insert(name, stack2, index);
+    await js_marker_insert(name, stack2, index);
     marker_current_set(name);
   }
 }
