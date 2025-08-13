@@ -22,7 +22,7 @@ export async function watch() {
       let output = await command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
       ("not await this on purpose");
-      let promise = git_acp_call(f_name, [path]);
+      let promise = git_acp_call(watch.name, [path]);
       last = last.then(promise);
     });
   });
