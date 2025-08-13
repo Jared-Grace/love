@@ -47,7 +47,6 @@ import { list_next } from "./list_next.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { each_async } from "./each_async.mjs";
 export async function js_dollar(ast) {
-  return;
   let seconds = [
     {
       name: "i",
