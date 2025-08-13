@@ -1,3 +1,4 @@
+import { list_empty } from "./list_empty.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { marker } from "./marker.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
@@ -9,7 +10,6 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function function_params_consolidate() {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
-    marker("1");
     let params = js_declaration_params_get(declaration);
     const params_names = js_identifiers_to_names(params);
     function lambda2(param_name) {
@@ -29,6 +29,7 @@ export async function function_params_consolidate() {
       type: "ObjectPattern",
       properties,
     };
+    list_empty();
   }
   let result = await function_transform(f_name, lambda);
 }
