@@ -9,5 +9,4 @@ export async function catch_log_async(lambda) {
     let message = message_get(e);
     log_keep(message);
   }
-  return;
 }
