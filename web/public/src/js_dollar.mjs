@@ -62,7 +62,6 @@ export function js_dollar(ast) {
         let parsed = js_parse_expression(code);
         let message = js_unparse(node);
         log(message);
-        object_replace(node, parsed);
       }
     }
   });
