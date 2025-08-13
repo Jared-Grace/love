@@ -36,9 +36,9 @@ export async function js_call_fill(ast) {
         let previous = list_previous(stack, block);
         let property_name = "async";
         let async = object_property_get(previous, property_name);
-        if (false) {
+        if (async_is && !async) {
+          object_property_set(previous, property_name, value);
         }
-        object_property_set(previous, property_name, value);
       }
     }
   }
