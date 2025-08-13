@@ -10,6 +10,9 @@ export async function js_unparse(ast) {
   if (!promise_not_is(ast)) {
     error();
   }
+  if (!js_visit_filter(ast)) {
+    error();
+  }
   let output;
   try {
     output = js_unparse_inner(ast);
@@ -33,7 +36,4 @@ export async function js_unparse(ast) {
     throw e;
   }
   return output;
-  if (!js_visit_filter(ast)) {
-    error();
-  }
 }
