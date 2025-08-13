@@ -1,4 +1,3 @@
-import { undefined } from "./undefined.mjs";
 import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_declare_assign_null } from "./js_declare_assign_null.mjs";
@@ -15,7 +14,7 @@ import { each_async } from "./each_async.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function function_auto(f_name) {
   marker("1");
-  await function_transform(f_name, async function undefined(ast) {
+  await function_transform(f_name, async function lambda2(ast) {
     let transforms = [
       js_arrow_blockify,
       js_arrow_to_function,
@@ -26,7 +25,7 @@ export async function function_auto(f_name) {
       js_outside_move,
       js_atomize,
     ];
-    await each_async(transforms, async function undefined(t) {
+    await each_async(transforms, async function lambda(t) {
       await t(ast);
     });
   });
