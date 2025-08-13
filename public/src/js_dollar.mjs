@@ -96,4 +96,5 @@ export async function js_dollar(ast) {
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   return;
+  each(list, function lambda3(item) {});
 }
