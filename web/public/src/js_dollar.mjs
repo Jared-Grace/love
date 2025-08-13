@@ -14,7 +14,7 @@ export function js_dollar(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      string_prefix_without(name);
+      let remaining = string_prefix_without(name, "$");
       if (name === "$i") {
         let from = js_parse_statement(
           js_keyword_if() +
