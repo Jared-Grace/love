@@ -31,6 +31,7 @@ export function js_dollar(ast) {
         return;
       }
       let second = list_second(split);
+      let remaining = list_skip(split, 2);
       if (second === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
