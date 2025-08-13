@@ -44,7 +44,7 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, lambda2);
     }
-    let filtered = js_stack_filtered_multiple(stack2, types);
+    let filtered = js_stack_filtered_multiple(stack, [types]);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
