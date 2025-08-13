@@ -1,3 +1,4 @@
+import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { each } from "./each.mjs";
 import { list_is } from "./list_is.mjs";
@@ -77,7 +78,7 @@ export async function js_dollar(ast) {
               js_identifier_replace(ast, id, init);
             }
             each(declarations, log);
-            list_remove(stack2, next);
+            list_remove_multiple(stack2, [stack1, next]);
           }
         }
       }
