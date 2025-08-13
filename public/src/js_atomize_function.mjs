@@ -43,7 +43,7 @@ export async function js_atomize_function(ast) {
       if (type_is) {
         let { node } = v;
         let name = js_declaration_name(node);
-        let copy = object_copy(from);
+        let copy = object_copy(node);
         js_block_insert(stack, assign);
       }
     }
