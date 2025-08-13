@@ -15,7 +15,6 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
-  let last = Promise.resolve();
   watcher.on("change", async (path) => {
     log(path);
     await catch_log_async(async () => {
@@ -23,8 +22,7 @@ export async function watch() {
       let output = await command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
       ("not await this on purpose");
-      let promise = git_acp_call(watch.name, [path]);
-      last = last.then(promise);
+      await git_acp_call(watch.name, [path]);
     });
   });
 }
