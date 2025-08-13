@@ -13,18 +13,18 @@ import { object_property_get } from "./object_property_get.mjs";
 import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
-  let defineds = list_adder_multiple(function lambda4(la) {
+  function lambda4(la) {
     let bss = js_stack_filtered(stack, "BlockStatement");
-    each(bss, function lambda3(bs) {
+    function lambda3(bs) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next(list, item);
-      each_range(index, function lambda2(i) {
+      function lambda2(i) {
         let list_item = list_get(list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
           let { declarations } = list_item;
           let ids = list_map_property(declarations, "id");
-          each(ids, function lambda(id) {
+          function lambda(id) {
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
               let values = list_map_property(properties, "value");
@@ -36,10 +36,14 @@ export function js_identifier_defineds(v) {
             } else {
               error();
             }
-          });
+          }
+          each(ids, lambda);
         }
-      });
-    });
-  });
+      }
+      each_range(index, lambda2);
+    }
+    each(bss, lambda3);
+  }
+  let defineds = list_adder_multiple(lambda4);
   return defineds;
 }
