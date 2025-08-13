@@ -1,4 +1,5 @@
-import {js_type} from './js_type.mjs';
+import { js_type } from "./js_type.mjs";
 export function js_imports_all(ast) {
-  return js_type(ast, "ImportDeclaration");
+  const imports = js_type(ast, "ImportDeclaration");
+  return imports;
 }
