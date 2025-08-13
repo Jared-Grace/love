@@ -20,7 +20,7 @@ export async function js_call_fill(ast) {
       let unaliased = await function_name_unalias(name);
       const valid = functions_names_includes(unaliased);
       if (valid) {
-        let { parsed } = await js_call_new(name, ast);
+        let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
       }
     }
