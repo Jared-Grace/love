@@ -1,3 +1,4 @@
+import { object_property_exists } from "./object_property_exists.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
@@ -26,6 +27,7 @@ export async function js_call_fill(ast) {
         object_replace(node, parsed);
         return;
         let block = js_stack_last(stack, "BlockStatement");
+        let result = object_property_exists(object, property_name);
         assert(b);
       }
     }
