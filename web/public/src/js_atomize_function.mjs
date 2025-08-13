@@ -29,8 +29,8 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 export async function js_atomize_function(ast) {
   let existing = js_identifiers(ast);
-  let ces = js_type(ast, "CallExpression");
-  await each_async(ces, async function lambda(v) {
+  let fes = js_type(ast, "FunctionExpression");
+  await each_async(fes, async function lambda(v) {
     let { stack } = v;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
