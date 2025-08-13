@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { log } from "./log.mjs";
 import { list_wait } from "./list_wait.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -11,7 +12,6 @@ export async function function_dependencies_code(f_name) {
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
-  let mapped3 = list_map(mapped2, js_unparse);
-  let waited2 = list_wait(mapped3);
+  let waited2 = list_map_unordered_async(mapped2);
   return list_join(waited2, "\n");
 }
