@@ -70,7 +70,9 @@ export async function js_dollar(ast) {
           let type_is = js_node_type_is(next, "VariableDeclaration");
           let { declarations } = next;
           if (type_is) {
-            function lambda2(declaration) {}
+            function lambda2(declaration) {
+              id = declaration;
+            }
             each(declarations, log);
           }
         }
