@@ -66,14 +66,14 @@ export async function js_dollar(ast) {
         let l = list_is(stack2);
         if (l) {
           let next = list_next(stack2, stack1);
-          log(next);
+          log({
+            next,
+          });
         }
       }
     } else if (second === "g") {
       await js_dollar_g(remaining, node, stack1, ast);
     }
-    let message = await js_unparse(ast);
-    log(message);
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
 }
