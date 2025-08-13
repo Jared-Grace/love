@@ -15,13 +15,14 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
+  let gits = [];
   watcher.on("change", async (path) => {
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
       let output = await command_line("node r.mjs " + f_name + " " + path);
       log_keep(output);
       ("not await this on purpose");
-      git_acp_call(f_name, [path]);
+      let promise = git_acp_call(f_name, [path]);
     });
   });
 }
