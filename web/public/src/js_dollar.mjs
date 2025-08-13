@@ -31,17 +31,16 @@ export async function js_dollar(ast) {
   await js_visit_type_each_async(ast, "Identifier", async (v) => {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
-    let { expression } = node;
+    let { name } = node;
+    const separator = "$";
+    let split = string_split(name, separator);
+    let { first, second } = list_first_second(split);
+    let ne = string_empty_not_is(first);
+    if (ne) {
+      return;
+    }
+    let remaining = list_skip(split, 2);
     if (js_node_type_is(stack1, "ExpressionStatement")) {
-      let { name } = expression;
-      const separator = "$";
-      let split = string_split(name, separator);
-      let { first, second } = list_first_second(split);
-      let ne = string_empty_not_is(first);
-      if (ne) {
-        return;
-      }
-      let remaining = list_skip(split, 2);
       if (second === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
@@ -49,12 +48,14 @@ export async function js_dollar(ast) {
             js_code_wrap_parenthesis("false") +
             js_code_braces_empty(),
         );
-        object_replace(node, from);
+        object_replace(stack1, from);
       } else if (second === "r") {
         let code = js_code_return_empty();
         let from = js_parse_statement(code);
-        object_replace(node, from);
-      } else if (second === "g") {
+        object_replace(stack1, from);
+      }
+    } else {
+      if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
         let code_string = await js_code_string(property_name);
@@ -63,10 +64,10 @@ export async function js_dollar(ast) {
           code_string,
         ]);
         let parsed = js_parse_expression(code);
-        object_replace(expression, parsed);
+        object_replace(node, parsed);
       }
     }
+    let message = await js_unparse(ast);
+    log(message);
   });
-  let message = await js_unparse(ast);
-  log(message);
 }
