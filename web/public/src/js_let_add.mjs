@@ -1,3 +1,4 @@
+import { object_replace } from "./object_replace.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { log } from "./log.mjs";
 import { js_declare } from "./js_declare.mjs";
@@ -8,17 +9,17 @@ import { list_get_end } from "./list_get_end.mjs";
 export function js_let_add(ast) {
   js_visit_type(ast, "AssignmentExpression", function lambda(v) {
     let { stack } = v;
-    let item = list_get_end_1(stack);
-    let type_is = js_node_type_is(item, "ExpressionStatement");
+    let stack1 = list_get_end_1(stack);
+    let type_is = js_node_type_is(stack1, "ExpressionStatement");
     if (!type_is) {
       return;
     }
     let { node } = v;
     let { left, right } = node;
-    log(node);
-    return;
     let name = object_property_get(left, "name");
     let assign = js_declare(name, right);
+    object_replace(to, from);
+    return;
   });
   return;
   a = 1;
