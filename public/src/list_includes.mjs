@@ -1,3 +1,4 @@
 export function list_includes(list, item) {
-  return list.includes(item);
+  const includes = list.includes(item);
+  return includes;
 }
