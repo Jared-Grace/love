@@ -9,7 +9,7 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_let_add(ast) {
-  js_visit_type(ast, "AssignmentExpression", function lambda(v) {
+  function lambda(v) {
     let { stack } = v;
     let stack1 = list_get_end_1(stack);
     let type_is = js_node_type_is(stack1, "ExpressionStatement");
@@ -26,7 +26,8 @@ export function js_let_add(ast) {
     }
     let assign = js_declare(name, right);
     object_replace(stack1, assign);
-  });
+  }
+  js_visit_type(ast, "AssignmentExpression", lambda);
   return;
-  let ast = 1;
+  ast = 1;
 }
