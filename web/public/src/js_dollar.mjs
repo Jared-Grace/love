@@ -66,7 +66,7 @@ export async function js_dollar(ast) {
         let l = list_is(stack2);
         if (l) {
           let next = list_next(stack2, stack1);
-          l;
+          log(message2);
         }
       }
     } else if (second === "g") {
