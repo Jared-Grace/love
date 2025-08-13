@@ -1,4 +1,3 @@
-import { object_property_get } from "./object_property_get.mjs";
 import { log } from "./log.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -17,8 +16,7 @@ export function js_let_add(ast) {
     let { left, right } = node;
     log(node);
     return;
-    let value = object_property_get(left, "name");
-    value;
+    $g$left$name;
     let assign = js_declare(right);
   });
   return;
