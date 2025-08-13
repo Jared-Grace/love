@@ -8,5 +8,4 @@ export async function data_watch_set() {
     return true;
   }
   await data_transform("watch", null, lambda);
-  await marker_current_set(name);
 }
