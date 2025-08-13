@@ -70,8 +70,8 @@ export async function js_dollar(ast) {
           let type_is = js_node_type_is(next, "VariableDeclaration");
           let { declarations } = next;
           if (type_is) {
-            function lambda2(item) {}
-            each(list, lambda2);
+            function lambda2(declaration) {}
+            each(declarations, log);
           }
         }
       }
