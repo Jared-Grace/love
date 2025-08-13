@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_any } from "./list_any.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_node_types_is(item, types) {
@@ -7,4 +8,5 @@ export function js_node_types_is(item, types) {
   }
   const match = list_any(types, lambda2);
   return match;
+  log(message);
 }
