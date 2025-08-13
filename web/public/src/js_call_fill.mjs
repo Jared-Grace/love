@@ -12,7 +12,7 @@ import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
-  await js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
+  async function lambda(v) {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
@@ -20,9 +20,10 @@ export async function js_call_fill(ast) {
       let unaliased = await function_name_unalias(name);
       const valid = functions_names_includes(unaliased);
       if (valid) {
-        let s = await js_call_new(name, ast);
-        object_replace(node, s);
+        let parsed = await js_call_new(name, ast);
+        object_replace(node, parsed);
       }
     }
-  });
+  }
+  await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
 }
