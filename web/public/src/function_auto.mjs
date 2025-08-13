@@ -14,7 +14,7 @@ import { each_async } from "./each_async.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function function_auto(f_name) {
   marker("1");
-  await function_transform(f_name, async function (ast) {
+  await function_transform(f_name, async function undefined(ast) {
     let transforms = [
       js_arrow_blockify,
       js_arrow_to_function,
@@ -25,7 +25,7 @@ export async function function_auto(f_name) {
       js_outside_move,
       js_atomize,
     ];
-    await each_async(transforms, async function (t) {
+    await each_async(transforms, async function undefined(t) {
       await t(ast);
     });
   });
