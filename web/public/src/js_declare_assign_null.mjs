@@ -12,9 +12,9 @@ export function js_declare_assign_null(ast) {
     let { init } = node;
     if (init === null) {
       let e1 = list_get_end_1(stack);
-      let stack22 = list_get_end_2(stack2);
+      let e2 = list_get_end_2(stack2);
       log({
-        e1,
+        e2,
       });
       if (false) {
       }
