@@ -10,6 +10,7 @@ import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
+import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   let f_name = await data_function_current_get();
   let result2 = task_function_name_part();
@@ -23,8 +24,7 @@ export async function task_new(task_name) {
     f_name_task,
     async function lambda(ast) {
       let body_block = js_declaration_single_block_blody(ast);
-      let code_string = await js_code_string("todo");
-      js_call_insert(error.name, [code_string], body_block, 0);
+      js_call_insert(todo.name, [], body_block, 0);
     },
   );
 }
