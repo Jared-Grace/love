@@ -5,10 +5,10 @@ import { git_push } from "./git_push.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 export async function git_acp(message) {
   await command_line_git("add -A");
-  await command_line_git(`fetch origin main`);
   await catch_ignore_async(async function lambda() {
     await command_line_git(`commit -m "${message}"`);
   });
+  await command_line_git(`fetch origin main`);
   await command_line_git(
     `rebase --autostash --no-stat --no-verify --no-interactive origin/main`,
   );
