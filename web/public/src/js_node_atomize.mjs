@@ -67,6 +67,9 @@ export async function js_node_atomize(existing, v) {
     }
   }
   let unique = js_identifier_unique(existing, variable_name);
+  log({
+    unique,
+  });
   let copy = object_copy(node);
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
