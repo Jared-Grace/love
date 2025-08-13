@@ -1,3 +1,4 @@
+import { object_copy } from "./object_copy.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { each } from "./each.mjs";
@@ -75,7 +76,8 @@ export async function js_dollar(ast) {
           if (type_is) {
             function lambda2(declaration) {
               let { id, init } = declaration;
-              js_identifier_replace(ast, id, init);
+              let replacement = object_copy(init);
+              js_identifier_replace(ast, id, replacement);
             }
             each(declarations, lambda2);
             list_remove_multiple(stack2, [stack1, next]);
