@@ -5,7 +5,6 @@ import { error } from "./error.mjs";
 import { log } from "./log.mjs";
 import { import_install } from "./import_install.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-import { generate } from "astring";
 export async function js_unparse(ast) {
   if (!promise_not_is(ast)) {
     error();
