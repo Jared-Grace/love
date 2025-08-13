@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { js_declare } from "./js_declare.mjs";
@@ -69,8 +70,7 @@ export async function js_dollar(ast) {
       let parsed = js_parse_expression(code);
       object_replace(node, parsed);
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let existing = js_identifiers_names(ast);
-        let unique = js_identifier_unique(existing, property_name);
+        let unique = js_identifier_unique_ast(ast, property_name);
         let assign = js_declare(unique, parsed);
         object_replace(stack1, assign);
       }
