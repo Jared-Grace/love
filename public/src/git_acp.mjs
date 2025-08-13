@@ -16,7 +16,11 @@ export async function git_acp(message) {
     );
   } catch (e) {
     log_keep("Rebase failed, aborting rebase");
-    await command_line_git("rebase --abort");
+    try {
+      await command_line_git("rebase --abort");
+    } catch (abortErr) {
+      log_keep("No rebase in progress, nothing to abort.");
+    }
     throw e;
   }
   await git_push();
