@@ -8,7 +8,7 @@ import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
   let name = js_declaration_name(declaration);
   const f_path = function_name_to_path(name);
-  let code_declaration = js_unparse(declaration);
+  let code_declaration = await js_unparse(declaration);
   const contents = js_code_export(code_declaration);
   let ast = js_parse(contents);
   js_imports_missing_add(ast);
