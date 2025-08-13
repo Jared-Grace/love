@@ -55,8 +55,8 @@ export async function js_dollar(ast) {
         object_replace(stack1, from);
       }
     }
-    if (js_node_type_is(stack1, "ExpressionStatement")) {
-      if (second === "g") {
+    if (second === "g") {
+      if (js_node_type_is(stack1, "ExpressionStatement")) {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
         let code_string = await js_code_string(property_name);
