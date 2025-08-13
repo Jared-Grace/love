@@ -1,3 +1,4 @@
+import { function_types } from "./function_types.mjs";
 import { js_stack_filtered_multiple } from "./js_stack_filtered_multiple.mjs";
 import { js_stack_filtered_each } from "./js_stack_filtered_each.mjs";
 import { log } from "./log.mjs";
@@ -44,7 +45,8 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, lambda2);
     }
-    let filtered = js_stack_filtered_multiple(stack, [types]);
+    let types = function_types();
+    let filtered = js_stack_filtered_multiple(stack, types);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
