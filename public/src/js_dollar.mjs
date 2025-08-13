@@ -23,8 +23,9 @@ import { log } from "./log.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
+import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 export function js_dollar(ast) {
-  js_visit_type(ast, "ExpressionStatement", (v) => {
+  js_visit_type_each_async(ast, "ExpressionStatement", async (v) => {
     let { node } = v;
     let { expression } = node;
     if (js_identifier_is(expression)) {
@@ -52,7 +53,7 @@ export function js_dollar(ast) {
       } else if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
-        let code_string = js_code_string(property_name);
+        let code_string = await js_code_string(property_name);
         let code = js_code_call_args(object_property_get.name, [
           object_name,
           code_string,
