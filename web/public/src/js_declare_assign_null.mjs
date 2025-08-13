@@ -1,3 +1,5 @@
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_get_end } from "./list_get_end.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
@@ -12,6 +14,7 @@ export function js_declare_assign_null(ast) {
     let { init } = node;
     if (init === null) {
       let stack3 = list_get_end(stack, 3);
+      let type_is = js_node_type_is(node2, type);
       if (false) {
       }
       let init_code = js_keyword_null();
