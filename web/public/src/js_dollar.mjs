@@ -37,6 +37,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_next } from "./list_next.mjs";
+import { list_remove } from "./list_remove.mjs";
 export async function js_dollar(ast) {
   async function lambda(v) {
     let { node, stack } = v;
@@ -76,6 +77,7 @@ export async function js_dollar(ast) {
               js_identifier_replace(ast, id, init);
             }
             each(declarations, log);
+            list_remove(list, item);
           }
         }
       }
