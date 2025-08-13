@@ -17,13 +17,12 @@ export async function js_unparse(ast) {
     };
     error_json(o);
   }
-  let output;
+  let output = null;
   try {
     output = js_unparse_inner(ast);
   } catch (e) {
-    log("test");
     let current = null;
-    await js_visit_each_async(ast, async (v) => {
+    async function lambda(v) {
       let { node } = v;
       try {
         js_unparse_inner(node);
@@ -31,12 +30,8 @@ export async function js_unparse(ast) {
         current = a;
         return true;
       }
-    });
-    let message = json_format_to(current);
-    log({
-      ast,
-      message,
-    });
+    }
+    await js_visit_each_async(ast, lambda);
     throw e;
   }
   return output;
