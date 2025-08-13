@@ -1,3 +1,4 @@
+import { js_imports_all } from "./js_imports_all.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -9,7 +10,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_type } from "./js_type.mjs";
 import { each } from "./each.mjs";
 export function js_imports(ast) {
-  let vs = js_type(ast, "ImportDeclaration");
+  let vs = js_imports_all(ast);
   return list_adder_unique((la) => {
     each(vs, (v) => {
       let { node } = v;
