@@ -11,6 +11,7 @@ import { command_line } from "./command_line.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_equals } from "./object_property_equals.mjs";
+import { object_property_set } from "./object_property_set.mjs";
 export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
   let joined = functions_path();
@@ -25,9 +26,11 @@ export async function watch() {
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
+      object_property_set(path, in_progress, value);
       const f_name = function_auto_path.name;
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
+      object_property_set(path, in_progress, false);
     });
   });
 }
