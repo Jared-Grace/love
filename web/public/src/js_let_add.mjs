@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -14,6 +15,7 @@ export function js_let_add(ast) {
       return;
     }
     let { node } = v;
+    log(message);
     return;
     let assign = js_declare(name, init);
   });
