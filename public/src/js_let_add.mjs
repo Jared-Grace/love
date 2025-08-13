@@ -9,7 +9,7 @@ export function js_let_add(ast) {
     let { stack } = v;
     let item = list_get_end_1(stack);
     let type_is = js_node_type_is(node, "ExpressionStatement");
-    if (type_is) {
+    if (!type_is) {
     }
   });
 }
