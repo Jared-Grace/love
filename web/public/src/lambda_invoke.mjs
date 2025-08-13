@@ -1,1 +1,3 @@
-export function lambda_invoke() {}
+export function lambda_invoke(lambda) {
+  lambda();
+}
