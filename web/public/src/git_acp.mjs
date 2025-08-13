@@ -12,7 +12,7 @@ export async function git_acp(message) {
   await command_line_git(`fetch origin main`);
   try {
     await command_line_git(
-      "rebase --autostash --no-stat --no-verify --no-interactive origin/main",
+      "git rebase --autostash --no-stat --no-verify origin/main",
     );
   } catch (e) {
     log_keep("Rebase failed, aborting rebase");
