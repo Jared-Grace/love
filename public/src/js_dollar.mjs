@@ -82,9 +82,9 @@ export async function js_dollar(ast) {
             function lambda2(declaration) {
               let { id, init } = declaration;
               let { name } = id;
-              let replacement = object_copy(init);
               let is = js_identifiers_named(ast, name);
               function lambda3(item) {
+                let replacement = object_copy(init);
                 object_replace(item, replacement);
               }
               each(is, lambda3);
