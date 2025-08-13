@@ -37,6 +37,7 @@ export async function js_dollar(ast) {
   async function lambda(v) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
+    let stack2 = list_get_end_2(stack);
     let { name } = node;
     const separator = "$";
     let split = string_split(name, separator);
@@ -60,7 +61,6 @@ export async function js_dollar(ast) {
       object_replace(stack1, from);
     } else if (second === "a") {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        let stack2 = list_get_end_2(stack);
       }
     } else if (second === "g") {
       await js_dollar_g(remaining, node, stack1, ast);
