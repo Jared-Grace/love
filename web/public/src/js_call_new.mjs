@@ -59,5 +59,6 @@ export async function js_call_new(f_name_call, ast) {
   let parsed = js_parse_statement(code);
   return {
     parsed,
+    async_is: object_property_get(declaration, "async"),
   };
 }
