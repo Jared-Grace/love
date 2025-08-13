@@ -1,3 +1,4 @@
+import { js_code_string } from "./js_code_string.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_call_insert } from "./js_call_insert.mjs";
@@ -15,7 +16,8 @@ export async function task_new(task_name) {
     f_name_task,
     async function lambda(ast) {
       let body_block = js_declaration_single_block_blody(ast);
-      js_call_insert(error.name, ["todo"], body_block, 0);
+      let code_string = js_code_string("todo");
+      js_call_insert(error.name, [code_string], body_block, 0);
     },
   );
 }
