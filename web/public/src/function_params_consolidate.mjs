@@ -1,3 +1,4 @@
+import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { marker } from "./marker.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
@@ -11,7 +12,6 @@ export async function function_params_consolidate() {
     marker("1");
     let params = js_declaration_params_get(declaration);
     const params_names = js_identifiers_to_names(params);
-    let params_names = params_names;
     function lambda2(param_name) {
       let expression = js_parse_expression(param_name);
       return {
