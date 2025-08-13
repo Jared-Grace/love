@@ -7,6 +7,9 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 export function js_arrow_blockify(ast) {
+  let a = function lambda2() {
+    true;
+  };
   function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, "body");
