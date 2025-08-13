@@ -1,3 +1,4 @@
+import { list_get } from "./list_get.mjs";
 import { list_index_of_previous } from "./list_index_of_previous.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
@@ -28,6 +29,7 @@ export async function js_call_fill(ast) {
         object_replace(node, parsed);
         return;
         let block = js_stack_last(stack, "BlockStatement");
+        let result2 = list_get(list, index);
         let index_previous = list_index_of_previous(stack, block);
         let result = object_property_exists(object, property_name);
         assert(result);
