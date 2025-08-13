@@ -30,8 +30,8 @@ export async function js_call_fill(ast) {
         return;
         let block = js_stack_last(stack, "BlockStatement");
         let index_previous = list_index_of_previous(stack, block);
-        let previous = stack(list, index_previous);
-        let result = object_property_exists(previous, "async");
+        let result2 = list_get(list, index_previous);
+        let result = object_property_exists(object, property_name);
         assert(result);
       }
     }
