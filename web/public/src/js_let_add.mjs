@@ -15,8 +15,8 @@ export function js_let_add(ast) {
     let { node } = v;
     let { left, right } = node;
     log(node);
-    return;
-    let assign = js_declare(name, right);
+    return;$g$left$name
+    let assign = js_declare( right);
   });
   return;
   a = 1;
