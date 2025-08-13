@@ -14,7 +14,8 @@ import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   function lambda4(la) {
-    let bss = js_stack_filtered(stack, "BlockStatement");
+    const type = "BlockStatement";
+    let bss = js_stack_filtered(stack, type);
     each(bss, lambda3);
     function lambda3(bs) {
       let list = list_next(stack, bs);
