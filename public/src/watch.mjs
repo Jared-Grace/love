@@ -15,7 +15,7 @@ export async function watch() {
     persistent: true,
     ignoreInitial: true,
   });
-  let gits = [];
+  let gits = Promise.resolve();
   watcher.on("change", async (path) => {
     await catch_log_async(async () => {
       const f_name = function_auto_path.name;
@@ -23,6 +23,7 @@ export async function watch() {
       log_keep(output);
       ("not await this on purpose");
       let promise = git_acp_call(f_name, [path]);
+      last = last.then(promise);
     });
   });
 }
