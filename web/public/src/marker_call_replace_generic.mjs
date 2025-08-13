@@ -41,7 +41,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
       await lambda$a(to);
       let { ast } = a;
       js_imports_missing_add(ast);
-      let output = js_unparse(next);
+      let output = await js_unparse(next);
       la(output);
     }
   });
