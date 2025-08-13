@@ -43,13 +43,13 @@ import { list_remove } from "./list_remove.mjs";
 export async function js_dollar(ast) {
   async function lambda(v) {
     let { node, stack } = v;
+    log({
+      node,
+    });
     let stack1 = list_get_end_1(stack);
     let stack2 = list_get_end_2(stack);
     let { name } = node;
     const separator = "$";
-    log({
-      name,
-    });
     let split = string_split(name, separator);
     let { first, second } = list_first_second(split);
     let ne = string_empty_not_is(first);
