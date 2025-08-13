@@ -6,7 +6,8 @@ export function js_arrow_blockify(ast) {
   js_visit_type(ast, "ArrowFunctionExpression", function lambda(v) {
     let { node } = v;
     object_property_set(node, "type", "FunctionDeclaration");
-    let nti = js_node_type_not_is(node);
+    const type = "BlockStatement";
+    let nti = js_node_type_not_is(node, type);
     if (nti) {
     }
   });
