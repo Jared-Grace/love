@@ -1,3 +1,4 @@
+import { promise_not_is } from "./promise_not_is.mjs";
 import { error } from "./error.mjs";
 import { promise_is } from "./promise_is.mjs";
 import { visit_filter } from "./visit_filter.mjs";
@@ -9,7 +10,3 @@ export function js_visit(ast, on_each) {
   }
   visit_filter(ast, js_visit_children_get, js_visit_filter, on_each);
 }
-function promise_not_is(ast) {
-  return !promise_is(ast);
-}
-
