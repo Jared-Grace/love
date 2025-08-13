@@ -16,9 +16,9 @@ import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   let f_name = await data_function_current_get();
   let result2 = task_function_name_part();
-  let unaliased = await function_name_unalias(f_name2);
+  let unaliased = await function_name_unalias(f_name);
   let f_name_task = function_name_combine_multiple([
-    f_name,
+    unaliased,
     result2,
     task_name,
   ]);
