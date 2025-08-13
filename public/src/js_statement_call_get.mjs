@@ -2,14 +2,14 @@ import { object_property_get } from "./object_property_get.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-export function js_statement_call_get(next) {
+export function js_statement_call_get(node) {
   let expression = null;
   let declaration = null;
-  if (js_node_type_is(next, "ExpressionStatement")) {
-    let { expression: expression_next } = next;
+  if (js_node_type_is(node, "ExpressionStatement")) {
+    let { expression: expression_next } = node;
     expression = expression_next;
-  } else if (js_node_type_is(next, "VariableDeclaration")) {
-    let { declarations } = next;
+  } else if (js_node_type_is(node, "VariableDeclaration")) {
+    let { declarations } = node;
     if (list_multiple_is(declarations)) {
       return null;
     }
