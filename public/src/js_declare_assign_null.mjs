@@ -14,8 +14,8 @@ export function js_declare_assign_null(ast) {
     let { init } = node;
     if (init === null) {
       let stack3 = list_get_end(stack, 3);
-      let type_is = js_node_type_is(node2, type);
-      if (false) {
+      let type_is = js_node_type_is(stack3, "ForOfStatement");
+      if (type_is) {
       }
       let init_code = js_keyword_null();
       let value = js_parse_expression(init_code);
