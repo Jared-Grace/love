@@ -67,11 +67,11 @@ export async function js_node_atomize(existing, v) {
   }
   let unique = js_identifier_unique(existing, variable_name);
   let copy = object_copy(node);
+  let assign = js_declare(unique, copy);
   let block = js_stack_last(stack, "BlockStatement");
   let block_body = list_next(stack, block);
   let block_body_item = list_next(stack, block_body);
   let block_body_item_index = list_index_of(block_body, block_body_item);
-  let assign = js_declare(unique, copy);
   list_insert(block_body, block_body_item_index, assign);
   let v2 = js_parse_expression(unique);
   object_replace(node, v2);
