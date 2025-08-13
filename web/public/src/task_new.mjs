@@ -1,3 +1,4 @@
+import { function_current_set } from "./function_current_set.mjs";
 import { task_function_name_part } from "./task_function_name_part.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -21,7 +22,7 @@ export async function task_new(task_name) {
   ]);
   let f_name_current = await data_function_current_get();
   await function_new(f_name_task);
-  data_function_current_set;
+  await function_current_set(f_name2);
   async function lambda(ast) {
     let body_block = js_declaration_single_block_blody(ast);
     js_call_insert(todo.name, [], body_block, 0);
