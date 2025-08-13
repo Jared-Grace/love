@@ -15,9 +15,7 @@ import { error } from "./error.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   function lambda4(la) {
-    $a;        
-    const type = "BlockStatement";
-    js_stack_filtered_each(stack, type, lambda3);
+    js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
@@ -37,7 +35,7 @@ export function js_identifier_defineds(v) {
               let value = object_property_get(id, "name");
               la([value]);
             } else {
-              error(); 
+              error();
             }
           }
           each(ids, lambda);
