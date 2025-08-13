@@ -13,5 +13,6 @@ export function js_identifier_unique(existing, name) {
   } while (string_empty_is(unique) || list_includes(existing, unique));
   list_add(existing, unique);
   return unique;
-  list_all(list, function lambda(item) {});
+  function lambda(item) {}
+  list_all(list, lambda);
 }
