@@ -4,7 +4,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 export function js_function_id_add(ast) {
   js_visit_type(ast, "FunctionDeclaration", function lambda(v) {
     let { node } = v;
-    let unique = js_identifier_unique_ast(ast, property_name);
+    let unique = js_identifier_unique_ast(ast, "lambda");
     object_property_set(node, "id", "FunctionDeclaration");
   });
 }
