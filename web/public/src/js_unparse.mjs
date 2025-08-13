@@ -12,7 +12,7 @@ export async function js_unparse(ast) {
     log({
       validator,
     });
-    const errors = validator.validate(ast);
+    const errors = Validator.validate(ast);
     if (errors.length > 0) {
       console.error("The AST is invalid. Errors:", errors);
     }
