@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { js_dollar_g } from "./js_dollar_g.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
@@ -59,6 +60,7 @@ export async function js_dollar(ast) {
       object_replace(stack1, from);
     } else if (second === "a") {
       if (js_node_type_is(stack1, "ExpressionStatement")) {
+        let e2 = list_get_end_2(stack2);
       }
     } else if (second === "g") {
       await js_dollar_g(remaining, node, stack1, ast);
