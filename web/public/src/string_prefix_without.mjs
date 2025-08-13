@@ -7,7 +7,7 @@ export function string_prefix_without(s, prefix) {
   if (!string_starts_with(s, prefix)) {
     error();
   }
-  let a = string_size(prefix);
+  let skipped = string_size(prefix);
   let b = string_size(prefix);
-  return string_slice(s, a, b);
+  return string_slice(s, skipped, b);
 }
