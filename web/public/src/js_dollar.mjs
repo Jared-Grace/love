@@ -1,3 +1,4 @@
+import { string_empty_not_is } from "./string_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { js_code_return_empty } from "./js_code_return_empty.mjs";
@@ -24,8 +25,8 @@ export function js_dollar(ast) {
       const separator = "$";
       let split = string_split(name, separator);
       let first = list_first(list);
-      let e = string_empty_is(first);
-      if (!e) {
+      let ne = string_empty_not_is(first);
+      if (ne) {
         return;
       }
       let remaining = string_prefix_without(name, prefix);
