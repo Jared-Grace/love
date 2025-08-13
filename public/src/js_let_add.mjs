@@ -8,11 +8,11 @@ export function js_let_add(ast) {
   js_visit_type(ast, "AssignmentExpression", function lambda(v) {
     let { stack } = v;
     let item = list_get_end_1(stack);
-    let { node } = v;
-    let type_is = js_node_type_is(node, "ExpressionStatement");
+    let type_is = js_node_type_is(item, "ExpressionStatement");
     if (!type_is) {
       return;
     }
+    let { node } = v;
     log(node);
     return;
     let assign = js_declare(name, init);
