@@ -30,10 +30,12 @@ export async function js_call_fill(ast) {
   let current = null;
   await js_visit_each_async(a, async (v) => {
     let { node } = v;
-    current = a;
     try {
       await js_unparse(current);
-    } catch (e) {}
+    } catch (e) {
+      current = a;
+      return true;
+    }
   });
   js_call_fill;
 }
