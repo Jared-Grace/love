@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
 import { log } from "./log.mjs";
@@ -11,6 +12,7 @@ export function js_declare_assign_null(ast) {
     let { init } = node;
     if (init === null) {
       let e1 = list_get_end_1(stack);
+      let stack22 = list_get_end_2(stack2);
       log({
         e1,
       });
