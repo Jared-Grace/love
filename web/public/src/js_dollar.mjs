@@ -9,6 +9,7 @@ import { js_visit } from "./js_visit.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
+import { log } from "./log.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
@@ -19,6 +20,7 @@ export function js_dollar(ast) {
         return;
       }
       let remaining = string_prefix_without(name, "$");
+      log(remaining);
       if (remaining === "i") {
         let from = js_parse_statement(
           js_keyword_if() +
