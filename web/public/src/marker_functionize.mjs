@@ -1,3 +1,4 @@
+import { object_property_equals } from "./object_property_equals.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -92,7 +93,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
         let { node } = v;
         let stack1 = list_get_end(stack2_from, 1);
         if (js_node_type_is(stack1, "Property")) {
-          if (object_property_equals(stack1, 'key', node)) {
+          if (object_property_equals(stack1, "key", node)) {
           }
         }
         let name = object_property_get(node, "name");
