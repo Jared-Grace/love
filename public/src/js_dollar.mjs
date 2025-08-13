@@ -27,11 +27,11 @@ export function js_dollar(ast) {
       const separator = "$";
       let split = string_split(name, separator);
       let first = list_first(split);
+      let second = list_second(split);
       let ne = string_empty_not_is(first);
       if (ne) {
         return;
       }
-      let second = list_second(split);
       let remaining = list_skip(split, 2);
       if (second === "i") {
         let from = js_parse_statement(
