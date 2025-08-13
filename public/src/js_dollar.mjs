@@ -72,6 +72,7 @@ export async function js_dollar(ast) {
         let existing = js_identifiers_names(ast);
         let unique = js_identifier_unique(existing, property_name);
         let assign = js_declare(unique, parsed);
+        object_replace(stack1, assign);
       }
     }
     let message = await js_unparse(ast);
