@@ -90,6 +90,9 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let missing = list_adder_unique((la) => {
       js_visit_type(declaration, "Identifier", (v) => {
         let defineds = js_identifier_defineds(v);
+        log({
+          defineds,
+        });
         let { node } = v;
         let stack1 = list_get_end(stack2_from, 1);
         if (js_node_type_is(stack1, "Property")) {
