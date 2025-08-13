@@ -85,13 +85,16 @@ export async function js_dollar(ast) {
               let is = js_identifiers_named(ast, name);
               function lambda3(item) {
                 let replacement = object_copy(init);
+                log({
+                  item,
+                  replacement,
+                });
                 object_replace(item, replacement);
               }
               each(is, lambda3);
             }
             each(declarations, lambda2);
             list_remove_multiple([stack1, next], stack2);
-            log("success");
           }
         }
       }
