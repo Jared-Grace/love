@@ -4,11 +4,12 @@ export async function catch_only_async(lambda, message_fragment) {
   try {
     await lambda();
   } catch (e) {
-    let message = json_to({
-      A: e,
-    });
-    log(message);
-    if (!e.message.includes(message_fragment)) {
+    let json = json_to(e);
+    const message = e.message;
+    if (
+      !message.includes(message_fragment) &&
+      !json.includes(message_fragment)
+    ) {
       throw e;
     }
   }
