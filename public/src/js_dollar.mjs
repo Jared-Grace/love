@@ -1,3 +1,4 @@
+import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_second } from "./list_second.mjs";
@@ -19,6 +20,7 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { log } from "./log.mjs";
 import { string_split } from "./string_split.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
@@ -48,6 +50,8 @@ export function js_dollar(ast) {
       } else if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
+        let code = js_code_call_args(f_name, args_code);
+        let parsed = js_parse_expression(code);
         object_replace(node, from);
       }
     }
