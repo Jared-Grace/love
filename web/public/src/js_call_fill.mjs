@@ -26,17 +26,5 @@ export async function js_call_fill(ast) {
     }
   });
   return;
-  let current = null;
-  await js_visit_each_async(a, async (v) => {
-    let { node } = v;
-    try {
-      await js_unparse(current);
-    } catch (e) {
-      current = a;
-      return true;
-    }
-  });
-  let message = json_formnat_to(a);
-  log(message);
   js_call_fill;
 }
