@@ -1,3 +1,4 @@
+import { js_call_new } from "./js_call_new.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
@@ -47,45 +48,7 @@ export async function marker_call(f_name_call) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
       marker("1");
-      let {
-        declaration,
-        unaliased,
-        ast: ast_call,
-      } = await function_parse_declaration(f_name_call);
-      let { index, stack2, ast, stack } = marker_next_index(a);
-      let existing = js_identifiers_names(ast);
-      let arg_names = js_declaration_params_names(declaration);
-      let args_code = list_map(arg_names, (arg_name) => {
-        let arg_code = js_identifier_unique(existing, arg_name);
-        let split = string_split(arg_name, "$");
-        const lambda = "lambda";
-        if (list_first(split) === lambda) {
-          let skip_count = 1;
-          let b = list_size(split);
-          let remaining = list_slice(split, skip_count, b);
-          let lamda_name = js_identifier_unique(existing, lambda);
-          let async_is = object_property_get(declaration, "async");
-          let code = js_code_declaration(lamda_name, "", async_is);
-          let declaration_lambda = js_parse_statement_module(code);
-          each(remaining, (p) => {
-            let unique = js_identifier_unique(existing, p);
-            js_declaration_param_add(declaration_lambda, unique);
-          });
-          arg_code = js_unparse(declaration_lambda);
-        }
-        return arg_code;
-      });
-      let code = js_code_call_args_await_maybe(
-        unaliased,
-        args_code,
-        declaration,
-      );
-      let body_block = js_return_name(ast_call);
-      if (body_block !== null) {
-        let unique = js_identifier_unique(existing, body_block);
-        code = js_code_let_assign(unique, code);
-      }
-      let parsed = js_parse_statement(code);
+      await js_call_new(f_name_call, a, arg_name, p);
       marker("2");
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
