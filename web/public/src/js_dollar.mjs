@@ -67,6 +67,8 @@ export async function js_dollar(ast) {
         if (l) {
           let next = list_next(stack2, stack1);
           let type_is = js_node_type_is(next, "VariableDeclaration");
+          if (false) {
+          }
         }
       }
     } else if (second === "g") {
