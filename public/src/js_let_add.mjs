@@ -5,6 +5,6 @@ export function js_let_add(ast) {
   a = 1;
   js_visit_type(ast, "AssignmentExpression", function lambda(v) {
     let { stack } = v;
-    let item = list_get_end(stack2, index_from_end);
+    let item = list_get_end(stack, 1);
   });
 }
