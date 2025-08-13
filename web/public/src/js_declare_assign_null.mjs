@@ -5,7 +5,7 @@ export function js_declare_assign_null(ast) {
   js_visit_type(ast, "VariableDeclarator", function lambda(v) {
     let { node } = v;
     let { init } = node;
-    if (false) {
+    if (init === null) {
     }
     log(node);
   });
