@@ -67,7 +67,7 @@ export async function js_dollar(ast) {
       let parsed = js_parse_expression(code);
       object_replace(node, parsed);
       if (js_node_type_is(stack1, "ExpressionStatement")) {
-        js_declare();
+        let assign = js_declare(name2, init);
       }
     }
     let message = await js_unparse(ast);
