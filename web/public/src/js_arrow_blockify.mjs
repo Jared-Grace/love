@@ -12,10 +12,10 @@ export function js_arrow_blockify(ast) {
     const type = "BlockStatement";
     let nti = js_node_type_not_is(body, type);
     if (nti) {
-      let result = object_copy(body);
+      let copy = object_copy(body);
       object_replace(body, {
         type: "BlockStatement",
-        body: [result],
+        body: [copy],
       });
     }
   });
