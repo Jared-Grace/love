@@ -1,3 +1,5 @@
+import { error } from "./error.mjs";
+import { js_call_new } from "./js_call_new.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
@@ -6,5 +8,7 @@ export async function task_new(task_name) {
   let f_name = await data_function_current_get();
   let f_name_task = function_name_combine(f_name, task_name);
   await function_new(f_name_task);
-  let result = await function_transform(f_name, async function lambda(ast) {});
+  let result = await function_transform(f_name, async function lambda(ast) {
+    let s = await js_call_new(error.name, ast);
+  });
 }
