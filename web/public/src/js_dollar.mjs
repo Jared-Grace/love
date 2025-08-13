@@ -1,3 +1,4 @@
+import { js_code_return } from "./js_code_return.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_code_braces_empty } from "./js_code_braces_empty.mjs";
@@ -29,6 +30,10 @@ export function js_dollar(ast) {
             js_code_wrap_parenthesis("false") +
             js_code_braces_empty(),
         );
+        object_replace(node, from);
+      } else if (remaining === "r") {
+        let code = js_code_return();
+        let from = js_parse_statement(code);
         object_replace(node, from);
       }
     }
