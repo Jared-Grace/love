@@ -79,6 +79,7 @@ export async function js_dollar(ast) {
           let type_is = js_node_type_is(next, "VariableDeclaration");
           let { declarations } = next;
           if (type_is) {
+            list_remove_multiple([stack1, next], stack2);
             function lambda2(declaration) {
               let { id, init } = declaration;
               let { name } = id;
@@ -94,7 +95,6 @@ export async function js_dollar(ast) {
               each(is, lambda3);
             }
             each(declarations, lambda2);
-            list_remove_multiple([stack1, next], stack2);
           }
         }
       }
