@@ -1,3 +1,4 @@
+import { js_statement_return } from "./js_statement_return.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -6,17 +7,19 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 export function js_arrow_blockify(ast) {
-  js_visit_type(ast, "ArrowFunctionExpression", function lambda(v) {
+  function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, "body");
     const type = "BlockStatement";
     let nti = js_node_type_not_is(body, type);
     if (nti) {
       let copy = object_copy(body);
+      let item = js_statement_return(code);
       object_replace(body, {
         type: "BlockStatement",
         body: [copy],
       });
     }
-  });
+  }
+  js_visit_type(ast, "ArrowFunctionExpression", lambda);
 }
