@@ -77,7 +77,7 @@ export async function js_dollar(ast) {
               js_identifier_replace(ast, id, init);
             }
             each(declarations, log);
-            list_remove(stack2, stack1);
+            list_remove(stack2, next);
           }
         }
       }
