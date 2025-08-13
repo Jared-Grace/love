@@ -48,9 +48,6 @@ import { list_remove } from "./list_remove.mjs";
 export async function js_dollar(ast) {
   async function lambda(v) {
     let { node, stack } = v;
-    log({
-      node,
-    });
     let stack1 = list_get_end_1(stack);
     let stack2 = list_get_end_2(stack);
     let { name } = node;
@@ -63,15 +60,15 @@ export async function js_dollar(ast) {
     }
     let remaining = list_skip(split, 2);
     if (second === "i") {
-      js_dollar_i({
+      await js_dollar_i({
         stack1,
       });
     } else if (second === "r") {
-      js_dollar_r({
+      await js_dollar_r({
         stack1,
       });
     } else if (second === "a") {
-      js_dollar_a({
+      await js_dollar_a({
         stack1,
         stack2,
         ast,
