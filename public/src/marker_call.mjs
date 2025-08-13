@@ -44,12 +44,12 @@ import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { each } from "./each.mjs";
 export async function marker_call(f_name_call) {
   let f_name_current = await data_function_current_get();
-  return list_adder_async(async (la) => {
+  async function lambda2(la) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
       marker("1");
       let { ast } = marker_next_index(a);
-      let parsed = await js_call_new(f_name_call, ast);
+      let { parsed } = await js_call_new(f_name_call, ast);
       marker("2");
       list_insert(stack2, index, parsed);
       js_imports_missing_add(ast);
@@ -57,5 +57,6 @@ export async function marker_call(f_name_call) {
       la(output);
       js_stack_declaration_asyncify(stack, declaration);
     }
-  });
+  }
+  return list_adder_async(lambda2);
 }
