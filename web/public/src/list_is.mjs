@@ -1,3 +1,4 @@
 export function list_is(value) {
-  return Array.isArray(value);
+  const l = Array.isArray(value);
+  return l;
 }
