@@ -21,6 +21,7 @@ import { string_starts_with } from "./string_starts_with.mjs";
 import { log } from "./log.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export function js_dollar(ast) {
   js_visit_type(ast, "ExpressionStatement", (v) => {
     let { node } = v;
@@ -50,7 +51,7 @@ export function js_dollar(ast) {
       } else if (second === "g") {
         let { first: object_name, second: property_name } =
           list_first_second(remaining);
-        let code = js_code_call_args(f_name, args_code);
+        let code = js_code_call_args(object_property_get.get, args_code);
         let parsed = js_parse_expression(code);
         object_replace(node, from);
       }
