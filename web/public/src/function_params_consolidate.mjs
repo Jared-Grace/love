@@ -34,5 +34,4 @@ export async function function_params_consolidate(f_name) {
     list_add(params, arg_new);
   }
   let result = await function_transform(f_name, lambda);
-  fns;
 }
