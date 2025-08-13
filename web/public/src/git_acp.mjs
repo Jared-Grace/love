@@ -1,3 +1,4 @@
+import { log_keep } from "./log_keep.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 import { catch_ignore } from "./catch_ignore.mjs";
 import { command_line } from "./command_line.mjs";
@@ -9,8 +10,14 @@ export async function git_acp(message) {
     await command_line_git(`commit -m "${message}"`);
   });
   await command_line_git(`fetch origin main`);
-  await command_line_git(
-    `rebase --autostash --no-stat --no-verify --no-interactive origin/main`,
-  );
+  try {
+    await command_line_git(
+      "rebase --autostash --no-stat --no-verify --no-interactive origin/main",
+    );
+  } catch (e) {
+    log_keep("Rebase failed, aborting rebase");
+    await command_line_git("rebase --abort");
+    throw e;
+  }
   await git_push();
 }
