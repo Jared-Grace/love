@@ -37,7 +37,7 @@ export function js_identifier_defineds(v) {
               let value = object_property_get(id, "name");
               la([value]);
             } else {
-              error();
+              error(); 
             }
           }
           each(ids, lambda);
