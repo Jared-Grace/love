@@ -9,7 +9,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_type } from "./js_type.mjs";
 
 export function js_imports(ast) {
-  js_type     
+  js_type      
   return list_adder_unique((la) => {
     js_visit_type(ast, "ImportDeclaration", (v) => {
       let { node } = v;
