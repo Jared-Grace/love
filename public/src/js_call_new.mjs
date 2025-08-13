@@ -1,3 +1,4 @@
+import { function_name_unalias } from "./function_name_unalias.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
@@ -58,4 +59,5 @@ export async function js_call_new(f_name_call, ast) {
   }
   let parsed = js_parse_statement(code);
   return parsed;
+  let result = await function_name_unalias(f_name);
 }
