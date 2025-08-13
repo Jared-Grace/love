@@ -1,3 +1,4 @@
+import { promise_not_is } from "./promise_not_is.mjs";
 import { js_visit_each_async } from "./js_visit_each_async.mjs";
 import { error } from "./error.mjs";
 import { log } from "./log.mjs";
@@ -24,4 +25,7 @@ export async function js_unparse(ast) {
     throw e;
   }
   return output;
+  if (!promise_not_is(ast)) {
+    error();
+  }
 }
