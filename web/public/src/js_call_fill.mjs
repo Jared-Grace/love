@@ -18,14 +18,14 @@ export async function js_call_fill(ast) {
       let { name } = expression;
       const valid = functions_names_includes(name);
       if (valid) {
+        return;
         let s = js_call_new(name, ast);
         a = s;
-        return;
         object_replace(node, s);
       }
     }
   });
-  await js_unparse(a)
   return;
+  await js_unparse(a);
   js_call_fill;
 }
