@@ -1,3 +1,4 @@
+import { error_json } from "./error_json.mjs";
 import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
@@ -14,8 +15,7 @@ export async function js_unparse(ast) {
     const o = {
       ast,
     };
-    let message = json_format_to(o);
-    error(message);
+    error_json(o);
   }
   let output;
   try {
