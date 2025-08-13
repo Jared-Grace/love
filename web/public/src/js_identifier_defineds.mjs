@@ -1,3 +1,4 @@
+import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
 import { function_types } from "./function_types.mjs";
 import { js_stack_filtered_multiple } from "./js_stack_filtered_multiple.mjs";
 import { js_stack_filtered_each } from "./js_stack_filtered_each.mjs";
@@ -47,8 +48,7 @@ export function js_identifier_defineds(v) {
     }
     let types = function_types();
     function lambda5(item2) {}
-    let filtered = js_stack_filtered_multiple(stack, types);
-    each(filtered, lambda5);
+    js_stack_filtered_multiple_each(stack, types, lambda5);
   }
   let defineds = list_adder_multiple(lambda4);
   return defineds;
