@@ -7,7 +7,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { list_first_second } from "./list_first_second.mjs";
-export async function js_dollar_g({ remaining, node, stack1, ast }) {
+export async function js_dollar_g(remaining, node, stack1, ast) {
   let { first: object_name, second: property_name } =
     list_first_second(remaining);
   let code_string = await js_code_string(property_name);
