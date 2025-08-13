@@ -6,9 +6,9 @@ import { function_transform } from "./function_transform.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function function_params_consolidate() {
-  marker("1");
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
+    marker("1");
     let params_names = js_declaration_params_names(declaration);
     function lambda2(param_name) {
       let expression = js_parse_expression(param_name);
