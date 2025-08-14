@@ -16,7 +16,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
     let s1 = list_size_1(list);
-    assert(b);
+    assert(s1);
     list_remove_multiple([stack1, next], stack2);
     function lambda2(declaration) {
       let { id, init } = declaration;
