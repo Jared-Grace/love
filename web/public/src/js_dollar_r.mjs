@@ -12,7 +12,7 @@ export function js_dollar_r({ stack1, stack2 }) {
   if (type_is) {
     let { expressions } = stack2;
     let second = list_second(expressions);
-    object_property_set(object, property_name, value);
+    object_property_set(from, "argument", second);
   }
   object_replace(stack1, from);
   return;
