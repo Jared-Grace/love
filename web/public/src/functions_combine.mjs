@@ -1,3 +1,4 @@
+import { js_auto } from "./js_auto.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
 import { functions_combine_name } from "./functions_combine_name.mjs";
 import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
@@ -25,6 +26,7 @@ export async function functions_combine(f_names_comma) {
       list_add(body_block, item);
     }
     await each_async(f_names, lambda);
+    js_auto(ast);
   }
   await function_new_transform(combined, lambda2);
 }
