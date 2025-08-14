@@ -12,5 +12,6 @@ export async function git_push_schedule() {
     command_line_git_prefix() +
     git_push_command() +
     '"';
-  cl;ii
+  cl;
+  ii;
 }
