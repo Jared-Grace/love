@@ -9,7 +9,7 @@ export function js_dollar_r({ stack1, stack2 }) {
   if (type_is) {
     let { expressions } = stack2;
     let second = list_second(expressions);
-    log(message);
+    log(second);
   }
   let code = js_code_return_empty();
   let from = js_parse_statement(code);
