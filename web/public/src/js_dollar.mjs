@@ -76,9 +76,7 @@ export async function js_dollar(ast) {
       let { node, stack } = v;
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
-      if (0) {
-        let stack3 = list_get_end_3(stack);
-      }
+      let stack3 = list_get_end_3(stack);
       let { name } = node;
       const separator = "$";
       let split = string_split(name, separator);
@@ -94,6 +92,7 @@ export async function js_dollar(ast) {
           node,
           stack1,
           stack2,
+          stack3,
           ast,
           afters,
         });
