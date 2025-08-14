@@ -10,9 +10,9 @@ export async function git_push_schedule_check() {
   marker("1");
   let paths = folder_current();
   let result = await path_resolve(paths);
+  let result2 = git_push_schedule_task_name();
   let command =
-    'schtasks /create /sc daily /st 08:00 /tn "' +
-    git_push_schedule_task_name() +
+    `schtasks /query /tn "${result2}" >nul 2>&1` +
     '" /tr "cmd /c cd /d ' +
     result +
     " && " +
