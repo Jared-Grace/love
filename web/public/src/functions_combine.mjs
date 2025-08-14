@@ -6,5 +6,5 @@ export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
   let combined = function_name_combine_multiple(parts);
   async function lambda2() {}
-  await function_new_transform(f_name, lambda2);
+  await function_new_transform(combined, lambda2);
 }
