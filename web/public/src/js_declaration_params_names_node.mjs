@@ -9,7 +9,7 @@ export function js_declaration_params_names_node(node) {
     names = [name];
   } else {
     let type_is = js_node_type_is(node, "ObjectPattern");
-    if (false) {
+    if (type_is) {
     }
   }
   return names;
