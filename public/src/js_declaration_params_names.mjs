@@ -7,7 +7,7 @@ export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
   function lambda(param) {
     if (false) {
-      jis;
+      jii;
     }
   }
   each(params, lambda);
