@@ -1,1 +1,1 @@
-export function list_to_dictionary() {}
+export function list_to_dictionary(list) {}
