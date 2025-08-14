@@ -4,6 +4,7 @@ import { list_to_dictionary } from "./list_to_dictionary.mjs";
 import { functions_names } from "./functions_names.mjs";
 export function function_names_to_acronyms() {
   let f_names = functions_names();
-  let dictionary = list_to_dictionary(list, function_name_to_acronym);
-  let inverted = object_invert(object);
+  let dictionary = list_to_dictionary(f_names, function_name_to_acronym);
+  let inverted = object_invert(dictionary);
+  return;
 }
