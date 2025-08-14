@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { each_async } from "./each_async.mjs";
@@ -20,6 +21,7 @@ export async function functions_combine(f_names) {
         declaration,
       );
       let statement = js_parse_statement(code);
+      list_add(list, item);
     }
     await each_async(split, lambda);
   }
