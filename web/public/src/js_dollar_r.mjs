@@ -8,10 +8,10 @@ export function js_dollar_r({ stack1, stack2 }) {
   let type_is = js_node_type_is(stack2, "SequenceExpression");
   if (type_is) {
     let second = list_second(list);
+    let expressions = stack2;
   }
   let code = js_code_return_empty();
   let from = js_parse_statement(code);
   object_replace(stack1, from);
-  return;expressions=stack2
+  return;
 }
-         
