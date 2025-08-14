@@ -23,8 +23,8 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     if (false) {
+      list_remove(stack2, stack1);
     }
-    list_remove(stack2, stack1);
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
       let expression = js_parse_expression(code);
