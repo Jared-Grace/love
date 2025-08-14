@@ -6,5 +6,5 @@ import { string_split } from "./string_split.mjs";
 export function function_name_to_acronym(f_name) {
   let parts = function_name_to_parts();
   let result = list_map(parts, list_first);
-  return parts;
+  return result;
 }
