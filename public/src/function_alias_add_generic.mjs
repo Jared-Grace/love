@@ -24,6 +24,7 @@ export async function function_alias_add_generic(alias) {
   if (exists) {
     unaliased = object_property_get(aliases, alias);
   }
+  log(unaliased);
   return {
     exists,
     aliases,
