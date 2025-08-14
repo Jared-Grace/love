@@ -1,3 +1,4 @@
+import { functions_combine_test } from "./functions_combine_test.mjs";
 import { functions_combine_name } from "./functions_combine_name.mjs";
 import { list_map_name } from "./list_map_name.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -11,8 +12,5 @@ import { function_param_new } from "./function_param_new.mjs";
 import { function_wrap } from "./function_wrap.mjs";
 export async function sandbox() {
   const list = [function_current_set, task_new];
-  let f_names_comma = list_map_name(list);
-  let { combined } = await functions_combine_name(f_names_comma);
-  await function_delete_if_exists(combined);
-  await functions_combine(f_names_comma);
+  await functions_combine_test(list);
 }
