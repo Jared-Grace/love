@@ -1,3 +1,4 @@
+import { function_acronym_to_name } from "./function_acronym_to_name.mjs";
 import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
 import { data_get } from "./data_get.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
@@ -9,15 +10,7 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { log } from "./log.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
-  let acronyms = function_names_to_acronyms();
-  const exists2 = object_property_exists(acronyms, alias);
-  if (exists2) {
-    let list = object_property_get(acronyms, alias);
-    let s1 = list_size_1(list);
-    if (s1) {
-      unaliased = list_single(list);
-    }
-  }
+  unaliased = function_acronym_to_name(alias, unaliased);
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
   if (exists) {
