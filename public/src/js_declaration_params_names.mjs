@@ -7,5 +7,6 @@ export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
   const params_names = js_identifiers_to_names(params);
   return params_names;
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
