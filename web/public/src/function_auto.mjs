@@ -36,5 +36,4 @@ export async function function_auto(f_name) {
   }
   await function_transform(f_name, lambda2);
   return;
-  [];
 }
