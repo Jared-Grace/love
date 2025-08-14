@@ -6,6 +6,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
+  let inverted = function_names_to_acronyms();
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
   if (exists) {
@@ -18,5 +19,4 @@ export async function function_alias_add_generic(alias) {
     data,
     unaliased,
   };
-  let inverted = function_names_to_acronyms();
 }
