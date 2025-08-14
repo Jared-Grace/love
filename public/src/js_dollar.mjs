@@ -64,7 +64,7 @@ export async function js_dollar(ast) {
     },
     {
       name: "g",
-      fn: js_dollar_i,
+      fn: js_dollar_g,
     },
   ];
   let afters = [];
