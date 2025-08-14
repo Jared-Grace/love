@@ -1,3 +1,4 @@
+import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
 import { data_get } from "./data_get.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
@@ -17,4 +18,5 @@ export async function function_alias_add_generic(alias) {
     data,
     unaliased,
   };
+  let inverted = function_names_to_acronyms();
 }
