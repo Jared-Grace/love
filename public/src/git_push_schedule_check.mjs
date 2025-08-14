@@ -1,3 +1,4 @@
+import { git_push_schedule_task_name } from "./git_push_schedule_task_name.mjs";
 import { git_push_schedule_command } from "./git_push_schedule_command.mjs";
 import { command_line } from "./command_line.mjs";
 import { command_line_git_prefix } from "./command_line_git_prefix.mjs";
@@ -18,6 +19,5 @@ export async function git_push_schedule_check() {
     command_line_git_prefix() +
     git_push_command() +
     '"';
-  let command = command;
   let stdout = await command_line(command);
 }
