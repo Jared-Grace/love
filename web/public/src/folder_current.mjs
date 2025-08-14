@@ -1,3 +1,4 @@
 export function folder_current() {
-  return ".";
+  const current = ".";
+  return current;
 }
