@@ -13,9 +13,7 @@ export function js_declaration_params_names(declaration) {
       let name = object_property_get(node, "name");
     }
   }
-  each(params, lambda);
+  list_map(params, lambda);
   const params_names = js_identifiers_to_names(params);
   return params_names;
-  function lambda2(item) {}
-  let result = list_map(list, lambda2);
 }
