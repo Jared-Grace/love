@@ -26,7 +26,7 @@ export async function functions_combine(f_names_comma) {
       list_add(body_block, item);
     }
     await each_async(f_names, lambda);
-    js_auto(ast);
+    await js_auto(ast);
   }
   await function_new_transform(combined, lambda2);
 }
