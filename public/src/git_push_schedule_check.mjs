@@ -10,5 +10,6 @@ import { marker } from "./marker.mjs";
 export async function git_push_schedule_check() {
   marker("1");
   let name = git_push_schedule_task_name();
+  return;
   await schtasks_query(name);
 }
