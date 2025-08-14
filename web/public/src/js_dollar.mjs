@@ -1,3 +1,4 @@
+import { list_get_end_3 } from "./list_get_end_3.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { lambda_invoke_multiple } from "./lambda_invoke_multiple.mjs";
 import { lambda_invoke } from "./lambda_invoke.mjs";
@@ -76,7 +77,7 @@ export async function js_dollar(ast) {
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
       if (0) {
-        let stack3 = list_get_end(stack, 3);
+        let stack3 = list_get_end_3(stack);
       }
       let { name } = node;
       const separator = "$";
