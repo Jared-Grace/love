@@ -9,6 +9,7 @@ export async function visit_unique_async(node, children_get, on_each) {
   }
   async function lambda2(v) {
     let { node } = v;
+    $li;
     if (false) {
     }
     list_add(found, node);
