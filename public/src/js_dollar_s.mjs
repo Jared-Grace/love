@@ -1,3 +1,4 @@
+import { assert } from "./assert.mjs";
 import { each } from "./each.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
@@ -12,6 +13,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     lambda,
     ast,
   });
+  assert(b);
   function lambda({ stack1, next, stack2, ast, declarations }) {
     list_remove_multiple([stack1, next], stack2);
     function lambda2(declaration) {
