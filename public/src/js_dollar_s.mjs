@@ -1,3 +1,4 @@
+import { js_code_assign } from "./js_code_assign.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { assert } from "./assert.mjs";
@@ -21,6 +22,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     assert(s1);
     list_remove(stack2, stack1);
     function lambda2(declaration) {
+      let result = js_code_assign(left, right);
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
