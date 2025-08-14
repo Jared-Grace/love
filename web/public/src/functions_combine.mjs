@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
@@ -8,6 +9,7 @@ export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
   let combined = function_name_combine_multiple(split);
   async function lambda2() {
+    await each_async(list, async function lambda(item) {});
     let { declaration, unaliased } = await function_parse_declaration(f_name);
     let code = js_code_call_args_await_maybe(unaliased, args_code, declaration);
   }
