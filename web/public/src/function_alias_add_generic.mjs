@@ -4,11 +4,13 @@ import { object_property_initialize } from "./object_property_initialize.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
+import { list_single } from "./list_single.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
   let acronyms = function_names_to_acronyms();
-  const exists2 = object_property_exists(aliases, alias);
+  const exists2 = object_property_exists(acronyms, alias);
   if (exists2) {
+    let result = list_single(list);
     unaliased = object_property_get(aliases, alias);
   }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
