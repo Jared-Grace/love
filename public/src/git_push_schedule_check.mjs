@@ -5,6 +5,5 @@ import { git_push_command } from "./git_push_command.mjs";
 import { folder_current } from "./folder_current.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 export async function git_push_schedule_check() {
-  let command = await git_push_schedule_command();
-  let stdout = await command_line(command);
+  let stdout = await command_line(await git_push_schedule_command());
 }
