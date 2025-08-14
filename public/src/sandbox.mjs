@@ -11,5 +11,5 @@ export async function sandbox() {
   const list = [function_current_set, task_new];
   let property_name = "name";
   let result = list_map_property(list, property_name);
-  await functions_combine(list);
+  await functions_combine(result);
 }
