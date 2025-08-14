@@ -1,4 +1,3 @@
-import { import_install } from "./import_install.mjs";
 import { command_line_git_prefix } from "./command_line_git_prefix.mjs";
 import { git_push_command } from "./git_push_command.mjs";
 import { folder_current } from "./folder_current.mjs";
@@ -13,5 +12,5 @@ export async function git_push_schedule() {
     command_line_git_prefix() +
     git_push_command() +
     '"';
-  await import_install(name);
+  cl;
 }
