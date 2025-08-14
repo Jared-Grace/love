@@ -6,6 +6,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
+import { log } from "./log.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
   let acronyms = function_names_to_acronyms();
@@ -14,7 +15,8 @@ export async function function_alias_add_generic(alias) {
     let list = object_property_get(acronyms, alias);
     let s1 = list_size_1(list);
     if (s1) {
-      unaliased = list_single(list);
+      log(list);
+      unaliased = list_single(acronyms);
     }
   }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
