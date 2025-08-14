@@ -4,5 +4,6 @@ export function js_declaration_params_names_node(node) {
   let ii = js_identifier_is(node);
   if (ii) {
     let name = object_property_get(node, "name");
+    return [name];
   }
 }
