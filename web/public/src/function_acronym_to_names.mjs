@@ -1,1 +1,4 @@
-export function function_acronym_to_names() {}
+import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
+export function function_acronym_to_names() {
+  let acronyms = function_names_to_acronyms();
+}
