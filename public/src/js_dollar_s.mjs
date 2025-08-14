@@ -24,7 +24,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     list_remove(stack2, stack1);
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
-      let expression = js_parse_expression(code_expression);
+      let expression = js_parse_expression(code);
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
