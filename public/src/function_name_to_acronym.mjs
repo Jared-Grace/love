@@ -6,7 +6,7 @@ import { string_split } from "./string_split.mjs";
 import { list_join } from "./list_join.mjs";
 export function function_name_to_acronym(f_name) {
   let parts = function_name_to_parts(f_name);
-  let result = list_map(parts, list_first);
-  let result2 = list_join(list, separator);
-  return result;
+  let letters = list_map(parts, list_first);
+  let result2 = list_join(letters, "");
+  return letters;
 }
