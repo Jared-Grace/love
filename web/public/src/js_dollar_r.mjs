@@ -13,5 +13,5 @@ export function js_dollar_r({ stack1, stack2 }) {
   let code = js_code_return_empty();
   let from = js_parse_statement(code);
   object_replace(stack1, from);
-  return;
+  return;expressions=stack2
 }
