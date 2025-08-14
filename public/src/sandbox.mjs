@@ -12,7 +12,7 @@ import { function_wrap } from "./function_wrap.mjs";
 export async function sandbox() {
   const list = [function_current_set, task_new];
   let f_names_comma = list_map_name(list);
-  let { f_names, combined } = await functions_combine_name(f_names_comma);
+  let { combined } = await functions_combine_name(f_names_comma);
   await function_delete_if_exists(combined);
   await functions_combine(f_names_comma);
 }
