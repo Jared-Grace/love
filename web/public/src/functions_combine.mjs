@@ -21,7 +21,7 @@ export async function functions_combine(f_names) {
         declaration,
       );
       let statement = js_parse_statement(code);
-      list_add(list, item);
+      list_add(body_block, statement);
     }
     await each_async(split, lambda);
   }
