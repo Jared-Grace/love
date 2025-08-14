@@ -9,8 +9,7 @@ import { list_single } from "./list_single.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { log } from "./log.mjs";
 export async function function_alias_add_generic(alias) {
-  let unaliased = null;
-  unaliased = function_acronym_to_name(alias, unaliased);
+  let unaliased = function_acronym_to_name(alias);
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
   if (exists) {
