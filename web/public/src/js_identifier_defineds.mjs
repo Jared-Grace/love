@@ -1,3 +1,4 @@
+import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
 import { function_types } from "./function_types.mjs";
@@ -49,7 +50,8 @@ export function js_identifier_defineds(v) {
     }
     let types = js_types_function();
     function lambda5(v) {
-      log(v);
+      let node = v;
+      let params = js_declaration_params_get(declaration);
     }
     js_stack_filtered_multiple_each(stack, types, lambda5);
   }
