@@ -8,7 +8,8 @@ import { function_delete } from "./function_delete.mjs";
 import { function_param_new } from "./function_param_new.mjs";
 import { function_wrap } from "./function_wrap.mjs";
 export async function sandbox() {
-  const fns = [function_current_set, task_new];
+  const list = [function_current_set, task_new];
+  let property_name = "name";
   let result = list_map_property(list, property_name);
-  await functions_combine(fns);
+  await functions_combine(list);
 }
