@@ -18,24 +18,29 @@ export function js_dollar_a({ stack1, stack2, ast, afters }) {
         let { declarations } = next;
         list_add(afters, after);
         function after() {
-          lambda({stack1, next, stack2, ast, declarations});
+          lambda({
+            stack1,
+            next,
+            stack2,
+            ast,
+            declarations,
+          });
         }
       }
     }
   }
-
-function lambda({stack1, next, stack2, ast, declarations}) {
-  list_remove_multiple([stack1, next], stack2);
-  function lambda2(declaration) {
-    let { id, init } = declaration;
-    let { name } = id;
-    let is = js_identifiers_named(ast, name);
-    function lambda3(item) {
-      let replacement = object_copy(init);
-      object_replace(item, replacement);
+  function lambda({ stack1, next, stack2, ast, declarations }) {
+    list_remove_multiple([stack1, next], stack2);
+    function lambda2(declaration) {
+      let { id, init } = declaration;
+      let { name } = id;
+      let is = js_identifiers_named(ast, name);
+      function lambda3(item) {
+        let replacement = object_copy(init);
+        object_replace(item, replacement);
+      }
+      each(is, lambda3);
     }
-    each(is, lambda3);
+    each(declarations, lambda2);
   }
-  each(declarations, lambda2);
-}
 }
