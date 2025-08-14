@@ -14,10 +14,10 @@ export async function function_alias_add_generic(alias) {
   if (exists2) {
     let list = object_property_get(acronyms, alias);
     let s1 = list_size_1(list);
-    log(list);
     if (s1) {
       unaliased = list_single(list);
     }
+    log(unaliased);
   }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
