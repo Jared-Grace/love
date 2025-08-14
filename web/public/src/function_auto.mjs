@@ -21,6 +21,7 @@ export async function function_auto(f_name) {
       js_arrow_blockify,
       js_arrow_to_function,
       js_function_id_add,
+      js_let_add,
       js_declare_assign_null,
       js_atomize_function,
       js_call_fill,
@@ -35,5 +36,5 @@ export async function function_auto(f_name) {
   }
   await function_transform(f_name, lambda2);
   return;
-  [js_let_add];
+  [];
 }
