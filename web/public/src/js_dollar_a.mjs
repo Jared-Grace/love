@@ -25,10 +25,6 @@ export function js_dollar_a({ stack1, stack2, ast, afters }) {
             let is = js_identifiers_named(ast, name);
             function lambda3(item) {
               let replacement = object_copy(init);
-              log({
-                item,
-                replacement,
-              });
               object_replace(item, replacement);
             }
             each(is, lambda3);
