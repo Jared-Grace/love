@@ -1,3 +1,4 @@
+import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { each_async } from "./each_async.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -9,7 +10,8 @@ import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
   let combined = function_name_combine_multiple(split);
-  async function lambda2() {
+  async function lambda2(ast) {
+    let body_block = js_declaration_single_block_blody(ast2);
     async function lambda(f_name) {
       let { declaration, unaliased } = await function_parse_declaration(f_name);
       let code = js_code_call_args_await_maybe(
