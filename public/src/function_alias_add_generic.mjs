@@ -17,14 +17,12 @@ export async function function_alias_add_generic(alias) {
     if (s1) {
       unaliased = list_single(list);
     }
-    log(unaliased);
   }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
   if (exists) {
     unaliased = object_property_get(aliases, alias);
   }
-  log(unaliased);
   return {
     exists,
     aliases,
