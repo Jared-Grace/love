@@ -34,5 +34,5 @@ export function js_let_add(ast) {
   js_visit_type(ast, "AssignmentExpression", lambda);
   return;
   ast = 1;
-  let ast2 = 1;
+  ast2 = 1;
 }
