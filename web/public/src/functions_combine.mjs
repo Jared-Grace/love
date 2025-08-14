@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
@@ -11,6 +12,7 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
+  let waited2 = list_map_unordered_async(mapped2, filter);
   function lambda3(item) {}
   let result = list_map(list, lambda3);
   let combined = function_name_combine_multiple(split);
