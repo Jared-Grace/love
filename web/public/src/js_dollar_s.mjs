@@ -1,3 +1,4 @@
+import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { assert } from "./assert.mjs";
 import { each } from "./each.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -13,8 +14,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     lambda,
     ast,
   });
-  assert(b);
   function lambda({ stack1, next, stack2, ast, declarations }) {
+    let e1 = list_get_end_1(stack);
+    assert(b);
     list_remove_multiple([stack1, next], stack2);
     function lambda2(declaration) {
       let { id, init } = declaration;
