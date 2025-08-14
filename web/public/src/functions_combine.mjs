@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -10,6 +11,7 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
+  let result = list_map(list, function lambda3(item) {});
   let combined = function_name_combine_multiple(split);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
