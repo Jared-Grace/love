@@ -7,6 +7,17 @@ import { path_resolve } from "./path_resolve.mjs";
 import { marker } from "./marker.mjs";
 export async function git_push_schedule_check() {
   marker("1");
-  let command = await git_push_schedule_command();
+  let paths = folder_current();
+  let result = await path_resolve(paths);
+  let command =
+    'schtasks /create /sc daily /st 08:00 /tn "' +
+    git_push_schedule_task_name() +
+    '" /tr "cmd /c cd /d ' +
+    result +
+    " && " +
+    command_line_git_prefix() +
+    git_push_command() +
+    '"';
+  let command = command;
   let stdout = await command_line(command);
 }
