@@ -53,7 +53,7 @@ export function js_identifier_defineds(v) {
     function lambda5(v) {
       let { node } = v;
       log({
-        node,
+        nn: node,
       });
       let params_names = js_declaration_params_names(node);
       la(params_names);
