@@ -32,6 +32,7 @@ export async function js_call_fill(ast) {
       const valid = functions_names_includes(unaliased);
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
+        log(async_is);
         object_replace(node, parsed);
         let types = js_types_function();
         let f = js_stack_last_multiple(stack, types);
@@ -45,5 +46,4 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
-  log(message);
 }
