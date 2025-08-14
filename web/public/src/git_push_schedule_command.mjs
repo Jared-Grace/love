@@ -8,8 +8,6 @@ import { folder_current } from "./folder_current.mjs";
 export async function git_push_schedule_command() {
   let exists = await git_push_schedule_check();
   assert_not(exists);
-  if (exists) {
-  }
   let paths = folder_current();
   let result = await path_resolve(paths);
   let command =
