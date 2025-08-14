@@ -1,3 +1,4 @@
+import { list_is } from "./list_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { visit_async } from "./visit_async.mjs";
@@ -9,7 +10,7 @@ export async function visit_unique_async(node, children_get, on_each) {
   }
   async function lambda2(v) {
     let { node } = v;
-    $li;
+    let l = list_is(value);
     if (false) {
     }
     list_add(found, node);
