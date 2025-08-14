@@ -4,6 +4,8 @@ import { command_line_git_prefix } from "./command_line_git_prefix.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { folder_current } from "./folder_current.mjs";
 export async function git_push_schedule_command() {
+  if (false) {
+  }
   let paths = folder_current();
   let result = await path_resolve(paths);
   let command =
