@@ -7,6 +7,10 @@ import { file_read_json } from "./file_read_json.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
   let acronyms = function_names_to_acronyms();
+  const exists2 = object_property_exists(aliases, alias);
+  if (exists2) {
+    unaliased = object_property_get(aliases, alias);
+  }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
   if (exists) {
