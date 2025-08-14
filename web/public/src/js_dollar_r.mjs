@@ -7,8 +7,9 @@ import { js_code_return_empty } from "./js_code_return_empty.mjs";
 export function js_dollar_r({ stack1, stack2 }) {
   let type_is = js_node_type_is(stack2, "SequenceExpression");
   if (type_is) {
-    let second = list_second(list);
-    let expressions = stack2;
+    let { expressions } = stack2;
+    let second = list_second(expressions);
+    log(message);
   }
   let code = js_code_return_empty();
   let from = js_parse_statement(code);
