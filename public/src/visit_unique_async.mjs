@@ -10,10 +10,10 @@ export async function visit_unique_async(node, children_get, on_each) {
   }
   async function lambda2(v) {
     let { node } = v;
-    let includes = list_includes(list, item);
-    if (false) {
+    let includes = list_includes(found, node);
+    if (!includes) {
+      list_add(found, node);
     }
-    list_add(found, node);
     await on_each(v);
   }
   await visit_async(node, lambda, lambda2);
