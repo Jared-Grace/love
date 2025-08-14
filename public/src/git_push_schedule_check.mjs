@@ -11,5 +11,6 @@ export async function git_push_schedule_check() {
   marker("1");
   ("todo rename this to exists from check");
   let name = git_push_schedule_task_name();
-  return await schtasks_query(name);
+  const exists = await schtasks_query(name);
+  return exists;
 }
