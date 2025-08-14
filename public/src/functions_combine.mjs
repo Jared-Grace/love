@@ -11,7 +11,8 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
-  let result = list_map(list, function lambda3(item) {});
+  function lambda3(item) {}
+  let result = list_map(list, lambda3);
   let combined = function_name_combine_multiple(split);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
