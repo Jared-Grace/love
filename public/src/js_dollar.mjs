@@ -5,6 +5,7 @@ import { lambda_invoke } from "./lambda_invoke.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_a } from "./js_dollar_a.mjs";
+import { js_dollar_s } from "./js_dollar_s.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { js_node_types } from "./js_node_types.mjs";
 import { object_copy } from "./object_copy.mjs";
@@ -67,6 +68,10 @@ export async function js_dollar(ast) {
     {
       name: "g",
       fn: js_dollar_g,
+    },
+    {
+      name: "s",
+      fn: js_dollar_s,
     },
   ];
   let afters = [];

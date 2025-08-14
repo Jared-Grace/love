@@ -14,24 +14,28 @@ export function js_dollar_a({ stack1, stack2, ast, afters }) {
     if (l) {
       let next = list_next(stack2, stack1);
       let type_is = js_node_type_is(next, "VariableDeclaration");
-      let { declarations } = next;
       if (type_is) {
+        let { declarations } = next;
         list_add(afters, after);
         function after() {
-          list_remove_multiple([stack1, next], stack2);
-          function lambda2(declaration) {
-            let { id, init } = declaration;
-            let { name } = id;
-            let is = js_identifiers_named(ast, name);
-            function lambda3(item) {
-              let replacement = object_copy(init);
-              object_replace(item, replacement);
-            }
-            each(is, lambda3);
-          }
-          each(declarations, lambda2);
+          lambda({stack1, next, stack2, ast, declarations});
         }
       }
     }
   }
+
+function lambda({stack1, next, stack2, ast, declarations}) {
+  list_remove_multiple([stack1, next], stack2);
+  function lambda2(declaration) {
+    let { id, init } = declaration;
+    let { name } = id;
+    let is = js_identifiers_named(ast, name);
+    function lambda3(item) {
+      let replacement = object_copy(init);
+      object_replace(item, replacement);
+    }
+    each(is, lambda3);
+  }
+  each(declarations, lambda2);
+}
 }
