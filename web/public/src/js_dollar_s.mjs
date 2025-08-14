@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_assign } from "./js_code_assign.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -25,6 +26,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
       let expression = js_parse_expression(code);
+      log(message);
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
