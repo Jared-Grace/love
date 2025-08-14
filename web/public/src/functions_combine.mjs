@@ -1,3 +1,4 @@
+import { function_wrap } from "./function_wrap.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
@@ -15,6 +16,7 @@ export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
   let waited = await list_map_unordered_async(split, function_name_unalias);
   let combined = function_name_combine_multiple(waited);
+  await function_wrap(f_name2, f_name_wrapped);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
     async function lambda(f_name) {
