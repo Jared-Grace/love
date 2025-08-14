@@ -12,10 +12,8 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
-  let waited = await list_map_unordered_async(
-    list2,
-    async function lambda4(item2) {},
-  );
+  async function lambda4(item2) {}
+  let waited = await list_map_unordered_async(list2, lambda4);
   function lambda3(item) {}
   let result = list_map(list, lambda3);
   let combined = function_name_combine_multiple(split);
