@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { each } from "./each.mjs";
 import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
@@ -6,13 +7,14 @@ import { object_property_get } from "./object_property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
-  function lambda(param) {
+  function lambda(node) {
     let ii = js_identifier_is(node);
     if (ii) {
-      let name = object_property_get(ii, "name");
+      let name = object_property_get(node, "name");
     }
   }
   each(params, lambda);
   const params_names = js_identifiers_to_names(params);
   return params_names;
+  let result = list_map(list, function lambda2(item) {});
 }
