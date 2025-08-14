@@ -12,7 +12,8 @@ export function js_declaration_params_names_node(node) {
     let type_is = js_node_type_is(node, "ObjectPattern");
     if (type_is) {
       let { properties } = node;
-      each(list, function lambda(item) {});
+      function lambda(item) {}
+      each(list, lambda);
     }
   }
   return names;
