@@ -1,3 +1,4 @@
+import { assert_not } from "./assert_not.mjs";
 import { git_push_schedule_check } from "./git_push_schedule_check.mjs";
 import { git_push_schedule_task_name } from "./git_push_schedule_task_name.mjs";
 import { git_push_command } from "./git_push_command.mjs";
@@ -6,7 +7,8 @@ import { path_resolve } from "./path_resolve.mjs";
 import { folder_current } from "./folder_current.mjs";
 export async function git_push_schedule_command() {
   let exists = await git_push_schedule_check();
-  if (false) {
+  assert_not(b);
+  if (exists) {
   }
   let paths = folder_current();
   let result = await path_resolve(paths);
