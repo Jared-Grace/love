@@ -5,12 +5,11 @@ import { path_resolve } from "./path_resolve.mjs";
 export async function git_push_schedule() {
   let paths = folder_current();
   let result = await path_resolve(paths);
-  let result2 = git_push_command();
   let text =
     'schtasks /create /sc daily /st 08:00 /tn "GitPushDaily" /tr "cmd /c cd /d ' +
     result +
     " && " +
     command_line_git_prefix() +
-    result2 +
+    git_push_command() +
     '"';
 }
