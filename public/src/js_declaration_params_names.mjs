@@ -7,12 +7,6 @@ import { object_property_get } from "./object_property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
-  function lambda(node) {
-    let ii = js_identifier_is(node);
-    if (ii) {
-      let name = object_property_get(node, "name");
-    }
-  }
   list_map(params, lambda);
   const params_names = js_identifiers_to_names(params);
   return params_names;
