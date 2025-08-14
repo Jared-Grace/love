@@ -3,8 +3,8 @@ import { command_line } from "./command_line.mjs";
 export async function schtasks_query(name) {
   "todo rename query to exists";
   async function lambda2() {
-    const command = `schtasks ` + `/query /tn "${name}" >nul 2>&1`;
-    let prefixed = command;
+    const command = `/query /tn "${name}" >nul 2>&1`;
+    let prefixed = `schtasks ` + command;
     let stdout = await command_line(prefixed);
   }
   let success = await throws_not_async(lambda2);
