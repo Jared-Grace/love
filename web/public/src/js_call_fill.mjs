@@ -1,3 +1,4 @@
+import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { js_stack_last_multiple } from "./js_stack_last_multiple.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -33,13 +34,7 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
-        let types = js_types_function();
-        let f = js_stack_last_multiple(stack, types);
-        let property_name = "async";
-        let async = object_property_get(f, property_name);
-        if (async_is && !async) {
-          object_property_set(f, property_name, true);
-        }
+        js_function_last_asyncify(stack, async_is);
       }
     }
   }
