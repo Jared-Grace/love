@@ -15,11 +15,7 @@ export async function functions_combine(f_names) {
     let body_block = js_declaration_single_block_blody(ast);
     async function lambda(f_name) {
       let { declaration, unaliased } = await function_parse_declaration(f_name);
-      let code = js_code_call_args_await_maybe(
-        unaliased,
-        args_code,
-        declaration,
-      );
+      let code = js_code_call_args_await_maybe(unaliased, "", declaration);
       let statement = js_parse_statement(code);
       list_add(body_block, statement);
     }
