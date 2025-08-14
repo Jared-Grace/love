@@ -11,7 +11,7 @@ export async function git_push_schedule_command() {
   let paths = folder_current();
   let result = await path_resolve(paths);
   let command =
-    'schtasks /create /sc daily /st 08:00 /tn "' +
+    '/create /sc daily /st 08:00 /tn "' +
     git_push_schedule_task_name() +
     '" /tr "cmd /c cd /d ' +
     result +
