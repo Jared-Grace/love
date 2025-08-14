@@ -27,6 +27,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let code = js_code_assign("a", "a");
       let expression = js_parse_expression(code);
       log(expression);
+      return;
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
