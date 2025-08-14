@@ -17,7 +17,7 @@ export async function functions_combine(f_names) {
         args_code,
         declaration,
       );
-      let statement = js_parse_statement(code2);
+      let statement = js_parse_statement(code);
     }
     await each_async(split, lambda);
   }
