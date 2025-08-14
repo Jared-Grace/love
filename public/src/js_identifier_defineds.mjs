@@ -50,8 +50,7 @@ export function js_identifier_defineds(v) {
       each_range(index, lambda2);
     }
     let types = js_types_function();
-    function lambda5(v) {
-      let node = v;
+    function lambda5(node) {
       let params_names = js_declaration_params_names(node);
       la(params_names);
     }
