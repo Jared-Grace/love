@@ -6,5 +6,5 @@ export async function schtasks_query(name) {
     let stdout = await command_line(command);
   }
   let success = await throws_not_async(lambda2);
-  return;
+  return success;
 }
