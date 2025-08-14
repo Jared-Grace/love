@@ -17,7 +17,7 @@ export async function functions_combine(f_names) {
         declaration,
       );
     }
-    await each_async(list, lambda);
+    await each_async(split, lambda);
   }
   await function_new_transform(combined, lambda2);
 }
