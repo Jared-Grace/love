@@ -7,8 +7,8 @@ import { list_map_property } from "./list_map_property.mjs";
 export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
   function lambda(param) {
-    if (false) {
-      let result = js_identifier_is(node);
+    let ii = js_identifier_is(node);
+    if (ii) {
     }
   }
   each(params, lambda);
