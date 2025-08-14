@@ -14,8 +14,8 @@ export async function function_alias_add_generic(alias) {
     let list = object_property_get(acronyms, alias);
     let s1 = list_size_1(list);
     if (s1) {
+      unaliased = list_single(acronyms);
     }
-    let result = list_single(acronyms);
   }
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   const exists = object_property_exists(aliases, alias);
