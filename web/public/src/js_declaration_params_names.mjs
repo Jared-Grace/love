@@ -16,5 +16,6 @@ export function js_declaration_params_names(declaration) {
   each(params, lambda);
   const params_names = js_identifiers_to_names(params);
   return params_names;
-  let result = list_map(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let result = list_map(list, lambda2);
 }
