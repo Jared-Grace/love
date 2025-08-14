@@ -13,6 +13,6 @@ export async function sandbox() {
   const list = [function_current_set, task_new];
   let f_names_comma = list_map_name(list);
   let { f_names, combined } = await functions_combine_name(f_names_comma);
-  function_delete_if_exists();
+  await function_delete_if_exists(combined);
   await functions_combine(f_names_comma);
 }
