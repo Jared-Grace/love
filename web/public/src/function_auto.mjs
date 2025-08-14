@@ -1,3 +1,4 @@
+import { js_let_add } from "./js_let_add.mjs";
 import { js_atomize_function } from "./js_atomize_function.mjs";
 import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
@@ -33,4 +34,6 @@ export async function function_auto(f_name) {
     await each_async(transforms, lambda);
   }
   await function_transform(f_name, lambda2);
+  return;
+  [js_let_add];
 }
