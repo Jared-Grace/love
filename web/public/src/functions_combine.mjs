@@ -1,3 +1,4 @@
+import { js_parse_statement } from "./js_parse_statement.mjs";
 import { each_async } from "./each_async.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -16,6 +17,7 @@ export async function functions_combine(f_names) {
         args_code,
         declaration,
       );
+      let statement = js_parse_statement(code2);
     }
     await each_async(split, lambda);
   }
