@@ -5,7 +5,7 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_return_empty } from "./js_code_return_empty.mjs";
 export function js_dollar_r({ stack1, stack2 }) {
   log(stack2);
-  let type_is = js_node_type_is(node, type);
+  let type_is = js_node_type_is(stack2, "SequenceExpression");
   if (false) {
   }
   let code = js_code_return_empty();
