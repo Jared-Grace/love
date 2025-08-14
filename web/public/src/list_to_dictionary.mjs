@@ -7,5 +7,5 @@ export function list_to_dictionary(list, lambda$item) {
     let value = lambda$item(list);
     object_property_set(dictionary, item, value);
   }
-  each(list, lambda);
+  each(list, lambda);$r,0
 }
