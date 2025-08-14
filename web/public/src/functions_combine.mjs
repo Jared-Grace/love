@@ -1,3 +1,4 @@
+import { function_name_unalias } from "./function_name_unalias.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,7 +14,7 @@ import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names) {
   let split = string_split_comma(f_names);
   async function lambda4(item2) {}
-  let waited = await list_map_unordered_async(list2, lambda4);
+  let waited = await list_map_unordered_async(list2, function_name_unalias);
   function lambda3(item) {}
   let result = list_map(list, lambda3);
   let combined = function_name_combine_multiple(split);
