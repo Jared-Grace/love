@@ -8,8 +8,6 @@ import { path_resolve } from "./path_resolve.mjs";
 import { marker } from "./marker.mjs";
 export async function git_push_schedule_check() {
   marker("1");
-  let paths = folder_current();
-  let result = await path_resolve(paths);
   let name = git_push_schedule_task_name();
   let command = `schtasks /query /tn "${name}" >nul 2>&1`;
   let stdout = await command_line(command);
