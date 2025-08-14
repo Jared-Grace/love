@@ -7,7 +7,7 @@ import { path_resolve } from "./path_resolve.mjs";
 import { folder_current } from "./folder_current.mjs";
 export async function git_push_schedule_command() {
   let exists = await git_push_schedule_check();
-  assert_not(b);
+  assert_not(exists);
   if (exists) {
   }
   let paths = folder_current();
