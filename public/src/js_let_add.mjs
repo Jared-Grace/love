@@ -20,6 +20,7 @@ export function js_let_add(ast) {
     let { left, right } = node;
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
+    log(message);
     let includes = list_includes(defineds, name);
     if (includes) {
       return;
@@ -29,5 +30,6 @@ export function js_let_add(ast) {
   }
   js_visit_type(ast, "AssignmentExpression", lambda);
   return;
-  let ast = 1;
+  ast = 1;
+  ast2 = 1;
 }
