@@ -9,7 +9,7 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_let_add(ast) {
-  log(message);
+  log("message");
   function lambda(v) {
     let { stack } = v;
     let stack1 = list_get_end_1(stack);
