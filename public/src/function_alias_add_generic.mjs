@@ -13,7 +13,7 @@ export async function function_alias_add_generic(alias) {
   if (exists2) {
     let list = object_property_get(acronyms, alias);
     let s1 = list_size_1(list);
-    if (false) {
+    if (s1) {
     }
     let result = list_single(acronyms);
   }
