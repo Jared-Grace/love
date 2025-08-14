@@ -29,5 +29,5 @@ export function js_let_add(ast) {
   }
   js_visit_type(ast, "AssignmentExpression", lambda);
   return;
-  let ast = 1;
+  ast = 1;
 }
