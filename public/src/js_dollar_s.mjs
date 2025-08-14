@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { assert } from "./assert.mjs";
 import { each } from "./each.mjs";
@@ -18,7 +19,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     "todo handle more than 1";
     let s1 = list_size_1(declarations);
     assert(s1);
-    list_remove_multiple([stack1, next], stack2);
+    list_remove(stack1, stack2);
     function lambda2(declaration) {
       let { id, init } = declaration;
       let { name } = id;
