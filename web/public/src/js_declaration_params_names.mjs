@@ -9,6 +9,7 @@ export function js_declaration_params_names(declaration) {
   function lambda(param) {
     let ii = js_identifier_is(node);
     if (ii) {
+      let name = object_property_get(ii, "name");
     }
   }
   each(params, lambda);
