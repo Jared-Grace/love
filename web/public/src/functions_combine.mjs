@@ -14,8 +14,8 @@ import { function_new_transform } from "./function_new_transform.mjs";
 import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 export async function functions_combine(f_names_comma) {
-  let split = string_split_comma(f_names_comma);
-  let waited = await list_map_unordered_async(split, function_name_unalias);
+  let f_names = string_split_comma(f_names_comma);
+  let waited = await list_map_unordered_async(f_names, function_name_unalias);
   let combined = function_name_combine_multiple(waited);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
