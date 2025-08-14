@@ -15,6 +15,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     ast,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
+    "todo handle more than 1";
     let s1 = list_size_1(declarations);
     assert(s1);
     list_remove_multiple([stack1, next], stack2);
