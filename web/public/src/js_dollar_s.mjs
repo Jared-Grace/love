@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_assign } from "./js_code_assign.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -23,6 +24,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     list_remove(stack2, stack1);
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
+      let expression = js_parse_expression(code_expression);
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
