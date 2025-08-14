@@ -53,6 +53,7 @@ export function js_identifier_defineds(v) {
     function lambda5(v) {
       let node = v;
       let params_names = js_declaration_params_names(node);
+      la(params_names);
     }
     js_stack_filtered_multiple_each(stack, types, lambda5);
   }
