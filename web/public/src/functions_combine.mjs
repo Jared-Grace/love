@@ -22,7 +22,7 @@ export async function functions_combine(f_names) {
       let { declaration, unaliased } = await function_parse_declaration(f_name);
       let code = js_code_call_args_await_maybe(unaliased, [], declaration);
       let statement = js_parse_statement(code);
-      async_is = object_property_get(declaration, "async");
+      let async_is = object_property_get(declaration, "async");
       list_add(body_block, statement);
     }
     await each_async(waited, lambda);
