@@ -16,13 +16,14 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     lambda,
     ast,
   });
+  let a = a;
   function lambda({ stack1, next, stack2, ast, declarations }) {
     "todo handle more than 1";
     let s1 = list_size_1(declarations);
     assert(s1);
     list_remove(stack2, stack1);
     function lambda2(declaration) {
-      let result = js_code_assign("a", "a");
+      let result = js_code_assign("a", "0");
       let { id, init } = declaration;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
