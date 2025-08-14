@@ -1,3 +1,4 @@
+import { list_map_name } from "./list_map_name.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { task_new } from "./task_new.mjs";
 import { function_current_set } from "./function_current_set.mjs";
@@ -9,7 +10,6 @@ import { function_param_new } from "./function_param_new.mjs";
 import { function_wrap } from "./function_wrap.mjs";
 export async function sandbox() {
   const list = [function_current_set, task_new];
-  let property_name = "name";
-  let result = list_map_property(list, property_name);
+  let result = list_map_name(list);
   await functions_combine(result);
 }
