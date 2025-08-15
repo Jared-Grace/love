@@ -1,3 +1,4 @@
+import { folder_current_join } from "folder_current_join.mjs";
 import { folder_current } from "./folder_current.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_code_import_single } from "./js_code_import_single.mjs";
@@ -14,8 +15,7 @@ export async function function_imports_add(ast, imports) {
   let { body } = ast;
   async function lambda(import_) {
     let result = function_name_to_base(import_);
-    let current = folder_current();
-    let value_string = path_join([current, result]);
+    let value_string = folder_current_join(result);
     const from = await js_code_string(value_string);
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
