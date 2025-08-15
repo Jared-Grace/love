@@ -34,7 +34,7 @@ export async function function_transform_marker(f_name, lambda$a) {
       await each_async(visitors, lambda);
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   list_size_1_assert(list);
   return list;
 }
