@@ -20,7 +20,6 @@ export function js_if_else_if_combine(ast) {
       });
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
-    log(stack1);
   }
   js_visit_type(ast, "IfStatement", lambda);
 }
