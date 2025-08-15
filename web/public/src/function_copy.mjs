@@ -16,5 +16,5 @@ export async function function_copy(f_name_old, f_name_new) {
   }
   await function_transform(unaliased_new, lambda);
   await file_open(f_path_new);
-  await function_current_set(f_name);
+  await function_current_set(unaliased_new);
 }
