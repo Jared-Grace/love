@@ -8,7 +8,7 @@ export function js_if_else_if_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
-    let type_is = js_node_type_is(node2, type);
+    let type_is = js_node_type_is(stack1, "IfStatement");
     log(stack1);
   }
   js_visit_type(ast, "IfStatement", lambda);
