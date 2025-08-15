@@ -3,5 +3,4 @@ import { marker } from "./marker.mjs";
 export function js_if_else_if_combine(ast) {
   function lambda(v) {}
   js_visit_type(ast, "IfStatement", lambda);
-  marker("1");
 }
