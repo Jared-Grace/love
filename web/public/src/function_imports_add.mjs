@@ -8,6 +8,7 @@ import { each } from "./each.mjs";
 export function function_imports_add(ast, imports) {
   let { body } = ast;
   function lambda(import_) {
+    const from = "'./" + function_name_to_base(import_) + "'";
     let code =
       js_keyword_import() +
       " " +
@@ -15,9 +16,7 @@ export function function_imports_add(ast, imports) {
       " " +
       js_keyword_from() +
       " " +
-      "'./" +
-      function_name_to_base(import_) +
-      "'";
+      from;
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
   }
