@@ -11,6 +11,7 @@ export function js_if_else_if_combine(ast) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     async function lambda3() {
+      let consequent2 = object_property_get(node, "consequent");
       let consequent = object_property_get(stack1, "consequent");
       let output = await js_unparse(ast2);
     }
