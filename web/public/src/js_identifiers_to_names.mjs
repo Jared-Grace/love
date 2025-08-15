@@ -10,4 +10,7 @@ export function js_identifiers_to_names(identifiers) {
   assert_message(b2, message2);
   const names = list_map_property(identifiers, "name");
   return names;
+  function test({a}) {
+     a=1
+  }
 }
