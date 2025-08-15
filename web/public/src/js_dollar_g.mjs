@@ -24,9 +24,8 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
   if (js_node_type_is(stack1, "ExpressionStatement")) {
     let unique = js_identifier_unique_ast(ast, property_name);
     let assign = js_declare(unique, parsed);
-    object_replace(stack1, assign);
     function lambda() {
-      object_replace(node, parsed);
+      object_replace(stack1, assign);
     }
     list_add(afters, lambda);
   }
