@@ -15,7 +15,7 @@ import { object_merge } from "./object_merge.mjs";
 export async function marker_call_replace_generic(input, lambda$a) {
   let arg_index = integer_to(input);
   let f_name = await data_function_current_get();
-  return list_adder_async(async (la) => {
+  async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
       let { next } = marker_next_get(a);
@@ -40,9 +40,11 @@ export async function marker_call_replace_generic(input, lambda$a) {
       );
       await lambda$a(to);
       let { ast } = a;
-      js_imports_missing_add(ast);
+      await js_imports_missing_add(ast);
       let output = await js_unparse(next);
       la(output);
     }
-  });
+  }
+  let list = list_adder_async(lambda2);
+  return list;
 }
