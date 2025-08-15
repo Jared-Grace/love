@@ -53,7 +53,7 @@ export async function js_node_atomize(existing, v) {
       let { callee } = stack2;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
-        const exists = await function_exists(name);
+        const { exists } = await function_exists(name);
         if (exists) {
           let { declaration } = await function_parse_declaration(name);
           let { params } = declaration;
