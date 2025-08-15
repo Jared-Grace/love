@@ -1,4 +1,4 @@
-export function equal_by_async(a, b, by) {
-  let v = by(a) === by(b);
+export async function equal_by_async(a, b, lambda$item) {
+  let v = (await lambda$item(a)) === (await lambda$item(b));
   return v;
 }
