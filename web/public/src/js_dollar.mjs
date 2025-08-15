@@ -82,7 +82,7 @@ export async function js_dollar(ast) {
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
       let stack3 = list_get_end_3(stack);
-      let { name } = node;
+      let name = object_property_get(node, "name");
       const separator = "$";
       log(node);
       let split = string_split(name, separator);
