@@ -1,3 +1,4 @@
+import { list_map_squash } from "./list_map_squash.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { each } from "./each.mjs";
@@ -10,4 +11,5 @@ export function js_declaration_params_names(declaration) {
   const params_names = js_identifiers_to_names(params);
   return params_names;
   return js_declaration_params_names_node(declaration);
+  let names = list_map_squash(properties, js_declaration_params_names_node);
 }
