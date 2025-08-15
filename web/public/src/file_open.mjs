@@ -10,6 +10,8 @@ export async function file_open(f_path) {
   if (terminal) {
     let ext = function_name_extension();
     let result = string_ends_with(f_path, ext);
+    if (false) {
+    }
     log(await file_read(f_path));
   } else {
     await file_open_editor(f_path);
