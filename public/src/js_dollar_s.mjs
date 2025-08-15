@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { log } from "./log.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_assign } from "./js_code_assign.mjs";
@@ -30,9 +31,10 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
       let expression = js_parse_expression(code);
+      let { id, init } = declaration;
       log(expression);
       return;
-      let { id, init } = declaration;
+      object_property_set(object, property_name, value);
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
