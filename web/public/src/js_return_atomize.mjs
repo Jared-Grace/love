@@ -11,12 +11,15 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 export async function js_return_atomize(ast) {
   let existing = js_identifiers_names(ast);
   let rs = js_type(ast, "ReturnStatement");
-  await each_async(rs, async (v) => {
+  async function lambda(v) {
     let { node } = v;
     await js_return_on_async(node, noop, identifier_not);
     async function identifier_not(argument) {
+      if (false) {
+      }
       let v = js_visit_match(ast, argument);
       await js_node_atomize(existing, v);
     }
-  });
+  }
+  await each_async(rs, lambda);
 }
