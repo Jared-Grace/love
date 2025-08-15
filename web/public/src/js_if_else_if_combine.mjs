@@ -9,6 +9,8 @@ export function js_if_else_if_combine(ast) {
     let { node, stack } = v;
     let stack1 = list_get_end_1(stack);
     let type_is = js_node_type_is(stack1, "IfStatement");
+    if (false) {
+    }
     log(stack1);
   }
   js_visit_type(ast, "IfStatement", lambda);
