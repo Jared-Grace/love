@@ -10,7 +10,7 @@ export function js_marker_named_ast(ast, m_name_from) {
     return result;
   }
   let filtered = list_filter(visitors, lambda);
-  log(filtered);
+  log(m_name_from);
   let marker_v = list_single(filtered);
   return marker_v;
 }
