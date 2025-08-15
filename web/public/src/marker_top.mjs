@@ -32,6 +32,6 @@ export async function marker_top() {
     let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
     await js_marker_insert(name_next, body, 0);
-    js_imports_missing_add(ast);
+    await js_imports_missing_add(ast);
   }
 }
