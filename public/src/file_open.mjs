@@ -11,6 +11,7 @@ export async function file_open(f_path) {
     let ext = function_name_extension();
     let ew = string_ends_with(f_path, ext);
     if (ew) {
+    } else {
     }
     log(await file_read(f_path));
   } else {
