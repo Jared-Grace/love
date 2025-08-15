@@ -1,3 +1,4 @@
+import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
 import { js_declare_assign } from "./js_declare_assign.mjs";
@@ -34,8 +35,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     if (false) {
-      $s;
-      let a = null;
+      $ss;
       let a = null;
       a = 0;
       list_remove(stack2, stack1);
@@ -45,6 +45,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let s = js_parse_statement(code);
       let expression = object_property_get(s, "expression");
       let { id, init } = declaration;
+      let type_is = js_node_type_is(node, type);
       log(init);
       js_left_right_set(expression, id, init);
       let name3 = object_property_get(id, "name");
