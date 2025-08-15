@@ -50,6 +50,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       if (type_is) {
         let value = object_property_get(node, "value");
         if (null_is(value)) {
+          return;
         }
       }
       log(init);
