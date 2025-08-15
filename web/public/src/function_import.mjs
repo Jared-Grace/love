@@ -6,7 +6,7 @@ export async function function_import(f_name) {
   const path = await import("path");
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  let {unaliased} = await function_name_unalias(f_name);
+  let { unaliased } = await function_name_unalias(f_name);
   let joined = function_name_to_base(unaliased);
   const f_path = path_join([__dirname, joined]);
   const imported = await import(`file://${f_path}`);
