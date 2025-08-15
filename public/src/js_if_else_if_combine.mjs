@@ -1,3 +1,4 @@
+import { js_left_right_set } from "./js_left_right_set.mjs";
 import { js_code_or } from "./js_code_or.mjs";
 import { js_operator_or } from "./js_operator_or.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -23,6 +24,7 @@ export function js_if_else_if_combine(ast) {
         let test2 = object_property_get(stack1, "test");
         let code_expression = js_code_or("a", "a");
         let expression = js_parse_expression(code_expression);
+        js_left_right_set(expression2, left, right);
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
