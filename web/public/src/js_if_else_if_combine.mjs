@@ -5,8 +5,8 @@ import { marker } from "./marker.mjs";
 export function js_if_else_if_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;
-    let e1 = list_get_end_1(stack);
-    log(e1);
+    let stack1 = list_get_end_1(stack);
+    log(stack1);
   }
   js_visit_type(ast, "IfStatement", lambda);
 }
