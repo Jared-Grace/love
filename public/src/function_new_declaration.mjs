@@ -11,7 +11,7 @@ export async function function_new_declaration(declaration) {
   let code_declaration = await js_unparse(declaration);
   const contents = js_code_export(code_declaration);
   let ast = js_parse(contents);
-  js_imports_missing_add(ast);
+  await js_imports_missing_add(ast);
   let contents_import = await js_unparse(ast);
   await file_write(f_path, contents_import);
 }
