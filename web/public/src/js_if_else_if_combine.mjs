@@ -1,3 +1,4 @@
+import { equal_by_async } from "./equal_by_async.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if_async } from "./js_node_type_is_if_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -13,6 +14,7 @@ export function js_if_else_if_combine(ast) {
     async function lambda3() {
       let consequent2 = object_property_get(node, "consequent");
       let consequent = object_property_get(stack1, "consequent");
+      let v2 = await equal_by_async(a, b, async function lambda2(item) {});
       let output = await js_unparse(ast2);
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
