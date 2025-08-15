@@ -19,7 +19,7 @@ export function js_if_else_if_combine(ast) {
       if (eq) {
         let test = object_property_get(node, "test");
         let test2 = object_property_get(stack1, "test");
-        let expression = js_parse_expression(code_expression);
+        let expression = js_parse_expression("a" + "||" + "a");
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
