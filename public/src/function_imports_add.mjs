@@ -13,8 +13,8 @@ import { path_join } from "./path_join.mjs";
 export async function function_imports_add(ast, imports) {
   let { body } = ast;
   async function lambda(import_) {
-    let current = folder_current();
     let result = function_name_to_base(import_);
+    let current = folder_current();
     let value_string = path_join([current, result]);
     const from = await js_code_string(value_string);
     let code = js_code_import_single(import_, from);
