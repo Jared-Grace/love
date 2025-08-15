@@ -13,8 +13,6 @@ export function function_acronym_to_name(alias) {
     let s1 = list_size_1(list);
     if (s1) {
       unaliased = list_single(list);
-    } else {
-      log(list);
     }
   }
   return unaliased;
