@@ -10,6 +10,7 @@ export function list_squash(list) {
         if (l) {
           list_process(list);
         } else {
+          la(item);
         }
       }
       each(list, lambda);
