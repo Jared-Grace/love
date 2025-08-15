@@ -45,16 +45,16 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
       log(expression);
+      let name3 = object_property_get(id, "name");
+      let init2 = js_null();
+      let assign = js_declare(name3, init2);
       list_add(afters, lambda);
       function lambda() {
         object_replace(next, s);
       }
-      return;
-      let name3 = object_property_get(id, "name");
-      let init2 = js_null();
-      let assign = js_declare(name3, init2);
       let index_next = list_next_index(stack2, stack1);
-      list_insert(stack2, index_next, value);
+      return;
+      list_insert(stack2, index_next, assign);
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
