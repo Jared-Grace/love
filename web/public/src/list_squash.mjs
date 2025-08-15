@@ -3,12 +3,15 @@ import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
 export function list_squash(list) {
   function lambda2(la) {
-    function lambda(item) {
-      let l = list_is(item);
-      if (l) {
+    list_process(list);
+    function list_process(list) {
+      function lambda(item) {
+        let l = list_is(item);
+        if (l) {
+        }
       }
+      each(list, lambda);
     }
-    each(list, lambda);
   }
   let squashed = list_adder(lambda2);
 }
