@@ -5,8 +5,8 @@ export async function data_boolean_set(property_name, value) {
     if (value === "1") {
       v = true;
     }
-    if (value === "1") {
-      v = true;
+    if (value === "0") {
+      v = false;
     }
     return v;
   }
