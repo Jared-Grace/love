@@ -11,7 +11,9 @@ export function function_imports_add(ast, imports) {
       js_keyword_import() +
       " " +
       js_code_wrap_braces(import_) +
-      " from " +
+      " " +
+      "from" +
+      " " +
       "'./" +
       function_name_to_base(import_) +
       "'";
