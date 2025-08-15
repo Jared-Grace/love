@@ -6,7 +6,7 @@ import { data_transform } from "./data_transform.mjs";
 export async function data_watch_set() {
   const property_name = "watch";
   function lambda(previous) {
-    let v = true;
+    let v = !previous;
     return v;
   }
   await data_transform(property_name, null, lambda);
