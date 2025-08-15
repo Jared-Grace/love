@@ -48,7 +48,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let type_is = js_node_type_is(node, "Literal");
       if (type_is) {
         let value = object_property_get(node, "value");
-        if (false) {
+        if (value === null) {
         }
       }
       log(init);
