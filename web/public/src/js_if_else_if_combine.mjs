@@ -1,3 +1,4 @@
+import { js_node_type_is_if_async } from "./js_node_type_is_if_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -11,7 +12,7 @@ export function js_if_else_if_combine(ast) {
     async function lambda3() {
       let output = await js_unparse(ast2);
     }
-    js_node_type_is_if(stack1, "IfStatement", lambda3);
+    js_node_type_is_if_async(stack1, "IfStatement", lambda3);
     log(stack1);
   }
   js_visit_type(ast, "IfStatement", lambda);
