@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
 import { js_declare_assign } from "./js_declare_assign.mjs";
 import { list_next_index } from "./list_next_index.mjs";
@@ -48,12 +49,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(next, s);
       }
       return;
-      js_declare_assign(ast, lambda5);
-      function lambda5() {
-        let init_code = js_keyword_null();
-        let value = js_parse_expression(init_code);
-        return value;
-      }
+      let assign = js_declare(name2, init2);
       let index_next = list_next_index(stack2, stack1);
       list_insert(stack2, index_next, value);
       let { name } = id;
