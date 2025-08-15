@@ -7,9 +7,10 @@ export async function function_current_set(f_name) {
   const { exists, unaliased } = await function_exists(f_name);
   assert(exists);
   function lambda(previous) {
-    return f_name;
+    return unaliased;
   }
   await data_transform("function_current", null, lambda);
   let name = marker_first();
   await marker_current_set(name);
+  return unaliased;
 }
