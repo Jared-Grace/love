@@ -1,8 +1,7 @@
 import { list_is } from "./list_is.mjs";
-import { assert } from "./assert.mjs";
+import { list_is_assert } from "./list_is_assert.mjs";
 export function list_size(list) {
-  let v = list.length;
-  return v;
-  let l = list_is(value);
-  assert(b);
+  list_is_assert(list);
+  let size = list.length;
+  return size;
 }
