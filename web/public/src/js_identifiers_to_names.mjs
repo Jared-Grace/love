@@ -12,5 +12,6 @@ export function js_identifiers_to_names(identifiers) {
   return names;
   function test({ a }) {
     a = 1;
+    let b = 1;
   }
 }
