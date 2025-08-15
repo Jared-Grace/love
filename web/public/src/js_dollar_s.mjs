@@ -36,7 +36,6 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     if (false) {
-      $s;
       let a = null;
       a = 0;
       list_remove(stack2, stack1);
