@@ -15,7 +15,7 @@ export function js_declaration_params_names_node(node) {
     if (type_is) {
       let { properties } = node;
       let mapped = list_map(properties, js_declaration_params_names_node);
-      let squashed = list_squash(list);
+      let squashed = list_squash(mapped);
     }
   }
   return names;
