@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { equal_by_async } from "./equal_by_async.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if_async } from "./js_node_type_is_if_async.mjs";
@@ -18,6 +19,7 @@ export function js_if_else_if_combine(ast) {
       if (eq) {
         let test = object_property_get(node, "test");
         let test2 = object_property_get(stack1, "test");
+        let expression = js_parse_expression(code_expression);
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
