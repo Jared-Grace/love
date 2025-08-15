@@ -49,6 +49,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(next, s);
       }
       return;
+      $gid$name;
       let assign = js_declare(name2, init2);
       let index_next = list_next_index(stack2, stack1);
       list_insert(stack2, index_next, value);
