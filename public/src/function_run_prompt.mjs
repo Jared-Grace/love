@@ -9,7 +9,7 @@ import { function_run_git } from "./function_run_git.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function function_run_prompt() {
-  let prompt_colored = await chalk_green("❤️‍🔥✟ ");
+  let prompt_colored = await chalk_green("❤️‍🔥✟🕊️ ");
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
