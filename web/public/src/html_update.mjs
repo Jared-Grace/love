@@ -5,7 +5,7 @@ export async function html_update(name) {
   let file_path = html_name_to_path(name);
   const name_prefixed = `app_${name}`;
   let body = `<script type="module">
-    import { ${name_prefixed} } from './greetings.js';
+    import { ${name_prefixed} } from './${name_prefixed}.js';
     sayHello('World');
   </script>`;
   await html_overwrite(name, body);
