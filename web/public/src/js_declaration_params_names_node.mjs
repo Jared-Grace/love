@@ -17,7 +17,7 @@ export function js_declaration_params_names_node(node) {
     if (type_is) {
       let { properties } = node;
       let fn = js_declaration_params_names_node;
-      let mapped = list_map(properties);
+      let mapped = list_map(properties, fn);
       names = list_squash(mapped);
     } else {
       let message = json_format_to(node);
