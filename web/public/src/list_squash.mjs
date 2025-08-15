@@ -17,4 +17,5 @@ export function list_squash(list) {
     }
   }
   let squashed = list_adder(lambda2);
+  return squashed;
 }
