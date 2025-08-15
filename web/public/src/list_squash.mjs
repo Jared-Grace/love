@@ -8,7 +8,7 @@ export function list_squash(list) {
       function lambda(item) {
         let l = list_is(item);
         if (l) {
-          list_process(list);
+          list_process(item);
         } else {
           la(item);
         }
