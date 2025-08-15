@@ -17,5 +17,4 @@ export async function function_imports_add(ast, imports) {
   }
   each(imports, lambda);
   return;
-  let code_string = await js_code_string(value_string);
 }
