@@ -4,7 +4,7 @@ import { assert } from "./assert.mjs";
 import { marker_first } from "./marker_first.mjs";
 import { marker_current_set } from "./marker_current_set.mjs";
 import { data_transform } from "./data_transform.mjs";
-export async function data_watch_set() {
+export async function data_watch_set(v) {
   const property_name = "watch";
-  await data_boolean_set(property_name, true);
+  await data_boolean_set(property_name, v);
 }
