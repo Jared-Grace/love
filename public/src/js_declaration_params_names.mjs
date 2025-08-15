@@ -15,5 +15,6 @@ export function js_declaration_params_names(declaration) {
     let params = js_declaration_params_get(declaration);
     params_names = list_map_squash(params, js_declaration_params_names_node);
   }
+  let b = function lambda({ a }) {};
   return params_names;
 }
