@@ -38,6 +38,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     if (false) {
       $s;
       let a = null;
+      a = 0;
       list_remove(stack2, stack1);
     }
     function lambda2(declaration) {
