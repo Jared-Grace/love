@@ -24,7 +24,7 @@ export function js_if_else_if_combine(ast) {
         let test2 = object_property_get(stack1, "test");
         let code_expression = js_code_or("a", "a");
         let expression = js_parse_expression(code_expression);
-        js_left_right_set(expression2, left, right);
+        js_left_right_set(expression, test2, test);
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
