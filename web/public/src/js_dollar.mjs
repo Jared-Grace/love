@@ -84,7 +84,6 @@ export async function js_dollar(ast) {
       let stack3 = list_get_end_3(stack);
       let name = object_property_get(node, "name");
       const separator = "$";
-      log(node);
       let split = string_split(name, separator);
       let { first, second } = list_first_second(split);
       let ne = string_empty_not_is(first);
