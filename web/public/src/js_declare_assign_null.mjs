@@ -1,3 +1,4 @@
+import { js_null } from "./js_null.mjs";
 import { js_declare_assign } from "./js_declare_assign.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -13,8 +14,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_declare_assign_null(ast) {
   js_declare_assign(ast, lambda);
   function lambda() {
-    let init_code = js_keyword_null();
-    let value = js_parse_expression(init_code);
+    let value = js_null();
     return value;
   }
 }
