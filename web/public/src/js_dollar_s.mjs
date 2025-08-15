@@ -35,6 +35,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     assert(s1);
     if (false) {
       $s;
+      let a = null;
       a = 0;
       list_remove(stack2, stack1);
     }
@@ -50,10 +51,10 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       list_add(afters, lambda);
       function lambda() {
         object_replace(next, s);
+        let index_next = list_next_index(stack2, stack1);
+        list_insert(stack2, index_next, assign);
       }
-      let index_next = list_next_index(stack2, stack1);
       return;
-      list_insert(stack2, index_next, assign);
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
