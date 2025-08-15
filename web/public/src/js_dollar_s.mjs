@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_left_right_set } from "./js_left_right_set.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { log } from "./log.mjs";
@@ -35,8 +36,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let expression = js_parse_statement(code);
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
-      log(expression);  
-      return;$g$statement$expression
+      log(expression);
+      return;
+      let expression2 = object_property_get(statement, "expression");
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
@@ -44,7 +46,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(item, replacement);
       }
       each(is, lambda3);
-    } 
+    }
     each(declarations, lambda2);
   }
 }
