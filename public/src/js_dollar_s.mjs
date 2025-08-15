@@ -50,6 +50,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       a = null;
       a = null;
       a = null;
+      a = null;
       a = 0;
       list_remove(stack2, stack1);
     }
