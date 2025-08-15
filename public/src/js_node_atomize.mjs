@@ -11,7 +11,6 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { js_declare_init_set } from "./js_declare_init_set.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
-import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_next } from "./list_next.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
