@@ -12,6 +12,7 @@ import { object_copy } from "./object_copy.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_dollar_s({ stack1, stack2, ast, afters }) {
   js_dollar_a_generic({
     stack1,
@@ -31,11 +32,11 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     }
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
-      let expression = js_parse_expression(code);
+      let expression = js_parse_statement(code);
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
       log(expression);
-      return;
+      return;$g$statement$expression
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
