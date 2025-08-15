@@ -13,17 +13,20 @@ import { js_unparse } from "./js_unparse.mjs";
 export async function js_outside_move(ast) {
   let { body } = ast;
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
-  await each_async(fds, async (fd) => {
+  async function lambda(fd) {
     let f_name = js_declaration_name(fd);
     let f_path = function_name_to_path(f_name);
     await assert_file_exists_not(f_path);
-  });
+  }
+  await each_async(fds, lambda);
   marker("1");
-  await each_async(fds, async (fd) => {
+  async function lambda2(fd) {
     await function_new_declaration(fd);
-  });
-  each(fds, (fd) => {
+  }
+  await each_async(fds, lambda2);
+  function lambda3(fd) {
     list_remove(body, fd);
-  });
-  js_imports_missing_add(ast);
+  }
+  each(fds, lambda3);
+  await js_imports_missing_add(ast);
 }
