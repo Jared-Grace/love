@@ -6,7 +6,7 @@ import { js_code_parenthesis_open_close } from "./js_code_parenthesis_open_close
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_dollar_f({ node, afters }) {
-  const code = js_code_declaration(f_name, "", false);
+  const code = js_code_declaration("", "", false);
   let parsed = js_parse_expression(code);
   list_add(afters, lambda);
   function lambda() {
