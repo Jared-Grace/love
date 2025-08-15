@@ -9,5 +9,4 @@ export async function function_run_log(f_name, args) {
   log_keep("result:");
   log_keep(result);
   return result;
-  error("a");
 }
