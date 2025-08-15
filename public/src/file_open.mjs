@@ -17,8 +17,9 @@ export async function file_open(f_path) {
       let f_name = function_path_to_name(f_path);
       output = await function_parse_declaration_js_unparse(f_name);
     } else {
+      output = await file_read(f_path);
     }
-    log(await file_read(f_path));
+    log(output);
   } else {
     await file_open_editor(f_path);
   }
