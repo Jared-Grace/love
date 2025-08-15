@@ -1,3 +1,4 @@
+import { list_next_index } from "./list_next_index.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -45,6 +46,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(next, s);
       }
       return;
+      let index2 = list_next_index(list2, item2);
       list_insert(list, index, value);
       let { name } = id;
       let is = js_identifiers_named(ast, name);
