@@ -44,7 +44,6 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let expression = object_property_get(s, "expression");
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
-      log(expression);
       let name3 = object_property_get(id, "name");
       let init2 = js_null();
       let assign = js_declare(name3, init2);
