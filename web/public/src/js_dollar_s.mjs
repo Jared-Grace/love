@@ -44,7 +44,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(item, replacement);
       }
       each(is, lambda3);
-    }
+    } 
     each(declarations, lambda2);
   }
 }
