@@ -9,8 +9,8 @@ export async function file_open(f_path) {
   let terminal = true;
   if (terminal) {
     let ext = function_name_extension();
-    let result = string_ends_with(f_path, ext);
-    if (false) {
+    let ew = string_ends_with(f_path, ext);
+    if (ew) {
     }
     log(await file_read(f_path));
   } else {
