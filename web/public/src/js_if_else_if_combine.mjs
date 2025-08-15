@@ -14,9 +14,9 @@ export function js_if_else_if_combine(ast) {
     async function lambda3() {
       let consequent2 = object_property_get(node, "consequent");
       let consequent = object_property_get(stack1, "consequent");
-      let v2 = await equal_by_async(consequent, consequent2, js_unparse);
+      let e = await equal_by_async(consequent, consequent2, js_unparse);
       log({
-        v2,
+        v2: e,
       });
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
