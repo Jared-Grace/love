@@ -6,5 +6,4 @@ export async function js_imports_missing_add(ast) {
   let imports_missing = js_imports_missing(ast);
   await function_imports_add(ast, imports_missing);
   return;
-  log(imports_missing);
 }
