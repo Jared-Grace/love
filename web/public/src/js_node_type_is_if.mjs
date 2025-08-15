@@ -4,5 +4,4 @@ export function js_node_type_is_if(node, type, lambda) {
   if (type_is) {
     lambda();
   }
-  return type_is;
 }
