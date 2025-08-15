@@ -1,5 +1,4 @@
 import { js_call_new } from "./js_call_new.mjs";
-import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
 import { js_stack_declaration_asyncify } from "./js_stack_declaration_asyncify.mjs";
