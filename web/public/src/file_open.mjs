@@ -1,3 +1,4 @@
+import { function_path_to_name } from "./function_path_to_name.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
 import { string_ends_with } from "./string_ends_with.mjs";
 import { file_open_editor } from "./file_open_editor.mjs";
@@ -11,6 +12,7 @@ export async function file_open(f_path) {
     let ext = function_name_extension();
     let ew = string_ends_with(f_path, ext);
     if (ew) {
+      let result = function_path_to_name(f_name);
     } else {
     }
     log(await file_read(f_path));
