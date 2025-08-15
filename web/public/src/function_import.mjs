@@ -6,14 +6,14 @@ export async function function_import(f_name) {
   const path = await import("path");
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  f_name = await function_name_unalias(f_name);
-  let joined = function_name_to_base(f_name);
+  let unaliased = await function_name_unalias(f_name);
+  let joined = function_name_to_base(unaliased);
   const f_path = path_join([__dirname, joined]);
   const imported = await import(`file://${f_path}`);
-  const imported_fn = imported[f_name];
+  const imported_fn = imported[unaliased];
   if (typeof imported_fn !== "function") {
     throw new Error(
-      `❌ The module "${f_name}" does not export a default function.`,
+      `❌ The module "${unaliased}" does not export a default function.`,
     );
   }
   return imported_fn;
