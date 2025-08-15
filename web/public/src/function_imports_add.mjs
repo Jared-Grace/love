@@ -1,3 +1,4 @@
+import { js_keyword_import } from "./js_keyword_import.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
@@ -6,7 +7,7 @@ export function function_imports_add(ast, imports) {
   let { body } = ast;
   function lambda(import_) {
     let code =
-      "import" +
+      js_keyword_import() +
       " { " +
       import_ +
       " } from './" +
