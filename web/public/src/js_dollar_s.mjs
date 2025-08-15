@@ -20,6 +20,7 @@ import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
+import { js_null } from "./js_null.mjs";
 export function js_dollar_s({ stack1, stack2, ast, afters }) {
   js_dollar_a_generic({
     stack1,
@@ -50,7 +51,8 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       }
       return;
       let name3 = object_property_get(id, "name");
-      let assign = js_declare(name2, init2);
+      let init2 = js_null();
+      let assign = js_declare(name3, init2);
       let index_next = list_next_index(stack2, stack1);
       list_insert(stack2, index_next, value);
       let { name } = id;
