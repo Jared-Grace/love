@@ -17,8 +17,7 @@ export function js_declaration_params_names_node(node) {
     let type_is = js_node_type_is(node, "ObjectPattern");
     if (type_is) {
       let { properties } = node;
-      let fn = js_declaration_params_names_node;
-      names = list_map_squash(properties, fn, names);
+      names = list_map_squash(properties, js_declaration_params_names_node);
     } else {
       let message = json_format_to(node);
       error(message);
