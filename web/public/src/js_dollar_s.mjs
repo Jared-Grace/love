@@ -1,3 +1,4 @@
+import { js_left_right_set } from "./js_left_right_set.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { log } from "./log.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -34,8 +35,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let { id, init } = declaration;
       log(expression);
       return;
-      object_property_set(expression, "left", id);
-      object_property_set(expression, "right", init);
+      js_left_right_set(expression, id, init);
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
