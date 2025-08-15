@@ -1,12 +1,12 @@
 import { error } from "./error.mjs";
 import { list_squash } from "./list_squash.mjs";
-import { each } from "./each.mjs";
+import { log } from "./log.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-export function js_declaration_params_names_node({node}) {
+export function js_declaration_params_names_node(node) {
   let names = null;
   let ii = js_identifier_is(node);
   if (ii) {
@@ -15,12 +15,12 @@ export function js_declaration_params_names_node({node}) {
   } else {
     let type_is = js_node_type_is(node, "ObjectPattern");
     if (type_is) {
-      let { properties } = node;
-      let mapped = list_map(properties, js_declaration_params_names_node);
-      names = list_squash(mapped);
+      let { properties } = node;fn=js_declaration_params_names_node
+      let mapped = list_map(properties,);
+      names = list_squash(mapped); 
     } else {
       let message = json_format_to(node);
-      error(message);
+      error(message); 
     }
   }
   return names;
