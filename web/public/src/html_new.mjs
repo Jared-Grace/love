@@ -1,3 +1,4 @@
+import { html_update } from "./html_update.mjs";
 import { html_name_to_path } from "./html_name_to_path.mjs";
 import { html_overwrite } from "./html_overwrite.mjs";
 import { assert_file_exists_not } from "./assert_file_exists_not.mjs";
@@ -12,12 +13,6 @@ import { file_overwrite } from "./file_overwrite.mjs";
 export async function html_new(name) {
   await assert_file_exists_not(file_path);
   marker("1");
-  let file_path = html_name_to_path(name);
-  let body = `<script type="module">
-    import { sayHello } from './greetings.js';
-    sayHello('World');
-  </script>`;
-  await html_overwrite(name, body);
-  await file_open(file_path);
+  await html_update(name);
   marker("2");
 }
