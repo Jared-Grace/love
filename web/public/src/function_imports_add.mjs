@@ -1,3 +1,4 @@
+import { folder_current } from "./folder_current.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_code_import_single } from "./js_code_import_single.mjs";
 import { js_keyword_from } from "./js_keyword_from.mjs";
@@ -18,4 +19,5 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
+  let current = folder_current();
 }
