@@ -8,8 +8,8 @@ import { function_run_git } from "./function_run_git.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function function_run_prompt() {
-  const chalk = (await import_install("chalk")).default;
   const prompt = "✟ ";
+  const chalk = (await import_install("chalk")).default;
   let prompt_colored = chalk.green(prompt);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
