@@ -10,6 +10,9 @@ export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
   const params_names = js_identifiers_to_names(params);
   return params_names;
-  return js_declaration_params_names_node(declaration);
-  let names = list_map_squash(properties, js_declaration_params_names_node);
+  {
+    let params = js_declaration_params_get(declaration);
+    return js_declaration_params_names_node(declaration);
+    let names = list_map_squash(properties, js_declaration_params_names_node);
+  }
 }
