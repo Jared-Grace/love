@@ -29,7 +29,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     assert(s1);
     if (false) {
       $s;
-      let a = 0;
+      a = 0;
       list_remove(stack2, stack1);
     }
     function lambda2(declaration) {
@@ -39,11 +39,11 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
       log(expression);
-      return;
       list_add(afters, lambda);
       function lambda() {
-        object_replace(node, parsed);
+        object_replace(next, s);
       }
+      return;
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
