@@ -9,12 +9,14 @@ import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
+import { path_join } from "./path_join.mjs";
 export async function function_imports_add(ast, imports) {
   let { body } = ast;
   async function lambda(import_) {
-    const from = await js_code_string(
-      folder_current() + "/" + function_name_to_base(import_),
-    );
+    let current = folder_current();
+    let result = function_name_to_base(import_);
+    let value_string = path_join([current, result]);
+    const from = await js_code_string(value_string);
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
