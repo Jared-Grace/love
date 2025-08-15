@@ -1,3 +1,4 @@
+import { function_name_extension } from "./function_name_extension.mjs";
 import { string_ends_with } from "./string_ends_with.mjs";
 import { file_open_editor } from "./file_open_editor.mjs";
 import { marker } from "./marker.mjs";
@@ -7,6 +8,7 @@ import { log } from "./log.mjs";
 export async function file_open(filePath) {
   let terminal = true;
   if (terminal) {
+    let result2 = function_name_extension();
     let result = string_ends_with(s, suffix);
     log(await file_read(filePath));
   } else {
