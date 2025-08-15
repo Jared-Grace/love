@@ -8,8 +8,8 @@ import { log } from "./log.mjs";
 export async function file_open(filePath) {
   let terminal = true;
   if (terminal) {
-    let result2 = function_name_extension();
-    let result = string_ends_with(s, suffix);
+    let ext = function_name_extension();
+    let result = string_ends_with(s, ext);
     log(await file_read(filePath));
   } else {
     await file_open_editor(filePath);
