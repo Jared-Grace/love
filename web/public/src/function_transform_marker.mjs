@@ -1,3 +1,4 @@
+import { list_size_1_assert } from "./list_size_1_assert.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
@@ -34,5 +35,6 @@ export async function function_transform_marker(f_name, lambda$a) {
     }
   }
   let list = list_adder_async(lambda2);
+  list_size_1_assert(list2);
   return list;
 }
