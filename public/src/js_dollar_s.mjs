@@ -45,7 +45,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let s = js_parse_statement(code);
       let expression = object_property_get(s, "expression");
       let { id, init } = declaration;
-      let type_is = js_node_type_is(node, type);
+      let type_is = js_node_type_is(node, "Literal");
       log(init);
       js_left_right_set(expression, id, init);
       let name3 = object_property_get(id, "name");
