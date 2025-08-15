@@ -19,8 +19,14 @@ export function js_declaration_params_names_node(node) {
       let { properties } = node;
       names = list_map_squash(properties, js_declaration_params_names_node);
     } else {
-      let message = json_format_to(node);
-      error(message);
+      let type_is = js_node_type_is(node, "ObjectPattern");
+      if (type_is) {
+        let { properties } = node;
+        names = list_map_squash(properties, js_declaration_params_names_node);
+      } else {
+        let message = json_format_to(node);
+        error(message);
+      }
     }
   }
   return names;
