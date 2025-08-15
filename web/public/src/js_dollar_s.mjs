@@ -33,12 +33,12 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     }
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
-      let expression = js_parse_statement(code);
+      let s = js_parse_statement(code);
+      let expression = object_property_get(s, "expression");
       let { id, init } = declaration;
       js_left_right_set(expression, id, init);
       log(expression);
       return;
-      let expression2 = object_property_get(statement, "expression");
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
