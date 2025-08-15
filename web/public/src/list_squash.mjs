@@ -1,4 +1,5 @@
 import { list_adder } from "./list_adder.mjs";
 export function list_squash() {
-  let list = list_adder(function lambda2() {});
+  function lambda2() {}
+  let list = list_adder(lambda2);
 }
