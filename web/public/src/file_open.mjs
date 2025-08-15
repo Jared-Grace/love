@@ -4,7 +4,7 @@ import { file_read } from "./file_read.mjs";
 export async function file_open(filePath) {
   let terminal = true;
   if (terminal) {
-    file_read(filePath);
+    await file_read(filePath);
   } else {
     await command_line(`code "${filePath}"`);
   }
