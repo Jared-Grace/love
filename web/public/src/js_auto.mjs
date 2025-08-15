@@ -18,6 +18,7 @@ export async function js_auto(ast) {
     js_let_add,
     js_declare_assign_null,
     js_atomize_function,
+    js_return_atomize,
     js_call_fill,
     js_dollar,
     js_outside_move,
@@ -28,5 +29,5 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   return;
-  [js_return_atomize];
+  [];
 }
