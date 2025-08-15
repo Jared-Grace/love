@@ -24,5 +24,4 @@ export async function file_open(f_path) {
   } else {
     await file_open_editor(f_path);
   }
-  await function_current_set(f_name);
 }
