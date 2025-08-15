@@ -23,8 +23,8 @@ export async function marker_down_generic(delta_get) {
     let { stack2, stack1, ast } = a;
     let { next } = marker_next_get(a);
     list_remove(stack2, stack1);
-    let vs = list_adder((la) => {
-      js_visit(ast, (v) => {
+    function lambda3(la) {
+      function lambda2(v) {
         let { stack } = v;
         if (
           js_stack_list_block_is(stack, 1) ||
@@ -32,8 +32,10 @@ export async function marker_down_generic(delta_get) {
         ) {
           la(v);
         }
-      });
-    });
+      }
+      js_visit(ast, lambda2);
+    }
+    let vs = list_adder(lambda3);
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
     let index_new =
