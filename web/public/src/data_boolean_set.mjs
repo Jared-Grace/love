@@ -5,6 +5,9 @@ export async function data_boolean_set(property_name, value) {
     if (value === "1") {
       v = true;
     }
+    if (value === "1") {
+      v = true;
+    }
     return v;
   }
   await data_transform(property_name, null, lambda);
