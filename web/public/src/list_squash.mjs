@@ -9,6 +9,7 @@ export function list_squash(list) {
         let l = list_is(item);
         if (l) {
           list_process(list);
+        } else {
         }
       }
       each(list, lambda);
