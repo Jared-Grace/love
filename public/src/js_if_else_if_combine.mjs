@@ -21,9 +21,8 @@ export function js_if_else_if_combine(ast) {
       if (eq) {
         let test = object_property_get(node, "test");
         let test2 = object_property_get(stack1, "test");
-        const left = "a";
         const right = "a";
-        let code_expression = js_code_or(left, right);
+        let code_expression = js_code_or("a", right);
         let expression = js_parse_expression(code_expression);
       }
     }
