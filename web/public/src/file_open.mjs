@@ -5,13 +5,13 @@ import { marker } from "./marker.mjs";
 import { command_line } from "./command_line.mjs";
 import { file_read } from "./file_read.mjs";
 import { log } from "./log.mjs";
-export async function file_open(filePath) {
+export async function file_open(f_path) {
   let terminal = true;
   if (terminal) {
     let ext = function_name_extension();
     let result = string_ends_with(s, ext);
-    log(await file_read(filePath));
+    log(await file_read(f_path));
   } else {
-    await file_open_editor(filePath);
+    await file_open_editor(f_path);
   }
 }
