@@ -1,3 +1,4 @@
+import { js_return_atomize } from "./js_return_atomize.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
@@ -26,4 +27,6 @@ export async function js_auto(ast) {
     await t(ast);
   }
   await each_async(transforms, lambda);
+  return;
+  [js_return_atomize];
 }
