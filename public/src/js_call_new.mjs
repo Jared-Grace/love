@@ -60,5 +60,6 @@ export async function js_call_new(f_name_call, ast) {
   return {
     parsed,
     async_is: object_property_get(declaration, "async"),
+    declaration,
   };
 }
