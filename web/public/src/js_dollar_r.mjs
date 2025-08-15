@@ -20,5 +20,4 @@ export function js_dollar_r({ stack1, stack2, stack3 }) {
   }
   object_replace(to, from);
   return;
-  return 0;
 }
