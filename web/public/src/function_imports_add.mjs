@@ -21,5 +21,4 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
-  let current = folder_current();
 }
