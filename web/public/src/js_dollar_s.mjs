@@ -38,7 +38,6 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     if (false) {
       $s;
       let a = null;
-      let a = 0;
       list_remove(stack2, stack1);
     }
     function lambda2(declaration) {
@@ -59,7 +58,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let assign = js_declare(name3, init2);
       list_add(afters, lambda);
       function lambda() {
-        if (0) object_replace(next, s);
+        object_replace(next, s);
         let index_next = list_next_index(stack2, stack1);
         list_insert(stack2, index_next, assign);
       }
