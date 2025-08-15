@@ -9,8 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function function_run_prompt() {
   const chalk = (await import_install("chalk")).default;
-  let v = chalk.green("Hello, world in green!");
-  console.log(v);
-  let line = await command_line_read("✟ ");
+  let prompt = chalk.green("✟ ");
+  let line = await command_line_read(prompt);
   await function_run_line_git(line);
 }
