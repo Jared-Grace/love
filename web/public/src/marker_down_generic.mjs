@@ -26,9 +26,10 @@ export async function marker_down_generic(delta_get) {
     function lambda3(la) {
       function lambda2(v) {
         let { stack } = v;
-        if (js_stack_list_block_is(stack, 1)) {
-          la(v);
-        } else if (js_stack_list_block_is(stack, 0)) {
+        if (
+          js_stack_list_block_is(stack, 1) ||
+          js_stack_list_block_is(stack, 0)
+        ) {
           la(v);
         }
       }
