@@ -4,7 +4,7 @@ import { marker_first } from "./marker_first.mjs";
 import { marker_current_set } from "./marker_current_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 export async function function_current_set(f_name) {
-  const exists = await function_exists(f_name);
+  const { exists } = await function_exists(f_name);
   assert(exists);
   function lambda(previous) {
     return f_name;
