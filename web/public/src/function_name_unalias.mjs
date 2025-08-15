@@ -9,5 +9,8 @@ export async function function_name_unalias(f_name) {
     : expanded !== null
       ? expanded
       : f_name;
-  return {unaliased};
+  let v = {
+    unaliased,
+  };
+  return v;
 }
