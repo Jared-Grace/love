@@ -1,3 +1,4 @@
+import { error } from "./error.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { each } from "./each.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -17,7 +18,7 @@ export function js_declaration_params_names_node(node) {
       let mapped = list_map(properties, js_declaration_params_names_node);
       names = list_squash(mapped);
     } else {
-      er;
+      error(message);
     }
   }
   return names;
