@@ -1,3 +1,4 @@
+import { js_operator_or } from "./js_operator_or.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { equal_by_async } from "./equal_by_async.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -19,7 +20,7 @@ export function js_if_else_if_combine(ast) {
       if (eq) {
         let test = object_property_get(node, "test");
         let test2 = object_property_get(stack1, "test");
-        let expression = js_parse_expression("a" + "||" + "a");
+        let expression = js_parse_expression("a" + js_operator_or() + "a");
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
