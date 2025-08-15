@@ -3,8 +3,9 @@ import { html_overwrite } from "./html_overwrite.mjs";
 import { html_name_to_path } from "./html_name_to_path.mjs";
 export async function html_update(name) {
   let file_path = html_name_to_path(name);
+  const name_prefixed = `app_${name}`;
   let body = `<script type="module">
-    import { ${`app_${name}`} } from './greetings.js';
+    import { ${name_prefixed} } from './greetings.js';
     sayHello('World');
   </script>`;
   await html_overwrite(name, body);
