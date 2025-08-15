@@ -48,6 +48,8 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let type_is = js_node_type_is(node, "Literal");
       if (type_is) {
         let value = object_property_get(node, "value");
+        if (false) {
+        }
       }
       log(init);
       js_left_right_set(expression, id, init);
