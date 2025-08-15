@@ -1,3 +1,4 @@
+import { js_if_else_if_combine } from "./js_if_else_if_combine.mjs";
 import { js_return_atomize } from "./js_return_atomize.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_atomize } from "./js_atomize.mjs";
@@ -17,6 +18,7 @@ export async function js_auto(ast) {
     js_function_id_add,
     js_let_add,
     js_declare_assign_null,
+    js_if_else_if_combine,
     js_atomize_function,
     js_return_atomize,
     js_call_fill,
