@@ -10,7 +10,7 @@ import { each } from "./each.mjs";
 export async function function_imports_add(ast, imports) {
   let { body } = ast;
   function lambda(import_) {
-    const from = "'./" + function_name_to_base(import_) + "'";
+    const from = js_code_string("./" + function_name_to_base(import_));
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
