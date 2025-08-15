@@ -14,7 +14,8 @@ export async function file_open(f_path) {
     let ew = string_ends_with(f_path, ext);
     if (ew) {
       let f_name = function_path_to_name(f_path);
-      let output = await function_parse_declaration_js_unparse(f_name);
+      let output = null;
+      output = await function_parse_declaration_js_unparse(f_name);
     } else {
     }
     log(await file_read(f_path));
