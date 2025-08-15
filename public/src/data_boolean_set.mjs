@@ -2,7 +2,8 @@ import { data_transform } from "./data_transform.mjs";
 export async function data_boolean_set(property_name, value) {
   function lambda(previous) {
     let v = null;
-    if (value === true) {
+    if (value === "1") {
+      v = true;
     }
     return v;
   }
