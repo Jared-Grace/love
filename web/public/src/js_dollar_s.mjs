@@ -36,9 +36,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     if (false) {
-      $ss;
+      $s;
       let a = null;
-      a = 0;
+      let a = 0;
       list_remove(stack2, stack1);
     }
     function lambda2(declaration) {
@@ -46,9 +46,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let s = js_parse_statement(code);
       let expression = object_property_get(s, "expression");
       let { id, init } = declaration;
-      let type_is = js_node_type_is(node, "Literal");
+      let type_is = js_node_type_is(init, "Literal");
       if (type_is) {
-        let value = object_property_get(node, "value");
+        let value = object_property_get(init, "value");
         if (null_is(value)) {
           return;
         }
