@@ -16,6 +16,8 @@ export function js_if_else_if_combine(ast) {
       let consequent = object_property_get(stack1, "consequent");
       let eq = await equal_by_async(consequent, consequent2, js_unparse);
       if (eq) {
+        let test = object_property_get(node, "test");
+        let test = object_property_get(stack1, "test");
       }
     }
     js_node_type_is_if_async(stack1, "IfStatement", lambda3);
