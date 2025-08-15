@@ -1,3 +1,4 @@
+import { js_declare_assign } from "./js_declare_assign.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
@@ -10,18 +11,10 @@ import { object_property_set } from "./object_property_set.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_declare_assign_null(ast) {
-  function lambda(v) {
-    let { node, stack } = v;
-    let { init } = node;
-    if (init === null) {
-      let stack3 = list_get_end(stack, 3);
-      let n = js_node_type_not_is(stack3, "ForOfStatement");
-      if (n) {
-        let init_code = js_keyword_null();
-        let value = js_parse_expression(init_code);
-        object_property_set(node, "init", value);
-      }
-    }
+  js_declare_assign(ast, lambda);
+  function lambda() {
+    let init_code = js_keyword_null();
+    let value = js_parse_expression(init_code);
+    return value;
   }
-  js_visit_type(ast, "VariableDeclarator", lambda);
 }
