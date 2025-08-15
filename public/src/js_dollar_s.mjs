@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_left_right_set } from "./js_left_right_set.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -39,6 +40,10 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       js_left_right_set(expression, id, init);
       log(expression);
       return;
+      list_add(afters, lambda);
+      function lambda() {
+        object_replace(node, parsed);
+      }
       let { name } = id;
       let is = js_identifiers_named(ast, name);
       function lambda3(item) {
