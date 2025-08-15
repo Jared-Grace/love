@@ -1,4 +1,4 @@
-import { list_adder } from "./list_adder.mjs";
+import { list_add } from "./list_add.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -18,8 +18,7 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
   ]);
   let parsed = js_parse_expression(code);
   object_replace(node, parsed);
-  function lambda(la) {}
-  let list = list_adder(lambda);
+  list_add(list, item);
   if (js_node_type_is(stack1, "ExpressionStatement")) {
     let unique = js_identifier_unique_ast(ast, property_name);
     let assign = js_declare(unique, parsed);
