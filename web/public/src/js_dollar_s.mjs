@@ -1,3 +1,4 @@
+import { null_is } from "./null_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_keyword_null } from "./js_keyword_null.mjs";
@@ -48,7 +49,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let type_is = js_node_type_is(node, "Literal");
       if (type_is) {
         let value = object_property_get(node, "value");
-        if (value === null) {
+        if (null_is(value)) {
         }
       }
       log(init);
