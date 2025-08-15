@@ -15,12 +15,13 @@ export function js_declaration_params_names_node(node) {
   } else {
     let type_is = js_node_type_is(node, "ObjectPattern");
     if (type_is) {
-      let { properties } = node;fn=js_declaration_params_names_node
-      let mapped = list_map(properties,);
-      names = list_squash(mapped); 
+      let { properties } = node;
+      let fn = js_declaration_params_names_node;
+      let mapped = list_map(properties);
+      names = list_squash(mapped);
     } else {
       let message = json_format_to(node);
-      error(message); 
+      error(message);
     }
   }
   return names;
