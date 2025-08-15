@@ -1,3 +1,4 @@
+import { js_keyword_from } from "./js_keyword_from.mjs";
 import { js_code_wrap_braces } from "./js_code_wrap_braces.mjs";
 import { js_keyword_import } from "./js_keyword_import.mjs";
 import { list_add_first } from "./list_add_first.mjs";
@@ -12,7 +13,7 @@ export function function_imports_add(ast, imports) {
       " " +
       js_code_wrap_braces(import_) +
       " " +
-      "from" +
+      js_keyword_from() +
       " " +
       "'./" +
       function_name_to_base(import_) +
