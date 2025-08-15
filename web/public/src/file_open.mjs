@@ -1,3 +1,4 @@
+import { function_current_set } from "./function_current_set.mjs";
 import { function_path_declaration_unparse } from "./function_path_declaration_unparse.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
@@ -23,4 +24,5 @@ export async function file_open(f_path) {
   } else {
     await file_open_editor(f_path);
   }
+  await function_current_set(f_name);
 }
