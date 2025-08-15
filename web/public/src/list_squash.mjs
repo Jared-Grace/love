@@ -6,7 +6,7 @@ export function list_squash(list) {
       if (false) {
       }
     }
-    each(list2, lambda);
+    each(list, lambda);
   }
   let squashed = list_adder(lambda2);
 }
