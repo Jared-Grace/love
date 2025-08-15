@@ -7,11 +7,13 @@ export function list_squash(list) {
     function list_process(list) {
       function lambda(item) {
         let l = list_is(item);
+        let fn = null;
         if (l) {
-          list_process(item);
+          fn = list_process;
         } else {
-          la(item);
+          fn = la;
         }
+        fn(item);
       }
       each(list, lambda);
     }
