@@ -17,8 +17,9 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
     code_string,
   ]);
   let parsed = js_parse_expression(code);
-  object_replace(node, parsed);
-  function lambda() {}
+  function lambda() {
+    object_replace(node, parsed);
+  }
   list_add(afters, lambda);
   if (js_node_type_is(stack1, "ExpressionStatement")) {
     let unique = js_identifier_unique_ast(ast, property_name);
