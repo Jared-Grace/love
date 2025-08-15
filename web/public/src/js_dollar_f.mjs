@@ -7,8 +7,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_dollar_f({ remaining, node, stack1, ast, afters }) {
   const code = js_code_arrow();
   let parsed = js_parse_expression(code);
-  lambda();
-  list_add(list, item);
+  list_add(afters, lambda);
   function lambda() {
     object_replace(node, parsed);
   }
