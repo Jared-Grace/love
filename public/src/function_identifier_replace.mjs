@@ -15,13 +15,17 @@ export async function function_identifier_replace(
   identifier_name,
   replacement,
 ) {
-  let f_name = data_function_current_get();
-  await function_transform(f_name, (ast) => {
+  let f_name = await data_function_current_get();
+  function lambda2(ast) {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     let b = list_empty_is(identifiers_named);
     assert_not(b);
     marker("1");
     let from = js_parse_expression(replacement);
-    each(identifiers_named, (i) => object_replace(i, from));
-  });
+    function lambda(i) {
+      return object_replace(i, from);
+    }
+    each(identifiers_named, lambda);
+  }
+  await function_transform(f_name, lambda2);
 }
