@@ -1,3 +1,4 @@
+import { log } from "log.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_code_import_single } from "./js_code_import_single.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -12,6 +13,7 @@ export async function function_imports_add(ast, imports) {
     let result = function_name_to_base(import_);
     let value_string = folder_current_join(result);
     const from = await js_code_string(value_string);
+    if (0) log(from);
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
