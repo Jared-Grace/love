@@ -29,7 +29,7 @@ export async function js_call_fill(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      let {unaliased} = await function_name_unalias(name);
+      let { unaliased } = await function_name_unalias(name);
       const valid = functions_names_includes(unaliased);
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
