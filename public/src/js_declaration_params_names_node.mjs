@@ -18,7 +18,7 @@ export function js_declaration_params_names_node(node) {
       let mapped = list_map(properties, js_declaration_params_names_node);
       names = list_squash(mapped);
     } else {
-      error(message);
+      error();
     }
   }
   return names;
