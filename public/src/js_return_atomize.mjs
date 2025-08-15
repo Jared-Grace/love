@@ -16,6 +16,7 @@ export async function js_return_atomize(ast) {
     await js_return_on_async(node, noop, identifier_not);
     async function identifier_not(argument) {
       if (argument === null) {
+        return;
       }
       let v = js_visit_match(ast, argument);
       await js_node_atomize(existing, v);
