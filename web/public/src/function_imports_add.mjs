@@ -7,14 +7,15 @@ import { list_add_first } from "./list_add_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
 import { each } from "./each.mjs";
+import { each_async } from "./each_async.mjs";
 export async function function_imports_add(ast, imports) {
   let { body } = ast;
-  function lambda(import_) {
-    const from = js_code_string("./" + function_name_to_base(import_));
+  async function lambda(import_) {
+    const from = await js_code_string("./" + function_name_to_base(import_));
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
   }
-  each(imports, lambda);
+  await each_async(imports, lambda);
   return;
 }
