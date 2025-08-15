@@ -30,6 +30,8 @@ export async function marker_down_generic(delta_get) {
           la(v);
         } else if (js_stack_list_block_is(stack, 0)) {
           la(v);
+        } else if (js_stack_list_block_is(stack, 0)) {
+          la(v);
         }
       }
       js_visit(ast, lambda2);
