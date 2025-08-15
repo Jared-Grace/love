@@ -9,6 +9,7 @@ import { marker } from "./marker.mjs";
 import { command_line } from "./command_line.mjs";
 import { file_read } from "./file_read.mjs";
 import { log } from "./log.mjs";
+import { log_keep } from "./log_keep.mjs";
 export async function file_open(f_path) {
   let terminal = true;
   if (terminal) {
@@ -20,7 +21,7 @@ export async function file_open(f_path) {
     } else {
       output = await file_read(f_path);
     }
-    log(output);
+    log_keep(output);
   } else {
     await file_open_editor(f_path);
   }
