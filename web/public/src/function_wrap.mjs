@@ -35,6 +35,6 @@ export async function function_wrap(f_name, f_name_wrapped) {
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     object_property_from(declaration, "params", declaration_call);
-    js_imports_missing_add(ast);
+    await js_imports_missing_add(ast);
   }
 }
