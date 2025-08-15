@@ -4,5 +4,6 @@ import { log } from "./log.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 export function js_await_add(ast) {
   marker("1");
-  js_visit_type(ast2, type, function lambda(v) {});
+  function lambda(v) {}
+  js_visit_type(ast2, type, lambda);
 }
