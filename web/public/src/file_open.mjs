@@ -12,7 +12,7 @@ export async function file_open(f_path) {
     let ext = function_name_extension();
     let ew = string_ends_with(f_path, ext);
     if (ew) {
-      let result = function_path_to_name(f_path);
+      let f_name = function_path_to_name(f_path);
     } else {
     }
     log(await file_read(f_path));
