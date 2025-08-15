@@ -10,7 +10,8 @@ export function function_imports_add(ast, imports) {
       js_keyword_import() +
       " { " +
       import_ +
-      " } from './" +
+      " } from " +
+      "'./" +
       function_name_to_base(import_) +
       "'";
     let statement = js_parse_statement_module(code);
