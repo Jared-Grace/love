@@ -62,6 +62,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         object_replace(next, s);
         let index_next = list_next_index(stack2, stack1);
         list_insert(stack2, index_next, assign);
+        list_remove(stack2, stack1);
       }
       return;
       let { name } = id;
