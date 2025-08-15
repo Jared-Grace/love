@@ -47,7 +47,7 @@ export async function marker_call(f_name_call) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
       marker("1");
-      let { ast } = marker_next_index(a);
+      let { stack2, index, ast } = marker_next_index(a);
       let { parsed } = await js_call_new(f_name_call, ast);
       marker("2");
       list_insert(stack2, index, parsed);
