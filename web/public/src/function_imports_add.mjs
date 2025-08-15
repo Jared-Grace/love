@@ -1,3 +1,4 @@
+import { js_code_import_single } from "./js_code_import_single.mjs";
 import { js_keyword_from } from "./js_keyword_from.mjs";
 import { js_code_wrap_braces } from "./js_code_wrap_braces.mjs";
 import { js_keyword_import } from "./js_keyword_import.mjs";
@@ -9,14 +10,7 @@ export function function_imports_add(ast, imports) {
   let { body } = ast;
   function lambda(import_) {
     const from = "'./" + function_name_to_base(import_) + "'";
-    let code =
-      js_keyword_import() +
-      " " +
-      js_code_wrap_braces(import_) +
-      " " +
-      js_keyword_from() +
-      " " +
-      from;
+    let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
   }
