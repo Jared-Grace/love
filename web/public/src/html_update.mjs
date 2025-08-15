@@ -6,7 +6,7 @@ export async function html_update(name) {
   let file_path = html_name_to_path(name);
   const name_prefixed = `app_${name}`;
   let ext = function_name_extension();
-  let body = `<script type="module">
+  let body = `<script type="module"> 
     import { ${name_prefixed} } from './${name_prefixed}${ext}.js';
     sayHello('World');
   </script>`;
