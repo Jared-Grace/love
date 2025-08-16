@@ -1118,7 +1118,6 @@
   "oe md",
   "oec",
   "oe fc",
-  "p",
   "1p",
   "ps",
   "fc mr m",
@@ -1132,9 +1131,11 @@
   "cd",
   "md -2",
   "md -1",
-  "fc mr,m"
+  "p",
+  "fc mr,m",
+  "n list_to"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "list_to",
  "terminal": true
 }
