@@ -9,7 +9,7 @@ import { marker } from "./marker.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
-  let f_types = await js_types_function();
+  let f_types = js_types_function();
   async function lambda(a) {
     let { stack2, stack1 } = a;
     let index_next = list_index_of_next(stack2, stack1);
