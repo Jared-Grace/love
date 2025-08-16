@@ -14,8 +14,8 @@ export function marker_down_choices_lambda({ stack2, stack1, ast }) {
   function lambda3(la) {
     function lambda2(v) {
       let { stack, node } = v;
-      let includes = list_includes(list, item);
-      if (node === body_block) {
+      let includes = list_includes([body_block, declaration], node);
+      if (includes) {
         return;
       }
       if (
