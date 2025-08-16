@@ -1,3 +1,4 @@
+import { data_terminal_get } from "./data_terminal_get.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { log } from "./log.mjs";
 import { file_js_unparse } from "./file_js_unparse.mjs";
@@ -8,7 +9,6 @@ export async function function_transform(f_name, lambda$ast) {
   let { ast } = parsed;
   let result = await lambda$ast(ast);
   await file_js_unparse(parsed);
-  if (false) {
-  }
+  let w = await data_terminal_get();
   return result;
 }
