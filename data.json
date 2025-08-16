@@ -1130,12 +1130,12 @@
   "md -2",
   "md -1",
   "p",
-  "fc mr,m",
   "n list_to",
   "oec",
-  "ps"
+  "ps",
+  "fc mr,m"
  ],
  "marker_current": "1",
- "function_current": "list_to",
+ "function_current": "marker_remove_marker_top",
  "terminal": true
 }
