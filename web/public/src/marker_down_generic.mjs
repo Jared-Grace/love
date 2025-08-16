@@ -30,7 +30,7 @@ export async function marker_down_generic(delta_get) {
     let index_new =
       next_index +
       delta_get({
-        vs: choices,
+        choices,
         next_index,
       });
     let v_new = list_get(choices, index_new);
