@@ -18,9 +18,6 @@ export function js_marker_name_get(v) {
     return v2;
   }
   if (!js_node_type_is(stack1, "ExpressionStatement")) {
-    log({
-      i,
-    });
     let v3 = null;
     return v3;
   }
