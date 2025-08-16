@@ -1160,12 +1160,12 @@
   "u jnt",
   "a jnt js_node_type",
   "ps",
-  "p",
   "s marker,ne",
   "s js,visit",
   "s type,js",
   "c js_visit_type js_visit_types",
   "oec",
+  "p",
   "ftc js_marker_enter js_marker_enter"
  ],
  "marker_current": "1",
