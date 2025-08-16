@@ -1138,7 +1138,8 @@
   "md 3",
   "mdc",
   "md -1",
-  "o mb"
+  "o mb",
+  "oe mb"
  ],
  "marker_current": "1",
  "function_current": "marker_bottom",
