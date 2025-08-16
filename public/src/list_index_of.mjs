@@ -1,6 +1,6 @@
 import { error } from "./error.mjs";
-export function list_index_of(arr, item) {
-  let index = arr.indexOf(item);
+export function list_index_of(list, item) {
+  let index = list.indexOf(item);
   if (index <= -1) {
     error();
   }
