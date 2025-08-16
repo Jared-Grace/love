@@ -31,17 +31,11 @@ export function js_marker_name_get(v) {
   }
   let { arguments: arguments2 } = node;
   if (list_empty_is(arguments2)) {
-    log({
-      i,
-    });
     let v6 = null;
     return v6;
   }
   let a_first = list_first(arguments2);
   if (!js_node_type_is(a_first, "Literal")) {
-    log({
-      i,
-    });
     let v7 = null;
     return v7;
   }
