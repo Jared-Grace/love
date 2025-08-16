@@ -659,7 +659,6 @@
   "na functions_search_open so",
   "o so",
   "so fill",
-  "u ft",
   "s body",
   "as v",
   "as task_new",
@@ -1154,7 +1153,8 @@
   "fws function_transform_marker current",
   "oec",
   "u fts",
-  "s function,types"
+  "s function,types",
+  "u ft"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
