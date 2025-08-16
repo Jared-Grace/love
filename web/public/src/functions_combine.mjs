@@ -1,3 +1,4 @@
+import { list_size_1_assert } from "./list_size_1_assert.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { assert } from "./assert.mjs";
 import { list_size } from "./list_size.mjs";
@@ -22,7 +23,7 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
-  ist_size_1_assert(arguments);
+  list_size_1_assert(arguments);
   let { f_names, combined } = await functions_combine_name(f_names_comma);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
