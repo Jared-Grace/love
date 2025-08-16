@@ -581,7 +581,6 @@
   "s js,new",
   "a nj function_new_js",
   "nj return_atomize",
-  "s js,visit",
   "c js_return_on js_return_on_async",
   "ftc marker_first js_return_atomize",
   "s expa",
@@ -1165,7 +1164,8 @@
   "ps",
   "p",
   "ftc js_marker_enter js_marker_enter",
-  "s marker,ne"
+  "s marker,ne",
+  "s js,visit"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
