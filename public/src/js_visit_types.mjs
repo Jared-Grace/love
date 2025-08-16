@@ -1,3 +1,4 @@
+import { js_node_types_is } from "./js_node_types_is.mjs";
 import { marker } from "./marker.mjs";
 import { log } from "./log.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -8,7 +9,7 @@ export function js_visit_types(ast, type, lambda$v) {
   marker("1");
   function lambda(v) {
     let { node } = v;
-    if (js_node_is(node) && js_node_type_is(node, type)) {
+    if (js_node_is(node) && js_node_types_is(node, type)) {
       lambda$v(v);
     }
   }
