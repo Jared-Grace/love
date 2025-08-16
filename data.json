@@ -1095,7 +1095,6 @@
   "ir type \"CallExpression\"",
   "oe ir",
   "s current",
-  "md 1",
   "oe md",
   "md 0",
   "c marker_down_generic marker_down_choices",
@@ -1123,7 +1122,8 @@
   "fd",
   "m",
   "cd",
-  "mdc"
+  "mdc",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
