@@ -8,6 +8,7 @@ import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { marker } from "./marker.mjs";
 export function marker_down_choices_lambda({ stack2, stack1, ast }) {
+  return stack2;
   marker("1");
   let declaration = js_declaration_single(ast);
   let body_block = js_declaration_to_block_body(declaration);
