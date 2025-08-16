@@ -9,9 +9,7 @@ import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_marker_name_get(v) {
   let { stack } = v;
-  let i = 5;
   let stack1 = list_get_end(stack, 1);
-  i++;
   if (!js_node_is(stack1)) {
     log({
       i,
@@ -19,7 +17,6 @@ export function js_marker_name_get(v) {
     let v2 = null;
     return v2;
   }
-  i++;
   if (!js_node_type_is(stack1, "ExpressionStatement")) {
     log({
       i,
@@ -27,17 +24,12 @@ export function js_marker_name_get(v) {
     let v3 = null;
     return v3;
   }
-  i++;
   let { node } = v;
   let { callee } = node;
   if (!js_node_type_is(callee, "Identifier")) {
-    log({
-      i,
-    });
     let v4 = null;
     return v4;
   }
-  i++;
   let { name } = callee;
   if (name !== marker.name) {
     log({
@@ -47,7 +39,6 @@ export function js_marker_name_get(v) {
     let v5 = null;
     return v5;
   }
-  i++;
   let { arguments: arguments2 } = node;
   if (list_empty_is(arguments2)) {
     log({
@@ -56,7 +47,6 @@ export function js_marker_name_get(v) {
     let v6 = null;
     return v6;
   }
-  i++;
   let a_first = list_first(arguments2);
   if (!js_node_type_is(a_first, "Literal")) {
     log({
@@ -65,7 +55,6 @@ export function js_marker_name_get(v) {
     let v7 = null;
     return v7;
   }
-  i++;
   let stack2 = list_get_end(stack, 2);
   if (!list_is(stack2)) {
     error();
