@@ -700,7 +700,6 @@
   "s seco",
   "c list_first list_second",
   "a ls list_second",
-  "s skip",
   "de list_skip",
   "c string_skip list_skip",
   "s string",
@@ -1156,7 +1155,8 @@
   "s function,types",
   "u ft",
   "a fy function_types",
-  "s find"
+  "s find",
+  "s skip"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
