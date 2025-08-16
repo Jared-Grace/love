@@ -35,6 +35,6 @@ export async function marker_down_generic(delta_get) {
       });
     let v_new = list_get(stack2, index_new);
     let copy = object_copy(stack1);
-    list_add(node, copy);
+    list_add(stack2, copy);
   }
 }
