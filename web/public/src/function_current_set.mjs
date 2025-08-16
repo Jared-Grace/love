@@ -10,7 +10,9 @@ export async function function_current_set(f_name) {
   const { exists, unaliased } = await function_exists(f_name);
   assert(exists);
   function lambda(previous) {
-    log(message);
+    log({
+      unaliased,
+    });
     return unaliased;
   }
   await data_transform("function_current", null, lambda);
