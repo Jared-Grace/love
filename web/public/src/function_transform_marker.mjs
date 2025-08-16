@@ -32,6 +32,7 @@ export async function function_transform_marker(f_name, lambda$a) {
         log({
           node,
           n: await js_unparse(node),
+          marker_name,
         });
         if (js_marker_named(v, marker_name)) {
           let a = function_transform_marker_arg(v, ast);
