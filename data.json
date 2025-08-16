@@ -1116,7 +1116,6 @@
   "function_transform_marker_empty",
   "fd",
   "m",
-  "md 1",
   "oe md",
   "md -1",
   "oec",
@@ -1131,7 +1130,8 @@
   "s size",
   "mdc",
   "md 0",
-  "cd"
+  "cd",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
