@@ -20,9 +20,11 @@ export async function js_marker_enter(ast) {
   let types_function = js_types_function();
   async function lambda(a) {
     let n = marker_next_get(a);
-    let next = n;
-    function lambda2(v3) {}
-    js_visit_types(ast, types_function, lambda2);
+    let { next } = n;
+    function lambda2(v) {
+      let node = v;
+    }
+    js_visit_types(next, types_function, lambda2);
   }
   let v = await function_transform_marker_current(lambda);
 }
