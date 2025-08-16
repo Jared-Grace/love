@@ -1135,13 +1135,13 @@
   "md -1",
   "o mb",
   "oe mb",
-  "cd",
   "fs jaa",
   "mrt",
   "md 1",
   "md c",
   "mdc",
-  "mn"
+  "mn",
+  "cd"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
