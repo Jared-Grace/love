@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { log } from "./log.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -6,6 +7,7 @@ import { string_split_comma } from "./string_split_comma.mjs";
 export async function functions_combine_name(f_names_comma) {
   let split = string_split_comma(f_names_comma);
   let results = await list_map_unordered_async(split, function_name_unalias);
+  let result = list_map_property(list, property_name);
   log(f_names);
   let combined = function_name_combine_multiple(f_names);
   let v = {
