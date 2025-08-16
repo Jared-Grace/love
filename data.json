@@ -1143,9 +1143,10 @@
   "oe mrt",
   "cd",
   "ps",
-  "p",
   "mdc",
-  "cs list_size_1_assert message"
+  "p",
+  "cs list_size_1_assert message",
+  "s size,1"
  ],
  "marker_current": "2",
  "function_current": "list_size_1_assert_message",
