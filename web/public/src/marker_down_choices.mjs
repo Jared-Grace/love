@@ -25,6 +25,7 @@ export async function marker_down_choices() {
   let f_name = await data_function_current_get();
   let choices = null;
   let v = await function_transform_marker(f_name, lambda);
+  return v;
   return choices;
   async function lambda(a) {
     let vs = marker_down_choices_lambda(a);
