@@ -25,7 +25,6 @@ export async function marker_down_generic(delta_get) {
   return v;
   async function lambda(a) {
     let { stack2, stack1 } = a;
-    let { next } = marker_next_get(a);
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
     let index_new =
