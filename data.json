@@ -1150,9 +1150,9 @@
   "md 1",
   "md -1",
   "nj marker_enter",
-  "oec",
   "s marker",
-  "fws function_transform_marker current"
+  "fws function_transform_marker current",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
