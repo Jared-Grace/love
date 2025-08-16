@@ -18,11 +18,12 @@ import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { log } from "./log.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
   let v = await function_transform_marker(f_name, lambda);
   return v;
-  function lambda(a) {
+  async function lambda(a) {
     let { stack2, stack1 } = a;
     let { next } = marker_next_get(a);
     let choices = marker_down_choices_lambda(a);
@@ -34,12 +35,13 @@ export async function marker_down_generic(delta_get) {
         choices,
         next_index: index,
       });
+    let v_new = list_get(choices, index_new);
+    let { stack, node } = v_new;
     log({
       next_index: index,
       index_new,
+      node: await js_unparse(node),
     });
-    let v_new = list_get(choices, index_new);
-    let { stack, node } = v_new;
     let copy = object_copy(stack1);
     if (list_is(node)) {
       list_add(node, copy);
