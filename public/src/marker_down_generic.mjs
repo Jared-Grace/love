@@ -33,7 +33,9 @@ export async function marker_down_generic(delta_get) {
         choices: stack2,
         next_index: index,
       });
-    log(message);
+    log({
+      index_new,
+    });
     let v_new = list_get(stack2, index_new);
     list_add(stack2, stack1);
   }
