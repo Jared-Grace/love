@@ -1,3 +1,4 @@
+import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
 import { list_is_assert } from "./list_is_assert.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { assert } from "./assert.mjs";
@@ -20,22 +21,9 @@ export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack2, stack1, ast } = a;
+    let { stack1 } = a;
     let { next } = marker_next_get(a);
-    list_remove(stack2, stack1);
-    function lambda3(la) {
-      function lambda2(v) {
-        let { stack } = v;
-        if (
-          js_stack_list_block_is(stack, 1) ||
-          js_stack_list_block_is(stack, 0)
-        ) {
-          la(v);
-        }
-      }
-      js_visit(ast, lambda2);
-    }
-    let vs = list_adder(lambda3);
+    let vs = marker_down_choices_lambda(a);
     log(vs);
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
