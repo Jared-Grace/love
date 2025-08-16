@@ -1153,7 +1153,8 @@
   "s marker",
   "fws function_transform_marker current",
   "oec",
-  "u fts"
+  "u fts",
+  "s function,types"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
