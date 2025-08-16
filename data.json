@@ -1141,13 +1141,13 @@
   "p",
   "cs list_size_1_assert message",
   "s size,1",
-  "mdc",
   "f",
   "fs jaa",
   "oe ms",
   "oe fs",
   "mg",
-  "cd"
+  "cd",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",

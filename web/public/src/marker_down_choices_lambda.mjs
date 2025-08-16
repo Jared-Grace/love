@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
@@ -8,6 +9,7 @@ import { js_stack_list_block_is } from "./js_stack_list_block_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { marker } from "./marker.mjs";
 export function marker_down_choices_lambda({ stack2, stack1, ast }) {
+  let result = list_map_property(list, property_name);
   return stack2;
   marker("1");
   let declaration = js_declaration_single(ast);
