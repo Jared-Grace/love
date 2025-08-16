@@ -1119,7 +1119,6 @@
   "md 1",
   "oe md",
   "md -1",
-  "md 0",
   "oec",
   "cd",
   "oe fc",
@@ -1131,7 +1130,8 @@
   "de marker_remove_marker_top",
   "a lz list_size",
   "s size",
-  "mdc"
+  "mdc",
+  "md 0"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
