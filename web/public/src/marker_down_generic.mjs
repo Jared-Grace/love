@@ -26,10 +26,10 @@ export async function marker_down_generic(delta_get) {
   async function lambda(a) {
     let { stack2, stack1 } = a;
     let { next } = marker_next_get(a);
+    let index = list_index_of(nodes, stack1);
     list_remove(stack2, stack1);
     let choices = marker_down_choices_lambda(a);
     let nodes = list_map_property(choices, "node");
-    let index = list_index_of(nodes, stack1);
     let index_new =
       index +
       delta_get({
