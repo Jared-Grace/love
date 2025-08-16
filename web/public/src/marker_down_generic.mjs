@@ -1,3 +1,4 @@
+import { object_copy } from "./object_copy.mjs";
 import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
 import { list_is_assert } from "./list_is_assert.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -38,6 +39,7 @@ export async function marker_down_generic(delta_get) {
     });
     let v_new = list_get(choices, index_new);
     let { stack, node } = v_new;
+    let copy = object_copy(from);
     if (list_is(node)) {
       list_add(node, stack1);
     } else {
