@@ -868,7 +868,6 @@
   "a lmp list_map_property",
   "s unalias",
   "fst function_alias_add_generic unalias_from_acronyms",
-  "s find",
   "sb",
   "a fst function_current_set_task_new",
   "n function_name_to_acronym",
@@ -1156,7 +1155,8 @@
   "u fts",
   "s function,types",
   "u ft",
-  "a fy function_types"
+  "a fy function_types",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
