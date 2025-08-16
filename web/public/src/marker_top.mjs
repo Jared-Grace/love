@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { string_to } from "./string_to.mjs";
 import { marker_first_index } from "./marker_first_index.mjs";
@@ -29,6 +30,7 @@ export async function marker_top() {
   return v;
   async function lambda(ast) {
     let markers = js_markers(ast);
+    let result = list_empty_not_is(body_block);
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
