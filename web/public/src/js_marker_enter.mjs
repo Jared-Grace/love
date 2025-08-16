@@ -19,7 +19,8 @@ export async function js_marker_enter(ast) {
   marker("1");
   let types_function = js_types_function();
   async function lambda(a) {
-    let v2 = marker_next_get(a);
+    let n = marker_next_get(a);
+    let next = n;
     function lambda2(v3) {}
     js_visit_types(ast, types_function, lambda2);
   }
