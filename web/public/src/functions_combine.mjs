@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_auto } from "./js_auto.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
 import { functions_combine_name } from "./functions_combine_name.mjs";
@@ -19,6 +20,7 @@ import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
   let { f_names, combined } = await functions_combine_name(f_names_comma);
+  log(message);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
     async function lambda(f_name) {
