@@ -10,6 +10,7 @@ import { function_types } from "./function_types.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
   async function lambda(a) {
@@ -24,7 +25,7 @@ export async function js_marker_enter(ast) {
     }
     let result = list_filter(stack2, lambda2);
     log(result);
-    log(message);
+    log(await js_unparse(stack1));
   }
   let v = await function_transform_marker_current(lambda);
 }
