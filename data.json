@@ -1082,7 +1082,6 @@
   "s data",
   "oe m",
   "fs m",
-  "m",
   "fp data_watch_set",
   "c dws data_terminal_set",
   "fs dts",
@@ -1119,7 +1118,8 @@
   "jaa",
   "cd",
   "mdc",
-  "oec"
+  "oec",
+  "m"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
