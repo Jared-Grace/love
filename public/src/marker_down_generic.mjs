@@ -39,14 +39,14 @@ export async function marker_down_generic(delta_get) {
     });
     let v_new = list_get(choices, index_new);
     let { stack, node } = v_new;
-    let copy = object_copy(from);
+    let copy = object_copy(stack1);
     if (list_is(node)) {
-      list_add(node, stack1);
+      list_add(node, copy);
     } else {
       let stack1_v_new = list_get_end(stack, 1);
       list_is_assert(stack1_v_new);
       let index = list_index_of(stack1_v_new, node);
-      list_insert(stack1_v_new, index, stack1);
+      list_insert(stack1_v_new, index, copy);
     }
     list_remove(stack2, stack1);
   }
