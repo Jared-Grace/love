@@ -909,7 +909,6 @@
   "cs git_push_schedule check",
   "f ",
   "fs git_push_schedule_check",
-  "x",
   "git_push_schedule_check",
   "schtasks_query t",
   "s schedule",
@@ -1137,7 +1136,8 @@
   "cd",
   "s block",
   "mdc",
-  "fs marker_down_choices_lambda"
+  "fs marker_down_choices_lambda",
+  "x"
  ],
  "marker_current": "1",
  "function_current": "marker_down_choices_lambda",
