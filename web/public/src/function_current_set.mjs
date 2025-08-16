@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_exists } from "./function_exists.mjs";
@@ -9,6 +10,7 @@ export async function function_current_set(f_name) {
   const { exists, unaliased } = await function_exists(f_name);
   assert(exists);
   function lambda(previous) {
+    log(message);
     return unaliased;
   }
   await data_transform("function_current", null, lambda);
