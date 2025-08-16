@@ -21,9 +21,10 @@ import { log } from "./log.mjs";
 export async function marker_down_choices(delta_get) {
   marker("1");
   let f_name = await data_function_current_get();
-  await function_transform_marker(f_name, lambda);
+  return await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let vs = marker_down_choices_lambda(a);
     let nodes = list_map_property(vs, "node");
+    return nodes;
   }
 }
