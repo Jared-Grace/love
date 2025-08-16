@@ -36,6 +36,7 @@ export async function marker_down_generic(delta_get) {
       js_visit(ast, lambda2);
     }
     let vs = list_adder(lambda3);
+    log(message);
     let nodes = list_map_property(vs, "node");
     let next_index = list_index_of(nodes, next);
     let index_new =
