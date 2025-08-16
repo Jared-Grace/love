@@ -1136,8 +1136,8 @@
   "s block",
   "fs marker_down_choices_lambda",
   "x",
-  "mdc",
-  "fs jaa"
+  "fs jaa",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
