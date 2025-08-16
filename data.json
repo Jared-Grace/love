@@ -1142,7 +1142,8 @@
   "cd",
   "md -1",
   "mdc",
-  "u me"
+  "u me",
+  "as mark"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
