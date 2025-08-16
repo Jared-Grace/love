@@ -1134,9 +1134,9 @@
   "oe mdc",
   "md 1",
   "p",
-  "mdc",
   "cd",
-  "s block"
+  "s block",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
