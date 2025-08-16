@@ -1151,9 +1151,10 @@
   "md -1",
   "nj marker_enter",
   "oec",
-  "s marker"
+  "s marker",
+  "fws function_transform_marker current"
  ],
  "marker_current": "1",
- "function_current": "js_marker_enter",
+ "function_current": "function_transform_marker_current",
  "terminal": true
 }
