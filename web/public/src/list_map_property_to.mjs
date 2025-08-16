@@ -6,5 +6,5 @@ export function list_map_property_to(list, name) {
     let o = {};
     object_property_set(o, name, item);
   }
-  let mappeed = list_map(list, lambda);
+  let mapped = list_map(list, lambda);
 }
