@@ -44,6 +44,6 @@ export function js_marker_name_get(v) {
     error();
   }
   let { value } = a_first;
-  log(message);
+  log(value);
   return value;
 }
