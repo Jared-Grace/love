@@ -44,6 +44,8 @@ export async function marker_down_generic(delta_get) {
     if (list_is(node)) {
       list_add(node, copy);
     } else {
+      if (false) {
+      }
       let stack1_v_new = list_get_end(stack, 1);
       list_is_assert(stack1_v_new);
       let index = list_index_of(stack1_v_new, node);
