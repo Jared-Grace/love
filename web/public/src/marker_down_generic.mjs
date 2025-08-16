@@ -20,7 +20,7 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { log } from "./log.mjs";
 export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
-  await function_transform_marker(f_name, lambda);
+  return await function_transform_marker(f_name, lambda);
   function lambda(a) {
     let { stack2, stack1 } = a;
     let { next } = marker_next_get(a);
