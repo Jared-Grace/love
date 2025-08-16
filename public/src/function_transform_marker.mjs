@@ -37,9 +37,5 @@ export async function function_transform_marker(f_name, lambda$a) {
   }
   let lines = await list_adder_async(lambda2);
   list_size_1_assert(lines);
-  let v2 = {
-    lines,
-    code,
-  };
-  return v2;
+  return code;
 }
