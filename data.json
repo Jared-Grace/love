@@ -1135,7 +1135,6 @@
   "o mb",
   "oe mb",
   "fs jaa",
-  "mrt",
   "md 1",
   "md c",
   "mn",
@@ -1143,7 +1142,8 @@
   "mdc",
   "u me",
   "as mark",
-  "cd"
+  "cd",
+  "mrt"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
