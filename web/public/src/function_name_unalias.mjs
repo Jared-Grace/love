@@ -11,7 +11,7 @@ export async function function_name_unalias(f_name) {
       : f_name;
   let v = {
     unaliased,
-    expanded,
+    acronyms,
   };
   return v;
 }
