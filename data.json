@@ -1146,7 +1146,8 @@
   "s size,1",
   "mdc",
   "f",
-  "fs jaa"
+  "fs jaa",
+  "oe ms"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
