@@ -1,3 +1,4 @@
+import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_type } from "./js_type.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
@@ -17,7 +18,6 @@ import { list_index_of_next } from "./list_index_of_next.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
-  let types_function = js_types_function();
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
@@ -27,7 +27,7 @@ export async function js_marker_enter(ast) {
         node,
       });
     }
-    js_visit_types(next, types_function, lambda2);
+    js_visit_type(next, "BlockStatement", lambda2);
   }
   let v = await function_transform_marker_current(lambda);
 }
