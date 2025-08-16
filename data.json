@@ -109,7 +109,8 @@
   "ars": "marker_assign_replace_string",
   "mdc": "marker_down_choices",
   "lz": "list_size",
-  "mrt": "marker_remove_marker_top"
+  "mrt": "marker_remove_marker_top",
+  "fy": "function_types"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1154,7 +1155,8 @@
   "oec",
   "u fts",
   "s function,types",
-  "u ft"
+  "u ft",
+  "a fy function_types"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
