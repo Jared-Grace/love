@@ -1131,11 +1131,11 @@
   "fc mr,m",
   "a mrt marker_remove_marker_top",
   "fs jaa",
-  "md -1",
   "jaa",
   "cd",
   "md 1",
-  "md 0"
+  "md 0",
+  "md -1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
