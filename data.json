@@ -1139,7 +1139,8 @@
   "cd",
   "fs jaa",
   "mdc",
-  "md 1"
+  "md 1",
+  "mrt"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
