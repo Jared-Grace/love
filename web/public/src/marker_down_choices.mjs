@@ -23,27 +23,7 @@ export async function marker_down_choices(delta_get) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack1 } = a;
-    let { next } = marker_next_get(a);
     let vs = marker_down_choices_lambda(a);
-    log(vs);
     let nodes = list_map_property(vs, "node");
-    let next_index = list_index_of(nodes, next);
-    let index_new =
-      next_index +
-      delta_get({
-        vs,
-        next_index,
-      });
-    let v_new = list_get(vs, index_new);
-    let { stack, node } = v_new;
-    if (list_is(node)) {
-      list_add(node, stack1);
-    } else {
-      let stack1_v_new = list_get_end(stack, 1);
-      list_is_assert(stack1_v_new);
-      let index = list_index_of(stack1_v_new, node);
-      list_insert(stack1_v_new, index, stack1);
-    }
   }
 }
