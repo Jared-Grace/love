@@ -1120,10 +1120,10 @@
   "oec",
   "fs jaa",
   "function_transform_marker_empty",
-  "m",
   "mdc",
   "fd",
-  "cd"
+  "cd",
+  "m"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
