@@ -1,3 +1,8 @@
 export function js_types_function() {
-  return ["FunctionExpression", "ArrowFunctionExpression", "FunctionDeclaration"];
+  const types_function = [
+    "FunctionExpression",
+    "ArrowFunctionExpression",
+    "FunctionDeclaration",
+  ];
+  return types_function;
 }
