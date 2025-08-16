@@ -1131,7 +1131,6 @@
   "md 3",
   "o mb",
   "oe mb",
-  "fs jaa",
   "md 1",
   "md c",
   "mn",
@@ -1146,9 +1145,10 @@
   "cs list_size_1_assert message",
   "s size,1",
   "mdc",
-  "f"
+  "f",
+  "fs jaa"
  ],
- "marker_current": "2",
- "function_current": "list_size_1_assert_message",
+ "marker_current": "1",
+ "function_current": "js_await_add",
  "terminal": true
 }
