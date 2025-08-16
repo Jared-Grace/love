@@ -36,12 +36,6 @@ export async function marker_down_generic(delta_get) {
       });
     let v_new = list_get(stack2, index_new);
     let copy = object_copy(stack1);
-    if (list_is(node)) {
-      list_add(node, copy);
-    } else {
-      list_is_assert(stack2);
-      let index = list_index_of(stack2, node);
-      list_insert(stack2, index, copy);
-    }
+    list_add(node, copy);
   }
 }
