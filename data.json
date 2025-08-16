@@ -1111,7 +1111,6 @@
   "o p",
   "ps",
   "o fs",
-  "mdc",
   "mg",
   "u fs",
   "oe fs",
@@ -1119,7 +1118,8 @@
   "fs jaa",
   "f",
   "jaa",
-  "cd"
+  "cd",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
