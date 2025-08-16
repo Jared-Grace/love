@@ -1,3 +1,4 @@
+import { marker_next } from "./marker_next.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { log } from "./log.mjs";
 import { js_node_type } from "./js_node_type.mjs";
@@ -15,8 +16,7 @@ import { js_unparse } from "./js_unparse.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
   async function lambda(a) {
-    let { stack2, stack1 } = a;
-    let index_next = list_index_of_next(stack2, stack1);
+    let result = await marker_next();
   }
   let v = await function_transform_marker_current(lambda);
 }
