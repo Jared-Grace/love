@@ -21,7 +21,7 @@ export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   function lambda(a) {
-    let { stack1 } = a;
+    let { stack2, stack1 } = a;
     let { next } = marker_next_get(a);
     list_remove(stack2, stack1);
     let vs = marker_down_choices_lambda(a);
