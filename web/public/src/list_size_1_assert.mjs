@@ -9,6 +9,6 @@ export function list_size_1_assert(list) {
     let message = list_size(list);
     let message2 = string_to(message);
     error(message2);
-    list_size_1_assert_message(list2);
+    list_size_1_assert_message(list2, message3);
   }
 }
