@@ -21,7 +21,6 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { log } from "./log.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_generic(delta_get) {
-  let f_name = await data_function_current_get();
   let v = await function_transform_marker_current(lambda);
   return v;
   async function lambda(a) {
