@@ -1148,7 +1148,6 @@
   "nj marker_enter",
   "s marker",
   "fws function_transform_marker current",
-  "oec",
   "u fts",
   "s function,types",
   "u ft",
@@ -1166,7 +1165,8 @@
   "s marker,ne",
   "s js,visit",
   "s type,js",
-  "c js_visit_type js_visit_types"
+  "c js_visit_type js_visit_types",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
