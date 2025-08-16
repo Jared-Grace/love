@@ -1119,7 +1119,6 @@
   "fc mr,m",
   "a mrt marker_remove_marker_top",
   "jaa",
-  "md 0",
   "me 1",
   "oe mdc",
   "s block",
@@ -1149,7 +1148,8 @@
   "md 1",
   "md 2",
   "mdc",
-  "md -1"
+  "md -1",
+  "md 0"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
