@@ -17,9 +17,9 @@ export async function js_unparse(ast) {
     };
     error_json(o);
   }
-  let output = null;
+  let code = null;
   try {
-    output = js_unparse_inner(ast);
+    code = js_unparse_inner(ast);
   } catch (e) {
     let current = null;
     async function lambda(v) {
@@ -28,11 +28,12 @@ export async function js_unparse(ast) {
         js_unparse_inner(node);
       } catch (e) {
         current = a;
-        return true;
+        let v2 = true;
+        return v2;
       }
     }
     await js_visit_each_async(ast, lambda);
     throw e;
   }
-  return output;
+  return code;
 }
