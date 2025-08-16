@@ -18,7 +18,7 @@ import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { log } from "./log.mjs";
-export async function marker_down_choices(delta_get) {
+export async function marker_down_choices() {
   marker("1");
   let f_name = await data_function_current_get();
   let v = await function_transform_marker(f_name, lambda);
