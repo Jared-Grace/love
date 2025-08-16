@@ -35,6 +35,7 @@ export async function marker_down_generic(delta_get) {
         choices,
         next_index: index,
       });
+    list_remove(stack2, stack1);
     let v_new = list_get(choices, index_new);
     let { stack, node } = v_new;
     log({
@@ -56,6 +57,5 @@ export async function marker_down_generic(delta_get) {
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, copy);
     }
-    list_remove(stack2, stack1);
   }
 }
