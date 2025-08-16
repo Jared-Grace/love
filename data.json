@@ -588,7 +588,6 @@
   "fs marker_top",
   "mr",
   "o mr",
-  "md 2",
   "o md",
   "u mb",
   "c md marker_bottom",
@@ -1137,7 +1136,8 @@
   "fs marker_down_choices_lambda",
   "x",
   "fs jaa",
-  "mdc"
+  "mdc",
+  "md 2"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
