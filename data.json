@@ -111,7 +111,8 @@
   "lz": "list_size",
   "mrt": "marker_remove_marker_top",
   "fy": "function_types",
-  "lk": "list_skip"
+  "lk": "list_skip",
+  "ll": "list_filter"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1158,7 +1159,8 @@
   "s find",
   "s skip",
   "a lk list_skip",
-  "s index,next"
+  "s index,next",
+  "a ll list_filter"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
