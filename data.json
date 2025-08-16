@@ -1167,7 +1167,8 @@
   "ps",
   "fts jme",
   "p",
-  "cd"
+  "cd",
+  "oe fts"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
