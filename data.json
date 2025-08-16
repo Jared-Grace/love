@@ -1122,10 +1122,10 @@
   "mdc",
   "oec",
   "cd",
-  "fc mr m",
   "p",
   "oe fc",
-  "ps"
+  "ps",
+  "fc mr m"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
