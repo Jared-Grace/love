@@ -46,6 +46,6 @@ export async function marker_down_generic(delta_get) {
       let index = list_index_of(stack1_v_new, node);
       list_insert(stack1_v_new, index, stack1);
     }
+    list_remove(stack2, stack1);
   }
-  list_remove(stack2, stack1);
 }
