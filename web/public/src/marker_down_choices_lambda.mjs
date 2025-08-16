@@ -1,4 +1,4 @@
-import { list_next } from "./list_next.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
@@ -14,7 +14,7 @@ export function marker_down_choices_lambda({ stack2, stack1, ast }) {
   function lambda3(la) {
     function lambda2(v) {
       let { stack, node } = v;
-      let next = list_next(list, item);
+      let includes = list_includes(list, item);
       if (node === body_block) {
         return;
       }
