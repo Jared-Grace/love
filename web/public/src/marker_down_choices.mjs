@@ -32,7 +32,8 @@ export async function marker_down_choices() {
       if (l) {
         return item;
       } else {
-        return js_unparse(item);
+        let output = js_unparse(item);
+        return output;
       }
     }
     let result = list_map(nodes, lambda2);
