@@ -25,8 +25,8 @@ export async function marker_bottom() {
   let v2 = await marker_down_generic(delta_get);
   return v2;
   function delta_get(a) {
-    let { choices, next_index } = a;
-    let v = list_index_last(choices) - next_index;
+    let { choices, index } = a;
+    let v = list_index_last(choices) - index;
     return v;
   }
 }
