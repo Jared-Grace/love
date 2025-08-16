@@ -1120,10 +1120,10 @@
   "function_transform_marker_empty",
   "fd",
   "m",
-  "mdc",
   "md 1",
   "oe md",
-  "cd"
+  "cd",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
