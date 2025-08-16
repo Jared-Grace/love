@@ -1113,7 +1113,6 @@
   "u fs",
   "oe fs",
   "p",
-  "fs jaa",
   "f",
   "jaa",
   "m",
@@ -1122,9 +1121,10 @@
   "oe mdc",
   "c marker_down_choices function_transform_marker_empty",
   "oec",
-  "function_transform_marker_empty"
+  "function_transform_marker_empty",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "function_transform_marker_empty",
+ "function_current": "js_await_add",
  "terminal": true
 }
