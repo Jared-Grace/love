@@ -28,12 +28,6 @@ export async function function_transform_marker(f_name, lambda$a) {
     async function lambda_marker(ast) {
       let visitors = js_type(ast, "CallExpression");
       async function lambda(v) {
-        let { node } = v;
-        log({
-          node,
-          n: await js_unparse(node),
-          marker_name,
-        });
         if (js_marker_named(v, marker_name)) {
           let a = function_transform_marker_arg(v, ast);
           la(await lambda$a(a));
