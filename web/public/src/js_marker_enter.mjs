@@ -9,12 +9,12 @@ import { marker } from "./marker.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
-  let f_types = js_types_function();
   async function lambda(a) {
     let { stack2, stack1 } = a;
     let index_next = list_index_of_next(stack2, stack1);
     let skipped = list_skip(stack2, index_next);
     function lambda2(item) {
+      let f_types = js_types_function();
       let includes = list_includes(f_types, item);
     }
     let result = list_filter(skipped, lambda2);
