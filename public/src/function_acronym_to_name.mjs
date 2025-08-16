@@ -15,5 +15,5 @@ export function function_acronym_to_name(alias) {
       expanded = list_single(list);
     }
   }
-  return expanded;
+  return {expanded,acronyms};
 }
