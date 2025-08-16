@@ -21,6 +21,7 @@ export async function js_marker_enter(ast) {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
+    log(message);
     function lambda2(v) {
       let { node } = v;
       log({
