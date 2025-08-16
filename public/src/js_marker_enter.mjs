@@ -17,18 +17,6 @@ export async function js_marker_enter(ast) {
   async function lambda(a) {
     let { stack2, stack1 } = a;
     let index_next = list_index_of_next(stack2, stack1);
-    let skipped = list_skip(stack2, index_next);
-    function lambda2(item) {
-      let nt = js_node_type(item);
-      log(nt);
-      let includes = js_types_function_includes(nt);
-      return includes;
-    }
-    let result = list_filter(stack2, lambda2);
-    log(result);
-    let message = await list_map_unordered_async(stack2, js_unparse);
-    log(message);
-    log(await js_unparse(stack1));
   }
   let v = await function_transform_marker_current(lambda);
 }
