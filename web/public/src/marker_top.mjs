@@ -32,6 +32,7 @@ export async function marker_top() {
     let markers = js_markers(ast);
     let ne = list_empty_not_is(markers);
     if (ne) {
+      return;
     }
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
