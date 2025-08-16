@@ -954,7 +954,6 @@
   "o ire",
   "fs js_if_else_if_combine",
   "ir type 'IfStatement'",
-  "md -1",
   "md -2",
   "fws nti if",
   "s return",
@@ -1123,7 +1122,8 @@
   "md 1",
   "oe md",
   "cd",
-  "mdc"
+  "mdc",
+  "md -1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
