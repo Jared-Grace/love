@@ -27,7 +27,7 @@ export async function js_marker_enter(ast) {
         node,
       });
     }
-    js_visit_types(next, ["Identifier"], lambda2);
+    js_visit_types(next, types_function, lambda2);
   }
   let v = await function_transform_marker_current(lambda);
 }
