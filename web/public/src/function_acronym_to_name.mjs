@@ -18,7 +18,7 @@ export function function_acronym_to_name(alias) {
   }
   let v = {
     expanded,
-    acronyms,
+    expandeds,
   };
   return v;
 }
