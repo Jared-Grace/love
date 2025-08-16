@@ -1145,12 +1145,12 @@
   "fs jaa",
   "md 2",
   "mdc",
-  "md -1",
   "md 0",
   "mrt",
   "oe marker_down_choices_lambda",
   "cd",
-  "md 1"
+  "md 1",
+  "md -1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
