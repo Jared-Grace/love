@@ -1127,7 +1127,8 @@
   "1p",
   "ps",
   "fc mr m",
-  "fcn mr,m"
+  "fcn mr,m",
+  "de marker_remove_marker_top"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
