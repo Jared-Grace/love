@@ -930,7 +930,6 @@
   "s code,fn",
   "s code,fun",
   "s function,ke",
-  "s index,next",
   "s assign",
   "s null",
   "fst function_params_consolidate simple",
@@ -1158,7 +1157,8 @@
   "a fy function_types",
   "s find",
   "s skip",
-  "a lk list_skip"
+  "a lk list_skip",
+  "s index,next"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
