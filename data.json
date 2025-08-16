@@ -1147,9 +1147,9 @@
   "n list_map_property_to",
   "oe list_map_property_to",
   "fs jaa",
-  "mdc",
   "md 1",
-  "md 2"
+  "md 2",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
