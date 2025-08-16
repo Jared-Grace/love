@@ -8,5 +8,7 @@ export async function function_transform(f_name, lambda$ast) {
   let { ast } = parsed;
   let result = await lambda$ast(ast);
   await file_js_unparse(parsed);
+  if (false) {
+  }
   return result;
 }
