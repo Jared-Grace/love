@@ -830,7 +830,6 @@
   "n lambda_invoke",
   "s stack",
   "s function,type",
-  "s types",
   "s assert",
   "s param",
   "fts js_let_add",
@@ -1166,7 +1165,8 @@
   "c js_visit_type js_visit_types",
   "oec",
   "p",
-  "ftc js_marker_enter js_marker_enter"
+  "ftc js_marker_enter js_marker_enter",
+  "s types"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
