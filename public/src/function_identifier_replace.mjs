@@ -28,5 +28,6 @@ export async function function_identifier_replace(
     }
     each(identifiers_named, lambda);
   }
-  return await function_transform(f_name, lambda2);
+  let v2 = await function_transform(f_name, lambda2);
+  return v2;
 }
