@@ -8,7 +8,7 @@ export async function js_marker_enter(ast) {
   let f_types = await function_types();
   async function lambda(a) {
     let { stack2, stack1 } = a;
-    let index = list_index_of(stack2, item);
+    let index = list_index_of(stack2, stack1);
     let skipped = list_skip(stack2, skip_count);
   }
   let v = await function_transform_marker_current(lambda);
