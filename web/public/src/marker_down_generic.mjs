@@ -26,7 +26,6 @@ export async function marker_down_generic(delta_get) {
   async function lambda(a) {
     let { stack2, stack1 } = a;
     let index = list_index_of(stack2, stack1);
-    list_remove(stack2, stack1);
     let index_new =
       index +
       delta_get({
@@ -37,6 +36,7 @@ export async function marker_down_generic(delta_get) {
       index_new,
     });
     let v_new = list_get(stack2, index_new);
+    list_remove(stack2, stack1);
     list_add(stack2, stack1);
   }
 }
