@@ -5,6 +5,6 @@ export function list_map_property(list, property_name) {
     let value = object_property_get(item, property_name);
     return value;
   }
-  let result = list_map(list, lambda);
-  return result;
+  let mapped = list_map(list, lambda);
+  return mapped;
 }
