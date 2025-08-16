@@ -12,7 +12,7 @@ import { log } from "./log.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { data_terminal_get } from "./data_terminal_get.mjs";
 export async function file_open(f_path) {
-  let terminal = data_terminal_get();
+  let terminal = await data_terminal_get();
   if (terminal) {
     let ext = function_name_extension();
     let ew = string_ends_with(f_path, ext);
