@@ -7,7 +7,9 @@ export function marker_down_choices_lambda({ stack2, stack1, ast }) {
   let body_block = js_declaration_single_block_blody(ast);
   function lambda3(la) {
     function lambda2(v) {
-      let { stack } = v;
+      let { stack, node } = v;
+      if (false) {
+      }
       if (
         js_stack_list_block_is(stack, 1) ||
         js_stack_list_block_is(stack, 0)
