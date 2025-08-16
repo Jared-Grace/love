@@ -1116,10 +1116,10 @@
   "fs jaa",
   "f",
   "jaa",
-  "mdc",
   "oec",
   "m",
-  "cd"
+  "cd",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
