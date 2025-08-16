@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { log } from "./log.mjs";
 import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
@@ -7,6 +8,7 @@ import { marker_first } from "./marker_first.mjs";
 import { marker_current_set } from "./marker_current_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 export async function function_current_set(f_name) {
+  marker("1");
   const { exists, unaliased } = await function_exists(f_name);
   assert(exists);
   function lambda(previous) {
