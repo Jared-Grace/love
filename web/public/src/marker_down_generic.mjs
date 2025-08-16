@@ -33,9 +33,6 @@ export async function marker_down_generic(delta_get) {
         choices: stack2,
         next_index: index,
       });
-    log({
-      index_new,
-    });
     list_insert(stack2, index_new, stack1);
   }
 }
