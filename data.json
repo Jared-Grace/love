@@ -1044,7 +1044,6 @@
   " fd ii",
   "fd ii",
   "fp dts",
-  "s marker",
   "as marker",
   "ma \"terminal\"",
   "fw ar marker_assign_replace_string",
@@ -1151,7 +1150,8 @@
   "md 1",
   "md -1",
   "nj marker_enter",
-  "oec"
+  "oec",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "js_marker_enter",
