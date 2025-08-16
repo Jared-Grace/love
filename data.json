@@ -1140,7 +1140,6 @@
   "mdc",
   "md 0",
   "oe marker_down_choices_lambda",
-  "cd",
   "mrt",
   "md 1",
   "md -1",
@@ -1167,7 +1166,8 @@
   "ftc js_marker_enter js_marker_enter",
   "s types",
   "ps",
-  "fts jme"
+  "fts jme",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
