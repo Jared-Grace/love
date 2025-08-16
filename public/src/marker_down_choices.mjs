@@ -19,6 +19,7 @@ import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { log } from "./log.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_choices() {
   let f_name = await data_function_current_get();
   let v = await function_transform_marker(f_name, lambda);
@@ -30,6 +31,8 @@ export async function marker_down_choices() {
       let l = list_is(item);
       if (l) {
         return item;
+      } else {
+        return js_unparse(item);
       }
     }
     let result = list_map(nodes, lambda2);
