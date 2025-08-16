@@ -1,3 +1,4 @@
+import { newFunction } from "./newFunction.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 import { js_type } from "./js_type.mjs";
@@ -21,8 +22,7 @@ export async function js_marker_enter(ast) {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
-    let code = await js_unparse(next);
-    log(code);
+    await newFunction(next);
     function lambda2(v) {
       let { node } = v;
       log({
