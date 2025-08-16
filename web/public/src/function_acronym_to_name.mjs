@@ -6,10 +6,10 @@ import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
 import { log } from "./log.mjs";
 export function function_acronym_to_name(alias) {
   let expanded = null;
+  let expandeds = null;
   let acronyms = function_names_to_acronyms();
   const exists2 = object_property_exists(acronyms, alias);
   if (exists2) {
-    let expandeds = null;
     expandeds = object_property_get(acronyms, alias);
     let s1 = list_size_1(expandeds);
     if (s1) {
