@@ -108,7 +108,8 @@
   "cd": "function_current_declaration_code",
   "ars": "marker_assign_replace_string",
   "mdc": "marker_down_choices",
-  "lz": "list_size"
+  "lz": "list_size",
+  "mrt": "marker_remove_marker_top"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1133,7 +1134,8 @@
   "n list_to",
   "oec",
   "ps",
-  "fc mr,m"
+  "fc mr,m",
+  "a mrt marker_remove_marker_top"
  ],
  "marker_current": "1",
  "function_current": "marker_remove_marker_top",
