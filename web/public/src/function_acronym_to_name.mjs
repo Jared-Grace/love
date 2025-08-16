@@ -9,11 +9,15 @@ export function function_acronym_to_name(alias) {
   let acronyms = function_names_to_acronyms();
   const exists2 = object_property_exists(acronyms, alias);
   if (exists2) {
-    let list = object_property_get(acronyms, alias);
-    let s1 = list_size_1(list);
+    let expandeds = object_property_get(acronyms, alias);
+    let s1 = list_size_1(expandeds);
     if (s1) {
-      expanded = list_single(list);
+      expanded = list_single(expandeds);
     }
   }
-  return {expanded,acronyms};
+  let v = {
+    expanded,
+    acronyms,
+  };
+  return v;
 }
