@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
 import { marker } from "./marker.mjs";
 import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
@@ -24,7 +25,7 @@ export async function marker_down_choices() {
   let f_name = await data_function_current_get();
   let v = await function_transform_marker(f_name, lambda);
   return v;
-  function lambda(a) {
+  async function lambda(a) {
     let vs = marker_down_choices_lambda(a);
     let nodes = list_map_property(vs, "node");
     async function lambda2(item) {
@@ -36,6 +37,10 @@ export async function marker_down_choices() {
         return code;
       }
     }
+    let waited = await list_map_unordered_async(
+      list,
+      async function lambda3(item2) {},
+    );
     let result = list_map(nodes, lambda2);
     return result;
   }
