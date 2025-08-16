@@ -1,3 +1,4 @@
+import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
 import { list_is_assert } from "./list_is_assert.mjs";
@@ -21,7 +22,7 @@ import { log } from "./log.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_generic(delta_get) {
   let f_name = await data_function_current_get();
-  let v = await function_transform_marker(f_name, lambda);
+  let v = await function_transform_marker_current(lambda);
   return v;
   async function lambda(a) {
     let { stack2, stack1 } = a;
