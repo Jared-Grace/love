@@ -1108,7 +1108,6 @@
   "mg",
   "u fs",
   "oe fs",
-  "p",
   "f",
   "jaa",
   "oe mdc",
@@ -1123,6 +1122,7 @@
   "cd",
   "md -1",
   "mdc",
+  "p",
   "md 0"
  ],
  "marker_current": "1",
