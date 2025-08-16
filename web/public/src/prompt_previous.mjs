@@ -23,5 +23,6 @@ export async function prompt_previous() {
   let difference = list_difference(prompts, other);
   let previous = list_last(difference);
   log_keep(previous);
-  return await function_run_line(previous);
+  let v = await function_run_line(previous);
+  return v;
 }
