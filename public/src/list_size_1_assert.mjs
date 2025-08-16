@@ -1,3 +1,4 @@
+import { list_size_1_assert_message } from "./list_size_1_assert_message.mjs";
 import { log } from "./log.mjs";
 import { string_to } from "./string_to.mjs";
 import { error } from "./error.mjs";
@@ -8,5 +9,6 @@ export function list_size_1_assert(list) {
     let message = list_size(list);
     let message2 = string_to(message);
     error(message2);
+    list_size_1_assert_message(list2);
   }
 }
