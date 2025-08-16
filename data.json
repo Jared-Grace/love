@@ -1135,9 +1135,9 @@
   "p",
   "cd",
   "s block",
-  "mdc",
   "fs marker_down_choices_lambda",
-  "x"
+  "x",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "marker_down_choices_lambda",
