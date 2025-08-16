@@ -11,9 +11,6 @@ export function js_marker_name_get(v) {
   let { stack } = v;
   let stack1 = list_get_end(stack, 1);
   if (!js_node_is(stack1)) {
-    log({
-      i,
-    });
     let v2 = null;
     return v2;
   }
