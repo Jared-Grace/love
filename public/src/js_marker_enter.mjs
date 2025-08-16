@@ -22,7 +22,7 @@ export async function js_marker_enter(ast) {
       return includes;
     }
     let result = list_filter(skipped, lambda2);
-    log(message);
+    log(result);
   }
   let v = await function_transform_marker_current(lambda);
 }
