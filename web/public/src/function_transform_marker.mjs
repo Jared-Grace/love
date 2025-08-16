@@ -27,6 +27,7 @@ export async function function_transform_marker(f_name, lambda$a) {
     async function lambda_marker(ast) {
       let visitors = js_type(ast, "CallExpression");
       async function lambda(v) {
+        let node = v;
         log({
           v,
         });
