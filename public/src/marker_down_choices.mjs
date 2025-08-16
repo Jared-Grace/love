@@ -37,9 +37,7 @@ export async function marker_down_choices() {
         return code;
       }
     }
-    async function lambda3(item2) {}
-    let waited = await list_map_unordered_async(list, lambda3);
-    let result = list_map(nodes, lambda2);
+    let waited = await list_map_unordered_async(list, lambda2);
     return result;
   }
 }
