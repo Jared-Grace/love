@@ -24,6 +24,7 @@ export async function js_marker_enter(ast) {
     }
     let result = list_filter(stack2, lambda2);
     log(result);
+    log(message);
   }
   let v = await function_transform_marker_current(lambda);
 }
