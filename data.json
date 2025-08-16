@@ -1125,7 +1125,6 @@
   "mdc",
   "md 0",
   "md 1",
-  "cd",
   "md -2",
   "p",
   "n list_to",
@@ -1135,7 +1134,8 @@
   "a mrt marker_remove_marker_top",
   "fs jaa",
   "md -1",
-  "jaa"
+  "jaa",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
