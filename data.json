@@ -1122,8 +1122,8 @@
   "md 1",
   "oe md",
   "cd",
-  "mdc",
-  "md -1"
+  "md -1",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
