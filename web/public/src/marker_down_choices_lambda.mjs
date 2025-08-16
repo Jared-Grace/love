@@ -15,6 +15,6 @@ export function marker_down_choices_lambda({ stack2, stack1, ast }) {
     }
     js_visit(ast, lambda2);
   }
-  let vs = list_adder(lambda3);
-  return vs;
+  let choices = list_adder(lambda3);
+  return choices;
 }
