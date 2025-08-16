@@ -33,6 +33,7 @@ export async function marker_down_choices() {
         return item;
       } else {
         let code = await js_unparse(ast);
+        return code;
       }
     }
     let result = list_map(nodes, lambda2);
