@@ -1120,7 +1120,6 @@
   "oe md",
   "md -1",
   "oec",
-  "cd",
   "oe fc",
   "p",
   "1p",
@@ -1131,7 +1130,8 @@
   "a lz list_size",
   "s size",
   "mdc",
-  "md 0"
+  "md 0",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
