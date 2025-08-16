@@ -7,6 +7,6 @@ import { marker_current_set } from "./marker_current_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 export async function data_terminal_set(v) {
   marker("1");
-  const property_name = "watch";
+  const property_name = "terminal";
   await data_boolean_set(property_name, v);
 }
