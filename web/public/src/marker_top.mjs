@@ -30,7 +30,7 @@ export async function marker_top() {
   return v;
   async function lambda(ast) {
     let markers = js_markers(ast);
-    let result = list_empty_not_is(markers);
+    let ne = list_empty_not_is(markers);
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_blody(ast);
