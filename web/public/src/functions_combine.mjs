@@ -20,7 +20,7 @@ import { string_split_comma } from "./string_split_comma.mjs";
 import { string_split } from "./string_split.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
-  let size = list_size(list);
+  let size = list_size(arguments);
   let { f_names, combined } = await functions_combine_name(f_names_comma);
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_blody(ast);
