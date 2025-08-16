@@ -38,6 +38,6 @@ export async function marker_down_choices() {
       }
     }
     let waited = await list_map_unordered_async(nodes, lambda2);
-    return result;
+    return waited;
   }
 }
