@@ -20,7 +20,7 @@ export async function js_marker_enter(ast) {
       let includes = js_types_function_includes(nt);
       return includes;
     }
-    let result = list_filter(skipped, js_types_function_includes);
+    let result = list_filter(skipped, lambda2);
   }
   let v = await function_transform_marker_current(lambda);
 }
