@@ -1130,7 +1130,6 @@
   "u me",
   "as mark",
   "oe mrt",
-  "ps",
   "cs list_size_1_assert message",
   "s size,1",
   "f",
@@ -1161,10 +1160,11 @@
   "a lk list_skip",
   "s index,next",
   "a ll list_filter",
-  "p",
   "ftc js_marker_enter js_marker_enter",
   "u jnt",
-  "a jnt js_node_type"
+  "p",
+  "a jnt js_node_type",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
