@@ -819,7 +819,6 @@
   "a at assert",
   "s remove",
   "s nodes",
-  "s type,js",
   "s name",
   "ftc js_dollar export function js_identifier_defineds(v) {",
   "ftc js_dollar js_identifier_defineds",
@@ -1165,7 +1164,8 @@
   "p",
   "ftc js_marker_enter js_marker_enter",
   "s marker,ne",
-  "s js,visit"
+  "s js,visit",
+  "s type,js"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
