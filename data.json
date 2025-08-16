@@ -1136,9 +1136,10 @@
   "p",
   "cd",
   "s block",
-  "mdc"
+  "mdc",
+  "fs marker_down_choices_lambda"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_down_choices_lambda",
  "terminal": true
 }
