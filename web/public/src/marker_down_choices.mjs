@@ -34,7 +34,7 @@ export async function marker_down_choices() {
       if (l) {
         return item;
       } else {
-        let code = await js_unparse(ast);
+        let code = await js_unparse(item);
         return code;
       }
     }
