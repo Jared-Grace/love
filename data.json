@@ -1096,7 +1096,6 @@
   "ir type \"CallExpression\"",
   "oe ir",
   "s current",
-  "oec",
   "md 1",
   "oe md",
   "md 0",
@@ -1119,7 +1118,8 @@
   "f",
   "jaa",
   "cd",
-  "mdc"
+  "mdc",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
