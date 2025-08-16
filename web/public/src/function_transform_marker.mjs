@@ -39,7 +39,11 @@ export async function function_transform_marker(f_name, lambda$a) {
     }
   }
   let lines = await list_adder_async(lambda2);
-  let message = json_to({});
+  let message = json_to({
+    f_name,
+    marker_name,
+    size: list_size(lines),
+  });
   list_size_1_assert_message(lines, message);
   return code;
 }
