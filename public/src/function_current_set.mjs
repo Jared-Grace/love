@@ -12,9 +12,9 @@ export async function function_current_set(f_name) {
     return unaliased;
   }
   await data_transform("function_current", null, lambda);
+  await marker_top();
   let name = marker_first();
   await marker_current_set(name);
-  await marker_top();
   let v = await function_parse_declaration_js_unparse(unaliased);
   return v;
 }
