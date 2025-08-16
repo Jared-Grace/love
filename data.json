@@ -1138,9 +1138,9 @@
   "oe mb",
   "cd",
   "fs jaa",
-  "md 1",
   "mrt",
-  "mdc"
+  "mdc",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
