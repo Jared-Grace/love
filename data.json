@@ -1099,7 +1099,6 @@
   "oec",
   "md 1",
   "oe md",
-  "cd",
   "md 0",
   "c marker_down_generic marker_down_choices",
   "a mdc marker_down_choices",
@@ -1119,7 +1118,8 @@
   "p",
   "fs jaa",
   "f",
-  "jaa"
+  "jaa",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
