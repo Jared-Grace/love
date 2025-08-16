@@ -112,7 +112,8 @@
   "mrt": "marker_remove_marker_top",
   "fy": "function_types",
   "lk": "list_skip",
-  "ll": "list_filter"
+  "ll": "list_filter",
+  "jnt": "js_node_type"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1162,7 +1163,8 @@
   "a ll list_filter",
   "p",
   "ftc js_marker_enter js_marker_enter",
-  "u jnt"
+  "u jnt",
+  "a jnt js_node_type"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
