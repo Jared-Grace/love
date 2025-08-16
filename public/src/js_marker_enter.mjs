@@ -15,7 +15,7 @@ export async function js_marker_enter(ast) {
     let { stack2, stack1 } = a;
     let index_next = list_index_of_next(stack2, stack1);
     let skipped = list_skip(stack2, index_next);
-    let result = list_filter(skipped, js_types_function_includes);
+    let result = list_filter(stack2, js_types_function_includes);
     log([result]);
     return result;
   }
