@@ -745,7 +745,6 @@
   "a lg list_get",
   "u st",
   "fs js_declaration_param_add",
-  "mn",
   "mf 1 2 js_declaration_params_get",
   "s js_dollar_g",
   "ts js_dollar_g",
@@ -1141,9 +1140,10 @@
   "mrt",
   "md 1",
   "md c",
-  "mdc"
+  "mdc",
+  "mn"
  ],
- "marker_current": "1",
+ "marker_current": "2",
  "function_current": "js_await_add",
  "terminal": true
 }
