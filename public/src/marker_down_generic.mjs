@@ -24,16 +24,16 @@ export async function marker_down_generic(delta_get) {
     let { stack2, stack1 } = a;
     let { next } = marker_next_get(a);
     list_remove(stack2, stack1);
-    let vs = marker_down_choices_lambda(a);
-    let nodes = list_map_property(vs, "node");
+    let choices = marker_down_choices_lambda(a);
+    let nodes = list_map_property(choices, "node");
     let next_index = list_index_of(nodes, next);
     let index_new =
       next_index +
       delta_get({
-        vs,
+        vs: choices,
         next_index,
       });
-    let v_new = list_get(vs, index_new);
+    let v_new = list_get(choices, index_new);
     let { stack, node } = v_new;
     if (list_is(node)) {
       list_add(node, stack1);
