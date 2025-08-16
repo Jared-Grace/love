@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { js_types_function_includes } from "./js_types_function_includes.mjs";
 import { js_types_function } from "./js_types_function.mjs";
@@ -21,6 +22,7 @@ export async function js_marker_enter(ast) {
       return includes;
     }
     let result = list_filter(skipped, lambda2);
+    log(message);
   }
   let v = await function_transform_marker_current(lambda);
 }
