@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { log } from "./log.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { js_types_function_includes } from "./js_types_function_includes.mjs";
@@ -25,6 +26,8 @@ export async function js_marker_enter(ast) {
     }
     let result = list_filter(stack2, lambda2);
     log(result);
+    let message = list_map_unordered_async(stack2, js_unparse);
+    log(message);
     log(await js_unparse(stack1));
   }
   let v = await function_transform_marker_current(lambda);
