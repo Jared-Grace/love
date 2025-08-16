@@ -21,7 +21,8 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
-  return await function_new_transform(f_name_wrapped, lambda);
+  let v = await function_new_transform(f_name_wrapped, lambda);
+  return v;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
     let code = js_code_call_args_await_maybe(
