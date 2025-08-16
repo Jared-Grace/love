@@ -12,37 +12,43 @@ export function js_marker_name_get(v) {
   let i = 0;
   let stack1 = list_get_end(stack, 1);
   if (!js_node_is(stack1)) {
-    log(message);
+    log(i++);
     let v2 = null;
     return v2;
   }
   if (!js_node_type_is(stack1, "ExpressionStatement")) {
+    log(i++);
     let v3 = null;
     return v3;
   }
   let { node } = v;
   let { callee } = node;
   if (!js_node_type_is(callee, "Identifier")) {
+    log(i++);
     let v4 = null;
     return v4;
   }
   let { name } = callee;
   if (name !== marker.name) {
+    log(i++);
     let v5 = null;
     return v5;
   }
   let { arguments: arguments2 } = node;
   if (list_empty_is(arguments2)) {
+    log(i++);
     let v6 = null;
     return v6;
   }
   let a_first = list_first(arguments2);
   if (!js_node_type_is(a_first, "Literal")) {
+    log(i++);
     let v7 = null;
     return v7;
   }
   let stack2 = list_get_end(stack, 2);
   if (!list_is(stack2)) {
+    log(i++);
     error();
   }
   let { value } = a_first;
