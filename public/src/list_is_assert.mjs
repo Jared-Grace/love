@@ -1,3 +1,4 @@
+import { assert_json } from "./assert_json.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { assert } from "./assert.mjs";
 import { list_is } from "./list_is.mjs";
@@ -7,6 +8,5 @@ export function list_is_assert(stack1_v_new) {
   assert(result);
   return;
   let o = null;
-  let message = json_to(o);
-  assert_message(b, message);
+  assert_json(o);
 }
