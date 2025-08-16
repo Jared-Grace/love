@@ -23,8 +23,8 @@ import { log } from "./log.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_choices() {
   let f_name = await data_function_current_get();
-  let v = await function_transform_marker(f_name, lambda);
   let choices = null;
+  let v = await function_transform_marker(f_name, lambda);
   return choices;
   async function lambda(a) {
     let vs = marker_down_choices_lambda(a);
