@@ -27,13 +27,12 @@ export async function marker_down_choices() {
   function lambda(a) {
     let vs = marker_down_choices_lambda(a);
     let nodes = list_map_property(vs, "node");
-    function lambda2(item) {
+    async function lambda2(item) {
       let l = list_is(item);
       if (l) {
         return item;
       } else {
-        let output = js_unparse(item);
-        return output;
+        let code = await js_unparse(ast);
       }
     }
     let result = list_map(nodes, lambda2);
