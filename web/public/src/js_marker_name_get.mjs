@@ -9,8 +9,10 @@ import { js_node_is } from "./js_node_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 export function js_marker_name_get(v) {
   let { stack } = v;
+  let i = 0;
   let stack1 = list_get_end(stack, 1);
   if (!js_node_is(stack1)) {
+    log(message);
     let v2 = null;
     return v2;
   }
