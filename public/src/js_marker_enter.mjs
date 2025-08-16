@@ -22,7 +22,7 @@ export async function js_marker_enter(ast) {
     let n = marker_next_get(a);
     let { next } = n;
     function lambda2(v) {
-      let node = v;
+      let { node } = v;
     }
     js_visit_types(next, types_function, lambda2);
   }
