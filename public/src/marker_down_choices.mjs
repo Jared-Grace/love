@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { marker } from "./marker.mjs";
 import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
 import { list_is_assert } from "./list_is_assert.mjs";
@@ -25,6 +26,7 @@ export async function marker_down_choices() {
   function lambda(a) {
     let vs = marker_down_choices_lambda(a);
     let nodes = list_map_property(vs, "node");
+    let result = list_map(list, function lambda2(item) {});
     return nodes;
   }
 }
