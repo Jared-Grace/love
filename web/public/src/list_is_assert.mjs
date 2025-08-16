@@ -5,6 +5,8 @@ import { list_is } from "./list_is.mjs";
 import { json_to } from "./json_to.mjs";
 export function list_is_assert(list) {
   let result = list_is(list);
-  assert_json(result,{list});
+  assert_json(result, {
+    list,
+  });
   return;
 }
