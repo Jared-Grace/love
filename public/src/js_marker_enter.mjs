@@ -16,7 +16,7 @@ import { js_unparse } from "./js_unparse.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
   async function lambda(a) {
-    let v2 = marker_next_get(a2);
+    let v2 = marker_next_get(a);
   }
   let v = await function_transform_marker_current(lambda);
 }
