@@ -1133,13 +1133,13 @@
   "fs marker_down_choices_lambda",
   "x",
   "fs jaa",
-  "cd",
   "md 2",
   "md 3",
   "mdc",
   "md -1",
   "o mb",
-  "oe mb"
+  "oe mb",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_bottom",
