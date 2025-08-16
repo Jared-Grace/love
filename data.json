@@ -851,7 +851,6 @@
   "u jsp",
   "s parse",
   "a jps js_parse_statement",
-  "s block",
   "u fc",
   "a fc functions_combine",
   "fc fs t",
@@ -1136,7 +1135,8 @@
   "md 1",
   "p",
   "mdc",
-  "cd"
+  "cd",
+  "s block"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
