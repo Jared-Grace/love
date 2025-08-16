@@ -28,34 +28,20 @@ export async function marker_down_generic(delta_get) {
     let { next } = marker_next_get(a);
     let index = list_index_of(stack2, stack1);
     list_remove(stack2, stack1);
-    let choices = marker_down_choices_lambda(a);
-    let nodes = list_map_property(choices, "node");
     let index_new =
       index +
       delta_get({
-        choices,
+        choices: stack2,
         next_index: index,
       });
-    let v_new = list_get(choices, index_new);
-    let { stack, node } = v_new;
-    log({
-      next_index: index,
-      index_new,
-      node: await js_unparse(node),
-    });
+    let v_new = list_get(stack2, index_new);
     let copy = object_copy(stack1);
     if (list_is(node)) {
       list_add(node, copy);
     } else {
-      let stack1_v_new = null;
-      if (false) {
-        stack1_v_new = list_get_end(stack, 1);
-      } else {
-        stack1_v_new = stack2;
-      }
-      list_is_assert(stack1_v_new);
-      let index = list_index_of(stack1_v_new, node);
-      list_insert(stack1_v_new, index, copy);
+      list_is_assert(stack2);
+      let index = list_index_of(stack2, node);
+      list_insert(stack2, index, copy);
     }
   }
 }
