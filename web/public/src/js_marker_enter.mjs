@@ -1,3 +1,4 @@
+import { js_node_type } from "./js_node_type.mjs";
 import { js_types_function_includes } from "./js_types_function_includes.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -15,7 +16,7 @@ export async function js_marker_enter(ast) {
     let index_next = list_index_of_next(stack2, stack1);
     let skipped = list_skip(stack2, index_next);
     function lambda2(item) {
-      jnt;
+      let result2 = js_node_type(n);
       let includes = js_types_function_includes(item);
       return includes;
     }
