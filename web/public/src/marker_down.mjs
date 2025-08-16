@@ -19,7 +19,8 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 export async function marker_down(delta) {
-  return await marker_down_generic(delta_get);
+  let v = await marker_down_generic(delta_get);
+  return v;
   function delta_get() {
     let i = integer_to(delta);
     return i;
