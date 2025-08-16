@@ -26,7 +26,7 @@ export async function js_marker_enter(ast) {
     }
     let result = list_filter(stack2, lambda2);
     log(result);
-    let message = list_map_unordered_async(stack2, js_unparse);
+    let message = await list_map_unordered_async(stack2, js_unparse);
     log(message);
     log(await js_unparse(stack1));
   }
