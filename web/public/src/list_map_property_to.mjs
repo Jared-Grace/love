@@ -4,7 +4,7 @@ import { marker } from "./marker.mjs";
 export function list_map_property_to(list, name) {
   function lambda(item) {
     let o = {};
-    object_property_set(object, property_name, value);
+    object_property_set(o, name, item);
   }
   let mappeed = list_map(list, lambda);
 }
