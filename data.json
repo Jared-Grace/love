@@ -1158,7 +1158,6 @@
   "a ll list_filter",
   "u jnt",
   "a jnt js_node_type",
-  "ps",
   "s marker,ne",
   "s js,visit",
   "s type,js",
@@ -1166,7 +1165,8 @@
   "oec",
   "p",
   "ftc js_marker_enter js_marker_enter",
-  "s types"
+  "s types",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
