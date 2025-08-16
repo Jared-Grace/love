@@ -19,6 +19,7 @@ import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function function_transform_marker(f_name, lambda$a) {
   let marker_name = await data_marker_current_get();
   let code = null;
@@ -27,9 +28,9 @@ export async function function_transform_marker(f_name, lambda$a) {
     async function lambda_marker(ast) {
       let visitors = js_type(ast, "CallExpression");
       async function lambda(v) {
-        let node = v;
+        let { node } = v;
         log({
-          v,
+          v: js_unparse(node),
         });
         if (js_marker_named(v, marker_name)) {
           let a = function_transform_marker_arg(v, ast);
