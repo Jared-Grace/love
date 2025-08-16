@@ -9,7 +9,7 @@ export function js_visit_types(ast, type, lambda$v) {
   marker("1");
   function lambda(v) {
     let { node } = v;
-    if (js_node_is(node) && js_node_types_is(node, type)) {
+    if (js_node_is(node) && js_node_types_is(node, types)) {
       lambda$v(v);
     }
   }
