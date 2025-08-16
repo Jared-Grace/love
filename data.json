@@ -1143,7 +1143,8 @@
   "u me",
   "as mark",
   "mrt",
-  "cd"
+  "cd",
+  "oe mrt"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
