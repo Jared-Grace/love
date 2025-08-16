@@ -17,6 +17,7 @@ import { list_index_of_next } from "./list_index_of_next.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function js_marker_enter(ast) {
   marker("1");
+  let types_function = js_types_function();
   async function lambda(a) {
     let v2 = marker_next_get(a);
     function lambda2(v3) {}
