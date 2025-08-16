@@ -1125,7 +1125,6 @@
   "md 0",
   "me 1",
   "oe mdc",
-  "p",
   "s block",
   "fs marker_down_choices_lambda",
   "x",
@@ -1144,6 +1143,7 @@
   "oe mrt",
   "cd",
   "ps",
+  "p",
   "mdc"
  ],
  "marker_current": "2",
