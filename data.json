@@ -1116,7 +1116,6 @@
   "fd",
   "m",
   "oe md",
-  "oec",
   "oe fc",
   "1p",
   "ps",
@@ -1133,7 +1132,8 @@
   "md -1",
   "p",
   "fc mr,m",
-  "n list_to"
+  "n list_to",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "list_to",
