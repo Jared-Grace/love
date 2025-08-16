@@ -1103,7 +1103,6 @@
   "mg",
   "u fs",
   "oe fs",
-  "f",
   "c marker_down_choices function_transform_marker_empty",
   "function_transform_marker_empty",
   "fd",
@@ -1146,7 +1145,8 @@
   "p",
   "cs list_size_1_assert message",
   "s size,1",
-  "mdc"
+  "mdc",
+  "f"
  ],
  "marker_current": "2",
  "function_current": "list_size_1_assert_message",
