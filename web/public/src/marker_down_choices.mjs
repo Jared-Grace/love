@@ -28,6 +28,7 @@ export async function marker_down_choices() {
   async function lambda(a) {
     let vs = marker_down_choices_lambda(a);
     let nodes = list_map_property(vs, "node");
+    let ast = a;
     async function lambda2(item) {
       let l = list_is(item);
       if (l) {
