@@ -110,7 +110,8 @@
   "mdc": "marker_down_choices",
   "lz": "list_size",
   "mrt": "marker_remove_marker_top",
-  "fy": "function_types"
+  "fy": "function_types",
+  "lk": "list_skip"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1156,7 +1157,8 @@
   "u ft",
   "a fy function_types",
   "s find",
-  "s skip"
+  "s skip",
+  "a lk list_skip"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
