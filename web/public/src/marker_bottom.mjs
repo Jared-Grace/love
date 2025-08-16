@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { marker_down_generic } from "./marker_down_generic.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_get } from "./list_get.mjs";
@@ -20,6 +21,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 export async function marker_bottom() {
+  marker("1");
   let v2 = await marker_down_generic(delta_get);
   return v2;
   function delta_get(a) {
