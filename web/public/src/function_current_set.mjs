@@ -1,3 +1,4 @@
+import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { assert } from "./assert.mjs";
@@ -13,6 +14,7 @@ export async function function_current_set(f_name) {
   await data_transform("function_current", null, lambda);
   let name = marker_first();
   await marker_current_set(name);
+  await marker_top();
   let v = await function_parse_declaration_js_unparse(unaliased);
   return v;
 }
