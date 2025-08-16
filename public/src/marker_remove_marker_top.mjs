@@ -4,5 +4,5 @@ import { marker } from "./marker.mjs";
 export async function marker_remove_marker_top() {
   marker("1");
   await marker_remove();
-  await marker_top();
+  return await marker_top();
 }
