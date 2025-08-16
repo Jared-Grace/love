@@ -1131,13 +1131,13 @@
   "oe mdc",
   "md 1",
   "p",
-  "cd",
   "s block",
   "fs marker_down_choices_lambda",
   "x",
   "fs jaa",
   "mdc",
-  "md 2"
+  "md 2",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
