@@ -1160,7 +1160,8 @@
   "s skip",
   "a lk list_skip",
   "s index,next",
-  "a ll list_filter"
+  "a ll list_filter",
+  "ftc js_marker_enter js_marker_enter"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
