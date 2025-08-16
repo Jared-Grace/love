@@ -20,7 +20,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { assert } from "./assert.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 export async function marker_bottom() {
-  await marker_down_generic(delta_get);
+  return await marker_down_generic(delta_get);
   function delta_get(a) {
     let { choices, next_index } = a;
     let v = list_index_last(choices) - next_index;
