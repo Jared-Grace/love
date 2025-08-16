@@ -1165,9 +1165,10 @@
   "ftc js_marker_enter js_marker_enter",
   "s marker,ne",
   "s js,visit",
-  "s type,js"
+  "s type,js",
+  "c js_visit_type js_visit_types"
  ],
  "marker_current": "1",
- "function_current": "function_transform_marker_current",
+ "function_current": "js_visit_types",
  "terminal": true
 }
