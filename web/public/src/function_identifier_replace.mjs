@@ -23,9 +23,10 @@ export async function function_identifier_replace(
     marker("1");
     let from = js_parse_expression(replacement);
     function lambda(i) {
-      return object_replace(i, from);
+      let v = object_replace(i, from);
+      return v;
     }
     each(identifiers_named, lambda);
   }
-  await function_transform(f_name, lambda2);
+  return await function_transform(f_name, lambda2);
 }
