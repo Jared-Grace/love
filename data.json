@@ -1166,7 +1166,8 @@
   "p",
   "ftc js_marker_enter js_marker_enter",
   "s types",
-  "ps"
+  "ps",
+  "fts jme"
  ],
  "marker_current": "1",
  "function_current": "js_visit_types",
