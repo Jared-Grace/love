@@ -26,10 +26,6 @@ export function js_marker_name_get(v) {
   }
   let { name } = callee;
   if (name !== marker.name) {
-    log({
-      i,
-      name,
-    });
     let v5 = null;
     return v5;
   }
