@@ -1122,7 +1122,6 @@
   "de marker_remove_marker_top",
   "a lz list_size",
   "s size",
-  "mdc",
   "md -2",
   "p",
   "n list_to",
@@ -1136,7 +1135,8 @@
   "md -1",
   "md 1",
   "me 1",
-  "cd"
+  "cd",
+  "mdc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
