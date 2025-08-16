@@ -1109,7 +1109,6 @@
   "u fs",
   "oe fs",
   "f",
-  "jaa",
   "oe mdc",
   "c marker_down_choices function_transform_marker_empty",
   "function_transform_marker_empty",
@@ -1135,7 +1134,8 @@
   "fc mr,m",
   "a mrt marker_remove_marker_top",
   "fs jaa",
-  "md -1"
+  "md -1",
+  "jaa"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
