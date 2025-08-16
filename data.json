@@ -1118,7 +1118,6 @@
   "oe md",
   "oe fc",
   "1p",
-  "ps",
   "fc mr m",
   "fcn mr,m",
   "de marker_remove_marker_top",
@@ -1133,7 +1132,8 @@
   "p",
   "fc mr,m",
   "n list_to",
-  "oec"
+  "oec",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "list_to",
