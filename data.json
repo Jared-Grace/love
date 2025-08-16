@@ -1125,7 +1125,6 @@
   "ps",
   "fc mr,m",
   "a mrt marker_remove_marker_top",
-  "fs jaa",
   "jaa",
   "md 0",
   "md -1",
@@ -1137,9 +1136,10 @@
   "s block",
   "fs marker_down_choices_lambda",
   "x",
-  "mdc"
+  "mdc",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_down_choices_lambda",
+ "function_current": "js_await_add",
  "terminal": true
 }
