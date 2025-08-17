@@ -4,7 +4,7 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
   function lambda(v) {
-    let node = v;
+    let { node } = v;
   }
   let list = js_visitors(ast);
   each(list, lambda);
