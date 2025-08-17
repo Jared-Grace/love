@@ -7,7 +7,7 @@ export function string_includes(string, item) {
     string,
     item,
   };
-  string_is_assert_json(o);
+  string_is_assert_json(item, o);
   let v = string.includes(item);
   return v;
 }
