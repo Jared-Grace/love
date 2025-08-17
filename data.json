@@ -1179,7 +1179,6 @@
   "n list_last_or_null",
   "oe ftc",
   "oe fts",
-  "p",
   "n null_not_is",
   "u lio",
   "a lx list_index_of",
@@ -1191,6 +1190,7 @@
   "s equ",
   "fws equal not",
   "ps",
+  "p",
   "fts jbcg"
  ],
  "marker_current": "1",
