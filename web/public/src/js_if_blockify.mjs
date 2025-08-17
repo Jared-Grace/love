@@ -12,15 +12,6 @@ export function js_if_blockify(ast) {
     let body = object_property_get(node, "consequent");
     const type = "BlockStatement";
     let nti = js_node_type_not_is(body, type);
-    if (nti) {
-      let copy = object_copy(body);
-      let r = js_statement_return("");
-      object_property_set(r, "argument", copy);
-      object_replace(body, {
-        type: "BlockStatement",
-        body: [r],
-      });
-    }
   }
   js_visit_type(ast, "IfStatement", lambda);
 }
