@@ -11,5 +11,5 @@ export function js_dollar_ie({ stack1 }) {
   js_dollar_i({
     stack1,
   });
-  log(message);
+  log(stack1);
 }
