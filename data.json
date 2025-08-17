@@ -1197,7 +1197,6 @@
   "u ii",
   "a ini integer_is",
   "p",
-  "ps",
   "fts jbcg",
   "o au",
   "nj if_blockify",
@@ -1207,7 +1206,8 @@
   "s js,type",
   "s each",
   "u lu",
-  "a lu log_unparse"
+  "a lu log_unparse",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
