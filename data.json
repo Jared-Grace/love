@@ -949,7 +949,6 @@
   "ir type 'IfStatement'",
   "fws nti if",
   "s return",
-  "o au",
   "u nt",
   "ac nti nt",
   "u n",
@@ -1201,9 +1200,10 @@
   "a ini integer_is",
   "p",
   "ps",
-  "fts jbcg"
+  "fts jbcg",
+  "o au"
  ],
  "marker_current": "1",
- "function_current": "integer_is",
+ "function_current": "function_auto",
  "terminal": false
 }
