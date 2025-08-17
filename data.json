@@ -1171,9 +1171,10 @@
   "u jv",
   "fw jv js_visitors",
   "oec",
-  "dts 0"
+  "dts 0",
+  "nj block_child_graph"
  ],
  "marker_current": "1",
- "function_current": "js_visitors",
+ "function_current": "js_block_child_graph",
  "terminal": false
 }
