@@ -8,7 +8,7 @@ import { js_node_type } from "./js_node_type.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-export async function js_if_blockify_generic(ast, type,property_name) {
+export async function js_if_blockify_generic(ast, type, property_name) {
   async function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, property_name);
