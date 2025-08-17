@@ -1,3 +1,4 @@
+import { list_is } from "./list_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { log } from "./log.mjs";
@@ -11,8 +12,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node, stack } = v;
       let last = js_stack_last(stack, "BlockStatement");
-      function lambda3(item) {}
-      each(list, lambda3);
+      let l = list_is(value);
       if (last) {
       }
       la([last, node]);
