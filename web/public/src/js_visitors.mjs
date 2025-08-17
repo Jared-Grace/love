@@ -1,7 +1,9 @@
+import { list_adder } from "./list_adder.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { marker } from "./marker.mjs";
-export function js_visitors(ast, lambda$v) {
+export function js_visitors(ast) {
   marker("1");
+  let list = list_adder(function lambda(la) {});
   let v = js_visit(ast, lambda$v);
   return v;
 }
