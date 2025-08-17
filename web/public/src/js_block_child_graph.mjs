@@ -21,6 +21,12 @@ export function js_block_child_graph(ast) {
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
+        let { body } = left;
+        let includes = list_includes(body, right);
+        if (includes) {
+          la([left, right]);
+          return;
+        }
         let index = list_index_of(stack, left);
         let index_2 = index + 2;
         let ii = list_index_is(stack, index_2);
@@ -32,11 +38,6 @@ export function js_block_child_graph(ast) {
             la([left, right]);
             return;
           }
-        }
-        let { body } = left;
-        let includes = list_includes(body, right);
-        if (includes) {
-          la([left, right]);
         }
       }
     }
