@@ -7,7 +7,7 @@ export function js_bang_to_not(ast) {
   !a;
   function lambda(v) {
     let { node } = v;
-    log(message);
+    log(node);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
 }
