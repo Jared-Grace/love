@@ -119,7 +119,8 @@
   "ini": "integer_is",
   "lu": "log_unparse",
   "ntsi": "js_node_types_is",
-  "jv": "js_visit"
+  "jv": "js_visit",
+  "jvt": "js_visit_type"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1223,7 +1224,8 @@
   "u jv",
   "a jv js_visit",
   "ts",
-  "s js,type"
+  "s js,type",
+  "a jvt js_visit_type"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
