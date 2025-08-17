@@ -118,7 +118,8 @@
   "x": "exit",
   "ini": "integer_is",
   "lu": "log_unparse",
-  "ntsi": "js_node_types_is"
+  "ntsi": "js_node_types_is",
+  "jv": "js_visit"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1221,7 +1222,8 @@
   "ftc jbcgu",
   "s size",
   "nj bang_to_not",
-  "u jv"
+  "u jv",
+  "a jv js_visit"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
