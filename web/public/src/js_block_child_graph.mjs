@@ -12,7 +12,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node, stack } = v;
       let last = js_stack_last(stack, "BlockStatement");
-      let v2 = null_not_is(value);
+      let nn = null_not_is(value);
       if (last) {
       }
       la([last, node]);
