@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { exit } from "./exit.mjs";
 import { log_unparse } from "./log_unparse.mjs";
@@ -19,7 +20,8 @@ export async function js_if_blockify(ast) {
     let nti = js_node_type_not_is(body, type);
     if (nti) {
       let copy = object_copy(body);
-      let result = js_node_type(body);
+      let nt = js_node_type(body);
+      let includes = list_includes(list, item);
       let r = js_statement_return("");
       object_property_set(r, "argument", copy);
       object_replace(body, {
