@@ -6,15 +6,25 @@ import { list_filter } from "./list_filter.mjs";
 import { string_split } from "./string_split.mjs";
 import { log } from "./log.mjs";
 export function search_generic(search, f_names, value_get) {
-  let terms = string_split(search, ",");log(terms)
-  let f_names_search = list_filter(f_names, (n) =>
-    {log({n})
-      return list_all(terms, (term) => string_includes(n, term))},
-  );
+  let terms = string_split(search, ",");
+  log(terms);
+  function lambda2(n) {
+    log({
+      n,
+    });
+    function lambda(term) {
+      let v = string_includes(n, term);
+      return v;
+    }
+    let v2 = list_all(terms, lambda);
+    return v2;
+  }
+  let f_names_search = list_filter(f_names, lambda2);
   let result = {};
-  each(f_names_search, (n) => {
+  function lambda3(n) {
     let value = value_get(n);
     object_property_set(result, n, value);
-  });
+  }
+  each(f_names_search, lambda3);
   return result;
 }
