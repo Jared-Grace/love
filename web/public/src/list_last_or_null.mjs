@@ -6,5 +6,6 @@ export function list_last_or_null(list) {
     let v = null;
     return v;
   }
-  return marker("1");
+  let v2 = marker("1");
+  return v2;
 }
