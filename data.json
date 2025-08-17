@@ -116,7 +116,8 @@
   "lx": "list_index_of",
   "me": "marker_expand",
   "x": "exit",
-  "ini": "integer_is"
+  "ini": "integer_is",
+  "lu": "log_unparse"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1205,7 +1206,8 @@
   "s visit,type",
   "s js,type",
   "s each",
-  "u lu"
+  "u lu",
+  "a lu log_unparse"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
