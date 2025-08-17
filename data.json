@@ -1212,7 +1212,8 @@
   "a ntsi js_node_types_is",
   "ps",
   "fts jbcg",
-  "s auto"
+  "s auto",
+  "cs js_block_child_graph unparse"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
