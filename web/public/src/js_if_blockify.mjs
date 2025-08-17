@@ -1,4 +1,4 @@
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_node_type } from "./js_node_type.mjs";
 import { exit } from "./exit.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
@@ -19,7 +19,7 @@ export async function js_if_blockify(ast) {
     let nti = js_node_type_not_is(body, type);
     if (nti) {
       let copy = object_copy(body);
-      let type_is = js_node_type_is(node2, type2);
+      let result = js_node_type(n);
       let r = js_statement_return("");
       object_property_set(r, "argument", copy);
       object_replace(body, {
