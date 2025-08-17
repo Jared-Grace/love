@@ -22,8 +22,7 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
   async function lambda(edge) {
-    function lambda2(item) {}
-    let waited = await list_map_unordered_async(list, js_unparse);
+    let waited = await list_map_unordered_async(edge, js_unparse);
     return waited;
   }
   let mapped = list_map(edges, lambda);
