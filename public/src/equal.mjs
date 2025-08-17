@@ -1,4 +1,4 @@
 export function equal(left, right) {
-  let v2 = left === right;
-  return v2;
+  let eq = left === right;
+  return eq;
 }
