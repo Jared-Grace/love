@@ -1181,9 +1181,10 @@
   "oe ftc",
   "ps",
   "fts jbcg",
-  "oe fts"
+  "oe fts",
+  "n null_not_is"
  ],
  "marker_current": "1",
- "function_current": "list_last_or_null",
+ "function_current": "null_not_is",
  "terminal": false
 }
