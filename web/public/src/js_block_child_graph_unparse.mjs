@@ -20,7 +20,8 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
   function lambda(edge) {
-    let mapped2 = list_map(list, function lambda2(item) {});
+    function lambda2(item) {}
+    let mapped2 = list_map(list, lambda2);
   }
   let mapped = list_map(edges, lambda);
   return mapped;
