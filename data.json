@@ -1170,9 +1170,10 @@
   "fts jme",
   "u jv",
   "fw jv js_visitors",
-  "oec"
+  "oec",
+  "dts 0"
  ],
  "marker_current": "1",
  "function_current": "js_visitors",
- "terminal": true
+ "terminal": false
 }
