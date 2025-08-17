@@ -46,7 +46,6 @@
   "mx": "marker_next",
   "mn": "marker_new",
   "mca": "marker_call_atomize",
-  "x": "marker_expand",
   "ms": "marker_current_set",
   "as": "function_aliases_search",
   "mg": "data_marker_current_get",
@@ -114,7 +113,8 @@
   "lk": "list_skip",
   "ll": "list_filter",
   "jnt": "js_node_type",
-  "lx": "list_index_of"
+  "lx": "list_index_of",
+  "me": "marker_expand"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1192,7 +1192,9 @@
   "ps",
   "p",
   "fts jbcg",
-  "n exit"
+  "n exit",
+  "a x exit",
+  "ac x me"
  ],
  "marker_current": "1",
  "function_current": "exit",
