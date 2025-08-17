@@ -594,7 +594,6 @@
   "u mb",
   "c md marker_bottom",
   "a mb marker_bottom",
-  "s last",
   "n list_last_is",
   "ms 2",
   "mb",
@@ -1172,7 +1171,8 @@
   "fw jv js_visitors",
   "oec",
   "dts 0",
-  "nj block_child_graph"
+  "nj block_child_graph",
+  "s last"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph",
