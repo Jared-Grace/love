@@ -52,6 +52,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_next } from "./list_next.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { each_async } from "./each_async.mjs";
+import { js_dollar_rt } from "./js_dollar_rt.mjs";
 export async function js_dollar(ast) {
   let seconds = [
     {
@@ -64,7 +65,7 @@ export async function js_dollar(ast) {
     },
     {
       name: "rt",
-      fn: js_dollar_r,
+      fn: js_dollar_rt,
     },
     {
       name: "a",
