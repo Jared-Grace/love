@@ -1,3 +1,4 @@
+import { list_index_is } from "./list_index_is.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_is } from "./list_is.mjs";
@@ -18,6 +19,7 @@ export function js_block_child_graph(ast) {
       if (nn) {
         let index = list_index_of(stack, left);
         let item = index + 2;
+        list_index_is(list, index2);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
