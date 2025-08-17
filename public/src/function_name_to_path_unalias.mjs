@@ -9,4 +9,5 @@ export async function function_name_to_path_unalias(f_name) {
     unaliased,
   };
   return v;
+  log(message);
 }
