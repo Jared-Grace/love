@@ -114,7 +114,8 @@
   "ll": "list_filter",
   "jnt": "js_node_type",
   "lx": "list_index_of",
-  "me": "marker_expand"
+  "me": "marker_expand",
+  "x": "exit"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1193,8 +1194,8 @@
   "p",
   "fts jbcg",
   "n exit",
-  "a x exit",
-  "ac x me"
+  "ac x me",
+  "a x exit"
  ],
  "marker_current": "1",
  "function_current": "exit",
