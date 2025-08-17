@@ -70,7 +70,7 @@ export async function js_dollar(ast) {
     },
     {
       name: "rf",
-      fn: js_dollar_rt,
+      fn: js_dollar_rf,
     },
     {
       name: "a",
@@ -123,5 +123,4 @@ export async function js_dollar(ast) {
   await js_visit_type_each_async(ast, "Identifier", lambda);
   lambda_invoke_multiple(afters);
   return;
-  [js_dollar_rf];
 }
