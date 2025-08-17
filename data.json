@@ -113,7 +113,8 @@
   "fy": "function_types",
   "lk": "list_skip",
   "ll": "list_filter",
-  "jnt": "js_node_type"
+  "jnt": "js_node_type",
+  "lx": "list_index_of"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1183,7 +1184,8 @@
   "n null_not_is",
   "ps",
   "fts jbcg",
-  "u lio"
+  "u lio",
+  "a lx list_index_of"
  ],
  "marker_current": "1",
  "function_current": "null_not_is",
