@@ -1186,9 +1186,10 @@
   "fts jbcg",
   "u lio",
   "a lx list_index_of",
-  "s list,index"
+  "s list,index",
+  "n list_index_is"
  ],
  "marker_current": "1",
- "function_current": "null_not_is",
+ "function_current": "list_index_is",
  "terminal": false
 }
