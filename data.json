@@ -1216,7 +1216,8 @@
   "cs js_block_child_graph unparse",
   "u ju",
   "u lmua",
-  "fs sb"
+  "fs sb",
+  "ftc jbcgu sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
