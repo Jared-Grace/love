@@ -22,8 +22,9 @@ export async function js_if_blockify(ast) {
       let copy = object_copy(body);
       let nt = js_node_type(body);
       let includes = list_includes(["EmptyStatement"], nt);
-      let r = null;
-      r = js_statement_return("");
+      if (false) {
+      }
+      let r = js_statement_return("");
       object_property_set(r, "argument", copy);
       object_replace(body, {
         type: "BlockStatement",
