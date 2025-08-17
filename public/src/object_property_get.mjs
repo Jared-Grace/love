@@ -4,12 +4,12 @@ import { undefined_is } from "./undefined_is.mjs";
 export function object_property_get(object, property_name) {
   let value = object[property_name];
   if (undefined_is(value)) {
-    const message = message_get();
+    const message = object_get();
     let message2 = json_to(message);
     error(message2);
   }
   return value;
-  function message_get() {
+  function object_get() {
     let v = {
       object,
       property_name,
