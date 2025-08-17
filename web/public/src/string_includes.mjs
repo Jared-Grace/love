@@ -1,3 +1,4 @@
 export function string_includes(string, item) {
-  return string.includes(item);
+  let v = string.includes(item);
+  return v;
 }
