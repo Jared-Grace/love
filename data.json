@@ -1174,10 +1174,10 @@
   "cs string_is_assert message",
   "ftc jbcg",
   "s string,assert",
-  "ps",
   "fts jbcg",
   "p",
-  "oe opg"
+  "oe opg",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
