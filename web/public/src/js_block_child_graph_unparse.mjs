@@ -1,3 +1,4 @@
+import { js_unparse } from "./js_unparse.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
@@ -21,7 +22,7 @@ export function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
   function lambda(edge) {
     function lambda2(item) {}
-    let mapped2 = list_map(list, lambda2);
+    let mapped2 = list_map(edge, js_unparse);
   }
   let mapped = list_map(edges, lambda);
   return mapped;
