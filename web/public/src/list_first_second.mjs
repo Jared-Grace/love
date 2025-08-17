@@ -7,12 +7,13 @@ export function list_first_second(list) {
   let second = null;
   if (list_empty_not_is(list)) {
     first = list_first(list);
-    if (list_multiple_is) {
+    if (list_multiple_is(list)) {
       second = list_second(list);
     }
   }
-  return {
+  let v = {
     first,
     second,
   };
+  return v;
 }
