@@ -1179,9 +1179,10 @@
   "i list_first_second",
   "ps",
   "fts jbcg",
-  "s empty"
+  "s empty",
+  "n list_last_or_null"
  ],
  "marker_current": "1",
- "function_current": "string_is_assert_message",
+ "function_current": "list_last_or_null",
  "terminal": false
 }
