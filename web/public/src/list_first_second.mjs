@@ -1,10 +1,16 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_first } from "./list_first.mjs";
-export function list_first_second(split) {
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+export function list_first_second(list) {
   let first = null;
-  first = list_first(split);
   let second = null;
-  second = list_second(split);
+  if (list_empty_not_is(list)) {
+    first = list_first(list);
+    if (list_multiple_is) {
+      second = list_second(list);
+    }
+  }
   return {
     first,
     second,
