@@ -1175,11 +1175,11 @@
   "ftc jbcg",
   "s string,assert",
   "oe opg",
-  "ps",
   "fts jbcg",
   "s mult",
   "p",
-  "i list_first_second"
+  "i list_first_second",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
