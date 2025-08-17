@@ -17,9 +17,9 @@ export function js_block_child_graph(ast) {
       if (nn) {
         let { body } = last;
         let includes = list_includes(body, node);
-        if (false) {
+        if (includes) {
+          la([last, node]);
         }
-        la([last, node]);
       }
     }
     let vs = js_visitors(ast);
