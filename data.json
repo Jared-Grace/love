@@ -1194,14 +1194,14 @@
   "ac x me",
   "a x exit",
   "p",
-  "fts jbcg",
   "s assert,inte",
   "s asser,num",
   "s inte",
   "n integer_is",
   "u ii",
   "a ini integer_is",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "integer_is",
