@@ -21,7 +21,7 @@ export function js_block_child_graph(ast) {
         let index = list_index_of(stack, left);
         let index_2 = index + 2;
         let ii = list_index_is(stack, index_2);
-        assert(b);
+        assert(ii);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
