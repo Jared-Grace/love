@@ -23,9 +23,8 @@ export function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
   async function lambda(edge) {
     function lambda2(item) {}
-    let mapped2 = list_map(edge, js_unparse);
-    async function lambda3(item2) {}
-    let waited = await list_map_unordered_async(list, lambda3);
+    let waited = await list_map_unordered_async(list, js_unparse);
+    return waited;
   }
   let mapped = list_map(edges, lambda);
   return mapped;
