@@ -22,15 +22,16 @@ export async function js_if_blockify(ast) {
       let copy = object_copy(body);
       let nt = js_node_type(body);
       let includes = list_includes(["EmptyStatement"], nt);
+      const bs_body = [r];
+      const bs = {
+        type: "BlockStatement",
+        body: bs_body,
+      };
       if (!includes) {
         let r = js_statement_return("");
         object_property_set(r, "argument", copy);
       }
-      const newLocal = {
-        type: "BlockStatement",
-        body: [r],
-      };
-      object_replace(body, newLocal);
+      object_replace(body, bs);
     }
   }
   await js_visit_type_each_async(ast, "IfStatement", lambda);
