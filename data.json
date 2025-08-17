@@ -1199,9 +1199,9 @@
   "n integer_is",
   "u ii",
   "a ini integer_is",
-  "ps",
   "p",
-  "fts jbcg"
+  "fts jbcg",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "integer_is",
