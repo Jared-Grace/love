@@ -117,7 +117,8 @@
   "me": "marker_expand",
   "x": "exit",
   "ini": "integer_is",
-  "lu": "log_unparse"
+  "lu": "log_unparse",
+  "ntsi": "js_node_types_is"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1210,7 +1211,8 @@
   "fts jbcg",
   "s function,js",
   "as node,type",
-  "u jnti"
+  "u jnti",
+  "a ntsi js_node_types_is"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
