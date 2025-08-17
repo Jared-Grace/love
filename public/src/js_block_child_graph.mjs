@@ -12,8 +12,9 @@ export function js_block_child_graph(ast) {
       let last = js_stack_last(stack, "BlockStatement");
       la([last, node]);
     }
-    let list = js_visitors(ast);
-    each(list, lambda);
+    let vs = js_visitors(ast);
+    each(vs, lambda);
   }
-  let list2 = list_adder(lambda2);
+  let edges = list_adder(lambda2);
+  return edges;
 }
