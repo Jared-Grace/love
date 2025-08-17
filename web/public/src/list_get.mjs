@@ -13,5 +13,5 @@ export function list_get(list, index) {
   }
   return item;
   let ii = integer_is(index);
-  assert(b);
+  assert(ii);
 }
