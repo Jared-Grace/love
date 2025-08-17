@@ -1161,7 +1161,6 @@
   "s js,visit",
   "s type,js",
   "c js_visit_type js_visit_types",
-  "oec",
   "ftc js_marker_enter js_marker_enter",
   "s types",
   "ps",
@@ -1170,7 +1169,8 @@
   "oe fts",
   "fts jme",
   "u jv",
-  "fw jv js_visitors"
+  "fw jv js_visitors",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "js_visitors",
