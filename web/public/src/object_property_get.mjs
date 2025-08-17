@@ -4,8 +4,8 @@ import { undefined_is } from "./undefined_is.mjs";
 export function object_property_get(object, property_name) {
   let value = object[property_name];
   if (undefined_is(value)) {
-    const message = object_get();
-    let message2 = json_to(message);
+    const object = object_get();
+    let message2 = json_to(object);
     error(message2);
   }
   return value;
