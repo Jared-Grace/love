@@ -12,17 +12,7 @@ export function js_dollar_rt({ stack1, stack2, stack3 }) {
   marker("1");
   let from = js_return_empty();
   let expression = js_parse_expression("true");
-  object_property_set(from, "argument", second);
-  let type_is = js_node_type_is(stack2, "SequenceExpression");
-  let to = null;
-  if (type_is) {
-    let { expressions } = stack2;
-    let second = list_second(expressions);
-    object_property_set(from, "argument", second);
-    to = stack3;
-  } else {
-    to = stack1;
-  }
-  object_replace(to, from);
+  object_property_set(from, "argument", expression);
+  object_replace(stack1, from);
   return;
 }
