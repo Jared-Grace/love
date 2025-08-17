@@ -1178,9 +1178,9 @@
   "i list_first_second",
   "s empty",
   "n list_last_or_null",
-  "fts jbcg",
   "p",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "list_last_or_null",
