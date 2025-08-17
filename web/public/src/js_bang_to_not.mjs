@@ -8,6 +8,8 @@ export function js_bang_to_not(ast) {
   function lambda(v) {
     let { node } = v;
     let { operator } = node;
+    if (false) {
+    }
     log(operator);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
