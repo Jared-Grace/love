@@ -862,7 +862,6 @@
   "s fil",
   "s let",
   "s sand",
-  "o sb",
   "lmp",
   "a lmp list_map_property",
   "s unalias",
@@ -1202,9 +1201,10 @@
   "fts jbcg",
   "o au",
   "nj if_blockify",
-  "s return"
+  "s return",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "js_if_blockify",
+ "function_current": "sandbox",
  "terminal": false
 }
