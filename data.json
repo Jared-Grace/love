@@ -1162,7 +1162,6 @@
   "ftc js_marker_enter js_marker_enter",
   "s types",
   "cd",
-  "oe fts",
   "fts jme",
   "u jv",
   "fw jv js_visitors",
@@ -1181,7 +1180,8 @@
   "p",
   "oe ftc",
   "ps",
-  "fts jbcg"
+  "fts jbcg",
+  "oe fts"
  ],
  "marker_current": "1",
  "function_current": "list_last_or_null",
