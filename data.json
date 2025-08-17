@@ -948,7 +948,6 @@
   "fs js_if_else_if_combine",
   "ir type 'IfStatement'",
   "fws nti if",
-  "s return",
   "u nt",
   "ac nti nt",
   "u n",
@@ -1202,7 +1201,8 @@
   "ps",
   "fts jbcg",
   "o au",
-  "nj if_blockify"
+  "nj if_blockify",
+  "s return"
  ],
  "marker_current": "1",
  "function_current": "js_if_blockify",
