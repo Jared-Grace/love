@@ -890,7 +890,6 @@
   "jis",
   "s acro",
   "n function_acronym_to_names",
-  "s dollar",
   "a atn function_acronym_to_names",
   "atn ii",
   "atn jis",
@@ -1229,7 +1228,8 @@
   "o mc",
   "nj js_dollar_ie",
   "de js_js_dollar_ie",
-  "nj dollar_ie"
+  "nj dollar_ie",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ie",
