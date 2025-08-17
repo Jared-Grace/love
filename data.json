@@ -1220,9 +1220,10 @@
   "ps",
   "p",
   "ftc jbcgu",
-  "s size"
+  "s size",
+  "nj bang_to_not"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "js_bang_to_not",
  "terminal": false
 }
