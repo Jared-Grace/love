@@ -338,7 +338,6 @@
   "mcr 0 combined",
   "c mcr marker_next_delete",
   "ir body2 body",
-  "o mc",
   "au list_remove",
   "i marker_next_delete",
   "a md marker_next_delete",
@@ -1226,9 +1225,10 @@
   "s js,type",
   "a jvt js_visit_type",
   "p",
-  "fts jbtn"
+  "fts jbtn",
+  "o mc"
  ],
  "marker_current": "1",
- "function_current": "js_bang_to_not",
+ "function_current": "marker_call",
  "terminal": false
 }
