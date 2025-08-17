@@ -14,11 +14,11 @@ import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_if_blockify(ast) {
+  const type = "IfStatement";
   async function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, "consequent");
-    const type = "BlockStatement";
-    let nti = js_node_type_not_is(body, type);
+    let nti = js_node_type_not_is(body, "BlockStatement");
     if (nti) {
       let copy = object_copy(body);
       let nt = js_node_type(body);
@@ -35,5 +35,5 @@ export async function js_if_blockify(ast) {
       });
     }
   }
-  await js_visit_type_each_async(ast, "IfStatement", lambda);
+  await js_visit_type_each_async(ast, type, lambda);
 }
