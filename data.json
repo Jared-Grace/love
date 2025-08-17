@@ -1185,7 +1185,8 @@
   "ps",
   "fts jbcg",
   "u lio",
-  "a lx list_index_of"
+  "a lx list_index_of",
+  "s list,index"
  ],
  "marker_current": "1",
  "function_current": "null_not_is",
