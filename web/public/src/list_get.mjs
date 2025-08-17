@@ -1,3 +1,4 @@
+import { assert_json } from "./assert_json.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { assert } from "./assert.mjs";
 import { integer_is } from "./integer_is.mjs";
@@ -14,5 +15,5 @@ export function list_get(list, index) {
   }
   return item;
   let ii = integer_is(index);
-  assert_message(ii, message);
+  assert_json(ii, message);
 }
