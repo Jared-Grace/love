@@ -12,10 +12,10 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node, stack } = v;
       let last = js_stack_last(stack, "BlockStatement");
-      let nn = null_not_is(value);
-      if (last) {
+      let nn = null_not_is(last);
+      if (nn) {
+        la([last, node]);
       }
-      la([last, node]);
     }
     let vs = js_visitors(ast);
     each(vs, lambda);
