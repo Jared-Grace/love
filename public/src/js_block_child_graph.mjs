@@ -1,4 +1,4 @@
-import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { exit } from "./exit.mjs";
@@ -30,8 +30,7 @@ export function js_block_child_graph(ast) {
           la([left, right]);
           return;
         }
-        function lambda4() {}
-        js_node_type_is_if(node2, type, lambda4);
+        let type_is = js_node_type_is(node2, type);
         let index = list_index_of(stack, left);
         let index_2 = index + 2;
         let ii = list_index_is(stack, index_2);
