@@ -14,6 +14,7 @@ export function js_block_child_graph(ast) {
       let last = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(last);
       if (nn) {
+        let body = last;
         la([last, node]);
       }
     }
