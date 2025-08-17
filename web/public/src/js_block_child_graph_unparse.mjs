@@ -17,39 +17,5 @@ import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export function js_block_child_graph_unparse(ast) {
-  marker("1");
-  function lambda2(la) {
-    function lambda(v) {
-      let { node: right, stack } = v;
-      let left = js_stack_last(stack, "BlockStatement");
-      let nn = null_not_is(left);
-      if (nn) {
-        let { body } = left;
-        let includes = list_includes(body, right);
-        if (includes) {
-          la([left, right]);
-          return;
-        }
-        function lambda4() {
-          let index = list_index_of(stack, left);
-          let index_2 = index + 2;
-          let ii = list_index_is(stack, index_2);
-          if (ii) {
-            let item = list_get(stack, index_2);
-            let ne = equal_not(item, right);
-            if (ne) {
-              left = item;
-              la([left, right]);
-              return;
-            }
-          }
-        }
-        js_node_type_is_if(right, "BlockStatement", lambda4);
-      }
-    }
-    let vs = js_visitors(ast);
-    each(vs, lambda);
-  }
-  let edges = list_adder(lambda2);
-  return edges;
+  let edge = js_block_child_graph_unparse(ast);
 }
