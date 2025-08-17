@@ -1,3 +1,4 @@
+import { exit } from "./exit.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { log } from "./log.mjs";
@@ -24,6 +25,7 @@ export async function js_if_blockify(ast) {
         body: [r],
       });
       await log_unparse(body);
+      exit();
     }
   }
   await js_visit_type_each_async(ast, "IfStatement", lambda);
