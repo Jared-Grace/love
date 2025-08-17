@@ -6,5 +6,7 @@ export function list_index_is(list, index) {
     let v = false;
     return v;
   }
+  if (false) {
+  }
   marker("1");
 }
