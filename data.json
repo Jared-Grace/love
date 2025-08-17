@@ -1187,7 +1187,8 @@
   "a lx list_index_of",
   "s list,index",
   "n list_index_is",
-  "s doll"
+  "s doll",
+  "c js_dollar_r js_dollar_rt"
  ],
  "marker_current": "1",
  "function_current": "list_index_is",
