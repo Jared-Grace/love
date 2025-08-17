@@ -19,5 +19,6 @@ import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
 }
