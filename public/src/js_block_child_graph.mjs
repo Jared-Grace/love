@@ -6,15 +6,16 @@ import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
-  function lambda2(la) {}
-  let list2 = list_adder(lambda2);
-  function lambda(v) {
-    let { node, stack } = v;
-    let last = js_stack_last(stack, "BlockStatement");
-    log({
-      last,
-    });
+  function lambda2(la) {
+    function lambda(v) {
+      let { node, stack } = v;
+      let last = js_stack_last(stack, "BlockStatement");
+      log({
+        last,
+      });
+    }
+    let list = js_visitors(ast);
+    each(list, lambda);
   }
-  let list = js_visitors(ast);
-  each(list, lambda);
+  let list2 = list_adder(lambda2);
 }
