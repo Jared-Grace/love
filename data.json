@@ -1207,12 +1207,12 @@
   "s each",
   "u lu",
   "a lu log_unparse",
-  "ps",
   "fts jbcg",
   "s function,js",
   "as node,type",
   "u jnti",
-  "a ntsi js_node_types_is"
+  "a ntsi js_node_types_is",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
