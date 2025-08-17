@@ -19,12 +19,16 @@ import { js_stack_last } from "./js_stack_last.mjs";
 import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
-export function js_block_child_graph_unparse(ast) {
+export async function js_block_child_graph_unparse(ast) {
   let edges = js_block_child_graph_unparse(ast);
   async function lambda(edge) {
     let waited = await list_map_unordered_async(edge, js_unparse);
     return waited;
   }
   let mapped = list_map(edges, lambda);
+  let waited2 = await list_map_unordered_async(
+    list,
+    async function lambda2(item) {},
+  );
   return mapped;
 }
