@@ -16,5 +16,6 @@ import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_if_blockify(ast) {
   const type = "IfStatement";
-  await js_if_blockify_generic(ast, type);
+  const property_name = "consequent";
+  await js_if_blockify_generic(ast, type, property_name);
 }
