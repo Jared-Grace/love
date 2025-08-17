@@ -1190,12 +1190,13 @@
   "c js_dollar_rt js_dollar_rf",
   "s equ",
   "fws equal not",
-  "p",
   "n exit",
   "ac x me",
   "a x exit",
   "ps",
-  "fts jbcg"
+  "p",
+  "fts jbcg",
+  "s assert,inte"
  ],
  "marker_current": "1",
  "function_current": "exit",
