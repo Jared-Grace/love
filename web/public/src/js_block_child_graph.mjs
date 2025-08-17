@@ -6,7 +6,7 @@ export function js_block_child_graph(ast) {
   marker("1");
   function lambda(v) {
     let { node, stack } = v;
-    let last = js_stack_last(stack, "type");
+    let last = js_stack_last(stack, "BlockStatement");
   }
   let list = js_visitors(ast);
   each(list, lambda);
