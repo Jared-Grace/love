@@ -1172,7 +1172,9 @@
   "oec",
   "dts 0",
   "nj block_child_graph",
-  "s last"
+  "s last",
+  "ftc jbcg",
+  "s string,assert"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph",
