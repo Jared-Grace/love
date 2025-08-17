@@ -8,7 +8,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export function js_if_blockify(ast) {
   let { node } = v;
-  let body = object_property_get(node, "body");
+  let body = object_property_get(node, "consequent");
   const type = "BlockStatement";
   let nti = js_node_type_not_is(body, type);
   if (nti) {
@@ -20,5 +20,5 @@ export function js_if_blockify(ast) {
       body: [r],
     });
   }
-  js_visit_type(ast, "ArrowFunctionExpression", lambda);
+  js_visit_type(ast, "IfStatement", lambda);
 }
