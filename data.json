@@ -962,7 +962,6 @@
   "o eb",
   "s left",
   "ftc js_if_else_if_combine marker_down_generic",
-  "s auto",
   "i js_auto",
   "mf html_overwrite",
   "mf 1 2 html_overwrite",
@@ -1212,7 +1211,8 @@
   "u jnti",
   "a ntsi js_node_types_is",
   "ps",
-  "fts jbcg"
+  "fts jbcg",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
