@@ -1,3 +1,4 @@
+import { js_dollar_rf } from "./js_dollar_rf.mjs";
 import { list_get_end_3 } from "./list_get_end_3.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { lambda_invoke_multiple } from "./lambda_invoke_multiple.mjs";
@@ -68,6 +69,10 @@ export async function js_dollar(ast) {
       fn: js_dollar_rt,
     },
     {
+      name: "rf",
+      fn: js_dollar_rt,
+    },
+    {
       name: "a",
       fn: js_dollar_a,
     },
@@ -118,4 +123,5 @@ export async function js_dollar(ast) {
   await js_visit_type_each_async(ast, "Identifier", lambda);
   lambda_invoke_multiple(afters);
   return;
+  [js_dollar_rf];
 }
