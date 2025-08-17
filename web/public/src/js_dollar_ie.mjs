@@ -1,3 +1,4 @@
+import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_code_braces_empty } from "./js_code_braces_empty.mjs";
@@ -6,12 +7,7 @@ import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { marker } from "./marker.mjs";
 export function js_dollar_ie({ stack1, stack2 }) {
-  let inside = js_keyword_false();
-  let from = js_parse_statement(
-    js_keyword_if() +
-      " " +
-      js_code_wrap_parenthesis(inside) +
-      js_code_braces_empty(),
-  );
-  object_replace(stack1, from);
+  js_dollar_i({
+    stack1,
+  });
 }
