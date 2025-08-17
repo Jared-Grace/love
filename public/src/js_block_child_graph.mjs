@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { list_get } from "./list_get.mjs";
 import { assert } from "./assert.mjs";
 import { list_index_is } from "./list_index_is.mjs";
@@ -24,8 +25,7 @@ export function js_block_child_graph(ast) {
         let ii = list_index_is(stack, index_2);
         assert(ii);
         let item = list_get(list, ii);
-        if (false) {
-        }
+        let ne = equal_not(left2, right2);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
