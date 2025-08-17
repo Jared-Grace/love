@@ -4,8 +4,8 @@ import { marker } from "./marker.mjs";
 export function js_visitors(ast) {
   marker("1");
   function lambda(la) {
-    js_visit(ast, lambda$v);
+    js_visit(ast, la);
   }
   let list = list_adder(lambda);
-  return v;
+  return list;
 }
