@@ -23,11 +23,11 @@ export async function js_if_blockify(ast) {
       let copy = object_copy(body);
       let nt = js_node_type(body);
       let includes = list_includes(["EmptyStatement"], nt);
-      const bs_body = [r];
+      const bs_body = [];
       if (!includes) {
         let r = js_statement_return("");
         object_property_set(r, "argument", copy);
-        list_add(list, item);
+        list_add(bs_body, r);
       }
       object_replace(body, {
         type: "BlockStatement",
