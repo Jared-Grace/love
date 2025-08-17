@@ -1104,7 +1104,6 @@
   "fcn mr,m",
   "de marker_remove_marker_top",
   "a lz list_size",
-  "s size",
   "md -2",
   "n list_to",
   "fc mr,m",
@@ -1217,10 +1216,11 @@
   "ftc jbcgu sb",
   "ob",
   "o sb",
-  "p",
   "f_name",
   "ps",
-  "ftc jbcgu"
+  "p",
+  "ftc jbcgu",
+  "s size"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
