@@ -1,3 +1,4 @@
+import { list_get } from "./list_get.mjs";
 import { assert } from "./assert.mjs";
 import { list_index_is } from "./list_index_is.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -22,6 +23,7 @@ export function js_block_child_graph(ast) {
         let index_2 = index + 2;
         let ii = list_index_is(stack, index_2);
         assert(ii);
+        list_get(list, index2);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
