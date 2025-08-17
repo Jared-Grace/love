@@ -16,7 +16,9 @@ export function js_block_child_graph(ast) {
       let nn = null_not_is(last);
       if (nn) {
         let { body } = last;
-        let includes = list_includes(list, item);
+        let includes = list_includes(body, node);
+        if (false) {
+        }
         la([last, node]);
       }
     }
