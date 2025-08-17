@@ -1200,8 +1200,8 @@
   "u ii",
   "a ini integer_is",
   "p",
-  "fts jbcg",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "integer_is",
