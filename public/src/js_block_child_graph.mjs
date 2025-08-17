@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { list_is } from "./list_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -15,6 +16,7 @@ export function js_block_child_graph(ast) {
       let nn = null_not_is(last);
       if (nn) {
         let { body } = last;
+        let includes = list_includes(list, item);
         la([last, node]);
       }
     }
