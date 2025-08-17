@@ -1191,11 +1191,11 @@
   "s equ",
   "fws equal not",
   "p",
-  "fts jbcg",
   "n exit",
   "ac x me",
   "a x exit",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "exit",
