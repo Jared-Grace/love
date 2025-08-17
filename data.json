@@ -1191,9 +1191,10 @@
   "fws equal not",
   "ps",
   "p",
-  "fts jbcg"
+  "fts jbcg",
+  "n exit"
  ],
  "marker_current": "1",
- "function_current": "equal_not",
+ "function_current": "exit",
  "terminal": false
 }
