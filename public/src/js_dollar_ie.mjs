@@ -6,7 +6,7 @@ import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { marker } from "./marker.mjs";
-export function js_dollar_ie({ stack1, stack2 }) {
+export function js_dollar_ie({ stack1 }) {
   js_dollar_i({
     stack1,
   });
