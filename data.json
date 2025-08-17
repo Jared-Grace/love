@@ -1172,10 +1172,10 @@
   "nj block_child_graph",
   "s last",
   "cs string_is_assert message",
-  "ps",
   "ftc jbcg",
   "p",
-  "s string,assert"
+  "s string,assert",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
