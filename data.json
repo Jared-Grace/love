@@ -1228,9 +1228,10 @@
   "fts jbtn",
   "o mc",
   "nj js_dollar_ie",
-  "de js_js_dollar_ie"
+  "de js_js_dollar_ie",
+  "nj dollar_ie"
  ],
  "marker_current": "1",
- "function_current": "js_js_dollar_ie",
+ "function_current": "js_dollar_ie",
  "terminal": false
 }
