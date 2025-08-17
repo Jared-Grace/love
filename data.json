@@ -1160,7 +1160,6 @@
   "s types",
   "cd",
   "fts jme",
-  "u jv",
   "fw jv js_visitors",
   "oec",
   "dts 0",
@@ -1221,7 +1220,8 @@
   "p",
   "ftc jbcgu",
   "s size",
-  "nj bang_to_not"
+  "nj bang_to_not",
+  "u jv"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
