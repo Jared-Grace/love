@@ -1175,7 +1175,8 @@
   "ftc jbcg",
   "p",
   "s string,assert",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
