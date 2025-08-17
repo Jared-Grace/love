@@ -19,7 +19,7 @@ export async function js_if_blockify(ast) {
     let nti = js_node_type_not_is(body, type);
     if (nti) {
       let copy = object_copy(body);
-      let result = js_node_type(n);
+      let result = js_node_type(body);
       let r = js_statement_return("");
       object_property_set(r, "argument", copy);
       object_replace(body, {
