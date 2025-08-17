@@ -1169,9 +1169,10 @@
   "cd",
   "oe fts",
   "fts jme",
-  "u jv"
+  "u jv",
+  "fw jv js_visitors"
  ],
  "marker_current": "1",
- "function_current": "js_visit_types",
+ "function_current": "js_visitors",
  "terminal": true
 }
