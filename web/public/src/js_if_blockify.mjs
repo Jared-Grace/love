@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_node_type } from "./js_node_type.mjs";
 import { exit } from "./exit.mjs";
@@ -26,6 +27,7 @@ export async function js_if_blockify(ast) {
       if (!includes) {
         let r = js_statement_return("");
         object_property_set(r, "argument", copy);
+        list_add(list, item);
       }
       object_replace(body, {
         type: "BlockStatement",
