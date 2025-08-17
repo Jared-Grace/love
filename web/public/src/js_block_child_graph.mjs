@@ -28,6 +28,8 @@ export function js_block_child_graph(ast) {
         let ne = equal_not(item, right);
         if (ne) {
           left = item;
+          la([left, right]);
+          return;
         }
         let { body } = left;
         let includes = list_includes(body, right);
