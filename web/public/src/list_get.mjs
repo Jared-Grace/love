@@ -14,6 +14,5 @@ export function list_get(list, index) {
   }
   return item;
   let ii = integer_is(index);
-  assert(ii);
-  assert_message(b, message);
+  assert_message(ii, message);
 }
