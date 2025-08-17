@@ -15,5 +15,7 @@ export function list_get(list, index) {
   }
   return item;
   let ii = integer_is(index);
-  assert_json(ii, message);
+  assert_json(ii, {
+    index,
+  });
 }
