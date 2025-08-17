@@ -15,7 +15,7 @@ import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function js_auto(ast) {
   let transforms = [
     js_arrow_blockify,
-    js_arrow_blockify,
+    js_if_blockify,
     js_arrow_to_function,
     js_function_id_add,
     js_let_add,
@@ -33,5 +33,5 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   return;
-  [js_if_blockify];
+  [];
 }
