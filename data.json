@@ -1227,7 +1227,8 @@
   "p",
   "fts jbtn",
   "o mc",
-  "nj js_dollar_ie"
+  "nj js_dollar_ie",
+  "de js_js_dollar_ie"
  ],
  "marker_current": "1",
  "function_current": "js_js_dollar_ie",
