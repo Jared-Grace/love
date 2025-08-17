@@ -1190,9 +1190,10 @@
   "s doll",
   "c js_dollar_r js_dollar_rt",
   "c js_dollar_rt js_dollar_rf",
-  "s equ"
+  "s equ",
+  "fws equal not"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_rf",
+ "function_current": "equal_not",
  "terminal": false
 }
