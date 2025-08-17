@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -16,7 +17,14 @@ export function js_if_blockify(ast) {
       let copy = object_copy(body);
       let r = js_statement_return("");
       object_property_set(r, "argument", copy);
+      return;
+      object_replace(body, {
+        type: "BlockStatement",
+        body: [r],
+      });
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
+  return;
+  log(message);
 }
