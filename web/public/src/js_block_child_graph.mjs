@@ -5,8 +5,8 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
   function lambda(v) {
-    let { node } = v;
-    let last = js_stack_last(stack, type);
+    let { node, stack } = v;
+    let last = js_stack_last(stack, "type");
   }
   let list = js_visitors(ast);
   each(list, lambda);
