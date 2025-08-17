@@ -1197,9 +1197,10 @@
   "fts jbcg",
   "s assert,inte",
   "s asser,num",
-  "s inte"
+  "s inte",
+  "n integer_is"
  ],
  "marker_current": "1",
- "function_current": "exit",
+ "function_current": "integer_is",
  "terminal": false
 }
