@@ -5,8 +5,8 @@ export function list_get(list, index) {
   undefined_not_is_assert_lambda(value, object_get);
   function object_get() {
     let v = {
-      object,
-      property_name,
+      list,
+      index,
     };
     return v;
   }
