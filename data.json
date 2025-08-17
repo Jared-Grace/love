@@ -1199,7 +1199,6 @@
   "o au",
   "nj if_blockify",
   "s return",
-  "o sb",
   "s visit,type",
   "s js,type",
   "s each",
@@ -1217,7 +1216,9 @@
   "u lmua",
   "fs sb",
   "p",
-  "ftc jbcgu sb"
+  "ftc jbcgu sb",
+  "ob",
+  "o sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
