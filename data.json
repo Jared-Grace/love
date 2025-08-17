@@ -1225,7 +1225,8 @@
   "a jv js_visit",
   "ts",
   "s js,type",
-  "a jvt js_visit_type"
+  "a jvt js_visit_type",
+  "fts jbtn"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
