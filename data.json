@@ -1201,9 +1201,10 @@
   "p",
   "ps",
   "fts jbcg",
-  "o au"
+  "o au",
+  "nj if_blockify"
  ],
  "marker_current": "1",
- "function_current": "function_auto",
+ "function_current": "js_if_blockify",
  "terminal": false
 }
