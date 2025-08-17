@@ -63,6 +63,10 @@ export async function js_dollar(ast) {
       fn: js_dollar_r,
     },
     {
+      name: "rt",
+      fn: js_dollar_r,
+    },
+    {
       name: "a",
       fn: js_dollar_a,
     },
