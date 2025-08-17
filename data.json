@@ -1198,7 +1198,6 @@
   "nj if_blockify",
   "s return",
   "s visit,type",
-  "s js,type",
   "s each",
   "u lu",
   "a lu log_unparse",
@@ -1223,7 +1222,8 @@
   "nj bang_to_not",
   "u jv",
   "a jv js_visit",
-  "ts"
+  "ts",
+  "s js,type"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
