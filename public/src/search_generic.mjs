@@ -7,11 +7,7 @@ import { string_split } from "./string_split.mjs";
 import { log } from "./log.mjs";
 export function search_generic(search, f_names, value_get) {
   let terms = string_split(search, ",");
-  log(terms);
   function lambda2(n) {
-    log({
-      n,
-    });
     function lambda(term) {
       let v = string_includes(n, term);
       return v;
