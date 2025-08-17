@@ -1177,12 +1177,12 @@
   "i list_first_second",
   "s empty",
   "n list_last_or_null",
-  "p",
   "oe ftc",
-  "ps",
   "fts jbcg",
   "oe fts",
-  "n null_not_is"
+  "p",
+  "n null_not_is",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "null_not_is",
