@@ -3,7 +3,8 @@ import { marker } from "./marker.mjs";
 export function list_last_or_null(list) {
   let result = list_empty_is(list);
   if (result) {
-    return null;
+    let v = null;
+    return v;
   }
   marker("1");
 }
