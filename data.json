@@ -115,7 +115,8 @@
   "jnt": "js_node_type",
   "lx": "list_index_of",
   "me": "marker_expand",
-  "x": "exit"
+  "x": "exit",
+  "ini": "integer_is"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1199,7 +1200,8 @@
   "s asser,num",
   "s inte",
   "n integer_is",
-  "u ii"
+  "u ii",
+  "a ini integer_is"
  ],
  "marker_current": "1",
  "function_current": "integer_is",
