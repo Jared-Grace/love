@@ -1203,7 +1203,8 @@
   "nj if_blockify",
   "s return",
   "o sb",
-  "s visit,type"
+  "s visit,type",
+  "s js,type"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
