@@ -1196,7 +1196,6 @@
   "n integer_is",
   "u ii",
   "a ini integer_is",
-  "p",
   "o au",
   "nj if_blockify",
   "s return",
@@ -1217,6 +1216,7 @@
   "u ju",
   "u lmua",
   "fs sb",
+  "p",
   "ftc jbcgu sb"
  ],
  "marker_current": "1",
