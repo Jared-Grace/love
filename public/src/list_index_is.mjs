@@ -14,7 +14,7 @@ export function list_index_is(list, index) {
   if (index > index_last) {
     return v;
   }
-  let v2 = true;
-  return v2;
+  let ii = true;
+  return ii;
   marker("1");
 }
