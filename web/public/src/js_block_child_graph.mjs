@@ -11,7 +11,8 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node, stack } = v;
       let last = js_stack_last(stack, "BlockStatement");
-      each(list, function lambda3(item) {});
+      function lambda3(item) {}
+      each(list, lambda3);
       if (last) {
       }
       la([last, node]);
