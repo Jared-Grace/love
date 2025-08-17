@@ -25,7 +25,7 @@ export async function js_if_blockify(ast) {
         type: "BlockStatement",
         body: [r],
       });
-      await log_unparse(next);
+      await log_unparse(body);
     }
   }
   await js_visit_type_each_async(ast, "IfStatement", lambda);
