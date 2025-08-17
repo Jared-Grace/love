@@ -1,5 +1,6 @@
 import { marker } from "./marker.mjs";
 export function null_not_is(value) {
-  return value !== null;
+  let v = value !== null;
+  return v;
   marker("1");
 }
