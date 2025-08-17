@@ -1208,7 +1208,8 @@
   "a lu log_unparse",
   "ps",
   "fts jbcg",
-  "s function,js"
+  "s function,js",
+  "as node,type"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
