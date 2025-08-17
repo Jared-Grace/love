@@ -11,14 +11,14 @@ export function js_block_child_graph(ast) {
   marker("1");
   function lambda2(la) {
     function lambda(v) {
-      let { node, stack } = v;
-      let last = js_stack_last(stack, "BlockStatement");
-      let nn = null_not_is(last);
+      let { node: right, stack } = v;
+      let left = js_stack_last(stack, "BlockStatement");
+      let nn = null_not_is(left);
       if (nn) {
-        let { body } = last;
-        let includes = list_includes(body, node);
+        let { body } = left;
+        let includes = list_includes(body, right);
         if (includes) {
-          la([last, node]);
+          la([left, right]);
         }
       }
     }
