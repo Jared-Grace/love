@@ -6,6 +6,6 @@ export function js_visitors(ast) {
   function lambda(la) {
     js_visit(ast, la);
   }
-  let list = list_adder(lambda);
-  return list;
+  let vs = list_adder(lambda);
+  return vs;
 }
