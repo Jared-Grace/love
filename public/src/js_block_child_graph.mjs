@@ -1,3 +1,4 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_is } from "./list_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -15,6 +16,7 @@ export function js_block_child_graph(ast) {
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
+        let index = list_index_of(list, item);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
