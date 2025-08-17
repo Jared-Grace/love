@@ -1,4 +1,3 @@
-
 export async function sandbox() {
-if (0); 
+  if (0);
 }
