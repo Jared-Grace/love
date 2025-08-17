@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { marker } from "./marker.mjs";
@@ -5,7 +6,8 @@ export function js_bang_to_not(ast) {
   marker("1");
   !a;
   function lambda(v) {
-    let node = v;
+    let { node } = v;
+    log(message);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
 }
