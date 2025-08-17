@@ -1,3 +1,4 @@
+import { js_if_blockify_generic } from "./js_if_blockify_generic.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_node_type } from "./js_node_type.mjs";
@@ -15,25 +16,5 @@ import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_if_blockify(ast) {
   const type = "IfStatement";
-  async function lambda(v) {
-    let { node } = v;
-    let body = object_property_get(node, "consequent");
-    let nti = js_node_type_not_is(body, "BlockStatement");
-    if (nti) {
-      let copy = object_copy(body);
-      let nt = js_node_type(body);
-      let includes = list_includes(["EmptyStatement"], nt);
-      const bs_body = [];
-      if (!includes) {
-        let r = js_statement_return("");
-        object_property_set(r, "argument", copy);
-        list_add(bs_body, r);
-      }
-      object_replace(body, {
-        type: "BlockStatement",
-        body: bs_body,
-      });
-    }
-  }
-  await js_visit_type_each_async(ast, type, lambda);
+  await js_if_blockify_generic(ast, type);
 }
