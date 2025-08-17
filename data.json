@@ -1162,7 +1162,6 @@
   "c js_visit_type js_visit_types",
   "ftc js_marker_enter js_marker_enter",
   "s types",
-  "ps",
   "cd",
   "oe fts",
   "fts jme",
@@ -1175,7 +1174,8 @@
   "ftc jbcg",
   "s string,assert",
   "p",
-  "cs string_is_assert message"
+  "cs string_is_assert message",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
