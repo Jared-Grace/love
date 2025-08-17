@@ -21,6 +21,6 @@ export function js_if_blockify(ast) {
         body: [r],
       });
     }
-    js_visit_type(ast, "IfStatement", lambda);
   }
+  js_visit_type(ast, "IfStatement", lambda);
 }
