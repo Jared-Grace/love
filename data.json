@@ -1079,7 +1079,6 @@
   "fc",
   "as current",
   "fp jaa",
-  "ts",
   "ir type \"CallExpression\"",
   "oe ir",
   "s current",
@@ -1223,7 +1222,8 @@
   "s size",
   "nj bang_to_not",
   "u jv",
-  "a jv js_visit"
+  "a jv js_visit",
+  "ts"
  ],
  "marker_current": "1",
  "function_current": "js_bang_to_not",
