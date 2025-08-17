@@ -1189,7 +1189,8 @@
   "n list_index_is",
   "s doll",
   "c js_dollar_r js_dollar_rt",
-  "c js_dollar_rt js_dollar_rf"
+  "c js_dollar_rt js_dollar_rf",
+  "s equ"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_rf",
