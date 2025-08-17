@@ -5,5 +5,5 @@ export function js_bang_to_not(ast) {
   marker("1");
   !a;
   function lambda(v) {}
-  js_visit_type(ast2, type, lambda);
+  js_visit_type(ast, "UnaryExpression", lambda);
 }
