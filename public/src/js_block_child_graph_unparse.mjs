@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_types_function } from "./js_types_function.mjs";
@@ -17,5 +18,6 @@ import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export function js_block_child_graph_unparse(ast) {
-  let edge = js_block_child_graph_unparse(ast);
+  let edges = js_block_child_graph_unparse(ast);
+  let mapped = list_map(list, function lambda(item) {});
 }
