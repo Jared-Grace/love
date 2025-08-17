@@ -10,9 +10,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node, stack } = v;
       let last = js_stack_last(stack, "BlockStatement");
-      log({
-        last,
-      });
+      la([last, node]);
     }
     let list = js_visitors(ast);
     each(list, lambda);
