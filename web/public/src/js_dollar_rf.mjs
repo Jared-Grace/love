@@ -11,7 +11,7 @@ import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_return_empty } from "./js_code_return_empty.mjs";
 export function js_dollar_rf({ stack1 }) {
   marker("1");
-  const code = "true";
+  const code = "false";
   js_return_code_replace(code, stack1);
   return;
 }
