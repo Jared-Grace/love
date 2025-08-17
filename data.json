@@ -767,7 +767,6 @@
   "ar fns functions_names",
   "s functions_names",
   "a e each",
-  "s each",
   "a l1 list_get_end_1",
   "c js_stack_filtered js_stack_filtered_multiple",
   "a la list_adder",
@@ -1204,7 +1203,8 @@
   "s return",
   "o sb",
   "s visit,type",
-  "s js,type"
+  "s js,type",
+  "s each"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
