@@ -697,7 +697,6 @@
   "a nti js_node_type_is",
   "a sei string_empty_is",
   "a lf list_first",
-  "s empty",
   "s seco",
   "c list_first list_second",
   "a ls list_second",
@@ -1175,11 +1174,12 @@
   "ftc jbcg",
   "s string,assert",
   "oe opg",
-  "fts jbcg",
   "s mult",
   "p",
   "i list_first_second",
-  "ps"
+  "ps",
+  "fts jbcg",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
