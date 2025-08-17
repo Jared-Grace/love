@@ -3,7 +3,8 @@ import { marker } from "./marker.mjs";
 export function list_index_is(list, index) {
   let e = list_empty_is(list);
   if (e) {
-    return false;
+    let v = false;
+    return v;
   }
   marker("1");
 }
