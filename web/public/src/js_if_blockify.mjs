@@ -8,9 +8,9 @@ import { object_copy } from "./object_copy.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
-export function js_if_blockify(ast) {
+export async function js_if_blockify(ast) {
   return;
-  function lambda(v) {
+  async function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, "consequent");
     const type = "BlockStatement";
@@ -24,7 +24,8 @@ export function js_if_blockify(ast) {
         type: "BlockStatement",
         body: [r],
       });
+      lu;
     }
   }
-  js_visit_type_each_async(ast, "IfStatement", lambda);
+  await js_visit_type_each_async(ast, "IfStatement", lambda);
 }
