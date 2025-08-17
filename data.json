@@ -1193,7 +1193,6 @@
   "n exit",
   "ac x me",
   "a x exit",
-  "p",
   "s assert,inte",
   "s asser,num",
   "s inte",
@@ -1201,6 +1200,7 @@
   "u ii",
   "a ini integer_is",
   "ps",
+  "p",
   "fts jbcg"
  ],
  "marker_current": "1",
