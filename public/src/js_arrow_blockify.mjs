@@ -8,5 +8,6 @@ import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 export async function js_arrow_blockify(ast) {
   const type = "ArrowFunctionExpression";
-  await js_if_blockify_generic(ast, type);
+  const property_name = "body";
+  await js_if_blockify_generic(ast, type, property_name);
 }
