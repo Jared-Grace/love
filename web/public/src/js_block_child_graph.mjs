@@ -1,3 +1,4 @@
+import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { exit } from "./exit.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -29,6 +30,7 @@ export function js_block_child_graph(ast) {
           return;
         }
         let types_function = js_types_function();
+        let match = js_node_types_is(item2, types);
         let index = list_index_of(stack, left);
         let index_2 = index + 2;
         let ii = list_index_is(stack, index_2);
