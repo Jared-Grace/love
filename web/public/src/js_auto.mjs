@@ -1,3 +1,4 @@
+import { js_if_blockify } from "./js_if_blockify.mjs";
 import { js_if_else_if_combine } from "./js_if_else_if_combine.mjs";
 import { js_return_atomize } from "./js_return_atomize.mjs";
 import { each_async } from "./each_async.mjs";
@@ -13,6 +14,7 @@ import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function js_auto(ast) {
   let transforms = [
+    js_arrow_blockify,
     js_arrow_blockify,
     js_arrow_to_function,
     js_function_id_add,
@@ -31,5 +33,5 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   return;
-  [];
+  [js_if_blockify];
 }
