@@ -11,7 +11,7 @@ import { js_code_return_empty } from "./js_code_return_empty.mjs";
 export function js_dollar_rt({ stack1, stack2, stack3 }) {
   marker("1");
   let from = js_return_empty();
-  let expression = js_parse_expression(code_expression);
+  let expression = js_parse_expression("true");
   object_property_set(from, "argument", second);
   let type_is = js_node_type_is(stack2, "SequenceExpression");
   let to = null;
