@@ -1176,7 +1176,8 @@
   "s string,assert",
   "ps",
   "p",
-  "fts jbcg"
+  "fts jbcg",
+  "oe opg"
  ],
  "marker_current": "1",
  "function_current": "string_is_assert_message",
