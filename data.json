@@ -1226,9 +1226,10 @@
   "a jvt js_visit_type",
   "p",
   "fts jbtn",
-  "o mc"
+  "o mc",
+  "nj js_dollar_ie"
  ],
  "marker_current": "1",
- "function_current": "marker_call",
+ "function_current": "js_js_dollar_ie",
  "terminal": false
 }
