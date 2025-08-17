@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -10,4 +11,5 @@ export function js_dollar_ie({ stack1 }) {
   js_dollar_i({
     stack1,
   });
+  log(message);
 }
