@@ -1179,9 +1179,9 @@
   "s empty",
   "n list_last_or_null",
   "p",
-  "fts jbcg",
   "oe ftc",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "list_last_or_null",
