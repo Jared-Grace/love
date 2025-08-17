@@ -25,7 +25,7 @@ export function js_block_child_graph(ast) {
         let ii = list_index_is(stack, index_2);
         assert(ii);
         let item = list_get(list, ii);
-        let ne = equal_not(left2, right2);
+        let ne = equal_not(item, right);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
