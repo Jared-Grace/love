@@ -1171,10 +1171,10 @@
   "dts 0",
   "nj block_child_graph",
   "s last",
-  "ftc jbcg",
   "s string,assert",
-  "p",
   "cs string_is_assert message",
+  "p",
+  "ftc jbcg",
   "ps"
  ],
  "marker_current": "1",
