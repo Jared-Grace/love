@@ -1181,7 +1181,6 @@
   "oe fts",
   "p",
   "n null_not_is",
-  "ps",
   "fts jbcg",
   "u lio",
   "a lx list_index_of",
@@ -1191,7 +1190,8 @@
   "c js_dollar_r js_dollar_rt",
   "c js_dollar_rt js_dollar_rf",
   "s equ",
-  "fws equal not"
+  "fws equal not",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "equal_not",
