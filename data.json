@@ -1217,7 +1217,6 @@
   "o sb",
   "f_name",
   "ps",
-  "p",
   "ftc jbcgu",
   "s size",
   "nj bang_to_not",
@@ -1226,6 +1225,7 @@
   "ts",
   "s js,type",
   "a jvt js_visit_type",
+  "p",
   "fts jbtn"
  ],
  "marker_current": "1",
