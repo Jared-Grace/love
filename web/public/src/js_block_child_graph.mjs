@@ -18,8 +18,8 @@ export function js_block_child_graph(ast) {
       let nn = null_not_is(left);
       if (nn) {
         let index = list_index_of(stack, left);
-        let item = index + 2;
-        list_index_is(list, index2);
+        let index_2 = index + 2;
+        list_index_is(list, index_2);
         let { body } = left;
         let includes = list_includes(body, right);
         if (includes) {
