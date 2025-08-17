@@ -326,7 +326,6 @@
   "c marker_assign_replace marker_call_replace",
   "tf AwaitExpression",
   "marker_call_replace",
-  "s inte",
   "marker_call_replace 1",
   "a mr marker_call_replace",
   "a mcr marker_call_replace",
@@ -1197,7 +1196,8 @@
   "p",
   "fts jbcg",
   "s assert,inte",
-  "s asser,num"
+  "s asser,num",
+  "s inte"
  ],
  "marker_current": "1",
  "function_current": "exit",
