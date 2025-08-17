@@ -1,3 +1,4 @@
+import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -8,10 +9,10 @@ import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export function js_if_blockify(ast) {
+  return;
   function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, "consequent");
-    log(body);
     const type = "BlockStatement";
     let nti = js_node_type_not_is(body, type);
     if (nti) {
@@ -25,6 +26,5 @@ export function js_if_blockify(ast) {
       });
     }
   }
-  js_visit_type(ast, "IfStatement", lambda);
-  return;
+  js_visit_type_each_async(ast, "IfStatement", lambda);
 }
