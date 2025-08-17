@@ -8,7 +8,7 @@ import { log } from "./log.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_return_empty } from "./js_code_return_empty.mjs";
-export function js_dollar_rt({ stack1, stack2, stack3 }) {
+export function js_dollar_rt({ stack1 }) {
   marker("1");
   const code = "true";
   let from = js_return_empty();
