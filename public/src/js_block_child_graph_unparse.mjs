@@ -25,8 +25,6 @@ export async function js_block_child_graph_unparse(ast) {
     let waited = await list_map_unordered_async(edge, js_unparse);
     return waited;
   }
-  let mapped = list_map(edges, lambda);
-  async function lambda2(item) {}
-  let waited2 = await list_map_unordered_async(list, lambda2);
+  let mapped = await list_map_unordered_async(list, lambda);
   return mapped;
 }
