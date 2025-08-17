@@ -7,7 +7,7 @@ export function list_last_or_null(list) {
     let v = null;
     return v;
   }
-  let item = list_last(list2);
-  return;
+  let item = list_last(list);
+  return item;
   marker("1");
 }
