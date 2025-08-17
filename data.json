@@ -1178,6 +1178,6 @@
   "cs string_is_assert message"
  ],
  "marker_current": "1",
- "function_current": "js_block_child_graph",
+ "function_current": "string_is_assert_message",
  "terminal": false
 }
