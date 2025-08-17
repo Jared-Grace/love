@@ -10,6 +10,9 @@ export function list_index_is(list, index) {
   if (index < 0) {
     return v;
   }
-  let result = list_index_last(list2);
+  let index_last = list_index_last(list);
+  if (index > index_last) {
+    return v;
+  }
   marker("1");
 }
