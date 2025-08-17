@@ -1,3 +1,4 @@
+import { assert_message } from "./assert_message.mjs";
 import { assert } from "./assert.mjs";
 import { integer_is } from "./integer_is.mjs";
 import { undefined_not_is_assert_lambda } from "./undefined_not_is_assert_lambda.mjs";
@@ -14,4 +15,5 @@ export function list_get(list, index) {
   return item;
   let ii = integer_is(index);
   assert(ii);
+  assert_message(b, message);
 }
