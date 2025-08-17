@@ -1174,7 +1174,8 @@
   "nj block_child_graph",
   "s last",
   "ftc jbcg",
-  "s string,assert"
+  "s string,assert",
+  "cs string_is_assert message"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph",
