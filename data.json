@@ -1268,14 +1268,14 @@
   "a lis list_insert",
   "a ma marker_above",
   "a mab marker_above",
-  "fs jaa",
   "mab $g$v$stack",
   "c mab marker_delete_above",
   "s prev",
   "s remove",
-  "cd"
+  "cd",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_delete_above",
+ "function_current": "js_await_add",
  "terminal": false
 }
