@@ -1255,7 +1255,8 @@
   "r js_marker_enter marker_enter",
   "fs jaa",
   "ac me mx",
-  "a me marker_enter"
+  "a me marker_enter",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
