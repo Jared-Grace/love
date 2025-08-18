@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -7,7 +8,9 @@ export function js_bang_to_not(ast) {
   !0;
   function lambda(v) {
     let { node } = v;
-    let { operator } = node;$ie
+    let { operator } = node;
+    if (equal(left, right)) {
+    }
     log(operator);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
