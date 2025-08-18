@@ -23,6 +23,7 @@ export function js_block_child_graph(ast) {
   function lambda2(la) {
     function lambda(v) {
       let { node: right, stack } = v;
+      log(message);
       log_unparse(right);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
