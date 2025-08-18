@@ -1233,7 +1233,8 @@
   "s js_visit_type",
   "n not",
   "ps",
-  "fts jbtn"
+  "fts jbtn",
+  "s js,call"
  ],
  "marker_current": "1",
  "function_current": "not",
