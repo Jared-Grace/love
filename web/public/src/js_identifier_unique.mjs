@@ -1,3 +1,5 @@
+import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { string_is_assert } from "./string_is_assert.mjs";
 import { list_all } from "./list_all.mjs";
 import { string_empty_not_is } from "./string_empty_not_is.mjs";
@@ -15,4 +17,6 @@ export function js_identifier_unique(existing, name) {
   } while (string_empty_is(unique) || list_includes(existing, unique));
   list_add(existing, unique);
   return unique;
+  let v2 = js_keyword_arguments();
+  list_concat(existing, [v2]);
 }
