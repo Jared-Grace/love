@@ -127,7 +127,8 @@
   "lis": "list_insert",
   "mab": "marker_above",
   "mda": "marker_delete_above",
-  "ja": "js_auto"
+  "ja": "js_auto",
+  "lax": "list_add_if_not_includes"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1285,7 +1286,8 @@
   "fw data_transform data_identifiers_file",
   "s ident",
   "p",
-  "s list,if,not"
+  "s list,if,not",
+  "a lax list_add_if_not_includes"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
