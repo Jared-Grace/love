@@ -1,3 +1,4 @@
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 import { each } from "./each.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
@@ -10,6 +11,7 @@ export async function data_identifiers_file(parsed) {
     let names = js_identifiers_names(ast);
     function lambda2(name) {
       let list = object_property_initialize(previous, name, []);
+      list_add_if_not_includes(found, node);
     }
     each(names, lambda2);
   }
