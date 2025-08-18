@@ -1279,7 +1279,8 @@
   "u ja",
   "a ja js_auto",
   "ps",
-  "mab $g$v$stack"
+  "mab $g$v$stack",
+  "s functions"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
