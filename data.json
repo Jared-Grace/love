@@ -1229,9 +1229,10 @@
   "nj js_dollar_ie",
   "de js_js_dollar_ie",
   "nj dollar_ie",
-  "s dollar"
+  "s dollar",
+  "fs js_call_new"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_ie",
+ "function_current": "js_call_new",
  "terminal": false
 }
