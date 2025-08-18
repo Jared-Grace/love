@@ -1244,7 +1244,9 @@
   "o jbcgu",
   "ftc jbcgu",
   "p",
-  "fts jbcgu"
+  "fts jbcgu",
+  "      }",
+  "s me"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph_unparse",
