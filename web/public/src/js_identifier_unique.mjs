@@ -6,9 +6,9 @@ import { string_empty_not_is } from "./string_empty_not_is.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
-export function js_identifier_unique(used, name) {
+export function js_identifier_unique(existing, name) {
   let v2 = js_keyword_arguments();
-  used = list_concat(used, [v2]);
+  let used = list_concat(existing, [v2]);
   list_all(used, string_is_assert);
   let unique = null;
   let attempt = 1;
