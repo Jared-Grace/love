@@ -1241,9 +1241,10 @@
   "c js_visit_each_async js_visit_each",
   "fts js_block_child_graph_unparse",
   "ps",
-  "fts jbcg"
+  "fts jbcg",
+  "fw list_is list_not_is"
  ],
  "marker_current": "1",
- "function_current": "js_visit_each",
+ "function_current": "list_not_is",
  "terminal": false
 }
