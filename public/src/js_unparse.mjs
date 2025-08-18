@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { error_json } from "./error_json.mjs";
 import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
@@ -7,11 +8,13 @@ import { error } from "./error.mjs";
 import { log } from "./log.mjs";
 import { import_install } from "./import_install.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-export async function js_unparse(ast) {
-  if (!promise_not_is(ast)) {
+export function js_unparse(ast) {
+  let a2 = promise_not_is(ast);
+  if (not(a2)) {
     error();
   }
-  if (!js_visit_filter(ast)) {
+  let a2 = js_visit_filter(ast);
+  if (not(a2)) {
     const o = {
       ast,
     };
@@ -32,7 +35,7 @@ export async function js_unparse(ast) {
         return v2;
       }
     }
-    await js_visit_each_async(ast, lambda);
+    js_visit_each_async(ast, lambda);
     throw e;
   }
   return code;
