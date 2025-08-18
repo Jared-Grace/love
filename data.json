@@ -1236,7 +1236,8 @@
   "s js_keyword_arguments",
   "fts jbtn",
   "s au",
-  "s js_block_child_graph"
+  "s js_block_child_graph",
+  "fts js_block_child_graph_unparse"
  ],
  "marker_current": "1",
  "function_current": "not",
