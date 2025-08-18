@@ -1295,5 +1295,73 @@
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
- "terminal": false
+ "terminal": false,
+ "identifiers": {
+  "log": [
+   "data_identifiers_file"
+  ],
+  "function_path_to_name": [
+   "data_identifiers_file"
+  ],
+  "list_add_if_not_includes": [
+   "data_identifiers_file"
+  ],
+  "object_property_initialize": [
+   "data_identifiers_file"
+  ],
+  "each": [
+   "data_identifiers_file"
+  ],
+  "js_identifiers_names": [
+   "data_identifiers_file"
+  ],
+  "data_transform": [
+   "data_identifiers_file"
+  ],
+  "marker": [
+   "data_identifiers_file"
+  ],
+  "data_identifiers_file": [
+   "data_identifiers_file"
+  ],
+  "parsed": [
+   "data_identifiers_file"
+  ],
+  "f_path": [
+   "data_identifiers_file"
+  ],
+  "ast": [
+   "data_identifiers_file"
+  ],
+  "code": [
+   "data_identifiers_file"
+  ],
+  "f_name": [
+   "data_identifiers_file"
+  ],
+  "property_name": [
+   "data_identifiers_file"
+  ],
+  "lambda": [
+   "data_identifiers_file"
+  ],
+  "previous": [
+   "data_identifiers_file"
+  ],
+  "i_names": [
+   "data_identifiers_file"
+  ],
+  "lambda2": [
+   "data_identifiers_file"
+  ],
+  "i_name": [
+   "data_identifiers_file"
+  ],
+  "list": [
+   "data_identifiers_file"
+  ],
+  "v": [
+   "data_identifiers_file"
+  ]
+ }
 }
