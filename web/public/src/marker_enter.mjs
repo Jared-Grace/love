@@ -1,3 +1,4 @@
+import { list_add_first } from "./list_add_first.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -27,8 +28,9 @@ export async function marker_enter() {
     let { next, stack1, stack2 } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
-      list_remove(list, item);
+      list_remove(stack2, stack1);
       let body = object_property_get(next, "body");
+      list_add_first(body2, statement);
     }
   }
   let v = await function_transform_marker_current(lambda);
