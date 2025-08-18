@@ -26,6 +26,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node: right, stack } = v;
       log_json(right);
+      jnti;
       let includes2 = list_includes(["ImportSpecifier"], right);
       if (includes2) {
         log_unparse(right);
