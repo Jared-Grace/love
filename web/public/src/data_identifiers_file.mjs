@@ -7,8 +7,8 @@ export async function data_identifiers_file(parsed) {
   let property_name = "identifiers";
   function lambda(previous) {
     let names = js_identifiers_names(ast);
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(name) {}
+    each(names, lambda2);
   }
   let v = await data_transform(property_name, {}, lambda);
   return v;
