@@ -1271,7 +1271,8 @@
   "a mab marker_above",
   "fs jaa",
   "mab $g$v$stack",
-  "cd"
+  "cd",
+  "c mab marker_delete_above"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
