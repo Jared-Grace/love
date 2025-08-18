@@ -23,13 +23,8 @@ export async function marker_enter() {
     let n = marker_next_get(a);
     let { next } = n;
     log_unparse(next);
-    function lambda2(v) {
-      let { node } = v;
-      log({
-        node,
-      });
+    if (false) {
     }
-    js_visit_type(next, "BlockStatement", lambda2);
   }
   let v = await function_transform_marker_current(lambda);
 }
