@@ -1252,7 +1252,6 @@
   "r js_marker_enter marker_enter",
   "ac me mx",
   "a me marker_enter",
-  "p",
   "u lr",
   "a lr list_remove",
   "s list,add",
@@ -1285,6 +1284,7 @@
   "s data",
   "fw data_transform data_identifiers_file",
   "s ident",
+  "p",
   "s list,if,not"
  ],
  "marker_current": "1",
