@@ -4,7 +4,7 @@ import { marker } from "./marker.mjs";
 export async function marker_above(code) {
   marker("1");
   async function lambda(a) {
-    let to = marker_index(a2);
+    let to = marker_index(a);
   }
   let v = await function_transform_marker_current(lambda);
 }
