@@ -35,7 +35,7 @@ export function js_unparse(ast) {
         return v2;
       }
     }
-    js_visit_each_async(ast, lambda);
+    js_visit_each(ast, lambda);
     throw e;
   }
   return code;
