@@ -1,3 +1,4 @@
+import { js_auto } from "./js_auto.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
@@ -14,7 +15,7 @@ export async function marker_above(code) {
     let statement = js_parse_statement(code);
     list_insert(stack2, index, statement);
     let ast = object_property_get(a, "ast");
-    ja;
+    await js_auto(ast2);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
