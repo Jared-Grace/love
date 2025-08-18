@@ -43,7 +43,7 @@
   "mnd": "marker_next_delete",
   "fts": "function_transform_command_self",
   "ire": "function_identifier_replace_ending_remove",
-  "mx": "marker_next",
+  "mx": "marker_expand",
   "mn": "marker_new",
   "mca": "marker_call_atomize",
   "ms": "marker_current_set",
@@ -114,7 +114,6 @@
   "ll": "list_filter",
   "jnt": "js_node_type",
   "lx": "list_index_of",
-  "me": "marker_expand",
   "x": "exit",
   "ini": "integer_is",
   "lu": "log_unparse",
@@ -1253,7 +1252,9 @@
   "a fcp function_copy",
   "a r function_rename",
   "r js_marker_enter marker_enter",
-  "fs jaa"
+  "fs jaa",
+  "a me marker_enter",
+  "ac me mx"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
