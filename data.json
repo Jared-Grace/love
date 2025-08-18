@@ -1229,7 +1229,6 @@
   "mf 1 2 js_call_new_code",
   "s js_visit_type",
   "n not",
-  "ps",
   "s js,call",
   "s js_keyword_arguments",
   "fts jbtn",
@@ -1237,7 +1236,8 @@
   "s js_block_child_graph",
   "p",
   "fts js_block_child_graph_unparse",
-  "s atom"
+  "s atom",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "not",
