@@ -1,3 +1,4 @@
+import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_call_new_expression } from "./js_call_new_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -5,7 +6,7 @@ import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { marker } from "./marker.mjs";
-export function js_bang_to_not(ast) {
+export async function js_bang_to_not(ast) {
   marker("1");
   !0;
   async function lambda(v) {
@@ -18,4 +19,5 @@ export function js_bang_to_not(ast) {
     log(node);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
+  await js_visit_type_each_async(ast3, type, async function lambda3() {});
 }
