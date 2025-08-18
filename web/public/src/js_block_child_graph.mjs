@@ -1,3 +1,4 @@
+import { log_unparse_try } from "./log_unparse_try.mjs";
 import { not } from "./not.mjs";
 import { log_json } from "./log_json.mjs";
 import { log_unparse } from "./log_unparse.mjs";
@@ -26,12 +27,7 @@ export function js_block_child_graph(ast) {
   function lambda2(la) {
     function lambda(v) {
       let { node: right, stack } = v;
-      log_json(right);
-      let a = js_node_types_is(right, ["ImportSpecifier", "Identifier"]);
-      let match = not(a || list_is(right));
-      if (match) {
-        log_unparse(right);
-      }
+      log_unparse_try(right);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
