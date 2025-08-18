@@ -1248,14 +1248,14 @@
   "s me",
   "u me",
   "s enter",
-  "fs jaa",
   "n function_rename",
   "u fc",
   "a fcp function_copy",
   "a r function_rename",
-  "r js_marker_enter marker_enter"
+  "r js_marker_enter marker_enter",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_enter",
+ "function_current": "js_await_add",
  "terminal": false
 }
