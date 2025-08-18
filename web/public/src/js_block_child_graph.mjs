@@ -31,7 +31,7 @@ export function js_block_child_graph(ast) {
           return;
         }
         function lambda4() {
-          log(message);
+          log("here");
           let index = list_index_of(stack, left);
           let index_2 = index + 2;
           let ii = list_index_is(stack, index_2);
