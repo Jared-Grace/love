@@ -7,6 +7,7 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { marker } from "./marker.mjs";
 export async function data_identifiers_file(parsed) {
+  log(message);
   let { f_path, ast, code } = parsed;
   let i_names = js_identifiers_names(ast);
   let f_name = function_path_to_name(f_path);
