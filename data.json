@@ -1232,16 +1232,16 @@
   "fts jbtn",
   "s au",
   "s js_block_child_graph",
-  "p",
   "s atom",
   "ps",
   "fts js_block_child_graph_unparse",
   "s dollar",
   "s auto",
   "o ",
+  "p",
   "o js_atomize_function"
  ],
  "marker_current": "1",
- "function_current": "not",
+ "function_current": "js_atomize_function",
  "terminal": false
 }
