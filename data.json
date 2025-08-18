@@ -1261,7 +1261,8 @@
   "s block",
   "cd",
   "me",
-  "n marker_above"
+  "n marker_above",
+  "s marker,index"
  ],
  "marker_current": "1",
  "function_current": "marker_above",
