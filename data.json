@@ -1289,8 +1289,8 @@
   "s path_To",
   "s path_to",
   "s data",
-  "p",
   "ps",
+  "p",
   "data_property_get identifiers"
  ],
  "marker_current": "1",
