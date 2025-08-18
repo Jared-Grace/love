@@ -29,9 +29,9 @@ export async function marker_enter() {
     let { next, stack1, stack2 } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
-      list_remove(stack2, stack1);
       let body = js_declaration_to_block_body(next);
       list_add_first(body, stack1);
+      list_remove(stack2, stack1);
     }
   }
   let v = await function_transform_marker_current(lambda);
