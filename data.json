@@ -1150,7 +1150,6 @@
   "u jnt",
   "a jnt js_node_type",
   "s marker,ne",
-  "s js,visit",
   "s type,js",
   "c js_visit_type js_visit_types",
   "ftc js_marker_enter js_marker_enter",
@@ -1240,7 +1239,8 @@
   "p",
   "o js_atomize_function",
   "s auto",
-  "s visit,each"
+  "s visit,each",
+  "s js,visit"
  ],
  "marker_current": "1",
  "function_current": "js_atomize_function",
