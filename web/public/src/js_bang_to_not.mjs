@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { equal } from "./equal.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -10,6 +11,7 @@ export function js_bang_to_not(ast) {
     let { node } = v;
     let { operator } = node;
     if (equal(operator, "!")) {
+      let argument = object_property_get(node, "argument");
     }
     log(node);
   }
