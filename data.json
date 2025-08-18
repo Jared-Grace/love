@@ -1238,12 +1238,12 @@
   "c js_visit_each_async js_visit_each",
   "fts js_block_child_graph_unparse",
   "fw list_is list_not_is",
-  "ps",
   "p",
   "fts jbcg",
   "cd",
   "fts jbcgu",
-  "f"
+  "f",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "list_not_is",
