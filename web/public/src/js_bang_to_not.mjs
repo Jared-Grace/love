@@ -24,7 +24,6 @@ export function js_bang_to_not(ast) {
       list_add(arguments2, copy);
       object_replace(node, expression);
     }
-    log(node);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
 }
