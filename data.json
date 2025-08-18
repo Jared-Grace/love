@@ -1269,7 +1269,6 @@
   "a lis list_insert",
   "a ma marker_above",
   "a mab marker_above",
-  "mab $g$v$stack",
   "c mab marker_delete_above",
   "s prev",
   "s remove",
@@ -1279,7 +1278,8 @@
   "mda",
   "u ja",
   "a ja js_auto",
-  "ps"
+  "ps",
+  "mab $g$v$stack"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
