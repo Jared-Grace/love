@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -51,15 +52,17 @@ export async function js_call_new(f_name_call, ast) {
   }
   let args_code = await list_map_unordered_async(arg_names, lambda3);
   let code = js_code_call_args_await_maybe(unaliased, args_code, declaration);
-  let body_block = js_return_name(ast_call);
-  if (body_block !== null) {
-    let unique = js_identifier_unique(existing, body_block);
+  let return_name = js_return_name(ast_call);
+  marker("2");
+  if (return_name !== null) {
+    let unique = js_identifier_unique(existing, return_name);
     code = js_code_let_assign(unique, code);
   }
   let parsed = js_parse_statement(code);
-  return {
+  let v = {
     parsed,
     async_is: object_property_get(declaration, "async"),
     declaration,
   };
+  return v;
 }
