@@ -12,7 +12,6 @@ import { marker } from "./marker.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_bang_to_not(ast) {
   marker("1");
-  not(0);
   function lambda(v) {
     let { node } = v;
     let { operator } = node;
