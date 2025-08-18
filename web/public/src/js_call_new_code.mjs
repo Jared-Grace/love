@@ -15,7 +15,7 @@ import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
-export async function js_call_new_code(f_name_call, ast, lambda3, lambda2) {
+export async function js_call_new_code(f_name_call, ast) {
   let {
     declaration,
     unaliased,
