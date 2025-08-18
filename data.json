@@ -1230,10 +1230,10 @@
   "fs js_call_new",
   "mf 1 2 js_call_new_code",
   "p",
-  "fts jbtn",
   "s js_visit_type",
   "n not",
-  "ps"
+  "ps",
+  "fts jbtn"
  ],
  "marker_current": "1",
  "function_current": "not",
