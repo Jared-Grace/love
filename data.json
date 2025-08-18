@@ -1252,7 +1252,8 @@
   "n function_rename",
   "u fc",
   "a fcp function_copy",
-  "a r function_rename"
+  "a r function_rename",
+  "r js_marker_enter marker_enter"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
