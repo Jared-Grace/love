@@ -12,7 +12,7 @@ export async function marker_above(code) {
     let index = object_property_get(i, "index");
     let stack2 = object_property_get(i, "stack2");
     let statement = js_parse_statement(code);
-    list_insert(list, index2, value);
+    list_insert(stack2, index, statement);
   }
   let v = await function_transform_marker_current(lambda);
 }
