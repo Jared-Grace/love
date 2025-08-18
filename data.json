@@ -1232,7 +1232,6 @@
   "s au",
   "s js_block_child_graph",
   "s atom",
-  "fts js_block_child_graph_unparse",
   "s dollar",
   "o ",
   "p",
@@ -1241,7 +1240,8 @@
   "s visit,each",
   "s js,visit",
   "c js_visit_each_async js_visit_each",
-  "ps"
+  "ps",
+  "fts js_block_child_graph_unparse"
  ],
  "marker_current": "1",
  "function_current": "js_visit_each",
