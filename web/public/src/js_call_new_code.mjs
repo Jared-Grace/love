@@ -47,8 +47,9 @@ export async function js_call_new_code(f_name_call, ast, lambda3, lambda2) {
   let args_code = await list_map_unordered_async(arg_names, lambda3);
   let code = js_code_call_args_await_maybe(unaliased, args_code, declaration);
   let return_name = js_return_name(ast_call);
-  return {
+  let v = {
     code,
     return_name,
   };
+  return v;
 }
