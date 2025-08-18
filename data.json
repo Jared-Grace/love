@@ -1282,7 +1282,8 @@
   "mab $g$v$stack",
   "s functions",
   "s function,write",
-  "s write"
+  "s write",
+  "s file_js_unparse"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
