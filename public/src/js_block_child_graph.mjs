@@ -26,7 +26,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node: right, stack } = v;
       log_json(right);
-      let match = js_node_types_is(match, ["ImportSpecifier"]);
+      let match = js_node_types_is(right, ["ImportSpecifier"]);
       if (match) {
         log_unparse(right);
       }
