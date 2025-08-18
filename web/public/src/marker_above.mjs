@@ -15,4 +15,5 @@ export async function marker_above(code) {
     list_insert(stack2, index, statement);
   }
   let v = await function_transform_marker_current(lambda);
+  return v;
 }
