@@ -1276,7 +1276,8 @@
   "cd",
   "fs jaa",
   "a mda marker_delete_above",
-  "mda"
+  "mda",
+  "u ja"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
