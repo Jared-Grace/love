@@ -1,3 +1,4 @@
+import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -29,7 +30,7 @@ export async function marker_enter() {
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
       list_remove(stack2, stack1);
-      let body = object_property_get(next, "body");
+      let body = js_declaration_to_block_body(next);
       list_add_first(body, stack1);
     }
   }
