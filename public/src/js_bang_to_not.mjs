@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_code_call } from "./js_code_call.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -13,7 +14,7 @@ export function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
-      js_code_call(f_name);
+      js_code_call(not);
     }
     log(node);
   }
