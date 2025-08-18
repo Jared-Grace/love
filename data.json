@@ -1281,7 +1281,8 @@
   "ps",
   "mab $g$v$stack",
   "s functions",
-  "s function,write"
+  "s function,write",
+  "s write"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
