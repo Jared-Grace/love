@@ -122,7 +122,8 @@
   "jvt": "js_visit_type",
   "fcp": "function_copy",
   "r": "function_rename",
-  "me": "marker_enter"
+  "me": "marker_enter",
+  "lr": "list_remove"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1257,7 +1258,8 @@
   "a me marker_enter",
   "p",
   "me",
-  "u lr"
+  "u lr",
+  "a lr list_remove"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
