@@ -1264,7 +1264,8 @@
   "s marker,index",
   "c marker_previous_index marker_index",
   "as insert",
-  "u li"
+  "u li",
+  "u lis"
  ],
  "marker_current": "1",
  "function_current": "marker_index",
