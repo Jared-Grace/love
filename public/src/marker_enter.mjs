@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { log_unparse } from "./log_unparse.mjs";
@@ -26,7 +27,7 @@ export async function marker_enter() {
     let { next, stack1, stack2 } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
-      lr;
+      list_remove(list, item);
       let body = object_property_get(next, "body");
     }
   }
