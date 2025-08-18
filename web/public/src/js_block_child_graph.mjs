@@ -26,9 +26,8 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node: right, stack } = v;
       log_json(right);
-      let match = js_node_types_is(item2, types);
-      let includes2 = list_includes(["ImportSpecifier"], right);
-      if (includes2) {
+      let match = js_node_types_is(item2, ["ImportSpecifier"]);
+      if (match) {
         log_unparse(right);
       }
       let left = js_stack_last(stack, "BlockStatement");
