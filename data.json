@@ -1234,7 +1234,8 @@
   "n not",
   "ps",
   "fts jbtn",
-  "s js,call"
+  "s js,call",
+  "s js_keyword_arguments"
  ],
  "marker_current": "1",
  "function_current": "not",
