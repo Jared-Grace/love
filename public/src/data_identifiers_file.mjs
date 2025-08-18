@@ -6,5 +6,6 @@ export async function data_identifiers_file(
   lambda$previous,
 ) {
   marker("1");
-  return await data_transform(property_name, value_initial, lambda$previous);
+  let v = await data_transform(property_name, value_initial, lambda$previous);
+  return v;
 }
