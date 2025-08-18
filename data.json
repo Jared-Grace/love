@@ -1266,6 +1266,6 @@
   "c marker_previous_index marker_index"
  ],
  "marker_current": "1",
- "function_current": "marker_above",
+ "function_current": "marker_index",
  "terminal": false
 }
