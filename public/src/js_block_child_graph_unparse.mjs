@@ -21,8 +21,7 @@ import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export async function js_block_child_graph_unparse(ast) {
-  function lambda2() {}
-  let edges = js_block_child_graph(ast, lambda2);
+  let edges = js_block_child_graph(ast);
   async function lambda(edge) {
     let waited = await list_map_unordered_async(edge, js_unparse);
     return waited;
