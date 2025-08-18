@@ -23,7 +23,7 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 export async function js_call_new(f_name_call, ast) {
-  let { code, return_name, existing } = await js_call_new_code(
+  let { code, return_name, existing, declaration } = await js_call_new_code(
     f_name_call,
     ast,
   );
