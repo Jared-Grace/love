@@ -14,7 +14,6 @@ export async function js_dollar_ie({ stack1, ast }) {
   js_dollar_i({
     stack1,
   });
-  let { test } = stack1;
-  let { declaration, parsed } = await js_call_new(equal.name, ast);
-  object_property_set(object, property_name, value);
+  let { parsed } = await js_call_new(equal.name, ast);
+  object_property_set(stack1, "test", parsed);
 }
