@@ -1207,7 +1207,6 @@
   "ob",
   "o sb",
   "f_name",
-  "ftc jbcgu",
   "s size",
   "nj bang_to_not",
   "u jv",
@@ -1241,10 +1240,11 @@
   "p",
   "fts jbcg",
   "cd",
-  "fts jbcgu",
   "f",
   "ps",
-  "o jbcgu"
+  "o jbcgu",
+  "ftc jbcgu",
+  "fts jbcgu"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph_unparse",
