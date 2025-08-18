@@ -17,6 +17,6 @@ export function js_identifier_unique(existing, name) {
     unique = name + suffix;
     attempt++;
   } while (string_empty_is(unique) || list_includes(used, unique));
-  list_add(used, unique);
+  list_add(existing, unique);
   return unique;
 }
