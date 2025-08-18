@@ -21,6 +21,7 @@ import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
 export async function js_block_child_graph_unparse(ast) {
+  marker("1");
   let edges = js_block_child_graph(ast);
   if (false) {
     function a() {}
