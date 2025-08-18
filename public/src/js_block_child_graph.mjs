@@ -18,11 +18,13 @@ import { js_stack_last } from "./js_stack_last.mjs";
 import { each } from "./each.mjs";
 import { js_visitors } from "./js_visitors.mjs";
 import { marker } from "./marker.mjs";
+import { json_to } from "./json_to.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
   function lambda2(la) {
     function lambda(v) {
       let { node: right, stack } = v;
+      let message = json_to(right);
       log(message);
       log_unparse(right);
       let left = js_stack_last(stack, "BlockStatement");
