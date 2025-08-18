@@ -1290,8 +1290,8 @@
   "s path_to",
   "s data",
   "p",
-  "data_property_get identifiers",
-  "ps"
+  "ps",
+  "data_property_get identifiers"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
