@@ -1,3 +1,4 @@
+import { list_is } from "./list_is.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker_index } from "./marker_index.mjs";
@@ -8,7 +9,8 @@ export async function marker_above(code) {
   async function lambda(a) {
     let i = marker_index(a);
     let index = object_property_get(i, "index");
-    let statement = js_parse_statement(code2);
+    let statement = js_parse_statement(code);
+    let l = list_is(value);
   }
   let v = await function_transform_marker_current(lambda);
 }
