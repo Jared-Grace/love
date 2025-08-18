@@ -17,7 +17,7 @@ export async function data_identifiers_file(parsed) {
       list_add_if_not_includes(list, f_name);
     }
     each(i_names, lambda2);
-    log(message);
+    log(previous);
     return previous;
   }
   let v = await data_transform(property_name, {}, lambda);
