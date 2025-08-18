@@ -124,7 +124,8 @@
   "r": "function_rename",
   "me": "marker_enter",
   "lr": "list_remove",
-  "lis": "list_insert"
+  "lis": "list_insert",
+  "mab": "marker_above"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1267,7 +1268,9 @@
   "as insert",
   "u li",
   "u lis",
-  "a lis list_insert"
+  "a lis list_insert",
+  "a ma marker_above",
+  "a mab marker_above"
  ],
  "marker_current": "1",
  "function_current": "marker_index",
