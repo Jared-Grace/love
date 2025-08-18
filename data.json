@@ -1240,7 +1240,6 @@
   "fw list_is list_not_is",
   "fts jbcg",
   "f",
-  "ps",
   "o jbcgu",
   "ftc jbcgu",
   "fts jbcgu",
@@ -1279,7 +1278,8 @@
   "a mda marker_delete_above",
   "mda",
   "u ja",
-  "a ja js_auto"
+  "a ja js_auto",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
