@@ -19,6 +19,7 @@ export async function data_identifiers_file(parsed) {
     }
     each(i_names, lambda2);
     log("message");
+    log(message);
     return previous;
   }
   let v = await data_transform(property_name, {}, lambda);
