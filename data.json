@@ -787,7 +787,6 @@
   "fs au",
   "t arrow_to_function_should_add_return",
   "s arrow",
-  "s au",
   "de au_task_arrow_to_function_should_add_return",
   "o t",
   "a fnu function_name_unalias",
@@ -1235,7 +1234,8 @@
   "ps",
   "s js,call",
   "s js_keyword_arguments",
-  "fts jbtn"
+  "fts jbtn",
+  "s au"
  ],
  "marker_current": "1",
  "function_current": "not",
