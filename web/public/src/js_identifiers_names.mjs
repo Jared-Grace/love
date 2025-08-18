@@ -6,6 +6,10 @@ export function js_identifiers_names(ast) {
     js_visit_type(ast, "Identifier", (v) => {
       let { node } = v;
       la(object_property_get(node, "name"));
-    });
+    });la(js_keyword_arguments())
   });
 }
+function js_keyword_arguments() {
+  return 'arguments';
+}
+
