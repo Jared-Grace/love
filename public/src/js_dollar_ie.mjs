@@ -8,7 +8,7 @@ import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { js_keyword_if } from "./js_keyword_if.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { marker } from "./marker.mjs";
-export async function js_dollar_ie({ stack1 }) {
+export async function js_dollar_ie({ stack1, ast }) {
   js_dollar_i({
     stack1,
   });
