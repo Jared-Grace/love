@@ -1201,7 +1201,6 @@
   "as node,type",
   "u jnti",
   "a ntsi js_node_types_is",
-  "fts jbcg",
   "cs js_block_child_graph unparse",
   "u ju",
   "u lmua",
@@ -1241,7 +1240,8 @@
   "s js,visit",
   "c js_visit_each_async js_visit_each",
   "fts js_block_child_graph_unparse",
-  "ps"
+  "ps",
+  "fts jbcg"
  ],
  "marker_current": "1",
  "function_current": "js_visit_each",
