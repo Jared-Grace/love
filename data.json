@@ -1256,11 +1256,11 @@
   "ac me mx",
   "a me marker_enter",
   "p",
-  "me",
   "u lr",
   "a lr list_remove",
   "s list,add",
-  "cd"
+  "cd",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
