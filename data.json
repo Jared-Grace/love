@@ -1068,7 +1068,6 @@
   "a ars marker_assign_replace_string",
   "o m",
   "fs dtg",
-  "s data",
   "oe m",
   "fs m",
   "fp data_watch_set",
@@ -1283,7 +1282,8 @@
   "s functions",
   "s function,write",
   "s write",
-  "s file_js_unparse"
+  "s file_js_unparse",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
