@@ -1232,9 +1232,10 @@
   "ps",
   "p",
   "fts jbtn",
-  "s js_visit_type"
+  "s js_visit_type",
+  "n not"
  ],
  "marker_current": "1",
- "function_current": "js_call_new",
+ "function_current": "not",
  "terminal": false
 }
