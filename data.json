@@ -121,7 +121,8 @@
   "ntsi": "js_node_types_is",
   "jv": "js_visit",
   "jvt": "js_visit_type",
-  "fcp": "function_copy"
+  "fcp": "function_copy",
+  "r": "function_rename"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1250,7 +1251,8 @@
   "fs jaa",
   "n function_rename",
   "u fc",
-  "a fcp function_copy"
+  "a fcp function_copy",
+  "a r function_rename"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
