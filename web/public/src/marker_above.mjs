@@ -14,6 +14,7 @@ export async function marker_above(code) {
     let statement = js_parse_statement(code);
     list_insert(stack2, index, statement);
     let ast = object_property_get(a, "ast");
+    ja;
   }
   let v = await function_transform_marker_current(lambda);
   return v;
