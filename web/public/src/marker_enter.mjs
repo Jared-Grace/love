@@ -23,8 +23,8 @@ export async function marker_enter() {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
-    let nt = js_node_type(n2);
-    if (js_types_function_includes(type_is)) {
+    let nt = js_node_type(next);
+    if (js_types_function_includes(nt)) {
     }
   }
   let v = await function_transform_marker_current(lambda);
