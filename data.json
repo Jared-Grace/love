@@ -1289,7 +1289,8 @@
   "s list,if,not",
   "a lax list_add_if_not_includes",
   "s file_js",
-  "s path_To"
+  "s path_To",
+  "s path_to"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
