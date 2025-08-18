@@ -1,3 +1,4 @@
+import { js_call_new_code } from "./js_call_new_code.mjs";
 import { marker } from "./marker.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -23,37 +24,7 @@ import { marker_next_index } from "./marker_next_index.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 export async function js_call_new(f_name_call, ast) {
   marker("1");
-  let {
-    declaration,
-    unaliased,
-    ast: ast_call,
-  } = await function_parse_declaration(f_name_call);
-  let existing = js_identifiers_names(ast);
-  let arg_names = js_declaration_params_names(declaration);
-  async function lambda3(arg_name) {
-    let arg_code = js_identifier_unique(existing, arg_name);
-    let split = string_split(arg_name, "$");
-    const lambda = "lambda";
-    if (list_first(split) === lambda) {
-      let skip_count = 1;
-      let b = list_size(split);
-      let remaining = list_slice(split, skip_count, b);
-      let lamda_name = js_identifier_unique(existing, lambda);
-      let async_is = object_property_get(declaration, "async");
-      let code = js_code_declaration(lamda_name, "", async_is);
-      let declaration_lambda = js_parse_statement_module(code);
-      function lambda2(p) {
-        let unique = js_identifier_unique(existing, p);
-        js_declaration_param_add(declaration_lambda, unique);
-      }
-      each(remaining, lambda2);
-      arg_code = await js_unparse(declaration_lambda);
-    }
-    return arg_code;
-  }
-  let args_code = await list_map_unordered_async(arg_names, lambda3);
-  let code = js_code_call_args_await_maybe(unaliased, args_code, declaration);
-  let return_name = js_return_name(ast_call);
+  await js_call_new_code(f_name_call, ast, lambda3, lambda2);
   marker("2");
   if (return_name !== null) {
     let unique = js_identifier_unique(existing, return_name);
