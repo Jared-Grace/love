@@ -123,7 +123,8 @@
   "fcp": "function_copy",
   "r": "function_rename",
   "me": "marker_enter",
-  "lr": "list_remove"
+  "lr": "list_remove",
+  "lis": "list_insert"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1265,7 +1266,8 @@
   "c marker_previous_index marker_index",
   "as insert",
   "u li",
-  "u lis"
+  "u lis",
+  "a lis list_insert"
  ],
  "marker_current": "1",
  "function_current": "marker_index",
