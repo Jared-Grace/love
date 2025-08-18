@@ -1229,11 +1229,11 @@
   "s dollar",
   "fs js_call_new",
   "mf 1 2 js_call_new_code",
-  "ps",
   "p",
   "fts jbtn",
   "s js_visit_type",
-  "n not"
+  "n not",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "not",
