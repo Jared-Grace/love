@@ -1256,6 +1256,6 @@
   "r js_marker_enter marker_enter"
  ],
  "marker_current": "1",
- "function_current": "function_rename",
+ "function_current": "marker_enter",
  "terminal": false
 }
