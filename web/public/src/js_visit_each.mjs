@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { marker } from "./marker.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_visit } from "./js_visit.mjs";
@@ -9,5 +10,5 @@ export async function js_visit_each(a, lambda) {
     return v;
   }
   let vs = list_adder(lambda2);
-  await each_async(vs, lambda);
+  each(vs, lambda);
 }
