@@ -1236,10 +1236,10 @@
   "ps",
   "fts js_block_child_graph_unparse",
   "s dollar",
-  "s auto",
   "o ",
   "p",
-  "o js_atomize_function"
+  "o js_atomize_function",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "js_atomize_function",
