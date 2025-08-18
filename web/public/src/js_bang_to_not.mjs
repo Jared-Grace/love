@@ -11,7 +11,7 @@ export function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
     }
-    log(operator);
+    log(node);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
 }
