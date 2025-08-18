@@ -1246,7 +1246,8 @@
   "fts jbcgu",
   "      }",
   "s me",
-  "u me"
+  "u me",
+  "s enter"
  ],
  "marker_current": "1",
  "function_current": "js_block_child_graph_unparse",
