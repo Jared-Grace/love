@@ -1258,9 +1258,9 @@
   "u lr",
   "a lr list_remove",
   "s list,add",
-  "cd",
   "me",
-  "s block"
+  "s block",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
