@@ -1287,7 +1287,8 @@
   "s ident",
   "p",
   "s list,if,not",
-  "a lax list_add_if_not_includes"
+  "a lax list_add_if_not_includes",
+  "s file_js"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
