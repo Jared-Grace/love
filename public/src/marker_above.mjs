@@ -1,3 +1,4 @@
+import { list_insert } from "./list_insert.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -11,7 +12,7 @@ export async function marker_above(code) {
     let index = object_property_get(i, "index");
     let stack2 = object_property_get(i, "stack2");
     let statement = js_parse_statement(code);
-    let includes = list_includes(list, item);
+    list_insert(list, index2, value);
   }
   let v = await function_transform_marker_current(lambda);
 }
