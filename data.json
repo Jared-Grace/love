@@ -1242,7 +1242,8 @@
   "p",
   "fts jbcg",
   "f",
-  "cd"
+  "cd",
+  "fts jbcgu"
  ],
  "marker_current": "1",
  "function_current": "list_not_is",
