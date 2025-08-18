@@ -1230,7 +1230,8 @@
   "de js_js_dollar_ie",
   "nj dollar_ie",
   "s dollar",
-  "fs js_call_new"
+  "fs js_call_new",
+  "mf 1 2 js_call_new_code"
  ],
  "marker_current": "1",
  "function_current": "js_call_new",
