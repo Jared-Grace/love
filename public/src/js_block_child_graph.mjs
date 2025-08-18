@@ -30,6 +30,8 @@ export function js_block_child_graph(ast) {
           la([left, right]);
           return;
         }
+        if (false) {
+        }
         function lambda4() {
           log("here");
           let index = list_index_of(stack, left);
