@@ -1298,7 +1298,8 @@
  "terminal": false,
  "identifiers": {
   "log": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "function_path_to_name": [
    "data_identifiers_file"
@@ -1322,19 +1323,24 @@
    "data_identifiers_file"
   ],
   "data_identifiers_file": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "parsed": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "f_path": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "ast": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "code": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "file_js_unparse"
   ],
   "f_name": [
    "data_identifiers_file"
@@ -1362,6 +1368,24 @@
   ],
   "v": [
    "data_identifiers_file"
+  ],
+  "file_overwrite": [
+   "file_js_unparse"
+  ],
+  "js_unparse": [
+   "file_js_unparse"
+  ],
+  "js_format": [
+   "file_js_unparse"
+  ],
+  "file_js_unparse": [
+   "file_js_unparse"
+  ],
+  "code_unparsed": [
+   "file_js_unparse"
+  ],
+  "code_new": [
+   "file_js_unparse"
   ]
  }
 }
