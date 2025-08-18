@@ -1260,9 +1260,10 @@
   "s list,add",
   "s block",
   "cd",
-  "me"
+  "me",
+  "n marker_above"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_above",
  "terminal": false
 }
