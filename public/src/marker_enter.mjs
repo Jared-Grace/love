@@ -30,7 +30,7 @@ export async function marker_enter() {
     if (js_types_function_includes(nt)) {
       list_remove(stack2, stack1);
       let body = object_property_get(next, "body");
-      list_add_first(body2, statement);
+      list_add_first(body, stack1);
     }
   }
   let v = await function_transform_marker_current(lambda);
