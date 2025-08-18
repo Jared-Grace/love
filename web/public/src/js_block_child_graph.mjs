@@ -26,7 +26,7 @@ export function js_block_child_graph(ast) {
     function lambda(v) {
       let { node: right, stack } = v;
       log_json(right);
-      let includes2 = list_includes(list, item2);
+      let includes2 = list_includes(["ImportSpecifier"], item2);
       log_unparse(right);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
