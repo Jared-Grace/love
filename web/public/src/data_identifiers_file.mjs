@@ -8,10 +8,10 @@ import { data_transform } from "./data_transform.mjs";
 import { marker } from "./marker.mjs";
 export async function data_identifiers_file(parsed) {
   let { f_path, ast, code } = parsed;
+  let i_names = js_identifiers_names(ast);
   let f_name = function_path_to_name(f_path);
   let property_name = "identifiers";
   function lambda(previous) {
-    let i_names = js_identifiers_names(ast);
     function lambda2(i_name) {
       let list = object_property_initialize(previous, i_name, []);
       list_add_if_not_includes(list, f_name);
