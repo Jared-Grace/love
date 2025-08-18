@@ -1,3 +1,4 @@
+import { js_atomize } from "./js_atomize.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_types_function } from "./js_types_function.mjs";
@@ -31,7 +32,9 @@ export function js_block_child_graph(ast) {
           return;
         }
         if (false) {
-          ("this was written for deeper block statements; atomize negates need");
+          "this was written for deeper block statements; " +
+            js_atomize.name +
+            " negates need";
           function lambda4() {
             let index = list_index_of(stack, left);
             let index_2 = index + 2;
