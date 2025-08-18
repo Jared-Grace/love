@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { js_call_new } from "./js_call_new.mjs";
 import { log } from "./log.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
@@ -15,4 +16,5 @@ export async function js_dollar_ie({ stack1, ast }) {
   });
   let { test } = stack1;
   let { declaration, parsed } = await js_call_new(equal.name, ast);
+  object_property_set(object, property_name, value);
 }
