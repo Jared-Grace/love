@@ -1121,7 +1121,6 @@
   "oe mrt",
   "cs list_size_1_assert message",
   "s size,1",
-  "f",
   "oe ms",
   "oe fs",
   "mg",
@@ -1242,7 +1241,8 @@
   "fw list_is list_not_is",
   "ps",
   "p",
-  "fts jbcg"
+  "fts jbcg",
+  "f"
  ],
  "marker_current": "1",
  "function_current": "list_not_is",
