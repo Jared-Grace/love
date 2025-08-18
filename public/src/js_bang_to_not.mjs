@@ -17,6 +17,7 @@ export function js_bang_to_not(ast) {
       let argument = object_property_get(node, "argument");
       let code = js_code_call(not.name);
       let expression = js_parse_expression(code);
+      let argument2 = object_property_get(expression, "argument");
     }
     log(node);
   }
