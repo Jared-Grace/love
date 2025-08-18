@@ -9,7 +9,7 @@ export function js_bang_to_not(ast) {
   function lambda(v) {
     let { node } = v;
     let { operator } = node;
-    if (equal(left, right)) {
+    if (equal(operator, right)) {
     }
     log(operator);
   }
