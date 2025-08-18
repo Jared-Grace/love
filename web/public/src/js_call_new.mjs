@@ -23,17 +23,15 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 export async function js_call_new(f_name_call, ast) {
-  marker("1");
   let { code, return_name } = await js_call_new_code(
     f_name_call,
     ast,
     lambda3,
     lambda2,
   );
-  marker("2");
   if (return_name !== null) {
     let unique = js_identifier_unique(existing, return_name);
-    let code = js_code_let_assign(unique, code);
+    code = js_code_let_assign(unique, code);
   }
   let parsed = js_parse_statement(code);
   let v = {
