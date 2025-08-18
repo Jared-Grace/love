@@ -1263,7 +1263,8 @@
   "me",
   "n marker_above",
   "s marker,index",
-  "c marker_previous_index marker_index"
+  "c marker_previous_index marker_index",
+  "as insert"
  ],
  "marker_current": "1",
  "function_current": "marker_index",
