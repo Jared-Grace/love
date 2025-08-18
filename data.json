@@ -1238,7 +1238,6 @@
   "fts js_block_child_graph_unparse",
   "fw list_is list_not_is",
   "fts jbcg",
-  "cd",
   "f",
   "ps",
   "o jbcgu",
@@ -1260,7 +1259,8 @@
   "me",
   "u lr",
   "a lr list_remove",
-  "s list,add"
+  "s list,add",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
