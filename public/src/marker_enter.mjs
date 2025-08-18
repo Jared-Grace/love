@@ -34,4 +34,5 @@ export async function marker_enter() {
     }
   }
   let v = await function_transform_marker_current(lambda);
+  return v;
 }
