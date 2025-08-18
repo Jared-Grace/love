@@ -9,7 +9,7 @@ export async function data_identifiers_file(parsed) {
   function lambda(previous) {
     let names = js_identifiers_names(ast);
     function lambda2(name) {
-      let result = object_property_initialize(previous, name, []);
+      let list = object_property_initialize(previous, name, []);
     }
     each(names, lambda2);
   }
