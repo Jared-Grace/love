@@ -22,7 +22,8 @@ export async function marker_enter() {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
-    log(next);
+    if (false) {
+    }
   }
   let v = await function_transform_marker_current(lambda);
 }
