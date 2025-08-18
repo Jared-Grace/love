@@ -1270,10 +1270,10 @@
   "a mab marker_above",
   "fs jaa",
   "mab $g$v$stack",
-  "cd",
   "c mab marker_delete_above",
   "s prev",
-  "s remove"
+  "s remove",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_delete_above",
