@@ -125,7 +125,8 @@
   "me": "marker_enter",
   "lr": "list_remove",
   "lis": "list_insert",
-  "mab": "marker_above"
+  "mab": "marker_above",
+  "mda": "marker_delete_above"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1273,7 +1274,8 @@
   "s prev",
   "s remove",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "a mda marker_delete_above"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
