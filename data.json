@@ -821,7 +821,6 @@
   "tt",
   "ad tt",
   "a at assert",
-  "s remove",
   "s nodes",
   "s name",
   "ftc js_dollar export function js_identifier_defineds(v) {",
@@ -1273,7 +1272,8 @@
   "mab $g$v$stack",
   "cd",
   "c mab marker_delete_above",
-  "s prev"
+  "s prev",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "marker_delete_above",
