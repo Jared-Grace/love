@@ -26,6 +26,7 @@ export async function marker_enter() {
     let { next, stack1, stack2 } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
+      lr;
       let body = object_property_get(next, "body");
     }
   }
