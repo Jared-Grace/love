@@ -1224,7 +1224,6 @@
   "nj js_dollar_ie",
   "de js_js_dollar_ie",
   "nj dollar_ie",
-  "s dollar",
   "fs js_call_new",
   "mf 1 2 js_call_new_code",
   "s js_visit_type",
@@ -1237,7 +1236,8 @@
   "p",
   "s atom",
   "ps",
-  "fts js_block_child_graph_unparse"
+  "fts js_block_child_graph_unparse",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "not",
