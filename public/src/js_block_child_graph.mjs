@@ -21,9 +21,9 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
   function lambda2(la) {
-    async function lambda(v) {
+    function lambda(v) {
       let { node: right, stack } = v;
-      await log_unparse(next);
+      log_unparse(next);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
