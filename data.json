@@ -1233,7 +1233,6 @@
   "s atom",
   "s dollar",
   "o ",
-  "p",
   "o js_atomize_function",
   "s auto",
   "s visit,each",
@@ -1242,6 +1241,7 @@
   "fts js_block_child_graph_unparse",
   "fw list_is list_not_is",
   "ps",
+  "p",
   "fts jbcg"
  ],
  "marker_current": "1",
