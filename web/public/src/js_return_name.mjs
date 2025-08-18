@@ -10,17 +10,17 @@ import { js_declaration_single } from "./js_declaration_single.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_return_name(ast) {
   let body_block = js_declaration_single_block_blody(ast);
-  let name = null;
+  let return_name = null;
   if (list_empty_not_is(body_block)) {
     let last = list_last(body_block);
     js_return_on(last, identifier_if, identifier_not);
   }
-  return name;
   function identifier_not() {
-    name = "result";
+    return_name = "result";
   }
   function identifier_if(argument) {
     let { name: name_argument } = argument;
-    name = name_argument;
+    return_name = name_argument;
   }
+  return return_name;
 }
