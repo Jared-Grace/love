@@ -1203,7 +1203,6 @@
   "u jnti",
   "a ntsi js_node_types_is",
   "fts jbcg",
-  "s auto",
   "cs js_block_child_graph unparse",
   "u ju",
   "u lmua",
@@ -1237,7 +1236,8 @@
   "s atom",
   "ps",
   "fts js_block_child_graph_unparse",
-  "s dollar"
+  "s dollar",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "not",
