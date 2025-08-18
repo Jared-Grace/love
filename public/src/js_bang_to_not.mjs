@@ -23,7 +23,7 @@ export function js_bang_to_not(ast) {
       let expression = js_parse_expression(code);
       let arguments2 = object_property_get(expression, "arguments");
       list_add(arguments2, copy);
-      object_replace(to, from);
+      object_replace(node, expression);
     }
     log(node);
   }
