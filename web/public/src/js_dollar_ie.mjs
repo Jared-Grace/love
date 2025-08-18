@@ -18,7 +18,8 @@ export async function js_dollar_ie({ stack1, ast }) {
   js_dollar_i({
     stack1,
   });
-  let { code } = await js_call_new_code(equal.name, ast);
+  const f_name = equal.name;
+  let { code } = await js_call_new_code(f_name, ast);
   let expression = js_parse_expression(code);
   object_property_set(stack1, "test", expression);
   await log_unparse(stack1);
