@@ -28,7 +28,7 @@ export function js_block_child_graph(ast) {
       let { node: right, stack } = v;
       log_json(right);
       let a = js_node_types_is(right, ["ImportSpecifier", "Identifier"]);
-      let match = not(a);
+      let match = not(a || list_is(a));
       if (match) {
         log_unparse(right);
       }
