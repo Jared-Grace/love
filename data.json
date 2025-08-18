@@ -1262,7 +1262,8 @@
   "cd",
   "me",
   "n marker_above",
-  "s marker,index"
+  "s marker,index",
+  "c marker_previous_index marker_index"
  ],
  "marker_current": "1",
  "function_current": "marker_above",
