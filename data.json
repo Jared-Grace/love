@@ -1125,7 +1125,6 @@
   "mg",
   "n list_map_property_to",
   "oe list_map_property_to",
-  "fs jaa",
   "md 2",
   "mdc",
   "md 0",
@@ -1247,9 +1246,10 @@
   "      }",
   "s me",
   "u me",
-  "s enter"
+  "s enter",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "js_block_child_graph_unparse",
+ "function_current": "js_await_add",
  "terminal": false
 }
