@@ -49,8 +49,8 @@ export function js_block_child_graph(ast) {
               }
             }
           }
+          js_node_type_is_if(right, "BlockStatement", lambda4);
         }
-        js_node_type_is_if(right, "BlockStatement", lambda4);
       }
     }
     let vs = js_visitors(ast);
