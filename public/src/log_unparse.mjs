@@ -1,6 +1,6 @@
 import { log } from "./log.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-export function log_unparse(next) {
-  let code = js_unparse(next);
+export function log_unparse(node) {
+  let code = js_unparse(node);
   log(code);
 }
