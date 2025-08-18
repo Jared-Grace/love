@@ -11,7 +11,7 @@ export async function data_identifiers_file(parsed) {
     let names = js_identifiers_names(ast);
     function lambda2(name) {
       let list = object_property_initialize(previous, name, []);
-      list_add_if_not_includes(found, node);
+      list_add_if_not_includes(list, name);
     }
     each(names, lambda2);
   }
