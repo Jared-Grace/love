@@ -1259,7 +1259,6 @@
   "a lr list_remove",
   "s list,add",
   "s block",
-  "cd",
   "me",
   "n marker_above",
   "s marker,index",
@@ -1271,7 +1270,8 @@
   "a ma marker_above",
   "a mab marker_above",
   "fs jaa",
-  "mab $g$v$stack"
+  "mab $g$v$stack",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
