@@ -17,7 +17,7 @@ import { function_transform_marker_current } from "./function_transform_marker_c
 import { marker } from "./marker.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-export async function marker_enter(ast) {
+export async function marker_enter() {
   marker("1");
   async function lambda(a) {
     let n = marker_next_get(a);
