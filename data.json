@@ -1235,9 +1235,9 @@
   "s au",
   "s js_block_child_graph",
   "p",
-  "fts js_block_child_graph_unparse",
   "s atom",
-  "ps"
+  "ps",
+  "fts js_block_child_graph_unparse"
  ],
  "marker_current": "1",
  "function_current": "not",
