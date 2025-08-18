@@ -14,7 +14,7 @@ export async function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
-      let expression = await js_call_new_expression(f_name, ast2);
+      let expression = await js_call_new_expression(f_name, ast);
     }
     log(node);
   }
