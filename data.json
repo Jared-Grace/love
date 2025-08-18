@@ -366,7 +366,6 @@
   "pn ast",
   "ir ast2 ast",
   "s filter",
-  "s ident",
   "fw object_merge object_copy",
   "au js_stack_declaration_asyncify",
   "i function_run_line",
@@ -1284,7 +1283,8 @@
   "s write",
   "s file_js_unparse",
   "s data",
-  "fw data_transform data_identifiers_file"
+  "fw data_transform data_identifiers_file",
+  "s ident"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
