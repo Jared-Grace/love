@@ -9,6 +9,6 @@ export function marker_next_get(a) {
   let n = {
     next,
   };
-  let to2 = object_merge(n, from);
+  let to2 = object_merge(n, ni);
   return n;
 }
