@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { js_call_new_expression } from "./js_call_new_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -14,7 +15,7 @@ export async function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
-      let expression = await js_call_new_expression(f_name, ast);
+      let expression = await js_call_new_expression(not, ast);
     }
     log(node);
   }
