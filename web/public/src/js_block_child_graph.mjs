@@ -1,3 +1,4 @@
+import { log_json } from "./log_json.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
@@ -24,8 +25,7 @@ export function js_block_child_graph(ast) {
   function lambda2(la) {
     function lambda(v) {
       let { node: right, stack } = v;
-      let message = json_to(right);
-      log(message);
+      log_json(right);
       log_unparse(right);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
