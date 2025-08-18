@@ -1270,7 +1270,8 @@
   "a lis list_insert",
   "a ma marker_above",
   "a mab marker_above",
-  "fs jaa"
+  "fs jaa",
+  "mab $g$v$stack"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
