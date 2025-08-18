@@ -126,7 +126,8 @@
   "lr": "list_remove",
   "lis": "list_insert",
   "mab": "marker_above",
-  "mda": "marker_delete_above"
+  "mda": "marker_delete_above",
+  "ja": "js_auto"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1277,7 +1278,8 @@
   "fs jaa",
   "a mda marker_delete_above",
   "mda",
-  "u ja"
+  "u ja",
+  "a ja js_auto"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
