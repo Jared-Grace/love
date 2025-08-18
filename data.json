@@ -1259,7 +1259,8 @@
   "p",
   "me",
   "u lr",
-  "a lr list_remove"
+  "a lr list_remove",
+  "s list,add"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
