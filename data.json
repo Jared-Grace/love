@@ -847,7 +847,6 @@
   "u jsp",
   "s parse",
   "a jps js_parse_statement",
-  "u fc",
   "a fc functions_combine",
   "fc fs t",
   "lm",
@@ -1248,7 +1247,8 @@
   "u me",
   "s enter",
   "fs jaa",
-  "n function_rename"
+  "n function_rename",
+  "u fc"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
