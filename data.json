@@ -1240,7 +1240,8 @@
   "o js_atomize_function",
   "s auto",
   "s visit,each",
-  "s js,visit"
+  "s js,visit",
+  "c js_visit_each_async js_visit_each"
  ],
  "marker_current": "1",
  "function_current": "js_atomize_function",
