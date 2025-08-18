@@ -1244,6 +1244,6 @@
   "c js_visit_each_async js_visit_each"
  ],
  "marker_current": "1",
- "function_current": "js_atomize_function",
+ "function_current": "js_visit_each",
  "terminal": false
 }
