@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -25,6 +26,7 @@ export async function marker_enter() {
     let { next } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
+      let body = object_property_get(next, "body");
     }
   }
   let v = await function_transform_marker_current(lambda);
