@@ -23,7 +23,7 @@ export async function marker_enter() {
   marker("1");
   async function lambda(a) {
     let n = marker_next_get(a);
-    let { next } = n;
+    let { next, stack1, stack2 } = n;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
       let body = object_property_get(next, "body");
