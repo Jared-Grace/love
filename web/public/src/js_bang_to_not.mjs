@@ -7,6 +7,7 @@ import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { marker } from "./marker.mjs";
+import { list_add } from "./list_add.mjs";
 export function js_bang_to_not(ast) {
   marker("1");
   !0;
@@ -18,6 +19,7 @@ export function js_bang_to_not(ast) {
       let code = js_code_call(not.name);
       let expression = js_parse_expression(code);
       let arguments2 = object_property_get(expression, "arguments");
+      list_add(arguments2, argument);
     }
     log(node);
   }
