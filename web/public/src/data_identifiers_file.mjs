@@ -10,12 +10,12 @@ export async function data_identifiers_file(parsed) {
   let f_name = function_path_to_name(f_path);
   let property_name = "identifiers";
   function lambda(previous) {
-    let names = js_identifiers_names(ast);
-    function lambda2(name) {
-      let list = object_property_initialize(previous, name, []);
-      list_add_if_not_includes(list, name);
+    let i_names = js_identifiers_names(ast);
+    function lambda2(i_name) {
+      let list = object_property_initialize(previous, i_name, []);
+      list_add_if_not_includes(list, f_name);
     }
-    each(names, lambda2);
+    each(i_names, lambda2);
   }
   let v = await data_transform(property_name, {}, lambda);
   return v;
