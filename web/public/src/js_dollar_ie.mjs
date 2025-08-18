@@ -1,3 +1,4 @@
+import { js_call_new_code } from "./js_call_new_code.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_call_new } from "./js_call_new.mjs";
@@ -15,7 +16,8 @@ export async function js_dollar_ie({ stack1, ast }) {
   js_dollar_i({
     stack1,
   });
-  let { parsed } = await js_call_new(equal.name, ast);
+  let { code } = await js_call_new_code(equal.name, ast);
+  let { parsed } = await js_call_new();
   object_property_set(stack1, "test", parsed);
   await log_unparse(stack1);
 }
