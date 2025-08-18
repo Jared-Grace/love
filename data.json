@@ -714,7 +714,6 @@
   "so dollar",
   "a or object_replace",
   "s define",
-  "u li",
   "fs js_identifier_defineds",
   "tf ArrowFunctionExpression",
   "nj arrow_to_function",
@@ -1264,7 +1263,8 @@
   "n marker_above",
   "s marker,index",
   "c marker_previous_index marker_index",
-  "as insert"
+  "as insert",
+  "u li"
  ],
  "marker_current": "1",
  "function_current": "marker_index",
