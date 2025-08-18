@@ -775,7 +775,6 @@
   "a la list_adder",
   "a lal list_all",
   "s atomize",
-  "s atom",
   "fw string_is",
   "fw string_is string_is_assert",
   "c js_stack_last js_stack_last_multiple",
@@ -1237,7 +1236,8 @@
   "s au",
   "s js_block_child_graph",
   "p",
-  "fts js_block_child_graph_unparse"
+  "fts js_block_child_graph_unparse",
+  "s atom"
  ],
  "marker_current": "1",
  "function_current": "not",
