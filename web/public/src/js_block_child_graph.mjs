@@ -30,21 +30,6 @@ export function js_block_child_graph(ast) {
           la([left, right]);
           return;
         }
-        function lambda4() {
-          let index = list_index_of(stack, left);
-          let index_2 = index + 2;
-          let ii = list_index_is(stack, index_2);
-          if (ii) {
-            let item = list_get(stack, index_2);
-            let ne = equal_not(item, right);
-            if (ne) {
-              left = item;
-              la([left, right]);
-              return;
-            }
-          }
-        }
-        js_node_type_is_if(right, "BlockStatement", lambda4);
       }
     }
     let vs = js_visitors(ast);
