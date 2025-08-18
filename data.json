@@ -120,7 +120,8 @@
   "lu": "log_unparse",
   "ntsi": "js_node_types_is",
   "jv": "js_visit",
-  "jvt": "js_visit_type"
+  "jvt": "js_visit_type",
+  "fcp": "function_copy"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1248,7 +1249,8 @@
   "s enter",
   "fs jaa",
   "n function_rename",
-  "u fc"
+  "u fc",
+  "a fcp function_copy"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
