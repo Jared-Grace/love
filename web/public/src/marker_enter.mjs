@@ -1,3 +1,4 @@
+import { js_node_type_is } from "./js_node_type_is.mjs";
 import { log_unparse } from "./log_unparse.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
@@ -22,7 +23,8 @@ export async function marker_enter() {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next } = n;
-    if (false) {
+    let type_is = js_node_type_is(node, type);
+    if (js_types_function_includes()) {
     }
   }
   let v = await function_transform_marker_current(lambda);
