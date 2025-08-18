@@ -19,5 +19,6 @@ export async function js_bang_to_not(ast) {
     log(node);
   }
   js_visit_type(ast, "UnaryExpression", lambda);
-  await js_visit_type_each_async(ast3, type, async function lambda3() {});
+  async function lambda3() {}
+  await js_visit_type_each_async(ast3, type, lambda3);
 }
