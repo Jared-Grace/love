@@ -1237,7 +1237,9 @@
   "ps",
   "fts js_block_child_graph_unparse",
   "s dollar",
-  "s auto"
+  "s auto",
+  "o ",
+  "o js_atomize_function"
  ],
  "marker_current": "1",
  "function_current": "not",
