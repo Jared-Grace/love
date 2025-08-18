@@ -14,7 +14,7 @@ export function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
-      js_code_call(not);
+      js_code_call(not.name);
     }
     log(node);
   }
