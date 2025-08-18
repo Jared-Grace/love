@@ -1,3 +1,4 @@
+import { list_remove_at } from "./list_remove_at.mjs";
 import { marker_previous_index } from "./marker_previous_index.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -12,8 +13,7 @@ export async function marker_delete_above(code) {
     let p = marker_previous_index(a);
     let index = object_property_get(p, "index");
     let stack2 = object_property_get(p, "stack2");
-    let statement = js_parse_statement(code);
-    list_insert(stack2, index, statement);
+    list_remove_at(stack2, index);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
