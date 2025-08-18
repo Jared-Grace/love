@@ -1,3 +1,4 @@
+import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { not } from "./not.mjs";
@@ -17,11 +18,12 @@ export function js_bang_to_not(ast) {
     let { operator } = node;
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
-      let copy = object_copy(from);
+      let copy = object_copy(argument);
       let code = js_code_call(not.name);
       let expression = js_parse_expression(code);
       let arguments2 = object_property_get(expression, "arguments");
-      list_add(arguments2, argument);
+      list_add(arguments2, copy);
+      object_replace(to, from);
     }
     log(node);
   }
