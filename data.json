@@ -1214,7 +1214,6 @@
   "ob",
   "o sb",
   "f_name",
-  "ps",
   "ftc jbcgu",
   "s size",
   "nj bang_to_not",
@@ -1231,7 +1230,8 @@
   "nj dollar_ie",
   "s dollar",
   "fs js_call_new",
-  "mf 1 2 js_call_new_code"
+  "mf 1 2 js_call_new_code",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_call_new",
