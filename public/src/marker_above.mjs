@@ -9,6 +9,7 @@ export async function marker_above(code) {
   async function lambda(a) {
     let i = marker_index(a);
     let index = object_property_get(i, "index");
+    let stack2 = object_property_get(i, "stack2");
     let statement = js_parse_statement(code);
     let includes = list_includes(list, item);
   }
