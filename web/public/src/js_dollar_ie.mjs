@@ -1,3 +1,4 @@
+import { js_call_new_expression } from "./js_call_new_expression.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_call_new_code } from "./js_call_new_code.mjs";
@@ -19,8 +20,7 @@ export async function js_dollar_ie({ stack1, ast }) {
     stack1,
   });
   const f_name = equal.name;
-  let { code } = await js_call_new_code(f_name, ast);
-  let expression = js_parse_expression(code);
+  let expression = await js_call_new_expression(f_name, ast);
   object_property_set(stack1, "test", expression);
   await log_unparse(stack1);
 }
