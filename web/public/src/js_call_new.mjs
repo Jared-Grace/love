@@ -28,7 +28,7 @@ export async function js_call_new(f_name_call, ast) {
   marker("2");
   if (return_name !== null) {
     let unique = js_identifier_unique(existing, return_name);
-    code = js_code_let_assign(unique, code);
+    let code = js_code_let_assign(unique, code);
   }
   let parsed = js_parse_statement(code);
   let v = {
