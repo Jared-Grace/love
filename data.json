@@ -1282,7 +1282,6 @@
   "s function,write",
   "s write",
   "s file_js_unparse",
-  "s data",
   "fw data_transform data_identifiers_file",
   "s ident",
   "p",
@@ -1290,7 +1289,8 @@
   "a lax list_add_if_not_includes",
   "s file_js",
   "s path_To",
-  "s path_to"
+  "s path_to",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_file",
