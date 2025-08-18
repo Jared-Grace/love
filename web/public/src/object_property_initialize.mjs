@@ -6,6 +6,6 @@ export function object_property_initialize(object, property_name, value) {
   if (!exists) {
     object_property_set(object, property_name, value);
   }
-  let result = object_property_get(object, property_name);
-  return result;
+  let value = object_property_get(object, property_name);
+  return value;
 }
