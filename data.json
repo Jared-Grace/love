@@ -1222,7 +1222,6 @@
   "ts",
   "s js,type",
   "a jvt js_visit_type",
-  "p",
   "o mc",
   "nj js_dollar_ie",
   "de js_js_dollar_ie",
@@ -1231,6 +1230,7 @@
   "fs js_call_new",
   "mf 1 2 js_call_new_code",
   "ps",
+  "p",
   "fts jbtn"
  ],
  "marker_current": "1",
