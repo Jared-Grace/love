@@ -31,6 +31,7 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { function_parse } from "./function_parse.mjs";
 export async function js_atomize_function(ast) {
+  marker("1");
   let fes = js_type(ast, "FunctionExpression");
   async function lambda(v) {
     let { stack } = v;
