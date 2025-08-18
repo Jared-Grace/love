@@ -1,3 +1,4 @@
+import { log_unparse } from "./log_unparse.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
@@ -20,8 +21,9 @@ import { marker } from "./marker.mjs";
 export function js_block_child_graph(ast) {
   marker("1");
   function lambda2(la) {
-    function lambda(v) {
+    async function lambda(v) {
       let { node: right, stack } = v;
+      await log_unparse(next);
       let left = js_stack_last(stack, "BlockStatement");
       let nn = null_not_is(left);
       if (nn) {
