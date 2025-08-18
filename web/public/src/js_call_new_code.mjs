@@ -50,6 +50,7 @@ export async function js_call_new_code(f_name_call, ast) {
   let v = {
     code,
     return_name,
+    existing,
   };
   return v;
 }

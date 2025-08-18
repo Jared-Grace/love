@@ -17,7 +17,7 @@ export async function js_dollar_ie({ stack1, ast }) {
     stack1,
   });
   let { code } = await js_call_new_code(equal.name, ast);
-  let { parsed } = await js_call_new();
+  ju
   object_property_set(stack1, "test", parsed);
   await log_unparse(stack1);
 }
