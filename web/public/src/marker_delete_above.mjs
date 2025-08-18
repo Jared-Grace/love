@@ -9,9 +9,9 @@ import { marker } from "./marker.mjs";
 export async function marker_delete_above(code) {
   marker("1");
   async function lambda(a) {
-    let i = marker_previous_index(a);
-    let index = object_property_get(i, "index");
-    let stack2 = object_property_get(i, "stack2");
+    let p = marker_previous_index(a);
+    let index = object_property_get(p, "index");
+    let stack2 = object_property_get(p, "stack2");
     let statement = js_parse_statement(code);
     list_insert(stack2, index, statement);
   }
