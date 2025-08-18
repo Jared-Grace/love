@@ -7,11 +7,11 @@ export function marker_index(a) {
   marker("1");
   let { stack2, stack1 } = a;
   let index = list_index_of(stack2, stack1);
-  let to = object_merge(
+  let i = object_merge(
     {
       index,
     },
     a,
   );
-  return to;
+  return i;
 }
