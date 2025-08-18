@@ -7,7 +7,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { marker_index } from "./marker_index.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
-export async function marker_delete_above(code) {
+export async function marker_delete_above() {
   marker("1");
   async function lambda(a) {
     let p = marker_previous_index(a);
