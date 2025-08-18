@@ -1153,7 +1153,6 @@
   "c js_visit_type js_visit_types",
   "ftc js_marker_enter js_marker_enter",
   "s types",
-  "cd",
   "fts jme",
   "fw jv js_visitors",
   "oec",
@@ -1242,7 +1241,8 @@
   "ps",
   "p",
   "fts jbcg",
-  "f"
+  "f",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "list_not_is",
