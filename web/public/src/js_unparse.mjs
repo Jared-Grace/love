@@ -31,7 +31,7 @@ export function js_unparse(ast) {
       try {
         js_unparse_inner(node);
       } catch (e) {
-        current = a;
+        current = node;
         let v2 = true;
         return v2;
       }
