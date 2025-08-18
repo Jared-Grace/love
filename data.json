@@ -1228,7 +1228,6 @@
   "s dollar",
   "fs js_call_new",
   "mf 1 2 js_call_new_code",
-  "p",
   "s js_visit_type",
   "n not",
   "ps",
@@ -1237,6 +1236,7 @@
   "fts jbtn",
   "s au",
   "s js_block_child_graph",
+  "p",
   "fts js_block_child_graph_unparse"
  ],
  "marker_current": "1",
