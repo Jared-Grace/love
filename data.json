@@ -1110,7 +1110,6 @@
   "jaa",
   "me 1",
   "oe mdc",
-  "s block",
   "fs marker_down_choices_lambda",
   "x",
   "md 3",
@@ -1260,7 +1259,8 @@
   "a lr list_remove",
   "s list,add",
   "cd",
-  "me"
+  "me",
+  "s block"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
