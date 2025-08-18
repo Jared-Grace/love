@@ -1247,9 +1247,10 @@
   "s me",
   "u me",
   "s enter",
-  "fs jaa"
+  "fs jaa",
+  "n function_rename"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "function_rename",
  "terminal": false
 }
