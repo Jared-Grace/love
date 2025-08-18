@@ -19,8 +19,7 @@ export async function js_dollar_ie({ stack1, ast }) {
   js_dollar_i({
     stack1,
   });
-  const f_name = equal.name;
-  let expression = await js_call_new_expression(f_name, ast);
+  let expression = await js_call_new_expression(equal.name, ast);
   object_property_set(stack1, "test", expression);
   await log_unparse(stack1);
 }
