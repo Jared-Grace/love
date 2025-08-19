@@ -1324,7 +1324,7 @@
   "r data_file_update_all data_files_update"
  ],
  "marker_current": "1",
- "function_current": "data_file_update_all",
+ "function_current": "data_files_update",
  "terminal": false,
  "identifiers": {
   "log": [
