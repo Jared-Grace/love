@@ -1381,8 +1381,7 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update",
-   "watch"
+   "data_file_update"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1637,9 +1636,6 @@
   "value2": [
    "watch"
   ],
-  "value_initial": [
-   "watch"
-  ],
   "lambda3": [
    "watch"
   ]
@@ -1727,8 +1723,6 @@
     "lambda3",
     "previous",
     "value2",
-    "property_name",
-    "value_initial",
     "on"
    ]
   }
