@@ -1552,7 +1552,8 @@
   ],
   "result": [
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "function_watch_ending_change"
   ],
   "separator": [
    "watch"
@@ -1762,8 +1763,7 @@
    "function_watch_ending_change"
   ],
   "function_watch_suffix_change": [
-   "function_watch_suffix_change",
-   "function_watch_ending_change"
+   "function_watch_suffix_change"
   ],
   "suffix": [
    "function_watch_suffix_change",
@@ -1778,6 +1778,15 @@
    "function_watch_ending_change"
   ],
   "function_watch_ending_change": [
+   "function_watch_ending_change"
+  ],
+  "string_suffix_without": [
+   "function_watch_ending_change"
+  ],
+  "s": [
+   "function_watch_ending_change"
+  ],
+  "suffix2": [
    "function_watch_ending_change"
   ]
  },
@@ -1956,6 +1965,7 @@
   },
   "function_watch_ending_change": {
    "identifiers": [
+    "string_suffix_without",
     "marker",
     "function_name_unalias",
     "function_name_combine",
@@ -1965,7 +1975,9 @@
     "suffix",
     "unaliased",
     "f_name_wrapped",
-    "function_watch_suffix_change",
+    "result",
+    "s",
+    "suffix2",
     "v"
    ]
   }
