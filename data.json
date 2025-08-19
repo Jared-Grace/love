@@ -1724,11 +1724,11 @@
     "value",
     "name",
     "e",
+    "lambda3",
+    "previous",
     "value2",
     "property_name",
     "value_initial",
-    "lambda3",
-    "previous",
     "on"
    ]
   }
