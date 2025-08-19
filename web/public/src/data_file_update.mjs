@@ -39,7 +39,7 @@ export async function data_file_update(f_path) {
     list_remove_all(list, f_name);
     let e = list_empty_is(list);
     if (e) {
-      object_property_delete(object, property_name2);
+      object_property_delete(identifiers, item);
     }
   }
   each(removals, lambda);
