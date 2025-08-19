@@ -1621,13 +1621,14 @@
   "e": [
    "data_file_update"
   ],
-  "list2": [
+  "object_property_delete": [
    "data_file_update"
   ]
  },
  "functions": {
   "data_file_update": {
    "identifiers": [
+    "object_property_delete",
     "list_empty_is",
     "object_property_set",
     "list_remove_all",
@@ -1664,8 +1665,7 @@
     "removals",
     "lambda",
     "item",
-    "e",
-    "list2"
+    "e"
    ]
   }
  }
