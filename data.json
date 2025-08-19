@@ -1762,7 +1762,8 @@
    "function_watch_ending_change"
   ],
   "function_watch_suffix_change": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "suffix": [
    "function_watch_suffix_change",
@@ -1964,6 +1965,7 @@
     "suffix",
     "unaliased",
     "f_name_wrapped",
+    "function_watch_suffix_change",
     "v"
    ]
   }
