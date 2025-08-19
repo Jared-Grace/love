@@ -1383,7 +1383,8 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "chalk_green"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1515,7 +1516,8 @@
    "watch"
   ],
   "value": [
-   "watch"
+   "watch",
+   "chalk_green"
   ],
   "name": [
    "watch"
@@ -1584,7 +1586,8 @@
    "data_file_update"
   ],
   "object_property_get": [
-   "data_file_update"
+   "data_file_update",
+   "chalk_green"
   ],
   "data_save": [
    "data_file_update"
@@ -1700,7 +1703,7 @@
   "green": [
    "chalk_green"
   ],
-  "$opg": [
+  "object": [
    "chalk_green"
   ]
  },
@@ -1813,6 +1816,7 @@
   },
   "chalk_green": {
    "identifiers": [
+    "object_property_get",
     "import_install",
     "chalk_green",
     "prompt",
@@ -1820,7 +1824,9 @@
     "default",
     "fn",
     "green",
-    "$opg",
+    "value",
+    "object",
+    "property_name",
     "prompt_colored"
    ]
   }
