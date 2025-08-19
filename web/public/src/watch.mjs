@@ -1,3 +1,4 @@
+import { error } from "./error.mjs";
 import { error_attention_set } from "./error_attention_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
@@ -39,13 +40,14 @@ export async function watch() {
       await command_line_node_g(function_auto_path.name, [path]);
       try {
         await command_line_node_g(data_file_update.name, [path]);
-      } catch (e) {
-        let fn = data_file_update.name;
+      } catch (error) {
+        let f_name = data_file_update.name;
         await error_attention_set({
           f_name,
           args,
+          error,
         });
-        throw e;
+        throw error;
       }
       object_property_set(in_progress, path, false);
     }
