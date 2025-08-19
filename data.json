@@ -1749,7 +1749,8 @@
    "error_attention_set"
   ],
   "error": [
-   "watch"
+   "watch",
+   "string_suffix_without"
   ],
   "json_format_to": [
    "function_run_prompt"
@@ -1767,7 +1768,8 @@
   ],
   "suffix": [
    "function_watch_suffix_change",
-   "function_watch_ending_change"
+   "function_watch_ending_change",
+   "string_suffix_without"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -1781,7 +1783,29 @@
    "function_watch_ending_change"
   ],
   "string_suffix_without": [
-   "function_watch_ending_change"
+   "function_watch_ending_change",
+   "string_suffix_without"
+  ],
+  "not": [
+   "string_suffix_without"
+  ],
+  "string_ends_with": [
+   "string_suffix_without"
+  ],
+  "string_slice": [
+   "string_suffix_without"
+  ],
+  "string_size": [
+   "string_suffix_without"
+  ],
+  "s": [
+   "string_suffix_without"
+  ],
+  "a": [
+   "string_suffix_without"
+  ],
+  "newLocal": [
+   "string_suffix_without"
   ]
  },
  "functions": {
@@ -1971,6 +1995,20 @@
     "f_name_wrapped",
     "result",
     "v"
+   ]
+  },
+  "string_suffix_without": {
+   "identifiers": [
+    "not",
+    "string_ends_with",
+    "error",
+    "string_slice",
+    "string_size",
+    "string_suffix_without",
+    "s",
+    "suffix",
+    "a",
+    "newLocal"
    ]
   }
  }
