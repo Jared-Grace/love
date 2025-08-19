@@ -1390,8 +1390,7 @@
   ],
   "previous": [
    "data_identifiers_file",
-   "data_file_update",
-   "watch"
+   "data_file_update"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -1634,10 +1633,7 @@
   "function_name_combine": [
    "watch"
   ],
-  "value2": [
-   "watch"
-  ],
-  "lambda3": [
+  "error_attention_set": [
    "watch"
   ]
  },
@@ -1686,6 +1682,7 @@
   },
   "watch": {
    "identifiers": [
+    "error_attention_set",
     "data_transform",
     "function_name_combine",
     "data_boolean_set",
@@ -1722,9 +1719,6 @@
     "name",
     "e",
     "message",
-    "lambda3",
-    "previous",
-    "value2",
     "on"
    ]
   }
