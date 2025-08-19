@@ -40,8 +40,11 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
-        let message = data_file_update.name;
-        await error_attention_set(message);
+        let fn = data_file_update.name;
+        await error_attention_set({
+          f_name,
+          args,
+        });
         throw e;
       }
       object_property_set(in_progress, path, false);
