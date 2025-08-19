@@ -1456,8 +1456,7 @@
    "function_watch_ending_change",
    "error_attention_clear",
    "folder_read",
-   "data_file_update_all",
-   "data_files_update"
+   "data_file_update_all"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -2189,8 +2188,7 @@
     "marker",
     "data_files_update",
     "f_names",
-    "f_paths",
-    "v"
+    "f_paths"
    ]
   }
  }
