@@ -23,6 +23,7 @@ export async function data_file_update(f_path) {
   }
   each(i_names, lambda2);
   let functions = object_property_initialize(data, "functions", {});
+  let f_this = object_property_initialize(functions, f_name, {});
   await data_save(d);
   marker("1");
 }
