@@ -1767,7 +1767,6 @@
   ],
   "suffix": [
    "function_watch_suffix_change",
-   "function_watch_ending_change",
    "string_suffix_without"
   ],
   "unaliased": [
@@ -1805,6 +1804,15 @@
   ],
   "without": [
    "string_suffix_without",
+   "function_watch_ending_change"
+  ],
+  "ending_old": [
+   "function_watch_ending_change"
+  ],
+  "ending_new": [
+   "function_watch_ending_change"
+  ],
+  "f_name_new": [
    "function_watch_ending_change"
   ]
  },
@@ -1990,10 +1998,12 @@
     "function_wrap",
     "function_watch_ending_change",
     "f_name",
-    "suffix",
+    "ending_old",
+    "ending_new",
     "unaliased",
     "f_name_wrapped",
     "without",
+    "f_name_new",
     "v"
    ]
   },
