@@ -1802,8 +1802,7 @@
    "string_suffix_without"
   ],
   "without": [
-   "string_suffix_without",
-   "function_watch_ending_change"
+   "string_suffix_without"
   ],
   "ending_old": [
    "function_watch_ending_change"
@@ -1812,6 +1811,9 @@
    "function_watch_ending_change"
   ],
   "f_name_new": [
+   "function_watch_ending_change"
+  ],
+  "string_suffix_change": [
    "function_watch_ending_change"
   ]
  },
@@ -1990,6 +1992,7 @@
   },
   "function_watch_ending_change": {
    "identifiers": [
+    "string_suffix_change",
     "string_suffix_without",
     "marker",
     "function_name_unalias",
@@ -2000,7 +2003,6 @@
     "ending_old",
     "ending_new",
     "unaliased",
-    "without",
     "f_name_new",
     "v"
    ]
