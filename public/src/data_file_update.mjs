@@ -18,7 +18,7 @@ export async function data_file_update(f_path) {
   let i_names = js_identifiers_names(ast);
   let identifiers = object_property_initialize(data, "identifiers", {});
   function lambda2(i_name) {
-    let list = object_property_initialize(previous, i_name, []);
+    let list = object_property_initialize(identifiers, i_name, []);
     list_add_if_not_includes(list, f_name);
   }
   each(i_names, lambda2);
