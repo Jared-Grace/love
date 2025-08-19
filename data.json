@@ -1305,13 +1305,13 @@
   "s git",
   "c chalk_green chalk_red",
   "s data,udpate",
-  "s update",
   "o w",
   "c fws function_watch_suffix_change",
   "r function_watch_suffix_change function_watch_ending_change",
   "s suffix",
   "a fwc function_watch_ending_change",
-  "fwc error_attention_set set clear"
+  "fwc error_attention_set set clear",
+  "s update"
  ],
  "marker_current": "1",
  "function_current": "error_attention_clear",
