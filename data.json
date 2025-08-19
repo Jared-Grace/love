@@ -1404,7 +1404,8 @@
   "lambda": [
    "data_identifiers_file",
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "functions_names"
   ],
   "previous": [
    "data_identifiers_file",
@@ -1480,7 +1481,8 @@
    "function_auto_path"
   ],
   "functions_path": [
-   "watch"
+   "watch",
+   "functions_names"
   ],
   "import_install": [
    "watch",
@@ -1774,7 +1776,8 @@
   ],
   "suffix": [
    "function_watch_suffix_change",
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -1788,7 +1791,8 @@
   ],
   "string_suffix_without": [
    "function_watch_ending_change",
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names"
   ],
   "not": [
    "string_suffix_without"
@@ -1809,7 +1813,8 @@
    "string_suffix_without"
   ],
   "without": [
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names"
   ],
   "ending_old": [
    "function_watch_ending_change"
@@ -1825,6 +1830,30 @@
   ],
   "error_attention_clear": [
    "error_attention_clear"
+  ],
+  "functions_paths": [
+   "functions_names"
+  ],
+  "folder_read": [
+   "functions_names"
+  ],
+  "function_name_extension": [
+   "functions_names"
+  ],
+  "list_map": [
+   "functions_names"
+  ],
+  "functions_names": [
+   "functions_names"
+  ],
+  "paths": [
+   "functions_names"
+  ],
+  "p": [
+   "functions_names"
+  ],
+  "f_names": [
+   "functions_names"
   ]
  },
  "functions": {
@@ -2037,6 +2066,23 @@
     "marker",
     "error_attention_clear",
     "v"
+   ]
+  },
+  "functions_names": {
+   "identifiers": [
+    "functions_paths",
+    "functions_path",
+    "folder_read",
+    "function_name_extension",
+    "string_suffix_without",
+    "list_map",
+    "functions_names",
+    "paths",
+    "lambda",
+    "p",
+    "suffix",
+    "without",
+    "f_names"
    ]
   }
  }
