@@ -38,8 +38,8 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
-        let combined = function_name_combine(left, right);
-        await data_boolean_set(property_name, value2);
+        let combined = function_name_combine(data_file_update.name, "error");
+        await data_boolean_set(combined, true);
         throw e;
       }
       object_property_set(in_progress, path, false);
