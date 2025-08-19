@@ -38,6 +38,7 @@ export async function data_file_update(f_path) {
   }
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
+  let x = null;
   await data_save(d);
   marker("1");
 }
