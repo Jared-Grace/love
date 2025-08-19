@@ -1,12 +1,11 @@
-import { fs } from "./fs.mjs";
 import { path_join } from "./path_join.mjs";
 import fs from "fs";
-export function folder_read(folder_path) {
+export function folder_read(dirPath) {
   function lambda(file) {
-    let result = path_join([folder_path, file]);
+    let result = path_join([dirPath, file]);
     let v = fs.statSync(result).isFile();
     return v;
   }
-  let v2 = fs.readdirSync(folder_path).filter(lambda);
+  let v2 = fs.readdirSync(dirPath).filter(lambda);
   return v2;
 }

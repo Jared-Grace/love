@@ -1088,7 +1088,6 @@
   "oe o",
   "o jaa",
   "o p",
-  "o fs",
   "u fs",
   "c marker_down_choices function_transform_marker_empty",
   "function_transform_marker_empty",
@@ -1300,7 +1299,6 @@
   "ps",
   "dpg identifiers",
   "s catch",
-  "s data",
   "s git",
   "c chalk_green chalk_red",
   "s data,udpate",
@@ -1314,10 +1312,13 @@
   "s functions",
   "functions_path",
   "functions_paths",
-  "de functions_paths"
+  "de functions_paths",
+  "s data",
+  "de fs",
+  "o fs"
  ],
  "marker_current": "1",
- "function_current": "error_attention_clear",
+ "function_current": "function_current_set",
  "terminal": false,
  "identifiers": {
   "log": [
