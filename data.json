@@ -1324,7 +1324,8 @@
   "fws data_file_update all",
   "r data_file_update_all data_files_update",
   "u fntp",
-  "a fntp function_name_to_path"
+  "a fntp function_name_to_path",
+  "u d"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
