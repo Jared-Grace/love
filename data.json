@@ -131,7 +131,8 @@
   "lax": "list_add_if_not_includes",
   "lj": "list_join",
   "opd": "object_property_delete",
-  "fwc": "function_watch_ending_change"
+  "fwc": "function_watch_ending_change",
+  "fntp": "function_name_to_path"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1322,7 +1323,8 @@
   "s data,update",
   "fws data_file_update all",
   "r data_file_update_all data_files_update",
-  "u fntp"
+  "u fntp",
+  "a fntp function_name_to_path"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
