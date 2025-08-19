@@ -234,7 +234,6 @@
   "ifunction_name_to_path",
   "function_name_to_path",
   "c np noop2",
-  "s delete",
   "c file_overwrite file_delete",
   "c function_new function_delete",
   "i function_delete",
@@ -1300,7 +1299,8 @@
   "data_property_get data_file_update",
   "p",
   "dpg functions",
-  "dpg identifiers"
+  "dpg identifiers",
+  "s delete"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
