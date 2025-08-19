@@ -1415,7 +1415,8 @@
    "data_identifiers_file",
    "file_js_unparse",
    "function_auto_path",
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1722,6 +1723,7 @@
     "e",
     "lambda3",
     "previous",
+    "v",
     "value2",
     "on"
    ]
