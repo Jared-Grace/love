@@ -16,8 +16,7 @@ export async function data_file_update(f_path) {
   let parsed = await file_js_parse(f_path);
   let { ast } = parsed;
   let i_names = js_identifiers_names(ast);
-  let property_name = "identifiers";
-  let identifiers = object_property_get(data, "identifiers");
+  let identifiers = object_property_initialize(data, "identifiers", {});
   function lambda2(i_name) {
     let list = object_property_initialize(previous, i_name, []);
     list_add_if_not_includes(list, f_name);
