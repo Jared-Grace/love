@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { object_property_exists_equals } from "./object_property_exists_equals.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { git_acp_call } from "./git_acp_call.mjs";
@@ -13,6 +14,7 @@ import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_equals } from "./object_property_equals.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 export async function watch() {
+  marker("1");
   const chokidar = (await import_install("chokidar")).default;
   let joined = functions_path();
   const watcher = chokidar.watch(joined, {
@@ -20,8 +22,8 @@ export async function watch() {
     ignoreInitial: true,
   });
   let in_progress = {};
-  watcher.on("change", async (path) => {
-    await catch_log_async(async () => {
+  async function lambda2(path) {
+    async function lambda() {
       const value = true;
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
@@ -31,6 +33,8 @@ export async function watch() {
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
       object_property_set(in_progress, path, false);
-    });
-  });
+    }
+    await catch_log_async(lambda);
+  }
+  watcher.on("change", lambda2);
 }
