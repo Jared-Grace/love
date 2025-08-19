@@ -1419,7 +1419,8 @@
    "watch",
    "data_file_update",
    "functions_names",
-   "folder_read"
+   "folder_read",
+   "data_files_update"
   ],
   "previous": [
    "data_identifiers_file",
@@ -1442,7 +1443,8 @@
   "list": [
    "data_identifiers_file",
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "data_files_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -1660,7 +1662,8 @@
    "data_file_update"
   ],
   "item": [
-   "data_file_update"
+   "data_file_update",
+   "data_files_update"
   ],
   "list_includes": [
    "data_file_update"
@@ -1862,7 +1865,8 @@
    "functions_names"
   ],
   "list_map": [
-   "functions_names"
+   "functions_names",
+   "data_files_update"
   ],
   "functions_names": [
    "functions_names",
@@ -1909,6 +1913,9 @@
    "data_file_update_all"
   ],
   "data_files_update": [
+   "data_files_update"
+  ],
+  "mapped": [
    "data_files_update"
   ]
  },
@@ -2169,11 +2176,16 @@
   },
   "data_files_update": {
    "identifiers": [
+    "list_map",
     "functions_names",
     "data_file_update",
     "marker",
     "data_files_update",
     "f_names",
+    "lambda",
+    "item",
+    "mapped",
+    "list",
     "v",
     "f_path"
    ]
