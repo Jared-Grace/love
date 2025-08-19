@@ -1312,7 +1312,8 @@
   "log": [
    "data_identifiers_file",
    "file_js_unparse",
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -1338,7 +1339,8 @@
   "data_transform": [
    "data_identifiers_file",
    "data_file_update",
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "marker": [
    "data_identifiers_file",
@@ -1381,7 +1383,8 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "function_run_prompt"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1461,7 +1464,8 @@
    "watch"
   ],
   "import_install": [
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "command_line": [
    "watch"
@@ -1510,7 +1514,8 @@
    "watch"
   ],
   "value": [
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "name": [
    "watch"
@@ -1635,6 +1640,42 @@
   ],
   "error_attention_set": [
    "watch"
+  ],
+  "data_property_get": [
+   "function_run_prompt"
+  ],
+  "trinity_green": [
+   "function_run_prompt"
+  ],
+  "chalk_green": [
+   "function_run_prompt"
+  ],
+  "function_run_line_git": [
+   "function_run_prompt"
+  ],
+  "function_run_line": [
+   "function_run_prompt"
+  ],
+  "command_line_read": [
+   "function_run_prompt"
+  ],
+  "function_run_git": [
+   "function_run_prompt"
+  ],
+  "list_add": [
+   "function_run_prompt"
+  ],
+  "list_unique": [
+   "function_run_prompt"
+  ],
+  "function_run_prompt": [
+   "function_run_prompt"
+  ],
+  "prompt_colored": [
+   "function_run_prompt"
+  ],
+  "line": [
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1720,6 +1761,27 @@
     "e",
     "message",
     "on"
+   ]
+  },
+  "function_run_prompt": {
+   "identifiers": [
+    "data_property_get",
+    "trinity_green",
+    "chalk_green",
+    "import_install",
+    "function_run_line_git",
+    "function_run_line",
+    "log",
+    "data_transform",
+    "command_line_read",
+    "function_run_git",
+    "list_add",
+    "list_unique",
+    "function_run_prompt",
+    "value",
+    "property_name",
+    "prompt_colored",
+    "line"
    ]
   }
  }
