@@ -1498,6 +1498,9 @@
   ],
   "command_line_node_g": [
    "watch"
+  ],
+  "$ag": [
+   "watch"
   ]
  }
 }
