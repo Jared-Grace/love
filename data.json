@@ -1420,7 +1420,6 @@
    "function_auto_path",
    "data_file_update",
    "chalk_green",
-   "chalk_red",
    "function_run_prompt"
   ],
   "file_overwrite": [
@@ -1724,7 +1723,8 @@
    "chalk_color"
   ],
   "colored": [
-   "chalk_color"
+   "chalk_color",
+   "chalk_red"
   ]
  },
  "functions": {
@@ -1857,7 +1857,7 @@
     "chalk_red",
     "prompt",
     "color",
-    "v"
+    "colored"
    ]
   },
   "chalk_color": {
