@@ -1312,7 +1312,8 @@
   "fwc error_attention_set set clear",
   "s update",
   "s functions",
-  "functions_path"
+  "functions_path",
+  "functions_paths"
  ],
  "marker_current": "1",
  "function_current": "error_attention_clear",
