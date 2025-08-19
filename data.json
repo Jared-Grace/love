@@ -1699,6 +1699,9 @@
   ],
   "green": [
    "chalk_green"
+  ],
+  "$opg": [
+   "chalk_green"
   ]
  },
  "functions": {
@@ -1817,6 +1820,7 @@
     "default",
     "fn",
     "green",
+    "$opg",
     "prompt_colored"
    ]
   }
