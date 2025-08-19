@@ -1310,7 +1310,7 @@
   "c fws function_watch_suffix_change"
  ],
  "marker_current": "1",
- "function_current": "watch",
+ "function_current": "function_watch_suffix_change",
  "terminal": false,
  "identifiers": {
   "log": [
