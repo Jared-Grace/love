@@ -1306,7 +1306,8 @@
    "watch"
   ],
   "function_path_to_name": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "function_auto_path"
   ],
   "list_add_if_not_includes": [
    "data_identifiers_file"
@@ -1349,7 +1350,8 @@
   ],
   "f_name": [
    "data_identifiers_file",
-   "watch"
+   "watch",
+   "function_auto_path"
   ],
   "property_name": [
    "data_identifiers_file"
@@ -1377,7 +1379,8 @@
   ],
   "v": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "function_auto_path"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1416,7 +1419,8 @@
    "watch"
   ],
   "function_auto_path": [
-   "watch"
+   "watch",
+   "function_auto_path"
   ],
   "functions_path": [
    "watch"
@@ -1501,6 +1505,12 @@
   ],
   "$ag": [
    "watch"
+  ],
+  "path_name": [
+   "function_auto_path"
+  ],
+  "function_auto": [
+   "function_auto_path"
   ]
  }
 }
