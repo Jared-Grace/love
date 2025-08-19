@@ -13,7 +13,7 @@ export async function data_file_update(f_path) {
   var d = await data_all();
   let { data } = d;
   let parsed = await file_js_parse(f_path);
-  let { ast, code } = parsed;
+  let { ast } = parsed;
   let i_names = js_identifiers_names(ast);
   let property_name = "identifiers";
   function lambda(previous) {
