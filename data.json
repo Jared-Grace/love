@@ -1291,7 +1291,8 @@
   "p",
   "data_property_get identifiers",
   "o w",
-  "s join"
+  "s join",
+  "u lj"
  ],
  "marker_current": "1",
  "function_current": "watch",
