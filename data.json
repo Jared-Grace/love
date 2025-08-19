@@ -1418,7 +1418,8 @@
    "file_js_unparse",
    "function_auto_path",
    "data_file_update",
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1467,7 +1468,8 @@
   "import_install": [
    "watch",
    "function_run_prompt",
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
   ],
   "command_line": [
    "watch"
@@ -1586,7 +1588,8 @@
   ],
   "object_property_get": [
    "data_file_update",
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
   ],
   "data_save": [
    "data_file_update"
@@ -1690,13 +1693,19 @@
    "function_run_prompt"
   ],
   "prompt": [
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
   ],
   "color": [
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
   ],
   "chalk_color": [
-   "chalk_green"
+   "chalk_green",
+   "chalk_red"
+  ],
+  "chalk_red": [
+   "chalk_red"
   ]
  },
  "functions": {
@@ -1812,6 +1821,17 @@
     "object_property_get",
     "import_install",
     "chalk_green",
+    "prompt",
+    "color",
+    "v"
+   ]
+  },
+  "chalk_red": {
+   "identifiers": [
+    "chalk_color",
+    "object_property_get",
+    "import_install",
+    "chalk_red",
     "prompt",
     "color",
     "v"
