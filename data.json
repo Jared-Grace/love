@@ -648,7 +648,6 @@
   "i js_unparse",
   "s visit,async",
   "n js_visit_type_each_async",
-  "o w",
   "s dec,name",
   "nj declare_assign_null",
   "nj await_add",
@@ -1291,15 +1290,17 @@
   "s data",
   "ps",
   "p",
-  "data_property_get identifiers"
+  "data_property_get identifiers",
+  "o w"
  ],
  "marker_current": "1",
- "function_current": "data_identifiers_file",
+ "function_current": "watch",
  "terminal": false,
  "identifiers": {
   "log": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "watch"
   ],
   "function_path_to_name": [
    "data_identifiers_file"
@@ -1320,7 +1321,8 @@
    "data_identifiers_file"
   ],
   "marker": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "watch"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1343,13 +1345,15 @@
    "file_js_unparse"
   ],
   "f_name": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "watch"
   ],
   "property_name": [
    "data_identifiers_file"
   ],
   "lambda": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "watch"
   ],
   "previous": [
    "data_identifiers_file"
@@ -1358,7 +1362,8 @@
    "data_identifiers_file"
   ],
   "lambda2": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "watch"
   ],
   "i_name": [
    "data_identifiers_file"
@@ -1390,6 +1395,84 @@
   ],
   "message": [
    "file_js_unparse"
+  ],
+  "object_property_exists_equals": [
+   "watch"
+  ],
+  "catch_log_async": [
+   "watch"
+  ],
+  "git_acp_call": [
+   "watch"
+  ],
+  "catch_log": [
+   "watch"
+  ],
+  "catch_ignore": [
+   "watch"
+  ],
+  "function_auto_path": [
+   "watch"
+  ],
+  "functions_path": [
+   "watch"
+  ],
+  "import_install": [
+   "watch"
+  ],
+  "command_line": [
+   "watch"
+  ],
+  "log_keep": [
+   "watch"
+  ],
+  "object_property_exists": [
+   "watch"
+  ],
+  "object_property_equals": [
+   "watch"
+  ],
+  "object_property_set": [
+   "watch"
+  ],
+  "watch": [
+   "watch"
+  ],
+  "chokidar": [
+   "watch"
+  ],
+  "default": [
+   "watch"
+  ],
+  "joined": [
+   "watch"
+  ],
+  "watcher": [
+   "watch"
+  ],
+  "persistent": [
+   "watch"
+  ],
+  "ignoreInitial": [
+   "watch"
+  ],
+  "in_progress": [
+   "watch"
+  ],
+  "on": [
+   "watch"
+  ],
+  "path": [
+   "watch"
+  ],
+  "value": [
+   "watch"
+  ],
+  "name": [
+   "watch"
+  ],
+  "output": [
+   "watch"
   ]
  }
 }
