@@ -1513,8 +1513,7 @@
    "watch"
   ],
   "value": [
-   "watch",
-   "function_run_prompt"
+   "watch"
   ],
   "name": [
    "watch"
@@ -1675,6 +1674,12 @@
   ],
   "line": [
    "function_run_prompt"
+  ],
+  "ea": [
+   "function_run_prompt"
+  ],
+  "nn": [
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1777,7 +1782,8 @@
     "list_add",
     "list_unique",
     "function_run_prompt",
-    "value",
+    "ea",
+    "nn",
     "prompt_colored",
     "line"
    ]
