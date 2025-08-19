@@ -1471,7 +1471,8 @@
    "watch",
    "function_run_prompt",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "chalk_color"
   ],
   "command_line": [
    "watch"
@@ -1496,7 +1497,8 @@
    "watch"
   ],
   "default": [
-   "watch"
+   "watch",
+   "chalk_color"
   ],
   "joined": [
    "watch"
@@ -1591,7 +1593,8 @@
   "object_property_get": [
    "data_file_update",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "chalk_color"
   ],
   "data_save": [
    "data_file_update"
@@ -1697,19 +1700,31 @@
   "prompt": [
    "chalk_green",
    "chalk_red",
-   "function_run_prompt"
+   "function_run_prompt",
+   "chalk_color"
   ],
   "color": [
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "chalk_color"
   ],
   "chalk_color": [
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "chalk_color"
   ],
   "chalk_red": [
    "chalk_red",
    "function_run_prompt"
+  ],
+  "chalk": [
+   "chalk_color"
+  ],
+  "fn": [
+   "chalk_color"
+  ],
+  "colored": [
+   "chalk_color"
   ]
  },
  "functions": {
@@ -1843,6 +1858,19 @@
     "prompt",
     "color",
     "v"
+   ]
+  },
+  "chalk_color": {
+   "identifiers": [
+    "object_property_get",
+    "import_install",
+    "chalk_color",
+    "color",
+    "prompt",
+    "chalk",
+    "default",
+    "fn",
+    "colored"
    ]
   }
  }
