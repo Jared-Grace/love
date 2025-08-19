@@ -1,5 +1,4 @@
 import { log } from "./log.mjs";
-import { data_identifiers_file } from "./data_identifiers_file.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_format } from "./js_format.mjs";
