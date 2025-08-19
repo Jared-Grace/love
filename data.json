@@ -1804,7 +1804,7 @@
   "a": [
    "string_suffix_without"
   ],
-  "newLocal": [
+  "without": [
    "string_suffix_without"
   ]
  },
@@ -2008,7 +2008,7 @@
     "s",
     "suffix",
     "a",
-    "newLocal"
+    "without"
    ]
   }
  }
