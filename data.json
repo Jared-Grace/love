@@ -1299,7 +1299,8 @@
   "dpg dfu",
   "data_property_get data_file_update",
   "p",
-  "dpg functions"
+  "dpg functions",
+  "dpg identifiers"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
