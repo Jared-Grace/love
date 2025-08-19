@@ -132,7 +132,8 @@
   "lj": "list_join",
   "opd": "object_property_delete",
   "fwc": "function_watch_ending_change",
-  "fntp": "function_name_to_path"
+  "fntp": "function_name_to_path",
+  "d": "data_files_update"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1325,7 +1326,8 @@
   "r data_file_update_all data_files_update",
   "u fntp",
   "a fntp function_name_to_path",
-  "u d"
+  "u d",
+  "a d data_files_update"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
