@@ -1,3 +1,4 @@
+import { data_transform } from "./data_transform.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { data_boolean_set } from "./data_boolean_set.mjs";
 import { command_line_node_g } from "./command_line_node_g.mjs";
@@ -38,8 +39,11 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
-        let combined = function_name_combine(data_file_update.name, "error");
-        await data_boolean_set(combined, true);
+        let value2 = await data_transform(
+          property_name,
+          value_initial,
+          async function lambda3(previous) {},
+        );
         throw e;
       }
       object_property_set(in_progress, path, false);
