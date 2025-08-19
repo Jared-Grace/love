@@ -1443,8 +1443,7 @@
   "list": [
    "data_identifiers_file",
    "watch",
-   "data_file_update",
-   "data_files_update"
+   "data_file_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -1917,6 +1916,9 @@
   ],
   "mapped": [
    "data_files_update"
+  ],
+  "fntp": [
+   "data_files_update"
   ]
  },
  "functions": {
@@ -2182,10 +2184,10 @@
     "marker",
     "data_files_update",
     "f_names",
+    "fntp",
     "lambda",
     "item",
     "mapped",
-    "list",
     "v",
     "f_path"
    ]
