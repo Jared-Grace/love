@@ -1411,7 +1411,8 @@
    "data_identifiers_file",
    "watch",
    "data_file_update",
-   "functions_names"
+   "functions_names",
+   "folder_read"
   ],
   "previous": [
    "data_identifiers_file",
@@ -1444,7 +1445,8 @@
    "chalk_green",
    "function_watch_suffix_change",
    "function_watch_ending_change",
-   "error_attention_clear"
+   "error_attention_clear",
+   "folder_read"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1566,7 +1568,8 @@
   ],
   "result": [
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "folder_read"
   ],
   "separator": [
    "watch"
@@ -1841,7 +1844,8 @@
    "functions_names"
   ],
   "folder_read": [
-   "functions_names"
+   "functions_names",
+   "folder_read"
   ],
   "function_name_extension": [
    "functions_names"
@@ -1860,6 +1864,33 @@
   ],
   "f_names": [
    "functions_names"
+  ],
+  "path_join": [
+   "folder_read"
+  ],
+  "fs": [
+   "folder_read"
+  ],
+  "dirPath": [
+   "folder_read"
+  ],
+  "file": [
+   "folder_read"
+  ],
+  "statSync": [
+   "folder_read"
+  ],
+  "isFile": [
+   "folder_read"
+  ],
+  "v2": [
+   "folder_read"
+  ],
+  "readdirSync": [
+   "folder_read"
+  ],
+  "filter": [
+   "folder_read"
   ]
  },
  "functions": {
@@ -2089,6 +2120,23 @@
     "suffix",
     "without",
     "f_names"
+   ]
+  },
+  "folder_read": {
+   "identifiers": [
+    "path_join",
+    "fs",
+    "folder_read",
+    "dirPath",
+    "lambda",
+    "file",
+    "result",
+    "v",
+    "statSync",
+    "isFile",
+    "v2",
+    "readdirSync",
+    "filter"
    ]
   }
  }
