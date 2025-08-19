@@ -1,3 +1,4 @@
+import { chalk_red } from "./chalk_red.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { data_property_get } from "./data_property_get.mjs";
 import { trinity_green } from "./trinity_green.mjs";
@@ -15,6 +16,7 @@ export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
   let nn = null_not_is(ea);
   if (nn) {
+    let v = await chalk_red(prompt);
   }
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
