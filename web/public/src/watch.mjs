@@ -32,6 +32,7 @@ export async function watch() {
         return;
       }
       object_property_set(in_progress, path, value);
+      $ag;
       const f_name = function_auto_path.name;
       await command_line_node_g(f_name, [path]);
       object_property_set(in_progress, path, false);
