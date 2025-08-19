@@ -1638,6 +1638,9 @@
   ],
   "lambda3": [
    "watch"
+  ],
+  "$rtrue": [
+   "watch"
   ]
  },
  "functions": {
@@ -1722,6 +1725,7 @@
     "e",
     "lambda3",
     "previous",
+    "$rtrue",
     "value2",
     "on"
    ]
