@@ -1,3 +1,4 @@
+import { object_property_delete } from "./object_property_delete.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { list_remove_all } from "./list_remove_all.mjs";
@@ -38,7 +39,7 @@ export async function data_file_update(f_path) {
     list_remove_all(list, f_name);
     let e = list_empty_is(list);
     if (e) {
-      opd;
+      object_property_delete(object, property_name2);
     }
   }
   each(removals, lambda);
