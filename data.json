@@ -3584,7 +3584,6 @@
   ],
   "f_names": [
    "functions_names",
-   "data_files_update",
    "functions_combine",
    "functions_combine_name",
    "functions_search",
@@ -8994,6 +8993,9 @@
   ],
   "found": [
    "visit_unique_async"
+  ],
+  "functions_paths": [
+   "data_files_update"
   ]
  },
  "functions": {
@@ -9249,6 +9251,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "functions_paths",
     "each_async",
     "function_name_to_path",
     "list_map",
@@ -9256,7 +9259,6 @@
     "data_file_update",
     "marker",
     "data_files_update",
-    "f_names",
     "f_paths"
    ]
   },
