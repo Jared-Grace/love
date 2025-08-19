@@ -1305,7 +1305,8 @@
   "s data",
   "s git",
   "c chalk_green chalk_red",
-  "s data,udpate"
+  "s data,udpate",
+  "s update"
  ],
  "marker_current": "1",
  "function_current": "chalk_red",
