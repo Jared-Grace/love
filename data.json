@@ -1445,7 +1445,6 @@
   ],
   "message": [
    "file_js_unparse",
-   "watch",
    "function_run_prompt"
   ],
   "object_property_exists_equals": [
@@ -1725,7 +1724,8 @@
    "chalk_color"
   ],
   "fn": [
-   "chalk_color"
+   "chalk_color",
+   "watch"
   ],
   "colored": [
    "chalk_color",
@@ -1823,7 +1823,9 @@
     "value",
     "name",
     "e",
-    "message",
+    "fn",
+    "f_name",
+    "args",
     "on"
    ]
   },
