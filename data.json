@@ -1317,7 +1317,8 @@
   "de fs",
   "o fs",
   "s imports",
-  "function_imports_missing folder_read"
+  "function_imports_missing folder_read",
+  "functions_names"
  ],
  "marker_current": "1",
  "function_current": "function_current_set",
