@@ -1343,7 +1343,8 @@
    "data_identifiers_file",
    "data_file_update",
    "watch",
-   "function_run_prompt"
+   "function_run_prompt",
+   "error_attention_set"
   ],
   "marker": [
    "data_identifiers_file",
@@ -1396,7 +1397,8 @@
   ],
   "previous": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "error_attention_set"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -1650,7 +1652,8 @@
    "watch"
   ],
   "error_attention_set": [
-   "watch"
+   "watch",
+   "error_attention_set"
   ],
   "data_property_get": [
    "function_run_prompt"
@@ -1728,6 +1731,15 @@
    "chalk_color",
    "chalk_red",
    "function_run_prompt"
+  ],
+  "vale": [
+   "error_attention_set"
+  ],
+  "lambda3": [
+   "error_attention_set"
+  ],
+  "value2": [
+   "error_attention_set"
   ]
  },
  "functions": {
@@ -1875,6 +1887,16 @@
     "default",
     "fn",
     "colored"
+   ]
+  },
+  "error_attention_set": {
+   "identifiers": [
+    "data_transform",
+    "error_attention_set",
+    "vale",
+    "lambda3",
+    "previous",
+    "value2"
    ]
   }
  }
