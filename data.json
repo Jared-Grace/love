@@ -1383,8 +1383,7 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update",
-   "chalk_green"
+   "data_file_update"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1516,8 +1515,7 @@
    "watch"
   ],
   "value": [
-   "watch",
-   "chalk_green"
+   "watch"
   ],
   "name": [
    "watch"
@@ -1699,12 +1697,6 @@
   ],
   "fn": [
    "chalk_green"
-  ],
-  "green": [
-   "chalk_green"
-  ],
-  "object": [
-   "chalk_green"
   ]
  },
  "functions": {
@@ -1823,10 +1815,6 @@
     "chalk",
     "default",
     "fn",
-    "green",
-    "value",
-    "object",
-    "property_name",
     "prompt_colored"
    ]
   }
