@@ -1614,9 +1614,6 @@
   "list_remove_all": [
    "data_file_update"
   ],
-  "x": [
-   "data_file_update"
-  ],
   "list_empty_is": [
    "data_file_update"
   ],
@@ -1667,8 +1664,7 @@
     "removals",
     "lambda",
     "item",
-    "e",
-    "x"
+    "e"
    ]
   }
  }
