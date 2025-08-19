@@ -1287,7 +1287,6 @@
   "s path_To",
   "s path_to",
   "ps",
-  "p",
   "data_property_get identifiers",
   "o w",
   "s join",
@@ -1299,6 +1298,7 @@
   "s data",
   "dpg dfu",
   "data_property_get data_file_update",
+  "p",
   "dpg functions"
  ],
  "marker_current": "1",
