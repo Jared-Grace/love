@@ -1328,7 +1328,8 @@
   "a fntp function_name_to_path",
   "u d",
   "a d data_files_update",
-  "d"
+  "d",
+  "o d"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
