@@ -1865,7 +1865,8 @@
    "functions_names"
   ],
   "functions_names": [
-   "functions_names"
+   "functions_names",
+   "data_files_update"
   ],
   "paths": [
    "functions_names"
@@ -1874,7 +1875,8 @@
    "functions_names"
   ],
   "f_names": [
-   "functions_names"
+   "functions_names",
+   "data_files_update"
   ],
   "path_join": [
    "folder_read"
@@ -2167,11 +2169,13 @@
   },
   "data_files_update": {
    "identifiers": [
+    "functions_names",
     "data_file_update",
     "marker",
     "data_files_update",
-    "f_path",
-    "v"
+    "f_names",
+    "v",
+    "f_path"
    ]
   }
  }
