@@ -1612,11 +1612,21 @@
   "list_remove_all": [
    "data_file_update"
   ],
-  "x": []
+  "x": [],
+  "list_empty_is": [
+   "data_file_update"
+  ],
+  "e": [
+   "data_file_update"
+  ],
+  "list2": [
+   "data_file_update"
+  ]
  },
  "functions": {
   "data_file_update": {
    "identifiers": [
+    "list_empty_is",
     "object_property_set",
     "list_remove_all",
     "object_property_get",
@@ -1651,7 +1661,9 @@
     "f_identifiers_old",
     "removals",
     "lambda",
-    "item"
+    "item",
+    "e",
+    "list2"
    ]
   }
  }
