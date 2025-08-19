@@ -34,7 +34,7 @@ export async function watch() {
       const f_name = function_auto_path.name;
       let args = [path];
       let result = list_join_space(args);
-      let output = await command_line("node g.mjs " + f_name + " " + path);
+      let output = await command_line("node g.mjs " + f_name + " " + result);
       log_keep(output);
       object_property_set(in_progress, path, false);
     }
