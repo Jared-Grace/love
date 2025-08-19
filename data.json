@@ -1619,7 +1619,8 @@
    "data_file_update"
   ],
   "e": [
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "object_property_delete": [
    "data_file_update"
@@ -1666,6 +1667,43 @@
     "lambda",
     "item",
     "e"
+   ]
+  },
+  "watch": {
+   "identifiers": [
+    "command_line_node_g",
+    "list_join_space",
+    "list_join",
+    "marker",
+    "object_property_exists_equals",
+    "catch_log_async",
+    "git_acp_call",
+    "catch_log",
+    "catch_ignore",
+    "log",
+    "function_auto_path",
+    "functions_path",
+    "import_install",
+    "command_line",
+    "log_keep",
+    "object_property_exists",
+    "data_file_update",
+    "object_property_set",
+    "watch",
+    "chokidar",
+    "default",
+    "joined",
+    "watcher",
+    "persistent",
+    "ignoreInitial",
+    "in_progress",
+    "lambda2",
+    "path",
+    "lambda",
+    "value",
+    "name",
+    "e",
+    "on"
    ]
   }
  }
