@@ -1367,7 +1367,8 @@
    "chalk_red",
    "function_watch_suffix_change",
    "function_watch_ending_change",
-   "error_attention_clear"
+   "error_attention_clear",
+   "data_file_update_all"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1383,7 +1384,8 @@
    "data_identifiers_file",
    "file_js_unparse",
    "data_file_update",
-   "file_js_parse"
+   "file_js_parse",
+   "data_file_update_all"
   ],
   "ast": [
    "data_identifiers_file",
@@ -1448,7 +1450,8 @@
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "error_attention_clear",
-   "folder_read"
+   "folder_read",
+   "data_file_update_all"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1593,7 +1596,8 @@
   ],
   "data_file_update": [
    "data_file_update",
-   "watch"
+   "watch",
+   "data_file_update_all"
   ],
   "file_js_parse": [
    "data_file_update",
@@ -1893,6 +1897,9 @@
   ],
   "filter": [
    "folder_read"
+  ],
+  "data_file_update_all": [
+   "data_file_update_all"
   ]
  },
  "functions": {
@@ -2139,6 +2146,15 @@
     "v2",
     "readdirSync",
     "filter"
+   ]
+  },
+  "data_file_update_all": {
+   "identifiers": [
+    "data_file_update",
+    "marker",
+    "data_file_update_all",
+    "f_path",
+    "v"
    ]
   }
  }
