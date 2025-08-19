@@ -1444,8 +1444,7 @@
    "file_js_unparse"
   ],
   "message": [
-   "file_js_unparse",
-   "function_run_prompt"
+   "file_js_unparse"
   ],
   "object_property_exists_equals": [
    "watch"
@@ -1741,6 +1740,9 @@
   ],
   "error": [
    "watch"
+  ],
+  "json_format_to": [
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1845,12 +1847,12 @@
     "function_run_git",
     "list_add",
     "list_unique",
+    "json_format_to",
     "function_run_prompt",
     "ea",
     "nn",
-    "colored",
     "prompt",
-    "message",
+    "colored",
     "prompt_colored",
     "line"
    ]
