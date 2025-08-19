@@ -1,3 +1,4 @@
+import { data_save } from "./data_save.mjs";
 import { data_all } from "./data_all.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { each } from "./each.mjs";
@@ -10,7 +11,7 @@ import { marker } from "./marker.mjs";
 export async function data_file_update(f_path) {
   let f_name = function_path_to_name(f_path);
   var d = await data_all();
-  let { data, file_path } = d;
+  let { data } = d;
   let parsed = await file_js_parse(f_path);
   let { ast, code } = parsed;
   let i_names = js_identifiers_names(ast);
@@ -23,6 +24,6 @@ export async function data_file_update(f_path) {
     each(i_names, lambda2);
     return previous;
   }
-  let v = await data_transform(property_name, {}, lambda);
+  await data_save(d);
   marker("1");
 }
