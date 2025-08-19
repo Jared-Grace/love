@@ -1346,7 +1346,8 @@
   "marker": [
    "data_identifiers_file",
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "chalk_red"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1828,6 +1829,7 @@
   },
   "chalk_red": {
    "identifiers": [
+    "marker",
     "chalk_color",
     "object_property_get",
     "import_install",
