@@ -1380,7 +1380,8 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1624,6 +1625,12 @@
   ],
   "object_property_delete": [
    "data_file_update"
+  ],
+  "data_boolean_set": [
+   "watch"
+  ],
+  "value2": [
+   "watch"
   ]
  },
  "functions": {
@@ -1671,6 +1678,7 @@
   },
   "watch": {
    "identifiers": [
+    "data_boolean_set",
     "command_line_node_g",
     "list_join_space",
     "list_join",
@@ -1703,6 +1711,8 @@
     "value",
     "name",
     "e",
+    "property_name",
+    "value2",
     "on"
    ]
   }
