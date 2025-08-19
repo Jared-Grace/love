@@ -129,7 +129,8 @@
   "mda": "marker_delete_above",
   "ja": "js_auto",
   "lax": "list_add_if_not_includes",
-  "lj": "list_join"
+  "lj": "list_join",
+  "opd": "object_property_delete"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1300,7 +1301,8 @@
   "p",
   "dpg functions",
   "dpg identifiers",
-  "s delete"
+  "s delete",
+  "a opd object_property_delete"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
