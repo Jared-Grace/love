@@ -1310,10 +1310,11 @@
   "c fws function_watch_suffix_change",
   "r function_watch_suffix_change function_watch_ending_change",
   "s suffix",
-  "a fwc function_watch_ending_change"
+  "a fwc function_watch_ending_change",
+  "fwc error_attention_set set clear"
  ],
  "marker_current": "1",
- "function_current": "function_watch_ending_change",
+ "function_current": "error_attention_clear",
  "terminal": false,
  "identifiers": {
   "log": [
