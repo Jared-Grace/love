@@ -1513,7 +1513,8 @@
    "watch"
   ],
   "value": [
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "name": [
    "watch"
@@ -1680,6 +1681,9 @@
   ],
   "nn": [
    "function_run_prompt"
+  ],
+  "null_not_is": [
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1769,6 +1773,7 @@
   },
   "function_run_prompt": {
    "identifiers": [
+    "null_not_is",
     "data_property_get",
     "trinity_green",
     "chalk_green",
@@ -1784,6 +1789,7 @@
     "function_run_prompt",
     "ea",
     "nn",
+    "value",
     "prompt_colored",
     "line"
    ]
