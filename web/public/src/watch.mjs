@@ -39,9 +39,9 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
+        let message = data_file_update.name;
         async function lambda3(previous) {
-          let v = data_file_update.name;
-          return v;
+          return message;
         }
         let value2 = await data_transform("error_attention", null, lambda3);
         throw e;
