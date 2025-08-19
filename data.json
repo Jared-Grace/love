@@ -1582,9 +1582,26 @@
   ],
   "f_this": [
    "data_file_update"
+  ],
+  "list_difference": [
+   "data_file_update"
+  ],
+  "f_identifiers_new": [
+   "data_file_update"
+  ],
+  "f_identifiers_old": [
+   "data_file_update"
+  ],
+  "removals": [
+   "data_file_update"
+  ],
+  "item": [
+   "data_file_update"
   ]
  },
  "functions": {
-  "data_file_update": {}
+  "data_file_update": {
+   "identifiers": []
+  }
  }
 }
