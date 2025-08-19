@@ -1337,20 +1337,24 @@
   ],
   "parsed": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "file_js_parse"
   ],
   "f_path": [
    "data_identifiers_file",
    "file_js_unparse",
-   "data_file_update"
+   "data_file_update",
+   "file_js_parse"
   ],
   "ast": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "file_js_parse"
   ],
   "code": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "file_js_parse"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -1522,10 +1526,17 @@
    "data_file_update"
   ],
   "file_js_parse": [
-   "data_file_update"
+   "data_file_update",
+   "file_js_parse"
   ],
   "f_path2": [
    "data_file_update"
+  ],
+  "file_read": [
+   "file_js_parse"
+  ],
+  "js_parse": [
+   "file_js_parse"
   ]
  }
 }
