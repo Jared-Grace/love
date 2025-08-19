@@ -40,7 +40,7 @@ export async function watch() {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
         async function lambda3(previous) {
-          true;
+          $rtrue;
         }
         let value2 = await data_transform("error_attention", null, lambda3);
         throw e;
