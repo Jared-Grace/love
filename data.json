@@ -845,7 +845,6 @@
   "sa function_new_transform ",
   "as function_new_transform",
   "a fnt function_new_transform",
-  "s join",
   "s combine",
   "s call",
   "u jsp",
@@ -1291,7 +1290,8 @@
   "ps",
   "p",
   "data_property_get identifiers",
-  "o w"
+  "o w",
+  "s join"
  ],
  "marker_current": "1",
  "function_current": "watch",
