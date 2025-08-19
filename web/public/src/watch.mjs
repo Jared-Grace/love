@@ -1,3 +1,4 @@
+import { list_join } from "./list_join.mjs";
 import { marker } from "./marker.mjs";
 import { object_property_exists_equals } from "./object_property_exists_equals.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
@@ -31,7 +32,7 @@ export async function watch() {
       object_property_set(in_progress, path, value);
       const f_name = function_auto_path.name;
       let args = [path];
-      lj;
+      let result = list_join(list, separator);
       let output = await command_line("node g.mjs " + f_name + " " + path);
       log_keep(output);
       object_property_set(in_progress, path, false);

@@ -1372,7 +1372,8 @@
    "data_identifiers_file"
   ],
   "list": [
-   "data_identifiers_file"
+   "data_identifiers_file",
+   "watch"
   ],
   "v": [
    "data_identifiers_file",
@@ -1481,6 +1482,15 @@
    "watch"
   ],
   "lj": [
+   "watch"
+  ],
+  "list_join": [
+   "watch"
+  ],
+  "result": [
+   "watch"
+  ],
+  "separator": [
    "watch"
   ]
  }
