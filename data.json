@@ -1420,7 +1420,8 @@
    "function_auto_path",
    "data_file_update",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "function_run_prompt"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1695,7 +1696,8 @@
   ],
   "prompt": [
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "function_run_prompt"
   ],
   "color": [
    "chalk_green",
@@ -1706,7 +1708,8 @@
    "chalk_red"
   ],
   "chalk_red": [
-   "chalk_red"
+   "chalk_red",
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1796,6 +1799,7 @@
   },
   "function_run_prompt": {
    "identifiers": [
+    "chalk_red",
     "null_not_is",
     "data_property_get",
     "trinity_green",
@@ -1812,6 +1816,8 @@
     "function_run_prompt",
     "ea",
     "nn",
+    "v",
+    "prompt",
     "prompt_colored",
     "line"
    ]
