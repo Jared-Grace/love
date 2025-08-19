@@ -128,7 +128,8 @@
   "mab": "marker_above",
   "mda": "marker_delete_above",
   "ja": "js_auto",
-  "lax": "list_add_if_not_includes"
+  "lax": "list_add_if_not_includes",
+  "lj": "list_join"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1292,7 +1293,8 @@
   "data_property_get identifiers",
   "o w",
   "s join",
-  "u lj"
+  "u lj",
+  "a lj list_join"
  ],
  "marker_current": "1",
  "function_current": "watch",
