@@ -1296,7 +1296,8 @@
   "n data_file_update",
   "de data_identifiers_file",
   "s remove",
-  "s data"
+  "s data",
+  "dpg dfu"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
