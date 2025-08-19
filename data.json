@@ -1337,7 +1337,8 @@
   ],
   "data_transform": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "marker": [
    "data_identifiers_file",
@@ -1380,7 +1381,8 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1389,7 +1391,8 @@
   ],
   "previous": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -1631,7 +1634,13 @@
   "function_name_combine": [
    "watch"
   ],
-  "combined": [
+  "value2": [
+   "watch"
+  ],
+  "value_initial": [
+   "watch"
+  ],
+  "lambda3": [
    "watch"
   ]
  },
@@ -1680,6 +1689,7 @@
   },
   "watch": {
    "identifiers": [
+    "data_transform",
     "function_name_combine",
     "data_boolean_set",
     "command_line_node_g",
@@ -1714,7 +1724,11 @@
     "value",
     "name",
     "e",
-    "combined",
+    "value2",
+    "property_name",
+    "value_initial",
+    "lambda3",
+    "previous",
     "on"
    ]
   }
