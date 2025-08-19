@@ -16,7 +16,7 @@ export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
   let nn = null_not_is(ea);
   if (nn) {
-    let v = await chalk_red(prompt);
+    let colored = await chalk_red(prompt);
   }
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
