@@ -28,6 +28,7 @@ export async function data_file_update(f_path) {
   let f_this = object_property_initialize(functions, f_name, {});
   let f_identifiers_old = object_property_get(f_this, property_name);
   let removals = list_difference(f_identifiers_old, f_identifiers_new);
+  each(list2, function lambda(item) {});
   await data_save(d);
   marker("1");
 }
