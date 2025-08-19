@@ -1,3 +1,4 @@
+import { data_all } from "./data_all.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { each } from "./each.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -8,6 +9,8 @@ import { function_path_to_name } from "./function_path_to_name.mjs";
 import { marker } from "./marker.mjs";
 export async function data_file_update(f_path) {
   let f_name = function_path_to_name(f_path);
+  var d = await data_all();
+  let { data, file_path } = d;
   let parsed = await file_js_parse(f_path);
   let { ast, code } = parsed;
   let i_names = js_identifiers_names(ast);
