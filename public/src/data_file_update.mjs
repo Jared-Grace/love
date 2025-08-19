@@ -9,6 +9,7 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
 import { marker } from "./marker.mjs";
+import { list_difference } from "./list_difference.mjs";
 export async function data_file_update(f_path) {
   let f_name = function_path_to_name(f_path);
   var d = await data_all();
@@ -26,6 +27,7 @@ export async function data_file_update(f_path) {
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let f_identifiers_old = object_property_get(object, property_name);
+  let result = list_difference(list2, other);
   await data_save(d);
   marker("1");
 }
