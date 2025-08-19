@@ -1318,7 +1318,8 @@
   "o fs",
   "s imports",
   "function_imports_missing folder_read",
-  "functions_names"
+  "functions_names",
+  "s data,update"
  ],
  "marker_current": "1",
  "function_current": "function_current_set",
