@@ -1538,8 +1538,7 @@
   ],
   "value": [
    "watch",
-   "error_attention_set",
-   "error_attention_clear"
+   "error_attention_set"
   ],
   "name": [
    "watch"
@@ -2036,7 +2035,6 @@
     "error_attention_set",
     "marker",
     "error_attention_clear",
-    "value",
     "v"
    ]
   }
