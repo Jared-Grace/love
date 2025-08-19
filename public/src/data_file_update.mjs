@@ -10,6 +10,7 @@ import { file_js_parse } from "./file_js_parse.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
 import { marker } from "./marker.mjs";
 import { list_difference } from "./list_difference.mjs";
+import { list_includes } from "./list_includes.mjs";
 export async function data_file_update(f_path) {
   let f_name = function_path_to_name(f_path);
   var d = await data_all();
@@ -30,6 +31,7 @@ export async function data_file_update(f_path) {
   let removals = list_difference(f_identifiers_old, f_identifiers_new);
   function lambda(item) {
     let list = object_property_initialize(identifiers, item, []);
+    while (list_includes(list, item)) {}
   }
   each(removals, lambda);
   await data_save(d);
