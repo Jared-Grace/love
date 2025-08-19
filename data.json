@@ -1552,8 +1552,7 @@
   ],
   "result": [
    "watch",
-   "data_file_update",
-   "function_watch_ending_change"
+   "data_file_update"
   ],
   "separator": [
    "watch"
@@ -1993,7 +1992,6 @@
     "suffix",
     "unaliased",
     "f_name_wrapped",
-    "result",
     "v"
    ]
   },
