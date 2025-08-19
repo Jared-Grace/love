@@ -631,7 +631,6 @@
   "c catch_log catch_log_async",
   "s eq",
   "s prefix",
-  "s suffix",
   "c string_suffix_without string_prefix_without",
   "s start",
   "si git_acp_call",
@@ -1308,7 +1307,8 @@
   "s update",
   "o w",
   "c fws function_watch_suffix_change",
-  "r function_watch_suffix_change function_watch_ending_change"
+  "r function_watch_suffix_change function_watch_ending_change",
+  "s suffix"
  ],
  "marker_current": "1",
  "function_current": "function_watch_ending_change",
