@@ -5,6 +5,6 @@ import { import_install } from "./import_install.mjs";
 export async function chalk_red(prompt) {
   marker("1");
   const color = "red";
-  let v = await chalk_color(color, prompt);
-  return v;
+  let colored = await chalk_color(color, prompt);
+  return colored;
 }
