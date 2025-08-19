@@ -33,8 +33,7 @@ export async function watch() {
       }
       object_property_set(in_progress, path, value);
       const f_name = function_auto_path.name;
-      let args = [path];
-      await command_line_node_g(f_name, args);
+      await command_line_node_g(f_name, [path]);
       object_property_set(in_progress, path, false);
     }
     await catch_log_async(lambda);
