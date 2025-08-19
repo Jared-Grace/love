@@ -1321,7 +1321,8 @@
   "functions_names",
   "s data,update",
   "fws data_file_update all",
-  "r data_file_update_all data_files_update"
+  "r data_file_update_all data_files_update",
+  "u fntp"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
