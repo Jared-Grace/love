@@ -1,3 +1,4 @@
+import { string_suffix_change } from "./string_suffix_change.mjs";
 import { string_suffix_without } from "./string_suffix_without.mjs";
 import { marker } from "./marker.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -10,8 +11,7 @@ export async function function_watch_ending_change(
 ) {
   marker("1");
   let { unaliased } = await function_name_unalias(f_name);
-  let without = string_suffix_without(unaliased, ending_old);
-  let f_name_new = without + ending_new;
+  let f_name_new = string_suffix_change(unaliased, ending_old, ending_new);
   let v = await function_wrap(unaliased, f_name_new);
   return v;
 }
