@@ -1603,6 +1603,9 @@
   ],
   "list_remove": [
    "data_file_update"
+  ],
+  "list_remove_all": [
+   "data_file_update"
   ]
  },
  "functions": {
