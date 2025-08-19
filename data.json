@@ -1611,9 +1611,7 @@
   "list_remove_all": [
    "data_file_update"
   ],
-  "x": [
-   "data_file_update"
-  ]
+  "x": []
  },
  "functions": {
   "data_file_update": {
@@ -1652,8 +1650,7 @@
     "f_identifiers_old",
     "removals",
     "lambda",
-    "item",
-    "x"
+    "item"
    ]
   }
  }
