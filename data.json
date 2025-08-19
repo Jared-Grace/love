@@ -1308,7 +1308,8 @@
   ],
   "function_path_to_name": [
    "data_identifiers_file",
-   "function_auto_path"
+   "function_auto_path",
+   "data_file_update"
   ],
   "list_add_if_not_includes": [
    "data_identifiers_file"
@@ -1340,7 +1341,8 @@
   ],
   "f_path": [
    "data_identifiers_file",
-   "file_js_unparse"
+   "file_js_unparse",
+   "data_file_update"
   ],
   "ast": [
    "data_identifiers_file",
@@ -1353,7 +1355,8 @@
   "f_name": [
    "data_identifiers_file",
    "watch",
-   "function_auto_path"
+   "function_auto_path",
+   "data_file_update"
   ],
   "property_name": [
    "data_identifiers_file"
