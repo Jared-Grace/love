@@ -13,7 +13,9 @@ import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
-  let nn = null_not_is(value);
+  let nn = null_not_is(ea);
+  if (false) {
+  }
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
