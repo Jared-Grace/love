@@ -1415,8 +1415,7 @@
    "data_identifiers_file",
    "file_js_unparse",
    "function_auto_path",
-   "data_file_update",
-   "watch"
+   "data_file_update"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1437,7 +1436,8 @@
    "file_js_unparse"
   ],
   "message": [
-   "file_js_unparse"
+   "file_js_unparse",
+   "watch"
   ],
   "object_property_exists_equals": [
    "watch"
@@ -1721,9 +1721,9 @@
     "value",
     "name",
     "e",
+    "message",
     "lambda3",
     "previous",
-    "v",
     "value2",
     "on"
    ]
