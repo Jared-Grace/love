@@ -1298,7 +1298,8 @@
   "s remove",
   "s data",
   "dpg dfu",
-  "data_property_get data_file_update"
+  "data_property_get data_file_update",
+  "dpg functions"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
