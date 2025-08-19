@@ -1294,10 +1294,11 @@
   "o w",
   "s join",
   "u lj",
-  "a lj list_join"
+  "a lj list_join",
+  "n data_file_update"
  ],
  "marker_current": "1",
- "function_current": "watch",
+ "function_current": "data_file_update",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -1326,7 +1327,8 @@
   ],
   "marker": [
    "data_identifiers_file",
-   "watch"
+   "watch",
+   "data_file_update"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1511,6 +1513,9 @@
   ],
   "function_auto": [
    "function_auto_path"
+  ],
+  "data_file_update": [
+   "data_file_update"
   ]
  }
 }
