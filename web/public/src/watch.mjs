@@ -1,4 +1,4 @@
-import { functions_combine } from "./functions_combine.mjs";
+import { function_name_combine } from "./function_name_combine.mjs";
 import { data_boolean_set } from "./data_boolean_set.mjs";
 import { command_line_node_g } from "./command_line_node_g.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -38,7 +38,7 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
-        await functions_combine(f_names_comma);
+        let combined = function_name_combine(left, right);
         await data_boolean_set(property_name, value2);
         throw e;
       }
