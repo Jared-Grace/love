@@ -1697,6 +1697,9 @@
   ],
   "fn": [
    "chalk_green"
+  ],
+  "color": [
+   "chalk_green"
   ]
  },
  "functions": {
@@ -1812,6 +1815,7 @@
     "import_install",
     "chalk_green",
     "prompt",
+    "color",
     "chalk",
     "default",
     "fn",
