@@ -1497,7 +1497,8 @@
    "watch"
   ],
   "result": [
-   "watch"
+   "watch",
+   "data_file_update"
   ],
   "separator": [
    "watch"
@@ -1518,6 +1519,12 @@
    "function_auto_path"
   ],
   "data_file_update": [
+   "data_file_update"
+  ],
+  "file_js_parse": [
+   "data_file_update"
+  ],
+  "f_path2": [
    "data_file_update"
   ]
  }
