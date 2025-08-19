@@ -1631,6 +1631,12 @@
   ],
   "value2": [
    "watch"
+  ],
+  "functions_combine": [
+   "watch"
+  ],
+  "f_names_comma": [
+   "watch"
   ]
  },
  "functions": {
@@ -1678,6 +1684,7 @@
   },
   "watch": {
    "identifiers": [
+    "functions_combine",
     "data_boolean_set",
     "command_line_node_g",
     "list_join_space",
@@ -1711,6 +1718,7 @@
     "value",
     "name",
     "e",
+    "f_names_comma",
     "property_name",
     "value2",
     "on"
