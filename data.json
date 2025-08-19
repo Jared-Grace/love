@@ -1540,7 +1540,8 @@
    "function_auto_path"
   ],
   "data_file_update": [
-   "data_file_update"
+   "data_file_update",
+   "watch"
   ],
   "file_js_parse": [
    "data_file_update",
