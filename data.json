@@ -1301,9 +1301,9 @@
   "dpg functions",
   "s delete",
   "a opd object_property_delete",
-  "dpg identifiers",
   "  let x = null;",
-  "ps"
+  "ps",
+  "dpg identifiers"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
