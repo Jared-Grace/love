@@ -1390,8 +1390,7 @@
    "file_js_unparse",
    "data_file_update",
    "file_js_parse",
-   "data_file_update_all",
-   "data_files_update"
+   "data_file_update_all"
   ],
   "ast": [
    "data_identifiers_file",
@@ -1422,8 +1421,7 @@
    "watch",
    "data_file_update",
    "functions_names",
-   "folder_read",
-   "data_files_update"
+   "folder_read"
   ],
   "previous": [
    "data_identifiers_file",
@@ -1446,8 +1444,7 @@
   "list": [
    "data_identifiers_file",
    "watch",
-   "data_file_update",
-   "data_files_update"
+   "data_file_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -1665,8 +1662,7 @@
    "data_file_update"
   ],
   "item": [
-   "data_file_update",
-   "data_files_update"
+   "data_file_update"
   ],
   "list_includes": [
    "data_file_update"
@@ -2194,11 +2190,7 @@
     "data_files_update",
     "f_names",
     "f_paths",
-    "lambda",
-    "item",
-    "list",
-    "v",
-    "f_path"
+    "v"
    ]
   }
  }
