@@ -13,6 +13,6 @@ export async function function_watch_ending_change(
   let f_name_wrapped = function_name_combine(unaliased, ending_old);
   let without = string_suffix_without(unaliased, ending_old);
   let f_name_new = without + ending_new;
-  let v = await function_wrap(unaliased, f_name_wrapped);
+  let v = await function_wrap(unaliased, f_name_new);
   return v;
 }
