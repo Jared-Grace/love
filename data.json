@@ -1385,7 +1385,8 @@
    "data_identifiers_file",
    "watch",
    "function_auto_path",
-   "data_file_update"
+   "data_file_update",
+   "function_watch_suffix_change"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -1424,7 +1425,8 @@
    "file_js_unparse",
    "function_auto_path",
    "data_file_update",
-   "chalk_green"
+   "chalk_green",
+   "function_watch_suffix_change"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1649,7 +1651,8 @@
    "watch"
   ],
   "function_name_combine": [
-   "watch"
+   "watch",
+   "function_watch_suffix_change"
   ],
   "error_attention_set": [
    "watch",
@@ -1743,6 +1746,24 @@
   ],
   "json_format_to": [
    "function_run_prompt"
+  ],
+  "function_name_unalias": [
+   "function_watch_suffix_change"
+  ],
+  "function_wrap": [
+   "function_watch_suffix_change"
+  ],
+  "function_watch_suffix_change": [
+   "function_watch_suffix_change"
+  ],
+  "suffix": [
+   "function_watch_suffix_change"
+  ],
+  "unaliased": [
+   "function_watch_suffix_change"
+  ],
+  "f_name_wrapped": [
+   "function_watch_suffix_change"
   ]
  },
  "functions": {
@@ -1902,6 +1923,19 @@
     "lambda3",
     "previous",
     "value2"
+   ]
+  },
+  "function_watch_suffix_change": {
+   "identifiers": [
+    "function_name_unalias",
+    "function_name_combine",
+    "function_wrap",
+    "function_watch_suffix_change",
+    "f_name",
+    "suffix",
+    "unaliased",
+    "f_name_wrapped",
+    "v"
    ]
   }
  }
