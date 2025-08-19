@@ -1,3 +1,4 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { list_remove_all } from "./list_remove_all.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -35,6 +36,7 @@ export async function data_file_update(f_path) {
   function lambda(item) {
     let list = object_property_initialize(identifiers, item, []);
     list_remove_all(list, f_name);
+    let e = list_empty_is(list2);
     if (false) {
     }
   }
