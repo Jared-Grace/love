@@ -1,3 +1,4 @@
+import { list_remove_all } from "./list_remove_all.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { data_save } from "./data_save.mjs";
 import { data_all } from "./data_all.mjs";
@@ -32,9 +33,7 @@ export async function data_file_update(f_path) {
   let removals = list_difference(f_identifiers_old, f_identifiers_new);
   function lambda(item) {
     let list = object_property_initialize(identifiers, item, []);
-    while (list_includes(list, f_name)) {
-      list_remove(list, f_name);
-    }
+    list_remove_all(list, f_name);
   }
   each(removals, lambda);
   await data_save(d);
