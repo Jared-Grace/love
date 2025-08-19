@@ -636,7 +636,6 @@
   "s start",
   "si git_acp_call",
   "fd git_acp_call",
-  "s catch",
   "n identity",
   "i catch_only_async",
   "fd git_commit",
@@ -1303,7 +1302,8 @@
   "a opd object_property_delete",
   "  let x = null;",
   "ps",
-  "dpg identifiers"
+  "dpg identifiers",
+  "s catch"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
