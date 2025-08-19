@@ -33,7 +33,11 @@ export async function watch() {
       }
       object_property_set(in_progress, path, value);
       await command_line_node_g(function_auto_path.name, [path]);
-      await command_line_node_g(data_file_update.name, [path]);
+      try {
+        await command_line_node_g(data_file_update.name, [path]);
+      } catch (e) {
+        throw e;
+      }
       object_property_set(in_progress, path, false);
     }
     await catch_log_async(lambda);
