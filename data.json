@@ -1774,8 +1774,7 @@
    "function_watch_ending_change"
   ],
   "f_name_wrapped": [
-   "function_watch_suffix_change",
-   "function_watch_ending_change"
+   "function_watch_suffix_change"
   ],
   "function_watch_ending_change": [
    "function_watch_ending_change"
@@ -2001,7 +2000,6 @@
     "ending_old",
     "ending_new",
     "unaliased",
-    "f_name_wrapped",
     "without",
     "f_name_new",
     "v"
