@@ -22,6 +22,7 @@ export async function data_file_update(f_path) {
     list_add_if_not_includes(list, f_name);
   }
   each(i_names, lambda2);
+  let functions = object_property_initialize(data, "functions", {});
   await data_save(d);
   marker("1");
 }
