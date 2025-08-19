@@ -1419,8 +1419,7 @@
    "file_js_unparse",
    "function_auto_path",
    "data_file_update",
-   "chalk_green",
-   "function_run_prompt"
+   "chalk_green"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1724,7 +1723,8 @@
   ],
   "colored": [
    "chalk_color",
-   "chalk_red"
+   "chalk_red",
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -1831,7 +1831,7 @@
     "function_run_prompt",
     "ea",
     "nn",
-    "v",
+    "colored",
     "prompt",
     "prompt_colored",
     "line"
