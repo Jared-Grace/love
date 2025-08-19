@@ -1285,7 +1285,6 @@
   "s path_To",
   "s path_to",
   "data_property_get identifiers",
-  "o w",
   "s join",
   "u lj",
   "a lj list_join",
@@ -1306,10 +1305,11 @@
   "s git",
   "c chalk_green chalk_red",
   "s data,udpate",
-  "s update"
+  "s update",
+  "o w"
  ],
  "marker_current": "1",
- "function_current": "chalk_red",
+ "function_current": "watch",
  "terminal": false,
  "identifiers": {
   "log": [
