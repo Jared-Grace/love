@@ -8,6 +8,6 @@ export function string_suffix_without(s, suffix) {
   if (not(a)) {
     error();
   }
-  const newLocal = string_slice(s, 0, string_size(s) - string_size(suffix));
-  return newLocal;
+  const without = string_slice(s, 0, string_size(s) - string_size(suffix));
+  return without;
 }
