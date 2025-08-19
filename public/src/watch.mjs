@@ -14,7 +14,7 @@ import { import_install } from "./import_install.mjs";
 import { command_line } from "./command_line.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
-import { object_property_equals } from "./object_property_equals.mjs";
+import { data_file_update } from "./data_file_update.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 export async function watch() {
   marker("1");
@@ -33,6 +33,7 @@ export async function watch() {
       }
       object_property_set(in_progress, path, value);
       await command_line_node_g(function_auto_path.name, [path]);
+      await command_line_node_g(data_file_update.name, [path]);
       object_property_set(in_progress, path, false);
     }
     await catch_log_async(lambda);
