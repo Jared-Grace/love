@@ -1524,7 +1524,8 @@
    "watch"
   ],
   "value": [
-   "watch"
+   "watch",
+   "error_attention_set"
   ],
   "name": [
    "watch"
@@ -1730,9 +1731,6 @@
    "chalk_red",
    "function_run_prompt"
   ],
-  "vale": [
-   "error_attention_set"
-  ],
   "lambda3": [
    "error_attention_set"
   ],
@@ -1899,7 +1897,7 @@
    "identifiers": [
     "data_transform",
     "error_attention_set",
-    "vale",
+    "value",
     "lambda3",
     "previous",
     "value2"
