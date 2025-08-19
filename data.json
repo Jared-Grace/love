@@ -1464,7 +1464,8 @@
   ],
   "import_install": [
    "watch",
-   "function_run_prompt"
+   "function_run_prompt",
+   "chalk_green"
   ],
   "command_line": [
    "watch"
@@ -1489,7 +1490,8 @@
    "watch"
   ],
   "default": [
-   "watch"
+   "watch",
+   "chalk_green"
   ],
   "joined": [
    "watch"
@@ -1646,7 +1648,8 @@
    "function_run_prompt"
   ],
   "chalk_green": [
-   "function_run_prompt"
+   "function_run_prompt",
+   "chalk_green"
   ],
   "function_run_line_git": [
    "function_run_prompt"
@@ -1670,7 +1673,8 @@
    "function_run_prompt"
   ],
   "prompt_colored": [
-   "function_run_prompt"
+   "function_run_prompt",
+   "chalk_green"
   ],
   "line": [
    "function_run_prompt"
@@ -1683,6 +1687,18 @@
   ],
   "null_not_is": [
    "function_run_prompt"
+  ],
+  "prompt": [
+   "chalk_green"
+  ],
+  "chalk": [
+   "chalk_green"
+  ],
+  "fn": [
+   "chalk_green"
+  ],
+  "green": [
+   "chalk_green"
   ]
  },
  "functions": {
@@ -1790,6 +1806,18 @@
     "nn",
     "prompt_colored",
     "line"
+   ]
+  },
+  "chalk_green": {
+   "identifiers": [
+    "import_install",
+    "chalk_green",
+    "prompt",
+    "chalk",
+    "default",
+    "fn",
+    "green",
+    "prompt_colored"
    ]
   }
  }
