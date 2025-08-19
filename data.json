@@ -1495,6 +1495,9 @@
   ],
   "list_join_space": [
    "watch"
+  ],
+  "command_line_node_g": [
+   "watch"
   ]
  }
 }

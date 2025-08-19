@@ -1,3 +1,4 @@
+import { command_line_node_g } from "./command_line_node_g.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_join } from "./list_join.mjs";
 import { marker } from "./marker.mjs";
@@ -33,9 +34,7 @@ export async function watch() {
       object_property_set(in_progress, path, value);
       const f_name = function_auto_path.name;
       let args = [path];
-      let result = list_join_space(args);
-      let output = await command_line("node g.mjs " + f_name + " " + result);
-      log_keep(output);
+      await command_line_node_g(f_name, args);
       object_property_set(in_progress, path, false);
     }
     await catch_log_async(lambda);
