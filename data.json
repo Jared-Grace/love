@@ -1492,6 +1492,9 @@
   ],
   "separator": [
    "watch"
+  ],
+  "list_join_space": [
+   "watch"
   ]
  }
 }
