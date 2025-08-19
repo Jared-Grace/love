@@ -1,3 +1,4 @@
+import { error_attention_set } from "./error_attention_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { data_boolean_set } from "./data_boolean_set.mjs";
@@ -40,10 +41,7 @@ export async function watch() {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
         let message = data_file_update.name;
-        async function lambda3(previous) {
-          return message;
-        }
-        let value2 = await data_transform("error_attention", null, lambda3);
+        await error_attention_set(message);
         throw e;
       }
       object_property_set(in_progress, path, false);
