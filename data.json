@@ -1286,7 +1286,6 @@
   "s file_js",
   "s path_To",
   "s path_to",
-  "ps",
   "data_property_get identifiers",
   "o w",
   "s join",
@@ -1302,7 +1301,8 @@
   "dpg functions",
   "dpg identifiers",
   "s delete",
-  "a opd object_property_delete"
+  "a opd object_property_delete",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
