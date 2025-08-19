@@ -11,5 +11,4 @@ export async function file_js_unparse(parsed) {
     return;
   }
   await file_overwrite(f_path, code_new);
-  let v = await data_identifiers_file(parsed);
 }
