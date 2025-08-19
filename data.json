@@ -1293,7 +1293,6 @@
   "n data_file_update",
   "de data_identifiers_file",
   "s remove",
-  "s data",
   "dpg dfu",
   "data_property_get data_file_update",
   "p",
@@ -1303,7 +1302,8 @@
   "  let x = null;",
   "ps",
   "dpg identifiers",
-  "s catch"
+  "s catch",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
