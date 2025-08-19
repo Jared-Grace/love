@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { list_remove_all } from "./list_remove_all.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { data_save } from "./data_save.mjs";
@@ -36,6 +37,7 @@ export async function data_file_update(f_path) {
     list_remove_all(list, f_name);
   }
   each(removals, lambda);
+  object_property_set(f_this, property_name, f_identifiers_new);
   await data_save(d);
   marker("1");
 }
