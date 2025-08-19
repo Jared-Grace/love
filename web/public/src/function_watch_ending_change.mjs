@@ -6,6 +6,7 @@ export async function function_watch_ending_change(f_name, suffix) {
   marker("1");
   let { unaliased } = await function_name_unalias(f_name);
   let f_name_wrapped = function_name_combine(unaliased, suffix);
+  function_watch_suffix_change;
   let v = await function_wrap(unaliased, f_name_wrapped);
   return v;
 }
