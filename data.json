@@ -1313,7 +1313,8 @@
   "s update",
   "s functions",
   "functions_path",
-  "functions_paths"
+  "functions_paths",
+  "de functions_paths"
  ],
  "marker_current": "1",
  "function_current": "error_attention_clear",
