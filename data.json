@@ -1311,7 +1311,7 @@
   "r function_watch_suffix_change function_watch_ending_change"
  ],
  "marker_current": "1",
- "function_current": "function_watch_suffix_change",
+ "function_current": "function_watch_ending_change",
  "terminal": false,
  "identifiers": {
   "log": [
