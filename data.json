@@ -1306,7 +1306,8 @@
   "c chalk_green chalk_red",
   "s data,udpate",
   "s update",
-  "o w"
+  "o w",
+  "c fws function_watch_suffix_change"
  ],
  "marker_current": "1",
  "function_current": "watch",
