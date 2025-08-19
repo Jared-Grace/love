@@ -9,5 +9,4 @@ export async function data_files_update() {
   let f_paths = list_map(f_names, function_name_to_path);
   marker("1");
   await each_async(f_paths, data_file_update);
-  return v;
 }
