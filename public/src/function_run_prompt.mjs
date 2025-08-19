@@ -1,3 +1,4 @@
+import { null_not_is } from "./null_not_is.mjs";
 import { data_property_get } from "./data_property_get.mjs";
 import { trinity_green } from "./trinity_green.mjs";
 import { chalk_green } from "./chalk_green.mjs";
@@ -12,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
-  nn;
+  let nn = null_not_is(value);
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
