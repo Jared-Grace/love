@@ -1411,7 +1411,8 @@
    "function_auto_path",
    "data_file_update",
    "function_watch_suffix_change",
-   "function_watch_ending_change"
+   "function_watch_ending_change",
+   "data_files_update"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -1540,7 +1541,8 @@
    "chalk_color"
   ],
   "joined": [
-   "watch"
+   "watch",
+   "data_files_update"
   ],
   "watcher": [
    "watch"
@@ -1920,7 +1922,13 @@
   "mapped": [
    "data_files_update"
   ],
-  "fntp": [
+  "function_name_to_path": [
+   "data_files_update"
+  ],
+  "joined2": [
+   "data_files_update"
+  ],
+  "f_name2": [
    "data_files_update"
   ]
  },
@@ -2181,13 +2189,17 @@
   },
   "data_files_update": {
    "identifiers": [
+    "function_name_to_path",
     "list_map",
     "functions_names",
     "data_file_update",
     "marker",
     "data_files_update",
     "f_names",
-    "fntp",
+    "joined",
+    "f_name",
+    "joined2",
+    "f_name2",
     "lambda",
     "item",
     "mapped",
