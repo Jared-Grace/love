@@ -39,10 +39,11 @@ export async function watch() {
       try {
         await command_line_node_g(data_file_update.name, [path]);
       } catch (e) {
+        async function lambda3(previous) {}
         let value2 = await data_transform(
           property_name,
           value_initial,
-          async function lambda3(previous) {},
+          lambda3,
         );
         throw e;
       }
