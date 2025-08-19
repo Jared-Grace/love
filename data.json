@@ -1411,8 +1411,7 @@
    "function_auto_path",
    "data_file_update",
    "function_watch_suffix_change",
-   "function_watch_ending_change",
-   "data_files_update"
+   "function_watch_ending_change"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -1447,7 +1446,8 @@
   "list": [
    "data_identifiers_file",
    "watch",
-   "data_file_update"
+   "data_file_update",
+   "data_files_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -1541,8 +1541,7 @@
    "chalk_color"
   ],
   "joined": [
-   "watch",
-   "data_files_update"
+   "watch"
   ],
   "watcher": [
    "watch"
@@ -1919,16 +1918,13 @@
   "data_files_update": [
    "data_files_update"
   ],
-  "mapped": [
-   "data_files_update"
-  ],
   "function_name_to_path": [
    "data_files_update"
   ],
-  "joined2": [
+  "each_async": [
    "data_files_update"
   ],
-  "f_name2": [
+  "f_paths": [
    "data_files_update"
   ]
  },
@@ -2189,6 +2185,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "each_async",
     "function_name_to_path",
     "list_map",
     "functions_names",
@@ -2196,13 +2193,10 @@
     "marker",
     "data_files_update",
     "f_names",
-    "joined",
-    "f_name",
-    "joined2",
-    "f_name2",
+    "f_paths",
     "lambda",
     "item",
-    "mapped",
+    "list",
     "v",
     "f_path"
    ]

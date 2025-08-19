@@ -8,7 +8,8 @@ export async function data_files_update() {
   let f_names = functions_names();
   let f_paths = list_map(f_names, function_name_to_path);
   marker("1");
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   let v = await data_file_update(f_path);
   return v;
 }
