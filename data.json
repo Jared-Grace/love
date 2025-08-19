@@ -1268,7 +1268,6 @@
   "a mab marker_above",
   "c mab marker_delete_above",
   "s prev",
-  "s remove",
   "cd",
   "fs jaa",
   "a mda marker_delete_above",
@@ -1296,7 +1295,8 @@
   "u lj",
   "a lj list_join",
   "n data_file_update",
-  "de data_identifiers_file"
+  "de data_identifiers_file",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
