@@ -12,12 +12,14 @@ import { command_line_read } from "./command_line_read.mjs";
 import { function_run_git } from "./function_run_git.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
+import { json_format_to } from "./json_format_to.mjs";
 export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
   let nn = null_not_is(ea);
   if (nn) {
+    let prompt = json_format_to(ea);
     let colored = await chalk_red(prompt);
-    log(message);
+    log(colored);
   }
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
