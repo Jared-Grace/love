@@ -1286,7 +1286,6 @@
   "s file_js",
   "s path_To",
   "s path_to",
-  "s data",
   "ps",
   "p",
   "data_property_get identifiers",
@@ -1296,7 +1295,8 @@
   "a lj list_join",
   "n data_file_update",
   "de data_identifiers_file",
-  "s remove"
+  "s remove",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
