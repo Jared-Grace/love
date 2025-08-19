@@ -42,7 +42,6 @@ export async function data_file_update(f_path) {
       object_property_delete(identifiers, item);
     }
   }
-  let x = null;
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
   await data_save(d);
