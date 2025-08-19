@@ -1782,12 +1782,6 @@
   ],
   "string_suffix_without": [
    "function_watch_ending_change"
-  ],
-  "s": [
-   "function_watch_ending_change"
-  ],
-  "suffix2": [
-   "function_watch_ending_change"
   ]
  },
  "functions": {
@@ -1976,8 +1970,6 @@
     "unaliased",
     "f_name_wrapped",
     "result",
-    "s",
-    "suffix2",
     "v"
    ]
   }
