@@ -35,6 +35,8 @@ export async function data_file_update(f_path) {
   function lambda(item) {
     let list = object_property_initialize(identifiers, item, []);
     list_remove_all(list, f_name);
+    if (false) {
+    }
   }
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
