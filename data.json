@@ -1351,7 +1351,8 @@
    "data_identifiers_file",
    "watch",
    "data_file_update",
-   "chalk_red"
+   "chalk_red",
+   "function_watch_suffix_change"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1927,6 +1928,7 @@
   },
   "function_watch_suffix_change": {
    "identifiers": [
+    "marker",
     "function_name_unalias",
     "function_name_combine",
     "function_wrap",
