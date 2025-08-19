@@ -1479,7 +1479,8 @@
    "watch"
   ],
   "log_keep": [
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "object_property_exists": [
    "watch"
@@ -1848,6 +1849,7 @@
     "list_add",
     "list_unique",
     "json_format_to",
+    "log_keep",
     "function_run_prompt",
     "ea",
     "nn",
