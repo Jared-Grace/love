@@ -895,7 +895,6 @@
   "atn jis",
   "path_resolve .",
   "s folder",
-  "s git",
   "a ii import_install",
   "git_push_schedule",
   "fw c function_copy_suffix_add",
@@ -1303,7 +1302,8 @@
   "ps",
   "dpg identifiers",
   "s catch",
-  "s data"
+  "s data",
+  "s git"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
