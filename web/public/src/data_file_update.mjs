@@ -15,17 +15,17 @@ export async function data_file_update(f_path) {
   let { data } = d;
   let parsed = await file_js_parse(f_path);
   let { ast } = parsed;
-  let i_names = js_identifiers_names(ast);
+  let f_identifiers_new = js_identifiers_names(ast);
   const property_name = "identifiers";
   let identifiers = object_property_initialize(data, property_name, {});
   function lambda2(i_name) {
     let list = object_property_initialize(identifiers, i_name, []);
     list_add_if_not_includes(list, f_name);
   }
-  each(i_names, lambda2);
+  each(f_identifiers_new, lambda2);
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
-  let value = object_property_get(object, property_name2);
+  let f_identifiers_old = object_property_get(object, property_name);
   await data_save(d);
   marker("1");
 }
