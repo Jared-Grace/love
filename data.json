@@ -1303,7 +1303,8 @@
   "dpg identifiers",
   "s catch",
   "s data",
-  "s git"
+  "s git",
+  "c chalk_green chalk_red"
  ],
  "marker_current": "1",
  "function_current": "data_file_update",
