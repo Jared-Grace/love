@@ -1307,7 +1307,8 @@
   "s data,udpate",
   "s update",
   "o w",
-  "c fws function_watch_suffix_change"
+  "c fws function_watch_suffix_change",
+  "r function_watch_suffix_change function_watch_ending_change"
  ],
  "marker_current": "1",
  "function_current": "function_watch_suffix_change",
