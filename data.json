@@ -1567,6 +1567,15 @@
   ],
   "file_path": [
    "data_file_update"
+  ],
+  "object_property_get": [
+   "data_file_update"
+  ],
+  "data_save": [
+   "data_file_update"
+  ],
+  "identifiers": [
+   "data_file_update"
   ]
  }
 }
