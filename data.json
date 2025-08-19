@@ -1353,7 +1353,8 @@
    "watch",
    "data_file_update",
    "chalk_red",
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1388,7 +1389,8 @@
    "watch",
    "function_auto_path",
    "data_file_update",
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -1428,7 +1430,8 @@
    "function_auto_path",
    "data_file_update",
    "chalk_green",
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "file_overwrite": [
    "file_js_unparse"
@@ -1654,7 +1657,8 @@
   ],
   "function_name_combine": [
    "watch",
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "error_attention_set": [
    "watch",
@@ -1750,22 +1754,30 @@
    "function_run_prompt"
   ],
   "function_name_unalias": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "function_wrap": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "function_watch_suffix_change": [
    "function_watch_suffix_change"
   ],
   "suffix": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "unaliased": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
   ],
   "f_name_wrapped": [
-   "function_watch_suffix_change"
+   "function_watch_suffix_change",
+   "function_watch_ending_change"
+  ],
+  "function_watch_ending_change": [
+   "function_watch_ending_change"
   ]
  },
  "functions": {
@@ -1934,6 +1946,20 @@
     "function_name_combine",
     "function_wrap",
     "function_watch_suffix_change",
+    "f_name",
+    "suffix",
+    "unaliased",
+    "f_name_wrapped",
+    "v"
+   ]
+  },
+  "function_watch_ending_change": {
+   "identifiers": [
+    "marker",
+    "function_name_unalias",
+    "function_name_combine",
+    "function_wrap",
+    "function_watch_ending_change",
     "f_name",
     "suffix",
     "unaliased",
