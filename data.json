@@ -1441,7 +1441,8 @@
   ],
   "message": [
    "file_js_unparse",
-   "watch"
+   "watch",
+   "function_run_prompt"
   ],
   "object_property_exists_equals": [
    "watch"
@@ -1833,6 +1834,7 @@
     "nn",
     "colored",
     "prompt",
+    "message",
     "prompt_colored",
     "line"
    ]
