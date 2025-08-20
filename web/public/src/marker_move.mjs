@@ -27,6 +27,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
 export async function marker_move(m_name_from, m_name_to) {
+  marker("1");
   let f_name = await data_function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
