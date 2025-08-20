@@ -10,6 +10,6 @@ export function list_first_remaining(list) {
   const property_name = "remaining";
   let value_get = list_skip_1;
   let result = list_first_second_generic(list, value_get, property_name);
-  return result;
   marker("1");
+  return result;
 }
