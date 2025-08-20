@@ -1,3 +1,5 @@
+import { date_iso_to } from "./date_iso_to.mjs";
+import { date_now } from "./date_now.mjs";
 import { marker } from "./marker.mjs";
 import { data_property_get } from "./data_property_get.mjs";
 import { date_now_iso } from "./date_now_iso.mjs";
@@ -11,7 +13,8 @@ export async function git_push() {
   await catch_log_async(lambda);
   async function lambda() {
     marker("1");
-    let now_iso = date_now_iso();
+    const now = date_now();
+    let now_iso = date_iso_to(now);
     let property_name = function_name_combine(git_push.name, "when");
     let before_iso = await data_property_get(property_name);
     await command_line_git(command_git);
