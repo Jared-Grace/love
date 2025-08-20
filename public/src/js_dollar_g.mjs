@@ -13,24 +13,25 @@ import { list_first_second } from "./list_first_second.mjs";
 export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
-  function lambda2(item) {}
-  each(list, lambda2);
-  let code_string = js_code_string(property_name);
-  let code = js_code_call_args(object_property_get.name, [
-    object_name,
-    code_string,
-  ]);
-  let parsed = js_parse_expression(code);
-  function lambda() {
-    object_replace(node, parsed);
-  }
-  list_add(afters, lambda);
-  if (js_node_type_is(stack1, "ExpressionStatement")) {
-    let unique = js_identifier_unique_ast(ast, property_name);
-    let assign = js_declare(unique, parsed);
+  function lambda2(property_name) {
+    let code_string = js_code_string(property_name);
+    let code = js_code_call_args(object_property_get.name, [
+      object_name,
+      code_string,
+    ]);
+    let parsed = js_parse_expression(code);
     function lambda() {
-      object_replace(stack1, assign);
+      object_replace(node, parsed);
     }
     list_add(afters, lambda);
+    if (js_node_type_is(stack1, "ExpressionStatement")) {
+      let unique = js_identifier_unique_ast(ast, property_name);
+      let assign = js_declare(unique, parsed);
+      function lambda() {
+        object_replace(stack1, assign);
+      }
+      list_add(afters, lambda);
+    }
   }
+  each(property_names, lambda2);
 }
