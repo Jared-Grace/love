@@ -9243,6 +9243,15 @@
   "lambda_get": [
    "git_push",
    "lambda_get"
+  ],
+  "ms": [
+   "git_push"
+  ],
+  "Math": [
+   "git_push"
+  ],
+  "abs": [
+   "git_push"
   ]
  },
  "functions": {
@@ -11695,6 +11704,9 @@
     "name",
     "before_iso",
     "before",
+    "ms",
+    "Math",
+    "abs",
     "lambda$previous"
    ]
   },
