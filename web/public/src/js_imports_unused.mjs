@@ -9,14 +9,18 @@ import { js_visit } from "./js_visit.mjs";
 import { each } from "./each.mjs";
 import { js_imports } from "./js_imports.mjs";
 import { marker } from "./marker.mjs";
+import { object_merge } from "./object_merge.mjs";
 export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports_declarations(ast);
   function lambda(i) {
     let name = object_property_get(i, "name");
     let declaration = object_property_get(i, "declaration");
-    let count_import = js_identifiers_named_count(ast, i_name);
-    log(count_import);
+    let count_import = js_identifiers_named_count(ast, name);
+    let count_declaration = js_identifiers_named_count(declaration, name);
+    object_merge({
+      unused: count_import === count_declaration,
+    });
   }
   each(imports, lambda);
 }
