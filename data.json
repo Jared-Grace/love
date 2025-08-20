@@ -1663,7 +1663,8 @@
    "list_first_remaining",
    "js_imports_unused_remove",
    "function_imports_fix",
-   "js_imports_fix"
+   "js_imports_fix",
+   "git_push"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11650,6 +11651,7 @@
   },
   "git_push": {
    "identifiers": [
+    "marker",
     "data_property_get",
     "date_now_iso",
     "function_name_combine",
