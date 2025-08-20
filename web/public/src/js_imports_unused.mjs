@@ -21,8 +21,8 @@ export function js_imports_unused(ast) {
       }
       js_visit_type(ast, "Identifier", lambda2);
     }
-    let count = counter(lambda3);
-    log(count);
+    let count_import = counter(lambda3);
+    log(count_import);
   }
   each(imports, lambda);
 }
