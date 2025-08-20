@@ -1926,7 +1926,8 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set"
+   "object_property_set",
+   "data_identifiers_search"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2598,7 +2599,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_is",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "data_identifiers_search"
   ],
   "name": [
    "watch",
@@ -2889,7 +2891,8 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "prompt_previous"
+   "prompt_previous",
+   "data_identifiers_search"
   ],
   "data_save": [
    "data_file_update",
@@ -3442,7 +3445,8 @@
    "string_split",
    "string_starts_with",
    "string_to",
-   "trinity_green"
+   "trinity_green",
+   "data_identifiers_search"
   ],
   "a": [
    "string_suffix_without",
@@ -4321,7 +4325,8 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "data_identifiers_search"
   ],
   "each_pair": [
    "each_pair",
@@ -16727,10 +16732,15 @@
   },
   "data_identifiers_search": {
    "identifiers": [
+    "object_property_get",
     "data_property_get",
     "marker",
     "data_identifiers_search",
-    "identifiers"
+    "s",
+    "identifiers",
+    "value",
+    "object",
+    "property_name"
    ]
   }
  }
