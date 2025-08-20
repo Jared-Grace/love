@@ -1375,10 +1375,11 @@
   "mc js_call_function_if",
   "cd",
   "mab $g$v$node",
-  "ire node2 2"
+  "ire node2 2",
+  "o mm"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_move",
  "terminal": false,
  "identifiers": {
   "log": [
