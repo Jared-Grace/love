@@ -21,7 +21,7 @@ export async function git_push() {
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
     if (hours < 1) {
-      log("less than 1 hour");
+      log("less than 1 hour:");
       log(hours);
       return;
     }
