@@ -6711,7 +6711,8 @@
    "marker_move",
    "marker_new",
    "marker_next",
-   "marker_next_delete"
+   "marker_next_delete",
+   "js_dollar_g"
   ],
   "list_get": [
    "function_transform_marker_empty",
@@ -12735,6 +12736,7 @@
     "js_code_string",
     "list_first_second",
     "list_index_of_next",
+    "list_insert",
     "js_dollar_g",
     "remaining",
     "node",
