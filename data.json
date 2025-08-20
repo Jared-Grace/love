@@ -2133,7 +2133,8 @@
    "search_generic",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_dollar_g"
+   "js_dollar_g",
+   "data_files_update"
   ],
   "i_name": [
    "data_identifiers_file"
@@ -2232,7 +2233,8 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining"
+   "list_first_remaining",
+   "data_files_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -3017,7 +3019,8 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run"
+   "tasks_run",
+   "data_files_update"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4721,7 +4724,8 @@
    "js_call_new_code",
    "list_map_unordered_async",
    "marker_down_choices",
-   "marker_enter"
+   "marker_enter",
+   "data_files_update"
   ],
   "js_declaration_single_block_blody": [
    "functions_combine",
@@ -5540,7 +5544,8 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async"
+   "list_map_unordered_async",
+   "data_files_update"
   ],
   "mapped2": [
    "function_dependencies_code"
@@ -9432,6 +9437,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "list_map_unordered_async",
     "data_save",
     "data_file_update_inner",
     "data_all",
@@ -9439,6 +9445,10 @@
     "each_async",
     "data_files_update",
     "f_paths",
+    "lambda2",
+    "item",
+    "waited",
+    "list",
     "d",
     "lambda",
     "f_path"
