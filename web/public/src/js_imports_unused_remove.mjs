@@ -9,7 +9,7 @@ export function js_imports_unused_remove(ast) {
   let body = object_property_get(ast, "body");
   function lambda(unused) {
     let declaration = object_property_get(unused, "declaration");
-    list_remove(body, item);
+    list_remove(body, declaration);
   }
   each(unuseds, lambda);
   return unuseds;
