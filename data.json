@@ -9210,7 +9210,8 @@
   ],
   "date_now": [
    "date_now_iso",
-   "date_now"
+   "date_now",
+   "git_push"
   ],
   "now_iso": [
    "date_now_iso",
@@ -9218,7 +9219,8 @@
   ],
   "now": [
    "date_now",
-   "date_now_iso"
+   "date_now_iso",
+   "git_push"
   ],
   "Date": [
    "date_now"
@@ -9227,7 +9229,8 @@
    "git_push"
   ],
   "date_iso_to": [
-   "date_now_iso"
+   "date_now_iso",
+   "git_push"
   ]
  },
  "functions": {
@@ -11661,6 +11664,8 @@
   },
   "git_push": {
    "identifiers": [
+    "date_iso_to",
+    "date_now",
     "marker",
     "data_property_get",
     "date_now_iso",
@@ -11672,6 +11677,7 @@
     "git_push",
     "command_git",
     "lambda",
+    "now",
     "now_iso",
     "property_name",
     "name",
