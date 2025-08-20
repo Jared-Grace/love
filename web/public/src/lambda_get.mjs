@@ -1,6 +1,6 @@
-export function lambda_get(before) {
-  let v = function lambda2() {
-    return before;
-  };
-  return v;
+export function lambda_get(value) {
+  function value_get() {
+    return value;
+  }
+  return value_get;
 }
