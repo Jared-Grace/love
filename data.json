@@ -1665,7 +1665,8 @@
    "js_imports_declarations",
    "list_first_remaining",
    "js_imports_unused_remove",
-   "function_imports_fix"
+   "function_imports_fix",
+   "git_push"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11868,6 +11869,7 @@
   },
   "git_push": {
    "identifiers": [
+    "marker",
     "date_diff_hours",
     "log",
     "lambda_get",
