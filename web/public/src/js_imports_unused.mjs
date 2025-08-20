@@ -27,5 +27,6 @@ export function js_imports_unused(ast) {
     );
   }
   each(imports, lambda);
-  let mapped = list_map(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let mapped = list_map(list, lambda2);
 }
