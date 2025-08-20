@@ -8933,7 +8933,8 @@
    "sandbox"
   ],
   "value_get": [
-   "search_generic"
+   "search_generic",
+   "list_first_second"
   ],
   "terms": [
    "search_generic"
@@ -14418,7 +14419,8 @@
     "property_name",
     "first",
     "second",
-    "v"
+    "v",
+    "value_get"
    ]
   },
   "list_get": {
