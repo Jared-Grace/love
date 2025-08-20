@@ -1,5 +1,4 @@
-import { date_ms_to_hours } from "./date_ms_to_hours.mjs";
-import { date_diff_ms } from "./date_diff_ms.mjs";
+import { date_diff_hours } from "./date_diff_hours.mjs";
 import { log } from "./log.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { date_to } from "./date_to.mjs";
@@ -20,8 +19,7 @@ export async function git_push() {
     let property_name = function_name_combine(git_push.name, "when");
     let before_iso = await data_property_get(property_name);
     let before = date_to(before_iso);
-    let ms = date_diff_ms(now, before);
-    const hours = date_ms_to_hours(ms);
+    const hours = date_diff_hours(now, before);
     if (hours < 1) {
       log("less than 1 hour");
       log(hours);
