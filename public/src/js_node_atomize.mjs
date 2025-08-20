@@ -1,5 +1,5 @@
+import { js_call_function_if } from "./js_call_function_if.mjs";
 import { js_block_insert } from "./js_block_insert.mjs";
-import { functions_names_includes } from "./functions_names_includes.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
@@ -23,14 +23,7 @@ export async function js_node_atomize(existing, v) {
   let { node } = v;
   let { stack } = v;
   if (js_node_type_is(node, "CallExpression")) {
-    let { callee } = node;
-    if (js_node_type_is(callee, "Identifier")) {
-      let { name } = callee;
-      const valid = functions_names_includes(name);
-      if (valid) {
-        await lambda(name);
-      }
-    }
+    await js_call_function_if(node, lambda);
     async function lambda(name) {
       let { ast: ast_callee } = await function_parse(name);
       let return_name = js_return_name(ast_callee);
