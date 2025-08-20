@@ -20,7 +20,7 @@ export function js_imports_unused(ast) {
       }
       js_visit_type(ast, "Identifier", lambda2);
     }
-    let i = counter(lambda3);
+    let count = counter(lambda3);
   }
   each(imports, lambda);
 }
