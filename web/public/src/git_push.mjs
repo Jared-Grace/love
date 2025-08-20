@@ -10,5 +10,8 @@ export async function git_push() {
     await command_line_git(command_git);
     let combined = function_name_combine(git_push.name, "when");
     await data_set(value_get, combined);
+    function value_get(previous) {
+      return v;
+    }
   }
 }
