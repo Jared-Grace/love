@@ -5,7 +5,7 @@ import { list_all } from "./list_all.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { string_split } from "./string_split.mjs";
 import { log } from "./log.mjs";
-export function search_generic(search, f_names, value_get) {
+export function search_generic(search, list, value_get) {
   let terms = string_split(search, ",");
   function lambda2(n) {
     function lambda(term) {
@@ -15,7 +15,7 @@ export function search_generic(search, f_names, value_get) {
     let v2 = list_all(terms, lambda);
     return v2;
   }
-  let f_names_search = list_filter(f_names, lambda2);
+  let f_names_search = list_filter(list, lambda2);
   let result = {};
   function lambda3(n) {
     let value = value_get(n);
