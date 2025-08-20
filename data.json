@@ -9100,6 +9100,9 @@
   ],
   "list_first_remaining": [
    "list_first_remaining"
+  ],
+  "list_skip_1": [
+   "list_first_remaining"
   ]
  },
  "functions": {
@@ -16898,6 +16901,7 @@
   },
   "list_first_remaining": {
    "identifiers": [
+    "list_skip_1",
     "marker",
     "list_multiple_is",
     "list_second",
