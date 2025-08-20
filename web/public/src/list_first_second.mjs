@@ -17,4 +17,5 @@ export function list_first_second(list) {
     [property_name]: second,
   };
   return v;
+  let value_get = list_second;
 }
