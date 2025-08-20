@@ -3757,8 +3757,7 @@
    "marker_functionize",
    "marker_move",
    "tasks_run",
-   "visit_filter_recursive_async",
-   "js_imports_unused_remove"
+   "visit_filter_recursive_async"
   ],
   "f_paths": [
    "data_files_update"
@@ -16991,7 +16990,6 @@
   },
   "js_imports_unused_remove": {
    "identifiers": [
-    "each_async",
     "list_remove",
     "each",
     "object_property_get",
