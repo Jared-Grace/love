@@ -2222,8 +2222,7 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining",
-   "js_imports_unused_remove"
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -6023,7 +6022,8 @@
    "marker_expand",
    "marker_functionize",
    "js_imports_declarations",
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_unused_remove"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -17001,7 +17001,7 @@
     "body",
     "lambda",
     "unused",
-    "list",
+    "declaration",
     "item"
    ]
   }
