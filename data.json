@@ -1370,10 +1370,11 @@
   "s error_attention",
   "dpg error_attention",
   "p",
-  "eac"
+  "eac",
+  "o gp"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "git_push",
  "terminal": false,
  "identifiers": {
   "log": [
