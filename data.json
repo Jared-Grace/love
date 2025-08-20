@@ -4284,7 +4284,8 @@
    "marker_next_delete",
    "marker_next_get",
    "marker_next_index",
-   "marker_previous_index"
+   "marker_previous_index",
+   "js_dollar_g"
   ],
   "lists_get": [
    "each_multiple",
@@ -12753,7 +12754,8 @@
     "parsed",
     "lambda",
     "unique",
-    "assign"
+    "assign",
+    "index"
    ]
   },
   "js_dollar_i": {
