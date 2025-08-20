@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { log } from "./log.mjs";
@@ -26,4 +27,5 @@ export function js_imports_unused(ast) {
     );
   }
   each(imports, lambda);
+  let mapped = list_map(list, function lambda2(item) {});
 }
