@@ -1340,7 +1340,6 @@
   "s ident",
   "n counter",
   "ftc js_imports_unused",
-  "fts js_imports_unused",
   "is js_imports",
   "c js_imports js_imports_declarations",
   "s dollar",
@@ -1351,7 +1350,8 @@
   "s equal",
   "s filter",
   "u lfp",
-  "a lfp list_filter_property"
+  "a lfp list_filter_property",
+  "fts js_imports_unused"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
