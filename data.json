@@ -9253,6 +9253,9 @@
   ],
   "date_diff_ms": [
    "git_push"
+  ],
+  "date_ms_to_hours": [
+   "git_push"
   ]
  },
  "functions": {
@@ -11686,6 +11689,7 @@
   },
   "git_push": {
    "identifiers": [
+    "date_ms_to_hours",
     "date_diff_ms",
     "log",
     "lambda_get",
