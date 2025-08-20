@@ -1352,7 +1352,8 @@
   "a lfp list_filter_property",
   "p",
   "fts js_imports_unused",
-  "fws js_imports_unused remove"
+  "fws js_imports_unused remove",
+  "fts js_imports_unused_remove"
  ],
  "marker_current": "1",
  "function_current": "js_imports_unused_remove",
