@@ -2750,7 +2750,8 @@
    "task_new",
    "data_identifiers_search",
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_imports_unused"
   ],
   "separator": [
    "watch",
@@ -5030,7 +5031,8 @@
    "marker_functionize",
    "marker_move",
    "prompt_previous",
-   "search_generic"
+   "search_generic",
+   "js_imports_unused"
   ],
   "function_name_to_path_unalias": [
    "functions_search",
@@ -16872,6 +16874,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "list_filter",
     "list_map",
     "js_imports_declarations",
     "js_identifiers_named_count",
@@ -16895,10 +16898,11 @@
     "count_import",
     "count_declaration",
     "unused",
-    "lambda2",
-    "item",
     "mapped",
-    "list"
+    "result",
+    "list",
+    "lambda2",
+    "item"
    ]
   },
   "counter": {
