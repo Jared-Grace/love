@@ -2049,7 +2049,8 @@
    "undefined_not_is_assert_lambda",
    "visit_unique_async",
    "js_imports",
-   "js_imports_unused"
+   "js_imports_unused",
+   "counter"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5654,7 +5655,8 @@
    "marker_above",
    "marker_down",
    "marker_index",
-   "range"
+   "range",
+   "counter"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -9031,7 +9033,8 @@
   ],
   "c": [
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "counter"
   ],
   "found": [
    "visit_unique_async"
@@ -16812,7 +16815,10 @@
   "counter": {
    "identifiers": [
     "marker",
-    "counter"
+    "counter",
+    "lambda",
+    "i",
+    "c"
    ]
   }
  }
