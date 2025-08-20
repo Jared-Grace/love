@@ -1365,13 +1365,13 @@
   "fs jaa",
   "s data",
   "s decl",
-  "d",
   "s red",
   "s error_attention",
   "dpg error_attention",
   "p",
   "eac",
-  "o gp"
+  "o gp",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "git_push",
@@ -2509,7 +2509,8 @@
    "log",
    "log_keep",
    "prompt_previous",
-   "server"
+   "server",
+   "log_error"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -3298,7 +3299,8 @@
    "chalk_red",
    "function_run_prompt",
    "chalk_color",
-   "command_line_read"
+   "command_line_read",
+   "log_error"
   ],
   "color": [
    "chalk_green",
@@ -3311,7 +3313,8 @@
    "chalk_color"
   ],
   "chalk_red": [
-   "chalk_red"
+   "chalk_red",
+   "log_error"
   ],
   "chalk": [
    "chalk_color"
@@ -3328,7 +3331,8 @@
   ],
   "colored": [
    "chalk_color",
-   "chalk_red"
+   "chalk_red",
+   "log_error"
   ],
   "lambda3": [
    "error_attention_set",
@@ -9312,7 +9316,8 @@
    "date_iso_to"
   ],
   "log_error": [
-   "function_run_prompt"
+   "function_run_prompt",
+   "log_error"
   ]
  },
  "functions": {
@@ -17894,6 +17899,16 @@
     "list_skip_1",
     "list",
     "skipped"
+   ]
+  },
+  "log_error": {
+   "async": true,
+   "identifiers": [
+    "log_keep",
+    "chalk_red",
+    "log_error",
+    "prompt",
+    "colored"
    ]
   }
  },
