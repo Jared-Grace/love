@@ -1951,7 +1951,8 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set"
+   "object_property_set",
+   "list_first_second"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -14416,6 +14417,7 @@
     "list",
     "first",
     "second",
+    "property_name",
     "v"
    ]
   },
