@@ -2445,8 +2445,7 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda",
-   "error_attention_set"
+   "undefined_not_is_assert_lambda"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -9430,7 +9429,6 @@
     "value",
     "lambda3",
     "previous",
-    "message",
     "value2"
    ],
    "async": true
