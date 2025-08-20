@@ -2105,7 +2105,8 @@
    "data_files_update",
    "data_file_update_inner",
    "js_declaration_single",
-   "js_node_atomize"
+   "js_node_atomize",
+   "marker_leave"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2362,7 +2363,8 @@
    "date_ms_to_hours",
    "date_to",
    "js_identifiers_named_count",
-   "marker_new"
+   "marker_new",
+   "marker_leave"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3568,7 +3570,8 @@
    "marker_remove",
    "not",
    "string_slice",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "marker_leave"
   ],
   "without": [
    "string_suffix_without",
@@ -6702,7 +6705,8 @@
    "marker_above",
    "marker_delete_above",
    "marker_down_generic",
-   "marker_enter"
+   "marker_enter",
+   "marker_leave"
   ],
   "marker_down_choices_lambda": [
    "function_transform_marker_empty",
@@ -17838,10 +17842,14 @@
    ]
   },
   "marker_leave": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_transform_marker_current",
     "marker",
-    "marker_leave"
+    "marker_leave",
+    "lambda",
+    "a",
+    "v"
    ]
   }
  },
