@@ -1979,7 +1979,8 @@
    "object_property_set",
    "list_first_second",
    "list_first_remaining",
-   "data_set"
+   "data_set",
+   "git_push"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2657,7 +2658,8 @@
    "string_is_assert_message",
    "undefined_is",
    "undefined_not_is_assert_lambda",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "git_push"
   ],
   "name": [
    "watch",
@@ -3184,7 +3186,8 @@
    "data_property_get",
    "data_terminal_get",
    "data_watch_get",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "git_push"
   ],
   "trinity_green": [
    "function_run_prompt",
@@ -11645,6 +11648,7 @@
   },
   "git_push": {
    "identifiers": [
+    "data_property_get",
     "date_now_iso",
     "function_name_combine",
     "data_set",
@@ -11654,6 +11658,8 @@
     "git_push",
     "command_git",
     "lambda",
+    "value",
+    "property_name",
     "combined",
     "name"
    ]
