@@ -1335,7 +1335,8 @@
   "s test",
   "s task",
   "a is data_identifiers_search",
-  "is v"
+  "is v",
+  "is value"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_search",
