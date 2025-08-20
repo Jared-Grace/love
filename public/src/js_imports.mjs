@@ -44,5 +44,6 @@ export function js_imports(ast) {
   const imports = list_adder_unique(lambda2);
   return imports;
   let imports2 = js_imports_declarations(ast2);
-  let mapped2 = list_map_property(list, property_name);
+  let mapped2 = list_map_property(imports2, "name");
+  return mapped2;
 }
