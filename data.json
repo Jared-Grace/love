@@ -7186,7 +7186,8 @@
    "marker_functionize",
    "marker_index",
    "marker_next_index",
-   "marker_previous_index"
+   "marker_previous_index",
+   "js_dollar_g"
   ],
   "js_stack_last": [
    "js_atomize",
@@ -12732,6 +12733,7 @@
     "js_code_call_args",
     "js_code_string",
     "list_first_second",
+    "list_index_of_next",
     "js_dollar_g",
     "remaining",
     "node",
