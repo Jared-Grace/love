@@ -1365,7 +1365,8 @@
   "s git",
   "cd",
   "fs jaa",
-  "s data"
+  "s data",
+  "s decl"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
