@@ -6,6 +6,7 @@ export function js_imports_unused_remove(ast) {
   marker("1");
   let unused = js_imports_unused(ast);
   let body = object_property_get(ast, "body");
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   return unused;
 }
