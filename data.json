@@ -845,7 +845,6 @@
   "as function_new_transform",
   "a fnt function_new_transform",
   "s combine",
-  "s call",
   "u jsp",
   "s parse",
   "a jps js_parse_statement",
@@ -1372,7 +1371,8 @@
   "cd",
   "fs jaa",
   "s name",
-  "s call,name"
+  "s call,name",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
