@@ -1348,7 +1348,8 @@
   "s assert,size",
   "s reve",
   "s equal",
-  "s filter"
+  "s filter",
+  "u lfp"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
