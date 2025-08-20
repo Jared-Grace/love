@@ -1334,7 +1334,6 @@
   "is value",
   "is null_is",
   "s unali",
-  "s imports",
   "nj imports_unused",
   "s ident",
   "n counter",
@@ -1353,7 +1352,8 @@
   "p",
   "fts js_imports_unused",
   "fws js_imports_unused remove",
-  "fts js_imports_unused_remove"
+  "fts js_imports_unused_remove",
+  "s imports"
  ],
  "marker_current": "1",
  "function_current": "js_imports_unused_remove",
