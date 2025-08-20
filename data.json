@@ -7393,8 +7393,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_imports_unused"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -16807,8 +16806,7 @@
     "lambda2",
     "v",
     "node",
-    "name",
-    "ast2"
+    "name"
    ]
   },
   "counter": {
