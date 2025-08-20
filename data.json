@@ -4401,7 +4401,8 @@
   ],
   "each_reverse": [
    "each_reverse",
-   "marker_expand"
+   "marker_expand",
+   "js_dollar_g"
   ],
   "reversed": [
    "each_reverse",
@@ -6660,7 +6661,8 @@
    "marker_next_get",
    "marker_next_index",
    "marker_previous_index",
-   "marker_remove"
+   "marker_remove",
+   "js_dollar_g"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -9115,6 +9117,9 @@
    "list_first_remaining"
   ],
   "property_names": [
+   "js_dollar_g"
+  ],
+  "list_rever": [
    "js_dollar_g"
   ]
  },
@@ -12713,6 +12718,7 @@
   },
   "js_dollar_g": {
    "identifiers": [
+    "each_reverse",
     "list_size_1_assert",
     "each",
     "list_first_remaining",
@@ -12730,11 +12736,13 @@
     "remaining",
     "node",
     "stack1",
+    "stack2",
     "ast",
     "afters",
     "first",
     "object_name",
     "property_names",
+    "list_rever",
     "lambda2",
     "property_name",
     "code_string",
