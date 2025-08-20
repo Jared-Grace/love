@@ -1,9 +1,9 @@
-import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
+import { list_remove } from "./list_remove.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
-import { marker } from "./marker.mjs";
+import { js_imports_unused } from "./js_imports_unused.mjs";
+import { each } from "./each.mjs";
 export async function js_imports_fix(ast) {
-  marker("1");
-  marker("1");
   let unuseds = js_imports_unused(ast);
   let body = object_property_get(ast, "body");
   function lambda(unused) {
