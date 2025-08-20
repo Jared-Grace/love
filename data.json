@@ -1364,7 +1364,8 @@
   "x",
   "fs gp",
   "mx",
-  "s date"
+  "s date",
+  "s lambda"
  ],
  "marker_current": "1",
  "function_current": "git_push",
