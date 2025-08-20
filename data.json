@@ -1225,7 +1225,6 @@
   "s atom",
   "o ",
   "o js_atomize_function",
-  "s auto",
   "s visit,each",
   "s js,visit",
   "c js_visit_each_async js_visit_each",
@@ -1355,7 +1354,9 @@
   "fts js_imports_unused_remove",
   "s imports",
   "c function_imports_missing_add function_imports_fix",
-  "ar i function_imports_fix"
+  "ar i function_imports_fix",
+  "o auto",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "function_imports_fix",
