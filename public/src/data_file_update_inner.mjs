@@ -1,19 +1,18 @@
-import {object_property_set} from "./object_property_set.mjs";
-import {object_property_delete} from "./object_property_delete.mjs";
-import {list_empty_is} from "./list_empty_is.mjs";
-import {list_remove_all} from "./list_remove_all.mjs";
-import {list_difference} from "./list_difference.mjs";
-import {each} from "./each.mjs";
-import {list_add_if_not_includes} from "./list_add_if_not_includes.mjs";
-import {object_property_initialize} from "./object_property_initialize.mjs";
-import {js_identifiers_names} from "./js_identifiers_names.mjs";
-import {file_js_parse} from "./file_js_parse.mjs";
-import {function_path_to_name} from "./function_path_to_name.mjs";
-export async function data_file_update_inner(f_path, d) {
+import { object_property_set } from "./object_property_set.mjs";
+import { object_property_delete } from "./object_property_delete.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_remove_all } from "./list_remove_all.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { each } from "./each.mjs";
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { object_property_initialize } from "./object_property_initialize.mjs";
+import { js_identifiers_names } from "./js_identifiers_names.mjs";
+import { function_path_to_name } from "./function_path_to_name.mjs";
+export async function data_file_update_inner(parsed, d) {
+  let f_path = parsed;
   let f_name = function_path_to_name(f_path);
-  let {data} = d;
-  let parsed = await file_js_parse(f_path);
-  let {ast} = parsed;
+  let { data } = d;
+  let { ast } = parsed;
   let f_identifiers_new = js_identifiers_names(ast);
   const property_name = "identifiers";
   let identifiers = object_property_initialize(data, property_name, {});
