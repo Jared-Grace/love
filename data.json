@@ -2214,7 +2214,8 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_dollar_g"
   ],
   "v": [
    "data_identifiers_file",
@@ -3784,8 +3785,7 @@
    "marker_next_delete",
    "object_property_exists_assert",
    "string_is_assert",
-   "string_is_assert_message",
-   "js_dollar_g"
+   "string_is_assert_message"
   ],
   "b": [
    "assert",
@@ -3811,8 +3811,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "js_dollar_g"
+   "string_slice"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -4669,7 +4668,8 @@
    "functions_combine",
    "function_transform_marker",
    "list_single",
-   "list_size_1_assert"
+   "list_size_1_assert",
+   "js_dollar_g"
   ],
   "list_size_1": [
    "functions_combine",
@@ -12713,7 +12713,7 @@
   },
   "js_dollar_g": {
    "identifiers": [
-    "assert",
+    "list_size_1_assert",
     "each",
     "list_first_remaining",
     "list_add",
@@ -12744,7 +12744,7 @@
     "lambda",
     "unique",
     "assign",
-    "b"
+    "list"
    ]
   },
   "js_dollar_i": {
