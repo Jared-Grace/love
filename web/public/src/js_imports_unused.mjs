@@ -9,15 +9,16 @@ export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports(ast);
   function lambda(i_name) {
-    function lambda3(la) {}
-    let list = list_adder(lambda3);
-    function lambda2(v) {
-      let node = object_property_get(v, "node");
-      let name = object_property_get(node, "name");
-      if (nmae === i_name) {
+    function lambda3(la) {
+      function lambda2(v) {
+        let node = object_property_get(v, "node");
+        let name = object_property_get(node, "name");
+        if (nmae === i_name) {
+        }
       }
+      js_visit_type(ast2, "Identifier", lambda2);
     }
-    js_visit_type(ast2, "Identifier", lambda2);
+    let list = list_adder(lambda3);
   }
   each(imports, lambda);
 }
