@@ -1,3 +1,4 @@
+import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
@@ -27,5 +28,5 @@ export function js_imports_unused(ast) {
     );
   }
   let mapped = list_map(imports, lambda);
-  lfp;
+  let result = list_filter_property(list, property_name, property_value);
 }
