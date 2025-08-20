@@ -1368,7 +1368,6 @@
   "eac",
   "o gp",
   "d",
-  "fs jaa",
   "s name",
   "s call,name",
   "s call",
@@ -1376,10 +1375,11 @@
   "mab $g$v$node",
   "ire node2 2",
   "o mm",
-  "cd"
+  "cd",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_move",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -17861,6 +17861,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-20T21:04:24.887Z",
+ "git_push_when": "2025-08-20T22:06:35.584Z",
  "error_attention": null
 }
