@@ -1,4 +1,4 @@
 export function date_now() {
-  let v = new Date();
-  return v;
+  let now = new Date();
+  return now;
 }
