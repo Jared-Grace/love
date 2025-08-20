@@ -1562,7 +1562,6 @@
    "watch",
    "function_run_prompt",
    "error_attention_set",
-   "data_boolean_set",
    "data_terminal_set",
    "data_transform",
    "data_watch_set",
@@ -1986,7 +1985,6 @@
    "catch_log",
    "catch_log_async",
    "catch_only_async",
-   "data_boolean_set",
    "each_index",
    "each_multiple",
    "each_object",
@@ -8978,7 +8976,8 @@
   "value_get": [
    "search_generic",
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "data_boolean_set"
   ],
   "terms": [
    "search_generic"
@@ -9181,6 +9180,9 @@
   "js_imports_fix": [
    "js_imports_fix",
    "js_outside_move"
+  ],
+  "data_set": [
+   "data_boolean_set"
   ]
  },
  "functions": {
@@ -9618,11 +9620,11 @@
   },
   "data_boolean_set": {
    "identifiers": [
-    "data_transform",
+    "data_set",
     "data_boolean_set",
     "property_name",
     "value",
-    "lambda",
+    "value_get",
     "previous",
     "v"
    ]
