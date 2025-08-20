@@ -1347,7 +1347,8 @@
   "s dollar",
   "s remaining",
   "c list_first_second list_first_remaining",
-  "s assert,size"
+  "s assert,size",
+  "s reve"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
