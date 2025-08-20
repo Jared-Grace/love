@@ -1465,7 +1465,8 @@
    "prompt_previous",
    "sandbox",
    "search_generic",
-   "js_imports_unused"
+   "js_imports_unused",
+   "git_push"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2427,7 +2428,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "git_push"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -11688,6 +11690,7 @@
   },
   "git_push": {
    "identifiers": [
+    "log",
     "lambda_get",
     "date_to",
     "date_iso_to",
@@ -11711,6 +11714,7 @@
     "Math",
     "abs",
     "hours",
+    "message",
     "lambda$previous"
    ]
   },
