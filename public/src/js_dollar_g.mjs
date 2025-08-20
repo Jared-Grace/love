@@ -25,7 +25,6 @@ export async function js_dollar_g({
 }) {
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
-  list_rever;
   function lambda2(property_name) {
     let code_string = js_code_string(property_name);
     let code = js_code_call_args(object_property_get.name, [
