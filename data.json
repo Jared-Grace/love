@@ -1357,14 +1357,14 @@
   "fwc js_imports_missing_add missing_add fix",
   "s git",
   "s data,set",
-  "s date",
   "gp",
   "data_get git_push_when",
   "s data",
   "dpg git_push_when",
   "x",
+  "fs gp",
   "mx",
-  "fs gp"
+  "s date"
  ],
  "marker_current": "1",
  "function_current": "git_push",
