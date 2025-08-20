@@ -10,7 +10,8 @@ export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports(ast);
   function lambda(i_name) {
-    let i = counter(function lambda3(c) {});
+    function lambda3(c) {}
+    let i = counter(lambda3);
     function lambda2(v) {
       let node = object_property_get(v, "node");
       let name = object_property_get(node, "name");
