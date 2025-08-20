@@ -7,7 +7,8 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 export async function marker_new() {
   marker("1");
   let f_name = await data_function_current_get();
-  return await function_transform_marker(f_name, lambda);
+  let v = await function_transform_marker(f_name, lambda);
+  return v;
   async function lambda(a) {
     let { index, stack2 } = marker_next_index(a);
     let name = "2";
