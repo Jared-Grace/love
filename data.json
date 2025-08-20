@@ -2855,7 +2855,8 @@
   "d": [
    "data_file_update",
    "data_property_get",
-   "data_transform"
+   "data_transform",
+   "date_now_iso"
   ],
   "data": [
    "data_file_update",
@@ -9216,9 +9217,6 @@
    "date_now_iso",
    "git_push"
   ],
-  "toISOString": [
-   "date_now_iso"
-  ],
   "now": [
    "date_now"
   ],
@@ -9227,6 +9225,9 @@
   ],
   "before_iso": [
    "git_push"
+  ],
+  "date_iso_to": [
+   "date_now_iso"
   ]
  },
  "functions": {
@@ -17128,10 +17129,11 @@
   },
   "date_now_iso": {
    "identifiers": [
+    "date_iso_to",
     "date_now",
     "date_now_iso",
-    "now_iso",
-    "toISOString"
+    "d",
+    "now_iso"
    ]
   },
   "date_now": {
