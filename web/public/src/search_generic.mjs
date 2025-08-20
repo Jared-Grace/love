@@ -17,7 +17,8 @@ export function search_generic(search, list, value_get) {
     return v2;
   }
   let f_names_search = list_filter(list, lambda2);
-  let dictionary = list_to_dictionary(list2, function lambda4(item) {});
+  function lambda4(item) {}
+  let dictionary = list_to_dictionary(list2, lambda4);
   let result = {};
   function lambda3(n) {
     let value = value_get(n);
