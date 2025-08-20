@@ -1373,10 +1373,10 @@
   "s call,name",
   "s call",
   "mc js_call_function_if",
-  "cd",
   "mab $g$v$node",
   "ire node2 2",
-  "o mm"
+  "o mm",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_move",
