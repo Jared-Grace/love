@@ -9193,7 +9193,17 @@
    "data_set"
   ],
   "date_now_iso": [
-   "git_acp_timestamp"
+   "git_acp_timestamp",
+   "date_now_iso"
+  ],
+  "date_now": [
+   "date_now_iso"
+  ],
+  "now_iso": [
+   "date_now_iso"
+  ],
+  "toISOString": [
+   "date_now_iso"
   ]
  },
  "functions": {
@@ -17082,6 +17092,14 @@
     "lambda",
     "previous",
     "v2"
+   ]
+  },
+  "date_now_iso": {
+   "identifiers": [
+    "date_now",
+    "date_now_iso",
+    "now_iso",
+    "toISOString"
    ]
   }
  }
