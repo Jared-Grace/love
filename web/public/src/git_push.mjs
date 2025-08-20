@@ -9,6 +9,7 @@ export async function git_push() {
   const command_git = git_push_command();
   await catch_log_async(lambda);
   async function lambda() {
+    let now_iso = date_now_iso();
     let property_name = function_name_combine(git_push.name, "when");
     let before_iso = await data_property_get(property_name);
     await command_line_git(command_git);
