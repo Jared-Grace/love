@@ -1535,7 +1535,8 @@
    "js_imports_unused",
    "js_imports_declarations",
    "js_dollar_g",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "function_imports_fix"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -1679,7 +1680,8 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize"
+   "marker_functionize",
+   "function_imports_fix"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -1803,7 +1805,8 @@
    "task_new",
    "js_imports_unused",
    "js_imports_declarations",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "function_imports_fix"
   ],
   "code": [
    "data_identifiers_file",
@@ -1929,7 +1932,8 @@
    "marker_next_delete",
    "marker_remove",
    "marker_top",
-   "task_new"
+   "task_new",
+   "function_imports_fix"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2377,7 +2381,8 @@
    "file_js_unparse",
    "function_imports_missing_add",
    "function_transform",
-   "function_transform_result"
+   "function_transform_result",
+   "function_imports_fix"
   ],
   "code_unparsed": [
    "file_js_unparse"
@@ -3734,7 +3739,8 @@
    "function_parse",
    "function_read",
    "js_outside_move",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "function_imports_fix"
   ],
   "each_async": [
    "data_files_update",
@@ -4778,7 +4784,8 @@
    "marker_functionize",
    "marker_new",
    "marker_next_delete",
-   "marker_top"
+   "marker_top",
+   "function_imports_fix"
   ],
   "function_parse_declaration": [
    "functions_combine",
@@ -5722,7 +5729,8 @@
    "function_imports_add",
    "function_imports_missing_add",
    "function_name_to_base",
-   "function_name_to_path"
+   "function_name_to_path",
+   "function_imports_fix"
   ],
   "function_import": [
    "function_import",
@@ -5810,7 +5818,8 @@
    "function_imports_missing_add",
    "list_add_first",
    "marker_enter",
-   "marker_top"
+   "marker_top",
+   "function_imports_fix"
   ],
   "js_parse_statement_module": [
    "function_imports_add",
@@ -5825,7 +5834,8 @@
    "function_imports_add",
    "function_imports_missing_add",
    "js_imports_missing_add",
-   "marker_top"
+   "marker_top",
+   "function_imports_fix"
   ],
   "body": [
    "function_imports_add",
@@ -5894,13 +5904,15 @@
   ],
   "function_imports_missing": [
    "function_imports_missing",
-   "function_imports_missing_add"
+   "function_imports_missing_add",
+   "function_imports_fix"
   ],
   "imports_missing": [
    "function_imports_missing",
    "function_imports_missing_add",
    "js_imports_missing",
-   "js_imports_missing_add"
+   "js_imports_missing_add",
+   "function_imports_fix"
   ],
   "function_imports_missing_add": [
    "function_imports_missing_add"
@@ -9156,6 +9168,9 @@
   "unuseds": [
    "js_imports_unused",
    "js_imports_unused_remove"
+  ],
+  "function_imports_fix": [
+   "function_imports_fix"
   ]
  },
  "functions": {
@@ -17003,6 +17018,23 @@
     "lambda",
     "unused",
     "declaration"
+   ]
+  },
+  "function_imports_fix": {
+   "identifiers": [
+    "function_imports_add",
+    "each",
+    "function_imports_missing",
+    "function_name_to_base",
+    "js_parse_statement",
+    "list_add_first",
+    "file_js_unparse",
+    "function_name_to_path",
+    "function_imports_fix",
+    "f_name",
+    "parsed",
+    "imports_missing",
+    "ast"
    ]
   }
  }
