@@ -5759,7 +5759,8 @@
    "js_imports_all",
    "js_imports_missing",
    "js_imports_unused",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports"
   ],
   "js_code_import_single": [
    "function_imports_add",
@@ -9079,9 +9080,6 @@
   ],
   "js_imports_declarations": [
    "js_imports_declarations",
-   "js_imports"
-  ],
-  "imports2": [
    "js_imports"
   ]
  },
@@ -13179,7 +13177,7 @@
     "each",
     "js_imports",
     "ast",
-    "imports2",
+    "imports",
     "mapped2"
    ]
   },
