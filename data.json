@@ -1655,7 +1655,8 @@
    "counter",
    "js_imports_declarations",
    "list_first_remaining",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "function_imports_fix"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -17022,6 +17023,7 @@
   },
   "function_imports_fix": {
    "identifiers": [
+    "marker",
     "function_imports_add",
     "each",
     "function_imports_missing",
