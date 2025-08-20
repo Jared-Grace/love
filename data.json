@@ -9203,7 +9203,8 @@
    "date_now"
   ],
   "now_iso": [
-   "date_now_iso"
+   "date_now_iso",
+   "git_push"
   ],
   "toISOString": [
    "date_now_iso"
@@ -11659,6 +11660,7 @@
     "git_push",
     "command_git",
     "lambda",
+    "now_iso",
     "property_name",
     "name",
     "before_iso"
