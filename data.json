@@ -2113,8 +2113,7 @@
    "search_generic",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_dollar_g",
-   "js_imports_unused"
+   "js_dollar_g"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2215,8 +2214,7 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining",
-   "js_imports_unused"
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -2750,8 +2748,7 @@
    "task_new",
    "data_identifiers_search",
    "list_first_second",
-   "list_first_remaining",
-   "js_imports_unused"
+   "list_first_remaining"
   ],
   "separator": [
    "watch",
@@ -3019,8 +3016,7 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run",
-   "js_imports_unused"
+   "tasks_run"
   ],
   "list_includes": [
    "data_file_update",
@@ -5031,8 +5027,7 @@
    "marker_functionize",
    "marker_move",
    "prompt_previous",
-   "search_generic",
-   "js_imports_unused"
+   "search_generic"
   ],
   "function_name_to_path_unalias": [
    "functions_search",
@@ -9135,6 +9130,9 @@
    "js_imports_unused"
   ],
   "unused": [
+   "js_imports_unused"
+  ],
+  "lfp": [
    "js_imports_unused"
   ]
  },
@@ -16874,7 +16872,6 @@
   },
   "js_imports_unused": {
    "identifiers": [
-    "list_filter",
     "list_map",
     "js_imports_declarations",
     "js_identifiers_named_count",
@@ -16899,10 +16896,7 @@
     "count_declaration",
     "unused",
     "mapped",
-    "lambda2",
-    "item",
-    "result",
-    "list"
+    "lfp"
    ]
   },
   "counter": {
