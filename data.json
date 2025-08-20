@@ -1973,8 +1973,7 @@
    "object_property_initialize",
    "object_property_set",
    "list_first_second",
-   "list_first_remaining",
-   "git_push"
+   "list_first_remaining"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2693,7 +2692,8 @@
    "string_empty_not_is",
    "task_new",
    "js_imports_declarations",
-   "js_imports_unused"
+   "js_imports_unused",
+   "git_push"
   ],
   "output": [
    "watch",
@@ -4450,8 +4450,7 @@
    "js_code_let_assign",
    "js_code_or",
    "js_left_right_set",
-   "js_let_add",
-   "git_push"
+   "js_let_add"
   ],
   "right": [
    "equal",
@@ -4465,8 +4464,7 @@
    "js_left_right_set",
    "js_let_add",
    "log_json",
-   "log_unparse_try",
-   "git_push"
+   "log_unparse_try"
   ],
   "eq": [
    "equal",
@@ -11632,10 +11630,8 @@
     "command_git",
     "lambda",
     "combined",
-    "left",
-    "right",
-    "value_get",
-    "property_name"
+    "name",
+    "value_get"
    ]
   },
   "git_push_command": {
