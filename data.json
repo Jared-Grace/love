@@ -2049,8 +2049,7 @@
    "undefined_not_is_assert_lambda",
    "visit_unique_async",
    "js_imports",
-   "js_imports_unused",
-   "counter"
+   "js_imports_unused"
   ],
   "previous": [
    "data_identifiers_file",
@@ -9053,6 +9052,9 @@
   "counter": [
    "counter",
    "js_imports_unused"
+  ],
+  "lambda$c": [
+   "counter"
   ]
  },
  "functions": {
@@ -16822,7 +16824,7 @@
    "identifiers": [
     "marker",
     "counter",
-    "lambda",
+    "lambda$c",
     "i",
     "c"
    ]
