@@ -1952,7 +1952,8 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "list_first_second"
+   "list_first_second",
+   "list_first_remaining"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2305,8 +2306,7 @@
    "string_includes",
    "string_is_assert_message",
    "visit_unique_async",
-   "js_imports_declarations",
-   "list_first_remaining"
+   "js_imports_declarations"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2743,7 +2743,8 @@
    "tasks_run",
    "task_new",
    "data_identifiers_search",
-   "list_first_second"
+   "list_first_second",
+   "list_first_remaining"
   ],
   "separator": [
    "watch",
@@ -4323,8 +4324,7 @@
    "js_dollar",
    "js_dollar_g",
    "list_first",
-   "list_single",
-   "list_first_remaining"
+   "list_single"
   ],
   "items": [
    "each_multiple",
@@ -7552,8 +7552,7 @@
   "remaining": [
    "js_call_new_code",
    "js_dollar",
-   "js_dollar_g",
-   "list_first_remaining"
+   "js_dollar_g"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -8932,7 +8931,8 @@
   ],
   "value_get": [
    "search_generic",
-   "list_first_second"
+   "list_first_second",
+   "list_first_remaining"
   ],
   "terms": [
    "search_generic"
@@ -9105,7 +9105,8 @@
    "list_first_remaining"
   ],
   "list_first_second_generic": [
-   "list_first_second"
+   "list_first_second",
+   "list_first_remaining"
   ]
  },
  "functions": {
@@ -16905,6 +16906,7 @@
   },
   "list_first_remaining": {
    "identifiers": [
+    "list_first_second_generic",
     "list_skip_1",
     "marker",
     "list_multiple_is",
@@ -16914,9 +16916,9 @@
     "list_skip",
     "list_first_remaining",
     "list",
-    "first",
-    "remaining",
-    "v"
+    "property_name",
+    "value_get",
+    "result"
    ]
   }
  }
