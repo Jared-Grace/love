@@ -9042,6 +9042,12 @@
   ],
   "js_imports_unused": [
    "js_imports_unused"
+  ],
+  "lad": [
+   "js_imports_unused"
+  ],
+  "nmae": [
+   "js_imports_unused"
   ]
  },
  "functions": {
@@ -16797,10 +16803,12 @@
     "imports",
     "lambda",
     "i_name",
+    "lad",
     "lambda2",
     "v",
     "node",
     "name",
+    "nmae",
     "ast2"
    ]
   }
