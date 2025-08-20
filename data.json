@@ -1632,7 +1632,8 @@
    "sandbox",
    "string_is_assert_message",
    "data_identifiers_search",
-   "js_imports_unused"
+   "js_imports_unused",
+   "counter"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9050,6 +9051,9 @@
   ],
   "nmae": [
    "js_imports_unused"
+  ],
+  "counter": [
+   "counter"
   ]
  },
  "functions": {
@@ -16815,6 +16819,12 @@
     "nmae",
     "ast2",
     "list"
+   ]
+  },
+  "counter": {
+   "identifiers": [
+    "marker",
+    "counter"
    ]
   }
  }
