@@ -1361,7 +1361,6 @@
   "s date",
   "s lambda",
   "s git",
-  "fs jaa",
   "s data",
   "s decl",
   "s red",
@@ -1371,10 +1370,11 @@
   "eac",
   "o gp",
   "d",
-  "cd"
+  "cd",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "git_push",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
