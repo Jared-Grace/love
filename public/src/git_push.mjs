@@ -1,3 +1,4 @@
+import { lambda_get } from "./lambda_get.mjs";
 import { date_to } from "./date_to.mjs";
 import { date_iso_to } from "./date_iso_to.mjs";
 import { date_now } from "./date_now.mjs";
@@ -17,9 +18,7 @@ export async function git_push() {
     let before_iso = await data_property_get(property_name);
     let before = date_to(before_iso);
     await command_line_git(command_git);
-    function lambda2() {
-      return before;
-    }
-    await data_set(lambda2, property_name);
+    let lambda$previous = lambda_get(before);
+    await data_set(lambda$previous, property_name);
   }
 }
