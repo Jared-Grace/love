@@ -3294,7 +3294,8 @@
    "js_if_else_if_combine",
    "js_outside_move",
    "marker_down_choices_lambda",
-   "marker_expand"
+   "marker_expand",
+   "js_imports_unused"
   ],
   "value2": [
    "error_attention_set"
@@ -8050,8 +8051,7 @@
   ],
   "lambda4": [
    "js_identifier_defineds",
-   "marker_expand",
-   "js_imports_unused"
+   "marker_expand"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9035,7 +9035,8 @@
   "c": [
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "counter"
+   "counter",
+   "js_imports_unused"
   ],
   "found": [
    "visit_unique_async"
@@ -16812,8 +16813,9 @@
     "imports",
     "lambda",
     "i_name",
-    "lambda4",
     "i",
+    "lambda3",
+    "c",
     "lambda2",
     "v",
     "node",
