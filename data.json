@@ -2808,7 +2808,8 @@
    "function_parse"
   ],
   "f_path2": [
-   "data_file_update"
+   "data_file_update",
+   "data_files_update"
   ],
   "file_read": [
    "file_js_parse",
@@ -9209,6 +9210,9 @@
   "data_file_update_inner": [
    "data_file_update",
    "data_files_update"
+  ],
+  "d2": [
+   "data_files_update"
   ]
  },
  "functions": {
@@ -9441,9 +9445,11 @@
     "marker",
     "data_files_update",
     "f_paths",
-    "lambda",
+    "d",
     "f_path",
-    "d"
+    "lambda",
+    "f_path2",
+    "d2"
    ]
   },
   "assert": {
