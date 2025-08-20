@@ -10,7 +10,7 @@ export async function git_push() {
   await catch_log_async(lambda);
   async function lambda() {
     let property_name = function_name_combine(git_push.name, "when");
-    let before = await data_property_get(property_name);
+    let before_iso = await data_property_get(property_name);
     await command_line_git(command_git);
     await data_set(date_now_iso, property_name);
   }
