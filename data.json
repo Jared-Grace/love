@@ -2117,8 +2117,7 @@
   ],
   "i_name": [
    "data_identifiers_file",
-   "data_file_update",
-   "js_imports_unused"
+   "data_file_update"
   ],
   "list": [
    "data_identifiers_file",
@@ -5568,7 +5567,8 @@
    "marker_previous_index",
    "object_copy",
    "object_merge",
-   "object_replace"
+   "object_replace",
+   "js_imports_unused"
   ],
   "u": [
    "function_exists"
@@ -9123,6 +9123,12 @@
   ],
   "property_names": [
    "js_dollar_g"
+  ],
+  "count_declaration": [
+   "js_imports_unused"
+  ],
+  "unused": [
+   "js_imports_unused"
   ]
  },
  "functions": {
@@ -16872,6 +16878,7 @@
     "each",
     "js_imports",
     "marker",
+    "object_merge",
     "js_imports_unused",
     "ast",
     "imports",
@@ -16880,7 +16887,8 @@
     "name",
     "declaration",
     "count_import",
-    "i_name"
+    "count_declaration",
+    "unused"
    ]
   },
   "counter": {
