@@ -1,3 +1,4 @@
+import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -42,4 +43,5 @@ export function js_imports(ast) {
   }
   const imports = list_adder_unique(lambda2);
   return imports;
+  let imports2 = js_imports_declarations(ast2);
 }
