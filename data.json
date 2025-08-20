@@ -2177,7 +2177,8 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_functionize",
-   "object_invert"
+   "object_invert",
+   "search_generic"
   ],
   "v": [
    "data_identifiers_file",
@@ -3594,7 +3595,6 @@
    "function_names_to_acronyms",
    "function_params_consolidate",
    "js_imports_missing",
-   "search_generic",
    "string_split_comma"
   ],
   "path_join": [
@@ -16305,7 +16305,7 @@
     "log",
     "search_generic",
     "search",
-    "f_names",
+    "list",
     "value_get",
     "terms",
     "lambda2",
