@@ -2282,7 +2282,6 @@
    "js_visit_match",
    "js_visit_nodes",
    "js_visit_types",
-   "list_first_second",
    "list_get",
    "list_index_is",
    "list_last_or_null",
@@ -2743,7 +2742,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "list_first_second"
   ],
   "separator": [
    "watch",
@@ -14420,7 +14420,7 @@
     "value_get",
     "first",
     "second",
-    "v"
+    "result"
    ]
   },
   "list_get": {
