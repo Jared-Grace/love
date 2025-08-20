@@ -1356,10 +1356,11 @@
   "c function_imports_missing_add function_imports_fix",
   "ar i function_imports_fix",
   "o auto",
-  "s auto"
+  "s auto",
+  "fwc js_imports_missing_add missing_add fix"
  ],
  "marker_current": "1",
- "function_current": "function_imports_fix",
+ "function_current": "js_imports_fix",
  "terminal": false,
  "identifiers": {
   "log": [
