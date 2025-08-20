@@ -13,6 +13,7 @@ export async function js_imports_unused_remove(ast) {
     list_remove(body, declaration);
   }
   each(unuseds, lambda);
-  await each_async(list, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list, lambda2);
   return unuseds;
 }
