@@ -5012,13 +5012,11 @@
   ],
   "functions_names_includes": [
    "functions_names_includes",
-   "js_call_fill",
-   "js_node_atomize"
+   "js_call_fill"
   ],
   "valid": [
    "functions_names_includes",
-   "js_call_fill",
-   "js_node_atomize"
+   "js_call_fill"
   ],
   "search_generic": [
    "functions_search",
@@ -9310,6 +9308,9 @@
   "log_error": [
    "function_run_prompt",
    "log_error"
+  ],
+  "js_call_function_if": [
+   "js_node_atomize"
   ]
  },
  "functions": {
@@ -13944,8 +13945,8 @@
   },
   "js_node_atomize": {
    "identifiers": [
+    "js_call_function_if",
     "js_block_insert",
-    "functions_names_includes",
     "assert_message",
     "equal_by",
     "js_declare",
@@ -13970,15 +13971,14 @@
     "variable_name",
     "node",
     "stack",
-    "callee",
-    "name",
-    "valid",
     "lambda",
+    "name",
     "ast",
     "ast_callee",
     "return_name",
     "stack2",
     "stack1",
+    "callee",
     "exists",
     "declaration",
     "params",
