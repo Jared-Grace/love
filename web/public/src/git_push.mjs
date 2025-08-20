@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { date_to } from "./date_to.mjs";
 import { date_iso_to } from "./date_iso_to.mjs";
@@ -19,7 +20,8 @@ export async function git_push() {
     let before = date_to(before_iso);
     let ms = Math.abs(now - before);
     const hours = ms / (1000 * 60 * 60);
-    if (false) {
+    if (hours < 1) {
+      log(message);
     }
     await command_line_git(command_git);
     let lambda$previous = lambda_get(now_iso);
