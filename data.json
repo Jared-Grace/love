@@ -9214,7 +9214,7 @@
   "Date": [
    "date_now"
   ],
-  "before": [
+  "before_iso": [
    "git_push"
   ]
  },
@@ -11661,7 +11661,7 @@
     "lambda",
     "property_name",
     "name",
-    "before"
+    "before_iso"
    ]
   },
   "git_push_command": {
