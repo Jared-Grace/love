@@ -1109,7 +1109,6 @@
   "o mb",
   "oe mb",
   "md c",
-  "mn",
   "as mark",
   "oe mrt",
   "cs list_size_1_assert message",
@@ -1376,9 +1375,10 @@
   "o mm",
   "cd",
   "fs jaa",
-  "me"
+  "me",
+  "mn"
  ],
- "marker_current": "1",
+ "marker_current": "2",
  "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
