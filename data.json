@@ -2099,7 +2099,8 @@
   ],
   "i_name": [
    "data_identifiers_file",
-   "data_file_update"
+   "data_file_update",
+   "js_imports_unused"
   ],
   "list": [
    "data_identifiers_file",
@@ -5651,8 +5652,7 @@
    "marker_above",
    "marker_down",
    "marker_index",
-   "range",
-   "js_imports_unused"
+   "range"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -16796,7 +16796,7 @@
     "ast",
     "imports",
     "lambda",
-    "i",
+    "i_name",
     "lambda2",
     "v",
     "node",
