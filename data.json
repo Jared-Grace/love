@@ -1686,7 +1686,8 @@
    "marker_call",
    "marker_functionize",
    "function_imports_fix",
-   "data_files_update"
+   "data_files_update",
+   "data_file_update"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -2806,7 +2807,8 @@
   "file_js_parse": [
    "file_js_parse",
    "function_parse",
-   "data_files_update"
+   "data_files_update",
+   "data_file_update"
   ],
   "f_path2": [
    "data_file_update"
@@ -9219,13 +9221,15 @@
  "functions": {
   "data_file_update": {
    "identifiers": [
+    "file_js_parse",
     "data_file_update_inner",
     "data_save",
     "data_all",
     "marker",
     "data_file_update",
     "f_path",
-    "d"
+    "d",
+    "parsed"
    ]
   },
   "watch": {
