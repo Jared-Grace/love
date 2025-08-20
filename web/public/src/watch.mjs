@@ -39,7 +39,8 @@ export async function watch() {
       object_property_set(in_progress, path, value);
       await command_line_node_g(function_auto_path.name, [path]);
       try {
-        await command_line_node_g(data_file_update.name, [path]);
+        const args = [path];
+        await command_line_node_g(data_file_update.name, args);
       } catch (error) {
         let f_name = data_file_update.name;
         await error_attention_set({
