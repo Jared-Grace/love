@@ -670,7 +670,6 @@
   "n function_new_aliased",
   "u a",
   "a na function_new_aliased",
-  "s search",
   "na functions_search_open so",
   "o so",
   "so fill",
@@ -1330,7 +1329,8 @@
   "d",
   "o d",
   "s data",
-  "fw dpg data_identifiers_search"
+  "fw dpg data_identifiers_search",
+  "s search"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_search",
