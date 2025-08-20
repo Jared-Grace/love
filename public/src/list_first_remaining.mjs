@@ -8,16 +8,16 @@ import { list_skip } from "./list_skip.mjs";
 export function list_first_remaining(list) {
   marker("1");
   let first = null;
-  let second = null;
+  let remaining = null;
   if (list_empty_not_is(list)) {
     first = list_first(list);
     if (list_multiple_is(list)) {
-      second = list_skip_1(list);
+      remaining = list_skip_1(list);
     }
   }
   let v = {
     first,
-    second,
+    remaining,
   };
   return v;
 }
