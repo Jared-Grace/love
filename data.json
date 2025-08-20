@@ -1468,8 +1468,7 @@
    "sandbox",
    "search_generic",
    "js_imports_unused",
-   "git_push",
-   "error_attention_set"
+   "git_push"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -9423,7 +9422,6 @@
   },
   "error_attention_set": {
    "identifiers": [
-    "log",
     "data_transform",
     "error_attention_set",
     "value",
