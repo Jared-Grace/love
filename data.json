@@ -2675,7 +2675,8 @@
    "schtasks_query",
    "string_empty_not_is",
    "task_new",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_unused"
   ],
   "output": [
    "watch",
@@ -16876,6 +16877,7 @@
     "imports",
     "lambda",
     "i",
+    "name",
     "declaration",
     "count_import",
     "i_name"
