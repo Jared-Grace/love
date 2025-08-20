@@ -7023,9 +7023,6 @@
   "git_acp_timestamp": [
    "git_acp_timestamp"
   ],
-  "toISOString": [
-   "git_acp_timestamp"
-  ],
   "git_push_command": [
    "git_push",
    "git_push_command",
@@ -9195,7 +9192,7 @@
    "git_push",
    "data_set"
   ],
-  "date_now": [
+  "date_now_iso": [
    "git_acp_timestamp"
   ]
  },
@@ -11612,12 +11609,11 @@
   },
   "git_acp_timestamp": {
    "identifiers": [
+    "date_now_iso",
     "git_acp",
-    "date_now",
     "execSync",
     "git_acp_timestamp",
-    "message",
-    "toISOString"
+    "message"
    ]
   },
   "git_commit": {
