@@ -4376,8 +4376,7 @@
   ],
   "count": [
    "each_range",
-   "range",
-   "js_imports_unused"
+   "range"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -9059,6 +9058,9 @@
   ],
   "lambda$c": [
    "counter"
+  ],
+  "count_import": [
+   "js_imports_unused"
   ]
  },
  "functions": {
@@ -16823,7 +16825,7 @@
     "v",
     "node",
     "name",
-    "count"
+    "count_import"
    ]
   },
   "counter": {
