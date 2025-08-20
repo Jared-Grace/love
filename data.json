@@ -1572,7 +1572,8 @@
    "function_run_line_git",
    "function_run_line_parse",
    "marker_current_set",
-   "prompt_previous"
+   "prompt_previous",
+   "data_set"
   ],
   "marker": [
    "data_identifiers_file",
@@ -1973,7 +1974,8 @@
    "object_property_initialize",
    "object_property_set",
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "data_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2082,7 +2084,8 @@
    "visit_unique_async",
    "js_imports_unused",
    "js_imports_declarations",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "data_set"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2095,7 +2098,8 @@
    "list_previous",
    "list_unique_reverse",
    "marker_current_set",
-   "prompt_previous"
+   "prompt_previous",
+   "data_set"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -3706,7 +3710,8 @@
    "js_operator_or",
    "js_unparse",
    "marker_bottom",
-   "search_generic"
+   "search_generic",
+   "data_set"
   ],
   "readdirSync": [
    "folder_read"
@@ -4221,7 +4226,8 @@
    "data_terminal_set"
   ],
   "lambda$previous": [
-   "data_transform"
+   "data_transform",
+   "data_set"
   ],
   "value_previous": [
    "data_transform"
@@ -9186,7 +9192,8 @@
   ],
   "data_set": [
    "data_boolean_set",
-   "git_push"
+   "git_push",
+   "data_set"
   ]
  },
  "functions": {
@@ -17063,6 +17070,17 @@
     "js_imports_fix",
     "ast",
     "v"
+   ]
+  },
+  "data_set": {
+   "identifiers": [
+    "data_transform",
+    "data_set",
+    "lambda$previous",
+    "property_name",
+    "lambda",
+    "previous",
+    "v2"
    ]
   }
  }
