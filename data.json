@@ -1315,7 +1315,6 @@
   "a fntp function_name_to_path",
   "u d",
   "a d data_files_update",
-  "d",
   "o d",
   "fw dpg data_identifiers_search",
   "s search",
@@ -1366,7 +1365,8 @@
   "cd",
   "fs jaa",
   "s data",
-  "s decl"
+  "s decl",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -1375,7 +1375,6 @@
   "log": [
    "data_identifiers_file",
    "file_js_unparse",
-   "watch",
    "function_run_prompt",
    "catch_log",
    "catch_log_async",
@@ -1413,7 +1412,6 @@
    "js_call_fill",
    "js_declaration_params_names_node",
    "js_declaration_param_named",
-   "js_declaration_single",
    "js_declare_assign_null",
    "js_dollar",
    "js_dollar_a",
@@ -1568,7 +1566,6 @@
   ],
   "data_transform": [
    "data_identifiers_file",
-   "watch",
    "function_run_prompt",
    "error_attention_set",
    "data_terminal_set",
@@ -1685,7 +1682,6 @@
    "js_call_fill",
    "js_call_insert",
    "js_call_new",
-   "js_declaration_single",
    "js_dollar_f",
    "js_dollar_g",
    "js_visit_nodes",
@@ -1821,7 +1817,9 @@
    "js_imports_unused_remove",
    "function_imports_fix",
    "js_imports_fix",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_declaration_single",
+   "js_identifiers_named_count"
   ],
   "code": [
    "data_identifiers_file",
@@ -1986,7 +1984,8 @@
    "list_first_remaining",
    "data_set",
    "git_push",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "list_first_second_generic"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2098,7 +2097,8 @@
    "data_set",
    "js_imports_fix",
    "data_files_update",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_declaration_single"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2147,11 +2147,14 @@
    "visit_unique_async",
    "js_imports_declarations",
    "js_dollar_g",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_declaration_single",
+   "js_identifiers_named_count"
   ],
   "i_name": [
    "data_identifiers_file",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_identifiers_named_count"
   ],
   "list": [
    "data_identifiers_file",
@@ -2248,7 +2251,9 @@
    "search_generic",
    "data_identifiers_search",
    "list_first_remaining",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "list_first_second_generic",
+   "list_skip_1"
   ],
   "v": [
    "data_identifiers_file",
@@ -2344,7 +2349,12 @@
    "string_is_assert_message",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_imports_fix"
+   "js_imports_fix",
+   "date_diff_ms",
+   "date_iso_to",
+   "date_ms_to_hours",
+   "date_to",
+   "js_identifiers_named_count"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2443,16 +2453,13 @@
    "git_push"
   ],
   "git_acp_call": [
-   "watch",
    "function_run_git",
    "git_acp_call"
   ],
   "catch_log": [
-   "watch",
    "catch_log"
   ],
   "catch_ignore": [
-   "watch",
    "catch_ignore"
   ],
   "function_auto_path": [
@@ -2475,7 +2482,6 @@
    "js_unparse"
   ],
   "command_line": [
-   "watch",
    "command_line",
    "command_line_git",
    "command_line_node_g",
@@ -2488,7 +2494,6 @@
    "schtasks_query"
   ],
   "log_keep": [
-   "watch",
    "function_run_prompt",
    "catch_log",
    "catch_log_async",
@@ -2505,7 +2510,6 @@
    "server"
   ],
   "object_property_exists": [
-   "watch",
    "function_acronym_to_name",
    "function_alias_add_generic",
    "js_call_fill",
@@ -2708,7 +2712,8 @@
    "task_new",
    "js_imports_declarations",
    "js_imports_unused",
-   "git_push"
+   "git_push",
+   "js_identifiers_named_count"
   ],
   "output": [
    "watch",
@@ -2741,7 +2746,6 @@
    "watch"
   ],
   "list_join": [
-   "watch",
    "functions_combine_test",
    "function_dependencies_code",
    "function_name_combine_multiple",
@@ -2781,7 +2785,8 @@
    "task_new",
    "data_identifiers_search",
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_first_second_generic"
   ],
   "separator": [
    "watch",
@@ -2794,7 +2799,6 @@
    "tasks_run"
   ],
   "list_join_space": [
-   "watch",
    "command_line_node_g",
    "list_join_space"
   ],
@@ -2860,7 +2864,8 @@
    "data_property_get",
    "data_transform",
    "data_files_update",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "date_iso_to"
   ],
   "data": [
    "data_all",
@@ -2967,7 +2972,8 @@
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_identifiers_named_count"
   ],
   "data_save": [
    "data_file_update",
@@ -3153,13 +3159,11 @@
    "data_file_update_inner"
   ],
   "data_boolean_set": [
-   "watch",
    "data_boolean_set",
    "data_terminal_set",
    "data_watch_set"
   ],
   "function_name_combine": [
-   "watch",
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "function_copy_suffix_add",
@@ -3341,7 +3345,8 @@
    "js_if_else_if_combine",
    "js_outside_move",
    "marker_down_choices_lambda",
-   "marker_expand"
+   "marker_expand",
+   "js_identifiers_named_count"
   ],
   "value2": [
    "error_attention_set"
@@ -3631,7 +3636,8 @@
    "marker_expand",
    "marker_functionize",
    "marker_top",
-   "js_imports_unused"
+   "js_imports_unused",
+   "functions_paths"
   ],
   "functions_names": [
    "functions_names",
@@ -3643,7 +3649,8 @@
    "function_params_consolidate",
    "js_imports_missing",
    "js_node_atomize",
-   "marker_functionize"
+   "marker_functionize",
+   "functions_paths"
   ],
   "paths": [
    "functions_names",
@@ -3668,7 +3675,8 @@
    "function_names_to_acronyms",
    "function_params_consolidate",
    "js_imports_missing",
-   "string_split_comma"
+   "string_split_comma",
+   "functions_paths"
   ],
   "path_join": [
    "folder_read",
@@ -3750,7 +3758,8 @@
    "function_read",
    "js_outside_move",
    "data_identifiers_search",
-   "function_imports_fix"
+   "function_imports_fix",
+   "functions_paths"
   ],
   "each_async": [
    "data_files_update",
@@ -3777,7 +3786,8 @@
    "visit_filter_recursive_async"
   ],
   "f_paths": [
-   "data_files_update"
+   "data_files_update",
+   "functions_paths"
   ],
   "assert": [
    "assert",
@@ -4342,7 +4352,8 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_first_second_generic"
   ],
   "each_multiple": [
    "each_multiple",
@@ -4359,7 +4370,8 @@
    "js_dollar",
    "js_dollar_g",
    "list_first",
-   "list_single"
+   "list_single",
+   "list_first_second_generic"
   ],
   "items": [
    "each_multiple",
@@ -4690,7 +4702,8 @@
    "function_name_to_path",
    "js_dollar",
    "js_dollar_r",
-   "list_second"
+   "list_second",
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -5559,7 +5572,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_identifiers_named_count"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6550,7 +6564,8 @@
    "marker_functionize",
    "marker_move",
    "js_imports_unused",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_identifiers_named_count"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -7891,7 +7906,8 @@
    "js_dollar",
    "list_skip",
    "marker_enter",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_skip_1"
   ],
   "list_second": [
    "js_dollar",
@@ -8417,7 +8433,8 @@
    "list_last",
    "marker_expand",
    "marker_top",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_first_second_generic"
   ],
   "last": [
    "js_return_name",
@@ -8455,7 +8472,8 @@
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_first_second_generic"
   ],
   "js_statement_call_get": [
    "js_statement_call_get",
@@ -8737,7 +8755,8 @@
   "skipped": [
    "list_skip",
    "string_prefix_without",
-   "string_skip"
+   "string_skip",
+   "list_skip_1"
   ],
   "slice": [
    "list_slice",
@@ -8984,7 +9003,8 @@
    "list_first_second",
    "list_first_remaining",
    "data_boolean_set",
-   "lambda_get"
+   "lambda_get",
+   "list_first_second_generic"
   ],
   "terms": [
    "search_generic"
@@ -9115,13 +9135,15 @@
   "c": [
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "counter"
+   "counter",
+   "js_identifiers_named_count"
   ],
   "found": [
    "visit_unique_async"
   ],
   "functions_paths": [
-   "data_files_update"
+   "data_files_update",
+   "functions_paths"
   ],
   "data_identifiers_search": [
    "data_identifiers_search"
@@ -9133,16 +9155,19 @@
   ],
   "counter": [
    "counter",
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_identifiers_named_count"
   ],
   "lambda$c": [
    "counter"
   ],
   "count_import": [
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_identifiers_named_count"
   ],
   "js_identifiers_named_count": [
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_identifiers_named_count"
   ],
   "js_imports_declarations": [
    "js_imports_declarations",
@@ -9157,11 +9182,13 @@
    "js_dollar_g"
   ],
   "list_skip_1": [
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_skip_1"
   ],
   "list_first_second_generic": [
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "list_first_second_generic"
   ],
   "property_names": [
    "js_dollar_g"
@@ -9211,33 +9238,43 @@
   "now": [
    "date_now",
    "date_now_iso",
-   "git_push"
+   "git_push",
+   "date_diff_hours",
+   "date_diff_ms"
   ],
   "Date": [
-   "date_now"
+   "date_now",
+   "date_to"
   ],
   "before_iso": [
-   "git_push"
+   "git_push",
+   "date_to"
   ],
   "date_iso_to": [
    "date_now_iso",
-   "git_push"
+   "git_push",
+   "date_iso_to"
   ],
   "before": [
-   "git_push"
+   "git_push",
+   "date_diff_hours",
+   "date_diff_ms"
   ],
   "date_to": [
-   "git_push"
+   "git_push",
+   "date_to"
   ],
   "lambda_get": [
    "git_push",
    "lambda_get"
   ],
   "hours": [
-   "git_push"
+   "git_push",
+   "date_diff_hours"
   ],
   "date_diff_hours": [
-   "git_push"
+   "git_push",
+   "date_diff_hours"
   ],
   "data_file_update_inner": [
    "data_file_update",
@@ -9258,6 +9295,27 @@
   ],
   "f_identifiers_old": [
    "data_file_update_inner"
+  ],
+  "date_ms_to_hours": [
+   "date_diff_hours",
+   "date_ms_to_hours"
+  ],
+  "date_diff_ms": [
+   "date_diff_hours",
+   "date_diff_ms"
+  ],
+  "ms": [
+   "date_diff_hours",
+   "date_ms_to_hours"
+  ],
+  "Math": [
+   "date_diff_ms"
+  ],
+  "abs": [
+   "date_diff_ms"
+  ],
+  "toISOString": [
+   "date_iso_to"
   ]
  },
  "functions": {
@@ -9272,31 +9330,20 @@
     "f_path",
     "d",
     "parsed"
-   ]
+   ],
+   "async": true
   },
   "watch": {
    "identifiers": [
     "error",
     "error_attention_set",
-    "data_transform",
-    "function_name_combine",
-    "data_boolean_set",
     "command_line_node_g",
-    "list_join_space",
-    "list_join",
     "marker",
     "object_property_exists_equals",
     "catch_log_async",
-    "git_acp_call",
-    "catch_log",
-    "catch_ignore",
-    "log",
     "function_auto_path",
     "functions_path",
     "import_install",
-    "command_line",
-    "log_keep",
-    "object_property_exists",
     "data_file_update",
     "object_property_set",
     "watch",
@@ -9315,7 +9362,8 @@
     "args",
     "f_name",
     "on"
-   ]
+   ],
+   "async": true
   },
   "function_run_prompt": {
    "identifiers": [
@@ -9342,7 +9390,8 @@
     "colored",
     "prompt_colored",
     "line"
-   ]
+   ],
+   "async": true
   },
   "chalk_green": {
    "identifiers": [
@@ -9353,7 +9402,8 @@
     "prompt",
     "color",
     "v"
-   ]
+   ],
+   "async": true
   },
   "chalk_red": {
    "identifiers": [
@@ -9365,7 +9415,8 @@
     "prompt",
     "color",
     "colored"
-   ]
+   ],
+   "async": true
   },
   "chalk_color": {
    "identifiers": [
@@ -9378,7 +9429,8 @@
     "default",
     "fn",
     "colored"
-   ]
+   ],
+   "async": true
   },
   "error_attention_set": {
    "identifiers": [
@@ -9388,7 +9440,8 @@
     "lambda3",
     "previous",
     "value2"
-   ]
+   ],
+   "async": true
   },
   "function_watch_suffix_change": {
    "identifiers": [
@@ -9419,7 +9472,8 @@
     "unaliased",
     "f_name_new",
     "v"
-   ]
+   ],
+   "async": true
   },
   "string_suffix_without": {
    "identifiers": [
@@ -9433,7 +9487,8 @@
     "suffix",
     "a",
     "without"
-   ]
+   ],
+   "async": false
   },
   "error_attention_clear": {
    "identifiers": [
@@ -9441,7 +9496,8 @@
     "marker",
     "error_attention_clear",
     "v"
-   ]
+   ],
+   "async": true
   },
   "functions_names": {
    "identifiers": [
@@ -9454,7 +9510,8 @@
     "paths",
     "f_names",
     "p"
-   ]
+   ],
+   "async": false
   },
   "folder_read": {
    "identifiers": [
@@ -9471,7 +9528,8 @@
     "v2",
     "readdirSync",
     "filter"
-   ]
+   ],
+   "async": false
   },
   "data_file_update_all": {
    "identifiers": [
@@ -9497,14 +9555,16 @@
     "parseds",
     "lambda",
     "parsed"
-   ]
+   ],
+   "async": true
   },
   "assert": {
    "identifiers": [
     "error",
     "assert",
     "b"
-   ]
+   ],
+   "async": false
   },
   "assert_file_exists_not": {
    "identifiers": [
@@ -9512,7 +9572,8 @@
     "file_exists",
     "assert_file_exists_not",
     "file_path_new"
-   ]
+   ],
+   "async": true
   },
   "assert_json": {
    "identifiers": [
@@ -9522,7 +9583,8 @@
     "b",
     "o",
     "message"
-   ]
+   ],
+   "async": false
   },
   "assert_message": {
    "identifiers": [
@@ -9530,28 +9592,32 @@
     "assert_message",
     "b",
     "message"
-   ]
+   ],
+   "async": false
   },
   "assert_not": {
    "identifiers": [
     "error",
     "assert_not",
     "b"
-   ]
+   ],
+   "async": false
   },
   "catch_ignore": {
    "identifiers": [
     "catch_ignore",
     "lambda",
     "e"
-   ]
+   ],
+   "async": false
   },
   "catch_ignore_async": {
    "identifiers": [
     "catch_ignore_async",
     "lambda",
     "e"
-   ]
+   ],
+   "async": true
   },
   "catch_log": {
    "identifiers": [
@@ -9560,7 +9626,8 @@
     "catch_log",
     "lambda",
     "e"
-   ]
+   ],
+   "async": false
   },
   "catch_log_async": {
    "identifiers": [
@@ -9572,7 +9639,8 @@
     "message_get",
     "e",
     "message"
-   ]
+   ],
+   "async": true
   },
   "catch_only_async": {
    "identifiers": [
@@ -9585,7 +9653,8 @@
     "json",
     "message",
     "includes"
-   ]
+   ],
+   "async": true
   },
   "clipboard_copy": {
    "identifiers": [
@@ -9594,7 +9663,8 @@
     "clipboard",
     "default",
     "write"
-   ]
+   ],
+   "async": true
   },
   "command_line": {
    "identifiers": [
@@ -9605,7 +9675,8 @@
     "command",
     "stdout",
     "encoding"
-   ]
+   ],
+   "async": true
   },
   "command_line_git": {
    "identifiers": [
@@ -9613,12 +9684,14 @@
     "command_line",
     "command_line_git",
     "command_git"
-   ]
+   ],
+   "async": true
   },
   "command_line_git_prefix": {
    "identifiers": [
     "command_line_git_prefix"
-   ]
+   ],
+   "async": false
   },
   "command_line_node_g": {
    "identifiers": [
@@ -9630,7 +9703,8 @@
     "args",
     "result",
     "output"
-   ]
+   ],
+   "async": true
   },
   "command_line_read": {
    "identifiers": [
@@ -9649,7 +9723,8 @@
     "question",
     "answer",
     "close"
-   ]
+   ],
+   "async": true
   },
   "command_line_schtasks": {
    "identifiers": [
@@ -9658,7 +9733,8 @@
     "command",
     "prefixed",
     "stdout"
-   ]
+   ],
+   "async": true
   },
   "data_all": {
    "identifiers": [
@@ -9666,7 +9742,8 @@
     "data_all",
     "file_path",
     "data"
-   ]
+   ],
+   "async": true
   },
   "data_boolean_set": {
    "identifiers": [
@@ -9677,7 +9754,8 @@
     "value_get",
     "previous",
     "v"
-   ]
+   ],
+   "async": true
   },
   "data_function_current_get": {
    "identifiers": [
@@ -9687,7 +9765,8 @@
     "data_function_current_get",
     "property_name",
     "f_name_current"
-   ]
+   ],
+   "async": true
   },
   "data_get": {
    "identifiers": [
@@ -9700,7 +9779,8 @@
     "data",
     "file_path",
     "value"
-   ]
+   ],
+   "async": true
   },
   "data_marker_current_get": {
    "identifiers": [
@@ -9710,7 +9790,8 @@
     "data_marker_current_get",
     "property_name",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "data_prompts": {
    "identifiers": [
@@ -9722,7 +9803,8 @@
     "data_prompts",
     "prompts",
     "offset"
-   ]
+   ],
+   "async": true
   },
   "data_property_get": {
    "identifiers": [
@@ -9733,12 +9815,14 @@
     "d",
     "data",
     "value"
-   ]
+   ],
+   "async": true
   },
   "data_property_new": {
    "identifiers": [
     "data_property_new"
-   ]
+   ],
+   "async": false
   },
   "data_save": {
    "identifiers": [
@@ -9747,7 +9831,8 @@
     "a",
     "file_path",
     "data"
-   ]
+   ],
+   "async": true
   },
   "data_terminal_get": {
    "identifiers": [
@@ -9758,7 +9843,8 @@
     "data_terminal_get",
     "property_name",
     "w"
-   ]
+   ],
+   "async": true
   },
   "data_terminal_set": {
    "identifiers": [
@@ -9772,7 +9858,8 @@
     "data_terminal_set",
     "v",
     "property_name"
-   ]
+   ],
+   "async": true
   },
   "data_transform": {
    "identifiers": [
@@ -9789,7 +9876,8 @@
     "data",
     "value",
     "value_previous"
-   ]
+   ],
+   "async": true
   },
   "data_value": {
    "identifiers": [
@@ -9801,7 +9889,8 @@
     "property_name",
     "data",
     "value"
-   ]
+   ],
+   "async": true
   },
   "data_watch_get": {
    "identifiers": [
@@ -9811,7 +9900,8 @@
     "data_watch_get",
     "property_name",
     "w"
-   ]
+   ],
+   "async": true
   },
   "data_watch_set": {
    "identifiers": [
@@ -9824,13 +9914,15 @@
     "data_watch_set",
     "v",
     "property_name"
-   ]
+   ],
+   "async": true
   },
   "data_watch_set_task_add_return": {
    "identifiers": [
     "todo",
     "data_watch_set_task_add_return"
-   ]
+   ],
+   "async": false
   },
   "each": {
    "identifiers": [
@@ -9838,7 +9930,8 @@
     "list",
     "lambda$item",
     "item"
-   ]
+   ],
+   "async": false
   },
   "each_async": {
    "identifiers": [
@@ -9846,7 +9939,8 @@
     "list",
     "lambda$item",
     "item"
-   ]
+   ],
+   "async": true
   },
   "each_index": {
    "identifiers": [
@@ -9856,7 +9950,8 @@
     "lambda",
     "index",
     "item"
-   ]
+   ],
+   "async": false
   },
   "each_multiple": {
    "identifiers": [
@@ -9870,7 +9965,8 @@
     "item",
     "index",
     "items"
-   ]
+   ],
+   "async": false
   },
   "each_object": {
    "identifiers": [
@@ -9882,7 +9978,8 @@
     "lambda",
     "p",
     "value"
-   ]
+   ],
+   "async": false
   },
   "each_pair": {
    "identifiers": [
@@ -9896,7 +9993,8 @@
     "items",
     "a",
     "b"
-   ]
+   ],
+   "async": false
   },
   "each_range": {
    "identifiers": [
@@ -9905,7 +10003,8 @@
     "each_range",
     "count",
     "lambda"
-   ]
+   ],
+   "async": false
   },
   "each_reverse": {
    "identifiers": [
@@ -9915,7 +10014,8 @@
     "list",
     "lambda",
     "reversed"
-   ]
+   ],
+   "async": false
   },
   "equal": {
    "identifiers": [
@@ -9923,7 +10023,8 @@
     "left",
     "right",
     "eq"
-   ]
+   ],
+   "async": false
   },
   "equal_by": {
    "identifiers": [
@@ -9935,7 +10036,8 @@
     "left",
     "right",
     "eq"
-   ]
+   ],
+   "async": false
   },
   "equal_by_async": {
    "identifiers": [
@@ -9944,7 +10046,8 @@
     "b",
     "lambda$item",
     "eq"
-   ]
+   ],
+   "async": true
   },
   "equal_not": {
    "identifiers": [
@@ -9954,14 +10057,16 @@
     "left",
     "right",
     "ne"
-   ]
+   ],
+   "async": false
   },
   "error": {
    "identifiers": [
     "error",
     "message",
     "Error"
-   ]
+   ],
+   "async": false
   },
   "error_json": {
    "identifiers": [
@@ -9970,7 +10075,8 @@
     "error_json",
     "o",
     "message"
-   ]
+   ],
+   "async": false
   },
   "exit": {
    "identifiers": [
@@ -9978,7 +10084,8 @@
     "marker",
     "exit",
     "process"
-   ]
+   ],
+   "async": false
   },
   "file_copy": {
    "identifiers": [
@@ -9989,7 +10096,8 @@
     "fs",
     "promises",
     "copyFile"
-   ]
+   ],
+   "async": true
   },
   "file_delete": {
    "identifiers": [
@@ -9998,7 +10106,8 @@
     "fs",
     "promises",
     "unlink"
-   ]
+   ],
+   "async": true
   },
   "file_exists": {
    "identifiers": [
@@ -10016,7 +10125,8 @@
     "success",
     "lambda",
     "F_OK"
-   ]
+   ],
+   "async": true
   },
   "file_js_parse": {
    "identifiers": [
@@ -10027,7 +10137,8 @@
     "code",
     "ast",
     "parsed"
-   ]
+   ],
+   "async": true
   },
   "file_js_unparse": {
    "identifiers": [
@@ -10042,13 +10153,15 @@
     "code",
     "code_unparsed",
     "code_new"
-   ]
+   ],
+   "async": true
   },
   "file_name_html": {
    "identifiers": [
     "file_name_html",
     "name"
-   ]
+   ],
+   "async": false
   },
   "file_open": {
    "identifiers": [
@@ -10071,14 +10184,16 @@
     "ext",
     "ew",
     "output"
-   ]
+   ],
+   "async": true
   },
   "file_open_editor": {
    "identifiers": [
     "command_line",
     "file_open_editor",
     "filePath"
-   ]
+   ],
+   "async": true
   },
   "file_overwrite": {
    "identifiers": [
@@ -10088,7 +10203,8 @@
     "fs",
     "promises",
     "writeFile"
-   ]
+   ],
+   "async": true
   },
   "file_overwrite_json": {
    "identifiers": [
@@ -10099,7 +10215,8 @@
     "file_path",
     "object",
     "json"
-   ]
+   ],
+   "async": true
   },
   "file_read": {
    "identifiers": [
@@ -10108,7 +10225,8 @@
     "fs",
     "promises",
     "readFile"
-   ]
+   ],
+   "async": true
   },
   "file_read_json": {
    "identifiers": [
@@ -10118,7 +10236,8 @@
     "file_path",
     "json",
     "data"
-   ]
+   ],
+   "async": true
   },
   "file_write": {
    "identifiers": [
@@ -10127,13 +10246,15 @@
     "file_write",
     "f_path",
     "contents"
-   ]
+   ],
+   "async": true
   },
   "folder_current": {
    "identifiers": [
     "folder_current",
     "current"
-   ]
+   ],
+   "async": false
   },
   "folder_current_join": {
    "identifiers": [
@@ -10143,12 +10264,14 @@
     "result",
     "current",
     "value_string"
-   ]
+   ],
+   "async": false
   },
   "folder_public": {
    "identifiers": [
     "folder_public"
-   ]
+   ],
+   "async": false
   },
   "folder_public_combine": {
    "identifiers": [
@@ -10156,7 +10279,8 @@
     "path_join",
     "folder_public_combine",
     "second"
-   ]
+   ],
+   "async": false
   },
   "functions_combine": {
    "identifiers": [
@@ -10197,7 +10321,8 @@
     "lambda",
     "f_name",
     "item"
-   ]
+   ],
+   "async": true
   },
   "functions_combine_name": {
    "identifiers": [
@@ -10214,7 +10339,8 @@
     "f_names",
     "combined",
     "v"
-   ]
+   ],
+   "async": true
   },
   "functions_combine_test": {
    "identifiers": [
@@ -10229,7 +10355,8 @@
     "names",
     "f_names_comma",
     "combined"
-   ]
+   ],
+   "async": true
   },
   "functions_format": {
    "identifiers": [
@@ -10239,7 +10366,8 @@
     "list_map",
     "functions_format",
     "mapped"
-   ]
+   ],
+   "async": true
   },
   "functions_names_includes": {
    "identifiers": [
@@ -10249,7 +10377,8 @@
     "name",
     "list",
     "valid"
-   ]
+   ],
+   "async": false
   },
   "functions_path": {
    "identifiers": [
@@ -10259,7 +10388,8 @@
     "functions_path",
     "second",
     "joined"
-   ]
+   ],
+   "async": false
   },
   "functions_search": {
    "identifiers": [
@@ -10278,7 +10408,8 @@
     "search",
     "f_names",
     "result"
-   ]
+   ],
+   "async": true
   },
   "functions_search_open": {
    "identifiers": [
@@ -10292,7 +10423,8 @@
     "result",
     "properties",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "function_acronym_to_name": {
    "identifiers": [
@@ -10310,7 +10442,8 @@
     "exists2",
     "s1",
     "v"
-   ]
+   ],
+   "async": false
   },
   "function_acronym_to_names": {
    "identifiers": [
@@ -10320,7 +10453,8 @@
     "acronym",
     "acronyms",
     "list"
-   ]
+   ],
+   "async": false
   },
   "function_aliases": {
    "identifiers": [
@@ -10332,7 +10466,8 @@
     "function_aliases",
     "a",
     "aliases"
-   ]
+   ],
+   "async": true
   },
   "function_aliases_inverted": {
    "identifiers": [
@@ -10341,7 +10476,8 @@
     "function_aliases_inverted",
     "aliases",
     "inverted"
-   ]
+   ],
+   "async": true
   },
   "function_aliases_search": {
    "identifiers": [
@@ -10355,7 +10491,8 @@
     "names",
     "result",
     "n"
-   ]
+   ],
+   "async": true
   },
   "function_alias_add": {
    "identifiers": [
@@ -10379,7 +10516,8 @@
     "exists",
     "aliases",
     "unaliased"
-   ]
+   ],
+   "async": true
   },
   "function_alias_add_generic": {
    "identifiers": [
@@ -10401,7 +10539,8 @@
     "file_path",
     "data",
     "exists"
-   ]
+   ],
+   "async": true
   },
   "function_alias_change": {
    "identifiers": [
@@ -10419,7 +10558,8 @@
     "exists",
     "aliases",
     "unaliased"
-   ]
+   ],
+   "async": true
   },
   "function_alias_delete": {
    "identifiers": [
@@ -10435,7 +10575,8 @@
     "a",
     "exists",
     "aliases"
-   ]
+   ],
+   "async": true
   },
   "function_alias_generic": {
    "identifiers": [
@@ -10448,7 +10589,8 @@
     "alias",
     "lambda",
     "a"
-   ]
+   ],
+   "async": true
   },
   "function_alias_replace": {
    "identifiers": [
@@ -10465,7 +10607,8 @@
     "a",
     "exists",
     "aliases"
-   ]
+   ],
+   "async": true
   },
   "function_auto": {
    "identifiers": [
@@ -10488,7 +10631,8 @@
     "js_arrow_blockify",
     "function_auto",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "function_auto_path": {
    "identifiers": [
@@ -10499,7 +10643,8 @@
     "f_path",
     "f_name",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_copy": {
    "identifiers": [
@@ -10521,7 +10666,8 @@
     "unaliased_new",
     "lambda",
     "ast"
-   ]
+   ],
+   "async": true
   },
   "function_copy_suffix_add": {
    "identifiers": [
@@ -10534,7 +10680,8 @@
     "unaliased",
     "combined",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_current_declaration_code": {
    "identifiers": [
@@ -10543,7 +10690,8 @@
     "function_current_declaration_code",
     "f_name_current",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_current_set": {
    "identifiers": [
@@ -10564,7 +10712,8 @@
     "previous",
     "name",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_current_set_task_new": {
    "identifiers": [
@@ -10573,14 +10722,16 @@
     "function_current_set_task_new",
     "f_name",
     "task_name"
-   ]
+   ],
+   "async": true
   },
   "function_current_set_task_new_simple": {
    "identifiers": [
     "function_current_set_task_new",
     "function_current_set_task_new_simple",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "function_delete": {
    "identifiers": [
@@ -10596,7 +10747,8 @@
     "function_delete",
     "f_name",
     "f_path"
-   ]
+   ],
+   "async": true
   },
   "function_delete_if_exists": {
    "identifiers": [
@@ -10607,7 +10759,8 @@
     "function_delete_if_exists",
     "f_name",
     "exists"
-   ]
+   ],
+   "async": true
   },
   "function_dependencies": {
    "identifiers": [
@@ -10622,7 +10775,8 @@
     "lambda",
     "v",
     "node"
-   ]
+   ],
+   "async": true
   },
   "function_dependencies_code": {
    "identifiers": [
@@ -10642,7 +10796,8 @@
     "waited",
     "mapped2",
     "waited2"
-   ]
+   ],
+   "async": true
   },
   "function_dependencies_code_copy": {
    "identifiers": [
@@ -10651,7 +10806,8 @@
     "function_dependencies_code_copy",
     "f_name",
     "code"
-   ]
+   ],
+   "async": true
   },
   "function_exists": {
    "identifiers": [
@@ -10665,7 +10821,8 @@
     "exists",
     "to",
     "e"
-   ]
+   ],
+   "async": true
   },
   "function_format": {
    "identifiers": [
@@ -10679,7 +10836,8 @@
     "f_path",
     "r",
     "formatted"
-   ]
+   ],
+   "async": true
   },
   "function_identifier_replace": {
    "identifiers": [
@@ -10709,7 +10867,8 @@
     "i",
     "v",
     "v2"
-   ]
+   ],
+   "async": true
   },
   "function_identifier_replace_ending_remove": {
    "identifiers": [
@@ -10721,7 +10880,8 @@
     "identifier_name",
     "ending_to_remove",
     "removed"
-   ]
+   ],
+   "async": true
   },
   "function_identifier_replace_suffix_add": {
    "identifiers": [
@@ -10730,7 +10890,8 @@
     "function_identifier_replace_suffix_add",
     "identifier_name",
     "suffix_to_add"
-   ]
+   ],
+   "async": true
   },
   "function_import": {
    "identifiers": [
@@ -10753,7 +10914,8 @@
     "imported",
     "imported_fn",
     "Error"
-   ]
+   ],
+   "async": true
   },
   "function_imports": {
    "identifiers": [
@@ -10764,7 +10926,8 @@
     "parsed",
     "ast",
     "imports"
-   ]
+   ],
+   "async": true
   },
   "function_imports_add": {
    "identifiers": [
@@ -10788,7 +10951,8 @@
     "from",
     "code",
     "statement"
-   ]
+   ],
+   "async": true
   },
   "function_imports_missing": {
    "identifiers": [
@@ -10808,7 +10972,8 @@
     "parsed",
     "ast",
     "imports_missing"
-   ]
+   ],
+   "async": true
   },
   "function_imports_missing_add": {
    "identifiers": [
@@ -10825,7 +10990,8 @@
     "parsed",
     "imports_missing",
     "ast"
-   ]
+   ],
+   "async": true
   },
   "function_names_to_acronyms": {
    "identifiers": [
@@ -10837,7 +11003,8 @@
     "f_names",
     "dictionary",
     "acronyms"
-   ]
+   ],
+   "async": false
   },
   "function_name_combine": {
    "identifiers": [
@@ -10847,7 +11014,8 @@
     "left",
     "right",
     "combined"
-   ]
+   ],
+   "async": false
   },
   "function_name_combine_multiple": {
    "identifiers": [
@@ -10857,19 +11025,22 @@
     "parts",
     "separator",
     "combined"
-   ]
+   ],
+   "async": false
   },
   "function_name_extension": {
    "identifiers": [
     "function_name_extension",
     "ext"
-   ]
+   ],
+   "async": false
   },
   "function_name_separator": {
    "identifiers": [
     "function_name_separator",
     "separator"
-   ]
+   ],
+   "async": false
   },
   "function_name_to_acronym": {
    "identifiers": [
@@ -10886,14 +11057,16 @@
     "parts",
     "letters",
     "acronym"
-   ]
+   ],
+   "async": false
   },
   "function_name_to_base": {
    "identifiers": [
     "function_name_extension",
     "function_name_to_base",
     "funcName"
-   ]
+   ],
+   "async": false
   },
   "function_name_to_parts": {
    "identifiers": [
@@ -10903,7 +11076,8 @@
     "f_name",
     "separator",
     "parts"
-   ]
+   ],
+   "async": false
   },
   "function_name_to_path": {
    "identifiers": [
@@ -10916,7 +11090,8 @@
     "f_name",
     "second",
     "joined"
-   ]
+   ],
+   "async": false
   },
   "function_name_to_path_unalias": {
    "identifiers": [
@@ -10928,7 +11103,8 @@
     "unaliased",
     "f_path",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_name_unalias": {
    "identifiers": [
@@ -10942,7 +11118,8 @@
     "expanded",
     "expandeds",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_new": {
    "identifiers": [
@@ -10965,7 +11142,8 @@
     "f_name",
     "code_declaration",
     "declaration"
-   ]
+   ],
+   "async": true
   },
   "function_new_aliased": {
    "identifiers": [
@@ -10974,7 +11152,8 @@
     "function_new_aliased",
     "f_name",
     "alias"
-   ]
+   ],
+   "async": true
   },
   "function_new_declaration": {
    "identifiers": [
@@ -10993,7 +11172,8 @@
     "contents",
     "ast",
     "contents_import"
-   ]
+   ],
+   "async": true
   },
   "function_new_js": {
    "identifiers": [
@@ -11009,7 +11189,8 @@
     "result",
     "lambda",
     "ast"
-   ]
+   ],
+   "async": true
   },
   "function_new_transform": {
    "identifiers": [
@@ -11020,7 +11201,8 @@
     "f_name",
     "lambda$ast",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_open": {
    "identifiers": [
@@ -11036,7 +11218,8 @@
     "function_open",
     "f_name",
     "f_path"
-   ]
+   ],
+   "async": true
   },
   "function_open_editor": {
    "identifiers": [
@@ -11052,7 +11235,8 @@
     "function_open_editor",
     "f_name",
     "f_path"
-   ]
+   ],
+   "async": true
   },
   "function_open_editor_current": {
    "identifiers": [
@@ -11061,7 +11245,8 @@
     "function_open_editor_current",
     "f_name_current",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_params_consolidate": {
    "identifiers": [
@@ -11097,13 +11282,15 @@
     "arg_new",
     "result",
     "f_names"
-   ]
+   ],
+   "async": true
   },
   "function_params_consolidate_task_simple": {
    "identifiers": [
     "todo",
     "function_params_consolidate_task_simple"
-   ]
+   ],
+   "async": false
   },
   "function_params_new": {
    "identifiers": [
@@ -11121,7 +11308,8 @@
     "param_names",
     "lambda",
     "ast"
-   ]
+   ],
+   "async": true
   },
   "function_param_new": {
    "identifiers": [
@@ -11136,7 +11324,8 @@
     "data_function_current_get",
     "function_param_new",
     "param_name"
-   ]
+   ],
+   "async": true
   },
   "function_param_swap": {
    "identifiers": [
@@ -11164,7 +11353,8 @@
     "a",
     "b",
     "params"
-   ]
+   ],
+   "async": true
   },
   "function_param_swap_task_simple": {
    "identifiers": [
@@ -11178,7 +11368,8 @@
     "f_name2",
     "param_name_a",
     "param_name_b"
-   ]
+   ],
+   "async": true
   },
   "function_parse": {
    "identifiers": [
@@ -11191,7 +11382,8 @@
     "f_path",
     "unaliased",
     "parsed"
-   ]
+   ],
+   "async": true
   },
   "function_parse_declaration": {
    "identifiers": [
@@ -11204,7 +11396,8 @@
     "ast",
     "declaration",
     "to"
-   ]
+   ],
+   "async": true
   },
   "function_parse_declaration_js_unparse": {
    "identifiers": [
@@ -11214,7 +11407,8 @@
     "f_name",
     "declaration",
     "output"
-   ]
+   ],
+   "async": true
   },
   "function_path_declaration_unparse": {
    "identifiers": [
@@ -11224,7 +11418,8 @@
     "f_path",
     "f_name",
     "output"
-   ]
+   ],
+   "async": true
   },
   "function_path_to_name": {
    "identifiers": [
@@ -11232,7 +11427,8 @@
     "function_path_to_name",
     "f_path",
     "f_name"
-   ]
+   ],
+   "async": false
   },
   "function_read": {
    "identifiers": [
@@ -11243,7 +11439,8 @@
     "f_name",
     "f_path",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_rename": {
    "identifiers": [
@@ -11253,7 +11450,8 @@
     "function_rename",
     "f_name_before",
     "f_name_after"
-   ]
+   ],
+   "async": true
   },
   "function_run": {
    "identifiers": [
@@ -11263,7 +11461,8 @@
     "args",
     "fn",
     "result"
-   ]
+   ],
+   "async": true
   },
   "function_run_git": {
    "identifiers": [
@@ -11275,7 +11474,8 @@
     "f_name",
     "args",
     "result"
-   ]
+   ],
+   "async": true
   },
   "function_run_line": {
    "identifiers": [
@@ -11294,7 +11494,8 @@
     "line",
     "f_name",
     "args"
-   ]
+   ],
+   "async": true
   },
   "function_run_line_git": {
    "identifiers": [
@@ -11311,7 +11512,8 @@
     "line",
     "f_name",
     "args"
-   ]
+   ],
+   "async": true
   },
   "function_run_line_parse": {
    "identifiers": [
@@ -11325,7 +11527,8 @@
     "split",
     "previous",
     "unique"
-   ]
+   ],
+   "async": true
   },
   "function_run_log": {
    "identifiers": [
@@ -11341,13 +11544,15 @@
     "args",
     "unaliased",
     "result"
-   ]
+   ],
+   "async": true
   },
   "function_run_log_task_duplicate_lines_to_each": {
    "identifiers": [
     "todo",
     "function_run_log_task_duplicate_lines_to_each"
-   ]
+   ],
+   "async": false
   },
   "function_transform": {
    "identifiers": [
@@ -11362,7 +11567,8 @@
     "f_name",
     "lambda$ast",
     "output"
-   ]
+   ],
+   "async": true
   },
   "function_transform_command": {
    "identifiers": [
@@ -11374,14 +11580,16 @@
     "f_name",
     "transformer",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_transform_command_self": {
    "identifiers": [
     "function_transform_command",
     "function_transform_command_self",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "function_transform_current": {
    "identifiers": [
@@ -11390,7 +11598,8 @@
     "function_transform_current",
     "lambda",
     "f_name"
-   ]
+   ],
+   "async": true
   },
   "function_transform_marker": {
    "identifiers": [
@@ -11434,7 +11643,8 @@
     "lines",
     "message",
     "size"
-   ]
+   ],
+   "async": true
   },
   "function_transform_marker_all": {
    "identifiers": [
@@ -11469,7 +11679,8 @@
     "markers",
     "v",
     "a"
-   ]
+   ],
+   "async": true
   },
   "function_transform_marker_arg": {
    "identifiers": [
@@ -11482,7 +11693,8 @@
     "stack1",
     "stack2",
     "a"
-   ]
+   ],
+   "async": false
   },
   "function_transform_marker_current": {
    "identifiers": [
@@ -11493,7 +11705,8 @@
     "lambda$a",
     "f_name_current",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_transform_marker_empty": {
    "identifiers": [
@@ -11524,7 +11737,8 @@
     "function_transform_marker_empty",
     "f_name",
     "v"
-   ]
+   ],
+   "async": true
   },
   "function_transform_result": {
    "identifiers": [
@@ -11536,7 +11750,8 @@
     "parsed",
     "ast",
     "result"
-   ]
+   ],
+   "async": true
   },
   "function_types": {
    "identifiers": [
@@ -11551,7 +11766,8 @@
     "f_name",
     "ast",
     "f_types"
-   ]
+   ],
+   "async": true
   },
   "function_type_first": {
    "identifiers": [
@@ -11568,7 +11784,8 @@
     "list",
     "la",
     "node"
-   ]
+   ],
+   "async": true
   },
   "function_wrap": {
    "identifiers": [
@@ -11605,7 +11822,8 @@
     "code",
     "body_block",
     "item"
-   ]
+   ],
+   "async": true
   },
   "function_wrap_suffix_add": {
    "identifiers": [
@@ -11618,7 +11836,8 @@
     "unaliased",
     "f_name_wrapped",
     "v"
-   ]
+   ],
+   "async": true
   },
   "git_acp": {
    "identifiers": [
@@ -11627,7 +11846,8 @@
     "command_line_git",
     "git_acp",
     "message"
-   ]
+   ],
+   "async": true
   },
   "git_acp_call": {
    "identifiers": [
@@ -11638,7 +11858,8 @@
     "message",
     "concat",
     "join"
-   ]
+   ],
+   "async": true
   },
   "git_acp_timestamp": {
    "identifiers": [
@@ -11647,7 +11868,8 @@
     "execSync",
     "git_acp_timestamp",
     "message"
-   ]
+   ],
+   "async": true
   },
   "git_commit": {
    "identifiers": [
@@ -11656,7 +11878,8 @@
     "git_commit",
     "message",
     "lambda"
-   ]
+   ],
+   "async": true
   },
   "git_push": {
    "identifiers": [
@@ -11683,12 +11906,14 @@
     "before",
     "hours",
     "lambda$previous"
-   ]
+   ],
+   "async": true
   },
   "git_push_command": {
    "identifiers": [
     "git_push_command"
-   ]
+   ],
+   "async": false
   },
   "git_push_schedule": {
    "identifiers": [
@@ -11702,7 +11927,8 @@
     "git_push_schedule",
     "command",
     "stdout"
-   ]
+   ],
+   "async": true
   },
   "git_push_schedule_check": {
    "identifiers": [
@@ -11718,7 +11944,8 @@
     "git_push_schedule_check",
     "name",
     "exists"
-   ]
+   ],
+   "async": true
   },
   "git_push_schedule_command": {
    "identifiers": [
@@ -11734,13 +11961,15 @@
     "paths",
     "result",
     "command"
-   ]
+   ],
+   "async": true
   },
   "git_push_schedule_task_name": {
    "identifiers": [
     "git_push_schedule_task_name",
     "name"
-   ]
+   ],
+   "async": false
   },
   "git_rebase": {
    "identifiers": [
@@ -11749,7 +11978,8 @@
     "git_rebase",
     "e",
     "abortErr"
-   ]
+   ],
+   "async": true
   },
   "html_name_to_path": {
    "identifiers": [
@@ -11759,7 +11989,8 @@
     "name",
     "file_name",
     "file_path"
-   ]
+   ],
+   "async": false
   },
   "html_new": {
    "identifiers": [
@@ -11778,7 +12009,8 @@
     "html_new",
     "name",
     "file_path"
-   ]
+   ],
+   "async": true
   },
   "html_overwrite": {
    "identifiers": [
@@ -11789,7 +12021,8 @@
     "body",
     "file_path",
     "contents"
-   ]
+   ],
+   "async": true
   },
   "html_update": {
    "identifiers": [
@@ -11803,13 +12036,15 @@
     "name_prefixed",
     "ext",
     "body"
-   ]
+   ],
+   "async": true
   },
   "identity": {
    "identifiers": [
     "identity",
     "a"
-   ]
+   ],
+   "async": false
   },
   "import_install": {
    "identifiers": [
@@ -11818,7 +12053,8 @@
     "name",
     "err",
     "code"
-   ]
+   ],
+   "async": true
   },
   "integer_is": {
    "identifiers": [
@@ -11828,7 +12064,8 @@
     "ii",
     "Number",
     "isInteger"
-   ]
+   ],
+   "async": false
   },
   "integer_is_assert": {
    "identifiers": [
@@ -11837,7 +12074,8 @@
     "integer_is_assert",
     "index",
     "ii"
-   ]
+   ],
+   "async": false
   },
   "integer_to": {
    "identifiers": [
@@ -11847,7 +12085,8 @@
     "parseInt",
     "Number",
     "isNaN"
-   ]
+   ],
+   "async": false
   },
   "json_format_to": {
    "identifiers": [
@@ -11855,7 +12094,8 @@
     "object",
     "JSON",
     "stringify"
-   ]
+   ],
+   "async": false
   },
   "json_from": {
    "identifiers": [
@@ -11863,7 +12103,8 @@
     "json",
     "JSON",
     "parse"
-   ]
+   ],
+   "async": false
   },
   "json_to": {
    "identifiers": [
@@ -11871,7 +12112,8 @@
     "object",
     "JSON",
     "stringify"
-   ]
+   ],
+   "async": false
   },
   "js_arrow_blockify": {
    "identifiers": [
@@ -11887,7 +12129,8 @@
     "ast",
     "type",
     "property_name"
-   ]
+   ],
+   "async": true
   },
   "js_arrow_to_function": {
    "identifiers": [
@@ -11898,7 +12141,8 @@
     "lambda",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_atomize": {
    "identifiers": [
@@ -11939,7 +12183,8 @@
     "v",
     "stack",
     "stack1"
-   ]
+   ],
+   "async": true
   },
   "js_atomize_function": {
    "identifiers": [
@@ -11988,7 +12233,8 @@
     "name",
     "copy",
     "expression"
-   ]
+   ],
+   "async": true
   },
   "js_auto": {
    "identifiers": [
@@ -12012,7 +12258,8 @@
     "transforms",
     "lambda",
     "t"
-   ]
+   ],
+   "async": true
   },
   "js_await_add": {
    "identifiers": [
@@ -12026,13 +12273,15 @@
     "lambda",
     "v",
     "stack"
-   ]
+   ],
+   "async": false
   },
   "js_await_add_task_simple": {
    "identifiers": [
     "todo",
     "js_await_add_task_simple"
-   ]
+   ],
+   "async": false
   },
   "js_bang_to_not": {
    "identifiers": [
@@ -12060,7 +12309,8 @@
     "name",
     "expression",
     "arguments2"
-   ]
+   ],
+   "async": false
   },
   "js_block_child_graph": {
    "identifiers": [
@@ -12103,7 +12353,8 @@
     "includes",
     "vs",
     "edges"
-   ]
+   ],
+   "async": false
   },
   "js_block_child_graph_unparse": {
    "identifiers": [
@@ -12137,7 +12388,8 @@
     "edge",
     "waited",
     "mapped"
-   ]
+   ],
+   "async": true
   },
   "js_block_insert": {
    "identifiers": [
@@ -12152,7 +12404,8 @@
     "block_body",
     "block_body_item",
     "block_body_item_index"
-   ]
+   ],
+   "async": false
   },
   "js_calls_to_each": {
    "identifiers": [
@@ -12164,13 +12417,15 @@
     "v",
     "ast2",
     "type"
-   ]
+   ],
+   "async": false
   },
   "js_calls_to_each_task_simple": {
    "identifiers": [
     "todo",
     "js_calls_to_each_task_simple"
-   ]
+   ],
+   "async": false
   },
   "js_call_fill": {
    "identifiers": [
@@ -12211,7 +12466,8 @@
     "valid",
     "parsed",
     "async_is"
-   ]
+   ],
+   "async": true
   },
   "js_call_insert": {
    "identifiers": [
@@ -12226,7 +12482,8 @@
     "index",
     "code",
     "parsed"
-   ]
+   ],
+   "async": false
   },
   "js_call_new": {
    "identifiers": [
@@ -12265,7 +12522,8 @@
     "parsed",
     "v",
     "async_is"
-   ]
+   ],
+   "async": true
   },
   "js_call_new_code": {
    "identifiers": [
@@ -12312,7 +12570,8 @@
     "args_code",
     "return_name",
     "v"
-   ]
+   ],
+   "async": true
   },
   "js_call_new_expression": {
    "identifiers": [
@@ -12323,7 +12582,8 @@
     "ast",
     "code",
     "expression"
-   ]
+   ],
+   "async": true
   },
   "js_code_arrow": {
    "identifiers": [
@@ -12332,7 +12592,8 @@
     "js_code_arrow",
     "oc",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_assign": {
    "identifiers": [
@@ -12340,19 +12601,22 @@
     "left",
     "right",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_await": {
    "identifiers": [
     "js_code_await",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_braces_empty": {
    "identifiers": [
     "js_code_wrap_braces",
     "js_code_braces_empty"
-   ]
+   ],
+   "async": false
   },
   "js_code_call": {
    "identifiers": [
@@ -12362,7 +12626,8 @@
     "js_code_call",
     "fn_name",
     "args"
-   ]
+   ],
+   "async": false
   },
   "js_code_call_args": {
    "identifiers": [
@@ -12372,7 +12637,8 @@
     "fn_name",
     "args",
     "joined"
-   ]
+   ],
+   "async": false
   },
   "js_code_call_args_await_maybe": {
    "identifiers": [
@@ -12384,7 +12650,8 @@
     "args_code",
     "declaration",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_call_statement": {
    "identifiers": [
@@ -12392,7 +12659,8 @@
     "js_code_statement",
     "js_code_call_statement",
     "f_name"
-   ]
+   ],
+   "async": false
   },
   "js_code_declaration": {
    "identifiers": [
@@ -12404,13 +12672,15 @@
     "inside",
     "async_is",
     "prefix"
-   ]
+   ],
+   "async": false
   },
   "js_code_export": {
    "identifiers": [
     "js_code_export",
     "code_declaration"
-   ]
+   ],
+   "async": false
   },
   "js_code_import_single": {
    "identifiers": [
@@ -12421,7 +12691,8 @@
     "import_",
     "from",
     "v"
-   ]
+   ],
+   "async": false
   },
   "js_code_let_assign": {
    "identifiers": [
@@ -12430,7 +12701,8 @@
     "js_code_let_assign",
     "left",
     "right"
-   ]
+   ],
+   "async": false
   },
   "js_code_or": {
    "identifiers": [
@@ -12439,31 +12711,36 @@
     "left",
     "right",
     "v2"
-   ]
+   ],
+   "async": false
   },
   "js_code_parenthesis_open_close": {
    "identifiers": [
     "js_code_wrap_parenthesis",
     "js_code_parenthesis_open_close"
-   ]
+   ],
+   "async": false
   },
   "js_code_return": {
    "identifiers": [
     "js_code_return",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_return_empty": {
    "identifiers": [
     "js_code_return",
     "js_code_return_empty"
-   ]
+   ],
+   "async": false
   },
   "js_code_statement": {
    "identifiers": [
     "js_code_statement",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_code_string": {
    "identifiers": [
@@ -12475,19 +12752,22 @@
     "value_string",
     "parsed_string",
     "code_string"
-   ]
+   ],
+   "async": false
   },
   "js_code_wrap_braces": {
    "identifiers": [
     "js_code_wrap_braces",
     "inside"
-   ]
+   ],
+   "async": false
   },
   "js_code_wrap_parenthesis": {
    "identifiers": [
     "js_code_wrap_parenthesis",
     "inside"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_asyncify": {
    "identifiers": [
@@ -12496,7 +12776,8 @@
     "js_declaration_asyncify",
     "declaration",
     "other"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_name": {
    "identifiers": [
@@ -12505,14 +12786,16 @@
     "declaration",
     "declaration_id",
     "name"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_params_get": {
    "identifiers": [
     "js_declaration_params_get",
     "declaration",
     "params"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_params_names": {
    "identifiers": [
@@ -12528,7 +12811,8 @@
     "declaration",
     "params",
     "params_names"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_params_names_node": {
    "identifiers": [
@@ -12550,7 +12834,8 @@
     "properties",
     "value",
     "message"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_param_add": {
    "identifiers": [
@@ -12563,7 +12848,8 @@
     "param_name",
     "params",
     "item"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_param_named": {
    "identifiers": [
@@ -12573,23 +12859,26 @@
     "declaration",
     "param_name",
     "params"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_single": {
    "identifiers": [
-    "log",
     "list_adder",
     "list_single",
     "js_visit_type",
     "js_declaration_single",
-    "parsed",
-    "nameds",
+    "ast",
+    "lambda2",
     "la",
+    "lambda",
     "v",
     "node",
+    "nameds",
     "named",
     "declaration"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_single_block_blody": {
    "identifiers": [
@@ -12599,7 +12888,8 @@
     "ast",
     "declaration",
     "body_block"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_single_params_add": {
    "identifiers": [
@@ -12611,7 +12901,8 @@
     "param_names",
     "declaration",
     "param_name"
-   ]
+   ],
+   "async": false
   },
   "js_declaration_to_block_body": {
    "identifiers": [
@@ -12619,7 +12910,8 @@
     "declaration",
     "body",
     "body_block"
-   ]
+   ],
+   "async": false
   },
   "js_declare": {
    "identifiers": [
@@ -12631,7 +12923,8 @@
     "init",
     "assign_code",
     "assign"
-   ]
+   ],
+   "async": false
   },
   "js_declare_assign": {
    "identifiers": [
@@ -12650,7 +12943,8 @@
     "stack3",
     "n",
     "value"
-   ]
+   ],
+   "async": false
   },
   "js_declare_assign_null": {
    "identifiers": [
@@ -12671,7 +12965,8 @@
     "ast",
     "lambda",
     "value"
-   ]
+   ],
+   "async": false
   },
   "js_declare_init_set": {
    "identifiers": [
@@ -12685,7 +12980,8 @@
     "b",
     "declarations",
     "declarators"
-   ]
+   ],
+   "async": false
   },
   "js_dollar": {
    "identifiers": [
@@ -12768,7 +13064,8 @@
     "second",
     "ne",
     "remaining"
-   ]
+   ],
+   "async": true
   },
   "js_dollar_a": {
    "identifiers": [
@@ -12800,7 +13097,8 @@
     "lambda3",
     "item",
     "replacement"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_a_generic": {
    "identifiers": [
@@ -12819,7 +13117,8 @@
     "type_is",
     "declarations",
     "after"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_f": {
    "identifiers": [
@@ -12835,7 +13134,8 @@
     "code",
     "parsed",
     "lambda"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_g": {
    "identifiers": [
@@ -12876,7 +13176,8 @@
     "assign",
     "index",
     "lambda"
-   ]
+   ],
+   "async": true
   },
   "js_dollar_i": {
    "identifiers": [
@@ -12890,7 +13191,8 @@
     "stack1",
     "inside",
     "from"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_ie": {
    "identifiers": [
@@ -12916,7 +13218,8 @@
     "ast",
     "expression",
     "name"
-   ]
+   ],
+   "async": true
   },
   "js_dollar_r": {
    "identifiers": [
@@ -12937,7 +13240,8 @@
     "to",
     "expressions",
     "second"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_rf": {
    "identifiers": [
@@ -12955,7 +13259,8 @@
     "js_dollar_rf",
     "stack1",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_rt": {
    "identifiers": [
@@ -12973,7 +13278,8 @@
     "js_dollar_rt",
     "stack1",
     "code"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_s": {
    "identifiers": [
@@ -13024,19 +13330,22 @@
     "init2",
     "assign",
     "index_next"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_task_each_code_own_fn": {
    "identifiers": [
     "todo",
     "js_dollar_task_each_code_own_fn"
-   ]
+   ],
+   "async": false
   },
   "js_dollar_task_if_else_to_generic": {
    "identifiers": [
     "todo",
     "js_dollar_task_if_else_to_generic"
-   ]
+   ],
+   "async": false
   },
   "js_format": {
    "identifiers": [
@@ -13049,7 +13358,8 @@
     "parser",
     "plugins",
     "braceStyle"
-   ]
+   ],
+   "async": true
   },
   "js_function_id_add": {
    "identifiers": [
@@ -13067,7 +13377,8 @@
     "id",
     "unique",
     "value"
-   ]
+   ],
+   "async": false
   },
   "js_function_last_asyncify": {
    "identifiers": [
@@ -13082,7 +13393,8 @@
     "f",
     "property_name",
     "async"
-   ]
+   ],
+   "async": false
   },
   "js_identifiers": {
    "identifiers": [
@@ -13094,7 +13406,8 @@
     "la",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_identifiers_named": {
    "identifiers": [
@@ -13107,7 +13420,8 @@
     "identifiers",
     "identifiers_named",
     "i"
-   ]
+   ],
+   "async": false
   },
   "js_identifiers_names": {
    "identifiers": [
@@ -13120,7 +13434,8 @@
     "la",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_identifiers_to_names": {
    "identifiers": [
@@ -13135,7 +13450,8 @@
     "b2",
     "message2",
     "names"
-   ]
+   ],
+   "async": false
   },
   "js_identifier_defineds": {
    "identifiers": [
@@ -13185,7 +13501,8 @@
     "node",
     "params_names",
     "defineds"
-   ]
+   ],
+   "async": false
   },
   "js_identifier_is": {
    "identifiers": [
@@ -13193,7 +13510,8 @@
     "js_identifier_is",
     "node",
     "ii"
-   ]
+   ],
+   "async": false
   },
   "js_identifier_replace": {
    "identifiers": [
@@ -13212,7 +13530,8 @@
     "lambda",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_identifier_unique": {
    "identifiers": [
@@ -13232,7 +13551,8 @@
     "unique",
     "attempt",
     "suffix"
-   ]
+   ],
+   "async": false
   },
   "js_identifier_unique_ast": {
    "identifiers": [
@@ -13243,7 +13563,8 @@
     "property_name",
     "existing",
     "unique"
-   ]
+   ],
+   "async": false
   },
   "js_if_blockify": {
    "identifiers": [
@@ -13267,7 +13588,8 @@
     "ast",
     "type",
     "property_name"
-   ]
+   ],
+   "async": true
   },
   "js_if_blockify_generic": {
    "identifiers": [
@@ -13295,7 +13617,8 @@
     "includes",
     "bs_body",
     "r"
-   ]
+   ],
+   "async": true
   },
   "js_if_else_if_combine": {
    "identifiers": [
@@ -13329,7 +13652,8 @@
     "test2",
     "code_expression",
     "expression"
-   ]
+   ],
+   "async": true
   },
   "js_imports": {
    "identifiers": [
@@ -13350,7 +13674,8 @@
     "ast",
     "imports_declarations",
     "imports"
-   ]
+   ],
+   "async": false
   },
   "js_imports_all": {
    "identifiers": [
@@ -13358,7 +13683,8 @@
     "js_imports_all",
     "ast",
     "imports"
-   ]
+   ],
+   "async": false
   },
   "js_imports_missing": {
    "identifiers": [
@@ -13381,7 +13707,8 @@
     "missing",
     "f_names",
     "imports_missing"
-   ]
+   ],
+   "async": false
   },
   "js_imports_missing_add": {
    "identifiers": [
@@ -13390,63 +13717,74 @@
     "js_imports_missing_add",
     "ast",
     "imports_missing"
-   ]
+   ],
+   "async": true
   },
   "js_import_inside": {
    "identifiers": [
     "js_import_inside",
     "ast"
-   ]
+   ],
+   "async": false
   },
   "js_import_inside_task_simple": {
    "identifiers": [
     "todo",
     "js_import_inside_task_simple"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_arguments": {
    "identifiers": [
     "js_keyword_arguments",
     "a"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_false": {
    "identifiers": [
     "js_keyword_false",
     "v"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_from": {
    "identifiers": [
     "js_keyword_from",
     "v"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_function": {
    "identifiers": [
     "js_keyword_function"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_if": {
    "identifiers": [
     "js_keyword_if"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_import": {
    "identifiers": [
     "js_keyword_import",
     "v"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_let": {
    "identifiers": [
     "js_keyword_let"
-   ]
+   ],
+   "async": false
   },
   "js_keyword_null": {
    "identifiers": [
     "js_keyword_null"
-   ]
+   ],
+   "async": false
   },
   "js_left_right_set": {
    "identifiers": [
@@ -13455,7 +13793,8 @@
     "expression",
     "left",
     "right"
-   ]
+   ],
+   "async": false
   },
   "js_let_add": {
    "identifiers": [
@@ -13483,13 +13822,15 @@
     "defineds",
     "includes",
     "assign"
-   ]
+   ],
+   "async": false
   },
   "js_let_add_task_simple": {
    "identifiers": [
     "todo",
     "js_let_add_task_simple"
-   ]
+   ],
+   "async": false
   },
   "js_markers": {
    "identifiers": [
@@ -13500,7 +13841,8 @@
     "ast",
     "visitors",
     "markers"
-   ]
+   ],
+   "async": false
   },
   "js_marker_insert": {
    "identifiers": [
@@ -13518,7 +13860,8 @@
     "code_string",
     "f_name",
     "args_code"
-   ]
+   ],
+   "async": true
   },
   "js_marker_is": {
    "identifiers": [
@@ -13527,7 +13870,8 @@
     "js_marker_is",
     "v",
     "marker_name_actual"
-   ]
+   ],
+   "async": false
   },
   "js_marker_named": {
    "identifiers": [
@@ -13548,7 +13892,8 @@
     "marker_name_actual",
     "v2",
     "v3"
-   ]
+   ],
+   "async": false
   },
   "js_marker_named_ast": {
    "identifiers": [
@@ -13566,7 +13911,8 @@
     "result",
     "filtered",
     "marker_v"
-   ]
+   ],
+   "async": false
   },
   "js_marker_named_ast_arg": {
    "identifiers": [
@@ -13577,7 +13923,8 @@
     "m_name_to",
     "marker_v_to",
     "a_to"
-   ]
+   ],
+   "async": false
   },
   "js_marker_name_get": {
    "identifiers": [
@@ -13608,7 +13955,8 @@
     "v7",
     "stack2",
     "value"
-   ]
+   ],
+   "async": false
   },
   "js_node_atomize": {
    "identifiers": [
@@ -13666,7 +14014,8 @@
     "copy",
     "assign",
     "v2"
-   ]
+   ],
+   "async": true
   },
   "js_node_is": {
    "identifiers": [
@@ -13674,7 +14023,8 @@
     "js_node_is",
     "n",
     "ni"
-   ]
+   ],
+   "async": false
   },
   "js_node_type": {
    "identifiers": [
@@ -13682,7 +14032,8 @@
     "js_node_type",
     "n",
     "nt"
-   ]
+   ],
+   "async": false
   },
   "js_node_types": {
    "identifiers": [
@@ -13693,7 +14044,8 @@
     "ast",
     "la",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_node_types_includes": {
    "identifiers": [
@@ -13702,7 +14054,8 @@
     "js_node_types_includes",
     "ast",
     "node_type"
-   ]
+   ],
+   "async": false
   },
   "js_node_types_is": {
    "identifiers": [
@@ -13716,7 +14069,8 @@
     "type",
     "type_is",
     "match"
-   ]
+   ],
+   "async": false
   },
   "js_node_type_is": {
    "identifiers": [
@@ -13726,7 +14080,8 @@
     "node",
     "type",
     "type_is"
-   ]
+   ],
+   "async": false
   },
   "js_node_type_is_assert": {
    "identifiers": [
@@ -13736,7 +14091,8 @@
     "node",
     "type",
     "type_is"
-   ]
+   ],
+   "async": false
   },
   "js_node_type_is_if": {
    "identifiers": [
@@ -13746,7 +14102,8 @@
     "type",
     "lambda",
     "type_is"
-   ]
+   ],
+   "async": false
   },
   "js_node_type_is_if_async": {
    "identifiers": [
@@ -13756,7 +14113,8 @@
     "type",
     "lambda",
     "type_is"
-   ]
+   ],
+   "async": true
   },
   "js_node_type_not_is": {
    "identifiers": [
@@ -13766,7 +14124,8 @@
     "type",
     "type_is",
     "nti"
-   ]
+   ],
+   "async": false
   },
   "js_null": {
    "identifiers": [
@@ -13775,13 +14134,15 @@
     "js_null",
     "init_code",
     "n"
-   ]
+   ],
+   "async": false
   },
   "js_operator_or": {
    "identifiers": [
     "js_operator_or",
     "v2"
-   ]
+   ],
+   "async": false
   },
   "js_outside_move": {
    "identifiers": [
@@ -13805,7 +14166,8 @@
     "f_path",
     "lambda2",
     "lambda3"
-   ]
+   ],
+   "async": true
   },
   "js_parse": {
    "identifiers": [
@@ -13819,7 +14181,8 @@
     "ecmaVersion",
     "sourceType",
     "e"
-   ]
+   ],
+   "async": false
   },
   "js_parse_expression": {
    "identifiers": [
@@ -13830,7 +14193,8 @@
     "code_expression",
     "statement",
     "expression"
-   ]
+   ],
+   "async": false
   },
   "js_parse_statement": {
    "identifiers": [
@@ -13845,7 +14209,8 @@
     "block",
     "statements",
     "statement"
-   ]
+   ],
+   "async": false
   },
   "js_parse_statement_module": {
    "identifiers": [
@@ -13856,7 +14221,8 @@
     "ast",
     "body",
     "statement"
-   ]
+   ],
+   "async": false
   },
   "js_return_atomize": {
    "identifiers": [
@@ -13879,7 +14245,8 @@
     "node",
     "identifier_not",
     "argument"
-   ]
+   ],
+   "async": true
   },
   "js_return_code_replace": {
    "identifiers": [
@@ -13892,7 +14259,8 @@
     "replace_to",
     "from",
     "expression"
-   ]
+   ],
+   "async": false
   },
   "js_return_empty": {
    "identifiers": [
@@ -13901,7 +14269,8 @@
     "js_return_empty",
     "code",
     "from"
-   ]
+   ],
+   "async": false
   },
   "js_return_name": {
    "identifiers": [
@@ -13925,7 +14294,8 @@
     "argument",
     "name",
     "name_argument"
-   ]
+   ],
+   "async": false
   },
   "js_return_on": {
    "identifiers": [
@@ -13935,7 +14305,8 @@
     "identifier_if",
     "identifier_not",
     "argument"
-   ]
+   ],
+   "async": false
   },
   "js_return_on_async": {
    "identifiers": [
@@ -13945,7 +14316,8 @@
     "identifier_if",
     "identifier_not",
     "argument"
-   ]
+   ],
+   "async": true
   },
   "js_stack_declaration_asyncify": {
    "identifiers": [
@@ -13961,7 +14333,8 @@
     "stack",
     "declaration",
     "last"
-   ]
+   ],
+   "async": false
   },
   "js_stack_filtered": {
    "identifiers": [
@@ -13973,7 +14346,8 @@
     "type",
     "filtered",
     "n"
-   ]
+   ],
+   "async": false
   },
   "js_stack_filtered_each": {
    "identifiers": [
@@ -13984,7 +14358,8 @@
     "stack",
     "type",
     "lambda"
-   ]
+   ],
+   "async": false
   },
   "js_stack_filtered_multiple": {
    "identifiers": [
@@ -14001,7 +14376,8 @@
     "item",
     "result",
     "filtered"
-   ]
+   ],
+   "async": false
   },
   "js_stack_filtered_multiple_each": {
    "identifiers": [
@@ -14012,7 +14388,8 @@
     "types",
     "lambda$node",
     "filtered"
-   ]
+   ],
+   "async": false
   },
   "js_stack_last": {
    "identifiers": [
@@ -14026,7 +14403,8 @@
     "stack",
     "type",
     "last"
-   ]
+   ],
+   "async": false
   },
   "js_stack_last_multiple": {
    "identifiers": [
@@ -14042,7 +14420,8 @@
     "types",
     "filtered",
     "last"
-   ]
+   ],
+   "async": false
   },
   "js_stack_list_block_is": {
    "identifiers": [
@@ -14054,7 +14433,8 @@
     "index",
     "stack1",
     "stack2"
-   ]
+   ],
+   "async": false
   },
   "js_statement_call_get": {
    "identifiers": [
@@ -14068,7 +14448,8 @@
     "declaration",
     "expression_next",
     "declarations"
-   ]
+   ],
+   "async": false
   },
   "js_statement_return": {
    "identifiers": [
@@ -14078,7 +14459,8 @@
     "code",
     "code2",
     "item"
-   ]
+   ],
+   "async": false
   },
   "js_type": {
    "identifiers": [
@@ -14089,13 +14471,15 @@
     "node_type",
     "vs",
     "la"
-   ]
+   ],
+   "async": false
   },
   "js_types_function": {
    "identifiers": [
     "js_types_function",
     "types_function"
-   ]
+   ],
+   "async": false
   },
   "js_types_function_includes": {
    "identifiers": [
@@ -14105,7 +14489,8 @@
     "item",
     "f_types",
     "includes"
-   ]
+   ],
+   "async": false
   },
   "js_unparse": {
    "identifiers": [
@@ -14132,7 +14517,8 @@
     "v",
     "node",
     "v2"
-   ]
+   ],
+   "async": false
   },
   "js_unparse_inner": {
    "identifiers": [
@@ -14140,7 +14526,8 @@
     "js_unparse_inner",
     "ast",
     "output"
-   ]
+   ],
+   "async": false
   },
   "js_visit": {
    "identifiers": [
@@ -14153,7 +14540,8 @@
     "js_visit",
     "ast",
     "lambda$v"
-   ]
+   ],
+   "async": false
   },
   "js_visitors": {
    "identifiers": [
@@ -14165,7 +14553,8 @@
     "lambda",
     "la",
     "vs"
-   ]
+   ],
+   "async": false
   },
   "js_visit_children_get": {
    "identifiers": [
@@ -14177,7 +14566,8 @@
     "js_visit_children_get",
     "n",
     "p"
-   ]
+   ],
+   "async": false
   },
   "js_visit_each": {
    "identifiers": [
@@ -14193,7 +14583,8 @@
     "la",
     "v",
     "vs"
-   ]
+   ],
+   "async": true
   },
   "js_visit_each_async": {
    "identifiers": [
@@ -14205,7 +14596,8 @@
     "lambda",
     "vs",
     "la"
-   ]
+   ],
+   "async": true
   },
   "js_visit_filter": {
    "identifiers": [
@@ -14213,7 +14605,8 @@
     "list_is",
     "js_visit_filter",
     "n"
-   ]
+   ],
+   "async": false
   },
   "js_visit_match": {
    "identifiers": [
@@ -14228,7 +14621,8 @@
     "v",
     "node",
     "v_match"
-   ]
+   ],
+   "async": false
   },
   "js_visit_nodes": {
    "identifiers": [
@@ -14239,7 +14633,8 @@
     "on_each",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_visit_type": {
    "identifiers": [
@@ -14253,7 +14648,8 @@
     "ast",
     "type",
     "lambda$v"
-   ]
+   ],
+   "async": false
   },
   "js_visit_types": {
    "identifiers": [
@@ -14271,7 +14667,8 @@
     "lambda",
     "v",
     "node"
-   ]
+   ],
+   "async": false
   },
   "js_visit_type_each_async": {
    "identifiers": [
@@ -14284,13 +14681,15 @@
     "lambda",
     "vs",
     "la"
-   ]
+   ],
+   "async": true
   },
   "lambda_invoke": {
    "identifiers": [
     "lambda_invoke",
     "lambda"
-   ]
+   ],
+   "async": false
   },
   "lambda_invoke_multiple": {
    "identifiers": [
@@ -14298,7 +14697,8 @@
     "each",
     "lambda_invoke_multiple",
     "afters"
-   ]
+   ],
+   "async": false
   },
   "lists_get": {
    "identifiers": [
@@ -14309,7 +14709,8 @@
     "index",
     "items",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_add": {
    "identifiers": [
@@ -14317,7 +14718,8 @@
     "list",
     "item",
     "push"
-   ]
+   ],
+   "async": false
   },
   "list_adder": {
    "identifiers": [
@@ -14327,7 +14729,8 @@
     "lambda$la",
     "fn",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_adder_async": {
    "identifiers": [
@@ -14337,7 +14740,8 @@
     "list",
     "list_adder_inner",
     "item"
-   ]
+   ],
+   "async": true
   },
   "list_adder_generic": {
    "identifiers": [
@@ -14347,7 +14751,8 @@
     "list",
     "list_adder_inner",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_adder_multiple": {
    "identifiers": [
@@ -14358,7 +14763,8 @@
     "lambda",
     "fn",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_adder_unique": {
    "identifiers": [
@@ -14367,7 +14773,8 @@
     "list_adder_unique",
     "lambda",
     "items"
-   ]
+   ],
+   "async": false
   },
   "list_adder_unique_async": {
    "identifiers": [
@@ -14377,7 +14784,8 @@
     "list_adder_unique_async",
     "lambda",
     "items"
-   ]
+   ],
+   "async": true
   },
   "list_add_first": {
    "identifiers": [
@@ -14385,7 +14793,8 @@
     "list_add_first",
     "body",
     "statement"
-   ]
+   ],
+   "async": false
   },
   "list_add_if_not_includes": {
    "identifiers": [
@@ -14396,7 +14805,8 @@
     "list",
     "item",
     "exists"
-   ]
+   ],
+   "async": false
   },
   "list_add_multiple": {
    "identifiers": [
@@ -14404,7 +14814,8 @@
     "list",
     "items",
     "push"
-   ]
+   ],
+   "async": false
   },
   "list_all": {
    "identifiers": [
@@ -14415,7 +14826,8 @@
     "list",
     "lambda$item",
     "filtered"
-   ]
+   ],
+   "async": false
   },
   "list_any": {
    "identifiers": [
@@ -14427,7 +14839,8 @@
     "list",
     "lambda$item",
     "filtered"
-   ]
+   ],
+   "async": false
   },
   "list_concat": {
    "identifiers": [
@@ -14435,14 +14848,16 @@
     "a",
     "b",
     "concat"
-   ]
+   ],
+   "async": false
   },
   "list_copy": {
    "identifiers": [
     "list_copy",
     "original",
     "copy"
-   ]
+   ],
+   "async": false
   },
   "list_copy_reverse": {
    "identifiers": [
@@ -14451,7 +14866,8 @@
     "list_copy_reverse",
     "previous",
     "copy"
-   ]
+   ],
+   "async": false
   },
   "list_difference": {
    "identifiers": [
@@ -14463,14 +14879,16 @@
     "other",
     "la",
     "l"
-   ]
+   ],
+   "async": false
   },
   "list_empty": {
    "identifiers": [
     "object_property_set",
     "list_empty",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_empty_is": {
    "identifiers": [
@@ -14478,7 +14896,8 @@
     "list_empty_is",
     "list",
     "e"
-   ]
+   ],
+   "async": false
   },
   "list_empty_not_is": {
    "identifiers": [
@@ -14486,7 +14905,8 @@
     "list_empty_not_is",
     "list",
     "ne"
-   ]
+   ],
+   "async": false
   },
   "list_empty_not_is_assert": {
    "identifiers": [
@@ -14495,7 +14915,8 @@
     "list_empty_not_is_assert",
     "list",
     "ne"
-   ]
+   ],
+   "async": false
   },
   "list_filter": {
    "identifiers": [
@@ -14506,7 +14927,8 @@
     "lambda$item",
     "l",
     "filter"
-   ]
+   ],
+   "async": false
   },
   "list_filter_property": {
    "identifiers": [
@@ -14519,7 +14941,8 @@
     "property_name",
     "property_value",
     "filter"
-   ]
+   ],
+   "async": false
   },
   "list_find": {
    "identifiers": [
@@ -14529,7 +14952,8 @@
     "list",
     "filter",
     "filtered"
-   ]
+   ],
+   "async": false
   },
   "list_find_property": {
    "identifiers": [
@@ -14540,7 +14964,8 @@
     "property_name",
     "property_value",
     "filter"
-   ]
+   ],
+   "async": false
   },
   "list_first": {
    "identifiers": [
@@ -14549,7 +14974,8 @@
     "list",
     "index",
     "first"
-   ]
+   ],
+   "async": false
   },
   "list_first_second": {
    "identifiers": [
@@ -14563,7 +14989,8 @@
     "property_name",
     "value_get",
     "result"
-   ]
+   ],
+   "async": false
   },
   "list_get": {
    "identifiers": [
@@ -14579,7 +15006,8 @@
     "item",
     "object_get",
     "v"
-   ]
+   ],
+   "async": false
   },
   "list_get_end": {
    "identifiers": [
@@ -14591,7 +15019,8 @@
     "index_from_end",
     "difference",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_get_end_1": {
    "identifiers": [
@@ -14599,7 +15028,8 @@
     "list_get_end_1",
     "stack",
     "e1"
-   ]
+   ],
+   "async": false
   },
   "list_get_end_2": {
    "identifiers": [
@@ -14607,14 +15037,16 @@
     "list_get_end_2",
     "stack",
     "e2"
-   ]
+   ],
+   "async": false
   },
   "list_get_end_3": {
    "identifiers": [
     "list_get_end",
     "list_get_end_3",
     "stack"
-   ]
+   ],
+   "async": false
   },
   "list_includes": {
    "identifiers": [
@@ -14622,7 +15054,8 @@
     "list",
     "item",
     "includes"
-   ]
+   ],
+   "async": false
   },
   "list_index_is": {
    "identifiers": [
@@ -14636,7 +15069,8 @@
     "v",
     "index_last",
     "ii"
-   ]
+   ],
+   "async": false
   },
   "list_index_last": {
    "identifiers": [
@@ -14644,7 +15078,8 @@
     "list_index_last",
     "list",
     "index_last"
-   ]
+   ],
+   "async": false
   },
   "list_index_of": {
    "identifiers": [
@@ -14654,7 +15089,8 @@
     "item",
     "index",
     "indexOf"
-   ]
+   ],
+   "async": false
   },
   "list_index_of_delta": {
    "identifiers": [
@@ -14665,7 +15101,8 @@
     "delta",
     "index",
     "index_next"
-   ]
+   ],
+   "async": false
   },
   "list_index_of_next": {
    "identifiers": [
@@ -14675,7 +15112,8 @@
     "list",
     "item",
     "delta"
-   ]
+   ],
+   "async": false
   },
   "list_index_of_previous": {
    "identifiers": [
@@ -14686,7 +15124,8 @@
     "item",
     "delta",
     "index_previous"
-   ]
+   ],
+   "async": false
   },
   "list_insert": {
    "identifiers": [
@@ -14699,7 +15138,8 @@
     "index",
     "value",
     "delete_count"
-   ]
+   ],
+   "async": false
   },
   "list_insert_generic": {
    "identifiers": [
@@ -14712,7 +15152,8 @@
     "delete_count",
     "value",
     "b"
-   ]
+   ],
+   "async": false
   },
   "list_intersect": {
    "identifiers": [
@@ -14724,7 +15165,8 @@
     "other",
     "la",
     "l"
-   ]
+   ],
+   "async": false
   },
   "list_is": {
    "identifiers": [
@@ -14733,7 +15175,8 @@
     "l",
     "Array",
     "isArray"
-   ]
+   ],
+   "async": false
   },
   "list_is_assert": {
    "identifiers": [
@@ -14745,7 +15188,8 @@
     "list_is_assert",
     "list",
     "result"
-   ]
+   ],
+   "async": false
   },
   "list_join": {
    "identifiers": [
@@ -14753,21 +15197,24 @@
     "list",
     "separator",
     "join"
-   ]
+   ],
+   "async": false
   },
   "list_join_comma": {
    "identifiers": [
     "list_join",
     "list_join_comma",
     "names"
-   ]
+   ],
+   "async": false
   },
   "list_join_comma_space": {
    "identifiers": [
     "list_join",
     "list_join_comma_space",
     "args"
-   ]
+   ],
+   "async": false
   },
   "list_join_empty": {
    "identifiers": [
@@ -14777,7 +15224,8 @@
     "letters",
     "e",
     "joined"
-   ]
+   ],
+   "async": false
   },
   "list_join_space": {
    "identifiers": [
@@ -14785,7 +15233,8 @@
     "list_join_space",
     "args",
     "result2"
-   ]
+   ],
+   "async": false
   },
   "list_last": {
    "identifiers": [
@@ -14798,7 +15247,8 @@
     "list_last",
     "list",
     "last"
-   ]
+   ],
+   "async": false
   },
   "list_last_is": {
    "identifiers": [
@@ -14807,7 +15257,8 @@
     "list",
     "item",
     "last"
-   ]
+   ],
+   "async": false
   },
   "list_last_or_null": {
    "identifiers": [
@@ -14819,7 +15270,8 @@
     "result",
     "v",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_map": {
    "identifiers": [
@@ -14828,7 +15280,8 @@
     "lambda$item",
     "mapped",
     "map"
-   ]
+   ],
+   "async": false
   },
   "list_map_index": {
    "identifiers": [
@@ -14838,7 +15291,8 @@
     "mapper",
     "index",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_map_name": {
    "identifiers": [
@@ -14847,7 +15301,8 @@
     "list",
     "property_name",
     "result"
-   ]
+   ],
+   "async": false
   },
   "list_map_property": {
    "identifiers": [
@@ -14860,7 +15315,8 @@
     "item",
     "value",
     "mapped"
-   ]
+   ],
+   "async": false
   },
   "list_map_property_to": {
    "identifiers": [
@@ -14874,7 +15330,8 @@
     "item",
     "o",
     "mapped"
-   ]
+   ],
+   "async": false
   },
   "list_map_squash": {
    "identifiers": [
@@ -14885,7 +15342,8 @@
     "fn",
     "mapped",
     "names"
-   ]
+   ],
+   "async": false
   },
   "list_map_unordered_async": {
    "identifiers": [
@@ -14897,14 +15355,16 @@
     "lambda$item",
     "mapped",
     "waited"
-   ]
+   ],
+   "async": true
   },
   "list_multiple_is": {
    "identifiers": [
     "list_size",
     "list_multiple_is",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_next": {
    "identifiers": [
@@ -14915,7 +15375,8 @@
     "item",
     "index_next",
     "next"
-   ]
+   ],
+   "async": false
   },
   "list_next_index": {
    "identifiers": [
@@ -14926,7 +15387,8 @@
     "item",
     "next",
     "index"
-   ]
+   ],
+   "async": false
   },
   "list_not_is": {
    "identifiers": [
@@ -14937,14 +15399,16 @@
     "value",
     "a",
     "l"
-   ]
+   ],
+   "async": false
   },
   "list_pop": {
    "identifiers": [
     "list_pop",
     "list",
     "pop"
-   ]
+   ],
+   "async": false
   },
   "list_previous": {
    "identifiers": [
@@ -14955,7 +15419,8 @@
     "item",
     "index_previous",
     "previous"
-   ]
+   ],
+   "async": false
   },
   "list_range": {
    "identifiers": [
@@ -14964,7 +15429,8 @@
     "list",
     "a",
     "b"
-   ]
+   ],
+   "async": false
   },
   "list_remove": {
    "identifiers": [
@@ -14975,7 +15441,8 @@
     "list",
     "item",
     "index"
-   ]
+   ],
+   "async": false
   },
   "list_remove_all": {
    "identifiers": [
@@ -14984,7 +15451,8 @@
     "list_remove_all",
     "list",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_remove_at": {
    "identifiers": [
@@ -14992,7 +15460,8 @@
     "list",
     "index",
     "splice"
-   ]
+   ],
+   "async": false
   },
   "list_remove_multiple": {
    "identifiers": [
@@ -15002,7 +15471,8 @@
     "removals",
     "list",
     "r"
-   ]
+   ],
+   "async": false
   },
   "list_replace": {
    "identifiers": [
@@ -15015,14 +15485,16 @@
     "index",
     "value",
     "delete_count"
-   ]
+   ],
+   "async": false
   },
   "list_reverse": {
    "identifiers": [
     "list_reverse",
     "list",
     "reverse"
-   ]
+   ],
+   "async": false
   },
   "list_second": {
    "identifiers": [
@@ -15031,7 +15503,8 @@
     "list",
     "index",
     "second"
-   ]
+   ],
+   "async": false
   },
   "list_single": {
    "identifiers": [
@@ -15043,7 +15516,8 @@
     "list_single",
     "list",
     "first"
-   ]
+   ],
+   "async": false
   },
   "list_size": {
    "identifiers": [
@@ -15053,7 +15527,8 @@
     "list",
     "size",
     "length"
-   ]
+   ],
+   "async": false
   },
   "list_size_1": {
    "identifiers": [
@@ -15061,7 +15536,8 @@
     "list_size_1",
     "list",
     "s1"
-   ]
+   ],
+   "async": false
   },
   "list_size_1_assert": {
    "identifiers": [
@@ -15075,7 +15551,8 @@
     "list",
     "message",
     "message2"
-   ]
+   ],
+   "async": false
   },
   "list_size_1_assert_message": {
    "identifiers": [
@@ -15087,7 +15564,8 @@
     "list_size_1_assert_message",
     "list",
     "message"
-   ]
+   ],
+   "async": false
   },
   "list_skip": {
    "identifiers": [
@@ -15098,7 +15576,8 @@
     "skip_count",
     "b",
     "skipped"
-   ]
+   ],
+   "async": false
   },
   "list_slice": {
    "identifiers": [
@@ -15107,7 +15586,8 @@
     "a",
     "b",
     "slice"
-   ]
+   ],
+   "async": false
   },
   "list_slice_end": {
    "identifiers": [
@@ -15118,7 +15598,8 @@
     "offset",
     "end",
     "start"
-   ]
+   ],
+   "async": false
   },
   "list_sort_number_mapper": {
    "identifiers": [
@@ -15131,14 +15612,16 @@
     "va",
     "vb",
     "sort"
-   ]
+   ],
+   "async": false
   },
   "list_sort_string": {
    "identifiers": [
     "list_sort_string",
     "list",
     "sort"
-   ]
+   ],
+   "async": false
   },
   "list_sort_string_size": {
    "identifiers": [
@@ -15146,7 +15629,8 @@
     "list_sort_number_mapper",
     "list_sort_string_size",
     "list"
-   ]
+   ],
+   "async": false
   },
   "list_splice": {
    "identifiers": [
@@ -15156,7 +15640,8 @@
     "delete_count",
     "value",
     "splice"
-   ]
+   ],
+   "async": false
   },
   "list_squash": {
    "identifiers": [
@@ -15173,7 +15658,8 @@
     "l",
     "fn",
     "squashed"
-   ]
+   ],
+   "async": false
   },
   "list_swap": {
    "identifiers": [
@@ -15185,7 +15671,8 @@
     "b",
     "ai",
     "bi"
-   ]
+   ],
+   "async": false
   },
   "list_to": {
    "identifiers": [
@@ -15195,7 +15682,8 @@
     "v",
     "Array",
     "from"
-   ]
+   ],
+   "async": false
   },
   "list_to_dictionary": {
    "identifiers": [
@@ -15209,7 +15697,8 @@
     "lambda",
     "item",
     "value"
-   ]
+   ],
+   "async": false
   },
   "list_unique": {
    "identifiers": [
@@ -15220,7 +15709,8 @@
     "list",
     "unique",
     "item"
-   ]
+   ],
+   "async": false
   },
   "list_unique_reverse": {
    "identifiers": [
@@ -15231,7 +15721,8 @@
     "previous",
     "reversed",
     "copy"
-   ]
+   ],
+   "async": false
   },
   "list_wait": {
    "identifiers": [
@@ -15239,14 +15730,16 @@
     "list",
     "Promise",
     "all"
-   ]
+   ],
+   "async": false
   },
   "log": {
    "identifiers": [
     "log_keep",
     "log",
     "message"
-   ]
+   ],
+   "async": false
   },
   "log_json": {
    "identifiers": [
@@ -15255,7 +15748,8 @@
     "log_json",
     "right",
     "message"
-   ]
+   ],
+   "async": false
   },
   "log_keep": {
    "identifiers": [
@@ -15263,7 +15757,8 @@
     "log_keep",
     "message",
     "console"
-   ]
+   ],
+   "async": false
   },
   "log_unparse": {
    "identifiers": [
@@ -15272,7 +15767,8 @@
     "log_unparse",
     "node",
     "code"
-   ]
+   ],
+   "async": false
   },
   "log_unparse_try": {
    "identifiers": [
@@ -15284,14 +15780,16 @@
     "right",
     "a",
     "match"
-   ]
+   ],
+   "async": false
   },
   "marker": {
    "identifiers": [
     "noop",
     "marker",
     "marker_name"
-   ]
+   ],
+   "async": false
   },
   "marker_above": {
    "identifiers": [
@@ -15313,7 +15811,8 @@
     "statement",
     "ast",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_assign_replace": {
    "identifiers": [
@@ -15344,7 +15843,8 @@
     "a",
     "next",
     "init"
-   ]
+   ],
+   "async": true
   },
   "marker_assign_replace_string": {
    "identifiers": [
@@ -15354,7 +15854,8 @@
     "value",
     "code_string",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_bottom": {
    "identifiers": [
@@ -15387,7 +15888,8 @@
     "choices",
     "index",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_call": {
    "identifiers": [
@@ -15449,7 +15951,8 @@
     "parsed",
     "output",
     "list"
-   ]
+   ],
+   "async": true
   },
   "marker_call_atomize": {
    "identifiers": [
@@ -15490,7 +15993,8 @@
     "ast",
     "existing",
     "v_match"
-   ]
+   ],
+   "async": true
   },
   "marker_call_replace": {
    "identifiers": [
@@ -15525,7 +16029,8 @@
     "a",
     "replaced",
     "replacement"
-   ]
+   ],
+   "async": true
   },
   "marker_call_replace_generic": {
    "identifiers": [
@@ -15563,7 +16068,8 @@
     "ast",
     "output",
     "list"
-   ]
+   ],
+   "async": true
   },
   "marker_current_set": {
    "identifiers": [
@@ -15571,7 +16077,8 @@
     "marker_current_set",
     "name_marker",
     "previous"
-   ]
+   ],
+   "async": true
   },
   "marker_delete_above": {
    "identifiers": [
@@ -15591,7 +16098,8 @@
     "index",
     "stack2",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_down": {
    "identifiers": [
@@ -15620,7 +16128,8 @@
     "v",
     "delta_get",
     "i"
-   ]
+   ],
+   "async": true
   },
   "marker_down_choices": {
    "identifiers": [
@@ -15659,7 +16168,8 @@
     "item",
     "l",
     "code"
-   ]
+   ],
+   "async": true
   },
   "marker_down_choices_lambda": {
    "identifiers": [
@@ -15688,7 +16198,8 @@
     "node",
     "includes",
     "choices"
-   ]
+   ],
+   "async": false
   },
   "marker_down_generic": {
    "identifiers": [
@@ -15724,7 +16235,8 @@
     "index",
     "index_new",
     "choices"
-   ]
+   ],
+   "async": true
   },
   "marker_enter": {
    "identifiers": [
@@ -15762,7 +16274,8 @@
     "nt",
     "body",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_expand": {
    "identifiers": [
@@ -15836,7 +16349,8 @@
     "lambda4",
     "item",
     "inserted"
-   ]
+   ],
+   "async": true
   },
   "marker_first": {
    "identifiers": [
@@ -15845,13 +16359,15 @@
     "marker_first",
     "index_value",
     "index"
-   ]
+   ],
+   "async": false
   },
   "marker_first_index": {
    "identifiers": [
     "marker_first_index",
     "index"
-   ]
+   ],
+   "async": false
   },
   "marker_functionize": {
    "identifiers": [
@@ -15958,7 +16474,8 @@
     "items",
     "code",
     "parsed"
-   ]
+   ],
+   "async": true
   },
   "marker_index": {
    "identifiers": [
@@ -15973,7 +16490,8 @@
     "stack1",
     "index",
     "i"
-   ]
+   ],
+   "async": false
   },
   "marker_move": {
    "identifiers": [
@@ -16018,7 +16536,8 @@
     "a_to",
     "index",
     "stack2_to"
-   ]
+   ],
+   "async": true
   },
   "marker_new": {
    "identifiers": [
@@ -16050,7 +16569,8 @@
     "index",
     "stack2",
     "name"
-   ]
+   ],
+   "async": true
   },
   "marker_next": {
    "identifiers": [
@@ -16070,7 +16590,8 @@
     "lambda",
     "a",
     "next"
-   ]
+   ],
+   "async": true
   },
   "marker_next_delete": {
    "identifiers": [
@@ -16104,7 +16625,8 @@
     "a",
     "index",
     "stack2"
-   ]
+   ],
+   "async": true
   },
   "marker_next_get": {
    "identifiers": [
@@ -16120,7 +16642,8 @@
     "next",
     "n",
     "to2"
-   ]
+   ],
+   "async": false
   },
   "marker_next_index": {
    "identifiers": [
@@ -16132,7 +16655,8 @@
     "stack2",
     "stack1",
     "index"
-   ]
+   ],
+   "async": false
   },
   "marker_previous_index": {
    "identifiers": [
@@ -16146,7 +16670,8 @@
     "stack1",
     "index",
     "p"
-   ]
+   ],
+   "async": false
   },
   "marker_remove": {
    "identifiers": [
@@ -16161,7 +16686,8 @@
     "a",
     "stack2",
     "stack1"
-   ]
+   ],
+   "async": true
   },
   "marker_remove_marker_top": {
    "identifiers": [
@@ -16170,7 +16696,8 @@
     "marker",
     "marker_remove_marker_top",
     "v"
-   ]
+   ],
+   "async": true
   },
   "marker_top": {
    "identifiers": [
@@ -16210,7 +16737,8 @@
     "names",
     "name_next",
     "body"
-   ]
+   ],
+   "async": true
   },
   "newFunction": {
    "identifiers": [
@@ -16219,12 +16747,14 @@
     "newFunction",
     "next",
     "code"
-   ]
+   ],
+   "async": true
   },
   "noop": {
    "identifiers": [
     "noop"
-   ]
+   ],
+   "async": false
   },
   "not": {
    "identifiers": [
@@ -16232,20 +16762,23 @@
     "not",
     "a",
     "n"
-   ]
+   ],
+   "async": false
   },
   "npm_install": {
    "identifiers": [
     "command_line",
     "npm_install",
     "package_name"
-   ]
+   ],
+   "async": true
   },
   "null_is": {
    "identifiers": [
     "null_is",
     "value"
-   ]
+   ],
+   "async": false
   },
   "null_not_is": {
    "identifiers": [
@@ -16253,14 +16786,16 @@
     "null_not_is",
     "value",
     "nn"
-   ]
+   ],
+   "async": false
   },
   "number_is": {
    "identifiers": [
     "number_is",
     "value",
     "isFinite"
-   ]
+   ],
+   "async": false
   },
   "object_copy": {
    "identifiers": [
@@ -16268,7 +16803,8 @@
     "object_copy",
     "from",
     "copy"
-   ]
+   ],
+   "async": false
   },
   "object_invert": {
    "identifiers": [
@@ -16284,7 +16820,8 @@
     "value",
     "key",
     "list"
-   ]
+   ],
+   "async": false
   },
   "object_merge": {
    "identifiers": [
@@ -16299,7 +16836,8 @@
     "from",
     "p",
     "value"
-   ]
+   ],
+   "async": false
   },
   "object_properties": {
    "identifiers": [
@@ -16308,7 +16846,8 @@
     "properties",
     "Object",
     "getOwnPropertyNames"
-   ]
+   ],
+   "async": false
   },
   "object_properties_delete": {
    "identifiers": [
@@ -16318,7 +16857,8 @@
     "object_properties_delete",
     "obj",
     "p"
-   ]
+   ],
+   "async": false
   },
   "object_property_delete": {
    "identifiers": [
@@ -16328,7 +16868,8 @@
     "object_property_delete",
     "object",
     "property_name"
-   ]
+   ],
+   "async": false
   },
   "object_property_equals": {
    "identifiers": [
@@ -16337,7 +16878,8 @@
     "item",
     "property_name",
     "property_value"
-   ]
+   ],
+   "async": false
   },
   "object_property_equals_lambda": {
    "identifiers": [
@@ -16347,7 +16889,8 @@
     "property_name",
     "property_value",
     "item"
-   ]
+   ],
+   "async": false
   },
   "object_property_exists": {
    "identifiers": [
@@ -16356,7 +16899,8 @@
     "property_name",
     "Object",
     "hasOwn"
-   ]
+   ],
+   "async": false
   },
   "object_property_exists_assert": {
    "identifiers": [
@@ -16366,7 +16910,8 @@
     "object",
     "property_name",
     "result"
-   ]
+   ],
+   "async": false
   },
   "object_property_exists_equals": {
    "identifiers": [
@@ -16376,7 +16921,8 @@
     "path",
     "in_progress",
     "value"
-   ]
+   ],
+   "async": false
   },
   "object_property_from": {
    "identifiers": [
@@ -16386,7 +16932,8 @@
     "to",
     "property_name",
     "from"
-   ]
+   ],
+   "async": false
   },
   "object_property_get": {
    "identifiers": [
@@ -16400,7 +16947,8 @@
     "value",
     "object_get",
     "v"
-   ]
+   ],
+   "async": false
   },
   "object_property_initialize": {
    "identifiers": [
@@ -16413,7 +16961,8 @@
     "property_name",
     "value",
     "exists"
-   ]
+   ],
+   "async": false
   },
   "object_property_set": {
    "identifiers": [
@@ -16421,7 +16970,8 @@
     "object",
     "property_name",
     "value"
-   ]
+   ],
+   "async": false
   },
   "object_replace": {
    "identifiers": [
@@ -16430,7 +16980,8 @@
     "object_replace",
     "to",
     "from"
-   ]
+   ],
+   "async": false
   },
   "path_join": {
    "identifiers": [
@@ -16438,7 +16989,8 @@
     "path_join",
     "list_of_segments",
     "join"
-   ]
+   ],
+   "async": false
   },
   "path_name": {
    "identifiers": [
@@ -16447,7 +16999,8 @@
     "file_path",
     "name",
     "parse"
-   ]
+   ],
+   "async": false
   },
   "path_resolve": {
    "identifiers": [
@@ -16455,7 +17008,8 @@
     "paths",
     "path",
     "resolve"
-   ]
+   ],
+   "async": true
   },
   "promise_is": {
    "identifiers": [
@@ -16463,14 +17017,16 @@
     "value",
     "then",
     "catch"
-   ]
+   ],
+   "async": false
   },
   "promise_not_is": {
    "identifiers": [
     "promise_is",
     "promise_not_is",
     "ast"
-   ]
+   ],
+   "async": false
   },
   "prompt_previous": {
    "identifiers": [
@@ -16499,7 +17055,8 @@
     "difference",
     "previous",
     "v"
-   ]
+   ],
+   "async": true
   },
   "range": {
    "identifiers": [
@@ -16508,7 +17065,8 @@
     "count",
     "r",
     "i"
-   ]
+   ],
+   "async": false
   },
   "sandbox": {
    "identifiers": [
@@ -16516,7 +17074,8 @@
     "marker",
     "sandbox",
     "test"
-   ]
+   ],
+   "async": true
   },
   "schtasks_query": {
    "identifiers": [
@@ -16528,7 +17087,8 @@
     "lambda2",
     "command",
     "success"
-   ]
+   ],
+   "async": true
   },
   "search_generic": {
    "identifiers": [
@@ -16553,7 +17113,8 @@
     "v2",
     "f_names_search",
     "result"
-   ]
+   ],
+   "async": false
   },
   "server": {
    "identifiers": [
@@ -16578,19 +17139,22 @@
     "static",
     "use",
     "listen"
-   ]
+   ],
+   "async": false
   },
   "string_empty": {
    "identifiers": [
     "string_empty"
-   ]
+   ],
+   "async": false
   },
   "string_empty_is": {
    "identifiers": [
     "string_empty_is",
     "s",
     "e"
-   ]
+   ],
+   "async": false
   },
   "string_empty_not_is": {
    "identifiers": [
@@ -16598,7 +17162,8 @@
     "string_empty_not_is",
     "name",
     "ne"
-   ]
+   ],
+   "async": false
   },
   "string_ends_with": {
    "identifiers": [
@@ -16607,7 +17172,8 @@
     "suffix",
     "ew",
     "endsWith"
-   ]
+   ],
+   "async": false
   },
   "string_includes": {
    "identifiers": [
@@ -16621,13 +17187,15 @@
     "o",
     "v",
     "includes"
-   ]
+   ],
+   "async": false
   },
   "string_is": {
    "identifiers": [
     "string_is",
     "value"
-   ]
+   ],
+   "async": false
   },
   "string_is_assert": {
    "identifiers": [
@@ -16636,7 +17204,8 @@
     "string_is_assert",
     "value",
     "b"
-   ]
+   ],
+   "async": false
   },
   "string_is_assert_json": {
    "identifiers": [
@@ -16646,7 +17215,8 @@
     "value",
     "o",
     "message"
-   ]
+   ],
+   "async": false
   },
   "string_is_assert_message": {
    "identifiers": [
@@ -16659,7 +17229,8 @@
     "message",
     "b",
     "v"
-   ]
+   ],
+   "async": false
   },
   "string_pad": {
    "identifiers": [
@@ -16667,7 +17238,8 @@
     "padding",
     "s",
     "padded"
-   ]
+   ],
+   "async": false
   },
   "string_prefix_without": {
    "identifiers": [
@@ -16681,14 +17253,16 @@
     "s",
     "prefix",
     "skipped"
-   ]
+   ],
+   "async": false
   },
   "string_size": {
    "identifiers": [
     "string_size",
     "s",
     "length"
-   ]
+   ],
+   "async": false
   },
   "string_skip": {
    "identifiers": [
@@ -16699,7 +17273,8 @@
     "skip_count",
     "b",
     "skipped"
-   ]
+   ],
+   "async": false
   },
   "string_slice": {
    "identifiers": [
@@ -16708,7 +17283,8 @@
     "a",
     "b",
     "slice"
-   ]
+   ],
+   "async": false
   },
   "string_split": {
    "identifiers": [
@@ -16716,14 +17292,16 @@
     "s",
     "separator",
     "split"
-   ]
+   ],
+   "async": false
   },
   "string_split_comma": {
    "identifiers": [
     "string_split",
     "string_split_comma",
     "f_names"
-   ]
+   ],
+   "async": false
   },
   "string_starts_with": {
    "identifiers": [
@@ -16731,7 +17309,8 @@
     "s",
     "prefix",
     "startsWith"
-   ]
+   ],
+   "async": false
   },
   "string_suffix_change": {
    "identifiers": [
@@ -16742,7 +17321,8 @@
     "ending_new",
     "without",
     "changed"
-   ]
+   ],
+   "async": false
   },
   "string_to": {
    "identifiers": [
@@ -16750,7 +17330,8 @@
     "input",
     "s",
     "toString"
-   ]
+   ],
+   "async": false
   },
   "tasks_run": {
    "identifiers": [
@@ -16770,12 +17351,14 @@
     "lambda",
     "item",
     "result3"
-   ]
+   ],
+   "async": true
   },
   "task_function_name_part": {
    "identifiers": [
     "task_function_name_part"
-   ]
+   ],
+   "async": false
   },
   "task_new": {
    "identifiers": [
@@ -16806,18 +17389,21 @@
     "body_block",
     "name",
     "result"
-   ]
+   ],
+   "async": true
   },
   "task_new_simple": {
    "identifiers": [
     "task_new",
     "task_new_simple"
-   ]
+   ],
+   "async": true
   },
   "tautology": {
    "identifiers": [
     "tautology"
-   ]
+   ],
+   "async": false
   },
   "throws_not_async": {
    "identifiers": [
@@ -16825,31 +17411,36 @@
     "lambda",
     "success",
     "e"
-   ]
+   ],
+   "async": true
   },
   "todo": {
    "identifiers": [
     "error",
     "todo"
-   ]
+   ],
+   "async": false
   },
   "trinity_green": {
    "identifiers": [
     "chalk_green",
     "trinity_green",
     "s"
-   ]
+   ],
+   "async": true
   },
   "undefined": {
    "identifiers": [
     "undefined"
-   ]
+   ],
+   "async": false
   },
   "undefined_is": {
    "identifiers": [
     "undefined_is",
     "value"
-   ]
+   ],
+   "async": false
   },
   "undefined_not_is_assert_lambda": {
    "identifiers": [
@@ -16861,7 +17452,8 @@
     "lambda",
     "object",
     "message"
-   ]
+   ],
+   "async": false
   },
   "visit": {
    "identifiers": [
@@ -16871,7 +17463,8 @@
     "node",
     "children_get",
     "on_each"
-   ]
+   ],
+   "async": false
   },
   "visit_async": {
    "identifiers": [
@@ -16881,7 +17474,8 @@
     "node",
     "children_get",
     "on_each"
-   ]
+   ],
+   "async": true
   },
   "visit_filter": {
    "identifiers": [
@@ -16891,7 +17485,8 @@
     "children_get",
     "filter",
     "on_each"
-   ]
+   ],
+   "async": false
   },
   "visit_filter_async": {
    "identifiers": [
@@ -16901,7 +17496,8 @@
     "children_get",
     "filter",
     "on_each"
-   ]
+   ],
+   "async": true
   },
   "visit_filter_recursive": {
    "identifiers": [
@@ -16920,7 +17516,8 @@
     "c",
     "copy",
     "removed"
-   ]
+   ],
+   "async": false
   },
   "visit_filter_recursive_async": {
    "identifiers": [
@@ -16940,7 +17537,8 @@
     "children",
     "c",
     "removed"
-   ]
+   ],
+   "async": true
   },
   "visit_unique_async": {
    "identifiers": [
@@ -16958,7 +17556,8 @@
     "children",
     "lambda2",
     "v"
-   ]
+   ],
+   "async": true
   },
   "data_identifiers_search": {
    "identifiers": [
@@ -16972,7 +17571,8 @@
     "identifiers",
     "list",
     "result"
-   ]
+   ],
+   "async": true
   },
   "js_imports_unused": {
    "identifiers": [
@@ -17003,7 +17603,8 @@
     "unused",
     "mapped",
     "unuseds"
-   ]
+   ],
+   "async": false
   },
   "counter": {
    "identifiers": [
@@ -17012,7 +17613,8 @@
     "lambda$c",
     "i",
     "c"
-   ]
+   ],
+   "async": false
   },
   "js_imports_declarations": {
    "identifiers": [
@@ -17052,7 +17654,8 @@
     "name",
     "declaration",
     "imports"
-   ]
+   ],
+   "async": false
   },
   "list_first_remaining": {
    "identifiers": [
@@ -17069,7 +17672,8 @@
     "property_name",
     "value_get",
     "result"
-   ]
+   ],
+   "async": false
   },
   "js_imports_unused_remove": {
    "identifiers": [
@@ -17085,7 +17689,8 @@
     "lambda",
     "unused",
     "declaration"
-   ]
+   ],
+   "async": true
   },
   "function_imports_fix": {
    "identifiers": [
@@ -17104,7 +17709,8 @@
     "parsed",
     "imports_missing",
     "ast"
-   ]
+   ],
+   "async": true
   },
   "js_imports_fix": {
    "identifiers": [
@@ -17121,7 +17727,8 @@
     "unused",
     "declaration",
     "v"
-   ]
+   ],
+   "async": true
   },
   "data_set": {
    "identifiers": [
@@ -17132,7 +17739,8 @@
     "lambda",
     "previous",
     "v2"
-   ]
+   ],
+   "async": true
   },
   "date_now_iso": {
    "identifiers": [
@@ -17141,21 +17749,24 @@
     "date_now_iso",
     "now",
     "now_iso"
-   ]
+   ],
+   "async": false
   },
   "date_now": {
    "identifiers": [
     "date_now",
     "now",
     "Date"
-   ]
+   ],
+   "async": false
   },
   "lambda_get": {
    "identifiers": [
     "lambda_get",
     "value",
     "value_get"
-   ]
+   ],
+   "async": false
   },
   "data_file_update_inner": {
    "identifiers": [
@@ -17195,6 +17806,108 @@
     "e"
    ],
    "async": true
+  },
+  "date_diff_hours": {
+   "async": false,
+   "identifiers": [
+    "date_ms_to_hours",
+    "date_diff_ms",
+    "date_diff_hours",
+    "now",
+    "before",
+    "ms",
+    "hours"
+   ]
+  },
+  "date_diff_ms": {
+   "async": false,
+   "identifiers": [
+    "date_diff_ms",
+    "now",
+    "before",
+    "v",
+    "Math",
+    "abs"
+   ]
+  },
+  "date_iso_to": {
+   "async": false,
+   "identifiers": [
+    "date_iso_to",
+    "d",
+    "v",
+    "toISOString"
+   ]
+  },
+  "date_ms_to_hours": {
+   "async": false,
+   "identifiers": [
+    "date_ms_to_hours",
+    "ms",
+    "v"
+   ]
+  },
+  "date_to": {
+   "async": false,
+   "identifiers": [
+    "date_to",
+    "before_iso",
+    "v",
+    "Date"
+   ]
+  },
+  "functions_paths": {
+   "async": false,
+   "identifiers": [
+    "function_name_to_path",
+    "list_map",
+    "functions_names",
+    "functions_paths",
+    "f_names",
+    "f_paths"
+   ]
+  },
+  "js_identifiers_named_count": {
+   "async": false,
+   "identifiers": [
+    "counter",
+    "js_visit_type",
+    "object_property_get",
+    "js_identifiers_named_count",
+    "ast",
+    "i_name",
+    "lambda3",
+    "c",
+    "lambda2",
+    "v",
+    "node",
+    "name",
+    "count_import"
+   ]
+  },
+  "list_first_second_generic": {
+   "async": false,
+   "identifiers": [
+    "list_multiple_is",
+    "list_first",
+    "list_empty_not_is",
+    "list_first_second_generic",
+    "list",
+    "value_get",
+    "property_name",
+    "first",
+    "second",
+    "result"
+   ]
+  },
+  "list_skip_1": {
+   "async": false,
+   "identifiers": [
+    "list_skip",
+    "list_skip_1",
+    "list",
+    "skipped"
+   ]
   }
  },
  "git_push_when": "2025-08-20T19:10:14.080Z",
