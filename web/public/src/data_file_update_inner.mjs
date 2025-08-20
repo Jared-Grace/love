@@ -26,6 +26,7 @@ export async function data_file_update_inner(parsed, d) {
   let functions = object_property_initialize(data, "functions", {});
   let declaration = js_declaration_single(ast);
   let async = object_property_get(declaration, "async");
+  object_property_set(object, property_name2, value);
   let f_this = object_property_initialize(functions, f_name, {});
   let f_identifiers_old = object_property_initialize(f_this, property_name, []);
   let removals = list_difference(f_identifiers_old, f_identifiers_new);
