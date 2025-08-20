@@ -1665,8 +1665,7 @@
    "js_imports_declarations",
    "list_first_remaining",
    "js_imports_unused_remove",
-   "function_imports_fix",
-   "git_push"
+   "function_imports_fix"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11666,7 +11665,6 @@
    "identifiers": [
     "date_iso_to",
     "date_now",
-    "marker",
     "data_property_get",
     "date_now_iso",
     "function_name_combine",
