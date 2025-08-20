@@ -1973,7 +1973,8 @@
    "object_property_initialize",
    "object_property_set",
    "list_first_second",
-   "list_first_remaining"
+   "list_first_remaining",
+   "git_push"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2467,7 +2468,6 @@
    "file_open",
    "file_open_editor",
    "git_acp",
-   "git_push",
    "git_push_schedule",
    "git_push_schedule_check",
    "npm_install",
@@ -8977,7 +8977,8 @@
    "search_generic",
    "list_first_second",
    "list_first_remaining",
-   "data_boolean_set"
+   "data_boolean_set",
+   "git_push"
   ],
   "terms": [
    "search_generic"
@@ -9182,7 +9183,8 @@
    "js_outside_move"
   ],
   "data_set": [
-   "data_boolean_set"
+   "data_boolean_set",
+   "git_push"
   ]
  },
  "functions": {
@@ -11617,13 +11619,15 @@
   },
   "git_push": {
    "identifiers": [
+    "data_set",
     "git_push_command",
     "command_line_git",
     "catch_log_async",
-    "command_line",
     "git_push",
     "command_git",
-    "lambda"
+    "lambda",
+    "value_get",
+    "property_name"
    ]
   },
   "git_push_command": {
