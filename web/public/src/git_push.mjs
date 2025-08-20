@@ -22,9 +22,9 @@ export async function git_push() {
     const hours = date_diff_hours(now, before);
     if (hours < 1) {
       if (false) {
+        log("less than 1 hour:");
+        log(hours);
       }
-      log("less than 1 hour:");
-      log(hours);
       return;
     }
     await command_line_git(command_git);
