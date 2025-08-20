@@ -1224,7 +1224,6 @@
   "s au",
   "s js_block_child_graph",
   "s atom",
-  "s dollar",
   "o ",
   "o js_atomize_function",
   "s auto",
@@ -1344,7 +1343,8 @@
   "ftc js_imports_unused",
   "fts js_imports_unused",
   "is js_imports",
-  "c js_imports js_imports_declarations"
+  "c js_imports js_imports_declarations",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_imports_declarations",
