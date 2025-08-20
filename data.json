@@ -1567,7 +1567,6 @@
   ],
   "data_transform": [
    "data_identifiers_file",
-   "data_file_update",
    "watch",
    "function_run_prompt",
    "error_attention_set",
@@ -2886,7 +2885,6 @@
    "path_name"
   ],
   "object_property_get": [
-   "data_file_update",
    "chalk_green",
    "chalk_red",
    "chalk_color",
@@ -3051,7 +3049,6 @@
    "tasks_run"
   ],
   "list_includes": [
-   "data_file_update",
    "functions_names_includes",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
@@ -3077,7 +3074,6 @@
    "visit_unique_async"
   ],
   "list_remove": [
-   "data_file_update",
    "function_transform_marker_empty",
    "js_dollar",
    "js_dollar_s",
@@ -9253,10 +9249,8 @@
     "list_empty_is",
     "object_property_set",
     "list_remove_all",
-    "object_property_get",
     "data_save",
     "data_all",
-    "data_transform",
     "each",
     "list_add_if_not_includes",
     "object_property_initialize",
@@ -9265,12 +9259,10 @@
     "function_path_to_name",
     "marker",
     "list_difference",
-    "list_includes",
-    "list_remove",
     "data_file_update",
     "f_path",
-    "f_name",
     "d",
+    "f_name",
     "data",
     "parsed",
     "ast",
