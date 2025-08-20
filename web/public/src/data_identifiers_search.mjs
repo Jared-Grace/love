@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export async function data_identifiers_search(s) {
   marker("1");
   let identifiers = await data_property_get("identifiers");
-  let value = object_property_get(object, property_name);
-  return identifiers;
+  let value = object_property_get(identifiers, s);
+  return value;
 }
