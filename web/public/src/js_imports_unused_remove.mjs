@@ -12,5 +12,4 @@ export async function js_imports_unused_remove(ast) {
     list_remove(body, declaration);
   }
   each(unuseds, lambda);
-  return unuseds;
 }
