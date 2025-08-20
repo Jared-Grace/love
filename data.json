@@ -2215,7 +2215,8 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_dollar_g"
   ],
   "v": [
    "data_identifiers_file",
@@ -3016,7 +3017,8 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run"
+   "tasks_run",
+   "js_dollar_g"
   ],
   "list_includes": [
    "data_file_update",
@@ -12751,7 +12753,9 @@
     "parsed",
     "lambda",
     "unique",
-    "assign"
+    "assign",
+    "list",
+    "item"
    ]
   },
   "js_dollar_i": {
