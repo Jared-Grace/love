@@ -12,7 +12,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_type } from "./js_type.mjs";
 import { each } from "./each.mjs";
 export function js_imports(ast) {
-  let imports2 = js_imports_declarations(ast);
-  let mapped2 = list_map_property(imports2, "name");
+  let imports = js_imports_declarations(ast);
+  let mapped2 = list_map_property(imports, "name");
   return mapped2;
 }
