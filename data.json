@@ -2094,7 +2094,8 @@
    "schtasks_query",
    "search_generic",
    "visit_unique_async",
-   "js_imports"
+   "js_imports",
+   "js_imports_unused"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2194,8 +2195,7 @@
    "marker_functionize",
    "object_invert",
    "search_generic",
-   "data_identifiers_search",
-   "js_imports_unused"
+   "data_identifiers_search"
   ],
   "v": [
    "data_identifiers_file",
@@ -2291,7 +2291,8 @@
    "server",
    "string_includes",
    "string_is_assert_message",
-   "visit_unique_async"
+   "visit_unique_async",
+   "js_imports_unused"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2994,8 +2995,7 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run",
-   "js_imports_unused"
+   "tasks_run"
   ],
   "list_includes": [
    "data_file_update",
@@ -5648,7 +5648,8 @@
    "marker_above",
    "marker_down",
    "marker_index",
-   "range"
+   "range",
+   "js_imports_unused"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -6772,7 +6773,8 @@
    "marker_down_choices",
    "marker_down_choices_lambda",
    "marker_down_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "js_imports_unused"
   ],
   "list_adder": [
    "function_transform_marker_empty",
@@ -7384,7 +7386,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_imports_unused"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -16779,6 +16782,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "js_visit",
     "each",
     "js_imports",
     "marker",
@@ -16786,8 +16790,10 @@
     "ast",
     "imports",
     "lambda",
-    "item",
-    "list"
+    "i",
+    "lambda2",
+    "v",
+    "ast2"
    ]
   }
  }
