@@ -2196,7 +2196,8 @@
    "marker_functionize",
    "object_invert",
    "search_generic",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "js_imports_unused"
   ],
   "v": [
    "data_identifiers_file",
@@ -3292,7 +3293,8 @@
    "js_if_else_if_combine",
    "js_outside_move",
    "marker_down_choices_lambda",
-   "marker_expand"
+   "marker_expand",
+   "js_imports_unused"
   ],
   "value2": [
    "error_attention_set"
@@ -5451,7 +5453,8 @@
    "marker_down_choices_lambda",
    "marker_functionize",
    "marker_next",
-   "marker_next_delete"
+   "marker_next_delete",
+   "js_imports_unused"
   ],
   "node": [
    "function_dependencies",
@@ -6805,7 +6808,8 @@
    "marker_down_choices",
    "marker_down_choices_lambda",
    "marker_down_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "js_imports_unused"
   ],
   "marker_next_get": [
    "function_transform_marker_empty",
@@ -9041,9 +9045,6 @@
    "data_identifiers_search"
   ],
   "js_imports_unused": [
-   "js_imports_unused"
-  ],
-  "lad": [
    "js_imports_unused"
   ],
   "nmae": [
@@ -16792,6 +16793,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "list_adder",
     "object_property_get",
     "js_visit_type",
     "js_visit",
@@ -16803,7 +16805,9 @@
     "imports",
     "lambda",
     "i_name",
-    "lad",
+    "list",
+    "lambda3",
+    "la",
     "lambda2",
     "v",
     "node",
