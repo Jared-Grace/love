@@ -1984,7 +1984,8 @@
    "data_set",
    "git_push",
    "data_file_update_inner",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "function_run_prompt"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -9368,6 +9369,7 @@
     "command_line_read",
     "json_format_to",
     "function_run_prompt",
+    "property_name",
     "ea",
     "nn",
     "prompt",
