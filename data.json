@@ -2143,7 +2143,8 @@
    "search_generic",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_dollar_g"
+   "js_dollar_g",
+   "git_push"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -9205,8 +9206,7 @@
   ],
   "date_now_iso": [
    "git_acp_timestamp",
-   "date_now_iso",
-   "git_push"
+   "date_now_iso"
   ],
   "date_now": [
    "date_now_iso",
@@ -11674,7 +11674,6 @@
     "date_iso_to",
     "date_now",
     "data_property_get",
-    "date_now_iso",
     "function_name_combine",
     "data_set",
     "git_push_command",
@@ -11688,7 +11687,8 @@
     "property_name",
     "name",
     "before_iso",
-    "before"
+    "before",
+    "lambda2"
    ]
   },
   "git_push_command": {
