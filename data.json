@@ -5999,7 +5999,8 @@
    "marker_down_choices_lambda",
    "marker_expand",
    "marker_functionize",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_unused"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -16859,6 +16860,7 @@
     "imports",
     "lambda",
     "i",
+    "declaration",
     "count_import",
     "i_name"
    ]
