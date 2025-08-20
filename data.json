@@ -2099,8 +2099,7 @@
    "schtasks_query",
    "search_generic",
    "visit_unique_async",
-   "js_imports",
-   "js_imports_unused"
+   "js_imports"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2297,8 +2296,7 @@
    "server",
    "string_includes",
    "string_is_assert_message",
-   "visit_unique_async",
-   "js_imports_unused"
+   "visit_unique_async"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2663,8 +2661,7 @@
    "prompt_previous",
    "schtasks_query",
    "string_empty_not_is",
-   "task_new",
-   "js_imports_unused"
+   "task_new"
   ],
   "output": [
    "watch",
@@ -3297,8 +3294,7 @@
    "js_if_else_if_combine",
    "js_outside_move",
    "marker_down_choices_lambda",
-   "marker_expand",
-   "js_imports_unused"
+   "marker_expand"
   ],
   "value2": [
    "error_attention_set"
@@ -5508,8 +5504,7 @@
    "visit_filter_async",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async",
-   "js_imports_unused"
+   "visit_unique_async"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -9037,8 +9032,7 @@
   "c": [
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "counter",
-   "js_imports_unused"
+   "counter"
   ],
   "found": [
    "visit_unique_async"
@@ -9060,6 +9054,9 @@
    "counter"
   ],
   "count_import": [
+   "js_imports_unused"
+  ],
+  "js_identifiers_named_count": [
    "js_imports_unused"
   ]
  },
@@ -16805,6 +16802,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "js_identifiers_named_count",
     "log",
     "counter",
     "list_adder",
@@ -16819,12 +16817,6 @@
     "imports",
     "lambda",
     "i_name",
-    "lambda3",
-    "c",
-    "lambda2",
-    "v",
-    "node",
-    "name",
     "count_import"
    ]
   },
