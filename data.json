@@ -9079,7 +9079,8 @@
   ],
   "js_imports_declarations": [
    "js_imports_declarations",
-   "js_imports"
+   "js_imports",
+   "js_imports_unused"
   ],
   "imports_declarations": [
    "js_imports"
@@ -16810,6 +16811,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "js_imports_declarations",
     "js_identifiers_named_count",
     "log",
     "counter",
