@@ -2207,7 +2207,8 @@
    "marker_functionize",
    "object_invert",
    "search_generic",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -2303,7 +2304,8 @@
    "string_includes",
    "string_is_assert_message",
    "visit_unique_async",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "list_first_remaining"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4301,7 +4303,8 @@
    "marker_call",
    "marker_expand",
    "marker_functionize",
-   "marker_move"
+   "marker_move",
+   "list_first_remaining"
   ],
   "each_multiple": [
    "each_multiple",
@@ -4319,7 +4322,8 @@
    "js_dollar_g",
    "list_first",
    "list_first_second",
-   "list_single"
+   "list_single",
+   "list_first_remaining"
   ],
   "items": [
    "each_multiple",
@@ -4651,7 +4655,8 @@
    "js_dollar_g",
    "js_dollar_r",
    "list_first_second",
-   "list_second"
+   "list_second",
+   "list_first_remaining"
   ],
   "list_to": [
    "functions_combine",
@@ -7845,7 +7850,8 @@
    "js_dollar_rf",
    "js_dollar_rt",
    "list_first_second",
-   "list_second"
+   "list_second",
+   "list_first_remaining"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -8360,7 +8366,8 @@
    "list_first_second",
    "list_last",
    "marker_expand",
-   "marker_top"
+   "marker_top",
+   "list_first_remaining"
   ],
   "last": [
    "js_return_name",
@@ -8397,7 +8404,8 @@
    "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "list_first_remaining"
   ],
   "js_statement_call_get": [
    "js_statement_call_get",
@@ -9087,6 +9095,9 @@
   ],
   "imports_declarations": [
    "js_imports"
+  ],
+  "list_first_remaining": [
+   "list_first_remaining"
   ]
  },
  "functions": {
@@ -16881,6 +16892,19 @@
     "name",
     "declaration",
     "imports"
+   ]
+  },
+  "list_first_remaining": {
+   "identifiers": [
+    "list_multiple_is",
+    "list_second",
+    "list_first",
+    "list_empty_not_is",
+    "list_first_remaining",
+    "list",
+    "first",
+    "second",
+    "v"
    ]
   }
  }
