@@ -1710,7 +1710,8 @@
    "function_path_declaration_unparse",
    "function_path_to_name",
    "function_read",
-   "js_outside_move"
+   "js_outside_move",
+   "data_files_update"
   ],
   "ast": [
    "data_identifiers_file",
@@ -2084,7 +2085,8 @@
    "js_imports_declarations",
    "js_imports_unused_remove",
    "data_set",
-   "js_imports_fix"
+   "js_imports_fix",
+   "data_files_update"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2799,8 +2801,7 @@
   "data_file_update": [
    "data_file_update",
    "watch",
-   "data_file_update_all",
-   "data_files_update"
+   "data_file_update_all"
   ],
   "file_js_parse": [
    "file_js_parse",
@@ -3574,7 +3575,6 @@
   ],
   "list_map": [
    "functions_names",
-   "data_files_update",
    "functions_combine",
    "functions_format",
    "function_dependencies_code",
@@ -3603,7 +3603,6 @@
   ],
   "functions_names": [
    "functions_names",
-   "data_files_update",
    "functions_format",
    "functions_names_includes",
    "functions_search",
@@ -3705,7 +3704,6 @@
    "data_files_update"
   ],
   "function_name_to_path": [
-   "data_files_update",
    "functions_search",
    "function_delete",
    "function_format",
@@ -9433,13 +9431,11 @@
    "identifiers": [
     "functions_paths",
     "each_async",
-    "function_name_to_path",
-    "list_map",
-    "functions_names",
-    "data_file_update",
     "marker",
     "data_files_update",
-    "f_paths"
+    "f_paths",
+    "lambda",
+    "f_path"
    ]
   },
   "assert": {
