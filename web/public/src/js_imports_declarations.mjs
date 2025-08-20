@@ -38,7 +38,10 @@ export function js_imports_declarations(ast) {
       let unique = list_unique(mapped);
       ("the names should be the same");
       let name = list_single(unique);
-      la(name);
+      la({
+        name,
+        declaration: node,
+      });
     }
     each(vs, lambda);
   }
