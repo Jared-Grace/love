@@ -1,3 +1,4 @@
+import { function_name_combine } from "./function_name_combine.mjs";
 import { data_set } from "./data_set.mjs";
 import { git_push_command } from "./git_push_command.mjs";
 import { command_line_git } from "./command_line_git.mjs";
@@ -7,6 +8,7 @@ export async function git_push() {
   await catch_log_async(lambda);
   async function lambda() {
     await command_line_git(command_git);
+    let combined = function_name_combine(left, right);
     await data_set(value_get, property_name);
   }
 }
