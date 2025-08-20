@@ -2214,8 +2214,7 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining",
-   "js_dollar_g"
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -12743,8 +12742,7 @@
     "parsed",
     "lambda",
     "unique",
-    "assign",
-    "list"
+    "assign"
    ]
   },
   "js_dollar_i": {
