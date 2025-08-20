@@ -1376,7 +1376,6 @@
   "log": [
    "data_identifiers_file",
    "file_js_unparse",
-   "function_run_prompt",
    "catch_log",
    "catch_log_async",
    "catch_only_async",
@@ -1567,7 +1566,6 @@
   ],
   "data_transform": [
    "data_identifiers_file",
-   "function_run_prompt",
    "error_attention_set",
    "data_terminal_set",
    "data_transform",
@@ -2475,7 +2473,6 @@
   ],
   "import_install": [
    "watch",
-   "function_run_prompt",
    "chalk_green",
    "chalk_red",
    "chalk_color",
@@ -2495,7 +2492,6 @@
    "schtasks_query"
   ],
   "log_keep": [
-   "function_run_prompt",
    "catch_log",
    "catch_log_async",
    "command_line_node_g",
@@ -3192,7 +3188,6 @@
    "git_push"
   ],
   "trinity_green": [
-   "function_run_prompt",
    "function_run_log",
    "trinity_green"
   ],
@@ -3206,7 +3201,6 @@
    "function_run_line_git"
   ],
   "function_run_line": [
-   "function_run_prompt",
    "function_run_line",
    "prompt_previous"
   ],
@@ -3215,13 +3209,11 @@
    "command_line_read"
   ],
   "function_run_git": [
-   "function_run_prompt",
    "function_run_git",
    "function_run_line",
    "function_run_line_git"
   ],
   "list_add": [
-   "function_run_prompt",
    "functions_combine",
    "function_params_consolidate",
    "function_param_new",
@@ -3261,7 +3253,6 @@
    "visit_unique_async"
   ],
   "list_unique": [
-   "function_run_prompt",
    "function_run_line",
    "function_run_line_git",
    "js_imports",
@@ -3316,8 +3307,7 @@
    "chalk_color"
   ],
   "chalk_red": [
-   "chalk_red",
-   "function_run_prompt"
+   "chalk_red"
   ],
   "chalk": [
    "chalk_color"
@@ -3334,8 +3324,7 @@
   ],
   "colored": [
    "chalk_color",
-   "chalk_red",
-   "function_run_prompt"
+   "chalk_red"
   ],
   "lambda3": [
    "error_attention_set",
@@ -9317,6 +9306,9 @@
   ],
   "toISOString": [
    "date_iso_to"
+  ],
+  "log_error": [
+   "function_run_prompt"
   ]
  },
  "functions": {
@@ -9368,27 +9360,17 @@
   },
   "function_run_prompt": {
    "identifiers": [
-    "chalk_red",
+    "log_error",
     "null_not_is",
     "data_property_get",
-    "trinity_green",
     "chalk_green",
-    "import_install",
     "function_run_line_git",
-    "function_run_line",
-    "log",
-    "data_transform",
     "command_line_read",
-    "function_run_git",
-    "list_add",
-    "list_unique",
     "json_format_to",
-    "log_keep",
     "function_run_prompt",
     "ea",
     "nn",
     "prompt",
-    "colored",
     "prompt_colored",
     "line"
    ],
