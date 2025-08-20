@@ -1261,7 +1261,6 @@
   "a mab marker_above",
   "c mab marker_delete_above",
   "s prev",
-  "fs jaa",
   "a mda marker_delete_above",
   "mda",
   "u ja",
@@ -1365,10 +1364,11 @@
   "s date",
   "s lambda",
   "s git",
-  "cd"
+  "cd",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "git_push",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
