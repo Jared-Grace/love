@@ -1544,7 +1544,8 @@
    "js_imports_declarations",
    "js_dollar_g",
    "js_imports_unused_remove",
-   "function_imports_fix"
+   "function_imports_fix",
+   "js_imports_fix"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -1665,7 +1666,6 @@
    "list_first_remaining",
    "js_imports_unused_remove",
    "function_imports_fix",
-   "js_imports_fix",
    "git_push"
   ],
   "data_identifiers_file": [
@@ -2093,7 +2093,8 @@
    "js_imports_unused",
    "js_imports_declarations",
    "js_imports_unused_remove",
-   "data_set"
+   "data_set",
+   "js_imports_fix"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2960,7 +2961,8 @@
    "prompt_previous",
    "data_identifiers_search",
    "js_imports_unused",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "data_save": [
    "data_file_update",
@@ -3101,7 +3103,8 @@
    "marker_next_delete",
    "marker_remove",
    "js_dollar_g",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "list_remove_all": [
    "data_file_update",
@@ -5870,7 +5873,8 @@
    "marker_enter",
    "marker_functionize",
    "marker_top",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "import_": [
    "function_imports_add",
@@ -6054,7 +6058,8 @@
    "marker_functionize",
    "js_imports_declarations",
    "js_imports_unused",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -9131,7 +9136,8 @@
   ],
   "js_imports_unused": [
    "js_imports_unused",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "counter": [
    "counter",
@@ -9173,16 +9179,17 @@
   ],
   "unused": [
    "js_imports_unused",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "js_imports_unused_remove": [
    "js_imports_unused_remove",
-   "function_imports_fix",
-   "js_imports_fix"
+   "function_imports_fix"
   ],
   "unuseds": [
    "js_imports_unused",
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "js_imports_fix"
   ],
   "function_imports_fix": [
    "function_imports_fix"
@@ -17093,11 +17100,18 @@
   },
   "js_imports_fix": {
    "identifiers": [
-    "js_imports_unused_remove",
+    "list_remove",
+    "object_property_get",
     "js_imports_missing_add",
-    "marker",
+    "js_imports_unused",
+    "each",
     "js_imports_fix",
     "ast",
+    "unuseds",
+    "body",
+    "lambda",
+    "unused",
+    "declaration",
     "v"
    ]
   },
