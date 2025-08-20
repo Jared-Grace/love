@@ -1926,8 +1926,7 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set",
-   "data_identifiers_search"
+   "object_property_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4325,8 +4324,7 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda",
-   "data_identifiers_search"
+   "undefined_not_is_assert_lambda"
   ],
   "each_pair": [
    "each_pair",
@@ -16738,9 +16736,7 @@
     "data_identifiers_search",
     "s",
     "identifiers",
-    "value",
-    "object",
-    "property_name"
+    "value"
    ]
   }
  }
