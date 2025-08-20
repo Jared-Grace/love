@@ -693,7 +693,6 @@
   "a op object_properties",
   "a ea each_async",
   "s function",
-  "s task",
   "s _task_",
   "fts js_declare_assign_null",
   "fs function_param_swap",
@@ -1332,7 +1331,8 @@
   "s search",
   "s list_To",
   "s list_to",
-  "s test"
+  "s test",
+  "s task"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_search",
