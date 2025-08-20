@@ -14,6 +14,7 @@ import { js_code_string } from "./js_code_string.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 import { list_insert } from "./list_insert.mjs";
+import { list_remove } from "./list_remove.mjs";
 export async function js_dollar_g({
   remaining,
   node,
@@ -51,5 +52,6 @@ export async function js_dollar_g({
   }
   each_reverse(property_names, lambda2);
   if (js_node_type_is(stack1, "ExpressionStatement")) {
+    list_remove(stack2, stack1);
   }
 }
