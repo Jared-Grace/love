@@ -1366,7 +1366,8 @@
   "fs jaa",
   "s data",
   "s decl",
-  "d"
+  "d",
+  "s red"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
