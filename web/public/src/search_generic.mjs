@@ -1,3 +1,4 @@
+import { list_to_dictionary } from "./list_to_dictionary.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { each } from "./each.mjs";
 import { string_includes } from "./string_includes.mjs";
@@ -16,6 +17,7 @@ export function search_generic(search, list, value_get) {
     return v2;
   }
   let f_names_search = list_filter(list, lambda2);
+  let dictionary = list_to_dictionary(list2, function lambda4(item) {});
   let result = {};
   function lambda3(n) {
     let value = value_get(n);
