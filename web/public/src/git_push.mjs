@@ -18,7 +18,9 @@ export async function git_push() {
     let before_iso = await data_property_get(property_name);
     let before = date_to(before_iso);
     let ms = Math.abs(now - before);
-    const diffHours = ms / (1000 * 60 * 60);
+    const hours = ms / (1000 * 60 * 60);
+    if (false) {
+    }
     await command_line_git(command_git);
     let lambda$previous = lambda_get(now_iso);
     await data_set(lambda$previous, property_name);
