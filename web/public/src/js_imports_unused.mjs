@@ -28,5 +28,6 @@ export function js_imports_unused(ast) {
     );
   }
   let mapped = list_map(imports, lambda);
-  let result = list_filter(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let result = list_filter(list, lambda2);
 }
