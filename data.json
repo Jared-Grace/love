@@ -133,7 +133,8 @@
   "opd": "object_property_delete",
   "fwc": "function_watch_ending_change",
   "fntp": "function_name_to_path",
-  "d": "data_files_update"
+  "d": "data_files_update",
+  "is": "data_identifiers_search"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1332,7 +1333,8 @@
   "s list_To",
   "s list_to",
   "s test",
-  "s task"
+  "s task",
+  "a is data_identifiers_search"
  ],
  "marker_current": "1",
  "function_current": "data_identifiers_search",
