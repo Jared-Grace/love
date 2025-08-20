@@ -27,6 +27,4 @@ export async function js_outside_move(ast) {
   }
   each(fds, lambda3);
   await js_imports_fix(ast);
-  return;
-  let v = await js_imports_fix(ast2);
 }
