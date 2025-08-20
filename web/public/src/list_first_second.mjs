@@ -4,6 +4,7 @@ import { list_first } from "./list_first.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export function list_first_second(list) {
   const property_name = "second";
+  let value_get = list_second;
   let first = null;
   let second = null;
   if (list_empty_not_is(list)) {
@@ -17,5 +18,4 @@ export function list_first_second(list) {
     [property_name]: second,
   };
   return v;
-  let value_get = list_second;
 }
