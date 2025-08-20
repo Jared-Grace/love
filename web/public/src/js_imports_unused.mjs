@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { counter } from "./counter.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -21,6 +22,7 @@ export function js_imports_unused(ast) {
       js_visit_type(ast, "Identifier", lambda2);
     }
     let count = counter(lambda3);
+    log(message);
   }
   each(imports, lambda);
 }
