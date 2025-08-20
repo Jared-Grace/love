@@ -7,7 +7,6 @@ import { functions_paths } from "./functions_paths.mjs";
 import { each_async } from "./each_async.mjs";
 export async function data_files_update() {
   let f_paths = functions_paths();
-  async function lambda2(item) {}
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   var d = await data_all();
   async function lambda(f_path) {
