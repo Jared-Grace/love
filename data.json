@@ -4656,8 +4656,7 @@
    "js_dollar_g",
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "list_first_remaining"
+   "list_second"
   ],
   "list_to": [
    "functions_combine",
@@ -7554,7 +7553,8 @@
   "remaining": [
    "js_call_new_code",
    "js_dollar",
-   "js_dollar_g"
+   "js_dollar_g",
+   "list_first_remaining"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -16911,7 +16911,7 @@
     "list_first_remaining",
     "list",
     "first",
-    "second",
+    "remaining",
     "v"
    ]
   }
