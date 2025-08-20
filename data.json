@@ -5585,7 +5585,8 @@
    "marker_call_replace_generic",
    "object_merge",
    "object_property_from",
-   "object_replace"
+   "object_replace",
+   "js_imports_unused"
   ],
   "r": [
    "function_format",
@@ -16896,6 +16897,7 @@
     "declaration",
     "count_import",
     "count_declaration",
+    "to",
     "unused",
     "mapped"
    ]
