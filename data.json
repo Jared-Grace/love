@@ -1642,7 +1642,8 @@
    "data_identifiers_search",
    "js_imports_unused",
    "counter",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "list_first_remaining"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16896,6 +16897,7 @@
   },
   "list_first_remaining": {
    "identifiers": [
+    "marker",
     "list_multiple_is",
     "list_second",
     "list_first",
