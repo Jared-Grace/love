@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_delete } from "./object_property_delete.mjs";
@@ -23,7 +24,8 @@ export async function data_file_update_inner(parsed, d) {
   }
   each(f_identifiers_new, lambda2);
   let functions = object_property_initialize(data, "functions", {});
-  let declaration = js_declaration_single(ast2);
+  let declaration = js_declaration_single(ast);
+  let async = object_property_get(declaration, "async");
   let f_this = object_property_initialize(functions, f_name, {});
   let f_identifiers_old = object_property_initialize(f_this, property_name, []);
   let removals = list_difference(f_identifiers_old, f_identifiers_new);
