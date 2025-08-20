@@ -28,12 +28,15 @@ export async function js_node_atomize(existing, v) {
       let { name } = callee;
       const valid = functions_names_includes(name);
       if (valid) {
-        let { ast: ast_callee } = await function_parse(name);
-        let return_name = js_return_name(ast_callee);
-        if (return_name !== null) {
-          variable_name = return_name;
-        }
+        await lambda(name);
       }
+    }
+  }
+  async function lambda(name) {
+    let { ast: ast_callee } = await function_parse(name);
+    let return_name = js_return_name(ast_callee);
+    if (return_name !== null) {
+      variable_name = return_name;
     }
   }
   let stack2 = list_get_end(stack, 2);
