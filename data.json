@@ -1355,7 +1355,6 @@
   "o auto",
   "s auto",
   "fwc js_imports_missing_add missing_add fix",
-  "s git",
   "s data,set",
   "gp",
   "data_get git_push_when",
@@ -1365,7 +1364,8 @@
   "fs gp",
   "mx",
   "s date",
-  "s lambda"
+  "s lambda",
+  "s git"
  ],
  "marker_current": "1",
  "function_current": "git_push",
