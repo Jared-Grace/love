@@ -1,3 +1,4 @@
+import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { log } from "./log.mjs";
 import { counter } from "./counter.mjs";
@@ -10,7 +11,7 @@ import { js_imports } from "./js_imports.mjs";
 import { marker } from "./marker.mjs";
 export function js_imports_unused(ast) {
   marker("1");
-  let imports = js_imports(ast);
+  let imports = js_imports_declarations(ast);
   function lambda(i_name) {
     let count_import = js_identifiers_named_count(ast, i_name);
     log(count_import);
