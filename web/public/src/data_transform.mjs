@@ -1,4 +1,3 @@
-import { object_property_get } from "./object_property_get.mjs";
 import { data_save } from "./data_save.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { data_get } from "./data_get.mjs";
@@ -12,6 +11,7 @@ export async function data_transform(
   let { data, value: value_previous } = d;
   const value = lambda$previous(value_previous);
   object_property_set(data, property_name, value);
+  log(value);
   await data_save(d);
   return value;
 }
