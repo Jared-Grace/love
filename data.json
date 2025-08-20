@@ -4373,7 +4373,8 @@
   ],
   "count": [
    "each_range",
-   "range"
+   "range",
+   "js_imports_unused"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -5656,8 +5657,7 @@
    "marker_down",
    "marker_index",
    "range",
-   "counter",
-   "js_imports_unused"
+   "counter"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -16819,7 +16819,7 @@
     "v",
     "node",
     "name",
-    "i"
+    "count"
    ]
   },
   "counter": {
