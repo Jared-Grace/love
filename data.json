@@ -1361,7 +1361,6 @@
   "s date",
   "s lambda",
   "s git",
-  "cd",
   "fs jaa",
   "s data",
   "s decl",
@@ -1371,7 +1370,8 @@
   "p",
   "eac",
   "o gp",
-  "d"
+  "d",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "git_push",
