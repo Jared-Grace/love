@@ -3783,7 +3783,8 @@
    "marker_next_delete",
    "object_property_exists_assert",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "js_dollar_g"
   ],
   "b": [
    "assert",
@@ -3809,7 +3810,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "js_dollar_g"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -12710,6 +12712,7 @@
   },
   "js_dollar_g": {
    "identifiers": [
+    "assert",
     "each",
     "list_first_remaining",
     "list_add",
@@ -12739,7 +12742,8 @@
     "parsed",
     "lambda",
     "unique",
-    "assign"
+    "assign",
+    "b"
    ]
   },
   "js_dollar_i": {
