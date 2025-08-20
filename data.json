@@ -1417,7 +1417,6 @@
    "js_identifier_defineds",
    "js_if_blockify",
    "js_if_else_if_combine",
-   "js_imports_missing_add",
    "js_let_add",
    "js_marker_named",
    "js_marker_named_ast",
@@ -5888,7 +5887,6 @@
    "js_declaration_single_block_blody",
    "js_declaration_single_params_add",
    "js_imports_missing",
-   "js_imports_missing_add",
    "js_return_name",
    "marker_down_choices_lambda",
    "marker_top"
@@ -13325,10 +13323,8 @@
   },
   "js_imports_missing_add": {
    "identifiers": [
-    "log",
     "function_imports_add",
     "js_imports_missing",
-    "js_declaration_single",
     "js_imports_missing_add",
     "ast",
     "imports_missing"
