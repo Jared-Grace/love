@@ -7526,7 +7526,8 @@
    "js_call_new_code",
    "js_code_declaration",
    "js_function_last_asyncify",
-   "marker_functionize"
+   "marker_functionize",
+   "data_file_update_inner"
   ],
   "js_code_call_args": [
    "js_call_insert",
@@ -8079,8 +8080,7 @@
    "js_function_last_asyncify"
   ],
   "async": [
-   "js_function_last_asyncify",
-   "data_file_update_inner"
+   "js_function_last_asyncify"
   ],
   "b2": [
    "js_identifiers_to_names"
@@ -17185,15 +17185,16 @@
     "i_name",
     "list",
     "functions",
-    "declaration",
-    "async",
     "f_this",
+    "declaration",
+    "async_is",
     "f_identifiers_old",
     "removals",
     "lambda",
     "item",
     "e"
-   ]
+   ],
+   "async": true
   }
  },
  "git_push_when": "2025-08-20T19:10:14.080Z",
