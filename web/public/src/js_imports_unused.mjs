@@ -1,3 +1,4 @@
+import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { log } from "./log.mjs";
 import { counter } from "./counter.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -11,17 +12,7 @@ export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports(ast);
   function lambda(i_name) {
-    function lambda3(c) {
-      function lambda2(v) {
-        let node = object_property_get(v, "node");
-        let name = object_property_get(node, "name");
-        if (name === i_name) {
-          c();
-        }
-      }
-      js_visit_type(ast, "Identifier", lambda2);
-    }
-    let count_import = counter(lambda3);
+    let count_import = js_identifiers_named_count(ast, i_name);
     log(count_import);
   }
   each(imports, lambda);
