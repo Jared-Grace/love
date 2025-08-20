@@ -6,9 +6,11 @@ import { function_run_line_git } from "./function_run_line_git.mjs";
 import { command_line_read } from "./command_line_read.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 export async function function_run_prompt() {
-  let ea = await data_property_get("error_attention");
+  const property_name = "error_attention";
+  let ea = await data_property_get(property_name);
   let nn = null_not_is(ea);
   if (nn) {
+    await log_error(property_name);
     let prompt = json_format_to(ea);
     await log_error(prompt);
   }
