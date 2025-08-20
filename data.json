@@ -9150,6 +9150,9 @@
   ],
   "js_imports_unused_remove": [
    "js_imports_unused_remove"
+  ],
+  "unuseds": [
+   "js_imports_unused"
   ]
  },
  "functions": {
@@ -16913,7 +16916,8 @@
     "count_declaration",
     "to",
     "unused",
-    "mapped"
+    "mapped",
+    "unuseds"
    ]
   },
   "counter": {
