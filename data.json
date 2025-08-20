@@ -1650,7 +1650,8 @@
    "js_imports_unused",
    "counter",
    "js_imports_declarations",
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_imports_unused_remove"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1798,7 +1799,8 @@
    "promise_not_is",
    "task_new",
    "js_imports_unused",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_unused_remove"
   ],
   "code": [
    "data_identifiers_file",
@@ -9095,7 +9097,8 @@
    "data_identifiers_search"
   ],
   "js_imports_unused": [
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_unused_remove"
   ],
   "counter": [
    "counter",
@@ -9136,7 +9139,11 @@
    "js_imports_unused"
   ],
   "unused": [
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_unused_remove"
+  ],
+  "js_imports_unused_remove": [
+   "js_imports_unused_remove"
   ]
  },
  "functions": {
@@ -16967,6 +16974,15 @@
     "property_name",
     "value_get",
     "result"
+   ]
+  },
+  "js_imports_unused_remove": {
+   "identifiers": [
+    "js_imports_unused",
+    "marker",
+    "js_imports_unused_remove",
+    "ast",
+    "unused"
    ]
   }
  }
