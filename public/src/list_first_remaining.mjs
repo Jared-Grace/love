@@ -1,3 +1,4 @@
+import { list_skip_1 } from "./list_skip_1.mjs";
 import { marker } from "./marker.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
@@ -11,7 +12,7 @@ export function list_first_remaining(list) {
   if (list_empty_not_is(list)) {
     first = list_first(list);
     if (list_multiple_is(list)) {
-      second = list_skip(list, 1);
+      second = list_skip_1(list);
     }
   }
   let v = {
