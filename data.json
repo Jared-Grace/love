@@ -1247,7 +1247,6 @@
   "a lr list_remove",
   "s list,add",
   "s block",
-  "me",
   "n marker_above",
   "s marker,index",
   "c marker_previous_index marker_index",
@@ -1376,7 +1375,8 @@
   "ire node2 2",
   "o mm",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
