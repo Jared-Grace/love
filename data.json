@@ -16895,10 +16895,10 @@
     "count_import",
     "count_declaration",
     "unused",
-    "mapped",
-    "list",
     "lambda2",
-    "item"
+    "item",
+    "mapped",
+    "list"
    ]
   },
   "counter": {
