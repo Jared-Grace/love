@@ -2657,7 +2657,8 @@
    "prompt_previous",
    "schtasks_query",
    "string_empty_not_is",
-   "task_new"
+   "task_new",
+   "js_imports_unused"
   ],
   "output": [
    "watch",
@@ -16799,6 +16800,7 @@
     "lambda2",
     "v",
     "node",
+    "name",
     "ast2"
    ]
   }
