@@ -134,7 +134,8 @@
   "fwc": "function_watch_ending_change",
   "fntp": "function_name_to_path",
   "d": "data_files_update",
-  "is": "data_identifiers_search"
+  "is": "data_identifiers_search",
+  "lfp": "list_filter_property"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1349,7 +1350,8 @@
   "s reve",
   "s equal",
   "s filter",
-  "u lfp"
+  "u lfp",
+  "a lfp list_filter_property"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
