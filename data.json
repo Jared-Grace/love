@@ -2329,8 +2329,7 @@
    "string_is_assert_message",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_imports_fix",
-   "js_outside_move"
+   "js_imports_fix"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7464,8 +7463,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_outside_move"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -13748,9 +13746,7 @@
     "f_name",
     "f_path",
     "lambda2",
-    "lambda3",
-    "v",
-    "ast2"
+    "lambda3"
    ]
   },
   "js_parse": {
