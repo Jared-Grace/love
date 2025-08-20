@@ -1639,7 +1639,8 @@
    "string_is_assert_message",
    "data_identifiers_search",
    "js_imports_unused",
-   "counter"
+   "counter",
+   "js_imports_declarations"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16869,6 +16870,7 @@
   },
   "js_imports_declarations": {
    "identifiers": [
+    "marker",
     "not",
     "js_imports_all",
     "js_visit_type",
