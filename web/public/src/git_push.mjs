@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { date_diff_hours } from "./date_diff_hours.mjs";
 import { log } from "./log.mjs";
 import { lambda_get } from "./lambda_get.mjs";
@@ -11,6 +12,7 @@ import { git_push_command } from "./git_push_command.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 export async function git_push() {
+  marker("1");
   const command_git = git_push_command();
   await catch_log_async(lambda);
   async function lambda() {
