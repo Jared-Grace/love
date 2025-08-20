@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_declare } from "./js_declare.mjs";
@@ -12,6 +13,7 @@ import { list_first_second } from "./list_first_second.mjs";
 export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
+  each(list, function lambda2(item) {});
   let code_string = js_code_string(property_name);
   let code = js_code_call_args(object_property_get.name, [
     object_name,
