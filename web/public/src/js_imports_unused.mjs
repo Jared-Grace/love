@@ -18,9 +18,12 @@ export function js_imports_unused(ast) {
     let declaration = object_property_get(i, "declaration");
     let count_import = js_identifiers_named_count(ast, name);
     let count_declaration = js_identifiers_named_count(declaration, name);
-    object_merge({
-      unused: count_import === count_declaration,
-    });
+    object_merge(
+      {
+        unused: count_import === count_declaration,
+      },
+      i,
+    );
   }
   each(imports, lambda);
 }
