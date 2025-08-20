@@ -1338,10 +1338,11 @@
   "is value",
   "is null_is",
   "s unali",
-  "s imports"
+  "s imports",
+  "nj imports_unused"
  ],
  "marker_current": "1",
- "function_current": "data_identifiers_search",
+ "function_current": "js_imports_unused",
  "terminal": false,
  "identifiers": {
   "log": [
