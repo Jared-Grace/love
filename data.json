@@ -2658,8 +2658,7 @@
    "string_is_assert_message",
    "undefined_is",
    "undefined_not_is_assert_lambda",
-   "js_imports_declarations",
-   "git_push"
+   "js_imports_declarations"
   ],
   "name": [
    "watch",
@@ -9214,6 +9213,9 @@
   ],
   "Date": [
    "date_now"
+  ],
+  "before": [
+   "git_push"
   ]
  },
  "functions": {
@@ -11659,7 +11661,7 @@
     "lambda",
     "property_name",
     "name",
-    "value"
+    "before"
    ]
   },
   "git_push_command": {
