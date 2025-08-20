@@ -50,4 +50,6 @@ export async function js_dollar_g({
     }
   }
   each_reverse(property_names, lambda2);
+  if (js_node_type_is(stack1, "ExpressionStatement")) {
+  }
 }
