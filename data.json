@@ -10,7 +10,6 @@
   "ac": "function_alias_change",
   "al": "function_aliases",
   "ni": "npm_install",
-  "i": "function_imports_missing_add",
   "fa": "functions_format",
   "v": "server",
   "m": "marker_top",
@@ -135,7 +134,8 @@
   "fntp": "function_name_to_path",
   "d": "data_files_update",
   "is": "data_identifiers_search",
-  "lfp": "list_filter_property"
+  "lfp": "list_filter_property",
+  "i": "function_imports_fix"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1354,7 +1354,8 @@
   "fws js_imports_unused remove",
   "fts js_imports_unused_remove",
   "s imports",
-  "c function_imports_missing_add function_imports_fix"
+  "c function_imports_missing_add function_imports_fix",
+  "ar i function_imports_fix"
  ],
  "marker_current": "1",
  "function_current": "function_imports_fix",
