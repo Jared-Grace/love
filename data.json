@@ -6094,7 +6094,8 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async"
+   "js_visit_type_each_async",
+   "js_imports_unused"
   ],
   "method": [
    "function_params_consolidate"
@@ -6470,7 +6471,8 @@
    "js_visit_type_each_async",
    "marker_enter",
    "marker_functionize",
-   "marker_move"
+   "marker_move",
+   "js_imports_unused"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -16782,6 +16784,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "js_visit_type",
     "js_visit",
     "each",
     "js_imports",
@@ -16793,7 +16796,8 @@
     "i",
     "lambda2",
     "v",
-    "ast2"
+    "ast2",
+    "type"
    ]
   }
  }
