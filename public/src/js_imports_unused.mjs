@@ -7,7 +7,8 @@ export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports(ast);
   function lambda(i) {
-    js_visit_type(ast2, type, function lambda2(v) {});
+    function lambda2(v) {}
+    js_visit_type(ast2, type, lambda2);
   }
   each(imports, lambda);
 }
