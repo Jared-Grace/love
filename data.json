@@ -1368,11 +1368,11 @@
   "eac",
   "o gp",
   "d",
-  "cd",
   "fs jaa",
   "s name",
   "s call,name",
-  "s call"
+  "s call",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
