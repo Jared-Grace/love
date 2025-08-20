@@ -4653,7 +4653,6 @@
    "function_alias_add",
    "function_name_to_path",
    "js_dollar",
-   "js_dollar_g",
    "js_dollar_r",
    "list_second"
   ],
@@ -9099,7 +9098,8 @@
    "js_imports"
   ],
   "list_first_remaining": [
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_dollar_g"
   ],
   "list_skip_1": [
    "list_first_remaining"
@@ -9107,6 +9107,9 @@
   "list_first_second_generic": [
    "list_first_second",
    "list_first_remaining"
+  ],
+  "property_names": [
+   "js_dollar_g"
   ]
  },
  "functions": {
@@ -12704,6 +12707,7 @@
   },
   "js_dollar_g": {
    "identifiers": [
+    "list_first_remaining",
     "list_add",
     "js_declare",
     "js_identifier_unique_ast",
@@ -12722,9 +12726,9 @@
     "afters",
     "first",
     "object_name",
-    "second",
-    "property_name",
+    "property_names",
     "code_string",
+    "property_name",
     "code",
     "name",
     "parsed",
