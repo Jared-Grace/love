@@ -12,7 +12,7 @@ export async function function_imports_fix(f_name) {
   marker("1");
   let parsed = await function_imports_missing(f_name);
   let { imports_missing, ast } = parsed;
-  await js_imports_unused_remove(ast2);
+  await js_imports_unused_remove(ast);
   await function_imports_add(ast, imports_missing);
   await file_js_unparse(parsed);
 }
