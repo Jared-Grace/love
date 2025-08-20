@@ -9197,13 +9197,20 @@
    "date_now_iso"
   ],
   "date_now": [
-   "date_now_iso"
+   "date_now_iso",
+   "date_now"
   ],
   "now_iso": [
    "date_now_iso"
   ],
   "toISOString": [
    "date_now_iso"
+  ],
+  "now": [
+   "date_now"
+  ],
+  "Date": [
+   "date_now"
   ]
  },
  "functions": {
@@ -17100,6 +17107,13 @@
     "date_now_iso",
     "now_iso",
     "toISOString"
+   ]
+  },
+  "date_now": {
+   "identifiers": [
+    "date_now",
+    "now",
+    "Date"
    ]
   }
  }
