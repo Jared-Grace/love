@@ -2662,7 +2662,8 @@
    "string_is_assert_message",
    "undefined_is",
    "undefined_not_is_assert_lambda",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -8993,7 +8994,8 @@
    "search_generic",
    "list_first_second",
    "list_first_remaining",
-   "data_boolean_set"
+   "data_boolean_set",
+   "lambda_get"
   ],
   "terms": [
    "search_generic"
@@ -9239,7 +9241,8 @@
    "git_push"
   ],
   "lambda_get": [
-   "git_push"
+   "git_push",
+   "lambda_get"
   ]
  },
  "functions": {
@@ -17158,6 +17161,13 @@
     "date_now",
     "now",
     "Date"
+   ]
+  },
+  "lambda_get": {
+   "identifiers": [
+    "lambda_get",
+    "value",
+    "value_get"
    ]
   }
  },
