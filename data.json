@@ -9122,9 +9122,6 @@
   ],
   "property_names": [
    "js_dollar_g"
-  ],
-  "list_rever": [
-   "js_dollar_g"
   ]
  },
  "functions": {
@@ -12749,7 +12746,6 @@
     "first",
     "object_name",
     "property_names",
-    "list_rever",
     "lambda2",
     "property_name",
     "code_string",
