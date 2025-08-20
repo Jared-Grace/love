@@ -20,6 +20,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_delete } from "./object_property_delete.mjs";
 export async function marker_new() {
+  marker("1");
   let f_name = await data_function_current_get();
   await function_transform_marker(f_name, lambda);
   async function lambda(a) {
