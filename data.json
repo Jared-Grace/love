@@ -3080,7 +3080,8 @@
    "marker_next",
    "marker_next_delete",
    "marker_remove",
-   "js_dollar_g"
+   "js_dollar_g",
+   "js_imports_unused_remove"
   ],
   "list_remove_all": [
    "data_file_update",
@@ -9152,7 +9153,8 @@
    "js_imports_unused_remove"
   ],
   "unuseds": [
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_unused_remove"
   ]
  },
  "functions": {
@@ -16988,17 +16990,19 @@
   },
   "js_imports_unused_remove": {
    "identifiers": [
+    "list_remove",
     "each",
     "object_property_get",
     "js_imports_unused",
     "marker",
     "js_imports_unused_remove",
     "ast",
-    "unused",
+    "unuseds",
     "body",
     "lambda",
-    "item",
-    "list"
+    "unused",
+    "list",
+    "item"
    ]
   }
  }
