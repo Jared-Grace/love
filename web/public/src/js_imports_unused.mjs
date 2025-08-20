@@ -10,6 +10,7 @@ export function js_imports_unused(ast) {
   function lambda(i) {
     function lambda2(v) {
       let node = object_property_get(v, "node");
+      let name = object_property_get(node, "name");
     }
     js_visit_type(ast2, "Identifier", lambda2);
   }
