@@ -1659,7 +1659,8 @@
    "js_imports_declarations",
    "list_first_remaining",
    "js_imports_unused_remove",
-   "function_imports_fix"
+   "function_imports_fix",
+   "js_imports_fix"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1810,7 +1811,8 @@
    "js_imports_unused",
    "js_imports_declarations",
    "js_imports_unused_remove",
-   "function_imports_fix"
+   "function_imports_fix",
+   "js_imports_fix"
   ],
   "code": [
    "data_identifiers_file",
@@ -2327,7 +2329,8 @@
    "string_includes",
    "string_is_assert_message",
    "visit_unique_async",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_fix"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5337,7 +5340,8 @@
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
-   "marker_top"
+   "marker_top",
+   "js_imports_fix"
   ],
   "function_transform": [
    "function_auto",
@@ -9176,6 +9180,9 @@
   ],
   "function_imports_fix": [
    "function_imports_fix"
+  ],
+  "js_imports_fix": [
+   "js_imports_fix"
   ]
  },
  "functions": {
@@ -17042,6 +17049,15 @@
     "parsed",
     "imports_missing",
     "ast"
+   ]
+  },
+  "js_imports_fix": {
+   "identifiers": [
+    "js_imports_missing_add",
+    "marker",
+    "js_imports_fix",
+    "ast",
+    "v"
    ]
   }
  }
