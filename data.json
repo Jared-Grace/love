@@ -2905,7 +2905,6 @@
    "data_marker_current_get",
    "data_property_get",
    "data_terminal_get",
-   "data_transform",
    "data_value",
    "data_watch_get",
    "each_object",
@@ -9851,7 +9850,6 @@
   },
   "data_transform": {
    "identifiers": [
-    "object_property_get",
     "data_save",
     "object_property_set",
     "data_get",
