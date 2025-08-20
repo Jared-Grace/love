@@ -2594,7 +2594,6 @@
    "object_property_initialize",
    "object_property_set",
    "promise_is",
-   "search_generic",
    "string_is",
    "string_is_assert",
    "string_is_assert_json",
@@ -2980,8 +2979,7 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run",
-   "search_generic"
+   "tasks_run"
   ],
   "list_includes": [
    "data_file_update",
@@ -3275,8 +3273,7 @@
    "js_if_else_if_combine",
    "js_outside_move",
    "marker_down_choices_lambda",
-   "marker_expand",
-   "search_generic"
+   "marker_expand"
   ],
   "value2": [
    "error_attention_set"
@@ -5849,8 +5846,7 @@
   ],
   "dictionary": [
    "function_names_to_acronyms",
-   "list_to_dictionary",
-   "search_generic"
+   "list_to_dictionary"
   ],
   "function_name_separator": [
    "function_name_combine",
@@ -8020,8 +8016,7 @@
   ],
   "lambda4": [
    "js_identifier_defineds",
-   "marker_expand",
-   "search_generic"
+   "marker_expand"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9012,9 +9007,6 @@
   ],
   "data_identifiers_search": [
    "data_identifiers_search"
-  ],
-  "list2": [
-   "search_generic"
   ]
  },
  "functions": {
@@ -16328,13 +16320,7 @@
     "v",
     "v2",
     "f_names_search",
-    "lambda4",
-    "item",
-    "dictionary",
-    "list2",
-    "result",
-    "lambda3",
-    "value"
+    "result"
    ]
   },
   "server": {
