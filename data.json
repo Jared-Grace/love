@@ -2233,8 +2233,7 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining",
-   "data_files_update"
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -2806,7 +2805,8 @@
   ],
   "file_js_parse": [
    "file_js_parse",
-   "function_parse"
+   "function_parse",
+   "data_files_update"
   ],
   "f_path2": [
    "data_file_update"
@@ -5544,8 +5544,7 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "data_files_update"
+   "list_map_unordered_async"
   ],
   "mapped2": [
    "function_dependencies_code"
@@ -9213,6 +9212,9 @@
   "data_file_update_inner": [
    "data_file_update",
    "data_files_update"
+  ],
+  "parseds": [
+   "data_files_update"
   ]
  },
  "functions": {
@@ -9437,6 +9439,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "file_js_parse",
     "list_map_unordered_async",
     "data_save",
     "data_file_update_inner",
@@ -9447,8 +9450,7 @@
     "f_paths",
     "lambda2",
     "item",
-    "waited",
-    "list",
+    "parseds",
     "d",
     "lambda",
     "f_path"
