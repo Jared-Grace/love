@@ -1340,7 +1340,9 @@
   "s imports",
   "nj imports_unused",
   "s ident",
-  "n counter"
+  "n counter",
+  "ftc js_imports_unused",
+  "fts js_imports_unused"
  ],
  "marker_current": "1",
  "function_current": "counter",
