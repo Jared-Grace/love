@@ -2450,8 +2450,7 @@
   ],
   "catch_ignore": [
    "watch",
-   "catch_ignore",
-   "git_acp"
+   "catch_ignore"
   ],
   "function_auto_path": [
    "watch",
@@ -2480,7 +2479,6 @@
    "command_line_schtasks",
    "file_open",
    "file_open_editor",
-   "git_acp",
    "git_push_schedule",
    "git_push_schedule_check",
    "npm_install",
@@ -2496,7 +2494,6 @@
    "file_open",
    "function_run_log",
    "function_transform",
-   "git_acp",
    "git_rebase",
    "js_parse",
    "log",
@@ -3924,8 +3921,7 @@
    "marker_call"
   ],
   "catch_ignore_async": [
-   "catch_ignore_async",
-   "git_acp"
+   "catch_ignore_async"
   ],
   "identity": [
    "catch_log_async",
@@ -3936,7 +3932,6 @@
   ],
   "catch_only_async": [
    "catch_only_async",
-   "git_acp",
    "git_commit"
   ],
   "message_fragment": [
@@ -7010,7 +7005,6 @@
    "function_wrap_suffix_add"
   ],
   "git_rebase": [
-   "git_acp",
    "git_rebase"
   ],
   "git_commit": [
@@ -11639,13 +11633,7 @@
   },
   "git_acp": {
    "identifiers": [
-    "git_rebase",
     "git_commit",
-    "catch_only_async",
-    "log_keep",
-    "catch_ignore_async",
-    "catch_ignore",
-    "command_line",
     "git_push",
     "command_line_git",
     "git_acp",
