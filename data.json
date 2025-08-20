@@ -2722,7 +2722,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "js_imports_unused"
   ],
   "separator": [
    "watch",
@@ -5710,7 +5711,8 @@
    "function_imports",
    "function_imports_missing",
    "js_imports",
-   "js_imports_missing"
+   "js_imports_missing",
+   "js_imports_unused"
   ],
   "function_parse": [
    "function_imports",
@@ -7373,7 +7375,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_imports_unused"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -16759,9 +16762,12 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "js_imports",
     "marker",
     "js_imports_unused",
-    "ast"
+    "ast",
+    "result",
+    "ast2"
    ]
   }
  }
