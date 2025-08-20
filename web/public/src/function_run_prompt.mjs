@@ -1,26 +1,16 @@
-import { chalk_red } from "./chalk_red.mjs";
+import { log_error } from "./log_error.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { data_property_get } from "./data_property_get.mjs";
-import { trinity_green } from "./trinity_green.mjs";
 import { chalk_green } from "./chalk_green.mjs";
-import { import_install } from "./import_install.mjs";
 import { function_run_line_git } from "./function_run_line_git.mjs";
-import { function_run_line } from "./function_run_line.mjs";
-import { log } from "./log.mjs";
-import { data_transform } from "./data_transform.mjs";
 import { command_line_read } from "./command_line_read.mjs";
-import { function_run_git } from "./function_run_git.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-import { log_keep } from "./log_keep.mjs";
 export async function function_run_prompt() {
   let ea = await data_property_get("error_attention");
   let nn = null_not_is(ea);
   if (nn) {
     let prompt = json_format_to(ea);
-    let colored = await chalk_red(prompt);
-    log_keep(colored);
+    await log_error(prompt);
   }
   let prompt_colored = await chalk_green("✟ ");
   let line = await command_line_read(prompt_colored);
