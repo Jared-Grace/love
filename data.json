@@ -2855,8 +2855,7 @@
   "d": [
    "data_file_update",
    "data_property_get",
-   "data_transform",
-   "date_now_iso"
+   "data_transform"
   ],
   "data": [
    "data_file_update",
@@ -9218,7 +9217,8 @@
    "git_push"
   ],
   "now": [
-   "date_now"
+   "date_now",
+   "date_now_iso"
   ],
   "Date": [
    "date_now"
@@ -17132,7 +17132,7 @@
     "date_iso_to",
     "date_now",
     "date_now_iso",
-    "d",
+    "now",
     "now_iso"
    ]
   },
