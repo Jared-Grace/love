@@ -8,7 +8,7 @@ export async function git_push() {
   await catch_log_async(lambda);
   async function lambda() {
     await command_line_git(command_git);
-    let combined = function_name_combine(left, right);
-    await data_set(value_get, property_name);
+    let combined = function_name_combine(git_push.name, "when");
+    await data_set(value_get, combined);
   }
 }
