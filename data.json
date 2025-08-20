@@ -7422,7 +7422,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_imports"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -9097,7 +9098,11 @@
    "js_imports_unused"
   ],
   "js_imports_declarations": [
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports"
+  ],
+  "imports2": [
+   "js_imports"
   ]
  },
  "functions": {
@@ -13179,6 +13184,7 @@
   },
   "js_imports": {
    "identifiers": [
+    "js_imports_declarations",
     "not",
     "js_imports_all",
     "js_visit_type",
@@ -13212,7 +13218,9 @@
     "mapped",
     "unique",
     "name",
-    "imports"
+    "imports",
+    "imports2",
+    "ast2"
    ]
   },
   "js_imports_all": {
