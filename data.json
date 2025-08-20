@@ -1468,7 +1468,8 @@
    "sandbox",
    "search_generic",
    "js_imports_unused",
-   "git_push"
+   "git_push",
+   "error_attention_set"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2444,7 +2445,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "error_attention_set"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -9422,11 +9424,13 @@
   },
   "error_attention_set": {
    "identifiers": [
+    "log",
     "data_transform",
     "error_attention_set",
     "value",
     "lambda3",
     "previous",
+    "message",
     "value2"
    ],
    "async": true
