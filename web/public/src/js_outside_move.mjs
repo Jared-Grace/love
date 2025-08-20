@@ -1,3 +1,4 @@
+import { js_imports_fix } from "./js_imports_fix.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -29,4 +30,6 @@ export async function js_outside_move(ast) {
   }
   each(fds, lambda3);
   await js_imports_missing_add(ast);
+  return;
+  let v = await js_imports_fix(ast2);
 }
