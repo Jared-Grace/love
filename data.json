@@ -1344,7 +1344,8 @@
   "fts js_imports_unused",
   "is js_imports",
   "c js_imports js_imports_declarations",
-  "s dollar"
+  "s dollar",
+  "s remaining"
  ],
  "marker_current": "1",
  "function_current": "js_imports_declarations",
