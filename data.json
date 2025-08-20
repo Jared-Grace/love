@@ -1667,7 +1667,8 @@
    "list_first_remaining",
    "js_imports_unused_remove",
    "function_imports_fix",
-   "git_push"
+   "git_push",
+   "marker_leave"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9283,6 +9284,9 @@
   "js_call_function_if": [
    "js_node_atomize",
    "js_await_add"
+  ],
+  "marker_leave": [
+   "marker_leave"
   ]
  },
  "functions": {
@@ -17831,6 +17835,13 @@
     "log_error",
     "prompt",
     "colored"
+   ]
+  },
+  "marker_leave": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "marker_leave"
    ]
   }
  },
