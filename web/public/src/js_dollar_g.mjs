@@ -13,6 +13,7 @@ import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
+import { list_insert } from "./list_insert.mjs";
 export async function js_dollar_g({
   remaining,
   node,
@@ -39,7 +40,7 @@ export async function js_dollar_g({
       let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_declare(unique, parsed);
       let index = list_index_of_next(stack2, stack1);
-      list_add(stack2, assign);
+      list_insert(stack2, index, assign);
       function lambda() {
         object_replace(stack1, assign);
       }
