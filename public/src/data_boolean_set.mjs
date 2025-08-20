@@ -1,6 +1,7 @@
-import { data_transform } from "./data_transform.mjs";
+import { data_set } from "./data_set.mjs";
 export async function data_boolean_set(property_name, value) {
-  function lambda(previous) {
+  await data_set(value_get, property_name);
+  function value_get(previous) {
     let v = null;
     if (value === "1") {
       v = true;
@@ -10,5 +11,4 @@ export async function data_boolean_set(property_name, value) {
     }
     return v;
   }
-  await data_transform(property_name, null, lambda);
 }
