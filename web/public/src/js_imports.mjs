@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -11,18 +12,21 @@ import { js_type } from "./js_type.mjs";
 import { each } from "./each.mjs";
 export function js_imports(ast) {
   let vs = js_imports_all(ast);
-  return list_adder_unique((la) => {
-    each(vs, (v) => {
+  function lambda2(la) {
+    function lambda(v) {
       let { node } = v;
       let { specifiers, source } = node;
-      if (!list_size_1(specifiers)) {
+      let a = list_size_1(specifiers);
+      if (not(a)) {
         return;
       }
-      if (!js_node_type_is(source, "Literal")) {
+      let a2 = js_node_type_is(source, "Literal");
+      if (not(a2)) {
         return;
       }
       let { value } = source;
-      if (!string_starts_with(value, ".")) {
+      let a3 = string_starts_with(value, ".");
+      if (not(a3)) {
         return;
       }
       let specifier = list_single(specifiers);
@@ -33,6 +37,9 @@ export function js_imports(ast) {
       ("the names should be the same");
       let name = list_single(unique);
       la(name);
-    });
-  });
+    }
+    each(vs, lambda);
+  }
+  const imports = list_adder_unique(lambda2);
+  return imports;
 }
