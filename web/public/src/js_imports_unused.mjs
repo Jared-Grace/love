@@ -20,12 +20,13 @@ export function js_imports_unused(ast) {
     let declaration = object_property_get(i, "declaration");
     let count_import = js_identifiers_named_count(ast, name);
     let count_declaration = js_identifiers_named_count(declaration, name);
-    return object_merge(
+    let to = object_merge(
       {
         unused: count_import === count_declaration,
       },
       i,
     );
+    return to;
   }
   let mapped = list_map(imports, lambda);
   let unused = list_filter_property(mapped, "unused", true);
