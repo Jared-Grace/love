@@ -21,6 +21,7 @@ export async function git_push() {
     let ms = Math.abs(now - before);
     const hours = ms / (1000 * 60 * 60);
     if (hours < 1) {
+      log("less than 1 hour");
       log(message);
     }
     await command_line_git(command_git);
