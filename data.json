@@ -9222,13 +9222,17 @@
    "git_push"
   ],
   "Date": [
-   "date_now"
+   "date_now",
+   "git_push"
   ],
   "before_iso": [
    "git_push"
   ],
   "date_iso_to": [
    "date_now_iso",
+   "git_push"
+  ],
+  "before": [
    "git_push"
   ]
  },
@@ -11679,7 +11683,9 @@
     "now_iso",
     "property_name",
     "name",
-    "before_iso"
+    "before_iso",
+    "before",
+    "Date"
    ]
   },
   "git_push_command": {
