@@ -587,7 +587,6 @@
   "function_auto_path src/noop.mjs",
   "au function_auto_path",
   "i watch",
-  "o mn",
   "n string_to",
   "s push",
   "au git_push",
@@ -1376,10 +1375,11 @@
   "cd",
   "fs jaa",
   "me",
-  "mn"
+  "mn",
+  "o mn"
  ],
- "marker_current": "2",
- "function_current": "js_await_add",
+ "marker_current": "1",
+ "function_current": "marker_new",
  "terminal": false,
  "identifiers": {
   "log": [
