@@ -5656,7 +5656,8 @@
    "marker_down",
    "marker_index",
    "range",
-   "counter"
+   "counter",
+   "js_imports_unused"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -8050,7 +8051,8 @@
   ],
   "lambda4": [
    "js_identifier_defineds",
-   "marker_expand"
+   "marker_expand",
+   "js_imports_unused"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9049,7 +9051,8 @@
    "js_imports_unused"
   ],
   "counter": [
-   "counter"
+   "counter",
+   "js_imports_unused"
   ]
  },
  "functions": {
@@ -16794,6 +16797,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "counter",
     "list_adder",
     "object_property_get",
     "js_visit_type",
@@ -16806,6 +16810,8 @@
     "imports",
     "lambda",
     "i_name",
+    "i",
+    "lambda4",
     "lambda2",
     "v",
     "node",
