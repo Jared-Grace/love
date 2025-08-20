@@ -22,7 +22,8 @@ export async function git_push() {
     const hours = ms / (1000 * 60 * 60);
     if (hours < 1) {
       log("less than 1 hour");
-      log(message);
+      log(hours);
+      return;
     }
     await command_line_git(command_git);
     let lambda$previous = lambda_get(now_iso);
