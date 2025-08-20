@@ -2274,8 +2274,7 @@
    "server",
    "string_includes",
    "string_is_assert_message",
-   "visit_unique_async",
-   "data_identifiers_search"
+   "visit_unique_async"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2905,7 +2904,8 @@
    "js_identifiers_named",
    "js_identifiers_to_names",
    "js_imports_missing",
-   "marker_expand"
+   "marker_expand",
+   "data_identifiers_search"
   ],
   "functions": [
    "data_file_update"
@@ -16730,7 +16730,7 @@
     "data_property_get",
     "marker",
     "data_identifiers_search",
-    "v"
+    "identifiers"
    ]
   }
  }
