@@ -6,7 +6,8 @@ export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports(ast);
   function lambda(i) {
-    js_visit(ast2, function lambda2(v) {});
+    function lambda2(v) {}
+    js_visit(ast2, lambda2);
   }
   each(imports, lambda);
 }
