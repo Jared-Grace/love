@@ -1587,7 +1587,6 @@
    "function_watch_ending_change",
    "error_attention_clear",
    "data_file_update_all",
-   "data_files_update",
    "data_terminal_get",
    "data_terminal_set",
    "equal_not",
@@ -2808,8 +2807,7 @@
    "function_parse"
   ],
   "f_path2": [
-   "data_file_update",
-   "data_files_update"
+   "data_file_update"
   ],
   "file_read": [
    "file_js_parse",
@@ -9210,9 +9208,6 @@
   "data_file_update_inner": [
    "data_file_update",
    "data_files_update"
-  ],
-  "d2": [
-   "data_files_update"
   ]
  },
  "functions": {
@@ -9442,14 +9437,11 @@
     "data_all",
     "functions_paths",
     "each_async",
-    "marker",
     "data_files_update",
     "f_paths",
     "d",
-    "f_path",
     "lambda",
-    "f_path2",
-    "d2"
+    "f_path"
    ]
   },
   "assert": {
