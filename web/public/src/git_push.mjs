@@ -9,9 +9,9 @@ export async function git_push() {
   const command_git = git_push_command();
   await catch_log_async(lambda);
   async function lambda() {
+    let property_name = function_name_combine(git_push.name, "when");
     let value = await data_property_get(property_name);
     await command_line_git(command_git);
-    let combined = function_name_combine(git_push.name, "when");
-    await data_set(date_now_iso, combined);
+    await data_set(date_now_iso, property_name);
   }
 }
