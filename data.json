@@ -9217,9 +9217,6 @@
   ],
   "before_iso": [
    "git_push"
-  ],
-  "$x": [
-   "git_push"
   ]
  },
  "functions": {
@@ -11663,7 +11660,6 @@
     "git_push",
     "command_git",
     "lambda",
-    "$x",
     "now_iso",
     "property_name",
     "name",
