@@ -2102,7 +2102,8 @@
    "js_imports_fix",
    "data_files_update",
    "data_file_update_inner",
-   "js_declaration_single"
+   "js_declaration_single",
+   "js_node_atomize"
   ],
   "previous": [
    "data_identifiers_file",
@@ -13972,6 +13973,7 @@
     "callee",
     "name",
     "valid",
+    "lambda",
     "ast",
     "ast_callee",
     "return_name",
