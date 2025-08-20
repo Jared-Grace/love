@@ -1261,7 +1261,6 @@
   "a mab marker_above",
   "c mab marker_delete_above",
   "s prev",
-  "cd",
   "fs jaa",
   "a mda marker_delete_above",
   "mda",
@@ -1365,7 +1364,8 @@
   "mx",
   "s date",
   "s lambda",
-  "s git"
+  "s git",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "git_push",
