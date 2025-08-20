@@ -9172,7 +9172,8 @@
   ],
   "js_imports_unused_remove": [
    "js_imports_unused_remove",
-   "function_imports_fix"
+   "function_imports_fix",
+   "js_imports_fix"
   ],
   "unuseds": [
    "js_imports_unused",
@@ -17053,6 +17054,7 @@
   },
   "js_imports_fix": {
    "identifiers": [
+    "js_imports_unused_remove",
     "js_imports_missing_add",
     "marker",
     "js_imports_fix",
