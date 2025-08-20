@@ -5664,7 +5664,8 @@
    "marker_down",
    "marker_index",
    "range",
-   "counter"
+   "counter",
+   "js_imports_unused"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -16826,8 +16827,9 @@
     "ast",
     "imports",
     "lambda",
-    "i_name",
-    "count_import"
+    "i",
+    "count_import",
+    "i_name"
    ]
   },
   "counter": {
