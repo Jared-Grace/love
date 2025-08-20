@@ -3068,7 +3068,8 @@
    "marker_new",
    "marker_next",
    "marker_next_delete",
-   "marker_remove"
+   "marker_remove",
+   "js_dollar_g"
   ],
   "list_remove_all": [
    "data_file_update",
@@ -12737,6 +12738,7 @@
     "list_first_second",
     "list_index_of_next",
     "list_insert",
+    "list_remove",
     "js_dollar_g",
     "remaining",
     "node",
