@@ -1619,7 +1619,8 @@
    "null_not_is",
    "prompt_previous",
    "sandbox",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "data_identifiers_search"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1925,7 +1926,8 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set"
+   "object_property_set",
+   "data_identifiers_search"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2272,7 +2274,8 @@
    "server",
    "string_includes",
    "string_is_assert_message",
-   "visit_unique_async"
+   "visit_unique_async",
+   "data_identifiers_search"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3110,7 +3113,8 @@
    "data_marker_current_get",
    "data_property_get",
    "data_terminal_get",
-   "data_watch_get"
+   "data_watch_get",
+   "data_identifiers_search"
   ],
   "trinity_green": [
    "function_run_prompt",
@@ -8997,6 +9001,9 @@
   ],
   "functions_paths": [
    "data_files_update"
+  ],
+  "data_identifiers_search": [
+   "data_identifiers_search"
   ]
  },
  "functions": {
@@ -16716,6 +16723,15 @@
     "lambda",
     "children",
     "lambda2",
+    "v"
+   ]
+  },
+  "data_identifiers_search": {
+   "identifiers": [
+    "data_property_get",
+    "marker",
+    "data_identifiers_search",
+    "property_name",
     "v"
    ]
   }
