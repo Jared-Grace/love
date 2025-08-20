@@ -2133,8 +2133,7 @@
    "search_generic",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_dollar_g",
-   "data_files_update"
+   "js_dollar_g"
   ],
   "i_name": [
    "data_identifiers_file"
@@ -3019,8 +3018,7 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run",
-   "data_files_update"
+   "tasks_run"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -9448,8 +9446,6 @@
     "each_async",
     "data_files_update",
     "f_paths",
-    "lambda2",
-    "item",
     "parseds",
     "d",
     "lambda",
