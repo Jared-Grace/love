@@ -29,6 +29,6 @@ export function js_imports_unused(ast) {
     return to;
   }
   let mapped = list_map(imports, lambda);
-  let unused = list_filter_property(mapped, "unused", true);
-  return unused;
+  let unuseds = list_filter_property(mapped, "unused", true);
+  return unuseds;
 }
