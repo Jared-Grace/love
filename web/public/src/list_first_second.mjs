@@ -10,7 +10,7 @@ export function list_first_second(list) {
   if (list_empty_not_is(list)) {
     first = list_first(list);
     if (list_multiple_is(list)) {
-      second = list_second(list);
+      second = value_get(list);
     }
   }
   let v = {
