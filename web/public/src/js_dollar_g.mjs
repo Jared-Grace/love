@@ -33,7 +33,7 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
       }
       list_add(afters, lambda);
     } else {
-      list_size_1_assert(list);
+      list_size_1_assert(remaining);
     }
   }
   each(property_names, lambda2);
