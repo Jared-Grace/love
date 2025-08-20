@@ -1711,8 +1711,7 @@
    "function_path_declaration_unparse",
    "function_path_to_name",
    "function_read",
-   "js_outside_move",
-   "data_files_update"
+   "js_outside_move"
   ],
   "ast": [
    "data_identifiers_file",
@@ -9450,12 +9449,11 @@
     "functions_paths",
     "each_async",
     "data_files_update",
+    "d",
     "f_paths",
     "parseds",
-    "d",
     "lambda",
-    "parsed",
-    "f_path"
+    "parsed"
    ]
   },
   "assert": {
