@@ -9245,16 +9245,10 @@
    "git_push",
    "lambda_get"
   ],
-  "ms": [
-   "git_push"
-  ],
   "hours": [
    "git_push"
   ],
-  "date_diff_ms": [
-   "git_push"
-  ],
-  "date_ms_to_hours": [
+  "date_diff_hours": [
    "git_push"
   ]
  },
@@ -11689,8 +11683,7 @@
   },
   "git_push": {
    "identifiers": [
-    "date_ms_to_hours",
-    "date_diff_ms",
+    "date_diff_hours",
     "log",
     "lambda_get",
     "date_to",
@@ -11711,7 +11704,6 @@
     "name",
     "before_iso",
     "before",
-    "ms",
     "hours",
     "lambda$previous"
    ]
