@@ -1356,7 +1356,6 @@
   "s data,set",
   "gp",
   "data_get git_push_when",
-  "s data",
   "dpg git_push_when",
   "x",
   "fs gp",
@@ -1365,7 +1364,8 @@
   "s lambda",
   "s git",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -17169,5 +17169,5 @@
    ]
   }
  },
- "git_push_when": "2025-08-20T16:41:33.732Z"
+ "git_push_when": "2025-08-20T19:10:14.080Z"
 }
