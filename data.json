@@ -1471,20 +1471,17 @@
   "function_path_to_name": [
    "data_identifiers_file",
    "function_auto_path",
-   "data_file_update",
    "file_open",
    "function_path_declaration_unparse",
    "function_path_to_name"
   ],
   "list_add_if_not_includes": [
    "data_identifiers_file",
-   "data_file_update",
    "list_add_if_not_includes",
    "visit_unique_async"
   ],
   "object_property_initialize": [
    "data_identifiers_file",
-   "data_file_update",
    "data_get",
    "data_value",
    "function_alias_add_generic",
@@ -1493,7 +1490,6 @@
   ],
   "each": [
    "data_identifiers_file",
-   "data_file_update",
    "each",
    "each_index",
    "each_object",
@@ -1551,7 +1547,6 @@
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
-   "data_file_update",
    "function_imports_missing",
    "js_atomize",
    "js_call_new",
@@ -1676,7 +1671,6 @@
    "data_identifiers_file",
    "file_js_unparse",
    "file_js_parse",
-   "data_file_update",
    "function_imports",
    "function_imports_missing",
    "function_imports_missing_add",
@@ -1722,7 +1716,6 @@
    "data_identifiers_file",
    "file_js_unparse",
    "file_js_parse",
-   "data_file_update",
    "functions_combine",
    "function_copy",
    "function_identifier_replace",
@@ -1864,7 +1857,6 @@
    "data_identifiers_file",
    "watch",
    "function_auto_path",
-   "data_file_update",
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "command_line_node_g",
@@ -1949,7 +1941,6 @@
   ],
   "property_name": [
    "data_identifiers_file",
-   "data_file_update",
    "data_boolean_set",
    "data_function_current_get",
    "data_get",
@@ -1988,7 +1979,6 @@
   "lambda": [
    "data_identifiers_file",
    "watch",
-   "data_file_update",
    "folder_read",
    "catch_ignore",
    "catch_ignore_async",
@@ -2117,7 +2107,6 @@
   "lambda2": [
    "data_identifiers_file",
    "watch",
-   "data_file_update",
    "functions_combine",
    "function_dependencies",
    "function_identifier_replace",
@@ -2146,13 +2135,11 @@
    "js_dollar_g"
   ],
   "i_name": [
-   "data_identifiers_file",
-   "data_file_update"
+   "data_identifiers_file"
   ],
   "list": [
    "data_identifiers_file",
    "watch",
-   "data_file_update",
    "each",
    "each_async",
    "each_index",
@@ -2521,7 +2508,6 @@
   ],
   "object_property_set": [
    "watch",
-   "data_file_update",
    "data_transform",
    "functions_search",
    "function_aliases",
@@ -2817,7 +2803,6 @@
    "data_files_update"
   ],
   "file_js_parse": [
-   "data_file_update",
    "file_js_parse",
    "function_parse"
   ],
@@ -2856,7 +2841,6 @@
    "data_transform"
   ],
   "data": [
-   "data_file_update",
    "data_all",
    "data_get",
    "data_property_get",
@@ -2970,21 +2954,13 @@
    "function_open_editor"
   ],
   "identifiers": [
-   "data_file_update",
    "js_identifiers_named",
    "js_identifiers_to_names",
    "js_imports_missing",
    "marker_expand",
    "data_identifiers_search"
   ],
-  "functions": [
-   "data_file_update"
-  ],
-  "f_this": [
-   "data_file_update"
-  ],
   "list_difference": [
-   "data_file_update",
    "function_imports_missing",
    "js_imports_missing",
    "list_difference",
@@ -2992,18 +2968,10 @@
    "prompt_previous",
    "visit_unique_async"
   ],
-  "f_identifiers_new": [
-   "data_file_update"
-  ],
-  "f_identifiers_old": [
-   "data_file_update"
-  ],
   "removals": [
-   "data_file_update",
    "list_remove_multiple"
   ],
   "item": [
-   "data_file_update",
    "each",
    "each_async",
    "each_index",
@@ -3102,11 +3070,9 @@
    "js_imports_fix"
   ],
   "list_remove_all": [
-   "data_file_update",
    "list_remove_all"
   ],
   "list_empty_is": [
-   "data_file_update",
    "function_identifier_replace",
    "function_transform_marker",
    "function_transform_marker_all",
@@ -3129,7 +3095,6 @@
    "marker_move"
   ],
   "e": [
-   "data_file_update",
    "catch_ignore",
    "catch_ignore_async",
    "catch_log",
@@ -3146,7 +3111,6 @@
    "throws_not_async"
   ],
   "object_property_delete": [
-   "data_file_update",
    "function_alias_change",
    "function_alias_delete",
    "function_alias_replace",
@@ -9240,45 +9204,21 @@
   ],
   "date_diff_hours": [
    "git_push"
+  ],
+  "data_file_update_inner": [
+   "data_file_update"
   ]
  },
  "functions": {
   "data_file_update": {
    "identifiers": [
-    "object_property_delete",
-    "list_empty_is",
-    "object_property_set",
-    "list_remove_all",
+    "data_file_update_inner",
     "data_save",
     "data_all",
-    "each",
-    "list_add_if_not_includes",
-    "object_property_initialize",
-    "js_identifiers_names",
-    "file_js_parse",
-    "function_path_to_name",
     "marker",
-    "list_difference",
     "data_file_update",
     "f_path",
-    "d",
-    "f_name",
-    "data",
-    "parsed",
-    "ast",
-    "f_identifiers_new",
-    "property_name",
-    "identifiers",
-    "lambda2",
-    "i_name",
-    "list",
-    "functions",
-    "f_this",
-    "f_identifiers_old",
-    "removals",
-    "lambda",
-    "item",
-    "e"
+    "d"
    ]
   },
   "watch": {
