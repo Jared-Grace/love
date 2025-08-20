@@ -1368,7 +1368,8 @@
   "s decl",
   "d",
   "s red",
-  "s error_attention"
+  "s error_attention",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
