@@ -12756,10 +12756,10 @@
     "code",
     "name",
     "parsed",
-    "lambda",
     "unique",
     "assign",
-    "index"
+    "index",
+    "lambda"
    ]
   },
   "js_dollar_i": {
