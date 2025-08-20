@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { not } from "./not.mjs";
 import { js_imports_all } from "./js_imports_all.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -11,6 +12,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_type } from "./js_type.mjs";
 import { each } from "./each.mjs";
 export function js_imports_declarations(ast) {
+  marker("1");
   let vs = js_imports_all(ast);
   function lambda2(la) {
     function lambda(v) {

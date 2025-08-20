@@ -1347,7 +1347,7 @@
   "c js_imports js_imports_declarations"
  ],
  "marker_current": "1",
- "function_current": "counter",
+ "function_current": "js_imports_declarations",
  "terminal": false,
  "identifiers": {
   "log": [
