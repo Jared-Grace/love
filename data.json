@@ -7459,7 +7459,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "function_imports_fix"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -9164,7 +9165,8 @@
    "js_imports_unused_remove"
   ],
   "js_imports_unused_remove": [
-   "js_imports_unused_remove"
+   "js_imports_unused_remove",
+   "function_imports_fix"
   ],
   "unuseds": [
    "js_imports_unused",
@@ -17023,6 +17025,7 @@
   },
   "function_imports_fix": {
    "identifiers": [
+    "js_imports_unused_remove",
     "marker",
     "function_imports_add",
     "each",
@@ -17036,7 +17039,8 @@
     "f_name",
     "parsed",
     "imports_missing",
-    "ast"
+    "ast",
+    "ast2"
    ]
   }
  }
