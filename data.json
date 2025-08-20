@@ -5529,8 +5529,7 @@
    "list_map_unordered_async"
   ],
   "mapped2": [
-   "function_dependencies_code",
-   "js_imports"
+   "function_dependencies_code"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -9080,6 +9079,9 @@
   ],
   "js_imports_declarations": [
    "js_imports_declarations",
+   "js_imports"
+  ],
+  "imports_declarations": [
    "js_imports"
   ]
  },
@@ -13177,8 +13179,8 @@
     "each",
     "js_imports",
     "ast",
-    "imports",
-    "mapped2"
+    "imports_declarations",
+    "imports"
    ]
   },
   "js_imports_all": {
