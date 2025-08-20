@@ -4917,8 +4917,7 @@
    "function_copy_suffix_add",
    "function_name_combine",
    "function_name_combine_multiple",
-   "function_new_js",
-   "git_push"
+   "function_new_js"
   ],
   "body_block": [
    "functions_combine",
@@ -11658,10 +11657,9 @@
     "git_push",
     "command_git",
     "lambda",
-    "value",
     "property_name",
-    "combined",
-    "name"
+    "name",
+    "value"
    ]
   },
   "git_push_command": {
