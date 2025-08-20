@@ -1460,7 +1460,6 @@
    "marker_enter",
    "marker_expand",
    "marker_functionize",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "marker_remove",
@@ -2402,7 +2401,6 @@
    "marker_enter",
    "marker_expand",
    "marker_functionize",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "newFunction"
@@ -2574,7 +2572,6 @@
    "marker_call_atomize",
    "marker_call_replace",
    "marker_expand",
-   "marker_new",
    "marker_next_delete",
    "object_merge",
    "object_property_from",
@@ -3098,7 +3095,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "marker_remove",
@@ -3154,7 +3150,6 @@
    "function_alias_delete",
    "function_alias_replace",
    "js_code_string",
-   "marker_new",
    "object_properties_delete",
    "object_property_delete",
    "data_file_update_inner"
@@ -4796,7 +4791,6 @@
    "marker_call_replace",
    "marker_delete_above",
    "marker_functionize",
-   "marker_new",
    "marker_next_delete",
    "marker_top",
    "function_imports_fix"
@@ -4889,7 +4883,6 @@
    "marker_call_atomize",
    "marker_call_replace",
    "marker_functionize",
-   "marker_new",
    "marker_next_delete"
   ],
   "functions_combine": [
@@ -5473,7 +5466,6 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "marker_expand",
-   "marker_new",
    "marker_next",
    "marker_next_delete"
   ],
@@ -5821,7 +5813,6 @@
    "js_dollar_g",
    "js_marker_insert",
    "marker_assign_replace_string",
-   "marker_new",
    "task_new"
   ],
   "list_add_first": [
@@ -6746,7 +6737,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "js_dollar_g"
@@ -6779,7 +6769,6 @@
    "marker_down_generic",
    "marker_expand",
    "marker_functionize",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "marker_next_get"
@@ -6810,7 +6799,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_index",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "marker_next_get",
@@ -6893,7 +6881,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "marker_new",
    "marker_next",
    "marker_next_delete",
    "marker_next_get"
@@ -7526,8 +7513,7 @@
    "js_dollar_g",
    "js_marker_insert",
    "marker_call",
-   "marker_functionize",
-   "marker_new"
+   "marker_functionize"
   ],
   "js_call_insert": [
    "js_call_insert",
@@ -7662,7 +7648,6 @@
   ],
   "js_code_call_statement": [
    "js_code_call_statement",
-   "marker_new",
    "marker_top"
   ],
   "js_keyword_function": [
@@ -16484,25 +16469,10 @@
    "identifiers": [
     "marker_current_set",
     "js_marker_insert",
-    "js_code_string",
-    "js_parse_statement",
     "marker",
-    "js_code_call_statement",
     "marker_next_index",
-    "marker_next_get",
-    "js_unparse",
-    "list_get",
-    "list_adder_async",
-    "log",
-    "list_insert",
-    "list_remove",
     "function_transform_marker",
     "data_function_current_get",
-    "list_index_of",
-    "js_parse_expression",
-    "js_code_call_args",
-    "object_property_set",
-    "object_property_delete",
     "marker_new",
     "f_name",
     "lambda",
