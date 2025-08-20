@@ -953,7 +953,6 @@
   "u t",
   "a nti js_node_type_is_if",
   "c js_node_type_is_if js_node_type_is_if_async ",
-  "s equal",
   "u eb",
   "o cs",
   "de eb_async",
@@ -1348,7 +1347,8 @@
   "s remaining",
   "c list_first_second list_first_remaining",
   "s assert,size",
-  "s reve"
+  "s reve",
+  "s equal"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
