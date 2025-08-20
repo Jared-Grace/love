@@ -1288,7 +1288,6 @@
   "s remove",
   "dpg dfu",
   "data_property_get data_file_update",
-  "p",
   "dpg functions",
   "s delete",
   "a opd object_property_delete",
@@ -1351,6 +1350,7 @@
   "s filter",
   "u lfp",
   "a lfp list_filter_property",
+  "p",
   "fts js_imports_unused"
  ],
  "marker_current": "1",
