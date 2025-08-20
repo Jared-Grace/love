@@ -2143,8 +2143,7 @@
    "search_generic",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_dollar_g",
-   "git_push"
+   "js_dollar_g"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4240,7 +4239,8 @@
   ],
   "lambda$previous": [
    "data_transform",
-   "data_set"
+   "data_set",
+   "git_push"
   ],
   "value_previous": [
    "data_transform"
@@ -9237,6 +9237,9 @@
   ],
   "date_to": [
    "git_push"
+  ],
+  "lambda_get": [
+   "git_push"
   ]
  },
  "functions": {
@@ -11670,6 +11673,7 @@
   },
   "git_push": {
    "identifiers": [
+    "lambda_get",
     "date_to",
     "date_iso_to",
     "date_now",
@@ -11688,7 +11692,7 @@
     "name",
     "before_iso",
     "before",
-    "lambda2"
+    "lambda$previous"
    ]
   },
   "git_push_command": {
