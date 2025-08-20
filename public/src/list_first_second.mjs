@@ -11,9 +11,10 @@ export function list_first_second(list) {
       second = list_second(list);
     }
   }
+  const property_name = "second";
   let v = {
     first,
-    ["second"]: second,
+    [property_name]: second,
   };
   return v;
 }
