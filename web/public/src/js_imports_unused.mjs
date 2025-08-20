@@ -15,7 +15,7 @@ export function js_imports_unused(ast) {
       if (name === i_name) {
       }
     }
-    js_visit_type(ast2, "Identifier", lambda2);
+    js_visit_type(ast, "Identifier", lambda2);
   }
   each(imports, lambda);
 }
