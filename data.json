@@ -2099,7 +2099,8 @@
    "list_unique_reverse",
    "marker_current_set",
    "prompt_previous",
-   "data_set"
+   "data_set",
+   "git_push"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -2331,7 +2332,8 @@
    "string_is_assert_message",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_imports_fix"
+   "js_imports_fix",
+   "git_push"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11638,7 +11640,9 @@
     "lambda",
     "combined",
     "name",
-    "value_get"
+    "value_get",
+    "previous",
+    "v"
    ]
   },
   "git_push_command": {
