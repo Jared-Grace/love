@@ -2980,7 +2980,8 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run"
+   "tasks_run",
+   "search_generic"
   ],
   "list_includes": [
    "data_file_update",
@@ -5843,11 +5844,13 @@
   ],
   "list_to_dictionary": [
    "function_names_to_acronyms",
-   "list_to_dictionary"
+   "list_to_dictionary",
+   "search_generic"
   ],
   "dictionary": [
    "function_names_to_acronyms",
-   "list_to_dictionary"
+   "list_to_dictionary",
+   "search_generic"
   ],
   "function_name_separator": [
    "function_name_combine",
@@ -8017,7 +8020,8 @@
   ],
   "lambda4": [
    "js_identifier_defineds",
-   "marker_expand"
+   "marker_expand",
+   "search_generic"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9008,6 +9012,9 @@
   ],
   "data_identifiers_search": [
    "data_identifiers_search"
+  ],
+  "list2": [
+   "search_generic"
   ]
  },
  "functions": {
@@ -16301,6 +16308,7 @@
   },
   "search_generic": {
    "identifiers": [
+    "list_to_dictionary",
     "object_property_set",
     "each",
     "string_includes",
@@ -16320,6 +16328,10 @@
     "v",
     "v2",
     "f_names_search",
+    "dictionary",
+    "list2",
+    "lambda4",
+    "item",
     "result",
     "lambda3",
     "value"
