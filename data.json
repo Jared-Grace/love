@@ -6000,7 +6000,8 @@
    "marker_call",
    "marker_down_choices_lambda",
    "marker_expand",
-   "marker_functionize"
+   "marker_functionize",
+   "js_imports_declarations"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -16904,6 +16905,7 @@
     "mapped",
     "unique",
     "name",
+    "declaration",
     "imports"
    ]
   }
