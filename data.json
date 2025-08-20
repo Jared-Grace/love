@@ -3161,7 +3161,8 @@
    "function_name_combine",
    "function_new_js",
    "function_wrap_suffix_add",
-   "task_new"
+   "task_new",
+   "git_push"
   ],
   "error_attention_set": [
    "watch",
@@ -4449,7 +4450,8 @@
    "js_code_let_assign",
    "js_code_or",
    "js_left_right_set",
-   "js_let_add"
+   "js_let_add",
+   "git_push"
   ],
   "right": [
    "equal",
@@ -4463,7 +4465,8 @@
    "js_left_right_set",
    "js_let_add",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "git_push"
   ],
   "eq": [
    "equal",
@@ -4903,7 +4906,8 @@
    "function_copy_suffix_add",
    "function_name_combine",
    "function_name_combine_multiple",
-   "function_new_js"
+   "function_new_js",
+   "git_push"
   ],
   "body_block": [
    "functions_combine",
@@ -11619,6 +11623,7 @@
   },
   "git_push": {
    "identifiers": [
+    "function_name_combine",
     "data_set",
     "git_push_command",
     "command_line_git",
@@ -11626,6 +11631,9 @@
     "git_push",
     "command_git",
     "lambda",
+    "combined",
+    "left",
+    "right",
     "value_get",
     "property_name"
    ]
