@@ -4323,7 +4323,6 @@
    "js_dollar",
    "js_dollar_g",
    "list_first",
-   "list_first_second",
    "list_single",
    "list_first_remaining"
   ],
@@ -4656,7 +4655,6 @@
    "js_dollar",
    "js_dollar_g",
    "js_dollar_r",
-   "list_first_second",
    "list_second"
   ],
   "list_to": [
@@ -9105,6 +9103,9 @@
   ],
   "list_skip_1": [
    "list_first_remaining"
+  ],
+  "list_first_second_generic": [
+   "list_first_second"
   ]
  },
  "functions": {
@@ -14410,6 +14411,7 @@
   },
   "list_first_second": {
    "identifiers": [
+    "list_first_second_generic",
     "list_multiple_is",
     "list_second",
     "list_first",
@@ -14418,8 +14420,6 @@
     "list",
     "property_name",
     "value_get",
-    "first",
-    "second",
     "result"
    ]
   },
