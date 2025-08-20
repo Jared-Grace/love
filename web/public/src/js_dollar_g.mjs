@@ -1,3 +1,4 @@
+import { assert } from "./assert.mjs";
 import { each } from "./each.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { list_add } from "./list_add.mjs";
@@ -31,6 +32,8 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
         object_replace(stack1, assign);
       }
       list_add(afters, lambda);
+    } else {
+      assert(b);
     }
   }
   each(property_names, lambda2);
