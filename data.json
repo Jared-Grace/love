@@ -1948,7 +1948,8 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set"
+   "object_property_set",
+   "js_imports"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2207,7 +2208,8 @@
    "marker_functionize",
    "object_invert",
    "search_generic",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "js_imports"
   ],
   "v": [
    "data_identifiers_file",
@@ -5538,7 +5540,8 @@
    "list_map_unordered_async"
   ],
   "mapped2": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "js_imports"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -13220,7 +13223,10 @@
     "name",
     "imports",
     "imports2",
-    "ast2"
+    "ast2",
+    "mapped2",
+    "list",
+    "property_name"
    ]
   },
   "js_imports_all": {
