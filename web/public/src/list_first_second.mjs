@@ -13,7 +13,7 @@ export function list_first_second(list) {
   }
   let v = {
     first,
-    second,
+    ["second"]: second,
   };
   return v;
 }
