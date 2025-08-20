@@ -2935,7 +2935,8 @@
    "object_property_initialize",
    "prompt_previous",
    "data_identifiers_search",
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_unused_remove"
   ],
   "data_save": [
    "data_file_update",
@@ -5834,7 +5835,8 @@
    "list_add_first",
    "marker_enter",
    "marker_functionize",
-   "marker_top"
+   "marker_top",
+   "js_imports_unused_remove"
   ],
   "import_": [
    "function_imports_add",
@@ -16978,11 +16980,13 @@
   },
   "js_imports_unused_remove": {
    "identifiers": [
+    "object_property_get",
     "js_imports_unused",
     "marker",
     "js_imports_unused_remove",
     "ast",
-    "unused"
+    "unused",
+    "body"
    ]
   }
  }
