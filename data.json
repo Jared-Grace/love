@@ -1357,7 +1357,7 @@
   "c function_imports_missing_add function_imports_fix"
  ],
  "marker_current": "1",
- "function_current": "js_imports_unused_remove",
+ "function_current": "function_imports_fix",
  "terminal": false,
  "identifiers": {
   "log": [
