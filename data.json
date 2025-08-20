@@ -1276,7 +1276,6 @@
   "s write",
   "s file_js_unparse",
   "fw data_transform data_identifiers_file",
-  "s ident",
   "s list,if,not",
   "a lax list_add_if_not_includes",
   "s file_js",
@@ -1339,7 +1338,8 @@
   "is null_is",
   "s unali",
   "s imports",
-  "nj imports_unused"
+  "nj imports_unused",
+  "s ident"
  ],
  "marker_current": "1",
  "function_current": "js_imports_unused",
