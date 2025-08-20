@@ -28,5 +28,6 @@ export function js_imports_unused(ast) {
     );
   }
   let mapped = list_map(imports, lambda);
-  let result = list_filter_property(list, property_name, property_value);
+  let unused = list_filter_property(mapped, "unused", true);
+  return unused;
 }
