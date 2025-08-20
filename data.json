@@ -1372,11 +1372,11 @@
   "mab $g$v$node",
   "ire node2 2",
   "o mm",
-  "cd",
   "fs jaa",
   "me",
   "mn",
-  "o mn"
+  "o mn",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_new",
