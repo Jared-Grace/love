@@ -2724,8 +2724,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "data_identifiers_search",
-   "js_imports_unused"
+   "data_identifiers_search"
   ],
   "separator": [
    "watch",
@@ -5738,7 +5737,8 @@
    "function_imports_add",
    "js_imports_all",
    "js_imports_missing",
-   "js_imports"
+   "js_imports",
+   "js_imports_unused"
   ],
   "js_code_import_single": [
    "function_imports_add",
@@ -16780,7 +16780,7 @@
     "marker",
     "js_imports_unused",
     "ast",
-    "result",
+    "imports",
     "ast2"
    ]
   }
