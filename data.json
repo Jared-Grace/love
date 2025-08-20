@@ -3025,8 +3025,7 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run",
-   "js_imports_unused_remove"
+   "tasks_run"
   ],
   "list_includes": [
    "data_file_update",
@@ -17001,8 +17000,7 @@
     "body",
     "lambda",
     "unused",
-    "declaration",
-    "item"
+    "declaration"
    ]
   }
  }
