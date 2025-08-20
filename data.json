@@ -1525,7 +1525,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "js_imports_unused",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_dollar_g"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2109,7 +2110,8 @@
    "schtasks_query",
    "search_generic",
    "visit_unique_async",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_dollar_g"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2211,7 +2213,8 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining"
+   "list_first_remaining",
+   "js_dollar_g"
   ],
   "v": [
    "data_identifiers_file",
@@ -3012,7 +3015,8 @@
    "object_property_equals",
    "object_property_equals_lambda",
    "string_includes",
-   "tasks_run"
+   "tasks_run",
+   "js_dollar_g"
   ],
   "list_includes": [
    "data_file_update",
@@ -12707,6 +12711,7 @@
   },
   "js_dollar_g": {
    "identifiers": [
+    "each",
     "list_first_remaining",
     "list_add",
     "js_declare",
@@ -12727,6 +12732,9 @@
     "first",
     "object_name",
     "property_names",
+    "list",
+    "lambda2",
+    "item",
     "code_string",
     "property_name",
     "code",
