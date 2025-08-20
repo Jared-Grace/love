@@ -9315,9 +9315,6 @@
   "js_call_function_if": [
    "js_node_atomize",
    "js_await_add"
-  ],
-  "node2": [
-   "js_await_add"
   ]
  },
  "functions": {
@@ -12264,9 +12261,8 @@
     "lambda",
     "v",
     "stack",
-    "node2",
-    "lambda3",
-    "node"
+    "node",
+    "lambda3"
    ],
    "async": false
   },
