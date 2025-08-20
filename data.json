@@ -1376,10 +1376,11 @@
   "cd",
   "eac",
   "fs jaa",
-  "md -1"
+  "md -1",
+  "n marker_leave"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_leave",
  "terminal": false,
  "identifiers": {
   "log": [
