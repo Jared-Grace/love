@@ -1370,14 +1370,14 @@
   "mab $g$v$node",
   "ire node2 2",
   "o mm",
-  "me",
   "mn",
   "o mn",
   "eac",
   "fs jaa",
   "md -1",
   "n marker_leave",
-  "cd"
+  "cd",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "marker_leave",
