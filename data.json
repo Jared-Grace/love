@@ -1369,8 +1369,8 @@
   "d",
   "s red",
   "s error_attention",
-  "eac",
-  "dpg error_attention"
+  "dpg error_attention",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
