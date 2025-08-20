@@ -10,7 +10,7 @@ export async function data_files_update() {
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   var d = await data_all();
   async function lambda(parsed) {
-    await data_file_update_inner(f_path, d);
+    await data_file_update_inner(parsed, d);
   }
   await each_async(parseds, lambda);
   await data_save(d);
