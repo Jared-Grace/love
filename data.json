@@ -7843,7 +7843,8 @@
   "list_skip": [
    "js_dollar",
    "list_skip",
-   "marker_enter"
+   "marker_enter",
+   "list_first_remaining"
   ],
   "list_second": [
    "js_dollar",
@@ -16902,6 +16903,7 @@
     "list_second",
     "list_first",
     "list_empty_not_is",
+    "list_skip",
     "list_first_remaining",
     "list",
     "first",
