@@ -1959,8 +1959,7 @@
    "object_property_initialize",
    "object_property_set",
    "list_first_second",
-   "list_first_remaining",
-   "js_imports_unused"
+   "list_first_remaining"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2218,8 +2217,7 @@
    "object_invert",
    "search_generic",
    "data_identifiers_search",
-   "list_first_remaining",
-   "js_imports_unused"
+   "list_first_remaining"
   ],
   "v": [
    "data_identifiers_file",
@@ -2753,8 +2751,7 @@
    "task_new",
    "data_identifiers_search",
    "list_first_second",
-   "list_first_remaining",
-   "js_imports_unused"
+   "list_first_remaining"
   ],
   "separator": [
    "watch",
@@ -8550,8 +8547,7 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda",
-   "js_imports_unused"
+   "object_property_equals_lambda"
   ],
   "list_find": [
    "list_find",
@@ -16901,11 +16897,7 @@
     "count_import",
     "count_declaration",
     "unused",
-    "mapped",
-    "result",
-    "list",
-    "property_name",
-    "property_value"
+    "mapped"
    ]
   },
   "counter": {
