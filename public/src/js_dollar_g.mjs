@@ -12,7 +12,7 @@ import { list_first_second } from "./list_first_second.mjs";
 export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
-  let code_string = await js_code_string(property_name);
+  let code_string = js_code_string(property_name);
   let code = js_code_call_args(object_property_get.name, [
     object_name,
     code_string,
