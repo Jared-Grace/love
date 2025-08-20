@@ -1373,7 +1373,8 @@
   "s call,name",
   "s call",
   "mc js_call_function_if",
-  "cd"
+  "cd",
+  "mab $g$v$node"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
