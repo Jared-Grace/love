@@ -1948,8 +1948,7 @@
    "object_property_from",
    "object_property_get",
    "object_property_initialize",
-   "object_property_set",
-   "js_imports"
+   "object_property_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2208,8 +2207,7 @@
    "marker_functionize",
    "object_invert",
    "search_generic",
-   "data_identifiers_search",
-   "js_imports"
+   "data_identifiers_search"
   ],
   "v": [
    "data_identifiers_file",
@@ -13224,9 +13222,7 @@
     "imports",
     "imports2",
     "ast2",
-    "mapped2",
-    "list",
-    "property_name"
+    "mapped2"
    ]
   },
   "js_imports_all": {
