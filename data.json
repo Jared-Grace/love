@@ -371,7 +371,6 @@
   "o pn",
   "pn ast",
   "ir ast2 ast",
-  "s filter",
   "fw object_merge object_copy",
   "au js_stack_declaration_asyncify",
   "i function_run_line",
@@ -1348,7 +1347,8 @@
   "c list_first_second list_first_remaining",
   "s assert,size",
   "s reve",
-  "s equal"
+  "s equal",
+  "s filter"
  ],
  "marker_current": "1",
  "function_current": "list_first_remaining",
