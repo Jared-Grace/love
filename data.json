@@ -7459,8 +7459,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "function_imports_fix"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -17039,8 +17038,7 @@
     "f_name",
     "parsed",
     "imports_missing",
-    "ast",
-    "ast2"
+    "ast"
    ]
   }
  }
