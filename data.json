@@ -1441,7 +1441,8 @@
    "newFunction",
    "prompt_previous",
    "sandbox",
-   "search_generic"
+   "search_generic",
+   "js_imports_unused"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2382,7 +2383,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_imports_unused"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -16800,6 +16802,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "log",
     "counter",
     "list_adder",
     "object_property_get",
@@ -16819,7 +16822,8 @@
     "v",
     "node",
     "name",
-    "count"
+    "count",
+    "message"
    ]
   },
   "counter": {
