@@ -1367,7 +1367,8 @@
   "s data",
   "s decl",
   "d",
-  "s red"
+  "s red",
+  "s error_attention"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
