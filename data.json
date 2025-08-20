@@ -2044,7 +2044,8 @@
    "task_new",
    "throws_not_async",
    "undefined_not_is_assert_lambda",
-   "visit_unique_async"
+   "visit_unique_async",
+   "js_imports"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2090,7 +2091,8 @@
    "marker_expand",
    "schtasks_query",
    "search_generic",
-   "visit_unique_async"
+   "visit_unique_async",
+   "js_imports"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3419,7 +3421,8 @@
    "list_not_is",
    "log_unparse_try",
    "not",
-   "object_property_initialize"
+   "object_property_initialize",
+   "js_imports"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3508,7 +3511,8 @@
    "marker_previous_index",
    "marker_remove",
    "not",
-   "string_slice"
+   "string_slice",
+   "js_imports"
   ],
   "without": [
    "string_suffix_without",
@@ -5733,7 +5737,8 @@
    "function_imports",
    "function_imports_add",
    "js_imports_all",
-   "js_imports_missing"
+   "js_imports_missing",
+   "js_imports"
   ],
   "js_code_import_single": [
    "function_imports_add",
@@ -8398,10 +8403,12 @@
    "promise_not_is"
   ],
   "a2": [
-   "js_unparse"
+   "js_unparse",
+   "js_imports"
   ],
   "a3": [
-   "js_unparse"
+   "js_unparse",
+   "js_imports"
   ],
   "generate": [
    "js_unparse_inner"
@@ -13106,6 +13113,7 @@
   },
   "js_imports": {
    "identifiers": [
+    "not",
     "js_imports_all",
     "js_visit_type",
     "list_size_1",
@@ -13120,19 +13128,25 @@
     "js_imports",
     "ast",
     "vs",
+    "lambda2",
     "la",
+    "lambda",
     "v",
     "node",
     "specifiers",
     "source",
+    "a",
+    "a2",
     "value",
+    "a3",
     "specifier",
     "imported",
     "local",
     "both",
     "mapped",
     "unique",
-    "name"
+    "name",
+    "imports"
    ]
   },
   "js_imports_all": {
