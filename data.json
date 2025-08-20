@@ -1353,7 +1353,8 @@
   "fts js_imports_unused",
   "fws js_imports_unused remove",
   "fts js_imports_unused_remove",
-  "s imports"
+  "s imports",
+  "c function_imports_missing_add function_imports_fix"
  ],
  "marker_current": "1",
  "function_current": "js_imports_unused_remove",
