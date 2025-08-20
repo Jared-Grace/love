@@ -2908,7 +2908,8 @@
    "object_property_get",
    "object_property_initialize",
    "prompt_previous",
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "js_imports_unused"
   ],
   "data_save": [
    "data_file_update",
@@ -5499,7 +5500,8 @@
    "visit_filter_async",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async"
+   "visit_unique_async",
+   "js_imports_unused"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6094,8 +6096,7 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async",
-   "js_imports_unused"
+   "js_visit_type_each_async"
   ],
   "method": [
    "function_params_consolidate"
@@ -16784,6 +16785,7 @@
   },
   "js_imports_unused": {
    "identifiers": [
+    "object_property_get",
     "js_visit_type",
     "js_visit",
     "each",
@@ -16796,8 +16798,8 @@
     "i",
     "lambda2",
     "v",
-    "ast2",
-    "type"
+    "node",
+    "ast2"
    ]
   }
  }
