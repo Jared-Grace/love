@@ -2100,8 +2100,7 @@
    "list_unique_reverse",
    "marker_current_set",
    "prompt_previous",
-   "data_set",
-   "git_push"
+   "data_set"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -2333,8 +2332,7 @@
    "string_is_assert_message",
    "visit_unique_async",
    "js_imports_declarations",
-   "js_imports_fix",
-   "git_push"
+   "js_imports_fix"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8982,8 +8980,7 @@
    "search_generic",
    "list_first_second",
    "list_first_remaining",
-   "data_boolean_set",
-   "git_push"
+   "data_boolean_set"
   ],
   "terms": [
    "search_generic"
@@ -9194,7 +9191,8 @@
   ],
   "date_now_iso": [
    "git_acp_timestamp",
-   "date_now_iso"
+   "date_now_iso",
+   "git_push"
   ],
   "date_now": [
    "date_now_iso",
@@ -11644,6 +11642,7 @@
   },
   "git_push": {
    "identifiers": [
+    "date_now_iso",
     "function_name_combine",
     "data_set",
     "git_push_command",
@@ -11653,10 +11652,7 @@
     "command_git",
     "lambda",
     "combined",
-    "name",
-    "value_get",
-    "previous",
-    "v"
+    "name"
    ]
   },
   "git_push_command": {
