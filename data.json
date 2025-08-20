@@ -1372,7 +1372,8 @@
   "s name",
   "s call,name",
   "s call",
-  "cd"
+  "cd",
+  "mc js_call_function_if"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
