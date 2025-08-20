@@ -2834,12 +2834,14 @@
    "data_file_update",
    "data_all",
    "data_get",
-   "data_value"
+   "data_value",
+   "data_files_update"
   ],
   "d": [
    "data_file_update",
    "data_property_get",
-   "data_transform"
+   "data_transform",
+   "data_files_update"
   ],
   "data": [
    "data_all",
@@ -2952,7 +2954,8 @@
    "data_transform",
    "function_alias_generic",
    "function_open",
-   "function_open_editor"
+   "function_open_editor",
+   "data_files_update"
   ],
   "identifiers": [
    "js_identifiers_named",
@@ -9204,7 +9207,8 @@
    "git_push"
   ],
   "data_file_update_inner": [
-   "data_file_update"
+   "data_file_update",
+   "data_files_update"
   ]
  },
  "functions": {
@@ -9429,13 +9433,17 @@
   },
   "data_files_update": {
    "identifiers": [
+    "data_save",
+    "data_file_update_inner",
+    "data_all",
     "functions_paths",
     "each_async",
     "marker",
     "data_files_update",
     "f_paths",
     "lambda",
-    "f_path"
+    "f_path",
+    "d"
    ]
   },
   "assert": {
