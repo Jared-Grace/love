@@ -9253,7 +9253,7 @@
   "abs": [
    "git_push"
   ],
-  "diffHours": [
+  "hours": [
    "git_push"
   ]
  },
@@ -11710,7 +11710,7 @@
     "ms",
     "Math",
     "abs",
-    "diffHours",
+    "hours",
     "lambda$previous"
    ]
   },
