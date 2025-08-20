@@ -1345,7 +1345,8 @@
   "is js_imports",
   "c js_imports js_imports_declarations",
   "s dollar",
-  "s remaining"
+  "s remaining",
+  "c list_first_second list_first_remaining"
  ],
  "marker_current": "1",
  "function_current": "js_imports_declarations",
