@@ -1,3 +1,4 @@
+import { each_reverse } from "./each_reverse.mjs";
 import { list_size_1_assert } from "./list_size_1_assert.mjs";
 import { each } from "./each.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
@@ -11,9 +12,17 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { list_first_second } from "./list_first_second.mjs";
-export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
+export async function js_dollar_g({
+  remaining,
+  node,
+  stack1,
+  stack2,
+  ast,
+  afters,
+}) {
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
+  list_rever;
   function lambda2(property_name) {
     let code_string = js_code_string(property_name);
     let code = js_code_call_args(object_property_get.name, [
@@ -36,5 +45,5 @@ export async function js_dollar_g({ remaining, node, stack1, ast, afters }) {
       list_size_1_assert(remaining);
     }
   }
-  each(property_names, lambda2);
+  each_reverse(property_names, lambda2);
 }
