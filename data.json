@@ -1685,7 +1685,8 @@
    "js_visit_nodes",
    "marker_call",
    "marker_functionize",
-   "function_imports_fix"
+   "function_imports_fix",
+   "data_files_update"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -9449,6 +9450,7 @@
     "parseds",
     "d",
     "lambda",
+    "parsed",
     "f_path"
    ]
   },
