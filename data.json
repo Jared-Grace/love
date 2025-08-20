@@ -1315,7 +1315,6 @@
   "functions_path",
   "functions_paths",
   "de functions_paths",
-  "s data",
   "de fs",
   "o fs",
   "s imports",
@@ -1329,7 +1328,8 @@
   "u d",
   "a d data_files_update",
   "d",
-  "o d"
+  "o d",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "data_files_update",
