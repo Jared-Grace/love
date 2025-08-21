@@ -3045,7 +3045,8 @@
    "list_join_empty",
    "string_empty_is",
    "throws_not_async",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_alias_rename"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -17781,6 +17782,7 @@
     "inverted",
     "n",
     "acronyms",
+    "e",
     "v"
    ]
   },
