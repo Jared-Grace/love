@@ -1868,7 +1868,8 @@
    "marker_above",
    "marker_down_choices",
    "marker_functionize",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_below"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2370,7 +2371,8 @@
    "marker_new",
    "marker_leave",
    "marker_up",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_below"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3322,7 +3324,8 @@
    "list_adder_multiple",
    "list_map_squash",
    "list_squash",
-   "marker_above"
+   "marker_above",
+   "marker_below"
   ],
   "colored": [
    "chalk_color",
@@ -3913,7 +3916,8 @@
   "identity": [
    "catch_log_async",
    "identity",
-   "marker_above"
+   "marker_above",
+   "marker_below"
   ],
   "message_get": [
    "catch_log_async"
@@ -9271,10 +9275,14 @@
   ],
   "marker_above_generic": [
    "marker_above",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_below"
   ],
   "lambda$index": [
    "marker_above_generic"
+  ],
+  "marker_below": [
+   "marker_below"
   ]
  },
  "functions": {
@@ -17803,6 +17811,17 @@
     "stack2",
     "statement",
     "ast",
+    "v"
+   ]
+  },
+  "marker_below": {
+   "async": true,
+   "identifiers": [
+    "marker_above_generic",
+    "identity",
+    "marker_below",
+    "code",
+    "fn",
     "v"
    ]
   }
