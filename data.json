@@ -1985,8 +1985,7 @@
    "marker_top",
    "task_new",
    "function_imports_fix",
-   "data_file_update_inner",
-   "function_alias_rename"
+   "data_file_update_inner"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -7956,7 +7955,8 @@
    "marker_down_choices"
   ],
   "after": [
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "function_alias_rename"
   ],
   "object_name": [
    "js_dollar_g"
@@ -9207,7 +9207,8 @@
   "before": [
    "git_push",
    "date_diff_hours",
-   "date_diff_ms"
+   "date_diff_ms",
+   "function_alias_rename"
   ],
   "date_to": [
    "git_push",
@@ -17905,7 +17906,8 @@
     "object_invert",
     "data_get",
     "function_alias_rename",
-    "f_name",
+    "before",
+    "after",
     "value",
     "aliases",
     "file_path",
