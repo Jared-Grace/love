@@ -4,8 +4,8 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
-  marker("1");
   let value = await data_property_get("functions");
+  marker("1");
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3() {
