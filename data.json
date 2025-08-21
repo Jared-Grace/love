@@ -1670,7 +1670,8 @@
    "git_push",
    "marker_leave",
    "marker_down",
-   "marker_up"
+   "marker_up",
+   "marker_above_generic"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1825,7 +1826,8 @@
    "js_imports_fix",
    "data_file_update_inner",
    "js_declaration_single",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "marker_above_generic"
   ],
   "code": [
    "data_identifiers_file",
@@ -1864,7 +1866,8 @@
    "log_unparse",
    "marker_above",
    "marker_down_choices",
-   "marker_functionize"
+   "marker_functionize",
+   "marker_above_generic"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2105,7 +2108,8 @@
    "data_file_update_inner",
    "js_declaration_single",
    "js_node_atomize",
-   "marker_leave"
+   "marker_leave",
+   "marker_above_generic"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2364,7 +2368,8 @@
    "js_identifiers_named_count",
    "marker_new",
    "marker_leave",
-   "marker_up"
+   "marker_up",
+   "marker_above_generic"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2972,7 +2977,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "data_file_update_inner",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "marker_above_generic"
   ],
   "data_save": [
    "data_file_update",
@@ -3562,7 +3568,8 @@
    "string_slice",
    "js_imports_declarations",
    "marker_leave",
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "marker_above_generic"
   ],
   "without": [
    "string_suffix_without",
@@ -4300,7 +4307,8 @@
    "marker_next_index",
    "marker_previous_index",
    "js_dollar_g",
-   "marker_leave"
+   "marker_leave",
+   "marker_above_generic"
   ],
   "lists_get": [
    "each_multiple",
@@ -4708,7 +4716,8 @@
   "js_auto": [
    "functions_combine",
    "function_auto",
-   "js_auto"
+   "js_auto",
+   "marker_above_generic"
   ],
   "js_visit_match": [
    "functions_combine",
@@ -4775,7 +4784,8 @@
    "marker_functionize",
    "marker_next_delete",
    "marker_top",
-   "function_imports_fix"
+   "function_imports_fix",
+   "marker_above_generic"
   ],
   "function_parse_declaration": [
    "functions_combine",
@@ -5678,7 +5688,8 @@
    "range",
    "counter",
    "js_imports_unused",
-   "marker_up"
+   "marker_up",
+   "marker_above_generic"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -5838,7 +5849,8 @@
    "js_parse_expression",
    "js_parse_statement",
    "js_parse_statement_module",
-   "list_add_first"
+   "list_add_first",
+   "marker_above_generic"
   ],
   "js_imports_missing": [
    "function_imports_missing",
@@ -6656,14 +6668,16 @@
    "marker_previous_index",
    "marker_remove",
    "js_dollar_g",
-   "marker_leave"
+   "marker_leave",
+   "marker_above_generic"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
    "marker_delete_above",
    "marker_down_generic",
    "marker_enter",
-   "marker_leave"
+   "marker_leave",
+   "marker_above_generic"
   ],
   "marker_down_choices_lambda": [
    "function_transform_marker_empty",
@@ -6703,7 +6717,8 @@
    "marker_next",
    "marker_next_delete",
    "js_dollar_g",
-   "marker_leave"
+   "marker_leave",
+   "marker_above_generic"
   ],
   "list_get": [
    "function_transform_marker_empty",
@@ -8706,7 +8721,8 @@
   ],
   "marker_index": [
    "marker_delete_above",
-   "marker_index"
+   "marker_index",
+   "marker_above_generic"
   ],
   "marker_above": [
    "marker_above"
@@ -9253,7 +9269,11 @@
    "marker_up"
   ],
   "marker_above_generic": [
-   "marker_above"
+   "marker_above",
+   "marker_above_generic"
+  ],
+  "lambda$index": [
+   "marker_above_generic"
   ]
  },
  "functions": {
@@ -17760,6 +17780,29 @@
     "delta_get",
     "i",
     "ni"
+   ]
+  },
+  "marker_above_generic": {
+   "async": true,
+   "identifiers": [
+    "function_transform_marker_current",
+    "js_auto",
+    "list_insert",
+    "js_parse_statement",
+    "object_property_get",
+    "marker_index",
+    "marker",
+    "marker_above_generic",
+    "lambda$index",
+    "code",
+    "lambda",
+    "a",
+    "i",
+    "index",
+    "stack2",
+    "statement",
+    "ast",
+    "v"
    ]
   }
  },
