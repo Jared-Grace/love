@@ -5,7 +5,7 @@ export async function marker_leave() {
   async function lambda(a) {
     marker("1");
     let { stack } = a;
-    log(message);
+    log(stack);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
