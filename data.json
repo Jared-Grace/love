@@ -1348,7 +1348,6 @@
   "s date",
   "s lambda",
   "s git",
-  "s data",
   "s decl",
   "s red",
   "s error_attention",
@@ -1389,7 +1388,8 @@
   "c marker_above marker_below",
   "n add",
   "fws add 1",
-  "eac"
+  "eac",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "add_1",
