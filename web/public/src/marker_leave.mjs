@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_is_assert } from "./list_is_assert.mjs";
@@ -13,6 +14,7 @@ export async function marker_leave() {
     list_is_assert(stack5);
     let index = list_index_of(stack5, stack4);
     let e1 = list_get_end_1(stack2);
+    let e2 = list_get_end_2(stack3);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
