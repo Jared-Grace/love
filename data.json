@@ -3380,8 +3380,7 @@
    "js_await_add"
   ],
   "value2": [
-   "error_attention_set",
-   "function_alias_rename"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -17915,8 +17914,7 @@
     "aliases",
     "inverted",
     "n",
-    "acronym",
-    "value2"
+    "acronym"
    ]
   },
   "object_property_exists_not": {
