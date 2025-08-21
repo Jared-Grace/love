@@ -5859,7 +5859,6 @@
    "js_declaration_single",
    "js_declaration_single_block_blody",
    "js_declaration_single_params_add",
-   "js_imports_missing",
    "js_return_name",
    "marker_down_choices_lambda",
    "marker_top",
@@ -5955,7 +5954,6 @@
    "function_param_swap",
    "js_atomize_function",
    "js_declaration_name",
-   "js_imports_missing",
    "js_outside_move",
    "marker_expand"
   ],
@@ -9260,6 +9258,9 @@
   "sum": [
    "add",
    "add_1"
+  ],
+  "js_declaration_single_name": [
+   "js_imports_missing"
   ]
  },
  "functions": {
@@ -13626,8 +13627,7 @@
   },
   "js_imports_missing": {
    "identifiers": [
-    "js_declaration_name",
-    "js_declaration_single",
+    "js_declaration_single_name",
     "list_intersect",
     "functions_names",
     "list_difference",
