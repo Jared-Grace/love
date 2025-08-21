@@ -1286,7 +1286,6 @@
   "s catch",
   "c chalk_green chalk_red",
   "s data,udpate",
-  "o w",
   "c fws function_watch_suffix_change",
   "r function_watch_suffix_change function_watch_ending_change",
   "s suffix",
@@ -1381,10 +1380,11 @@
   "me",
   "ml",
   "fs jaa",
-  "mg"
+  "mg",
+  "o w"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "watch",
  "terminal": false,
  "identifiers": {
   "log": [
