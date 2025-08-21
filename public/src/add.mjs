@@ -1,3 +1,4 @@
 export function add(left, right) {
-  return left;
+  const sum = left + right;
+  return sum;
 }
