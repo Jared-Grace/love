@@ -895,7 +895,6 @@
   "u ar",
   "de marker_assign_replace_string",
   " u u",
-  "u u",
   "fw mar marker_assign_replace_string",
   "o fw",
   "fe fw",
@@ -1281,7 +1280,8 @@
   "s data_tr",
   "ps",
   "function_alias_rename marker_delete_above marker_above_delete",
-  "u e"
+  "u e",
+  "u u"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
