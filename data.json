@@ -123,7 +123,7 @@
   "lr": "list_remove",
   "lis": "list_insert",
   "mab": "marker_above",
-  "mda": "marker_delete_above",
+  "mda": "marker_above_delete",
   "ja": "js_auto",
   "lax": "list_add_if_not_includes",
   "lj": "list_join",
@@ -1413,7 +1413,6 @@
   "a ox object_property_exists",
   "de object_property_exists_not",
   "s data_tr",
-  "function_alias_rename marker_delete_above marker_above_delete",
   "u e",
   "u u",
   "c function_alias_rename function_aliases_restor",
@@ -1421,7 +1420,8 @@
   "c function_alias_rename function_aliases_restore",
   "function_aliases_restore",
   "s rename",
-  "ps"
+  "ps",
+  "function_alias_rename marker_delete_above marker_above_delete"
  ],
  "marker_current": "1",
  "function_current": "function_aliases_restore",
