@@ -3,6 +3,7 @@ import { marker } from "./marker.mjs";
 export async function marker_leave() {
   async function lambda(a) {
     marker("1");
+    let stack = a;
   }
   let v = await function_transform_marker_current(lambda);
   return v;
