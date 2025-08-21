@@ -1395,7 +1395,8 @@
   "ir 'functions'",
   "ir property_name 'functions'",
   "md 1",
-  "s name"
+  "s name",
+  "s decl,name"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
