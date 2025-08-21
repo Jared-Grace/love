@@ -1,1 +1,1 @@
-export async function newFunction(next) {}
+export async function newFunction() {}
