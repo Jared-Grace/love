@@ -878,7 +878,6 @@
   "n list_to_dictionary",
   "so doll",
   "s ac",
-  "s invert",
   "function_names_to_acronyms",
   "n git_push_schedule",
   "n path_resolve",
@@ -1412,7 +1411,8 @@
   "as marker",
   "s alias",
   "n function_alias_rename",
-  "function_alias_rename"
+  "function_alias_rename",
+  "s invert"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
