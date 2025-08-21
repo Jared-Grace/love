@@ -53,7 +53,6 @@
   "w": "watch",
   "fws": "function_wrap_suffix_add",
   "nj": "function_new_js",
-  "mb": "marker_bottom",
   "na": "function_new_aliased",
   "so": "functions_search_open",
   "t": "task_new",
@@ -137,7 +136,8 @@
   "lfp": "list_filter_property",
   "i": "function_imports_fix",
   "ml": "marker_leave",
-  "mu": "marker_up"
+  "mu": "marker_up",
+  "mb": "marker_below"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1402,7 +1402,8 @@
   "ir property_name name",
   "ir value2 f",
   "md 1",
-  "u mb"
+  "u mb",
+  "ar mb marker_below"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
