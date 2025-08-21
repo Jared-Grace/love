@@ -3607,8 +3607,7 @@
    "marker_leave",
    "js_marker_name_get",
    "marker_above_generic",
-   "marker_above_delete",
-   "function_alias_rename"
+   "marker_above_delete"
   ],
   "without": [
    "string_suffix_without",
@@ -17906,8 +17905,7 @@
     "data",
     "inverted",
     "result",
-    "n",
-    "a"
+    "n"
    ]
   }
  },
