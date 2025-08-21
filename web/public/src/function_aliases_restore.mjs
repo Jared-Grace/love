@@ -1,8 +1,8 @@
 import { marker } from "./marker.mjs";
 import { data_transform } from "./data_transform.mjs";
-export async function function_aliases_restore(before, after) {
+export async function function_aliases_restore() {
   marker("1");
-  async function lambda(aliases) {
+  async function lambda(previous) {
     let v2 = {
       a: "function_alias_add",
       c: "function_copy",
@@ -102,7 +102,6 @@ export async function function_aliases_restore(before, after) {
       nt: "js_node_type_is",
       nti: "js_node_type_is_if",
       fr: "function_read",
-      "": "oe",
       oe: "function_open_editor",
       fp: "function_parse_declaration_js_unparse",
       oec: "function_open_editor_current",
