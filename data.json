@@ -7993,8 +7993,7 @@
   ],
   "after": [
    "js_dollar_a_generic",
-   "function_alias_rename",
-   "function_rename"
+   "function_alias_rename"
   ],
   "object_name": [
    "js_dollar_g"
@@ -9253,8 +9252,7 @@
    "git_push",
    "date_diff_hours",
    "date_diff_ms",
-   "function_alias_rename",
-   "function_rename"
+   "function_alias_rename"
   ],
   "date_to": [
    "git_push",
@@ -11840,9 +11838,7 @@
     "function_rename",
     "f_name_before",
     "f_name_after",
-    "v",
-    "before",
-    "after"
+    "v"
    ],
    "async": true
   },
