@@ -1372,7 +1372,6 @@
   "o mm",
   "mn",
   "o mn",
-  "fs jaa",
   "md -1",
   "n marker_leave",
   "a ml marker_leave",
@@ -1381,10 +1380,11 @@
   "s assert,list",
   "eac",
   "me",
-  "ml"
+  "ml",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_leave",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
