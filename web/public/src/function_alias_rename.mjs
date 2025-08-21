@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { data_transform } from "./data_transform.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -11,7 +12,7 @@ export async function function_alias_rename(before, after) {
       return;
     }
     let acronyms = object_property_get(inverted, before);
-    e;
+    each(list, function lambda2(item) {});
     object_property_set(aliases, acronyms, after);
     return aliases;
   }
