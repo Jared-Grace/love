@@ -1017,7 +1017,6 @@
   "fr jaa",
   "sa declar",
   "as declar",
-  "ire ast2 2",
   "s watch",
   "oe dwg",
   "c dwg data_editor_get",
@@ -1397,7 +1396,8 @@
   "s name",
   "p",
   "s decl,name",
-  "mc js_declaration_single_name"
+  "mc js_declaration_single_name",
+  "ire ast2 2"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
