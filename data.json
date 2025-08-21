@@ -801,7 +801,6 @@
   "a li list_includes",
   "ar li list_is",
   "a log l",
-  "s alias",
   "as alias",
   "ad log",
   "a l log",
@@ -1410,7 +1409,8 @@
   "is mda",
   "is marker_delete_above",
   "r marker_delete_above marker_above_delete",
-  "as marker"
+  "as marker",
+  "s alias"
  ],
  "marker_current": "1",
  "function_current": "marker_above_delete",
