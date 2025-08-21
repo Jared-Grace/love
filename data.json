@@ -17911,11 +17911,11 @@
     "function_alias_rename",
     "before",
     "after",
-    "acronym",
-    "inverted",
     "lambda",
     "aliases",
+    "inverted",
     "n",
+    "acronym",
     "value2"
    ]
   },
