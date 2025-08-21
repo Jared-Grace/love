@@ -2003,8 +2003,7 @@
    "git_push",
    "data_file_update_inner",
    "list_first_second_generic",
-   "function_run_prompt",
-   "js_await_add"
+   "function_run_prompt"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -12207,7 +12206,6 @@
     "js_await_add",
     "ast",
     "value",
-    "property_name",
     "lambda",
     "v",
     "node",
