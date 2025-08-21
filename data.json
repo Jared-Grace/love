@@ -1674,7 +1674,8 @@
    "marker_down",
    "marker_up",
    "marker_above_generic",
-   "marker_below"
+   "marker_below",
+   "add"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9287,6 +9288,9 @@
   ],
   "add_1": [
    "marker_below"
+  ],
+  "add": [
+   "add"
   ]
  },
  "functions": {
@@ -17828,6 +17832,13 @@
     "fn",
     "add_1",
     "v"
+   ]
+  },
+  "add": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "add"
    ]
   }
  },
