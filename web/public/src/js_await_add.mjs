@@ -6,8 +6,8 @@ export function js_await_add(ast) {
   async function lambda(v) {
     let stack = object_property_get(v, "stack");
     let node = object_property_get(v, "node");
+    marker("1");
     async function lambda3() {
-      marker("1");
       marker("2");
     }
     await js_call_function_if(node, lambda3);
