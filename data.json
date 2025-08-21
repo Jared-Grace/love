@@ -1459,7 +1459,6 @@
    "log_unparse",
    "marker_assign_replace",
    "marker_bottom",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_down_choices",
@@ -1539,7 +1538,6 @@
    "list_squash",
    "list_to_dictionary",
    "list_unique",
-   "marker_call",
    "marker_expand",
    "marker_functionize",
    "object_invert",
@@ -1568,7 +1566,6 @@
    "js_imports_missing",
    "js_return_atomize",
    "js_return_name",
-   "marker_call",
    "marker_expand",
    "data_file_update_inner"
   ],
@@ -2578,7 +2575,6 @@
    "list_map_property_to",
    "list_to_dictionary",
    "marker_assign_replace",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_expand",
@@ -2961,7 +2957,6 @@
    "list_filter_property",
    "list_map_property",
    "marker_above",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
@@ -3078,7 +3073,6 @@
    "list_remove_all",
    "list_unique",
    "marker_above",
-   "marker_call",
    "marker_delete_above",
    "marker_down_choices_lambda",
    "marker_enter",
@@ -3247,7 +3241,6 @@
    "list_add_if_not_includes",
    "list_unique",
    "marker_bottom",
-   "marker_call",
    "marker_down_choices",
    "marker_down_generic",
    "marker_expand",
@@ -3635,7 +3628,6 @@
    "list_map_property_to",
    "list_map_squash",
    "list_map_unordered_async",
-   "marker_call",
    "marker_down_choices",
    "marker_expand",
    "marker_functionize",
@@ -3890,7 +3882,6 @@
    "js_block_child_graph",
    "js_identifiers_to_names",
    "log_json",
-   "marker_call",
    "object_property_delete",
    "object_property_get",
    "string_includes",
@@ -3914,8 +3905,7 @@
   "assert_not": [
    "assert_not",
    "function_identifier_replace",
-   "git_push_schedule_command",
-   "marker_call"
+   "git_push_schedule_command"
   ],
   "catch_ignore_async": [
    "catch_ignore_async"
@@ -4154,7 +4144,6 @@
    "list_size_1_assert_message",
    "list_skip",
    "list_slice_end",
-   "marker_call",
    "marker_functionize"
   ],
   "list_slice": [
@@ -4165,7 +4154,6 @@
    "list_skip",
    "list_slice",
    "list_slice_end",
-   "marker_call",
    "marker_functionize"
   ],
   "data_prompts": [
@@ -4343,7 +4331,6 @@
    "list_first",
    "list_first_second",
    "list_single",
-   "marker_call",
    "marker_expand",
    "marker_functionize",
    "list_first_remaining",
@@ -4766,7 +4753,6 @@
    "function_wrap",
    "js_declaration_single_block_blody",
    "js_return_name",
-   "marker_call",
    "marker_down_choices_lambda",
    "marker_top",
    "task_new"
@@ -4794,7 +4780,6 @@
    "js_statement_return",
    "marker_above",
    "marker_assign_replace",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_delete_above",
@@ -4813,7 +4798,6 @@
    "js_call_new",
    "js_call_new_code",
    "js_node_atomize",
-   "marker_call",
    "marker_expand"
   ],
   "js_code_call_args_await_maybe": [
@@ -4824,7 +4808,6 @@
    "js_call_new_code",
    "js_code_call_args_await_maybe",
    "js_marker_insert",
-   "marker_call",
    "marker_functionize"
   ],
   "function_name_combine_multiple": [
@@ -4855,7 +4838,6 @@
    "js_call_new",
    "js_call_new_code",
    "js_dollar",
-   "marker_call",
    "search_generic",
    "string_split",
    "string_split_comma"
@@ -4938,7 +4920,6 @@
    "list_map_name",
    "list_map_property",
    "marker_bottom",
-   "marker_call",
    "marker_down_choices",
    "marker_down_choices_lambda",
    "marker_down_generic",
@@ -5053,7 +5034,6 @@
    "list_filter",
    "list_filter_property",
    "list_find",
-   "marker_call",
    "marker_enter",
    "marker_functionize",
    "prompt_previous",
@@ -5432,7 +5412,6 @@
    "js_call_new_code",
    "js_code_declaration",
    "js_parse_statement",
-   "marker_call",
    "marker_functionize"
   ],
   "js_code_call": [
@@ -5837,7 +5816,6 @@
    "js_call_new",
    "js_call_new_code",
    "js_parse_statement_module",
-   "marker_call",
    "marker_functionize"
   ],
   "function_imports_add": [
@@ -6100,7 +6078,6 @@
    "js_call_new_code",
    "js_declaration_params_names",
    "js_identifier_defineds",
-   "marker_call",
    "marker_expand"
   ],
   "js_declaration_params_get": [
@@ -6205,8 +6182,7 @@
    "js_call_new",
    "js_call_new_code",
    "js_declaration_param_add",
-   "js_declaration_single_params_add",
-   "marker_call"
+   "js_declaration_single_params_add"
   ],
   "function_param_new": [
    "function_params_new",
@@ -6453,7 +6429,6 @@
    "js_visit_types",
    "marker_assign_replace",
    "marker_bottom",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
@@ -6480,7 +6455,6 @@
    "js_visit_nodes",
    "js_visit_type",
    "js_visit_types",
-   "marker_call",
    "marker_functionize"
   ],
   "list_get_end": [
@@ -6876,7 +6850,6 @@
    "function_transform_marker_empty",
    "marker_assign_replace",
    "marker_bottom",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
@@ -7190,8 +7163,7 @@
    "js_call_new",
    "js_call_new_code",
    "js_node_atomize",
-   "js_return_name",
-   "marker_call"
+   "js_return_name"
   ],
   "js_declare_init_set": [
    "js_atomize",
@@ -7233,7 +7205,6 @@
    "js_identifier_unique_ast",
    "js_node_atomize",
    "js_return_name",
-   "marker_call",
    "marker_top"
   ],
   "existing": [
@@ -7520,7 +7491,6 @@
    "js_dollar",
    "js_dollar_g",
    "js_marker_insert",
-   "marker_call",
    "marker_functionize"
   ],
   "js_call_insert": [
@@ -7622,8 +7592,7 @@
   ],
   "js_code_await": [
    "js_code_await",
-   "js_code_call_args_await_maybe",
-   "marker_call"
+   "js_code_call_args_await_maybe"
   ],
   "js_code_wrap_braces": [
    "js_code_braces_empty",
@@ -8385,7 +8354,6 @@
    "list_last",
    "list_last_is",
    "list_last_or_null",
-   "marker_call",
    "marker_expand",
    "prompt_previous"
   ],
@@ -8433,7 +8401,6 @@
    "js_statement_call_get",
    "list_first_second",
    "list_multiple_is",
-   "marker_call",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
@@ -15874,48 +15841,15 @@
   "marker_call": {
    "identifiers": [
     "js_call_new",
-    "js_return_name",
-    "js_declaration_single_block_blody",
     "js_stack_declaration_asyncify",
-    "js_code_call_args_await_maybe",
-    "js_declaration_params_names",
-    "js_declaration_param_add",
-    "js_code_declaration",
-    "list_slice",
-    "list_size",
-    "list_multiple_is",
-    "string_split",
-    "object_property_set",
-    "list_last",
-    "list_filter",
-    "js_code_await",
-    "js_identifier_unique",
     "js_imports_missing_add",
-    "json_to",
-    "log",
     "list_insert",
-    "assert_not",
-    "list_map",
-    "js_identifiers_names",
-    "list_map_property",
-    "js_parse_statement",
     "marker",
-    "js_code_call_args",
-    "function_parse_declaration",
     "js_unparse",
-    "marker_next_get",
     "function_transform_marker",
     "list_adder_async",
     "data_function_current_get",
     "marker_next_index",
-    "object_property_get",
-    "list_includes",
-    "list_add",
-    "js_node_is",
-    "js_node_type_is",
-    "list_first",
-    "js_parse_statement_module",
-    "each",
     "marker_call",
     "f_name_call",
     "f_name_current",
