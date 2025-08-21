@@ -2265,8 +2265,7 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1",
-   "marker_leave"
+   "list_skip_1"
   ],
   "v": [
    "data_identifiers_file",
@@ -2679,7 +2678,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "marker_leave"
   ],
   "name": [
    "watch",
@@ -3059,8 +3059,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "marker_leave"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3084,8 +3083,7 @@
    "marker_down_choices_lambda",
    "marker_enter",
    "marker_functionize",
-   "visit_unique_async",
-   "marker_leave"
+   "visit_unique_async"
   ],
   "list_remove": [
    "function_transform_marker_empty",
@@ -3951,8 +3949,7 @@
    "js_types_function_includes",
    "list_includes",
    "marker_down_choices_lambda",
-   "string_includes",
-   "marker_leave"
+   "string_includes"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -6413,7 +6410,8 @@
    "marker_down",
    "marker_down_choices",
    "marker_down_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "marker_leave"
   ],
   "js_node_type_is": [
    "function_transform_marker",
@@ -7986,7 +7984,8 @@
    "list_is",
    "list_not_is",
    "list_squash",
-   "marker_down_choices"
+   "marker_down_choices",
+   "marker_leave"
   ],
   "after": [
    "js_dollar_a_generic"
@@ -17862,7 +17861,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
-    "list_includes",
+    "list_is",
     "list_remove",
     "list_get_end_2",
     "list_get_end_1",
@@ -17880,9 +17879,8 @@
     "index",
     "stack1",
     "stack2",
-    "includes",
-    "list",
-    "item",
+    "l",
+    "value",
     "v"
    ]
   }
