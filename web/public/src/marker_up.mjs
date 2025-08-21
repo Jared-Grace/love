@@ -7,6 +7,7 @@ export async function marker_up(delta) {
   return v;
   function delta_get() {
     let i = integer_to(delta);
-    return i;
+    let v2 = -i;
+    return v2;
   }
 }
