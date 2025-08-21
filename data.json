@@ -1145,7 +1145,6 @@
   "oec",
   "dts 0",
   "nj block_child_graph",
-  "s last",
   "cs string_is_assert message",
   "ftc jbcg",
   "s string,assert",
@@ -1385,7 +1384,8 @@
   "mu 2",
   "mm 1 2",
   "cd",
-  "o mc"
+  "o mc",
+  "s last"
  ],
  "marker_current": "1",
  "function_current": "marker_call",
