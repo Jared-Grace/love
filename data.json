@@ -1378,13 +1378,13 @@
   "s assert,list",
   "me",
   "ml",
-  "fs jaa",
   "mg",
   "o w",
-  "eac"
+  "eac",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "watch",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
