@@ -1385,7 +1385,7 @@
   "c md marker_up"
  ],
  "marker_current": "1",
- "function_current": "marker_down",
+ "function_current": "marker_up",
  "terminal": false,
  "identifiers": {
   "log": [
