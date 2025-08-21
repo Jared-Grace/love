@@ -7276,7 +7276,8 @@
    "js_atomize_function",
    "js_declare_assign_null",
    "js_dollar",
-   "list_get_end_2"
+   "list_get_end_2",
+   "marker_leave"
   ],
   "fes": [
    "js_atomize_function"
@@ -7788,7 +7789,8 @@
   "stack3": [
    "js_declare_assign",
    "js_dollar",
-   "js_dollar_r"
+   "js_dollar_r",
+   "marker_leave"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8603,7 +8605,8 @@
    "marker_leave"
   ],
   "e2": [
-   "list_get_end_2"
+   "list_get_end_2",
+   "marker_leave"
   ],
   "index_last": [
    "list_index_is",
@@ -17856,6 +17859,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_get_end_2",
     "list_get_end_1",
     "list_index_of",
     "list_is_assert",
@@ -17871,6 +17875,8 @@
     "index",
     "e1",
     "stack2",
+    "e2",
+    "stack3",
     "v"
    ]
   }
