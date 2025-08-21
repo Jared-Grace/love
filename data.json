@@ -4420,8 +4420,7 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda",
-   "function_alias_rename"
+   "undefined_not_is_assert_lambda"
   ],
   "each_pair": [
    "each_pair",
@@ -17893,8 +17892,7 @@
     "aliases",
     "file_path",
     "data",
-    "inverted",
-    "object"
+    "inverted"
    ]
   }
  },
