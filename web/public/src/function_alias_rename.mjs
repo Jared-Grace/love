@@ -9,6 +9,6 @@ export async function function_alias_rename(before, after) {
   if (n) {
     return;
   }
-  let value2 = object_property_get(object, property_name);
+  let value2 = object_property_get(inverted, before);
   return n;
 }
