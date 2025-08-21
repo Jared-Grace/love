@@ -1385,7 +1385,6 @@
   "fs jaa",
   "ml",
   "mc dpg",
-  "s marker",
   "s ident,repl",
   "cd",
   "irs functions",
@@ -1405,7 +1404,8 @@
   "u mb",
   "ar mb marker_below",
   "mb $g$f$async",
-  "irs async is"
+  "irs async is",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
