@@ -1270,7 +1270,6 @@
   "s delete",
   "a opd object_property_delete",
   "  let x = null;",
-  "ps",
   "dpg identifiers",
   "s catch",
   "c chalk_green chalk_red",
@@ -1412,7 +1411,8 @@
   "s alias",
   "n function_alias_rename",
   "function_alias_rename",
-  "s invert"
+  "s invert",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
