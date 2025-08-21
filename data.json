@@ -1088,7 +1088,6 @@
   "u fs",
   "c marker_down_choices function_transform_marker_empty",
   "function_transform_marker_empty",
-  "fd",
   "m",
   "oe md",
   "oe fc",
@@ -1376,10 +1375,11 @@
   "fs jaa",
   "md -1",
   "n marker_leave",
-  "cd",
   "me",
   "a ml marker_leave",
-  "eac"
+  "eac",
+  "fd",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_leave",
