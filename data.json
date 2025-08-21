@@ -1439,7 +1439,6 @@
    "js_let_add",
    "js_marker_named",
    "js_marker_named_ast",
-   "js_marker_name_get",
    "js_node_types_is",
    "js_parse",
    "js_parse_expression",
@@ -3485,7 +3484,8 @@
    "not",
    "object_property_initialize",
    "js_imports",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_marker_name_get"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3576,7 +3576,8 @@
    "not",
    "string_slice",
    "js_imports_declarations",
-   "marker_leave"
+   "marker_leave",
+   "js_marker_name_get"
   ],
   "without": [
    "string_suffix_without",
@@ -8489,11 +8490,13 @@
   ],
   "a2": [
    "js_unparse",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_marker_name_get"
   ],
   "a3": [
    "js_unparse",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_marker_name_get"
   ],
   "generate": [
    "js_unparse_inner"
@@ -9309,6 +9312,12 @@
   ],
   "stack5": [
    "marker_leave"
+  ],
+  "a4": [
+   "js_marker_name_get"
+  ],
+  "a5": [
+   "js_marker_name_get"
   ]
  },
  "functions": {
@@ -13912,7 +13921,7 @@
   },
   "js_marker_name_get": {
    "identifiers": [
-    "log",
+    "not",
     "error",
     "list_is",
     "list_first",
@@ -13925,10 +13934,13 @@
     "v",
     "stack",
     "stack1",
+    "a",
     "v2",
+    "a2",
     "v3",
     "node",
     "callee",
+    "a3",
     "v4",
     "name",
     "v5",
@@ -13936,8 +13948,10 @@
     "arguments2",
     "v6",
     "a_first",
+    "a4",
     "v7",
     "stack2",
+    "a5",
     "value"
    ],
    "async": false
