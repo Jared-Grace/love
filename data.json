@@ -1316,7 +1316,6 @@
   "is null_is",
   "s unali",
   "nj imports_unused",
-  "s ident",
   "n counter",
   "ftc js_imports_unused",
   "is js_imports",
@@ -1386,7 +1385,8 @@
   "o mc",
   "s last",
   "o jaa",
-  "o mab"
+  "o mab",
+  "s ident"
  ],
  "marker_current": "1",
  "function_current": "marker_above",
