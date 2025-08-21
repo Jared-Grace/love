@@ -1392,12 +1392,12 @@
   "irs functions",
   "ir 'functions'",
   "ir property_name 'functions'",
-  "md 1",
   "s name",
   "p",
   "s decl,name",
   "mc js_declaration_single_name",
-  "ire ast2 2"
+  "ire ast2 2",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
