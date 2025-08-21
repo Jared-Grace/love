@@ -4420,7 +4420,8 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_alias_rename"
   ],
   "each_pair": [
    "each_pair",
@@ -5209,7 +5210,8 @@
    "function_aliases_inverted",
    "function_names_to_acronyms",
    "object_invert",
-   "prompt_previous"
+   "prompt_previous",
+   "function_alias_rename"
   ],
   "function_aliases_inverted": [
    "function_aliases_inverted",
@@ -5219,7 +5221,8 @@
   "inverted": [
    "function_aliases_inverted",
    "object_invert",
-   "prompt_previous"
+   "prompt_previous",
+   "function_alias_rename"
   ],
   "function_aliases_search": [
    "function_aliases_search"
@@ -17883,12 +17886,15 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
+    "object_invert",
     "data_get",
     "function_alias_rename",
     "value",
     "aliases",
     "file_path",
-    "data"
+    "data",
+    "inverted",
+    "object"
    ]
   }
  },
