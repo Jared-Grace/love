@@ -1388,10 +1388,11 @@
   "o mab",
   "s ident",
   "c marker_above marker_below",
-  "n add"
+  "n add",
+  "fws add 1"
  ],
  "marker_current": "1",
- "function_current": "add",
+ "function_current": "add_1",
  "terminal": false,
  "identifiers": {
   "log": [
