@@ -1119,7 +1119,6 @@
   "md 0",
   "oe marker_down_choices_lambda",
   "mrt",
-  "md 1",
   "nj marker_enter",
   "fws function_transform_marker current",
   "u fts",
@@ -1395,7 +1394,8 @@
   "cd",
   "irs functions",
   "ir 'functions'",
-  "ir property_name 'functions'"
+  "ir property_name 'functions'",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
