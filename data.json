@@ -1695,8 +1695,7 @@
    "marker_up",
    "marker_above_generic",
    "marker_below",
-   "marker_above_delete",
-   "function_alias_rename"
+   "marker_above_delete"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2705,7 +2704,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "function_alias_rename"
   ],
   "name": [
    "watch",
@@ -2914,7 +2914,8 @@
    "data_value",
    "file_read_json",
    "function_alias_add_generic",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_alias_rename"
   ],
   "file_path": [
    "data_file_update",
@@ -2932,7 +2933,8 @@
    "html_new",
    "html_overwrite",
    "html_update",
-   "path_name"
+   "path_name",
+   "function_alias_rename"
   ],
   "object_property_get": [
    "chalk_green",
@@ -4091,7 +4093,8 @@
    "function_alias_add_generic",
    "function_open",
    "function_open_editor",
-   "marker_top"
+   "marker_top",
+   "function_alias_rename"
   ],
   "data_function_current_get": [
    "data_function_current_get",
@@ -5198,7 +5201,8 @@
    "function_alias_add_generic",
    "function_alias_change",
    "function_alias_delete",
-   "function_alias_replace"
+   "function_alias_replace",
+   "function_alias_rename"
   ],
   "object_invert": [
    "function_aliases_inverted",
@@ -17876,10 +17880,14 @@
    ]
   },
   "function_alias_rename": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "function_alias_rename"
+    "data_get",
+    "function_alias_rename",
+    "value",
+    "aliases",
+    "file_path",
+    "data"
    ]
   }
  },
