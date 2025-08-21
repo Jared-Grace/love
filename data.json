@@ -1410,9 +1410,9 @@
   "as marker",
   "s alias",
   "n function_alias_rename",
-  "function_alias_rename",
   "s invert",
-  "ps"
+  "ps",
+  "function_alias_rename"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
