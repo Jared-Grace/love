@@ -2265,8 +2265,7 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1",
-   "marker_leave"
+   "list_skip_1"
   ],
   "v": [
    "data_identifiers_file",
@@ -3059,8 +3058,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "marker_leave"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -17877,8 +17875,6 @@
     "index",
     "stack1",
     "stack2",
-    "list",
-    "item",
     "v"
    ]
   }
