@@ -17926,11 +17926,11 @@
     "inverted",
     "n",
     "acronym",
+    "lambda",
+    "previous",
     "value2",
     "property_name",
-    "value_initial",
-    "lambda",
-    "previous"
+    "value_initial"
    ]
   },
   "object_property_exists_not": {
