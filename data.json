@@ -12258,9 +12258,9 @@
     "ast",
     "lambda",
     "v",
-    "stack",
     "node",
-    "lambda3"
+    "lambda3",
+    "stack"
    ],
    "async": false
   },
