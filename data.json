@@ -1121,7 +1121,6 @@
   "mrt",
   "md 1",
   "nj marker_enter",
-  "s marker",
   "fws function_transform_marker current",
   "u fts",
   "s function,types",
@@ -1391,7 +1390,8 @@
   "s data,get",
   "fs jaa",
   "ml",
-  "mc dpg"
+  "mc dpg",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
