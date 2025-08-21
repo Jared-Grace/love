@@ -1413,7 +1413,6 @@
   "a ox object_property_exists",
   "de object_property_exists_not",
   "s data_tr",
-  "ps",
   "function_alias_rename marker_delete_above marker_above_delete",
   "u e",
   "u u",
@@ -1421,7 +1420,8 @@
   "p",
   "c function_alias_rename function_aliases_restore",
   "function_aliases_restore",
-  "s rename"
+  "s rename",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_aliases_restore",
