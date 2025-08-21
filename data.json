@@ -1376,7 +1376,6 @@
   "a mu marker_up",
   "mu 2",
   "mm 1 2",
-  "cd",
   "o mc",
   "s last",
   "o jaa",
@@ -1392,7 +1391,8 @@
   "ml",
   "mc dpg",
   "s marker",
-  "s ident,repl"
+  "s ident,repl",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
