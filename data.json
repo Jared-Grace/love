@@ -2423,7 +2423,8 @@
    "marker_call_atomize",
    "marker_above_delete",
    "function_alias_rename",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_rename"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7992,7 +7993,8 @@
   ],
   "after": [
    "js_dollar_a_generic",
-   "function_alias_rename"
+   "function_alias_rename",
+   "function_rename"
   ],
   "object_name": [
    "js_dollar_g"
@@ -9251,7 +9253,8 @@
    "git_push",
    "date_diff_hours",
    "date_diff_ms",
-   "function_alias_rename"
+   "function_alias_rename",
+   "function_rename"
   ],
   "date_to": [
    "git_push",
@@ -9376,7 +9379,8 @@
    "marker_above_delete"
   ],
   "function_alias_rename": [
-   "function_alias_rename"
+   "function_alias_rename",
+   "function_rename"
   ],
   "object_property_exists_not": [
    "function_alias_rename",
@@ -11829,12 +11833,16 @@
   },
   "function_rename": {
    "identifiers": [
+    "function_alias_rename",
     "function_delete",
     "function_copy",
     "marker",
     "function_rename",
     "f_name_before",
-    "f_name_after"
+    "f_name_after",
+    "v",
+    "before",
+    "after"
    ],
    "async": true
   },
