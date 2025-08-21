@@ -8,7 +8,7 @@ export async function js_await_add(ast) {
   let functions = await data_functions_get();
   let name = js_declaration_single_name(ast);
   marker("1");
-  let value2 = object_property_get(functions, property_name);
+  let value2 = object_property_get(functions, name);
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3() {
