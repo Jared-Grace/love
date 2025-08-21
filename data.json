@@ -3399,7 +3399,8 @@
    "function_run_log",
    "json_format_to",
    "js_declaration_params_names_node",
-   "js_unparse"
+   "js_unparse",
+   "watch"
   ],
   "function_name_unalias": [
    "function_watch_suffix_change",
@@ -9343,6 +9344,7 @@
     "import_install",
     "data_file_update",
     "object_property_set",
+    "json_format_to",
     "watch",
     "chokidar",
     "default",
