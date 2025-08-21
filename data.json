@@ -1422,7 +1422,8 @@
   "function_alias_rename marker_delete_above marker_above_delete",
   "eac",
   "ps",
-  "o r"
+  "o r",
+  "u mad"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
