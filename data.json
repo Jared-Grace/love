@@ -1674,8 +1674,7 @@
    "marker_down",
    "marker_up",
    "marker_above_generic",
-   "marker_below",
-   "add"
+   "marker_below"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4456,7 +4455,8 @@
    "js_code_let_assign",
    "js_code_or",
    "js_left_right_set",
-   "js_let_add"
+   "js_let_add",
+   "add"
   ],
   "right": [
    "equal",
@@ -4470,7 +4470,8 @@
    "js_left_right_set",
    "js_let_add",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "add"
   ],
   "eq": [
    "equal",
@@ -17837,8 +17838,9 @@
   "add": {
    "async": false,
    "identifiers": [
-    "marker",
-    "add"
+    "add",
+    "left",
+    "right"
    ]
   }
  },
