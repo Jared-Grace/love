@@ -3513,7 +3513,8 @@
    "object_property_initialize",
    "js_imports",
    "js_imports_declarations",
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "function_alias_rename"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3606,7 +3607,8 @@
    "marker_leave",
    "js_marker_name_get",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_alias_rename"
   ],
   "without": [
    "string_suffix_without",
@@ -5247,7 +5249,8 @@
    "marker_enter",
    "marker_next_get",
    "not",
-   "search_generic"
+   "search_generic",
+   "function_alias_rename"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -17891,6 +17894,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
+    "not",
     "object_property_exists",
     "object_invert",
     "data_get",
@@ -17901,7 +17905,9 @@
     "file_path",
     "data",
     "inverted",
-    "result"
+    "result",
+    "n",
+    "a"
    ]
   }
  },
