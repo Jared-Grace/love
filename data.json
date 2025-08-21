@@ -1423,7 +1423,7 @@
   "c function_alias_rename function_aliases_restore"
  ],
  "marker_current": "1",
- "function_current": "function_alias_rename",
+ "function_current": "function_aliases_restore",
  "terminal": false,
  "identifiers": {
   "log": [
