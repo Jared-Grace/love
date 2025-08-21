@@ -98,7 +98,6 @@
   "nt": "js_node_type_is",
   "nti": "js_node_type_is_if",
   "fr": "function_read",
-  "": "oe",
   "oe": "function_open_editor",
   "fp": "function_parse_declaration_js_unparse",
   "oec": "function_open_editor_current",
@@ -1420,7 +1419,8 @@
   "u u",
   "c function_alias_rename function_aliases_restor",
   "p",
-  "c function_alias_rename function_aliases_restore"
+  "c function_alias_rename function_aliases_restore",
+  "function_aliases_restore"
  ],
  "marker_current": "1",
  "function_current": "function_aliases_restore",
