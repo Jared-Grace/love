@@ -1409,7 +1409,8 @@
   "si mda",
   "is mda",
   "as marker",
-  "is marker_delete_above"
+  "is marker_delete_above",
+  "r marker_delete_above marker_above_delete"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
