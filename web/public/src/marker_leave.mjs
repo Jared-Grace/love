@@ -8,7 +8,8 @@ export async function marker_leave() {
     let { stack } = a;
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
-    log(stack);
+    log(stack4);
+    log(stack5);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
