@@ -1390,7 +1390,7 @@
   "c marker_above marker_below"
  ],
  "marker_current": "1",
- "function_current": "marker_above",
+ "function_current": "marker_below",
  "terminal": false,
  "identifiers": {
   "log": [
