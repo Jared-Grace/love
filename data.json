@@ -1675,8 +1675,7 @@
    "marker_down",
    "marker_up",
    "marker_above_generic",
-   "marker_below",
-   "add_1"
+   "marker_below"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -17857,7 +17856,6 @@
    "async": false,
    "identifiers": [
     "add",
-    "marker",
     "add_1",
     "left",
     "sum"
