@@ -5246,7 +5246,8 @@
    "marker_enter",
    "marker_next_get",
    "not",
-   "search_generic"
+   "search_generic",
+   "function_alias_rename"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -17902,7 +17903,8 @@
     "aliases",
     "file_path",
     "data",
-    "inverted"
+    "inverted",
+    "n"
    ]
   }
  },
