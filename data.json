@@ -1400,7 +1400,8 @@
   "md 1",
   "mc opg",
   "ir object value",
-  "ir value functions"
+  "ir value functions",
+  "ir property_name name"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
