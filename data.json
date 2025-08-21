@@ -2266,7 +2266,8 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1"
+   "list_skip_1",
+   "marker_leave"
   ],
   "v": [
    "data_identifiers_file",
@@ -2797,7 +2798,8 @@
    "data_identifiers_search",
    "list_first_second",
    "list_first_remaining",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "marker_leave"
   ],
   "separator": [
    "watch",
@@ -6726,7 +6728,8 @@
    "list_is_assert",
    "list_size",
    "marker_down_choices",
-   "marker_down_generic"
+   "marker_down_generic",
+   "marker_leave"
   ],
   "list_insert": [
    "function_transform_marker_empty",
@@ -17857,6 +17860,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_is_assert",
     "list_get_end",
     "log",
     "function_transform_marker_current",
@@ -17867,6 +17871,8 @@
     "stack",
     "stack4",
     "stack5",
+    "result",
+    "list",
     "v"
    ]
   }
