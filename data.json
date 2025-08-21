@@ -2265,7 +2265,8 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1"
+   "list_skip_1",
+   "marker_leave"
   ],
   "v": [
    "data_identifiers_file",
@@ -3058,7 +3059,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "marker_leave"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3109,7 +3111,8 @@
    "marker_remove",
    "js_dollar_g",
    "js_imports_unused_remove",
-   "js_imports_fix"
+   "js_imports_fix",
+   "marker_leave"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -17857,6 +17860,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_remove",
     "list_get_end_2",
     "list_get_end_1",
     "list_index_of",
@@ -17873,6 +17877,8 @@
     "index",
     "stack1",
     "stack2",
+    "list",
+    "item",
     "v"
    ]
   }
