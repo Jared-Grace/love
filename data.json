@@ -1114,7 +1114,6 @@
   "s size,1",
   "oe ms",
   "oe fs",
-  "mg",
   "n list_map_property_to",
   "oe list_map_property_to",
   "md 2",
@@ -1381,7 +1380,8 @@
   "eac",
   "me",
   "ml",
-  "fs jaa"
+  "fs jaa",
+  "mg"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
