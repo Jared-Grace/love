@@ -1030,7 +1030,6 @@
   " fd ii",
   "fd ii",
   "fp dts",
-  "as marker",
   "ma \"terminal\"",
   "fw ar marker_assign_replace_string",
   "u ar",
@@ -1405,7 +1404,8 @@
   "ar mb marker_below",
   "mb $g$f$async",
   "irs async is",
-  "s marker"
+  "s marker",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
