@@ -1412,7 +1412,8 @@
   "s invert",
   "ps",
   "function_alias_rename",
-  "s exist"
+  "s exist",
+  "u ope"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
