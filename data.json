@@ -2797,8 +2797,7 @@
    "data_identifiers_search",
    "list_first_second",
    "list_first_remaining",
-   "list_first_second_generic",
-   "marker_leave"
+   "list_first_second_generic"
   ],
   "separator": [
    "watch",
@@ -17864,7 +17863,6 @@
     "stack",
     "stack4",
     "stack5",
-    "result",
     "v"
    ]
   }
