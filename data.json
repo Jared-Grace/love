@@ -1378,16 +1378,16 @@
   "me",
   "o w",
   "eac",
-  "fs jaa",
   "mg",
   "ml",
   "o md",
   "c md marker_up",
   "a mu marker_up",
-  "cd"
+  "cd",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_up",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
