@@ -2732,7 +2732,8 @@
    "js_imports_declarations",
    "js_imports_unused",
    "git_push",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "js_await_add"
   ],
   "output": [
    "watch",
@@ -7382,7 +7383,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_await_add"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -9262,7 +9264,8 @@
    "add_1"
   ],
   "js_declaration_single_name": [
-   "js_imports_missing"
+   "js_imports_missing",
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12201,6 +12204,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "js_declaration_single_name",
     "data_property_get",
     "js_call_function_if",
     "object_property_get",
@@ -12209,6 +12213,8 @@
     "js_await_add",
     "ast",
     "value",
+    "name",
+    "ast2",
     "lambda",
     "v",
     "node",
