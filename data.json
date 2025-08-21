@@ -1404,7 +1404,8 @@
   "md 1",
   "u mb",
   "ar mb marker_below",
-  "mb $g$f$async"
+  "mb $g$f$async",
+  "irs async is"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
