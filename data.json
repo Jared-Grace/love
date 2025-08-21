@@ -1468,7 +1468,6 @@
    "marker_next_delete",
    "marker_remove",
    "marker_top",
-   "newFunction",
    "prompt_previous",
    "sandbox",
    "search_generic",
@@ -1866,8 +1865,7 @@
    "log_unparse",
    "marker_above",
    "marker_down_choices",
-   "marker_functionize",
-   "newFunction"
+   "marker_functionize"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2410,8 +2408,7 @@
    "marker_expand",
    "marker_functionize",
    "marker_next",
-   "marker_next_delete",
-   "newFunction"
+   "marker_next_delete"
   ],
   "js_format": [
    "file_js_unparse",
@@ -16693,11 +16690,8 @@
   },
   "newFunction": {
    "identifiers": [
-    "log",
-    "js_unparse",
     "newFunction",
-    "next",
-    "code"
+    "next"
    ],
    "async": true
   },
