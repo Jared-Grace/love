@@ -2690,8 +2690,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "js_await_add"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -9189,7 +9188,8 @@
    "data_file_update_inner"
   ],
   "functions": [
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_await_add"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -12216,7 +12216,7 @@
     "marker",
     "js_await_add",
     "ast",
-    "value",
+    "functions",
     "name",
     "value2",
     "property_name",
