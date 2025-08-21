@@ -1379,9 +1379,9 @@
   "fd",
   "cd",
   "s assert,list",
-  "me",
   "eac",
-  "ml"
+  "ml",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "marker_leave",
