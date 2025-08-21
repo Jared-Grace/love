@@ -1672,7 +1672,8 @@
    "marker_leave",
    "marker_down",
    "marker_up",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_below"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -17817,6 +17818,7 @@
   "marker_below": {
    "async": true,
    "identifiers": [
+    "marker",
     "marker_above_generic",
     "identity",
     "marker_below",
