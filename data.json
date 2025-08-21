@@ -1420,7 +1420,8 @@
   "c function_alias_rename function_aliases_restor",
   "p",
   "c function_alias_rename function_aliases_restore",
-  "function_aliases_restore"
+  "function_aliases_restore",
+  "s rename"
  ],
  "marker_current": "1",
  "function_current": "function_aliases_restore",
