@@ -1413,7 +1413,7 @@
   "r marker_delete_above marker_above_delete"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_above_delete",
  "terminal": false,
  "identifiers": {
   "log": [
