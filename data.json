@@ -1380,7 +1380,8 @@
   "eac",
   "fd",
   "cd",
-  "ml"
+  "ml",
+  "s assert,list"
  ],
  "marker_current": "1",
  "function_current": "marker_leave",
