@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { not } from "./not.mjs";
 import { error } from "./error.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -10,17 +10,20 @@ import { list_get_end } from "./list_get_end.mjs";
 export function js_marker_name_get(v) {
   let { stack } = v;
   let stack1 = list_get_end(stack, 1);
-  if (!js_node_is(stack1)) {
+  let a = js_node_is(stack1);
+  if (not(a)) {
     let v2 = null;
     return v2;
   }
-  if (!js_node_type_is(stack1, "ExpressionStatement")) {
+  let a2 = js_node_type_is(stack1, "ExpressionStatement");
+  if (not(a2)) {
     let v3 = null;
     return v3;
   }
   let { node } = v;
   let { callee } = node;
-  if (!js_node_type_is(callee, "Identifier")) {
+  let a3 = js_node_type_is(callee, "Identifier");
+  if (not(a3)) {
     let v4 = null;
     return v4;
   }
@@ -35,15 +38,16 @@ export function js_marker_name_get(v) {
     return v6;
   }
   let a_first = list_first(arguments2);
-  if (!js_node_type_is(a_first, "Literal")) {
+  let a4 = js_node_type_is(a_first, "Literal");
+  if (not(a4)) {
     let v7 = null;
     return v7;
   }
   let stack2 = list_get_end(stack, 2);
-  if (!list_is(stack2)) {
+  let a5 = list_is(stack2);
+  if (not(a5)) {
     error();
   }
   let { value } = a_first;
-  log(value);
   return value;
 }
