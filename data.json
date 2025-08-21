@@ -1385,10 +1385,11 @@
   "cd",
   "o mc",
   "s last",
-  "o jaa"
+  "o jaa",
+  "o mab"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_above",
  "terminal": false,
  "identifiers": {
   "log": [
