@@ -13,6 +13,7 @@ export async function function_alias_rename(before, after) {
     let acronyms = object_property_get(inverted, before);
     e;
     object_property_set(aliases, acronyms, after);
+    return aliases;
   }
   let v = await data_transform("aliases", {}, lambda);
   return v;
