@@ -1391,7 +1391,8 @@
   "fs jaa",
   "ml",
   "mc dpg",
-  "s marker"
+  "s marker",
+  "s ident,repl"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
