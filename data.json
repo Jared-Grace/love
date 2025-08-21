@@ -2006,7 +2006,8 @@
    "git_push",
    "data_file_update_inner",
    "list_first_second_generic",
-   "function_run_prompt"
+   "function_run_prompt",
+   "js_await_add"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3349,7 +3350,8 @@
    "js_await_add"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "js_await_add"
   ],
   "error": [
    "watch",
@@ -4393,7 +4395,8 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_await_add"
   ],
   "each_pair": [
    "each_pair",
@@ -12214,6 +12217,9 @@
     "ast",
     "value",
     "name",
+    "value2",
+    "object",
+    "property_name",
     "lambda",
     "v",
     "node",
