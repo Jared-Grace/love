@@ -1353,7 +1353,6 @@
   "p",
   "o gp",
   "d",
-  "s name",
   "s call,name",
   "s call",
   "mc js_call_function_if",
@@ -1395,7 +1394,8 @@
   "irs functions",
   "ir 'functions'",
   "ir property_name 'functions'",
-  "md 1"
+  "md 1",
+  "s name"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
