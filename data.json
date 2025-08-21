@@ -9320,6 +9320,9 @@
   ],
   "function_alias_rename": [
    "function_alias_rename"
+  ],
+  "ope": [
+   "function_alias_rename"
   ]
  },
  "functions": {
@@ -17892,7 +17895,8 @@
     "aliases",
     "file_path",
     "data",
-    "inverted"
+    "inverted",
+    "ope"
    ]
   }
  },
