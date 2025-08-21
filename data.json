@@ -2166,7 +2166,8 @@
    "list_unique_reverse",
    "marker_current_set",
    "prompt_previous",
-   "data_set"
+   "data_set",
+   "function_aliases_restore"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -5234,8 +5235,7 @@
    "function_alias_change",
    "function_alias_delete",
    "function_alias_replace",
-   "function_alias_rename",
-   "function_aliases_restore"
+   "function_alias_rename"
   ],
   "object_invert": [
    "function_aliases_inverted",
@@ -7988,8 +7988,7 @@
   ],
   "after": [
    "js_dollar_a_generic",
-   "function_alias_rename",
-   "function_aliases_restore"
+   "function_alias_rename"
   ],
   "object_name": [
    "js_dollar_g"
@@ -9248,8 +9247,7 @@
    "git_push",
    "date_diff_hours",
    "date_diff_ms",
-   "function_alias_rename",
-   "function_aliases_restore"
+   "function_alias_rename"
   ],
   "date_to": [
    "git_push",
@@ -18309,10 +18307,8 @@
     "marker",
     "data_transform",
     "function_aliases_restore",
-    "before",
-    "after",
     "lambda",
-    "aliases",
+    "previous",
     "v2",
     "a",
     "c",
