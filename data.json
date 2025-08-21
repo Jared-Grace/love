@@ -2265,8 +2265,7 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1",
-   "marker_leave"
+   "list_skip_1"
   ],
   "v": [
    "data_identifiers_file",
@@ -3059,8 +3058,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "marker_leave"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6704,7 +6702,8 @@
    "marker_next_index",
    "marker_previous_index",
    "marker_remove",
-   "js_dollar_g"
+   "js_dollar_g",
+   "marker_leave"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7171,7 +7170,8 @@
    "js_dollar",
    "js_if_else_if_combine",
    "js_let_add",
-   "list_get_end_1"
+   "list_get_end_1",
+   "marker_leave"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8599,7 +8599,8 @@
    "prompt_previous"
   ],
   "e1": [
-   "list_get_end_1"
+   "list_get_end_1",
+   "marker_leave"
   ],
   "e2": [
    "list_get_end_2"
@@ -17855,6 +17856,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_get_end_1",
     "list_index_of",
     "list_is_assert",
     "list_get_end",
@@ -17867,8 +17869,8 @@
     "stack4",
     "stack5",
     "index",
-    "list",
-    "item",
+    "e1",
+    "stack2",
     "v"
    ]
   }
