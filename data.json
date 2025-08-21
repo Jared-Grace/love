@@ -1707,7 +1707,8 @@
    "marker_up",
    "marker_above_generic",
    "marker_below",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_aliases_restore"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -17961,6 +17962,7 @@
   "function_aliases_restore": {
    "async": true,
    "identifiers": [
+    "marker",
     "each",
     "object_property_set",
     "data_transform",
@@ -17975,9 +17977,9 @@
     "inverted",
     "n",
     "acronyms",
-    "list",
     "lambda2",
     "item",
+    "list",
     "v"
    ]
   }
