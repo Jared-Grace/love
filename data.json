@@ -2026,7 +2026,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_alias_rename"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3015,7 +3016,8 @@
    "data_file_update_inner",
    "js_identifiers_named_count",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_alias_rename"
   ],
   "data_save": [
    "data_file_update",
@@ -3379,7 +3381,8 @@
    "js_await_add"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "function_alias_rename"
   ],
   "error": [
    "watch",
@@ -4429,7 +4432,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_alias_rename"
   ],
   "each_pair": [
    "each_pair",
@@ -17902,6 +17906,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "object_property_exists_not",
     "object_invert",
     "data_get",
@@ -17913,7 +17918,10 @@
     "file_path",
     "data",
     "inverted",
-    "n"
+    "n",
+    "value2",
+    "object",
+    "property_name"
    ]
   },
   "object_property_exists_not": {
