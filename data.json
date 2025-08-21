@@ -3721,8 +3721,7 @@
    "js_unparse",
    "marker_bottom",
    "search_generic",
-   "data_set",
-   "marker_up"
+   "data_set"
   ],
   "readdirSync": [
    "folder_read"
@@ -8305,7 +8304,8 @@
   ],
   "ni": [
    "js_node_is",
-   "marker_next_get"
+   "marker_next_get",
+   "marker_up"
   ],
   "js_node_types_includes": [
    "js_node_types_includes",
@@ -17875,7 +17875,7 @@
     "v",
     "delta_get",
     "i",
-    "v2"
+    "ni"
    ]
   }
  },
