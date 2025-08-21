@@ -1384,7 +1384,8 @@
   "c md marker_up",
   "a mu marker_up",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "mu 2"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
