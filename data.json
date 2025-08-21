@@ -1421,10 +1421,11 @@
   "s rename",
   "function_alias_rename marker_delete_above marker_above_delete",
   "eac",
-  "ps"
+  "ps",
+  "o r"
  ],
  "marker_current": "1",
- "function_current": "function_aliases_restore",
+ "function_current": "function_rename",
  "terminal": false,
  "identifiers": {
   "log": [
