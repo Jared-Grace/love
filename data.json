@@ -2311,8 +2311,7 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1",
-   "function_alias_rename"
+   "list_skip_1"
   ],
   "v": [
    "data_identifiers_file",
@@ -3108,8 +3107,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "function_alias_rename"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5206,7 +5204,8 @@
   ],
   "acronym": [
    "function_acronym_to_names",
-   "function_name_to_acronym"
+   "function_name_to_acronym",
+   "function_alias_rename"
   ],
   "function_alias_generic": [
    "function_aliases",
@@ -18291,8 +18290,7 @@
     "n",
     "acronyms",
     "lambda2",
-    "item",
-    "list",
+    "acronym",
     "v"
    ]
   },
