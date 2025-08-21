@@ -137,7 +137,8 @@
   "i": "function_imports_fix",
   "ml": "marker_leave",
   "mu": "marker_up",
-  "mb": "marker_below"
+  "mb": "marker_below",
+  "ox": "object_property_exists"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1413,7 +1414,8 @@
   "ps",
   "function_alias_rename",
   "s exist",
-  "u ope"
+  "u ope",
+  "a ox object_property_exists"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
