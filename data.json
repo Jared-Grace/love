@@ -1348,7 +1348,6 @@
   "s error_attention",
   "dpg error_attention",
   "o gp",
-  "d",
   "s call,name",
   "s call",
   "mc js_call_function_if",
@@ -1406,7 +1405,8 @@
   "s marker",
   "as marker",
   "s data_files",
-  "eac"
+  "eac",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -1845,7 +1845,8 @@
    "data_file_update_inner",
    "js_declaration_single",
    "js_identifiers_named_count",
-   "marker_above_generic"
+   "marker_above_generic",
+   "js_declaration_single_name"
   ],
   "code": [
    "data_identifiers_file",
@@ -2128,7 +2129,8 @@
    "js_declaration_single",
    "js_node_atomize",
    "marker_leave",
-   "marker_above_generic"
+   "marker_above_generic",
+   "js_call_function_if"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2740,7 +2742,9 @@
    "js_imports_unused",
    "git_push",
    "js_identifiers_named_count",
-   "js_await_add"
+   "js_await_add",
+   "js_call_function_if",
+   "js_declaration_single_name"
   ],
   "output": [
    "watch",
@@ -3196,7 +3200,8 @@
    "data_terminal_get",
    "data_watch_get",
    "data_identifiers_search",
-   "git_push"
+   "git_push",
+   "data_functions_get"
   ],
   "trinity_green": [
    "function_run_log",
@@ -4994,11 +4999,13 @@
   ],
   "functions_names_includes": [
    "functions_names_includes",
-   "js_call_fill"
+   "js_call_fill",
+   "js_call_function_if"
   ],
   "valid": [
    "functions_names_includes",
-   "js_call_fill"
+   "js_call_fill",
+   "js_call_function_if"
   ],
   "search_generic": [
    "functions_search",
@@ -5535,7 +5542,8 @@
    "visit_unique_async",
    "js_imports_declarations",
    "js_identifiers_named_count",
-   "js_await_add"
+   "js_await_add",
+   "js_call_function_if"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -5871,7 +5879,8 @@
    "marker_down_choices_lambda",
    "marker_top",
    "data_file_update_inner",
-   "js_imports_missing"
+   "js_imports_missing",
+   "js_declaration_single_name"
   ],
   "list_concat": [
    "function_imports_missing",
@@ -5964,7 +5973,8 @@
    "js_atomize_function",
    "js_declaration_name",
    "js_outside_move",
-   "marker_expand"
+   "marker_expand",
+   "js_declaration_single_name"
   ],
   "js_code_export": [
    "function_new",
@@ -6022,7 +6032,8 @@
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_declaration_single_name"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -6425,7 +6436,8 @@
    "marker_expand",
    "marker_functionize",
    "marker_next_delete",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_call_function_if"
   ],
   "js_node_is": [
    "function_transform_marker",
@@ -8216,7 +8228,8 @@
    "js_marker_name_get",
    "js_node_atomize",
    "marker_call_replace_generic",
-   "marker_expand"
+   "marker_expand",
+   "js_call_function_if"
   ],
   "v4": [
    "js_marker_name_get"
@@ -9189,7 +9202,8 @@
   ],
   "functions": [
    "data_file_update_inner",
-   "js_await_add"
+   "js_await_add",
+   "data_functions_get"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -9224,7 +9238,8 @@
   ],
   "js_call_function_if": [
    "js_node_atomize",
-   "js_await_add"
+   "js_await_add",
+   "js_call_function_if"
   ],
   "marker_leave": [
    "marker_leave"
@@ -9269,10 +9284,12 @@
   ],
   "js_declaration_single_name": [
    "js_imports_missing",
-   "js_await_add"
+   "js_await_add",
+   "js_declaration_single_name"
   ],
   "data_functions_get": [
-   "js_await_add"
+   "js_await_add",
+   "data_functions_get"
   ]
  },
  "functions": {
@@ -17784,6 +17801,38 @@
     "add_1",
     "left",
     "sum"
+   ]
+  },
+  "data_functions_get": {
+   "async": true,
+   "identifiers": [
+    "data_property_get",
+    "data_functions_get",
+    "functions"
+   ]
+  },
+  "js_call_function_if": {
+   "async": true,
+   "identifiers": [
+    "functions_names_includes",
+    "js_node_type_is",
+    "js_call_function_if",
+    "node",
+    "lambda",
+    "callee",
+    "name",
+    "valid"
+   ]
+  },
+  "js_declaration_single_name": {
+   "async": false,
+   "identifiers": [
+    "js_declaration_name",
+    "js_declaration_single",
+    "js_declaration_single_name",
+    "ast",
+    "declaration",
+    "name"
    ]
   }
  },
