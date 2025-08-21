@@ -2001,7 +2001,8 @@
    "git_push",
    "data_file_update_inner",
    "list_first_second_generic",
-   "function_run_prompt"
+   "function_run_prompt",
+   "js_await_add"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2684,7 +2685,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "js_await_add"
   ],
   "name": [
    "watch",
@@ -3193,7 +3195,8 @@
    "data_terminal_get",
    "data_watch_get",
    "data_identifiers_search",
-   "git_push"
+   "git_push",
+   "js_await_add"
   ],
   "trinity_green": [
    "function_run_log",
@@ -12240,19 +12243,22 @@
   },
   "js_await_add": {
    "identifiers": [
+    "data_property_get",
     "js_call_function_if",
     "object_property_get",
     "js_visit_type",
     "marker",
     "js_await_add",
     "ast",
+    "value",
+    "property_name",
     "lambda",
     "v",
     "node",
     "lambda3",
     "stack"
    ],
-   "async": false
+   "async": true
   },
   "js_await_add_task_simple": {
    "identifiers": [
