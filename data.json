@@ -6641,7 +6641,8 @@
    "marker_down_choices_lambda",
    "marker_functionize",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "marker_leave"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -17849,10 +17850,11 @@
     "marker_leave",
     "lambda",
     "a",
+    "stack",
     "v"
    ]
   }
  },
- "git_push_when": "2025-08-20T22:06:35.584Z",
+ "git_push_when": "2025-08-21T17:02:42.805Z",
  "error_attention": null
 }
