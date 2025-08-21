@@ -6673,7 +6673,8 @@
    "marker_index",
    "marker_next_index",
    "marker_previous_index",
-   "marker_remove"
+   "marker_remove",
+   "marker_leave"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -7789,8 +7790,7 @@
   "stack3": [
    "js_declare_assign",
    "js_dollar",
-   "js_dollar_r",
-   "marker_leave"
+   "js_dollar_r"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8601,12 +8601,10 @@
    "prompt_previous"
   ],
   "e1": [
-   "list_get_end_1",
-   "marker_leave"
+   "list_get_end_1"
   ],
   "e2": [
-   "list_get_end_2",
-   "marker_leave"
+   "list_get_end_2"
   ],
   "index_last": [
    "list_index_is",
@@ -17873,10 +17871,8 @@
     "stack4",
     "stack5",
     "index",
-    "e1",
+    "stack1",
     "stack2",
-    "e2",
-    "stack3",
     "v"
    ]
   }
