@@ -2410,7 +2410,8 @@
    "marker_below",
    "marker_call_replace",
    "marker_call_atomize",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_alias_rename"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -17916,7 +17917,8 @@
     "aliases",
     "inverted",
     "n",
-    "acronym"
+    "acronym",
+    "v"
    ]
   },
   "object_property_exists_not": {
