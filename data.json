@@ -3192,8 +3192,7 @@
    "data_terminal_get",
    "data_watch_get",
    "data_identifiers_search",
-   "git_push",
-   "js_await_add"
+   "git_push"
   ],
   "trinity_green": [
    "function_run_log",
@@ -9270,6 +9269,9 @@
   "js_declaration_single_name": [
    "js_imports_missing",
    "js_await_add"
+  ],
+  "data_functions_get": [
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12208,8 +12210,8 @@
   },
   "js_await_add": {
    "identifiers": [
+    "data_functions_get",
     "js_declaration_single_name",
-    "data_property_get",
     "js_call_function_if",
     "object_property_get",
     "js_visit_type",
