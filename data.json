@@ -1403,10 +1403,12 @@
   "mb $g$f$async",
   "irs async is",
   "s marker",
-  "as marker",
   "s data_files",
   "eac",
-  "d"
+  "d",
+  "si mda",
+  "is mda",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
