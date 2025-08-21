@@ -1470,7 +1470,8 @@
    "sandbox",
    "search_generic",
    "js_imports_unused",
-   "git_push"
+   "git_push",
+   "marker_leave"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2449,7 +2450,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "marker_leave"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -17845,12 +17847,14 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "log",
     "function_transform_marker_current",
     "marker",
     "marker_leave",
     "lambda",
     "a",
     "stack",
+    "message",
     "v"
    ]
   }
