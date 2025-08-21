@@ -1378,7 +1378,6 @@
   "c marker_above marker_below",
   "n add",
   "fws add 1",
-  "eac",
   "s data",
   "s data,get",
   "fs jaa",
@@ -1406,7 +1405,8 @@
   "irs async is",
   "s marker",
   "as marker",
-  "s data_files"
+  "s data_files",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -17787,6 +17787,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-21T19:32:40.896Z",
- "error_attention": {}
+ "git_push_when": "2025-08-21T21:52:25.714Z",
+ "error_attention": null
 }
