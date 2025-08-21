@@ -3811,7 +3811,6 @@
    "list_get",
    "list_insert",
    "list_insert_generic",
-   "list_is_assert",
    "list_last",
    "list_replace",
    "marker_assign_replace",
@@ -3879,7 +3878,6 @@
    "js_identifiers_to_names",
    "js_node_atomize",
    "list_get",
-   "list_is_assert",
    "string_includes",
    "string_is_assert_message"
   ],
@@ -3892,7 +3890,6 @@
    "json_to",
    "js_block_child_graph",
    "js_identifiers_to_names",
-   "list_is_assert",
    "log_json",
    "marker_call",
    "object_property_delete",
@@ -15152,10 +15149,7 @@
   "list_is_assert": {
    "identifiers": [
     "assert_json",
-    "assert_message",
-    "assert",
     "list_is",
-    "json_to",
     "list_is_assert",
     "list",
     "result"
