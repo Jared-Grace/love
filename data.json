@@ -7961,8 +7961,7 @@
    "marker_expand",
    "marker_move",
    "marker_next",
-   "marker_next_get",
-   "newFunction"
+   "marker_next_get"
   ],
   "id": [
    "js_dollar_a",
@@ -16690,8 +16689,7 @@
   },
   "newFunction": {
    "identifiers": [
-    "newFunction",
-    "next"
+    "newFunction"
    ],
    "async": true
   },
