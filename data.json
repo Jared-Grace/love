@@ -1611,7 +1611,8 @@
    "function_run_line_parse",
    "marker_current_set",
    "prompt_previous",
-   "data_set"
+   "data_set",
+   "function_alias_rename"
   ],
   "marker": [
    "data_identifiers_file",
@@ -2027,7 +2028,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_alias_rename"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2144,7 +2146,8 @@
    "marker_leave",
    "marker_above_generic",
    "js_call_function_if",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_alias_rename"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2158,7 +2161,8 @@
    "list_unique_reverse",
    "marker_current_set",
    "prompt_previous",
-   "data_set"
+   "data_set",
+   "function_alias_rename"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -3381,7 +3385,8 @@
    "js_await_add"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "function_alias_rename"
   ],
   "error": [
    "watch",
@@ -4146,7 +4151,8 @@
   ],
   "value_initial": [
    "data_get",
-   "data_transform"
+   "data_transform",
+   "function_alias_rename"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -17905,6 +17911,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
+    "data_transform",
     "object_property_get",
     "object_property_exists_not",
     "object_invert",
@@ -17918,7 +17925,12 @@
     "data",
     "inverted",
     "n",
-    "acronym"
+    "acronym",
+    "value2",
+    "property_name",
+    "value_initial",
+    "lambda",
+    "previous"
    ]
   },
   "object_property_exists_not": {
