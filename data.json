@@ -2265,7 +2265,8 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1"
+   "list_skip_1",
+   "marker_leave"
   ],
   "v": [
    "data_identifiers_file",
@@ -6410,8 +6411,7 @@
    "marker_down",
    "marker_down_choices",
    "marker_down_generic",
-   "marker_functionize",
-   "marker_leave"
+   "marker_functionize"
   ],
   "js_node_type_is": [
    "function_transform_marker",
@@ -6756,7 +6756,8 @@
    "marker_move",
    "marker_next",
    "marker_next_delete",
-   "js_dollar_g"
+   "js_dollar_g",
+   "marker_leave"
   ],
   "list_get": [
    "function_transform_marker_empty",
@@ -7984,8 +7985,7 @@
    "list_is",
    "list_not_is",
    "list_squash",
-   "marker_down_choices",
-   "marker_leave"
+   "marker_down_choices"
   ],
   "after": [
    "js_dollar_a_generic"
@@ -9310,6 +9310,9 @@
    "marker_leave"
   ],
   "stack5": [
+   "marker_leave"
+  ],
+  "index2": [
    "marker_leave"
   ]
  },
@@ -17861,7 +17864,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
-    "list_is",
+    "list_insert",
     "list_remove",
     "list_get_end_2",
     "list_get_end_1",
@@ -17879,7 +17882,8 @@
     "index",
     "stack1",
     "stack2",
-    "l",
+    "list",
+    "index2",
     "value",
     "v"
    ]
