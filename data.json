@@ -1405,7 +1405,8 @@
   "mb $g$f$async",
   "irs async is",
   "s marker",
-  "as marker"
+  "as marker",
+  "s data_files"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
