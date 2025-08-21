@@ -1984,7 +1984,8 @@
    "marker_top",
    "task_new",
    "function_imports_fix",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_alias_rename"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2024,8 +2025,7 @@
    "git_push",
    "data_file_update_inner",
    "list_first_second_generic",
-   "function_run_prompt",
-   "function_alias_rename"
+   "function_run_prompt"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4426,8 +4426,7 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda",
-   "function_alias_rename"
+   "undefined_not_is_assert_lambda"
   ],
   "each_pair": [
    "each_pair",
@@ -17896,14 +17895,13 @@
     "object_invert",
     "data_get",
     "function_alias_rename",
+    "f_name",
     "value",
     "aliases",
     "file_path",
     "data",
     "inverted",
-    "result",
-    "object",
-    "property_name"
+    "result"
    ]
   }
  },
