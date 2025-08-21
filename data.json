@@ -5862,7 +5862,8 @@
    "js_return_name",
    "marker_down_choices_lambda",
    "marker_top",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_imports_missing"
   ],
   "list_concat": [
    "function_imports_missing",
@@ -13634,10 +13635,11 @@
     "list_concat",
     "js_identifiers_names",
     "js_imports",
+    "js_declaration_single",
     "js_imports_missing",
     "ast",
-    "declaration",
     "name",
+    "declaration",
     "imports",
     "identifiers",
     "imports_self",
