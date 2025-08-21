@@ -3721,7 +3721,8 @@
    "js_unparse",
    "marker_bottom",
    "search_generic",
-   "data_set"
+   "data_set",
+   "marker_up"
   ],
   "readdirSync": [
    "folder_read"
@@ -17873,7 +17874,8 @@
     "delta",
     "v",
     "delta_get",
-    "i"
+    "i",
+    "v2"
    ]
   }
  },
