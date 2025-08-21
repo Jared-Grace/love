@@ -1350,7 +1350,6 @@
   "s red",
   "s error_attention",
   "dpg error_attention",
-  "p",
   "o gp",
   "d",
   "s call,name",
@@ -1396,6 +1395,7 @@
   "ir property_name 'functions'",
   "md 1",
   "s name",
+  "p",
   "s decl,name"
  ],
  "marker_current": "1",
