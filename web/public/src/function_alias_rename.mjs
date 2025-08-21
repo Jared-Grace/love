@@ -6,6 +6,6 @@ export async function function_alias_rename(f_name) {
   var { value: aliases, file_path, data } = await data_get("aliases", {});
   let inverted = object_invert(aliases);
   let result = object_property_exists(inverted, f_name);
-  let n = not(a);
+  let n = not(result);
   return inverted;
 }
