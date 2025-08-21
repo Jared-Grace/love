@@ -9292,6 +9292,9 @@
   ],
   "add": [
    "add"
+  ],
+  "sum": [
+   "add"
   ]
  },
  "functions": {
@@ -17840,7 +17843,8 @@
    "identifiers": [
     "add",
     "left",
-    "right"
+    "right",
+    "sum"
    ]
   }
  },
