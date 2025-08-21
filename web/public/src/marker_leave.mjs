@@ -1,4 +1,4 @@
-import { list_includes } from "./list_includes.mjs";
+import { list_is } from "./list_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -18,7 +18,7 @@ export async function marker_leave() {
     let stack1 = list_get_end_1(stack);
     let stack2 = list_get_end_2(stack);
     list_remove(stack2, stack1);
-    let includes = list_includes(list, item);
+    let l = list_is(value);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
