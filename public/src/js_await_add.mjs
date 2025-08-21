@@ -9,6 +9,7 @@ export async function js_await_add(ast) {
   let name = js_declaration_single_name(ast);
   let f = object_property_get(functions, name);
   marker("1");
+  let async = object_property_get(f, "async");
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3() {
