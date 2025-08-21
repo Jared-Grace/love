@@ -1695,7 +1695,8 @@
    "marker_up",
    "marker_above_generic",
    "marker_below",
-   "marker_above_delete"
+   "marker_above_delete",
+   "function_alias_rename"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9309,6 +9310,9 @@
   ],
   "marker_above_delete": [
    "marker_above_delete"
+  ],
+  "function_alias_rename": [
+   "function_alias_rename"
   ]
  },
  "functions": {
@@ -17869,6 +17873,13 @@
     "index",
     "stack2",
     "v"
+   ]
+  },
+  "function_alias_rename": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "function_alias_rename"
    ]
   }
  },
