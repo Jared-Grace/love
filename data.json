@@ -1386,7 +1386,8 @@
   "s last",
   "o jaa",
   "o mab",
-  "s ident"
+  "s ident",
+  "c marker_above marker_below"
  ],
  "marker_current": "1",
  "function_current": "marker_above",
