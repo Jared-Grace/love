@@ -3070,7 +3070,6 @@
    "list_intersect",
    "list_remove_all",
    "list_unique",
-   "marker_above",
    "marker_delete_above",
    "marker_down_choices_lambda",
    "marker_functionize",
@@ -3319,7 +3318,8 @@
    "list_adder_generic",
    "list_adder_multiple",
    "list_map_squash",
-   "list_squash"
+   "list_squash",
+   "marker_above"
   ],
   "colored": [
    "chalk_color",
@@ -3909,7 +3909,8 @@
   ],
   "identity": [
    "catch_log_async",
-   "identity"
+   "identity",
+   "marker_above"
   ],
   "message_get": [
    "catch_log_async"
@@ -15725,9 +15726,9 @@
   },
   "marker_above": {
    "identifiers": [
+    "identity",
     "js_auto",
     "list_insert",
-    "list_includes",
     "js_parse_statement",
     "object_property_get",
     "marker_index",
@@ -15735,6 +15736,7 @@
     "marker",
     "marker_above",
     "code",
+    "fn",
     "lambda",
     "a",
     "i",
