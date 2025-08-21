@@ -1410,10 +1410,11 @@
   "is marker_delete_above",
   "r marker_delete_above marker_above_delete",
   "as marker",
-  "s alias"
+  "s alias",
+  "n function_alias_rename"
  ],
  "marker_current": "1",
- "function_current": "marker_above_delete",
+ "function_current": "function_alias_rename",
  "terminal": false,
  "identifiers": {
   "log": [
