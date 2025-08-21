@@ -2450,8 +2450,7 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda",
-   "marker_leave"
+   "undefined_not_is_assert_lambda"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -17854,7 +17853,6 @@
     "lambda",
     "a",
     "stack",
-    "message",
     "v"
    ]
   }
