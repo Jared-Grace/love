@@ -7451,7 +7451,8 @@
    "js_code_declaration",
    "js_function_last_asyncify",
    "marker_functionize",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_await_add"
   ],
   "js_code_call_args": [
    "js_call_insert",
@@ -8000,8 +8001,7 @@
    "js_await_add"
   ],
   "async": [
-   "js_function_last_asyncify",
-   "js_await_add"
+   "js_function_last_asyncify"
   ],
   "b2": [
    "js_identifiers_to_names"
@@ -12226,7 +12226,7 @@
     "functions",
     "name",
     "f",
-    "async",
+    "async_is",
     "lambda",
     "v",
     "node",
