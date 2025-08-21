@@ -1372,7 +1372,6 @@
   "s assert,list",
   "me",
   "o w",
-  "eac",
   "mg",
   "ml",
   "o md",
@@ -1389,7 +1388,8 @@
   "s ident",
   "c marker_above marker_below",
   "n add",
-  "fws add 1"
+  "fws add 1",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "add_1",
@@ -17863,5 +17863,5 @@
   }
  },
  "git_push_when": "2025-08-21T18:07:02.910Z",
- "error_attention": {}
+ "error_attention": null
 }
