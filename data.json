@@ -1397,7 +1397,8 @@
   "s decl,name",
   "mc js_declaration_single_name",
   "ire ast2 2",
-  "md 1"
+  "md 1",
+  "mc opg"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
