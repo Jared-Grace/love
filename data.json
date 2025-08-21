@@ -1469,7 +1469,6 @@
    "js_return_atomize",
    "js_return_name",
    "js_unparse",
-   "js_visit_type",
    "js_visit_types",
    "list_size_1_assert",
    "list_size_1_assert_message",
@@ -6419,7 +6418,6 @@
    "js_stack_last_multiple",
    "js_stack_list_block_is",
    "js_statement_call_get",
-   "js_visit_type",
    "js_visit_types",
    "marker_assign_replace",
    "marker_bottom",
@@ -6443,7 +6441,6 @@
    "js_stack_last_multiple",
    "js_visit_filter",
    "js_visit_nodes",
-   "js_visit_type",
    "js_visit_types",
    "marker_functionize"
   ],
@@ -6789,7 +6786,6 @@
    "js_visit_each_async",
    "js_visit_match",
    "js_visit_nodes",
-   "js_visit_type",
    "js_visit_types",
    "marker_bottom",
    "marker_down_choices",
@@ -8432,7 +8428,6 @@
   "js_visit_children_get": [
    "js_visit",
    "js_visit_children_get",
-   "js_visit_type",
    "js_visit_types"
   ],
   "lambda$v": [
@@ -14592,11 +14587,6 @@
   "js_visit_type": {
    "identifiers": [
     "js_visit_types",
-    "log",
-    "js_visit",
-    "js_visit_children_get",
-    "js_node_type_is",
-    "js_node_is",
     "js_visit_type",
     "ast",
     "type",
