@@ -4396,8 +4396,7 @@
    "object_property_get",
    "object_property_initialize",
    "object_property_set",
-   "undefined_not_is_assert_lambda",
-   "js_await_add"
+   "undefined_not_is_assert_lambda"
   ],
   "each_pair": [
    "each_pair",
@@ -12219,7 +12218,6 @@
     "value",
     "name",
     "value2",
-    "object",
     "property_name",
     "lambda",
     "v",
