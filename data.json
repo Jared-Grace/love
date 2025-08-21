@@ -1474,8 +1474,7 @@
    "sandbox",
    "search_generic",
    "js_imports_unused",
-   "git_push",
-   "marker_leave"
+   "git_push"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2679,7 +2678,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "marker_leave"
   ],
   "name": [
    "watch",
@@ -6408,7 +6408,8 @@
    "marker_down",
    "marker_down_choices",
    "marker_down_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "marker_leave"
   ],
   "js_node_type_is": [
    "function_transform_marker",
@@ -7976,7 +7977,8 @@
    "list_is",
    "list_not_is",
    "list_squash",
-   "marker_down_choices"
+   "marker_down_choices",
+   "marker_leave"
   ],
   "after": [
    "js_dollar_a_generic"
@@ -17852,9 +17854,9 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_is",
     "list_is_assert",
     "list_get_end",
-    "log",
     "function_transform_marker_current",
     "marker",
     "marker_leave",
@@ -17863,6 +17865,8 @@
     "stack",
     "stack4",
     "stack5",
+    "l",
+    "value",
     "v"
    ]
   }
