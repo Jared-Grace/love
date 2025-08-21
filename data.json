@@ -5029,7 +5029,8 @@
   "acronyms": [
    "function_acronym_to_name",
    "function_acronym_to_names",
-   "function_names_to_acronyms"
+   "function_names_to_acronyms",
+   "function_alias_rename"
   ],
   "exists2": [
    "function_acronym_to_name"
@@ -5044,8 +5045,7 @@
   ],
   "acronym": [
    "function_acronym_to_names",
-   "function_name_to_acronym",
-   "function_alias_rename"
+   "function_name_to_acronym"
   ],
   "function_alias_generic": [
    "function_aliases",
@@ -17780,7 +17780,7 @@
     "aliases",
     "inverted",
     "n",
-    "acronym",
+    "acronyms",
     "v"
    ]
   },
