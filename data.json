@@ -4474,8 +4474,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "add_1"
+   "add"
   ],
   "eq": [
    "equal",
@@ -17861,7 +17860,6 @@
     "marker",
     "add_1",
     "left",
-    "right",
     "sum"
    ]
   }
