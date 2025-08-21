@@ -1643,7 +1643,6 @@
    "list_not_is",
    "list_to",
    "marker",
-   "marker_above",
    "marker_bottom",
    "marker_call",
    "marker_delete_above",
@@ -1809,7 +1808,6 @@
    "js_visit_type",
    "js_visit_types",
    "js_visit_type_each_async",
-   "marker_above",
    "marker_call",
    "marker_call_atomize",
    "marker_call_replace_generic",
@@ -2078,7 +2076,6 @@
    "list_sort_number_mapper",
    "list_squash",
    "list_to_dictionary",
-   "marker_above",
    "marker_assign_replace",
    "marker_call",
    "marker_call_atomize",
@@ -2955,7 +2952,6 @@
    "js_visit_children_get",
    "list_filter_property",
    "list_map_property",
-   "marker_above",
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
@@ -3543,7 +3539,6 @@
    "list_swap",
    "list_to",
    "log_unparse_try",
-   "marker_above",
    "marker_assign_replace",
    "marker_bottom",
    "marker_call",
@@ -4289,7 +4284,6 @@
    "list_replace",
    "list_second",
    "list_splice",
-   "marker_above",
    "marker_bottom",
    "marker_call",
    "marker_delete_above",
@@ -4714,8 +4708,7 @@
   "js_auto": [
    "functions_combine",
    "function_auto",
-   "js_auto",
-   "marker_above"
+   "js_auto"
   ],
   "js_visit_match": [
    "functions_combine",
@@ -4775,7 +4768,6 @@
    "js_parse_statement",
    "js_return_empty",
    "js_statement_return",
-   "marker_above",
    "marker_assign_replace",
    "marker_call_atomize",
    "marker_call_replace",
@@ -5681,7 +5673,6 @@
    "integer_to",
    "js_identifiers_named",
    "js_identifier_defineds",
-   "marker_above",
    "marker_down",
    "marker_index",
    "range",
@@ -5847,8 +5838,7 @@
    "js_parse_expression",
    "js_parse_statement",
    "js_parse_statement_module",
-   "list_add_first",
-   "marker_above"
+   "list_add_first"
   ],
   "js_imports_missing": [
    "function_imports_missing",
@@ -6650,7 +6640,6 @@
    "js_marker_name_get",
    "js_node_atomize",
    "js_stack_list_block_is",
-   "marker_above",
    "marker_call",
    "marker_delete_above",
    "marker_down_choices_lambda",
@@ -6671,7 +6660,6 @@
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
-   "marker_above",
    "marker_delete_above",
    "marker_down_generic",
    "marker_enter",
@@ -6701,7 +6689,6 @@
    "js_marker_insert",
    "list_add_first",
    "list_insert",
-   "marker_above",
    "marker_assign_replace",
    "marker_bottom",
    "marker_call",
@@ -8718,7 +8705,6 @@
    "log_keep"
   ],
   "marker_index": [
-   "marker_above",
    "marker_delete_above",
    "marker_index"
   ],
@@ -9265,6 +9251,9 @@
   ],
   "marker_up": [
    "marker_up"
+  ],
+  "marker_above_generic": [
+   "marker_above"
   ]
  },
  "functions": {
@@ -15726,24 +15715,11 @@
   },
   "marker_above": {
    "identifiers": [
+    "marker_above_generic",
     "identity",
-    "js_auto",
-    "list_insert",
-    "js_parse_statement",
-    "object_property_get",
-    "marker_index",
-    "function_transform_marker_current",
-    "marker",
     "marker_above",
     "code",
     "fn",
-    "lambda",
-    "a",
-    "i",
-    "index",
-    "stack2",
-    "statement",
-    "ast",
     "v"
    ],
    "async": true
