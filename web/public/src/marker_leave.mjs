@@ -18,7 +18,7 @@ export async function marker_leave() {
     let stack1 = list_get_end_1(stack);
     let stack2 = list_get_end_2(stack);
     list_remove(stack2, stack1);
-    list_insert(list, index2, value);
+    list_insert(stack5, index, stack1);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
