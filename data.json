@@ -746,7 +746,6 @@
   "n function_params_consolidate",
   "de js_params_consolidate",
   "as exist",
-  "s exist",
   "s before",
   "s previous",
   "a lg list_get",
@@ -1412,7 +1411,8 @@
   "n function_alias_rename",
   "s invert",
   "ps",
-  "function_alias_rename"
+  "function_alias_rename",
+  "s exist"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
