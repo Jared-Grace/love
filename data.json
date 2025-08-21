@@ -607,7 +607,6 @@
   "fs marker_top",
   "mr",
   "o mr",
-  "u mb",
   "c md marker_bottom",
   "a mb marker_bottom",
   "n list_last_is",
@@ -1402,7 +1401,8 @@
   "ir value functions",
   "ir property_name name",
   "ir value2 f",
-  "md 1"
+  "md 1",
+  "u mb"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
