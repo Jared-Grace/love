@@ -1411,7 +1411,8 @@
   "r marker_delete_above marker_above_delete",
   "as marker",
   "s alias",
-  "n function_alias_rename"
+  "n function_alias_rename",
+  "function_alias_rename"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
