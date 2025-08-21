@@ -1379,7 +1379,8 @@
   "a ml marker_leave",
   "eac",
   "fd",
-  "cd"
+  "cd",
+  "ml"
  ],
  "marker_current": "1",
  "function_current": "marker_leave",
