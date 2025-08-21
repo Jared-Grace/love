@@ -9,6 +9,7 @@ import { functions_path } from "./functions_path.mjs";
 import { import_install } from "./import_install.mjs";
 import { data_file_update } from "./data_file_update.mjs";
 import { object_property_set } from "./object_property_set.mjs";
+import { json_format_to } from "./json_format_to.mjs";
 export async function watch() {
   marker("1");
   const chokidar = (await import_install("chokidar")).default;
@@ -35,7 +36,7 @@ export async function watch() {
           await error_attention_set({
             f_name,
             args,
-            error,
+            error: json_format_to(error),
           });
           throw error;
         }
