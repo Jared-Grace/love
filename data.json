@@ -7999,7 +7999,8 @@
    "js_await_add"
   ],
   "async": [
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "js_await_add"
   ],
   "b2": [
    "js_identifiers_to_names"
@@ -12224,6 +12225,7 @@
     "functions",
     "name",
     "f",
+    "async",
     "lambda",
     "v",
     "node",
