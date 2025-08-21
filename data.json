@@ -1411,13 +1411,13 @@
   "s alias",
   "n function_alias_rename",
   "s invert",
-  "ps",
   "function_alias_rename",
   "s exist",
   "u ope",
   "a ox object_property_exists",
   "de object_property_exists_not",
-  "s data_tr"
+  "s data_tr",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_alias_rename",
