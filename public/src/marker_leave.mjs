@@ -9,7 +9,7 @@ export async function marker_leave() {
     let { stack } = a;
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
-    let result = list_is_assert(list);
+    let result = list_is_assert(stack5);
     log(stack4);
     log(stack5);
   }
