@@ -5,6 +5,6 @@ import { marker } from "./marker.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   await function_copy(f_name_before, f_name_after);
   await function_delete(f_name_before);
-  let v = await function_alias_rename(before, after);
+  let v = await function_alias_rename(f_name_before, f_name_after);
   marker("1");
 }
