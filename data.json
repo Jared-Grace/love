@@ -1675,7 +1675,8 @@
    "marker_down",
    "marker_up",
    "marker_above_generic",
-   "marker_below"
+   "marker_below",
+   "add_1"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4457,7 +4458,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "add"
+   "add",
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4472,7 +4474,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "add_1"
   ],
   "eq": [
    "equal",
@@ -9289,13 +9292,16 @@
    "marker_below"
   ],
   "add_1": [
-   "marker_below"
+   "marker_below",
+   "add_1"
   ],
   "add": [
-   "add"
+   "add",
+   "add_1"
   ],
   "sum": [
-   "add"
+   "add",
+   "add_1"
   ]
  },
  "functions": {
@@ -17843,6 +17849,17 @@
    "async": false,
    "identifiers": [
     "add",
+    "left",
+    "right",
+    "sum"
+   ]
+  },
+  "add_1": {
+   "async": false,
+   "identifiers": [
+    "add",
+    "marker",
+    "add_1",
     "left",
     "right",
     "sum"
