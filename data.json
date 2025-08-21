@@ -1392,7 +1392,10 @@
   "mc dpg",
   "s marker",
   "s ident,repl",
-  "cd"
+  "cd",
+  "irs functions",
+  "ir 'functions'",
+  "ir property_name 'functions'"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
