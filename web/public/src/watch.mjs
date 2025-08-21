@@ -25,20 +25,23 @@ export async function watch() {
         return;
       }
       object_property_set(in_progress, path, value);
-      await command_line_node_g(function_auto_path.name, [path]);
-      const args = [path];
       try {
-        await command_line_node_g(data_file_update.name, args);
-      } catch (error) {
-        let f_name = data_file_update.name;
-        await error_attention_set({
-          f_name,
-          args,
-          error,
-        });
-        throw error;
+        await command_line_node_g(function_auto_path.name, [path]);
+        const args = [path];
+        try {
+          await command_line_node_g(data_file_update.name, args);
+        } catch (error) {
+          let f_name = data_file_update.name;
+          await error_attention_set({
+            f_name,
+            args,
+            error,
+          });
+          throw error;
+        }
+      } finally {
+        object_property_set(in_progress, path, false);
       }
-      object_property_set(in_progress, path, false);
     }
     await catch_log_async(lambda);
   }
