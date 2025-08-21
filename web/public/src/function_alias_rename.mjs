@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
-export function function_alias_rename() {
-  marker("1");
+import { data_get } from "./data_get.mjs";
+export async function function_alias_rename() {
+  var { value: aliases, file_path, data } = await data_get("aliases", {});
 }
