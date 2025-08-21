@@ -2265,7 +2265,8 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1"
+   "list_skip_1",
+   "marker_leave"
   ],
   "v": [
    "data_identifiers_file",
@@ -3058,7 +3059,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "marker_leave"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3082,7 +3084,8 @@
    "marker_down_choices_lambda",
    "marker_enter",
    "marker_functionize",
-   "visit_unique_async"
+   "visit_unique_async",
+   "marker_leave"
   ],
   "list_remove": [
    "function_transform_marker_empty",
@@ -3948,7 +3951,8 @@
    "js_types_function_includes",
    "list_includes",
    "marker_down_choices_lambda",
-   "string_includes"
+   "string_includes",
+   "marker_leave"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -17858,6 +17862,7 @@
   "marker_leave": {
    "async": true,
    "identifiers": [
+    "list_includes",
     "list_remove",
     "list_get_end_2",
     "list_get_end_1",
@@ -17875,6 +17880,9 @@
     "index",
     "stack1",
     "stack2",
+    "includes",
+    "list",
+    "item",
     "v"
    ]
   }
