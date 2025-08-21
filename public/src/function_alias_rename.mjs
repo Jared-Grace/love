@@ -14,5 +14,6 @@ export async function function_alias_rename(before, after) {
     return acronym;
     object_property_set(aliases, acronym, after);
   }
-  return await data_transform("aliases", {}, lambda);
+  let v = await data_transform("aliases", {}, lambda);
+  return v;
 }
