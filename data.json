@@ -2563,8 +2563,7 @@
    "object_property_exists",
    "object_property_exists_assert",
    "object_property_exists_equals",
-   "object_property_initialize",
-   "function_alias_rename"
+   "object_property_initialize"
   ],
   "object_property_equals": [
    "watch",
@@ -2832,8 +2831,7 @@
    "data_identifiers_search",
    "list_first_second",
    "list_first_remaining",
-   "list_first_second_generic",
-   "function_alias_rename"
+   "list_first_second_generic"
   ],
   "separator": [
    "watch",
@@ -3513,8 +3511,7 @@
    "object_property_initialize",
    "js_imports",
    "js_imports_declarations",
-   "js_marker_name_get",
-   "function_alias_rename"
+   "js_marker_name_get"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5248,8 +5245,7 @@
    "marker_enter",
    "marker_next_get",
    "not",
-   "search_generic",
-   "function_alias_rename"
+   "search_generic"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -9327,6 +9323,9 @@
    "marker_above_delete"
   ],
   "function_alias_rename": [
+   "function_alias_rename"
+  ],
+  "object_property_exists_not": [
    "function_alias_rename"
   ]
  },
@@ -17893,8 +17892,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
-    "not",
-    "object_property_exists",
+    "object_property_exists_not",
     "object_invert",
     "data_get",
     "function_alias_rename",
@@ -17903,9 +17901,7 @@
     "aliases",
     "file_path",
     "data",
-    "inverted",
-    "result",
-    "n"
+    "inverted"
    ]
   }
  },
