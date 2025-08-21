@@ -7383,8 +7383,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_await_add"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -12214,7 +12213,6 @@
     "ast",
     "value",
     "name",
-    "ast2",
     "lambda",
     "v",
     "node",
