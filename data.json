@@ -3050,7 +3050,8 @@
    "js_identifiers_named_count",
    "marker_above_generic",
    "marker_above_delete",
-   "function_alias_rename"
+   "function_alias_rename",
+   "marker_next_await"
   ],
   "data_save": [
    "data_file_update",
@@ -6218,7 +6219,8 @@
    "js_return_code_replace",
    "js_statement_call_get",
    "marker_call_replace_generic",
-   "marker_expand"
+   "marker_expand",
+   "marker_next_await"
   ],
   "type": [
    "function_params_consolidate",
@@ -18491,6 +18493,7 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "object_property_set",
     "js_parse_expression",
     "js_node_type_is_assert",
@@ -18506,6 +18509,7 @@
     "lambda",
     "a",
     "next",
+    "expression",
     "code_expression",
     "parsed",
     "value",
