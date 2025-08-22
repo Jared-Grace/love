@@ -139,7 +139,8 @@
   "mb": "marker_below",
   "mna": "marker_next_await",
   "mpa": "marker_param_add",
-  "ox": "object_property_exists"
+  "ox": "object_property_exists",
+  "mi": "marker_if_test_replace"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1449,7 +1450,8 @@
   "me",
   "o ml",
   "c ml marker_if_test_replace",
-  "s stack,last"
+  "s stack,last",
+  "a mi marker_if_test_replace"
  ],
  "marker_current": "1",
  "function_current": "marker_if_test_replace",
