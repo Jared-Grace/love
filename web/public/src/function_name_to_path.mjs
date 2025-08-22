@@ -7,7 +7,9 @@ export function function_name_to_path(f_name) {
   if (string_includes(f_name, ".")) {
     error();
   }
-  let second = [functions_path(), function_name_to_base(f_name)];
+  let joined2 = functions_path();
+  let v = function_name_to_base(f_name);
+  let second = [joined2, v];
   let joined = path_join(second);
   return joined;
 }
