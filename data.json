@@ -1538,7 +1538,6 @@
    "function_wrap",
    "js_atomize",
    "js_atomize_function",
-   "js_bang_to_not",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "js_call_fill",
@@ -6989,7 +6988,6 @@
    "function_transform_marker_empty",
    "js_atomize",
    "js_atomize_function",
-   "js_bang_to_not",
    "js_call_fill",
    "js_dollar",
    "js_visit",
@@ -7596,7 +7594,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_bang_to_not"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -9504,7 +9503,8 @@
   ],
   "js_declaration_single_name": [
    "js_imports_missing",
-   "js_declaration_single_name"
+   "js_declaration_single_name",
+   "js_bang_to_not"
   ],
   "data_functions_get": [
    "js_await_add",
@@ -9918,6 +9918,9 @@
   ],
   "list2": [
    "list_difference"
+  ],
+  "name2": [
+   "js_bang_to_not"
   ]
  },
  "functions": {
@@ -12897,6 +12900,7 @@
   },
   "js_bang_to_not": {
    "identifiers": [
+    "js_declaration_single_name",
     "object_replace",
     "object_copy",
     "js_parse_expression",
@@ -12904,9 +12908,7 @@
     "js_code_call",
     "object_property_get",
     "equal",
-    "log",
     "js_visit_type",
-    "js_visit",
     "marker",
     "list_add",
     "js_bang_to_not",
@@ -12920,7 +12922,9 @@
     "code",
     "name",
     "expression",
-    "arguments2"
+    "arguments2",
+    "name2",
+    "ast2"
    ],
    "async": false
   },
