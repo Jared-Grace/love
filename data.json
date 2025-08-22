@@ -1858,7 +1858,6 @@
    "function_params_consolidate",
    "function_params_new",
    "function_param_swap",
-   "function_parse_declaration",
    "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
@@ -5743,7 +5742,6 @@
    "function_exists",
    "function_imports_missing",
    "function_parse",
-   "function_parse_declaration",
    "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
@@ -6051,7 +6049,6 @@
    "function_params_new",
    "function_param_new",
    "function_param_swap",
-   "function_parse_declaration",
    "function_wrap",
    "js_declaration_single",
    "js_declaration_single_block_blody",
@@ -6183,7 +6180,6 @@
    "function_new_declaration",
    "function_params_consolidate",
    "function_param_swap",
-   "function_parse_declaration",
    "function_parse_declaration_js_unparse",
    "function_wrap",
    "js_call_new",
@@ -9879,6 +9875,9 @@
   ],
   "function_parse_strict_declaration": [
    "function_parse_strict_declaration"
+  ],
+  "function_parse_declaration_inner": [
+   "function_parse_declaration"
   ]
  },
  "functions": {
@@ -11940,14 +11939,11 @@
   },
   "function_parse_declaration": {
    "identifiers": [
-    "object_merge",
-    "js_declaration_single",
+    "function_parse_declaration_inner",
     "function_parse",
     "function_parse_declaration",
     "f_name",
     "parsed",
-    "ast",
-    "declaration",
     "to"
    ],
    "async": true
