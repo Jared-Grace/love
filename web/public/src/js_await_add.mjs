@@ -24,7 +24,8 @@ export async function js_await_add(ast) {
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
       marker("1");
-      js_node_type_is_if(node, "AwaitExpression", function lambda4() {});
+      function lambda4() {}
+      js_node_type_is_if(node, "AwaitExpression", lambda4);
       log(stack1);
     }
     await js_call_function_if(node, lambda3);
