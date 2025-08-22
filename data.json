@@ -8127,7 +8127,8 @@
   "f": [
    "js_function_last_asyncify",
    "js_await_add",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_param_add"
   ],
   "async": [
    "js_function_last_asyncify"
@@ -9778,7 +9779,8 @@
    "marker_param_add"
   ],
   "js_stack_last_function": [
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "marker_param_add"
   ]
  },
  "functions": {
@@ -18551,6 +18553,7 @@
   "marker_param_add": {
    "async": true,
    "identifiers": [
+    "js_stack_last_function",
     "js_call_new",
     "js_stack_declaration_asyncify",
     "js_imports_missing_add",
@@ -18568,6 +18571,7 @@
     "la",
     "lambda",
     "a",
+    "f",
     "stack",
     "stack2",
     "index",
