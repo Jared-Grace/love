@@ -1384,7 +1384,6 @@
   "ir object value",
   "ir value functions",
   "ir value2 f",
-  "md 1",
   "u mb",
   "ar mb marker_below",
   "mb $g$f$async",
@@ -1446,7 +1445,8 @@
   "cd",
   "mg",
   "mcr c object_property_exists_not",
-  "ir exists en"
+  "ir exists en",
+  "md 1"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
