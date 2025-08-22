@@ -11,9 +11,9 @@ export async function js_await_add(ast) {
   let name = js_declaration_single_name(ast);
   let f = object_property_get(functions, name);
   async function lambda(v) {
-    marker("1");
     let node = object_property_get(v, "node");
     async function lambda3(name) {
+      marker("1");
       let en = object_property_exists_not(functions, name);
       if (en) {
         return;
