@@ -1,3 +1,4 @@
+import { object_replace } from "./object_replace.mjs";
 import { js_await } from "./js_await.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_node_type_not_is_if } from "./js_node_type_not_is_if.mjs";
@@ -27,6 +28,7 @@ export async function js_await_add(ast) {
         let copy = object_copy(node);
         let awaited = js_await(copy);
         marker("1");
+        object_replace(to, from);
       }
       js_node_type_not_is_if(stack1, "AwaitExpression", lambda4);
     }
