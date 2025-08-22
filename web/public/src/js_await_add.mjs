@@ -23,8 +23,8 @@ export async function js_await_add(ast) {
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
       function lambda4() {
-        marker("1");
         let copy = object_copy(node);
+        marker("1");
       }
       js_node_type_not_is_if(stack1, "AwaitExpression", lambda4);
     }
