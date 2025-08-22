@@ -2000,7 +2000,8 @@
    "marker_functionize",
    "marker_above_generic",
    "marker_below",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "marker_next_await"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2595,7 +2596,8 @@
    "marker_down_generic",
    "marker_expand",
    "marker_next",
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_next_await"
   ],
   "js_format": [
    "file_js_unparse",
@@ -5081,7 +5083,6 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_next_delete",
-   "marker_next_await",
    "marker_if_test_replace"
   ],
   "functions_combine": [
@@ -7776,8 +7777,7 @@
   ],
   "js_code_await": [
    "js_code_await",
-   "js_code_call_args_await_maybe",
-   "marker_next_await"
+   "js_code_call_args_await_maybe"
   ],
   "js_code_wrap_braces": [
    "js_code_braces_empty",
@@ -8343,8 +8343,7 @@
   ],
   "code_expression": [
    "js_if_else_if_combine",
-   "js_parse_expression",
-   "marker_next_await"
+   "js_parse_expression"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -9928,6 +9927,9 @@
   ],
   "marker_up_1": [
    "marker_up_1"
+  ],
+  "js_await": [
+   "marker_next_await"
   ]
  },
  "functions": {
@@ -18659,15 +18661,15 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
+    "js_await",
     "object_property_get",
     "object_property_set",
-    "js_parse_expression",
     "js_node_type_is_assert",
     "list_adder_async",
     "marker_next_get",
     "function_transform_marker",
     "data_function_current_get",
-    "js_code_await",
+    "js_unparse",
     "marker_next_await",
     "f_name",
     "lambda2",
@@ -18676,8 +18678,8 @@
     "a",
     "next",
     "expression",
-    "code_expression",
     "parsed",
+    "code",
     "list"
    ]
   },
