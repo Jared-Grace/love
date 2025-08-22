@@ -2892,8 +2892,7 @@
    "js_await_add",
    "js_call_function_if",
    "js_declaration_single_name",
-   "js_log_remove",
-   "functions_log_remove"
+   "js_log_remove"
   ],
   "output": [
    "watch",
@@ -9921,7 +9920,8 @@
    "js_node_atomize"
   ],
   "js_log_remove": [
-   "js_log_remove"
+   "js_log_remove",
+   "functions_log_remove"
   ],
   "functions_log_remove": [
    "functions_log_remove"
@@ -18814,13 +18814,13 @@
     "list_wait",
     "functions_names",
     "list_map",
+    "js_log_remove",
     "functions_log_remove",
-    "lambda2",
-    "name",
     "lambda",
+    "lambda2",
+    "f_name",
     "ast",
     "output",
-    "f_name",
     "mapped"
    ]
   }
