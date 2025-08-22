@@ -9,7 +9,7 @@ export function js_log_remove(ast) {
   function lambda(v) {
     let { stack, node } = v;
     let e1 = list_get_end_1(stack);
-    let e2 = list_get_end_2(stack2);
+    let e2 = list_get_end_2(stack);
     function lambda3() {
       let { callee } = node;
       let { name } = callee;
