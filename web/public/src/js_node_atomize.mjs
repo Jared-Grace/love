@@ -1,9 +1,9 @@
+import { function_parse_strict_declaration } from "./function_parse_strict_declaration.mjs";
 import { js_call_function_if } from "./js_call_function_if.mjs";
 import { js_block_insert } from "./js_block_insert.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { function_exists } from "./function_exists.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -41,7 +41,7 @@ export async function js_node_atomize(existing, v) {
         let { name } = callee;
         const { exists } = await function_exists(name);
         if (exists) {
-          let { declaration } = await function_parse_declaration(name);
+          let { declaration } = await function_parse_strict_declaration(name);
           let { params } = declaration;
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
