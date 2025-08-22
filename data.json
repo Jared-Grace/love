@@ -1478,7 +1478,8 @@
   "as node,type",
   "cd",
   "mb nti",
-  "ire node2 2"
+  "ire node2 2",
+  "ir type 'AwaitExpression'"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
