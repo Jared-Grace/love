@@ -1457,7 +1457,8 @@
   "ms 2",
   "mnd",
   "md 1",
-  "mc js_function_last_asyncify"
+  "mc js_function_last_asyncify",
+  "ire async_is2 2"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
