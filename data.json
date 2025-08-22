@@ -18764,10 +18764,10 @@
     "marker",
     "js_log_remove",
     "ast",
-    "ast2",
-    "type",
     "lambda",
-    "v"
+    "v",
+    "ast2",
+    "type"
    ]
   }
  },
