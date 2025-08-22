@@ -6276,7 +6276,8 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async"
+   "js_visit_type_each_async",
+   "marker_if_test_replace"
   ],
   "method": [
    "function_params_consolidate"
@@ -7310,7 +7311,8 @@
    "js_block_insert",
    "js_call_fill",
    "js_stack_declaration_asyncify",
-   "js_stack_last"
+   "js_stack_last",
+   "marker_if_test_replace"
   ],
   "js_identifier_unique": [
    "js_atomize",
@@ -7869,7 +7871,8 @@
   "stack3": [
    "js_declare_assign",
    "js_dollar",
-   "js_dollar_r"
+   "js_dollar_r",
+   "marker_if_test_replace"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8508,7 +8511,8 @@
    "js_stack_last_multiple",
    "list_last",
    "list_last_is",
-   "marker_expand"
+   "marker_expand",
+   "marker_if_test_replace"
   ],
   "identifier_if": [
    "js_return_name",
@@ -18612,6 +18616,7 @@
   "marker_if_test_replace": {
    "async": true,
    "identifiers": [
+    "js_stack_last",
     "list_insert",
     "list_remove",
     "list_get_end_2",
@@ -18625,6 +18630,9 @@
     "lambda",
     "a",
     "stack",
+    "last",
+    "stack3",
+    "type",
     "stack4",
     "stack5",
     "index",
