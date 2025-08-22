@@ -142,7 +142,8 @@
   "ox": "object_property_exists",
   "mi": "marker_if_test_replace",
   "mbt": "marker_bottom",
-  "rg": "range"
+  "rg": "range",
+  "mdm": "marker_next_delete_multiple"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1468,7 +1469,8 @@
   "md 1",
   "fw mnd marker_next_delete_multiple",
   "s range",
-  "a rg range"
+  "a rg range",
+  "a mdm marker_next_delete_multiple"
  ],
  "marker_current": "1",
  "function_current": "marker_next_delete_multiple",
