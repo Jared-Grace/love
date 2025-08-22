@@ -4540,7 +4540,8 @@
   "range": [
    "each_range",
    "marker_functionize",
-   "range"
+   "range",
+   "marker_next_delete_multiple"
   ],
   "each_range": [
    "each_range",
@@ -4549,7 +4550,8 @@
   ],
   "count": [
    "each_range",
-   "range"
+   "range",
+   "marker_next_delete_multiple"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -5743,7 +5745,8 @@
    "list_remove_multiple",
    "marker_functionize",
    "range",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_next_delete_multiple"
   ],
   "formatted": [
    "function_format",
@@ -6388,16 +6391,13 @@
    "function_read"
   ],
   "function_rename": [
-   "function_rename",
-   "marker_next_delete_multiple"
+   "function_rename"
   ],
   "f_name_before": [
-   "function_rename",
-   "marker_next_delete_multiple"
+   "function_rename"
   ],
   "f_name_after": [
-   "function_rename",
-   "marker_next_delete_multiple"
+   "function_rename"
   ],
   "function_run": [
    "function_run",
@@ -18619,13 +18619,13 @@
   "marker_next_delete_multiple": {
    "async": true,
    "identifiers": [
-    "function_rename",
+    "range",
     "each_async",
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
-    "f_name_before",
-    "f_name_after",
+    "r",
+    "count",
     "code",
     "lambda",
     "list"
