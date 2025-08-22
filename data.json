@@ -1429,7 +1429,8 @@
   "c mn marker_next_await",
   "eac",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "marker_next_await"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
