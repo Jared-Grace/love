@@ -1,6 +1,5 @@
 import { js_call_function_if } from "./js_call_function_if.mjs";
 import { js_block_insert } from "./js_block_insert.mjs";
-import { assert_message } from "./assert_message.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { function_exists } from "./function_exists.mjs";
@@ -18,6 +17,7 @@ import { list_is } from "./list_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_size } from "./list_size.mjs";
+import { assert_json } from "./assert_json.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = "v";
   let { node } = v;
@@ -46,7 +46,10 @@ export async function js_node_atomize(existing, v) {
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
-          assert_message(b, "param counts must match");
+          assert_json(b, {
+            name,
+            message: "param counts must match",
+          });
           variable_name = object_property_get(param, "name");
         }
       }
