@@ -1480,7 +1480,6 @@
   "c js_node_type_is_if js_node_type_not_is_if",
   "fs jaa",
   "mc c js_node_type_not_is_if",
-  "p",
   "mcr c js_node_type_not_is_if",
   "mu 1",
   "me",
@@ -1489,6 +1488,7 @@
   "ir mode node",
   "md 1",
   "fw md marker_down_1",
+  "p",
   "ir delta 1"
  ],
  "marker_current": "1",
