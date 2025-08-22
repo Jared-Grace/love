@@ -1492,7 +1492,8 @@
   "ir delta 1",
   "a mdd marker_down_1",
   "s await",
-  "u la"
+  "u la",
+  "c function_parse_declaration function_parse_strict_declaration"
  ],
  "marker_current": "1",
  "function_current": "marker_down_1",
