@@ -6223,7 +6223,8 @@
    "js_declaration_param_add",
    "js_declaration_param_named",
    "js_declaration_single_params_add",
-   "marker_expand"
+   "marker_expand",
+   "marker_param_add"
   ],
   "expression": [
    "function_params_consolidate",
@@ -6295,7 +6296,8 @@
    "js_call_new",
    "js_call_new_code",
    "js_declaration_param_add",
-   "js_declaration_single_params_add"
+   "js_declaration_single_params_add",
+   "marker_param_add"
   ],
   "function_param_new": [
    "function_params_new",
@@ -9780,6 +9782,9 @@
   ],
   "js_stack_last_function": [
    "js_function_last_asyncify",
+   "marker_param_add"
+  ],
+  "declaration2": [
    "marker_param_add"
   ]
  },
@@ -18553,6 +18558,7 @@
   "marker_param_add": {
    "async": true,
    "identifiers": [
+    "js_declaration_param_add",
     "js_stack_last_function",
     "js_call_new",
     "js_stack_declaration_asyncify",
@@ -18573,6 +18579,8 @@
     "a",
     "f",
     "stack",
+    "declaration2",
+    "param_name",
     "stack2",
     "index",
     "ast",
