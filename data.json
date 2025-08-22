@@ -1497,7 +1497,8 @@
   "s each",
   "o js_type",
   "s functions",
-  "c functions_format functions_log_remove"
+  "c functions_format functions_log_remove",
+  "flr"
  ],
  "marker_current": "1",
  "function_current": "functions_log_remove",

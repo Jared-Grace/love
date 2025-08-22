@@ -1,6 +1,6 @@
-import {counter} from "./counter.mjs";
-import {js_visit_type} from "./js_visit_type.mjs";
-import {object_property_get} from "./object_property_get.mjs";
+import { counter } from "./counter.mjs";
+import { js_visit_type } from "./js_visit_type.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export function js_identifiers_named_count(ast, i_name) {
   function lambda3(c) {
     function lambda2(v) {

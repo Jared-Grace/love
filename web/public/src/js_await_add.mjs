@@ -18,7 +18,6 @@ export async function js_await_add(ast) {
       if (en) {
         return;
       }
-      log(name);
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       let stack = object_property_get(v, "stack");
@@ -29,7 +28,6 @@ export async function js_await_add(ast) {
         marker("1");
       }
       js_node_type_not_is_if(node, "AwaitExpression", lambda4);
-      log(stack1);
     }
     await js_call_function_if(node, lambda3);
   }
