@@ -2764,7 +2764,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "marker_enter"
   ],
   "name": [
    "watch",
@@ -3370,13 +3371,15 @@
   "nn": [
    "function_run_prompt",
    "js_block_child_graph",
-   "null_not_is"
+   "null_not_is",
+   "marker_enter"
   ],
   "null_not_is": [
    "function_run_prompt",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
-   "null_not_is"
+   "null_not_is",
+   "marker_enter"
   ],
   "prompt": [
    "chalk_green",
@@ -16589,6 +16592,7 @@
   },
   "marker_enter": {
    "identifiers": [
+    "null_not_is",
     "js_declaration_to_block_body",
     "list_add_first",
     "list_remove",
@@ -16606,6 +16610,8 @@
     "stack2",
     "body",
     "nt",
+    "nn",
+    "value",
     "v"
    ],
    "async": true
