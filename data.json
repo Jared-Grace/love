@@ -1357,7 +1357,6 @@
   "s assert,list",
   "me",
   "o w",
-  "mg",
   "o md",
   "c md marker_up",
   "a mu marker_up",
@@ -1425,7 +1424,8 @@
   "s js_visit",
   "s marker",
   "fs jaa",
-  "eac"
+  "eac",
+  "mg"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
