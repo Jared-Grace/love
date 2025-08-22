@@ -1511,7 +1511,8 @@
   "mcr 0 copy",
   "mdd",
   "mc or",
-  "ir to node"
+  "ir to node",
+  "ir from awaited"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
