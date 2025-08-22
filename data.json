@@ -2429,7 +2429,8 @@
    "marker_above_delete",
    "function_alias_rename",
    "function_aliases_restore",
-   "function_rename"
+   "function_rename",
+   "js_code_await"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -13009,7 +13010,8 @@
   "js_code_await": {
    "identifiers": [
     "js_code_await",
-    "code"
+    "code",
+    "v"
    ],
    "async": false
   },
