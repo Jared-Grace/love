@@ -1481,8 +1481,8 @@
   "o js_node_type_is_if",
   "s not",
   "c js_node_type_is_if js_node_type_not_is_if",
-  "md 1",
-  "fs jaa"
+  "fs jaa",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
