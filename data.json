@@ -1471,7 +1471,8 @@
   "s auto",
   "f",
   "me",
-  "mbt"
+  "mbt",
+  "mc l1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
