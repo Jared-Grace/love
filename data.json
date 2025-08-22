@@ -1953,7 +1953,8 @@
    "marker_down_choices",
    "marker_functionize",
    "marker_above_generic",
-   "marker_below"
+   "marker_below",
+   "marker_next_delete_multiple"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -18619,10 +18620,11 @@
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
+    "code",
     "lambda",
     "item",
-    "v",
-    "list"
+    "list",
+    "v"
    ]
   }
  },
