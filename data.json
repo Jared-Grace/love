@@ -1443,7 +1443,8 @@
   "a ox object_property_exists",
   "ps",
   "mc ox",
-  "ir object functions"
+  "ir object functions",
+  "ir result exists"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
