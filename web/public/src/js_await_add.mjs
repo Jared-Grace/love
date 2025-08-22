@@ -16,6 +16,7 @@ export async function js_await_add(ast) {
       let en = object_property_exists_not(functions, name);
       if (en) {
         marker("2");
+        return;
       }
       let stack = object_property_get(v, "stack");
     }
