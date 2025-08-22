@@ -1479,10 +1479,11 @@
   "cd",
   "mb nti",
   "ire node2 2",
-  "ir type 'AwaitExpression'"
+  "ir type 'AwaitExpression'",
+  "o js_node_type_is_if"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "js_node_type_is_if",
  "terminal": false,
  "identifiers": {
   "log": [
