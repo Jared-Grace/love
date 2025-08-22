@@ -1,3 +1,4 @@
 export function json_to(object) {
-  return JSON.stringify(object);
+  let v = JSON.stringify(object);
+  return v;
 }

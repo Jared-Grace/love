@@ -9,8 +9,8 @@ export async function js_format(code) {
   }
   const formatted = await prettier.format(code, {
     parser: "babel",
-    plugins: [parserBabel],braceStyle: "allman",
+    plugins: [parserBabel],
+    braceStyle: "allman",
   });
-
   return formatted;
 }

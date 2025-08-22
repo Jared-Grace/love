@@ -1,5 +1,5 @@
-import {log} from './log.mjs';
-import { log_keep } from './log_keep.mjs';
+import { log } from "./log.mjs";
+import { log_keep } from "./log_keep.mjs";
 export function catch_log(lambda) {
   try {
     lambda();

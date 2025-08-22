@@ -7,7 +7,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function js_stack_declaration_asyncify(stack, declaration) {
-  let last = js_stack_last(stack,  "FunctionDeclaration");
+  let last = js_stack_last(stack, "FunctionDeclaration");
   object_property_set(
     last,
     "async",
