@@ -1789,7 +1789,8 @@
    "js_node_type_not_is_if",
    "marker_down_1",
    "function_parse_strict_declaration",
-   "function_exists_strict"
+   "function_exists_strict",
+   "js_log_remove"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -1947,7 +1948,8 @@
    "js_declaration_single",
    "js_identifiers_named_count",
    "marker_above_generic",
-   "js_declaration_single_name"
+   "js_declaration_single_name",
+   "js_log_remove"
   ],
   "code": [
    "data_identifiers_file",
@@ -9887,6 +9889,9 @@
   "function_exists_strict": [
    "function_exists_strict",
    "js_node_atomize"
+  ],
+  "js_log_remove": [
+   "js_log_remove"
   ]
  },
  "functions": {
@@ -18741,6 +18746,14 @@
     "f_name",
     "f_path",
     "e"
+   ]
+  },
+  "js_log_remove": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_log_remove",
+    "ast"
    ]
   }
  },
