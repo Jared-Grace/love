@@ -1451,7 +1451,6 @@
   "o me",
   "mx",
   "fs jaa",
-  "me",
   "s bottom",
   "as marker",
   "a mbt marker_bottom",
@@ -1471,7 +1470,8 @@
   "fs js_await_add",
   "mdm 2",
   "s auto",
-  "f"
+  "f",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
