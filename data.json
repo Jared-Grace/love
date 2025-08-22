@@ -1499,7 +1499,9 @@
   "s functions",
   "c functions_format functions_log_remove",
   "flr",
-  "as format"
+  "as format",
+  "fm",
+  "fa"
  ],
  "marker_current": "1",
  "function_current": "functions_log_remove",

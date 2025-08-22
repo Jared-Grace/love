@@ -1,8 +1,6 @@
 import { throws_not_async } from "./throws_not_async.mjs";
 import { error } from "./error.mjs";
-import { log } from "./log.mjs";
 import { promise_is } from "./promise_is.mjs";
-import { string_is } from "./string_is.mjs";
 export async function file_exists(file_path) {
   if (promise_is(file_path)) {
     error();
