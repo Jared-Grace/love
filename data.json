@@ -2977,7 +2977,8 @@
    "list_first_remaining",
    "list_first_second_generic",
    "object_property_exists_not",
-   "js_identifiers"
+   "js_identifiers",
+   "list_join_comma"
   ],
   "separator": [
    "watch",
@@ -15833,7 +15834,8 @@
    "identifiers": [
     "list_join",
     "list_join_comma",
-    "names"
+    "names",
+    "result"
    ],
    "async": false
   },
