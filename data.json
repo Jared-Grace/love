@@ -2483,8 +2483,7 @@
    "function_aliases_restore",
    "function_rename",
    "js_code_await",
-   "marker_if_test_replace",
-   "marker_next_delete_multiple"
+   "marker_if_test_replace"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -18623,8 +18622,7 @@
     "code",
     "lambda",
     "item",
-    "list",
-    "v"
+    "list"
    ]
   }
  },
