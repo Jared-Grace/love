@@ -1395,7 +1395,6 @@
   "ar mb marker_below",
   "mb $g$f$async",
   "irs async is",
-  "s marker",
   "s data_files",
   "d",
   "si mda",
@@ -1425,7 +1424,8 @@
   "o r",
   "u mad",
   "u mda",
-  "s js_visit"
+  "s js_visit",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
