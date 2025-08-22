@@ -33,6 +33,8 @@ export async function watch() {
           await command_line_node_g(data_file_update.name, args);
         } catch (error) {
           let f_name = data_file_update.name;
+          if (false) {
+          }
           await error_attention_set({
             f_name,
             args,
