@@ -1208,7 +1208,6 @@
   "fts js_block_child_graph_unparse",
   "fw list_is list_not_is",
   "fts jbcg",
-  "f",
   "o jbcgu",
   "ftc jbcgu",
   "fts jbcgu",
@@ -1430,7 +1429,8 @@
   "p",
   "s assert",
   "ps",
-  "marker_next_await"
+  "marker_next_await",
+  "f"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
