@@ -2164,7 +2164,6 @@
    "js_node_atomize",
    "marker_leave",
    "marker_above_generic",
-   "js_call_function_if",
    "marker_above_delete",
    "function_alias_rename",
    "function_aliases_restore",
@@ -9747,6 +9746,9 @@
   ],
   "marker_next_await": [
    "marker_next_await"
+  ],
+  "lambda$name": [
+   "js_call_function_if"
   ]
  },
  "functions": {
@@ -18276,7 +18278,7 @@
     "js_node_type_is",
     "js_call_function_if",
     "node",
-    "lambda",
+    "lambda$name",
     "callee",
     "name",
     "valid"
