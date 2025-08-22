@@ -1436,7 +1436,6 @@
   "mcr c object_property_exists_not",
   "ir exists en",
   "o me",
-  "me",
   "o ml",
   "c ml marker_if_test_replace",
   "s stack,last",
@@ -1461,7 +1460,8 @@
   "ire stack2 2",
   "ms 1",
   "mu",
-  "mu 1"
+  "mu 1",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
