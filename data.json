@@ -1772,7 +1772,8 @@
    "function_aliases_restore",
    "marker_if_test_replace",
    "marker_next_delete_multiple",
-   "js_node_type_is_if"
+   "js_node_type_is_if",
+   "js_node_type_not_is_if"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2223,7 +2224,8 @@
    "marker_next_await",
    "marker_param_add",
    "marker_if_test_replace",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "js_node_type_not_is_if"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5695,7 +5697,8 @@
    "js_imports_declarations",
    "js_identifiers_named_count",
    "js_await_add",
-   "js_call_function_if"
+   "js_call_function_if",
+   "js_node_type_not_is_if"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6312,7 +6315,8 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async"
+   "js_visit_type_each_async",
+   "js_node_type_not_is_if"
   ],
   "method": [
    "function_params_consolidate"
@@ -6596,7 +6600,8 @@
    "marker_functionize",
    "marker_next_delete",
    "js_imports_declarations",
-   "js_call_function_if"
+   "js_call_function_if",
+   "js_node_type_not_is_if"
   ],
   "js_node_is": [
    "function_transform_marker",
@@ -7393,7 +7398,8 @@
    "js_node_type_is_assert",
    "js_node_type_is_if",
    "js_node_type_is_if_async",
-   "js_node_type_not_is"
+   "js_node_type_not_is",
+   "js_node_type_not_is_if"
   ],
   "copy": [
    "js_atomize_function",
@@ -9838,6 +9844,9 @@
   ],
   "each_range_async": [
    "marker_next_delete_multiple"
+  ],
+  "js_node_type_not_is_if": [
+   "js_node_type_not_is_if"
   ]
  },
  "functions": {
@@ -18651,6 +18660,18 @@
     "count",
     "code",
     "lambda"
+   ]
+  },
+  "js_node_type_not_is_if": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_node_type_is",
+    "js_node_type_not_is_if",
+    "node",
+    "type",
+    "lambda",
+    "type_is"
    ]
   }
  },
