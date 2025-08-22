@@ -1,7 +1,6 @@
 import { function_current_set } from "./function_current_set.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { function_transform } from "./function_transform.mjs";
-import { marker } from "./marker.mjs";
 import { file_copy } from "./file_copy.mjs";
 import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
 import { file_open } from "./file_open.mjs";
