@@ -8,5 +8,5 @@ export async function marker_next_delete_multiple() {
     code = await marker_next_delete();
   }
   await each_async(list, lambda);
-  return v;
+  return code;
 }
