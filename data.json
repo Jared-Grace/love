@@ -1439,10 +1439,10 @@
   "p",
   "mpa name",
   "mb $i",
-  "mc ox",
   "u ox",
   "a ox object_property_exists",
-  "ps"
+  "ps",
+  "mc ox"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
