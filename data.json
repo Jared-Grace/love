@@ -2614,8 +2614,7 @@
    "object_property_exists_assert",
    "object_property_exists_equals",
    "object_property_initialize",
-   "object_property_exists_not",
-   "js_await_add"
+   "object_property_exists_not"
   ],
   "object_property_equals": [
    "watch",
@@ -9435,7 +9434,8 @@
   ],
   "object_property_exists_not": [
    "function_alias_rename",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_await_add"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -12722,7 +12722,7 @@
   },
   "js_await_add": {
    "identifiers": [
-    "object_property_exists",
+    "object_property_exists_not",
     "js_visit_type_each_async",
     "data_functions_get",
     "js_declaration_single_name",
