@@ -1,3 +1,4 @@
 export function json_from(json) {
-  return JSON.parse(json);
+  let v = JSON.parse(json);
+  return v;
 }
