@@ -660,7 +660,6 @@
   "o ftc",
   "s import",
   "ftc js_imports js_import_inside",
-  "o js_type",
   "js_visit_filter n",
   "ftd js_await_add",
   "s function,trans",
@@ -1496,10 +1495,11 @@
   "s log",
   "nj log_remove",
   "s call",
-  "s each"
+  "s each",
+  "o js_type"
  ],
  "marker_current": "1",
- "function_current": "js_log_remove",
+ "function_current": "js_type",
  "terminal": false,
  "identifiers": {
   "log": [
