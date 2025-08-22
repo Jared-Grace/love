@@ -1424,7 +1424,8 @@
   "ps",
   "o r",
   "u mad",
-  "u mda"
+  "u mda",
+  "s js_visit"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
