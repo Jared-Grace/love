@@ -3172,8 +3172,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "marker_next_delete_multiple"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6387,13 +6386,16 @@
    "function_read"
   ],
   "function_rename": [
-   "function_rename"
+   "function_rename",
+   "marker_next_delete_multiple"
   ],
   "f_name_before": [
-   "function_rename"
+   "function_rename",
+   "marker_next_delete_multiple"
   ],
   "f_name_after": [
-   "function_rename"
+   "function_rename",
+   "marker_next_delete_multiple"
   ],
   "function_run": [
    "function_run",
@@ -18615,13 +18617,15 @@
   "marker_next_delete_multiple": {
    "async": true,
    "identifiers": [
+    "function_rename",
     "each_async",
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
+    "f_name_before",
+    "f_name_after",
     "code",
     "lambda",
-    "item",
     "list"
    ]
   }
