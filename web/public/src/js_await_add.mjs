@@ -20,9 +20,9 @@ export async function js_await_add(ast) {
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       marker("2");
+      let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
       marker("1");
-      let stack = object_property_get(v, "stack");
     }
     await js_call_function_if(node, lambda3);
   }
