@@ -1486,7 +1486,8 @@
   "mu 1",
   "me",
   "mc oc",
-  "ir from mode"
+  "ir from mode",
+  "ir mode node"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
