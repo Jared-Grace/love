@@ -1436,8 +1436,8 @@
   "as marker",
   "c mc marker_param_add"
  ],
- "marker_current": "2",
- "function_current": "js_await_add",
+ "marker_current": "1",
+ "function_current": "marker_param_add",
  "terminal": false,
  "identifiers": {
   "log": [
