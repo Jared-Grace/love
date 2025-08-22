@@ -6864,8 +6864,7 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete",
-   "js_log_remove"
+   "marker_above_delete"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -18784,7 +18783,6 @@
     "node",
     "e1",
     "e2",
-    "stack2",
     "lambda3",
     "callee",
     "name"
