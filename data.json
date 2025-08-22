@@ -1508,7 +1508,8 @@
   "me",
   "mdd",
   "u ja",
-  "mc js_await"
+  "mc js_await",
+  "mcr 0 copy"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
