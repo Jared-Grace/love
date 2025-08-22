@@ -1447,7 +1447,6 @@
   "mu",
   "o me",
   "mx",
-  "fs jaa",
   "s bottom",
   "as marker",
   "a mbt marker_bottom",
@@ -1482,10 +1481,11 @@
   "o js_node_type_is_if",
   "s not",
   "c js_node_type_is_if js_node_type_not_is_if",
-  "md 1"
+  "md 1",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "js_node_type_not_is_if",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
