@@ -1462,7 +1462,6 @@
   "mdm 2",
   "s auto",
   "f",
-  "me",
   "mbt",
   "mc l1",
   "ir stack2 2",
@@ -1484,7 +1483,8 @@
   "mc c js_node_type_not_is_if",
   "p",
   "mcr c js_node_type_not_is_if",
-  "mu 1"
+  "mu 1",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
