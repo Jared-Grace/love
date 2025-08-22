@@ -1445,15 +1445,15 @@
   "ir exists en",
   "md 1",
   "o me",
-  "ms 2",
   "me",
   "o ml",
   "c ml marker_if_test_replace",
   "s stack,last",
   "a mi marker_if_test_replace",
-  "fs jaa"
+  "fs jaa",
+  "ms 2"
  ],
- "marker_current": "1",
+ "marker_current": "2",
  "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
