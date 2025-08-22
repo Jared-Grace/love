@@ -1553,8 +1553,7 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "git_push",
-   "js_await_add"
+   "git_push"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -12763,7 +12762,6 @@
   },
   "js_await_add": {
    "identifiers": [
-    "log",
     "js_function_last_asyncify",
     "object_property_exists_not",
     "js_visit_type_each_async",
