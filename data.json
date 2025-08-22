@@ -4654,8 +4654,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "js_bang_to_not"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4670,8 +4669,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "js_bang_to_not"
+   "add"
   ],
   "eq": [
    "equal",
@@ -12920,9 +12918,7 @@
     "copy",
     "code",
     "expression",
-    "arguments2",
-    "left",
-    "right"
+    "arguments2"
    ],
    "async": false
   },
