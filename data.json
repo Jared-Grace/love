@@ -1488,7 +1488,8 @@
   "ir from mode",
   "ir mode node",
   "md 1",
-  "fw md marker_down_1"
+  "fw md marker_down_1",
+  "ir delta 1"
  ],
  "marker_current": "1",
  "function_current": "marker_down_1",
