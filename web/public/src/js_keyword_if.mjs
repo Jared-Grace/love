@@ -1,3 +1,4 @@
 export function js_keyword_if() {
-  return "if";
+  let v = "if";
+  return v;
 }
