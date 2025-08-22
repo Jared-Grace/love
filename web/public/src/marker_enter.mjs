@@ -19,6 +19,8 @@ export async function marker_enter() {
       list_remove(stack2, stack1);
     } else if (nt === "IfStatement") {
     }
+    if (false) {
+    }
   }
   let v = await function_transform_marker_current(lambda);
   return v;
