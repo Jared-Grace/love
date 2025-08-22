@@ -1,5 +1,4 @@
-import { marker } from "./marker.mjs";
 export function not(a) {
-  let n = !a;
+  let n = not(a);
   return n;
 }
