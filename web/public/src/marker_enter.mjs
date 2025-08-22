@@ -11,9 +11,9 @@ export async function marker_enter() {
   async function lambda(a) {
     let n = marker_next_get(a);
     let { next, stack1, stack2 } = n;
+    let body = null;
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
-      let body = null;
       body = js_declaration_to_block_body(next);
       list_add_first(body, stack1);
       list_remove(stack2, stack1);
