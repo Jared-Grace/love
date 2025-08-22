@@ -8750,8 +8750,7 @@
    "list_index_of_next",
    "list_index_of_previous",
    "marker_down",
-   "marker_up",
-   "marker_down_1"
+   "marker_up"
   ],
   "index_previous": [
    "list_index_of_previous",
@@ -18698,8 +18697,7 @@
     "marker_down",
     "marker",
     "marker_down_1",
-    "v",
-    "delta"
+    "v"
    ]
   }
  },
