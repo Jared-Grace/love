@@ -1485,7 +1485,7 @@
   "c js_node_type_is_if js_node_type_not_is_if"
  ],
  "marker_current": "1",
- "function_current": "js_node_type_is_if",
+ "function_current": "js_node_type_not_is_if",
  "terminal": false,
  "identifiers": {
   "log": [
