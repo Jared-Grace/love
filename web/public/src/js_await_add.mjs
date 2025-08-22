@@ -9,8 +9,6 @@ import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
   let functions = await data_functions_get();
   marker("1");
-  let name = js_declaration_single_name(ast);
-  let f = object_property_get(functions, name);
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
