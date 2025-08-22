@@ -1418,14 +1418,14 @@
   "function_aliases_restore",
   "s rename",
   "function_alias_rename marker_delete_above marker_above_delete",
-  "eac",
   "ps",
   "o r",
   "u mad",
   "u mda",
   "s js_visit",
   "s marker",
-  "fs jaa"
+  "fs jaa",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -18464,5 +18464,5 @@
   }
  },
  "git_push_when": "2025-08-21T23:08:47.367Z",
- "error_attention": {}
+ "error_attention": null
 }
