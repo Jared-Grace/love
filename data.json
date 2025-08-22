@@ -2764,8 +2764,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "marker_enter"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -16611,7 +16610,6 @@
     "body",
     "nt",
     "nn",
-    "value",
     "v"
    ],
    "async": true
