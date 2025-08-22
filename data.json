@@ -12766,12 +12766,12 @@
     "functions",
     "name",
     "f",
-    "async_is",
     "lambda",
     "v",
     "node",
     "lambda3",
     "en",
+    "async_is",
     "stack"
    ],
    "async": true
