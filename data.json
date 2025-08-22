@@ -7540,8 +7540,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_auto"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -12756,7 +12755,6 @@
     "js_arrow_blockify",
     "js_auto",
     "ast",
-    "ast2",
     "transforms",
     "lambda",
     "t"
