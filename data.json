@@ -1553,7 +1553,8 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "git_push"
+   "git_push",
+   "js_await_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2568,7 +2569,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_await_add"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -12762,6 +12764,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "log",
     "js_function_last_asyncify",
     "object_property_exists_not",
     "js_visit_type_each_async",
@@ -12778,6 +12781,7 @@
     "lambda3",
     "name",
     "en",
+    "message",
     "f",
     "async_is",
     "stack"
