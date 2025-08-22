@@ -6339,8 +6339,7 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if",
-   "js_log_remove"
+   "js_node_type_not_is_if"
   ],
   "method": [
    "function_params_consolidate"
@@ -6863,7 +6862,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "js_log_remove"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7304,7 +7304,8 @@
    "js_let_add",
    "list_get_end_1",
    "marker_leave",
-   "js_await_add"
+   "js_await_add",
+   "js_log_remove"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8746,7 +8747,8 @@
    "prompt_previous"
   ],
   "e1": [
-   "list_get_end_1"
+   "list_get_end_1",
+   "js_log_remove"
   ],
   "e2": [
    "list_get_end_2"
@@ -18763,6 +18765,7 @@
   "js_log_remove": {
    "async": false,
    "identifiers": [
+    "list_get_end_1",
     "js_node_type_is_if",
     "js_visit_type",
     "marker",
@@ -18771,9 +18774,10 @@
     "lambda",
     "v",
     "stack",
+    "e1",
+    "stack2",
     "lambda3",
-    "node",
-    "type"
+    "node"
    ]
   }
  },
