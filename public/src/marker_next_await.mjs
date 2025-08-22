@@ -15,7 +15,7 @@ export async function marker_next_await() {
       js_node_type_is_assert(next, "ExpressionStatement");
       let code_expression = js_code_await("a");
       let expression = js_parse_expression(code_expression);
-      object_property_set(object, property_name, value);
+      object_property_set(expression, "argument", value);
       la(expression);
     }
   }
