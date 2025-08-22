@@ -1395,7 +1395,6 @@
   "is mda",
   "is marker_delete_above",
   "r marker_delete_above marker_above_delete",
-  "as marker",
   "s alias",
   "n function_alias_rename",
   "s invert",
@@ -1433,7 +1432,8 @@
   "f",
   "a mna marker_next_await",
   "mna",
-  "ms 2"
+  "ms 2",
+  "as marker"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
