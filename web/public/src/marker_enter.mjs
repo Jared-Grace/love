@@ -16,6 +16,7 @@ export async function marker_enter() {
     let { index, stack1, stack2 } = ni;
     let next = list_get(stack2, index);
     let body = null;
+    while (body === null) {}
     let nt = js_node_type(next);
     if (js_types_function_includes(nt)) {
       body = js_declaration_to_block_body(next);
