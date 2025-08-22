@@ -1,3 +1,4 @@
 export function list_concat(a, b) {
-  return a.concat(b);
+  let v = a.concat(b);
+  return v;
 }

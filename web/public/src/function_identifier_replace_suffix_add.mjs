@@ -4,8 +4,7 @@ export async function function_identifier_replace_suffix_add(
   identifier_name,
   suffix_to_add,
 ) {
-  return await function_identifier_replace(
-    identifier_name,
-    function_name_combine(identifier_name, suffix_to_add),
-  );
+  let replacement = function_name_combine(identifier_name, suffix_to_add);
+  let v = await function_identifier_replace(identifier_name, replacement);
+  return v;
 }
