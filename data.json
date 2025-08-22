@@ -1744,7 +1744,8 @@
    "function_imports_fix",
    "data_files_update",
    "data_file_update",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "marker_next_await"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -6217,8 +6218,7 @@
    "js_return_code_replace",
    "js_statement_call_get",
    "marker_call_replace_generic",
-   "marker_expand",
-   "marker_next_await"
+   "marker_expand"
   ],
   "type": [
    "function_params_consolidate",
@@ -18507,7 +18507,7 @@
     "a",
     "next",
     "code_expression",
-    "expression",
+    "parsed",
     "value",
     "list"
    ]
