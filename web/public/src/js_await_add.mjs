@@ -23,6 +23,7 @@ export async function js_await_add(ast) {
       js_function_last_asyncify(stack, async_is);
       let e1 = list_get_end_1(stack);
       marker("1");
+      log(message);
     }
     await js_call_function_if(node, lambda3);
   }
