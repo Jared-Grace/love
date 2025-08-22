@@ -1434,7 +1434,8 @@
   "mna",
   "ms 2",
   "as marker",
-  "c mc marker_param_add"
+  "c mc marker_param_add",
+  "s stack,last"
  ],
  "marker_current": "1",
  "function_current": "marker_param_add",
