@@ -966,7 +966,6 @@
   "i folder_current_join",
   "mt",
   "u mt",
-  "fs js_await_add",
   "o data_all",
   "da",
   "u ds",
@@ -1470,10 +1469,11 @@
   "s range",
   "a rg range",
   "a mdm marker_next_delete_multiple",
-  "eac"
+  "eac",
+  "fs js_await_add"
  ],
  "marker_current": "1",
- "function_current": "marker_next_delete_multiple",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
