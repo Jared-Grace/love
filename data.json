@@ -1474,7 +1474,6 @@
   "mc c js_node_type_not_is_if",
   "mcr c js_node_type_not_is_if",
   "mu 1",
-  "me",
   "mc oc",
   "ir from mode",
   "ir mode node",
@@ -1506,7 +1505,8 @@
   "a muu marker_up_1",
   "cd",
   "fs jaa",
-  "muu"
+  "muu",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
