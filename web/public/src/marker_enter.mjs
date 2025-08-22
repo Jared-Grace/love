@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { list_add_first } from "./list_add_first.mjs";
@@ -17,6 +18,7 @@ export async function marker_enter() {
     if (js_types_function_includes(nt)) {
       body = js_declaration_to_block_body(next);
     } else if (nt === "IfStatement") {
+      let value = object_property_get(object, property_name);
     }
     let nn = null_not_is(body);
     if (nn) {
