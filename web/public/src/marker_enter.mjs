@@ -9,8 +9,8 @@ import { js_types_function_includes } from "./js_types_function_includes.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
 export async function marker_enter() {
-  marker("1");
   async function lambda(a) {
+    marker("1");
     let n = marker_next_get(a);
     let { next, stack1, stack2 } = n;
     let body = null;
