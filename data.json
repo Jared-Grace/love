@@ -1454,7 +1454,6 @@
   "ire stack2 2",
   "ms 1",
   "mu",
-  "mu 1",
   "o me",
   "mx",
   "fs jaa",
@@ -1465,7 +1464,8 @@
   "mg",
   "cd",
   "p",
-  "mbt"
+  "mbt",
+  "mu 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
