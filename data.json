@@ -2542,7 +2542,8 @@
    "js_stack_list_block_is",
    "each_index",
    "function_identifier_replace_suffix_add",
-   "promise_is"
+   "promise_is",
+   "string_starts_with"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -17756,6 +17757,7 @@
     "string_starts_with",
     "s",
     "prefix",
+    "v",
     "startsWith"
    ],
    "async": false
