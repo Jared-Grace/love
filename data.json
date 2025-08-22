@@ -6337,8 +6337,7 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if",
-   "js_log_remove"
+   "js_node_type_not_is_if"
   ],
   "method": [
    "function_params_consolidate"
@@ -7585,8 +7584,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_log_remove"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -18765,9 +18763,7 @@
     "js_log_remove",
     "ast",
     "lambda",
-    "v",
-    "ast2",
-    "type"
+    "v"
    ]
   }
  },
