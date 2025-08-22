@@ -5356,7 +5356,8 @@
    "git_push_schedule_command",
    "js_node_atomize",
    "list_add_if_not_includes",
-   "object_property_initialize"
+   "object_property_initialize",
+   "object_property_exists"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -17184,6 +17185,7 @@
     "object_property_exists",
     "object",
     "property_name",
+    "exists",
     "Object",
     "hasOwn"
    ],
