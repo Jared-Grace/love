@@ -1467,7 +1467,6 @@
   "mbt",
   "mc l1",
   "ir stack2 2",
-  "p",
   "ire stack2 2",
   "mc l",
   "mcr 0 e1",
@@ -1484,6 +1483,7 @@
   "fs jaa",
   "md 1",
   "mc c js_node_type_not_is_if",
+  "p",
   "mcr c js_node_type_not_is_if"
  ],
  "marker_current": "1",
