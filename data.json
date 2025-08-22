@@ -9445,7 +9445,6 @@
   ],
   "js_declaration_single_name": [
    "js_imports_missing",
-   "js_await_add",
    "js_declaration_single_name"
   ],
   "data_functions_get": [
@@ -12765,20 +12764,19 @@
     "object_property_exists_not",
     "js_visit_type_each_async",
     "data_functions_get",
-    "js_declaration_single_name",
     "js_call_function_if",
     "object_property_get",
     "marker",
     "js_await_add",
     "ast",
     "functions",
-    "name",
-    "f",
     "lambda",
     "v",
     "node",
     "lambda3",
+    "name",
     "en",
+    "f",
     "async_is",
     "stack"
    ],
