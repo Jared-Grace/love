@@ -6,7 +6,8 @@ import { functions_names } from "./functions_names.mjs";
 import { list_map } from "./list_map.mjs";
 export async function functions_log_remove() {
   marker("1");
-  let output = await function_transform(f_name, async function lambda(ast) {});
+  async function lambda(ast) {}
+  let output = await function_transform(f_name, lambda);
   let mapped = list_map(await functions_names(), function_format);
   await list_wait(mapped);
 }
