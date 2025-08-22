@@ -1438,7 +1438,6 @@
   "c ml marker_if_test_replace",
   "s stack,last",
   "a mi marker_if_test_replace",
-  "fs jaa",
   "mi en",
   "mb $r",
   "ml",
@@ -1461,10 +1460,11 @@
   "mu 1",
   "me",
   "o me",
-  "mx"
+  "mx",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_enter",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
