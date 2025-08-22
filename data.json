@@ -6558,7 +6558,6 @@
    "js_arrow_to_function",
    "js_atomize",
    "js_atomize_function",
-   "js_await_add",
    "js_bang_to_not",
    "js_calls_to_each",
    "js_call_fill",
@@ -9717,6 +9716,9 @@
   ],
   "mb": [
    "function_aliases_restore"
+  ],
+  "jvtea": [
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12661,7 +12663,6 @@
     "js_declaration_single_name",
     "js_call_function_if",
     "object_property_get",
-    "js_visit_type",
     "marker",
     "js_await_add",
     "ast",
@@ -12673,7 +12674,8 @@
     "v",
     "node",
     "lambda3",
-    "stack"
+    "stack",
+    "jvtea"
    ],
    "async": true
   },
