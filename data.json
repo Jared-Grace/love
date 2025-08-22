@@ -6794,7 +6794,8 @@
    "marker_next_index",
    "marker_previous_index",
    "marker_remove",
-   "marker_leave"
+   "marker_leave",
+   "js_await_add"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -8702,8 +8703,7 @@
    "prompt_previous"
   ],
   "e1": [
-   "list_get_end_1",
-   "js_await_add"
+   "list_get_end_1"
   ],
   "e2": [
    "list_get_end_2"
@@ -12791,7 +12791,7 @@
     "f",
     "async_is",
     "stack",
-    "e1"
+    "stack1"
    ],
    "async": true
   },
