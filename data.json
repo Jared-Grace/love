@@ -7260,7 +7260,8 @@
    "js_if_else_if_combine",
    "js_let_add",
    "list_get_end_1",
-   "marker_leave"
+   "marker_leave",
+   "js_await_add"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8698,7 +8699,8 @@
    "prompt_previous"
   ],
   "e1": [
-   "list_get_end_1"
+   "list_get_end_1",
+   "js_await_add"
   ],
   "e2": [
    "list_get_end_2"
@@ -12765,6 +12767,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "list_get_end_1",
     "log",
     "js_function_last_asyncify",
     "object_property_exists_not",
@@ -12784,7 +12787,8 @@
     "en",
     "f",
     "async_is",
-    "stack"
+    "stack",
+    "e1"
    ],
    "async": true
   },
