@@ -1,3 +1,4 @@
 export function list_pop(list) {
-  return list.pop();
+  let v = list.pop();
+  return v;
 }
