@@ -1779,7 +1779,8 @@
    "marker_if_test_replace",
    "marker_next_delete_multiple",
    "js_node_type_is_if",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "marker_down_1"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2508,7 +2509,8 @@
    "function_aliases_restore",
    "function_rename",
    "js_code_await",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_down_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8747,7 +8749,8 @@
    "list_index_of_next",
    "list_index_of_previous",
    "marker_down",
-   "marker_up"
+   "marker_up",
+   "marker_down_1"
   ],
   "index_previous": [
    "list_index_of_previous",
@@ -8974,7 +8977,8 @@
    "marker_delete_above"
   ],
   "marker_down": [
-   "marker_down"
+   "marker_down",
+   "marker_down_1"
   ],
   "marker_down_choices": [
    "marker_down_choices"
@@ -9855,6 +9859,9 @@
   "js_node_type_not_is_if": [
    "js_node_type_not_is_if",
    "js_await_add"
+  ],
+  "marker_down_1": [
+   "marker_down_1"
   ]
  },
  "functions": {
@@ -18682,6 +18689,16 @@
     "type",
     "lambda",
     "type_is"
+   ]
+  },
+  "marker_down_1": {
+   "async": true,
+   "identifiers": [
+    "marker_down",
+    "marker",
+    "marker_down_1",
+    "delta",
+    "v"
    ]
   }
  },
