@@ -144,7 +144,8 @@
   "mbt": "marker_bottom",
   "rg": "range",
   "mdm": "marker_next_delete_multiple",
-  "mdd": "marker_down_1"
+  "mdd": "marker_down_1",
+  "muu": "marker_up_1"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1503,7 +1504,8 @@
   "ml",
   "md 1",
   "mcr 0 stack1",
-  "fw mu marker_up_1"
+  "fw mu marker_up_1",
+  "a muu marker_up_1"
  ],
  "marker_current": "1",
  "function_current": "marker_up_1",
