@@ -2370,8 +2370,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "marker_next_delete_multiple"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -18624,11 +18623,10 @@
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
-    "r",
     "count",
+    "r",
     "code",
-    "lambda",
-    "list"
+    "lambda"
    ]
   }
  },
