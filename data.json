@@ -1477,7 +1477,8 @@
   "ir e1 stack1",
   "as nti",
   "as node,type",
-  "cd"
+  "cd",
+  "mb nti"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
