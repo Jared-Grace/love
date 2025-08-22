@@ -1,3 +1,4 @@
+import { object_property_exists_not } from "./object_property_exists_not.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { data_functions_get } from "./data_functions_get.mjs";
@@ -14,7 +15,7 @@ export async function js_await_add(ast) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
       marker("2");
-      let exists = object_property_exists(functions, name);
+      let exists = object_property_exists_not(functions, name);
       if (false) {
       }
       let stack = object_property_get(v, "stack");
