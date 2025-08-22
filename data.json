@@ -1496,7 +1496,7 @@
   "c function_parse_declaration function_parse_strict_declaration"
  ],
  "marker_current": "1",
- "function_current": "marker_down_1",
+ "function_current": "function_parse_strict_declaration",
  "terminal": false,
  "identifiers": {
   "log": [
