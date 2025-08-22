@@ -1,3 +1,4 @@
+import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { data_functions_get } from "./data_functions_get.mjs";
 import { js_declaration_single_name } from "./js_declaration_single_name.mjs";
 import { js_call_function_if } from "./js_call_function_if.mjs";
@@ -17,5 +18,5 @@ export async function js_await_add(ast) {
     await js_call_function_if(node, lambda3);
   }
   marker("1");
-  jvtea(ast, "CallExpression", lambda);
+  js_visit_type_each_async(ast, "CallExpression", lambda);
 }
