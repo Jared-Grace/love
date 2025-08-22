@@ -1764,7 +1764,6 @@
    "marker_new",
    "marker_remove_marker_top",
    "marker_top",
-   "not",
    "null_not_is",
    "prompt_previous",
    "sandbox",
@@ -17163,7 +17162,6 @@
   },
   "not": {
    "identifiers": [
-    "marker",
     "not",
     "a",
     "n"
