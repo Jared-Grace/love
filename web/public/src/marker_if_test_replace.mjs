@@ -12,7 +12,7 @@ export async function marker_if_test_replace() {
   marker("1");
   async function lambda(a) {
     let { stack } = a;
-    let last = js_stack_last(stack3, type);
+    let last = js_stack_last(stack, "IfStatement");
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
     list_is_assert(stack5);
