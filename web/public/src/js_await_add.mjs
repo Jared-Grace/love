@@ -25,6 +25,7 @@ export async function js_await_add(ast) {
       function lambda4() {
         let copy = object_copy(node);
         marker("1");
+        ja
       }
       js_node_type_not_is_if(stack1, "AwaitExpression", lambda4);
     }

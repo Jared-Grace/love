@@ -1236,7 +1236,6 @@
   "s prev",
   "a mda marker_delete_above",
   "mda",
-  "u ja",
   "a ja js_auto",
   "mab $g$v$stack",
   "s function,write",
@@ -1507,7 +1506,8 @@
   "fs jaa",
   "muu",
   "me",
-  "mdd"
+  "mdd",
+  "u ja"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
