@@ -1,13 +1,6 @@
 import { object_property_set } from "./object_property_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { list_get_end_2 } from "./list_get_end_2.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
-import { list_get_end } from "./list_get_end.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
 export async function marker_if_test_replace(replacement) {
@@ -16,15 +9,7 @@ export async function marker_if_test_replace(replacement) {
     let { stack } = a;
     let last = js_stack_last(stack, "IfStatement");
     let expression = js_parse_expression(replacement);
-    object_property_set(object, property_name, value);
-    let stack4 = list_get_end(stack, 4);
-    let stack5 = list_get_end(stack, 5);
-    list_is_assert(stack5);
-    let index = list_index_of(stack5, stack4);
-    let stack1 = list_get_end_1(stack);
-    let stack2 = list_get_end_2(stack);
-    list_remove(stack2, stack1);
-    list_insert(stack5, index, stack1);
+    object_property_set(last, "test", expression);
   }
   let v = await function_transform_marker_current(lambda);
   return v;
