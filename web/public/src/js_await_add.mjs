@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { log } from "./log.mjs";
 import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
@@ -23,6 +24,7 @@ export async function js_await_add(ast) {
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
       marker("1");
+      js_node_type_is_if(node2, type, function lambda4() {});
       log(stack1);
     }
     await js_call_function_if(node, lambda3);
