@@ -4,7 +4,8 @@ import { marker } from "./marker.mjs";
 export function js_log_remove(ast) {
   marker("1");
   function lambda(v) {
-    js_node_type_is_if(node, type, function lambda3() {});
+    function lambda3() {}
+    js_node_type_is_if(node, type, lambda3);
   }
   js_visit_type(ast, "CallExpression", lambda);
 }

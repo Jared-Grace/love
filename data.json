@@ -3504,7 +3504,8 @@
    "marker_down_choices_lambda",
    "marker_expand",
    "js_identifiers_named_count",
-   "js_await_add"
+   "js_await_add",
+   "js_log_remove"
   ],
   "value2": [
    "error_attention_set"
@@ -5723,7 +5724,8 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_call_function_if",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_log_remove"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6337,7 +6339,8 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_log_remove"
   ],
   "method": [
    "function_params_consolidate"
@@ -7508,7 +7511,8 @@
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "js_if_else_if_combine",
-   "js_node_type_is_if"
+   "js_node_type_is_if",
+   "js_log_remove"
   ],
   "js_node_types_is": [
    "js_block_child_graph",
@@ -18758,12 +18762,16 @@
   "js_log_remove": {
    "async": false,
    "identifiers": [
+    "js_node_type_is_if",
     "js_visit_type",
     "marker",
     "js_log_remove",
     "ast",
     "lambda",
-    "v"
+    "v",
+    "node",
+    "type",
+    "lambda3"
    ]
   }
  },
