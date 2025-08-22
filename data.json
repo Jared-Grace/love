@@ -2543,7 +2543,11 @@
    "each_index",
    "function_identifier_replace_suffix_add",
    "promise_is",
-   "string_starts_with"
+   "string_starts_with",
+   "js_code_return_empty",
+   "undefined_is",
+   "folder_public",
+   "file_read"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10837,6 +10841,7 @@
     "file_read",
     "file_path",
     "fs",
+    "v",
     "promises",
     "readFile"
    ],
@@ -10883,7 +10888,8 @@
   },
   "folder_public": {
    "identifiers": [
-    "folder_public"
+    "folder_public",
+    "v"
    ],
    "async": false
   },
@@ -13364,7 +13370,8 @@
   "js_code_return_empty": {
    "identifiers": [
     "js_code_return",
-    "js_code_return_empty"
+    "js_code_return_empty",
+    "v"
    ],
    "async": false
   },
@@ -17890,7 +17897,8 @@
   "undefined_is": {
    "identifiers": [
     "undefined_is",
-    "value"
+    "value",
+    "v"
    ],
    "async": false
   },
