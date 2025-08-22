@@ -3810,7 +3810,8 @@
    "marker_functionize",
    "marker_top",
    "js_imports_unused",
-   "functions_paths"
+   "functions_paths",
+   "functions_log_remove"
   ],
   "functions_names": [
    "functions_names",
@@ -3822,7 +3823,8 @@
    "function_params_consolidate",
    "js_imports_missing",
    "marker_functionize",
-   "functions_paths"
+   "functions_paths",
+   "functions_log_remove"
   ],
   "paths": [
    "functions_names",
@@ -5148,11 +5150,13 @@
    "functions_format",
    "function_dependencies_code",
    "list_map_unordered_async",
-   "list_wait"
+   "list_wait",
+   "functions_log_remove"
   ],
   "function_format": [
    "functions_format",
-   "function_format"
+   "function_format",
+   "functions_log_remove"
   ],
   "functions_format": [
    "functions_format"
@@ -5167,7 +5171,8 @@
    "list_map_squash",
    "list_map_unordered_async",
    "js_imports_declarations",
-   "js_imports_unused"
+   "js_imports_unused",
+   "functions_log_remove"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -9910,6 +9915,9 @@
   ],
   "js_log_remove": [
    "js_log_remove"
+  ],
+  "functions_log_remove": [
+   "functions_log_remove"
   ]
  },
  "functions": {
@@ -18789,6 +18797,17 @@
     "lambda3",
     "callee",
     "name"
+   ]
+  },
+  "functions_log_remove": {
+   "async": true,
+   "identifiers": [
+    "list_wait",
+    "function_format",
+    "functions_names",
+    "list_map",
+    "functions_log_remove",
+    "mapped"
    ]
   }
  },
