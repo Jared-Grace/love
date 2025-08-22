@@ -1,19 +1,18 @@
+import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_identifier_defineds } from "./js_identifier_defineds.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-import { log } from "./log.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-import { list_get_end } from "./list_get_end.mjs";
 export function js_let_add(ast) {
   function lambda(v) {
     let { stack } = v;
     let stack1 = list_get_end_1(stack);
     let type_is = js_node_type_is(stack1, "ExpressionStatement");
-    if (!type_is) {
+    if (not(type_is)) {
       return;
     }
     let { node } = v;
