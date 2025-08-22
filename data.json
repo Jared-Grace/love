@@ -1432,7 +1432,8 @@
   "ps",
   "marker_next_await",
   "f",
-  "a mna marker_next_await"
+  "a mna marker_next_await",
+  "mna"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
