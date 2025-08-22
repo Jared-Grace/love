@@ -1470,7 +1470,8 @@
   "a rg range",
   "a mdm marker_next_delete_multiple",
   "eac",
-  "fs js_await_add"
+  "fs js_await_add",
+  "mdm 2"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
