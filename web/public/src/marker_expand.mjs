@@ -1,7 +1,6 @@
 import { todo } from "./todo.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declare } from "./js_declare.mjs";
-import { object_property_set } from "./object_property_set.mjs";
 import { js_return_on } from "./js_return_on.mjs";
 import { list_last } from "./list_last.mjs";
 import { each_reverse } from "./each_reverse.mjs";
@@ -10,11 +9,6 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { each_pair } from "./each_pair.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { lists_get } from "./lists_get.mjs";
-import { each_index } from "./each_index.mjs";
-import { js_identifier_is } from "./js_identifier_is.mjs";
-import { list_all } from "./list_all.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
@@ -22,26 +16,17 @@ import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { log } from "./log.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { function_parse } from "./function_parse.mjs";
-import { assert } from "./assert.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_first } from "./list_first.mjs";
-import { error } from "./error.mjs";
-import { each } from "./each.mjs";
 import { noop } from "./noop.mjs";
 import { list_add } from "./list_add.mjs";
 export async function marker_expand() {
   let f_name = await data_function_current_get();
-  return await function_transform_marker(f_name, lambda2);
+  let v = await function_transform_marker(f_name, lambda2);
+  return v;
   async function lambda2(a) {
     let { next, index } = marker_next_get(a);
     let { expression, declaration: declaration_call } =
@@ -66,17 +51,14 @@ export async function marker_expand() {
     }
     let body_block = js_declaration_to_block_body(declaration);
     let last = list_last(body_block);
-    js_return_on(
-      last,
-      () => {
-        list_remove(body_block, last);
-        let { argument } = last;
-        let name = js_declaration_name(declaration_call);
-        let assign = js_declare(name, argument);
-        list_add(body_block, assign);
-      },
-      noop,
-    );
+    function lambda() {
+      list_remove(body_block, last);
+      let { argument } = last;
+      let name = js_declaration_name(declaration_call);
+      let assign = js_declare(name, argument);
+      list_add(body_block, assign);
+    }
+    js_return_on(last, lambda, noop);
     let { stack2 } = a;
     list_remove(stack2, next);
     each_reverse(body_block, lambda4);
