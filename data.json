@@ -2075,7 +2075,8 @@
    "function_imports_fix",
    "data_file_update_inner",
    "marker_next_await",
-   "function_parse_strict_declaration"
+   "function_parse_strict_declaration",
+   "function_exists_strict"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3293,7 +3294,8 @@
    "string_empty_is",
    "throws_not_async",
    "data_file_update_inner",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_exists_strict"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5214,7 +5216,8 @@
    "function_open",
    "function_open_editor",
    "function_parse",
-   "function_read"
+   "function_read",
+   "function_exists_strict"
   ],
   "functions_search": [
    "functions_search",
@@ -5753,7 +5756,8 @@
   ],
   "u": [
    "function_exists",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_exists_strict"
   ],
   "to": [
    "function_parse_declaration",
@@ -9875,7 +9879,11 @@
    "function_parse_strict_declaration"
   ],
   "function_exists_inner": [
-   "function_exists"
+   "function_exists",
+   "function_exists_strict"
+  ],
+  "function_exists_strict": [
+   "function_exists_strict"
   ]
  },
  "functions": {
@@ -18718,6 +18726,17 @@
     "f_name",
     "parsed",
     "to"
+   ]
+  },
+  "function_exists_strict": {
+   "async": true,
+   "identifiers": [
+    "function_exists_inner",
+    "function_name_to_path_unalias",
+    "function_exists_strict",
+    "f_name",
+    "u",
+    "e"
    ]
   }
  },
