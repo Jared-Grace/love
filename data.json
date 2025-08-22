@@ -1578,7 +1578,8 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_await_add"
+   "js_await_add",
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -8435,7 +8436,8 @@
    "js_node_atomize",
    "marker_call_replace_generic",
    "marker_expand",
-   "js_call_function_if"
+   "js_call_function_if",
+   "js_log_remove"
   ],
   "v4": [
    "js_marker_name_get"
@@ -18765,6 +18767,7 @@
   "js_log_remove": {
    "async": false,
    "identifiers": [
+    "log",
     "list_get_end_1",
     "js_node_type_is_if",
     "js_visit_type",
@@ -18777,6 +18780,7 @@
     "node",
     "e1",
     "lambda3",
+    "callee",
     "name"
    ]
   }
