@@ -12,5 +12,5 @@ export async function functions_log_remove() {
     return output;
   }
   let mapped = list_map(await functions_names(), lambda2);
-  await list_wait(mapped);
+  return await list_wait(mapped);
 }
