@@ -1423,7 +1423,6 @@
   "s next,marker",
   "c mn marker_next_await",
   "cd",
-  "p",
   "s assert",
   "ps",
   "marker_next_await",
@@ -1438,6 +1437,7 @@
   "eac",
   "ms 2",
   "a mpa marker_param_add",
+  "p",
   "mpa name"
  ],
  "marker_current": "2",
