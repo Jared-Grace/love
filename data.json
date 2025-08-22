@@ -7271,7 +7271,8 @@
    "js_if_blockify_generic",
    "js_node_atomize",
    "marker_down_generic",
-   "object_copy"
+   "object_copy",
+   "js_await_add"
   ],
   "list_get_end_1": [
    "js_atomize",
@@ -7416,7 +7417,8 @@
    "list_unique_reverse",
    "object_copy",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_await_add"
   ],
   "js_bang_to_not": [
    "js_auto",
@@ -12793,6 +12795,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "object_copy",
     "js_node_type_not_is_if",
     "list_get_end_1",
     "log",
@@ -12816,7 +12819,8 @@
     "async_is",
     "stack",
     "stack1",
-    "lambda4"
+    "lambda4",
+    "copy"
    ],
    "async": true
   },
