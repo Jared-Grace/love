@@ -1,8 +1,6 @@
 import { functions_names } from "./functions_names.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
-import { marker } from "./marker.mjs";
-import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -16,7 +14,7 @@ export async function function_params_consolidate(f_name) {
     const params_names = js_identifiers_to_names(params);
     function lambda2(param_name) {
       let expression = js_parse_expression(param_name);
-      return {
+      let v = {
         type: "Property",
         method: false,
         shorthand: true,
@@ -25,6 +23,7 @@ export async function function_params_consolidate(f_name) {
         value: expression,
         kind: "init",
       };
+      return v;
     }
     let properties = list_map(params_names, lambda2);
     let arg_new = {
