@@ -1495,10 +1495,11 @@
   "u la",
   "c function_parse_declaration function_parse_strict_declaration",
   "c function_exists function_exists_strict",
-  "s log"
+  "s log",
+  "nj log_remove"
  ],
  "marker_current": "1",
- "function_current": "function_exists_strict",
+ "function_current": "js_log_remove",
  "terminal": false,
  "identifiers": {
   "log": [
