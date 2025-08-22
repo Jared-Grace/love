@@ -1506,7 +1506,8 @@
   "cd",
   "fs jaa",
   "muu",
-  "me"
+  "me",
+  "mdd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
