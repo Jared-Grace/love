@@ -1,3 +1,4 @@
+import { null_not_is } from "./null_not_is.mjs";
 import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -19,6 +20,7 @@ export async function marker_enter() {
       list_remove(stack2, stack1);
     } else if (nt === "IfStatement") {
     }
+    let nn = null_not_is(value);
     if (false) {
     }
   }
