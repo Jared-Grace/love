@@ -8249,7 +8249,8 @@
    "js_if_else_if_combine"
   ],
   "consequent": [
-   "js_if_else_if_combine"
+   "js_if_else_if_combine",
+   "marker_enter"
   ],
   "test": [
    "js_if_else_if_combine",
@@ -16611,6 +16612,7 @@
     "stack2",
     "body",
     "nt",
+    "consequent",
     "nn",
     "v"
    ],
