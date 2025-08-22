@@ -1580,7 +1580,6 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_await_add",
    "js_log_remove"
   ],
   "function_path_to_name": [
@@ -12891,7 +12890,6 @@
     "object_copy",
     "js_node_type_not_is_if",
     "list_get_end_1",
-    "log",
     "js_function_last_asyncify",
     "object_property_exists_not",
     "js_visit_type_each_async",
