@@ -2533,7 +2533,8 @@
    "marker_if_test_replace",
    "marker_down_1",
    "js_log_remove",
-   "functions_log_remove"
+   "functions_log_remove",
+   "function_name_to_base"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11655,7 +11656,8 @@
    "identifiers": [
     "function_name_extension",
     "function_name_to_base",
-    "funcName"
+    "funcName",
+    "v"
    ],
    "async": false
   },
