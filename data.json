@@ -1413,7 +1413,6 @@
   "u mda",
   "s js_visit",
   "s marker",
-  "mg",
   "md 2",
   "mcr c jvtea",
   "mcr c js_visit_type_each_async",
@@ -1444,7 +1443,8 @@
   "u u",
   "eac",
   "s exist",
-  "cd"
+  "cd",
+  "mg"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
