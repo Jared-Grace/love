@@ -141,7 +141,8 @@
   "mpa": "marker_param_add",
   "ox": "object_property_exists",
   "mi": "marker_if_test_replace",
-  "mbt": "marker_bottom"
+  "mbt": "marker_bottom",
+  "rg": "range"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1466,7 +1467,8 @@
   "mrt",
   "md 1",
   "fw mnd marker_next_delete_multiple",
-  "s range"
+  "s range",
+  "a rg range"
  ],
  "marker_current": "1",
  "function_current": "marker_next_delete_multiple",
