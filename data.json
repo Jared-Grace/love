@@ -2045,7 +2045,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "marker_next_await"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4474,7 +4475,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "marker_next_await"
   ],
   "each_pair": [
    "each_pair",
@@ -18512,6 +18514,8 @@
     "expression",
     "code_expression",
     "parsed",
+    "object",
+    "property_name",
     "value",
     "list"
    ]
