@@ -6916,7 +6916,6 @@
    "marker_functionize",
    "marker_index",
    "marker_next_delete",
-   "marker_next_get",
    "marker_next_index",
    "marker_previous_index",
    "marker_leave"
@@ -16968,7 +16967,6 @@
     "object_merge",
     "marker_next_index",
     "list_get",
-    "list_index_of",
     "marker_next_get",
     "a",
     "ni",
