@@ -9936,11 +9936,13 @@
   ],
   "js_await": [
    "marker_next_await",
-   "js_await"
+   "js_await",
+   "js_await_add"
   ],
   "awaited": [
    "js_await",
-   "marker_next_await"
+   "marker_next_await",
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12883,6 +12885,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "js_await",
     "object_copy",
     "js_node_type_not_is_if",
     "list_get_end_1",
@@ -12907,7 +12910,8 @@
     "stack",
     "stack1",
     "lambda4",
-    "copy"
+    "copy",
+    "awaited"
    ],
    "async": true
   },
