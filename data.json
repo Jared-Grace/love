@@ -3921,7 +3921,8 @@
    "js_outside_move",
    "data_identifiers_search",
    "function_imports_fix",
-   "functions_paths"
+   "functions_paths",
+   "function_parse_strict_declaration"
   ],
   "each_async": [
    "data_files_update",
@@ -5219,8 +5220,7 @@
    "function_open",
    "function_open_editor",
    "function_parse",
-   "function_read",
-   "function_parse_strict_declaration"
+   "function_read"
   ],
   "functions_search": [
    "functions_search",
@@ -18717,8 +18717,8 @@
   "function_parse_strict_declaration": {
    "async": true,
    "identifiers": [
+    "function_name_to_path",
     "file_js_parse",
-    "function_name_to_path_unalias",
     "function_parse_declaration_inner",
     "marker",
     "function_parse_strict_declaration",
