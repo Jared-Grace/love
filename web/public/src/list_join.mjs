@@ -1,1 +1,3 @@
-export function list_join( list,separator ){return list.join(separator)}
+export function list_join(list, separator) {
+  return list.join(separator);
+}

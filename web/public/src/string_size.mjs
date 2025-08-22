@@ -1,3 +1,4 @@
 export function string_size(s) {
-  return s.length;
+  let v = s.length;
+  return v;
 }
