@@ -1413,7 +1413,6 @@
   "function_aliases_restore",
   "s rename",
   "function_alias_rename marker_delete_above marker_above_delete",
-  "ps",
   "o r",
   "u mad",
   "u mda",
@@ -1430,7 +1429,8 @@
   "fs jaa",
   "marker_next_await",
   "p",
-  "s assert"
+  "s assert",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
