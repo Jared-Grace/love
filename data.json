@@ -1459,7 +1459,8 @@
   "mc js_function_last_asyncify",
   "ire async_is2 2",
   "ire stack2 2",
-  "ms 1"
+  "ms 1",
+  "mu"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
