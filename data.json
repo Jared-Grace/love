@@ -1576,7 +1576,6 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "git_push",
    "js_await_add"
   ],
   "function_path_to_name": [
@@ -2667,7 +2666,8 @@
    "log_keep",
    "prompt_previous",
    "server",
-   "log_error"
+   "log_error",
+   "git_push"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -12439,7 +12439,6 @@
    "identifiers": [
     "marker",
     "date_diff_hours",
-    "log",
     "lambda_get",
     "date_to",
     "date_iso_to",
@@ -12450,6 +12449,7 @@
     "git_push_command",
     "command_line_git",
     "catch_log_async",
+    "log_keep",
     "git_push",
     "command_git",
     "lambda",
