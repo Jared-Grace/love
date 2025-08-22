@@ -4435,7 +4435,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "marker_enter"
   ],
   "lists_get": [
    "each_multiple",
@@ -5341,7 +5342,6 @@
    "js_stack_filtered",
    "js_visit_children_get",
    "js_visit_filter",
-   "marker_enter",
    "marker_next_get",
    "not",
    "search_generic",
@@ -6892,7 +6892,8 @@
    "marker_expand",
    "marker_functionize",
    "marker_next_delete",
-   "marker_next_get"
+   "marker_next_get",
+   "marker_enter"
   ],
   "list_index_of": [
    "function_transform_marker_empty",
@@ -6983,7 +6984,6 @@
    "marker_call_replace_generic",
    "marker_down_choices",
    "marker_down_generic",
-   "marker_enter",
    "marker_expand",
    "marker_functionize",
    "marker_move",
@@ -7648,7 +7648,8 @@
    "marker_new",
    "marker_next_delete",
    "marker_next_get",
-   "marker_next_index"
+   "marker_next_index",
+   "marker_enter"
   ],
   "f_name_call": [
    "js_call_new",
@@ -8416,7 +8417,8 @@
    "js_node_is",
    "marker_next_get",
    "marker_up",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_enter"
   ],
   "js_node_types_includes": [
    "js_node_types_includes",
@@ -16621,12 +16623,13 @@
   },
   "marker_enter": {
    "identifiers": [
+    "list_get",
+    "marker_next_index",
     "object_property_get",
     "null_not_is",
     "js_declaration_to_block_body",
     "list_add_first",
     "list_remove",
-    "marker_next_get",
     "js_node_type",
     "js_types_function_includes",
     "function_transform_marker_current",
@@ -16634,10 +16637,11 @@
     "marker_enter",
     "lambda",
     "a",
-    "n",
-    "next",
+    "ni",
+    "index",
     "stack1",
     "stack2",
+    "next",
     "body",
     "nt",
     "consequent",
