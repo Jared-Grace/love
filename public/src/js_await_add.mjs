@@ -8,7 +8,6 @@ export async function js_await_add(ast) {
   let functions = await data_functions_get();
   let name = js_declaration_single_name(ast);
   let f = object_property_get(functions, name);
-  marker("1");
   let async_is = object_property_get(f, "async");
   async function lambda(v) {
     let node = object_property_get(v, "node");
@@ -18,5 +17,6 @@ export async function js_await_add(ast) {
     }
     await js_call_function_if(node, lambda3);
   }
+  marker("1");
   js_visit_type(ast, "CallExpression", lambda);
 }
