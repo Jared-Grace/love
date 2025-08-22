@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -8,7 +9,10 @@ export function js_log_remove(ast) {
     let { stack, node } = v;
     let e1 = list_get_end_1(stack);
     function lambda3() {
-      let name = node;
+      let { callee } = node;
+      let { name } = callee;
+      if (name === log.name) {
+      }
     }
     js_node_type_is_if(e1, "ExpressionStatement", lambda3);
   }
