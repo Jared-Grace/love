@@ -17,6 +17,7 @@ export async function marker_enter() {
       body = js_declaration_to_block_body(next);
       list_add_first(body, stack1);
       list_remove(stack2, stack1);
+    } else if (nt === "IfStatement") {
     }
   }
   let v = await function_transform_marker_current(lambda);
