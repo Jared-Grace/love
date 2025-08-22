@@ -1424,7 +1424,6 @@
   "c mn marker_next_await",
   "cd",
   "s assert",
-  "ps",
   "marker_next_await",
   "f",
   "a mna marker_next_await",
@@ -1442,7 +1441,8 @@
   "mb $i",
   "mc ox",
   "u ox",
-  "a ox object_property_exists"
+  "a ox object_property_exists",
+  "ps"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
