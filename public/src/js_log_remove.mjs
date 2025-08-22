@@ -15,7 +15,7 @@ export function js_log_remove(ast) {
       let { callee } = node;
       let { name } = callee;
       if (name === log.name) {
-        list_remove(list, item);
+        list_remove(e2, e1);
       }
     }
     js_node_type_is_if(e1, "ExpressionStatement", lambda3);
