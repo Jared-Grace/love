@@ -1500,12 +1500,12 @@
   "fs jaa",
   "s auto",
   "s decl,name",
-  "cd",
   "ml",
   "md 1",
   "mcr 0 stack1",
   "fw mu marker_up_1",
-  "a muu marker_up_1"
+  "a muu marker_up_1",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_up_1",
