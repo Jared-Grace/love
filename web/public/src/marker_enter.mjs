@@ -14,17 +14,18 @@ export async function marker_enter() {
     marker("1");
     let ni = marker_next_index(a);
     let { index, stack1, stack2 } = ni;
-    let next = list_get(stack2, index);
     let body = null;
-    while (body === null) {}
-    let nt = js_node_type(next);
-    if (js_types_function_includes(nt)) {
-      body = js_declaration_to_block_body(next);
-    } else if (nt === "IfStatement") {
-      let consequent = object_property_get(next, "consequent");
-      body = object_property_get(consequent, "body");
+    while (body === null) {
+      let next = list_get(stack2, index);
+      let nt = js_node_type(next);
+      if (js_types_function_includes(nt)) {
+        body = js_declaration_to_block_body(next);
+      } else if (nt === "IfStatement") {
+        let consequent = object_property_get(next, "consequent");
+        body = object_property_get(consequent, "body");
+      }
+      index++;
     }
-    index++;
     let nn = null_not_is(body);
     if (nn) {
       list_add_first(body, stack1);
