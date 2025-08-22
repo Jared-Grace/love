@@ -138,7 +138,8 @@
   "mu": "marker_up",
   "mb": "marker_below",
   "mna": "marker_next_await",
-  "mpa": "marker_param_add"
+  "mpa": "marker_param_add",
+  "ox": "object_property_exists"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1401,7 +1402,6 @@
   "function_alias_rename",
   "s exist",
   "u ope",
-  "a ox object_property_exists",
   "de object_property_exists_not",
   "s data_tr",
   "u e",
@@ -1441,7 +1441,8 @@
   "mpa name",
   "mb $i",
   "mc ox",
-  "u ox"
+  "u ox",
+  "a ox object_property_exists"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
