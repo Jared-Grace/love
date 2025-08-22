@@ -5729,7 +5729,8 @@
    "object_merge",
    "object_property_from",
    "object_replace",
-   "js_imports_unused"
+   "js_imports_unused",
+   "marker_next_get"
   ],
   "r": [
    "function_format",
@@ -9011,9 +9012,6 @@
   ],
   "marker_next_delete": [
    "marker_next_delete"
-  ],
-  "to2": [
-   "marker_next_get"
   ],
   "marker_remove": [
    "marker_remove",
@@ -16974,7 +16972,7 @@
     "stack2",
     "next",
     "n",
-    "to2"
+    "to"
    ],
    "async": false
   },
