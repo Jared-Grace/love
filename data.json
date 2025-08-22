@@ -2203,7 +2203,8 @@
    "function_aliases_restore",
    "marker_next_await",
    "marker_param_add",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_next_delete_multiple"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2366,7 +2367,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_next_delete_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -3170,7 +3172,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "marker_next_delete_multiple"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3904,7 +3907,8 @@
    "js_visit_type_each_async",
    "marker_functionize",
    "tasks_run",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "marker_next_delete_multiple"
   ],
   "f_paths": [
    "data_files_update",
@@ -18611,9 +18615,13 @@
   "marker_next_delete_multiple": {
    "async": true,
    "identifiers": [
+    "each_async",
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
+    "list",
+    "lambda",
+    "item",
     "v"
    ]
   }
