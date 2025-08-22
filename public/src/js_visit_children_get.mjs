@@ -8,7 +8,14 @@ export function js_visit_children_get(n) {
     return n;
   }
   if (string_is(n)) {
-    return [];
+    let v = [];
+    return v;
   }
-  return list_map(object_properties(n), (p) => object_property_get(n, p));
+  function lambda(p) {
+    let value = object_property_get(n, p);
+    return value;
+  }
+  let list = object_properties(n);
+  let mapped = list_map(list, lambda);
+  return mapped;
 }
