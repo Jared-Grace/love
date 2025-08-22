@@ -1,5 +1,4 @@
 import { identity } from "./identity.mjs";
-import { log } from "./log.mjs";
 import { log_keep } from "./log_keep.mjs";
 export async function catch_log_async(lambda) {
   let message_get = identity;
