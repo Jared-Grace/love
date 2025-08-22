@@ -1,3 +1,4 @@
+import { js_stack_last } from "./js_stack_last.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
@@ -11,6 +12,7 @@ export async function marker_if_test_replace() {
   marker("1");
   async function lambda(a) {
     let { stack } = a;
+    let last = js_stack_last(stack3, type);
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
     list_is_assert(stack5);
