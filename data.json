@@ -1353,7 +1353,6 @@
   "a ml marker_leave",
   "fd",
   "s assert,list",
-  "me",
   "o w",
   "o md",
   "c md marker_up",
@@ -1446,7 +1445,8 @@
   "mg",
   "mcr c object_property_exists_not",
   "ir exists en",
-  "md 1"
+  "md 1",
+  "me"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
