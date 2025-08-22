@@ -18,7 +18,8 @@ export async function marker_enter() {
     if (js_types_function_includes(nt)) {
       body = js_declaration_to_block_body(next);
     } else if (nt === "IfStatement") {
-      body = object_property_get(next, "consequent");
+      let consequent = object_property_get(next, "consequent");
+      body = object_property_get(consequent, "body");
     }
     let nn = null_not_is(body);
     if (nn) {
