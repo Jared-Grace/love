@@ -1374,7 +1374,6 @@
   "ml",
   "mc dpg",
   "s ident,repl",
-  "cd",
   "irs functions",
   "ir 'functions'",
   "ir property_name 'functions'",
@@ -1429,7 +1428,8 @@
   "mcr c js_visit_type_each_async",
   "s next,marker",
   "c mn marker_next_await",
-  "eac"
+  "eac",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
