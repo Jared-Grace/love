@@ -1426,7 +1426,8 @@
   "eac",
   "mg",
   "md 2",
-  "mcr c jvtea"
+  "mcr c jvtea",
+  "mcr c js_visit_type_each_async"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
