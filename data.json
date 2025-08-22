@@ -2085,8 +2085,7 @@
    "data_file_update_inner",
    "marker_next_await",
    "function_parse_strict_declaration",
-   "function_exists_strict",
-   "functions_log_remove"
+   "function_exists_strict"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2309,8 +2308,7 @@
    "function_alias_rename",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "functions_log_remove"
+   "marker_param_add"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2904,8 +2902,7 @@
    "function_transform",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic",
-   "functions_log_remove"
+   "marker_call_replace_generic"
   ],
   "args": [
    "watch",
@@ -3816,8 +3813,7 @@
    "marker_functionize",
    "marker_top",
    "js_imports_unused",
-   "functions_paths",
-   "functions_log_remove"
+   "functions_paths"
   ],
   "functions_names": [
    "functions_names",
@@ -3829,8 +3825,7 @@
    "function_params_consolidate",
    "js_imports_missing",
    "marker_functionize",
-   "functions_paths",
-   "functions_log_remove"
+   "functions_paths"
   ],
   "paths": [
    "functions_names",
@@ -5156,8 +5151,7 @@
    "functions_format",
    "function_dependencies_code",
    "list_map_unordered_async",
-   "list_wait",
-   "functions_log_remove"
+   "list_wait"
   ],
   "function_format": [
    "functions_format",
@@ -5176,8 +5170,7 @@
    "list_map_squash",
    "list_map_unordered_async",
    "js_imports_declarations",
-   "js_imports_unused",
-   "functions_log_remove"
+   "js_imports_unused"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -5539,8 +5532,7 @@
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new",
-   "functions_log_remove"
+   "task_new"
   ],
   "js_arrow_blockify": [
    "function_auto",
@@ -9924,6 +9916,9 @@
    "functions_log_remove"
   ],
   "functions_log_remove": [
+   "functions_log_remove"
+  ],
+  "functions_transform": [
    "functions_log_remove"
   ]
  },
@@ -18809,18 +18804,11 @@
   "functions_log_remove": {
    "async": true,
    "identifiers": [
-    "function_transform",
+    "functions_transform",
     "marker",
-    "list_wait",
-    "functions_names",
-    "list_map",
     "js_log_remove",
     "functions_log_remove",
     "lambda",
-    "lambda2",
-    "f_name",
-    "output",
-    "mapped",
     "v"
    ]
   }
