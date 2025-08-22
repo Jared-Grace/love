@@ -1,7 +1,6 @@
 import { object_copy } from "./object_copy.mjs";
 import { js_node_type_not_is_if } from "./js_node_type_not_is_if.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { log } from "./log.mjs";
 import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
 import { object_property_exists_not } from "./object_property_exists_not.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
