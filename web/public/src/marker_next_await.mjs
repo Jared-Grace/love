@@ -1,18 +1,17 @@
-import { marker_current_set } from "./marker_current_set.mjs";
-import { js_marker_insert } from "./js_marker_insert.mjs";
-import { marker } from "./marker.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
+import { list_adder_async } from "./list_adder_async.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 export async function marker_next_await() {
-  marker("1");
   let f_name = await data_function_current_get();
-  let v = await function_transform_marker(f_name, lambda);
-  return v;
-  async function lambda(a) {
-    let { index, stack2 } = marker_next_index(a);
-    let name = "2";
-    await js_marker_insert(name, stack2, index);
-    marker_current_set(name);
+  async function lambda2(la) {
+    await function_transform_marker(f_name, lambda);
+    async function lambda(a) {
+      let { next } = marker_next_get(a);
+      la(await js_unparse(next));
+    }
   }
+  let list = list_adder_async(lambda2);
+  return list;
 }
