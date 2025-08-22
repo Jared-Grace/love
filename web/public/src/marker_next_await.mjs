@@ -14,9 +14,9 @@ export async function marker_next_await() {
       let { next } = marker_next_get(a);
       js_node_type_is_assert(next, "ExpressionStatement");
       let code_expression = js_code_await("a");
-      let expression = js_parse_expression(code_expression);
-      object_property_set(expression, "argument", value);
-      la(expression);
+      let parsed = js_parse_expression(code_expression);
+      object_property_set(parsed, "argument", value);
+      la(parsed);
     }
   }
   let list = list_adder_async(lambda2);
