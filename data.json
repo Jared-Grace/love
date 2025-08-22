@@ -5621,7 +5621,8 @@
    "js_imports_declarations",
    "js_identifiers_named_count",
    "js_await_add",
-   "js_call_function_if"
+   "js_call_function_if",
+   "marker_next_await"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6233,7 +6234,8 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async"
+   "js_visit_type_each_async",
+   "marker_next_await"
   ],
   "method": [
    "function_params_consolidate"
@@ -8167,7 +8169,8 @@
   ],
   "js_node_type_is_assert": [
    "js_identifier_replace",
-   "js_node_type_is_assert"
+   "js_node_type_is_assert",
+   "marker_next_await"
   ],
   "name_from": [
    "js_identifier_replace"
@@ -18484,6 +18487,7 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
+    "js_node_type_is_assert",
     "list_adder_async",
     "marker_next_get",
     "function_transform_marker",
@@ -18495,6 +18499,8 @@
     "lambda",
     "a",
     "next",
+    "node",
+    "type",
     "list"
    ]
   }
