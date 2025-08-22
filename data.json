@@ -535,7 +535,6 @@
   "au function_transform_marker_all",
   "i function_transform",
   "i html_new",
-  "ms 1",
   "s html",
   "i js_outside_move",
   "de export async function html_overwrite(name, body, file_path) {",
@@ -1456,9 +1455,10 @@
   "mcr 0 functions",
   "mcr 1 name",
   "ir value f",
-  "md 1"
+  "md 1",
+  "ms 1"
  ],
- "marker_current": "2",
+ "marker_current": "1",
  "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
