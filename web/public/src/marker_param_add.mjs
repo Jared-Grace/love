@@ -8,6 +8,7 @@ export async function marker_param_add(param_name) {
   async function lambda2(la) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
+      let stack = a;
       let f = js_stack_last_function(stack);
       js_declaration_param_add(f, param_name);
     }
