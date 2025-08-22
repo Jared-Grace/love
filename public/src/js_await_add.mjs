@@ -7,7 +7,6 @@ import { js_call_function_if } from "./js_call_function_if.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
-  log("message");
   let functions = await data_functions_get();
   marker("1");
   async function lambda(v) {
@@ -17,6 +16,7 @@ export async function js_await_add(ast) {
       if (en) {
         return;
       }
+      log("message");
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       let stack = object_property_get(v, "stack");
