@@ -1769,7 +1769,8 @@
    "marker_above_delete",
    "function_aliases_restore",
    "marker_if_test_replace",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "js_node_type_is_if"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14618,6 +14619,7 @@
   },
   "js_node_type_is_if": {
    "identifiers": [
+    "marker",
     "js_node_type_is",
     "js_node_type_is_if",
     "node",
