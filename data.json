@@ -1470,7 +1470,6 @@
   "ir stack2 2",
   "p",
   "ire stack2 2",
-  "md 1",
   "mc l",
   "mcr 0 e1",
   "ir e1 stack1",
@@ -1482,7 +1481,8 @@
   "ir type 'AwaitExpression'",
   "o js_node_type_is_if",
   "s not",
-  "c js_node_type_is_if js_node_type_not_is_if"
+  "c js_node_type_is_if js_node_type_not_is_if",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_node_type_not_is_if",
