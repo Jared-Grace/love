@@ -1418,7 +1418,6 @@
   "c mc marker_param_add",
   "s param",
   "a mpa marker_param_add",
-  "p",
   "mpa name",
   "mb $i",
   "u ox",
@@ -1465,6 +1464,7 @@
   "a mbt marker_bottom",
   "mg",
   "cd",
+  "p",
   "mbt"
  ],
  "marker_current": "1",
