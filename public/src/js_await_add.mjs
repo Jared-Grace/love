@@ -1,3 +1,4 @@
+import { js_node_type_not_is_if } from "./js_node_type_not_is_if.mjs";
 import { function_copy } from "./function_copy.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -26,7 +27,7 @@ export async function js_await_add(ast) {
       let stack1 = list_get_end_1(stack);
       function lambda4() {}
       marker("1");
-      await function_copy(f_name_old, f_name_new);
+      await js_node_type_not_is_if(f_name_old, f_name_new);
       js_node_type_is_if(node, "AwaitExpression", lambda4);
       log(stack1);
     }
