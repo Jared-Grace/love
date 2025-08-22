@@ -7658,7 +7658,8 @@
   ],
   "js_code_await": [
    "js_code_await",
-   "js_code_call_args_await_maybe"
+   "js_code_call_args_await_maybe",
+   "marker_next_await"
   ],
   "js_code_wrap_braces": [
    "js_code_braces_empty",
@@ -18494,6 +18495,7 @@
     "marker_next_get",
     "function_transform_marker",
     "data_function_current_get",
+    "js_code_await",
     "marker_next_await",
     "f_name",
     "lambda2",
@@ -18501,8 +18503,8 @@
     "lambda",
     "a",
     "next",
-    "expression",
     "code_expression",
+    "expression",
     "list"
    ]
   }
