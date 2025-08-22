@@ -15,8 +15,8 @@ export async function marker_next_await() {
       let { next } = marker_next_get(a);
       js_node_type_is_assert(next, "ExpressionStatement");
       let expression = object_property_get(next, "expression");
-      let parsed = js_await(expression);
-      object_property_set(next, "expression", parsed);
+      let awaited = js_await(expression);
+      object_property_set(next, "expression", awaited);
       let code = js_unparse(next);
       la(code);
     }
