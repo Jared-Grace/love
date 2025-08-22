@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
@@ -10,6 +11,7 @@ export async function marker_next_await() {
     async function lambda(a) {
       let { next } = marker_next_get(a);
       js_node_type_is_assert(next, "ExpressionStatement");
+      let expression = js_parse_expression(code_expression);
       la(next);
     }
   }
