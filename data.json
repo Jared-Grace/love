@@ -9719,6 +9719,9 @@
   ],
   "mb": [
    "function_aliases_restore"
+  ],
+  "js_keyword_await": [
+   "js_code_await"
   ]
  },
  "functions": {
@@ -13009,6 +13012,7 @@
   },
   "js_code_await": {
    "identifiers": [
+    "js_keyword_await",
     "js_code_await",
     "code",
     "v"
