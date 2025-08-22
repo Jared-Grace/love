@@ -2062,7 +2062,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "marker_enter"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2764,7 +2765,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "marker_enter"
   ],
   "name": [
    "watch",
@@ -3069,7 +3071,8 @@
    "marker_above_generic",
    "marker_above_delete",
    "function_alias_rename",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_enter"
   ],
   "data_save": [
    "data_file_update",
@@ -4498,7 +4501,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "marker_enter"
   ],
   "each_pair": [
    "each_pair",
@@ -16591,6 +16595,7 @@
   },
   "marker_enter": {
    "identifiers": [
+    "object_property_get",
     "null_not_is",
     "js_declaration_to_block_body",
     "list_add_first",
@@ -16609,6 +16614,9 @@
     "stack2",
     "body",
     "nt",
+    "value",
+    "object",
+    "property_name",
     "nn",
     "v"
    ],
