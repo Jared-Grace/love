@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import * as acorn from "acorn";
 import { log_keep } from "./log_keep.mjs";
 export function js_parse(code) {
