@@ -1793,7 +1793,8 @@
    "function_parse_strict_declaration",
    "function_exists_strict",
    "js_log_remove",
-   "js_type"
+   "js_type",
+   "functions_log_remove"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -18802,6 +18803,7 @@
   "functions_log_remove": {
    "async": true,
    "identifiers": [
+    "marker",
     "list_wait",
     "function_format",
     "functions_names",
