@@ -1445,7 +1445,8 @@
   "s exist",
   "cd",
   "mg",
-  "mcr c object_property_exists_not"
+  "mcr c object_property_exists_not",
+  "ir exists en"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
