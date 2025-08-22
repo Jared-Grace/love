@@ -7,6 +7,7 @@ import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { js_code_await } from "./js_code_await.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function marker_next_await() {
   let f_name = await data_function_current_get();
   async function lambda2(la) {
@@ -19,7 +20,7 @@ export async function marker_next_await() {
       let parsed = js_parse_expression(code_expression);
       object_property_set(parsed, "argument", expression);
       object_property_set(next, "expression", parsed);
-      la(parsed);
+      la(js_unparse(next));
     }
   }
   let list = list_adder_async(lambda2);
