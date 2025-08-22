@@ -1472,7 +1472,8 @@
   "f",
   "me",
   "mbt",
-  "mc l1"
+  "mc l1",
+  "ir stack2 2"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
