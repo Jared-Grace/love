@@ -1399,7 +1399,6 @@
   "n function_alias_rename",
   "s invert",
   "function_alias_rename",
-  "s exist",
   "u ope",
   "de object_property_exists_not",
   "s data_tr",
@@ -1444,7 +1443,8 @@
   "ir result exists",
   "ir property_name name",
   "u u",
-  "eac"
+  "eac",
+  "s exist"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
