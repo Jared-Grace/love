@@ -1414,7 +1414,6 @@
   "f",
   "a mna marker_next_await",
   "mna",
-  "as marker",
   "c mc marker_param_add",
   "s param",
   "a mpa marker_param_add",
@@ -1462,7 +1461,8 @@
   "mx",
   "fs jaa",
   "me",
-  "s bottom"
+  "s bottom",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
