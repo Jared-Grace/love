@@ -9,7 +9,7 @@ export async function marker_next_await() {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
       let { next } = marker_next_get(a);
-      js_node_type_is_assert(node, type);
+      js_node_type_is_assert(next, "ExpressionStatement");
       la(next);
     }
   }
