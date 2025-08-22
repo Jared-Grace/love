@@ -7,12 +7,15 @@ import { list_first } from "./list_first.mjs";
 export async function function_type_first(type) {
   let f_name = await data_function_current_get();
   let { ast } = await function_parse(f_name);
-  let list = list_adder((la) => {
-    js_visit_nodes(ast, (node) => {
+  function lambda2(la) {
+    function lambda(node) {
       if (js_node_type(node) === type) {
         la(node);
       }
-    });
-  });
-  return list_first(list);
+    }
+    js_visit_nodes(ast, lambda);
+  }
+  let list = list_adder(lambda2);
+  let first = list_first(list);
+  return first;
 }
