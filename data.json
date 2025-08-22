@@ -1787,7 +1787,8 @@
    "js_node_type_is_if",
    "js_node_type_not_is_if",
    "marker_down_1",
-   "function_parse_strict_declaration"
+   "function_parse_strict_declaration",
+   "function_exists_strict"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -18731,6 +18732,7 @@
   "function_exists_strict": {
    "async": true,
    "identifiers": [
+    "marker",
     "function_exists_inner",
     "function_name_to_path_unalias",
     "function_exists_strict",
