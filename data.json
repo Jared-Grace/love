@@ -1168,7 +1168,6 @@
   "u lu",
   "a lu log_unparse",
   "s function,js",
-  "as node,type",
   "u jnti",
   "a ntsi js_node_types_is",
   "cs js_block_child_graph unparse",
@@ -1477,7 +1476,8 @@
   "mc l",
   "mcr 0 e1",
   "ir e1 stack1",
-  "as nti"
+  "as nti",
+  "as node,type"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -18643,6 +18643,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-22T18:25:42.508Z",
+ "git_push_when": "2025-08-22T19:57:12.196Z",
  "error_attention": null
 }
