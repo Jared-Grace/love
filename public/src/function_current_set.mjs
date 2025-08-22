@@ -1,5 +1,4 @@
 import { marker } from "./marker.mjs";
-import { log } from "./log.mjs";
 import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_exists } from "./function_exists.mjs";
