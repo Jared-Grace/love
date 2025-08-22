@@ -1,13 +1,7 @@
-import { object_merge } from "./object_merge.mjs";
-import { file_exists } from "./file_exists.mjs";
+import { function_exists_inner } from "./function_exists_inner.mjs";
 import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
 export async function function_exists(f_name) {
   let u = await function_name_to_path_unalias(f_name);
-  let { f_path } = u;
-  const exists = await file_exists(f_path);
-  let to = {
-    exists,
-  };
-  let e = object_merge(to, u);
+  let e = await function_exists_inner(u);
   return e;
 }
