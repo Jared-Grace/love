@@ -3,5 +3,5 @@ import { marker } from "./marker.mjs";
 export function js_log_remove(ast) {
   marker("1");
   function lambda(v) {}
-  js_visit_type(ast2, type, lambda);
+  js_visit_type(ast, "CallExpression", lambda);
 }
