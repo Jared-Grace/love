@@ -1433,7 +1433,8 @@
   "a mna marker_next_await",
   "mna",
   "ms 2",
-  "as marker"
+  "as marker",
+  "c mc marker_param_add"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
