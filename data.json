@@ -3907,8 +3907,7 @@
    "js_visit_type_each_async",
    "marker_functionize",
    "tasks_run",
-   "visit_filter_recursive_async",
-   "marker_next_delete_multiple"
+   "visit_filter_recursive_async"
   ],
   "f_paths": [
    "data_files_update",
@@ -4539,8 +4538,7 @@
   "range": [
    "each_range",
    "marker_functionize",
-   "range",
-   "marker_next_delete_multiple"
+   "range"
   ],
   "each_range": [
    "each_range",
@@ -5744,8 +5742,7 @@
    "list_remove_multiple",
    "marker_functionize",
    "range",
-   "function_aliases_restore",
-   "marker_next_delete_multiple"
+   "function_aliases_restore"
   ],
   "formatted": [
    "function_format",
@@ -9817,6 +9814,9 @@
    "marker_if_test_replace"
   ],
   "marker_next_delete_multiple": [
+   "marker_next_delete_multiple"
+  ],
+  "each_range_async": [
    "marker_next_delete_multiple"
   ]
  },
@@ -18618,15 +18618,13 @@
   "marker_next_delete_multiple": {
    "async": true,
    "identifiers": [
-    "range",
-    "each_async",
+    "each_range_async",
     "marker_next_delete",
     "marker",
     "marker_next_delete_multiple",
     "count",
     "code",
-    "lambda",
-    "r"
+    "lambda"
    ]
   }
  },
