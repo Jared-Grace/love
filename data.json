@@ -1383,7 +1383,6 @@
   "mc opg",
   "ir object value",
   "ir value functions",
-  "ir property_name name",
   "ir value2 f",
   "md 1",
   "u mb",
@@ -1444,7 +1443,8 @@
   "ps",
   "mc ox",
   "ir object functions",
-  "ir result exists"
+  "ir result exists",
+  "ir property_name name"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
