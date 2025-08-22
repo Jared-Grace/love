@@ -4513,8 +4513,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "js_await_add"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -12774,7 +12773,6 @@
     "lambda3",
     "en",
     "value",
-    "object",
     "property_name",
     "stack"
    ],
