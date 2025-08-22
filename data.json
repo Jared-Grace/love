@@ -6276,8 +6276,7 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async",
-   "marker_if_test_replace"
+   "js_visit_type_each_async"
   ],
   "method": [
    "function_params_consolidate"
@@ -7871,8 +7870,7 @@
   "stack3": [
    "js_declare_assign",
    "js_dollar",
-   "js_dollar_r",
-   "marker_if_test_replace"
+   "js_dollar_r"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -18631,8 +18629,6 @@
     "a",
     "stack",
     "last",
-    "stack3",
-    "type",
     "stack4",
     "stack5",
     "index",
