@@ -1495,7 +1495,6 @@
   "as format",
   "fm",
   "fa",
-  "s auto",
   "s decl,name",
   "ml",
   "md 1",
@@ -1512,7 +1511,8 @@
   "mdd",
   "mc or",
   "ir to node",
-  "ir from awaited"
+  "ir from awaited",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
