@@ -34,12 +34,12 @@ export async function watch() {
         } catch (error) {
           let f_name = data_file_update.name;
           if (false) {
+            await error_attention_set({
+              f_name,
+              args,
+              error: json_format_to(error),
+            });
           }
-          await error_attention_set({
-            f_name,
-            args,
-            error: json_format_to(error),
-          });
           throw error;
         }
       } finally {
