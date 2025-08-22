@@ -1460,7 +1460,8 @@
   "ire async_is2 2",
   "ire stack2 2",
   "ms 1",
-  "mu"
+  "mu",
+  "mu 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
