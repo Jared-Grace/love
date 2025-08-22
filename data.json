@@ -2310,7 +2310,8 @@
    "function_alias_rename",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "functions_log_remove"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -18818,6 +18819,7 @@
     "ast",
     "output",
     "f_name",
+    "lambda2",
     "name",
     "mapped"
    ]
