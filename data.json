@@ -1452,7 +1452,8 @@
   "a mi marker_if_test_replace",
   "fs jaa",
   "ms 2",
-  "mi en"
+  "mi en",
+  "mb $r"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
