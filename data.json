@@ -9818,9 +9818,6 @@
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
-  ],
-  "async_is2": [
-   "js_await_add"
   ]
  },
  "functions": {
@@ -12781,7 +12778,6 @@
     "en",
     "async_is",
     "stack2",
-    "async_is2",
     "stack"
    ],
    "async": true
