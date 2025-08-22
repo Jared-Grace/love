@@ -1506,7 +1506,6 @@
    "marker_down_generic",
    "marker_expand",
    "marker_functionize",
-   "marker_next",
    "marker_next_delete",
    "marker_remove",
    "marker_top",
@@ -2218,7 +2217,8 @@
    "data_file_update_inner",
    "js_declaration_single",
    "js_identifiers_named_count",
-   "function_alias_rename"
+   "function_alias_rename",
+   "marker_next"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2322,7 +2322,8 @@
    "list_first_remaining",
    "data_file_update_inner",
    "list_first_second_generic",
-   "list_skip_1"
+   "list_skip_1",
+   "marker_next"
   ],
   "v": [
    "data_identifiers_file",
@@ -3162,7 +3163,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "marker_next",
    "marker_next_delete",
    "marker_remove",
    "js_dollar_g",
@@ -6798,7 +6798,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_move",
-   "marker_next",
    "marker_next_delete",
    "js_dollar_g",
    "marker_leave",
@@ -6829,7 +6828,6 @@
    "marker_down_generic",
    "marker_expand",
    "marker_functionize",
-   "marker_next",
    "marker_next_delete",
    "marker_next_get"
   ],
@@ -6855,7 +6853,6 @@
    "marker_expand",
    "marker_functionize",
    "marker_index",
-   "marker_next",
    "marker_next_delete",
    "marker_next_get",
    "marker_next_index",
@@ -16828,20 +16825,17 @@
    "identifiers": [
     "marker_next_get",
     "js_unparse",
-    "list_get",
     "list_adder_async",
-    "log",
-    "list_insert",
-    "list_remove",
     "function_transform_marker",
     "data_function_current_get",
-    "list_index_of",
     "marker_next",
     "f_name",
+    "lambda2",
     "la",
     "lambda",
     "a",
-    "next"
+    "next",
+    "list"
    ],
    "async": true
   },
