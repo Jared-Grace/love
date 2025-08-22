@@ -1329,7 +1329,6 @@
   "dpg git_push_when",
   "x",
   "fs gp",
-  "mx",
   "s date",
   "s lambda",
   "s git",
@@ -1461,7 +1460,8 @@
   "mu",
   "mu 1",
   "me",
-  "o me"
+  "o me",
+  "mx"
  ],
  "marker_current": "1",
  "function_current": "marker_enter",
