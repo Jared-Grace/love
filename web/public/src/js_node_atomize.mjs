@@ -1,9 +1,9 @@
+import { function_exists_strict } from "./function_exists_strict.mjs";
 import { function_parse_strict_declaration } from "./function_parse_strict_declaration.mjs";
 import { js_call_function_if } from "./js_call_function_if.mjs";
 import { js_block_insert } from "./js_block_insert.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_declare } from "./js_declare.mjs";
-import { function_exists } from "./function_exists.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -39,7 +39,7 @@ export async function js_node_atomize(existing, v) {
       let { callee } = stack2;
       if (js_node_type_is(callee, "Identifier")) {
         let { name } = callee;
-        const { exists } = await function_exists(name);
+        const { exists } = await function_exists_strict(name);
         if (exists) {
           let { declaration } = await function_parse_strict_declaration(name);
           let { params } = declaration;
