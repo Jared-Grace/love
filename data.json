@@ -8776,8 +8776,7 @@
    "list_index_of_next",
    "list_index_of_previous",
    "marker_down",
-   "marker_up",
-   "marker_up_1"
+   "marker_up"
   ],
   "index_previous": [
    "list_index_of_previous",
@@ -18813,7 +18812,6 @@
     "marker_up",
     "marker",
     "marker_up_1",
-    "delta",
     "v"
    ]
   }
