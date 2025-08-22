@@ -2569,8 +2569,7 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda",
-   "js_await_add"
+   "undefined_not_is_assert_lambda"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -12781,7 +12780,6 @@
     "lambda3",
     "name",
     "en",
-    "message",
     "f",
     "async_is",
     "stack"
