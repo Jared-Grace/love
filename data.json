@@ -1423,7 +1423,6 @@
   "mna",
   "as marker",
   "c mc marker_param_add",
-  "s stack,last",
   "s param",
   "a mpa marker_param_add",
   "p",
@@ -1449,7 +1448,8 @@
   "ms 2",
   "me",
   "o ml",
-  "c ml marker_if_test_replace"
+  "c ml marker_if_test_replace",
+  "s stack,last"
  ],
  "marker_current": "1",
  "function_current": "marker_if_test_replace",
