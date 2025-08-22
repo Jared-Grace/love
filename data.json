@@ -2891,7 +2891,8 @@
    "js_await_add",
    "js_call_function_if",
    "js_declaration_single_name",
-   "js_log_remove"
+   "js_log_remove",
+   "functions_log_remove"
   ],
   "output": [
    "watch",
@@ -5160,8 +5161,7 @@
   ],
   "function_format": [
    "functions_format",
-   "function_format",
-   "functions_log_remove"
+   "function_format"
   ],
   "functions_format": [
    "functions_format"
@@ -18811,7 +18811,6 @@
     "function_transform",
     "marker",
     "list_wait",
-    "function_format",
     "functions_names",
     "list_map",
     "functions_log_remove",
@@ -18819,6 +18818,7 @@
     "ast",
     "output",
     "f_name",
+    "name",
     "mapped"
    ]
   }
