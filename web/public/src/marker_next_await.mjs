@@ -18,7 +18,7 @@ export async function marker_next_await() {
       let code_expression = js_code_await("a");
       let parsed = js_parse_expression(code_expression);
       object_property_set(parsed, "argument", expression);
-      object_property_set(object, property_name, value);
+      object_property_set(next, "expression", parsed);
       la(parsed);
     }
   }
