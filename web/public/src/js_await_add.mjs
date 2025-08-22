@@ -22,7 +22,7 @@ export async function js_await_add(ast) {
       let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
       marker("1");
-      let e1 = list_get_end_1(2);
+      let e1 = list_get_end_1(stack);
     }
     await js_call_function_if(node, lambda3);
   }
