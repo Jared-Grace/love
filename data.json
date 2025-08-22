@@ -1410,7 +1410,6 @@
   "u e",
   "u u",
   "c function_alias_rename function_aliases_restor",
-  "p",
   "c function_alias_rename function_aliases_restore",
   "function_aliases_restore",
   "s rename",
@@ -1430,6 +1429,7 @@
   "eac",
   "cd",
   "fs jaa",
+  "p",
   "marker_next_await"
  ],
  "marker_current": "1",
