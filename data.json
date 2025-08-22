@@ -1410,7 +1410,6 @@
   "c mn marker_next_await",
   "s assert",
   "marker_next_await",
-  "f",
   "a mna marker_next_await",
   "mna",
   "c mc marker_param_add",
@@ -1471,7 +1470,8 @@
   "eac",
   "fs js_await_add",
   "mdm 2",
-  "s auto"
+  "s auto",
+  "f"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
