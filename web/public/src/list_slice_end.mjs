@@ -6,5 +6,6 @@ export function list_slice_end(prompts, offset) {
   if (start < 0) {
     start = 0;
   }
-  return list_slice(prompts, start, end);
+  let result = list_slice(prompts, start, end);
+  return result;
 }
