@@ -1370,7 +1370,6 @@
   "fws add 1",
   "s data",
   "s data,get",
-  "ml",
   "mc dpg",
   "s ident,repl",
   "irs functions",
@@ -1453,7 +1452,8 @@
   "fs jaa",
   "ms 2",
   "mi en",
-  "mb $r"
+  "mb $r",
+  "ml"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
