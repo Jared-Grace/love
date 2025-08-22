@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { js_await_add } from "./js_await_add.mjs";
 import { js_bang_to_not } from "./js_bang_to_not.mjs";
 import { js_if_blockify } from "./js_if_blockify.mjs";
@@ -15,6 +16,7 @@ import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function js_auto(ast) {
+  marker("1");
   let transforms = [
     js_bang_to_not,
     js_await_add,
