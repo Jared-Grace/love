@@ -1451,7 +1451,8 @@
   "s stack,last",
   "a mi marker_if_test_replace",
   "fs jaa",
-  "ms 2"
+  "ms 2",
+  "mi en"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
