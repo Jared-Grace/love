@@ -1429,15 +1429,15 @@
   "f",
   "a mna marker_next_await",
   "mna",
-  "ms 2",
   "as marker",
   "c mc marker_param_add",
   "s stack,last",
   "s param",
   "fs jaa",
-  "eac"
+  "eac",
+  "ms 2"
  ],
- "marker_current": "1",
+ "marker_current": "2",
  "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
