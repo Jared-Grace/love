@@ -1505,7 +1505,8 @@
   "fw mu marker_up_1",
   "a muu marker_up_1",
   "cd",
-  "fs jaa"
+  "fs jaa",
+  "muu"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
