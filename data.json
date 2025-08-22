@@ -1455,7 +1455,8 @@
   "cd",
   "mc opg",
   "mcr 0 functions",
-  "mcr 1 name"
+  "mcr 1 name",
+  "ir value f"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
