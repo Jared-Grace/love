@@ -2057,7 +2057,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_await_add"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2611,7 +2612,8 @@
    "object_property_exists_assert",
    "object_property_exists_equals",
    "object_property_initialize",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_await_add"
   ],
   "object_property_equals": [
    "watch",
@@ -2882,7 +2884,8 @@
    "list_first_second",
    "list_first_remaining",
    "list_first_second_generic",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_await_add"
   ],
   "separator": [
    "watch",
@@ -4491,7 +4494,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_await_add"
   ],
   "each_pair": [
    "each_pair",
@@ -12716,6 +12720,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "object_property_exists",
     "js_visit_type_each_async",
     "data_functions_get",
     "js_declaration_single_name",
@@ -12732,6 +12737,9 @@
     "v",
     "node",
     "lambda3",
+    "result",
+    "object",
+    "property_name",
     "stack"
    ],
    "async": true
