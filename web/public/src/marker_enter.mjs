@@ -23,6 +23,7 @@ export async function marker_enter() {
       let consequent = object_property_get(next, "consequent");
       body = object_property_get(consequent, "body");
     }
+    index++;
     let nn = null_not_is(body);
     if (nn) {
       list_add_first(body, stack1);
