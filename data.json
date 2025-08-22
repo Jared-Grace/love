@@ -2071,8 +2071,7 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not",
-   "js_await_add"
+   "object_property_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -12774,7 +12773,6 @@
     "lambda3",
     "en",
     "value",
-    "property_name",
     "stack"
    ],
    "async": true
