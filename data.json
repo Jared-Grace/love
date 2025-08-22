@@ -7501,7 +7501,8 @@
    "js_if_blockify",
    "js_if_blockify_generic",
    "js_if_else_if_combine",
-   "js_visit_type_each_async"
+   "js_visit_type_each_async",
+   "js_await_add"
   ],
   "js_visit_each_async": [
    "js_call_fill",
@@ -9717,9 +9718,6 @@
   ],
   "mb": [
    "function_aliases_restore"
-  ],
-  "jvtea": [
-   "js_await_add"
   ]
  },
  "functions": {
@@ -12660,6 +12658,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "js_visit_type_each_async",
     "data_functions_get",
     "js_declaration_single_name",
     "js_call_function_if",
@@ -12675,8 +12674,7 @@
     "v",
     "node",
     "lambda3",
-    "stack",
-    "jvtea"
+    "stack"
    ],
    "async": true
   },
