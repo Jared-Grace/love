@@ -143,7 +143,8 @@
   "mi": "marker_if_test_replace",
   "mbt": "marker_bottom",
   "rg": "range",
-  "mdm": "marker_next_delete_multiple"
+  "mdm": "marker_next_delete_multiple",
+  "mdd": "marker_down_1"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1489,7 +1490,8 @@
   "md 1",
   "fw md marker_down_1",
   "p",
-  "ir delta 1"
+  "ir delta 1",
+  "a mdd marker_down_1"
  ],
  "marker_current": "1",
  "function_current": "marker_down_1",
