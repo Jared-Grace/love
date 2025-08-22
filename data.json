@@ -1790,7 +1790,8 @@
    "marker_down_1",
    "function_parse_strict_declaration",
    "function_exists_strict",
-   "js_log_remove"
+   "js_log_remove",
+   "js_type"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2245,7 +2246,8 @@
    "marker_param_add",
    "marker_if_test_replace",
    "marker_next_delete_multiple",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_type"
   ],
   "previous": [
    "data_identifiers_file",
@@ -15040,13 +15042,15 @@
   },
   "js_type": {
    "identifiers": [
+    "marker",
     "js_visit_type",
     "list_adder",
     "js_type",
     "ast",
     "node_type",
-    "vs",
-    "la"
+    "lambda",
+    "la",
+    "vs"
    ],
    "async": false
   },
