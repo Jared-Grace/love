@@ -4364,8 +4364,7 @@
    "data_watch_set",
    "function_current_set",
    "function_delete_if_exists",
-   "function_exists",
-   "js_node_atomize"
+   "function_exists"
   ],
   "marker_first": [
    "data_terminal_set",
@@ -9884,7 +9883,8 @@
    "function_exists_strict"
   ],
   "function_exists_strict": [
-   "function_exists_strict"
+   "function_exists_strict",
+   "js_node_atomize"
   ]
  },
  "functions": {
@@ -14537,12 +14537,12 @@
   },
   "js_node_atomize": {
    "identifiers": [
+    "function_exists_strict",
     "function_parse_strict_declaration",
     "js_call_function_if",
     "js_block_insert",
     "equal_by",
     "js_declare",
-    "function_exists",
     "object_replace",
     "js_parse_expression",
     "list_index_of",
