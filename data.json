@@ -2533,7 +2533,8 @@
    "js_code_await",
    "marker_if_test_replace",
    "marker_down_1",
-   "js_log_remove"
+   "js_log_remove",
+   "functions_log_remove"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -18819,7 +18820,8 @@
     "lambda2",
     "f_name",
     "output",
-    "mapped"
+    "mapped",
+    "v"
    ]
   }
  },
