@@ -2777,8 +2777,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "js_await_add"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -12773,7 +12772,6 @@
     "node",
     "lambda3",
     "en",
-    "value",
     "stack"
    ],
    "async": true
