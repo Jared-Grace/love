@@ -1,3 +1,4 @@
 export function js_keyword_null() {
-  return "null";
+  let v = "null";
+  return v;
 }

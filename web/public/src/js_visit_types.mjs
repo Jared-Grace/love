@@ -1,9 +1,6 @@
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { marker } from "./marker.mjs";
-import { log } from "./log.mjs";
 import { js_visit } from "./js_visit.mjs";
-import { js_visit_children_get } from "./js_visit_children_get.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_node_is } from "./js_node_is.mjs";
 export function js_visit_types(ast, types, lambda$v) {
   marker("1");
