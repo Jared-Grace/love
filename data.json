@@ -2412,7 +2412,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "js_log_remove"
   ],
   "v": [
    "data_identifiers_file",
@@ -3220,7 +3221,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_log_remove"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3264,7 +3266,8 @@
    "js_dollar_g",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "marker_leave"
+   "marker_leave",
+   "js_log_remove"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -18769,6 +18772,7 @@
   "js_log_remove": {
    "async": false,
    "identifiers": [
+    "list_remove",
     "list_get_end_2",
     "log",
     "list_get_end_1",
@@ -18785,7 +18789,9 @@
     "e2",
     "lambda3",
     "callee",
-    "name"
+    "name",
+    "list",
+    "item"
    ]
   }
  },
