@@ -1404,7 +1404,6 @@
   "de object_property_exists_not",
   "s data_tr",
   "u e",
-  "u u",
   "c function_alias_rename function_aliases_restor",
   "c function_alias_rename function_aliases_restore",
   "function_aliases_restore",
@@ -1444,7 +1443,8 @@
   "mc ox",
   "ir object functions",
   "ir result exists",
-  "ir property_name name"
+  "ir property_name name",
+  "u u"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
