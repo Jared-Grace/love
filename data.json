@@ -1475,7 +1475,8 @@
   "ire stack2 2",
   "md 1",
   "mc l",
-  "mcr 0 e1"
+  "mcr 0 e1",
+  "ir e1 stack1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
