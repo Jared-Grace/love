@@ -1736,7 +1736,8 @@
    "marker_above_generic",
    "marker_below",
    "marker_above_delete",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_if_test_replace"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2184,7 +2185,8 @@
    "function_alias_rename",
    "function_aliases_restore",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_if_test_replace"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2460,7 +2462,8 @@
    "function_alias_rename",
    "function_aliases_restore",
    "function_rename",
-   "js_code_await"
+   "js_code_await",
+   "marker_if_test_replace"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3193,7 +3196,8 @@
    "js_dollar_g",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -3673,7 +3677,8 @@
    "marker_above_delete",
    "function_aliases_restore",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_if_test_replace"
   ],
   "without": [
    "string_suffix_without",
@@ -4418,7 +4423,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "marker_if_test_replace"
   ],
   "lists_get": [
    "each_multiple",
@@ -6600,7 +6606,8 @@
    "marker_down_choices",
    "marker_down_generic",
    "marker_functionize",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "js_visit_type": [
    "function_transform_marker",
@@ -6733,7 +6740,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "marker_leave",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_if_test_replace"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -6762,7 +6770,8 @@
    "marker_next_index",
    "marker_previous_index",
    "marker_remove",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -6793,7 +6802,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "marker_if_test_replace"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -6802,7 +6812,8 @@
    "marker_enter",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "marker_if_test_replace"
   ],
   "marker_down_choices_lambda": [
    "function_transform_marker_empty",
@@ -6816,7 +6827,8 @@
    "list_size",
    "marker_down_choices",
    "marker_down_generic",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "list_insert": [
    "function_transform_marker_empty",
@@ -6840,7 +6852,8 @@
    "marker_next_delete",
    "js_dollar_g",
    "marker_leave",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_if_test_replace"
   ],
   "list_get": [
    "function_transform_marker_empty",
@@ -6896,7 +6909,8 @@
    "marker_next_get",
    "marker_next_index",
    "marker_previous_index",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "js_stack_list_block_is": [
    "function_transform_marker_empty",
@@ -7239,7 +7253,8 @@
    "js_if_else_if_combine",
    "js_let_add",
    "list_get_end_1",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -7342,7 +7357,8 @@
    "js_declare_assign_null",
    "js_dollar",
    "list_get_end_2",
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "fes": [
    "js_atomize_function"
@@ -9386,10 +9402,12 @@
    "marker_leave"
   ],
   "stack4": [
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "stack5": [
-   "marker_leave"
+   "marker_leave",
+   "marker_if_test_replace"
   ],
   "a4": [
    "js_marker_name_get"
@@ -9792,6 +9810,9 @@
   ],
   "en": [
    "js_await_add"
+  ],
+  "marker_if_test_replace": [
+   "marker_if_test_replace"
   ]
  },
  "functions": {
@@ -18586,6 +18607,30 @@
     "stack",
     "f",
     "list"
+   ]
+  },
+  "marker_if_test_replace": {
+   "async": true,
+   "identifiers": [
+    "list_insert",
+    "list_remove",
+    "list_get_end_2",
+    "list_get_end_1",
+    "list_index_of",
+    "list_is_assert",
+    "list_get_end",
+    "function_transform_marker_current",
+    "marker",
+    "marker_if_test_replace",
+    "lambda",
+    "a",
+    "stack",
+    "stack4",
+    "stack5",
+    "index",
+    "stack1",
+    "stack2",
+    "v"
    ]
   }
  },
