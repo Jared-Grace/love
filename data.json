@@ -1805,7 +1805,8 @@
    "js_log_remove",
    "js_type",
    "functions_log_remove",
-   "marker_up_1"
+   "marker_up_1",
+   "js_auto"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12863,6 +12864,7 @@
   },
   "js_auto": {
    "identifiers": [
+    "marker",
     "js_await_add",
     "js_bang_to_not",
     "js_if_blockify",
