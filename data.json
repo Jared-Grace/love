@@ -2045,8 +2045,7 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not",
-   "marker_next_await"
+   "object_property_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2746,8 +2745,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "marker_next_await"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -4475,8 +4473,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "marker_next_await"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -18514,9 +18511,6 @@
     "expression",
     "code_expression",
     "parsed",
-    "object",
-    "property_name",
-    "value",
     "list"
    ]
   }
