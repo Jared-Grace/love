@@ -1419,7 +1419,6 @@
   "mcr c js_visit_type_each_async",
   "s next,marker",
   "c mn marker_next_await",
-  "cd",
   "s assert",
   "marker_next_await",
   "f",
@@ -1444,7 +1443,8 @@
   "ir property_name name",
   "u u",
   "eac",
-  "s exist"
+  "s exist",
+  "cd"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
