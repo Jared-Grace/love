@@ -5,9 +5,7 @@ import { not } from "./not.mjs";
 import { js_code_call } from "./js_code_call.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { equal } from "./equal.mjs";
-import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
-import { js_visit } from "./js_visit.mjs";
 import { marker } from "./marker.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_bang_to_not(ast) {
