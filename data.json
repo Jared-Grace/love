@@ -6600,8 +6600,7 @@
    "marker_functionize",
    "marker_next_delete",
    "js_imports_declarations",
-   "js_call_function_if",
-   "js_node_type_not_is_if"
+   "js_call_function_if"
   ],
   "js_node_is": [
    "function_transform_marker",
@@ -7247,7 +7246,8 @@
    "js_declare_assign_null",
    "js_if_blockify",
    "js_if_blockify_generic",
-   "js_node_type_not_is"
+   "js_node_type_not_is",
+   "js_node_type_not_is_if"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -18665,8 +18665,8 @@
   "js_node_type_not_is_if": {
    "async": false,
    "identifiers": [
+    "js_node_type_not_is",
     "marker",
-    "js_node_type_is",
     "js_node_type_not_is_if",
     "node",
     "type",
