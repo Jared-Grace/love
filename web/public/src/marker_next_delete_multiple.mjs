@@ -1,5 +1,4 @@
-import { range } from "./range.mjs";
-import { each_async } from "./each_async.mjs";
+import { each_range_async } from "./each_range_async.mjs";
 import { marker_next_delete } from "./marker_next_delete.mjs";
 import { marker } from "./marker.mjs";
 export async function marker_next_delete_multiple(count) {
@@ -8,7 +7,6 @@ export async function marker_next_delete_multiple(count) {
   async function lambda() {
     code = await marker_next_delete();
   }
-  let r = range(count);
-  await each_async(r, lambda);
+  await each_range_async(count, lambda);
   return code;
 }
