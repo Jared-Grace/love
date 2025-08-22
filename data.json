@@ -2884,7 +2884,8 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_call_function_if",
-   "js_declaration_single_name"
+   "js_declaration_single_name",
+   "js_log_remove"
   ],
   "output": [
    "watch",
@@ -5724,7 +5725,8 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_call_function_if",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_log_remove"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -18772,8 +18774,10 @@
     "lambda",
     "v",
     "stack",
+    "node",
     "e1",
-    "lambda3"
+    "lambda3",
+    "name"
    ]
   }
  },
