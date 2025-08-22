@@ -1423,7 +1423,6 @@
   "c mn marker_next_await",
   "eac",
   "cd",
-  "fs jaa",
   "p",
   "s assert",
   "ps",
@@ -1435,10 +1434,11 @@
   "as marker",
   "c mc marker_param_add",
   "s stack,last",
-  "s param"
+  "s param",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "marker_param_add",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
