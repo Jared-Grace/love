@@ -1,4 +1,4 @@
 export function not(a) {
-  let n = not(a);
+  let n = !a;
   return n;
 }

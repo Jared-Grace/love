@@ -1456,7 +1456,6 @@
   "eac",
   "fs js_await_add",
   "mdm 2",
-  "s auto",
   "f",
   "mbt",
   "mc l1",
@@ -1501,7 +1500,8 @@
   "as format",
   "fm",
   "fa",
-  "fs jaa"
+  "fs jaa",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
