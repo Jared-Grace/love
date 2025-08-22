@@ -1785,7 +1785,8 @@
    "marker_next_delete_multiple",
    "js_node_type_is_if",
    "js_node_type_not_is_if",
-   "marker_down_1"
+   "marker_down_1",
+   "function_parse_strict_declaration"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -18720,6 +18721,7 @@
   "function_parse_strict_declaration": {
    "async": true,
    "identifiers": [
+    "marker",
     "object_merge",
     "js_declaration_single",
     "function_parse",
