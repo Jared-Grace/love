@@ -1493,7 +1493,8 @@
   "a mdd marker_down_1",
   "s await",
   "u la",
-  "c function_parse_declaration function_parse_strict_declaration"
+  "c function_parse_declaration function_parse_strict_declaration",
+  "c function_exists function_exists_strict"
  ],
  "marker_current": "1",
  "function_current": "function_parse_strict_declaration",
