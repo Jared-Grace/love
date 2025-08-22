@@ -2594,7 +2594,8 @@
    "log_keep",
    "string_is_assert_json",
    "string_is_assert_message",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_node_atomize"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4023,7 +4024,6 @@
    "assert_json",
    "assert_message",
    "js_identifiers_to_names",
-   "js_node_atomize",
    "list_get",
    "string_includes",
    "string_is_assert_message"
@@ -4048,7 +4048,8 @@
    "assert_json",
    "integer_is_assert",
    "list_get",
-   "list_is_assert"
+   "list_is_assert",
+   "js_node_atomize"
   ],
   "o": [
    "assert_json",
@@ -14525,7 +14526,6 @@
    "identifiers": [
     "js_call_function_if",
     "js_block_insert",
-    "assert_message",
     "equal_by",
     "js_declare",
     "function_exists",
@@ -14543,6 +14543,7 @@
     "list_get",
     "object_property_get",
     "list_size",
+    "assert_json",
     "js_node_atomize",
     "existing",
     "v",
@@ -14563,6 +14564,7 @@
     "index",
     "param",
     "b",
+    "message",
     "unique",
     "copy",
     "assign",
