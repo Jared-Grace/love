@@ -6801,7 +6801,8 @@
    "visit_filter_recursive_async",
    "marker_leave",
    "marker_param_add",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "js_log_remove"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -18769,6 +18770,7 @@
     "ast",
     "lambda",
     "v",
+    "stack",
     "lambda3",
     "node",
     "type"
