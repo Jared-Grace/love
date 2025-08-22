@@ -6813,8 +6813,7 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete",
-   "js_await_add"
+   "marker_above_delete"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -12778,7 +12777,6 @@
     "lambda3",
     "en",
     "async_is",
-    "stack2",
     "stack"
    ],
    "async": true
