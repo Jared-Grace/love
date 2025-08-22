@@ -1,3 +1,4 @@
+import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
 import { object_property_exists_not } from "./object_property_exists_not.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { data_functions_get } from "./data_functions_get.mjs";
@@ -18,6 +19,7 @@ export async function js_await_add(ast) {
       }
       let f = object_property_get(functions, name);
       marker("2");
+      js_function_last_asyncify(stack2, async_is2);
       let async_is = object_property_get(f, "async");
       let stack = object_property_get(v, "stack");
     }
