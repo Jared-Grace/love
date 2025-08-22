@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
@@ -13,6 +14,7 @@ export async function marker_next_await() {
     async function lambda(a) {
       let { next } = marker_next_get(a);
       js_node_type_is_assert(next, "ExpressionStatement");
+      let expression = object_property_get(next, "expression");
       let code_expression = js_code_await("a");
       let parsed = js_parse_expression(code_expression);
       object_property_set(parsed, "argument", value);
