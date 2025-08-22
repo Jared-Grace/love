@@ -1496,7 +1496,8 @@
   "s call",
   "s each",
   "o js_type",
-  "s functions"
+  "s functions",
+  "c functions_format functions_log_remove"
  ],
  "marker_current": "1",
  "function_current": "js_type",
