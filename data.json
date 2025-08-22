@@ -1474,7 +1474,6 @@
   "o js_node_type_is_if",
   "s not",
   "c js_node_type_is_if js_node_type_not_is_if",
-  "fs jaa",
   "mc c js_node_type_not_is_if",
   "mcr c js_node_type_not_is_if",
   "mu 1",
@@ -1501,10 +1500,11 @@
   "flr",
   "as format",
   "fm",
-  "fa"
+  "fa",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "functions_log_remove",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
