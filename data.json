@@ -1446,10 +1446,11 @@
   "mcr c object_property_exists_not",
   "ir exists en",
   "md 1",
-  "me"
+  "me",
+  "o me"
  ],
- "marker_current": "2",
- "function_current": "js_await_add",
+ "marker_current": "1",
+ "function_current": "marker_enter",
  "terminal": false,
  "identifiers": {
   "log": [
