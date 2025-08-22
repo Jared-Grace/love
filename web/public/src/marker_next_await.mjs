@@ -20,7 +20,8 @@ export async function marker_next_await() {
       let parsed = js_parse_expression(code_expression);
       object_property_set(parsed, "argument", expression);
       object_property_set(next, "expression", parsed);
-      la(js_unparse(next));
+      let code = js_unparse(next);
+      la(code);
     }
   }
   let list = list_adder_async(lambda2);
