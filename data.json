@@ -828,7 +828,6 @@
   "n lambda_invoke",
   "s stack",
   "s function,type",
-  "s assert",
   "s param",
   "fts js_let_add",
   "n functions_combine",
@@ -1430,7 +1429,8 @@
   "cd",
   "fs jaa",
   "p",
-  "marker_next_await"
+  "marker_next_await",
+  "s assert"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
