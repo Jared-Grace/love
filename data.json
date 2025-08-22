@@ -5758,8 +5758,7 @@
   ],
   "u": [
    "function_exists",
-   "function_aliases_restore",
-   "function_exists_strict"
+   "function_aliases_restore"
   ],
   "to": [
    "function_parse_declaration",
@@ -18739,8 +18738,7 @@
     "function_exists_strict",
     "f_name",
     "f_path",
-    "e",
-    "u"
+    "e"
    ]
   }
  },
