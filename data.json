@@ -18815,12 +18815,12 @@
     "functions_names",
     "list_map",
     "functions_log_remove",
+    "lambda2",
+    "name",
     "lambda",
     "ast",
     "output",
     "f_name",
-    "lambda2",
-    "name",
     "mapped"
    ]
   }
