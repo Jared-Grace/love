@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -14,7 +15,8 @@ export async function marker_if_test_replace(replacement) {
   async function lambda(a) {
     let { stack } = a;
     let last = js_stack_last(stack, "IfStatement");
-    let expression = js_parse_expression(code_expression);
+    let expression = js_parse_expression(replacement);
+    object_property_set(object, property_name, value);
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
     list_is_assert(stack5);
