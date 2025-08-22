@@ -6348,8 +6348,7 @@
    "marker_expand",
    "marker_next_await",
    "marker_if_test_replace",
-   "js_await",
-   "js_await_add"
+   "js_await"
   ],
   "type": [
    "function_params_consolidate",
@@ -9935,13 +9934,11 @@
   ],
   "js_await": [
    "marker_next_await",
-   "js_await",
-   "js_await_add"
+   "js_await"
   ],
   "awaited": [
    "js_await",
-   "marker_next_await",
-   "js_await_add"
+   "marker_next_await"
   ]
  },
  "functions": {
@@ -12884,7 +12881,6 @@
   },
   "js_await_add": {
    "identifiers": [
-    "js_await",
     "object_copy",
     "js_node_type_not_is_if",
     "list_get_end_1",
@@ -12909,9 +12905,7 @@
     "stack",
     "stack1",
     "lambda4",
-    "copy",
-    "awaited",
-    "expression"
+    "copy"
    ],
    "async": true
   },
