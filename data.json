@@ -137,7 +137,8 @@
   "ml": "marker_leave",
   "mu": "marker_up",
   "mb": "marker_below",
-  "mna": "marker_next_await"
+  "mna": "marker_next_await",
+  "mpa": "marker_param_add"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1435,7 +1436,8 @@
   "s param",
   "fs jaa",
   "eac",
-  "ms 2"
+  "ms 2",
+  "a mpa marker_param_add"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
