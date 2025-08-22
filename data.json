@@ -4988,7 +4988,8 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_next_delete",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_if_test_replace"
   ],
   "functions_combine": [
    "functions_combine",
@@ -5785,7 +5786,8 @@
   "replacement": [
    "function_identifier_replace",
    "js_dollar_a",
-   "marker_call_replace"
+   "marker_call_replace",
+   "marker_if_test_replace"
   ],
   "identifiers_named": [
    "function_identifier_replace",
@@ -6257,7 +6259,8 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_expand",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_if_test_replace"
   ],
   "type": [
    "function_params_consolidate",
@@ -8281,7 +8284,8 @@
   "code_expression": [
    "js_if_else_if_combine",
    "js_parse_expression",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_if_test_replace"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -18614,6 +18618,7 @@
   "marker_if_test_replace": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "js_stack_last",
     "list_insert",
     "list_remove",
@@ -18625,10 +18630,13 @@
     "function_transform_marker_current",
     "marker",
     "marker_if_test_replace",
+    "replacement",
     "lambda",
     "a",
     "stack",
     "last",
+    "expression",
+    "code_expression",
     "stack4",
     "stack5",
     "index",
