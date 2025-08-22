@@ -140,7 +140,8 @@
   "mna": "marker_next_await",
   "mpa": "marker_param_add",
   "ox": "object_property_exists",
-  "mi": "marker_if_test_replace"
+  "mi": "marker_if_test_replace",
+  "mbt": "marker_bottom"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1462,7 +1463,8 @@
   "fs jaa",
   "me",
   "s bottom",
-  "as marker"
+  "as marker",
+  "a mbt marker_bottom"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
