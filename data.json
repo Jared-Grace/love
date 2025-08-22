@@ -1438,7 +1438,8 @@
   "ms 2",
   "a mpa marker_param_add",
   "p",
-  "mpa name"
+  "mpa name",
+  "mb $i"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
