@@ -1481,7 +1481,8 @@
   "ire node2 2",
   "ir type 'AwaitExpression'",
   "o js_node_type_is_if",
-  "s not"
+  "s not",
+  "c js_node_type_is_if js_node_type_not_is_if"
  ],
  "marker_current": "1",
  "function_current": "js_node_type_is_if",
