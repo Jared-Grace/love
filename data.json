@@ -1423,13 +1423,13 @@
   "s js_visit",
   "s marker",
   "fs jaa",
-  "eac",
   "mg",
   "md 2",
   "mcr c jvtea",
   "mcr c js_visit_type_each_async",
   "s next,marker",
-  "c mn marker_next_await"
+  "c mn marker_next_await",
+  "eac"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
@@ -18501,5 +18501,5 @@
   }
  },
  "git_push_when": "2025-08-22T00:09:20.076Z",
- "error_attention": {}
+ "error_attention": null
 }
