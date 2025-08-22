@@ -5357,8 +5357,7 @@
    "js_node_atomize",
    "list_add_if_not_includes",
    "object_property_initialize",
-   "object_property_exists",
-   "js_await_add"
+   "object_property_exists"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -9783,6 +9782,9 @@
   "js_stack_last_function": [
    "js_function_last_asyncify",
    "marker_param_add"
+  ],
+  "en": [
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12740,7 +12742,7 @@
     "v",
     "node",
     "lambda3",
-    "exists",
+    "en",
     "stack"
    ],
    "async": true
