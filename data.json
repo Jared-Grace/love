@@ -513,7 +513,6 @@
   "",
   "au export function js_stack_last(stack, type) {",
   "au js_stack_last",
-  "s range",
   "n range",
   "fm range",
   "fw each each_range",
@@ -1466,7 +1465,8 @@
   "mm 1 2",
   "mrt",
   "md 1",
-  "fw mnd marker_next_delete_multiple"
+  "fw mnd marker_next_delete_multiple",
+  "s range"
  ],
  "marker_current": "1",
  "function_current": "marker_next_delete_multiple",
