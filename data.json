@@ -1494,7 +1494,8 @@
   "s await",
   "u la",
   "c function_parse_declaration function_parse_strict_declaration",
-  "c function_exists function_exists_strict"
+  "c function_exists function_exists_strict",
+  "s log"
  ],
  "marker_current": "1",
  "function_current": "function_exists_strict",
