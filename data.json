@@ -1427,7 +1427,6 @@
   "a mi marker_if_test_replace",
   "mi en",
   "mb $r",
-  "ml",
   "mc opg",
   "mcr 0 functions",
   "mcr 1 name",
@@ -1501,7 +1500,8 @@
   "fs jaa",
   "s auto",
   "s decl,name",
-  "cd"
+  "cd",
+  "ml"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
