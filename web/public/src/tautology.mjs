@@ -1,3 +1,4 @@
 export function tautology() {
-  return true;
+  let v = true;
+  return v;
 }
