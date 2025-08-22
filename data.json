@@ -1444,7 +1444,8 @@
   "eac",
   "s exist",
   "cd",
-  "mg"
+  "mg",
+  "mcr c object_property_exists_not"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
