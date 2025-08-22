@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +19,7 @@ export async function js_if_blockify_generic(ast, type, property_name) {
       let nt = js_node_type(body);
       let includes = list_includes(["EmptyStatement"], nt);
       const bs_body = [];
-      if (!includes) {
+      if (not(includes)) {
         let r = js_statement_return("");
         object_property_set(r, "argument", copy);
         list_add(bs_body, r);
