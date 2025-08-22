@@ -18624,9 +18624,9 @@
     "marker",
     "marker_next_delete_multiple",
     "count",
-    "r",
     "code",
-    "lambda"
+    "lambda",
+    "r"
    ]
   }
  },
