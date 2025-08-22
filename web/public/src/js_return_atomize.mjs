@@ -1,11 +1,8 @@
 import { js_return_on_async } from "./js_return_on_async.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_type } from "./js_type.mjs";
-import { log } from "./log.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
 import { js_visit_match } from "./js_visit_match.mjs";
-import { js_return_on } from "./js_return_on.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
 import { noop } from "./noop.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 export async function js_return_atomize(ast) {
