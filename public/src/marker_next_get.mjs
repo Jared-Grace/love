@@ -8,6 +8,6 @@ export function marker_next_get(a) {
   let n = {
     next,
   };
-  let to2 = object_merge(n, ni);
-  return to2;
+  let to = object_merge(n, ni);
+  return to;
 }
