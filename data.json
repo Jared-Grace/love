@@ -5621,8 +5621,7 @@
    "js_imports_declarations",
    "js_identifiers_named_count",
    "js_await_add",
-   "js_call_function_if",
-   "marker_next_await"
+   "js_call_function_if"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6234,8 +6233,7 @@
    "js_stack_filtered_each",
    "js_stack_last",
    "js_visit_type",
-   "js_visit_type_each_async",
-   "marker_next_await"
+   "js_visit_type_each_async"
   ],
   "method": [
    "function_params_consolidate"
@@ -18499,8 +18497,6 @@
     "lambda",
     "a",
     "next",
-    "node",
-    "type",
     "list"
    ]
   }
