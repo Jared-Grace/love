@@ -1953,8 +1953,7 @@
    "js_identifiers_named_count",
    "marker_above_generic",
    "js_declaration_single_name",
-   "js_log_remove",
-   "functions_log_remove"
+   "js_log_remove"
   ],
   "code": [
    "data_identifiers_file",
@@ -18819,7 +18818,6 @@
     "lambda",
     "lambda2",
     "f_name",
-    "ast",
     "output",
     "mapped"
    ]
