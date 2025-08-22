@@ -1827,7 +1827,6 @@
    "data_files_update",
    "data_file_update",
    "data_file_update_inner",
-   "marker_next_await",
    "function_parse_strict_declaration"
   ],
   "f_path": [
@@ -9938,7 +9937,8 @@
    "js_await"
   ],
   "awaited": [
-   "js_await"
+   "js_await",
+   "marker_next_await"
   ]
  },
  "functions": {
@@ -18687,7 +18687,7 @@
     "a",
     "next",
     "expression",
-    "parsed",
+    "awaited",
     "code",
     "list"
    ]
