@@ -1,6 +1,5 @@
 import { each_reverse } from "./each_reverse.mjs";
 import { list_size_1_assert } from "./list_size_1_assert.mjs";
-import { each } from "./each.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_declare } from "./js_declare.mjs";
@@ -11,7 +10,6 @@ import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_string } from "./js_code_string.mjs";
-import { list_first_second } from "./list_first_second.mjs";
 import { list_index_of_next } from "./list_index_of_next.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
