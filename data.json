@@ -4858,7 +4858,8 @@
   "js_function_last_asyncify": [
    "functions_combine",
    "js_call_fill",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "js_await_add"
   ],
   "list_map_unordered_async": [
    "functions_combine",
@@ -6810,7 +6811,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "js_await_add"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -9815,6 +9817,9 @@
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
+  ],
+  "async_is2": [
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12755,6 +12760,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "js_function_last_asyncify",
     "object_property_exists_not",
     "js_visit_type_each_async",
     "data_functions_get",
@@ -12773,7 +12779,9 @@
     "lambda3",
     "en",
     "async_is",
-    "stack"
+    "stack",
+    "stack2",
+    "async_is2"
    ],
    "async": true
   },
