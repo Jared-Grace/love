@@ -1479,7 +1479,6 @@
   "s not",
   "c js_node_type_is_if js_node_type_not_is_if",
   "fs jaa",
-  "md 1",
   "mc c js_node_type_not_is_if",
   "p",
   "mcr c js_node_type_not_is_if",
@@ -1487,7 +1486,8 @@
   "me",
   "mc oc",
   "ir from mode",
-  "ir mode node"
+  "ir mode node",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
