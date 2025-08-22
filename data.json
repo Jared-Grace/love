@@ -3563,7 +3563,8 @@
    "js_imports",
    "js_imports_declarations",
    "js_marker_name_get",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_function_last_asyncify"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -7446,7 +7447,6 @@
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "js_call_fill",
-   "js_function_last_asyncify",
    "js_identifier_defineds",
    "js_types_function",
    "js_types_function_includes"
@@ -7516,7 +7516,6 @@
   ],
   "js_stack_last_multiple": [
    "js_call_fill",
-   "js_function_last_asyncify",
    "js_stack_last",
    "js_stack_last_multiple"
   ],
@@ -8118,7 +8117,6 @@
    "js_format"
   ],
   "types": [
-   "js_function_last_asyncify",
    "js_identifier_defineds",
    "js_node_types_is",
    "js_stack_filtered_multiple",
@@ -9778,6 +9776,9 @@
   ],
   "marker_param_add": [
    "marker_param_add"
+  ],
+  "js_stack_last_function": [
+   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -13846,14 +13847,13 @@
   },
   "js_function_last_asyncify": {
    "identifiers": [
+    "not",
+    "js_stack_last_function",
     "object_property_set",
     "object_property_get",
-    "js_stack_last_multiple",
-    "js_types_function",
     "js_function_last_asyncify",
     "stack",
     "async_is",
-    "types",
     "f",
     "property_name",
     "async"
