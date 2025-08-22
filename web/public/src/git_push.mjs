@@ -1,6 +1,5 @@
 import { marker } from "./marker.mjs";
 import { date_diff_hours } from "./date_diff_hours.mjs";
-import { log } from "./log.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { date_to } from "./date_to.mjs";
 import { date_iso_to } from "./date_iso_to.mjs";
@@ -11,6 +10,7 @@ import { data_set } from "./data_set.mjs";
 import { git_push_command } from "./git_push_command.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
+import { log_keep } from "./log_keep.mjs";
 export async function git_push() {
   marker("1");
   const command_git = git_push_command();
@@ -24,8 +24,8 @@ export async function git_push() {
     const hours = date_diff_hours(now, before);
     if (hours < 1) {
       if (false) {
-        log("less than 1 hour:");
-        log(hours);
+        log_keep("less than 1 hour:");
+        log_keep(hours);
       }
       return;
     }
