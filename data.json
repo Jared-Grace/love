@@ -1753,7 +1753,8 @@
    "marker_below",
    "marker_above_delete",
    "function_aliases_restore",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_next_delete_multiple"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2479,7 +2480,8 @@
    "function_aliases_restore",
    "function_rename",
    "js_code_await",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_next_delete_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8999,7 +9001,8 @@
    "marker_next"
   ],
   "marker_next_delete": [
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_next_delete_multiple"
   ],
   "marker_remove": [
    "marker_remove",
@@ -9805,6 +9808,9 @@
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
+  ],
+  "marker_next_delete_multiple": [
+   "marker_next_delete_multiple"
   ]
  },
  "functions": {
@@ -18599,6 +18605,15 @@
     "stack",
     "last",
     "expression",
+    "v"
+   ]
+  },
+  "marker_next_delete_multiple": {
+   "async": true,
+   "identifiers": [
+    "marker_next_delete",
+    "marker",
+    "marker_next_delete_multiple",
     "v"
    ]
   }
