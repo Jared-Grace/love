@@ -1484,7 +1484,8 @@
   "p",
   "mcr c js_node_type_not_is_if",
   "mu 1",
-  "me"
+  "me",
+  "mc oc"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
