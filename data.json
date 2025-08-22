@@ -3603,8 +3603,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "function_parse_strict_declaration"
+   "task_new"
   ],
   "f_name_wrapped": [
    "function_watch_suffix_change",
@@ -18724,7 +18723,6 @@
     "function_parse_strict_declaration",
     "f_name",
     "f_path",
-    "unaliased",
     "parsed",
     "to"
    ]
