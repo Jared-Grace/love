@@ -4950,7 +4950,8 @@
    "marker_assign_replace",
    "marker_call_replace",
    "marker_functionize",
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_next_await"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6214,7 +6215,8 @@
    "js_return_code_replace",
    "js_statement_call_get",
    "marker_call_replace_generic",
-   "marker_expand"
+   "marker_expand",
+   "marker_next_await"
   ],
   "type": [
    "function_params_consolidate",
@@ -8223,7 +8225,8 @@
   ],
   "code_expression": [
    "js_if_else_if_combine",
-   "js_parse_expression"
+   "js_parse_expression",
+   "marker_next_await"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -18485,6 +18488,7 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "js_node_type_is_assert",
     "list_adder_async",
     "marker_next_get",
@@ -18497,6 +18501,8 @@
     "lambda",
     "a",
     "next",
+    "expression",
+    "code_expression",
     "list"
    ]
   }
