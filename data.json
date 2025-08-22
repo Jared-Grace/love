@@ -1477,7 +1477,6 @@
   "mc oc",
   "ir from mode",
   "ir mode node",
-  "md 1",
   "fw md marker_down_1",
   "p",
   "ir delta 1",
@@ -1501,7 +1500,8 @@
   "s auto",
   "s decl,name",
   "cd",
-  "ml"
+  "ml",
+  "md 1"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
