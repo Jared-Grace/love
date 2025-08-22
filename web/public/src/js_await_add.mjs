@@ -18,5 +18,5 @@ export async function js_await_add(ast) {
     await js_call_function_if(node, lambda3);
   }
   marker("1");
-  js_visit_type(ast, "CallExpression", lambda);
+  jvtea(ast, "CallExpression", lambda);
 }
