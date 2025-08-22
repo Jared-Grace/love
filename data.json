@@ -1461,7 +1461,8 @@
   "o me",
   "mx",
   "fs jaa",
-  "me"
+  "me",
+  "s bottom"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
