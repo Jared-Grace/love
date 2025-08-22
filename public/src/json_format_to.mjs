@@ -1,3 +1,4 @@
 export function json_format_to(object) {
-  return JSON.stringify(object, null, 1);
+  let v = JSON.stringify(object, null, 1);
+  return v;
 }
