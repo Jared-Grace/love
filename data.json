@@ -2775,7 +2775,8 @@
    "data_file_update_inner",
    "function_alias_rename",
    "marker_next_await",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "js_await"
   ],
   "watch": [
    "watch"
@@ -5083,7 +5084,8 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_next_delete",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "js_await"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6346,7 +6348,8 @@
    "marker_call_replace_generic",
    "marker_expand",
    "marker_next_await",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "js_await"
   ],
   "type": [
    "function_params_consolidate",
@@ -7777,7 +7780,8 @@
   ],
   "js_code_await": [
    "js_code_await",
-   "js_code_call_args_await_maybe"
+   "js_code_call_args_await_maybe",
+   "js_await"
   ],
   "js_code_wrap_braces": [
    "js_code_braces_empty",
@@ -8343,7 +8347,8 @@
   ],
   "code_expression": [
    "js_if_else_if_combine",
-   "js_parse_expression"
+   "js_parse_expression",
+   "js_await"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -9929,7 +9934,11 @@
    "marker_up_1"
   ],
   "js_await": [
-   "marker_next_await"
+   "marker_next_await",
+   "js_await"
+  ],
+  "awaited": [
+   "js_await"
   ]
  },
  "functions": {
@@ -18819,6 +18828,18 @@
     "marker",
     "marker_up_1",
     "v"
+   ]
+  },
+  "js_await": {
+   "async": false,
+   "identifiers": [
+    "object_property_set",
+    "js_parse_expression",
+    "js_code_await",
+    "js_await",
+    "expression",
+    "code_expression",
+    "awaited"
    ]
   }
  },
