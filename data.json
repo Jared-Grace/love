@@ -1432,7 +1432,7 @@
   "c mn marker_next_await"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "marker_next_await",
  "terminal": false,
  "identifiers": {
   "log": [
