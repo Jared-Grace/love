@@ -1840,7 +1840,8 @@
    "function_path_to_name",
    "function_read",
    "js_outside_move",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_parse_strict_declaration"
   ],
   "ast": [
    "data_identifiers_file",
@@ -2989,7 +2990,8 @@
    "file_js_parse",
    "function_parse",
    "data_files_update",
-   "data_file_update"
+   "data_file_update",
+   "function_parse_strict_declaration"
   ],
   "f_path2": [
    "data_file_update"
@@ -3601,7 +3603,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "function_parse_strict_declaration"
   ],
   "f_name_wrapped": [
    "function_watch_suffix_change",
@@ -5216,7 +5219,8 @@
    "function_open",
    "function_open_editor",
    "function_parse",
-   "function_read"
+   "function_read",
+   "function_parse_strict_declaration"
   ],
   "functions_search": [
    "functions_search",
@@ -5958,8 +5962,7 @@
    "js_atomize_function",
    "js_node_atomize",
    "marker_expand",
-   "marker_top",
-   "function_parse_strict_declaration"
+   "marker_top"
   ],
   "imports": [
    "function_imports",
@@ -18714,11 +18717,14 @@
   "function_parse_strict_declaration": {
    "async": true,
    "identifiers": [
+    "file_js_parse",
+    "function_name_to_path_unalias",
     "function_parse_declaration_inner",
     "marker",
-    "function_parse",
     "function_parse_strict_declaration",
     "f_name",
+    "f_path",
+    "unaliased",
     "parsed",
     "to"
    ]
