@@ -2535,7 +2535,8 @@
    "js_log_remove",
    "functions_log_remove",
    "function_name_to_base",
-   "json_to"
+   "json_to",
+   "js_stack_list_block_is"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3655,7 +3656,8 @@
    "js_imports_declarations",
    "js_marker_name_get",
    "object_property_exists_not",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "js_stack_list_block_is"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3753,7 +3755,8 @@
    "function_aliases_restore",
    "marker_next_await",
    "marker_param_add",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "js_stack_list_block_is"
   ],
   "without": [
    "string_suffix_without",
@@ -3903,7 +3906,8 @@
    "marker_bottom",
    "search_generic",
    "data_set",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_stack_list_block_is"
   ],
   "readdirSync": [
    "folder_read"
@@ -8397,7 +8401,8 @@
   ],
   "v3": [
    "js_marker_named",
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "js_stack_list_block_is"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -8645,7 +8650,8 @@
   "a2": [
    "js_unparse",
    "js_imports_declarations",
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "js_stack_list_block_is"
   ],
   "a3": [
    "js_unparse",
@@ -15034,6 +15040,7 @@
   },
   "js_stack_list_block_is": {
    "identifiers": [
+    "not",
     "js_node_type_is",
     "list_is",
     "list_get_end",
@@ -15041,7 +15048,12 @@
     "stack",
     "index",
     "stack1",
-    "stack2"
+    "a",
+    "v",
+    "stack2",
+    "a2",
+    "v2",
+    "v3"
    ],
    "async": false
   },
