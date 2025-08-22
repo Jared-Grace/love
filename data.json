@@ -1270,7 +1270,6 @@
   "a fwc function_watch_ending_change",
   "fwc error_attention_set set clear",
   "s update",
-  "s functions",
   "functions_path",
   "functions_paths",
   "de functions_paths",
@@ -1496,7 +1495,8 @@
   "nj log_remove",
   "s call",
   "s each",
-  "o js_type"
+  "o js_type",
+  "s functions"
  ],
  "marker_current": "1",
  "function_current": "js_type",
