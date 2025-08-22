@@ -1,3 +1,4 @@
 export function js_keyword_let() {
-  return "let";
+  let v = "let";
+  return v;
 }
