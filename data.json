@@ -828,7 +828,6 @@
   "n lambda_invoke",
   "s stack",
   "s function,type",
-  "s param",
   "fts js_let_add",
   "n functions_combine",
   "s split",
@@ -1435,7 +1434,8 @@
   "ms 2",
   "as marker",
   "c mc marker_param_add",
-  "s stack,last"
+  "s stack,last",
+  "s param"
  ],
  "marker_current": "1",
  "function_current": "marker_param_add",
