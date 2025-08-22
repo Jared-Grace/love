@@ -11,6 +11,7 @@ import { marker } from "./marker.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_bang_to_not(ast) {
   marker("1");
+  let name = js_declaration_single_name(ast);
   function lambda(v) {
     let { node } = v;
     let { operator } = node;
@@ -26,5 +27,6 @@ export function js_bang_to_not(ast) {
   }
   js_visit_type(ast, "UnaryExpression", lambda);
   return;
-  let name2 = js_declaration_single_name(ast2);
+  if (equal(left, right)) {
+  }
 }
