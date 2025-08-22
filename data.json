@@ -2412,8 +2412,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "js_log_remove"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -3221,8 +3220,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "js_log_remove"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -18789,9 +18787,7 @@
     "e2",
     "lambda3",
     "callee",
-    "name",
-    "list",
-    "item"
+    "name"
    ]
   }
  },
