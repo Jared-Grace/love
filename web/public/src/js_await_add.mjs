@@ -16,7 +16,7 @@ export async function js_await_add(ast) {
       if (en) {
         return;
       }
-      log("message");
+      log(name);
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       let stack = object_property_get(v, "stack");
