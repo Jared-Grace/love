@@ -18,7 +18,7 @@ export async function js_await_add(ast) {
         return;
       }
       marker("2");
-      let value = object_property_get(functions, property_name);
+      let value = object_property_get(functions, name);
       let stack = object_property_get(v, "stack");
     }
     await js_call_function_if(node, lambda3);
