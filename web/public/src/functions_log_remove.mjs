@@ -9,6 +9,7 @@ export async function functions_log_remove() {
   let lambda = js_log_remove;
   async function lambda2(f_name) {
     let output = await function_transform(f_name, lambda);
+    return output;
   }
   let mapped = list_map(await functions_names(), lambda2);
   await list_wait(mapped);
