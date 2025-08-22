@@ -10,8 +10,8 @@ export async function js_await_add(ast) {
   let functions = await data_functions_get();
   let name = js_declaration_single_name(ast);
   let f = object_property_get(functions, name);
-  marker("1");
   async function lambda(v) {
+    marker("1");
     let node = object_property_get(v, "node");
     async function lambda3(name) {
       let en = object_property_exists_not(functions, name);
