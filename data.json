@@ -7421,7 +7421,8 @@
    "js_imports_declarations"
   ],
   "js_await_add": [
-   "js_await_add"
+   "js_await_add",
+   "js_auto"
   ],
   "js_await_add_task_simple": [
    "js_await_add_task_simple"
@@ -12735,6 +12736,7 @@
   },
   "js_auto": {
    "identifiers": [
+    "js_await_add",
     "js_bang_to_not",
     "js_if_blockify",
     "js_if_else_if_combine",
