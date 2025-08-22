@@ -7486,8 +7486,7 @@
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "js_if_else_if_combine",
-   "js_node_type_is_if",
-   "js_await_add"
+   "js_node_type_is_if"
   ],
   "js_node_types_is": [
    "js_block_child_graph",
@@ -9848,7 +9847,8 @@
    "marker_next_delete_multiple"
   ],
   "js_node_type_not_is_if": [
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_await_add"
   ]
  },
  "functions": {
@@ -12790,7 +12790,7 @@
   },
   "js_await_add": {
    "identifiers": [
-    "js_node_type_is_if",
+    "js_node_type_not_is_if",
     "list_get_end_1",
     "log",
     "js_function_last_asyncify",
