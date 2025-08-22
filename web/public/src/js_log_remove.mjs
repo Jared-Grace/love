@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { log } from "./log.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -14,6 +15,7 @@ export function js_log_remove(ast) {
       let { callee } = node;
       let { name } = callee;
       if (name === log.name) {
+        list_remove(list, item);
       }
     }
     js_node_type_is_if(e1, "ExpressionStatement", lambda3);
