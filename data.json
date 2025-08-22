@@ -1428,7 +1428,8 @@
   "md 2",
   "mcr c jvtea",
   "mcr c js_visit_type_each_async",
-  "s next,marker"
+  "s next,marker",
+  "c mn marker_next_await"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
@@ -18472,6 +18473,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-21T23:08:47.367Z",
+ "git_push_when": "2025-08-22T00:09:20.076Z",
  "error_attention": {}
 }
