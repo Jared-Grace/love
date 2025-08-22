@@ -5724,8 +5724,7 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_call_function_if",
-   "js_node_type_not_is_if",
-   "js_log_remove"
+   "js_node_type_not_is_if"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6862,8 +6861,7 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete",
-   "js_log_remove"
+   "marker_above_delete"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -18775,9 +18773,7 @@
     "v",
     "stack",
     "e1",
-    "stack2",
-    "lambda3",
-    "node"
+    "lambda3"
    ]
   }
  },
