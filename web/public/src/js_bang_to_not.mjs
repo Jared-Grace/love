@@ -1,3 +1,4 @@
+import { js_declaration_single_name } from "./js_declaration_single_name.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -24,4 +25,6 @@ export function js_bang_to_not(ast) {
     }
   }
   js_visit_type(ast, "UnaryExpression", lambda);
+  return;
+  let name2 = js_declaration_single_name(ast2);
 }
