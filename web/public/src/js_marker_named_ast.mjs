@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_marker_named } from "./js_marker_named.mjs";
 import { list_filter } from "./list_filter.mjs";
