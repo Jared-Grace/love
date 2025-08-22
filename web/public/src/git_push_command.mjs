@@ -1,3 +1,4 @@
 export function git_push_command() {
-  return "push";
+  let v = "push";
+  return v;
 }
