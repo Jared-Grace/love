@@ -1336,7 +1336,6 @@
   "dpg error_attention",
   "o gp",
   "s call,name",
-  "s call",
   "mc js_call_function_if",
   "mab $g$v$node",
   "o mm",
@@ -1496,7 +1495,8 @@
   "c function_parse_declaration function_parse_strict_declaration",
   "c function_exists function_exists_strict",
   "s log",
-  "nj log_remove"
+  "nj log_remove",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "js_log_remove",
