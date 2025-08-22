@@ -1500,7 +1500,7 @@
   "c functions_format functions_log_remove"
  ],
  "marker_current": "1",
- "function_current": "js_type",
+ "function_current": "functions_log_remove",
  "terminal": false,
  "identifiers": {
   "log": [
