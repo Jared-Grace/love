@@ -2886,8 +2886,7 @@
    "list_first_second",
    "list_first_remaining",
    "list_first_second_generic",
-   "object_property_exists_not",
-   "js_await_add"
+   "object_property_exists_not"
   ],
   "separator": [
    "watch",
@@ -5358,7 +5357,8 @@
    "js_node_atomize",
    "list_add_if_not_includes",
    "object_property_initialize",
-   "object_property_exists"
+   "object_property_exists",
+   "js_await_add"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -12739,7 +12739,7 @@
     "v",
     "node",
     "lambda3",
-    "result",
+    "exists",
     "property_name",
     "stack"
    ],
