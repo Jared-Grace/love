@@ -1716,8 +1716,7 @@
    "marker_above_generic",
    "marker_below",
    "marker_above_delete",
-   "function_aliases_restore",
-   "marker_next_await"
+   "function_aliases_restore"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2218,7 +2217,8 @@
    "js_declaration_single",
    "js_identifiers_named_count",
    "function_alias_rename",
-   "marker_next"
+   "marker_next",
+   "marker_next_await"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2323,7 +2323,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "list_skip_1",
-   "marker_next"
+   "marker_next",
+   "marker_next_await"
   ],
   "v": [
    "data_identifiers_file",
@@ -2436,8 +2437,7 @@
    "function_alias_rename",
    "function_aliases_restore",
    "function_rename",
-   "js_code_await",
-   "marker_next_await"
+   "js_code_await"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2477,7 +2477,8 @@
    "marker_expand",
    "marker_functionize",
    "marker_next",
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_next_await"
   ],
   "js_format": [
    "file_js_unparse",
@@ -2790,8 +2791,7 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_call_function_if",
-   "js_declaration_single_name",
-   "marker_next_await"
+   "js_declaration_single_name"
   ],
   "output": [
    "watch",
@@ -4289,8 +4289,7 @@
    "data_watch_set",
    "function_current_set",
    "marker_current_set",
-   "marker_new",
-   "marker_next_await"
+   "marker_new"
   ],
   "data_terminal_set": [
    "data_terminal_set"
@@ -4388,8 +4387,7 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete",
-   "marker_next_await"
+   "marker_above_delete"
   ],
   "lists_get": [
    "each_multiple",
@@ -5534,7 +5532,8 @@
    "marker_call_replace_generic",
    "marker_expand",
    "marker_next",
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_next_await"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -5567,7 +5566,8 @@
    "marker_next",
    "marker_next_delete",
    "js_imports_declarations",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_next_await"
   ],
   "node": [
    "function_dependencies",
@@ -6753,8 +6753,7 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete",
-   "marker_next_await"
+   "marker_above_delete"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -6927,7 +6926,8 @@
    "marker_move",
    "marker_next",
    "marker_next_delete",
-   "marker_next_get"
+   "marker_next_get",
+   "marker_next_await"
   ],
   "noop": [
    "function_transform_marker_empty",
@@ -7586,8 +7586,7 @@
    "marker_new",
    "marker_next_delete",
    "marker_next_get",
-   "marker_next_index",
-   "marker_next_await"
+   "marker_next_index"
   ],
   "f_name_call": [
    "js_call_new",
@@ -7985,7 +7984,8 @@
    "marker_expand",
    "marker_move",
    "marker_next",
-   "marker_next_get"
+   "marker_next_get",
+   "marker_next_await"
   ],
   "id": [
    "js_dollar_a",
@@ -8258,8 +8258,7 @@
   "js_marker_insert": [
    "js_marker_insert",
    "marker_new",
-   "marker_top",
-   "marker_next_await"
+   "marker_top"
   ],
   "js_marker_name_get": [
    "js_marker_is",
@@ -18485,20 +18484,19 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
-    "marker_current_set",
-    "js_marker_insert",
-    "marker",
-    "marker_next_index",
+    "list_adder_async",
+    "js_unparse",
+    "marker_next_get",
     "function_transform_marker",
     "data_function_current_get",
     "marker_next_await",
     "f_name",
-    "v",
+    "lambda2",
+    "la",
     "lambda",
     "a",
-    "index",
-    "stack2",
-    "name"
+    "next",
+    "list"
    ]
   }
  },
