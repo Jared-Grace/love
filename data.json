@@ -1321,7 +1321,6 @@
   "c function_imports_missing_add function_imports_fix",
   "ar i function_imports_fix",
   "o auto",
-  "s auto",
   "fwc js_imports_missing_add missing_add fix",
   "s data,set",
   "gp",
@@ -1471,7 +1470,8 @@
   "a mdm marker_next_delete_multiple",
   "eac",
   "fs js_await_add",
-  "mdm 2"
+  "mdm 2",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
