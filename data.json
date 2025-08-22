@@ -4964,7 +4964,6 @@
    "function_wrap",
    "js_call_new",
    "js_call_new_code",
-   "js_node_atomize",
    "marker_expand"
   ],
   "js_code_call_args_await_maybe": [
@@ -9869,7 +9868,8 @@
    "marker_down_1"
   ],
   "function_parse_strict_declaration": [
-   "function_parse_strict_declaration"
+   "function_parse_strict_declaration",
+   "js_node_atomize"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -14533,12 +14533,12 @@
   },
   "js_node_atomize": {
    "identifiers": [
+    "function_parse_strict_declaration",
     "js_call_function_if",
     "js_block_insert",
     "equal_by",
     "js_declare",
     "function_exists",
-    "function_parse_declaration",
     "object_replace",
     "js_parse_expression",
     "list_index_of",
