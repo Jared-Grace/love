@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_stack_last } from "./js_stack_last.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -8,11 +9,12 @@ import { list_is_assert } from "./list_is_assert.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
-export async function marker_if_test_replace() {
+export async function marker_if_test_replace(replacement) {
   marker("1");
   async function lambda(a) {
     let { stack } = a;
     let last = js_stack_last(stack, "IfStatement");
+    let expression = js_parse_expression(code_expression);
     let stack4 = list_get_end(stack, 4);
     let stack5 = list_get_end(stack, 5);
     list_is_assert(stack5);
