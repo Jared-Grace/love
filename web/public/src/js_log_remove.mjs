@@ -6,9 +6,9 @@ export function js_log_remove(ast) {
   marker("1");
   function lambda(v) {
     let { stack } = v;
-    let e1 = list_get_end_1(stack2);
+    let e1 = list_get_end_1(stack);
     function lambda3() {}
-    js_node_type_is_if(node, "ExpressionStatement", lambda3);
+    js_node_type_is_if(e1, "ExpressionStatement", lambda3);
   }
   js_visit_type(ast, "CallExpression", lambda);
 }
