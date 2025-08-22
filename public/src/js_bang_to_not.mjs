@@ -12,6 +12,9 @@ import { list_add } from "./list_add.mjs";
 export function js_bang_to_not(ast) {
   marker("1");
   let name = js_declaration_single_name(ast);
+  if (equal(name, not.name)) {
+    return;
+  }
   function lambda(v) {
     let { node } = v;
     let { operator } = node;
@@ -27,6 +30,4 @@ export function js_bang_to_not(ast) {
   }
   js_visit_type(ast, "UnaryExpression", lambda);
   return;
-  if (equal(left, right)) {
-  }
 }
