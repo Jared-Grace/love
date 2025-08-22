@@ -1828,7 +1828,6 @@
    "function_auto_path",
    "function_copy",
    "function_delete",
-   "function_exists",
    "function_format",
    "function_import",
    "function_name_to_path_unalias",
@@ -4008,8 +4007,7 @@
   "file_exists": [
    "assert_file_exists_not",
    "file_exists",
-   "function_delete_if_exists",
-   "function_exists"
+   "function_delete_if_exists"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -5412,7 +5410,6 @@
    "function_alias_replace",
    "function_current_set",
    "function_delete_if_exists",
-   "function_exists",
    "function_name_unalias",
    "git_push_schedule_check",
    "git_push_schedule_command",
@@ -5737,7 +5734,6 @@
    "function_dependencies_code_copy"
   ],
   "object_merge": [
-   "function_exists",
    "function_imports_missing",
    "function_parse",
    "function_transform_marker",
@@ -5759,7 +5755,6 @@
    "function_aliases_restore"
   ],
   "to": [
-   "function_exists",
    "function_parse_declaration",
    "js_dollar_r",
    "marker_call_replace_generic",
@@ -9877,6 +9872,9 @@
   ],
   "function_parse_strict": [
    "function_parse_strict_declaration"
+  ],
+  "function_exists_inner": [
+   "function_exists"
   ]
  },
  "functions": {
@@ -11362,15 +11360,11 @@
   },
   "function_exists": {
    "identifiers": [
-    "object_merge",
-    "file_exists",
+    "function_exists_inner",
     "function_name_to_path_unalias",
     "function_exists",
     "f_name",
     "u",
-    "f_path",
-    "exists",
-    "to",
     "e"
    ],
    "async": true
