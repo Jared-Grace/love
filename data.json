@@ -6864,7 +6864,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "js_log_remove"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7410,7 +7411,8 @@
    "js_declare_assign_null",
    "js_dollar",
    "list_get_end_2",
-   "marker_leave"
+   "marker_leave",
+   "js_log_remove"
   ],
   "fes": [
    "js_atomize_function"
@@ -8753,7 +8755,8 @@
    "js_log_remove"
   ],
   "e2": [
-   "list_get_end_2"
+   "list_get_end_2",
+   "js_log_remove"
   ],
   "index_last": [
    "list_index_is",
@@ -18767,6 +18770,7 @@
   "js_log_remove": {
    "async": false,
    "identifiers": [
+    "list_get_end_2",
     "log",
     "list_get_end_1",
     "js_node_type_is_if",
@@ -18779,6 +18783,8 @@
     "stack",
     "node",
     "e1",
+    "e2",
+    "stack2",
     "lambda3",
     "callee",
     "name"
