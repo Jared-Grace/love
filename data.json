@@ -1455,9 +1455,9 @@
   "mm 1 2",
   "s async",
   "md 1",
-  "mc js_function_last_asyncify",
   "mnd",
-  "ms 2"
+  "ms 2",
+  "mc js_function_last_asyncify"
  ],
  "marker_current": "2",
  "function_current": "js_await_add",
