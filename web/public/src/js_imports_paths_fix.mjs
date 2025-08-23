@@ -11,10 +11,9 @@ export function js_imports_paths_fix(ast) {
   function lambda(i) {
     let name = object_property_get(i, "name");
     let declaration = object_property_get(i, "declaration");
-    let { source } = declaration;
     const from = function_name_to_path_import(name);
-    let parsed_string = js_string(from);
-    object_property_set(object, property_name, value);
+    let s = js_string(from);
+    object_property_set(declaration, "source", s);
     log(declaration);
   }
   each(imports_declarations, lambda);
