@@ -16,10 +16,9 @@ import { js_function_id_add } from "./js_function_id_add.mjs";
 import { js_arrow_to_function } from "./js_arrow_to_function.mjs";
 import { js_arrow_blockify } from "./js_arrow_blockify.mjs";
 export async function js_auto(ast) {
-  await marker("1");
+  marker("1");
   let transforms = [
     js_bang_to_not,
-    js_await_add,
     js_arrow_blockify,
     js_if_blockify,
     js_arrow_to_function,
@@ -39,5 +38,6 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   return;
-  [];
+  [
+    js_await_add,];
 }
