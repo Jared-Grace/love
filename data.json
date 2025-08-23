@@ -2945,8 +2945,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "function_rename"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -3971,7 +3970,8 @@
    "function_params_consolidate",
    "js_imports_missing",
    "string_split_comma",
-   "functions_paths"
+   "functions_paths",
+   "function_rename"
   ],
   "path_join": [
    "folder_read",
@@ -12264,7 +12264,7 @@
     "f_name_after",
     "v",
     "identifiers",
-    "value"
+    "f_names"
    ],
    "async": true
   },
