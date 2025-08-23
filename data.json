@@ -6232,7 +6232,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_replace_home",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_replace_rule_set"
   ],
   "import_": [
    "function_imports_add",
@@ -10173,7 +10174,8 @@
   "html_document_body": [
    "html_document_body",
    "app_replace_home",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_replace_rule_set"
   ],
   "document": [
    "html_document_body",
@@ -19723,8 +19725,10 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_document_body",
     "marker",
-    "app_replace_rule_set"
+    "app_replace_rule_set",
+    "body"
    ]
   }
  },
