@@ -4914,12 +4914,10 @@
    "js_unparse"
   ],
   "folder_current_join": [
-   "folder_current_join",
-   "function_imports_add"
+   "folder_current_join"
   ],
   "value_string": [
    "folder_current_join",
-   "function_imports_add",
    "js_code_string"
   ],
   "folder_public": [
@@ -6064,7 +6062,6 @@
    "html_update"
   ],
   "js_code_string": [
-   "function_imports_add",
    "js_code_string",
    "js_dollar",
    "js_dollar_g",
@@ -10013,6 +10010,9 @@
   "f_name_ext": [
    "function_name_to_base",
    "function_imports_add"
+  ],
+  "folder_current_join_code": [
+   "function_imports_add"
   ]
  },
  "functions": {
@@ -11623,10 +11623,9 @@
   },
   "function_imports_add": {
    "identifiers": [
+    "folder_current_join_code",
     "each_async",
     "js_code_import_single",
-    "js_code_string",
-    "folder_current_join",
     "list_add_first",
     "js_parse_statement_module",
     "function_name_to_base",
@@ -11637,7 +11636,6 @@
     "lambda",
     "import_",
     "f_name_ext",
-    "value_string",
     "from",
     "code",
     "statement"
