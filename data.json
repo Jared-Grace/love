@@ -2649,7 +2649,8 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1"
+   "marker_up_1",
+   "html_element"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10217,6 +10218,9 @@
   ],
   "html_button_element": [
    "app_replace"
+  ],
+  "element": [
+   "html_element"
   ]
  },
  "functions": {
@@ -19251,7 +19255,9 @@
     "e",
     "document",
     "createElement",
-    "appendChild"
+    "appendChild",
+    "v",
+    "element"
    ]
   },
   "html_button": {
