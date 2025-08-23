@@ -1,3 +1,4 @@
+import { app_replace_refresh } from "./app_replace_refresh.mjs";
 import { app_replace } from "./app_replace.mjs";
 import { each } from "./each.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
@@ -24,6 +25,7 @@ export function app_replace_home() {
       let key = "screen";
       const value = "rule_set";
       storage_local_set(app_fn, key, value);
+      app_replace_refresh();
     }
   }
   each(rule_sets, lambda2);
