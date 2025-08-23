@@ -660,7 +660,6 @@
   "fd js_unparse",
   "nj import_inside",
   "o ftc",
-  "s import",
   "ftc js_imports js_import_inside",
   "js_visit_filter n",
   "ftd js_await_add",
@@ -1551,7 +1550,8 @@
   "a oh app_html_open",
   "oh code",
   "s html",
-  "s js,call"
+  "s js,call",
+  "s import"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
