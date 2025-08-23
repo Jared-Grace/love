@@ -20,7 +20,6 @@ export async function html_update(name) {
   let code = js_code_import_single(name_prefixed, from);
   let body = `<script type="module"> 
     ${code}
-    import { ${name_prefixed} } from './${name_prefixed}${ext}';
     ${call}
   </script>`;
   await html_overwrite(name, body);
