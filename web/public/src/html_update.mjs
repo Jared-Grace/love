@@ -9,6 +9,7 @@ export async function html_update(name) {
   let ext = function_name_extension();
   let call = js_code_call_statement(name_prefixed);
   let body = `<script type="module"> 
+  ${js_code_import_single()}
     import { ${name_prefixed} } from './${name_prefixed}${ext}';
     ${call}
   </script>`;
