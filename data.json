@@ -1587,7 +1587,8 @@
   "o r",
   "s auto",
   "o oe",
-  "fws o app"
+  "fws o app",
+  "as html"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
