@@ -1346,7 +1346,6 @@
   "s last",
   "o jaa",
   "o mab",
-  "s ident",
   "c marker_above marker_below",
   "n add",
   "fws add 1",
@@ -1579,7 +1578,8 @@
   "mnd",
   "fs app_replace",
   "mc hdb",
-  "mdd"
+  "mdd",
+  "s ident"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
