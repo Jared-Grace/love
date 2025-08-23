@@ -1517,10 +1517,11 @@
   "mb $r",
   "as marker",
   "mi n",
-  "s html"
+  "s html",
+  "n apps_get"
  ],
  "marker_current": "1",
- "function_current": "js_await_add",
+ "function_current": "apps_get",
  "terminal": false,
  "identifiers": {
   "log": [
