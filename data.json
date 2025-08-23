@@ -1684,7 +1684,8 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove"
+   "js_log_remove",
+   "marker_screen_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2773,7 +2774,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize"
+   "js_node_atomize",
+   "marker_screen_add"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19630,6 +19632,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "log",
     "function_name_combine",
     "data_app_current_get",
     "function_current_set",
@@ -19645,6 +19648,7 @@
     "lambda",
     "a",
     "next",
+    "message",
     "v2",
     "v"
    ]
