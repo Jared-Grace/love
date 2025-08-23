@@ -1604,15 +1604,16 @@
   "s restore",
   "s app",
   "o marker_screen_add",
-  "p",
   "s assert,null",
   "oa replace",
   "s combine",
   "ps",
-  "marker_screen_add t"
+  "p",
+  "marker_screen_add t",
+  "fw r function_rename_suffix_add"
  ],
  "marker_current": "1",
- "function_current": "app_replace_screens",
+ "function_current": "function_rename_suffix_add",
  "terminal": false,
  "identifiers": {
   "log": [
