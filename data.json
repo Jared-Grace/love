@@ -3630,8 +3630,7 @@
    "list_map_squash",
    "list_squash",
    "marker_above",
-   "marker_below",
-   "app_replace"
+   "marker_below"
   ],
   "colored": [
    "chalk_color",
@@ -10242,10 +10241,10 @@
   "function_open_app": [
    "function_open_app"
   ],
-  "localStorage": [
+  "storage_local_set": [
    "app_replace"
   ],
-  "setItem": [
+  "app_fn": [
    "app_replace"
   ]
  },
@@ -19240,13 +19239,14 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "storage_local_set",
     "html_button",
     "object_property_get",
     "each",
     "html_document_body",
     "marker",
     "app_replace",
-    "fn",
+    "app_fn",
     "body",
     "rule_sets",
     "name",
@@ -19255,9 +19255,7 @@
     "rs",
     "name2",
     "key",
-    "value",
-    "localStorage",
-    "setItem"
+    "value"
    ]
   },
   "html_document_body": {
