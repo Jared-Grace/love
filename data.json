@@ -146,7 +146,8 @@
   "mdm": "marker_next_delete_multiple",
   "mdd": "marker_down_1",
   "muu": "marker_up_1",
-  "for": "folder_read"
+  "for": "folder_read",
+  "fop": "folder_public"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1525,7 +1526,8 @@
   "a for folder_read",
   "mc for",
   "s folder",
-  "u fp"
+  "u fp",
+  "a fop folder_public"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
