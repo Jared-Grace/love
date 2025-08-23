@@ -19754,9 +19754,9 @@
     "marker",
     "app_replace_rule_set",
     "body",
+    "lambda2",
     "parent",
-    "text",
-    "lambda2"
+    "text"
    ]
   },
   "app_refresh": {
