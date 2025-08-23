@@ -11,6 +11,7 @@ export async function function_current_set(f_name) {
   const { exists, unaliased } = await function_exists(f_name);
   assert_json(exists, {
     f_name,
+    unaliased,
   });
   function lambda(previous) {
     return unaliased;
