@@ -713,7 +713,6 @@
   "a ls list_second",
   "de list_skip",
   "c string_skip list_skip",
-  "s string",
   "so dollar",
   "a or object_replace",
   "s define",
@@ -1584,7 +1583,8 @@
   "nj imports_paths_fix",
   "s imports",
   "fts js_imports_paths_fix",
-  "s import"
+  "s import",
+  "s string"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
