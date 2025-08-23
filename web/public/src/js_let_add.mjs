@@ -18,8 +18,9 @@ export function js_let_add(ast) {
     }
     let { node } = v;
     let { left, right } = node;
-    let ii = js_identifier_is(node2);
-    if (false) {
+    let ii = js_identifier_is(left);
+    if (not(ii)) {
+      return;
     }
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
