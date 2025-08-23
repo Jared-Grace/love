@@ -12270,9 +12270,9 @@
     "v",
     "identifiers",
     "f_names",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ],
    "async": true
   },
