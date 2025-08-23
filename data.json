@@ -1895,7 +1895,8 @@
    "function_read",
    "js_outside_move",
    "data_file_update_inner",
-   "function_exists_strict"
+   "function_exists_strict",
+   "app_html_open"
   ],
   "ast": [
    "data_identifiers_file",
@@ -4861,7 +4862,8 @@
    "function_open",
    "function_open_editor",
    "html_new",
-   "html_update"
+   "html_update",
+   "app_html_open"
   ],
   "terminal": [
    "file_open"
@@ -18931,15 +18933,17 @@
    ]
   },
   "app_html_open": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "file_open",
     "folder_public_combine",
     "file_name_html",
     "marker",
     "app_html_open",
     "a_name",
     "file_name",
-    "combined"
+    "combined",
+    "f_path"
    ]
   }
  },
