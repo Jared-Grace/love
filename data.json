@@ -1895,7 +1895,8 @@
    "js_imports_paths_fix",
    "function_open_editor",
    "function_open_app",
-   "html_button_element"
+   "html_button_element",
+   "storage_local_get"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19471,6 +19472,7 @@
   "storage_local_get": {
    "async": false,
    "identifiers": [
+    "marker",
     "storage_local_key_get",
     "storage_local_get",
     "app_fn",
