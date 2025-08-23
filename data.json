@@ -2341,7 +2341,8 @@
    "js_identifiers",
    "list_difference",
    "marker_functionize",
-   "app_replace"
+   "app_replace",
+   "function_rename"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2508,7 +2509,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "function_rename"
   ],
   "v": [
    "data_identifiers_file",
@@ -3336,7 +3338,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_rename"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4076,7 +4079,8 @@
    "js_visit_each_async",
    "js_visit_type_each_async",
    "tasks_run",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "function_rename"
   ],
   "f_paths": [
    "data_files_update",
@@ -12253,6 +12257,7 @@
   },
   "function_rename": {
    "identifiers": [
+    "each_async",
     "object_property_get",
     "data_identifiers_get",
     "function_alias_rename",
@@ -12264,7 +12269,10 @@
     "f_name_after",
     "v",
     "identifiers",
-    "f_names"
+    "f_names",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
