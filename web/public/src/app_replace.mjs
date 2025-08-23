@@ -20,7 +20,7 @@ export function app_replace() {
       rules: ["a a > a"],
     },
   ];
-  function lambda(rs) {
+  function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
     html_button(body, name2, lambda);
     function lambda() {
@@ -29,5 +29,5 @@ export function app_replace() {
       storage_local_set(app_fn, key, value);
     }
   }
-  each(rule_sets, lambda);
+  each(rule_sets, lambda2);
 }
