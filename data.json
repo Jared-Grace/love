@@ -1605,7 +1605,6 @@
   "s assert,null",
   "oa replace",
   "s combine",
-  "p",
   "fw r function_rename_suffix_add",
   "r function_transform_marker function_transform_marker_current",
   "o function_transform_marker",
@@ -1613,6 +1612,7 @@
   "s let",
   "s single",
   "ps",
+  "p",
   "marker_screen_add t"
  ],
  "marker_current": "1",
