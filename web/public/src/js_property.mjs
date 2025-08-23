@@ -1,12 +1,12 @@
 export function js_property(key, value) {
-  let v2 = {
+  let p = {
     type: "Property",
     method: false,
     shorthand: true,
     computed: false,
     key: key,
     value: value,
-    kind: "init"
+    kind: "init",
   };
-  return v2;
+  return p;
 }
