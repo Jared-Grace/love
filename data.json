@@ -1580,13 +1580,13 @@
   "o r",
   "s data,f",
   "r html_button html_button_element",
-  "nj imports_paths_fix",
   "np",
   "s restore",
-  "u u"
+  "u u",
+  "nj imports_paths_fix"
  ],
  "marker_current": "1",
- "function_current": "html_button_element",
+ "function_current": "js_imports_paths_fix",
  "terminal": false,
  "identifiers": {
   "log": [
