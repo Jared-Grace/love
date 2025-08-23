@@ -1896,8 +1896,7 @@
    "function_read",
    "js_outside_move",
    "data_file_update_inner",
-   "function_exists_strict",
-   "app_html_open"
+   "function_exists_strict"
   ],
   "ast": [
    "data_identifiers_file",
@@ -18943,8 +18942,7 @@
     "app_html_open",
     "a_name",
     "file_name",
-    "combined",
-    "f_path"
+    "combined"
    ]
   }
  },
