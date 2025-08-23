@@ -10293,8 +10293,7 @@
    "html_document_body"
   ],
   "app_replace_home": [
-   "app_replace_home",
-   "app_replace_refresh"
+   "app_replace_home"
   ],
   "storage_local_set": [
    "app_replace_home",
@@ -10361,9 +10360,6 @@
   "screens": [
    "app_replace_refresh"
   ],
-  "home": [
-   "app_replace_refresh"
-  ],
   "screen_name": [
    "app_replace_refresh",
    "function_new_app_screen"
@@ -10373,6 +10369,9 @@
   ],
   "function_new_app_screen": [
    "function_new_app_screen"
+  ],
+  "app_replace_screens": [
+   "app_replace_refresh"
   ]
  },
  "functions": {
@@ -19557,17 +19556,16 @@
   "app_replace_refresh": {
    "async": false,
    "identifiers": [
+    "app_replace_screens",
     "storage_local_get_or",
     "object_property_get",
     "marker",
     "html_clear",
     "html_document_body",
-    "app_replace_home",
     "app_replace",
     "app_replace_refresh",
     "app_fn",
     "screens",
-    "home",
     "body",
     "screen_name",
     "screen"
@@ -19588,6 +19586,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-23T21:28:45.101Z",
+ "git_push_when": "2025-08-23T22:30:15.525Z",
  "error_attention": null
 }
