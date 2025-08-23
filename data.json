@@ -10087,9 +10087,6 @@
   ],
   "document": [
    "html_document_body"
-  ],
-  "node2": [
-   "js_let_add"
   ]
  },
  "functions": {
@@ -14620,7 +14617,6 @@
     "left",
     "right",
     "ii",
-    "node2",
     "name",
     "defineds",
     "includes",
