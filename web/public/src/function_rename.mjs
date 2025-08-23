@@ -11,6 +11,7 @@ export async function function_rename(f_name_before, f_name_after) {
   let v = await function_alias_rename(f_name_before, f_name_after);
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   marker("1");
 }
