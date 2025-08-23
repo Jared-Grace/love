@@ -1,3 +1,4 @@
+import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { each_async } from "./each_async.mjs";
@@ -16,6 +17,7 @@ export async function function_rename(f_name_before, f_name_after) {
   async function lambda(f_name) {
     async function lambda2(ast) {
       js_identifier_replace(ast, f_name_before, f_name_after);
+      js_imports_paths_fix(ast2);
     }
     let output = await function_transform(f_name, lambda2);
   }
