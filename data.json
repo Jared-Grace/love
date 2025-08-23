@@ -147,7 +147,8 @@
   "mdd": "marker_down_1",
   "muu": "marker_up_1",
   "for": "folder_read",
-  "fop": "folder_public"
+  "fop": "folder_public",
+  "fpc": "folder_public_combine"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1543,7 +1544,8 @@
   "mdd",
   "mc fpc",
   "u fpb",
-  "u fpc"
+  "u fpc",
+  "a fpc folder_public_combine"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
