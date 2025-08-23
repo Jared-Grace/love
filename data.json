@@ -1915,7 +1915,8 @@
    "function_new_app_screen",
    "app_replace_screens",
    "marker_screen_add",
-   "marker_next_await"
+   "marker_next_await",
+   "app_replace"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19405,6 +19406,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "marker",
     "app_replace_refresh",
     "app_replace"
    ]
