@@ -3416,8 +3416,7 @@
    "throws_not_async",
    "data_file_update_inner",
    "function_aliases_restore",
-   "function_exists_strict",
-   "app_replace"
+   "function_exists_strict"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -10087,19 +10086,12 @@
    "app_replace"
   ],
   "document": [
-   "html_document_body",
-   "app_replace"
-  ],
-  "createElement": [
-   "app_replace"
-  ],
-  "parent": [
-   "app_replace"
-  ],
-  "appendChild": [
-   "app_replace"
+   "html_document_body"
   ],
   "tag_name": [
+   "app_replace"
+  ],
+  "html_element": [
    "app_replace"
   ]
  },
@@ -19077,16 +19069,12 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_element",
     "html_document_body",
     "marker",
     "app_replace",
     "body",
-    "tag_name",
-    "e",
-    "document",
-    "createElement",
-    "parent",
-    "appendChild"
+    "tag_name"
    ]
   },
   "html_document_body": {
