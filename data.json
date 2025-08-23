@@ -1547,7 +1547,6 @@
   "ir f_path combined",
   "a oh app_html_open",
   "oh code",
-  "s html",
   "s js,call",
   "s import",
   "is js_code_call_statement",
@@ -1561,7 +1560,8 @@
   "mb alert()",
   "s server",
   "u v",
-  "n app_new"
+  "n app_new",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "app_new",
