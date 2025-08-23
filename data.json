@@ -3516,8 +3516,7 @@
    "function_new_js",
    "function_wrap_suffix_add",
    "git_push",
-   "function_new_app_screen",
-   "marker_screen_add"
+   "function_new_app_screen"
   ],
   "error_attention_set": [
    "watch",
@@ -5183,7 +5182,8 @@
    "functions_combine_name",
    "function_name_combine",
    "function_name_combine_multiple",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "function_new_transform": [
    "functions_combine",
@@ -19639,8 +19639,8 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_name_combine_multiple",
     "log",
-    "function_name_combine",
     "data_app_current_get",
     "function_current_set",
     "data_function_current_restore",
