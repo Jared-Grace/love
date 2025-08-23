@@ -9,7 +9,7 @@ export async function html_update(name) {
   let ext = function_name_extension();
   let call = js_code_call_statement(name_prefixed);
   let body = `<script type="module"> 
-    import { ${name_prefixed} } from './${name_prefixed}${ext}.js';
+    import { ${name_prefixed} } from './${name_prefixed}${ext}';
     ${call}
   </script>`;
   await html_overwrite(name, body);
