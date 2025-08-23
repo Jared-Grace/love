@@ -1585,10 +1585,11 @@
   "p",
   "ftc js_imports_paths_fix app_replace",
   "o r",
-  "s auto"
+  "s auto",
+  "o oe"
  ],
  "marker_current": "1",
- "function_current": "function_rename",
+ "function_current": "function_open_editor",
  "terminal": false,
  "identifiers": {
   "log": [
