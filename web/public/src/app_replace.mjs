@@ -13,5 +13,6 @@ export function app_replace() {
   html_clear(body);
   marker("1");
   let screen_name = storage_local_get(app_fn, "screen");
-  let value = object_property_get(object, property_name);
+  let screen = object_property_get(screens, screen_name);
+  screen();
 }
