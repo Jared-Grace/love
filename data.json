@@ -3006,7 +3006,8 @@
    "storage_local_set",
    "storage_local_get",
    "storage_local_get_or",
-   "js_property_identifier"
+   "js_property_identifier",
+   "js_property"
   ],
   "name": [
    "watch",
@@ -4032,7 +4033,8 @@
    "object_properties_delete",
    "marker_above_delete",
    "function_aliases_restore",
-   "app_name_prefixed"
+   "app_name_prefixed",
+   "js_property"
   ],
   "f_names": [
    "functions_names",
@@ -6538,7 +6540,8 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_property"
   ],
   "key": [
    "object_invert",
@@ -6546,7 +6549,8 @@
    "storage_local_key_get",
    "storage_local_get",
    "storage_local_get_or",
-   "js_property_identifier"
+   "js_property_identifier",
+   "js_property"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10414,7 +10418,20 @@
   ],
   "js_property": [
    "js_property_identifier",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_property"
+  ],
+  "method": [
+   "js_property"
+  ],
+  "shorthand": [
+   "js_property"
+  ],
+  "computed": [
+   "js_property"
+  ],
+  "kind": [
+   "js_property"
   ]
  },
  "functions": {
@@ -19679,6 +19696,20 @@
     "key",
     "value",
     "v"
+   ]
+  },
+  "js_property": {
+   "async": false,
+   "identifiers": [
+    "js_property",
+    "key",
+    "value",
+    "p",
+    "type",
+    "method",
+    "shorthand",
+    "computed",
+    "kind"
    ]
   }
  },
