@@ -3,7 +3,7 @@ import { js_imports_declarations } from "./js_imports_declarations.mjs";
 import { marker } from "./marker.mjs";
 export function js_imports_paths_fix(ast) {
   let imports_declarations = js_imports_declarations(ast);
-  function lambda(item) {}
-  each(list, lambda);
+  function lambda(i) {}
+  each(imports_declarations, lambda);
   marker("1");
 }
