@@ -13,7 +13,7 @@ export async function marker_screen_add(screen_name) {
     await function_current_set(combined);
     async function lambda(a) {
       let { next } = marker_next_get(a);
-      log(message);
+      log(next);
     }
     let v2 = await function_transform_marker_current(lambda);
   }
