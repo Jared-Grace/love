@@ -24,6 +24,7 @@ export function app_replace() {
     html_text_set(b, name2);
     let element = html_component_element_get(component);
     element.on("click", lambda);
+    function lambda() {}
   }
   each(rule_sets, lambda);
 }
