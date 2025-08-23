@@ -10407,11 +10407,11 @@
   ],
   "js_property_identifier": [
    "function_params_consolidate",
-   "marker_screen_add",
    "js_property_identifier"
   ],
   "js_property": [
-   "js_property_identifier"
+   "js_property_identifier",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19593,7 +19593,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "js_property_identifier",
+    "js_property",
     "object_property_get",
     "js_declare_single",
     "function_transform_marker_specified",
