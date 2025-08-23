@@ -1611,10 +1611,10 @@
   "o function_transform_marker_current",
   "s let",
   "s single",
-  "ps",
   "marker_screen_add t",
   "p",
-  "marker_screen_add rule_set"
+  "marker_screen_add rule_set",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
