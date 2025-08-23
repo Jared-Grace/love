@@ -2579,7 +2579,8 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1"
+   "marker_up_1",
+   "apps_get"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4909,7 +4910,8 @@
    "folder_public_combine",
    "functions_path",
    "html_new",
-   "server"
+   "server",
+   "apps_get"
   ],
   "folder_public_combine": [
    "folder_public_combine",
@@ -18887,9 +18889,11 @@
   "apps_get": {
    "async": true,
    "identifiers": [
+    "folder_public",
     "folder_read",
     "marker",
     "apps_get",
+    "v",
     "v2",
     "dirPath"
    ]
