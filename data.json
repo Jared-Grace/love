@@ -1583,7 +1583,6 @@
   "as html",
   "a oa function_open_app",
   "s prefix",
-  "oa replace",
   "de storage_local_set",
   "c storage_local_get storage_local_set",
   "de storage_local_get",
@@ -1606,13 +1605,14 @@
   "s restore",
   "s app",
   "o marker_screen_add",
-  "marker_screen_add t",
   "p",
   "s assert,null",
-  "ps"
+  "ps",
+  "marker_screen_add t",
+  "oa replace"
  ],
  "marker_current": "1",
- "function_current": "marker_screen_add",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -19678,5 +19678,6 @@
   }
  },
  "git_push_when": "2025-08-23T22:30:15.525Z",
- "error_attention": null
+ "error_attention": null,
+ "app_current": "replace"
 }
