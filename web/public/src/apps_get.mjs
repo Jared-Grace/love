@@ -5,4 +5,5 @@ export async function apps_get() {
   let fop = folder_public();
   let fr = folder_read(fop);
   marker("1");
+  return fr;
 }
