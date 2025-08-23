@@ -1515,7 +1515,8 @@
   "mu 3",
   "mc n",
   "p",
-  "mc not"
+  "mc not",
+  "ir a async_is"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
