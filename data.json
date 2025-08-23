@@ -1552,7 +1552,8 @@
   "s html",
   "s js,call",
   "s import",
-  "is js_code_call_statement"
+  "is js_code_call_statement",
+  "is js_code_import_single"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
