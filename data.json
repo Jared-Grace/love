@@ -3115,7 +3115,8 @@
    "js_identifiers",
    "list_join_comma",
    "marker_functionize",
-   "folder_public_combine"
+   "folder_public_combine",
+   "storage_local_get_or"
   ],
   "separator": [
    "watch",
@@ -3667,7 +3668,8 @@
    "marker_functionize"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "storage_local_get_or"
   ],
   "error": [
    "watch",
@@ -7370,8 +7372,7 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install",
-   "storage_local_get_or"
+   "npm_install"
   ],
   "err": [
    "import_install"
@@ -8308,7 +8309,8 @@
   ],
   "null_is": [
    "js_dollar_s",
-   "null_is"
+   "null_is",
+   "storage_local_get_or"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -9245,8 +9247,7 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install",
-   "storage_local_get_or"
+   "npm_install"
   ],
   "isFinite": [
    "number_is"
@@ -19494,9 +19495,9 @@
    ]
   },
   "storage_local_get_or": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "npm_install",
+    "null_is",
     "storage_local_get",
     "marker",
     "storage_local_get_or",
@@ -19504,7 +19505,8 @@
     "key",
     "value_or",
     "value",
-    "package_name"
+    "result",
+    "value2"
    ]
   }
  },
