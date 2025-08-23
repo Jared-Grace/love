@@ -1890,7 +1890,6 @@
    "app_html_open",
    "app_code",
    "app_new",
-   "app_replace",
    "html_document_body",
    "js_imports_paths_fix",
    "function_open_editor",
@@ -3296,8 +3295,7 @@
    "marker_enter",
    "function_rename",
    "js_imports_paths_fix",
-   "app_replace_home",
-   "app_replace"
+   "app_replace_home"
   ],
   "data_save": [
    "data_file_update",
@@ -6193,7 +6191,6 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace",
    "app_replace_home"
   ],
   "import_": [
@@ -10147,7 +10144,6 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace",
    "app_replace_home"
   ],
   "document": [
@@ -10269,11 +10265,7 @@
    "html_element",
    "html_document_body"
   ],
-  "html_clear": [
-   "app_replace"
-  ],
   "app_replace_home": [
-   "app_replace",
    "app_replace_home"
   ],
   "storage_local_set": [
@@ -10284,8 +10276,7 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_key_get",
-   "storage_local_get",
-   "app_replace"
+   "storage_local_get"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10316,22 +10307,12 @@
    "storage_local_get"
   ],
   "storage_local_get": [
-   "storage_local_get",
-   "app_replace"
+   "storage_local_get"
   ],
   "getItem": [
    "storage_local_get"
   ],
-  "screens": [
-   "app_replace"
-  ],
-  "home": [
-   "app_replace"
-  ],
-  "screen_name": [
-   "app_replace"
-  ],
-  "screen": [
+  "app_replace_refresh": [
    "app_replace"
   ]
  },
@@ -19326,19 +19307,8 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "object_property_get",
-    "storage_local_get",
-    "app_replace_home",
-    "html_clear",
-    "html_document_body",
-    "marker",
-    "app_replace",
-    "app_fn",
-    "screens",
-    "home",
-    "body",
-    "screen_name",
-    "screen"
+    "app_replace_refresh",
+    "app_replace"
    ]
   },
   "html_document_body": {
