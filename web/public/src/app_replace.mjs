@@ -1,5 +1,5 @@
+import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
-import { html_element } from "./html_element.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace() {
@@ -15,8 +15,7 @@ export function app_replace() {
       rules: ["a a > a"],
     },
   ];
-  const tag_name = "div";
-  html_element(body, tag_name);
-  function lambda(item) {}
-  each(list, lambda);
+  html_button(body);
+  function lambda(rs) {}
+  each(rule_sets, lambda);
 }
