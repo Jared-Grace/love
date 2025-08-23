@@ -10432,6 +10432,9 @@
   ],
   "app_refresh": [
    "app_replace_refresh"
+  ],
+  "context": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19505,6 +19508,7 @@
     "object_property_get",
     "html_document_body",
     "app_replace_home",
+    "context",
     "app_fn",
     "body",
     "rule_sets",
