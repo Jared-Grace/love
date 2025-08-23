@@ -4,7 +4,7 @@ import { html_new } from "./html_new.mjs";
 import { marker } from "./marker.mjs";
 export async function app_new(name) {
   marker("1");
-  let v = app_name_prefixed(name);
+  let a_name = app_name_prefixed(name);
   await function_new(f_name);
   await html_new(name);
 }
