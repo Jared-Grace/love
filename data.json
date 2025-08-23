@@ -10153,13 +10153,13 @@
    "html_element"
   ],
   "html_button": [
-   "html_button"
+   "html_button",
+   "app_replace"
   ],
   "name2": [
    "app_replace"
   ],
   "html_text_set": [
-   "app_replace",
    "html_text_set"
   ],
   "data_identifiers_get": [
@@ -10217,25 +10217,18 @@
    "js_code_string",
    "js_string"
   ],
-  "html_button_element": [
-   "app_replace"
-  ],
   "element": [
    "html_element",
    "html_text_set"
   ],
   "component": [
-   "html_text_set",
-   "app_replace"
+   "html_text_set"
   ],
   "innerHTML": [
    "html_text_set"
   ],
   "html_component_element_get": [
    "html_text_set"
-  ],
-  "html_on_click": [
-   "app_replace"
   ]
  },
  "functions": {
@@ -19235,10 +19228,8 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "html_on_click",
-    "html_text_set",
+    "html_button",
     "object_property_get",
-    "html_button_element",
     "each",
     "html_document_body",
     "marker",
@@ -19249,8 +19240,7 @@
     "rules",
     "lambda",
     "rs",
-    "name2",
-    "component"
+    "name2"
    ]
   },
   "html_document_body": {
