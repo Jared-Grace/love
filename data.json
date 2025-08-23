@@ -10260,6 +10260,9 @@
   "html_button_element": [
    "html_button",
    "html_button_element"
+  ],
+  "parent_element": [
+   "html_element"
   ]
  },
  "functions": {
@@ -19288,12 +19291,13 @@
     "html_element",
     "parent",
     "tag_name",
-    "element",
+    "parent_element",
     "e",
     "document",
     "createElement",
     "appendChild",
-    "v"
+    "v",
+    "element"
    ]
   },
   "html_button": {
