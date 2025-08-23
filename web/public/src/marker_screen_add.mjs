@@ -19,4 +19,5 @@ export async function marker_screen_add(screen_name) {
     lambda,
   );
   marker("1");
+  return v2;
 }
