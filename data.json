@@ -1539,7 +1539,6 @@
   "s js,call",
   "is js_code_call_statement",
   "is js_code_import_single",
-  "p",
   "s src",
   "u hu",
   "hu code",
@@ -1585,6 +1584,7 @@
   "s string",
   "fts js_imports_paths_fix",
   "ps",
+  "p",
   "ftc js_imports_paths_fix app_replace"
  ],
  "marker_current": "1",
