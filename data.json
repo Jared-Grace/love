@@ -1502,7 +1502,6 @@
   "ml",
   "mu 3",
   "mc n",
-  "p",
   "mc not",
   "ir a async_is",
   "mb $i",
@@ -1553,6 +1552,7 @@
   "s import",
   "is js_code_call_statement",
   "is js_code_import_single",
+  "p",
   "s src"
  ],
  "marker_current": "1",
