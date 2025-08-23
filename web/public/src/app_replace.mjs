@@ -12,6 +12,7 @@ export function app_replace() {
   marker("1");
   lambda();
   function lambda() {
+    let body = html_document_body();
     let rule_sets = [
       {
         name: "Grow",
