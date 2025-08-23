@@ -2211,7 +2211,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_rename"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2945,7 +2946,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "function_rename"
   ],
   "name": [
    "watch",
@@ -3258,7 +3260,8 @@
    "function_alias_rename",
    "marker_next_await",
    "marker_enter",
-   "app_replace"
+   "app_replace",
+   "function_rename"
   ],
   "data_save": [
    "data_file_update",
@@ -4685,7 +4688,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_rename"
   ],
   "each_pair": [
    "each_pair",
@@ -10135,9 +10139,6 @@
   "data_identifiers_get": [
    "data_identifiers_search",
    "function_rename"
-  ],
-  "$opg": [
-   "function_rename"
   ]
  },
  "functions": {
@@ -12254,6 +12255,7 @@
   },
   "function_rename": {
    "identifiers": [
+    "object_property_get",
     "data_identifiers_get",
     "function_alias_rename",
     "function_delete",
@@ -12264,7 +12266,9 @@
     "f_name_after",
     "v",
     "identifiers",
-    "$opg"
+    "value",
+    "object",
+    "property_name"
    ],
    "async": true
   },
