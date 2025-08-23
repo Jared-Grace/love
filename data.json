@@ -6515,7 +6515,6 @@
   "key": [
    "function_params_consolidate",
    "object_invert",
-   "app_replace_home",
    "storage_local_set",
    "storage_local_key_get",
    "storage_local_get"
@@ -19438,7 +19437,6 @@
     "rs",
     "name2",
     "lambda",
-    "key",
     "value"
    ]
   },
