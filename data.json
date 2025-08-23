@@ -3957,8 +3957,7 @@
    "search_generic",
    "data_set",
    "function_aliases_restore",
-   "js_stack_list_block_is",
-   "apps_get"
+   "js_stack_list_block_is"
   ],
   "readdirSync": [
    "folder_read"
@@ -9787,7 +9786,8 @@
    "function_aliases_restore"
   ],
   "fr": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "apps_get"
   ],
   "oe": [
    "function_aliases_restore"
@@ -18896,7 +18896,7 @@
     "marker",
     "apps_get",
     "fop",
-    "v2"
+    "fr"
    ]
   }
  },
