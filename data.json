@@ -1385,7 +1385,6 @@
   "function_aliases_restore",
   "s rename",
   "function_alias_rename marker_delete_above marker_above_delete",
-  "o r",
   "u mad",
   "u mda",
   "s js_visit",
@@ -1579,10 +1578,11 @@
   "fs app_replace",
   "mc hdb",
   "mdd",
-  "s ident"
+  "s ident",
+  "o r"
  ],
  "marker_current": "1",
- "function_current": "app_replace",
+ "function_current": "function_rename",
  "terminal": false,
  "identifiers": {
   "log": [
