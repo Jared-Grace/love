@@ -572,7 +572,6 @@
   "u ni",
   "i import_install",
   "s src",
-  "s public",
   "a w watch",
   "fw fw function_wrap_suffix_add",
   "fw fws function_wrap_suffix_add",
@@ -1540,7 +1539,8 @@
   "s html",
   "cd",
   "mc fnh",
-  "ir name a_name"
+  "ir name a_name",
+  "s public"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
