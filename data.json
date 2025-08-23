@@ -6192,8 +6192,7 @@
    "marker_top",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "html_document_body",
-   "app_replace_home"
+   "html_document_body"
   ],
   "import_": [
    "function_imports_add",
@@ -10146,8 +10145,7 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace",
-   "app_replace_home"
+   "app_replace"
   ],
   "document": [
    "html_document_body",
@@ -10334,7 +10332,8 @@
    "app_replace"
   ],
   "root": [
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19457,10 +19456,9 @@
     "storage_local_set",
     "html_button",
     "object_property_get",
-    "html_document_body",
     "app_replace_home",
+    "root",
     "app_fn",
-    "body",
     "rule_sets",
     "name",
     "rules",
