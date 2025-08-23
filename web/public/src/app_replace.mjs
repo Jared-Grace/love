@@ -1,10 +1,11 @@
+import { storage_local_set } from "./storage_local_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { each } from "./each.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace() {
-  let fn = app_replace;
+  let app_fn = app_replace;
   let body = html_document_body();
   marker("1");
   let rule_sets = [
@@ -23,7 +24,7 @@ export function app_replace() {
     function lambda() {
       let key = "screen";
       const value = "rule_set";
-      localStorage.setItem(fn.name + " " + key, value);
+      storage_local_set(app_fn, key, value);
     }
   }
   each(rule_sets, lambda);
