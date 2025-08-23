@@ -2580,8 +2580,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "apps_get"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9978,6 +9977,9 @@
   ],
   "path_folder": [
    "folder_read"
+  ],
+  "fop": [
+   "apps_get"
   ]
  },
  "functions": {
@@ -18894,7 +18896,7 @@
     "folder_read",
     "marker",
     "apps_get",
-    "v",
+    "fop",
     "v2",
     "dirPath"
    ]
