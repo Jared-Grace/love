@@ -1896,7 +1896,8 @@
    "function_open_editor",
    "function_open_app",
    "html_button_element",
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_get_or"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2978,7 +2979,8 @@
    "lambda_get",
    "app_replace_home",
    "storage_local_set",
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_get_or"
   ],
   "name": [
    "watch",
@@ -6518,7 +6520,8 @@
    "object_invert",
    "storage_local_set",
    "storage_local_key_get",
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_get_or"
   ],
   "kind": [
    "function_params_consolidate"
@@ -10276,7 +10279,8 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_key_get",
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_get_or"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10307,7 +10311,8 @@
    "storage_local_get"
   ],
   "storage_local_get": [
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_get_or"
   ],
   "getItem": [
    "storage_local_get"
@@ -10315,6 +10320,9 @@
   "app_replace_refresh": [
    "app_replace",
    "app_replace_home"
+  ],
+  "storage_local_get_or": [
+   "storage_local_get_or"
   ]
  },
  "functions": {
@@ -19476,6 +19484,17 @@
     "value",
     "localStorage",
     "getItem"
+   ]
+  },
+  "storage_local_get_or": {
+   "async": false,
+   "identifiers": [
+    "storage_local_get",
+    "marker",
+    "storage_local_get_or",
+    "app_fn",
+    "key",
+    "value"
    ]
   }
  },
