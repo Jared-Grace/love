@@ -1661,8 +1661,7 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove",
-   "js_imports_paths_fix"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -19266,7 +19265,6 @@
     "object_property_set",
     "js_string",
     "function_name_to_path_import",
-    "log",
     "object_property_get",
     "each",
     "js_imports_declarations",
