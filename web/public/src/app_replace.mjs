@@ -10,24 +10,27 @@ export function app_replace() {
   let body = html_document_body();
   html_clear(body);
   marker("1");
-  let rule_sets = [
-    {
-      name: "Grow",
-      rules: ["a > a a"],
-    },
-    {
-      name: "Shrink",
-      rules: ["a a > a"],
-    },
-  ];
-  function lambda2(rs) {
-    let name2 = object_property_get(rs, "name");
-    html_button(body, name2, lambda);
-    function lambda() {
-      let key = "screen";
-      const value = "rule_set";
-      storage_local_set(app_fn, key, value);
+  lambda();
+  function lambda() {
+    let rule_sets = [
+      {
+        name: "Grow",
+        rules: ["a > a a"],
+      },
+      {
+        name: "Shrink",
+        rules: ["a a > a"],
+      },
+    ];
+    function lambda2(rs) {
+      let name2 = object_property_get(rs, "name");
+      html_button(body, name2, lambda);
+      function lambda() {
+        let key = "screen";
+        const value = "rule_set";
+        storage_local_set(app_fn, key, value);
+      }
     }
+    each(rule_sets, lambda2);
   }
-  each(rule_sets, lambda2);
 }
