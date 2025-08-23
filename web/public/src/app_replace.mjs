@@ -22,7 +22,8 @@ export function app_replace() {
     html_button(body, name2, lambda);
     function lambda() {
       let key = "screen";
-      localStorage.setItem(fn.name + " " + key, "rule_set");
+      const value = "rule_set";
+      localStorage.setItem(fn.name + " " + key, value);
     }
   }
   each(rule_sets, lambda);
