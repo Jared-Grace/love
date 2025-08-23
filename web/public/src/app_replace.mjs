@@ -5,5 +5,8 @@ export function app_replace() {
   marker("1");
   let app_fn = app_replace;
   let screens = app_replace_screens();
-  app_refresh(app_fn, screens);
+  app_refresh({
+    app_fn,
+    screens,
+  });
 }
