@@ -10320,6 +10320,9 @@
   ],
   "getItem": [
    "storage_local_get"
+  ],
+  "screen": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19320,7 +19323,8 @@
     "marker",
     "app_replace",
     "app_fn",
-    "body"
+    "body",
+    "screen"
    ]
   },
   "html_document_body": {
