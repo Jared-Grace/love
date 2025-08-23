@@ -1556,7 +1556,9 @@
   "s src",
   "u hu",
   "hu code",
-  "n app_code"
+  "n app_code",
+  "mc alert",
+  "mb alert()"
  ],
  "marker_current": "1",
  "function_current": "app_code",
