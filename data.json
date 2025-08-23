@@ -2394,7 +2394,6 @@
    "function_rename",
    "js_imports_paths_fix",
    "html_button",
-   "app_replace_home",
    "function_open_app",
    "marker_screen_add",
    "data_function_current_restore",
@@ -10210,7 +10209,6 @@
   ],
   "html_button": [
    "html_button",
-   "app_replace_home",
    "app_replace_rule_set"
   ],
   "html_text_set": [
@@ -10464,9 +10462,6 @@
   "screen": [
    "app_refresh"
   ],
-  "app_screen_set": [
-   "app_replace_home"
-  ],
   "html_on": [
    "html_on"
   ],
@@ -10478,6 +10473,9 @@
   ],
   "lambda_value": [
    "lambda_value"
+  ],
+  "html_button_screen": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19546,9 +19544,8 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
-    "app_screen_set",
+    "html_button_screen",
     "each",
-    "html_button",
     "object_property_get",
     "html_document_body",
     "app_replace_home",
@@ -19560,8 +19557,7 @@
     "lambda2",
     "rs",
     "name2",
-    "value",
-    "lambda"
+    "value"
    ]
   },
   "storage_local_set": {
