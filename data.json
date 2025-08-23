@@ -2512,8 +2512,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "function_rename"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -12281,8 +12280,7 @@
     "f_name",
     "lambda2",
     "ast",
-    "output",
-    "list"
+    "output"
    ],
    "async": true
   },
