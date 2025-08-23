@@ -2730,8 +2730,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize",
-   "js_imports_paths_fix"
+   "js_node_atomize"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19267,8 +19266,7 @@
     "lambda",
     "i",
     "name",
-    "declaration",
-    "message"
+    "declaration"
    ]
   }
  },
