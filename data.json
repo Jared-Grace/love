@@ -573,7 +573,6 @@
   "n import_install",
   "import_install chokidar",
   "import_install chokdiar",
-  "u ni",
   "i import_install",
   "a w watch",
   "fw fw function_wrap_suffix_add",
@@ -1596,7 +1595,8 @@
   "de storage_local_get",
   "c storage_local_set storage_local_get",
   "fw storage_local_get storage_local_get_or",
-  "s null"
+  "s null",
+  "u ni"
  ],
  "marker_current": "1",
  "function_current": "storage_local_get_or",
