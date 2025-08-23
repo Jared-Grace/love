@@ -3006,7 +3006,8 @@
    "storage_local_get",
    "storage_local_get_or",
    "js_property_identifier",
-   "js_property"
+   "js_property",
+   "marker_screen_add"
   ],
   "name": [
    "watch",
@@ -5241,7 +5242,8 @@
    "js_await",
    "js_string",
    "js_imports_paths_fix",
-   "js_property_identifier"
+   "js_property_identifier",
+   "marker_screen_add"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6549,7 +6551,8 @@
    "storage_local_get",
    "storage_local_get_or",
    "js_property_identifier",
-   "js_property"
+   "js_property",
+   "marker_screen_add"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -19612,6 +19615,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "list_add",
     "js_property",
     "object_property_get",
@@ -19634,8 +19638,10 @@
     "declarator",
     "oe",
     "properties",
-    "p",
+    "key",
     "param_name",
+    "value",
+    "p",
     "v2"
    ]
   },
