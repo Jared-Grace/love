@@ -15,9 +15,9 @@ export async function marker_screen_add(screen_name) {
   async function lambda(a) {
     let { next } = marker_next_get(a);
     let declarator = js_declare_single(next);
-    let expression = object_property_get(declarator, "init");
-    let properties = expression;
-    log(expression);
+    let oe = object_property_get(declarator, "init");
+    let { properties } = oe;
+    log(oe);
     let v = js_property(param_name);
   }
   let v2 = await function_transform_marker_specified(
