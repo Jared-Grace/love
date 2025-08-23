@@ -1501,7 +1501,6 @@
   "fw mu marker_up_1",
   "a muu marker_up_1",
   "cd",
-  "fs jaa",
   "muu",
   "me",
   "u ja",
@@ -1513,10 +1512,11 @@
   "ir from awaited",
   "s auto",
   "fs js_auto",
-  "s await"
+  "s await",
+  "fs jaa"
  ],
  "marker_current": "1",
- "function_current": "js_auto",
+ "function_current": "js_await_add",
  "terminal": false,
  "identifiers": {
   "log": [
