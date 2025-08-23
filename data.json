@@ -3517,7 +3517,8 @@
    "function_wrap_suffix_add",
    "git_push",
    "function_new_app_screen",
-   "app_name_prefixed"
+   "app_name_prefixed",
+   "marker_screen_add"
   ],
   "error_attention_set": [
    "watch",
@@ -4822,7 +4823,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "marker_screen_add"
   ],
   "right": [
    "equal",
@@ -5184,8 +5186,7 @@
    "functions_combine_name",
    "function_name_combine",
    "function_name_combine_multiple",
-   "task_new",
-   "marker_screen_add"
+   "task_new"
   ],
   "function_new_transform": [
    "functions_combine",
@@ -10183,7 +10184,8 @@
    "html_update",
    "app_new",
    "app_name_prefixed",
-   "function_open_app"
+   "function_open_app",
+   "marker_screen_add"
   ],
   "app_new": [
    "app_new"
@@ -19647,8 +19649,9 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "function_name_combine_multiple",
+    "app_name_prefixed",
     "log",
+    "function_name_combine",
     "data_app_current_get",
     "function_current_set",
     "data_function_current_restore",
@@ -19659,6 +19662,7 @@
     "screen_name",
     "lambda3",
     "a_name",
+    "left",
     "combined",
     "lambda",
     "a",
