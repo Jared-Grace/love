@@ -1632,7 +1632,6 @@
    "js_identifier_defineds",
    "js_if_blockify",
    "js_if_else_if_combine",
-   "js_let_add",
    "js_marker_named",
    "js_marker_named_ast",
    "js_node_types_is",
@@ -3759,7 +3758,8 @@
    "js_stack_list_block_is",
    "list_difference",
    "marker_functionize",
-   "js_await_add"
+   "js_await_add",
+   "js_let_add"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -6758,7 +6758,6 @@
    "js_declare_assign",
    "js_declare_assign_null",
    "js_dollar",
-   "js_let_add",
    "js_marker_named",
    "js_marker_name_get",
    "js_node_atomize",
@@ -14595,16 +14594,15 @@
   },
   "js_let_add": {
    "identifiers": [
+    "not",
     "list_includes",
     "js_identifier_defineds",
     "object_replace",
     "object_property_get",
-    "log",
     "js_declare",
     "js_node_type_is",
     "list_get_end_1",
     "js_visit_type",
-    "list_get_end",
     "js_let_add",
     "ast",
     "lambda",
