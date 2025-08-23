@@ -9201,7 +9201,8 @@
    "app_html_open",
    "app_name_prefixed",
    "app_new",
-   "function_open_app"
+   "function_open_app",
+   "function_new_app_screen"
   ],
   "marker_first_index": [
    "marker_first",
@@ -10154,7 +10155,8 @@
    "html_update",
    "app_new",
    "app_name_prefixed",
-   "function_open_app"
+   "function_open_app",
+   "function_new_app_screen"
   ],
   "app_new": [
    "app_new"
@@ -19571,10 +19573,12 @@
   "function_new_app_screen": {
    "async": true,
    "identifiers": [
+    "app_name_prefixed",
     "function_new",
     "marker",
     "function_new_app_screen",
     "f_name",
+    "a_name",
     "v"
    ]
   }
