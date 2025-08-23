@@ -1902,7 +1902,8 @@
    "html_button_element",
    "storage_local_get",
    "storage_local_get_or",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "function_new_app_screen"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2200,7 +2201,8 @@
    "function_exists_strict",
    "function_name_to_base",
    "function_rename",
-   "function_open_app"
+   "function_open_app",
+   "function_new_app_screen"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2674,7 +2676,8 @@
    "folder_public",
    "file_read",
    "marker_up_1",
-   "function_open_app"
+   "function_open_app",
+   "function_new_app_screen"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6346,7 +6349,8 @@
    "function_param_swap_task_simple",
    "function_wrap",
    "task_new",
-   "app_new"
+   "app_new",
+   "function_new_app_screen"
   ],
   "code_declaration": [
    "function_new",
@@ -10360,6 +10364,9 @@
   ],
   "screen": [
    "app_replace_refresh"
+  ],
+  "function_new_app_screen": [
+   "function_new_app_screen"
   ]
  },
  "functions": {
@@ -19558,6 +19565,16 @@
     "body",
     "screen_name",
     "screen"
+   ]
+  },
+  "function_new_app_screen": {
+   "async": true,
+   "identifiers": [
+    "function_new",
+    "marker",
+    "function_new_app_screen",
+    "f_name",
+    "v"
    ]
   }
  },
