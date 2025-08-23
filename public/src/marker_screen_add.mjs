@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_property } from "./js_property.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -19,7 +20,9 @@ export async function marker_screen_add(screen_name) {
     let oe = object_property_get(declarator, "init");
     let { properties } = oe;
     log(oe);
-    let p = js_property(param_name);
+    let key = js_parse_expression(param_name);
+    let value = js_parse_expression(param_name);
+    let p = js_property(key, value);
     list_add(properties, p);
   }
   let v2 = await function_transform_marker_specified(
