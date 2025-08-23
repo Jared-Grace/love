@@ -4,6 +4,7 @@ import { each } from "./each.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace() {
+  let fn = app_replace;
   let body = html_document_body();
   marker("1");
   let rule_sets = [
@@ -20,7 +21,7 @@ export function app_replace() {
     let name2 = object_property_get(rs, "name");
     html_button(body, name2, lambda);
     function lambda() {
-      let body = html_document_body();
+      localStorage.setItem();
     }
   }
   each(rule_sets, lambda);
