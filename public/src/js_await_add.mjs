@@ -25,6 +25,7 @@ export async function js_await_add(ast) {
       let n = not(async_is);
       if (false) {
         marker("1");
+        return;
       }
       let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
