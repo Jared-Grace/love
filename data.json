@@ -1608,7 +1608,8 @@
   "ps",
   "o marker_screen_add",
   "p",
-  "marker_screen_add t"
+  "marker_screen_add t",
+  "s assert,null"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
