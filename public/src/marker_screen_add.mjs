@@ -1,3 +1,4 @@
+import { function_new } from "./function_new.mjs";
 import { log } from "./log.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
@@ -25,6 +26,7 @@ export async function marker_screen_add(screen_name) {
     let value = js_parse_expression(combined_screen);
     let p = js_property(key, value);
     list_add(properties, p);
+    await function_new(f_name);
     let message = js_unparse(next);
     log(p);
   }
