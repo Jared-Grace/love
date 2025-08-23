@@ -3829,7 +3829,8 @@
   ],
   "folder_read": [
    "functions_names",
-   "folder_read"
+   "folder_read",
+   "apps_get"
   ],
   "function_name_extension": [
    "functions_names",
@@ -3927,7 +3928,8 @@
    "function_aliases_restore"
   ],
   "dirPath": [
-   "folder_read"
+   "folder_read",
+   "apps_get"
   ],
   "file": [
    "folder_read"
@@ -3952,7 +3954,8 @@
    "search_generic",
    "data_set",
    "function_aliases_restore",
-   "js_stack_list_block_is"
+   "js_stack_list_block_is",
+   "apps_get"
   ],
   "readdirSync": [
    "folder_read"
@@ -18878,8 +18881,11 @@
   "apps_get": {
    "async": true,
    "identifiers": [
+    "folder_read",
     "marker",
-    "apps_get"
+    "apps_get",
+    "v2",
+    "dirPath"
    ]
   }
  },
