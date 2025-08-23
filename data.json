@@ -2424,7 +2424,8 @@
    "each_index",
    "list_difference",
    "marker_functionize",
-   "function_rename"
+   "function_rename",
+   "app_replace"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -19276,9 +19277,10 @@
     "rule_sets",
     "name",
     "rules",
-    "lambda",
+    "lambda2",
     "rs",
     "name2",
+    "lambda",
     "key",
     "value"
    ]
