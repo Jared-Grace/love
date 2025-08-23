@@ -1533,7 +1533,8 @@
   "ir v2 fr",
   "md 2",
   "mb $r,fr",
-  "ag"
+  "ag",
+  "s code"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
