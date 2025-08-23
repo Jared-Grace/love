@@ -15231,7 +15231,7 @@
     "node",
     "v2"
    ],
-   "async": true
+   "async": false
   },
   "js_unparse_inner": {
    "identifiers": [
