@@ -1551,7 +1551,8 @@
   "oh code",
   "s html",
   "s js,call",
-  "s import"
+  "s import",
+  "is js_code_call_statement"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
