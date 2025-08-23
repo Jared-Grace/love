@@ -17,6 +17,8 @@ export function js_let_add(ast) {
     }
     let { node } = v;
     let { left, right } = node;
+    if (false) {
+    }
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
     let includes = list_includes(defineds, name);
