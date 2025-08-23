@@ -10057,9 +10057,6 @@
   ],
   "app_new": [
    "app_new"
-  ],
-  "name2": [
-   "app_new"
   ]
  },
  "functions": {
@@ -19022,7 +19019,6 @@
     "app_new",
     "name",
     "v",
-    "name2",
     "f_name"
    ]
   }
