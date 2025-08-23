@@ -1590,10 +1590,11 @@
   "fws o app",
   "as html",
   "a oa function_open_app",
-  "s prefix"
+  "s prefix",
+  "oa replace"
  ],
  "marker_current": "1",
- "function_current": "function_open_app",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
