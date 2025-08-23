@@ -1854,7 +1854,8 @@
    "js_auto",
    "apps_get",
    "app_html_open",
-   "app_code"
+   "app_code",
+   "app_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10042,6 +10043,9 @@
   ],
   "app_name_prefixed": [
    "html_update"
+  ],
+  "app_new": [
+   "app_new"
   ]
  },
  "functions": {
@@ -18992,6 +18996,13 @@
     "marker",
     "app_code",
     "alert"
+   ]
+  },
+  "app_new": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_new"
    ]
   }
  },
