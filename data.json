@@ -1125,7 +1125,6 @@
   "s types",
   "fts jme",
   "fw jv js_visitors",
-  "oec",
   "dts 0",
   "nj block_child_graph",
   "cs string_is_assert message",
@@ -1577,7 +1576,9 @@
   "n html_document_body",
   "mb $r,document.body",
   "ir v body",
-  "mc hdb"
+  "mc hdb",
+  "oce",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "html_document_body",
