@@ -10313,7 +10313,8 @@
    "storage_local_get"
   ],
   "app_replace_refresh": [
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19420,6 +19421,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "app_replace_refresh",
     "app_replace",
     "each",
     "storage_local_set",
