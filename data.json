@@ -1003,7 +1003,6 @@
   "oe mc",
   "u ls",
   "oe list_single",
-  "u fr",
   "mc jvt",
   "fr jaa",
   "sa declar",
@@ -1521,7 +1520,8 @@
   "s folder",
   "cd",
   "mc fr",
-  "mnd"
+  "mnd",
+  "u fr"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
