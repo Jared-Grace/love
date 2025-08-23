@@ -10230,7 +10230,6 @@
    "js_string"
   ],
   "element": [
-   "html_element",
    "html_text_set"
   ],
   "component": [
@@ -10262,6 +10261,9 @@
    "html_button_element"
   ],
   "parent_element": [
+   "html_element"
+  ],
+  "html_component_wrap": [
    "html_element"
   ]
  },
@@ -19287,6 +19289,7 @@
   "html_element": {
    "async": false,
    "identifiers": [
+    "html_component_wrap",
     "html_component_element_get",
     "html_element",
     "parent",
@@ -19296,8 +19299,7 @@
     "document",
     "createElement",
     "appendChild",
-    "component",
-    "element"
+    "component"
    ]
   },
   "html_button": {
