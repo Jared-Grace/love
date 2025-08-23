@@ -10172,8 +10172,7 @@
   ],
   "html_text_set": [
    "html_text_set",
-   "html_button",
-   "app_replace"
+   "html_button"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10268,6 +10267,9 @@
   "html_component_wrap": [
    "html_element",
    "html_document_body"
+  ],
+  "html_clear": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19261,13 +19263,13 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_clear",
     "storage_local_set",
     "html_button",
     "object_property_get",
     "each",
     "html_document_body",
     "marker",
-    "html_text_set",
     "app_replace",
     "app_fn",
     "body",
