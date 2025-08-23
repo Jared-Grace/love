@@ -2980,7 +2980,8 @@
    "js_call_function_if",
    "js_declaration_single_name",
    "js_log_remove",
-   "app_new"
+   "app_new",
+   "app_name_prefixed"
   ],
   "output": [
    "watch",
@@ -9104,7 +9105,8 @@
   ],
   "a_name": [
    "marker_expand",
-   "app_html_open"
+   "app_html_open",
+   "app_name_prefixed"
   ],
   "marker_first_index": [
    "marker_first",
@@ -10053,7 +10055,8 @@
   ],
   "app_name_prefixed": [
    "html_update",
-   "app_new"
+   "app_new",
+   "app_name_prefixed"
   ],
   "app_new": [
    "app_new"
@@ -19020,6 +19023,14 @@
     "name",
     "v",
     "f_name"
+   ]
+  },
+  "app_name_prefixed": {
+   "async": false,
+   "identifiers": [
+    "app_name_prefixed",
+    "name",
+    "a_name"
    ]
   }
  },
