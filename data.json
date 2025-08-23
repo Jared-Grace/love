@@ -3323,7 +3323,8 @@
    "function_rename",
    "js_imports_paths_fix",
    "app_replace_home",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "marker_screen_add"
   ],
   "data_save": [
    "data_file_update",
@@ -6405,7 +6406,8 @@
    "js_imports_fix",
    "data_file_update_inner",
    "js_declaration_single_name",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "marker_screen_add"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -6509,7 +6511,8 @@
    "marker_next_await",
    "marker_if_test_replace",
    "js_await",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "marker_screen_add"
   ],
   "type": [
    "function_params_consolidate",
@@ -8107,7 +8110,8 @@
    "js_null"
   ],
   "vd": [
-   "js_declare_init_set"
+   "js_declare_init_set",
+   "marker_screen_add"
   ],
   "declarations": [
    "js_dollar_a",
@@ -8117,7 +8121,8 @@
    "js_statement_call_get"
   ],
   "declarators": [
-   "js_declare_init_set"
+   "js_declare_init_set",
+   "marker_screen_add"
   ],
   "js_dollar_rf": [
    "js_dollar",
@@ -10399,7 +10404,8 @@
    "marker_screen_add"
   ],
   "js_declare_single": [
-   "js_declare_init_set"
+   "js_declare_init_set",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19589,6 +19595,8 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "object_property_get",
+    "js_declare_single",
     "function_transform_marker_specified",
     "app_name_prefixed",
     "log",
@@ -19604,6 +19612,10 @@
     "lambda",
     "a",
     "next",
+    "declarators",
+    "vd",
+    "expression",
+    "declaration",
     "v2"
    ]
   },
