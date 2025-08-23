@@ -2203,8 +2203,7 @@
    "function_exists_strict",
    "function_name_to_base",
    "function_rename",
-   "function_open_app",
-   "function_new_app_screen"
+   "function_open_app"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -10366,7 +10365,8 @@
    "app_replace_refresh"
   ],
   "screen_name": [
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "function_new_app_screen"
   ],
   "screen": [
    "app_replace_refresh"
@@ -19581,7 +19581,7 @@
     "function_new",
     "marker",
     "function_new_app_screen",
-    "f_name",
+    "screen_name",
     "a_name",
     "combined",
     "v"
