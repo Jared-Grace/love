@@ -2561,7 +2561,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_screen_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -3402,7 +3403,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "marker_screen_add"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3596,7 +3598,8 @@
    "range",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async"
+   "visit_unique_async",
+   "marker_screen_add"
   ],
   "list_unique": [
    "function_run_line",
@@ -19594,6 +19597,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "list_add",
     "js_property",
     "object_property_get",
     "js_declare_single",
@@ -19615,6 +19619,8 @@
     "declarator",
     "oe",
     "properties",
+    "list",
+    "item",
     "v",
     "param_name",
     "v2"
