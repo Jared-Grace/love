@@ -2221,7 +2221,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_imports_paths_fix"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2866,7 +2867,8 @@
    "function_alias_rename",
    "marker_next_await",
    "marker_if_test_replace",
-   "js_await"
+   "js_await",
+   "js_imports_paths_fix"
   ],
   "watch": [
    "watch"
@@ -2957,7 +2959,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "js_imports_paths_fix"
   ],
   "name": [
    "watch",
@@ -4702,7 +4705,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "js_imports_paths_fix"
   ],
   "each_pair": [
    "each_pair",
@@ -6001,7 +6005,8 @@
    "object_merge",
    "object_property_from",
    "object_replace",
-   "html_update"
+   "html_update",
+   "js_imports_paths_fix"
   ],
   "i": [
    "function_identifier_replace",
@@ -7973,7 +7978,8 @@
    "js_return_empty"
   ],
   "parsed_string": [
-   "js_code_string"
+   "js_code_string",
+   "js_imports_paths_fix"
   ],
   "code_string": [
    "js_code_string",
@@ -10200,10 +10206,12 @@
    "js_imports_paths_fix"
   ],
   "function_name_to_path_import": [
-   "function_imports_add"
+   "function_imports_add",
+   "js_imports_paths_fix"
   ],
   "js_string": [
-   "js_code_string"
+   "js_code_string",
+   "js_imports_paths_fix"
   ]
  },
  "functions": {
@@ -19253,6 +19261,9 @@
   "js_imports_paths_fix": {
    "async": false,
    "identifiers": [
+    "object_property_set",
+    "js_string",
+    "function_name_to_path_import",
     "log",
     "object_property_get",
     "each",
@@ -19265,7 +19276,12 @@
     "i",
     "name",
     "declaration",
-    "source"
+    "source",
+    "from",
+    "parsed_string",
+    "object",
+    "property_name",
+    "value"
    ]
   }
  },
