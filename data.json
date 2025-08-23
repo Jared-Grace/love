@@ -151,7 +151,8 @@
   "fpc": "folder_public_combine",
   "oh": "app_html_open",
   "an": "app_new",
-  "oa": "function_open_app"
+  "oa": "function_open_app",
+  "nli": "null_is"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1596,7 +1597,8 @@
   "c storage_local_set storage_local_get",
   "fw storage_local_get storage_local_get_or",
   "s null",
-  "u ni"
+  "u ni",
+  "a nli null_is"
  ],
  "marker_current": "1",
  "function_current": "storage_local_get_or",
