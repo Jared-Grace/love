@@ -3,10 +3,8 @@ import { each } from "./each.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-import { html_document_body } from "./html_document_body.mjs";
-export function app_replace_home() {
+export function app_replace_home({ root }) {
   let app_fn = app_replace;
-  let body = html_document_body();
   let rule_sets = [
     {
       name: "Grow",
@@ -19,7 +17,7 @@ export function app_replace_home() {
   ];
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
-    html_button(body, name2, lambda);
+    html_button(root, name2, lambda);
     function lambda() {
       let key = "screen";
       const value = "rule_set";
