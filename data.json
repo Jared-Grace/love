@@ -1573,10 +1573,11 @@
   "u an",
   "u na",
   "a an app_new",
-  "an replace"
+  "an replace",
+  "n html_document_body"
  ],
  "marker_current": "1",
- "function_current": "app_replace",
+ "function_current": "html_document_body",
  "terminal": false,
  "identifiers": {
   "log": [
