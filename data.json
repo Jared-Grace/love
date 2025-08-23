@@ -3782,7 +3782,8 @@
    "function_copy_suffix_add",
    "function_wrap_suffix_add",
    "js_identifier_unique",
-   "string_ends_with"
+   "string_ends_with",
+   "function_rename_suffix_add"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -4828,8 +4829,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "function_rename_suffix_add"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4844,8 +4844,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "function_rename_suffix_add"
+   "add"
   ],
   "eq": [
    "equal",
@@ -5280,8 +5279,7 @@
    "folder_public_combine",
    "app_html_open",
    "function_new_app_screen",
-   "marker_screen_add",
-   "function_rename_suffix_add"
+   "marker_screen_add"
   ],
   "body_block": [
    "functions_combine",
@@ -19711,10 +19709,8 @@
     "marker",
     "function_rename_suffix_add",
     "f_name_before",
+    "suffix",
     "f_name_after",
-    "combined",
-    "left",
-    "right",
     "v"
    ]
   }
