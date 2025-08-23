@@ -1,4 +1,4 @@
 export function file_name_html(name) {
-  let v = name + ".html";
-  return v;
+  let file_name = name + ".html";
+  return file_name;
 }
