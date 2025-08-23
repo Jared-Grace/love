@@ -1598,10 +1598,11 @@
   "fw storage_local_get storage_local_get_or",
   "s null",
   "u ni",
-  "a nli null_is"
+  "a nli null_is",
+  "o oa"
  ],
  "marker_current": "1",
- "function_current": "storage_local_get_or",
+ "function_current": "function_open_app",
  "terminal": false,
  "identifiers": {
   "log": [
