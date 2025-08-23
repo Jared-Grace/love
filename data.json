@@ -853,7 +853,6 @@
   "fc fs,t",
   "de fs_t",
   "s fil",
-  "s let",
   "s sand",
   "lmp",
   "a lmp list_map_property",
@@ -1612,7 +1611,8 @@
   "o function_transform_marker",
   "o function_transform_marker_current",
   "ps",
-  "marker_screen_add t"
+  "marker_screen_add t",
+  "s let"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
