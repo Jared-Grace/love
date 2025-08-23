@@ -9424,10 +9424,12 @@
   "js_imports_declarations": [
    "js_imports_declarations",
    "js_imports",
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_paths_fix"
   ],
   "imports_declarations": [
-   "js_imports"
+   "js_imports",
+   "js_imports_paths_fix"
   ],
   "list_first_remaining": [
    "list_first_remaining",
@@ -19246,9 +19248,11 @@
   "js_imports_paths_fix": {
    "async": false,
    "identifiers": [
+    "js_imports_declarations",
     "marker",
     "js_imports_paths_fix",
-    "ast"
+    "ast",
+    "imports_declarations"
    ]
   }
  },
