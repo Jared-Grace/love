@@ -1558,7 +1558,8 @@
   "hu code",
   "n app_code",
   "mc alert",
-  "mb alert()"
+  "mb alert()",
+  "s server"
  ],
  "marker_current": "1",
  "function_current": "app_code",
