@@ -1518,13 +1518,13 @@
   "n apps_get",
   "s files",
   "s file",
-  "s folder",
   "cd",
   "mc fr",
   "mnd",
   "u fr",
   "a for folder_read",
-  "mc for"
+  "mc for",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
