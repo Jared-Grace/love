@@ -8,7 +8,7 @@ import { html_text_set } from "./html_text_set.mjs";
 export function app_replace() {
   let app_fn = app_replace;
   let body = html_document_body();
-  html_text_set(body);
+  html_text_set(body, "");
   marker("1");
   let rule_sets = [
     {
