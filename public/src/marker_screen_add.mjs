@@ -26,7 +26,7 @@ export async function marker_screen_add(screen_name) {
     let value = js_parse_expression(combined_screen);
     let p = js_property(key, value);
     list_add(properties, p);
-    await function_new(f_name);
+    await function_new(combined_screen);
     let message = js_unparse(next);
     log(p);
   }
