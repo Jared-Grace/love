@@ -4135,7 +4135,8 @@
    "string_is_assert_message",
    "string_skip",
    "string_slice",
-   "html_button"
+   "html_button",
+   "app_replace"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -19107,6 +19108,7 @@
     "rule_sets",
     "name",
     "rules",
+    "b",
     "lambda",
     "rs"
    ]
