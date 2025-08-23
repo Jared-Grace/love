@@ -2394,7 +2394,8 @@
    "app_replace_home",
    "function_open_app",
    "marker_screen_add",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "html_on"
   ],
   "previous": [
    "data_identifiers_file",
@@ -10264,20 +10265,23 @@
    "js_string"
   ],
   "element": [
-   "html_text_set"
+   "html_text_set",
+   "html_on"
   ],
   "component": [
    "html_text_set",
    "html_button",
    "html_element",
-   "html_document_body"
+   "html_document_body",
+   "html_on"
   ],
   "innerHTML": [
    "html_text_set"
   ],
   "html_component_element_get": [
    "html_text_set",
-   "html_element"
+   "html_element",
+   "html_on"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10454,6 +10458,15 @@
   ],
   "app_screen_set": [
    "app_replace_home"
+  ],
+  "html_on": [
+   "html_on"
+  ],
+  "name_event": [
+   "html_on"
+  ],
+  "addEventListener": [
+   "html_on"
   ]
  },
  "functions": {
@@ -19753,6 +19766,18 @@
     "body",
     "screen_name",
     "screen"
+   ]
+  },
+  "html_on": {
+   "async": false,
+   "identifiers": [
+    "html_component_element_get",
+    "html_on",
+    "component",
+    "name_event",
+    "lambda",
+    "element",
+    "addEventListener"
    ]
   }
  },
