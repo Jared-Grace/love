@@ -8,6 +8,6 @@ export function app_replace() {
   let body = html_document_body();
   html_clear(body);
   marker("1");
-  storage_local_get(app_fn, "screen");
+  let screen = storage_local_get(app_fn, "screen");
   app_replace_home();
 }
