@@ -1628,7 +1628,6 @@
    "function_acronym_to_name",
    "function_alias_add_generic",
    "function_auto",
-   "function_current_set",
    "function_delete_if_exists",
    "function_dependencies_code",
    "function_identifier_replace",
@@ -4156,7 +4155,6 @@
    "data_terminal_set",
    "data_watch_set",
    "functions_combine",
-   "function_current_set",
    "function_transform_marker_empty",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
@@ -4256,7 +4254,8 @@
    "integer_is_assert",
    "list_get",
    "list_is_assert",
-   "js_node_atomize"
+   "js_node_atomize",
+   "function_current_set"
   ],
   "o": [
    "assert_json",
@@ -11786,14 +11785,13 @@
   "function_current_set": {
    "identifiers": [
     "marker",
-    "log",
     "marker_top",
     "function_parse_declaration_js_unparse",
     "function_exists",
-    "assert",
     "marker_first",
     "marker_current_set",
     "data_transform",
+    "assert_json",
     "function_current_set",
     "f_name",
     "exists",
