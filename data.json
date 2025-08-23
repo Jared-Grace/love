@@ -10311,7 +10311,8 @@
    "storage_local_get",
    "storage_local_get_or",
    "app_replace_refresh",
-   "app_refresh"
+   "app_refresh",
+   "app_replace"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10349,7 +10350,6 @@
    "storage_local_get"
   ],
   "app_replace_refresh": [
-   "app_replace",
    "app_replace_home",
    "app_replace_refresh"
   ],
@@ -10362,7 +10362,8 @@
   ],
   "screens": [
    "app_replace_refresh",
-   "app_refresh"
+   "app_refresh",
+   "app_replace"
   ],
   "screen_name": [
    "function_new_app_screen",
@@ -10374,7 +10375,8 @@
   ],
   "app_replace_screens": [
    "app_replace_refresh",
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_replace"
   ],
   "home": [
    "app_replace_screens"
@@ -10440,7 +10442,8 @@
   ],
   "app_refresh": [
    "app_replace_refresh",
-   "app_refresh"
+   "app_refresh",
+   "app_replace"
   ],
   "context": [
    "app_replace_home",
@@ -19399,9 +19402,12 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "app_refresh",
+    "app_replace_screens",
     "marker",
-    "app_replace_refresh",
-    "app_replace"
+    "app_replace",
+    "app_fn",
+    "screens"
    ]
   },
   "html_document_body": {
