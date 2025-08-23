@@ -4822,8 +4822,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "app_name_prefixed"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4838,8 +4837,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "app_name_prefixed"
+   "add"
   ],
   "eq": [
    "equal",
@@ -5275,8 +5273,7 @@
    "folder_public_combine",
    "app_html_open",
    "function_new_app_screen",
-   "marker_screen_add",
-   "app_name_prefixed"
+   "marker_screen_add"
   ],
   "body_block": [
    "functions_combine",
@@ -19411,9 +19408,6 @@
     "app_name_prefixed",
     "name",
     "p",
-    "combined",
-    "left",
-    "right",
     "a_name"
    ]
   },
