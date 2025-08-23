@@ -5190,7 +5190,8 @@
    "marker_next_delete",
    "marker_if_test_replace",
    "js_await",
-   "js_string"
+   "js_string",
+   "js_imports_paths_fix"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6465,7 +6466,8 @@
    "marker_expand",
    "marker_next_await",
    "marker_if_test_replace",
-   "js_await"
+   "js_await",
+   "js_imports_paths_fix"
   ],
   "type": [
    "function_params_consolidate",
@@ -8468,7 +8470,8 @@
   "code_expression": [
    "js_if_else_if_combine",
    "js_parse_expression",
-   "js_await"
+   "js_await",
+   "js_imports_paths_fix"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -19263,6 +19266,7 @@
   "js_imports_paths_fix": {
    "async": false,
    "identifiers": [
+    "js_parse_expression",
     "object_property_set",
     "js_string",
     "function_name_to_path_import",
@@ -19278,6 +19282,8 @@
     "name",
     "declaration",
     "from",
+    "expression",
+    "code_expression",
     "s"
    ]
   },
