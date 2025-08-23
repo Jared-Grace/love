@@ -2974,7 +2974,8 @@
    "js_await_add",
    "js_call_function_if",
    "js_declaration_single_name",
-   "js_log_remove"
+   "js_log_remove",
+   "app_new"
   ],
   "output": [
    "watch",
@@ -7279,7 +7280,8 @@
    "html_update"
   ],
   "html_new": [
-   "html_new"
+   "html_new",
+   "app_new"
   ],
   "name_prefixed": [
    "html_update"
@@ -19001,10 +19003,12 @@
    ]
   },
   "app_new": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "html_new",
     "marker",
-    "app_new"
+    "app_new",
+    "name"
    ]
   }
  },
