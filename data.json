@@ -6192,7 +6192,8 @@
    "marker_top",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "html_document_body"
+   "html_document_body",
+   "app_replace"
   ],
   "import_": [
    "function_imports_add",
@@ -10329,9 +10330,6 @@
    "app_replace"
   ],
   "screen": [
-   "app_replace"
-  ],
-  "root": [
    "app_replace"
   ]
  },
@@ -19336,7 +19334,7 @@
     "app_fn",
     "screens",
     "home",
-    "root",
+    "body",
     "screen_name",
     "screen"
    ]
