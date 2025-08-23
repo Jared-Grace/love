@@ -4,6 +4,7 @@ export function app_replace_screens() {
   marker("screens");
   let v = {
     home: app_replace_home,
+    rule_set: app_replace_rule_set,
   };
   return v;
 }
