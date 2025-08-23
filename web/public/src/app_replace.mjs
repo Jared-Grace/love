@@ -16,6 +16,7 @@ export function app_replace() {
     },
   ];
   let b = html_button(body);
+  b.innerHTML = text;
   function lambda(rs) {}
   each(rule_sets, lambda);
 }
