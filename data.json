@@ -3115,8 +3115,7 @@
    "js_identifiers",
    "list_join_comma",
    "marker_functionize",
-   "folder_public_combine",
-   "storage_local_get_or"
+   "folder_public_combine"
   ],
   "separator": [
    "watch",
@@ -5557,7 +5556,8 @@
    "object_property_exists_not",
    "function_aliases_restore",
    "js_await_add",
-   "null_is"
+   "null_is",
+   "storage_local_get_or"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -19506,7 +19506,7 @@
     "key",
     "value_or",
     "value",
-    "result"
+    "n"
    ]
   }
  },
