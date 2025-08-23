@@ -145,7 +145,8 @@
   "rg": "range",
   "mdm": "marker_next_delete_multiple",
   "mdd": "marker_down_1",
-  "muu": "marker_up_1"
+  "muu": "marker_up_1",
+  "for": "folder_read"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1521,7 +1522,8 @@
   "cd",
   "mc fr",
   "mnd",
-  "u fr"
+  "u fr",
+  "a for folder_read"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
