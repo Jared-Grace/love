@@ -4240,8 +4240,7 @@
    "function_dependencies_code_copy"
   ],
   "text": [
-   "clipboard_copy",
-   "app_replace"
+   "clipboard_copy"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10126,10 +10125,10 @@
    "app_replace",
    "html_button"
   ],
-  "innerHTML": [
+  "name2": [
    "app_replace"
   ],
-  "name2": [
+  "html_text_set": [
    "app_replace"
   ]
  },
@@ -19107,6 +19106,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "object_property_get",
     "html_button",
     "each",
@@ -19120,9 +19120,7 @@
     "lambda",
     "rs",
     "name2",
-    "b",
-    "innerHTML",
-    "text"
+    "b"
    ]
   },
   "html_document_body": {
