@@ -10100,6 +10100,9 @@
   ],
   "appendChild": [
    "app_replace"
+  ],
+  "tag_name": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19080,6 +19083,7 @@
     "marker",
     "app_replace",
     "body",
+    "tag_name",
     "newDiv",
     "document",
     "createElement",
