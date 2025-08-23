@@ -1,3 +1,4 @@
+import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { folder_src } from "./folder_src.mjs";
 import { folder_current_join_code } from "./folder_current_join_code.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
@@ -9,7 +10,7 @@ import { html_name_to_path } from "./html_name_to_path.mjs";
 import { path_join } from "./path_join.mjs";
 export async function html_update(name) {
   let file_path = html_name_to_path(name);
-  const name_prefixed = `app_${name}`;
+  const name_prefixed = app_name_prefixed(name);
   let call = js_code_call_statement(name_prefixed);
   let f_name_ext = function_name_to_base(name_prefixed);
   let src = folder_src();
