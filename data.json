@@ -5662,7 +5662,8 @@
    "function_copy",
    "js_dollar",
    "js_identifier_replace",
-   "marker_expand"
+   "marker_expand",
+   "function_rename"
   ],
   "function_copy": [
    "function_copy",
@@ -12262,6 +12263,7 @@
   },
   "function_rename": {
    "identifiers": [
+    "js_identifier_replace",
     "function_transform",
     "each_async",
     "object_property_get",
