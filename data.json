@@ -1494,7 +1494,6 @@
   "mb $i",
   "me",
   "mb $r",
-  "as marker",
   "mi n",
   "n apps_get",
   "s files",
@@ -1602,7 +1601,8 @@
   "oa oa",
   "o oa",
   "as combine",
-  "s combine"
+  "s combine",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
