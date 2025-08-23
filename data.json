@@ -150,7 +150,8 @@
   "fop": "folder_public",
   "fpc": "folder_public_combine",
   "oh": "app_html_open",
-  "an": "app_new"
+  "an": "app_new",
+  "oa": "function_open_app"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1588,7 +1589,8 @@
   "s auto",
   "o oe",
   "fws o app",
-  "as html"
+  "as html",
+  "a oa function_open_app"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
