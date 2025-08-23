@@ -8,5 +8,6 @@ export async function function_rename(f_name_before, f_name_after) {
   await function_delete(f_name_before);
   let v = await function_alias_rename(f_name_before, f_name_after);
   let identifiers = await data_identifiers_get();
+  $opg;
   marker("1");
 }
