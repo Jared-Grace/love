@@ -10223,16 +10223,19 @@
   ],
   "element": [
    "html_element",
-   "html_text_set"
+   "html_text_set",
+   "app_replace"
   ],
   "component": [
-   "html_text_set"
+   "html_text_set",
+   "app_replace"
   ],
   "innerHTML": [
    "html_text_set"
   ],
   "html_component_element_get": [
-   "html_text_set"
+   "html_text_set",
+   "app_replace"
   ]
  },
  "functions": {
@@ -19232,6 +19235,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_component_element_get",
     "html_text_set",
     "object_property_get",
     "html_button_element",
@@ -19246,7 +19250,9 @@
     "lambda",
     "rs",
     "name2",
-    "b"
+    "b",
+    "element",
+    "component"
    ]
   },
   "html_document_body": {
