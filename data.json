@@ -540,7 +540,6 @@
   "c function_transform_marker function_transform_marker_all",
   "i function_transform_marker_all",
   "i marker_remove",
-  "o function_transform_marker",
   "au function_transform_marker_all",
   "i function_transform",
   "i html_new",
@@ -1610,10 +1609,12 @@
   "ps",
   "p",
   "marker_screen_add t",
-  "fw r function_rename_suffix_add"
+  "fw r function_rename_suffix_add",
+  "r function_transform_marker function_transform_marker_current",
+  "o function_transform_marker"
  ],
  "marker_current": "1",
- "function_current": "function_rename_suffix_add",
+ "function_current": "function_transform_marker",
  "terminal": false,
  "identifiers": {
   "log": [
