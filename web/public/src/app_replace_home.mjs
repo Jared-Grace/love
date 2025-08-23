@@ -16,8 +16,7 @@ export function app_replace_home(context) {
   ];
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
-    const value = "rule_set";
-    html_button_screen(body, name2, context, value);
+    html_button_screen(body, name2, context, "rule_set");
   }
   each(rule_sets, lambda2);
 }
