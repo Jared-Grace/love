@@ -2235,7 +2235,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "app_replace"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2978,7 +2979,8 @@
    "lambda_get",
    "app_replace_home",
    "storage_local_set",
-   "storage_local_get"
+   "storage_local_get",
+   "app_replace"
   ],
   "name": [
    "watch",
@@ -3296,7 +3298,8 @@
    "marker_enter",
    "function_rename",
    "js_imports_paths_fix",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace"
   ],
   "data_save": [
    "data_file_update",
@@ -4724,7 +4727,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "app_replace"
   ],
   "each_pair": [
    "each_pair",
@@ -10321,13 +10325,13 @@
   "getItem": [
    "storage_local_get"
   ],
-  "screen": [
-   "app_replace"
-  ],
   "screens": [
    "app_replace"
   ],
   "home": [
+   "app_replace"
+  ],
+  "screen_name": [
    "app_replace"
   ]
  },
@@ -19322,6 +19326,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "storage_local_get",
     "app_replace_home",
     "html_clear",
@@ -19332,7 +19337,10 @@
     "screens",
     "home",
     "body",
-    "screen"
+    "screen_name",
+    "value",
+    "object",
+    "property_name"
    ]
   },
   "html_document_body": {
