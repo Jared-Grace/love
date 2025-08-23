@@ -1523,7 +1523,8 @@
   "mc fr",
   "mnd",
   "u fr",
-  "a for folder_read"
+  "a for folder_read",
+  "mc for"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
