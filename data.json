@@ -3512,7 +3512,8 @@
    "function_new_js",
    "function_wrap_suffix_add",
    "git_push",
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "marker_screen_add"
   ],
   "error_attention_set": [
    "watch",
@@ -4814,7 +4815,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "marker_screen_add"
   ],
   "right": [
    "equal",
@@ -4829,7 +4831,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "marker_screen_add"
   ],
   "eq": [
    "equal",
@@ -5263,7 +5266,8 @@
    "function_new_js",
    "folder_public_combine",
    "app_html_open",
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "marker_screen_add"
   ],
   "body_block": [
    "functions_combine",
@@ -19627,6 +19631,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_name_combine",
     "data_app_current_get",
     "function_current_set",
     "data_function_current_restore",
@@ -19637,6 +19642,9 @@
     "screen_name",
     "lambda3",
     "a_name",
+    "combined",
+    "left",
+    "right",
     "lambda",
     "a",
     "next",
