@@ -1990,7 +1990,6 @@
    "function_params_consolidate",
    "function_params_new",
    "function_param_swap",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "function_transform_result",
@@ -2291,7 +2290,6 @@
    "function_params_new",
    "function_param_swap",
    "function_transform_current",
-   "function_transform_marker",
    "function_wrap",
    "git_commit",
    "git_push",
@@ -2422,7 +2420,6 @@
    "function_dependencies",
    "function_identifier_replace",
    "function_params_consolidate",
-   "function_transform_marker",
    "js_block_child_graph",
    "js_call_new_code",
    "js_declare_assign",
@@ -2593,7 +2590,6 @@
    "function_open_editor_current",
    "function_read",
    "function_transform_command",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "function_transform_marker_current",
@@ -2764,7 +2760,6 @@
    "catch_only_async",
    "error",
    "error_json",
-   "function_transform_marker",
    "git_acp",
    "git_acp_call",
    "git_acp_timestamp",
@@ -3891,7 +3886,6 @@
    "function_alias_generic",
    "function_alias_replace",
    "function_param_swap",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "identity",
@@ -4139,7 +4133,6 @@
    "functions_search",
    "function_auto",
    "function_imports_add",
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_atomize",
    "js_atomize_function",
@@ -4247,7 +4240,6 @@
    "catch_only_async",
    "file_overwrite_json",
    "function_run_log",
-   "function_transform_marker",
    "json_to",
    "js_block_child_graph",
    "js_identifiers_to_names",
@@ -4502,7 +4494,6 @@
   "list_size": [
    "data_prompts",
    "functions_combine",
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_call_new",
    "js_call_new_code",
@@ -5718,7 +5709,6 @@
    "function_transform",
    "function_transform_command",
    "function_transform_current",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_wrap",
    "marker_functionize",
@@ -5824,7 +5814,6 @@
   ],
   "list_adder_async": [
    "function_dependencies",
-   "function_transform_marker",
    "function_transform_marker_all",
    "list_adder_async",
    "list_adder_unique_async",
@@ -5843,7 +5832,6 @@
   ],
   "la": [
    "function_dependencies",
-   "function_transform_marker",
    "function_type_first",
    "js_block_child_graph",
    "js_declaration_single",
@@ -6730,25 +6718,21 @@
    "function_transform_command_self"
   ],
   "list_size_1_assert_message": [
-   "function_transform_marker",
    "list_size_1_assert",
    "list_size_1_assert_message"
   ],
   "function_transform_marker_arg": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "js_marker_named_ast_arg"
   ],
   "js_marker_named": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_marker_is",
    "js_marker_named",
    "js_marker_named_ast"
   ],
   "js_type": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_atomize",
    "js_atomize_function",
@@ -6933,21 +6917,15 @@
    "marker"
   ],
   "lambda_marker": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "marker_functionize",
    "marker_move"
   ],
   "visitors": [
-   "function_transform_marker",
    "js_markers",
    "js_marker_named_ast"
   ],
-  "lines": [
-   "function_transform_marker"
-  ],
   "size": [
-   "function_transform_marker",
    "list_size"
   ],
   "js_markers": [
@@ -10424,6 +10402,9 @@
   ],
   "function_rename_suffix_add": [
    "function_rename_suffix_add"
+  ],
+  "function_transform_marker_specified": [
+   "function_transform_marker"
   ]
  },
  "functions": {
@@ -12705,33 +12686,14 @@
   },
   "function_transform_marker": {
    "identifiers": [
+    "function_transform_marker_specified",
     "marker",
-    "list_size_1_assert_message",
-    "list_adder_async",
-    "function_transform_marker_arg",
-    "js_marker_named",
     "data_marker_current_get",
-    "js_type",
-    "function_transform",
-    "each_async",
-    "list_size",
-    "json_to",
     "function_transform_marker",
     "f_name",
     "lambda$a",
     "marker_name",
-    "code",
-    "lambda2",
-    "la",
-    "lambda_marker",
-    "ast",
-    "visitors",
-    "lambda",
-    "v",
-    "a",
-    "lines",
-    "message",
-    "size"
+    "code"
    ],
    "async": true
   },
