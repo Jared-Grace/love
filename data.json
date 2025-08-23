@@ -1583,7 +1583,8 @@
   "s restore",
   "u u",
   "nj imports_paths_fix",
-  "s imports"
+  "s imports",
+  "fts js_imports_paths_fix"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
