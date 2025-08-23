@@ -1560,10 +1560,11 @@
   "mc alert",
   "mb alert()",
   "s server",
-  "u v"
+  "u v",
+  "n app_new"
  ],
  "marker_current": "1",
- "function_current": "app_code",
+ "function_current": "app_new",
  "terminal": false,
  "identifiers": {
   "log": [
