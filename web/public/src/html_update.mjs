@@ -1,3 +1,5 @@
+import { folder_current_join_code } from "./folder_current_join_code.mjs";
+import { function_name_to_base } from "./function_name_to_base.mjs";
 import { js_code_import_single } from "./js_code_import_single.mjs";
 import { js_code_call_statement } from "./js_code_call_statement.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
@@ -10,6 +12,9 @@ export async function html_update(name) {
   let ext = function_name_extension();
   let call = js_code_call_statement(name_prefixed);
   let i = js_code_import_single(name_prefixed);
+  let f_name_ext = function_name_to_base(import_);
+  const from = folder_current_join_code(f_name_ext);
+  let code = js_code_import_single(import_, from);
   let body = `<script type="module"> 
     ${i}
     import { ${name_prefixed} } from './${name_prefixed}${ext}';
