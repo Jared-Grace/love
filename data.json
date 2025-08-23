@@ -1605,7 +1605,8 @@
   "oec",
   "o mna",
   "s set,current",
-  "s restore"
+  "s restore",
+  "s app"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
