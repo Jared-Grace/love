@@ -3937,7 +3937,6 @@
    "folder_read",
    "folder_current_join",
    "folder_public_combine",
-   "functions_path",
    "function_import",
    "function_name_to_path",
    "html_new",
@@ -4924,7 +4923,6 @@
   "folder_public": [
    "folder_public",
    "folder_public_combine",
-   "functions_path",
    "html_new",
    "server",
    "apps_get"
@@ -10017,6 +10015,9 @@
   "folder_current_join_code": [
    "function_imports_add",
    "html_update"
+  ],
+  "folder_src": [
+   "functions_path"
   ]
  },
  "functions": {
@@ -11080,9 +11081,8 @@
   },
   "functions_path": {
    "identifiers": [
+    "folder_src",
     "folder_public_combine",
-    "path_join",
-    "folder_public",
     "functions_path",
     "second",
     "joined"
