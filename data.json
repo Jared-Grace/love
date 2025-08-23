@@ -10038,6 +10038,9 @@
   ],
   "alert": [
    "app_code"
+  ],
+  "app_name_prefixed": [
+   "html_update"
   ]
  },
  "functions": {
@@ -12739,6 +12742,7 @@
   },
   "html_update": {
    "identifiers": [
+    "app_name_prefixed",
     "folder_src",
     "folder_current_join_code",
     "function_name_to_base",
