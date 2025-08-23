@@ -1495,7 +1495,6 @@
   "fm",
   "fa",
   "s decl,name",
-  "ml",
   "md 1",
   "mcr 0 stack1",
   "fw mu marker_up_1",
@@ -1513,7 +1512,8 @@
   "s auto",
   "fs js_auto",
   "s await",
-  "fs jaa"
+  "fs jaa",
+  "ml"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
