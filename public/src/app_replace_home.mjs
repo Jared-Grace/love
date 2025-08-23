@@ -1,10 +1,8 @@
-import { app_replace } from "./app_replace.mjs";
 import { each } from "./each.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-export function app_replace_home({ root }) {
-  let app_fn = app_replace;
+export function app_replace_home({ root, app_fn }) {
   let rule_sets = [
     {
       name: "Grow",
