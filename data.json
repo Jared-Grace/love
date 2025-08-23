@@ -2382,7 +2382,8 @@
    "js_imports_paths_fix",
    "html_button",
    "app_replace_home",
-   "function_open_app"
+   "function_open_app",
+   "marker_screen_add"
   ],
   "previous": [
    "data_identifiers_file",
@@ -7060,7 +7061,8 @@
    "marker_leave",
    "marker_above_generic",
    "marker_above_delete",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_screen_add"
   ],
   "marker_down_choices_lambda": [
    "function_transform_marker_empty",
@@ -9676,8 +9678,7 @@
    "marker_above_generic"
   ],
   "marker_below": [
-   "marker_below",
-   "marker_screen_add"
+   "marker_below"
   ],
   "add_1": [
    "marker_below",
@@ -19613,10 +19614,11 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "marker_below",
+    "function_transform_marker_current",
     "marker",
     "marker_screen_add",
     "code",
+    "lambda",
     "v"
    ]
   }
