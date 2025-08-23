@@ -1,3 +1,4 @@
+import { data_app_current_get } from "./data_app_current_get.mjs";
 import { function_current_set } from "./function_current_set.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
@@ -5,7 +6,8 @@ import { function_transform_marker_current } from "./function_transform_marker_c
 import { marker } from "./marker.mjs";
 export async function marker_screen_add(screen_name) {
   async function lambda3() {
-    await function_current_set(f_name_current);
+    let a_name = await data_app_current_get();
+    await function_current_set(a_name);
     async function lambda(a) {
       let { next } = marker_next_get(a);
     }
