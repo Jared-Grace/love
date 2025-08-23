@@ -1829,7 +1829,8 @@
    "functions_log_remove",
    "marker_up_1",
    "js_auto",
-   "apps_get"
+   "apps_get",
+   "app_html_open"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9983,6 +9984,9 @@
   ],
   "fop": [
    "apps_get"
+  ],
+  "app_html_open": [
+   "app_html_open"
   ]
  },
  "functions": {
@@ -18901,6 +18905,13 @@
     "apps_get",
     "fop",
     "fr"
+   ]
+  },
+  "app_html_open": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_html_open"
    ]
   }
  },
