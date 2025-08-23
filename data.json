@@ -10098,9 +10098,6 @@
   "rule_sets": [
    "app_replace"
   ],
-  "set1": [
-   "app_replace"
-  ],
   "rules": [
    "app_replace"
   ]
@@ -19084,10 +19081,9 @@
     "marker",
     "app_replace",
     "body",
-    "set1",
+    "rule_sets",
     "name",
     "rules",
-    "rule_sets",
     "tag_name"
    ]
   },
