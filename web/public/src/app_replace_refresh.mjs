@@ -15,4 +15,5 @@ export function app_replace_refresh() {
   marker("1");
   let screen_name = storage_local_get_or(app_fn, "screen", "home");
   let screen = object_property_get(screens, screen_name);
+  screen();
 }
