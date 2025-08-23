@@ -1867,7 +1867,8 @@
    "apps_get",
    "app_html_open",
    "app_code",
-   "app_new"
+   "app_new",
+   "app_replace"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10066,6 +10067,9 @@
   ],
   "app_new": [
    "app_new"
+  ],
+  "app_replace": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19036,6 +19040,13 @@
     "app_name_prefixed",
     "name",
     "a_name"
+   ]
+  },
+  "app_replace": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_replace"
    ]
   }
  },
