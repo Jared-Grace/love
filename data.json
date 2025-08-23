@@ -1579,7 +1579,8 @@
   "mc hdb",
   "mdd",
   "s ident",
-  "o r"
+  "o r",
+  "s data,f"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
