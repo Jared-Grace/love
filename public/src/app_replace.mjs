@@ -4,9 +4,11 @@ import { object_property_get } from "./object_property_get.mjs";
 import { each } from "./each.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { marker } from "./marker.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 export function app_replace() {
   let app_fn = app_replace;
   let body = html_document_body();
+  html_text_set(body);
   marker("1");
   let rule_sets = [
     {
