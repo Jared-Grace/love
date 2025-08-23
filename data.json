@@ -10242,7 +10242,8 @@
    "html_text_set"
   ],
   "html_component_element_get": [
-   "html_text_set"
+   "html_text_set",
+   "html_element"
   ],
   "function_open_app": [
    "function_open_app"
@@ -19283,15 +19284,16 @@
   "html_element": {
    "async": false,
    "identifiers": [
+    "html_component_element_get",
     "html_element",
     "parent",
     "tag_name",
+    "element",
     "e",
     "document",
     "createElement",
     "appendChild",
-    "v",
-    "element"
+    "v"
    ]
   },
   "html_button": {
