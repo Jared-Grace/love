@@ -3277,7 +3277,8 @@
    "marker_enter",
    "app_replace",
    "function_rename",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "html_text_set"
   ],
   "data_save": [
    "data_file_update",
@@ -10229,6 +10230,9 @@
    "html_text_set"
   ],
   "innerHTML": [
+   "html_text_set"
+  ],
+  "element2": [
    "html_text_set"
   ]
  },
@@ -19314,10 +19318,12 @@
   "html_text_set": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_text_set",
     "component",
     "name2",
     "element",
+    "element2",
     "innerHTML"
    ]
   }
