@@ -1688,8 +1688,7 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove",
-   "marker_screen_add"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -19622,7 +19621,6 @@
     "js_declare_single",
     "function_transform_marker_specified",
     "app_name_prefixed",
-    "log",
     "function_name_combine",
     "data_app_current_get",
     "marker_next_get",
