@@ -1591,7 +1591,8 @@
   "as html",
   "a oa function_open_app",
   "s prefix",
-  "oa replace"
+  "oa replace",
+  "c storage_local_set storage_local_get"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
