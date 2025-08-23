@@ -6902,8 +6902,7 @@
    "marker_next_delete",
    "marker_remove",
    "marker_next_await",
-   "marker_param_add",
-   "marker_screen_add"
+   "marker_param_add"
   ],
   "lambda$a": [
    "function_transform_marker",
@@ -10404,7 +10403,8 @@
    "function_rename_suffix_add"
   ],
   "function_transform_marker_specified": [
-   "function_transform_marker"
+   "function_transform_marker",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19598,7 +19598,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "function_transform_marker",
+    "function_transform_marker_specified",
     "app_name_prefixed",
     "log",
     "function_name_combine",
