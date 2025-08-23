@@ -2661,7 +2661,8 @@
    "folder_public",
    "file_read",
    "marker_up_1",
-   "function_open_app"
+   "function_open_app",
+   "storage_local_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2971,7 +2972,8 @@
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
    "lambda_get",
-   "app_replace_home"
+   "app_replace_home",
+   "storage_local_set"
   ],
   "name": [
    "watch",
@@ -6509,7 +6511,8 @@
   "key": [
    "function_params_consolidate",
    "object_invert",
-   "app_replace_home"
+   "app_replace_home",
+   "storage_local_set"
   ],
   "kind": [
    "function_params_consolidate"
@@ -10265,10 +10268,12 @@
    "app_replace_home"
   ],
   "storage_local_set": [
-   "app_replace_home"
+   "app_replace_home",
+   "storage_local_set"
   ],
   "app_fn": [
-   "app_replace_home"
+   "app_replace_home",
+   "storage_local_set"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10278,6 +10283,15 @@
   ],
   "name2": [
    "app_replace_home"
+  ],
+  "storage_local_key_get": [
+   "storage_local_set"
+  ],
+  "localStorage": [
+   "storage_local_set"
+  ],
+  "setItem": [
+   "storage_local_set"
   ]
  },
  "functions": {
@@ -19406,6 +19420,19 @@
     "lambda",
     "key",
     "value"
+   ]
+  },
+  "storage_local_set": {
+   "async": false,
+   "identifiers": [
+    "storage_local_key_get",
+    "storage_local_set",
+    "app_fn",
+    "key",
+    "value",
+    "v",
+    "localStorage",
+    "setItem"
    ]
   }
  },
