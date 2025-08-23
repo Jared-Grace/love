@@ -3527,8 +3527,7 @@
    "data_terminal_get",
    "data_watch_get",
    "git_push",
-   "data_functions_get",
-   "function_new_app_screen"
+   "data_functions_get"
   ],
   "trinity_green": [
    "function_run_log",
@@ -10402,6 +10401,9 @@
    "task_new",
    "marker_screen_add",
    "data_function_current_restore"
+  ],
+  "data_app_current_get": [
+   "function_new_app_screen"
   ]
  },
  "functions": {
@@ -19600,7 +19602,7 @@
   "function_new_app_screen": {
    "async": true,
    "identifiers": [
-    "data_property_get",
+    "data_app_current_get",
     "function_name_combine",
     "function_new",
     "marker",
