@@ -6516,8 +6516,7 @@
    "marker_next_await",
    "marker_if_test_replace",
    "js_await",
-   "js_imports_paths_fix",
-   "marker_screen_add"
+   "js_imports_paths_fix"
   ],
   "type": [
    "function_params_consolidate",
@@ -9927,7 +9926,8 @@
    "apps_get"
   ],
   "oe": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "marker_screen_add"
   ],
   "fp": [
    "function_aliases_restore"
@@ -19613,7 +19613,7 @@
     "a",
     "next",
     "declarator",
-    "expression",
+    "oe",
     "properties",
     "v",
     "param_name",
