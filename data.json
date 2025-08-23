@@ -1578,10 +1578,11 @@
   "mc hdb",
   "oce",
   "oec",
-  "mnd"
+  "mnd",
+  "fs app_replace"
  ],
  "marker_current": "1",
- "function_current": "html_document_body",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
