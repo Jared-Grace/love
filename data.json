@@ -10033,6 +10033,9 @@
   ],
   "app_code": [
    "app_code"
+  ],
+  "alert": [
+   "app_code"
   ]
  },
  "functions": {
@@ -18980,7 +18983,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "app_code"
+    "app_code",
+    "alert"
    ]
   }
  },
