@@ -15,7 +15,7 @@ export function app_replace_home({ parent, app_fn }) {
   ];
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
-    html_button(root, name2, lambda);
+    html_button(parent, name2, lambda);
     function lambda() {
       let key = "screen";
       const value = "rule_set";
