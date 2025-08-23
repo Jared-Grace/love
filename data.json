@@ -1530,7 +1530,8 @@
   "a fop folder_public",
   "mc fop",
   "ir v fop",
-  "ir dirPath fop"
+  "ir dirPath fop",
+  "ir v2 fr"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
