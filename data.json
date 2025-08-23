@@ -10301,11 +10301,9 @@
    "app_replace_screens"
   ],
   "storage_local_set": [
-   "app_replace_home",
    "storage_local_set"
   ],
   "app_fn": [
-   "app_replace_home",
    "storage_local_set",
    "storage_local_key_get",
    "storage_local_get",
@@ -10442,8 +10440,7 @@
   "app_refresh": [
    "app_replace_refresh",
    "app_refresh",
-   "app_replace",
-   "app_replace_home"
+   "app_replace"
   ],
   "context": [
    "app_replace_home",
@@ -10454,6 +10451,9 @@
   ],
   "screen": [
    "app_refresh"
+  ],
+  "app_screen_set": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19522,9 +19522,8 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
-    "app_refresh",
+    "app_screen_set",
     "each",
-    "storage_local_set",
     "html_button",
     "object_property_get",
     "html_document_body",
@@ -19538,8 +19537,7 @@
     "rs",
     "name2",
     "lambda",
-    "value",
-    "app_fn"
+    "value"
    ]
   },
   "storage_local_set": {
