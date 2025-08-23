@@ -22,9 +22,8 @@ export function app_replace_home() {
     let name2 = object_property_get(rs, "name");
     html_button(body, name2, lambda);
     function lambda() {
-      let key = "screen";
       const value = "rule_set";
-      storage_local_set(app_fn, key, value);
+      storage_local_set(app_fn, "screen", value);
       app_replace_refresh();
     }
   }
