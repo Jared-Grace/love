@@ -10093,6 +10093,9 @@
   ],
   "html_element": [
    "app_replace"
+  ],
+  "rule_sets": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19074,6 +19077,7 @@
     "marker",
     "app_replace",
     "body",
+    "rule_sets",
     "tag_name"
    ]
   },
