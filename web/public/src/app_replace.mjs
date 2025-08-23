@@ -1,3 +1,4 @@
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button_element } from "./html_button_element.mjs";
@@ -21,6 +22,7 @@ export function app_replace() {
     let name2 = object_property_get(rs, "name");
     let b = html_button_element(body);
     html_text_set(b, name2);
+    let element = html_component_element_get(component);
   }
   each(rule_sets, lambda);
 }
