@@ -1591,11 +1591,11 @@
   "s prefix",
   "oa replace",
   "p",
-  "c storage_local_set storage_local_get",
   "de storage_local_set",
   "c storage_local_get storage_local_set",
   "ps",
-  "de storage_local_get"
+  "de storage_local_get",
+  "c storage_local_set storage_local_get"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
