@@ -3275,7 +3275,8 @@
    "js_imports_missing",
    "marker_expand",
    "data_identifiers_search",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "function_rename"
   ],
   "list_difference": [
    "function_imports_missing",
@@ -9527,8 +9528,7 @@
   "functions": [
    "data_file_update_inner",
    "js_await_add",
-   "data_functions_get",
-   "function_rename"
+   "data_functions_get"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -9616,8 +9616,7 @@
   ],
   "data_functions_get": [
    "js_await_add",
-   "data_functions_get",
-   "function_rename"
+   "data_functions_get"
   ],
   "marker_above_delete": [
    "marker_above_delete"
@@ -10134,7 +10133,8 @@
    "app_replace"
   ],
   "data_identifiers_get": [
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "function_rename"
   ]
  },
  "functions": {
@@ -12251,7 +12251,7 @@
   },
   "function_rename": {
    "identifiers": [
-    "data_functions_get",
+    "data_identifiers_get",
     "function_alias_rename",
     "function_delete",
     "function_copy",
@@ -12260,7 +12260,7 @@
     "f_name_before",
     "f_name_after",
     "v",
-    "functions"
+    "identifiers"
    ],
    "async": true
   },
