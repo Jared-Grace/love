@@ -8,7 +8,7 @@ export function js_imports_paths_fix(ast) {
   function lambda(i) {
     let name = object_property_get(i, "name");
     let declaration = object_property_get(i, "declaration");
-    let specifiers = declaration;
+    let { specifiers } = declaration;
     log(declaration);
   }
   each(imports_declarations, lambda);
