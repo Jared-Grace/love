@@ -7324,7 +7324,8 @@
    "integer_is_assert",
    "js_declaration_params_names_node",
    "js_identifier_is",
-   "list_index_is"
+   "list_index_is",
+   "js_let_add"
   ],
   "Number": [
    "integer_is",
@@ -7739,7 +7740,8 @@
    "js_dollar",
    "js_identifiers_to_names",
    "js_identifier_is",
-   "marker_expand"
+   "marker_expand",
+   "js_let_add"
   ],
   "async_is": [
    "js_call_fill",
@@ -10085,6 +10087,9 @@
   ],
   "document": [
    "html_document_body"
+  ],
+  "node2": [
+   "js_let_add"
   ]
  },
  "functions": {
@@ -14594,6 +14599,7 @@
   },
   "js_let_add": {
    "identifiers": [
+    "js_identifier_is",
     "not",
     "list_includes",
     "js_identifier_defineds",
@@ -14613,6 +14619,8 @@
     "node",
     "left",
     "right",
+    "ii",
+    "node2",
     "name",
     "defineds",
     "includes",
