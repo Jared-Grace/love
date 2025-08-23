@@ -2630,7 +2630,8 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1"
+   "marker_up_1",
+   "html_document_body"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6135,7 +6136,8 @@
    "marker_functionize",
    "marker_top",
    "js_imports_unused_remove",
-   "js_imports_fix"
+   "js_imports_fix",
+   "html_document_body"
   ],
   "import_": [
    "function_imports_add",
@@ -10075,6 +10077,9 @@
    "app_replace"
   ],
   "html_document_body": [
+   "html_document_body"
+  ],
+  "document": [
    "html_document_body"
   ]
  },
@@ -19059,7 +19064,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "html_document_body"
+    "html_document_body",
+    "v",
+    "document",
+    "body"
    ]
   }
  },
