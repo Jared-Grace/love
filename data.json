@@ -4801,8 +4801,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "function_new_app_screen"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4817,8 +4816,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "function_new_app_screen"
+   "add"
   ],
   "eq": [
    "equal",
@@ -19586,8 +19584,6 @@
     "f_name",
     "a_name",
     "combined",
-    "left",
-    "right",
     "v"
    ]
   }
