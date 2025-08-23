@@ -1550,7 +1550,8 @@
   "mdd",
   "mc file_open",
   "ir f_path combined",
-  "a oh app_html_open"
+  "a oh app_html_open",
+  "oh code"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
