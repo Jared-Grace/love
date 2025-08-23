@@ -6409,8 +6409,7 @@
    "js_imports_fix",
    "data_file_update_inner",
    "js_declaration_single_name",
-   "js_imports_paths_fix",
-   "marker_screen_add"
+   "js_imports_paths_fix"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -8115,7 +8114,6 @@
   ],
   "vd": [
    "js_declare_init_set",
-   "marker_screen_add",
    "js_declare_single"
   ],
   "declarations": [
@@ -8127,8 +8125,7 @@
    "js_declare_single"
   ],
   "declarators": [
-   "js_declare_init_set",
-   "marker_screen_add"
+   "js_declare_init_set"
   ],
   "js_dollar_rf": [
    "js_dollar",
@@ -10415,7 +10412,8 @@
    "js_declare_single"
   ],
   "declarator": [
-   "js_declare_single"
+   "js_declare_single",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19622,10 +19620,8 @@
     "lambda",
     "a",
     "next",
-    "declarators",
-    "vd",
+    "declarator",
     "expression",
-    "declaration",
     "v2"
    ]
   },
