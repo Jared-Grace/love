@@ -13,10 +13,8 @@ export async function function_rename(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
   async function lambda(item) {
-    let output = await function_transform(
-      f_name,
-      async function lambda2(ast) {},
-    );
+    async function lambda2(ast) {}
+    let output = await function_transform(f_name, lambda2);
   }
   await each_async(list, lambda);
   marker("1");
