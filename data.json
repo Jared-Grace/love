@@ -1529,7 +1529,8 @@
   "u fp",
   "a fop folder_public",
   "mc fop",
-  "ir v fop"
+  "ir v fop",
+  "ir dirPath fop"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
