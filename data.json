@@ -5463,7 +5463,8 @@
    "js_identifier_defineds",
    "list_map_squash",
    "object_properties",
-   "tasks_run"
+   "tasks_run",
+   "marker_screen_add"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -19613,6 +19614,7 @@
     "next",
     "declarator",
     "expression",
+    "properties",
     "v",
     "param_name",
     "v2"
