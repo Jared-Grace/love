@@ -1923,7 +1923,8 @@
    "app_replace",
    "function_rename_suffix_add",
    "app_replace_rule_set",
-   "app_refresh"
+   "app_refresh",
+   "lambda_value"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10471,6 +10472,9 @@
   ],
   "addEventListener": [
    "html_on"
+  ],
+  "lambda_value": [
+   "lambda_value"
   ]
  },
  "functions": {
@@ -19784,6 +19788,13 @@
     "lambda",
     "element",
     "addEventListener"
+   ]
+  },
+  "lambda_value": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "lambda_value"
    ]
   }
  },
