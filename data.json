@@ -10156,10 +10156,12 @@
    "html_button"
   ],
   "name2": [
-   "app_replace"
+   "app_replace",
+   "html_text_set"
   ],
   "html_text_set": [
-   "app_replace"
+   "app_replace",
+   "html_text_set"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10220,7 +10222,14 @@
    "app_replace"
   ],
   "element": [
-   "html_element"
+   "html_element",
+   "html_text_set"
+  ],
+  "component": [
+   "html_text_set"
+  ],
+  "innerHTML": [
+   "html_text_set"
   ]
  },
  "functions": {
@@ -19300,6 +19309,16 @@
     "js_string",
     "value_string",
     "s"
+   ]
+  },
+  "html_text_set": {
+   "async": false,
+   "identifiers": [
+    "html_text_set",
+    "component",
+    "name2",
+    "element",
+    "innerHTML"
    ]
   }
  },
