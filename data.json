@@ -1581,10 +1581,10 @@
   "u u",
   "nj imports_paths_fix",
   "s imports",
-  "fts js_imports_paths_fix",
   "s import",
   "s string",
-  "ps"
+  "ps",
+  "fts js_imports_paths_fix"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
