@@ -8,7 +8,7 @@ export function js_property_identifier(param_name) {
     shorthand: true,
     computed: false,
     key: key,
-    value: key,
+    value: value,
     kind: "init",
   };
   return v;
