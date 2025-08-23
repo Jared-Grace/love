@@ -2216,7 +2216,8 @@
    "function_exists_strict",
    "function_name_to_base",
    "function_rename",
-   "function_open_app"
+   "function_open_app",
+   "marker_screen_add"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -6375,7 +6376,8 @@
    "function_wrap",
    "task_new",
    "app_new",
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "marker_screen_add"
   ],
   "code_declaration": [
    "function_new",
@@ -19621,6 +19623,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_new",
     "log",
     "js_parse_expression",
     "list_add",
@@ -19649,6 +19652,7 @@
     "combined_screen",
     "value",
     "p",
+    "f_name",
     "message",
     "v2"
    ]
