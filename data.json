@@ -3668,8 +3668,7 @@
    "marker_functionize"
   ],
   "value2": [
-   "error_attention_set",
-   "storage_local_get_or"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -19505,8 +19504,7 @@
     "key",
     "value_or",
     "value",
-    "result",
-    "value2"
+    "result"
    ]
   }
  },
