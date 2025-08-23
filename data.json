@@ -3035,7 +3035,8 @@
    "object_property_exists_not",
    "js_identifiers",
    "list_join_comma",
-   "marker_functionize"
+   "marker_functionize",
+   "folder_public_combine"
   ],
   "separator": [
    "watch",
@@ -5153,7 +5154,8 @@
    "function_copy_suffix_add",
    "function_name_combine",
    "function_name_combine_multiple",
-   "function_new_js"
+   "function_new_js",
+   "folder_public_combine"
   ],
   "body_block": [
    "functions_combine",
@@ -10961,7 +10963,9 @@
     "folder_public",
     "path_join",
     "folder_public_combine",
-    "second"
+    "second",
+    "result",
+    "combined"
    ],
    "async": false
   },
