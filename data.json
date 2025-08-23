@@ -1572,7 +1572,6 @@
   "mc hdb",
   "mdd",
   "s ident",
-  "o r",
   "s data,f",
   "r html_button html_button_element",
   "np",
@@ -1585,10 +1584,11 @@
   "fts js_imports_paths_fix",
   "ps",
   "p",
-  "ftc js_imports_paths_fix app_replace"
+  "ftc js_imports_paths_fix app_replace",
+  "o r"
  ],
  "marker_current": "1",
- "function_current": "js_imports_paths_fix",
+ "function_current": "function_rename",
  "terminal": false,
  "identifiers": {
   "log": [
