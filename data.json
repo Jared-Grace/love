@@ -1517,7 +1517,6 @@
   "n apps_get",
   "s files",
   "s file",
-  "cd",
   "mc fr",
   "mnd",
   "u fr",
@@ -1538,7 +1537,8 @@
   "s param,new",
   "s param,add",
   "mpa a_name",
-  "s html"
+  "s html",
+  "cd"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
