@@ -2601,7 +2601,8 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1"
+   "marker_up_1",
+   "html_update"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6059,7 +6060,8 @@
   ],
   "js_code_import_single": [
    "function_imports_add",
-   "js_code_import_single"
+   "js_code_import_single",
+   "html_update"
   ],
   "js_code_string": [
    "function_imports_add",
@@ -12711,6 +12713,7 @@
   },
   "html_update": {
    "identifiers": [
+    "js_code_import_single",
     "js_code_call_statement",
     "function_name_extension",
     "file_open",
@@ -12722,6 +12725,7 @@
     "name_prefixed",
     "ext",
     "call",
+    "v",
     "body"
    ],
    "async": true
