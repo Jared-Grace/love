@@ -2398,7 +2398,8 @@
    "function_open_app",
    "marker_screen_add",
    "data_function_current_restore",
-   "html_on"
+   "html_on",
+   "lambda_value"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2702,7 +2703,8 @@
    "app_replace_screens",
    "function_rename_suffix_add",
    "function_params_consolidate",
-   "js_property_identifier"
+   "js_property_identifier",
+   "lambda_value"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3015,7 +3017,8 @@
    "storage_local_get_or",
    "js_property_identifier",
    "js_property",
-   "marker_screen_add"
+   "marker_screen_add",
+   "lambda_value"
   ],
   "name": [
    "watch",
@@ -19794,7 +19797,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "lambda_value"
+    "lambda_value",
+    "value",
+    "v",
+    "lambda"
    ]
   }
  },
