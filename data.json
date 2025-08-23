@@ -4029,7 +4029,8 @@
    "object_merge",
    "object_properties_delete",
    "marker_above_delete",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_name_prefixed"
   ],
   "f_names": [
    "functions_names",
@@ -10417,6 +10418,9 @@
   ],
   "null_not_is_assert": [
    "data_app_current_get"
+  ],
+  "app_name_prefix": [
+   "app_name_prefixed"
   ]
  },
  "functions": {
@@ -19398,8 +19402,10 @@
   "app_name_prefixed": {
    "async": false,
    "identifiers": [
+    "app_name_prefix",
     "app_name_prefixed",
     "name",
+    "p",
     "a_name"
    ]
   },
