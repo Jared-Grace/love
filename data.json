@@ -1640,7 +1640,6 @@
    "function_param_new",
    "function_run_log",
    "function_transform",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_empty",
    "function_wrap",
@@ -1726,7 +1725,6 @@
    "function_imports_missing_add",
    "function_params_new",
    "function_param_swap",
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_atomize",
    "js_atomize_function",
@@ -2717,7 +2715,6 @@
    "function_new",
    "function_new_declaration",
    "function_parse_declaration_js_unparse",
-   "function_transform_marker",
    "function_transform_marker_empty",
    "js_block_child_graph_unparse",
    "js_call_fill",
@@ -3459,7 +3456,6 @@
   ],
   "list_empty_is": [
    "function_identifier_replace",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_empty",
    "js_marker_named",
@@ -3722,7 +3718,6 @@
    "function_alias_replace",
    "function_name_to_path",
    "function_param_swap_task_simple",
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_declaration_params_names_node",
    "js_identifier_defineds",
@@ -4697,7 +4692,6 @@
   "list_first": [
    "each_multiple",
    "function_name_to_acronym",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_type_first",
    "js_call_new",
@@ -5074,7 +5068,6 @@
   ],
   "list_size_1_assert": [
    "functions_combine",
-   "function_transform_marker",
    "list_single",
    "list_size_1_assert",
    "js_dollar_g"
@@ -5958,7 +5951,6 @@
   "object_merge": [
    "function_imports_missing",
    "function_parse",
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "marker_call_replace_generic",
@@ -6768,7 +6760,6 @@
    "js_imports_declarations"
   ],
   "list_is": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_empty",
    "js_atomize",
@@ -6795,7 +6786,6 @@
    "marker_down_generic"
   ],
   "js_node_type_is": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_atomize",
    "js_atomize_function",
@@ -6843,7 +6833,6 @@
    "js_call_function_if"
   ],
   "js_node_is": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_identifier_replace",
    "js_marker_named",
@@ -6860,7 +6849,6 @@
    "js_visit_types"
   ],
   "list_get_end": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "function_transform_marker_arg",
    "function_transform_marker_empty",
@@ -6884,7 +6872,6 @@
    "marker_leave"
   ],
   "js_visit_type": [
-   "function_transform_marker",
    "function_transform_marker_all",
    "js_arrow_blockify",
    "js_arrow_to_function",
@@ -12717,29 +12704,16 @@
   },
   "function_transform_marker": {
    "identifiers": [
+    "marker",
     "list_size_1_assert_message",
-    "list_size_1_assert",
     "list_adder_async",
     "function_transform_marker_arg",
     "js_marker_named",
     "data_marker_current_get",
-    "log",
-    "each",
     "js_type",
-    "error",
-    "list_is",
-    "marker",
-    "js_node_type_is",
-    "js_node_is",
-    "list_get_end",
-    "js_visit_type",
     "function_transform",
-    "object_merge",
     "each_async",
     "list_size",
-    "list_empty_is",
-    "list_first",
-    "js_unparse",
     "json_to",
     "function_transform_marker",
     "f_name",
