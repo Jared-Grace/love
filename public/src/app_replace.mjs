@@ -4,6 +4,7 @@ import { marker } from "./marker.mjs";
 export function app_replace() {
   let body = html_document_body();
   marker("1");
+  let set1 = [];
   let rule_sets = [];
   const tag_name = "div";
   html_element(body, tag_name);
