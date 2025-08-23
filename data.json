@@ -1507,7 +1507,6 @@
   "p",
   "mc not",
   "ir a async_is",
-  "mdd",
   "mb $i",
   "me",
   "mb $r",
@@ -1540,7 +1539,8 @@
   "cd",
   "mc fnh",
   "ir name a_name",
-  "s public"
+  "s public",
+  "mdd"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
