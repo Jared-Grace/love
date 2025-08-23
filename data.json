@@ -10432,6 +10432,12 @@
   "js_property_generic": [
    "js_property",
    "js_property_identifier"
+  ],
+  "rule_set": [
+   "app_replace_screens"
+  ],
+  "app_replace_rule_set": [
+   "app_replace_screens"
   ]
  },
  "functions": {
@@ -19607,7 +19613,9 @@
     "marker",
     "app_replace_screens",
     "v",
-    "home"
+    "home",
+    "rule_set",
+    "app_replace_rule_set"
    ]
   },
   "marker_screen_add": {
