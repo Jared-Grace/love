@@ -839,7 +839,6 @@
   "sa function_new_transform ",
   "as function_new_transform",
   "a fnt function_new_transform",
-  "s combine",
   "u jsp",
   "s parse",
   "a jps js_parse_statement",
@@ -1602,7 +1601,8 @@
   "fws n app_screen",
   "oa oa",
   "o oa",
-  "as combine"
+  "as combine",
+  "s combine"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
