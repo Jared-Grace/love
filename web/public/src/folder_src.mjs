@@ -1,4 +1,4 @@
 export function folder_src() {
-  let v = "src";
-  return v;
+  let src = "src";
+  return src;
 }
