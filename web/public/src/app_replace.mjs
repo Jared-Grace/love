@@ -15,6 +15,7 @@ export function app_replace() {
   let screen_name = storage_local_get(app_fn, "screen");
   let screen = object_property_get(screens, screen_name);
   screen({
+    app_fn,
     root,
   });
 }
