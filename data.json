@@ -2692,7 +2692,6 @@
    "function_open_app",
    "function_new_app_screen",
    "app_replace_screens",
-   "marker_screen_add",
    "function_rename_suffix_add"
   ],
   "file_overwrite": [
@@ -19610,8 +19609,7 @@
     "lambda",
     "a",
     "next",
-    "v2",
-    "v"
+    "v2"
    ]
   },
   "data_function_current_restore": {
