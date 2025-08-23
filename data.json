@@ -10086,7 +10086,26 @@
    "app_replace"
   ],
   "document": [
-   "html_document_body"
+   "html_document_body",
+   "app_replace"
+  ],
+  "newDiv": [
+   "app_replace"
+  ],
+  "createElement": [
+   "app_replace"
+  ],
+  "textContent": [
+   "app_replace"
+  ],
+  "parent": [
+   "app_replace"
+  ],
+  "getElementById": [
+   "app_replace"
+  ],
+  "appendChild": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19066,7 +19085,14 @@
     "html_document_body",
     "marker",
     "app_replace",
-    "body"
+    "body",
+    "newDiv",
+    "document",
+    "createElement",
+    "textContent",
+    "parent",
+    "getElementById",
+    "appendChild"
    ]
   },
   "html_document_body": {
