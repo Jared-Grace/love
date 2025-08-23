@@ -10095,13 +10095,7 @@
   "createElement": [
    "app_replace"
   ],
-  "textContent": [
-   "app_replace"
-  ],
   "parent": [
-   "app_replace"
-  ],
-  "getElementById": [
    "app_replace"
   ],
   "appendChild": [
@@ -19089,9 +19083,7 @@
     "newDiv",
     "document",
     "createElement",
-    "textContent",
     "parent",
-    "getElementById",
     "appendChild"
    ]
   },
