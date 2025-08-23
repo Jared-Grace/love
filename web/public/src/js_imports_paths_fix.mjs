@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_string } from "./js_string.mjs";
 import { function_name_to_path_import } from "./function_name_to_path_import.mjs";
@@ -12,6 +13,7 @@ export function js_imports_paths_fix(ast) {
     let name = object_property_get(i, "name");
     let declaration = object_property_get(i, "declaration");
     const from = function_name_to_path_import(name);
+    let expression = js_parse_expression(code_expression);
     let s = js_string(from);
     object_property_set(declaration, "source", s);
   }
