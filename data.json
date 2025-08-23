@@ -2976,7 +2976,8 @@
    "js_imports_declarations",
    "lambda_get",
    "app_replace_home",
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get"
   ],
   "name": [
    "watch",
@@ -6517,7 +6518,8 @@
    "object_invert",
    "app_replace_home",
    "storage_local_set",
-   "storage_local_key_get"
+   "storage_local_key_get",
+   "storage_local_get"
   ],
   "kind": [
    "function_params_consolidate"
@@ -10279,7 +10281,8 @@
   "app_fn": [
    "app_replace_home",
    "storage_local_set",
-   "storage_local_key_get"
+   "storage_local_key_get",
+   "storage_local_get"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10292,19 +10295,26 @@
   ],
   "storage_local_key_get": [
    "storage_local_set",
-   "storage_local_key_get"
+   "storage_local_key_get",
+   "storage_local_get"
   ],
   "localStorage": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get"
   ],
   "setItem": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get"
   ],
   "ley": [
    "storage_local_key_get"
   ],
   "storage_local_key": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get"
+  ],
+  "storage_local_get": [
+   "storage_local_get"
   ]
  },
  "functions": {
@@ -19456,6 +19466,19 @@
     "key",
     "ley",
     "name"
+   ]
+  },
+  "storage_local_get": {
+   "async": false,
+   "identifiers": [
+    "storage_local_key_get",
+    "storage_local_get",
+    "app_fn",
+    "key",
+    "value",
+    "storage_local_key",
+    "localStorage",
+    "setItem"
    ]
   }
  },
