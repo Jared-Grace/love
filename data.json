@@ -2449,7 +2449,8 @@
    "marker_functionize",
    "function_rename",
    "app_replace_home",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -10391,7 +10392,8 @@
    "marker_screen_add"
   ],
   "data_function_current_restore": [
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19614,11 +19616,13 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "data_function_current_restore",
     "marker_next_get",
     "function_transform_marker_current",
     "marker",
     "marker_screen_add",
     "screen_name",
+    "lambda2",
     "lambda",
     "a",
     "next",
