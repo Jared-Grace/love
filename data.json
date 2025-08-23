@@ -3690,7 +3690,8 @@
    "js_function_last_asyncify",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize"
+   "marker_functionize",
+   "js_await_add"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3791,7 +3792,8 @@
    "marker_if_test_replace",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize"
+   "marker_functionize",
+   "js_await_add"
   ],
   "without": [
    "string_suffix_without",
@@ -5435,7 +5437,8 @@
    "search_generic",
    "function_alias_rename",
    "object_property_exists_not",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_await_add"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -12896,6 +12899,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "not",
     "function_new",
     "object_replace",
     "js_await",
@@ -12920,6 +12924,8 @@
     "en",
     "f",
     "async_is",
+    "n",
+    "a",
     "f_name",
     "stack",
     "stack1",
