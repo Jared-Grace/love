@@ -4942,8 +4942,7 @@
    "function_current_set",
    "function_current_set_task_new",
    "function_open",
-   "data_function_current_restore",
-   "marker_screen_add"
+   "data_function_current_restore"
   ],
   "function_path_declaration_unparse": [
    "file_open",
@@ -19601,7 +19600,6 @@
     "log",
     "function_name_combine",
     "data_app_current_get",
-    "function_current_set",
     "marker_next_get",
     "marker",
     "marker_screen_add",
