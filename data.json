@@ -1408,7 +1408,6 @@
   "s param",
   "a mpa marker_param_add",
   "mpa name",
-  "mb $i",
   "u ox",
   "a ox object_property_exists",
   "ps",
@@ -1516,7 +1515,8 @@
   "p",
   "mc not",
   "ir a async_is",
-  "mdd"
+  "mdd",
+  "mb $i"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
