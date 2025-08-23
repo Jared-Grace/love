@@ -5,7 +5,7 @@ import { storage_local_set } from "./storage_local_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_document_body } from "./html_document_body.mjs";
-export function app_replace_home() {
+export function app_replace_home(context) {
   let app_fn = app_replace;
   let body = html_document_body();
   let rule_sets = [
@@ -24,7 +24,7 @@ export function app_replace_home() {
     function lambda() {
       const value = "rule_set";
       storage_local_set(app_fn, "screen", value);
-      app_replace_refresh();
+      app_replace_refresh(context);
     }
   }
   each(rule_sets, lambda2);
