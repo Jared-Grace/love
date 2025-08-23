@@ -6921,7 +6921,8 @@
    "marker_next_delete",
    "marker_remove",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_screen_add"
   ],
   "lambda$a": [
    "function_transform_marker",
@@ -7078,8 +7079,7 @@
    "marker_leave",
    "marker_above_generic",
    "marker_above_delete",
-   "marker_if_test_replace",
-   "marker_screen_add"
+   "marker_if_test_replace"
   ],
   "marker_down_choices_lambda": [
    "function_transform_marker_empty",
@@ -19649,6 +19649,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_transform_marker",
     "app_name_prefixed",
     "log",
     "function_name_combine",
@@ -19656,7 +19657,6 @@
     "function_current_set",
     "data_function_current_restore",
     "marker_next_get",
-    "function_transform_marker_current",
     "marker",
     "marker_screen_add",
     "screen_name",
