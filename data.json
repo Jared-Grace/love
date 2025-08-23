@@ -3462,7 +3462,6 @@
    "data_property_get",
    "data_terminal_get",
    "data_watch_get",
-   "data_identifiers_search",
    "git_push",
    "data_functions_get"
   ],
@@ -10133,6 +10132,9 @@
   ],
   "html_text_set": [
    "app_replace"
+  ],
+  "data_identifiers_get": [
+   "data_identifiers_search"
   ]
  },
  "functions": {
@@ -18194,10 +18196,10 @@
   },
   "data_identifiers_search": {
    "identifiers": [
+    "data_identifiers_get",
     "function_name_to_path",
     "list_to_dictionary",
     "object_property_get",
-    "data_property_get",
     "marker",
     "data_identifiers_search",
     "s",
