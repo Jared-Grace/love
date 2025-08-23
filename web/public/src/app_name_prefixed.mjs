@@ -1,4 +1,4 @@
 export function app_name_prefixed(name) {
-  let v = `app_${name}`;
-  return v;
+  let a_name = `app_${name}`;
+  return a_name;
 }
