@@ -1520,7 +1520,8 @@
   "s files",
   "s file",
   "s folder",
-  "cd"
+  "cd",
+  "mc fr"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
