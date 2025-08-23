@@ -1561,7 +1561,6 @@
   "mb $r,document.body",
   "ir v body",
   "oce",
-  "oec",
   "mnd",
   "fs app_replace",
   "mc hdb",
@@ -1603,7 +1602,8 @@
   "as combine",
   "s combine",
   "as marker",
-  "fw mb marker_screen_add"
+  "fw mb marker_screen_add",
+  "oec"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
