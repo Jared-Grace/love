@@ -1587,7 +1587,6 @@
   "p",
   "de storage_local_set",
   "c storage_local_get storage_local_set",
-  "ps",
   "de storage_local_get",
   "c storage_local_set storage_local_get",
   "fw storage_local_get storage_local_get_or",
@@ -1606,7 +1605,8 @@
   "o mna",
   "s set,current",
   "s restore",
-  "s app"
+  "s app",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
