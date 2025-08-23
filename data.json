@@ -10323,6 +10323,12 @@
   ],
   "screen": [
    "app_replace"
+  ],
+  "screens": [
+   "app_replace"
+  ],
+  "home": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19323,6 +19329,8 @@
     "marker",
     "app_replace",
     "app_fn",
+    "screens",
+    "home",
     "body",
     "screen"
    ]
