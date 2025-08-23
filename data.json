@@ -1890,7 +1890,8 @@
    "html_document_body",
    "js_imports_paths_fix",
    "function_open_editor",
-   "function_open_app"
+   "function_open_app",
+   "html_button_element"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4166,7 +4167,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "html_button_element"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10138,10 +10140,12 @@
    "html_element"
   ],
   "tag_name": [
-   "html_element"
+   "html_element",
+   "html_button_element"
   ],
   "html_element": [
-   "html_element"
+   "html_element",
+   "html_button_element"
   ],
   "rule_sets": [
    "app_replace"
@@ -10151,7 +10155,8 @@
   ],
   "parent": [
    "html_element",
-   "html_button"
+   "html_button",
+   "html_button_element"
   ],
   "createElement": [
    "html_element"
@@ -10252,7 +10257,8 @@
    "html_button"
   ],
   "html_button_element": [
-   "html_button"
+   "html_button",
+   "html_button_element"
   ]
  },
  "functions": {
@@ -19354,6 +19360,17 @@
     "f_name",
     "a_name",
     "v"
+   ]
+  },
+  "html_button_element": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_element",
+    "html_button_element",
+    "parent",
+    "tag_name",
+    "b"
    ]
   }
  },
