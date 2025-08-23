@@ -7368,7 +7368,8 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install"
+   "npm_install",
+   "storage_local_get_or"
   ],
   "err": [
    "import_install"
@@ -9242,7 +9243,8 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install"
+   "npm_install",
+   "storage_local_get_or"
   ],
   "isFinite": [
    "number_is"
@@ -19490,15 +19492,17 @@
    ]
   },
   "storage_local_get_or": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "npm_install",
     "storage_local_get",
     "marker",
     "storage_local_get_or",
     "app_fn",
     "key",
     "value_or",
-    "value"
+    "value",
+    "package_name"
    ]
   }
  },
