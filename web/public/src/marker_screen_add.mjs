@@ -8,7 +8,7 @@ import { marker } from "./marker.mjs";
 export async function marker_screen_add(screen_name) {
   async function lambda3() {
     let a_name = await data_app_current_get();
-    let combined = function_name_combine(left, right);
+    let combined = function_name_combine(a_name, "screens");
     await function_current_set(a_name);
     async function lambda(a) {
       let { next } = marker_next_get(a);
