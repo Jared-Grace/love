@@ -1402,7 +1402,6 @@
   "c mc marker_param_add",
   "s param",
   "a mpa marker_param_add",
-  "mpa name",
   "u ox",
   "a ox object_property_exists",
   "ps",
@@ -1564,7 +1563,8 @@
   "s html",
   "u hn",
   "mc hn",
-  "s param,marker"
+  "s param,marker",
+  "mpa name"
  ],
  "marker_current": "1",
  "function_current": "app_new",
