@@ -2666,8 +2666,7 @@
    "folder_public",
    "file_read",
    "marker_up_1",
-   "function_open_app",
-   "storage_local_get"
+   "function_open_app"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19484,9 +19483,8 @@
     "storage_local_get",
     "app_fn",
     "key",
-    "value",
     "storage_local_key",
-    "v",
+    "value",
     "localStorage",
     "getItem"
    ]
