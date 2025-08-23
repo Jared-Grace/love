@@ -8467,7 +8467,8 @@
    "js_await"
   ],
   "specifiers": [
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_paths_fix"
   ],
   "source": [
    "js_imports_declarations"
@@ -19267,7 +19268,8 @@
     "lambda",
     "i",
     "name",
-    "declaration"
+    "declaration",
+    "specifiers"
    ]
   }
  },
