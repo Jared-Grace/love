@@ -10152,7 +10152,6 @@
    "html_element"
   ],
   "html_button": [
-   "app_replace",
    "html_button"
   ],
   "name2": [
@@ -10214,6 +10213,9 @@
   "js_string": [
    "js_code_string",
    "js_string"
+  ],
+  "html_button_element": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19214,7 +19216,7 @@
    "identifiers": [
     "html_text_set",
     "object_property_get",
-    "html_button",
+    "html_button_element",
     "each",
     "html_document_body",
     "marker",
