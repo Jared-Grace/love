@@ -1595,10 +1595,11 @@
   "c storage_local_get storage_local_set",
   "ps",
   "de storage_local_get",
-  "c storage_local_set storage_local_get"
+  "c storage_local_set storage_local_get",
+  "fw storage_local_get storage_local_get_or"
  ],
  "marker_current": "1",
- "function_current": "storage_local_get",
+ "function_current": "storage_local_get_or",
  "terminal": false,
  "identifiers": {
   "log": [
