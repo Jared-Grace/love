@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { list_size_1_assert_message } from "./list_size_1_assert_message.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
@@ -9,6 +10,7 @@ import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { json_to } from "./json_to.mjs";
 export async function function_transform_marker(f_name, lambda$a) {
+  marker("1");
   let marker_name = await data_marker_current_get();
   let code = null;
   async function lambda2(la) {
