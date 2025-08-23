@@ -2601,8 +2601,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "html_update"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5960,7 +5959,8 @@
    "js_imports_unused",
    "marker_up",
    "marker_above_generic",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "html_update"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -12725,7 +12725,7 @@
     "name_prefixed",
     "ext",
     "call",
-    "v",
+    "i",
     "body"
    ],
    "async": true
