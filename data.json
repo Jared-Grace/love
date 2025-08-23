@@ -4032,7 +4032,6 @@
    "js_dollar",
    "js_outside_move",
    "js_return_atomize",
-   "js_visit_each",
    "js_visit_each_async",
    "js_visit_type_each_async",
    "tasks_run",
@@ -15287,7 +15286,6 @@
    "identifiers": [
     "each",
     "marker",
-    "each_async",
     "js_visit",
     "list_adder",
     "js_visit_each",
@@ -15298,7 +15296,7 @@
     "v",
     "vs"
    ],
-   "async": true
+   "async": false
   },
   "js_visit_each_async": {
    "identifiers": [
