@@ -20,7 +20,7 @@ export async function marker_screen_add(screen_name) {
     let { properties } = oe;
     list_add(properties, item);
     log(oe);
-    let v = js_property(param_name);
+    let p = js_property(param_name);
   }
   let v2 = await function_transform_marker_specified(
     combined,
