@@ -4239,7 +4239,8 @@
    "function_dependencies_code_copy"
   ],
   "text": [
-   "clipboard_copy"
+   "clipboard_copy",
+   "app_replace"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10123,6 +10124,9 @@
   "html_button": [
    "app_replace",
    "html_button"
+  ],
+  "innerHTML": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19109,6 +19113,8 @@
     "name",
     "rules",
     "b",
+    "innerHTML",
+    "text",
     "lambda",
     "rs"
    ]
