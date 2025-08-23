@@ -1811,7 +1811,8 @@
    "js_type",
    "functions_log_remove",
    "marker_up_1",
-   "js_auto"
+   "js_auto",
+   "apps_get"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9956,6 +9957,9 @@
    "js_await",
    "marker_next_await",
    "js_await_add"
+  ],
+  "apps_get": [
+   "apps_get"
   ]
  },
  "functions": {
@@ -18863,6 +18867,13 @@
     "expression",
     "code_expression",
     "awaited"
+   ]
+  },
+  "apps_get": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "apps_get"
    ]
   }
  },
