@@ -7243,7 +7243,8 @@
    "html_update"
   ],
   "file_name": [
-   "html_name_to_path"
+   "html_name_to_path",
+   "file_name_html"
   ],
   "html_update": [
    "html_new",
@@ -10826,7 +10827,8 @@
   "file_name_html": {
    "identifiers": [
     "file_name_html",
-    "name"
+    "name",
+    "file_name"
    ],
    "async": false
   },
