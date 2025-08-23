@@ -22,7 +22,7 @@ export async function js_unparse(ast) {
     code = js_unparse_inner(ast);
   } catch (e) {
     let current = null;
-    async function lambda(v) {
+    function lambda(v) {
       let { node } = v;
       try {
         js_unparse_inner(node);
@@ -32,7 +32,7 @@ export async function js_unparse(ast) {
         return v2;
       }
     }
-    js_visit_each(ast, lambda);
+    await js_visit_each(ast, lambda);
     throw e;
   }
   return code;
