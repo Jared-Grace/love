@@ -3008,7 +3008,8 @@
    "js_log_remove",
    "app_new",
    "app_name_prefixed",
-   "app_replace"
+   "app_replace",
+   "js_imports_paths_fix"
   ],
   "output": [
    "watch",
@@ -3271,7 +3272,8 @@
    "marker_next_await",
    "marker_enter",
    "app_replace",
-   "function_rename"
+   "function_rename",
+   "js_imports_paths_fix"
   ],
   "data_save": [
    "data_file_update",
@@ -6353,7 +6355,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "data_file_update_inner",
-   "js_declaration_single_name"
+   "js_declaration_single_name",
+   "js_imports_paths_fix"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -19251,6 +19254,7 @@
   "js_imports_paths_fix": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "each",
     "js_imports_declarations",
     "marker",
@@ -19258,7 +19262,9 @@
     "ast",
     "imports_declarations",
     "lambda",
-    "i"
+    "i",
+    "name",
+    "declaration"
    ]
   }
  },
