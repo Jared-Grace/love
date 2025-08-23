@@ -10350,7 +10350,6 @@
    "storage_local_get"
   ],
   "app_replace_refresh": [
-   "app_replace_home",
    "app_replace_refresh"
   ],
   "storage_local_get_or": [
@@ -10443,7 +10442,8 @@
   "app_refresh": [
    "app_replace_refresh",
    "app_refresh",
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "context": [
    "app_replace_home",
@@ -19522,7 +19522,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
-    "app_replace_refresh",
+    "app_refresh",
     "app_replace",
     "each",
     "storage_local_set",
