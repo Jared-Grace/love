@@ -3516,7 +3516,8 @@
    "function_new_js",
    "function_wrap_suffix_add",
    "git_push",
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "app_name_prefixed"
   ],
   "error_attention_set": [
    "watch",
@@ -4821,7 +4822,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "app_name_prefixed"
   ],
   "right": [
    "equal",
@@ -4836,7 +4838,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "app_name_prefixed"
   ],
   "eq": [
    "equal",
@@ -5272,7 +5275,8 @@
    "folder_public_combine",
    "app_html_open",
    "function_new_app_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_name_prefixed"
   ],
   "body_block": [
    "functions_combine",
@@ -19402,10 +19406,14 @@
   "app_name_prefixed": {
    "async": false,
    "identifiers": [
+    "function_name_combine",
     "app_name_prefix",
     "app_name_prefixed",
     "name",
     "p",
+    "combined",
+    "left",
+    "right",
     "a_name"
    ]
   },
