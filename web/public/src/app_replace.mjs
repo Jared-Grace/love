@@ -9,6 +9,10 @@ export function app_replace() {
       name: "Grow",
       rules: ["a > a a"],
     },
+    {
+      name: "Shrink",
+      rules: ["a a a"],
+    },
   ];
   const tag_name = "div";
   html_element(body, tag_name);
