@@ -4932,7 +4932,8 @@
    "folder_public_combine",
    "functions_path",
    "html_name_to_path",
-   "html_new"
+   "html_new",
+   "app_html_open"
   ],
   "second": [
    "folder_public_combine",
@@ -4942,7 +4943,8 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "app_html_open"
   ],
   "list_to": [
    "functions_combine",
@@ -5152,7 +5154,8 @@
    "function_name_combine",
    "function_name_combine_multiple",
    "function_new_js",
-   "folder_public_combine"
+   "folder_public_combine",
+   "app_html_open"
   ],
   "body_block": [
    "functions_combine",
@@ -18929,11 +18932,14 @@
   "app_html_open": {
    "async": false,
    "identifiers": [
+    "folder_public_combine",
     "file_name_html",
     "marker",
     "app_html_open",
     "a_name",
-    "file_name"
+    "file_name",
+    "combined",
+    "second"
    ]
   }
  },
