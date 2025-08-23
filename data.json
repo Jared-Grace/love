@@ -3933,9 +3933,6 @@
    "file_read",
    "function_aliases_restore"
   ],
-  "dirPath": [
-   "apps_get"
-  ],
   "file": [
    "folder_read"
   ],
@@ -18898,8 +18895,7 @@
     "marker",
     "apps_get",
     "fop",
-    "v2",
-    "dirPath"
+    "v2"
    ]
   }
  },
