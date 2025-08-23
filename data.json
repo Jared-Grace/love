@@ -5556,7 +5556,8 @@
    "function_alias_rename",
    "object_property_exists_not",
    "function_aliases_restore",
-   "js_await_add"
+   "js_await_add",
+   "null_is"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -17607,7 +17608,8 @@
   "null_is": {
    "identifiers": [
     "null_is",
-    "value"
+    "value",
+    "n"
    ],
    "async": false
   },
