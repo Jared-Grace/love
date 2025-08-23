@@ -2631,8 +2631,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "html_document_body"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19066,9 +19065,8 @@
    "identifiers": [
     "marker",
     "html_document_body",
-    "v",
-    "document",
-    "body"
+    "body",
+    "document"
    ]
   }
  },
