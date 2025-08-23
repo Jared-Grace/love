@@ -4323,8 +4323,7 @@
   "text": [
    "clipboard_copy",
    "html_text_set",
-   "html_button",
-   "app_replace_rule_set"
+   "html_button"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10195,8 +10194,7 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element",
-   "app_replace_rule_set"
+   "html_button_element"
   ],
   "createElement": [
    "html_element"
@@ -19754,9 +19752,7 @@
     "marker",
     "app_replace_rule_set",
     "body",
-    "lambda2",
-    "parent",
-    "text"
+    "lambda2"
    ]
   },
   "app_refresh": {
