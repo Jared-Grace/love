@@ -5851,7 +5851,8 @@
    "js_return_code_replace",
    "marker_call_replace",
    "marker_next_delete",
-   "object_replace"
+   "object_replace",
+   "js_await_add"
   ],
   "js_identifiers_named": [
    "function_identifier_replace",
@@ -12891,6 +12892,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "object_replace",
     "js_await",
     "object_copy",
     "js_node_type_not_is_if",
