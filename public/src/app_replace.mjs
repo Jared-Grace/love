@@ -20,8 +20,8 @@ export function app_replace() {
   ];
   function lambda(rs) {
     let name2 = object_property_get(rs, "name");
-    let b = html_button_element(body);
-    html_text_set(b, name2);
+    let component = html_button_element(body);
+    html_text_set(component, name2);
     const name_event = "click";
     let element = html_component_element_get(component);
     element.on(name_event, lambda);
