@@ -1539,7 +1539,6 @@
   "a oh app_html_open",
   "oh code",
   "s js,call",
-  "s import",
   "is js_code_call_statement",
   "is js_code_import_single",
   "p",
@@ -1584,7 +1583,8 @@
   "u u",
   "nj imports_paths_fix",
   "s imports",
-  "fts js_imports_paths_fix"
+  "fts js_imports_paths_fix",
+  "s import"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
