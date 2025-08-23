@@ -2106,8 +2106,7 @@
    "data_file_update_inner",
    "marker_next_await",
    "function_parse_strict_declaration",
-   "function_exists_strict",
-   "apps_get"
+   "function_exists_strict"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2573,8 +2572,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "apps_get"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6477,8 +6475,7 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read",
-   "apps_get"
+   "function_read"
   ],
   "function_rename": [
    "function_rename"
@@ -18878,11 +18875,8 @@
   "apps_get": {
    "async": true,
    "identifiers": [
-    "function_read",
     "marker",
-    "apps_get",
-    "v",
-    "f_name"
+    "apps_get"
    ]
   }
  },
