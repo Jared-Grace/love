@@ -2604,8 +2604,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "html_update"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10025,7 +10024,8 @@
    "folder_src"
   ],
   "src": [
-   "folder_src"
+   "folder_src",
+   "html_update"
   ]
  },
  "functions": {
@@ -12744,7 +12744,7 @@
     "ext",
     "call",
     "f_name_ext",
-    "v",
+    "src",
     "f_path",
     "from",
     "code",
