@@ -2098,7 +2098,8 @@
    "data_file_update_inner",
    "marker_next_await",
    "function_parse_strict_declaration",
-   "function_exists_strict"
+   "function_exists_strict",
+   "js_await_add"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -6210,7 +6211,8 @@
    "function_new_transform",
    "function_param_swap_task_simple",
    "function_wrap",
-   "task_new"
+   "task_new",
+   "js_await_add"
   ],
   "code_declaration": [
    "function_new",
@@ -12893,6 +12895,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "function_new",
     "object_replace",
     "js_await",
     "object_copy",
@@ -12916,6 +12919,7 @@
     "en",
     "f",
     "async_is",
+    "f_name",
     "stack",
     "stack1",
     "lambda4",
