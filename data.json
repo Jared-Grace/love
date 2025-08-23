@@ -2458,7 +2458,8 @@
    "marker_functionize",
    "function_rename",
    "app_replace_home",
-   "task_new"
+   "task_new",
+   "app_replace_rule_set"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4322,7 +4323,8 @@
   "text": [
    "clipboard_copy",
    "html_text_set",
-   "html_button"
+   "html_button",
+   "app_replace_rule_set"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10193,7 +10195,8 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_rule_set"
   ],
   "createElement": [
    "html_element"
@@ -10203,7 +10206,8 @@
   ],
   "html_button": [
    "html_button",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "html_text_set": [
    "html_text_set",
@@ -19745,10 +19749,14 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_button",
     "html_document_body",
     "marker",
     "app_replace_rule_set",
-    "body"
+    "body",
+    "parent",
+    "text",
+    "lambda2"
    ]
   },
   "app_refresh": {
