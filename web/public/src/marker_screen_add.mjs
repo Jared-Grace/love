@@ -1,3 +1,4 @@
+import { js_property_identifier } from "./js_property_identifier.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
@@ -16,6 +17,7 @@ export async function marker_screen_add(screen_name) {
     let declarator = js_declare_single(next);
     let expression = object_property_get(declarator, "init");
     log(expression);
+    let v = js_property_identifier(param_name);
   }
   let v2 = await function_transform_marker_specified(
     combined,
