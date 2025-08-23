@@ -4463,7 +4463,6 @@
    "function_open_editor_current",
    "function_transform_marker_current",
    "marker_call",
-   "task_new",
    "marker_param_add"
   ],
   "value_initial": [
@@ -4937,8 +4936,7 @@
    "function_copy",
    "function_current_set",
    "function_current_set_task_new",
-   "function_open",
-   "task_new"
+   "function_open"
   ],
   "function_path_declaration_unparse": [
    "file_open",
@@ -10391,6 +10389,9 @@
   ],
   "marker_screen_add": [
    "marker_screen_add"
+  ],
+  "data_function_current_restore": [
+   "task_new"
   ]
  },
  "functions": {
@@ -18254,8 +18255,8 @@
   },
   "task_new": {
    "identifiers": [
+    "data_function_current_restore",
     "function_name_unalias",
-    "function_current_set",
     "task_function_name_part",
     "function_name_combine_multiple",
     "js_declaration_single_block_blody",
@@ -18270,7 +18271,6 @@
     "result2",
     "unaliased",
     "f_name_task",
-    "f_name_current",
     "lambda2",
     "lambda",
     "ast",
