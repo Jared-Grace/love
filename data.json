@@ -3501,7 +3501,8 @@
    "function_new_js",
    "function_wrap_suffix_add",
    "task_new",
-   "git_push"
+   "git_push",
+   "function_new_app_screen"
   ],
   "error_attention_set": [
    "watch",
@@ -4800,7 +4801,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "function_new_app_screen"
   ],
   "right": [
    "equal",
@@ -4815,7 +4817,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "function_new_app_screen"
   ],
   "eq": [
    "equal",
@@ -5247,7 +5250,8 @@
    "function_name_combine_multiple",
    "function_new_js",
    "folder_public_combine",
-   "app_html_open"
+   "app_html_open",
+   "function_new_app_screen"
   ],
   "body_block": [
    "functions_combine",
@@ -19574,12 +19578,16 @@
   "function_new_app_screen": {
    "async": true,
    "identifiers": [
+    "function_name_combine",
     "app_name_prefixed",
     "function_new",
     "marker",
     "function_new_app_screen",
     "f_name",
     "a_name",
+    "combined",
+    "left",
+    "right",
     "v"
    ]
   }
