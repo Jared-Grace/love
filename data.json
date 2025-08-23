@@ -1516,7 +1516,8 @@
   "mb $i",
   "me",
   "mb $r",
-  "as marker"
+  "as marker",
+  "mi n"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",

@@ -23,7 +23,7 @@ export async function js_await_add(ast) {
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       let n = not(async_is);
-      if (false) {
+      if (n) {
         marker("1");
         return;
       }
