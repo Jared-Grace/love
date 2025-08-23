@@ -1607,12 +1607,12 @@
   "oa replace",
   "s combine",
   "p",
-  "marker_screen_add t",
   "fw r function_rename_suffix_add",
   "r function_transform_marker function_transform_marker_current",
   "o function_transform_marker",
   "o function_transform_marker_current",
-  "ps"
+  "ps",
+  "marker_screen_add t"
  ],
  "marker_current": "1",
  "function_current": "function_transform_marker_current",
