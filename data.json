@@ -2244,7 +2244,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "function_new_app_screen"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2991,7 +2992,8 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "function_new_app_screen"
   ],
   "name": [
    "watch",
@@ -3516,7 +3518,8 @@
    "data_terminal_get",
    "data_watch_get",
    "git_push",
-   "data_functions_get"
+   "data_functions_get",
+   "function_new_app_screen"
   ],
   "trinity_green": [
    "function_run_log",
@@ -19576,12 +19579,15 @@
   "function_new_app_screen": {
    "async": true,
    "identifiers": [
+    "data_property_get",
     "function_name_combine",
     "app_name_prefixed",
     "function_new",
     "marker",
     "function_new_app_screen",
     "screen_name",
+    "value",
+    "property_name",
     "a_name",
     "combined",
     "v"
