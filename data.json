@@ -2868,7 +2868,8 @@
    "marker_next_await",
    "marker_if_test_replace",
    "js_await",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_string"
   ],
   "watch": [
    "watch"
@@ -3450,7 +3451,8 @@
    "function_alias_replace",
    "object_properties_delete",
    "object_property_delete",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_string"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -3821,7 +3823,8 @@
    "string_to",
    "trinity_green",
    "data_identifiers_search",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_string"
   ],
   "a": [
    "string_suffix_without",
@@ -4979,7 +4982,8 @@
   ],
   "value_string": [
    "folder_current_join",
-   "js_code_string"
+   "js_code_string",
+   "js_string"
   ],
   "folder_public": [
    "folder_public",
@@ -5187,7 +5191,8 @@
    "marker_functionize",
    "marker_next_delete",
    "marker_if_test_replace",
-   "js_await"
+   "js_await",
+   "js_string"
   ],
   "functions_combine": [
    "functions_combine",
@@ -10211,7 +10216,8 @@
   ],
   "js_string": [
    "js_code_string",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_string"
   ]
  },
  "functions": {
@@ -19282,6 +19288,17 @@
     "object",
     "property_name",
     "value"
+   ]
+  },
+  "js_string": {
+   "async": false,
+   "identifiers": [
+    "object_property_delete",
+    "object_property_set",
+    "js_parse_expression",
+    "js_string",
+    "value_string",
+    "s"
    ]
   }
  },
