@@ -3792,8 +3792,7 @@
    "marker_if_test_replace",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize",
-   "js_await_add"
+   "marker_functionize"
   ],
   "without": [
    "string_suffix_without",
@@ -12923,7 +12922,6 @@
     "f",
     "async_is",
     "n",
-    "a",
     "stack",
     "stack1",
     "lambda4",
