@@ -919,7 +919,6 @@
   "s code,fun",
   "s function,ke",
   "s assign",
-  "s null",
   "fst function_params_consolidate simple",
   "fw fst",
   "s wrap",
@@ -1596,7 +1595,8 @@
   "ps",
   "de storage_local_get",
   "c storage_local_set storage_local_get",
-  "fw storage_local_get storage_local_get_or"
+  "fw storage_local_get storage_local_get_or",
+  "s null"
  ],
  "marker_current": "1",
  "function_current": "storage_local_get_or",
