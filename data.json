@@ -148,7 +148,8 @@
   "muu": "marker_up_1",
   "for": "folder_read",
   "fop": "folder_public",
-  "fpc": "folder_public_combine"
+  "fpc": "folder_public_combine",
+  "oh": "app_html_open"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1548,7 +1549,8 @@
   "s open",
   "mdd",
   "mc file_open",
-  "ir f_path combined"
+  "ir f_path combined",
+  "a oh app_html_open"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
