@@ -1514,7 +1514,8 @@
   "fs jaa",
   "ml",
   "mu 3",
-  "mc n"
+  "mc n",
+  "mc not"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
