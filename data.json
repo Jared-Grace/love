@@ -8467,11 +8467,11 @@
    "js_await"
   ],
   "specifiers": [
-   "js_imports_declarations",
-   "js_imports_paths_fix"
+   "js_imports_declarations"
   ],
   "source": [
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_imports_paths_fix"
   ],
   "specifier": [
    "js_imports_declarations"
@@ -19269,7 +19269,7 @@
     "i",
     "name",
     "declaration",
-    "specifiers"
+    "source"
    ]
   }
  },
