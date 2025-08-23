@@ -2035,7 +2035,8 @@
    "js_identifiers_named_count",
    "marker_above_generic",
    "js_declaration_single_name",
-   "js_log_remove"
+   "js_log_remove",
+   "function_rename"
   ],
   "code": [
    "data_identifiers_file",
@@ -2170,7 +2171,8 @@
    "marker_next_await",
    "function_parse_strict_declaration",
    "function_exists_strict",
-   "function_name_to_base"
+   "function_name_to_base",
+   "function_rename"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2402,7 +2404,8 @@
    "js_identifiers",
    "each_index",
    "list_difference",
-   "marker_functionize"
+   "marker_functionize",
+   "function_rename"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3011,7 +3014,8 @@
    "function_transform",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "function_rename"
   ],
   "args": [
    "watch",
@@ -5646,7 +5650,8 @@
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new"
+   "task_new",
+   "function_rename"
   ],
   "js_arrow_blockify": [
    "function_auto",
@@ -12257,6 +12262,7 @@
   },
   "function_rename": {
    "identifiers": [
+    "function_transform",
     "each_async",
     "object_property_get",
     "data_identifiers_get",
@@ -12272,6 +12278,10 @@
     "f_names",
     "lambda",
     "item",
+    "output",
+    "f_name",
+    "lambda2",
+    "ast",
     "list"
    ],
    "async": true
