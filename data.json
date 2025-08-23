@@ -1535,7 +1535,6 @@
   "s param,new",
   "s param,add",
   "mpa a_name",
-  "s html",
   "cd",
   "mc fnh",
   "ir name a_name",
@@ -1551,7 +1550,8 @@
   "mc file_open",
   "ir f_path combined",
   "a oh app_html_open",
-  "oh code"
+  "oh code",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
