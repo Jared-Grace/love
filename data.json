@@ -3928,7 +3928,6 @@
    "function_aliases_restore"
   ],
   "dirPath": [
-   "folder_read",
    "apps_get"
   ],
   "file": [
@@ -9969,6 +9968,9 @@
   ],
   "apps_get": [
    "apps_get"
+  ],
+  "path_folder": [
+   "folder_read"
   ]
  },
  "functions": {
@@ -10163,7 +10165,7 @@
     "path_join",
     "fs",
     "folder_read",
-    "dirPath",
+    "path_folder",
     "lambda",
     "file",
     "result",
