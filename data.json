@@ -2135,7 +2135,8 @@
    "data_file_update_inner",
    "marker_next_await",
    "function_parse_strict_declaration",
-   "function_exists_strict"
+   "function_exists_strict",
+   "function_name_to_base"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -6220,9 +6221,6 @@
   "letters": [
    "function_name_to_acronym",
    "list_join_empty"
-  ],
-  "funcName": [
-   "function_name_to_base"
   ],
   "unaliased_actual": [
    "function_name_unalias"
@@ -11755,7 +11753,7 @@
    "identifiers": [
     "function_name_extension",
     "function_name_to_base",
-    "funcName",
+    "f_name",
     "v"
    ],
    "async": false
