@@ -6536,8 +6536,7 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if",
-   "js_property_identifier"
+   "js_node_type_not_is_if"
   ],
   "key": [
    "object_invert",
@@ -10411,16 +10410,7 @@
    "marker_screen_add",
    "js_property_identifier"
   ],
-  "method": [
-   "js_property_identifier"
-  ],
-  "shorthand": [
-   "js_property_identifier"
-  ],
-  "computed": [
-   "js_property_identifier"
-  ],
-  "kind": [
+  "js_property": [
    "js_property_identifier"
   ]
  },
@@ -19676,17 +19666,13 @@
   "js_property_identifier": {
    "async": false,
    "identifiers": [
+    "js_property",
     "js_parse_expression",
     "js_property_identifier",
     "param_name",
     "key",
     "value",
-    "v",
-    "type",
-    "method",
-    "shorthand",
-    "computed",
-    "kind"
+    "v"
    ]
   }
  },
