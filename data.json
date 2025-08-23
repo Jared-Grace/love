@@ -2448,7 +2448,8 @@
    "list_difference",
    "marker_functionize",
    "function_rename",
-   "app_replace_home"
+   "app_replace_home",
+   "task_new"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3508,7 +3509,6 @@
    "function_name_combine",
    "function_new_js",
    "function_wrap_suffix_add",
-   "task_new",
    "git_push",
    "function_new_app_screen"
   ],
@@ -3725,7 +3725,6 @@
    "object_merge",
    "object_property_get",
    "string_prefix_without",
-   "task_new",
    "todo",
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
@@ -6179,8 +6178,7 @@
    "js_dollar",
    "js_dollar_g",
    "js_marker_insert",
-   "marker_assign_replace_string",
-   "task_new"
+   "marker_assign_replace_string"
   ],
   "list_add_first": [
    "function_imports_add",
@@ -7821,8 +7819,7 @@
    "js_call_fill",
    "js_call_new",
    "js_dollar_ie",
-   "marker_call",
-   "task_new"
+   "marker_call"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -8084,8 +8081,7 @@
    "marker_down_choices_lambda",
    "marker_enter",
    "marker_expand",
-   "marker_functionize",
-   "task_new"
+   "marker_functionize"
   ],
   "init": [
    "js_declare",
@@ -18262,15 +18258,10 @@
     "function_current_set",
     "task_function_name_part",
     "function_name_combine_multiple",
-    "js_code_string",
     "js_declaration_single_block_blody",
-    "js_declaration_to_block_body",
     "js_call_insert",
-    "error",
-    "js_call_new",
     "function_transform",
     "function_new",
-    "function_name_combine",
     "data_function_current_get",
     "todo",
     "task_new",
@@ -18280,6 +18271,7 @@
     "unaliased",
     "f_name_task",
     "f_name_current",
+    "lambda2",
     "lambda",
     "ast",
     "body_block",
