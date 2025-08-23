@@ -10135,6 +10135,9 @@
   "data_identifiers_get": [
    "data_identifiers_search",
    "function_rename"
+  ],
+  "$opg": [
+   "function_rename"
   ]
  },
  "functions": {
@@ -12260,7 +12263,8 @@
     "f_name_before",
     "f_name_after",
     "v",
-    "identifiers"
+    "identifiers",
+    "$opg"
    ],
    "async": true
   },
