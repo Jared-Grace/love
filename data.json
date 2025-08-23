@@ -2904,7 +2904,8 @@
    "object_property_exists_equals"
   ],
   "on": [
-   "watch"
+   "watch",
+   "app_replace"
   ],
   "path": [
    "watch",
@@ -19252,7 +19253,8 @@
     "name2",
     "b",
     "element",
-    "component"
+    "component",
+    "on"
    ]
   },
   "html_document_body": {
