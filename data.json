@@ -2968,7 +2968,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "app_replace"
   ],
   "name": [
    "watch",
@@ -19254,6 +19255,7 @@
     "rs",
     "name2",
     "key",
+    "value",
     "localStorage",
     "setItem"
    ]
