@@ -2221,8 +2221,7 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not",
-   "js_imports_paths_fix"
+   "object_property_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2960,8 +2959,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "js_imports_paths_fix"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -3824,7 +3822,8 @@
    "trinity_green",
    "data_identifiers_search",
    "function_aliases_restore",
-   "js_string"
+   "js_string",
+   "js_imports_paths_fix"
   ],
   "a": [
    "string_suffix_without",
@@ -4708,8 +4707,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "js_imports_paths_fix"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -7983,8 +7981,7 @@
    "js_return_empty"
   ],
   "parsed_string": [
-   "js_code_string",
-   "js_imports_paths_fix"
+   "js_code_string"
   ],
   "code_string": [
    "js_code_string",
@@ -8477,8 +8474,7 @@
    "js_imports_declarations"
   ],
   "source": [
-   "js_imports_declarations",
-   "js_imports_paths_fix"
+   "js_imports_declarations"
   ],
   "specifier": [
    "js_imports_declarations"
@@ -19282,12 +19278,8 @@
     "i",
     "name",
     "declaration",
-    "source",
     "from",
-    "parsed_string",
-    "object",
-    "property_name",
-    "value"
+    "s"
    ]
   },
   "js_string": {
