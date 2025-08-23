@@ -5,10 +5,10 @@ export function app_replace() {
   let body = html_document_body();
   marker("1");
   let set1 = {
-    name: "grow",
+    name: "Grow",
     rules: ["a > a a"],
   };
-  let rule_sets = [];
+  let rule_sets = [set1];
   const tag_name = "div";
   html_element(body, tag_name);
 }
