@@ -3006,7 +3006,8 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "data_app_current_get"
   ],
   "name": [
    "watch",
@@ -3531,7 +3532,8 @@
    "data_terminal_get",
    "data_watch_get",
    "git_push",
-   "data_functions_get"
+   "data_functions_get",
+   "data_app_current_get"
   ],
   "trinity_green": [
    "function_run_log",
@@ -3626,14 +3628,16 @@
    "function_run_prompt",
    "js_block_child_graph",
    "null_not_is",
-   "marker_enter"
+   "marker_enter",
+   "data_app_current_get"
   ],
   "null_not_is": [
    "function_run_prompt",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "null_not_is",
-   "marker_enter"
+   "marker_enter",
+   "data_app_current_get"
   ],
   "prompt": [
    "chalk_green",
@@ -3935,7 +3939,8 @@
    "js_stack_list_block_is",
    "list_difference",
    "marker_functionize",
-   "marker_screen_add"
+   "marker_screen_add",
+   "data_app_current_get"
   ],
   "without": [
    "string_suffix_without",
@@ -10409,7 +10414,8 @@
   ],
   "data_app_current_get": [
    "function_new_app_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "data_app_current_get"
   ]
  },
  "functions": {
@@ -19659,6 +19665,17 @@
     "data_function_current_restore",
     "lambda",
     "f_name_current"
+   ]
+  },
+  "data_app_current_get": {
+   "async": true,
+   "identifiers": [
+    "null_not_is",
+    "data_property_get",
+    "data_app_current_get",
+    "a",
+    "nn",
+    "value"
    ]
   }
  },
