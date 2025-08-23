@@ -3417,7 +3417,8 @@
    "throws_not_async",
    "data_file_update_inner",
    "function_aliases_restore",
-   "function_exists_strict"
+   "function_exists_strict",
+   "html_element"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -10087,19 +10088,31 @@
    "app_replace"
   ],
   "document": [
-   "html_document_body"
+   "html_document_body",
+   "html_element"
   ],
   "tag_name": [
-   "app_replace"
+   "app_replace",
+   "html_element"
   ],
   "html_element": [
-   "app_replace"
+   "app_replace",
+   "html_element"
   ],
   "rule_sets": [
    "app_replace"
   ],
   "rules": [
    "app_replace"
+  ],
+  "parent": [
+   "html_element"
+  ],
+  "createElement": [
+   "html_element"
+  ],
+  "appendChild": [
+   "html_element"
   ]
  },
  "functions": {
@@ -19095,8 +19108,20 @@
     "body",
     "document"
    ]
+  },
+  "html_element": {
+   "async": false,
+   "identifiers": [
+    "html_element",
+    "parent",
+    "tag_name",
+    "e",
+    "document",
+    "createElement",
+    "appendChild"
+   ]
   }
  },
- "git_push_when": "2025-08-23T18:49:44.606Z",
+ "git_push_when": "2025-08-23T19:58:00.619Z",
  "error_attention": null
 }
