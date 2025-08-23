@@ -1399,7 +1399,6 @@
   "a mpa marker_param_add",
   "u ox",
   "a ox object_property_exists",
-  "ps",
   "mc ox",
   "ir object functions",
   "ir result exists",
@@ -1584,7 +1583,8 @@
   "s imports",
   "fts js_imports_paths_fix",
   "s import",
-  "s string"
+  "s string",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
