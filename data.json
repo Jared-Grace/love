@@ -1602,7 +1602,6 @@
   "s restore",
   "s app",
   "s assert,null",
-  "oa replace",
   "s combine",
   "fw r function_rename_suffix_add",
   "r function_transform_marker function_transform_marker_current",
@@ -1616,10 +1615,11 @@
   "s screens",
   "ps",
   "marker_screen_add rule_set",
-  "de app_replace_refresh"
+  "de app_replace_refresh",
+  "oa replace"
  ],
  "marker_current": "1",
- "function_current": "app_replace_rule_set",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
