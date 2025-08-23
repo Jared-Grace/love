@@ -4944,8 +4944,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "app_html_open"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -18939,8 +18938,7 @@
     "app_html_open",
     "a_name",
     "file_name",
-    "combined",
-    "second"
+    "combined"
    ]
   }
  },
