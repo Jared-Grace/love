@@ -1519,7 +1519,8 @@
   "mi n",
   "s html",
   "n apps_get",
-  "s files"
+  "s files",
+  "s file"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
