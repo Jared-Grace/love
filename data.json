@@ -1602,10 +1602,11 @@
   "o oa",
   "as combine",
   "s combine",
-  "as marker"
+  "as marker",
+  "fw mb marker_screen_add"
  ],
  "marker_current": "1",
- "function_current": "function_open_app",
+ "function_current": "marker_screen_add",
  "terminal": false,
  "identifiers": {
   "log": [
