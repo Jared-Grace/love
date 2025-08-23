@@ -2152,7 +2152,8 @@
    "marker_next_await",
    "function_parse_strict_declaration",
    "function_exists_strict",
-   "function_name_to_base"
+   "function_name_to_base",
+   "app_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -6261,7 +6262,8 @@
    "function_new_transform",
    "function_param_swap_task_simple",
    "function_wrap",
-   "task_new"
+   "task_new",
+   "app_new"
   ],
   "code_declaration": [
    "function_new",
@@ -19006,10 +19008,12 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "function_new",
     "html_new",
     "marker",
     "app_new",
-    "name"
+    "name",
+    "f_name"
    ]
   }
  },
