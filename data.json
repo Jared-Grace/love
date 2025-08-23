@@ -3416,7 +3416,8 @@
    "throws_not_async",
    "data_file_update_inner",
    "function_aliases_restore",
-   "function_exists_strict"
+   "function_exists_strict",
+   "app_replace"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -10087,9 +10088,6 @@
   ],
   "document": [
    "html_document_body",
-   "app_replace"
-  ],
-  "newDiv": [
    "app_replace"
   ],
   "createElement": [
@@ -19084,7 +19082,7 @@
     "app_replace",
     "body",
     "tag_name",
-    "newDiv",
+    "e",
     "document",
     "createElement",
     "parent",
