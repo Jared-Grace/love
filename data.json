@@ -1429,7 +1429,6 @@
   "mu 2",
   "s async",
   "ms 2",
-  "mnd",
   "mc js_function_last_asyncify",
   "ire async_is2 2",
   "ms 1",
@@ -1521,7 +1520,8 @@
   "s file",
   "s folder",
   "cd",
-  "mc fr"
+  "mc fr",
+  "mnd"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
