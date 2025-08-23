@@ -6140,7 +6140,8 @@
    "marker_top",
    "js_imports_unused_remove",
    "js_imports_fix",
-   "html_document_body"
+   "html_document_body",
+   "app_replace"
   ],
   "import_": [
    "function_imports_add",
@@ -10080,7 +10081,8 @@
    "app_replace"
   ],
   "html_document_body": [
-   "html_document_body"
+   "html_document_body",
+   "app_replace"
   ],
   "document": [
    "html_document_body"
@@ -19059,8 +19061,10 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_document_body",
     "marker",
-    "app_replace"
+    "app_replace",
+    "body"
    ]
   },
   "html_document_body": {
