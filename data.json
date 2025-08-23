@@ -1189,7 +1189,6 @@
   "mf 1 2 js_call_new_code",
   "s js_visit_type",
   "n not",
-  "s js,call",
   "s js_keyword_arguments",
   "fts jbtn",
   "s au",
@@ -1551,7 +1550,8 @@
   "ir f_path combined",
   "a oh app_html_open",
   "oh code",
-  "s html"
+  "s html",
+  "s js,call"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
