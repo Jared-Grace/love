@@ -1747,7 +1747,6 @@
    "js_imports_fix",
    "data_file_update_inner",
    "function_alias_rename",
-   "app_replace",
    "js_imports_paths_fix"
   ],
   "js_identifiers_names": [
@@ -2360,7 +2359,6 @@
    "js_identifiers",
    "list_difference",
    "marker_functionize",
-   "app_replace",
    "function_rename",
    "js_imports_paths_fix",
    "html_button"
@@ -2424,8 +2422,7 @@
    "each_index",
    "list_difference",
    "marker_functionize",
-   "function_rename",
-   "app_replace"
+   "function_rename"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2970,8 +2967,7 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get",
-   "app_replace"
+   "lambda_get"
   ],
   "name": [
    "watch",
@@ -3023,7 +3019,6 @@
    "js_log_remove",
    "app_new",
    "app_name_prefixed",
-   "app_replace",
    "js_imports_paths_fix"
   ],
   "output": [
@@ -3286,7 +3281,6 @@
    "function_alias_rename",
    "marker_next_await",
    "marker_enter",
-   "app_replace",
    "function_rename",
    "js_imports_paths_fix"
   ],
@@ -6507,8 +6501,7 @@
   ],
   "key": [
    "function_params_consolidate",
-   "object_invert",
-   "app_replace"
+   "object_invert"
   ],
   "kind": [
    "function_params_consolidate"
@@ -8667,8 +8660,7 @@
    "marker_expand"
   ],
   "rs": [
-   "js_return_atomize",
-   "app_replace"
+   "js_return_atomize"
   ],
   "identifier_not": [
    "js_return_atomize",
@@ -10147,12 +10139,6 @@
    "html_element",
    "html_button_element"
   ],
-  "rule_sets": [
-   "app_replace"
-  ],
-  "rules": [
-   "app_replace"
-  ],
   "parent": [
    "html_element",
    "html_button",
@@ -10165,11 +10151,7 @@
    "html_element"
   ],
   "html_button": [
-   "html_button",
-   "app_replace"
-  ],
-  "name2": [
-   "app_replace"
+   "html_button"
   ],
   "html_text_set": [
    "html_text_set",
@@ -10249,9 +10231,6 @@
   "function_open_app": [
    "function_open_app"
   ],
-  "storage_local_set": [
-   "app_replace"
-  ],
   "app_fn": [
    "app_replace"
   ],
@@ -10270,6 +10249,9 @@
    "html_document_body"
   ],
   "html_clear": [
+   "app_replace"
+  ],
+  "app_replace_home": [
    "app_replace"
   ]
  },
@@ -19264,25 +19246,13 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "app_replace_home",
     "html_clear",
-    "storage_local_set",
-    "html_button",
-    "object_property_get",
-    "each",
     "html_document_body",
     "marker",
     "app_replace",
     "app_fn",
-    "body",
-    "lambda",
-    "rule_sets",
-    "name",
-    "rules",
-    "lambda2",
-    "rs",
-    "name2",
-    "key",
-    "value"
+    "body"
    ]
   },
   "html_document_body": {
