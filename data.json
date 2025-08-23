@@ -7725,8 +7725,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "function_rename"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -12352,7 +12351,6 @@
     "f_name",
     "lambda2",
     "ast",
-    "ast2",
     "output"
    ],
    "async": true
