@@ -18,8 +18,8 @@ export function app_replace_home(context) {
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
     html_button(body, name2, lambda);
+    const value = "rule_set";
     function lambda() {
-      const value = "rule_set";
       app_screen_set(context, value);
     }
   }
