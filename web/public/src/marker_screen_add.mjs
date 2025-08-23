@@ -10,6 +10,7 @@ import { function_name_combine } from "./function_name_combine.mjs";
 import { data_app_current_get } from "./data_app_current_get.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { marker } from "./marker.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export async function marker_screen_add(screen_name) {
   let a_name = await data_app_current_get();
   let prefixed = app_name_prefixed(a_name);
@@ -24,6 +25,7 @@ export async function marker_screen_add(screen_name) {
     let value = js_parse_expression(combined_screen);
     let p = js_property(key, value);
     list_add(properties, p);
+    let message = js_unparse(next);
     log(message);
   }
   let v2 = await function_transform_marker_specified(
