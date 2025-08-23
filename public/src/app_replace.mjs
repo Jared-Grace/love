@@ -9,10 +9,12 @@ export function app_replace() {
   let screens = {
     home: app_replace_home,
   };
-  let body = html_document_body();
-  html_clear(body);
+  let root = html_document_body();
+  html_clear(root);
   marker("1");
   let screen_name = storage_local_get(app_fn, "screen");
   let screen = object_property_get(screens, screen_name);
-  screen();
+  screen({
+    root,
+  });
 }
