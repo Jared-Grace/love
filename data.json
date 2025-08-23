@@ -6500,7 +6500,6 @@
    "js_declaration_single_params_add",
    "marker_expand",
    "marker_param_add",
-   "marker_screen_add",
    "js_property_identifier"
   ],
   "expression": [
@@ -10433,6 +10432,9 @@
   ],
   "kind": [
    "js_property"
+  ],
+  "combined_screen": [
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19637,7 +19639,7 @@
     "oe",
     "properties",
     "key",
-    "param_name",
+    "combined_screen",
     "value",
     "p",
     "v2"
