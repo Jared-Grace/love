@@ -19,6 +19,6 @@ export async function function_rename(f_name_before, f_name_after) {
     }
     let output = await function_transform(f_name, lambda2);
   }
-  await each_async(list, lambda);
+  await each_async(f_names, lambda);
   marker("1");
 }
