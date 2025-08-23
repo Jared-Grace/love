@@ -1599,10 +1599,11 @@
   "u ni",
   "a nli null_is",
   "o oa",
-  "s data,set"
+  "s data,set",
+  "fws n app_screen"
  ],
  "marker_current": "1",
- "function_current": "function_open_app",
+ "function_current": "function_new_app_screen",
  "terminal": false,
  "identifiers": {
   "log": [
