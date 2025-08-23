@@ -1,5 +1,5 @@
+import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
-import { function_current_set } from "./function_current_set.mjs";
 import { task_function_name_part } from "./task_function_name_part.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
 import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
@@ -17,9 +17,7 @@ export async function task_new(task_name) {
     result2,
     task_name,
   ]);
-  let f_name_current = await data_function_current_get();
-  await lambda2();
-  await function_current_set(f_name_current);
+  await data_function_current_restore(lambda2);
   async function lambda2() {
     await function_new(f_name_task);
   }
