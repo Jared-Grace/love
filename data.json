@@ -1613,9 +1613,9 @@
   "marker_screen_add t",
   "p",
   "marker_screen_add rule_set",
-  "ps",
   "o marker_screen_add",
-  "s screens"
+  "s screens",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
