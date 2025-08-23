@@ -1898,7 +1898,8 @@
    "function_read",
    "js_outside_move",
    "data_file_update_inner",
-   "function_exists_strict"
+   "function_exists_strict",
+   "html_update"
   ],
   "ast": [
    "data_identifiers_file",
@@ -10019,9 +10020,6 @@
   ],
   "folder_src": [
    "functions_path"
-  ],
-  "f_name_ext2": [
-   "html_update"
   ]
  },
  "functions": {
@@ -12739,7 +12737,7 @@
     "ext",
     "call",
     "f_name_ext",
-    "f_name_ext2",
+    "f_path",
     "from",
     "code",
     "body"
@@ -18959,6 +18957,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-23T17:38:02.754Z",
+ "git_push_when": "2025-08-23T18:49:44.606Z",
  "error_attention": null
 }
