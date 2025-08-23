@@ -1848,7 +1848,8 @@
    "marker_up_1",
    "js_auto",
    "apps_get",
-   "app_html_open"
+   "app_html_open",
+   "app_code"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10027,6 +10028,9 @@
   "src": [
    "folder_src",
    "html_update"
+  ],
+  "app_code": [
+   "app_code"
   ]
  },
  "functions": {
@@ -18968,6 +18972,13 @@
    "identifiers": [
     "folder_src",
     "src"
+   ]
+  },
+  "app_code": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_code"
    ]
   }
  },
