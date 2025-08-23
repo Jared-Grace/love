@@ -3026,7 +3026,8 @@
    "app_new",
    "app_name_prefixed",
    "js_imports_paths_fix",
-   "app_replace_home"
+   "app_replace_home",
+   "storage_local_key_get"
   ],
   "output": [
    "watch",
@@ -6512,7 +6513,8 @@
    "function_params_consolidate",
    "object_invert",
    "app_replace_home",
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_key_get"
   ],
   "kind": [
    "function_params_consolidate"
@@ -10273,7 +10275,8 @@
   ],
   "app_fn": [
    "app_replace_home",
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_key_get"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10285,13 +10288,17 @@
    "app_replace_home"
   ],
   "storage_local_key_get": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_key_get"
   ],
   "localStorage": [
    "storage_local_set"
   ],
   "setItem": [
    "storage_local_set"
+  ],
+  "ley": [
+   "storage_local_key_get"
   ]
  },
  "functions": {
@@ -19433,6 +19440,16 @@
     "v",
     "localStorage",
     "setItem"
+   ]
+  },
+  "storage_local_key_get": {
+   "async": false,
+   "identifiers": [
+    "storage_local_key_get",
+    "app_fn",
+    "key",
+    "ley",
+    "name"
    ]
   }
  },
