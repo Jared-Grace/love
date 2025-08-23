@@ -149,7 +149,8 @@
   "for": "folder_read",
   "fop": "folder_public",
   "fpc": "folder_public_combine",
-  "oh": "app_html_open"
+  "oh": "app_html_open",
+  "an": "app_new"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1570,7 +1571,8 @@
   "ir v a_name",
   "ir f_name a_name",
   "u an",
-  "u na"
+  "u na",
+  "a an app_new"
  ],
  "marker_current": "1",
  "function_current": "app_new",
