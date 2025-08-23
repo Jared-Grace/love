@@ -4467,8 +4467,7 @@
    "function_transform_marker_current",
    "marker_call",
    "marker_param_add",
-   "data_function_current_restore",
-   "marker_screen_add"
+   "data_function_current_restore"
   ],
   "value_initial": [
    "data_get",
@@ -9220,7 +9219,8 @@
    "app_name_prefixed",
    "app_new",
    "function_open_app",
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "marker_screen_add"
   ],
   "marker_first_index": [
    "marker_first",
@@ -10403,7 +10403,8 @@
    "data_function_current_restore"
   ],
   "data_app_current_get": [
-   "function_new_app_screen"
+   "function_new_app_screen",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19626,6 +19627,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "data_app_current_get",
     "function_current_set",
     "data_function_current_restore",
     "marker_next_get",
@@ -19634,7 +19636,7 @@
     "marker_screen_add",
     "screen_name",
     "lambda3",
-    "f_name_current",
+    "a_name",
     "lambda",
     "a",
     "next",
