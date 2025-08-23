@@ -13,8 +13,8 @@ export async function marker_screen_add(screen_name) {
     log({
       a_name,
     });
-    let left = app_name_prefixed(a_name);
-    let combined = function_name_combine(left, "screens");
+    let prefixed = app_name_prefixed(a_name);
+    let combined = function_name_combine(prefixed, "screens");
     await function_current_set(combined);
     async function lambda(a) {
       let { next } = marker_next_get(a);
