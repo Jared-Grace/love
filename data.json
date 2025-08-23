@@ -10332,8 +10332,7 @@
    "app_replace"
   ],
   "root": [
-   "app_replace",
-   "app_replace_home"
+   "app_replace"
   ]
  },
  "functions": {
@@ -19464,7 +19463,6 @@
     "lambda2",
     "rs",
     "name2",
-    "root",
     "lambda",
     "key",
     "value"
