@@ -15,8 +15,9 @@ export function app_replace() {
       rules: ["a a > a"],
     },
   ];
-  let b = html_button(body);
-  b.innerHTML = text;
-  function lambda(rs) {}
+  function lambda(rs) {
+    let b = html_button(body);
+    b.innerHTML = text;
+  }
   each(rule_sets, lambda);
 }
