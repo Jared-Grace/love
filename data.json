@@ -3013,7 +3013,6 @@
    "functions_search",
    "functions_search_open",
    "function_aliases_search",
-   "function_imports_add",
    "function_new_js",
    "function_params_consolidate",
    "function_run",
@@ -10012,7 +10011,8 @@
    "html_update"
   ],
   "f_name_ext": [
-   "function_name_to_base"
+   "function_name_to_base",
+   "function_imports_add"
   ]
  },
  "functions": {
@@ -11636,7 +11636,7 @@
     "body",
     "lambda",
     "import_",
-    "result",
+    "f_name_ext",
     "value_string",
     "from",
     "code",
