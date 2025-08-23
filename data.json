@@ -1604,7 +1604,8 @@
   "as marker",
   "fw mb marker_screen_add",
   "oec",
-  "o mna"
+  "o mna",
+  "s set,current"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
