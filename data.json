@@ -2662,8 +2662,7 @@
    "folder_public",
    "file_read",
    "marker_up_1",
-   "function_open_app",
-   "storage_local_set"
+   "function_open_app"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10300,6 +10299,9 @@
   ],
   "ley": [
    "storage_local_key_get"
+  ],
+  "storage_local_key": [
+   "storage_local_set"
   ]
  },
  "functions": {
@@ -19438,7 +19440,7 @@
     "app_fn",
     "key",
     "value",
-    "v",
+    "storage_local_key",
     "localStorage",
     "setItem"
    ]
