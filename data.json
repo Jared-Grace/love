@@ -10096,6 +10096,9 @@
   ],
   "rule_sets": [
    "app_replace"
+  ],
+  "set1": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19077,6 +19080,7 @@
     "marker",
     "app_replace",
     "body",
+    "set1",
     "rule_sets",
     "tag_name"
    ]
