@@ -1307,7 +1307,6 @@
   "fts js_imports_unused",
   "fws js_imports_unused remove",
   "fts js_imports_unused_remove",
-  "s imports",
   "c function_imports_missing_add function_imports_fix",
   "ar i function_imports_fix",
   "o auto",
@@ -1583,7 +1582,8 @@
   "np",
   "s restore",
   "u u",
-  "nj imports_paths_fix"
+  "nj imports_paths_fix",
+  "s imports"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
