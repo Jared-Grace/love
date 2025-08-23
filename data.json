@@ -1540,7 +1540,9 @@
   "mc fnh",
   "ir name a_name",
   "s public",
-  "mdd"
+  "mdd",
+  "mc fpc",
+  "u fpb"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
