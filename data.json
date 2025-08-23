@@ -1584,7 +1584,6 @@
   "a oa function_open_app",
   "s prefix",
   "oa replace",
-  "p",
   "de storage_local_set",
   "c storage_local_get storage_local_set",
   "de storage_local_get",
@@ -1608,6 +1607,7 @@
   "s app",
   "ps",
   "o marker_screen_add",
+  "p",
   "marker_screen_add t"
  ],
  "marker_current": "1",
