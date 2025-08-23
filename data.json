@@ -4467,7 +4467,8 @@
    "function_transform_marker_current",
    "marker_call",
    "marker_param_add",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "marker_screen_add"
   ],
   "value_initial": [
    "data_get",
@@ -4941,7 +4942,8 @@
    "function_current_set",
    "function_current_set_task_new",
    "function_open",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "marker_screen_add"
   ],
   "function_path_declaration_unparse": [
    "file_open",
@@ -19621,6 +19623,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_current_set",
     "data_function_current_restore",
     "marker_next_get",
     "function_transform_marker_current",
@@ -19628,6 +19631,7 @@
     "marker_screen_add",
     "screen_name",
     "lambda3",
+    "f_name_current",
     "lambda",
     "a",
     "next",
