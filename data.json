@@ -1919,7 +1919,8 @@
    "marker_screen_add",
    "marker_next_await",
    "app_replace",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "app_replace_rule_set"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10431,6 +10432,9 @@
   "js_property_generic": [
    "js_property",
    "js_property_identifier"
+  ],
+  "app_replace_rule_set": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19708,6 +19712,13 @@
     "value",
     "shorthand",
     "p"
+   ]
+  },
+  "app_replace_rule_set": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_replace_rule_set"
    ]
   }
  },
