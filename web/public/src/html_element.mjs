@@ -3,8 +3,8 @@ export function html_element(parent, tag_name) {
   let parent_element = html_component_element_get(parent);
   const e = document.createElement(tag_name);
   parent_element.appendChild(e);
-  let v = {
+  let component = {
     element: e,
   };
-  return v;
+  return component;
 }
