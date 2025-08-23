@@ -23,7 +23,7 @@ export async function js_await_add(ast) {
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       marker("1");
-      let n = not(a);
+      let n = not(async_is);
       let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
