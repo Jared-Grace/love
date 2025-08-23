@@ -13,7 +13,7 @@ export async function function_rename(f_name_before, f_name_after) {
   let v = await function_alias_rename(f_name_before, f_name_after);
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
-  async function lambda(item) {
+  async function lambda(f_name) {
     async function lambda2(ast) {
       js_identifier_replace(ast, f_name_before, f_name_after);
     }
