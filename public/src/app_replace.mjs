@@ -1,3 +1,4 @@
+import { html_text_set } from "./html_text_set.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
@@ -19,7 +20,7 @@ export function app_replace() {
   function lambda(rs) {
     let name2 = object_property_get(rs, "name");
     let b = html_button(body);
-    b.innerHTML = text;
+    html_text_set(b, name2);
   }
   each(rule_sets, lambda);
 }
