@@ -1909,7 +1909,8 @@
    "app_replace_refresh",
    "function_new_app_screen",
    "app_replace_screens",
-   "marker_screen_add"
+   "marker_screen_add",
+   "marker_next_await"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19151,6 +19152,7 @@
   "marker_next_await": {
    "async": true,
    "identifiers": [
+    "marker",
     "js_await",
     "object_property_get",
     "object_property_set",
