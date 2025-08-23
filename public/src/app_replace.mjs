@@ -21,7 +21,8 @@ export function app_replace() {
     let name2 = object_property_get(rs, "name");
     html_button(body, name2, lambda);
     function lambda() {
-      localStorage.setItem();
+      let key = "screen";
+      localStorage.setItem(fn.name + " " + key);
     }
   }
   each(rule_sets, lambda);
