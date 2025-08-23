@@ -5959,8 +5959,7 @@
    "js_imports_unused",
    "marker_up",
    "marker_above_generic",
-   "function_aliases_restore",
-   "html_update"
+   "function_aliases_restore"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -6114,8 +6113,7 @@
   ],
   "import_": [
    "function_imports_add",
-   "js_code_import_single",
-   "html_update"
+   "js_code_import_single"
   ],
   "statement": [
    "function_imports_add",
@@ -12735,9 +12733,7 @@
     "name_prefixed",
     "ext",
     "call",
-    "i",
     "f_name_ext",
-    "import_",
     "from",
     "code",
     "body"
