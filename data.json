@@ -1503,7 +1503,6 @@
   "u ja",
   "mc js_await",
   "mcr 0 copy",
-  "mdd",
   "mc or",
   "ir to node",
   "ir from awaited",
@@ -1516,7 +1515,8 @@
   "mc n",
   "p",
   "mc not",
-  "ir a async_is"
+  "ir a async_is",
+  "mdd"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
