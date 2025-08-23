@@ -2993,7 +2993,8 @@
    "js_declaration_single_name",
    "js_log_remove",
    "app_new",
-   "app_name_prefixed"
+   "app_name_prefixed",
+   "app_replace"
   ],
   "output": [
    "watch",
@@ -10098,6 +10099,9 @@
    "app_replace"
   ],
   "set1": [
+   "app_replace"
+  ],
+  "rules": [
    "app_replace"
   ]
  },
@@ -19081,6 +19085,8 @@
     "app_replace",
     "body",
     "set1",
+    "name",
+    "rules",
     "rule_sets",
     "tag_name"
    ]
