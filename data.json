@@ -1605,11 +1605,11 @@
   "s set,current",
   "s restore",
   "s app",
-  "ps",
   "o marker_screen_add",
   "marker_screen_add t",
   "p",
-  "s assert,null"
+  "s assert,null",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
