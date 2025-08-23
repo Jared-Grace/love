@@ -1575,7 +1575,6 @@
    "function_delete_if_exists",
    "function_dependencies_code",
    "function_identifier_replace",
-   "function_imports_add",
    "function_name_to_path_unalias",
    "function_new",
    "function_new_transform",
@@ -1666,7 +1665,6 @@
    "functions_search",
    "function_auto",
    "function_identifier_replace",
-   "function_imports_add",
    "function_imports_missing_add",
    "function_params_new",
    "function_param_swap",
@@ -11626,7 +11624,6 @@
   },
   "function_imports_add": {
    "identifiers": [
-    "log",
     "each_async",
     "js_code_import_single",
     "js_code_string",
@@ -11634,7 +11631,6 @@
     "list_add_first",
     "js_parse_statement_module",
     "function_name_to_base",
-    "each",
     "function_imports_add",
     "ast",
     "imports",
