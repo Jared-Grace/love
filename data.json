@@ -2734,7 +2734,8 @@
    "marker_expand",
    "marker_next",
    "marker_next_delete",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_screen_add"
   ],
   "js_format": [
    "file_js_unparse",
@@ -19635,6 +19636,7 @@
     "data_app_current_get",
     "marker_next_get",
     "marker",
+    "js_unparse",
     "marker_screen_add",
     "screen_name",
     "a_name",
