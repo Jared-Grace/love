@@ -1582,7 +1582,8 @@
   "r html_button html_button_element",
   "nj imports_paths_fix",
   "u u",
-  "np"
+  "np",
+  "s restore"
  ],
  "marker_current": "1",
  "function_current": "html_button_element",
