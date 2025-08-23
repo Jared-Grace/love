@@ -10237,6 +10237,9 @@
   "html_component_element_get": [
    "html_text_set",
    "app_replace"
+  ],
+  "name_event": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19252,6 +19255,7 @@
     "rs",
     "name2",
     "b",
+    "name_event",
     "element",
     "component",
     "on"
