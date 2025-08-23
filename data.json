@@ -1612,7 +1612,6 @@
    "js_parse_expression",
    "js_return_atomize",
    "js_return_name",
-   "js_unparse",
    "js_visit_types",
    "list_size_1_assert",
    "list_size_1_assert_message",
@@ -2720,8 +2719,7 @@
    "chalk_green",
    "chalk_red",
    "chalk_color",
-   "import_install",
-   "js_unparse"
+   "import_install"
   ],
   "command_line": [
    "command_line",
@@ -3639,7 +3637,6 @@
    "function_run_log",
    "json_format_to",
    "js_declaration_params_names_node",
-   "js_unparse",
    "watch"
   ],
   "function_name_unalias": [
@@ -7693,7 +7690,6 @@
   ],
   "js_visit_each_async": [
    "js_call_fill",
-   "js_unparse",
    "js_visit_each_async"
   ],
   "js_call_new": [
@@ -15222,11 +15218,7 @@
     "js_visit_filter",
     "js_unparse_inner",
     "promise_not_is",
-    "js_visit_each_async",
     "error",
-    "log",
-    "import_install",
-    "json_format_to",
     "js_unparse",
     "ast",
     "a2",
@@ -15240,7 +15232,7 @@
     "node",
     "v2"
    ],
-   "async": false
+   "async": true
   },
   "js_unparse_inner": {
    "identifiers": [
