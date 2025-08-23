@@ -10161,7 +10161,8 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_home"
   ],
   "createElement": [
    "html_element"
@@ -19455,7 +19456,7 @@
     "html_button",
     "object_property_get",
     "app_replace_home",
-    "root",
+    "parent",
     "app_fn",
     "rule_sets",
     "name",
@@ -19463,6 +19464,7 @@
     "lambda2",
     "rs",
     "name2",
+    "root",
     "lambda",
     "key",
     "value"
