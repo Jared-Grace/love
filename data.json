@@ -9071,7 +9071,8 @@
    "marker_expand"
   ],
   "a_name": [
-   "marker_expand"
+   "marker_expand",
+   "app_html_open"
   ],
   "marker_first_index": [
    "marker_first",
@@ -18914,7 +18915,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "app_html_open"
+    "app_html_open",
+    "a_name"
    ]
   }
  },
