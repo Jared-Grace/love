@@ -1569,7 +1569,6 @@
   "s data,f",
   "r html_button html_button_element",
   "np",
-  "s restore",
   "u u",
   "nj imports_paths_fix",
   "s imports",
@@ -1605,7 +1604,8 @@
   "fw mb marker_screen_add",
   "oec",
   "o mna",
-  "s set,current"
+  "s set,current",
+  "s restore"
  ],
  "marker_current": "1",
  "function_current": "marker_next_await",
