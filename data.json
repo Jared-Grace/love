@@ -1823,7 +1823,6 @@
    "function_identifier_replace_ending_remove",
    "function_new_js",
    "function_open",
-   "function_params_consolidate",
    "function_param_new",
    "function_rename",
    "function_transform_marker",
@@ -2693,7 +2692,8 @@
    "function_open_app",
    "function_new_app_screen",
    "app_replace_screens",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "function_params_consolidate"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2965,7 +2965,6 @@
    "data_value",
    "each_object",
    "function_alias_add_generic",
-   "function_params_consolidate",
    "integer_is",
    "js_declaration_params_names_node",
    "js_declare_assign",
@@ -5207,7 +5206,6 @@
    "functions_combine",
    "function_identifier_replace",
    "function_new",
-   "function_params_consolidate",
    "function_param_new",
    "function_wrap",
    "js_atomize",
@@ -6453,7 +6451,6 @@
    "marker_expand"
   ],
   "js_declaration_params_names": [
-   "function_params_consolidate",
    "function_wrap",
    "js_call_new",
    "js_call_new_code",
@@ -6496,7 +6493,6 @@
    "marker_param_add"
   ],
   "expression": [
-   "function_params_consolidate",
    "js_atomize_function",
    "js_bang_to_not",
    "js_call_fill",
@@ -6536,25 +6532,12 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if"
   ],
-  "method": [
-   "function_params_consolidate"
-  ],
-  "shorthand": [
-   "function_params_consolidate"
-  ],
-  "computed": [
-   "function_params_consolidate"
-  ],
   "key": [
-   "function_params_consolidate",
    "object_invert",
    "storage_local_set",
    "storage_local_key_get",
    "storage_local_get",
    "storage_local_get_or"
-  ],
-  "kind": [
-   "function_params_consolidate"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10414,6 +10397,9 @@
   "declarator": [
    "js_declare_single",
    "marker_screen_add"
+  ],
+  "js_property_identifier": [
+   "function_params_consolidate"
   ]
  },
  "functions": {
@@ -12330,16 +12316,14 @@
   },
   "function_params_consolidate": {
    "identifiers": [
+    "js_property_identifier",
     "functions_names",
     "list_empty",
     "js_identifiers_to_names",
-    "marker",
-    "js_declaration_params_names",
     "js_declaration_params_get",
     "js_declaration_single",
     "function_transform",
     "list_map",
-    "js_parse_expression",
     "list_add",
     "function_params_consolidate",
     "f_name",
@@ -12350,16 +12334,10 @@
     "params_names",
     "lambda2",
     "param_name",
-    "expression",
-    "type",
-    "method",
-    "shorthand",
-    "computed",
-    "key",
-    "value",
-    "kind",
+    "v",
     "properties",
     "arg_new",
+    "type",
     "result",
     "f_names"
    ],
