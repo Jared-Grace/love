@@ -1907,7 +1907,8 @@
    "storage_local_get_or",
    "app_replace_refresh",
    "function_new_app_screen",
-   "app_replace_screens"
+   "app_replace_screens",
+   "marker_screen_add"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2112,7 +2113,8 @@
    "marker_below",
    "marker_next_delete_multiple",
    "marker_next_await",
-   "html_update"
+   "html_update",
+   "marker_screen_add"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2681,7 +2683,8 @@
    "marker_up_1",
    "function_open_app",
    "function_new_app_screen",
-   "app_replace_screens"
+   "app_replace_screens",
+   "marker_screen_add"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9673,7 +9676,8 @@
    "marker_above_generic"
   ],
   "marker_below": [
-   "marker_below"
+   "marker_below",
+   "marker_screen_add"
   ],
   "add_1": [
    "marker_below",
@@ -10380,6 +10384,9 @@
   ],
   "home": [
    "app_replace_screens"
+  ],
+  "marker_screen_add": [
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19601,6 +19608,16 @@
     "app_replace_screens",
     "v",
     "home"
+   ]
+  },
+  "marker_screen_add": {
+   "async": true,
+   "identifiers": [
+    "marker_below",
+    "marker",
+    "marker_screen_add",
+    "code",
+    "v"
    ]
   }
  },
