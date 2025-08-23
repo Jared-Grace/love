@@ -1768,7 +1768,6 @@
    "data_watch_set",
    "function_current_set",
    "function_open",
-   "function_open_editor",
    "function_run_line",
    "function_run_line_git",
    "function_run_line_parse",
@@ -1884,7 +1883,8 @@
    "app_new",
    "app_replace",
    "html_document_body",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "function_open_editor"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2830,7 +2830,6 @@
    "function_alias_generic",
    "function_alias_replace",
    "function_open",
-   "function_open_editor",
    "function_wrap",
    "js_arrow_blockify",
    "js_arrow_to_function",
@@ -3286,7 +3285,6 @@
    "data_transform",
    "function_alias_generic",
    "function_open",
-   "function_open_editor",
    "data_files_update"
   ],
   "identifiers": [
@@ -4068,7 +4066,6 @@
    "function_new",
    "function_new_declaration",
    "function_open",
-   "function_open_editor",
    "function_parse",
    "function_read",
    "js_outside_move",
@@ -4382,7 +4379,6 @@
    "data_watch_get",
    "function_alias_add_generic",
    "function_open",
-   "function_open_editor",
    "marker_top"
   ],
   "data_function_current_get": [
@@ -4896,7 +4892,6 @@
    "function_current_set",
    "function_current_set_task_new",
    "function_open",
-   "function_open_editor",
    "task_new"
   ],
   "function_path_declaration_unparse": [
@@ -4922,7 +4917,6 @@
    "function_delete",
    "function_new",
    "function_open",
-   "function_open_editor",
    "html_new",
    "html_update",
    "app_html_open"
@@ -12126,14 +12120,8 @@
   },
   "function_open_editor": {
    "identifiers": [
-    "function_current_set",
-    "data_transform",
-    "data_save",
-    "data_get",
+    "marker",
     "function_name_to_path_unalias",
-    "file_open",
-    "function_name_to_path",
-    "object_property_set",
     "file_open_editor",
     "function_open_editor",
     "f_name",
