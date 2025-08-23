@@ -1,6 +1,5 @@
-import { app_screen_set } from "./app_screen_set.mjs";
+import { html_button_screen } from "./html_button_screen.mjs";
 import { each } from "./each.mjs";
-import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 export function app_replace_home(context) {
@@ -18,10 +17,7 @@ export function app_replace_home(context) {
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
     const value = "rule_set";
-    html_button(body, name2, lambda);
-    function lambda() {
-      app_screen_set(context, value);
-    }
+    html_button_screen(body, name2, context, value);
   }
   each(rule_sets, lambda2);
 }
