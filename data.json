@@ -3041,8 +3041,7 @@
    "js_identifiers",
    "list_join_comma",
    "marker_functionize",
-   "folder_public_combine",
-   "html_update"
+   "folder_public_combine"
   ],
   "separator": [
    "watch",
@@ -10014,6 +10013,9 @@
   ],
   "app_html_open": [
    "app_html_open"
+  ],
+  "call": [
+   "html_update"
   ]
  },
  "functions": {
@@ -12730,7 +12732,7 @@
     "file_path",
     "name_prefixed",
     "ext",
-    "result",
+    "call",
     "body"
    ],
    "async": true
