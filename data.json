@@ -2774,8 +2774,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize",
-   "marker_screen_add"
+   "js_node_atomize"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19648,7 +19647,6 @@
     "lambda",
     "a",
     "next",
-    "message",
     "v2",
     "v"
    ]
