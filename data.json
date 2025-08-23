@@ -1917,7 +1917,8 @@
    "app_replace_screens",
    "marker_screen_add",
    "marker_next_await",
-   "app_replace"
+   "app_replace",
+   "function_rename_suffix_add"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2695,7 +2696,8 @@
    "function_open_app",
    "function_new_app_screen",
    "app_replace_screens",
-   "marker_screen_add"
+   "marker_screen_add",
+   "function_rename_suffix_add"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6643,13 +6645,16 @@
    "function_read"
   ],
   "function_rename": [
-   "function_rename"
+   "function_rename",
+   "function_rename_suffix_add"
   ],
   "f_name_before": [
-   "function_rename"
+   "function_rename",
+   "function_rename_suffix_add"
   ],
   "f_name_after": [
-   "function_rename"
+   "function_rename",
+   "function_rename_suffix_add"
   ],
   "function_run": [
    "function_run",
@@ -10425,6 +10430,9 @@
   ],
   "app_name_prefix": [
    "app_name_prefixed"
+  ],
+  "function_rename_suffix_add": [
+   "function_rename_suffix_add"
   ]
  },
  "functions": {
@@ -19689,6 +19697,17 @@
     "data_property_get",
     "data_app_current_get",
     "a"
+   ]
+  },
+  "function_rename_suffix_add": {
+   "async": true,
+   "identifiers": [
+    "function_rename",
+    "marker",
+    "function_rename_suffix_add",
+    "f_name_before",
+    "f_name_after",
+    "v"
    ]
   }
  },
