@@ -2694,7 +2694,8 @@
    "app_replace_screens",
    "function_rename_suffix_add",
    "function_params_consolidate",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_property_identifier"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3004,7 +3005,8 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "js_property_identifier"
   ],
   "name": [
    "watch",
@@ -5235,7 +5237,8 @@
    "marker_if_test_replace",
    "js_await",
    "js_string",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_property_identifier"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6492,7 +6495,8 @@
    "js_declaration_single_params_add",
    "marker_expand",
    "marker_param_add",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_property_identifier"
   ],
   "expression": [
    "js_atomize_function",
@@ -6532,14 +6536,16 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_property_identifier"
   ],
   "key": [
    "object_invert",
    "storage_local_set",
    "storage_local_key_get",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "js_property_identifier"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10402,7 +10408,20 @@
   ],
   "js_property_identifier": [
    "function_params_consolidate",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_property_identifier"
+  ],
+  "method": [
+   "js_property_identifier"
+  ],
+  "shorthand": [
+   "js_property_identifier"
+  ],
+  "computed": [
+   "js_property_identifier"
+  ],
+  "kind": [
+   "js_property_identifier"
   ]
  },
  "functions": {
@@ -19652,6 +19671,22 @@
     "b",
     "declarations",
     "declarator"
+   ]
+  },
+  "js_property_identifier": {
+   "async": false,
+   "identifiers": [
+    "js_parse_expression",
+    "js_property_identifier",
+    "param_name",
+    "key",
+    "value",
+    "v",
+    "type",
+    "method",
+    "shorthand",
+    "computed",
+    "kind"
    ]
   }
  },
