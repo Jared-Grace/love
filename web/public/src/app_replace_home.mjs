@@ -1,12 +1,10 @@
 import { app_refresh } from "./app_refresh.mjs";
-import { app_replace } from "./app_replace.mjs";
 import { each } from "./each.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { html_button } from "./html_button.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 export function app_replace_home(context) {
-  let app_fn = app_replace;
   let body = html_document_body();
   let rule_sets = [
     {
@@ -23,6 +21,7 @@ export function app_replace_home(context) {
     html_button(body, name2, lambda);
     function lambda() {
       const value = "rule_set";
+      let { app_fn } = context;
       storage_local_set(app_fn, "screen", value);
       app_refresh(context);
     }
