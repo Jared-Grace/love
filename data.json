@@ -10323,6 +10323,9 @@
   ],
   "storage_local_get_or": [
    "storage_local_get_or"
+  ],
+  "value_or": [
+   "storage_local_get_or"
   ]
  },
  "functions": {
@@ -19494,6 +19497,7 @@
     "storage_local_get_or",
     "app_fn",
     "key",
+    "value_or",
     "value"
    ]
   }
