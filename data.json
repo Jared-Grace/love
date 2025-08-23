@@ -10284,7 +10284,8 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_key_get",
-   "storage_local_get"
+   "storage_local_get",
+   "app_replace"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10315,7 +10316,8 @@
    "storage_local_get"
   ],
   "storage_local_get": [
-   "storage_local_get"
+   "storage_local_get",
+   "app_replace"
   ],
   "getItem": [
    "storage_local_get"
@@ -19312,11 +19314,13 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "storage_local_get",
     "app_replace_home",
     "html_clear",
     "html_document_body",
     "marker",
     "app_replace",
+    "app_fn",
     "body"
    ]
   },
