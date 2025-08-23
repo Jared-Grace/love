@@ -10231,9 +10231,6 @@
   "function_open_app": [
    "function_open_app"
   ],
-  "app_fn": [
-   "app_replace"
-  ],
   "html_on_click": [
    "html_button"
   ],
@@ -19251,7 +19248,6 @@
     "html_document_body",
     "marker",
     "app_replace",
-    "app_fn",
     "body"
    ]
   },
