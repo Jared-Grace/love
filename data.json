@@ -10140,8 +10140,7 @@
    "app_new"
   ],
   "app_replace": [
-   "app_replace",
-   "app_replace_home"
+   "app_replace"
   ],
   "html_document_body": [
    "html_document_body",
@@ -19451,7 +19450,6 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
-    "app_replace",
     "each",
     "storage_local_set",
     "html_button",
