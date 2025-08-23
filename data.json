@@ -10235,7 +10235,8 @@
   "component": [
    "html_text_set",
    "html_button",
-   "html_element"
+   "html_element",
+   "html_document_body"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10264,7 +10265,8 @@
    "html_element"
   ],
   "html_component_wrap": [
-   "html_element"
+   "html_element",
+   "html_document_body"
   ]
  },
  "functions": {
@@ -19280,10 +19282,12 @@
   "html_document_body": {
    "async": false,
    "identifiers": [
+    "html_component_wrap",
     "marker",
     "html_document_body",
     "body",
-    "document"
+    "document",
+    "component"
    ]
   },
   "html_element": {
