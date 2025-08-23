@@ -6,6 +6,7 @@ export async function function_open_app(f_name) {
   marker("1");
   let a_name = app_name_prefixed(f_name);
   let v = await function_open(a_name);
-  await data_set(async function lambda(previous) {}, property_name);
+  async function lambda(previous) {}
+  await data_set(lambda, property_name);
   return v;
 }
