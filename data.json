@@ -3927,7 +3927,8 @@
    "marker_if_test_replace",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize"
+   "marker_functionize",
+   "marker_screen_add"
   ],
   "without": [
    "string_suffix_without",
@@ -4076,7 +4077,8 @@
    "search_generic",
    "data_set",
    "function_aliases_restore",
-   "js_stack_list_block_is"
+   "js_stack_list_block_is",
+   "marker_screen_add"
   ],
   "readdirSync": [
    "folder_read"
@@ -19618,7 +19620,9 @@
     "marker",
     "marker_screen_add",
     "code",
+    "v2",
     "lambda",
+    "a",
     "v"
    ]
   }
