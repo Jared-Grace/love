@@ -1539,7 +1539,6 @@
   "mc fpc",
   "ir second file_name",
   "s open",
-  "mdd",
   "mc file_open",
   "ir f_path combined",
   "a oh app_html_open",
@@ -1579,7 +1578,8 @@
   "oec",
   "mnd",
   "fs app_replace",
-  "mc hdb"
+  "mc hdb",
+  "mdd"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
