@@ -2507,8 +2507,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "app_replace"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -3333,8 +3332,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "app_replace"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -8627,7 +8625,8 @@
    "marker_expand"
   ],
   "rs": [
-   "js_return_atomize"
+   "js_return_atomize",
+   "app_replace"
   ],
   "identifier_not": [
    "js_return_atomize",
@@ -10096,11 +10095,9 @@
    "html_element"
   ],
   "tag_name": [
-   "app_replace",
    "html_element"
   ],
   "html_element": [
-   "app_replace",
    "html_element"
   ],
   "rule_sets": [
@@ -10117,6 +10114,9 @@
   ],
   "appendChild": [
    "html_element"
+  ],
+  "html_button": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19093,8 +19093,8 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_button",
     "each",
-    "html_element",
     "html_document_body",
     "marker",
     "app_replace",
@@ -19102,10 +19102,8 @@
     "rule_sets",
     "name",
     "rules",
-    "tag_name",
     "lambda",
-    "item",
-    "list"
+    "rs"
    ]
   },
   "html_document_body": {
