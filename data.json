@@ -10434,7 +10434,11 @@
    "js_property_identifier"
   ],
   "app_replace_rule_set": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_screens"
+  ],
+  "rule_set": [
+   "app_replace_screens"
   ]
  },
  "functions": {
@@ -19606,11 +19610,13 @@
   "app_replace_screens": {
    "async": false,
    "identifiers": [
+    "app_replace_rule_set",
     "app_replace_home",
     "marker",
     "app_replace_screens",
     "v",
-    "home"
+    "home",
+    "rule_set"
    ]
   },
   "marker_screen_add": {
