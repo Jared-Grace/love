@@ -1,3 +1,4 @@
+import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { each_async } from "./each_async.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -13,7 +14,9 @@ export async function function_rename(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
   async function lambda(item) {
-    async function lambda2(ast) {}
+    async function lambda2(ast) {
+      js_identifier_replace(ast, f_name_before, f_name_after);
+    }
     let output = await function_transform(f_name, lambda2);
   }
   await each_async(list, lambda);
