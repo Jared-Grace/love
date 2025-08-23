@@ -11,7 +11,7 @@ export function app_replace() {
     },
     {
       name: "Shrink",
-      rules: ["a a a"],
+      rules: ["a a > a"],
     },
   ];
   const tag_name = "div";
