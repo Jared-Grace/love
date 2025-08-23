@@ -637,7 +637,6 @@
   "w",
   "c catch_log catch_log_async",
   "s eq",
-  "s prefix",
   "c string_suffix_without string_prefix_without",
   "s start",
   "si git_acp_call",
@@ -1590,7 +1589,8 @@
   "o oe",
   "fws o app",
   "as html",
-  "a oa function_open_app"
+  "a oa function_open_app",
+  "s prefix"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
