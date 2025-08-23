@@ -4179,7 +4179,8 @@
    "marker_next_delete",
    "object_property_exists_assert",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "js_declare_single"
   ],
   "b": [
    "assert",
@@ -4205,7 +4206,8 @@
    "string_is_assert_message",
    "string_skip",
    "string_slice",
-   "html_button_element"
+   "html_button_element",
+   "js_declare_single"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5446,7 +5448,8 @@
    "list_single",
    "marker_assign_replace",
    "marker_next_delete",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_declare_single"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -6812,7 +6815,8 @@
    "marker_functionize",
    "marker_next_delete",
    "js_imports_declarations",
-   "js_call_function_if"
+   "js_call_function_if",
+   "js_declare_single"
   ],
   "js_node_is": [
    "function_transform_marker_all",
@@ -8111,14 +8115,16 @@
   ],
   "vd": [
    "js_declare_init_set",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_declare_single"
   ],
   "declarations": [
    "js_dollar_a",
    "js_dollar_a_generic",
    "js_dollar_s",
    "js_identifier_defineds",
-   "js_statement_call_get"
+   "js_statement_call_get",
+   "js_declare_single"
   ],
   "declarators": [
    "js_declare_init_set",
@@ -10405,7 +10411,11 @@
   ],
   "js_declare_single": [
    "js_declare_init_set",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_declare_single"
+  ],
+  "declarator": [
+   "js_declare_single"
   ]
  },
  "functions": {
@@ -19649,6 +19659,19 @@
     "suffix",
     "f_name_after",
     "v"
+   ]
+  },
+  "js_declare_single": {
+   "async": false,
+   "identifiers": [
+    "list_single",
+    "assert",
+    "js_node_type_is",
+    "js_declare_single",
+    "vd",
+    "b",
+    "declarations",
+    "declarator"
    ]
   }
  },
