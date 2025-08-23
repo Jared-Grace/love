@@ -1747,7 +1747,8 @@
    "js_imports_fix",
    "data_file_update_inner",
    "function_alias_rename",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "app_replace_home"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2361,7 +2362,8 @@
    "marker_functionize",
    "function_rename",
    "js_imports_paths_fix",
-   "html_button"
+   "html_button",
+   "app_replace_home"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2422,7 +2424,8 @@
    "each_index",
    "list_difference",
    "marker_functionize",
-   "function_rename"
+   "function_rename",
+   "app_replace_home"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2967,7 +2970,8 @@
    "undefined_is",
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
-   "lambda_get"
+   "lambda_get",
+   "app_replace_home"
   ],
   "name": [
    "watch",
@@ -3019,7 +3023,8 @@
    "js_log_remove",
    "app_new",
    "app_name_prefixed",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "app_replace_home"
   ],
   "output": [
    "watch",
@@ -3282,7 +3287,8 @@
    "marker_next_await",
    "marker_enter",
    "function_rename",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "app_replace_home"
   ],
   "data_save": [
    "data_file_update",
@@ -6178,7 +6184,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "import_": [
    "function_imports_add",
@@ -6501,7 +6508,8 @@
   ],
   "key": [
    "function_params_consolidate",
-   "object_invert"
+   "object_invert",
+   "app_replace_home"
   ],
   "kind": [
    "function_params_consolidate"
@@ -8660,7 +8668,8 @@
    "marker_expand"
   ],
   "rs": [
-   "js_return_atomize"
+   "js_return_atomize",
+   "app_replace_home"
   ],
   "identifier_not": [
    "js_return_atomize",
@@ -10121,11 +10130,13 @@
    "app_new"
   ],
   "app_replace": [
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "document": [
    "html_document_body",
@@ -10151,7 +10162,8 @@
    "html_element"
   ],
   "html_button": [
-   "html_button"
+   "html_button",
+   "app_replace_home"
   ],
   "html_text_set": [
    "html_text_set",
@@ -10249,7 +10261,23 @@
    "app_replace"
   ],
   "app_replace_home": [
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
+  ],
+  "storage_local_set": [
+   "app_replace_home"
+  ],
+  "app_fn": [
+   "app_replace_home"
+  ],
+  "rule_sets": [
+   "app_replace_home"
+  ],
+  "rules": [
+   "app_replace_home"
+  ],
+  "name2": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19355,6 +19383,29 @@
     "parent",
     "tag_name",
     "b"
+   ]
+  },
+  "app_replace_home": {
+   "async": false,
+   "identifiers": [
+    "app_replace",
+    "each",
+    "storage_local_set",
+    "html_button",
+    "object_property_get",
+    "html_document_body",
+    "app_replace_home",
+    "app_fn",
+    "body",
+    "rule_sets",
+    "name",
+    "rules",
+    "lambda2",
+    "rs",
+    "name2",
+    "lambda",
+    "key",
+    "value"
    ]
   }
  },
