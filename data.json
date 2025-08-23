@@ -10169,7 +10169,6 @@
   ],
   "app_replace": [
    "app_replace",
-   "app_replace_home",
    "app_replace_refresh"
   ],
   "html_document_body": [
@@ -19524,7 +19523,6 @@
    "async": false,
    "identifiers": [
     "app_refresh",
-    "app_replace",
     "each",
     "storage_local_set",
     "html_button",
@@ -19532,7 +19530,6 @@
     "html_document_body",
     "app_replace_home",
     "context",
-    "app_fn",
     "body",
     "rule_sets",
     "name",
@@ -19541,7 +19538,8 @@
     "rs",
     "name2",
     "lambda",
-    "value"
+    "value",
+    "app_fn"
    ]
   },
   "storage_local_set": {
