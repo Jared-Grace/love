@@ -1564,7 +1564,8 @@
   "mc hn",
   "s param,marker",
   "mpa name",
-  "mc n"
+  "mc n",
+  "mc anp"
  ],
  "marker_current": "1",
  "function_current": "app_new",
