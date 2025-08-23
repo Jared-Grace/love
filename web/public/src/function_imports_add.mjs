@@ -8,8 +8,8 @@ import { function_name_to_base } from "./function_name_to_base.mjs";
 export async function function_imports_add(ast, imports) {
   let { body } = ast;
   async function lambda(import_) {
-    let result = function_name_to_base(import_);
-    let value_string = folder_current_join(result);
+    let f_name_ext = function_name_to_base(import_);
+    let value_string = folder_current_join(f_name_ext);
     const from = js_code_string(value_string);
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
