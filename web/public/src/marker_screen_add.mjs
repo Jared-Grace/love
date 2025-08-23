@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_property } from "./js_property.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
@@ -17,6 +18,7 @@ export async function marker_screen_add(screen_name) {
     let declarator = js_declare_single(next);
     let oe = object_property_get(declarator, "init");
     let { properties } = oe;
+    list_add(list, item);
     log(oe);
     let v = js_property(param_name);
   }
