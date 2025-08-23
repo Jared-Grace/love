@@ -10021,7 +10021,11 @@
   ],
   "folder_src": [
    "functions_path",
-   "html_update"
+   "html_update",
+   "folder_src"
+  ],
+  "src": [
+   "folder_src"
   ]
  },
  "functions": {
@@ -18958,6 +18962,13 @@
     "a_name",
     "file_name",
     "combined"
+   ]
+  },
+  "folder_src": {
+   "async": false,
+   "identifiers": [
+    "folder_src",
+    "src"
    ]
   }
  },
