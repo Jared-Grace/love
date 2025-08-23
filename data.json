@@ -19258,9 +19258,9 @@
     "js_imports_paths_fix",
     "ast",
     "imports_declarations",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ]
   }
  },
