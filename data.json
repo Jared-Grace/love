@@ -2244,8 +2244,7 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not",
-   "function_new_app_screen"
+   "object_property_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2992,8 +2991,7 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_get",
-   "storage_local_get_or",
-   "function_new_app_screen"
+   "storage_local_get_or"
   ],
   "name": [
    "watch",
@@ -10160,8 +10158,7 @@
    "html_update",
    "app_new",
    "app_name_prefixed",
-   "function_open_app",
-   "function_new_app_screen"
+   "function_open_app"
   ],
   "app_new": [
    "app_new"
@@ -19581,13 +19578,10 @@
    "identifiers": [
     "data_property_get",
     "function_name_combine",
-    "app_name_prefixed",
     "function_new",
     "marker",
     "function_new_app_screen",
     "screen_name",
-    "value",
-    "property_name",
     "a_name",
     "combined",
     "v"
