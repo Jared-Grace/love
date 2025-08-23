@@ -17,7 +17,7 @@ export async function function_rename(f_name_before, f_name_after) {
   async function lambda(f_name) {
     async function lambda2(ast) {
       js_identifier_replace(ast, f_name_before, f_name_after);
-      js_imports_paths_fix(ast2);
+      js_imports_paths_fix(ast);
     }
     let output = await function_transform(f_name, lambda2);
   }
