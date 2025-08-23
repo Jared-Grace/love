@@ -1,11 +1,6 @@
+import { js_declare_single } from "./js_declare_single.mjs";
 import { object_property_set } from "./object_property_set.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { assert } from "./assert.mjs";
 export function js_declare_init_set(vd, init) {
-  let b = js_node_type_is(vd, "VariableDeclaration");
-  assert(b);
-  let { declarations } = vd;
-  let declarators = list_single(declarations);
+  let declarators = js_declare_single(vd);
   object_property_set(declarators, "init", init);
 }
