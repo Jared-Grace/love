@@ -23,6 +23,7 @@ export function app_replace() {
     let b = html_button_element(body);
     html_text_set(b, name2);
     let element = html_component_element_get(component);
+    element.on("click", lambda);
   }
   each(rule_sets, lambda);
 }
