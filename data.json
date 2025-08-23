@@ -10083,9 +10083,6 @@
   ],
   "document": [
    "html_document_body"
-  ],
-  "body2": [
-   "html_document_body"
   ]
  },
  "functions": {
@@ -19070,7 +19067,6 @@
    "identifiers": [
     "marker",
     "html_document_body",
-    "body2",
     "body",
     "document"
    ]
