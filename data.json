@@ -1869,7 +1869,8 @@
    "app_html_open",
    "app_code",
    "app_new",
-   "app_replace"
+   "app_replace",
+   "html_document_body"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10071,6 +10072,9 @@
   ],
   "app_replace": [
    "app_replace"
+  ],
+  "html_document_body": [
+   "html_document_body"
   ]
  },
  "functions": {
@@ -19048,6 +19052,13 @@
    "identifiers": [
     "marker",
     "app_replace"
+   ]
+  },
+  "html_document_body": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_document_body"
    ]
   }
  },
