@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { data_app_current_get } from "./data_app_current_get.mjs";
 import { function_current_set } from "./function_current_set.mjs";
@@ -12,6 +13,7 @@ export async function marker_screen_add(screen_name) {
     await function_current_set(combined);
     async function lambda(a) {
       let { next } = marker_next_get(a);
+      log(message);
     }
     let v2 = await function_transform_marker_current(lambda);
   }
