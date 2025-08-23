@@ -2156,8 +2156,7 @@
    "marker_next_await",
    "function_parse_strict_declaration",
    "function_exists_strict",
-   "function_name_to_base",
-   "app_new"
+   "function_name_to_base"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -19023,8 +19022,7 @@
     "marker",
     "app_new",
     "name",
-    "a_name",
-    "f_name"
+    "a_name"
    ]
   },
   "app_name_prefixed": {
