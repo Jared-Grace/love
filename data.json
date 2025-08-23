@@ -1601,7 +1601,8 @@
   "s data,set",
   "fws n app_screen",
   "oa oa",
-  "o oa"
+  "o oa",
+  "as combine"
  ],
  "marker_current": "1",
  "function_current": "function_open_app",
