@@ -2,7 +2,7 @@ import { each } from "./each.mjs";
 import { marker } from "./marker.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { list_adder } from "./list_adder.mjs";
-export async function js_visit_each(a, lambda$item) {
+export function js_visit_each(a, lambda$item) {
   marker("1");
   function lambda2(la) {
     let v = js_visit(a, la);
