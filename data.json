@@ -2046,7 +2046,8 @@
    "marker_above_generic",
    "marker_below",
    "marker_next_delete_multiple",
-   "marker_next_await"
+   "marker_next_await",
+   "html_update"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -5943,7 +5944,8 @@
    "object_copy",
    "object_merge",
    "object_property_from",
-   "object_replace"
+   "object_replace",
+   "html_update"
   ],
   "i": [
    "function_identifier_replace",
@@ -5987,7 +5989,8 @@
    "function_imports_missing_add",
    "function_name_to_base",
    "function_name_to_path",
-   "function_imports_fix"
+   "function_imports_fix",
+   "html_update"
   ],
   "function_import": [
    "function_import",
@@ -6111,7 +6114,8 @@
   ],
   "import_": [
    "function_imports_add",
-   "js_code_import_single"
+   "js_code_import_single",
+   "html_update"
   ],
   "statement": [
    "function_imports_add",
@@ -10009,10 +10013,12 @@
   ],
   "f_name_ext": [
    "function_name_to_base",
-   "function_imports_add"
+   "function_imports_add",
+   "html_update"
   ],
   "folder_current_join_code": [
-   "function_imports_add"
+   "function_imports_add",
+   "html_update"
   ]
  },
  "functions": {
@@ -12715,6 +12721,8 @@
   },
   "html_update": {
    "identifiers": [
+    "folder_current_join_code",
+    "function_name_to_base",
     "js_code_import_single",
     "js_code_call_statement",
     "function_name_extension",
@@ -12728,6 +12736,10 @@
     "ext",
     "call",
     "i",
+    "f_name_ext",
+    "import_",
+    "from",
+    "code",
     "body"
    ],
    "async": true
@@ -18945,6 +18957,6 @@
    ]
   }
  },
- "git_push_when": "2025-08-23T16:37:50.229Z",
+ "git_push_when": "2025-08-23T17:38:02.754Z",
  "error_attention": null
 }
