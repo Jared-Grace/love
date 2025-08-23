@@ -2099,8 +2099,7 @@
    "data_file_update_inner",
    "marker_next_await",
    "function_parse_strict_declaration",
-   "function_exists_strict",
-   "js_await_add"
+   "function_exists_strict"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3690,8 +3689,7 @@
    "js_function_last_asyncify",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize",
-   "js_await_add"
+   "marker_functionize"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -3792,8 +3790,7 @@
    "marker_if_test_replace",
    "js_stack_list_block_is",
    "list_difference",
-   "marker_functionize",
-   "js_await_add"
+   "marker_functionize"
   ],
   "without": [
    "string_suffix_without",
@@ -5437,8 +5434,7 @@
    "search_generic",
    "function_alias_rename",
    "object_property_exists_not",
-   "function_aliases_restore",
-   "js_await_add"
+   "function_aliases_restore"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -6215,8 +6211,7 @@
    "function_new_transform",
    "function_param_swap_task_simple",
    "function_wrap",
-   "task_new",
-   "js_await_add"
+   "task_new"
   ],
   "code_declaration": [
    "function_new",
@@ -12899,8 +12894,6 @@
   },
   "js_await_add": {
    "identifiers": [
-    "not",
-    "function_new",
     "object_replace",
     "js_await",
     "object_copy",
@@ -12924,9 +12917,6 @@
     "en",
     "f",
     "async_is",
-    "n",
-    "a",
-    "f_name",
     "stack",
     "stack1",
     "lambda4",
