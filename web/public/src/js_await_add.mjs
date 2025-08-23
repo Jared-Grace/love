@@ -1,3 +1,4 @@
+import { function_new } from "./function_new.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_await } from "./js_await.mjs";
 import { object_copy } from "./object_copy.mjs";
@@ -22,6 +23,7 @@ export async function js_await_add(ast) {
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       marker("1");
+      await function_new(f_name);
       let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
