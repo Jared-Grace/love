@@ -1899,7 +1899,8 @@
    "function_open_app",
    "html_button_element",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "app_replace_refresh"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3300,7 +3301,8 @@
    "marker_enter",
    "function_rename",
    "js_imports_paths_fix",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "data_save": [
    "data_file_update",
@@ -6198,7 +6200,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "import_": [
    "function_imports_add",
@@ -10148,11 +10151,13 @@
   ],
   "app_replace": [
    "app_replace",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "document": [
    "html_document_body",
@@ -10274,7 +10279,8 @@
    "html_document_body"
   ],
   "app_replace_home": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "storage_local_set": [
    "app_replace_home",
@@ -10285,7 +10291,8 @@
    "storage_local_set",
    "storage_local_key_get",
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "app_replace_refresh"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10324,13 +10331,30 @@
   ],
   "app_replace_refresh": [
    "app_replace",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_refresh"
   ],
   "storage_local_get_or": [
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "app_replace_refresh"
   ],
   "value_or": [
    "storage_local_get_or"
+  ],
+  "html_clear": [
+   "app_replace_refresh"
+  ],
+  "screens": [
+   "app_replace_refresh"
+  ],
+  "home": [
+   "app_replace_refresh"
+  ],
+  "screen_name": [
+   "app_replace_refresh"
+  ],
+  "screen": [
+   "app_replace_refresh"
   ]
  },
  "functions": {
@@ -19507,6 +19531,25 @@
     "value_or",
     "value",
     "n"
+   ]
+  },
+  "app_replace_refresh": {
+   "async": false,
+   "identifiers": [
+    "storage_local_get_or",
+    "object_property_get",
+    "marker",
+    "html_clear",
+    "html_document_body",
+    "app_replace_home",
+    "app_replace",
+    "app_replace_refresh",
+    "app_fn",
+    "screens",
+    "home",
+    "body",
+    "screen_name",
+    "screen"
    ]
   }
  },
