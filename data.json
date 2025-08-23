@@ -2461,8 +2461,7 @@
    "marker_functionize",
    "function_rename",
    "app_replace_home",
-   "task_new",
-   "app_replace_rule_set"
+   "task_new"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -10207,8 +10206,7 @@
    "html_element"
   ],
   "html_button": [
-   "html_button",
-   "app_replace_rule_set"
+   "html_button"
   ],
   "html_text_set": [
    "html_text_set",
@@ -10453,7 +10451,8 @@
   ],
   "context": [
    "app_replace_home",
-   "app_refresh"
+   "app_refresh",
+   "app_replace_rule_set"
   ],
   "html_clear": [
    "app_refresh"
@@ -10474,7 +10473,8 @@
    "lambda_value"
   ],
   "html_button_screen": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19750,12 +19750,12 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "html_button",
+    "html_button_screen",
     "html_document_body",
     "marker",
     "app_replace_rule_set",
     "body",
-    "lambda2"
+    "context"
    ]
   },
   "app_refresh": {
