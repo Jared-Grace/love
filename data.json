@@ -2950,7 +2950,8 @@
    "js_await_add",
    "js_call_function_if",
    "js_declaration_single_name",
-   "js_log_remove"
+   "js_log_remove",
+   "app_html_open"
   ],
   "output": [
    "watch",
@@ -4815,7 +4816,8 @@
   "file_name_html": [
    "file_name_html",
    "html_name_to_path",
-   "html_new"
+   "html_new",
+   "app_html_open"
   ],
   "function_current_set": [
    "file_open",
@@ -7245,7 +7247,8 @@
   ],
   "file_name": [
    "html_name_to_path",
-   "file_name_html"
+   "file_name_html",
+   "app_html_open"
   ],
   "html_update": [
    "html_new",
@@ -18917,9 +18920,12 @@
   "app_html_open": {
    "async": false,
    "identifiers": [
+    "file_name_html",
     "marker",
     "app_html_open",
-    "a_name"
+    "a_name",
+    "file_name",
+    "name"
    ]
   }
  },
