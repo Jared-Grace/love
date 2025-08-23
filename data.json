@@ -19112,11 +19112,11 @@
     "rule_sets",
     "name",
     "rules",
+    "lambda",
+    "rs",
     "b",
     "innerHTML",
-    "text",
-    "lambda",
-    "rs"
+    "text"
    ]
   },
   "html_document_body": {
