@@ -1582,7 +1582,6 @@
   "s string",
   "fts js_imports_paths_fix",
   "ps",
-  "p",
   "ftc js_imports_paths_fix app_replace",
   "o r",
   "s auto",
@@ -1592,7 +1591,9 @@
   "a oa function_open_app",
   "s prefix",
   "oa replace",
-  "c storage_local_set storage_local_get"
+  "p",
+  "c storage_local_set storage_local_get",
+  "de storage_local_set"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
