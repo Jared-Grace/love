@@ -2216,8 +2216,7 @@
    "function_exists_strict",
    "function_name_to_base",
    "function_rename",
-   "function_open_app",
-   "marker_screen_add"
+   "function_open_app"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -19652,7 +19651,6 @@
     "combined_screen",
     "value",
     "p",
-    "f_name",
     "message",
     "v2"
    ]
