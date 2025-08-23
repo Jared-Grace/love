@@ -1480,7 +1480,6 @@
   "p",
   "ir delta 1",
   "a mdd marker_down_1",
-  "s await",
   "u la",
   "c function_parse_declaration function_parse_strict_declaration",
   "c function_exists function_exists_strict",
@@ -1513,7 +1512,8 @@
   "ir to node",
   "ir from awaited",
   "s auto",
-  "fs js_auto"
+  "fs js_auto",
+  "s await"
  ],
  "marker_current": "1",
  "function_current": "js_auto",
