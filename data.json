@@ -1919,7 +1919,8 @@
    "marker_next_await",
    "app_replace",
    "function_rename_suffix_add",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_refresh"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3327,7 +3328,8 @@
    "function_rename",
    "js_imports_paths_fix",
    "app_replace_home",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_refresh"
   ],
   "data_save": [
    "data_file_update",
@@ -6230,7 +6232,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_refresh"
   ],
   "import_": [
    "function_imports_add",
@@ -10171,7 +10174,8 @@
   "html_document_body": [
    "html_document_body",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_refresh"
   ],
   "document": [
    "html_document_body",
@@ -10306,7 +10310,8 @@
    "storage_local_key_get",
    "storage_local_get",
    "storage_local_get_or",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_refresh"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10349,17 +10354,20 @@
    "app_replace_refresh"
   ],
   "storage_local_get_or": [
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "app_refresh"
   ],
   "value_or": [
    "storage_local_get_or"
   ],
   "screens": [
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_refresh"
   ],
   "screen_name": [
    "function_new_app_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_refresh"
   ],
   "function_new_app_screen": [
    "function_new_app_screen"
@@ -10431,10 +10439,18 @@
    "app_replace_screens"
   ],
   "app_refresh": [
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_refresh"
   ],
   "context": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_refresh"
+  ],
+  "html_clear": [
+   "app_refresh"
+  ],
+  "screen": [
+   "app_refresh"
   ]
  },
  "functions": {
@@ -19717,6 +19733,23 @@
     "marker",
     "app_replace_rule_set",
     "body"
+   ]
+  },
+  "app_refresh": {
+   "async": false,
+   "identifiers": [
+    "object_property_get",
+    "storage_local_get_or",
+    "marker",
+    "html_clear",
+    "html_document_body",
+    "app_refresh",
+    "context",
+    "app_fn",
+    "body",
+    "screen_name",
+    "screen",
+    "screens"
    ]
   }
  },
