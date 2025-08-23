@@ -3627,16 +3627,14 @@
    "function_run_prompt",
    "js_block_child_graph",
    "null_not_is",
-   "marker_enter",
-   "data_app_current_get"
+   "marker_enter"
   ],
   "null_not_is": [
    "function_run_prompt",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "null_not_is",
-   "marker_enter",
-   "data_app_current_get"
+   "marker_enter"
   ],
   "prompt": [
    "chalk_green",
@@ -4184,8 +4182,7 @@
    "marker_next_delete",
    "object_property_exists_assert",
    "string_is_assert",
-   "string_is_assert_message",
-   "data_app_current_get"
+   "string_is_assert_message"
   ],
   "b": [
    "assert",
@@ -10415,6 +10412,9 @@
   "data_app_current_get": [
    "function_new_app_screen",
    "marker_screen_add",
+   "data_app_current_get"
+  ],
+  "null_not_is_assert": [
    "data_app_current_get"
   ]
  },
@@ -19670,12 +19670,10 @@
   "data_app_current_get": {
    "async": true,
    "identifiers": [
-    "null_not_is",
+    "null_not_is_assert",
     "data_property_get",
-    "assert",
     "data_app_current_get",
-    "a",
-    "nn"
+    "a"
    ]
   }
  },
