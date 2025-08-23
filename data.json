@@ -10439,9 +10439,6 @@
   ],
   "combined_screen": [
    "marker_screen_add"
-  ],
-  "app_replace_rule_set": [
-   "app_replace_screens"
   ]
  },
  "functions": {
@@ -19617,8 +19614,7 @@
     "marker",
     "app_replace_screens",
     "v",
-    "home",
-    "app_replace_rule_set"
+    "home"
    ]
   },
   "marker_screen_add": {
