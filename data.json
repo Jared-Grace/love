@@ -7217,7 +7217,8 @@
    "marker_next",
    "marker_next_delete",
    "marker_next_get",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_screen_add"
   ],
   "noop": [
    "function_transform_marker_empty",
@@ -8284,7 +8285,8 @@
    "marker_move",
    "marker_next",
    "marker_next_get",
-   "marker_next_await"
+   "marker_next_await",
+   "marker_screen_add"
   ],
   "id": [
    "js_dollar_a",
@@ -19619,12 +19621,14 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "marker_next_get",
     "function_transform_marker_current",
     "marker",
     "marker_screen_add",
     "code",
     "lambda",
     "a",
+    "next",
     "v2",
     "v"
    ]
