@@ -1734,7 +1734,8 @@
    "function_imports_fix",
    "js_imports_fix",
    "data_file_update_inner",
-   "function_alias_rename"
+   "function_alias_rename",
+   "app_replace"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2338,7 +2339,8 @@
    "functions_log_remove",
    "js_identifiers",
    "list_difference",
-   "marker_functionize"
+   "marker_functionize",
+   "app_replace"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2505,7 +2507,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "app_replace"
   ],
   "v": [
    "data_identifiers_file",
@@ -3330,7 +3333,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "app_replace"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -19089,6 +19093,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "each",
     "html_element",
     "html_document_body",
     "marker",
@@ -19097,7 +19102,10 @@
     "rule_sets",
     "name",
     "rules",
-    "tag_name"
+    "tag_name",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "html_document_body": {

@@ -17,5 +17,6 @@ export function app_replace() {
   ];
   const tag_name = "div";
   html_element(body, tag_name);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
