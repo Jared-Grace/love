@@ -1598,12 +1598,13 @@
   "s null",
   "u ni",
   "a nli null_is",
-  "o oa",
   "s data,set",
-  "fws n app_screen"
+  "fws n app_screen",
+  "oa oa",
+  "o oa"
  ],
  "marker_current": "1",
- "function_current": "function_new_app_screen",
+ "function_current": "function_open_app",
  "terminal": false,
  "identifiers": {
   "log": [
