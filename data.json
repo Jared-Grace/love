@@ -3863,8 +3863,7 @@
    "functions_names",
    "file_open",
    "function_name_extension",
-   "function_name_to_base",
-   "html_update"
+   "function_name_to_base"
   ],
   "list_map": [
    "functions_names",
@@ -4870,8 +4869,7 @@
   ],
   "ext": [
    "file_open",
-   "function_name_extension",
-   "html_update"
+   "function_name_extension"
   ],
   "ew": [
    "file_open",
@@ -12732,7 +12730,6 @@
     "function_name_to_base",
     "js_code_import_single",
     "js_code_call_statement",
-    "function_name_extension",
     "file_open",
     "html_overwrite",
     "html_name_to_path",
@@ -12741,7 +12738,6 @@
     "name",
     "file_path",
     "name_prefixed",
-    "ext",
     "call",
     "f_name_ext",
     "src",
