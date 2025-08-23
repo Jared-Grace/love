@@ -11,12 +11,11 @@ export async function html_update(name) {
   const name_prefixed = `app_${name}`;
   let ext = function_name_extension();
   let call = js_code_call_statement(name_prefixed);
-  let i = js_code_import_single(name_prefixed);
-  let f_name_ext = function_name_to_base(import_);
+  let f_name_ext = function_name_to_base(name_prefixed);
   const from = folder_current_join_code(f_name_ext);
-  let code = js_code_import_single(import_, from);
+  let code = js_code_import_single(name_prefixed, from);
   let body = `<script type="module"> 
-    ${i}
+    ${code}
     import { ${name_prefixed} } from './${name_prefixed}${ext}';
     ${call}
   </script>`;
