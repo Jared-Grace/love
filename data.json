@@ -6044,7 +6044,6 @@
   ],
   "function_name_to_base": [
    "function_import",
-   "function_imports_add",
    "function_imports_missing_add",
    "function_name_to_base",
    "function_name_to_path",
@@ -10085,11 +10084,9 @@
   ],
   "f_name_ext": [
    "function_name_to_base",
-   "function_imports_add",
    "html_update"
   ],
   "folder_current_join_code": [
-   "function_imports_add",
    "html_update"
   ],
   "folder_src": [
@@ -10204,6 +10201,9 @@
   ],
   "js_imports_paths_fix": [
    "js_imports_paths_fix"
+  ],
+  "function_name_to_path_import": [
+   "function_imports_add"
   ]
  },
  "functions": {
@@ -11813,19 +11813,17 @@
   },
   "function_imports_add": {
    "identifiers": [
-    "folder_current_join_code",
+    "function_name_to_path_import",
     "each_async",
     "js_code_import_single",
     "list_add_first",
     "js_parse_statement_module",
-    "function_name_to_base",
     "function_imports_add",
     "ast",
     "imports",
     "body",
     "lambda",
     "import_",
-    "f_name_ext",
     "from",
     "code",
     "statement"
