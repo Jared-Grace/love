@@ -1,4 +1,3 @@
-import { folder_public_combine } from "./folder_public_combine.mjs";
 import { file_name_html } from "./file_name_html.mjs";
 import { marker } from "./marker.mjs";
 export function app_html_open(a_name) {
