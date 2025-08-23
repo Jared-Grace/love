@@ -886,7 +886,6 @@
   "atn ii",
   "atn jis",
   "path_resolve .",
-  "s folder",
   "a ii import_install",
   "git_push_schedule",
   "fw c function_copy_suffix_add",
@@ -1520,7 +1519,8 @@
   "s html",
   "n apps_get",
   "s files",
-  "s file"
+  "s file",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "apps_get",
