@@ -1439,7 +1439,6 @@
   "o me",
   "mx",
   "s bottom",
-  "as marker",
   "a mbt marker_bottom",
   "mg",
   "mm 1 2",
@@ -1516,7 +1515,8 @@
   "mdd",
   "mb $i",
   "me",
-  "mb $r"
+  "mb $r",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
