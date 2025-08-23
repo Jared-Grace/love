@@ -1,3 +1,4 @@
+import { function_transform } from "./function_transform.mjs";
 import { each_async } from "./each_async.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
@@ -11,7 +12,12 @@ export async function function_rename(f_name_before, f_name_after) {
   let v = await function_alias_rename(f_name_before, f_name_after);
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
-  async function lambda(item) {}
+  async function lambda(item) {
+    let output = await function_transform(
+      f_name,
+      async function lambda2(ast) {},
+    );
+  }
   await each_async(list, lambda);
   marker("1");
 }
