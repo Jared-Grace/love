@@ -19746,10 +19746,10 @@
     "app_refresh",
     "context",
     "app_fn",
+    "screens",
     "body",
     "screen_name",
-    "screen",
-    "screens"
+    "screen"
    ]
   }
  },
