@@ -1,3 +1,4 @@
+import { function_transform_marker } from "./function_transform_marker.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { log } from "./log.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
@@ -5,7 +6,6 @@ import { data_app_current_get } from "./data_app_current_get.mjs";
 import { function_current_set } from "./function_current_set.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
-import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 import { marker } from "./marker.mjs";
 export async function marker_screen_add(screen_name) {
   async function lambda3() {
@@ -17,7 +17,7 @@ export async function marker_screen_add(screen_name) {
       let { next } = marker_next_get(a);
       log(next);
     }
-    let v2 = await function_transform_marker_current(lambda);
+    let v2 = await function_transform_marker("screens", lambda);
   }
   await data_function_current_restore(lambda3);
   marker("1");
