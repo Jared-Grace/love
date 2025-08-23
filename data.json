@@ -1542,10 +1542,10 @@
   "ir name a_name",
   "s public",
   "mdd",
-  "mc fpc",
   "u fpb",
   "u fpc",
-  "a fpc folder_public_combine"
+  "a fpc folder_public_combine",
+  "mc fpc"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
