@@ -2693,7 +2693,8 @@
    "function_new_app_screen",
    "app_replace_screens",
    "function_rename_suffix_add",
-   "function_params_consolidate"
+   "function_params_consolidate",
+   "marker_screen_add"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6490,7 +6491,8 @@
    "js_declaration_param_named",
    "js_declaration_single_params_add",
    "marker_expand",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_screen_add"
   ],
   "expression": [
    "js_atomize_function",
@@ -10399,7 +10401,8 @@
    "marker_screen_add"
   ],
   "js_property_identifier": [
-   "function_params_consolidate"
+   "function_params_consolidate",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19581,6 +19584,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_property_identifier",
     "object_property_get",
     "js_declare_single",
     "function_transform_marker_specified",
@@ -19600,6 +19604,8 @@
     "next",
     "declarator",
     "expression",
+    "v",
+    "param_name",
     "v2"
    ]
   },
