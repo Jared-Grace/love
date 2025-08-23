@@ -4160,8 +4160,7 @@
    "string_is_assert_message",
    "string_skip",
    "string_slice",
-   "html_button",
-   "app_replace"
+   "html_button"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -19254,10 +19253,9 @@
     "lambda",
     "rs",
     "name2",
-    "b",
+    "component",
     "name_event",
     "element",
-    "component",
     "on"
    ]
   },
