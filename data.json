@@ -10172,7 +10172,8 @@
   ],
   "html_text_set": [
    "html_text_set",
-   "html_button"
+   "html_button",
+   "app_replace"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -19266,6 +19267,7 @@
     "each",
     "html_document_body",
     "marker",
+    "html_text_set",
     "app_replace",
     "app_fn",
     "body",
