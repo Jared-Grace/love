@@ -4815,8 +4815,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "marker_screen_add"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4831,8 +4830,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "marker_screen_add"
+   "add"
   ],
   "eq": [
    "equal",
@@ -19643,8 +19641,6 @@
     "lambda3",
     "a_name",
     "combined",
-    "left",
-    "right",
     "lambda",
     "a",
     "next",
