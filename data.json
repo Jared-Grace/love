@@ -2519,8 +2519,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "js_imports_paths_fix"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -3349,8 +3348,7 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner",
-   "js_imports_paths_fix"
+   "data_file_update_inner"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6016,7 +6014,8 @@
    "js_imports_unused",
    "marker_up",
    "marker_above_generic",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_imports_paths_fix"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -19259,8 +19258,7 @@
     "ast",
     "imports_declarations",
     "lambda",
-    "item",
-    "list"
+    "i"
    ]
   }
  },
