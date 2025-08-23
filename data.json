@@ -1879,7 +1879,8 @@
    "app_code",
    "app_new",
    "app_replace",
-   "html_document_body"
+   "html_document_body",
+   "js_imports_paths_fix"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2039,7 +2040,8 @@
    "marker_above_generic",
    "js_declaration_single_name",
    "js_log_remove",
-   "function_rename"
+   "function_rename",
+   "js_imports_paths_fix"
   ],
   "code": [
    "data_identifiers_file",
@@ -10188,6 +10190,9 @@
   ],
   "an": [
    "function_aliases_restore"
+  ],
+  "js_imports_paths_fix": [
+   "js_imports_paths_fix"
   ]
  },
  "functions": {
@@ -19236,6 +19241,14 @@
     "body",
     "tag_name",
     "b"
+   ]
+  },
+  "js_imports_paths_fix": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_imports_paths_fix",
+    "ast"
    ]
   }
  },
