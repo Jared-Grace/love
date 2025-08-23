@@ -3006,8 +3006,7 @@
    "app_replace_home",
    "storage_local_set",
    "storage_local_get",
-   "storage_local_get_or",
-   "data_app_current_get"
+   "storage_local_get_or"
   ],
   "name": [
    "watch",
@@ -4185,7 +4184,8 @@
    "marker_next_delete",
    "object_property_exists_assert",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "data_app_current_get"
   ],
   "b": [
    "assert",
@@ -19672,10 +19672,10 @@
    "identifiers": [
     "null_not_is",
     "data_property_get",
+    "assert",
     "data_app_current_get",
     "a",
-    "nn",
-    "value"
+    "nn"
    ]
   }
  },
