@@ -4134,7 +4134,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "html_button"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6145,7 +6146,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace"
+   "app_replace",
+   "html_button"
   ],
   "import_": [
    "function_imports_add",
@@ -10095,10 +10097,12 @@
    "html_element"
   ],
   "tag_name": [
-   "html_element"
+   "html_element",
+   "html_button"
   ],
   "html_element": [
-   "html_element"
+   "html_element",
+   "html_button"
   ],
   "rule_sets": [
    "app_replace"
@@ -10116,7 +10120,8 @@
    "html_element"
   ],
   "html_button": [
-   "app_replace"
+   "app_replace",
+   "html_button"
   ]
  },
  "functions": {
@@ -19125,6 +19130,16 @@
     "document",
     "createElement",
     "appendChild"
+   ]
+  },
+  "html_button": {
+   "async": false,
+   "identifiers": [
+    "html_element",
+    "html_button",
+    "body",
+    "tag_name",
+    "b"
    ]
   }
  },
