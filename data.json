@@ -4158,7 +4158,6 @@
    "js_block_child_graph",
    "js_block_child_graph_unparse",
    "js_call_fill",
-   "js_declare_init_set",
    "js_dollar_s",
    "js_identifiers_to_names",
    "js_identifier_replace",
@@ -4191,7 +4190,6 @@
    "function_identifier_replace",
    "function_param_swap",
    "js_call_new_code",
-   "js_declare_init_set",
    "js_node_atomize",
    "list_concat",
    "list_insert_generic",
@@ -5438,7 +5436,6 @@
    "function_acronym_to_name",
    "function_alias_add_generic",
    "js_declaration_single",
-   "js_declare_init_set",
    "js_imports",
    "js_marker_named_ast",
    "js_statement_call_get",
@@ -6773,7 +6770,6 @@
    "js_atomize_function",
    "js_declaration_params_names_node",
    "js_declare_assign_null",
-   "js_declare_init_set",
    "js_dollar",
    "js_dollar_a",
    "js_dollar_a_generic",
@@ -8113,7 +8109,6 @@
    "js_declare_init_set"
   ],
   "declarations": [
-   "js_declare_init_set",
    "js_dollar_a",
    "js_dollar_a_generic",
    "js_dollar_s",
@@ -10401,6 +10396,9 @@
   "function_transform_marker_specified": [
    "function_transform_marker",
    "marker_screen_add"
+  ],
+  "js_declare_single": [
+   "js_declare_init_set"
   ]
  },
  "functions": {
@@ -14052,15 +14050,11 @@
   },
   "js_declare_init_set": {
    "identifiers": [
+    "js_declare_single",
     "object_property_set",
-    "list_single",
-    "js_node_type_is",
-    "assert",
     "js_declare_init_set",
     "vd",
     "init",
-    "b",
-    "declarations",
     "declarators"
    ],
    "async": false
