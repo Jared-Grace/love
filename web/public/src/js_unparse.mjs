@@ -5,7 +5,7 @@ import { js_visit_filter } from "./js_visit_filter.mjs";
 import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
 import { error } from "./error.mjs";
-export async function js_unparse(ast) {
+export function js_unparse(ast) {
   let a2 = promise_not_is(ast);
   if (not(a2)) {
     error();
@@ -32,7 +32,7 @@ export async function js_unparse(ast) {
         return v2;
       }
     }
-    await js_visit_each(ast, lambda);
+    js_visit_each(ast, lambda);
     throw e;
   }
   return code;
