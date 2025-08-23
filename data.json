@@ -10234,10 +10234,7 @@
   "html_component_element_get": [
    "html_text_set"
   ],
-  "name_event": [
-   "app_replace"
-  ],
-  "html_on": [
+  "html_on_click": [
    "app_replace"
   ]
  },
@@ -19238,7 +19235,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "html_on",
+    "html_on_click",
     "html_text_set",
     "object_property_get",
     "html_button_element",
@@ -19253,8 +19250,7 @@
     "lambda",
     "rs",
     "name2",
-    "component",
-    "name_event"
+    "component"
    ]
   },
   "html_document_body": {
