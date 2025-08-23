@@ -1584,7 +1584,8 @@
   "s import",
   "s string",
   "fts js_imports_paths_fix",
-  "ps"
+  "ps",
+  "ftc js_imports_paths_fix app_replace"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
