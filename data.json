@@ -6543,8 +6543,7 @@
    "js_stack_last",
    "js_visit_type",
    "js_visit_type_each_async",
-   "js_node_type_not_is_if",
-   "js_property"
+   "js_node_type_not_is_if"
   ],
   "key": [
    "object_invert",
@@ -10425,20 +10424,14 @@
    "marker_screen_add",
    "js_property"
   ],
-  "method": [
-   "js_property"
-  ],
   "shorthand": [
-   "js_property"
-  ],
-  "computed": [
-   "js_property"
-  ],
-  "kind": [
    "js_property"
   ],
   "combined_screen": [
    "marker_screen_add"
+  ],
+  "js_property_generic": [
+   "js_property"
   ]
  },
  "functions": {
@@ -19712,15 +19705,12 @@
   "js_property": {
    "async": false,
    "identifiers": [
+    "js_property_generic",
     "js_property",
     "key",
     "value",
     "shorthand",
-    "p",
-    "type",
-    "method",
-    "computed",
-    "kind"
+    "p"
    ]
   }
  },
