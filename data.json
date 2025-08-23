@@ -1581,7 +1581,6 @@
   "s import",
   "s string",
   "fts js_imports_paths_fix",
-  "ps",
   "ftc js_imports_paths_fix app_replace",
   "o r",
   "s auto",
@@ -1594,7 +1593,8 @@
   "p",
   "c storage_local_set storage_local_get",
   "de storage_local_set",
-  "c storage_local_get storage_local_set"
+  "c storage_local_get storage_local_set",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
