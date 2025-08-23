@@ -1,3 +1,5 @@
+import { object_property_get } from "./object_property_get.mjs";
+import { js_declare_single } from "./js_declare_single.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { log } from "./log.mjs";
@@ -11,6 +13,8 @@ export async function marker_screen_add(screen_name) {
   let combined = function_name_combine(prefixed, "screens");
   async function lambda(a) {
     let { next } = marker_next_get(a);
+    let declarators = js_declare_single(vd);
+    let expression = object_property_get(declaration, "init");
     log(next);
   }
   let v2 = await function_transform_marker_specified(
