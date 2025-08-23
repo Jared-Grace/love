@@ -1606,10 +1606,11 @@
   "s set,current",
   "s restore",
   "s app",
-  "ps"
+  "ps",
+  "o marker_screen_add"
  ],
  "marker_current": "1",
- "function_current": "marker_next_await",
+ "function_current": "marker_screen_add",
  "terminal": false,
  "identifiers": {
   "log": [
