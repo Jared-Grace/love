@@ -1612,8 +1612,8 @@
   "s let",
   "s single",
   "ps",
-  "p",
   "marker_screen_add t",
+  "p",
   "marker_screen_add rule_set"
  ],
  "marker_current": "1",
