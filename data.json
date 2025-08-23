@@ -19715,10 +19715,10 @@
     "js_property",
     "key",
     "value",
+    "shorthand",
     "p",
     "type",
     "method",
-    "shorthand",
     "computed",
     "kind"
    ]
