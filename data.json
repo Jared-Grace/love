@@ -3041,7 +3041,8 @@
    "js_identifiers",
    "list_join_comma",
    "marker_functionize",
-   "folder_public_combine"
+   "folder_public_combine",
+   "html_update"
   ],
   "separator": [
    "watch",
@@ -7870,7 +7871,8 @@
   ],
   "js_code_call_statement": [
    "js_code_call_statement",
-   "marker_top"
+   "marker_top",
+   "html_update"
   ],
   "js_keyword_function": [
    "js_code_declaration",
@@ -12718,6 +12720,7 @@
   },
   "html_update": {
    "identifiers": [
+    "js_code_call_statement",
     "function_name_extension",
     "file_open",
     "html_overwrite",
@@ -12727,6 +12730,7 @@
     "file_path",
     "name_prefixed",
     "ext",
+    "result",
     "body"
    ],
    "async": true
