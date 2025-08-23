@@ -1660,7 +1660,8 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove"
+   "js_log_remove",
+   "js_imports_paths_fix"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2729,7 +2730,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize"
+   "js_node_atomize",
+   "js_imports_paths_fix"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19254,6 +19256,7 @@
   "js_imports_paths_fix": {
    "async": false,
    "identifiers": [
+    "log",
     "object_property_get",
     "each",
     "js_imports_declarations",
@@ -19264,7 +19267,8 @@
     "lambda",
     "i",
     "name",
-    "declaration"
+    "declaration",
+    "message"
    ]
   }
  },
