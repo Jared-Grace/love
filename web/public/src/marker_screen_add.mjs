@@ -18,8 +18,9 @@ export async function marker_screen_add(screen_name) {
     let declarator = js_declare_single(next);
     let oe = object_property_get(declarator, "init");
     let { properties } = oe;
-    let key = js_parse_expression(param_name);
-    let value = js_parse_expression(param_name);
+    let key = js_parse_expression(screen_name);
+    let combined_screen = function_name_combine(prefixed, screen_name);
+    let value = js_parse_expression(combined_screen);
     let p = js_property(key, value);
     list_add(properties, p);
   }
