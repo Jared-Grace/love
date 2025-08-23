@@ -2592,7 +2592,6 @@
    "marker_down_1",
    "js_log_remove",
    "functions_log_remove",
-   "function_name_to_base",
    "json_to",
    "js_stack_list_block_is",
    "each_index",
@@ -10011,6 +10010,9 @@
   ],
   "call": [
    "html_update"
+  ],
+  "f_name_ext": [
+   "function_name_to_base"
   ]
  },
  "functions": {
@@ -11753,7 +11755,7 @@
     "function_name_extension",
     "function_name_to_base",
     "f_name",
-    "v"
+    "f_name_ext"
    ],
    "async": false
   },
