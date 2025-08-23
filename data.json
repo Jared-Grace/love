@@ -2361,7 +2361,8 @@
    "marker_functionize",
    "app_replace",
    "function_rename",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "html_button"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4165,8 +4166,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "html_button"
+   "string_slice"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -4270,7 +4270,8 @@
   ],
   "text": [
    "clipboard_copy",
-   "html_text_set"
+   "html_text_set",
+   "html_button"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6181,8 +6182,7 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace",
-   "html_button"
+   "app_replace"
   ],
   "import_": [
    "function_imports_add",
@@ -10138,12 +10138,10 @@
    "html_element"
   ],
   "tag_name": [
-   "html_element",
-   "html_button"
+   "html_element"
   ],
   "html_element": [
-   "html_element",
-   "html_button"
+   "html_element"
   ],
   "rule_sets": [
    "app_replace"
@@ -10152,7 +10150,8 @@
    "app_replace"
   ],
   "parent": [
-   "html_element"
+   "html_element",
+   "html_button"
   ],
   "createElement": [
    "html_element"
@@ -10168,7 +10167,8 @@
    "app_replace"
   ],
   "html_text_set": [
-   "html_text_set"
+   "html_text_set",
+   "html_button"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10230,7 +10230,8 @@
    "html_text_set"
   ],
   "component": [
-   "html_text_set"
+   "html_text_set",
+   "html_button"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10246,6 +10247,12 @@
   ],
   "app_fn": [
    "app_replace"
+  ],
+  "html_on_click": [
+   "html_button"
+  ],
+  "html_button_element": [
+   "html_button"
   ]
  },
  "functions": {
@@ -19284,11 +19291,14 @@
   "html_button": {
    "async": false,
    "identifiers": [
-    "html_element",
+    "html_on_click",
+    "html_text_set",
+    "html_button_element",
     "html_button",
-    "body",
-    "tag_name",
-    "b"
+    "parent",
+    "text",
+    "lambda",
+    "component"
    ]
   },
   "js_imports_paths_fix": {
