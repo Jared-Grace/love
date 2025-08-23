@@ -2597,8 +2597,7 @@
    "undefined_is",
    "folder_public",
    "file_read",
-   "marker_up_1",
-   "app_html_open"
+   "marker_up_1"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4933,8 +4932,7 @@
    "folder_public_combine",
    "functions_path",
    "html_name_to_path",
-   "html_new",
-   "app_html_open"
+   "html_new"
   ],
   "second": [
    "folder_public_combine",
@@ -4944,8 +4942,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "app_html_open"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -18932,14 +18929,11 @@
   "app_html_open": {
    "async": false,
    "identifiers": [
-    "folder_public_combine",
     "file_name_html",
     "marker",
     "app_html_open",
     "a_name",
-    "file_name",
-    "v",
-    "second"
+    "file_name"
    ]
   }
  },
