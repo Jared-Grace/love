@@ -2951,8 +2951,7 @@
    "js_await_add",
    "js_call_function_if",
    "js_declaration_single_name",
-   "js_log_remove",
-   "app_html_open"
+   "js_log_remove"
   ],
   "output": [
    "watch",
@@ -18925,8 +18924,7 @@
     "marker",
     "app_html_open",
     "a_name",
-    "file_name",
-    "name"
+    "file_name"
    ]
   }
  },
