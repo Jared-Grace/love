@@ -3256,7 +3256,8 @@
    "marker_above_delete",
    "function_alias_rename",
    "marker_next_await",
-   "marker_enter"
+   "marker_enter",
+   "app_replace"
   ],
   "data_save": [
    "data_file_update",
@@ -10126,6 +10127,9 @@
    "html_button"
   ],
   "innerHTML": [
+   "app_replace"
+  ],
+  "name2": [
    "app_replace"
   ]
  },
@@ -19103,6 +19107,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_button",
     "each",
     "html_document_body",
@@ -19114,6 +19119,7 @@
     "rules",
     "lambda",
     "rs",
+    "name2",
     "b",
     "innerHTML",
     "text"
