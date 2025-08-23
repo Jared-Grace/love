@@ -1514,7 +1514,6 @@
   "mb $r",
   "as marker",
   "mi n",
-  "s html",
   "n apps_get",
   "s files",
   "s file",
@@ -1538,7 +1537,8 @@
   "n app_html_open",
   "s param,new",
   "s param,add",
-  "mpa a_name"
+  "mpa a_name",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
