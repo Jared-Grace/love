@@ -22,8 +22,9 @@ export function app_replace() {
     let name2 = object_property_get(rs, "name");
     let b = html_button_element(body);
     html_text_set(b, name2);
+    const name_event = "click";
     let element = html_component_element_get(component);
-    element.on("click", lambda);
+    element.on(name_event, lambda);
     function lambda() {}
   }
   each(rule_sets, lambda);
