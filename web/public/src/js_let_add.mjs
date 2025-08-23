@@ -1,3 +1,4 @@
+import { js_identifier_is } from "./js_identifier_is.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_identifier_defineds } from "./js_identifier_defineds.mjs";
@@ -17,6 +18,7 @@ export function js_let_add(ast) {
     }
     let { node } = v;
     let { left, right } = node;
+    let ii = js_identifier_is(node2);
     if (false) {
     }
     let name = object_property_get(left, "name");
