@@ -1601,7 +1601,6 @@
   "s set,current",
   "s restore",
   "s app",
-  "o marker_screen_add",
   "s assert,null",
   "oa replace",
   "s combine",
@@ -1614,10 +1613,11 @@
   "marker_screen_add t",
   "p",
   "marker_screen_add rule_set",
-  "ps"
+  "ps",
+  "o marker_screen_add"
  ],
  "marker_current": "1",
- "function_current": "function_transform_marker_current",
+ "function_current": "marker_screen_add",
  "terminal": false,
  "identifiers": {
   "log": [
