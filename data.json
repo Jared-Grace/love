@@ -10304,8 +10304,7 @@
    "storage_local_get"
   ],
   "setItem": [
-   "storage_local_set",
-   "storage_local_get"
+   "storage_local_set"
   ],
   "ley": [
    "storage_local_key_get"
@@ -10315,6 +10314,9 @@
    "storage_local_get"
   ],
   "storage_local_get": [
+   "storage_local_get"
+  ],
+  "getItem": [
    "storage_local_get"
   ]
  },
@@ -19480,7 +19482,7 @@
     "value",
     "storage_local_key",
     "localStorage",
-    "setItem"
+    "getItem"
    ]
   }
  },
