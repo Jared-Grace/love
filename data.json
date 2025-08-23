@@ -1574,7 +1574,8 @@
   "u na",
   "a an app_new",
   "an replace",
-  "n html_document_body"
+  "n html_document_body",
+  "mb $r,document.body"
  ],
  "marker_current": "1",
  "function_current": "html_document_body",
