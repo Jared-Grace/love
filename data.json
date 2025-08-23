@@ -3629,7 +3629,8 @@
    "list_map_squash",
    "list_squash",
    "marker_above",
-   "marker_below"
+   "marker_below",
+   "app_replace"
   ],
   "colored": [
    "chalk_color",
@@ -10238,6 +10239,12 @@
   ],
   "function_open_app": [
    "function_open_app"
+  ],
+  "localStorage": [
+   "app_replace"
+  ],
+  "setItem": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -19237,13 +19244,16 @@
     "html_document_body",
     "marker",
     "app_replace",
+    "fn",
     "body",
     "rule_sets",
     "name",
     "rules",
     "lambda",
     "rs",
-    "name2"
+    "name2",
+    "localStorage",
+    "setItem"
    ]
   },
   "html_document_body": {
