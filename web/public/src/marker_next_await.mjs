@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { js_await } from "./js_await.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -8,6 +9,7 @@ import { function_transform_marker } from "./function_transform_marker.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function marker_next_await() {
+  marker("1");
   let f_name = await data_function_current_get();
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
