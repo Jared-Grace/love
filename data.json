@@ -1554,7 +1554,8 @@
   "is js_code_import_single",
   "p",
   "s src",
-  "u hu"
+  "u hu",
+  "hu code"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
