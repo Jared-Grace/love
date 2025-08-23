@@ -1513,7 +1513,8 @@
   "fs js_auto",
   "s await",
   "fs jaa",
-  "ml"
+  "ml",
+  "mu 3"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
