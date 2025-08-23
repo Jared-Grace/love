@@ -1553,7 +1553,8 @@
   "is js_code_call_statement",
   "is js_code_import_single",
   "p",
-  "s src"
+  "s src",
+  "u hu"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
