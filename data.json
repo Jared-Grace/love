@@ -1689,8 +1689,7 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove",
-   "marker_screen_add"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2734,8 +2733,7 @@
    "marker_expand",
    "marker_next",
    "marker_next_delete",
-   "marker_next_await",
-   "marker_screen_add"
+   "marker_next_await"
   ],
   "js_format": [
    "file_js_unparse",
@@ -2776,8 +2774,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize",
-   "marker_screen_add"
+   "js_node_atomize"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19623,7 +19620,6 @@
    "async": true,
    "identifiers": [
     "function_new",
-    "log",
     "js_parse_expression",
     "list_add",
     "js_property",
@@ -19635,7 +19631,6 @@
     "data_app_current_get",
     "marker_next_get",
     "marker",
-    "js_unparse",
     "marker_screen_add",
     "screen_name",
     "a_name",
@@ -19651,7 +19646,6 @@
     "combined_screen",
     "value",
     "p",
-    "message",
     "v2"
    ]
   },
