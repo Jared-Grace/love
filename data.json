@@ -1572,10 +1572,11 @@
   "ir f_name a_name",
   "u an",
   "u na",
-  "a an app_new"
+  "a an app_new",
+  "an replace"
  ],
  "marker_current": "1",
- "function_current": "app_new",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
