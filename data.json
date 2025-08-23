@@ -1612,13 +1612,13 @@
   "s single",
   "marker_screen_add t",
   "p",
-  "marker_screen_add rule_set",
   "o marker_screen_add",
   "s screens",
-  "ps"
+  "ps",
+  "marker_screen_add rule_set"
  ],
  "marker_current": "1",
- "function_current": "marker_screen_add",
+ "function_current": "app_replace_rule_set",
  "terminal": false,
  "identifiers": {
   "log": [
