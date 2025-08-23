@@ -1534,10 +1534,11 @@
   "md 2",
   "mb $r,fr",
   "ag",
-  "s code"
+  "s code",
+  "n app_html_open"
  ],
  "marker_current": "1",
- "function_current": "apps_get",
+ "function_current": "app_html_open",
  "terminal": false,
  "identifiers": {
   "log": [
