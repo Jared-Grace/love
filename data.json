@@ -2833,7 +2833,6 @@
    "js_arrow_blockify",
    "js_arrow_to_function",
    "js_call_fill",
-   "js_code_string",
    "js_declaration_asyncify",
    "js_declare_assign",
    "js_declare_assign_null",
@@ -3446,7 +3445,6 @@
    "function_alias_change",
    "function_alias_delete",
    "function_alias_replace",
-   "js_code_string",
    "object_properties_delete",
    "object_property_delete",
    "data_file_update_inner"
@@ -5165,7 +5163,6 @@
    "js_atomize_function",
    "js_bang_to_not",
    "js_call_new_expression",
-   "js_code_string",
    "js_declaration_param_add",
    "js_declare_assign_null",
    "js_dollar",
@@ -10204,6 +10201,9 @@
   ],
   "function_name_to_path_import": [
    "function_imports_add"
+  ],
+  "js_string": [
+   "js_code_string"
   ]
  },
  "functions": {
@@ -13669,10 +13669,8 @@
   },
   "js_code_string": {
    "identifiers": [
+    "js_string",
     "js_unparse",
-    "object_property_delete",
-    "object_property_set",
-    "js_parse_expression",
     "js_code_string",
     "value_string",
     "parsed_string",
