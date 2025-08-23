@@ -1603,10 +1603,11 @@
   "s combine",
   "as marker",
   "fw mb marker_screen_add",
-  "oec"
+  "oec",
+  "o mna"
  ],
  "marker_current": "1",
- "function_current": "marker_screen_add",
+ "function_current": "marker_next_await",
  "terminal": false,
  "identifiers": {
   "log": [
