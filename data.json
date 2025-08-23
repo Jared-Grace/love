@@ -1586,10 +1586,11 @@
   "ftc js_imports_paths_fix app_replace",
   "o r",
   "s auto",
-  "o oe"
+  "o oe",
+  "fws o app"
  ],
  "marker_current": "1",
- "function_current": "function_open_editor",
+ "function_current": "function_open_app",
  "terminal": false,
  "identifiers": {
   "log": [
