@@ -1,13 +1,6 @@
+import { js_property_generic } from "./js_property_generic.mjs";
 export function js_property(key, value) {
   const shorthand = false;
-  let p = {
-    type: "Property",
-    method: false,
-    shorthand: shorthand,
-    computed: false,
-    key: key,
-    value: value,
-    kind: "init",
-  };
+  let p = js_property_generic(shorthand, key, value);
   return p;
 }
