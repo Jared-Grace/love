@@ -3010,7 +3010,6 @@
    "undefined_not_is_assert_lambda",
    "js_imports_declarations",
    "lambda_get",
-   "app_replace_home",
    "storage_local_set",
    "storage_local_get",
    "storage_local_get_or",
@@ -19556,8 +19555,7 @@
     "rules",
     "lambda2",
     "rs",
-    "name2",
-    "value"
+    "name2"
    ]
   },
   "storage_local_set": {
