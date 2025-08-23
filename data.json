@@ -989,7 +989,6 @@
   "fr file_open",
   "js_parse 1",
   "o file_open",
-  "s open",
   "s declar",
   "fc function_parse_declaration,ju",
   "cs function_open editor",
@@ -1546,7 +1545,8 @@
   "a fpc folder_public_combine",
   "mnd",
   "mc fpc",
-  "ir second file_name"
+  "ir second file_name",
+  "s open"
  ],
  "marker_current": "1",
  "function_current": "app_html_open",
