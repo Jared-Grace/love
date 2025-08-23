@@ -16,6 +16,7 @@ export async function marker_screen_add(screen_name) {
     let { next } = marker_next_get(a);
     let declarator = js_declare_single(next);
     let expression = object_property_get(declarator, "init");
+    let properties = expression;
     log(expression);
     let v = js_property(param_name);
   }
