@@ -1498,7 +1498,6 @@
   "a muu marker_up_1",
   "cd",
   "muu",
-  "me",
   "u ja",
   "mc js_await",
   "mcr 0 copy",
@@ -1516,7 +1515,8 @@
   "mc not",
   "ir a async_is",
   "mdd",
-  "mb $i"
+  "mb $i",
+  "me"
  ],
  "marker_current": "1",
  "function_current": "js_await_add",
