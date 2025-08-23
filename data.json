@@ -4262,7 +4262,8 @@
    "function_dependencies_code_copy"
   ],
   "text": [
-   "clipboard_copy"
+   "clipboard_copy",
+   "html_text_set"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10155,8 +10156,7 @@
    "html_button"
   ],
   "name2": [
-   "app_replace",
-   "html_text_set"
+   "app_replace"
   ],
   "html_text_set": [
    "app_replace",
@@ -19324,7 +19324,7 @@
     "html_component_element_get",
     "html_text_set",
     "component",
-    "name2",
+    "text",
     "element",
     "innerHTML"
    ]
