@@ -9,7 +9,9 @@ import { marker } from "./marker.mjs";
 export async function marker_screen_add(screen_name) {
   async function lambda3() {
     let a_name = await data_app_current_get();
-    log(message);
+    log({
+      a_name,
+    });
     let combined = function_name_combine(a_name, "screens");
     await function_current_set(combined);
     async function lambda(a) {
