@@ -1607,7 +1607,8 @@
   "s restore",
   "s app",
   "ps",
-  "o marker_screen_add"
+  "o marker_screen_add",
+  "marker_screen_add t"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
