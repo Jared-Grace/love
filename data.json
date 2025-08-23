@@ -1487,7 +1487,6 @@
   "mc or",
   "ir to node",
   "ir from awaited",
-  "s auto",
   "fs js_auto",
   "s await",
   "fs jaa",
@@ -1585,7 +1584,8 @@
   "ps",
   "p",
   "ftc js_imports_paths_fix app_replace",
-  "o r"
+  "o r",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "function_rename",
