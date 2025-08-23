@@ -6193,7 +6193,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "import_": [
    "function_imports_add",
@@ -10141,11 +10142,13 @@
    "app_new"
   ],
   "app_replace": [
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace"
+   "app_replace",
+   "app_replace_home"
   ],
   "document": [
    "html_document_body",
@@ -10162,8 +10165,7 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element",
-   "app_replace_home"
+   "html_button_element"
   ],
   "createElement": [
    "html_element"
@@ -19448,13 +19450,15 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "app_replace",
     "each",
     "storage_local_set",
     "html_button",
     "object_property_get",
+    "html_document_body",
     "app_replace_home",
-    "parent",
     "app_fn",
+    "body",
     "rule_sets",
     "name",
     "rules",
