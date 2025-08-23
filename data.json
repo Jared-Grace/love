@@ -6193,7 +6193,6 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace",
    "app_replace_home"
   ],
   "import_": [
@@ -10332,6 +10331,9 @@
    "app_replace"
   ],
   "screen": [
+   "app_replace"
+  ],
+  "root": [
    "app_replace"
   ]
  },
@@ -19336,7 +19338,7 @@
     "app_fn",
     "screens",
     "home",
-    "body",
+    "root",
     "screen_name",
     "screen"
    ]
