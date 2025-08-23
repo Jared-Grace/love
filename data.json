@@ -6505,7 +6505,8 @@
   ],
   "key": [
    "function_params_consolidate",
-   "object_invert"
+   "object_invert",
+   "app_replace"
   ],
   "kind": [
    "function_params_consolidate"
@@ -19252,6 +19253,7 @@
     "lambda",
     "rs",
     "name2",
+    "key",
     "localStorage",
     "setItem"
    ]
