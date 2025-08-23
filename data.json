@@ -10061,7 +10061,8 @@
    "folder_read"
   ],
   "fop": [
-   "apps_get"
+   "apps_get",
+   "function_aliases_restore"
   ],
   "app_html_open": [
    "app_html_open"
@@ -10148,6 +10149,45 @@
   "data_identifiers_get": [
    "data_identifiers_search",
    "function_rename"
+  ],
+  "mna": [
+   "function_aliases_restore"
+  ],
+  "mpa": [
+   "function_aliases_restore"
+  ],
+  "ox": [
+   "function_aliases_restore"
+  ],
+  "mi": [
+   "function_aliases_restore"
+  ],
+  "mbt": [
+   "function_aliases_restore"
+  ],
+  "rg": [
+   "function_aliases_restore"
+  ],
+  "mdm": [
+   "function_aliases_restore"
+  ],
+  "mdd": [
+   "function_aliases_restore"
+  ],
+  "muu": [
+   "function_aliases_restore"
+  ],
+  "for": [
+   "function_aliases_restore"
+  ],
+  "fpc": [
+   "function_aliases_restore"
+  ],
+  "oh": [
+   "function_aliases_restore"
+  ],
+  "an": [
+   "function_aliases_restore"
   ]
  },
  "functions": {
@@ -18896,7 +18936,21 @@
     "i",
     "ml",
     "mu",
-    "mb"
+    "mb",
+    "mna",
+    "mpa",
+    "ox",
+    "mi",
+    "mbt",
+    "rg",
+    "mdm",
+    "mdd",
+    "muu",
+    "for",
+    "fop",
+    "fpc",
+    "oh",
+    "an"
    ]
   },
   "marker_next_await": {
