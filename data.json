@@ -1583,8 +1583,8 @@
   "s imports",
   "s import",
   "s string",
-  "ps",
-  "fts js_imports_paths_fix"
+  "fts js_imports_paths_fix",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_imports_paths_fix",
