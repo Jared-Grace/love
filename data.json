@@ -10420,7 +10420,6 @@
    "js_property_identifier"
   ],
   "js_property": [
-   "js_property_identifier",
    "marker_screen_add",
    "js_property"
   ],
@@ -10431,7 +10430,8 @@
    "marker_screen_add"
   ],
   "js_property_generic": [
-   "js_property"
+   "js_property",
+   "js_property_identifier"
   ]
  },
  "functions": {
@@ -19693,7 +19693,7 @@
   "js_property_identifier": {
    "async": false,
    "identifiers": [
-    "js_property",
+    "js_property_generic",
     "js_parse_expression",
     "js_property_identifier",
     "param_name",
