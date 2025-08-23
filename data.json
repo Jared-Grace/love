@@ -2904,8 +2904,7 @@
    "object_property_exists_equals"
   ],
   "on": [
-   "watch",
-   "app_replace"
+   "watch"
   ],
   "path": [
    "watch",
@@ -10223,8 +10222,7 @@
   ],
   "element": [
    "html_element",
-   "html_text_set",
-   "app_replace"
+   "html_text_set"
   ],
   "component": [
    "html_text_set",
@@ -10234,10 +10232,12 @@
    "html_text_set"
   ],
   "html_component_element_get": [
-   "html_text_set",
-   "app_replace"
+   "html_text_set"
   ],
   "name_event": [
+   "app_replace"
+  ],
+  "html_on": [
    "app_replace"
   ]
  },
@@ -19238,7 +19238,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "html_component_element_get",
+    "html_on",
     "html_text_set",
     "object_property_get",
     "html_button_element",
@@ -19254,9 +19254,7 @@
     "rs",
     "name2",
     "component",
-    "name_event",
-    "element",
-    "on"
+    "name_event"
    ]
   },
   "html_document_body": {
