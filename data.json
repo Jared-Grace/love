@@ -1607,9 +1607,9 @@
   "o marker_screen_add",
   "p",
   "s assert,null",
-  "ps",
   "marker_screen_add t",
-  "oa replace"
+  "oa replace",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
