@@ -1564,7 +1564,6 @@
   "s data,f",
   "r html_button html_button_element",
   "np",
-  "u u",
   "nj imports_paths_fix",
   "s imports",
   "s import",
@@ -1621,7 +1620,8 @@
   "s storage",
   "s rule_set",
   "unlias s",
-  "u s"
+  "u s",
+  "u u"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
