@@ -1567,7 +1567,6 @@
   "nj imports_paths_fix",
   "s imports",
   "s import",
-  "s string",
   "fts js_imports_paths_fix",
   "ftc js_imports_paths_fix app_replace",
   "o r",
@@ -1622,7 +1621,8 @@
   "unlias s",
   "u s",
   "u u",
-  "function_name_unalias s"
+  "function_name_unalias s",
+  "s string"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
