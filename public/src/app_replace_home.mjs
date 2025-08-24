@@ -16,8 +16,8 @@ export function app_replace_home(context) {
     },
   ];
   function lambda2(item, index) {
-    let name2 = object_property_get(rs, "name");
-    storage_local_set_context(context, "rule_set_index", value);
+    let name2 = object_property_get(item, "name");
+    storage_local_set_context(context, "rule_set_index", index);
     html_button_screen(body, name2, context, "rule_set");
   }
   each_index(rule_sets, lambda2);
