@@ -2567,8 +2567,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "app_replace_rule_set"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -4693,8 +4692,7 @@
    "marker_above_generic",
    "marker_above_delete",
    "marker_enter",
-   "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_home"
   ],
   "lists_get": [
    "each_multiple",
@@ -10325,8 +10323,7 @@
    "storage_local_get_or",
    "app_replace_refresh",
    "app_refresh",
-   "app_replace",
-   "app_replace_rule_set"
+   "app_replace"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -10356,8 +10353,7 @@
   ],
   "storage_local_get": [
    "storage_local_get",
-   "storage_local_get_or",
-   "app_replace_rule_set"
+   "storage_local_get_or"
   ],
   "getItem": [
    "storage_local_get"
@@ -10501,6 +10497,9 @@
   ],
   "app_replace_rule_sets": [
    "app_replace_home",
+   "app_replace_rule_set"
+  ],
+  "storage_local_get_context": [
    "app_replace_rule_set"
   ]
  },
@@ -19779,9 +19778,9 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "storage_local_get_context",
     "list_get",
     "app_replace_rule_sets",
-    "storage_local_get",
     "emoji_home",
     "html_button_screen",
     "html_document_body",
@@ -19790,12 +19789,9 @@
     "context",
     "body",
     "key",
-    "app_fn",
     "value",
     "rule_sets",
-    "item",
-    "list",
-    "index"
+    "item"
    ]
   },
   "app_refresh": {
