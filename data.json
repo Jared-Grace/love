@@ -4819,8 +4819,7 @@
    "each_range",
    "range",
    "marker_next_delete_multiple",
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -4857,7 +4856,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "app_replace_rule_set"
   ],
   "right": [
    "equal",
@@ -7933,7 +7933,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "app_replace_rule_set"
   ],
   "remaining": [
    "js_call_new_code",
@@ -8229,7 +8230,8 @@
    "js_dollar",
    "list_skip",
    "list_first_remaining",
-   "list_skip_1"
+   "list_skip_1",
+   "app_replace_rule_set"
   ],
   "list_second": [
    "js_dollar",
@@ -9095,7 +9097,8 @@
    "list_skip",
    "string_prefix_without",
    "string_skip",
-   "list_skip_1"
+   "list_skip_1",
+   "app_replace_rule_set"
   ],
   "slice": [
    "list_slice",
@@ -10557,8 +10560,7 @@
    "list_take"
   ],
   "taken": [
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ]
  },
  "functions": {
@@ -19845,6 +19847,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_skip",
     "list_take",
     "list_index_of",
     "string_split_space",
@@ -19868,9 +19871,10 @@
     "rule",
     "split",
     "middle",
-    "taken",
+    "left",
+    "skipped",
     "list",
-    "count",
+    "skip_count",
     "text"
    ]
   },
