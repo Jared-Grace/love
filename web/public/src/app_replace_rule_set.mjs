@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -22,7 +23,8 @@ export function app_replace_rule_set(context) {
     let split = string_split_space(rule);
     let middle = list_index_of(split, ">");
     let left = list_take(split, middle);
-    let skipped = list_skip(list, skip_count);
+    let right = list_skip(list, split + 1);
+    log(message);
   }
   each(rules, lambda);
   let text = json_to(item);
