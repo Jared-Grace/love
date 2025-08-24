@@ -6564,8 +6564,7 @@
    "storage_local_get_or",
    "js_property_identifier",
    "js_property",
-   "marker_screen_add",
-   "app_replace_rule_set"
+   "marker_screen_add"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -19788,7 +19787,6 @@
     "app_replace_rule_set",
     "context",
     "body",
-    "key",
     "index",
     "rule_sets",
     "item"
