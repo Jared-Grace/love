@@ -4043,8 +4043,7 @@
    "function_aliases_restore",
    "app_name_prefixed",
    "js_property",
-   "marker_screen_add",
-   "app_replace_rule_set"
+   "marker_screen_add"
   ],
   "f_names": [
    "functions_names",
@@ -10214,8 +10213,7 @@
   ],
   "html_text_set": [
    "html_text_set",
-   "html_button",
-   "app_replace_rule_set"
+   "html_button"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10505,7 +10503,7 @@
    "app_replace_home",
    "app_replace_rule_set"
   ],
-  "html_p": [
+  "html_p_text": [
    "app_replace_rule_set"
   ]
  },
@@ -19783,8 +19781,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "html_p",
-    "html_text_set",
+    "html_p_text",
     "storage_local_get_context",
     "list_get",
     "app_replace_rule_sets",
@@ -19798,8 +19795,7 @@
     "index",
     "rule_sets",
     "item",
-    "text",
-    "p"
+    "text"
    ]
   },
   "app_refresh": {
