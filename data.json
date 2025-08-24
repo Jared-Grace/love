@@ -9929,8 +9929,7 @@
    "storage_local_get",
    "storage_local_get_or",
    "storage_local_initialize",
-   "storage_local_get_context",
-   "storage_local_initialize_context"
+   "storage_local_get_context"
   ],
   "getItem": [
    "storage_local_get"
@@ -10142,7 +10141,8 @@
   ],
   "storage_local_initialize": [
    "storage_local_initialize",
-   "app_refresh"
+   "app_refresh",
+   "storage_local_initialize_context"
   ],
   "middle": [
    "app_replace_rule_parse"
@@ -19289,8 +19289,8 @@
   "storage_local_initialize_context": {
    "async": false,
    "identifiers": [
+    "storage_local_initialize",
     "marker",
-    "storage_local_get",
     "storage_local_initialize_context",
     "context",
     "key",
