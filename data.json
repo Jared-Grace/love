@@ -4445,7 +4445,8 @@
   ],
   "value_initial": [
    "data_get",
-   "data_transform"
+   "data_transform",
+   "storage_local_initialize"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -9934,8 +9935,7 @@
    "storage_local_get_or"
   ],
   "value_or": [
-   "storage_local_get_or",
-   "storage_local_initialize"
+   "storage_local_get_or"
   ],
   "screens": [
    "app_replace_refresh",
@@ -18950,7 +18950,7 @@
     "storage_local_initialize",
     "app_fn",
     "key",
-    "value_or",
+    "value_initial",
     "value",
     "n"
    ]
