@@ -928,7 +928,6 @@
   "fsts js_calls_to_each",
   "s else",
   "s visit",
-  "s replace",
   "as replace",
   "o ire",
   "fs js_if_else_if_combine",
@@ -1619,7 +1618,8 @@
   "s invoke",
   "n lambda_value",
   "s param",
-  "s storage"
+  "s storage",
+  "s replace"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
