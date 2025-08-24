@@ -9895,7 +9895,8 @@
    "function_aliases_restore"
   ],
   "lr": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_rename"
   ],
   "lis": [
    "function_aliases_restore"
@@ -12545,6 +12546,7 @@
     "v",
     "identifiers",
     "f_names",
+    "lr",
     "lambda",
     "f_name",
     "lambda2",
