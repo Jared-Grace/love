@@ -7403,7 +7403,8 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install"
+   "npm_install",
+   "storage_local_get"
   ],
   "err": [
    "import_install"
@@ -9279,7 +9280,8 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install"
+   "npm_install",
+   "storage_local_get"
   ],
   "isFinite": [
    "number_is"
@@ -19622,8 +19624,9 @@
    ]
   },
   "storage_local_get": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "npm_install",
     "json_from",
     "marker",
     "storage_local_key_get",
@@ -19634,6 +19637,7 @@
     "json",
     "localStorage",
     "getItem",
+    "package_name",
     "value"
    ]
   },
