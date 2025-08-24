@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { app_replace_rule_parse } from "./app_replace_rule_parse.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -16,6 +17,7 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
+  each(list, function lambda(item2) {});
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
