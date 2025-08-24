@@ -3708,7 +3708,8 @@
    "marker_functionize"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "storage_local_get"
   ],
   "error": [
    "watch",
@@ -5611,7 +5612,8 @@
    "function_aliases_restore",
    "js_await_add",
    "null_is",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "storage_local_get"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -7403,8 +7405,7 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install",
-   "storage_local_get"
+   "npm_install"
   ],
   "err": [
    "import_install"
@@ -8342,7 +8343,8 @@
   "null_is": [
    "js_dollar_s",
    "null_is",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "storage_local_get"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -9280,8 +9282,7 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install",
-   "storage_local_get"
+   "npm_install"
   ],
   "isFinite": [
    "number_is"
@@ -19624,9 +19625,9 @@
    ]
   },
   "storage_local_get": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "npm_install",
+    "null_is",
     "json_from",
     "marker",
     "storage_local_key_get",
@@ -19637,7 +19638,8 @@
     "json",
     "localStorage",
     "getItem",
-    "package_name",
+    "n",
+    "value2",
     "value"
    ]
   },
