@@ -3112,8 +3112,7 @@
    "js_code_call",
    "js_code_call_args",
    "list_join_comma_space",
-   "list_join_space",
-   "app_replace_rule_set"
+   "list_join_space"
   ],
   "lj": [
    "watch",
@@ -9032,8 +9031,7 @@
    "list_join_space",
    "server",
    "tasks_run",
-   "task_new",
-   "app_replace_rule_set"
+   "task_new"
   ],
   "list_last_is": [
    "list_last_is"
@@ -10570,6 +10568,12 @@
    "app_replace_rule_set"
   ],
   "text2": [
+   "app_replace_rule_set"
+  ],
+  "right_joined": [
+   "app_replace_rule_set"
+  ],
+  "left_joined": [
    "app_replace_rule_set"
   ]
  },
@@ -19883,12 +19887,12 @@
     "rule",
     "left",
     "right",
-    "result2",
-    "args",
+    "right_joined",
+    "left_joined",
+    "text",
     "lambda3",
     "parent",
-    "text2",
-    "text"
+    "text2"
    ]
   },
   "app_refresh": {
