@@ -2181,7 +2181,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "app_replace_rule_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2925,7 +2926,8 @@
    "js_await",
    "js_imports_paths_fix",
    "js_string",
-   "js_await_wrap"
+   "js_await_wrap",
+   "app_replace_rule_set"
   ],
   "watch": [
    "watch"
@@ -3034,7 +3036,8 @@
    "object_property_from",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_replace_rule_set"
   ],
   "name": [
    "watch",
@@ -4709,7 +4712,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "app_replace_rule_set"
   ],
   "each_pair": [
    "each_pair",
@@ -18871,6 +18875,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_property_set",
     "html_component_element_get",
     "each_index",
     "html_style_set",
@@ -18914,7 +18919,10 @@
     "left_joined",
     "text",
     "lambda3",
-    "b_element"
+    "b_element",
+    "object",
+    "property_name",
+    "value"
    ]
   },
   "app_refresh": {
