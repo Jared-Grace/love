@@ -4586,8 +4586,7 @@
   "each_index": [
    "each_index",
    "each_multiple",
-   "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_home"
   ],
   "index": [
    "each_index",
@@ -9854,7 +9853,8 @@
    "html_on",
    "html_component_element_get",
    "html_on_click",
-   "html_p"
+   "html_p",
+   "app_replace_rule_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -9874,7 +9874,8 @@
   ],
   "html_button_element": [
    "html_button",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_rule_set"
   ],
   "parent_element": [
    "html_element"
@@ -18858,7 +18859,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "each_index",
+    "html_button_element",
     "string_split_empty",
     "storage_local_initialize_context",
     "list_join_space",
@@ -18888,6 +18889,7 @@
     "letter",
     "b",
     "lambda5",
+    "component",
     "rules",
     "mapped",
     "lambda",
