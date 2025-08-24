@@ -32,5 +32,6 @@ export function app_replace_rule_set(context) {
     html_button(root, text, lambda3);
   }
   each(mapped, lambda);
+  html_p_text(root, "Start:");
   marker("1");
 }
