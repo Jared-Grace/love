@@ -3962,8 +3962,7 @@
    "list_difference",
    "marker_functionize",
    "marker_screen_add",
-   "data_app_current_get",
-   "list_take"
+   "data_app_current_get"
   ],
   "without": [
    "string_suffix_without",
@@ -4237,8 +4236,7 @@
    "string_skip",
    "string_slice",
    "html_button_element",
-   "js_declare_single",
-   "list_take"
+   "js_declare_single"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -4818,7 +4816,8 @@
   "count": [
    "each_range",
    "range",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "list_take"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -19930,8 +19929,7 @@
     "marker",
     "list_take",
     "list",
-    "a",
-    "b",
+    "count",
     "v"
    ]
   }
