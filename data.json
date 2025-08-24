@@ -4957,7 +4957,8 @@
   "current": [
    "folder_current",
    "folder_current_join",
-   "js_unparse"
+   "js_unparse",
+   "app_replace_rule_set"
   ],
   "folder_current_join": [
    "folder_current_join",
@@ -18865,6 +18866,7 @@
     "item",
     "name",
     "start",
+    "current",
     "rules",
     "mapped",
     "lambda",
