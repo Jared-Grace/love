@@ -21,7 +21,8 @@ export function app_replace_rule_set(context) {
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
   html_p_text(root, "Start:");
-  storage_local_initialize_context(context, "rule_set_start");
+  let { start } = item;
+  storage_local_initialize_context(context, "rule_set_start", start);
   html_p_text(root, "Rules:");
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
