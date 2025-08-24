@@ -3015,7 +3015,8 @@
    "js_property_identifier",
    "js_property",
    "marker_screen_add",
-   "lambda_value"
+   "lambda_value",
+   "app_screen_set"
   ],
   "name": [
    "watch",
@@ -6560,7 +6561,8 @@
    "storage_local_get_or",
    "js_property_identifier",
    "js_property",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_screen_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10309,7 +10311,8 @@
    "app_replace_screens"
   ],
   "storage_local_set": [
-   "storage_local_set"
+   "storage_local_set",
+   "app_screen_set"
   ],
   "app_fn": [
    "storage_local_set",
@@ -10318,7 +10321,8 @@
    "storage_local_get_or",
    "app_replace_refresh",
    "app_refresh",
-   "app_replace"
+   "app_replace",
+   "app_screen_set"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10448,12 +10452,14 @@
   "app_refresh": [
    "app_replace_refresh",
    "app_refresh",
-   "app_replace"
+   "app_replace",
+   "app_screen_set"
   ],
   "context": [
    "app_replace_home",
    "app_refresh",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_screen_set"
   ],
   "html_clear": [
    "app_refresh"
@@ -10479,6 +10485,9 @@
   ],
   "emoji_home": [
    "app_replace_rule_set"
+  ],
+  "app_screen_set": [
+   "app_screen_set"
   ]
  },
  "functions": {
@@ -19801,6 +19810,18 @@
     "value",
     "v",
     "lambda"
+   ]
+  },
+  "app_screen_set": {
+   "async": false,
+   "identifiers": [
+    "app_refresh",
+    "storage_local_set",
+    "app_screen_set",
+    "context",
+    "value",
+    "key",
+    "app_fn"
    ]
   }
  },
