@@ -6511,8 +6511,7 @@
    "js_declaration_single_params_add",
    "marker_expand",
    "marker_param_add",
-   "js_property_identifier",
-   "marker_screen_add"
+   "js_property_identifier"
   ],
   "expression": [
    "js_atomize_function",
@@ -19682,7 +19681,6 @@
     "combined_screen",
     "value",
     "p",
-    "param_name",
     "v2"
    ]
   },
