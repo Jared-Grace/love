@@ -29,7 +29,7 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
-  let current_list = string_split_empty();
+  let current_list = string_split_empty(current);
   function lambda2(letter) {
     let b = null;
     function lambda5() {
