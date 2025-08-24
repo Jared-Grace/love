@@ -22,7 +22,11 @@ export function app_replace_rule_set(context) {
   html_p_text(root, "Rule set: " + name);
   html_p_text(root, "Start:");
   let { start } = item;
-  storage_local_initialize_context(context, "rule_set_start", start);
+  let current = storage_local_initialize_context(
+    context,
+    "rule_set_start",
+    start,
+  );
   html_p_text(root, "Rules:");
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
