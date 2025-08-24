@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
 import { app_replace_rule_parse } from "./app_replace_rule_parse.mjs";
@@ -19,6 +20,8 @@ export function app_replace_rule_set(context) {
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
+    let left = object_property_get(rule, "left");
+    let right = object_property_get(rule, "right");
     function lambda3() {}
     html_button(parent, text2, lambda3);
   }
