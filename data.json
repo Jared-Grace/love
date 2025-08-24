@@ -3689,8 +3689,7 @@
    "app_replace_rule_set"
   ],
   "value2": [
-   "error_attention_set",
-   "storage_local_initialize"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -18999,8 +18998,7 @@
     "key",
     "value_initial",
     "value",
-    "n",
-    "value2"
+    "n"
    ]
   },
   "app_name_prefix": {
