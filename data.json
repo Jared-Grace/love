@@ -1618,7 +1618,8 @@
   "oa replace",
   "s invoke",
   "n lambda_value",
-  "s param"
+  "s param",
+  "s storage"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
