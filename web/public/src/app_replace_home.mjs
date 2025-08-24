@@ -22,5 +22,6 @@ export function app_replace_home(context) {
     html_button_screen(body, name2, context, "rule_set");
   }
   each(rule_sets, lambda2);
-  let v = each_index(list, function lambda(item, index) {});
+  function lambda(item, index) {}
+  let v = each_index(list, lambda);
 }
