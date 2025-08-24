@@ -1630,7 +1630,8 @@
   "as list",
   "ps",
   "function_rename_identifiers storage_local_get_or storage_local_initialize",
-  "d"
+  "d",
+  "s storage_local_initialize"
  ],
  "marker_current": "1",
  "function_current": "storage_local_initialize",
