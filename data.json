@@ -1,4 +1,5 @@
-{ "aliases": {
+{
+ "aliases": {
   "a": "function_alias_add",
   "c": "function_copy",
   "n": "function_new",
@@ -2582,7 +2583,8 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take"
+   "list_take",
+   "function_rename"
   ],
   "v": [
    "data_identifiers_file",
@@ -3434,7 +3436,8 @@
    "tasks_run",
    "data_file_update_inner",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "function_rename"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3479,7 +3482,8 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "marker_leave",
-   "js_log_remove"
+   "js_log_remove",
+   "function_rename"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -10050,8 +10054,7 @@
    "function_aliases_restore"
   ],
   "lr": [
-   "function_aliases_restore",
-   "function_rename"
+   "function_aliases_restore"
   ],
   "lis": [
    "function_aliases_restore"
@@ -12685,6 +12688,7 @@
   },
   "function_rename": {
    "identifiers": [
+    "list_remove",
     "js_imports_paths_fix",
     "js_identifier_replace",
     "function_transform",
@@ -12701,7 +12705,8 @@
     "v",
     "identifiers",
     "f_names",
-    "lr",
+    "list",
+    "item",
     "lambda",
     "f_name",
     "lambda2",
