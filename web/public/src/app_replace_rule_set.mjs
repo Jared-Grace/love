@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -30,6 +31,7 @@ export function app_replace_rule_set(context) {
     return v;
   }
   each(rules, lambda);
+  let mapped = list_map(list, function lambda2(item2) {});
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
