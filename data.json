@@ -2397,7 +2397,8 @@
    "marker_screen_add",
    "data_function_current_restore",
    "html_on",
-   "lambda_value"
+   "lambda_value",
+   "app_replace_home"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3414,7 +3415,8 @@
    "object_property_equals_lambda",
    "string_includes",
    "tasks_run",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "app_replace_home"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3706,8 +3708,7 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_log_remove",
-   "marker_functionize",
-   "app_replace_home"
+   "marker_functionize"
   ],
   "value2": [
    "error_attention_set"
@@ -4693,7 +4694,8 @@
    "marker_leave",
    "marker_above_generic",
    "marker_above_delete",
-   "marker_enter"
+   "marker_enter",
+   "app_replace_home"
   ],
   "lists_get": [
    "each_multiple",
@@ -19580,9 +19582,11 @@
     "rs",
     "name2",
     "value",
-    "lambda3",
     "v",
-    "list"
+    "list",
+    "lambda",
+    "item",
+    "index"
    ]
   },
   "storage_local_set": {
