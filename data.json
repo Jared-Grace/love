@@ -3016,7 +3016,8 @@
    "js_property",
    "marker_screen_add",
    "lambda_value",
-   "app_screen_set"
+   "app_screen_set",
+   "app_replace_home"
   ],
   "name": [
    "watch",
@@ -10487,7 +10488,8 @@
    "app_screen_set"
   ],
   "storage_local_set_context": [
-   "app_screen_set"
+   "app_screen_set",
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19556,6 +19558,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "storage_local_set_context",
     "html_button_screen",
     "each",
     "object_property_get",
@@ -19568,7 +19571,8 @@
     "rules",
     "lambda2",
     "rs",
-    "name2"
+    "name2",
+    "value"
    ]
   },
   "storage_local_set": {
