@@ -28,9 +28,11 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
-  let split = string_split_empty();
-  function lambda2(item2) {}
-  each(list, lambda2);
+  let current_list = string_split_empty();
+  function lambda2(item2) {
+    html_button(parent, text2, function lambda5() {});
+  }
+  each(current_list, lambda2);
   html_p_text(root, current);
   html_p_text(root, "Rules:");
   let { rules } = item;
