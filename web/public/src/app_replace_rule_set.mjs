@@ -23,7 +23,7 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
-  html_p_text(root, "Choose:");
+  html_p_text(root, "Choose a symbol:");
   let { start } = item;
   let current = storage_local_initialize_context(
     context,
