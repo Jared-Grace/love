@@ -830,7 +830,6 @@
   "s function,type",
   "fts js_let_add",
   "n functions_combine",
-  "s split",
   "a ss string_split",
   "a ssc string_split_comma",
   "s fun,new",
@@ -1624,7 +1623,8 @@
   "function_name_unalias s",
   "s string",
   "u ssw",
-  "u ss"
+  "u ss",
+  "s split"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
