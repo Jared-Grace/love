@@ -3084,7 +3084,8 @@
    "app_name_prefixed",
    "js_imports_paths_fix",
    "storage_local_key_get",
-   "app_replace_rule_sets"
+   "app_replace_rule_sets",
+   "app_replace_rule_set"
   ],
   "output": [
    "watch",
@@ -19877,6 +19878,7 @@
     "index",
     "rule_sets",
     "item",
+    "name",
     "rules",
     "mapped",
     "lambda",
