@@ -18,7 +18,7 @@ export function app_replace_rule_set(context) {
   let { rules } = item;
   function lambda(rule) {
     let split = string_split_space(rule);
-    let index2 = list_index_of(list, split);
+    let index2 = list_index_of(split, ">");
   }
   each(rules, lambda);
   let text = json_to(item);
