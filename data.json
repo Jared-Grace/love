@@ -3015,7 +3015,8 @@
    "js_property",
    "marker_screen_add",
    "lambda_value",
-   "app_screen_set"
+   "app_screen_set",
+   "app_replace_rule_set"
   ],
   "name": [
    "watch",
@@ -6562,7 +6563,8 @@
    "storage_local_get_or",
    "js_property_identifier",
    "js_property",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_replace_rule_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10319,7 +10321,8 @@
    "storage_local_get_or",
    "app_replace_refresh",
    "app_refresh",
-   "app_replace"
+   "app_replace",
+   "app_replace_rule_set"
   ],
   "rule_sets": [
    "app_replace_home"
@@ -10348,7 +10351,8 @@
   ],
   "storage_local_get": [
    "storage_local_get",
-   "storage_local_get_or"
+   "storage_local_get_or",
+   "app_replace_rule_set"
   ],
   "getItem": [
    "storage_local_get"
@@ -19769,13 +19773,17 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "storage_local_get",
     "emoji_home",
     "html_button_screen",
     "html_document_body",
     "marker",
     "app_replace_rule_set",
     "context",
-    "body"
+    "body",
+    "value",
+    "app_fn",
+    "key"
    ]
   },
   "app_refresh": {
