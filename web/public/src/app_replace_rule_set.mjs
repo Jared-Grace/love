@@ -35,7 +35,8 @@ export function app_replace_rule_set(context) {
     let b = null;
     function lambda5() {
       html_style_set(b, "background-color", "lightgreen");
-      let index_selected = index;
+      let index_selected = null;
+      index_selected = index;
     }
     b = html_button(root, letter, lambda5);
   }
