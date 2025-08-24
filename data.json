@@ -2581,8 +2581,7 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ],
   "v": [
    "data_identifiers_file",
@@ -19874,7 +19873,6 @@
     "middle",
     "left",
     "right",
-    "list",
     "text"
    ]
   },
