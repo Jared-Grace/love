@@ -1830,7 +1830,8 @@
    "app_refresh",
    "lambda_value",
    "list_take",
-   "storage_local_initialize"
+   "storage_local_initialize",
+   "storage_local_initialize_context"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19288,6 +19289,7 @@
   "storage_local_initialize_context": {
    "async": false,
    "identifiers": [
+    "marker",
     "storage_local_get",
     "storage_local_initialize_context",
     "context",
