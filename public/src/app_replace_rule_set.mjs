@@ -19,7 +19,8 @@ export function app_replace_rule_set(context) {
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
-    html_button(parent, text2, function lambda3() {});
+    function lambda3() {}
+    html_button(parent, text2, lambda3);
   }
   each(mapped, lambda);
   let text = json_to(item);
