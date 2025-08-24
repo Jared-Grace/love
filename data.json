@@ -1618,8 +1618,8 @@
   "s invoke",
   "n lambda_value",
   "s param",
-  "s storage",
-  "s replace"
+  "s replace",
+  "s storage"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
