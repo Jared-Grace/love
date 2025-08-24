@@ -2472,7 +2472,8 @@
    "marker_functionize",
    "function_rename",
    "app_replace_home",
-   "task_new"
+   "task_new",
+   "app_replace_rule_set"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2580,7 +2581,8 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take"
+   "list_take",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -4027,7 +4029,8 @@
    "marker_functionize",
    "marker_top",
    "js_imports_unused",
-   "functions_paths"
+   "functions_paths",
+   "app_replace_rule_set"
   ],
   "functions_names": [
    "functions_names",
@@ -5396,7 +5399,8 @@
    "list_map_squash",
    "list_map_unordered_async",
    "js_imports_declarations",
-   "js_imports_unused"
+   "js_imports_unused",
+   "app_replace_rule_set"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10560,6 +10564,9 @@
   ],
   "taken": [
    "list_take"
+  ],
+  "item2": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19846,6 +19853,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_map",
     "list_skip",
     "list_take",
     "list_index_of",
@@ -19873,6 +19881,10 @@
     "left",
     "right",
     "v",
+    "mapped",
+    "list",
+    "lambda2",
+    "item2",
     "text"
    ]
   },
