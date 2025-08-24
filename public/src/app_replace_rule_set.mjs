@@ -27,7 +27,7 @@ export function app_replace_rule_set(context) {
     let left_joined = list_join_space(left);
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {}
-    html_button(parent, text, lambda3);
+    html_button(root, text, lambda3);
   }
   each(mapped, lambda);
   let text = json_to(item);
