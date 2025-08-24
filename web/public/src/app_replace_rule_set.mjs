@@ -55,7 +55,7 @@ export function app_replace_rule_set(context) {
     function lambda3() {}
     let b = html_button(root, text, lambda3);
     let b_element = html_component_element_get(b);
-    object_property_set(object, property_name, value);
+    object_property_set(b_element, "disabled", true);
   }
   each(mapped, lambda);
   marker("1");
