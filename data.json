@@ -4043,7 +4043,8 @@
    "function_aliases_restore",
    "app_name_prefixed",
    "js_property",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_replace_rule_set"
   ],
   "f_names": [
    "functions_names",
@@ -4262,7 +4263,8 @@
    "object_property_get",
    "string_includes",
    "string_is_assert_json",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_replace_rule_set"
   ],
   "assert_json": [
    "assert_json",
@@ -10280,8 +10282,7 @@
    "html_button",
    "html_element",
    "html_document_body",
-   "html_on",
-   "app_replace_rule_set"
+   "html_on"
   ],
   "innerHTML": [
    "html_text_set"
@@ -19788,14 +19789,15 @@
     "html_button_screen",
     "marker",
     "html_element",
+    "json_to",
     "app_replace_rule_set",
     "context",
     "root",
     "index",
     "rule_sets",
     "item",
-    "component",
-    "text"
+    "text",
+    "p"
    ]
   },
   "app_refresh": {
