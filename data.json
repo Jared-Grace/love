@@ -10516,6 +10516,9 @@
   ],
   "html_p_text": [
    "app_replace_rule_set"
+  ],
+  "rules": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19816,6 +19819,7 @@
     "index",
     "rule_sets",
     "item",
+    "rules",
     "text"
    ]
   },
