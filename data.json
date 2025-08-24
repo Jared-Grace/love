@@ -3015,8 +3015,7 @@
    "js_property",
    "marker_screen_add",
    "lambda_value",
-   "app_screen_set",
-   "app_replace_rule_set"
+   "app_screen_set"
   ],
   "name": [
    "watch",
@@ -4692,7 +4691,8 @@
    "marker_above_generic",
    "marker_above_delete",
    "marker_enter",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "lists_get": [
    "each_multiple",
@@ -19789,7 +19789,7 @@
     "context",
     "body",
     "key",
-    "value",
+    "index",
     "rule_sets",
     "item"
    ]
