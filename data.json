@@ -3350,7 +3350,8 @@
    "js_imports_paths_fix",
    "app_replace_home",
    "marker_screen_add",
-   "app_refresh"
+   "app_refresh",
+   "app_replace_rule_set"
   ],
   "data_save": [
    "data_file_update",
@@ -4859,7 +4860,8 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1"
+   "add_1",
+   "app_replace_rule_set"
   ],
   "right": [
    "equal",
@@ -4874,7 +4876,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "app_replace_rule_set"
   ],
   "eq": [
    "equal",
@@ -19851,6 +19854,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_button",
     "each",
     "app_replace_rule_parse",
@@ -19873,6 +19877,8 @@
     "mapped",
     "lambda",
     "rule",
+    "left",
+    "right",
     "lambda3",
     "parent",
     "text2",
