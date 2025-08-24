@@ -4586,7 +4586,8 @@
   "each_index": [
    "each_index",
    "each_multiple",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "index": [
    "each_index",
@@ -18863,6 +18864,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "each_index",
     "html_style_set",
     "string_split_empty",
     "storage_local_initialize_context",
