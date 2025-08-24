@@ -6241,7 +6241,6 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace_home",
    "app_replace_rule_set",
    "app_refresh"
   ],
@@ -10183,7 +10182,6 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace_home",
    "app_replace_rule_set",
    "app_refresh"
   ],
@@ -10500,6 +10498,9 @@
   ],
   "storage_local_get_context": [
    "app_replace_rule_set"
+  ],
+  "root": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19573,10 +19574,9 @@
     "storage_local_set_context",
     "html_button_screen",
     "object_property_get",
-    "html_document_body",
     "app_replace_home",
     "context",
-    "body",
+    "root",
     "rule_sets",
     "lambda2",
     "item",
