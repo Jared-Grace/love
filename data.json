@@ -2580,8 +2580,7 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ],
   "v": [
    "data_identifiers_file",
@@ -3719,7 +3718,8 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_log_remove",
-   "marker_functionize"
+   "marker_functionize",
+   "app_replace_rule_set"
   ],
   "value2": [
    "error_attention_set"
@@ -10227,7 +10227,8 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_rule_set"
   ],
   "createElement": [
    "html_element"
@@ -10237,7 +10238,8 @@
   ],
   "html_button": [
    "html_button",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "html_text_set": [
    "html_text_set",
@@ -10553,7 +10555,10 @@
   "app_replace_rule_parse": [
    "app_replace_rule_set"
   ],
-  "item2": [
+  "rule": [
+   "app_replace_rule_set"
+  ],
+  "text2": [
    "app_replace_rule_set"
   ]
  },
@@ -19841,6 +19846,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_button",
     "each",
     "app_replace_rule_parse",
     "list_map",
@@ -19861,8 +19867,10 @@
     "rules",
     "mapped",
     "lambda",
-    "item2",
-    "list",
+    "rule",
+    "parent",
+    "text2",
+    "lambda3",
     "text"
    ]
   },
