@@ -2578,7 +2578,8 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take"
+   "list_take",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -4816,7 +4817,8 @@
    "each_range",
    "range",
    "marker_next_delete_multiple",
-   "list_take"
+   "list_take",
+   "app_replace_rule_set"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -10553,7 +10555,8 @@
    "list_take"
   ],
   "taken": [
-   "list_take"
+   "list_take",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19840,6 +19843,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_take",
     "list_index_of",
     "string_split_space",
     "each",
@@ -19862,7 +19866,9 @@
     "rule",
     "split",
     "middle",
-    "list_take",
+    "taken",
+    "list",
+    "count",
     "text"
    ]
   },
