@@ -30,12 +30,12 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
+  let index_selected = null;
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     let b = null;
     function lambda5() {
       html_style_set(b, "background-color", "lightgreen");
-      let index_selected = null;
       index_selected = index;
     }
     b = html_button(root, letter, lambda5);
