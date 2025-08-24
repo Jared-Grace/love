@@ -1702,7 +1702,8 @@
    "prompt_previous",
    "search_generic",
    "js_imports_unused",
-   "js_log_remove"
+   "js_log_remove",
+   "app_replace_rule_set"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2796,7 +2797,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize"
+   "js_node_atomize",
+   "app_replace_rule_set"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4872,7 +4874,8 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add"
+   "add",
+   "app_replace_rule_set"
   ],
   "eq": [
    "equal",
@@ -7933,8 +7936,7 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip",
-   "app_replace_rule_set"
+   "string_skip"
   ],
   "remaining": [
    "js_call_new_code",
@@ -9097,8 +9099,7 @@
    "list_skip",
    "string_prefix_without",
    "string_skip",
-   "list_skip_1",
-   "app_replace_rule_set"
+   "list_skip_1"
   ],
   "slice": [
    "list_slice",
@@ -19847,6 +19848,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "log",
     "list_skip",
     "list_take",
     "list_index_of",
@@ -19872,9 +19874,9 @@
     "split",
     "middle",
     "left",
-    "skipped",
+    "right",
     "list",
-    "skip_count",
+    "message",
     "text"
    ]
   },
