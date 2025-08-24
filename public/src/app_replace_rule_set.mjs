@@ -1,3 +1,4 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { string_split_space } from "./string_split_space.mjs";
 import { each } from "./each.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -17,6 +18,7 @@ export function app_replace_rule_set(context) {
   let { rules } = item;
   function lambda(rule) {
     let split = string_split_space(rule);
+    let index2 = list_index_of(list, item2);
   }
   each(rules, lambda);
   let text = json_to(item);
