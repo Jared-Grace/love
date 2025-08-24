@@ -9762,8 +9762,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_replace_rule_set"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -10187,16 +10186,13 @@
    "storage_local_initialize_context",
    "app_replace_rule_set"
   ],
-  "item2": [
-   "app_replace_rule_set"
-  ],
   "string_split_empty": [
    "app_replace_rule_set"
   ],
   "current_list": [
    "app_replace_rule_set"
   ],
-  "text2": [
+  "letter": [
    "app_replace_rule_set"
   ]
  },
@@ -18886,10 +18882,8 @@
     "current",
     "current_list",
     "lambda2",
-    "item2",
+    "letter",
     "lambda5",
-    "parent",
-    "text2",
     "rules",
     "mapped",
     "lambda",
