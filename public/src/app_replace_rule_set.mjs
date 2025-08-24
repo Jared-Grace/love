@@ -30,7 +30,8 @@ export function app_replace_rule_set(context) {
   );
   let current_list = string_split_empty();
   function lambda2(item2) {
-    html_button(parent, text2, function lambda5() {});
+    function lambda5() {}
+    html_button(parent, text2, lambda5);
   }
   each(current_list, lambda2);
   html_p_text(root, current);
