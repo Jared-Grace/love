@@ -2713,8 +2713,7 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set",
-   "app_replace_rule_set"
+   "storage_local_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4855,8 +4854,7 @@
    "js_left_right_set",
    "js_let_add",
    "add",
-   "add_1",
-   "app_replace_rule_set"
+   "add_1"
   ],
   "right": [
    "equal",
@@ -4871,8 +4869,7 @@
    "js_let_add",
    "log_json",
    "log_unparse_try",
-   "add",
-   "app_replace_rule_set"
+   "add"
   ],
   "eq": [
    "equal",
@@ -5340,8 +5337,7 @@
    "function_run_line_parse",
    "js_call_new_code",
    "js_dollar",
-   "string_split",
-   "app_replace_rule_set"
+   "string_split"
   ],
   "results": [
    "functions_combine_name"
@@ -7180,8 +7176,7 @@
    "marker_next_delete",
    "marker_next_index",
    "marker_previous_index",
-   "marker_leave",
-   "app_replace_rule_set"
+   "marker_leave"
   ],
   "js_stack_list_block_is": [
    "function_transform_marker_empty",
@@ -8230,8 +8225,7 @@
    "js_dollar",
    "list_skip",
    "list_first_remaining",
-   "list_skip_1",
-   "app_replace_rule_set"
+   "list_skip_1"
   ],
   "list_second": [
    "js_dollar",
@@ -10541,21 +10535,13 @@
   "rules": [
    "app_replace_rule_set"
   ],
-  "rule": [
-   "app_replace_rule_set"
-  ],
   "string_split_space": [
-   "app_replace_rule_set",
    "string_split_space"
   ],
   "split2": [
    "string_split_space"
   ],
-  "middle": [
-   "app_replace_rule_set"
-  ],
   "list_take": [
-   "app_replace_rule_set",
    "list_take"
   ],
   "taken": [
@@ -19849,11 +19835,8 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "app_replace_rule_parse",
     "list_map",
-    "list_skip",
-    "list_take",
-    "list_index_of",
-    "string_split_space",
     "html_p_text",
     "storage_local_get_context",
     "list_get",
@@ -19869,13 +19852,6 @@
     "rule_sets",
     "item",
     "rules",
-    "app_replace_rule_parse",
-    "rule",
-    "split",
-    "middle",
-    "left",
-    "right",
-    "v",
     "mapped",
     "text"
    ]
