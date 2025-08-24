@@ -2568,7 +2568,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "app_replace_home"
   ],
   "v": [
    "data_identifiers_file",
@@ -2702,7 +2703,8 @@
    "function_rename_suffix_add",
    "function_params_consolidate",
    "js_property_identifier",
-   "lambda_value"
+   "lambda_value",
+   "app_replace_home"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3705,7 +3707,8 @@
    "js_identifiers_named_count",
    "js_await_add",
    "js_log_remove",
-   "marker_functionize"
+   "marker_functionize",
+   "app_replace_home"
   ],
   "value2": [
    "error_attention_set"
@@ -4645,7 +4648,8 @@
   "each_index": [
    "each_index",
    "each_multiple",
-   "marker_expand"
+   "marker_expand",
+   "app_replace_home"
   ],
   "index": [
    "each_index",
@@ -19558,6 +19562,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "each_index",
     "storage_local_set_context",
     "html_button_screen",
     "each",
@@ -19572,7 +19577,10 @@
     "lambda2",
     "rs",
     "name2",
-    "value"
+    "value",
+    "v",
+    "list",
+    "lambda3"
    ]
   },
   "storage_local_set": {
