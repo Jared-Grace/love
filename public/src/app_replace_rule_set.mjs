@@ -11,7 +11,6 @@ import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
 import { marker } from "./marker.mjs";
-import { json_to } from "./json_to.mjs";
 export function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
@@ -33,7 +32,5 @@ export function app_replace_rule_set(context) {
     html_button(root, text, lambda3);
   }
   each(mapped, lambda);
-  let text = json_to(item);
-  html_p_text(root, text);
   marker("1");
 }
