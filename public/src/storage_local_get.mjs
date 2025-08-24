@@ -7,7 +7,8 @@ export function storage_local_get(app_fn, key) {
   let storage_local_key = storage_local_key_get(app_fn, key);
   let json = localStorage.getItem(storage_local_key);
   let n = null_is(json);
-  if (false) {
+  if (n) {
+    return json;
   }
   let { value } = json_from(json);
   return value;
