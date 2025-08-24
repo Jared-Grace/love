@@ -10178,7 +10178,8 @@
    "function_rename_identifiers"
   ],
   "storage_local_initialize_context": [
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18841,6 +18842,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "storage_local_initialize_context",
     "list_join_space",
     "object_property_get",
     "html_button",
