@@ -9914,8 +9914,7 @@
    "app_replace_refresh"
   ],
   "storage_local_get_or": [
-   "storage_local_get_or",
-   "app_refresh"
+   "storage_local_get_or"
   ],
   "value_or": [
    "storage_local_get_or",
@@ -10117,7 +10116,8 @@
    "app_replace_rule_set"
   ],
   "storage_local_initialize": [
-   "storage_local_initialize"
+   "storage_local_initialize",
+   "app_refresh"
   ],
   "middle": [
    "app_replace_rule_parse"
@@ -18847,7 +18847,7 @@
    "async": false,
    "identifiers": [
     "object_property_get",
-    "storage_local_get_or",
+    "storage_local_initialize",
     "marker",
     "html_clear",
     "html_document_body",
