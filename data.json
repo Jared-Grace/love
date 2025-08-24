@@ -8620,7 +8620,8 @@
   ],
   "start": [
    "list_slice_end",
-   "app_replace_rule_sets"
+   "app_replace_rule_sets",
+   "app_replace_rule_set"
   ],
   "va": [
    "list_sort_number_mapper"
@@ -18863,6 +18864,7 @@
     "rule_sets",
     "item",
     "name",
+    "start",
     "rules",
     "mapped",
     "lambda",
