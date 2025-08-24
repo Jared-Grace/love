@@ -1,4 +1,4 @@
-import { html_disable_set } from "./html_disable_set.mjs";
+import { html_disable } from "./html_disable.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
@@ -53,8 +53,7 @@ export function app_replace_rule_set(context) {
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {}
     let b = html_button(root, text, lambda3);
-    const disabled = true;
-    html_disable_set(b, disabled);
+    html_disable(b);
   }
   each(mapped, lambda);
   marker("1");
