@@ -2542,8 +2542,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -5187,8 +5186,7 @@
    "js_dollar",
    "string_split",
    "app_replace_rule_parse",
-   "string_split_comma",
-   "app_replace_rule_set"
+   "string_split_comma"
   ],
   "results": [
    "functions_combine_name"
@@ -8018,7 +8016,8 @@
    "js_identifier_defineds"
   ],
   "lambda5": [
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "app_replace_rule_set"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -9763,7 +9762,8 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_rule_set"
   ],
   "createElement": [
    "html_element"
@@ -10191,6 +10191,12 @@
    "app_replace_rule_set"
   ],
   "string_split_empty": [
+   "app_replace_rule_set"
+  ],
+  "current_list": [
+   "app_replace_rule_set"
+  ],
+  "text2": [
    "app_replace_rule_set"
   ]
  },
@@ -18878,10 +18884,12 @@
     "name",
     "start",
     "current",
-    "split",
+    "current_list",
     "lambda2",
     "item2",
-    "list",
+    "parent",
+    "text2",
+    "lambda5",
     "rules",
     "mapped",
     "lambda",
