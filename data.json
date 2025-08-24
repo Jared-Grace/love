@@ -1624,10 +1624,11 @@
   "s string",
   "u ssw",
   "u ss",
-  "s split"
+  "s split",
+  "fw list_slice list_take"
  ],
  "marker_current": "1",
- "function_current": "lambda_value",
+ "function_current": "list_take",
  "terminal": false,
  "identifiers": {
   "log": [
