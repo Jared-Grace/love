@@ -12,6 +12,7 @@ export function app_replace_rule_set(context) {
   let index = storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
+  let rules = item;
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
