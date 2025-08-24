@@ -3166,8 +3166,7 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run",
-   "app_replace_rule_set"
+   "tasks_run"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -3894,8 +3893,7 @@
    "trinity_green",
    "data_identifiers_search",
    "function_aliases_restore",
-   "js_string",
-   "app_replace_rule_set"
+   "js_string"
   ],
   "a": [
    "string_suffix_without",
@@ -5235,8 +5233,7 @@
    "js_dollar",
    "search_generic",
    "string_split",
-   "string_split_comma",
-   "app_replace_rule_set"
+   "string_split_comma"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -10533,13 +10530,7 @@
   "rule": [
    "app_replace_rule_set"
   ],
-  "split2": [
-   "app_replace_rule_set"
-  ],
-  "s2": [
-   "app_replace_rule_set"
-  ],
-  "separator2": [
+  "string_split_space": [
    "app_replace_rule_set"
   ]
  },
@@ -19827,7 +19818,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "string_split",
+    "string_split_space",
     "each",
     "html_p_text",
     "storage_local_get_context",
@@ -19847,11 +19838,6 @@
     "lambda",
     "rule",
     "split",
-    "s",
-    "separator",
-    "split2",
-    "s2",
-    "separator2",
     "text"
    ]
   },
