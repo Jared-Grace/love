@@ -2702,7 +2702,8 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4311,7 +4312,8 @@
    "catch_only_async",
    "file_overwrite_json",
    "file_read_json",
-   "json_from"
+   "json_from",
+   "storage_local_get"
   ],
   "includes": [
    "catch_only_async",
@@ -5022,7 +5024,8 @@
   ],
   "json_from": [
    "file_read_json",
-   "json_from"
+   "json_from",
+   "storage_local_get"
   ],
   "file_write": [
    "file_write",
@@ -10509,6 +10512,9 @@
   ],
   "html_p_text": [
    "app_replace_rule_set"
+  ],
+  "json2": [
+   "storage_local_get"
   ]
  },
  "functions": {
@@ -19622,15 +19628,19 @@
   "storage_local_get": {
    "async": false,
    "identifiers": [
+    "json_from",
     "marker",
     "storage_local_key_get",
     "storage_local_get",
     "app_fn",
     "key",
     "storage_local_key",
-    "value",
+    "json",
     "localStorage",
-    "getItem"
+    "getItem",
+    "v",
+    "json2",
+    "value"
    ]
   },
   "storage_local_get_or": {
