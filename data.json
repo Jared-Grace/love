@@ -1990,7 +1990,6 @@
    "marker_above_generic",
    "js_declaration_single_name",
    "js_log_remove",
-   "function_rename",
    "js_imports_paths_fix",
    "function_parse_declaration_inner",
    "function_transform_marker_specified"
@@ -2131,7 +2130,6 @@
    "function_parse_strict_declaration",
    "function_exists_strict",
    "function_name_to_base",
-   "function_rename",
    "function_open_app",
    "functions_transform",
    "function_parse_strict",
@@ -2304,7 +2302,6 @@
    "js_identifiers",
    "list_difference",
    "marker_functionize",
-   "function_rename",
    "js_imports_paths_fix",
    "html_button",
    "function_open_app",
@@ -2404,7 +2401,6 @@
    "each_index",
    "list_difference",
    "marker_functionize",
-   "function_rename",
    "app_replace_home",
    "task_new",
    "command_line_read",
@@ -3095,7 +3091,6 @@
    "js_unparse_inner",
    "marker_call",
    "marker_call_replace_generic",
-   "function_rename",
    "functions_transform"
   ],
   "args": [
@@ -3332,7 +3327,6 @@
    "function_alias_rename",
    "marker_next_await",
    "marker_enter",
-   "function_rename",
    "js_imports_paths_fix",
    "app_replace_home",
    "marker_screen_add",
@@ -3353,8 +3347,7 @@
    "js_imports_missing",
    "marker_expand",
    "data_identifiers_search",
-   "data_file_update_inner",
-   "function_rename"
+   "data_file_update_inner"
   ],
   "list_difference": [
    "js_imports_missing",
@@ -3453,8 +3446,7 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "marker_leave",
-   "js_log_remove",
-   "function_rename"
+   "js_log_remove"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -4038,8 +4030,7 @@
    "function_params_consolidate",
    "js_imports_missing",
    "string_split_comma",
-   "functions_paths",
-   "function_rename"
+   "functions_paths"
   ],
   "path_join": [
    "folder_read",
@@ -4139,7 +4130,6 @@
    "js_visit_type_each_async",
    "tasks_run",
    "visit_filter_recursive_async",
-   "function_rename",
    "each_range_async",
    "function_transform_marker_specified"
   ],
@@ -5561,7 +5551,6 @@
    "marker_move",
    "marker_top",
    "task_new",
-   "function_rename",
    "functions_transform",
    "function_transform_marker_specified"
   ],
@@ -5572,8 +5561,7 @@
   "js_identifier_replace": [
    "function_copy",
    "js_identifier_replace",
-   "marker_expand",
-   "function_rename"
+   "marker_expand"
   ],
   "function_copy": [
    "function_copy",
@@ -9768,7 +9756,6 @@
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
-   "function_rename",
    "data_identifiers_get"
   ],
   "mna": [
@@ -9811,8 +9798,7 @@
    "function_aliases_restore"
   ],
   "js_imports_paths_fix": [
-   "js_imports_paths_fix",
-   "function_rename"
+   "js_imports_paths_fix"
   ],
   "function_name_to_path_import": [
    "function_imports_add",
@@ -10159,6 +10145,9 @@
   ],
   "kind": [
    "js_property_generic"
+  ],
+  "function_rename_identifiers": [
+   "function_rename"
   ]
  },
  "functions": {
@@ -12100,13 +12089,7 @@
   },
   "function_rename": {
    "identifiers": [
-    "list_remove",
-    "js_imports_paths_fix",
-    "js_identifier_replace",
-    "function_transform",
-    "each_async",
-    "object_property_get",
-    "data_identifiers_get",
+    "function_rename_identifiers",
     "function_alias_rename",
     "function_delete",
     "function_copy",
@@ -12114,14 +12097,7 @@
     "function_rename",
     "f_name_before",
     "f_name_after",
-    "v",
-    "identifiers",
-    "f_names",
-    "lambda",
-    "f_name",
-    "lambda2",
-    "ast",
-    "output"
+    "v"
    ],
    "async": true
   },
