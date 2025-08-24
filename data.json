@@ -4327,7 +4327,8 @@
   "text": [
    "clipboard_copy",
    "html_text_set",
-   "html_button"
+   "html_button",
+   "app_replace_rule_set"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10212,7 +10213,8 @@
   ],
   "html_text_set": [
    "html_text_set",
-   "html_button"
+   "html_button",
+   "app_replace_rule_set"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10278,7 +10280,8 @@
    "html_button",
    "html_element",
    "html_document_body",
-   "html_on"
+   "html_on",
+   "app_replace_rule_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -19777,6 +19780,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "storage_local_get_context",
     "list_get",
     "app_replace_rule_sets",
@@ -19789,7 +19793,9 @@
     "root",
     "index",
     "rule_sets",
-    "item"
+    "item",
+    "component",
+    "text"
    ]
   },
   "app_refresh": {
