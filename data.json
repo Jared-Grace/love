@@ -1623,7 +1623,8 @@
   "u u",
   "function_name_unalias s",
   "s string",
-  "u ssw"
+  "u ssw",
+  "u ss"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
