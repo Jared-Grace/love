@@ -1,4 +1,4 @@
-import { string_split } from "./string_split.mjs";
+import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -28,7 +28,7 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
-  let split = string_split(s, separator);
+  let split = string_split_empty();
   function lambda2(item2) {}
   each(list, lambda2);
   html_p_text(root, current);
