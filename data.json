@@ -2583,8 +2583,7 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take",
-   "function_rename"
+   "list_take"
   ],
   "v": [
    "data_identifiers_file",
@@ -3436,8 +3435,7 @@
    "tasks_run",
    "data_file_update_inner",
    "app_replace_home",
-   "app_replace_rule_set",
-   "function_rename"
+   "app_replace_rule_set"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12705,8 +12703,6 @@
     "v",
     "identifiers",
     "f_names",
-    "list",
-    "item",
     "lambda",
     "f_name",
     "lambda2",
