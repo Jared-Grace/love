@@ -31,7 +31,7 @@ export function app_replace_rule_set(context) {
     start,
   );
   let current_list = string_split_empty(current);
-  function lambda2(letter) {
+  function lambda2(letter, index) {
     let b = null;
     function lambda5() {
       html_style_set(b, "background-color", "lightgreen");
