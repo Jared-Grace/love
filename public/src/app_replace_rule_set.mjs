@@ -1,4 +1,4 @@
-import { each_index } from "./each_index.mjs";
+import { html_button_element } from "./html_button_element.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -32,10 +32,12 @@ export function app_replace_rule_set(context) {
   let current_list = string_split_empty();
   function lambda2(letter) {
     let b = null;
-    function lambda5() {}
+    function lambda5() {
+      let component = html_button_element(b);
+    }
     b = html_button(root, letter, lambda5);
   }
-  each_index(current_list, lambda2);
+  each(current_list, lambda2);
   html_p_text(root, current);
   html_p_text(root, "Rules:");
   let { rules } = item;
