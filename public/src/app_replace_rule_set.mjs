@@ -1,3 +1,4 @@
+import { html_component_element_get } from "./html_component_element_get.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
@@ -51,7 +52,8 @@ export function app_replace_rule_set(context) {
     let left_joined = list_join_space(left);
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {}
-    html_button(root, text, lambda3);
+    let b = html_button(root, text, lambda3);
+    let b_element = html_component_element_get(b);
   }
   each(mapped, lambda);
   marker("1");
