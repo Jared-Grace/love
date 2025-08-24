@@ -1605,7 +1605,6 @@
   "p",
   "o marker_screen_add",
   "s screens",
-  "ps",
   "marker_screen_add rule_set",
   "de app_replace_refresh",
   "oa replace",
@@ -1629,7 +1628,8 @@
   "s get_or",
   "r storage_local_get_or storage_local_initialize",
   "as list",
-  "d"
+  "d",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "storage_local_initialize",
