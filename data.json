@@ -2715,7 +2715,8 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set"
+   "storage_local_set",
+   "app_replace_rule_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19871,6 +19872,7 @@
     "middle",
     "left",
     "right",
+    "v",
     "text"
    ]
   },
