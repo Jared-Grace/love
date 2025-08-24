@@ -2575,7 +2575,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -7170,7 +7171,8 @@
    "marker_next_delete",
    "marker_next_index",
    "marker_previous_index",
-   "marker_leave"
+   "marker_leave",
+   "app_replace_rule_set"
   ],
   "js_stack_list_block_is": [
    "function_transform_marker_empty",
@@ -10538,6 +10540,12 @@
   ],
   "split2": [
    "string_split_space"
+  ],
+  "index2": [
+   "app_replace_rule_set"
+  ],
+  "item2": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19824,6 +19832,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_index_of",
     "string_split_space",
     "each",
     "html_p_text",
@@ -19844,6 +19853,9 @@
     "lambda",
     "rule",
     "split",
+    "index2",
+    "list",
+    "item2",
     "text"
    ]
   },
