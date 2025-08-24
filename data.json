@@ -3187,8 +3187,7 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run",
-   "app_replace_rule_set"
+   "tasks_run"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -3871,8 +3870,7 @@
    "data_identifiers_search",
    "function_aliases_restore",
    "js_string",
-   "string_split_space",
-   "app_replace_rule_set"
+   "string_split_space"
   ],
   "a": [
    "string_suffix_without",
@@ -5104,8 +5102,7 @@
    "search_generic",
    "string_split",
    "string_split_comma",
-   "string_split_space",
-   "app_replace_rule_set"
+   "string_split_space"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -10191,6 +10188,9 @@
    "app_replace_rule_set"
   ],
   "item2": [
+   "app_replace_rule_set"
+  ],
+  "string_split_empty": [
    "app_replace_rule_set"
   ]
  },
@@ -18854,7 +18854,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "string_split",
+    "string_split_empty",
     "storage_local_initialize_context",
     "list_join_space",
     "object_property_get",
@@ -18879,8 +18879,6 @@
     "start",
     "current",
     "split",
-    "s",
-    "separator",
     "lambda2",
     "item2",
     "list",
