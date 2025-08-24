@@ -10199,9 +10199,6 @@
   "letter": [
    "app_replace_rule_set"
   ],
-  "style_key": [
-   "app_replace_rule_set"
-  ],
   "style_value": [
    "app_replace_rule_set"
   ],
@@ -18899,7 +18896,6 @@
     "letter",
     "b",
     "lambda5",
-    "style_key",
     "style_value",
     "rules",
     "mapped",
