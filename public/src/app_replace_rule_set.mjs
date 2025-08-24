@@ -18,7 +18,7 @@ export function app_replace_rule_set(context) {
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
   let { rules } = item;
-  function lambda(rule) {
+  function app_replace_rule_parse(rule) {
     let split = string_split_space(rule);
     let middle = list_index_of(split, ">");
     let left = list_take(split, middle);
@@ -29,7 +29,7 @@ export function app_replace_rule_set(context) {
     };
     return v;
   }
-  let mapped = list_map(rules, lambda);
+  let mapped = list_map(rules, app_replace_rule_parse);
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
