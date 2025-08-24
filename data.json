@@ -10475,6 +10475,9 @@
   "html_button_screen": [
    "app_replace_home",
    "app_replace_rule_set"
+  ],
+  "emoji_home": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19750,6 +19753,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "emoji_home",
     "html_button_screen",
     "html_document_body",
     "marker",
