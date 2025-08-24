@@ -4450,7 +4450,8 @@
   "value_initial": [
    "data_get",
    "data_transform",
-   "storage_local_initialize"
+   "storage_local_initialize",
+   "storage_local_initialize_context"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -19294,6 +19295,7 @@
     "storage_local_initialize_context",
     "context",
     "key",
+    "value_initial",
     "app_fn",
     "value"
    ]
