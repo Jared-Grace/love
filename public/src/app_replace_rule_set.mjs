@@ -23,7 +23,7 @@ export function app_replace_rule_set(context) {
     let split = string_split_space(rule);
     let middle = list_index_of(split, ">");
     let left = list_take(split, middle);
-    let right = list_skip(split, split + 1);
+    let right = list_skip(split, middle + 1);
     log({
       left,
       right,
