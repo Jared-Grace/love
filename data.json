@@ -9763,8 +9763,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_replace_rule_set"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -9878,8 +9877,7 @@
    "html_button_element"
   ],
   "parent_element": [
-   "html_element",
-   "app_replace_rule_set"
+   "html_element"
   ],
   "html_component_wrap": [
    "html_element",
@@ -10197,6 +10195,12 @@
    "app_replace_rule_set"
   ],
   "letter": [
+   "app_replace_rule_set"
+  ],
+  "b_element": [
+   "app_replace_rule_set"
+  ],
+  "style": [
    "app_replace_rule_set"
   ]
  },
@@ -18890,8 +18894,8 @@
     "letter",
     "b",
     "lambda5",
-    "parent_element",
-    "parent",
+    "b_element",
+    "style",
     "rules",
     "mapped",
     "lambda",
