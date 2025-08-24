@@ -2407,8 +2407,7 @@
    "data_function_current_restore",
    "html_on",
    "lambda_value",
-   "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_home"
   ],
   "previous": [
    "data_identifiers_file",
@@ -10561,6 +10560,9 @@
   ],
   "taken": [
    "list_take"
+  ],
+  "app_replace_rule_parse": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19867,7 +19869,7 @@
     "rule_sets",
     "item",
     "rules",
-    "lambda",
+    "app_replace_rule_parse",
     "rule",
     "split",
     "middle",
