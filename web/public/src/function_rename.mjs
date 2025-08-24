@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -14,7 +15,7 @@ export async function function_rename(f_name_before, f_name_after) {
   let v = await function_alias_rename(f_name_before, f_name_after);
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
-  lr;
+  list_remove(list, item);
   async function lambda(f_name) {
     async function lambda2(ast) {
       js_identifier_replace(ast, f_name_before, f_name_after);
