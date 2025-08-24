@@ -2424,7 +2424,8 @@
    "list_intersect",
    "marker_assign_replace",
    "marker_next_delete",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "app_replace_rule_set"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2540,7 +2541,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -10181,6 +10183,9 @@
   ],
   "storage_local_initialize_context": [
    "storage_local_initialize_context",
+   "app_replace_rule_set"
+  ],
+  "item2": [
    "app_replace_rule_set"
   ]
  },
@@ -18867,6 +18872,9 @@
     "name",
     "start",
     "current",
+    "list",
+    "lambda2",
+    "item2",
     "rules",
     "mapped",
     "lambda",
