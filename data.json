@@ -10205,6 +10205,12 @@
   ],
   "style": [
    "app_replace_rule_set"
+  ],
+  "style_key": [
+   "app_replace_rule_set"
+  ],
+  "style_value": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18897,6 +18903,8 @@
     "letter",
     "b",
     "lambda5",
+    "style_key",
+    "style_value",
     "b_element",
     "style",
     "rules",
