@@ -27,6 +27,7 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
+  each(list, function lambda2(item2) {});
   html_p_text(root, current);
   html_p_text(root, "Rules:");
   let { rules } = item;
