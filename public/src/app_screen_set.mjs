@@ -1,8 +1,7 @@
+import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { app_refresh } from "./app_refresh.mjs";
-import { storage_local_set } from "./storage_local_set.mjs";
 export function app_screen_set(context, value) {
   const key = "screen";
-  let { app_fn } = context;
-  storage_local_set(app_fn, key, value);
+  storage_local_set_context(context, key, value);
   app_refresh(context);
 }
