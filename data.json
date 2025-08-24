@@ -6561,8 +6561,7 @@
    "storage_local_get_or",
    "js_property_identifier",
    "js_property",
-   "marker_screen_add",
-   "app_screen_set"
+   "marker_screen_add"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -19820,8 +19819,7 @@
     "app_refresh",
     "app_screen_set",
     "context",
-    "value",
-    "key"
+    "value"
    ]
   }
  },
