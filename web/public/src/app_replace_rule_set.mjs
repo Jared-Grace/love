@@ -14,8 +14,8 @@ export function app_replace_rule_set(context) {
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
   let { rules } = item;
-  function lambda(item2) {}
-  each(list, lambda);
+  function lambda(rule) {}
+  each(rules, lambda);
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
