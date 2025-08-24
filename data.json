@@ -10349,7 +10349,8 @@
    "app_replace_screens"
   ],
   "storage_local_set": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_get_or"
   ],
   "app_fn": [
    "storage_local_set",
@@ -19712,6 +19713,7 @@
   "storage_local_get_or": {
    "async": false,
    "identifiers": [
+    "storage_local_set",
     "null_is",
     "storage_local_get",
     "marker",
@@ -19721,9 +19723,9 @@
     "value_or",
     "value",
     "n",
-    "value2",
     "app_fn2",
-    "key2"
+    "key2",
+    "value2"
    ]
   },
   "app_replace_refresh": {
