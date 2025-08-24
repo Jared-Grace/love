@@ -3,7 +3,6 @@ import { list_skip } from "./list_skip.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { string_split_space } from "./string_split_space.mjs";
-import { each } from "./each.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { list_get } from "./list_get.mjs";
@@ -30,9 +29,7 @@ export function app_replace_rule_set(context) {
     };
     return v;
   }
-  each(rules, lambda);
-  function lambda2(item2) {}
-  let mapped = list_map(list, lambda2);
+  let mapped = list_map(rules, lambda);
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
