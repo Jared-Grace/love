@@ -1619,7 +1619,8 @@
   "n lambda_value",
   "s param",
   "s replace",
-  "s storage"
+  "s storage",
+  "s rule_set"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
