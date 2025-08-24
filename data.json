@@ -2702,8 +2702,7 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set",
-   "storage_local_get"
+   "storage_local_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10512,9 +10511,6 @@
   ],
   "html_p_text": [
    "app_replace_rule_set"
-  ],
-  "json2": [
-   "storage_local_get"
   ]
  },
  "functions": {
@@ -19638,8 +19634,6 @@
     "json",
     "localStorage",
     "getItem",
-    "v",
-    "json2",
     "value"
    ]
   },
