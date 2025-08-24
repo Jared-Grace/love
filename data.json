@@ -3893,7 +3893,8 @@
    "trinity_green",
    "data_identifiers_search",
    "function_aliases_restore",
-   "js_string"
+   "js_string",
+   "string_split_space"
   ],
   "a": [
    "string_suffix_without",
@@ -5233,7 +5234,8 @@
    "js_dollar",
    "search_generic",
    "string_split",
-   "string_split_comma"
+   "string_split_comma",
+   "string_split_space"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -10531,7 +10533,11 @@
    "app_replace_rule_set"
   ],
   "string_split_space": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "string_split_space"
+  ],
+  "split2": [
+   "string_split_space"
   ]
  },
  "functions": {
@@ -19888,6 +19894,15 @@
     "app_screen_set",
     "context",
     "value"
+   ]
+  },
+  "string_split_space": {
+   "async": false,
+   "identifiers": [
+    "string_split",
+    "string_split_space",
+    "s",
+    "split2"
    ]
   }
  },
