@@ -1,4 +1,4 @@
-import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -35,8 +35,7 @@ export function app_replace_rule_set(context) {
     function lambda5() {
       const style_key = "background-color";
       const style_value = "lightgreen";
-      let b_element = html_component_element_get(b);
-      b_element.style[style_key] = style_value;
+      html_style_set(b, style_key, style_value);
     }
     b = html_button(root, letter, lambda5);
   }
