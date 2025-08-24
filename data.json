@@ -19781,9 +19781,9 @@
     "app_replace_rule_set",
     "context",
     "body",
+    "key",
     "app_fn",
-    "value",
-    "key"
+    "value"
    ]
   },
   "app_refresh": {
