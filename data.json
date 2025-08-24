@@ -10210,6 +10210,9 @@
   ],
   "b_element": [
    "app_replace_rule_set"
+  ],
+  "disabled": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18916,7 +18919,8 @@
     "left_joined",
     "text",
     "lambda3",
-    "b_element"
+    "b_element",
+    "disabled"
    ]
   },
   "app_refresh": {
