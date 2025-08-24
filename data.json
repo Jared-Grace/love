@@ -19582,11 +19582,11 @@
     "rs",
     "name2",
     "value",
-    "v",
-    "list",
     "lambda",
     "item",
-    "index"
+    "index",
+    "v",
+    "list"
    ]
   },
   "storage_local_set": {
