@@ -1,3 +1,4 @@
+import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
@@ -9,5 +10,6 @@ export function app_replace_rule_set(context) {
   let key = "rule_set_index";
   let { app_fn } = context;
   let value = storage_local_get(app_fn, key);
+  let rule_sets = app_replace_rule_sets();
   marker("1");
 }
