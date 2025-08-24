@@ -1,3 +1,4 @@
+import { each_index } from "./each_index.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
 import { each } from "./each.mjs";
@@ -21,4 +22,5 @@ export function app_replace_home(context) {
     html_button_screen(body, name2, context, "rule_set");
   }
   each(rule_sets, lambda2);
+  let v = each_index(list, function lambda3() {});
 }
