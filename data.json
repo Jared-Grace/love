@@ -6241,7 +6241,6 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "html_document_body",
-   "app_replace_rule_set",
    "app_refresh"
   ],
   "import_": [
@@ -10182,7 +10181,6 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_replace_rule_set",
    "app_refresh"
   ],
   "document": [
@@ -10195,7 +10193,8 @@
   ],
   "html_element": [
    "html_element",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_rule_set"
   ],
   "parent": [
    "html_element",
@@ -10500,7 +10499,8 @@
    "app_replace_rule_set"
   ],
   "root": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19782,11 +19782,11 @@
     "app_replace_rule_sets",
     "emoji_home",
     "html_button_screen",
-    "html_document_body",
     "marker",
+    "html_element",
     "app_replace_rule_set",
     "context",
-    "body",
+    "root",
     "index",
     "rule_sets",
     "item"
