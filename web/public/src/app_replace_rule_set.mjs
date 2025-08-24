@@ -1,3 +1,4 @@
+import { list_join_space } from "./list_join_space.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
@@ -22,6 +23,7 @@ export function app_replace_rule_set(context) {
   function lambda(rule) {
     let left = object_property_get(rule, "left");
     let right = object_property_get(rule, "right");
+    let result2 = list_join_space(args);
     function lambda3() {}
     html_button(parent, text2, lambda3);
   }
