@@ -1627,7 +1627,8 @@
   "s split",
   "fw list_slice list_take",
   "u ls",
-  "a lsk list_skip"
+  "a lsk list_skip",
+  "s get_or"
  ],
  "marker_current": "1",
  "function_current": "list_take",
