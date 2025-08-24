@@ -666,7 +666,6 @@
   "ftc js_await_add js_unparse_inner",
   "n task_new",
   "s funct,new",
-  "u s",
   "n function_new_aliased",
   "u a",
   "a na function_new_aliased",
@@ -1620,7 +1619,9 @@
   "s param",
   "s replace",
   "s storage",
-  "s rule_set"
+  "s rule_set",
+  "unlias s",
+  "u s"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
