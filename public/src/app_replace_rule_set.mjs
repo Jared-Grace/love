@@ -1,3 +1,4 @@
+import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
 import { app_replace_rule_parse } from "./app_replace_rule_parse.mjs";
 import { list_map } from "./list_map.mjs";
@@ -17,8 +18,10 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
-  function lambda(item2) {}
-  each(list, lambda);
+  function lambda(rule) {
+    html_button(parent, text2, function lambda3() {});
+  }
+  each(mapped, lambda);
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
