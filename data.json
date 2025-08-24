@@ -10325,7 +10325,8 @@
    "app_replace_rule_set"
   ],
   "rule_sets": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "name2": [
    "app_replace_home"
@@ -10495,7 +10496,8 @@
    "each_index"
   ],
   "app_replace_rule_sets": [
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19773,6 +19775,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "app_replace_rule_sets",
     "storage_local_get",
     "emoji_home",
     "html_button_screen",
@@ -19783,7 +19786,8 @@
     "body",
     "key",
     "app_fn",
-    "value"
+    "value",
+    "rule_sets"
    ]
   },
   "app_refresh": {
