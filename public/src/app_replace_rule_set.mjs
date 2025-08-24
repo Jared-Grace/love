@@ -8,8 +8,7 @@ import { marker } from "./marker.mjs";
 export function app_replace_rule_set(context) {
   let body = html_document_body();
   html_button_screen(body, emoji_home() + "Home", context, "home");
-  let key = "rule_set_index";
-  let index = storage_local_get_context(context, key);
+  let index = storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
   marker("1");
