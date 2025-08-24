@@ -1771,8 +1771,7 @@
    "js_imports_fix",
    "data_file_update_inner",
    "function_alias_rename",
-   "js_imports_paths_fix",
-   "app_replace_home"
+   "js_imports_paths_fix"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2397,8 +2396,7 @@
    "marker_screen_add",
    "data_function_current_restore",
    "html_on",
-   "lambda_value",
-   "app_replace_home"
+   "lambda_value"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2568,8 +2566,7 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
-   "app_replace_home"
+   "marker_param_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -2703,8 +2700,7 @@
    "function_rename_suffix_add",
    "function_params_consolidate",
    "js_property_identifier",
-   "lambda_value",
-   "app_replace_home"
+   "lambda_value"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19569,7 +19565,6 @@
     "each_index",
     "storage_local_set_context",
     "html_button_screen",
-    "each",
     "object_property_get",
     "html_document_body",
     "app_replace_home",
@@ -19579,14 +19574,11 @@
     "name",
     "rules",
     "lambda2",
-    "rs",
-    "name2",
-    "value",
-    "lambda",
     "item",
     "index",
-    "v",
-    "list"
+    "name2",
+    "rs",
+    "value"
    ]
   },
   "storage_local_set": {
