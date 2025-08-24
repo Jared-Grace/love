@@ -6511,7 +6511,8 @@
    "js_declaration_single_params_add",
    "marker_expand",
    "marker_param_add",
-   "js_property_identifier"
+   "js_property_identifier",
+   "marker_screen_add"
   ],
   "expression": [
    "js_atomize_function",
@@ -6586,7 +6587,8 @@
   "function_param_new": [
    "function_params_new",
    "function_param_new",
-   "function_param_swap"
+   "function_param_swap",
+   "marker_screen_add"
   ],
   "function_params_new": [
    "function_params_new",
@@ -19652,6 +19654,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_param_new",
     "function_new",
     "js_parse_expression",
     "list_add",
@@ -19679,6 +19682,7 @@
     "combined_screen",
     "value",
     "p",
+    "param_name",
     "v2"
    ]
   },
