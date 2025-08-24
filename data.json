@@ -1390,7 +1390,6 @@
   "a mna marker_next_await",
   "mna",
   "c mc marker_param_add",
-  "s param",
   "a mpa marker_param_add",
   "u ox",
   "a ox object_property_exists",
@@ -1618,7 +1617,8 @@
   "de app_replace_refresh",
   "oa replace",
   "s invoke",
-  "n lambda_value"
+  "n lambda_value",
+  "s param"
  ],
  "marker_current": "1",
  "function_current": "lambda_value",
