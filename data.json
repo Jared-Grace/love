@@ -2567,7 +2567,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -3412,7 +3413,8 @@
    "string_includes",
    "tasks_run",
    "data_file_update_inner",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4691,7 +4693,8 @@
    "marker_above_generic",
    "marker_above_delete",
    "marker_enter",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "lists_get": [
    "each_multiple",
@@ -7128,7 +7131,8 @@
    "marker_expand",
    "marker_next_delete",
    "marker_next_get",
-   "marker_enter"
+   "marker_enter",
+   "app_replace_rule_set"
   ],
   "list_index_of": [
    "function_transform_marker_empty",
@@ -19775,6 +19779,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_get",
     "app_replace_rule_sets",
     "storage_local_get",
     "emoji_home",
@@ -19787,7 +19792,10 @@
     "key",
     "app_fn",
     "value",
-    "rule_sets"
+    "rule_sets",
+    "item",
+    "list",
+    "index"
    ]
   },
   "app_refresh": {
