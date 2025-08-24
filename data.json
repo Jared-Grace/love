@@ -1628,7 +1628,8 @@
   "fw list_slice list_take",
   "u ls",
   "a lsk list_skip",
-  "s get_or"
+  "s get_or",
+  "r storage_local_get_or storage_local_initialize"
  ],
  "marker_current": "1",
  "function_current": "list_take",
