@@ -9864,7 +9864,8 @@
    "html_text_set",
    "html_element",
    "html_on",
-   "html_component_element_get"
+   "html_component_element_get",
+   "app_replace_rule_set"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10204,6 +10205,9 @@
    "app_replace_rule_set"
   ],
   "index_selected": [
+   "app_replace_rule_set"
+  ],
+  "b_element": [
    "app_replace_rule_set"
   ]
  },
@@ -18867,6 +18871,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_component_element_get",
     "each_index",
     "html_style_set",
     "string_split_empty",
@@ -18908,7 +18913,8 @@
     "right_joined",
     "left_joined",
     "text",
-    "lambda3"
+    "lambda3",
+    "b_element"
    ]
   },
   "app_refresh": {
