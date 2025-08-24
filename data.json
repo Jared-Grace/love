@@ -3014,8 +3014,7 @@
    "js_property",
    "marker_screen_add",
    "lambda_value",
-   "app_screen_set",
-   "app_replace_home"
+   "app_screen_set"
   ],
   "name": [
    "watch",
@@ -8710,8 +8709,7 @@
    "marker_expand"
   ],
   "rs": [
-   "js_return_atomize",
-   "app_replace_home"
+   "js_return_atomize"
   ],
   "identifier_not": [
    "js_return_atomize",
@@ -19576,9 +19574,7 @@
     "lambda2",
     "item",
     "index",
-    "name2",
-    "rs",
-    "value"
+    "name2"
    ]
   },
   "storage_local_set": {
