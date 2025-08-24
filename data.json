@@ -3868,7 +3868,8 @@
    "data_identifiers_search",
    "function_aliases_restore",
    "js_string",
-   "string_split_space"
+   "string_split_space",
+   "string_split_empty"
   ],
   "a": [
    "string_suffix_without",
@@ -5101,7 +5102,8 @@
    "search_generic",
    "string_split",
    "string_split_comma",
-   "string_split_space"
+   "string_split_space",
+   "string_split_empty"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -10123,7 +10125,8 @@
    "app_replace_rule_parse"
   ],
   "split2": [
-   "string_split_space"
+   "string_split_space",
+   "string_split_empty"
   ],
   "list_take": [
    "list_take",
@@ -10188,7 +10191,8 @@
    "app_replace_rule_set"
   ],
   "string_split_empty": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "string_split_empty"
   ],
   "current_list": [
    "app_replace_rule_set"
@@ -19331,6 +19335,15 @@
     "value_initial",
     "app_fn",
     "value"
+   ]
+  },
+  "string_split_empty": {
+   "async": false,
+   "identifiers": [
+    "string_split",
+    "string_split_empty",
+    "s",
+    "split2"
    ]
   }
  },
