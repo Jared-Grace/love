@@ -2925,8 +2925,7 @@
    "js_await",
    "js_imports_paths_fix",
    "js_string",
-   "js_await_wrap",
-   "app_replace_rule_set"
+   "js_await_wrap"
   ],
   "watch": [
    "watch"
@@ -9865,8 +9864,7 @@
    "html_text_set",
    "html_element",
    "html_on",
-   "html_component_element_get",
-   "app_replace_rule_set"
+   "html_component_element_get"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10208,10 +10206,10 @@
   "index_selected": [
    "app_replace_rule_set"
   ],
-  "b_element": [
+  "disabled": [
    "app_replace_rule_set"
   ],
-  "disabled": [
+  "html_disable_set": [
    "app_replace_rule_set"
   ]
  },
@@ -18875,8 +18873,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "object_property_set",
-    "html_component_element_get",
+    "html_disable_set",
     "each_index",
     "html_style_set",
     "string_split_empty",
@@ -18919,8 +18916,7 @@
     "left_joined",
     "text",
     "lambda3",
-    "disabled",
-    "b_element"
+    "disabled"
    ]
   },
   "app_refresh": {
