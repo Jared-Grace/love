@@ -10567,9 +10567,6 @@
   "rule": [
    "app_replace_rule_set"
   ],
-  "text2": [
-   "app_replace_rule_set"
-  ],
   "right_joined": [
    "app_replace_rule_set"
   ],
@@ -19891,8 +19888,7 @@
     "left_joined",
     "text",
     "lambda3",
-    "parent",
-    "text2"
+    "parent"
    ]
   },
   "app_refresh": {
