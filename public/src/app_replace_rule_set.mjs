@@ -27,6 +27,7 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
+  sse;
   function lambda2(item2) {}
   each(list, lambda2);
   html_p_text(root, current);
