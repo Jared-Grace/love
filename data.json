@@ -3166,7 +3166,8 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run"
+   "tasks_run",
+   "app_replace_rule_set"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -5234,7 +5235,8 @@
    "js_dollar",
    "search_generic",
    "string_split",
-   "string_split_comma"
+   "string_split_comma",
+   "app_replace_rule_set"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -5330,7 +5332,8 @@
    "function_run_line_parse",
    "js_call_new_code",
    "js_dollar",
-   "string_split"
+   "string_split",
+   "app_replace_rule_set"
   ],
   "results": [
    "functions_combine_name"
@@ -19815,6 +19818,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "string_split",
     "each",
     "html_p_text",
     "storage_local_get_context",
@@ -19833,7 +19837,9 @@
     "rules",
     "lambda",
     "rule",
+    "split",
     "s",
+    "separator",
     "text"
    ]
   },
