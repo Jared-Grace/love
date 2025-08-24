@@ -1635,7 +1635,7 @@
   "c storage_local_get_context storage_local_initialize_context"
  ],
  "marker_current": "1",
- "function_current": "storage_local_initialize",
+ "function_current": "storage_local_initialize_context",
  "terminal": false,
  "identifiers": {
   "log": [
