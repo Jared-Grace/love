@@ -1,5 +1,4 @@
-import { object_property_set } from "./object_property_set.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_disable_set } from "./html_disable_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
@@ -55,8 +54,7 @@ export function app_replace_rule_set(context) {
     function lambda3() {}
     let b = html_button(root, text, lambda3);
     const disabled = true;
-    let b_element = html_component_element_get(b);
-    object_property_set(b_element, "disabled", disabled);
+    html_disable_set(b, disabled);
   }
   each(mapped, lambda);
   marker("1");
