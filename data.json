@@ -10183,7 +10183,8 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_refresh"
+   "app_refresh",
+   "app_replace"
   ],
   "document": [
    "html_document_body",
@@ -10501,7 +10502,8 @@
   ],
   "root": [
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace"
   ],
   "html_p_text": [
    "app_replace_rule_set"
@@ -19455,10 +19457,12 @@
    "identifiers": [
     "app_refresh",
     "app_replace_screens",
+    "html_document_body",
     "marker",
     "app_replace",
     "app_fn",
-    "screens"
+    "screens",
+    "root"
    ]
   },
   "html_document_body": {
