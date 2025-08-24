@@ -9863,8 +9863,7 @@
    "html_text_set",
    "html_element",
    "html_on",
-   "html_component_element_get",
-   "app_replace_rule_set"
+   "html_component_element_get"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10200,16 +10199,13 @@
   "letter": [
    "app_replace_rule_set"
   ],
-  "b_element": [
-   "app_replace_rule_set"
-  ],
-  "style": [
-   "app_replace_rule_set"
-  ],
   "style_key": [
    "app_replace_rule_set"
   ],
   "style_value": [
+   "app_replace_rule_set"
+  ],
+  "html_style_set": [
    "app_replace_rule_set"
   ]
  },
@@ -18873,7 +18869,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "html_component_element_get",
+    "html_style_set",
     "string_split_empty",
     "storage_local_initialize_context",
     "list_join_space",
@@ -18905,8 +18901,6 @@
     "lambda5",
     "style_key",
     "style_value",
-    "b_element",
-    "style",
     "rules",
     "mapped",
     "lambda",
