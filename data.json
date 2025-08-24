@@ -2181,8 +2181,7 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not",
-   "app_replace_rule_set"
+   "object_property_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3036,8 +3035,7 @@
    "object_property_from",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context",
-   "app_replace_rule_set"
+   "storage_local_initialize_context"
   ],
   "name": [
    "watch",
@@ -4712,8 +4710,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "app_replace_rule_set"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -18919,10 +18916,7 @@
     "left_joined",
     "text",
     "lambda3",
-    "b_element",
-    "object",
-    "property_name",
-    "value"
+    "b_element"
    ]
   },
   "app_refresh": {
