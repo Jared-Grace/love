@@ -10206,10 +10206,7 @@
   "index_selected": [
    "app_replace_rule_set"
   ],
-  "disabled": [
-   "app_replace_rule_set"
-  ],
-  "html_disable_set": [
+  "html_disable": [
    "app_replace_rule_set"
   ]
  },
@@ -18873,7 +18870,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "html_disable_set",
+    "html_disable",
     "each_index",
     "html_style_set",
     "string_split_empty",
@@ -18915,8 +18912,7 @@
     "right_joined",
     "left_joined",
     "text",
-    "lambda3",
-    "disabled"
+    "lambda3"
    ]
   },
   "app_refresh": {
