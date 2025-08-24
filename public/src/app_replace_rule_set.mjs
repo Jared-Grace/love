@@ -23,10 +23,11 @@ export function app_replace_rule_set(context) {
     let middle = list_index_of(split, ">");
     let left = list_take(split, middle);
     let right = list_skip(split, middle + 1);
-    return {
+    let v = {
       left,
       right,
     };
+    return v;
   }
   each(rules, lambda);
   let text = json_to(item);
