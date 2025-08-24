@@ -2797,8 +2797,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
-   "js_node_atomize",
-   "app_replace_rule_set"
+   "js_node_atomize"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19876,7 +19875,6 @@
     "left",
     "right",
     "list",
-    "message",
     "text"
    ]
   },
