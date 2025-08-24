@@ -10571,12 +10571,6 @@
   ],
   "left_joined": [
    "app_replace_rule_set"
-  ],
-  "root2": [
-   "app_replace_rule_set"
-  ],
-  "text2": [
-   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19883,8 +19877,6 @@
     "index",
     "rule_sets",
     "item",
-    "root2",
-    "text2",
     "rules",
     "mapped",
     "lambda",
