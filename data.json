@@ -10532,6 +10532,15 @@
   ],
   "rule": [
    "app_replace_rule_set"
+  ],
+  "split2": [
+   "app_replace_rule_set"
+  ],
+  "s2": [
+   "app_replace_rule_set"
+  ],
+  "separator2": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19840,6 +19849,9 @@
     "split",
     "s",
     "separator",
+    "split2",
+    "s2",
+    "separator2",
     "text"
    ]
   },
