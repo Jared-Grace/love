@@ -3708,8 +3708,7 @@
    "marker_functionize"
   ],
   "value2": [
-   "error_attention_set",
-   "storage_local_get"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -19639,7 +19638,6 @@
     "localStorage",
     "getItem",
     "n",
-    "value2",
     "value"
    ]
   },
