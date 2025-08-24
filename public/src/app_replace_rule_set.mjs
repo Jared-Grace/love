@@ -31,7 +31,8 @@ export function app_replace_rule_set(context) {
     return v;
   }
   each(rules, lambda);
-  let mapped = list_map(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let mapped = list_map(list, lambda2);
   let text = json_to(item);
   html_p_text(root, text);
   marker("1");
