@@ -1,4 +1,3 @@
-import { string_split } from "./string_split.mjs";
 import { each } from "./each.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
@@ -16,7 +15,7 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { rules } = item;
   function lambda(rule) {
-    let split = string_split(s, separator);
+    let s = s;
   }
   each(rules, lambda);
   let text = json_to(item);
