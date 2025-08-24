@@ -1780,8 +1780,7 @@
    "js_imports_fix",
    "data_file_update_inner",
    "function_alias_rename",
-   "js_imports_paths_fix",
-   "app_replace_rule_set"
+   "js_imports_paths_fix"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2472,8 +2471,7 @@
    "marker_functionize",
    "function_rename",
    "app_replace_home",
-   "task_new",
-   "app_replace_rule_set"
+   "task_new"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2581,8 +2579,7 @@
    "marker_next",
    "marker_next_await",
    "marker_param_add",
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ],
   "v": [
    "data_identifiers_file",
@@ -10564,9 +10561,6 @@
   ],
   "taken": [
    "list_take"
-  ],
-  "item2": [
-   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19858,7 +19852,6 @@
     "list_take",
     "list_index_of",
     "string_split_space",
-    "each",
     "html_p_text",
     "storage_local_get_context",
     "list_get",
@@ -19881,10 +19874,7 @@
     "left",
     "right",
     "v",
-    "lambda2",
-    "item2",
     "mapped",
-    "list",
     "text"
    ]
   },
