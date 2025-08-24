@@ -54,8 +54,8 @@ export function app_replace_rule_set(context) {
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {}
     let b = html_button(root, text, lambda3);
-    let b_element = html_component_element_get(b);
     const disabled = true;
+    let b_element = html_component_element_get(b);
     object_property_set(b_element, "disabled", disabled);
   }
   each(mapped, lambda);
