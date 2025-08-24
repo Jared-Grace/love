@@ -3728,8 +3728,7 @@
    "app_replace_rule_set"
   ],
   "value2": [
-   "error_attention_set",
-   "storage_local_get_or"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -10574,12 +10573,6 @@
   ],
   "left_joined": [
    "app_replace_rule_set"
-  ],
-  "app_fn2": [
-   "storage_local_get_or"
-  ],
-  "key2": [
-   "storage_local_get_or"
   ]
  },
  "functions": {
@@ -19722,10 +19715,7 @@
     "key",
     "value_or",
     "value",
-    "n",
-    "app_fn2",
-    "key2",
-    "value2"
+    "n"
    ]
   },
   "app_replace_refresh": {
