@@ -2273,7 +2273,6 @@
    "catch_log",
    "catch_log_async",
    "catch_only_async",
-   "each_index",
    "each_multiple",
    "each_object",
    "each_pair",
@@ -10494,6 +10493,9 @@
   "storage_local_set_context": [
    "app_screen_set",
    "app_replace_home"
+  ],
+  "lambda$item$index": [
+   "each_index"
   ]
  },
  "functions": {
@@ -11115,7 +11117,7 @@
     "each",
     "each_index",
     "list",
-    "lambda",
+    "lambda$item$index",
     "index",
     "lambda2",
     "item",
