@@ -2701,7 +2701,8 @@
    "function_rename_suffix_add",
    "function_params_consolidate",
    "js_property_identifier",
-   "lambda_value"
+   "lambda_value",
+   "storage_local_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4263,7 +4264,8 @@
    "string_includes",
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "storage_local_set"
   ],
   "assert_json": [
    "assert_json",
@@ -19595,12 +19597,14 @@
   "storage_local_set": {
    "async": false,
    "identifiers": [
+    "json_to",
     "storage_local_key_get",
     "storage_local_set",
     "app_fn",
     "key",
     "value",
     "storage_local_key",
+    "v",
     "localStorage",
     "setItem"
    ]
