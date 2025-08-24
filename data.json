@@ -9763,7 +9763,8 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_rule_set"
   ],
   "createElement": [
    "html_element"
@@ -9853,8 +9854,7 @@
    "html_on",
    "html_component_element_get",
    "html_on_click",
-   "html_p",
-   "app_replace_rule_set"
+   "html_p"
   ],
   "innerHTML": [
    "html_text_set"
@@ -9863,7 +9863,8 @@
    "html_text_set",
    "html_element",
    "html_on",
-   "html_component_element_get"
+   "html_component_element_get",
+   "app_replace_rule_set"
   ],
   "function_open_app": [
    "function_open_app"
@@ -9874,11 +9875,11 @@
   ],
   "html_button_element": [
    "html_button",
-   "html_button_element",
-   "app_replace_rule_set"
+   "html_button_element"
   ],
   "parent_element": [
-   "html_element"
+   "html_element",
+   "app_replace_rule_set"
   ],
   "html_component_wrap": [
    "html_element",
@@ -18859,7 +18860,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "html_button_element",
+    "html_component_element_get",
     "string_split_empty",
     "storage_local_initialize_context",
     "list_join_space",
@@ -18889,7 +18890,8 @@
     "letter",
     "b",
     "lambda5",
-    "component",
+    "parent_element",
+    "parent",
     "rules",
     "mapped",
     "lambda",
