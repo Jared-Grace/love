@@ -2715,7 +2715,8 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set"
+   "storage_local_set",
+   "app_replace_rule_sets"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3082,7 +3083,8 @@
    "app_new",
    "app_name_prefixed",
    "js_imports_paths_fix",
-   "storage_local_key_get"
+   "storage_local_key_get",
+   "app_replace_rule_sets"
   ],
   "output": [
    "watch",
@@ -9104,7 +9106,8 @@
    "list_slice_end"
   ],
   "start": [
-   "list_slice_end"
+   "list_slice_end",
+   "app_replace_rule_sets"
   ],
   "va": [
    "list_sort_number_mapper"
@@ -10524,7 +10527,8 @@
   ],
   "app_replace_rule_sets": [
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_rule_sets"
   ],
   "storage_local_get_context": [
    "app_replace_rule_set"
@@ -10538,7 +10542,8 @@
    "app_replace_rule_set"
   ],
   "rules": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_rule_sets"
   ],
   "string_split_space": [
    "string_split_space"
@@ -19941,6 +19946,16 @@
     "list",
     "count",
     "taken"
+   ]
+  },
+  "app_replace_rule_sets": {
+   "async": false,
+   "identifiers": [
+    "app_replace_rule_sets",
+    "v",
+    "name",
+    "rules",
+    "start"
    ]
   }
  },
