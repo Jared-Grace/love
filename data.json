@@ -10194,6 +10194,9 @@
   ],
   "letter": [
    "app_replace_rule_set"
+  ],
+  "bhtml_button": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18884,6 +18887,7 @@
     "lambda2",
     "letter",
     "lambda5",
+    "bhtml_button",
     "rules",
     "mapped",
     "lambda",
