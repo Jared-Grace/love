@@ -2713,8 +2713,7 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set",
-   "list_take"
+   "storage_local_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10551,6 +10550,9 @@
   ],
   "list_take": [
    "app_replace_rule_set",
+   "list_take"
+  ],
+  "taken": [
    "list_take"
   ]
  },
@@ -19930,7 +19932,7 @@
     "list_take",
     "list",
     "count",
-    "v"
+    "taken"
    ]
   }
  },
