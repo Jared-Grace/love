@@ -19,6 +19,8 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
+  html_p_text(root, "Start:");
+  storage_local_get_context(context, "rule_set_start");
   html_p_text(root, "Rules:");
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
@@ -32,6 +34,5 @@ export function app_replace_rule_set(context) {
     html_button(root, text, lambda3);
   }
   each(mapped, lambda);
-  html_p_text(root, "Start:");
   marker("1");
 }
