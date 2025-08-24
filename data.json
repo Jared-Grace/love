@@ -1631,7 +1631,8 @@
   "ps",
   "function_rename_identifiers storage_local_get_or storage_local_initialize",
   "d",
-  "s storage_local_initialize"
+  "s storage_local_initialize",
+  "c storage_local_get_context storage_local_initialize_context"
  ],
  "marker_current": "1",
  "function_current": "storage_local_initialize",
