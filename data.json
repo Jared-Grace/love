@@ -152,7 +152,8 @@
   "oh": "app_html_open",
   "an": "app_new",
   "oa": "function_open_app",
-  "nli": "null_is"
+  "nli": "null_is",
+  "lsk": "list_skip"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1625,7 +1626,8 @@
   "u ss",
   "s split",
   "fw list_slice list_take",
-  "u ls"
+  "u ls",
+  "a lsk list_skip"
  ],
  "marker_current": "1",
  "function_current": "list_take",
