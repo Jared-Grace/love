@@ -17,6 +17,7 @@ export function app_replace_rule_set(context) {
   let { rules } = item;
   function lambda(rule) {
     let split = string_split(s, separator);
+    let split2 = string_split(s2, separator2);
   }
   each(rules, lambda);
   let text = json_to(item);
