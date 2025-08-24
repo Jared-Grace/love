@@ -3112,7 +3112,8 @@
    "js_code_call",
    "js_code_call_args",
    "list_join_comma_space",
-   "list_join_space"
+   "list_join_space",
+   "app_replace_rule_set"
   ],
   "lj": [
    "watch",
@@ -3177,7 +3178,8 @@
   ],
   "list_join_space": [
    "command_line_node_g",
-   "list_join_space"
+   "list_join_space",
+   "app_replace_rule_set"
   ],
   "command_line_node_g": [
    "watch",
@@ -9030,7 +9032,8 @@
    "list_join_space",
    "server",
    "tasks_run",
-   "task_new"
+   "task_new",
+   "app_replace_rule_set"
   ],
   "list_last_is": [
    "list_last_is"
@@ -19854,6 +19857,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_join_space",
     "object_property_get",
     "html_button",
     "each",
@@ -19879,6 +19883,8 @@
     "rule",
     "left",
     "right",
+    "result2",
+    "args",
     "lambda3",
     "parent",
     "text2",
