@@ -17,7 +17,7 @@ export function app_replace_home(context) {
   ];
   function lambda2(rs) {
     let name2 = object_property_get(rs, "name");
-    storage_local_set_context(context, "rule_set", value);
+    storage_local_set_context(context, "rule_set_index", value);
     html_button_screen(body, name2, context, "rule_set");
   }
   each(rule_sets, lambda2);
