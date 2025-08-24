@@ -10234,8 +10234,7 @@
   "parent": [
    "html_element",
    "html_button",
-   "html_button_element",
-   "app_replace_rule_set"
+   "html_button_element"
   ],
   "createElement": [
    "html_element"
@@ -19887,8 +19886,7 @@
     "right_joined",
     "left_joined",
     "text",
-    "lambda3",
-    "parent"
+    "lambda3"
    ]
   },
   "app_refresh": {
@@ -19971,7 +19969,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-24T19:22:27.040Z",
+ "git_push_when": "2025-08-24T20:22:58.625Z",
  "error_attention": null,
  "app_current": "replace"
 }
