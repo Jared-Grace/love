@@ -993,7 +993,6 @@
   "u fns",
   "oe function_parse_declaration_js_unparse",
   "oe mc",
-  "u ls",
   "oe list_single",
   "mc jvt",
   "fr jaa",
@@ -1625,7 +1624,8 @@
   "u ssw",
   "u ss",
   "s split",
-  "fw list_slice list_take"
+  "fw list_slice list_take",
+  "u ls"
  ],
  "marker_current": "1",
  "function_current": "list_take",
