@@ -1931,7 +1931,8 @@
    "function_rename_suffix_add",
    "app_replace_rule_set",
    "app_refresh",
-   "lambda_value"
+   "lambda_value",
+   "list_take"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2576,7 +2577,8 @@
    "list_skip_1",
    "marker_next",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "list_take"
   ],
   "v": [
    "data_identifiers_file",
@@ -2711,7 +2713,8 @@
    "function_params_consolidate",
    "js_property_identifier",
    "lambda_value",
-   "storage_local_set"
+   "storage_local_set",
+   "list_take"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3959,7 +3962,8 @@
    "list_difference",
    "marker_functionize",
    "marker_screen_add",
-   "data_app_current_get"
+   "data_app_current_get",
+   "list_take"
   ],
   "without": [
    "string_suffix_without",
@@ -4233,7 +4237,8 @@
    "string_skip",
    "string_slice",
    "html_button_element",
-   "js_declare_single"
+   "js_declare_single",
+   "list_take"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -4548,7 +4553,8 @@
    "list_range",
    "list_skip",
    "list_slice",
-   "list_slice_end"
+   "list_slice_end",
+   "list_take"
   ],
   "data_prompts": [
    "data_prompts",
@@ -10545,7 +10551,8 @@
    "app_replace_rule_set"
   ],
   "list_take": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_take"
   ]
  },
  "functions": {
@@ -19914,6 +19921,18 @@
     "string_split_space",
     "s",
     "split2"
+   ]
+  },
+  "list_take": {
+   "async": false,
+   "identifiers": [
+    "list_slice",
+    "marker",
+    "list_take",
+    "list",
+    "a",
+    "b",
+    "v"
    ]
   }
  },
