@@ -1,3 +1,4 @@
+import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
@@ -20,7 +21,7 @@ export function app_replace_rule_set(context) {
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
   html_p_text(root, "Start:");
-  storage_local_get_context(context, "rule_set_start");
+  storage_local_initialize_context(context, "rule_set_start");
   html_p_text(root, "Rules:");
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
