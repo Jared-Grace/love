@@ -3067,7 +3067,6 @@
    "app_new",
    "app_name_prefixed",
    "js_imports_paths_fix",
-   "app_replace_home",
    "storage_local_key_get"
   ],
   "output": [
@@ -10324,9 +10323,6 @@
   "rule_sets": [
    "app_replace_home"
   ],
-  "rules": [
-   "app_replace_home"
-  ],
   "name2": [
    "app_replace_home"
   ],
@@ -10492,6 +10488,9 @@
   ],
   "lambda$item$index": [
    "each_index"
+  ],
+  "app_replace_rule_sets": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19560,6 +19559,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "app_replace_rule_sets",
     "each_index",
     "storage_local_set_context",
     "html_button_screen",
@@ -19569,8 +19569,6 @@
     "context",
     "body",
     "rule_sets",
-    "name",
-    "rules",
     "lambda2",
     "item",
     "index",
