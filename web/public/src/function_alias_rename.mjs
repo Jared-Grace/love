@@ -9,7 +9,7 @@ export async function function_alias_rename(before, after) {
     let inverted = object_invert(aliases);
     let n = object_property_exists_not(inverted, before);
     if (n) {
-      return;
+      return aliases;
     }
     let acronyms = object_property_get(inverted, before);
     function lambda2(acronym) {
