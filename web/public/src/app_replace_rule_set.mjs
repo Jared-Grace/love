@@ -25,7 +25,7 @@ export function app_replace_rule_set(context) {
     let right = object_property_get(rule, "right");
     let right_joined = list_join_space(right);
     let left_joined = list_join_space(left);
-    let text = " ↦ ";
+    let text = left_joined + " ↦ " + right_joined;
     function lambda3() {}
     html_button(parent, text2, lambda3);
   }
