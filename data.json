@@ -10540,7 +10540,10 @@
   "split2": [
    "string_split_space"
   ],
-  "index2": [
+  "middle": [
+   "app_replace_rule_set"
+  ],
+  "list_take": [
    "app_replace_rule_set"
   ]
  },
@@ -19849,7 +19852,8 @@
     "lambda",
     "rule",
     "split",
-    "index2",
+    "middle",
+    "list_take",
     "text"
    ]
   },
