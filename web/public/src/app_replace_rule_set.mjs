@@ -33,9 +33,8 @@ export function app_replace_rule_set(context) {
   function lambda2(letter) {
     let b = null;
     function lambda5() {
-      const style_key = "background-color";
       const style_value = "lightgreen";
-      html_style_set(b, style_key, style_value);
+      html_style_set(b, "background-color", style_value);
     }
     b = html_button(root, letter, lambda5);
   }
