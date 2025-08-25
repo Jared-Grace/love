@@ -40,9 +40,11 @@ export function app_replace_rule_set(context) {
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
-      if (false) {
+      if (index_selected === index) {
+        index_selected = null;
+      } else {
+        index_selected = index;
       }
-      index_selected = index;
       refresh();
     }
     let b = html_button(root, letter, lambda5);
