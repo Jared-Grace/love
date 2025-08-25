@@ -101,7 +101,9 @@ export function app_replace_rule_set(context) {
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
       html_enable_if(component, nn);
-      function lambda7(item2) {app_replace_rule_valid(rule2, index_selected, current_list)}
+      function lambda7(item2) {
+        app_replace_rule_valid(rule2, index_selected, current_list);
+      }
       let ne = list_any(current_list, lambda7);
     }
     each(rules_buttons, lambda6);
