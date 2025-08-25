@@ -9793,8 +9793,7 @@
   ],
   "html_document_body": [
    "html_document_body",
-   "app_refresh",
-   "app_replace"
+   "app_refresh"
   ],
   "document": [
    "html_document_body",
@@ -9954,7 +9953,6 @@
    "storage_local_get_or",
    "app_replace_refresh",
    "app_refresh",
-   "app_replace",
    "storage_local_initialize",
    "storage_local_get_context",
    "storage_local_set_context",
@@ -10006,8 +10004,7 @@
   ],
   "screens": [
    "app_replace_refresh",
-   "app_refresh",
-   "app_replace"
+   "app_refresh"
   ],
   "screen_name": [
    "function_new_app_screen",
@@ -10020,8 +10017,7 @@
   ],
   "app_replace_screens": [
    "app_replace_refresh",
-   "app_replace_screens",
-   "app_replace"
+   "app_replace_screens"
   ],
   "home": [
    "app_replace_screens"
@@ -10093,7 +10089,6 @@
   "app_refresh": [
    "app_replace_refresh",
    "app_refresh",
-   "app_replace",
    "app_screen_set"
   ],
   "context": [
@@ -10162,7 +10157,6 @@
   "root": [
    "app_replace_home",
    "app_replace_rule_set",
-   "app_replace",
    "html_p",
    "html_p_text",
    "html_div"
@@ -10359,6 +10353,9 @@
   ],
   "firebase_deploy": [
    "firebase_deploy"
+  ],
+  "app_replace_main": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -18682,14 +18679,9 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "app_refresh",
-    "app_replace_screens",
-    "html_document_body",
+    "app_replace_main",
     "marker",
-    "app_replace",
-    "app_fn",
-    "screens",
-    "root"
+    "app_replace"
    ]
   },
   "html_document_body": {
