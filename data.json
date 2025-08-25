@@ -10214,6 +10214,9 @@
   ],
   "label": [
    "app_replace_rule_set"
+  ],
+  "refresh": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18911,10 +18914,11 @@
     "letter",
     "b",
     "lambda5",
+    "refresh",
     "l",
-    "label",
     "rules",
     "mapped",
+    "label",
     "lambda",
     "rule",
     "left",
