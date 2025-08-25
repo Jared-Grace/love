@@ -5,6 +5,5 @@ export function each_index(list, lambda$item$index) {
     lambda$item$index(item, index);
     index++;
   }
-  let v = each(list, lambda2);
-  return v;
+  each(list, lambda2);
 }
