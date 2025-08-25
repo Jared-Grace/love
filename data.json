@@ -10746,9 +10746,6 @@
    "html_document_root",
    "app_replace_main"
   ],
-  "html_style_set": [
-   "app_replace_main"
-  ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
    "html_update_dev"
@@ -10794,6 +10791,9 @@
   ],
   "html_update_public": [
    "html_update_public"
+  ],
+  "html_style_font_size": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20295,19 +20295,19 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
-    "html_style_set",
+    "html_style_font_size",
     "html_document_root",
     "html_meta_viewport",
     "app_refresh",
     "html_document_body",
     "app_replace_screens",
     "app_replace",
-    "value",
     "app_replace_main",
     "app_fn",
     "screens",
     "root",
-    "html"
+    "html",
+    "value"
    ]
   },
   "html_document_head": {
