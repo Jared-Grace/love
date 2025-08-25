@@ -1633,7 +1633,8 @@
   "d",
   "s storage_local_initialize",
   "c storage_local_get_context storage_local_initialize_context",
-  "u sse"
+  "u sse",
+  "c html_disable html_enable"
  ],
  "marker_current": "1",
  "function_current": "storage_local_initialize_context",
