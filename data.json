@@ -1681,7 +1681,7 @@
   "c object_property_lambda object_property_lambda_async"
  ],
  "marker_current": "1",
- "function_current": "object_property_lambda",
+ "function_current": "object_property_lambda_async",
  "terminal": false,
  "identifiers": {
   "log": [
