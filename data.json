@@ -10220,9 +10220,6 @@
   "html_disable": [
    "app_replace_rule_set"
   ],
-  "label": [
-   "app_replace_rule_set"
-  ],
   "refresh": [
    "app_replace_rule_set"
   ],
@@ -10270,6 +10267,9 @@
    "app_replace_rule_set"
   ],
   "label_rules": [
+   "app_replace_rule_set"
+  ],
+  "label_rules_text": [
    "app_replace_rule_set"
   ]
  },
@@ -18986,7 +18986,7 @@
     "text",
     "lambda3",
     "rules_buttons",
-    "label",
+    "label_rules_text",
     "fn",
     "nn",
     "lambda4",
