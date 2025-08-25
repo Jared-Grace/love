@@ -2757,8 +2757,7 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology",
-   "app_replace_rule_set"
+   "tautology"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19076,7 +19075,6 @@
     "lambda6",
     "component",
     "rule2",
-    "v",
     "lambda4",
     "symbols_button",
     "index2"
