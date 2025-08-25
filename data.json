@@ -1535,7 +1535,6 @@
   "s server",
   "u v",
   "n app_new",
-  "s html",
   "u hn",
   "mc hn",
   "s param,marker",
@@ -1657,7 +1656,8 @@
   "fb",
   "s app_replace",
   "o fd",
-  "function_dependencies_code app_replace_main"
+  "function_dependencies_code app_replace_main",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "function_dependencies_code_copy",
