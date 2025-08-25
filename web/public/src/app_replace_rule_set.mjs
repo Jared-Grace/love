@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { log } from "./log.mjs";
 import { json_to } from "./json_to.mjs";
 import { equal_by } from "./equal_by.mjs";
@@ -72,7 +73,7 @@ export function app_replace_rule_set(context) {
       current_list;
       let sliced = list_slice_count(current_list, index_selected, size);
       let eq = equal_by(left, sliced, json_to);
-      if (false) {
+      if (not(eq)) {
       }
       log({
         left,
