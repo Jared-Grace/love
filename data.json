@@ -5186,8 +5186,7 @@
    "app_html_open",
    "function_new_app_screen",
    "marker_screen_add",
-   "list_concat_multiple",
-   "app_replace_rule_set"
+   "list_concat_multiple"
   ],
   "body_block": [
    "functions_combine",
@@ -19067,10 +19066,9 @@
     "before",
     "size",
     "after",
-    "combined",
+    "refresh",
     "b",
     "rules_buttons",
-    "refresh",
     "lambda2",
     "letter",
     "lambda5",
