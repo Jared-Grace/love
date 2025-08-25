@@ -1922,7 +1922,8 @@
    "firebase_admin_get",
    "firebase_storage_url_project",
    "string_replace",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "html_document_head"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -6226,7 +6227,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_clear"
+   "html_clear",
+   "html_document_head"
   ],
   "import_": [
    "function_imports_add",
@@ -9932,7 +9934,8 @@
   ],
   "document": [
    "html_document_body",
-   "html_element"
+   "html_element",
+   "html_document_head"
   ],
   "tag_name": [
    "html_element",
@@ -10040,7 +10043,8 @@
    "html_on_click",
    "html_p",
    "html_enable_if",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_document_head"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10069,7 +10073,8 @@
   "html_component_wrap": [
    "html_element",
    "html_document_body",
-   "html_component_wrap"
+   "html_component_wrap",
+   "html_document_head"
   ],
   "app_replace_home": [
    "app_replace_home",
@@ -10676,6 +10681,9 @@
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
+  ],
+  "html_document_head": [
+   "html_document_head"
   ]
  },
  "functions": {
@@ -20201,9 +20209,20 @@
     "root",
     "p"
    ]
+  },
+  "html_document_head": {
+   "async": false,
+   "identifiers": [
+    "html_component_wrap",
+    "marker",
+    "html_document_head",
+    "body",
+    "document",
+    "component"
+   ]
   }
  },
- "git_push_when": "2025-08-25T20:10:09.708Z",
+ "git_push_when": "2025-08-25T21:11:44.192Z",
  "error_attention": null,
  "app_current": "replace"
 }
