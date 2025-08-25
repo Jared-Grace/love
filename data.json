@@ -10291,7 +10291,8 @@
    "html_button_screen",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_replace_settings"
   ],
   "html_clear": [
    "app_refresh",
@@ -20456,7 +20457,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "app_replace_settings"
+    "app_replace_settings",
+    "context"
    ]
   }
  },
