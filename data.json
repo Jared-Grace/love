@@ -9783,7 +9783,8 @@
    "html_text_set",
    "html_button",
    "html_clear",
-   "html_p_text"
+   "html_p_text",
+   "app_replace_rule_set"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -9855,7 +9856,8 @@
    "html_on",
    "html_component_element_get",
    "html_on_click",
-   "html_p"
+   "html_p",
+   "app_replace_rule_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10207,6 +10209,9 @@
    "app_replace_rule_set"
   ],
   "html_disable": [
+   "app_replace_rule_set"
+  ],
+  "text2": [
    "app_replace_rule_set"
   ]
  },
@@ -18870,6 +18875,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "html_disable",
     "each_index",
     "html_style_set",
@@ -18903,6 +18909,8 @@
     "letter",
     "b",
     "lambda5",
+    "component",
+    "text2",
     "rules",
     "mapped",
     "lambda",
@@ -19351,7 +19359,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-24T23:14:35.836Z",
+ "git_push_when": "2025-08-25T00:16:41.783Z",
  "error_attention": null,
  "app_current": "replace"
 }
