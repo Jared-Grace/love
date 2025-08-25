@@ -4250,8 +4250,7 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified",
-   "app_replace_rule_set"
+   "function_transform_marker_specified"
   ],
   "assert_json": [
    "assert_json",
@@ -4499,8 +4498,7 @@
    "list_size_1_assert",
    "list_skip",
    "list_slice_end",
-   "function_transform_marker_specified",
-   "app_replace_rule_set"
+   "function_transform_marker_specified"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -4820,8 +4818,7 @@
   ],
   "equal_by": [
    "equal_by",
-   "js_node_atomize",
-   "app_replace_rule_set"
+   "js_node_atomize"
   ],
   "equal_by_async": [
    "equal_by_async",
@@ -6697,8 +6694,7 @@
   ],
   "size": [
    "list_size",
-   "function_transform_marker_specified",
-   "app_replace_rule_set"
+   "function_transform_marker_specified"
   ],
   "js_markers": [
    "function_transform_marker_all",
@@ -10309,10 +10305,9 @@
    "app_replace_rule_set"
   ],
   "sliced": [
-   "list_slice",
-   "app_replace_rule_set"
+   "list_slice"
   ],
-  "list_slice_count": [
+  "app_replace_rule_valid": [
    "app_replace_rule_set"
   ]
  },
@@ -18976,11 +18971,8 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "app_replace_rule_valid",
     "not",
-    "json_to",
-    "equal_by",
-    "list_slice_count",
-    "list_size",
     "html_enable_if",
     "html_text_set_if",
     "null_not_is",
@@ -19034,8 +19026,6 @@
     "left_joined",
     "text",
     "lambda3",
-    "size",
-    "sliced",
     "eq",
     "alert",
     "before",
