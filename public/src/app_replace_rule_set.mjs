@@ -1,4 +1,4 @@
-import { list_second } from "./list_second.mjs";
+import { list_slice } from "./list_slice.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -65,7 +65,7 @@ export function app_replace_rule_set(context) {
       let left = object_property_get(rule, "left");
       index_selected;
       current_list;
-      let second = list_second(list);
+      let v2 = list_slice(list, a, b2);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
