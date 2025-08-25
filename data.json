@@ -1102,7 +1102,6 @@
   "s function,types",
   "u ft",
   "a fy function_types",
-  "s find",
   "s skip",
   "a lk list_skip",
   "s index,next",
@@ -1666,7 +1665,8 @@
   "s folder",
   "firebase_deploy_function",
   "u ssw",
-  "a ssw string_starts_with"
+  "a ssw string_starts_with",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
