@@ -4392,7 +4392,8 @@
    "file_read_json",
    "json_from",
    "storage_local_get",
-   "http_json"
+   "http_json",
+   "app_replace"
   ],
   "includes": [
    "catch_only_async",
@@ -6099,7 +6100,8 @@
    "function_import",
    "server",
    "http",
-   "http_json"
+   "http_json",
+   "app_replace"
   ],
   "__dirname": [
    "function_import",
@@ -10567,7 +10569,8 @@
    "http"
   ],
   "http_json": [
-   "http_json"
+   "http_json",
+   "app_replace"
   ]
  },
  "functions": {
@@ -18891,11 +18894,14 @@
    ]
   },
   "app_replace": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "http_json",
     "app_replace_main",
     "marker",
-    "app_replace"
+    "app_replace",
+    "json",
+    "url"
    ]
   },
   "html_document_body": {
