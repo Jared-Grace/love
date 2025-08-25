@@ -1638,7 +1638,8 @@
   "c list_map list_map_index",
   "u lmi",
   "c html_style_set html_style_remove",
-  "n html_enable_if"
+  "n html_enable_if",
+  "s list,sli"
  ],
  "marker_current": "1",
  "function_current": "html_enable_if",
