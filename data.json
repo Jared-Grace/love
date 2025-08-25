@@ -4179,8 +4179,7 @@
   "paths": [
    "functions_names",
    "git_push_schedule_command",
-   "path_resolve",
-   "html_update_generic"
+   "path_resolve"
   ],
   "p": [
    "functions_names",
@@ -9916,12 +9915,10 @@
   ],
   "folder_src": [
    "functions_path",
-   "folder_src",
-   "html_update_generic"
+   "folder_src"
   ],
   "src": [
-   "folder_src",
-   "html_update_generic"
+   "folder_src"
   ],
   "app_code": [
    "app_code"
@@ -10755,6 +10752,9 @@
    "html_update_generic"
   ],
   "from_paths": [
+   "html_update_generic"
+  ],
+  "lambda$f_name_ext": [
    "html_update_generic"
   ]
  },
@@ -20337,18 +20337,16 @@
     "js_code_import_single",
     "folder_current_join_code",
     "path_join",
-    "folder_src",
     "function_name_to_base",
     "js_code_call_statement",
     "app_name_prefixed",
     "html_update_generic",
     "name",
     "file_path",
+    "lambda$f_name_ext",
     "name_prefixed",
     "call",
     "f_name_ext",
-    "src",
-    "paths",
     "from_paths",
     "f_path",
     "from",
