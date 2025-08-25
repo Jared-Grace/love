@@ -161,7 +161,8 @@
   "jf": "json_from",
   "rs": "function_rename_suffix_add",
   "ffc": "firebase_deploy_function_app_current",
-  "he": "html_element"
+  "he": "html_element",
+  "msa": "marker_screen_add"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1719,7 +1720,8 @@
   "s roo",
   "s screen",
   "as marker_screen_add",
-  "as marker"
+  "as marker",
+  "a msa marker_screen_add"
  ],
  "marker_current": "1",
  "function_current": "app_replace_screens",
