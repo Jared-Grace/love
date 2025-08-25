@@ -8,9 +8,9 @@ export async function functions_combine_name(f_names_comma) {
   let results = await list_map_unordered_async(split, function_name_unalias);
   let f_names = list_map_property(results, "unaliased");
   let combined = function_name_combine_multiple(f_names);
-  let v = {
+  let result = {
     f_names,
     combined,
   };
-  return v;
+  return result;
 }
