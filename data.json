@@ -7871,7 +7871,8 @@
    "list_not_is",
    "list_squash",
    "marker_down_choices",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_replace_rule_set"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -18909,6 +18910,7 @@
     "letter",
     "b",
     "lambda5",
+    "l",
     "component",
     "text2",
     "rules",
