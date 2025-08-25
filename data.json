@@ -1617,7 +1617,6 @@
   "u u",
   "function_name_unalias s",
   "s string",
-  "u ssw",
   "u ss",
   "s split",
   "fw list_slice list_take",
@@ -1664,7 +1663,8 @@
   "u for",
   "ac for flr",
   "s folder",
-  "firebase_deploy_function"
+  "firebase_deploy_function",
+  "u ssw"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
