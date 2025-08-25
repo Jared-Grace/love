@@ -3169,8 +3169,7 @@
    "global_function_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "html_attribute_set",
-   "app_replace_main"
+   "html_attribute_set"
   ],
   "name": [
    "watch",
@@ -20306,8 +20305,7 @@
     "app_fn",
     "screens",
     "root",
-    "html",
-    "value"
+    "html"
    ]
   },
   "html_document_head": {
