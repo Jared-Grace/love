@@ -1725,7 +1725,8 @@
   "s app,repla",
   "s setting",
   "s storage",
-  "s screen"
+  "s screen",
+  "s rule,set"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
