@@ -2821,7 +2821,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "http_json"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4391,7 +4392,8 @@
    "file_overwrite_json",
    "file_read_json",
    "json_from",
-   "storage_local_get"
+   "storage_local_get",
+   "http_json"
   ],
   "includes": [
    "catch_only_async",
@@ -5065,7 +5067,8 @@
   "json_from": [
    "file_read_json",
    "json_from",
-   "storage_local_get"
+   "storage_local_get",
+   "http_json"
   ],
   "file_write": [
    "file_write",
@@ -10565,9 +10568,6 @@
    "http"
   ],
   "http_json": [
-   "http_json"
-  ],
-  "jf": [
    "http_json"
   ]
  },
@@ -19981,12 +19981,14 @@
   "http_json": {
    "async": true,
    "identifiers": [
+    "json_from",
     "http",
     "marker",
     "http_json",
     "url",
     "text",
-    "jf"
+    "v",
+    "json"
    ]
   }
  },
