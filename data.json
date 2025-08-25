@@ -2321,7 +2321,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "app_replace_rule_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4915,7 +4916,8 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "app_replace_rule_set"
   ],
   "each_pair": [
    "each_pair",
@@ -10893,7 +10895,8 @@
    "app_replace_rule_set"
   ],
   "object_property_exists_not_assert": [
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19551,6 +19554,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_property_exists_not_assert",
     "range",
     "list_any",
     "html_div",
@@ -19621,6 +19625,8 @@
     "lambda2",
     "letter",
     "lambda5",
+    "object",
+    "property_name",
     "nn",
     "lambda6",
     "component",
