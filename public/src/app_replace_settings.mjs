@@ -6,6 +6,7 @@ import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
+  let root = context;
   function lambda2() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
