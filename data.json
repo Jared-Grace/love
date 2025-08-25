@@ -2818,7 +2818,6 @@
    "js_visit_type_each_async",
    "list_all",
    "list_concat",
-   "list_join",
    "list_join_comma_space",
    "list_last_is",
    "list_multiple_is",
@@ -3042,7 +3041,8 @@
    "function_import",
    "function_name_to_path",
    "js_code_call_args",
-   "list_join_empty"
+   "list_join_empty",
+   "list_join"
   ],
   "watcher": [
    "watch"
@@ -15976,7 +15976,7 @@
     "list_join",
     "list",
     "separator",
-    "v",
+    "joined",
     "join"
    ],
    "async": false
