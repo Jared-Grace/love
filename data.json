@@ -1645,7 +1645,6 @@
   "a fb firebase_deploy",
   "o app_replace",
   "s html,update",
-  "fb",
   "s app_replace",
   "o fd",
   "function_dependencies_code app_replace_main",
@@ -1694,7 +1693,8 @@
   "n string_replace",
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
-  "s new"
+  "s new",
+  "fb"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
