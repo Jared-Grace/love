@@ -10564,7 +10564,7 @@
   "http_json": [
    "http_json"
   ],
-  "jf": [
+  "jt": [
    "http_json"
   ]
  },
@@ -19983,7 +19983,7 @@
     "http_json",
     "url",
     "text",
-    "jf"
+    "jt"
    ]
   }
  },
