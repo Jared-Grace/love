@@ -10688,6 +10688,9 @@
   "head": [
    "html_document_head",
    "app_replace_main"
+  ],
+  "he": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20212,6 +20215,7 @@
     "app_fn",
     "screens",
     "head",
+    "he",
     "root",
     "p"
    ]
