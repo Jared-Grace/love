@@ -2388,7 +2388,8 @@
    "object_properties_delete",
    "visit_filter_recursive_async",
    "function_rename_identifiers",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "firebase_deploy_function"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2782,7 +2783,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3466,7 +3468,8 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "firebase_deploy_function"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4701,8 +4704,7 @@
    "js_parse_statement_module",
    "list_first",
    "list_single",
-   "list_first_second_generic",
-   "firebase_deploy_function"
+   "list_first_second_generic"
   ],
   "each_multiple": [
    "each_multiple",
@@ -4724,8 +4726,7 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find",
-   "list_find_property",
-   "firebase_deploy_function"
+   "list_find_property"
   ],
   "items": [
    "each_multiple",
@@ -5344,7 +5345,8 @@
    "list_filter_property",
    "list_find",
    "prompt_previous",
-   "search_generic"
+   "search_generic",
+   "firebase_deploy_function"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -19631,7 +19633,7 @@
   "firebase_deploy_function": {
    "async": false,
    "identifiers": [
-    "list_first",
+    "list_filter",
     "folder_previous",
     "folder_read",
     "marker",
@@ -19639,8 +19641,10 @@
     "prefix",
     "path_folder",
     "files",
-    "first",
-    "list"
+    "v",
+    "list",
+    "lambda",
+    "item"
    ]
   }
  },
