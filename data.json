@@ -1672,8 +1672,8 @@
   "date_now_file",
   "s json",
   "a ff firebase_deploy_function",
-  "p",
   "ff app_replace_main",
+  "p",
   "fd firebase_deploy_function"
  ],
  "marker_current": "1",
