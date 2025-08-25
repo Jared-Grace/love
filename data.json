@@ -1917,7 +1917,8 @@
    "firebase_deploy_function",
    "firebase_admin_get",
    "firebase_storage_url_project",
-   "string_replace"
+   "string_replace",
+   "firebase_deploy_function_app_current"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2232,7 +2233,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "firebase_deploy_function_app_current"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2840,7 +2842,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_deploy_function_app_current"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10480,7 +10483,8 @@
    "app_replace"
   ],
   "firebase_deploy_function": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_deploy_function_app_current"
   ],
   "files": [
    "folder_read"
@@ -10651,6 +10655,9 @@
   ],
   "firebase_storage_function_run": [
    "app_replace"
+  ],
+  "firebase_deploy_function_app_current": [
+   "firebase_deploy_function_app_current"
   ]
  },
  "functions": {
@@ -20146,6 +20153,16 @@
     "property_name",
     "parsed",
     "value"
+   ]
+  },
+  "firebase_deploy_function_app_current": {
+   "async": true,
+   "identifiers": [
+    "firebase_deploy_function",
+    "marker",
+    "firebase_deploy_function_app_current",
+    "f_name",
+    "v"
    ]
   }
  },
