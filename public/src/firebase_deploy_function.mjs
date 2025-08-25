@@ -4,9 +4,9 @@ import { marker } from "./marker.mjs";
 export async function firebase_deploy_function() {
   const admin = await import("firebase-admin");
   marker("1");
-  let data = await firebase_service_account();
+  let service_account = await firebase_service_account();
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(service_account),
     storageBucket: "YOUR_PROJECT_ID.appspot.com",
   });
   const bucket = admin.storage().bucket();
