@@ -1675,10 +1675,11 @@
   "p",
   "fd firebase_deploy_function",
   "ff app_replace_main",
-  "n global_get"
+  "n global_get",
+  "n global_function"
  ],
  "marker_current": "1",
- "function_current": "global_get",
+ "function_current": "global_function",
  "terminal": false,
  "identifiers": {
   "log": [
