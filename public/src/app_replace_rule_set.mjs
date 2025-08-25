@@ -47,7 +47,7 @@ export function app_replace_rule_set(context) {
   );
   let index_selected = null;
   let div = html_div(root);
-  let current_list = string_split_empty(current);
+  let current_list = string_split_empty(start);
   let symbols_buttons = null;
   let label_rules = html_p(root);
   let { rules } = item;
