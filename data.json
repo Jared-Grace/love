@@ -1665,7 +1665,6 @@
   "date_now_file",
   "s json",
   "a ff firebase_deploy_function",
-  "p",
   "fd firebase_deploy_function",
   "n global_get",
   "n global_function",
@@ -1713,6 +1712,7 @@
   "html_name_to_path_dev replace",
   "html_update replace",
   "ps",
+  "p",
   "html_update_dev replace"
  ],
  "marker_current": "1",
