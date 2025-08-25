@@ -1706,8 +1706,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "app_replace"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3291,7 +3290,8 @@
    "list_filter_property",
    "list_range",
    "list_slice_end",
-   "ternary"
+   "ternary",
+   "app_replace"
   ],
   "separator": [
    "watch",
@@ -5795,7 +5795,8 @@
    "js_bang_to_not",
    "js_code_call",
    "js_code_call_statement",
-   "js_code_declaration"
+   "js_code_declaration",
+   "app_replace"
   ],
   "function_delete": [
    "function_delete",
@@ -7728,7 +7729,8 @@
   ],
   "fn_name": [
    "js_code_call",
-   "js_code_call_args"
+   "js_code_call_args",
+   "app_replace"
   ],
   "js_code_statement": [
    "js_code_call_statement",
@@ -18973,8 +18975,8 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "js_code_call",
     "firebase_storage_download_property",
-    "log",
     "firebase_deploy_function_destination_version",
     "app_replace_main",
     "marker",
@@ -18983,7 +18985,9 @@
     "name",
     "destination_version",
     "destination",
-    "code"
+    "code",
+    "result",
+    "fn_name"
    ]
   },
   "html_document_body": {
