@@ -1,4 +1,3 @@
-import { app_replace_font_size } from "./app_replace_font_size.mjs";
 import { app_replace_font_size_refresh } from "./app_replace_font_size_refresh.mjs";
 import { html_meta_viewport } from "./html_meta_viewport.mjs";
 import { app_refresh } from "./app_refresh.mjs";
@@ -15,6 +14,5 @@ export function app_replace_main() {
     screens,
     root: root,
   });
-  let value = app_replace_font_size(context);
   app_replace_font_size_refresh(context);
 }
