@@ -4,7 +4,6 @@ import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
-import { each_index } from "./each_index.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
@@ -45,9 +44,10 @@ export function app_replace_rule_set(context) {
       refresh();
     }
     b = html_button(root, letter, lambda5);
+    return b;
   }
   let mapped2 = list_map_index(list, mapper);
-  each_index(current_list, lambda2);
+  list_map_index(current_list, lambda2);
   let l = html_p(root);
   refresh();
   let { rules } = item;
