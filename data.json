@@ -1584,7 +1584,6 @@
   "oa oa",
   "o oa",
   "as combine",
-  "as marker",
   "fw mb marker_screen_add",
   "oec",
   "o mna",
@@ -1719,7 +1718,8 @@
   "o app_replace_screens",
   "s roo",
   "s screen",
-  "as marker_screen_add"
+  "as marker_screen_add",
+  "as marker"
  ],
  "marker_current": "1",
  "function_current": "app_replace_screens",
