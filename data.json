@@ -3191,7 +3191,8 @@
    "list_filter_property",
    "list_range",
    "list_slice_end",
-   "ternary"
+   "ternary",
+   "list_concat_multiple"
   ],
   "separator": [
    "watch",
@@ -4681,7 +4682,8 @@
   "lists": [
    "each_multiple",
    "each_pair",
-   "lists_get"
+   "lists_get",
+   "list_concat_multiple"
   ],
   "first": [
    "each_multiple",
@@ -19547,7 +19549,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "list_concat_multiple"
+    "list_concat_multiple",
+    "lists",
+    "result"
    ]
   }
  },
