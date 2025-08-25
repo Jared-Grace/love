@@ -1656,7 +1656,8 @@
   "html_update replace",
   "fb",
   "s app_replace",
-  "o fd"
+  "o fd",
+  "function_dependencies_code app_replace_main"
  ],
  "marker_current": "1",
  "function_current": "function_dependencies_code_copy",
