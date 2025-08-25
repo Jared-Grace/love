@@ -93,6 +93,7 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {}
       let b = html_button(div, letter, lambda5);
+      let to2 = object_merge(to, from);
       return b;
     }
     symbols_buttons = list_map_index(current_list, lambda2);
