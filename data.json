@@ -1947,7 +1947,8 @@
    "html_document_root",
    "html_name_to_path_dev",
    "html_update_dev",
-   "html_update_public"
+   "html_update_public",
+   "app_replace_settings"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10806,6 +10807,9 @@
   ],
   "emoji_gear": [
    "app_replace_home"
+  ],
+  "app_replace_settings": [
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20439,6 +20443,13 @@
     "f_name_ext",
     "src",
     "from_paths"
+   ]
+  },
+  "app_replace_settings": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_replace_settings"
    ]
   }
  },
