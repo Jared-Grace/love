@@ -2872,7 +2872,8 @@
    "command_line_schtasks",
    "file_open_editor",
    "npm_install",
-   "schtasks_query"
+   "schtasks_query",
+   "firebase_deploy"
   ],
   "log_keep": [
    "catch_log",
@@ -4352,13 +4353,15 @@
    "command_line_schtasks",
    "git_push_schedule",
    "git_push_schedule_command",
-   "schtasks_query"
+   "schtasks_query",
+   "firebase_deploy"
   ],
   "stdout": [
    "command_line",
    "command_line_read",
    "command_line_schtasks",
-   "git_push_schedule"
+   "git_push_schedule",
+   "firebase_deploy"
   ],
   "encoding": [
    "command_line"
@@ -10347,9 +10350,6 @@
    "html_div"
   ],
   "firebase_deploy": [
-   "firebase_deploy"
-  ],
-  "cl": [
    "firebase_deploy"
   ]
  },
@@ -19592,11 +19592,13 @@
    ]
   },
   "firebase_deploy": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "command_line",
     "marker",
     "firebase_deploy",
-    "cl"
+    "stdout",
+    "command"
    ]
   }
  },
