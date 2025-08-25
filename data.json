@@ -1904,7 +1904,8 @@
    "global_function_async",
    "global_function_property_async",
    "http_json",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_admin_get"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3022,7 +3023,8 @@
   "default": [
    "watch",
    "chalk_color",
-   "clipboard_copy"
+   "clipboard_copy",
+   "firebase_admin_get"
   ],
   "joined": [
    "watch",
@@ -10468,7 +10470,8 @@
    "firebase_service_account"
   ],
   "firebase_service_account": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_admin_get"
   ],
   "folder_find_starts_with": [
    "firebase_service_account"
@@ -10477,7 +10480,8 @@
    "firebase_service_account"
   ],
   "service_account": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_admin_get"
   ],
   "firebase_upload_string": [
    "firebase_deploy_function"
@@ -10516,7 +10520,8 @@
    "firebase_admin"
   ],
   "admin": [
-   "firebase_admin"
+   "firebase_admin",
+   "firebase_admin_get"
   ],
   "global_get": [
    "global_get",
@@ -10555,7 +10560,8 @@
    "firebase_admin"
   ],
   "firebase_admin_get": [
-   "firebase_admin"
+   "firebase_admin",
+   "firebase_admin_get"
   ],
   "global_function_property_async": [
    "global_function_property_async"
@@ -10580,6 +10586,21 @@
   "firebase_deploy_function_destination_version": [
    "firebase_deploy_function",
    "app_replace"
+  ],
+  "firebase_storage_url": [
+   "firebase_admin_get"
+  ],
+  "initializeApp": [
+   "firebase_admin_get"
+  ],
+  "credential": [
+   "firebase_admin_get"
+  ],
+  "cert": [
+   "firebase_admin_get"
+  ],
+  "storageBucket": [
+   "firebase_admin_get"
   ]
  },
  "functions": {
@@ -20008,6 +20029,22 @@
     "url",
     "text",
     "json"
+   ]
+  },
+  "firebase_admin_get": {
+   "async": true,
+   "identifiers": [
+    "firebase_storage_url",
+    "firebase_service_account",
+    "marker",
+    "firebase_admin_get",
+    "admin",
+    "default",
+    "service_account",
+    "initializeApp",
+    "credential",
+    "cert",
+    "storageBucket"
    ]
   }
  },
