@@ -99,7 +99,7 @@ export function app_replace_rule_set(context) {
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
-      html_enable_if(component, nn);
+      html_enable_if(component, true);
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
