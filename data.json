@@ -4506,8 +4506,7 @@
    "list_skip",
    "list_slice",
    "list_slice_end",
-   "list_take",
-   "app_replace_rule_set"
+   "list_take"
   ],
   "data_prompts": [
    "data_prompts",
@@ -10304,6 +10303,9 @@
   ],
   "sliced": [
    "list_slice",
+   "app_replace_rule_set"
+  ],
+  "list_slice_count": [
    "app_replace_rule_set"
   ]
  },
@@ -18967,8 +18969,8 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_slice_count",
     "list_size",
-    "list_slice",
     "html_enable_if",
     "html_text_set_if",
     "null_not_is",
