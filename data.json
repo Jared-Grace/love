@@ -10871,9 +10871,6 @@
   "lambda7": [
    "app_replace_rule_set"
   ],
-  "item2": [
-   "app_replace_rule_set"
-  ],
   "size2": [
    "app_replace_rule_set"
   ]
@@ -19607,7 +19604,6 @@
     "component",
     "rule2",
     "lambda7",
-    "item2",
     "size2",
     "r",
     "ne",
