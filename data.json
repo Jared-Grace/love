@@ -9907,7 +9907,8 @@
    "folder_current_join_code",
    "function_name_to_path_import",
    "html_update_generic",
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
@@ -9917,11 +9918,13 @@
   "folder_src": [
    "functions_path",
    "folder_src",
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ],
   "src": [
    "folder_src",
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ],
   "app_code": [
    "app_code"
@@ -10756,13 +10759,15 @@
   ],
   "from_paths": [
    "html_update_generic",
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ],
   "lambda$f_name_ext": [
    "html_update_generic"
   ],
   "paths_get": [
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ]
  },
  "functions": {
@@ -20333,12 +20338,17 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
+    "folder_src",
     "html_name_to_path_dev",
     "html_update_generic",
     "marker",
     "html_update_dev",
     "name",
-    "file_path"
+    "file_path",
+    "paths_get",
+    "f_name_ext",
+    "src",
+    "from_paths"
    ]
   },
   "html_update_generic": {
