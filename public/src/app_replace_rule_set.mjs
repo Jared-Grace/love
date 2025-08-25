@@ -66,9 +66,12 @@ export function app_replace_rule_set(context) {
     let fn = null;
     if (index_selected) {
       label = "Choose a rule:";
-      fn = html_enable;
     } else {
       label = "Rules:";
+    }
+    if (index_selected) {
+      fn = html_enable;
+    } else {
       fn = html_disable;
     }
     html_text_set(l, label);
