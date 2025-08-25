@@ -10809,7 +10809,11 @@
    "app_replace_home"
   ],
   "app_replace_settings": [
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_screens"
+  ],
+  "settings": [
+   "app_replace_screens"
   ]
  },
  "functions": {
@@ -19350,13 +19354,15 @@
   "app_replace_screens": {
    "async": false,
    "identifiers": [
+    "app_replace_settings",
     "app_replace_rule_set",
     "app_replace_home",
     "marker",
     "app_replace_screens",
     "v",
     "home",
-    "rule_set"
+    "rule_set",
+    "settings"
    ]
   },
   "marker_screen_add": {
