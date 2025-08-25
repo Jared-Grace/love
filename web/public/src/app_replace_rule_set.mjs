@@ -93,7 +93,7 @@ export function app_replace_rule_set(context) {
     html_clear(div);
     function lambda2(letter, index) {
       function lambda5() {}
-      let b = html_button(div, letter, lambda5);
+      let b = html_button(div, letter, lambda5);$a
       let object = b;
       object_property_set_exists_not(object, "index", index);
       return b;
