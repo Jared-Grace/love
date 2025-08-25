@@ -1589,7 +1589,6 @@
   "o mna",
   "s set,current",
   "s restore",
-  "s app",
   "s assert,null",
   "s combine",
   "fw r function_rename_suffix_add",
@@ -1694,7 +1693,8 @@
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
   "s new",
-  "fb"
+  "fb",
+  "s app"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
