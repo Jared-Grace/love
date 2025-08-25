@@ -60,7 +60,8 @@ export function app_replace_rule_set(context) {
     let b = html_button(div, letter, lambda5);
     return b;
   }
-  let symbols_buttons = list_map_index(current_list, lambda2);
+  let symbols_buttons = null;
+  symbols_buttons = list_map_index(current_list, lambda2);
   let label_rules = html_p(root);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
