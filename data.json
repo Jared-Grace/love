@@ -2788,8 +2788,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "firebase_deploy_function"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7110,7 +7109,8 @@
    "html_name_to_path",
    "file_name_html",
    "app_html_open",
-   "file_name_json"
+   "file_name_json",
+   "firebase_deploy_function"
   ],
   "html_update": [
    "html_new",
@@ -19689,7 +19689,7 @@
     "f_name",
     "code",
     "now_file",
-    "v",
+    "file_name",
     "destination"
    ]
   },
