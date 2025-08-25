@@ -11,7 +11,9 @@ export async function app_replace() {
   let url =
     "https://firebasestorage.googleapis.com/v0/b/" +
     firebase_storage_url() +
-    "/o/myfile.json?alt=media";
+    "/o/" +
+    destination_version +
+    "?alt=media";
   app_replace_main();
   let json = await http_json(url);
 }
