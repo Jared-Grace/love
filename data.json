@@ -1709,7 +1709,8 @@
   "c html_document_body html_document_root",
   "s style",
   "s html",
-  "is html_update"
+  "is html_update",
+  "cs html_name_to_path dev"
  ],
  "marker_current": "1",
  "function_current": "html_document_root",
