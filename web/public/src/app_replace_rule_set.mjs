@@ -1,3 +1,4 @@
+import { html_style_remove } from "./html_style_remove.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
@@ -77,6 +78,8 @@ export function app_replace_rule_set(context) {
     function lambda4(symbols_button, index2) {
       if (index2 === index_selected) {
         html_style_set(symbols_button, "background-color", "lightgreen");
+      } else {
+        html_style_remove();
       }
     }
     each_index(symbols_buttons, lambda4);
