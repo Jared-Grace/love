@@ -1687,11 +1687,11 @@
   "a jf json_from",
   "o ff",
   "ff app_replace_main",
-  "rs firebase_storage_url project",
   "s rename",
   "as rename",
   "a rs function_rename_suffix_add",
-  "ps"
+  "ps",
+  "rs firebase_storage_url project"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
