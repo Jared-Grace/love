@@ -1932,7 +1932,8 @@
    "string_replace",
    "firebase_deploy_function_app_current",
    "html_document_head",
-   "html_document_root"
+   "html_document_root",
+   "html_name_to_path_dev"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20301,6 +20302,7 @@
   "html_name_to_path_dev": {
    "async": false,
    "identifiers": [
+    "marker",
     "folder_public_combine",
     "file_name_html",
     "html_name_to_path_dev",
