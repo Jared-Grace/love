@@ -1,3 +1,4 @@
+import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { folder_src } from "./folder_src.mjs";
 import { html_update_generic } from "./html_update_generic.mjs";
 import { marker } from "./marker.mjs";
@@ -10,5 +11,5 @@ export async function html_update(name) {
     const from_paths = [src, f_name_ext];
     return from_paths;
   }
-  await html_update_generic(name, file_path, paths_get);
+  await html_update_generic(name, file_path, paths_get, app_name_prefixed);
 }
