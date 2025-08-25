@@ -74,7 +74,7 @@ export function app_replace_rule_set(context) {
     }
     const on_true = "Choose a rule:";
     const on_false = "Rules:";
-    let label_rules_text = ternary(nn, label_rules_text, on_true, on_false);
+    let label_rules_text = ternary(nn, on_true, on_false);
     html_text_set(label_rules, label_rules_text);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
