@@ -1849,7 +1849,8 @@
    "storage_local_initialize_context",
    "html_enable",
    "html_style_remove",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "firebase_deploy"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10343,6 +10344,9 @@
   "html_div": [
    "app_replace_rule_set",
    "html_div"
+  ],
+  "firebase_deploy": [
+   "firebase_deploy"
   ]
  },
  "functions": {
@@ -19581,6 +19585,13 @@
     "html_div",
     "root",
     "div"
+   ]
+  },
+  "firebase_deploy": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "firebase_deploy"
    ]
   }
  },
