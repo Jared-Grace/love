@@ -1708,7 +1708,8 @@
   "ffc",
   "c html_document_body html_document_root",
   "s style",
-  "s html"
+  "s html",
+  "is html_update"
  ],
  "marker_current": "1",
  "function_current": "html_document_root",
