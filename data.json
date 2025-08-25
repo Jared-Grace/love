@@ -1713,7 +1713,8 @@
    "data_file_update_inner",
    "function_alias_rename",
    "js_imports_paths_fix",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_concat_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2362,7 +2363,8 @@
    "object_merge",
    "object_properties_delete",
    "visit_filter_recursive_async",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "list_concat_multiple"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2556,7 +2558,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "list_concat_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -3439,7 +3442,8 @@
    "app_replace_home",
    "app_replace_rule_set",
    "lists_get",
-   "list_get_end_3"
+   "list_get_end_3",
+   "list_concat_multiple"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -19548,10 +19552,14 @@
   "list_concat_multiple": {
    "async": false,
    "identifiers": [
+    "each",
     "marker",
     "list_concat_multiple",
     "lists",
-    "result"
+    "result",
+    "list",
+    "lambda",
+    "item"
    ]
   }
  },
