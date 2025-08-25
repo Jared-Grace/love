@@ -14,6 +14,6 @@ export async function app_replace() {
     "destination",
   );
   let code = await firebase_storage_download_property(destination, "code");
-  let result = js_code_call_statement(f_name);
-  let code2 = list_join_newline(waited2);
+  let call = js_code_call_statement(f_name);
+  let code2 = list_join_newline([call, code]);
 }
