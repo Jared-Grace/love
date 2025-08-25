@@ -1743,8 +1743,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "app_replace_rule_set"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -19538,7 +19537,6 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "log",
     "range",
     "list_any",
     "html_div",
