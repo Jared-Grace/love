@@ -10588,7 +10588,8 @@
    "app_replace"
   ],
   "firebase_storage_url": [
-   "firebase_admin_get"
+   "firebase_admin_get",
+   "app_replace"
   ],
   "initializeApp": [
    "firebase_admin_get"
@@ -18926,6 +18927,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "firebase_storage_url",
     "firebase_deploy_function_destination_version",
     "http_json",
     "app_replace_main",
