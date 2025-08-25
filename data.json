@@ -1830,7 +1830,6 @@
    "function_transform_marker_current",
    "function_transform_marker_empty",
    "git_push_schedule_check",
-   "html_new",
    "integer_is",
    "js_atomize_function",
    "js_await_add",
@@ -13111,7 +13110,6 @@
     "html_update",
     "html_name_to_path",
     "assert_file_exists_not",
-    "marker",
     "html_new",
     "name",
     "file_path"
