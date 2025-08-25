@@ -1860,7 +1860,8 @@
    "html_enable",
    "html_style_remove",
    "list_concat_multiple",
-   "firebase_deploy"
+   "firebase_deploy",
+   "function_dependencies_code_copy"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11740,6 +11741,7 @@
   },
   "function_dependencies_code_copy": {
    "identifiers": [
+    "marker",
     "clipboard_copy",
     "function_dependencies_code",
     "function_dependencies_code_copy",
