@@ -1590,7 +1590,6 @@
   "s set,current",
   "s restore",
   "s assert,null",
-  "s combine",
   "fw r function_rename_suffix_add",
   "r function_transform_marker function_transform_marker_current",
   "o function_transform_marker",
@@ -1697,7 +1696,8 @@
   "s app",
   "data_app_current_get",
   "u ff",
-  "fws firebase_deploy_function app_current"
+  "fws firebase_deploy_function app_current",
+  "s combine"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function_app_current",
