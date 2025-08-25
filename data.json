@@ -3844,7 +3844,8 @@
    "list_size_1_assert_message",
    "list_unique",
    "promise_not_is",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_replace_rule_set"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -18973,6 +18974,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "not",
     "log",
     "json_to",
     "equal_by",
