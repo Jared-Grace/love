@@ -1682,10 +1682,11 @@
   "c global_function_property_async global_function_async",
   "ps",
   "ff app_replace_main",
-  "n http"
+  "n http",
+  "fw http http_json"
  ],
  "marker_current": "1",
- "function_current": "http",
+ "function_current": "http_json",
  "terminal": false,
  "identifiers": {
   "log": [
