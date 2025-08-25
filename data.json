@@ -3184,7 +3184,8 @@
    "firebase_storage_download_property",
    "html_attribute_set",
    "app_replace_font_size_refresh",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -9093,7 +9094,8 @@
    "list_first_remaining",
    "data_boolean_set",
    "lambda_get",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "app_replace_font_size_adjust"
   ],
   "terms": [
    "search_generic"
@@ -10303,7 +10305,8 @@
    "storage_local_initialize_context",
    "app_replace_settings",
    "app_replace_font_size_refresh",
-   "app_replace_main"
+   "app_replace_main",
+   "app_replace_font_size_adjust"
   ],
   "html_clear": [
    "app_refresh",
@@ -10344,7 +10347,8 @@
    "app_screen_set",
    "app_replace_home",
    "storage_local_set_context",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_adjust"
   ],
   "lambda$item$index": [
    "each_index",
@@ -10839,11 +10843,13 @@
   "app_replace_font_size_refresh": [
    "app_replace_main",
    "app_replace_settings",
-   "app_replace_font_size_refresh"
+   "app_replace_font_size_refresh",
+   "app_replace_font_size_adjust"
   ],
   "app_replace_font_size": [
    "app_replace_font_size_refresh",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_adjust"
   ],
   "app_replace_font_size_factor": [
    "app_replace_settings"
@@ -10852,7 +10858,8 @@
    "app_replace_settings"
   ],
   "app_replace_font_size_adjust": [
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_adjust"
   ]
  },
  "functions": {
@@ -20521,6 +20528,18 @@
     "app_replace_font_size_refresh",
     "context",
     "html",
+    "value"
+   ]
+  },
+  "app_replace_font_size_adjust": {
+   "async": false,
+   "identifiers": [
+    "app_replace_font_size_refresh",
+    "storage_local_set_context",
+    "app_replace_font_size",
+    "app_replace_font_size_adjust",
+    "context",
+    "value_get",
     "value"
    ]
   }
