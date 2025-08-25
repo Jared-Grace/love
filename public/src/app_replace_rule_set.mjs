@@ -72,8 +72,7 @@ export function app_replace_rule_set(context) {
       fn = html_disable;
     }
     html_text_set(l, label);
-    function lambda4(item2) {}
-    each(list, lambda4);
+    each(rules_buttons, fn);
   }
   marker("1");
 }
