@@ -1,5 +1,5 @@
+import { list_slice_count } from "./list_slice_count.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -67,11 +67,7 @@ export function app_replace_rule_set(context) {
       let size = list_size(left);
       index_selected;
       current_list;
-      let sliced = list_slice(
-        current_list,
-        index_selected,
-        index_selected + size,
-      );
+      let sliced = list_slice_count(current_list, index_selected, size);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
