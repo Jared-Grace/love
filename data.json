@@ -1704,7 +1704,7 @@
   "c html_document_body html_document_head"
  ],
  "marker_current": "1",
- "function_current": "firebase_deploy_function_app_current",
+ "function_current": "html_document_head",
  "terminal": false,
  "identifiers": {
   "log": [
