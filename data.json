@@ -3093,8 +3093,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index",
-   "global_function"
+   "list_map_index"
   ],
   "name": [
    "watch",
@@ -19819,8 +19818,7 @@
     "property_name",
     "global",
     "value2",
-    "name",
-    "value"
+    "name"
    ]
   }
  },
