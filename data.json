@@ -1651,10 +1651,11 @@
   "u cl",
   "a f firebase_deploy",
   "a fd firebase_deploy",
-  "a fb firebase_deploy"
+  "a fb firebase_deploy",
+  "o app_replace"
  ],
  "marker_current": "1",
- "function_current": "firebase_deploy",
+ "function_current": "app_replace",
  "terminal": false,
  "identifiers": {
   "log": [
