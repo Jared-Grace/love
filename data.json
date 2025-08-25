@@ -10271,6 +10271,12 @@
   ],
   "label_rules_text": [
    "app_replace_rule_set"
+  ],
+  "on_true": [
+   "app_replace_rule_set"
+  ],
+  "on_false": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18989,6 +18995,8 @@
     "label_rules_text",
     "fn",
     "nn",
+    "on_true",
+    "on_false",
     "lambda4",
     "symbols_button",
     "index2"
