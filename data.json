@@ -2682,7 +2682,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -5193,7 +5194,8 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "app_replace_rule_set"
   ],
   "list_to": [
    "functions_combine",
@@ -8002,7 +8004,8 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second"
+   "list_second",
+   "app_replace_rule_set"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -19516,6 +19519,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_second",
     "html_div",
     "list_concat_multiple",
     "list_size",
@@ -19588,6 +19592,8 @@
     "lambda6",
     "component",
     "rule2",
+    "second",
+    "list",
     "lambda4",
     "symbols_button",
     "index2"
