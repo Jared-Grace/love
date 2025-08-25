@@ -72,10 +72,12 @@ export function app_replace_rule_set(context) {
     } else {
       fn = html_disable;
     }
+    const on_true = "Choose a rule:";
+    const on_false = "Rules:";
     if (nn) {
-      label_rules_text = "Choose a rule:";
+      label_rules_text = on_true;
     } else {
-      label_rules_text = "Rules:";
+      label_rules_text = on_false;
     }
     html_text_set(label_rules, label_rules_text);
     each(rules_buttons, fn);
