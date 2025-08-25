@@ -3293,7 +3293,8 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run"
+   "tasks_run",
+   "string_replace"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -3991,7 +3992,8 @@
    "function_aliases_restore",
    "js_string",
    "string_split_space",
-   "string_split_empty"
+   "string_split_empty",
+   "string_replace"
   ],
   "a": [
    "string_suffix_without",
@@ -5238,7 +5240,8 @@
    "string_split",
    "string_split_comma",
    "string_split_space",
-   "string_split_empty"
+   "string_split_empty",
+   "string_replace"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -5324,7 +5327,8 @@
    "js_dollar",
    "string_split",
    "app_replace_rule_parse",
-   "string_split_comma"
+   "string_split_comma",
+   "string_replace"
   ],
   "results": [
    "functions_combine_name"
@@ -5965,7 +5969,8 @@
    "function_imports_missing",
    "function_parse",
    "function_parse_declaration_inner",
-   "marker_next_index"
+   "marker_next_index",
+   "string_replace"
   ],
   "r": [
    "function_format",
@@ -6047,7 +6052,8 @@
    "html_update",
    "js_imports_paths_fix",
    "folder_current_join_code",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "string_replace"
   ],
   "i": [
    "function_identifier_replace",
@@ -10619,6 +10625,9 @@
    "app_replace"
   ],
   "string_replace": [
+   "string_replace"
+  ],
+  "s2": [
    "string_replace"
   ]
  },
@@ -20080,8 +20089,15 @@
   "string_replace": {
    "async": false,
    "identifiers": [
+    "string_split",
     "marker",
-    "string_replace"
+    "string_replace",
+    "s",
+    "from",
+    "to",
+    "split",
+    "s2",
+    "separator"
    ]
   }
  },
