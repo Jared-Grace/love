@@ -77,8 +77,8 @@ export function app_replace_rule_set(context) {
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       const condition = index2 === index_selected;
+      const key = "background-color";
       if (condition) {
-        const key = "background-color";
         html_style_set(symbols_button, key, "lightgreen");
       } else {
         html_style_remove(symbols_button, key);
