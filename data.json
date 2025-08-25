@@ -2546,8 +2546,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -8568,9 +8567,6 @@
   ],
   "list_map_index": [
    "list_map_index",
-   "app_replace_rule_set"
-  ],
-  "mapper": [
    "app_replace_rule_set"
   ],
   "list_map_property_lambda": [
@@ -18939,8 +18935,6 @@
     "lambda5",
     "refresh",
     "mapped2",
-    "list",
-    "mapper",
     "l",
     "rules",
     "mapped",
