@@ -3039,8 +3039,7 @@
    "object_property_from",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context",
-   "app_replace_rule_set"
+   "storage_local_initialize_context"
   ],
   "name": [
    "watch",
@@ -10267,9 +10266,6 @@
    "app_replace_rule_set"
   ],
   "html_style_set_or_remove": [
-   "app_replace_rule_set"
-  ],
-  "$a": [
    "app_replace_rule_set"
   ]
  },
@@ -18989,9 +18985,7 @@
     "symbols_button",
     "index2",
     "condition",
-    "key",
-    "$a",
-    "value"
+    "key"
    ]
   },
   "app_refresh": {
