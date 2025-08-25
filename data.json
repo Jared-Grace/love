@@ -2685,8 +2685,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -4936,8 +4935,7 @@
    "range",
    "marker_next_delete_multiple",
    "list_take",
-   "each_range_async",
-   "app_replace_rule_set"
+   "each_range_async"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -19611,9 +19609,7 @@
     "lambda7",
     "item2",
     "size2",
-    "list",
     "r",
-    "count",
     "ne",
     "lambda4",
     "symbols_button",
