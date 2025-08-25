@@ -9095,7 +9095,8 @@
    "data_boolean_set",
    "lambda_get",
    "list_first_second_generic",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "app_replace_settings"
   ],
   "terms": [
    "search_generic"
@@ -20511,10 +20512,11 @@
     "app_replace_settings",
     "context",
     "lambda2",
+    "value_get",
+    "value",
     "factor",
     "root",
     "lambda3",
-    "value",
     "component",
     "parent"
    ]
