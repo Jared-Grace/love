@@ -1,5 +1,6 @@
+import { command_line } from "./command_line.mjs";
 import { marker } from "./marker.mjs";
-export function firebase_deploy() {
+export async function firebase_deploy() {
   marker("1");
-  cl;
+  let stdout = await command_line(command);
 }
