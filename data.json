@@ -2562,7 +2562,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "function_rename_identifiers",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_settings"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4486,7 +4487,8 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json"
+   "http_json",
+   "app_replace_settings"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -9995,7 +9997,8 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_settings"
   ],
   "createElement": [
    "html_element"
@@ -10091,7 +10094,8 @@
    "html_enable_if",
    "app_replace_rule_set",
    "html_document_head",
-   "html_attribute_set"
+   "html_attribute_set",
+   "app_replace_settings"
   ],
   "innerHTML": [
    "html_text_set"
@@ -20468,7 +20472,11 @@
     "app_replace_settings",
     "context",
     "root",
-    "lambda4"
+    "lambda4",
+    "component",
+    "parent",
+    "text",
+    "lambda2"
    ]
   }
  },
