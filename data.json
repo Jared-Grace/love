@@ -9954,7 +9954,8 @@
    "html_element",
    "html_button_element",
    "html_p",
-   "html_div"
+   "html_div",
+   "html_document_root"
   ],
   "parent": [
    "html_element",
@@ -10056,7 +10057,6 @@
    "app_replace_rule_set",
    "html_document_head",
    "html_attribute_set",
-   "html_document_root",
    "app_replace_main"
   ],
   "innerHTML": [
@@ -20276,13 +20276,13 @@
   "html_document_root": {
    "async": false,
    "identifiers": [
+    "html_element",
     "html_component_wrap",
     "marker",
     "html_document_root",
-    "html",
     "document",
     "documentElement",
-    "component"
+    "html"
    ]
   }
  },
