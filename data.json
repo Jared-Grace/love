@@ -3766,8 +3766,7 @@
   ],
   "value2": [
    "error_attention_set",
-   "global_function",
-   "object_property_lambda"
+   "global_function"
   ],
   "error": [
    "watch",
@@ -10503,6 +10502,9 @@
    "global_function"
   ],
   "object_property_lambda": [
+   "object_property_lambda"
+  ],
+  "value_set": [
    "object_property_lambda"
   ]
  },
@@ -19853,8 +19855,8 @@
     "property_name",
     "lambda",
     "exists",
-    "value",
-    "value2"
+    "value_set",
+    "value"
    ]
   }
  },
