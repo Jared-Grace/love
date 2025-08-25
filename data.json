@@ -10682,10 +10682,12 @@
    "firebase_deploy_function_app_current"
   ],
   "html_document_head": [
-   "html_document_head"
+   "html_document_head",
+   "app_replace_main"
   ],
   "head": [
-   "html_document_head"
+   "html_document_head",
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20200,6 +20202,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
+    "html_document_head",
     "html_p_text",
     "app_refresh",
     "html_document_body",
@@ -20208,6 +20211,7 @@
     "app_replace_main",
     "app_fn",
     "screens",
+    "head",
     "root",
     "p"
    ]
