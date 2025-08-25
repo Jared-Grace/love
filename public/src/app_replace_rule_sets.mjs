@@ -10,6 +10,11 @@ export function app_replace_rule_sets() {
       rules: ["a a > a"],
       start: "aaaaa",
     },
+    {
+      name: "Unary Equations",
+      rules: ["= > 1 = 1"],
+      start: "1 = 1",
+    },
   ];
   return v;
 }
