@@ -3,7 +3,7 @@ import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { data_app_current_get } from "./data_app_current_get.mjs";
 import { firebase_deploy_function } from "./firebase_deploy_function.mjs";
 import { marker } from "./marker.mjs";
-export async function firebase_deploy_function_app_current(f_name) {
+export async function firebase_deploy_function_app_current() {
   marker("1");
   let a = await data_app_current_get();
   let a_name = app_name_prefixed(a);
