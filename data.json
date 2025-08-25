@@ -2821,8 +2821,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "http_json"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -19987,7 +19986,6 @@
     "http_json",
     "url",
     "text",
-    "v",
     "json"
    ]
   }
