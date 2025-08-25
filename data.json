@@ -2666,7 +2666,6 @@
    "functions_log_remove",
    "json_to",
    "js_stack_list_block_is",
-   "each_index",
    "function_identifier_replace_suffix_add",
    "promise_is",
    "string_starts_with",
@@ -10852,8 +10851,7 @@
     "lambda$item$index",
     "index",
     "lambda2",
-    "item",
-    "v"
+    "item"
    ],
    "async": false
   },
