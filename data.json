@@ -1682,7 +1682,7 @@
   "r global_function global_function_async"
  ],
  "marker_current": "1",
- "function_current": "object_property_lambda_async",
+ "function_current": "global_function_async",
  "terminal": false,
  "identifiers": {
   "log": [
