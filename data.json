@@ -4923,7 +4923,8 @@
    "each_range",
    "marker_functionize",
    "range",
-   "each_range_async"
+   "each_range_async",
+   "app_replace_rule_set"
   ],
   "each_range": [
    "each_range",
@@ -4934,7 +4935,8 @@
    "range",
    "marker_next_delete_multiple",
    "list_take",
-   "each_range_async"
+   "each_range_async",
+   "app_replace_rule_set"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -6047,7 +6049,8 @@
    "marker_functionize",
    "range",
    "function_aliases_restore",
-   "each_range_async"
+   "each_range_async",
+   "app_replace_rule_set"
   ],
   "formatted": [
    "function_format",
@@ -19527,6 +19530,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "range",
     "list_any",
     "html_div",
     "list_concat_multiple",
@@ -19602,6 +19606,8 @@
     "rule2",
     "lambda7",
     "item2",
+    "r",
+    "count",
     "ne",
     "lambda4",
     "symbols_button",
