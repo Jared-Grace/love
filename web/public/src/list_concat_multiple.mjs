@@ -4,5 +4,5 @@ export function list_concat_multiple(lists) {
   marker("1");
   let result = [];
   function lambda(item) {}
-  each(list, lambda);
+  each(lists, lambda);
 }
