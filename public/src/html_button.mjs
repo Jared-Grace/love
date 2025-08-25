@@ -6,6 +6,6 @@ export function html_button(parent, text, lambda) {
   let component = html_button_element(parent);
   html_text_set(component, text);
   html_on_click(component, lambda);
-  html_style_font_size(html, "inherit");
+  html_style_font_size(component, "inherit");
   return component;
 }
