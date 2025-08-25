@@ -2748,7 +2748,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "app_replace_rule_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4593,7 +4594,8 @@
   "each_index": [
    "each_index",
    "each_multiple",
-   "app_replace_home"
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "index": [
    "each_index",
@@ -10241,6 +10243,9 @@
    "app_replace_rule_set"
   ],
   "item2": [
+   "app_replace_rule_set"
+  ],
+  "index2": [
    "app_replace_rule_set"
   ]
  },
@@ -18904,6 +18909,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "each_index",
     "list_map_index",
     "each",
     "html_enable",
@@ -18956,9 +18962,11 @@
     "rules_buttons",
     "label",
     "fn",
+    "v",
+    "list",
     "lambda4",
     "item2",
-    "list"
+    "index2"
    ]
   },
   "app_refresh": {
