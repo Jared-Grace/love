@@ -1637,10 +1637,11 @@
   "c html_disable html_enable",
   "c list_map list_map_index",
   "u lmi",
-  "c html_style_set html_style_remove"
+  "c html_style_set html_style_remove",
+  "n html_enable_if"
  ],
  "marker_current": "1",
- "function_current": "html_style_remove",
+ "function_current": "html_enable_if",
  "terminal": false,
  "identifiers": {
   "log": [
