@@ -1,3 +1,4 @@
+import { string_replace } from "./string_replace.mjs";
 import { log } from "./log.mjs";
 import { firebase_storage_url_project } from "./firebase_storage_url_project.mjs";
 import { firebase_deploy_function_destination_version } from "./firebase_deploy_function_destination_version.mjs";
@@ -15,7 +16,7 @@ export async function app_replace() {
     "/o/" +
     destination_version +
     "?alt=media";
-  sr;
+  let replaced = string_replace(s, from, to);
   let json = await http_json(url);
   log(json);
 }
