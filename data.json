@@ -1683,7 +1683,7 @@
   "r global_function_async global_function_property_async"
  ],
  "marker_current": "1",
- "function_current": "global_function_async",
+ "function_current": "global_function_property_async",
  "terminal": false,
  "identifiers": {
   "log": [
