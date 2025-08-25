@@ -1688,7 +1688,8 @@
   "o ff",
   "ff app_replace_main",
   "rs firebase_storage_url project",
-  "s rename"
+  "s rename",
+  "as rename"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
