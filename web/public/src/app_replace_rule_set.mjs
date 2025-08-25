@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_size } from "./list_size.mjs";
@@ -69,8 +70,7 @@ export function app_replace_rule_set(context) {
       index_selected;
       current_list;
       let sliced = list_slice_count(current_list, index_selected, size);
-      function lambda7(item2) {}
-      let eq = equal_by(a, b2, lambda7);
+      let eq = equal_by(a, b2, json_to);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
