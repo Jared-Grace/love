@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export async function http_json(url) {
   marker("1");
   let text = await http(url);
-  let v = json_from(json);
-  return text;
+  let json = json_from(json);
+  return json;
 }
