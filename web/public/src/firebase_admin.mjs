@@ -6,7 +6,7 @@ export async function firebase_admin() {
   let service_account = await firebase_service_account();
   admin.initializeApp({
     credential: admin.credential.cert(service_account),
-    storageBucket: "jared-grace.appspot.com",
+    storageBucket: "jared-grace.firebasestorage.app",
   });
   return admin;
 }
