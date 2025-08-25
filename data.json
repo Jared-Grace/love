@@ -10775,7 +10775,8 @@
    "file_overwrite"
   ],
   "app_name_main": [
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "html_update_dev"
   ]
  },
  "functions": {
@@ -20344,6 +20345,7 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
+    "app_name_main",
     "folder_previous",
     "folder_src",
     "html_name_to_path_dev",
