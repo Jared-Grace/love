@@ -2662,7 +2662,6 @@
    "data_boolean_set",
    "data_terminal_set",
    "data_watch_set",
-   "functions_combine_name",
    "function_acronym_to_name",
    "function_copy_suffix_add",
    "function_current_declaration_code",
@@ -3295,7 +3294,8 @@
    "list_filter_property",
    "list_range",
    "list_slice_end",
-   "ternary"
+   "ternary",
+   "functions_combine_name"
   ],
   "separator": [
    "watch",
@@ -11642,7 +11642,7 @@
     "results",
     "f_names",
     "combined",
-    "v"
+    "result"
    ],
    "async": true
   },
