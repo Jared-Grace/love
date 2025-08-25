@@ -10438,6 +10438,9 @@
   ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
+  ],
+  "destination_version": [
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19698,7 +19701,8 @@
     "now_file",
     "destination",
     "version",
-    "content"
+    "content",
+    "destination_version"
    ]
   },
   "firebase_service_account": {
