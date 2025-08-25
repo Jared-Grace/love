@@ -1945,7 +1945,8 @@
    "function_parse_strict_declaration",
    "function_parse_declaration_inner",
    "function_parse_strict",
-   "http_json"
+   "http_json",
+   "firebase_storage_download"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -6122,7 +6123,8 @@
    "http",
    "http_json",
    "firebase_storage_url_project",
-   "firebase_storage_url"
+   "firebase_storage_url",
+   "firebase_storage_download"
   ],
   "__dirname": [
    "function_import",
@@ -10528,7 +10530,8 @@
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "firebase_storage_download"
   ],
   "firebase_upload_object": [
    "firebase_deploy_function"
@@ -10597,7 +10600,8 @@
    "http"
   ],
   "http_json": [
-   "http_json"
+   "http_json",
+   "firebase_storage_download"
   ],
   "firebase_deploy_function_destination_version": [
    "firebase_deploy_function",
@@ -10628,13 +10632,15 @@
    "firebase_storage_url"
   ],
   "firebase_storage_url": [
-   "firebase_storage_url"
+   "firebase_storage_url",
+   "firebase_storage_download"
   ],
   "storage_path": [
    "firebase_storage_url"
   ],
   "firebase_storage_download": [
-   "app_replace"
+   "app_replace",
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -20112,6 +20118,17 @@
     "storage_path",
     "replaced",
     "url"
+   ]
+  },
+  "firebase_storage_download": {
+   "async": true,
+   "identifiers": [
+    "http_json",
+    "firebase_storage_url",
+    "firebase_storage_download",
+    "destination_version",
+    "url",
+    "parsed"
    ]
   }
  },
