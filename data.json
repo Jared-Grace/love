@@ -1663,10 +1663,10 @@
   "u ssw",
   "a ssw string_starts_with",
   "s find",
-  "ps",
   "s json",
   "p",
-  "firebase_deploy_function"
+  "firebase_deploy_function",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
