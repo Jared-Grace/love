@@ -4783,8 +4783,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "global_function"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -10486,9 +10485,6 @@
    "global_function"
   ],
   "global_function": [
-   "global_function"
-  ],
-  "property_name2": [
    "global_function"
   ]
  },
@@ -19822,8 +19818,6 @@
     "property_name",
     "global",
     "value2",
-    "object",
-    "property_name2",
     "value"
    ]
   }
