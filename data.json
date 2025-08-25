@@ -9794,8 +9794,7 @@
   "html_element": [
    "html_element",
    "html_button_element",
-   "html_p",
-   "app_replace_rule_set"
+   "html_p"
   ],
   "parent": [
    "html_element",
@@ -10335,6 +10334,9 @@
    "app_replace_rule_set"
   ],
   "div": [
+   "app_replace_rule_set"
+  ],
+  "html_div": [
    "app_replace_rule_set"
   ]
  },
@@ -18998,6 +19000,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_div",
     "list_concat_multiple",
     "list_size",
     "list_skip",
@@ -19028,7 +19031,6 @@
     "html_button_screen",
     "marker",
     "list_take",
-    "html_element",
     "app_replace_rule_set",
     "context",
     "root",
