@@ -72,7 +72,11 @@ export function app_replace_rule_set(context) {
       current_list;
       let sliced = list_slice_count(current_list, index_selected, size);
       let eq = equal_by(left, sliced, json_to);
-      log(message);
+      log({
+        left,
+        sliced,
+        eq,
+      });
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
