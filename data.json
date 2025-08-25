@@ -2841,8 +2841,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "firebase_deploy_function_app_current"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -20173,8 +20172,7 @@
     "f_name",
     "a",
     "a_name",
-    "combined",
-    "v"
+    "combined"
    ]
   }
  },
