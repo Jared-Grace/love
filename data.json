@@ -4593,8 +4593,7 @@
   "each_index": [
    "each_index",
    "each_multiple",
-   "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_home"
   ],
   "index": [
    "each_index",
@@ -18908,7 +18907,6 @@
     "html_p",
     "html_text_set",
     "html_disable",
-    "each_index",
     "html_style_set",
     "string_split_empty",
     "storage_local_initialize_context",
