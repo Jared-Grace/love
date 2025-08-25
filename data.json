@@ -10714,7 +10714,8 @@
    "app_replace_main"
   ],
   "documentElement": [
-   "app_replace_main"
+   "app_replace_main",
+   "html_document_root"
   ],
   "html_document_root": [
    "html_document_root"
@@ -20278,6 +20279,7 @@
     "html_document_root",
     "body",
     "document",
+    "documentElement",
     "component"
    ]
   }
