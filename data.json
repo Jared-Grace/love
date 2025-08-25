@@ -1716,7 +1716,8 @@
   "rs html_update public",
   "html_update replace",
   "s button",
-  "o app_replace_screens"
+  "o app_replace_screens",
+  "s roo"
  ],
  "marker_current": "1",
  "function_current": "app_replace_screens",
