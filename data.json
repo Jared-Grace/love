@@ -4234,7 +4234,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "firebase_deploy_function_app_current"
   ],
   "readdirSync": [
    "folder_read"
@@ -5174,7 +5175,8 @@
   "functions_combine_name": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test"
+   "functions_combine_test",
+   "firebase_deploy_function_app_current"
   ],
   "js_function_last_asyncify": [
    "js_call_fill",
@@ -5287,7 +5289,8 @@
   "f_names_comma": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test"
+   "functions_combine_test",
+   "firebase_deploy_function_app_current"
   ],
   "arguments": [
    "functions_combine",
@@ -20160,12 +20163,15 @@
   "firebase_deploy_function_app_current": {
    "async": true,
    "identifiers": [
+    "functions_combine_name",
     "data_app_current_get",
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_current",
     "f_name",
     "a",
+    "v2",
+    "f_names_comma",
     "v"
    ]
   }
