@@ -12,6 +12,6 @@ export function firebase_deploy_function() {
     let sw = string_starts_with(item, prefix);
     return sw;
   }
-  let filtered = list_find(files, lambda);
-  return filtered;
+  let first = list_find(files, lambda);
+  return first;
 }
