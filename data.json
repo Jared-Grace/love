@@ -6235,8 +6235,7 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_clear",
-   "html_document_root"
+   "html_clear"
   ],
   "import_": [
    "function_imports_add",
@@ -10716,6 +10715,9 @@
    "html_document_root"
   ],
   "html_document_root": [
+   "html_document_root"
+  ],
+  "html": [
    "html_document_root"
   ]
  },
@@ -20273,7 +20275,7 @@
     "html_component_wrap",
     "marker",
     "html_document_root",
-    "body",
+    "html",
     "document",
     "documentElement",
     "component"
