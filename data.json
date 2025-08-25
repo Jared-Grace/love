@@ -9751,8 +9751,7 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read",
-   "firebase_deploy_function"
+   "folder_read"
   ],
   "fop": [
    "apps_get",
@@ -19626,8 +19625,7 @@
     "marker",
     "firebase_deploy_function",
     "prefix",
-    "v2",
-    "path_folder"
+    "v2"
    ]
   }
  },
