@@ -10744,7 +10744,8 @@
   ],
   "html": [
    "html_document_root",
-   "app_replace_main"
+   "app_replace_main",
+   "html_button"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -10793,7 +10794,8 @@
    "html_update_public"
   ],
   "html_style_font_size": [
-   "app_replace_main"
+   "app_replace_main",
+   "html_button"
   ]
  },
  "functions": {
@@ -19146,6 +19148,7 @@
   "html_button": {
    "async": false,
    "identifiers": [
+    "html_style_font_size",
     "html_on_click",
     "html_text_set",
     "html_button_element",
@@ -19153,7 +19156,8 @@
     "parent",
     "text",
     "lambda",
-    "component"
+    "component",
+    "html"
    ]
   },
   "js_imports_paths_fix": {
