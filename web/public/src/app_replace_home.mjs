@@ -6,7 +6,8 @@ import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
-  let component = html_button(parent, text, function lambda4() {});
+  function lambda4() {}
+  let component = html_button(parent, text, lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = object_property_get(item, "name");
