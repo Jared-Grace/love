@@ -1707,7 +1707,8 @@
   "a he html_element",
   "s att",
   "ffc",
-  "c html_document_body html_document_root"
+  "c html_document_body html_document_root",
+  "s style"
  ],
  "marker_current": "1",
  "function_current": "html_document_root",
