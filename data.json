@@ -10757,12 +10757,10 @@
    "html_document_root"
   ],
   "html_document_root": [
-   "html_document_root",
-   "app_replace_main"
+   "html_document_root"
   ],
   "html": [
-   "html_document_root",
-   "app_replace_main"
+   "html_document_root"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -10811,7 +10809,6 @@
    "html_update_public"
   ],
   "html_style_font_size": [
-   "app_replace_main",
    "html_button"
   ],
   "emoji_gear": [
@@ -10829,6 +10826,9 @@
   ],
   "emoji_font_smaller": [
    "app_replace_settings"
+  ],
+  "app_replace_font_size_refresh": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20335,8 +20335,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
-    "html_style_font_size",
-    "html_document_root",
+    "app_replace_font_size_refresh",
     "html_meta_viewport",
     "app_refresh",
     "html_document_body",
@@ -20345,8 +20344,7 @@
     "app_replace_main",
     "app_fn",
     "screens",
-    "root",
-    "html"
+    "root"
    ]
   },
   "html_document_head": {
