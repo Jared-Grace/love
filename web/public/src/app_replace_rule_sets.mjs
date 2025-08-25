@@ -16,8 +16,8 @@ export function app_replace_rule_sets() {
       start: "1=1",
     },
     {
-      name: "Unary Equations",
-      rules: ["= > 1 = 1"],
+      name: "Unary Equations Adding",
+      rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       start: "1=1",
     },
   ];
