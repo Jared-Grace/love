@@ -1662,11 +1662,11 @@
   "u for",
   "ac for flr",
   "s folder",
-  "firebase_deploy_function",
   "u ssw",
   "a ssw string_starts_with",
   "s find",
-  "ps"
+  "ps",
+  "firebase_deploy_function"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
