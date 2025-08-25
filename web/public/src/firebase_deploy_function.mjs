@@ -9,6 +9,7 @@ export async function firebase_deploy_function() {
   let v = folder_previous();
   let path_folder = path_join([v, "secret"]);
   let only = folder_find_starts_with(path_folder, prefix);
-  let data = await file_read_json(only);
+  let file_path = path_join([path_folder, only]);
+  let data = await file_read_json(file_path);
   return data;
 }
