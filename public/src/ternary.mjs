@@ -1,6 +1,6 @@
-export function ternary(nn, on_true, on_false) {
+export function ternary(condition, on_true, on_false) {
   let result = null;
-  if (nn) {
+  if (condition) {
     result = on_true;
   } else {
     result = on_false;
