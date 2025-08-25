@@ -1637,7 +1637,7 @@
   "c html_disable html_enable"
  ],
  "marker_current": "1",
- "function_current": "storage_local_initialize_context",
+ "function_current": "html_enable",
  "terminal": false,
  "identifiers": {
   "log": [
