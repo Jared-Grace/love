@@ -1,3 +1,4 @@
+import { string_starts_with } from "./string_starts_with.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { folder_previous } from "./folder_previous.mjs";
 import { folder_read } from "./folder_read.mjs";
@@ -8,7 +9,7 @@ export function firebase_deploy_function() {
   let path_folder = folder_previous();
   let files = folder_read(path_folder);
   function lambda(item) {
-    ssw;
+    let v2 = string_starts_with(s, prefix2);
   }
   let v = list_filter(files, lambda);
   return files;
