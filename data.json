@@ -1875,7 +1875,8 @@
    "list_concat_multiple",
    "firebase_deploy",
    "function_dependencies_code_copy",
-   "html_update"
+   "html_update",
+   "date_now_file"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -9162,7 +9163,8 @@
   ],
   "date_now_iso": [
    "git_acp_timestamp",
-   "date_now_iso"
+   "date_now_iso",
+   "date_now_file"
   ],
   "date_now": [
    "date_now_iso",
@@ -9171,7 +9173,8 @@
   ],
   "now_iso": [
    "date_now_iso",
-   "git_push"
+   "git_push",
+   "date_now_file"
   ],
   "now": [
    "date_now",
@@ -10409,6 +10412,9 @@
   ],
   "destination": [
    "firebase_deploy_function"
+  ],
+  "date_now_file": [
+   "date_now_file"
   ]
  },
  "functions": {
@@ -19681,6 +19687,15 @@
     "only",
     "file_path",
     "service_account"
+   ]
+  },
+  "date_now_file": {
+   "async": false,
+   "identifiers": [
+    "date_now_iso",
+    "marker",
+    "date_now_file",
+    "now_iso"
    ]
   }
  },
