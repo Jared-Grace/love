@@ -4,4 +4,5 @@ import { marker } from "./marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   html_button(root, emoji_font_larger() + " Font size larger", lambda4);
+  let component = html_button(parent, text, function lambda2() {});
 }
