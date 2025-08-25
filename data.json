@@ -1718,7 +1718,8 @@
   "s button",
   "o app_replace_screens",
   "s roo",
-  "s screen"
+  "s screen",
+  "as marker_screen_add"
  ],
  "marker_current": "1",
  "function_current": "app_replace_screens",
