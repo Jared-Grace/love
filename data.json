@@ -1839,8 +1839,7 @@
    "storage_local_initialize",
    "storage_local_initialize_context",
    "html_enable",
-   "html_style_remove",
-   "html_enable_if"
+   "html_style_remove"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3631,7 +3630,8 @@
    "null_not_is",
    "marker_enter",
    "null_not_is_assert",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_enable_if"
   ],
   "null_not_is": [
    "function_run_prompt",
@@ -3677,7 +3677,8 @@
    "list_squash",
    "marker_above",
    "marker_below",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_enable_if"
   ],
   "colored": [
    "chalk_color",
@@ -9868,7 +9869,8 @@
    "html_on",
    "html_component_element_get",
    "html_on_click",
-   "html_p"
+   "html_p",
+   "html_enable_if"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10220,7 +10222,8 @@
    "app_replace_rule_set"
   ],
   "html_disable": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_enable_if"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -10233,7 +10236,8 @@
   ],
   "html_enable": [
    "html_enable",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_enable_if"
   ],
   "disabled": [
    "html_enable"
@@ -19481,8 +19485,12 @@
   "html_enable_if": {
    "async": false,
    "identifiers": [
-    "marker",
-    "html_enable_if"
+    "html_disable",
+    "html_enable",
+    "html_enable_if",
+    "component",
+    "fn",
+    "nn"
    ]
   }
  },
