@@ -4250,7 +4250,8 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "assert_json": [
    "assert_json",
@@ -10310,12 +10311,6 @@
    "app_replace_rule_set"
   ],
   "list_slice_count": [
-   "app_replace_rule_set"
-  ],
-  "lambda7": [
-   "app_replace_rule_set"
-  ],
-  "item2": [
    "app_replace_rule_set"
   ]
  },
@@ -18979,6 +18974,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "json_to",
     "equal_by",
     "list_slice_count",
     "list_size",
@@ -19036,8 +19032,6 @@
     "lambda3",
     "size",
     "sliced",
-    "lambda7",
-    "item2",
     "eq",
     "a",
     "b2",
