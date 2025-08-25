@@ -3324,7 +3324,8 @@
    "html_new",
    "html_overwrite",
    "html_update",
-   "path_name"
+   "path_name",
+   "firebase_deploy_function"
   ],
   "object_property_get": [
    "chalk_color",
@@ -19650,6 +19651,7 @@
     "v",
     "path_folder",
     "only",
+    "file_path",
     "data"
    ]
   }
