@@ -18962,11 +18962,11 @@
     "rules_buttons",
     "label",
     "fn",
-    "v",
-    "list",
     "lambda4",
     "item2",
-    "index2"
+    "index2",
+    "v",
+    "list"
    ]
   },
   "app_refresh": {
