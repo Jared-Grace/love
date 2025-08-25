@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { range } from "./range.mjs";
 import { list_any } from "./list_any.mjs";
 import { html_div } from "./html_div.mjs";
@@ -102,6 +103,7 @@ export function app_replace_rule_set(context) {
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
       function lambda7(index) {
+        log(message);
         app_replace_rule_valid(rule2, index, current_list);
       }
       let size2 = list_size(current_list);
