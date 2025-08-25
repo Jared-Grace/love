@@ -3040,7 +3040,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index"
+   "list_map_index",
+   "app_replace_rule_set"
   ],
   "name": [
    "watch",
@@ -3627,14 +3628,16 @@
    "js_block_child_graph",
    "null_not_is",
    "marker_enter",
-   "null_not_is_assert"
+   "null_not_is_assert",
+   "app_replace_rule_set"
   ],
   "null_not_is": [
    "function_run_prompt",
    "js_block_child_graph",
    "null_not_is",
    "marker_enter",
-   "null_not_is_assert"
+   "null_not_is_assert",
+   "app_replace_rule_set"
   ],
   "prompt": [
    "chalk_green",
@@ -18926,6 +18929,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "null_not_is",
     "html_style_set_or_remove",
     "each_index",
     "list_map_index",
@@ -18979,6 +18983,8 @@
     "rules_buttons",
     "label",
     "fn",
+    "nn",
+    "value",
     "lambda4",
     "symbols_button",
     "index2"
