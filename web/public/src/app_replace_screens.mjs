@@ -1,3 +1,4 @@
+import { app_replace_settings } from "./app_replace_settings.mjs";
 import { app_replace_rule_set } from "./app_replace_rule_set.mjs";
 import { app_replace_home } from "./app_replace_home.mjs";
 import { marker } from "./marker.mjs";
