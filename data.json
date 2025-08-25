@@ -1704,7 +1704,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "app_replace"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2898,7 +2899,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -18936,6 +18938,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "log",
     "firebase_storage_url_project",
     "firebase_deploy_function_destination_version",
     "http_json",
@@ -18946,7 +18949,8 @@
     "name",
     "destination_version",
     "url",
-    "json"
+    "json",
+    "message"
    ]
   },
   "html_document_body": {
