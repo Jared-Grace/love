@@ -11,9 +11,7 @@ export function app_replace_main() {
   let screens = app_replace_screens();
   const head = html_document_head();
   let component = html_element(head, "meta");
-  let name = "name";
-  let value = "viewport";
-  html_attribute_set(component, name, value);
+  html_attribute_set(component, "name", "viewport");
   const root = html_document_body();
   app_refresh({
     app_fn,
