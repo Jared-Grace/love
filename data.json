@@ -3309,8 +3309,7 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "firebase_deploy_function",
-   "firebase_service_account"
+   "firebase_deploy_function"
   ],
   "file_path": [
    "data_file_update",
@@ -10457,6 +10456,9 @@
    "firebase_service_account"
   ],
   "folder_previous": [
+   "firebase_service_account"
+  ],
+  "service_account": [
    "firebase_service_account"
   ]
  },
@@ -19751,7 +19753,7 @@
     "path_folder",
     "only",
     "file_path",
-    "data"
+    "service_account"
    ]
   }
  },
