@@ -1,8 +1,5 @@
+import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
 import { not } from "./not.mjs";
-import { json_to } from "./json_to.mjs";
-import { equal_by } from "./equal_by.mjs";
-import { list_slice_count } from "./list_slice_count.mjs";
-import { list_size } from "./list_size.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -67,12 +64,7 @@ export function app_replace_rule_set(context) {
     let left_joined = list_join_space(left);
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {
-      let left = object_property_get(rule, "left");
-      let size = list_size(left);
-      index_selected;
-      current_list;
-      let sliced = list_slice_count(current_list, index_selected, size);
-      let eq = equal_by(left, sliced, json_to);
+      let eq = app_replace_rule_valid(rule, index_selected, current_list);
       if (not(eq)) {
         alert("invalid index for rule");
       }
