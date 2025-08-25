@@ -1654,8 +1654,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "app_replace_rule_set"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -9153,7 +9152,8 @@
    "git_push",
    "date_diff_hours",
    "date_diff_ms",
-   "function_alias_rename"
+   "function_alias_rename",
+   "app_replace_rule_set"
   ],
   "date_to": [
    "git_push",
@@ -10157,7 +10157,8 @@
   ],
   "list_take": [
    "list_take",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "app_replace_rule_set"
   ],
   "taken": [
    "list_take"
@@ -18976,7 +18977,6 @@
    "async": false,
    "identifiers": [
     "not",
-    "log",
     "json_to",
     "equal_by",
     "list_slice_count",
@@ -19004,6 +19004,7 @@
     "emoji_home",
     "html_button_screen",
     "marker",
+    "list_take",
     "app_replace_rule_set",
     "context",
     "root",
@@ -19037,6 +19038,7 @@
     "sliced",
     "eq",
     "alert",
+    "before",
     "rules_buttons",
     "nn",
     "lambda6",
