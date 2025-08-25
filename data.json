@@ -9794,7 +9794,8 @@
   "html_element": [
    "html_element",
    "html_button_element",
-   "html_p"
+   "html_p",
+   "app_replace_rule_set"
   ],
   "parent": [
    "html_element",
@@ -19024,6 +19025,7 @@
     "html_button_screen",
     "marker",
     "list_take",
+    "html_element",
     "app_replace_rule_set",
     "context",
     "root",
