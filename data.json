@@ -10302,7 +10302,8 @@
    "storage_local_set_context",
    "storage_local_initialize_context",
    "app_replace_settings",
-   "app_replace_font_size_refresh"
+   "app_replace_font_size_refresh",
+   "app_replace_main"
   ],
   "html_clear": [
    "app_refresh",
@@ -20354,7 +20355,8 @@
     "app_replace_main",
     "app_fn",
     "screens",
-    "root"
+    "root",
+    "context"
    ]
   },
   "html_document_head": {
