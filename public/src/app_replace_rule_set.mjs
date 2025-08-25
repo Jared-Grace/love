@@ -100,12 +100,9 @@ export function app_replace_rule_set(context) {
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
-      html_enable_if(
-        component,
-        nn && app_replace_rule_valid(rule2, index_selected, current_list),
-      );
+      html_enable_if(component, nn);
       function lambda7(item2) {}
-      let ne = list_any(list, lambda7);
+      let ne = list_any(current_list, lambda7);
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
