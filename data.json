@@ -2238,7 +2238,8 @@
    "data_file_update_inner",
    "list_first_second_generic",
    "function_run_prompt",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "global_function"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3729,7 +3730,8 @@
    "list_squash",
    "marker_above",
    "marker_below",
-   "html_enable_if"
+   "html_enable_if",
+   "global_function"
   ],
   "colored": [
    "chalk_color",
@@ -19804,7 +19806,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "global_function"
+    "global_function",
+    "fn",
+    "property_name"
    ]
   }
  },
