@@ -81,7 +81,9 @@ export function app_replace_rule_set(context) {
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
-      let v = html_enable_if(component, nn);
+      let v =
+        html_enable_if(component, nn) &&
+        app_replace_rule_valid(rule, index_selected, current_list);
       return v;
     }
     each(rules_buttons, lambda6);
