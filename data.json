@@ -3181,7 +3181,8 @@
    "global_function_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "html_attribute_set"
+   "html_attribute_set",
+   "app_replace_font_size_refresh"
   ],
   "name": [
    "watch",
@@ -4642,7 +4643,8 @@
    "data_get",
    "data_transform",
    "storage_local_initialize",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_replace_font_size_refresh"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -6583,7 +6585,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set"
+   "html_attribute_set",
+   "app_replace_font_size_refresh"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10298,7 +10301,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_refresh"
   ],
   "html_clear": [
    "app_refresh",
@@ -10440,7 +10444,8 @@
   ],
   "storage_local_initialize_context": [
    "storage_local_initialize_context",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_font_size_refresh"
   ],
   "string_split_empty": [
    "app_replace_rule_set",
@@ -10757,10 +10762,12 @@
    "html_document_root"
   ],
   "html_document_root": [
-   "html_document_root"
+   "html_document_root",
+   "app_replace_font_size_refresh"
   ],
   "html": [
-   "html_document_root"
+   "html_document_root",
+   "app_replace_font_size_refresh"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -10809,7 +10816,8 @@
    "html_update_public"
   ],
   "html_style_font_size": [
-   "html_button"
+   "html_button",
+   "app_replace_font_size_refresh"
   ],
   "emoji_gear": [
    "app_replace_home"
@@ -10829,7 +10837,8 @@
   ],
   "app_replace_font_size_refresh": [
    "app_replace_main",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_replace_font_size_refresh"
   ]
  },
  "functions": {
@@ -20480,6 +20489,20 @@
     "lambda3",
     "component",
     "parent"
+   ]
+  },
+  "app_replace_font_size_refresh": {
+   "async": false,
+   "identifiers": [
+    "storage_local_initialize_context",
+    "html_style_font_size",
+    "html_document_root",
+    "app_replace_font_size_refresh",
+    "html",
+    "value",
+    "context",
+    "key",
+    "value_initial"
    ]
   }
  },
