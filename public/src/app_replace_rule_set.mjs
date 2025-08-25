@@ -1,4 +1,4 @@
-import { list_second } from "./list_second.mjs";
+import { list_any } from "./list_any.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
@@ -104,7 +104,7 @@ export function app_replace_rule_set(context) {
         component,
         nn && app_replace_rule_valid(rule2, index_selected, current_list),
       );
-      let second = list_second(list);
+      let ne = list_any(list, function lambda7(item2) {});
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
