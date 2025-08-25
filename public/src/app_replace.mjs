@@ -15,6 +15,7 @@ export async function app_replace() {
     "/o/" +
     destination_version +
     "?alt=media";
+  sr;
   let json = await http_json(url);
   log(json);
 }
