@@ -1679,7 +1679,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "firebase_deploy_function"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2781,7 +2782,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3129,7 +3131,8 @@
    "js_imports_paths_fix",
    "storage_local_key_get",
    "app_replace_rule_sets",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "firebase_deploy_function"
   ],
   "output": [
    "watch",
@@ -4115,7 +4118,8 @@
    "function_aliases_restore"
   ],
   "file": [
-   "folder_read"
+   "folder_read",
+   "firebase_deploy_function"
   ],
   "statSync": [
    "folder_read"
@@ -5960,7 +5964,8 @@
    "html_update",
    "js_imports_paths_fix",
    "folder_current_join_code",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "firebase_deploy_function"
   ],
   "i": [
    "function_identifier_replace",
@@ -6024,7 +6029,8 @@
   ],
   "url": [
    "function_import",
-   "server"
+   "server",
+   "firebase_deploy_function"
   ],
   "__dirname": [
    "function_import",
@@ -8713,7 +8719,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "firebase_deploy_function"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -10404,13 +10411,37 @@
   "storage": [
    "firebase_deploy_function"
   ],
-  "upload": [
-   "firebase_deploy_function"
-  ],
-  "destination": [
-   "firebase_deploy_function"
-  ],
   "firebase_service_account": [
+   "firebase_deploy_function"
+  ],
+  "uploadString": [
+   "firebase_deploy_function"
+  ],
+  "content": [
+   "firebase_deploy_function"
+  ],
+  "destinationPath": [
+   "firebase_deploy_function"
+  ],
+  "Buffer": [
+   "firebase_deploy_function"
+  ],
+  "save": [
+   "firebase_deploy_function"
+  ],
+  "contentType": [
+   "firebase_deploy_function"
+  ],
+  "gzip": [
+   "firebase_deploy_function"
+  ],
+  "metadata": [
+   "firebase_deploy_function"
+  ],
+  "cacheControl": [
+   "firebase_deploy_function"
+  ],
+  "myString": [
    "firebase_deploy_function"
   ]
  },
@@ -19661,6 +19692,7 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "log",
     "firebase_service_account",
     "marker",
     "firebase_deploy_function",
@@ -19673,8 +19705,22 @@
     "storageBucket",
     "bucket",
     "storage",
-    "upload",
-    "destination"
+    "uploadString",
+    "content",
+    "destinationPath",
+    "file",
+    "v",
+    "Buffer",
+    "from",
+    "save",
+    "contentType",
+    "gzip",
+    "metadata",
+    "cacheControl",
+    "console",
+    "url",
+    "name",
+    "myString"
    ]
   }
  },
