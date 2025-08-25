@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { folder_src } from "./folder_src.mjs";
 import { folder_current_join_code } from "./folder_current_join_code.mjs";
@@ -9,6 +10,7 @@ import { html_overwrite } from "./html_overwrite.mjs";
 import { html_name_to_path } from "./html_name_to_path.mjs";
 import { path_join } from "./path_join.mjs";
 export async function html_update(name) {
+  marker("1");
   let file_path = html_name_to_path(name);
   const name_prefixed = app_name_prefixed(name);
   let call = js_code_call_statement(name_prefixed);
