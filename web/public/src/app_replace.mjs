@@ -10,13 +10,13 @@ export async function app_replace() {
   let f_name = app_replace_main.name;
   let destination_version =
     firebase_deploy_function_destination_version(f_name);
+  let replaced = string_replace(destination_version, "/", "%2F");
   let url =
     "https://firebasestorage.googleapis.com/v0/b/" +
     firebase_storage_url_project() +
     "/o/" +
-    destination_version +
+    replaced +
     "?alt=media";
-  let replaced = string_replace(s, from, to);
   let json = await http_json(url);
   log(json);
 }
