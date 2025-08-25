@@ -5343,8 +5343,7 @@
    "list_filter_property",
    "list_find",
    "prompt_previous",
-   "search_generic",
-   "firebase_deploy_function"
+   "search_generic"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -8531,7 +8530,8 @@
   ],
   "list_find": [
    "list_find",
-   "list_find_property"
+   "list_find_property",
+   "firebase_deploy_function"
   ],
   "undefined_not_is_assert_lambda": [
    "list_get",
@@ -19638,8 +19638,8 @@
   "firebase_deploy_function": {
    "async": false,
    "identifiers": [
+    "list_find",
     "string_starts_with",
-    "list_filter",
     "folder_previous",
     "folder_read",
     "marker",
