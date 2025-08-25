@@ -4488,8 +4488,7 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json",
-   "app_replace_settings"
+   "http_json"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -20475,8 +20474,7 @@
     "root",
     "lambda3",
     "component",
-    "parent",
-    "text"
+    "parent"
    ]
   }
  },
