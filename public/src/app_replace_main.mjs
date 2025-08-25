@@ -12,6 +12,7 @@ export function app_replace_main() {
   const head = html_document_head();
   let component = html_element(head, "meta");
   let element = html_component_element_get(component);
+  element.setAttribute;
   const root = html_document_body();
   app_refresh({
     app_fn,
