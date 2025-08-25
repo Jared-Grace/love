@@ -9,7 +9,6 @@ export function app_replace_main() {
   let screens = app_replace_screens();
   html_meta_viewport();
   const root = html_document_body();
-  document.documentElement;
   app_refresh({
     app_fn,
     screens,
