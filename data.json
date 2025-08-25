@@ -10410,9 +10410,6 @@
   "content": [
    "firebase_deploy_function"
   ],
-  "destinationPath": [
-   "firebase_deploy_function"
-  ],
   "Buffer": [
    "firebase_deploy_function"
   ],
@@ -10444,6 +10441,9 @@
    "firebase_service_account"
   ],
   "firebase_admin": [
+   "firebase_deploy_function"
+  ],
+  "destination": [
    "firebase_deploy_function"
   ]
  },
@@ -19699,7 +19699,7 @@
     "firebase_deploy_function",
     "uploadString",
     "content",
-    "destinationPath",
+    "destination",
     "admin",
     "bucket",
     "storage",
