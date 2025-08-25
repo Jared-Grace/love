@@ -1,5 +1,4 @@
-import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_document_root } from "./html_document_root.mjs";
+import { app_replace_font_size_refresh } from "./app_replace_font_size_refresh.mjs";
 import { html_meta_viewport } from "./html_meta_viewport.mjs";
 import { app_refresh } from "./app_refresh.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -15,6 +14,5 @@ export function app_replace_main() {
     screens,
     root: root,
   });
-  let html = html_document_root();
-  html_style_font_size(html, "20px");
+  app_replace_font_size_refresh();
 }
