@@ -12,5 +12,13 @@ export async function firebase_deploy_function() {
   let only = folder_find_starts_with(path_folder, prefix);
   let file_path = path_join([path_folder, only]);
   let data = await file_read_json(file_path);
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  });
+  const bucket = admin.storage().bucket();
+  await bucket.upload("./local-file.txt", {
+    destination: "uploads/file.txt",
+  });
   return data;
 }
