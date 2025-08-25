@@ -10255,13 +10255,13 @@
   "style_key": [
    "html_style_remove"
   ],
-  "style_value": [
-   "html_style_remove"
-  ],
   "b_element": [
    "html_style_remove"
   ],
   "style": [
+   "html_style_remove"
+  ],
+  "removeProperty": [
    "html_style_remove"
   ]
  },
@@ -19435,9 +19435,9 @@
     "html_style_remove",
     "b",
     "style_key",
-    "style_value",
     "b_element",
-    "style"
+    "style",
+    "removeProperty"
    ]
   }
  },
