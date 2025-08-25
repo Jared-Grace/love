@@ -3182,7 +3182,8 @@
    "js_node_types",
    "list_filter_property",
    "list_range",
-   "list_slice_end"
+   "list_slice_end",
+   "ternary"
   ],
   "separator": [
    "watch",
@@ -3628,7 +3629,8 @@
    "null_not_is",
    "marker_enter",
    "null_not_is_assert",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ternary"
   ],
   "null_not_is": [
    "function_run_prompt",
@@ -10273,13 +10275,16 @@
    "app_replace_rule_set"
   ],
   "on_true": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ternary"
   ],
   "on_false": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ternary"
   ],
   "ternary": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ternary"
   ]
  },
  "functions": {
@@ -19462,6 +19467,16 @@
     "b_element",
     "style",
     "removeProperty"
+   ]
+  },
+  "ternary": {
+   "async": false,
+   "identifiers": [
+    "ternary",
+    "nn",
+    "on_true",
+    "on_false",
+    "result"
    ]
   }
  },
