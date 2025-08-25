@@ -1880,7 +1880,8 @@
    "firebase_deploy",
    "function_dependencies_code_copy",
    "html_update",
-   "date_now_file"
+   "date_now_file",
+   "firebase_admin"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2985,7 +2986,8 @@
   "default": [
    "watch",
    "chalk_color",
-   "clipboard_copy"
+   "clipboard_copy",
+   "firebase_admin"
   ],
   "joined": [
    "watch",
@@ -10401,7 +10403,8 @@
    "firebase_service_account"
   ],
   "firebase_service_account": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_admin"
   ],
   "folder_find_starts_with": [
    "firebase_service_account"
@@ -10410,7 +10413,8 @@
    "firebase_service_account"
   ],
   "service_account": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_admin"
   ],
   "firebase_upload_string": [
    "firebase_deploy_function"
@@ -10443,6 +10447,24 @@
   ],
   "firebase_upload_object": [
    "firebase_deploy_function"
+  ],
+  "firebase_admin": [
+   "firebase_admin"
+  ],
+  "admin": [
+   "firebase_admin"
+  ],
+  "initializeApp": [
+   "firebase_admin"
+  ],
+  "credential": [
+   "firebase_admin"
+  ],
+  "cert": [
+   "firebase_admin"
+  ],
+  "storageBucket": [
+   "firebase_admin"
   ]
  },
  "functions": {
@@ -19739,6 +19761,21 @@
     "file_name_json",
     "name",
     "file_name"
+   ]
+  },
+  "firebase_admin": {
+   "async": true,
+   "identifiers": [
+    "firebase_service_account",
+    "marker",
+    "firebase_admin",
+    "admin",
+    "default",
+    "service_account",
+    "initializeApp",
+    "credential",
+    "cert",
+    "storageBucket"
    ]
   }
  },
