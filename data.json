@@ -2319,7 +2319,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_property_async",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3023,7 +3024,8 @@
    "object_property_initialize",
    "object_property_exists_not",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "object_property_exists_not_assert"
   ],
   "object_property_equals": [
    "watch",
@@ -3345,7 +3347,8 @@
    "list_range",
    "list_slice_end",
    "ternary",
-   "functions_combine_name"
+   "functions_combine_name",
+   "object_property_exists_not_assert"
   ],
   "separator": [
    "watch",
@@ -4361,7 +4364,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "js_declare_single",
-   "null_not_is_assert"
+   "null_not_is_assert",
+   "object_property_exists_not_assert"
   ],
   "b": [
    "assert",
@@ -4910,7 +4914,8 @@
    "undefined_not_is_assert_lambda",
    "object_property_exists_not",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "object_property_exists_not_assert"
   ],
   "each_pair": [
    "each_pair",
@@ -10885,6 +10890,9 @@
   ],
   "lambda8": [
    "app_replace_rule_set"
+  ],
+  "object_property_exists_not_assert": [
+   "object_property_exists_not_assert"
   ]
  },
  "functions": {
@@ -20575,6 +20583,17 @@
     "context",
     "value_get",
     "value"
+   ]
+  },
+  "object_property_exists_not_assert": {
+   "async": false,
+   "identifiers": [
+    "assert",
+    "object_property_exists",
+    "object_property_exists_not_assert",
+    "object",
+    "property_name",
+    "result"
    ]
   }
  },
