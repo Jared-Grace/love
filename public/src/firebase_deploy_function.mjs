@@ -1,3 +1,4 @@
+import { firebase_deploy_function_destination_version } from "./firebase_deploy_function_destination_version.mjs";
 import { marker } from "./marker.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { firebase_deploy_function_destination } from "./firebase_deploy_function_destination.mjs";
@@ -13,9 +14,7 @@ export async function firebase_deploy_function(f_name) {
   let version = {
     destination,
   };
-  let destination_version = firebase_deploy_function_destination(
-    "version",
-    f_name,
-  );
+  let destination_version =
+    firebase_deploy_function_destination_version(f_name);
   await firebase_upload_object(version, destination_version);
 }
