@@ -1734,7 +1734,7 @@
   "c object_property_exists_assert object_property_exists_not_assert"
  ],
  "marker_current": "1",
- "function_current": "list_any",
+ "function_current": "object_property_exists_not_assert",
  "terminal": false,
  "identifiers": {
   "log": [
