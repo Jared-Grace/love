@@ -2558,8 +2558,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "list_concat_multiple"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -19558,8 +19557,7 @@
     "lists",
     "result",
     "lambda",
-    "item",
-    "list"
+    "item"
    ]
   }
  },
