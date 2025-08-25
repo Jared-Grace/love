@@ -5472,7 +5472,8 @@
   "valid": [
    "functions_names_includes",
    "js_call_fill",
-   "js_call_function_if"
+   "js_call_function_if",
+   "app_replace_rule_set"
   ],
   "search_generic": [
    "functions_search",
@@ -19642,7 +19643,8 @@
     "index2",
     "lambda8",
     "sb",
-    "index3"
+    "index3",
+    "valid"
    ]
   },
   "app_refresh": {
