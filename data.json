@@ -1890,7 +1890,8 @@
    "firebase_admin",
    "global_get",
    "global_function",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2244,7 +2245,8 @@
    "function_run_prompt",
    "object_property_exists_not",
    "global_function",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2413,7 +2415,8 @@
    "visit_filter_recursive_async",
    "function_rename_identifiers",
    "list_concat_multiple",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2944,7 +2947,8 @@
    "object_property_exists_equals",
    "object_property_initialize",
    "object_property_exists_not",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "object_property_equals": [
    "watch",
@@ -2989,7 +2993,8 @@
    "js_imports_paths_fix",
    "js_string",
    "js_await_wrap",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "watch": [
    "watch"
@@ -3101,7 +3106,8 @@
    "storage_local_set_context",
    "storage_local_initialize_context",
    "list_map_index",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "name": [
    "watch",
@@ -3417,7 +3423,8 @@
    "app_replace_rule_set",
    "html_component_element_get",
    "function_rename_identifiers",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "data_save": [
    "data_file_update",
@@ -3909,7 +3916,8 @@
    "promise_not_is",
    "visit_filter_recursive_async",
    "app_replace_rule_set",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -4794,7 +4802,8 @@
    "object_property_set",
    "undefined_not_is_assert_lambda",
    "object_property_exists_not",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "each_pair": [
    "each_pair",
@@ -5583,7 +5592,8 @@
    "object_property_initialize",
    "object_property_exists",
    "function_exists_inner",
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -10506,7 +10516,11 @@
    "object_property_lambda"
   ],
   "value_set": [
-   "object_property_lambda"
+   "object_property_lambda",
+   "object_property_lambda_async"
+  ],
+  "object_property_lambda_async": [
+   "object_property_lambda_async"
   ]
  },
  "functions": {
@@ -19852,6 +19866,23 @@
     "object_property_get",
     "object_property_exists",
     "object_property_lambda",
+    "object",
+    "property_name",
+    "lambda",
+    "exists",
+    "value_set",
+    "value"
+   ]
+  },
+  "object_property_lambda_async": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "not",
+    "object_property_set",
+    "object_property_get",
+    "object_property_exists",
+    "object_property_lambda_async",
     "object",
     "property_name",
     "lambda",
