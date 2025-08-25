@@ -3757,8 +3757,7 @@
    "app_replace_rule_set"
   ],
   "value2": [
-   "error_attention_set",
-   "global_function"
+   "error_attention_set"
   ],
   "error": [
    "watch",
@@ -10485,6 +10484,9 @@
    "global_function"
   ],
   "global_function": [
+   "global_function"
+  ],
+  "fn_object": [
    "global_function"
   ]
  },
@@ -19817,7 +19819,7 @@
     "fn",
     "property_name",
     "global",
-    "value2",
+    "fn_object",
     "name"
    ]
   }
