@@ -1672,7 +1672,6 @@
   "a ff firebase_deploy_function",
   "p",
   "fd firebase_deploy_function",
-  "ff app_replace_main",
   "n global_get",
   "n global_function",
   "s lambda",
@@ -1681,7 +1680,8 @@
   "r global_function global_function_async",
   "r global_function_async global_function_property_async",
   "c global_function_property_async global_function_async",
-  "ps"
+  "ps",
+  "ff app_replace_main"
  ],
  "marker_current": "1",
  "function_current": "global_function_async",
