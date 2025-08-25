@@ -155,7 +155,8 @@
   "lsk": "list_skip",
   "lsl": "list_slice",
   "fb": "firebase_deploy",
-  "flr": "folder_read"
+  "flr": "folder_read",
+  "ssw": "string_starts_with"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1664,7 +1665,8 @@
   "ac for flr",
   "s folder",
   "firebase_deploy_function",
-  "u ssw"
+  "u ssw",
+  "a ssw string_starts_with"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
