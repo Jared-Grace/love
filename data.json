@@ -3072,7 +3072,8 @@
    "js_string",
    "js_await_wrap",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "app_replace_rule_set"
   ],
   "watch": [
    "watch"
@@ -3195,7 +3196,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "app_replace_rule_set"
   ],
   "name": [
    "watch",
@@ -19554,6 +19556,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_property_set",
     "object_property_exists_not_assert",
     "range",
     "list_any",
@@ -19627,6 +19630,7 @@
     "lambda5",
     "object",
     "property_name",
+    "value",
     "nn",
     "lambda6",
     "component",
