@@ -5,9 +5,13 @@ import { folder_current_join_code } from "./folder_current_join_code.mjs";
 import { path_join } from "./path_join.mjs";
 import { function_name_to_base } from "./function_name_to_base.mjs";
 import { js_code_call_statement } from "./js_code_call_statement.mjs";
-import { app_name_prefixed } from "./app_name_prefixed.mjs";
-export async function html_update_generic(name, file_path, lambda$f_name_ext) {
-  const name_prefixed = app_name_prefixed(name);
+export async function html_update_generic(
+  name,
+  file_path,
+  lambda$f_name_ext,
+  lambda$fn_get,
+) {
+  const name_prefixed = lambda$fn_get(name);
   let call = js_code_call_statement(name_prefixed);
   let f_name_ext = function_name_to_base(name_prefixed);
   const from_paths = lambda$f_name_ext(f_name_ext);
