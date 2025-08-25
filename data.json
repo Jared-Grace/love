@@ -1681,7 +1681,6 @@
   "r global_function global_function_async",
   "r global_function_async global_function_property_async",
   "c global_function_property_async global_function_async",
-  "ps",
   "n http",
   "fw http http_json",
   "u jf",
@@ -1691,7 +1690,8 @@
   "rs firebase_storage_url project",
   "s rename",
   "as rename",
-  "a rs function_rename_suffix_add"
+  "a rs function_rename_suffix_add",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
