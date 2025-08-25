@@ -2176,7 +2176,8 @@
    "functions_transform",
    "function_parse_strict",
    "function_transform_marker_specified",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "firebase_deploy_function"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2778,7 +2779,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6490,7 +6492,8 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read"
+   "function_read",
+   "firebase_deploy_function"
   ],
   "function_rename": [
    "function_rename",
@@ -19615,11 +19618,14 @@
    ]
   },
   "firebase_deploy_function": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_read",
     "marker",
     "firebase_deploy_function",
-    "prefix"
+    "prefix",
+    "v",
+    "f_name"
    ]
   }
  },
