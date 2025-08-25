@@ -28,7 +28,7 @@ export function app_replace_rule_sets() {
     {
       name: "Unary to Binary Equations",
       rules: [
-        "= c > c = b c",
+        "= b > c = b c",
         "c c > c + b c",
         "d b > b d",
         "d c > a d",
