@@ -9,10 +9,11 @@ export function app_replace_main() {
   let screens = app_replace_screens();
   html_meta_viewport();
   const root = html_document_body();
-  app_refresh({
+  const context = {
     app_fn,
     screens,
     root: root,
-  });
+  };
+  app_refresh(context);
   app_replace_font_size_refresh(context);
 }
