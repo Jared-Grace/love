@@ -1,3 +1,4 @@
+import { ternary } from "./ternary.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_style_set_or_remove } from "./html_style_set_or_remove.mjs";
 import { each_index } from "./each_index.mjs";
@@ -64,7 +65,6 @@ export function app_replace_rule_set(context) {
   let rules_buttons = list_map(mapped, lambda);
   refresh();
   function refresh() {
-    let label_rules_text = null;
     let fn = null;
     let nn = null_not_is(index_selected);
     if (nn) {
@@ -74,11 +74,7 @@ export function app_replace_rule_set(context) {
     }
     const on_true = "Choose a rule:";
     const on_false = "Rules:";
-    if (nn) {
-      label_rules_text = on_true;
-    } else {
-      label_rules_text = on_false;
-    }
+    let label_rules_text = ternary(nn, label_rules_text, on_true, on_false);
     html_text_set(label_rules, label_rules_text);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
