@@ -1730,7 +1730,8 @@
   "s list_any",
   "a lan list_any",
   "o list_any",
-  "s assert"
+  "s assert",
+  "c object_property_exists_assert object_property_exists_not_assert"
  ],
  "marker_current": "1",
  "function_current": "list_any",
