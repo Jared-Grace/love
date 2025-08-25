@@ -1241,7 +1241,6 @@
   "a lj list_join",
   "n data_file_update",
   "de data_identifiers_file",
-  "s remove",
   "dpg dfu",
   "data_property_get data_file_update",
   "dpg functions",
@@ -1691,7 +1690,8 @@
   "as rename",
   "a rs function_rename_suffix_add",
   "ps",
-  "rs firebase_storage_url project"
+  "rs firebase_storage_url project",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_url_project",
