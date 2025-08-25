@@ -1642,7 +1642,8 @@
   "as list",
   "a lsl list_slice",
   "s json",
-  "u lcm"
+  "u lcm",
+  "s concat"
  ],
  "marker_current": "1",
  "function_current": "html_enable_if",
