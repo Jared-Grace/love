@@ -1672,12 +1672,13 @@
   "date_now_file",
   "s json",
   "a ff firebase_deploy_function",
-  "ff app_replace_main",
   "p",
-  "fd firebase_deploy_function"
+  "fd firebase_deploy_function",
+  "ff app_replace_main",
+  "n global_get"
  ],
  "marker_current": "1",
- "function_current": "date_now_file",
+ "function_current": "global_get",
  "terminal": false,
  "identifiers": {
   "log": [
