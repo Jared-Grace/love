@@ -2249,8 +2249,7 @@
    "global_function",
    "object_property_lambda",
    "object_property_lambda_async",
-   "global_function_async",
-   "firebase_admin"
+   "global_function_async"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2499,8 +2498,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "function_rename_identifiers",
-   "app_replace_rule_set",
-   "firebase_admin"
+   "app_replace_rule_set"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3113,8 +3111,7 @@
    "list_map_index",
    "object_property_lambda",
    "object_property_lambda_async",
-   "global_function_async",
-   "firebase_admin"
+   "global_function_async"
   ],
   "name": [
    "watch",
@@ -3758,8 +3755,7 @@
    "marker_below",
    "html_enable_if",
    "global_function",
-   "global_function_async",
-   "firebase_admin"
+   "global_function_async"
   ],
   "colored": [
    "chalk_color",
@@ -10524,8 +10520,7 @@
    "global_function_async"
   ],
   "global_function_async": [
-   "global_function_async",
-   "firebase_admin"
+   "global_function_async"
   ],
   "firebase_admin_get": [
    "firebase_admin"
@@ -19830,14 +19825,9 @@
   "firebase_admin": {
    "async": true,
    "identifiers": [
-    "global_function_async",
     "firebase_admin_get",
     "firebase_admin",
-    "admin",
-    "lambda2",
-    "value",
-    "fn",
-    "property_name"
+    "admin"
    ]
   },
   "global_get": {
