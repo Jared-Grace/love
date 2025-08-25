@@ -1897,7 +1897,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "http"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10539,6 +10540,9 @@
   ],
   "global_function_property_async": [
    "global_function_property_async"
+  ],
+  "http": [
+   "http"
   ]
  },
  "functions": {
@@ -19933,6 +19937,13 @@
     "fn_object",
     "name",
     "value"
+   ]
+  },
+  "http": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "http"
    ]
   }
  },
