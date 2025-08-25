@@ -5,5 +5,6 @@ export function firebase_deploy_function() {
   marker("1");
   let prefix = "jared-grace-firebase-adminsdk-";
   let path_folder = folder_previous();
-  let v2 = folder_read(path_folder);
+  let files = folder_read(path_folder);
+  return files;
 }
