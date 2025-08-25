@@ -44,8 +44,8 @@ export function app_replace_rule_set(context) {
     b = html_button(root, letter, lambda5);
   }
   each_index(current_list, lambda2);
-  let label = null;
   let l = html_p(root);
+  let label = null;
   if (index_selected) {
     label = "Choose a rule:";
   } else {
