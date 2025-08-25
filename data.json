@@ -4643,8 +4643,7 @@
    "data_get",
    "data_transform",
    "storage_local_initialize",
-   "storage_local_initialize_context",
-   "app_replace_font_size_refresh"
+   "storage_local_initialize_context"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -6585,8 +6584,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set",
-   "app_replace_font_size_refresh"
+   "html_attribute_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -20502,9 +20500,7 @@
     "app_replace_font_size_refresh",
     "context",
     "html",
-    "value",
-    "key",
-    "value_initial"
+    "value"
    ]
   }
  },
