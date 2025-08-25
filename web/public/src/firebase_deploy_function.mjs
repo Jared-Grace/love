@@ -5,6 +5,6 @@ import { list_join } from "./list_join.mjs";
 export async function firebase_deploy_function(f_name) {
   let code = await function_dependencies_code(f_name);
   let now_file = date_now_file();
-  let destination = list_join(["function", f_name], "/");
+  let destination = list_join(["function", f_name, now_file], "/");
   firebase_upload_string(code, destination);
 }
