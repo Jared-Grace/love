@@ -9566,7 +9566,8 @@
    "function_aliases_restore"
   ],
   "sb": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_replace_rule_set"
   ],
   "psn": [
    "function_aliases_restore"
@@ -10882,9 +10883,6 @@
    "app_replace_rule_set"
   ],
   "lambda8": [
-   "app_replace_rule_set"
-  ],
-  "item2": [
    "app_replace_rule_set"
   ]
  },
@@ -19626,7 +19624,7 @@
     "symbols_button",
     "index2",
     "lambda8",
-    "item2"
+    "sb"
    ]
   },
   "app_refresh": {
