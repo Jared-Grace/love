@@ -159,7 +159,8 @@
   "ssw": "string_starts_with",
   "ff": "firebase_deploy_function",
   "jf": "json_from",
-  "rs": "function_rename_suffix_add"
+  "rs": "function_rename_suffix_add",
+  "ffc": "firebase_deploy_function_app_current"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1697,7 +1698,8 @@
   "data_app_current_get",
   "u ff",
   "fws firebase_deploy_function app_current",
-  "s combine"
+  "s combine",
+  "a ffc firebase_deploy_function_app_current"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function_app_current",
