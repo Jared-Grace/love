@@ -2085,7 +2085,8 @@
    "html_update",
    "function_transform_marker_specified",
    "js_code_call_statement",
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "firebase_deploy_function"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2782,8 +2783,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "firebase_deploy_function"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6493,8 +6493,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "firebase_deploy_function"
+   "function_param_swap_task_simple"
   ],
   "function_read": [
    "function_read"
@@ -19659,8 +19658,7 @@
     "firebase_upload_string",
     "firebase_deploy_function",
     "f_name",
-    "v",
-    "f_name2",
+    "code",
     "myString"
    ]
   },
