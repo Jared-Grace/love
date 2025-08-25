@@ -10592,9 +10592,6 @@
    "firebase_deploy_function",
    "app_replace"
   ],
-  "firebase_storage_url": [
-   "firebase_admin_get"
-  ],
   "initializeApp": [
    "firebase_admin_get"
   ],
@@ -10609,7 +10606,8 @@
   ],
   "firebase_storage_url_project": [
    "firebase_storage_url_project",
-   "app_replace"
+   "app_replace",
+   "firebase_admin_get"
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers"
@@ -20047,7 +20045,7 @@
   "firebase_admin_get": {
    "async": true,
    "identifiers": [
-    "firebase_storage_url",
+    "firebase_storage_url_project",
     "firebase_service_account",
     "marker",
     "firebase_admin_get",
