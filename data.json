@@ -5174,8 +5174,7 @@
   "functions_combine_name": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test",
-   "firebase_deploy_function_app_current"
+   "functions_combine_test"
   ],
   "js_function_last_asyncify": [
    "js_call_fill",
@@ -5232,7 +5231,8 @@
    "functions_combine_name",
    "function_name_combine",
    "function_name_combine_multiple",
-   "task_new"
+   "task_new",
+   "firebase_deploy_function_app_current"
   ],
   "function_new_transform": [
    "functions_combine",
@@ -20164,8 +20164,8 @@
   "firebase_deploy_function_app_current": {
    "async": true,
    "identifiers": [
+    "function_name_combine_multiple",
     "app_name_prefixed",
-    "functions_combine_name",
     "data_app_current_get",
     "firebase_deploy_function",
     "marker",
