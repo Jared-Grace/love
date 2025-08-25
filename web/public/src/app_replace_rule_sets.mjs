@@ -23,7 +23,7 @@ export function app_replace_rule_sets() {
     {
       name: "Binary Counting",
       rules: ["0 a > 1", "1 a > a 0", "c > a c", "b a > b 1"],
-      start: "1=1",
+      start: "b0c",
     },
   ];
   return v;
