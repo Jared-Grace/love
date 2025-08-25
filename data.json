@@ -10744,8 +10744,7 @@
   ],
   "html": [
    "html_document_root",
-   "app_replace_main",
-   "html_button"
+   "app_replace_main"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -19156,8 +19155,7 @@
     "parent",
     "text",
     "lambda",
-    "component",
-    "html"
+    "component"
    ]
   },
   "js_imports_paths_fix": {
