@@ -5016,7 +5016,8 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "list_any"
+   "list_any",
+   "app_replace_rule_set"
   ],
   "Error": [
    "error",
@@ -5197,8 +5198,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "app_replace_rule_set"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -8007,8 +8007,7 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "app_replace_rule_set"
+   "list_second"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -8460,7 +8459,8 @@
   "list_any": [
    "js_node_types_is",
    "list_any",
-   "marker_functionize"
+   "marker_functionize",
+   "app_replace_rule_set"
   ],
   "match": [
    "js_node_types_is",
@@ -10866,6 +10866,12 @@
   "app_replace_font_size_adjust": [
    "app_replace_settings",
    "app_replace_font_size_adjust"
+  ],
+  "lambda7": [
+   "app_replace_rule_set"
+  ],
+  "item2": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19522,7 +19528,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "list_second",
+    "list_any",
     "html_div",
     "list_concat_multiple",
     "list_size",
@@ -19595,8 +19601,10 @@
     "lambda6",
     "component",
     "rule2",
-    "second",
+    "ne",
     "list",
+    "lambda7",
+    "item2",
     "lambda4",
     "symbols_button",
     "index2"
