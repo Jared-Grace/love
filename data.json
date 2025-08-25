@@ -146,7 +146,6 @@
   "mdm": "marker_next_delete_multiple",
   "mdd": "marker_down_1",
   "muu": "marker_up_1",
-  "for": "folder_read",
   "fop": "folder_public",
   "fpc": "folder_public_combine",
   "oh": "app_html_open",
@@ -155,7 +154,8 @@
   "nli": "null_is",
   "lsk": "list_skip",
   "lsl": "list_slice",
-  "fb": "firebase_deploy"
+  "fb": "firebase_deploy",
+  "flr": "folder_read"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1662,7 +1662,8 @@
   "html_update replace",
   "ni firebase-admin",
   "n firebase_deploy_function",
-  "u for"
+  "u for",
+  "ac for flr"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
