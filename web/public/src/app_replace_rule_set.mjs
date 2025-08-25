@@ -48,7 +48,6 @@ export function app_replace_rule_set(context) {
   }
   let symbols_buttons = list_map_index(current_list, lambda2);
   let l = html_p(root);
-  refresh();
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
@@ -62,6 +61,7 @@ export function app_replace_rule_set(context) {
     html_disable(b);
   }
   let rules_buttons = list_map(mapped, lambda);
+  refresh();
   function refresh() {
     let label = null;
     let fn = null;
