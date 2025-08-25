@@ -5262,8 +5262,7 @@
    "functions_combine_name",
    "function_name_combine",
    "function_name_combine_multiple",
-   "task_new",
-   "firebase_deploy_function_app_current"
+   "task_new"
   ],
   "function_new_transform": [
    "functions_combine",
@@ -8967,8 +8966,7 @@
    "app_new",
    "function_open_app",
    "function_new_app_screen",
-   "marker_screen_add",
-   "firebase_deploy_function_app_current"
+   "marker_screen_add"
   ],
   "marker_first_index": [
    "marker_first",
@@ -9941,7 +9939,6 @@
    "app_name_prefixed",
    "function_open_app",
    "marker_screen_add",
-   "firebase_deploy_function_app_current",
    "html_update_generic"
   ],
   "app_new": [
@@ -10776,6 +10773,9 @@
   ],
   "file_parent_exists_ensure": [
    "file_overwrite"
+  ],
+  "app_name_main": [
+   "firebase_deploy_function_app_current"
   ]
  },
  "functions": {
@@ -20264,14 +20264,12 @@
   "firebase_deploy_function_app_current": {
    "async": true,
    "identifiers": [
-    "function_name_combine_multiple",
-    "app_name_prefixed",
+    "app_name_main",
     "data_app_current_get",
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_current",
     "a",
-    "a_name",
     "combined"
    ]
   },
