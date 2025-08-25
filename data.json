@@ -3150,7 +3150,8 @@
    "storage_local_key_get",
    "app_replace_rule_sets",
    "app_replace_rule_set",
-   "file_name_json"
+   "file_name_json",
+   "global_function"
   ],
   "output": [
    "watch",
@@ -19818,6 +19819,7 @@
     "property_name",
     "global",
     "value2",
+    "name",
     "value"
    ]
   }
