@@ -1898,7 +1898,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "http_json"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2817,7 +2818,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "http_json"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6091,7 +6093,8 @@
   "url": [
    "function_import",
    "server",
-   "http"
+   "http",
+   "http_json"
   ],
   "__dirname": [
    "function_import",
@@ -10546,7 +10549,8 @@
    "global_function_property_async"
   ],
   "http": [
-   "http"
+   "http",
+   "http_json"
   ],
   "response": [
    "http"
@@ -10556,6 +10560,9 @@
   ],
   "ok": [
    "http"
+  ],
+  "http_json": [
+   "http_json"
   ]
  },
  "functions": {
@@ -19963,6 +19970,16 @@
     "fetch",
     "ok",
     "text"
+   ]
+  },
+  "http_json": {
+   "async": true,
+   "identifiers": [
+    "http",
+    "marker",
+    "http_json",
+    "url",
+    "v"
    ]
   }
  },
