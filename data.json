@@ -2180,7 +2180,8 @@
    "functions_transform",
    "function_parse_strict",
    "function_transform_marker_specified",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "firebase_deploy_function"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -19653,6 +19654,7 @@
    "identifiers": [
     "firebase_upload_string",
     "firebase_deploy_function",
+    "f_name",
     "myString"
    ]
   },
