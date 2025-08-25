@@ -1,4 +1,4 @@
-import { html_style_remove } from "./html_style_remove.mjs";
+import { html_style_set_or_remove } from "./html_style_set_or_remove.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
@@ -6,7 +6,6 @@ import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -79,11 +78,7 @@ export function app_replace_rule_set(context) {
       const condition = index2 === index_selected;
       const key = "background-color";
       const value = "lightgreen";
-      if (condition) {
-        html_style_set(symbols_button, key, value);
-      } else {
-        html_style_remove(symbols_button, key);
-      }
+      html_style_set_or_remove(condition, symbols_button, key, value);
     }
     each_index(symbols_buttons, lambda4);
   }
