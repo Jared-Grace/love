@@ -3993,7 +3993,8 @@
    "js_string",
    "string_split_space",
    "string_split_empty",
-   "string_replace"
+   "string_replace",
+   "app_replace"
   ],
   "a": [
    "string_suffix_without",
@@ -5970,7 +5971,8 @@
    "function_parse",
    "function_parse_declaration_inner",
    "marker_next_index",
-   "string_replace"
+   "string_replace",
+   "app_replace"
   ],
   "r": [
    "function_format",
@@ -6053,7 +6055,8 @@
    "js_imports_paths_fix",
    "folder_current_join_code",
    "function_name_to_path_import",
-   "string_replace"
+   "string_replace",
+   "app_replace"
   ],
   "i": [
    "function_identifier_replace",
@@ -8865,7 +8868,8 @@
    "marker_call_atomize",
    "marker_call_replace",
    "marker_call_replace_generic",
-   "string_replace"
+   "string_replace",
+   "app_replace"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -10622,11 +10626,9 @@
   "list_remove_if_exists": [
    "function_rename_identifiers"
   ],
-  "sr": [
-   "app_replace"
-  ],
   "string_replace": [
-   "string_replace"
+   "string_replace",
+   "app_replace"
   ]
  },
  "functions": {
@@ -18952,6 +18954,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "string_replace",
     "log",
     "firebase_storage_url_project",
     "firebase_deploy_function_destination_version",
@@ -18963,7 +18966,10 @@
     "name",
     "destination_version",
     "url",
-    "sr",
+    "replaced",
+    "s",
+    "from",
+    "to",
     "json"
    ]
   },
