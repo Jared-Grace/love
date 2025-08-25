@@ -26,7 +26,7 @@ export function app_replace_rule_sets() {
       start: "b0c",
     },
     {
-      name: "Binary Counting",
+      name: "Unary to Binary Equations",
       rules: [
         "= b > a = b a",
         "a a > a + b a",
