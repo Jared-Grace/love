@@ -4197,7 +4197,8 @@
    "string_slice",
    "html_button_element",
    "js_declare_single",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_enable"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10221,6 +10222,15 @@
   ],
   "rules_buttons": [
    "app_replace_rule_set"
+  ],
+  "html_disable_set": [
+   "html_enable"
+  ],
+  "html_enable": [
+   "html_enable"
+  ],
+  "disabled": [
+   "html_enable"
   ]
  },
  "functions": {
@@ -19367,6 +19377,15 @@
     "string_split_empty",
     "s",
     "split2"
+   ]
+  },
+  "html_enable": {
+   "async": false,
+   "identifiers": [
+    "html_disable_set",
+    "html_enable",
+    "b",
+    "disabled"
    ]
   }
  },
