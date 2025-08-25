@@ -1832,7 +1832,8 @@
    "lambda_value",
    "list_take",
    "storage_local_initialize",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "html_enable"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19382,6 +19383,7 @@
   "html_enable": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_disable_set",
     "html_enable",
     "b",
