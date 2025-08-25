@@ -3960,7 +3960,8 @@
    "list_unique",
    "null_not_is_assert",
    "promise_not_is",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_replace_rule_set"
   ],
   "without": [
    "string_suffix_without",
@@ -4113,7 +4114,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "app_replace_rule_set"
   ],
   "readdirSync": [
    "folder_read"
@@ -4507,7 +4509,8 @@
    "list_skip",
    "list_slice",
    "list_slice_end",
-   "list_take"
+   "list_take",
+   "app_replace_rule_set"
   ],
   "data_prompts": [
    "data_prompts",
@@ -5012,8 +5015,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "app_replace_rule_set"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -7803,8 +7805,7 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "app_replace_rule_set"
+   "list_second"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -7989,7 +7990,8 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names"
+   "js_identifiers_to_names",
+   "app_replace_rule_set"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -18964,7 +18966,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "list_second",
+    "list_slice",
     "html_enable_if",
     "html_text_set_if",
     "null_not_is",
@@ -19017,8 +19019,10 @@
     "left_joined",
     "text",
     "lambda3",
-    "second",
+    "v2",
     "list",
+    "a",
+    "b2",
     "rules_buttons",
     "nn",
     "lambda6",
