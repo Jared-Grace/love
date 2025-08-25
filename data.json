@@ -9941,7 +9941,8 @@
   "document": [
    "html_document_body",
    "html_element",
-   "html_document_head"
+   "html_document_head",
+   "app_replace_main"
   ],
   "tag_name": [
    "html_element",
@@ -10704,6 +10705,9 @@
    "html_attribute_set"
   ],
   "html_meta_viewport": [
+   "app_replace_main"
+  ],
+  "documentElement": [
    "app_replace_main"
   ]
  },
@@ -20229,6 +20233,8 @@
     "app_fn",
     "screens",
     "root",
+    "document",
+    "documentElement",
     "p"
    ]
   },
