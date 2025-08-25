@@ -2749,7 +2749,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "app_replace_rule_set"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3676,7 +3677,6 @@
    "list_squash",
    "marker_above",
    "marker_below",
-   "app_replace_rule_set",
    "html_enable_if"
   ],
   "colored": [
@@ -9869,7 +9869,8 @@
    "html_component_element_get",
    "html_on_click",
    "html_p",
-   "html_enable_if"
+   "html_enable_if",
+   "app_replace_rule_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10235,7 +10236,6 @@
   ],
   "html_enable": [
    "html_enable",
-   "app_replace_rule_set",
    "html_enable_if"
   ],
   "disabled": [
@@ -10285,13 +10285,18 @@
   ],
   "condition": [
    "ternary",
-   "html_enable_if"
+   "html_enable_if",
+   "app_replace_rule_set"
   ],
   "html_text_set_if": [
    "app_replace_rule_set"
   ],
   "html_enable_if": [
-   "html_enable_if"
+   "html_enable_if",
+   "app_replace_rule_set"
+  ],
+  "lambda6": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18954,13 +18959,13 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_enable_if",
     "html_text_set_if",
     "null_not_is",
     "html_style_set_or_remove",
     "each_index",
     "list_map_index",
     "each",
-    "html_enable",
     "html_p",
     "html_disable",
     "string_split_empty",
@@ -19008,7 +19013,10 @@
     "lambda3",
     "rules_buttons",
     "nn",
-    "fn",
+    "lambda6",
+    "component",
+    "v",
+    "condition",
     "lambda4",
     "symbols_button",
     "index2"
