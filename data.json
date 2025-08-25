@@ -1713,7 +1713,8 @@
   "html_update replace",
   "p",
   "ps",
-  "html_update_dev replace"
+  "html_update_dev replace",
+  "rs html_update public"
  ],
  "marker_current": "1",
  "function_current": "html_update_dev",
