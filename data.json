@@ -2636,8 +2636,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "string_replace"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -2833,8 +2832,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "string_replace"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3296,8 +3294,7 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run",
-   "string_replace"
+   "tasks_run"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -8867,7 +8864,8 @@
   "replaced": [
    "marker_call_atomize",
    "marker_call_replace",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "string_replace"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -20097,9 +20095,7 @@
     "from",
     "to",
     "split",
-    "v",
-    "list",
-    "separator"
+    "replaced"
    ]
   }
  },
