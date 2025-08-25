@@ -8,7 +8,6 @@ import { storage_local_initialize_context } from "./storage_local_initialize_con
 import { list_join_space } from "./list_join_space.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
-import { each } from "./each.mjs";
 import { app_replace_rule_parse } from "./app_replace_rule_parse.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -68,6 +67,6 @@ export function app_replace_rule_set(context) {
     let b = html_button(root, text, lambda3);
     html_disable(b);
   }
-  each(mapped, lambda);
+  let rules_buttons = list_map(mapped, lambda);
   marker("1");
 }
