@@ -1700,7 +1700,8 @@
   "fws firebase_deploy_function app_current",
   "s combine",
   "a ffc firebase_deploy_function_app_current",
-  "ffc"
+  "ffc",
+  "c html_document_body html_document_head"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function_app_current",
