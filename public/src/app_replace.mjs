@@ -8,10 +8,10 @@ export function app_replace() {
   let app_fn = app_replace;
   let screens = app_replace_screens();
   const root = html_document_body();
-  let p = html_p_text(root2, text);
   app_refresh({
     app_fn,
     screens,
     root: root,
   });
+  let p = html_p_text(root, "test");
 }
