@@ -10312,7 +10312,8 @@
   ],
   "html_button_screen": [
    "app_replace_rule_set",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_home"
   ],
   "emoji_home": [
    "app_replace_rule_set",
@@ -19238,6 +19239,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "html_button_screen",
     "emoji_gear",
     "app_screen_set",
     "html_button",
