@@ -1715,10 +1715,11 @@
   "html_update_dev replace",
   "rs html_update public",
   "html_update replace",
-  "s button"
+  "s button",
+  "o app_replace_screens"
  ],
  "marker_current": "1",
- "function_current": "html_update_public",
+ "function_current": "app_replace_screens",
  "terminal": false,
  "identifiers": {
   "log": [
