@@ -1867,7 +1867,8 @@
    "list_concat_multiple",
    "firebase_deploy",
    "function_dependencies_code_copy",
-   "html_update"
+   "html_update",
+   "firebase_deploy_function"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10363,6 +10364,9 @@
   ],
   "app_replace_main": [
    "app_replace"
+  ],
+  "firebase_deploy_function": [
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19607,6 +19611,13 @@
     "marker",
     "firebase_deploy",
     "stdout"
+   ]
+  },
+  "firebase_deploy_function": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "firebase_deploy_function"
    ]
   }
  },
