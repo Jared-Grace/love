@@ -4202,7 +4202,8 @@
    "html_button_element",
    "js_declare_single",
    "app_replace_rule_set",
-   "html_enable"
+   "html_enable",
+   "html_style_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -9871,7 +9872,8 @@
    "html_text_set",
    "html_element",
    "html_on",
-   "html_component_element_get"
+   "html_component_element_get",
+   "html_style_remove"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10245,6 +10247,21 @@
   ],
   "symbols_button": [
    "app_replace_rule_set"
+  ],
+  "html_style_remove": [
+   "html_style_remove"
+  ],
+  "style_key": [
+   "html_style_remove"
+  ],
+  "style_value": [
+   "html_style_remove"
+  ],
+  "b_element": [
+   "html_style_remove"
+  ],
+  "style": [
+   "html_style_remove"
   ]
  },
  "functions": {
@@ -19407,6 +19424,18 @@
     "html_enable",
     "b",
     "disabled"
+   ]
+  },
+  "html_style_remove": {
+   "async": false,
+   "identifiers": [
+    "html_component_element_get",
+    "html_style_remove",
+    "b",
+    "style_key",
+    "style_value",
+    "b_element",
+    "style"
    ]
   }
  },
