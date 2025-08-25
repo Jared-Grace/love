@@ -10347,6 +10347,9 @@
   ],
   "firebase_deploy": [
    "firebase_deploy"
+  ],
+  "cl": [
+   "firebase_deploy"
   ]
  },
  "functions": {
@@ -19591,7 +19594,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "firebase_deploy"
+    "firebase_deploy",
+    "cl"
    ]
   }
  },
