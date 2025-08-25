@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { firebase_storage_url_project } from "./firebase_storage_url_project.mjs";
 import { firebase_deploy_function_destination_version } from "./firebase_deploy_function_destination_version.mjs";
 import { http_json } from "./http_json.mjs";
@@ -16,4 +17,5 @@ export async function app_replace() {
     "?alt=media";
   app_replace_main();
   let json = await http_json(url);
+  log(message);
 }
