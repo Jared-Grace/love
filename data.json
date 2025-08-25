@@ -2582,7 +2582,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "firebase_deploy_function"
   ],
   "v": [
    "data_identifiers_file",
@@ -4700,7 +4701,8 @@
    "js_parse_statement_module",
    "list_first",
    "list_single",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "firebase_deploy_function"
   ],
   "each_multiple": [
    "each_multiple",
@@ -4722,7 +4724,8 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find",
-   "list_find_property"
+   "list_find_property",
+   "firebase_deploy_function"
   ],
   "items": [
    "each_multiple",
@@ -19628,13 +19631,16 @@
   "firebase_deploy_function": {
    "async": false,
    "identifiers": [
+    "list_first",
     "folder_previous",
     "folder_read",
     "marker",
     "firebase_deploy_function",
     "prefix",
     "path_folder",
-    "files"
+    "files",
+    "first",
+    "list"
    ]
   }
  },
