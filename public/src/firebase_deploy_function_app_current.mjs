@@ -7,7 +7,6 @@ export async function firebase_deploy_function_app_current(f_name) {
   marker("1");
   let a = await data_app_current_get();
   let a_name = app_name_prefixed(a);
-  let { combined } = await function_name_combine_multiple([a_name, "main"]);
-  let v = await firebase_deploy_function(f_name);
-  return v;
+  let combined = function_name_combine_multiple([a_name, "main"]);
+  await firebase_deploy_function(combined);
 }
