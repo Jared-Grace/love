@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["http://localhost:8080"],
+    "origin": ["http://localhost:8080","https://jared-grace.web.app"],
     "method": ["GET"],
     "maxAgeSeconds": 3600
   }
