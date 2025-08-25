@@ -1654,7 +1654,8 @@
   "a fb firebase_deploy",
   "o app_replace",
   "s html,update",
-  "html_update replace"
+  "html_update replace",
+  "fb"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
