@@ -2552,8 +2552,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -7991,8 +7990,7 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names",
-   "app_replace_rule_set"
+   "js_identifiers_to_names"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -19022,9 +19020,7 @@
     "text",
     "lambda3",
     "size",
-    "list",
     "v2",
-    "b2",
     "rules_buttons",
     "nn",
     "lambda6",
