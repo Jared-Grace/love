@@ -2788,8 +2788,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "firebase_deploy_function"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4292,7 +4291,8 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "firebase_deploy_function"
   ],
   "assert_json": [
    "assert_json",
@@ -10432,6 +10432,12 @@
   "file_name_json": [
    "firebase_deploy_function",
    "file_name_json"
+  ],
+  "version": [
+   "firebase_deploy_function"
+  ],
+  "content": [
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19686,13 +19692,15 @@
     "function_dependencies_code",
     "firebase_upload_string",
     "list_join",
+    "json_to",
     "firebase_deploy_function",
     "f_name",
     "code",
     "now_file",
     "file_name",
     "destination",
-    "v"
+    "version",
+    "content"
    ]
   },
   "firebase_service_account": {
