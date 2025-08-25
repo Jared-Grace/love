@@ -1709,7 +1709,8 @@
    "data_get",
    "object_invert",
    "object_property_initialize",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "global_function"
   ],
   "each": [
    "data_identifiers_file",
@@ -3092,7 +3093,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index"
+   "list_map_index",
+   "global_function"
   ],
   "name": [
    "watch",
@@ -3755,7 +3757,8 @@
    "app_replace_rule_set"
   ],
   "value2": [
-   "error_attention_set"
+   "error_attention_set",
+   "global_function"
   ],
   "error": [
    "watch",
@@ -4780,7 +4783,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "global_function"
   ],
   "each_pair": [
    "each_pair",
@@ -10482,6 +10486,9 @@
    "global_function"
   ],
   "global_function": [
+   "global_function"
+  ],
+  "property_name2": [
    "global_function"
   ]
  },
@@ -19807,12 +19814,17 @@
   "global_function": {
    "async": false,
    "identifiers": [
+    "object_property_initialize",
     "global_get",
     "marker",
     "global_function",
     "fn",
     "property_name",
-    "global"
+    "global",
+    "value2",
+    "object",
+    "property_name2",
+    "value"
    ]
   }
  },
