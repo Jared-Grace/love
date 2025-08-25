@@ -3173,8 +3173,7 @@
    "global_function_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "html_attribute_set",
-   "app_replace_home"
+   "html_attribute_set"
   ],
   "name": [
    "watch",
@@ -10802,9 +10801,6 @@
    "html_button"
   ],
   "emoji_gear": [
-   "app_replace_home"
-  ],
-  "context2": [
    "app_replace_home"
   ]
  },
@@ -19252,8 +19248,6 @@
     "context",
     "root",
     "lambda4",
-    "context2",
-    "value",
     "rule_sets",
     "lambda2",
     "item",
