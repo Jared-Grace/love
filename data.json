@@ -1912,7 +1912,8 @@
    "http_json",
    "firebase_deploy_function",
    "firebase_admin_get",
-   "firebase_storage_url_project"
+   "firebase_storage_url_project",
+   "string_replace"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10616,6 +10617,9 @@
   ],
   "sr": [
    "app_replace"
+  ],
+  "string_replace": [
+   "string_replace"
   ]
  },
  "functions": {
@@ -20071,6 +20075,13 @@
     "marker",
     "firebase_storage_url_project",
     "url"
+   ]
+  },
+  "string_replace": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_replace"
    ]
   }
  },
