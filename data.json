@@ -3629,8 +3629,7 @@
    "null_not_is",
    "marker_enter",
    "null_not_is_assert",
-   "app_replace_rule_set",
-   "ternary"
+   "app_replace_rule_set"
   ],
   "null_not_is": [
    "function_run_prompt",
@@ -10284,6 +10283,9 @@
   ],
   "ternary": [
    "app_replace_rule_set",
+   "ternary"
+  ],
+  "condition": [
    "ternary"
   ]
  },
@@ -19473,7 +19475,7 @@
    "async": false,
    "identifiers": [
     "ternary",
-    "nn",
+    "condition",
     "on_true",
     "on_false",
     "result"
