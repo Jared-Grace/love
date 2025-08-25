@@ -40,6 +40,8 @@ export function app_replace_rule_set(context) {
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
+      if (false) {
+      }
       index_selected = index;
       refresh();
     }
