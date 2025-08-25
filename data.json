@@ -1626,7 +1626,6 @@
   "a lsk list_skip",
   "s get_or",
   "r storage_local_get_or storage_local_initialize",
-  "ps",
   "function_rename_identifiers storage_local_get_or storage_local_initialize",
   "d",
   "s storage_local_initialize",
@@ -1657,7 +1656,8 @@
   "s app_replace",
   "o fd",
   "function_dependencies_code app_replace_main",
-  "s html"
+  "s html",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "function_dependencies_code_copy",
