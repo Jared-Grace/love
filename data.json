@@ -5289,8 +5289,7 @@
   "f_names_comma": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test",
-   "firebase_deploy_function_app_current"
+   "functions_combine_test"
   ],
   "arguments": [
    "functions_combine",
@@ -8939,7 +8938,8 @@
    "app_new",
    "function_open_app",
    "function_new_app_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "firebase_deploy_function_app_current"
   ],
   "marker_first_index": [
    "marker_first",
@@ -9911,7 +9911,8 @@
    "app_new",
    "app_name_prefixed",
    "function_open_app",
-   "marker_screen_add"
+   "marker_screen_add",
+   "firebase_deploy_function_app_current"
   ],
   "app_new": [
    "app_new"
@@ -20163,6 +20164,7 @@
   "firebase_deploy_function_app_current": {
    "async": true,
    "identifiers": [
+    "app_name_prefixed",
     "functions_combine_name",
     "data_app_current_get",
     "firebase_deploy_function",
@@ -20170,8 +20172,8 @@
     "firebase_deploy_function_app_current",
     "f_name",
     "a",
+    "a_name",
     "v2",
-    "f_names_comma",
     "v"
    ]
   }
