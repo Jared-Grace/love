@@ -1658,10 +1658,11 @@
   "function_dependencies_code app_replace_main",
   "s html",
   "ps",
-  "oh replace"
+  "oh replace",
+  "o html_update"
  ],
  "marker_current": "1",
- "function_current": "function_dependencies_code_copy",
+ "function_current": "html_update",
  "terminal": false,
  "identifiers": {
   "log": [
