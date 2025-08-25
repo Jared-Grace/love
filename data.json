@@ -1641,7 +1641,8 @@
   "s list,sli",
   "as list",
   "a lsl list_slice",
-  "s json"
+  "s json",
+  "u lcm"
  ],
  "marker_current": "1",
  "function_current": "html_enable_if",
