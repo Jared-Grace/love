@@ -10799,6 +10799,9 @@
   "html_style_font_size": [
    "app_replace_main",
    "html_button"
+  ],
+  "emoji_gear": [
+   "app_replace_home"
   ]
  },
  "functions": {
@@ -19234,6 +19237,7 @@
   "app_replace_home": {
    "async": false,
    "identifiers": [
+    "emoji_gear",
     "app_screen_set",
     "html_button",
     "app_replace_rule_sets",
