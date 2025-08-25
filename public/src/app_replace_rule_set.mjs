@@ -1,3 +1,4 @@
+import { html_p } from "./html_p.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { each_index } from "./each_index.mjs";
@@ -44,7 +45,7 @@ export function app_replace_rule_set(context) {
   }
   each_index(current_list, lambda2);
   let label = null;
-  let l = html_p_text(root, label);
+  let l = html_p(root);
   if (index_selected) {
     label = "Choose a rule:";
   } else {
