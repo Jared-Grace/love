@@ -2781,7 +2781,8 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology"
+   "tautology",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4103,7 +4104,8 @@
    "function_name_to_path",
    "path_join",
    "server",
-   "html_update"
+   "html_update",
+   "firebase_deploy_function"
   ],
   "fs": [
    "folder_read",
@@ -19642,8 +19644,10 @@
     "folder_find_starts_with",
     "folder_previous",
     "marker",
+    "path_join",
     "firebase_deploy_function",
     "prefix",
+    "v",
     "path_folder",
     "only",
     "data"
