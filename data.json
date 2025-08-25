@@ -2829,7 +2829,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_storage_url_project"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10606,6 +10607,9 @@
   ],
   "storageBucket": [
    "firebase_admin_get"
+  ],
+  "firebase_storage_url_project": [
+   "firebase_storage_url_project"
   ]
  },
  "functions": {
@@ -20051,6 +20055,13 @@
     "credential",
     "cert",
     "storageBucket"
+   ]
+  },
+  "firebase_storage_url_project": {
+   "async": false,
+   "identifiers": [
+    "firebase_storage_url_project",
+    "v"
    ]
   }
  },
