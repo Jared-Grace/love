@@ -4353,8 +4353,7 @@
    "command_line_schtasks",
    "git_push_schedule",
    "git_push_schedule_command",
-   "schtasks_query",
-   "firebase_deploy"
+   "schtasks_query"
   ],
   "stdout": [
    "command_line",
@@ -19597,8 +19596,7 @@
     "command_line",
     "marker",
     "firebase_deploy",
-    "stdout",
-    "command"
+    "stdout"
    ]
   }
  },
