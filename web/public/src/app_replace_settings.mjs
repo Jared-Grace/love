@@ -10,7 +10,7 @@ export function app_replace_settings(context) {
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
   function lambda3() {
-    app_replace_font_size_refresh();
+    app_replace_font_size_refresh(context);
   }
   let component = html_button(
     parent,
