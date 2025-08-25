@@ -11,8 +11,10 @@ export function app_replace_main() {
   let screens = app_replace_screens();
   const head = html_document_head();
   let component = html_element(head, "meta");
+  let name = "name";
+  let value = "viewport";
   let element = html_component_element_get(component);
-  element.setAttribute;
+  element.setAttribute(name, value);
   const root = html_document_body();
   app_refresh({
     app_fn,
