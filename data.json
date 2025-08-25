@@ -1699,7 +1699,8 @@
   "u ff",
   "fws firebase_deploy_function app_current",
   "s combine",
-  "a ffc firebase_deploy_function_app_current"
+  "a ffc firebase_deploy_function_app_current",
+  "ffc"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function_app_current",
