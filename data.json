@@ -3664,7 +3664,8 @@
    "list_map_squash",
    "list_squash",
    "marker_above",
-   "marker_below"
+   "marker_below",
+   "app_replace_rule_set"
   ],
   "colored": [
    "chalk_color",
@@ -18928,7 +18929,8 @@
     "text",
     "lambda3",
     "rules_buttons",
-    "label"
+    "label",
+    "fn"
    ]
   },
   "app_refresh": {
