@@ -7247,7 +7247,6 @@
    "html_name_to_path_dev"
   ],
   "html_update": [
-   "html_new",
    "html_update"
   ],
   "html_overwrite": [
@@ -10795,7 +10794,8 @@
    "html_update_generic"
   ],
   "html_update_public": [
-   "html_update_public"
+   "html_update_public",
+   "html_new"
   ]
  },
  "functions": {
@@ -13180,7 +13180,7 @@
   "html_new": {
    "identifiers": [
     "html_update_dev",
-    "html_update",
+    "html_update_public",
     "html_name_to_path",
     "assert_file_exists_not",
     "html_new",
