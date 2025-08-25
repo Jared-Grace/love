@@ -1495,7 +1495,6 @@
   "u fr",
   "a for folder_read",
   "mc for",
-  "u fp",
   "a fop folder_public",
   "mc fop",
   "ir v fop",
@@ -1711,7 +1710,8 @@
   "s html",
   "is html_update",
   "cs html_name_to_path dev",
-  "cs html_update dev"
+  "cs html_update dev",
+  "u fp"
  ],
  "marker_current": "1",
  "function_current": "html_update_dev",
