@@ -44,7 +44,7 @@ export function app_replace_rule_set(context) {
   }
   each_index(current_list, lambda2);
   let l = html_p_text(root, "Choose a rule:");
-  html_text_set(component, text2);
+  html_text_set(l, "Rules:");
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
