@@ -6,6 +6,7 @@ export function app_replace_screens() {
   let v = {
     home: app_replace_home,
     rule_set: app_replace_rule_set,
+    settings: app_replace_settings,
   };
   return v;
 }
