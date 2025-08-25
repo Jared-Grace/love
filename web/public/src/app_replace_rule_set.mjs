@@ -1,3 +1,4 @@
+import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
 import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
@@ -45,7 +46,7 @@ export function app_replace_rule_set(context) {
     }
     b = html_button(root, letter, lambda5);
   }
-  lmi;
+  let mapped2 = list_map_index(list, mapper);
   each_index(current_list, lambda2);
   let l = html_p(root);
   refresh();
