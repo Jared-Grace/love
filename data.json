@@ -154,7 +154,8 @@
   "oa": "function_open_app",
   "nli": "null_is",
   "lsk": "list_skip",
-  "lsl": "list_slice"
+  "lsl": "list_slice",
+  "fb": "firebase_deploy"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1647,7 +1648,10 @@
   "n list_concat_multiple",
   "s fire",
   "n firebase_deploy",
-  "u cl"
+  "u cl",
+  "a f firebase_deploy",
+  "a fd firebase_deploy",
+  "a fb firebase_deploy"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy",
