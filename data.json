@@ -3155,7 +3155,8 @@
    "global_function_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "app_replace_main"
+   "app_replace_main",
+   "html_attribute_set"
   ],
   "name": [
    "watch",
@@ -6547,7 +6548,8 @@
    "js_property_generic",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "html_attribute_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10038,7 +10040,8 @@
   "element": [
    "html_text_set",
    "html_on",
-   "html_component_wrap"
+   "html_component_wrap",
+   "html_attribute_set"
   ],
   "component": [
    "html_text_set",
@@ -10052,7 +10055,8 @@
    "html_enable_if",
    "app_replace_rule_set",
    "html_document_head",
-   "app_replace_main"
+   "app_replace_main",
+   "html_attribute_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10062,7 +10066,8 @@
    "html_element",
    "html_on",
    "html_component_element_get",
-   "html_style_remove"
+   "html_style_remove",
+   "html_attribute_set"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10699,7 +10704,11 @@
    "app_replace_main"
   ],
   "html_attribute_set": [
-   "app_replace_main"
+   "app_replace_main",
+   "html_attribute_set"
+  ],
+  "setAttribute": [
+   "html_attribute_set"
   ]
  },
  "functions": {
@@ -20242,6 +20251,18 @@
     "head",
     "document",
     "component"
+   ]
+  },
+  "html_attribute_set": {
+   "async": false,
+   "identifiers": [
+    "html_component_element_get",
+    "html_attribute_set",
+    "component",
+    "key",
+    "value",
+    "element",
+    "setAttribute"
    ]
   }
  },
