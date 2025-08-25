@@ -1666,7 +1666,8 @@
   "p",
   "firebase_deploy_function",
   "ps",
-  "s date"
+  "s date",
+  "date_now_iso"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
