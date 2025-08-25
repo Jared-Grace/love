@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { object_property_exists_not_assert } from "./object_property_exists_not_assert.mjs";
 import { range } from "./range.mjs";
 import { list_any } from "./list_any.mjs";
@@ -96,10 +97,9 @@ export function app_replace_rule_set(context) {
       let b = html_button(div, letter, lambda5);
       let object = b;
       let property_name = "index";
+      let value = index;
       object_property_exists_not_assert(object, property_name);
-      object_merge(b, {
-        ["index"]: index,
-      });
+      object_property_set(object, property_name, value);
       return b;
     }
     symbols_buttons = list_map_index(current_list, lambda2);
