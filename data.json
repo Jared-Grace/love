@@ -6227,8 +6227,7 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_clear",
-   "html_document_head"
+   "html_clear"
   ],
   "import_": [
    "function_imports_add",
@@ -20219,9 +20218,8 @@
     "html_component_wrap",
     "marker",
     "html_document_head",
-    "body",
-    "document",
     "head",
+    "document",
     "component"
    ]
   }
