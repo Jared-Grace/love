@@ -1,3 +1,4 @@
+import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -43,6 +44,7 @@ export function app_replace_rule_set(context) {
   }
   each_index(current_list, lambda2);
   html_p_text(root, "Choose a rule:");
+  html_text_set(component, text2);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
