@@ -12,5 +12,5 @@ export function app_replace_main() {
     screens,
     root: root,
   });
-  let p = html_p_text(root2, text);
+  let p = html_p_text(root, "f");
 }
