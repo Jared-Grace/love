@@ -1714,7 +1714,7 @@
   "cs html_update dev"
  ],
  "marker_current": "1",
- "function_current": "html_name_to_path_dev",
+ "function_current": "html_update_dev",
  "terminal": false,
  "identifiers": {
   "log": [
