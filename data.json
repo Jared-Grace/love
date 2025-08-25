@@ -19701,8 +19701,8 @@
     "now_file",
     "destination",
     "version",
-    "content",
-    "destination_version"
+    "destination_version",
+    "content"
    ]
   },
   "firebase_service_account": {
