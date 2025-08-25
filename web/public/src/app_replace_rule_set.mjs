@@ -45,6 +45,7 @@ export function app_replace_rule_set(context) {
     }
     b = html_button(root, letter, lambda5);
   }
+  lmi;
   each_index(current_list, lambda2);
   let l = html_p(root);
   refresh();
