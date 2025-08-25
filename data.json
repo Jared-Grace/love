@@ -1637,7 +1637,6 @@
   "s list,sli",
   "as list",
   "a lsl list_slice",
-  "s json",
   "u lcm",
   "s concat",
   "n list_concat_multiple",
@@ -1666,7 +1665,8 @@
   "a ssw string_starts_with",
   "s find",
   "ps",
-  "firebase_deploy_function"
+  "firebase_deploy_function",
+  "s json"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
