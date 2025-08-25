@@ -64,8 +64,8 @@ export function app_replace_rule_set(context) {
   let rules_buttons = list_map(mapped, lambda);
   refresh();
   function refresh() {
-    let fn = null;
     let nn = null_not_is(index_selected);
+    let fn = null;
     if (nn) {
       fn = html_enable;
     } else {
