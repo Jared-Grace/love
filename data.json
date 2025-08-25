@@ -1630,7 +1630,6 @@
   "c html_style_set html_style_remove",
   "n html_enable_if",
   "s list,sli",
-  "as list",
   "a lsl list_slice",
   "u lcm",
   "s concat",
@@ -1726,7 +1725,8 @@
   "s setting",
   "s storage",
   "s screen",
-  "s rule,set"
+  "s rule,set",
+  "as list"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
