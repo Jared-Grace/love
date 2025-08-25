@@ -10623,8 +10623,7 @@
    "function_rename_identifiers"
   ],
   "string_replace": [
-   "string_replace",
-   "app_replace"
+   "string_replace"
   ],
   "firebase_storage_url": [
    "app_replace"
@@ -18954,7 +18953,6 @@
    "async": true,
    "identifiers": [
     "firebase_storage_url",
-    "string_replace",
     "log",
     "firebase_deploy_function_destination_version",
     "http_json",
@@ -18964,8 +18962,8 @@
     "f_name",
     "name",
     "destination_version",
-    "replaced",
     "url",
+    "replaced",
     "json"
    ]
   },
