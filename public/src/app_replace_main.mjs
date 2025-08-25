@@ -16,5 +16,5 @@ export function app_replace_main() {
     root: root,
   });
   let p = html_p_text(root, "f");
-  let component = html_document_root();
+  let html = html_document_root();
 }
