@@ -10084,8 +10084,7 @@
    "html_enable_if",
    "app_replace_rule_set",
    "html_document_head",
-   "html_attribute_set",
-   "app_replace_home"
+   "html_attribute_set"
   ],
   "innerHTML": [
    "html_text_set"
@@ -19255,7 +19254,6 @@
     "lambda4",
     "context2",
     "value",
-    "component",
     "rule_sets",
     "lambda2",
     "item",
