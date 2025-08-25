@@ -4172,7 +4172,8 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text"
+   "html_p_text",
+   "app_replace_main"
   ],
   "f_names": [
    "functions_names",
@@ -4444,7 +4445,8 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json"
+   "http_json",
+   "app_replace_main"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -9919,11 +9921,13 @@
   ],
   "app_replace": [
    "app_replace",
-   "app_replace_refresh"
+   "app_replace_refresh",
+   "app_replace_main"
   ],
   "html_document_body": [
    "html_document_body",
-   "app_refresh"
+   "app_refresh",
+   "app_replace_main"
   ],
   "document": [
    "html_document_body",
@@ -10086,7 +10090,8 @@
    "storage_local_initialize",
    "storage_local_get_context",
    "storage_local_set_context",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_replace_main"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -10134,7 +10139,8 @@
   ],
   "screens": [
    "app_replace_refresh",
-   "app_refresh"
+   "app_refresh",
+   "app_replace_main"
   ],
   "screen_name": [
    "function_new_app_screen",
@@ -10147,7 +10153,8 @@
   ],
   "app_replace_screens": [
    "app_replace_refresh",
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_replace_main"
   ],
   "home": [
    "app_replace_screens"
@@ -10220,7 +10227,8 @@
   "app_refresh": [
    "app_replace_refresh",
    "app_refresh",
-   "app_screen_set"
+   "app_screen_set",
+   "app_replace_main"
   ],
   "context": [
    "app_replace_home",
@@ -10290,11 +10298,13 @@
    "app_replace_rule_set",
    "html_p",
    "html_p_text",
-   "html_div"
+   "html_div",
+   "app_replace_main"
   ],
   "html_p_text": [
    "app_replace_rule_set",
-   "html_p_text"
+   "html_p_text",
+   "app_replace_main"
   ],
   "rules": [
    "app_replace_rule_set",
@@ -10486,7 +10496,8 @@
    "firebase_deploy"
   ],
   "app_replace_main": [
-   "app_replace"
+   "app_replace",
+   "app_replace_main"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function",
@@ -10664,6 +10675,9 @@
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
+  ],
+  "root2": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20173,6 +20187,23 @@
     "a",
     "a_name",
     "combined"
+   ]
+  },
+  "app_replace_main": {
+   "async": false,
+   "identifiers": [
+    "html_p_text",
+    "app_refresh",
+    "html_document_body",
+    "app_replace_screens",
+    "app_replace",
+    "app_replace_main",
+    "app_fn",
+    "screens",
+    "root",
+    "p",
+    "root2",
+    "text"
    ]
   }
  },
