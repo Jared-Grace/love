@@ -2420,7 +2420,8 @@
    "function_rename_identifiers",
    "list_concat_multiple",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "global_function_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3111,7 +3112,8 @@
    "storage_local_initialize_context",
    "list_map_index",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "global_function_async"
   ],
   "name": [
    "watch",
@@ -3780,8 +3782,7 @@
   ],
   "value2": [
    "error_attention_set",
-   "global_function",
-   "global_function_async"
+   "global_function"
   ],
   "error": [
    "watch",
@@ -19917,10 +19918,11 @@
     "global_function_async",
     "fn",
     "property_name",
+    "lambda",
     "global",
     "fn_object",
     "name",
-    "value2"
+    "value"
    ]
   }
  },
