@@ -1716,7 +1716,6 @@
    "object_property_initialize",
    "data_file_update_inner",
    "global_function",
-   "global_function_async",
    "global_function_property_async"
   ],
   "each": [
@@ -2253,7 +2252,6 @@
    "global_function",
    "object_property_lambda",
    "object_property_lambda_async",
-   "global_function_async",
    "global_function_property_async"
   ],
   "lambda": [
@@ -10516,7 +10514,6 @@
   ],
   "fn_object": [
    "global_function",
-   "global_function_async",
    "global_function_property_async"
   ],
   "object_property_lambda": [
@@ -19908,17 +19905,14 @@
    "async": true,
    "identifiers": [
     "object_property_lambda_async",
-    "object_property_initialize",
     "global_get",
     "marker",
     "global_function_async",
     "fn",
-    "property_name",
     "lambda",
     "global",
-    "fn_object",
-    "name",
-    "value"
+    "value",
+    "name"
    ]
   },
   "global_function_property_async": {
