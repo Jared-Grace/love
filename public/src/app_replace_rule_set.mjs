@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
@@ -63,9 +64,10 @@ export function app_replace_rule_set(context) {
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {
       let left = object_property_get(rule, "left");
+      let size = list_size(list);
       index_selected;
       current_list;
-      let v2 = list_slice(list, a, b2);
+      let v2 = list_slice(current_list, index_selected, b2);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
