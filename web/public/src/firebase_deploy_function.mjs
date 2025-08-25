@@ -1,17 +1,10 @@
-import { list_find } from "./list_find.mjs";
-import { string_starts_with } from "./string_starts_with.mjs";
+import { folder_find_starts_with } from "./folder_find_starts_with.mjs";
 import { folder_previous } from "./folder_previous.mjs";
-import { folder_read } from "./folder_read.mjs";
 import { marker } from "./marker.mjs";
 export function firebase_deploy_function() {
   marker("1");
   let prefix = "jared-grace-firebase-adminsdk-";
   let path_folder = folder_previous();
-  let files = folder_read(path_folder);
-  function lambda(item) {
-    let sw = string_starts_with(item, prefix);
-    return sw;
-  }
-  let only = list_find(files, lambda);
+  let only = folder_find_starts_with(path_folder, prefix);
   return only;
 }
