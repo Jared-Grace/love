@@ -4445,8 +4445,7 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json",
-   "app_replace_main"
+   "http_json"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10675,9 +10674,6 @@
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
-  ],
-  "root2": [
-   "app_replace_main"
   ]
  },
  "functions": {
@@ -20201,9 +20197,7 @@
     "app_fn",
     "screens",
     "root",
-    "p",
-    "root2",
-    "text"
+    "p"
    ]
   }
  },
