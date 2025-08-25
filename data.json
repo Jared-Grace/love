@@ -1722,10 +1722,11 @@
   "as marker_screen_add",
   "as marker",
   "a msa marker_screen_add",
-  "msa settings"
+  "msa settings",
+  "o msa"
  ],
  "marker_current": "1",
- "function_current": "app_replace_settings",
+ "function_current": "marker_screen_add",
  "terminal": false,
  "identifiers": {
   "log": [
