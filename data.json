@@ -7882,8 +7882,7 @@
    "list_not_is",
    "list_squash",
    "marker_down_choices",
-   "function_aliases_restore",
-   "app_replace_rule_set"
+   "function_aliases_restore"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -10265,6 +10264,12 @@
    "html_style_remove"
   ],
   "html_style_set_or_remove": [
+   "app_replace_rule_set"
+  ],
+  "label_symbols": [
+   "app_replace_rule_set"
+  ],
+  "label_rules": [
    "app_replace_rule_set"
   ]
  },
@@ -18958,6 +18963,7 @@
     "rule_sets",
     "item",
     "name",
+    "label_symbols",
     "start",
     "current",
     "index_selected",
@@ -18968,7 +18974,7 @@
     "refresh",
     "b",
     "symbols_buttons",
-    "l",
+    "label_rules",
     "rules",
     "mapped",
     "lambda",
