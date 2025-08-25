@@ -2821,8 +2821,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "app_replace_rule_set"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19034,7 +19033,6 @@
     "size",
     "sliced",
     "eq",
-    "message",
     "rules_buttons",
     "nn",
     "lambda6",
