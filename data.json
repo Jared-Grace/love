@@ -1648,7 +1648,6 @@
   "s app_replace",
   "o fd",
   "function_dependencies_code app_replace_main",
-  "s html",
   "oh replace",
   "o html_update",
   "html_update replace",
@@ -1708,7 +1707,8 @@
   "s att",
   "ffc",
   "c html_document_body html_document_root",
-  "s style"
+  "s style",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "html_document_root",
