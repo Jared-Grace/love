@@ -896,7 +896,6 @@
   "as err",
   "git_push_schedule_command",
   "fd git_push_schedule_command",
-  "o fd",
   "s unique",
   "cs list_adder_unique async",
   "fd git_push_schedule",
@@ -1656,10 +1655,11 @@
   "s html,update",
   "html_update replace",
   "fb",
-  "s app_replace"
+  "s app_replace",
+  "o fd"
  ],
  "marker_current": "1",
- "function_current": "app_replace",
+ "function_current": "function_dependencies_code_copy",
  "terminal": false,
  "identifiers": {
   "log": [
