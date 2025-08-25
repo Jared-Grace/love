@@ -10234,6 +10234,9 @@
   ],
   "disabled": [
    "html_enable"
+  ],
+  "lmi": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18933,6 +18936,7 @@
     "b",
     "lambda5",
     "refresh",
+    "lmi",
     "l",
     "rules",
     "mapped",
