@@ -10056,7 +10056,8 @@
    "app_replace_rule_set",
    "html_document_head",
    "html_attribute_set",
-   "html_document_root"
+   "html_document_root",
+   "app_replace_main"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10715,7 +10716,8 @@
    "html_document_root"
   ],
   "html_document_root": [
-   "html_document_root"
+   "html_document_root",
+   "app_replace_main"
   ],
   "html": [
    "html_document_root"
@@ -20233,6 +20235,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
+    "html_document_root",
     "html_meta_viewport",
     "html_p_text",
     "app_refresh",
@@ -20243,7 +20246,8 @@
     "app_fn",
     "screens",
     "root",
-    "p"
+    "p",
+    "component"
    ]
   },
   "html_document_head": {
