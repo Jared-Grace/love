@@ -2275,7 +2275,6 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_property_async",
-   "app_replace",
    "firebase_storage_download_property"
   ],
   "lambda": [
@@ -18982,7 +18981,6 @@
     "f_name",
     "name",
     "destination_version",
-    "property_name",
     "destination"
    ]
   },
