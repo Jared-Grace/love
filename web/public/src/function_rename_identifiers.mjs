@@ -9,10 +9,10 @@ import { data_identifiers_get } from "./data_identifiers_get.mjs";
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
-  let includes = list_includes(list, item);
-  if (false) {
+  let includes = list_includes(f_names, f_name_before);
+  if (includes) {
+    list_remove(f_names, f_name_before);
   }
-  list_remove(f_names, f_name_before);
   async function lambda(f_name) {
     async function lambda2(ast) {
       js_identifier_replace(ast, f_name_before, f_name_after);
