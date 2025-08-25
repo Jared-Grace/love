@@ -1,8 +1,9 @@
+import { html_element } from "./html_element.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
 import { marker } from "./marker.mjs";
 export function html_document_root() {
   marker("1");
-  let html = document.documentElement;
-  let component = html_component_wrap(html);
-  return component;
+  let html_element = document.documentElement;
+  let html = html_component_wrap(html_element);
+  return html;
 }
