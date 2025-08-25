@@ -18956,9 +18956,9 @@
     "rules_buttons",
     "label",
     "fn",
-    "list",
     "lambda4",
-    "item2"
+    "item2",
+    "list"
    ]
   },
   "app_refresh": {
