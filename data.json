@@ -5823,7 +5823,8 @@
    "object_replace",
    "js_imports_unused",
    "function_exists_inner",
-   "function_parse_declaration_inner"
+   "function_parse_declaration_inner",
+   "app_replace_rule_set"
   ],
   "u": [
    "function_exists",
@@ -5844,7 +5845,8 @@
    "function_imports_missing",
    "function_parse",
    "function_parse_declaration_inner",
-   "marker_next_index"
+   "marker_next_index",
+   "app_replace_rule_set"
   ],
   "r": [
    "function_format",
@@ -5926,7 +5928,8 @@
    "html_update",
    "js_imports_paths_fix",
    "folder_current_join_code",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "app_replace_rule_set"
   ],
   "i": [
    "function_identifier_replace",
@@ -10308,6 +10311,9 @@
    "list_slice"
   ],
   "app_replace_rule_valid": [
+   "app_replace_rule_set"
+  ],
+  "to2": [
    "app_replace_rule_set"
   ]
  },
@@ -18971,6 +18977,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_merge",
     "app_replace_rule_valid",
     "not",
     "html_enable_if",
@@ -19029,6 +19036,9 @@
     "eq",
     "alert",
     "before",
+    "to2",
+    "to",
+    "from",
     "rules_buttons",
     "nn",
     "lambda6",
