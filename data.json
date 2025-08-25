@@ -2832,7 +2832,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_storage_url"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8866,7 +8867,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "app_replace"
+   "app_replace",
+   "firebase_storage_url"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -10527,7 +10529,8 @@
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "firebase_storage_url"
   ],
   "firebase_upload_object": [
    "firebase_deploy_function"
@@ -10617,16 +10620,19 @@
   ],
   "firebase_storage_url_project": [
    "firebase_storage_url_project",
-   "firebase_admin_get"
+   "firebase_admin_get",
+   "firebase_storage_url"
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers"
   ],
   "string_replace": [
-   "string_replace"
+   "string_replace",
+   "firebase_storage_url"
   ],
   "firebase_storage_url": [
-   "app_replace"
+   "app_replace",
+   "firebase_storage_url"
   ]
  },
  "functions": {
@@ -20096,6 +20102,17 @@
     "to",
     "split",
     "replaced"
+   ]
+  },
+  "firebase_storage_url": {
+   "async": false,
+   "identifiers": [
+    "string_replace",
+    "firebase_storage_url_project",
+    "firebase_storage_url",
+    "destination_version",
+    "replaced",
+    "v"
    ]
   }
  },
