@@ -121,7 +121,7 @@ export function app_replace_rule_set(context) {
     }
     each_index(symbols_buttons, lambda4);
     function lambda8(item2) {}
-    each(list, lambda8);
+    each(symbols_buttons, lambda8);
   }
   refresh();
   marker("1");
