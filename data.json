@@ -1711,9 +1711,9 @@
   "u fp",
   "html_name_to_path_dev replace",
   "html_update replace",
-  "ps",
   "p",
-  "html_update_dev replace"
+  "html_update_dev replace",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "html_update_dev",
