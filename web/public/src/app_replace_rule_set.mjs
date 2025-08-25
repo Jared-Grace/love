@@ -1,3 +1,4 @@
+import { null_not_is } from "./null_not_is.mjs";
 import { html_style_set_or_remove } from "./html_style_set_or_remove.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
@@ -65,6 +66,7 @@ export function app_replace_rule_set(context) {
   function refresh() {
     let label = null;
     let fn = null;
+    let nn = null_not_is(value);
     if (index_selected) {
       label = "Choose a rule:";
       fn = html_enable;
