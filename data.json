@@ -1944,7 +1944,8 @@
    "data_file_update_inner",
    "function_parse_strict_declaration",
    "function_parse_declaration_inner",
-   "function_parse_strict"
+   "function_parse_strict",
+   "http_json"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -4408,7 +4409,6 @@
    "file_read_json",
    "json_from",
    "storage_local_get",
-   "http_json",
    "app_replace"
   ],
   "includes": [
@@ -20062,7 +20062,7 @@
     "http_json",
     "url",
     "text",
-    "json"
+    "parsed"
    ]
   },
   "firebase_admin_get": {
