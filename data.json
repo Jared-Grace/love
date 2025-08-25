@@ -1640,7 +1640,7 @@
   "c html_style_set html_style_remove"
  ],
  "marker_current": "1",
- "function_current": "html_enable",
+ "function_current": "html_style_remove",
  "terminal": false,
  "identifiers": {
   "log": [
