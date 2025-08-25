@@ -9751,7 +9751,8 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read"
+   "folder_read",
+   "firebase_deploy_function"
   ],
   "fop": [
    "apps_get",
@@ -10371,6 +10372,9 @@
    "app_replace"
   ],
   "firebase_deploy_function": [
+   "firebase_deploy_function"
+  ],
+  "folder_previous": [
    "firebase_deploy_function"
   ]
  },
@@ -19621,10 +19625,12 @@
   "firebase_deploy_function": {
    "async": false,
    "identifiers": [
+    "folder_previous",
     "folder_read",
     "marker",
     "firebase_deploy_function",
     "prefix",
+    "path_folder",
     "v2"
    ]
   }
