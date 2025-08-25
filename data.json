@@ -9857,8 +9857,7 @@
    "html_on",
    "html_component_element_get",
    "html_on_click",
-   "html_p",
-   "app_replace_rule_set"
+   "html_p"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10210,9 +10209,6 @@
    "app_replace_rule_set"
   ],
   "html_disable": [
-   "app_replace_rule_set"
-  ],
-  "text2": [
    "app_replace_rule_set"
   ]
  },
@@ -18911,8 +18907,6 @@
     "b",
     "lambda5",
     "l",
-    "component",
-    "text2",
     "rules",
     "mapped",
     "lambda",
