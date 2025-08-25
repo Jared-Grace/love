@@ -64,17 +64,20 @@ export function app_replace_rule_set(context) {
   let rules_buttons = list_map(mapped, lambda);
   refresh();
   function refresh() {
-    let label = null;
+    let label_rules_text = null;
     let fn = null;
     let nn = null_not_is(index_selected);
     if (nn) {
-      label = "Choose a rule:";
       fn = html_enable;
     } else {
-      label = "Rules:";
       fn = html_disable;
     }
-    html_text_set(label_rules, label);
+    if (nn) {
+      label_rules_text = "Choose a rule:";
+    } else {
+      label_rules_text = "Rules:";
+    }
+    html_text_set(label_rules, label_rules_text);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
