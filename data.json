@@ -1909,7 +1909,8 @@
    "global_function_property_async",
    "http_json",
    "firebase_deploy_function",
-   "firebase_admin_get"
+   "firebase_admin_get",
+   "firebase_storage_url_project"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20060,6 +20061,7 @@
   "firebase_storage_url_project": {
    "async": false,
    "identifiers": [
+    "marker",
     "firebase_storage_url_project",
     "v"
    ]
