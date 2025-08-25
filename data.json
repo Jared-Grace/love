@@ -1889,7 +1889,6 @@
    "function_dependencies_code_copy",
    "html_update",
    "date_now_file",
-   "firebase_admin",
    "global_get",
    "global_function",
    "object_property_lambda",
@@ -3010,8 +3009,7 @@
   "default": [
    "watch",
    "chalk_color",
-   "clipboard_copy",
-   "firebase_admin"
+   "clipboard_copy"
   ],
   "joined": [
    "watch",
@@ -10443,8 +10441,7 @@
    "firebase_service_account"
   ],
   "firebase_service_account": [
-   "firebase_service_account",
-   "firebase_admin"
+   "firebase_service_account"
   ],
   "folder_find_starts_with": [
    "firebase_service_account"
@@ -10453,8 +10450,7 @@
    "firebase_service_account"
   ],
   "service_account": [
-   "firebase_service_account",
-   "firebase_admin"
+   "firebase_service_account"
   ],
   "firebase_upload_string": [
    "firebase_deploy_function"
@@ -10494,18 +10490,6 @@
   "admin": [
    "firebase_admin"
   ],
-  "initializeApp": [
-   "firebase_admin"
-  ],
-  "credential": [
-   "firebase_admin"
-  ],
-  "cert": [
-   "firebase_admin"
-  ],
-  "storageBucket": [
-   "firebase_admin"
-  ],
   "global_get": [
    "global_get",
    "global_function",
@@ -10537,6 +10521,9 @@
   ],
   "global_function_async": [
    "global_function_async"
+  ],
+  "firebase_admin_get": [
+   "firebase_admin"
   ]
  },
  "functions": {
@@ -19838,16 +19825,9 @@
   "firebase_admin": {
    "async": true,
    "identifiers": [
-    "firebase_service_account",
-    "marker",
+    "firebase_admin_get",
     "firebase_admin",
-    "admin",
-    "default",
-    "service_account",
-    "initializeApp",
-    "credential",
-    "cert",
-    "storageBucket"
+    "admin"
    ]
   },
   "global_get": {
