@@ -25,7 +25,7 @@ export function app_replace_settings(context) {
     app_replace_font_size_adjust(context, value_get);
   }
   let component = html_button(
-    parent,
+    root,
     emoji_font_smaller() + " Font size smaller",
     lambda3,
   );
