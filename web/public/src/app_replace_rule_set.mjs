@@ -79,7 +79,7 @@ export function app_replace_rule_set(context) {
       if (index2 === index_selected) {
         html_style_set(symbols_button, "background-color", "lightgreen");
       } else {
-        html_style_remove();
+        html_style_remove(symbols_button, "background-color");
       }
     }
     each_index(symbols_buttons, lambda4);
