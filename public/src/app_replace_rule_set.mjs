@@ -66,7 +66,7 @@ export function app_replace_rule_set(context) {
   function refresh() {
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
-    html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_rules);
+    html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
       let v = html_enable_if(component, nn);
       return v;
