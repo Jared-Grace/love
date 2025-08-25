@@ -10228,7 +10228,8 @@
    "html_enable"
   ],
   "html_enable": [
-   "html_enable"
+   "html_enable",
+   "app_replace_rule_set"
   ],
   "disabled": [
    "html_enable"
@@ -18894,6 +18895,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_enable",
     "html_p",
     "html_text_set",
     "html_disable",
