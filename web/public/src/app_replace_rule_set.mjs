@@ -72,7 +72,7 @@ export function app_replace_rule_set(context) {
       fn = html_disable;
     }
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
-    html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
+    html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_rules);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
