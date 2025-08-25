@@ -4203,8 +4203,7 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text",
-   "app_replace_main"
+   "html_p_text"
   ],
   "f_names": [
    "functions_names",
@@ -10346,8 +10345,7 @@
   ],
   "html_p_text": [
    "app_replace_rule_set",
-   "html_p_text",
-   "app_replace_main"
+   "html_p_text"
   ],
   "rules": [
    "app_replace_rule_set",
@@ -20299,7 +20297,6 @@
     "html_style_set",
     "html_document_root",
     "html_meta_viewport",
-    "html_p_text",
     "app_refresh",
     "html_document_body",
     "app_replace_screens",
@@ -20308,7 +20305,6 @@
     "app_fn",
     "screens",
     "root",
-    "p",
     "html"
    ]
   },
