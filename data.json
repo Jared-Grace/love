@@ -3072,8 +3072,7 @@
    "js_string",
    "js_await_wrap",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "app_replace_rule_set"
+   "object_property_lambda_async"
   ],
   "watch": [
    "watch"
@@ -10897,7 +10896,9 @@
    "app_replace_rule_set"
   ],
   "object_property_exists_not_assert": [
-   "object_property_exists_not_assert",
+   "object_property_exists_not_assert"
+  ],
+  "object_property_set_exists_not": [
    "app_replace_rule_set"
   ]
  },
@@ -19556,8 +19557,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "object_property_set",
-    "object_property_exists_not_assert",
+    "object_property_set_exists_not",
     "range",
     "list_any",
     "html_div",
