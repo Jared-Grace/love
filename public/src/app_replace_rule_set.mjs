@@ -1,3 +1,4 @@
+import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
@@ -64,6 +65,7 @@ export function app_replace_rule_set(context) {
     let fn = null;
     if (index_selected) {
       label = "Choose a rule:";
+      fn = html_enable;
     } else {
       label = "Rules:";
       fn = html_disable;
