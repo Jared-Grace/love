@@ -1,5 +1,4 @@
 import { not } from "./not.mjs";
-import { log } from "./log.mjs";
 import { json_to } from "./json_to.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
@@ -27,6 +26,7 @@ import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
 import { marker } from "./marker.mjs";
+import { list_take } from "./list_take.mjs";
 export function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
@@ -76,11 +76,7 @@ export function app_replace_rule_set(context) {
       if (not(eq)) {
         alert("invalid index for rule");
       }
-      log({
-        left,
-        sliced,
-        eq,
-      });
+      let before = list_take(current_list, index_selected);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
