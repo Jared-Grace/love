@@ -2783,7 +2783,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3308,7 +3309,8 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_service_account"
   ],
   "file_path": [
    "data_file_update",
@@ -3326,7 +3328,8 @@
    "html_new",
    "html_overwrite",
    "html_update",
-   "path_name"
+   "path_name",
+   "firebase_service_account"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4106,7 +4109,8 @@
    "function_name_to_path",
    "path_join",
    "server",
-   "html_update"
+   "html_update",
+   "firebase_service_account"
   ],
   "fs": [
    "folder_read",
@@ -4459,7 +4463,8 @@
   "file_read_json": [
    "data_all",
    "data_get",
-   "file_read_json"
+   "file_read_json",
+   "firebase_service_account"
   ],
   "data_get": [
    "data_get",
@@ -7652,7 +7657,8 @@
   "prefix": [
    "js_code_declaration",
    "string_prefix_without",
-   "string_starts_with"
+   "string_starts_with",
+   "firebase_service_account"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9755,7 +9761,8 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read"
+   "folder_read",
+   "firebase_service_account"
   ],
   "fop": [
    "apps_get",
@@ -10385,7 +10392,8 @@
   ],
   "only": [
    "list_single",
-   "list_find"
+   "list_find",
+   "firebase_service_account"
   ],
   "admin": [
    "firebase_deploy_function"
@@ -10412,7 +10420,8 @@
    "firebase_deploy_function"
   ],
   "firebase_service_account": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_service_account"
   ],
   "uploadString": [
    "firebase_deploy_function"
@@ -10443,6 +10452,12 @@
   ],
   "myString": [
    "firebase_deploy_function"
+  ],
+  "folder_find_starts_with": [
+   "firebase_service_account"
+  ],
+  "folder_previous": [
+   "firebase_service_account"
   ]
  },
  "functions": {
@@ -19721,6 +19736,22 @@
     "url",
     "name",
     "myString"
+   ]
+  },
+  "firebase_service_account": {
+   "async": true,
+   "identifiers": [
+    "file_read_json",
+    "folder_find_starts_with",
+    "path_join",
+    "folder_previous",
+    "firebase_service_account",
+    "prefix",
+    "v",
+    "path_folder",
+    "only",
+    "file_path",
+    "data"
    ]
   }
  },
