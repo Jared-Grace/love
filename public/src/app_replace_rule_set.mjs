@@ -29,7 +29,7 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
-  let label_symbols = html_p_text(root, "Choose a symbol:");
+  let label_symbols = html_p_text(root);
   let { start } = item;
   let current = storage_local_initialize_context(
     context,
@@ -71,6 +71,7 @@ export function app_replace_rule_set(context) {
     } else {
       fn = html_disable;
     }
+    html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
