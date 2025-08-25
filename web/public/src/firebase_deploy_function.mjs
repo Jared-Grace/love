@@ -7,6 +7,6 @@ export async function firebase_deploy_function() {
   let prefix = "jared-grace-firebase-adminsdk-";
   let path_folder = folder_previous();
   let only = folder_find_starts_with(path_folder, prefix);
-  let data = await file_read_json(file_path);
+  let data = await file_read_json(only);
   return only;
 }
