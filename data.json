@@ -10471,6 +10471,9 @@
   ],
   "global_get": [
    "global_get"
+  ],
+  "global": [
+   "global_get"
   ]
  },
  "functions": {
@@ -19788,6 +19791,7 @@
    "async": false,
    "identifiers": [
     "marker",
+    "global",
     "global_get"
    ]
   }
