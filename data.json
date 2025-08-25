@@ -4348,8 +4348,7 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove",
-   "app_replace_main"
+   "html_style_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10450,8 +10449,7 @@
    "html_style_remove"
   ],
   "style_key": [
-   "html_style_remove",
-   "app_replace_main"
+   "html_style_remove"
   ],
   "b_element": [
    "html_style_remove"
@@ -10726,9 +10724,6 @@
    "app_replace_main"
   ],
   "html_style_set": [
-   "app_replace_main"
-  ],
-  "style_value": [
    "app_replace_main"
   ]
  },
@@ -20257,10 +20252,7 @@
     "screens",
     "root",
     "p",
-    "html",
-    "b",
-    "style_key",
-    "style_value"
+    "html"
    ]
   },
   "html_document_head": {
