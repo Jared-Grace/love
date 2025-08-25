@@ -1726,7 +1726,8 @@
   "s storage",
   "s screen",
   "s rule,set",
-  "as list"
+  "as list",
+  "s list_any"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
