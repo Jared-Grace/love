@@ -3,10 +3,10 @@ import { each } from "./each.mjs";
 import { marker } from "./marker.mjs";
 export function list_concat_multiple(lists) {
   marker("1");
-  let result = [];
+  let combined = [];
   function lambda(item) {
-    result = list_concat(result, item);
+    combined = list_concat(combined, item);
   }
   each(lists, lambda);
-  return result;
+  return combined;
 }
