@@ -1885,7 +1885,8 @@
    "html_update",
    "date_now_file",
    "firebase_admin",
-   "global_get"
+   "global_get",
+   "global_function"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10475,6 +10476,9 @@
   ],
   "global": [
    "global_get"
+  ],
+  "global_function": [
+   "global_function"
   ]
  },
  "functions": {
@@ -19794,6 +19798,13 @@
     "marker",
     "global",
     "global_get"
+   ]
+  },
+  "global_function": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "global_function"
    ]
   }
  },
