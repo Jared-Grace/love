@@ -10268,6 +10268,9 @@
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set"
+  ],
+  "$a": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18987,6 +18990,7 @@
     "index2",
     "condition",
     "key",
+    "$a",
     "value"
    ]
   },
