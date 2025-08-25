@@ -75,7 +75,7 @@ export function app_replace_rule_set(context) {
       let before = list_take(current_list, index_selected);
       let size = list_size(left);
       let after = list_skip(current_list, index_selected + size);
-      let combined = list_concat_multiple(lists);
+      let combined = list_concat_multiple([before, right, after]);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
