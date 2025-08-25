@@ -1,15 +1,8 @@
+import { firebase_admin } from "./firebase_admin.mjs";
 import { log } from "./log.mjs";
-import { firebase_service_account } from "./firebase_service_account.mjs";
-import { marker } from "./marker.mjs";
 export async function firebase_deploy_function() {
   {
-    const admin = await import("firebase-admin");
-    marker("1");
-    let service_account = await firebase_service_account();
-    admin.initializeApp({
-      credential: admin.credential.cert(service_account),
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    });
+    await firebase_admin();
   }
   const admin = await import("firebase-admin");
   const bucket = admin.storage().bucket();
