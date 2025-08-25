@@ -7220,8 +7220,7 @@
    "html_name_to_path",
    "html_new",
    "html_overwrite",
-   "html_update",
-   "html_update_dev"
+   "html_update"
   ],
   "file_name": [
    "html_name_to_path",
@@ -10720,7 +10719,8 @@
    "app_replace_main"
   ],
   "html_name_to_path_dev": [
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_update_dev"
   ],
   "html_update_generic": [
    "html_update",
@@ -20293,9 +20293,9 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
+    "html_name_to_path_dev",
     "html_update_generic",
     "marker",
-    "html_name_to_path",
     "html_update_dev",
     "name",
     "file_path"
