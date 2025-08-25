@@ -32,7 +32,7 @@ export function app_replace_rule_sets() {
         "1 a > a 0",
         "b a > b 1",
         "= b > a = b a",
-        "1 1 > 1 + 1",
+        "a a > a + b a",
       ],
       start: "ba=ba",
     },
