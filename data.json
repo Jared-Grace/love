@@ -157,7 +157,8 @@
   "fb": "firebase_deploy",
   "flr": "folder_read",
   "ssw": "string_starts_with",
-  "ff": "firebase_deploy_function"
+  "ff": "firebase_deploy_function",
+  "jf": "json_from"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1684,7 +1685,8 @@
   "ff app_replace_main",
   "n http",
   "fw http http_json",
-  "u jf"
+  "u jf",
+  "a jf json_from"
  ],
  "marker_current": "1",
  "function_current": "http_json",
