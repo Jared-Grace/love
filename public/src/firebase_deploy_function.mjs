@@ -1,8 +1,8 @@
+import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { firebase_deploy_function_destination } from "./firebase_deploy_function_destination.mjs";
 import { date_now_file } from "./date_now_file.mjs";
 import { function_dependencies_code } from "./function_dependencies_code.mjs";
 import { firebase_upload_string } from "./firebase_upload_string.mjs";
-import { json_to } from "./json_to.mjs";
 export async function firebase_deploy_function(f_name) {
   let code = await function_dependencies_code(f_name);
   let now_file = date_now_file();
@@ -15,6 +15,5 @@ export async function firebase_deploy_function(f_name) {
     now_file,
     f_name,
   );
-  let content = json_to(version);
-  await firebase_upload_string(content, destination_version);
+  await firebase_upload_object(version, destination_version);
 }
