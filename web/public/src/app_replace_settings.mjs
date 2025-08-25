@@ -8,6 +8,7 @@ export function app_replace_settings(context) {
   marker("1");
   function lambda2() {
     let value = app_replace_font_size(context);
+    value *= 1.1;
     app_replace_font_size_refresh(context);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
