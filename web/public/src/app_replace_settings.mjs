@@ -9,8 +9,9 @@ import { marker } from "./marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   function lambda2() {
+    const factor = app_replace_font_size_factor();
     let value = app_replace_font_size(context);
-    value *= app_replace_font_size_factor();
+    value *= factor;
     storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
   }
