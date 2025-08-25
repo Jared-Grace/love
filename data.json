@@ -10395,6 +10395,33 @@
   ],
   "admin": [
    "firebase_deploy_function"
+  ],
+  "initializeApp": [
+   "firebase_deploy_function"
+  ],
+  "credential": [
+   "firebase_deploy_function"
+  ],
+  "cert": [
+   "firebase_deploy_function"
+  ],
+  "serviceAccount": [
+   "firebase_deploy_function"
+  ],
+  "storageBucket": [
+   "firebase_deploy_function"
+  ],
+  "bucket": [
+   "firebase_deploy_function"
+  ],
+  "storage": [
+   "firebase_deploy_function"
+  ],
+  "upload": [
+   "firebase_deploy_function"
+  ],
+  "destination": [
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19656,7 +19683,16 @@
     "path_folder",
     "only",
     "file_path",
-    "data"
+    "data",
+    "initializeApp",
+    "credential",
+    "cert",
+    "serviceAccount",
+    "storageBucket",
+    "bucket",
+    "storage",
+    "upload",
+    "destination"
    ]
   }
  },
