@@ -3093,8 +3093,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index",
-   "global_function"
+   "list_map_index"
   ],
   "name": [
    "watch",
@@ -4784,8 +4783,7 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not",
-   "global_function"
+   "object_property_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -10490,9 +10488,6 @@
    "global_function"
   ],
   "fn_object": [
-   "global_function"
-  ],
-  "property_name2": [
    "global_function"
   ]
  },
@@ -19827,10 +19822,7 @@
     "global",
     "fn_object",
     "name",
-    "value2",
-    "object",
-    "property_name2",
-    "value"
+    "value2"
    ]
   }
  },
