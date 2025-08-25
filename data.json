@@ -4069,8 +4069,7 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text",
-   "app_replace"
+   "html_p_text"
   ],
   "f_names": [
    "functions_names",
@@ -10169,8 +10168,7 @@
   ],
   "html_p_text": [
    "app_replace_rule_set",
-   "html_p_text",
-   "app_replace"
+   "html_p_text"
   ],
   "rules": [
    "app_replace_rule_set",
@@ -18683,7 +18681,6 @@
   "app_replace": {
    "async": false,
    "identifiers": [
-    "html_p_text",
     "app_refresh",
     "app_replace_screens",
     "html_document_body",
@@ -18691,8 +18688,7 @@
     "app_replace",
     "app_fn",
     "screens",
-    "root",
-    "p"
+    "root"
    ]
   },
   "html_document_body": {
