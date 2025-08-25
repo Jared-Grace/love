@@ -1677,7 +1677,8 @@
   "n global_get",
   "n global_function",
   "s lambda",
-  "c object_property_initialize object_property_lambda"
+  "c object_property_initialize object_property_lambda",
+  "c object_property_lambda object_property_lambda_async"
  ],
  "marker_current": "1",
  "function_current": "object_property_lambda",
