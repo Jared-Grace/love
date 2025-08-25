@@ -2084,7 +2084,8 @@
    "marker_next_await",
    "html_update",
    "function_transform_marker_specified",
-   "js_code_call_statement"
+   "js_code_call_statement",
+   "function_dependencies_code"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2730,7 +2731,6 @@
    "functions_transform",
    "function_alias_add_generic",
    "function_current_set_task_new_simple",
-   "function_dependencies_code",
    "function_identifier_replace_ending_remove",
    "function_name_to_path",
    "function_run_line",
@@ -11784,7 +11784,7 @@
     "waited",
     "mapped2",
     "waited2",
-    "v"
+    "code"
    ],
    "async": true
   },
