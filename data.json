@@ -3173,7 +3173,8 @@
    "list_join_comma",
    "list_join_comma_space",
    "list_join_empty",
-   "list_join_space"
+   "list_join_space",
+   "firebase_deploy_function"
   ],
   "result": [
    "watch",
@@ -10404,6 +10405,9 @@
    "firebase_service_account"
   ],
   "firebase_upload_string": [
+   "firebase_deploy_function"
+  ],
+  "destination": [
    "firebase_deploy_function"
   ]
  },
@@ -19656,10 +19660,12 @@
    "identifiers": [
     "function_dependencies_code",
     "firebase_upload_string",
+    "list_join",
     "firebase_deploy_function",
     "f_name",
     "code",
-    "myString"
+    "myString",
+    "destination"
    ]
   },
   "firebase_service_account": {
