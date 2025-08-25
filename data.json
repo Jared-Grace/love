@@ -1644,7 +1644,8 @@
   "s json",
   "u lcm",
   "s concat",
-  "n list_concat_multiple"
+  "n list_concat_multiple",
+  "s fire"
  ],
  "marker_current": "1",
  "function_current": "list_concat_multiple",
