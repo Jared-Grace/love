@@ -1,3 +1,4 @@
+import { html_style_set } from "./html_style_set.mjs";
 import { html_document_root } from "./html_document_root.mjs";
 import { html_meta_viewport } from "./html_meta_viewport.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -17,4 +18,5 @@ export function app_replace_main() {
   });
   let p = html_p_text(root, "f");
   let html = html_document_root();
+  html_style_set(b, style_key, style_value);
 }
