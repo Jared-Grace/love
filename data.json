@@ -2131,7 +2131,8 @@
    "function_transform_marker_specified",
    "js_code_call_statement",
    "function_dependencies_code",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_replace"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -18981,7 +18982,8 @@
     "f_name",
     "name",
     "destination_version",
-    "destination"
+    "destination",
+    "code"
    ]
   },
   "html_document_body": {
