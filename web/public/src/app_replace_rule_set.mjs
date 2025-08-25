@@ -47,7 +47,7 @@ export function app_replace_rule_set(context) {
   );
   let index_selected = null;
   let div = html_div(root);
-  let current_list = null;
+  let current_list = string_split_empty(current);
   let symbols_buttons = null;
   let label_rules = html_p(root);
   let { rules } = item;
@@ -66,7 +66,8 @@ export function app_replace_rule_set(context) {
       let before = list_take(current_list, index_selected);
       let size = list_size(left);
       let after = list_skip(current_list, index_selected + size);
-      let combined = list_concat_multiple([before, right, after]);
+      current_list = list_concat_multiple([before, right, after]);
+      refresh();
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
@@ -78,7 +79,6 @@ export function app_replace_rule_set(context) {
   let rules_buttons = list_map(mapped, lambda);
   refresh();
   function refresh() {
-    current_list = string_split_empty(current);
     html_clear(div);
     function lambda2(letter, index) {
       function lambda5() {
