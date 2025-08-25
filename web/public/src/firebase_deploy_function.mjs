@@ -2,13 +2,16 @@ import { log } from "./log.mjs";
 import { firebase_service_account } from "./firebase_service_account.mjs";
 import { marker } from "./marker.mjs";
 export async function firebase_deploy_function() {
+  {
+    const admin = await import("firebase-admin");
+    marker("1");
+    let service_account = await firebase_service_account();
+    admin.initializeApp({
+      credential: admin.credential.cert(service_account),
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    });
+  }
   const admin = await import("firebase-admin");
-  marker("1");
-  let service_account = await firebase_service_account();
-  admin.initializeApp({
-    credential: admin.credential.cert(service_account),
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  });
   const bucket = admin.storage().bucket();
   async function uploadString(content, destinationPath) {
     const file = bucket.file(destinationPath);
