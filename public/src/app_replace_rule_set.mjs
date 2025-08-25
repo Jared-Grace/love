@@ -1,3 +1,4 @@
+import { object_merge } from "./object_merge.mjs";
 import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
 import { not } from "./not.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
@@ -72,6 +73,7 @@ export function app_replace_rule_set(context) {
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
+    let to2 = object_merge(to, from);
     return b;
   }
   let rules_buttons = list_map(mapped, lambda);
