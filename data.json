@@ -9945,7 +9945,6 @@
    "html_document_body",
    "html_element",
    "html_document_head",
-   "app_replace_main",
    "html_document_root"
   ],
   "tag_name": [
@@ -10714,7 +10713,6 @@
    "app_replace_main"
   ],
   "documentElement": [
-   "app_replace_main",
    "html_document_root"
   ],
   "html_document_root": [
@@ -20243,8 +20241,6 @@
     "app_fn",
     "screens",
     "root",
-    "document",
-    "documentElement",
     "p"
    ]
   },
