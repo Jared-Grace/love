@@ -1992,7 +1992,6 @@
    "js_outside_move",
    "data_file_update_inner",
    "function_exists_strict",
-   "html_update",
    "function_exists_inner",
    "function_parse_strict"
   ],
@@ -2146,7 +2145,6 @@
    "marker_below",
    "marker_next_delete_multiple",
    "marker_next_await",
-   "html_update",
    "function_transform_marker_specified",
    "js_code_call_statement",
    "function_dependencies_code",
@@ -4211,7 +4209,6 @@
    "function_name_to_path",
    "path_join",
    "server",
-   "html_update",
    "firebase_service_account",
    "html_name_to_path_dev"
   ],
@@ -5081,7 +5078,6 @@
    "file_open",
    "function_copy",
    "function_open",
-   "html_update",
    "app_html_open"
   ],
   "terminal": [
@@ -6083,7 +6079,6 @@
    "object_merge",
    "object_property_from",
    "object_replace",
-   "html_update",
    "js_imports_paths_fix",
    "folder_current_join_code",
    "function_name_to_path_import",
@@ -6129,7 +6124,6 @@
    "function_import",
    "function_name_to_base",
    "function_name_to_path",
-   "html_update",
    "function_name_to_path_import"
   ],
   "function_import": [
@@ -6198,8 +6192,7 @@
   ],
   "js_code_import_single": [
    "function_imports_add",
-   "js_code_import_single",
-   "html_update"
+   "js_code_import_single"
   ],
   "js_code_string": [
    "js_code_string",
@@ -6229,7 +6222,6 @@
   "body": [
    "function_imports_add",
    "html_overwrite",
-   "html_update",
    "js_block_child_graph",
    "js_declaration_to_block_body",
    "js_if_blockify_generic",
@@ -7238,15 +7230,11 @@
    "html_update"
   ],
   "html_overwrite": [
-   "html_overwrite",
-   "html_update"
+   "html_overwrite"
   ],
   "html_new": [
    "html_new",
    "app_new"
-  ],
-  "name_prefixed": [
-   "html_update"
   ],
   "npm_install": [
    "import_install",
@@ -7765,8 +7753,7 @@
    "js_code_statement"
   ],
   "js_code_call_statement": [
-   "js_code_call_statement",
-   "html_update"
+   "js_code_call_statement"
   ],
   "js_keyword_function": [
    "js_code_declaration",
@@ -9899,28 +9886,21 @@
   "app_html_open": [
    "app_html_open"
   ],
-  "call": [
-   "html_update"
-  ],
   "f_name_ext": [
    "function_name_to_base",
-   "html_update",
    "folder_current_join_code",
    "function_name_to_path_import"
   ],
   "folder_current_join_code": [
-   "html_update",
    "folder_current_join_code",
    "function_name_to_path_import"
   ],
   "folder_src": [
    "functions_path",
-   "html_update",
    "folder_src"
   ],
   "src": [
-   "folder_src",
-   "html_update"
+   "folder_src"
   ],
   "app_code": [
    "app_code"
@@ -9930,7 +9910,6 @@
    "app_replace_rule_set"
   ],
   "app_name_prefixed": [
-   "html_update",
    "app_new",
    "app_name_prefixed",
    "function_open_app",
@@ -10737,6 +10716,9 @@
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev"
+  ],
+  "html_update_generic": [
+   "html_update"
   ]
  },
  "functions": {
@@ -13142,28 +13124,12 @@
   },
   "html_update": {
    "identifiers": [
+    "html_update_generic",
     "marker",
-    "app_name_prefixed",
-    "folder_src",
-    "folder_current_join_code",
-    "function_name_to_base",
-    "js_code_import_single",
-    "js_code_call_statement",
-    "file_open",
-    "html_overwrite",
     "html_name_to_path",
-    "path_join",
     "html_update",
     "name",
-    "file_path",
-    "name_prefixed",
-    "call",
-    "f_name_ext",
-    "src",
-    "f_path",
-    "from",
-    "code",
-    "body"
+    "file_path"
    ],
    "async": true
   },
