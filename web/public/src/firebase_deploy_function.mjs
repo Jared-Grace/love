@@ -9,4 +9,7 @@ export async function firebase_deploy_function(f_name) {
   let file_name = file_name_json(now_file);
   let destination = list_join(["function", f_name, file_name], "/");
   await firebase_upload_string(code, destination);
+  let v = {
+    destination,
+  };
 }
