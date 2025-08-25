@@ -19557,9 +19557,9 @@
     "list_concat_multiple",
     "lists",
     "result",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ]
   }
  },
