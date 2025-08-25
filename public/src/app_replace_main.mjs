@@ -12,7 +12,11 @@ export function app_replace_main() {
   const head = html_document_head();
   let component = html_element(head, "meta");
   html_attribute_set(component, "name", "viewport");
-  html_attribute_set(component, "name", "viewport");
+  html_attribute_set(
+    component,
+    "content",
+    "width=device-width, initial-scale=1.0",
+  );
   const root = html_document_body();
   app_refresh({
     app_fn,
