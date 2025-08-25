@@ -1680,7 +1680,7 @@
   "c object_property_initialize object_property_lambda"
  ],
  "marker_current": "1",
- "function_current": "global_function",
+ "function_current": "object_property_lambda",
  "terminal": false,
  "identifiers": {
   "log": [
