@@ -10003,8 +10003,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_replace_settings"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -20511,8 +20510,7 @@
     "value_get",
     "value",
     "lambda3",
-    "component",
-    "parent"
+    "component"
    ]
   },
   "app_replace_font_size_refresh": {
