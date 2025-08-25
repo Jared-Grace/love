@@ -10898,6 +10898,9 @@
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set"
+  ],
+  "$a": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19626,6 +19629,7 @@
     "lambda2",
     "letter",
     "lambda5",
+    "$a",
     "object",
     "nn",
     "lambda6",
