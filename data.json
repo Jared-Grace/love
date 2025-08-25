@@ -4685,7 +4685,8 @@
    "each_multiple",
    "each_pair",
    "lists_get",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "app_replace_rule_set"
   ],
   "first": [
    "each_multiple",
@@ -5186,7 +5187,8 @@
    "app_html_open",
    "function_new_app_screen",
    "marker_screen_add",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "app_replace_rule_set"
   ],
   "body_block": [
    "functions_combine",
@@ -10328,11 +10330,9 @@
   "rule2": [
    "app_replace_rule_set"
   ],
-  "lcm": [
-   "app_replace_rule_set"
-  ],
   "list_concat_multiple": [
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18995,6 +18995,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_concat_multiple",
     "list_size",
     "list_skip",
     "object_merge",
@@ -19058,7 +19059,8 @@
     "before",
     "size",
     "after",
-    "lcm",
+    "combined",
+    "lists",
     "rules_buttons",
     "nn",
     "lambda6",
