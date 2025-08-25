@@ -2685,8 +2685,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -19604,7 +19603,6 @@
     "lambda7",
     "item2",
     "ne",
-    "list",
     "lambda4",
     "symbols_button",
     "index2"
