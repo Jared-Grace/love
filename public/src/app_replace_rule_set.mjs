@@ -62,7 +62,8 @@ export function app_replace_rule_set(context) {
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {
       let left = object_property_get(rule, "left");
-      index_selected;current_list
+      index_selected;
+      current_list;
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
