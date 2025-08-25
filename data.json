@@ -2546,7 +2546,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -5789,7 +5790,8 @@
    "list_map_unordered_async"
   ],
   "mapped2": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "app_replace_rule_set"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -8566,10 +8568,12 @@
    "list_map"
   ],
   "list_map_index": [
-   "list_map_index"
+   "list_map_index",
+   "app_replace_rule_set"
   ],
   "mapper": [
-   "list_map_index"
+   "list_map_index",
+   "app_replace_rule_set"
   ],
   "list_map_property_lambda": [
    "list_map_property"
@@ -10236,9 +10240,6 @@
   ],
   "disabled": [
    "html_enable"
-  ],
-  "lmi": [
-   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18901,6 +18902,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_map_index",
     "each",
     "html_enable",
     "html_p",
@@ -18938,7 +18940,9 @@
     "b",
     "lambda5",
     "refresh",
-    "lmi",
+    "mapped2",
+    "list",
+    "mapper",
     "l",
     "rules",
     "mapped",
