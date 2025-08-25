@@ -1607,7 +1607,6 @@
   "s invoke",
   "n lambda_value",
   "s param",
-  "s replace",
   "s storage",
   "s rule_set",
   "unlias s",
@@ -1691,7 +1690,8 @@
   "a rs function_rename_suffix_add",
   "ps",
   "rs firebase_storage_url project",
-  "s remove"
+  "s remove",
+  "s replace"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_url_project",
