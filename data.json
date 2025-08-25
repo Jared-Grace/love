@@ -3958,8 +3958,7 @@
    "list_unique",
    "null_not_is_assert",
    "promise_not_is",
-   "visit_filter_recursive_async",
-   "app_replace_rule_set"
+   "visit_filter_recursive_async"
   ],
   "without": [
    "string_suffix_without",
@@ -7893,7 +7892,8 @@
    "list_not_is",
    "list_squash",
    "marker_down_choices",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_replace_rule_set"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -7991,8 +7991,7 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names",
-   "app_replace_rule_set"
+   "js_identifiers_to_names"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -19033,8 +19032,7 @@
     "size",
     "sliced",
     "eq",
-    "a",
-    "b2",
+    "l",
     "rules_buttons",
     "nn",
     "lambda6",
