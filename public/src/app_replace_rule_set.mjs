@@ -94,6 +94,8 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {}
       let b = html_button(div, letter, lambda5);
+      let object = b;
+      let property_name = "index";
       object_property_exists_not_assert(object, property_name);
       object_merge(b, {
         ["index"]: index,
