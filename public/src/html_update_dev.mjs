@@ -8,8 +8,8 @@ export async function html_update_dev(name) {
   let file_path = html_name_to_path_dev(name);
   function paths_get(f_name_ext) {
     let src = folder_src();
-    let v = folder_previous();
-    const from_paths = [src, f_name_ext];
+    let previous = folder_previous();
+    const from_paths = [previous, src, f_name_ext];
     return from_paths;
   }
   await html_update_generic(name, file_path, paths_get);
