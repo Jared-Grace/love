@@ -71,9 +71,8 @@ export function app_replace_rule_set(context) {
     } else {
       fn = html_disable;
     }
-    const on_true = "Choose a rule:";
     const on_false = "Rules:";
-    html_text_set_if(nn, on_true, on_false, label_rules);
+    html_text_set_if(nn, "Choose a rule:", on_false, label_rules);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
