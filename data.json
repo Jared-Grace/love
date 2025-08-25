@@ -3184,7 +3184,8 @@
    "file_name_json",
    "global_function",
    "global_function_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "app_replace"
   ],
   "output": [
    "watch",
@@ -18909,8 +18910,9 @@
     "app_replace_main",
     "marker",
     "app_replace",
-    "destination_version",
     "f_name",
+    "name",
+    "destination_version",
     "json",
     "url"
    ]
