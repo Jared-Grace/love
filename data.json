@@ -1649,7 +1649,6 @@
   "function_dependencies_code app_replace_main",
   "oh replace",
   "o html_update",
-  "html_update replace",
   "ni firebase-admin",
   "n firebase_deploy_function",
   "u for",
@@ -1713,7 +1712,8 @@
   "cs html_update dev",
   "u fp",
   "html_name_to_path_dev replace",
-  "html_update_dev replace"
+  "html_update_dev replace",
+  "html_update replace"
  ],
  "marker_current": "1",
  "function_current": "html_update_dev",
