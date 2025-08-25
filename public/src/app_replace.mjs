@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { firebase_storage_download } from "./firebase_storage_download.mjs";
 import { log } from "./log.mjs";
 import { firebase_deploy_function_destination_version } from "./firebase_deploy_function_destination_version.mjs";
@@ -9,5 +10,6 @@ export async function app_replace() {
   let destination_version =
     firebase_deploy_function_destination_version(f_name);
   let parsed = await firebase_storage_download(destination_version);
+  let destination = object_property_get(parsed, "destination");
   log(parsed);
 }
