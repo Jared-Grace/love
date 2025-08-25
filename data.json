@@ -7233,7 +7233,6 @@
   "html_name_to_path": [
    "html_name_to_path",
    "html_new",
-   "html_overwrite",
    "html_update"
   ],
   "file_name": [
@@ -13167,12 +13166,11 @@
   },
   "html_overwrite": {
    "identifiers": [
-    "html_name_to_path",
     "file_overwrite",
     "html_overwrite",
     "name",
-    "body",
     "file_path",
+    "body",
     "contents"
    ],
    "async": true
