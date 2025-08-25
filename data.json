@@ -2782,7 +2782,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5826,7 +5827,8 @@
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
-   "function_dependencies_code_copy"
+   "function_dependencies_code_copy",
+   "firebase_deploy_function"
   ],
   "ds": [
    "function_dependencies_code"
@@ -6491,7 +6493,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "firebase_deploy_function"
   ],
   "function_read": [
    "function_read"
@@ -19652,9 +19655,12 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "function_dependencies_code",
     "firebase_upload_string",
     "firebase_deploy_function",
     "f_name",
+    "v",
+    "f_name2",
     "myString"
    ]
   },
