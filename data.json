@@ -4147,8 +4147,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "firebase_deploy_function"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -10388,7 +10387,8 @@
    "firebase_deploy_function"
   ],
   "sw": [
-   "string_starts_with"
+   "string_starts_with",
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19649,7 +19649,7 @@
     "files",
     "lambda",
     "item",
-    "v2",
+    "sw",
     "v"
    ]
   }
