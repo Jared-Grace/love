@@ -3290,8 +3290,7 @@
    "list_filter_property",
    "list_range",
    "list_slice_end",
-   "ternary",
-   "app_replace"
+   "ternary"
   ],
   "separator": [
    "watch",
@@ -5934,8 +5933,7 @@
    "function_dependencies_code"
   ],
   "waited2": [
-   "function_dependencies_code",
-   "app_replace"
+   "function_dependencies_code"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -9872,7 +9870,8 @@
    "app_html_open"
   ],
   "call": [
-   "html_update"
+   "html_update",
+   "app_replace"
   ],
   "f_name_ext": [
    "function_name_to_base",
@@ -18992,9 +18991,8 @@
     "destination_version",
     "destination",
     "code",
-    "result",
-    "code2",
-    "waited2"
+    "call",
+    "code2"
    ]
   },
   "html_document_body": {
