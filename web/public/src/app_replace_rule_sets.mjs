@@ -28,13 +28,16 @@ export function app_replace_rule_sets() {
     {
       name: "Unary to Binary Equations",
       rules: [
-        "= b > a = b a",
-        "a a > a + b a",
+        "= c > c = b c",
+        "c c > c + b c",
+        "d b > b d",
+        "d c > a d",
+        "d = > = d",
         "0 a > 1",
         "1 a > a 0",
         "b a > b 1",
       ],
-      start: "ba=ba",
+      start: "dbc=bc",
     },
   ];
   return v;
