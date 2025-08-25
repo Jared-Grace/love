@@ -94,10 +94,8 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {}
       let b = html_button(div, letter, lambda5);
-      let object = b;$a
-      let property_name = "index";$a
-      let value = index;
-      object_property_set_exists_not(object, property_name, value);
+      let object = b;
+      object_property_set_exists_not(object, "index", index);
       return b;
     }
     symbols_buttons = list_map_index(current_list, lambda2);
