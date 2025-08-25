@@ -1729,10 +1729,11 @@
   "s rule,set",
   "as list",
   "s list_any",
-  "a lan list_any"
+  "a lan list_any",
+  "o list_any"
  ],
  "marker_current": "1",
- "function_current": "marker_screen_add",
+ "function_current": "list_any",
  "terminal": false,
  "identifiers": {
   "log": [
