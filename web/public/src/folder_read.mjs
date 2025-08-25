@@ -6,6 +6,6 @@ export function folder_read(path_folder) {
     let v = fs.statSync(result).isFile();
     return v;
   }
-  let v2 = fs.readdirSync(path_folder).filter(lambda);
-  return v2;
+  let files = fs.readdirSync(path_folder).filter(lambda);
+  return files;
 }
