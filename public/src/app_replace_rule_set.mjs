@@ -40,20 +40,24 @@ export function app_replace_rule_set(context) {
     function lambda5() {
       html_style_set(b, "background-color", "lightgreen");
       index_selected = index;
+      refresh();
     }
     b = html_button(root, letter, lambda5);
   }
   each_index(current_list, lambda2);
   let l = html_p(root);
-  let label = null;
-  if (index_selected) {
-    label = "Choose a rule:";
-  } else {
-    label = "Rules:";
-  }
-  html_text_set(l, label);
+  refresh();
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
+  function refresh() {
+    let label = null;
+    if (index_selected) {
+      label = "Choose a rule:";
+    } else {
+      label = "Rules:";
+    }
+    html_text_set(l, label);
+  }
   function lambda(rule) {
     let left = object_property_get(rule, "left");
     let right = object_property_get(rule, "right");
