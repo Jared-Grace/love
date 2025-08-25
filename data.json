@@ -4069,7 +4069,8 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text"
+   "html_p_text",
+   "app_replace"
   ],
   "f_names": [
    "functions_names",
@@ -4339,7 +4340,8 @@
    "html_button",
    "app_replace_rule_set",
    "html_button_screen",
-   "html_p_text"
+   "html_p_text",
+   "app_replace"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10168,7 +10170,8 @@
   ],
   "html_p_text": [
    "app_replace_rule_set",
-   "html_p_text"
+   "html_p_text",
+   "app_replace"
   ],
   "rules": [
    "app_replace_rule_set",
@@ -10358,6 +10361,9 @@
   ],
   "firebase_deploy": [
    "firebase_deploy"
+  ],
+  "root2": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -18681,6 +18687,7 @@
   "app_replace": {
    "async": false,
    "identifiers": [
+    "html_p_text",
     "app_refresh",
     "app_replace_screens",
     "html_document_body",
@@ -18688,7 +18695,10 @@
     "app_replace",
     "app_fn",
     "screens",
-    "root"
+    "root",
+    "p",
+    "root2",
+    "text"
    ]
   },
   "html_document_body": {
