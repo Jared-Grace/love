@@ -3155,7 +3155,6 @@
    "global_function_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "app_replace_main",
    "html_attribute_set"
   ],
   "name": [
@@ -3216,8 +3215,7 @@
    "global_function",
    "global_function_async",
    "global_function_property_async",
-   "app_replace",
-   "app_replace_main"
+   "app_replace"
   ],
   "output": [
    "watch",
@@ -20236,8 +20234,6 @@
     "screens",
     "head",
     "component",
-    "name",
-    "value",
     "root",
     "p"
    ]
