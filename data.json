@@ -4340,8 +4340,7 @@
    "html_button",
    "app_replace_rule_set",
    "html_button_screen",
-   "html_p_text",
-   "app_replace"
+   "html_p_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10361,9 +10360,6 @@
   ],
   "firebase_deploy": [
    "firebase_deploy"
-  ],
-  "root2": [
-   "app_replace"
   ]
  },
  "functions": {
@@ -18696,9 +18692,7 @@
     "app_fn",
     "screens",
     "root",
-    "p",
-    "root2",
-    "text"
+    "p"
    ]
   },
   "html_document_body": {
