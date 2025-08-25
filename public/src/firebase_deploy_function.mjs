@@ -8,5 +8,5 @@ export async function firebase_deploy_function(f_name) {
   let now_file = date_now_file();
   let file_name = file_name_json(now_file);
   let destination = list_join(["function", f_name, file_name], "/");
-  firebase_upload_string(code, destination);
+  await firebase_upload_string(code, destination);
 }
