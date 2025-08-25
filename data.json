@@ -3040,8 +3040,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index",
-   "app_replace_rule_set"
+   "list_map_index"
   ],
   "name": [
    "watch",
@@ -18984,7 +18983,6 @@
     "label",
     "fn",
     "nn",
-    "value",
     "lambda4",
     "symbols_button",
     "index2"
