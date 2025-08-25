@@ -2687,7 +2687,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -10879,6 +10880,12 @@
    "app_replace_rule_set"
   ],
   "eq2": [
+   "app_replace_rule_set"
+  ],
+  "lambda8": [
+   "app_replace_rule_set"
+  ],
+  "item2": [
    "app_replace_rule_set"
   ]
  },
@@ -19618,7 +19625,10 @@
     "any",
     "lambda4",
     "symbols_button",
-    "index2"
+    "index2",
+    "list",
+    "lambda8",
+    "item2"
    ]
   },
   "app_refresh": {
