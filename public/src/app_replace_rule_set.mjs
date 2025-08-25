@@ -67,7 +67,11 @@ export function app_replace_rule_set(context) {
       let size = list_size(left);
       index_selected;
       current_list;
-      let v2 = list_slice(current_list, index_selected, index_selected + size);
+      let sliced = list_slice(
+        current_list,
+        index_selected,
+        index_selected + size,
+      );
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
