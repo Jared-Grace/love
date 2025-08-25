@@ -3137,7 +3137,8 @@
    "js_imports_paths_fix",
    "storage_local_key_get",
    "app_replace_rule_sets",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "file_name_json"
   ],
   "output": [
    "watch",
@@ -7108,7 +7109,8 @@
   "file_name": [
    "html_name_to_path",
    "file_name_html",
-   "app_html_open"
+   "app_html_open",
+   "file_name_json"
   ],
   "html_update": [
    "html_new",
@@ -10427,7 +10429,8 @@
    "date_now_file"
   ],
   "file_name_json": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "file_name_json"
   ]
  },
  "functions": {
@@ -19715,6 +19718,14 @@
     "now_iso",
     "now_file",
     "replace"
+   ]
+  },
+  "file_name_json": {
+   "async": false,
+   "identifiers": [
+    "file_name_json",
+    "name",
+    "file_name"
    ]
   }
  },
