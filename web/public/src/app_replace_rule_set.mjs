@@ -72,7 +72,8 @@ export function app_replace_rule_set(context) {
       fn = html_disable;
     }
     html_text_set(l, label);
-    each(list, function lambda4(item2) {});
+    function lambda4(item2) {}
+    each(list, lambda4);
   }
   marker("1");
 }
