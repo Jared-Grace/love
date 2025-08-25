@@ -9942,19 +9942,22 @@
   ],
   "tag_name": [
    "html_element",
-   "html_button_element"
+   "html_button_element",
+   "app_replace_main"
   ],
   "html_element": [
    "html_element",
    "html_button_element",
    "html_p",
-   "html_div"
+   "html_div",
+   "app_replace_main"
   ],
   "parent": [
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_main"
   ],
   "createElement": [
    "html_element"
@@ -10047,7 +10050,8 @@
    "html_p",
    "html_enable_if",
    "app_replace_rule_set",
-   "html_document_head"
+   "html_document_head",
+   "app_replace_main"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10691,9 +10695,6 @@
   ],
   "head": [
    "html_document_head",
-   "app_replace_main"
-  ],
-  "he": [
    "app_replace_main"
   ]
  },
@@ -20209,6 +20210,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
+    "html_element",
     "html_document_head",
     "html_p_text",
     "app_refresh",
@@ -20219,7 +20221,9 @@
     "app_fn",
     "screens",
     "head",
-    "he",
+    "component",
+    "parent",
+    "tag_name",
     "root",
     "p"
    ]
