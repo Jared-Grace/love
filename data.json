@@ -5795,8 +5795,7 @@
    "js_bang_to_not",
    "js_code_call",
    "js_code_call_statement",
-   "js_code_declaration",
-   "app_replace"
+   "js_code_declaration"
   ],
   "function_delete": [
    "function_delete",
@@ -6593,7 +6592,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "app_replace"
   ],
   "function_read": [
    "function_read"
@@ -7729,8 +7729,7 @@
   ],
   "fn_name": [
    "js_code_call",
-   "js_code_call_args",
-   "app_replace"
+   "js_code_call_args"
   ],
   "js_code_statement": [
    "js_code_call_statement",
@@ -7738,7 +7737,8 @@
   ],
   "js_code_call_statement": [
    "js_code_call_statement",
-   "html_update"
+   "html_update",
+   "app_replace"
   ],
   "js_keyword_function": [
    "js_code_declaration",
@@ -18975,7 +18975,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
-    "js_code_call",
+    "js_code_call_statement",
     "firebase_storage_download_property",
     "firebase_deploy_function_destination_version",
     "app_replace_main",
@@ -18987,7 +18987,7 @@
     "destination",
     "code",
     "result",
-    "fn_name"
+    "f_name2"
    ]
   },
   "html_document_body": {
