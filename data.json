@@ -1663,7 +1663,8 @@
   "n firebase_deploy_function",
   "u for",
   "ac for flr",
-  "s folder"
+  "s folder",
+  "firebase_deploy_function"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
