@@ -1684,7 +1684,6 @@
   "u jf",
   "a jf json_from",
   "o ff",
-  "ff app_replace_main",
   "s rename",
   "as rename",
   "a rs function_rename_suffix_add",
@@ -1693,7 +1692,8 @@
   "s remove",
   "s replace",
   "n string_replace",
-  "is firebase_deploy_function_destination_version"
+  "is firebase_deploy_function_destination_version",
+  "ff app_replace_main"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
