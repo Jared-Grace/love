@@ -10443,8 +10443,7 @@
   ],
   "storage_local_initialize_context": [
    "storage_local_initialize_context",
-   "app_replace_rule_set",
-   "app_replace_font_size_refresh"
+   "app_replace_rule_set"
   ],
   "string_split_empty": [
    "app_replace_rule_set",
@@ -10837,6 +10836,9 @@
   "app_replace_font_size_refresh": [
    "app_replace_main",
    "app_replace_settings",
+   "app_replace_font_size_refresh"
+  ],
+  "app_replace_font_size": [
    "app_replace_font_size_refresh"
   ]
  },
@@ -20494,7 +20496,7 @@
   "app_replace_font_size_refresh": {
    "async": false,
    "identifiers": [
-    "storage_local_initialize_context",
+    "app_replace_font_size",
     "html_style_font_size",
     "html_document_root",
     "app_replace_font_size_refresh",
