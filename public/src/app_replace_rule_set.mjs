@@ -1,3 +1,4 @@
+import { list_skip } from "./list_skip.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
 import { not } from "./not.mjs";
@@ -70,6 +71,7 @@ export function app_replace_rule_set(context) {
         alert("invalid index for rule");
       }
       let before = list_take(current_list, index_selected);
+      let skipped = list_skip(list, skip_count);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
