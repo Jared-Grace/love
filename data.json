@@ -1717,7 +1717,6 @@
   "s button",
   "o app_replace_screens",
   "s roo",
-  "s screen",
   "as marker_screen_add",
   "as marker",
   "a msa marker_screen_add",
@@ -1725,7 +1724,8 @@
   "o msa",
   "s app,repla",
   "s setting",
-  "s storage"
+  "s storage",
+  "s screen"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
