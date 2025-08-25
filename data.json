@@ -3154,7 +3154,8 @@
    "object_property_lambda_async",
    "global_function_async",
    "global_function_property_async",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "app_replace_main"
   ],
   "name": [
    "watch",
@@ -3214,7 +3215,8 @@
    "global_function",
    "global_function_async",
    "global_function_property_async",
-   "app_replace"
+   "app_replace",
+   "app_replace_main"
   ],
   "output": [
    "watch",
@@ -20227,6 +20229,8 @@
     "screens",
     "head",
     "component",
+    "name",
+    "value",
     "element",
     "setAttribute",
     "root",
