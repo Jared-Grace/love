@@ -1946,7 +1946,8 @@
    "function_parse_declaration_inner",
    "function_parse_strict",
    "http_json",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "app_replace"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -4409,8 +4410,7 @@
    "file_overwrite_json",
    "file_read_json",
    "json_from",
-   "storage_local_get",
-   "app_replace"
+   "storage_local_get"
   ],
   "includes": [
    "catch_only_async",
@@ -18975,7 +18975,7 @@
     "f_name",
     "name",
     "destination_version",
-    "json"
+    "parsed"
    ]
   },
   "html_document_body": {
