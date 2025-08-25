@@ -1,15 +1,6 @@
-import { app_refresh } from "./app_refresh.mjs";
-import { app_replace_screens } from "./app_replace_screens.mjs";
-import { html_document_body } from "./html_document_body.mjs";
+import { app_replace_main } from "./app_replace_main.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace() {
   marker("1");
-  let app_fn = app_replace;
-  let screens = app_replace_screens();
-  const root = html_document_body();
-  app_refresh({
-    app_fn,
-    screens,
-    root: root,
-  });
+  app_replace_main();
 }
