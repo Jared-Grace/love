@@ -9,7 +9,7 @@ export async function app_replace() {
   let f_name = app_replace_main.name;
   let destination_version =
     firebase_deploy_function_destination_version(f_name);
-  let url = firebase_storage_url(replaced);
+  let url = firebase_storage_url(destination_version);
   let json = await http_json(url);
   log(json);
 }
