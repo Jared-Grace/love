@@ -45,7 +45,7 @@ export function app_replace_rule_set(context) {
     start,
   );
   let index_selected = null;
-  html_element(root, "div");
+  let div = html_element(root, "div");
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
