@@ -12,5 +12,5 @@ export async function app_replace() {
   const property_name = "destination";
   let parsed = await firebase_storage_download(destination_version);
   let destination = object_property_get(parsed, property_name);
-  log(parsed);
+  log(destination);
 }
