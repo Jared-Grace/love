@@ -10,7 +10,7 @@ export function app_replace_home(context) {
   function lambda4() {
     app_screen_set(context2, value);
   }
-  let component = html_button(root, emoji_gear() + " Settings", lambda4);
+  html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = object_property_get(item, "name");
