@@ -9794,7 +9794,8 @@
   "html_element": [
    "html_element",
    "html_button_element",
-   "html_p"
+   "html_p",
+   "html_div"
   ],
   "parent": [
    "html_element",
@@ -10149,7 +10150,8 @@
    "app_replace_rule_set",
    "app_replace",
    "html_p",
-   "html_p_text"
+   "html_p_text",
+   "html_div"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -10334,10 +10336,12 @@
    "app_replace_rule_set"
   ],
   "div": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_div"
   ],
   "html_div": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "html_div"
   ]
  },
  "functions": {
@@ -19568,6 +19572,15 @@
     "combined",
     "lambda",
     "item"
+   ]
+  },
+  "html_div": {
+   "async": false,
+   "identifiers": [
+    "html_element",
+    "html_div",
+    "root",
+    "div"
    ]
   }
  },
