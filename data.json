@@ -4290,8 +4290,7 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified",
-   "firebase_deploy_function"
+   "function_transform_marker_specified"
   ],
   "assert_json": [
    "assert_json",
@@ -10433,13 +10432,13 @@
   "version": [
    "firebase_deploy_function"
   ],
-  "content": [
-   "firebase_deploy_function"
-  ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
   ],
   "destination_version": [
+   "firebase_deploy_function"
+  ],
+  "firebase_upload_object": [
    "firebase_deploy_function"
   ]
  },
@@ -19690,19 +19689,18 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "firebase_upload_object",
     "firebase_deploy_function_destination",
     "date_now_file",
     "function_dependencies_code",
     "firebase_upload_string",
-    "json_to",
     "firebase_deploy_function",
     "f_name",
     "code",
     "now_file",
     "destination",
     "version",
-    "destination_version",
-    "content"
+    "destination_version"
    ]
   },
   "firebase_service_account": {
