@@ -10348,7 +10348,6 @@
    "app_screen_set",
    "app_replace_home",
    "storage_local_set_context",
-   "app_replace_settings",
    "app_replace_font_size_adjust"
   ],
   "lambda$item$index": [
@@ -10843,13 +10842,11 @@
   ],
   "app_replace_font_size_refresh": [
    "app_replace_main",
-   "app_replace_settings",
    "app_replace_font_size_refresh",
    "app_replace_font_size_adjust"
   ],
   "app_replace_font_size": [
    "app_replace_font_size_refresh",
-   "app_replace_settings",
    "app_replace_font_size_adjust"
   ],
   "app_replace_font_size_factor": [
@@ -20502,9 +20499,6 @@
    "identifiers": [
     "app_replace_font_size_adjust",
     "app_replace_font_size_factor",
-    "storage_local_set_context",
-    "app_replace_font_size",
-    "app_replace_font_size_refresh",
     "emoji_font_smaller",
     "emoji_font_larger",
     "html_button",
@@ -20512,9 +20506,9 @@
     "app_replace_settings",
     "context",
     "lambda2",
+    "factor",
     "value_get",
     "value",
-    "factor",
     "root",
     "lambda3",
     "component",
