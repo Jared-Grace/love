@@ -3460,7 +3460,8 @@
    "html_component_element_get",
    "function_rename_identifiers",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "app_replace"
   ],
   "data_save": [
    "data_file_update",
@@ -10506,7 +10507,8 @@
    "firebase_deploy_function"
   ],
   "destination": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_replace"
   ],
   "date_now_file": [
    "date_now_file",
@@ -18966,6 +18968,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "firebase_storage_download",
     "log",
     "firebase_deploy_function_destination_version",
@@ -18975,7 +18978,8 @@
     "f_name",
     "name",
     "destination_version",
-    "parsed"
+    "parsed",
+    "destination"
    ]
   },
   "html_document_body": {
