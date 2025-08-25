@@ -8,6 +8,7 @@ export function app_replace_main() {
   let app_fn = app_replace;
   let screens = app_replace_screens();
   const head = html_document_head();
+  he;
   const root = html_document_body();
   app_refresh({
     app_fn,
