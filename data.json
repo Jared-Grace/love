@@ -10844,6 +10844,9 @@
   "app_replace_font_size": [
    "app_replace_font_size_refresh",
    "app_replace_settings"
+  ],
+  "app_replace_font_size_factor": [
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20483,6 +20486,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "app_replace_font_size_factor",
     "storage_local_set_context",
     "app_replace_font_size",
     "app_replace_font_size_refresh",
