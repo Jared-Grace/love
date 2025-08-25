@@ -2832,8 +2832,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "firebase_storage_url"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6122,7 +6121,8 @@
    "http",
    "http_json",
    "app_replace",
-   "firebase_storage_url_project"
+   "firebase_storage_url_project",
+   "firebase_storage_url"
   ],
   "__dirname": [
    "function_import",
@@ -20114,7 +20114,7 @@
     "firebase_storage_url",
     "storage_path",
     "replaced",
-    "v"
+    "url"
    ]
   }
  },
