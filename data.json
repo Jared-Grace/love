@@ -2250,8 +2250,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "html_update_dev"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2857,7 +2856,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "html_update_dev"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3241,8 +3241,7 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers",
-   "html_update_dev"
+   "function_rename_identifiers"
   ],
   "args": [
    "watch",
@@ -5078,8 +5077,7 @@
    "function_current_set",
    "function_parse_declaration_js_unparse",
    "function_path_declaration_unparse",
-   "function_transform",
-   "html_update_dev"
+   "function_transform"
   ],
   "file_open_editor": [
    "file_open",
@@ -10559,7 +10557,8 @@
    "firebase_service_account"
   ],
   "folder_previous": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "html_update_dev"
   ],
   "service_account": [
    "firebase_service_account",
@@ -20341,7 +20340,7 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
-    "function_parse_declaration_js_unparse",
+    "folder_previous",
     "folder_src",
     "html_name_to_path_dev",
     "html_update_generic",
@@ -20352,8 +20351,7 @@
     "paths_get",
     "f_name_ext",
     "src",
-    "output",
-    "f_name",
+    "v",
     "from_paths"
    ]
   },
