@@ -3183,7 +3183,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "html_attribute_set",
-   "app_replace_font_size_refresh"
+   "app_replace_font_size_refresh",
+   "app_replace_settings"
   ],
   "name": [
    "watch",
@@ -10840,7 +10841,8 @@
    "app_replace_font_size_refresh"
   ],
   "app_replace_font_size": [
-   "app_replace_font_size_refresh"
+   "app_replace_font_size_refresh",
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20480,6 +20482,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "app_replace_font_size",
     "app_replace_font_size_refresh",
     "emoji_font_smaller",
     "emoji_font_larger",
@@ -20488,6 +20491,7 @@
     "app_replace_settings",
     "context",
     "lambda2",
+    "value",
     "root",
     "lambda3",
     "component",
