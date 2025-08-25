@@ -2855,7 +2855,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "html_name_to_path_dev"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4211,7 +4212,8 @@
    "path_join",
    "server",
    "html_update",
-   "firebase_service_account"
+   "firebase_service_account",
+   "html_name_to_path_dev"
   ],
   "fs": [
    "folder_read",
@@ -9046,7 +9048,8 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join"
+   "path_join",
+   "html_name_to_path_dev"
   ],
   "then": [
    "promise_is"
@@ -20302,12 +20305,15 @@
   "html_name_to_path_dev": {
    "async": false,
    "identifiers": [
+    "path_join",
     "marker",
     "folder_public_combine",
     "file_name_html",
     "html_name_to_path_dev",
     "name",
     "file_name",
+    "v",
+    "list_of_segments",
     "file_path"
    ]
   }
