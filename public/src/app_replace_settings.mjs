@@ -1,3 +1,4 @@
+import { app_replace_font_size_factor } from "./app_replace_font_size_factor.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { app_replace_font_size } from "./app_replace_font_size.mjs";
 import { app_replace_font_size_refresh } from "./app_replace_font_size_refresh.mjs";
@@ -9,14 +10,14 @@ export function app_replace_settings(context) {
   marker("1");
   function lambda2() {
     let value = app_replace_font_size(context);
-    value *= 1.1;
+    value *= app_replace_font_size_factor();
     storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
   function lambda3() {
     let value = app_replace_font_size(context);
-    value *= 1 / 1.1;
+    value *= 1 / app_replace_font_size_factor();
     storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
   }
