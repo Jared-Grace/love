@@ -76,10 +76,12 @@ export function app_replace_rule_set(context) {
     html_text_set(l, label);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
-      if (index2 === index_selected) {
-        html_style_set(symbols_button, "background-color", "lightgreen");
+      const condition = index2 === index_selected;
+      if (condition) {
+        const key = "background-color";
+        html_style_set(symbols_button, key, "lightgreen");
       } else {
-        html_style_remove(symbols_button, "background-color");
+        html_style_remove(symbols_button, key);
       }
     }
     each_index(symbols_buttons, lambda4);
