@@ -1694,7 +1694,8 @@
   "ff app_replace_main",
   "s new",
   "fb",
-  "s app"
+  "s app",
+  "data_app_current_get"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
