@@ -10847,6 +10847,9 @@
   ],
   "app_replace_font_size_factor": [
    "app_replace_settings"
+  ],
+  "factor": [
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20497,6 +20500,7 @@
     "app_replace_settings",
     "context",
     "lambda2",
+    "factor",
     "value",
     "root",
     "lambda3",
