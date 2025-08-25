@@ -16,7 +16,7 @@ export function app_replace_settings(context) {
   function lambda3() {
     let value = app_replace_font_size(context);
     value *= 1 / 1.1;
-    storage_local_set_context(context2, key, value2);
+    storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
   }
   let component = html_button(
