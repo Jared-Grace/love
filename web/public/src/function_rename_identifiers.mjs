@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { each_async } from "./each_async.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
@@ -8,6 +9,7 @@ import { data_identifiers_get } from "./data_identifiers_get.mjs";
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
   let f_names = object_property_get(identifiers, f_name_before);
+  let includes = list_includes(list, item);
   if (false) {
   }
   list_remove(f_names, f_name_before);
