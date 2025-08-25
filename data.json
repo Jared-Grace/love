@@ -10277,6 +10277,9 @@
   ],
   "on_false": [
    "app_replace_rule_set"
+  ],
+  "ternary": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18939,6 +18942,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "ternary",
     "null_not_is",
     "html_style_set_or_remove",
     "each_index",
@@ -18992,11 +18996,11 @@
     "text",
     "lambda3",
     "rules_buttons",
-    "label_rules_text",
     "fn",
     "nn",
     "on_true",
     "on_false",
+    "label_rules_text",
     "lambda4",
     "symbols_button",
     "index2"
