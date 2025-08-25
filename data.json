@@ -3866,7 +3866,8 @@
   ],
   "value2": [
    "error_attention_set",
-   "global_function"
+   "global_function",
+   "app_replace_settings"
   ],
   "error": [
    "watch",
@@ -6586,7 +6587,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set"
+   "html_attribute_set",
+   "app_replace_settings"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10343,7 +10345,8 @@
   "storage_local_set_context": [
    "app_screen_set",
    "app_replace_home",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_replace_settings"
   ],
   "lambda$item$index": [
    "each_index",
@@ -10842,6 +10845,9 @@
   ],
   "app_replace_font_size": [
    "app_replace_font_size_refresh",
+   "app_replace_settings"
+  ],
+  "context2": [
    "app_replace_settings"
   ]
  },
@@ -20482,6 +20488,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "storage_local_set_context",
     "app_replace_font_size",
     "app_replace_font_size_refresh",
     "emoji_font_smaller",
@@ -20494,6 +20501,9 @@
     "value",
     "root",
     "lambda3",
+    "context2",
+    "key",
+    "value2",
     "component",
     "parent"
    ]
