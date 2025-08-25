@@ -3630,8 +3630,7 @@
    "null_not_is",
    "marker_enter",
    "null_not_is_assert",
-   "app_replace_rule_set",
-   "html_enable_if"
+   "app_replace_rule_set"
   ],
   "null_not_is": [
    "function_run_prompt",
@@ -10285,7 +10284,8 @@
    "ternary"
   ],
   "condition": [
-   "ternary"
+   "ternary",
+   "html_enable_if"
   ],
   "html_text_set_if": [
    "app_replace_rule_set"
@@ -19489,8 +19489,8 @@
     "html_enable",
     "html_enable_if",
     "component",
-    "fn",
-    "nn"
+    "condition",
+    "fn"
    ]
   }
  },
