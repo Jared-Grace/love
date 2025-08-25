@@ -88,7 +88,7 @@ export function app_replace_rule_set(context) {
       let rule2 = object_property_get(component, "rule");
       let v =
         html_enable_if(component, nn) &&
-        app_replace_rule_valid(index_selected, current_list);
+        app_replace_rule_valid(rule2, index_selected, current_list);
       return v;
     }
     each(rules_buttons, lambda6);
