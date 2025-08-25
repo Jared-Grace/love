@@ -6120,7 +6120,6 @@
    "server",
    "http",
    "http_json",
-   "app_replace",
    "firebase_storage_url_project",
    "firebase_storage_url"
   ],
@@ -10597,8 +10596,7 @@
    "http"
   ],
   "http_json": [
-   "http_json",
-   "app_replace"
+   "http_json"
   ],
   "firebase_deploy_function_destination_version": [
    "firebase_deploy_function",
@@ -10629,11 +10627,13 @@
    "firebase_storage_url"
   ],
   "firebase_storage_url": [
-   "app_replace",
    "firebase_storage_url"
   ],
   "storage_path": [
    "firebase_storage_url"
+  ],
+  "firebase_storage_download": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -18959,17 +18959,15 @@
   "app_replace": {
    "async": true,
    "identifiers": [
-    "firebase_storage_url",
+    "firebase_storage_download",
     "log",
     "firebase_deploy_function_destination_version",
-    "http_json",
     "app_replace_main",
     "marker",
     "app_replace",
     "f_name",
     "name",
     "destination_version",
-    "url",
     "json"
    ]
   },
