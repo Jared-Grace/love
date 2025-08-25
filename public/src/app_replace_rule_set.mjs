@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -71,6 +72,7 @@ export function app_replace_rule_set(context) {
       fn = html_disable;
     }
     html_text_set(l, label);
+    each(list, function lambda4(item2) {});
   }
   marker("1");
 }
