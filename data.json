@@ -4142,8 +4142,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "firebase_deploy_function"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -10377,7 +10376,8 @@
    "firebase_deploy_function"
   ],
   "files": [
-   "folder_read"
+   "folder_read",
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19633,7 +19633,7 @@
     "firebase_deploy_function",
     "prefix",
     "path_folder",
-    "v2"
+    "files"
    ]
   }
  },
