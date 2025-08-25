@@ -5,5 +5,6 @@ export function app_replace_settings(context) {
   marker("1");
   function lambda2() {}
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
-  let component = html_button(parent, text, function lambda3() {});
+  function lambda3() {}
+  let component = html_button(parent, text, lambda3);
 }
