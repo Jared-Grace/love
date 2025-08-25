@@ -1308,7 +1308,6 @@
   "dpg git_push_when",
   "x",
   "fs gp",
-  "s lambda",
   "s git",
   "s decl",
   "s red",
@@ -1676,7 +1675,8 @@
   "fd firebase_deploy_function",
   "ff app_replace_main",
   "n global_get",
-  "n global_function"
+  "n global_function",
+  "s lambda"
  ],
  "marker_current": "1",
  "function_current": "global_function",
