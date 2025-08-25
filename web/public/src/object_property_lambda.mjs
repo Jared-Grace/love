@@ -8,7 +8,7 @@ export function object_property_lambda(object, property_name, lambda) {
   const exists = object_property_exists(object, property_name);
   let value = null;
   if (not(exists)) {
-    let value2 = lambda();
+    value = lambda();
     object_property_set(object, property_name, value2);
   }
   value = object_property_get(object, property_name);
