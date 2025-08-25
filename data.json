@@ -4724,7 +4724,8 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find",
-   "list_find_property"
+   "list_find_property",
+   "firebase_deploy_function"
   ],
   "items": [
    "each_multiple",
@@ -8223,8 +8224,7 @@
    "list_all",
    "list_any",
    "list_find",
-   "list_filter",
-   "firebase_deploy_function"
+   "list_filter"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -19650,7 +19650,7 @@
     "lambda",
     "item",
     "sw",
-    "filtered"
+    "first"
    ]
   }
  },
