@@ -156,7 +156,8 @@
   "lsl": "list_slice",
   "fb": "firebase_deploy",
   "flr": "folder_read",
-  "ssw": "string_starts_with"
+  "ssw": "string_starts_with",
+  "ff": "firebase_deploy_function"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1670,7 +1671,8 @@
   "fd date_now_iso",
   "fw date_now_iso date_now_file",
   "date_now_file",
-  "s json"
+  "s json",
+  "a ff firebase_deploy_function"
  ],
  "marker_current": "1",
  "function_current": "date_now_file",
