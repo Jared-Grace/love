@@ -1684,7 +1684,7 @@
   "c global_function_property_async global_function_async"
  ],
  "marker_current": "1",
- "function_current": "global_function_property_async",
+ "function_current": "global_function_async",
  "terminal": false,
  "identifiers": {
   "log": [
