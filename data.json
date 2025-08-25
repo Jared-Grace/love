@@ -10333,6 +10333,9 @@
   "list_concat_multiple": [
    "list_concat_multiple",
    "app_replace_rule_set"
+  ],
+  "div": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19037,6 +19040,7 @@
     "start",
     "current",
     "index_selected",
+    "div",
     "current_list",
     "lambda2",
     "letter",
