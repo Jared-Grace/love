@@ -10503,9 +10503,6 @@
    "firebase_service_account",
    "firebase_admin_get"
   ],
-  "firebase_upload_string": [
-   "firebase_deploy_function"
-  ],
   "destination": [
    "firebase_deploy_function",
    "app_replace"
@@ -19907,7 +19904,6 @@
     "firebase_deploy_function_destination",
     "date_now_file",
     "function_dependencies_code",
-    "firebase_upload_string",
     "firebase_deploy_function",
     "f_name",
     "code",
