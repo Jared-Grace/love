@@ -7897,7 +7897,8 @@
   ],
   "after": [
    "js_dollar_a_generic",
-   "function_alias_rename"
+   "function_alias_rename",
+   "app_replace_rule_set"
   ],
   "object_name": [
    "js_dollar_g"
@@ -8637,8 +8638,7 @@
    "list_skip",
    "string_prefix_without",
    "string_skip",
-   "list_skip_1",
-   "app_replace_rule_set"
+   "list_skip_1"
   ],
   "slice": [
    "list_slice",
@@ -10316,6 +10316,9 @@
    "app_replace_rule_set"
   ],
   "rule2": [
+   "app_replace_rule_set"
+  ],
+  "lcm": [
    "app_replace_rule_set"
   ]
  },
@@ -19041,7 +19044,8 @@
     "alert",
     "before",
     "size",
-    "skipped",
+    "after",
+    "lcm",
     "rules_buttons",
     "nn",
     "lambda6",
