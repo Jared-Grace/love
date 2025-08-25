@@ -49,21 +49,6 @@ export function app_replace_rule_set(context) {
   let div = html_div(root);
   let current_list = null;
   let symbols_buttons = null;
-  current_list = string_split_empty(current);
-  html_clear(div);
-  function lambda2(letter, index) {
-    function lambda5() {
-      if (index_selected === index) {
-        index_selected = null;
-      } else {
-        index_selected = index;
-      }
-      refresh();
-    }
-    let b = html_button(div, letter, lambda5);
-    return b;
-  }
-  symbols_buttons = list_map_index(current_list, lambda2);
   let label_rules = html_p(root);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
@@ -93,6 +78,21 @@ export function app_replace_rule_set(context) {
   let rules_buttons = list_map(mapped, lambda);
   refresh();
   function refresh() {
+    current_list = string_split_empty(current);
+    html_clear(div);
+    function lambda2(letter, index) {
+      function lambda5() {
+        if (index_selected === index) {
+          index_selected = null;
+        } else {
+          index_selected = index;
+        }
+        refresh();
+      }
+      let b = html_button(div, letter, lambda5);
+      return b;
+    }
+    symbols_buttons = list_map_index(current_list, lambda2);
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
