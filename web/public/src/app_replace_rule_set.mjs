@@ -74,7 +74,8 @@ export function app_replace_rule_set(context) {
     }
     html_text_set(l, label);
     each(rules_buttons, fn);
-    each(list, function lambda4(item2) {});
+    function lambda4(item2) {}
+    each(list, lambda4);
   }
   refresh();
   marker("1");
