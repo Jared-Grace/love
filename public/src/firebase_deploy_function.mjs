@@ -12,5 +12,9 @@ export async function firebase_deploy_function(f_name) {
     destination,
   };
   let content = json_to(version);
-  await firebase_upload_string(content, destination);
+  let destination_version = firebase_deploy_function_destination(
+    now_file,
+    f_name,
+  );
+  await firebase_upload_string(content, destination_version);
 }
