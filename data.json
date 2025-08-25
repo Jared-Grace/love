@@ -4722,8 +4722,7 @@
    "list_first",
    "list_first_second_generic",
    "function_type_first",
-   "list_find_property",
-   "firebase_deploy_function"
+   "list_find_property"
   ],
   "items": [
    "each_multiple",
@@ -10390,7 +10389,8 @@
   ],
   "only": [
    "list_single",
-   "list_find"
+   "list_find",
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19652,7 +19652,7 @@
     "lambda",
     "item",
     "sw",
-    "first"
+    "only"
    ]
   }
  },
