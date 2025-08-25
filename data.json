@@ -7247,7 +7247,8 @@
    "html_name_to_path_dev"
   ],
   "html_update": [
-   "html_update"
+   "html_update",
+   "html_new"
   ],
   "html_overwrite": [
    "html_overwrite",
@@ -10760,8 +10761,7 @@
    "html_update_public"
   ],
   "html_update_dev": [
-   "html_update_dev",
-   "html_new"
+   "html_update_dev"
   ],
   "name_prefixed": [
    "html_update_generic"
@@ -10794,8 +10794,7 @@
    "html_update_generic"
   ],
   "html_update_public": [
-   "html_update_public",
-   "html_new"
+   "html_update_public"
   ]
  },
  "functions": {
@@ -13179,8 +13178,7 @@
   },
   "html_new": {
    "identifiers": [
-    "html_update_dev",
-    "html_update_public",
+    "html_update",
     "html_name_to_path",
     "assert_file_exists_not",
     "html_new",
