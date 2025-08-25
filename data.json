@@ -2321,8 +2321,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "app_replace_rule_set"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3195,8 +3194,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "app_replace_rule_set"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -10899,9 +10897,6 @@
    "object_property_exists_not_assert"
   ],
   "object_property_set_exists_not": [
-   "app_replace_rule_set"
-  ],
-  "$a": [
    "app_replace_rule_set"
   ]
  },
@@ -19632,9 +19627,6 @@
     "letter",
     "lambda5",
     "object",
-    "$a",
-    "property_name",
-    "value",
     "nn",
     "lambda6",
     "component",
