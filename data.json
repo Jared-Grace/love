@@ -1655,7 +1655,8 @@
   "o app_replace",
   "s html,update",
   "html_update replace",
-  "fb"
+  "fb",
+  "s app_replace"
  ],
  "marker_current": "1",
  "function_current": "app_replace",
