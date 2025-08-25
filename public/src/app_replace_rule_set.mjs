@@ -46,6 +46,7 @@ export function app_replace_rule_set(context) {
     "rule_set_start",
     start,
   );
+  let index_selected = null;
   let label_rules = html_p(root);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
@@ -57,11 +58,12 @@ export function app_replace_rule_set(context) {
     let text = left_joined + " ↦ " + right_joined;
     function lambda3() {
       if (index_selected === index) {
-        let index_selected = null;
+        index_selected = null;
       } else {
-        let index_selected = index;
+        index_selected = index;
       }
       refresh();
+      return;
       let eq = app_replace_rule_valid(rule, index_selected, current_list);
       if (not(eq)) {
         alert("invalid index for rule");
@@ -81,7 +83,6 @@ export function app_replace_rule_set(context) {
     return b;
   }
   let rules_buttons = list_map_index(mapped, lambda);
-  let index_selected = null;
   let label_symbols = html_p(root);
   let div = html_div(root);
   let current_list = string_split_empty(start);
