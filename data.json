@@ -3993,8 +3993,7 @@
    "js_string",
    "string_split_space",
    "string_split_empty",
-   "string_replace",
-   "app_replace"
+   "string_replace"
   ],
   "a": [
    "string_suffix_without",
@@ -5971,8 +5970,7 @@
    "function_parse",
    "function_parse_declaration_inner",
    "marker_next_index",
-   "string_replace",
-   "app_replace"
+   "string_replace"
   ],
   "r": [
    "function_format",
@@ -6055,8 +6053,7 @@
    "js_imports_paths_fix",
    "folder_current_join_code",
    "function_name_to_path_import",
-   "string_replace",
-   "app_replace"
+   "string_replace"
   ],
   "i": [
    "function_identifier_replace",
@@ -18965,11 +18962,8 @@
     "f_name",
     "name",
     "destination_version",
-    "url",
     "replaced",
-    "s",
-    "from",
-    "to",
+    "url",
     "json"
    ]
   },
