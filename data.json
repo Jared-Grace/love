@@ -4720,7 +4720,6 @@
    "js_dollar",
    "js_dollar_g",
    "list_first",
-   "list_single",
    "list_first_second_generic",
    "function_type_first",
    "list_find",
@@ -10389,6 +10388,9 @@
   "sw": [
    "string_starts_with",
    "firebase_deploy_function"
+  ],
+  "only": [
+   "list_single"
   ]
  },
  "functions": {
@@ -16053,7 +16055,7 @@
     "list_first",
     "list_single",
     "list",
-    "first"
+    "only"
    ],
    "async": false
   },
