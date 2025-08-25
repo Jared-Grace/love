@@ -1694,7 +1694,7 @@
   "rs firebase_storage_url project"
  ],
  "marker_current": "1",
- "function_current": "firebase_deploy_function",
+ "function_current": "firebase_storage_url_project",
  "terminal": false,
  "identifiers": {
   "log": [
