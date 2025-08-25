@@ -1,4 +1,4 @@
-import { ternary } from "./ternary.mjs";
+import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_style_set_or_remove } from "./html_style_set_or_remove.mjs";
 import { each_index } from "./each_index.mjs";
@@ -6,7 +6,6 @@ import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
 import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
 import { storage_local_initialize_context } from "./storage_local_initialize_context.mjs";
@@ -74,8 +73,7 @@ export function app_replace_rule_set(context) {
     }
     const on_true = "Choose a rule:";
     const on_false = "Rules:";
-    let label_rules_text = ternary(nn, on_true, on_false);
-    html_text_set(label_rules, label_rules_text);
+    html_text_set_if(nn, on_true, on_false, label_rules);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
