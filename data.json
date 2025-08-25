@@ -10036,7 +10036,8 @@
   "element": [
    "html_text_set",
    "html_on",
-   "html_component_wrap"
+   "html_component_wrap",
+   "app_replace_main"
   ],
   "component": [
    "html_text_set",
@@ -10060,7 +10061,8 @@
    "html_element",
    "html_on",
    "html_component_element_get",
-   "html_style_remove"
+   "html_style_remove",
+   "app_replace_main"
   ],
   "function_open_app": [
    "function_open_app"
@@ -20209,6 +20211,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
+    "html_component_element_get",
     "html_element",
     "html_document_head",
     "html_p_text",
@@ -20221,6 +20224,7 @@
     "screens",
     "head",
     "component",
+    "element",
     "root",
     "p"
    ]
