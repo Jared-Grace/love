@@ -1,3 +1,4 @@
+import { equal_by } from "./equal_by.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_size } from "./list_size.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
@@ -68,6 +69,7 @@ export function app_replace_rule_set(context) {
       index_selected;
       current_list;
       let sliced = list_slice_count(current_list, index_selected, size);
+      let eq = equal_by(a, b2, function lambda7(item2) {});
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
