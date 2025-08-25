@@ -3025,8 +3025,7 @@
    "object_property_initialize",
    "object_property_exists_not",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "object_property_exists_not_assert"
+   "object_property_lambda_async"
   ],
   "object_property_equals": [
    "watch",
@@ -9504,7 +9503,8 @@
   "object_property_exists_not": [
    "function_alias_rename",
    "object_property_exists_not",
-   "js_await_add"
+   "js_await_add",
+   "object_property_exists_not_assert"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -20589,9 +20589,9 @@
   "object_property_exists_not_assert": {
    "async": false,
    "identifiers": [
+    "object_property_exists_not",
     "marker",
     "assert",
-    "object_property_exists",
     "object_property_exists_not_assert",
     "object",
     "property_name",
