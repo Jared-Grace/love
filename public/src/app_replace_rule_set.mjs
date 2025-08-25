@@ -38,7 +38,6 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
-  let label_symbols = html_p(root);
   let { start } = item;
   let current = storage_local_initialize_context(
     context,
@@ -75,6 +74,7 @@ export function app_replace_rule_set(context) {
   }
   let rules_buttons = list_map(mapped, lambda);
   let index_selected = null;
+  let label_symbols = html_p(root);
   let div = html_div(root);
   let current_list = string_split_empty(start);
   let symbols_buttons = null;
