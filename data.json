@@ -10250,7 +10250,8 @@
    "app_replace_rule_set"
   ],
   "html_style_remove": [
-   "html_style_remove"
+   "html_style_remove",
+   "app_replace_rule_set"
   ],
   "style_key": [
    "html_style_remove"
@@ -18924,6 +18925,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_style_remove",
     "each_index",
     "list_map_index",
     "each",
