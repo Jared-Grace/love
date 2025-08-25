@@ -1663,7 +1663,6 @@
   "u ssw",
   "a ssw string_starts_with",
   "s find",
-  "p",
   "firebase_deploy_function",
   "ps",
   "s date",
@@ -1673,7 +1672,9 @@
   "date_now_file",
   "s json",
   "a ff firebase_deploy_function",
-  "ff app_replace_main"
+  "p",
+  "ff app_replace_main",
+  "fd firebase_deploy_function"
  ],
  "marker_current": "1",
  "function_current": "date_now_file",
