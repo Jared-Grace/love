@@ -1,5 +1,5 @@
+import { js_code_call } from "./js_code_call.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
-import { log } from "./log.mjs";
 import { firebase_deploy_function_destination_version } from "./firebase_deploy_function_destination_version.mjs";
 import { app_replace_main } from "./app_replace_main.mjs";
 import { marker } from "./marker.mjs";
@@ -13,5 +13,5 @@ export async function app_replace() {
     "destination",
   );
   let code = await firebase_storage_download_property(destination, "code");
-  log(code);
+  let result = js_code_call(fn_name);
 }
