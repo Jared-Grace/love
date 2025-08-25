@@ -10474,10 +10474,12 @@
    "firebase_admin"
   ],
   "global_get": [
-   "global_get"
+   "global_get",
+   "global_function"
   ],
   "global": [
-   "global_get"
+   "global_get",
+   "global_function"
   ],
   "global_function": [
    "global_function"
@@ -19805,10 +19807,12 @@
   "global_function": {
    "async": false,
    "identifiers": [
+    "global_get",
     "marker",
     "global_function",
     "fn",
-    "property_name"
+    "property_name",
+    "global"
    ]
   }
  },
