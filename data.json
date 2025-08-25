@@ -1696,10 +1696,11 @@
   "fb",
   "s app",
   "data_app_current_get",
-  "u ff"
+  "u ff",
+  "fws firebase_deploy_function app_current"
  ],
  "marker_current": "1",
- "function_current": "string_replace",
+ "function_current": "firebase_deploy_function_app_current",
  "terminal": false,
  "identifiers": {
   "log": [
