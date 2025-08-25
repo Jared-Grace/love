@@ -2788,7 +2788,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_deploy_function"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10424,6 +10425,9 @@
   ],
   "replace": [
    "date_now_file"
+  ],
+  "file_name_json": [
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19673,6 +19677,7 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "file_name_json",
     "date_now_file",
     "function_dependencies_code",
     "firebase_upload_string",
@@ -19681,6 +19686,7 @@
     "f_name",
     "code",
     "now_file",
+    "v",
     "destination"
    ]
   },
