@@ -2485,7 +2485,8 @@
    "data_set",
    "function_aliases_restore",
    "function_open_app",
-   "folder_previous"
+   "folder_previous",
+   "html_update_dev"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -2857,8 +2858,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "html_update_dev"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -20353,7 +20353,7 @@
     "paths_get",
     "f_name_ext",
     "src",
-    "v",
+    "previous",
     "from_paths"
    ]
   },
