@@ -102,8 +102,8 @@ export function app_replace_rule_set(context) {
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
       html_enable_if(component, nn);
-      function lambda7(item2) {
-        app_replace_rule_valid(rule2, index_selected, current_list);
+      function lambda7(index) {
+        app_replace_rule_valid(rule2, index, current_list);
       }
       let size2 = list_size(index_selected);
       let r = range(size2);
