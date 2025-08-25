@@ -4,6 +4,7 @@ import { app_replace_main } from "./app_replace_main.mjs";
 import { marker } from "./marker.mjs";
 export async function app_replace() {
   marker("1");
+  let f_name = app_replace_main.name;
   let destination_version =
     firebase_deploy_function_destination_version(f_name);
   app_replace_main();
