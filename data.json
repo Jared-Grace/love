@@ -1695,7 +1695,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "http"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -1897,8 +1898,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_async",
-   "global_function_property_async",
-   "http"
+   "global_function_property_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3819,7 +3819,8 @@
    "todo",
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "http"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -3932,7 +3933,8 @@
    "visit_filter_recursive_async",
    "app_replace_rule_set",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "http"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -4408,7 +4410,8 @@
    "html_button",
    "app_replace_rule_set",
    "html_button_screen",
-   "html_p_text"
+   "html_p_text",
+   "http"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6087,7 +6090,8 @@
   ],
   "url": [
    "function_import",
-   "server"
+   "server",
+   "http"
   ],
   "__dirname": [
    "function_import",
@@ -8778,7 +8782,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "http"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -10542,6 +10547,15 @@
    "global_function_property_async"
   ],
   "http": [
+   "http"
+  ],
+  "response": [
+   "http"
+  ],
+  "fetch": [
+   "http"
+  ],
+  "ok": [
    "http"
   ]
  },
@@ -19940,10 +19954,18 @@
    ]
   },
   "http": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "http"
+    "error",
+    "log",
+    "not",
+    "http",
+    "url",
+    "response",
+    "fetch",
+    "ok",
+    "text",
+    "console"
    ]
   }
  },
