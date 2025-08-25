@@ -1627,7 +1627,6 @@
   "a lsk list_skip",
   "s get_or",
   "r storage_local_get_or storage_local_initialize",
-  "as list",
   "ps",
   "function_rename_identifiers storage_local_get_or storage_local_initialize",
   "d",
@@ -1639,7 +1638,8 @@
   "u lmi",
   "c html_style_set html_style_remove",
   "n html_enable_if",
-  "s list,sli"
+  "s list,sli",
+  "as list"
  ],
  "marker_current": "1",
  "function_current": "html_enable_if",
