@@ -1958,7 +1958,8 @@
    "html_update_dev",
    "html_update_public",
    "app_replace_settings",
-   "list_any"
+   "list_any",
+   "object_property_exists_not_assert"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20588,6 +20589,7 @@
   "object_property_exists_not_assert": {
    "async": false,
    "identifiers": [
+    "marker",
     "assert",
     "object_property_exists",
     "object_property_exists_not_assert",
