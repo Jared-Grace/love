@@ -10828,7 +10828,8 @@
    "app_replace_settings"
   ],
   "app_replace_font_size_refresh": [
-   "app_replace_main"
+   "app_replace_main",
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20467,6 +20468,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "app_replace_font_size_refresh",
     "emoji_font_smaller",
     "emoji_font_larger",
     "html_button",
