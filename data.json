@@ -10267,6 +10267,9 @@
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set"
+  ],
+  "$a": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18985,6 +18988,7 @@
     "symbols_button",
     "index2",
     "condition",
+    "$a",
     "key"
    ]
   },
