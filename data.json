@@ -3920,7 +3920,8 @@
    "function_aliases_restore",
    "js_string",
    "string_split_space",
-   "string_split_empty"
+   "string_split_empty",
+   "firebase_deploy_function"
   ],
   "a": [
    "string_suffix_without",
@@ -4148,7 +4149,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "firebase_deploy_function"
   ],
   "readdirSync": [
    "folder_read"
@@ -7870,7 +7872,8 @@
   "string_starts_with": [
    "string_prefix_without",
    "string_starts_with",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "firebase_deploy_function"
   ],
   "js_dollar_rt": [
    "js_dollar",
@@ -10386,7 +10389,7 @@
    "folder_read",
    "firebase_deploy_function"
   ],
-  "ssw": [
+  "prefix2": [
    "firebase_deploy_function"
   ]
  },
@@ -19637,6 +19640,7 @@
   "firebase_deploy_function": {
    "async": false,
    "identifiers": [
+    "string_starts_with",
     "list_filter",
     "folder_previous",
     "folder_read",
@@ -19647,7 +19651,9 @@
     "files",
     "lambda",
     "item",
-    "ssw",
+    "v2",
+    "s",
+    "prefix2",
     "v"
    ]
   }
