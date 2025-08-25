@@ -1,7 +1,7 @@
 import { firebase_admin } from "./firebase_admin.mjs";
 import { log } from "./log.mjs";
 export async function firebase_deploy_function() {
-  async function uploadString(content, destination) {
+  async function firebase_upload_string(content, destination) {
     const admin = await firebase_admin();
     const bucket = admin.storage().bucket();
     const file = bucket.file(destination);
@@ -18,5 +18,5 @@ export async function firebase_deploy_function() {
     console.log("Accessible at:", url);
   }
   const myString = "Hello, Firebase Storage!";
-  uploadString(myString, "uploads/hello.txt");
+  firebase_upload_string(myString, "uploads/hello.txt");
 }
