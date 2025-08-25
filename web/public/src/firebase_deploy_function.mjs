@@ -1,9 +1,9 @@
 import { firebase_admin } from "./firebase_admin.mjs";
 import { log } from "./log.mjs";
 export async function firebase_deploy_function() {
-  const admin = await firebase_admin();
-  const bucket = admin.storage().bucket();
   async function uploadString(content, destinationPath) {
+    const admin = await firebase_admin();
+    const bucket = admin.storage().bucket();
     const file = bucket.file(destinationPath);
     let v = Buffer.from(content);
     await file.save(v, {
