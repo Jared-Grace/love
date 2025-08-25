@@ -3238,7 +3238,6 @@
    "function_aliases_restore"
   ],
   "list_join": [
-   "function_dependencies_code",
    "function_name_combine_multiple",
    "list_join",
    "list_join_comma",
@@ -3302,8 +3301,7 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run",
-   "function_dependencies_code"
+   "tasks_run"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -10652,7 +10650,7 @@
    "app_replace",
    "firebase_storage_download_property"
   ],
-  "newline": [
+  "list_join_newline": [
    "function_dependencies_code"
   ]
  },
@@ -12017,14 +12015,13 @@
   },
   "function_dependencies_code": {
    "identifiers": [
-    "newline",
+    "list_join_newline",
     "list_map_unordered_async",
     "list_wait",
     "function_parse_declaration",
     "function_dependencies",
     "list_map",
     "js_unparse",
-    "list_join",
     "list_map_property",
     "function_dependencies_code",
     "f_name",
@@ -12033,7 +12030,6 @@
     "waited",
     "mapped2",
     "waited2",
-    "separator",
     "code"
    ],
    "async": true
