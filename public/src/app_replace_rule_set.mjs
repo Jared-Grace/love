@@ -73,7 +73,8 @@ export function app_replace_rule_set(context) {
       }
       let before = list_take(current_list, index_selected);
       let size = list_size(left);
-      let skipped = list_skip(current_list, index_selected + size);
+      let after = list_skip(current_list, index_selected + size);
+      lcm;
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
