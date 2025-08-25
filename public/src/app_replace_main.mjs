@@ -14,5 +14,5 @@ export function app_replace_main() {
     screens,
     root: root,
   });
-  app_replace_font_size_refresh();
+  app_replace_font_size_refresh(context);
 }
