@@ -1686,10 +1686,11 @@
   "n http",
   "fw http http_json",
   "u jf",
-  "a jf json_from"
+  "a jf json_from",
+  "o ff"
  ],
  "marker_current": "1",
- "function_current": "http_json",
+ "function_current": "firebase_deploy_function",
  "terminal": false,
  "identifiers": {
   "log": [
