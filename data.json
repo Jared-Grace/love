@@ -2636,7 +2636,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "string_replace"
   ],
   "v": [
    "data_identifiers_file",
@@ -2833,7 +2834,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "string_replace"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3237,7 +3239,8 @@
    "list_join_comma",
    "list_join_comma_space",
    "list_join_empty",
-   "list_join_space"
+   "list_join_space",
+   "string_replace"
   ],
   "result": [
    "watch",
@@ -10625,9 +10628,6 @@
    "app_replace"
   ],
   "string_replace": [
-   "string_replace"
-  ],
-  "s2": [
    "string_replace"
   ]
  },
@@ -20089,6 +20089,7 @@
   "string_replace": {
    "async": false,
    "identifiers": [
+    "list_join",
     "string_split",
     "marker",
     "string_replace",
@@ -20096,7 +20097,8 @@
     "from",
     "to",
     "split",
-    "s2",
+    "v",
+    "list",
     "separator"
    ]
   }
