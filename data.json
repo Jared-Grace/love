@@ -3308,8 +3308,7 @@
    "data_value",
    "file_read_json",
    "function_alias_add_generic",
-   "data_file_update_inner",
-   "firebase_deploy_function"
+   "data_file_update_inner"
   ],
   "file_path": [
    "data_file_update",
@@ -10406,9 +10405,6 @@
   "cert": [
    "firebase_deploy_function"
   ],
-  "serviceAccount": [
-   "firebase_deploy_function"
-  ],
   "storageBucket": [
    "firebase_deploy_function"
   ],
@@ -10459,7 +10455,8 @@
    "firebase_service_account"
   ],
   "service_account": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_deploy_function"
   ]
  },
  "functions": {
@@ -19714,11 +19711,10 @@
     "marker",
     "firebase_deploy_function",
     "admin",
-    "data",
+    "service_account",
     "initializeApp",
     "credential",
     "cert",
-    "serviceAccount",
     "storageBucket",
     "bucket",
     "storage",
