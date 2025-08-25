@@ -2546,8 +2546,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -2747,8 +2746,7 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology",
-   "app_replace_rule_set"
+   "tautology"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10241,10 +10239,10 @@
   "symbols_buttons": [
    "app_replace_rule_set"
   ],
-  "item2": [
+  "index2": [
    "app_replace_rule_set"
   ],
-  "index2": [
+  "symbols_button": [
    "app_replace_rule_set"
   ]
  },
@@ -18961,10 +18959,8 @@
     "label",
     "fn",
     "lambda4",
-    "item2",
-    "index2",
-    "v",
-    "list"
+    "symbols_button",
+    "index2"
    ]
   },
   "app_refresh": {
