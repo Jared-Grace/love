@@ -1712,8 +1712,8 @@
   "cs html_name_to_path dev",
   "cs html_update dev",
   "u fp",
-  "html_update_dev replace",
-  "html_name_to_path_dev replace"
+  "html_name_to_path_dev replace",
+  "html_update_dev replace"
  ],
  "marker_current": "1",
  "function_current": "html_update_dev",
