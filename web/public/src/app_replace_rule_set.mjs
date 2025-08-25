@@ -1,3 +1,4 @@
+import { html_div } from "./html_div.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -28,7 +29,6 @@ import { emoji_home } from "./emoji_home.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
 import { marker } from "./marker.mjs";
 import { list_take } from "./list_take.mjs";
-import { html_element } from "./html_element.mjs";
 export function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
@@ -45,7 +45,7 @@ export function app_replace_rule_set(context) {
     start,
   );
   let index_selected = null;
-  let div = html_element(root, "div");
+  let div = html_div(root);
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
@@ -56,7 +56,7 @@ export function app_replace_rule_set(context) {
       }
       refresh();
     }
-    let b = html_button(root, letter, lambda5);
+    let b = html_button(div, letter, lambda5);
     return b;
   }
   let symbols_buttons = list_map_index(current_list, lambda2);
