@@ -1695,8 +1695,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "http"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -8782,8 +8781,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "http"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -19957,15 +19955,13 @@
    "async": true,
    "identifiers": [
     "error",
-    "log",
     "not",
     "http",
     "url",
     "response",
     "fetch",
     "ok",
-    "text",
-    "console"
+    "text"
    ]
   }
  },
