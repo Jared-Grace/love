@@ -1,4 +1,3 @@
-import { html_p_text } from "./html_p_text.mjs";
 import { app_refresh } from "./app_refresh.mjs";
 import { app_replace_screens } from "./app_replace_screens.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -13,5 +12,4 @@ export function app_replace() {
     screens,
     root: root,
   });
-  let p = html_p_text(root, "test");
 }
