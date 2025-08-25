@@ -9749,7 +9749,8 @@
    "app_code"
   ],
   "alert": [
-   "app_code"
+   "app_code",
+   "app_replace_rule_set"
   ],
   "app_name_prefixed": [
    "html_update",
@@ -19035,6 +19036,7 @@
     "size",
     "sliced",
     "eq",
+    "alert",
     "rules_buttons",
     "nn",
     "lambda6",
