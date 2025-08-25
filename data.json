@@ -1669,7 +1669,8 @@
   "s date",
   "date_now_iso",
   "fd date_now_iso",
-  "fw date_now_iso date_now_file"
+  "fw date_now_iso date_now_file",
+  "date_now_file"
  ],
  "marker_current": "1",
  "function_current": "date_now_file",
