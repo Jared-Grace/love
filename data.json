@@ -1934,7 +1934,8 @@
    "firebase_deploy_function_app_current",
    "html_document_head",
    "html_document_root",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_update_dev"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3221,7 +3222,8 @@
    "global_function_async",
    "global_function_property_async",
    "app_replace",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_update_dev"
   ],
   "output": [
    "watch",
@@ -3417,7 +3419,8 @@
    "html_update",
    "path_name",
    "firebase_service_account",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_update_dev"
   ],
   "object_property_get": [
    "chalk_color",
@@ -7217,7 +7220,8 @@
    "html_name_to_path",
    "html_new",
    "html_overwrite",
-   "html_update"
+   "html_update",
+   "html_update_dev"
   ],
   "file_name": [
    "html_name_to_path",
@@ -10719,7 +10723,11 @@
    "html_name_to_path_dev"
   ],
   "html_update_generic": [
-   "html_update"
+   "html_update",
+   "html_update_dev"
+  ],
+  "html_update_dev": [
+   "html_update_dev"
   ]
  },
  "functions": {
@@ -20279,6 +20287,17 @@
     "name",
     "file_name",
     "joined",
+    "file_path"
+   ]
+  },
+  "html_update_dev": {
+   "async": true,
+   "identifiers": [
+    "html_update_generic",
+    "marker",
+    "html_name_to_path",
+    "html_update_dev",
+    "name",
     "file_path"
    ]
   }
