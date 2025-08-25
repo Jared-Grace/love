@@ -1873,8 +1873,7 @@
    "list_concat_multiple",
    "firebase_deploy",
    "function_dependencies_code_copy",
-   "html_update",
-   "firebase_deploy_function"
+   "html_update"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10396,18 +10395,6 @@
   "admin": [
    "firebase_deploy_function"
   ],
-  "initializeApp": [
-   "firebase_deploy_function"
-  ],
-  "credential": [
-   "firebase_deploy_function"
-  ],
-  "cert": [
-   "firebase_deploy_function"
-  ],
-  "storageBucket": [
-   "firebase_deploy_function"
-  ],
   "bucket": [
    "firebase_deploy_function"
   ],
@@ -10415,7 +10402,6 @@
    "firebase_deploy_function"
   ],
   "firebase_service_account": [
-   "firebase_deploy_function",
    "firebase_service_account"
   ],
   "uploadString": [
@@ -10455,7 +10441,9 @@
    "firebase_service_account"
   ],
   "service_account": [
-   "firebase_service_account",
+   "firebase_service_account"
+  ],
+  "firebase_admin": [
    "firebase_deploy_function"
   ]
  },
@@ -19706,16 +19694,10 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "firebase_admin",
     "log",
-    "firebase_service_account",
-    "marker",
     "firebase_deploy_function",
     "admin",
-    "service_account",
-    "initializeApp",
-    "credential",
-    "cert",
-    "storageBucket",
     "bucket",
     "storage",
     "uploadString",
