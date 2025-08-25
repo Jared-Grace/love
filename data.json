@@ -2552,7 +2552,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_replace_rule_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -7525,7 +7526,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "app_replace_rule_set"
   ],
   "remaining": [
    "js_call_new_code",
@@ -7798,7 +7800,8 @@
    "js_dollar",
    "list_skip",
    "list_skip_1",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "app_replace_rule_set"
   ],
   "list_second": [
    "js_dollar_r",
@@ -8634,7 +8637,8 @@
    "list_skip",
    "string_prefix_without",
    "string_skip",
-   "list_skip_1"
+   "list_skip_1",
+   "app_replace_rule_set"
   ],
   "slice": [
    "list_slice",
@@ -18975,6 +18979,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_skip",
     "object_merge",
     "app_replace_rule_valid",
     "not",
@@ -19034,6 +19039,9 @@
     "eq",
     "alert",
     "before",
+    "skipped",
+    "list",
+    "skip_count",
     "rules_buttons",
     "nn",
     "lambda6",
