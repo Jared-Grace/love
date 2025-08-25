@@ -10773,6 +10773,9 @@
   "paths_get": [
    "html_update",
    "html_update_dev"
+  ],
+  "file_parent_exists_ensure": [
+   "file_overwrite"
   ]
  },
  "functions": {
@@ -11625,6 +11628,7 @@
   },
   "file_overwrite": {
    "identifiers": [
+    "file_parent_exists_ensure",
     "file_overwrite",
     "file_path",
     "contents",
@@ -20390,7 +20394,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-25T21:11:44.192Z",
+ "git_push_when": "2025-08-25T22:12:38.334Z",
  "error_attention": null,
  "app_current": "replace"
 }
