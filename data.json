@@ -10404,9 +10404,6 @@
   "firebase_service_account": [
    "firebase_service_account"
   ],
-  "uploadString": [
-   "firebase_deploy_function"
-  ],
   "content": [
    "firebase_deploy_function"
   ],
@@ -10444,6 +10441,9 @@
    "firebase_deploy_function"
   ],
   "destination": [
+   "firebase_deploy_function"
+  ],
+  "firebase_upload_string": [
    "firebase_deploy_function"
   ]
  },
@@ -19697,7 +19697,7 @@
     "firebase_admin",
     "log",
     "firebase_deploy_function",
-    "uploadString",
+    "firebase_upload_string",
     "content",
     "destination",
     "admin",
