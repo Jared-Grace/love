@@ -1717,7 +1717,7 @@
   "rs html_update public"
  ],
  "marker_current": "1",
- "function_current": "html_update_dev",
+ "function_current": "html_update_public",
  "terminal": false,
  "identifiers": {
   "log": [
