@@ -153,7 +153,8 @@
   "an": "app_new",
   "oa": "function_open_app",
   "nli": "null_is",
-  "lsk": "list_skip"
+  "lsk": "list_skip",
+  "lsl": "list_slice"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1639,7 +1640,8 @@
   "c html_style_set html_style_remove",
   "n html_enable_if",
   "s list,sli",
-  "as list"
+  "as list",
+  "a lsl list_slice"
  ],
  "marker_current": "1",
  "function_current": "html_enable_if",
