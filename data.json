@@ -19601,10 +19601,10 @@
     "lambda6",
     "component",
     "rule2",
-    "ne",
-    "list",
     "lambda7",
     "item2",
+    "ne",
+    "list",
     "lambda4",
     "symbols_button",
     "index2"
