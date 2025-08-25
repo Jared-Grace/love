@@ -12,6 +12,6 @@ export async function function_dependencies_code(f_name) {
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
   let waited2 = await list_map_unordered_async(mapped2, js_unparse);
-  let v = list_join(waited2, "\n");
-  return v;
+  let code = list_join(waited2, "\n");
+  return code;
 }
