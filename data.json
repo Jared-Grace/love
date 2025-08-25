@@ -1383,7 +1383,6 @@
   "mcr c js_visit_type_each_async",
   "s next,marker",
   "c mn marker_next_await",
-  "s assert",
   "marker_next_await",
   "a mna marker_next_await",
   "mna",
@@ -1730,7 +1729,8 @@
   "as list",
   "s list_any",
   "a lan list_any",
-  "o list_any"
+  "o list_any",
+  "s assert"
  ],
  "marker_current": "1",
  "function_current": "list_any",
