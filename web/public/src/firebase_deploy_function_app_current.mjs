@@ -6,8 +6,8 @@ import { marker } from "./marker.mjs";
 export async function firebase_deploy_function_app_current(f_name) {
   marker("1");
   let a = await data_app_current_get();
-  let a_name = app_name_prefixed();
-  let v2 = await functions_combine_name([a_name]);
+  let a_name = app_name_prefixed(a);
+  let { combined } = await functions_combine_name([a_name, "main"]);
   let v = await firebase_deploy_function(f_name);
   return v;
 }
