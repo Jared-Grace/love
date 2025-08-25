@@ -1,3 +1,4 @@
+import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
 import { html_enable } from "./html_enable.mjs";
@@ -74,8 +75,7 @@ export function app_replace_rule_set(context) {
     }
     html_text_set(l, label);
     each(rules_buttons, fn);
-    function lambda4(item2) {}
-    each(list, lambda4);
+    let v = each_index(list, function lambda4(item2, index2) {});
   }
   refresh();
   marker("1");
