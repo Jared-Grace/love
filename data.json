@@ -7645,7 +7645,8 @@
   "prefix": [
    "js_code_declaration",
    "string_prefix_without",
-   "string_starts_with"
+   "string_starts_with",
+   "firebase_deploy_function"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -19617,7 +19618,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "firebase_deploy_function"
+    "firebase_deploy_function",
+    "prefix"
    ]
   }
  },
