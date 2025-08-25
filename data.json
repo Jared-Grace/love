@@ -10850,6 +10850,9 @@
   ],
   "factor": [
    "app_replace_settings"
+  ],
+  "app_replace_font_size_adjust": [
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20489,6 +20492,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "app_replace_font_size_adjust",
     "app_replace_font_size_factor",
     "storage_local_set_context",
     "app_replace_font_size",
@@ -20501,9 +20505,9 @@
     "context",
     "lambda2",
     "factor",
-    "value",
     "root",
     "lambda3",
+    "value",
     "component",
     "parent"
    ]
