@@ -10273,7 +10273,6 @@
    "ternary"
   ],
   "on_false": [
-   "app_replace_rule_set",
    "ternary"
   ],
   "ternary": [
@@ -19001,7 +19000,6 @@
     "rules_buttons",
     "fn",
     "nn",
-    "on_false",
     "lambda4",
     "symbols_button",
     "index2"
