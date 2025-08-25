@@ -10420,9 +10420,6 @@
   "now_file": [
    "date_now_file"
   ],
-  "iso": [
-   "date_now_file"
-  ],
   "replace": [
    "date_now_file"
   ]
@@ -19707,7 +19704,6 @@
     "date_now_file",
     "now_iso",
     "now_file",
-    "iso",
     "replace"
    ]
   }
