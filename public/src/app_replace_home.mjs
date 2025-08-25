@@ -8,7 +8,7 @@ import { object_property_get } from "./object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {
-    app_screen_set(context2, value);
+    app_screen_set(context, "settings");
   }
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
