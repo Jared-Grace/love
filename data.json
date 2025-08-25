@@ -4915,8 +4915,7 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert",
-   "app_replace_rule_set"
+   "object_property_exists_not_assert"
   ],
   "each_pair": [
    "each_pair",
@@ -10897,9 +10896,6 @@
    "object_property_exists_not_assert"
   ],
   "object_property_set_exists_not": [
-   "app_replace_rule_set"
-  ],
-  "$a": [
    "app_replace_rule_set"
   ]
  },
@@ -19629,8 +19625,6 @@
     "lambda2",
     "letter",
     "lambda5",
-    "$a",
-    "object",
     "nn",
     "lambda6",
     "component",
