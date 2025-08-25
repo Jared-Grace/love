@@ -1710,7 +1710,8 @@
   "s style",
   "s html",
   "is html_update",
-  "cs html_name_to_path dev"
+  "cs html_name_to_path dev",
+  "cs html_update dev"
  ],
  "marker_current": "1",
  "function_current": "html_name_to_path_dev",
