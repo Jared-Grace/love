@@ -9794,8 +9794,7 @@
    "html_text_set",
    "html_button",
    "html_clear",
-   "html_p_text",
-   "app_replace_rule_set"
+   "html_p_text"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -10270,9 +10269,6 @@
   "label_rules": [
    "app_replace_rule_set"
   ],
-  "label_rules_text": [
-   "app_replace_rule_set"
-  ],
   "on_true": [
    "app_replace_rule_set",
    "ternary"
@@ -10282,11 +10278,13 @@
    "ternary"
   ],
   "ternary": [
-   "app_replace_rule_set",
    "ternary"
   ],
   "condition": [
    "ternary"
+  ],
+  "html_text_set_if": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18949,7 +18947,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
-    "ternary",
+    "html_text_set_if",
     "null_not_is",
     "html_style_set_or_remove",
     "each_index",
@@ -18957,7 +18955,6 @@
     "each",
     "html_enable",
     "html_p",
-    "html_text_set",
     "html_disable",
     "string_split_empty",
     "storage_local_initialize_context",
@@ -19007,7 +19004,6 @@
     "nn",
     "on_true",
     "on_false",
-    "label_rules_text",
     "lambda4",
     "symbols_button",
     "index2"
