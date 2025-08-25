@@ -1938,7 +1938,8 @@
    "html_document_head",
    "html_document_root",
    "html_name_to_path_dev",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3231,7 +3232,8 @@
    "app_replace",
    "html_name_to_path_dev",
    "html_update_dev",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "output": [
    "watch",
@@ -3429,7 +3431,8 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_dev",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "object_property_get": [
    "chalk_color",
@@ -7233,7 +7236,8 @@
   "html_name_to_path": [
    "html_name_to_path",
    "html_new",
-   "html_update"
+   "html_update",
+   "html_update_public"
   ],
   "file_name": [
    "html_name_to_path",
@@ -9910,7 +9914,8 @@
    "function_name_to_path_import",
    "html_update_generic",
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
@@ -9921,12 +9926,14 @@
    "functions_path",
    "folder_src",
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "src": [
    "folder_src",
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "app_code": [
    "app_code"
@@ -9940,7 +9947,8 @@
    "app_name_prefixed",
    "function_open_app",
    "marker_screen_add",
-   "html_update"
+   "html_update",
+   "html_update_public"
   ],
   "app_new": [
    "app_new"
@@ -10749,7 +10757,8 @@
   "html_update_generic": [
    "html_update",
    "html_update_dev",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "html_update_dev": [
    "html_update_dev",
@@ -10764,14 +10773,16 @@
   "from_paths": [
    "html_update_generic",
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "lambda$f_name_ext": [
    "html_update_generic"
   ],
   "paths_get": [
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public"
   ],
   "file_parent_exists_ensure": [
    "file_overwrite"
@@ -10782,6 +10793,9 @@
   ],
   "lambda$fn_get": [
    "html_update_generic"
+  ],
+  "html_update_public": [
+   "html_update_public"
   ]
  },
  "functions": {
@@ -20398,6 +20412,23 @@
    "identifiers": [
     "folder_previous",
     "previous"
+   ]
+  },
+  "html_update_public": {
+   "async": true,
+   "identifiers": [
+    "app_name_prefixed",
+    "folder_src",
+    "html_update_generic",
+    "marker",
+    "html_name_to_path",
+    "html_update_public",
+    "name",
+    "file_path",
+    "paths_get",
+    "f_name_ext",
+    "src",
+    "from_paths"
    ]
   }
  },
