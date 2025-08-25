@@ -1,4 +1,4 @@
 export function folder_previous() {
-  let v = "..";
-  return v;
+  let previous = "..";
+  return previous;
 }
