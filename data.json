@@ -1714,7 +1714,8 @@
   "ps",
   "html_update_dev replace",
   "rs html_update public",
-  "html_update replace"
+  "html_update replace",
+  "s button"
  ],
  "marker_current": "1",
  "function_current": "html_update_public",
