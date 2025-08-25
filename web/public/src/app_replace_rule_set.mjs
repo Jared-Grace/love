@@ -66,8 +66,8 @@ export function app_replace_rule_set(context) {
   function refresh() {
     let label = null;
     let fn = null;
-    let nn = null_not_is(value);
-    if (index_selected) {
+    let nn = null_not_is(index_selected);
+    if (nn) {
       label = "Choose a rule:";
       fn = html_enable;
     } else {
