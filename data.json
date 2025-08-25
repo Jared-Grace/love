@@ -2741,7 +2741,6 @@
    "list_last_is",
    "list_multiple_is",
    "list_pop",
-   "list_slice",
    "list_wait",
    "marker_expand",
    "number_is",
@@ -10303,6 +10302,9 @@
   ],
   "lambda6": [
    "app_replace_rule_set"
+  ],
+  "sliced": [
+   "list_slice"
   ]
  },
  "functions": {
@@ -16030,7 +16032,7 @@
     "list",
     "a",
     "b",
-    "v",
+    "sliced",
     "slice"
    ],
    "async": false
