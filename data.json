@@ -1680,7 +1680,8 @@
   "c object_property_initialize object_property_lambda",
   "c object_property_lambda object_property_lambda_async",
   "r global_function global_function_async",
-  "r global_function_async global_function_property_async"
+  "r global_function_async global_function_property_async",
+  "c global_function_property_async global_function_async"
  ],
  "marker_current": "1",
  "function_current": "global_function_property_async",
