@@ -33,6 +33,7 @@ export function app_replace_rule_sets() {
         "d b > b d",
         "d c > a d",
         "d = > = d",
+        "d + > + d",
         "0 a > 1",
         "1 a > a 0",
         "b a > b 1",
