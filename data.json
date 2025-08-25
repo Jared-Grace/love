@@ -2767,7 +2767,6 @@
    "js_visit_type_each_async",
    "list_all",
    "list_concat",
-   "list_filter",
    "list_join",
    "list_join_comma_space",
    "list_last_is",
@@ -8225,7 +8224,8 @@
    "js_stack_last_multiple",
    "list_all",
    "list_any",
-   "list_find"
+   "list_find",
+   "list_filter"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -15471,7 +15471,7 @@
     "list",
     "lambda$item",
     "l",
-    "v",
+    "filtered",
     "filter"
    ],
    "async": false
