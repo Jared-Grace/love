@@ -2633,7 +2633,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "function_rename_identifiers"
   ],
   "v": [
    "data_identifiers_file",
@@ -3532,7 +3533,8 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "function_rename_identifiers"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3551,7 +3553,8 @@
    "marker_delete_above",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "visit_unique_async"
+   "visit_unique_async",
+   "function_rename_identifiers"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -4416,7 +4419,8 @@
    "list_includes",
    "marker_down_choices_lambda",
    "string_includes",
-   "js_node_types_includes"
+   "js_node_types_includes",
+   "function_rename_identifiers"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -19749,6 +19753,7 @@
   "function_rename_identifiers": {
    "async": true,
    "identifiers": [
+    "list_includes",
     "each_async",
     "function_transform",
     "js_imports_paths_fix",
@@ -19761,6 +19766,9 @@
     "f_name_after",
     "identifiers",
     "f_names",
+    "includes",
+    "list",
+    "item",
     "lambda",
     "f_name",
     "lambda2",
