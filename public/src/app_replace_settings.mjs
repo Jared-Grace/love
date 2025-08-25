@@ -10,6 +10,7 @@ export function app_replace_settings(context) {
   function lambda2() {
     let value = app_replace_font_size(context);
     value *= 1.1;
+    storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
