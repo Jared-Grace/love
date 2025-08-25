@@ -1883,7 +1883,8 @@
    "function_dependencies_code_copy",
    "html_update",
    "date_now_file",
-   "firebase_admin"
+   "firebase_admin",
+   "global_get"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10467,6 +10468,9 @@
   ],
   "storageBucket": [
    "firebase_admin"
+  ],
+  "global_get": [
+   "global_get"
   ]
  },
  "functions": {
@@ -19778,6 +19782,13 @@
     "credential",
     "cert",
     "storageBucket"
+   ]
+  },
+  "global_get": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "global_get"
    ]
   }
  },
