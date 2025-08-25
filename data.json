@@ -2818,8 +2818,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "http_json"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4413,7 +4412,8 @@
    "app_replace_rule_set",
    "html_button_screen",
    "html_p_text",
-   "http"
+   "http",
+   "http_json"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10562,6 +10562,9 @@
    "http"
   ],
   "http_json": [
+   "http_json"
+  ],
+  "jf": [
    "http_json"
   ]
  },
@@ -19979,7 +19982,8 @@
     "marker",
     "http_json",
     "url",
-    "v"
+    "text",
+    "jf"
    ]
   }
  },
