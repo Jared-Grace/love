@@ -73,12 +73,9 @@ export function app_replace_rule_set(context) {
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
-    let to = object_merge(
-      {
-        rule,
-      },
-      b,
-    );
+    let to = object_merge(b, {
+      rule,
+    });
     return to;
   }
   let rules_buttons = list_map(mapped, lambda);
