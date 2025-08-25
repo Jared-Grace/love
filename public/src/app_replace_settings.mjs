@@ -6,7 +6,7 @@ import { marker } from "./marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   function lambda2() {
-    app_replace_font_size_refresh();
+    app_replace_font_size_refresh(context);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
   function lambda3() {
