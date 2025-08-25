@@ -18,6 +18,6 @@ export async function html_update_generic(name, file_path, lambda$f_name_ext) {
     ${code}
     ${call}
   </script>`;
-  await html_overwrite(name, body);
+  await html_overwrite(name, file_path, body);
   await file_open(file_path);
 }
