@@ -2215,7 +2215,8 @@
    "function_parse_strict",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -10504,7 +10505,8 @@
    "firebase_deploy_function"
   ],
   "destination_version": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_replace"
   ],
   "firebase_upload_object": [
    "firebase_deploy_function"
@@ -10575,7 +10577,8 @@
    "app_replace"
   ],
   "firebase_deploy_function_destination_version": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_replace"
   ]
  },
  "functions": {
@@ -18901,10 +18904,13 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "firebase_deploy_function_destination_version",
     "http_json",
     "app_replace_main",
     "marker",
     "app_replace",
+    "destination_version",
+    "f_name",
     "json",
     "url"
    ]
