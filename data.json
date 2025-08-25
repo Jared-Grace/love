@@ -10580,9 +10580,6 @@
   "firebase_deploy_function_destination_version": [
    "firebase_deploy_function",
    "app_replace"
-  ],
-  "downloadJSON": [
-   "app_replace"
   ]
  },
  "functions": {
@@ -18917,7 +18914,6 @@
     "name",
     "destination_version",
     "url",
-    "downloadJSON",
     "json"
    ]
   },
