@@ -2583,8 +2583,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "firebase_deploy_function"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -10383,6 +10382,9 @@
   ],
   "files": [
    "folder_read",
+   "firebase_deploy_function"
+  ],
+  "ssw": [
    "firebase_deploy_function"
   ]
  },
@@ -19643,8 +19645,8 @@
     "files",
     "lambda",
     "item",
-    "v",
-    "list"
+    "ssw",
+    "v"
    ]
   }
  },
