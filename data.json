@@ -10392,9 +10392,6 @@
   "firebase_service_account": [
    "firebase_service_account"
   ],
-  "myString": [
-   "firebase_deploy_function"
-  ],
   "folder_find_starts_with": [
    "firebase_service_account"
   ],
@@ -19664,7 +19661,6 @@
     "firebase_deploy_function",
     "f_name",
     "code",
-    "myString",
     "destination"
    ]
   },
