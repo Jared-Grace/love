@@ -1701,8 +1701,7 @@
    "js_imports_fix",
    "data_file_update_inner",
    "function_alias_rename",
-   "js_imports_paths_fix",
-   "app_replace_rule_set"
+   "js_imports_paths_fix"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -10216,6 +10215,9 @@
    "app_replace_rule_set"
   ],
   "refresh": [
+   "app_replace_rule_set"
+  ],
+  "rules_buttons": [
    "app_replace_rule_set"
   ]
  },
@@ -18889,7 +18891,6 @@
     "list_join_space",
     "object_property_get",
     "html_button",
-    "each",
     "app_replace_rule_parse",
     "list_map",
     "html_p_text",
@@ -18926,7 +18927,8 @@
     "right_joined",
     "left_joined",
     "text",
-    "lambda3"
+    "lambda3",
+    "rules_buttons"
    ]
   },
   "app_refresh": {
