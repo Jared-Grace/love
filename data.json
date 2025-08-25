@@ -1682,12 +1682,12 @@
   "r global_function_async global_function_property_async",
   "c global_function_property_async global_function_async",
   "ps",
-  "ff app_replace_main",
   "n http",
   "fw http http_json",
   "u jf",
   "a jf json_from",
-  "o ff"
+  "o ff",
+  "ff app_replace_main"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
