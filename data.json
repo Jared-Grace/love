@@ -4348,7 +4348,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "app_replace_main"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10449,7 +10450,8 @@
    "html_style_remove"
   ],
   "style_key": [
-   "html_style_remove"
+   "html_style_remove",
+   "app_replace_main"
   ],
   "b_element": [
    "html_style_remove"
@@ -10721,6 +10723,12 @@
   ],
   "html": [
    "html_document_root",
+   "app_replace_main"
+  ],
+  "html_style_set": [
+   "app_replace_main"
+  ],
+  "style_value": [
    "app_replace_main"
   ]
  },
@@ -20236,6 +20244,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "html_document_root",
     "html_meta_viewport",
     "html_p_text",
@@ -20248,7 +20257,10 @@
     "screens",
     "root",
     "p",
-    "html"
+    "html",
+    "b",
+    "style_key",
+    "style_value"
    ]
   },
   "html_document_head": {
