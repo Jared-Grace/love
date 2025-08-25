@@ -1660,10 +1660,11 @@
   "oh replace",
   "o html_update",
   "html_update replace",
-  "ni firebase-admin"
+  "ni firebase-admin",
+  "n firebase_deploy_function"
  ],
  "marker_current": "1",
- "function_current": "html_update",
+ "function_current": "firebase_deploy_function",
  "terminal": false,
  "identifiers": {
   "log": [
