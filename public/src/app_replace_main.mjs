@@ -1,3 +1,4 @@
+import { html_document_root } from "./html_document_root.mjs";
 import { html_meta_viewport } from "./html_meta_viewport.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_refresh } from "./app_refresh.mjs";
@@ -15,4 +16,5 @@ export function app_replace_main() {
     root: root,
   });
   let p = html_p_text(root, "f");
+  let component = html_document_root();
 }
