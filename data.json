@@ -3920,8 +3920,7 @@
    "function_aliases_restore",
    "js_string",
    "string_split_space",
-   "string_split_empty",
-   "firebase_deploy_function"
+   "string_split_empty"
   ],
   "a": [
    "string_suffix_without",
@@ -10387,9 +10386,6 @@
   ],
   "files": [
    "folder_read",
-   "firebase_deploy_function"
-  ],
-  "prefix2": [
    "firebase_deploy_function"
   ]
  },
@@ -19652,8 +19648,6 @@
     "lambda",
     "item",
     "v2",
-    "s",
-    "prefix2",
     "v"
    ]
   }
