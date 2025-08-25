@@ -9951,8 +9951,7 @@
    "html_element",
    "html_button_element",
    "html_p",
-   "html_div",
-   "app_replace_main"
+   "html_div"
   ],
   "parent": [
    "html_element",
@@ -10053,7 +10052,6 @@
    "html_enable_if",
    "app_replace_rule_set",
    "html_document_head",
-   "app_replace_main",
    "html_attribute_set"
   ],
   "innerHTML": [
@@ -10694,19 +10692,19 @@
    "firebase_deploy_function_app_current"
   ],
   "html_document_head": [
-   "html_document_head",
-   "app_replace_main"
+   "html_document_head"
   ],
   "head": [
-   "html_document_head",
-   "app_replace_main"
+   "html_document_head"
   ],
   "html_attribute_set": [
-   "app_replace_main",
    "html_attribute_set"
   ],
   "setAttribute": [
    "html_attribute_set"
+  ],
+  "html_meta_viewport": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20221,9 +20219,7 @@
   "app_replace_main": {
    "async": false,
    "identifiers": [
-    "html_attribute_set",
-    "html_element",
-    "html_document_head",
+    "html_meta_viewport",
     "html_p_text",
     "app_refresh",
     "html_document_body",
@@ -20232,8 +20228,6 @@
     "app_replace_main",
     "app_fn",
     "screens",
-    "head",
-    "component",
     "root",
     "p"
    ]
