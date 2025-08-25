@@ -1723,7 +1723,8 @@
   "as marker",
   "a msa marker_screen_add",
   "msa settings",
-  "o msa"
+  "o msa",
+  "s app,repla"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
