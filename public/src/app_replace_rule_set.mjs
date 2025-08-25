@@ -1,10 +1,10 @@
+import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_style_set_or_remove } from "./html_style_set_or_remove.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { each } from "./each.mjs";
-import { html_enable } from "./html_enable.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { string_split_empty } from "./string_split_empty.mjs";
@@ -65,15 +65,13 @@ export function app_replace_rule_set(context) {
   refresh();
   function refresh() {
     let nn = null_not_is(index_selected);
-    let fn = null;
-    if (nn) {
-      fn = html_enable;
-    } else {
-      fn = html_disable;
-    }
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_rules);
-    each(rules_buttons, fn);
+    function lambda6(component) {
+      let v = html_enable_if(component, condition);
+      return v;
+    }
+    each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
         index2 === index_selected,
