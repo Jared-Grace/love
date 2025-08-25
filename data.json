@@ -4111,8 +4111,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "app_replace_rule_set"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -10304,7 +10303,8 @@
    "app_replace_rule_set"
   ],
   "sliced": [
-   "list_slice"
+   "list_slice",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19022,7 +19022,7 @@
     "text",
     "lambda3",
     "size",
-    "v2",
+    "sliced",
     "rules_buttons",
     "nn",
     "lambda6",
