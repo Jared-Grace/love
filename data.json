@@ -160,7 +160,8 @@
   "ff": "firebase_deploy_function",
   "jf": "json_from",
   "rs": "function_rename_suffix_add",
-  "ffc": "firebase_deploy_function_app_current"
+  "ffc": "firebase_deploy_function_app_current",
+  "he": "html_element"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1703,7 +1704,8 @@
   "ffc",
   "c html_document_body html_document_head",
   "s element",
-  "u he"
+  "u he",
+  "a he html_element"
  ],
  "marker_current": "1",
  "function_current": "html_document_head",
