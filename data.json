@@ -1600,7 +1600,6 @@
   "s let",
   "s single",
   "marker_screen_add t",
-  "p",
   "o marker_screen_add",
   "s screens",
   "marker_screen_add rule_set",
@@ -1666,6 +1665,7 @@
   "s find",
   "ps",
   "s json",
+  "p",
   "firebase_deploy_function"
  ],
  "marker_current": "1",
