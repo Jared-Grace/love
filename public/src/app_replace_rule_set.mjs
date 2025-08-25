@@ -29,7 +29,7 @@ export function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
-  html_p_text(root, "Choose a symbol:");
+  let label_symbols = html_p_text(root, "Choose a symbol:");
   let { start } = item;
   let current = storage_local_initialize_context(
     context,
@@ -47,7 +47,7 @@ export function app_replace_rule_set(context) {
     return b;
   }
   let symbols_buttons = list_map_index(current_list, lambda2);
-  let l = html_p(root);
+  let label_rules = html_p(root);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
@@ -74,7 +74,7 @@ export function app_replace_rule_set(context) {
       label = "Rules:";
       fn = html_disable;
     }
-    html_text_set(l, label);
+    html_text_set(label_rules, label);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
       html_style_set_or_remove(
