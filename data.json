@@ -1494,7 +1494,6 @@
   "u fr",
   "a for folder_read",
   "mc for",
-  "s folder",
   "u fp",
   "a fop folder_public",
   "mc fop",
@@ -1663,7 +1662,8 @@
   "ni firebase-admin",
   "n firebase_deploy_function",
   "u for",
-  "ac for flr"
+  "ac for flr",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
