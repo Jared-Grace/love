@@ -107,7 +107,7 @@ export function app_replace_rule_set(context) {
       }
       let size2 = list_size(index_selected);
       let r = range(size2);
-      let ne = list_any(r, lambda7);
+      let any = list_any(r, lambda7);
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
