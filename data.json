@@ -1692,7 +1692,8 @@
   "rs firebase_storage_url project",
   "s remove",
   "s replace",
-  "n string_replace"
+  "n string_replace",
+  "is firebase_deploy_function_destination_version"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
