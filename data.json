@@ -10684,6 +10684,9 @@
   ],
   "html_document_head": [
    "html_document_head"
+  ],
+  "head": [
+   "html_document_head"
   ]
  },
  "functions": {
@@ -20218,6 +20221,7 @@
     "html_document_head",
     "body",
     "document",
+    "head",
     "component"
    ]
   }
