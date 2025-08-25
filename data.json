@@ -1681,10 +1681,11 @@
   "r global_function_async global_function_property_async",
   "c global_function_property_async global_function_async",
   "ps",
-  "ff app_replace_main"
+  "ff app_replace_main",
+  "n http"
  ],
  "marker_current": "1",
- "function_current": "global_function_async",
+ "function_current": "http",
  "terminal": false,
  "identifiers": {
   "log": [
