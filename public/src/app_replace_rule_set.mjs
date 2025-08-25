@@ -66,6 +66,7 @@ export function app_replace_rule_set(context) {
       label = "Choose a rule:";
     } else {
       label = "Rules:";
+      fn = html_disable;
     }
     html_text_set(l, label);
   }
