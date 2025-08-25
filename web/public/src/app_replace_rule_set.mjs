@@ -104,7 +104,8 @@ export function app_replace_rule_set(context) {
         component,
         nn && app_replace_rule_valid(rule2, index_selected, current_list),
       );
-      let ne = list_any(list, function lambda7(item2) {});
+      function lambda7(item2) {}
+      let ne = list_any(list, lambda7);
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
