@@ -1946,8 +1946,7 @@
    "function_parse_declaration_inner",
    "function_parse_strict",
    "http_json",
-   "firebase_storage_download",
-   "app_replace"
+   "firebase_storage_download"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -3461,8 +3460,7 @@
    "html_component_element_get",
    "function_rename_identifiers",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "app_replace"
+   "object_property_lambda_async"
   ],
   "data_save": [
    "data_file_update",
@@ -10639,8 +10637,10 @@
    "firebase_storage_url"
   ],
   "firebase_storage_download": [
-   "app_replace",
    "firebase_storage_download"
+  ],
+  "firebase_storage_download_property": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -18966,8 +18966,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
-    "object_property_get",
-    "firebase_storage_download",
+    "firebase_storage_download_property",
     "log",
     "firebase_deploy_function_destination_version",
     "app_replace_main",
@@ -18977,7 +18976,6 @@
     "name",
     "destination_version",
     "property_name",
-    "parsed",
     "destination"
    ]
   },
