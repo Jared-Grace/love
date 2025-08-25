@@ -8867,7 +8867,6 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "app_replace",
    "firebase_storage_url"
   ],
   "marker_call_replace": [
@@ -18971,7 +18970,6 @@
     "name",
     "destination_version",
     "url",
-    "replaced",
     "json"
    ]
   },
