@@ -9,7 +9,7 @@ export function firebase_deploy_function() {
   let path_folder = folder_previous();
   let files = folder_read(path_folder);
   function lambda(item) {
-    let v2 = string_starts_with(s, prefix2);
+    let v2 = string_starts_with(item, prefix);
   }
   let v = list_filter(files, lambda);
   return files;
