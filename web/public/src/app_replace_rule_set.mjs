@@ -104,7 +104,7 @@ export function app_replace_rule_set(context) {
       function lambda7(index) {
         app_replace_rule_valid(rule2, index, current_list);
       }
-      let size2 = list_size(index_selected);
+      let size2 = list_size(current_list);
       let r = range(size2);
       let any = list_any(r, lambda7);
       html_enable_if(component, any);
