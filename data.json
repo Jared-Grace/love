@@ -158,7 +158,8 @@
   "flr": "folder_read",
   "ssw": "string_starts_with",
   "ff": "firebase_deploy_function",
-  "jf": "json_from"
+  "jf": "json_from",
+  "rs": "function_rename_suffix_add"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1689,7 +1690,8 @@
   "ff app_replace_main",
   "rs firebase_storage_url project",
   "s rename",
-  "as rename"
+  "as rename",
+  "a rs function_rename_suffix_add"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
