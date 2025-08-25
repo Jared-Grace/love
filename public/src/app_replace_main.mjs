@@ -16,6 +16,5 @@ export function app_replace_main() {
     root: root,
   });
   let html = html_document_root();
-  const value = "20px";
-  html_style_font_size(html, value);
+  html_style_font_size(html, "20px");
 }
