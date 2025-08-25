@@ -10210,6 +10210,9 @@
   ],
   "html_disable": [
    "app_replace_rule_set"
+  ],
+  "label": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18906,6 +18909,7 @@
     "letter",
     "b",
     "lambda5",
+    "label",
     "l",
     "rules",
     "mapped",
