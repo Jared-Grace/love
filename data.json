@@ -2274,7 +2274,8 @@
    "global_function",
    "object_property_lambda",
    "object_property_lambda_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "app_replace"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -18976,6 +18977,7 @@
     "name",
     "destination_version",
     "parsed",
+    "property_name",
     "destination"
    ]
   },
