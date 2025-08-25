@@ -5845,8 +5845,7 @@
    "function_imports_missing",
    "function_parse",
    "function_parse_declaration_inner",
-   "marker_next_index",
-   "app_replace_rule_set"
+   "marker_next_index"
   ],
   "r": [
    "function_format",
@@ -10310,6 +10309,9 @@
    "list_slice"
   ],
   "app_replace_rule_valid": [
+   "app_replace_rule_set"
+  ],
+  "rule2": [
    "app_replace_rule_set"
   ]
  },
@@ -19032,11 +19034,11 @@
     "eq",
     "alert",
     "before",
-    "to",
     "rules_buttons",
     "nn",
     "lambda6",
     "component",
+    "rule2",
     "v",
     "lambda4",
     "symbols_button",
