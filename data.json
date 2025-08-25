@@ -1636,7 +1636,8 @@
   "u sse",
   "c html_disable html_enable",
   "c list_map list_map_index",
-  "u lmi"
+  "u lmi",
+  "c html_style_set html_style_remove"
  ],
  "marker_current": "1",
  "function_current": "html_enable",
