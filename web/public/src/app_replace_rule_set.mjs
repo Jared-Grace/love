@@ -38,12 +38,11 @@ export function app_replace_rule_set(context) {
   let index_selected = null;
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
-    let b = null;
     function lambda5() {
       index_selected = index;
       refresh();
     }
-    b = html_button(root, letter, lambda5);
+    let b = html_button(root, letter, lambda5);
     return b;
   }
   let symbols_buttons = list_map_index(current_list, lambda2);
