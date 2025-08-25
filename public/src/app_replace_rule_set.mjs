@@ -46,7 +46,7 @@ export function app_replace_rule_set(context) {
     b = html_button(root, letter, lambda5);
     return b;
   }
-  let mapped2 = list_map_index(current_list, lambda2);
+  let symbols_buttons = list_map_index(current_list, lambda2);
   let l = html_p(root);
   refresh();
   let { rules } = item;
