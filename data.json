@@ -6126,7 +6126,8 @@
    "js_identifier_unique",
    "js_imports_missing",
    "list_concat",
-   "prompt_previous"
+   "prompt_previous",
+   "list_concat_multiple"
   ],
   "list_intersect": [
    "js_imports_missing",
@@ -19551,6 +19552,7 @@
   "list_concat_multiple": {
    "async": false,
    "identifiers": [
+    "list_concat",
     "each",
     "marker",
     "list_concat_multiple",
