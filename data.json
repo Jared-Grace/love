@@ -10095,7 +10095,8 @@
   ],
   "html_clear": [
    "app_refresh",
-   "html_clear"
+   "html_clear",
+   "app_replace_rule_set"
   ],
   "screen": [
    "app_refresh"
@@ -19035,6 +19036,7 @@
     "html_button_screen",
     "marker",
     "list_take",
+    "html_clear",
     "app_replace_rule_set",
     "context",
     "root",
