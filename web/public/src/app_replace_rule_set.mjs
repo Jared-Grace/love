@@ -120,7 +120,9 @@ export function app_replace_rule_set(context) {
       );
     }
     each_index(symbols_buttons, lambda4);
-    function lambda8(sb) {}
+    function lambda8(sb) {
+      app_replace_rule_valid(rule2, index, current_list);
+    }
     each(symbols_buttons, lambda8);
   }
   refresh();
