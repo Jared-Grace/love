@@ -1634,7 +1634,9 @@
   "s storage_local_initialize",
   "c storage_local_get_context storage_local_initialize_context",
   "u sse",
-  "c html_disable html_enable"
+  "c html_disable html_enable",
+  "c list_map list_map_index",
+  "u lmi"
  ],
  "marker_current": "1",
  "function_current": "html_enable",
