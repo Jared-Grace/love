@@ -1903,7 +1903,8 @@
    "object_property_lambda_async",
    "global_function_async",
    "global_function_property_async",
-   "http_json"
+   "http_json",
+   "firebase_deploy_function"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19824,6 +19825,7 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "marker",
     "firebase_upload_object",
     "firebase_deploy_function_destination",
     "date_now_file",
