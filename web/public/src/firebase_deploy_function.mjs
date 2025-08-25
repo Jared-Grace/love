@@ -14,7 +14,7 @@ export async function firebase_deploy_function(f_name) {
     destination,
   };
   let destination_version = firebase_deploy_function_destination(
-    now_file,
+    "version",
     f_name,
   );
   await firebase_upload_object(version, destination_version);
