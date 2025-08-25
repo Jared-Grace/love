@@ -6039,7 +6039,8 @@
    "function_parse",
    "function_parse_declaration_inner",
    "marker_next_index",
-   "string_replace"
+   "string_replace",
+   "app_replace_rule_set"
   ],
   "r": [
    "function_format",
@@ -6123,7 +6124,8 @@
    "folder_current_join_code",
    "function_name_to_path_import",
    "string_replace",
-   "html_update_generic"
+   "html_update_generic",
+   "app_replace_rule_set"
   ],
   "i": [
    "function_identifier_replace",
@@ -10883,6 +10885,9 @@
    "app_replace_rule_set"
   ],
   "lambda8": [
+   "app_replace_rule_set"
+  ],
+  "to2": [
    "app_replace_rule_set"
   ]
  },
@@ -19611,6 +19616,9 @@
     "lambda2",
     "letter",
     "lambda5",
+    "to2",
+    "to",
+    "from",
     "nn",
     "lambda6",
     "component",
