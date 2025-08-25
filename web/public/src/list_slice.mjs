@@ -1,4 +1,4 @@
 export function list_slice(list, a, b) {
-  let v = list.slice(a, b);
-  return v;
+  let sliced = list.slice(a, b);
+  return sliced;
 }
