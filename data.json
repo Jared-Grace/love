@@ -1724,8 +1724,8 @@
   "msa settings",
   "o msa",
   "s app,repla",
-  "s storage",
-  "s setting"
+  "s setting",
+  "s storage"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
