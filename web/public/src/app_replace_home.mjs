@@ -7,7 +7,7 @@ import { object_property_get } from "./object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {}
-  let component = html_button(root, text, lambda4);
+  let component = html_button(root, "Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = object_property_get(item, "name");
