@@ -2233,8 +2233,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "firebase_deploy_function_app_current"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -20169,7 +20168,6 @@
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_current",
-    "f_name",
     "a",
     "a_name",
     "combined"
