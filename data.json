@@ -10170,7 +10170,8 @@
   ],
   "html_p": [
    "html_p",
-   "html_p_text"
+   "html_p_text",
+   "app_replace_rule_set"
   ],
   "js_await_wrap": [
    "js_await_wrap"
@@ -18875,6 +18876,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "html_p",
     "html_text_set",
     "html_disable",
     "each_index",
