@@ -4179,7 +4179,8 @@
   "paths": [
    "functions_names",
    "git_push_schedule_command",
-   "path_resolve"
+   "path_resolve",
+   "html_update_generic"
   ],
   "p": [
    "functions_names",
@@ -20347,6 +20348,7 @@
     "call",
     "f_name_ext",
     "src",
+    "paths",
     "from_paths",
     "f_path",
     "from",
