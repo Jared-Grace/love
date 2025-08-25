@@ -2706,7 +2706,6 @@
    "js_stack_list_block_is",
    "function_identifier_replace_suffix_add",
    "promise_is",
-   "string_starts_with",
    "js_code_return_empty",
    "undefined_is",
    "folder_public",
@@ -10387,6 +10386,9 @@
   "files": [
    "folder_read",
    "firebase_deploy_function"
+  ],
+  "sw": [
+   "string_starts_with"
   ]
  },
  "functions": {
@@ -17544,7 +17546,7 @@
     "string_starts_with",
     "s",
     "prefix",
-    "v",
+    "sw",
     "startsWith"
    ],
    "async": false
