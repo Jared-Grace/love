@@ -1845,7 +1845,8 @@
    "storage_local_initialize",
    "storage_local_initialize_context",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "list_concat_multiple"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10323,6 +10324,9 @@
   ],
   "lcm": [
    "app_replace_rule_set"
+  ],
+  "list_concat_multiple": [
+   "list_concat_multiple"
   ]
  },
  "functions": {
@@ -19537,6 +19541,13 @@
     "component",
     "condition",
     "fn"
+   ]
+  },
+  "list_concat_multiple": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "list_concat_multiple"
    ]
   }
  },
