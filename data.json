@@ -10751,7 +10751,8 @@
    "html_update_generic"
   ],
   "html_update_dev": [
-   "html_update_dev"
+   "html_update_dev",
+   "html_new"
   ],
   "name_prefixed": [
    "html_update_generic"
@@ -13163,6 +13164,7 @@
   },
   "html_new": {
    "identifiers": [
+    "html_update_dev",
     "html_update",
     "html_name_to_path",
     "assert_file_exists_not",
