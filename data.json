@@ -1864,7 +1864,8 @@
    "html_style_remove",
    "list_concat_multiple",
    "firebase_deploy",
-   "function_dependencies_code_copy"
+   "function_dependencies_code_copy",
+   "html_update"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12766,6 +12767,7 @@
   },
   "html_update": {
    "identifiers": [
+    "marker",
     "app_name_prefixed",
     "folder_src",
     "folder_current_join_code",
