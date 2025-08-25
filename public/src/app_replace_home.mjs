@@ -1,4 +1,3 @@
-import { html_button_screen } from "./html_button_screen.mjs";
 import { emoji_gear } from "./emoji_gear.mjs";
 import { app_screen_set } from "./app_screen_set.mjs";
 import { html_button } from "./html_button.mjs";
@@ -9,7 +8,7 @@ import { object_property_get } from "./object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {}
-  let component = html_button_screen(root, emoji_gear() + " Settings", lambda4);
+  let component = html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = object_property_get(item, "name");
