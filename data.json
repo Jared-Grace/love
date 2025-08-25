@@ -2241,7 +2241,8 @@
    "list_first_second_generic",
    "function_run_prompt",
    "object_property_exists_not",
-   "global_function"
+   "global_function",
+   "object_property_lambda"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2939,7 +2940,8 @@
    "object_property_exists_assert",
    "object_property_exists_equals",
    "object_property_initialize",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "object_property_lambda"
   ],
   "object_property_equals": [
    "watch",
@@ -2983,7 +2985,8 @@
    "js_await",
    "js_imports_paths_fix",
    "js_string",
-   "js_await_wrap"
+   "js_await_wrap",
+   "object_property_lambda"
   ],
   "watch": [
    "watch"
@@ -3094,7 +3097,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "list_map_index"
+   "list_map_index",
+   "object_property_lambda"
   ],
   "name": [
    "watch",
@@ -3409,7 +3413,8 @@
    "app_refresh",
    "app_replace_rule_set",
    "html_component_element_get",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "object_property_lambda"
   ],
   "data_save": [
    "data_file_update",
@@ -3900,7 +3905,8 @@
    "list_unique",
    "promise_not_is",
    "visit_filter_recursive_async",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "object_property_lambda"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -4784,7 +4790,8 @@
    "object_property_initialize",
    "object_property_set",
    "undefined_not_is_assert_lambda",
-   "object_property_exists_not"
+   "object_property_exists_not",
+   "object_property_lambda"
   ],
   "each_pair": [
    "each_pair",
@@ -5572,7 +5579,8 @@
    "list_add_if_not_includes",
    "object_property_initialize",
    "object_property_exists",
-   "function_exists_inner"
+   "function_exists_inner",
+   "object_property_lambda"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -10490,6 +10498,9 @@
   ],
   "fn_object": [
    "global_function"
+  ],
+  "object_property_lambda": [
+   "object_property_lambda"
   ]
  },
  "functions": {
@@ -19824,6 +19835,20 @@
     "fn_object",
     "name",
     "value2"
+   ]
+  },
+  "object_property_lambda": {
+   "async": false,
+   "identifiers": [
+    "not",
+    "object_property_set",
+    "object_property_get",
+    "object_property_exists",
+    "object_property_lambda",
+    "object",
+    "property_name",
+    "value",
+    "exists"
    ]
   }
  },
