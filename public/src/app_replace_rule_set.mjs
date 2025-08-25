@@ -73,10 +73,10 @@ export function app_replace_rule_set(context) {
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
-    let to = object_merge(b, {
+    object_merge(b, {
       rule,
     });
-    return to;
+    return b;
   }
   let rules_buttons = list_map(mapped, lambda);
   refresh();
@@ -85,9 +85,10 @@ export function app_replace_rule_set(context) {
     html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
+      let rule2 = object_property_get(component, "rule");
       let v =
         html_enable_if(component, nn) &&
-        app_replace_rule_valid(rule, index_selected, current_list);
+        app_replace_rule_valid(index_selected, current_list);
       return v;
     }
     each(rules_buttons, lambda6);
