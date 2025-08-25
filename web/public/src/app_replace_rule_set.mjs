@@ -48,15 +48,6 @@ export function app_replace_rule_set(context) {
   refresh();
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
-  function refresh() {
-    let label = null;
-    if (index_selected) {
-      label = "Choose a rule:";
-    } else {
-      label = "Rules:";
-    }
-    html_text_set(l, label);
-  }
   function lambda(rule) {
     let left = object_property_get(rule, "left");
     let right = object_property_get(rule, "right");
@@ -68,5 +59,14 @@ export function app_replace_rule_set(context) {
     html_disable(b);
   }
   let rules_buttons = list_map(mapped, lambda);
+  function refresh() {
+    let label = null;
+    if (index_selected) {
+      label = "Choose a rule:";
+    } else {
+      label = "Rules:";
+    }
+    html_text_set(l, label);
+  }
   marker("1");
 }
