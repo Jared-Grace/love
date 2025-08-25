@@ -2544,8 +2544,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "app_replace_rule_set"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -8010,8 +8009,7 @@
   "lambda4": [
    "js_identifier_defineds",
    "marker_expand",
-   "js_await_add",
-   "app_replace_rule_set"
+   "js_await_add"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -10236,9 +10234,6 @@
   ],
   "disabled": [
    "html_enable"
-  ],
-  "item2": [
-   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18951,10 +18946,7 @@
     "lambda3",
     "rules_buttons",
     "label",
-    "fn",
-    "lambda4",
-    "item2",
-    "list"
+    "fn"
    ]
   },
   "app_refresh": {
