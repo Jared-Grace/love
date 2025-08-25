@@ -12,6 +12,7 @@ export async function html_update_generic(name, file_path) {
   let call = js_code_call_statement(name_prefixed);
   let f_name_ext = function_name_to_base(name_prefixed);
   let src = folder_src();
+  let paths = [];
   const from_paths = [src, f_name_ext];
   let f_path = path_join(from_paths);
   const from = folder_current_join_code(f_path);
