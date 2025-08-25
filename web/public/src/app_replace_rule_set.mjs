@@ -62,16 +62,13 @@ export function app_replace_rule_set(context) {
   }
   let rules_buttons = list_map(mapped, lambda);
   function refresh() {
-    let fn = null;
     let label = null;
+    let fn = null;
     if (index_selected) {
       label = "Choose a rule:";
-    } else {
-      label = "Rules:";
-    }
-    if (index_selected) {
       fn = html_enable;
     } else {
+      label = "Rules:";
       fn = html_disable;
     }
     html_text_set(l, label);
