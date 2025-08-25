@@ -162,7 +162,8 @@
   "rs": "function_rename_suffix_add",
   "ffc": "firebase_deploy_function_app_current",
   "he": "html_element",
-  "msa": "marker_screen_add"
+  "msa": "marker_screen_add",
+  "lan": "list_any"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1727,7 +1728,8 @@
   "s screen",
   "s rule,set",
   "as list",
-  "s list_any"
+  "s list_any",
+  "a lan list_any"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
