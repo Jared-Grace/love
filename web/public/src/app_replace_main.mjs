@@ -5,6 +5,7 @@ import { app_refresh } from "./app_refresh.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { app_replace_screens } from "./app_replace_screens.mjs";
 import { app_replace } from "./app_replace.mjs";
+const value = "20px";
 export function app_replace_main() {
   let app_fn = app_replace;
   let screens = app_replace_screens();
@@ -16,5 +17,5 @@ export function app_replace_main() {
     root: root,
   });
   let html = html_document_root();
-  html_style_set(html, "font-size", "20px");
+  html_style_set(html, "font-size", value);
 }
