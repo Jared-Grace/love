@@ -1663,7 +1663,6 @@
   "a ssw string_starts_with",
   "s find",
   "firebase_deploy_function",
-  "ps",
   "s date",
   "date_now_iso",
   "fd date_now_iso",
@@ -1681,7 +1680,8 @@
   "c object_property_lambda object_property_lambda_async",
   "r global_function global_function_async",
   "r global_function_async global_function_property_async",
-  "c global_function_property_async global_function_async"
+  "c global_function_property_async global_function_async",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "global_function_async",
