@@ -3,6 +3,6 @@ import { assert } from "./assert.mjs";
 export function list_filter(list, lambda$item) {
   let l = list_is(list);
   assert(l);
-  let v = list.filter(lambda$item);
-  return v;
+  let filtered = list.filter(lambda$item);
+  return filtered;
 }
