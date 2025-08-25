@@ -28,11 +28,11 @@ export function app_replace_rule_sets() {
     {
       name: "Binary Counting",
       rules: [
+        "= b > a = b a",
+        "a a > a + b a",
         "0 a > 1",
         "1 a > a 0",
         "b a > b 1",
-        "= b > a = b a",
-        "a a > a + b a",
       ],
       start: "ba=ba",
     },
