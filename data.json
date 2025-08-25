@@ -10415,6 +10415,15 @@
   ],
   "date_now_file": [
    "date_now_file"
+  ],
+  "now_file": [
+   "date_now_file"
+  ],
+  "iso": [
+   "date_now_file"
+  ],
+  "replace": [
+   "date_now_file"
   ]
  },
  "functions": {
@@ -19695,7 +19704,10 @@
     "date_now_iso",
     "marker",
     "date_now_file",
-    "now_iso"
+    "now_iso",
+    "now_file",
+    "iso",
+    "replace"
    ]
   }
  },
