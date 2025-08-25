@@ -4234,8 +4234,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "firebase_deploy_function_app_current"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -5309,7 +5308,8 @@
    "app_html_open",
    "function_new_app_screen",
    "marker_screen_add",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "firebase_deploy_function_app_current"
   ],
   "body_block": [
    "functions_combine",
@@ -20173,7 +20173,7 @@
     "f_name",
     "a",
     "a_name",
-    "v2",
+    "combined",
     "v"
    ]
   }
