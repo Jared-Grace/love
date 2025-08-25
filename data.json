@@ -2818,8 +2818,7 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account",
-   "http_json"
+   "firebase_service_account"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4342,8 +4341,7 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified",
-   "http_json"
+   "function_transform_marker_specified"
   ],
   "assert_json": [
    "assert_json",
@@ -4825,8 +4823,7 @@
    "undefined_not_is_assert_lambda",
    "object_property_exists_not",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "http_json"
+   "object_property_lambda_async"
   ],
   "each_pair": [
    "each_pair",
@@ -10565,6 +10562,9 @@
    "http"
   ],
   "http_json": [
+   "http_json"
+  ],
+  "jf": [
    "http_json"
   ]
  },
@@ -19979,13 +19979,11 @@
    "async": true,
    "identifiers": [
     "http",
-    "json_to",
     "marker",
     "http_json",
     "url",
     "text",
-    "v",
-    "object"
+    "jf"
    ]
   }
  },
