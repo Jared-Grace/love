@@ -2178,8 +2178,7 @@
    "functions_transform",
    "function_parse_strict",
    "function_transform_marker_specified",
-   "function_rename_identifiers",
-   "firebase_deploy_function"
+   "function_rename_identifiers"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2781,8 +2780,7 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology",
-   "firebase_deploy_function"
+   "tautology"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4021,7 +4019,8 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "firebase_deploy_function"
   ],
   "function_name_extension": [
    "functions_names",
@@ -4144,7 +4143,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "firebase_deploy_function"
   ],
   "readdirSync": [
    "folder_read"
@@ -6494,8 +6494,7 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read",
-   "firebase_deploy_function"
+   "function_read"
   ],
   "function_rename": [
    "function_rename",
@@ -9752,7 +9751,8 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read"
+   "folder_read",
+   "firebase_deploy_function"
   ],
   "fop": [
    "apps_get",
@@ -19620,14 +19620,14 @@
    ]
   },
   "firebase_deploy_function": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "function_read",
+    "folder_read",
     "marker",
     "firebase_deploy_function",
     "prefix",
-    "v",
-    "f_name"
+    "v2",
+    "path_folder"
    ]
   }
  },
