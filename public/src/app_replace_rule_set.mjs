@@ -108,7 +108,7 @@ export function app_replace_rule_set(context) {
           index,
           current_list,
         });
-        app_replace_rule_valid(rule2, index, current_list);
+        return app_replace_rule_valid(rule2, index, current_list);
       }
       let size2 = list_size(current_list);
       let r = range(size2);
