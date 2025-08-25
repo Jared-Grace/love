@@ -3219,7 +3219,8 @@
    "global_function",
    "global_function_async",
    "global_function_property_async",
-   "app_replace"
+   "app_replace",
+   "html_name_to_path_dev"
   ],
   "output": [
    "watch",
@@ -3414,7 +3415,8 @@
    "html_overwrite",
    "html_update",
    "path_name",
-   "firebase_service_account"
+   "firebase_service_account",
+   "html_name_to_path_dev"
   ],
   "object_property_get": [
    "chalk_color",
@@ -5046,7 +5048,8 @@
   "file_name_html": [
    "file_name_html",
    "html_name_to_path",
-   "app_html_open"
+   "app_html_open",
+   "html_name_to_path_dev"
   ],
   "function_current_set": [
    "function_copy",
@@ -5145,7 +5148,8 @@
    "folder_public_combine",
    "functions_path",
    "html_name_to_path",
-   "app_html_open"
+   "app_html_open",
+   "html_name_to_path_dev"
   ],
   "second": [
    "folder_public_combine",
@@ -7223,7 +7227,8 @@
    "html_name_to_path",
    "file_name_html",
    "app_html_open",
-   "file_name_json"
+   "file_name_json",
+   "html_name_to_path_dev"
   ],
   "html_update": [
    "html_new",
@@ -10726,6 +10731,9 @@
   ],
   "html_style_set": [
    "app_replace_main"
+  ],
+  "html_name_to_path_dev": [
+   "html_name_to_path_dev"
   ]
  },
  "functions": {
@@ -20288,6 +20296,17 @@
     "document",
     "documentElement",
     "html"
+   ]
+  },
+  "html_name_to_path_dev": {
+   "async": false,
+   "identifiers": [
+    "folder_public_combine",
+    "file_name_html",
+    "html_name_to_path_dev",
+    "name",
+    "file_name",
+    "file_path"
    ]
   }
  },
