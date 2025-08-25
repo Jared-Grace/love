@@ -17,5 +17,5 @@ export async function app_replace() {
     "?alt=media";
   app_replace_main();
   let json = await http_json(url);
-  log(message);
+  log(json);
 }
