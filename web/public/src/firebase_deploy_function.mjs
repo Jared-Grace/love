@@ -4,6 +4,7 @@ import { folder_previous } from "./folder_previous.mjs";
 import { marker } from "./marker.mjs";
 import { path_join } from "./path_join.mjs";
 export async function firebase_deploy_function() {
+  const admin = await import("firebase-admin");
   marker("1");
   let prefix = "jared-grace-firebase-adminsdk-";
   let v = folder_previous();
