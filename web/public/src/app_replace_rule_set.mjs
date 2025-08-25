@@ -44,9 +44,10 @@ export function app_replace_rule_set(context) {
   }
   each_index(current_list, lambda2);
   let label = null;
-  label = "Choose a rule:";
   let l = html_p_text(root, label);
   if (index_selected) {
+    label = "Choose a rule:";
+  } else {
   }
   html_text_set(l, "Rules:");
   let { rules } = item;
