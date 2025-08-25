@@ -75,9 +75,13 @@ export function app_replace_rule_set(context) {
     html_text_set(l, label);
     each(rules_buttons, fn);
     function lambda4(symbols_button, index2) {
-      const condition = index2 === index_selected;$a
-      const key = "background-color";
-      html_style_set_or_remove(condition, symbols_button, key, "lightgreen");
+      const condition = index2 === index_selected;
+      html_style_set_or_remove(
+        condition,
+        symbols_button,
+        "background-color",
+        "lightgreen",
+      );
     }
     each_index(symbols_buttons, lambda4);
   }
