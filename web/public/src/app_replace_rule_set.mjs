@@ -74,5 +74,6 @@ export function app_replace_rule_set(context) {
     html_text_set(l, label);
     each(rules_buttons, fn);
   }
+  refresh();
   marker("1");
 }
