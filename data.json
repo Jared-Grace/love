@@ -4080,7 +4080,8 @@
    "list_unique",
    "null_not_is_assert",
    "promise_not_is",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "firebase_deploy_function_app_current"
   ],
   "without": [
    "string_suffix_without",
@@ -10157,7 +10158,8 @@
   "data_app_current_get": [
    "function_new_app_screen",
    "marker_screen_add",
-   "data_app_current_get"
+   "data_app_current_get",
+   "firebase_deploy_function_app_current"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -20158,10 +20160,12 @@
   "firebase_deploy_function_app_current": {
    "async": true,
    "identifiers": [
+    "data_app_current_get",
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_current",
     "f_name",
+    "a",
     "v"
    ]
   }
