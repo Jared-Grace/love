@@ -1606,7 +1606,6 @@
   "s invoke",
   "n lambda_value",
   "s param",
-  "s storage",
   "s rule_set",
   "unlias s",
   "u s",
@@ -1724,7 +1723,8 @@
   "a msa marker_screen_add",
   "msa settings",
   "o msa",
-  "s app,repla"
+  "s app,repla",
+  "s storage"
  ],
  "marker_current": "1",
  "function_current": "marker_screen_add",
