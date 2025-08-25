@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -74,7 +75,7 @@ export function app_replace_rule_set(context) {
       let before = list_take(current_list, index_selected);
       let size = list_size(left);
       let after = list_skip(current_list, index_selected + size);
-      lcm;
+      let combined = list_concat_multiple(lists);
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
