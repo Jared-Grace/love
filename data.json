@@ -1695,7 +1695,8 @@
   "s new",
   "fb",
   "s app",
-  "data_app_current_get"
+  "data_app_current_get",
+  "u ff"
  ],
  "marker_current": "1",
  "function_current": "string_replace",
