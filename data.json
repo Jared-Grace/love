@@ -1888,7 +1888,8 @@
    "date_now_file",
    "firebase_admin",
    "global_get",
-   "global_function"
+   "global_function",
+   "object_property_lambda"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19840,6 +19841,7 @@
   "object_property_lambda": {
    "async": false,
    "identifiers": [
+    "marker",
     "not",
     "object_property_set",
     "object_property_get",
