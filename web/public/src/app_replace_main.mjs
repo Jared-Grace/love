@@ -9,7 +9,7 @@ export function app_replace_main() {
   let app_fn = app_replace;
   let screens = app_replace_screens();
   const head = html_document_head();
-  let component = html_element(parent, tag_name);
+  let component = html_element(head, "meta");
   const root = html_document_body();
   app_refresh({
     app_fn,
