@@ -8572,7 +8572,6 @@
    "app_replace_rule_set"
   ],
   "mapper": [
-   "list_map_index",
    "app_replace_rule_set"
   ],
   "list_map_property_lambda": [
@@ -10106,7 +10105,8 @@
    "storage_local_set_context"
   ],
   "lambda$item$index": [
-   "each_index"
+   "each_index",
+   "list_map_index"
   ],
   "app_replace_rule_sets": [
    "app_replace_home",
@@ -15678,7 +15678,7 @@
     "list_map",
     "list_map_index",
     "list",
-    "mapper",
+    "lambda$item$index",
     "index",
     "lambda",
     "item",
