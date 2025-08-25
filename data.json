@@ -1995,7 +1995,8 @@
    "data_file_update_inner",
    "function_exists_strict",
    "function_exists_inner",
-   "function_parse_strict"
+   "function_parse_strict",
+   "html_update_generic"
   ],
   "ast": [
    "data_identifiers_file",
@@ -2150,7 +2151,8 @@
    "function_transform_marker_specified",
    "js_code_call_statement",
    "function_dependencies_code",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "html_update_generic"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3223,7 +3225,8 @@
    "global_function_property_async",
    "app_replace",
    "html_name_to_path_dev",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_generic"
   ],
   "output": [
    "watch",
@@ -3420,7 +3423,8 @@
    "path_name",
    "firebase_service_account",
    "html_name_to_path_dev",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_generic"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4214,7 +4218,8 @@
    "path_join",
    "server",
    "firebase_service_account",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_update_generic"
   ],
   "fs": [
    "folder_read",
@@ -5082,7 +5087,8 @@
    "file_open",
    "function_copy",
    "function_open",
-   "app_html_open"
+   "app_html_open",
+   "html_update_generic"
   ],
   "terminal": [
    "file_open"
@@ -6086,7 +6092,8 @@
    "js_imports_paths_fix",
    "folder_current_join_code",
    "function_name_to_path_import",
-   "string_replace"
+   "string_replace",
+   "html_update_generic"
   ],
   "i": [
    "function_identifier_replace",
@@ -6128,7 +6135,8 @@
    "function_import",
    "function_name_to_base",
    "function_name_to_path",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "html_update_generic"
   ],
   "function_import": [
    "function_import",
@@ -6196,7 +6204,8 @@
   ],
   "js_code_import_single": [
    "function_imports_add",
-   "js_code_import_single"
+   "js_code_import_single",
+   "html_update_generic"
   ],
   "js_code_string": [
    "js_code_string",
@@ -6240,7 +6249,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_clear"
+   "html_clear",
+   "html_update_generic"
   ],
   "import_": [
    "function_imports_add",
@@ -7234,7 +7244,8 @@
    "html_update"
   ],
   "html_overwrite": [
-   "html_overwrite"
+   "html_overwrite",
+   "html_update_generic"
   ],
   "html_new": [
    "html_new",
@@ -7757,7 +7768,8 @@
    "js_code_statement"
   ],
   "js_code_call_statement": [
-   "js_code_call_statement"
+   "js_code_call_statement",
+   "html_update_generic"
   ],
   "js_keyword_function": [
    "js_code_declaration",
@@ -9893,18 +9905,22 @@
   "f_name_ext": [
    "function_name_to_base",
    "folder_current_join_code",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "html_update_generic"
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "html_update_generic"
   ],
   "folder_src": [
    "functions_path",
-   "folder_src"
+   "folder_src",
+   "html_update_generic"
   ],
   "src": [
-   "folder_src"
+   "folder_src",
+   "html_update_generic"
   ],
   "app_code": [
    "app_code"
@@ -9918,7 +9934,8 @@
    "app_name_prefixed",
    "function_open_app",
    "marker_screen_add",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "html_update_generic"
   ],
   "app_new": [
    "app_new"
@@ -10724,10 +10741,20 @@
   ],
   "html_update_generic": [
    "html_update",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_generic"
   ],
   "html_update_dev": [
    "html_update_dev"
+  ],
+  "name_prefixed": [
+   "html_update_generic"
+  ],
+  "call": [
+   "html_update_generic"
+  ],
+  "from_paths": [
+   "html_update_generic"
   ]
  },
  "functions": {
@@ -20299,6 +20326,32 @@
     "html_update_dev",
     "name",
     "file_path"
+   ]
+  },
+  "html_update_generic": {
+   "async": true,
+   "identifiers": [
+    "file_open",
+    "html_overwrite",
+    "js_code_import_single",
+    "folder_current_join_code",
+    "path_join",
+    "folder_src",
+    "function_name_to_base",
+    "js_code_call_statement",
+    "app_name_prefixed",
+    "html_update_generic",
+    "name",
+    "file_path",
+    "name_prefixed",
+    "call",
+    "f_name_ext",
+    "src",
+    "f_path",
+    "from_paths",
+    "from",
+    "code",
+    "body"
    ]
   }
  },
