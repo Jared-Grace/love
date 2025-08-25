@@ -1721,10 +1721,11 @@
   "s screen",
   "as marker_screen_add",
   "as marker",
-  "a msa marker_screen_add"
+  "a msa marker_screen_add",
+  "msa settings"
  ],
  "marker_current": "1",
- "function_current": "app_replace_screens",
+ "function_current": "app_replace_settings",
  "terminal": false,
  "identifiers": {
   "log": [
