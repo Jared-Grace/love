@@ -5934,7 +5934,8 @@
    "function_dependencies_code"
   ],
   "waited2": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "app_replace"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -8513,7 +8514,8 @@
   ],
   "code2": [
    "js_statement_return",
-   "js_parse_statement"
+   "js_parse_statement",
+   "app_replace"
   ],
   "types_function": [
    "js_types_function"
@@ -10651,7 +10653,8 @@
    "firebase_storage_download_property"
   ],
   "list_join_newline": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "app_replace"
   ]
  },
  "functions": {
@@ -18977,6 +18980,7 @@
   "app_replace": {
    "async": true,
    "identifiers": [
+    "list_join_newline",
     "js_code_call_statement",
     "firebase_storage_download_property",
     "firebase_deploy_function_destination_version",
@@ -18988,7 +18992,9 @@
     "destination_version",
     "destination",
     "code",
-    "result"
+    "result",
+    "code2",
+    "waited2"
    ]
   },
   "html_document_body": {
