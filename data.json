@@ -2850,7 +2850,6 @@
    "object_properties_delete",
    "object_property_equals",
    "object_property_exists_equals",
-   "path_join",
    "string_is",
    "string_size",
    "string_slice",
@@ -3064,7 +3063,8 @@
    "function_name_to_path",
    "js_code_call_args",
    "list_join_empty",
-   "list_join"
+   "list_join",
+   "path_join"
   ],
   "watcher": [
    "watch"
@@ -17566,7 +17566,7 @@
     "path",
     "path_join",
     "list_of_segments",
-    "v",
+    "joined",
     "join"
    ],
    "async": false
