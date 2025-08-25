@@ -47,6 +47,7 @@ export function app_replace_rule_set(context) {
   let index_selected = null;
   let div = html_div(root);
   let current_list = null;
+  let symbols_buttons = null;
   current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
@@ -60,7 +61,6 @@ export function app_replace_rule_set(context) {
     let b = html_button(div, letter, lambda5);
     return b;
   }
-  let symbols_buttons = null;
   symbols_buttons = list_map_index(current_list, lambda2);
   let label_rules = html_p(root);
   let { rules } = item;
