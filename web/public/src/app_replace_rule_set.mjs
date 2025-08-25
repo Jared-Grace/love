@@ -28,6 +28,7 @@ import { emoji_home } from "./emoji_home.mjs";
 import { html_button_screen } from "./html_button_screen.mjs";
 import { marker } from "./marker.mjs";
 import { list_take } from "./list_take.mjs";
+import { html_element } from "./html_element.mjs";
 export function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
@@ -44,6 +45,7 @@ export function app_replace_rule_set(context) {
     start,
   );
   let index_selected = null;
+  html_element(root, "div");
   let current_list = string_split_empty(current);
   function lambda2(letter, index) {
     function lambda5() {
