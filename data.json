@@ -19834,10 +19834,10 @@
     "firebase_admin_get",
     "firebase_admin",
     "admin",
+    "lambda2",
     "value",
     "fn",
-    "property_name",
-    "lambda2"
+    "property_name"
    ]
   },
   "global_get": {
