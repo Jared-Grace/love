@@ -1654,7 +1654,6 @@
   "o fd",
   "function_dependencies_code app_replace_main",
   "s html",
-  "ps",
   "oh replace",
   "o html_update",
   "html_update replace",
@@ -1666,7 +1665,8 @@
   "firebase_deploy_function",
   "u ssw",
   "a ssw string_starts_with",
-  "s find"
+  "s find",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
