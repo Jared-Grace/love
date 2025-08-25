@@ -3551,8 +3551,7 @@
    "marker_delete_above",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "visit_unique_async",
-   "function_rename_identifiers"
+   "visit_unique_async"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -3570,8 +3569,7 @@
    "js_imports_unused_remove",
    "js_imports_fix",
    "marker_leave",
-   "js_log_remove",
-   "function_rename_identifiers"
+   "js_log_remove"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -4417,8 +4415,7 @@
    "list_includes",
    "marker_down_choices_lambda",
    "string_includes",
-   "js_node_types_includes",
-   "function_rename_identifiers"
+   "js_node_types_includes"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -10613,6 +10610,9 @@
   ],
   "firebase_storage_url_project": [
    "firebase_storage_url_project"
+  ],
+  "list_remove_if_exists": [
+   "function_rename_identifiers"
   ]
  },
  "functions": {
@@ -19751,12 +19751,11 @@
   "function_rename_identifiers": {
    "async": true,
    "identifiers": [
-    "list_includes",
+    "list_remove_if_exists",
     "each_async",
     "function_transform",
     "js_imports_paths_fix",
     "js_identifier_replace",
-    "list_remove",
     "object_property_get",
     "data_identifiers_get",
     "function_rename_identifiers",
@@ -19764,7 +19763,6 @@
     "f_name_after",
     "identifiers",
     "f_names",
-    "includes",
     "lambda",
     "f_name",
     "lambda2",
