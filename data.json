@@ -3866,8 +3866,7 @@
   ],
   "value2": [
    "error_attention_set",
-   "global_function",
-   "app_replace_settings"
+   "global_function"
   ],
   "error": [
    "watch",
@@ -6587,8 +6586,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set",
-   "app_replace_settings"
+   "html_attribute_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10845,9 +10843,6 @@
   ],
   "app_replace_font_size": [
    "app_replace_font_size_refresh",
-   "app_replace_settings"
-  ],
-  "context2": [
    "app_replace_settings"
   ]
  },
@@ -20501,9 +20496,6 @@
     "value",
     "root",
     "lambda3",
-    "context2",
-    "key",
-    "value2",
     "component",
     "parent"
    ]
