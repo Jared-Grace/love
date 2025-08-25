@@ -5,7 +5,7 @@ import { file_name_html } from "./file_name_html.mjs";
 export function html_name_to_path_dev(name) {
   marker("1");
   let file_name = file_name_html(name);
-  let v = path_join(list_of_segments);
-  let file_path = folder_public_combine(file_name);
+  let joined = path_join(["dev", file_name]);
+  let file_path = folder_public_combine(joined);
   return file_path;
 }
