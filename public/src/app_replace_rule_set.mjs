@@ -48,8 +48,9 @@ export function app_replace_rule_set(context) {
   if (index_selected) {
     label = "Choose a rule:";
   } else {
+    label = "Rules:";
   }
-  html_text_set(l, "Rules:");
+  html_text_set(l, label);
   let { rules } = item;
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule) {
