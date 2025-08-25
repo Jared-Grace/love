@@ -5017,8 +5017,7 @@
    "list_empty_not_is",
    "list_empty_not_is_assert",
    "marker_top",
-   "string_empty_not_is",
-   "app_replace_rule_set"
+   "string_empty_not_is"
   ],
   "Error": [
    "error",
@@ -10876,7 +10875,8 @@
    "app_replace_rule_set"
   ],
   "any": [
-   "list_any"
+   "list_any",
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19611,7 +19611,7 @@
     "lambda7",
     "size2",
     "r",
-    "ne",
+    "any",
     "lambda4",
     "symbols_button",
     "index2"
