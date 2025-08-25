@@ -1706,7 +1706,8 @@
   "u he",
   "a he html_element",
   "s att",
-  "ffc"
+  "ffc",
+  "c html_document_body html_document_root"
  ],
  "marker_current": "1",
  "function_current": "html_document_head",
