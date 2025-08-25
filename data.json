@@ -2131,8 +2131,7 @@
    "function_transform_marker_specified",
    "js_code_call_statement",
    "function_dependencies_code",
-   "firebase_deploy_function",
-   "app_replace"
+   "firebase_deploy_function"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3046,8 +3045,7 @@
    "function_name_to_path",
    "js_code_call_args",
    "list_join_empty",
-   "list_join",
-   "app_replace"
+   "list_join"
   ],
   "watcher": [
    "watch"
@@ -7736,8 +7734,7 @@
   ],
   "js_code_call_statement": [
    "js_code_call_statement",
-   "html_update",
-   "app_replace"
+   "html_update"
   ],
   "js_keyword_function": [
    "js_code_declaration",
@@ -9870,8 +9867,7 @@
    "app_html_open"
   ],
   "call": [
-   "html_update",
-   "app_replace"
+   "html_update"
   ],
   "f_name_ext": [
    "function_name_to_base",
@@ -10509,8 +10505,7 @@
    "firebase_admin_get"
   ],
   "destination": [
-   "firebase_deploy_function",
-   "app_replace"
+   "firebase_deploy_function"
   ],
   "date_now_file": [
    "date_now_file",
@@ -10534,7 +10529,6 @@
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "app_replace",
    "firebase_storage_download"
   ],
   "firebase_upload_object": [
@@ -10608,8 +10602,7 @@
    "firebase_storage_download"
   ],
   "firebase_deploy_function_destination_version": [
-   "firebase_deploy_function",
-   "app_replace"
+   "firebase_deploy_function"
   ],
   "initializeApp": [
    "firebase_admin_get"
@@ -10648,14 +10641,12 @@
    "firebase_storage_download_property"
   ],
   "firebase_storage_download_property": [
-   "app_replace",
    "firebase_storage_download_property"
   ],
   "list_join_newline": [
-   "function_dependencies_code",
-   "app_replace"
+   "function_dependencies_code"
   ],
-  "eval": [
+  "firebase_storage_function_run": [
    "app_replace"
   ]
  },
@@ -18982,21 +18973,12 @@
   "app_replace": {
    "async": true,
    "identifiers": [
-    "list_join_newline",
-    "js_code_call_statement",
-    "firebase_storage_download_property",
-    "firebase_deploy_function_destination_version",
+    "firebase_storage_function_run",
     "app_replace_main",
     "marker",
     "app_replace",
     "f_name",
-    "name",
-    "destination_version",
-    "destination",
-    "code",
-    "call",
-    "joined",
-    "eval"
+    "name"
    ]
   },
   "html_document_body": {
