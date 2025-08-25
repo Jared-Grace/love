@@ -4499,7 +4499,8 @@
    "list_size_1_assert",
    "list_skip",
    "list_slice_end",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -6696,7 +6697,8 @@
   ],
   "size": [
    "list_size",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "js_markers": [
    "function_transform_marker_all",
@@ -7526,8 +7528,7 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip",
-   "app_replace_rule_set"
+   "string_skip"
   ],
   "remaining": [
    "js_call_new_code",
@@ -18979,6 +18980,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_size",
     "list_skip",
     "object_merge",
     "app_replace_rule_valid",
@@ -19039,9 +19041,9 @@
     "eq",
     "alert",
     "before",
-    "skipped",
+    "size",
     "list",
-    "skip_count",
+    "skipped",
     "rules_buttons",
     "nn",
     "lambda6",
