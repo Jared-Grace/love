@@ -10697,6 +10697,9 @@
   "head": [
    "html_document_head",
    "app_replace_main"
+  ],
+  "setAttribute": [
+   "app_replace_main"
   ]
  },
  "functions": {
@@ -20225,6 +20228,7 @@
     "head",
     "component",
     "element",
+    "setAttribute",
     "root",
     "p"
    ]
