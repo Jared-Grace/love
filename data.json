@@ -4722,7 +4722,6 @@
    "list_first",
    "list_first_second_generic",
    "function_type_first",
-   "list_find",
    "list_find_property",
    "firebase_deploy_function"
   ],
@@ -10390,7 +10389,8 @@
    "firebase_deploy_function"
   ],
   "only": [
-   "list_single"
+   "list_single",
+   "list_find"
   ]
  },
  "functions": {
@@ -15499,7 +15499,7 @@
     "list",
     "filter",
     "filtered",
-    "first"
+    "only"
    ],
    "async": false
   },
