@@ -10261,9 +10261,6 @@
   "removeProperty": [
    "html_style_remove"
   ],
-  "condition": [
-   "app_replace_rule_set"
-  ],
   "html_style_set_or_remove": [
    "app_replace_rule_set"
   ]
@@ -18982,8 +18979,7 @@
     "fn",
     "lambda4",
     "symbols_button",
-    "index2",
-    "condition"
+    "index2"
    ]
   },
   "app_refresh": {
