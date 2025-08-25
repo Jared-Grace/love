@@ -10,8 +10,12 @@ import { marker } from "./marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   function lambda2() {
-    const factor = app_replace_font_size_factor();
-    app_replace_font_size_adjust(context, factor);
+    function value_get(value) {
+      const factor = app_replace_font_size_factor();
+      value *= factor;
+      return value;
+    }
+    app_replace_font_size_adjust(context, value_get);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
   function lambda3() {
@@ -19,6 +23,7 @@ export function app_replace_settings(context) {
     value *= 1 / app_replace_font_size_factor();
     storage_local_set_context(context, "font_size", value);
     app_replace_font_size_refresh(context);
+    app_replace_font_size_adjust(context, factor);
   }
   let component = html_button(
     parent,
