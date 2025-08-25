@@ -9942,8 +9942,7 @@
   ],
   "tag_name": [
    "html_element",
-   "html_button_element",
-   "app_replace_main"
+   "html_button_element"
   ],
   "html_element": [
    "html_element",
@@ -9956,8 +9955,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_replace_main"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -20222,8 +20220,6 @@
     "screens",
     "head",
     "component",
-    "parent",
-    "tag_name",
     "root",
     "p"
    ]
