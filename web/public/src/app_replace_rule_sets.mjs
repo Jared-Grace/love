@@ -13,7 +13,7 @@ export function app_replace_rule_sets() {
     {
       name: "Unary Equations",
       rules: ["= > 1 = 1"],
-      start: "1 = 1",
+      start: "1=1",
     },
   ];
   return v;
