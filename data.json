@@ -4478,7 +4478,8 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json"
+   "http_json",
+   "app_replace_home"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -8208,7 +8209,8 @@
    "js_identifier_defineds",
    "marker_expand",
    "js_await_add",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_replace_home"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9985,7 +9987,8 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_replace_home"
   ],
   "createElement": [
    "html_element"
@@ -10080,7 +10083,8 @@
    "html_enable_if",
    "app_replace_rule_set",
    "html_document_head",
-   "html_attribute_set"
+   "html_attribute_set",
+   "app_replace_home"
   ],
   "innerHTML": [
    "html_text_set"
@@ -19240,6 +19244,10 @@
     "app_replace_home",
     "context",
     "root",
+    "component",
+    "parent",
+    "text",
+    "lambda4",
     "rule_sets",
     "lambda2",
     "item",
