@@ -10819,6 +10819,9 @@
   ],
   "settings": [
    "app_replace_screens"
+  ],
+  "emoji_font_larger": [
+   "app_replace_settings"
   ]
  },
  "functions": {
@@ -20459,6 +20462,7 @@
   "app_replace_settings": {
    "async": false,
    "identifiers": [
+    "emoji_font_larger",
     "html_button",
     "marker",
     "app_replace_settings",
