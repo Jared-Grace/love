@@ -40,7 +40,6 @@ export function app_replace_rule_set(context) {
   function lambda2(letter, index) {
     let b = null;
     function lambda5() {
-      html_style_set(b, "background-color", "lightgreen");
       index_selected = index;
       refresh();
     }
@@ -75,7 +74,11 @@ export function app_replace_rule_set(context) {
     }
     html_text_set(l, label);
     each(rules_buttons, fn);
-    function lambda4(symbols_button, index2) {}
+    function lambda4(symbols_button, index2) {
+      if (false) {
+      }
+      html_style_set(b, "background-color", "lightgreen");
+    }
     each_index(symbols_buttons, lambda4);
   }
   refresh();
