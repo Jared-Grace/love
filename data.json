@@ -10612,6 +10612,9 @@
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers"
+  ],
+  "sr": [
+   "app_replace"
   ]
  },
  "functions": {
@@ -18948,6 +18951,7 @@
     "name",
     "destination_version",
     "url",
+    "sr",
     "json"
    ]
   },
