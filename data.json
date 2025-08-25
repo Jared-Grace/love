@@ -3960,8 +3960,7 @@
    "list_unique",
    "null_not_is_assert",
    "promise_not_is",
-   "visit_filter_recursive_async",
-   "app_replace_rule_set"
+   "visit_filter_recursive_async"
   ],
   "without": [
    "string_suffix_without",
@@ -4501,7 +4500,8 @@
    "list_size_1_assert",
    "list_skip",
    "list_slice_end",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -6697,7 +6697,8 @@
   ],
   "size": [
    "list_size",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "js_markers": [
    "function_transform_marker_all",
@@ -18966,6 +18967,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "list_size",
     "list_slice",
     "html_enable_if",
     "html_text_set_if",
@@ -19019,9 +19021,9 @@
     "left_joined",
     "text",
     "lambda3",
-    "v2",
+    "size",
     "list",
-    "a",
+    "v2",
     "b2",
     "rules_buttons",
     "nn",
