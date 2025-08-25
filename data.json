@@ -2781,8 +2781,7 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology",
-   "firebase_deploy_function"
+   "tautology"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3324,8 +3323,7 @@
    "html_new",
    "html_overwrite",
    "html_update",
-   "path_name",
-   "firebase_deploy_function"
+   "path_name"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4105,8 +4103,7 @@
    "function_name_to_path",
    "path_join",
    "server",
-   "html_update",
-   "firebase_deploy_function"
+   "html_update"
   ],
   "fs": [
    "folder_read",
@@ -4458,8 +4455,7 @@
   "file_read_json": [
    "data_all",
    "data_get",
-   "file_read_json",
-   "firebase_deploy_function"
+   "file_read_json"
   ],
   "data_get": [
    "data_get",
@@ -7650,8 +7646,7 @@
   "prefix": [
    "js_code_declaration",
    "string_prefix_without",
-   "string_starts_with",
-   "firebase_deploy_function"
+   "string_starts_with"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9753,8 +9748,7 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read",
-   "firebase_deploy_function"
+   "folder_read"
   ],
   "fop": [
    "apps_get",
@@ -10376,9 +10370,6 @@
   "firebase_deploy_function": [
    "firebase_deploy_function"
   ],
-  "folder_previous": [
-   "firebase_deploy_function"
-  ],
   "files": [
    "folder_read"
   ],
@@ -10387,11 +10378,7 @@
   ],
   "only": [
    "list_single",
-   "list_find",
-   "firebase_deploy_function"
-  ],
-  "folder_find_starts_with": [
-   "firebase_deploy_function"
+   "list_find"
   ],
   "admin": [
    "firebase_deploy_function"
@@ -10421,6 +10408,9 @@
    "firebase_deploy_function"
   ],
   "destination": [
+   "firebase_deploy_function"
+  ],
+  "firebase_service_account": [
    "firebase_deploy_function"
   ]
  },
@@ -19671,18 +19661,10 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
-    "file_read_json",
-    "folder_find_starts_with",
-    "folder_previous",
+    "firebase_service_account",
     "marker",
-    "path_join",
     "firebase_deploy_function",
     "admin",
-    "prefix",
-    "v",
-    "path_folder",
-    "only",
-    "file_path",
     "data",
     "initializeApp",
     "credential",
