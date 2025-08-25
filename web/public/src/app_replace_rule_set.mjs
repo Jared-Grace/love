@@ -1,3 +1,4 @@
+import { range } from "./range.mjs";
 import { list_any } from "./list_any.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
@@ -104,6 +105,7 @@ export function app_replace_rule_set(context) {
       function lambda7(item2) {
         app_replace_rule_valid(rule2, index_selected, current_list);
       }
+      let r = range(count);
       let ne = list_any(current_list, lambda7);
     }
     each(rules_buttons, lambda6);
