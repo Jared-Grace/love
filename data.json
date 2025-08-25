@@ -1307,7 +1307,6 @@
   "dpg git_push_when",
   "x",
   "fs gp",
-  "s date",
   "s lambda",
   "s git",
   "s decl",
@@ -1666,7 +1665,8 @@
   "s json",
   "p",
   "firebase_deploy_function",
-  "ps"
+  "ps",
+  "s date"
  ],
  "marker_current": "1",
  "function_current": "firebase_deploy_function",
