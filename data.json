@@ -10285,8 +10285,7 @@
   ],
   "condition": [
    "ternary",
-   "html_enable_if",
-   "app_replace_rule_set"
+   "html_enable_if"
   ],
   "html_text_set_if": [
    "app_replace_rule_set"
@@ -19016,7 +19015,6 @@
     "lambda6",
     "component",
     "v",
-    "condition",
     "lambda4",
     "symbols_button",
     "index2"
