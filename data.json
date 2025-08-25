@@ -3046,7 +3046,8 @@
    "function_name_to_path",
    "js_code_call_args",
    "list_join_empty",
-   "list_join"
+   "list_join",
+   "app_replace"
   ],
   "watcher": [
    "watch"
@@ -8512,8 +8513,7 @@
   ],
   "code2": [
    "js_statement_return",
-   "js_parse_statement",
-   "app_replace"
+   "js_parse_statement"
   ],
   "types_function": [
    "js_types_function"
@@ -10653,6 +10653,9 @@
   ],
   "list_join_newline": [
    "function_dependencies_code",
+   "app_replace"
+  ],
+  "eval": [
    "app_replace"
   ]
  },
@@ -18992,7 +18995,8 @@
     "destination",
     "code",
     "call",
-    "code2"
+    "joined",
+    "eval"
    ]
   },
   "html_document_body": {
