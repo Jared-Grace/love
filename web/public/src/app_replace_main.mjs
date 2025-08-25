@@ -18,5 +18,5 @@ export function app_replace_main() {
   });
   let p = html_p_text(root, "f");
   let html = html_document_root();
-  html_style_set(b, style_key, style_value);
+  html_style_set(html, "font-size", "20px");
 }
