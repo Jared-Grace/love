@@ -2411,7 +2411,8 @@
    "object_properties_delete",
    "visit_filter_recursive_async",
    "function_rename_identifiers",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "object_property_lambda"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3765,7 +3766,8 @@
   ],
   "value2": [
    "error_attention_set",
-   "global_function"
+   "global_function",
+   "object_property_lambda"
   ],
   "error": [
    "watch",
@@ -19849,8 +19851,10 @@
     "object_property_lambda",
     "object",
     "property_name",
-    "value",
-    "exists"
+    "lambda",
+    "exists",
+    "value2",
+    "value"
    ]
   }
  },
