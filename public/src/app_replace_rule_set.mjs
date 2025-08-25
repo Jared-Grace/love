@@ -1,3 +1,4 @@
+import { list_second } from "./list_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
@@ -99,7 +100,11 @@ export function app_replace_rule_set(context) {
     html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
-      html_enable_if(component, true);
+      html_enable_if(
+        component,
+        nn && app_replace_rule_valid(rule2, index_selected, current_list),
+      );
+      let second = list_second(list);
     }
     each(rules_buttons, lambda6);
     function lambda4(symbols_button, index2) {
