@@ -12,5 +12,6 @@ export async function app_replace() {
     destination_version,
     "destination",
   );
-  log(destination);
+  let code = await firebase_storage_download_property(destination, "code");
+  log(code);
 }
