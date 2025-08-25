@@ -4685,8 +4685,7 @@
    "each_multiple",
    "each_pair",
    "lists_get",
-   "list_concat_multiple",
-   "app_replace_rule_set"
+   "list_concat_multiple"
   ],
   "first": [
    "each_multiple",
@@ -19060,7 +19059,6 @@
     "size",
     "after",
     "combined",
-    "lists",
     "rules_buttons",
     "nn",
     "lambda6",
