@@ -10415,10 +10415,12 @@
    "firebase_deploy_function"
   ],
   "date_now_file": [
-   "date_now_file"
+   "date_now_file",
+   "firebase_deploy_function"
   ],
   "now_file": [
-   "date_now_file"
+   "date_now_file",
+   "firebase_deploy_function"
   ],
   "replace": [
    "date_now_file"
@@ -19671,12 +19673,14 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
+    "date_now_file",
     "function_dependencies_code",
     "firebase_upload_string",
     "list_join",
     "firebase_deploy_function",
     "f_name",
     "code",
+    "now_file",
     "destination"
    ]
   },
