@@ -18919,7 +18919,6 @@
     "l",
     "rules",
     "mapped",
-    "label",
     "lambda",
     "rule",
     "left",
@@ -18928,7 +18927,8 @@
     "left_joined",
     "text",
     "lambda3",
-    "rules_buttons"
+    "rules_buttons",
+    "label"
    ]
   },
   "app_refresh": {
