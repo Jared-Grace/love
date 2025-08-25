@@ -75,8 +75,8 @@ export function app_replace_rule_set(context) {
     }
     html_text_set(l, label);
     each(rules_buttons, fn);
-    function lambda4(item2, index2) {}
-    let v = each_index(list, lambda4);
+    function lambda4(symbols_button, index2) {}
+    each_index(symbols_buttons, lambda4);
   }
   refresh();
   marker("1");
