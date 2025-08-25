@@ -1645,10 +1645,11 @@
   "u lcm",
   "s concat",
   "n list_concat_multiple",
-  "s fire"
+  "s fire",
+  "n firebase_deploy"
  ],
  "marker_current": "1",
- "function_current": "list_concat_multiple",
+ "function_current": "firebase_deploy",
  "terminal": false,
  "identifiers": {
   "log": [
