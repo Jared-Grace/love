@@ -58,6 +58,7 @@ export function app_replace_rule_set(context) {
     function lambda3() {}
     let b = html_button(root, text, lambda3);
     html_disable(b);
+    return b;
   }
   let rules_buttons = list_map(mapped, lambda);
   refresh();
