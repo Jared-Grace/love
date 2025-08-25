@@ -19845,9 +19845,9 @@
     "global_function_async",
     "firebase_admin_get",
     "firebase_admin",
+    "lambda2",
     "value",
     "fn",
-    "lambda2",
     "admin"
    ]
   },
