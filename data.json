@@ -5788,8 +5788,7 @@
    "list_map_unordered_async"
   ],
   "mapped2": [
-   "function_dependencies_code",
-   "app_replace_rule_set"
+   "function_dependencies_code"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -10235,6 +10234,9 @@
   ],
   "disabled": [
    "html_enable"
+  ],
+  "symbols_buttons": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -18934,7 +18936,7 @@
     "b",
     "lambda5",
     "refresh",
-    "mapped2",
+    "symbols_buttons",
     "l",
     "rules",
     "mapped",
