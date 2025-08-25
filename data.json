@@ -10529,8 +10529,7 @@
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "app_replace",
-   "firebase_storage_url"
+   "app_replace"
   ],
   "firebase_upload_object": [
    "firebase_deploy_function"
@@ -10632,6 +10631,9 @@
   ],
   "firebase_storage_url": [
    "app_replace",
+   "firebase_storage_url"
+  ],
+  "storage_path": [
    "firebase_storage_url"
   ]
  },
@@ -20110,7 +20112,7 @@
     "string_replace",
     "firebase_storage_url_project",
     "firebase_storage_url",
-    "destination_version",
+    "storage_path",
     "replaced",
     "v"
    ]
