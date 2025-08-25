@@ -5928,8 +5928,7 @@
    "html_update",
    "js_imports_paths_fix",
    "folder_current_join_code",
-   "function_name_to_path_import",
-   "app_replace_rule_set"
+   "function_name_to_path_import"
   ],
   "i": [
    "function_identifier_replace",
@@ -10311,9 +10310,6 @@
    "list_slice"
   ],
   "app_replace_rule_valid": [
-   "app_replace_rule_set"
-  ],
-  "to2": [
    "app_replace_rule_set"
   ]
  },
@@ -19036,9 +19032,7 @@
     "eq",
     "alert",
     "before",
-    "to2",
     "to",
-    "from",
     "rules_buttons",
     "nn",
     "lambda6",
