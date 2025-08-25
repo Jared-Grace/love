@@ -1,4 +1,4 @@
-export function file_name_json(now_file) {
-  let v = now_file + '.json';
-  return v;
+export function file_name_json(name) {
+  let file_name = name + ".json";
+  return file_name;
 }
