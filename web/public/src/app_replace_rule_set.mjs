@@ -1,3 +1,4 @@
+import { object_property_exists_not_assert } from "./object_property_exists_not_assert.mjs";
 import { range } from "./range.mjs";
 import { list_any } from "./list_any.mjs";
 import { html_div } from "./html_div.mjs";
@@ -93,6 +94,7 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {}
       let b = html_button(div, letter, lambda5);
+      object_property_exists_not_assert(object, property_name);
       object_merge(b, {
         ["index"]: index,
       });
