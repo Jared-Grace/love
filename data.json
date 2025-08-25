@@ -2782,8 +2782,7 @@
    "string_is",
    "string_size",
    "string_slice",
-   "tautology",
-   "firebase_deploy_function"
+   "tautology"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8225,7 +8224,8 @@
    "list_all",
    "list_any",
    "list_find",
-   "list_filter"
+   "list_filter",
+   "firebase_deploy_function"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -19650,7 +19650,7 @@
     "lambda",
     "item",
     "sw",
-    "v"
+    "filtered"
    ]
   }
  },
