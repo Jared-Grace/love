@@ -1,9 +1,9 @@
+import { function_new } from "./function_new.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
 import { js_dollar } from "./js_dollar.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { js_statement_return_empty } from "./js_statement_return_empty.mjs";
 import { function_transform } from "./function_transform.mjs";
-import { function_new_js_inner } from "./function_new_js_inner.mjs";
 import { list_add } from "./list_add.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -15,7 +15,7 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new(code) {
   marker("1");
   let combined = function_name_combine(js_dollar.name, code);
-  await function_new_js_inner(combined);
+  await function_new(combined);
   async function lambda2(ast) {
     let r = js_statement_return_empty();
     let body_block = js_declaration_single_block_body(ast);
