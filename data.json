@@ -1736,10 +1736,11 @@
   "o an",
   "s auto",
   "s marker",
-  "is function_transform_marker"
+  "is function_transform_marker",
+  "n marker_rename"
  ],
  "marker_current": "1",
- "function_current": "app_new",
+ "function_current": "marker_rename",
  "terminal": false,
  "identifiers": {
   "log": [
