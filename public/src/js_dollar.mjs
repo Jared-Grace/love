@@ -30,7 +30,7 @@ export async function js_dollar(ast) {
       }
       let remaining = list_skip(split, 2);
       if (second === choice_name) {
-        await fn({
+        const a = {
           remaining,
           node,
           stack1,
@@ -38,7 +38,8 @@ export async function js_dollar(ast) {
           stack3,
           ast,
           afters,
-        });
+        };
+        await fn(a);
       }
     }
     await each_async(choices, lambda2);
