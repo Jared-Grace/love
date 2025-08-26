@@ -2139,7 +2139,8 @@
    "js_imports_paths_fix",
    "function_parse_declaration_inner",
    "function_transform_marker_specified",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_dollar_new"
   ],
   "code": [
    "data_identifiers_file",
@@ -3360,7 +3361,8 @@
    "list_slice_end",
    "ternary",
    "functions_combine_name",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "js_dollar_new"
   ],
   "separator": [
    "watch",
@@ -5799,7 +5801,8 @@
    "task_new",
    "functions_transform",
    "function_transform_marker_specified",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_dollar_new"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -20595,6 +20598,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "function_transform",
     "function_new_js_inner",
     "list_add",
     "function_name_combine",
@@ -20609,6 +20613,8 @@
     "combined",
     "name",
     "lambda",
+    "ast",
+    "result",
     "a",
     "array_expression",
     "elements",
