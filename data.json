@@ -1969,7 +1969,8 @@
    "list_any",
    "object_property_exists_not_assert",
    "marker_rename",
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "js_dollar_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10884,6 +10885,9 @@
   "js_dollar_choices": [
    "js_dollar",
    "js_dollar_choices"
+  ],
+  "js_dollar_new": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20571,6 +20575,13 @@
     "choices",
     "name",
     "fn"
+   ]
+  },
+  "js_dollar_new": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_new"
    ]
   }
  },
