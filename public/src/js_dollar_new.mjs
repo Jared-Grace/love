@@ -1,3 +1,5 @@
+import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
+import { js_dollar } from "./js_dollar.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { js_statement_return_empty } from "./js_statement_return_empty.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -31,7 +33,8 @@ export async function js_dollar_new(code) {
     let code_string = js_code_string(code);
     js_property_parse_expression_add("name", code_string, properties);
     js_property_parse_expression_add("fn", combined, properties);
-    list_add(elements, oe);js_imports_missing_add
+    list_add(elements, oe);
+    let result2 = await js_imports_missing_add(ast2);
   }
   let code2 = await function_transform_marker_specified(
     js_dollar_choices.name,
