@@ -17181,6 +17181,7 @@
     "a",
     "next",
     "index",
+    "stack2",
     "inserted",
     "expression",
     "declaration",
@@ -17202,7 +17203,6 @@
     "lambda",
     "argument",
     "assign",
-    "stack2",
     "lambda4",
     "item"
    ],
