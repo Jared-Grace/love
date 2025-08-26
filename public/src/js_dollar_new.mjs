@@ -15,9 +15,9 @@ export async function js_dollar_new(code) {
       type: "ObjectExpression",
       properties: [],
     };
-    let s = js_string(value_string);
+    let s = js_string(code);
     let key = js_parse_expression("name");
-    let p = js_property(key, value);
+    let p = js_property(key, s);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
