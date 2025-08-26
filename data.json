@@ -6968,7 +6968,8 @@
    "marker_param_add",
    "marker_if_test_replace",
    "js_log_remove",
-   "js_stack_last_function"
+   "js_stack_last_function",
+   "js_dollar_a"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -7375,7 +7376,8 @@
    "list_get_end_1",
    "marker_leave",
    "js_await_add",
-   "js_log_remove"
+   "js_log_remove",
+   "js_dollar_a"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8713,7 +8715,8 @@
   ],
   "e1": [
    "list_get_end_1",
-   "js_log_remove"
+   "js_log_remove",
+   "js_dollar_a"
   ],
   "e2": [
    "list_get_end_2",
@@ -10935,9 +10938,6 @@
   ],
   "choice_name": [
    "js_dollar"
-  ],
-  "ls1": [
-   "js_dollar_a"
   ]
  },
  "functions": {
@@ -14235,6 +14235,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
+    "list_get_end_1",
     "marker",
     "js_dollar_a_generic",
     "each",
@@ -14248,7 +14249,8 @@
     "ast",
     "afters",
     "remaining",
-    "ls1",
+    "e1",
+    "stack",
     "lambda",
     "next",
     "declarations",
