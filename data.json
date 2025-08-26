@@ -10509,9 +10509,6 @@
   "index2": [
    "app_replace_rule_set"
   ],
-  "symbols_button": [
-   "app_replace_rule_set"
-  ],
   "html_style_remove": [
    "html_style_remove"
   ],
@@ -10903,6 +10900,9 @@
    "app_replace_rule_set"
   ],
   "nn2": [
+   "app_replace_rule_set"
+  ],
+  "rb": [
    "app_replace_rule_set"
   ]
  },
@@ -19642,7 +19642,7 @@
     "r",
     "any",
     "lambda4",
-    "symbols_button",
+    "rb",
     "index2",
     "lambda8",
     "sb",
@@ -20613,7 +20613,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-25T23:12:39.928Z",
+ "git_push_when": "2025-08-26T02:31:14.100Z",
  "error_attention": null,
  "app_current": "replace"
 }
