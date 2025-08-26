@@ -123,7 +123,7 @@ export function app_replace_rule_set(context) {
     }
     each_index(symbols_buttons, lambda4);
     function lambda8(sb) {
-      let valid = false;
+      let valid = false;nni
       if (false) {
       }
       let index3 = object_property_get(sb, "index");
