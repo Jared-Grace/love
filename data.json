@@ -3781,8 +3781,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "marker_screen_add",
-   "js_dollar_new"
+   "marker_screen_add"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -4244,8 +4243,7 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text",
-   "js_dollar_new"
+   "html_p_text"
   ],
   "f_names": [
    "functions_names",
@@ -10914,10 +10912,10 @@
   "value_code": [
    "js_dollar_new"
   ],
-  "js_property_parse_expression": [
+  "key_code": [
    "js_dollar_new"
   ],
-  "key_code": [
+  "js_property_parse_expression_add": [
    "js_dollar_new"
   ]
  },
@@ -20607,8 +20605,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
-    "js_property_parse_expression",
-    "list_add",
+    "js_property_parse_expression_add",
     "js_string",
     "marker_next_declare_single_init",
     "log",
@@ -20627,7 +20624,6 @@
     "s",
     "key_code",
     "value_code",
-    "p",
     "code2",
     "name"
    ]
