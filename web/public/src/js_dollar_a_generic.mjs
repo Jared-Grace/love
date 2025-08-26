@@ -16,7 +16,7 @@ export function js_dollar_a_generic({
     if (l) {
       let next = stack1;
       function lambda3() {
-        let next = list_next(stack2, stack1);
+        next = list_next(stack2, next);
         let type_is = js_node_type_is(next, "VariableDeclaration");
         if (type_is) {
           let { declarations } = next;
