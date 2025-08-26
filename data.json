@@ -2706,7 +2706,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_dollar_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -3618,7 +3619,8 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "js_dollar_new"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -7617,8 +7619,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_dollar_new"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -20635,7 +20636,8 @@
     "ast",
     "r",
     "body_block",
-    "ast2",
+    "list",
+    "item",
     "result",
     "a",
     "array_expression",
