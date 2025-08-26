@@ -3534,7 +3534,6 @@
    "marker_enter",
    "js_imports_paths_fix",
    "app_replace_home",
-   "marker_screen_add",
    "app_refresh",
    "app_replace_rule_set",
    "html_component_element_get",
@@ -10253,12 +10252,10 @@
   ],
   "js_declare_single": [
    "js_declare_init_set",
-   "marker_screen_add",
    "js_declare_single"
   ],
   "declarator": [
-   "js_declare_single",
-   "marker_screen_add"
+   "js_declare_single"
   ],
   "js_property_identifier": [
    "function_params_consolidate",
@@ -10903,7 +10900,8 @@
    "js_dollar_new"
   ],
   "js_declare_single_init": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19410,13 +19408,12 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_declare_single_init",
     "function_param_new",
     "function_new",
     "js_parse_expression",
     "list_add",
     "js_property",
-    "object_property_get",
-    "js_declare_single",
     "function_transform_marker_specified",
     "app_name_prefixed",
     "function_name_combine",
@@ -19431,7 +19428,6 @@
     "lambda",
     "a",
     "next",
-    "declarator",
     "oe",
     "properties",
     "key",
