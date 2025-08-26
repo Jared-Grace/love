@@ -16,9 +16,11 @@ export async function js_dollar_new(code) {
       properties: [],
     };
     let s = js_string(code);
-    let key = js_parse_expression("name");
-    let expression = js_parse_expression(code_expression);
-    let p = js_property(key, s);
+    const key_code = "name";
+    const value_code = "name";
+    let key = js_parse_expression(key_code);
+    let expression = js_parse_expression(value_code);
+    let p = js_property(key, expression);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
