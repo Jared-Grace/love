@@ -1734,7 +1734,8 @@
   "ffc",
   "as app",
   "o an",
-  "is app_name_prefixed"
+  "is app_name_prefixed",
+  "is app_name_main"
  ],
  "marker_current": "1",
  "function_current": "app_new",
