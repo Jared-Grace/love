@@ -1733,7 +1733,8 @@
   "c object_property_exists_assert object_property_exists_not_assert",
   "ffc",
   "as app",
-  "o an"
+  "o an",
+  "is app_name_prefixed"
  ],
  "marker_current": "1",
  "function_current": "app_new",
