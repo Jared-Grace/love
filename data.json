@@ -2909,8 +2909,7 @@
    "string_slice",
    "tautology",
    "firebase_service_account",
-   "marker_rename",
-   "js_dollar_a_generic"
+   "marker_rename"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14300,9 +14299,8 @@
     "ast",
     "count",
     "l",
-    "lambda3",
-    "v",
     "count2",
+    "lambda3",
     "next",
     "type_is",
     "declarations",
