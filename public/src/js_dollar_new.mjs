@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_string } from "./js_string.mjs";
 import { js_property } from "./js_property.mjs";
@@ -15,12 +16,14 @@ export async function js_dollar_new(code) {
       type: "ObjectExpression",
       properties: [],
     };
+    let { properties } = oe;
     let s = js_string(code);
     const key_code = "name";
     const value_code = "name";
     let key = js_parse_expression(key_code);
     let expression = js_parse_expression(value_code);
     let p = js_property(key, expression);
+    list_add(properties, p);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
