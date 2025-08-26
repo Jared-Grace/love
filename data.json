@@ -6929,8 +6929,7 @@
    "function_transform_marker",
    "js_marker_named",
    "marker",
-   "function_transform_marker_specified",
-   "js_dollar"
+   "function_transform_marker_specified"
   ],
   "lambda_marker": [
    "function_transform_marker_all",
@@ -14273,7 +14272,6 @@
     "second",
     "ne",
     "remaining",
-    "marker_name",
     "a"
    ],
    "async": true
