@@ -2605,7 +2605,8 @@
    "marker_next_delete",
    "function_rename_identifiers",
    "app_replace_rule_set",
-   "app_replace_settings"
+   "app_replace_settings",
+   "js_dollar_new"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -20669,11 +20670,12 @@
     "code",
     "combined",
     "name",
-    "lambda",
+    "lambda2",
     "ast",
     "r",
     "body_block",
     "result",
+    "lambda",
     "a",
     "array_expression",
     "elements",
