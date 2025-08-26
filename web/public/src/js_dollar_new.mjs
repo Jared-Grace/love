@@ -17,7 +17,7 @@ export async function js_dollar_new(code) {
   async function lambda(ast) {
     let r = js_statement_return_empty();
     let body_block = js_declaration_single_block_body(ast);
-    list_add(list, item);
+    list_add(body_block, r);
   }
   let result = await function_transform(combined, lambda);
   async function lambda(a) {
