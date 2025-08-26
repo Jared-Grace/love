@@ -1755,10 +1755,11 @@
   "a erg each_range",
   "u nd",
   "s dollar",
-  "a nd js_dollar_new"
+  "a nd js_dollar_new",
+  "nd x"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_a",
+ "function_current": "js_dollar_choices_x",
  "terminal": false,
  "identifiers": {
   "log": [
