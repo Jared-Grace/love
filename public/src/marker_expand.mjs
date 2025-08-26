@@ -33,7 +33,7 @@ export async function marker_expand() {
     let { expression, declaration: declaration_call } =
       js_statement_call_get(next);
     if (expression === null) {
-      return;
+      return inserted;
     }
     let { callee } = expression;
     let { arguments: arguments2 } = expression;
