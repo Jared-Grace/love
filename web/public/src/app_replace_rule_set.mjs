@@ -65,16 +65,6 @@ export function app_replace_rule_set(context) {
       }
       refresh();
       return;
-      let eq = app_replace_rule_valid(rule, index_selected, current_list);
-      if (not(eq)) {
-        alert("invalid index for rule");
-      }
-      let before = list_take(current_list, index_selected);
-      let size = list_size(left);
-      let after = list_skip(current_list, index_selected + size);
-      let current_list = list_concat_multiple([before, right, after]);
-      index_selected = null;
-      refresh();
     }
     let b = html_button(root, text, lambda3);
     html_disable(b);
@@ -92,7 +82,18 @@ export function app_replace_rule_set(context) {
   function refresh() {
     html_clear(div);
     function lambda2(letter, index) {
-      function lambda5() {}
+      function lambda5() {
+        let eq = app_replace_rule_valid(rule, index_selected, current_list);
+        if (not(eq)) {
+          alert("invalid index for rule");
+        }
+        let before = list_take(current_list, index_selected);
+        let size = list_size(left);
+        let after = list_skip(current_list, index_selected + size);
+        let current_list = list_concat_multiple([before, right, after]);
+        index_selected = null;
+        refresh();
+      }
       let b = html_button(div, letter, lambda5);
       object_property_set_exists_not(b, "index", index);
       return b;
