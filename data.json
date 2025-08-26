@@ -166,7 +166,8 @@
   "lan": "list_any",
   "lz1": "list_size_1",
   "erg": "each_range",
-  "nd": "js_dollar_new"
+  "nd": "js_dollar_new",
+  "mk": "marker"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1759,7 +1760,8 @@
   "r js_dollar_choices_x js_dollar_x",
   "s imports",
   "o nd",
-  "s dollar"
+  "s dollar",
+  "a mk marker"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
