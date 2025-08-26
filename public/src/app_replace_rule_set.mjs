@@ -91,7 +91,7 @@ export function app_replace_rule_set(context) {
         let before = list_take(current_list, index_selected);
         let size = list_size(left);
         let after = list_skip(current_list, index_selected + size);
-        let current_list = list_concat_multiple([before, right, after]);
+        current_list = list_concat_multiple([before, right, after]);
         index_selected = null;
         refresh();
       }
