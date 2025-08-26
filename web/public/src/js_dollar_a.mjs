@@ -1,4 +1,4 @@
-import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { list_size_1 } from "./list_size_1.mjs";
 import { marker } from "./marker.mjs";
 import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
 import { each } from "./each.mjs";
@@ -7,7 +7,7 @@ import { object_copy } from "./object_copy.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
-  let e1 = list_get_end_1(stack);
+  let s1 = list_size_1(list);
   marker("1");
   js_dollar_a_generic({
     stack1,
