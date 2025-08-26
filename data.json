@@ -1755,9 +1755,9 @@
   "u nd",
   "s dollar",
   "a nd js_dollar_new",
-  "nd x",
   "de js_dollar_choices_x",
-  "ps"
+  "ps",
+  "nd x"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_choices_x",
