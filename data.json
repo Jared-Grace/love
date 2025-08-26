@@ -1741,7 +1741,8 @@
   "mt",
   "n js_dollar_new",
   "s scren",
-  "s screen"
+  "s screen",
+  "js_dollar_new"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
