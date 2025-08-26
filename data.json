@@ -1987,7 +1987,8 @@
    "js_dollar_choices",
    "js_dollar_new",
    "js_declaration_single_block_body",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_dollar_choices_x"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2156,7 +2157,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "js_dollar_new",
-   "js_declaration_single_block_body"
+   "js_declaration_single_block_body",
+   "js_dollar_choices_x"
   ],
   "code": [
    "data_identifiers_file",
@@ -10955,6 +10957,9 @@
   ],
   "choice_name": [
    "js_dollar"
+  ],
+  "js_dollar_choices_x": [
+   "js_dollar_choices_x"
   ]
  },
  "functions": {
@@ -20689,6 +20694,14 @@
     "ast",
     "declaration",
     "body_block"
+   ]
+  },
+  "js_dollar_choices_x": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_choices_x",
+    "ast"
    ]
   }
  },
