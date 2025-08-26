@@ -1,7 +1,6 @@
+import { js_property_parse_expression } from "./js_property_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_string } from "./js_string.mjs";
-import { js_property } from "./js_property.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { log } from "./log.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
@@ -20,9 +19,7 @@ export async function js_dollar_new(code) {
     let s = js_string(code);
     const key_code = "name";
     const value_code = "name";
-    let key = js_parse_expression(key_code);
-    let expression = js_parse_expression(value_code);
-    let p = js_property(key, expression);
+    let p = js_property_parse_expression(key_code, value_code);
     list_add(properties, p);
     log(array_expression);
   }
