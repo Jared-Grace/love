@@ -7126,7 +7126,6 @@
    "marker_next",
    "marker_next_get",
    "marker_next_await",
-   "marker_screen_add",
    "js_dollar_new"
   ],
   "noop": [
@@ -8070,7 +8069,6 @@
    "marker_next",
    "marker_next_get",
    "marker_next_await",
-   "marker_screen_add",
    "js_dollar_new"
   ],
   "id": [
@@ -10899,14 +10897,16 @@
    "js_dollar_new"
   ],
   "js_declare_single_init": [
-   "js_dollar_new",
-   "marker_screen_add"
+   "js_dollar_new"
   ],
   "elements": [
    "js_dollar_new"
   ],
   "array_expression": [
    "js_dollar_new"
+  ],
+  "marker_next_declare_single_init": [
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -19413,7 +19413,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "js_declare_single_init",
+    "marker_next_declare_single_init",
     "function_param_new",
     "function_new",
     "js_parse_expression",
@@ -19423,7 +19423,6 @@
     "app_name_prefixed",
     "function_name_combine",
     "data_app_current_get",
-    "marker_next_get",
     "marker",
     "marker_screen_add",
     "screen_name",
@@ -19432,7 +19431,6 @@
     "combined",
     "lambda",
     "a",
-    "next",
     "oe",
     "properties",
     "key",
