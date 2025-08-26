@@ -1322,7 +1322,6 @@
   "mc js_call_function_if",
   "mab $g$v$node",
   "o mm",
-  "mn",
   "o mn",
   "md -1",
   "n marker_leave",
@@ -1738,9 +1737,10 @@
   "n marker_rename",
   "s expand",
   "ps",
-  "s dollar"
+  "s dollar",
+  "mn"
  ],
- "marker_current": "1",
+ "marker_current": "2",
  "function_current": "marker_rename",
  "terminal": false,
  "identifiers": {
