@@ -2711,7 +2711,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_dollar_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -5236,7 +5237,8 @@
    "js_dollar_s",
    "list_size_1",
    "list_size_1_assert_message",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_dollar_a"
   ],
   "js_auto": [
    "functions_combine",
@@ -5609,7 +5611,8 @@
   "s1": [
    "function_acronym_to_name",
    "js_dollar_s",
-   "list_size_1"
+   "list_size_1",
+   "js_dollar_a"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -6971,8 +6974,7 @@
    "marker_param_add",
    "marker_if_test_replace",
    "js_log_remove",
-   "js_stack_last_function",
-   "js_dollar_a"
+   "js_stack_last_function"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -7379,8 +7381,7 @@
    "list_get_end_1",
    "marker_leave",
    "js_await_add",
-   "js_log_remove",
-   "js_dollar_a"
+   "js_log_remove"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8718,8 +8719,7 @@
   ],
   "e1": [
    "list_get_end_1",
-   "js_log_remove",
-   "js_dollar_a"
+   "js_log_remove"
   ],
   "e2": [
    "list_get_end_2",
@@ -14238,7 +14238,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
-    "list_get_end_1",
+    "list_size_1",
     "marker",
     "js_dollar_a_generic",
     "each",
@@ -14252,8 +14252,8 @@
     "ast",
     "afters",
     "remaining",
-    "e1",
-    "stack",
+    "s1",
+    "list",
     "lambda",
     "next",
     "declarations",
