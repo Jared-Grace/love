@@ -9,4 +9,5 @@ export async function js_dollar_new(code) {
     "choices",
     lambda,
   );
+  return code2;
 }
