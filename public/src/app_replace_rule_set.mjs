@@ -126,9 +126,9 @@ export function app_replace_rule_set(context) {
       let valid = false;
       let nn2 = null_not_is(index_selected);
       if (nn2) {
-      let index3 = object_property_get(sb, "index");
-      let rule2 = list_get(rules, index_selected);
-      valid = app_replace_rule_valid(rule2, index3, current_list);
+        let index3 = object_property_get(sb, "index");
+        let rule2 = list_get(rules, index_selected);
+        valid = app_replace_rule_valid(rule2, index3, current_list);
       }
       html_enable_if(sb, valid);
     }
