@@ -1756,8 +1756,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "js_dollar_new"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -20611,7 +20610,6 @@
     "js_code_string",
     "js_property_parse_expression_add",
     "marker_next_declare_single_init",
-    "log",
     "js_dollar_choices",
     "function_transform_marker_specified",
     "marker",
