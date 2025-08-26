@@ -10911,9 +10911,6 @@
    "marker_screen_add",
    "js_dollar_new"
   ],
-  "key_code": [
-   "js_dollar_new"
-  ],
   "value_code": [
    "js_dollar_new"
   ],
@@ -20625,7 +20622,6 @@
     "type",
     "properties",
     "s",
-    "key_code",
     "value_code",
     "p",
     "code2",
