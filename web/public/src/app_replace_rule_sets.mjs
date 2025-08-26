@@ -38,7 +38,7 @@ export function app_replace_rule_sets() {
         "1 a > a 0",
         "b a > b 1",
       ],
-      start: "dbc=bc",
+      start: "dbce=bc",
     },
   ];
   return v;
