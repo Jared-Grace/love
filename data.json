@@ -6489,8 +6489,7 @@
    "function_new_js"
   ],
   "f_name_unprefixed": [
-   "function_new_js",
-   "js_dollar_new"
+   "function_new_js"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -10919,11 +10918,7 @@
    "js_dollar_new"
   ],
   "function_new_js_name": [
-   "function_new_js",
-   "js_dollar_new"
-  ],
-  "combined2": [
-   "js_dollar_new"
+   "function_new_js"
   ]
  },
  "functions": {
@@ -20613,7 +20608,6 @@
    "async": true,
    "identifiers": [
     "function_name_combine",
-    "function_new_js_name",
     "js_code_string",
     "js_property_parse_expression_add",
     "js_string",
@@ -20626,10 +20620,8 @@
     "code",
     "lambda",
     "a",
-    "combined2",
-    "name",
     "combined",
-    "f_name_unprefixed",
+    "name",
     "array_expression",
     "elements",
     "oe",
