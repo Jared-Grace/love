@@ -2141,7 +2141,8 @@
    "function_parse_declaration_inner",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_declaration_single_block_body"
   ],
   "code": [
    "data_identifiers_file",
@@ -5390,7 +5391,8 @@
    "js_return_name",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "task_new"
+   "task_new",
+   "js_declaration_single_block_body"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -6328,7 +6330,8 @@
    "data_file_update_inner",
    "js_imports_missing",
    "js_declaration_single_name",
-   "function_parse_declaration_inner"
+   "function_parse_declaration_inner",
+   "js_declaration_single_block_body"
   ],
   "list_concat": [
    "js_identifier_unique",
@@ -6469,7 +6472,8 @@
    "data_file_update_inner",
    "js_declaration_single_name",
    "js_imports_paths_fix",
-   "function_parse_declaration_inner"
+   "function_parse_declaration_inner",
+   "js_declaration_single_block_body"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -7890,7 +7894,8 @@
    "js_declaration_to_block_body",
    "marker_down_choices_lambda",
    "marker_enter",
-   "marker_functionize"
+   "marker_functionize",
+   "js_declaration_single_block_body"
   ],
   "init": [
    "js_declare",
@@ -10921,6 +10926,9 @@
   "js_statement_return_empty": [
    "js_if_blockify_generic",
    "js_dollar_new"
+  ],
+  "js_declaration_single_block_body": [
+   "js_declaration_single_block_body"
   ]
  },
  "functions": {
@@ -20630,6 +20638,17 @@
     "properties",
     "code_string",
     "code2"
+   ]
+  },
+  "js_declaration_single_block_body": {
+   "async": false,
+   "identifiers": [
+    "js_declaration_to_block_body",
+    "js_declaration_single",
+    "js_declaration_single_block_body",
+    "ast",
+    "declaration",
+    "body_block"
    ]
   }
  },
