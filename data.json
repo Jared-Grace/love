@@ -3738,8 +3738,7 @@
    "function_new_app_screen",
    "app_name_prefixed",
    "marker_screen_add",
-   "function_rename_suffix_add",
-   "js_dollar_new"
+   "function_rename_suffix_add"
   ],
   "error_attention_set": [
    "watch",
@@ -5801,8 +5800,7 @@
   ],
   "js_dollar": [
    "js_auto",
-   "js_dollar",
-   "js_dollar_new"
+   "js_dollar"
   ],
   "js_atomize": [
    "js_atomize",
@@ -10985,6 +10983,9 @@
   ],
   "js_dollar_new_args": [
    "js_dollar_new_args"
+  ],
+  "js_dollar_new_name": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20681,14 +20682,13 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_dollar_new_name",
     "function_new",
     "js_imports_missing_add",
-    "js_dollar",
     "js_declaration_single_block_body",
     "js_statement_return_empty",
     "function_transform",
     "list_add",
-    "function_name_combine",
     "js_code_string",
     "js_property_parse_expression_add",
     "marker_next_declare_single_init",
@@ -20698,7 +20698,6 @@
     "js_dollar_new",
     "code",
     "combined",
-    "name",
     "lambda2",
     "ast",
     "r",
@@ -20711,7 +20710,8 @@
     "type",
     "properties",
     "code_string",
-    "code2"
+    "code2",
+    "name"
    ]
   },
   "js_declaration_single_block_body": {
