@@ -31,7 +31,7 @@ export async function js_dollar(ast) {
       }
       let remaining = list_skip(split, 2);
       if (second === choice_name) {
-        marker("choice_arguments");
+        marker("choice_params");
         const a = {
           remaining,
           node,
