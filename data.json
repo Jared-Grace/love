@@ -1761,10 +1761,11 @@
   "s imports",
   "o nd",
   "s dollar",
-  "a mk marker"
+  "a mk marker",
+  "n js_dollar_new_args"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_new",
+ "function_current": "js_dollar_new_args",
  "terminal": false,
  "identifiers": {
   "log": [
