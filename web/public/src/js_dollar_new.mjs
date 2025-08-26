@@ -6,7 +6,7 @@ export async function js_dollar_new(code) {
   async function lambda(a) {}
   let code2 = await function_transform_marker_specified(
     js_dollar_choices.name,
-    marker_name,
+    "choices",
     lambda,
   );
 }
