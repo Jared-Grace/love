@@ -1605,7 +1605,6 @@
   "u s",
   "u u",
   "function_name_unalias s",
-  "s string",
   "u ss",
   "s split",
   "fw list_slice list_take",
@@ -1742,7 +1741,8 @@
   "n js_dollar_new",
   "s scren",
   "s screen",
-  "js_dollar_new"
+  "js_dollar_new",
+  "s string"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
