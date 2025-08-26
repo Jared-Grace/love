@@ -5267,9 +5267,7 @@
   "js_declaration_single_block_blody": [
    "function_wrap",
    "js_declaration_single_block_blody",
-   "js_return_name",
-   "marker_top",
-   "task_new"
+   "js_return_name"
   ],
   "js_parse_statement": [
    "js_call_insert",
@@ -10929,7 +10927,9 @@
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
-   "functions_combine"
+   "functions_combine",
+   "task_new",
+   "marker_top"
   ]
  },
  "functions": {
@@ -17422,7 +17422,7 @@
     "list_empty_not_is",
     "js_identifier_unique",
     "js_marker_insert",
-    "js_declaration_single_block_blody",
+    "js_declaration_single_block_body",
     "js_imports_missing_add",
     "data_function_current_get",
     "function_transform",
@@ -18079,7 +18079,7 @@
     "function_name_unalias",
     "task_function_name_part",
     "function_name_combine_multiple",
-    "js_declaration_single_block_blody",
+    "js_declaration_single_block_body",
     "js_call_insert",
     "function_transform",
     "function_new",
