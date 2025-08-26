@@ -1,3 +1,4 @@
+import { js_statement_return_empty } from "./js_statement_return_empty.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new_js_inner } from "./function_new_js_inner.mjs";
 import { list_add } from "./list_add.mjs";
@@ -12,7 +13,9 @@ export async function js_dollar_new(code) {
   marker("1");
   let combined = function_name_combine(js_dollar_choices.name, code);
   await function_new_js_inner(combined);
-  async function lambda(ast) {}
+  async function lambda(ast) {
+    let r = js_statement_return_empty();
+  }
   let result = await function_transform(combined, lambda);
   async function lambda(a) {
     let array_expression = marker_next_declare_single_init(a);
