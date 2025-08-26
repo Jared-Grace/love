@@ -2706,7 +2706,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_dollar_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -3618,7 +3619,8 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "js_dollar_new"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3782,7 +3784,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_dollar_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -4075,8 +4078,7 @@
    "js_string",
    "string_split_space",
    "string_split_empty",
-   "string_replace",
-   "js_dollar_new"
+   "string_replace"
   ],
   "a": [
    "string_suffix_without",
@@ -10080,8 +10082,7 @@
   ],
   "js_string": [
    "js_code_string",
-   "js_string",
-   "js_dollar_new"
+   "js_string"
   ],
   "element": [
    "html_text_set",
@@ -20607,10 +20608,10 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "list_add",
     "function_name_combine",
     "js_code_string",
     "js_property_parse_expression_add",
-    "js_string",
     "marker_next_declare_single_init",
     "log",
     "js_dollar_choices",
@@ -20618,18 +20619,19 @@
     "marker",
     "js_dollar_new",
     "code",
-    "lambda",
-    "a",
     "combined",
     "name",
+    "lambda",
+    "a",
     "array_expression",
     "elements",
     "oe",
     "type",
     "properties",
-    "s",
     "code_string",
     "value_string",
+    "list",
+    "item",
     "code2"
    ]
   }
