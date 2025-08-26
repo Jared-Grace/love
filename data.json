@@ -20592,6 +20592,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_declare_single_init",
     "log",
     "marker_next_get",
     "js_dollar_choices",
@@ -20603,7 +20604,6 @@
     "a",
     "next",
     "oe",
-    "js_declare_single_init",
     "code2",
     "name"
    ]
