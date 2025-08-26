@@ -10935,6 +10935,9 @@
   ],
   "choice_name": [
    "js_dollar"
+  ],
+  "ls1": [
+   "js_dollar_a"
   ]
  },
  "functions": {
@@ -14245,6 +14248,7 @@
     "ast",
     "afters",
     "remaining",
+    "ls1",
     "lambda",
     "next",
     "declarations",
