@@ -1154,7 +1154,6 @@
   "a ini integer_is",
   "o au",
   "nj if_blockify",
-  "s return",
   "s visit,type",
   "u lu",
   "a lu log_unparse",
@@ -1743,7 +1742,8 @@
   "s screen",
   "js_dollar_new",
   "s string",
-  "o nj"
+  "o nj",
+  "s return"
  ],
  "marker_current": "1",
  "function_current": "function_new_js",
