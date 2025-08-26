@@ -1739,10 +1739,11 @@
   "s dollar",
   "mn",
   "fs js_dollar_choices",
-  "mt"
+  "mt",
+  "n js_dollar_new"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_choices",
+ "function_current": "js_dollar_new",
  "terminal": false,
  "identifiers": {
   "log": [
