@@ -1965,7 +1965,8 @@
    "html_update_public",
    "app_replace_settings",
    "list_any",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "marker_rename"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10912,6 +10913,9 @@
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set"
+  ],
+  "marker_rename": [
+   "marker_rename"
   ]
  },
  "functions": {
@@ -20620,6 +20624,13 @@
     "object",
     "property_name",
     "result"
+   ]
+  },
+  "marker_rename": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "marker_rename"
    ]
   }
  },
