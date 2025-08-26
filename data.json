@@ -10964,6 +10964,9 @@
   ],
   "js_dollar_choices_x": [
    "js_dollar_choices_x"
+  ],
+  "js_dollar_x": [
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -20648,6 +20651,7 @@
     "js_dollar_r",
     "js_dollar_ie",
     "js_dollar_i",
+    "js_dollar_x",
     "js_dollar_choices",
     "choices",
     "name",
