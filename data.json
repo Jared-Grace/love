@@ -4964,7 +4964,8 @@
    "list_take",
    "each_range_async",
    "js_dollar_a",
-   "js_dollar_s"
+   "js_dollar_s",
+   "js_dollar_a_generic"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -14289,6 +14290,7 @@
     "afters",
     "lambda",
     "ast",
+    "count",
     "l",
     "next",
     "type_is",
