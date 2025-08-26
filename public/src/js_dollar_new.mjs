@@ -8,8 +8,9 @@ export async function js_dollar_new(code) {
   marker("1");
   async function lambda(a) {
     let { next } = marker_next_get(a);
-    let oe = js_declare_single_init(next);
-    log(oe);
+    let ArrayExpression = js_declare_single_init(next);
+    let { elements } = ArrayExpression;
+    log(ArrayExpression);
   }
   let code2 = await function_transform_marker_specified(
     js_dollar_choices.name,
