@@ -1991,7 +1991,8 @@
    "js_dollar_new",
    "js_declaration_single_block_body",
    "js_dollar_a",
-   "js_dollar_choices_x"
+   "js_dollar_choices_x",
+   "js_dollar_x"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2161,7 +2162,8 @@
    "function_rename_identifiers",
    "js_dollar_new",
    "js_declaration_single_block_body",
-   "js_dollar_choices_x"
+   "js_dollar_choices_x",
+   "js_dollar_x"
   ],
   "code": [
    "data_identifiers_file",
@@ -4869,7 +4871,8 @@
    "marker_above_delete",
    "marker_enter",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "js_dollar_x"
   ],
   "lists_get": [
    "each_multiple",
@@ -7054,7 +7057,8 @@
    "js_dollar_g",
    "marker_leave",
    "marker_above_generic",
-   "marker_above_delete"
+   "marker_above_delete",
+   "js_dollar_x"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7622,7 +7626,8 @@
   ],
   "inserted": [
    "js_block_insert",
-   "marker_expand"
+   "marker_expand",
+   "js_dollar_x"
   ],
   "block": [
    "js_block_insert",
@@ -8099,7 +8104,8 @@
    "marker_move",
    "marker_next",
    "marker_next_get",
-   "marker_next_await"
+   "marker_next_await",
+   "js_dollar_x"
   ],
   "id": [
    "js_dollar_a",
@@ -10918,7 +10924,8 @@
    "marker_rename"
   ],
   "js_expand_generic": [
-   "marker_expand"
+   "marker_expand",
+   "js_dollar_x"
   ],
   "js_dollar_choices": [
    "js_dollar",
@@ -10966,7 +10973,8 @@
    "js_dollar_choices_x"
   ],
   "js_dollar_x": [
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "js_dollar_x"
   ]
  },
  "functions": {
@@ -20711,6 +20719,19 @@
     "marker",
     "js_dollar_choices_x",
     "ast"
+   ]
+  },
+  "js_dollar_x": {
+   "async": true,
+   "identifiers": [
+    "js_expand_generic",
+    "marker",
+    "js_dollar_x",
+    "ast",
+    "inserted",
+    "next",
+    "stack2",
+    "index"
    ]
   }
  },
