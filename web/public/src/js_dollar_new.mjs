@@ -1,5 +1,4 @@
-import { js_property_parse_expression } from "./js_property_parse_expression.mjs";
-import { list_add } from "./list_add.mjs";
+import { js_property_parse_expression_add } from "./js_property_parse_expression_add.mjs";
 import { js_string } from "./js_string.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { log } from "./log.mjs";
@@ -19,8 +18,7 @@ export async function js_dollar_new(code) {
     let s = js_string(code);
     const key_code = "name";
     const value_code = "name";
-    let p = js_property_parse_expression(key_code, value_code);
-    list_add(properties, p);
+    js_property_parse_expression_add(key_code, value_code, properties);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
