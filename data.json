@@ -8314,8 +8314,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "js_dollar_new"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -10913,6 +10912,12 @@
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
+   "js_dollar_new"
+  ],
+  "key_code": [
+   "js_dollar_new"
+  ],
+  "value_code": [
    "js_dollar_new"
   ]
  },
@@ -20620,9 +20625,10 @@
     "type",
     "properties",
     "s",
+    "key_code",
+    "value_code",
     "key",
     "expression",
-    "code_expression",
     "p",
     "code2",
     "name"
