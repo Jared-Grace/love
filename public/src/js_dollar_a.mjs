@@ -5,7 +5,7 @@ import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
-export function js_dollar_a({ stack1, stack2, ast, afters }) {
+export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   marker("1");
   js_dollar_a_generic({
     stack1,
