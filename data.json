@@ -2712,8 +2712,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "js_dollar_a"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -4598,7 +4597,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "js_dollar_a"
   ],
   "process": [
    "command_line_read",
@@ -4961,7 +4961,8 @@
    "range",
    "marker_next_delete_multiple",
    "list_take",
-   "each_range_async"
+   "each_range_async",
+   "js_dollar_a"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -6163,7 +6164,8 @@
    "marker_up",
    "marker_above_generic",
    "function_aliases_restore",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_dollar_a"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -7331,7 +7333,8 @@
    "integer_to",
    "marker_call_replace_generic",
    "marker_down",
-   "marker_up"
+   "marker_up",
+   "js_dollar_a"
   ],
   "parseInt": [
    "integer_to"
@@ -14239,6 +14242,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
+    "integer_to",
     "list_size_1",
     "marker",
     "js_dollar_a_generic",
@@ -14253,8 +14257,10 @@
     "ast",
     "afters",
     "remaining",
+    "count",
     "s1",
-    "list",
+    "i",
+    "input",
     "lambda",
     "next",
     "declarations",
