@@ -5191,7 +5191,8 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code"
+   "folder_current_join_code",
+   "js_dollar_new"
   ],
   "folder_public": [
    "folder_public",
@@ -6257,7 +6258,8 @@
    "js_dollar_g",
    "js_marker_insert",
    "marker_assign_replace_string",
-   "folder_current_join_code"
+   "folder_current_join_code",
+   "js_dollar_new"
   ],
   "list_add_first": [
    "function_imports_add",
@@ -7850,7 +7852,8 @@
    "js_code_string",
    "js_dollar_g",
    "js_marker_insert",
-   "marker_assign_replace_string"
+   "marker_assign_replace_string",
+   "js_dollar_new"
   ],
   "other": [
    "js_declaration_asyncify",
@@ -20605,6 +20608,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_code_string",
     "js_property_parse_expression_add",
     "js_string",
     "marker_next_declare_single_init",
@@ -20623,6 +20627,8 @@
     "properties",
     "s",
     "key_code",
+    "code_string",
+    "value_string",
     "value_code",
     "code2",
     "name"
