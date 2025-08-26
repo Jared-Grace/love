@@ -4963,7 +4963,8 @@
    "marker_next_delete_multiple",
    "list_take",
    "each_range_async",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_dollar_s"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -14444,6 +14445,7 @@
     "stack2",
     "ast",
     "afters",
+    "count",
     "lambda",
     "next",
     "declarations",
