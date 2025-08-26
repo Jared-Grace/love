@@ -4075,7 +4075,8 @@
    "js_string",
    "string_split_space",
    "string_split_empty",
-   "string_replace"
+   "string_replace",
+   "js_dollar_new"
   ],
   "a": [
    "string_suffix_without",
@@ -5192,7 +5193,8 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code"
+   "folder_current_join_code",
+   "js_dollar_new"
   ],
   "folder_public": [
    "folder_public",
@@ -5351,7 +5353,8 @@
    "js_imports_paths_fix",
    "js_property_identifier",
    "marker_screen_add",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_dollar_new"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6603,7 +6606,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set"
+   "html_attribute_set",
+   "js_dollar_new"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10076,7 +10080,8 @@
   ],
   "js_string": [
    "js_code_string",
-   "js_string"
+   "js_string",
+   "js_dollar_new"
   ],
   "element": [
    "html_text_set",
@@ -20597,6 +20602,8 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
+    "js_string",
     "js_property",
     "marker_next_declare_single_init",
     "log",
@@ -20612,6 +20619,9 @@
     "oe",
     "type",
     "properties",
+    "s",
+    "value_string",
+    "key",
     "p",
     "value",
     "code2",
