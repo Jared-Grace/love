@@ -4991,8 +4991,7 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_dollar_new"
+   "app_replace_rule_parse"
   ],
   "right": [
    "equal",
@@ -5009,8 +5008,7 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_dollar_new"
+   "app_replace_rule_parse"
   ],
   "eq": [
    "equal",
@@ -20629,8 +20627,7 @@
     "lambda",
     "a",
     "combined2",
-    "left",
-    "right",
+    "name",
     "combined",
     "f_name_unprefixed",
     "array_expression",
@@ -20641,8 +20638,7 @@
     "s",
     "code_string",
     "value_string",
-    "code2",
-    "name"
+    "code2"
    ]
   }
  },
