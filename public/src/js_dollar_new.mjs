@@ -11,7 +11,7 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new(code) {
   marker("1");
   async function lambda(a) {
-    let combined2 = function_name_combine(left, right);
+    let combined2 = function_name_combine(js_dollar_choices.name, code);
     let combined = function_new_js_name(f_name_unprefixed);
     let array_expression = marker_next_declare_single_init(a);
     let { elements } = array_expression;
