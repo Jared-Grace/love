@@ -113,15 +113,15 @@ export function app_replace_rule_set(context) {
       html_enable_if(component, any);
     }
     each(rules_buttons, lambda6);
-    function lambda4(symbols_button, index2) {
+    function lambda4(rb, index2) {
       html_style_set_or_remove(
         index2 === index_selected,
-        symbols_button,
+        rb,
         "background-color",
         "lightgreen",
       );
     }
-    each_index(symbols_buttons, lambda4);
+    each_index(rules_buttons, lambda4);
     function lambda8(sb) {
       let valid = false;
       let nn2 = null_not_is(index_selected);
