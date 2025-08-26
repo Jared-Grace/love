@@ -1583,7 +1583,6 @@
   "s data,set",
   "fws n app_screen",
   "oa oa",
-  "o oa",
   "as combine",
   "fw mb marker_screen_add",
   "oec",
@@ -1735,10 +1734,11 @@
   "as app",
   "o an",
   "is app_name_prefixed",
-  "is app_name_main"
+  "is app_name_main",
+  "o oa"
  ],
  "marker_current": "1",
- "function_current": "app_new",
+ "function_current": "function_open_app",
  "terminal": false,
  "identifiers": {
   "log": [
