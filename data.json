@@ -3263,7 +3263,8 @@
    "html_name_to_path_dev",
    "html_update_dev",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "js_dollar_choices"
   ],
   "output": [
    "watch",
@@ -3852,7 +3853,8 @@
    "html_enable_if",
    "global_function",
    "global_function_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "js_dollar_choices"
   ],
   "colored": [
    "chalk_color",
@@ -7930,7 +7932,8 @@
    "js_declare_init_set"
   ],
   "js_dollar_rf": [
-   "js_dollar_rf"
+   "js_dollar_rf",
+   "js_dollar_choices"
   ],
   "list_get_end_3": [
    "js_dollar",
@@ -7946,19 +7949,24 @@
   ],
   "js_dollar_i": [
    "js_dollar_i",
-   "js_dollar_ie"
+   "js_dollar_ie",
+   "js_dollar_choices"
   ],
   "js_dollar_r": [
-   "js_dollar_r"
+   "js_dollar_r",
+   "js_dollar_choices"
   ],
   "js_dollar_a": [
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_dollar_choices"
   ],
   "js_dollar_s": [
-   "js_dollar_s"
+   "js_dollar_s",
+   "js_dollar_choices"
   ],
   "js_dollar_f": [
-   "js_dollar_f"
+   "js_dollar_f",
+   "js_dollar_choices"
   ],
   "list_remove_multiple": [
    "js_dollar_a",
@@ -7966,7 +7974,8 @@
    "marker_functionize"
   ],
   "js_dollar_g": [
-   "js_dollar_g"
+   "js_dollar_g",
+   "js_dollar_choices"
   ],
   "js_identifier_unique_ast": [
    "js_dollar_g",
@@ -8012,10 +8021,12 @@
    "js_imports_declarations"
   ],
   "js_dollar_rt": [
-   "js_dollar_rt"
+   "js_dollar_rt",
+   "js_dollar_choices"
   ],
   "js_dollar_ie": [
-   "js_dollar_ie"
+   "js_dollar_ie",
+   "js_dollar_choices"
   ],
   "afters": [
    "js_dollar",
@@ -8888,7 +8899,8 @@
    "marker_down_choices",
    "marker_down_choices_lambda",
    "marker_down_generic",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_choices"
   ],
   "marker_call": [
    "marker_call"
@@ -10867,7 +10879,8 @@
    "marker_expand"
   ],
   "js_dollar_choices": [
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -20536,6 +20549,24 @@
     "lambda",
     "a",
     "v"
+   ]
+  },
+  "js_dollar_choices": {
+   "async": false,
+   "identifiers": [
+    "js_dollar_f",
+    "js_dollar_s",
+    "js_dollar_g",
+    "js_dollar_a",
+    "js_dollar_rf",
+    "js_dollar_rt",
+    "js_dollar_r",
+    "js_dollar_ie",
+    "js_dollar_i",
+    "js_dollar_choices",
+    "choices",
+    "name",
+    "fn"
    ]
   }
  },
