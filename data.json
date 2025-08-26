@@ -1856,7 +1856,6 @@
    "function_current_set",
    "function_identifier_replace",
    "function_identifier_replace_ending_remove",
-   "function_new_js",
    "function_open",
    "function_rename",
    "function_transform_marker",
@@ -2048,7 +2047,6 @@
    "function_imports_missing",
    "function_imports_missing_add",
    "function_new_declaration",
-   "function_new_js",
    "function_params_consolidate",
    "function_params_new",
    "function_param_swap",
@@ -2363,7 +2361,6 @@
    "function_dependencies",
    "function_identifier_replace",
    "function_imports_add",
-   "function_new_js",
    "function_params_consolidate",
    "function_params_new",
    "function_param_swap",
@@ -3327,7 +3324,6 @@
    "functions_search",
    "functions_search_open",
    "function_aliases_search",
-   "function_new_js",
    "function_params_consolidate",
    "function_run",
    "function_run_git",
@@ -5791,7 +5787,6 @@
    "function_auto",
    "function_copy",
    "function_identifier_replace",
-   "function_new_js",
    "function_new_transform",
    "function_params_consolidate",
    "function_param_swap",
@@ -6419,7 +6414,6 @@
   "function_new": [
    "function_new",
    "function_new_aliased",
-   "function_new_js",
    "function_new_transform",
    "function_param_swap_task_simple",
    "task_new",
@@ -6479,7 +6473,6 @@
    "function_new_declaration"
   ],
   "js_declaration_single_params_add": [
-   "function_new_js",
    "function_params_new",
    "js_declaration_single_params_add"
   ],
@@ -10916,6 +10909,9 @@
   ],
   "function_new_js_name": [
    "function_new_js"
+  ],
+  "function_new_js_inner": [
+   "function_new_js"
   ]
  },
  "functions": {
@@ -12639,17 +12635,11 @@
   },
   "function_new_js": {
    "identifiers": [
+    "function_new_js_inner",
     "function_new_js_name",
-    "js_declaration_single_params_add",
-    "function_transform",
-    "marker",
-    "function_new",
     "function_new_js",
     "f_name_unprefixed",
-    "combined",
-    "lambda",
-    "ast",
-    "result"
+    "combined"
    ],
    "async": true
   },
