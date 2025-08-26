@@ -1996,7 +1996,8 @@
    "js_dollar_a",
    "js_dollar_choices_x",
    "js_dollar_x",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_new_args"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10981,6 +10982,9 @@
   "js_dollar_x": [
    "js_dollar_choices",
    "js_dollar_x"
+  ],
+  "js_dollar_new_args": [
+   "js_dollar_new_args"
   ]
  },
  "functions": {
@@ -20741,6 +20745,13 @@
     "next",
     "stack2",
     "index"
+   ]
+  },
+  "js_dollar_new_args": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_new_args"
    ]
   }
  },
