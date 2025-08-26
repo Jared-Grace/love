@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { js_dollar_f } from "./js_dollar_f.mjs";
 import { js_dollar_s } from "./js_dollar_s.mjs";
 import { js_dollar_g } from "./js_dollar_g.mjs";
@@ -8,6 +9,7 @@ import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_ie } from "./js_dollar_ie.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 export function js_dollar_choices() {
+  marker("1");
   let choices = [
     {
       name: "i",
