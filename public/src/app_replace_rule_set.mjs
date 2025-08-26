@@ -88,7 +88,7 @@ export function app_replace_rule_set(context) {
         log({
           rule2,
         });
-        let eq = app_replace_rule_valid(rule2, index_selected, current_list);
+        let eq = app_replace_rule_valid(rule2, index, current_list);
         if (not(eq)) {
           alert("invalid index for rule");
         }
