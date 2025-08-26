@@ -8026,9 +8026,6 @@
    "js_dollar",
    "js_dollar_ie"
   ],
-  "seconds": [
-   "js_dollar"
-  ],
   "afters": [
    "js_dollar",
    "js_dollar_a",
@@ -8899,7 +8896,8 @@
    "marker_bottom",
    "marker_down_choices",
    "marker_down_choices_lambda",
-   "marker_down_generic"
+   "marker_down_generic",
+   "js_dollar"
   ],
   "marker_call": [
    "marker_call"
@@ -14162,7 +14160,7 @@
     "js_dollar_ie",
     "js_dollar",
     "ast",
-    "seconds",
+    "choices",
     "name",
     "fn",
     "afters",
