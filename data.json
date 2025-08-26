@@ -4060,7 +4060,6 @@
   ],
   "s": [
    "string_suffix_without",
-   "js_dollar",
    "js_dollar_s",
    "string_empty_is",
    "string_ends_with",
@@ -8055,9 +8054,6 @@
    "js_dollar_s",
    "lambda_invoke_multiple"
   ],
-  "second_name": [
-   "js_dollar"
-  ],
   "js_dollar_a_generic": [
    "js_dollar_a",
    "js_dollar_a_generic",
@@ -9228,7 +9224,8 @@
    "visit_filter_recursive_async",
    "counter",
    "js_identifiers_named_count",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_dollar"
   ],
   "found": [
    "visit_unique_async"
@@ -10934,6 +10931,9 @@
    "task_new",
    "marker_top",
    "js_dollar_new"
+  ],
+  "choice_name": [
+   "js_dollar"
   ]
  },
  "functions": {
@@ -14211,9 +14211,9 @@
     "lambda",
     "v",
     "lambda2",
-    "s",
+    "c",
     "name",
-    "second_name",
+    "choice_name",
     "fn",
     "node",
     "stack",
