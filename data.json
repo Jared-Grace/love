@@ -1699,7 +1699,6 @@
   "u he",
   "a he html_element",
   "s att",
-  "ffc",
   "c html_document_body html_document_root",
   "s style",
   "s html",
@@ -1731,7 +1730,8 @@
   "a lan list_any",
   "o list_any",
   "s assert",
-  "c object_property_exists_assert object_property_exists_not_assert"
+  "c object_property_exists_assert object_property_exists_not_assert",
+  "ffc"
  ],
  "marker_current": "1",
  "function_current": "object_property_exists_not_assert",
