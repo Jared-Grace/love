@@ -14,8 +14,8 @@ export async function js_dollar(ast) {
   let choices = js_dollar_choices();
   let afters = [];
   async function lambda(v) {
-    async function lambda2(s) {
-      let { name: second_name, fn } = s;
+    async function lambda2(c) {
+      let { name: choice_name, fn } = c;
       let { node, stack } = v;
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
@@ -29,7 +29,7 @@ export async function js_dollar(ast) {
         return;
       }
       let remaining = list_skip(split, 2);
-      if (second === second_name) {
+      if (second === choice_name) {
         await fn({
           remaining,
           node,
