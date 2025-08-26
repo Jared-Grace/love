@@ -963,7 +963,6 @@
   "au function_imports_add",
   "ftc js_outside_move function_imports_add",
   "i folder_current_join",
-  "mt",
   "u mt",
   "o data_all",
   "da",
@@ -1739,7 +1738,8 @@
   "ps",
   "s dollar",
   "mn",
-  "fs js_dollar_choices"
+  "fs js_dollar_choices",
+  "mt"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_choices",
