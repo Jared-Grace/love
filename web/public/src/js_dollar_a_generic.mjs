@@ -14,23 +14,24 @@ export function js_dollar_a_generic({
   if (js_node_type_is(stack1, "ExpressionStatement")) {
     let l = list_is(stack2);
     if (l) {
-      function lambda3() {}
-      each_range(count, lambda3);
-      let next = list_next(stack2, stack1);
-      let type_is = js_node_type_is(next, "VariableDeclaration");
-      if (type_is) {
-        let { declarations } = next;
-        list_add(afters, after);
-        function after() {
-          lambda({
-            stack1,
-            next,
-            stack2,
-            ast,
-            declarations,
-          });
+      function lambda3() {
+        let next = list_next(stack2, stack1);
+        let type_is = js_node_type_is(next, "VariableDeclaration");
+        if (type_is) {
+          let { declarations } = next;
+          list_add(afters, after);
+          function after() {
+            lambda({
+              stack1,
+              next,
+              stack2,
+              ast,
+              declarations,
+            });
+          }
         }
       }
+      each_range(count, lambda3);
     }
   }
 }
