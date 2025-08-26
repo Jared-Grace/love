@@ -10911,7 +10911,8 @@
    "function_new_js"
   ],
   "function_new_js_inner": [
-   "function_new_js"
+   "function_new_js",
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20594,6 +20595,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "function_new_js_inner",
     "list_add",
     "function_name_combine",
     "js_code_string",
