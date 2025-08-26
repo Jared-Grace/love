@@ -65,7 +65,8 @@ export async function marker_expand() {
     function lambda4(item) {
       list_insert(stack2, index, item);
     }
-    let inserted = list_map(body_block, js_unparse);
+    let inserted = null;
+    inserted = list_map(body_block, js_unparse);
     return inserted;
   }
 }
