@@ -5796,7 +5796,8 @@
   ],
   "js_dollar": [
    "js_auto",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_new"
   ],
   "js_atomize": [
    "js_atomize",
@@ -5814,7 +5815,8 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_top",
-   "js_imports_fix"
+   "js_imports_fix",
+   "js_dollar_new"
   ],
   "function_transform": [
    "function_auto",
@@ -7649,7 +7651,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_dollar_new"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -8804,7 +8807,8 @@
    "list_join_space",
    "server",
    "tasks_run",
-   "task_new"
+   "task_new",
+   "js_dollar_new"
   ],
   "list_last_is": [
    "list_last_is"
@@ -20669,6 +20673,8 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_imports_missing_add",
+    "js_dollar",
     "js_declaration_single_block_body",
     "js_statement_return_empty",
     "function_transform",
@@ -20698,6 +20704,8 @@
     "type",
     "properties",
     "code_string",
+    "result2",
+    "ast2",
     "code2"
    ]
   },
