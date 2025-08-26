@@ -9717,7 +9717,8 @@
   ],
   "oe": [
    "function_aliases_restore",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_dollar_new"
   ],
   "fp": [
    "function_aliases_restore"
@@ -10897,6 +10898,9 @@
    "js_dollar_new"
   ],
   "js_dollar_new": [
+   "js_dollar_new"
+  ],
+  "js_declare_single_init": [
    "js_dollar_new"
   ]
  },
@@ -20599,6 +20603,8 @@
     "lambda",
     "a",
     "next",
+    "oe",
+    "js_declare_single_init",
     "code2",
     "name"
    ]
