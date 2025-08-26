@@ -124,7 +124,8 @@ export function app_replace_rule_set(context) {
     each_index(symbols_buttons, lambda4);
     function lambda8(sb) {
       let valid = false;
-      $;
+      if (false) {
+      }
       let index3 = object_property_get(sb, "index");
       let rule2 = list_get(rules, index_selected);
       valid = app_replace_rule_valid(rule2, index3, current_list);
