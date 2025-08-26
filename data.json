@@ -163,7 +163,8 @@
   "ffc": "firebase_deploy_function_app_current",
   "he": "html_element",
   "msa": "marker_screen_add",
-  "lan": "list_any"
+  "lan": "list_any",
+  "lz1": "list_size_1"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1746,7 +1747,8 @@
   "r js_declaration_single_block_blody js_declaration_single_block_body",
   "o js_dollar_a",
   "s dollar",
-  "u ls1"
+  "u ls1",
+  "a lz1 list_size_1"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
