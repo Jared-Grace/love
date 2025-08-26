@@ -1,5 +1,5 @@
 import { js_statement_return } from "./js_statement_return.mjs";
-import { js_declaration_single_block_blody } from "./js_declaration_single_block_blody.mjs";
+import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { object_property_from } from "./object_property_from.mjs";
 import { js_declaration_asyncify } from "./js_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -21,7 +21,7 @@ export async function function_wrap(f_name, f_name_wrapped) {
       arg_names,
       declaration_call,
     );
-    let body_block = js_declaration_single_block_blody(ast);
+    let body_block = js_declaration_single_block_body(ast);
     let item = js_statement_return(code);
     list_add(body_block, item);
     let declaration = js_declaration_single(ast);

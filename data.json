@@ -1747,7 +1747,7 @@
   "r js_declaration_single_block_blody js_declaration_single_block_body"
  ],
  "marker_current": "1",
- "function_current": "function_new_js",
+ "function_current": "js_declaration_single_block_body",
  "terminal": false,
  "identifiers": {
   "log": [
