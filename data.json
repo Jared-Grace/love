@@ -5265,7 +5265,6 @@
    "data_files_update"
   ],
   "js_declaration_single_block_blody": [
-   "functions_combine",
    "function_wrap",
    "js_declaration_single_block_blody",
    "js_return_name",
@@ -10929,7 +10928,8 @@
    "js_dollar_new"
   ],
   "js_declaration_single_block_body": [
-   "js_declaration_single_block_body"
+   "js_declaration_single_block_body",
+   "functions_combine"
   ]
  },
  "functions": {
@@ -11877,7 +11877,7 @@
     "js_auto",
     "functions_combine_name",
     "list_add",
-    "js_declaration_single_block_blody",
+    "js_declaration_single_block_body",
     "each_async",
     "function_new_transform",
     "js_parse_expression",
