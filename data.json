@@ -10912,9 +10912,6 @@
    "marker_screen_add",
    "js_dollar_new"
   ],
-  "value_code": [
-   "js_dollar_new"
-  ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
   ]
@@ -20625,7 +20622,6 @@
     "s",
     "code_string",
     "value_string",
-    "value_code",
     "code2",
     "name"
    ]
