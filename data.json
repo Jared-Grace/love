@@ -5876,7 +5876,8 @@
   "marker_top": [
    "function_current_set",
    "marker_remove_marker_top",
-   "marker_top"
+   "marker_top",
+   "js_dollar"
   ],
   "task_new": [
    "function_current_set_task_new",
@@ -14234,6 +14235,7 @@
   },
   "js_dollar": {
    "identifiers": [
+    "marker_top",
     "js_dollar_choices",
     "list_get_end_3",
     "lambda_invoke_multiple",
