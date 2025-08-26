@@ -12,6 +12,7 @@ export async function js_dollar_new_args(code) {
     list_add(body_block, r);
   }
   await function_transform(combined, lambda2);
-  let output = await function_transform(f_name, async function lambda(ast2) {});
+  async function lambda(ast2) {}
+  let output = await function_transform(f_name, lambda);
   marker("1");
 }
