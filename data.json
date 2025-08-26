@@ -4143,7 +4143,8 @@
    "null_not_is_assert",
    "promise_not_is",
    "visit_filter_recursive_async",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "app_new"
   ],
   "without": [
    "string_suffix_without",
@@ -5375,7 +5376,8 @@
    "function_new_app_screen",
    "marker_screen_add",
    "list_concat_multiple",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "app_new"
   ],
   "body_block": [
    "functions_combine",
@@ -10831,7 +10833,8 @@
   ],
   "app_name_main": [
    "firebase_deploy_function_app_current",
-   "html_update_dev"
+   "html_update_dev",
+   "app_new"
   ],
   "lambda$fn_get": [
    "html_update_generic"
@@ -19200,13 +19203,16 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "app_name_main",
     "app_name_prefixed",
     "function_new",
     "html_new",
     "marker",
     "app_new",
     "name",
-    "a_name"
+    "a_name",
+    "combined",
+    "a"
    ]
   },
   "app_name_prefixed": {
