@@ -20,6 +20,7 @@ export async function js_dollar_new(code) {
     let code_string = js_code_string(value_string);
     const value_code = "name";
     js_property_parse_expression_add("name", code_string, properties);
+    js_property_parse_expression_add("fn", code_string, properties);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
