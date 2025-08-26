@@ -17181,6 +17181,7 @@
     "a",
     "next",
     "index",
+    "inserted",
     "expression",
     "declaration",
     "declaration_call",
@@ -17203,8 +17204,7 @@
     "assign",
     "stack2",
     "lambda4",
-    "item",
-    "inserted"
+    "item"
    ],
    "async": true
   },
