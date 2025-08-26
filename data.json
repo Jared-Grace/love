@@ -7125,8 +7125,7 @@
    "marker_move",
    "marker_next",
    "marker_next_get",
-   "marker_next_await",
-   "js_dollar_new"
+   "marker_next_await"
   ],
   "noop": [
    "function_transform_marker_empty",
@@ -8068,8 +8067,7 @@
    "marker_move",
    "marker_next",
    "marker_next_get",
-   "marker_next_await",
-   "js_dollar_new"
+   "marker_next_await"
   ],
   "id": [
    "js_dollar_a",
@@ -10896,9 +10894,6 @@
   "js_dollar_new": [
    "js_dollar_new"
   ],
-  "js_declare_single_init": [
-   "js_dollar_new"
-  ],
   "elements": [
    "js_dollar_new"
   ],
@@ -10906,7 +10901,8 @@
    "js_dollar_new"
   ],
   "marker_next_declare_single_init": [
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20595,9 +20591,8 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
-    "js_declare_single_init",
+    "marker_next_declare_single_init",
     "log",
-    "marker_next_get",
     "js_dollar_choices",
     "function_transform_marker_specified",
     "marker",
@@ -20605,7 +20600,6 @@
     "code",
     "lambda",
     "a",
-    "next",
     "array_expression",
     "elements",
     "code2",
