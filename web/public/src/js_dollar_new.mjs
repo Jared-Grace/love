@@ -12,7 +12,7 @@ import { function_transform_marker_specified } from "./function_transform_marker
 import { marker } from "./marker.mjs";
 export async function js_dollar_new(code) {
   marker("1");
-  let combined = function_name_combine(js_dollar_choices.name, code);
+  let combined = function_name_combine(js_dollar.name, code);
   await function_new_js_inner(combined);
   async function lambda2(ast) {
     let r = js_statement_return_empty();
