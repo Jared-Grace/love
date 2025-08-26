@@ -4143,8 +4143,7 @@
    "null_not_is_assert",
    "promise_not_is",
    "visit_filter_recursive_async",
-   "firebase_deploy_function_app_current",
-   "app_new"
+   "firebase_deploy_function_app_current"
   ],
   "without": [
    "string_suffix_without",
@@ -19211,8 +19210,7 @@
     "app_new",
     "name",
     "a_name",
-    "combined",
-    "a"
+    "combined"
    ]
   },
   "app_name_prefixed": {
