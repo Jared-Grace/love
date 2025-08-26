@@ -3709,7 +3709,6 @@
    "function_copy_suffix_add",
    "function_identifier_replace_suffix_add",
    "function_name_combine",
-   "function_new_js",
    "function_wrap_suffix_add",
    "git_push",
    "function_new_app_screen",
@@ -10915,6 +10914,9 @@
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
+  ],
+  "function_new_js_name": [
+   "function_new_js"
   ]
  },
  "functions": {
@@ -12638,8 +12640,8 @@
   },
   "function_new_js": {
    "identifiers": [
+    "function_new_js_name",
     "js_declaration_single_params_add",
-    "function_name_combine",
     "function_transform",
     "marker",
     "function_new",
