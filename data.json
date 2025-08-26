@@ -164,7 +164,8 @@
   "he": "html_element",
   "msa": "marker_screen_add",
   "lan": "list_any",
-  "lz1": "list_size_1"
+  "lz1": "list_size_1",
+  "erg": "each_range"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1750,7 +1751,8 @@
   "u ls1",
   "a lz1 list_size_1",
   "s integ",
-  "as range"
+  "as range",
+  "a erg each_range"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
