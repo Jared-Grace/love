@@ -1743,7 +1743,8 @@
   "s string",
   "o nj",
   "s return",
-  "s blody"
+  "s blody",
+  "r js_declaration_single_block_blody js_declaration_single_block_body"
  ],
  "marker_current": "1",
  "function_current": "function_new_js",
