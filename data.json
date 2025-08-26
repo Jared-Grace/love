@@ -1967,7 +1967,8 @@
    "app_replace_settings",
    "list_any",
    "object_property_exists_not_assert",
-   "marker_rename"
+   "marker_rename",
+   "js_dollar_choices"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20555,6 +20556,7 @@
   "js_dollar_choices": {
    "async": false,
    "identifiers": [
+    "marker",
     "js_dollar_f",
     "js_dollar_s",
     "js_dollar_g",
