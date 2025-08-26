@@ -2285,7 +2285,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "js_dollar_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2504,7 +2505,8 @@
    "object_property_lambda_async",
    "global_function_async",
    "global_function_property_async",
-   "marker_rename"
+   "marker_rename",
+   "js_dollar_new"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4147,7 +4149,8 @@
    "promise_not_is",
    "visit_filter_recursive_async",
    "firebase_deploy_function_app_current",
-   "marker_rename"
+   "marker_rename",
+   "js_dollar_new"
   ],
   "without": [
    "string_suffix_without",
@@ -6883,7 +6886,8 @@
    "function_transform_marker",
    "js_marker_named",
    "marker",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_dollar_new"
   ],
   "lambda_marker": [
    "function_transform_marker_all",
@@ -8560,7 +8564,8 @@
   ],
   "code2": [
    "js_statement_return",
-   "js_parse_statement"
+   "js_parse_statement",
+   "js_dollar_new"
   ],
   "types_function": [
    "js_types_function"
@@ -10238,7 +10243,8 @@
   "function_transform_marker_specified": [
    "function_transform_marker",
    "marker_screen_add",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_dollar_new"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -20579,11 +20585,17 @@
    ]
   },
   "js_dollar_new": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_transform_marker_specified",
     "marker",
     "js_dollar_new",
-    "code"
+    "code",
+    "code2",
+    "f_name",
+    "marker_name",
+    "lambda",
+    "a"
    ]
   }
  },
