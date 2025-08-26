@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { range } from "./range.mjs";
 import { list_any } from "./list_any.mjs";
@@ -84,6 +85,7 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {
         let rule2 = list_get(mapped, index_selected);
+        log(message);
         let eq = app_replace_rule_valid(rule2, index_selected, current_list);
         if (not(eq)) {
           alert("invalid index for rule");
