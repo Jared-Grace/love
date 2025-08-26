@@ -8,6 +8,7 @@ import { js_dollar_rt } from "./js_dollar_rt.mjs";
 import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_ie } from "./js_dollar_ie.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
+import { js_dollar_x } from "./js_dollar_x.mjs";
 export function js_dollar_choices() {
   marker("choices");
   let choices = [

@@ -31,7 +31,7 @@ export async function js_dollar_new(code) {
     let code_string = js_code_string(code);
     js_property_parse_expression_add("name", code_string, properties);
     js_property_parse_expression_add("fn", combined, properties);
-    list_add(elements, oe);
+    list_add(elements, oe);js_imports_missing_add
   }
   let code2 = await function_transform_marker_specified(
     js_dollar_choices.name,
