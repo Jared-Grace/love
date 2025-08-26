@@ -10901,6 +10901,9 @@
   ],
   "rb": [
    "app_replace_rule_set"
+  ],
+  "object_property_set_exists_not": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19558,6 +19561,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "object_property_set_exists_not",
     "range",
     "list_any",
     "html_div",
