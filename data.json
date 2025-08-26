@@ -5390,7 +5390,8 @@
    "marker_down_choices_lambda",
    "marker_functionize",
    "task_new",
-   "js_declaration_single_block_body"
+   "js_declaration_single_block_body",
+   "js_dollar_new"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -7616,7 +7617,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_dollar_new"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -10929,7 +10931,8 @@
    "js_declaration_single_block_body",
    "functions_combine",
    "task_new",
-   "marker_top"
+   "marker_top",
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20612,6 +20615,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_declaration_single_block_body",
     "js_statement_return_empty",
     "function_transform",
     "function_new_js_inner",
@@ -20630,6 +20634,8 @@
     "lambda",
     "ast",
     "r",
+    "body_block",
+    "ast2",
     "result",
     "a",
     "array_expression",
