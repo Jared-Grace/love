@@ -1737,7 +1737,8 @@
   "s auto",
   "s marker",
   "is function_transform_marker",
-  "n marker_rename"
+  "n marker_rename",
+  "s expand"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
