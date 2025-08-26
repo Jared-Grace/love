@@ -461,7 +461,6 @@
   "i js_node_atomize",
   "de js_statement_call_get",
   "au marker_call_replace_generic",
-  "s blody",
   "au js_declaration_single_block_blody",
   "au js_declaration_params_names",
   "fw js_node_type_is js_identifier_is",
@@ -1743,7 +1742,8 @@
   "js_dollar_new",
   "s string",
   "o nj",
-  "s return"
+  "s return",
+  "s blody"
  ],
  "marker_current": "1",
  "function_current": "function_new_js",
