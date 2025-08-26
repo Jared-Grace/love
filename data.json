@@ -1705,7 +1705,6 @@
   "u fp",
   "html_name_to_path_dev replace",
   "p",
-  "ps",
   "html_update_dev replace",
   "rs html_update public",
   "html_update replace",
@@ -1738,7 +1737,8 @@
   "s marker",
   "is function_transform_marker",
   "n marker_rename",
-  "s expand"
+  "s expand",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
