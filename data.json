@@ -10915,9 +10915,6 @@
   "value_code": [
    "js_dollar_new"
   ],
-  "key_code": [
-   "js_dollar_new"
-  ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
   ]
@@ -20626,7 +20623,6 @@
     "type",
     "properties",
     "s",
-    "key_code",
     "code_string",
     "value_string",
     "value_code",
