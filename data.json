@@ -2712,7 +2712,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_dollar_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -4873,7 +4874,8 @@
    "js_parse_statement_module",
    "list_first",
    "list_single",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "js_dollar_a"
   ],
   "each_multiple": [
    "each_multiple",
@@ -4893,7 +4895,8 @@
    "list_first",
    "list_first_second_generic",
    "function_type_first",
-   "list_find_property"
+   "list_find_property",
+   "js_dollar_a"
   ],
   "items": [
    "each_multiple",
@@ -14242,6 +14245,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
+    "list_first",
     "integer_to",
     "list_size_1",
     "marker",
@@ -14259,6 +14263,8 @@
     "remaining",
     "count",
     "s1",
+    "first",
+    "list",
     "i",
     "input",
     "lambda",
