@@ -1742,10 +1742,11 @@
   "s scren",
   "s screen",
   "js_dollar_new",
-  "s string"
+  "s string",
+  "o nj"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_new",
+ "function_current": "function_new_js",
  "terminal": false,
  "identifiers": {
   "log": [
