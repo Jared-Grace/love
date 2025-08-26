@@ -5381,7 +5381,8 @@
    "marker_screen_add",
    "list_concat_multiple",
    "firebase_deploy_function_app_current",
-   "app_new"
+   "app_new",
+   "js_dollar_new"
   ],
   "body_block": [
    "functions_combine",
@@ -6487,7 +6488,8 @@
    "function_new_js"
   ],
   "f_name_unprefixed": [
-   "function_new_js"
+   "function_new_js",
+   "js_dollar_new"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -10916,7 +10918,8 @@
    "js_dollar_new"
   ],
   "function_new_js_name": [
-   "function_new_js"
+   "function_new_js",
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20605,6 +20608,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "function_new_js_name",
     "js_code_string",
     "js_property_parse_expression_add",
     "js_string",
@@ -20617,6 +20621,8 @@
     "code",
     "lambda",
     "a",
+    "combined",
+    "f_name_unprefixed",
     "array_expression",
     "elements",
     "oe",
