@@ -9718,8 +9718,7 @@
   ],
   "oe": [
    "function_aliases_restore",
-   "marker_screen_add",
-   "js_dollar_new"
+   "marker_screen_add"
   ],
   "fp": [
    "function_aliases_restore"
@@ -10902,6 +10901,12 @@
   "js_declare_single_init": [
    "js_dollar_new",
    "marker_screen_add"
+  ],
+  "ArrayExpression": [
+   "js_dollar_new"
+  ],
+  "elements": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20603,7 +20608,8 @@
     "lambda",
     "a",
     "next",
-    "oe",
+    "ArrayExpression",
+    "elements",
     "code2",
     "name"
    ]
