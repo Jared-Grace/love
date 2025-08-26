@@ -2855,7 +2855,6 @@
    "command_line_read",
    "data_all",
    "data_identifiers_get",
-   "each_range",
    "emoji_home",
    "functions_transform",
    "function_alias_add_generic",
@@ -11618,8 +11617,7 @@
     "each_range",
     "count",
     "lambda",
-    "list",
-    "v"
+    "list"
    ],
    "async": false
   },
