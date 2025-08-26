@@ -14,8 +14,7 @@ export function js_dollar_a_generic({
   if (js_node_type_is(stack1, "ExpressionStatement")) {
     let l = list_is(stack2);
     if (l) {
-      function lambda3() {}
-      let v = each_range(count2, lambda3);
+      each_range(count2, function lambda3() {});
       let next = list_next(stack2, stack1);
       let type_is = js_node_type_is(next, "VariableDeclaration");
       if (type_is) {
