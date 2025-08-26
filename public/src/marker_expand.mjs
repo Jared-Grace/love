@@ -29,6 +29,7 @@ export async function marker_expand() {
   return v;
   async function lambda2(a) {
     let { next, index } = marker_next_get(a);
+    let inserted = null;
     let { expression, declaration: declaration_call } =
       js_statement_call_get(next);
     if (expression === null) {
@@ -65,7 +66,6 @@ export async function marker_expand() {
     function lambda4(item) {
       list_insert(stack2, index, item);
     }
-    let inserted = null;
     inserted = list_map(body_block, js_unparse);
     return inserted;
   }
