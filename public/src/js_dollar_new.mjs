@@ -1,3 +1,4 @@
+import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { js_statement_return_empty } from "./js_statement_return_empty.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new_js_inner } from "./function_new_js_inner.mjs";
@@ -15,6 +16,7 @@ export async function js_dollar_new(code) {
   await function_new_js_inner(combined);
   async function lambda(ast) {
     let r = js_statement_return_empty();
+    let body_block = js_declaration_single_block_body(ast2);
   }
   let result = await function_transform(combined, lambda);
   async function lambda(a) {
