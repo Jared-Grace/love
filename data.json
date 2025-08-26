@@ -7738,7 +7738,8 @@
   "remaining": [
    "js_call_new_code",
    "js_dollar",
-   "js_dollar_g"
+   "js_dollar_g",
+   "js_dollar_a"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -14243,6 +14244,7 @@
     "stack2",
     "ast",
     "afters",
+    "remaining",
     "lambda",
     "next",
     "declarations",
