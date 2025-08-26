@@ -1732,13 +1732,13 @@
   "c object_property_exists_assert object_property_exists_not_assert",
   "ffc",
   "as app",
-  "o an",
   "is app_name_prefixed",
   "is app_name_main",
-  "o oa"
+  "o oa",
+  "o an"
  ],
  "marker_current": "1",
- "function_current": "function_open_app",
+ "function_current": "app_new",
  "terminal": false,
  "identifiers": {
   "log": [
