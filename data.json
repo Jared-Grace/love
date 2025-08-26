@@ -1378,7 +1378,6 @@
   "u mad",
   "u mda",
   "s js_visit",
-  "s marker",
   "mcr c jvtea",
   "mcr c js_visit_type_each_async",
   "s next,marker",
@@ -1735,7 +1734,8 @@
   "is app_name_main",
   "o oa",
   "o an",
-  "s auto"
+  "s auto",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "app_new",
