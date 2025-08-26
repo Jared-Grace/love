@@ -30,8 +30,8 @@ export async function js_dollar(ast) {
         return;
       }
       let remaining = list_skip(split, 2);
-      marker(marker_name);
       if (second === choice_name) {
+        marker("choice_arguments");
         const a = {
           remaining,
           node,
