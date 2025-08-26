@@ -2317,8 +2317,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "js_dollar_new_args"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2537,8 +2536,7 @@
    "global_function_async",
    "global_function_property_async",
    "marker_rename",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3319,8 +3317,7 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers",
-   "js_dollar_new_args"
+   "function_rename_identifiers"
   ],
   "args": [
    "watch",
@@ -7666,8 +7663,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_dollar_new_args"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -20777,11 +20773,7 @@
     "lambda2",
     "ast",
     "r",
-    "body_block",
-    "lambda",
-    "ast2",
-    "output",
-    "f_name"
+    "body_block"
    ]
   }
  },
