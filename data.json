@@ -4173,7 +4173,8 @@
    "visit_filter_recursive_async",
    "firebase_deploy_function_app_current",
    "marker_rename",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar"
   ],
   "without": [
    "string_suffix_without",
@@ -14266,7 +14267,8 @@
     "first",
     "second",
     "ne",
-    "remaining"
+    "remaining",
+    "a"
    ],
    "async": true
   },
