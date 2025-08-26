@@ -85,7 +85,9 @@ export function app_replace_rule_set(context) {
     function lambda2(letter, index) {
       function lambda5() {
         let rule2 = list_get(mapped, index_selected);
-        log({rule2});
+        log({
+          rule2,
+        });
         let eq = app_replace_rule_valid(rule2, index_selected, current_list);
         if (not(eq)) {
           alert("invalid index for rule");
