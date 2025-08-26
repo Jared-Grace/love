@@ -1566,7 +1566,6 @@
   "fts js_imports_paths_fix",
   "ftc js_imports_paths_fix app_replace",
   "o r",
-  "s auto",
   "o oe",
   "fws o app",
   "as html",
@@ -1735,7 +1734,8 @@
   "is app_name_prefixed",
   "is app_name_main",
   "o oa",
-  "o an"
+  "o an",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "app_new",
