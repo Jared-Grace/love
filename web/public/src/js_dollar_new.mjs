@@ -1,3 +1,4 @@
+import { function_new_js_inner } from "./function_new_js_inner.mjs";
 import { list_add } from "./list_add.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -9,6 +10,7 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new(code) {
   marker("1");
   let combined = function_name_combine(js_dollar_choices.name, code);
+  await function_new_js_inner(combined);
   async function lambda(a) {
     let array_expression = marker_next_declare_single_init(a);
     let { elements } = array_expression;
