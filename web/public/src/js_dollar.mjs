@@ -1,4 +1,3 @@
-import { marker_top } from "./marker_top.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { list_get_end_3 } from "./list_get_end_3.mjs";
 import { lambda_invoke_multiple } from "./lambda_invoke_multiple.mjs";
@@ -30,7 +29,7 @@ export async function js_dollar(ast) {
         return;
       }
       let remaining = list_skip(split, 2);
-      await marker_top();
+      mk;
       if (second === choice_name) {
         const a = {
           remaining,
