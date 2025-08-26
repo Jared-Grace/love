@@ -3714,7 +3714,8 @@
    "function_new_app_screen",
    "app_name_prefixed",
    "marker_screen_add",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "js_dollar_new"
   ],
   "error_attention_set": [
    "watch",
@@ -4990,7 +4991,8 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_dollar_new"
   ],
   "right": [
    "equal",
@@ -5007,7 +5009,8 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_dollar_new"
   ],
   "eq": [
    "equal",
@@ -10919,6 +10922,9 @@
   ],
   "function_new_js_name": [
    "function_new_js",
+   "js_dollar_new"
+  ],
+  "combined2": [
    "js_dollar_new"
   ]
  },
@@ -20608,6 +20614,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "function_name_combine",
     "function_new_js_name",
     "js_code_string",
     "js_property_parse_expression_add",
@@ -20621,6 +20628,9 @@
     "code",
     "lambda",
     "a",
+    "combined2",
+    "left",
+    "right",
     "combined",
     "f_name_unprefixed",
     "array_expression",
