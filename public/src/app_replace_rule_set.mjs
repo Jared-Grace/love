@@ -123,9 +123,10 @@ export function app_replace_rule_set(context) {
     }
     each_index(symbols_buttons, lambda4);
     function lambda8(sb) {
+      let valid = false;
+      $;
       let index3 = object_property_get(sb, "index");
       let rule2 = list_get(rules, index_selected);
-      let valid = null;
       valid = app_replace_rule_valid(rule2, index3, current_list);
       html_enable_if(sb, valid);
     }
