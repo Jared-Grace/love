@@ -7175,7 +7175,6 @@
   ],
   "js_statement_return": [
    "function_wrap",
-   "js_if_blockify_generic",
    "js_statement_return"
   ],
   "js_code_return": [
@@ -10916,6 +10915,9 @@
   "function_new_js_inner": [
    "function_new_js",
    "js_dollar_new"
+  ],
+  "js_statement_return_empty": [
+   "js_if_blockify_generic"
   ]
  },
  "functions": {
@@ -14666,12 +14668,12 @@
   },
   "js_if_blockify_generic": {
    "identifiers": [
+    "js_statement_return_empty",
     "not",
     "js_visit_type_each_async",
     "object_replace",
     "list_add",
     "object_property_set",
-    "js_statement_return",
     "list_includes",
     "js_node_type",
     "object_copy",
