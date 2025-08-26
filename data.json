@@ -3384,8 +3384,7 @@
    "list_slice_end",
    "ternary",
    "functions_combine_name",
-   "object_property_exists_not_assert",
-   "js_dollar_new"
+   "object_property_exists_not_assert"
   ],
   "separator": [
    "watch",
@@ -20693,7 +20692,6 @@
     "ast",
     "r",
     "body_block",
-    "result",
     "lambda",
     "a",
     "array_expression",
