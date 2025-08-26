@@ -2974,7 +2974,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_dollar_a_generic"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3927,7 +3928,8 @@
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "http"
+   "http",
+   "js_dollar_a_generic"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -14280,6 +14282,7 @@
   },
   "js_dollar_a_generic": {
    "identifiers": [
+    "error",
     "list_add",
     "list_next",
     "list_is",
@@ -14292,6 +14295,7 @@
     "ast",
     "count",
     "l",
+    "message",
     "next",
     "type_is",
     "declarations",
