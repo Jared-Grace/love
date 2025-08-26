@@ -2186,7 +2186,8 @@
    "js_code_call_statement",
    "function_dependencies_code",
    "firebase_deploy_function",
-   "html_update_generic"
+   "html_update_generic",
+   "js_dollar_new"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -20581,7 +20582,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "js_dollar_new"
+    "js_dollar_new",
+    "code"
    ]
   }
  },
