@@ -1716,7 +1716,6 @@
   "s app,repla",
   "s setting",
   "s storage",
-  "s screen",
   "s rule,set",
   "as list",
   "s list_any",
@@ -1741,7 +1740,8 @@
   "fs js_dollar_choices",
   "mt",
   "n js_dollar_new",
-  "s scren"
+  "s scren",
+  "s screen"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
