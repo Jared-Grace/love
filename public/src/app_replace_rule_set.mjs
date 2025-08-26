@@ -106,8 +106,8 @@ export function app_replace_rule_set(context) {
     }
     symbols_buttons = list_map_index(current_list, lambda2);
     let nn = null_not_is(index_selected);
-    html_text_set_if(nn, "Choose a rule:", "Rules:", label_rules);
-    html_text_set_if(nn, "Symbols:", "Choose a symbol:", label_symbols);
+    html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
+    html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     function lambda6(component) {
       let rule2 = object_property_get(component, "rule");
       function lambda7(index) {
