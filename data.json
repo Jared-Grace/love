@@ -1973,7 +1973,8 @@
    "object_property_exists_not_assert",
    "marker_rename",
    "js_dollar_choices",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_declaration_single_block_body"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20643,6 +20644,7 @@
   "js_declaration_single_block_body": {
    "async": false,
    "identifiers": [
+    "marker",
     "js_declaration_to_block_body",
     "js_declaration_single",
     "js_declaration_single_block_body",
