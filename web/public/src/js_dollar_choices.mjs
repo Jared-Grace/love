@@ -9,7 +9,7 @@ import { js_dollar_r } from "./js_dollar_r.mjs";
 import { js_dollar_ie } from "./js_dollar_ie.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 export function js_dollar_choices() {
-  marker("1");
+  marker("choices");
   let choices = [
     {
       name: "i",
