@@ -1752,14 +1752,14 @@
   "as range",
   "a erg each_range",
   "u nd",
-  "s dollar",
   "a nd js_dollar_new",
   "de js_dollar_choices_x",
   "ps",
   "nd x",
   "r js_dollar_choices_x js_dollar_x",
   "s imports",
-  "o nd"
+  "o nd",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
