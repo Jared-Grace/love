@@ -88,15 +88,14 @@ export function app_replace_rule_set(context) {
         if (not(eq)) {
           alert("invalid index for rule");
         }
-        let before = list_take(current_list, index_selected);
+        let before = list_take(current_list, index);
         let size = list_size(left);
-        let after = list_skip(current_list, index_selected + size);
+        let after = list_skip(current_list, index + size);
         current_list = list_concat_multiple([before, right, after]);
         index_selected = null;
         refresh();
       }
       let b = html_button(div, letter, lambda5);
-      object_property_set_exists_not(b, "index", index);
       return b;
     }
     symbols_buttons = list_map_index(current_list, lambda2);
