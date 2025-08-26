@@ -10916,6 +10916,9 @@
   ],
   "js_property_parse_expression": [
    "js_dollar_new"
+  ],
+  "key_code": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20622,6 +20625,7 @@
     "type",
     "properties",
     "s",
+    "key_code",
     "value_code",
     "p",
     "code2",
