@@ -2712,8 +2712,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "js_dollar_a"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -4598,8 +4597,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "js_dollar_a"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -6167,8 +6165,7 @@
    "marker_up",
    "marker_above_generic",
    "function_aliases_restore",
-   "js_imports_paths_fix",
-   "js_dollar_a"
+   "js_imports_paths_fix"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -14264,9 +14261,6 @@
     "count",
     "s1",
     "first",
-    "list",
-    "i",
-    "input",
     "lambda",
     "next",
     "declarations",
