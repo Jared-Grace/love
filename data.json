@@ -10902,10 +10902,10 @@
    "js_dollar_new",
    "marker_screen_add"
   ],
-  "ArrayExpression": [
+  "elements": [
    "js_dollar_new"
   ],
-  "elements": [
+  "array_expression": [
    "js_dollar_new"
   ]
  },
@@ -20608,7 +20608,7 @@
     "lambda",
     "a",
     "next",
-    "ArrayExpression",
+    "array_expression",
     "elements",
     "code2",
     "name"
