@@ -13,7 +13,7 @@ export async function js_dollar_new(code) {
       type: "ObjectExpression",
       properties: [],
     };
-    let p = js_property(key, value);
+    let p = js_property("name", value);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
