@@ -1,3 +1,4 @@
+import { js_property } from "./js_property.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { log } from "./log.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
@@ -12,6 +13,7 @@ export async function js_dollar_new(code) {
       type: "ObjectExpression",
       properties: [],
     };
+    let p = js_property(key, value);
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
