@@ -1,6 +1,7 @@
+import { js_expand_generic } from "./js_expand_generic.mjs";
 import { marker } from "./marker.mjs";
-export function js_dollar_x(ast) {
+export async function js_dollar_x(ast) {
   marker("1");
   return;
-  js_expand_generic;
+  let inserted = await js_expand_generic(next, stack2, index);
 }
