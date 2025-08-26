@@ -22,6 +22,7 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
     afters,
     lambda,
     ast,
+    count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
     list_remove_multiple([stack1, next], stack2);
