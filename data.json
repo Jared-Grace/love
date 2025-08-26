@@ -6603,8 +6603,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set",
-   "js_dollar_new"
+   "html_attribute_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -20614,7 +20613,6 @@
     "type",
     "properties",
     "p",
-    "key",
     "value",
     "code2",
     "name"
