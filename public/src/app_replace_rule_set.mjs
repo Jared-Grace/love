@@ -92,7 +92,7 @@ export function app_replace_rule_set(context) {
         if (not(eq)) {
           alert("invalid index for rule");
         }
-        let { left,right } = rule2;
+        let { left, right } = rule2;
         let before = list_take(current_list, index);
         let size = list_size(left);
         let after = list_skip(current_list, index + size);
