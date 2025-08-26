@@ -1748,7 +1748,8 @@
   "o js_dollar_a",
   "s dollar",
   "u ls1",
-  "a lz1 list_size_1"
+  "a lz1 list_size_1",
+  "s integ"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
