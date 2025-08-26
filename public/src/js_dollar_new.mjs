@@ -1,3 +1,4 @@
+import { function_new_js_name } from "./function_new_js_name.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_property_parse_expression_add } from "./js_property_parse_expression_add.mjs";
 import { js_string } from "./js_string.mjs";
@@ -9,6 +10,7 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new(code) {
   marker("1");
   async function lambda(a) {
+    let combined = function_new_js_name(f_name_unprefixed);
     let array_expression = marker_next_declare_single_init(a);
     let { elements } = array_expression;
     let oe = {
