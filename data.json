@@ -1292,7 +1292,6 @@
   "ftc js_imports_unused",
   "is js_imports",
   "c js_imports js_imports_declarations",
-  "s dollar",
   "s remaining",
   "c list_first_second list_first_remaining",
   "s assert,size",
@@ -1738,7 +1737,8 @@
   "is function_transform_marker",
   "n marker_rename",
   "s expand",
-  "ps"
+  "ps",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
