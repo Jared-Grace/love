@@ -2217,7 +2217,8 @@
    "function_dependencies_code",
    "firebase_deploy_function",
    "html_update_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -5411,7 +5412,8 @@
    "list_concat_multiple",
    "firebase_deploy_function_app_current",
    "app_new",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "body_block": [
    "functions_combine",
@@ -10985,7 +10987,8 @@
    "js_dollar_new_args"
   ],
   "js_dollar_new_name": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ]
  },
  "functions": {
@@ -20750,8 +20753,11 @@
   "js_dollar_new_args": {
    "async": false,
    "identifiers": [
+    "js_dollar_new_name",
     "marker",
-    "js_dollar_new_args"
+    "js_dollar_new_args",
+    "code",
+    "combined"
    ]
   }
  },
