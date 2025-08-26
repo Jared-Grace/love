@@ -1558,7 +1558,6 @@
   "r html_button html_button_element",
   "np",
   "nj imports_paths_fix",
-  "s imports",
   "s import",
   "fts js_imports_paths_fix",
   "ftc js_imports_paths_fix app_replace",
@@ -1759,7 +1758,8 @@
   "ps",
   "nd x",
   "r js_dollar_choices_x js_dollar_x",
-  "o nd"
+  "o nd",
+  "s imports"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new",
