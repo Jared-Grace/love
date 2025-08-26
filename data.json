@@ -2966,8 +2966,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_dollar_new"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20608,7 +20607,6 @@
     "next",
     "oe",
     "js_declare_single_init",
-    "message",
     "code2",
     "name"
    ]
