@@ -1,13 +1,7 @@
-import { js_dollar_rf } from "./js_dollar_rf.mjs";
+import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { list_get_end_3 } from "./list_get_end_3.mjs";
 import { lambda_invoke_multiple } from "./lambda_invoke_multiple.mjs";
-import { js_dollar_i } from "./js_dollar_i.mjs";
-import { js_dollar_r } from "./js_dollar_r.mjs";
-import { js_dollar_a } from "./js_dollar_a.mjs";
-import { js_dollar_s } from "./js_dollar_s.mjs";
-import { js_dollar_f } from "./js_dollar_f.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
-import { js_dollar_g } from "./js_dollar_g.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { string_empty_not_is } from "./string_empty_not_is.mjs";
@@ -16,47 +10,8 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { each_async } from "./each_async.mjs";
-import { js_dollar_rt } from "./js_dollar_rt.mjs";
-import { js_dollar_ie } from "./js_dollar_ie.mjs";
 export async function js_dollar(ast) {
-  let choices = [
-    {
-      name: "i",
-      fn: js_dollar_i,
-    },
-    {
-      name: "ie",
-      fn: js_dollar_ie,
-    },
-    {
-      name: "r",
-      fn: js_dollar_r,
-    },
-    {
-      name: "rt",
-      fn: js_dollar_rt,
-    },
-    {
-      name: "rf",
-      fn: js_dollar_rf,
-    },
-    {
-      name: "a",
-      fn: js_dollar_a,
-    },
-    {
-      name: "g",
-      fn: js_dollar_g,
-    },
-    {
-      name: "s",
-      fn: js_dollar_s,
-    },
-    {
-      name: "f",
-      fn: js_dollar_f,
-    },
-  ];
+  let choices = js_dollar_choices();
   let afters = [];
   async function lambda(v) {
     async function lambda2(s) {
