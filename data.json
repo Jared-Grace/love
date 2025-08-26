@@ -1738,10 +1738,11 @@
   "s expand",
   "ps",
   "s dollar",
-  "mn"
+  "mn",
+  "fs js_dollar_choices"
  ],
- "marker_current": "2",
- "function_current": "marker_rename",
+ "marker_current": "1",
+ "function_current": "js_dollar_choices",
  "terminal": false,
  "identifiers": {
   "log": [
