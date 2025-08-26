@@ -10901,9 +10901,6 @@
   ],
   "index3": [
    "app_replace_rule_set"
-  ],
-  "$": [
-   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19647,7 +19644,6 @@
     "lambda8",
     "sb",
     "valid",
-    "$",
     "index3"
    ]
   },
