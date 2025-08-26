@@ -10951,9 +10951,6 @@
   ],
   "choice_name": [
    "js_dollar"
-  ],
-  "count2": [
-   "js_dollar_a_generic"
   ]
  },
  "functions": {
@@ -14300,7 +14297,6 @@
     "count",
     "l",
     "lambda3",
-    "count2",
     "next",
     "type_is",
     "declarations",
