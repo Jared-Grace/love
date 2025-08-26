@@ -1,3 +1,4 @@
+import { js_code_string } from "./js_code_string.mjs";
 import { js_property_parse_expression_add } from "./js_property_parse_expression_add.mjs";
 import { js_string } from "./js_string.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
@@ -17,6 +18,7 @@ export async function js_dollar_new(code) {
     let { properties } = oe;
     let s = js_string(code);
     const key_code = "name";
+    let code_string = js_code_string(value_string);
     const value_code = "name";
     js_property_parse_expression_add(key_code, value_code, properties);
     log(array_expression);
