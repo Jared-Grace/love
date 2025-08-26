@@ -1732,10 +1732,11 @@
   "s assert",
   "c object_property_exists_assert object_property_exists_not_assert",
   "ffc",
-  "as app"
+  "as app",
+  "o an"
  ],
  "marker_current": "1",
- "function_current": "object_property_exists_not_assert",
+ "function_current": "app_new",
  "terminal": false,
  "identifiers": {
   "log": [
