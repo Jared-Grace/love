@@ -5191,8 +5191,7 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code",
-   "js_dollar_new"
+   "folder_current_join_code"
   ],
   "folder_public": [
    "folder_public",
@@ -20625,7 +20624,6 @@
     "type",
     "properties",
     "code_string",
-    "value_string",
     "code2"
    ]
   }
