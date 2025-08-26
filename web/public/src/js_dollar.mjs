@@ -19,7 +19,7 @@ import { each_async } from "./each_async.mjs";
 import { js_dollar_rt } from "./js_dollar_rt.mjs";
 import { js_dollar_ie } from "./js_dollar_ie.mjs";
 export async function js_dollar(ast) {
-  let seconds = [
+  let choices = [
     {
       name: "i",
       fn: js_dollar_i,
@@ -86,7 +86,7 @@ export async function js_dollar(ast) {
         });
       }
     }
-    await each_async(seconds, lambda2);
+    await each_async(choices, lambda2);
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   lambda_invoke_multiple(afters);
