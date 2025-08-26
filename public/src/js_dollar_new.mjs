@@ -8,6 +8,10 @@ export async function js_dollar_new(code) {
   async function lambda(a) {
     let array_expression = marker_next_declare_single_init(a);
     let { elements } = array_expression;
+    let oe = {
+      type: "ObjectExpression",
+      properties: [],
+    };
     log(array_expression);
   }
   let code2 = await function_transform_marker_specified(
