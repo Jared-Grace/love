@@ -17,7 +17,7 @@ export async function js_dollar_new(code) {
       properties: [],
     };
     let { properties } = oe;
-    let code_string = js_code_string(value_string);
+    let code_string = js_code_string(code);
     js_property_parse_expression_add("name", code_string, properties);
     js_property_parse_expression_add("fn", combined, properties);
     list_add(elements, oe);
