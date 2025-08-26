@@ -1975,7 +1975,8 @@
    "marker_rename",
    "js_dollar_choices",
    "js_dollar_new",
-   "js_declaration_single_block_body"
+   "js_declaration_single_block_body",
+   "js_dollar_a"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14230,6 +14231,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
+    "marker",
     "js_dollar_a_generic",
     "each",
     "object_replace",
