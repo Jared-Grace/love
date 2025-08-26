@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { marker } from "./marker.mjs";
@@ -11,6 +12,7 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   let count = 1;
   let s1 = list_size_1(remaining);
   if (s1) {
+    let first = list_first(list);
     let i = integer_to(input);
   }
   marker("1");
