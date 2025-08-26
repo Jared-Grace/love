@@ -1732,7 +1732,6 @@
   "n marker_rename",
   "s expand",
   "ps",
-  "s dollar",
   "mn",
   "fs js_dollar_choices",
   "mt",
@@ -1745,7 +1744,8 @@
   "s return",
   "s blody",
   "r js_declaration_single_block_blody js_declaration_single_block_body",
-  "o js_dollar_a"
+  "o js_dollar_a",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
