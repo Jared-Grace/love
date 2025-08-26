@@ -2285,8 +2285,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "js_dollar_new"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3271,7 +3270,8 @@
    "html_update_dev",
    "html_update_generic",
    "html_update_public",
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "js_dollar_new"
   ],
   "output": [
    "watch",
@@ -10891,7 +10891,8 @@
   ],
   "js_dollar_choices": [
    "js_dollar",
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "js_dollar_new"
   ],
   "js_dollar_new": [
    "js_dollar_new"
@@ -20587,6 +20588,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_dollar_choices",
     "function_transform_marker_specified",
     "marker",
     "js_dollar_new",
@@ -20594,7 +20596,7 @@
     "lambda",
     "a",
     "code2",
-    "f_name",
+    "name",
     "marker_name"
    ]
   }
