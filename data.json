@@ -3209,7 +3209,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "js_dollar_new"
   ],
   "name": [
    "watch",
@@ -4242,7 +4243,8 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text"
+   "html_p_text",
+   "js_dollar_new"
   ],
   "f_names": [
    "functions_names",
@@ -6601,7 +6603,8 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set"
+   "html_attribute_set",
+   "js_dollar_new"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10261,7 +10264,8 @@
   ],
   "js_property": [
    "marker_screen_add",
-   "js_property"
+   "js_property",
+   "js_dollar_new"
   ],
   "shorthand": [
    "js_property",
@@ -20594,6 +20598,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_property",
     "marker_next_declare_single_init",
     "log",
     "js_dollar_choices",
@@ -20608,6 +20613,9 @@
     "oe",
     "type",
     "properties",
+    "p",
+    "key",
+    "value",
     "code2",
     "name"
    ]
