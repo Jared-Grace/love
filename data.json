@@ -6063,7 +6063,8 @@
    "range",
    "function_aliases_restore",
    "each_range_async",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "js_dollar_new"
   ],
   "formatted": [
    "function_format",
@@ -10917,7 +10918,8 @@
    "js_dollar_new"
   ],
   "js_statement_return_empty": [
-   "js_if_blockify_generic"
+   "js_if_blockify_generic",
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20600,6 +20602,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_statement_return_empty",
     "function_transform",
     "function_new_js_inner",
     "list_add",
@@ -20616,6 +20619,7 @@
     "name",
     "lambda",
     "ast",
+    "r",
     "result",
     "a",
     "array_expression",
