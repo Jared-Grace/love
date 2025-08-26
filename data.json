@@ -3209,8 +3209,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "js_dollar_new"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -5193,8 +5192,7 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code",
-   "js_dollar_new"
+   "folder_current_join_code"
   ],
   "folder_public": [
    "folder_public",
@@ -20620,10 +20618,8 @@
     "type",
     "properties",
     "s",
-    "value_string",
     "key",
     "p",
-    "value",
     "code2",
     "name"
    ]
