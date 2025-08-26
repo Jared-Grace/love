@@ -2168,7 +2168,8 @@
    "js_dollar_new",
    "js_declaration_single_block_body",
    "js_dollar_choices_x",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_dollar_new_args"
   ],
   "code": [
    "data_identifiers_file",
@@ -2316,7 +2317,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "js_dollar_new_args"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2535,7 +2537,8 @@
    "global_function_async",
    "global_function_property_async",
    "marker_rename",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2617,7 +2620,8 @@
    "function_rename_identifiers",
    "app_replace_rule_set",
    "app_replace_settings",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3315,7 +3319,8 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_dollar_new_args"
   ],
   "args": [
    "watch",
@@ -3807,7 +3812,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -5425,7 +5431,8 @@
    "marker_functionize",
    "task_new",
    "js_declaration_single_block_body",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -5840,7 +5847,8 @@
    "functions_transform",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -6102,7 +6110,8 @@
    "function_aliases_restore",
    "each_range_async",
    "app_replace_rule_set",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "formatted": [
    "function_format",
@@ -7657,7 +7666,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_dollar_new_args"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -10964,14 +10974,16 @@
   ],
   "js_statement_return_empty": [
    "js_if_blockify_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
    "functions_combine",
    "task_new",
    "marker_top",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "choice_name": [
    "js_dollar"
@@ -20751,13 +20763,25 @@
    ]
   },
   "js_dollar_new_args": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_transform",
+    "list_add",
+    "js_declaration_single_block_body",
+    "js_statement_return_empty",
     "js_dollar_new_name",
     "marker",
     "js_dollar_new_args",
     "code",
-    "combined"
+    "combined",
+    "lambda2",
+    "ast",
+    "r",
+    "body_block",
+    "output",
+    "f_name",
+    "lambda",
+    "ast2"
    ]
   }
  },
