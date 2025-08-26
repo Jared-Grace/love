@@ -1,3 +1,4 @@
+import { js_declare_single_init } from "./js_declare_single_init.mjs";
 import { log } from "./log.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
