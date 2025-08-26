@@ -16,12 +16,14 @@ import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_null } from "./js_null.mjs";
 export function js_dollar_s({ stack1, stack2, ast, afters }) {
+  let count = 1;
   js_dollar_a_generic({
     stack1,
     stack2,
     afters,
     lambda,
     ast,
+    count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
     "todo handle more than 1";
