@@ -10901,6 +10901,9 @@
   ],
   "index3": [
    "app_replace_rule_set"
+  ],
+  "nni": [
+   "app_replace_rule_set"
   ]
  },
  "functions": {
@@ -19644,6 +19647,7 @@
     "lambda8",
     "sb",
     "valid",
+    "nni",
     "index3"
    ]
   },
