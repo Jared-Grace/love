@@ -17,8 +17,9 @@ export async function js_dollar_new(code) {
     };
     let { properties } = oe;
     let s = js_string(code);
+    const key_code = "name";
     const value_code = "name";
-    let p = js_property_parse_expression("name", value_code);
+    let p = js_property_parse_expression(key_code, value_code);
     list_add(properties, p);
     log(array_expression);
   }
