@@ -1731,7 +1731,8 @@
   "o list_any",
   "s assert",
   "c object_property_exists_assert object_property_exists_not_assert",
-  "ffc"
+  "ffc",
+  "as app"
  ],
  "marker_current": "1",
  "function_current": "object_property_exists_not_assert",
@@ -20613,7 +20614,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-26T02:31:14.100Z",
+ "git_push_when": "2025-08-26T19:32:14.553Z",
  "error_attention": null,
  "app_current": "replace"
 }
