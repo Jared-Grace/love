@@ -23,7 +23,7 @@ export async function js_dollar_new(code) {
   }
   let result = await function_transform(combined, lambda2);
   async function lambda(a) {
-    let ast = a;
+    let { ast } = a;
     let array_expression = marker_next_declare_single_init(a);
     let { elements } = array_expression;
     let oe = {
