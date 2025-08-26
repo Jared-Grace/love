@@ -7930,7 +7930,6 @@
    "js_declare_init_set"
   ],
   "js_dollar_rf": [
-   "js_dollar",
    "js_dollar_rf"
   ],
   "list_get_end_3": [
@@ -7946,24 +7945,19 @@
    "lambda_invoke_multiple"
   ],
   "js_dollar_i": [
-   "js_dollar",
    "js_dollar_i",
    "js_dollar_ie"
   ],
   "js_dollar_r": [
-   "js_dollar",
    "js_dollar_r"
   ],
   "js_dollar_a": [
-   "js_dollar",
    "js_dollar_a"
   ],
   "js_dollar_s": [
-   "js_dollar",
    "js_dollar_s"
   ],
   "js_dollar_f": [
-   "js_dollar",
    "js_dollar_f"
   ],
   "list_remove_multiple": [
@@ -7972,7 +7966,6 @@
    "marker_functionize"
   ],
   "js_dollar_g": [
-   "js_dollar",
    "js_dollar_g"
   ],
   "js_identifier_unique_ast": [
@@ -8019,11 +8012,9 @@
    "js_imports_declarations"
   ],
   "js_dollar_rt": [
-   "js_dollar",
    "js_dollar_rt"
   ],
   "js_dollar_ie": [
-   "js_dollar",
    "js_dollar_ie"
   ],
   "afters": [
@@ -10874,6 +10865,9 @@
   ],
   "js_expand_generic": [
    "marker_expand"
+  ],
+  "js_dollar_choices": [
+   "js_dollar"
   ]
  },
  "functions": {
@@ -14138,16 +14132,10 @@
   },
   "js_dollar": {
    "identifiers": [
-    "js_dollar_rf",
+    "js_dollar_choices",
     "list_get_end_3",
     "lambda_invoke_multiple",
-    "js_dollar_i",
-    "js_dollar_r",
-    "js_dollar_a",
-    "js_dollar_s",
-    "js_dollar_f",
     "list_get_end_2",
-    "js_dollar_g",
     "list_first_second",
     "list_skip",
     "string_empty_not_is",
@@ -14156,19 +14144,17 @@
     "js_visit_type_each_async",
     "list_get_end_1",
     "each_async",
-    "js_dollar_rt",
-    "js_dollar_ie",
     "js_dollar",
     "ast",
     "choices",
-    "name",
-    "fn",
     "afters",
     "lambda",
     "v",
     "lambda2",
     "s",
+    "name",
     "second_name",
+    "fn",
     "node",
     "stack",
     "stack1",
