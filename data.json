@@ -2910,7 +2910,8 @@
    "string_slice",
    "tautology",
    "firebase_service_account",
-   "marker_rename"
+   "marker_rename",
+   "js_dollar_a_generic"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -2977,8 +2978,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_dollar_a_generic"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3896,7 +3896,8 @@
    "js_log_remove",
    "marker_functionize",
    "app_replace_rule_set",
-   "app_replace_settings"
+   "app_replace_settings",
+   "js_dollar_a_generic"
   ],
   "value2": [
    "error_attention_set",
@@ -3931,8 +3932,7 @@
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "http",
-   "js_dollar_a_generic"
+   "http"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -4960,7 +4960,8 @@
   ],
   "each_range": [
    "each_range",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "js_dollar_a_generic"
   ],
   "count": [
    "each_range",
@@ -10952,6 +10953,9 @@
   ],
   "choice_name": [
    "js_dollar"
+  ],
+  "count2": [
+   "js_dollar_a_generic"
   ]
  },
  "functions": {
@@ -14285,7 +14289,7 @@
   },
   "js_dollar_a_generic": {
    "identifiers": [
-    "error",
+    "each_range",
     "list_add",
     "list_next",
     "list_is",
@@ -14298,7 +14302,9 @@
     "ast",
     "count",
     "l",
-    "message",
+    "v",
+    "count2",
+    "lambda3",
     "next",
     "type_is",
     "declarations",
