@@ -1758,10 +1758,11 @@
   "de js_dollar_choices_x",
   "ps",
   "nd x",
-  "r js_dollar_choices_x js_dollar_x"
+  "r js_dollar_choices_x js_dollar_x",
+  "o nd"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_x",
+ "function_current": "js_dollar_new",
  "terminal": false,
  "identifiers": {
   "log": [

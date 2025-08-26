@@ -49,7 +49,7 @@ export function js_dollar_choices() {
     },
     {
       name: "x",
-      fn: js_dollar_choices_x,
+      fn: js_dollar_x,
     },
   ];
   return choices;
