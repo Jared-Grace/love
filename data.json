@@ -5352,8 +5352,7 @@
    "js_imports_paths_fix",
    "js_property_identifier",
    "marker_screen_add",
-   "js_await_wrap",
-   "js_dollar_new"
+   "js_await_wrap"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6567,8 +6566,7 @@
    "marker_if_test_replace",
    "js_await",
    "js_imports_paths_fix",
-   "js_await_wrap",
-   "js_dollar_new"
+   "js_await_wrap"
   ],
   "type": [
    "function_params_consolidate",
@@ -6606,8 +6604,7 @@
    "storage_local_get_context",
    "storage_local_set_context",
    "storage_local_initialize_context",
-   "html_attribute_set",
-   "js_dollar_new"
+   "html_attribute_set"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10268,8 +10265,7 @@
   ],
   "js_property": [
    "marker_screen_add",
-   "js_property",
-   "js_dollar_new"
+   "js_property"
   ],
   "shorthand": [
    "js_property",
@@ -10919,6 +10915,9 @@
    "js_dollar_new"
   ],
   "value_code": [
+   "js_dollar_new"
+  ],
+  "js_property_parse_expression": [
    "js_dollar_new"
   ]
  },
@@ -20608,10 +20607,9 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_property_parse_expression",
     "list_add",
-    "js_parse_expression",
     "js_string",
-    "js_property",
     "marker_next_declare_single_init",
     "log",
     "js_dollar_choices",
@@ -20629,8 +20627,6 @@
     "s",
     "key_code",
     "value_code",
-    "key",
-    "expression",
     "p",
     "code2",
     "name"
