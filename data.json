@@ -1744,7 +1744,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "app_replace_rule_set"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2952,7 +2953,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_replace_rule_set"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19561,6 +19563,7 @@
   "app_replace_rule_set": {
    "async": false,
    "identifiers": [
+    "log",
     "object_property_set_exists_not",
     "range",
     "list_any",
@@ -19628,6 +19631,7 @@
     "letter",
     "lambda5",
     "rule2",
+    "message",
     "eq",
     "alert",
     "before",
