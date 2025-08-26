@@ -3781,7 +3781,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_dollar_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -20607,6 +20608,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "list_add",
     "js_parse_expression",
     "js_string",
     "js_property",
