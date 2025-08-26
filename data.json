@@ -3194,7 +3194,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "app_replace_rule_set"
   ],
   "name": [
    "watch",
@@ -10902,7 +10903,7 @@
   "index3": [
    "app_replace_rule_set"
   ],
-  "nni": [
+  "nn2": [
    "app_replace_rule_set"
   ]
  },
@@ -19647,7 +19648,8 @@
     "lambda8",
     "sb",
     "valid",
-    "nni",
+    "nn2",
+    "value",
     "index3"
    ]
   },
