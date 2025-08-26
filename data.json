@@ -2500,7 +2500,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "global_function_async",
-   "global_function_property_async"
+   "global_function_property_async",
+   "marker_rename"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2891,7 +2892,8 @@
    "string_size",
    "string_slice",
    "tautology",
-   "firebase_service_account"
+   "firebase_service_account",
+   "marker_rename"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4146,7 +4148,8 @@
    "null_not_is_assert",
    "promise_not_is",
    "visit_filter_recursive_async",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "marker_rename"
   ],
   "without": [
    "string_suffix_without",
@@ -7042,7 +7045,8 @@
    "marker_leave",
    "marker_above_generic",
    "marker_above_delete",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "marker_rename"
   ],
   "marker_down_choices_lambda": [
    "marker_down_choices",
@@ -20627,10 +20631,14 @@
    ]
   },
   "marker_rename": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_transform_marker_current",
     "marker",
-    "marker_rename"
+    "marker_rename",
+    "lambda",
+    "a",
+    "v"
    ]
   }
  },
