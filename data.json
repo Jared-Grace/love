@@ -6566,7 +6566,8 @@
    "marker_if_test_replace",
    "js_await",
    "js_imports_paths_fix",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_dollar_new"
   ],
   "type": [
    "function_params_consolidate",
@@ -8313,7 +8314,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_dollar_new"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -20619,6 +20621,8 @@
     "properties",
     "s",
     "key",
+    "expression",
+    "code_expression",
     "p",
     "code2",
     "name"
