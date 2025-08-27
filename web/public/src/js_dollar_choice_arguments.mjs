@@ -10,7 +10,7 @@ export async function js_dollar_choice_arguments() {
     names = oe;
     let { properties } = oe;
     let mapped = list_map_property(properties, "key");
-    names = js_identifiers_to_names(mapped);
+    js_identifiers_to_names(mapped);
   }
   let code2 = await function_transform_marker_specified(
     js_dollar.name,
