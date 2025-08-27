@@ -3809,8 +3809,7 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "marker_screen_add",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -5428,8 +5427,7 @@
    "marker_functionize",
    "task_new",
    "js_declaration_single_block_body",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -6107,8 +6105,7 @@
    "function_aliases_restore",
    "each_range_async",
    "app_replace_rule_set",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "formatted": [
    "function_format",
@@ -10970,16 +10967,14 @@
   ],
   "js_statement_return_empty": [
    "js_if_blockify_generic",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
    "functions_combine",
    "task_new",
    "marker_top",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "choice_name": [
    "js_dollar"
@@ -20762,22 +20757,17 @@
    "async": true,
    "identifiers": [
     "function_transform",
-    "list_add",
-    "js_declaration_single_block_body",
-    "js_statement_return_empty",
     "js_dollar_new_name",
     "marker",
     "js_dollar_new_args",
     "code",
     "combined",
     "lambda2",
-    "ast",
-    "r",
-    "body_block"
+    "ast"
    ]
   }
  },
- "git_push_when": "2025-08-26T21:02:18.340Z",
+ "git_push_when": "2025-08-27T20:52:14.501Z",
  "error_attention": null,
  "app_current": "replace"
 }
