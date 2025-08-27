@@ -2012,7 +2012,8 @@
    "js_dollar",
    "js_dollar_new_args",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_names",
+   "function_open_dollar_choice"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2332,7 +2333,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "function_open_dollar_choice"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2944,7 +2946,8 @@
    "string_slice",
    "tautology",
    "firebase_service_account",
-   "marker_rename"
+   "marker_rename",
+   "function_open_dollar_choice"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5603,7 +5606,8 @@
    "functions_search_open",
    "function_new",
    "function_open",
-   "function_open_app"
+   "function_open_app",
+   "function_open_dollar_choice"
   ],
   "list_single": [
    "functions_search_open",
@@ -11051,6 +11055,9 @@
   "js_dollar_new_args_inner": [
    "js_dollar_new_args",
    "js_dollar_new"
+  ],
+  "function_open_dollar_choice": [
+   "function_open_dollar_choice"
   ]
  },
  "functions": {
@@ -20872,9 +20879,19 @@
     "mapped",
     "names"
    ]
+  },
+  "function_open_dollar_choice": {
+   "async": true,
+   "identifiers": [
+    "function_open",
+    "marker",
+    "function_open_dollar_choice",
+    "f_name",
+    "v"
+   ]
   }
  },
- "git_push_when": "2025-08-27T20:52:14.501Z",
+ "git_push_when": "2025-08-27T23:10:22.698Z",
  "error_attention": null,
  "app_current": "replace"
 }
