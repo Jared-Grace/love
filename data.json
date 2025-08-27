@@ -7841,7 +7841,8 @@
    "js_return_name"
   ],
   "ast_call": [
-   "js_call_new_code"
+   "js_call_new_code",
+   "js_expand_generic"
   ],
   "arg_name": [
    "js_call_new_code"
@@ -20999,6 +21000,7 @@
     "a_names",
     "name",
     "ast",
+    "ast_call",
     "identifiers",
     "intesection",
     "params_names",
