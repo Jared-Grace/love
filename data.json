@@ -6876,7 +6876,8 @@
    "list_not_is",
    "list_squash",
    "log_unparse_try",
-   "marker_down_choices"
+   "marker_down_choices",
+   "js_dollar_x"
   ],
   "js_node_type_is": [
    "js_atomize_function",
@@ -8176,7 +8177,8 @@
    "list_not_is",
    "list_squash",
    "marker_down_choices",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_dollar_x"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -20810,6 +20812,7 @@
   "js_dollar_x": {
    "async": true,
    "identifiers": [
+    "list_is",
     "js_expand_generic",
     "marker",
     "js_dollar_x",
@@ -20820,6 +20823,7 @@
     "stack3",
     "ast",
     "afters",
+    "l",
     "inserted",
     "next",
     "index"
