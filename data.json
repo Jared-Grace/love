@@ -2223,7 +2223,8 @@
    "firebase_deploy_function",
    "html_update_generic",
    "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "js_code_declaration"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2897,7 +2898,6 @@
    "json_from",
    "js_code_braces_empty",
    "js_code_call_args",
-   "js_code_declaration",
    "js_code_export",
    "js_code_let_assign",
    "js_code_return",
@@ -13962,7 +13962,7 @@
     "async_is",
     "args",
     "prefix",
-    "v"
+    "code"
    ],
    "async": false
   },
