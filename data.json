@@ -1767,8 +1767,8 @@
   "s func,code",
   "s code,dec",
   "is js_keyword_function",
-  "p",
   "js_dollar_new_args x",
+  "p",
   "js_dollar_choice_arguments"
  ],
  "marker_current": "1",
