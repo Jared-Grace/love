@@ -1,7 +1,10 @@
-import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
+import { function_transform_marker } from "./function_transform_marker.mjs";
+import { data_function_current_get } from "./data_function_current_get.mjs";
 import { marker } from "./marker.mjs";
 export async function marker_rename() {
-  async function lambda(a) {}$x
-  let v = await function_transform_marker_current(lambda);
+  async function lambda(a) {}
+  marker("1");
+  let f_name_current = await data_function_current_get();
+  let v2 = await function_transform_marker(f_name_current, lambda);
+  let v = v2;
 }
-
