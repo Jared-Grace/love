@@ -367,7 +367,6 @@
   "i function_transform_command",
   "a ftc function_transform_command",
   "fs js_return_name",
-  "s names",
   "i js_return_name",
   "ftc js_return_name js_return_name",
   "i marker_call",
@@ -1763,7 +1762,8 @@
   "a mk marker",
   "n js_dollar_new_args",
   "p",
-  "js_dollar_new_args"
+  "js_dollar_new_args",
+  "s names"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
