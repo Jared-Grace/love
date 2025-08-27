@@ -13,7 +13,6 @@ export async function js_dollar_x({
   afters,
 }) {
   marker("1");
-  return;
   let l = list_is(stack2);
   if (l) {
     let index = list_next_index(stack2, stack1);
