@@ -2175,7 +2175,8 @@
    "js_dollar_new",
    "js_declaration_single_block_body",
    "js_dollar_choices_x",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "js_dollar_x"
   ],
   "code": [
    "data_identifiers_file",
@@ -6047,7 +6048,8 @@
    "js_await_add",
    "js_call_function_if",
    "js_node_type_not_is_if",
-   "js_log_remove"
+   "js_log_remove",
+   "js_dollar_x"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -7052,7 +7054,8 @@
    "marker_previous_index",
    "marker_remove",
    "marker_leave",
-   "js_await_add"
+   "js_await_add",
+   "js_dollar_x"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -7796,7 +7799,8 @@
    "js_call_new_code",
    "js_dollar",
    "js_dollar_g",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_dollar_x"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -7977,7 +7981,8 @@
   "stack3": [
    "js_declare_assign",
    "js_dollar",
-   "js_dollar_r"
+   "js_dollar_r",
+   "js_dollar_x"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8107,7 +8112,8 @@
    "js_dollar_f",
    "js_dollar_g",
    "js_dollar_s",
-   "lambda_invoke_multiple"
+   "lambda_invoke_multiple",
+   "js_dollar_x"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -20768,9 +20774,15 @@
     "js_expand_generic",
     "marker",
     "js_dollar_x",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters",
     "inserted",
     "next",
-    "stack2",
     "index"
    ]
   },
