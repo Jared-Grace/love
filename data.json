@@ -7469,7 +7469,8 @@
    "js_dollar_a_generic",
    "js_identifier_defineds",
    "list_next",
-   "list_next_index"
+   "list_next_index",
+   "js_dollar_x"
   ],
   "js_return_name": [
    "js_call_new_code",
@@ -20812,6 +20813,7 @@
   "js_dollar_x": {
    "async": true,
    "identifiers": [
+    "list_next",
     "list_is",
     "js_expand_generic",
     "marker",
@@ -20824,8 +20826,8 @@
     "ast",
     "afters",
     "l",
-    "inserted",
     "next",
+    "inserted",
     "index"
    ]
   },
