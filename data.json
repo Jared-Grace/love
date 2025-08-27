@@ -2010,7 +2010,6 @@
    "app_replace_settings",
    "list_any",
    "object_property_exists_not_assert",
-   "marker_rename",
    "js_dollar_choices",
    "js_dollar_new",
    "js_declaration_single_block_body",
@@ -20810,7 +20809,6 @@
    "identifiers": [
     "function_transform_marker",
     "data_function_current_get",
-    "marker",
     "marker_rename",
     "lambda",
     "a",
