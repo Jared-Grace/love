@@ -1599,7 +1599,6 @@
   "oa replace",
   "s invoke",
   "n lambda_value",
-  "s param",
   "s rule_set",
   "unlias s",
   "u s",
@@ -1764,7 +1763,8 @@
   "p",
   "s names",
   "js_dollar_new_args",
-  "s para,"
+  "s para,",
+  "s param"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
