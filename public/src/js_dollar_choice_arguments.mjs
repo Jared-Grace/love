@@ -7,6 +7,7 @@ export async function js_dollar_choice_arguments() {
   let names = null;
   async function lambda(a) {
     let oe = marker_next_declare_single_init(a);
+    names = oe;
     let { properties } = oe;
     let mapped = list_map_property(properties, "key");
     names = js_identifiers_to_names(mapped);
