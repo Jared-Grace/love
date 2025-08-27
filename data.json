@@ -11122,6 +11122,9 @@
   ],
   "intesection": [
    "js_expand_generic"
+  ],
+  "identifiers_call": [
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -21001,6 +21004,7 @@
     "a_names",
     "name",
     "ast_call",
+    "identifiers_call",
     "identifiers",
     "intesection",
     "params_names",
