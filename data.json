@@ -3737,7 +3737,8 @@
   "list_remove_all": [
    "list_remove_all",
    "data_file_update_inner",
-   "list_remove_multiple"
+   "list_remove_multiple",
+   "js_expand_generic"
   ],
   "list_empty_is": [
    "function_identifier_replace",
@@ -11167,8 +11168,7 @@
    "marker_rename"
   ],
   "list_remove_multiple_if_exists": [
-   "list_remove_multiple_if_exists",
-   "js_expand_generic"
+   "list_remove_multiple_if_exists"
   ]
  },
  "functions": {
@@ -21017,8 +21017,8 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "list_remove_all",
     "log",
-    "list_remove_multiple_if_exists",
     "functions_names",
     "list_concat",
     "js_identifier_unique",
