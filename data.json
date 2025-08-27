@@ -11130,6 +11130,9 @@
   ],
   "identifiers_call": [
    "js_expand_generic"
+  ],
+  "lc": [
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -21014,6 +21017,7 @@
     "identifiers_call",
     "identifiers",
     "intesection",
+    "lc",
     "lambda2",
     "i",
     "unique",
