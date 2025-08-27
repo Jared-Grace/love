@@ -7469,8 +7469,7 @@
    "js_dollar_a_generic",
    "js_identifier_defineds",
    "list_next",
-   "list_next_index",
-   "js_dollar_x"
+   "list_next_index"
   ],
   "js_return_name": [
    "js_call_new_code",
@@ -8215,7 +8214,8 @@
   ],
   "list_next_index": [
    "js_dollar_s",
-   "list_next_index"
+   "list_next_index",
+   "js_dollar_x"
   ],
   "js_left_right_set": [
    "js_dollar_s",
@@ -20813,7 +20813,7 @@
   "js_dollar_x": {
    "async": true,
    "identifiers": [
-    "list_next",
+    "list_next_index",
     "list_is",
     "js_expand_generic",
     "marker",
