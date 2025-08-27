@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -13,7 +14,6 @@ import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs
 import { js_identifier_replace } from "./js_identifier_replace.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
-import { todo } from "./todo.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_intersect } from "./list_intersect.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
@@ -34,7 +34,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
-      todo();
+      each(list, function lambda2(item2) {});
     }
     let params_names = js_declaration_params_names(declaration);
     each_pair(params_names, a_names, lambda3);
