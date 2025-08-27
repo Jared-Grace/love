@@ -30,8 +30,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
     const a_names = js_identifiers_to_names(arguments2);
     let { name } = callee;
     let { declaration, ast: ast_call } = await function_parse_declaration(name);
-    let identifiers = js_identifiers_names(ast_call);
-    let intesection = list_intersect(identifiers, arguments2);
+    let identifiers_call = js_identifiers_names(ast_call);
+    let identifiers = js_identifiers_names(ast);
+    let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
       todo();
     }
