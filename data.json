@@ -1779,7 +1779,8 @@
   "s dollar",
   "a od function_open_dollar_choice",
   "od a",
-  "s unique"
+  "s unique",
+  "u lc"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
