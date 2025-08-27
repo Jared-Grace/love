@@ -1791,7 +1791,7 @@
   "c list_remove_all_multiple list_remove_multiple"
  ],
  "marker_current": "1",
- "function_current": "list_remove_all_multiple",
+ "function_current": "list_remove_multiple",
  "terminal": false,
  "identifiers": {
   "log": [
