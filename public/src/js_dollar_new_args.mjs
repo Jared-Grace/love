@@ -7,7 +7,7 @@ export async function js_dollar_new_args(code) {
   async function lambda(a) {}
   let code2 = await function_transform_marker_specified(
     js_dollar.name,
-    marker_name,
+    "choice_arguments",
     lambda,
   );
   let combined = js_dollar_new_name(code);
