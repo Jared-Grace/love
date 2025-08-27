@@ -1,3 +1,4 @@
+import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { js_dollar } from "./js_dollar.mjs";
@@ -11,6 +12,7 @@ export async function js_dollar_new_args(code) {
     let oe = marker_next_declare_single_init(a);
     let { properties } = oe;
     let mapped = list_map_property(properties, "key");
+    let names = js_identifiers_to_names(identifiers);
   }
   let code2 = await function_transform_marker_specified(
     js_dollar.name,
