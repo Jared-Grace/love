@@ -2552,8 +2552,7 @@
    "marker_rename",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3321,8 +3320,7 @@
    "js_dollar_choices",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "output": [
    "watch",
@@ -4203,8 +4201,7 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "without": [
    "string_suffix_without",
@@ -5838,8 +5835,7 @@
    "js_auto",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "js_atomize": [
    "js_atomize",
@@ -8653,8 +8649,7 @@
    "js_parse_statement",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "types_function": [
    "js_types_function"
@@ -10339,8 +10334,7 @@
    "function_transform_marker_specified",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -11002,8 +10996,7 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_name"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -11044,7 +11037,8 @@
   ],
   "js_dollar_choice_arguments": [
    "js_dollar_new_args",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_names"
   ],
   "js_declaration_param_add_node": [
    "js_declaration_param_add",
@@ -20874,21 +20868,15 @@
   "js_dollar_choice_arguments_names": {
    "async": true,
    "identifiers": [
+    "js_dollar_choice_arguments",
     "marker",
-    "js_dollar",
-    "function_transform_marker_specified",
     "js_identifiers_to_names",
     "list_map_property",
-    "marker_next_declare_single_init",
     "js_dollar_choice_arguments_names",
     "names",
-    "lambda",
-    "a",
-    "oe",
     "properties",
-    "mapped",
-    "code2",
-    "name"
+    "oe",
+    "mapped"
    ]
   }
  },
