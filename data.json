@@ -1764,7 +1764,8 @@
   "js_dollar_new_args",
   "s para,",
   "s param",
-  "s declar"
+  "s declar",
+  "s func,code"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
