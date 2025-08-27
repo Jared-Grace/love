@@ -3412,7 +3412,8 @@
    "list_slice_end",
    "ternary",
    "functions_combine_name",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "js_dollar_choice_arguments"
   ],
   "separator": [
    "watch",
@@ -5461,7 +5462,6 @@
    "list_map_property",
    "marker_down_choices",
    "js_imports_declarations",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -5504,7 +5504,6 @@
    "list_map_squash",
    "marker_top",
    "js_dollar_new_args",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -5537,7 +5536,6 @@
    "functions_transform",
    "js_visit_children_get",
    "list_map_index",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -5636,7 +5634,6 @@
    "tasks_run",
    "marker_screen_add",
    "js_dollar_new",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -6591,7 +6588,6 @@
    "js_declaration_params_names",
    "js_identifiers_to_names",
    "js_identifier_defineds",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -20847,16 +20843,12 @@
    "identifiers": [
     "js_dollar",
     "function_transform_marker_specified",
-    "js_identifiers_to_names",
-    "list_map_property",
     "marker_next_declare_single_init",
     "js_dollar_choice_arguments",
-    "names",
+    "result",
     "lambda",
     "a",
     "oe",
-    "properties",
-    "mapped",
     "code2",
     "name"
    ]
