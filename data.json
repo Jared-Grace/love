@@ -1762,7 +1762,8 @@
   "o nd",
   "s dollar",
   "a mk marker",
-  "n js_dollar_new_args"
+  "n js_dollar_new_args",
+  "js_dollar_new_args"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
