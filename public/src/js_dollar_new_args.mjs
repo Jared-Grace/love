@@ -1,24 +1,9 @@
-import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
-import { js_dollar } from "./js_dollar.mjs";
-import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
+import { js_dollar_choice_arguments } from "./js_dollar_choice_arguments.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { marker } from "./marker.mjs";
 export async function js_dollar_new_args(code) {
-  let names = null;
-  async function lambda(a) {
-    let oe = marker_next_declare_single_init(a);
-    let { properties } = oe;
-    let mapped = list_map_property(properties, "key");
-    names = js_identifiers_to_names(mapped);
-  }
-  let code2 = await function_transform_marker_specified(
-    js_dollar.name,
-    "choice_arguments",
-    lambda,
-  );
+  let names = await js_dollar_choice_arguments();
   return names;
   let combined = js_dollar_new_name(code);
   async function lambda2(ast) {}
