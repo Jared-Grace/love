@@ -2756,8 +2756,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "js_dollar_x"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -10583,8 +10582,7 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set",
-   "js_dollar_x"
+   "app_replace_rule_set"
   ],
   "html_style_remove": [
    "html_style_remove"
@@ -20833,8 +20831,6 @@
     "l",
     "index",
     "item",
-    "list",
-    "index2",
     "inserted",
     "next"
    ]
