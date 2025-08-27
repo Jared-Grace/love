@@ -9807,7 +9807,6 @@
    "function_aliases_restore",
    "marker_screen_add",
    "js_dollar_new",
-   "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names"
   ],
@@ -20848,7 +20847,6 @@
     "result",
     "lambda",
     "a",
-    "oe",
     "code2",
     "name"
    ]
