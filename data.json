@@ -1782,8 +1782,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "js_dollar_new_args"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -20779,7 +20778,6 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
-    "log",
     "js_declaration_single",
     "js_declaration_param_add_node",
     "js_dollar_choice_arguments",
