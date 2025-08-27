@@ -3033,8 +3033,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_expand_generic"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21058,7 +21057,6 @@
     "intesection",
     "identifiers_all",
     "f_names",
-    "message",
     "lambda2",
     "i",
     "unique",
