@@ -3727,8 +3727,7 @@
    "marker_leave",
    "js_log_remove",
    "js_expand_generic",
-   "js_dollar_x",
-   "list_remove_multiple_if_exists"
+   "js_dollar_x"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -10879,7 +10878,8 @@
    "firebase_storage_url"
   ],
   "list_remove_if_exists": [
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "list_remove_multiple_if_exists"
   ],
   "string_replace": [
    "string_replace",
@@ -21074,8 +21074,8 @@
   "list_remove_multiple_if_exists": {
    "async": false,
    "identifiers": [
+    "list_remove_if_exists",
     "marker",
-    "list_remove",
     "each",
     "list_remove_multiple_if_exists",
     "removals",
