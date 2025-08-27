@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_next_index } from "./list_next_index.mjs";
@@ -20,5 +21,6 @@ export async function js_dollar_x({
     let next = list_get(stack2, index);
     let inserted = await js_expand_generic(next, stack2, index, ast);
     list_remove(stack2, stack1);
+    log(message);
   }
 }
