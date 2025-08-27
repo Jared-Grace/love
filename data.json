@@ -1786,7 +1786,8 @@
   "cs list_remove_multiple if_exists",
   "s remove",
   "de list_remove_multiple_if_exists",
-  "r list_remove_multiple list_remove_all_multiple"
+  "r list_remove_multiple list_remove_all_multiple",
+  "is list_remove_all_multiple"
  ],
  "marker_current": "1",
  "function_current": "list_remove_all_multiple",
