@@ -2765,7 +2765,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_expand_generic"
   ],
   "v": [
    "data_identifiers_file",
@@ -3631,7 +3632,8 @@
   ],
   "removals": [
    "list_remove_multiple",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "js_expand_generic"
   ],
   "item": [
    "each",
@@ -8124,7 +8126,8 @@
   "list_remove_multiple": [
    "js_dollar_a",
    "list_remove_multiple",
-   "marker_functionize"
+   "marker_functionize",
+   "js_expand_generic"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -20996,6 +20999,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "list_remove_multiple",
     "functions_names",
     "list_concat",
     "js_identifier_unique",
@@ -21041,6 +21045,8 @@
     "intesection",
     "identifiers_all",
     "f_names",
+    "removals",
+    "list",
     "lambda2",
     "i",
     "unique",
