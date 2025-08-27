@@ -7548,8 +7548,7 @@
    "js_identifier_unique_ast",
    "js_node_atomize",
    "js_return_atomize",
-   "marker_call_atomize",
-   "js_expand_generic"
+   "marker_call_atomize"
   ],
   "ces": [
    "js_atomize"
@@ -10305,8 +10304,7 @@
    "app_replace_rule_set"
   ],
   "name2": [
-   "app_replace_home",
-   "js_expand_generic"
+   "app_replace_home"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -21017,12 +21015,10 @@
     "lambda2",
     "i",
     "unique",
-    "existing",
-    "name2",
-    "a_name",
     "params_names",
     "lambda3",
     "param_name",
+    "a_name",
     "body_block",
     "last",
     "lambda",
