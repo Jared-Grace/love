@@ -1767,7 +1767,8 @@
   "s declar",
   "s func,code",
   "s code,dec",
-  "is js_keyword_function"
+  "is js_keyword_function",
+  "js_dollar_new_args x"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
