@@ -1784,7 +1784,8 @@
   "s names",
   "s remove,if",
   "cs list_remove_multiple if_exists",
-  "s remove"
+  "s remove",
+  "de list_remove_multiple_if_exists"
  ],
  "marker_current": "1",
  "function_current": "list_remove_multiple_if_exists",
