@@ -1756,7 +1756,6 @@
   "r js_dollar_choices_x js_dollar_x",
   "s imports",
   "o nd",
-  "s dollar",
   "a mk marker",
   "n js_dollar_new_args",
   "s names",
@@ -1776,7 +1775,8 @@
   "de js_dollar_choice_arguments_name",
   "cs js_dollar_choice_arguments names",
   "js_dollar_choice_arguments_names",
-  "fws o dollar_choice"
+  "fws o dollar_choice",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "function_open_dollar_choice",
