@@ -3652,8 +3652,7 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple",
-   "js_dollar_new_args"
+   "list_concat_multiple"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -20789,8 +20788,7 @@
     "combined",
     "lambda2",
     "ast",
-    "declaration",
-    "item"
+    "declaration"
    ]
   },
   "js_dollar_choice_arguments": {
