@@ -3336,7 +3336,8 @@
    "js_code_call",
    "js_code_call_args",
    "list_join_comma_space",
-   "list_join_space"
+   "list_join_space",
+   "js_code_declaration"
   ],
   "lj": [
    "watch",
@@ -7724,7 +7725,8 @@
    "js_code_call",
    "js_code_call_args",
    "js_code_call_args_await_maybe",
-   "js_dollar_g"
+   "js_dollar_g",
+   "js_code_declaration"
   ],
   "js_call_insert": [
    "js_call_insert",
@@ -13952,6 +13954,7 @@
   },
   "js_code_declaration": {
    "identifiers": [
+    "js_code_call_args",
     "js_keyword_function",
     "js_code_wrap_braces",
     "js_code_call",
@@ -13959,6 +13962,7 @@
     "f_name",
     "inside",
     "async_is",
+    "args",
     "prefix",
     "v"
    ],
