@@ -1673,7 +1673,6 @@
   "as rename",
   "a rs function_rename_suffix_add",
   "rs firebase_storage_url project",
-  "s remove",
   "s replace",
   "n string_replace",
   "is firebase_deploy_function_destination_version",
@@ -1784,7 +1783,8 @@
   "a lc list_concat",
   "s names",
   "s remove,if",
-  "cs list_remove_multiple if_exists"
+  "cs list_remove_multiple if_exists",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "list_remove_multiple_if_exists",
