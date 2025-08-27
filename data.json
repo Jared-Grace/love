@@ -1798,7 +1798,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_expand_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3032,7 +3033,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_expand_generic"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21009,6 +21011,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "log",
     "list_remove_multiple_if_exists",
     "functions_names",
     "list_concat",
@@ -21055,6 +21058,7 @@
     "intesection",
     "identifiers_all",
     "f_names",
+    "message",
     "lambda2",
     "i",
     "unique",
