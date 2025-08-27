@@ -2959,8 +2959,7 @@
    "tautology",
    "firebase_service_account",
    "marker_rename",
-   "function_open_dollar_choice",
-   "js_expand_generic"
+   "function_open_dollar_choice"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4224,8 +4223,7 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_expand_generic"
+   "js_dollar_choice_arguments_name"
   ],
   "without": [
    "string_suffix_without",
@@ -4481,8 +4479,7 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove",
-   "js_expand_generic"
+   "html_style_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11136,6 +11133,9 @@
    "js_expand_generic"
   ],
   "identifiers_call": [
+   "js_expand_generic"
+  ],
+  "identifiers_all": [
    "js_expand_generic"
   ]
  },
@@ -21022,9 +21022,7 @@
     "identifiers_call",
     "identifiers",
     "intesection",
-    "v",
-    "a",
-    "b",
+    "identifiers_all",
     "lambda2",
     "i",
     "unique",
