@@ -9,7 +9,7 @@ export async function js_dollar_new_args(code) {
   return names;
   let combined = js_dollar_new_name(code);
   async function lambda2(ast) {
-    let declaration2 = js_declaration_single(ast2);
+    let declaration = js_declaration_single(ast);
     js_declaration_param_add_node(declaration, item);
   }
   await function_transform(combined, lambda2);
