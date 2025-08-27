@@ -2762,8 +2762,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "js_expand_generic"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -6254,7 +6253,8 @@
    "marker_up",
    "marker_above_generic",
    "function_aliases_restore",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_expand_generic"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -11126,9 +11126,6 @@
    "js_expand_generic"
   ],
   "identifiers_call": [
-   "js_expand_generic"
-  ],
-  "item2": [
    "js_expand_generic"
   ]
  },
@@ -21013,8 +21010,7 @@
     "identifiers",
     "intesection",
     "lambda2",
-    "item2",
-    "list",
+    "i",
     "params_names",
     "lambda3",
     "param_name",
