@@ -7690,8 +7690,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_dollar_new"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -20763,7 +20762,6 @@
     "ast",
     "r",
     "body_block",
-    "ast2",
     "lambda",
     "a",
     "array_expression",
