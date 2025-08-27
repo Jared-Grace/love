@@ -3741,12 +3741,12 @@
    "js_log_remove",
    "js_expand_generic",
    "js_dollar_x",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "list_remove_multiple"
   ],
   "list_remove_all": [
    "list_remove_all",
    "data_file_update_inner",
-   "list_remove_multiple",
    "list_remove_all_multiple"
   ],
   "list_empty_is": [
@@ -16787,8 +16787,8 @@
   },
   "list_remove_multiple": {
    "identifiers": [
+    "list_remove",
     "marker",
-    "list_remove_all",
     "each",
     "list_remove_multiple",
     "removals",
