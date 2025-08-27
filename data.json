@@ -3395,8 +3395,7 @@
    "list_slice_end",
    "ternary",
    "functions_combine_name",
-   "object_property_exists_not_assert",
-   "js_dollar_new_args"
+   "object_property_exists_not_assert"
   ],
   "separator": [
    "watch",
@@ -3587,8 +3586,7 @@
    "js_imports_missing",
    "data_identifiers_search",
    "data_file_update_inner",
-   "function_rename_identifiers",
-   "js_dollar_new_args"
+   "function_rename_identifiers"
   ],
   "list_difference": [
    "js_imports_missing",
@@ -20782,14 +20780,12 @@
     "marker",
     "js_dollar_new_args",
     "code",
-    "result",
+    "names",
     "lambda",
     "a",
     "oe",
     "properties",
     "mapped",
-    "names",
-    "identifiers",
     "code2",
     "name",
     "combined",
