@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { each } from "./each.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_map } from "./list_map.mjs";
@@ -35,7 +36,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
       function lambda2(i) {
-        js_identifier_replace(ast_call, param_name, a_name);
+        let unique = js_identifier_unique_ast(ast2, property_name);
+        js_identifier_replace(ast_call, i, a_name);
       }
       each(intesection, lambda2);
     }
