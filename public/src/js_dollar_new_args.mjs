@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { js_dollar } from "./js_dollar.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
@@ -9,6 +10,7 @@ export async function js_dollar_new_args(code) {
   async function lambda(a) {
     let oe = marker_next_declare_single_init(a);
     let { properties } = oe;
+    let mapped = list_map_property(list, property_name);
   }
   let code2 = await function_transform_marker_specified(
     js_dollar.name,
