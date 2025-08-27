@@ -1774,7 +1774,8 @@
   "cs js_dollar_choice_arguments_name",
   "cs js_dollar_choice_arguments name",
   "de js_dollar_choice_arguments_name",
-  "cs js_dollar_choice_arguments names"
+  "cs js_dollar_choice_arguments names",
+  "js_dollar_choice_arguments_names"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_choice_arguments_names",
