@@ -8132,8 +8132,7 @@
   "list_remove_multiple": [
    "js_dollar_a",
    "list_remove_multiple",
-   "marker_functionize",
-   "js_expand_generic"
+   "marker_functionize"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -11160,7 +11159,8 @@
    "marker_rename"
   ],
   "list_remove_multiple_if_exists": [
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -21009,7 +21009,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
-    "list_remove_multiple",
+    "list_remove_multiple_if_exists",
     "functions_names",
     "list_concat",
     "js_identifier_unique",
