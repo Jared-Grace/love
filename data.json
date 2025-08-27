@@ -2942,7 +2942,6 @@
    "js_visit_filter",
    "js_visit_type_each_async",
    "list_all",
-   "list_concat",
    "list_join_comma_space",
    "list_last_is",
    "list_multiple_is",
@@ -11137,6 +11136,9 @@
   ],
   "identifiers_all": [
    "js_expand_generic"
+  ],
+  "concated": [
+   "list_concat"
   ]
  },
  "functions": {
@@ -16117,7 +16119,7 @@
     "list_concat",
     "a",
     "b",
-    "v",
+    "concated",
     "concat"
    ],
    "async": false
