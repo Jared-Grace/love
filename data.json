@@ -8146,8 +8146,7 @@
   ],
   "list_remove_multiple": [
    "list_remove_multiple",
-   "marker_functionize",
-   "js_expand_generic"
+   "marker_functionize"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -11179,7 +11178,8 @@
   ],
   "list_remove_all_multiple": [
    "list_remove_all_multiple",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -21028,7 +21028,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
-    "list_remove_multiple",
+    "list_remove_all_multiple",
     "log",
     "functions_names",
     "list_concat",
