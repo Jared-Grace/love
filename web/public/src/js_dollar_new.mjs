@@ -1,3 +1,4 @@
+import { js_dollar_new_args_inner } from "./js_dollar_new_args_inner.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { function_new } from "./function_new.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
@@ -19,6 +20,7 @@ export async function js_dollar_new(code) {
     let r = js_statement_return_empty();
     let body_block = js_declaration_single_block_body(ast);
     list_add(body_block, r);
+    js_dollar_new_args_inner(ast);
   }
   await function_transform(combined, lambda2);
   async function lambda(a) {
