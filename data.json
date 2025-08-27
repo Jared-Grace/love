@@ -3646,7 +3646,8 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "js_dollar_new_args"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6513,7 +6514,8 @@
    "js_declaration_single_name",
    "js_imports_paths_fix",
    "function_parse_declaration_inner",
-   "js_declaration_single_block_body"
+   "js_declaration_single_block_body",
+   "js_dollar_new_args"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -10996,7 +10998,8 @@
    "js_dollar_new_args"
   ],
   "js_declaration_param_add_node": [
-   "js_declaration_param_add"
+   "js_declaration_param_add",
+   "js_dollar_new_args"
   ]
  },
  "functions": {
@@ -20758,6 +20761,7 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
+    "js_declaration_param_add_node",
     "js_dollar_choice_arguments",
     "function_transform",
     "js_dollar_new_name",
@@ -20767,7 +20771,9 @@
     "names",
     "combined",
     "lambda2",
-    "ast"
+    "ast",
+    "declaration",
+    "item"
    ]
   }
  },
