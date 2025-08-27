@@ -2006,7 +2006,8 @@
    "js_dollar_choices_x",
    "js_dollar_x",
    "js_dollar",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "js_dollar_choice_arguments_name"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20844,6 +20845,7 @@
   "js_dollar_choice_arguments_name": {
    "async": true,
    "identifiers": [
+    "marker",
     "js_dollar",
     "function_transform_marker_specified",
     "js_identifiers_to_names",
