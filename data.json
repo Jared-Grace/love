@@ -1782,7 +1782,8 @@
   "s unique",
   "u lc",
   "a lc list_concat",
-  "s names"
+  "s names",
+  "s remove,if"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
