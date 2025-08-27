@@ -14129,8 +14129,8 @@
     "js_declaration_param_add",
     "declaration",
     "param_name",
-    "params",
-    "item"
+    "item",
+    "params"
    ],
    "async": false
   },
