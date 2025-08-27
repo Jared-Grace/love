@@ -43,7 +43,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let identifiers_all = list_concat(identifiers, identifiers_call);
     let f_names = functions_names();
     list_remove_multiple_if_exists(f_names, identifiers_all);
-    log(message);
+    log(identifiers_all);
     function lambda2(i) {
       let unique = js_identifier_unique(identifiers_all, i);
       js_identifier_replace(ast_call, i, unique);
