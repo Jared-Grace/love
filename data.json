@@ -3719,7 +3719,6 @@
    "js_outside_move",
    "list_remove",
    "list_remove_all",
-   "list_remove_multiple",
    "marker_down_generic",
    "marker_enter",
    "marker_functionize",
@@ -3736,7 +3735,8 @@
   ],
   "list_remove_all": [
    "list_remove_all",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "list_remove_multiple"
   ],
   "list_empty_is": [
    "function_identifier_replace",
@@ -16772,7 +16772,7 @@
   },
   "list_remove_multiple": {
    "identifiers": [
-    "list_remove",
+    "list_remove_all",
     "each",
     "list_remove_multiple",
     "removals",
