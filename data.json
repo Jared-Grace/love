@@ -7662,8 +7662,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_dollar_new_args"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -11001,9 +11000,6 @@
   ],
   "js_declaration_param_add_node": [
    "js_declaration_param_add",
-   "js_dollar_new_args"
-  ],
-  "declaration2": [
    "js_dollar_new_args"
   ]
  },
@@ -20778,8 +20774,6 @@
     "combined",
     "lambda2",
     "ast",
-    "declaration2",
-    "ast2",
     "declaration",
     "item"
    ]
