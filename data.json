@@ -989,7 +989,6 @@
   "fr file_open",
   "js_parse 1",
   "o file_open",
-  "s declar",
   "fc function_parse_declaration,ju",
   "cs function_open editor",
   "s function_open_editor",
@@ -1764,7 +1763,8 @@
   "s names",
   "js_dollar_new_args",
   "s para,",
-  "s param"
+  "s param",
+  "s declar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
