@@ -20873,10 +20873,10 @@
     "js_identifiers_to_names",
     "list_map_property",
     "js_dollar_choice_arguments_names",
-    "names",
-    "properties",
     "oe",
-    "mapped"
+    "properties",
+    "mapped",
+    "names"
    ]
   }
  },
