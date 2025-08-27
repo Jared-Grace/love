@@ -20768,11 +20768,11 @@
     "marker",
     "js_dollar_new_args",
     "code",
+    "lambda",
+    "a",
     "code2",
     "f_name",
     "marker_name",
-    "lambda",
-    "a",
     "combined",
     "lambda2",
     "ast"
