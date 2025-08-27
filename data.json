@@ -2182,7 +2182,6 @@
    "js_dollar_new",
    "js_declaration_single_block_body",
    "js_dollar_choices_x",
-   "js_dollar_new_args",
    "js_dollar_x"
   ],
   "code": [
@@ -2635,8 +2634,7 @@
    "function_rename_identifiers",
    "app_replace_rule_set",
    "app_replace_settings",
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -20821,9 +20819,7 @@
     "marker",
     "js_dollar_new_args",
     "code",
-    "combined",
-    "lambda2",
-    "ast"
+    "combined"
    ]
   },
   "js_dollar_choice_arguments": {
