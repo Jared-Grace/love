@@ -3,10 +3,11 @@ import { function_transform } from "./function_transform.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { marker } from "./marker.mjs";
 export async function js_dollar_new_args(code) {
+  async function lambda(a) {}
   let code2 = await function_transform_marker_specified(
     f_name,
     marker_name,
-    async function lambda(a) {},
+    lambda,
   );
   let combined = js_dollar_new_name(code);
   async function lambda2(ast) {}
