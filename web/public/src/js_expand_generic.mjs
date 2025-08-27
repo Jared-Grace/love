@@ -35,12 +35,12 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
-      function lambda2(i) {
-        let unique = js_identifier_unique(identifiers, i);
-        js_identifier_replace(ast_call, i, unique);
-      }
-      each(intesection, lambda2);
     }
+    function lambda2(i) {
+      let unique = js_identifier_unique(identifiers, i);
+      js_identifier_replace(ast_call, i, unique);
+    }
+    each(intesection, lambda2);
     let params_names = js_declaration_params_names(declaration);
     each_pair(params_names, a_names, lambda3);
     function lambda3(param_name, a_name) {
