@@ -1763,7 +1763,8 @@
   "n js_dollar_new_args",
   "p",
   "s names",
-  "js_dollar_new_args"
+  "js_dollar_new_args",
+  "s para,"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_new_args",
