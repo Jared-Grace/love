@@ -2388,8 +2388,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "js_expand_generic"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -7538,7 +7537,8 @@
    "js_identifier_unique",
    "js_identifier_unique_ast",
    "js_node_atomize",
-   "marker_top"
+   "marker_top",
+   "js_expand_generic"
   ],
   "existing": [
    "js_atomize",
@@ -7548,7 +7548,8 @@
    "js_identifier_unique_ast",
    "js_node_atomize",
    "js_return_atomize",
-   "marker_call_atomize"
+   "marker_call_atomize",
+   "js_expand_generic"
   ],
   "ces": [
    "js_atomize"
@@ -7741,8 +7742,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_expand_generic"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -8124,8 +8124,7 @@
   "js_identifier_unique_ast": [
    "js_dollar_g",
    "js_function_id_add",
-   "js_identifier_unique_ast",
-   "js_expand_generic"
+   "js_identifier_unique_ast"
   ],
   "list_first_second": [
    "js_dollar",
@@ -10306,7 +10305,8 @@
    "app_replace_rule_set"
   ],
   "name2": [
-   "app_replace_home"
+   "app_replace_home",
+   "js_expand_generic"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -20973,7 +20973,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
-    "js_identifier_unique_ast",
+    "js_identifier_unique",
     "each",
     "js_unparse",
     "list_map",
@@ -21017,8 +21017,8 @@
     "lambda2",
     "i",
     "unique",
-    "ast2",
-    "property_name",
+    "existing",
+    "name2",
     "a_name",
     "params_names",
     "lambda3",
