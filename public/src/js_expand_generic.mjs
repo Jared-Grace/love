@@ -20,7 +20,7 @@ import { js_identifiers_names } from "./js_identifiers_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
-export async function js_expand_generic(next, stack2, index) {
+export async function js_expand_generic(next, stack2, index, ast) {
   let inserted = null;
   let { expression, declaration: declaration_call } =
     js_statement_call_get(next);
