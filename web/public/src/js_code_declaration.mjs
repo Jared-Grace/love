@@ -4,11 +4,11 @@ import { js_code_wrap_braces } from "./js_code_wrap_braces.mjs";
 export function js_code_declaration(f_name, inside, async_is) {
   let args = [];
   let prefix = async_is ? "async " : "";
-  let v =
+  let code =
     prefix +
     js_keyword_function() +
     " " +
     js_code_call_args(f_name, args) +
     js_code_wrap_braces(inside);
-  return v;
+  return code;
 }
