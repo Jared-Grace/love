@@ -3670,8 +3670,7 @@
    "app_replace_rule_set",
    "lists_get",
    "list_get_end_3",
-   "list_concat_multiple",
-   "js_dollar_x"
+   "list_concat_multiple"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -20830,9 +20829,8 @@
     "afters",
     "l",
     "index",
-    "item",
-    "inserted",
-    "next"
+    "next",
+    "inserted"
    ]
   },
   "js_dollar_new_args": {
