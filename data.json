@@ -9772,7 +9772,8 @@
   "oe": [
    "function_aliases_restore",
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "fp": [
    "function_aliases_restore"
@@ -20776,6 +20777,7 @@
     "result",
     "lambda",
     "a",
+    "oe",
     "code2",
     "name",
     "combined",
