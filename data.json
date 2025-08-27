@@ -8148,7 +8148,8 @@
    "js_dollar_choices"
   ],
   "list_remove_multiple": [
-   "list_remove_multiple"
+   "list_remove_multiple",
+   "js_dollar_a"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -11180,7 +11181,6 @@
   ],
   "list_remove_all_multiple": [
    "list_remove_all_multiple",
-   "js_dollar_a",
    "js_expand_generic",
    "marker_functionize"
   ]
@@ -14476,6 +14476,7 @@
   },
   "js_dollar_a": {
    "identifiers": [
+    "list_remove_multiple",
     "list_first",
     "integer_to",
     "list_size_1",
@@ -14485,7 +14486,6 @@
     "object_replace",
     "object_copy",
     "js_identifiers_named",
-    "list_remove_all_multiple",
     "js_dollar_a",
     "stack1",
     "stack2",
