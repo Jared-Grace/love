@@ -1862,7 +1862,8 @@
    "app_replace_rule_set",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_all_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2574,7 +2575,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_all_multiple"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2775,7 +2777,8 @@
    "object_merge",
    "object_properties_delete",
    "list_remove_multiple_if_exists",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "list_remove_all_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -3642,7 +3645,8 @@
   "removals": [
    "list_remove_multiple",
    "data_file_update_inner",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_all_multiple"
   ],
   "item": [
    "each",
@@ -3738,7 +3742,8 @@
   "list_remove_all": [
    "list_remove_all",
    "data_file_update_inner",
-   "list_remove_multiple"
+   "list_remove_multiple",
+   "list_remove_all_multiple"
   ],
   "list_empty_is": [
    "function_identifier_replace",
@@ -6189,7 +6194,8 @@
    "each_range_async",
    "app_replace_rule_set",
    "js_dollar_new",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_all_multiple"
   ],
   "formatted": [
    "function_format",
@@ -11170,6 +11176,9 @@
   ],
   "list_remove_multiple_if_exists": [
    "list_remove_multiple_if_exists"
+  ],
+  "list_remove_all_multiple": [
+   "list_remove_all_multiple"
   ]
  },
  "functions": {
@@ -21103,6 +21112,18 @@
     "list",
     "item",
     "includes"
+   ]
+  },
+  "list_remove_all_multiple": {
+   "async": false,
+   "identifiers": [
+    "list_remove_all",
+    "each",
+    "list_remove_all_multiple",
+    "removals",
+    "list",
+    "lambda",
+    "r"
    ]
   }
  },
