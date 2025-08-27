@@ -907,7 +907,6 @@
   "as err",
   "git_push_schedule_command",
   "fd git_push_schedule_command",
-  "s unique",
   "cs list_adder_unique async",
   "fd git_push_schedule",
   "o command_line_schtasks ",
@@ -1779,7 +1778,8 @@
   "fws o dollar_choice",
   "s dollar",
   "a od function_open_dollar_choice",
-  "od a"
+  "od a",
+  "s unique"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
