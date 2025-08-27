@@ -8,4 +8,5 @@ export async function js_dollar_choice_arguments_names() {
   let { properties } = oe;
   let mapped = list_map_property(properties, "key");
   let names = js_identifiers_to_names(mapped);
+  return names;
 }
