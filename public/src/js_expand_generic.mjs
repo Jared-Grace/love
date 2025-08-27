@@ -36,6 +36,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
     }
+    lc;
     function lambda2(i) {
       let unique = js_identifier_unique(identifiers, i);
       js_identifier_replace(ast_call, i, unique);
