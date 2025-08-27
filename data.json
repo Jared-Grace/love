@@ -2317,7 +2317,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "js_dollar_new_args"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2536,7 +2537,8 @@
    "global_function_async",
    "global_function_property_async",
    "marker_rename",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4181,7 +4183,8 @@
    "firebase_deploy_function_app_current",
    "marker_rename",
    "js_dollar_new",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_new_args"
   ],
   "without": [
    "string_suffix_without",
@@ -6934,7 +6937,8 @@
    "function_transform_marker",
    "js_marker_named",
    "marker",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_dollar_new_args"
   ],
   "lambda_marker": [
    "function_transform_marker_all",
@@ -8613,7 +8617,8 @@
   "code2": [
    "js_statement_return",
    "js_parse_statement",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "types_function": [
    "js_types_function"
@@ -10294,7 +10299,8 @@
    "function_transform_marker",
    "marker_screen_add",
    "function_transform_marker_specified",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -20756,11 +20762,17 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
+    "function_transform_marker_specified",
     "function_transform",
     "js_dollar_new_name",
     "marker",
     "js_dollar_new_args",
     "code",
+    "code2",
+    "f_name",
+    "marker_name",
+    "lambda",
+    "a",
     "combined",
     "lambda2",
     "ast"
