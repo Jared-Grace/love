@@ -1769,6 +1769,7 @@
   "is js_keyword_function",
   "p",
   "js_dollar_choice_arguments",
+  "  return;",
   "js_dollar_new_args x"
  ],
  "marker_current": "1",
