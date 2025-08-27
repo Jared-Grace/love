@@ -167,7 +167,8 @@
   "lz1": "list_size_1",
   "erg": "each_range",
   "nd": "js_dollar_new",
-  "mk": "marker"
+  "mk": "marker",
+  "od": "function_open_dollar_choice"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1776,7 +1777,8 @@
   "cs js_dollar_choice_arguments names",
   "js_dollar_choice_arguments_names",
   "fws o dollar_choice",
-  "s dollar"
+  "s dollar",
+  "a od function_open_dollar_choice"
  ],
  "marker_current": "1",
  "function_current": "function_open_dollar_choice",
