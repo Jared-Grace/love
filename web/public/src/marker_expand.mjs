@@ -9,7 +9,7 @@ export async function marker_expand() {
   async function lambda2(a) {
     let { next, index } = marker_next_get(a);
     let { stack2, ast } = a;
-    let inserted = await js_expand_generic(next, stack2, index);
+    let inserted = await js_expand_generic(next, stack2, index, ast);
     return inserted;
   }
 }
