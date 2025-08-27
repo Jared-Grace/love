@@ -2033,7 +2033,8 @@
    "function_open_dollar_choice",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "list_remove_multiple"
+   "list_remove_multiple",
+   "marker_rename"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11173,9 +11174,6 @@
   ],
   "concated": [
    "list_concat"
-  ],
-  "marker2": [
-   "marker_rename"
   ],
   "list_remove_multiple_if_exists": [
    "list_remove_multiple_if_exists"
@@ -20848,10 +20846,10 @@
    "identifiers": [
     "function_transform_marker",
     "data_function_current_get",
+    "marker",
     "marker_rename",
     "lambda",
     "a",
-    "marker2",
     "f_name_current",
     "v2",
     "v"
