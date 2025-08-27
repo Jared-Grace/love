@@ -19,6 +19,6 @@ export async function js_dollar_x({
     let index = list_next_index(stack2, stack1);
     let next = list_get(stack2, index);
     let inserted = await js_expand_generic(next, stack2, index, ast);
-    list_remove(list, item);
+    list_remove(stack2, stack1);
   }
 }
