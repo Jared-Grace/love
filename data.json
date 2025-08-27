@@ -1772,7 +1772,8 @@
   "p",
   "js_dollar_new_args x",
   "cs js_dollar_choice_arguments_name",
-  "cs js_dollar_choice_arguments name"
+  "cs js_dollar_choice_arguments name",
+  "de js_dollar_choice_arguments_name"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_choice_arguments_name",
