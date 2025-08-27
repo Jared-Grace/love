@@ -3737,8 +3737,7 @@
   "list_remove_all": [
    "list_remove_all",
    "data_file_update_inner",
-   "list_remove_multiple",
-   "js_expand_generic"
+   "list_remove_multiple"
   ],
   "list_empty_is": [
    "function_identifier_replace",
@@ -8140,7 +8139,8 @@
   "list_remove_multiple": [
    "js_dollar_a",
    "list_remove_multiple",
-   "marker_functionize"
+   "marker_functionize",
+   "js_expand_generic"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -21017,7 +21017,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
-    "list_remove_all",
+    "list_remove_multiple",
     "log",
     "functions_names",
     "list_concat",
