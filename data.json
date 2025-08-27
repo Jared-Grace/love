@@ -1787,7 +1787,7 @@
   "cs list_remove_multiple if_exists"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_a",
+ "function_current": "list_remove_multiple_if_exists",
  "terminal": false,
  "identifiers": {
   "log": [
