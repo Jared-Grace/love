@@ -1851,7 +1851,8 @@
    "function_alias_rename",
    "js_imports_paths_fix",
    "app_replace_rule_set",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "js_expand_generic"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2644,7 +2645,8 @@
    "function_rename_identifiers",
    "app_replace_rule_set",
    "app_replace_settings",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_expand_generic"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2760,7 +2762,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_expand_generic"
   ],
   "v": [
    "data_identifiers_file",
@@ -4846,8 +4849,7 @@
    "js_import_inside_task_simple",
    "js_let_add_task_simple",
    "task_new",
-   "todo",
-   "js_expand_generic"
+   "todo"
   ],
   "data_watch_set_task_add_return": [
    "data_watch_set_task_add_return"
@@ -11124,6 +11126,9 @@
    "js_expand_generic"
   ],
   "identifiers_call": [
+   "js_expand_generic"
+  ],
+  "item2": [
    "js_expand_generic"
   ]
  },
@@ -20967,6 +20972,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "each",
     "js_unparse",
     "list_map",
     "list_insert",
@@ -20982,7 +20988,6 @@
     "js_identifier_replace",
     "each_pair",
     "js_declaration_params_names",
-    "todo",
     "list_empty_not_is",
     "list_intersect",
     "js_identifiers_names",
@@ -21007,6 +21012,9 @@
     "identifiers_call",
     "identifiers",
     "intesection",
+    "list",
+    "lambda2",
+    "item2",
     "params_names",
     "lambda3",
     "param_name",
