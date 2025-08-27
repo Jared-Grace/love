@@ -2541,7 +2541,8 @@
    "global_function_async",
    "global_function_property_async",
    "marker_rename",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3307,7 +3308,8 @@
    "html_update_generic",
    "html_update_public",
    "js_dollar_choices",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "output": [
    "watch",
@@ -4186,7 +4188,8 @@
    "firebase_deploy_function_app_current",
    "marker_rename",
    "js_dollar_new",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_choice_arguments"
   ],
   "without": [
    "string_suffix_without",
@@ -5443,7 +5446,8 @@
    "list_map_name",
    "list_map_property",
    "marker_down_choices",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "js_dollar_choice_arguments"
   ],
   "split": [
    "functions_combine_name",
@@ -5483,7 +5487,8 @@
    "list_join_comma",
    "list_map_squash",
    "marker_top",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "js_dollar_choice_arguments"
   ],
   "list_wait": [
    "functions_format",
@@ -5513,7 +5518,8 @@
    "app_replace_rule_set",
    "functions_transform",
    "js_visit_children_get",
-   "list_map_index"
+   "list_map_index",
+   "js_dollar_choice_arguments"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -5609,7 +5615,8 @@
    "object_properties",
    "tasks_run",
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -5810,7 +5817,8 @@
   ],
   "js_dollar": [
    "js_auto",
-   "js_dollar"
+   "js_dollar",
+   "js_dollar_choice_arguments"
   ],
   "js_atomize": [
    "js_atomize",
@@ -6557,7 +6565,8 @@
    "function_params_consolidate",
    "js_declaration_params_names",
    "js_identifiers_to_names",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "js_dollar_choice_arguments"
   ],
   "js_declaration_params_names": [
    "function_wrap",
@@ -8615,7 +8624,8 @@
   "code2": [
    "js_statement_return",
    "js_parse_statement",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "types_function": [
    "js_types_function"
@@ -9767,7 +9777,8 @@
   "oe": [
    "function_aliases_restore",
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "fp": [
    "function_aliases_restore"
@@ -10296,7 +10307,8 @@
    "function_transform_marker",
    "marker_screen_add",
    "function_transform_marker_specified",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -10956,7 +10968,8 @@
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_choice_arguments"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -10996,7 +11009,8 @@
    "js_dollar_new_args"
   ],
   "js_dollar_choice_arguments": [
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "js_dollar_choice_arguments"
   ],
   "js_declaration_param_add_node": [
    "js_declaration_param_add",
@@ -20777,6 +20791,25 @@
     "ast",
     "declaration",
     "item"
+   ]
+  },
+  "js_dollar_choice_arguments": {
+   "async": true,
+   "identifiers": [
+    "js_dollar",
+    "function_transform_marker_specified",
+    "js_identifiers_to_names",
+    "list_map_property",
+    "marker_next_declare_single_init",
+    "js_dollar_choice_arguments",
+    "names",
+    "lambda",
+    "a",
+    "oe",
+    "properties",
+    "mapped",
+    "code2",
+    "name"
    ]
   }
  },
