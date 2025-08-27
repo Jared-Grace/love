@@ -1889,7 +1889,6 @@
    "js_bang_to_not",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
-   "js_declaration_param_add",
    "js_dollar_rf",
    "js_dollar_rt",
    "js_marker_insert",
@@ -3792,7 +3791,6 @@
    "function_run_line_parse",
    "function_wrap",
    "js_bang_to_not",
-   "js_declaration_param_add",
    "js_dollar_a_generic",
    "js_dollar_f",
    "js_dollar_g",
@@ -6564,8 +6562,7 @@
   "js_declaration_params_get": [
    "function_params_consolidate",
    "js_declaration_params_get",
-   "js_declaration_params_names",
-   "js_declaration_param_add"
+   "js_declaration_params_names"
   ],
   "function_params_consolidate": [
    "function_params_consolidate"
@@ -6575,7 +6572,6 @@
    "function_param_swap",
    "js_declaration_params_get",
    "js_declaration_params_names",
-   "js_declaration_param_add",
    "js_declaration_param_named",
    "js_node_atomize"
   ],
@@ -10998,6 +10994,9 @@
   ],
   "js_dollar_choice_arguments": [
    "js_dollar_new_args"
+  ],
+  "js_declaration_param_add_node": [
+   "js_declaration_param_add"
   ]
  },
  "functions": {
@@ -14122,15 +14121,12 @@
   },
   "js_declaration_param_add": {
    "identifiers": [
-    "js_declaration_params_get",
-    "marker",
+    "js_declaration_param_add_node",
     "js_parse_expression",
-    "list_add",
     "js_declaration_param_add",
     "declaration",
     "param_name",
-    "item",
-    "params"
+    "item"
    ],
    "async": false
   },
