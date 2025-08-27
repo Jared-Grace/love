@@ -2365,8 +2365,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "js_dollar_new_args"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2738,8 +2737,7 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete",
-   "js_dollar_new_args"
+   "object_properties_delete"
   ],
   "v": [
    "data_identifiers_file",
@@ -20786,8 +20784,6 @@
     "oe",
     "properties",
     "mapped",
-    "list",
-    "property_name",
     "code2",
     "name",
     "combined",
