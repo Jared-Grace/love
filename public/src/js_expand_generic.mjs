@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_insert } from "./list_insert.mjs";
@@ -35,7 +34,6 @@ export async function js_expand_generic(next, stack2, index) {
     let intesection = list_intersect(identifiers, arguments2);
     if (list_empty_not_is(intesection)) {
       todo();
-      error(message);
     }
     let params_names = js_declaration_params_names(declaration);
     each_pair(params_names, a_names, lambda3);
