@@ -8,7 +8,8 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new_args(code) {
   let names = await js_dollar_choice_arguments();
   let combined = js_dollar_new_name(code);
-  log(message);
+  log(combined);
+  return;
   async function lambda2(ast) {
     let declaration = js_declaration_single(ast);
     js_declaration_param_add_node(declaration, names);
