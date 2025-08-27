@@ -4,8 +4,8 @@ import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export async function js_dollar_choice_arguments_names() {
   marker("1");
-  let names = await js_dollar_choice_arguments();
+  let oe = await js_dollar_choice_arguments();
   let { properties } = oe;
   let mapped = list_map_property(properties, "key");
-  js_identifiers_to_names(mapped);
+  let names = js_identifiers_to_names(mapped);
 }
