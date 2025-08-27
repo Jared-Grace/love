@@ -2551,7 +2551,8 @@
    "marker_rename",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3319,7 +3320,8 @@
    "js_dollar_choices",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "output": [
    "watch",
@@ -4199,7 +4201,8 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "without": [
    "string_suffix_without",
@@ -5458,7 +5461,8 @@
    "marker_down_choices",
    "js_imports_declarations",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "split": [
    "functions_combine_name",
@@ -5500,7 +5504,8 @@
    "marker_top",
    "js_dollar_new_args",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "list_wait": [
    "functions_format",
@@ -5532,7 +5537,8 @@
    "js_visit_children_get",
    "list_map_index",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -5630,7 +5636,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -5833,7 +5840,8 @@
    "js_auto",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "js_atomize": [
    "js_atomize",
@@ -6583,7 +6591,8 @@
    "js_identifiers_to_names",
    "js_identifier_defineds",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "js_declaration_params_names": [
    "function_wrap",
@@ -8647,7 +8656,8 @@
    "js_parse_statement",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "types_function": [
    "js_types_function"
@@ -9801,7 +9811,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "fp": [
    "function_aliases_restore"
@@ -10332,7 +10343,8 @@
    "function_transform_marker_specified",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -10994,7 +11006,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_dollar_choice_arguments_names"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -11046,6 +11059,9 @@
   ],
   "js_dollar_choice_arguments_name": [
    "js_dollar_choice_arguments_name"
+  ],
+  "js_dollar_choice_arguments_names": [
+   "js_dollar_choice_arguments_names"
   ]
  },
  "functions": {
@@ -20854,6 +20870,25 @@
     "list_map_property",
     "marker_next_declare_single_init",
     "js_dollar_choice_arguments_name",
+    "names",
+    "lambda",
+    "a",
+    "oe",
+    "properties",
+    "mapped",
+    "code2",
+    "name"
+   ]
+  },
+  "js_dollar_choice_arguments_names": {
+   "async": true,
+   "identifiers": [
+    "js_dollar",
+    "function_transform_marker_specified",
+    "js_identifiers_to_names",
+    "list_map_property",
+    "marker_next_declare_single_init",
+    "js_dollar_choice_arguments_names",
     "names",
     "lambda",
     "a",
