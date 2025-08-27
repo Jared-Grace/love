@@ -5052,7 +5052,8 @@
    "equal_by",
    "equal_not",
    "js_bang_to_not",
-   "js_dollar_ie"
+   "js_dollar_ie",
+   "js_identifier_replace"
   ],
   "left": [
    "equal",
@@ -5068,7 +5069,8 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_identifier_replace"
   ],
   "right": [
    "equal",
@@ -5085,7 +5087,8 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_identifier_replace"
   ],
   "eq": [
    "equal",
@@ -14829,6 +14832,7 @@
   },
   "js_identifier_replace": {
    "identifiers": [
+    "equal",
     "object_property_set",
     "js_visit_type",
     "object_property_get",
@@ -14836,6 +14840,8 @@
     "ast",
     "name_from",
     "name_to",
+    "left",
+    "right",
     "lambda",
     "v",
     "node"
