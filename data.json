@@ -8145,7 +8145,6 @@
    "js_dollar_choices"
   ],
   "list_remove_multiple": [
-   "js_dollar_a",
    "list_remove_multiple",
    "marker_functionize",
    "js_expand_generic"
@@ -11179,7 +11178,8 @@
    "list_remove_multiple_if_exists"
   ],
   "list_remove_all_multiple": [
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_dollar_a"
   ]
  },
  "functions": {
@@ -14482,7 +14482,7 @@
     "object_replace",
     "object_copy",
     "js_identifiers_named",
-    "list_remove_multiple",
+    "list_remove_all_multiple",
     "js_dollar_a",
     "stack1",
     "stack2",
