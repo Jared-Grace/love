@@ -2024,7 +2024,8 @@
    "js_dollar_new_args",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "list_remove_multiple_if_exists"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21073,6 +21074,7 @@
   "list_remove_multiple_if_exists": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_remove",
     "each",
     "list_remove_multiple_if_exists",
