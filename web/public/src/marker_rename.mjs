@@ -5,7 +5,6 @@ export async function marker_rename() {
   marker("1");
   marker("2");
   async function lambda(a) {}
-  $x;
   marker2("1");
   let f_name_current = await data_function_current_get();
   let v2 = await function_transform_marker(f_name_current, lambda);
