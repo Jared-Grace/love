@@ -3021,8 +3021,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_expand_generic"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3983,8 +3982,7 @@
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "http",
-   "js_expand_generic"
+   "http"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -20963,7 +20961,6 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
-    "error",
     "js_unparse",
     "list_map",
     "list_insert",
@@ -21002,7 +20999,6 @@
     "ast",
     "identifiers",
     "intesection",
-    "message",
     "params_names",
     "lambda3",
     "param_name",
