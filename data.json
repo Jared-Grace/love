@@ -10956,11 +10956,13 @@
    "js_dollar_new"
   ],
   "array_expression": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -20762,6 +20764,7 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
+    "marker_next_declare_single_init",
     "js_dollar",
     "function_transform_marker_specified",
     "function_transform",
@@ -20771,6 +20774,7 @@
     "code",
     "lambda",
     "a",
+    "array_expression",
     "code2",
     "name",
     "combined",
