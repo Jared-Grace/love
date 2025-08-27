@@ -7,6 +7,7 @@ import { marker } from "./marker.mjs";
 export async function js_dollar_new_args(code) {
   async function lambda(a) {
     let array_expression = marker_next_declare_single_init(a);
+    return array_expression;
   }
   let code2 = await function_transform_marker_specified(
     js_dollar.name,
