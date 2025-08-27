@@ -4293,7 +4293,8 @@
    "js_imports_missing",
    "marker_functionize",
    "functions_paths",
-   "functions_transform"
+   "functions_transform",
+   "js_expand_generic"
   ],
   "paths": [
    "functions_names",
@@ -4326,7 +4327,8 @@
    "js_imports_missing",
    "string_split_comma",
    "functions_paths",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_expand_generic"
   ],
   "path_join": [
    "folder_read",
@@ -20994,6 +20996,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "functions_names",
     "list_concat",
     "js_identifier_unique",
     "each",
@@ -21037,6 +21040,7 @@
     "identifiers",
     "intesection",
     "identifiers_all",
+    "f_names",
     "lambda2",
     "i",
     "unique",
