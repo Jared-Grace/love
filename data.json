@@ -5608,7 +5608,8 @@
    "object_properties",
    "tasks_run",
    "marker_screen_add",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_dollar_new_args"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -20778,6 +20779,7 @@
     "lambda",
     "a",
     "oe",
+    "properties",
     "code2",
     "name",
     "combined",
