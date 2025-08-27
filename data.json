@@ -2959,7 +2959,8 @@
    "tautology",
    "firebase_service_account",
    "marker_rename",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_expand_generic"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4223,7 +4224,8 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_expand_generic"
   ],
   "without": [
    "string_suffix_without",
@@ -4479,7 +4481,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "js_expand_generic"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6440,7 +6443,8 @@
    "js_imports_missing",
    "list_concat",
    "prompt_previous",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "js_expand_generic"
   ],
   "list_intersect": [
    "js_imports_missing",
@@ -11132,9 +11136,6 @@
    "js_expand_generic"
   ],
   "identifiers_call": [
-   "js_expand_generic"
-  ],
-  "lc": [
    "js_expand_generic"
   ]
  },
@@ -20979,6 +20980,7 @@
   "js_expand_generic": {
    "async": true,
    "identifiers": [
+    "list_concat",
     "js_identifier_unique",
     "each",
     "js_unparse",
@@ -21020,7 +21022,9 @@
     "identifiers_call",
     "identifiers",
     "intesection",
-    "lc",
+    "v",
+    "a",
+    "b",
     "lambda2",
     "i",
     "unique",
