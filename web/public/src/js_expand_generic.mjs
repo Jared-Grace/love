@@ -34,7 +34,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers_call, identifiers);
     if (list_empty_not_is(intesection)) {
-      function lambda2(i) {}
+      function lambda2(i) {
+        js_identifier_replace(ast_call, param_name, a_name);
+      }
       each(intesection, lambda2);
     }
     let params_names = js_declaration_params_names(declaration);
