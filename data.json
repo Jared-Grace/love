@@ -1775,10 +1775,11 @@
   "cs js_dollar_choice_arguments name",
   "de js_dollar_choice_arguments_name",
   "cs js_dollar_choice_arguments names",
-  "js_dollar_choice_arguments_names"
+  "js_dollar_choice_arguments_names",
+  "fws o dollar_choice"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_choice_arguments_names",
+ "function_current": "function_open_dollar_choice",
  "terminal": false,
  "identifiers": {
   "log": [
