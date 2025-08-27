@@ -41,11 +41,13 @@ export async function js_expand_generic(next, stack2, index, ast) {
     if (list_empty_not_is(intesection)) {
     }
     let identifiers_all = list_concat(identifiers, identifiers_call);
+    log({
+      identifiers_all,
+    });
     let f_names = functions_names();
     list_remove_multiple_if_exists(f_names, identifiers_all);
     log({
       identifiers_all,
-      f_names,
     });
     function lambda2(i) {
       let unique = js_identifier_unique(identifiers_all, i);
