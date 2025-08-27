@@ -2235,7 +2235,8 @@
    "html_update_generic",
    "js_dollar_new",
    "js_dollar_new_args",
-   "js_code_declaration"
+   "js_code_declaration",
+   "function_open_dollar_choice"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2333,8 +2334,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "function_open_dollar_choice"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -5438,7 +5438,8 @@
    "firebase_deploy_function_app_current",
    "app_new",
    "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "function_open_dollar_choice"
   ],
   "body_block": [
    "functions_combine",
@@ -11034,7 +11035,8 @@
   ],
   "js_dollar_new_name": [
    "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "function_open_dollar_choice"
   ],
   "js_dollar_choice_arguments": [
    "js_dollar_choice_arguments",
@@ -20883,10 +20885,12 @@
   "function_open_dollar_choice": {
    "async": true,
    "identifiers": [
+    "js_dollar_new_name",
     "function_open",
     "marker",
     "function_open_dollar_choice",
-    "f_name",
+    "code",
+    "combined",
     "v"
    ]
   }
