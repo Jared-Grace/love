@@ -3587,7 +3587,8 @@
    "js_imports_missing",
    "data_identifiers_search",
    "data_file_update_inner",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_dollar_new_args"
   ],
   "list_difference": [
    "js_imports_missing",
@@ -5483,7 +5484,8 @@
    "js_identifier_defineds",
    "list_join_comma",
    "list_map_squash",
-   "marker_top"
+   "marker_top",
+   "js_dollar_new_args"
   ],
   "list_wait": [
    "functions_format",
@@ -6559,7 +6561,8 @@
    "function_params_consolidate",
    "js_declaration_params_names",
    "js_identifiers_to_names",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "js_dollar_new_args"
   ],
   "js_declaration_params_names": [
    "function_wrap",
@@ -20769,6 +20772,7 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
+    "js_identifiers_to_names",
     "list_map_property",
     "marker_next_declare_single_init",
     "js_dollar",
@@ -20784,6 +20788,8 @@
     "oe",
     "properties",
     "mapped",
+    "names",
+    "identifiers",
     "code2",
     "name",
     "combined",
