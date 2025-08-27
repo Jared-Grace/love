@@ -1,8 +1,9 @@
+import { equal } from "./equal.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export function js_identifier_replace(ast, name_from, name_to) {
-  if (false) {
+  if (equal(left, right)) {
   }
   function lambda(v) {
     let { node } = v;
