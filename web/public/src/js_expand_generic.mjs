@@ -1,4 +1,4 @@
-import { list_remove_all } from "./list_remove_all.mjs";
+import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { log } from "./log.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -45,7 +45,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       identifiers_all,
     });
     let f_names = functions_names();
-    list_remove_all(f_names, identifiers_all);
+    list_remove_multiple(f_names, identifiers_all);
     log({
       identifiers_all,
     });
