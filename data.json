@@ -2765,7 +2765,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "js_dollar_x"
   ],
   "v": [
    "data_identifiers_file",
@@ -3682,7 +3683,8 @@
    "lists_get",
    "list_get_end_3",
    "list_concat_multiple",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_dollar_x"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3719,7 +3721,8 @@
    "js_imports_fix",
    "marker_leave",
    "js_log_remove",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_dollar_x"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -20902,6 +20905,7 @@
   "js_dollar_x": {
    "async": true,
    "identifiers": [
+    "list_remove",
     "list_get",
     "list_next_index",
     "list_is",
@@ -20918,7 +20922,9 @@
     "l",
     "index",
     "next",
-    "inserted"
+    "inserted",
+    "list",
+    "item"
    ]
   },
   "js_dollar_new_args": {
