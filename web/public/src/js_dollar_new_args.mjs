@@ -4,9 +4,6 @@ import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { marker } from "./marker.mjs";
 export async function js_dollar_new_args(code) {
   let combined = js_dollar_new_name(code);
-  async function lambda2(ast) {
-    await js_dollar_new_args_inner(ast);
-  }
-  await function_transform(combined, lambda2);
+  await function_transform(combined, js_dollar_new_args_inner);
   marker("1");
 }
