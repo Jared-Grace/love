@@ -2772,7 +2772,8 @@
    "marker_next_delete",
    "object_merge",
    "object_properties_delete",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_if_exists"
   ],
   "v": [
    "data_identifiers_file",
@@ -3690,7 +3691,8 @@
    "lists_get",
    "list_get_end_3",
    "list_concat_multiple",
-   "js_expand_generic"
+   "js_expand_generic",
+   "list_remove_if_exists"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3709,7 +3711,8 @@
    "marker_delete_above",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "visit_unique_async"
+   "visit_unique_async",
+   "list_remove_if_exists"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -3728,7 +3731,8 @@
    "marker_leave",
    "js_log_remove",
    "js_expand_generic",
-   "js_dollar_x"
+   "js_dollar_x",
+   "list_remove_if_exists"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -4585,7 +4589,8 @@
    "list_includes",
    "marker_down_choices_lambda",
    "string_includes",
-   "js_node_types_includes"
+   "js_node_types_includes",
+   "list_remove_if_exists"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -10879,7 +10884,8 @@
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers",
-   "list_remove_multiple_if_exists"
+   "list_remove_multiple_if_exists",
+   "list_remove_if_exists"
   ],
   "string_replace": [
    "string_replace",
@@ -21084,6 +21090,17 @@
     "list",
     "lambda",
     "r"
+   ]
+  },
+  "list_remove_if_exists": {
+   "async": false,
+   "identifiers": [
+    "list_remove",
+    "list_includes",
+    "list_remove_if_exists",
+    "list",
+    "item",
+    "includes"
    ]
   }
  },
