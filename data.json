@@ -2189,7 +2189,8 @@
    "js_declaration_single_block_body",
    "js_dollar_choices_x",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "marker_expand"
   ],
   "code": [
    "data_identifiers_file",
@@ -17354,6 +17355,7 @@
     "next",
     "index",
     "stack2",
+    "ast",
     "inserted"
    ],
    "async": true
