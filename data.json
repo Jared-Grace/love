@@ -1775,7 +1775,7 @@
   "cs js_dollar_choice_arguments name"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_new_args",
+ "function_current": "js_dollar_choice_arguments_name",
  "terminal": false,
  "identifiers": {
   "log": [
