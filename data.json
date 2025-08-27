@@ -2547,7 +2547,8 @@
    "global_function_property_async",
    "marker_rename",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3314,7 +3315,8 @@
    "html_update_public",
    "js_dollar_choices",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "output": [
    "watch",
@@ -4193,7 +4195,8 @@
    "marker_rename",
    "js_dollar_new",
    "js_dollar",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "without": [
    "string_suffix_without",
@@ -5451,7 +5454,8 @@
    "list_map_property",
    "marker_down_choices",
    "js_imports_declarations",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "split": [
    "functions_combine_name",
@@ -5492,7 +5496,8 @@
    "list_map_squash",
    "marker_top",
    "js_dollar_new_args",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "list_wait": [
    "functions_format",
@@ -5523,7 +5528,8 @@
    "functions_transform",
    "js_visit_children_get",
    "list_map_index",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -5620,7 +5626,8 @@
    "tasks_run",
    "marker_screen_add",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -5822,7 +5829,8 @@
   "js_dollar": [
    "js_auto",
    "js_dollar",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "js_atomize": [
    "js_atomize",
@@ -6571,7 +6579,8 @@
    "js_declaration_params_names",
    "js_identifiers_to_names",
    "js_identifier_defineds",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "js_declaration_params_names": [
    "function_wrap",
@@ -8634,7 +8643,8 @@
    "js_statement_return",
    "js_parse_statement",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "types_function": [
    "js_types_function"
@@ -9787,7 +9797,8 @@
    "function_aliases_restore",
    "marker_screen_add",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "fp": [
    "function_aliases_restore"
@@ -10317,7 +10328,8 @@
    "marker_screen_add",
    "function_transform_marker_specified",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -10978,7 +10990,8 @@
   "marker_next_declare_single_init": [
    "marker_screen_add",
    "js_dollar_new",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_dollar_choice_arguments_name"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -11027,6 +11040,9 @@
   ],
   "js_code_declaration_args": [
    "js_code_declaration"
+  ],
+  "js_dollar_choice_arguments_name": [
+   "js_dollar_choice_arguments_name"
   ]
  },
  "functions": {
@@ -20815,6 +20831,25 @@
     "list_map_property",
     "marker_next_declare_single_init",
     "js_dollar_choice_arguments",
+    "names",
+    "lambda",
+    "a",
+    "oe",
+    "properties",
+    "mapped",
+    "code2",
+    "name"
+   ]
+  },
+  "js_dollar_choice_arguments_name": {
+   "async": true,
+   "identifiers": [
+    "js_dollar",
+    "function_transform_marker_specified",
+    "js_identifiers_to_names",
+    "list_map_property",
+    "marker_next_declare_single_init",
+    "js_dollar_choice_arguments_name",
     "names",
     "lambda",
     "a",
