@@ -7724,8 +7724,7 @@
    "js_code_call",
    "js_code_call_args",
    "js_code_call_args_await_maybe",
-   "js_dollar_g",
-   "js_code_declaration"
+   "js_dollar_g"
   ],
   "js_call_insert": [
    "js_call_insert",
@@ -7829,7 +7828,6 @@
   ],
   "js_code_wrap_braces": [
    "js_code_braces_empty",
-   "js_code_declaration",
    "js_code_import_single",
    "js_code_wrap_braces"
   ],
@@ -7856,7 +7854,6 @@
    "html_update_generic"
   ],
   "js_keyword_function": [
-   "js_code_declaration",
    "js_keyword_function"
   ],
   "inside": [
@@ -7866,7 +7863,6 @@
    "js_dollar_i"
   ],
   "prefix": [
-   "js_code_declaration",
    "string_prefix_without",
    "string_starts_with",
    "firebase_service_account"
@@ -11005,6 +11001,9 @@
   "js_declaration_param_add_node": [
    "js_declaration_param_add",
    "js_dollar_new_args"
+  ],
+  "js_code_declaration_args": [
+   "js_code_declaration"
   ]
  },
  "functions": {
@@ -13953,15 +13952,12 @@
   },
   "js_code_declaration": {
    "identifiers": [
-    "js_code_call_args",
-    "js_keyword_function",
-    "js_code_wrap_braces",
+    "js_code_declaration_args",
     "js_code_declaration",
     "f_name",
     "inside",
     "async_is",
     "args",
-    "prefix",
     "code"
    ],
    "async": false
