@@ -1858,7 +1858,8 @@
    "js_imports_paths_fix",
    "app_replace_rule_set",
    "list_concat_multiple",
-   "js_expand_generic"
+   "js_expand_generic",
+   "list_remove_multiple_if_exists"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2568,7 +2569,8 @@
    "js_dollar_new",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_expand_generic"
+   "js_expand_generic",
+   "list_remove_multiple_if_exists"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2767,7 +2769,8 @@
    "marker_assign_replace",
    "marker_next_delete",
    "object_merge",
-   "object_properties_delete"
+   "object_properties_delete",
+   "list_remove_multiple_if_exists"
   ],
   "v": [
    "data_identifiers_file",
@@ -3633,7 +3636,8 @@
   ],
   "removals": [
    "list_remove_multiple",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "list_remove_multiple_if_exists"
   ],
   "item": [
    "each",
@@ -3722,7 +3726,8 @@
    "marker_leave",
    "js_log_remove",
    "js_expand_generic",
-   "js_dollar_x"
+   "js_dollar_x",
+   "list_remove_multiple_if_exists"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -6175,7 +6180,8 @@
    "function_aliases_restore",
    "each_range_async",
    "app_replace_rule_set",
-   "js_dollar_new"
+   "js_dollar_new",
+   "list_remove_multiple_if_exists"
   ],
   "formatted": [
    "function_format",
@@ -11151,6 +11157,9 @@
   ],
   "marker2": [
    "marker_rename"
+  ],
+  "list_remove_multiple_if_exists": [
+   "list_remove_multiple_if_exists"
   ]
  },
  "functions": {
@@ -21059,6 +21068,18 @@
     "assign",
     "lambda4",
     "item"
+   ]
+  },
+  "list_remove_multiple_if_exists": {
+   "async": false,
+   "identifiers": [
+    "list_remove",
+    "each",
+    "list_remove_multiple_if_exists",
+    "removals",
+    "list",
+    "lambda",
+    "r"
    ]
   }
  },
