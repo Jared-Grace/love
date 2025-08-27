@@ -5918,8 +5918,7 @@
   "js_code_call": [
    "js_bang_to_not",
    "js_code_call",
-   "js_code_call_statement",
-   "js_code_declaration"
+   "js_code_call_statement"
   ],
   "function_delete": [
    "function_delete",
@@ -13957,7 +13956,6 @@
     "js_code_call_args",
     "js_keyword_function",
     "js_code_wrap_braces",
-    "js_code_call",
     "js_code_declaration",
     "f_name",
     "inside",
