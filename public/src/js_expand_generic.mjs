@@ -1,4 +1,4 @@
-import { list_remove_multiple } from "./list_remove_multiple.mjs";
+import { list_remove_multiple_if_exists } from "./list_remove_multiple_if_exists.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
@@ -41,7 +41,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     }
     let identifiers_all = list_concat(identifiers, identifiers_call);
     let f_names = functions_names();
-    list_remove_multiple(f_names, identifiers_all);
+    list_remove_multiple_if_exists(f_names, identifiers_all);
     function lambda2(i) {
       let unique = js_identifier_unique(identifiers_all, i);
       js_identifier_replace(ast_call, i, unique);
