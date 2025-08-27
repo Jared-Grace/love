@@ -11168,6 +11168,9 @@
   "list_remove_multiple_if_exists": [
    "list_remove_multiple_if_exists",
    "js_expand_generic"
+  ],
+  "identifiers_alf_namesl": [
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -21063,6 +21066,7 @@
     "intesection",
     "identifiers_all",
     "f_names",
+    "identifiers_alf_namesl",
     "lambda2",
     "i",
     "unique",
