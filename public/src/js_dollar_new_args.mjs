@@ -10,7 +10,7 @@ export async function js_dollar_new_args(code) {
   let combined = js_dollar_new_name(code);
   async function lambda2(ast) {
     let declaration = js_declaration_single(ast);
-    js_declaration_param_add_node(declaration, item);
+    js_declaration_param_add_node(declaration, names);
   }
   await function_transform(combined, lambda2);
   marker("1");
