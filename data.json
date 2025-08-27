@@ -5069,8 +5069,7 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_identifier_replace"
+   "app_replace_rule_parse"
   ],
   "right": [
    "equal",
@@ -5087,8 +5086,7 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_identifier_replace"
+   "app_replace_rule_parse"
   ],
   "eq": [
    "equal",
@@ -14840,8 +14838,6 @@
     "ast",
     "name_from",
     "name_to",
-    "left",
-    "right",
     "lambda",
     "v",
     "node"
