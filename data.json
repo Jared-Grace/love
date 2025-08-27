@@ -1782,7 +1782,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "js_dollar_new_args"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3003,7 +3004,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_dollar_new_args"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20778,6 +20780,7 @@
   "js_dollar_new_args": {
    "async": true,
    "identifiers": [
+    "log",
     "js_declaration_single",
     "js_declaration_param_add_node",
     "js_dollar_choice_arguments",
@@ -20788,6 +20791,7 @@
     "code",
     "names",
     "combined",
+    "message",
     "lambda2",
     "ast",
     "declaration"
