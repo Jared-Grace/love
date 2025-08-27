@@ -8149,7 +8149,8 @@
   ],
   "list_remove_multiple": [
    "list_remove_multiple",
-   "js_dollar_a"
+   "js_dollar_a",
+   "marker_functionize"
   ],
   "js_dollar_g": [
    "js_dollar_g",
@@ -11181,8 +11182,7 @@
   ],
   "list_remove_all_multiple": [
    "list_remove_all_multiple",
-   "js_expand_generic",
-   "marker_functionize"
+   "js_expand_generic"
   ]
  },
  "functions": {
@@ -17443,12 +17443,12 @@
   },
   "marker_functionize": {
    "identifiers": [
+    "list_remove_multiple",
     "not",
     "object_property_equals",
     "js_outside_move",
     "js_parse_statement",
     "js_code_call_args_await_maybe",
-    "list_remove_all_multiple",
     "js_parse_expression",
     "list_difference",
     "js_identifier_defineds",
