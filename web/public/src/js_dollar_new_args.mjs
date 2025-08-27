@@ -14,6 +14,7 @@ export async function js_dollar_new_args(code) {
     "choice_arguments",
     lambda,
   );
+  return code2;
   let combined = js_dollar_new_name(code);
   async function lambda2(ast) {}
   await function_transform(combined, lambda2);
