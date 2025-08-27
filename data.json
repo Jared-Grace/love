@@ -4376,7 +4376,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "marker_rename"
   ],
   "readdirSync": [
    "folder_read"
@@ -4725,7 +4726,8 @@
    "task_new",
    "marker_next_await",
    "marker_param_add",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "marker_rename"
   ],
   "f_name_current": [
    "data_function_current_get",
@@ -4734,7 +4736,8 @@
    "function_transform_marker_current",
    "marker_call",
    "marker_param_add",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "marker_rename"
   ],
   "value_initial": [
    "data_get",
@@ -6995,7 +6998,8 @@
    "marker_next",
    "marker_next_delete",
    "marker_next_await",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_rename"
   ],
   "lambda$a": [
    "function_transform_marker",
@@ -7155,8 +7159,7 @@
    "marker_leave",
    "marker_above_generic",
    "marker_above_delete",
-   "marker_if_test_replace",
-   "marker_rename"
+   "marker_if_test_replace"
   ],
   "marker_down_choices_lambda": [
    "marker_down_choices",
@@ -11139,6 +11142,12 @@
   ],
   "concated": [
    "list_concat"
+  ],
+  "$x": [
+   "marker_rename"
+  ],
+  "marker2": [
+   "marker_rename"
   ]
  },
  "functions": {
@@ -20801,11 +20810,16 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
-    "function_transform_marker_current",
+    "function_transform_marker",
+    "data_function_current_get",
     "marker",
     "marker_rename",
     "lambda",
     "a",
+    "$x",
+    "marker2",
+    "f_name_current",
+    "v2",
     "v"
    ]
   },
