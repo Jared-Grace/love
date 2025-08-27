@@ -3395,7 +3395,8 @@
    "list_slice_end",
    "ternary",
    "functions_combine_name",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "js_dollar_new_args"
   ],
   "separator": [
    "watch",
@@ -10957,8 +10958,7 @@
    "js_dollar_new"
   ],
   "array_expression": [
-   "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -20775,7 +20775,7 @@
     "code",
     "lambda",
     "a",
-    "array_expression",
+    "result",
     "code2",
     "name",
     "combined",
