@@ -168,7 +168,8 @@
   "erg": "each_range",
   "nd": "js_dollar_new",
   "mk": "marker",
-  "od": "function_open_dollar_choice"
+  "od": "function_open_dollar_choice",
+  "lc": "list_concat"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1780,7 +1781,8 @@
   "a od function_open_dollar_choice",
   "od a",
   "s unique",
-  "u lc"
+  "u lc",
+  "a lc list_concat"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_a",
