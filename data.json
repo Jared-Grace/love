@@ -1789,7 +1789,7 @@
   "r list_remove_multiple list_remove_all_multiple"
  ],
  "marker_current": "1",
- "function_current": "list_remove_multiple_if_exists",
+ "function_current": "list_remove_all_multiple",
  "terminal": false,
  "identifiers": {
   "log": [
