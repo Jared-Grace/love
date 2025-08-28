@@ -7,7 +7,7 @@ export async function js_auto_transform_new() {
     let array_expression = marker_next_declare_single_init(a);
   }
   let code = await function_transform_marker_specified(
-    f_name,
+    js_auto_transform.name,
     marker_name,
     lambda,
   );
