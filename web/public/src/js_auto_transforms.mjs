@@ -32,6 +32,7 @@ export function js_auto_transforms() {
     js_dollar,
     js_outside_move,
     js_atomize,
+    js_assign_combine,
   ];
   return transforms;
 }

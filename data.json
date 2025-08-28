@@ -1792,10 +1792,11 @@
   "n js_auto_transform_new",
   "s init",
   "js_auto_transform_new",
-  "is marker_next_declare_single_init"
+  "is marker_next_declare_single_init",
+  "js_auto_transform_new assign_combine"
  ],
  "marker_current": "1",
- "function_current": "js_auto_transform_new",
+ "function_current": "js_auto_transforms",
  "terminal": false,
  "identifiers": {
   "log": [
