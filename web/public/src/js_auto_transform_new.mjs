@@ -1,3 +1,4 @@
+import { function_open } from "./function_open.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { function_new_js_name } from "./function_new_js_name.mjs";
@@ -20,4 +21,5 @@ export async function js_auto_transform_new(f_name_unprefixed) {
     "transforms",
     lambda,
   );
+  await function_open(f_name);
 }
