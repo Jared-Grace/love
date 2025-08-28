@@ -1788,10 +1788,11 @@
   "de list_remove_multiple_if_exists",
   "r list_remove_multiple list_remove_all_multiple",
   "is list_remove_all_multiple",
-  "c list_remove_all_multiple list_remove_multiple"
+  "c list_remove_all_multiple list_remove_multiple",
+  "o js_auto"
  ],
  "marker_current": "1",
- "function_current": "list_remove_multiple",
+ "function_current": "js_auto",
  "terminal": false,
  "identifiers": {
   "log": [
