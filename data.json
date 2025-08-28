@@ -3788,8 +3788,7 @@
    "function_aliases_restore",
    "function_exists_strict",
    "html_element",
-   "function_exists_inner",
-   "js_auto_transform_new"
+   "function_exists_inner"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -11204,6 +11203,9 @@
    "js_auto_transform_new"
   ],
   "js_auto_transform_new": [
+   "js_auto_transform_new"
+  ],
+  "ae": [
    "js_auto_transform_new"
   ]
  },
@@ -21175,7 +21177,7 @@
     "js_auto_transform_new",
     "lambda",
     "a",
-    "e",
+    "ae",
     "code",
     "name"
    ]
