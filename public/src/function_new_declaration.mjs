@@ -1,3 +1,4 @@
+import { js_format } from "./js_format.mjs";
 import { file_write } from "./file_write.mjs";
 import { js_code_export } from "./js_code_export.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -13,5 +14,6 @@ export async function function_new_declaration(declaration) {
   let ast = js_parse(contents);
   await js_imports_missing_add(ast);
   let contents_import = js_unparse(ast);
+  let formatted = await js_format(code);
   await file_write(f_path, contents_import);
 }
