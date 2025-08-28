@@ -1806,7 +1806,8 @@
    "search_generic",
    "js_log_remove",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_auto_transform_new"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3051,7 +3052,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_auto_transform_new"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3786,7 +3788,8 @@
    "function_aliases_restore",
    "function_exists_strict",
    "html_element",
-   "function_exists_inner"
+   "function_exists_inner",
+   "js_auto_transform_new"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -11103,8 +11106,7 @@
    "js_dollar_new"
   ],
   "array_expression": [
-   "js_dollar_new",
-   "js_auto_transform_new"
+   "js_dollar_new"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -21165,6 +21167,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "log",
     "js_auto_transforms",
     "marker_next_declare_single_init",
     "function_transform_marker_specified",
@@ -21172,7 +21175,8 @@
     "js_auto_transform_new",
     "lambda",
     "a",
-    "array_expression",
+    "e",
+    "message",
     "code",
     "name"
    ]
