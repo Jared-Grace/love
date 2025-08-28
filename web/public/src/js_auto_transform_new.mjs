@@ -21,5 +21,5 @@ export async function js_auto_transform_new(f_name_unprefixed) {
     "transforms",
     lambda,
   );
-  await function_open(f_name);
+  await function_open(js_auto_transforms.name);
 }
