@@ -11104,13 +11104,15 @@
    "js_dollar_new"
   ],
   "array_expression": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_auto_transform_new"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_auto_transform_new"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -21163,11 +21165,13 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "marker_next_declare_single_init",
     "function_transform_marker_specified",
     "marker",
     "js_auto_transform_new",
     "lambda",
     "a",
+    "array_expression",
     "code",
     "f_name",
     "marker_name"
