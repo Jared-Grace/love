@@ -14,7 +14,7 @@ export async function js_auto_transform_new(f_name_unprefixed) {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     let expression = js_parse_expression(combined);
-    list_add(list, item);
+    list_add(elements, expression);
     log(ae);
   }
   let code = await function_transform_marker_specified(
