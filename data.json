@@ -11102,13 +11102,13 @@
    "js_dollar_new"
   ],
   "elements": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_auto_transform_new"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_auto_transform_new"
+   "js_dollar_choice_arguments_name"
   ],
   "js_property_parse_expression_add": [
    "js_dollar_new"
@@ -11205,7 +11205,8 @@
    "js_auto_transform_new"
   ],
   "marker_next_declare_single_init_elements": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_auto_transform_new"
   ]
  },
  "functions": {
@@ -21167,14 +21168,15 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "marker_next_declare_single_init_elements",
     "log",
     "js_auto_transforms",
-    "marker_next_declare_single_init",
     "function_transform_marker_specified",
     "marker",
     "js_auto_transform_new",
     "lambda",
     "a",
+    "elements",
     "ae",
     "code",
     "name"
