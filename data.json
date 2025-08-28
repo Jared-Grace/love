@@ -3052,8 +3052,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_auto_transform_new"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21176,7 +21175,6 @@
     "lambda",
     "a",
     "e",
-    "message",
     "code",
     "name"
    ]
