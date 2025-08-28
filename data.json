@@ -2260,8 +2260,7 @@
    "js_dollar_new",
    "js_dollar_new_args",
    "js_code_declaration",
-   "function_open_dollar_choice",
-   "function_new_declaration"
+   "function_open_dollar_choice"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -12908,8 +12907,7 @@
     "contents",
     "ast",
     "contents_import",
-    "formatted",
-    "code"
+    "formatted"
    ],
    "async": true
   },
