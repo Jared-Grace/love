@@ -2363,7 +2363,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "js_auto_transform_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -5678,7 +5679,8 @@
    "function_new",
    "function_open",
    "function_open_app",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_auto_transform_new"
   ],
   "list_single": [
    "functions_search_open",
@@ -21171,6 +21173,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "function_open",
     "list_add",
     "js_parse_expression",
     "function_new_js_name",
@@ -21187,7 +21190,8 @@
     "elements",
     "expression",
     "code",
-    "name"
+    "name",
+    "f_name"
    ]
   }
  },
