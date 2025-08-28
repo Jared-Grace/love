@@ -11201,6 +11201,9 @@
   ],
   "js_auto_transform_new_inner": [
    "js_auto_transform_new"
+  ],
+  "js_assign_combine": [
+   "js_auto_transforms"
   ]
  },
  "functions": {
@@ -21139,6 +21142,7 @@
   "js_auto_transforms": {
    "async": false,
    "identifiers": [
+    "js_assign_combine",
     "js_atomize",
     "js_outside_move",
     "js_dollar",
