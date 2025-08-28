@@ -2363,8 +2363,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "js_auto_transform_new"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -21190,8 +21189,7 @@
     "elements",
     "expression",
     "code",
-    "name",
-    "f_name"
+    "name"
    ]
   }
  },
