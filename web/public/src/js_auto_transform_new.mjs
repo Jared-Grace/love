@@ -9,7 +9,7 @@ export async function js_auto_transform_new() {
   }
   let code = await function_transform_marker_specified(
     js_auto_transforms.name,
-    marker_name,
+    "transforms",
     lambda,
   );
 }
