@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { function_new_js_name } from "./function_new_js_name.mjs";
 import { function_new_js } from "./function_new_js.mjs";
@@ -12,7 +13,8 @@ export async function js_auto_transform_new(f_name_unprefixed) {
   marker("1");
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
-    let expression = js_parse_expression(code_expression);
+    let expression = js_parse_expression(combined);
+    list_add(list, item);
     log(ae);
   }
   let code = await function_transform_marker_specified(
