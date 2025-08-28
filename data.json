@@ -5472,7 +5472,8 @@
    "js_imports_paths_fix",
    "js_property_identifier",
    "marker_screen_add",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_auto_transform_new"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6727,7 +6728,8 @@
    "js_await",
    "js_imports_paths_fix",
    "js_await_wrap",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_auto_transform_new"
   ],
   "type": [
    "function_params_consolidate",
@@ -8497,7 +8499,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_auto_transform_new"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -21172,6 +21175,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "function_new_js_name",
     "function_new_js",
     "marker_next_declare_single_init_elements",
@@ -21185,6 +21189,8 @@
     "lambda",
     "a",
     "elements",
+    "expression",
+    "code_expression",
     "ae",
     "code",
     "name"
