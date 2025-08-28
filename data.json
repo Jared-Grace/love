@@ -1789,10 +1789,11 @@
   "is list_remove_all_multiple",
   "c list_remove_all_multiple list_remove_multiple",
   "o js_auto",
-  "s format"
+  "s format",
+  "n js_auto_transform_new"
  ],
  "marker_current": "1",
- "function_current": "js_auto",
+ "function_current": "js_auto_transform_new",
  "terminal": false,
  "identifiers": {
   "log": [
