@@ -1,4 +1,4 @@
-import { object_property_get } from "./object_property_get.mjs";
+import { marker_next_declare_single_init_elements } from "./marker_next_declare_single_init_elements.mjs";
 import { js_dollar_new_args_inner } from "./js_dollar_new_args_inner.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { function_new } from "./function_new.mjs";
@@ -9,7 +9,6 @@ import { function_transform } from "./function_transform.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_code_string } from "./js_code_string.mjs";
 import { js_property_parse_expression_add } from "./js_property_parse_expression_add.mjs";
-import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { marker } from "./marker.mjs";
@@ -26,8 +25,7 @@ export async function js_dollar_new(code) {
   await function_transform(combined, lambda2);
   async function lambda(a) {
     let { ast } = a;
-    let array_expression = marker_next_declare_single_init(a);
-    let elements = object_property_get(array_expression, "elements");
+    let elements = marker_next_declare_single_init_elements(a);
     let oe = {
       type: "ObjectExpression",
       properties: [],
