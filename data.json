@@ -11199,12 +11199,10 @@
   ],
   "js_auto_transforms": [
    "js_auto",
-   "js_auto_transforms"
-  ],
-  "js_auto_transform_new": [
+   "js_auto_transforms",
    "js_auto_transform_new"
   ],
-  "js_auto_transform": [
+  "js_auto_transform_new": [
    "js_auto_transform_new"
   ]
  },
@@ -21168,6 +21166,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "js_auto_transforms",
     "marker_next_declare_single_init",
     "function_transform_marker_specified",
     "marker",
@@ -21176,7 +21175,6 @@
     "a",
     "array_expression",
     "code",
-    "js_auto_transform",
     "name",
     "marker_name"
    ]
