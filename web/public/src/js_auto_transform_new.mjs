@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { function_new_js_name } from "./function_new_js_name.mjs";
 import { function_new_js } from "./function_new_js.mjs";
 import { marker_next_declare_single_init_elements } from "./marker_next_declare_single_init_elements.mjs";
@@ -11,6 +12,7 @@ export async function js_auto_transform_new(f_name_unprefixed) {
   marker("1");
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
+    let expression = js_parse_expression(code_expression);
     log(ae);
   }
   let code = await function_transform_marker_specified(
