@@ -11208,9 +11208,6 @@
   ],
   "ae": [
    "js_auto_transform_new"
-  ],
-  "elements2": [
-   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20920,7 +20917,6 @@
     "lambda",
     "a",
     "array_expression",
-    "elements2",
     "elements",
     "oe",
     "type",
