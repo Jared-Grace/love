@@ -7052,8 +7052,7 @@
    "function_transform_marker",
    "js_marker_named",
    "marker",
-   "function_transform_marker_specified",
-   "js_auto_transform_new"
+   "function_transform_marker_specified"
   ],
   "lambda_marker": [
    "function_transform_marker_all",
@@ -21175,8 +21174,7 @@
     "a",
     "array_expression",
     "code",
-    "name",
-    "marker_name"
+    "name"
    ]
   }
  },
