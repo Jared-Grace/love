@@ -6,8 +6,8 @@ import { marker } from "./marker.mjs";
 export async function js_auto_transform_new() {
   marker("1");
   async function lambda(a) {
-    let e = marker_next_declare_single_init(a);
-    log(e);
+    let ae = marker_next_declare_single_init(a);
+    log(ae);
   }
   let code = await function_transform_marker_specified(
     js_auto_transforms.name,
