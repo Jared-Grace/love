@@ -2036,7 +2036,8 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "marker_rename",
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "js_auto_transform_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11190,6 +11191,9 @@
   "js_auto_transforms": [
    "js_auto",
    "js_auto_transforms"
+  ],
+  "js_auto_transform_new": [
+   "js_auto_transform_new"
   ]
  },
  "functions": {
@@ -21147,6 +21151,13 @@
     "marker",
     "js_auto_transforms",
     "transforms"
+   ]
+  },
+  "js_auto_transform_new": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_auto_transform_new"
    ]
   }
  },
