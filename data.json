@@ -91,7 +91,6 @@
   "lmp": "list_map_property",
   "fst": "function_current_set_task_new",
   "fsp": "function_name_separator",
-  "atn": "function_acronym_to_names",
   "cs": "function_copy_suffix_add",
   "er": "error",
   "fsts": "function_current_set_task_new_simple",
@@ -169,7 +168,8 @@
   "nd": "js_dollar_new",
   "mk": "marker",
   "od": "function_open_dollar_choice",
-  "lc": "list_concat"
+  "lc": "list_concat",
+  "atn": "js_auto_transform_new"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1794,7 +1794,10 @@
   "is marker_next_declare_single_init",
   "js_auto_transform_new assign_combine",
   "s imports",
-  "js_auto_transform_new_inner assign_combine"
+  "js_auto_transform_new_inner assign_combine",
+  "a atn js_auto_transform_new",
+  "a at js_auto_transform_new",
+  "ar atn js_auto_transform_new"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
