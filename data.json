@@ -3631,7 +3631,8 @@
    "function_rename_identifiers",
    "object_property_lambda",
    "object_property_lambda_async",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "js_dollar_new"
   ],
   "data_save": [
    "data_file_update",
@@ -11207,6 +11208,9 @@
   ],
   "ae": [
    "js_auto_transform_new"
+  ],
+  "elements2": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20891,6 +20895,7 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "js_dollar_new_args_inner",
     "js_dollar_new_name",
     "function_new",
@@ -20915,6 +20920,7 @@
     "lambda",
     "a",
     "array_expression",
+    "elements2",
     "elements",
     "oe",
     "type",
