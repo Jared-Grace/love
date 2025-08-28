@@ -1807,8 +1807,7 @@
    "search_generic",
    "js_log_remove",
    "js_dollar_x",
-   "js_expand_generic",
-   "js_auto_transform_new"
+   "js_expand_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -11206,9 +11205,6 @@
    "js_auto_transform_new"
   ],
   "js_auto_transform_new": [
-   "js_auto_transform_new"
-  ],
-  "ae": [
    "js_auto_transform_new"
   ],
   "marker_next_declare_single_init_elements": [
@@ -21180,7 +21176,6 @@
     "function_new_js_name",
     "function_new_js",
     "marker_next_declare_single_init_elements",
-    "log",
     "js_auto_transforms",
     "function_transform_marker_specified",
     "marker",
@@ -21191,7 +21186,6 @@
     "a",
     "elements",
     "expression",
-    "ae",
     "code",
     "name"
    ]
