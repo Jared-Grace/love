@@ -2791,7 +2791,8 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_auto_transform_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -3713,7 +3714,8 @@
    "list_get_end_3",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "js_auto_transform_new"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3882,7 +3884,8 @@
    "visit_unique_async",
    "marker_screen_add",
    "js_dollar_new",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_auto_transform_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -8499,8 +8502,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "js_auto_transform_new"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -21175,6 +21177,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "list_add",
     "js_parse_expression",
     "function_new_js_name",
     "function_new_js",
@@ -21190,7 +21193,8 @@
     "a",
     "elements",
     "expression",
-    "code_expression",
+    "list",
+    "item",
     "ae",
     "code",
     "name"
