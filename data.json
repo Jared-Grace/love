@@ -2260,7 +2260,8 @@
    "js_dollar_new",
    "js_dollar_new_args",
    "js_code_declaration",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "function_new_declaration"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3009,7 +3010,8 @@
   "js_format": [
    "file_js_unparse",
    "function_format",
-   "js_format"
+   "js_format",
+   "function_new_declaration"
   ],
   "file_js_unparse": [
    "file_js_unparse",
@@ -6205,7 +6207,8 @@
   ],
   "formatted": [
    "function_format",
-   "js_format"
+   "js_format",
+   "function_new_declaration"
   ],
   "object_replace": [
    "function_identifier_replace",
@@ -12889,6 +12892,7 @@
   },
   "function_new_declaration": {
    "identifiers": [
+    "js_format",
     "file_write",
     "js_code_export",
     "js_unparse",
@@ -12903,7 +12907,9 @@
     "code_declaration",
     "contents",
     "ast",
-    "contents_import"
+    "contents_import",
+    "formatted",
+    "code"
    ],
    "async": true
   },
