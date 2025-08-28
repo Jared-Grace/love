@@ -5506,7 +5506,8 @@
    "app_new",
    "js_dollar_new",
    "js_dollar_new_args",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_auto_transform_new"
   ],
   "body_block": [
    "functions_combine",
@@ -11116,7 +11117,8 @@
    "js_dollar_new"
   ],
   "function_new_js_name": [
-   "function_new_js"
+   "function_new_js",
+   "js_auto_transform_new"
   ],
   "function_new_js_inner": [
    "function_new_js"
@@ -21170,6 +21172,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "function_new_js_name",
     "function_new_js",
     "marker_next_declare_single_init_elements",
     "log",
@@ -21178,6 +21181,7 @@
     "marker",
     "js_auto_transform_new",
     "f_name_unprefixed",
+    "combined",
     "lambda",
     "a",
     "elements",
