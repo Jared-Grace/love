@@ -2791,8 +2791,7 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple",
-   "js_auto_transform_new"
+   "list_remove_all_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -3714,8 +3713,7 @@
    "list_get_end_3",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_if_exists",
-   "js_auto_transform_new"
+   "list_remove_if_exists"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -21193,8 +21191,6 @@
     "a",
     "elements",
     "expression",
-    "list",
-    "item",
     "ae",
     "code",
     "name"
