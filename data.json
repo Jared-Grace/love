@@ -1970,7 +1970,6 @@
    "js_type",
    "functions_log_remove",
    "marker_up_1",
-   "js_auto",
    "apps_get",
    "app_html_open",
    "app_code",
@@ -5870,41 +5869,32 @@
    "function_alias_replace"
   ],
   "js_let_add": [
-   "js_auto",
    "js_let_add"
   ],
   "js_atomize_function": [
-   "js_atomize_function",
-   "js_auto"
+   "js_atomize_function"
   ],
   "js_function_id_add": [
-   "js_auto",
    "js_function_id_add"
   ],
   "js_arrow_to_function": [
-   "js_arrow_to_function",
-   "js_auto"
+   "js_arrow_to_function"
   ],
   "js_declare_assign_null": [
-   "js_auto",
    "js_declare_assign_null"
   ],
   "js_call_fill": [
-   "js_auto",
    "js_call_fill"
   ],
   "js_dollar": [
-   "js_auto",
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name"
   ],
   "js_atomize": [
-   "js_atomize",
-   "js_auto"
+   "js_atomize"
   ],
   "js_outside_move": [
-   "js_auto",
    "js_outside_move",
    "marker_functionize"
   ],
@@ -5939,8 +5929,7 @@
    "js_dollar_new_args"
   ],
   "js_arrow_blockify": [
-   "js_arrow_blockify",
-   "js_auto"
+   "js_arrow_blockify"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -7644,19 +7633,15 @@
    "js_await_add"
   ],
   "js_bang_to_not": [
-   "js_auto",
    "js_bang_to_not"
   ],
   "js_if_blockify": [
-   "js_auto",
    "js_if_blockify"
   ],
   "js_if_else_if_combine": [
-   "js_auto",
    "js_if_else_if_combine"
   ],
   "js_return_atomize": [
-   "js_auto",
    "js_return_atomize"
   ],
   "transforms": [
@@ -7671,8 +7656,7 @@
    "js_imports_declarations"
   ],
   "js_await_add": [
-   "js_await_add",
-   "js_auto"
+   "js_await_add"
   ],
   "js_await_add_task_simple": [
    "js_await_add_task_simple"
@@ -11182,6 +11166,9 @@
   "list_remove_all_multiple": [
    "list_remove_all_multiple",
    "js_expand_generic"
+  ],
+  "js_auto_transforms": [
+   "js_auto"
   ]
  },
  "functions": {
@@ -13750,23 +13737,8 @@
   },
   "js_auto": {
    "identifiers": [
-    "marker",
-    "js_await_add",
-    "js_bang_to_not",
-    "js_if_blockify",
-    "js_if_else_if_combine",
-    "js_return_atomize",
+    "js_auto_transforms",
     "each_async",
-    "js_atomize",
-    "js_outside_move",
-    "js_dollar",
-    "js_call_fill",
-    "js_atomize_function",
-    "js_declare_assign_null",
-    "js_let_add",
-    "js_function_id_add",
-    "js_arrow_to_function",
-    "js_arrow_blockify",
     "js_auto",
     "ast",
     "transforms",
