@@ -16,7 +16,7 @@ export async function js_auto_transform_new(f_name_unprefixed) {
     let elements = marker_next_declare_single_init_elements(a);
     let expression = js_parse_expression(combined);
     list_add(elements, expression);
-    let ast = a;
+    let { ast } = a;
     await js_imports_missing_add(ast);
   }
   let code = await function_transform_marker_specified(
