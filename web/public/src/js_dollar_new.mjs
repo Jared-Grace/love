@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_dollar_new_args_inner } from "./js_dollar_new_args_inner.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { function_new } from "./function_new.mjs";
@@ -26,6 +27,7 @@ export async function js_dollar_new(code) {
   async function lambda(a) {
     let { ast } = a;
     let array_expression = marker_next_declare_single_init(a);
+    let elements2 = object_property_get(array_expression, "elements");
     let { elements } = array_expression;
     let oe = {
       type: "ObjectExpression",
