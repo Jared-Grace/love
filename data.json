@@ -1752,7 +1752,6 @@
   "ps",
   "nd x",
   "r js_dollar_choices_x js_dollar_x",
-  "s imports",
   "o nd",
   "a mk marker",
   "n js_dollar_new_args",
@@ -1793,7 +1792,8 @@
   "s init",
   "js_auto_transform_new",
   "is marker_next_declare_single_init",
-  "js_auto_transform_new assign_combine"
+  "js_auto_transform_new assign_combine",
+  "s imports"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
