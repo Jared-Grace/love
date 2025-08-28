@@ -2362,8 +2362,7 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace",
-   "js_auto_transform_new"
+   "app_replace"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3362,7 +3361,8 @@
    "js_dollar_new",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_auto_transform_new"
   ],
   "output": [
    "watch",
@@ -11202,6 +11202,9 @@
    "js_auto_transforms"
   ],
   "js_auto_transform_new": [
+   "js_auto_transform_new"
+  ],
+  "js_auto_transform": [
    "js_auto_transform_new"
   ]
  },
@@ -21173,7 +21176,8 @@
     "a",
     "array_expression",
     "code",
-    "f_name",
+    "js_auto_transform",
+    "name",
     "marker_name"
    ]
   }
