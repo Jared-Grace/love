@@ -2213,7 +2213,8 @@
    "js_dollar_choices_x",
    "js_dollar_x",
    "js_expand_generic",
-   "marker_expand"
+   "marker_expand",
+   "js_auto_transform_new"
   ],
   "code": [
    "data_identifiers_file",
@@ -5930,7 +5931,8 @@
    "marker_call_replace_generic",
    "marker_top",
    "js_imports_fix",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_auto_transform_new"
   ],
   "function_transform": [
    "function_auto",
@@ -21173,6 +21175,7 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "js_imports_missing_add",
     "function_open",
     "list_add",
     "js_parse_expression",
@@ -21189,6 +21192,7 @@
     "a",
     "elements",
     "expression",
+    "ast",
     "code",
     "name"
    ]
