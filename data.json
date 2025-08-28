@@ -6637,10 +6637,12 @@
    "js_declaration_single_params_add"
   ],
   "function_new_js": [
-   "function_new_js"
+   "function_new_js",
+   "js_auto_transform_new"
   ],
   "f_name_unprefixed": [
-   "function_new_js"
+   "function_new_js",
+   "js_auto_transform_new"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -21168,12 +21170,14 @@
   "js_auto_transform_new": {
    "async": true,
    "identifiers": [
+    "function_new_js",
     "marker_next_declare_single_init_elements",
     "log",
     "js_auto_transforms",
     "function_transform_marker_specified",
     "marker",
     "js_auto_transform_new",
+    "f_name_unprefixed",
     "lambda",
     "a",
     "elements",
