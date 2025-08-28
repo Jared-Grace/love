@@ -27,8 +27,7 @@ export async function js_dollar_new(code) {
   async function lambda(a) {
     let { ast } = a;
     let array_expression = marker_next_declare_single_init(a);
-    let elements2 = object_property_get(array_expression, "elements");
-    let { elements } = array_expression;
+    let elements = object_property_get(array_expression, "elements");
     let oe = {
       type: "ObjectExpression",
       properties: [],
