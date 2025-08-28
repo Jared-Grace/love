@@ -1791,8 +1791,8 @@
   "s format",
   "n js_auto_transform_new",
   "s init",
-  "is marker_next_declare_single_init",
-  "js_auto_transform_new"
+  "js_auto_transform_new",
+  "is marker_next_declare_single_init"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transform_new",
