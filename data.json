@@ -202,7 +202,6 @@
   "i function_identifier_replace",
   "fcs function_param_new",
   "function_identifier_replace lambda ast=>{}",
-  "s format",
   "f function_param_new",
   "ac f fm",
   "ac fc f",
@@ -1789,7 +1788,8 @@
   "r list_remove_multiple list_remove_all_multiple",
   "is list_remove_all_multiple",
   "c list_remove_all_multiple list_remove_multiple",
-  "o js_auto"
+  "o js_auto",
+  "s format"
  ],
  "marker_current": "1",
  "function_current": "js_auto",
