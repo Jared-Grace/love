@@ -4155,7 +4155,8 @@
    "app_replace_rule_set",
    "object_property_lambda",
    "object_property_lambda_async",
-   "http"
+   "http",
+   "list_index_of_delta"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -16495,6 +16496,7 @@
   },
   "list_index_of_delta": {
    "identifiers": [
+    "not",
     "list_index_is",
     "list_index_of",
     "list_index_of_delta",
