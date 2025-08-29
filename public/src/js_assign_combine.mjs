@@ -20,6 +20,7 @@ export function js_assign_combine(ast) {
     if (nti) {
       return;
     }
+    let name = object_property_get(init, "name");
     let e1 = list_get_end_1(stack);
     let next = list_next(e1, node);
     let declaration2 = js_declare_single(next);
