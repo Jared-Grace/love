@@ -3306,8 +3306,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "js_assign_combine"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -21280,8 +21279,7 @@
     "name2",
     "id",
     "name",
-    "init",
-    "value"
+    "init"
    ]
   },
   "js_declare_single_init": {
