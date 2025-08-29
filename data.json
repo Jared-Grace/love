@@ -1797,7 +1797,8 @@
   "a atn js_auto_transform_new",
   "a at js_auto_transform_new",
   "ar atn js_auto_transform_new",
-  "ts"
+  "ts",
+  "tf VariableDeclaration"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
@@ -21176,7 +21177,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-28T17:26:38.352Z",
+ "git_push_when": "2025-08-29T21:28:37.059Z",
  "error_attention": null,
  "app_current": "replace"
 }
