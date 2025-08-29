@@ -2045,8 +2045,7 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "marker_rename",
-   "js_auto_transforms",
-   "js_assign_combine"
+   "js_auto_transforms"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21252,7 +21251,6 @@
     "list_get_end_1",
     "js_declare_single",
     "js_visit_type",
-    "marker",
     "js_assign_combine",
     "ast",
     "lambda",
