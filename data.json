@@ -3374,8 +3374,7 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
-   "js_dollar_ien",
-   "js_assign_combine"
+   "js_dollar_ien"
   ],
   "output": [
    "watch",
@@ -8291,7 +8290,8 @@
    "js_dollar_a",
    "js_dollar_s",
    "js_function_id_add",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "js_assign_combine"
   ],
   "is": [
    "js_dollar_a",
@@ -10393,7 +10393,8 @@
    "app_replace_rule_set"
   ],
   "name2": [
-   "app_replace_home"
+   "app_replace_home",
+   "js_assign_combine"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -21269,7 +21270,8 @@
     "declaration2",
     "init2",
     "nti",
-    "name"
+    "name2",
+    "id"
    ]
   },
   "js_declare_single_init": {
