@@ -4540,7 +4540,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "html_disable"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10704,7 +10705,8 @@
   ],
   "html_disable": [
    "app_replace_rule_set",
-   "html_enable_if"
+   "html_enable_if",
+   "html_disable"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -10713,14 +10715,16 @@
    "app_replace_rule_set"
   ],
   "html_disable_set": [
-   "html_enable"
+   "html_enable",
+   "html_disable"
   ],
   "html_enable": [
    "html_enable",
    "html_enable_if"
   ],
   "disabled": [
-   "html_enable"
+   "html_enable",
+   "html_disable"
   ],
   "symbols_buttons": [
    "app_replace_rule_set"
@@ -21283,6 +21287,15 @@
     "stack3",
     "ast",
     "afters"
+   ]
+  },
+  "html_disable": {
+   "async": false,
+   "identifiers": [
+    "html_disable_set",
+    "html_disable",
+    "b",
+    "disabled"
    ]
   }
  },
