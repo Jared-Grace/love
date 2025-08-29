@@ -34,7 +34,7 @@ export function js_assign_combine(ast) {
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
       let init = object_property_get(declaration, "init");
-      object_property_set(declaration, "init", value);
+      object_property_set(declaration2, "init", init);
       log(name);
     }
   }
