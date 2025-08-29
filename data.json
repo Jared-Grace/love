@@ -8142,7 +8142,8 @@
    "js_dollar_s",
    "js_identifier_defineds",
    "js_statement_call_get",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "declarators": [
    "js_declare_init_set"
@@ -21212,7 +21213,8 @@
     "ast",
     "lambda",
     "v",
-    "node"
+    "node",
+    "declarations"
    ]
   },
   "js_auto_transform_new_inner": {
