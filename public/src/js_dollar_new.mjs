@@ -1,10 +1,9 @@
+import { js_declaration_single_block_body_add_return } from "./js_declaration_single_block_body_add_return.mjs";
 import { marker_next_declare_single_init_elements } from "./marker_next_declare_single_init_elements.mjs";
 import { js_dollar_new_args_inner } from "./js_dollar_new_args_inner.mjs";
 import { js_dollar_new_name } from "./js_dollar_new_name.mjs";
 import { function_new } from "./function_new.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
-import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { js_statement_return_empty } from "./js_statement_return_empty.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_code_string } from "./js_code_string.mjs";
@@ -17,9 +16,7 @@ export async function js_dollar_new(code) {
   let combined = js_dollar_new_name(code);
   await function_new(combined);
   async function lambda2(ast) {
-    let r = js_statement_return_empty();
-    let body_block = js_declaration_single_block_body(ast);
-    list_add(body_block, r);
+    js_declaration_single_block_body_add_return(ast);
     await js_dollar_new_args_inner(ast);
   }
   await function_transform(combined, lambda2);
