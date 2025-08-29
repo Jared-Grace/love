@@ -3473,7 +3473,8 @@
    "functions_combine_name",
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "separator": [
    "watch",
@@ -10481,9 +10482,6 @@
   "js_declare_single": [
    "js_declare_init_set",
    "js_declare_single",
-   "js_assign_combine"
-  ],
-  "declarator": [
    "js_assign_combine"
   ],
   "js_property_identifier": [
@@ -21224,7 +21222,7 @@
     "lambda",
     "v",
     "node",
-    "declarator",
+    "result",
     "vd"
    ]
   },
