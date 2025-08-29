@@ -3062,8 +3062,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_assign_combine"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21276,8 +21275,7 @@
     "nti",
     "name2",
     "id",
-    "name",
-    "message"
+    "name"
    ]
   },
   "js_declare_single_init": {
