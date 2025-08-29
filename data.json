@@ -5099,8 +5099,7 @@
    "equal_not",
    "js_bang_to_not",
    "js_dollar_ie",
-   "js_identifier_replace",
-   "js_dollar_ien"
+   "js_identifier_replace"
   ],
   "left": [
    "equal",
@@ -8318,7 +8317,8 @@
    "null_is",
    "storage_local_get_or",
    "storage_local_get",
-   "storage_local_initialize"
+   "storage_local_initialize",
+   "js_dollar_ien"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -21193,9 +21193,9 @@
    "async": true,
    "identifiers": [
     "object_property_set",
-    "equal",
     "js_call_new_expression",
     "js_dollar_i",
+    "null_is",
     "js_dollar_ien",
     "remaining",
     "node",
