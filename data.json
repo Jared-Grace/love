@@ -2804,8 +2804,7 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple",
-   "js_assign_combine"
+   "list_remove_all_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -21219,8 +21218,7 @@
     "v",
     "node",
     "declarations",
-    "s1",
-    "list"
+    "s1"
    ]
   },
   "js_auto_transform_new_inner": {
