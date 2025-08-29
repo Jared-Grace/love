@@ -4,15 +4,15 @@ import { list_single } from "./list_single.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_declare_single(vd) {
   let b = js_node_type_is(vd, "VariableDeclaration");
-  let result = null;
+  let declaration = null;
   if (not(b)) {
-    return result;
+    return declaration;
   }
   let { declarations } = vd;
   let s1 = list_size_1(declarations);
   if (not(s1)) {
-    return result;
+    return declaration;
   }
-  result = list_single(declarations);
-  return result;
+  declaration = list_single(declarations);
+  return declaration;
 }
