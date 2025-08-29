@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { equal } from "./equal.mjs";
 import { log } from "./log.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
@@ -8,6 +9,7 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_assign_combine(ast) {
+  return;
   let a = 1;
   let b = a;
   function lambda(v) {
@@ -32,6 +34,7 @@ export function js_assign_combine(ast) {
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
       let init = object_property_get(declaration, "init");
+      object_property_set(object, property_name, value);
       log(name);
     }
   }
