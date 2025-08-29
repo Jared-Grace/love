@@ -2046,7 +2046,8 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "marker_rename",
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "js_assign_combine"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2219,7 +2220,8 @@
    "js_dollar_choices_x",
    "js_dollar_x",
    "js_expand_generic",
-   "marker_expand"
+   "marker_expand",
+   "js_assign_combine"
   ],
   "code": [
    "data_identifiers_file",
@@ -2593,7 +2595,8 @@
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_assign_combine"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2988,7 +2991,8 @@
    "tautology",
    "firebase_service_account",
    "marker_rename",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_assign_combine"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7795,7 +7799,8 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_assign_combine"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -8364,7 +8369,8 @@
    "js_stack_filtered_multiple_each",
    "js_stack_last_multiple",
    "js_visit_types",
-   "js_stack_last_function"
+   "js_stack_last_function",
+   "js_assign_combine"
   ],
   "f": [
    "js_function_last_asyncify",
@@ -8837,7 +8843,8 @@
   ],
   "js_visit_types": [
    "js_visit_type",
-   "js_visit_types"
+   "js_visit_types",
+   "js_assign_combine"
   ],
   "push": [
    "list_add",
@@ -11209,7 +11216,8 @@
    "js_auto_transform_new"
   ],
   "js_assign_combine": [
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21176,6 +21184,19 @@
     "function_new_js",
     "js_auto_transform_new",
     "f_name_unprefixed"
+   ]
+  },
+  "js_assign_combine": {
+   "async": false,
+   "identifiers": [
+    "js_visit_types",
+    "marker",
+    "js_assign_combine",
+    "ast",
+    "ast2",
+    "types",
+    "lambda",
+    "v"
    ]
   }
  },
