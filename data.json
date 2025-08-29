@@ -169,7 +169,8 @@
   "mk": "marker",
   "od": "function_open_dollar_choice",
   "lc": "list_concat",
-  "atn": "js_auto_transform_new"
+  "atn": "js_auto_transform_new",
+  "lsg": "list_single"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1803,7 +1804,8 @@
   "is js_statement_return_empty",
   "s transform",
   "s next,index",
-  "as list"
+  "as list",
+  "a lsg list_single"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
