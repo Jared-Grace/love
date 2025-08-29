@@ -1798,8 +1798,8 @@
   "s dollar",
   "s init",
   "as js,node,type,is",
-  "p",
   "s id",
+  "p",
   "fts js_assign_combine"
  ],
  "marker_current": "1",
