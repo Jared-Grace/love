@@ -1787,7 +1787,6 @@
   "o js_auto",
   "s format",
   "n js_auto_transform_new",
-  "s init",
   "js_auto_transform_new",
   "is marker_next_declare_single_init",
   "js_auto_transform_new assign_combine",
@@ -1797,7 +1796,8 @@
   "a at js_auto_transform_new",
   "ar atn js_auto_transform_new",
   "ts",
-  "s dollar"
+  "s dollar",
+  "s init"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
