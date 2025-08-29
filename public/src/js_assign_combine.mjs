@@ -12,22 +12,22 @@ export function js_assign_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;
     let declaration = js_declare_single(node);
-    log(declaration);
     if (null_is(declaration)) {
       return;
     }
-    let init = object_property_get(declaration, "init");
-    let nti = js_node_type_not_is(init, "Identifier");
-    if (nti) {
-      return;
-    }
-    let name = object_property_get(init, "name");
     let e1 = list_get_end_1(stack);
     let next = list_next(e1, node);
     let declaration2 = js_declare_single(next);
     if (null_is(declaration2)) {
       return;
     }
+    let init2 = object_property_get(declaration2, "init");
+    let nti = js_node_type_not_is(init2, "Identifier");
+    if (nti) {
+      return;
+    }
+    let name = object_property_get(init2, "name");
+    log(name);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
