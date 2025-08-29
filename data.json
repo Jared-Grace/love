@@ -4427,8 +4427,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "marker_rename"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -20918,7 +20917,6 @@
     "lambda",
     "a",
     "f_name_current",
-    "v2",
     "v"
    ]
   },
