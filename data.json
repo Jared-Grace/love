@@ -3372,7 +3372,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "output": [
    "watch",
@@ -21259,6 +21260,7 @@
     "declaration",
     "init",
     "nti",
+    "name",
     "e1",
     "next",
     "declaration2"
