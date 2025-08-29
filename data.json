@@ -1815,8 +1815,7 @@
    "search_generic",
    "js_log_remove",
    "js_dollar_x",
-   "js_expand_generic",
-   "js_assign_combine"
+   "js_expand_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -21256,7 +21255,6 @@
     "list_remove",
     "object_property_set",
     "equal",
-    "log",
     "js_node_type_not_is",
     "object_property_get",
     "list_next",
