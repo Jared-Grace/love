@@ -10,7 +10,7 @@ export function js_assign_combine(ast) {
     let { declarations } = node;
     let s1 = list_size_1(declarations);
     if (s1) {
-      let only = list_single(list);
+      let only = list_single(declarations);
     }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
