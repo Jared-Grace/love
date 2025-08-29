@@ -5,7 +5,7 @@ export function list_index_of_delta(list, item, delta) {
   let index = list_index_of(list, item);
   let index_next = index + delta;
   return index_next;
-  let ii = list_index_is(list2, index2);
+  let ii = list_index_is(list, index_next);
   if (not(ii)) {
     return;
   }
