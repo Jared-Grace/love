@@ -1722,7 +1722,6 @@
   "is app_name_main",
   "o oa",
   "o an",
-  "s auto",
   "s marker",
   "is function_transform_marker",
   "n marker_rename",
@@ -1800,7 +1799,8 @@
   "ts",
   "tf VariableDeclaration",
   "s node,types",
-  "s types,js"
+  "s types,js",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
