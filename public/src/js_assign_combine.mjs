@@ -26,8 +26,9 @@ export function js_assign_combine(ast) {
     if (nti) {
       return;
     }
-    let name = object_property_get(init2, "name");
-    log(name);
+    let name2 = object_property_get(init2, "name");
+    let id = object_property_get(declaration2, "id");
+    log(name2);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
