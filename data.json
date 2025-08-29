@@ -2996,7 +2996,8 @@
    "firebase_service_account",
    "marker_rename",
    "function_open_dollar_choice",
-   "js_assign_combine"
+   "js_assign_combine",
+   "list_index_of_delta"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -16503,7 +16504,8 @@
     "delta",
     "index",
     "index_next",
-    "ii"
+    "ii",
+    "v"
    ],
    "async": false
   },
