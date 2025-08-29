@@ -1799,7 +1799,8 @@
   "ar atn js_auto_transform_new",
   "ts",
   "tf VariableDeclaration",
-  "s node,types"
+  "s node,types",
+  "s types,js"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
