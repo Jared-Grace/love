@@ -7,7 +7,6 @@ import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_assign_combine(ast) {
-  return;
   let a = 1;
   let b = a;
   function lambda(v) {
