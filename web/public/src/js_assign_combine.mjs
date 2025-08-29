@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_next } from "./list_next.mjs";
@@ -27,6 +28,7 @@ export function js_assign_combine(ast) {
     if (null_is(declaration2)) {
       return;
     }
+    log(message);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
