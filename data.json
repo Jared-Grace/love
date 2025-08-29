@@ -11258,7 +11258,8 @@
    "js_auto_transform_new_inner"
   ],
   "js_dollar_ien": [
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -20925,6 +20926,7 @@
   "js_dollar_choices": {
    "async": false,
    "identifiers": [
+    "js_dollar_ien",
     "marker",
     "js_dollar_f",
     "js_dollar_s",
