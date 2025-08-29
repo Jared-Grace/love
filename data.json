@@ -2807,7 +2807,8 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_assign_combine"
   ],
   "v": [
    "data_identifiers_file",
@@ -5709,7 +5710,8 @@
    "list_find",
    "list_single",
    "js_imports_declarations",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -10803,7 +10805,8 @@
   "only": [
    "list_single",
    "list_find",
-   "firebase_service_account"
+   "firebase_service_account",
+   "js_assign_combine"
   ],
   "firebase_service_account": [
    "firebase_service_account",
@@ -11244,9 +11247,6 @@
   "js_declaration_single_block_body_add_return": [
    "js_dollar_new",
    "js_auto_transform_new_inner"
-  ],
-  "lsn": [
-   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21215,6 +21215,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "list_single",
     "list_size_1",
     "js_visit_type",
     "marker",
@@ -21225,7 +21226,8 @@
     "node",
     "declarations",
     "s1",
-    "lsn"
+    "only",
+    "list"
    ]
   },
   "js_auto_transform_new_inner": {
