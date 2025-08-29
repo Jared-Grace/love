@@ -10484,7 +10484,6 @@
    "js_assign_combine"
   ],
   "declarator": [
-   "js_declare_single",
    "js_assign_combine"
   ],
   "js_property_identifier": [
@@ -19816,8 +19815,7 @@
     "b",
     "result",
     "declarations",
-    "s1",
-    "declarator"
+    "s1"
    ]
   },
   "js_property_identifier": {
