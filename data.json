@@ -1805,7 +1805,8 @@
   "s next,index",
   "as list",
   "a lsg list_single",
-  "s declar"
+  "s declar",
+  "s dollar n"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
