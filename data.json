@@ -4582,7 +4582,8 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "firebase_upload_object"
   ],
   "assert_json": [
    "assert_json",
@@ -10868,17 +10869,20 @@
    "file_name_json"
   ],
   "version": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_upload_object"
   ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "firebase_upload_object"
   ],
   "firebase_upload_object": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_upload_object"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -11278,6 +11282,12 @@
   "js_dollar_ien": [
    "js_dollar_ien",
    "js_dollar_choices"
+  ],
+  "firebase_upload_string": [
+   "firebase_upload_object"
+  ],
+  "content": [
+   "firebase_upload_object"
   ]
  },
  "functions": {
@@ -21332,6 +21342,17 @@
     "item",
     "sw",
     "only"
+   ]
+  },
+  "firebase_upload_object": {
+   "async": true,
+   "identifiers": [
+    "firebase_upload_string",
+    "json_to",
+    "firebase_upload_object",
+    "version",
+    "destination_version",
+    "content"
    ]
   }
  },
