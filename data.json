@@ -1763,7 +1763,6 @@
   "is js_keyword_function",
   "js_dollar_choice_arguments",
   "  return;",
-  "p",
   "js_dollar_new_args x",
   "cs js_dollar_choice_arguments_name",
   "cs js_dollar_choice_arguments name",
@@ -1799,6 +1798,7 @@
   "s dollar",
   "s init",
   "as js,node,type,is",
+  "p",
   "fts js_assign_combine"
  ],
  "marker_current": "1",
