@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { equal } from "./equal.mjs";
 import { log } from "./log.mjs";
@@ -35,6 +36,7 @@ export function js_assign_combine(ast) {
     if (equal(name2, name)) {
       let init = object_property_get(declaration, "init");
       object_property_set(declaration2, "init", init);
+      list_remove(list, item);
       log(name);
     }
   }
