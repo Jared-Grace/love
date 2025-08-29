@@ -1807,7 +1807,8 @@
   "s declar",
   "s dollar n",
   "js_dollar_new ien",
-  "s log"
+  "s log",
+  "functions_log_remove"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ien",
