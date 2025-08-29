@@ -3001,7 +3001,8 @@
    "firebase_service_account",
    "marker_rename",
    "function_open_dollar_choice",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_declare_single"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4504,7 +4505,6 @@
    "object_property_exists_assert",
    "string_is_assert",
    "string_is_assert_message",
-   "js_declare_single",
    "null_not_is_assert",
    "object_property_exists_not_assert"
   ],
@@ -19809,11 +19809,11 @@
    "identifiers": [
     "not",
     "list_single",
-    "assert",
     "js_node_type_is",
     "js_declare_single",
     "vd",
     "b",
+    "v",
     "declarations",
     "declarator"
    ]
