@@ -6155,7 +6155,8 @@
    "js_call_function_if",
    "js_node_type_not_is_if",
    "js_log_remove",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_assign_combine"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -21210,7 +21211,8 @@
     "js_assign_combine",
     "ast",
     "lambda",
-    "v"
+    "v",
+    "node"
    ]
   },
   "js_auto_transform_new_inner": {
