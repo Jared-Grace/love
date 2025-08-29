@@ -6,7 +6,7 @@ export function js_property_generic(shorthand, key, value) {
     computed: false,
     key: key,
     value: value,
-    kind: "init"
+    kind: "init",
   };
   return v;
 }
