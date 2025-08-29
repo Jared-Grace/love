@@ -1799,7 +1799,8 @@
   "s init",
   "as js,node,type,is",
   "p",
-  "fts js_assign_combine"
+  "fts js_assign_combine",
+  "s id"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
