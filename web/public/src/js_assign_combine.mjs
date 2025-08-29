@@ -9,7 +9,7 @@ export function js_assign_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;
     let declaration = js_declare_single(node);
-    if (null_is(value)) {
+    if (null_is(declaration)) {
     }
     let e1 = list_get_end_1(stack);
   }
