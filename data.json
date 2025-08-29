@@ -1802,7 +1802,8 @@
   "p",
   "fts js_assign_combine",
   "cs list_next_try",
-  "cs list_next try"
+  "cs list_next try",
+  "s index,list"
  ],
  "marker_current": "1",
  "function_current": "list_next_try",
