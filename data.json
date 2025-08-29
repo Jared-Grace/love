@@ -7501,7 +7501,8 @@
    "js_declaration_params_names_node",
    "js_identifier_is",
    "list_index_is",
-   "js_let_add"
+   "js_let_add",
+   "list_index_of_delta"
   ],
   "Number": [
    "integer_is",
@@ -16502,6 +16503,7 @@
     "delta",
     "index",
     "index_next",
+    "ii",
     "list2",
     "index2"
    ],
