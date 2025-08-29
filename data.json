@@ -1172,7 +1172,6 @@
   "nj bang_to_not",
   "u jv",
   "a jv js_visit",
-  "ts",
   "s js,type",
   "a jvt js_visit_type",
   "nj js_dollar_ie",
@@ -1797,7 +1796,8 @@
   "js_auto_transform_new_inner assign_combine",
   "a atn js_auto_transform_new",
   "a at js_auto_transform_new",
-  "ar atn js_auto_transform_new"
+  "ar atn js_auto_transform_new",
+  "ts"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
