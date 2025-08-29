@@ -6,7 +6,7 @@ export function list_next_try(list, item) {
   marker("1");
   let index_next = list_index_of_next(list, item);
   if (null_is(index_next)) {
-    return;
+    return index_next;
   }
   let next = list_get(list, index_next);
   return next;
