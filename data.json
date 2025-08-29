@@ -4269,7 +4269,8 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_assign_combine"
   ],
   "without": [
    "string_suffix_without",
@@ -4528,7 +4529,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "js_assign_combine"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -21254,6 +21256,8 @@
     "js_visit_type",
     "js_assign_combine",
     "ast",
+    "a",
+    "b",
     "lambda",
     "v",
     "node",
