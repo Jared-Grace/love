@@ -1709,7 +1709,6 @@
   "s setting",
   "s storage",
   "s rule,set",
-  "as list",
   "s list_any",
   "a lan list_any",
   "o list_any",
@@ -1803,7 +1802,8 @@
   "is js_return_empty",
   "is js_statement_return_empty",
   "s transform",
-  "s next,index"
+  "s next,index",
+  "as list"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
