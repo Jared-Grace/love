@@ -7812,8 +7812,7 @@
    "js_calls_to_each"
   ],
   "ast2": [
-   "js_calls_to_each",
-   "js_assign_combine"
+   "js_calls_to_each"
   ],
   "js_calls_to_each_task_simple": [
    "js_calls_to_each_task_simple"
@@ -21213,7 +21212,6 @@
     "ast",
     "lambda",
     "v",
-    "ast2",
     "types"
    ]
   },
