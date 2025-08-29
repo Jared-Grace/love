@@ -5374,8 +5374,7 @@
    "list_size_1",
    "list_size_1_assert_message",
    "js_imports_declarations",
-   "js_dollar_a",
-   "js_assign_combine"
+   "js_dollar_a"
   ],
   "js_auto": [
    "functions_combine",
@@ -5710,8 +5709,7 @@
    "list_find",
    "list_single",
    "js_imports_declarations",
-   "js_declare_single",
-   "js_assign_combine"
+   "js_declare_single"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -5766,8 +5764,7 @@
    "function_acronym_to_name",
    "js_dollar_s",
    "list_size_1",
-   "js_dollar_a",
-   "js_assign_combine"
+   "js_dollar_a"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -8141,7 +8138,8 @@
   ],
   "vd": [
    "js_declare_init_set",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "declarations": [
    "js_dollar_a",
@@ -8149,8 +8147,7 @@
    "js_dollar_s",
    "js_identifier_defineds",
    "js_statement_call_get",
-   "js_declare_single",
-   "js_assign_combine"
+   "js_declare_single"
   ],
   "declarators": [
    "js_declare_init_set"
@@ -10481,10 +10478,12 @@
   ],
   "js_declare_single": [
    "js_declare_init_set",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "declarator": [
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "js_property_identifier": [
    "function_params_consolidate",
@@ -10805,8 +10804,7 @@
   "only": [
    "list_single",
    "list_find",
-   "firebase_service_account",
-   "js_assign_combine"
+   "firebase_service_account"
   ],
   "firebase_service_account": [
    "firebase_service_account",
@@ -21216,8 +21214,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
-    "list_single",
-    "list_size_1",
+    "js_declare_single",
     "js_visit_type",
     "marker",
     "js_assign_combine",
@@ -21225,9 +21222,8 @@
     "lambda",
     "v",
     "node",
-    "declarations",
-    "s1",
-    "only"
+    "declarator",
+    "vd"
    ]
   },
   "js_auto_transform_new_inner": {
