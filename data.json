@@ -1813,7 +1813,8 @@
    "search_generic",
    "js_log_remove",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_assign_combine"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3060,7 +3061,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_assign_combine"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21243,6 +21245,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "log",
     "js_node_type_not_is",
     "object_property_get",
     "list_next",
@@ -21263,7 +21266,8 @@
     "name",
     "e1",
     "next",
-    "declaration2"
+    "declaration2",
+    "message"
    ]
   },
   "js_declare_single_init": {
