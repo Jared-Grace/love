@@ -1,3 +1,4 @@
+import { list_next } from "./list_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
@@ -13,6 +14,7 @@ export function js_assign_combine(ast) {
       return;
     }
     let e1 = list_get_end_1(stack);
+    let next = list_next(list, item);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
