@@ -3472,8 +3472,7 @@
    "ternary",
    "functions_combine_name",
    "object_property_exists_not_assert",
-   "js_dollar_choice_arguments",
-   "js_assign_combine"
+   "js_dollar_choice_arguments"
   ],
   "separator": [
    "watch",
@@ -6649,7 +6648,8 @@
    "function_parse_declaration_inner",
    "js_declaration_single_block_body",
    "js_expand_generic",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -8143,8 +8143,7 @@
   ],
   "vd": [
    "js_declare_init_set",
-   "js_declare_single",
-   "js_assign_combine"
+   "js_declare_single"
   ],
   "declarations": [
    "js_dollar_a",
@@ -21227,9 +21226,8 @@
     "v",
     "node",
     "stack",
-    "e1",
-    "result",
-    "vd"
+    "declaration",
+    "e1"
    ]
   },
   "js_auto_transform_new_inner": {
