@@ -6,7 +6,7 @@ export function js_assign_combine(ast) {
   marker("1");
   function lambda(v) {
     let { node } = v;
-    let declarator = js_declare_single(vd);
+    let result = js_declare_single(vd);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
