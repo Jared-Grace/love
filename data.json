@@ -1800,7 +1800,8 @@
   "s node,types",
   "s types,js",
   "s auto",
-  "s return"
+  "s return",
+  "is js_return_empty"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
