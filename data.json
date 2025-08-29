@@ -4826,8 +4826,7 @@
    "list_skip",
    "list_slice_end",
    "function_transform_marker_specified",
-   "app_replace_rule_set",
-   "js_assign_combine"
+   "app_replace_rule_set"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -5372,7 +5371,8 @@
    "list_size_1",
    "list_size_1_assert_message",
    "js_imports_declarations",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_assign_combine"
   ],
   "js_auto": [
    "functions_combine",
@@ -5762,7 +5762,8 @@
    "function_acronym_to_name",
    "js_dollar_s",
    "list_size_1",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_assign_combine"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -7095,8 +7096,7 @@
   "size": [
    "list_size",
    "function_transform_marker_specified",
-   "app_replace_rule_set",
-   "js_assign_combine"
+   "app_replace_rule_set"
   ],
   "js_markers": [
    "function_transform_marker_all",
@@ -21210,7 +21210,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
-    "list_size",
+    "list_size_1",
     "js_visit_type",
     "marker",
     "js_assign_combine",
@@ -21219,7 +21219,7 @@
     "v",
     "node",
     "declarations",
-    "size",
+    "s1",
     "list"
    ]
   },
