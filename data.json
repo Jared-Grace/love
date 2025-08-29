@@ -3473,7 +3473,6 @@
    "functions_combine_name",
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
-   "js_declare_single",
    "js_assign_combine"
   ],
   "separator": [
@@ -6649,7 +6648,8 @@
    "js_imports_paths_fix",
    "function_parse_declaration_inner",
    "js_declaration_single_block_body",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_declare_single"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -19814,7 +19814,7 @@
     "js_declare_single",
     "vd",
     "b",
-    "result",
+    "declaration",
     "declarations",
     "s1"
    ]
