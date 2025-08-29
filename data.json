@@ -7715,7 +7715,6 @@
    "log_json"
   ],
   "log_unparse": [
-   "js_dollar_ie",
    "log_unparse",
    "log_unparse_try"
   ],
@@ -14617,7 +14616,6 @@
   "js_dollar_ie": {
    "identifiers": [
     "js_call_new_expression",
-    "log_unparse",
     "object_property_set",
     "js_dollar_i",
     "equal",
