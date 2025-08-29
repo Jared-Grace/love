@@ -8105,8 +8105,7 @@
    "js_dollar_a",
    "js_dollar_s",
    "marker_assign_replace",
-   "js_declare_single_init",
-   "js_assign_combine"
+   "js_declare_single_init"
   ],
   "assign_code": [
    "js_declare"
@@ -8357,7 +8356,8 @@
    "js_dollar_s"
   ],
   "init2": [
-   "js_dollar_s"
+   "js_dollar_s",
+   "js_assign_combine"
   ],
   "index_next": [
    "js_dollar_s",
@@ -21263,12 +21263,12 @@
     "node",
     "stack",
     "declaration",
-    "init",
-    "nti",
-    "name",
     "e1",
     "next",
-    "declaration2"
+    "declaration2",
+    "init2",
+    "nti",
+    "name"
    ]
   },
   "js_declare_single_init": {
