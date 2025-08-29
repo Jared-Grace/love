@@ -2419,7 +2419,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "js_assign_combine"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3182,7 +3183,8 @@
    "js_await_wrap",
    "object_property_lambda",
    "object_property_lambda_async",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "watch": [
    "watch"
@@ -3305,7 +3307,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "js_assign_combine"
   ],
   "name": [
    "watch",
@@ -5057,7 +5060,8 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "js_assign_combine"
   ],
   "each_pair": [
    "each_pair",
@@ -21251,6 +21255,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "object_property_set",
     "equal",
     "log",
     "js_node_type_not_is",
@@ -21277,7 +21282,10 @@
     "name2",
     "id",
     "name",
-    "init"
+    "init",
+    "object",
+    "property_name",
+    "value"
    ]
   },
   "js_declare_single_init": {
