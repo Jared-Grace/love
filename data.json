@@ -6761,7 +6761,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_assign_combine"
   ],
   "key": [
    "object_invert",
@@ -7535,7 +7536,8 @@
    "js_declare_assign",
    "js_if_blockify_generic",
    "js_node_type_not_is",
-   "js_node_type_not_is_if"
+   "js_node_type_not_is_if",
+   "js_assign_combine"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -8491,7 +8493,8 @@
   "nti": [
    "js_if_blockify_generic",
    "js_node_type_not_is",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_assign_combine"
   ],
   "nt": [
    "js_if_blockify_generic",
@@ -11251,6 +11254,9 @@
   ],
   "js_declare_single_init": [
    "js_declare_single_init"
+  ],
+  "node2": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21240,6 +21246,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "js_node_type_not_is",
     "object_property_get",
     "list_next",
     "null_is",
@@ -21255,6 +21262,9 @@
     "stack",
     "declaration",
     "init",
+    "nti",
+    "node2",
+    "type",
     "e1",
     "next",
     "declaration2"
