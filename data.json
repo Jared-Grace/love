@@ -1806,10 +1806,11 @@
   "as list",
   "a lsg list_single",
   "s declar",
-  "s dollar n"
+  "s dollar n",
+  "js_dollar_new ien"
  ],
  "marker_current": "1",
- "function_current": "js_auto_transforms",
+ "function_current": "js_dollar_ien",
  "terminal": false,
  "identifiers": {
   "log": [
