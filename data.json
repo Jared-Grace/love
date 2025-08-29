@@ -1798,7 +1798,8 @@
   "ts",
   "s dollar",
   "s init",
-  "as js,node,type,is"
+  "as js,node,type,is",
+  "fts js_assign_combine"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
