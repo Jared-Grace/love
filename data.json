@@ -5526,7 +5526,6 @@
    "marker_functionize",
    "task_new",
    "js_declaration_single_block_body",
-   "js_dollar_new",
    "js_expand_generic"
   ],
   "list_map_property": [
@@ -6217,7 +6216,6 @@
    "function_aliases_restore",
    "each_range_async",
    "app_replace_rule_set",
-   "js_dollar_new",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple"
   ],
@@ -11131,15 +11129,13 @@
    "function_new_js"
   ],
   "js_statement_return_empty": [
-   "js_if_blockify_generic",
-   "js_dollar_new"
+   "js_if_blockify_generic"
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
    "functions_combine",
    "task_new",
-   "marker_top",
-   "js_dollar_new"
+   "marker_top"
   ],
   "choice_name": [
    "js_dollar"
@@ -11220,6 +11216,9 @@
   "js_assign_combine": [
    "js_auto_transforms",
    "js_assign_combine"
+  ],
+  "js_declaration_single_block_body_add_return": [
+   "js_dollar_new"
   ]
  },
  "functions": {
@@ -20904,13 +20903,12 @@
   "js_dollar_new": {
    "async": true,
    "identifiers": [
+    "js_declaration_single_block_body_add_return",
     "marker_next_declare_single_init_elements",
     "js_dollar_new_args_inner",
     "js_dollar_new_name",
     "function_new",
     "js_imports_missing_add",
-    "js_declaration_single_block_body",
-    "js_statement_return_empty",
     "function_transform",
     "list_add",
     "js_code_string",
@@ -20923,8 +20921,6 @@
     "combined",
     "lambda2",
     "ast",
-    "r",
-    "body_block",
     "lambda",
     "a",
     "elements",
