@@ -1449,7 +1449,6 @@
   "u la",
   "c function_parse_declaration function_parse_strict_declaration",
   "c function_exists function_exists_strict",
-  "s log",
   "nj log_remove",
   "s call",
   "s each",
@@ -1807,7 +1806,8 @@
   "a lsg list_single",
   "s declar",
   "s dollar n",
-  "js_dollar_new ien"
+  "js_dollar_new ien",
+  "s log"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ien",
