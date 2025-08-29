@@ -10,6 +10,7 @@ export function js_assign_combine(ast) {
     let { node, stack } = v;
     let declaration = js_declare_single(node);
     if (null_is(declaration)) {
+      return;
     }
     let e1 = list_get_end_1(stack);
   }
