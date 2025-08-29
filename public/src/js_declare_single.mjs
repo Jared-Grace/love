@@ -13,6 +13,6 @@ export function js_declare_single(vd) {
   if (not(s1)) {
     return result;
   }
-  let declarator = list_single(declarations);
-  return declarator;
+  result = list_single(declarations);
+  return result;
 }
