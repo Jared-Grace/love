@@ -3001,8 +3001,7 @@
    "firebase_service_account",
    "marker_rename",
    "function_open_dollar_choice",
-   "js_assign_combine",
-   "js_declare_single"
+   "js_assign_combine"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3473,7 +3472,8 @@
    "ternary",
    "functions_combine_name",
    "object_property_exists_not_assert",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "js_declare_single"
   ],
   "separator": [
    "watch",
@@ -19814,7 +19814,7 @@
     "js_declare_single",
     "vd",
     "b",
-    "v",
+    "result",
     "declarations",
     "s1",
     "declarator"
