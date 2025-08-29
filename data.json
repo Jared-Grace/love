@@ -7768,7 +7768,8 @@
    "js_stack_last_function"
   ],
   "list_index_is": [
-   "list_index_is"
+   "list_index_is",
+   "list_index_of_delta"
   ],
   "js_visitors": [
    "js_block_child_graph",
@@ -10139,7 +10140,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "list_index_of_delta"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -10737,7 +10739,8 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_index_of_delta"
   ],
   "html_style_remove": [
    "html_style_remove"
@@ -16493,13 +16496,16 @@
   },
   "list_index_of_delta": {
    "identifiers": [
+    "list_index_is",
     "list_index_of",
     "list_index_of_delta",
     "list",
     "item",
     "delta",
     "index",
-    "index_next"
+    "index_next",
+    "list2",
+    "index2"
    ],
    "async": false
   },
