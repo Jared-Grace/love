@@ -4582,8 +4582,7 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified",
-   "firebase_upload_object"
+   "function_transform_marker_specified"
   ],
   "assert_json": [
    "assert_json",
@@ -10869,20 +10868,17 @@
    "file_name_json"
   ],
   "version": [
-   "firebase_deploy_function",
-   "firebase_upload_object"
+   "firebase_deploy_function"
   ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "firebase_storage_download",
-   "firebase_upload_object"
+   "firebase_storage_download"
   ],
   "firebase_upload_object": [
-   "firebase_deploy_function",
-   "firebase_upload_object"
+   "firebase_deploy_function"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -11282,12 +11278,6 @@
   "js_dollar_ien": [
    "js_dollar_ien",
    "js_dollar_choices"
-  ],
-  "firebase_upload_string": [
-   "firebase_upload_object"
-  ],
-  "content": [
-   "firebase_upload_object"
   ]
  },
  "functions": {
@@ -21335,6 +21325,20 @@
     "string_starts_with",
     "folder_read",
     "folder_find_starts_with",
+    "path_folder",
+    "prefix",
+    "files",
+    "lambda",
+    "item",
+    "sw",
+    "only"
+   ]
+  }
+ },
+ "git_push_when": "2025-08-29T21:28:37.059Z",
+ "error_attention": null,
+ "app_current": "replace"
+}er_find_starts_with",
     "path_folder",
     "prefix",
     "files",
