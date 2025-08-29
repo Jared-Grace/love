@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { log } from "./log.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -27,8 +28,12 @@ export function js_assign_combine(ast) {
       return;
     }
     let name2 = object_property_get(init2, "name");
-    let id = object_property_get(declaration2, "id");
+    let id = object_property_get(declaration, "id");
+    let name = object_property_get(id, "name");
     log(name2);
+    return;
+    if (equal(left, right)) {
+    }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
