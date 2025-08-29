@@ -10141,8 +10141,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "list_index_of_delta"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -10740,8 +10739,7 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set",
-   "list_index_of_delta"
+   "app_replace_rule_set"
   ],
   "html_style_remove": [
    "html_style_remove"
@@ -16505,9 +16503,7 @@
     "delta",
     "index",
     "index_next",
-    "ii",
-    "list2",
-    "index2"
+    "ii"
    ],
    "async": false
   },
