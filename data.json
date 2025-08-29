@@ -1802,7 +1802,8 @@
   "s return",
   "is js_return_empty",
   "is js_statement_return_empty",
-  "s transform"
+  "s transform",
+  "s next,index"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
