@@ -8107,7 +8107,8 @@
    "js_dollar_a",
    "js_dollar_s",
    "marker_assign_replace",
-   "js_declare_single_init"
+   "js_declare_single_init",
+   "js_assign_combine"
   ],
   "assign_code": [
    "js_declare"
@@ -21275,7 +21276,8 @@
     "nti",
     "name2",
     "id",
-    "name"
+    "name",
+    "init"
    ]
   },
   "js_declare_single_init": {
