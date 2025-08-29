@@ -3062,7 +3062,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_assign_combine"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5128,8 +5129,7 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_assign_combine"
+   "app_replace_rule_parse"
   ],
   "right": [
    "equal",
@@ -5146,8 +5146,7 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse",
-   "js_assign_combine"
+   "app_replace_rule_parse"
   ],
   "eq": [
    "equal",
@@ -21278,8 +21277,7 @@
     "name2",
     "id",
     "name",
-    "left",
-    "right"
+    "message"
    ]
   },
   "js_declare_single_init": {
