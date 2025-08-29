@@ -3638,7 +3638,8 @@
    "function_rename_identifiers",
    "object_property_lambda",
    "object_property_lambda_async",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "js_declare_single_init"
   ],
   "data_save": [
    "data_file_update",
@@ -8096,7 +8097,8 @@
    "js_declare_init_set",
    "js_dollar_a",
    "js_dollar_s",
-   "marker_assign_replace"
+   "marker_assign_replace",
+   "js_declare_single_init"
   ],
   "assign_code": [
    "js_declare"
@@ -8274,7 +8276,8 @@
    "marker_next_await",
    "js_dollar_x",
    "js_expand_generic",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_declare_single_init"
   ],
   "id": [
    "js_dollar_a",
@@ -10476,10 +10479,12 @@
   "js_declare_single": [
    "js_declare_init_set",
    "js_declare_single",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_declare_single_init"
   ],
   "declarator": [
-   "js_declare_single"
+   "js_declare_single",
+   "js_declare_single_init"
   ],
   "js_property_identifier": [
    "function_params_consolidate",
@@ -11240,6 +11245,9 @@
   ],
   "declaration2": [
    "js_assign_combine"
+  ],
+  "js_declare_single_init": [
+   "js_declare_single_init"
   ]
  },
  "functions": {
@@ -21245,6 +21253,17 @@
     "e1",
     "next",
     "declaration2"
+   ]
+  },
+  "js_declare_single_init": {
+   "async": false,
+   "identifiers": [
+    "object_property_get",
+    "js_declare_single",
+    "js_declare_single_init",
+    "next",
+    "declarator",
+    "init"
    ]
   }
  },
