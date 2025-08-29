@@ -16,7 +16,7 @@ export function js_assign_combine(ast) {
       return;
     }
     let init = object_property_get(declaration, "init");
-    let nti = js_node_type_not_is(node2, type);
+    let nti = js_node_type_not_is(init, "Identifier");
     let e1 = list_get_end_1(stack);
     let next = list_next(e1, node);
     let declaration2 = js_declare_single(next);
