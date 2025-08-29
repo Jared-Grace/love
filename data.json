@@ -7046,7 +7046,8 @@
    "js_visit_type_each_async",
    "marker_functionize",
    "js_identifiers_named_count",
-   "js_log_remove"
+   "js_log_remove",
+   "js_assign_combine"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -8855,8 +8856,7 @@
   ],
   "js_visit_types": [
    "js_visit_type",
-   "js_visit_types",
-   "js_assign_combine"
+   "js_visit_types"
   ],
   "push": [
    "list_add",
@@ -21206,7 +21206,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
-    "js_visit_types",
+    "js_visit_type",
     "marker",
     "js_assign_combine",
     "ast",
