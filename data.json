@@ -3310,7 +3310,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "list_next_try"
   ],
   "name": [
    "watch",
@@ -8354,7 +8355,8 @@
    "storage_local_get",
    "storage_local_initialize",
    "js_dollar_ien",
-   "js_assign_combine"
+   "js_assign_combine",
+   "list_next_try"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -21309,6 +21311,7 @@
   "list_next_try": {
    "async": false,
    "identifiers": [
+    "null_is",
     "marker",
     "list_get",
     "list_index_of_next",
@@ -21316,6 +21319,7 @@
     "list",
     "item",
     "index_next",
+    "value",
     "next"
    ]
   }
