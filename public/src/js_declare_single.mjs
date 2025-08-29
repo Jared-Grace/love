@@ -5,6 +5,7 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_declare_single(vd) {
   let b = js_node_type_is(vd, "VariableDeclaration");
   if (not(b)) {
+    return;
   }
   assert(b);
   let { declarations } = vd;
