@@ -2610,7 +2610,8 @@
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
    "js_assign_combine",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "folder_find_starts_with"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3006,7 +3007,8 @@
    "firebase_service_account",
    "marker_rename",
    "function_open_dollar_choice",
-   "js_assign_combine"
+   "js_assign_combine",
+   "emoji_font_smaller"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3735,7 +3737,8 @@
    "list_get_end_3",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "folder_find_starts_with"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4312,7 +4315,8 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "folder_find_starts_with"
   ],
   "function_name_extension": [
    "functions_names",
@@ -8035,7 +8039,8 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account"
+   "firebase_service_account",
+   "folder_find_starts_with"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8254,7 +8259,8 @@
   "string_starts_with": [
    "string_prefix_without",
    "string_starts_with",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "folder_find_starts_with"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -8920,7 +8926,8 @@
   ],
   "list_find": [
    "list_find",
-   "list_find_property"
+   "list_find_property",
+   "folder_find_starts_with"
   ],
   "undefined_not_is_assert_lambda": [
    "list_get",
@@ -10155,7 +10162,8 @@
   ],
   "path_folder": [
    "folder_read",
-   "firebase_service_account"
+   "firebase_service_account",
+   "folder_find_starts_with"
   ],
   "fop": [
    "apps_get",
@@ -10812,22 +10820,26 @@
    "firebase_deploy_function_app_current"
   ],
   "files": [
-   "folder_read"
+   "folder_read",
+   "folder_find_starts_with"
   ],
   "sw": [
-   "string_starts_with"
+   "string_starts_with",
+   "folder_find_starts_with"
   ],
   "only": [
    "list_single",
    "list_find",
-   "firebase_service_account"
+   "firebase_service_account",
+   "folder_find_starts_with"
   ],
   "firebase_service_account": [
    "firebase_service_account",
    "firebase_admin_get"
   ],
   "folder_find_starts_with": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "folder_find_starts_with"
   ],
   "folder_previous": [
    "firebase_service_account",
@@ -11079,7 +11091,8 @@
    "app_replace_settings"
   ],
   "emoji_font_smaller": [
-   "app_replace_settings"
+   "app_replace_settings",
+   "emoji_font_smaller"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_main",
@@ -21296,6 +21309,29 @@
     "html_disable",
     "b",
     "disabled"
+   ]
+  },
+  "emoji_font_smaller": {
+   "async": false,
+   "identifiers": [
+    "emoji_font_smaller",
+    "v"
+   ]
+  },
+  "folder_find_starts_with": {
+   "async": false,
+   "identifiers": [
+    "list_find",
+    "string_starts_with",
+    "folder_read",
+    "folder_find_starts_with",
+    "path_folder",
+    "prefix",
+    "files",
+    "lambda",
+    "item",
+    "sw",
+    "only"
    ]
   }
  },
