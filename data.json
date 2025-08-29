@@ -2800,7 +2800,8 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "list_next_try"
   ],
   "v": [
    "data_identifiers_file",
@@ -3728,7 +3729,8 @@
    "list_get_end_3",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "list_next_try"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -7267,7 +7269,8 @@
    "marker_next_get",
    "marker_enter",
    "app_replace_rule_set",
-   "js_dollar_x"
+   "js_dollar_x",
+   "list_next_try"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -7599,7 +7602,8 @@
    "list_index_of_next",
    "list_next",
    "marker_next_index",
-   "js_dollar_g"
+   "js_dollar_g",
+   "list_next_try"
   ],
   "js_stack_last": [
    "js_block_child_graph",
@@ -8287,7 +8291,8 @@
    "js_dollar_x",
    "js_expand_generic",
    "js_assign_combine",
-   "js_declare_single_init"
+   "js_declare_single_init",
+   "list_next_try"
   ],
   "id": [
    "js_dollar_a",
@@ -8367,7 +8372,8 @@
    "js_dollar_s",
    "list_index_of_delta",
    "list_next",
-   "list_index_of_next"
+   "list_index_of_next",
+   "list_next_try"
   ],
   "js_dollar_task_each_code_own_fn": [
    "js_dollar_task_each_code_own_fn"
@@ -11262,6 +11268,9 @@
   ],
   "js_declare_single_init": [
    "js_declare_single_init"
+  ],
+  "list_next_try": [
+   "list_next_try"
   ]
  },
  "functions": {
@@ -21287,6 +21296,18 @@
     "next",
     "declarator",
     "init"
+   ]
+  },
+  "list_next_try": {
+   "async": false,
+   "identifiers": [
+    "list_get",
+    "list_index_of_next",
+    "list_next_try",
+    "list",
+    "item",
+    "index_next",
+    "next"
    ]
   }
  },
