@@ -1,5 +1,5 @@
-import {log} from "./log.mjs";
-import {firebase_admin} from "./firebase_admin.mjs";
+import { log } from "./log.mjs";
+import { firebase_admin } from "./firebase_admin.mjs";
 export async function firebase_upload_string(content, destination) {
   const admin = await firebase_admin();
   const bucket = admin.storage().bucket();
@@ -9,8 +9,8 @@ export async function firebase_upload_string(content, destination) {
     contentType: "text/plain",
     gzip: true,
     metadata: {
-      cacheControl: "no-cache"
-    }
+      cacheControl: "no-cache",
+    },
   });
   console.log(`Uploaded string to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
