@@ -12,6 +12,7 @@ export function js_assign_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;
     let declaration = js_declare_single(node);
+    log(declaration);
     if (null_is(declaration)) {
       return;
     }
@@ -27,7 +28,6 @@ export function js_assign_combine(ast) {
     if (null_is(declaration2)) {
       return;
     }
-    log(declaration2);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
