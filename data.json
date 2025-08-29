@@ -4154,7 +4154,8 @@
    "app_replace_rule_set",
    "object_property_lambda",
    "object_property_lambda_async",
-   "http"
+   "http",
+   "js_declare_single"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -19806,6 +19807,7 @@
   "js_declare_single": {
    "async": false,
    "identifiers": [
+    "not",
     "list_single",
     "assert",
     "js_node_type_is",
