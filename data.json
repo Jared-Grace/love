@@ -1797,7 +1797,8 @@
   "ar atn js_auto_transform_new",
   "ts",
   "s dollar",
-  "s init"
+  "s init",
+  "as js,node,type,is"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
