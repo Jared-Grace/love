@@ -2048,7 +2048,8 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "marker_rename",
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "list_next_try"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21301,6 +21302,7 @@
   "list_next_try": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_get",
     "list_index_of_next",
     "list_next_try",
