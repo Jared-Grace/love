@@ -2043,7 +2043,8 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "marker_rename",
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "js_assign_combine"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2217,7 +2218,8 @@
    "js_dollar_x",
    "js_expand_generic",
    "marker_expand",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "code": [
    "data_identifiers_file",
@@ -2591,7 +2593,8 @@
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_assign_combine"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2986,7 +2989,8 @@
    "tautology",
    "firebase_service_account",
    "marker_rename",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_assign_combine"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3298,7 +3302,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "js_assign_combine"
   ],
   "name": [
    "watch",
@@ -6140,7 +6145,8 @@
    "js_node_type_not_is_if",
    "js_log_remove",
    "js_dollar_x",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -6627,7 +6633,8 @@
    "js_imports_paths_fix",
    "function_parse_declaration_inner",
    "js_declaration_single_block_body",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_assign_combine"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -7031,7 +7038,8 @@
    "js_visit_type_each_async",
    "marker_functionize",
    "js_identifiers_named_count",
-   "js_log_remove"
+   "js_log_remove",
+   "js_assign_combine"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -7133,7 +7141,8 @@
    "marker_param_add",
    "marker_if_test_replace",
    "js_log_remove",
-   "js_stack_last_function"
+   "js_stack_last_function",
+   "js_assign_combine"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -7549,7 +7558,8 @@
    "list_get_end_1",
    "marker_leave",
    "js_await_add",
-   "js_log_remove"
+   "js_log_remove",
+   "js_assign_combine"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8318,7 +8328,8 @@
    "storage_local_get_or",
    "storage_local_get",
    "storage_local_initialize",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -8915,7 +8926,8 @@
   ],
   "e1": [
    "list_get_end_1",
-   "js_log_remove"
+   "js_log_remove",
+   "js_assign_combine"
   ],
   "e2": [
    "list_get_end_2",
@@ -10462,7 +10474,8 @@
   ],
   "js_declare_single": [
    "js_declare_init_set",
-   "js_declare_single"
+   "js_declare_single",
+   "js_assign_combine"
   ],
   "declarator": [
    "js_declare_single"
@@ -11218,7 +11231,8 @@
    "js_auto_transform_new"
   ],
   "js_assign_combine": [
-   "js_auto_transforms"
+   "js_auto_transforms",
+   "js_assign_combine"
   ],
   "js_dollar_ien": [
    "js_dollar_ien"
@@ -21206,6 +21220,25 @@
     "afters",
     "expression",
     "name"
+   ]
+  },
+  "js_assign_combine": {
+   "async": false,
+   "identifiers": [
+    "null_is",
+    "list_get_end_1",
+    "js_declare_single",
+    "js_visit_type",
+    "marker",
+    "js_assign_combine",
+    "ast",
+    "lambda",
+    "v",
+    "node",
+    "stack",
+    "declaration",
+    "value",
+    "e1"
    ]
   }
  },
