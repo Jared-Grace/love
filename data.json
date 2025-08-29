@@ -3374,7 +3374,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_assign_combine"
   ],
   "output": [
    "watch",
@@ -5110,7 +5111,8 @@
    "equal_not",
    "js_bang_to_not",
    "js_dollar_ie",
-   "js_identifier_replace"
+   "js_identifier_replace",
+   "js_assign_combine"
   ],
   "left": [
    "equal",
@@ -5126,7 +5128,8 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_assign_combine"
   ],
   "right": [
    "equal",
@@ -5143,7 +5146,8 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_assign_combine"
   ],
   "eq": [
    "equal",
@@ -21248,6 +21252,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "equal",
     "log",
     "js_node_type_not_is",
     "object_property_get",
@@ -21271,7 +21276,10 @@
     "init2",
     "nti",
     "name2",
-    "id"
+    "id",
+    "name",
+    "left",
+    "right"
    ]
   },
   "js_declare_single_init": {
