@@ -2805,8 +2805,7 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple",
-   "js_assign_combine"
+   "list_remove_all_multiple"
   ],
   "v": [
    "data_identifiers_file",
@@ -5354,8 +5353,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "js_assign_combine"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -8218,8 +8216,7 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "js_assign_combine"
+   "list_second"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -11245,6 +11242,9 @@
   "js_declaration_single_block_body_add_return": [
    "js_dollar_new",
    "js_auto_transform_new_inner"
+  ],
+  "lsn": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21213,7 +21213,6 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
-    "list_second",
     "list_size_1",
     "js_visit_type",
     "marker",
@@ -21224,8 +21223,7 @@
     "node",
     "declarations",
     "s1",
-    "second",
-    "list"
+    "lsn"
    ]
   },
   "js_auto_transform_new_inner": {
