@@ -1942,7 +1942,6 @@
    "js_visitors",
    "js_visit_each",
    "js_visit_types",
-   "list_index_is",
    "list_last_or_null",
    "list_not_is",
    "marker",
@@ -16463,7 +16462,6 @@
    "identifiers": [
     "list_index_last",
     "list_empty_is",
-    "marker",
     "list_index_is",
     "list",
     "index",
