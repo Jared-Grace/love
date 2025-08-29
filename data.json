@@ -11244,6 +11244,9 @@
   "js_declaration_single_block_body_add_return": [
    "js_dollar_new",
    "js_auto_transform_new_inner"
+  ],
+  "le1": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21221,6 +21224,7 @@
     "ast",
     "lambda",
     "v",
+    "le1",
     "node",
     "result",
     "vd"
