@@ -7,8 +7,8 @@ export function js_assign_combine(ast) {
   marker("1");
   function lambda(v) {
     let { node, stack } = v;
+    let declaration = js_declare_single(node);
     let e1 = list_get_end_1(stack);
-    let result = js_declare_single(vd);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
