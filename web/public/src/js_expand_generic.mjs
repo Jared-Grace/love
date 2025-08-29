@@ -1,5 +1,4 @@
 import { list_remove_all_multiple } from "./list_remove_all_multiple.mjs";
-import { log } from "./log.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { js_identifier_unique } from "./js_identifier_unique.mjs";
