@@ -5,6 +5,7 @@ export function js_assign_combine(ast) {
   return;
   marker("1");
   function lambda(v) {
+    le1;
     let { node } = v;
     let result = js_declare_single(vd);
   }
