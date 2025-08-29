@@ -4529,8 +4529,7 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove",
-   "js_assign_combine"
+   "html_style_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -21261,7 +21260,6 @@
     "js_visit_type",
     "js_assign_combine",
     "ast",
-    "b",
     "lambda",
     "v",
     "node",
