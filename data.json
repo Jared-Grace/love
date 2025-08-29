@@ -2796,7 +2796,8 @@
    "object_properties_delete",
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "js_assign_combine"
   ],
   "v": [
    "data_identifiers_file",
@@ -3720,7 +3721,8 @@
    "list_get_end_3",
    "list_concat_multiple",
    "js_expand_generic",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "js_assign_combine"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -7571,7 +7573,8 @@
    "js_dollar_a_generic",
    "js_identifier_defineds",
    "list_next",
-   "list_next_index"
+   "list_next_index",
+   "js_assign_combine"
   ],
   "js_return_name": [
    "js_call_new_code",
@@ -8272,7 +8275,8 @@
    "marker_next_get",
    "marker_next_await",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_assign_combine"
   ],
   "id": [
    "js_dollar_a",
@@ -21224,6 +21228,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "list_next",
     "null_is",
     "list_get_end_1",
     "js_declare_single",
@@ -21236,7 +21241,10 @@
     "node",
     "stack",
     "declaration",
-    "e1"
+    "e1",
+    "next",
+    "list",
+    "item"
    ]
   }
  },
