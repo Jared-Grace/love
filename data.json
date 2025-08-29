@@ -4271,8 +4271,7 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_assign_combine"
+   "js_dollar_choice_arguments_name"
   ],
   "without": [
    "string_suffix_without",
@@ -21264,7 +21263,6 @@
     "js_visit_type",
     "js_assign_combine",
     "ast",
-    "a",
     "b",
     "lambda",
     "v",
