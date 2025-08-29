@@ -774,7 +774,6 @@
   "s list",
   "n list_empty",
   "function_params_consolidate js_dollar_g",
-  "s transform",
   "a fns function_names",
   "a fns functions_names",
   "ac fns functions_names",
@@ -1802,7 +1801,8 @@
   "s auto",
   "s return",
   "is js_return_empty",
-  "is js_statement_return_empty"
+  "is js_statement_return_empty",
+  "s transform"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
