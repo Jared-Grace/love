@@ -21225,9 +21225,9 @@
     "ast",
     "lambda",
     "v",
-    "e1",
-    "stack",
     "node",
+    "stack",
+    "e1",
     "result",
     "vd"
    ]
