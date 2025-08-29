@@ -1754,7 +1754,6 @@
   "js_dollar_new_args",
   "s para,",
   "s param",
-  "s declar",
   "s func,code",
   "s code,dec",
   "is js_keyword_function",
@@ -1805,7 +1804,8 @@
   "s transform",
   "s next,index",
   "as list",
-  "a lsg list_single"
+  "a lsg list_single",
+  "s declar"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
