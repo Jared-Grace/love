@@ -28,7 +28,7 @@ export function js_assign_combine(ast) {
     if (null_is(declaration2)) {
       return;
     }
-    log(message);
+    log(declaration2);
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
 }
