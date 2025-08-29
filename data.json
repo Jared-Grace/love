@@ -2055,7 +2055,8 @@
    "marker_rename",
    "js_auto_transforms",
    "js_assign_combine",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "js_dollar_ien"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2230,7 +2231,8 @@
    "js_expand_generic",
    "marker_expand",
    "js_assign_combine",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "js_dollar_ien"
   ],
   "code": [
    "data_identifiers_file",
@@ -6163,7 +6165,8 @@
    "js_node_type_not_is_if",
    "js_log_remove",
    "js_dollar_x",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_dollar_ien"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -7191,7 +7194,8 @@
    "marker_remove",
    "marker_leave",
    "js_await_add",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_dollar_ien"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -7224,7 +7228,8 @@
    "marker_above_generic",
    "marker_above_delete",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_dollar_ien"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7948,7 +7953,8 @@
    "js_dollar",
    "js_dollar_g",
    "js_dollar_a",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_dollar_ien"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -8132,7 +8138,8 @@
    "js_declare_assign",
    "js_dollar",
    "js_dollar_r",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_dollar_ien"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8263,7 +8270,8 @@
    "js_dollar_g",
    "js_dollar_s",
    "lambda_invoke_multiple",
-   "js_dollar_x"
+   "js_dollar_x",
+   "js_dollar_ien"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -11248,6 +11256,9 @@
   "js_declaration_single_block_body_add_return": [
    "js_dollar_new",
    "js_auto_transform_new_inner"
+  ],
+  "js_dollar_ien": [
+   "js_dollar_ien"
   ]
  },
  "functions": {
@@ -21255,6 +21266,20 @@
     "ast",
     "code",
     "name"
+   ]
+  },
+  "js_dollar_ien": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_ien",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
