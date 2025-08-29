@@ -30,9 +30,8 @@ export function js_assign_combine(ast) {
     let name2 = object_property_get(init2, "name");
     let id = object_property_get(declaration, "id");
     let name = object_property_get(id, "name");
-    log(name2);
-    return;
-    if (equal(left, right)) {
+    if (equal(id, name)) {
+      log(message);
     }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
