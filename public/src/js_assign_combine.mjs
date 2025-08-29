@@ -1,7 +1,6 @@
 import { list_remove } from "./list_remove.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { equal } from "./equal.mjs";
-import { log } from "./log.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_next } from "./list_next.mjs";
@@ -37,7 +36,6 @@ export function js_assign_combine(ast) {
       let init = object_property_get(declaration, "init");
       object_property_set(declaration2, "init", init);
       list_remove(e1, node);
-      log(name);
     }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
