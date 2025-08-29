@@ -8382,8 +8382,7 @@
    "js_stack_filtered_multiple_each",
    "js_stack_last_multiple",
    "js_visit_types",
-   "js_stack_last_function",
-   "js_assign_combine"
+   "js_stack_last_function"
   ],
   "f": [
    "js_function_last_asyncify",
@@ -21211,8 +21210,7 @@
     "js_assign_combine",
     "ast",
     "lambda",
-    "v",
-    "types"
+    "v"
    ]
   },
   "js_auto_transform_new_inner": {
