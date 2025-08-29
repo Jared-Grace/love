@@ -36,7 +36,7 @@ export function js_assign_combine(ast) {
     if (equal(name2, name)) {
       let init = object_property_get(declaration, "init");
       object_property_set(declaration2, "init", init);
-      list_remove(list, item);
+      list_remove(e1, node);
       log(name);
     }
   }
