@@ -8,7 +8,7 @@ export function js_assign_combine(ast) {
     let { node } = v;
     let { declarations } = node;
     let s1 = list_size_1(declarations);
-    if (false) {
+    if (s1) {
     }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
