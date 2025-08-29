@@ -6761,8 +6761,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "js_assign_combine"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -11254,9 +11253,6 @@
   ],
   "js_declare_single_init": [
    "js_declare_single_init"
-  ],
-  "node2": [
-   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21263,8 +21259,6 @@
     "declaration",
     "init",
     "nti",
-    "node2",
-    "type",
     "e1",
     "next",
     "declaration2"
