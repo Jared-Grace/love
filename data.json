@@ -5374,7 +5374,8 @@
    "list_size_1",
    "list_size_1_assert_message",
    "js_imports_declarations",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_declare_single"
   ],
   "js_auto": [
    "functions_combine",
@@ -5764,7 +5765,8 @@
    "function_acronym_to_name",
    "js_dollar_s",
    "list_size_1",
-   "js_dollar_a"
+   "js_dollar_a",
+   "js_declare_single"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -19805,6 +19807,7 @@
   "js_declare_single": {
    "async": false,
    "identifiers": [
+    "list_size_1",
     "not",
     "list_single",
     "js_node_type_is",
@@ -19813,6 +19816,7 @@
     "b",
     "v",
     "declarations",
+    "s1",
     "declarator"
    ]
   },
