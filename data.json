@@ -6172,7 +6172,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_assign_combine",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -14026,7 +14027,8 @@
     "ast",
     "call_name",
     "lambda",
-    "v"
+    "v",
+    "node"
    ],
    "async": false
   },
