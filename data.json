@@ -14035,10 +14035,10 @@
     "js_visit_type",
     "js_calls_to_each",
     "ast",
+    "awaited",
     "call_name",
     "lambda",
     "v",
-    "awaited",
     "node",
     "expression",
     "lambda3"
