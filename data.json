@@ -6805,8 +6805,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "js_calls_to_each"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -11351,7 +11350,7 @@
   "js_statement_expression_get": [
    "js_calls_to_each"
   ],
-  "node2": [
+  "$ir": [
    "js_calls_to_each"
   ]
  },
@@ -14089,8 +14088,7 @@
     "e1",
     "next",
     "nti",
-    "node2",
-    "type",
+    "$ir",
     "d",
     "a",
     "b",
