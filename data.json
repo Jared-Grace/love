@@ -7584,7 +7584,8 @@
    "js_node_type_not_is_if",
    "js_assign_combine",
    "js_identifier_not_is",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -8498,8 +8499,7 @@
    "js_await_add",
    "app_replace_rule_set",
    "app_replace_home",
-   "js_expand_generic",
-   "js_calls_to_each"
+   "js_expand_generic"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -8551,7 +8551,8 @@
    "js_node_type_not_is",
    "function_aliases_restore",
    "js_assign_combine",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "nt": [
    "js_if_blockify_generic",
@@ -10143,8 +10144,7 @@
   ],
   "js_node_type_not_is_if": [
    "js_node_type_not_is_if",
-   "js_await_add",
-   "js_calls_to_each"
+   "js_await_add"
   ],
   "marker_down_1": [
    "marker_down_1"
@@ -14066,7 +14066,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
-    "js_node_type_not_is_if",
+    "js_node_type_not_is",
     "js_statement_expression_get",
     "null_is",
     "list_next_try",
@@ -14088,7 +14088,7 @@
     "lambda3",
     "e1",
     "next",
-    "lambda4",
+    "nti",
     "node2",
     "type",
     "d",
