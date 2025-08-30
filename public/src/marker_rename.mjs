@@ -1,3 +1,4 @@
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { list_single } from "./list_single.mjs";
@@ -17,6 +18,7 @@ export async function marker_rename(from, to) {
     }
     log(arguments2);
     let a0 = list_single(arguments2);
+    let nti2 = js_node_type_not_is(node2, type);
     let nti = js_identifier_not_is(a0);
     if (nti) {
       return;
