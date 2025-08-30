@@ -1567,7 +1567,6 @@
   "de storage_local_get",
   "c storage_local_set storage_local_get",
   "fw storage_local_get storage_local_get_or",
-  "s null",
   "u ni",
   "a nli null_is",
   "s data,set",
@@ -1810,7 +1809,8 @@
   "ts",
   "ftc js_calls_to_each app_new",
   "s split",
-  "s dollar"
+  "s dollar",
+  "s null"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
