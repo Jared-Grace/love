@@ -5575,7 +5575,8 @@
    "js_declaration_single_block_body",
    "js_dollar_new",
    "js_expand_generic",
-   "js_declaration_single_block_body_add_return"
+   "js_declaration_single_block_body_add_return",
+   "js_dollar_ir"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -6511,8 +6512,7 @@
    "html_document_body",
    "app_refresh",
    "html_clear",
-   "html_update_generic",
-   "js_dollar_ir"
+   "html_update_generic"
   ],
   "import_": [
    "function_imports_add",
@@ -11383,7 +11383,8 @@
    "js_declaration_single_block_body_add_return"
   ],
   "js_statement_return_empty_add": [
-   "js_declaration_single_block_body_add_return"
+   "js_declaration_single_block_body_add_return",
+   "js_dollar_ir"
   ]
  },
  "functions": {
@@ -21493,6 +21494,7 @@
   "js_dollar_ir": {
    "async": false,
    "identifiers": [
+    "js_statement_return_empty_add",
     "object_property_get",
     "js_dollar_i",
     "marker",
@@ -21505,7 +21507,7 @@
     "ast",
     "afters",
     "consequent",
-    "body"
+    "body_block"
    ]
   },
   "js_declaration_single_block_body_add_return": {
