@@ -12,6 +12,7 @@ import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { each_async } from "./each_async.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
@@ -50,7 +51,7 @@ export function js_calls_to_each(ast) {
     if (n) {
       return;
     }
-    let eq = equal_by(call, call2, js_call_callee_name);
+    let eq = equal_by(call, call2, js_unparse);
     if (not(eq)) {
       return;
     }
