@@ -14036,14 +14036,14 @@
     "js_visit_type",
     "js_calls_to_each",
     "ast",
-    "lambda3",
-    "a",
-    "f",
     "call_name",
     "lambda",
     "v",
+    "a",
+    "f",
     "node",
-    "expression"
+    "expression",
+    "lambda3"
    ],
    "async": false
   },
