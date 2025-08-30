@@ -2803,7 +2803,8 @@
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
    "list_remove_all_multiple",
-   "list_next_try"
+   "list_next_try",
+   "marker_rename"
   ],
   "v": [
    "data_identifiers_file",
@@ -5378,7 +5379,8 @@
    "list_size_1",
    "list_size_1_assert_message",
    "js_imports_declarations",
-   "js_dollar_a"
+   "js_dollar_a",
+   "marker_rename"
   ],
   "js_auto": [
    "functions_combine",
@@ -5510,7 +5512,8 @@
    "functions_combine",
    "js_marker_name_get",
    "marker_call_replace_generic",
-   "js_expand_generic"
+   "js_expand_generic",
+   "marker_rename"
   ],
   "combined": [
    "functions_combine",
@@ -5766,7 +5769,8 @@
    "function_acronym_to_name",
    "js_dollar_s",
    "list_size_1",
-   "js_dollar_a"
+   "js_dollar_a",
+   "marker_rename"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -7745,7 +7749,8 @@
    "js_bang_to_not",
    "js_marker_name_get",
    "marker_call_replace_generic",
-   "js_expand_generic"
+   "js_expand_generic",
+   "marker_rename"
   ],
   "log_unparse_try": [
    "js_block_child_graph",
@@ -20950,6 +20955,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "list_size_1",
     "object_property_set",
     "js_identifier_not_is",
     "function_transform_marker_specified",
@@ -20960,8 +20966,12 @@
     "lambda",
     "a",
     "node",
-    "callee",
+    "arguments",
+    "arguments2",
+    "s1",
+    "list",
     "nti",
+    "callee",
     "b",
     "f_name_current",
     "v"
