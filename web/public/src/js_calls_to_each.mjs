@@ -35,7 +35,7 @@ export function js_calls_to_each(ast) {
     let expression2 = js_statement_expression_get(next);
     let call2 = null;
     if (awaited) {
-      let nti = js_node_type_not_is(next, "AwaitExpression");
+      let nti = js_node_type_not_is(expression2, "AwaitExpression");
       if (nti) {
         return;
       }
