@@ -11372,9 +11372,6 @@
   "js_statement_expression_get": [
    "js_calls_to_each"
   ],
-  "$ir": [
-   "js_calls_to_each"
-  ],
   "js_dollar_ir": [
    "js_dollar_ir",
    "js_dollar_choices"
@@ -14121,7 +14118,6 @@
     "e1",
     "next",
     "nti",
-    "$ir",
     "d",
     "a",
     "b",
