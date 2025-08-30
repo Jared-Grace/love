@@ -1723,7 +1723,6 @@
   "o oa",
   "o an",
   "s auto",
-  "s marker",
   "is function_transform_marker",
   "n marker_rename",
   "s expand",
@@ -1803,7 +1802,8 @@
   "fts js_assign_combine",
   "cs list_next_try",
   "cs list_next try",
-  "s index,list"
+  "s index,list",
+  "s marker"
  ],
  "marker_current": "1",
  "function_current": "list_next_try",
