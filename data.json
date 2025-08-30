@@ -14055,8 +14055,8 @@
     "node",
     "expression",
     "awaited",
-    "lambda3",
-    "call"
+    "call",
+    "lambda3"
    ],
    "async": false
   },
