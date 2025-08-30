@@ -1839,8 +1839,7 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add",
-   "js_call_callee_name"
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -21557,7 +21556,6 @@
   "js_call_callee_name": {
    "async": false,
    "identifiers": [
-    "log",
     "js_node_type_not_is",
     "js_identifier_not_is",
     "object_property_get_name",
