@@ -1,3 +1,4 @@
+import { js_statement_return_empty_add } from "./js_statement_return_empty_add.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { marker } from "./marker.mjs";
@@ -15,6 +16,7 @@ export function js_dollar_ir({
     stack1,
   });
   let consequent = object_property_get(stack1, "consequent");
-  let body = object_property_get(consequent, "body");
+  let body_block = object_property_get(consequent, "body");
+  js_statement_return_empty_add(body_block);
   return;
 }
