@@ -6792,8 +6792,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "js_calls_to_each"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -11315,9 +11314,6 @@
   ],
   "a0": [
    "marker_rename"
-  ],
-  "node2": [
-   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14041,9 +14037,7 @@
     "v",
     "node",
     "expression",
-    "lambda3",
-    "node2",
-    "type"
+    "lambda3"
    ],
    "async": false
   },
