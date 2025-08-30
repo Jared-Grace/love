@@ -1,3 +1,4 @@
+import { js_string } from "./js_string.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { log } from "./log.mjs";
@@ -21,6 +22,7 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
+    let s = js_string(value_string);
     object_replace(to2, from2);
   }
   marker("a");
