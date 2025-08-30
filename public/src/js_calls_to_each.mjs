@@ -60,7 +60,7 @@ export function js_calls_to_each(ast) {
       expression3 = object_property_get(expression3, "argument");
     }
     log({
-      parsed,
+      expression3,
     });
     async function d() {
       await a(b);
