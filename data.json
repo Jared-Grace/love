@@ -1210,7 +1210,6 @@
   "u lr",
   "a lr list_remove",
   "s list,add",
-  "s block",
   "n marker_above",
   "s marker,index",
   "c marker_previous_index marker_index",
@@ -1820,7 +1819,8 @@
   "nd ir",
   "s dollar",
   "od I",
-  "s body,get"
+  "s body,get",
+  "s block"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
