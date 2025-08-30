@@ -26,7 +26,7 @@ export function js_calls_to_each(ast) {
       return;
     }
     let nti = js_node_type_not_is(node, "ExpressionStatement");
-    if (false) {
+    if (nti) {
       return;
     }
     log(next);
