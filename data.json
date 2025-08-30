@@ -6220,7 +6220,8 @@
    "function_parse",
    "function_parse_declaration_inner",
    "marker_next_index",
-   "string_replace"
+   "string_replace",
+   "marker_rename"
   ],
   "r": [
    "function_format",
@@ -6308,7 +6309,8 @@
    "folder_current_join_code",
    "function_name_to_path_import",
    "string_replace",
-   "html_update_generic"
+   "html_update_generic",
+   "marker_rename"
   ],
   "i": [
    "function_identifier_replace",
@@ -20933,6 +20935,8 @@
     "data_function_current_get",
     "marker",
     "marker_rename",
+    "from",
+    "to",
     "lambda",
     "a",
     "f_name_current",
