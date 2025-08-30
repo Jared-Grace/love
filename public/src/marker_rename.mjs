@@ -13,7 +13,7 @@ export async function marker_rename(from, to) {
     }
     object_property_set(callee, "name", to);
   }
-  marker("a");
+  b("a");
   let f_name_current = await data_function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,

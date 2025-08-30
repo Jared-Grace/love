@@ -1802,9 +1802,9 @@
   "fs",
   "f",
   "fs marker_rename",
-  "p",
   "s call",
   "ps",
+  "p",
   "marker_rename a b"
  ],
  "marker_current": "1",
