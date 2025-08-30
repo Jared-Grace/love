@@ -2302,7 +2302,8 @@
    "js_dollar_new",
    "js_dollar_new_args",
    "js_code_declaration",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "js_calls_to_each"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -11422,6 +11423,9 @@
   ],
   "expression3": [
    "js_calls_to_each"
+  ],
+  "ast2": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14171,6 +14175,8 @@
     "lambda6",
     "jin2",
     "callee",
+    "code",
+    "ast2",
     "eq",
     "parsed",
     "expression3",
