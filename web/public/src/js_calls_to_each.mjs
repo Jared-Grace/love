@@ -1,3 +1,4 @@
+import { object_property_get_name } from "./object_property_get_name.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
@@ -40,10 +41,6 @@ export function js_calls_to_each(ast) {
       call2 = object_property_get(expression2, "argument");
     } else {
       call2 = expression2;
-    }
-    function object_property_get_name(item) {
-      let name = object_property_get(item, "name");
-      return name;
     }
     let eq = equal_by(a2, b2, object_property_get_name);
     log({
