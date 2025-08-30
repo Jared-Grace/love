@@ -1901,8 +1901,7 @@
    "list_concat_multiple",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple",
-   "js_calls_to_each"
+   "list_remove_all_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -4526,7 +4525,8 @@
    "visit_filter_recursive_async",
    "each_range_async",
    "function_transform_marker_specified",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "js_calls_to_each"
   ],
   "f_paths": [
    "data_files_update",
@@ -14140,7 +14140,7 @@
     "js_node_type_is_if",
     "log",
     "js_visit_type",
-    "each",
+    "each_async",
     "js_calls_to_each",
     "ast",
     "call_name",
