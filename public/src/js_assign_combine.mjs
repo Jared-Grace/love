@@ -1,14 +1,15 @@
+import { list_next_try } from "./list_next_try.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { equal } from "./equal.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-import { list_next } from "./list_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { js_declare_single } from "./js_declare_single.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_assign_combine(ast) {
+  return;
   function lambda(v) {
     let { node, stack } = v;
     let declaration = js_declare_single(node);
@@ -16,7 +17,7 @@ export function js_assign_combine(ast) {
       return;
     }
     let e1 = list_get_end_1(stack);
-    let next = list_next(e1, node);
+    let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
     }
