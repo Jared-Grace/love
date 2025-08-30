@@ -14036,10 +14036,10 @@
     "js_visit_type",
     "js_calls_to_each",
     "ast",
+    "b",
     "call_name",
     "lambda",
     "v",
-    "b",
     "node",
     "expression",
     "lambda3"
