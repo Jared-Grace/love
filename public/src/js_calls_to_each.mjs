@@ -9,9 +9,9 @@ export function js_calls_to_each(ast) {
     let { node } = v;
     let { expression } = node;
     let awaited = false;
+    let call = expression;
     function lambda3() {
       awaited = true;
-      let call = null;
       call = object_property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
