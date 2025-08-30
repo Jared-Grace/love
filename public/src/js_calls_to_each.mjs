@@ -1,3 +1,4 @@
+import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { object_property_get_name } from "./object_property_get_name.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
@@ -42,12 +43,12 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
-    let callee = object_property_get(expression, "callee");
-    let name = object_property_get_name(callee);
+    let name = js_call_callee_name(expression);
     let eq = equal_by(a2, b2, object_property_get_name);
     log({
       call,
       call2,
+      name,
     });
     async function d() {
       await a(b);
