@@ -42,6 +42,7 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
+    let callee = object_property_get(expression, "callee");
     let eq = equal_by(a2, b2, object_property_get_name);
     log({
       call,
