@@ -43,6 +43,7 @@ export function js_calls_to_each(ast) {
     }
     function lambda2(item) {
       let name = object_property_get(item, "name");
+      return name;
     }
     let eq = equal_by(a2, b2, lambda2);
     log({
