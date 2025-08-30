@@ -15,5 +15,6 @@ export function js_dollar_ir({
     stack1,
   });
   let consequent = object_property_get(stack1, "consequent");
+  let body = object_property_get(consequent, "body");
   return;
 }
