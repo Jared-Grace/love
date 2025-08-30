@@ -6,7 +6,7 @@ export function js_calls_to_each(ast) {
   function lambda(v) {
     let { node } = v;
     let { expression } = node;
-    log(message);
+    log(expression);
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
 }
