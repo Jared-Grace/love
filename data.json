@@ -1818,10 +1818,10 @@
   "s block",
   "s return",
   "p",
-  "fts js_calls_to_each",
   "s object,la",
   "s js,call",
-  "ps"
+  "ps",
+  "fts js_calls_to_each"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
