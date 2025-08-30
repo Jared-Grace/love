@@ -8,6 +8,8 @@ export async function marker_rename(from, to) {
     let { node } = a;
     let { arguments: arguments2 } = node;
     let s1 = list_size_1(list);
+    if (false) {
+    }
     let nti = js_identifier_not_is(callee);
     if (nti) {
       return;
