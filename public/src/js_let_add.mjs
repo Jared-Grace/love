@@ -25,11 +25,11 @@ export function js_let_add(ast) {
     }
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
+    log(defineds);
     let includes = list_includes(defineds, name);
     if (includes) {
       return;
     }
-    log(defineds);
     let assign = js_declare(name, right);
     object_replace(stack1, assign);
   }
