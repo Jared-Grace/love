@@ -6772,7 +6772,6 @@
    "function_params_consolidate",
    "function_type_first",
    "js_arrow_blockify",
-   "js_calls_to_each",
    "js_if_blockify",
    "js_if_blockify_generic",
    "js_node_types_is",
@@ -14031,8 +14030,7 @@
     "call_name",
     "lambda",
     "v",
-    "ast2",
-    "type"
+    "ast2"
    ],
    "async": false
   },
