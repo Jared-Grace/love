@@ -2706,7 +2706,8 @@
    "app_replace_rule_set",
    "app_replace_settings",
    "js_dollar_new",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3761,7 +3762,8 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "js_calls_to_each"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5190,11 +5192,13 @@
    "equal_by",
    "equal_by_async",
    "js_if_else_if_combine",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "js_calls_to_each"
   ],
   "equal_by": [
    "equal_by",
-   "js_node_atomize"
+   "js_node_atomize",
+   "js_calls_to_each"
   ],
   "equal_by_async": [
    "equal_by_async",
@@ -8480,7 +8484,8 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names"
+   "js_identifiers_to_names",
+   "js_calls_to_each"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -8901,7 +8906,8 @@
    "js_unparse",
    "js_imports_declarations",
    "js_marker_name_get",
-   "js_stack_list_block_is"
+   "js_stack_list_block_is",
+   "js_calls_to_each"
   ],
   "a3": [
    "js_unparse",
@@ -14101,6 +14107,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "equal_by",
     "js_node_type_not_is",
     "js_statement_expression_get",
     "null_is",
@@ -14126,6 +14133,11 @@
     "nti",
     "expression2",
     "call2",
+    "eq",
+    "a2",
+    "b2",
+    "lambda2",
+    "item",
     "d",
     "a",
     "b",
