@@ -4204,7 +4204,8 @@
    "js_string",
    "string_split_space",
    "string_split_empty",
-   "string_replace"
+   "string_replace",
+   "marker_rename"
   ],
   "a": [
    "string_suffix_without",
@@ -5341,7 +5342,8 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code"
+   "folder_current_join_code",
+   "marker_rename"
   ],
   "folder_public": [
    "folder_public",
@@ -10343,7 +10345,8 @@
   ],
   "js_string": [
    "js_code_string",
-   "js_string"
+   "js_string",
+   "marker_rename"
   ],
   "element": [
    "html_text_set",
@@ -20968,6 +20971,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "js_string",
     "object_replace",
     "js_node_type_not_is",
     "log",
@@ -20988,6 +20992,8 @@
     "s1",
     "a0",
     "nti",
+    "s",
+    "value_string",
     "to2",
     "from2",
     "f_name_current",
