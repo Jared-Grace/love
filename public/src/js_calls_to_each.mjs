@@ -10,7 +10,7 @@ export function js_calls_to_each(ast) {
   let call_name = null;
   function lambda(v) {
     let { node, stack } = v;
-    let { expression } = node;
+    let expression2 = object_property_get(node, "expression");
     let awaited = false;
     let call = expression;
     function lambda3() {
