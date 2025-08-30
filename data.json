@@ -7181,7 +7181,8 @@
    "marker_if_test_replace",
    "js_log_remove",
    "js_stack_last_function",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "stack1": [
    "function_transform_marker_arg",
@@ -7602,7 +7603,8 @@
    "marker_leave",
    "js_await_add",
    "js_log_remove",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "js_node_atomize": [
    "js_atomize",
@@ -8320,7 +8322,8 @@
    "js_expand_generic",
    "js_assign_combine",
    "js_declare_single_init",
-   "list_next_try"
+   "list_next_try",
+   "js_calls_to_each"
   ],
   "id": [
    "js_dollar_a",
@@ -8379,7 +8382,8 @@
    "storage_local_initialize",
    "js_dollar_ien",
    "js_assign_combine",
-   "list_next_try"
+   "list_next_try",
+   "js_calls_to_each"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -8982,7 +8986,8 @@
   "e1": [
    "list_get_end_1",
    "js_log_remove",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "e2": [
    "list_get_end_2",
@@ -11308,7 +11313,8 @@
   ],
   "list_next_try": [
    "list_next_try",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "nti2": [
    "js_assign_combine"
@@ -14044,6 +14050,9 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "null_is",
+    "list_next_try",
+    "list_get_end_1",
     "object_property_get",
     "js_node_type_is_if",
     "log",
@@ -14057,7 +14066,10 @@
     "expression",
     "awaited",
     "call",
-    "lambda3"
+    "lambda3",
+    "e1",
+    "stack",
+    "next"
    ],
    "async": false
   },
