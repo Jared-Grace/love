@@ -2049,7 +2049,6 @@
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
    "list_remove_multiple",
-   "marker_rename",
    "js_auto_transforms",
    "list_next_try"
   ],
@@ -4539,7 +4538,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "marker_rename"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -20954,7 +20954,6 @@
     "js_identifier_not_is",
     "function_transform_marker_specified",
     "data_function_current_get",
-    "marker",
     "marker_rename",
     "from",
     "to",
@@ -20963,6 +20962,7 @@
     "node",
     "callee",
     "nti",
+    "b",
     "f_name_current",
     "v"
    ]
