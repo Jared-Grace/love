@@ -8439,7 +8439,8 @@
    "js_await_add",
    "function_aliases_restore",
    "marker_param_add",
-   "js_stack_last_function"
+   "js_stack_last_function",
+   "js_calls_to_each"
   ],
   "async": [
    "js_function_last_asyncify"
@@ -11315,6 +11316,9 @@
   ],
   "a0": [
    "marker_rename"
+  ],
+  "$s": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14039,7 +14043,9 @@
     "node",
     "expression",
     "lambda3",
-    "awaited"
+    "$s",
+    "awaited",
+    "f"
    ],
    "async": false
   },
