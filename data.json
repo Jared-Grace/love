@@ -6805,7 +6805,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_calls_to_each"
   ],
   "key": [
    "object_invert",
@@ -8497,7 +8498,8 @@
    "js_await_add",
    "app_replace_rule_set",
    "app_replace_home",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -10141,7 +10143,8 @@
   ],
   "js_node_type_not_is_if": [
    "js_node_type_not_is_if",
-   "js_await_add"
+   "js_await_add",
+   "js_calls_to_each"
   ],
   "marker_down_1": [
    "marker_down_1"
@@ -11346,6 +11349,9 @@
    "js_dollar_g"
   ],
   "js_statement_expression_get": [
+   "js_calls_to_each"
+  ],
+  "node2": [
    "js_calls_to_each"
   ]
  },
@@ -14060,6 +14066,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_node_type_not_is_if",
     "js_statement_expression_get",
     "null_is",
     "list_next_try",
@@ -14081,6 +14088,9 @@
     "lambda3",
     "e1",
     "next",
+    "node2",
+    "type",
+    "lambda4",
     "d",
     "a",
     "b",
