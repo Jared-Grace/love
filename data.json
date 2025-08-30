@@ -5342,8 +5342,7 @@
    "folder_current_join",
    "js_code_string",
    "js_string",
-   "folder_current_join_code",
-   "marker_rename"
+   "folder_current_join_code"
   ],
   "folder_public": [
    "folder_public",
@@ -11312,12 +11311,6 @@
    "js_identifier_not_is"
   ],
   "a0": [
-   "marker_rename"
-  ],
-  "to2": [
-   "marker_rename"
-  ],
-  "from2": [
    "marker_rename"
   ]
  },
@@ -20993,9 +20986,6 @@
     "a0",
     "nti",
     "s",
-    "value_string",
-    "to2",
-    "from2",
     "f_name_current",
     "v"
    ]
