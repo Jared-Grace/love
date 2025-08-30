@@ -11385,6 +11385,9 @@
   ],
   "call2": [
    "js_calls_to_each"
+  ],
+  "expression2": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14121,6 +14124,7 @@
     "e1",
     "next",
     "nti",
+    "expression2",
     "call2",
     "d",
     "a",
