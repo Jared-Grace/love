@@ -2067,7 +2067,8 @@
    "list_remove_multiple",
    "js_auto_transforms",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "js_dollar_ir"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2242,7 +2243,8 @@
    "js_expand_generic",
    "marker_expand",
    "js_dollar_ien",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_dollar_ir"
   ],
   "code": [
    "data_identifiers_file",
@@ -6191,7 +6193,8 @@
    "js_dollar_ien",
    "js_assign_combine",
    "marker_rename",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_dollar_ir"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -7222,7 +7225,8 @@
    "marker_leave",
    "js_await_add",
    "js_dollar_x",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -7256,7 +7260,8 @@
    "marker_above_delete",
    "js_dollar_x",
    "js_expand_generic",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -7985,7 +7990,8 @@
    "js_dollar_g",
    "js_dollar_a",
    "js_dollar_x",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -8173,7 +8179,8 @@
    "js_dollar",
    "js_dollar_r",
    "js_dollar_x",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8306,7 +8313,8 @@
    "js_dollar_s",
    "lambda_invoke_multiple",
    "js_dollar_x",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -11354,6 +11362,9 @@
   ],
   "$ir": [
    "js_calls_to_each"
+  ],
+  "js_dollar_ir": [
+   "js_dollar_ir"
   ]
  },
  "functions": {
@@ -21454,6 +21465,20 @@
     "item",
     "delta",
     "index_next"
+   ]
+  },
+  "js_dollar_ir": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_ir",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
