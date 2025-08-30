@@ -1811,7 +1811,8 @@
   "s dollar",
   "s null",
   "s ;et",
-  "s let"
+  "s let",
+  "cs list_index_of_next outside"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
