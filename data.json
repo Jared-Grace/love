@@ -8711,8 +8711,7 @@
    "marker_call_replace_generic",
    "js_call_function_if",
    "js_log_remove",
-   "js_expand_generic",
-   "js_calls_to_each"
+   "js_expand_generic"
   ],
   "v4": [
    "js_marker_name_get"
@@ -11397,6 +11396,9 @@
    "js_calls_to_each"
   ],
   "object_property_get_name": [
+   "js_calls_to_each"
+  ],
+  "js_call_callee_name": [
    "js_calls_to_each"
   ]
  },
@@ -14111,6 +14113,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_call_callee_name",
     "object_property_get_name",
     "equal_by",
     "js_node_type_not_is",
@@ -14138,7 +14141,6 @@
     "nti",
     "expression2",
     "call2",
-    "callee",
     "name",
     "eq",
     "a2",
