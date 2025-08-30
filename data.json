@@ -8652,7 +8652,8 @@
    "marker_call_replace_generic",
    "js_call_function_if",
    "js_log_remove",
-   "js_expand_generic"
+   "js_expand_generic",
+   "marker_rename"
   ],
   "v4": [
    "js_marker_name_get"
@@ -20945,6 +20946,7 @@
     "lambda",
     "a",
     "node",
+    "callee",
     "f_name_current",
     "v"
    ]
