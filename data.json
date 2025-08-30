@@ -11342,6 +11342,9 @@
    "list_index_of_next_outside",
    "js_identifier_defineds",
    "js_dollar_g"
+  ],
+  "js_statement_expression_get": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14055,6 +14058,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_statement_expression_get",
     "null_is",
     "list_next_try",
     "list_get_end_1",
