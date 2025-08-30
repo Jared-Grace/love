@@ -56,7 +56,7 @@ export function js_calls_to_each(ast) {
     }
     let { parsed } = await js_call_new(each_async, ast);
     log({
-      name,
+      parsed,
     });
     async function d() {
       await a(b);
