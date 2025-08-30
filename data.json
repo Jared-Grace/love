@@ -7629,7 +7629,6 @@
    "list_index_of_next",
    "list_next",
    "marker_next_index",
-   "js_dollar_g",
    "list_next_try"
   ],
   "js_stack_last": [
@@ -11327,7 +11326,8 @@
   ],
   "list_index_of_next_outside": [
    "list_index_of_next_outside",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "js_dollar_g"
   ]
  },
  "functions": {
@@ -14698,9 +14698,9 @@
     "object_property_get",
     "js_code_call_args",
     "js_code_string",
-    "list_index_of_next",
     "list_insert",
     "list_remove",
+    "list_index_of_next_outside",
     "js_dollar_g",
     "remaining",
     "node",
