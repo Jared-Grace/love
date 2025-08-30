@@ -54,7 +54,7 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
-    let { parsed } = await js_call_new(each_async, ast);
+    let { parsed } = await js_call_new(each_async.name, ast);
     log({
       parsed,
     });
