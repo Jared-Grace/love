@@ -3073,8 +3073,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "js_calls_to_each"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -14033,8 +14032,7 @@
     "lambda",
     "v",
     "node",
-    "expression",
-    "message"
+    "expression"
    ],
    "async": false
   },
