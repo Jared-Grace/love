@@ -7757,8 +7757,7 @@
    "js_return_name",
    "js_return_on",
    "js_return_on_async",
-   "js_expand_generic",
-   "js_calls_to_each"
+   "js_expand_generic"
   ],
   "arguments2": [
    "js_bang_to_not",
@@ -11072,7 +11071,8 @@
    "html_update_generic"
   ],
   "call": [
-   "html_update_generic"
+   "html_update_generic",
+   "js_calls_to_each"
   ],
   "from_paths": [
    "html_update_generic",
@@ -14056,7 +14056,7 @@
     "expression",
     "awaited",
     "lambda3",
-    "argument"
+    "call"
    ],
    "async": false
   },
