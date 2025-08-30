@@ -43,7 +43,7 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
-    let name = js_call_callee_name(expression);
+    let name = js_call_callee_name(call2);
     log({
       name,
     });
@@ -51,7 +51,7 @@ export function js_calls_to_each(ast) {
     if (n) {
       return;
     }
-    let eq = equal_by(expression, expression2, js_call_callee_name);
+    let eq = equal_by(call, call2, js_call_callee_name);
     if (not(eq)) {
       return;
     }
