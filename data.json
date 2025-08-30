@@ -1788,7 +1788,6 @@
   "a atn js_auto_transform_new",
   "a at js_auto_transform_new",
   "ar atn js_auto_transform_new",
-  "ts",
   "s dollar",
   "s init",
   "as js,node,type,is",
@@ -1808,7 +1807,9 @@
   "p",
   "s js,string",
   "marker_rename a b",
-  "s auto"
+  "s auto",
+  "atn calls_to_each",
+  "ts"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
