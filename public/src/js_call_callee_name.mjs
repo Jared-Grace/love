@@ -7,6 +7,7 @@ export function js_call_callee_name(expression) {
   if (jin) {
     return;
   }
-  let name = object_property_get_name(callee);
+  let name = null;
+  name = object_property_get_name(callee);
   return name;
 }
