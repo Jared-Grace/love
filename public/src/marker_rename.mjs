@@ -15,7 +15,7 @@ export async function marker_rename(from, to) {
     if (not(s1)) {
       return;
     }
-    log(message);
+    log(arguments2);
     let a0 = list_single(arguments2);
     let nti = js_identifier_not_is(a0);
     if (nti) {
