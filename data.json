@@ -2803,8 +2803,7 @@
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
    "list_remove_all_multiple",
-   "list_next_try",
-   "marker_rename"
+   "list_next_try"
   ],
   "v": [
    "data_identifiers_file",
@@ -4160,7 +4159,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "http",
-   "list_index_of_delta"
+   "list_index_of_delta",
+   "marker_rename"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -20955,6 +20955,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "not",
     "list_size_1",
     "object_property_set",
     "js_identifier_not_is",
@@ -20969,7 +20970,6 @@
     "arguments",
     "arguments2",
     "s1",
-    "list",
     "nti",
     "callee",
     "b",
