@@ -3406,8 +3406,7 @@
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
    "js_dollar_ien",
-   "js_assign_combine",
-   "js_calls_to_each"
+   "js_assign_combine"
   ],
   "output": [
    "watch",
@@ -3763,8 +3762,7 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside",
-   "js_calls_to_each"
+   "list_index_of_next_outside"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -14111,6 +14109,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "object_property_get_name",
     "equal_by",
     "js_node_type_not_is",
     "js_statement_expression_get",
@@ -14137,9 +14136,6 @@
     "nti",
     "expression2",
     "call2",
-    "object_property_get_name",
-    "item",
-    "name",
     "eq",
     "a2",
     "b2",
