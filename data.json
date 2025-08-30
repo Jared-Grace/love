@@ -11287,6 +11287,9 @@
   ],
   "nti2": [
    "js_assign_combine"
+  ],
+  "js_identifier_not_is": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21283,6 +21286,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "js_identifier_not_is",
     "list_next_try",
     "list_remove",
     "object_property_set",
