@@ -4965,7 +4965,6 @@
    "list_get",
    "list_index_is",
    "list_index_of",
-   "list_index_of_delta",
    "list_insert",
    "list_insert_generic",
    "list_map_index",
@@ -7302,7 +7301,6 @@
    "js_block_insert",
    "js_node_atomize",
    "list_index_of",
-   "list_index_of_delta",
    "list_next_index",
    "list_remove",
    "list_swap",
@@ -11318,6 +11316,9 @@
   ],
   "a0": [
    "marker_rename"
+  ],
+  "list_index_of_delta_outside": [
+   "list_index_of_delta"
   ]
  },
  "functions": {
@@ -16543,14 +16544,13 @@
   },
   "list_index_of_delta": {
    "identifiers": [
+    "list_index_of_delta_outside",
     "not",
     "list_index_is",
-    "list_index_of",
     "list_index_of_delta",
     "list",
     "item",
     "delta",
-    "index",
     "index_next",
     "ii",
     "v"
