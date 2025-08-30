@@ -44,9 +44,6 @@ export function js_calls_to_each(ast) {
       call2 = expression2;
     }
     let name = js_call_callee_name(call2);
-    log({
-      name,
-    });
     let n = null_is(name);
     if (n) {
       return;
@@ -55,6 +52,9 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
+    log({
+      name,
+    });
     async function d() {
       await a(b);
       await a(c);
