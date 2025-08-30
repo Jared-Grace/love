@@ -4289,7 +4289,8 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_calls_to_each"
   ],
   "without": [
    "string_suffix_without",
@@ -10179,8 +10180,7 @@
    "js_await",
    "marker_next_await",
    "js_await_add",
-   "js_await_wrap",
-   "js_calls_to_each"
+   "js_await_wrap"
   ],
   "apps_get": [
    "apps_get"
@@ -11316,9 +11316,6 @@
   ],
   "a0": [
    "marker_rename"
-  ],
-  "$s": [
-   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14043,8 +14040,7 @@
     "node",
     "expression",
     "lambda3",
-    "$s",
-    "awaited",
+    "a",
     "f"
    ],
    "async": false
