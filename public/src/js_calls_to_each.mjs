@@ -7,7 +7,8 @@ export function js_calls_to_each(ast) {
   function lambda(v) {
     let { node } = v;
     let { expression } = node;
-    js_node_type_is_if(node2, type, function lambda3() {});
+    function lambda3() {}
+    js_node_type_is_if(node2, type, lambda3);
     log(expression);
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
