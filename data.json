@@ -3336,7 +3336,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "js_calls_to_each"
   ],
   "name": [
    "watch",
@@ -5890,7 +5891,8 @@
    "storage_local_get_or",
    "storage_local_get",
    "storage_local_initialize",
-   "promise_not_is"
+   "promise_not_is",
+   "js_calls_to_each"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -7540,8 +7542,7 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install",
-   "js_calls_to_each"
+   "npm_install"
   ],
   "err": [
    "import_install"
@@ -9357,8 +9358,7 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install",
-   "js_calls_to_each"
+   "npm_install"
   ],
   "isFinite": [
    "number_is"
@@ -14124,7 +14124,6 @@
   },
   "js_calls_to_each": {
    "identifiers": [
-    "npm_install",
     "js_call_callee_name",
     "object_property_get_name",
     "equal_by",
@@ -14154,7 +14153,8 @@
     "expression2",
     "call2",
     "name",
-    "package_name",
+    "n",
+    "value",
     "eq",
     "a2",
     "b2",
