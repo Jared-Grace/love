@@ -1128,7 +1128,6 @@
   "oe opg",
   "s mult",
   "i list_first_second",
-  "s empty",
   "n list_last_or_null",
   "oe ftc",
   "oe fts",
@@ -1821,7 +1820,8 @@
   "ps",
   "s call",
   "p",
-  "fts js_calls_to_each"
+  "fts js_calls_to_each",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
