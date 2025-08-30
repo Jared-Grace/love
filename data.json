@@ -4472,7 +4472,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "js_calls_to_each"
   ],
   "readdirSync": [
    "folder_read"
@@ -7919,7 +7920,8 @@
   "js_call_new": [
    "js_call_fill",
    "js_call_new",
-   "marker_call"
+   "marker_call",
+   "js_calls_to_each"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -7979,7 +7981,8 @@
   "f_name_call": [
    "js_call_new",
    "js_call_new_code",
-   "marker_call"
+   "marker_call",
+   "js_calls_to_each"
   ],
   "return_name": [
    "js_call_new",
@@ -11411,6 +11414,9 @@
   ],
   "jin2": [
    "js_call_callee_name"
+  ],
+  "ast2": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14124,6 +14130,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_call_new",
     "not",
     "js_call_callee_name",
     "equal_by",
@@ -14155,6 +14162,9 @@
     "name",
     "n",
     "eq",
+    "v2",
+    "f_name_call",
+    "ast2",
     "d",
     "a",
     "b",
