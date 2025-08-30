@@ -9,7 +9,7 @@ export function js_calls_to_each(ast) {
     let { expression } = node;
     let awaited = false;
     function lambda3() {
-      awaited = true;
+      awaited = true;$g$expression$argument 
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     log(expression);
