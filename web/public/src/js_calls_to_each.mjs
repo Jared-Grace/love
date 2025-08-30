@@ -26,7 +26,9 @@ export function js_calls_to_each(ast) {
       return;
     }
     let nti = js_node_type_not_is(node, "ExpressionStatement");
-    $ir;
+    if (false) {
+      return;
+    }
     log(next);
     async function d() {
       await a(b);
