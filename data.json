@@ -3562,7 +3562,8 @@
    "data_files_update",
    "data_file_update_inner",
    "date_iso_to",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "js_calls_to_each"
   ],
   "data": [
    "data_all",
@@ -14074,6 +14075,7 @@
     "lambda3",
     "e1",
     "next",
+    "d",
     "a",
     "b",
     "c"
