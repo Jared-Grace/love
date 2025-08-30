@@ -11383,7 +11383,7 @@
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir"
   ],
-  "expression2": [
+  "call2": [
    "js_calls_to_each"
   ]
  },
@@ -14121,7 +14121,7 @@
     "e1",
     "next",
     "nti",
-    "expression2",
+    "call2",
     "d",
     "a",
     "b",
