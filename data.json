@@ -1825,7 +1825,8 @@
    "js_log_remove",
    "js_dollar_x",
    "js_expand_generic",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3072,7 +3073,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_calls_to_each"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -14023,6 +14025,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "log",
     "js_visit_type",
     "js_calls_to_each",
     "ast",
@@ -14030,7 +14033,8 @@
     "lambda",
     "v",
     "node",
-    "expression"
+    "expression",
+    "message"
    ],
    "async": false
   },
