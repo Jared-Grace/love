@@ -1,3 +1,4 @@
+import { list_size_1 } from "./list_size_1.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
@@ -5,7 +6,8 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 export async function marker_rename(from, to) {
   async function lambda(a) {
     let { node } = a;
-    let { callee } = node;
+    let { arguments: arguments2 } = node;
+    let s1 = list_size_1(list);
     let nti = js_identifier_not_is(callee);
     if (nti) {
       return;
