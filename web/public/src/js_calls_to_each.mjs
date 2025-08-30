@@ -9,7 +9,7 @@ export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
   function lambda(v) {
-    let { node } = v;
+    let { node, stack } = v;
     let { expression } = node;
     let awaited = false;
     let call = expression;
