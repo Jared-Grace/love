@@ -8228,7 +8228,8 @@
    "js_dollar_i",
    "js_dollar_ie",
    "js_dollar_choices",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ir"
   ],
   "js_dollar_r": [
    "js_dollar_r",
@@ -21477,6 +21478,7 @@
   "js_dollar_ir": {
    "async": false,
    "identifiers": [
+    "js_dollar_i",
     "marker",
     "js_dollar_ir",
     "remaining",
