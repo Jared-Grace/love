@@ -25,7 +25,8 @@ export function js_calls_to_each(ast) {
     if (null_is(next)) {
       return;
     }
-    js_node_type_not_is_if(node2, type, function lambda4() {});
+    function lambda4() {}
+    js_node_type_not_is_if(node2, type, lambda4);
     log(next);
     async function d() {
       await a(b);
