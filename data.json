@@ -11382,6 +11382,9 @@
   "js_statement_return_empty_add": [
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir"
+  ],
+  "expression2": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14118,6 +14121,7 @@
     "e1",
     "next",
     "nti",
+    "expression2",
     "d",
     "a",
     "b",
