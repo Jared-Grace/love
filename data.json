@@ -4291,8 +4291,7 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name",
-   "js_calls_to_each"
+   "js_dollar_choice_arguments_name"
   ],
   "without": [
    "string_suffix_without",
@@ -8442,8 +8441,7 @@
    "js_await_add",
    "function_aliases_restore",
    "marker_param_add",
-   "js_stack_last_function",
-   "js_calls_to_each"
+   "js_stack_last_function"
   ],
   "async": [
    "js_function_last_asyncify"
@@ -10182,7 +10180,8 @@
    "js_await",
    "marker_next_await",
    "js_await_add",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_calls_to_each"
   ],
   "apps_get": [
    "apps_get"
@@ -14039,11 +14038,10 @@
     "call_name",
     "lambda",
     "v",
-    "a",
-    "f",
     "node",
     "expression",
-    "lambda3"
+    "lambda3",
+    "awaited"
    ],
    "async": false
   },
