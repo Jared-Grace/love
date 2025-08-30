@@ -6767,7 +6767,8 @@
    "js_imports_paths_fix",
    "js_await_wrap",
    "js_expand_generic",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_calls_to_each"
   ],
   "type": [
    "function_params_consolidate",
@@ -14028,7 +14029,8 @@
     "call_name",
     "lambda",
     "v",
-    "node"
+    "node",
+    "expression"
    ],
    "async": false
   },
