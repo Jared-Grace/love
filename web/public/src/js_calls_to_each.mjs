@@ -1,4 +1,4 @@
-import { js_node_type_not_is_if } from "./js_node_type_not_is_if.mjs";
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
@@ -25,8 +25,7 @@ export function js_calls_to_each(ast) {
     if (null_is(next)) {
       return;
     }
-    function lambda4() {}
-    js_node_type_not_is_if(node2, type, lambda4);
+    let nti = js_node_type_not_is(node2, type);
     log(next);
     async function d() {
       await a(b);
