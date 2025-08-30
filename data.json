@@ -11423,9 +11423,6 @@
   ],
   "expression3": [
    "js_calls_to_each"
-  ],
-  "ast2": [
-   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14173,18 +14170,17 @@
     "name",
     "n",
     "lambda6",
+    "c",
     "jin2",
     "callee",
     "code",
-    "ast2",
     "eq",
     "parsed",
     "expression3",
     "arguments2",
     "d",
     "a",
-    "b",
-    "c"
+    "b"
    ],
    "async": false
   },
