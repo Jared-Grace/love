@@ -57,7 +57,7 @@ export function js_calls_to_each(ast) {
     let { parsed } = await js_call_new(each_async.name, ast);
     let expression3 = object_property_get(parsed, "expression");
     if (async_is) {
-      parsed = object_property_get(parsed, "expression");
+      expression3 = object_property_get(expression3, "argument");
     }
     log({
       parsed,
