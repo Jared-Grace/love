@@ -1,3 +1,4 @@
+import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -12,7 +13,7 @@ export async function marker_rename(from, to) {
     if (not(s1)) {
       return;
     }
-    lsg;
+    let only = list_single(list);
     let nti = js_identifier_not_is(callee);
     if (nti) {
       return;
