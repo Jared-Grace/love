@@ -1,5 +1,5 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
-import { log } from "./log.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { marker } from "./marker.mjs";
@@ -11,7 +11,7 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
-    log(callee);
+    object_property_set(object, property_name, value);
   }
   marker("a");
   let f_name_current = await data_function_current_get();
