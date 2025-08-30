@@ -1,3 +1,4 @@
+import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -10,7 +11,7 @@ export function js_calls_to_each(ast) {
   let call_name = null;
   function lambda(v) {
     let { node, stack } = v;
-    let expression = object_property_get(node, "expression");
+    let expression = js_statement_expression_get(node);
     let awaited = false;
     let call = expression;
     function lambda3() {
