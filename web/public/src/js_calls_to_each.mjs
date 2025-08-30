@@ -11,7 +11,8 @@ export function js_calls_to_each(ast) {
     let awaited = false;
     function lambda3() {
       awaited = true;
-      let argument = object_property_get(expression, "argument");
+      let call = null;
+      call = object_property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     log(expression);
