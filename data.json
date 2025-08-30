@@ -2814,7 +2814,8 @@
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
    "list_remove_all_multiple",
-   "list_next_try"
+   "list_next_try",
+   "list_index_of_next_outside"
   ],
   "v": [
    "data_identifiers_file",
@@ -3744,7 +3745,8 @@
    "list_concat_multiple",
    "js_expand_generic",
    "list_remove_if_exists",
-   "list_next_try"
+   "list_next_try",
+   "list_index_of_next_outside"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -8402,7 +8404,8 @@
    "list_index_of_delta",
    "list_next",
    "list_index_of_next",
-   "list_next_try"
+   "list_next_try",
+   "list_index_of_next_outside"
   ],
   "js_dollar_task_each_code_own_fn": [
    "js_dollar_task_each_code_own_fn"
@@ -8996,14 +8999,16 @@
   "list_index_of_delta": [
    "list_index_of_delta",
    "list_index_of_next",
-   "list_index_of_previous"
+   "list_index_of_previous",
+   "list_index_of_next_outside"
   ],
   "delta": [
    "list_index_of_delta",
    "list_index_of_next",
    "list_index_of_previous",
    "marker_down",
-   "marker_up"
+   "marker_up",
+   "list_index_of_next_outside"
   ],
   "index_previous": [
    "list_index_of_previous",
@@ -11320,6 +11325,9 @@
   ],
   "list_index_of_delta_outside": [
    "list_index_of_delta"
+  ],
+  "list_index_of_next_outside": [
+   "list_index_of_next_outside"
   ]
  },
  "functions": {
@@ -21393,6 +21401,17 @@
     "js_identifier_not_is",
     "id",
     "jin"
+   ]
+  },
+  "list_index_of_next_outside": {
+   "async": false,
+   "identifiers": [
+    "list_index_of_delta",
+    "list_index_of_next_outside",
+    "list",
+    "item",
+    "delta",
+    "index_next"
    ]
   }
  },
