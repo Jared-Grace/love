@@ -11414,6 +11414,9 @@
   ],
   "jin2": [
    "js_call_callee_name"
+  ],
+  "expression3": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14161,6 +14164,7 @@
     "n",
     "eq",
     "parsed",
+    "expression3",
     "d",
     "a",
     "b",
