@@ -8524,7 +8524,8 @@
    "js_await_add",
    "app_replace_rule_set",
    "app_replace_home",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -14136,6 +14137,7 @@
     "expression2",
     "call2",
     "lambda2",
+    "lambda4",
     "item",
     "name",
     "eq",
