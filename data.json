@@ -3071,8 +3071,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "marker_rename"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20980,7 +20979,6 @@
     "arguments",
     "arguments2",
     "s1",
-    "message",
     "a0",
     "nti",
     "f_name_current",
