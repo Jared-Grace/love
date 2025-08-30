@@ -1,3 +1,4 @@
+import { list_index_of_next_outside } from "./list_index_of_next_outside.mjs";
 import { log } from "./log.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_types_function } from "./js_types_function.mjs";
@@ -8,7 +9,6 @@ import { list_map_property } from "./list_map_property.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { each_range } from "./each_range.mjs";
-import { list_index_of_next } from "./list_index_of_next.mjs";
 import { list_next } from "./list_next.mjs";
 import { each } from "./each.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
@@ -22,7 +22,7 @@ export function js_identifier_defineds(v) {
       log(bs);
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
-      let index = list_index_of_next(list, item);
+      let index = list_index_of_next_outside(list, item);
       function lambda2(i) {
         let list_item = list_get(list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
