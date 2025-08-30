@@ -30,7 +30,7 @@ export function js_calls_to_each(ast) {
       return;
     }
     let expression2 = js_statement_expression_get(next);
-    if (false) {
+    if (awaited) {
     }
     log(next);
     async function d() {
