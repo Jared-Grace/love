@@ -11342,9 +11342,6 @@
    "list_index_of_next_outside",
    "js_identifier_defineds",
    "js_dollar_g"
-  ],
-  "expression2": [
-   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14072,10 +14069,9 @@
     "v",
     "node",
     "stack",
-    "expression2",
+    "expression",
     "awaited",
     "call",
-    "expression",
     "lambda3",
     "e1",
     "next",
