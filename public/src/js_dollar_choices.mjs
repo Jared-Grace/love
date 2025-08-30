@@ -1,3 +1,4 @@
+import { js_dollar_ir } from "./js_dollar_ir.mjs";
 import { js_dollar_ien } from "./js_dollar_ien.mjs";
 import { marker } from "./marker.mjs";
 import { js_dollar_f } from "./js_dollar_f.mjs";
@@ -56,6 +57,10 @@ export function js_dollar_choices() {
     {
       name: "ien",
       fn: js_dollar_ien,
+    },
+    {
+      name: "ir",
+      fn: js_dollar_ir,
     },
   ];
   return choices;
