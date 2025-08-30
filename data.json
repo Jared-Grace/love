@@ -8489,8 +8489,7 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names",
-   "js_calls_to_each"
+   "js_identifiers_to_names"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -8912,8 +8911,7 @@
    "js_unparse",
    "js_imports_declarations",
    "js_marker_name_get",
-   "js_stack_list_block_is",
-   "js_calls_to_each"
+   "js_stack_list_block_is"
   ],
   "a3": [
    "js_unparse",
@@ -11404,7 +11402,6 @@
    "js_calls_to_each"
   ],
   "object_property_get_name": [
-   "js_calls_to_each",
    "js_call_callee_name"
   ],
   "js_call_callee_name": [
@@ -14124,7 +14121,6 @@
   "js_calls_to_each": {
    "identifiers": [
     "js_call_callee_name",
-    "object_property_get_name",
     "equal_by",
     "js_node_type_not_is",
     "js_statement_expression_get",
@@ -14154,8 +14150,6 @@
     "name",
     "n",
     "eq",
-    "a2",
-    "b2",
     "d",
     "a",
     "b",
