@@ -11,7 +11,7 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
-    object_property_set(object, property_name, value);
+    object_property_set(callee, "name", to);
   }
   marker("a");
   let f_name_current = await data_function_current_get();
