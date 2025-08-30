@@ -4549,7 +4549,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "js_calls_to_each"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10180,8 +10181,7 @@
    "js_await",
    "marker_next_await",
    "js_await_add",
-   "js_await_wrap",
-   "js_calls_to_each"
+   "js_await_wrap"
   ],
   "apps_get": [
    "apps_get"
@@ -14035,10 +14035,10 @@
     "js_visit_type",
     "js_calls_to_each",
     "ast",
-    "awaited",
     "call_name",
     "lambda",
     "v",
+    "b",
     "node",
     "expression",
     "lambda3"
