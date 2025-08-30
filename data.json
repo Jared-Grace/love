@@ -1804,7 +1804,8 @@
   "s marker",
   "fs",
   "f",
-  "fs marker_rename"
+  "fs marker_rename",
+  "marker_rename a b"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
