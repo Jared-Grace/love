@@ -806,7 +806,6 @@
   "fs data_watch_set",
   "t add_return",
   "o e",
-  "s next",
   "a li list_is",
   "ac li lin",
   "a li list_includes",
@@ -1812,7 +1811,8 @@
   "s null",
   "s ;et",
   "s let",
-  "cs list_index_of_next outside"
+  "cs list_index_of_next outside",
+  "s next"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_next_outside",
