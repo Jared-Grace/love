@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -20,7 +21,7 @@ export async function marker_rename(from, to) {
     }
     object_property_set(a0, "name", to);
   }
-  b("a");
+  marker("a");
   let f_name_current = await data_function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,
