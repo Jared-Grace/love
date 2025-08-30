@@ -4297,7 +4297,8 @@
    "js_dollar_new",
    "js_dollar",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_calls_to_each"
   ],
   "without": [
    "string_suffix_without",
@@ -4555,7 +4556,8 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove"
+   "html_style_remove",
+   "js_calls_to_each"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -9502,7 +9504,8 @@
    "counter",
    "js_identifiers_named_count",
    "function_aliases_restore",
-   "js_dollar"
+   "js_dollar",
+   "js_calls_to_each"
   ],
   "found": [
    "visit_unique_async"
@@ -14069,7 +14072,10 @@
     "call",
     "lambda3",
     "e1",
-    "next"
+    "next",
+    "a",
+    "b",
+    "c"
    ],
    "async": false
   },
@@ -21432,7 +21438,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-30T00:43:23.854Z",
+ "git_push_when": "2025-08-30T19:58:00.892Z",
  "error_attention": null,
  "app_current": "replace"
 }
