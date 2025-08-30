@@ -4015,7 +4015,8 @@
    "app_replace_rule_set",
    "app_replace_settings",
    "js_dollar_a_generic",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "value2": [
    "error_attention_set",
@@ -6791,7 +6792,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_calls_to_each"
   ],
   "key": [
    "object_invert",
@@ -7775,7 +7777,8 @@
   ],
   "js_node_type_is_if": [
    "js_node_type_is_if",
-   "js_log_remove"
+   "js_log_remove",
+   "js_calls_to_each"
   ],
   "js_node_types_is": [
    "js_node_types_is",
@@ -11312,6 +11315,9 @@
   ],
   "a0": [
    "marker_rename"
+  ],
+  "node2": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14025,6 +14031,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_node_type_is_if",
     "log",
     "js_visit_type",
     "js_calls_to_each",
@@ -14033,7 +14040,10 @@
     "lambda",
     "v",
     "node",
-    "expression"
+    "expression",
+    "node2",
+    "type",
+    "lambda3"
    ],
    "async": false
   },
