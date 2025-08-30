@@ -1449,7 +1449,6 @@
   "c function_exists function_exists_strict",
   "s log",
   "nj log_remove",
-  "s call",
   "s each",
   "o js_type",
   "s functions",
@@ -1805,7 +1804,8 @@
   "f",
   "fs marker_rename",
   "p",
-  "marker_rename a b"
+  "marker_rename a b",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
