@@ -11303,6 +11303,9 @@
   ],
   "jin": [
    "js_identifier_not_is"
+  ],
+  "lsg": [
+   "marker_rename"
   ]
  },
  "functions": {
@@ -20970,6 +20973,7 @@
     "arguments",
     "arguments2",
     "s1",
+    "lsg",
     "nti",
     "callee",
     "b",
