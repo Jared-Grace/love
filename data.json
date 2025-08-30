@@ -9000,8 +9000,7 @@
   "list_index_of_delta": [
    "list_index_of_delta",
    "list_index_of_next",
-   "list_index_of_previous",
-   "list_index_of_next_outside"
+   "list_index_of_previous"
   ],
   "delta": [
    "list_index_of_delta",
@@ -11325,7 +11324,8 @@
    "marker_rename"
   ],
   "list_index_of_delta_outside": [
-   "list_index_of_delta"
+   "list_index_of_delta",
+   "list_index_of_next_outside"
   ],
   "list_index_of_next_outside": [
    "list_index_of_next_outside"
@@ -21408,7 +21408,7 @@
    "async": false,
    "identifiers": [
     "marker",
-    "list_index_of_delta",
+    "list_index_of_delta_outside",
     "list_index_of_next_outside",
     "list",
     "item",
