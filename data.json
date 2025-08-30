@@ -1803,11 +1803,11 @@
   "f",
   "fs marker_rename",
   "s call",
-  "ps",
   "p",
   "marker_rename a b",
   "as list",
-  "a lsg list_single"
+  "a lsg list_single",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
