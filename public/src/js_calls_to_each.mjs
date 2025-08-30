@@ -40,7 +40,7 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression;
     }
-    log(next);
+    log(call2);
     async function d() {
       await a(b);
       await a(c);
