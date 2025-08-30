@@ -61,7 +61,7 @@ export function js_calls_to_each(ast) {
     }
     let arguments2 = object_property_get(expression3, "arguments");
     log({
-      expression3,
+      arguments2,
     });
     async function d() {
       await a(b);
