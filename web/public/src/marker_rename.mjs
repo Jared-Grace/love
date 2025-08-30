@@ -1,10 +1,10 @@
+import { object_replace } from "./object_replace.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
-import { object_property_set } from "./object_property_set.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 export async function marker_rename(from, to) {
@@ -21,7 +21,7 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
-    object_property_set(a0, "name", to);
+    object_replace(to2, from2);
   }
   marker("a");
   let f_name_current = await data_function_current_get();
