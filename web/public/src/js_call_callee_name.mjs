@@ -9,7 +9,7 @@ export function js_call_callee_name(expression) {
     return name;
   }
   let callee = object_property_get(expression, "callee");
-  let jin = js_identifier_not_is(id);
+  let jin = js_identifier_not_is(callee);
   if (jin) {
     return name;
   }
