@@ -29,9 +29,6 @@ export function js_calls_to_each(ast) {
     if (nti) {
       return;
     }
-    log({
-      call,
-    });
     let expression2 = js_statement_expression_get(next);
     let call2 = null;
     if (awaited) {
@@ -43,6 +40,10 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
+    log({
+      call,
+      call2,
+    });
     async function d() {
       await a(b);
       await a(c);
