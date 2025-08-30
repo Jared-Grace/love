@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { marker } from "./marker.mjs";
 export function js_dollar_ir({
@@ -13,5 +14,6 @@ export function js_dollar_ir({
   js_dollar_i({
     stack1,
   });
+  let consequent = object_property_get(stack1, "consequent");
   return;
 }
