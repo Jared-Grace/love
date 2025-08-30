@@ -5,11 +5,12 @@ export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
   function lambda(v) {
-    let b = null;
-    b = true;
     let { node } = v;
     let { expression } = node;
-    function lambda3() {}
+    function lambda3() {
+      let b = null;
+      let b = true;
+    }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     log(expression);
   }
