@@ -3027,7 +3027,8 @@
    "marker_rename",
    "function_open_dollar_choice",
    "js_assign_combine",
-   "list_index_of_delta"
+   "list_index_of_delta",
+   "js_code_wrap_brackets"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8093,7 +8094,8 @@
    "js_code_declaration",
    "js_code_wrap_braces",
    "js_code_wrap_parenthesis",
-   "js_dollar_i"
+   "js_dollar_i",
+   "js_code_wrap_brackets"
   ],
   "prefix": [
    "string_prefix_without",
@@ -11425,6 +11427,9 @@
   ],
   "expression3": [
    "js_calls_to_each"
+  ],
+  "js_code_wrap_brackets": [
+   "js_code_wrap_brackets"
   ]
  },
  "functions": {
@@ -21590,6 +21595,14 @@
     "jin2",
     "callee",
     "jin"
+   ]
+  },
+  "js_code_wrap_brackets": {
+   "async": false,
+   "identifiers": [
+    "js_code_wrap_brackets",
+    "inside",
+    "v"
    ]
   }
  },
