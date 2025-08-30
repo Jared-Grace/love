@@ -7607,7 +7607,8 @@
    "js_assign_combine",
    "js_identifier_not_is",
    "marker_rename",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_call_callee_name"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -11407,6 +11408,9 @@
   ],
   "js_call_callee_name": [
    "js_calls_to_each",
+   "js_call_callee_name"
+  ],
+  "jin2": [
    "js_call_callee_name"
   ]
  },
@@ -21553,15 +21557,17 @@
   "js_call_callee_name": {
    "async": false,
    "identifiers": [
+    "js_node_type_not_is",
     "js_identifier_not_is",
     "object_property_get_name",
     "object_property_get",
     "js_call_callee_name",
     "expression",
-    "callee",
-    "jin",
+    "name",
+    "jin2",
     "id",
-    "name"
+    "callee",
+    "jin"
    ]
   }
  },
