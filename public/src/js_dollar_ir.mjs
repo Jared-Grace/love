@@ -1,3 +1,4 @@
+import { js_dollar_i } from "./js_dollar_i.mjs";
 import { marker } from "./marker.mjs";
 export function js_dollar_ir({
   remaining,
@@ -9,5 +10,8 @@ export function js_dollar_ir({
   afters,
 }) {
   marker("1");
+  js_dollar_i({
+    stack1,
+  });
   return;
 }
