@@ -7,8 +7,8 @@ export function js_calls_to_each(ast) {
   function lambda(v) {
     let { node } = v;
     let { expression } = node;
+    let awaited = false;
     function lambda3() {
-      let awaited = null;
       awaited = true;
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
