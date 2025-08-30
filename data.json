@@ -1799,7 +1799,6 @@
   "ps",
   "f",
   "fs marker_rename",
-  "p",
   "s js,string",
   "marker_rename a b",
   "s auto",
@@ -1814,6 +1813,7 @@
   "cs list_index_of_next outside",
   "s next",
   "is list_next_try",
+  "p",
   "fts js_calls_to_each"
  ],
  "marker_current": "1",
