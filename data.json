@@ -7800,7 +7800,8 @@
    "js_marker_name_get",
    "marker_call_replace_generic",
    "js_expand_generic",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "log_unparse_try": [
    "js_block_child_graph",
@@ -14165,6 +14166,7 @@
     "eq",
     "parsed",
     "expression3",
+    "arguments2",
     "d",
     "a",
     "b",
@@ -21579,7 +21581,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-30T21:38:44.085Z",
+ "git_push_when": "2025-08-30T22:44:45.771Z",
  "error_attention": null,
  "app_current": "replace"
 }
