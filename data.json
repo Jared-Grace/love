@@ -2052,7 +2052,8 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "js_auto_transforms",
-   "list_next_try"
+   "list_next_try",
+   "marker_rename"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4541,8 +4542,7 @@
    "js_declare_single",
    "app_replace_rule_set",
    "html_enable",
-   "html_style_remove",
-   "marker_rename"
+   "html_style_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -20960,6 +20960,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "marker",
     "list_single",
     "not",
     "list_size_1",
@@ -20978,7 +20979,6 @@
     "s1",
     "a0",
     "nti",
-    "b",
     "f_name_current",
     "v"
    ]
