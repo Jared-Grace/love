@@ -5,6 +5,7 @@ import { marker } from "./marker.mjs";
 export async function marker_rename(from, to) {
   async function lambda(a) {
     let { node } = a;
+    callee;
     log(a);
   }
   marker("a");
