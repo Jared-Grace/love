@@ -24,9 +24,9 @@ export function js_calls_to_each(ast) {
       return;
     }
     log(next);
-    if (0) {
-      a(b);
-      a(c);
+    async function d() {
+      await a(b);
+      await a(c);
     }
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
