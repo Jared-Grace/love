@@ -1583,7 +1583,6 @@
   "r function_transform_marker function_transform_marker_current",
   "o function_transform_marker",
   "o function_transform_marker_current",
-  "s let",
   "s single",
   "marker_screen_add t",
   "o marker_screen_add",
@@ -1811,7 +1810,8 @@
   "s split",
   "s dollar",
   "s null",
-  "s ;et"
+  "s ;et",
+  "s let"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
