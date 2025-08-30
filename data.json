@@ -2074,7 +2074,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "js_dollar_ir",
-   "js_dollar_i"
+   "js_dollar_i",
+   "js_code_wrap_brackets"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21600,6 +21601,7 @@
   "js_code_wrap_brackets": {
    "async": false,
    "identifiers": [
+    "marker",
     "js_code_wrap_brackets",
     "inside",
     "v"
