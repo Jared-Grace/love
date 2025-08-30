@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
 import { js_types_function } from "./js_types_function.mjs";
 import { js_stack_filtered_multiple_each } from "./js_stack_filtered_multiple_each.mjs";
@@ -18,6 +19,7 @@ export function js_identifier_defineds(v) {
   function lambda4(la) {
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
+      log(message);
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next(list, item);
