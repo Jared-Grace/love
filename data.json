@@ -2805,7 +2805,8 @@
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
    "list_remove_all_multiple",
-   "list_next_try"
+   "list_next_try",
+   "marker_rename"
   ],
   "v": [
    "data_identifiers_file",
@@ -5716,7 +5717,8 @@
    "list_find",
    "list_single",
    "js_imports_declarations",
-   "js_declare_single"
+   "js_declare_single",
+   "marker_rename"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -10847,7 +10849,8 @@
   "only": [
    "list_single",
    "list_find",
-   "firebase_service_account"
+   "firebase_service_account",
+   "marker_rename"
   ],
   "firebase_service_account": [
    "firebase_service_account",
@@ -11305,9 +11308,6 @@
   ],
   "jin": [
    "js_identifier_not_is"
-  ],
-  "lsg": [
-   "marker_rename"
   ]
  },
  "functions": {
@@ -20960,6 +20960,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "list_single",
     "not",
     "list_size_1",
     "object_property_set",
@@ -20975,7 +20976,8 @@
     "arguments",
     "arguments2",
     "s1",
-    "lsg",
+    "only",
+    "list",
     "nti",
     "callee",
     "b",
