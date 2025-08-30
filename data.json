@@ -1822,7 +1822,8 @@
   "p",
   "fts js_calls_to_each",
   "s empty",
-  "s brack"
+  "s brack",
+  "c js_code_wrap_braces js_code_wrap_brackets"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
