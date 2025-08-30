@@ -1707,7 +1707,6 @@
   "s setting",
   "s storage",
   "s rule,set",
-  "as list",
   "s list_any",
   "a lan list_any",
   "o list_any",
@@ -1805,7 +1804,8 @@
   "s call",
   "ps",
   "p",
-  "marker_rename a b"
+  "marker_rename a b",
+  "as list"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
