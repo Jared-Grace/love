@@ -6509,7 +6509,8 @@
    "html_document_body",
    "app_refresh",
    "html_clear",
-   "html_update_generic"
+   "html_update_generic",
+   "js_dollar_ir"
   ],
   "import_": [
    "function_imports_add",
@@ -21494,7 +21495,8 @@
     "stack3",
     "ast",
     "afters",
-    "consequent"
+    "consequent",
+    "body"
    ]
   }
  },
