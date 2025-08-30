@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { equal_by } from "./equal_by.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
@@ -48,6 +49,9 @@ export function js_calls_to_each(ast) {
       return;
     }
     let eq = equal_by(expression, expression2, js_call_callee_name);
+    if (not(eq)) {
+      return;
+    }
     log({
       call,
       call2,
