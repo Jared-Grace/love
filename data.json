@@ -3931,8 +3931,7 @@
    "visit_unique_async",
    "marker_screen_add",
    "js_dollar_new",
-   "js_expand_generic",
-   "js_declaration_single_block_body_add_return"
+   "js_expand_generic"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -6276,8 +6275,7 @@
    "app_replace_rule_set",
    "js_dollar_new",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple",
-   "js_declaration_single_block_body_add_return"
+   "list_remove_all_multiple"
   ],
   "formatted": [
    "function_format",
@@ -11244,8 +11242,7 @@
   ],
   "js_statement_return_empty": [
    "js_if_blockify_generic",
-   "js_dollar_new",
-   "js_declaration_single_block_body_add_return"
+   "js_dollar_new"
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
@@ -11383,6 +11380,9 @@
    "js_dollar_choices"
   ],
   "js_declaration_single_block_body_add_return": [
+   "js_declaration_single_block_body_add_return"
+  ],
+  "js_statement_return_empty_add": [
    "js_declaration_single_block_body_add_return"
   ]
  },
@@ -21511,13 +21511,11 @@
   "js_declaration_single_block_body_add_return": {
    "async": false,
    "identifiers": [
-    "list_add",
+    "js_statement_return_empty_add",
     "js_declaration_single_block_body",
-    "js_statement_return_empty",
     "js_declaration_single_block_body_add_return",
     "ast",
-    "body_block",
-    "r"
+    "body_block"
    ]
   }
  },
