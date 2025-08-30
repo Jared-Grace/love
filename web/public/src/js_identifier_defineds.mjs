@@ -19,7 +19,7 @@ export function js_identifier_defineds(v) {
   function lambda4(la) {
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
-      log(message);
+      log(bs);
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next(list, item);
