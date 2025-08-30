@@ -7540,7 +7540,8 @@
   ],
   "npm_install": [
    "import_install",
-   "npm_install"
+   "npm_install",
+   "js_calls_to_each"
   ],
   "err": [
    "import_install"
@@ -9356,7 +9357,8 @@
    "newFunction"
   ],
   "package_name": [
-   "npm_install"
+   "npm_install",
+   "js_calls_to_each"
   ],
   "isFinite": [
    "number_is"
@@ -14122,6 +14124,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "npm_install",
     "js_call_callee_name",
     "object_property_get_name",
     "equal_by",
@@ -14151,6 +14154,7 @@
     "expression2",
     "call2",
     "name",
+    "package_name",
     "eq",
     "a2",
     "b2",
