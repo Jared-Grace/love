@@ -13,12 +13,12 @@ export async function marker_rename(from, to) {
     if (not(s1)) {
       return;
     }
-    let only = list_single(list);
-    let nti = js_identifier_not_is(callee);
+    let a0 = list_single(arguments2);
+    let nti = js_identifier_not_is(a0);
     if (nti) {
       return;
     }
-    object_property_set(callee, "name", to);
+    object_property_set(a0, "name", to);
   }
   b("a");
   let f_name_current = await data_function_current_get();
