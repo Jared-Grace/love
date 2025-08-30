@@ -11,16 +11,17 @@ import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
+import { each } from "./each.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
   async function lambda(v) {
     let { node, stack } = v;
     let expression = js_statement_expression_get(node);
-    let awaited = false;
+    let async_is = false;
     let call = expression;
     function lambda3() {
-      awaited = true;
+      async_is = true;
       call = object_property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
@@ -35,7 +36,7 @@ export function js_calls_to_each(ast) {
     }
     let expression2 = js_statement_expression_get(next);
     let call2 = null;
-    if (awaited) {
+    if (async_is) {
       let nti = js_node_type_not_is(expression2, "AwaitExpression");
       if (nti) {
         return;
@@ -53,7 +54,7 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
-    let v2 = await js_call_new(f_name_call, ast2);
+    let { parsed } = await js_call_new(each, ast);
     log({
       name,
     });
