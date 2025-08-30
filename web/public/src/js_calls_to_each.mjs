@@ -1,3 +1,4 @@
+import { function_current_set } from "./function_current_set.mjs";
 import { js_call_new } from "./js_call_new.mjs";
 import { not } from "./not.mjs";
 import { js_call_callee_name } from "./js_call_callee_name.mjs";
@@ -59,6 +60,7 @@ export function js_calls_to_each(ast) {
     if (async_is) {
       expression3 = object_property_get(expression3, "argument");
     }
+    let v2 = await function_current_set(f_name);
     log({
       expression3,
     });
