@@ -1,3 +1,4 @@
+import { js_call_new } from "./js_call_new.mjs";
 import { not } from "./not.mjs";
 import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { equal_by } from "./equal_by.mjs";
@@ -13,7 +14,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
-  function lambda(v) {
+  async function lambda(v) {
     let { node, stack } = v;
     let expression = js_statement_expression_get(node);
     let awaited = false;
@@ -52,6 +53,7 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
+    let v2 = await js_call_new(f_name_call, ast2);
     log({
       name,
     });
