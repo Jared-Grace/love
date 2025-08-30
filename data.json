@@ -1818,7 +1818,8 @@
    "search_generic",
    "js_log_remove",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "marker_rename"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3066,7 +3067,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "marker_rename"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20931,6 +20933,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "log",
     "function_transform_marker_specified",
     "data_function_current_get",
     "marker",
@@ -20940,6 +20943,7 @@
     "lambda",
     "a",
     "v",
+    "message",
     "f_name_current"
    ]
   },
