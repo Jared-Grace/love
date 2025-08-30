@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -9,7 +10,8 @@ export function js_calls_to_each(ast) {
     let { expression } = node;
     let awaited = false;
     function lambda3() {
-      awaited = true;$g$expression$argument 
+      awaited = true;
+      let argument = object_property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     log(expression);
