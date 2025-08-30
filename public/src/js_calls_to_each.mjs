@@ -29,12 +29,16 @@ export function js_calls_to_each(ast) {
     if (nti) {
       return;
     }
-    let call2 = js_statement_expression_get(next);
+    let expression2 = js_statement_expression_get(next);
+    let call2 = null;
     if (awaited) {
       let nti = js_node_type_not_is(next, "AwaitExpression");
       if (nti) {
         return;
       }
+      call2 = object_property_get(expression2, "argument");
+    } else {
+      call2 = expression;
     }
     log(next);
     async function d() {
