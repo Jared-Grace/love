@@ -8710,7 +8710,8 @@
    "marker_call_replace_generic",
    "js_call_function_if",
    "js_log_remove",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "v4": [
    "js_marker_name_get"
@@ -14136,6 +14137,7 @@
     "nti",
     "expression2",
     "call2",
+    "callee",
     "eq",
     "a2",
     "b2",
