@@ -1790,7 +1790,6 @@
   "s index,list",
   "s marker",
   "fs",
-  "s call",
   "as list",
   "a lsg list_single",
   "f",
@@ -1821,7 +1820,8 @@
   "s js,call",
   "ps",
   "p",
-  "fts js_calls_to_each"
+  "fts js_calls_to_each",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
