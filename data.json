@@ -4192,7 +4192,8 @@
    "object_property_lambda_async",
    "http",
    "list_index_of_delta",
-   "marker_rename"
+   "marker_rename",
+   "js_calls_to_each"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -14120,6 +14121,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "not",
     "js_call_callee_name",
     "equal_by",
     "js_node_type_not_is",
