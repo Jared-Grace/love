@@ -3406,7 +3406,8 @@
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
    "js_dollar_ien",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "output": [
    "watch",
@@ -14135,6 +14136,7 @@
     "call2",
     "lambda2",
     "item",
+    "name",
     "eq",
     "a2",
     "b2",
