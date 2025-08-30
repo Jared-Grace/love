@@ -1,3 +1,6 @@
+import { null_is } from "./null_is.mjs";
+import { list_next_try } from "./list_next_try.mjs";
+import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { log } from "./log.mjs";
@@ -15,6 +18,11 @@ export function js_calls_to_each(ast) {
       call = object_property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
+    let e1 = list_get_end_1(stack);
+    let next = list_next_try(e1, node);
+    if (null_is(next)) {
+      return;
+    }
     log(expression);
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
