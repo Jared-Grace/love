@@ -41,11 +41,11 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
-    let lambda2 = function lambda4(item) {
+    function object_property_get_name(item) {
       let name = object_property_get(item, "name");
       return name;
-    };
-    let eq = equal_by(a2, b2, lambda2);
+    }
+    let eq = equal_by(a2, b2, object_property_get_name);
     log({
       call,
       call2,
