@@ -1,3 +1,4 @@
+import { equal_by } from "./equal_by.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
 import { null_is } from "./null_is.mjs";
@@ -40,6 +41,7 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
+    let eq = equal_by(a2, b2, function lambda2(item) {});
     log({
       call,
       call2,
