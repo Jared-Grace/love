@@ -10,6 +10,7 @@ export async function marker_rename(from, to) {
     let { arguments: arguments2 } = node;
     let s1 = list_size_1(arguments2);
     if (not(s1)) {
+      return;
     }
     let nti = js_identifier_not_is(callee);
     if (nti) {
