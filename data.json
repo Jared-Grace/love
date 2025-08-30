@@ -1806,7 +1806,6 @@
   "ts",
   "ftc js_calls_to_each app_new",
   "s split",
-  "s dollar",
   "s null",
   "s ;et",
   "s let",
@@ -1818,7 +1817,8 @@
   "s if",
   "s _if",
   "as dollar",
-  "nd ir"
+  "nd ir",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ir",
