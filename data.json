@@ -14063,12 +14063,12 @@
     "lambda",
     "v",
     "node",
+    "stack",
     "expression",
     "awaited",
     "call",
     "lambda3",
     "e1",
-    "stack",
     "next"
    ],
    "async": false
