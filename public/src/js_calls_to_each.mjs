@@ -24,7 +24,7 @@ export function js_calls_to_each(ast) {
       return;
     }
     log(expression);
-    {
+    if (0) {
       a(b);
       a(c);
     }
