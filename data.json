@@ -1820,8 +1820,8 @@
   "s js,call",
   "ps",
   "p",
-  "fts js_calls_to_each",
-  "s call"
+  "s call",
+  "fts js_calls_to_each"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
