@@ -1726,7 +1726,6 @@
   "js_dollar_new",
   "s string",
   "o nj",
-  "s return",
   "s blody",
   "r js_declaration_single_block_blody js_declaration_single_block_body",
   "o js_dollar_a",
@@ -1820,7 +1819,8 @@
   "s dollar",
   "od I",
   "s body,get",
-  "s block"
+  "s block",
+  "s return"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
