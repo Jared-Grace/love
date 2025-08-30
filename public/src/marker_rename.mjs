@@ -25,7 +25,7 @@ export async function marker_rename(from, to) {
     let s = js_string(to);
     object_replace(a0, s);
   }
-  marker("a");
+  marker("b");
   let f_name_current = await data_function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,
