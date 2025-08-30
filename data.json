@@ -6786,8 +6786,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "marker_rename"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -11299,21 +11298,16 @@
    "js_assign_combine"
   ],
   "nti2": [
-   "js_assign_combine",
-   "marker_rename"
+   "js_assign_combine"
   ],
   "js_identifier_not_is": [
    "js_assign_combine",
-   "marker_rename",
    "js_identifier_not_is"
   ],
   "jin": [
    "js_identifier_not_is"
   ],
   "a0": [
-   "marker_rename"
-  ],
-  "node2": [
    "marker_rename"
   ]
  },
@@ -20974,7 +20968,6 @@
     "not",
     "list_size_1",
     "object_property_set",
-    "js_identifier_not_is",
     "function_transform_marker_specified",
     "data_function_current_get",
     "marker_rename",
@@ -20987,9 +20980,6 @@
     "arguments2",
     "s1",
     "a0",
-    "nti2",
-    "node2",
-    "type",
     "nti",
     "f_name_current",
     "v"
