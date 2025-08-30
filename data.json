@@ -1839,7 +1839,8 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add"
+   "js_let_add",
+   "js_call_callee_name"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3092,7 +3093,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_call_callee_name"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21556,6 +21558,7 @@
   "js_call_callee_name": {
    "async": false,
    "identifiers": [
+    "log",
     "js_node_type_not_is",
     "js_identifier_not_is",
     "object_property_get_name",
@@ -21564,6 +21567,7 @@
     "expression",
     "name",
     "jin2",
+    "message",
     "callee",
     "jin"
    ]
