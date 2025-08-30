@@ -1830,8 +1830,7 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add",
-   "js_identifier_defineds"
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -14965,7 +14964,6 @@
   "js_identifier_defineds": {
    "identifiers": [
     "list_index_of_next_outside",
-    "log",
     "js_declaration_params_names",
     "js_types_function",
     "js_stack_filtered_multiple_each",
