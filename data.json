@@ -7588,8 +7588,7 @@
    "js_dollar_a_generic",
    "js_identifier_defineds",
    "list_next",
-   "list_next_index",
-   "js_assign_combine"
+   "list_next_index"
   ],
   "js_return_name": [
    "js_call_new_code",
@@ -11276,7 +11275,8 @@
    "js_declare_single_init"
   ],
   "list_next_try": [
-   "list_next_try"
+   "list_next_try",
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -21268,12 +21268,12 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "list_next_try",
     "list_remove",
     "object_property_set",
     "equal",
     "js_node_type_not_is",
     "object_property_get",
-    "list_next",
     "null_is",
     "list_get_end_1",
     "js_declare_single",
@@ -21322,7 +21322,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-29T21:46:23.327Z",
+ "git_push_when": "2025-08-30T00:43:22.942Z",
  "error_attention": null,
  "app_current": "replace"
 }
