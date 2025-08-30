@@ -5,5 +5,9 @@ export async function marker_rename(from, to) {
   async function lambda(a) {}
   marker("1");
   let f_name_current = await data_function_current_get();
-  let v = await function_transform_marker_specified(from, lambda);
+  let v = await function_transform_marker_specified(
+    f_name_current,
+    from,
+    lambda,
+  );
 }
