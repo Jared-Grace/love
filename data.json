@@ -1811,7 +1811,6 @@
   "s next",
   "is list_next_try",
   "p",
-  "fts js_calls_to_each",
   "s if",
   "s _if",
   "as dollar",
@@ -1820,7 +1819,8 @@
   "od I",
   "s body,get",
   "s block",
-  "s return"
+  "s return",
+  "fts js_calls_to_each"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
