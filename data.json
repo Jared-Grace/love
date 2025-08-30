@@ -2054,8 +2054,7 @@
    "list_remove_all_multiple",
    "list_remove_multiple",
    "js_auto_transforms",
-   "list_next_try",
-   "marker_rename"
+   "list_next_try"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20968,7 +20967,6 @@
     "object_replace",
     "js_node_type_not_is",
     "log",
-    "marker",
     "list_single",
     "not",
     "list_size_1",
