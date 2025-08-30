@@ -51,6 +51,13 @@ export function js_calls_to_each(ast) {
     if (n) {
       return;
     }
+    function lambda6() {
+      let jin2 = js_node_type_not_is(expression, "CallExpression");
+      if (jin2) {
+        return name;
+      }
+      let callee = object_property_get(expression, "callee");
+    }
     let eq = equal_by(call, call2, js_unparse);
     if (not(eq)) {
       return;
