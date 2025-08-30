@@ -1793,7 +1793,6 @@
   "s call",
   "as list",
   "a lsg list_single",
-  "ps",
   "f",
   "fs marker_rename",
   "s js,string",
@@ -1821,7 +1820,8 @@
   "p",
   "fts js_calls_to_each",
   "s object,la",
-  "s js,call"
+  "s js,call",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
