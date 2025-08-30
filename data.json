@@ -2069,7 +2069,8 @@
    "js_auto_transforms",
    "list_next_try",
    "list_index_of_next_outside",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_i"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14782,6 +14783,7 @@
   },
   "js_dollar_i": {
    "identifiers": [
+    "marker",
     "js_keyword_false",
     "object_replace",
     "js_code_braces_empty",
