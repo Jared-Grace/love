@@ -1065,7 +1065,6 @@
   "dts 1",
   "dtg",
   "o o",
-  "fs",
   "oe o",
   "o p",
   "u fs",
@@ -1421,7 +1420,6 @@
   "eac",
   "fs js_await_add",
   "mdm 2",
-  "f",
   "mbt",
   "mc l1",
   "ir stack2 2",
@@ -1803,7 +1801,9 @@
   "cs list_next_try",
   "cs list_next try",
   "s index,list",
-  "s marker"
+  "s marker",
+  "fs",
+  "f"
  ],
  "marker_current": "1",
  "function_current": "list_next_try",
