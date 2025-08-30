@@ -38,7 +38,7 @@ export function js_calls_to_each(ast) {
       }
       call2 = object_property_get(expression2, "argument");
     } else {
-      call2 = expression;
+      call2 = expression2;
     }
     log({
       call2,
