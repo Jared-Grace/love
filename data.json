@@ -1803,10 +1803,11 @@
   "s index,list",
   "s marker",
   "fs",
-  "f"
+  "f",
+  "fs marker_rename"
  ],
  "marker_current": "1",
- "function_current": "list_next_try",
+ "function_current": "marker_rename",
  "terminal": false,
  "identifiers": {
   "log": [
