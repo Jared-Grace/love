@@ -3406,7 +3406,8 @@
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
    "js_dollar_ien",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "output": [
    "watch",
@@ -11397,6 +11398,9 @@
   ],
   "object_property_get_name": [
    "js_calls_to_each"
+  ],
+  "calle": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14138,6 +14142,8 @@
     "expression2",
     "call2",
     "callee",
+    "name",
+    "calle",
     "eq",
     "a2",
     "b2",
