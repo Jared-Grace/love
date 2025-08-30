@@ -8367,8 +8367,7 @@
    "js_function_id_add",
    "js_identifier_defineds",
    "js_assign_combine",
-   "js_identifier_not_is",
-   "js_call_callee_name"
+   "js_identifier_not_is"
   ],
   "is": [
    "js_dollar_a",
@@ -21566,8 +21565,7 @@
     "name",
     "jin2",
     "callee",
-    "jin",
-    "id"
+    "jin"
    ]
   }
  },
