@@ -29,6 +29,7 @@ export function js_identifier_defineds(v) {
           let { declarations } = list_item;
           let ids = list_map_property(declarations, "id");
           function lambda(id) {
+            log(id);
             if (js_node_type_is(id, "ObjectPattern")) {
               let { properties } = id;
               let values = list_map_property(properties, "value");
@@ -36,7 +37,6 @@ export function js_identifier_defineds(v) {
               la(names);
             } else if (js_node_type_is(id, "Identifier")) {
               let value = object_property_get(id, "name");
-              log(value);
               la([value]);
             } else {
               error();
