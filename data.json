@@ -6162,7 +6162,8 @@
    "js_log_remove",
    "js_dollar_x",
    "js_dollar_ien",
-   "js_assign_combine"
+   "js_assign_combine",
+   "marker_rename"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -20943,8 +20944,9 @@
     "to",
     "lambda",
     "a",
-    "v",
-    "f_name_current"
+    "node",
+    "f_name_current",
+    "v"
    ]
   },
   "js_dollar_choices": {
