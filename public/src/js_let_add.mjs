@@ -29,7 +29,7 @@ export function js_let_add(ast) {
     if (includes) {
       return;
     }
-    log(message);
+    log(defineds);
     let assign = js_declare(name, right);
     object_replace(stack1, assign);
   }
