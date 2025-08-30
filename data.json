@@ -11286,10 +11286,12 @@
    "js_assign_combine"
   ],
   "nti2": [
-   "js_assign_combine"
+   "js_assign_combine",
+   "marker_rename"
   ],
   "js_identifier_not_is": [
-   "js_assign_combine"
+   "js_assign_combine",
+   "marker_rename"
   ]
  },
  "functions": {
@@ -20942,6 +20944,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "js_identifier_not_is",
     "log",
     "function_transform_marker_specified",
     "data_function_current_get",
@@ -20953,6 +20956,7 @@
     "a",
     "node",
     "callee",
+    "nti2",
     "f_name_current",
     "v"
    ]
