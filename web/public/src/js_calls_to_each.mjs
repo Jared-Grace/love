@@ -51,13 +51,14 @@ export function js_calls_to_each(ast) {
     if (n) {
       return;
     }
-    function lambda6() {
-      let jin2 = js_node_type_not_is(expression, "CallExpression");
+    function lambda6(c) {
+      let jin2 = js_node_type_not_is(c, "CallExpression");
       if (jin2) {
         return name;
       }
-      let callee = object_property_get(expression, "callee");
-      let code = js_unparse(ast2);
+      let callee = object_property_get(c, "callee");
+      let code = js_unparse(callee);
+      return code;
     }
     let eq = equal_by(call, call2, js_unparse);
     if (not(eq)) {
