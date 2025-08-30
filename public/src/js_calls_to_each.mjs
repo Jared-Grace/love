@@ -25,10 +25,11 @@ export function js_calls_to_each(ast) {
     if (null_is(next)) {
       return;
     }
-    let nti = js_node_type_not_is(node, "ExpressionStatement");
+    let nti = js_node_type_not_is(next, "ExpressionStatement");
     if (nti) {
       return;
     }
+    let expression2 = js_statement_expression_get(next);
     log(next);
     async function d() {
       await a(b);
