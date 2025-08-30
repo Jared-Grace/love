@@ -7854,7 +7854,8 @@
   ],
   "block": [
    "js_block_insert",
-   "js_parse_statement"
+   "js_parse_statement",
+   "js_declaration_to_block_body"
   ],
   "block_body": [
    "js_block_insert"
@@ -14569,6 +14570,7 @@
     "js_declaration_to_block_body",
     "declaration",
     "body",
+    "block",
     "body_block"
    ],
    "async": false
