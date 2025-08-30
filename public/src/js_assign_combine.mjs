@@ -31,6 +31,10 @@ export function js_assign_combine(ast) {
     }
     let name2 = object_property_get(init2, "name");
     let id = object_property_get(declaration, "id");
+    let nti2 = js_node_type_not_is(id, "Identifier");
+    if (nti2) {
+      return;
+    }
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
       let init = object_property_get(declaration, "init");
