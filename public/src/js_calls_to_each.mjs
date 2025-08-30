@@ -42,6 +42,7 @@ export function js_calls_to_each(ast) {
     }
     log({
       call2,
+      call,
     });
     async function d() {
       await a(b);
