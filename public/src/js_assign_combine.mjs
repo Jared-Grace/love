@@ -1,3 +1,4 @@
+import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -31,7 +32,7 @@ export function js_assign_combine(ast) {
     }
     let name2 = object_property_get(init2, "name");
     let id = object_property_get(declaration, "id");
-    let nti2 = js_node_type_not_is(id, "Identifier");
+    let nti2 = js_identifier_not_is(id);
     if (nti2) {
       return;
     }
