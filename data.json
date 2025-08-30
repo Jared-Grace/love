@@ -1815,7 +1815,7 @@
   "cs list_index_of_next outside"
  ],
  "marker_current": "1",
- "function_current": "marker_rename",
+ "function_current": "list_index_of_next_outside",
  "terminal": false,
  "identifiers": {
   "log": [
