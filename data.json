@@ -1828,7 +1828,8 @@
    "js_dollar_x",
    "js_expand_generic",
    "marker_rename",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3075,7 +3076,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "js_let_add"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -15260,6 +15262,7 @@
   },
   "js_let_add": {
    "identifiers": [
+    "log",
     "js_identifier_is",
     "not",
     "list_includes",
@@ -15284,6 +15287,7 @@
     "name",
     "defineds",
     "includes",
+    "message",
     "assign"
    ],
    "async": false
