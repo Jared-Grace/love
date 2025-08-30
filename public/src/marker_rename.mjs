@@ -2,7 +2,6 @@ import { js_string } from "./js_string.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { log } from "./log.mjs";
-import { marker } from "./marker.mjs";
 import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -25,7 +24,6 @@ export async function marker_rename(from, to) {
     let s = js_string(to);
     object_replace(a0, s);
   }
-  marker("b");
   let f_name_current = await data_function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,
