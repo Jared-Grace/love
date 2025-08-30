@@ -12,6 +12,7 @@ export async function marker_rename(from, to) {
     if (not(s1)) {
       return;
     }
+    lsg;
     let nti = js_identifier_not_is(callee);
     if (nti) {
       return;
