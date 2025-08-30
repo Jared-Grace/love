@@ -7628,7 +7628,6 @@
    "marker_assign_replace"
   ],
   "list_index_of_next": [
-   "js_identifier_defineds",
    "list_index_of_next",
    "list_next",
    "marker_next_index",
@@ -11328,7 +11327,8 @@
    "list_index_of_next_outside"
   ],
   "list_index_of_next_outside": [
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "js_identifier_defineds"
   ]
  },
  "functions": {
@@ -14964,6 +14964,7 @@
   },
   "js_identifier_defineds": {
    "identifiers": [
+    "list_index_of_next_outside",
     "log",
     "js_declaration_params_names",
     "js_types_function",
@@ -14974,7 +14975,6 @@
     "js_node_type_is",
     "list_get",
     "each_range",
-    "list_index_of_next",
     "list_next",
     "each",
     "list_adder_multiple",
