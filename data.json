@@ -3051,7 +3051,8 @@
    "marker_down_choices",
    "marker_next",
    "marker_next_await",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "js_format": [
    "file_js_unparse",
@@ -14145,6 +14146,7 @@
     "log",
     "js_visit_type",
     "each_async",
+    "js_unparse",
     "js_calls_to_each",
     "ast",
     "call_name",
