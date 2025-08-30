@@ -59,6 +59,7 @@ export function js_calls_to_each(ast) {
     if (async_is) {
       expression3 = object_property_get(expression3, "argument");
     }
+    let arguments2 = object_property_get(expression3, "arguments");
     log({
       expression3,
     });
