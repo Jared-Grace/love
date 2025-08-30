@@ -1,4 +1,3 @@
-import { npm_install } from "./npm_install.mjs";
 import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { object_property_get_name } from "./object_property_get_name.mjs";
 import { equal_by } from "./equal_by.mjs";
@@ -14,7 +13,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
-  async function lambda(v) {
+  function lambda(v) {
     let { node, stack } = v;
     let expression = js_statement_expression_get(node);
     let awaited = false;
@@ -45,7 +44,7 @@ export function js_calls_to_each(ast) {
       call2 = expression2;
     }
     let name = js_call_callee_name(expression);
-    await npm_install(package_name);
+    let n = null_is(value);
     let eq = equal_by(a2, b2, object_property_get_name);
     log({
       call,
