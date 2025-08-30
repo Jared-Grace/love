@@ -14038,10 +14038,10 @@
     "call_name",
     "lambda",
     "v",
+    "awaited",
     "node",
     "expression",
-    "lambda3",
-    "awaited"
+    "lambda3"
    ],
    "async": false
   },
