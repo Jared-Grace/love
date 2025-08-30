@@ -24,6 +24,10 @@ export function js_calls_to_each(ast) {
       return;
     }
     log(expression);
+    {
+      a(b);
+      a(c);
+    }
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
 }
