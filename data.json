@@ -1801,12 +1801,12 @@
   "s marker",
   "fs",
   "s call",
-  "p",
   "as list",
   "a lsg list_single",
   "ps",
   "f",
   "fs marker_rename",
+  "p",
   "marker_rename a b"
  ],
  "marker_current": "1",
