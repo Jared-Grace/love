@@ -7554,7 +7554,8 @@
    "js_if_blockify_generic",
    "js_node_type_not_is",
    "js_node_type_not_is_if",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_identifier_not_is"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -8308,7 +8309,8 @@
    "js_dollar_s",
    "js_function_id_add",
    "js_identifier_defineds",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_identifier_not_is"
   ],
   "is": [
    "js_dollar_a",
@@ -11291,7 +11293,11 @@
   ],
   "js_identifier_not_is": [
    "js_assign_combine",
-   "marker_rename"
+   "marker_rename",
+   "js_identifier_not_is"
+  ],
+  "jin": [
+   "js_identifier_not_is"
   ]
  },
  "functions": {
@@ -21343,6 +21349,15 @@
     "item",
     "index_next",
     "next"
+   ]
+  },
+  "js_identifier_not_is": {
+   "async": false,
+   "identifiers": [
+    "js_node_type_not_is",
+    "js_identifier_not_is",
+    "id",
+    "jin"
    ]
   }
  },
