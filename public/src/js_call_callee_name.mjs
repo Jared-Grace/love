@@ -4,7 +4,7 @@ import { object_property_get_name } from "./object_property_get_name.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export function js_call_callee_name(expression) {
   let name = null;
-  let jin2 = js_node_type_not_is(id, "CallExpression");
+  let jin2 = js_node_type_not_is(expression, "CallExpression");
   if (jin2) {
     return name;
   }
