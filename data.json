@@ -2707,8 +2707,7 @@
    "app_replace_rule_set",
    "app_replace_settings",
    "js_dollar_new",
-   "js_expand_generic",
-   "js_calls_to_each"
+   "js_expand_generic"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -8524,8 +8523,7 @@
    "js_await_add",
    "app_replace_rule_set",
    "app_replace_home",
-   "js_expand_generic",
-   "js_calls_to_each"
+   "js_expand_generic"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -11397,6 +11395,9 @@
   ],
   "expression2": [
    "js_calls_to_each"
+  ],
+  "object_property_get_name": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14136,8 +14137,7 @@
     "nti",
     "expression2",
     "call2",
-    "lambda2",
-    "lambda4",
+    "object_property_get_name",
     "item",
     "name",
     "eq",
