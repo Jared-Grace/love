@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
@@ -5,6 +6,7 @@ export function js_calls_to_each(ast) {
   function lambda(v) {
     let { node } = v;
     let { expression } = node;
+    log(message);
   }
   js_visit_type(ast, "ExpressionStatement", lambda);
 }
