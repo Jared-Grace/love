@@ -7,8 +7,8 @@ export async function marker_rename(from, to) {
   async function lambda(a) {
     let { node } = a;
     let { callee } = node;
-    let nti2 = js_identifier_not_is(callee);
-    if (nti2) {
+    let nti = js_identifier_not_is(callee);
+    if (nti) {
       return;
     }
     log(callee);
