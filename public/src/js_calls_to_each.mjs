@@ -29,7 +29,7 @@ export function js_calls_to_each(ast) {
     if (nti) {
       return;
     }
-    let expression2 = js_statement_expression_get(next);
+    let call2 = js_statement_expression_get(next);
     if (awaited) {
       let nti = js_node_type_not_is(next, "AwaitExpression");
       if (nti) {
