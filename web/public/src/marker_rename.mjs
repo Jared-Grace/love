@@ -7,7 +7,7 @@ export async function marker_rename(from, to) {
     let { v } = a;
     log(v);
   }
-  marker("1");
+  marker("a");
   let f_name_current = await data_function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,
