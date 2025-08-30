@@ -5,7 +5,6 @@ import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { object_property_set } from "./object_property_set.mjs";
-import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 export async function marker_rename(from, to) {
@@ -18,8 +17,7 @@ export async function marker_rename(from, to) {
     }
     log(arguments2);
     let a0 = list_single(arguments2);
-    let nti2 = js_node_type_not_is(node2, type);
-    let nti = js_identifier_not_is(a0);
+    let nti = js_node_type_not_is(a0, "Literal");
     if (nti) {
       return;
     }
