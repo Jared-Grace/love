@@ -2423,8 +2423,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "marker_rename"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3314,8 +3313,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "marker_rename"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -5067,8 +5065,7 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert",
-   "marker_rename"
+   "object_property_exists_not_assert"
   ],
   "each_pair": [
    "each_pair",
@@ -20966,9 +20963,6 @@
     "node",
     "callee",
     "nti",
-    "object",
-    "property_name",
-    "value",
     "f_name_current",
     "v"
    ]
