@@ -1818,10 +1818,11 @@
   "s _if",
   "as dollar",
   "nd ir",
-  "s dollar"
+  "s dollar",
+  "od I"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_ir",
+ "function_current": "js_dollar_I",
  "terminal": false,
  "identifiers": {
   "log": [
