@@ -1826,7 +1826,7 @@
   "c js_code_wrap_braces js_code_wrap_brackets"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_I",
+ "function_current": "js_code_wrap_brackets",
  "terminal": false,
  "identifiers": {
   "log": [
