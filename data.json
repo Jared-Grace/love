@@ -2400,7 +2400,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "js_calls_to_each"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4473,7 +4474,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "js_calls_to_each"
   ],
   "readdirSync": [
    "folder_read"
@@ -5296,7 +5298,8 @@
    "function_current_set",
    "function_current_set_task_new",
    "function_open",
-   "data_function_current_restore"
+   "data_function_current_restore",
+   "js_calls_to_each"
   ],
   "function_path_declaration_unparse": [
    "file_open",
@@ -14130,6 +14133,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "function_current_set",
     "js_call_new",
     "not",
     "js_call_callee_name",
@@ -14165,6 +14169,8 @@
     "eq",
     "parsed",
     "expression3",
+    "v2",
+    "f_name",
     "d",
     "a",
     "b",
