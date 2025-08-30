@@ -3662,7 +3662,8 @@
    "object_property_lambda_async",
    "firebase_storage_download_property",
    "js_declare_single_init",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_calls_to_each"
   ],
   "data_save": [
    "data_file_update",
@@ -7756,7 +7757,8 @@
    "js_return_name",
    "js_return_on",
    "js_return_on_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_calls_to_each"
   ],
   "arguments2": [
    "js_bang_to_not",
@@ -14041,6 +14043,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "object_property_get",
     "js_node_type_is_if",
     "log",
     "js_visit_type",
@@ -14052,7 +14055,8 @@
     "node",
     "expression",
     "awaited",
-    "lambda3"
+    "lambda3",
+    "argument"
    ],
    "async": false
   },
