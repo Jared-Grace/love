@@ -57,6 +57,7 @@ export function js_calls_to_each(ast) {
         return name;
       }
       let callee = object_property_get(expression, "callee");
+      let code = js_unparse(ast2);
     }
     let eq = equal_by(call, call2, js_unparse);
     if (not(eq)) {
