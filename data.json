@@ -8517,7 +8517,8 @@
    "js_if_blockify_generic",
    "js_node_type_not_is",
    "function_aliases_restore",
-   "js_assign_combine"
+   "js_assign_combine",
+   "marker_rename"
   ],
   "nt": [
    "js_if_blockify_generic",
@@ -11286,8 +11287,7 @@
    "js_assign_combine"
   ],
   "nti2": [
-   "js_assign_combine",
-   "marker_rename"
+   "js_assign_combine"
   ],
   "js_identifier_not_is": [
    "js_assign_combine",
@@ -20956,7 +20956,7 @@
     "a",
     "node",
     "callee",
-    "nti2",
+    "nti",
     "f_name_current",
     "v"
    ]
