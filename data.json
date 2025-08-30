@@ -1744,7 +1744,6 @@
   "u nd",
   "a nd js_dollar_new",
   "de js_dollar_choices_x",
-  "ps",
   "nd x",
   "r js_dollar_choices_x js_dollar_x",
   "o nd",
@@ -1805,7 +1804,8 @@
   "fs marker_rename",
   "p",
   "marker_rename a b",
-  "s call"
+  "s call",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
