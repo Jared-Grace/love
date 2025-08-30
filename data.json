@@ -3675,7 +3675,8 @@
    "firebase_storage_download_property",
    "js_declare_single_init",
    "js_assign_combine",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_dollar_ir"
   ],
   "data_save": [
    "data_file_update",
@@ -8587,7 +8588,8 @@
   ],
   "consequent": [
    "js_if_else_if_combine",
-   "marker_enter"
+   "marker_enter",
+   "js_dollar_ir"
   ],
   "test": [
    "js_if_else_if_combine",
@@ -21481,6 +21483,7 @@
   "js_dollar_ir": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "js_dollar_i",
     "marker",
     "js_dollar_ir",
@@ -21490,7 +21493,8 @@
     "stack2",
     "stack3",
     "ast",
-    "afters"
+    "afters",
+    "consequent"
    ]
   }
  },
