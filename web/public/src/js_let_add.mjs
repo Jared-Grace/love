@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -28,6 +29,7 @@ export function js_let_add(ast) {
     if (includes) {
       return;
     }
+    log(message);
     let assign = js_declare(name, right);
     object_replace(stack1, assign);
   }
