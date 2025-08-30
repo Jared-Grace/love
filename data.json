@@ -7069,8 +7069,7 @@
    "marker_next",
    "marker_next_delete",
    "marker_next_await",
-   "marker_param_add",
-   "marker_rename"
+   "marker_param_add"
   ],
   "lambda$a": [
    "function_transform_marker",
@@ -10501,7 +10500,8 @@
    "function_transform_marker_specified",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "marker_rename"
   ],
   "js_declare_single": [
    "js_declare_init_set",
@@ -20931,7 +20931,7 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
-    "function_transform_marker",
+    "function_transform_marker_specified",
     "data_function_current_get",
     "marker",
     "marker_rename",
