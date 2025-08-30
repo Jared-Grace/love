@@ -1817,10 +1817,11 @@
   "fts js_calls_to_each",
   "s if",
   "s _if",
-  "as dollar"
+  "as dollar",
+  "nd ir"
  ],
  "marker_current": "1",
- "function_current": "list_index_of_next_outside",
+ "function_current": "js_dollar_ir",
  "terminal": false,
  "identifiers": {
   "log": [
