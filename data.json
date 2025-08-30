@@ -1809,7 +1809,8 @@
   "marker_rename a b",
   "s auto",
   "atn calls_to_each",
-  "ts"
+  "ts",
+  "ftc js_calls_to_each app_new"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
