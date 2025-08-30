@@ -11398,9 +11398,6 @@
   ],
   "object_property_get_name": [
    "js_calls_to_each"
-  ],
-  "calle": [
-   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14143,7 +14140,6 @@
     "call2",
     "callee",
     "name",
-    "calle",
     "eq",
     "a2",
     "b2",
