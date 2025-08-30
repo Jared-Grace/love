@@ -2805,8 +2805,7 @@
    "list_remove_multiple_if_exists",
    "list_remove_if_exists",
    "list_remove_all_multiple",
-   "list_next_try",
-   "marker_rename"
+   "list_next_try"
   ],
   "v": [
    "data_identifiers_file",
@@ -8664,8 +8663,7 @@
    "marker_call_replace_generic",
    "js_call_function_if",
    "js_log_remove",
-   "js_expand_generic",
-   "marker_rename"
+   "js_expand_generic"
   ],
   "v4": [
    "js_marker_name_get"
@@ -10849,8 +10847,7 @@
   "only": [
    "list_single",
    "list_find",
-   "firebase_service_account",
-   "marker_rename"
+   "firebase_service_account"
   ],
   "firebase_service_account": [
    "firebase_service_account",
@@ -11308,6 +11305,9 @@
   ],
   "jin": [
    "js_identifier_not_is"
+  ],
+  "a0": [
+   "marker_rename"
   ]
  },
  "functions": {
@@ -20976,10 +20976,8 @@
     "arguments",
     "arguments2",
     "s1",
-    "only",
-    "list",
+    "a0",
     "nti",
-    "callee",
     "b",
     "f_name_current",
     "v"
