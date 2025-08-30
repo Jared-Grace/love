@@ -18,6 +18,9 @@ export function js_calls_to_each(ast) {
     function lambda3() {
       awaited = true;
       call = object_property_get(expression, "argument");
+      log({
+        call,
+      });
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     let e1 = list_get_end_1(stack);
@@ -40,11 +43,6 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
-    log({
-      call2,
-      call,
-      stack,
-    });
     async function d() {
       await a(b);
       await a(c);
