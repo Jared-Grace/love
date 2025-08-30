@@ -22,8 +22,8 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
-    let s = js_string(value_string);
-    object_replace(to2, from2);
+    let s = js_string(to);
+    object_replace(a0, s);
   }
   marker("a");
   let f_name_current = await data_function_current_get();
