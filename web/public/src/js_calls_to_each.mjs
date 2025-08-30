@@ -23,7 +23,7 @@ export function js_calls_to_each(ast) {
     if (null_is(next)) {
       return;
     }
-    log(expression);
+    log(next);
     if (0) {
       a(b);
       a(c);
