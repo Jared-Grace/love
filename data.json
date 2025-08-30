@@ -1800,14 +1800,14 @@
   "s index,list",
   "s marker",
   "fs",
-  "f",
   "fs marker_rename",
   "s call",
   "p",
   "as list",
   "a lsg list_single",
   "ps",
-  "marker_rename a b"
+  "marker_rename a b",
+  "f"
  ],
  "marker_current": "1",
  "function_current": "marker_rename",
