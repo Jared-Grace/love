@@ -1513,7 +1513,6 @@
   "ir f_path combined",
   "a oh app_html_open",
   "oh code",
-  "s js,call",
   "is js_code_call_statement",
   "is js_code_import_single",
   "s src",
@@ -1821,7 +1820,8 @@
   "s return",
   "p",
   "fts js_calls_to_each",
-  "s object,la"
+  "s object,la",
+  "s js,call"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_I",
