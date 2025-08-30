@@ -3193,8 +3193,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "js_dollar_ien",
-   "js_assign_combine",
-   "marker_rename"
+   "js_assign_combine"
   ],
   "watch": [
    "watch"
@@ -6271,7 +6270,8 @@
    "js_return_code_replace",
    "marker_call_replace",
    "object_replace",
-   "js_await_add"
+   "js_await_add",
+   "marker_rename"
   ],
   "js_identifiers_named": [
    "function_identifier_replace",
@@ -11309,6 +11309,12 @@
    "js_identifier_not_is"
   ],
   "a0": [
+   "marker_rename"
+  ],
+  "to2": [
+   "marker_rename"
+  ],
+  "from2": [
    "marker_rename"
   ]
  },
@@ -20962,13 +20968,13 @@
   "marker_rename": {
    "async": true,
    "identifiers": [
+    "object_replace",
     "js_node_type_not_is",
     "log",
     "marker",
     "list_single",
     "not",
     "list_size_1",
-    "object_property_set",
     "function_transform_marker_specified",
     "data_function_current_get",
     "marker_rename",
@@ -20982,6 +20988,8 @@
     "s1",
     "a0",
     "nti",
+    "to2",
+    "from2",
     "f_name_current",
     "v"
    ]
