@@ -4,6 +4,9 @@ import { object_property_get } from "./object_property_get.mjs";
 export function js_call_callee_name(expression) {
   let callee = object_property_get(expression, "callee");
   let jin = js_identifier_not_is(id);
+  if (false) {
+    return;
+  }
   let name = object_property_get_name(callee);
   return name;
 }
