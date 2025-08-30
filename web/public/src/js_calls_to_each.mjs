@@ -53,8 +53,6 @@ export function js_calls_to_each(ast) {
       return;
     }
     log({
-      call,
-      call2,
       name,
     });
     async function d() {
