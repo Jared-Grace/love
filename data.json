@@ -8897,7 +8897,8 @@
    "js_parse_statement",
    "js_dollar_new",
    "js_dollar_choice_arguments",
-   "js_dollar_choice_arguments_name"
+   "js_dollar_choice_arguments_name",
+   "js_calls_to_each"
   ],
   "types_function": [
    "js_types_function"
@@ -11437,7 +11438,8 @@
    "js_code_brackets_empty"
   ],
   "js_code_brackets_empty": [
-   "js_code_brackets_empty"
+   "js_code_brackets_empty",
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14151,6 +14153,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_code_brackets_empty",
     "js_call_new",
     "not",
     "js_call_callee_name",
@@ -14193,6 +14196,7 @@
     "parsed",
     "expression3",
     "arguments2",
+    "code2",
     "d",
     "a",
     "b"
