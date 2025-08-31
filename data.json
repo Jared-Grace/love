@@ -2078,7 +2078,8 @@
    "js_dollar_ir",
    "js_dollar_i",
    "js_code_wrap_brackets",
-   "js_code_brackets_empty"
+   "js_code_brackets_empty",
+   "js_dollar_l"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2256,7 +2257,8 @@
    "js_dollar_ien",
    "js_assign_combine",
    "js_dollar_ir",
-   "js_declaration_single_block_body_add_return"
+   "js_declaration_single_block_body_add_return",
+   "js_dollar_l"
   ],
   "code": [
    "data_identifiers_file",
@@ -6222,7 +6224,8 @@
    "js_assign_combine",
    "marker_rename",
    "js_calls_to_each",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -7255,7 +7258,8 @@
    "js_await_add",
    "js_dollar_x",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -7290,7 +7294,8 @@
    "js_dollar_x",
    "js_expand_generic",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -8025,7 +8030,8 @@
    "js_dollar_a",
    "js_dollar_x",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -8215,7 +8221,8 @@
    "js_dollar_r",
    "js_dollar_x",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -8350,7 +8357,8 @@
    "lambda_invoke_multiple",
    "js_dollar_x",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_l"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -11445,6 +11453,9 @@
   ],
   "expression4": [
    "js_calls_to_each"
+  ],
+  "js_dollar_l": [
+   "js_dollar_l"
   ]
  },
  "functions": {
@@ -21632,6 +21643,20 @@
     "marker",
     "js_code_brackets_empty",
     "code"
+   ]
+  },
+  "js_dollar_l": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_l",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
