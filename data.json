@@ -2308,7 +2308,8 @@
    "js_dollar_new_args",
    "js_code_declaration",
    "function_open_dollar_choice",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_code_wrap_brackets"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3031,7 +3032,6 @@
    "function_open_dollar_choice",
    "js_assign_combine",
    "list_index_of_delta",
-   "js_code_wrap_brackets",
    "js_code_brackets_empty"
   ],
   "file_overwrite": [
@@ -21612,7 +21612,7 @@
     "marker",
     "js_code_wrap_brackets",
     "inside",
-    "v"
+    "code"
    ]
   },
   "js_code_brackets_empty": {
