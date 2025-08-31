@@ -63,9 +63,6 @@ export function js_calls_to_each(ast) {
       return code;
     }
     let eq = equal_by(call, call2, lambda6);
-    log({
-      eq,
-    });
     if (not(eq)) {
       return;
     }
