@@ -11455,7 +11455,8 @@
    "js_calls_to_each"
   ],
   "js_dollar_l": [
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -21179,6 +21180,7 @@
   "js_dollar_choices": {
    "async": false,
    "identifiers": [
+    "js_dollar_l",
     "js_dollar_ir",
     "js_dollar_ien",
     "marker",
