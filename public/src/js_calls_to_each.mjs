@@ -62,7 +62,7 @@ export function js_calls_to_each(ast) {
       let code = js_unparse(callee);
       return code;
     }
-    let eq = equal_by(call, call2, js_unparse);
+    let eq = equal_by(call, call2, lambda6);
     log({
       eq,
     });
