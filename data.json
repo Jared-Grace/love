@@ -2076,7 +2076,8 @@
    "list_index_of_next_outside",
    "js_dollar_ir",
    "js_dollar_i",
-   "js_code_wrap_brackets"
+   "js_code_wrap_brackets",
+   "js_code_brackets_empty"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3030,7 +3031,8 @@
    "function_open_dollar_choice",
    "js_assign_combine",
    "list_index_of_delta",
-   "js_code_wrap_brackets"
+   "js_code_wrap_brackets",
+   "js_code_brackets_empty"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8097,7 +8099,8 @@
    "js_code_wrap_braces",
    "js_code_wrap_parenthesis",
    "js_dollar_i",
-   "js_code_wrap_brackets"
+   "js_code_wrap_brackets",
+   "js_code_brackets_empty"
   ],
   "prefix": [
    "string_prefix_without",
@@ -11431,7 +11434,11 @@
    "js_calls_to_each"
   ],
   "js_code_wrap_brackets": [
-   "js_code_wrap_brackets"
+   "js_code_wrap_brackets",
+   "js_code_brackets_empty"
+  ],
+  "js_code_brackets_empty": [
+   "js_code_brackets_empty"
   ]
  },
  "functions": {
@@ -21607,9 +21614,19 @@
     "inside",
     "v"
    ]
+  },
+  "js_code_brackets_empty": {
+   "async": false,
+   "identifiers": [
+    "js_code_wrap_brackets",
+    "marker",
+    "js_code_brackets_empty",
+    "inside",
+    "v"
+   ]
   }
  },
- "git_push_when": "2025-08-30T22:44:45.771Z",
+ "git_push_when": "2025-08-31T03:11:50.567Z",
  "error_attention": null,
  "app_current": "replace"
 }
