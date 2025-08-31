@@ -1823,8 +1823,8 @@
   "c js_code_wrap_braces js_code_wrap_brackets",
   "fw js_code_wrap_brackets js_code_brackets_empty",
   "ps",
-  "p",
-  "fts js_calls_to_each"
+  "fts js_calls_to_each",
+  "p"
  ],
  "marker_current": "1",
  "function_current": "js_code_brackets_empty",
