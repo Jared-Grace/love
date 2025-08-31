@@ -8099,8 +8099,7 @@
    "js_code_wrap_braces",
    "js_code_wrap_parenthesis",
    "js_dollar_i",
-   "js_code_wrap_brackets",
-   "js_code_brackets_empty"
+   "js_code_wrap_brackets"
   ],
   "prefix": [
    "string_prefix_without",
@@ -21621,7 +21620,6 @@
     "js_code_wrap_brackets",
     "marker",
     "js_code_brackets_empty",
-    "inside",
     "code"
    ]
   }
