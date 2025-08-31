@@ -1821,9 +1821,9 @@
   "s empty",
   "s brack",
   "c js_code_wrap_braces js_code_wrap_brackets",
-  "p",
   "fw js_code_wrap_brackets js_code_brackets_empty",
   "ps",
+  "p",
   "fts js_calls_to_each"
  ],
  "marker_current": "1",
