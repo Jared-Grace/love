@@ -63,6 +63,9 @@ export function js_calls_to_each(ast) {
       return code;
     }
     let eq = equal_by(call, call2, js_unparse);
+    log({
+      eq,
+    });
     if (not(eq)) {
       return;
     }
