@@ -3103,8 +3103,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "equal_by"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -12142,7 +12141,6 @@
     "lambda$item",
     "left",
     "right",
-    "message",
     "eq"
    ],
    "async": false
