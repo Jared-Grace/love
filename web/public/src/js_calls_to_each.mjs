@@ -1,3 +1,4 @@
+import { js_code_brackets_empty } from "./js_code_brackets_empty.mjs";
 import { js_call_new } from "./js_call_new.mjs";
 import { not } from "./not.mjs";
 import { js_call_callee_name } from "./js_call_callee_name.mjs";
@@ -70,6 +71,7 @@ export function js_calls_to_each(ast) {
       expression3 = object_property_get(expression3, "argument");
     }
     let arguments2 = object_property_get(expression3, "arguments");
+    let code2 = js_code_brackets_empty();
     log({
       arguments2,
     });
