@@ -75,7 +75,7 @@ export function js_calls_to_each(ast) {
     let code2 = js_code_brackets_empty();
     let expression4 = js_parse_expression(code2);
     log({
-      arguments2,
+      expression4,
     });
     async function d() {
       await a(b);
