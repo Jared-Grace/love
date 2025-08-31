@@ -5544,7 +5544,8 @@
    "js_imports_paths_fix",
    "js_property_identifier",
    "marker_screen_add",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_calls_to_each"
   ],
   "functions_combine": [
    "functions_combine",
@@ -8630,7 +8631,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_calls_to_each"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -11440,6 +11442,9 @@
   "js_code_brackets_empty": [
    "js_code_brackets_empty",
    "js_calls_to_each"
+  ],
+  "expression4": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14153,6 +14158,7 @@
   },
   "js_calls_to_each": {
    "identifiers": [
+    "js_parse_expression",
     "js_code_brackets_empty",
     "js_call_new",
     "not",
@@ -14197,6 +14203,8 @@
     "expression3",
     "arguments2",
     "code2",
+    "expression4",
+    "code_expression",
     "d",
     "a",
     "b"
@@ -21628,7 +21636,7 @@
    ]
   }
  },
- "git_push_when": "2025-08-31T08:19:45.808Z",
+ "git_push_when": "2025-08-31T20:40:23.806Z",
  "error_attention": null,
  "app_current": "replace"
 }
