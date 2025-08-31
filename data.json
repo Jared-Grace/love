@@ -1842,8 +1842,7 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add",
-   "equal_by"
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -12133,7 +12132,6 @@
   },
   "equal_by": {
    "identifiers": [
-    "log",
     "equal",
     "equal_by",
     "a",
