@@ -74,6 +74,7 @@ export function js_calls_to_each(ast) {
     let arguments2 = object_property_get(expression3, "arguments");
     let code2 = js_code_brackets_empty();
     let array_expression = js_parse_expression(code2);
+    let elements = object_property_get(array_expression, "elements");
     log({
       expression4: array_expression,
     });
