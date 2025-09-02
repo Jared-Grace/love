@@ -11457,6 +11457,9 @@
   "js_dollar_l": [
    "js_dollar_l",
    "js_dollar_choices"
+  ],
+  "array_expression": [
+   "js_calls_to_each"
   ]
  },
  "functions": {
@@ -14215,6 +14218,7 @@
     "expression3",
     "arguments2",
     "code2",
+    "array_expression",
     "expression4",
     "d",
     "a",
