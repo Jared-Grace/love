@@ -11262,7 +11262,8 @@
    "js_dollar_new"
   ],
   "elements": [
-   "js_dollar_new"
+   "js_dollar_new",
+   "js_calls_to_each"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -14219,6 +14220,7 @@
     "arguments2",
     "code2",
     "array_expression",
+    "elements",
     "expression4",
     "d",
     "a",
