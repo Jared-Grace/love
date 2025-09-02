@@ -1824,8 +1824,8 @@
   "fw js_code_wrap_brackets js_code_brackets_empty",
   "ps",
   "p",
-  "fts js_calls_to_each",
-  "nd l"
+  "nd l",
+  "fts js_calls_to_each"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_l",
