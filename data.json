@@ -1918,8 +1918,7 @@
    "list_concat_multiple",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple",
-   "app_reply_main"
+   "list_remove_all_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -4424,7 +4423,8 @@
    "functions_paths",
    "app_replace_rule_set",
    "functions_transform",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_reply_main"
   ],
   "functions_names": [
    "functions_names",
@@ -11620,6 +11620,9 @@
    "app_reply_main"
   ],
   "emoji_sleep_face": [
+   "app_reply_main"
+  ],
+  "buttons": [
    "app_reply_main"
   ]
  },
@@ -21845,6 +21848,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "list_map",
     "emoji_sleep_face",
     "emoji_sleep_z",
     "list_empty",
@@ -21867,7 +21871,6 @@
     "clipboard_copy",
     "object_property_get",
     "html_button",
-    "each",
     "emoji_smile",
     "emoji_wave",
     "emoji_cross",
@@ -21887,7 +21890,8 @@
     "response2",
     "text3",
     "component",
-    "lambda3"
+    "lambda3",
+    "buttons"
    ]
   },
   "browser_is": {
