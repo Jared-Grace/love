@@ -1,3 +1,4 @@
+import { emoji_hands_raising } from "./emoji_hands_raising.mjs";
 import { emoji_church } from "./emoji_church.mjs";
 import { string_lord_bless } from "./string_lord_bless.mjs";
 import { string_may_the_lord } from "./string_may_the_lord.mjs";
@@ -48,6 +49,10 @@ export function app_reply_choices() {
         emoji_smile() +
         " Greetings in the name of our LORD Jesus Christ! " +
         emoji_cross(),
+    },
+    {
+      text: emoji_hands_raising() + " Hallelujah hallelujah hallelujah",
+      response: emoji_pray() + string_may_the_lord() + "heal the sick",
     },
     {
       text: emoji_pray() + " Heal",
