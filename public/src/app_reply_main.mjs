@@ -4,7 +4,7 @@ export function app_reply_main() {
   let choices = [
     {
       text: "greetings",
-      response: "Greetings in the name of our LORD Jesus Christ",
+      response: "Greetings in the name of our LORD Jesus Christ " + "✝️",
     },
   ];
 }
