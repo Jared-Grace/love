@@ -1,3 +1,4 @@
+import { string_lord_bless } from "./string_lord_bless.mjs";
 import { string_may_the_lord } from "./string_may_the_lord.mjs";
 import { string_lord_bless_your } from "./string_lord_bless_your.mjs";
 import { emoji_phone } from "./emoji_phone.mjs";
@@ -26,7 +27,8 @@ export function app_reply_choices() {
       text: emoji_pray() + " Bless",
       response:
         prayer_start() +
-        "May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
+        string_lord_bless() +
+        "you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
         prayer_end(),
     },
     {
