@@ -3741,8 +3741,7 @@
    "js_calls_to_each",
    "js_dollar_ir",
    "js_call_callee_name",
-   "app_reply_main",
-   "app_reply_choices"
+   "app_reply_main"
   ],
   "data_save": [
    "data_file_update",
@@ -5147,8 +5146,7 @@
    "object_merge",
    "object_properties",
    "object_properties_delete",
-   "tasks_run",
-   "app_reply_choices"
+   "tasks_run"
   ],
   "each_object": [
    "each_object",
@@ -5840,8 +5838,7 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names",
-   "app_reply_choices"
+   "js_dollar_choice_arguments_names"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11710,15 +11707,10 @@
    "app_reply_choices"
   ],
   "kjv": [
-   "kjv",
-   "app_reply_choices"
-  ],
-  "bible": [
-   "app_reply_choices"
+   "kjv"
   ],
   "list_random_item": [
-   "list_random_item",
-   "app_reply_choices"
+   "list_random_item"
   ],
   "arr": [
    "list_random_item"
@@ -11728,12 +11720,6 @@
   ],
   "random": [
    "list_random_item"
-  ],
-  "reference": [
-   "app_reply_choices"
-  ],
-  "verse": [
-   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22080,10 +22066,6 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
-    "object_property_get",
-    "list_random_item",
-    "object_properties",
-    "kjv",
     "emoji_dove",
     "app_reply_pray",
     "emoji_family",
@@ -22109,10 +22091,6 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
-    "bible",
-    "properties",
-    "reference",
-    "verse",
     "heal",
     "job",
     "provide",
