@@ -1836,7 +1836,7 @@
   "cs list_join_newline 2"
  ],
  "marker_current": "1",
- "function_current": "browser_is",
+ "function_current": "list_join_newline_2",
  "terminal": false,
  "identifiers": {
   "log": [
