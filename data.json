@@ -2100,7 +2100,8 @@
    "app_reply_main",
    "list_join_newline_2",
    "html_remove",
-   "prayer_end"
+   "prayer_end",
+   "html_display_none"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21980,6 +21981,7 @@
   "html_display_none": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_style_set",
     "html_display_none",
     "html",
