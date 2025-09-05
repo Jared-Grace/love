@@ -2081,7 +2081,8 @@
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
    "js_dollar_l",
-   "app_reply"
+   "app_reply",
+   "app_reply_main"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11466,6 +11467,9 @@
   ],
   "app_reply": [
    "app_reply"
+  ],
+  "app_reply_main": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21677,6 +21681,13 @@
    "identifiers": [
     "marker",
     "app_reply"
+   ]
+  },
+  "app_reply_main": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_reply_main"
    ]
   }
  },
