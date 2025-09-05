@@ -1,3 +1,4 @@
+import { object_properties } from "./object_properties.mjs";
 import { kjv } from "./kjv.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
@@ -24,7 +25,8 @@ import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
-  let bible = kjv();object_properties
+  let bible = kjv();
+  let properties = object_properties(obj);
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
