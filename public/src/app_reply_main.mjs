@@ -66,7 +66,8 @@ export function app_reply_main() {
     },
     {
       text: "🎵 Glory",
-      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
+      response:
+        emoji_pray() + "🔥" + " All glory to God " + emoji_trinity() + " ! ",
     },
   ];
   function lambda(choice) {
