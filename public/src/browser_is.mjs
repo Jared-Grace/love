@@ -1,4 +1,5 @@
-import { marker } from "./marker.mjs";
 export function browser_is() {
-  marker("1");
+  let v =
+    typeof window !== "undefined" && typeof window.document !== "undefined";
+  return v;
 }
