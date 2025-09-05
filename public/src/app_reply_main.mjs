@@ -20,11 +20,11 @@ export function app_reply_main() {
   function lambda4() {
     list_empty(copied);
     let joined = list_join_newline_2(copied);
-    html_text_set(component2, joined);
+    html_text_set(preview, joined);
     each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
-  let component2 = html_p(root);
+  let preview = html_p(root);
   marker("1");
   let choices = app_reply_choices();
   function lambda(choice) {
@@ -35,7 +35,7 @@ export function app_reply_main() {
       list_add(copied, response2);
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
-      html_text_set(component2, joined);
+      html_text_set(preview, joined);
       html_display_none(component);
     }
     return component;
