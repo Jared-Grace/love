@@ -2325,7 +2325,8 @@
    "js_calls_to_each",
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
-   "app_reply_main"
+   "app_reply_main",
+   "list_join_newline_2"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3479,7 +3480,8 @@
    "list_join_comma_space",
    "list_join_empty",
    "list_join_space",
-   "string_replace"
+   "string_replace",
+   "list_join_newline_2"
   ],
   "result": [
    "watch",
@@ -3537,7 +3539,8 @@
    "js_dollar",
    "list_join",
    "string_split",
-   "tasks_run"
+   "tasks_run",
+   "list_join_newline_2"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -6267,7 +6270,8 @@
   ],
   "waited2": [
    "function_dependencies_code",
-   "app_reply_main"
+   "app_reply_main",
+   "list_join_newline_2"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -11554,6 +11558,12 @@
   ],
   "copied": [
    "app_reply_main"
+  ],
+  "newline": [
+   "list_join_newline_2"
+  ],
+  "list_join_newline_2": [
+   "list_join_newline_2"
   ]
  },
  "functions": {
@@ -21820,6 +21830,17 @@
     "b",
     "window",
     "document"
+   ]
+  },
+  "list_join_newline_2": {
+   "async": false,
+   "identifiers": [
+    "list_join",
+    "newline",
+    "list_join_newline_2",
+    "waited2",
+    "separator",
+    "code"
    ]
   }
  },
