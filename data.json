@@ -3059,7 +3059,8 @@
    "function_open_dollar_choice",
    "js_assign_combine",
    "list_index_of_delta",
-   "prayer_end"
+   "prayer_end",
+   "prayer_start"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11563,7 +11564,8 @@
   ],
   "emoji_pray": [
    "app_reply_main",
-   "prayer_end"
+   "prayer_end",
+   "prayer_start"
   ],
   "string_the_servant_of_god_is": [
    "app_reply_main"
@@ -11596,13 +11598,15 @@
    "html_remove"
   ],
   "emoji_trinity": [
-   "app_reply_main"
+   "app_reply_main",
+   "prayer_start"
   ],
   "emoji_fire": [
    "app_reply_main"
   ],
   "prayer_start": [
-   "app_reply_main"
+   "app_reply_main",
+   "prayer_start"
   ],
   "prayer_end": [
    "prayer_end",
@@ -21934,6 +21938,15 @@
     "marker",
     "emoji_pray",
     "prayer_end",
+    "v"
+   ]
+  },
+  "prayer_start": {
+   "async": false,
+   "identifiers": [
+    "emoji_trinity",
+    "emoji_pray",
+    "prayer_start",
     "v"
    ]
   }
