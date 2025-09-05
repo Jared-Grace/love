@@ -1667,7 +1667,6 @@
   "ff app_replace_main",
   "s new",
   "fb",
-  "s app",
   "data_app_current_get",
   "u ff",
   "fws firebase_deploy_function app_current",
@@ -1826,7 +1825,8 @@
   "nd l",
   "fts js_calls_to_each",
   "as app",
-  "an reply"
+  "an reply",
+  "s app"
  ],
  "marker_current": "1",
  "function_current": "app_reply_main",
