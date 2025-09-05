@@ -42,9 +42,8 @@ export function app_reply_main() {
     let component = html_button(root, text3, lambda3);
     async function lambda3() {
       list_add(copied, response2);
-      let joined = list_join_newline_2(copied);
+      let joined = preview_refresh();
       await clipboard_copy(joined);
-      preview_refresh();
       html_display_none(component);
     }
     return component;
