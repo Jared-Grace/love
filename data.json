@@ -10807,7 +10807,8 @@
   "html_p": [
    "html_p",
    "html_p_text",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "js_await_wrap": [
    "js_await_wrap"
@@ -11524,6 +11525,12 @@
    "clipboard_copy"
   ],
   "text3": [
+   "app_reply_main"
+  ],
+  "component2": [
+   "app_reply_main"
+  ],
+  "root2": [
    "app_reply_main"
   ]
  },
@@ -21749,6 +21756,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_p",
     "html_document_body",
     "clipboard_copy",
     "object_property_get",
@@ -21760,6 +21768,8 @@
     "marker",
     "app_reply_main",
     "root",
+    "component2",
+    "root2",
     "choices",
     "text",
     "response",
