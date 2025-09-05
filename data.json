@@ -11545,6 +11545,9 @@
   ],
   "emoji_ok": [
    "app_reply_main"
+  ],
+  "copied": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21787,6 +21790,7 @@
     "marker",
     "app_reply_main",
     "root",
+    "copied",
     "component2",
     "choices",
     "text",
