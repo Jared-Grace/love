@@ -1,3 +1,4 @@
+import { emoji_thumbs_up } from "./emoji_thumbs_up.mjs";
 import { string_the_servant_of_god_is } from "./string_the_servant_of_god_is.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_globe_americas } from "./emoji_globe_americas.mjs";
@@ -28,8 +29,7 @@ export function app_reply_main() {
     {
       text: emoji_wave() + "How r u",
       response:
-        emoji_wave() +
-        emoji_smile() +
+        emoji_thumbs_up() +
         " " +
         string_the_servant_of_god_is() +
         " doing good through the grace of God " +
