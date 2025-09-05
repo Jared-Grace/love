@@ -71,7 +71,7 @@ export function app_reply_main() {
       list_add(copied, response2);
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
-      html_text_set(component2, response2);
+      html_text_set(component2, joined);
       html_remove(component);
     }
   }
