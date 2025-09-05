@@ -11599,8 +11599,7 @@
    "app_reply_main"
   ],
   "html_remove": [
-   "html_remove",
-   "app_reply_main"
+   "html_remove"
   ],
   "remove": [
    "html_remove"
@@ -11636,7 +11635,8 @@
    "html_display_none"
   ],
   "html_display_none": [
-   "html_display_none"
+   "html_display_none",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21861,6 +21861,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_display_none",
     "each",
     "list_map",
     "emoji_sleep_face",
@@ -21870,7 +21871,6 @@
     "prayer_end",
     "emoji_fire",
     "emoji_trinity",
-    "html_remove",
     "emoji_book_open",
     "list_join_newline_2",
     "list_add",
