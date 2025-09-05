@@ -6583,8 +6583,7 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_update_generic",
-   "app_reply_main"
+   "html_update_generic"
   ],
   "import_": [
    "function_imports_add",
@@ -10791,7 +10790,8 @@
   ],
   "html_p_text": [
    "app_replace_rule_set",
-   "html_p_text"
+   "html_p_text",
+   "app_reply_main"
   ],
   "rules": [
    "app_replace_rule_set",
@@ -11612,12 +11612,6 @@
    "app_reply_main"
   ],
   "preview": [
-   "app_reply_main"
-  ],
-  "component2": [
-   "app_reply_main"
-  ],
-  "root2": [
    "app_reply_main"
   ]
  },
@@ -21843,6 +21837,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_p_text",
     "html_clear",
     "app_reply_choices",
     "html_display_block",
@@ -21874,11 +21869,8 @@
     "text3",
     "component",
     "lambda3",
-    "body",
     "lambda2",
-    "item",
-    "component2",
-    "root2"
+    "item"
    ]
   },
   "browser_is": {
