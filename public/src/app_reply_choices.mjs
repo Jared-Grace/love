@@ -1,3 +1,4 @@
+import { app_reply_pray } from "./app_reply_pray.mjs";
 import { emoji_family } from "./emoji_family.mjs";
 import { emoji_voice } from "./emoji_voice.mjs";
 import { emoji_hands_raising } from "./emoji_hands_raising.mjs";
@@ -24,6 +25,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
   const pray_title = "Provide";
   const pray_request = "provide what is needed";
+  let v2 = app_reply_pray(pray_title, pray_request);
   let v = [
     {
       text: emoji_pray() + " Amen",
@@ -121,10 +123,7 @@ export function app_reply_choices() {
       response:
         emoji_pray() + "At this time, I cannot choose a day and time to preach",
     },
-    {
-      text: emoji_pray() + " " + pray_title,
-      response: emoji_pray() + string_may_the_lord() + pray_request,
-    },
+    v2,
     {
       text: emoji_pray() + " Sleep",
       response:
