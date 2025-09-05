@@ -57,6 +57,6 @@ export function app_reply_main() {
     html_clear(preview);
     html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
-    return concated;
+    return joined;
   }
 }
