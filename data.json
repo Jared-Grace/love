@@ -11744,6 +11744,9 @@
   ],
   "will": [
    "app_reply_choices"
+  ],
+  "education": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22126,6 +22129,7 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
+    "education",
     "heal",
     "job",
     "provide",
