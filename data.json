@@ -10894,20 +10894,17 @@
    "html_style_remove"
   ],
   "style_key": [
-   "html_style_remove",
-   "html_remove"
+   "html_style_remove"
   ],
   "b_element": [
    "html_style_remove",
    "html_remove"
   ],
   "style": [
-   "html_style_remove",
-   "html_remove"
+   "html_style_remove"
   ],
   "removeProperty": [
-   "html_style_remove",
-   "html_remove"
+   "html_style_remove"
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set"
@@ -11586,6 +11583,9 @@
    "app_reply_main"
   ],
   "html_remove": [
+   "html_remove"
+  ],
+  "remove": [
    "html_remove"
   ]
  },
@@ -21885,10 +21885,8 @@
     "html_component_element_get",
     "html_remove",
     "b",
-    "style_key",
     "b_element",
-    "style",
-    "removeProperty"
+    "remove"
    ]
   }
  },
