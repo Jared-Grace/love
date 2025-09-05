@@ -33,8 +33,10 @@ export function app_reply_main() {
         emoji_ok() +
         " " +
         string_the_servant_of_god_is() +
-        " doing good through the grace of God " +
-        emoji_100(),
+        " doing good " +
+        emoji_100() +
+        " through the grace of God " +
+        emoji_pray(),
     },
     {
       text: emoji_globe_americas() + " Location",
