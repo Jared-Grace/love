@@ -36,7 +36,9 @@ export function app_reply_main() {
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_clear(body);
-      function lambda2(item) {}
+      function lambda2(item) {
+        let component2 = html_p(root2);
+      }
       each(copied, lambda2);
       html_text_set(preview, joined);
       html_display_none(component);
