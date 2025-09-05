@@ -4624,7 +4624,6 @@
    "js_calls_to_each",
    "browser_is",
    "clipboard_copy",
-   "html_remove",
    "app_reply_main"
   ],
   "file_exists": [
@@ -10474,7 +10473,8 @@
    "html_text_set",
    "html_on",
    "html_component_wrap",
-   "html_attribute_set"
+   "html_attribute_set",
+   "html_remove"
   ],
   "component": [
    "html_text_set",
@@ -10490,7 +10490,8 @@
    "html_document_head",
    "html_attribute_set",
    "app_replace_settings",
-   "app_reply_main"
+   "app_reply_main",
+   "html_remove"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10898,8 +10899,7 @@
    "html_style_remove"
   ],
   "b_element": [
-   "html_style_remove",
-   "html_remove"
+   "html_style_remove"
   ],
   "style": [
    "html_style_remove"
@@ -21888,8 +21888,8 @@
     "marker",
     "html_component_element_get",
     "html_remove",
-    "b",
-    "b_element",
+    "component",
+    "element",
     "remove"
    ]
   }
