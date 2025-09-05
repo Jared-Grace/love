@@ -4745,8 +4745,7 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json",
-   "app_reply_main"
+   "http_json"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -11098,8 +11097,7 @@
    "http_json"
   ],
   "response": [
-   "http",
-   "app_reply_main"
+   "http"
   ],
   "fetch": [
    "http"
@@ -11534,15 +11532,6 @@
    "app_reply_main",
    "app_reply"
   ],
-  "emoji_cross": [
-   "app_reply_main"
-  ],
-  "emoji_wave": [
-   "app_reply_main"
-  ],
-  "emoji_smile": [
-   "app_reply_main"
-  ],
   "choice": [
    "app_reply_main"
   ],
@@ -11568,22 +11557,11 @@
   "component2": [
    "app_reply_main"
   ],
-  "emoji_globe_americas": [
-   "app_reply_main"
-  ],
   "emoji_pray": [
-   "app_reply_main",
    "prayer_end"
   ],
   "string_the_servant_of_god_is": [
-   "app_reply_main",
    "string_the_servant_of_god_is"
-  ],
-  "emoji_100": [
-   "app_reply_main"
-  ],
-  "emoji_ok": [
-   "app_reply_main"
   ],
   "copied": [
    "app_reply_main"
@@ -11596,9 +11574,6 @@
    "list_join_newline_2",
    "app_reply_main"
   ],
-  "emoji_book_open": [
-   "app_reply_main"
-  ],
   "html_remove": [
    "html_remove"
   ],
@@ -11606,27 +11581,15 @@
    "html_remove"
   ],
   "emoji_trinity": [
-   "app_reply_main",
    "prayer_start"
   ],
-  "emoji_fire": [
-   "app_reply_main"
-  ],
   "prayer_start": [
-   "app_reply_main",
    "prayer_start"
   ],
   "prayer_end": [
-   "prayer_end",
-   "app_reply_main"
+   "prayer_end"
   ],
   "component3": [
-   "app_reply_main"
-  ],
-  "emoji_sleep_z": [
-   "app_reply_main"
-  ],
-  "emoji_sleep_face": [
    "app_reply_main"
   ],
   "buttons": [
@@ -11642,6 +11605,9 @@
   ],
   "html_display_block": [
    "html_display_block",
+   "app_reply_main"
+  ],
+  "app_reply_choices": [
    "app_reply_main"
   ]
  },
@@ -21867,34 +21833,20 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "app_reply_choices",
     "html_display_block",
     "html_display_none",
     "each",
     "list_map",
-    "emoji_sleep_face",
-    "emoji_sleep_z",
     "list_empty",
-    "prayer_start",
-    "prayer_end",
-    "emoji_fire",
-    "emoji_trinity",
-    "emoji_book_open",
     "list_join_newline_2",
     "list_add",
-    "emoji_ok",
-    "emoji_100",
-    "string_the_servant_of_god_is",
-    "emoji_pray",
-    "emoji_globe_americas",
     "html_text_set",
     "html_p",
     "html_document_body",
     "clipboard_copy",
     "object_property_get",
     "html_button",
-    "emoji_smile",
-    "emoji_wave",
-    "emoji_cross",
     "marker",
     "app_reply_main",
     "root",
@@ -21905,8 +21857,6 @@
     "component2",
     "component3",
     "choices",
-    "text",
-    "response",
     "lambda",
     "choice",
     "response2",
