@@ -2097,7 +2097,8 @@
    "app_reply",
    "app_reply_main",
    "list_join_newline_2",
-   "html_remove"
+   "html_remove",
+   "prayer_end"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21916,6 +21917,7 @@
   "prayer_end": {
    "async": false,
    "identifiers": [
+    "marker",
     "emoji_pray",
     "prayer_end",
     "v"
