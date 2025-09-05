@@ -42,6 +42,10 @@ export function app_reply_main() {
   marker("1");
   let choices = [
     {
+      text: emoji_pray() + " Amen",
+      response: prayer_end(),
+    },
+    {
       text: emoji_wave() + "Greetings",
       response:
         emoji_wave() +
@@ -79,10 +83,6 @@ export function app_reply_main() {
         string_the_servant_of_god_is() +
         " called Jared Patten Mathis " +
         "🤝",
-    },
-    {
-      text: emoji_pray() + " Amen",
-      response: prayer_end(),
     },
     {
       text: "🎵 Praise",
