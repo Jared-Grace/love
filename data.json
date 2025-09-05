@@ -11522,6 +11522,9 @@
   ],
   "text2": [
    "app_reply_main"
+  ],
+  "response3": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21761,6 +21764,7 @@
     "lambda",
     "choice",
     "response2",
+    "response3",
     "lambda3",
     "text2",
     "component"
