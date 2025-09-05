@@ -1,3 +1,4 @@
+import { html_text_set } from "./html_text_set.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
@@ -27,7 +28,7 @@ export function app_reply_main() {
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
       await clipboard_copy(response2);
-      his;
+      html_text_set(component3, text2);
     }
     let component = html_button(root, text3, lambda3);
   }
