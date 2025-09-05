@@ -1844,7 +1844,7 @@
   "c html_display_none html_display_block"
  ],
  "marker_current": "1",
- "function_current": "html_display_none",
+ "function_current": "html_display_block",
  "terminal": false,
  "identifiers": {
   "log": [
