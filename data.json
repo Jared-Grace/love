@@ -2856,7 +2856,8 @@
    "list_remove_if_exists",
    "list_remove_all_multiple",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "list_join_newline_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -6271,8 +6272,7 @@
   ],
   "waited2": [
    "function_dependencies_code",
-   "app_reply_main",
-   "list_join_newline_2"
+   "app_reply_main"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -21840,7 +21840,7 @@
     "list_join",
     "newline",
     "list_join_newline_2",
-    "waited2",
+    "list",
     "separator",
     "code"
    ]
