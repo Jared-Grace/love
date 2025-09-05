@@ -109,7 +109,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " WhatsApp",
-      response: "WhatsApp: +1-904-314-4053",
+      response: "☎️ WhatsApp: +1-904-314-4053",
     },
   ];
   return v;
