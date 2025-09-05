@@ -72,7 +72,7 @@ export function app_reply_main() {
       response:
         prayer_start() +
         " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
-        (" Amen! " + emoji_pray()),
+        prayer_end(),
     },
     {
       text: emoji_pray() + " Bless",
