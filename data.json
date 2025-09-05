@@ -2080,7 +2080,8 @@
    "js_dollar_i",
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
-   "js_dollar_l"
+   "js_dollar_l",
+   "app_reply"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11462,6 +11463,9 @@
   ],
   "array_expression": [
    "js_calls_to_each"
+  ],
+  "app_reply": [
+   "app_reply"
   ]
  },
  "functions": {
@@ -21666,6 +21670,13 @@
     "stack3",
     "ast",
     "afters"
+   ]
+  },
+  "app_reply": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_reply"
    ]
   }
  },
