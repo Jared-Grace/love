@@ -108,9 +108,9 @@ export function app_reply_main() {
       response: "WhatsApp: +1-904-314-4053",
     },
     {
-      text: emoji_pray() + emoji_sleep_z() + " sleep",
+      text: emoji_pray() +  " sleep",
       response:
-        emoji_pray() +
+        emoji_pray() +emoji_sleep_z() +
         " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons and bad dreams. " +
         emoji_sleep_face(),
     },
