@@ -1,3 +1,4 @@
+import { emoji_question } from "./emoji_question.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
 import { emoji_family } from "./emoji_family.mjs";
@@ -38,7 +39,7 @@ export function app_reply_choices() {
       response: prayer_end(),
     },
     {
-      text: "❓" + " Ask",
+      text: emoji_question() + " Ask",
       response: "What are you asking me to do?",
     },
     {
