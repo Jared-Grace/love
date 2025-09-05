@@ -15,5 +15,6 @@ export function app_reply_main() {
         emoji_cross(),
     },
   ];
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
