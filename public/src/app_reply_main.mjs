@@ -1,3 +1,4 @@
+import { prayer_start } from "./prayer_start.mjs";
 import { prayer_ending } from "./prayer_ending.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
 import { emoji_trinity } from "./emoji_trinity.mjs";
@@ -69,10 +70,7 @@ export function app_reply_main() {
     {
       text: "🎵 Bless",
       response:
-        emoji_pray() +
-        "In the name of the Father, and of the Son, and of the Holy Spirit" +
-        " " +
-        emoji_trinity() +
+        prayer_start() +
         " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
         (" Amen! " + emoji_pray()),
     },
