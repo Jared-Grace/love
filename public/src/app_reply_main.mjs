@@ -37,8 +37,8 @@ export function app_reply_main() {
       list_add(copied, response2);
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
-      html_clear(root);
-      html_p_text_multiple(root, copied);
+      html_clear(preview);
+      html_p_text_multiple(preview, copied);
       html_text_set(preview, joined);
       html_display_none(component);
     }
