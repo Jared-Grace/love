@@ -54,7 +54,7 @@ export function app_reply_main() {
         emoji_pray(),
     },
     {
-      text: emoji_ok() + " Yes!",
+      text: emoji_ok() + " Yes",
       response: emoji_ok() + " Yes!",
     },
   ];
