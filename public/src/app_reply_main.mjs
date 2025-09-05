@@ -1,3 +1,4 @@
+import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { prayer_start } from "./prayer_start.mjs";
@@ -110,7 +111,8 @@ export function app_reply_main() {
       text: emoji_pray() + emoji_sleep_z() + " sleep",
       response:
         emoji_pray() +
-        " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons and bad dreams",
+        " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons and bad dreams. " +
+        emoji_sleep_face(),
     },
   ];
   function lambda(choice) {
