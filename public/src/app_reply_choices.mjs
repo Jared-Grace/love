@@ -23,8 +23,7 @@ import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
-  const pray_request = "provide what is needed";
-  let v2 = app_reply_pray("Provide", pray_request);
+  let v2 = app_reply_pray("Provide", "provide what is needed");
   let v = [
     {
       text: emoji_pray() + " Amen",
