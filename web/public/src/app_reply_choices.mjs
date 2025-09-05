@@ -43,7 +43,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Heal",
-      response: emoji_pray() + "May the LORD heal the sick",
+      response: emoji_pray() + string_may_the_lord() + "heal the sick",
     },
     {
       text: emoji_pray() + " How family",
