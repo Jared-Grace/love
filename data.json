@@ -4529,8 +4529,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "app_reply_choices"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -11683,7 +11682,10 @@
   "app_reply_pray": [
    "app_reply_choices"
   ],
-  "v22": [
+  "heal": [
+   "app_reply_choices"
+  ],
+  "provide": [
    "app_reply_choices"
   ]
  },
@@ -22055,8 +22057,8 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
-    "v2",
-    "v22",
+    "heal",
+    "provide",
     "v",
     "text",
     "response"
