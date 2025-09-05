@@ -4753,8 +4753,7 @@
    "html_p_text",
    "http",
    "http_json",
-   "app_reply_choices",
-   "app_reply_main"
+   "app_reply_choices"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -22004,7 +22003,6 @@
     "lambda5",
     "component2",
     "parent",
-    "text",
     "choices",
     "lambda",
     "choice",
