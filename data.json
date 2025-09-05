@@ -1838,7 +1838,8 @@
   "c html_style_remove html_remove",
   "r prayer_ending prayer_end",
   "s clear",
-  "s list"
+  "s list",
+  "s display"
  ],
  "marker_current": "1",
  "function_current": "prayer_end",
