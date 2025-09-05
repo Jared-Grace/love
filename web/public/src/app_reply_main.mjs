@@ -6,7 +6,7 @@ export function app_reply_main() {
   marker("1");
   let choices = [
     {
-      text: "greetings",
+      text: emoji_wave() + "Greetings",
       response:
         emoji_wave() +
         emoji_smile() +
