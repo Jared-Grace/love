@@ -51,7 +51,7 @@ export function app_reply_choices() {
         emoji_cross(),
     },
     {
-      text: emoji_hands_raising() + " Hallelujah hallelujah hallelujah",
+      text: emoji_hands_raising() + " Hallelujah! Hallelujah! Hallelujah!",
       response: emoji_pray() + string_may_the_lord() + "heal the sick",
     },
     {
@@ -96,7 +96,9 @@ export function app_reply_choices() {
     {
       text: "🎵 Praise",
       response:
-        " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
+        " 🎵 " +
+        "🗣️" +
+        " Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
     {
       text: emoji_pray() + " Pray",
