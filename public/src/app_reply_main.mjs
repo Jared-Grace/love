@@ -68,7 +68,7 @@ export function app_reply_main() {
         emoji_pray(),
     },
     {
-      text: emoji_globe_americas() + " Location",
+      text: emoji_wave() + " Name",
       response: string_the_servant_of_god_is() + " called Jared Patten Mathis ",
     },
     {
