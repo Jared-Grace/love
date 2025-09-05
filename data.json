@@ -11485,6 +11485,9 @@
   ],
   "emoji_wave": [
    "app_reply_main"
+  ],
+  "emoji_smile": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21705,6 +21708,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_smile",
     "emoji_wave",
     "emoji_cross",
     "marker",
