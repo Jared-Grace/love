@@ -2414,7 +2414,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "firebase_deploy_function",
-   "app_replace"
+   "app_replace",
+   "app_reply"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3424,7 +3425,8 @@
    "js_dollar_ien",
    "js_assign_combine",
    "js_calls_to_each",
-   "js_call_callee_name"
+   "js_call_callee_name",
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -10921,7 +10923,8 @@
   ],
   "app_replace_main": [
    "app_replace",
-   "app_replace_main"
+   "app_replace_main",
+   "app_reply"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function",
@@ -11099,7 +11102,8 @@
    "function_dependencies_code"
   ],
   "firebase_storage_function_run": [
-   "app_replace"
+   "app_replace",
+   "app_reply"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -21679,8 +21683,12 @@
   "app_reply": {
    "async": false,
    "identifiers": [
+    "firebase_storage_function_run",
+    "app_replace_main",
     "marker",
-    "app_reply"
+    "app_reply",
+    "f_name",
+    "name"
    ]
   },
   "app_reply_main": {
