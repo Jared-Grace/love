@@ -59,8 +59,8 @@ export function app_reply_main() {
       response: emoji_pray() + " Amen!",
     },
     {
-      text: emoji_pray() + " Praise",
-      response: emoji_pray() + " 🎵 Praise the LORD our God! 🎶",
+      text: "🎵 Praise",
+      response: " 🎵 🗣️ Praise the LORD our God! 🎶",
     },
   ];
   function lambda(choice) {
