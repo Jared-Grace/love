@@ -3073,8 +3073,7 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv",
-   "list_random_item"
+   "kjv"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6358,7 +6357,8 @@
    "app_replace_rule_set",
    "js_dollar_new",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "list_random_item"
   ],
   "formatted": [
    "function_format",
@@ -22134,7 +22134,7 @@
    "identifiers": [
     "list_random_item",
     "arr",
-    "v",
+    "r",
     "Math",
     "floor",
     "random",
