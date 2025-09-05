@@ -3045,8 +3045,7 @@
    "marker_rename",
    "function_open_dollar_choice",
    "js_assign_combine",
-   "list_index_of_delta",
-   "clipboard_copy"
+   "list_index_of_delta"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4604,7 +4603,8 @@
    "html_enable",
    "html_style_remove",
    "js_calls_to_each",
-   "browser_is"
+   "browser_is",
+   "clipboard_copy"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11847,7 +11847,7 @@
     "browser_is",
     "clipboard_copy",
     "text",
-    "v",
+    "b",
     "clipboard",
     "default",
     "write"
