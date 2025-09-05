@@ -21990,7 +21990,7 @@
     "buttons",
     "preview",
     "lambda4",
-    "joined",
+    "preview_refresh",
     "component3",
     "choices",
     "lambda",
@@ -21999,7 +21999,7 @@
     "text3",
     "component",
     "lambda3",
-    "preview_refresh"
+    "joined"
    ]
   },
   "browser_is": {
