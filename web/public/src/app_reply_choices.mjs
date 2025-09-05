@@ -66,6 +66,11 @@ export function app_reply_choices() {
       response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
     {
+      text: emoji_pray() + " Give",
+      response:
+        emoji_pray() + " Sorry, I have nothing to give you at this time ! ",
+    },
+    {
       text: emoji_wave() + "Greetings",
       response:
         emoji_wave() +
