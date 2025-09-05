@@ -4,6 +4,7 @@ export function app_reply_main() {
   let choices = [
     {
       text: "greetings",
+      response: "",
     },
   ];
 }
