@@ -1,3 +1,4 @@
+import { emoji_church } from "./emoji_church.mjs";
 import { string_lord_bless } from "./string_lord_bless.mjs";
 import { string_may_the_lord } from "./string_may_the_lord.mjs";
 import { string_lord_bless_your } from "./string_lord_bless_your.mjs";
@@ -33,7 +34,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Church",
-      response: string_lord_bless_your() + "church",
+      response: string_lord_bless_your() + "church " + emoji_church(),
     },
     {
       text: emoji_fire() + " Glory",
