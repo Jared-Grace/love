@@ -38,6 +38,10 @@ export function app_reply_choices() {
       response: prayer_end(),
     },
     {
+      text: "❓" + " Ask",
+      response: "What are you asking me to do?",
+    },
+    {
       text: emoji_pray() + " Bless",
       response:
         prayer_start() +
