@@ -21964,7 +21964,7 @@
    ]
   },
   "app_reply_main": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "list_concat",
     "list_random_item",
@@ -22008,8 +22008,8 @@
     "text3",
     "component",
     "lambda3",
-    "joined",
-    "concated"
+    "concated",
+    "joined"
    ]
   },
   "browser_is": {
