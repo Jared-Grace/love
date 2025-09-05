@@ -1841,7 +1841,7 @@
   "r prayer_ending prayer_end"
  ],
  "marker_current": "1",
- "function_current": "html_remove",
+ "function_current": "prayer_end",
  "terminal": false,
  "identifiers": {
   "log": [
