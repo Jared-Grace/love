@@ -2087,7 +2087,8 @@
    "js_code_brackets_empty",
    "js_dollar_l",
    "app_reply",
-   "app_reply_main"
+   "app_reply_main",
+   "browser_is"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11502,6 +11503,9 @@
   ],
   "response2": [
    "app_reply_main"
+  ],
+  "browser_is": [
+   "browser_is"
   ]
  },
  "functions": {
@@ -21738,6 +21742,13 @@
     "response2",
     "lambda3",
     "component"
+   ]
+  },
+  "browser_is": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "browser_is"
    ]
   }
  },
