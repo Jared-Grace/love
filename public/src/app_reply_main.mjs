@@ -31,7 +31,7 @@ export function app_reply_main() {
     let joined = list_join_newline_2(copied);
     html_text_set(component2, joined);
   }
-  let component3 = html_button(parent, "Reset", lambda4);
+  let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_p(root);
   marker("1");
   let choices = [
