@@ -27,7 +27,7 @@ export function app_reply_main() {
       response:
         emoji_wave() +
         emoji_smile() +
-        " Greetings in the name of our LORD Jesus Christ " +
+        " Greetings in the name of our LORD Jesus Christ! " +
         emoji_cross(),
     },
     {
@@ -38,7 +38,7 @@ export function app_reply_main() {
         string_the_servant_of_god_is() +
         " doing good " +
         emoji_100() +
-        " through the grace of God " +
+        " through the grace of God! " +
         emoji_pray(),
     },
     {
