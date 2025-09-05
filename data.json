@@ -4623,8 +4623,7 @@
    "html_style_remove",
    "js_calls_to_each",
    "browser_is",
-   "clipboard_copy",
-   "app_reply_main"
+   "clipboard_copy"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -21846,8 +21845,7 @@
     "text3",
     "component",
     "lambda3",
-    "joined",
-    "b"
+    "joined"
    ]
   },
   "browser_is": {
