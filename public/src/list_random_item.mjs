@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
-export function list_random_item() {
-  marker("1");
+export function list_random_item(arr) {
+  let v = arr[Math.floor(Math.random() * arr.length)];
+  return v;
 }
