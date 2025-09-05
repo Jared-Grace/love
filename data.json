@@ -1825,10 +1825,11 @@
   "p",
   "nd l",
   "fts js_calls_to_each",
-  "as app"
+  "as app",
+  "an reply"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_l",
+ "function_current": "app_reply",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -21668,7 +21669,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-02T03:01:12.214Z",
+ "git_push_when": "2025-09-05T17:53:57.496Z",
  "error_attention": null,
  "app_current": "replace"
 }
