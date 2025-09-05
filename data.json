@@ -4705,7 +4705,8 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json"
+   "http_json",
+   "app_reply_main"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -21698,7 +21699,8 @@
    "identifiers": [
     "marker",
     "app_reply_main",
-    "choices"
+    "choices",
+    "text"
    ]
   }
  },
