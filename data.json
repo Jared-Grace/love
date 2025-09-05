@@ -11591,6 +11591,9 @@
   ],
   "emoji_trinity": [
    "app_reply_main"
+  ],
+  "emoji_fire": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21815,6 +21818,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_fire",
     "emoji_trinity",
     "html_remove",
     "emoji_book_open",
