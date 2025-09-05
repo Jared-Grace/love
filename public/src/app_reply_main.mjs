@@ -121,7 +121,7 @@ export function app_reply_main() {
       response: "WhatsApp: +1-904-314-4053",
     },
     {
-      text: emoji_pray() + " sleep",
+      text: emoji_pray() + " Sleep",
       response:
         emoji_pray() +
         emoji_sleep_z() +
