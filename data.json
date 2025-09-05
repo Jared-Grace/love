@@ -11678,6 +11678,9 @@
   ],
   "emoji_voice": [
    "app_reply_choices"
+  ],
+  "emoji_family": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22024,6 +22027,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_family",
     "emoji_voice",
     "emoji_hands_raising",
     "emoji_church",
