@@ -32,6 +32,10 @@ export function app_reply_choices() {
         prayer_end(),
     },
     {
+      text: emoji_pray() + " Church",
+      response: string_lord_bless_your() + "church",
+    },
+    {
       text: emoji_fire() + " Glory",
       response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
