@@ -11613,6 +11613,9 @@
   ],
   "text2": [
    "app_reply_main"
+  ],
+  "lc": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21865,6 +21868,7 @@
     "root",
     "copied",
     "lambda4",
+    "lc",
     "component3",
     "parent",
     "text2",
