@@ -84,7 +84,7 @@ export function app_reply_main() {
         " ! ",
     },
     {
-      text: emoji_fire() + " Thanks",
+      text: emoji_pray() + " Thanks",
       response: emoji_pray() + " Thank you very much! " + +emoji_smile(),
     },
   ];
