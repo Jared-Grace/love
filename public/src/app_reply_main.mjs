@@ -37,7 +37,7 @@ export function app_reply_main() {
       await clipboard_copy(joined);
       html_clear(body);
       function lambda2(item) {}
-      each(list, lambda2);
+      each(copied, lambda2);
       html_text_set(preview, joined);
       html_display_none(component);
     }
