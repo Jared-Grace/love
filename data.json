@@ -2322,7 +2322,8 @@
    "function_open_dollar_choice",
    "js_calls_to_each",
    "js_code_wrap_brackets",
-   "js_code_brackets_empty"
+   "js_code_brackets_empty",
+   "app_reply_main"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2851,8 +2852,7 @@
    "list_remove_if_exists",
    "list_remove_all_multiple",
    "list_next_try",
-   "list_index_of_next_outside",
-   "app_reply_main"
+   "list_index_of_next_outside"
   ],
   "v": [
    "data_identifiers_file",
@@ -3792,8 +3792,7 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside",
-   "app_reply_main"
+   "list_index_of_next_outside"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6265,7 +6264,8 @@
    "function_dependencies_code"
   ],
   "waited2": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "app_reply_main"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -11123,7 +11123,8 @@
    "firebase_storage_download_property"
   ],
   "list_join_newline": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "app_reply_main"
   ],
   "firebase_storage_function_run": [
    "app_replace",
@@ -21792,6 +21793,7 @@
     "emoji_wave",
     "emoji_cross",
     "marker",
+    "list_join_newline",
     "app_reply_main",
     "root",
     "copied",
@@ -21804,8 +21806,8 @@
     "response2",
     "text3",
     "lambda3",
-    "list",
-    "item",
+    "code",
+    "waited2",
     "component"
    ]
   },
