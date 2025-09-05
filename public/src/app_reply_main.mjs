@@ -34,6 +34,7 @@ export function app_reply_main() {
     each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
+  let component2 = html_button(parent, text, function lambda5() {});
   marker("1");
   let choices = app_reply_choices();
   function lambda(choice) {
