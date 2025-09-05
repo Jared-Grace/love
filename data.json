@@ -7821,7 +7821,8 @@
    "object_copy",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "js_await_add"
+   "js_await_add",
+   "app_reply_main"
   ],
   "js_bang_to_not": [
    "js_bang_to_not",
@@ -22010,6 +22011,7 @@
     "text3",
     "component",
     "lambda3",
+    "copy",
     "joined",
     "concated"
    ]
