@@ -28,7 +28,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
   let bible = kjv();
   let properties = object_properties(bible);
-  let v2 = list_random_item(arr);
+  let v2 = list_random_item(properties);
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
