@@ -1829,7 +1829,7 @@
   "an reply"
  ],
  "marker_current": "1",
- "function_current": "app_reply",
+ "function_current": "app_reply_main",
  "terminal": false,
  "identifiers": {
   "log": [

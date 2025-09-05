@@ -1,1 +1,4 @@
-export function app_reply_main() {}
+import { marker } from "./marker.mjs";
+export function app_reply_main() {
+  marker("1");
+}
