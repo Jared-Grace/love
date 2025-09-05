@@ -1664,7 +1664,6 @@
   "n string_replace",
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
-  "s new",
   "fb",
   "data_app_current_get",
   "u ff",
@@ -1831,7 +1830,8 @@
   "s copy",
   "s web",
   "n browser_is",
-  "s main"
+  "s main",
+  "s new"
  ],
  "marker_current": "1",
  "function_current": "browser_is",
