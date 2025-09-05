@@ -30,7 +30,7 @@ export function app_reply_choices() {
   let bible = kjv();
   let properties = object_properties(bible);
   let reference = list_random_item(properties);
-  let value = object_property_get(bible, reference);
+  let verse = object_property_get(bible, reference);
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
