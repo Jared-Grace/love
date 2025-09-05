@@ -1,3 +1,4 @@
+import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
 import { emoji_family } from "./emoji_family.mjs";
 import { emoji_voice } from "./emoji_voice.mjs";
@@ -25,7 +26,7 @@ export function app_reply_choices() {
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
-  let with2 = app_reply_pray("With", "always be with you");
+  let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
   let v = [
     {
       text: emoji_pray() + " Amen",
