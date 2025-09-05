@@ -58,7 +58,7 @@ export function app_reply_main() {
     },
     {
       text: emoji_pray() + " Amen",
-      response: emoji_pray() + " Amen!",
+      response: " Amen! " + emoji_pray(),
     },
     {
       text: "🎵 Praise",
