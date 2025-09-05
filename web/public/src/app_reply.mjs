@@ -1,8 +1,8 @@
 import { firebase_storage_function_run } from "./firebase_storage_function_run.mjs";
 import { app_replace_main } from "./app_replace_main.mjs";
 import { marker } from "./marker.mjs";
-export function app_reply() {
+export async function app_reply() {
   marker("1");
   let f_name = app_replace_main.name;
-  firebase_storage_function_run(f_name);
+  await firebase_storage_function_run(f_name);
 }
