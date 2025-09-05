@@ -11530,6 +11530,9 @@
   ],
   "component2": [
    "app_reply_main"
+  ],
+  "emoji_globe_americas": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21754,6 +21757,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_globe_americas",
     "html_text_set",
     "html_p",
     "html_document_body",
