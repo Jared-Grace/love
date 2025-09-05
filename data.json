@@ -3390,8 +3390,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "app_reply_choices"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -11731,6 +11730,9 @@
    "list_random_item"
   ],
   "reference": [
+   "app_reply_choices"
+  ],
+  "verse": [
    "app_reply_choices"
   ]
  },
@@ -22110,7 +22112,7 @@
     "bible",
     "properties",
     "reference",
-    "value",
+    "verse",
     "heal",
     "job",
     "provide",
