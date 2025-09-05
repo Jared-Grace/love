@@ -6275,8 +6275,7 @@
    "function_dependencies_code"
   ],
   "waited2": [
-   "function_dependencies_code",
-   "app_reply_main"
+   "function_dependencies_code"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -21826,7 +21825,6 @@
     "text3",
     "lambda3",
     "joined",
-    "waited2",
     "component"
    ]
   },
