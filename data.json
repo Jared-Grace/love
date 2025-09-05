@@ -770,7 +770,6 @@
   "tf Property",
   "fs function_params_consolidate",
   "s list,clear",
-  "s clear",
   "s list",
   "n list_empty",
   "function_params_consolidate js_dollar_g",
@@ -1838,7 +1837,8 @@
   "s vis",
   "s remove",
   "c html_style_remove html_remove",
-  "r prayer_ending prayer_end"
+  "r prayer_ending prayer_end",
+  "s clear"
  ],
  "marker_current": "1",
  "function_current": "prayer_end",
