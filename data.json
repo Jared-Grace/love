@@ -1837,7 +1837,8 @@
   "s html,hid",
   "s vis",
   "s remove",
-  "c html_style_remove html_remove"
+  "c html_style_remove html_remove",
+  "r prayer_ending prayer_end"
  ],
  "marker_current": "1",
  "function_current": "html_remove",
