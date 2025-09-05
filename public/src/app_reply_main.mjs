@@ -52,7 +52,7 @@ export function app_reply_main() {
   buttons = list_map(choices, lambda);
   preview = html_p(root);
   function preview_refresh() {
-    let concated = list_concat(a, b);
+    let concated = list_concat(a, reference + " " + verse);
     let joined = list_join_newline_2(copied);
     html_clear(preview);
     html_p_text_multiple(preview, copied);
