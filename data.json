@@ -11664,8 +11664,10 @@
    "string_lord_bless_your"
   ],
   "string_may_the_lord": [
-   "string_lord_bless_your",
    "app_reply_choices"
+  ],
+  "string_lord_bless": [
+   "string_lord_bless_your"
   ]
  },
  "functions": {
@@ -22039,7 +22041,7 @@
   "string_lord_bless_your": {
    "async": false,
    "identifiers": [
-    "string_may_the_lord",
+    "string_lord_bless",
     "string_lord_bless_your",
     "blessing"
    ]
