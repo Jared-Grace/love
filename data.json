@@ -11685,9 +11685,6 @@
   ],
   "app_reply_pray": [
    "app_reply_choices"
-  ],
-  "$a": [
-   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22059,7 +22056,6 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
-    "$a",
     "v2",
     "v",
     "text",
