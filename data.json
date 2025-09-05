@@ -11721,8 +11721,7 @@
    "app_reply_choices"
   ],
   "arr": [
-   "list_random_item",
-   "app_reply_choices"
+   "list_random_item"
   ],
   "floor": [
    "list_random_item"
@@ -22106,7 +22105,6 @@
     "bible",
     "properties",
     "v2",
-    "arr",
     "heal",
     "job",
     "provide",
