@@ -1,4 +1,4 @@
-import { html_p_text } from "./html_p_text.mjs";
+import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_choices } from "./app_reply_choices.mjs";
 import { html_display_block } from "./html_display_block.mjs";
@@ -37,10 +37,7 @@ export function app_reply_main() {
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_clear(root);
-      function lambda2(item) {
-        html_p_text(root, item);
-      }
-      each(copied, lambda2);
+      html_p_text_multiple(root, copied);
       html_text_set(preview, joined);
       html_display_none(component);
     }
