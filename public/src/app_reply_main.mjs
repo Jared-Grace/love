@@ -66,7 +66,12 @@ export function app_reply_main() {
     {
       text: "🎵 Glory",
       response:
-        emoji_pray() + " All glory to God ❤️‍🔥" + emoji_cross() + "🕊️" + " ! ",
+        emoji_pray() +
+        " All glory to God " +
+        "❤️‍🔥" +
+        emoji_cross() +
+        "🕊️" +
+        " ! ",
     },
   ];
   function lambda(choice) {
