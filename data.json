@@ -9446,8 +9446,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "app_reply_choices"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -22085,7 +22084,6 @@
     "app_reply_choices",
     "bible",
     "properties",
-    "obj",
     "heal",
     "job",
     "provide",
