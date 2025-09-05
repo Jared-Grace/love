@@ -6582,7 +6582,8 @@
    "html_document_body",
    "app_refresh",
    "html_clear",
-   "html_update_generic"
+   "html_update_generic",
+   "app_reply_main"
   ],
   "import_": [
    "function_imports_add",
@@ -10722,7 +10723,8 @@
   "html_clear": [
    "app_refresh",
    "html_clear",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "screen": [
    "app_refresh"
@@ -21833,6 +21835,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_clear",
     "app_reply_choices",
     "html_display_block",
     "html_display_none",
@@ -21862,7 +21865,8 @@
     "response2",
     "text3",
     "component",
-    "lambda3"
+    "lambda3",
+    "body"
    ]
   },
   "browser_is": {
