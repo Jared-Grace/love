@@ -73,7 +73,8 @@ export function app_reply_main() {
         emoji_pray() +
         " " +
         string_the_servant_of_god_is() +
-        " called Jared Patten Mathis ",
+        " called Jared Patten Mathis " +
+        "🤝",
     },
     {
       text: emoji_pray() + " Amen",
