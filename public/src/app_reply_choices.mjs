@@ -44,7 +44,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " How family",
-      response: emoji_pray() + "Plesae pray for my family",
+      response: emoji_pray() + "Please pray for my family",
     },
     {
       text: emoji_ok() + "How r u",
