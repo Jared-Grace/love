@@ -62,7 +62,7 @@ export function app_reply_choices() {
       response:
         emoji_hands_raising() +
         " Hallelujah! Hallelujah! Hallelujah! " +
-        emoji_voice(),
+        emoji_pray(),
     },
     {
       text: emoji_pray() + " Heal",
