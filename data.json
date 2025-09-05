@@ -11738,6 +11738,9 @@
   ],
   "preview_refresh": [
    "app_reply_main"
+  ],
+  "component2": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21995,6 +21998,7 @@
     "lambda4",
     "preview_refresh",
     "component3",
+    "component2",
     "choices",
     "lambda",
     "choice",
