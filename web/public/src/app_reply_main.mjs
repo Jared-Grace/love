@@ -61,13 +61,13 @@ export function app_reply_main() {
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
     let text3 = object_property_get(choice, "text");
+    let component = html_button(root, text3, lambda3);
     async function lambda3() {
       list_add(copied, response2);
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_text_set(component2, response2);
     }
-    let component = html_button(root, text3, lambda3);
   }
   each(choices, lambda);
 }
