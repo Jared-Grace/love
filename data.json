@@ -11655,6 +11655,9 @@
   ],
   "emoji_phone": [
    "app_reply_choices"
+  ],
+  "string_lord_bless_your": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22001,6 +22004,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "string_lord_bless_your",
     "emoji_phone",
     "emoji_sleep_face",
     "emoji_sleep_z",
