@@ -70,11 +70,11 @@ export function app_reply_main() {
       response:
         emoji_pray() +
         " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
-        "in the name of the Father, and of the Son, and of the Holy Spirit" +
-        " " +
-        emoji_trinity() +
-        " Amen! " +
-        emoji_pray(),
+        ("in the name of the Father, and of the Son, and of the Holy Spirit" +
+          " " +
+          emoji_trinity() +
+          " Amen! " +
+          emoji_pray()),
     },
     {
       text: emoji_fire() + " Glory",
