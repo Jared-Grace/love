@@ -11681,6 +11681,12 @@
   ],
   "emoji_family": [
    "app_reply_choices"
+  ],
+  "pray_title": [
+   "app_reply_choices"
+  ],
+  "pray_request": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22051,6 +22057,8 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
+    "pray_title",
+    "pray_request",
     "v",
     "text",
     "response"
