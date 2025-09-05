@@ -3046,7 +3046,8 @@
    "function_open_dollar_choice",
    "js_assign_combine",
    "list_index_of_delta",
-   "browser_is"
+   "browser_is",
+   "clipboard_copy"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11506,7 +11507,8 @@
    "app_reply_main"
   ],
   "browser_is": [
-   "browser_is"
+   "browser_is",
+   "clipboard_copy"
   ],
   "window": [
    "browser_is"
@@ -11842,8 +11844,10 @@
   },
   "clipboard_copy": {
    "identifiers": [
+    "browser_is",
     "clipboard_copy",
     "text",
+    "v",
     "clipboard",
     "default",
     "write"
