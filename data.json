@@ -1830,7 +1830,8 @@
   "s emoji",
   "s copy",
   "s web",
-  "n browser_is"
+  "n browser_is",
+  "s main"
  ],
  "marker_current": "1",
  "function_current": "browser_is",
