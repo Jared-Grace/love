@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { kjv } from "./kjv.mjs";
@@ -51,6 +52,7 @@ export function app_reply_main() {
   buttons = list_map(choices, lambda);
   preview = html_p(root);
   function preview_refresh() {
+    let concated = list_concat(a, b);
     let joined = list_join_newline_2(copied);
     html_clear(preview);
     html_p_text_multiple(preview, copied);
