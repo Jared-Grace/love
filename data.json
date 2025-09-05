@@ -11529,6 +11529,9 @@
   ],
   "component2": [
    "app_reply_main"
+  ],
+  "his": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21774,6 +21777,7 @@
     "response2",
     "text3",
     "lambda3",
+    "his",
     "component"
    ]
   },
