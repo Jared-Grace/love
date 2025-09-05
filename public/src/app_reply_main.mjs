@@ -66,7 +66,7 @@ export function app_reply_main() {
         " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
     {
-      text: emoji_fire() + " Glory",
+      text: "🎵 Bless",
       response:
         emoji_pray() +
         " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think in the name of the Father, and of the Son, and of the Holy Spirit " +
@@ -75,7 +75,7 @@ export function app_reply_main() {
         emoji_pray(),
     },
     {
-      text: "🎵 Bless",
+      text: emoji_fire() + " Glory",
       response:
         emoji_pray() +
         emoji_fire() +
