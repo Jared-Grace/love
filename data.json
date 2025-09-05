@@ -11565,8 +11565,7 @@
   ],
   "emoji_pray": [
    "app_reply_main",
-   "prayer_end",
-   "prayer_start"
+   "prayer_end"
   ],
   "string_the_servant_of_god_is": [
    "app_reply_main",
@@ -21947,7 +21946,6 @@
    "async": false,
    "identifiers": [
     "emoji_trinity",
-    "emoji_pray",
     "prayer_start",
     "v"
    ]
