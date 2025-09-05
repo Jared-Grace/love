@@ -3703,7 +3703,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_dollar_ir",
-   "js_call_callee_name"
+   "js_call_callee_name",
+   "app_reply_main"
   ],
   "data_save": [
    "data_file_update",
@@ -10360,8 +10361,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_reply_main"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -11499,6 +11499,9 @@
    "app_reply_main"
   ],
   "text2": [
+   "app_reply_main"
+  ],
+  "response2": [
    "app_reply_main"
   ]
  },
@@ -21720,6 +21723,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_button",
     "each",
     "emoji_smile",
@@ -21732,9 +21736,9 @@
     "response",
     "lambda",
     "choice",
+    "response2",
     "lambda3",
     "component",
-    "parent",
     "text2"
    ]
   }
