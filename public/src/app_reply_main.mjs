@@ -1,3 +1,4 @@
+import { html_remove } from "./html_remove.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { list_add } from "./list_add.mjs";
@@ -67,6 +68,7 @@ export function app_reply_main() {
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_text_set(component2, response2);
+      html_remove(b);
     }
   }
   each(choices, lambda);
