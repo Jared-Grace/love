@@ -28,7 +28,7 @@ export function app_reply_main() {
       text: emoji_globe_americas() + " Location",
       response:
         emoji_globe_americas() +
-        " The servant of God is from the United States of America 🇺🇸, state of Florida, city of Jacksonville " +
+        " The servant of God is from 🇺🇸 the United States of America, state of Florida, city of Jacksonville " +
         emoji_pray(),
     },
   ];
