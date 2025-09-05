@@ -1,7 +1,3 @@
-import { object_property_get } from "./object_property_get.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { object_properties } from "./object_properties.mjs";
-import { kjv } from "./kjv.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
 import { emoji_family } from "./emoji_family.mjs";
@@ -27,10 +23,6 @@ import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
-  let bible = kjv();
-  let properties = object_properties(bible);
-  let reference = list_random_item(properties);
-  let verse = object_property_get(bible, reference);
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
