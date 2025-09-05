@@ -44,13 +44,17 @@ export function app_reply_main() {
       list_add(copied, response2);
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
-      html_clear(preview);
-      html_p_text_multiple(preview, copied);
-      html_text_set(preview, joined);
+      preview_refresh();
       html_display_none(component);
     }
     return component;
   }
   buttons = list_map(choices, lambda);
   preview = html_p(root);
+  function preview_refresh() {
+    let joined = list_join_newline_2(copied);
+    html_clear(preview);
+    html_p_text_multiple(preview, copied);
+    html_text_set(preview, joined);
+  }
 }
