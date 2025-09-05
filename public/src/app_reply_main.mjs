@@ -137,6 +137,7 @@ export function app_reply_main() {
       html_remove(component);
     }
     return component;
-  }$s
-  let buttons = list_map(choices, lambda);
+  }
+  let buttons = null;
+  buttons = list_map(choices, lambda);
 }
