@@ -2105,7 +2105,8 @@
    "html_remove",
    "prayer_end",
    "html_display_none",
-   "html_display_block"
+   "html_display_block",
+   "kjv"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11698,6 +11699,9 @@
   ],
   "emoji_dove": [
    "app_reply_choices"
+  ],
+  "kjv": [
+   "kjv"
   ]
  },
  "functions": {
@@ -22084,6 +22088,13 @@
     "string_lord_bless",
     "string_lord_bless_your",
     "blessing"
+   ]
+  },
+  "kjv": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "kjv"
    ]
   }
  },
