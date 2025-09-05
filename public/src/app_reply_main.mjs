@@ -53,6 +53,10 @@ export function app_reply_main() {
         " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
         emoji_pray(),
     },
+    {
+      text: emoji_ok() + " Yes!",
+      response: emoji_ok() + " Yes!",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
