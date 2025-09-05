@@ -1,3 +1,4 @@
+import { string_may_the_lord } from "./string_may_the_lord.mjs";
 import { string_lord_bless_your } from "./string_lord_bless_your.mjs";
 import { emoji_phone } from "./emoji_phone.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
@@ -95,7 +96,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Provide",
-      response: emoji_pray() + "May the LORD provide what is needed",
+      response: emoji_pray() + string_may_the_lord() + "provide what is needed",
     },
     {
       text: emoji_pray() + " Sleep",
