@@ -20,6 +20,7 @@ export function app_reply_main() {
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
+    let response3 = object_property_get(choice, "response");
     async function lambda3() {
       await clipboard_copy(text2);
     }
