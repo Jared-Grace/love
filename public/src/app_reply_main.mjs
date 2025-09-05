@@ -70,9 +70,7 @@ export function app_reply_main() {
       response:
         emoji_pray() +
         " All glory to God " +
-        emoji_heart_fire() +
-        emoji_cross() +
-        emoji_dove() +
+        (emoji_heart_fire() + emoji_cross() + emoji_dove()) +
         " ! ",
     },
   ];
