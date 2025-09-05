@@ -1845,10 +1845,11 @@
   "s dove",
   "n kjv",
   "s propert",
-  "s random"
+  "s random",
+  "n list_random_item"
  ],
  "marker_current": "1",
- "function_current": "kjv",
+ "function_current": "list_random_item",
  "terminal": false,
  "identifiers": {
   "log": [
