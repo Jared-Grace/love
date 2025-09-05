@@ -2108,7 +2108,8 @@
    "html_remove",
    "prayer_end",
    "html_display_none",
-   "html_display_block"
+   "html_display_block",
+   "list_random_item"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11711,6 +11712,9 @@
   ],
   "bible": [
    "app_reply_choices"
+  ],
+  "list_random_item": [
+   "list_random_item"
   ]
  },
  "functions": {
@@ -22108,6 +22112,13 @@
    "identifiers": [
     "kjv",
     "v"
+   ]
+  },
+  "list_random_item": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "list_random_item"
    ]
   }
  },
