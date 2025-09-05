@@ -1826,7 +1826,8 @@
   "fts js_calls_to_each",
   "as app",
   "an reply",
-  "s app"
+  "s app",
+  "s hash"
  ],
  "marker_current": "1",
  "function_current": "app_reply_main",
