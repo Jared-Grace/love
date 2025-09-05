@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { emoji_ok } from "./emoji_ok.mjs";
 import { emoji_100 } from "./emoji_100.mjs";
 import { string_the_servant_of_god_is } from "./string_the_servant_of_god_is.mjs";
@@ -54,6 +55,7 @@ export function app_reply_main() {
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
       await clipboard_copy(response2);
+      list_add(list, item);
       html_text_set(component2, response2);
     }
     let component = html_button(root, text3, lambda3);
