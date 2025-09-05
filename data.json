@@ -21721,9 +21721,9 @@
     "choices",
     "text",
     "response",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ]
   }
  },
