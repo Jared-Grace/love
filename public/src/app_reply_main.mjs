@@ -24,7 +24,6 @@ export function app_reply_main() {
     each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
-  let preview = html_p(root);
   marker("1");
   let choices = app_reply_choices();
   function lambda(choice) {
@@ -41,4 +40,5 @@ export function app_reply_main() {
     return component;
   }
   buttons = list_map(choices, lambda);
+  let preview = html_p(root);
 }
