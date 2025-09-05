@@ -75,6 +75,10 @@ export function app_reply_main() {
         (" Amen! " + emoji_pray()),
     },
     {
+      text: "🎵 Bless",
+      response: prayer_start(),
+    },
+    {
       text: emoji_fire() + " Glory",
       response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
