@@ -75,16 +75,8 @@ export function app_reply_main() {
         prayer_end(),
     },
     {
-      text: emoji_pray() + " Bless",
+      text: emoji_pray() + " Pray",
       response: prayer_start(),
-    },
-    {
-      text: emoji_fire() + " Glory",
-      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
-    },
-    {
-      text: emoji_pray() + " Thanks",
-      response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
     {
       text: emoji_pray() + " Provide",
@@ -93,6 +85,14 @@ export function app_reply_main() {
     {
       text: emoji_pray() + " Heal",
       response: emoji_pray() + " May the LORD heal the sick",
+    },
+    {
+      text: emoji_fire() + " Glory",
+      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
+    },
+    {
+      text: emoji_pray() + " Thanks",
+      response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
     {
       text: emoji_pray() + " Heal",
