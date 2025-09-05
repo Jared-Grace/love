@@ -11613,6 +11613,12 @@
   ],
   "preview": [
    "app_reply_main"
+  ],
+  "component2": [
+   "app_reply_main"
+  ],
+  "root2": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21870,7 +21876,9 @@
     "lambda3",
     "body",
     "lambda2",
-    "item"
+    "item",
+    "component2",
+    "root2"
    ]
   },
   "browser_is": {
