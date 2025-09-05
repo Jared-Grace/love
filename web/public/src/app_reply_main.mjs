@@ -53,7 +53,7 @@ export function app_reply_main() {
   preview = html_p(root);
   function preview_refresh() {
     let concated = list_concat(a, reference + " " + verse);
-    let joined = list_join_newline_2(copied);
+    let joined = list_join_newline_2(concated);
     html_clear(preview);
     html_p_text_multiple(preview, copied);
     html_text_set(preview, joined);
