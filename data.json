@@ -2087,8 +2087,7 @@
    "js_code_brackets_empty",
    "js_dollar_l",
    "app_reply",
-   "app_reply_main",
-   "browser_is"
+   "app_reply_main"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3046,7 +3045,8 @@
    "marker_rename",
    "function_open_dollar_choice",
    "js_assign_combine",
-   "list_index_of_delta"
+   "list_index_of_delta",
+   "browser_is"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10347,7 +10347,8 @@
    "html_document_body",
    "html_element",
    "html_document_head",
-   "html_document_root"
+   "html_document_root",
+   "browser_is"
   ],
   "tag_name": [
    "html_element",
@@ -11505,6 +11506,9 @@
    "app_reply_main"
   ],
   "browser_is": [
+   "browser_is"
+  ],
+  "window": [
    "browser_is"
   ]
  },
@@ -21747,8 +21751,10 @@
   "browser_is": {
    "async": false,
    "identifiers": [
-    "marker",
-    "browser_is"
+    "browser_is",
+    "v",
+    "window",
+    "document"
    ]
   }
  },
