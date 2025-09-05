@@ -11570,6 +11570,9 @@
   "list_join_newline_2": [
    "list_join_newline_2",
    "app_reply_main"
+  ],
+  "emoji_book_open": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21794,6 +21797,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_book_open",
     "list_join_newline_2",
     "list_add",
     "emoji_ok",
