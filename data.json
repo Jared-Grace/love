@@ -3382,8 +3382,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "html_display_none"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -10487,7 +10486,8 @@
    "html_on",
    "html_component_wrap",
    "html_attribute_set",
-   "html_remove"
+   "html_remove",
+   "html_display_none"
   ],
   "component": [
    "html_text_set",
@@ -11189,8 +11189,7 @@
   ],
   "html": [
    "html_document_root",
-   "app_replace_font_size_refresh",
-   "html_display_none"
+   "app_replace_font_size_refresh"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -21984,8 +21983,7 @@
     "marker",
     "html_style_set",
     "html_display_none",
-    "html",
-    "value"
+    "element"
    ]
   }
  },
