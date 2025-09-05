@@ -3046,7 +3046,6 @@
    "function_open_dollar_choice",
    "js_assign_combine",
    "list_index_of_delta",
-   "browser_is",
    "clipboard_copy"
   ],
   "file_overwrite": [
@@ -4604,7 +4603,8 @@
    "app_replace_rule_set",
    "html_enable",
    "html_style_remove",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "browser_is"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -21756,7 +21756,7 @@
    "async": false,
    "identifiers": [
     "browser_is",
-    "v",
+    "b",
     "window",
     "document"
    ]
