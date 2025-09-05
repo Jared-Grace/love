@@ -1,3 +1,4 @@
+import { html_display_none } from "./html_display_none.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
@@ -7,7 +8,6 @@ import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
 import { emoji_trinity } from "./emoji_trinity.mjs";
-import { html_remove } from "./html_remove.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { list_add } from "./list_add.mjs";
@@ -138,7 +138,7 @@ export function app_reply_main() {
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_text_set(component2, joined);
-      html_remove(component);
+      html_display_none(component);
     }
     return component;
   }
