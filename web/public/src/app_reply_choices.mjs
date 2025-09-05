@@ -84,7 +84,8 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Preach",
-      response: emoji_pray() + "I cannot preach at this time",
+      response:
+        emoji_pray() + "At this time, I cannot choose a day and time to preach",
     },
     {
       text: emoji_pray() + " Provide",
