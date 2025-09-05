@@ -10344,7 +10344,8 @@
   "html_document_body": [
    "html_document_body",
    "app_refresh",
-   "app_replace_main"
+   "app_replace_main",
+   "app_reply_main"
   ],
   "document": [
    "html_document_body",
@@ -10745,7 +10746,8 @@
    "html_p_text",
    "html_div",
    "app_replace_main",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_reply_main"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -21747,6 +21749,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_document_body",
     "clipboard_copy",
     "object_property_get",
     "html_button",
@@ -21756,6 +21759,7 @@
     "emoji_cross",
     "marker",
     "app_reply_main",
+    "root",
     "choices",
     "text",
     "response",
