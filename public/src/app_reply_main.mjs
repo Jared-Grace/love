@@ -136,6 +136,7 @@ export function app_reply_main() {
       html_text_set(component2, joined);
       html_remove(component);
     }
+    return component;
   }
   each(choices, lambda);
 }
