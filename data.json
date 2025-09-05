@@ -11530,12 +11530,6 @@
   ],
   "component2": [
    "app_reply_main"
-  ],
-  "component3": [
-   "app_reply_main"
-  ],
-  "text2": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -21782,8 +21776,6 @@
     "response2",
     "text3",
     "lambda3",
-    "component3",
-    "text2",
     "component"
    ]
   },
