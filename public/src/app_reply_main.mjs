@@ -63,6 +63,10 @@ export function app_reply_main() {
       response:
         " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
+    {
+      text: "🎵 Glory",
+      response: emoji_pray() + " All glory to God! ",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
