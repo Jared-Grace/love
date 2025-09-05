@@ -1,3 +1,4 @@
+import { html_p } from "./html_p.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -9,6 +10,7 @@ import { emoji_cross } from "./emoji_cross.mjs";
 import { marker } from "./marker.mjs";
 export function app_reply_main() {
   const root = html_document_body();
+  let component2 = html_p(root2);
   marker("1");
   let choices = [
     {
