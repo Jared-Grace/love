@@ -1828,7 +1828,8 @@
   "s app",
   "s hash",
   "s emoji",
-  "s copy"
+  "s copy",
+  "s web"
  ],
  "marker_current": "1",
  "function_current": "app_reply_main",
