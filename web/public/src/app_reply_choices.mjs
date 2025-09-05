@@ -26,6 +26,7 @@ export function app_reply_choices() {
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
+  let will = app_reply_pray("Will", "have His will done " + emoji_dove());
   let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
   let v = [
     {
@@ -140,7 +141,7 @@ export function app_reply_choices() {
     {
       text: emoji_phone() + " WhatsApp",
       response: emoji_phone() + " WhatsApp: +1-904-314-4053",
-    },
+    },will,
     with2,
   ];
   return v;
