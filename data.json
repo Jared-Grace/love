@@ -4378,7 +4378,8 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_reply_main"
   ],
   "without": [
    "string_suffix_without",
@@ -4641,7 +4642,8 @@
    "html_style_remove",
    "js_calls_to_each",
    "browser_is",
-   "clipboard_copy"
+   "clipboard_copy",
+   "app_reply_main"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6632,7 +6634,8 @@
    "list_concat",
    "prompt_previous",
    "list_concat_multiple",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_reply_main"
   ],
   "list_intersect": [
    "js_imports_missing",
@@ -11423,7 +11426,8 @@
    "js_expand_generic"
   ],
   "concated": [
-   "list_concat"
+   "list_concat",
+   "app_reply_main"
   ],
   "list_remove_multiple_if_exists": [
    "list_remove_multiple_if_exists"
@@ -21960,6 +21964,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "list_concat",
     "list_random_item",
     "object_properties",
     "kjv",
@@ -21999,7 +22004,10 @@
     "text3",
     "component",
     "lambda3",
-    "joined"
+    "joined",
+    "concated",
+    "a",
+    "b"
    ]
   },
   "browser_is": {
