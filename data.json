@@ -4378,8 +4378,7 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each",
-   "app_reply_main"
+   "js_calls_to_each"
   ],
   "without": [
    "string_suffix_without",
@@ -22004,8 +22003,7 @@
     "component",
     "lambda3",
     "joined",
-    "concated",
-    "a"
+    "concated"
    ]
   },
   "browser_is": {
