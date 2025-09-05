@@ -11498,9 +11498,6 @@
   "choice": [
    "app_reply_main"
   ],
-  "text2": [
-   "app_reply_main"
-  ],
   "response2": [
    "app_reply_main"
   ]
@@ -21738,8 +21735,7 @@
     "choice",
     "response2",
     "lambda3",
-    "component",
-    "text2"
+    "component"
    ]
   }
  },
