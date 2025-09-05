@@ -6,7 +6,7 @@ export function app_reply_main() {
     {
       text: "greetings",
       response:
-        "Greetings in the name of our LORD Jesus Christ " + emoji_cross(),
+        "👋 Greetings in the name of our LORD Jesus Christ " + emoji_cross(),
     },
   ];
 }
