@@ -44,5 +44,6 @@ export function app_reply_main() {
     return component;
   }
   buttons = list_map(choices, lambda);
-  let preview = html_p(root);
+  let preview = null;
+  preview = html_p(root);
 }
