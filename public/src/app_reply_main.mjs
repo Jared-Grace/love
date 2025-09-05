@@ -44,8 +44,7 @@ export function app_reply_main() {
     let component = html_button(root, text3, lambda3);
     async function lambda3() {
       list_add(copied, response2);
-      let joined = preview_refresh();
-      await clipboard_copy(joined);
+      await copy();
       html_display_none(component);
     }
     return component;
@@ -53,6 +52,10 @@ export function app_reply_main() {
   buttons = list_map(choices, lambda);
   preview = html_p(root);
   preview_refresh();
+  async function copy() {
+    let joined = preview_refresh();
+    await clipboard_copy(joined);
+  }
   function preview_refresh() {
     let concated = list_concat(copied, reference + " " + verse);
     let joined = list_join_newline_2(concated);
