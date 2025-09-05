@@ -25,7 +25,7 @@ import { marker } from "./marker.mjs";
 export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
-  function lambda4() {}
+  function lambda4() {lc}
   let component3 = html_button(parent, text2, lambda4);
   let component2 = html_p(root);
   marker("1");
