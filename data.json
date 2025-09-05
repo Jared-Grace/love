@@ -11672,6 +11672,9 @@
   ],
   "emoji_church": [
    "app_reply_choices"
+  ],
+  "emoji_hands_raising": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22018,6 +22021,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_hands_raising",
     "emoji_church",
     "string_lord_bless",
     "string_may_the_lord",
