@@ -10413,8 +10413,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_reply_main"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -22001,7 +22000,6 @@
     "preview_refresh",
     "component3",
     "component2",
-    "parent",
     "copy",
     "choices",
     "lambda",
