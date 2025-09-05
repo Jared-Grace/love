@@ -1,3 +1,4 @@
+import { string_lord_bless_your } from "./string_lord_bless_your.mjs";
 import { emoji_phone } from "./emoji_phone.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
@@ -102,7 +103,7 @@ export function app_reply_choices() {
         emoji_pray() +
         emoji_sleep_z() +
         " " +
-        "May the LORD bless your " +
+        string_lord_bless_your() +
         "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. " +
         emoji_sleep_face(),
     },
