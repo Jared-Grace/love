@@ -11667,7 +11667,8 @@
    "app_reply_choices"
   ],
   "string_lord_bless": [
-   "string_lord_bless_your"
+   "string_lord_bless_your",
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22014,6 +22015,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "string_lord_bless",
     "string_may_the_lord",
     "string_lord_bless_your",
     "emoji_phone",
