@@ -3266,7 +3266,8 @@
    "list_join",
    "path_join",
    "html_name_to_path_dev",
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "list_join_newline"
   ],
   "watcher": [
    "watch"
@@ -3483,7 +3484,8 @@
    "list_join_empty",
    "list_join_space",
    "string_replace",
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "list_join_newline"
   ],
   "result": [
    "watch",
@@ -3542,7 +3544,8 @@
    "list_join",
    "string_split",
    "tasks_run",
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "list_join_newline"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -6272,7 +6275,8 @@
   ],
   "waited2": [
    "function_dependencies_code",
-   "app_reply_main"
+   "app_reply_main",
+   "list_join_newline"
   ],
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
@@ -11130,7 +11134,8 @@
    "firebase_storage_download_property"
   ],
   "list_join_newline": [
-   "function_dependencies_code"
+   "function_dependencies_code",
+   "list_join_newline"
   ],
   "firebase_storage_function_run": [
    "app_replace",
@@ -11560,7 +11565,8 @@
    "app_reply_main"
   ],
   "newline": [
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "list_join_newline"
   ],
   "list_join_newline_2": [
    "list_join_newline_2",
@@ -21841,6 +21847,17 @@
     "newline",
     "list_join_newline_2",
     "list",
+    "separator",
+    "joined"
+   ]
+  },
+  "list_join_newline": {
+   "async": false,
+   "identifiers": [
+    "list_join",
+    "newline",
+    "list_join_newline",
+    "waited2",
     "separator",
     "joined"
    ]
