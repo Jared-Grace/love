@@ -25,10 +25,22 @@ export function app_reply_main() {
         emoji_cross(),
     },
     {
+      text: emoji_wave() + "How r u",
+      response:
+        emoji_wave() +
+        emoji_smile() +
+        " " +
+        "The servant of God is" +
+        " doing good through the grace of God " +
+        emoji_cross(),
+    },
+    {
       text: emoji_globe_americas() + " Location",
       response:
         emoji_globe_americas() +
-        " The servant of God is from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
+        " " +
+        "The servant of God is" +
+        " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
         emoji_pray(),
     },
   ];
