@@ -11741,6 +11741,9 @@
   ],
   "component2": [
    "app_reply_main"
+  ],
+  "will": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22126,6 +22129,7 @@
     "heal",
     "job",
     "provide",
+    "will",
     "with2",
     "v",
     "text",
