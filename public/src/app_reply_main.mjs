@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
@@ -28,10 +29,12 @@ import { marker } from "./marker.mjs";
 export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
+  let buttons = null;
   function lambda4() {
     list_empty(copied);
     let joined = list_join_newline_2(copied);
     html_text_set(component2, joined);
+    each(list, function lambda2(item) {});
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_p(root);
@@ -138,6 +141,5 @@ export function app_reply_main() {
     }
     return component;
   }
-  let buttons = null;
   buttons = list_map(choices, lambda);
 }
