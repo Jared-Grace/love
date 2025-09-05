@@ -60,7 +60,7 @@ export function app_reply_main() {
     },
     {
       text: emoji_pray() + " Praise",
-      response: emoji_pray() + " Praise the LORD our God!",
+      response: emoji_pray() + " 🎵 Praise the LORD our God! 🎶",
     },
   ];
   function lambda(choice) {
