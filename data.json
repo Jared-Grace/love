@@ -2488,7 +2488,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "app_reply_choices"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3390,7 +3391,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "app_reply_choices"
   ],
   "name": [
    "watch",
@@ -3741,7 +3743,8 @@
    "js_calls_to_each",
    "js_dollar_ir",
    "js_call_callee_name",
-   "app_reply_main"
+   "app_reply_main",
+   "app_reply_choices"
   ],
   "data_save": [
    "data_file_update",
@@ -5169,7 +5172,8 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "app_reply_choices"
   ],
   "each_pair": [
    "each_pair",
@@ -6357,8 +6361,7 @@
    "js_dollar_new",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "list_random_item",
-   "app_reply_choices"
+   "list_random_item"
   ],
   "formatted": [
    "function_format",
@@ -11728,6 +11731,9 @@
   ],
   "random": [
    "list_random_item"
+  ],
+  "reference": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22074,6 +22080,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "list_random_item",
     "object_properties",
     "kjv",
@@ -22104,7 +22111,10 @@
     "app_reply_choices",
     "bible",
     "properties",
-    "r",
+    "reference",
+    "value",
+    "object",
+    "property_name",
     "heal",
     "job",
     "provide",
