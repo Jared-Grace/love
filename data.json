@@ -2848,8 +2848,7 @@
    "list_remove_if_exists",
    "list_remove_all_multiple",
    "list_next_try",
-   "list_index_of_next_outside",
-   "app_reply_main"
+   "list_index_of_next_outside"
   ],
   "v": [
    "data_identifiers_file",
@@ -3788,8 +3787,7 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside",
-   "app_reply_main"
+   "list_index_of_next_outside"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11491,6 +11489,9 @@
    "app_reply_main"
   ],
   "emoji_smile": [
+   "app_reply_main"
+  ],
+  "choice": [
    "app_reply_main"
   ]
  },
@@ -21722,8 +21723,7 @@
     "text",
     "response",
     "lambda",
-    "item",
-    "list"
+    "choice"
    ]
   }
  },
