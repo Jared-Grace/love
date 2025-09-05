@@ -5144,7 +5144,8 @@
    "object_merge",
    "object_properties",
    "object_properties_delete",
-   "tasks_run"
+   "tasks_run",
+   "app_reply_choices"
   ],
   "each_object": [
    "each_object",
@@ -22080,6 +22081,7 @@
     "emoji_pray",
     "app_reply_choices",
     "bible",
+    "object_properties",
     "heal",
     "job",
     "provide",
