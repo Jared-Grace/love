@@ -2095,7 +2095,8 @@
    "js_dollar_l",
    "app_reply",
    "app_reply_main",
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "html_remove"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4622,7 +4623,8 @@
    "html_style_remove",
    "js_calls_to_each",
    "browser_is",
-   "clipboard_copy"
+   "clipboard_copy",
+   "html_remove"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -10498,7 +10500,8 @@
    "html_on",
    "html_component_element_get",
    "html_style_remove",
-   "html_attribute_set"
+   "html_attribute_set",
+   "html_remove"
   ],
   "function_open_app": [
    "function_open_app"
@@ -10891,16 +10894,20 @@
    "html_style_remove"
   ],
   "style_key": [
-   "html_style_remove"
+   "html_style_remove",
+   "html_remove"
   ],
   "b_element": [
-   "html_style_remove"
+   "html_style_remove",
+   "html_remove"
   ],
   "style": [
-   "html_style_remove"
+   "html_style_remove",
+   "html_remove"
   ],
   "removeProperty": [
-   "html_style_remove"
+   "html_style_remove",
+   "html_remove"
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set"
@@ -11577,6 +11584,9 @@
   ],
   "emoji_book_open": [
    "app_reply_main"
+  ],
+  "html_remove": [
+   "html_remove"
   ]
  },
  "functions": {
@@ -21866,6 +21876,19 @@
     "list",
     "separator",
     "joined"
+   ]
+  },
+  "html_remove": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_component_element_get",
+    "html_remove",
+    "b",
+    "style_key",
+    "b_element",
+    "style",
+    "removeProperty"
    ]
   }
  },
