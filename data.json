@@ -1835,7 +1835,8 @@
   "s newl",
   "cs list_join_newline 2",
   "s html,hide",
-  "s html,hid"
+  "s html,hid",
+  "s vis"
  ],
  "marker_current": "1",
  "function_current": "list_join_newline_2",
