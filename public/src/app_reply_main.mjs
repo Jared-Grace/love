@@ -17,7 +17,8 @@ export function app_reply_main() {
     },
   ];
   function lambda(choice) {
-    let component = html_button(parent, text2, function lambda3() {});
+    function lambda3() {}
+    let component = html_button(parent, text2, lambda3);
   }
   each(choices, lambda);
 }
