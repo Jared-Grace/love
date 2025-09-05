@@ -2488,8 +2488,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "app_reply_choices"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -5172,8 +5171,7 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert",
-   "app_reply_choices"
+   "object_property_exists_not_assert"
   ],
   "each_pair": [
    "each_pair",
@@ -22113,8 +22111,6 @@
     "properties",
     "reference",
     "value",
-    "object",
-    "property_name",
     "heal",
     "job",
     "provide",
