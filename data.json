@@ -1840,7 +1840,7 @@
   "c html_style_remove html_remove"
  ],
  "marker_current": "1",
- "function_current": "list_join_newline_2",
+ "function_current": "html_remove",
  "terminal": false,
  "identifiers": {
   "log": [
