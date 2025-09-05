@@ -1,3 +1,4 @@
+import { emoji_book_open } from "./emoji_book_open.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { list_add } from "./list_add.mjs";
 import { emoji_ok } from "./emoji_ok.mjs";
@@ -39,7 +40,7 @@ export function app_reply_main() {
         " doing good " +
         emoji_100() +
         " through the grace of God, because " +
-        "📖" +
+        emoji_book_open() +
         " all things work together for good to them that love God and are called according to the purpose of God! " +
         emoji_pray(),
     },
