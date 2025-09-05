@@ -1841,7 +1841,8 @@
   "s display",
   "s html",
   "c html_style_font_size html_display_none",
-  "c html_display_none html_display_block"
+  "c html_display_none html_display_block",
+  "s dove"
  ],
  "marker_current": "1",
  "function_current": "html_display_block",
