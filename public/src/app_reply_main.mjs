@@ -87,7 +87,7 @@ export function app_reply_main() {
       response: emoji_pray() + " May the LORD provide what is needed",
     },
     {
-      text: emoji_pray() + " Provide",
+      text: emoji_pray() + " Heal",
       response: emoji_pray() + " May the LORD heal the sick",
     },
   ];
