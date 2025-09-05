@@ -68,7 +68,7 @@ export function app_reply_main() {
       let joined = list_join_newline_2(copied);
       await clipboard_copy(joined);
       html_text_set(component2, response2);
-      html_remove(b);
+      html_remove(component);
     }
   }
   each(choices, lambda);
