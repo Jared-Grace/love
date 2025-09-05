@@ -11536,6 +11536,9 @@
   ],
   "emoji_pray": [
    "app_reply_main"
+  ],
+  "string_the_servant_of_god_is": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21760,6 +21763,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "string_the_servant_of_god_is",
     "emoji_pray",
     "emoji_globe_americas",
     "html_text_set",
