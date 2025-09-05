@@ -58,11 +58,11 @@ export function app_reply_choices() {
         emoji_cross(),
     },
     {
-      text:
+      text: emoji_hands_raising() + "Hallelujah",
+      response:
         emoji_hands_raising() +
         " Hallelujah! Hallelujah! Hallelujah! " +
         emoji_voice(),
-      response: emoji_pray() + string_may_the_lord() + "heal the sick",
     },
     {
       text: emoji_pray() + " Heal",
