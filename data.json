@@ -2090,7 +2090,8 @@
    "js_code_brackets_empty",
    "js_dollar_l",
    "app_reply",
-   "app_reply_main"
+   "app_reply_main",
+   "list_join_newline_2"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21835,6 +21836,7 @@
   "list_join_newline_2": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_join",
     "newline",
     "list_join_newline_2",
