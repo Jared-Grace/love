@@ -21732,10 +21732,10 @@
     "response",
     "lambda",
     "choice",
+    "lambda3",
     "component",
     "parent",
-    "text2",
-    "lambda3"
+    "text2"
    ]
   }
  },
