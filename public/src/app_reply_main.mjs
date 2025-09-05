@@ -83,6 +83,10 @@ export function app_reply_main() {
         emoji_trinity() +
         " ! ",
     },
+    {
+      text: emoji_fire() + " Thanks",
+      response: emoji_pray() + " Thank you very much! " + +emoji_smile(),
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
