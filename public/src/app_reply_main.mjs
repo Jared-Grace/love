@@ -1,3 +1,4 @@
+import { emoji_100 } from "./emoji_100.mjs";
 import { emoji_thumbs_up } from "./emoji_thumbs_up.mjs";
 import { string_the_servant_of_god_is } from "./string_the_servant_of_god_is.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
@@ -33,7 +34,7 @@ export function app_reply_main() {
         " " +
         string_the_servant_of_god_is() +
         " doing good through the grace of God " +
-        emoji_cross(),
+        emoji_100(),
     },
     {
       text: emoji_globe_americas() + " Location",
