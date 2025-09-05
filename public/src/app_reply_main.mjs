@@ -16,6 +16,10 @@ import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export function app_reply_main() {
+  let bible = kjv();
+  let properties = object_properties(bible);
+  let reference = list_random_item(properties);
+  let verse = object_property_get(bible, reference);
   const root = html_document_body();
   let copied = [];
   let buttons = null;
