@@ -69,7 +69,11 @@ export function app_reply_main() {
     },
     {
       text: emoji_wave() + " Name",
-      response: string_the_servant_of_god_is() + " called Jared Patten Mathis ",
+      response:
+        emoji_pray() +
+        " " +
+        string_the_servant_of_god_is() +
+        " called Jared Patten Mathis ",
     },
     {
       text: emoji_pray() + " Amen",
