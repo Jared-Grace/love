@@ -7821,8 +7821,7 @@
    "object_copy",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "js_await_add",
-   "app_reply_main"
+   "js_await_add"
   ],
   "js_bang_to_not": [
    "js_bang_to_not",
@@ -11738,9 +11737,6 @@
    "app_reply_main"
   ],
   "preview_refresh": [
-   "app_reply_main"
-  ],
-  "component2": [
    "app_reply_main"
   ]
  },
@@ -21999,8 +21995,6 @@
     "lambda4",
     "preview_refresh",
     "component3",
-    "component2",
-    "copy",
     "choices",
     "lambda",
     "choice",
