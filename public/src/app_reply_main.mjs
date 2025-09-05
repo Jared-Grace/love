@@ -66,7 +66,16 @@ export function app_reply_main() {
         " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
     {
-      text: "🎵 Glory",
+      text: emoji_fire() + " Glory",
+      response:
+        emoji_pray() +
+        emoji_fire() +
+        " All glory to God " +
+        emoji_trinity() +
+        " ! ",
+    },
+    {
+      text: "🎵 Bless",
       response:
         emoji_pray() +
         emoji_fire() +
