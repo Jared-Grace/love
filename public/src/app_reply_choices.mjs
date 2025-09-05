@@ -83,6 +83,10 @@ export function app_reply_choices() {
       response: prayer_start(),
     },
     {
+      text: emoji_pray() + " Preach",
+      response: prayer_start(),
+    },
+    {
       text: emoji_pray() + " Provide",
       response: emoji_pray() + "May the LORD provide what is needed",
     },
