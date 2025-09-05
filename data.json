@@ -11611,9 +11611,6 @@
   ],
   "component3": [
    "app_reply_main"
-  ],
-  "text2": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -21871,7 +21868,6 @@
     "component2",
     "component3",
     "parent",
-    "text2",
     "choices",
     "text",
     "response",
