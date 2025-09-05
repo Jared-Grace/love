@@ -1843,7 +1843,8 @@
   "c html_style_font_size html_display_none",
   "c html_display_none html_display_block",
   "s dove",
-  "n kjv"
+  "n kjv",
+  "s propert"
  ],
  "marker_current": "1",
  "function_current": "kjv",
