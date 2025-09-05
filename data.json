@@ -11733,6 +11733,9 @@
   ],
   "verse": [
    "app_reply_main"
+  ],
+  "preview_refresh": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21995,7 +21998,8 @@
     "response2",
     "text3",
     "component",
-    "lambda3"
+    "lambda3",
+    "preview_refresh"
    ]
   },
   "browser_is": {
