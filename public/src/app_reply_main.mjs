@@ -41,7 +41,6 @@ export function app_reply_main() {
         emoji_globe_americas() +
         " " +
         string_the_servant_of_god_is() +
-        " is" +
         " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
         emoji_pray(),
     },
