@@ -25,7 +25,7 @@ export function app_reply_choices() {
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
-  let with2 = app_reply_pray("Provide", "always be with you");
+  let with2 = app_reply_pray("With", "always be with you");
   let v = [
     {
       text: emoji_pray() + " Amen",
