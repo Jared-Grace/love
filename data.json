@@ -4704,7 +4704,8 @@
   ],
   "clipboard_copy": [
    "clipboard_copy",
-   "function_dependencies_code_copy"
+   "function_dependencies_code_copy",
+   "app_reply_main"
   ],
   "text": [
    "clipboard_copy",
@@ -11518,6 +11519,9 @@
   ],
   "writeText": [
    "clipboard_copy"
+  ],
+  "text2": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21742,6 +21746,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "clipboard_copy",
     "object_property_get",
     "html_button",
     "each",
@@ -21757,6 +21762,7 @@
     "choice",
     "response2",
     "lambda3",
+    "text2",
     "component"
    ]
   },
