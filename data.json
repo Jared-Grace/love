@@ -2105,8 +2105,7 @@
    "html_remove",
    "prayer_end",
    "html_display_none",
-   "html_display_block",
-   "kjv"
+   "html_display_block"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22093,12 +22092,11 @@
   "kjv": {
    "async": false,
    "identifiers": [
-    "marker",
     "kjv"
    ]
   }
  },
- "git_push_when": "2025-09-05T20:18:53.886Z",
+ "git_push_when": "2025-09-05T21:18:59.966Z",
  "error_attention": null,
  "app_current": "replace"
 }
