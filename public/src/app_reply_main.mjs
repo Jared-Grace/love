@@ -26,7 +26,7 @@ export function app_reply_main() {
     async function lambda3() {
       await clipboard_copy(response3);
     }
-    let component = html_button(choice, response2, lambda3);
+    let component = html_button(root, response2, lambda3);
   }
   each(choices, lambda);
 }
