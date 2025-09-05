@@ -1760,7 +1760,6 @@
   "s names",
   "s remove,if",
   "cs list_remove_multiple if_exists",
-  "s remove",
   "de list_remove_multiple_if_exists",
   "r list_remove_multiple list_remove_all_multiple",
   "is list_remove_all_multiple",
@@ -1836,7 +1835,8 @@
   "cs list_join_newline 2",
   "s html,hide",
   "s html,hid",
-  "s vis"
+  "s vis",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "list_join_newline_2",
