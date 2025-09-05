@@ -1,3 +1,4 @@
+import { prayer_ending } from "./prayer_ending.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
 import { emoji_trinity } from "./emoji_trinity.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -58,7 +59,7 @@ export function app_reply_main() {
     },
     {
       text: emoji_pray() + " Amen",
-      response: " Amen! " + emoji_pray(),
+      response: prayer_ending(),
     },
     {
       text: "🎵 Praise",
