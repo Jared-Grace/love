@@ -105,6 +105,12 @@ export function app_reply_main() {
       text: emoji_pray() + " WhatsApp",
       response: "WhatsApp: +1-904-314-4053",
     },
+    {
+      text: emoji_pray() + " sleep",
+      response:
+        emoji_pray() +
+        " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons and bad dreams",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
