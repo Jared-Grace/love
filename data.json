@@ -1707,7 +1707,6 @@
   "s assert",
   "c object_property_exists_assert object_property_exists_not_assert",
   "ffc",
-  "as app",
   "is app_name_prefixed",
   "is app_name_main",
   "o oa",
@@ -1825,7 +1824,8 @@
   "ps",
   "p",
   "nd l",
-  "fts js_calls_to_each"
+  "fts js_calls_to_each",
+  "as app"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_l",
