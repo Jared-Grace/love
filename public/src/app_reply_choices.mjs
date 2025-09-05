@@ -50,6 +50,7 @@ export function app_reply_choices() {
       response:
         emoji_pray() + string_lord_bless_your() + "church " + emoji_church(),
     },
+    education,
     {
       text: emoji_pray() + " Family",
       response:
