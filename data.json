@@ -11610,6 +11610,9 @@
   ],
   "component3": [
    "app_reply_main"
+  ],
+  "emoji_sleep_z": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21834,6 +21837,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_sleep_z",
     "list_empty",
     "prayer_start",
     "prayer_end",
