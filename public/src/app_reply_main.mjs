@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
@@ -17,8 +18,9 @@ export function app_reply_main() {
     },
   ];
   function lambda(choice) {
+    let response2 = object_property_get(choice, "response");
     function lambda3() {}
-    let component = html_button(parent, text2, lambda3);
+    let component = html_button(choice, text2, lambda3);
   }
   each(choices, lambda);
 }
