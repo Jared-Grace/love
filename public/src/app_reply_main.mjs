@@ -51,11 +51,12 @@ export function app_reply_main() {
   }
   buttons = list_map(choices, lambda);
   preview = html_p(root);
+  preview_refresh();
   function preview_refresh() {
-    let concated = list_concat(a, reference + " " + verse);
+    let concated = list_concat(copied, reference + " " + verse);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
-    html_p_text_multiple(preview, copied);
+    html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
   }
 }
