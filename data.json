@@ -11597,6 +11597,9 @@
   ],
   "prayer_ending": [
    "app_reply_main"
+  ],
+  "prayer_start": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21821,6 +21824,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "prayer_start",
     "prayer_ending",
     "emoji_fire",
     "emoji_trinity",
