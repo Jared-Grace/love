@@ -56,8 +56,8 @@ export function app_reply_main() {
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
       list_add(copied, response2);
-      let code = list_join_newline_2(waited2);
-      await clipboard_copy(response2);
+      let joined = list_join_newline_2(waited2);
+      await clipboard_copy(joined);
       html_text_set(component2, response2);
     }
     let component = html_button(root, text3, lambda3);
