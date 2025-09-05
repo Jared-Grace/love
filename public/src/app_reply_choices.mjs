@@ -1,3 +1,4 @@
+import { emoji_family } from "./emoji_family.mjs";
 import { emoji_voice } from "./emoji_voice.mjs";
 import { emoji_hands_raising } from "./emoji_hands_raising.mjs";
 import { emoji_church } from "./emoji_church.mjs";
@@ -42,7 +43,7 @@ export function app_reply_choices() {
     {
       text: emoji_pray() + " Family",
       response:
-        emoji_pray() + string_lord_bless_your() + "family " + emoji_church(),
+        emoji_pray() + string_lord_bless_your() + "family " + emoji_family(),
     },
     {
       text: emoji_fire() + " Glory",
