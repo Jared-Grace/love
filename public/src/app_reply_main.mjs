@@ -19,7 +19,7 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
-export function app_reply_main() {
+export async function app_reply_main() {
   let bible = kjv();
   let properties = object_properties(bible);
   let reference = list_random_item(properties);
@@ -51,16 +51,12 @@ export function app_reply_main() {
   buttons = list_map(choices, lambda);
   preview = html_p(root);
   preview_refresh();
-  async function copy() {
-    let joined = preview_refresh();
-    await clipboard_copy(joined);
-  }
-  function preview_refresh() {
+  async function preview_refresh() {
     let concated = list_concat(copied, reference + " " + verse);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
-    return joined;
+    await clipboard_copy(joined);
   }
 }
