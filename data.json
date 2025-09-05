@@ -11747,6 +11747,9 @@
   ],
   "education": [
    "app_reply_choices"
+  ],
+  "emoji_question": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22104,6 +22107,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_question",
     "emoji_dove",
     "app_reply_pray",
     "emoji_family",
