@@ -22,6 +22,11 @@ export function app_reply_main() {
         " Greetings in the name of our LORD Jesus Christ " +
         emoji_cross(),
     },
+    {
+      text: "Location",
+      response:
+        " From United States of America 🇺🇸, state of Florida, city of Jacksonville",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
