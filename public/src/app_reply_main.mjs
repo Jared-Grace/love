@@ -1,3 +1,4 @@
+import { emoji_fire } from "./emoji_fire.mjs";
 import { emoji_trinity } from "./emoji_trinity.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
@@ -67,7 +68,11 @@ export function app_reply_main() {
     {
       text: "🎵 Glory",
       response:
-        emoji_pray() + "🔥" + " All glory to God " + emoji_trinity() + " ! ",
+        emoji_pray() +
+        emoji_fire() +
+        " All glory to God " +
+        emoji_trinity() +
+        " ! ",
     },
   ];
   function lambda(choice) {
