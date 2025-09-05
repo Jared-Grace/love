@@ -141,7 +141,8 @@ export function app_reply_choices() {
     {
       text: emoji_phone() + " WhatsApp",
       response: emoji_phone() + " WhatsApp: +1-904-314-4053",
-    },will,
+    },
+    will,
     with2,
   ];
   return v;
