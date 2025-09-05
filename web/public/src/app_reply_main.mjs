@@ -15,6 +15,7 @@ import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_wave } from "./emoji_wave.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { marker } from "./marker.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
@@ -54,8 +55,9 @@ export function app_reply_main() {
     let response2 = object_property_get(choice, "response");
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
+      list_add(copied, response2);
+      let code = list_join_newline(waited2);
       await clipboard_copy(response2);
-      list_add(list, item);
       html_text_set(component2, response2);
     }
     let component = html_button(root, text3, lambda3);
