@@ -11683,9 +11683,6 @@
   "emoji_family": [
    "app_reply_choices"
   ],
-  "pray_request": [
-   "app_reply_choices"
-  ],
   "app_reply_pray": [
    "app_reply_choices"
   ]
@@ -22059,7 +22056,6 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
-    "pray_request",
     "v2",
     "v",
     "text",
