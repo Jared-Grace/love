@@ -4753,7 +4753,8 @@
    "html_p_text",
    "http",
    "http_json",
-   "app_reply_choices"
+   "app_reply_choices",
+   "app_reply_main"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -8627,7 +8628,8 @@
   ],
   "lambda5": [
    "js_identifier_defineds",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -10412,7 +10414,8 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen"
+   "html_button_screen",
+   "app_reply_main"
   ],
   "createElement": [
    "html_element"
@@ -11737,6 +11740,9 @@
    "app_reply_main"
   ],
   "preview_refresh": [
+   "app_reply_main"
+  ],
+  "component2": [
    "app_reply_main"
   ]
  },
@@ -21995,6 +22001,10 @@
     "lambda4",
     "preview_refresh",
     "component3",
+    "component2",
+    "parent",
+    "text",
+    "lambda5",
     "choices",
     "lambda",
     "choice",
