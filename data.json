@@ -11687,6 +11687,9 @@
   ],
   "provide": [
    "app_reply_choices"
+  ],
+  "job": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22058,6 +22061,7 @@
     "emoji_pray",
     "app_reply_choices",
     "heal",
+    "job",
     "provide",
     "v",
     "text",
