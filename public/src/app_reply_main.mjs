@@ -1,3 +1,5 @@
+import { emoji_dove } from "./emoji_dove.mjs";
+import { emoji_heart_fire } from "./emoji_heart_fire.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
@@ -68,9 +70,9 @@ export function app_reply_main() {
       response:
         emoji_pray() +
         " All glory to God " +
-        "❤️‍🔥" +
+        emoji_heart_fire() +
         emoji_cross() +
-        "🕊️" +
+        emoji_dove() +
         " ! ",
     },
   ];
