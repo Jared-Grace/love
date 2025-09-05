@@ -34,7 +34,8 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Church",
-      response: string_lord_bless_your() + "church " + emoji_church(),
+      response:
+        emoji_pray() + string_lord_bless_your() + "church " + emoji_church(),
     },
     {
       text: emoji_fire() + " Glory",
