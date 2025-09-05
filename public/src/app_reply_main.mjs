@@ -27,7 +27,9 @@ export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
   function lambda4() {
-    let concated = list_empty(copied);
+    list_empty(copied);
+    let joined = list_join_newline_2(copied);
+    html_text_set(component2, joined);
   }
   let component3 = html_button(parent, text2, lambda4);
   let component2 = html_p(root);
