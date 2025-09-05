@@ -112,7 +112,7 @@ export function app_reply_main() {
       response:
         emoji_pray() +
         emoji_sleep_z() +
-        " May the LORD bless your sleep, make your sleep sweet and peaceful, and protect you from demons and bad dreams. " +
+        " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. " +
         emoji_sleep_face(),
     },
   ];
