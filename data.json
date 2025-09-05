@@ -11512,6 +11512,12 @@
   ],
   "window": [
    "browser_is"
+  ],
+  "navigator": [
+   "clipboard_copy"
+  ],
+  "writeText": [
+   "clipboard_copy"
   ]
  },
  "functions": {
@@ -11848,7 +11854,9 @@
     "clipboard_copy",
     "text",
     "b",
+    "navigator",
     "clipboard",
+    "writeText",
     "default",
     "write"
    ],
