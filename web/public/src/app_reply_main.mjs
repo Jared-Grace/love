@@ -8,6 +8,7 @@ export function app_reply_main() {
       text: "greetings",
       response:
         emoji_wave() +
+        "😁" +
         " Greetings in the name of our LORD Jesus Christ " +
         emoji_cross(),
     },
