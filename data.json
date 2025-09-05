@@ -1833,7 +1833,8 @@
   "s main",
   "s new",
   "s newl",
-  "cs list_join_newline 2"
+  "cs list_join_newline 2",
+  "s html,hide"
  ],
  "marker_current": "1",
  "function_current": "list_join_newline_2",
