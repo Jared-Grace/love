@@ -8628,8 +8628,7 @@
   ],
   "lambda5": [
    "js_identifier_defineds",
-   "app_replace_rule_set",
-   "app_reply_main"
+   "app_replace_rule_set"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -22001,9 +22000,9 @@
     "lambda4",
     "preview_refresh",
     "component3",
-    "lambda5",
     "component2",
     "parent",
+    "copy",
     "choices",
     "lambda",
     "choice",
@@ -22011,7 +22010,6 @@
     "text3",
     "component",
     "lambda3",
-    "copy",
     "joined",
     "concated"
    ]
