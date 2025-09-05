@@ -60,7 +60,8 @@ export function app_reply_main() {
     },
     {
       text: "🎵 Praise",
-      response: " 🎵 🗣️ Praise the LORD our God! 🎶",
+      response:
+        " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
   ];
   function lambda(choice) {
