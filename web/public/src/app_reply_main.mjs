@@ -94,6 +94,10 @@ export function app_reply_main() {
       text: emoji_pray() + " Thanks",
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
+    {
+      text: emoji_pray() + " WhatsApp",
+      response: "WhatsApp: +1-904-314-4053",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
