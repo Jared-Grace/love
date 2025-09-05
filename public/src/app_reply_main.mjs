@@ -69,7 +69,9 @@ export function app_reply_main() {
       text: "🎵 Bless",
       response:
         emoji_pray() +
-        " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think in the name of the Father, and of the Son, and of the Holy Spirit " +
+        " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
+        "in the name of the Father, and of the Son, and of the Holy Spirit" +
+        " " +
         emoji_trinity() +
         " Amen! " +
         emoji_pray(),
@@ -85,6 +87,10 @@ export function app_reply_main() {
     {
       text: emoji_pray() + " Provide",
       response: emoji_pray() + " May the LORD provide what is needed",
+    },
+    {
+      text: emoji_pray() + " Heal",
+      response: emoji_pray() + " May the LORD heal the sick",
     },
     {
       text: emoji_pray() + " Heal",
