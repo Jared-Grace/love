@@ -2851,7 +2851,8 @@
    "list_remove_if_exists",
    "list_remove_all_multiple",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -3791,7 +3792,8 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -3961,7 +3963,8 @@
    "visit_unique_async",
    "marker_screen_add",
    "js_dollar_new",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_reply_main"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -21772,6 +21775,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "list_add",
     "emoji_ok",
     "emoji_100",
     "string_the_servant_of_god_is",
@@ -21800,6 +21804,8 @@
     "response2",
     "text3",
     "lambda3",
+    "list",
+    "item",
     "component"
    ]
   },
