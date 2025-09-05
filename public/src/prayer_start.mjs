@@ -5,6 +5,7 @@ export function prayer_start() {
     emoji_pray() +
     "In the name of the Father, and of the Son, and of the Holy Spirit" +
     " " +
-    emoji_trinity();
+    emoji_trinity() +
+    " : ";
   return v;
 }
