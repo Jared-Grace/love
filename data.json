@@ -5146,7 +5146,8 @@
    "object_merge",
    "object_properties",
    "object_properties_delete",
-   "tasks_run"
+   "tasks_run",
+   "app_reply_main"
   ],
   "each_object": [
    "each_object",
@@ -5838,7 +5839,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_names",
+   "app_reply_main"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11707,10 +11709,12 @@
    "app_reply_choices"
   ],
   "kjv": [
-   "kjv"
+   "kjv",
+   "app_reply_main"
   ],
   "list_random_item": [
-   "list_random_item"
+   "list_random_item",
+   "app_reply_main"
   ],
   "arr": [
    "list_random_item"
@@ -11720,6 +11724,15 @@
   ],
   "random": [
    "list_random_item"
+  ],
+  "bible": [
+   "app_reply_main"
+  ],
+  "reference": [
+   "app_reply_main"
+  ],
+  "verse": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21944,6 +21957,9 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "list_random_item",
+    "object_properties",
+    "kjv",
     "html_p_text_multiple",
     "html_clear",
     "app_reply_choices",
@@ -21962,6 +21978,10 @@
     "html_button",
     "marker",
     "app_reply_main",
+    "bible",
+    "properties",
+    "reference",
+    "verse",
     "root",
     "copied",
     "buttons",
