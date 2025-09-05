@@ -10923,8 +10923,7 @@
   ],
   "app_replace_main": [
    "app_replace",
-   "app_replace_main",
-   "app_reply"
+   "app_replace_main"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function",
@@ -11473,7 +11472,8 @@
    "app_reply"
   ],
   "app_reply_main": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_reply"
   ]
  },
  "functions": {
@@ -21683,8 +21683,8 @@
   "app_reply": {
    "async": true,
    "identifiers": [
+    "app_reply_main",
     "firebase_storage_function_run",
-    "app_replace_main",
     "marker",
     "app_reply",
     "f_name",
