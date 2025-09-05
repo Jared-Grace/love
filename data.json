@@ -2102,7 +2102,8 @@
    "list_join_newline_2",
    "html_remove",
    "prayer_end",
-   "html_display_none"
+   "html_display_none",
+   "html_display_block"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10488,7 +10489,8 @@
    "html_component_wrap",
    "html_attribute_set",
    "html_remove",
-   "html_display_none"
+   "html_display_none",
+   "html_display_block"
   ],
   "component": [
    "html_text_set",
@@ -11633,11 +11635,15 @@
    "app_reply_main"
   ],
   "html_style_set": [
-   "html_display_none"
+   "html_display_none",
+   "html_display_block"
   ],
   "html_display_none": [
    "html_display_none",
    "app_reply_main"
+  ],
+  "html_display_block": [
+   "html_display_block"
   ]
  },
  "functions": {
@@ -21984,6 +21990,15 @@
     "marker",
     "html_style_set",
     "html_display_none",
+    "element"
+   ]
+  },
+  "html_display_block": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_style_set",
+    "html_display_block",
     "element"
    ]
   }
