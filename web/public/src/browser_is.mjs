@@ -1,5 +1,5 @@
 export function browser_is() {
-  let v =
+  let b =
     typeof window !== "undefined" && typeof window.document !== "undefined";
-  return v;
+  return b;
 }
