@@ -1843,7 +1843,7 @@
   "c html_style_font_size html_display_none"
  ],
  "marker_current": "1",
- "function_current": "prayer_end",
+ "function_current": "html_display_none",
  "terminal": false,
  "identifiers": {
   "log": [
