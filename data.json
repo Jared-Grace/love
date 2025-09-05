@@ -4624,7 +4624,8 @@
    "js_calls_to_each",
    "browser_is",
    "clipboard_copy",
-   "html_remove"
+   "html_remove",
+   "app_reply_main"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11583,7 +11584,8 @@
    "app_reply_main"
   ],
   "html_remove": [
-   "html_remove"
+   "html_remove",
+   "app_reply_main"
   ],
   "remove": [
    "html_remove"
@@ -21811,6 +21813,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_remove",
     "emoji_book_open",
     "list_join_newline_2",
     "list_add",
@@ -21843,7 +21846,8 @@
     "text3",
     "component",
     "lambda3",
-    "joined"
+    "joined",
+    "b"
    ]
   },
   "browser_is": {
