@@ -11588,6 +11588,12 @@
   ],
   "remove": [
    "html_remove"
+  ],
+  "emoji_dove": [
+   "app_reply_main"
+  ],
+  "emoji_heart_fire": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21812,6 +21818,8 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_dove",
+    "emoji_heart_fire",
     "html_remove",
     "emoji_book_open",
     "list_join_newline_2",
