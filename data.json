@@ -11664,9 +11664,6 @@
   "blessing": [
    "string_lord_bless_your"
   ],
-  "string_may_the_lord": [
-   "app_reply_choices"
-  ],
   "string_lord_bless": [
    "string_lord_bless_your",
    "app_reply_choices"
@@ -11684,6 +11681,9 @@
    "app_reply_choices"
   ],
   "app_reply_pray": [
+   "app_reply_choices"
+  ],
+  "v22": [
    "app_reply_choices"
   ]
  },
@@ -22037,7 +22037,6 @@
     "emoji_hands_raising",
     "emoji_church",
     "string_lord_bless",
-    "string_may_the_lord",
     "string_lord_bless_your",
     "emoji_phone",
     "emoji_sleep_face",
@@ -22057,6 +22056,7 @@
     "emoji_pray",
     "app_reply_choices",
     "v2",
+    "v22",
     "v",
     "text",
     "response"
