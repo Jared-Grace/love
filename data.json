@@ -474,7 +474,6 @@
   "i each_pair",
   "s identifier",
   "s inter",
-  "s copy",
   "o marker_expand",
   "au marker_expand",
   "a x marker_expand",
@@ -1828,7 +1827,8 @@
   "an reply",
   "s app",
   "s hash",
-  "s emoji"
+  "s emoji",
+  "s copy"
  ],
  "marker_current": "1",
  "function_current": "app_reply_main",
