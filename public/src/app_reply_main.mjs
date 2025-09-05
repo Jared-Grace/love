@@ -1,4 +1,4 @@
-import { list_concat } from "./list_concat.mjs";
+import { list_empty } from "./list_empty.mjs";
 import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
@@ -27,7 +27,7 @@ export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
   function lambda4() {
-    let concated = list_concat(a, b);
+    let concated = list_empty(copied);
   }
   let component3 = html_button(parent, text2, lambda4);
   let component2 = html_p(root);
