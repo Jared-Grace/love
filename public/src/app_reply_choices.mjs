@@ -40,6 +40,11 @@ export function app_reply_choices() {
         emoji_pray() + string_lord_bless_your() + "church " + emoji_church(),
     },
     {
+      text: emoji_pray() + " Family",
+      response:
+        emoji_pray() + string_lord_bless_your() + "family " + emoji_church(),
+    },
+    {
       text: emoji_fire() + " Glory",
       response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
