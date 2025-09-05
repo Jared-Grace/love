@@ -11554,9 +11554,6 @@
   "text3": [
    "app_reply_main"
   ],
-  "component2": [
-   "app_reply_main"
-  ],
   "emoji_pray": [
    "prayer_end"
   ],
@@ -11608,6 +11605,9 @@
    "app_reply_main"
   ],
   "app_reply_choices": [
+   "app_reply_main"
+  ],
+  "preview": [
    "app_reply_main"
   ]
  },
@@ -21854,7 +21854,7 @@
     "buttons",
     "lambda4",
     "joined",
-    "component2",
+    "preview",
     "component3",
     "choices",
     "lambda",
