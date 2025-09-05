@@ -2745,7 +2745,8 @@
    "app_replace_rule_set",
    "app_replace_settings",
    "js_dollar_new",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_reply_main"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2868,7 +2869,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -3818,7 +3820,8 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -21866,7 +21869,10 @@
     "text3",
     "component",
     "lambda3",
-    "body"
+    "body",
+    "list",
+    "lambda2",
+    "item"
    ]
   },
   "browser_is": {
