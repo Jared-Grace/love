@@ -11540,9 +11540,6 @@
   "string_the_servant_of_god_is": [
    "app_reply_main"
   ],
-  "emoji_thumbs_up": [
-   "app_reply_main"
-  ],
   "emoji_100": [
    "app_reply_main"
   ],
@@ -21774,7 +21771,6 @@
    "identifiers": [
     "emoji_ok",
     "emoji_100",
-    "emoji_thumbs_up",
     "string_the_servant_of_god_is",
     "emoji_pray",
     "emoji_globe_americas",
