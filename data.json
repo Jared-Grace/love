@@ -1908,7 +1908,8 @@
    "list_concat_multiple",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "app_reply_main"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2642,7 +2643,8 @@
    "js_expand_generic",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_reply_main"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2846,7 +2848,8 @@
    "list_remove_if_exists",
    "list_remove_all_multiple",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -3785,7 +3788,8 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -21708,6 +21712,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "each",
     "emoji_smile",
     "emoji_wave",
     "emoji_cross",
@@ -21715,7 +21720,10 @@
     "app_reply_main",
     "choices",
     "text",
-    "response"
+    "response",
+    "list",
+    "lambda",
+    "item"
    ]
   }
  },
