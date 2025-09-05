@@ -1,3 +1,4 @@
+import { emoji_phone } from "./emoji_phone.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
 import { emoji_globe_americas } from "./emoji_globe_americas.mjs";
@@ -108,8 +109,8 @@ export function app_reply_choices() {
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
     {
-      text: emoji_pray() + " WhatsApp",
-      response: "📞" + " WhatsApp: +1-904-314-4053",
+      text: emoji_phone() + " WhatsApp",
+      response: emoji_phone() + " WhatsApp: +1-904-314-4053",
     },
   ];
   return v;
