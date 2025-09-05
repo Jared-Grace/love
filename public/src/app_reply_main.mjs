@@ -80,7 +80,7 @@ export function app_reply_main() {
       text: emoji_pray() + " Bless",
       response:
         prayer_start() +
-        " May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
+        "May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
         prayer_end(),
     },
     {
@@ -89,11 +89,11 @@ export function app_reply_main() {
     },
     {
       text: emoji_pray() + " Provide",
-      response: emoji_pray() + " May the LORD provide what is needed",
+      response: emoji_pray() + "May the LORD provide what is needed",
     },
     {
       text: emoji_pray() + " Heal",
-      response: emoji_pray() + " May the LORD heal the sick",
+      response: emoji_pray() + "May the LORD heal the sick",
     },
     {
       text: emoji_fire() + " Glory",
