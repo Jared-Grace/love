@@ -11520,9 +11520,6 @@
   "writeText": [
    "clipboard_copy"
   ],
-  "text2": [
-   "app_reply_main"
-  ],
   "response3": [
    "app_reply_main"
   ]
@@ -21766,7 +21763,6 @@
     "response2",
     "response3",
     "lambda3",
-    "text2",
     "component"
    ]
   },
