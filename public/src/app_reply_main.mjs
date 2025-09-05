@@ -1,3 +1,4 @@
+import { html_display_block } from "./html_display_block.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
@@ -34,8 +35,7 @@ export function app_reply_main() {
     list_empty(copied);
     let joined = list_join_newline_2(copied);
     html_text_set(component2, joined);
-    function lambda2(item) {}
-    each(buttons, lambda2);
+    each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_p(root);
