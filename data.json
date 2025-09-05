@@ -11401,8 +11401,7 @@
    "js_expand_generic"
   ],
   "concated": [
-   "list_concat",
-   "app_reply_main"
+   "list_concat"
   ],
   "list_remove_multiple_if_exists": [
    "list_remove_multiple_if_exists"
@@ -21868,11 +21867,11 @@
     "root",
     "copied",
     "lambda4",
-    "concated",
+    "joined",
+    "component2",
     "component3",
     "parent",
     "text2",
-    "component2",
     "choices",
     "text",
     "response",
@@ -21881,8 +21880,7 @@
     "response2",
     "text3",
     "component",
-    "lambda3",
-    "joined"
+    "lambda3"
    ]
   },
   "browser_is": {
