@@ -55,8 +55,8 @@ export function app_reply_main() {
         emoji_pray(),
     },
     {
-      text: emoji_ok() + " Yes",
-      response: emoji_ok() + " Yes!",
+      text: emoji_pray() + " Amen",
+      response: emoji_pray() + " Amen!",
     },
   ];
   function lambda(choice) {
