@@ -3057,7 +3057,8 @@
    "marker_rename",
    "function_open_dollar_choice",
    "js_assign_combine",
-   "list_index_of_delta"
+   "list_index_of_delta",
+   "prayer_end"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11558,7 +11559,8 @@
    "app_reply_main"
   ],
   "emoji_pray": [
-   "app_reply_main"
+   "app_reply_main",
+   "prayer_end"
   ],
   "string_the_servant_of_god_is": [
    "app_reply_main"
@@ -11601,6 +11603,9 @@
   ],
   "prayer_start": [
    "app_reply_main"
+  ],
+  "prayer_end": [
+   "prayer_end"
   ]
  },
  "functions": {
@@ -21906,6 +21911,14 @@
     "component",
     "element",
     "remove"
+   ]
+  },
+  "prayer_end": {
+   "async": false,
+   "identifiers": [
+    "emoji_pray",
+    "prayer_end",
+    "v"
    ]
   }
  },
