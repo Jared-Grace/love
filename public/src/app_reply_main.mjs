@@ -46,12 +46,27 @@ export function app_reply_main() {
       response: prayer_end(),
     },
     {
+      text: emoji_pray() + " Bless",
+      response:
+        prayer_start() +
+        "May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
+        prayer_end(),
+    },
+    {
+      text: emoji_fire() + " Glory",
+      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
+    },
+    {
       text: emoji_wave() + "Greetings",
       response:
         emoji_wave() +
         emoji_smile() +
         " Greetings in the name of our LORD Jesus Christ! " +
         emoji_cross(),
+    },
+    {
+      text: emoji_pray() + " Heal",
+      response: emoji_pray() + "May the LORD heal the sick",
     },
     {
       text: emoji_ok() + "How r u",
@@ -90,27 +105,12 @@ export function app_reply_main() {
         " 🎵 🗣️ Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
     {
-      text: emoji_pray() + " Bless",
-      response:
-        prayer_start() +
-        "May God bless you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
-        prayer_end(),
-    },
-    {
       text: emoji_pray() + " Pray",
       response: prayer_start(),
     },
     {
       text: emoji_pray() + " Provide",
       response: emoji_pray() + "May the LORD provide what is needed",
-    },
-    {
-      text: emoji_pray() + " Heal",
-      response: emoji_pray() + "May the LORD heal the sick",
-    },
-    {
-      text: emoji_fire() + " Glory",
-      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
     {
       text: emoji_pray() + " Thanks",
