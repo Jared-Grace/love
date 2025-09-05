@@ -20,7 +20,7 @@ export function app_reply_main() {
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
     function lambda3() {}
-    let component = html_button(choice, text2, lambda3);
+    let component = html_button(choice, response2, lambda3);
   }
   each(choices, lambda);
 }
