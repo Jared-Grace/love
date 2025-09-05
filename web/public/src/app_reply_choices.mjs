@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { kjv } from "./kjv.mjs";
@@ -28,7 +29,8 @@ import { emoji_pray } from "./emoji_pray.mjs";
 export function app_reply_choices() {
   let bible = kjv();
   let properties = object_properties(bible);
-  let r = list_random_item(properties);
+  let reference = list_random_item(properties);
+  let value = object_property_get(object, property_name);
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
