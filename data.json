@@ -1831,7 +1831,8 @@
   "s web",
   "n browser_is",
   "s main",
-  "s new"
+  "s new",
+  "s newl"
  ],
  "marker_current": "1",
  "function_current": "browser_is",
