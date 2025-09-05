@@ -29,6 +29,8 @@ export async function app_reply_main() {
   let buttons = null;
   let preview = null;
   function lambda4() {
+    reference = list_random_item(properties);
+    verse = object_property_get(bible, reference);
     list_empty(copied);
     preview_refresh();
     each(buttons, html_display_block);
