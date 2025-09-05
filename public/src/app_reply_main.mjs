@@ -19,6 +19,7 @@ export function app_reply_main() {
   const root = html_document_body();
   let copied = [];
   let buttons = null;
+  let preview = null;
   function lambda4() {
     list_empty(copied);
     let joined = list_join_newline_2(copied);
@@ -44,6 +45,5 @@ export function app_reply_main() {
     return component;
   }
   buttons = list_map(choices, lambda);
-  let preview = null;
   preview = html_p(root);
 }
