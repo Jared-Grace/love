@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_wave } from "./emoji_wave.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
@@ -14,4 +15,5 @@ export function app_reply_main() {
         emoji_cross(),
     },
   ];
+  each(list, function lambda(item) {});
 }
