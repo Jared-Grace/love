@@ -1,3 +1,4 @@
+import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_wave } from "./emoji_wave.mjs";
@@ -15,6 +16,8 @@ export function app_reply_main() {
         emoji_cross(),
     },
   ];
-  function lambda(choice) {}
+  function lambda(choice) {
+    let component = html_button(parent, text2, function lambda3() {});
+  }
   each(choices, lambda);
 }
