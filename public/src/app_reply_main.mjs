@@ -76,12 +76,7 @@ export function app_reply_main() {
     },
     {
       text: emoji_fire() + " Glory",
-      response:
-        emoji_pray() +
-        emoji_fire() +
-        " All glory to God " +
-        emoji_trinity() +
-        " ! ",
+      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
     {
       text: emoji_pray() + " Thanks",
