@@ -10389,7 +10389,8 @@
    "html_text_set",
    "html_button",
    "html_clear",
-   "html_p_text"
+   "html_p_text",
+   "app_reply_main"
   ],
   "data_identifiers_get": [
    "data_identifiers_search",
@@ -11530,7 +11531,10 @@
   "component2": [
    "app_reply_main"
   ],
-  "his": [
+  "component3": [
+   "app_reply_main"
+  ],
+  "text2": [
    "app_reply_main"
   ]
  },
@@ -21756,6 +21760,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "html_p",
     "html_document_body",
     "clipboard_copy",
@@ -21777,7 +21782,8 @@
     "response2",
     "text3",
     "lambda3",
-    "his",
+    "component3",
+    "text2",
     "component"
    ]
   },
