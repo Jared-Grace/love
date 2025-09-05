@@ -1918,7 +1918,8 @@
    "list_concat_multiple",
    "js_expand_generic",
    "list_remove_multiple_if_exists",
-   "list_remove_all_multiple"
+   "list_remove_all_multiple",
+   "app_reply_main"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2739,7 +2740,8 @@
    "app_replace_rule_set",
    "app_replace_settings",
    "js_dollar_new",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_reply_main"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2862,7 +2864,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -3812,7 +3815,8 @@
    "js_expand_generic",
    "list_remove_if_exists",
    "list_next_try",
-   "list_index_of_next_outside"
+   "list_index_of_next_outside",
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -21848,6 +21852,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "each",
     "list_map",
     "emoji_sleep_face",
     "emoji_sleep_z",
@@ -21878,9 +21883,13 @@
     "app_reply_main",
     "root",
     "copied",
+    "buttons",
     "lambda4",
     "joined",
     "component2",
+    "list",
+    "lambda2",
+    "item",
     "component3",
     "choices",
     "text",
@@ -21890,8 +21899,7 @@
     "response2",
     "text3",
     "component",
-    "lambda3",
-    "buttons"
+    "lambda3"
    ]
   },
   "browser_is": {
