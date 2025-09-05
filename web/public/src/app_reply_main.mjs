@@ -43,7 +43,7 @@ export async function app_reply_main() {
     let component = html_button(root, text3, lambda3);
     async function lambda3() {
       list_add(copied, response2);
-      await copy();
+      await preview_refresh();
       html_display_none(component);
     }
     return component;
