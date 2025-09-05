@@ -10392,8 +10392,7 @@
    "html_element",
    "html_button",
    "html_button_element",
-   "html_button_screen",
-   "app_reply_main"
+   "html_button_screen"
   ],
   "createElement": [
    "html_element"
@@ -21867,7 +21866,6 @@
     "joined",
     "component2",
     "component3",
-    "parent",
     "choices",
     "text",
     "response",
