@@ -9262,7 +9262,8 @@
    "marker_down_choices_lambda",
    "marker_down_generic",
    "js_dollar",
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "app_reply_main"
   ],
   "marker_call": [
    "marker_call"
@@ -21696,7 +21697,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "app_reply_main"
+    "app_reply_main",
+    "choices"
    ]
   }
  },
