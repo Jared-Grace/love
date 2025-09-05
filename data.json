@@ -11479,6 +11479,9 @@
   "app_reply_main": [
    "app_reply_main",
    "app_reply"
+  ],
+  "emoji_cross": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21699,6 +21702,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "emoji_cross",
     "marker",
     "app_reply_main",
     "choices",
