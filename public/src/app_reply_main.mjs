@@ -10,7 +10,7 @@ import { emoji_cross } from "./emoji_cross.mjs";
 import { marker } from "./marker.mjs";
 export function app_reply_main() {
   const root = html_document_body();
-  let component2 = html_p(root2);
+  let component2 = html_p(root);
   marker("1");
   let choices = [
     {
