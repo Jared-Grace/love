@@ -1,3 +1,4 @@
+import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
@@ -106,7 +107,7 @@ export function app_reply_main() {
       response: "WhatsApp: +1-904-314-4053",
     },
     {
-      text: emoji_pray() + " sleep",
+      text: emoji_pray() + emoji_sleep_z() + " sleep",
       response:
         emoji_pray() +
         " May the LORD bless your sleep, make your sleep sweet and peaceful, protect you from demons and bad dreams",
