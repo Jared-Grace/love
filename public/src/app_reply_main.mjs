@@ -1,3 +1,4 @@
+import { emoji_globe_americas } from "./emoji_globe_americas.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -23,7 +24,7 @@ export function app_reply_main() {
         emoji_cross(),
     },
     {
-      text: "Location",
+      text: emoji_globe_americas() + " Location",
       response:
         " From United States of America 🇺🇸, state of Florida, city of Jacksonville",
     },
