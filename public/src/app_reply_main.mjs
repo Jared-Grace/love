@@ -1,3 +1,6 @@
+import { list_random_item } from "./list_random_item.mjs";
+import { object_properties } from "./object_properties.mjs";
+import { kjv } from "./kjv.mjs";
 import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_choices } from "./app_reply_choices.mjs";
