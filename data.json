@@ -11044,7 +11044,8 @@
    "http_json"
   ],
   "response": [
-   "http"
+   "http",
+   "app_reply_main"
   ],
   "fetch": [
    "http"
@@ -21700,7 +21701,8 @@
     "marker",
     "app_reply_main",
     "choices",
-    "text"
+    "text",
+    "response"
    ]
   }
  },
