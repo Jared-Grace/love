@@ -1,3 +1,4 @@
+import { string_the_servant_of_god_is } from "./string_the_servant_of_god_is.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_globe_americas } from "./emoji_globe_americas.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -30,7 +31,7 @@ export function app_reply_main() {
         emoji_wave() +
         emoji_smile() +
         " " +
-        "The servant of God is" +
+        string_the_servant_of_god_is() +
         " doing good through the grace of God " +
         emoji_cross(),
     },
@@ -39,7 +40,8 @@ export function app_reply_main() {
       response:
         emoji_globe_americas() +
         " " +
-        "The servant of God is" +
+        string_the_servant_of_god_is() +
+        " is" +
         " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
         emoji_pray(),
     },
