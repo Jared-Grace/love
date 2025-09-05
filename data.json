@@ -2326,8 +2326,7 @@
    "js_calls_to_each",
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
-   "app_reply_main",
-   "list_join_newline_2"
+   "app_reply_main"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -4726,7 +4725,8 @@
    "html_p_text",
    "http",
    "http_json",
-   "app_reply_main"
+   "app_reply_main",
+   "list_join_newline_2"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -21842,7 +21842,7 @@
     "list_join_newline_2",
     "list",
     "separator",
-    "code"
+    "text"
    ]
   }
  },
