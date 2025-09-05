@@ -1829,10 +1829,11 @@
   "s hash",
   "s emoji",
   "s copy",
-  "s web"
+  "s web",
+  "n browser_is"
  ],
  "marker_current": "1",
- "function_current": "app_reply_main",
+ "function_current": "browser_is",
  "terminal": false,
  "identifiers": {
   "log": [
