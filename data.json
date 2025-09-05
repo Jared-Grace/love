@@ -5837,7 +5837,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_names",
+   "app_reply_choices"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -9445,7 +9446,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_reply_choices"
   ],
   "Object": [
    "object_properties",
@@ -22054,6 +22056,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "object_properties",
     "kjv",
     "emoji_dove",
     "app_reply_pray",
@@ -22081,7 +22084,8 @@
     "emoji_pray",
     "app_reply_choices",
     "bible",
-    "object_properties",
+    "properties",
+    "obj",
     "heal",
     "job",
     "provide",
