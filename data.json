@@ -11702,7 +11702,11 @@
    "app_reply_choices"
   ],
   "kjv": [
-   "kjv"
+   "kjv",
+   "app_reply_choices"
+  ],
+  "bible": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22049,6 +22053,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "kjv",
     "emoji_dove",
     "app_reply_pray",
     "emoji_family",
@@ -22074,6 +22079,7 @@
     "prayer_end",
     "emoji_pray",
     "app_reply_choices",
+    "bible",
     "heal",
     "job",
     "provide",
