@@ -1,3 +1,4 @@
+import { emoji_voice } from "./emoji_voice.mjs";
 import { emoji_hands_raising } from "./emoji_hands_raising.mjs";
 import { emoji_church } from "./emoji_church.mjs";
 import { string_lord_bless } from "./string_lord_bless.mjs";
@@ -97,7 +98,7 @@ export function app_reply_choices() {
       text: "🎵 Praise",
       response:
         " 🎵 " +
-        "🗣️" +
+        emoji_voice() +
         " Praise the LORD our God in the name of Jesus Christ! 🎶",
     },
     {
