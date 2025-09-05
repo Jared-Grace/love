@@ -11624,6 +11624,9 @@
   ],
   "buttons": [
    "app_reply_main"
+  ],
+  "$s": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21891,6 +21894,7 @@
     "text3",
     "component",
     "lambda3",
+    "$s",
     "buttons"
    ]
   },
