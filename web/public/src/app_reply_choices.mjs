@@ -85,6 +85,7 @@ export function app_reply_choices() {
         " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28)" +
         emoji_pray(),
     },
+    job,
     {
       text: emoji_globe_americas() + " Location",
       response:
