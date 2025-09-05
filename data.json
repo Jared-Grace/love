@@ -1827,7 +1827,8 @@
   "as app",
   "an reply",
   "s app",
-  "s hash"
+  "s hash",
+  "s emoji"
  ],
  "marker_current": "1",
  "function_current": "app_reply_main",
