@@ -24,7 +24,7 @@ export function app_reply_main() {
     let response2 = object_property_get(choice, "response");
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
-      await clipboard_copy(response3);
+      await clipboard_copy(response2);
     }
     let component = html_button(root, text3, lambda3);
   }
