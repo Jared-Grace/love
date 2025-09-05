@@ -11130,8 +11130,7 @@
    "firebase_storage_download_property"
   ],
   "list_join_newline": [
-   "function_dependencies_code",
-   "app_reply_main"
+   "function_dependencies_code"
   ],
   "firebase_storage_function_run": [
    "app_replace",
@@ -11564,7 +11563,8 @@
    "list_join_newline_2"
   ],
   "list_join_newline_2": [
-   "list_join_newline_2"
+   "list_join_newline_2",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -21789,6 +21789,7 @@
   "app_reply_main": {
    "async": false,
    "identifiers": [
+    "list_join_newline_2",
     "list_add",
     "emoji_ok",
     "emoji_100",
@@ -21806,7 +21807,6 @@
     "emoji_wave",
     "emoji_cross",
     "marker",
-    "list_join_newline",
     "app_reply_main",
     "root",
     "copied",
