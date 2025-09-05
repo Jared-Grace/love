@@ -4535,8 +4535,7 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all",
-   "app_reply_choices"
+   "list_all"
   ],
   "readdirSync": [
    "folder_read"
@@ -6358,7 +6357,8 @@
    "js_dollar_new",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "list_random_item"
+   "list_random_item",
+   "app_reply_choices"
   ],
   "formatted": [
    "function_format",
@@ -22104,7 +22104,7 @@
     "app_reply_choices",
     "bible",
     "properties",
-    "v2",
+    "r",
     "heal",
     "job",
     "provide",
