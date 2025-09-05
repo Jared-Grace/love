@@ -2108,8 +2108,7 @@
    "html_remove",
    "prayer_end",
    "html_display_none",
-   "html_display_block",
-   "list_random_item"
+   "html_display_block"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3074,7 +3073,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "list_random_item"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9224,7 +9224,8 @@
   ],
   "length": [
    "list_size",
-   "string_size"
+   "string_size",
+   "list_random_item"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -9810,7 +9811,8 @@
    "function_aliases_restore"
   ],
   "Math": [
-   "date_diff_ms"
+   "date_diff_ms",
+   "list_random_item"
   ],
   "abs": [
    "date_diff_ms"
@@ -11714,6 +11716,15 @@
    "app_reply_choices"
   ],
   "list_random_item": [
+   "list_random_item"
+  ],
+  "arr": [
+   "list_random_item"
+  ],
+  "floor": [
+   "list_random_item"
+  ],
+  "random": [
    "list_random_item"
   ]
  },
@@ -22117,8 +22128,13 @@
   "list_random_item": {
    "async": false,
    "identifiers": [
-    "marker",
-    "list_random_item"
+    "list_random_item",
+    "arr",
+    "v",
+    "Math",
+    "floor",
+    "random",
+    "length"
    ]
   }
  },
