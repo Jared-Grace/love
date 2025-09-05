@@ -27,7 +27,7 @@ export function app_reply_main() {
         emoji_cross(),
     },
     {
-      text: emoji_wave() + "How r u",
+      text: emoji_thumbs_up() + "How r u",
       response:
         emoji_thumbs_up() +
         " " +
