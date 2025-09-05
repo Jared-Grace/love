@@ -1,3 +1,4 @@
+import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { each } from "./each.mjs";
@@ -19,7 +20,9 @@ export function app_reply_main() {
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
-    function lambda3() {}
+    async function lambda3() {
+      await clipboard_copy(text2);
+    }
     let component = html_button(choice, response2, lambda3);
   }
   each(choices, lambda);
