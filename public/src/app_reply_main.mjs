@@ -1,3 +1,4 @@
+import { emoji_ok } from "./emoji_ok.mjs";
 import { emoji_100 } from "./emoji_100.mjs";
 import { emoji_thumbs_up } from "./emoji_thumbs_up.mjs";
 import { string_the_servant_of_god_is } from "./string_the_servant_of_god_is.mjs";
@@ -28,7 +29,7 @@ export function app_reply_main() {
         emoji_cross(),
     },
     {
-      text: emoji_thumbs_up() + "How r u",
+      text: emoji_ok() + "How r u",
       response:
         emoji_thumbs_up() +
         " " +
