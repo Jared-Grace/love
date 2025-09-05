@@ -38,7 +38,9 @@ export function app_reply_main() {
         string_the_servant_of_god_is() +
         " doing good " +
         emoji_100() +
-        " through the grace of God, because all things work together for good to them that love God and are called according to the purpose of God! " +
+        " through the grace of God, because " +
+        "📖" +
+        " all things work together for good to them that love God and are called according to the purpose of God! " +
         emoji_pray(),
     },
     {
