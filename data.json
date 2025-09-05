@@ -4536,7 +4536,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "app_reply_choices"
   ],
   "readdirSync": [
    "folder_read"
@@ -11716,10 +11717,12 @@
    "app_reply_choices"
   ],
   "list_random_item": [
-   "list_random_item"
+   "list_random_item",
+   "app_reply_choices"
   ],
   "arr": [
-   "list_random_item"
+   "list_random_item",
+   "app_reply_choices"
   ],
   "floor": [
    "list_random_item"
@@ -22072,6 +22075,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "list_random_item",
     "object_properties",
     "kjv",
     "emoji_dove",
@@ -22101,6 +22105,8 @@
     "app_reply_choices",
     "bible",
     "properties",
+    "v2",
+    "arr",
     "heal",
     "job",
     "provide",
