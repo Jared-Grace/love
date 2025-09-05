@@ -82,6 +82,14 @@ export function app_reply_main() {
       text: emoji_pray() + " Thanks",
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
+    {
+      text: emoji_pray() + " Provide",
+      response: emoji_pray() + " May the LORD provide what is needed",
+    },
+    {
+      text: emoji_pray() + " Provide",
+      response: emoji_pray() + " May the LORD heal the sick",
+    },
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
