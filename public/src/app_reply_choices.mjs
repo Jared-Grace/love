@@ -22,7 +22,7 @@ import { emoji_fire } from "./emoji_fire.mjs";
 import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-export function app_reply_choices() {
+export function app_reply_choices() {$a
   let v2 = app_reply_pray("Provide", "provide what is needed");
   let v = [
     {
