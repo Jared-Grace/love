@@ -68,7 +68,7 @@ export function app_reply_choices() {
     {
       text: emoji_pray() + " Give",
       response:
-        emoji_pray() + " Sorry, I have nothing to give you at this time ! ",
+        emoji_pray() + " Sorry, I have nothing to give you at this time",
     },
     {
       text: emoji_wave() + "Greetings",
