@@ -43,6 +43,10 @@ export function app_reply_choices() {
       response: emoji_pray() + "May the LORD heal the sick",
     },
     {
+      text: emoji_pray() + " How family",
+      response: emoji_pray() + "Plesae pray for my family",
+    },
+    {
       text: emoji_ok() + "How r u",
       response:
         emoji_ok() +
