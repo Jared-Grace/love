@@ -1,3 +1,4 @@
+import { kjv } from "./kjv.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
 import { emoji_family } from "./emoji_family.mjs";
@@ -22,7 +23,8 @@ import { emoji_fire } from "./emoji_fire.mjs";
 import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-export function app_reply_choices() {bible=kjv()
+export function app_reply_choices() {
+  let bible = kjv();
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
