@@ -21870,9 +21870,9 @@
     "component",
     "lambda3",
     "body",
-    "list",
     "lambda2",
-    "item"
+    "item",
+    "list"
    ]
   },
   "browser_is": {
