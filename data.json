@@ -1836,7 +1836,8 @@
   "s html,hide",
   "s html,hid",
   "s vis",
-  "s remove"
+  "s remove",
+  "c html_style_remove html_remove"
  ],
  "marker_current": "1",
  "function_current": "list_join_newline_2",
