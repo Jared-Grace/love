@@ -3066,7 +3066,8 @@
    "list_index_of_delta",
    "prayer_end",
    "prayer_start",
-   "string_the_servant_of_god_is"
+   "string_the_servant_of_god_is",
+   "app_reply_choices"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4745,7 +4746,8 @@
    "html_button_screen",
    "html_p_text",
    "http",
-   "http_json"
+   "http_json",
+   "app_reply_choices"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -11098,7 +11100,8 @@
    "http_json"
   ],
   "response": [
-   "http"
+   "http",
+   "app_reply_choices"
   ],
   "fetch": [
    "http"
@@ -11556,10 +11559,12 @@
    "app_reply_main"
   ],
   "emoji_pray": [
-   "prayer_end"
+   "prayer_end",
+   "app_reply_choices"
   ],
   "string_the_servant_of_god_is": [
-   "string_the_servant_of_god_is"
+   "string_the_servant_of_god_is",
+   "app_reply_choices"
   ],
   "copied": [
    "app_reply_main"
@@ -11579,13 +11584,16 @@
    "html_remove"
   ],
   "emoji_trinity": [
-   "prayer_start"
+   "prayer_start",
+   "app_reply_choices"
   ],
   "prayer_start": [
-   "prayer_start"
+   "prayer_start",
+   "app_reply_choices"
   ],
   "prayer_end": [
-   "prayer_end"
+   "prayer_end",
+   "app_reply_choices"
   ],
   "component3": [
    "app_reply_main"
@@ -11606,13 +11614,44 @@
    "app_reply_main"
   ],
   "app_reply_choices": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_reply_choices"
   ],
   "preview": [
    "app_reply_main"
   ],
   "html_p_text_multiple": [
    "app_reply_main"
+  ],
+  "emoji_sleep_face": [
+   "app_reply_choices"
+  ],
+  "emoji_sleep_z": [
+   "app_reply_choices"
+  ],
+  "emoji_globe_americas": [
+   "app_reply_choices"
+  ],
+  "emoji_book_open": [
+   "app_reply_choices"
+  ],
+  "emoji_100": [
+   "app_reply_choices"
+  ],
+  "emoji_ok": [
+   "app_reply_choices"
+  ],
+  "emoji_cross": [
+   "app_reply_choices"
+  ],
+  "emoji_smile": [
+   "app_reply_choices"
+  ],
+  "emoji_wave": [
+   "app_reply_choices"
+  ],
+  "emoji_fire": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -21954,6 +21993,30 @@
     "html_style_set",
     "html_display_block",
     "element"
+   ]
+  },
+  "app_reply_choices": {
+   "async": false,
+   "identifiers": [
+    "emoji_sleep_face",
+    "emoji_sleep_z",
+    "emoji_globe_americas",
+    "emoji_book_open",
+    "emoji_100",
+    "string_the_servant_of_god_is",
+    "emoji_ok",
+    "emoji_cross",
+    "emoji_smile",
+    "emoji_wave",
+    "emoji_trinity",
+    "emoji_fire",
+    "prayer_start",
+    "prayer_end",
+    "emoji_pray",
+    "app_reply_choices",
+    "v",
+    "text",
+    "response"
    ]
   }
  },
