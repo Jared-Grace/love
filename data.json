@@ -4529,7 +4529,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "app_reply_choices"
   ],
   "readdirSync": [
    "folder_read"
@@ -11686,6 +11687,9 @@
    "app_reply_choices"
   ],
   "pray_request": [
+   "app_reply_choices"
+  ],
+  "app_reply_pray": [
    "app_reply_choices"
   ]
  },
@@ -22033,6 +22037,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "app_reply_pray",
     "emoji_family",
     "emoji_voice",
     "emoji_hands_raising",
@@ -22059,6 +22064,7 @@
     "app_reply_choices",
     "pray_title",
     "pray_request",
+    "v2",
     "v",
     "text",
     "response"
