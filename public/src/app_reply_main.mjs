@@ -22,11 +22,11 @@ export function app_reply_main() {
   ];
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
-    let response3 = object_property_get(choice, "response");
+    let text3 = object_property_get(choice, "text");
     async function lambda3() {
       await clipboard_copy(response3);
     }
-    let component = html_button(root, response2, lambda3);
+    let component = html_button(root, text3, lambda3);
   }
   each(choices, lambda);
 }
