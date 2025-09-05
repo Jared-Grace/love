@@ -27,6 +27,7 @@ export function app_reply_main() {
     let text3 = object_property_get(choice, "text");
     async function lambda3() {
       await clipboard_copy(response2);
+      his;
     }
     let component = html_button(root, text3, lambda3);
   }
