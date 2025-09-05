@@ -29,8 +29,7 @@ export function app_reply_main() {
   let preview = null;
   function lambda4() {
     list_empty(copied);
-    let joined = list_join_newline_2(copied);
-    html_text_set(preview, joined);
+    preview_refresh();
     each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
