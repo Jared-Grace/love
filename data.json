@@ -11529,9 +11529,6 @@
   ],
   "component2": [
    "app_reply_main"
-  ],
-  "root2": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -21769,7 +21766,6 @@
     "app_reply_main",
     "root",
     "component2",
-    "root2",
     "choices",
     "text",
     "response",
