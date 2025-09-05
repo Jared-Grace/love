@@ -1675,7 +1675,6 @@
   "s att",
   "c html_document_body html_document_root",
   "s style",
-  "s html",
   "is html_update",
   "cs html_name_to_path dev",
   "cs html_update dev",
@@ -1839,7 +1838,8 @@
   "r prayer_ending prayer_end",
   "s clear",
   "s list",
-  "s display"
+  "s display",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "prayer_end",
