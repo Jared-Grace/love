@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { emoji_sleep_face } from "./emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "./emoji_sleep_z.mjs";
 import { list_empty } from "./list_empty.mjs";
@@ -20,7 +21,6 @@ import { html_document_body } from "./html_document_body.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
-import { each } from "./each.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_wave } from "./emoji_wave.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
@@ -138,5 +138,5 @@ export function app_reply_main() {
     }
     return component;
   }
-  each(choices, lambda);
+  let buttons = list_map(choices, lambda);
 }
