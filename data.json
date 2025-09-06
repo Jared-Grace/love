@@ -1849,10 +1849,11 @@
   "c html_on_click html_on_keydown",
   "s display",
   "s property",
-  "s letter"
+  "s letter",
+  "n string_letters_only"
  ],
  "marker_current": "1",
- "function_current": "html_on_keydown",
+ "function_current": "string_letters_only",
  "terminal": false,
  "identifiers": {
   "log": [
