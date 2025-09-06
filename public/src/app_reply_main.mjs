@@ -43,7 +43,6 @@ export async function app_reply_main() {
   marker("1");
   let choices = app_reply_choices();
   function buttons_refresh() {
-    each(buttons, html_display_block);
     function lambda2(item) {
       let includes = list_includes(chosens, item);
       if (includes) {
