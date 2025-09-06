@@ -142,6 +142,10 @@ export function app_reply_choices() {
       response:
         emoji_pray() + "At this time, I cannot choose a day and time to preach",
     },
+    {
+      text: emoji_pray() + " " + "Prayers",
+      response: emoji_pray() + "May there be prayer for you",
+    },
     provide,
     {
       text: emoji_pray() + " Sleep",
