@@ -567,7 +567,6 @@
   "fw list_map list_map_index",
   "fw list_filter list_find",
   "fw list_find list_find_property",
-  "s property",
   "au list_filter_property",
   "i list_find_property",
   "au function_param_swap",
@@ -1848,7 +1847,8 @@
   "n list_random_item",
   "s click",
   "c html_on_click html_on_keydown",
-  "s display"
+  "s display",
+  "s property"
  ],
  "marker_current": "1",
  "function_current": "html_on_keydown",
