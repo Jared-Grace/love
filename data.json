@@ -10077,7 +10077,8 @@
    "function_aliases_restore"
   ],
   "li": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_reply_main"
   ],
   "at": [
    "function_aliases_restore"
@@ -22039,6 +22040,7 @@
     "choices",
     "lambda2",
     "item",
+    "li",
     "list",
     "lambda",
     "choice",

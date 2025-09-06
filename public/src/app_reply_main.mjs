@@ -43,7 +43,7 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   function buttons_refresh() {
     each(buttons, html_display_block);
-    function lambda2(item) {
+    function lambda2(item) {li
       if (false) {
       }
     }
