@@ -10510,7 +10510,8 @@
    "html_remove",
    "html_display_none",
    "html_display_block",
-   "html_clear"
+   "html_clear",
+   "app_reply_main"
   ],
   "component": [
    "html_text_set",
@@ -22043,6 +22044,7 @@
     "lambda2",
     "item",
     "includes",
+    "element",
     "list",
     "lambda",
     "choice",
