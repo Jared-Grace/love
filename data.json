@@ -10313,8 +10313,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "app_reply_main"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -11778,9 +11777,6 @@
    "app_reply_main"
   ],
   "buttons_refresh": [
-   "app_reply_main"
-  ],
-  "item2": [
    "app_reply_main"
   ]
  },
@@ -22047,8 +22043,6 @@
     "lambda2",
     "item",
     "includes",
-    "list2",
-    "item2",
     "list",
     "lambda",
     "choice",
