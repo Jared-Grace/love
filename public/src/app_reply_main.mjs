@@ -48,6 +48,7 @@ export async function app_reply_main() {
     async function lambda3() {
       list_add(copied, response2);
       await preview_refresh();
+      list_add(list, item);
       html_display_none(component);
     }
     return component;
