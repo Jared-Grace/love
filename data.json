@@ -11792,6 +11792,9 @@
   ],
   "text2": [
    "app_reply_main"
+  ],
+  "typed": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -22050,6 +22053,7 @@
     "buttons",
     "preview",
     "chosens",
+    "typed",
     "lambda4",
     "preview_refresh",
     "buttons_refresh",
