@@ -3396,8 +3396,7 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust",
-   "app_reply_main"
+   "app_replace_font_size_adjust"
   ],
   "name": [
    "watch",
@@ -3853,7 +3852,8 @@
    "marker_down_choices_lambda",
    "marker_functionize",
    "visit_unique_async",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "app_reply_main"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -4745,7 +4745,8 @@
    "marker_down_choices_lambda",
    "string_includes",
    "js_node_types_includes",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "app_reply_main"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -7119,8 +7120,7 @@
    "list_squash",
    "log_unparse_try",
    "marker_down_choices",
-   "js_dollar_x",
-   "app_reply_main"
+   "js_dollar_x"
   ],
   "js_node_type_is": [
    "js_atomize_function",
@@ -8475,8 +8475,7 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x",
-   "app_reply_main"
+   "js_dollar_x"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -10314,7 +10313,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "app_reply_main"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -11778,6 +11778,9 @@
    "app_reply_main"
   ],
   "buttons_refresh": [
+   "app_reply_main"
+  ],
+  "item2": [
    "app_reply_main"
   ]
  },
@@ -22003,7 +22006,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
-    "list_is",
+    "list_includes",
     "list_concat",
     "list_random_item",
     "object_properties",
@@ -22043,8 +22046,9 @@
     "choices",
     "lambda2",
     "item",
-    "l",
-    "value",
+    "includes",
+    "list2",
+    "item2",
     "list",
     "lambda",
     "choice",
