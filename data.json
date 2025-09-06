@@ -3084,8 +3084,7 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv",
-   "string_lower_to"
+   "kjv"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11811,6 +11810,9 @@
    "string_lower_to"
   ],
   "toLowerCase": [
+   "string_lower_to"
+  ],
+  "lower": [
    "string_lower_to"
   ]
  },
@@ -22278,7 +22280,7 @@
     "marker",
     "string_lower_to",
     "s",
-    "v",
+    "lower",
     "toLowerCase"
    ]
   }
