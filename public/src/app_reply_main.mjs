@@ -34,6 +34,7 @@ export async function app_reply_main() {
     verse = object_property_get(bible, reference);
     list_empty(copied);
     preview_refresh();
+    chosens = [];
     each(buttons, html_display_block);
   }
   let component3 = html_button(root, "Reset", lambda4);
