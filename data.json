@@ -3081,8 +3081,7 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv",
-   "app_reply_main"
+   "kjv"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6708,7 +6707,8 @@
   "letters": [
    "function_name_to_acronym",
    "list_join_empty",
-   "string_letters_only"
+   "string_letters_only",
+   "app_reply_main"
   ],
   "unaliased_actual": [
    "function_name_unalias"
@@ -11788,8 +11788,7 @@
    "app_reply_main"
   ],
   "str": [
-   "string_letters_only",
-   "app_reply_main"
+   "string_letters_only"
   ],
   "text2": [
    "app_reply_main"
@@ -22060,8 +22059,7 @@
     "lambda2",
     "item",
     "text2",
-    "v",
-    "str",
+    "letters",
     "includes",
     "lambda",
     "choice",
