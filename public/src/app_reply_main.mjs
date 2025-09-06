@@ -40,6 +40,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   function lambda4() {
+    typed = "";
     reference = list_random_item(properties);
     verse = object_property_get(bible, reference);
     list_empty(copied);
