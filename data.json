@@ -3082,7 +3082,8 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "string_letters_only"
+   "string_letters_only",
+   "app_reply_main"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11783,10 +11784,12 @@
    "app_reply_main"
   ],
   "string_letters_only": [
-   "string_letters_only"
+   "string_letters_only",
+   "app_reply_main"
   ],
   "str": [
-   "string_letters_only"
+   "string_letters_only",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -22011,6 +22014,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "string_letters_only",
     "object_property_set_exists_not",
     "list_includes",
     "list_concat",
@@ -22052,6 +22056,8 @@
     "choices",
     "lambda2",
     "item",
+    "v",
+    "str",
     "includes",
     "lambda",
     "choice",
