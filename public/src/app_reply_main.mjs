@@ -43,7 +43,8 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   function buttons_refresh() {
     each(buttons, html_display_block);
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
   }
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
