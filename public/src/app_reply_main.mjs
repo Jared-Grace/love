@@ -34,7 +34,9 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
-  function lambda6() {}
+  function lambda6(event) {
+    let key = object_property_get(event, "key");
+  }
   html_on_keydown(root, lambda6);
   function lambda4() {
     reference = list_random_item(properties);
