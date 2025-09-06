@@ -2110,7 +2110,8 @@
    "html_remove",
    "prayer_end",
    "html_display_none",
-   "html_display_block"
+   "html_display_block",
+   "html_on_keydown"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22193,6 +22194,7 @@
   "html_on_keydown": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_on",
     "html_on_keydown",
     "component",
