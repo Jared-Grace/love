@@ -2113,7 +2113,8 @@
    "prayer_end",
    "html_display_none",
    "html_display_block",
-   "html_on_keydown"
+   "html_on_keydown",
+   "string_letters_only"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11778,6 +11779,9 @@
   ],
   "buttons_refresh": [
    "app_reply_main"
+  ],
+  "string_letters_only": [
+   "string_letters_only"
   ]
  },
  "functions": {
@@ -22218,6 +22222,13 @@
     "component",
     "lambda",
     "name_event"
+   ]
+  },
+  "string_letters_only": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_letters_only"
    ]
   }
  },
