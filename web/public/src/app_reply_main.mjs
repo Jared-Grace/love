@@ -47,7 +47,7 @@ export async function app_reply_main() {
   function buttons_refresh() {
     function lambda2(item) {
       let text2 = object_property_get(item, "text");
-      let v = string_letters_only(str);
+      let letters = string_letters_only(text2);
       let includes = list_includes(chosens, item);
       if (includes) {
         html_display_none(item);
