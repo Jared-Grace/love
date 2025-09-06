@@ -3081,7 +3081,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "string_letters_only"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11054,7 +11055,8 @@
    "firebase_deploy_function"
   ],
   "replace": [
-   "date_now_file"
+   "date_now_file",
+   "string_letters_only"
   ],
   "file_name_json": [
    "file_name_json"
@@ -11781,6 +11783,9 @@
    "app_reply_main"
   ],
   "string_letters_only": [
+   "string_letters_only"
+  ],
+  "str": [
    "string_letters_only"
   ]
  },
@@ -22228,7 +22233,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "string_letters_only"
+    "string_letters_only",
+    "str",
+    "v",
+    "replace"
    ]
   }
  },
