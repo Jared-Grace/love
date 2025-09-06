@@ -2878,8 +2878,7 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline",
-   "app_reply_main"
+   "list_join_newline"
   ],
   "v": [
    "data_identifiers_file",
@@ -22043,7 +22042,6 @@
     "lambda2",
     "item",
     "includes",
-    "list",
     "lambda",
     "choice",
     "response2",
