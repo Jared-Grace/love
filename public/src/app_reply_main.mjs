@@ -58,7 +58,9 @@ export async function app_reply_main() {
     let response2 = object_property_get(choice, "response");
     let text = object_property_get(choice, "text");
     let component = html_button(root, text, lambda3);
-    let to2 = object_merge(to, from);
+    object_merge(component, {
+      text,
+    });
     async function lambda3() {
       list_add(copied, response2);
       await preview_refresh();
