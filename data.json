@@ -1838,7 +1838,6 @@
   "r prayer_ending prayer_end",
   "s clear",
   "s list",
-  "s display",
   "s html",
   "c html_style_font_size html_display_none",
   "c html_display_none html_display_block",
@@ -1848,7 +1847,8 @@
   "s random",
   "n list_random_item",
   "s click",
-  "c html_on_click html_on_keydown"
+  "c html_on_click html_on_keydown",
+  "s display"
  ],
  "marker_current": "1",
  "function_current": "html_on_keydown",
