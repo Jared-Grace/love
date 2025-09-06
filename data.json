@@ -2116,7 +2116,8 @@
    "html_display_none",
    "html_display_block",
    "html_on_keydown",
-   "string_letters_only"
+   "string_letters_only",
+   "string_lower_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11803,6 +11804,9 @@
   ],
   "event": [
    "app_reply_main"
+  ],
+  "string_lower_to": [
+   "string_lower_to"
   ]
  },
  "functions": {
@@ -22261,6 +22265,13 @@
     "str",
     "letters",
     "replace"
+   ]
+  },
+  "string_lower_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_lower_to"
    ]
   }
  },
