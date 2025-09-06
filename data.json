@@ -1848,7 +1848,8 @@
   "s click",
   "c html_on_click html_on_keydown",
   "s display",
-  "s property"
+  "s property",
+  "s letter"
  ],
  "marker_current": "1",
  "function_current": "html_on_keydown",
