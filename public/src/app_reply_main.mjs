@@ -35,12 +35,16 @@ export async function app_reply_main() {
     list_empty(copied);
     preview_refresh();
     chosens = [];
-    each(buttons, html_display_block);
+    buttons_refresh();
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
   marker("1");
   let choices = app_reply_choices();
+  function buttons_refresh() {
+    each(buttons, html_display_block);
+    each(list, function lambda2(item) {});
+  }
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
     let text3 = object_property_get(choice, "text");
