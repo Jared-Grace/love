@@ -1851,7 +1851,7 @@
   "c html_on_click html_on_keydown"
  ],
  "marker_current": "1",
- "function_current": "list_random_item",
+ "function_current": "html_on_keydown",
  "terminal": false,
  "identifiers": {
   "log": [
