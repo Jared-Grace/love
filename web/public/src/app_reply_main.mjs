@@ -1,3 +1,4 @@
+import { html_on_keydown } from "./html_on_keydown.mjs";
 import { string_letters_only } from "./string_letters_only.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -33,6 +34,7 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
+  html_on_keydown(component4, function lambda6() {});
   function lambda4() {
     reference = list_random_item(properties);
     verse = object_property_get(bible, reference);
