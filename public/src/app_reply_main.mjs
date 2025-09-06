@@ -45,8 +45,8 @@ export async function app_reply_main() {
   function buttons_refresh() {
     each(buttons, html_display_block);
     function lambda2(item) {
-      let includes = list_includes(list2, item2);
-      if (false) {
+      let includes = list_includes(chosens, item);
+      if (includes) {
       }
     }
     each(list, lambda2);
