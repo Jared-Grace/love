@@ -4310,7 +4310,8 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to"
+   "string_lower_to",
+   "app_reply_main"
   ],
   "a": [
    "string_suffix_without",
@@ -11807,13 +11808,15 @@
    "app_reply_main"
   ],
   "string_lower_to": [
-   "string_lower_to"
+   "string_lower_to",
+   "app_reply_main"
   ],
   "toLowerCase": [
    "string_lower_to"
   ],
   "lower": [
-   "string_lower_to"
+   "string_lower_to",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -22038,6 +22041,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "string_lower_to",
     "html_on_keydown",
     "string_letters_only",
     "object_property_set_exists_not",
@@ -22087,6 +22091,8 @@
     "item",
     "text2",
     "letters",
+    "lower",
+    "s",
     "includes",
     "lambda",
     "choice",
