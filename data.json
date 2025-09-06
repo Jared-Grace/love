@@ -8190,7 +8190,8 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account"
+   "firebase_service_account",
+   "app_reply_main"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8415,7 +8416,8 @@
   "string_starts_with": [
    "string_prefix_without",
    "string_starts_with",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "app_reply_main"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -11028,7 +11030,8 @@
    "folder_read"
   ],
   "sw": [
-   "string_starts_with"
+   "string_starts_with",
+   "app_reply_main"
   ],
   "only": [
    "list_single",
@@ -22041,6 +22044,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "string_lower_to",
     "html_on_keydown",
     "string_letters_only",
@@ -22092,7 +22096,9 @@
     "text2",
     "letters",
     "lower",
+    "sw",
     "s",
+    "prefix",
     "includes",
     "lambda",
     "choice",
