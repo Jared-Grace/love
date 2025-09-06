@@ -11753,6 +11753,9 @@
   ],
   "travel": [
    "app_reply_choices"
+  ],
+  "string_the_servant_of_god": [
+   "string_the_servant_of_god_is"
   ]
  },
  "functions": {
@@ -22085,6 +22088,7 @@
   "string_the_servant_of_god_is": {
    "async": false,
    "identifiers": [
+    "string_the_servant_of_god",
     "string_the_servant_of_god_is",
     "v"
    ]
