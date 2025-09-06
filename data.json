@@ -1850,7 +1850,8 @@
   "s display",
   "s property",
   "s letter",
-  "n string_letters_only"
+  "n string_letters_only",
+  "s lower"
  ],
  "marker_current": "1",
  "function_current": "string_letters_only",
