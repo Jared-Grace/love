@@ -11797,9 +11797,6 @@
   ],
   "typed": [
    "app_reply_main"
-  ],
-  "component4": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -22061,7 +22058,6 @@
     "chosens",
     "typed",
     "lambda6",
-    "component4",
     "lambda4",
     "preview_refresh",
     "buttons_refresh",
