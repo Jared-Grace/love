@@ -46,6 +46,7 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   function buttons_refresh() {
     function lambda2(item) {
+      let text2 = object_property_get(item, "text");
       let v = string_letters_only(str);
       let includes = list_includes(chosens, item);
       if (includes) {
