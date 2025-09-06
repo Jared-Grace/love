@@ -144,7 +144,9 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " " + "Prayers",
-      response: emoji_pray() + "May there be prayer for you",
+      response:
+        emoji_pray() +
+        "According to the desire of God, may there be prayer for you",
     },
     provide,
     {
