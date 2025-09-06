@@ -35,7 +35,7 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   function lambda6() {}
-  html_on_keydown(component4, lambda6);
+  html_on_keydown(root, lambda6);
   function lambda4() {
     reference = list_random_item(properties);
     verse = object_property_get(bible, reference);
