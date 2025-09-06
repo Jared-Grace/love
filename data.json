@@ -4309,7 +4309,8 @@
    "string_split_space",
    "string_split_empty",
    "string_replace",
-   "marker_rename"
+   "marker_rename",
+   "string_lower_to"
   ],
   "a": [
    "string_suffix_without",
@@ -11806,6 +11807,9 @@
    "app_reply_main"
   ],
   "string_lower_to": [
+   "string_lower_to"
+  ],
+  "toLowerCase": [
    "string_lower_to"
   ]
  },
@@ -22271,7 +22275,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "string_lower_to"
+    "string_lower_to",
+    "s",
+    "toLowerCase"
    ]
   }
  },
