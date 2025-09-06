@@ -1,4 +1,4 @@
-import { list_is } from "./list_is.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { object_properties } from "./object_properties.mjs";
@@ -45,7 +45,7 @@ export async function app_reply_main() {
   function buttons_refresh() {
     each(buttons, html_display_block);
     function lambda2(item) {
-      let l = list_is(value);
+      let includes = list_includes(list2, item2);
       if (false) {
       }
     }
