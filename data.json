@@ -1851,10 +1851,11 @@
   "s property",
   "s letter",
   "n string_letters_only",
-  "s lower"
+  "s lower",
+  "n string_lower_to"
  ],
  "marker_current": "1",
- "function_current": "string_letters_only",
+ "function_current": "string_lower_to",
  "terminal": false,
  "identifiers": {
   "log": [
