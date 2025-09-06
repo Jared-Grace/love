@@ -2669,7 +2669,8 @@
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
    "js_assign_combine",
-   "app_reply_main"
+   "app_reply_main",
+   "html_on_keydown"
   ],
   "previous": [
    "data_identifiers_file",
@@ -10520,7 +10521,8 @@
    "html_attribute_set",
    "app_replace_settings",
    "app_reply_main",
-   "html_remove"
+   "html_remove",
+   "html_on_keydown"
   ],
   "innerHTML": [
    "html_text_set"
@@ -10746,11 +10748,13 @@
   ],
   "html_on": [
    "html_on",
-   "html_on_click"
+   "html_on_click",
+   "html_on_keydown"
   ],
   "name_event": [
    "html_on",
-   "html_on_click"
+   "html_on_click",
+   "html_on_keydown"
   ],
   "addEventListener": [
    "html_on"
@@ -11759,6 +11763,9 @@
   "string_the_servant_of_god": [
    "string_the_servant_of_god_is",
    "app_reply_choices"
+  ],
+  "html_on_keydown": [
+   "html_on_keydown"
   ]
  },
  "functions": {
@@ -22181,6 +22188,16 @@
     "floor",
     "random",
     "length"
+   ]
+  },
+  "html_on_keydown": {
+   "async": false,
+   "identifiers": [
+    "html_on",
+    "html_on_keydown",
+    "component",
+    "lambda",
+    "name_event"
    ]
   }
  },
