@@ -1,3 +1,4 @@
+import { string_the_servant_of_god } from "./string_the_servant_of_god.mjs";
 import { emoji_question } from "./emoji_question.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
@@ -108,6 +109,15 @@ export function app_reply_choices() {
         emoji_pray(),
     },
     job,
+    {
+      text: emoji_globe_americas() + " Language",
+      response:
+        emoji_globe_americas() +
+        " " +
+        string_the_servant_of_god() +
+        " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
+        emoji_pray(),
+    },
     {
       text: emoji_globe_americas() + " Location",
       response:
