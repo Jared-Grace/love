@@ -1,3 +1,4 @@
+import { list_is } from "./list_is.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { object_properties } from "./object_properties.mjs";
@@ -43,7 +44,8 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   function buttons_refresh() {
     each(buttons, html_display_block);
-    function lambda2(item) {li
+    function lambda2(item) {
+      let l = list_is(value);
       if (false) {
       }
     }
