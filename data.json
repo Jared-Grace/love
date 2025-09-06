@@ -6353,8 +6353,7 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename",
-   "app_reply_main"
+   "marker_rename"
   ],
   "r": [
    "function_format",
@@ -6445,8 +6444,7 @@
    "function_name_to_path_import",
    "string_replace",
    "html_update_generic",
-   "marker_rename",
-   "app_reply_main"
+   "marker_rename"
   ],
   "i": [
    "function_identifier_replace",
@@ -11777,9 +11775,6 @@
    "app_reply_main"
   ],
   "buttons_refresh": [
-   "app_reply_main"
-  ],
-  "to2": [
    "app_reply_main"
   ]
  },
@@ -22053,9 +22048,6 @@
     "text",
     "component",
     "lambda3",
-    "to2",
-    "to",
-    "from",
     "concated",
     "joined"
    ]
