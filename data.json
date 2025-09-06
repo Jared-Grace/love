@@ -4761,7 +4761,8 @@
    "html_p_text",
    "http",
    "http_json",
-   "app_reply_choices"
+   "app_reply_choices",
+   "app_reply_main"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6328,7 +6329,8 @@
    "js_imports_unused",
    "function_exists_inner",
    "function_parse_declaration_inner",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "u": [
    "function_exists",
@@ -6351,7 +6353,8 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename"
+   "marker_rename",
+   "app_reply_main"
   ],
   "r": [
    "function_format",
@@ -6442,7 +6445,8 @@
    "function_name_to_path_import",
    "string_replace",
    "html_update_generic",
-   "marker_rename"
+   "marker_rename",
+   "app_reply_main"
   ],
   "i": [
    "function_identifier_replace",
@@ -11579,9 +11583,6 @@
   "writeText": [
    "clipboard_copy"
   ],
-  "text3": [
-   "app_reply_main"
-  ],
   "emoji_pray": [
    "prayer_end",
    "app_reply_choices"
@@ -11776,6 +11777,9 @@
    "app_reply_main"
   ],
   "buttons_refresh": [
+   "app_reply_main"
+  ],
+  "to2": [
    "app_reply_main"
   ]
  },
@@ -22001,6 +22005,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "object_merge",
     "list_includes",
     "list_concat",
     "list_random_item",
@@ -22045,9 +22050,12 @@
     "lambda",
     "choice",
     "response2",
-    "text3",
+    "text",
     "component",
     "lambda3",
+    "to2",
+    "to",
+    "from",
     "concated",
     "joined"
    ]
