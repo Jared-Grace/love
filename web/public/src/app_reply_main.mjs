@@ -1,3 +1,4 @@
+import { object_merge } from "./object_merge.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -55,8 +56,9 @@ export async function app_reply_main() {
   }
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
-    let text3 = object_property_get(choice, "text");
-    let component = html_button(root, text3, lambda3);
+    let text = object_property_get(choice, "text");
+    let component = html_button(root, text, lambda3);
+    let to2 = object_merge(to, from);
     async function lambda3() {
       list_add(copied, response2);
       await preview_refresh();
