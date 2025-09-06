@@ -1,3 +1,4 @@
+import { string_letters_only } from "./string_letters_only.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -45,6 +46,7 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   function buttons_refresh() {
     function lambda2(item) {
+      let v = string_letters_only(str);
       let includes = list_includes(chosens, item);
       if (includes) {
         html_display_none(item);
