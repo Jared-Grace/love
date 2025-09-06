@@ -49,7 +49,7 @@ export async function app_reply_main() {
       if (includes) {
         html_display_block(item);
       } else {
-        html_display_none(element);
+        html_display_none(item);
       }
     }
     each(list, lambda2);
