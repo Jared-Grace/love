@@ -1,3 +1,4 @@
+import { string_lower_to } from "./string_lower_to.mjs";
 import { html_on_keydown } from "./html_on_keydown.mjs";
 import { string_letters_only } from "./string_letters_only.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
@@ -56,6 +57,7 @@ export async function app_reply_main() {
     function lambda2(item) {
       let text2 = object_property_get(item, "text");
       let letters = string_letters_only(text2);
+      let lower = string_lower_to(s);
       let includes = list_includes(chosens, item);
       if (includes) {
         html_display_none(item);
