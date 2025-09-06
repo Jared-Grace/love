@@ -68,6 +68,7 @@ export async function app_reply_main() {
   buttons = list_map(choices, lambda);
   preview = html_p(root);
   preview_refresh();
+  buttons_refresh();
   async function preview_refresh() {
     let concated = list_concat(copied, reference + " " + verse);
     let joined = list_join_newline_2(concated);
