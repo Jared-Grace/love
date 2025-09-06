@@ -10983,7 +10983,8 @@
   ],
   "lambda6": [
    "app_replace_rule_set",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_reply_main"
   ],
   "sliced": [
    "list_slice"
@@ -11775,7 +11776,8 @@
    "app_reply_choices"
   ],
   "html_on_keydown": [
-   "html_on_keydown"
+   "html_on_keydown",
+   "app_reply_main"
   ],
   "chosens": [
    "app_reply_main"
@@ -11794,6 +11796,9 @@
    "app_reply_main"
   ],
   "typed": [
+   "app_reply_main"
+  ],
+  "component4": [
    "app_reply_main"
   ]
  },
@@ -22019,6 +22024,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "html_on_keydown",
     "string_letters_only",
     "object_property_set_exists_not",
     "list_includes",
@@ -22054,6 +22060,8 @@
     "preview",
     "chosens",
     "typed",
+    "component4",
+    "lambda6",
     "lambda4",
     "preview_refresh",
     "buttons_refresh",
