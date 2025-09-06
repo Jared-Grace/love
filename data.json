@@ -4268,7 +4268,8 @@
    "http",
    "list_index_of_delta",
    "marker_rename",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_reply_main"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -4310,8 +4311,7 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to",
-   "app_reply_main"
+   "string_lower_to"
   ],
   "a": [
    "string_suffix_without",
@@ -8190,8 +8190,7 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account",
-   "app_reply_main"
+   "firebase_service_account"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -22044,6 +22043,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "not",
     "string_starts_with",
     "string_lower_to",
     "html_on_keydown",
@@ -22097,8 +22097,6 @@
     "letters",
     "lower",
     "sw",
-    "s",
-    "prefix",
     "includes",
     "lambda",
     "choice",
