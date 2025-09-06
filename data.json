@@ -3082,7 +3082,6 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "string_letters_only",
    "app_reply_main"
   ],
   "file_overwrite": [
@@ -6708,7 +6707,8 @@
   ],
   "letters": [
    "function_name_to_acronym",
-   "list_join_empty"
+   "list_join_empty",
+   "string_letters_only"
   ],
   "unaliased_actual": [
    "function_name_unalias"
@@ -22245,7 +22245,7 @@
     "marker",
     "string_letters_only",
     "str",
-    "v",
+    "letters",
     "replace"
    ]
   }
