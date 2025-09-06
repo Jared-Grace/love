@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -58,6 +59,7 @@ export async function app_reply_main() {
     let response2 = object_property_get(choice, "response");
     let text = object_property_get(choice, "text");
     let component = html_button(root, text, lambda3);
+    object_property_set_exists_not(object, property_name, value);
     object_merge(component, {
       text,
     });
