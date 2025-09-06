@@ -61,7 +61,7 @@ export async function app_reply_main() {
       list_add(copied, response2);
       await preview_refresh();
       list_add(chosens, component);
-      html_display_none(component);
+      buttons_refresh();
     }
     return component;
   }
