@@ -47,6 +47,7 @@ export async function app_reply_main() {
     function lambda2(item) {
       let includes = list_includes(chosens, item);
       if (includes) {
+        html_display_block(element);
       }
     }
     each(list, lambda2);
