@@ -51,7 +51,7 @@ export async function app_reply_main() {
         html_display_none(item);
       }
     }
-    each(list, lambda2);
+    each(buttons, lambda2);
   }
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
