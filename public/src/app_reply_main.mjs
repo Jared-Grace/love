@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { string_lower_to } from "./string_lower_to.mjs";
 import { html_on_keydown } from "./html_on_keydown.mjs";
@@ -59,9 +60,9 @@ export async function app_reply_main() {
       let text2 = object_property_get(item, "text");
       let letters = string_letters_only(text2);
       let lower = string_lower_to(letters);
-      let sw = string_starts_with(s, prefix);
+      let sw = string_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
-      if (includes) {
+      if (includes || not(sw)) {
         html_display_none(item);
       } else {
         html_display_block(item);
