@@ -40,6 +40,7 @@ export async function app_reply_main() {
   function lambda6(event) {
     let key = object_property_get(event, "key");
     typed += key;
+    buttons_refresh();
   }
   html_on_keydown(root, lambda6);
   function lambda4() {
