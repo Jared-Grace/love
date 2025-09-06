@@ -1847,7 +1847,8 @@
   "s propert",
   "s random",
   "n list_random_item",
-  "s click"
+  "s click",
+  "c html_on_click html_on_keydown"
  ],
  "marker_current": "1",
  "function_current": "list_random_item",
@@ -22183,7 +22184,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-06T19:04:26.837Z",
+ "git_push_when": "2025-09-06T22:55:09.305Z",
  "error_attention": null,
  "app_current": "replace"
 }
