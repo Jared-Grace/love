@@ -3396,7 +3396,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "app_reply_main"
   ],
   "name": [
    "watch",
@@ -7118,7 +7119,8 @@
    "list_squash",
    "log_unparse_try",
    "marker_down_choices",
-   "js_dollar_x"
+   "js_dollar_x",
+   "app_reply_main"
   ],
   "js_node_type_is": [
    "js_atomize_function",
@@ -8473,7 +8475,8 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x"
+   "js_dollar_x",
+   "app_reply_main"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -10077,8 +10080,7 @@
    "function_aliases_restore"
   ],
   "li": [
-   "function_aliases_restore",
-   "app_reply_main"
+   "function_aliases_restore"
   ],
   "at": [
    "function_aliases_restore"
@@ -22001,6 +22003,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_is",
     "list_concat",
     "list_random_item",
     "object_properties",
@@ -22040,7 +22043,8 @@
     "choices",
     "lambda2",
     "item",
-    "li",
+    "l",
+    "value",
     "list",
     "lambda",
     "choice",
