@@ -141,7 +141,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Preach",
       response:
         emoji_pray() +
-        "At this time, I cannot commit to a day and time to preach",
+        "If you want I will write a message and someone else can preach",
     },
     {
       text: emoji_pray() + " " + "Prayers",
