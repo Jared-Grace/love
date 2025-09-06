@@ -11767,6 +11767,9 @@
   ],
   "html_on_keydown": [
    "html_on_keydown"
+  ],
+  "chosens": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -22021,6 +22024,7 @@
     "copied",
     "buttons",
     "preview",
+    "chosens",
     "lambda4",
     "preview_refresh",
     "component3",
