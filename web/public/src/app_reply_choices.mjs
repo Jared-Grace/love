@@ -133,7 +133,7 @@ export function app_reply_choices() {
         emoji_pray() +
         " " +
         string_the_servant_of_god_is() +
-        " called Jared Patten Mathis " +
+        " called Jared Mathis " +
         "🤝",
     },
     {
