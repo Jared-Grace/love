@@ -92,6 +92,12 @@ export function app_reply_choices() {
     },
     heal,
     {
+      text: emoji_pray() + "Hallelujah",
+      response:
+        emoji_pray() +
+        " The doctors said I had schizoaffective disorder. Please pray for my health, that I am healed and that those who gave me medicine command me to stop taking medicine.",
+    },
+    {
       text: emoji_pray() + " How family",
       response: emoji_pray() + "Please pray for my family",
     },
