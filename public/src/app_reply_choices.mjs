@@ -114,6 +114,10 @@ export function app_reply_choices() {
         " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28)" +
         emoji_pray(),
     },
+    {
+      text: emoji_pray() + " Invite",
+      response: emoji_pray() + "At this time I have no money to travel to you",
+    },
     job,
     {
       text: emoji_globe_americas() + " Language",
