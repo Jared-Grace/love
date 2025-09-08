@@ -56,6 +56,12 @@ export function app_reply_choices() {
         prayer_end(),
     },
     {
+      text: emoji_phone() + " Call",
+      response:
+        emoji_phone() +
+        " Why did you call me? What did you want to talk about?",
+    },
+    {
       text: emoji_pray() + " Church",
       response:
         emoji_pray() + string_lord_bless_your() + "church " + emoji_church(),
