@@ -163,7 +163,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Preach",
       response:
         emoji_pray() +
-        "If you want I will write a message and someone else can preach",
+        "No video call. If you want I will write a message and someone else can speak.",
     },
     {
       text: emoji_pray() + " " + "Prayers",
