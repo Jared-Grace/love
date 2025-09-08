@@ -116,7 +116,9 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Invite",
-      response: emoji_pray() + "At this time I have no money to travel to you",
+      response:
+        emoji_pray() +
+        "If the LORD makes a way, then I will travel to you. However at this time I have no money to travel.",
     },
     job,
     {
