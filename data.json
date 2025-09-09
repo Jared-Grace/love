@@ -22461,7 +22461,7 @@
    ]
   },
   "firebase_storage_exists": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "firebase_bucket",
     "marker",
