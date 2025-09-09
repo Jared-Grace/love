@@ -1,6 +1,8 @@
 import { error } from "./error.mjs";
 import { not } from "./not.mjs";
 export async function http(url) {
+  if (false) {
+  }
   const response = await fetch(url);
   if (not(response.ok)) {
     error("Failed to fetch file");
