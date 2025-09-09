@@ -11096,17 +11096,20 @@
    "file_name_json"
   ],
   "version": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "http_firebase"
   ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "http_firebase"
   ],
   "firebase_upload_object": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "http_firebase"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -22358,11 +22361,14 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "firebase_upload_object",
     "http",
     "marker",
     "http_firebase",
     "url",
-    "text"
+    "text",
+    "version",
+    "destination_version"
    ]
   }
  },
