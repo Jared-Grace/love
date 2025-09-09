@@ -4668,8 +4668,7 @@
    "string_is_assert_message",
    "js_declare_single",
    "null_not_is_assert",
-   "object_property_exists_not_assert",
-   "http"
+   "object_property_exists_not_assert"
   ],
   "b": [
    "assert",
@@ -4749,7 +4748,8 @@
    "list_get",
    "list_is_assert",
    "js_node_atomize",
-   "function_current_set"
+   "function_current_set",
+   "http"
   ],
   "o": [
    "assert_json",
@@ -21376,13 +21376,13 @@
   "http": {
    "async": true,
    "identifiers": [
-    "assert",
     "round",
     "log",
     "string_starts_with",
     "browser_is",
     "error",
     "not",
+    "assert_json",
     "http",
     "url",
     "b",
@@ -21398,14 +21398,14 @@
     "reject",
     "lambda2",
     "res",
-    "statusCode",
-    "d",
-    "rounded",
     "data",
     "lambda",
     "chunk",
     "on",
     "lambda4",
+    "statusCode",
+    "d",
+    "rounded",
     "get"
    ]
   },
