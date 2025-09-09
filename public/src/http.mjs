@@ -1,4 +1,3 @@
-import { import_install } from "./import_install.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
@@ -15,6 +14,6 @@ export async function http(url) {
   }
   let sw = string_starts_with(url, "https://");
   if (sw) {
-    await import_install("https");
+    await import("https");
   }
 }
