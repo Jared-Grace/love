@@ -2147,7 +2147,8 @@
    "string_letters_only",
    "string_lower_to",
    "http_firebase",
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "round"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11963,6 +11964,9 @@
   ],
   "statusCode": [
    "http"
+  ],
+  "round": [
+   "round"
   ]
  },
  "functions": {
@@ -22537,6 +22541,13 @@
     "console",
     "url",
     "name"
+   ]
+  },
+  "round": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "round"
    ]
   }
  },
