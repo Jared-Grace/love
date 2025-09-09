@@ -18,21 +18,22 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
-  await new Promise(function lambda5(resolve, reject) {});
-  function lambda2(res) {
-    let data = "";
-    function lambda(chunk) {
-      data += chunk;
+  await new Promise(function lambda5(resolve, reject) {
+    function lambda2(res) {
+      let data = "";
+      function lambda(chunk) {
+        data += chunk;
+      }
+      res.on("data", lambda);
+      function lambda4() {
+        console.log("Result as string:");
+        console.log(data);
+      }
+      res.on("end", lambda4);
     }
-    res.on("data", lambda);
-    function lambda4() {
-      console.log("Result as string:");
-      console.log(data);
+    function lambda3(err) {
+      console.error("Error: ", err.message);
     }
-    res.on("end", lambda4);
-  }
-  function lambda3(err) {
-    console.error("Error: ", err.message);
-  }
-  h.get(url, lambda2).on("error", lambda3);
+    h.get(url, lambda2).on("error", lambda3);
+  });
 }
