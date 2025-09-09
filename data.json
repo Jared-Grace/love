@@ -11112,7 +11112,8 @@
   "destination": [
    "firebase_deploy_function",
    "firebase_upload_object",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_storage_download"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11136,8 +11137,7 @@
    "firebase_deploy_function"
   ],
   "destination_version": [
-   "firebase_deploy_function",
-   "firebase_storage_download"
+   "firebase_deploy_function"
   ],
   "firebase_upload_object": [
    "firebase_deploy_function",
@@ -11951,7 +11951,8 @@
    "file_path_safe_to"
   ],
   "firebase_path_fix": [
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -21444,10 +21445,11 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "firebase_path_fix",
     "http_json",
     "firebase_storage_url",
     "firebase_storage_download",
-    "destination_version",
+    "destination",
     "url",
     "parsed"
    ]
