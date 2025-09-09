@@ -1863,7 +1863,8 @@
   "is function_dependencies",
   "is function_dependencies_code",
   "fws http firebase",
-  "n file_path_safe_to"
+  "n file_path_safe_to",
+  "s firebase"
  ],
  "marker_current": "1",
  "function_current": "file_path_safe_to",
