@@ -1,7 +1,8 @@
+import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
 import { not } from "./not.mjs";
 export async function http(url) {
-  wi;
+  let b = browser_is();
   if (false) {
   }
   const response = await fetch(url);
