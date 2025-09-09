@@ -1859,7 +1859,8 @@
   "http https://google.com",
   "s storage",
   "u fd",
-  "o function_dependencies_code_copy"
+  "o function_dependencies_code_copy",
+  "is function_dependencies"
  ],
  "marker_current": "1",
  "function_current": "function_dependencies_code_copy",
