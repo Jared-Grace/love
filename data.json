@@ -10183,8 +10183,7 @@
   ],
   "fp": [
    "function_aliases_restore",
-   "file_path_safe_to",
-   "http_firebase"
+   "file_path_safe_to"
   ],
   "oec": [
    "function_aliases_restore"
@@ -22397,7 +22396,6 @@
     "url",
     "text",
     "safe",
-    "fp",
     "joined",
     "version",
     "destination_version"
