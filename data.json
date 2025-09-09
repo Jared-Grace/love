@@ -3192,7 +3192,8 @@
   "import_install": [
    "watch",
    "chalk_color",
-   "import_install"
+   "import_install",
+   "http"
   ],
   "command_line": [
    "command_line",
@@ -3478,7 +3479,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "http"
   ],
   "output": [
    "watch",
@@ -7660,8 +7662,7 @@
    "js_identifier_is",
    "list_index_is",
    "js_let_add",
-   "list_index_of_delta",
-   "http"
+   "list_index_of_delta"
   ],
   "Number": [
    "integer_is",
@@ -21229,6 +21230,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "import_install",
     "string_starts_with",
     "browser_is",
     "error",
@@ -21241,7 +21243,7 @@
     "ok",
     "text",
     "sw",
-    "ii"
+    "name"
    ]
   },
   "http_json": {
