@@ -27,7 +27,9 @@ export async function http(url) {
       res.on("data", lambda);
       function lambda4() {
         resolve(data);
-        log(message);
+        log({
+          data,
+        });
       }
       res.on("end", lambda4);
     }
