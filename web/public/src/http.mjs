@@ -1,3 +1,4 @@
+import { assert } from "./assert.mjs";
 import { round } from "./round.mjs";
 import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
@@ -23,7 +24,8 @@ export async function http(url) {
     function lambda2(res) {
       let { statusCode } = res;
       let d = statusCode / 100;
-      let rounded = round(n);
+      let rounded = round(d);
+      assert(b2);
       let data = "";
       function lambda(chunk) {
         data += chunk;
