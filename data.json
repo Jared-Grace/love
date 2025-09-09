@@ -3090,7 +3090,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "http"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -21264,6 +21265,7 @@
     "text",
     "h",
     "sw",
+    "v",
     "Promise",
     "lambda5",
     "resolve",
