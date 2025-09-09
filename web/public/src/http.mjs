@@ -14,6 +14,7 @@ export async function http(url) {
   }
   let sw = string_starts_with(url, "https://");
   if (sw) {
-    let h = await import("https");
+    let h = null;
+    h = await import("https");
   }
 }
