@@ -29,9 +29,6 @@ export async function http(url) {
       }
       res.on("end", lambda4);
     }
-    function lambda3(err) {
-      console.error("Error: ", err.message);
-    }
-    h.get(url, lambda2).on("error", lambda3);
+    h.get(url, lambda2).on("error", reject);
   });
 }
