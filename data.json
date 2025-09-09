@@ -9356,7 +9356,8 @@
   ],
   "console": [
    "log_keep",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "http"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -11956,6 +11957,9 @@
   "firebase_path_fix": [
    "firebase_storage_exists",
    "firebase_storage_download"
+  ],
+  "statusCode": [
+   "http"
   ]
  },
  "functions": {
@@ -21377,6 +21381,8 @@
     "reject",
     "lambda2",
     "res",
+    "console",
+    "statusCode",
     "data",
     "lambda",
     "chunk",
