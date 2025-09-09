@@ -2129,7 +2129,8 @@
    "html_on_keydown",
    "string_letters_only",
    "string_lower_to",
-   "http_firebase"
+   "http_firebase",
+   "file_path_safe_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11879,6 +11880,9 @@
   ],
   "content": [
    "firebase_upload_object"
+  ],
+  "file_path_safe_to": [
+   "file_path_safe_to"
   ]
  },
  "functions": {
@@ -22395,6 +22399,13 @@
     "object",
     "destination",
     "content"
+   ]
+  },
+  "file_path_safe_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "file_path_safe_to"
    ]
   }
  },
