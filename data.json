@@ -1655,7 +1655,6 @@
   "as rename",
   "a rs function_rename_suffix_add",
   "rs firebase_storage_url project",
-  "s replace",
   "n string_replace",
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
@@ -1872,7 +1871,8 @@
   "http https://www.google.com",
   "file_path_safe_to http://www.google.com",
   "firebase_storage_exists http/http%3A%2F%2Fwww.google.com",
-  "firebase_storage_exists http\\http%3A%2F%2Fwww.google.com"
+  "firebase_storage_exists http\\http%3A%2F%2Fwww.google.com",
+  "s replace"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
