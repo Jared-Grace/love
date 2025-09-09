@@ -1877,7 +1877,8 @@
   "ps",
   "p",
   "http_firebase https://www.google.com",
-  "s base"
+  "s base",
+  "s 64"
  ],
  "marker_current": "1",
  "function_current": "round",
