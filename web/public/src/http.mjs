@@ -1,4 +1,4 @@
-import { assert_message } from "./assert_message.mjs";
+import { assert } from "./assert.mjs";
 import { round } from "./round.mjs";
 import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
@@ -25,7 +25,7 @@ export async function http(url) {
       let { statusCode } = res;
       let d = statusCode / 100;
       let rounded = round(d);
-      assert_message(b2, message);
+      assert(rounded === 2);
       let data = "";
       function lambda(chunk) {
         data += chunk;
