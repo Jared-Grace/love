@@ -1,4 +1,3 @@
-import { marker } from "./marker.mjs";
-export function round() {
-  marker("1");
+export function round(n) {
+  return Math.round(n);
 }
