@@ -3111,8 +3111,7 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_upload_string"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3948,7 +3947,8 @@
    "function_aliases_restore",
    "function_exists_strict",
    "html_element",
-   "function_exists_inner"
+   "function_exists_inner",
+   "firebase_storage_exists"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -4346,7 +4346,8 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to"
+   "string_lower_to",
+   "firebase_storage_exists"
   ],
   "a": [
    "string_suffix_without",
@@ -6406,7 +6407,8 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename"
+   "marker_rename",
+   "firebase_storage_exists"
   ],
   "r": [
    "function_format",
@@ -6498,7 +6500,8 @@
    "string_replace",
    "html_update_generic",
    "marker_rename",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_storage_exists"
   ],
   "i": [
    "function_identifier_replace",
@@ -9353,8 +9356,7 @@
   ],
   "console": [
    "log_keep",
-   "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_upload_string"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -9411,7 +9413,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "firebase_storage_url"
+   "firebase_storage_url",
+   "firebase_storage_exists"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -11241,7 +11244,8 @@
   ],
   "string_replace": [
    "string_replace",
-   "firebase_storage_url"
+   "firebase_storage_url",
+   "firebase_storage_exists"
   ],
   "firebase_storage_url": [
    "firebase_storage_url",
@@ -22486,16 +22490,20 @@
   "firebase_storage_exists": {
    "async": true,
    "identifiers": [
+    "string_replace",
     "error",
     "firebase_bucket",
     "firebase_storage_exists",
     "path",
+    "replaced",
+    "s",
+    "from",
+    "to",
     "bucket",
     "file",
     "exists",
-    "err",
-    "console",
-    "v"
+    "e",
+    "err"
    ]
   },
   "firebase_upload_string": {
