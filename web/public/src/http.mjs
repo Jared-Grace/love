@@ -1,5 +1,4 @@
 import { round } from "./round.mjs";
-import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
@@ -35,9 +34,6 @@ export async function http(url) {
           data,
         });
         resolve(data);
-        log({
-          data,
-        });
       }
       res.on("end", lambda4);
     }
