@@ -4709,7 +4709,8 @@
    "string_is_assert_json",
    "undefined_not_is_assert_lambda",
    "storage_local_set",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "firebase_upload_object"
   ],
   "assert_json": [
    "assert_json",
@@ -5205,7 +5206,8 @@
    "object_property_exists_not",
    "object_property_lambda",
    "object_property_lambda_async",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "firebase_upload_object"
   ],
   "each_pair": [
    "each_pair",
@@ -11078,7 +11080,8 @@
    "firebase_admin_get"
   ],
   "destination": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_upload_object"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11109,7 +11112,8 @@
   ],
   "firebase_upload_object": [
    "firebase_deploy_function",
-   "http_firebase"
+   "http_firebase",
+   "firebase_upload_object"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -11866,6 +11870,12 @@
   ],
   "http_firebase": [
    "http_firebase"
+  ],
+  "firebase_upload_string": [
+   "firebase_upload_object"
+  ],
+  "content": [
+   "firebase_upload_object"
   ]
  },
  "functions": {
@@ -22369,6 +22379,17 @@
     "text",
     "version",
     "destination_version"
+   ]
+  },
+  "firebase_upload_object": {
+   "async": true,
+   "identifiers": [
+    "firebase_upload_string",
+    "json_to",
+    "firebase_upload_object",
+    "object",
+    "destination",
+    "content"
    ]
   }
  },
