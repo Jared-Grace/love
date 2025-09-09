@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
 import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
 import { file_path_safe_to } from "./file_path_safe_to.mjs";
@@ -13,6 +14,7 @@ export async function http_firebase(url) {
     let result = await firebase_storage_download_property(joined, "text");
     return result;
   }
+  log(message);
   marker("1");
   let text = await http(url);
   await firebase_upload_object(
