@@ -1,6 +1,7 @@
 import { error } from "./error.mjs";
 import { not } from "./not.mjs";
 export async function http(url) {
+  wi;
   if (false) {
   }
   const response = await fetch(url);
