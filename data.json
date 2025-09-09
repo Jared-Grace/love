@@ -4314,7 +4314,8 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to"
+   "string_lower_to",
+   "http"
   ],
   "a": [
    "string_suffix_without",
@@ -8194,7 +8195,8 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account"
+   "firebase_service_account",
+   "http"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8420,7 +8422,8 @@
    "string_prefix_without",
    "string_starts_with",
    "js_imports_declarations",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -11034,7 +11037,8 @@
   ],
   "sw": [
    "string_starts_with",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "only": [
    "list_single",
@@ -21225,6 +21229,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "browser_is",
     "error",
     "not",
@@ -21234,7 +21239,10 @@
     "response",
     "fetch",
     "ok",
-    "text"
+    "text",
+    "sw",
+    "s",
+    "prefix"
    ]
   },
   "http_json": {
