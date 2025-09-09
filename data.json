@@ -1858,10 +1858,11 @@
   "a ii import_install",
   "http https://google.com",
   "s storage",
-  "u fd"
+  "u fd",
+  "o function_dependencies_code_copy"
  ],
  "marker_current": "1",
- "function_current": "string_lower_to",
+ "function_current": "function_dependencies_code_copy",
  "terminal": false,
  "identifiers": {
   "log": [
