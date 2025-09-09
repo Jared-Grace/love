@@ -11857,9 +11857,6 @@
   "pipe": [
    "http"
   ],
-  "https": [
-   "http"
-  ],
   "get": [
    "http"
   ]
@@ -21292,7 +21289,6 @@
     "lambda3",
     "err",
     "message",
-    "https",
     "get"
    ]
   },
