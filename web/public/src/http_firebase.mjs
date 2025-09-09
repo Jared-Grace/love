@@ -6,8 +6,8 @@ import { marker } from "./marker.mjs";
 export async function http_firebase(url) {
   marker("1");
   let text = await http(url);
-  let safe = file_path_safe_to(fp);
-  let joined = path_join(["http"]);
+  let safe = file_path_safe_to(url);
+  let joined = path_join(["http", url]);
   await firebase_upload_object(version, destination_version);
   return text;
 }
