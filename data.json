@@ -3187,8 +3187,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "http"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4669,7 +4668,8 @@
    "string_is_assert_message",
    "js_declare_single",
    "null_not_is_assert",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "http"
   ],
   "b": [
    "assert",
@@ -4727,8 +4727,7 @@
    "js_identifiers_to_names",
    "list_get",
    "string_includes",
-   "string_is_assert_message",
-   "http"
+   "string_is_assert_message"
   ],
   "json_to": [
    "assert_json",
@@ -8655,8 +8654,7 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names",
-   "http"
+   "js_identifiers_to_names"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -21378,7 +21376,7 @@
   "http": {
    "async": true,
    "identifiers": [
-    "assert_message",
+    "assert",
     "round",
     "log",
     "string_starts_with",
@@ -21403,8 +21401,6 @@
     "statusCode",
     "d",
     "rounded",
-    "b2",
-    "message",
     "data",
     "lambda",
     "chunk",
