@@ -1897,8 +1897,7 @@
    "js_let_add",
    "firebase_upload_string",
    "http_firebase",
-   "firebase_storage_download",
-   "http"
+   "firebase_storage_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -21377,7 +21376,6 @@
    "async": true,
    "identifiers": [
     "round",
-    "log",
     "string_starts_with",
     "browser_is",
     "error",
