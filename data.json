@@ -1883,7 +1883,8 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add"
+   "js_let_add",
+   "firebase_upload_string"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3102,7 +3103,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "firebase_upload_string"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3494,7 +3496,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "firebase_upload_string"
   ],
   "output": [
    "watch",
@@ -4544,7 +4547,8 @@
    "function_aliases_restore"
   ],
   "file": [
-   "folder_read"
+   "folder_read",
+   "firebase_upload_string"
   ],
   "statSync": [
    "folder_read"
@@ -6479,7 +6483,8 @@
    "function_name_to_path_import",
    "string_replace",
    "html_update_generic",
-   "marker_rename"
+   "marker_rename",
+   "firebase_upload_string"
   ],
   "i": [
    "function_identifier_replace",
@@ -6550,7 +6555,8 @@
    "firebase_storage_url_project",
    "firebase_storage_url",
    "firebase_storage_download",
-   "http_firebase"
+   "http_firebase",
+   "firebase_upload_string"
   ],
   "__dirname": [
    "function_import",
@@ -9331,7 +9337,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "firebase_upload_string"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -11089,7 +11096,8 @@
   ],
   "destination": [
    "firebase_deploy_function",
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "firebase_upload_string"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11878,10 +11886,12 @@
    "http_firebase"
   ],
   "firebase_upload_string": [
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "firebase_upload_string"
   ],
   "content": [
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "firebase_upload_string"
   ],
   "file_path_safe_to": [
    "file_path_safe_to",
@@ -11896,6 +11906,30 @@
   ],
   "firebase_storage_exists": [
    "firebase_storage_exists"
+  ],
+  "firebase_bucket": [
+   "firebase_upload_string"
+  ],
+  "bucket": [
+   "firebase_upload_string"
+  ],
+  "Buffer": [
+   "firebase_upload_string"
+  ],
+  "save": [
+   "firebase_upload_string"
+  ],
+  "contentType": [
+   "firebase_upload_string"
+  ],
+  "gzip": [
+   "firebase_upload_string"
+  ],
+  "metadata": [
+   "firebase_upload_string"
+  ],
+  "cacheControl": [
+   "firebase_upload_string"
   ]
  },
  "functions": {
@@ -22429,6 +22463,29 @@
    "identifiers": [
     "marker",
     "firebase_storage_exists"
+   ]
+  },
+  "firebase_upload_string": {
+   "async": true,
+   "identifiers": [
+    "firebase_bucket",
+    "log",
+    "firebase_upload_string",
+    "content",
+    "destination",
+    "bucket",
+    "file",
+    "v",
+    "Buffer",
+    "from",
+    "save",
+    "contentType",
+    "gzip",
+    "metadata",
+    "cacheControl",
+    "console",
+    "url",
+    "name"
    ]
   }
  },
