@@ -2127,7 +2127,8 @@
    "html_display_block",
    "html_on_keydown",
    "string_letters_only",
-   "string_lower_to"
+   "string_lower_to",
+   "http_firebase"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3096,7 +3097,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "http_firebase"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6538,7 +6540,8 @@
    "http_json",
    "firebase_storage_url_project",
    "firebase_storage_url",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "http_firebase"
   ],
   "__dirname": [
    "function_import",
@@ -11157,7 +11160,8 @@
   ],
   "http": [
    "http",
-   "http_json"
+   "http_json",
+   "http_firebase"
   ],
   "response": [
    "http",
@@ -11856,6 +11860,9 @@
   ],
   "reject": [
    "http"
+  ],
+  "http_firebase": [
+   "http_firebase"
   ]
  },
  "functions": {
@@ -22346,6 +22353,16 @@
     "s",
     "lower",
     "toLowerCase"
+   ]
+  },
+  "http_firebase": {
+   "async": true,
+   "identifiers": [
+    "http",
+    "marker",
+    "http_firebase",
+    "url",
+    "v"
    ]
   }
  },
