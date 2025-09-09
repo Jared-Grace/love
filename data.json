@@ -1144,7 +1144,6 @@
   "s asser,num",
   "s inte",
   "n integer_is",
-  "u ii",
   "a ini integer_is",
   "o au",
   "nj if_blockify",
@@ -1855,7 +1854,8 @@
   "s web",
   "s client",
   "s bro",
-  "s import"
+  "s import",
+  "u ii"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
