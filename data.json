@@ -3160,8 +3160,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "http"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4125,8 +4124,7 @@
    "js_dollar_a_generic",
    "js_expand_generic",
    "js_calls_to_each",
-   "app_reply_main",
-   "http"
+   "app_reply_main"
   ],
   "value2": [
    "error_attention_set",
@@ -7654,8 +7652,7 @@
    "npm_install"
   ],
   "err": [
-   "import_install",
-   "http"
+   "import_install"
   ],
   "integer_is": [
    "integer_is",
@@ -9316,8 +9313,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "http"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -21279,10 +21275,6 @@
     "chunk",
     "on",
     "lambda4",
-    "lambda3",
-    "err",
-    "console",
-    "message",
     "get"
    ]
   },
