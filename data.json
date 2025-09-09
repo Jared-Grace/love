@@ -6032,7 +6032,8 @@
    "storage_local_initialize",
    "promise_not_is",
    "js_calls_to_each",
-   "round"
+   "round",
+   "http"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -11968,10 +11969,12 @@
    "http"
   ],
   "round": [
-   "round"
+   "round",
+   "http"
   ],
   "rounded": [
-   "round"
+   "round",
+   "http"
   ]
  },
  "functions": {
@@ -21373,6 +21376,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "round",
     "log",
     "string_starts_with",
     "browser_is",
@@ -21395,6 +21399,8 @@
     "res",
     "statusCode",
     "d",
+    "rounded",
+    "n",
     "data",
     "lambda",
     "chunk",
