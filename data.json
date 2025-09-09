@@ -2147,8 +2147,7 @@
    "string_letters_only",
    "string_lower_to",
    "http_firebase",
-   "file_path_safe_to",
-   "round"
+   "file_path_safe_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -6031,7 +6030,8 @@
    "storage_local_get",
    "storage_local_initialize",
    "promise_not_is",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "round"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -9895,7 +9895,8 @@
   ],
   "Math": [
    "date_diff_ms",
-   "list_random_item"
+   "list_random_item",
+   "round"
   ],
   "abs": [
    "date_diff_ms"
@@ -22546,8 +22547,9 @@
   "round": {
    "async": false,
    "identifiers": [
-    "marker",
-    "round"
+    "round",
+    "n",
+    "Math"
    ]
   }
  },
