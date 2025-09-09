@@ -5,11 +5,11 @@ export async function firebase_storage_exists(path) {
   const file = bucket.file(path);
   let exists = null;
   try {
-    const [exists] = await file.exists();
-    return exists;
+    const [e] = await file.exists();
+    exists = e;
   } catch (err) {
-    console.error("Error checking file:", err);
-    let v = false;
-    return v;
+    error(err);
+    exists = false;
   }
+  return exists;
 }
