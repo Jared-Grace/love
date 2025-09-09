@@ -12,9 +12,9 @@ export async function http(url) {
     const text = await response.text();
     return text;
   }
+  let h = null;
   let sw = string_starts_with(url, "https://");
   if (sw) {
-    let h = null;
     h = await import("https");
   }
 }
