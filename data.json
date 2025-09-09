@@ -4346,8 +4346,7 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to",
-   "firebase_storage_exists"
+   "string_lower_to"
   ],
   "a": [
    "string_suffix_without",
@@ -6407,8 +6406,7 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename",
-   "firebase_storage_exists"
+   "marker_rename"
   ],
   "r": [
    "function_format",
@@ -6500,8 +6498,7 @@
    "string_replace",
    "html_update_generic",
    "marker_rename",
-   "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_upload_string"
   ],
   "i": [
    "function_identifier_replace",
@@ -9413,8 +9410,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "firebase_storage_url",
-   "firebase_storage_exists"
+   "firebase_storage_url"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -22495,10 +22491,6 @@
     "firebase_bucket",
     "firebase_storage_exists",
     "path",
-    "replaced",
-    "s",
-    "from",
-    "to",
     "bucket",
     "file",
     "exists",
