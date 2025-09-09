@@ -1809,7 +1809,6 @@
   "s brack",
   "c js_code_wrap_braces js_code_wrap_brackets",
   "fw js_code_wrap_brackets js_code_brackets_empty",
-  "p",
   "nd l",
   "fts js_calls_to_each",
   "as app",
@@ -1876,7 +1875,9 @@
   "s round",
   "n round",
   "ps",
-  "http_firebase https://www.google.com"
+  "p",
+  "http_firebase https://www.google.com",
+  "s base"
  ],
  "marker_current": "1",
  "function_current": "round",
