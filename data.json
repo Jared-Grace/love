@@ -1853,7 +1853,8 @@
   "s lower",
   "n string_lower_to",
   "s http",
-  "s web"
+  "s web",
+  "s client"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
