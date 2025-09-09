@@ -20,7 +20,7 @@ export async function http(url) {
   }
   let text = await new Promise(function lambda5(resolve, reject) {
     function lambda2(res) {
-      res.statusCode;
+      let statusCode = res;
       let data = "";
       function lambda(chunk) {
         data += chunk;
