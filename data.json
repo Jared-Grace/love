@@ -1874,8 +1874,7 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add",
-   "http"
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -21256,7 +21255,6 @@
   "http": {
    "async": true,
    "identifiers": [
-    "log",
     "string_starts_with",
     "browser_is",
     "error",
@@ -21281,9 +21279,9 @@
     "chunk",
     "on",
     "lambda4",
-    "console",
     "lambda3",
     "err",
+    "console",
     "message",
     "get"
    ]
