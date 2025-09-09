@@ -1864,10 +1864,11 @@
   "is function_dependencies_code",
   "fws http firebase",
   "n file_path_safe_to",
-  "s firebase"
+  "s firebase",
+  "n firebase_storage_exists"
  ],
  "marker_current": "1",
- "function_current": "file_path_safe_to",
+ "function_current": "firebase_storage_exists",
  "terminal": false,
  "identifiers": {
   "log": [
