@@ -3105,8 +3105,7 @@
    "app_reply_choices",
    "kjv",
    "firebase_upload_string",
-   "firebase_storage_exists",
-   "http_firebase"
+   "firebase_storage_exists"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3594,7 +3593,8 @@
    "ternary",
    "functions_combine_name",
    "object_property_exists_not_assert",
-   "js_dollar_choice_arguments"
+   "js_dollar_choice_arguments",
+   "http_firebase"
   ],
   "separator": [
    "watch",
@@ -22452,7 +22452,7 @@
     "joined",
     "exists",
     "path",
-    "v",
+    "result",
     "text"
    ]
   },
