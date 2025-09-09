@@ -2150,8 +2150,7 @@
    "string_letters_only",
    "string_lower_to",
    "http_firebase",
-   "file_path_safe_to",
-   "string_base64_to"
+   "file_path_safe_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -6511,7 +6510,8 @@
    "string_replace",
    "html_update_generic",
    "marker_rename",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "string_base64_to"
   ],
   "i": [
    "function_identifier_replace",
@@ -9651,7 +9651,8 @@
    "string_suffix_change"
   ],
   "toString": [
-   "string_to"
+   "string_to",
+   "string_base64_to"
   ],
   "task_function_name_part": [
    "tasks_run",
@@ -11875,7 +11876,8 @@
    "app_reply_main"
   ],
   "str": [
-   "string_letters_only"
+   "string_letters_only",
+   "string_base64_to"
   ],
   "text2": [
    "app_reply_main"
@@ -11944,7 +11946,8 @@
    "firebase_storage_exists"
   ],
   "Buffer": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "string_base64_to"
   ],
   "save": [
    "firebase_upload_string"
@@ -11981,6 +11984,15 @@
    "http"
   ],
   "string_base64_to": [
+   "string_base64_to"
+  ],
+  "b64": [
+   "string_base64_to"
+  ],
+  "btoa": [
+   "string_base64_to"
+  ],
+  "b64node": [
    "string_base64_to"
   ]
  },
@@ -22573,8 +22585,14 @@
   "string_base64_to": {
    "async": false,
    "identifiers": [
-    "marker",
-    "string_base64_to"
+    "string_base64_to",
+    "b64",
+    "btoa",
+    "str",
+    "b64node",
+    "Buffer",
+    "from",
+    "toString"
    ]
   }
  },
