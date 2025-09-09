@@ -2514,7 +2514,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "http_firebase"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3426,7 +3427,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "http_firebase"
   ],
   "name": [
    "watch",
@@ -11242,14 +11244,16 @@
   ],
   "storage_path": [
    "firebase_storage_url",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "http_firebase"
   ],
   "firebase_storage_download": [
    "firebase_storage_download",
    "firebase_storage_download_property"
   ],
   "firebase_storage_download_property": [
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "http_firebase"
   ],
   "list_join_newline": [
    "function_dependencies_code",
@@ -22437,6 +22441,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download_property",
     "firebase_storage_exists",
     "file_path_safe_to",
     "path_join",
@@ -22449,6 +22454,9 @@
     "joined",
     "exists",
     "path",
+    "value",
+    "storage_path",
+    "property_name",
     "text"
    ]
   },
