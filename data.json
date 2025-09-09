@@ -3117,8 +3117,7 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "firebase_upload_string",
-   "round"
+   "firebase_upload_string"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11968,6 +11967,9 @@
    "http"
   ],
   "round": [
+   "round"
+  ],
+  "rounded": [
    "round"
   ]
  },
@@ -22550,7 +22552,7 @@
    "identifiers": [
     "round",
     "n",
-    "v",
+    "rounded",
     "Math"
    ]
   }
