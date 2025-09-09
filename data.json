@@ -2150,7 +2150,8 @@
    "string_letters_only",
    "string_lower_to",
    "http_firebase",
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "string_base64_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11978,6 +11979,9 @@
   "rounded": [
    "round",
    "http"
+  ],
+  "string_base64_to": [
+   "string_base64_to"
   ]
  },
  "functions": {
@@ -22564,6 +22568,13 @@
     "n",
     "rounded",
     "Math"
+   ]
+  },
+  "string_base64_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_base64_to"
    ]
   }
  },
