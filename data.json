@@ -4837,11 +4837,13 @@
   ],
   "Promise": [
    "command_line_read",
-   "list_wait"
+   "list_wait",
+   "http"
   ],
   "resolve": [
    "command_line_read",
-   "path_resolve"
+   "path_resolve",
+   "http"
   ],
   "rl": [
    "command_line_read"
@@ -8663,7 +8665,8 @@
   ],
   "lambda5": [
    "js_identifier_defineds",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "http"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -11848,6 +11851,9 @@
    "http"
   ],
   "chunk": [
+   "http"
+  ],
+  "reject": [
    "http"
   ]
  },
@@ -21264,6 +21270,10 @@
     "text",
     "h",
     "sw",
+    "Promise",
+    "lambda5",
+    "resolve",
+    "reject",
     "lambda2",
     "res",
     "data",
