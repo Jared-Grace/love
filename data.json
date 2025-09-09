@@ -3479,8 +3479,7 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply",
-   "http"
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -21242,8 +21241,7 @@
     "fetch",
     "ok",
     "text",
-    "sw",
-    "name"
+    "sw"
    ]
   },
   "http_json": {
