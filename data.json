@@ -3335,8 +3335,7 @@
    "path_join",
    "path_name",
    "path_resolve",
-   "server",
-   "http"
+   "server"
   ],
   "value": [
    "watch",
@@ -3667,7 +3666,8 @@
    "data_value",
    "file_read_json",
    "function_alias_add_generic",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "http"
   ],
   "file_path": [
    "data_file_update",
@@ -4530,8 +4530,7 @@
    "file_exists",
    "file_overwrite",
    "file_read",
-   "function_aliases_restore",
-   "http"
+   "function_aliases_restore"
   ],
   "file": [
    "folder_read"
@@ -4873,8 +4872,7 @@
    "command_line_read"
   ],
   "close": [
-   "command_line_read",
-   "http"
+   "command_line_read"
   ],
   "command_line_schtasks": [
    "command_line_schtasks",
@@ -8648,7 +8646,8 @@
    "app_replace_rule_set",
    "app_replace_home",
    "js_expand_generic",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -11845,19 +11844,10 @@
   "res": [
    "http"
   ],
-  "statusCode": [
-   "http"
-  ],
-  "fileStream": [
-   "http"
-  ],
-  "createWriteStream": [
-   "http"
-  ],
-  "pipe": [
-   "http"
-  ],
   "get": [
+   "http"
+  ],
+  "chunk": [
    "http"
   ]
  },
@@ -21276,16 +21266,12 @@
     "sw",
     "lambda2",
     "res",
-    "statusCode",
-    "console",
-    "fileStream",
-    "fs",
-    "createWriteStream",
-    "path",
-    "pipe",
+    "data",
     "lambda",
-    "close",
+    "chunk",
     "on",
+    "lambda4",
+    "console",
     "lambda3",
     "err",
     "message",
