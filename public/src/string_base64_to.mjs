@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
 export function string_base64_to() {
-  marker("1");
+  const b64 = btoa(str);
+  const b64node = Buffer.from(str, "utf-8").toString("base64");
 }
