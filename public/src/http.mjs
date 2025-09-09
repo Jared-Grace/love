@@ -32,6 +32,7 @@ export async function http(url) {
         let rounded = round(d);
         assert_json(rounded === 2, {
           data,
+          url,
         });
         resolve(data);
       }
