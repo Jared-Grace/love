@@ -3359,7 +3359,8 @@
    "path_name",
    "path_resolve",
    "server",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "firebase_upload_string"
   ],
   "value": [
    "watch",
@@ -9414,7 +9415,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "firebase_storage_url"
+   "firebase_storage_url",
+   "firebase_upload_string"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -11956,7 +11958,8 @@
   ],
   "firebase_path_fix": [
    "firebase_storage_exists",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "firebase_upload_string"
   ],
   "statusCode": [
    "http"
@@ -22516,11 +22519,14 @@
   "firebase_upload_string": {
    "async": true,
    "identifiers": [
+    "firebase_path_fix",
     "firebase_bucket",
     "log",
     "firebase_upload_string",
     "content",
     "destination",
+    "replaced",
+    "path",
     "bucket",
     "file",
     "v",
@@ -22537,7 +22543,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-09T22:04:37.808Z",
+ "git_push_when": "2025-09-09T23:04:49.638Z",
  "error_attention": null,
  "app_current": "replace"
 }
