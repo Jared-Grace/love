@@ -10183,7 +10183,8 @@
   ],
   "fp": [
    "function_aliases_restore",
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "http_firebase"
   ],
   "oec": [
    "function_aliases_restore"
@@ -11883,13 +11884,15 @@
    "firebase_upload_object"
   ],
   "file_path_safe_to": [
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "http_firebase"
   ],
   "urlToFirebaseKey": [
    "file_path_safe_to"
   ],
   "safe": [
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "http_firebase"
   ]
  },
  "functions": {
@@ -22385,6 +22388,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "file_path_safe_to",
     "path_join",
     "firebase_upload_object",
     "http",
@@ -22392,6 +22396,8 @@
     "http_firebase",
     "url",
     "text",
+    "safe",
+    "fp",
     "joined",
     "version",
     "destination_version"
