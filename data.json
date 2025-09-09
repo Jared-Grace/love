@@ -4668,7 +4668,8 @@
    "string_is_assert_message",
    "js_declare_single",
    "null_not_is_assert",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "http"
   ],
   "b": [
    "assert",
@@ -6032,8 +6033,7 @@
    "storage_local_initialize",
    "promise_not_is",
    "js_calls_to_each",
-   "round",
-   "http"
+   "round"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -8654,7 +8654,8 @@
    "js_function_last_asyncify"
   ],
   "b2": [
-   "js_identifiers_to_names"
+   "js_identifiers_to_names",
+   "http"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -21376,6 +21377,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "assert",
     "round",
     "log",
     "string_starts_with",
@@ -21400,7 +21402,7 @@
     "statusCode",
     "d",
     "rounded",
-    "n",
+    "b2",
     "data",
     "lambda",
     "chunk",
