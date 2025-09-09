@@ -6547,7 +6547,8 @@
    "firebase_storage_url_project",
    "firebase_storage_url",
    "firebase_storage_download",
-   "http_firebase"
+   "http_firebase",
+   "file_path_safe_to"
   ],
   "__dirname": [
    "function_import",
@@ -11882,6 +11883,9 @@
    "firebase_upload_object"
   ],
   "file_path_safe_to": [
+   "file_path_safe_to"
+  ],
+  "urlToFirebaseKey": [
    "file_path_safe_to"
   ]
  },
@@ -22405,7 +22409,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "file_path_safe_to"
+    "file_path_safe_to",
+    "urlToFirebaseKey",
+    "url"
    ]
   }
  },
