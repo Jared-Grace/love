@@ -11908,10 +11908,12 @@
    "firebase_storage_exists"
   ],
   "firebase_bucket": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_storage_exists"
   ],
   "bucket": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_storage_exists"
   ],
   "Buffer": [
    "firebase_upload_string"
@@ -22461,8 +22463,10 @@
   "firebase_storage_exists": {
    "async": false,
    "identifiers": [
+    "firebase_bucket",
     "marker",
-    "firebase_storage_exists"
+    "firebase_storage_exists",
+    "bucket"
    ]
   },
   "firebase_upload_string": {
