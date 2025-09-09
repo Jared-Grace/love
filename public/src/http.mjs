@@ -1,10 +1,10 @@
-import { assert } from "./assert.mjs";
 import { round } from "./round.mjs";
 import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
 import { not } from "./not.mjs";
+import { assert_json } from "./assert_json.mjs";
 export async function http(url) {
   let b = browser_is();
   if (b) {
@@ -22,16 +22,18 @@ export async function http(url) {
   }
   let text = await new Promise(function lambda5(resolve, reject) {
     function lambda2(res) {
-      let { statusCode } = res;
-      let d = statusCode / 100;
-      let rounded = round(d);
-      assert(rounded === 2);
       let data = "";
       function lambda(chunk) {
         data += chunk;
       }
       res.on("data", lambda);
       function lambda4() {
+        let { statusCode } = res;
+        let d = statusCode / 100;
+        let rounded = round(d);
+        assert_json(rounded === 2, {
+          data,
+        });
         resolve(data);
         log({
           data,
