@@ -1874,7 +1874,8 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add"
+   "js_let_add",
+   "http"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2681,7 +2682,8 @@
    "list_remove_all_multiple",
    "js_assign_combine",
    "app_reply_main",
-   "html_on_keydown"
+   "html_on_keydown",
+   "http"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2765,7 +2767,8 @@
    "app_replace_settings",
    "js_dollar_new",
    "js_expand_generic",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3158,7 +3161,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "http"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3321,7 +3325,8 @@
    "object_property_exists_equals"
   ],
   "on": [
-   "watch"
+   "watch",
+   "http"
   ],
   "path": [
    "watch",
@@ -3330,7 +3335,8 @@
    "path_join",
    "path_name",
    "path_resolve",
-   "server"
+   "server",
+   "http"
   ],
   "value": [
    "watch",
@@ -4120,7 +4126,8 @@
    "js_dollar_a_generic",
    "js_expand_generic",
    "js_calls_to_each",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "value2": [
    "error_attention_set",
@@ -4523,7 +4530,8 @@
    "file_exists",
    "file_overwrite",
    "file_read",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "http"
   ],
   "file": [
    "folder_read"
@@ -4865,7 +4873,8 @@
    "command_line_read"
   ],
   "close": [
-   "command_line_read"
+   "command_line_read",
+   "http"
   ],
   "command_line_schtasks": [
    "command_line_schtasks",
@@ -7646,7 +7655,8 @@
    "npm_install"
   ],
   "err": [
-   "import_install"
+   "import_install",
+   "http"
   ],
   "integer_is": [
    "integer_is",
@@ -9305,7 +9315,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "http"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -11829,6 +11840,27 @@
    "app_reply_main"
   ],
   "h": [
+   "http"
+  ],
+  "res": [
+   "http"
+  ],
+  "statusCode": [
+   "http"
+  ],
+  "fileStream": [
+   "http"
+  ],
+  "createWriteStream": [
+   "http"
+  ],
+  "pipe": [
+   "http"
+  ],
+  "https": [
+   "http"
+  ],
+  "get": [
    "http"
   ]
  },
@@ -21231,6 +21263,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "log",
     "string_starts_with",
     "browser_is",
     "error",
@@ -21243,7 +21276,24 @@
     "ok",
     "text",
     "h",
-    "sw"
+    "sw",
+    "lambda2",
+    "res",
+    "statusCode",
+    "console",
+    "fileStream",
+    "fs",
+    "createWriteStream",
+    "path",
+    "pipe",
+    "lambda",
+    "close",
+    "on",
+    "lambda3",
+    "err",
+    "message",
+    "https",
+    "get"
    ]
   },
   "http_json": {
