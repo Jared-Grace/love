@@ -9356,8 +9356,7 @@
   ],
   "console": [
    "log_keep",
-   "firebase_upload_string",
-   "http"
+   "firebase_upload_string"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -21382,7 +21381,6 @@
     "reject",
     "lambda2",
     "res",
-    "console",
     "statusCode",
     "data",
     "lambda",
