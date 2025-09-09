@@ -3684,7 +3684,8 @@
    "data_file_update_inner",
    "date_iso_to",
    "function_aliases_restore",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "http"
   ],
   "data": [
    "data_all",
@@ -21393,6 +21394,7 @@
     "lambda2",
     "res",
     "statusCode",
+    "d",
     "data",
     "lambda",
     "chunk",
