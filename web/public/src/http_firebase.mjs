@@ -7,7 +7,7 @@ export async function http_firebase(url) {
   marker("1");
   let text = await http(url);
   let safe = file_path_safe_to(url);
-  let joined = path_join(["http", url]);
+  let joined = path_join(["http", safe]);
   await firebase_upload_object(version, joined);
   return text;
 }
