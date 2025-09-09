@@ -3314,7 +3314,8 @@
    "html_name_to_path_dev",
    "list_join_newline_2",
    "list_join_newline",
-   "app_reply_main"
+   "app_reply_main",
+   "http_firebase"
   ],
   "watcher": [
    "watch"
@@ -4525,7 +4526,8 @@
    "server",
    "firebase_service_account",
    "html_name_to_path_dev",
-   "html_update_generic"
+   "html_update_generic",
+   "http_firebase"
   ],
   "fs": [
    "folder_read",
@@ -9519,7 +9521,8 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join"
+   "path_join",
+   "http_firebase"
   ],
   "then": [
    "promise_is"
@@ -22371,12 +22374,15 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "path_join",
     "firebase_upload_object",
     "http",
     "marker",
     "http_firebase",
     "url",
     "text",
+    "joined",
+    "list_of_segments",
     "version",
     "destination_version"
    ]
