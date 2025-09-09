@@ -1,4 +1,4 @@
 export function round(n) {
-  let v = Math.round(n);
-  return v;
+  let rounded = Math.round(n);
+  return rounded;
 }
