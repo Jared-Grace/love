@@ -11,4 +11,6 @@ export async function http(url) {
     const text = await response.text();
     return text;
   }
+  if (false) {
+  }
 }
