@@ -1860,7 +1860,8 @@
   "s storage",
   "u fd",
   "o function_dependencies_code_copy",
-  "is function_dependencies"
+  "is function_dependencies",
+  "is function_dependencies_code"
  ],
  "marker_current": "1",
  "function_current": "function_dependencies_code_copy",
