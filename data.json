@@ -11910,9 +11910,6 @@
    "file_path_safe_to",
    "http_firebase"
   ],
-  "urlToFirebaseKey": [
-   "file_path_safe_to"
-  ],
   "safe": [
    "file_path_safe_to",
    "http_firebase"
@@ -11946,6 +11943,9 @@
   ],
   "cacheControl": [
    "firebase_upload_string"
+  ],
+  "encodeURIComponent": [
+   "file_path_safe_to"
   ]
  },
  "functions": {
@@ -22477,7 +22477,7 @@
     "file_path_safe_to",
     "fp",
     "safe",
-    "urlToFirebaseKey"
+    "encodeURIComponent"
    ]
   },
   "firebase_storage_exists": {
