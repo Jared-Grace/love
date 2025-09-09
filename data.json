@@ -3359,8 +3359,7 @@
    "path_name",
    "path_resolve",
    "server",
-   "firebase_storage_exists",
-   "firebase_upload_string"
+   "firebase_storage_exists"
   ],
   "value": [
    "watch",
@@ -9415,8 +9414,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace",
-   "firebase_storage_url",
-   "firebase_upload_string"
+   "firebase_storage_url"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -22525,8 +22523,6 @@
     "firebase_upload_string",
     "content",
     "destination",
-    "replaced",
-    "path",
     "bucket",
     "file",
     "v",
