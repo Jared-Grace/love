@@ -1874,7 +1874,8 @@
   "s replace",
   "http_firebase http://www.google.com",
   "http_firebase https://www.google.com",
-  "s roudn"
+  "s roudn",
+  "s round"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
