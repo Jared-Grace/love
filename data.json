@@ -3349,7 +3349,8 @@
    "path_name",
    "path_resolve",
    "server",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase"
   ],
   "value": [
    "watch",
@@ -11911,7 +11912,8 @@
    "http_firebase"
   ],
   "firebase_storage_exists": [
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase"
   ],
   "firebase_bucket": [
    "firebase_upload_string",
@@ -22433,6 +22435,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "firebase_storage_exists",
     "file_path_safe_to",
     "path_join",
     "firebase_upload_object",
@@ -22440,6 +22443,7 @@
     "marker",
     "http_firebase",
     "url",
+    "path",
     "text",
     "safe",
     "joined"
