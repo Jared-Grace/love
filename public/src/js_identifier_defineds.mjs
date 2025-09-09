@@ -13,6 +13,7 @@ import { each } from "./each.mjs";
 import { list_adder_multiple } from "./list_adder_multiple.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { error } from "./error.mjs";
+import { json_to } from "./json_to.mjs";
 export function js_identifier_defineds(v) {
   let { stack } = v;
   function lambda4(la) {
@@ -32,11 +33,15 @@ export function js_identifier_defineds(v) {
               let values = list_map_property(properties, "value");
               let names = js_identifiers_to_names(values);
               la(names);
+            } else if (js_node_type_is(id, "ArrayPattern")) {
+              let { elements } = id;
+              let names = js_identifiers_to_names(elements);
+              la(names);
             } else if (js_node_type_is(id, "Identifier")) {
               let value = object_property_get(id, "name");
               la([value]);
             } else {
-              error();
+              error(json_to(id));
             }
           }
           each(ids, lambda);
