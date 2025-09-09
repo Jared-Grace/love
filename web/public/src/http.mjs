@@ -18,6 +18,7 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
+  await new Promise(function lambda5(resolve, reject) {});
   function lambda2(res) {
     let data = "";
     function lambda(chunk) {
