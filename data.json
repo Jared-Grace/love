@@ -1885,7 +1885,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "http_firebase"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3175,7 +3176,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "http_firebase"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -22439,6 +22441,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "log",
     "firebase_storage_download_property",
     "firebase_storage_exists",
     "file_path_safe_to",
@@ -22453,6 +22456,7 @@
     "exists",
     "path",
     "result",
+    "message",
     "text"
    ]
   },
