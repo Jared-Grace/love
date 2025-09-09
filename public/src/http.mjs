@@ -17,7 +17,7 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
-  return await new Promise(function lambda5(resolve, reject) {
+  let v = await new Promise(function lambda5(resolve, reject) {
     function lambda2(res) {
       let data = "";
       function lambda(chunk) {
@@ -31,4 +31,5 @@ export async function http(url) {
     }
     h.get(url, lambda2).on("error", reject);
   });
+  return v;
 }
