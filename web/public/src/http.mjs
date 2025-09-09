@@ -13,6 +13,7 @@ export async function http(url) {
     return text;
   }
   let sw = string_starts_with(url, "https://");
-  if (false) {
+  if (sw) {
+    ii;
   }
 }
