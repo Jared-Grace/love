@@ -1872,7 +1872,8 @@
   "file_path_safe_to http://www.google.com",
   "firebase_storage_exists http/http%3A%2F%2Fwww.google.com",
   "firebase_storage_exists http\\http%3A%2F%2Fwww.google.com",
-  "s replace"
+  "s replace",
+  "http_firebase http://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
