@@ -11827,6 +11827,9 @@
   "lower": [
    "string_lower_to",
    "app_reply_main"
+  ],
+  "h": [
+   "http"
   ]
  },
  "functions": {
@@ -21239,7 +21242,8 @@
     "fetch",
     "ok",
     "text",
-    "sw"
+    "sw",
+    "h"
    ]
   },
   "http_json": {
