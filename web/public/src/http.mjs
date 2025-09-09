@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
@@ -17,4 +18,21 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
+  function lambda2(res) {
+    if (res.statusCode !== 200) {
+      console.error(`Download failed. Status Code: ${res.statusCode}`);
+      return;
+    }
+    const fileStream = fs.createWriteStream(path);
+    res.pipe(fileStream);
+    function lambda() {
+      fileStream.close();
+      console.log("Download completed!");
+    }
+    fileStream.on("finish", lambda);
+  }
+  function lambda3(err) {
+    console.error("Error: ", err.message);
+  }
+  https.get(url, lambda2).on("error", lambda3);
 }
