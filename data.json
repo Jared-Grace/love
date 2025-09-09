@@ -11104,8 +11104,7 @@
    "file_name_json"
   ],
   "version": [
-   "firebase_deploy_function",
-   "http_firebase"
+   "firebase_deploy_function"
   ],
   "firebase_deploy_function_destination": [
    "firebase_deploy_function"
@@ -22395,8 +22394,7 @@
     "url",
     "text",
     "safe",
-    "joined",
-    "version"
+    "joined"
    ]
   },
   "firebase_upload_object": {
