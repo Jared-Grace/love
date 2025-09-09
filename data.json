@@ -170,7 +170,8 @@
   "od": "function_open_dollar_choice",
   "lc": "list_concat",
   "atn": "js_auto_transform_new",
-  "lsg": "list_single"
+  "lsg": "list_single",
+  "ii": "import_install"
  },
  "prompts": [
   "f function_run_prompt",
@@ -888,7 +889,6 @@
   "atn ii",
   "atn jis",
   "path_resolve .",
-  "a ii import_install",
   "git_push_schedule",
   "fw c function_copy_suffix_add",
   "u cs",
@@ -1855,7 +1855,8 @@
   "s client",
   "s bro",
   "s import",
-  "u ii"
+  "u ii",
+  "a ii import_install"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
