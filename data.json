@@ -11820,6 +11820,9 @@
   "lower": [
    "string_lower_to",
    "app_reply_main"
+  ],
+  "wi": [
+   "http"
   ]
  },
  "functions": {
@@ -21225,6 +21228,7 @@
     "not",
     "http",
     "url",
+    "wi",
     "response",
     "fetch",
     "ok",
