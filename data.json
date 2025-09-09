@@ -1869,7 +1869,8 @@
   "s download",
   "http_firebase https://wwww.google.com",
   "http_firebase https://www.google.com",
-  "http https://www.google.com"
+  "http https://www.google.com",
+  "file_path_safe_to http://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
