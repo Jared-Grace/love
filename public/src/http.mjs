@@ -1,3 +1,4 @@
+import { round } from "./round.mjs";
 import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -22,6 +23,7 @@ export async function http(url) {
     function lambda2(res) {
       let { statusCode } = res;
       let d = statusCode / 100;
+      let rounded = round(n);
       let data = "";
       function lambda(chunk) {
         data += chunk;
