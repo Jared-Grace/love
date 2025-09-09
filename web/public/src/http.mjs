@@ -19,17 +19,16 @@ export async function http(url) {
     h = await import("https");
   }
   function lambda2(res) {
-    if (res.statusCode !== 200) {
-      console.error(`Download failed. Status Code: ${res.statusCode}`);
-      return;
+    let data = "";
+    function lambda(chunk) {
+      data += chunk;
     }
-    const fileStream = fs.createWriteStream(path);
-    res.pipe(fileStream);
-    function lambda() {
-      fileStream.close();
-      console.log("Download completed!");
+    res.on("data", lambda);
+    function lambda4() {
+      console.log("Result as string:");
+      console.log(data);
     }
-    fileStream.on("finish", lambda);
+    res.on("end", lambda4);
   }
   function lambda3(err) {
     console.error("Error: ", err.message);
