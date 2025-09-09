@@ -9521,8 +9521,7 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join",
-   "http_firebase"
+   "path_join"
   ],
   "then": [
    "promise_is"
@@ -22382,7 +22381,6 @@
     "url",
     "text",
     "joined",
-    "list_of_segments",
     "version",
     "destination_version"
    ]
