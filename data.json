@@ -3192,8 +3192,7 @@
   "import_install": [
    "watch",
    "chalk_color",
-   "import_install",
-   "http"
+   "import_install"
   ],
   "command_line": [
    "command_line",
@@ -21229,7 +21228,6 @@
   "http": {
    "async": true,
    "identifiers": [
-    "import_install",
     "string_starts_with",
     "browser_is",
     "error",
