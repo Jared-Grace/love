@@ -10,8 +10,8 @@ export async function http_firebase(url) {
   let joined = path_join(["http", safe]);
   let exists = await firebase_storage_exists(path);
   if (exists) {
-    let v = await firebase_storage_download_property(joined, "text");
-    return v;
+    let result = await firebase_storage_download_property(joined, "text");
+    return result;
   }
   marker("1");
   let text = await http(url);
@@ -21,5 +21,6 @@ export async function http_firebase(url) {
     },
     joined,
   );
-  return text;
+  let result = await firebase_storage_download_property(joined, "text");
+  return result;
 }
