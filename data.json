@@ -1893,7 +1893,8 @@
    "js_calls_to_each",
    "js_let_add",
    "firebase_upload_string",
-   "http_firebase"
+   "http_firebase",
+   "firebase_storage_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3182,7 +3183,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "firebase_storage_download"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21446,11 +21448,13 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "log",
     "firebase_path_fix",
     "http_json",
     "firebase_storage_url",
     "firebase_storage_download",
     "destination",
+    "message",
     "url",
     "parsed"
    ]
