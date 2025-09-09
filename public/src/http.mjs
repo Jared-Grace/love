@@ -12,7 +12,7 @@ export async function http(url) {
     const text = await response.text();
     return text;
   }
-  let sw = string_starts_with(s, prefix);
+  let sw = string_starts_with(url, "https://");
   if (false) {
   }
 }
