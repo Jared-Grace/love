@@ -3,6 +3,7 @@ import { firebase_bucket } from "./firebase_bucket.mjs";
 export async function firebase_storage_exists(path) {
   const bucket = await firebase_bucket();
   const file = bucket.file(path);
+  let exists = null;
   try {
     const [exists] = await file.exists();
     return exists;
