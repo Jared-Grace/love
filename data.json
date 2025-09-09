@@ -2514,8 +2514,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "http_firebase"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -11244,8 +11243,7 @@
   ],
   "storage_path": [
    "firebase_storage_url",
-   "firebase_storage_download_property",
-   "http_firebase"
+   "firebase_storage_download_property"
   ],
   "firebase_storage_download": [
    "firebase_storage_download",
@@ -22455,8 +22453,6 @@
     "exists",
     "path",
     "value",
-    "storage_path",
-    "property_name",
     "text"
    ]
   },
