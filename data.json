@@ -1852,7 +1852,8 @@
   "s letter",
   "n string_letters_only",
   "s lower",
-  "n string_lower_to"
+  "n string_lower_to",
+  "s http"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
