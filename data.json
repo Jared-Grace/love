@@ -11240,8 +11240,7 @@
   ],
   "string_replace": [
    "string_replace",
-   "firebase_storage_url",
-   "firebase_storage_exists"
+   "firebase_storage_url"
   ],
   "firebase_storage_url": [
    "firebase_storage_url",
@@ -11950,6 +11949,9 @@
   ],
   "encodeURIComponent": [
    "file_path_safe_to"
+  ],
+  "firebase_path_fix": [
+   "firebase_storage_exists"
   ]
  },
  "functions": {
@@ -22486,7 +22488,7 @@
   "firebase_storage_exists": {
    "async": true,
    "identifiers": [
-    "string_replace",
+    "firebase_path_fix",
     "error",
     "firebase_bucket",
     "firebase_storage_exists",
