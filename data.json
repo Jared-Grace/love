@@ -4659,7 +4659,8 @@
    "html_style_remove",
    "js_calls_to_each",
    "browser_is",
-   "clipboard_copy"
+   "clipboard_copy",
+   "http"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11588,7 +11589,8 @@
   ],
   "browser_is": [
    "browser_is",
-   "clipboard_copy"
+   "clipboard_copy",
+   "http"
   ],
   "window": [
    "browser_is"
@@ -11822,9 +11824,6 @@
   "lower": [
    "string_lower_to",
    "app_reply_main"
-  ],
-  "wi": [
-   "http"
   ]
  },
  "functions": {
@@ -21226,11 +21225,12 @@
   "http": {
    "async": true,
    "identifiers": [
+    "browser_is",
     "error",
     "not",
     "http",
     "url",
-    "wi",
+    "b",
     "response",
     "fetch",
     "ok",
