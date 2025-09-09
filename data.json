@@ -2132,7 +2132,8 @@
    "string_letters_only",
    "string_lower_to",
    "http_firebase",
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "firebase_storage_exists"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -11892,6 +11893,9 @@
   "safe": [
    "file_path_safe_to",
    "http_firebase"
+  ],
+  "firebase_storage_exists": [
+   "firebase_storage_exists"
   ]
  },
  "functions": {
@@ -22418,6 +22422,13 @@
     "fp",
     "safe",
     "urlToFirebaseKey"
+   ]
+  },
+  "firebase_storage_exists": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "firebase_storage_exists"
    ]
   }
  },
