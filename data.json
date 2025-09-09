@@ -1823,7 +1823,6 @@
   "s hash",
   "s emoji",
   "s copy",
-  "s web",
   "n browser_is",
   "s main",
   "s new",
@@ -1853,7 +1852,8 @@
   "n string_letters_only",
   "s lower",
   "n string_lower_to",
-  "s http"
+  "s http",
+  "s web"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
