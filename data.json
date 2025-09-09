@@ -1862,10 +1862,11 @@
   "o function_dependencies_code_copy",
   "is function_dependencies",
   "is function_dependencies_code",
-  "fws http firebase"
+  "fws http firebase",
+  "n file_path_safe_to"
  ],
  "marker_current": "1",
- "function_current": "http_firebase",
+ "function_current": "file_path_safe_to",
  "terminal": false,
  "identifiers": {
   "log": [
