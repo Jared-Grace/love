@@ -1867,7 +1867,9 @@
   "s firebase",
   "n firebase_storage_exists",
   "s download",
-  "http_firebase https://wwww.google.com"
+  "http_firebase https://wwww.google.com",
+  "http_firebase https://www.google.com",
+  "http https://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
