@@ -6052,7 +6052,8 @@
    "function_exists_inner",
    "object_property_lambda",
    "object_property_lambda_async",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -22443,10 +22444,11 @@
     "marker",
     "http_firebase",
     "url",
-    "path",
-    "text",
     "safe",
-    "joined"
+    "joined",
+    "exists",
+    "path",
+    "text"
    ]
   },
   "firebase_upload_object": {
