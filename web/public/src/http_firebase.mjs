@@ -8,7 +8,7 @@ export async function http_firebase(url) {
   let safe = file_path_safe_to(url);
   let joined = path_join(["http", safe]);
   let exists = await firebase_storage_exists(path);
-  if (false) {
+  if (exists) {
   }
   marker("1");
   let text = await http(url);
