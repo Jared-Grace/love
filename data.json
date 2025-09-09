@@ -3105,7 +3105,8 @@
    "app_reply_choices",
    "kjv",
    "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -22451,6 +22452,7 @@
     "joined",
     "exists",
     "path",
+    "v",
     "text"
    ]
   },
