@@ -3352,8 +3352,7 @@
    "path_name",
    "path_resolve",
    "server",
-   "firebase_storage_exists",
-   "http_firebase"
+   "firebase_storage_exists"
   ],
   "value": [
    "watch",
@@ -22454,7 +22453,6 @@
     "safe",
     "joined",
     "exists",
-    "path",
     "result",
     "text"
    ]
