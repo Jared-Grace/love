@@ -1,6 +1,8 @@
+import { firebase_path_fix } from "./firebase_path_fix.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { log } from "./log.mjs";
 export async function firebase_upload_string(content, destination) {
+  let replaced = firebase_path_fix(path);
   const bucket = await firebase_bucket();
   const file = bucket.file(destination);
   let v = Buffer.from(content);
