@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { error } from "./error.mjs";
@@ -26,6 +27,7 @@ export async function http(url) {
       res.on("data", lambda);
       function lambda4() {
         resolve(data);
+        log(message);
       }
       res.on("end", lambda4);
     }
