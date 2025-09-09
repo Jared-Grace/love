@@ -15,6 +15,6 @@ export async function http(url) {
   }
   let sw = string_starts_with(url, "https://");
   if (sw) {
-    await import_install(name);
+    await import_install("https");
   }
 }
