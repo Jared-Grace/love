@@ -1865,7 +1865,8 @@
   "fws http firebase",
   "n file_path_safe_to",
   "s firebase",
-  "n firebase_storage_exists"
+  "n firebase_storage_exists",
+  "s download"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_exists",
