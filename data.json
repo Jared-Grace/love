@@ -1690,7 +1690,6 @@
   "o msa",
   "s app,repla",
   "s setting",
-  "s storage",
   "s rule,set",
   "s list_any",
   "a lan list_any",
@@ -1857,7 +1856,8 @@
   "s import",
   "u ii",
   "a ii import_install",
-  "http https://google.com"
+  "http https://google.com",
+  "s storage"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
