@@ -1856,7 +1856,8 @@
   "s bro",
   "s import",
   "u ii",
-  "a ii import_install"
+  "a ii import_install",
+  "http https://google.com"
  ],
  "marker_current": "1",
  "function_current": "string_lower_to",
