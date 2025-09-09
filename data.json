@@ -1894,7 +1894,8 @@
    "js_let_add",
    "firebase_upload_string",
    "http_firebase",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "http"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3183,7 +3184,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "http"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21356,6 +21358,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "log",
     "string_starts_with",
     "browser_is",
     "error",
@@ -21380,6 +21383,7 @@
     "chunk",
     "on",
     "lambda4",
+    "message",
     "get"
    ]
   },
