@@ -4314,8 +4314,7 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to",
-   "http"
+   "string_lower_to"
   ],
   "a": [
    "string_suffix_without",
@@ -8195,8 +8194,7 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account",
-   "http"
+   "firebase_service_account"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -21240,9 +21238,7 @@
     "fetch",
     "ok",
     "text",
-    "sw",
-    "s",
-    "prefix"
+    "sw"
    ]
   },
   "http_json": {
