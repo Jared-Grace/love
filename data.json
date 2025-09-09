@@ -1861,10 +1861,11 @@
   "u fd",
   "o function_dependencies_code_copy",
   "is function_dependencies",
-  "is function_dependencies_code"
+  "is function_dependencies_code",
+  "fws http firebase"
  ],
  "marker_current": "1",
- "function_current": "function_dependencies_code_copy",
+ "function_current": "http_firebase",
  "terminal": false,
  "identifiers": {
   "log": [
