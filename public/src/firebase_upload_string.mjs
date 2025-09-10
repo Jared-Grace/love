@@ -11,15 +11,15 @@ export async function firebase_upload_string(content, destination) {
     contentType: "text/plain",
     gzip: true,
   };
-  object_merge(
+  let merged = object_merge(
     {
       metadata: {
         cacheControl: "no-cache",
       },
     },
-    from2,
+    settings,
   );
-  await file.save(b, settings);
+  await file.save(b, merged);
   console.log(`Uploaded string to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   console.log("Accessible at:", url);
