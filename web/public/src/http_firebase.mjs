@@ -11,6 +11,7 @@ export async function http_firebase(url) {
       joined,
       property_name,
     );
+    return result;
   };
   const property_name = "text";
   if (exists) {
