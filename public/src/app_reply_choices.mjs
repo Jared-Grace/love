@@ -73,6 +73,13 @@ export function app_reply_choices() {
         emoji_pray() + string_lord_bless_your() + "family " + emoji_family(),
     },
     {
+      text: " Future",
+      response:
+        emoji_question() +
+        "God knows the future. I do not know the future." +
+        emoji_question(),
+    },
+    {
       text: emoji_fire() + " Glory",
       response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
     },
