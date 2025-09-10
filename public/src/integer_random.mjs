@@ -1,4 +1,6 @@
-import { marker } from "./marker.mjs";
+import { random } from "./random.mjs";
+import { floor } from "./floor.mjs";
 export function integer_random() {
-  marker("1");
+  let v = Math.floor(Math.random() * (max - min + 1)) + min;
+  return v;
 }
