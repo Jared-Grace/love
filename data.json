@@ -3722,8 +3722,7 @@
    "data_value",
    "file_read_json",
    "function_alias_add_generic",
-   "data_file_update_inner",
-   "http"
+   "data_file_update_inner"
   ],
   "file_path": [
    "data_file_update",
@@ -4184,7 +4183,8 @@
    "js_dollar_a_generic",
    "js_expand_generic",
    "js_calls_to_each",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "value2": [
    "error_attention_set",
@@ -4627,7 +4627,8 @@
    "js_keyword_await",
    "js_marker_is",
    "js_statement_call_get",
-   "list_all"
+   "list_all",
+   "http"
   ],
   "readdirSync": [
    "folder_read"
@@ -4853,7 +4854,6 @@
    "app_replace_rule_set",
    "html_button_screen",
    "html_p_text",
-   "http",
    "http_json",
    "app_reply_choices",
    "app_reply_main"
@@ -7671,7 +7671,8 @@
   ],
   "concat": [
    "git_acp_call",
-   "list_concat"
+   "list_concat",
+   "http"
   ],
   "join": [
    "git_acp_call",
@@ -8759,8 +8760,7 @@
   ],
   "lambda5": [
    "js_identifier_defineds",
-   "app_replace_rule_set",
-   "http"
+   "app_replace_rule_set"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -8884,7 +8884,8 @@
    "js_marker_named",
    "js_marker_name_get",
    "js_stack_list_block_is",
-   "js_statement_call_get"
+   "js_statement_call_get",
+   "http"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -9178,7 +9179,8 @@
   ],
   "push": [
    "list_add",
-   "list_add_multiple"
+   "list_add_multiple",
+   "http"
   ],
   "list_adder_generic": [
    "list_adder",
@@ -12060,7 +12062,8 @@
    "http_local_file_name"
   ],
   "buffer": [
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "http"
   ],
   "download": [
    "firebase_storage_download"
@@ -12104,6 +12107,9 @@
    "http"
   ],
   "arrayBuffer": [
+   "http"
+  ],
+  "chunks": [
    "http"
   ]
  },
@@ -21525,21 +21531,25 @@
     "from",
     "h",
     "sw",
-    "text",
+    "buffer",
     "Promise",
-    "lambda5",
+    "lambda4",
     "resolve",
     "reject",
     "lambda2",
     "res",
-    "data",
+    "chunks",
     "lambda",
     "chunk",
+    "v2",
+    "push",
     "on",
-    "lambda4",
+    "lambda3",
     "statusCode",
     "d",
     "rounded",
+    "v3",
+    "concat",
     "get"
    ]
   },
