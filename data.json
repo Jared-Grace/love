@@ -2247,8 +2247,7 @@
    "function_exists_inner",
    "function_parse_strict",
    "html_update_generic",
-   "file_write_buffer",
-   "unzip"
+   "file_write_buffer"
   ],
   "ast": [
    "data_identifiers_file",
@@ -3376,7 +3375,8 @@
    "list_join_newline",
    "app_reply_main",
    "http_local_file_name",
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "unzip"
   ],
   "watcher": [
    "watch"
@@ -7768,7 +7768,8 @@
    "file_name_json",
    "html_name_to_path_dev",
    "http_firebase_file_path",
-   "http_local_file_name"
+   "http_local_file_name",
+   "unzip"
   ],
   "html_update": [
    "html_update",
@@ -12243,7 +12244,8 @@
    "unzip"
   ],
   "local_function_path": [
-   "http_local_file_name"
+   "http_local_file_name",
+   "unzip"
   ]
  },
  "functions": {
@@ -23054,14 +23056,16 @@
   "unzip": {
    "async": true,
    "identifiers": [
+    "local_function_path",
     "file_write_buffer",
     "unzip",
+    "file_name",
     "buffer",
     "gunzip",
     "promisify",
     "gunzipAsync",
     "unzipped",
-    "f_path",
+    "joined",
     "contents"
    ]
   }
