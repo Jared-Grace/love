@@ -1900,7 +1900,8 @@
   "http_firebase https://www.google.com",
   "s read",
   "c file_read file_read_buffer",
-  "s write"
+  "s write",
+  "fd file_write"
  ],
  "marker_current": "1",
  "function_current": "file_read_buffer",
