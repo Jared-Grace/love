@@ -2177,7 +2177,8 @@
    "file_write_json",
    "firebase_upload_buffer",
    "file_read_buffer",
-   "file_overwrite_buffer"
+   "file_overwrite_buffer",
+   "http_local_text"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3146,7 +3147,8 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "file_read_buffer"
+   "file_read_buffer",
+   "http_local_text"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6639,7 +6641,8 @@
    "http_firebase_file_name",
    "http_local",
    "http_local_file_name",
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "http_local_text"
   ],
   "__dirname": [
    "function_import",
@@ -12098,7 +12101,8 @@
   ],
   "http_local": [
    "http_local",
-   "http_local_file_name"
+   "http_local_file_name",
+   "http_local_text"
   ],
   "http_local_file_name": [
    "http_local_file_name",
@@ -12166,6 +12170,9 @@
   "file_write_generic": [
    "file_write",
    "file_write_buffer"
+  ],
+  "http_local_text": [
+   "http_local_text"
   ]
  },
  "functions": {
@@ -22912,6 +22919,16 @@
     "file_write_buffer",
     "f_path",
     "contents"
+   ]
+  },
+  "http_local_text": {
+   "async": true,
+   "identifiers": [
+    "http_local",
+    "marker",
+    "http_local_text",
+    "url",
+    "v"
    ]
   }
  },
