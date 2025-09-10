@@ -1903,7 +1903,8 @@
   "cs file_overwrite buffer",
   "s read",
   "s write",
-  "cs file_write buffer"
+  "cs file_write buffer",
+  "http_local https://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "file_write_buffer",
