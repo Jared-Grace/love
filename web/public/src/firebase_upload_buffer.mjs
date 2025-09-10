@@ -1,0 +1,10 @@
+import { firebase_upload_generic } from "./firebase_upload_generic.mjs";
+export async function firebase_upload_buffer(content, destination) {
+  let buffer = Buffer.from(content);
+  const settings = {
+    contentType: "text/plain",
+    gzip: true,
+  };
+  await firebase_upload_generic(destination, settings, buffer);
+  return destination;
+}
