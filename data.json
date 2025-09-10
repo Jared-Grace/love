@@ -1905,7 +1905,7 @@
   "cs file_overwrite buffer"
  ],
  "marker_current": "1",
- "function_current": "file_read_buffer",
+ "function_current": "file_overwrite_buffer",
  "terminal": false,
  "identifiers": {
   "log": [
