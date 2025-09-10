@@ -2166,8 +2166,7 @@
    "file_path_safe_to",
    "http_local",
    "http_firebase_file_path",
-   "file_write_json",
-   "buffer_string_to"
+   "file_write_json"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22831,7 +22830,6 @@
   "buffer_string_to": {
    "async": false,
    "identifiers": [
-    "marker",
     "buffer_string_to",
     "buffer",
     "v",
