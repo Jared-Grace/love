@@ -1900,7 +1900,7 @@
   "c firebase_upload_string firebase_upload_buffer"
  ],
  "marker_current": "1",
- "function_current": "buffer_string_to",
+ "function_current": "firebase_upload_buffer",
  "terminal": false,
  "identifiers": {
   "log": [
