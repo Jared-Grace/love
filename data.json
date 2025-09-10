@@ -2158,7 +2158,8 @@
    "string_letters_only",
    "string_lower_to",
    "file_path_safe_to",
-   "http_local"
+   "http_local",
+   "http_firebase_file_path"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3351,7 +3352,8 @@
    "list_join_newline",
    "app_reply_main",
    "http_firebase_file_name",
-   "http_local_file_name"
+   "http_local_file_name",
+   "http_firebase_file_path"
   ],
   "watcher": [
    "watch"
@@ -4575,7 +4577,8 @@
    "html_name_to_path_dev",
    "html_update_generic",
    "http_firebase_file_name",
-   "http_local_file_name"
+   "http_local_file_name",
+   "http_firebase_file_path"
   ],
   "fs": [
    "folder_read",
@@ -6609,7 +6612,8 @@
    "firebase_upload_string",
    "http_firebase_file_name",
    "http_local",
-   "http_local_file_name"
+   "http_local_file_name",
+   "http_firebase_file_path"
   ],
   "__dirname": [
    "function_import",
@@ -7713,7 +7717,8 @@
    "app_html_open",
    "file_name_json",
    "html_name_to_path_dev",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_firebase_file_path"
   ],
   "html_update": [
    "html_update",
@@ -12010,7 +12015,8 @@
    "firebase_storage_exists",
    "firebase_storage_download",
    "firebase_upload_string",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_firebase_file_path"
   ],
   "statusCode": [
    "http"
@@ -12039,7 +12045,8 @@
   "http_firebase_file_name": [
    "http_firebase",
    "http_firebase_file_name",
-   "http_local"
+   "http_local",
+   "http_firebase_file_path"
   ],
   "buffer": [
    "firebase_storage_download"
@@ -12073,6 +12080,9 @@
   ],
   "http_local_file_name": [
    "http_local_file_name"
+  ],
+  "http_firebase_file_path": [
+   "http_firebase_file_path"
   ]
  },
  "functions": {
@@ -22737,6 +22747,19 @@
     "url",
     "joined",
     "name"
+   ]
+  },
+  "http_firebase_file_path": {
+   "async": false,
+   "identifiers": [
+    "http_firebase_file_name",
+    "marker",
+    "firebase_path_fix",
+    "path_join",
+    "http_firebase_file_path",
+    "url",
+    "file_name",
+    "joined"
    ]
   }
  },
