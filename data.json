@@ -9984,8 +9984,7 @@
   "Math": [
    "date_diff_ms",
    "round",
-   "floor",
-   "integer_random"
+   "floor"
   ],
   "abs": [
    "date_diff_ms"
@@ -23004,10 +23003,9 @@
     "random",
     "floor",
     "integer_random",
-    "v",
-    "Math",
+    "min",
     "max",
-    "min"
+    "v"
    ]
   }
  },
