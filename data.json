@@ -9450,8 +9450,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "unzip"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -23065,8 +23064,7 @@
     "buffer",
     "zip",
     "AdmZip",
-    "extractAllTo",
-    "console"
+    "extractAllTo"
    ]
   }
  },
