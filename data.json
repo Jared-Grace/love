@@ -1912,7 +1912,8 @@
   "s http",
   "n unzip",
   "p",
-  "ebible_version_download engbsb"
+  "ebible_version_download engbsb",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "unzip",
