@@ -3965,8 +3965,7 @@
    "function_exists_strict",
    "html_element",
    "function_exists_inner",
-   "firebase_storage_exists",
-   "http_firebase"
+   "firebase_storage_exists"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -12038,6 +12037,9 @@
    "http_firebase"
   ],
   "cached_exists": [
+   "http_firebase"
+  ],
+  "cache_generic": [
    "http_firebase"
   ]
  },
@@ -22552,6 +22554,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "cache_generic",
     "http_firebase_file_name",
     "firebase_storage_download_property",
     "firebase_storage_exists",
@@ -22568,8 +22571,7 @@
     "key_get",
     "cache_save",
     "value",
-    "value_get",
-    "e"
+    "value_get"
    ]
   },
   "firebase_upload_object": {
