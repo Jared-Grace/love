@@ -11,7 +11,7 @@ export function buffer_string_to(buffer) {
       throw new Error("Unsupported buffer type");
     }
   } else {
+    s = buffer.toString("utf8");
   }
-  let v = buffer.toString("utf8");
-  return v;
+  return s;
 }
