@@ -19,6 +19,7 @@ export async function http_firebase(url) {
       joined,
     );
   }
+  let value_get = http;
   let joined = key_get(url);
   let e = await cached_exists(joined);
   if (e) {
