@@ -1909,10 +1909,11 @@
   "http_local_text https://www.google.com",
   "s sle",
   "s rand",
-  "n integer_random"
+  "n integer_random",
+  "n ebible_version_download"
  ],
  "marker_current": "1",
- "function_current": "integer_random",
+ "function_current": "ebible_version_download",
  "terminal": false,
  "identifiers": {
   "log": [
