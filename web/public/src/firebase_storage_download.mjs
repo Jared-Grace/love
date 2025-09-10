@@ -20,7 +20,5 @@ export async function firebase_storage_download(destination) {
   const bucket = await firebase_bucket();
   const file_path = firebase_storage_download_path(destination);
   await file_parent_exists_ensure(file_path);
-  await bucket.file(destination).download({
-    destination: file_path,
-  });
+  await bucket.file(destination).getBuffer();
 }
