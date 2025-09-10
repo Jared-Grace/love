@@ -12217,6 +12217,9 @@
   ],
   "ebible_version_download": [
    "ebible_version_download"
+  ],
+  "bible_folder": [
+   "ebible_version_download"
   ]
  },
  "functions": {
@@ -23017,7 +23020,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "ebible_version_download"
+    "ebible_version_download",
+    "bible_folder"
    ]
   }
  },
