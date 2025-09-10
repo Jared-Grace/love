@@ -12115,7 +12115,8 @@
    "http"
   ],
   "buffer_string_to": [
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "http_json"
   ]
  },
  "functions": {
@@ -21561,6 +21562,7 @@
   "http_json": {
    "async": true,
    "identifiers": [
+    "buffer_string_to",
     "json_from",
     "http",
     "marker",
