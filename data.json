@@ -3466,8 +3466,7 @@
    "app_replace_font_size_refresh",
    "app_replace_settings",
    "app_replace_font_size_adjust",
-   "http_firebase",
-   "http_local"
+   "http_firebase"
   ],
   "name": [
    "watch",
@@ -7054,8 +7053,7 @@
    "storage_local_initialize_context",
    "html_attribute_set",
    "app_reply_main",
-   "http_firebase",
-   "http_local"
+   "http_firebase"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -10265,8 +10263,7 @@
    "function_aliases_restore"
   ],
   "cs": [
-   "function_aliases_restore",
-   "http_local"
+   "function_aliases_restore"
   ],
   "er": [
    "function_aliases_restore"
@@ -12110,8 +12107,7 @@
    "http_firebase"
   ],
   "file_write_json": [
-   "file_write_json",
-   "http_local"
+   "file_write_json"
   ],
   "buf": [
    "http"
@@ -22796,7 +22792,6 @@
    "identifiers": [
     "file_write_buffer",
     "file_read_buffer",
-    "file_write_json",
     "file_exists",
     "http_local_file_name",
     "http_firebase",
@@ -22809,9 +22804,6 @@
     "cached_get",
     "value_get",
     "cache_save",
-    "key",
-    "value",
-    "cs",
     "result"
    ]
   },
