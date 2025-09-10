@@ -2160,7 +2160,8 @@
    "string_lower_to",
    "file_path_safe_to",
    "http_local",
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "file_write_json"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22778,6 +22779,7 @@
   "file_write_json": {
    "async": true,
    "identifiers": [
+    "marker",
     "file_overwrite",
     "json_format_to",
     "file_write_json",
