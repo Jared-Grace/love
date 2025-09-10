@@ -1,14 +1,14 @@
+import { file_exists } from "./file_exists.mjs";
 import { http_local_file_name } from "./http_local_file_name.mjs";
 import { http_firebase } from "./http_firebase.mjs";
 import { marker } from "./marker.mjs";
 import { cache_generic } from "./cache_generic.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
-import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 export async function http_local(url) {
   marker("1");
   let key_get = http_local_file_name;
-  let cached_exists = firebase_storage_exists;
+  let cached_exists = file_exists;
   const property_name = "text";
   let cached_get = async function lambda(key) {
     let result = await firebase_storage_download_property(key, property_name);
