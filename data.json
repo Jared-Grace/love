@@ -4756,8 +4756,7 @@
    "undefined_not_is_assert_lambda",
    "storage_local_set",
    "function_transform_marker_specified",
-   "firebase_upload_object",
-   "firebase_storage_download"
+   "firebase_upload_object"
   ],
   "assert_json": [
    "assert_json",
@@ -4805,7 +4804,8 @@
    "file_overwrite_json",
    "file_read_json",
    "json_from",
-   "storage_local_get"
+   "storage_local_get",
+   "firebase_storage_download"
   ],
   "includes": [
    "catch_only_async",
@@ -5255,8 +5255,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_exists_not_assert",
-   "firebase_upload_object",
-   "firebase_storage_download"
+   "firebase_upload_object"
   ],
   "each_pair": [
    "each_pair",
@@ -5505,7 +5504,8 @@
    "file_read_json",
    "json_from",
    "storage_local_get",
-   "http_json"
+   "http_json",
+   "firebase_storage_download"
   ],
   "file_write": [
    "file_write",
@@ -21526,7 +21526,7 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
-    "json_to",
+    "json_from",
     "firebase_bucket",
     "browser_is",
     "log",
@@ -21545,7 +21545,7 @@
     "data",
     "toString",
     "v",
-    "object"
+    "json"
    ]
   },
   "firebase_storage_download_property": {
