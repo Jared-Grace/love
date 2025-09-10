@@ -12,6 +12,7 @@ export async function http_firebase(url) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
+  let value_get = http;
   async function cache_save(key, value) {
     await firebase_upload_object(
       {
@@ -20,7 +21,6 @@ export async function http_firebase(url) {
       key,
     );
   }
-  let value_get = http;
   let result = await cache_generic(
     key_get,
     url,
