@@ -1829,7 +1829,6 @@
   "r prayer_ending prayer_end",
   "s clear",
   "s list",
-  "s html",
   "c html_style_font_size html_display_none",
   "c html_display_none html_display_block",
   "s dove",
@@ -1910,7 +1909,8 @@
   "s sle",
   "s rand",
   "n integer_random",
-  "n ebible_version_download"
+  "n ebible_version_download",
+  "s html"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_download",
