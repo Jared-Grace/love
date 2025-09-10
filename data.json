@@ -1930,7 +1930,8 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add"
+   "js_let_add",
+   "unzip"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3260,8 +3261,7 @@
   "import_install": [
    "watch",
    "chalk_color",
-   "import_install",
-   "unzip"
+   "import_install"
   ],
   "command_line": [
    "command_line",
@@ -3376,8 +3376,7 @@
    "list_join_newline",
    "app_reply_main",
    "http_local_file_name",
-   "http_firebase_file_path",
-   "unzip"
+   "http_firebase_file_path"
   ],
   "watcher": [
    "watch"
@@ -3553,8 +3552,7 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply",
-   "unzip"
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -3767,7 +3765,8 @@
    "html_update_public",
    "file_write_json",
    "file_read_buffer",
-   "file_overwrite_buffer"
+   "file_overwrite_buffer",
+   "unzip"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4893,8 +4892,7 @@
    "command_line"
   ],
   "promisify": [
-   "command_line",
-   "unzip"
+   "command_line"
   ],
   "execAsync": [
    "command_line"
@@ -7770,7 +7768,6 @@
    "html_name_to_path_dev",
    "http_firebase_file_path",
    "http_local_file_name",
-   "unzip",
    "ebible_version_download"
   ],
   "html_update": [
@@ -9453,7 +9450,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "unzip"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -12195,8 +12193,7 @@
   ],
   "file_write_buffer": [
    "file_write_buffer",
-   "http_local",
-   "unzip"
+   "http_local"
   ],
   "overwrite": [
    "file_write"
@@ -12238,17 +12235,16 @@
    "unzip",
    "ebible_version_download"
   ],
-  "gunzip": [
-   "unzip"
-  ],
-  "gunzipAsync": [
-   "unzip"
-  ],
-  "unzipped": [
-   "unzip"
-  ],
   "local_function_path": [
-   "http_local_file_name",
+   "http_local_file_name"
+  ],
+  "zip": [
+   "unzip"
+  ],
+  "AdmZip": [
+   "unzip"
+  ],
+  "extractAllTo": [
    "unzip"
   ]
  },
@@ -23063,18 +23059,14 @@
   "unzip": {
    "async": true,
    "identifiers": [
-    "import_install",
-    "local_function_path",
-    "file_write_buffer",
+    "log",
     "unzip",
-    "file_name",
+    "file_path",
     "buffer",
-    "name",
-    "gunzip",
-    "promisify",
-    "gunzipAsync",
-    "unzipped",
-    "joined"
+    "zip",
+    "AdmZip",
+    "extractAllTo",
+    "console"
    ]
   }
  },
