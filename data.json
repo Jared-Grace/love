@@ -12013,9 +12013,6 @@
   "b64node": [
    "string_base64_to"
   ],
-  "download": [
-   "firebase_storage_download"
-  ],
   "firebase_storage_download_path": [
    "firebase_storage_download"
   ],
@@ -12023,6 +12020,9 @@
    "http_firebase",
    "firebase_storage_exists",
    "http_firebase_file_name"
+  ],
+  "getBuffer": [
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -21536,7 +21536,7 @@
     "bucket",
     "file_path",
     "file",
-    "download"
+    "getBuffer"
    ]
   },
   "firebase_storage_download_property": {
