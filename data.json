@@ -11270,7 +11270,8 @@
   "http": [
    "http",
    "http_json",
-   "http_firebase"
+   "http_firebase",
+   "firebase_storage_download"
   ],
   "response": [
    "http",
@@ -11283,8 +11284,7 @@
    "http"
   ],
   "http_json": [
-   "http_json",
-   "firebase_storage_download"
+   "http_json"
   ],
   "firebase_deploy_function_destination_version": [
    "firebase_deploy_function"
@@ -21651,12 +21651,12 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "http",
     "buffer_string_to",
     "json_from",
     "firebase_bucket",
     "browser_is",
     "firebase_path_fix",
-    "http_json",
     "firebase_storage_url",
     "firebase_storage_download",
     "destination",
