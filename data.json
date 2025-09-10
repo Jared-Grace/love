@@ -1886,7 +1886,6 @@
   "c http_firebase http_local",
   "n http_local_file_name",
   "r http_firebase_file_name http_firebase_file_path",
-  "s write",
   "c file_overwrite_json file_write_json",
   "fd http",
   "is http",
@@ -1900,7 +1899,8 @@
   "is firebase_storage_download",
   "http_firebase https://www.google.com",
   "s read",
-  "c file_read file_read_buffer"
+  "c file_read file_read_buffer",
+  "s write"
  ],
  "marker_current": "1",
  "function_current": "file_read_buffer",
