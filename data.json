@@ -3447,7 +3447,8 @@
    "html_attribute_set",
    "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_replace_font_size_adjust"
+   "app_replace_font_size_adjust",
+   "http_firebase"
   ],
   "name": [
    "watch",
@@ -4835,8 +4836,7 @@
    "http",
    "http_json",
    "app_reply_choices",
-   "app_reply_main",
-   "http_firebase"
+   "app_reply_main"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12033,6 +12033,9 @@
    "http_firebase"
   ],
   "cached_get": [
+   "http_firebase"
+  ],
+  "cache_save": [
    "http_firebase"
   ]
  },
@@ -22563,7 +22566,8 @@
     "key_get",
     "joined",
     "e",
-    "text"
+    "value",
+    "cache_save"
    ]
   },
   "firebase_upload_object": {
