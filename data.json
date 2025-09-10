@@ -3152,8 +3152,7 @@
    "app_reply_choices",
    "kjv",
    "file_read_buffer",
-   "sleep",
-   "integer_random"
+   "sleep"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6498,7 +6497,8 @@
    "js_dollar_new",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "list_random_item"
+   "list_random_item",
+   "integer_random"
   ],
   "formatted": [
    "function_format",
@@ -23005,7 +23005,7 @@
     "integer_random",
     "min",
     "max",
-    "v"
+    "r"
    ]
   }
  },
