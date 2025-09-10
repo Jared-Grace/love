@@ -9,7 +9,7 @@ export async function http_firebase(url) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
-  let exists = firebase_storage_exists;
+  let cached_exists = firebase_storage_exists;
   let key_get = http_firebase_file_name;
   async function cache_save(value) {
     await firebase_upload_object(
@@ -20,7 +20,7 @@ export async function http_firebase(url) {
     );
   }
   let joined = key_get(url);
-  let e = await exists(joined);
+  let e = await cached_exists(joined);
   if (e) {
     let result = await cached_get(joined);
     return result;
