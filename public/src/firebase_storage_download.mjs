@@ -17,7 +17,7 @@ export async function firebase_storage_download(destination) {
     return parsed;
   }
   const bucket = await firebase_bucket();
-  let buffer = await bucket.file(destination).getBuffer();
+  let [buffer] = await bucket.file(destination).download();
   const json = buffer.toString("utf8");
   let o = json_from(json);
   return o;
