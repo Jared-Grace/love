@@ -21569,8 +21569,8 @@
     "http_json",
     "url",
     "buffer",
-    "parsed",
-    "text"
+    "text",
+    "parsed"
    ]
   },
   "firebase_admin_get": {
