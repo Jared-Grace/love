@@ -12023,10 +12023,10 @@
    "firebase_storage_exists",
    "http_firebase_file_name"
   ],
-  "getBuffer": [
+  "buffer": [
    "firebase_storage_download"
   ],
-  "buffer": [
+  "download": [
    "firebase_storage_download"
   ]
  },
@@ -21540,7 +21540,7 @@
     "bucket",
     "buffer",
     "file",
-    "getBuffer",
+    "download",
     "json",
     "toString",
     "o"
