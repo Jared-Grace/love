@@ -1,3 +1,4 @@
+import { firebase_bucket } from "./firebase_bucket.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { log } from "./log.mjs";
 import { firebase_path_fix } from "./firebase_path_fix.mjs";
@@ -14,4 +15,8 @@ export async function firebase_storage_download(destination) {
     let parsed = await http_json(url);
     return parsed;
   }
+  const bucket = await firebase_bucket();
+  await bucket.file(storagePath).download({
+    destination: localPath,
+  });
 }
