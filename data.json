@@ -2167,7 +2167,8 @@
    "file_path_safe_to",
    "http_local",
    "http_firebase_file_path",
-   "file_write_json"
+   "file_write_json",
+   "firebase_upload_buffer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22853,6 +22854,7 @@
   "firebase_upload_buffer": {
    "async": true,
    "identifiers": [
+    "marker",
     "firebase_upload_generic",
     "firebase_upload_buffer",
     "content",
