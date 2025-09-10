@@ -7,7 +7,7 @@ import { http } from "./http.mjs";
 import { marker } from "./marker.mjs";
 export async function http_firebase(url) {
   let joined = http_firebase_file_name(url);
-  let exists = await firebase_storage_exists(joined);
+  let exists = await firebase_storage_exists(url);
   if (exists) {
     log("not downloading");
     let result = await firebase_storage_download_property(joined, "text");
