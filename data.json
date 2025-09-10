@@ -1892,7 +1892,8 @@
   "s write",
   "c file_overwrite_json file_write_json",
   "fd http",
-  "is http"
+  "is http",
+  "s buffer"
  ],
  "marker_current": "1",
  "function_current": "file_write_json",
