@@ -23,10 +23,11 @@ export async function http_firebase(url) {
   let joined = key_get(url);
   let e = await cached_exists(joined);
   if (e) {
-    let result = await cached_get(joined);
+    let result = null;
+    result = await cached_get(joined);
     return result;
   }
-  let value = await http(url);
+  let value = await value_get(url);
   await cache_save(value);
   let result = await cached_get(joined);
   return result;
