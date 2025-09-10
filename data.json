@@ -6087,8 +6087,7 @@
    "function_exists_inner",
    "object_property_lambda",
    "object_property_lambda_async",
-   "firebase_storage_exists",
-   "http_firebase"
+   "firebase_storage_exists"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -12036,6 +12035,9 @@
    "http_firebase"
   ],
   "cache_save": [
+   "http_firebase"
+  ],
+  "cached_exists": [
    "http_firebase"
   ]
  },
@@ -22562,7 +22564,7 @@
     "lambda",
     "key",
     "result",
-    "exists",
+    "cached_exists",
     "key_get",
     "cache_save",
     "value",
