@@ -3260,7 +3260,8 @@
   "import_install": [
    "watch",
    "chalk_color",
-   "import_install"
+   "import_install",
+   "unzip"
   ],
   "command_line": [
    "command_line",
@@ -3552,7 +3553,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "unzip"
   ],
   "output": [
    "watch",
@@ -23061,11 +23063,13 @@
   "unzip": {
    "async": true,
    "identifiers": [
+    "import_install",
     "local_function_path",
     "file_write_buffer",
     "unzip",
     "file_name",
     "buffer",
+    "name",
     "gunzip",
     "promisify",
     "gunzipAsync",
