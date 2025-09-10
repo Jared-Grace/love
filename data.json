@@ -9704,8 +9704,7 @@
   ],
   "toString": [
    "string_to",
-   "string_base64_to",
-   "firebase_storage_download"
+   "string_base64_to"
   ],
   "task_function_name_part": [
    "tasks_run",
@@ -12114,6 +12113,9 @@
   ],
   "chunks": [
    "http"
+  ],
+  "buffer_string_to": [
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -21621,6 +21623,7 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "buffer_string_to",
     "json_from",
     "firebase_bucket",
     "browser_is",
@@ -21638,7 +21641,6 @@
     "file",
     "download",
     "json",
-    "toString",
     "o"
    ]
   },
