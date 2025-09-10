@@ -2186,8 +2186,7 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "http_local_text",
-   "ebible_version_download",
-   "unzip"
+   "ebible_version_download"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4892,7 +4891,8 @@
    "command_line"
   ],
   "promisify": [
-   "command_line"
+   "command_line",
+   "unzip"
   ],
   "execAsync": [
    "command_line"
@@ -12099,7 +12099,8 @@
    "firebase_upload_string",
    "firebase_upload_buffer",
    "firebase_storage_download_property",
-   "http_local_text"
+   "http_local_text",
+   "unzip"
   ],
   "download": [
    "firebase_storage_download"
@@ -12228,6 +12229,15 @@
    "ebible_version_download"
   ],
   "unzip": [
+   "unzip"
+  ],
+  "gunzip": [
+   "unzip"
+  ],
+  "gunzipAsync": [
+   "unzip"
+  ],
+  "uncompressed": [
    "unzip"
   ]
  },
@@ -23037,10 +23047,14 @@
    ]
   },
   "unzip": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "unzip"
+    "unzip",
+    "buffer",
+    "gunzip",
+    "promisify",
+    "gunzipAsync",
+    "uncompressed"
    ]
   }
  },
