@@ -1882,7 +1882,8 @@
   "p",
   "http_firebase https://www.google.com",
   "fd firebase_storage_download_property",
-  "firebase_storage_download_path test.json"
+  "firebase_storage_download_path test.json",
+  "s file,json"
  ],
  "marker_current": "1",
  "function_current": "string_base64_to",
