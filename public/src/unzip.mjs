@@ -1,12 +1,6 @@
-import { import_install } from "./import_install.mjs";
-import { local_function_path } from "./local_function_path.mjs";
-import { file_write_buffer } from "./file_write_buffer.mjs";
-export async function unzip(file_name, buffer) {
-  await import_install(name);
-  const { gunzip } = await import("zlib");
-  const { promisify } = await import("util");
-  const gunzipAsync = promisify(gunzip);
-  const unzipped = await gunzipAsync(buffer);
-  let joined = local_function_path(unzip, file_name);
-  await file_write_buffer(joined, unzipped);
+import { log } from "./log.mjs";
+export async function unzip(file_path, buffer) {
+  const zip = new AdmZip(buffer);
+  zip.extractAllTo(file_path, true);
+  console.log(`Extracted zip to folder: ${file_path}`);
 }
