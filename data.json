@@ -12162,6 +12162,9 @@
   ],
   "file_write_buffer": [
    "file_write_buffer"
+  ],
+  "overwrite": [
+   "file_write"
   ]
  },
  "functions": {
@@ -13066,7 +13069,8 @@
     "assert_file_exists_not",
     "file_write",
     "f_path",
-    "contents"
+    "contents",
+    "overwrite"
    ],
    "async": true
   },
