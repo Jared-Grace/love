@@ -20,26 +20,27 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
-  let text = await new Promise(function lambda5(resolve, reject) {
+  let buffer = await new Promise(function lambda4(resolve, reject) {
     function lambda2(res) {
-      let data = "";
+      const chunks = [];
       function lambda(chunk) {
-        data += chunk;
+        let v2 = chunks.push(chunk);
+        return v2;
       }
       res.on("data", lambda);
-      function lambda4() {
-        let { statusCode } = res;
-        let d = statusCode / 100;
-        let rounded = round(d);
+      function lambda3() {
+        const { statusCode } = res;
+        const d = statusCode / 100;
+        const rounded = round(d);
         assert_json(rounded === 2, {
-          data,
           url,
         });
-        resolve(data);
+        let v3 = Buffer.concat(chunks);
+        resolve(v3);
       }
-      res.on("end", lambda4);
+      res.on("end", lambda3);
     }
     h.get(url, lambda2).on("error", reject);
   });
-  return text;
+  return buffer;
 }
