@@ -1,16 +1,12 @@
-import { file_name_json } from "./file_name_json.mjs";
-import { string_base64_to } from "./string_base64_to.mjs";
+import { http_firebase_file_name } from "./http_firebase_file_name.mjs";
 import { log } from "./log.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
 import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
-import { path_join } from "./path_join.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { http } from "./http.mjs";
 import { marker } from "./marker.mjs";
 export async function http_firebase(url) {
-  let safe = string_base64_to(url);
-  let file_name = file_name_json(safe);
-  let joined = path_join(["http", file_name]);
+  let joined = http_firebase_file_name(url);
   let exists = await firebase_storage_exists(joined);
   if (exists) {
     log("not downloading");
