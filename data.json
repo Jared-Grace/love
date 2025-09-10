@@ -2155,7 +2155,8 @@
    "html_on_keydown",
    "string_letters_only",
    "string_lower_to",
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "http_local"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22696,6 +22697,7 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "marker",
     "cache_generic",
     "http_firebase_file_name",
     "firebase_storage_download_property",
