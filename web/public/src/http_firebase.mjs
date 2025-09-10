@@ -17,13 +17,16 @@ export async function http_firebase(url) {
     let result = await cached_get(joined);
     return result;
   }
-  let text = await http(url);
-  await firebase_upload_object(
-    {
-      [property_name]: text,
-    },
-    joined,
-  );
+  let value = await http(url);
+  await cache_save(value);
   let result = await cached_get(joined);
   return result;
+  async function cache_save(value) {
+    await firebase_upload_object(
+      {
+        [property_name]: value,
+      },
+      joined,
+    );
+  }
 }
