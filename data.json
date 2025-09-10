@@ -3361,7 +3361,8 @@
    "watch",
    "chalk_color",
    "clipboard_copy",
-   "firebase_admin_get"
+   "firebase_admin_get",
+   "unzip"
   ],
   "joined": [
    "watch",
@@ -23066,8 +23067,9 @@
     "file_path",
     "buffer",
     "name",
-    "zip",
     "AdmZip",
+    "default",
+    "zip",
     "extractAllTo"
    ]
   }
