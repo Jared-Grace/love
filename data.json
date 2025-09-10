@@ -4708,7 +4708,8 @@
    "browser_is",
    "clipboard_copy",
    "http",
-   "string_base64_to"
+   "string_base64_to",
+   "firebase_storage_download"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11667,7 +11668,8 @@
    "browser_is",
    "clipboard_copy",
    "http",
-   "string_base64_to"
+   "string_base64_to",
+   "firebase_storage_download"
   ],
   "window": [
    "browser_is"
@@ -21494,12 +21496,14 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "browser_is",
     "log",
     "firebase_path_fix",
     "http_json",
     "firebase_storage_url",
     "firebase_storage_download",
     "destination",
+    "b",
     "url",
     "parsed"
    ]
@@ -22601,7 +22605,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-09T23:04:49.638Z",
+ "git_push_when": "2025-09-10T00:12:43.058Z",
  "error_attention": null,
  "app_current": "replace"
 }
