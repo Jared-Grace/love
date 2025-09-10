@@ -1884,7 +1884,6 @@
   "a jt json_to",
   "ps",
   "p",
-  "http_firebase https://www.google.com",
   "c http_firebase http_local",
   "n http_local_file_name",
   "r http_firebase_file_name http_firebase_file_path",
@@ -1899,7 +1898,8 @@
   "fd firebase_upload_string",
   "c firebase_upload_string firebase_upload_buffer",
   "fd firebase_storage_download",
-  "is firebase_storage_download"
+  "is firebase_storage_download",
+  "http_firebase https://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "firebase_upload_buffer",
