@@ -3261,7 +3261,8 @@
   "import_install": [
    "watch",
    "chalk_color",
-   "import_install"
+   "import_install",
+   "unzip"
   ],
   "command_line": [
    "command_line",
@@ -3552,7 +3553,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "unzip"
   ],
   "output": [
    "watch",
@@ -23058,10 +23060,12 @@
   "unzip": {
    "async": true,
    "identifiers": [
+    "import_install",
     "log",
     "unzip",
     "file_path",
     "buffer",
+    "name",
     "zip",
     "AdmZip",
     "extractAllTo"
