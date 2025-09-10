@@ -3766,7 +3766,8 @@
    "file_write_json",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "unzip"
+   "unzip",
+   "ebible_version_download"
   ],
   "object_property_get": [
    "chalk_color",
@@ -7767,8 +7768,7 @@
    "file_name_json",
    "html_name_to_path_dev",
    "http_firebase_file_path",
-   "http_local_file_name",
-   "ebible_version_download"
+   "http_local_file_name"
   ],
   "html_update": [
    "html_update",
@@ -12235,7 +12235,8 @@
    "ebible_version_download"
   ],
   "local_function_path": [
-   "http_local_file_name"
+   "http_local_file_name",
+   "ebible_version_download"
   ],
   "zip": [
    "unzip"
@@ -23044,6 +23045,7 @@
   "ebible_version_download": {
    "async": true,
    "identifiers": [
+    "local_function_path",
     "unzip",
     "http_local",
     "marker",
@@ -23051,7 +23053,7 @@
     "bible_folder",
     "url",
     "result",
-    "file_name",
+    "file_path",
     "buffer"
    ]
   },
