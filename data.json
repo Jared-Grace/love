@@ -2548,7 +2548,6 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "http_firebase",
    "http_local"
   ],
   "lambda": [
@@ -2731,7 +2730,6 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "http_firebase",
    "http_local"
   ],
   "previous": [
@@ -11321,11 +11319,11 @@
   ],
   "firebase_storage_download": [
    "firebase_storage_download",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "http_firebase"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
-   "http_firebase",
    "http_local"
   ],
   "list_join_newline": [
@@ -22660,24 +22658,22 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download",
     "firebase_upload_buffer",
     "cache_generic",
     "http_firebase_file_path",
-    "firebase_storage_download_property",
     "firebase_storage_exists",
     "http",
     "http_firebase",
     "url",
     "key_get",
     "cached_exists",
-    "property_name",
     "cached_get",
-    "lambda",
-    "key",
-    "result",
     "value_get",
     "cache_save",
-    "value"
+    "key",
+    "value",
+    "result"
    ]
   },
   "firebase_upload_object": {
