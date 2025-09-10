@@ -6,7 +6,12 @@ import { http } from "./http.mjs";
 export async function http_firebase(url) {
   let joined = http_firebase_file_name(url);
   let exists = await firebase_storage_exists(url);
-  let get = function lambda(key) {};
+  let get = async function lambda(key) {
+    let result = await firebase_storage_download_property(
+      joined,
+      property_name,
+    );
+  };
   const property_name = "text";
   if (exists) {
     let result = await firebase_storage_download_property(
