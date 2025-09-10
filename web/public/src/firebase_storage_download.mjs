@@ -5,6 +5,8 @@ import { http_json } from "./http_json.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
 export async function firebase_storage_download(destination) {
   let b = browser_is();
+  if (false) {
+  }
   destination = firebase_path_fix(destination);
   log({
     destination,
