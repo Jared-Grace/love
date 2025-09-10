@@ -6463,8 +6463,7 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename",
-   "firebase_upload_string"
+   "marker_rename"
   ],
   "r": [
    "function_format",
@@ -11433,7 +11432,8 @@
    "app_replace_screens"
   ],
   "settings": [
-   "app_replace_screens"
+   "app_replace_screens",
+   "firebase_upload_string"
   ],
   "emoji_font_larger": [
    "app_replace_settings"
@@ -12141,9 +12141,6 @@
   ],
   "Uint8Array": [
    "buffer_string_to"
-  ],
-  "newLocal": [
-   "firebase_upload_string"
   ],
   "to2": [
    "firebase_upload_string"
@@ -22745,13 +22742,12 @@
     "b",
     "Buffer",
     "from",
-    "newLocal",
+    "settings",
     "contentType",
     "gzip",
+    "to2",
     "metadata",
     "cacheControl",
-    "to2",
-    "to",
     "from2",
     "save",
     "console",
