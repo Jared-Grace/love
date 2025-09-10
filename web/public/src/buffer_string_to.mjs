@@ -8,7 +8,9 @@ export function buffer_string_to(buffer) {
     } else if (buffer instanceof Uint8Array) {
       let v3 = new TextDecoder("utf-8").decode(buffer);
       return v3;
-    } else throw new Error("Unsupported buffer type");
+    } else {
+      throw new Error("Unsupported buffer type");
+    }
   }
   let v = buffer.toString("utf8");
   return v;
