@@ -11994,6 +11994,9 @@
   ],
   "b64node": [
    "string_base64_to"
+  ],
+  "ib": [
+   "string_base64_to"
   ]
  },
  "functions": {
@@ -22586,6 +22589,7 @@
    "async": false,
    "identifiers": [
     "string_base64_to",
+    "ib",
     "b64",
     "btoa",
     "str",
