@@ -11927,8 +11927,7 @@
    "http"
   ],
   "get": [
-   "http",
-   "http_firebase"
+   "http"
   ],
   "chunk": [
    "http"
@@ -12031,6 +12030,9 @@
    "firebase_storage_download"
   ],
   "key_get": [
+   "http_firebase"
+  ],
+  "cached_get": [
    "http_firebase"
   ]
  },
@@ -22553,7 +22555,7 @@
     "http_firebase",
     "url",
     "property_name",
-    "get",
+    "cached_get",
     "lambda",
     "key",
     "result",
