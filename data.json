@@ -966,7 +966,6 @@
   "da",
   "u ds",
   "o ds",
-  "s read",
   "a function_read fr",
   "o fr",
   "s unal",
@@ -1899,7 +1898,8 @@
   "c firebase_upload_string firebase_upload_buffer",
   "fd firebase_storage_download",
   "is firebase_storage_download",
-  "http_firebase https://www.google.com"
+  "http_firebase https://www.google.com",
+  "s read"
  ],
  "marker_current": "1",
  "function_current": "firebase_upload_buffer",
