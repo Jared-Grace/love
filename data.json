@@ -11928,8 +11928,7 @@
    "firebase_upload_string"
   ],
   "file_path_safe_to": [
-   "file_path_safe_to",
-   "http_firebase"
+   "file_path_safe_to"
   ],
   "safe": [
    "file_path_safe_to",
@@ -11986,7 +11985,8 @@
    "http"
   ],
   "string_base64_to": [
-   "string_base64_to"
+   "string_base64_to",
+   "http_firebase"
   ],
   "b64": [
    "string_base64_to"
@@ -22498,10 +22498,10 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "string_base64_to",
     "log",
     "firebase_storage_download_property",
     "firebase_storage_exists",
-    "file_path_safe_to",
     "path_join",
     "firebase_upload_object",
     "http",
