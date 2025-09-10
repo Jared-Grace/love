@@ -11204,8 +11204,7 @@
   "firebase_upload_object": [
    "firebase_deploy_function",
    "http_firebase",
-   "firebase_upload_object",
-   "http_local"
+   "firebase_upload_object"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -12094,7 +12093,8 @@
    "http_firebase_file_path"
   ],
   "file_write_json": [
-   "file_write_json"
+   "file_write_json",
+   "http_local"
   ]
  },
  "functions": {
@@ -22729,13 +22729,13 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "file_write_json",
     "file_exists",
     "http_local_file_name",
     "http_firebase",
     "marker",
     "cache_generic",
     "firebase_storage_download_property",
-    "firebase_upload_object",
     "http_local",
     "url",
     "key_get",
