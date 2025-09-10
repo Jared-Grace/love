@@ -9600,7 +9600,8 @@
    "lambda_get",
    "list_first_second_generic",
    "app_replace_font_size_adjust",
-   "app_replace_settings"
+   "app_replace_settings",
+   "http_firebase"
   ],
   "terms": [
    "search_generic"
@@ -22569,6 +22570,7 @@
     "cache_save",
     "value",
     "joined",
+    "value_get",
     "e"
    ]
   },
