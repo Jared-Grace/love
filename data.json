@@ -1903,14 +1903,14 @@
   "cs file_write buffer",
   "http_local https://www.google.com",
   "fws http_local text",
-  "s http",
   "s property",
   "http_local_text https://www.google.com",
   "s sle",
   "s rand",
   "n integer_random",
   "n ebible_version_download",
-  "s html"
+  "s html",
+  "s http"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_download",
