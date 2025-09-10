@@ -2182,8 +2182,7 @@
    "firebase_upload_buffer",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "http_local_text",
-   "integer_random"
+   "http_local_text"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3153,7 +3152,8 @@
    "app_reply_choices",
    "kjv",
    "file_read_buffer",
-   "sleep"
+   "sleep",
+   "integer_random"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9984,7 +9984,8 @@
   "Math": [
    "date_diff_ms",
    "round",
-   "floor"
+   "floor",
+   "integer_random"
   ],
   "abs": [
    "date_diff_ms"
@@ -11913,10 +11914,12 @@
   ],
   "floor": [
    "list_random_item",
-   "floor"
+   "floor",
+   "integer_random"
   ],
   "random": [
-   "list_random_item"
+   "list_random_item",
+   "integer_random"
   ],
   "bible": [
    "app_reply_main"
@@ -12203,6 +12206,12 @@
    "floor"
   ],
   "integer_random": [
+   "integer_random"
+  ],
+  "max": [
+   "integer_random"
+  ],
+  "min": [
    "integer_random"
   ]
  },
@@ -22992,8 +23001,13 @@
   "integer_random": {
    "async": false,
    "identifiers": [
-    "marker",
-    "integer_random"
+    "random",
+    "floor",
+    "integer_random",
+    "v",
+    "Math",
+    "max",
+    "min"
    ]
   }
  },
