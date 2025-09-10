@@ -3356,7 +3356,6 @@
    "list_join_newline_2",
    "list_join_newline",
    "app_reply_main",
-   "http_firebase_file_name",
    "http_local_file_name",
    "http_firebase_file_path"
   ],
@@ -4583,7 +4582,6 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_generic",
-   "http_firebase_file_name",
    "http_local_file_name",
    "http_firebase_file_path"
   ],
@@ -7730,7 +7728,6 @@
    "app_html_open",
    "file_name_json",
    "html_name_to_path_dev",
-   "http_firebase_file_name",
    "http_firebase_file_path",
    "http_local_file_name"
   ],
@@ -11195,8 +11192,7 @@
    "string_letters_only"
   ],
   "file_name_json": [
-   "file_name_json",
-   "http_firebase_file_name"
+   "file_name_json"
   ],
   "version": [
    "firebase_deploy_function"
@@ -12022,7 +12018,6 @@
   "firebase_path_fix": [
    "firebase_storage_exists",
    "firebase_storage_download",
-   "http_firebase_file_name",
    "http_firebase_file_path"
   ],
   "statusCode": [
@@ -22754,15 +22749,10 @@
   "http_firebase_file_name": {
    "async": false,
    "identifiers": [
-    "firebase_path_fix",
-    "path_join",
-    "file_name_json",
     "string_base64_to",
     "http_firebase_file_name",
     "url",
-    "safe",
-    "file_name",
-    "joined"
+    "safe"
    ]
   },
   "http_local": {
