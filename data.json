@@ -10265,7 +10265,8 @@
    "function_aliases_restore"
   ],
   "cs": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "http_local"
   ],
   "er": [
    "function_aliases_restore"
@@ -12158,7 +12159,8 @@
    "file_write_buffer"
   ],
   "file_write_buffer": [
-   "file_write_buffer"
+   "file_write_buffer",
+   "http_local"
   ],
   "overwrite": [
    "file_write"
@@ -22792,6 +22794,7 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "file_write_buffer",
     "file_read_buffer",
     "file_write_json",
     "file_exists",
@@ -22808,6 +22811,7 @@
     "cache_save",
     "key",
     "value",
+    "cs",
     "result"
    ]
   },
