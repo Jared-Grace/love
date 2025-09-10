@@ -11,7 +11,7 @@ export async function http_firebase(url) {
   };
   let cached_exists = firebase_storage_exists;
   let key_get = http_firebase_file_name;
-  async function cache_save(value) {
+  async function cache_save(key, value) {
     await firebase_upload_object(
       {
         [property_name]: value,
@@ -27,7 +27,7 @@ export async function http_firebase(url) {
     result = await cached_get(key);
   } else {
     let value = await value_get(url);
-    await cache_save(value);
+    await cache_save(key, value);
     result = await cached_get(key);
   }
   return result;
