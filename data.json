@@ -12020,8 +12020,7 @@
    "firebase_upload_buffer"
   ],
   "gzip": [
-   "firebase_upload_string",
-   "firebase_upload_buffer"
+   "firebase_upload_string"
   ],
   "encodeURIComponent": [
    "file_path_safe_to"
@@ -12139,6 +12138,9 @@
    "firebase_upload_buffer"
   ],
   "firebase_upload_buffer": [
+   "firebase_upload_buffer"
+  ],
+  "resumable": [
    "firebase_upload_buffer"
   ]
  },
@@ -22864,7 +22866,7 @@
     "from",
     "settings",
     "contentType",
-    "gzip"
+    "resumable"
    ]
   }
  },
