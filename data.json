@@ -1902,7 +1902,8 @@
   "fd file_write",
   "cs file_overwrite buffer",
   "s read",
-  "s write"
+  "s write",
+  "cs file_write buffer"
  ],
  "marker_current": "1",
  "function_current": "file_overwrite_buffer",
