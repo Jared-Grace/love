@@ -1,13 +1,11 @@
 import { browser_is } from "./browser_is.mjs";
 export function buffer_string_to(buffer) {
+  let s = null;
   let b = browser_is();
   if (b) {
     if (buffer instanceof ArrayBuffer) {
-      let s = null;
       s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
-      return s;
-    }
-    if (buffer instanceof Uint8Array) {
+    } else if (buffer instanceof Uint8Array) {
       let v3 = new TextDecoder("utf-8").decode(buffer);
       return v3;
     }
