@@ -8961,8 +8961,7 @@
    "js_calls_to_each"
   ],
   "v4": [
-   "js_marker_name_get",
-   "http"
+   "js_marker_name_get"
   ],
   "v5": [
    "js_marker_name_get"
@@ -21608,7 +21607,6 @@
     "ok",
     "buf",
     "arrayBuffer",
-    "v4",
     "ms",
     "h",
     "sw",
