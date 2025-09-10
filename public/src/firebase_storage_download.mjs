@@ -1,5 +1,3 @@
-import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
-import { firebase_storage_download_path } from "./firebase_storage_download_path.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { log } from "./log.mjs";
@@ -18,8 +16,7 @@ export async function firebase_storage_download(destination) {
     return parsed;
   }
   const bucket = await firebase_bucket();
-  const file_path = firebase_storage_download_path(destination);
-  await file_parent_exists_ensure(file_path);
   let buffer = await bucket.file(destination).getBuffer();
   const data = buffer.toString("utf8");
+  return data;
 }
