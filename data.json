@@ -4633,7 +4633,8 @@
    "js_marker_is",
    "js_statement_call_get",
    "list_all",
-   "http"
+   "http",
+   "buffer_string_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -4742,7 +4743,8 @@
    "clipboard_copy",
    "http",
    "string_base64_to",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "buffer_string_to"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5401,7 +5403,8 @@
   ],
   "Error": [
    "error",
-   "function_import"
+   "function_import",
+   "buffer_string_to"
   ],
   "error_json": [
    "error_json",
@@ -8890,7 +8893,8 @@
    "js_marker_name_get",
    "js_stack_list_block_is",
    "js_statement_call_get",
-   "http"
+   "http",
+   "buffer_string_to"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -11723,7 +11727,8 @@
    "clipboard_copy",
    "http",
    "string_base64_to",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "buffer_string_to"
   ],
   "window": [
    "browser_is"
@@ -12122,6 +12127,18 @@
   "buffer_string_to": [
    "firebase_storage_download",
    "http_json",
+   "buffer_string_to"
+  ],
+  "ArrayBuffer": [
+   "buffer_string_to"
+  ],
+  "TextDecoder": [
+   "buffer_string_to"
+  ],
+  "decode": [
+   "buffer_string_to"
+  ],
+  "Uint8Array": [
    "buffer_string_to"
   ]
  },
@@ -22830,8 +22847,17 @@
   "buffer_string_to": {
    "async": false,
    "identifiers": [
+    "browser_is",
     "buffer_string_to",
     "buffer",
+    "b",
+    "ArrayBuffer",
+    "v2",
+    "TextDecoder",
+    "decode",
+    "Uint8Array",
+    "v3",
+    "Error",
     "v",
     "toString"
    ]
