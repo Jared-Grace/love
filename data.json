@@ -6589,7 +6589,8 @@
    "firebase_storage_url",
    "firebase_storage_download",
    "http_firebase",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_storage_exists"
   ],
   "__dirname": [
    "function_import",
@@ -12009,7 +12010,8 @@
    "firebase_storage_download"
   ],
   "http_firebase_file_name": [
-   "http_firebase"
+   "http_firebase",
+   "firebase_storage_exists"
   ]
  },
  "functions": {
@@ -22558,10 +22560,12 @@
   "firebase_storage_exists": {
    "async": true,
    "identifiers": [
+    "http_firebase_file_name",
     "firebase_path_fix",
     "error",
     "firebase_bucket",
     "firebase_storage_exists",
+    "url",
     "path",
     "bucket",
     "file",
