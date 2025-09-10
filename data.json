@@ -7768,7 +7768,8 @@
    "html_name_to_path_dev",
    "http_firebase_file_path",
    "http_local_file_name",
-   "unzip"
+   "unzip",
+   "ebible_version_download"
   ],
   "html_update": [
    "html_update",
@@ -12101,7 +12102,8 @@
    "firebase_upload_buffer",
    "firebase_storage_download_property",
    "http_local_text",
-   "unzip"
+   "unzip",
+   "ebible_version_download"
   ],
   "download": [
    "firebase_storage_download"
@@ -12231,7 +12233,8 @@
    "ebible_version_download"
   ],
   "unzip": [
-   "unzip"
+   "unzip",
+   "ebible_version_download"
   ],
   "gunzip": [
    "unzip"
@@ -23044,12 +23047,15 @@
   "ebible_version_download": {
    "async": true,
    "identifiers": [
+    "unzip",
     "http_local",
     "marker",
     "ebible_version_download",
     "bible_folder",
     "url",
-    "result"
+    "result",
+    "file_name",
+    "buffer"
    ]
   },
   "unzip": {
