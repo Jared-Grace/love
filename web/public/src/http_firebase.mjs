@@ -11,6 +11,14 @@ export async function http_firebase(url) {
   };
   let exists = firebase_storage_exists;
   let key_get = http_firebase_file_name;
+  async function cache_save(value) {
+    await firebase_upload_object(
+      {
+        [property_name]: value,
+      },
+      joined,
+    );
+  }
   let joined = key_get(url);
   let e = await exists(joined);
   if (e) {
@@ -21,12 +29,4 @@ export async function http_firebase(url) {
   await cache_save(value);
   let result = await cached_get(joined);
   return result;
-  async function cache_save(value) {
-    await firebase_upload_object(
-      {
-        [property_name]: value,
-      },
-      joined,
-    );
-  }
 }
