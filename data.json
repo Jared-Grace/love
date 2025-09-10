@@ -2186,7 +2186,8 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "http_local_text",
-   "ebible_version_download"
+   "ebible_version_download",
+   "unzip"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12225,6 +12226,9 @@
   ],
   "bible_folder": [
    "ebible_version_download"
+  ],
+  "unzip": [
+   "unzip"
   ]
  },
  "functions": {
@@ -23030,6 +23034,13 @@
     "bible_folder",
     "url",
     "result"
+   ]
+  },
+  "unzip": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "unzip"
    ]
   }
  },
