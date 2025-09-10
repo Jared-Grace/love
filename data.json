@@ -12023,6 +12023,9 @@
   ],
   "buffer": [
    "firebase_storage_download"
+  ],
+  "jt": [
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -21536,7 +21539,8 @@
     "file",
     "getBuffer",
     "data",
-    "toString"
+    "toString",
+    "jt"
    ]
   },
   "firebase_storage_download_property": {
