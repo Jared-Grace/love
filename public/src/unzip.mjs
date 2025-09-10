@@ -6,5 +6,5 @@ export async function unzip(file_name, buffer) {
   const gunzipAsync = promisify(gunzip);
   const unzipped = await gunzipAsync(buffer);
   let joined = local_function_path(unzip, file_name);
-  await file_write_buffer(joined, contents);
+  await file_write_buffer(joined, unzipped);
 }
