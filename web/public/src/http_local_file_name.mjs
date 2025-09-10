@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
+import { path_join } from "./path_join.mjs";
 export function http_local_file_name() {
-  marker("1");
+  let joined = path_join(list_of_segments);
 }
