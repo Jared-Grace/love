@@ -6,11 +6,11 @@ export function buffer_string_to(buffer) {
     if (buffer instanceof ArrayBuffer) {
       s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
     } else if (buffer instanceof Uint8Array) {
-      let v3 = new TextDecoder("utf-8").decode(buffer);
-      return v3;
+      s = new TextDecoder("utf-8").decode(buffer);
     } else {
       throw new Error("Unsupported buffer type");
     }
+  } else {
   }
   let v = buffer.toString("utf8");
   return v;
