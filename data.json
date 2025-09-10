@@ -2201,7 +2201,6 @@
    "function_parse_declaration_inner",
    "function_parse_strict",
    "http_json",
-   "firebase_storage_download_property",
    "js_calls_to_each"
   ],
   "f_path": [
@@ -4799,7 +4798,8 @@
    "string_includes",
    "string_is_assert_json",
    "function_aliases_restore",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "firebase_storage_download_property"
   ],
   "assert_not": [
    "assert_not",
@@ -4831,7 +4831,8 @@
    "json_from",
    "storage_local_get",
    "firebase_storage_download",
-   "file_write_json"
+   "file_write_json",
+   "firebase_storage_download_property"
   ],
   "includes": [
    "catch_only_async",
@@ -5531,7 +5532,8 @@
    "json_from",
    "storage_local_get",
    "http_json",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "firebase_storage_download_property"
   ],
   "file_write": [
    "file_write",
@@ -12063,7 +12065,8 @@
    "http_json",
    "buffer_string_to",
    "firebase_upload_string",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "firebase_storage_download_property"
   ],
   "download": [
    "firebase_storage_download"
@@ -12116,7 +12119,8 @@
   "buffer_string_to": [
    "firebase_storage_download",
    "http_json",
-   "buffer_string_to"
+   "buffer_string_to",
+   "firebase_storage_download_property"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -21668,12 +21672,16 @@
   "firebase_storage_download_property": {
    "async": true,
    "identifiers": [
+    "json_from",
+    "buffer_string_to",
     "object_property_get",
     "firebase_storage_download",
     "firebase_storage_download_property",
     "storage_path",
     "property_name",
-    "parsed",
+    "buffer",
+    "json",
+    "o",
     "value"
    ]
   },
