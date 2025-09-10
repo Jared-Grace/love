@@ -2182,7 +2182,8 @@
    "firebase_upload_buffer",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "http_local_text"
+   "http_local_text",
+   "integer_random"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12200,6 +12201,9 @@
   ],
   "floored": [
    "floor"
+  ],
+  "integer_random": [
+   "integer_random"
   ]
  },
  "functions": {
@@ -22983,6 +22987,13 @@
     "p",
     "floored",
     "Math"
+   ]
+  },
+  "integer_random": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "integer_random"
    ]
   }
  },
