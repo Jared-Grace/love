@@ -1,3 +1,4 @@
+import { integer_random } from "./integer_random.mjs";
 import { sleep } from "./sleep.mjs";
 import { round } from "./round.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
@@ -15,7 +16,7 @@ export async function http(url) {
     const buf = await response.arrayBuffer();
     return buf;
   }
-  await sleep(ms);
+  await sleep(integer_random(5, 8) * 1000);
   let h = null;
   let sw = string_starts_with(url, "https://");
   if (sw) {
