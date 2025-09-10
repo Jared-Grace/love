@@ -2716,7 +2716,8 @@
    "js_assign_combine",
    "app_reply_main",
    "html_on_keydown",
-   "http"
+   "http",
+   "http_firebase"
   ],
   "previous": [
    "data_identifiers_file",
@@ -7013,7 +7014,8 @@
    "storage_local_set_context",
    "storage_local_initialize_context",
    "html_attribute_set",
-   "app_reply_main"
+   "app_reply_main",
+   "http_firebase"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -11925,7 +11927,8 @@
    "http"
   ],
   "get": [
-   "http"
+   "http",
+   "http_firebase"
   ],
   "chunk": [
    "http"
@@ -22549,6 +22552,9 @@
     "url",
     "joined",
     "exists",
+    "get",
+    "lambda",
+    "key",
     "property_name",
     "result",
     "text"
