@@ -2175,7 +2175,8 @@
    "file_write_json",
    "firebase_upload_buffer",
    "file_read_buffer",
-   "file_overwrite_buffer"
+   "file_overwrite_buffer",
+   "file_write_buffer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22903,6 +22904,7 @@
   "file_write_buffer": {
    "async": true,
    "identifiers": [
+    "marker",
     "file_overwrite",
     "assert_file_exists_not",
     "file_write_buffer",
