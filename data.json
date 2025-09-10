@@ -3636,8 +3636,7 @@
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
    "http_firebase",
-   "http_local",
-   "buffer_string_to"
+   "http_local"
   ],
   "separator": [
    "watch",
@@ -4388,7 +4387,8 @@
    "string_replace",
    "marker_rename",
    "string_lower_to",
-   "string_base64_to"
+   "string_base64_to",
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -22852,7 +22852,7 @@
     "buffer",
     "b",
     "ArrayBuffer",
-    "result",
+    "s",
     "TextDecoder",
     "decode",
     "Uint8Array",
