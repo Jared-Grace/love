@@ -1899,7 +1899,8 @@
   "fd firebase_storage_download",
   "is firebase_storage_download",
   "http_firebase https://www.google.com",
-  "s read"
+  "s read",
+  "c file_read file_read_buffer"
  ],
  "marker_current": "1",
  "function_current": "firebase_upload_buffer",
