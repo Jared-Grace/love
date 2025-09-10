@@ -73,9 +73,9 @@ export function app_reply_choices() {
         emoji_pray() + string_lord_bless_your() + "family " + emoji_family(),
     },
     {
-      text: " Future",
+      text: emoji_pray() +" Future",
       response:
-        emoji_question() +
+        emoji_pray() +
         "God knows the future. I do not know the future." +
         emoji_question(),
     },
