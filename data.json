@@ -2157,7 +2157,8 @@
    "string_letters_only",
    "string_lower_to",
    "file_path_safe_to",
-   "http_local"
+   "http_local",
+   "http_local_file_name"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12064,6 +12065,9 @@
   ],
   "http_local": [
    "http_local"
+  ],
+  "http_local_file_name": [
+   "http_local_file_name"
   ]
  },
  "functions": {
@@ -22717,6 +22721,13 @@
     "value_get",
     "cache_save",
     "value"
+   ]
+  },
+  "http_local_file_name": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "http_local_file_name"
    ]
   }
  },
