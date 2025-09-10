@@ -1,3 +1,4 @@
+import { file_write_buffer } from "./file_write_buffer.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
 import { file_write_json } from "./file_write_json.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -14,6 +15,7 @@ export async function http_local(url) {
   async function cache_save(key, value) {
     await file_write_json(key, value);
   }
+  let cs = file_write_buffer;
   let result = await cache_generic(
     key_get,
     url,
