@@ -1911,10 +1911,11 @@
   "n ebible_version_download",
   "s html",
   "s http",
-  "ebible_version_download engbsb"
+  "ebible_version_download engbsb",
+  "n unzip"
  ],
  "marker_current": "1",
- "function_current": "ebible_version_download",
+ "function_current": "unzip",
  "terminal": false,
  "identifiers": {
   "log": [
