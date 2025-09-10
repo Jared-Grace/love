@@ -1906,7 +1906,6 @@
    "js_calls_to_each",
    "js_let_add",
    "firebase_upload_string",
-   "http_firebase",
    "firebase_storage_download"
   ],
   "function_path_to_name": [
@@ -2155,7 +2154,6 @@
    "html_on_keydown",
    "string_letters_only",
    "string_lower_to",
-   "http_firebase",
    "file_path_safe_to"
   ],
   "data_identifiers_file": [
@@ -22542,12 +22540,10 @@
    "async": true,
    "identifiers": [
     "http_firebase_file_name",
-    "log",
     "firebase_storage_download_property",
     "firebase_storage_exists",
     "firebase_upload_object",
     "http",
-    "marker",
     "http_firebase",
     "url",
     "joined",
@@ -22657,7 +22653,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-10T03:24:03.931Z",
+ "git_push_when": "2025-09-10T19:04:47.292Z",
  "error_attention": null,
  "app_current": "replace"
 }
