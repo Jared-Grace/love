@@ -1846,7 +1846,6 @@
   "n string_letters_only",
   "s lower",
   "n string_lower_to",
-  "s http",
   "s web",
   "s client",
   "s bro",
@@ -1895,7 +1894,8 @@
   "is http",
   "s buffer",
   "is http_json",
-  "o buffer_string_to"
+  "o buffer_string_to",
+  "s http"
  ],
  "marker_current": "1",
  "function_current": "buffer_string_to",
