@@ -1,6 +1,8 @@
+import { import_install } from "./import_install.mjs";
 import { local_function_path } from "./local_function_path.mjs";
 import { file_write_buffer } from "./file_write_buffer.mjs";
 export async function unzip(file_name, buffer) {
+  await import_install(name);
   const { gunzip } = await import("zlib");
   const { promisify } = await import("util");
   const gunzipAsync = promisify(gunzip);
