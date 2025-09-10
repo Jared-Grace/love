@@ -1915,7 +1915,6 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "firebase_upload_string",
    "firebase_storage_download"
   ],
   "function_path_to_name": [
@@ -3539,7 +3538,6 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "firebase_upload_string",
    "http_local_file_name"
   ],
   "output": [
@@ -4602,7 +4600,6 @@
   ],
   "file": [
    "folder_read",
-   "firebase_upload_string",
    "firebase_storage_exists",
    "firebase_storage_download"
   ],
@@ -4743,8 +4740,7 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to",
-   "firebase_upload_string"
+   "buffer_string_to"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6439,8 +6435,7 @@
    "js_imports_unused",
    "function_exists_inner",
    "function_parse_declaration_inner",
-   "app_replace_rule_set",
-   "firebase_upload_string"
+   "app_replace_rule_set"
   ],
   "u": [
    "function_exists",
@@ -6629,7 +6624,6 @@
    "firebase_storage_url",
    "firebase_storage_download",
    "http_firebase",
-   "firebase_upload_string",
    "http_firebase_file_name",
    "http_local",
    "http_local_file_name",
@@ -9422,8 +9416,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "firebase_upload_string"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -12003,12 +11996,10 @@
    "http_firebase"
   ],
   "firebase_bucket": [
-   "firebase_upload_string",
    "firebase_storage_exists",
    "firebase_storage_download"
   ],
   "bucket": [
-   "firebase_upload_string",
    "firebase_storage_exists",
    "firebase_storage_download"
   ],
@@ -12017,19 +12008,10 @@
    "string_base64_to",
    "http"
   ],
-  "save": [
-   "firebase_upload_string"
-  ],
   "contentType": [
    "firebase_upload_string"
   ],
   "gzip": [
-   "firebase_upload_string"
-  ],
-  "metadata": [
-   "firebase_upload_string"
-  ],
-  "cacheControl": [
    "firebase_upload_string"
   ],
   "encodeURIComponent": [
@@ -12038,7 +12020,6 @@
   "firebase_path_fix": [
    "firebase_storage_exists",
    "firebase_storage_download",
-   "firebase_upload_string",
    "http_firebase_file_name",
    "http_firebase_file_path"
   ],
@@ -12076,7 +12057,8 @@
    "firebase_storage_download",
    "http",
    "http_json",
-   "buffer_string_to"
+   "buffer_string_to",
+   "firebase_upload_string"
   ],
   "download": [
    "firebase_storage_download"
@@ -12142,7 +12124,7 @@
   "Uint8Array": [
    "buffer_string_to"
   ],
-  "merged": [
+  "firebase_upload_generic": [
    "firebase_upload_string"
   ]
  },
@@ -22727,28 +22709,16 @@
   "firebase_upload_string": {
    "async": true,
    "identifiers": [
-    "object_merge",
-    "firebase_path_fix",
-    "firebase_bucket",
-    "log",
+    "firebase_upload_generic",
     "firebase_upload_string",
     "content",
     "destination",
-    "b",
+    "buffer",
     "Buffer",
     "from",
     "settings",
     "contentType",
-    "gzip",
-    "bucket",
-    "file",
-    "merged",
-    "metadata",
-    "cacheControl",
-    "save",
-    "console",
-    "url",
-    "name"
+    "gzip"
    ]
   },
   "round": {
