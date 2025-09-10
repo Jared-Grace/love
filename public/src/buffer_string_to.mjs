@@ -1,6 +1,8 @@
 import { browser_is } from "./browser_is.mjs";
 export function buffer_string_to(buffer) {
   let b = browser_is();
+  if (false) {
+  }
   if (buffer instanceof ArrayBuffer) {
     let v2 = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
     return v2;
