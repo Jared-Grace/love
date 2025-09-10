@@ -8,5 +8,5 @@ export async function ebible_version_download(bible_folder) {
   let buffer = await http_local(url);
   let file_path = local_function_path(ebible_version_download, bible_folder);
   await unzip(file_path, buffer);
-  return result;
+  return file_path;
 }
