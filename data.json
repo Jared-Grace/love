@@ -3143,8 +3143,7 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite",
-   "file_write_json"
+   "html_overwrite"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -5529,7 +5528,8 @@
   ],
   "file_write": [
    "file_write",
-   "function_new_declaration"
+   "function_new_declaration",
+   "file_write_json"
   ],
   "folder_current": [
    "folder_current",
@@ -22779,8 +22779,8 @@
   "file_write_json": {
    "async": true,
    "identifiers": [
+    "file_write",
     "marker",
-    "file_overwrite",
     "json_format_to",
     "file_write_json",
     "file_path",
