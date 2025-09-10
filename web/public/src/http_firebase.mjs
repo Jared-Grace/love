@@ -25,10 +25,10 @@ export async function http_firebase(url) {
   let result = null;
   if (e) {
     result = await cached_get(joined);
-    return result;
+  } else {
+    let value = await value_get(url);
+    await cache_save(value);
+    result = await cached_get(joined);
   }
-  let value = await value_get(url);
-  await cache_save(value);
-  result = await cached_get(joined);
   return result;
 }
