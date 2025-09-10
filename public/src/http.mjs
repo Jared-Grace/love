@@ -1,3 +1,4 @@
+import { sleep } from "./sleep.mjs";
 import { round } from "./round.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -14,6 +15,7 @@ export async function http(url) {
     const buf = await response.arrayBuffer();
     return buf;
   }
+  let v4 = sleep(ms);
   let h = null;
   let sw = string_starts_with(url, "https://");
   if (sw) {
