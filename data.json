@@ -9978,7 +9978,6 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "http",
    "sleep"
   ],
   "Math": [
@@ -12205,7 +12204,8 @@
    "floor"
   ],
   "integer_random": [
-   "integer_random"
+   "integer_random",
+   "http"
   ],
   "max": [
    "integer_random"
@@ -21614,6 +21614,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "integer_random",
     "sleep",
     "round",
     "string_starts_with",
@@ -21629,7 +21630,6 @@
     "ok",
     "buf",
     "arrayBuffer",
-    "ms",
     "h",
     "sw",
     "buffer",
