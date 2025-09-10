@@ -2175,8 +2175,7 @@
    "file_write_json",
    "firebase_upload_buffer",
    "file_read_buffer",
-   "file_overwrite_buffer",
-   "file_write_buffer"
+   "file_overwrite_buffer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4759,8 +4758,7 @@
    "assert_file_exists_not",
    "file_copy",
    "html_new",
-   "js_outside_move",
-   "file_write_buffer"
+   "js_outside_move"
   ],
   "file_path_new": [
    "assert_file_exists_not",
@@ -12166,7 +12164,8 @@
    "file_write"
   ],
   "file_write_generic": [
-   "file_write"
+   "file_write",
+   "file_write_buffer"
   ]
  },
  "functions": {
@@ -22910,9 +22909,8 @@
   "file_write_buffer": {
    "async": true,
    "identifiers": [
+    "file_write_generic",
     "file_overwrite_buffer",
-    "marker",
-    "assert_file_exists_not",
     "file_write_buffer",
     "f_path",
     "contents"
