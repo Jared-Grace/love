@@ -1,10 +1,10 @@
+import { file_write_json } from "./file_write_json.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { http_local_file_name } from "./http_local_file_name.mjs";
 import { http_firebase } from "./http_firebase.mjs";
 import { marker } from "./marker.mjs";
 import { cache_generic } from "./cache_generic.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
-import { firebase_upload_object } from "./firebase_upload_object.mjs";
 export async function http_local(url) {
   marker("1");
   let key_get = http_local_file_name;
@@ -16,12 +16,7 @@ export async function http_local(url) {
   };
   let value_get = http_firebase;
   async function cache_save(key, value) {
-    await firebase_upload_object(
-      {
-        [property_name]: value,
-      },
-      key,
-    );
+    await file_write_json(key, value);
   }
   let result = await cache_generic(
     key_get,
