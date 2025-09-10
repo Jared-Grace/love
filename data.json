@@ -1892,7 +1892,6 @@
   "s buffer",
   "is http_json",
   "o buffer_string_to",
-  "s http",
   "fd firebase_upload_string",
   "c firebase_upload_string firebase_upload_buffer",
   "fd firebase_storage_download",
@@ -1905,7 +1904,8 @@
   "s write",
   "cs file_write buffer",
   "http_local https://www.google.com",
-  "fws http_local text"
+  "fws http_local text",
+  "s http"
  ],
  "marker_current": "1",
  "function_current": "http_local_text",
