@@ -2949,7 +2949,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "list_random_item"
   ],
   "v": [
    "data_identifiers_file",
@@ -3916,7 +3917,8 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main"
+   "app_reply_main",
+   "list_random_item"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5214,7 +5216,8 @@
    "app_replace_home",
    "app_replace_rule_set",
    "js_dollar_x",
-   "js_expand_generic"
+   "js_expand_generic",
+   "list_random_item"
   ],
   "lists_get": [
    "each_multiple",
@@ -7556,7 +7559,8 @@
    "marker_enter",
    "app_replace_rule_set",
    "js_dollar_x",
-   "list_next_try"
+   "list_next_try",
+   "list_random_item"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -22677,12 +22681,16 @@
   "list_random_item": {
    "async": false,
    "identifiers": [
+    "list_get",
     "floor",
     "list_size",
     "random",
     "list_random_item",
     "arr",
     "p",
+    "item",
+    "list",
+    "index",
     "r"
    ]
   },
