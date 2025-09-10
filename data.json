@@ -1901,7 +1901,8 @@
   "s read",
   "c file_read file_read_buffer",
   "s write",
-  "fd file_write"
+  "fd file_write",
+  "cs file_overwrite buffer"
  ],
  "marker_current": "1",
  "function_current": "file_read_buffer",
