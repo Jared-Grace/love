@@ -2170,7 +2170,8 @@
    "http_local",
    "http_firebase_file_path",
    "file_write_json",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "file_read_buffer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3139,7 +3140,8 @@
    "prayer_start",
    "string_the_servant_of_god_is",
    "app_reply_choices",
-   "kjv"
+   "kjv",
+   "file_read_buffer"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3746,7 +3748,8 @@
    "html_update_dev",
    "html_update_generic",
    "html_update_public",
-   "file_write_json"
+   "file_write_json",
+   "file_read_buffer"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4593,7 +4596,8 @@
    "file_exists",
    "file_overwrite",
    "file_read",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "file_read_buffer"
   ],
   "file": [
    "folder_read",
@@ -5418,7 +5422,8 @@
    "file_delete",
    "file_exists",
    "file_overwrite",
-   "file_read"
+   "file_read",
+   "file_read_buffer"
   ],
   "copyFile": [
    "file_copy"
@@ -5520,7 +5525,8 @@
    "file_overwrite"
   ],
   "readFile": [
-   "file_read"
+   "file_read",
+   "file_read_buffer"
   ],
   "json_from": [
    "file_read_json",
@@ -12134,6 +12140,9 @@
   ],
   "resumable": [
    "firebase_upload_buffer"
+  ],
+  "file_read_buffer": [
+   "file_read_buffer"
   ]
  },
  "functions": {
@@ -22849,9 +22858,21 @@
     "contentType",
     "resumable"
    ]
+  },
+  "file_read_buffer": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "file_read_buffer",
+    "file_path",
+    "fs",
+    "v",
+    "promises",
+    "readFile"
+   ]
   }
  },
- "git_push_when": "2025-09-10T19:04:47.292Z",
+ "git_push_when": "2025-09-10T20:05:13.107Z",
  "error_attention": null,
  "app_current": "replace"
 }
