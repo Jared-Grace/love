@@ -14,12 +14,7 @@ export async function http_firebase(url) {
   };
   let value_get = http;
   async function cache_save(key, value) {
-    await firebase_upload_buffer(
-      {
-        [property_name]: value,
-      },
-      key,
-    );
+    await firebase_upload_buffer(value, key);
   }
   let result = await cache_generic(
     key_get,
