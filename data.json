@@ -4572,7 +4572,8 @@
    "js_property",
    "marker_screen_add",
    "html_p_text",
-   "list_random_item"
+   "list_random_item",
+   "floor"
   ],
   "f_names": [
    "functions_names",
@@ -9978,7 +9979,8 @@
   ],
   "Math": [
    "date_diff_ms",
-   "round"
+   "round",
+   "floor"
   ],
   "abs": [
    "date_diff_ms"
@@ -11906,7 +11908,8 @@
    "list_random_item"
   ],
   "floor": [
-   "list_random_item"
+   "list_random_item",
+   "floor"
   ],
   "random": [
    "list_random_item"
@@ -12191,6 +12194,9 @@
   ],
   "setTimeout": [
    "sleep"
+  ],
+  "floored": [
+   "floor"
   ]
  },
  "functions": {
@@ -22963,6 +22969,15 @@
     "resolve",
     "v",
     "setTimeout"
+   ]
+  },
+  "floor": {
+   "async": false,
+   "identifiers": [
+    "floor",
+    "p",
+    "floored",
+    "Math"
    ]
   }
  },
