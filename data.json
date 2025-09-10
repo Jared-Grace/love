@@ -1905,7 +1905,8 @@
   "http_local https://www.google.com",
   "fws http_local text",
   "s http",
-  "s property"
+  "s property",
+  "http_local_text https://www.google.com"
  ],
  "marker_current": "1",
  "function_current": "http_local_text",
