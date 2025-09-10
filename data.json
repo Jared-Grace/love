@@ -3149,7 +3149,8 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "file_read_buffer"
+   "file_read_buffer",
+   "sleep"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4925,12 +4926,14 @@
   "Promise": [
    "command_line_read",
    "list_wait",
-   "http"
+   "http",
+   "sleep"
   ],
   "resolve": [
    "command_line_read",
    "path_resolve",
-   "http"
+   "http",
+   "sleep"
   ],
   "rl": [
    "command_line_read"
@@ -8778,7 +8781,8 @@
   ],
   "lambda5": [
    "js_identifier_defineds",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "sleep"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -9968,7 +9972,8 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "http"
+   "http",
+   "sleep"
   ],
   "Math": [
    "date_diff_ms",
@@ -12181,7 +12186,11 @@
    "http_local_text"
   ],
   "sleep": [
-   "http"
+   "http",
+   "sleep"
+  ],
+  "setTimeout": [
+   "sleep"
   ]
  },
  "functions": {
@@ -22944,9 +22953,21 @@
     "buffer",
     "text"
    ]
+  },
+  "sleep": {
+   "async": true,
+   "identifiers": [
+    "sleep",
+    "ms",
+    "Promise",
+    "lambda5",
+    "resolve",
+    "v",
+    "setTimeout"
+   ]
   }
  },
- "git_push_when": "2025-09-10T20:05:13.107Z",
+ "git_push_when": "2025-09-10T21:46:44.375Z",
  "error_attention": null,
  "app_current": "replace"
 }
