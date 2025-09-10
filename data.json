@@ -8893,8 +8893,7 @@
    "js_marker_name_get",
    "js_stack_list_block_is",
    "js_statement_call_get",
-   "http",
-   "buffer_string_to"
+   "http"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -22856,7 +22855,6 @@
     "TextDecoder",
     "decode",
     "Uint8Array",
-    "v3",
     "Error",
     "v",
     "toString"
