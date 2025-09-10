@@ -11240,8 +11240,7 @@
   "http": [
    "http",
    "http_json",
-   "http_firebase",
-   "http_local"
+   "http_firebase"
   ],
   "response": [
    "http",
@@ -11946,7 +11945,8 @@
    "http"
   ],
   "http_firebase": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "firebase_upload_string": [
    "firebase_upload_object",
@@ -22697,13 +22697,13 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "http_firebase",
     "marker",
     "cache_generic",
     "http_firebase_file_name",
     "firebase_storage_download_property",
     "firebase_storage_exists",
     "firebase_upload_object",
-    "http",
     "http_local",
     "url",
     "key_get",
