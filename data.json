@@ -1895,7 +1895,8 @@
   "s buffer",
   "is http_json",
   "o buffer_string_to",
-  "s http"
+  "s http",
+  "fd firebase_upload_string"
  ],
  "marker_current": "1",
  "function_current": "buffer_string_to",
