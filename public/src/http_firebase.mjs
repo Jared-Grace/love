@@ -1,3 +1,4 @@
+import { cache_generic } from "./cache_generic.mjs";
 import { http_firebase_file_name } from "./http_firebase_file_name.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
 import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
@@ -20,15 +21,13 @@ export async function http_firebase(url) {
     );
   }
   let value_get = http;
-  let key = key_get(url);
-  let e = await cached_exists(key);
-  let result = null;
-  if (e) {
-    result = await cached_get(key);
-  } else {
-    let value = await value_get(url);
-    await cache_save(key, value);
-    result = await cached_get(key);
-  }
+  let result = await cache_generic(
+    key_get,
+    url,
+    cached_exists,
+    cached_get,
+    value_get,
+    cache_save,
+  );
   return result;
 }
