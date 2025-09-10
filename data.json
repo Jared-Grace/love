@@ -12223,9 +12223,6 @@
   ],
   "bible_folder": [
    "ebible_version_download"
-  ],
-  "url2": [
-   "ebible_version_download"
   ]
  },
  "functions": {
@@ -23030,8 +23027,7 @@
     "ebible_version_download",
     "bible_folder",
     "url",
-    "result",
-    "url2"
+    "result"
    ]
   }
  },
