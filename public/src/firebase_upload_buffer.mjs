@@ -4,8 +4,8 @@ export async function firebase_upload_buffer(content, destination) {
   marker("1");
   let buffer = Buffer.from(content);
   const settings = {
-    contentType: "text/plain",
-    gzip: true,
+    contentType: "application/octet-stream",
+    resumable: false,
   };
   await firebase_upload_generic(destination, settings, buffer);
   return destination;
