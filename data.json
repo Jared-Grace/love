@@ -4558,8 +4558,7 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_generic",
-   "http_firebase",
-   "firebase_storage_download"
+   "http_firebase"
   ],
   "fs": [
    "folder_read",
@@ -12005,6 +12004,9 @@
    "string_base64_to"
   ],
   "download": [
+   "firebase_storage_download"
+  ],
+  "firebase_storage_download_path": [
    "firebase_storage_download"
   ]
  },
@@ -21503,13 +21505,13 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download_path",
     "firebase_bucket",
     "browser_is",
     "log",
     "firebase_path_fix",
     "http_json",
     "firebase_storage_url",
-    "path_join",
     "firebase_storage_download",
     "destination",
     "b",
