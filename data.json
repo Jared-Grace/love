@@ -6656,7 +6656,8 @@
    "http_local",
    "http_local_file_name",
    "http_firebase_file_path",
-   "http_local_text"
+   "http_local_text",
+   "ebible_version_download"
   ],
   "__dirname": [
    "function_import",
@@ -23021,7 +23022,8 @@
    "identifiers": [
     "marker",
     "ebible_version_download",
-    "bible_folder"
+    "bible_folder",
+    "url"
    ]
   }
  },
