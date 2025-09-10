@@ -12064,7 +12064,8 @@
   ],
   "buffer": [
    "firebase_storage_download",
-   "http"
+   "http",
+   "http_json"
   ],
   "download": [
    "firebase_storage_download"
@@ -21562,8 +21563,9 @@
     "marker",
     "http_json",
     "url",
-    "text",
-    "parsed"
+    "buffer",
+    "parsed",
+    "text"
    ]
   },
   "firebase_admin_get": {
