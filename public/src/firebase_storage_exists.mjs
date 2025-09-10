@@ -1,7 +1,9 @@
+import { http_firebase_file_name } from "./http_firebase_file_name.mjs";
 import { firebase_path_fix } from "./firebase_path_fix.mjs";
 import { error } from "./error.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
-export async function firebase_storage_exists(path) {
+export async function firebase_storage_exists(url) {
+  let path = http_firebase_file_name(url);
   path = firebase_path_fix(path);
   const bucket = await firebase_bucket();
   const file = bucket.file(path);
