@@ -12,8 +12,7 @@ export async function http(url) {
       error("Failed to fetch file");
     }
     const buf = await response.arrayBuffer();
-    let v = Buffer.from(buf);
-    return v;
+    return buf;
   }
   let h = null;
   let sw = string_starts_with(url, "https://");
