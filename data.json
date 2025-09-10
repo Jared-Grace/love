@@ -4571,7 +4571,8 @@
    "app_name_prefixed",
    "js_property",
    "marker_screen_add",
-   "html_p_text"
+   "html_p_text",
+   "list_random_item"
   ],
   "f_names": [
    "functions_names",
@@ -9977,7 +9978,6 @@
   ],
   "Math": [
    "date_diff_ms",
-   "list_random_item",
    "round"
   ],
   "abs": [
@@ -22671,13 +22671,13 @@
   "list_random_item": {
    "async": false,
    "identifiers": [
+    "floor",
     "random",
     "list_random_item",
     "arr",
-    "r",
-    "Math",
-    "floor",
-    "length"
+    "p",
+    "length",
+    "r"
    ]
   },
   "html_on_keydown": {
