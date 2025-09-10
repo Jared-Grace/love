@@ -10,7 +10,7 @@ export async function http_firebase(url) {
     return result;
   };
   let joined = http_firebase_file_name(url);
-  let exists = await firebase_storage_exists(url);
+  let exists = await firebase_storage_exists(joined);
   if (exists) {
     let result = await firebase_storage_download_property(
       joined,
