@@ -2157,8 +2157,7 @@
    "string_letters_only",
    "string_lower_to",
    "file_path_safe_to",
-   "http_local",
-   "http_local_file_name"
+   "http_local"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3350,7 +3349,8 @@
    "list_join_newline_2",
    "list_join_newline",
    "app_reply_main",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_local_file_name"
   ],
   "watcher": [
    "watch"
@@ -4572,7 +4572,8 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_generic",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_local_file_name"
   ],
   "fs": [
    "folder_read",
@@ -9586,7 +9587,8 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join"
+   "path_join",
+   "http_local_file_name"
   ],
   "then": [
    "promise_is"
@@ -22726,8 +22728,10 @@
   "http_local_file_name": {
    "async": false,
    "identifiers": [
-    "marker",
-    "http_local_file_name"
+    "path_join",
+    "http_local_file_name",
+    "joined",
+    "list_of_segments"
    ]
   }
  },
