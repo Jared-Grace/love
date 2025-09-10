@@ -2536,7 +2536,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2718,7 +2719,8 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3448,7 +3450,8 @@
    "app_replace_font_size_refresh",
    "app_replace_settings",
    "app_replace_font_size_adjust",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "name": [
    "watch",
@@ -3616,7 +3619,8 @@
    "functions_combine_name",
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "separator": [
    "watch",
@@ -6597,7 +6601,8 @@
    "firebase_storage_download",
    "http_firebase",
    "firebase_upload_string",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_local"
   ],
   "__dirname": [
    "function_import",
@@ -7013,7 +7018,8 @@
    "storage_local_initialize_context",
    "html_attribute_set",
    "app_reply_main",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -9600,7 +9606,8 @@
    "list_first_second_generic",
    "app_replace_font_size_adjust",
    "app_replace_settings",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "terms": [
    "search_generic"
@@ -11176,7 +11183,8 @@
   "firebase_upload_object": [
    "firebase_deploy_function",
    "http_firebase",
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "http_local"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -11231,7 +11239,8 @@
   "http": [
    "http",
    "http_json",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "response": [
    "http",
@@ -11290,7 +11299,8 @@
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "list_join_newline": [
    "function_dependencies_code",
@@ -11954,7 +11964,8 @@
   ],
   "firebase_storage_exists": [
    "firebase_storage_exists",
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "firebase_bucket": [
    "firebase_upload_string",
@@ -12020,7 +12031,8 @@
   ],
   "http_firebase_file_name": [
    "http_firebase",
-   "http_firebase_file_name"
+   "http_firebase_file_name",
+   "http_local"
   ],
   "buffer": [
    "firebase_storage_download"
@@ -12029,19 +12041,27 @@
    "firebase_storage_download"
   ],
   "key_get": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "cached_get": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "cache_save": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "cached_exists": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
   ],
   "cache_generic": [
-   "http_firebase"
+   "http_firebase",
+   "http_local"
+  ],
+  "http_local": [
+   "http_local"
   ]
  },
  "functions": {
@@ -22671,6 +22691,29 @@
     "safe",
     "file_name",
     "joined"
+   ]
+  },
+  "http_local": {
+   "async": true,
+   "identifiers": [
+    "cache_generic",
+    "http_firebase_file_name",
+    "firebase_storage_download_property",
+    "firebase_storage_exists",
+    "firebase_upload_object",
+    "http",
+    "http_local",
+    "url",
+    "key_get",
+    "cached_exists",
+    "property_name",
+    "cached_get",
+    "lambda",
+    "key",
+    "result",
+    "value_get",
+    "cache_save",
+    "value"
    ]
   }
  },
