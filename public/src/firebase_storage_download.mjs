@@ -10,8 +10,8 @@ export async function firebase_storage_download(destination) {
   let b = browser_is();
   if (b) {
     let url = firebase_storage_url(destination);
-    let parsed = await http(url);
-    return parsed;
+    let buffer = await http(url);
+    return buffer;
   }
   const bucket = await firebase_bucket();
   let [buffer] = await bucket.file(destination).download();
