@@ -12142,9 +12142,6 @@
   "Uint8Array": [
    "buffer_string_to"
   ],
-  "to2": [
-   "firebase_upload_string"
-  ],
   "from2": [
    "firebase_upload_string"
   ]
@@ -22745,7 +22742,6 @@
     "settings",
     "contentType",
     "gzip",
-    "to2",
     "metadata",
     "cacheControl",
     "from2",
