@@ -5060,7 +5060,8 @@
    "list_skip",
    "list_slice_end",
    "function_transform_marker_specified",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_random_item"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -9385,8 +9386,7 @@
   ],
   "length": [
    "list_size",
-   "string_size",
-   "list_random_item"
+   "string_size"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -22678,11 +22678,11 @@
    "async": false,
    "identifiers": [
     "floor",
+    "list_size",
     "random",
     "list_random_item",
     "arr",
     "p",
-    "length",
     "r"
    ]
   },
