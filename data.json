@@ -3141,7 +3141,6 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "firebase_upload_string",
    "http"
   ],
   "file_overwrite": [
@@ -4744,7 +4743,8 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to"
+   "buffer_string_to",
+   "firebase_upload_string"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6439,7 +6439,8 @@
    "js_imports_unused",
    "function_exists_inner",
    "function_parse_declaration_inner",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "firebase_upload_string"
   ],
   "u": [
    "function_exists",
@@ -6462,7 +6463,8 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename"
+   "marker_rename",
+   "firebase_upload_string"
   ],
   "r": [
    "function_format",
@@ -12139,6 +12141,15 @@
   ],
   "Uint8Array": [
    "buffer_string_to"
+  ],
+  "newLocal": [
+   "firebase_upload_string"
+  ],
+  "to2": [
+   "firebase_upload_string"
+  ],
+  "from2": [
+   "firebase_upload_string"
   ]
  },
  "functions": {
@@ -22722,6 +22733,7 @@
   "firebase_upload_string": {
    "async": true,
    "identifiers": [
+    "object_merge",
     "firebase_path_fix",
     "firebase_bucket",
     "log",
@@ -22730,14 +22742,18 @@
     "destination",
     "bucket",
     "file",
-    "v",
+    "b",
     "Buffer",
     "from",
-    "save",
+    "newLocal",
     "contentType",
     "gzip",
     "metadata",
     "cacheControl",
+    "to2",
+    "to",
+    "from2",
+    "save",
     "console",
     "url",
     "name"
