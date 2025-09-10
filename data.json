@@ -4356,7 +4356,8 @@
    "string_split_empty",
    "string_replace",
    "marker_rename",
-   "string_lower_to"
+   "string_lower_to",
+   "string_base64_to"
   ],
   "a": [
    "string_suffix_without",
@@ -11878,8 +11879,7 @@
    "app_reply_main"
   ],
   "str": [
-   "string_letters_only",
-   "string_base64_to"
+   "string_letters_only"
   ],
   "text2": [
    "app_reply_main"
@@ -22589,10 +22589,10 @@
    "identifiers": [
     "browser_is",
     "string_base64_to",
+    "s",
     "b",
     "b64",
     "btoa",
-    "str",
     "b64node",
     "Buffer",
     "from",
