@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { log } from "./log.mjs";
@@ -18,6 +19,6 @@ export async function firebase_storage_download(destination) {
   const bucket = await firebase_bucket();
   let buffer = await bucket.file(destination).getBuffer();
   const data = buffer.toString("utf8");
-  jt;
+  let v = json_to(object);
   return data;
 }
