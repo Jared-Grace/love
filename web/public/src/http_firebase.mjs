@@ -7,10 +7,7 @@ export async function http_firebase(url) {
   let joined = http_firebase_file_name(url);
   let exists = await firebase_storage_exists(url);
   let get = async function lambda(key) {
-    let result = await firebase_storage_download_property(
-      joined,
-      property_name,
-    );
+    let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
   const property_name = "text";
