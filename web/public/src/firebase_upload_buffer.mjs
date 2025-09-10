@@ -1,5 +1,7 @@
+import { marker } from "./marker.mjs";
 import { firebase_upload_generic } from "./firebase_upload_generic.mjs";
 export async function firebase_upload_buffer(content, destination) {
+  marker("1");
   let buffer = Buffer.from(content);
   const settings = {
     contentType: "text/plain",
