@@ -4735,7 +4735,8 @@
   "file_exists": [
    "assert_file_exists_not",
    "file_exists",
-   "function_exists_inner"
+   "function_exists_inner",
+   "http_local"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -11977,8 +11978,7 @@
   ],
   "firebase_storage_exists": [
    "firebase_storage_exists",
-   "http_firebase",
-   "http_local"
+   "http_firebase"
   ],
   "firebase_bucket": [
    "firebase_upload_string",
@@ -22719,12 +22719,12 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "file_exists",
     "http_local_file_name",
     "http_firebase",
     "marker",
     "cache_generic",
     "firebase_storage_download_property",
-    "firebase_storage_exists",
     "firebase_upload_object",
     "http_local",
     "url",
