@@ -2534,7 +2534,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "http_firebase"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -22548,6 +22549,7 @@
     "url",
     "joined",
     "exists",
+    "property_name",
     "result",
     "text"
    ]
