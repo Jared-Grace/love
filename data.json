@@ -2183,7 +2183,8 @@
    "firebase_upload_buffer",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "http_local_text"
+   "http_local_text",
+   "ebible_version_download"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12213,6 +12214,9 @@
   ],
   "min": [
    "integer_random"
+  ],
+  "ebible_version_download": [
+   "ebible_version_download"
   ]
  },
  "functions": {
@@ -23007,6 +23011,13 @@
     "min",
     "max",
     "r"
+   ]
+  },
+  "ebible_version_download": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "ebible_version_download"
    ]
   }
  },
