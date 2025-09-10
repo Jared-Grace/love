@@ -7718,7 +7718,8 @@
    "file_name_json",
    "html_name_to_path_dev",
    "http_firebase_file_name",
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "http_local_file_name"
   ],
   "html_update": [
    "html_update",
@@ -12046,7 +12047,8 @@
    "http_firebase",
    "http_firebase_file_name",
    "http_local",
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "http_local_file_name"
   ],
   "buffer": [
    "firebase_storage_download"
@@ -22741,10 +22743,12 @@
   "http_local_file_name": {
    "async": false,
    "identifiers": [
+    "http_firebase_file_name",
     "http_local",
     "path_join",
     "http_local_file_name",
     "url",
+    "file_name",
     "joined",
     "name"
    ]
