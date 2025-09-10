@@ -1888,10 +1888,11 @@
   "p",
   "http_firebase https://www.google.com",
   "c http_firebase http_local",
-  "n http_local_file_name"
+  "n http_local_file_name",
+  "r http_firebase_file_name http_firebase_file_path"
  ],
  "marker_current": "1",
- "function_current": "http_local_file_name",
+ "function_current": "http_firebase_file_path",
  "terminal": false,
  "identifiers": {
   "log": [
