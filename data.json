@@ -3554,8 +3554,7 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply",
-   "unzip"
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -23066,7 +23065,6 @@
     "unzip",
     "file_path",
     "buffer",
-    "name",
     "AdmZip",
     "default",
     "zip",
