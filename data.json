@@ -171,7 +171,8 @@
   "lc": "list_concat",
   "atn": "js_auto_transform_new",
   "lsg": "list_single",
-  "ii": "import_install"
+  "ii": "import_install",
+  "jt": "json_to"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1884,7 +1885,8 @@
   "p",
   "http_firebase https://www.google.com",
   "s write",
-  "u jt"
+  "u jt",
+  "a jt json_to"
  ],
  "marker_current": "1",
  "function_current": "string_base64_to",
