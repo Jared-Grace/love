@@ -15,7 +15,7 @@ export async function http(url) {
     const buf = await response.arrayBuffer();
     return buf;
   }
-  let v4 = sleep(ms);
+  await sleep(ms);
   let h = null;
   let sw = string_starts_with(url, "https://");
   if (sw) {
