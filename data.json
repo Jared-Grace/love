@@ -3147,8 +3147,7 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "file_read_buffer",
-   "http_local_text"
+   "file_read_buffer"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4867,7 +4866,8 @@
    "html_p_text",
    "http_json",
    "app_reply_choices",
-   "app_reply_main"
+   "app_reply_main",
+   "http_local_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12074,7 +12074,8 @@
    "buffer_string_to",
    "firebase_upload_string",
    "firebase_upload_buffer",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "http_local_text"
   ],
   "download": [
    "firebase_storage_download"
@@ -12127,7 +12128,8 @@
   "buffer_string_to": [
    "http_json",
    "buffer_string_to",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "http_local_text"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -22924,11 +22926,13 @@
   "http_local_text": {
    "async": true,
    "identifiers": [
+    "buffer_string_to",
     "http_local",
     "marker",
     "http_local_text",
     "url",
-    "v"
+    "buffer",
+    "text"
    ]
   }
  },
