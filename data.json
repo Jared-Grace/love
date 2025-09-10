@@ -4178,7 +4178,8 @@
    "global_function",
    "global_function_async",
    "global_function_property_async",
-   "js_dollar_choices"
+   "js_dollar_choices",
+   "http_local_file_name"
   ],
   "colored": [
    "chalk_color",
@@ -22898,6 +22899,7 @@
     "http_local_file_name",
     "url",
     "file_name",
+    "fn",
     "joined",
     "name"
    ]
