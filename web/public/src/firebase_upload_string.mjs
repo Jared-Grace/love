@@ -7,15 +7,19 @@ export async function firebase_upload_string(content, destination) {
   const bucket = await firebase_bucket();
   const file = bucket.file(destination);
   let b = Buffer.from(content);
-  const newLocal = {
+  const settings = {
     contentType: "text/plain",
     gzip: true,
-    metadata: {
-      cacheControl: "no-cache",
-    },
   };
-  let to2 = object_merge(to, from2);
-  await file.save(b, newLocal);
+  let to2 = object_merge(
+    {
+      metadata: {
+        cacheControl: "no-cache",
+      },
+    },
+    from2,
+  );
+  await file.save(b, settings);
   console.log(`Uploaded string to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   console.log("Accessible at:", url);
