@@ -7691,7 +7691,8 @@
    "file_name_html",
    "app_html_open",
    "file_name_json",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "http_firebase"
   ],
   "html_update": [
    "html_update",
@@ -11150,7 +11151,8 @@
    "string_letters_only"
   ],
   "file_name_json": [
-   "file_name_json"
+   "file_name_json",
+   "http_firebase"
   ],
   "version": [
    "firebase_deploy_function"
@@ -22519,6 +22521,7 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "file_name_json",
     "string_base64_to",
     "log",
     "firebase_storage_download_property",
@@ -22530,6 +22533,7 @@
     "http_firebase",
     "url",
     "safe",
+    "file_name",
     "joined",
     "exists",
     "result",
