@@ -2247,7 +2247,8 @@
    "function_exists_inner",
    "function_parse_strict",
    "html_update_generic",
-   "file_write_buffer"
+   "file_write_buffer",
+   "unzip"
   ],
   "ast": [
    "data_identifiers_file",
@@ -5546,7 +5547,8 @@
    "function_new_declaration",
    "html_overwrite",
    "file_overwrite_buffer",
-   "file_write_buffer"
+   "file_write_buffer",
+   "unzip"
   ],
   "writeFile": [
    "file_overwrite",
@@ -12190,7 +12192,8 @@
   ],
   "file_write_buffer": [
    "file_write_buffer",
-   "http_local"
+   "http_local",
+   "unzip"
   ],
   "overwrite": [
    "file_write"
@@ -23049,12 +23052,15 @@
   "unzip": {
    "async": true,
    "identifiers": [
+    "file_write_buffer",
     "unzip",
     "buffer",
     "gunzip",
     "promisify",
     "gunzipAsync",
-    "unzipped"
+    "unzipped",
+    "f_path",
+    "contents"
    ]
   }
  },
