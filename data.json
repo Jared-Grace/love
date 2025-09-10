@@ -3749,7 +3749,8 @@
    "html_update_generic",
    "html_update_public",
    "file_write_json",
-   "file_read_buffer"
+   "file_read_buffer",
+   "file_overwrite_buffer"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4597,7 +4598,8 @@
    "file_overwrite",
    "file_read",
    "function_aliases_restore",
-   "file_read_buffer"
+   "file_read_buffer",
+   "file_overwrite_buffer"
   ],
   "file": [
    "folder_read",
@@ -5423,7 +5425,8 @@
    "file_exists",
    "file_overwrite",
    "file_read",
-   "file_read_buffer"
+   "file_read_buffer",
+   "file_overwrite_buffer"
   ],
   "copyFile": [
    "file_copy"
@@ -5519,10 +5522,12 @@
    "file_overwrite",
    "file_write",
    "function_new_declaration",
-   "html_overwrite"
+   "html_overwrite",
+   "file_overwrite_buffer"
   ],
   "writeFile": [
-   "file_overwrite"
+   "file_overwrite",
+   "file_overwrite_buffer"
   ],
   "readFile": [
    "file_read",
@@ -11400,7 +11405,8 @@
    "html_update_public"
   ],
   "file_parent_exists_ensure": [
-   "file_overwrite"
+   "file_overwrite",
+   "file_overwrite_buffer"
   ],
   "app_name_main": [
    "firebase_deploy_function_app_current",
@@ -12143,6 +12149,9 @@
   "file_read_buffer": [
    "file_read_buffer",
    "http_local"
+  ],
+  "file_overwrite_buffer": [
+   "file_overwrite_buffer"
   ]
  },
  "functions": {
@@ -22867,6 +22876,18 @@
     "v",
     "promises",
     "readFile"
+   ]
+  },
+  "file_overwrite_buffer": {
+   "async": true,
+   "identifiers": [
+    "file_parent_exists_ensure",
+    "file_overwrite_buffer",
+    "file_path",
+    "contents",
+    "fs",
+    "promises",
+    "writeFile"
    ]
   }
  },
