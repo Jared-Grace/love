@@ -1220,7 +1220,6 @@
   "a ja js_auto",
   "mab $g$v$stack",
   "s function,write",
-  "s write",
   "s file_js_unparse",
   "fw data_transform data_identifiers_file",
   "s list,if,not",
@@ -1883,7 +1882,8 @@
   "firebase_storage_download_path test.json",
   "s file,json",
   "p",
-  "http_firebase https://www.google.com"
+  "http_firebase https://www.google.com",
+  "s write"
  ],
  "marker_current": "1",
  "function_current": "string_base64_to",
