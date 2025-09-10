@@ -4705,7 +4705,8 @@
    "js_calls_to_each",
    "browser_is",
    "clipboard_copy",
-   "http"
+   "http",
+   "string_base64_to"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11663,7 +11664,8 @@
   "browser_is": [
    "browser_is",
    "clipboard_copy",
-   "http"
+   "http",
+   "string_base64_to"
   ],
   "window": [
    "browser_is"
@@ -11993,9 +11995,6 @@
    "string_base64_to"
   ],
   "b64node": [
-   "string_base64_to"
-  ],
-  "ib": [
    "string_base64_to"
   ]
  },
@@ -22588,8 +22587,9 @@
   "string_base64_to": {
    "async": false,
    "identifiers": [
+    "browser_is",
     "string_base64_to",
-    "ib",
+    "b",
     "b64",
     "btoa",
     "str",
