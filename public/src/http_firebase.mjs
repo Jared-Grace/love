@@ -7,7 +7,7 @@ import { http } from "./http.mjs";
 export async function http_firebase(url) {
   let key_get = http_firebase_file_path;
   let cached_exists = firebase_storage_exists;
-  const property_name = "text";
+  const property_name = "buffer";
   let cached_get = async function lambda(key) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
