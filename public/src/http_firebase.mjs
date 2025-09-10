@@ -24,6 +24,6 @@ export async function http_firebase(url) {
     },
     joined,
   );
-  let result = await firebase_storage_download_property(joined, property_name);
+  let result = await get(joined);
   return result;
 }
