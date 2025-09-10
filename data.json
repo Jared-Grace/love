@@ -3552,8 +3552,7 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply",
-   "http_local_file_name"
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -4606,7 +4605,6 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_generic",
-   "http_local_file_name",
    "http_firebase_file_path"
   ],
   "fs": [
@@ -12243,6 +12241,9 @@
   ],
   "unzipped": [
    "unzip"
+  ],
+  "local_function_path": [
+   "http_local_file_name"
   ]
  },
  "functions": {
@@ -22893,15 +22894,14 @@
   "http_local_file_name": {
    "async": false,
    "identifiers": [
+    "local_function_path",
     "http_firebase_file_name",
     "http_local",
-    "path_join",
     "http_local_file_name",
     "url",
     "file_name",
     "fn",
-    "joined",
-    "name"
+    "joined"
    ]
   },
   "http_firebase_file_path": {
