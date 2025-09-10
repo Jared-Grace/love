@@ -6607,7 +6607,8 @@
    "http_firebase",
    "firebase_upload_string",
    "http_firebase_file_name",
-   "http_local"
+   "http_local",
+   "http_local_file_name"
   ],
   "__dirname": [
    "function_import",
@@ -22732,6 +22733,7 @@
     "http_local",
     "path_join",
     "http_local_file_name",
+    "url",
     "joined",
     "name"
    ]
