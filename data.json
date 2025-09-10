@@ -3141,8 +3141,7 @@
    "app_reply_choices",
    "kjv",
    "firebase_upload_string",
-   "http",
-   "buffer_string_to"
+   "http"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -22856,7 +22855,6 @@
     "decode",
     "Uint8Array",
     "Error",
-    "v",
     "toString"
    ]
   }
