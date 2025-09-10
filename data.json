@@ -1903,7 +1903,7 @@
   "c file_read file_read_buffer"
  ],
  "marker_current": "1",
- "function_current": "firebase_upload_buffer",
+ "function_current": "file_read_buffer",
  "terminal": false,
  "identifiers": {
   "log": [
