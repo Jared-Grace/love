@@ -12142,7 +12142,7 @@
   "Uint8Array": [
    "buffer_string_to"
   ],
-  "from2": [
+  "merged": [
    "firebase_upload_string"
   ]
  },
@@ -22742,9 +22742,9 @@
     "settings",
     "contentType",
     "gzip",
+    "merged",
     "metadata",
     "cacheControl",
-    "from2",
     "save",
     "console",
     "url",
