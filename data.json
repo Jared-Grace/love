@@ -3636,7 +3636,8 @@
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
    "http_firebase",
-   "http_local"
+   "http_local",
+   "buffer_string_to"
   ],
   "separator": [
    "watch",
@@ -4633,8 +4634,7 @@
    "js_marker_is",
    "js_statement_call_get",
    "list_all",
-   "http",
-   "buffer_string_to"
+   "http"
   ],
   "readdirSync": [
    "folder_read"
@@ -22852,7 +22852,7 @@
     "buffer",
     "b",
     "ArrayBuffer",
-    "v2",
+    "result",
     "TextDecoder",
     "decode",
     "Uint8Array",
