@@ -1,10 +1,10 @@
+import { http_firebase } from "./http_firebase.mjs";
 import { marker } from "./marker.mjs";
 import { cache_generic } from "./cache_generic.mjs";
 import { http_firebase_file_name } from "./http_firebase_file_name.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
 import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
-import { http } from "./http.mjs";
 export async function http_local(url) {
   marker("1");
   let key_get = http_firebase_file_name;
@@ -14,7 +14,7 @@ export async function http_local(url) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
-  let value_get = http;
+  let value_get = http_firebase;
   async function cache_save(key, value) {
     await firebase_upload_object(
       {
