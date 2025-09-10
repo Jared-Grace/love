@@ -3528,7 +3528,8 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "http_local_file_name"
   ],
   "output": [
    "watch",
@@ -9587,8 +9588,7 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join",
-   "http_local_file_name"
+   "path_join"
   ],
   "then": [
    "promise_is"
@@ -12066,7 +12066,8 @@
    "http_local"
   ],
   "http_local": [
-   "http_local"
+   "http_local",
+   "http_local_file_name"
   ],
   "http_local_file_name": [
    "http_local_file_name"
@@ -22728,10 +22729,11 @@
   "http_local_file_name": {
    "async": false,
    "identifiers": [
+    "http_local",
     "path_join",
     "http_local_file_name",
     "joined",
-    "list_of_segments"
+    "name"
    ]
   }
  },
