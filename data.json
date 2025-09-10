@@ -3126,8 +3126,7 @@
    "string_the_servant_of_god_is",
    "app_reply_choices",
    "kjv",
-   "firebase_upload_string",
-   "firebase_storage_download"
+   "firebase_upload_string"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3708,8 +3707,7 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "http",
-   "firebase_storage_download"
+   "http"
   ],
   "file_path": [
    "data_file_update",
@@ -4774,7 +4772,8 @@
    "list_map_property_to",
    "string_includes",
    "string_is_assert_json",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "firebase_storage_download"
   ],
   "assert_not": [
    "assert_not",
@@ -21542,10 +21541,9 @@
     "buffer",
     "file",
     "getBuffer",
-    "data",
+    "json",
     "toString",
-    "v",
-    "json"
+    "o"
    ]
   },
   "firebase_storage_download_property": {
