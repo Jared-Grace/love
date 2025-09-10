@@ -22671,12 +22671,12 @@
   "list_random_item": {
    "async": false,
    "identifiers": [
+    "random",
     "list_random_item",
     "arr",
     "r",
     "Math",
     "floor",
-    "random",
     "length"
    ]
   },
