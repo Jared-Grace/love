@@ -1897,7 +1897,8 @@
   "o buffer_string_to",
   "s http",
   "fd firebase_upload_string",
-  "c firebase_upload_string firebase_upload_buffer"
+  "c firebase_upload_string firebase_upload_buffer",
+  "fd firebase_storage_download"
  ],
  "marker_current": "1",
  "function_current": "firebase_upload_buffer",
