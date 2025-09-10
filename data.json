@@ -11214,7 +11214,6 @@
   ],
   "firebase_upload_object": [
    "firebase_deploy_function",
-   "http_firebase",
    "firebase_upload_object"
   ],
   "firebase_admin": [
@@ -12056,7 +12055,6 @@
    "string_base64_to"
   ],
   "http_firebase_file_name": [
-   "http_firebase",
    "http_firebase_file_name",
    "http_firebase_file_path",
    "http_local_file_name"
@@ -12101,7 +12099,8 @@
    "http_local"
   ],
   "http_firebase_file_path": [
-   "http_firebase_file_path"
+   "http_firebase_file_path",
+   "http_firebase"
   ],
   "file_write_json": [
    "file_write_json",
@@ -12138,7 +12137,8 @@
    "firebase_upload_buffer"
   ],
   "firebase_upload_buffer": [
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "http_firebase"
   ],
   "resumable": [
    "firebase_upload_buffer"
@@ -22666,11 +22666,11 @@
   "http_firebase": {
    "async": true,
    "identifiers": [
+    "firebase_upload_buffer",
     "cache_generic",
-    "http_firebase_file_name",
+    "http_firebase_file_path",
     "firebase_storage_download_property",
     "firebase_storage_exists",
-    "firebase_upload_object",
     "http",
     "http_firebase",
     "url",
