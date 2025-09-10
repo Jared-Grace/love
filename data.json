@@ -6553,7 +6553,8 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "http"
+   "http",
+   "firebase_upload_buffer"
   ],
   "i": [
    "function_identifier_replace",
@@ -11182,7 +11183,8 @@
    "firebase_deploy_function",
    "firebase_upload_object",
    "firebase_upload_string",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "firebase_upload_buffer"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11427,7 +11429,8 @@
   ],
   "settings": [
    "app_replace_screens",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
   ],
   "emoji_font_larger": [
    "app_replace_settings"
@@ -11983,7 +11986,8 @@
   ],
   "content": [
    "firebase_upload_object",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
   ],
   "file_path_safe_to": [
    "file_path_safe_to"
@@ -12007,13 +12011,16 @@
   "Buffer": [
    "firebase_upload_string",
    "string_base64_to",
-   "http"
+   "http",
+   "firebase_upload_buffer"
   ],
   "contentType": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
   ],
   "gzip": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
   ],
   "encodeURIComponent": [
    "file_path_safe_to"
@@ -12059,7 +12066,8 @@
    "http",
    "http_json",
    "buffer_string_to",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
   ],
   "download": [
    "firebase_storage_download"
@@ -12126,7 +12134,11 @@
    "buffer_string_to"
   ],
   "firebase_upload_generic": [
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "firebase_upload_buffer"
+  ],
+  "firebase_upload_buffer": [
+   "firebase_upload_buffer"
   ]
  },
  "functions": {
@@ -22836,6 +22848,21 @@
     "Uint8Array",
     "Error",
     "toString"
+   ]
+  },
+  "firebase_upload_buffer": {
+   "async": true,
+   "identifiers": [
+    "firebase_upload_generic",
+    "firebase_upload_buffer",
+    "content",
+    "destination",
+    "buffer",
+    "Buffer",
+    "from",
+    "settings",
+    "contentType",
+    "gzip"
    ]
   }
  },
