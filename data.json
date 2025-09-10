@@ -1898,11 +1898,11 @@
   "fd firebase_storage_download",
   "is firebase_storage_download",
   "http_firebase https://www.google.com",
-  "s read",
   "c file_read file_read_buffer",
   "s write",
   "fd file_write",
-  "cs file_overwrite buffer"
+  "cs file_overwrite buffer",
+  "s read"
  ],
  "marker_current": "1",
  "function_current": "file_overwrite_buffer",
