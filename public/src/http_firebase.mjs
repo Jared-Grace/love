@@ -1,3 +1,4 @@
+import { file_name_json } from "./file_name_json.mjs";
 import { string_base64_to } from "./string_base64_to.mjs";
 import { log } from "./log.mjs";
 import { firebase_storage_download_property } from "./firebase_storage_download_property.mjs";
@@ -8,7 +9,8 @@ import { http } from "./http.mjs";
 import { marker } from "./marker.mjs";
 export async function http_firebase(url) {
   let safe = string_base64_to(url);
-  let joined = path_join(["http", safe]);
+  let file_name = file_name_json(safe);
+  let joined = path_join(["http", file_name]);
   let exists = await firebase_storage_exists(joined);
   if (exists) {
     log("not downloading");
