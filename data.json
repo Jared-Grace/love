@@ -2166,7 +2166,8 @@
    "file_path_safe_to",
    "http_local",
    "http_firebase_file_path",
-   "file_write_json"
+   "file_write_json",
+   "buffer_string_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3141,7 +3142,8 @@
    "app_reply_choices",
    "kjv",
    "firebase_upload_string",
-   "http"
+   "http",
+   "buffer_string_to"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9706,7 +9708,8 @@
   ],
   "toString": [
    "string_to",
-   "string_base64_to"
+   "string_base64_to",
+   "buffer_string_to"
   ],
   "task_function_name_part": [
    "tasks_run",
@@ -12067,7 +12070,8 @@
   "buffer": [
    "firebase_storage_download",
    "http",
-   "http_json"
+   "http_json",
+   "buffer_string_to"
   ],
   "download": [
    "firebase_storage_download"
@@ -12118,7 +12122,8 @@
   ],
   "buffer_string_to": [
    "firebase_storage_download",
-   "http_json"
+   "http_json",
+   "buffer_string_to"
   ]
  },
  "functions": {
@@ -22821,6 +22826,16 @@
     "file_path",
     "object",
     "json"
+   ]
+  },
+  "buffer_string_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "buffer_string_to",
+    "buffer",
+    "v",
+    "toString"
    ]
   }
  },
