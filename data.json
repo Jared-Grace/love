@@ -8957,7 +8957,8 @@
    "js_calls_to_each"
   ],
   "v4": [
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "http"
   ],
   "v5": [
    "js_marker_name_get"
@@ -9966,7 +9967,8 @@
   "ms": [
    "date_diff_hours",
    "date_ms_to_hours",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "http"
   ],
   "Math": [
    "date_diff_ms",
@@ -12177,6 +12179,9 @@
   ],
   "http_local_text": [
    "http_local_text"
+  ],
+  "sleep": [
+   "http"
   ]
  },
  "functions": {
@@ -21579,6 +21584,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "sleep",
     "round",
     "string_starts_with",
     "browser_is",
@@ -21593,6 +21599,8 @@
     "ok",
     "buf",
     "arrayBuffer",
+    "v4",
+    "ms",
     "h",
     "sw",
     "buffer",
