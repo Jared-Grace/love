@@ -1891,7 +1891,8 @@
   "r http_firebase_file_name http_firebase_file_path",
   "s write",
   "c file_overwrite_json file_write_json",
-  "fd http"
+  "fd http",
+  "is http"
  ],
  "marker_current": "1",
  "function_current": "file_write_json",
