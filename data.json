@@ -3728,8 +3728,7 @@
    "html_name_to_path_dev",
    "html_update_dev",
    "html_update_generic",
-   "html_update_public",
-   "firebase_storage_download"
+   "html_update_public"
   ],
   "object_property_get": [
    "chalk_color",
@@ -11360,8 +11359,7 @@
    "html_update_public"
   ],
   "file_parent_exists_ensure": [
-   "file_overwrite",
-   "firebase_storage_download"
+   "file_overwrite"
   ],
   "app_name_main": [
    "firebase_deploy_function_app_current",
@@ -12014,9 +12012,6 @@
   ],
   "b64node": [
    "string_base64_to"
-  ],
-  "firebase_storage_download_path": [
-   "firebase_storage_download"
   ],
   "http_firebase_file_name": [
    "http_firebase",
@@ -21525,8 +21520,6 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
-    "file_parent_exists_ensure",
-    "firebase_storage_download_path",
     "firebase_bucket",
     "browser_is",
     "log",
@@ -21539,7 +21532,6 @@
     "url",
     "parsed",
     "bucket",
-    "file_path",
     "buffer",
     "file",
     "getBuffer",
