@@ -2173,7 +2173,8 @@
    "http_firebase_file_path",
    "file_write_json",
    "firebase_upload_buffer",
-   "file_read_buffer"
+   "file_read_buffer",
+   "file_overwrite_buffer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -22881,6 +22882,7 @@
   "file_overwrite_buffer": {
    "async": true,
    "identifiers": [
+    "marker",
     "file_parent_exists_ensure",
     "file_overwrite_buffer",
     "file_path",
