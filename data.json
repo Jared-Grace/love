@@ -1886,7 +1886,8 @@
   "a jt json_to",
   "ps",
   "p",
-  "http_firebase https://www.google.com"
+  "http_firebase https://www.google.com",
+  "c http_firebase http_local"
  ],
  "marker_current": "1",
  "function_current": "string_base64_to",
