@@ -1,3 +1,4 @@
+import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { firebase_storage_download_path } from "./firebase_storage_download_path.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -17,7 +18,9 @@ export async function firebase_storage_download(destination) {
     return parsed;
   }
   const bucket = await firebase_bucket();
+  const file_path = firebase_storage_download_path(destination);
+  await file_parent_exists_ensure(file_path);
   await bucket.file(destination).download({
-    destination: firebase_storage_download_path(destination),
+    destination: file_path,
   });
 }
