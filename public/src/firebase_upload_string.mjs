@@ -11,7 +11,7 @@ export async function firebase_upload_string(content, destination) {
     contentType: "text/plain",
     gzip: true,
   };
-  let to2 = object_merge(
+  object_merge(
     {
       metadata: {
         cacheControl: "no-cache",
