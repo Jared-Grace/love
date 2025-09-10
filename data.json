@@ -3341,7 +3341,8 @@
    "list_join_newline_2",
    "list_join_newline",
    "app_reply_main",
-   "http_firebase"
+   "http_firebase",
+   "http_firebase_file_name"
   ],
   "watcher": [
    "watch"
@@ -4559,7 +4560,8 @@
    "server",
    "firebase_service_account",
    "html_name_to_path_dev",
-   "html_update_generic"
+   "html_update_generic",
+   "http_firebase_file_name"
   ],
   "fs": [
    "folder_read",
@@ -6590,7 +6592,8 @@
    "firebase_storage_download",
    "http_firebase",
    "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase_file_name"
   ],
   "__dirname": [
    "function_import",
@@ -7691,7 +7694,8 @@
    "file_name_html",
    "app_html_open",
    "file_name_json",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "http_firebase_file_name"
   ],
   "html_update": [
    "html_update",
@@ -11150,7 +11154,8 @@
    "string_letters_only"
   ],
   "file_name_json": [
-   "file_name_json"
+   "file_name_json",
+   "http_firebase_file_name"
   ],
   "version": [
    "firebase_deploy_function"
@@ -11937,7 +11942,8 @@
    "file_path_safe_to"
   ],
   "safe": [
-   "file_path_safe_to"
+   "file_path_safe_to",
+   "http_firebase_file_name"
   ],
   "firebase_storage_exists": [
    "firebase_storage_exists",
@@ -11978,7 +11984,8 @@
   "firebase_path_fix": [
    "firebase_storage_exists",
    "firebase_storage_download",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "http_firebase_file_name"
   ],
   "statusCode": [
    "http"
@@ -11992,7 +11999,8 @@
    "http"
   ],
   "string_base64_to": [
-   "string_base64_to"
+   "string_base64_to",
+   "http_firebase_file_name"
   ],
   "b64": [
    "string_base64_to"
@@ -12011,7 +12019,8 @@
   ],
   "http_firebase_file_name": [
    "http_firebase",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase_file_name"
   ]
  },
  "functions": {
@@ -22620,6 +22629,20 @@
     "Buffer",
     "from",
     "toString"
+   ]
+  },
+  "http_firebase_file_name": {
+   "async": false,
+   "identifiers": [
+    "firebase_path_fix",
+    "path_join",
+    "file_name_json",
+    "string_base64_to",
+    "http_firebase_file_name",
+    "url",
+    "safe",
+    "file_name",
+    "joined"
    ]
   }
  },
