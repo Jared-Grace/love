@@ -3153,8 +3153,7 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite",
-   "file_write_buffer"
+   "html_overwrite"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -12158,7 +12157,8 @@
    "http_local"
   ],
   "file_overwrite_buffer": [
-   "file_overwrite_buffer"
+   "file_overwrite_buffer",
+   "file_write_buffer"
   ],
   "file_write_buffer": [
    "file_write_buffer"
@@ -22904,8 +22904,8 @@
   "file_write_buffer": {
    "async": true,
    "identifiers": [
+    "file_overwrite_buffer",
     "marker",
-    "file_overwrite",
     "assert_file_exists_not",
     "file_write_buffer",
     "f_path",
