@@ -2201,7 +2201,6 @@
    "function_parse_declaration_inner",
    "function_parse_strict",
    "http_json",
-   "firebase_storage_download",
    "firebase_storage_download_property",
    "js_calls_to_each"
   ],
@@ -21662,9 +21661,8 @@
     "destination",
     "b",
     "url",
-    "parsed",
-    "bucket",
     "buffer",
+    "bucket",
     "file",
     "download",
     "json",
