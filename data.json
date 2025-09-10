@@ -4572,7 +4572,8 @@
   "file": [
    "folder_read",
    "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "firebase_storage_download"
   ],
   "statSync": [
    "folder_read"
@@ -11943,11 +11944,13 @@
   ],
   "firebase_bucket": [
    "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "firebase_storage_download"
   ],
   "bucket": [
    "firebase_upload_string",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "firebase_storage_download"
   ],
   "Buffer": [
    "firebase_upload_string",
@@ -11999,6 +12002,15 @@
   ],
   "b64node": [
    "string_base64_to"
+  ],
+  "storagePath": [
+   "firebase_storage_download"
+  ],
+  "download": [
+   "firebase_storage_download"
+  ],
+  "localPath": [
+   "firebase_storage_download"
   ]
  },
  "functions": {
@@ -21496,6 +21508,7 @@
   "firebase_storage_download": {
    "async": true,
    "identifiers": [
+    "firebase_bucket",
     "browser_is",
     "log",
     "firebase_path_fix",
@@ -21505,7 +21518,12 @@
     "destination",
     "b",
     "url",
-    "parsed"
+    "parsed",
+    "bucket",
+    "file",
+    "storagePath",
+    "download",
+    "localPath"
    ]
   },
   "firebase_storage_download_property": {
