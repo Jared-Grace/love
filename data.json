@@ -3142,7 +3142,8 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite"
+   "html_overwrite",
+   "file_write_json"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -3743,7 +3744,8 @@
    "html_name_to_path_dev",
    "html_update_dev",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "file_write_json"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4224,7 +4226,8 @@
    "file_overwrite_json",
    "json_format_to",
    "js_declaration_params_names_node",
-   "watch"
+   "watch",
+   "file_write_json"
   ],
   "function_name_unalias": [
    "function_watch_suffix_change",
@@ -4820,7 +4823,8 @@
    "file_read_json",
    "json_from",
    "storage_local_get",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "file_write_json"
   ],
   "includes": [
    "catch_only_async",
@@ -5269,7 +5273,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_exists_not_assert",
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "file_write_json"
   ],
   "each_pair": [
    "each_pair",
@@ -12086,6 +12091,9 @@
   ],
   "http_firebase_file_path": [
    "http_firebase_file_path"
+  ],
+  "file_write_json": [
+   "file_write_json"
   ]
  },
  "functions": {
@@ -22765,6 +22773,17 @@
     "url",
     "file_name",
     "joined"
+   ]
+  },
+  "file_write_json": {
+   "async": true,
+   "identifiers": [
+    "file_overwrite",
+    "json_format_to",
+    "file_write_json",
+    "file_path",
+    "object",
+    "json"
    ]
   }
  },
