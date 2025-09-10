@@ -2235,7 +2235,8 @@
    "function_exists_strict",
    "function_exists_inner",
    "function_parse_strict",
-   "html_update_generic"
+   "html_update_generic",
+   "file_write_buffer"
   ],
   "ast": [
    "data_identifiers_file",
@@ -3151,7 +3152,8 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite"
+   "html_overwrite",
+   "file_write_buffer"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -4758,7 +4760,8 @@
    "file_copy",
    "file_write",
    "html_new",
-   "js_outside_move"
+   "js_outside_move",
+   "file_write_buffer"
   ],
   "file_path_new": [
    "assert_file_exists_not",
@@ -5525,7 +5528,8 @@
    "file_write",
    "function_new_declaration",
    "html_overwrite",
-   "file_overwrite_buffer"
+   "file_overwrite_buffer",
+   "file_write_buffer"
   ],
   "writeFile": [
    "file_overwrite",
@@ -12154,6 +12158,9 @@
   ],
   "file_overwrite_buffer": [
    "file_overwrite_buffer"
+  ],
+  "file_write_buffer": [
+   "file_write_buffer"
   ]
  },
  "functions": {
@@ -22891,6 +22898,16 @@
     "fs",
     "promises",
     "writeFile"
+   ]
+  },
+  "file_write_buffer": {
+   "async": true,
+   "identifiers": [
+    "file_overwrite",
+    "assert_file_exists_not",
+    "file_write_buffer",
+    "f_path",
+    "contents"
    ]
   }
  },
