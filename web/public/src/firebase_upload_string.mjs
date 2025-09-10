@@ -20,7 +20,7 @@ export async function firebase_upload_string(content, destination) {
     settings,
   );
   await file.save(b, merged);
-  console.log(`Uploaded string to ${destination}`);
+  console.log(`Uploaded data to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   console.log("Accessible at:", url);
 }
