@@ -1840,7 +1840,6 @@
   "s click",
   "c html_on_click html_on_keydown",
   "s display",
-  "s property",
   "s letter",
   "n string_letters_only",
   "s lower",
@@ -1905,7 +1904,8 @@
   "cs file_write buffer",
   "http_local https://www.google.com",
   "fws http_local text",
-  "s http"
+  "s http",
+  "s property"
  ],
  "marker_current": "1",
  "function_current": "http_local_text",
