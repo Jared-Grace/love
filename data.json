@@ -2549,8 +2549,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "http_local"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2731,8 +2730,7 @@
    "js_assign_combine",
    "app_reply_main",
    "html_on_keydown",
-   "http",
-   "http_local"
+   "http"
   ],
   "previous": [
    "data_identifiers_file",
@@ -11326,8 +11324,7 @@
    "http_firebase"
   ],
   "firebase_storage_download_property": [
-   "firebase_storage_download_property",
-   "http_local"
+   "firebase_storage_download_property"
   ],
   "list_join_newline": [
    "function_dependencies_code",
@@ -12142,7 +12139,8 @@
    "firebase_upload_buffer"
   ],
   "file_read_buffer": [
-   "file_read_buffer"
+   "file_read_buffer",
+   "http_local"
   ]
  },
  "functions": {
@@ -22768,25 +22766,23 @@
   "http_local": {
    "async": true,
    "identifiers": [
+    "file_read_buffer",
     "file_write_json",
     "file_exists",
     "http_local_file_name",
     "http_firebase",
     "marker",
     "cache_generic",
-    "firebase_storage_download_property",
     "http_local",
     "url",
     "key_get",
     "cached_exists",
-    "property_name",
     "cached_get",
-    "lambda",
-    "key",
-    "result",
     "value_get",
     "cache_save",
-    "value"
+    "key",
+    "value",
+    "result"
    ]
   },
   "http_local_file_name": {
