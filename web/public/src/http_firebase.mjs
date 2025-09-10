@@ -11,13 +11,10 @@ export async function http_firebase(url) {
   };
   let exists = firebase_storage_exists;
   let key_get = http_firebase_file_name;
-  let joined = http_firebase_file_name(url);
+  let joined = key_get(url);
   let e = await exists(joined);
   if (e) {
-    let result = await firebase_storage_download_property(
-      joined,
-      property_name,
-    );
+    let result = await get(joined);
     return result;
   }
   let text = await http(url);
