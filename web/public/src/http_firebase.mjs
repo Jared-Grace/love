@@ -5,7 +5,7 @@ import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { http } from "./http.mjs";
 export async function http_firebase(url) {
   const property_name = "text";
-  let get = async function lambda(key) {
+  let cached_get = async function lambda(key) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
@@ -14,7 +14,7 @@ export async function http_firebase(url) {
   let joined = key_get(url);
   let e = await exists(joined);
   if (e) {
-    let result = await get(joined);
+    let result = await cached_get(joined);
     return result;
   }
   let text = await http(url);
@@ -24,6 +24,6 @@ export async function http_firebase(url) {
     },
     joined,
   );
-  let result = await get(joined);
+  let result = await cached_get(joined);
   return result;
 }
