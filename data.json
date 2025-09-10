@@ -4798,7 +4798,6 @@
    "string_includes",
    "string_is_assert_json",
    "function_aliases_restore",
-   "firebase_storage_download",
    "firebase_storage_download_property"
   ],
   "assert_not": [
@@ -4830,7 +4829,6 @@
    "file_read_json",
    "json_from",
    "storage_local_get",
-   "firebase_storage_download",
    "file_write_json",
    "firebase_storage_download_property"
   ],
@@ -5532,7 +5530,6 @@
    "json_from",
    "storage_local_get",
    "http_json",
-   "firebase_storage_download",
    "firebase_storage_download_property"
   ],
   "file_write": [
@@ -12117,7 +12114,6 @@
    "http"
   ],
   "buffer_string_to": [
-   "firebase_storage_download",
    "http_json",
    "buffer_string_to",
    "firebase_storage_download_property"
@@ -21651,8 +21647,6 @@
    "async": true,
    "identifiers": [
     "http",
-    "buffer_string_to",
-    "json_from",
     "firebase_bucket",
     "browser_is",
     "firebase_path_fix",
@@ -21664,9 +21658,7 @@
     "buffer",
     "bucket",
     "file",
-    "download",
-    "json",
-    "o"
+    "download"
    ]
   },
   "firebase_storage_download_property": {
