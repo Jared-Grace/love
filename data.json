@@ -3965,7 +3965,8 @@
    "function_exists_strict",
    "html_element",
    "function_exists_inner",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http_firebase"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -12028,6 +12029,9 @@
   ],
   "download": [
    "firebase_storage_download"
+  ],
+  "key_get": [
+   "http_firebase"
   ]
  },
  "functions": {
@@ -22553,8 +22557,10 @@
     "lambda",
     "key",
     "result",
-    "joined",
     "exists",
+    "key_get",
+    "joined",
+    "e",
     "text"
    ]
   },
