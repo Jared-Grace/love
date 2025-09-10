@@ -5,13 +5,13 @@ import { firebase_storage_exists } from "./firebase_storage_exists.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { http } from "./http.mjs";
 export async function http_firebase(url) {
+  let key_get = http_firebase_file_name;
   const property_name = "text";
   let cached_get = async function lambda(key) {
     let result = await firebase_storage_download_property(key, property_name);
     return result;
   };
   let cached_exists = firebase_storage_exists;
-  let key_get = http_firebase_file_name;
   async function cache_save(key, value) {
     await firebase_upload_object(
       {
