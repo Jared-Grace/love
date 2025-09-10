@@ -1893,7 +1893,7 @@
   "c file_overwrite_json file_write_json"
  ],
  "marker_current": "1",
- "function_current": "http_firebase_file_path",
+ "function_current": "file_write_json",
  "terminal": false,
  "identifiers": {
   "log": [
