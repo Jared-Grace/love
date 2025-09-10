@@ -3645,7 +3645,8 @@
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
    "http_firebase",
-   "http_local"
+   "http_local",
+   "ebible_version_download"
   ],
   "separator": [
    "watch",
@@ -12123,7 +12124,8 @@
   "http_local": [
    "http_local",
    "http_local_file_name",
-   "http_local_text"
+   "http_local_text",
+   "ebible_version_download"
   ],
   "http_local_file_name": [
    "http_local_file_name",
@@ -12220,6 +12222,9 @@
    "ebible_version_download"
   ],
   "bible_folder": [
+   "ebible_version_download"
+  ],
+  "url2": [
    "ebible_version_download"
   ]
  },
@@ -23018,12 +23023,15 @@
    ]
   },
   "ebible_version_download": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "http_local",
     "marker",
     "ebible_version_download",
     "bible_folder",
-    "url"
+    "url",
+    "result",
+    "url2"
    ]
   }
  },
