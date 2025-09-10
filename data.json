@@ -3647,8 +3647,7 @@
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
    "http_firebase",
-   "http_local",
-   "ebible_version_download"
+   "http_local"
   ],
   "separator": [
    "watch",
@@ -23053,8 +23052,7 @@
     "bible_folder",
     "url",
     "buffer",
-    "file_path",
-    "result"
+    "file_path"
    ]
   },
   "unzip": {
