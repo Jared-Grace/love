@@ -12380,6 +12380,9 @@
   ],
   "href": [
    "ebible_version_verses"
+  ],
+  "class_old": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23245,6 +23248,7 @@
     "marker",
     "ebible_version_verses",
     "bible_folder",
+    "class_old",
     "file_path",
     "joined",
     "contents",
