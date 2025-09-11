@@ -3220,8 +3220,7 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "list_filter_starts_with_not_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6733,7 +6732,8 @@
    "function_aliases_restore",
    "js_imports_paths_fix",
    "js_expand_generic",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "catch_call"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -23676,7 +23676,7 @@
     "catch_call",
     "reject",
     "lambda",
-    "v",
+    "i",
     "inner",
     "result",
     "e"
