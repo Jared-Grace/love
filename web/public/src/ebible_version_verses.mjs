@@ -14,13 +14,13 @@ export async function ebible_version_verses(bible_folder) {
   marker("1");
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
-  let chapters_name = book_code + "00.htm";
+  let chapters_name = book_code + ".htm";
   let file_path = ebible_version_download_path(bible_folder);
   let joined = path_join([file_path, chapters_name]);
   let { d, root } = await html_parse_read(joined);
-  let list = html_parse_find_list_to(root, ".toc2 a");
+  let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
   let mapped2 = list_map_property(mapped, "href");
-  let filtered = list_filter_starts_with(mapped2, book_code);
+  let filtered = list_filter_starts_with(mapped, book_code);
   return filtered;
 }
