@@ -1,4 +1,4 @@
-import { log_unparse } from "./log_unparse.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { list_map_prefix_without } from "./list_map_prefix_without.mjs";
 import { html_parse_find_a_href_starts_with } from "./html_parse_find_a_href_starts_with.mjs";
 import { html_parse } from "./html_parse.mjs";
@@ -11,7 +11,7 @@ export async function sandbox() {
   let { d, root } = await html_parse(text);
   let list = html_parse_find_a_href_starts_with(root, d, "details.php?id=");
   let mapped = list_map_prefix_without(list, "details.php?id=");
-  log_unparse(node);
+  let unique = list_unique(list2);
   return mapped;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
