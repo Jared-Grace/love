@@ -3192,8 +3192,7 @@
    "app_new",
    "html_parse_list_text_to",
    "html_parse_text",
-   "html_parse_href",
-   "ebible_version_books_testament"
+   "html_parse_href"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8974,7 +8973,8 @@
    "js_imports_declarations"
   ],
   "both": [
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "ebible_version_books_testament"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -23434,7 +23434,7 @@
     "item",
     "text",
     "href",
-    "v",
+    "both",
     "mapped",
     "to",
     "book_code",
