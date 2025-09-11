@@ -2597,8 +2597,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "ebible_version_verses"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -10586,8 +10585,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_version_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23362,8 +23360,6 @@
     "list",
     "mapped",
     "mapped2",
-    "list2",
-    "property_name",
     "filtered"
    ]
   },
