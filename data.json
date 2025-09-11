@@ -3618,8 +3618,7 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration",
-   "ebible_version_verses"
+   "js_code_declaration"
   ],
   "lj": [
    "watch",
@@ -4703,7 +4702,8 @@
    "js_statement_call_get",
    "list_all",
    "http",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "ebible_version_verses"
   ],
   "readdirSync": [
    "folder_read"
@@ -12417,6 +12417,9 @@
   ],
   "class_new": [
    "ebible_version_books_testament_new",
+   "ebible_version_verses"
+  ],
+  "ebible_class_old_new": [
    "ebible_version_verses"
   ]
  },
@@ -23278,8 +23281,9 @@
     "ebible_version_verses",
     "bible_folder",
     "class_new",
+    "v2",
+    "ebible_class_old_new",
     "v",
-    "args",
     "mapped"
    ]
   },
