@@ -1918,7 +1918,8 @@
   "s bible",
   "n ebible_version_verses",
   "ebible_version_download engbsb",
-  "s folder"
+  "s folder",
+  "ebible_version_verses engbsb"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
