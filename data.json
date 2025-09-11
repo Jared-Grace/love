@@ -3003,8 +3003,7 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "sandbox"
+   "html_parse_href_text_map"
   ],
   "v": [
    "data_identifiers_file",
@@ -3795,8 +3794,7 @@
    "html_parse_href",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "data": [
    "data_all",
@@ -4185,8 +4183,7 @@
    "list_adder_unique_async",
    "list_unique",
    "list_unique_reverse",
-   "js_imports_declarations",
-   "sandbox"
+   "js_imports_declarations"
   ],
   "function_run_prompt": [
    "function_run_prompt",
@@ -4972,8 +4969,7 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text",
-   "sandbox"
+   "html_parse_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -5994,8 +5990,7 @@
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "sandbox"
+   "list_filter_starts_with_not_multiple"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -6781,8 +6776,7 @@
    "http_local_file_name",
    "http_firebase_file_path",
    "http_local_text",
-   "ebible_version_download",
-   "sandbox"
+   "ebible_version_download"
   ],
   "__dirname": [
    "function_import",
@@ -11114,8 +11108,7 @@
    "html_parse_find",
    "html_parse",
    "ebible_version_books_testament",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12341,8 +12334,7 @@
    "file_write_buffer"
   ],
   "http_local_text": [
-   "http_local_text",
-   "sandbox"
+   "http_local_text"
   ],
   "sleep": [
    "http",
@@ -12405,8 +12397,7 @@
   ],
   "html_parse": [
    "html_parse",
-   "html_parse_read",
-   "sandbox"
+   "html_parse_read"
   ],
   "html_parse_find": [
    "html_parse_find",
@@ -12538,10 +12529,9 @@
    "ebible_version_verses"
   ],
   "html_parse_find_a_href_starts_with": [
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
-  "list_map_prefix_without": [
+  "ebible_versions": [
    "sandbox"
   ]
  },
@@ -19442,20 +19432,10 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_unique",
-    "list_map_prefix_without",
-    "html_parse_find_a_href_starts_with",
-    "html_parse",
-    "http_local_text",
+    "ebible_versions",
     "marker",
     "ebible_version_verses",
     "sandbox",
-    "url",
-    "text",
-    "d",
-    "root",
-    "list",
-    "mapped",
     "unique",
     "contents"
    ],
