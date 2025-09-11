@@ -5,7 +5,8 @@ import { list_filter } from "./list_filter.mjs";
 export function list_filter_starts_with_not_multiple(mapped, prefixes) {
   marker("1");
   function lambda(item) {
-    list_all(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    list_all(list, lambda2);
     let sw = string_starts_with_not(item, book_code);
     return sw;
   }
