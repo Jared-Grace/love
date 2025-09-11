@@ -685,7 +685,6 @@
   "na functions_search_open so",
   "o so",
   "so fill",
-  "s body",
   "as v",
   "as task_new",
   "a t task_new",
@@ -1916,7 +1915,8 @@
   "s js,dec",
   "s code",
   "n js_code_dot",
-  "s dot"
+  "s dot",
+  "s body"
  ],
  "marker_current": "1",
  "function_current": "js_code_dot",
