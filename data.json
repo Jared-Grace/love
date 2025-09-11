@@ -7330,8 +7330,7 @@
    "js_imports_declarations",
    "list_adder_unique",
    "list_adder_unique_async",
-   "js_expand_generic",
-   "sandbox"
+   "js_expand_generic"
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
@@ -12374,8 +12373,7 @@
    "ebible_version_books_testament_new",
    "ebible_version_books_testament",
    "ebible_version_books_testament_old",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "unzip": [
    "unzip",
@@ -19447,12 +19445,10 @@
     "marker",
     "ebible_version_verses",
     "sandbox",
-    "unique",
+    "list",
     "lambda",
     "item",
     "file_path",
-    "bible_folder",
-    "list",
     "contents"
    ],
    "async": true
