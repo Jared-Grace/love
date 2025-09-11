@@ -2794,8 +2794,7 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3006,8 +3005,7 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "sandbox"
+   "html_parse_href_text_map"
   ],
   "v": [
    "data_identifiers_file",
@@ -3840,8 +3838,7 @@
    "ebible_version_download",
    "ebible_version_books_testament",
    "html_parse_read",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4007,8 +4004,7 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4797,8 +4793,7 @@
    "each_range_async",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "js_calls_to_each",
-   "sandbox"
+   "js_calls_to_each"
   ],
   "f_paths": [
    "data_files_update",
@@ -12364,8 +12359,7 @@
   ],
   "ebible_version_download": [
    "ebible_version_download",
-   "ebible_version_books_testament",
-   "sandbox"
+   "ebible_version_books_testament"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -12538,7 +12532,7 @@
   "html_parse_find_a_href_starts_with": [
    "ebible_chapters"
   ],
-  "ebible_versions": [
+  "ebible_versions_download": [
    "sandbox"
   ]
  },
@@ -19439,16 +19433,10 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_version_download",
-    "each_async",
-    "ebible_versions",
+    "ebible_versions_download",
     "marker",
     "ebible_version_verses",
     "sandbox",
-    "list",
-    "lambda",
-    "item",
-    "file_path",
     "contents"
    ],
    "async": true
