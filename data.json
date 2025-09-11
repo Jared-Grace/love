@@ -1800,7 +1800,6 @@
   "s return",
   "s object,la",
   "s js,call",
-  "s call",
   "s empty",
   "s brack",
   "c js_code_wrap_braces js_code_wrap_brackets",
@@ -1916,7 +1915,8 @@
   "s code",
   "n js_code_dot",
   "s dot",
-  "s body"
+  "s body",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "js_code_dot",
