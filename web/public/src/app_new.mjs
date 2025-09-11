@@ -1,3 +1,4 @@
+import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_dot } from "./js_code_dot.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -14,6 +15,7 @@ export async function app_new(name) {
   async function lambda(ast) {
     const v = "f_name";
     let code = js_code_dot(combined, "name");
+    let expression = js_parse_expression(code_expression);
     let assign = js_declare(v, code);
   }
   let output = await function_transform(a_name, lambda);
