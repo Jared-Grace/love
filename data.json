@@ -1961,7 +1961,8 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add"
+   "js_let_add",
+   "ebible_versions_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3285,7 +3286,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_versions_download"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -23629,6 +23631,7 @@
   "ebible_versions_download": {
    "async": true,
    "identifiers": [
+    "log",
     "catch_ignore_async",
     "each_async",
     "ebible_version_download",
@@ -23638,7 +23641,8 @@
     "lambda",
     "item",
     "lambda3",
-    "file_path"
+    "file_path",
+    "message"
    ]
   }
  },
