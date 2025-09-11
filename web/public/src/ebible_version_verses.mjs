@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { ebible_class_old } from "./ebible_class_old.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
@@ -10,6 +11,7 @@ export async function ebible_version_verses(bible_folder) {
   let classes = list_join_comma_space([o, n]);
   let books = await ebible_version_books_testament(bible_folder, classes);
   marker("1");
-  let first = list_first(list);
+  let first = list_first(books);
+  let book_code = object_property_get(first, "book_code");
   return books;
 }
