@@ -1930,10 +1930,11 @@
   "n html_parse_read",
   "sb",
   "s href",
-  "o sb"
+  "o sb",
+  "n html_parse_href_text_map"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "html_parse_href_text_map",
  "terminal": false,
  "identifiers": {
   "log": [
