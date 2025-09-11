@@ -16,11 +16,11 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   function lambda(item) {
     let text = html_parse_text(d, item);
     let href = html_parse_href(d, item);
-    let v = {
+    let both = {
       text,
       href,
     };
-    return v;
+    return both;
   }
   let mapped = list_map(list, lambda);
   function lambda(item) {
