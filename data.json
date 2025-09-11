@@ -12263,6 +12263,9 @@
   ],
   "js_code_dot": [
    "js_code_dot"
+  ],
+  "jcd": [
+   "app_new"
   ]
  },
  "functions": {
@@ -20561,6 +20564,7 @@
     "combined",
     "lambda",
     "ast",
+    "jcd",
     "assign",
     "init",
     "output"
