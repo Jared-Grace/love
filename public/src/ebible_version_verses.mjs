@@ -9,12 +9,13 @@ import { file_read } from "./file_read.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_version_verses(bible_folder) {
+  const class_old = "oo";
   let file_path = await ebible_version_download(bible_folder);
   let joined = path_join([file_path, "index.htm"]);
   let contents = await file_read(joined);
   let { d, root } = await html_parse(contents);
   let bl = html_parse_find(root, ".bookList");
-  let query = html_parse_find(bl, "." + "oo");
+  let query = html_parse_find(bl, "." + class_old);
   let list = html_parse_list_to(query);
   function lambda(item) {
     let text = html_parse_text(d, item);
