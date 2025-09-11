@@ -8,10 +8,11 @@ import { list_first } from "./list_first.mjs";
 import { marker } from "./marker.mjs";
 import { folder_read } from "./folder_read.mjs";
 export async function ebible_version_verses(bible_folder) {
+  let books = await ebible_version_books(bible_folder);
+  return books;
   let file_path = await ebible_version_download(bible_folder);
   let files = folder_read(file_path);
   return files;
-  let books = await ebible_version_books(bible_folder);
   marker("1");
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
