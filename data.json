@@ -3187,7 +3187,8 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3617,7 +3618,8 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration"
+   "js_code_declaration",
+   "ebible_version_verses"
   ],
   "lj": [
    "watch",
@@ -8373,7 +8375,8 @@
   ],
   "list_join_comma_space": [
    "js_code_call_args",
-   "list_join_comma_space"
+   "list_join_comma_space",
+   "ebible_version_verses"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -23268,12 +23271,15 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_join_comma_space",
     "ebible_version_books_testament",
     "ebible_class_new",
     "marker",
     "ebible_version_verses",
     "bible_folder",
     "class_new",
+    "v",
+    "args",
     "mapped"
    ]
   },
