@@ -172,7 +172,8 @@
   "atn": "js_auto_transform_new",
   "lsg": "list_single",
   "ii": "import_install",
-  "jt": "json_to"
+  "jt": "json_to",
+  "fir": "file_read"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1919,7 +1920,8 @@
   "n ebible_version_verses",
   "ebible_version_download engbsb",
   "s folder",
-  "ebible_version_verses engbsb"
+  "ebible_version_verses engbsb",
+  "a fir file_read"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
