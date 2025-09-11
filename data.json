@@ -5761,7 +5761,8 @@
    "js_property_identifier",
    "marker_screen_add",
    "js_await_wrap",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new"
   ],
   "functions_combine": [
    "functions_combine",
@@ -7053,7 +7054,8 @@
    "js_expand_generic",
    "js_dollar_ien",
    "js_calls_to_each",
-   "js_call_callee_name"
+   "js_call_callee_name",
+   "app_new"
   ],
   "type": [
    "function_params_consolidate",
@@ -8886,7 +8888,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "app_new"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -20551,6 +20554,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "js_code_dot",
     "js_declare",
     "function_transform",
@@ -20567,6 +20571,8 @@
     "ast",
     "v",
     "code",
+    "expression",
+    "code_expression",
     "assign",
     "output"
    ]
