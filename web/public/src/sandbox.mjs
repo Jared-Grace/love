@@ -11,8 +11,9 @@ export async function sandbox() {
   let { d, root } = await html_parse(text);
   const prefix = "details.php?id=";
   let filtered = html_parse_find_a_href_starts_with(root, d, prefix);
-  let result = string_prefix_without(s, prefix);
-  function lambda(item) {}
+  function lambda(item) {
+    let result = string_prefix_without(s, prefix);
+  }
   let mapped = list_map(list, lambda);
   return filtered;
   marker("1");
