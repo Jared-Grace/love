@@ -12405,6 +12405,9 @@
   ],
   "href": [
    "ebible_version_books_testament"
+  ],
+  "ebible_class_old": [
+   "ebible_version_books_testament_old"
   ]
  },
  "functions": {
@@ -23371,6 +23374,7 @@
   "ebible_version_books_testament_old": {
    "async": true,
    "identifiers": [
+    "ebible_class_old",
     "ebible_version_books_testament",
     "ebible_version_books_testament_old",
     "bible_folder",
