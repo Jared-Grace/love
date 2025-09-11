@@ -12345,7 +12345,8 @@
    "ebible_version_books_testament"
   ],
   "selector": [
-   "html_parse_find"
+   "html_parse_find",
+   "ebible_version_books_testament"
   ],
   "find": [
    "html_parse_find"
@@ -12394,7 +12395,6 @@
   ],
   "class_old": [
    "ebible_version_books_testament_new",
-   "ebible_version_books_testament",
    "ebible_version_books_testament_old"
   ],
   "html_parse_list_to": [
@@ -23351,7 +23351,7 @@
     "ebible_version_download",
     "ebible_version_books_testament",
     "bible_folder",
-    "class_old",
+    "selector",
     "file_path",
     "joined",
     "contents",
