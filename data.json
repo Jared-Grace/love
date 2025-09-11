@@ -2204,7 +2204,8 @@
    "js_code_dot",
    "ebible_version_verses",
    "html_parse_list_text_to",
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_version_books_testament_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23291,6 +23292,7 @@
   "ebible_version_books_testament_new": {
    "async": true,
    "identifiers": [
+    "marker",
     "ebible_version_books_testament",
     "ebible_version_books_testament_new",
     "bible_folder",
