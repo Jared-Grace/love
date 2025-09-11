@@ -12334,7 +12334,8 @@
    "file_write_buffer"
   ],
   "http_local_text": [
-   "http_local_text"
+   "http_local_text",
+   "sandbox"
   ],
   "sleep": [
    "http",
@@ -19431,6 +19432,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "http_local_text",
     "marker",
     "ebible_version_verses",
     "sandbox",
