@@ -1936,7 +1936,8 @@
   "s http",
   "sb",
   "s prefix",
-  "as uni"
+  "as uni",
+  "as unique"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
