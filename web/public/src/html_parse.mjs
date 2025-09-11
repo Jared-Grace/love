@@ -1,0 +1,7 @@
+import { import_install } from "./import_install.mjs";
+export async function html_parse(contents) {
+  let cheerio = await import_install("cheerio");
+  let d = cheerio.load(contents);
+  let root = d("html");
+  return root;
+}
