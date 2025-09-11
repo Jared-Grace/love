@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
@@ -7,6 +8,7 @@ export async function ebible_versions_download() {
   async function lambda(item) {
     async function lambda3() {
       let file_path = await ebible_version_download(item);
+      log(message);
     }
     await catch_ignore_async(lambda3);
   }
