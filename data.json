@@ -12408,6 +12408,9 @@
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old"
+  ],
+  "ebible_class_new": [
+   "ebible_version_books_testament_new"
   ]
  },
  "functions": {
@@ -23332,6 +23335,7 @@
   "ebible_version_books_testament_new": {
    "async": true,
    "identifiers": [
+    "ebible_class_new",
     "marker",
     "ebible_version_books_testament",
     "ebible_version_books_testament_new",
