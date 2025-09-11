@@ -21,7 +21,8 @@ export async function ebible_version_verses(bible_folder) {
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
   function lambda(item) {
-    let sw = string_starts_with(s, prefix);
+    let sw = string_starts_with(s, book_code);
+    return sw;
   }
   let filtered = list_filter(mapped, lambda);
   return mapped;
