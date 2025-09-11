@@ -1,3 +1,4 @@
+import { html_parse_find } from "./html_parse_find.mjs";
 import { html_parse } from "./html_parse.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
@@ -11,7 +12,7 @@ export async function ebible_version_verses(bible_folder) {
   let contents = await file_read(joined);
   let root = await html_parse(contents);
   let selector = "";
-  root.find(selector);
+  html_parse_find(root, selector);
   return root;
   marker("1");
 }
