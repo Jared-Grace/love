@@ -5406,8 +5406,7 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "app_new"
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -20568,7 +20567,6 @@
     "ast",
     "v",
     "code",
-    "right",
     "assign",
     "output"
    ]
