@@ -1954,7 +1954,6 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "html_parse_read",
    "ebible_version_verses"
   ],
   "function_path_to_name": [
@@ -23536,7 +23535,6 @@
   "html_parse_read": {
    "async": true,
    "identifiers": [
-    "log",
     "html_parse",
     "file_read",
     "html_parse_read",
