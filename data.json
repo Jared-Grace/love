@@ -12472,7 +12472,8 @@
    "ebible_version_verses"
   ],
   "ebible_version_download_path": [
-   "ebible_version_download"
+   "ebible_version_download",
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23327,6 +23328,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "ebible_version_download_path",
     "html_parse_href_text_map",
     "html_parse_find_list_to",
     "ebible_version_books",
@@ -23341,8 +23343,8 @@
     "first",
     "book_code",
     "chapters_name",
-    "joined",
     "file_path",
+    "joined",
     "d",
     "root",
     "list",
