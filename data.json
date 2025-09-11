@@ -2888,7 +2888,8 @@
    "js_expand_generic",
    "app_reply_main",
    "http",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "catch_call"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3220,7 +3221,8 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "catch_call"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23672,12 +23674,14 @@
     "catch_call",
     "reject",
     "lambda",
+    "v",
+    "lambda2",
     "result",
     "e"
    ]
   }
  },
- "git_push_when": "2025-09-11T21:10:33.144Z",
+ "git_push_when": "2025-09-11T22:10:33.655Z",
  "error_attention": null,
  "app_current": "replace"
 }
