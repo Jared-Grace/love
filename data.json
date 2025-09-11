@@ -1927,7 +1927,8 @@
   "p",
   "c html_parse_text html_parse_href",
   "c ebible_version_books_testament_old ebible_version_books_testament_new",
-  "sb"
+  "sb",
+  "s take"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_new",
