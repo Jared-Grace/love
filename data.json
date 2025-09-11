@@ -3172,8 +3172,7 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
-   "sandbox"
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5575,7 +5574,8 @@
    "file_overwrite_buffer",
    "file_write_buffer",
    "file_read",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "sandbox"
   ],
   "writeFile": [
    "file_overwrite",
@@ -19194,7 +19194,7 @@
    "identifiers": [
     "ebible_version_verses",
     "sandbox",
-    "v"
+    "contents"
    ],
    "async": true
   },
