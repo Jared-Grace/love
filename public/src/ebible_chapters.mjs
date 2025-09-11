@@ -21,6 +21,6 @@ export async function ebible_chapters(bible_folder, book_code) {
   }
   let prefixes = list_map(["00", "000"], lambda);
   let filtered = list_filter_starts_with(mapped2, book_code);
-  let filtered2 = list_filter_starts_with_not_multiple(filtered, prefixes);
-  return filtered2;
+  let chapters = list_filter_starts_with_not_multiple(filtered, prefixes);
+  return chapters;
 }
