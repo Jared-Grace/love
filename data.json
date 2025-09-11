@@ -1932,9 +1932,9 @@
   "s list_filter_property",
   "s start",
   "as filter",
-  "p",
   "c list_filter_starts_with list_filter_starts_with_not",
   "cs list_filter_starts_with_not multiple",
+  "p",
   "sb"
  ],
  "marker_current": "1",
