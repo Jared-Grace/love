@@ -178,7 +178,9 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Preach",
-      response: emoji_pray() + "If God wills, then yes I will preach.",
+      response:
+        emoji_pray() +
+        "If God wills, then yes I will preach. I am not available 10 am to 12 pm every day.",
     },
     {
       text: emoji_pray() + " " + "Prayers",
