@@ -1698,7 +1698,6 @@
   "is app_name_prefixed",
   "is app_name_main",
   "o oa",
-  "o an",
   "is function_transform_marker",
   "n marker_rename",
   "s expand",
@@ -1913,10 +1912,11 @@
   "n unzip",
   "p",
   "ebible_version_download engbsb",
-  "s reply"
+  "s reply",
+  "o an"
  ],
  "marker_current": "1",
- "function_current": "unzip",
+ "function_current": "app_new",
  "terminal": false,
  "identifiers": {
   "log": [
