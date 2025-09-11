@@ -1898,7 +1898,6 @@
   "n integer_random",
   "n ebible_version_download",
   "s html",
-  "s http",
   "n unzip",
   "s app",
   "o an",
@@ -1935,7 +1934,8 @@
   "c list_filter_starts_with list_filter_starts_with_not",
   "cs list_filter_starts_with_not multiple",
   "p",
-  "sb"
+  "sb",
+  "s http"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
