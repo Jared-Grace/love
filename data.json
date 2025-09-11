@@ -2596,7 +2596,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "ebible_version_verses"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3695,7 +3696,8 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse"
+   "html_parse",
+   "ebible_version_verses"
   ],
   "separator": [
    "watch",
@@ -9129,7 +9131,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "ebible_version_verses"
   ],
   "fds": [
    "js_outside_move"
@@ -9350,7 +9353,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "ebible_version_verses"
   ],
   "list_find": [
    "list_find",
@@ -10581,7 +10585,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "ebible_version_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23329,6 +23334,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_filter_property",
     "ebible_version_download_path",
     "html_parse_href_text_map",
     "html_parse_find_list_to",
@@ -23349,7 +23355,11 @@
     "d",
     "root",
     "list",
-    "mapped"
+    "mapped",
+    "result",
+    "list2",
+    "property_name",
+    "property_value"
    ]
   },
   "html_parse_find": {
