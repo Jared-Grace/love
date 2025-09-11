@@ -12298,6 +12298,12 @@
   ],
   "html_parse": [
    "ebible_version_verses"
+  ],
+  "find": [
+   "ebible_version_verses"
+  ],
+  "selector": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23163,7 +23169,9 @@
     "files",
     "joined",
     "contents",
-    "root"
+    "root",
+    "find",
+    "selector"
    ]
   }
  },
