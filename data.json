@@ -5412,8 +5412,7 @@
    "js_dollar_a",
    "js_dollar_s",
    "js_dollar_a_generic",
-   "string_take",
-   "ebible_version_books_testament"
+   "string_take"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -12472,9 +12471,6 @@
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
-   "ebible_version_books_testament"
-  ],
-  "href2": [
    "ebible_version_books_testament"
   ]
  },
@@ -23451,10 +23447,8 @@
     "mapped",
     "lambda",
     "item",
-    "href2",
-    "taken",
     "href",
-    "count",
+    "taken",
     "to",
     "book_code",
     "mapped2"
