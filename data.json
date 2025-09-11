@@ -3162,7 +3162,8 @@
    "app_reply_choices",
    "kjv",
    "file_read_buffer",
-   "sleep"
+   "sleep",
+   "js_code_dot"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5383,7 +5384,8 @@
    "add",
    "add_1",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_code_dot"
   ],
   "right": [
    "equal",
@@ -5400,7 +5402,8 @@
    "log_unparse_try",
    "add",
    "app_replace_rule_set",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -23094,11 +23097,14 @@
    "async": false,
    "identifiers": [
     "marker",
-    "js_code_dot"
+    "js_code_dot",
+    "v",
+    "left",
+    "right"
    ]
   }
  },
- "git_push_when": "2025-09-11T16:12:01.114Z",
+ "git_push_when": "2025-09-11T17:18:22.751Z",
  "error_attention": null,
  "app_current": "replace"
 }
