@@ -17,7 +17,8 @@ export async function ebible_version_verses(bible_folder) {
   let query = html_parse_find(bl, ".oo");
   let list = html_parse_list_to(query);
   function lambda(item) {
-    return item.text();
+    let v = item.text();
+    return v;
   }
   let mapped = list_map(list, lambda);
   return list;
