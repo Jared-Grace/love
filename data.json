@@ -2788,8 +2788,7 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3705,8 +3704,7 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse",
-   "sandbox"
+   "html_parse"
   ],
   "separator": [
    "watch",
@@ -4002,8 +4000,7 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4630,8 +4627,7 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "functions_names": [
    "functions_names",
@@ -8678,8 +8674,7 @@
    "string_empty_not_is"
   ],
   "string_prefix_without": [
-   "string_prefix_without",
-   "sandbox"
+   "string_prefix_without"
   ],
   "js_keyword_if": [
    "js_dollar_i",
@@ -12539,6 +12534,9 @@
   ],
   "html_parse_find_a_href_starts_with": [
    "ebible_chapters",
+   "sandbox"
+  ],
+  "list_map_prefix_without": [
    "sandbox"
   ]
  },
@@ -19439,8 +19437,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_map",
-    "string_prefix_without",
+    "list_map_prefix_without",
     "html_parse_find_a_href_starts_with",
     "html_parse",
     "http_local_text",
@@ -19453,9 +19450,6 @@
     "root",
     "prefix",
     "list",
-    "lambda",
-    "item",
-    "result",
     "mapped",
     "contents"
    ],
