@@ -12274,9 +12274,6 @@
   "js_code_dot": [
    "js_code_dot",
    "app_new"
-  ],
-  "ast2": [
-   "app_new"
   ]
  },
  "functions": {
@@ -20587,7 +20584,6 @@
     "assign",
     "body_block",
     "expression2",
-    "ast2",
     "output"
    ]
   },
