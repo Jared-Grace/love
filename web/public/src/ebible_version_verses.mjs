@@ -1,7 +1,8 @@
-import { ebible_version_books_testament_old } from "./ebible_version_books_testament_old.mjs";
+import { ebible_version_books_testament } from "./ebible_version_books_testament.mjs";
+import { ebible_class_new } from "./ebible_class_new.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_version_verses(bible_folder) {
-  let mapped = await ebible_version_books_testament_old(bible_folder);
-  return mapped;
+  const class_new = ebible_class_new();
+  let mapped = await ebible_version_books_testament(bible_folder, class_new);
   marker("1");
 }
