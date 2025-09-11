@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
 import { html_parse_find_a_href_starts_with } from "./html_parse_find_a_href_starts_with.mjs";
 import { html_parse } from "./html_parse.mjs";
@@ -10,7 +11,8 @@ export async function sandbox() {
   let { d, root } = await html_parse(text);
   const prefix = "details.php?id=";
   let filtered = html_parse_find_a_href_starts_with(root, d, prefix);
-  let result = string_prefix_without(s, prefix2);
+  let result = string_prefix_without(s, prefix);
+  let mapped = list_map(list, function lambda(item) {});
   return filtered;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
