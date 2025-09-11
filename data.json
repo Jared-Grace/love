@@ -1914,10 +1914,11 @@
   "o an",
   "s reply",
   "s js,dec",
-  "s code"
+  "s code",
+  "n js_code_dot"
  ],
  "marker_current": "1",
- "function_current": "app_new",
+ "function_current": "js_code_dot",
  "terminal": false,
  "identifiers": {
   "log": [
