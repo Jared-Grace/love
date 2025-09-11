@@ -6538,7 +6538,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "sandbox"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -8170,7 +8171,8 @@
   ],
   "log_unparse": [
    "log_unparse",
-   "log_unparse_try"
+   "log_unparse_try",
+   "sandbox"
   ],
   "js_node_type_is_if": [
    "js_node_type_is_if",
@@ -19436,6 +19438,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log_unparse",
     "list_map_prefix_without",
     "html_parse_find_a_href_starts_with",
     "html_parse",
@@ -19449,6 +19452,7 @@
     "root",
     "list",
     "mapped",
+    "node",
     "contents"
    ],
    "async": true
