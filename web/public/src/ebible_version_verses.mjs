@@ -18,6 +18,6 @@ export async function ebible_version_verses(bible_folder) {
   let { d, root } = await html_parse_read(joined);
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
-  let first2 = list_first(list2);
+  lfi;
   return mapped;
 }
