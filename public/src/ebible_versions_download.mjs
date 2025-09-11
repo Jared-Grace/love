@@ -8,7 +8,7 @@ export async function ebible_versions_download() {
   async function lambda(item) {
     async function lambda3() {
       let file_path = await ebible_version_download(item);
-      log(message);
+      log(file_path);
     }
     await catch_ignore_async(lambda3);
   }
