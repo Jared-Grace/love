@@ -32,8 +32,8 @@ export function app_reply_choices() {
   let heal = app_reply_pray("Heal", "heal the sick");
   let job = app_reply_pray("Job", "provide you with a good job");
   let provide = app_reply_pray("Provide", "provide what is needed");
-  let travel = app_reply_pray(
-    "Travel",
+  let travel_pray = app_reply_pray(
+    "Travel pray",
     "give you safe travels " + emoji_dove(),
   );
   let will = app_reply_pray("Will", "have His will done " + emoji_dove());
@@ -56,10 +56,14 @@ export function app_reply_choices() {
         prayer_end(),
     },
     {
-      text: emoji_phone() + " Call",
+      text: emoji_phone() + " Call why?",
       response:
         emoji_phone() +
         " Why did you call me? What did you want to talk about?",
+    },
+    {
+      text: emoji_phone() + " Call no",
+      response: emoji_phone() + " No video call",
     },
     {
       text: emoji_pray() + " Church",
@@ -183,6 +187,10 @@ export function app_reply_choices() {
       response:
         emoji_pray() + "According to the desire of God, may there be prayer",
     },
+    {
+      text: emoji_pray() + " " + "Replying",
+      response: emoji_pray() + "I am replying to messages 📨",
+    },
     provide,
     {
       text: emoji_pray() + " Sleep",
@@ -198,7 +206,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Thanks",
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
-    travel,
+    travel_pray,
     {
       text: emoji_phone() + " WhatsApp",
       response: emoji_phone() + " WhatsApp: +1-904-314-4052",
