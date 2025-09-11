@@ -2595,8 +2595,7 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert",
-   "ebible_version_books_testament"
+   "object_property_exists_not_assert"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3389,8 +3388,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "js_dollar_ien",
-   "js_assign_combine",
-   "ebible_version_books_testament"
+   "js_assign_combine"
   ],
   "watch": [
    "watch"
@@ -3524,8 +3522,7 @@
    "app_replace_font_size_refresh",
    "app_replace_settings",
    "app_replace_font_size_adjust",
-   "http_firebase",
-   "ebible_version_books_testament"
+   "http_firebase"
   ],
   "name": [
    "watch",
@@ -5381,8 +5378,7 @@
    "object_property_lambda_async",
    "object_property_exists_not_assert",
    "firebase_upload_object",
-   "file_write_json",
-   "ebible_version_books_testament"
+   "file_write_json"
   ],
   "each_pair": [
    "each_pair",
@@ -5415,7 +5411,8 @@
    "js_dollar_a",
    "js_dollar_s",
    "js_dollar_a_generic",
-   "string_take"
+   "string_take",
+   "ebible_version_books_testament"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -12431,7 +12428,8 @@
    "ebible_version_books_testament"
   ],
   "href": [
-   "string_take"
+   "string_take",
+   "ebible_version_books_testament"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old"
@@ -12447,7 +12445,8 @@
    "ebible_version_verses"
   ],
   "string_take": [
-   "string_take"
+   "string_take",
+   "ebible_version_books_testament"
   ],
   "books": [
    "ebible_version_verses"
@@ -12472,6 +12471,9 @@
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
+   "ebible_version_books_testament"
+  ],
+  "taken2": [
    "ebible_version_books_testament"
   ]
  },
@@ -23426,7 +23428,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
-    "object_property_set",
+    "string_take",
     "html_parse_href_text_map",
     "object_merge",
     "html_parse_find_list_to",
@@ -23447,9 +23449,9 @@
     "mapped",
     "lambda",
     "item",
-    "object",
-    "property_name",
-    "value",
+    "taken2",
+    "href",
+    "count",
     "to",
     "book_code",
     "taken",
