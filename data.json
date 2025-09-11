@@ -3782,7 +3782,8 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "unzip",
-   "ebible_version_download"
+   "ebible_version_download",
+   "ebible_version_verses"
   ],
   "object_property_get": [
    "chalk_color",
@@ -12249,7 +12250,8 @@
    "integer_random"
   ],
   "ebible_version_download": [
-   "ebible_version_download"
+   "ebible_version_download",
+   "ebible_version_verses"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -12280,6 +12282,9 @@
    "app_new"
   ],
   "ebible_version_verses": [
+   "ebible_version_verses"
+  ],
+  "bible_folder2": [
    "ebible_version_verses"
   ]
  },
@@ -23132,11 +23137,14 @@
    ]
   },
   "ebible_version_verses": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "ebible_version_download",
     "marker",
     "ebible_version_verses",
-    "bible_folder"
+    "bible_folder",
+    "file_path",
+    "bible_folder2"
    ]
   }
  },
