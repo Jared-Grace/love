@@ -2787,7 +2787,6 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "ebible_version_verses",
    "list_filter_starts_with_not_multiple"
   ],
   "previous": [
@@ -2999,8 +2998,7 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "ebible_version_verses"
+   "html_parse_href_text_map"
   ],
   "v": [
    "data_identifiers_file",
@@ -3206,7 +3204,8 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_version_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3429,8 +3428,7 @@
    "app_reply_main",
    "http_local_file_name",
    "http_firebase_file_path",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "watcher": [
    "watch"
@@ -3790,7 +3788,6 @@
    "html_parse_text",
    "html_parse_href",
    "ebible_version_books_testament",
-   "ebible_version_verses",
    "html_parse_href_text_map"
   ],
   "data": [
@@ -3832,7 +3829,6 @@
    "unzip",
    "ebible_version_download",
    "ebible_version_books_testament",
-   "ebible_version_verses",
    "html_parse_read"
   ],
   "object_property_get": [
@@ -3998,7 +3994,6 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "ebible_version_verses",
    "list_filter_starts_with_not_multiple"
   ],
   "list_includes": [
@@ -4625,8 +4620,7 @@
    "js_expand_generic",
    "app_reply_main",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "ebible_version_verses"
+   "html_parse_href_text_map"
   ],
   "functions_names": [
    "functions_names",
@@ -4688,8 +4682,7 @@
    "html_name_to_path_dev",
    "html_update_generic",
    "http_firebase_file_path",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "fs": [
    "folder_read",
@@ -5878,8 +5871,7 @@
    "app_new",
    "js_dollar_new",
    "js_dollar_new_args",
-   "function_open_dollar_choice",
-   "ebible_version_verses"
+   "function_open_dollar_choice"
   ],
   "body_block": [
    "functions_combine",
@@ -5908,8 +5900,7 @@
    "marker_down_choices",
    "js_imports_declarations",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names",
-   "ebible_version_verses"
+   "js_dollar_choice_arguments_names"
   ],
   "split": [
    "functions_combine_name",
@@ -5987,7 +5978,6 @@
    "ebible_version_books_testament",
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
-   "ebible_version_verses",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple"
   ],
@@ -6554,8 +6544,7 @@
   ],
   "mapped2": [
    "function_dependencies_code",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -9063,7 +9052,6 @@
    "list_any",
    "list_find",
    "list_filter",
-   "ebible_version_verses",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple"
   ],
@@ -11106,8 +11094,7 @@
    "app_reply_main",
    "html_parse_find",
    "html_parse",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12477,32 +12464,25 @@
   "books": [
    "ebible_version_verses"
   ],
-  "chapters_name": [
-   "ebible_version_verses"
-  ],
   "html_parse_read": [
    "html_parse_read",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "ebible_version_books": [
    "ebible_version_verses"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "ebible_version_download_path": [
-   "ebible_version_download",
-   "ebible_version_verses"
+   "ebible_version_download"
   ],
   "list_filter_starts_with_not": [
    "list_filter_starts_with_not"
@@ -12512,17 +12492,12 @@
    "list_filter_starts_with_not_multiple"
   ],
   "prefixes": [
-   "ebible_version_verses",
    "list_filter_starts_with_not_multiple"
   ],
   "list_filter_starts_with_not_multiple": [
-   "list_filter_starts_with_not_multiple",
-   "ebible_version_verses"
+   "list_filter_starts_with_not_multiple"
   ],
-  "list_filter_starts_with": [
-   "ebible_version_verses"
-  ],
-  "filtered2": [
+  "ebible_chapters": [
    "ebible_version_verses"
   ]
  },
@@ -23378,16 +23353,8 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "list_filter_starts_with_not_multiple",
-    "list_filter_starts_with",
-    "list_map",
-    "list_map_property",
-    "ebible_version_download_path",
-    "html_parse_href_text_map",
-    "html_parse_find_list_to",
+    "ebible_chapters",
     "ebible_version_books",
-    "html_parse_read",
-    "path_join",
     "object_property_get",
     "list_first",
     "marker",
@@ -23396,20 +23363,7 @@
     "books",
     "first",
     "book_code",
-    "chapters_name",
-    "file_path",
-    "joined",
-    "d",
-    "root",
-    "list",
-    "mapped",
-    "mapped2",
-    "lambda",
-    "item",
-    "combined",
-    "prefixes",
-    "filtered",
-    "filtered2"
+    "v"
    ]
   },
   "html_parse_find": {
