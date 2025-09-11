@@ -4090,7 +4090,8 @@
    "function_exists_strict",
    "html_element",
    "function_exists_inner",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "http"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -21994,6 +21995,7 @@
     "lambda4",
     "resolve",
     "reject",
+    "e",
     "lambda2",
     "res",
     "chunks",
