@@ -12409,7 +12409,8 @@
    "ebible_version_books_testament"
   ],
   "ebible_class_old": [
-   "ebible_version_books_testament_old"
+   "ebible_version_books_testament_old",
+   "ebible_version_verses"
   ],
   "ebible_class_new": [
    "ebible_version_books_testament_new",
@@ -12417,9 +12418,6 @@
   ],
   "class_new": [
    "ebible_version_books_testament_new",
-   "ebible_version_verses"
-  ],
-  "ebible_class_old_new": [
    "ebible_version_verses"
   ]
  },
@@ -23274,6 +23272,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "ebible_class_old",
     "list_join_comma_space",
     "ebible_version_books_testament",
     "ebible_class_new",
@@ -23282,7 +23281,6 @@
     "bible_folder",
     "class_new",
     "v2",
-    "ebible_class_old_new",
     "v",
     "mapped"
    ]
