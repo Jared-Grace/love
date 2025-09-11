@@ -178,9 +178,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Preach",
-      response:
-        emoji_pray() +
-        "No video call. If you want I will write a message and someone else can speak.",
+      response: emoji_pray() + "If God wills, then yes I will preach.",
     },
     {
       text: emoji_pray() + " " + "Prayers",
