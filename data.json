@@ -3173,8 +3173,7 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
-   "html_parse_find"
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3668,7 +3667,8 @@
    "object_property_exists_not_assert",
    "js_dollar_choice_arguments",
    "http_firebase",
-   "http_local"
+   "http_local",
+   "html_parse_find"
   ],
   "separator": [
    "watch",
@@ -23185,7 +23185,7 @@
     "html_parse_find",
     "root",
     "selector",
-    "v",
+    "result",
     "find"
    ]
   }
