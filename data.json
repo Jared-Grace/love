@@ -651,7 +651,6 @@
   "c catch_log catch_log_async",
   "s eq",
   "c string_suffix_without string_prefix_without",
-  "s start",
   "si git_acp_call",
   "fd git_acp_call",
   "n identity",
@@ -1932,7 +1931,8 @@
   "n html_parse_href_text_map",
   "p",
   "sb",
-  "s list_filter_property"
+  "s list_filter_property",
+  "s start"
  ],
  "marker_current": "1",
  "function_current": "html_parse_href_text_map",
