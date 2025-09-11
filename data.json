@@ -1939,7 +1939,9 @@
   "s unique",
   "p",
   "a lun list_unique",
-  "sb"
+  "sb",
+  "ebible",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
