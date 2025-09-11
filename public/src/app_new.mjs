@@ -10,7 +10,7 @@ export async function app_new(name) {
   let combined = app_name_main(name);
   await function_new(a_name);
   async function lambda(ast) {}
-  let output = await function_transform(f_name, lambda);
+  let output = await function_transform(a_name, lambda);
   await function_new(combined);
   await html_new(name);
 }
