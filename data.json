@@ -2227,7 +2227,8 @@
    "ebible_version_books_testament_new",
    "sandbox",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "catch_call"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12552,6 +12553,9 @@
   ],
   "promise_wrap": [
    "http"
+  ],
+  "catch_call": [
+   "catch_call"
   ]
  },
  "functions": {
@@ -23643,6 +23647,13 @@
     "item",
     "lambda3",
     "file_path"
+   ]
+  },
+  "catch_call": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "catch_call"
    ]
   }
  },
