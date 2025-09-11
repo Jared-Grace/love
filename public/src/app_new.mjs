@@ -12,9 +12,9 @@ export async function app_new(name) {
   let combined = app_name_main(name);
   await function_new(a_name);
   async function lambda(ast) {
-    let code = js_code_dot(left, right);
     const v = "f_name";
-    let assign = js_declare(v, init);
+    let code = js_code_dot(v, right);
+    let assign = js_declare(v, code);
   }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
