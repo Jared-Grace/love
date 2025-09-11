@@ -12374,8 +12374,7 @@
    "html_parse_find"
   ],
   "query": [
-   "html_parse_list_text_to",
-   "ebible_version_books_testament"
+   "html_parse_list_text_to"
   ],
   "html_parse_text": [
    "html_parse_text",
@@ -12417,9 +12416,6 @@
   "class_old": [
    "ebible_version_books_testament_old"
   ],
-  "html_parse_list_to": [
-   "ebible_version_books_testament"
-  ],
   "bl": [
    "ebible_version_books_testament"
   ],
@@ -12457,6 +12453,9 @@
   ],
   "ebible_version_books": [
    "ebible_version_verses"
+  ],
+  "html_parse_find_list_to": [
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23409,12 +23408,12 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "html_parse_find_list_to",
     "html_parse_read",
     "string_take",
     "list_map",
     "html_parse_href",
     "html_parse_text",
-    "html_parse_list_to",
     "html_parse_find",
     "path_join",
     "ebible_version_download",
@@ -23426,7 +23425,6 @@
     "d",
     "root",
     "bl",
-    "query",
     "list",
     "lambda",
     "item",
