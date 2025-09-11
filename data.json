@@ -1929,11 +1929,11 @@
   "s href",
   "o sb",
   "n html_parse_href_text_map",
-  "sb",
   "s list_filter_property",
   "s start",
   "p",
-  "as filter"
+  "as filter",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "html_parse_href_text_map",
