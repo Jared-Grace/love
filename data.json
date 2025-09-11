@@ -3220,7 +3220,8 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "catch_call"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23675,6 +23676,7 @@
     "catch_call",
     "reject",
     "lambda",
+    "v",
     "inner",
     "result",
     "e"
