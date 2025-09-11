@@ -12041,8 +12041,7 @@
    "http"
   ],
   "get": [
-   "http",
-   "ebible_version_verses"
+   "http"
   ],
   "chunk": [
    "http"
@@ -12317,6 +12316,9 @@
    "ebible_version_verses"
   ],
   "query": [
+   "ebible_version_verses"
+  ],
+  "html_parse_list_to": [
    "ebible_version_verses"
   ]
  },
@@ -23171,6 +23173,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_list_to",
     "html_parse_find",
     "html_parse",
     "path_join",
@@ -23187,8 +23190,7 @@
     "root",
     "bl",
     "query",
-    "list",
-    "get"
+    "list"
    ]
   },
   "html_parse_find": {
