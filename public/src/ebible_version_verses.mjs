@@ -1,5 +1,4 @@
-import { string_starts_with } from "./string_starts_with.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
 import { ebible_version_download_path } from "./ebible_version_download_path.mjs";
 import { html_parse_href_text_map } from "./html_parse_href_text_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
@@ -20,10 +19,6 @@ export async function ebible_version_verses(bible_folder) {
   let { d, root } = await html_parse_read(joined);
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
-  function lambda(item) {
-    let sw = string_starts_with(item, book_code);
-    return sw;
-  }
-  let filtered = list_filter(mapped, lambda);
+  let filtered = list_filter_starts_with(mapped, book_code);
   return filtered;
 }
