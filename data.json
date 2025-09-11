@@ -3704,8 +3704,7 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse",
-   "sandbox"
+   "html_parse"
   ],
   "separator": [
    "watch",
@@ -3792,7 +3791,8 @@
    "html_parse_href",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ],
   "data": [
    "data_all",
@@ -11110,7 +11110,8 @@
    "html_parse_find",
    "html_parse",
    "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12536,9 +12537,6 @@
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses"
-  ],
-  "contents2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -19445,8 +19443,8 @@
     "sandbox",
     "url",
     "text",
-    "result",
-    "contents2",
+    "d",
+    "root",
     "contents"
    ],
    "async": true
