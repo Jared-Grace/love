@@ -1871,7 +1871,6 @@
   "n http_local_file_name",
   "r http_firebase_file_name http_firebase_file_path",
   "c file_overwrite_json file_write_json",
-  "fd http",
   "is http",
   "s buffer",
   "is http_json",
@@ -1943,8 +1942,9 @@
   "s ebible",
   "s try",
   "s catch",
+  "fd ebible_versions_download",
   "ebible_versions_download",
-  "fd ebible_versions_download"
+  "fd http"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
