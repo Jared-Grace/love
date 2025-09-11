@@ -2769,8 +2769,7 @@
    "html_on_keydown",
    "http",
    "app_new",
-   "html_parse_list_text_to",
-   "ebible_version_verses"
+   "html_parse_list_text_to"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2978,8 +2977,7 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline",
-   "ebible_version_verses"
+   "list_join_newline"
   ],
   "v": [
    "data_identifiers_file",
@@ -3183,7 +3181,6 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "ebible_version_verses",
    "html_parse_text",
    "html_parse_href"
   ],
@@ -3407,8 +3404,7 @@
    "list_join_newline",
    "app_reply_main",
    "http_local_file_name",
-   "http_firebase_file_path",
-   "ebible_version_verses"
+   "http_firebase_file_path"
   ],
   "watcher": [
    "watch"
@@ -3737,8 +3733,7 @@
    "file_read",
    "file_read_json",
    "function_format",
-   "function_read",
-   "ebible_version_verses"
+   "function_read"
   ],
   "js_parse": [
    "file_js_parse",
@@ -3765,7 +3760,6 @@
    "js_calls_to_each",
    "http",
    "html_parse",
-   "ebible_version_verses",
    "html_parse_text",
    "html_parse_href"
   ],
@@ -3806,8 +3800,7 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "unzip",
-   "ebible_version_download",
-   "ebible_version_verses"
+   "ebible_version_download"
   ],
   "object_property_get": [
    "chalk_color",
@@ -3965,7 +3958,6 @@
    "list_next_try",
    "list_index_of_next_outside",
    "app_reply_main",
-   "ebible_version_verses",
    "html_parse_text",
    "html_parse_href"
   ],
@@ -4590,8 +4582,7 @@
    "app_replace_rule_set",
    "functions_transform",
    "js_expand_generic",
-   "app_reply_main",
-   "ebible_version_verses"
+   "app_reply_main"
   ],
   "functions_names": [
    "functions_names",
@@ -4652,8 +4643,7 @@
    "firebase_service_account",
    "html_name_to_path_dev",
    "html_update_generic",
-   "http_firebase_file_path",
-   "ebible_version_verses"
+   "http_firebase_file_path"
   ],
   "fs": [
    "folder_read",
@@ -4930,8 +4920,7 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text",
-   "ebible_version_verses"
+   "html_parse_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -5601,7 +5590,6 @@
    "file_overwrite_buffer",
    "file_write_buffer",
    "file_read",
-   "ebible_version_verses",
    "sandbox",
    "html_parse"
   ],
@@ -11046,7 +11034,6 @@
    "app_replace_main",
    "app_replace_settings",
    "app_reply_main",
-   "ebible_version_verses",
    "html_parse_find",
    "html_parse"
   ],
@@ -12293,8 +12280,7 @@
    "integer_random"
   ],
   "ebible_version_download": [
-   "ebible_version_download",
-   "ebible_version_verses"
+   "ebible_version_download"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -12329,11 +12315,9 @@
    "sandbox"
   ],
   "html_parse": [
-   "ebible_version_verses",
    "html_parse"
   ],
   "html_parse_find": [
-   "ebible_version_verses",
    "html_parse_find"
   ],
   "selector": [
@@ -12342,18 +12326,10 @@
   "find": [
    "html_parse_find"
   ],
-  "bl": [
-   "ebible_version_verses"
-  ],
   "query": [
-   "ebible_version_verses",
    "html_parse_list_text_to"
   ],
-  "html_parse_list_to": [
-   "ebible_version_verses"
-  ],
   "html_parse_text": [
-   "ebible_version_verses",
    "html_parse_text"
   ],
   "html_parse_list_text_to": [
@@ -12372,16 +12348,15 @@
    "html_parse"
   ],
   "html_parse_href": [
-   "html_parse_href",
-   "ebible_version_verses"
+   "html_parse_href"
   ],
   "attr": [
    "html_parse_href"
   ],
-  "href": [
+  "class_old": [
    "ebible_version_verses"
   ],
-  "class_old": [
+  "ebible_version_books_testament": [
    "ebible_version_verses"
   ]
  },
@@ -23236,32 +23211,11 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "html_parse_href",
-    "html_parse_text",
-    "list_map",
-    "html_parse_list_to",
-    "html_parse_find",
-    "html_parse",
-    "path_join",
-    "file_read",
-    "ebible_version_download",
+    "ebible_version_books_testament",
     "marker",
     "ebible_version_verses",
     "bible_folder",
     "class_old",
-    "file_path",
-    "joined",
-    "contents",
-    "d",
-    "root",
-    "bl",
-    "query",
-    "list",
-    "lambda",
-    "item",
-    "text",
-    "href",
-    "v",
     "mapped"
    ]
   },
