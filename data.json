@@ -4930,8 +4930,7 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text",
-   "html_parse_href"
+   "html_parse_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12372,6 +12371,9 @@
    "html_parse"
   ],
   "html_parse_href": [
+   "html_parse_href"
+  ],
+  "attr": [
    "html_parse_href"
   ]
  },
@@ -23309,7 +23311,7 @@
     "d",
     "item",
     "v",
-    "text"
+    "attr"
    ]
   }
  },
