@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_dot } from "./js_code_dot.mjs";
@@ -19,6 +20,7 @@ export async function app_new(name) {
     let expression = js_parse_expression(code);
     let assign = js_declare(v, expression);
     let body_block = js_declaration_single_block_body(ast);
+    list_add(list, item);
   }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
