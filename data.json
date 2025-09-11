@@ -1932,14 +1932,14 @@
   "as filter",
   "c list_filter_starts_with list_filter_starts_with_not",
   "cs list_filter_starts_with_not multiple",
-  "p",
   "s http",
-  "sb",
   "s prefix",
   "as uni",
   "as unique",
   "s unique",
-  "a lun list_unique"
+  "p",
+  "a lun list_unique",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
