@@ -12343,8 +12343,7 @@
    "ebible_version_download"
   ],
   "local_function_path": [
-   "http_local_file_name",
-   "ebible_version_download"
+   "http_local_file_name"
   ],
   "zip": [
    "unzip"
@@ -12471,6 +12470,9 @@
    "html_parse_href_text_map",
    "ebible_version_books_testament",
    "ebible_version_verses"
+  ],
+  "ebible_version_download_path": [
+   "ebible_version_download"
   ]
  },
  "functions": {
@@ -23288,7 +23290,7 @@
   "ebible_version_download": {
    "async": true,
    "identifiers": [
-    "local_function_path",
+    "ebible_version_download_path",
     "unzip",
     "http_local",
     "marker",
