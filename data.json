@@ -2888,8 +2888,7 @@
    "js_expand_generic",
    "app_reply_main",
    "http",
-   "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "list_filter_starts_with_not_multiple"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3221,8 +3220,7 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "list_filter_starts_with_not_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12570,6 +12568,9 @@
   ],
   "on_end": [
    "http"
+  ],
+  "inner": [
+   "catch_call"
   ]
  },
  "functions": {
@@ -23674,8 +23675,7 @@
     "catch_call",
     "reject",
     "lambda",
-    "v",
-    "lambda2",
+    "inner",
     "result",
     "e"
    ]
