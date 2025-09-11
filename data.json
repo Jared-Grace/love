@@ -8183,7 +8183,8 @@
    "js_call_fill",
    "js_call_new",
    "marker_call",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -8286,8 +8287,7 @@
   "js_call_new_expression": [
    "js_call_new_expression",
    "js_dollar_ie",
-   "js_dollar_ien",
-   "app_new"
+   "js_dollar_ien"
   ],
   "js_code_braces_empty": [
    "js_code_arrow",
@@ -20559,8 +20559,8 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "js_call_new",
     "firebase_storage_function_run",
-    "js_call_new_expression",
     "list_add",
     "js_declaration_single_block_body",
     "js_parse_expression",
