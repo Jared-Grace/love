@@ -12534,9 +12534,6 @@
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses"
-  ],
-  "url2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -19442,7 +19439,6 @@
     "sandbox",
     "url",
     "text",
-    "url2",
     "contents"
    ],
    "async": true
