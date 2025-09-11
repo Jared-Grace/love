@@ -2202,7 +2202,8 @@
    "ebible_version_download",
    "js_code_dot",
    "ebible_version_verses",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "html_parse_href"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23303,6 +23304,7 @@
   "html_parse_href": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_parse_href",
     "d",
     "item",
