@@ -3165,7 +3165,8 @@
    "app_reply_choices",
    "kjv",
    "file_read_buffer",
-   "sleep"
+   "sleep",
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12268,9 +12269,6 @@
   "js_code_dot": [
    "js_code_dot",
    "app_new"
-  ],
-  "newLocal": [
-   "app_new"
   ]
  },
  "functions": {
@@ -20573,7 +20571,7 @@
     "code",
     "left",
     "right",
-    "newLocal",
+    "v",
     "assign",
     "init",
     "output"
