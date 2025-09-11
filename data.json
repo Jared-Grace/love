@@ -4090,8 +4090,7 @@
    "function_exists_strict",
    "html_element",
    "function_exists_inner",
-   "firebase_storage_exists",
-   "http"
+   "firebase_storage_exists"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5039,7 +5038,6 @@
   "Promise": [
    "command_line_read",
    "list_wait",
-   "http",
    "sleep"
   ],
   "resolve": [
@@ -8913,8 +8911,7 @@
    "app_replace_rule_set",
    "app_replace_home",
    "js_expand_generic",
-   "app_reply_main",
-   "http"
+   "app_reply_main"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -12551,6 +12548,9 @@
   ],
   "ebible_versions": [
    "ebible_versions_download"
+  ],
+  "promise_wrap": [
+   "http"
   ]
  },
  "functions": {
@@ -21972,6 +21972,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "promise_wrap",
     "integer_random",
     "sleep",
     "round",
@@ -21991,14 +21992,12 @@
     "h",
     "sw",
     "buffer",
-    "Promise",
-    "lambda4",
+    "lambda",
     "resolve",
     "reject",
     "lambda2",
     "res",
     "chunks",
-    "lambda",
     "chunk",
     "v2",
     "push",
@@ -22010,8 +22009,7 @@
     "v3",
     "Buffer",
     "concat",
-    "get",
-    "e"
+    "get"
    ]
   },
   "http_json": {
