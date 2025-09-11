@@ -18,7 +18,7 @@ export async function ebible_version_verses(bible_folder) {
   let file_path = ebible_version_download_path(bible_folder);
   let joined = path_join([file_path, chapters_name]);
   let { d, root } = await html_parse_read(joined);
-  let list = html_parse_find_list_to(root, ".toc2");
+  let list = html_parse_find_list_to(root, ".toc2 a");
   let mapped = html_parse_href_text_map(d, list);
   let mapped2 = list_map_property(mapped, "href");
   let filtered = list_filter_starts_with(mapped2, book_code);
