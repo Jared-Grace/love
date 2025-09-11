@@ -5949,7 +5949,6 @@
    "list_map_index",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
-   "ebible_version_verses",
    "ebible_version_books_testament_new",
    "ebible_version_books_testament",
    "ebible_version_books_testament_old"
@@ -12434,6 +12433,9 @@
   "string_take": [
    "ebible_version_books_testament",
    "string_take"
+  ],
+  "books": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23297,7 +23299,7 @@
     "n",
     "o",
     "classes",
-    "mapped"
+    "books"
    ]
   },
   "html_parse_find": {
