@@ -5947,7 +5947,8 @@
    "js_dollar_choice_arguments_names",
    "ebible_version_verses",
    "ebible_version_books_testament_new",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_books_testament_old"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -12304,7 +12305,8 @@
    "ebible_version_download",
    "ebible_version_verses",
    "ebible_version_books_testament_new",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_books_testament_old"
   ],
   "unzip": [
    "unzip",
@@ -12379,18 +12381,21 @@
    "html_parse_href"
   ],
   "ebible_version_books_testament_old": [
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "ebible_version_books_testament_old"
   ],
   "ebible_version_books_testament": [
    "ebible_version_books_testament_new",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_books_testament_old"
   ],
   "ebible_version_books_testament_new": [
    "ebible_version_books_testament_new"
   ],
   "class_old": [
    "ebible_version_books_testament_new",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_books_testament_old"
   ],
   "html_parse_list_to": [
    "ebible_version_books_testament"
@@ -23360,6 +23365,16 @@
     "text",
     "href",
     "v",
+    "mapped"
+   ]
+  },
+  "ebible_version_books_testament_old": {
+   "async": true,
+   "identifiers": [
+    "ebible_version_books_testament",
+    "ebible_version_books_testament_old",
+    "bible_folder",
+    "class_old",
     "mapped"
    ]
   }
