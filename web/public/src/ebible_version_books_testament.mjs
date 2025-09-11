@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { html_parse_href_text_map } from "./html_parse_href_text_map.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
@@ -14,6 +15,7 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   let list = html_parse_find_list_to(bl, selector);
   let mapped = html_parse_href_text_map(d, list);
   function lambda(item) {
+    object_property_set(object, property_name, value);
     let to = object_merge(
       {
         book_code: taken,
