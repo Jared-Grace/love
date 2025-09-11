@@ -1,3 +1,4 @@
+import { catch_call } from "./catch_call.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { sleep } from "./sleep.mjs";
@@ -31,7 +32,8 @@ export async function http(url) {
         let v2 = chunks.push(chunk);
         return v2;
       }
-      res.on("data", lambda);
+      let result = catch_call(reject, lambda);
+      res.on("data", result);
       function lambda3() {
         const { statusCode } = res;
         const d = statusCode / 100;
@@ -42,7 +44,8 @@ export async function http(url) {
         let v3 = Buffer.concat(chunks);
         resolve(v3);
       }
-      res.on("end", lambda3);
+      let result2 = catch_call(reject, lambda3);
+      res.on("end", result2);
     }
     h.get(url, lambda2).on("error", reject);
   }
