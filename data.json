@@ -9072,8 +9072,7 @@
    "list_filter",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "sandbox"
+   "ebible_chapters"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -19453,12 +19452,11 @@
     "d",
     "root",
     "prefix",
-    "filtered",
+    "list",
     "lambda",
     "item",
     "result",
     "mapped",
-    "list",
     "contents"
    ],
    "async": true
