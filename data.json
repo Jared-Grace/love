@@ -10581,8 +10581,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_version_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12477,7 +12476,7 @@
    "ebible_version_download",
    "ebible_version_verses"
   ],
-  "first2": [
+  "lfi": [
    "ebible_version_verses"
   ]
  },
@@ -23354,8 +23353,7 @@
     "root",
     "list",
     "mapped",
-    "first2",
-    "list2"
+    "lfi"
    ]
   },
   "html_parse_find": {
