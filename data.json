@@ -3571,8 +3571,7 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply",
-   "ebible_version_verses"
+   "app_reply"
   ],
   "output": [
    "watch",
@@ -3749,7 +3748,8 @@
    "date_iso_to",
    "function_aliases_restore",
    "js_calls_to_each",
-   "http"
+   "http",
+   "ebible_version_verses"
   ],
   "data": [
    "data_all",
@@ -12295,6 +12295,9 @@
   "ebible_version_verses": [
    "ebible_version_verses",
    "sandbox"
+  ],
+  "cheerio": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23160,7 +23163,8 @@
     "files",
     "joined",
     "contents",
-    "name"
+    "cheerio",
+    "d"
    ]
   }
  },
