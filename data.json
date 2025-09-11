@@ -4880,8 +4880,7 @@
    "string_includes",
    "string_is_assert_json",
    "function_aliases_restore",
-   "firebase_storage_download_property",
-   "ebible_version_verses"
+   "firebase_storage_download_property"
   ],
   "assert_not": [
    "assert_not",
@@ -6188,8 +6187,7 @@
    "storage_local_initialize",
    "promise_not_is",
    "js_calls_to_each",
-   "round",
-   "ebible_version_verses"
+   "round"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -8389,8 +8387,7 @@
   ],
   "list_join_comma_space": [
    "js_code_call_args",
-   "list_join_comma_space",
-   "ebible_version_verses"
+   "list_join_comma_space"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -12409,8 +12406,7 @@
   "ebible_version_books_testament": [
    "ebible_version_books_testament_new",
    "ebible_version_books_testament",
-   "ebible_version_books_testament_old",
-   "ebible_version_verses"
+   "ebible_version_books_testament_old"
   ],
   "ebible_version_books_testament_new": [
    "ebible_version_books_testament_new"
@@ -12429,18 +12425,13 @@
    "string_take"
   ],
   "ebible_class_old": [
-   "ebible_version_books_testament_old",
-   "ebible_version_verses"
+   "ebible_version_books_testament_old"
   ],
   "ebible_class_new": [
-   "ebible_version_books_testament_new",
-   "ebible_version_verses"
+   "ebible_version_books_testament_new"
   ],
   "class_new": [
    "ebible_version_books_testament_new"
-  ],
-  "classes": [
-   "ebible_version_verses"
   ],
   "book_code": [
    "ebible_version_books_testament",
@@ -12459,6 +12450,9 @@
   "html_parse_read": [
    "html_parse_read",
    "ebible_version_books_testament",
+   "ebible_version_verses"
+  ],
+  "ebible_version_books": [
    "ebible_version_verses"
   ]
  },
@@ -23313,24 +23307,18 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "ebible_version_books",
     "html_parse_read",
     "path_join",
     "ebible_version_download",
     "object_property_get",
     "list_first",
-    "ebible_class_old",
-    "list_join_comma_space",
-    "ebible_version_books_testament",
-    "ebible_class_new",
     "marker",
     "folder_read",
     "ebible_version_verses",
     "bible_folder",
     "file_path",
     "files",
-    "n",
-    "o",
-    "classes",
     "books",
     "first",
     "book_code",
