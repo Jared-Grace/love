@@ -4,9 +4,9 @@ import { ebible_version_books_testament } from "./ebible_version_books_testament
 import { ebible_class_new } from "./ebible_class_new.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_version_verses(bible_folder) {
-  const class_new = ebible_class_new();
-  let v2 = ebible_class_old();
-  let v = list_join_comma_space([v2]);
-  let mapped = await ebible_version_books_testament(bible_folder, class_new);
+  const n = ebible_class_new();
+  let o = ebible_class_old();
+  let v = list_join_comma_space([o, n]);
+  let mapped = await ebible_version_books_testament(bible_folder, n);
   marker("1");
 }
