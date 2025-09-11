@@ -1965,7 +1965,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "catch_call"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3291,7 +3292,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "catch_call"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -8885,7 +8887,8 @@
   ],
   "message2": [
    "js_identifiers_to_names",
-   "list_size_1_assert"
+   "list_size_1_assert",
+   "catch_call"
   ],
   "js_stack_filtered_multiple_each": [
    "js_identifier_defineds",
@@ -23674,6 +23677,7 @@
   "catch_call": {
    "async": false,
    "identifiers": [
+    "log",
     "marker",
     "catch_call",
     "reject",
@@ -23681,8 +23685,10 @@
     "i",
     "inner",
     "result",
+    "message",
     "arguments",
-    "e"
+    "e",
+    "message2"
    ]
   }
  },
