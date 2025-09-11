@@ -12506,8 +12506,7 @@
    "ebible_version_verses"
   ],
   "list_filter_starts_with_not": [
-   "list_filter_starts_with_not",
-   "ebible_version_verses"
+   "list_filter_starts_with_not"
   ],
   "string_starts_with_not": [
    "list_filter_starts_with_not",
@@ -12518,7 +12517,14 @@
    "list_filter_starts_with_not_multiple"
   ],
   "list_filter_starts_with_not_multiple": [
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_version_verses"
+  ],
+  "list_filter_starts_with": [
+   "ebible_version_verses"
+  ],
+  "filtered2": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23373,9 +23379,10 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_filter_starts_with_not_multiple",
+    "list_filter_starts_with",
     "log",
     "list_map",
-    "list_filter_starts_with_not",
     "list_map_property",
     "ebible_version_download_path",
     "html_parse_href_text_map",
@@ -23403,7 +23410,8 @@
     "item",
     "combined",
     "prefixes",
-    "filtered"
+    "filtered",
+    "filtered2"
    ]
   },
   "html_parse_find": {
