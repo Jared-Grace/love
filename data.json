@@ -8888,8 +8888,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "app_new"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -20572,7 +20571,6 @@
     "v",
     "code",
     "expression",
-    "code_expression",
     "assign",
     "output"
    ]
