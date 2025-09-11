@@ -12310,6 +12310,9 @@
   ],
   "find": [
    "html_parse_find"
+  ],
+  "bl": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23176,7 +23179,8 @@
     "files",
     "joined",
     "contents",
-    "root"
+    "root",
+    "bl"
    ]
   },
   "html_parse_find": {
