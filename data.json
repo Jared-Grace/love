@@ -1965,8 +1965,7 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download",
-   "catch_call"
+   "ebible_versions_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23675,7 +23674,6 @@
   "catch_call": {
    "async": false,
    "identifiers": [
-    "log",
     "marker",
     "catch_call",
     "reject",
