@@ -203,7 +203,11 @@ export function app_reply_choices() {
         emoji_sleep_face(),
     },
     {
-      text: emoji_pray() + " Thanks",
+      text: emoji_pray() + " Thank God",
+      response: emoji_pray() + " Thank the LORD, our God! " + emoji_smile(),
+    },
+    {
+      text: emoji_pray() + " Thank you",
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
     {
