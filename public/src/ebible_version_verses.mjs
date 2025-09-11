@@ -1,6 +1,5 @@
 import { list_filter_starts_with_not_multiple } from "./list_filter_starts_with_not_multiple.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
-import { log } from "./log.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_version_download_path } from "./ebible_version_download_path.mjs";
@@ -29,9 +28,6 @@ export async function ebible_version_verses(bible_folder) {
     return combined;
   }
   let prefixes = list_map(["00", "000"], lambda);
-  log({
-    mapped2,
-  });
   let filtered = list_filter_starts_with(mapped2, book_code);
   let filtered2 = list_filter_starts_with_not_multiple(filtered, prefixes);
   return filtered2;
