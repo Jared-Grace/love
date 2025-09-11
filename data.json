@@ -21995,7 +21995,6 @@
     "lambda4",
     "resolve",
     "reject",
-    "e",
     "lambda2",
     "res",
     "chunks",
@@ -22011,7 +22010,8 @@
     "v3",
     "Buffer",
     "concat",
-    "get"
+    "get",
+    "e"
    ]
   },
   "http_json": {
