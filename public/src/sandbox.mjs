@@ -9,4 +9,5 @@ export async function sandbox() {
   return unique;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
-  return con
+  return contents;
+}
