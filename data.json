@@ -2425,7 +2425,8 @@
    "function_open_dollar_choice",
    "js_calls_to_each",
    "js_code_wrap_brackets",
-   "js_code_brackets_empty"
+   "js_code_brackets_empty",
+   "js_code_dot"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3164,7 +3165,6 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "js_code_dot",
    "app_new"
   ],
   "file_overwrite": [
@@ -23109,7 +23109,7 @@
     "js_code_dot",
     "left",
     "right",
-    "v"
+    "code"
    ]
   }
  },
