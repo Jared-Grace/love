@@ -2874,7 +2874,8 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "http"
+   "http",
+   "list_filter_starts_with_not_multiple"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4173,8 +4174,7 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "app_new",
-   "list_filter_starts_with_not_multiple"
+   "app_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -6012,7 +6012,8 @@
    "js_identifiers_to_names",
    "js_identifier_unique",
    "list_all",
-   "search_generic"
+   "search_generic",
+   "list_filter_starts_with_not_multiple"
   ],
   "string_includes": [
    "function_name_to_path",
@@ -23577,7 +23578,7 @@
   "list_filter_starts_with_not_multiple": {
    "async": false,
    "identifiers": [
-    "list_add",
+    "list_all",
     "string_starts_with_not",
     "marker",
     "list_filter",
@@ -23587,6 +23588,7 @@
     "lambda",
     "item",
     "list",
+    "lambda2",
     "item2",
     "sw",
     "book_code",
