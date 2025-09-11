@@ -3703,7 +3703,8 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse"
+   "html_parse",
+   "sandbox"
   ],
   "separator": [
    "watch",
@@ -4482,7 +4483,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -8672,7 +8674,8 @@
    "string_empty_not_is"
   ],
   "string_prefix_without": [
-   "string_prefix_without"
+   "string_prefix_without",
+   "sandbox"
   ],
   "js_keyword_if": [
    "js_dollar_i",
@@ -12533,6 +12536,9 @@
   ],
   "html_parse_find_a_href_starts_with": [
    "ebible_chapters",
+   "sandbox"
+  ],
+  "prefix2": [
    "sandbox"
   ]
  },
@@ -19433,6 +19439,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_prefix_without",
     "html_parse_find_a_href_starts_with",
     "html_parse",
     "http_local_text",
@@ -19445,6 +19452,9 @@
     "root",
     "prefix",
     "filtered",
+    "result",
+    "s",
+    "prefix2",
     "contents"
    ],
    "async": true
