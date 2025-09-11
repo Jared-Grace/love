@@ -11,8 +11,8 @@ export async function sandbox() {
   let { d, root } = await html_parse(text);
   let list = html_parse_find_a_href_starts_with(root, d, "details.php?id=");
   let mapped = list_map_prefix_without(list, "details.php?id=");
-  let unique = list_unique(list2);
-  return mapped;
+  let unique = list_unique(mapped);
+  return unique;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
   return contents;
