@@ -4420,7 +4420,8 @@
    "string_suffix_without",
    "string_prefix_without",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "string_take"
   ],
   "string_size": [
    "string_suffix_without",
@@ -5392,7 +5393,8 @@
    "js_dollar_a",
    "js_dollar_s",
    "js_dollar_a_generic",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "string_take"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -11083,7 +11085,8 @@
   ],
   "taken": [
    "list_take",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "string_take"
   ],
   "app_replace_rule_parse": [
    "app_replace_rule_set",
@@ -12409,7 +12412,8 @@
    "ebible_version_books_testament"
   ],
   "href": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "string_take"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -12429,7 +12433,8 @@
    "ebible_version_books_testament"
   ],
   "string_take": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "string_take"
   ]
  },
  "functions": {
@@ -23413,6 +23418,16 @@
     "bible_folder",
     "class_old",
     "mapped"
+   ]
+  },
+  "string_take": {
+   "async": false,
+   "identifiers": [
+    "string_slice",
+    "string_take",
+    "href",
+    "count",
+    "taken"
    ]
   }
  },
