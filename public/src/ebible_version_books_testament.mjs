@@ -1,3 +1,4 @@
+import { string_slice } from "./string_slice.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_href } from "./html_parse_href.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
@@ -18,7 +19,8 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   function lambda(item) {
     let text = html_parse_text(d, item);
     let href = html_parse_href(d, item);
-    string_take;
+    let v2 = string_slice(s, a, b);
+    book_code;
     let v = {
       text,
       href,
