@@ -12364,8 +12364,7 @@
   ],
   "html_parse_find": [
    "html_parse_find",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "selector": [
    "html_parse_find",
@@ -12456,7 +12455,8 @@
    "ebible_version_verses"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23311,6 +23311,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_find_list_to",
     "ebible_version_books",
     "html_parse_read",
     "path_join",
@@ -23319,7 +23320,6 @@
     "list_first",
     "marker",
     "folder_read",
-    "html_parse_find",
     "ebible_version_verses",
     "bible_folder",
     "file_path",
