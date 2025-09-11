@@ -9064,7 +9064,8 @@
    "list_filter",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -12530,7 +12531,8 @@
    "ebible_version_verses"
   ],
   "html_parse_find_a_href_starts_with": [
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ]
  },
  "functions": {
@@ -19430,6 +19432,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "html_parse_find_a_href_starts_with",
     "html_parse",
     "http_local_text",
     "marker",
@@ -19439,6 +19442,7 @@
     "text",
     "d",
     "root",
+    "filtered",
     "contents"
    ],
    "async": true
