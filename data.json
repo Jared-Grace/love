@@ -1953,8 +1953,7 @@
    "js_expand_generic",
    "marker_rename",
    "js_calls_to_each",
-   "js_let_add",
-   "ebible_version_verses"
+   "js_let_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23381,7 +23380,6 @@
    "identifiers": [
     "list_filter_starts_with_not_multiple",
     "list_filter_starts_with",
-    "log",
     "list_map",
     "list_map_property",
     "ebible_version_download_path",
