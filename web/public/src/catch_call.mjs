@@ -6,6 +6,7 @@ export function catch_call(reject, lambda) {
     try {
       log(1);
       result = lambda(...arguments);
+      log(3);
     } catch (e) {
       log(2);
       reject(e);
