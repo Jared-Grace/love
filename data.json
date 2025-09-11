@@ -9727,8 +9727,7 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join",
-   "ebible_version_verses"
+   "path_join"
   ],
   "then": [
    "promise_is"
@@ -23324,8 +23323,7 @@
     "first",
     "book_code",
     "chapters_name",
-    "joined",
-    "list_of_segments"
+    "joined"
    ]
   },
   "html_parse_find": {
