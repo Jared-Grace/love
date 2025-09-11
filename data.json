@@ -1907,7 +1907,6 @@
   "s http",
   "n unzip",
   "p",
-  "ebible_version_download engbsb",
   "s app",
   "o an",
   "s reply",
@@ -1918,7 +1917,8 @@
   "s body",
   "s call",
   "s bible",
-  "n ebible_version_verses"
+  "n ebible_version_verses",
+  "ebible_version_download engbsb"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
