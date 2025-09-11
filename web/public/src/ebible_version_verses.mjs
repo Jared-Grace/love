@@ -7,7 +7,7 @@ export async function ebible_version_verses(bible_folder) {
   const n = ebible_class_new();
   let o = ebible_class_old();
   let classes = list_join_comma_space([o, n]);
-  let mapped = await ebible_version_books_testament(bible_folder, classes);
+  let books = await ebible_version_books_testament(bible_folder, classes);
   marker("1");
-  return mapped;
+  return books;
 }
