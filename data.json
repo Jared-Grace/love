@@ -2240,7 +2240,8 @@
    "function_parse_strict",
    "http_json",
    "js_calls_to_each",
-   "app_new"
+   "app_new",
+   "html_parse_read"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -3413,8 +3414,7 @@
    "http_local_file_name",
    "http_firebase_file_path",
    "ebible_version_books_testament",
-   "ebible_version_verses",
-   "html_parse_read"
+   "ebible_version_verses"
   ],
   "watcher": [
    "watch"
@@ -3774,8 +3774,7 @@
    "html_parse",
    "html_parse_text",
    "html_parse_href",
-   "ebible_version_books_testament",
-   "html_parse_read"
+   "ebible_version_books_testament"
   ],
   "data": [
    "data_all",
@@ -3816,7 +3815,8 @@
    "unzip",
    "ebible_version_download",
    "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_read"
   ],
   "object_property_get": [
    "chalk_color",
@@ -11070,8 +11070,7 @@
    "app_reply_main",
    "html_parse_find",
    "html_parse",
-   "ebible_version_books_testament",
-   "html_parse_read"
+   "ebible_version_books_testament"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -23470,10 +23469,9 @@
     "html_parse",
     "file_read",
     "html_parse_read",
+    "file_path",
     "contents",
-    "joined",
-    "d",
-    "root"
+    "parsed"
    ]
   }
  },
