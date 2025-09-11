@@ -12252,7 +12252,8 @@
    "ebible_version_download"
   ],
   "bible_folder": [
-   "ebible_version_download"
+   "ebible_version_download",
+   "ebible_version_verses"
   ],
   "unzip": [
    "unzip",
@@ -23134,7 +23135,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "ebible_version_verses"
+    "ebible_version_verses",
+    "bible_folder"
    ]
   }
  },
