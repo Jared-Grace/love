@@ -24,27 +24,29 @@ export async function http(url) {
   }
   let buffer = await new Promise(function lambda4(resolve, reject) {
     try {
-    } catch (e) {}
-    function lambda2(res) {
-      const chunks = [];
-      function lambda(chunk) {
-        let v2 = chunks.push(chunk);
-        return v2;
+      function lambda2(res) {
+        const chunks = [];
+        function lambda(chunk) {
+          let v2 = chunks.push(chunk);
+          return v2;
+        }
+        res.on("data", lambda);
+        function lambda3() {
+          const { statusCode } = res;
+          const d = statusCode / 100;
+          const rounded = round(d);
+          assert_json(rounded === 2, {
+            url,
+          });
+          let v3 = Buffer.concat(chunks);
+          resolve(v3);
+        }
+        res.on("end", lambda3);
       }
-      res.on("data", lambda);
-      function lambda3() {
-        const { statusCode } = res;
-        const d = statusCode / 100;
-        const rounded = round(d);
-        assert_json(rounded === 2, {
-          url,
-        });
-        let v3 = Buffer.concat(chunks);
-        resolve(v3);
-      }
-      res.on("end", lambda3);
+      h.get(url, lambda2).on("error", reject);
+    } catch (e) {
+      reject(e);
     }
-    h.get(url, lambda2).on("error", reject);
   });
   return buffer;
 }
