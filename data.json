@@ -1913,7 +1913,8 @@
   "ebible_version_download engbsb",
   "s app",
   "o an",
-  "s reply"
+  "s reply",
+  "s js,dec"
  ],
  "marker_current": "1",
  "function_current": "app_new",
