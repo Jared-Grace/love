@@ -860,7 +860,6 @@
   "fc fs,t",
   "de fs_t",
   "s fil",
-  "s sand",
   "lmp",
   "a lmp list_map_property",
   "s unalias",
@@ -1922,7 +1921,8 @@
   "ebible_version_verses engbsb",
   "a fir file_read",
   "as file",
-  "ps"
+  "ps",
+  "s sand"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
