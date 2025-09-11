@@ -19,7 +19,8 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   function lambda(item) {
     let text = html_parse_text(d, item);
     let href = html_parse_href(d, item);
-    let v2 = string_slice(s, a, b);
+    let count = 3;
+    let taken = string_slice(href, 0, count);
     book_code;
     let v = {
       text,
