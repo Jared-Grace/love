@@ -13,7 +13,7 @@ export async function ebible_version_books_testament(bible_folder, class_old) {
   let contents = await file_read(joined);
   let { d, root } = await html_parse(contents);
   let bl = html_parse_find(root, ".bookList");
-  let query = html_parse_find(bl, "." + class_old);
+  let query = html_parse_find(bl, class_old);
   let list = html_parse_list_to(query);
   function lambda(item) {
     let text = html_parse_text(d, item);
