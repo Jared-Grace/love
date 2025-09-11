@@ -3179,7 +3179,8 @@
    "file_read_buffer",
    "sleep",
    "app_new",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "html_parse"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3284,7 +3285,8 @@
    "watch",
    "chalk_color",
    "import_install",
-   "unzip"
+   "unzip",
+   "html_parse"
   ],
   "command_line": [
    "command_line",
@@ -3755,7 +3757,8 @@
    "date_iso_to",
    "function_aliases_restore",
    "js_calls_to_each",
-   "http"
+   "http",
+   "html_parse"
   ],
   "data": [
    "data_all",
@@ -5586,7 +5589,8 @@
    "file_write_buffer",
    "file_read",
    "ebible_version_verses",
-   "sandbox"
+   "sandbox",
+   "html_parse"
   ],
   "writeFile": [
    "file_overwrite",
@@ -11030,7 +11034,8 @@
    "app_replace_settings",
    "app_reply_main",
    "ebible_version_verses",
-   "html_parse_find"
+   "html_parse_find",
+   "html_parse"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12312,7 +12317,8 @@
    "sandbox"
   ],
   "html_parse": [
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse"
   ],
   "html_parse_find": [
    "ebible_version_verses",
@@ -12345,6 +12351,12 @@
   ],
   "$": [
    "html_parse_list_text_to"
+  ],
+  "cheerio": [
+   "html_parse"
+  ],
+  "load": [
+   "html_parse"
   ]
  },
  "functions": {
@@ -23246,6 +23258,19 @@
     "v2",
     "map",
     "get"
+   ]
+  },
+  "html_parse": {
+   "async": true,
+   "identifiers": [
+    "import_install",
+    "html_parse",
+    "contents",
+    "cheerio",
+    "d",
+    "load",
+    "root",
+    "v"
    ]
   }
  },
