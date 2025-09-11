@@ -1937,7 +1937,7 @@
   "c list_filter_starts_with list_filter_starts_with_not"
  ],
  "marker_current": "1",
- "function_current": "html_parse_href_text_map",
+ "function_current": "list_filter_starts_with_not",
  "terminal": false,
  "identifiers": {
   "log": [
