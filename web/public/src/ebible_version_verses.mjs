@@ -25,5 +25,5 @@ export async function ebible_version_verses(bible_folder) {
     return sw;
   }
   let filtered = list_filter(mapped, lambda);
-  return mapped;
+  return filtered;
 }
