@@ -23230,6 +23230,7 @@
     "files",
     "joined",
     "contents",
+    "d",
     "root",
     "bl",
     "query",
@@ -23237,7 +23238,6 @@
     "lambda",
     "item",
     "v",
-    "d",
     "mapped"
    ]
   },
