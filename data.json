@@ -2531,8 +2531,7 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply",
-   "ebible_version_verses"
+   "app_reply"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3721,7 +3720,8 @@
    "file_read",
    "file_read_json",
    "function_format",
-   "function_read"
+   "function_read",
+   "ebible_version_verses"
   ],
   "js_parse": [
    "file_js_parse",
@@ -7171,8 +7171,7 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read",
-   "ebible_version_verses"
+   "function_read"
   ],
   "function_rename": [
    "function_rename",
@@ -12288,6 +12287,9 @@
    "app_new"
   ],
   "ebible_version_verses": [
+   "ebible_version_verses"
+  ],
+  "file_path2": [
    "ebible_version_verses"
   ]
  },
@@ -23142,16 +23144,16 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "function_read",
     "folder_read",
     "ebible_version_download",
     "marker",
+    "file_read",
     "ebible_version_verses",
     "bible_folder",
     "file_path",
     "files",
     "v",
-    "f_name"
+    "file_path2"
    ]
   }
  },
