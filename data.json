@@ -8438,8 +8438,7 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account",
-   "ebible_version_verses"
+   "firebase_service_account"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -23365,7 +23364,6 @@
     "item",
     "sw",
     "s",
-    "prefix",
     "filtered"
    ]
   },
