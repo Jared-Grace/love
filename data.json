@@ -4301,7 +4301,6 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "http",
    "ebible_versions_download"
   ],
   "value2": [
@@ -12562,6 +12561,12 @@
   ],
   "catch_call": [
    "catch_call",
+   "http"
+  ],
+  "on_data": [
+   "http"
+  ],
+  "on_end": [
    "http"
   ]
  },
@@ -22011,12 +22016,13 @@
     "lambda2",
     "res",
     "chunks",
+    "on_data",
     "chunk",
     "v2",
     "push",
     "result",
     "on",
-    "lambda3",
+    "on_end",
     "statusCode",
     "d",
     "rounded",
