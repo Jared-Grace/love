@@ -3173,7 +3173,8 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new"
+   "app_new",
+   "html_parse_find"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11016,7 +11017,8 @@
    "app_replace_main",
    "app_replace_settings",
    "app_reply_main",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_find"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12300,7 +12302,14 @@
    "ebible_version_verses"
   ],
   "html_parse_find": [
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_find"
+  ],
+  "selector": [
+   "html_parse_find"
+  ],
+  "find": [
+   "html_parse_find"
   ]
  },
  "functions": {
@@ -23168,6 +23177,16 @@
     "joined",
     "contents",
     "root"
+   ]
+  },
+  "html_parse_find": {
+   "async": false,
+   "identifiers": [
+    "html_parse_find",
+    "root",
+    "selector",
+    "v",
+    "find"
    ]
   }
  },
