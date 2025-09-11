@@ -27,6 +27,6 @@ export async function ebible_version_verses(bible_folder) {
     return combined;
   }
   let prefixes = list_map(["00", "000"], lambda);
-  let filtered = list_filter_starts_with_not(mapped2, book_code);
+  let filtered = list_filter_starts_with_not(mapped2, prefixes);
   return filtered;
 }
