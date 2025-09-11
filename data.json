@@ -8980,7 +8980,6 @@
   ],
   "both": [
    "js_imports_declarations",
-   "ebible_version_books_testament",
    "html_parse_href_text_map"
   ],
   "imports_self": [
@@ -12465,11 +12464,11 @@
    "ebible_version_verses"
   ],
   "html_parse_href_text": [
-   "ebible_version_books_testament",
    "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23423,7 +23422,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
-    "html_parse_href_text",
+    "html_parse_href_text_map",
     "object_merge",
     "html_parse_find_list_to",
     "html_parse_read",
@@ -23440,10 +23439,9 @@
     "root",
     "bl",
     "list",
+    "mapped",
     "lambda",
     "item",
-    "both",
-    "mapped",
     "to",
     "book_code",
     "taken",
