@@ -1704,7 +1704,6 @@
   "s scren",
   "s screen",
   "js_dollar_new",
-  "s string",
   "o nj",
   "s blody",
   "r js_declaration_single_block_blody js_declaration_single_block_body",
@@ -1928,7 +1927,8 @@
   "c html_parse_text html_parse_href",
   "c ebible_version_books_testament_old ebible_version_books_testament_new",
   "sb",
-  "s take"
+  "s take",
+  "s string"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_new",
