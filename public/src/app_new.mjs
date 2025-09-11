@@ -15,8 +15,8 @@ export async function app_new(name) {
   async function lambda(ast) {
     const v = "f_name";
     let code = js_code_dot(combined, "name");
-    let expression = js_parse_expression(code_expression);
-    let assign = js_declare(v, code);
+    let expression = js_parse_expression(code);
+    let assign = js_declare(v, expression);
   }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
