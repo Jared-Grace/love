@@ -3669,8 +3669,7 @@
    "js_dollar_choice_arguments",
    "http_firebase",
    "http_local",
-   "html_parse_find",
-   "ebible_version_verses"
+   "html_parse_find"
   ],
   "separator": [
    "watch",
@@ -12315,6 +12314,9 @@
    "html_parse_find"
   ],
   "bl": [
+   "ebible_version_verses"
+  ],
+  "query": [
    "ebible_version_verses"
   ]
  },
@@ -23184,7 +23186,7 @@
     "contents",
     "root",
     "bl",
-    "result",
+    "query",
     "v",
     "get"
    ]
