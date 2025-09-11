@@ -1622,7 +1622,6 @@
   "n firebase_deploy_function",
   "u for",
   "ac for flr",
-  "s folder",
   "u ssw",
   "a ssw string_starts_with",
   "s find",
@@ -1918,7 +1917,8 @@
   "s call",
   "s bible",
   "n ebible_version_verses",
-  "ebible_version_download engbsb"
+  "ebible_version_download engbsb",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
