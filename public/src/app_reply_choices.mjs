@@ -115,6 +115,19 @@ export function app_reply_choices() {
         " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine.",
     },
     {
+      text: emoji_ok() + "How day",
+      response:
+        emoji_ok() +
+        " The day of the " +
+        string_the_servant_of_god_is() +
+        " doing good " +
+        emoji_100() +
+        " through the grace of God, because " +
+        emoji_book_open() +
+        " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However please pray that the servant of God will stop hearing demons" +
+        emoji_pray(),
+    },
+    {
       text: emoji_pray() + " How family",
       response: emoji_pray() + "Please pray for my family",
     },
