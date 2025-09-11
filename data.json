@@ -12367,8 +12367,7 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "find": [
    "html_parse_find"
@@ -12456,9 +12455,6 @@
    "ebible_version_verses"
   ],
   "ebible_version_books": [
-   "ebible_version_verses"
-  ],
-  "root2": [
    "ebible_version_verses"
   ]
  },
@@ -23333,9 +23329,7 @@
     "joined",
     "d",
     "root",
-    "result",
-    "root2",
-    "selector"
+    "result"
    ]
   },
   "html_parse_find": {
