@@ -1487,7 +1487,6 @@
   "md 2",
   "mb $r,fr",
   "ag",
-  "s code",
   "n app_html_open",
   "s param,new",
   "s param,add",
@@ -1914,7 +1913,8 @@
   "s app",
   "o an",
   "s reply",
-  "s js,dec"
+  "s js,dec",
+  "s code"
  ],
  "marker_current": "1",
  "function_current": "app_new",
