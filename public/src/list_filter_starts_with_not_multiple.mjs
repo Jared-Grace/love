@@ -9,7 +9,8 @@ export function list_filter_starts_with_not_multiple(mapped, prefixes) {
       let sw = string_starts_with_not(item, book_code);
       return sw;
     }
-    return list_all(prefixes, lambda2);
+    let v = list_all(prefixes, lambda2);
+    return v;
   }
   let filtered = list_filter(mapped, lambda);
   return filtered;
