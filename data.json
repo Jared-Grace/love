@@ -1923,9 +1923,9 @@
   "s sand",
   "fd ebible_version_verses",
   "p",
-  "sb",
   "n html_parse_list_text_to",
-  "de html_parse_list_text_to"
+  "de html_parse_list_text_to",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "html_parse_list_text_to",
