@@ -2189,7 +2189,8 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "http_local_text",
-   "ebible_version_download"
+   "ebible_version_download",
+   "js_code_dot"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12256,6 +12257,9 @@
   ],
   "travel_pray": [
    "app_reply_choices"
+  ],
+  "js_code_dot": [
+   "js_code_dot"
   ]
  },
  "functions": {
@@ -23084,6 +23088,13 @@
     "default",
     "zip",
     "extractAllTo"
+   ]
+  },
+  "js_code_dot": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_code_dot"
    ]
   }
  },
