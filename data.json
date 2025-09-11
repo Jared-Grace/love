@@ -173,7 +173,8 @@
   "lsg": "list_single",
   "ii": "import_install",
   "jt": "json_to",
-  "fir": "file_read"
+  "fir": "file_read",
+  "lun": "list_unique"
  },
  "prompts": [
   "f function_run_prompt",
@@ -1937,7 +1938,8 @@
   "s prefix",
   "as uni",
   "as unique",
-  "s unique"
+  "s unique",
+  "a lun list_unique"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
