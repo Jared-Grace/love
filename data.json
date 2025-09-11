@@ -2214,7 +2214,8 @@
    "html_parse_list_text_to",
    "html_parse_href",
    "ebible_version_books_testament_new",
-   "sandbox"
+   "sandbox",
+   "list_filter_starts_with_not"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23530,6 +23531,7 @@
   "list_filter_starts_with_not": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_filter",
     "string_starts_with",
     "list_filter_starts_with_not",
