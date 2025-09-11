@@ -208,7 +208,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Travel ask",
-      response: prayer_start(),
+      response: emoji_pray() + 'No money for travel',
     },
     travel_pray,
     {
