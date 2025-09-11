@@ -4453,8 +4453,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "ebible_version_books_testament"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -4536,8 +4535,7 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each",
-   "ebible_version_books_testament"
+   "js_calls_to_each"
   ],
   "without": [
    "string_suffix_without",
@@ -4705,8 +4703,7 @@
    "js_statement_call_get",
    "list_all",
    "http",
-   "html_parse_list_text_to",
-   "ebible_version_books_testament"
+   "html_parse_list_text_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -4816,8 +4813,7 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to",
-   "ebible_version_books_testament"
+   "buffer_string_to"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5396,7 +5392,8 @@
    "each_range_async",
    "js_dollar_a",
    "js_dollar_s",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "ebible_version_books_testament"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -11086,7 +11083,8 @@
    "app_replace_rule_set"
   ],
   "taken": [
-   "list_take"
+   "list_take",
+   "ebible_version_books_testament"
   ],
   "app_replace_rule_parse": [
    "app_replace_rule_set",
@@ -23397,10 +23395,8 @@
     "item",
     "text",
     "href",
-    "v2",
-    "s",
-    "a",
-    "b",
+    "count",
+    "taken",
     "book_code",
     "v",
     "mapped"
