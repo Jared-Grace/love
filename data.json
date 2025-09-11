@@ -12299,6 +12299,9 @@
   ],
   "cheerio": [
    "ebible_version_verses"
+  ],
+  "load": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23165,7 +23168,8 @@
     "joined",
     "contents",
     "cheerio",
-    "d"
+    "d",
+    "load"
    ]
   }
  },
