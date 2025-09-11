@@ -2207,8 +2207,7 @@
    "ebible_version_verses",
    "html_parse_list_text_to",
    "html_parse_href",
-   "ebible_version_books_testament_new",
-   "html_parse_read"
+   "ebible_version_books_testament_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3414,7 +3413,8 @@
    "http_local_file_name",
    "http_firebase_file_path",
    "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_read"
   ],
   "watcher": [
    "watch"
@@ -3744,7 +3744,8 @@
    "file_read_json",
    "function_format",
    "function_read",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_read"
   ],
   "js_parse": [
    "file_js_parse",
@@ -3773,7 +3774,8 @@
    "html_parse",
    "html_parse_text",
    "html_parse_href",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_read"
   ],
   "data": [
    "data_all",
@@ -5618,7 +5620,8 @@
    "file_read",
    "sandbox",
    "html_parse",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_read"
   ],
   "writeFile": [
    "file_overwrite",
@@ -11067,7 +11070,8 @@
    "app_reply_main",
    "html_parse_find",
    "html_parse",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_read"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12356,7 +12360,8 @@
   ],
   "html_parse": [
    "html_parse",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_read"
   ],
   "html_parse_find": [
    "html_parse_find",
@@ -23460,10 +23465,15 @@
    ]
   },
   "html_parse_read": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "html_parse_read"
+    "html_parse",
+    "file_read",
+    "html_parse_read",
+    "contents",
+    "joined",
+    "d",
+    "root"
    ]
   }
  },
