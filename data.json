@@ -3810,7 +3810,8 @@
    "file_overwrite_buffer",
    "unzip",
    "ebible_version_download",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4566,7 +4567,8 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "ebible_version_verses"
   ],
   "function_name_extension": [
    "functions_names",
@@ -12309,7 +12311,8 @@
   ],
   "ebible_version_download": [
    "ebible_version_download",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -23293,6 +23296,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "ebible_version_download",
     "object_property_get",
     "list_first",
     "ebible_class_old",
@@ -23300,8 +23304,10 @@
     "ebible_version_books_testament",
     "ebible_class_new",
     "marker",
+    "folder_read",
     "ebible_version_verses",
     "bible_folder",
+    "file_path",
     "n",
     "o",
     "classes",
