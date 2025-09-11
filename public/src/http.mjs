@@ -23,6 +23,8 @@ export async function http(url) {
     h = await import("https");
   }
   let buffer = await new Promise(function lambda4(resolve, reject) {
+    try {
+    } catch (e) {}
     function lambda2(res) {
       const chunks = [];
       function lambda(chunk) {
