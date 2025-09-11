@@ -11,7 +11,7 @@ export async function ebible_version_verses(bible_folder) {
   let joined = path_join([file_path, "index.htm"]);
   let contents = await file_read(joined);
   let root = await html_parse(contents);
-  html_parse_find(root, "");
+  html_parse_find(root, ".bookList");
   return root;
   marker("1");
 }
