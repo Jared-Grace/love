@@ -18,5 +18,5 @@ export async function ebible_version_verses(bible_folder) {
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
   let chapters_name = book_code + ".htm";
-  return book_code;
+  return chapters_name;
 }
