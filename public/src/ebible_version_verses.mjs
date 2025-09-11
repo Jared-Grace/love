@@ -1,4 +1,3 @@
-import { list_filter_property } from "./list_filter_property.mjs";
 import { ebible_version_download_path } from "./ebible_version_download_path.mjs";
 import { html_parse_href_text_map } from "./html_parse_href_text_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
@@ -19,6 +18,6 @@ export async function ebible_version_verses(bible_folder) {
   let { d, root } = await html_parse_read(joined);
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
-  let result = list_filter_property(list2, property_name, property_value);
+  let first2 = list_first(list2);
   return mapped;
 }
