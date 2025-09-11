@@ -22,7 +22,8 @@ export async function ebible_version_verses(bible_folder) {
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
   let mapped2 = list_map_property(mapped, "href");
-  let mapped3 = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped3 = list_map(list2, lambda);
   let filtered = list_filter_starts_with_not(mapped2, book_code);
   return filtered;
 }
