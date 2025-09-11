@@ -2426,7 +2426,8 @@
    "js_calls_to_each",
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
-   "js_code_dot"
+   "js_code_dot",
+   "app_new"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3164,8 +3165,7 @@
    "app_reply_choices",
    "kjv",
    "file_read_buffer",
-   "sleep",
-   "app_new"
+   "sleep"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12268,6 +12268,9 @@
   "js_code_dot": [
    "js_code_dot",
    "app_new"
+  ],
+  "newLocal": [
+   "app_new"
   ]
  },
  "functions": {
@@ -20567,9 +20570,10 @@
     "combined",
     "lambda",
     "ast",
-    "v",
+    "code",
     "left",
     "right",
+    "newLocal",
     "assign",
     "init",
     "output"
