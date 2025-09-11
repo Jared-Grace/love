@@ -1915,7 +1915,8 @@
   "s reply",
   "s js,dec",
   "s code",
-  "n js_code_dot"
+  "n js_code_dot",
+  "s dot"
  ],
  "marker_current": "1",
  "function_current": "js_code_dot",
