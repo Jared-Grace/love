@@ -1,3 +1,4 @@
+import { js_declare } from "./js_declare.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { app_name_main } from "./app_name_main.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
@@ -9,7 +10,9 @@ export async function app_new(name) {
   let a_name = app_name_prefixed(name);
   let combined = app_name_main(name);
   await function_new(a_name);
-  async function lambda(ast) {}
+  async function lambda(ast) {
+    let assign = js_declare(name2, init);
+  }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
   await html_new(name);
