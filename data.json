@@ -2763,8 +2763,7 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "app_new",
-   "ebible_version_verses"
+   "app_new"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3948,8 +3947,7 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main",
-   "ebible_version_verses"
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4910,8 +4908,7 @@
    "http_json",
    "app_reply_choices",
    "app_reply_main",
-   "http_local_text",
-   "ebible_version_verses"
+   "http_local_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -23201,9 +23198,6 @@
     "bl",
     "query",
     "list",
-    "lambda",
-    "item",
-    "text",
     "mapped"
    ]
   },
