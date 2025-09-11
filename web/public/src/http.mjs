@@ -1,3 +1,4 @@
+import { promise_wrap } from "./promise_wrap.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { sleep } from "./sleep.mjs";
 import { round } from "./round.mjs";
@@ -22,31 +23,28 @@ export async function http(url) {
   if (sw) {
     h = await import("https");
   }
-  let buffer = await new Promise(function lambda4(resolve, reject) {
-    try {
-      function lambda2(res) {
-        const chunks = [];
-        function lambda(chunk) {
-          let v2 = chunks.push(chunk);
-          return v2;
-        }
-        res.on("data", lambda);
-        function lambda3() {
-          const { statusCode } = res;
-          const d = statusCode / 100;
-          const rounded = round(d);
-          assert_json(rounded === 2, {
-            url,
-          });
-          let v3 = Buffer.concat(chunks);
-          resolve(v3);
-        }
-        res.on("end", lambda3);
+  let buffer = await promise_wrap(lambda);
+  function lambda(resolve, reject) {
+    function lambda2(res) {
+      const chunks = [];
+      function lambda(chunk) {
+        let v2 = chunks.push(chunk);
+        return v2;
       }
-      h.get(url, lambda2).on("error", reject);
-    } catch (e) {
-      reject(e);
+      res.on("data", lambda);
+      function lambda3() {
+        const { statusCode } = res;
+        const d = statusCode / 100;
+        const rounded = round(d);
+        assert_json(rounded === 2, {
+          url,
+        });
+        let v3 = Buffer.concat(chunks);
+        resolve(v3);
+      }
+      res.on("end", lambda3);
     }
-  });
+    h.get(url, lambda2).on("error", reject);
+  }
   return buffer;
 }
