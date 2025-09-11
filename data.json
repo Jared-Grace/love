@@ -3704,7 +3704,8 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse"
+   "html_parse",
+   "sandbox"
   ],
   "separator": [
    "watch",
@@ -12399,7 +12400,8 @@
   ],
   "html_parse": [
    "html_parse",
-   "html_parse_read"
+   "html_parse_read",
+   "sandbox"
   ],
   "html_parse_find": [
    "html_parse_find",
@@ -12534,6 +12536,9 @@
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses"
+  ],
+  "contents2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -19433,12 +19438,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "html_parse",
     "http_local_text",
     "marker",
     "ebible_version_verses",
     "sandbox",
     "url",
     "text",
+    "result",
+    "contents2",
     "contents"
    ],
    "async": true
