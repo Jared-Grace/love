@@ -28,13 +28,13 @@ export async function http(url) {
   function lambda(resolve, reject) {
     function lambda2(res) {
       const chunks = [];
-      function lambda(chunk) {
+      function on_data(chunk) {
         let v2 = chunks.push(chunk);
         return v2;
       }
-      let result = catch_call(reject, lambda);
+      let result = catch_call(reject, on_data);
       res.on("data", result);
-      function lambda3() {
+      function on_end() {
         const { statusCode } = res;
         const d = statusCode / 100;
         const rounded = round(d);
@@ -44,7 +44,7 @@ export async function http(url) {
         let v3 = Buffer.concat(chunks);
         resolve(v3);
       }
-      let result2 = catch_call(reject, lambda3);
+      let result2 = catch_call(reject, on_end);
       res.on("end", result2);
     }
     h.get(url, lambda2).on("error", reject);
