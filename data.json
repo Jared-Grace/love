@@ -4910,7 +4910,8 @@
    "http_json",
    "app_reply_choices",
    "app_reply_main",
-   "http_local_text"
+   "http_local_text",
+   "ebible_version_verses"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -10524,8 +10525,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_version_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23199,8 +23199,8 @@
     "list",
     "lambda",
     "item",
-    "mapped",
-    "list2"
+    "text",
+    "mapped"
    ]
   },
   "html_parse_find": {
