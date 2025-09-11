@@ -2526,8 +2526,7 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply",
-   "app_new"
+   "app_reply"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -11389,7 +11388,8 @@
   ],
   "firebase_storage_function_run": [
    "app_replace",
-   "app_reply"
+   "app_reply",
+   "app_new"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -20562,6 +20562,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "firebase_storage_function_run",
     "js_call_new_expression",
     "list_add",
     "js_declaration_single_block_body",
@@ -20586,7 +20587,6 @@
     "assign",
     "body_block",
     "expression2",
-    "f_name",
     "ast2",
     "output"
    ]
