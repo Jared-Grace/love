@@ -7,7 +7,8 @@ export async function sandbox() {
   let url = "https://ebible.org/download.php";
   let text = await http_local_text(url);
   let { d, root } = await html_parse(text);
-  let filtered = html_parse_find_a_href_starts_with(root, d, "details.php?id=");
+  const prefix = "details.php?id=";
+  let filtered = html_parse_find_a_href_starts_with(root, d, prefix);
   return filtered;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
