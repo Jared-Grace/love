@@ -1928,10 +1928,11 @@
   "c ebible_version_books_testament_old ebible_version_books_testament_new",
   "s take",
   "s string",
-  "sb"
+  "sb",
+  "n html_parse_read"
  ],
  "marker_current": "1",
- "function_current": "ebible_version_books_testament_new",
+ "function_current": "html_parse_read",
  "terminal": false,
  "identifiers": {
   "log": [
