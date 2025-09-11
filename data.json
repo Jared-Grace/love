@@ -4486,8 +4486,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "sandbox"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -19458,7 +19457,6 @@
     "lambda",
     "item",
     "result",
-    "s",
     "mapped",
     "list",
     "contents"
