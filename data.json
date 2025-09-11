@@ -1874,7 +1874,6 @@
   "s file,json",
   "u jt",
   "a jt json_to",
-  "ps",
   "c http_firebase http_local",
   "n http_local_file_name",
   "r http_firebase_file_name http_firebase_file_path",
@@ -1922,7 +1921,8 @@
   "s folder",
   "ebible_version_verses engbsb",
   "a fir file_read",
-  "as file"
+  "as file",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
