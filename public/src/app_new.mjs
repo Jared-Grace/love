@@ -11,7 +11,7 @@ export async function app_new(name) {
   let combined = app_name_main(name);
   await function_new(a_name);
   async function lambda(ast) {
-    let assign = js_declare(name2, init);
+    let assign = js_declare("f_name", init);
   }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
