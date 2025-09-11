@@ -1912,8 +1912,8 @@
   "p",
   "ebible_version_download engbsb",
   "s app",
-  "s reply",
-  "o an"
+  "o an",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "app_new",
