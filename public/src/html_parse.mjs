@@ -3,9 +3,9 @@ export async function html_parse(contents) {
   let cheerio = await import_install("cheerio");
   let d = cheerio.load(contents);
   let root = d("html");
-  let v = {
+  let result = {
     d,
     root,
   };
-  return v;
+  return result;
 }
