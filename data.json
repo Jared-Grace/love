@@ -12353,10 +12353,7 @@
   "attr": [
    "html_parse_href"
   ],
-  "class_old": [
-   "ebible_version_verses"
-  ],
-  "ebible_version_books_testament": [
+  "ebible_version_books_testament_old": [
    "ebible_version_verses"
   ]
  },
@@ -23211,11 +23208,10 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "ebible_version_books_testament",
+    "ebible_version_books_testament_old",
     "marker",
     "ebible_version_verses",
     "bible_folder",
-    "class_old",
     "mapped"
    ]
   },
