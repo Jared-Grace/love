@@ -4946,8 +4946,7 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text",
-   "ebible_version_books_testament"
+   "html_parse_text"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12380,8 +12379,7 @@
    "html_parse_list_text_to"
   ],
   "html_parse_text": [
-   "html_parse_text",
-   "ebible_version_books_testament"
+   "html_parse_text"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -12399,8 +12397,7 @@
    "html_parse"
   ],
   "html_parse_href": [
-   "html_parse_href",
-   "ebible_version_books_testament"
+   "html_parse_href"
   ],
   "attr": [
    "html_parse_href"
@@ -12423,7 +12420,6 @@
    "ebible_version_books_testament"
   ],
   "href": [
-   "ebible_version_books_testament",
    "string_take"
   ],
   "ebible_class_old": [
@@ -12459,6 +12455,9 @@
   "html_parse_find_list_to": [
    "ebible_version_books_testament",
    "ebible_version_verses"
+  ],
+  "html_parse_href_text": [
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23412,12 +23411,11 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "html_parse_href_text",
     "object_merge",
     "html_parse_find_list_to",
     "html_parse_read",
     "list_map",
-    "html_parse_href",
-    "html_parse_text",
     "html_parse_find",
     "path_join",
     "ebible_version_download",
@@ -23432,8 +23430,6 @@
     "list",
     "lambda",
     "item",
-    "text",
-    "href",
     "both",
     "mapped",
     "to",
