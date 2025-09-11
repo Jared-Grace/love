@@ -12307,16 +12307,12 @@
    "html_parse_find"
   ],
   "selector": [
-   "html_parse_find",
-   "ebible_version_verses"
+   "html_parse_find"
   ],
   "find": [
    "html_parse_find"
   ],
   "bl": [
-   "ebible_version_verses"
-  ],
-  "root2": [
    "ebible_version_verses"
   ]
  },
@@ -23186,9 +23182,7 @@
     "contents",
     "root",
     "bl",
-    "result",
-    "root2",
-    "selector"
+    "result"
    ]
   },
   "html_parse_find": {
