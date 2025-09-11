@@ -2963,7 +2963,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "app_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -3935,7 +3936,8 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main"
+   "app_reply_main",
+   "app_new"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4108,7 +4110,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "js_expand_generic",
-   "app_reply_main"
+   "app_reply_main",
+   "app_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -20555,6 +20558,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "list_add",
     "js_declaration_single_block_body",
     "js_parse_expression",
     "js_code_dot",
@@ -20576,6 +20580,8 @@
     "expression",
     "assign",
     "body_block",
+    "list",
+    "item",
     "output"
    ]
   },
