@@ -12469,8 +12469,7 @@
   "book_code": [
    "ebible_version_books_testament",
    "ebible_version_verses",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not"
   ],
   "string_take": [
    "string_take",
@@ -23588,7 +23587,6 @@
     "lambda2",
     "prefix",
     "sw",
-    "book_code",
     "v",
     "filtered"
    ]
