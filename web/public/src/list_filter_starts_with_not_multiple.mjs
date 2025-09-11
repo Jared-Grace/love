@@ -6,7 +6,7 @@ export function list_filter_starts_with_not_multiple(mapped, prefixes) {
   marker("1");
   function lambda(item) {
     function lambda2(prefix) {
-      let sw = string_starts_with_not(item, book_code);
+      let sw = string_starts_with_not(item, prefix);
       return sw;
     }
     let v = list_all(prefixes, lambda2);
