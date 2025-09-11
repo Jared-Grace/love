@@ -1237,7 +1237,6 @@
   "a opd object_property_delete",
   "  let x = null;",
   "dpg identifiers",
-  "s catch",
   "c chalk_green chalk_red",
   "s data,udpate",
   "c fws function_watch_suffix_change",
@@ -1943,7 +1942,8 @@
   "ebible",
   "s ebible",
   "ebible_versions_download",
-  "s try"
+  "s try",
+  "s catch"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
