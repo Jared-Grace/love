@@ -12,7 +12,7 @@ export async function ebible_version_verses(bible_folder) {
   let contents = await file_read(joined);
   let root = await html_parse(contents);
   let bl = html_parse_find(root, ".bookList");
-  let result = html_parse_find(root2, selector);
-  return root;
+  let result = html_parse_find(bl, ".oo");
+  return result;
   marker("1");
 }
