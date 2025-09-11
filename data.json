@@ -2767,7 +2767,8 @@
    "html_on_keydown",
    "http",
    "app_new",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "ebible_version_verses"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3180,7 +3181,8 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "html_parse"
+   "html_parse",
+   "ebible_version_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3758,7 +3760,8 @@
    "function_aliases_restore",
    "js_calls_to_each",
    "http",
-   "html_parse"
+   "html_parse",
+   "ebible_version_verses"
   ],
   "data": [
    "data_all",
@@ -3955,7 +3958,8 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -23230,6 +23234,10 @@
     "bl",
     "query",
     "list",
+    "lambda",
+    "item",
+    "v",
+    "d",
     "mapped"
    ]
   },
