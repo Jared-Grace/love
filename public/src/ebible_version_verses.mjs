@@ -23,8 +23,8 @@ export async function ebible_version_verses(bible_folder) {
   let mapped = html_parse_href_text_map(d, list);
   let mapped2 = list_map_property(mapped, "href");
   function lambda(item) {
-    let v = book_code + item + "";
-    return v;
+    let combined = book_code + item + ".";
+    return combined;
   }
   let mapped3 = list_map(["00", "000"], lambda);
   let filtered = list_filter_starts_with_not(mapped2, book_code);
