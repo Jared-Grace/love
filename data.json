@@ -4930,7 +4930,8 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text"
+   "html_parse_text",
+   "ebible_version_verses"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12371,10 +12372,14 @@
    "html_parse"
   ],
   "html_parse_href": [
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_version_verses"
   ],
   "attr": [
    "html_parse_href"
+  ],
+  "href": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23228,6 +23233,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_href",
     "html_parse_text",
     "list_map",
     "html_parse_list_to",
@@ -23249,6 +23255,8 @@
     "list",
     "lambda",
     "item",
+    "text",
+    "href",
     "v",
     "mapped"
    ]
