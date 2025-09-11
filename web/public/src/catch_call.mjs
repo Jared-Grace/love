@@ -4,10 +4,10 @@ export function catch_call(reject, lambda) {
   let i = function inner() {
     let result = null;
     try {
-      log(message);
+      log(1);
       result = lambda(...arguments);
     } catch (e) {
-      log(message2);
+      log(2);
       reject(e);
     }
     marker("1");
