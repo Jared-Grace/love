@@ -5388,8 +5388,7 @@
    "add_1",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "app_new"
+   "js_code_dot"
   ],
   "right": [
    "equal",
@@ -8440,8 +8439,7 @@
    "js_dollar_s",
    "marker_assign_replace",
    "js_declare_single_init",
-   "js_assign_combine",
-   "app_new"
+   "js_assign_combine"
   ],
   "assign_code": [
    "js_declare"
@@ -20568,12 +20566,10 @@
     "combined",
     "lambda",
     "ast",
-    "code",
-    "left",
-    "right",
     "v",
+    "code",
+    "right",
     "assign",
-    "init",
     "output"
    ]
   },
