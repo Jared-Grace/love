@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
 import { string_take } from "./string_take.mjs";
@@ -16,6 +17,15 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   function lambda(item) {
     let text = html_parse_text(d, item);
     let href = html_parse_href(d, item);
+    let v = {
+      text,
+      href,
+    };
+    return v;
+  }
+  let mapped = list_map(list, lambda);
+  function lambda(item) {
+    let href2 = object_property_get(item, "href");
     let taken = string_take(href, 3);
     let v = {
       text,
@@ -24,6 +34,6 @@ export async function ebible_version_books_testament(bible_folder, selector) {
     };
     return v;
   }
-  let mapped = list_map(list, lambda);
-  return mapped;
+  let mapped2 = list_map(mapped, lambda);
+  return mapped2;
 }
