@@ -19,6 +19,6 @@ export async function ebible_version_verses(bible_folder) {
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
   let chapters_name = book_code + ".htm";
-  let joined = path_join(list_of_segments);
-  return chapters_name;
+  let joined = path_join([file_path, chapters_name]);
+  return joined;
 }
