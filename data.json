@@ -1930,7 +1930,7 @@
   "c ebible_version_books_testament_old ebible_version_books_testament_new"
  ],
  "marker_current": "1",
- "function_current": "html_parse_href",
+ "function_current": "ebible_version_books_testament_new",
  "terminal": false,
  "identifiers": {
   "log": [
