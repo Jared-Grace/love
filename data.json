@@ -12283,9 +12283,6 @@
   ],
   "ebible_version_verses": [
    "ebible_version_verses"
-  ],
-  "bible_folder2": [
-   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23143,8 +23140,7 @@
     "marker",
     "ebible_version_verses",
     "bible_folder",
-    "file_path",
-    "bible_folder2"
+    "file_path"
    ]
   }
  },
