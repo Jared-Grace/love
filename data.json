@@ -10771,8 +10771,7 @@
   ],
   "name2": [
    "app_replace_home",
-   "js_assign_combine",
-   "app_new"
+   "js_assign_combine"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -20555,7 +20554,6 @@
     "lambda",
     "ast",
     "assign",
-    "name2",
     "init",
     "output"
    ]
