@@ -12,6 +12,6 @@ export async function ebible_version_verses(bible_folder) {
   let cheerio = await import_install("cheerio");
   let d = cheerio.load(contents);
   let root = d("html");
-  return d;
+  return root;
   marker("1");
 }
