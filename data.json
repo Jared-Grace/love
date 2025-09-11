@@ -3719,7 +3719,8 @@
    "http_local",
    "html_parse_find",
    "html_parse",
-   "catch_call"
+   "catch_call",
+   "http"
   ],
   "separator": [
    "watch",
@@ -9483,7 +9484,8 @@
    "list_join_space",
    "server",
    "tasks_run",
-   "task_new"
+   "task_new",
+   "http"
   ],
   "list_last_is": [
    "list_last_is"
@@ -12559,7 +12561,8 @@
    "http"
   ],
   "catch_call": [
-   "catch_call"
+   "catch_call",
+   "http"
   ]
  },
  "functions": {
@@ -21981,6 +21984,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "catch_call",
     "promise_wrap",
     "integer_random",
     "sleep",
@@ -22010,6 +22014,7 @@
     "chunk",
     "v2",
     "push",
+    "result",
     "on",
     "lambda3",
     "statusCode",
@@ -22018,6 +22023,7 @@
     "v3",
     "Buffer",
     "concat",
+    "result2",
     "get"
    ]
   },
