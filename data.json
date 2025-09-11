@@ -2763,7 +2763,8 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "app_new"
+   "app_new",
+   "ebible_version_verses"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3947,7 +3948,8 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4571,7 +4573,8 @@
    "app_replace_rule_set",
    "functions_transform",
    "js_expand_generic",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_verses"
   ],
   "functions_names": [
    "functions_names",
@@ -5917,7 +5920,8 @@
    "js_visit_children_get",
    "list_map_index",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_names",
+   "ebible_version_verses"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10520,7 +10524,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "ebible_version_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23173,6 +23178,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_map",
     "html_parse_list_to",
     "html_parse_find",
     "html_parse",
@@ -23190,7 +23196,11 @@
     "root",
     "bl",
     "query",
-    "list"
+    "list",
+    "mapped",
+    "list2",
+    "lambda",
+    "item"
    ]
   },
   "html_parse_find": {
