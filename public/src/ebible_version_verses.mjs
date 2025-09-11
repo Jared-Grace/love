@@ -20,7 +20,7 @@ export async function ebible_version_verses(bible_folder) {
   let { d, root } = await html_parse_read(joined);
   let list = html_parse_find_list_to(root, "a");
   let mapped = html_parse_href_text_map(d, list);
-  let mapped2 = list_map_property(list2, property_name);
+  let mapped2 = list_map_property(mapped, "href");
   let filtered = list_filter_starts_with(mapped, book_code);
   return filtered;
 }
