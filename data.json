@@ -2597,7 +2597,8 @@
    "object_property_lambda_async",
    "global_function_property_async",
    "firebase_storage_download_property",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "ebible_version_verses"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -5895,7 +5896,8 @@
    "marker_down_choices",
    "js_imports_declarations",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names"
+   "js_dollar_choice_arguments_names",
+   "ebible_version_verses"
   ],
   "split": [
    "functions_combine_name",
@@ -6535,7 +6537,8 @@
   ],
   "mapped2": [
    "function_dependencies_code",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -10583,7 +10586,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "ebible_version_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23334,6 +23338,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "list_filter_starts_with",
     "ebible_version_download_path",
     "html_parse_href_text_map",
@@ -23356,6 +23361,9 @@
     "root",
     "list",
     "mapped",
+    "mapped2",
+    "list2",
+    "property_name",
     "filtered"
    ]
   },
