@@ -2963,8 +2963,7 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline",
-   "app_new"
+   "list_join_newline"
   ],
   "v": [
    "data_identifiers_file",
@@ -3936,8 +3935,7 @@
    "list_remove_if_exists",
    "list_next_try",
    "list_index_of_next_outside",
-   "app_reply_main",
-   "app_new"
+   "app_reply_main"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -20580,8 +20578,6 @@
     "expression",
     "assign",
     "body_block",
-    "list",
-    "item",
     "output"
    ]
   },
