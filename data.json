@@ -2209,7 +2209,8 @@
    "ebible_version_verses",
    "html_parse_list_text_to",
    "html_parse_href",
-   "ebible_version_books_testament_new"
+   "ebible_version_books_testament_new",
+   "sandbox"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -19355,6 +19356,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "marker",
     "ebible_version_verses",
     "sandbox",
     "contents"
