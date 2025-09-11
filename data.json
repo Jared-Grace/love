@@ -11269,7 +11269,8 @@
    "firebase_deploy_function_app_current"
   ],
   "files": [
-   "folder_read"
+   "folder_read",
+   "ebible_version_verses"
   ],
   "sw": [
    "string_starts_with",
@@ -23308,6 +23309,7 @@
     "ebible_version_verses",
     "bible_folder",
     "file_path",
+    "files",
     "n",
     "o",
     "classes",
