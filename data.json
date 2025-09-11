@@ -2199,7 +2199,8 @@
    "http_local_text",
    "ebible_version_download",
    "js_code_dot",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_list_text_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12326,6 +12327,9 @@
   ],
   "html_parse_text": [
    "ebible_version_verses"
+  ],
+  "html_parse_list_text_to": [
+   "html_parse_list_text_to"
   ]
  },
  "functions": {
@@ -23211,9 +23215,16 @@
     "result",
     "find"
    ]
+  },
+  "html_parse_list_text_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_parse_list_text_to"
+   ]
   }
  },
- "git_push_when": "2025-09-11T17:18:22.751Z",
+ "git_push_when": "2025-09-11T18:18:53.372Z",
  "error_attention": null,
  "app_current": "replace"
 }
