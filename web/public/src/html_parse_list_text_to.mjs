@@ -5,5 +5,6 @@ export function html_parse_list_text_to(query) {
     let v = $(el).text();
     return v;
   }
-  return query.map(lambda).get();
+  let v2 = query.map(lambda).get();
+  return v2;
 }
