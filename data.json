@@ -10595,8 +10595,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_version_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23384,7 +23383,6 @@
     "lambda",
     "item",
     "mapped3",
-    "list2",
     "filtered"
    ]
   },
