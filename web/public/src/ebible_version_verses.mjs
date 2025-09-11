@@ -10,6 +10,7 @@ import { folder_read } from "./folder_read.mjs";
 export async function ebible_version_verses(bible_folder) {
   let file_path = await ebible_version_download(bible_folder);
   let files = folder_read(file_path);
+  return files;
   let books = await ebible_version_books(bible_folder);
   marker("1");
   let first = list_first(books);
