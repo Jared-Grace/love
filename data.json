@@ -3173,8 +3173,7 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
-   "ebible_version_verses"
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5573,7 +5572,8 @@
    "html_overwrite",
    "file_overwrite_buffer",
    "file_write_buffer",
-   "file_read"
+   "file_read",
+   "ebible_version_verses"
   ],
   "writeFile": [
    "file_overwrite",
@@ -23155,7 +23155,7 @@
     "bible_folder",
     "file_path",
     "files",
-    "v",
+    "contents",
     "file_path2"
    ]
   }
