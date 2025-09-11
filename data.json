@@ -5393,7 +5393,6 @@
    "js_dollar_a",
    "js_dollar_s",
    "js_dollar_a_generic",
-   "ebible_version_books_testament",
    "string_take"
   ],
   "list_copy_reverse": [
@@ -23402,7 +23401,6 @@
     "item",
     "text",
     "href",
-    "count",
     "taken",
     "v",
     "book_code",
