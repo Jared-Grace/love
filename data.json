@@ -12500,7 +12500,7 @@
   "string_starts_with_not": [
    "list_filter_starts_with_not"
   ],
-  "mapped3": [
+  "prefixes": [
    "ebible_version_verses"
   ]
  },
@@ -23384,7 +23384,7 @@
     "lambda",
     "item",
     "combined",
-    "mapped3",
+    "prefixes",
     "filtered"
    ]
   },
