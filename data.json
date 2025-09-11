@@ -4420,7 +4420,8 @@
    "string_suffix_without",
    "string_prefix_without",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "ebible_version_books_testament"
   ],
   "string_size": [
    "string_suffix_without",
@@ -4452,7 +4453,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_version_books_testament"
   ],
   "a": [
    "string_suffix_without",
@@ -4534,7 +4536,8 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "ebible_version_books_testament"
   ],
   "without": [
    "string_suffix_without",
@@ -4702,7 +4705,8 @@
    "js_statement_call_get",
    "list_all",
    "http",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "ebible_version_books_testament"
   ],
   "readdirSync": [
    "folder_read"
@@ -4812,7 +4816,8 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_version_books_testament"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -12423,7 +12428,7 @@
   "classes": [
    "ebible_version_verses"
   ],
-  "string_take": [
+  "book_code": [
    "ebible_version_books_testament"
   ]
  },
@@ -23367,6 +23372,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "string_slice",
     "list_map",
     "html_parse_href",
     "html_parse_text",
@@ -23391,7 +23397,11 @@
     "item",
     "text",
     "href",
-    "string_take",
+    "v2",
+    "s",
+    "a",
+    "b",
+    "book_code",
     "v",
     "mapped"
    ]
