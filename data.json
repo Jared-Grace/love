@@ -2193,7 +2193,8 @@
    "file_overwrite_buffer",
    "http_local_text",
    "ebible_version_download",
-   "js_code_dot"
+   "js_code_dot",
+   "ebible_version_verses"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12276,6 +12277,9 @@
   "js_code_dot": [
    "js_code_dot",
    "app_new"
+  ],
+  "ebible_version_verses": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23124,6 +23128,13 @@
     "left",
     "right",
     "code"
+   ]
+  },
+  "ebible_version_verses": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "ebible_version_verses"
    ]
   }
  },
