@@ -4683,7 +4683,8 @@
    "js_marker_is",
    "js_statement_call_get",
    "list_all",
-   "http"
+   "http",
+   "html_parse_list_text_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -23241,6 +23242,7 @@
     "v",
     "$",
     "text",
+    "v2",
     "map",
     "get"
    ]
