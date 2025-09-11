@@ -4473,7 +4473,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_version_verses"
   ],
   "a": [
    "string_suffix_without",
@@ -8437,7 +8438,8 @@
   "prefix": [
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account"
+   "firebase_service_account",
+   "ebible_version_verses"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8665,7 +8667,8 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http"
+   "http",
+   "ebible_version_verses"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -10586,8 +10589,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_version_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -11299,7 +11301,8 @@
   "sw": [
    "string_starts_with",
    "app_reply_main",
-   "http"
+   "http",
+   "ebible_version_verses"
   ],
   "only": [
    "list_single",
@@ -23335,6 +23338,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "list_filter",
     "ebible_version_download_path",
     "html_parse_href_text_map",
@@ -23359,8 +23363,10 @@
     "mapped",
     "lambda",
     "item",
-    "filtered",
-    "list2"
+    "sw",
+    "s",
+    "prefix",
+    "filtered"
    ]
   },
   "html_parse_find": {
