@@ -1922,7 +1922,6 @@
   "fd ebible_version_verses",
   "n html_parse_list_text_to",
   "de html_parse_list_text_to",
-  "p",
   "c html_parse_text html_parse_href",
   "c ebible_version_books_testament_old ebible_version_books_testament_new",
   "s take",
@@ -1931,6 +1930,7 @@
   "s href",
   "o sb",
   "n html_parse_href_text_map",
+  "p",
   "sb"
  ],
  "marker_current": "1",
