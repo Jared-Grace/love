@@ -4185,7 +4185,8 @@
    "list_adder_unique_async",
    "list_unique",
    "list_unique_reverse",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "sandbox"
   ],
   "function_run_prompt": [
    "function_run_prompt",
@@ -6542,8 +6543,7 @@
    "marker_rename",
    "js_calls_to_each",
    "js_dollar_ir",
-   "js_dollar_l",
-   "sandbox"
+   "js_dollar_l"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -7329,7 +7329,8 @@
    "js_imports_declarations",
    "list_adder_unique",
    "list_adder_unique_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "sandbox"
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
@@ -8175,8 +8176,7 @@
   ],
   "log_unparse": [
    "log_unparse",
-   "log_unparse_try",
-   "sandbox"
+   "log_unparse_try"
   ],
   "js_node_type_is_if": [
    "js_node_type_is_if",
@@ -10613,7 +10613,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19442,7 +19443,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "log_unparse",
+    "list_unique",
     "list_map_prefix_without",
     "html_parse_find_a_href_starts_with",
     "html_parse",
@@ -19456,7 +19457,8 @@
     "root",
     "list",
     "mapped",
-    "node",
+    "unique",
+    "list2",
     "contents"
    ],
    "async": true
