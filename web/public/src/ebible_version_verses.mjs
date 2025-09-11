@@ -1,3 +1,4 @@
+import { html_parse_list_to } from "./html_parse_list_to.mjs";
 import { html_parse_find } from "./html_parse_find.mjs";
 import { html_parse } from "./html_parse.mjs";
 import { path_join } from "./path_join.mjs";
@@ -13,7 +14,7 @@ export async function ebible_version_verses(bible_folder) {
   let root = await html_parse(contents);
   let bl = html_parse_find(root, ".bookList");
   let query = html_parse_find(bl, ".oo");
-  let list = query.get();
+  let list = html_parse_list_to(query);
   return list;
   marker("1");
 }
