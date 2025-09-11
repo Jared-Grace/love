@@ -25,6 +25,7 @@ export async function ebible_version_books_testament(bible_folder, selector) {
     let v = {
       text,
       href,
+      book_code: taken,
     };
     return v;
   }
