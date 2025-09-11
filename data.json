@@ -2211,8 +2211,7 @@
    "html_parse_list_text_to",
    "html_parse_href",
    "ebible_version_books_testament_new",
-   "sandbox",
-   "html_parse_href_text_map"
+   "sandbox"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2780,7 +2779,8 @@
    "http",
    "app_new",
    "html_parse_list_text_to",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2989,7 +2989,8 @@
    "list_index_of_next_outside",
    "list_join_newline_2",
    "list_join_newline",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "v": [
    "data_identifiers_file",
@@ -3779,7 +3780,8 @@
    "html_parse_text",
    "html_parse_href",
    "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_href_text_map"
   ],
   "data": [
    "data_all",
@@ -3982,7 +3984,8 @@
    "app_reply_main",
    "html_parse_text",
    "html_parse_href",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4608,7 +4611,8 @@
    "functions_transform",
    "js_expand_generic",
    "app_reply_main",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "functions_names": [
    "functions_names",
@@ -5965,7 +5969,8 @@
    "js_dollar_choice_arguments_names",
    "ebible_version_books_testament_new",
    "ebible_version_books_testament",
-   "ebible_version_books_testament_old"
+   "ebible_version_books_testament_old",
+   "html_parse_href_text_map"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -8975,7 +8980,8 @@
   ],
   "both": [
    "js_imports_declarations",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -12459,7 +12465,8 @@
    "ebible_version_verses"
   ],
   "html_parse_href_text": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map"
@@ -23479,8 +23486,15 @@
   "html_parse_href_text_map": {
    "async": false,
    "identifiers": [
-    "marker",
-    "html_parse_href_text_map"
+    "list_map",
+    "html_parse_href_text",
+    "html_parse_href_text_map",
+    "d",
+    "list",
+    "lambda",
+    "item",
+    "both",
+    "mapped"
    ]
   }
  },
