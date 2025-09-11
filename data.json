@@ -10531,8 +10531,7 @@
   ],
   "path_folder": [
    "folder_read",
-   "firebase_service_account",
-   "ebible_version_verses"
+   "firebase_service_account"
   ],
   "fop": [
    "apps_get",
@@ -23145,8 +23144,7 @@
     "ebible_version_verses",
     "bible_folder",
     "file_path",
-    "files",
-    "path_folder"
+    "files"
    ]
   }
  },
