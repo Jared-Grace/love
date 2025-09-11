@@ -2365,7 +2365,8 @@
    "js_assign_combine",
    "js_dollar_ir",
    "js_declaration_single_block_body_add_return",
-   "js_dollar_l"
+   "js_dollar_l",
+   "app_new"
   ],
   "code": [
    "data_identifiers_file",
@@ -2519,7 +2520,8 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply"
+   "app_reply",
+   "app_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -2747,7 +2749,8 @@
    "js_assign_combine",
    "app_reply_main",
    "html_on_keydown",
-   "http"
+   "http",
+   "app_new"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3568,7 +3571,8 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "app_new"
   ],
   "args": [
    "watch",
@@ -6232,7 +6236,8 @@
    "function_transform_marker_specified",
    "function_rename_identifiers",
    "js_dollar_new",
-   "js_dollar_new_args"
+   "js_dollar_new_args",
+   "app_new"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -20532,6 +20537,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "function_transform",
     "app_name_main",
     "app_name_prefixed",
     "function_new",
@@ -20540,7 +20546,11 @@
     "app_new",
     "name",
     "a_name",
-    "combined"
+    "combined",
+    "output",
+    "f_name",
+    "lambda",
+    "ast"
    ]
   },
   "app_name_prefixed": {
