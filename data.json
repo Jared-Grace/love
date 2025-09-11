@@ -4581,8 +4581,7 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get",
-   "ebible_version_verses"
+   "apps_get"
   ],
   "function_name_extension": [
    "functions_names",
@@ -11287,8 +11286,7 @@
    "firebase_deploy_function_app_current"
   ],
   "files": [
-   "folder_read",
-   "ebible_version_verses"
+   "folder_read"
   ],
   "sw": [
    "string_starts_with",
@@ -12330,8 +12328,7 @@
   ],
   "ebible_version_download": [
    "ebible_version_download",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -23330,20 +23327,17 @@
     "ebible_version_books",
     "html_parse_read",
     "path_join",
-    "ebible_version_download",
     "object_property_get",
     "list_first",
     "marker",
-    "folder_read",
     "ebible_version_verses",
     "bible_folder",
-    "file_path",
-    "files",
     "books",
     "first",
     "book_code",
     "chapters_name",
     "joined",
+    "file_path",
     "d",
     "root",
     "result"
