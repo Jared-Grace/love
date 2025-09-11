@@ -2765,7 +2765,8 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "app_new"
+   "app_new",
+   "html_parse_list_text_to"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3176,7 +3177,8 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new"
+   "app_new",
+   "html_parse_list_text_to"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4910,7 +4912,8 @@
    "http_json",
    "app_reply_choices",
    "app_reply_main",
-   "http_local_text"
+   "http_local_text",
+   "html_parse_list_text_to"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6639,7 +6642,8 @@
    "marker_above_generic",
    "function_aliases_restore",
    "js_imports_paths_fix",
-   "js_expand_generic"
+   "js_expand_generic",
+   "html_parse_list_text_to"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -9392,7 +9396,8 @@
    "list_last_is"
   ],
   "map": [
-   "list_map"
+   "list_map",
+   "html_parse_list_text_to"
   ],
   "list_map_index": [
    "list_map_index",
@@ -12045,7 +12050,8 @@
    "http"
   ],
   "get": [
-   "http"
+   "http",
+   "html_parse_list_text_to"
   ],
   "chunk": [
    "http"
@@ -12320,7 +12326,8 @@
    "ebible_version_verses"
   ],
   "query": [
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "html_parse_list_text_to"
   ],
   "html_parse_list_to": [
    "ebible_version_verses"
@@ -12329,6 +12336,12 @@
    "ebible_version_verses"
   ],
   "html_parse_list_text_to": [
+   "html_parse_list_text_to"
+  ],
+  "el": [
+   "html_parse_list_text_to"
+  ],
+  "$": [
    "html_parse_list_text_to"
   ]
  },
@@ -23220,7 +23233,16 @@
    "async": false,
    "identifiers": [
     "marker",
-    "html_parse_list_text_to"
+    "html_parse_list_text_to",
+    "query",
+    "lambda",
+    "i",
+    "el",
+    "v",
+    "$",
+    "text",
+    "map",
+    "get"
    ]
   }
  },
