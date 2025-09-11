@@ -9,4 +9,5 @@ export async function ebible_version_verses(bible_folder) {
   let classes = list_join_comma_space([o, n]);
   let mapped = await ebible_version_books_testament(bible_folder, classes);
   marker("1");
+  return mapped;
 }
