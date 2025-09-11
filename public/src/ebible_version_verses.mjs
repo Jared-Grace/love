@@ -12,12 +12,12 @@ import { folder_read } from "./folder_read.mjs";
 export async function ebible_version_verses(bible_folder) {
   let file_path = await ebible_version_download(bible_folder);
   let files = folder_read(file_path);
-  let books = await ebible_version_books_testament(bible_folder, classes);
-  marker("1");
-  let first = list_first(books);
   const n = ebible_class_new();
   let o = ebible_class_old();
   let classes = list_join_comma_space([o, n]);
+  let books = await ebible_version_books_testament(bible_folder, classes);
+  marker("1");
+  let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
   let chapters_name = book_code + ".htm";
   let joined = path_join([file_path, chapters_name]);
