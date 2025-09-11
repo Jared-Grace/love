@@ -2782,8 +2782,7 @@
    "app_new",
    "html_parse_list_text_to",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "ebible_version_verses"
+   "html_parse_href_text_map"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3989,8 +3988,7 @@
    "html_parse_text",
    "html_parse_href",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "ebible_version_verses"
+   "html_parse_href_text_map"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6016,8 +6014,7 @@
    "list_filter_property",
    "list_find",
    "prompt_previous",
-   "search_generic",
-   "ebible_version_verses"
+   "search_generic"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -8665,8 +8662,7 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http",
-   "ebible_version_verses"
+   "http"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -11299,8 +11295,7 @@
   "sw": [
    "string_starts_with",
    "app_reply_main",
-   "http",
-   "ebible_version_verses"
+   "http"
   ],
   "only": [
    "list_single",
@@ -12481,6 +12476,9 @@
   ],
   "ebible_version_download_path": [
    "ebible_version_download",
+   "ebible_version_verses"
+  ],
+  "list_filter_starts_with": [
    "ebible_version_verses"
   ]
  },
@@ -23336,8 +23334,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "string_starts_with",
-    "list_filter",
+    "list_filter_starts_with",
     "ebible_version_download_path",
     "html_parse_href_text_map",
     "html_parse_find_list_to",
@@ -23359,9 +23356,6 @@
     "root",
     "list",
     "mapped",
-    "lambda",
-    "item",
-    "sw",
     "filtered"
    ]
   },
