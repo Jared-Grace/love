@@ -3292,8 +3292,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "catch_call"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -8887,8 +8886,7 @@
   ],
   "message2": [
    "js_identifiers_to_names",
-   "list_size_1_assert",
-   "catch_call"
+   "list_size_1_assert"
   ],
   "js_stack_filtered_multiple_each": [
    "js_identifier_defineds",
@@ -23685,10 +23683,8 @@
     "i",
     "inner",
     "result",
-    "message",
     "arguments",
-    "e",
-    "message2"
+    "e"
    ]
   }
  },
