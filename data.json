@@ -3173,7 +3173,8 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new"
+   "app_new",
+   "ebible_version_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12041,7 +12042,8 @@
    "http"
   ],
   "get": [
-   "http"
+   "http",
+   "ebible_version_verses"
   ],
   "chunk": [
    "http"
@@ -23182,7 +23184,9 @@
     "contents",
     "root",
     "bl",
-    "result"
+    "result",
+    "v",
+    "get"
    ]
   },
   "html_parse_find": {
