@@ -1929,7 +1929,7 @@
   "c html_parse_text html_parse_href"
  ],
  "marker_current": "1",
- "function_current": "html_parse_list_text_to",
+ "function_current": "html_parse_href",
  "terminal": false,
  "identifiers": {
   "log": [
