@@ -3181,7 +3181,6 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "html_parse",
    "ebible_version_verses"
   ],
   "file_overwrite": [
@@ -3678,7 +3677,8 @@
    "js_dollar_choice_arguments",
    "http_firebase",
    "http_local",
-   "html_parse_find"
+   "html_parse_find",
+   "html_parse"
   ],
   "separator": [
    "watch",
@@ -23278,7 +23278,7 @@
     "d",
     "load",
     "root",
-    "v"
+    "result"
    ]
   }
  },
