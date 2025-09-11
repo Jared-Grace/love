@@ -6551,7 +6551,8 @@
    "js_imports_unused",
    "function_exists_inner",
    "function_parse_declaration_inner",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_version_books_testament"
   ],
   "u": [
    "function_exists",
@@ -6574,7 +6575,8 @@
    "function_parse_declaration_inner",
    "marker_next_index",
    "string_replace",
-   "marker_rename"
+   "marker_rename",
+   "ebible_version_books_testament"
   ],
   "r": [
    "function_format",
@@ -6669,7 +6671,8 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "ebible_version_books_testament"
   ],
   "i": [
    "function_identifier_replace",
@@ -12460,7 +12463,7 @@
    "ebible_version_books_testament",
    "ebible_version_verses"
   ],
-  "href2": [
+  "to2": [
    "ebible_version_books_testament"
   ]
  },
@@ -23415,6 +23418,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "object_merge",
     "object_property_get",
     "html_parse_find_list_to",
     "html_parse_read",
@@ -23440,9 +23444,11 @@
     "href",
     "v",
     "mapped",
-    "href2",
     "taken",
     "book_code",
+    "to2",
+    "to",
+    "from",
     "mapped2"
    ]
   },
