@@ -16,8 +16,8 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   let list = html_parse_find_list_to(bl, selector);
   let mapped = html_parse_href_text_map(d, list);
   function lambda(item) {
-    let href2 = object_property_get(item, "href");
-    let taken = string_take(href, count);
+    let href = object_property_get(item, "href");
+    let taken = string_take(href, 3);
     let to = object_merge(
       {
         book_code: taken,
