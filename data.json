@@ -5879,7 +5879,8 @@
    "js_marker_name_get",
    "marker_call_replace_generic",
    "js_expand_generic",
-   "marker_rename"
+   "marker_rename",
+   "catch_call"
   ],
   "combined": [
    "functions_combine",
@@ -23679,6 +23680,7 @@
     "i",
     "inner",
     "result",
+    "arguments",
     "e"
    ]
   }
