@@ -2999,8 +2999,7 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map",
-   "ebible_chapters"
+   "html_parse_href_text_map"
   ],
   "v": [
    "data_identifiers_file",
@@ -5910,8 +5909,7 @@
    "marker_down_choices",
    "js_imports_declarations",
    "js_dollar_choice_arguments_name",
-   "js_dollar_choice_arguments_names",
-   "ebible_chapters"
+   "js_dollar_choice_arguments_names"
   ],
   "split": [
    "functions_combine_name",
@@ -5990,8 +5988,7 @@
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "list_filter_starts_with_not_multiple"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -6556,8 +6553,7 @@
   ],
   "mapped2": [
    "function_dependencies_code",
-   "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_version_books_testament"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -12494,16 +12490,14 @@
    "ebible_version_verses"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_version_books_testament"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
-   "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_version_books_testament"
   ],
   "ebible_version_download_path": [
    "ebible_version_download",
@@ -12528,15 +12522,15 @@
    "ebible_version_verses",
    "ebible_chapters"
   ],
-  "list_filter_starts_with": [
-   "ebible_chapters"
-  ],
   "chapters_name": [
    "ebible_chapters"
   ],
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses"
+  ],
+  "html_parse_find_a_href_starts_with": [
+   "ebible_chapters"
   ]
  },
  "functions": {
@@ -23598,12 +23592,9 @@
   "ebible_chapters": {
    "async": true,
    "identifiers": [
+    "html_parse_find_a_href_starts_with",
     "list_filter_starts_with_not_multiple",
-    "list_filter_starts_with",
     "list_map",
-    "list_map_property",
-    "html_parse_href_text_map",
-    "html_parse_find_list_to",
     "html_parse_read",
     "path_join",
     "ebible_version_download_path",
@@ -23615,9 +23606,6 @@
     "joined",
     "d",
     "root",
-    "list",
-    "mapped",
-    "mapped2",
     "filtered",
     "lambda",
     "item",
