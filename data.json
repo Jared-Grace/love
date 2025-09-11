@@ -12444,6 +12444,9 @@
   ],
   "books": [
    "ebible_version_verses"
+  ],
+  "chapters_name": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23315,7 +23318,8 @@
     "classes",
     "books",
     "first",
-    "book_code"
+    "book_code",
+    "chapters_name"
    ]
   },
   "html_parse_find": {
