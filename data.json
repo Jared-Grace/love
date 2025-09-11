@@ -4430,7 +4430,8 @@
    "list_index_of_delta",
    "marker_rename",
    "js_calls_to_each",
-   "app_reply_main"
+   "app_reply_main",
+   "list_filter_starts_with_not"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -4557,7 +4558,8 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "list_filter_starts_with_not"
   ],
   "without": [
    "string_suffix_without",
@@ -8670,7 +8672,8 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http"
+   "http",
+   "list_filter_starts_with_not"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12493,9 +12496,6 @@
    "ebible_version_verses"
   ],
   "list_filter_starts_with_not": [
-   "list_filter_starts_with_not"
-  ],
-  "string_starts_with_not": [
    "list_filter_starts_with_not"
   ]
  },
@@ -23533,15 +23533,17 @@
   "list_filter_starts_with_not": {
    "async": false,
    "identifiers": [
+    "not",
     "marker",
     "list_filter",
+    "string_starts_with",
     "list_filter_starts_with_not",
     "mapped",
     "book_code",
     "lambda",
     "item",
+    "a",
     "sw",
-    "string_starts_with_not",
     "filtered"
    ]
   }
