@@ -1926,7 +1926,8 @@
   "de html_parse_list_text_to",
   "p",
   "c html_parse_text html_parse_href",
-  "sb"
+  "sb",
+  "c ebible_version_books_testament_old ebible_version_books_testament_new"
  ],
  "marker_current": "1",
  "function_current": "html_parse_href",
