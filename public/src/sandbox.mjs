@@ -12,11 +12,11 @@ export async function sandbox() {
   const prefix = "details.php?id=";
   let filtered = html_parse_find_a_href_starts_with(root, d, prefix);
   function lambda(item) {
-    let result = string_prefix_without(s, prefix);
+    let result = string_prefix_without(item, prefix);
     return result;
   }
   let mapped = list_map(list, lambda);
-  return filtered;
+  return mapped;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
   return contents;
