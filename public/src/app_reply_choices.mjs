@@ -206,6 +206,10 @@ export function app_reply_choices() {
       text: emoji_pray() + " Thanks",
       response: emoji_pray() + " Thank you very much! " + emoji_smile(),
     },
+    {
+      text: emoji_pray() + " Travel ask",
+      response: prayer_start(),
+    },
     travel_pray,
     {
       text: emoji_phone() + " WhatsApp",
