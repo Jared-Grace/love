@@ -3202,8 +3202,7 @@
    "app_new",
    "html_parse_list_text_to",
    "html_parse_text",
-   "html_parse_href",
-   "ebible_version_verses"
+   "html_parse_href"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5874,7 +5873,8 @@
    "app_new",
    "js_dollar_new",
    "js_dollar_new_args",
-   "function_open_dollar_choice"
+   "function_open_dollar_choice",
+   "ebible_version_verses"
   ],
   "body_block": [
    "functions_combine",
@@ -23383,7 +23383,7 @@
     "mapped2",
     "lambda",
     "item",
-    "v",
+    "combined",
     "mapped3",
     "filtered"
    ]
