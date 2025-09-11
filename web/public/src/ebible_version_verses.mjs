@@ -1,3 +1,4 @@
+import { html_parse_href_text_map } from "./html_parse_href_text_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
@@ -14,5 +15,6 @@ export async function ebible_version_verses(bible_folder) {
   let joined = path_join([file_path, chapters_name]);
   let { d, root } = await html_parse_read(joined);
   let result = html_parse_find_list_to(root, "a");
+  let mapped = html_parse_href_text_map(d2, list);
   return joined;
 }
