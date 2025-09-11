@@ -3694,8 +3694,7 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse",
-   "ebible_version_verses"
+   "html_parse"
   ],
   "separator": [
    "watch",
@@ -12471,9 +12470,6 @@
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
    "ebible_version_books_testament",
-   "ebible_version_verses"
-  ],
-  "d2": [
    "ebible_version_verses"
   ]
  },
@@ -23347,10 +23343,8 @@
     "file_path",
     "d",
     "root",
-    "result",
-    "mapped",
-    "d2",
-    "list"
+    "list",
+    "mapped"
    ]
   },
   "html_parse_find": {
