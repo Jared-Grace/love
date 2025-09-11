@@ -1545,7 +1545,6 @@
   "fws o app",
   "as html",
   "a oa function_open_app",
-  "s prefix",
   "de storage_local_set",
   "c storage_local_get storage_local_set",
   "de storage_local_get",
@@ -1935,7 +1934,8 @@
   "cs list_filter_starts_with_not multiple",
   "p",
   "s http",
-  "sb"
+  "sb",
+  "s prefix"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
