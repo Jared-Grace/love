@@ -19434,8 +19434,8 @@
     "marker",
     "ebible_version_verses",
     "sandbox",
-    "contents",
-    "url"
+    "url",
+    "contents"
    ],
    "async": true
   },
