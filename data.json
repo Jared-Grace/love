@@ -3220,8 +3220,7 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "list_filter_starts_with_not_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3719,7 +3718,8 @@
    "http_firebase",
    "http_local",
    "html_parse_find",
-   "html_parse"
+   "html_parse",
+   "catch_call"
   ],
   "separator": [
    "watch",
@@ -23660,7 +23660,7 @@
     "catch_call",
     "reject",
     "lambda",
-    "v",
+    "result",
     "e"
    ]
   }
