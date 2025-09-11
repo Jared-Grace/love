@@ -1,3 +1,4 @@
+import { html_parse_href } from "./html_parse_href.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_list_to } from "./html_parse_list_to.mjs";
@@ -17,7 +18,12 @@ export async function ebible_version_verses(bible_folder) {
   let query = html_parse_find(bl, ".oo");
   let list = html_parse_list_to(query);
   function lambda(item) {
-    let v = html_parse_text(d, item);
+    let text = html_parse_text(d, item);
+    let href = html_parse_href(d, item);
+    let v = {
+      text,
+      href,
+    };
     return v;
   }
   let mapped = list_map(list, lambda);
