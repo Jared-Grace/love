@@ -1922,7 +1922,8 @@
   "ps",
   "s sand",
   "p",
-  "sb"
+  "sb",
+  "fd ebible_version_verses"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
