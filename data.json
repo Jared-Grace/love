@@ -1811,7 +1811,6 @@
   "fts js_calls_to_each",
   "as app",
   "an reply",
-  "s app",
   "s hash",
   "s emoji",
   "s copy",
@@ -1913,7 +1912,8 @@
   "p",
   "ebible_version_download engbsb",
   "s reply",
-  "o an"
+  "o an",
+  "s app"
  ],
  "marker_current": "1",
  "function_current": "app_new",
@@ -23071,7 +23071,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-10T22:47:40.438Z",
+ "git_push_when": "2025-09-11T01:38:16.467Z",
  "error_attention": null,
  "app_current": "replace"
 }
