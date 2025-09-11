@@ -2796,7 +2796,8 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_versions_download"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3007,7 +3008,8 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "ebible_versions_download"
   ],
   "v": [
    "data_identifiers_file",
@@ -3840,7 +3842,8 @@
    "ebible_version_download",
    "ebible_version_books_testament",
    "html_parse_read",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_versions_download"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4006,7 +4009,8 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_versions_download"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4289,7 +4293,8 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "http"
+   "http",
+   "ebible_versions_download"
   ],
   "value2": [
    "error_attention_set",
@@ -4795,7 +4800,8 @@
    "each_range_async",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "ebible_versions_download"
   ],
   "f_paths": [
    "data_files_update",
@@ -4917,7 +4923,8 @@
    "git_push_schedule_command"
   ],
   "catch_ignore_async": [
-   "catch_ignore_async"
+   "catch_ignore_async",
+   "ebible_versions_download"
   ],
   "identity": [
    "catch_log_async",
@@ -12361,7 +12368,8 @@
   ],
   "ebible_version_download": [
    "ebible_version_download",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_versions_download"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -12535,7 +12543,11 @@
    "ebible_chapters"
   ],
   "ebible_versions_download": [
-   "sandbox"
+   "sandbox",
+   "ebible_versions_download"
+  ],
+  "ebible_versions": [
+   "ebible_versions_download"
   ]
  },
  "functions": {
@@ -23612,6 +23624,21 @@
     "combined",
     "prefixes",
     "chapters"
+   ]
+  },
+  "ebible_versions_download": {
+   "async": true,
+   "identifiers": [
+    "catch_ignore_async",
+    "each_async",
+    "ebible_version_download",
+    "ebible_versions",
+    "ebible_versions_download",
+    "list",
+    "lambda",
+    "item",
+    "file_path",
+    "lambda3"
    ]
   }
  },
