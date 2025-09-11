@@ -1,3 +1,4 @@
+import { function_transform } from "./function_transform.mjs";
 import { app_name_main } from "./app_name_main.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { function_new } from "./function_new.mjs";
@@ -8,6 +9,7 @@ export async function app_new(name) {
   let a_name = app_name_prefixed(name);
   let combined = app_name_main(name);
   await function_new(a_name);
+  let output = await function_transform(f_name, async function lambda(ast) {});
   await function_new(combined);
   await html_new(name);
 }
