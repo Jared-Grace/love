@@ -2223,7 +2223,8 @@
    "function_parse_declaration_inner",
    "function_parse_strict",
    "http_json",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -11727,8 +11728,7 @@
    "js_calls_to_each"
   ],
   "expression2": [
-   "js_calls_to_each",
-   "app_new"
+   "js_calls_to_each"
   ],
   "object_property_get_name": [
    "js_call_callee_name"
@@ -20583,7 +20583,7 @@
     "expression",
     "assign",
     "body_block",
-    "expression2",
+    "parsed",
     "output"
    ]
   },
