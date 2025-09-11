@@ -1157,7 +1157,6 @@
   "fs sb",
   "ftc jbcgu sb",
   "ob",
-  "o sb",
   "f_name",
   "s size",
   "nj bang_to_not",
@@ -1930,10 +1929,11 @@
   "s string",
   "n html_parse_read",
   "sb",
-  "s href"
+  "s href",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "html_parse_read",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
