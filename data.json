@@ -1921,7 +1921,8 @@
   "ebible_version_download engbsb",
   "s folder",
   "ebible_version_verses engbsb",
-  "a fir file_read"
+  "a fir file_read",
+  "as file"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_verses",
