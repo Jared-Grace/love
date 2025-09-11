@@ -20,7 +20,7 @@ export async function app_new(name) {
     let expression = js_parse_expression(code);
     let assign = js_declare(v, expression);
     let body_block = js_declaration_single_block_body(ast);
-    list_add(list, item);
+    list_add(body_block, assign);
   }
   let output = await function_transform(a_name, lambda);
   await function_new(combined);
