@@ -2520,8 +2520,7 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply",
-   "app_new"
+   "app_reply"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -20549,8 +20548,7 @@
     "combined",
     "lambda",
     "ast",
-    "output",
-    "f_name"
+    "output"
    ]
   },
   "app_name_prefixed": {
