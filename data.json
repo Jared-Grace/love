@@ -19444,9 +19444,9 @@
     "ebible_version_verses",
     "sandbox",
     "unique",
-    "list",
     "lambda",
     "item",
+    "list",
     "contents"
    ],
    "async": true
