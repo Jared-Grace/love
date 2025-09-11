@@ -25,7 +25,7 @@ export async function app_new(name) {
     list_add(body_block, assign);
     let expression2 = await js_call_new_expression(
       firebase_storage_function_run.name,
-      ast2,
+      ast,
     );
   }
   let output = await function_transform(a_name, lambda);
