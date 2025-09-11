@@ -1923,10 +1923,11 @@
   "s sand",
   "fd ebible_version_verses",
   "p",
-  "sb"
+  "sb",
+  "n html_parse_list_text_to"
  ],
  "marker_current": "1",
- "function_current": "ebible_version_verses",
+ "function_current": "html_parse_list_text_to",
  "terminal": false,
  "identifiers": {
   "log": [
