@@ -8,6 +8,6 @@ export async function ebible_version_verses(bible_folder) {
   marker("1");
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
-  let v = await ebible_chapters(bible_folder, book_code);
-  return v;
+  let chapters = await ebible_chapters(bible_folder, book_code);
+  return chapters;
 }
