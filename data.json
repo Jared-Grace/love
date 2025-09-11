@@ -3277,7 +3277,8 @@
    "watch",
    "chalk_color",
    "import_install",
-   "unzip"
+   "unzip",
+   "ebible_version_verses"
   ],
   "command_line": [
    "command_line",
@@ -3570,7 +3571,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "ebible_version_verses"
   ],
   "output": [
    "watch",
@@ -23146,6 +23148,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "import_install",
     "path_join",
     "file_read",
     "folder_read",
@@ -23156,7 +23159,8 @@
     "file_path",
     "files",
     "joined",
-    "contents"
+    "contents",
+    "name"
    ]
   }
  },
