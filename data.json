@@ -1916,7 +1916,8 @@
   "n js_code_dot",
   "s dot",
   "s body",
-  "s call"
+  "s call",
+  "s bible"
  ],
  "marker_current": "1",
  "function_current": "js_code_dot",
