@@ -2079,7 +2079,6 @@
    "marker_top",
    "null_not_is",
    "prompt_previous",
-   "sandbox",
    "string_is_assert_message",
    "data_identifiers_search",
    "js_imports_unused",
@@ -8895,8 +8894,7 @@
    "js_dollar_ir"
   ],
   "test": [
-   "js_if_else_if_combine",
-   "sandbox"
+   "js_if_else_if_combine"
   ],
   "test2": [
    "js_if_else_if_combine"
@@ -12265,7 +12263,8 @@
   ],
   "bible_folder": [
    "ebible_version_download",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -12292,7 +12291,8 @@
    "app_new"
   ],
   "ebible_version_verses": [
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "sandbox"
   ]
  },
  "functions": {
@@ -19192,9 +19192,9 @@
   },
   "sandbox": {
    "identifiers": [
-    "marker",
+    "ebible_version_verses",
     "sandbox",
-    "test"
+    "bible_folder"
    ],
    "async": true
   },
