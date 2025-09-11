@@ -2801,7 +2801,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "catch_call"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4092,7 +4093,8 @@
    "function_exists_strict",
    "html_element",
    "function_exists_inner",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "catch_call"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -12152,7 +12154,8 @@
    "http"
   ],
   "reject": [
-   "http"
+   "http",
+   "catch_call"
   ],
   "http_firebase": [
    "http_firebase",
@@ -23653,7 +23656,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "catch_call"
+    "catch_call",
+    "reject",
+    "lambda",
+    "e"
    ]
   }
  },
