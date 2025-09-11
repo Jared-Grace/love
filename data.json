@@ -7955,7 +7955,8 @@
    "js_dollar_s",
    "js_let_add",
    "js_node_atomize",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_new"
   ],
   "list_get_end_2": [
    "js_atomize_function",
@@ -8429,7 +8430,8 @@
    "js_dollar_s",
    "marker_assign_replace",
    "js_declare_single_init",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_new"
   ],
   "assign_code": [
    "js_declare"
@@ -8440,7 +8442,8 @@
    "js_dollar_s",
    "js_let_add",
    "js_node_atomize",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_new"
   ],
   "js_declare_assign": [
    "js_declare_assign",
@@ -10768,7 +10771,8 @@
   ],
   "name2": [
    "app_replace_home",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_new"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -20537,6 +20541,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "js_declare",
     "function_transform",
     "app_name_main",
     "app_name_prefixed",
@@ -20549,6 +20554,9 @@
     "combined",
     "lambda",
     "ast",
+    "assign",
+    "name2",
+    "init",
     "output"
    ]
   },
