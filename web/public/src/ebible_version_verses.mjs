@@ -1,3 +1,4 @@
+import { import_install } from "./import_install.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_read } from "./file_read.mjs";
 import { folder_read } from "./folder_read.mjs";
@@ -8,6 +9,7 @@ export async function ebible_version_verses(bible_folder) {
   let files = folder_read(file_path);
   let joined = path_join([file_path, "index.htm"]);
   let contents = await file_read(joined);
+  await import_install(name);
   return contents;
   marker("1");
 }
