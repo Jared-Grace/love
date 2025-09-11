@@ -2794,7 +2794,8 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3005,7 +3006,8 @@
    "list_join_newline_2",
    "list_join_newline",
    "ebible_version_books_testament",
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4004,7 +4006,8 @@
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4793,7 +4796,8 @@
    "each_range_async",
    "function_transform_marker_specified",
    "function_rename_identifiers",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "sandbox"
   ],
   "f_paths": [
    "data_files_update",
@@ -19434,11 +19438,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "each_async",
     "ebible_versions",
     "marker",
     "ebible_version_verses",
     "sandbox",
     "unique",
+    "list",
+    "lambda",
+    "item",
     "contents"
    ],
    "async": true
