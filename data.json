@@ -1922,9 +1922,9 @@
   "ps",
   "s sand",
   "fd ebible_version_verses",
-  "p",
   "n html_parse_list_text_to",
   "de html_parse_list_text_to",
+  "p",
   "sb"
  ],
  "marker_current": "1",
