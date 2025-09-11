@@ -2526,7 +2526,8 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply"
+   "app_reply",
+   "app_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -8286,7 +8287,8 @@
   "js_call_new_expression": [
    "js_call_new_expression",
    "js_dollar_ie",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "app_new"
   ],
   "js_code_braces_empty": [
    "js_code_arrow",
@@ -11725,7 +11727,8 @@
    "js_calls_to_each"
   ],
   "expression2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new"
   ],
   "object_property_get_name": [
    "js_call_callee_name"
@@ -12270,6 +12273,9 @@
   ],
   "js_code_dot": [
    "js_code_dot",
+   "app_new"
+  ],
+  "ast2": [
    "app_new"
   ]
  },
@@ -20556,6 +20562,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "js_call_new_expression",
     "list_add",
     "js_declaration_single_block_body",
     "js_parse_expression",
@@ -20578,6 +20585,9 @@
     "expression",
     "assign",
     "body_block",
+    "expression2",
+    "f_name",
+    "ast2",
     "output"
    ]
   },
