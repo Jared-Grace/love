@@ -1,6 +1,7 @@
+import { list_filter_starts_with_not_multiple } from "./list_filter_starts_with_not_multiple.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
 import { log } from "./log.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_filter_starts_with_not } from "./list_filter_starts_with_not.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_version_download_path } from "./ebible_version_download_path.mjs";
 import { html_parse_href_text_map } from "./html_parse_href_text_map.mjs";
@@ -31,6 +32,7 @@ export async function ebible_version_verses(bible_folder) {
   log({
     mapped2,
   });
-  let filtered = list_filter_starts_with_not(mapped2, prefixes);
-  return filtered;
+  let filtered = list_filter_starts_with(mapped2, book_code);
+  let filtered2 = list_filter_starts_with_not_multiple(filtered, prefixes);
+  return filtered2;
 }
