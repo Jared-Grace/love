@@ -9,6 +9,7 @@ export async function sandbox() {
     let file_path = await ebible_version_download(item);
   }
   await each_async(list, lambda);
+  return;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
   return contents;
