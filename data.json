@@ -1941,9 +1941,9 @@
   "sb",
   "ebible",
   "s ebible",
-  "ebible_versions_download",
   "s try",
-  "s catch"
+  "s catch",
+  "ebible_versions_download"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
