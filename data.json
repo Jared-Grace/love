@@ -3202,7 +3202,8 @@
    "app_new",
    "html_parse_list_text_to",
    "html_parse_text",
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_version_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23382,6 +23383,7 @@
     "mapped2",
     "lambda",
     "item",
+    "v",
     "mapped3",
     "filtered"
    ]
