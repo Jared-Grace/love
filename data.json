@@ -11952,9 +11952,6 @@
   "emoji_question": [
    "app_reply_choices"
   ],
-  "travel": [
-   "app_reply_choices"
-  ],
   "string_the_servant_of_god": [
    "string_the_servant_of_god_is",
    "app_reply_choices"
@@ -12247,6 +12244,9 @@
   ],
   "extractAllTo": [
    "unzip"
+  ],
+  "travel_pray": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -22701,7 +22701,7 @@
     "heal",
     "job",
     "provide",
-    "travel",
+    "travel_pray",
     "will",
     "with2",
     "v",
