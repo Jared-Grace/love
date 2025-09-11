@@ -4966,7 +4966,8 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text"
+   "html_parse_text",
+   "sandbox"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12533,6 +12534,9 @@
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses"
+  ],
+  "url2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -19437,6 +19441,8 @@
     "ebible_version_verses",
     "sandbox",
     "url",
+    "text",
+    "url2",
     "contents"
    ],
    "async": true
