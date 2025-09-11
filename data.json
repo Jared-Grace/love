@@ -11017,7 +11017,8 @@
    "html_div",
    "app_replace_main",
    "app_replace_settings",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_verses"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -23169,7 +23170,8 @@
     "contents",
     "cheerio",
     "d",
-    "load"
+    "load",
+    "root"
    ]
   }
  },
