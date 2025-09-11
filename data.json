@@ -3286,8 +3286,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "ebible_versions_download"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -23641,8 +23640,7 @@
     "lambda",
     "item",
     "lambda3",
-    "file_path",
-    "message"
+    "file_path"
    ]
   }
  },
