@@ -3183,7 +3183,8 @@
    "app_new",
    "html_parse_list_text_to",
    "ebible_version_verses",
-   "html_parse_text"
+   "html_parse_text",
+   "html_parse_href"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3764,7 +3765,8 @@
    "http",
    "html_parse",
    "ebible_version_verses",
-   "html_parse_text"
+   "html_parse_text",
+   "html_parse_href"
   ],
   "data": [
    "data_all",
@@ -3963,7 +3965,8 @@
    "list_index_of_next_outside",
    "app_reply_main",
    "ebible_version_verses",
-   "html_parse_text"
+   "html_parse_text",
+   "html_parse_href"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4926,7 +4929,8 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text"
+   "html_parse_text",
+   "html_parse_href"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12365,6 +12369,9 @@
   ],
   "load": [
    "html_parse"
+  ],
+  "html_parse_href": [
+   "html_parse_href"
   ]
  },
  "functions": {
@@ -23287,6 +23294,16 @@
    "async": false,
    "identifiers": [
     "html_parse_text",
+    "d",
+    "item",
+    "v",
+    "text"
+   ]
+  },
+  "html_parse_href": {
+   "async": false,
+   "identifiers": [
+    "html_parse_href",
     "d",
     "item",
     "v",
