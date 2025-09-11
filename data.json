@@ -2783,7 +2783,8 @@
    "app_new",
    "html_parse_list_text_to",
    "ebible_version_books_testament",
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "list_filter_starts_with_not"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3989,7 +3990,8 @@
    "html_parse_text",
    "html_parse_href",
    "ebible_version_books_testament",
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "list_filter_starts_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5975,7 +5977,8 @@
    "ebible_version_books_testament",
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "list_filter_starts_with_not"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -6016,7 +6019,8 @@
    "list_filter_property",
    "list_find",
    "prompt_previous",
-   "search_generic"
+   "search_generic",
+   "list_filter_starts_with_not"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -8665,7 +8669,8 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http"
+   "http",
+   "list_filter_starts_with_not"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -9045,7 +9050,8 @@
    "list_any",
    "list_find",
    "list_filter",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "list_filter_starts_with_not"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -11298,7 +11304,8 @@
   "sw": [
    "string_starts_with",
    "app_reply_main",
-   "http"
+   "http",
+   "list_filter_starts_with_not"
   ],
   "only": [
    "list_single",
@@ -12445,7 +12452,8 @@
   ],
   "book_code": [
    "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "list_filter_starts_with_not"
   ],
   "string_take": [
    "string_take",
@@ -12483,6 +12491,9 @@
   ],
   "list_filter_starts_with": [
    "ebible_version_verses"
+  ],
+  "list_filter_starts_with_not": [
+   "list_filter_starts_with_not"
   ]
  },
  "functions": {
@@ -23514,6 +23525,20 @@
     "item",
     "both",
     "mapped"
+   ]
+  },
+  "list_filter_starts_with_not": {
+   "async": false,
+   "identifiers": [
+    "list_filter",
+    "string_starts_with",
+    "list_filter_starts_with_not",
+    "mapped",
+    "book_code",
+    "lambda",
+    "item",
+    "sw",
+    "filtered"
    ]
   }
  },
