@@ -5,7 +5,7 @@ import { ebible_version_verses } from "./ebible_version_verses.mjs";
 export async function sandbox() {
   let url = "https://ebible.org/download.php";
   let text = await http_local_text(url);
-  let result = await html_parse(contents2);
+  let { d, root } = await html_parse(text);
   return;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
