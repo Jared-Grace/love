@@ -1954,7 +1954,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "html_parse_read"
+   "html_parse_read",
+   "ebible_version_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3277,7 +3278,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_version_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -23373,6 +23375,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "list_map",
     "list_filter_starts_with_not",
     "list_map_property",
@@ -23402,6 +23405,7 @@
     "item",
     "combined",
     "prefixes",
+    "message",
     "filtered"
    ]
   },
