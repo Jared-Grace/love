@@ -3187,8 +3187,7 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12419,6 +12418,9 @@
   ],
   "class_new": [
    "ebible_version_books_testament_new"
+  ],
+  "classes": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23281,7 +23283,7 @@
     "bible_folder",
     "n",
     "o",
-    "v",
+    "classes",
     "mapped"
    ]
   },
