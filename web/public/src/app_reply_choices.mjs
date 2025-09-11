@@ -195,7 +195,8 @@ export function app_reply_choices() {
       text: emoji_pray() + " Share",
       response:
         emoji_pray() +
-        " What day and time are you asking me to share the word of God?",
+        " What day and time are you asking me to share the word of God? " +
+        emoji_book_open(),
     },
     provide,
     {
