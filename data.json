@@ -1917,10 +1917,11 @@
   "s dot",
   "s body",
   "s call",
-  "s bible"
+  "s bible",
+  "n ebible_version_verses"
  ],
  "marker_current": "1",
- "function_current": "js_code_dot",
+ "function_current": "ebible_version_verses",
  "terminal": false,
  "identifiers": {
   "log": [
