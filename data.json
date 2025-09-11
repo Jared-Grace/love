@@ -8454,7 +8454,8 @@
    "string_prefix_without",
    "string_starts_with",
    "firebase_service_account",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "sandbox"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -19442,6 +19443,7 @@
     "text",
     "d",
     "root",
+    "prefix",
     "filtered",
     "contents"
    ],
