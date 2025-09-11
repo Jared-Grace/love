@@ -3206,8 +3206,7 @@
    "html_parse_list_text_to",
    "html_parse_text",
    "html_parse_href",
-   "list_filter_starts_with_not_multiple",
-   "ebible_version_verses"
+   "list_filter_starts_with_not_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12530,7 +12529,8 @@
    "ebible_chapters"
   ],
   "chapters": [
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23395,7 +23395,7 @@
     "books",
     "first",
     "book_code",
-    "v"
+    "chapters"
    ]
   },
   "html_parse_find": {
