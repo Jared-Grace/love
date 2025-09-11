@@ -3896,7 +3896,8 @@
    "js_dollar_ir",
    "js_call_callee_name",
    "app_reply_main",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "ebible_version_books_testament"
   ],
   "data_save": [
    "data_file_update",
@@ -12473,7 +12474,7 @@
    "html_parse_href_text_map",
    "ebible_version_books_testament"
   ],
-  "taken2": [
+  "href2": [
    "ebible_version_books_testament"
   ]
  },
@@ -23428,6 +23429,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "string_take",
     "html_parse_href_text_map",
     "object_merge",
@@ -23449,12 +23451,12 @@
     "mapped",
     "lambda",
     "item",
-    "taken2",
+    "href2",
+    "taken",
     "href",
     "count",
     "to",
     "book_code",
-    "taken",
     "mapped2"
    ]
   },
