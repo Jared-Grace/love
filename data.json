@@ -3893,8 +3893,7 @@
    "js_dollar_ir",
    "js_call_callee_name",
    "app_reply_main",
-   "ebible_version_verses",
-   "ebible_version_books_testament"
+   "ebible_version_verses"
   ],
   "data_save": [
    "data_file_update",
@@ -6671,8 +6670,7 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer",
-   "ebible_version_books_testament"
+   "firebase_upload_buffer"
   ],
   "i": [
    "function_identifier_replace",
@@ -12442,7 +12440,6 @@
    "ebible_version_verses"
   ],
   "string_take": [
-   "ebible_version_books_testament",
    "string_take"
   ],
   "books": [
@@ -12462,9 +12459,6 @@
   "html_parse_find_list_to": [
    "ebible_version_books_testament",
    "ebible_version_verses"
-  ],
-  "to2": [
-   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23419,10 +23413,8 @@
    "async": true,
    "identifiers": [
     "object_merge",
-    "object_property_get",
     "html_parse_find_list_to",
     "html_parse_read",
-    "string_take",
     "list_map",
     "html_parse_href",
     "html_parse_text",
@@ -23444,11 +23436,9 @@
     "href",
     "v",
     "mapped",
-    "taken",
-    "book_code",
-    "to2",
     "to",
-    "from",
+    "book_code",
+    "taken",
     "mapped2"
    ]
   },
