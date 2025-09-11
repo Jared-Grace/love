@@ -3411,7 +3411,8 @@
    "app_reply_main",
    "http_local_file_name",
    "http_firebase_file_path",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "watcher": [
    "watch"
@@ -4660,7 +4661,8 @@
    "html_name_to_path_dev",
    "html_update_generic",
    "http_firebase_file_path",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "fs": [
    "folder_read",
@@ -9725,7 +9727,8 @@
    "object_property_exists"
   ],
   "list_of_segments": [
-   "path_join"
+   "path_join",
+   "ebible_version_verses"
   ],
   "then": [
    "promise_is"
@@ -23300,6 +23303,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "path_join",
     "ebible_version_download",
     "object_property_get",
     "list_first",
@@ -23319,7 +23323,9 @@
     "books",
     "first",
     "book_code",
-    "chapters_name"
+    "chapters_name",
+    "joined",
+    "list_of_segments"
    ]
   },
   "html_parse_find": {
