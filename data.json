@@ -6776,7 +6776,8 @@
    "http_local_file_name",
    "http_firebase_file_path",
    "http_local_text",
-   "ebible_version_download"
+   "ebible_version_download",
+   "sandbox"
   ],
   "__dirname": [
    "function_import",
@@ -19433,7 +19434,8 @@
     "marker",
     "ebible_version_verses",
     "sandbox",
-    "contents"
+    "contents",
+    "url"
    ],
    "async": true
   },
