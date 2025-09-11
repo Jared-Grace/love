@@ -1911,9 +1911,9 @@
   "n unzip",
   "p",
   "ebible_version_download engbsb",
-  "o an",
   "s app",
-  "s reply"
+  "s reply",
+  "o an"
  ],
  "marker_current": "1",
  "function_current": "app_new",
