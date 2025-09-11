@@ -4534,7 +4534,8 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "ebible_version_verses"
   ],
   "function_name_extension": [
    "functions_names",
@@ -10530,7 +10531,8 @@
   ],
   "path_folder": [
    "folder_read",
-   "firebase_service_account"
+   "firebase_service_account",
+   "ebible_version_verses"
   ],
   "fop": [
    "apps_get",
@@ -11210,7 +11212,8 @@
    "firebase_deploy_function_app_current"
   ],
   "files": [
-   "folder_read"
+   "folder_read",
+   "ebible_version_verses"
   ],
   "sw": [
    "string_starts_with",
@@ -23136,11 +23139,14 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "folder_read",
     "ebible_version_download",
     "marker",
     "ebible_version_verses",
     "bible_folder",
-    "file_path"
+    "file_path",
+    "files",
+    "path_folder"
    ]
   }
  },
