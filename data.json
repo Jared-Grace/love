@@ -1929,7 +1929,8 @@
   "s take",
   "s string",
   "n html_parse_read",
-  "sb"
+  "sb",
+  "s href"
  ],
  "marker_current": "1",
  "function_current": "html_parse_read",
