@@ -12489,11 +12489,9 @@
    "ebible_version_download",
    "ebible_version_verses"
   ],
-  "list_filter_starts_with": [
-   "ebible_version_verses"
-  ],
   "list_filter_starts_with_not": [
-   "list_filter_starts_with_not"
+   "list_filter_starts_with_not",
+   "ebible_version_verses"
   ],
   "string_starts_with_not": [
    "list_filter_starts_with_not"
@@ -23351,8 +23349,8 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "list_filter_starts_with_not",
     "list_map_property",
-    "list_filter_starts_with",
     "ebible_version_download_path",
     "html_parse_href_text_map",
     "html_parse_find_list_to",
