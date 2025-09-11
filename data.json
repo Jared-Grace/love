@@ -3668,7 +3668,8 @@
    "js_dollar_choice_arguments",
    "http_firebase",
    "http_local",
-   "html_parse_find"
+   "html_parse_find",
+   "ebible_version_verses"
   ],
   "separator": [
    "watch",
@@ -12306,12 +12307,16 @@
    "html_parse_find"
   ],
   "selector": [
-   "html_parse_find"
+   "html_parse_find",
+   "ebible_version_verses"
   ],
   "find": [
    "html_parse_find"
   ],
   "bl": [
+   "ebible_version_verses"
+  ],
+  "root2": [
    "ebible_version_verses"
   ]
  },
@@ -23180,7 +23185,10 @@
     "joined",
     "contents",
     "root",
-    "bl"
+    "bl",
+    "result",
+    "root2",
+    "selector"
    ]
   },
   "html_parse_find": {
