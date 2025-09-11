@@ -2982,8 +2982,7 @@
    "list_index_of_next_outside",
    "list_join_newline_2",
    "list_join_newline",
-   "ebible_version_books_testament",
-   "ebible_version_verses"
+   "ebible_version_books_testament"
   ],
   "v": [
    "data_identifiers_file",
@@ -3883,7 +3882,8 @@
    "js_calls_to_each",
    "js_dollar_ir",
    "js_call_callee_name",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_verses"
   ],
   "data_save": [
    "data_file_update",
@@ -12431,7 +12431,8 @@
    "ebible_version_verses"
   ],
   "book_code": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_version_verses"
   ],
   "string_take": [
    "ebible_version_books_testament",
@@ -23292,6 +23293,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "list_first",
     "ebible_class_old",
     "list_join_comma_space",
@@ -23305,7 +23307,7 @@
     "classes",
     "books",
     "first",
-    "list"
+    "book_code"
    ]
   },
   "html_parse_find": {
