@@ -5812,7 +5812,8 @@
    "js_dollar_new",
    "js_expand_generic",
    "js_declaration_single_block_body_add_return",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "app_new"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -11582,7 +11583,8 @@
    "task_new",
    "marker_top",
    "js_dollar_new",
-   "js_declaration_single_block_body_add_return"
+   "js_declaration_single_block_body_add_return",
+   "app_new"
   ],
   "choice_name": [
    "js_dollar"
@@ -20553,6 +20555,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "js_declaration_single_block_body",
     "js_parse_expression",
     "js_code_dot",
     "js_declare",
@@ -20572,6 +20575,7 @@
     "code",
     "expression",
     "assign",
+    "body_block",
     "output"
    ]
   },
