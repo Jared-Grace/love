@@ -1,8 +1,6 @@
 import { object_merge } from "./object_merge.mjs";
-import { object_property_get } from "./object_property_get.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
-import { string_take } from "./string_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_href } from "./html_parse_href.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
@@ -26,15 +24,13 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   }
   let mapped = list_map(list, lambda);
   function lambda(item) {
-    let href = object_property_get(item, "href");
-    let taken = string_take(href, 3);
-    let v = {
-      text,
-      href,
-      book_code: taken,
-    };
-    let to2 = object_merge(to, from);
-    return v;
+    let to = object_merge(
+      {
+        book_code: taken,
+      },
+      item,
+    );
+    return to;
   }
   let mapped2 = list_map(mapped, lambda);
   return mapped2;
