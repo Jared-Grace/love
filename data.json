@@ -4420,8 +4420,7 @@
    "string_suffix_without",
    "string_prefix_without",
    "string_skip",
-   "string_slice",
-   "ebible_version_books_testament"
+   "string_slice"
   ],
   "string_size": [
    "string_suffix_without",
@@ -12427,6 +12426,9 @@
    "ebible_version_verses"
   ],
   "book_code": [
+   "ebible_version_books_testament"
+  ],
+  "string_take": [
    "ebible_version_books_testament"
   ]
  },
@@ -23370,7 +23372,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
-    "string_slice",
+    "string_take",
     "list_map",
     "html_parse_href",
     "html_parse_text",
