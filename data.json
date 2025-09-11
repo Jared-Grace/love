@@ -1925,8 +1925,8 @@
   "n html_parse_list_text_to",
   "de html_parse_list_text_to",
   "p",
-  "sb",
-  "c html_parse_text html_parse_href"
+  "c html_parse_text html_parse_href",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "html_parse_href",
