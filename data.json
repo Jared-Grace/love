@@ -3378,7 +3378,8 @@
    "chalk_color",
    "clipboard_copy",
    "firebase_admin_get",
-   "unzip"
+   "unzip",
+   "ebible_version_verses"
   ],
   "joined": [
    "watch",
@@ -23164,6 +23165,7 @@
     "joined",
     "contents",
     "cheerio",
+    "default",
     "d"
    ]
   }
