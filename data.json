@@ -3175,8 +3175,7 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
-   "ebible_version_verses"
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12325,6 +12324,9 @@
    "ebible_version_verses"
   ],
   "html_parse_list_to": [
+   "ebible_version_verses"
+  ],
+  "html_parse_text": [
    "ebible_version_verses"
   ]
  },
@@ -23179,6 +23181,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_text",
     "list_map",
     "html_parse_list_to",
     "html_parse_find",
@@ -23200,7 +23203,6 @@
     "list",
     "lambda",
     "item",
-    "v",
     "text",
     "mapped"
    ]
