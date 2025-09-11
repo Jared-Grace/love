@@ -1933,9 +1933,9 @@
   "s start",
   "as filter",
   "p",
-  "sb",
   "c list_filter_starts_with list_filter_starts_with_not",
-  "cs list_filter_starts_with_not multiple"
+  "cs list_filter_starts_with_not multiple",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_filter_starts_with_not_multiple",
