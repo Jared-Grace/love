@@ -9,7 +9,7 @@ export async function ebible_version_verses(bible_folder) {
   let files = folder_read(file_path);
   let joined = path_join([file_path, "index.htm"]);
   let contents = await file_read(joined);
-  let cheerio = await import_install("cheerio");
+  let cheerio = await (await import_install("cheerio")).default;
   let d = cheerio(contents);
   return d;
   marker("1");
