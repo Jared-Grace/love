@@ -18,6 +18,6 @@ export async function ebible_version_verses(bible_folder) {
   let query = html_parse_find(bl, ".oo");
   let list = html_parse_list_to(query);
   let mapped = list_map(list, html_parse_text);
-  return list;
+  return mapped;
   marker("1");
 }
