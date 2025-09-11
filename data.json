@@ -4473,8 +4473,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "ebible_version_verses"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -23363,7 +23362,6 @@
     "lambda",
     "item",
     "sw",
-    "s",
     "filtered"
    ]
   },
