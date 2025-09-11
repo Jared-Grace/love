@@ -1,3 +1,4 @@
+import { js_code_dot } from "./js_code_dot.mjs";
 import { js_declare } from "./js_declare.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { app_name_main } from "./app_name_main.mjs";
@@ -11,7 +12,7 @@ export async function app_new(name) {
   let combined = app_name_main(name);
   await function_new(a_name);
   async function lambda(ast) {
-    jcd;
+    let v = js_code_dot(left, right);
     let assign = js_declare("f_name", init);
   }
   let output = await function_transform(a_name, lambda);
