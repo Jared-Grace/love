@@ -1938,7 +1938,7 @@
   "cs list_filter_starts_with_not multiple"
  ],
  "marker_current": "1",
- "function_current": "list_filter_starts_with_not",
+ "function_current": "list_filter_starts_with_not_multiple",
  "terminal": false,
  "identifiers": {
   "log": [
