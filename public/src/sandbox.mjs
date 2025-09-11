@@ -12,7 +12,8 @@ export async function sandbox() {
   const prefix = "details.php?id=";
   let filtered = html_parse_find_a_href_starts_with(root, d, prefix);
   let result = string_prefix_without(s, prefix);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return filtered;
   marker("1");
   let contents = await ebible_version_verses("engbsb");
