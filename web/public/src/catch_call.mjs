@@ -1,6 +1,6 @@
 import { marker } from "./marker.mjs";
 export function catch_call(reject, lambda) {
-  let v = function inner() {
+  let i = function inner() {
     let result = null;
     try {
       result = lambda();
@@ -10,5 +10,5 @@ export function catch_call(reject, lambda) {
     marker("1");
     return result;
   };
-  return v;
+  return i;
 }
