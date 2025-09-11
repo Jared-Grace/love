@@ -8670,8 +8670,7 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http",
-   "list_filter_starts_with_not"
+   "http"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12494,6 +12493,9 @@
    "ebible_version_verses"
   ],
   "list_filter_starts_with_not": [
+   "list_filter_starts_with_not"
+  ],
+  "string_starts_with_not": [
    "list_filter_starts_with_not"
   ]
  },
@@ -23533,13 +23535,13 @@
    "identifiers": [
     "marker",
     "list_filter",
-    "string_starts_with",
     "list_filter_starts_with_not",
     "mapped",
     "book_code",
     "lambda",
     "item",
     "sw",
+    "string_starts_with_not",
     "filtered"
    ]
   }
