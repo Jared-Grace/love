@@ -12293,9 +12293,6 @@
   ],
   "ebible_version_verses": [
    "ebible_version_verses"
-  ],
-  "file_path2": [
-   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23159,8 +23156,7 @@
     "file_path",
     "files",
     "joined",
-    "contents",
-    "file_path2"
+    "contents"
    ]
   }
  },
