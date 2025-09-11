@@ -12421,6 +12421,9 @@
   ],
   "classes": [
    "ebible_version_verses"
+  ],
+  "string_take": [
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23387,6 +23390,7 @@
     "item",
     "text",
     "href",
+    "string_take",
     "v",
     "mapped"
    ]
@@ -23403,7 +23407,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-11T18:18:53.372Z",
+ "git_push_when": "2025-09-11T20:09:56.660Z",
  "error_attention": null,
  "app_current": "replace"
 }
