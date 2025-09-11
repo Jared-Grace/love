@@ -12263,8 +12263,7 @@
   ],
   "bible_folder": [
    "ebible_version_download",
-   "ebible_version_verses",
-   "sandbox"
+   "ebible_version_verses"
   ],
   "unzip": [
    "unzip",
@@ -19193,8 +19192,7 @@
   "sandbox": {
    "identifiers": [
     "ebible_version_verses",
-    "sandbox",
-    "bible_folder"
+    "sandbox"
    ],
    "async": true
   },
