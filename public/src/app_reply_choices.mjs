@@ -191,6 +191,12 @@ export function app_reply_choices() {
       text: emoji_pray() + " " + "Replying",
       response: emoji_pray() + "I am replying to messages 📨",
     },
+    {
+      text: emoji_pray() + " Share",
+      response:
+        emoji_pray() +
+        " What day and time are you asking me to share the word of God?",
+    },
     provide,
     {
       text: emoji_pray() + " Sleep",
