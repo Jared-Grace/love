@@ -180,7 +180,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Preach",
       response:
         emoji_pray() +
-        "If God wills, then yes I will preach. I am not available 10 am to 12 pm every day.",
+        "If God wills, then yes I will preach. I am not available 10 am to 12 pm every day EST. Do you have a day and time?",
     },
     {
       text: emoji_pray() + " " + "Prayers",
