@@ -2971,7 +2971,8 @@
    "list_next_try",
    "list_index_of_next_outside",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "ebible_version_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -3173,8 +3174,7 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
-   "ebible_version_verses"
+   "app_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23187,7 +23187,7 @@
     "root",
     "bl",
     "query",
-    "v",
+    "list",
     "get"
    ]
   },
