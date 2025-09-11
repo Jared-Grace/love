@@ -12299,10 +12299,10 @@
   "html_parse": [
    "ebible_version_verses"
   ],
-  "find": [
+  "selector": [
    "ebible_version_verses"
   ],
-  "selector": [
+  "html_parse_find": [
    "ebible_version_verses"
   ]
  },
@@ -23157,6 +23157,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_find",
     "html_parse",
     "path_join",
     "file_read",
@@ -23170,8 +23171,7 @@
     "joined",
     "contents",
     "root",
-    "selector",
-    "find"
+    "selector"
    ]
   }
  },
