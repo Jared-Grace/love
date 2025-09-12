@@ -8,8 +8,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
-  let include = ["m", "b", "pmo", "q", "q2"];
+  let include = ["m", "pmo", "q", "q2"];
   let exclude = [
+    "b",
     "chapterlabel",
     "copyright",
     "f",
