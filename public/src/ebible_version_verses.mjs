@@ -6,8 +6,8 @@ import { list_first } from "./list_first.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_version_verses(bible_folder) {
   let books = await ebible_version_books(bible_folder);
-  async function lambda(item) {}
-  await each_async(list, lambda);
+  await each_async(books, lambda);
+  async function lambda(book) {}
   marker("1");
   let first = list_first(books);
   let book_code = object_property_get(first, "book_code");
