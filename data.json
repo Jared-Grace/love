@@ -2830,7 +2830,8 @@
    "ebible_verses",
    "ebible_version_verses",
    "list_adder_generic_async",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4062,7 +4063,8 @@
    "ebible_versions_download",
    "html_parse_descendants_classes",
    "ebible_verses",
-   "list_adder_generic_async"
+   "list_adder_generic_async",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4860,7 +4862,8 @@
    "js_calls_to_each",
    "ebible_versions_download",
    "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "f_paths": [
    "data_files_update",
@@ -10692,7 +10695,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19616,11 +19620,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "each_async",
     "ebible_chapter_codes",
     "ebible_verses",
     "marker",
     "sandbox",
     "list",
+    "list2",
+    "lambda",
+    "item",
     "contents"
    ],
    "async": true
