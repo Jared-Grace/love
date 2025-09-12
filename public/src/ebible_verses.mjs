@@ -34,10 +34,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "verse",
   ];
   let list2 = list_difference(classes, include);
-  let list3 = list_difference(list2, exclude);
-  let e = list_empty_is(list3);
+  let extra = list_difference(list2, exclude);
+  let e = list_empty_is(extra);
   assert_json(e, {
-    e,
+    extra,
   });
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
