@@ -3727,8 +3727,7 @@
    "html_parse_find",
    "html_parse",
    "catch_call",
-   "http",
-   "ebible_verses"
+   "http"
   ],
   "separator": [
    "watch",
@@ -12443,8 +12442,7 @@
    "html_parse_list_text_to"
   ],
   "html_parse_text": [
-   "html_parse_text",
-   "ebible_verses"
+   "html_parse_text"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -12589,6 +12587,12 @@
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
+   "ebible_verses"
+  ],
+  "main": [
+   "ebible_verses"
+  ],
+  "descendants": [
    "ebible_verses"
   ]
  },
@@ -23700,7 +23704,6 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "html_parse_text",
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
@@ -23710,7 +23713,8 @@
     "joined",
     "d",
     "root",
-    "result",
+    "main",
+    "descendants",
     "v"
    ]
   }
