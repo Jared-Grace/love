@@ -15,6 +15,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     return c;
   }
   let mapped = list_map(descendants, lambda);
-  let unique = list_unique(list);
-  return mapped;
+  let unique = list_unique(mapped);
+  return unique;
 }
