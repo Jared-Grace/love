@@ -3034,8 +3034,7 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_version_verses"
+   "html_parse_descendants_classes"
   ],
   "v": [
    "data_identifiers_file",
@@ -4044,8 +4043,7 @@
    "ebible_chapters",
    "ebible_versions_download",
    "html_parse_descendants_classes",
-   "ebible_verses",
-   "ebible_version_verses"
+   "ebible_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12670,6 +12668,9 @@
   ],
   "list3": [
    "ebible_verses"
+  ],
+  "book": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23537,8 +23538,7 @@
     "bible_folder",
     "books",
     "lambda",
-    "item",
-    "list",
+    "book",
     "first",
     "book_code",
     "chapters"
