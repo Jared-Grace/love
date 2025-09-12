@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { list_any } from "./list_any.mjs";
 import { assert } from "./assert.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
@@ -30,8 +31,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  function lambda2(item2) {}
-  let any = list_any(list, lambda2);
+  function lambda2(item2) {
+    let includes = list_includes(list, item3);
+  }
+  let any = list_any([include, exclude], lambda2);
   assert(b);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
