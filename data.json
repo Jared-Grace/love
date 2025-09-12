@@ -12553,7 +12553,6 @@
    "ebible_chapters"
   ],
   "ebible_versions_download": [
-   "sandbox",
    "ebible_versions_download"
   ],
   "ebible_versions": [
@@ -19473,7 +19472,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_versions_download",
     "marker",
     "ebible_version_verses",
     "sandbox",
@@ -23686,7 +23684,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-12T03:30:51.844Z",
+ "git_push_when": "2025-09-12T17:59:52.064Z",
  "error_attention": null,
  "app_current": "replace"
 }
