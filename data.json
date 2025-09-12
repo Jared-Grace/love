@@ -2813,7 +2813,8 @@
    "ebible_versions_download",
    "catch_call",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3456,7 +3457,8 @@
    "http_firebase_file_path",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "watcher": [
    "watch"
@@ -3822,7 +3824,8 @@
    "html_parse_href_text_map",
    "ebible_chapters",
    "ebible_verses",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_chapter_classes"
   ],
   "data": [
    "data_all",
@@ -4112,7 +4115,8 @@
    "function_exists_inner",
    "firebase_storage_exists",
    "catch_call",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5004,7 +5008,8 @@
    "http_local_text",
    "html_parse_list_text_to",
    "html_parse_text",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6976,12 +6981,14 @@
    "list_to_dictionary",
    "search_generic",
    "data_identifiers_search",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "dictionary": [
    "function_names_to_acronyms",
    "list_to_dictionary",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "function_name_separator": [
    "function_name_combine_multiple",
@@ -9974,7 +9981,8 @@
    "js_dollar",
    "js_calls_to_each",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "found": [
    "visit_unique_async"
@@ -11153,7 +11161,8 @@
    "html_parse",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -12414,7 +12423,8 @@
    "ebible_version_books_testament",
    "ebible_version_books_testament_old",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "unzip": [
    "unzip",
@@ -12449,7 +12459,8 @@
   "html_parse_find": [
    "html_parse_find",
    "ebible_version_books_testament",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "selector": [
    "html_parse_find",
@@ -12463,7 +12474,8 @@
   ],
   "html_parse_text": [
    "html_parse_text",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -12531,7 +12543,8 @@
    "html_parse_read",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "ebible_version_books": [
    "ebible_version_verses"
@@ -12603,14 +12616,17 @@
    "sandbox"
   ],
   "chapter_code": [
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "main": [
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "html_parse_attr": [
    "html_parse_href",
@@ -12618,14 +12634,19 @@
   ],
   "html_parse_descendants_classes": [
    "ebible_verses",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_chapter_classes"
   ],
   "descendants": [
    "html_parse_descendants_classes"
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
+  ],
+  "ebible_chapter_classes": [
+   "ebible_chapter_classes"
   ]
  },
  "functions": {
@@ -23779,6 +23800,30 @@
     "split",
     "list",
     "classes"
+   ]
+  },
+  "ebible_chapter_classes": {
+   "async": true,
+   "identifiers": [
+    "html_parse_text",
+    "list_to_dictionary",
+    "html_parse_descendants_classes",
+    "html_parse_find",
+    "html_parse_read",
+    "ebible_version_download_path_combine",
+    "ebible_chapter_classes",
+    "bible_folder",
+    "chapter_code",
+    "joined",
+    "d",
+    "root",
+    "main",
+    "classes",
+    "lambda",
+    "c",
+    "e",
+    "text",
+    "dictionary"
    ]
   }
  },
