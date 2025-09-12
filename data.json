@@ -3026,8 +3026,7 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "v": [
    "data_identifiers_file",
@@ -4032,8 +4031,7 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -9972,7 +9970,8 @@
    "function_aliases_restore",
    "js_dollar",
    "js_calls_to_each",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ],
   "found": [
    "visit_unique_async"
@@ -23748,9 +23747,8 @@
     "main",
     "classes",
     "lambda",
-    "item",
-    "dictionary",
-    "list"
+    "c",
+    "dictionary"
    ]
   },
   "html_parse_descendants_classes": {
