@@ -16,6 +16,7 @@ export async function ebible_chapters(bible_folder, book_code) {
   let chapters = list_filter_starts_with_not_multiple(filtered, prefixes);
   function lambda2(item2) {
     let without = string_suffix_without(item2, ".htm");
+    return without;
   }
   let mapped = list_map(list, lambda2);
   return chapters;
