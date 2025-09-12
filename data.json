@@ -1948,11 +1948,11 @@
   "s href",
   "s list_to",
   "fd ebible_verses",
-  "p",
   "s dict",
   "sb",
   "c ebible_verses ebible_chapter_classes",
   "ps",
+  "p",
   "ebible_chapter_classes engbsb GEN01"
  ],
  "marker_current": "1",
