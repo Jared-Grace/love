@@ -10695,8 +10695,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19628,8 +19627,7 @@
     "list",
     "lambda",
     "item",
-    "contents",
-    "list2"
+    "contents"
    ],
    "async": true
   },
