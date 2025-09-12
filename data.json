@@ -873,7 +873,6 @@
   "function_name_to_acronym function_name_to_acronym",
   "n function_names_to_acronyms",
   "s lookup",
-  "s dict",
   "s object",
   "n list_to_dictionary",
   "so doll",
@@ -1951,7 +1950,8 @@
   "p",
   "sb",
   "ps",
-  "fd ebible_verses"
+  "fd ebible_verses",
+  "s dict"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
