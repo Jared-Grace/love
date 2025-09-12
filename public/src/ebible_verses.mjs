@@ -36,7 +36,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let e = list_empty_is(extra);
-  let dictionary = html_parse_classes_preview(main, d, include);
+  let dictionary = html_parse_classes_preview(main, d, extra);
   assert_json(e, {
     extra,
     dictionary,
