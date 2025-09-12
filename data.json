@@ -12462,8 +12462,7 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament",
-   "ebible_verses"
+   "ebible_version_books_testament"
   ],
   "find": [
    "html_parse_find"
@@ -23782,7 +23781,6 @@
     "exclude",
     "lambda",
     "item",
-    "selector",
     "list",
     "dictionary"
    ]
