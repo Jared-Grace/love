@@ -1,3 +1,4 @@
+import { ebible_verses_include } from "./ebible_verses_include.mjs";
 import { log } from "./log.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -15,20 +16,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
   let classes = html_parse_descendants_classes(main, d);
-  let include = [
-    "d",
-    "fk",
-    "it",
-    "li",
-    "li2",
-    "m",
-    "p",
-    "pc",
-    "pmo",
-    "q",
-    "q2",
-    "qr",
-  ];
+  let include = ebible_verses_include();
   let exclude = [
     "b",
     "chapterlabel",
