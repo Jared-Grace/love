@@ -29,6 +29,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "notebackref",
     "notemark",
     "popup",
+    "qa",
     "r",
     "s",
     "s2",
