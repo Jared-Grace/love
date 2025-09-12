@@ -6981,7 +6981,8 @@
   "dictionary": [
    "function_names_to_acronyms",
    "list_to_dictionary",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses"
   ],
   "function_name_separator": [
    "function_name_combine_multiple",
@@ -12630,7 +12631,8 @@
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses"
   ],
   "ebible_chapter_classes": [
    "ebible_chapter_classes"
@@ -12639,7 +12641,8 @@
    "ebible_verses"
   ],
   "html_parse_classes_preview": [
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23750,6 +23753,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_classes_preview",
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
@@ -23760,6 +23764,8 @@
     "d",
     "root",
     "main",
+    "dictionary",
+    "classes",
     "include"
    ]
   },
