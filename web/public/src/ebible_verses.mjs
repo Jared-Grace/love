@@ -16,13 +16,19 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "b",
     "s2",
     "pmo",
-    "notemark",
-    "popup",
     "q",
     "q2",
     "f",
   ];
   let dictionary = html_parse_classes_preview(main, d, include);
-  let exclude = ["copyright", "footnote", "ft", "notebackref", "tnav"];
+  let exclude = [
+    "copyright",
+    "footnote",
+    "ft",
+    "notebackref",
+    "notemark",
+    "popup",
+    "tnav",
+  ];
   return dictionary;
 }
