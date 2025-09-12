@@ -1948,7 +1948,8 @@
   "ebible_version_download khm-h",
   "ebible_versions_download",
   "n ebible_verses",
-  "ebible_chapters engbsb GEN"
+  "ebible_chapters engbsb GEN",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
