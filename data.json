@@ -4612,7 +4612,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_calls_to_each",
-   "list_all"
+   "list_all",
+   "ebible_verses"
   ],
   "without": [
    "string_suffix_without",
@@ -4894,8 +4895,7 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to",
-   "ebible_verses"
+   "buffer_string_to"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -23809,7 +23809,7 @@
     "includes",
     "list",
     "any",
-    "b",
+    "a",
     "dictionary",
     "lambda",
     "item"
