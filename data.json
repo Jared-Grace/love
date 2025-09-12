@@ -4433,7 +4433,8 @@
    "js_identifier_unique",
    "string_ends_with",
    "function_rename_suffix_add",
-   "functions_names"
+   "functions_names",
+   "ebible_chapters"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -4468,7 +4469,8 @@
    "string_suffix_without",
    "functions_names",
    "function_identifier_replace_ending_remove",
-   "string_suffix_change"
+   "string_suffix_change",
+   "ebible_chapters"
   ],
   "not": [
    "string_suffix_without",
@@ -4645,7 +4647,8 @@
   "without": [
    "string_suffix_without",
    "string_suffix_change",
-   "functions_names"
+   "functions_names",
+   "ebible_chapters"
   ],
   "ending_old": [
    "function_watch_ending_change",
@@ -8543,8 +8546,7 @@
    "string_prefix_without",
    "string_starts_with",
    "firebase_service_account",
-   "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "list_filter_starts_with_not_multiple"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8772,8 +8774,7 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http",
-   "ebible_chapters"
+   "http"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -11418,8 +11419,7 @@
    "app_reply_main",
    "http",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "list_filter_starts_with_not_multiple"
   ],
   "only": [
    "list_single",
@@ -23798,7 +23798,7 @@
   "ebible_chapters": {
    "async": true,
    "identifiers": [
-    "string_starts_with",
+    "string_suffix_without",
     "ebible_version_download_path_combine",
     "html_parse_find_a_href_starts_with",
     "list_filter_starts_with_not_multiple",
@@ -23818,9 +23818,9 @@
     "chapters",
     "lambda2",
     "item2",
-    "sw",
+    "without",
     "s",
-    "prefix",
+    "suffix",
     "mapped",
     "list"
    ]
