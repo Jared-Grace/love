@@ -1,3 +1,4 @@
+import { string_starts_with } from "./string_starts_with.mjs";
 import { ebible_version_download_path_combine } from "./ebible_version_download_path_combine.mjs";
 import { html_parse_find_a_href_starts_with } from "./html_parse_find_a_href_starts_with.mjs";
 import { list_filter_starts_with_not_multiple } from "./list_filter_starts_with_not_multiple.mjs";
@@ -13,7 +14,9 @@ export async function ebible_chapters(bible_folder, book_code) {
   }
   let prefixes = list_map(["00", "000"], lambda);
   let chapters = list_filter_starts_with_not_multiple(filtered, prefixes);
-  function lambda2(item2) {}
+  function lambda2(item2) {
+    let sw = string_starts_with(s, prefix);
+  }
   let mapped = list_map(list, lambda2);
   return chapters;
 }
