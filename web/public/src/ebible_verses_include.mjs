@@ -1,0 +1,17 @@
+export function ebible_verses_include() {
+  let v = [
+    "d",
+    "fk",
+    "it",
+    "li",
+    "li2",
+    "m",
+    "p",
+    "pc",
+    "pmo",
+    "q",
+    "q2",
+    "qr",
+  ];
+  return v;
+}
