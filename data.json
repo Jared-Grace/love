@@ -5376,8 +5376,7 @@
    "list_first",
    "list_single",
    "list_first_second_generic",
-   "js_dollar_a",
-   "ebible_version_verses"
+   "js_dollar_a"
   ],
   "each_multiple": [
    "each_multiple",
@@ -5398,8 +5397,7 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find_property",
-   "js_dollar_a",
-   "ebible_version_verses"
+   "js_dollar_a"
   ],
   "items": [
    "each_multiple",
@@ -23532,14 +23530,12 @@
     "ebible_chapters",
     "ebible_version_books",
     "object_property_get",
-    "list_first",
     "marker",
     "ebible_version_verses",
     "bible_folder",
     "books",
     "lambda",
     "book",
-    "first",
     "book_code",
     "chapters"
    ]
