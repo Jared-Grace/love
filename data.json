@@ -1941,7 +1941,6 @@
   "s catch",
   "n catch_call",
   "fd http",
-  "sb",
   "ebible_version_download khm-h",
   "ebible_versions_download",
   "n ebible_verses",
@@ -1950,7 +1949,8 @@
   "ebible_verses engbsb GEN01",
   "s text",
   "s find",
-  "ps"
+  "ps",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
