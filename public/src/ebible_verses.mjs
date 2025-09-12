@@ -1,3 +1,4 @@
+import { ebible_verses_exclude } from "./ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "./ebible_verses_include.mjs";
 import { log } from "./log.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -17,28 +18,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let main = html_parse_find(root, ".main");
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
-  let exclude = [
-    "b",
-    "chapterlabel",
-    "copyright",
-    "f",
-    "fq",
-    "fqa",
-    "footnote",
-    "ft",
-    "mt",
-    "mr",
-    "ms",
-    "notebackref",
-    "notemark",
-    "popup",
-    "qa",
-    "r",
-    "s",
-    "s2",
-    "tnav",
-    "verse",
-  ];
+  let exclude = ebible_verses_exclude();
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let e = list_empty_is(extra);
