@@ -1955,7 +1955,7 @@
   "c ebible_verses ebible_chapter_classes"
  ],
  "marker_current": "1",
- "function_current": "ebible_verses",
+ "function_current": "ebible_chapter_classes",
  "terminal": false,
  "identifiers": {
   "log": [
