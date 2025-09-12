@@ -5,7 +5,8 @@ import { marker } from "./marker.mjs";
 export async function sandbox() {
   marker("1");
   let list = await ebible_chapter_codes("engbsb");
-  await each_async(list2, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list2, lambda);
   let contents = await ebible_verses("engbsb", "GEN01");
   return contents;
 }
