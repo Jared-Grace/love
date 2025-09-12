@@ -1953,7 +1953,6 @@
   "ebible_chapter_classes engbsb GEN01",
   "s class",
   "s sort",
-  "p",
   "s classes",
   "s list_",
   "s verses",
@@ -1964,6 +1963,7 @@
   "r ebible_version_verses ebible_chapter_codes",
   "ebible_chapter_codes engbsb",
   "s suff",
+  "p",
   "sb"
  ],
  "marker_current": "1",
