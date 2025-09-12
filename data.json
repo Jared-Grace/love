@@ -1970,7 +1970,8 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "html_parse_read"
+   "html_parse_read",
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3297,7 +3298,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3629,8 +3631,7 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "html_parse_href",
-   "ebible_verses"
+   "html_parse_href"
   ],
   "output": [
    "watch",
@@ -4765,8 +4766,7 @@
    "js_statement_call_get",
    "list_all",
    "http",
-   "html_parse_list_text_to",
-   "ebible_verses"
+   "html_parse_list_text_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -9961,7 +9961,8 @@
    "js_identifiers_named_count",
    "function_aliases_restore",
    "js_dollar",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "ebible_verses"
   ],
   "found": [
    "visit_unique_async"
@@ -12603,12 +12604,6 @@
   ],
   "html_parse_attr": [
    "html_parse_href",
-   "ebible_verses"
-  ],
-  "d2": [
-   "ebible_verses"
-  ],
-  "item2": [
    "ebible_verses"
   ]
  },
@@ -23721,6 +23716,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "html_parse_attr",
     "list_map",
     "html_parse_find_list_to",
@@ -23737,10 +23733,8 @@
     "descendants",
     "lambda",
     "item",
-    "v2",
-    "d2",
-    "item2",
-    "name",
+    "c",
+    "message",
     "mapped",
     "list",
     "v"
