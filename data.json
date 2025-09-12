@@ -3224,7 +3224,6 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "html_parse_href",
    "list_filter_starts_with_not_multiple",
    "ebible_verses"
   ],
@@ -3627,7 +3626,8 @@
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_reply"
+   "app_reply",
+   "html_parse_href"
   ],
   "output": [
    "watch",
@@ -12484,7 +12484,8 @@
   ],
   "href": [
    "string_take",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_href"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old"
@@ -23520,7 +23521,8 @@
     "html_parse_href",
     "d",
     "item",
-    "v",
+    "name",
+    "href",
     "attr"
    ]
   },
