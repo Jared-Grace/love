@@ -23,7 +23,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  function lambda(item) {}
+  function lambda(item) {
+    let result = html_parse_find(root2, selector);
+  }
   each(list, lambda);
   let dictionary = html_parse_classes_preview(main, d, include);
   return dictionary;
