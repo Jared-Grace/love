@@ -10,6 +10,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   function lambda(c) {
     let e = html_parse_find(root, "." + c);
+    hpt;
   }
   let dictionary = list_to_dictionary(classes, lambda);
   return classes;
