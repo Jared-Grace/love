@@ -3050,7 +3050,8 @@
    "ebible_version_verses",
    "list_adder_multiple_async",
    "list_adder_generic_async",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -12457,7 +12458,8 @@
    "ebible_chapters",
    "ebible_verses",
    "ebible_chapter_classes",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -12714,7 +12716,8 @@
    "list_adder_multiple_async"
   ],
   "ebible_chapter_codes": [
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ]
  },
  "functions": {
@@ -19614,9 +19617,12 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_chapter_codes",
     "ebible_verses",
     "marker",
     "sandbox",
+    "list",
+    "bible_folder",
     "contents"
    ],
    "async": true
