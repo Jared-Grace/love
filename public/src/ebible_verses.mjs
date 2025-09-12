@@ -1,3 +1,4 @@
+import { html_parse_find_remove } from "./html_parse_find_remove.mjs";
 import { each } from "./each.mjs";
 import { html_parse_classes_preview } from "./html_parse_classes_preview.mjs";
 import { html_parse_find } from "./html_parse_find.mjs";
@@ -24,8 +25,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "verse",
   ];
   function lambda(item) {
-    let result = html_parse_find(main, "." + item);
-    result.remove();
+    const selector = "." + item;
+    html_parse_find_remove(main, selector);
   }
   each(list, lambda);
   let dictionary = html_parse_classes_preview(main, d, include);
