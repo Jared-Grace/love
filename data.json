@@ -1957,7 +1957,8 @@
   "sb",
   "s classes",
   "s list_",
-  "s verses"
+  "s verses",
+  "s list_add"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_classes",
