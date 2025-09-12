@@ -2702,7 +2702,6 @@
    "lambda_invoke",
    "list_adder_async",
    "list_adder_generic",
-   "list_adder_multiple",
    "list_adder_unique",
    "list_adder_unique_async",
    "list_map_property_to",
@@ -9406,7 +9405,8 @@
    "list_adder_multiple"
   ],
   "lambda$la": [
-   "list_adder"
+   "list_adder",
+   "list_adder_multiple"
   ],
   "list_adder_inner": [
    "list_adder_async",
@@ -17599,7 +17599,7 @@
     "list_adder_generic",
     "list_add_multiple",
     "list_adder_multiple",
-    "lambda",
+    "lambda$la",
     "fn",
     "list"
    ],
