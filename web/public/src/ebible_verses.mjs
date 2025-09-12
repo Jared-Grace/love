@@ -32,12 +32,13 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  function lambda3(item4) {}
-  list_all(list2, lambda3);
-  function lambda2(item2) {
-    let includes = list_includes(list, item3);
+  function lambda3(c) {
+    function lambda2(item2) {
+      let includes = list_includes(list, c);
+    }
+    let any = list_any([include, exclude], lambda2);
   }
-  let any = list_any([include, exclude], lambda2);
+  list_all(classes, lambda3);
   assert(b);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
