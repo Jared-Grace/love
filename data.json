@@ -2809,7 +2809,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
    "ebible_versions_download",
-   "catch_call"
+   "catch_call",
+   "html_parse_descendants_classes"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3021,7 +3022,8 @@
    "list_join_newline",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "html_parse_descendants_classes"
   ],
   "v": [
    "data_identifiers_file",
@@ -3815,7 +3817,8 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "html_parse_descendants_classes"
   ],
   "data": [
    "data_all",
@@ -4024,7 +4027,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "html_parse_descendants_classes"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4199,14 +4203,16 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "app_new"
+   "app_new",
+   "html_parse_descendants_classes"
   ],
   "list_unique": [
    "list_adder_unique",
    "list_adder_unique_async",
    "list_unique",
    "list_unique_reverse",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "html_parse_descendants_classes"
   ],
   "function_run_prompt": [
    "function_run_prompt",
@@ -4652,7 +4658,8 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters"
+   "ebible_chapters",
+   "html_parse_descendants_classes"
   ],
   "functions_names": [
    "functions_names",
@@ -5591,7 +5598,8 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "html_parse_descendants_classes"
   ],
   "access": [
    "file_exists"
@@ -6014,7 +6022,8 @@
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "html_parse_descendants_classes"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -6058,7 +6067,8 @@
    "prompt_previous",
    "search_generic",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "html_parse_descendants_classes"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -7348,7 +7358,8 @@
    "js_imports_declarations",
    "list_adder_unique",
    "list_adder_unique_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "html_parse_descendants_classes"
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
@@ -9090,7 +9101,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_verses"
+   "ebible_verses",
+   "html_parse_descendants_classes"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -9955,7 +9967,8 @@
    "js_identifiers_named_count",
    "function_aliases_restore",
    "js_dollar",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "html_parse_descendants_classes"
   ],
   "found": [
    "visit_unique_async"
@@ -12517,7 +12530,8 @@
    "ebible_version_verses"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_descendants_classes"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -12592,10 +12606,18 @@
    "ebible_verses"
   ],
   "html_parse_attr": [
-   "html_parse_href"
+   "html_parse_href",
+   "html_parse_descendants_classes"
   ],
   "html_parse_descendants_classes": [
-   "ebible_verses"
+   "ebible_verses",
+   "html_parse_descendants_classes"
+  ],
+  "descendants": [
+   "html_parse_descendants_classes"
+  ],
+  "item2": [
+   "html_parse_descendants_classes"
   ]
  },
  "functions": {
@@ -23718,6 +23740,29 @@
     "d",
     "root",
     "main",
+    "filtered"
+   ]
+  },
+  "html_parse_descendants_classes": {
+   "async": false,
+   "identifiers": [
+    "list_add",
+    "string_is",
+    "list_filter",
+    "list_unique",
+    "list_map",
+    "html_parse_attr",
+    "html_parse_find_list_to",
+    "html_parse_descendants_classes",
+    "item",
+    "d",
+    "descendants",
+    "list",
+    "item2",
+    "lambda",
+    "c",
+    "mapped",
+    "unique",
     "filtered"
    ]
   }
