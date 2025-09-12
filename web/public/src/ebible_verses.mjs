@@ -7,7 +7,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
   let include = ["m", "b", "pmo", "q", "q2", "f"];
-  let dictionary = html_parse_classes_preview(main, d, include);
   let exclude = [
     "chapterlabel",
     "copyright",
@@ -23,5 +22,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
+  let dictionary = html_parse_classes_preview(main, d, include);
   return dictionary;
 }
