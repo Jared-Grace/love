@@ -4851,7 +4851,8 @@
    "string_is_assert_message",
    "js_declare_single",
    "null_not_is_assert",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "ebible_verses"
   ],
   "b": [
    "assert",
@@ -4888,7 +4889,8 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_verses"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -12630,14 +12632,16 @@
   ],
   "html_parse_descendants_classes": [
    "html_parse_descendants_classes",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses"
   ],
   "descendants": [
    "html_parse_descendants_classes"
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses"
   ],
   "ebible_chapter_classes": [
    "ebible_chapter_classes"
@@ -23764,6 +23768,8 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "assert",
+    "html_parse_descendants_classes",
     "html_parse_find_remove",
     "each",
     "html_parse_classes_preview",
@@ -23777,8 +23783,10 @@
     "d",
     "root",
     "main",
+    "classes",
     "include",
     "exclude",
+    "b",
     "dictionary",
     "lambda",
     "item"
