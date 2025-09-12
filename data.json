@@ -2895,8 +2895,7 @@
    "js_expand_generic",
    "app_reply_main",
    "http",
-   "list_filter_starts_with_not_multiple",
-   "ebible_verses"
+   "list_filter_starts_with_not_multiple"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3022,8 +3021,7 @@
    "list_join_newline",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_versions_download",
-   "ebible_verses"
+   "ebible_versions_download"
   ],
   "v": [
    "data_identifiers_file",
@@ -12607,9 +12605,6 @@
   ],
   "html_parse_attr": [
    "html_parse_href",
-   "ebible_verses"
-  ],
-  "item2": [
    "ebible_verses"
   ]
  },
@@ -23744,10 +23739,7 @@
     "c",
     "mapped",
     "unique",
-    "lambda2",
-    "item2",
-    "filtered",
-    "list"
+    "filtered"
    ]
   }
  },
