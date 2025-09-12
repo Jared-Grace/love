@@ -12631,8 +12631,7 @@
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_chapter_classes",
-   "ebible_verses"
+   "ebible_chapter_classes"
   ],
   "ebible_chapter_classes": [
    "ebible_chapter_classes"
@@ -23769,7 +23768,6 @@
     "main",
     "include",
     "dictionary",
-    "classes",
     "exclude"
    ]
   },
