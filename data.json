@@ -3853,7 +3853,6 @@
    "ebible_version_download",
    "ebible_version_books_testament",
    "html_parse_read",
-   "ebible_chapters",
    "ebible_versions_download"
   ],
   "object_property_get": [
@@ -4711,8 +4710,7 @@
    "html_name_to_path_dev",
    "html_update_generic",
    "http_firebase_file_path",
-   "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_version_books_testament"
   ],
   "fs": [
    "folder_read",
@@ -12524,8 +12522,7 @@
    "ebible_version_books_testament"
   ],
   "ebible_version_download_path": [
-   "ebible_version_download",
-   "ebible_chapters"
+   "ebible_version_download"
   ],
   "list_filter_starts_with_not": [
    "list_filter_starts_with_not"
@@ -12544,9 +12541,6 @@
   ],
   "ebible_chapters": [
    "ebible_version_verses",
-   "ebible_chapters"
-  ],
-  "chapters_name": [
    "ebible_chapters"
   ],
   "chapters": [
@@ -12583,6 +12577,9 @@
   ],
   "chapter_code": [
    "ebible_verses"
+  ],
+  "ebible_version_download_path_combine": [
+   "ebible_chapters"
   ]
  },
  "functions": {
@@ -23641,17 +23638,14 @@
   "ebible_chapters": {
    "async": true,
    "identifiers": [
+    "ebible_version_download_path_combine",
     "html_parse_find_a_href_starts_with",
     "list_filter_starts_with_not_multiple",
     "list_map",
     "html_parse_read",
-    "path_join",
-    "ebible_version_download_path",
     "ebible_chapters",
     "bible_folder",
     "book_code",
-    "chapters_name",
-    "file_path",
     "joined",
     "d",
     "root",
