@@ -8,7 +8,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
   let classes = html_parse_descendants_classes(main, d);
-  function lambda(item) {}
-  let dictionary = list_to_dictionary(list, lambda);
+  function lambda(c) {}
+  let dictionary = list_to_dictionary(classes, lambda);
   return classes;
 }
