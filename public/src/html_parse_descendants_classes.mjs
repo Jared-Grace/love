@@ -18,6 +18,6 @@ export function html_parse_descendants_classes(item, d) {
     each(descendants, lambda);
   }
   let list = list_adder(lambda2);
-  let unique = list_unique(list);
-  return unique;
+  let classes = list_unique(list);
+  return classes;
 }
