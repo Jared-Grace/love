@@ -9,11 +9,11 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
-  let descendants = html_parse_find_list_to(root, "*");
+  let descendants = html_parse_find_list_to(main, "*");
   function lambda(item) {
     let c = html_parse_attr(d, item, "class");
-    log(message);
+    log(c);
   }
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(descendants, lambda);
   return v;
 }
