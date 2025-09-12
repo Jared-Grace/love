@@ -23894,7 +23894,7 @@
    ]
   },
   "list_adder_generic_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
     "list_adder_generic_async",
