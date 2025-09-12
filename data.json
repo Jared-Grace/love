@@ -1263,7 +1263,6 @@
   "fw dpg data_identifiers_search",
   "s search",
   "s list_To",
-  "s list_to",
   "s test",
   "s task",
   "a is data_identifiers_search",
@@ -1950,7 +1949,8 @@
   "s find",
   "ps",
   "sb",
-  "s href"
+  "s href",
+  "s list_to"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
