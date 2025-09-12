@@ -1,3 +1,4 @@
+import { string_split } from "./string_split.mjs";
 import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { string_is } from "./string_is.mjs";
@@ -10,6 +11,7 @@ export function html_parse_descendants_classes(item, d) {
   function lambda2(la) {
     function lambda(item) {
       let c = html_parse_attr(d, item, "class");
+      let split = string_split(s, separator);
       return c;
     }
     let mapped = each(descendants, lambda);
