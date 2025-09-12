@@ -2249,7 +2249,8 @@
    "catch_call",
    "ebible_chapter_classes",
    "list_adder_multiple_async",
-   "list_adder_generic_async"
+   "list_adder_generic_async",
+   "ebible_chapter_codes"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23926,6 +23927,7 @@
   "ebible_chapter_codes": {
    "async": true,
    "identifiers": [
+    "marker",
     "list_adder_multiple_async",
     "each_async",
     "ebible_chapters",
