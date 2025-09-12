@@ -1951,7 +1951,8 @@
   "fd ebible_verses",
   "p",
   "s dict",
-  "sb"
+  "sb",
+  "c ebible_verses ebible_chapter_classes"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
