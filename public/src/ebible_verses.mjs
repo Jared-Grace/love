@@ -40,8 +40,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     let any = list_any([include, exclude], lambda2);
     return any;
   }
-  list_all(classes, lambda3);
-  assert(b);
+  let a = list_all(classes, lambda3);
+  assert(a);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
     html_parse_find_remove(main, "." + item);
