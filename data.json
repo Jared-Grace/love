@@ -1911,7 +1911,6 @@
   "ebible_version_verses engbsb",
   "a fir file_read",
   "as file",
-  "ps",
   "s sand",
   "fd ebible_version_verses",
   "n html_parse_list_text_to",
@@ -1950,7 +1949,8 @@
   "p",
   "ebible_verses engbsb GEN01",
   "s text",
-  "s find"
+  "s find",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
