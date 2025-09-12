@@ -17,6 +17,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   let include = [
     "d",
+    "fk",
     "it",
     "li",
     "li2",
