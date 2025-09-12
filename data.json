@@ -2230,7 +2230,8 @@
    "sandbox",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "catch_call",
+   "ebible_verses"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12574,6 +12575,9 @@
   ],
   "inner": [
    "catch_call"
+  ],
+  "ebible_verses": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23682,6 +23686,13 @@
     "result",
     "arguments",
     "e"
+   ]
+  },
+  "ebible_verses": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "ebible_verses"
    ]
   }
  },
