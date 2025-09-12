@@ -1,0 +1,25 @@
+export function ebible_verses_exclude() {
+  let v = [
+    "b",
+    "chapterlabel",
+    "copyright",
+    "f",
+    "fq",
+    "fqa",
+    "footnote",
+    "ft",
+    "mt",
+    "mr",
+    "ms",
+    "notebackref",
+    "notemark",
+    "popup",
+    "qa",
+    "r",
+    "s",
+    "s2",
+    "tnav",
+    "verse",
+  ];
+  return v;
+}
