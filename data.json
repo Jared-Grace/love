@@ -2814,7 +2814,6 @@
    "ebible_versions_download",
    "catch_call",
    "html_parse_descendants_classes",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "previous": [
@@ -4117,7 +4116,6 @@
    "function_exists_inner",
    "firebase_storage_exists",
    "catch_call",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "object_property_delete": [
@@ -5010,7 +5008,6 @@
    "http_local_text",
    "html_parse_list_text_to",
    "html_parse_text",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "clipboard": [
@@ -6983,13 +6980,11 @@
    "list_to_dictionary",
    "search_generic",
    "data_identifiers_search",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "dictionary": [
    "function_names_to_acronyms",
    "list_to_dictionary",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "function_name_separator": [
@@ -9983,7 +9978,6 @@
    "js_dollar",
    "js_calls_to_each",
    "html_parse_descendants_classes",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "found": [
@@ -12476,7 +12470,6 @@
   ],
   "html_parse_text": [
    "html_parse_text",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "html_parse_list_text_to": [
@@ -12635,7 +12628,6 @@
    "html_parse_descendants_classes"
   ],
   "html_parse_descendants_classes": [
-   "ebible_verses",
    "html_parse_descendants_classes",
    "ebible_chapter_classes"
   ],
@@ -12644,11 +12636,13 @@
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_verses",
    "ebible_chapter_classes"
   ],
   "ebible_chapter_classes": [
    "ebible_chapter_classes"
+  ],
+  "include": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23759,9 +23753,6 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "html_parse_text",
-    "list_to_dictionary",
-    "html_parse_descendants_classes",
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
@@ -23772,12 +23763,7 @@
     "d",
     "root",
     "main",
-    "classes",
-    "lambda",
-    "c",
-    "e",
-    "text",
-    "dictionary"
+    "include"
    ]
   },
   "html_parse_descendants_classes": {
