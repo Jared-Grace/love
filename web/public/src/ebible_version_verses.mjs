@@ -14,5 +14,5 @@ export async function ebible_version_verses(bible_folder) {
     }
   }
   let list = await list_adder_multiple_async(lambda2);
-  return chapters;
+  return list;
 }
