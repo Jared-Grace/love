@@ -30,7 +30,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  list_all(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  list_all(list, lambda2);
   assert(b);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
