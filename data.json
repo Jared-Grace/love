@@ -1954,7 +1954,6 @@
   "s class",
   "s sort",
   "p",
-  "sb",
   "s classes",
   "s list_",
   "s verses",
@@ -1963,7 +1962,8 @@
   "cs list_adder_multiple async",
   "cs list_adder_generic async",
   "r ebible_version_verses ebible_chapter_codes",
-  "ebible_chapter_codes engbsb"
+  "ebible_chapter_codes engbsb",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_codes",
