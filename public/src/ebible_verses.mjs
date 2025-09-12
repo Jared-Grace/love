@@ -6,7 +6,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
-  let dictionary = html_parse_classes_preview(main, d, classes);
   let include = [
     "mt",
     "chapterlabel",
@@ -28,4 +27,5 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "ft",
     "copyright",
   ];
+  let dictionary = html_parse_classes_preview(main, d, classes);
 }
