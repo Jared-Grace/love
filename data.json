@@ -3743,7 +3743,8 @@
    "string_split",
    "tasks_run",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "html_parse_descendants_classes"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -4515,7 +4516,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "html_parse_descendants_classes"
   ],
   "a": [
    "string_suffix_without",
@@ -5849,7 +5851,8 @@
    "string_split_comma",
    "string_split_space",
    "string_split_empty",
-   "string_replace"
+   "string_replace",
+   "html_parse_descendants_classes"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -5953,7 +5956,8 @@
    "string_split",
    "app_replace_rule_parse",
    "string_split_comma",
-   "string_replace"
+   "string_replace",
+   "html_parse_descendants_classes"
   ],
   "results": [
    "functions_combine_name"
@@ -23745,6 +23749,7 @@
   "html_parse_descendants_classes": {
    "async": false,
    "identifiers": [
+    "string_split",
     "each",
     "list_adder",
     "string_is",
@@ -23760,6 +23765,9 @@
     "la",
     "lambda",
     "c",
+    "split",
+    "s",
+    "separator",
     "mapped",
     "list",
     "unique",
