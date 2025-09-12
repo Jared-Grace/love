@@ -35,8 +35,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda3(c) {
     function lambda2(item2) {
       let includes = list_includes(list, c);
+      return includes;
     }
     let any = list_any([include, exclude], lambda2);
+    return any;
   }
   list_all(classes, lambda3);
   assert(b);
