@@ -1,3 +1,4 @@
+import { html_parse_text } from "./html_parse_text.mjs";
 import { list_to_dictionary } from "./list_to_dictionary.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
 import { html_parse_find } from "./html_parse_find.mjs";
@@ -10,7 +11,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   function lambda(c) {
     let e = html_parse_find(root, "." + c);
-    hpt;
+    let text = html_parse_text(d2, item);
   }
   let dictionary = list_to_dictionary(classes, lambda);
   return classes;
