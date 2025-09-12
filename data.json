@@ -3258,7 +3258,8 @@
    "app_new",
    "html_parse_list_text_to",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "ebible_verses_exclude"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12734,7 +12735,8 @@
    "ebible_verses"
   ],
   "ebible_verses_exclude": [
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_verses_exclude"
   ]
  },
  "functions": {
@@ -23979,6 +23981,13 @@
     "book_code",
     "chapters",
     "list"
+   ]
+  },
+  "ebible_verses_exclude": {
+   "async": false,
+   "identifiers": [
+    "ebible_verses_exclude",
+    "v"
    ]
   }
  },
