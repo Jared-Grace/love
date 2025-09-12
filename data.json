@@ -4433,8 +4433,7 @@
    "js_identifier_unique",
    "string_ends_with",
    "function_rename_suffix_add",
-   "functions_names",
-   "ebible_chapters"
+   "functions_names"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -4558,8 +4557,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "ebible_chapters"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -23819,8 +23817,6 @@
     "lambda2",
     "item2",
     "without",
-    "s",
-    "suffix",
     "mapped",
     "list"
    ]
