@@ -24,6 +24,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "footnote",
     "ft",
     "mt",
+    "mr",
+    "ms",
     "notebackref",
     "notemark",
     "popup",
