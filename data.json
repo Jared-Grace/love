@@ -3209,7 +3209,6 @@
    "js_visit_each_async",
    "js_visit_filter",
    "js_visit_type_each_async",
-   "list_all",
    "list_join_comma_space",
    "list_last_is",
    "list_multiple_is",
@@ -4612,7 +4611,8 @@
    "js_dollar",
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "list_all"
   ],
   "without": [
    "string_suffix_without",
@@ -17664,7 +17664,7 @@
     "list",
     "lambda$item",
     "list2",
-    "v",
+    "a",
     "filtered",
     "v2"
    ],
