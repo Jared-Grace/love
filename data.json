@@ -1968,7 +1968,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "html_parse_read"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3294,7 +3295,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "html_parse_read"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -23584,11 +23586,13 @@
   "html_parse_read": {
    "async": true,
    "identifiers": [
+    "log",
     "html_parse",
     "file_read",
     "html_parse_read",
     "file_path",
     "contents",
+    "message",
     "parsed"
    ]
   },
