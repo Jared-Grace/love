@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { html_parse_classes_preview } from "./html_parse_classes_preview.mjs";
 import { html_parse_find } from "./html_parse_find.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
@@ -22,6 +23,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
+  each(list, function lambda(item) {});
   let dictionary = html_parse_classes_preview(main, d, include);
   return dictionary;
 }
