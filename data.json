@@ -2247,7 +2247,8 @@
    "list_filter_starts_with_not_multiple",
    "catch_call",
    "ebible_chapter_classes",
-   "list_adder_multiple_async"
+   "list_adder_multiple_async",
+   "list_adder_generic_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23895,6 +23896,7 @@
   "list_adder_generic_async": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_adder_generic_async",
     "lambda",
     "fn",
