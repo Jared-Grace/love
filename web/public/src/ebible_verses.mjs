@@ -34,6 +34,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "chapterlabel",
     "copyright",
     "f",
+    "fq",
+    "fqa",
     "footnote",
     "ft",
     "mt",
