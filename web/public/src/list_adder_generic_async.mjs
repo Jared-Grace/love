@@ -1,4 +1,6 @@
+import { marker } from "./marker.mjs";
 export function list_adder_generic_async(lambda, fn) {
+  marker("1");
   let list = [];
   function list_adder_inner(item) {
     fn(list, item);
