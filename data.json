@@ -19628,8 +19628,8 @@
     "list",
     "lambda",
     "item",
-    "list2",
-    "contents"
+    "contents",
+    "list2"
    ],
    "async": true
   },
