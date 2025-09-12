@@ -3054,8 +3054,7 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox",
-   "ebible_chapters"
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -23817,8 +23816,7 @@
     "lambda2",
     "item2",
     "without",
-    "mapped",
-    "list"
+    "mapped"
    ]
   },
   "ebible_versions_download": {
