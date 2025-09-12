@@ -1960,7 +1960,8 @@
   "s verses",
   "s list_add",
   "cs list_adder_multiple_async",
-  "cs list_adder_multiple async"
+  "cs list_adder_multiple async",
+  "cs list_adder_generic async"
  ],
  "marker_current": "1",
  "function_current": "list_adder_multiple_async",
