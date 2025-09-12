@@ -1,3 +1,4 @@
+import { string_is } from "./string_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { html_parse_attr } from "./html_parse_attr.mjs";
@@ -18,6 +19,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let mapped = list_map(descendants, lambda);
   let unique = list_unique(mapped);
   function lambda2(item2) {}
-  let filtered = list_filter(list, lambda2);
+  let filtered = list_filter(list, string_is);
   return unique;
 }
