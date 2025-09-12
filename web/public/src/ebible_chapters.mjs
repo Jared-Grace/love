@@ -18,6 +18,6 @@ export async function ebible_chapters(bible_folder, book_code) {
     let without = string_suffix_without(item2, ".htm");
     return without;
   }
-  let mapped = list_map(list, lambda2);
+  let mapped = list_map(chapters, lambda2);
   return mapped;
 }
