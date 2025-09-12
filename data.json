@@ -1950,10 +1950,10 @@
   "s dict",
   "c ebible_verses ebible_chapter_classes",
   "ps",
-  "p",
   "ebible_chapter_classes engbsb GEN01",
   "s class",
   "s sort",
+  "p",
   "sb"
  ],
  "marker_current": "1",
