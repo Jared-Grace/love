@@ -1947,11 +1947,11 @@
   "s find",
   "s href",
   "s list_to",
-  "sb",
   "ps",
   "fd ebible_verses",
   "p",
-  "s dict"
+  "s dict",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
