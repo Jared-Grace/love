@@ -11,14 +11,13 @@ export function html_parse_descendants_classes(item, d) {
   function lambda2(la) {
     function lambda(item) {
       let c = html_parse_attr(d, item, "class");
-      let split = string_split(s, " ");
-      function lambda3(item2) {}
-      each(list2, lambda3);
+      let split = string_split(c, " ");
+      each(split, la);
     }
-    let mapped = each(descendants, lambda);
+    each(descendants, lambda);
   }
   let list = list_adder(lambda2);
-  let unique = list_unique(mapped);
+  let unique = list_unique(list);
   let filtered = list_filter(unique, string_is);
   return filtered;
 }
