@@ -3031,7 +3031,8 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -4215,7 +4216,8 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "app_new"
+   "app_new",
+   "ebible_verses"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -12657,6 +12659,9 @@
    "ebible_verses"
   ],
   "html_parse_find_remove": [
+   "ebible_verses"
+  ],
+  "item2": [
    "ebible_verses"
   ]
  },
@@ -23768,6 +23773,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_add",
     "assert",
     "html_parse_descendants_classes",
     "html_parse_find_remove",
@@ -23786,6 +23792,8 @@
     "classes",
     "include",
     "exclude",
+    "list",
+    "item2",
     "b",
     "dictionary",
     "lambda",
