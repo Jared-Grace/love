@@ -3739,7 +3739,8 @@
    "html_parse_find",
    "html_parse",
    "catch_call",
-   "http"
+   "http",
+   "ebible_verses"
   ],
   "separator": [
    "watch",
@@ -12462,7 +12463,8 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_verses"
   ],
   "find": [
    "html_parse_find"
@@ -12650,6 +12652,9 @@
    "ebible_verses"
   ],
   "exclude": [
+   "ebible_verses"
+  ],
+  "root2": [
    "ebible_verses"
   ]
  },
@@ -23777,6 +23782,9 @@
     "exclude",
     "lambda",
     "item",
+    "result",
+    "root2",
+    "selector",
     "list",
     "dictionary"
    ]
