@@ -2920,7 +2920,8 @@
    "list_filter_starts_with_not_multiple",
    "html_parse_descendants_classes",
    "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "ebible_chapters"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3052,7 +3053,8 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox"
+   "sandbox",
+   "ebible_chapters"
   ],
   "v": [
    "data_identifiers_file",
@@ -6065,7 +6067,8 @@
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_chapters"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -12720,6 +12723,9 @@
   "ebible_chapter_codes": [
    "ebible_chapter_codes",
    "sandbox"
+  ],
+  "item2": [
+   "ebible_chapters"
   ]
  },
  "functions": {
@@ -23803,7 +23809,11 @@
     "item",
     "combined",
     "prefixes",
-    "chapters"
+    "chapters",
+    "mapped",
+    "list",
+    "lambda2",
+    "item2"
    ]
   },
   "ebible_versions_download": {
