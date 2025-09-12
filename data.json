@@ -7359,8 +7359,7 @@
    "js_imports_declarations",
    "list_adder_unique",
    "list_adder_unique_async",
-   "js_expand_generic",
-   "html_parse_descendants_classes"
+   "js_expand_generic"
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
@@ -12615,6 +12614,9 @@
    "html_parse_descendants_classes"
   ],
   "descendants": [
+   "html_parse_descendants_classes"
+  ],
+  "classes": [
    "html_parse_descendants_classes"
   ]
  },
@@ -23761,7 +23763,7 @@
     "c",
     "split",
     "list",
-    "unique"
+    "classes"
    ]
   }
  },
