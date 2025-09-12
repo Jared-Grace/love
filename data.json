@@ -3739,8 +3739,7 @@
    "html_parse_find",
    "html_parse",
    "catch_call",
-   "http",
-   "ebible_verses"
+   "http"
   ],
   "separator": [
    "watch",
@@ -11978,8 +11977,7 @@
    "html_remove"
   ],
   "remove": [
-   "html_remove",
-   "ebible_verses"
+   "html_remove"
   ],
   "emoji_trinity": [
    "prayer_start",
@@ -12464,7 +12462,8 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_verses"
   ],
   "find": [
    "html_parse_find"
@@ -12652,6 +12651,9 @@
    "ebible_verses"
   ],
   "exclude": [
+   "ebible_verses"
+  ],
+  "html_parse_find_remove": [
    "ebible_verses"
   ]
  },
@@ -23763,6 +23765,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_find_remove",
     "each",
     "html_parse_classes_preview",
     "html_parse_find",
@@ -23779,8 +23782,7 @@
     "exclude",
     "lambda",
     "item",
-    "result",
-    "remove",
+    "selector",
     "list",
     "dictionary"
    ]
