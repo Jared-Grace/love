@@ -12389,7 +12389,8 @@
    "ebible_version_books_testament_new",
    "ebible_version_books_testament",
    "ebible_version_books_testament_old",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "unzip": [
    "unzip",
@@ -12577,6 +12578,9 @@
    "catch_call"
   ],
   "ebible_verses": [
+   "ebible_verses"
+  ],
+  "chapter_code": [
    "ebible_verses"
   ]
  },
@@ -23692,7 +23696,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "ebible_verses"
+    "ebible_verses",
+    "bible_folder",
+    "chapter_code"
    ]
   }
  },
