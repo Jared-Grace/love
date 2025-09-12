@@ -32,7 +32,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  list_all(list2, function lambda3(item4) {});
+  function lambda3(item4) {}
+  list_all(list2, lambda3);
   function lambda2(item2) {
     let includes = list_includes(list, item3);
   }
