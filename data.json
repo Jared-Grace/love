@@ -9414,8 +9414,7 @@
   "list_adder_generic": [
    "list_adder",
    "list_adder_generic",
-   "list_adder_multiple",
-   "list_adder_multiple_async"
+   "list_adder_multiple"
   ],
   "lambda$la": [
    "list_adder",
@@ -12693,7 +12692,8 @@
    "list_adder_multiple_async"
   ],
   "list_adder_generic_async": [
-   "list_adder_generic_async"
+   "list_adder_generic_async",
+   "list_adder_multiple_async"
   ]
  },
  "functions": {
@@ -23882,10 +23882,10 @@
    ]
   },
   "list_adder_multiple_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "list_adder_generic_async",
     "marker",
-    "list_adder_generic",
     "list_add_multiple",
     "list_adder_multiple_async",
     "lambda$la",
