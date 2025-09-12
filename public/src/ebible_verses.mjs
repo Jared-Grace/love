@@ -24,10 +24,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
+  let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
     html_parse_find_remove(main, "." + item);
   }
   each(exclude, lambda);
-  let dictionary = html_parse_classes_preview(main, d, include);
   return dictionary;
 }
