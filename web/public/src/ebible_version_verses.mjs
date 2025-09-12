@@ -10,6 +10,7 @@ export async function ebible_version_verses(bible_folder) {
     async function lambda(book) {
       let book_code = object_property_get(book, "book_code");
       let chapters = await ebible_chapters(bible_folder, book_code);
+      la(chapters);
     }
   }
   let list = await list_adder_multiple_async(lambda2);
