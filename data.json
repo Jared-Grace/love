@@ -4031,8 +4031,7 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12625,9 +12624,6 @@
   ],
   "classes": [
    "html_parse_descendants_classes",
-   "ebible_verses"
-  ],
-  "d2": [
    "ebible_verses"
   ]
  },
@@ -23758,8 +23754,6 @@
     "c",
     "e",
     "text",
-    "d2",
-    "item",
     "dictionary"
    ]
   },
