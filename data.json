@@ -4064,7 +4064,8 @@
    "marker_functionize",
    "visit_unique_async",
    "list_remove_if_exists",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verses"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -4996,7 +4997,8 @@
    "string_includes",
    "js_node_types_includes",
    "list_remove_if_exists",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verses"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -12665,6 +12667,9 @@
    "ebible_verses"
   ],
   "item2": [
+   "ebible_verses"
+  ],
+  "item3": [
    "ebible_verses"
   ]
  },
@@ -23776,6 +23781,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_includes",
     "list_any",
     "assert",
     "html_parse_descendants_classes",
@@ -23797,8 +23803,10 @@
     "exclude",
     "lambda2",
     "item2",
-    "any",
+    "includes",
     "list",
+    "item3",
+    "any",
     "b",
     "dictionary",
     "lambda",
