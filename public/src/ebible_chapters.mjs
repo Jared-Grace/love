@@ -13,6 +13,7 @@ export async function ebible_chapters(bible_folder, book_code) {
   }
   let prefixes = list_map(["00", "000"], lambda);
   let chapters = list_filter_starts_with_not_multiple(filtered, prefixes);
-  let mapped = list_map(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let mapped = list_map(list, lambda2);
   return chapters;
 }
