@@ -23,11 +23,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "footnote",
     "f",
-    "notebackref",
-    "ft",
-    "copyright",
   ];
   let dictionary = html_parse_classes_preview(main, d, include);
-  let exclude = [];
+  let exclude = ["copyright", "ft", "notebackref"];
   return dictionary;
 }
