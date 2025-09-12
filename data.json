@@ -6068,8 +6068,7 @@
    "prompt_previous",
    "search_generic",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "html_parse_descendants_classes"
+   "list_filter_starts_with_not_multiple"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9104,8 +9103,7 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_verses",
-   "html_parse_descendants_classes"
+   "ebible_verses"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -23750,7 +23748,6 @@
     "each",
     "list_adder",
     "string_is",
-    "list_filter",
     "list_unique",
     "html_parse_attr",
     "html_parse_find_list_to",
@@ -23764,8 +23761,7 @@
     "c",
     "split",
     "list",
-    "unique",
-    "filtered"
+    "unique"
    ]
   }
  },
