@@ -1972,8 +1972,7 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download",
-   "html_parse_read"
+   "ebible_versions_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23641,7 +23640,6 @@
   "html_parse_read": {
    "async": true,
    "identifiers": [
-    "log",
     "html_parse",
     "file_read",
     "html_parse_read",
