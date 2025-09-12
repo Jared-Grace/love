@@ -2906,7 +2906,8 @@
    "app_reply_main",
    "http",
    "list_filter_starts_with_not_multiple",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_version_verses"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4330,8 +4331,7 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download",
-   "ebible_version_verses"
+   "ebible_versions_download"
   ],
   "value2": [
    "error_attention_set",
@@ -6528,7 +6528,8 @@
    "marker_next_await",
    "marker_param_add",
    "function_transform_marker_specified",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_version_verses"
   ],
   "node": [
    "function_dependencies",
@@ -23536,8 +23537,9 @@
     "object_property_get",
     "ebible_version_verses",
     "bible_folder",
-    "lambda3",
     "list",
+    "lambda2",
+    "la",
     "books",
     "lambda",
     "book",
