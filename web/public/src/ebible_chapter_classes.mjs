@@ -18,8 +18,8 @@ export async function ebible_chapter_classes(bible_folder, chapter_code) {
   }
   let dictionary = list_to_dictionary(classes, lambda);
   let v = {
-    classes,
     dictionary,
+    classes,
   };
   return v;
 }
