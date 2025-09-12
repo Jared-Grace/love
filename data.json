@@ -2266,8 +2266,7 @@
    "http_json",
    "js_calls_to_each",
    "app_new",
-   "html_parse_read",
-   "ebible_verses"
+   "html_parse_read"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -3813,7 +3812,8 @@
    "html_parse_href",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "data": [
    "data_all",
@@ -3855,8 +3855,7 @@
    "ebible_version_download",
    "ebible_version_books_testament",
    "html_parse_read",
-   "ebible_versions_download",
-   "ebible_verses"
+   "ebible_versions_download"
   ],
   "object_property_get": [
    "chalk_color",
@@ -11131,7 +11130,8 @@
    "html_parse_find",
    "html_parse",
    "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -23701,8 +23701,8 @@
     "bible_folder",
     "chapter_code",
     "joined",
-    "parsed",
-    "file_path"
+    "d",
+    "root"
    ]
   }
  },
