@@ -8,5 +8,5 @@ export async function sandbox() {
   async function lambda(item) {
     let contents = await ebible_verses("engbsb", item);
   }
-  await each_async(list2, lambda);
+  await each_async(list, lambda);
 }
