@@ -3032,8 +3032,7 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "v": [
    "data_identifiers_file",
@@ -4612,8 +4611,7 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_calls_to_each",
-   "list_all",
-   "ebible_verses"
+   "list_all"
   ],
   "without": [
    "string_suffix_without",
@@ -4857,8 +4855,7 @@
    "string_is_assert_message",
    "js_declare_single",
    "null_not_is_assert",
-   "object_property_exists_not_assert",
-   "ebible_verses"
+   "object_property_exists_not_assert"
   ],
   "b": [
    "assert",
@@ -4942,7 +4939,8 @@
    "list_is_assert",
    "js_node_atomize",
    "function_current_set",
-   "http"
+   "http",
+   "ebible_verses"
   ],
   "o": [
    "assert_json",
@@ -23779,7 +23777,6 @@
    "identifiers": [
     "list_empty_is",
     "list_difference",
-    "assert",
     "html_parse_descendants_classes",
     "html_parse_find_remove",
     "each",
@@ -23787,6 +23784,7 @@
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
+    "assert_json",
     "ebible_verses",
     "bible_folder",
     "chapter_code",
@@ -23800,8 +23798,6 @@
     "list2",
     "list3",
     "e",
-    "list",
-    "a",
     "dictionary",
     "lambda",
     "item"
