@@ -3226,8 +3226,7 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "list_filter_starts_with_not_multiple",
-   "ebible_verses"
+   "list_filter_starts_with_not_multiple"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23732,8 +23731,7 @@
     "lambda",
     "item",
     "c",
-    "mapped",
-    "v"
+    "mapped"
    ]
   }
  },
