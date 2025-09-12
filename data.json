@@ -2814,7 +2814,8 @@
    "ebible_versions_download",
    "catch_call",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3232,7 +3233,8 @@
    "sleep",
    "app_new",
    "html_parse_list_text_to",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_chapter_classes"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4115,7 +4117,8 @@
    "function_exists_inner",
    "firebase_storage_exists",
    "catch_call",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5007,7 +5010,8 @@
    "http_local_text",
    "html_parse_list_text_to",
    "html_parse_text",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6979,12 +6983,14 @@
    "list_to_dictionary",
    "search_generic",
    "data_identifiers_search",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "dictionary": [
    "function_names_to_acronyms",
    "list_to_dictionary",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "function_name_separator": [
    "function_name_combine_multiple",
@@ -9977,7 +9983,8 @@
    "js_dollar",
    "js_calls_to_each",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "found": [
    "visit_unique_async"
@@ -12469,7 +12476,8 @@
   ],
   "html_parse_text": [
    "html_parse_text",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_classes"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -23798,6 +23806,8 @@
   "ebible_chapter_classes": {
    "async": true,
    "identifiers": [
+    "list_to_dictionary",
+    "html_parse_text",
     "marker",
     "html_parse_descendants_classes",
     "html_parse_find",
@@ -23810,7 +23820,13 @@
     "d",
     "root",
     "main",
-    "classes"
+    "classes",
+    "lambda",
+    "c",
+    "e",
+    "text",
+    "dictionary",
+    "v"
    ]
   }
  },
