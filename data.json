@@ -8955,8 +8955,7 @@
   ],
   "list_adder_multiple": [
    "js_identifier_defineds",
-   "list_adder_multiple",
-   "ebible_version_verses"
+   "list_adder_multiple"
   ],
   "js_identifier_defineds": [
    "js_identifier_defineds",
@@ -12689,7 +12688,8 @@
    "ebible_version_verses"
   ],
   "list_adder_multiple_async": [
-   "list_adder_multiple_async"
+   "list_adder_multiple_async",
+   "ebible_version_verses"
   ],
   "list_adder_generic_async": [
    "list_adder_generic_async",
@@ -23551,7 +23551,7 @@
   "ebible_version_verses": {
    "async": true,
    "identifiers": [
-    "list_adder_multiple",
+    "list_adder_multiple_async",
     "each_async",
     "ebible_chapters",
     "ebible_version_books",
