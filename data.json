@@ -1947,13 +1947,13 @@
   "s find",
   "s href",
   "s list_to",
-  "ps",
   "fd ebible_verses",
   "p",
   "s dict",
   "sb",
   "c ebible_verses ebible_chapter_classes",
-  "ebible_chapter_classes engbsb GEN01"
+  "ebible_chapter_classes engbsb GEN01",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_classes",
