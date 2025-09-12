@@ -2896,7 +2896,8 @@
    "js_expand_generic",
    "app_reply_main",
    "http",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "html_parse_descendants_classes"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4203,8 +4204,7 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "app_new",
-   "html_parse_descendants_classes"
+   "app_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -6509,7 +6509,8 @@
    "function_aliases_restore",
    "marker_next_await",
    "marker_param_add",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "html_parse_descendants_classes"
   ],
   "node": [
    "function_dependencies",
@@ -7762,7 +7763,8 @@
    "list_difference",
    "list_intersect",
    "list_squash",
-   "marker_down_choices_lambda"
+   "marker_down_choices_lambda",
+   "html_parse_descendants_classes"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -12614,9 +12616,6 @@
    "html_parse_descendants_classes"
   ],
   "descendants": [
-   "html_parse_descendants_classes"
-  ],
-  "item2": [
    "html_parse_descendants_classes"
   ]
  },
@@ -23746,7 +23745,7 @@
   "html_parse_descendants_classes": {
    "async": false,
    "identifiers": [
-    "list_add",
+    "list_adder",
     "string_is",
     "list_filter",
     "list_unique",
@@ -23758,7 +23757,8 @@
     "d",
     "descendants",
     "list",
-    "item2",
+    "lambda2",
+    "la",
     "lambda",
     "c",
     "mapped",
