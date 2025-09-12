@@ -12462,9 +12462,6 @@
   "html_parse_href": [
    "html_parse_href"
   ],
-  "attr": [
-   "html_parse_href"
-  ],
   "ebible_version_books_testament_old": [
    "ebible_version_books_testament_old"
   ],
@@ -12595,6 +12592,9 @@
   ],
   "descendants": [
    "ebible_verses"
+  ],
+  "html_parse_attr": [
+   "html_parse_href"
   ]
  },
  "functions": {
@@ -23517,13 +23517,13 @@
   "html_parse_href": {
    "async": false,
    "identifiers": [
+    "html_parse_attr",
     "marker",
     "html_parse_href",
     "d",
     "item",
     "name",
-    "href",
-    "attr"
+    "href"
    ]
   },
   "ebible_version_books_testament_new": {
