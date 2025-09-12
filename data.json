@@ -3629,7 +3629,8 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_verses"
   ],
   "output": [
    "watch",
@@ -4764,7 +4765,8 @@
    "js_statement_call_get",
    "list_all",
    "http",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "ebible_verses"
   ],
   "readdirSync": [
    "folder_read"
@@ -12600,7 +12602,14 @@
    "ebible_verses"
   ],
   "html_parse_attr": [
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_verses"
+  ],
+  "d2": [
+   "ebible_verses"
+  ],
+  "item2": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23712,6 +23721,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_attr",
     "list_map",
     "html_parse_find_list_to",
     "html_parse_find",
@@ -23727,6 +23737,10 @@
     "descendants",
     "lambda",
     "item",
+    "v2",
+    "d2",
+    "item2",
+    "name",
     "mapped",
     "list",
     "v"
