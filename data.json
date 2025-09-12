@@ -2237,7 +2237,8 @@
    "sandbox",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "catch_call"
+   "catch_call",
+   "ebible_chapter_classes"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23805,6 +23806,7 @@
   "ebible_chapter_classes": {
    "async": true,
    "identifiers": [
+    "marker",
     "html_parse_text",
     "list_to_dictionary",
     "html_parse_descendants_classes",
