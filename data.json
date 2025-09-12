@@ -4025,8 +4025,7 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_versions_download",
-   "ebible_verses"
+   "ebible_versions_download"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12590,9 +12589,6 @@
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
-   "ebible_verses"
-  ],
-  "d2": [
    "ebible_verses"
   ]
  },
@@ -23715,9 +23711,7 @@
     "d",
     "root",
     "result",
-    "v",
-    "d2",
-    "item"
+    "v"
    ]
   }
  },
