@@ -3448,7 +3448,8 @@
    "http_local_file_name",
    "http_firebase_file_path",
    "ebible_version_books_testament",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "watcher": [
    "watch"
@@ -12579,7 +12580,8 @@
    "ebible_verses"
   ],
   "ebible_version_download_path_combine": [
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23690,10 +23692,12 @@
   "ebible_verses": {
    "async": false,
    "identifiers": [
+    "ebible_version_download_path_combine",
     "marker",
     "ebible_verses",
     "bible_folder",
-    "chapter_code"
+    "chapter_code",
+    "joined"
    ]
   }
  },
