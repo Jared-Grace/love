@@ -9990,7 +9990,8 @@
    "function_aliases_restore",
    "js_dollar",
    "js_calls_to_each",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ],
   "found": [
    "visit_unique_async"
@@ -10667,8 +10668,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "ebible_verses"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12670,12 +12670,6 @@
    "ebible_verses"
   ],
   "item2": [
-   "ebible_verses"
-  ],
-  "item3": [
-   "ebible_verses"
-  ],
-  "item4": [
    "ebible_verses"
   ]
  },
@@ -23809,13 +23803,11 @@
     "include",
     "exclude",
     "lambda3",
-    "item4",
-    "list2",
+    "c",
     "lambda2",
     "item2",
     "includes",
     "list",
-    "item3",
     "any",
     "b",
     "dictionary",
