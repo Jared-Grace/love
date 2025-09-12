@@ -12,7 +12,7 @@ export async function ebible_chapter_classes(bible_folder, chapter_code) {
   let main = html_parse_find(root, ".main");
   let classes = html_parse_descendants_classes(main, d);
   function lambda(c) {
-    let e = html_parse_find(root, "." + c);
+    let e = html_parse_find(main, "." + c);
     let text = html_parse_text(d, e);
     return text;
   }
