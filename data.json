@@ -1982,7 +1982,8 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23828,6 +23829,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "list_empty_is",
     "list_difference",
     "html_parse_descendants_classes",
@@ -23947,7 +23949,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-12T17:59:52.064Z",
+ "git_push_when": "2025-09-12T19:17:57.091Z",
  "error_attention": null,
  "app_current": "replace"
 }
