@@ -15,5 +15,5 @@ export async function ebible_verses(bible_folder, chapter_code) {
     return text;
   }
   let dictionary = list_to_dictionary(classes, lambda);
-  return classes;
+  return dictionary;
 }
