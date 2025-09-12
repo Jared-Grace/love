@@ -1,3 +1,4 @@
+import { list_sort_string } from "./list_sort_string.mjs";
 import { string_split } from "./string_split.mjs";
 import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -19,5 +20,6 @@ export function html_parse_descendants_classes(item, d) {
   }
   let list = list_adder(lambda2);
   let classes = list_unique(list);
+  list_sort_string(list2);
   return classes;
 }
