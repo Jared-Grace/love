@@ -1970,8 +1970,7 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "html_parse_read",
-   "ebible_verses"
+   "html_parse_read"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23713,7 +23712,6 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "log",
     "html_parse_attr",
     "list_map",
     "html_parse_find_list_to",
