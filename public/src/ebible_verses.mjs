@@ -29,4 +29,5 @@ export async function ebible_verses(bible_folder, chapter_code) {
   ];
   let dictionary = html_parse_classes_preview(main, d, classes);
   let exclude = [];
+  return dictionary;
 }
