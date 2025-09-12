@@ -4315,8 +4315,7 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download",
-   "html_parse_descendants_classes"
+   "ebible_versions_download"
   ],
   "value2": [
    "error_attention_set",
@@ -4516,8 +4515,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "html_parse_descendants_classes"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -6026,8 +6024,7 @@
    "ebible_version_books_testament_old",
    "html_parse_href_text_map",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "html_parse_descendants_classes"
+   "list_filter_starts_with_not_multiple"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10651,8 +10648,7 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect",
-   "html_parse_descendants_classes"
+   "list_intersect"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12621,9 +12617,6 @@
    "html_parse_descendants_classes"
   ],
   "descendants": [
-   "html_parse_descendants_classes"
-  ],
-  "item2": [
    "html_parse_descendants_classes"
   ]
  },
@@ -23770,11 +23763,6 @@
     "lambda",
     "c",
     "split",
-    "s",
-    "lambda3",
-    "item2",
-    "list2",
-    "mapped",
     "list",
     "unique",
     "filtered"
