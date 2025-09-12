@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { html_parse_attr } from "./html_parse_attr.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
@@ -10,7 +11,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let main = html_parse_find(root, ".main");
   let descendants = html_parse_find_list_to(root, "*");
   function lambda(item) {
-    let v2 = html_parse_attr(d2, item2, name);
+    let c = html_parse_attr(d, item, "class");
+    log(message);
   }
   let mapped = list_map(list, lambda);
   return v;
