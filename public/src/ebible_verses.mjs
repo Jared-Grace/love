@@ -1,4 +1,4 @@
-import { list_add } from "./list_add.mjs";
+import { list_all } from "./list_all.mjs";
 import { assert } from "./assert.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
 import { html_parse_find_remove } from "./html_parse_find_remove.mjs";
@@ -30,7 +30,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  list_add(list, item2);
+  list_all(list, function lambda2(item2) {});
   assert(b);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
