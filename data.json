@@ -12732,6 +12732,9 @@
   ],
   "ebible_verses_include": [
    "ebible_verses"
+  ],
+  "ebible_verses_exclude": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23857,6 +23860,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "ebible_verses_exclude",
     "ebible_verses_include",
     "log",
     "list_empty_is",
