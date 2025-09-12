@@ -12706,9 +12706,6 @@
   "html_parse_find_remove": [
    "ebible_verses"
   ],
-  "list3": [
-   "ebible_verses"
-  ],
   "book": [
    "ebible_version_verses",
    "ebible_chapter_codes"
@@ -12728,6 +12725,9 @@
   ],
   "item2": [
    "ebible_chapters"
+  ],
+  "extra": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23874,7 +23874,7 @@
     "include",
     "exclude",
     "list2",
-    "list3",
+    "extra",
     "e",
     "dictionary",
     "lambda",
