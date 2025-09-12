@@ -1620,7 +1620,6 @@
   "ac for flr",
   "u ssw",
   "a ssw string_starts_with",
-  "s find",
   "firebase_deploy_function",
   "s date",
   "date_now_iso",
@@ -1950,7 +1949,8 @@
   "ebible_chapters engbsb GEN",
   "p",
   "ebible_verses engbsb GEN01",
-  "s text"
+  "s text",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
