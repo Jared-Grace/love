@@ -1950,8 +1950,8 @@
   "s href",
   "s list_to",
   "p",
-  "sb",
-  "fd ebible_verses"
+  "fd ebible_verses",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
