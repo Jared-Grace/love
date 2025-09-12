@@ -15,7 +15,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
   let classes = html_parse_descendants_classes(main, d);
-  let include = ["m", "li", "pc", "pmo", "q", "q2"];
+  let include = ["m", "li", "li2", "pc", "pmo", "q", "q2"];
   let exclude = [
     "b",
     "chapterlabel",
