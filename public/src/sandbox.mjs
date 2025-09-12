@@ -4,9 +4,10 @@ import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
 export async function sandbox() {
   marker("1");
-  let list = await ebible_chapter_codes("engbsb");
+  const bible_folder = "urdgvu";
+  let list = await ebible_chapter_codes(bible_folder);
   async function lambda(item) {
-    let contents = await ebible_verses("engbsb", item);
+    let contents = await ebible_verses(bible_folder, item);
   }
   await each_async(list, lambda);
 }
