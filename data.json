@@ -2034,7 +2034,8 @@
    "js_expand_generic",
    "list_remove_multiple_if_exists",
    "list_remove_all_multiple",
-   "app_reply_main"
+   "app_reply_main",
+   "html_parse_descendants_classes"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -4658,8 +4659,7 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters",
-   "html_parse_descendants_classes"
+   "ebible_chapters"
   ],
   "functions_names": [
    "functions_names",
@@ -23745,11 +23745,11 @@
   "html_parse_descendants_classes": {
    "async": false,
    "identifiers": [
+    "each",
     "list_adder",
     "string_is",
     "list_filter",
     "list_unique",
-    "list_map",
     "html_parse_attr",
     "html_parse_find_list_to",
     "html_parse_descendants_classes",
@@ -23758,10 +23758,10 @@
     "descendants",
     "lambda2",
     "la",
-    "list",
     "lambda",
     "c",
     "mapped",
+    "list",
     "unique",
     "filtered"
    ]
