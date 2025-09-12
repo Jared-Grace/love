@@ -11,6 +11,8 @@ export function html_parse_descendants_classes(item, d) {
   function lambda2(la) {
     function lambda(item) {
       let c = html_parse_attr(d, item, "class");
+      if (false) {
+      }
       let split = string_split(c, " ");
       each(split, la);
     }
