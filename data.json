@@ -1920,7 +1920,6 @@
   "s take",
   "s string",
   "n html_parse_read",
-  "s href",
   "o sb",
   "n html_parse_href_text_map",
   "s list_filter_property",
@@ -1950,7 +1949,8 @@
   "s text",
   "s find",
   "ps",
-  "sb"
+  "sb",
+  "s href"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
