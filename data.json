@@ -3037,7 +3037,8 @@
    "html_parse_href_text_map",
    "ebible_versions_download",
    "html_parse_descendants_classes",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "list_adder_multiple_async"
   ],
   "v": [
    "data_identifiers_file",
@@ -4307,7 +4308,8 @@
    "global_function_async",
    "global_function_property_async",
    "js_dollar_choices",
-   "http_local_file_name"
+   "http_local_file_name",
+   "list_adder_multiple_async"
   ],
   "colored": [
    "chalk_color",
@@ -9405,11 +9407,13 @@
   "list_adder_generic": [
    "list_adder",
    "list_adder_generic",
-   "list_adder_multiple"
+   "list_adder_multiple",
+   "list_adder_multiple_async"
   ],
   "lambda$la": [
    "list_adder",
-   "list_adder_multiple"
+   "list_adder_multiple",
+   "list_adder_multiple_async"
   ],
   "list_adder_inner": [
    "list_adder_async",
@@ -9418,7 +9422,8 @@
   "list_add_multiple": [
    "list_adder_multiple",
    "list_add_multiple",
-   "marker_functionize"
+   "marker_functionize",
+   "list_adder_multiple_async"
   ],
   "original": [
    "list_copy"
@@ -12675,6 +12680,9 @@
   ],
   "book": [
    "ebible_version_verses"
+  ],
+  "list_adder_multiple_async": [
+   "list_adder_multiple_async"
   ]
  },
  "functions": {
@@ -23860,6 +23868,17 @@
     "classes",
     "dictionary",
     "v"
+   ]
+  },
+  "list_adder_multiple_async": {
+   "async": false,
+   "identifiers": [
+    "list_adder_generic",
+    "list_add_multiple",
+    "list_adder_multiple_async",
+    "lambda$la",
+    "fn",
+    "list"
    ]
   }
  },
