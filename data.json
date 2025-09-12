@@ -3030,8 +3030,7 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "v": [
    "data_identifiers_file",
@@ -23781,7 +23780,6 @@
     "exclude",
     "lambda",
     "item",
-    "list",
     "dictionary"
    ]
   },
