@@ -12,7 +12,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda(c) {
     let e = html_parse_find(root, "." + c);
     let text = html_parse_text(d, e);
-    return c;
+    return text;
   }
   let dictionary = list_to_dictionary(classes, lambda);
   return classes;
