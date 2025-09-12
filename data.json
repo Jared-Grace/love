@@ -12458,8 +12458,7 @@
    "ebible_chapters",
    "ebible_verses",
    "ebible_chapter_classes",
-   "ebible_chapter_codes",
-   "sandbox"
+   "ebible_chapter_codes"
   ],
   "unzip": [
    "unzip",
@@ -19622,7 +19621,6 @@
     "marker",
     "sandbox",
     "list",
-    "bible_folder",
     "contents"
    ],
    "async": true
