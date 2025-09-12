@@ -20,6 +20,6 @@ export function html_parse_descendants_classes(item, d) {
   }
   let list = list_adder(lambda2);
   let classes = list_unique(list);
-  list_sort_string(list2);
+  list_sort_string(classes);
   return classes;
 }
