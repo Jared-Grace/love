@@ -19,5 +19,5 @@ export async function ebible_chapters(bible_folder, book_code) {
     return without;
   }
   let mapped = list_map(list, lambda2);
-  return chapters;
+  return mapped;
 }
