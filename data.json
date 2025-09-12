@@ -1917,7 +1917,6 @@
   "s take",
   "s string",
   "n html_parse_read",
-  "o sb",
   "n html_parse_href_text_map",
   "s list_filter_property",
   "s start",
@@ -1964,10 +1963,11 @@
   "ebible_chapter_codes engbsb",
   "s suff",
   "p",
-  "sb"
+  "sb",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "ebible_chapter_codes",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
