@@ -12421,8 +12421,7 @@
    "app_new"
   ],
   "ebible_version_verses": [
-   "ebible_version_verses",
-   "sandbox"
+   "ebible_version_verses"
   ],
   "html_parse": [
    "html_parse",
@@ -12582,7 +12581,8 @@
    "catch_call"
   ],
   "ebible_verses": [
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "chapter_code": [
    "ebible_verses"
@@ -19489,8 +19489,8 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_verses",
     "marker",
-    "ebible_version_verses",
     "sandbox",
     "contents"
    ],
