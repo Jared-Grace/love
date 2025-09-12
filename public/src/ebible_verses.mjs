@@ -12,9 +12,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "s",
     "r",
     "m",
-    "verse",
     "b",
-    "s2",
     "pmo",
     "q",
     "q2",
@@ -28,7 +26,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "notebackref",
     "notemark",
     "popup",
+    "s2",
     "tnav",
+    "verse",
   ];
   return dictionary;
 }
