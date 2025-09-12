@@ -3021,7 +3021,8 @@
    "list_join_newline",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "ebible_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -4207,7 +4208,8 @@
    "list_adder_unique_async",
    "list_unique",
    "list_unique_reverse",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "ebible_verses"
   ],
   "function_run_prompt": [
    "function_run_prompt",
@@ -7351,7 +7353,8 @@
    "js_imports_declarations",
    "list_adder_unique",
    "list_adder_unique_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "ebible_verses"
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
@@ -23712,6 +23715,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_unique",
     "html_parse_attr",
     "list_map",
     "html_parse_find_list_to",
@@ -23729,7 +23733,9 @@
     "lambda",
     "item",
     "c",
-    "mapped"
+    "mapped",
+    "unique",
+    "list"
    ]
   }
  },
