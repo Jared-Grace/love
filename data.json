@@ -4098,7 +4098,8 @@
    "list_empty_not_is",
    "list_index_is",
    "list_last_or_null",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "ebible_verses"
   ],
   "e": [
    "catch_ignore",
@@ -4121,7 +4122,8 @@
    "html_element",
    "function_exists_inner",
    "firebase_storage_exists",
-   "catch_call"
+   "catch_call",
+   "ebible_verses"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -8551,8 +8553,7 @@
    "list_difference",
    "list_intersect",
    "marker_functionize",
-   "prompt_previous",
-   "ebible_verses"
+   "prompt_previous"
   ],
   "declaration_id": [
    "js_declaration_name"
@@ -12662,6 +12663,9 @@
    "ebible_verses"
   ],
   "html_parse_find_remove": [
+   "ebible_verses"
+  ],
+  "list3": [
    "ebible_verses"
   ]
  },
@@ -23773,6 +23777,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_empty_is",
     "list_difference",
     "assert",
     "html_parse_descendants_classes",
@@ -23793,8 +23798,9 @@
     "include",
     "exclude",
     "list2",
+    "list3",
+    "e",
     "list",
-    "other",
     "a",
     "dictionary",
     "lambda",
