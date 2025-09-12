@@ -11,7 +11,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   function lambda(c) {
     let e = html_parse_find(root, "." + c);
-    let text = html_parse_text(d2, item);
+    let text = html_parse_text(d, e);
+    return c;
   }
   let dictionary = list_to_dictionary(classes, lambda);
   return classes;
