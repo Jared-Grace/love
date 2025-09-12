@@ -1948,10 +1948,10 @@
   "s find",
   "s href",
   "s list_to",
-  "fd ebible_verses",
   "p",
   "sb",
-  "ps"
+  "ps",
+  "fd ebible_verses"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
