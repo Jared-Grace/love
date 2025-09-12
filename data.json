@@ -3743,8 +3743,7 @@
    "string_split",
    "tasks_run",
    "list_join_newline_2",
-   "list_join_newline",
-   "html_parse_descendants_classes"
+   "list_join_newline"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -4316,7 +4315,8 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "html_parse_descendants_classes"
   ],
   "value2": [
    "error_attention_set",
@@ -10651,7 +10651,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "html_parse_descendants_classes"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12620,6 +12621,9 @@
    "html_parse_descendants_classes"
   ],
   "descendants": [
+   "html_parse_descendants_classes"
+  ],
+  "item2": [
    "html_parse_descendants_classes"
   ]
  },
@@ -23767,7 +23771,9 @@
     "c",
     "split",
     "s",
-    "separator",
+    "list2",
+    "lambda3",
+    "item2",
     "mapped",
     "list",
     "unique",
