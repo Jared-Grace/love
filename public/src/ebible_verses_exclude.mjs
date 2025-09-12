@@ -11,6 +11,7 @@ export function ebible_verses_exclude() {
     "mt",
     "mr",
     "ms",
+    "nb",
     "notebackref",
     "notemark",
     "popup",
