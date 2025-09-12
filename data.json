@@ -1949,7 +1949,8 @@
   "n ebible_verses",
   "ebible_chapters engbsb GEN",
   "p",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "s text"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
