@@ -12516,7 +12516,8 @@
    "ebible_version_verses"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_verses"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -23706,6 +23707,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_find_list_to",
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
