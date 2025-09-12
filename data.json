@@ -12623,6 +12623,9 @@
   "classes": [
    "html_parse_descendants_classes",
    "ebible_verses"
+  ],
+  "hpt": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23750,6 +23753,7 @@
     "lambda",
     "c",
     "e",
+    "hpt",
     "dictionary"
    ]
   },
