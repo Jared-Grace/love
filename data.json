@@ -4555,7 +4555,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_chapters"
   ],
   "a": [
    "string_suffix_without",
@@ -8541,7 +8542,8 @@
    "string_prefix_without",
    "string_starts_with",
    "firebase_service_account",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_chapters"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -8769,7 +8771,8 @@
    "string_starts_with",
    "js_imports_declarations",
    "app_reply_main",
-   "http"
+   "http",
+   "ebible_chapters"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -11414,7 +11417,8 @@
    "app_reply_main",
    "http",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_chapters"
   ],
   "only": [
    "list_single",
@@ -23793,6 +23797,7 @@
   "ebible_chapters": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "ebible_version_download_path_combine",
     "html_parse_find_a_href_starts_with",
     "list_filter_starts_with_not_multiple",
@@ -23812,6 +23817,9 @@
     "chapters",
     "lambda2",
     "item2",
+    "sw",
+    "s",
+    "prefix",
     "mapped",
     "list"
    ]
