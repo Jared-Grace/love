@@ -12643,6 +12643,9 @@
   "html_parse_classes_preview": [
    "ebible_chapter_classes",
    "ebible_verses"
+  ],
+  "exclude": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23766,7 +23769,8 @@
     "main",
     "include",
     "dictionary",
-    "classes"
+    "classes",
+    "exclude"
    ]
   },
   "html_parse_descendants_classes": {
