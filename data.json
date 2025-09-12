@@ -1946,12 +1946,12 @@
   "ebible_verses engbsb GEN01",
   "s text",
   "s find",
-  "ps",
   "s href",
   "s list_to",
   "fd ebible_verses",
   "p",
-  "sb"
+  "sb",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
