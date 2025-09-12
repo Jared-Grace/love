@@ -12668,6 +12668,9 @@
   ],
   "book": [
    "ebible_version_verses"
+  ],
+  "lam": [
+   "ebible_version_verses"
   ]
  },
  "functions": {
@@ -23531,6 +23534,7 @@
     "object_property_get",
     "ebible_version_verses",
     "bible_folder",
+    "lam",
     "books",
     "lambda",
     "book",
