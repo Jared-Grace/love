@@ -1,6 +1,4 @@
-import { list_all } from "./list_all.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_any } from "./list_any.mjs";
+import { list_difference } from "./list_difference.mjs";
 import { assert } from "./assert.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
 import { html_parse_find_remove } from "./html_parse_find_remove.mjs";
@@ -32,15 +30,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  function lambda3(c) {
-    function lambda2(item2) {
-      let includes = list_includes(list, c);
-      return includes;
-    }
-    let any = list_any([include, exclude], lambda2);
-    return any;
-  }
-  let a = list_all(classes, lambda3);
+  let list2 = list_difference(list, other);
   assert(a);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
