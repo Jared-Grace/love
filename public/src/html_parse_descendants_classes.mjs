@@ -7,7 +7,8 @@ import { html_parse_attr } from "./html_parse_attr.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 export function html_parse_descendants_classes(item, d) {
   let descendants = html_parse_find_list_to(item, "*");
-  let list = list_adder(function lambda2(la) {});
+  function lambda2(la) {}
+  let list = list_adder(lambda2);
   function lambda(item) {
     let c = html_parse_attr(d, item, "class");
     return c;
