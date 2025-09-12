@@ -1,3 +1,4 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { assert } from "./assert.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
@@ -30,7 +31,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
-  let list2 = list_difference(list, other);
+  let list2 = list_difference(classes, include);
+  let list3 = list_difference(list2, exclude);
+  let e = list_empty_is(list);
   assert(a);
   let dictionary = html_parse_classes_preview(main, d, include);
   function lambda(item) {
