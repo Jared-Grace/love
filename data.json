@@ -5596,7 +5596,8 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "ebible_verses"
   ],
   "access": [
    "file_exists"
@@ -23721,6 +23722,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "string_is",
     "list_filter",
     "list_unique",
     "html_parse_attr",
