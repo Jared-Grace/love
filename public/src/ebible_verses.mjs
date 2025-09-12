@@ -15,5 +15,4 @@ export async function ebible_verses(bible_folder, chapter_code) {
     log(c);
   }
   let mapped = list_map(descendants, lambda);
-  return v;
 }
