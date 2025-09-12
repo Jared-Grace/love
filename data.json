@@ -9101,8 +9101,7 @@
    "list_filter",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters",
-   "ebible_verses"
+   "ebible_chapters"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -12617,7 +12616,8 @@
    "html_parse_descendants_classes"
   ],
   "classes": [
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23740,7 +23740,7 @@
     "d",
     "root",
     "main",
-    "filtered"
+    "classes"
    ]
   },
   "html_parse_descendants_classes": {
