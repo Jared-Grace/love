@@ -6062,8 +6062,7 @@
    "js_identifier_unique",
    "list_all",
    "search_generic",
-   "list_filter_starts_with_not_multiple",
-   "ebible_verses"
+   "list_filter_starts_with_not_multiple"
   ],
   "string_includes": [
    "function_name_to_path",
@@ -9196,7 +9195,8 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "match": [
    "js_node_types_is",
@@ -11687,7 +11687,8 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -23775,7 +23776,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "list_all",
+    "list_any",
     "assert",
     "html_parse_descendants_classes",
     "html_parse_find_remove",
@@ -23794,9 +23795,10 @@
     "classes",
     "include",
     "exclude",
+    "any",
+    "list",
     "lambda2",
     "item2",
-    "list",
     "b",
     "dictionary",
     "lambda",
