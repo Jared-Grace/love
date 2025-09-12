@@ -11978,7 +11978,8 @@
    "html_remove"
   ],
   "remove": [
-   "html_remove"
+   "html_remove",
+   "ebible_verses"
   ],
   "emoji_trinity": [
    "prayer_start",
@@ -23779,6 +23780,7 @@
     "lambda",
     "item",
     "result",
+    "remove",
     "list",
     "dictionary"
    ]
