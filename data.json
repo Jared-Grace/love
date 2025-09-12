@@ -23747,10 +23747,10 @@
     "root",
     "main",
     "classes",
-    "dictionary",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "dictionary",
+    "list"
    ]
   },
   "html_parse_descendants_classes": {
