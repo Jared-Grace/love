@@ -2905,8 +2905,7 @@
    "app_reply_main",
    "http",
    "list_filter_starts_with_not_multiple",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3971,7 +3970,8 @@
    "marker_functionize",
    "prompt_previous",
    "visit_unique_async",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "ebible_verses"
   ],
   "removals": [
    "list_remove_multiple",
@@ -4063,8 +4063,7 @@
    "marker_functionize",
    "visit_unique_async",
    "list_remove_if_exists",
-   "app_reply_main",
-   "ebible_verses"
+   "app_reply_main"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -4328,8 +4327,7 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download",
-   "ebible_verses"
+   "ebible_versions_download"
   ],
   "value2": [
    "error_attention_set",
@@ -4998,8 +4996,7 @@
    "string_includes",
    "js_node_types_includes",
    "list_remove_if_exists",
-   "app_reply_main",
-   "ebible_verses"
+   "app_reply_main"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -6065,8 +6062,7 @@
    "js_identifier_unique",
    "list_all",
    "search_generic",
-   "list_filter_starts_with_not_multiple",
-   "ebible_verses"
+   "list_filter_starts_with_not_multiple"
   ],
   "string_includes": [
    "function_name_to_path",
@@ -8555,7 +8551,8 @@
    "list_difference",
    "list_intersect",
    "marker_functionize",
-   "prompt_previous"
+   "prompt_previous",
+   "ebible_verses"
   ],
   "declaration_id": [
    "js_declaration_name"
@@ -9199,8 +9196,7 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set",
-   "ebible_verses"
+   "app_replace_rule_set"
   ],
   "match": [
    "js_node_types_is",
@@ -9990,8 +9986,7 @@
    "function_aliases_restore",
    "js_dollar",
    "js_calls_to_each",
-   "html_parse_descendants_classes",
-   "ebible_verses"
+   "html_parse_descendants_classes"
   ],
   "found": [
    "visit_unique_async"
@@ -10668,7 +10663,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "ebible_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -11692,8 +11688,7 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set",
-   "ebible_verses"
+   "app_replace_rule_set"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -12667,9 +12662,6 @@
    "ebible_verses"
   ],
   "html_parse_find_remove": [
-   "ebible_verses"
-  ],
-  "item2": [
    "ebible_verses"
   ]
  },
@@ -23781,9 +23773,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "list_all",
-    "list_includes",
-    "list_any",
+    "list_difference",
     "assert",
     "html_parse_descendants_classes",
     "html_parse_find_remove",
@@ -23802,13 +23792,9 @@
     "classes",
     "include",
     "exclude",
-    "lambda3",
-    "c",
-    "lambda2",
-    "item2",
-    "includes",
+    "list2",
     "list",
-    "any",
+    "other",
     "a",
     "dictionary",
     "lambda",
