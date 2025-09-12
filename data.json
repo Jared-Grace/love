@@ -4031,7 +4031,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
    "ebible_versions_download",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5002,7 +5003,8 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text"
+   "html_parse_text",
+   "ebible_verses"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12460,7 +12462,8 @@
    "html_parse_list_text_to"
   ],
   "html_parse_text": [
-   "html_parse_text"
+   "html_parse_text",
+   "ebible_verses"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -12624,7 +12627,7 @@
    "html_parse_descendants_classes",
    "ebible_verses"
   ],
-  "hpt": [
+  "d2": [
    "ebible_verses"
   ]
  },
@@ -23737,6 +23740,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_text",
     "list_to_dictionary",
     "html_parse_descendants_classes",
     "html_parse_find",
@@ -23753,7 +23757,9 @@
     "lambda",
     "c",
     "e",
-    "hpt",
+    "text",
+    "d2",
+    "item",
     "dictionary"
    ]
   },
