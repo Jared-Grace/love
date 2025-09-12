@@ -1963,8 +1963,8 @@
   "cs list_adder_generic async",
   "r ebible_version_verses ebible_chapter_codes",
   "ebible_chapter_codes engbsb",
-  "sb",
-  "s suff"
+  "s suff",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_codes",
