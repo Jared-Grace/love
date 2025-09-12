@@ -1963,7 +1963,7 @@
   "cs list_adder_multiple async"
  ],
  "marker_current": "1",
- "function_current": "ebible_chapter_classes",
+ "function_current": "list_adder_multiple_async",
  "terminal": false,
  "identifiers": {
   "log": [
