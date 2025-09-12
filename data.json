@@ -23560,12 +23560,12 @@
     "bible_folder",
     "lambda2",
     "la",
-    "list",
     "books",
     "lambda",
     "book",
     "book_code",
-    "chapters"
+    "chapters",
+    "list"
    ]
   },
   "html_parse_find": {
