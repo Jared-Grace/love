@@ -6270,7 +6270,8 @@
   ],
   "list_sort_string": [
    "function_types",
-   "list_sort_string"
+   "list_sort_string",
+   "html_parse_descendants_classes"
   ],
   "function_alias_add": [
    "function_alias_add",
@@ -10652,7 +10653,8 @@
   "list2": [
    "list_difference",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "html_parse_descendants_classes"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23775,6 +23777,7 @@
   "html_parse_descendants_classes": {
    "async": false,
    "identifiers": [
+    "list_sort_string",
     "string_split",
     "each",
     "list_adder",
@@ -23792,7 +23795,8 @@
     "c",
     "split",
     "list",
-    "classes"
+    "classes",
+    "list2"
    ]
   },
   "ebible_chapter_classes": {
