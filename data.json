@@ -1954,7 +1954,8 @@
   "s class",
   "s sort",
   "p",
-  "sb"
+  "sb",
+  "s classes"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_classes",
