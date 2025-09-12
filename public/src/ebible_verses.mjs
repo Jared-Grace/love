@@ -1,3 +1,4 @@
+import { list_all } from "./list_all.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_any } from "./list_any.mjs";
 import { assert } from "./assert.mjs";
@@ -31,6 +32,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     "tnav",
     "verse",
   ];
+  list_all(list2, function lambda3(item4) {});
   function lambda2(item2) {
     let includes = list_includes(list, item3);
   }
