@@ -7429,7 +7429,8 @@
   "list_reverse": [
    "list_copy_reverse",
    "list_reverse",
-   "list_unique_reverse"
+   "list_unique_reverse",
+   "ebible_verses"
   ],
   "list_copy": [
    "list_copy",
@@ -23961,6 +23962,7 @@
     "string_split_space",
     "ebible_chapter_text",
     "marker",
+    "list_reverse",
     "ebible_verses",
     "bible_folder",
     "chapter_code",
