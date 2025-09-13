@@ -8259,8 +8259,7 @@
    "http_firebase_file_path",
    "http_local_file_name",
    "firebase_deploy_function_destination",
-   "local_function_path",
-   "ebible_index_upload"
+   "local_function_path"
   ],
   "html_update": [
    "html_update",
@@ -11834,8 +11833,7 @@
   ],
   "file_name_json": [
    "file_name_json",
-   "firebase_deploy_function_destination",
-   "ebible_index_upload"
+   "firebase_deploy_function_destination"
   ],
   "version": [
    "firebase_deploy_function"
@@ -24833,12 +24831,10 @@
    "async": true,
    "identifiers": [
     "ebible_firebase_upload",
-    "file_name_json",
     "ebible_index",
     "ebible_index_upload",
     "bible_folder",
-    "index",
-    "file_name"
+    "index"
    ]
   },
   "app_name_main": {
