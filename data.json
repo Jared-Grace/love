@@ -12015,8 +12015,7 @@
   "firebase_storage_download": [
    "firebase_storage_download",
    "firebase_storage_download_property",
-   "http_firebase",
-   "app_reply_main"
+   "http_firebase"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -23877,7 +23876,6 @@
     "ebible_index_upload_name",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
-    "firebase_storage_download",
     "not",
     "string_starts_with",
     "string_lower_to",
