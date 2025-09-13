@@ -1,3 +1,4 @@
+import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { marker } from "./marker.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
@@ -36,6 +37,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
+  let list = html_parse_find_list_to(bl, selector);
   let text = html_parse_text(d, main);
   return text;
 }
