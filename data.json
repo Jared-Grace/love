@@ -1972,7 +1972,8 @@
   "ps",
   "p",
   "ebible_verses engbsb GEN01",
-  "s ebible"
+  "s ebible",
+  "s filter,empty"
  ],
  "marker_current": "1",
  "function_current": "html_parse_find_list_href_text",
