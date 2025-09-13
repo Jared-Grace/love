@@ -3367,8 +3367,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "global_function_async"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -22299,8 +22298,7 @@
     "global",
     "value",
     "name",
-    "awaited",
-    "message"
+    "awaited"
    ]
   },
   "global_function_property_async": {
