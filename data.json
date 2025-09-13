@@ -1940,7 +1940,6 @@
   "ebible_versions_download",
   "n ebible_verses",
   "ebible_chapters engbsb GEN",
-  "ebible_verses engbsb GEN01",
   "s text",
   "s find",
   "s href",
@@ -1968,7 +1967,8 @@
   "u hpt",
   "p",
   "ebible_verses engbsb GEN02",
-  "pp"
+  "pp",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
