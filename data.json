@@ -2939,7 +2939,8 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_chapters",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3072,7 +3073,8 @@
    "ebible_chapter_codes",
    "sandbox",
    "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -5540,7 +5542,8 @@
   "each_reverse": [
    "each_reverse",
    "js_dollar_g",
-   "js_expand_generic"
+   "js_expand_generic",
+   "ebible_verses"
   ],
   "reversed": [
    "each_reverse",
@@ -23926,6 +23929,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "each_reverse",
     "whitespace_normalize",
     "string_empty_not_is",
     "list_filter",
@@ -23938,7 +23942,9 @@
     "verse_numbers",
     "text",
     "split",
-    "filtered"
+    "filtered",
+    "list",
+    "lambda2"
    ]
   },
   "html_parse_descendants_classes": {
