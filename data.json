@@ -2296,8 +2296,7 @@
    "js_auto_transform_new_inner",
    "js_declaration_param_add_node",
    "ebible_chapter_code_to_book",
-   "firebase_storage_download",
-   "folder_read_async"
+   "firebase_storage_download"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2898,7 +2897,8 @@
    "list_filter_starts_with",
    "list_map_prefix_without",
    "promise_wrap",
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "folder_read_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2991,7 +2991,8 @@
    "ebible_chapters",
    "ebible_chapter_text",
    "ebible_verses",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "folder_read_async"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3375,7 +3376,8 @@
    "string_lord_bless",
    "string_may_the_lord",
    "ebible_book_code_size",
-   "sandbox"
+   "sandbox",
+   "folder_read_async"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3639,7 +3641,8 @@
    "server",
    "firebase_storage_exists",
    "file_parent_exists_ensure",
-   "firebase_path_fix"
+   "firebase_path_fix",
+   "folder_read_async"
   ],
   "value": [
    "watch",
@@ -3800,7 +3803,8 @@
    "js_auto_transform_new_inner",
    "js_dollar_new_name",
    "local_function_path",
-   "object_property_get_name"
+   "object_property_get_name",
+   "folder_read_async"
   ],
   "output": [
    "watch",
@@ -4976,7 +4980,8 @@
    "function_aliases_restore",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "file_parent_exists_ensure"
+   "file_parent_exists_ensure",
+   "folder_read_async"
   ],
   "file": [
    "folder_read",
@@ -4988,7 +4993,8 @@
    "folder_read"
   ],
   "isFile": [
-   "folder_read"
+   "folder_read",
+   "folder_read_async"
   ],
   "v2": [
    "function_identifier_replace",
@@ -5022,7 +5028,8 @@
    "emoji_question",
    "emoji_voice",
    "string_the_servant_of_god",
-   "sandbox"
+   "sandbox",
+   "folder_read_async"
   ],
   "readdirSync": [
    "folder_read"
@@ -5036,7 +5043,8 @@
    "visit_filter",
    "visit_filter_async",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "folder_read_async"
   ],
   "data_file_update_all": [
    "data_file_update_all"
@@ -8227,7 +8235,8 @@
   "join": [
    "git_acp_call",
    "list_join",
-   "path_join"
+   "path_join",
+   "folder_read_async"
   ],
   "execSync": [
    "git_acp_timestamp"
@@ -9905,7 +9914,8 @@
   ],
   "map": [
    "list_map",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "folder_read_async"
   ],
   "list_map_index": [
    "list_map_index",
@@ -11071,7 +11081,8 @@
   "path_folder": [
    "folder_read",
    "firebase_service_account",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "folder_read_async"
   ],
   "fop": [
    "apps_get",
@@ -11799,7 +11810,8 @@
   ],
   "files": [
    "folder_read",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "folder_read_async"
   ],
   "sw": [
    "string_starts_with",
@@ -13544,6 +13556,18 @@
    "ebible_index_upload"
   ],
   "folder_read_async": [
+   "folder_read_async"
+  ],
+  "entries": [
+   "folder_read_async"
+  ],
+  "readdir": [
+   "folder_read_async"
+  ],
+  "withFileTypes": [
+   "folder_read_async"
+  ],
+  "entry": [
    "folder_read_async"
   ]
  },
@@ -25979,10 +26003,26 @@
    ]
   },
   "folder_read_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "folder_read_async"
+    "folder_read_async",
+    "path_folder",
+    "fs",
+    "path",
+    "entries",
+    "readdir",
+    "withFileTypes",
+    "lambda",
+    "entry",
+    "v",
+    "isFile",
+    "lambda2",
+    "v2",
+    "join",
+    "name",
+    "files",
+    "filter",
+    "map"
    ]
   }
  },
