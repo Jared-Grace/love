@@ -3903,7 +3903,8 @@
    "string_split",
    "tasks_run",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "ebible_index_upload"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -4725,7 +4726,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_index_upload"
   ],
   "a": [
    "string_suffix_without",
@@ -6121,7 +6123,8 @@
    "string_split_space",
    "string_split_empty",
    "string_replace",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_index_upload"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -6234,7 +6237,8 @@
    "string_replace",
    "html_parse_descendants_classes",
    "string_split_space",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_index_upload"
   ],
   "results": [
    "functions_combine_name"
@@ -24829,6 +24833,7 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
+    "string_split",
     "object_property_initialize",
     "ebible_chapter_code_to_book",
     "ebible_chapters_each_verses",
@@ -24840,7 +24845,10 @@
     "verses",
     "book_code",
     "book",
-    "object"
+    "object",
+    "split",
+    "s",
+    "separator"
    ]
   },
   "app_name_main": {
