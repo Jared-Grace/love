@@ -2266,7 +2266,8 @@
    "ebible_chapter_codes",
    "ebible_chapter_text",
    "ebible_verses",
-   "html_parse_find_list_href_text"
+   "html_parse_find_list_href_text",
+   "whitespace_normalize"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -12790,6 +12791,9 @@
   "verse_numbers": [
    "ebible_chapter_text",
    "ebible_verses"
+  ],
+  "whitespace_normalize": [
+   "whitespace_normalize"
   ]
  },
  "functions": {
@@ -24089,6 +24093,13 @@
     "d",
     "list",
     "mapped"
+   ]
+  },
+  "whitespace_normalize": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "whitespace_normalize"
    ]
   }
  },
