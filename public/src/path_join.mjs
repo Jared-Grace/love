@@ -2,7 +2,7 @@ export function path_join(list_of_segments) {
   // Flatten and normalize
   let parts = [];
 
-  for (let seg of segments) {
+  for (let seg of list_of_segments) {
     if (!seg) continue; // skip null/undefined/empty
     let split = seg.split(/[\\/]+/); // split on / or \
     for (let s of split) {
