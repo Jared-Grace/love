@@ -8,6 +8,7 @@ import { ebible_verses } from "./ebible_verses.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_chapter_codes } from "./ebible_chapter_codes.mjs";
 import { marker } from "./marker.mjs";
+import { list_wait } from "./list_wait.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folder = "urdgvu";
@@ -36,7 +37,7 @@ export async function sandbox() {
       await firebase_upload_object(object, destination);
       log(destination);
     }
-    await each_async(verses, lambda2);
+    await list_wait(verses, lambda2);
   }
   await each_async(list, lambda);
 }
