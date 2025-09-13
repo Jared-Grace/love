@@ -34,7 +34,7 @@ export async function sandbox() {
         verse: merged,
       };
       await firebase_upload_object(object, destination);
-      log(message);
+      log(destination);
     }
     await each_async(verses, lambda2);
   }
