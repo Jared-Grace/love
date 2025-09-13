@@ -39,7 +39,8 @@ export async function sandbox() {
       await firebase_upload_object(object, destination);
       log(destination);
     }
-    let mapped = list_map(list2, function lambda3(item) {});
+    function lambda3(item) {}
+    let mapped = list_map(list2, lambda3);
     await list_wait(verses, lambda2);
   }
   await each_async(list, lambda);
