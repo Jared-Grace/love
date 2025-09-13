@@ -1965,13 +1965,13 @@
   "u hpt",
   "ebible_verses engbsb GEN02",
   "pp",
-  "p",
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
   "fw ebible_chapter_text ebible_verses",
   "s find",
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "ps",
+  "p",
   "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
@@ -3065,8 +3065,7 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "html_parse_find_list_href_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -4719,8 +4718,7 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters",
-   "ebible_chapter_text"
+   "ebible_chapters"
   ],
   "functions_names": [
    "functions_names",
@@ -9112,8 +9110,7 @@
   ],
   "both": [
    "js_imports_declarations",
-   "html_parse_href_text_map",
-   "ebible_chapter_text"
+   "html_parse_href_text_map"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -12620,8 +12617,7 @@
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
-   "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "html_parse_find_list_href_text"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -24019,8 +24015,6 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
-    "list_map",
-    "html_parse_find_list_to",
     "marker",
     "html_parse_text",
     "css_class_prefix_combine",
@@ -24054,11 +24048,9 @@
     "lambda",
     "item",
     "selector2",
-    "list",
-    "both",
-    "verse_numbers",
     "text",
-    "result"
+    "result",
+    "verse_numbers"
    ]
   },
   "html_parse_find_list_href_text": {
@@ -24076,7 +24068,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-13T19:25:20.308Z",
+ "git_push_when": "2025-09-13T20:25:22.267Z",
  "error_attention": null,
  "app_current": "replace"
 }
