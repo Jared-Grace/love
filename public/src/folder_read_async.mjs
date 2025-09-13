@@ -1,4 +1,3 @@
-import { path_join } from "./path_join.mjs";
 export async function folder_read_async(path_folder) {
   const fs = await import("fs/promises");
   const path = await import("path");
@@ -10,7 +9,7 @@ export async function folder_read_async(path_folder) {
     return v;
   }
   function lambda2(entry) {
-    let v2 = path_join(path_folder, entry.name);
+    let v2 = path.join(path_folder, entry.name);
     return v2;
   }
   const files = entries.filter(lambda).map(lambda2);
