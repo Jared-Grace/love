@@ -1,3 +1,4 @@
+import { list_wait } from "./list_wait.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { file_name_json } from "./file_name_json.mjs";
@@ -34,7 +35,7 @@ export async function sandbox() {
       };
       await firebase_upload_object(object, destination);
     }
-    await each_async(verses, lambda2);
+    await list_wait(verses, lambda2);
   }
   await each_async(list, lambda);
 }
