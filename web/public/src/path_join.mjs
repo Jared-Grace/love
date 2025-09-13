@@ -1,14 +1,17 @@
-export function path_join(list_of_segments) {
-  // Flatten and normalize
+export function path_join(segments) {
   let parts = [];
 
-  for (let seg of list_of_segments) {
-    if (!seg) continue; // skip null/undefined/empty
-    let split = seg.split(/[\\/]+/); // split on / or \
+  for (let seg of segments) {
+    if (!seg) continue;
+    let split = seg.split(/[\\/]+/);
     for (let s of split) {
       if (s === "" || s === ".") continue;
       if (s === "..") {
-        if (parts.length > 0) parts.pop();
+        if (parts.length > 0 && parts[parts.length - 1] !== "..") {
+          parts.pop();
+        } else {
+          parts.push(".."); // preserve leading ..
+        }
       } else {
         parts.push(s);
       }
