@@ -2946,7 +2946,8 @@
    "ebible_chapter_codes",
    "ebible_chapters",
    "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4102,7 +4103,8 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "ebible_chapter_text",
-   "list_index_of_last"
+   "list_index_of_last",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10759,7 +10761,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19759,7 +19762,10 @@
     "list",
     "lambda",
     "chapter_code",
-    "contents"
+    "contents",
+    "list2",
+    "lambda2",
+    "item"
    ],
    "async": true
   },
