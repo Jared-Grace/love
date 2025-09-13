@@ -40,7 +40,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let mapped = list_map(include, css_class_prefix_combine);
   let joined2 = list_join_space(mapped);
   log(joined2);
-  let result = html_parse_find_list_to(root, ".m");
+  let result = html_parse_find_list_to(root, joined2);
   log({
     result,
   });
