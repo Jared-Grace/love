@@ -1,4 +1,4 @@
-import { html_parse_find_list_text } from "./html_parse_find_list_text.mjs";
+import { html_parse_find_list_href_text } from "./html_parse_find_list_href_text.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { string_take } from "./string_take.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -12,7 +12,7 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   let joined = path_join([file_path, "index.htm"]);
   let { d, root } = await html_parse_read(joined);
   let bl = html_parse_find(root, ".bookList");
-  let mapped = html_parse_find_list_text(bl, selector, d);
+  let mapped = html_parse_find_list_href_text(bl, selector, d);
   function lambda(item) {
     let href = object_property_get(item, "href");
     let taken = string_take(href, 3);

@@ -1975,7 +1975,7 @@
   "r html_parse_find_list_text html_parse_find_list_href_text"
  ],
  "marker_current": "1",
- "function_current": "ebible_verses",
+ "function_current": "html_parse_find_list_href_text",
  "terminal": false,
  "identifiers": {
   "log": [
