@@ -1838,7 +1838,6 @@
   "is function_dependencies_code",
   "fws http firebase",
   "n file_path_safe_to",
-  "s firebase",
   "n firebase_storage_exists",
   "s download",
   "http_firebase https://wwww.google.com",
@@ -1978,7 +1977,8 @@
   "s index",
   "c list_index_of list_index_of_last",
   "p",
-  "sb"
+  "sb",
+  "s firebase"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
