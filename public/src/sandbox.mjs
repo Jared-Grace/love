@@ -1,3 +1,4 @@
+import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { each_async } from "./each_async.mjs";
@@ -11,6 +12,7 @@ export async function sandbox() {
     let verses = await ebible_verses(bible_folder, chapter_code);
     async function lambda2(v) {
       let verse_number = object_property_get(v, "verse_number");
+      list_join_slash_forward(list);
     }
     await each_async(verses, lambda2);
   }
