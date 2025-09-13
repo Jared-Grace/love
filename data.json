@@ -3139,8 +3139,7 @@
    "list_join_slash_forward",
    "list_map_prefix_without",
    "list_slice_count",
-   "ebible_chapters_each_verses",
-   "ebible_index"
+   "ebible_chapters_each_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -4246,8 +4245,7 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not",
-   "ebible_index"
+   "string_starts_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -26020,8 +26018,6 @@
     "book_code",
     "book",
     "chapters",
-    "list",
-    "item",
     "count",
     "chapter_name",
     "verse_numbers",
