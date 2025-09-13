@@ -27,6 +27,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
+    if (false) {
+    }
     each_reverse(verse_numbers, lambda2);
   }
   let list = list_adder(lambda);
