@@ -1990,7 +1990,7 @@
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "ebible_chapter_code_to_book",
  "terminal": false,
  "identifiers": {
   "log": [
