@@ -18773,7 +18773,7 @@
     "Promise",
     "all"
    ],
-   "async": false
+   "async": true
   },
   "log": {
    "identifiers": [
