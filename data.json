@@ -20361,9 +20361,9 @@
     "marker",
     "sandbox",
     "bible_folders",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ],
    "async": true
   },
