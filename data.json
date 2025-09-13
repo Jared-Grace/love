@@ -3121,7 +3121,8 @@
    "list_index_of_delta_outside",
    "list_join_slash_forward",
    "list_map_prefix_without",
-   "list_slice_count"
+   "list_slice_count",
+   "ebible_index_upload"
   ],
   "v": [
    "data_identifiers_file",
@@ -4221,7 +4222,8 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "ebible_index_upload"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4408,7 +4410,8 @@
    "js_auto_transform_new_inner",
    "js_declaration_param_add_node",
    "js_property_parse_expression_add",
-   "js_statement_return_empty_add"
+   "js_statement_return_empty_add",
+   "ebible_index_upload"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -24839,6 +24842,7 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
+    "list_add",
     "ebible_book_code_size",
     "string_skip",
     "object_property_initialize",
@@ -24854,7 +24858,9 @@
     "book",
     "object",
     "count",
-    "chapter_name"
+    "chapter_name",
+    "list",
+    "item"
    ]
   },
   "app_name_main": {
