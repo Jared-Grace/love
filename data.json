@@ -2296,7 +2296,8 @@
    "js_auto_transform_new_inner",
    "js_declaration_param_add_node",
    "ebible_chapter_code_to_book",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "folder_read_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -13541,6 +13542,9 @@
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload"
+  ],
+  "folder_read_async": [
+   "folder_read_async"
   ]
  },
  "functions": {
@@ -25972,6 +25976,13 @@
     "file_name_with_extension",
     "joined",
     "destination"
+   ]
+  },
+  "folder_read_async": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "folder_read_async"
    ]
   }
  },
