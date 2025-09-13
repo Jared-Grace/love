@@ -33,7 +33,7 @@ import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let bible_folder = ebible_folder_english();
   let file_name = ebible_index_upload_name();
-  let destination2 = ebible_firebase_upload_path(bible_folder, file_name);
+  let destination = ebible_firebase_upload_path(bible_folder, file_name);
   let buffer = await firebase_storage_download(destination);
   let bible = kjv();
   let properties = object_properties(bible);
