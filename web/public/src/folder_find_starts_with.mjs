@@ -8,7 +8,10 @@ export async function folder_find_starts_with(path_folder, prefix) {
     let sw = string_starts_with(item, prefix);
     return sw;
   }
-  log(message);
+  log({
+    files,
+    prefix,
+  });
   let only = list_find(files, lambda);
   return only;
 }
