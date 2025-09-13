@@ -12733,8 +12733,7 @@
    "sandbox"
   ],
   "item2": [
-   "ebible_chapters",
-   "ebible_verses"
+   "ebible_chapters"
   ],
   "extra": [
    "ebible_verses"
@@ -12750,12 +12749,6 @@
    "ebible_verses"
   ],
   "selector2": [
-   "ebible_verses"
-  ],
-  "hpt": [
-   "ebible_verses"
-  ],
-  "d2": [
    "ebible_verses"
   ]
  },
@@ -23917,10 +23910,7 @@
     "selector2",
     "mapped",
     "result",
-    "text",
-    "d2",
-    "item2",
-    "hpt"
+    "text"
    ]
   },
   "html_parse_descendants_classes": {
