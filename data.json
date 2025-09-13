@@ -5052,7 +5052,8 @@
    "app_reply_main",
    "http_local_text",
    "html_parse_list_text_to",
-   "html_parse_text"
+   "html_parse_text",
+   "ebible_verses"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -12522,7 +12523,8 @@
    "html_parse_list_text_to"
   ],
   "html_parse_text": [
-   "html_parse_text"
+   "html_parse_text",
+   "ebible_verses"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -12731,7 +12733,8 @@
    "sandbox"
   ],
   "item2": [
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "extra": [
    "ebible_verses"
@@ -12750,6 +12753,9 @@
    "ebible_verses"
   ],
   "hpt": [
+   "ebible_verses"
+  ],
+  "d2": [
    "ebible_verses"
   ]
  },
@@ -23876,6 +23882,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "html_parse_text",
     "list_map",
     "css_class_prefix_combine",
     "ebible_verses_exclude",
@@ -23910,6 +23917,9 @@
     "selector2",
     "mapped",
     "result",
+    "text",
+    "d2",
+    "item2",
     "hpt"
    ]
   },
