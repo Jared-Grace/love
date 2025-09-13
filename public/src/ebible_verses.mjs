@@ -1,6 +1,5 @@
 import { list_take } from "./list_take.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { log } from "./log.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { each_reverse } from "./each_reverse.mjs";
@@ -19,11 +18,11 @@ export async function ebible_verses(bible_folder, chapter_code) {
   text = whitespace_normalize(text);
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
+  lad;
   function lambda2(item) {
     let index = list_index_of(filtered, item);
     let skipped = list_skip(filtered, index + 1);
     let joined = list_join_space(skipped);
-    log(joined);
     filtered = list_take(filtered, index);
   }
   each_reverse(verse_numbers, lambda2);
