@@ -6089,8 +6089,7 @@
    "function_dependencies_code",
    "list_map_unordered_async",
    "list_wait",
-   "functions_transform",
-   "sandbox"
+   "functions_transform"
   ],
   "function_format": [
    "functions_format",
@@ -19769,7 +19768,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_wait",
     "object_merge",
     "firebase_upload_object",
     "file_name_json",
