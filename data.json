@@ -3593,7 +3593,8 @@
    "ebible_version_download_path_combine",
    "firebase_storage_download_path",
    "firebase_storage_function_run",
-   "list_join_slash_forward"
+   "list_join_slash_forward",
+   "ebible_verses_upload"
   ],
   "watcher": [
    "watch"
@@ -24818,6 +24819,7 @@
     "v",
     "verse_number",
     "file_name",
+    "joined",
     "destination",
     "merged",
     "object",
