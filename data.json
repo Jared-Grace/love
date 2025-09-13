@@ -2000,8 +2000,7 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download",
-   "ebible_chapter_text"
+   "ebible_versions_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -24156,7 +24155,6 @@
     "css_class_prefix_combine",
     "ebible_verses_exclude",
     "ebible_verses_include",
-    "log",
     "list_empty_is",
     "list_difference",
     "html_parse_descendants_classes",
