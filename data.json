@@ -2031,7 +2031,8 @@
    "data_identifiers_file",
    "list_add_if_not_includes",
    "visit_unique_async",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "ebible_index"
   ],
   "object_property_initialize": [
    "data_identifiers_file",
@@ -3138,7 +3139,8 @@
    "list_join_slash_forward",
    "list_map_prefix_without",
    "list_slice_count",
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "ebible_index"
   ],
   "v": [
    "data_identifiers_file",
@@ -4244,7 +4246,8 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "ebible_index"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -25999,6 +26002,7 @@
   "ebible_index": {
    "async": true,
    "identifiers": [
+    "list_add_if_not_includes",
     "list_add",
     "list_map_property",
     "string_skip",
@@ -26016,6 +26020,8 @@
     "book_code",
     "book",
     "chapters",
+    "list",
+    "item",
     "count",
     "chapter_name",
     "verse_numbers",
