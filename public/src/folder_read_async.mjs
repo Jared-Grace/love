@@ -8,10 +8,6 @@ export async function folder_read_async(path_folder) {
     let v = entry.isFile();
     return v;
   }
-  function lambda2(entry) {
-    let v2 = path.join(path_folder, entry.name);
-    return v2;
-  }
-  const files = entries.filter(lambda).map(lambda2);
+  const files = entries.filter(lambda);
   return files;
 }
