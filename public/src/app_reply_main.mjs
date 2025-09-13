@@ -1,3 +1,4 @@
+import { json_from } from "./json_from.mjs";
 import { buffer_string_to } from "./buffer_string_to.mjs";
 import { ebible_index_upload_name } from "./ebible_index_upload_name.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -36,7 +37,8 @@ export async function app_reply_main() {
   let file_name = ebible_index_upload_name();
   let destination = ebible_firebase_upload_path(bible_folder, file_name);
   let buffer = await firebase_storage_download(destination);
-  let s = buffer_string_to(buffer2);
+  let s = buffer_string_to(buffer);
+  let v = json_from(json);
   let bible = kjv();
   let properties = object_properties(bible);
   let reference = list_random_item(properties);
