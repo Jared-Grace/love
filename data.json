@@ -3276,7 +3276,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
    "ebible_verses_exclude",
-   "ebible_verses_include"
+   "ebible_verses_include",
+   "whitespace_normalize"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11486,7 +11487,8 @@
   ],
   "replace": [
    "date_now_file",
-   "string_letters_only"
+   "string_letters_only",
+   "whitespace_normalize"
   ],
   "file_name_json": [
    "file_name_json"
@@ -12229,7 +12231,8 @@
    "app_reply_main"
   ],
   "str": [
-   "string_letters_only"
+   "string_letters_only",
+   "whitespace_normalize"
   ],
   "text2": [
    "app_reply_main"
@@ -12793,6 +12796,9 @@
    "ebible_verses"
   ],
   "whitespace_normalize": [
+   "whitespace_normalize"
+  ],
+  "trim": [
    "whitespace_normalize"
   ]
  },
@@ -24099,7 +24105,11 @@
    "async": false,
    "identifiers": [
     "marker",
-    "whitespace_normalize"
+    "whitespace_normalize",
+    "str",
+    "v",
+    "replace",
+    "trim"
    ]
   }
  },
