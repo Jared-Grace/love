@@ -26013,12 +26013,12 @@
     "chapter_code",
     "verses",
     "book_code",
+    "book",
     "chapters",
     "count",
     "chapter_name",
     "verse_numbers",
-    "chapter",
-    "book"
+    "chapter"
    ]
   },
   "ebible_firebase_upload_path": {
