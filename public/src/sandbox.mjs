@@ -1,3 +1,4 @@
+import { object_merge } from "./object_merge.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { file_name_json } from "./file_name_json.mjs";
 import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
@@ -21,6 +22,7 @@ export async function sandbox() {
         chapter_code,
         file_name,
       ]);
+      let to2 = object_merge(to, from);
       await firebase_upload_object(
         {
           verse,
