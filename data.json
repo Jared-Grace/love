@@ -3488,7 +3488,8 @@
    "ebible_version_books_testament",
    "ebible_chapters",
    "ebible_verses",
-   "ebible_chapter_classes"
+   "ebible_chapter_classes",
+   "list_join_space"
   ],
   "watcher": [
    "watch"
@@ -9565,7 +9566,6 @@
    "list_is"
   ],
   "result2": [
-   "list_join_space",
    "server",
    "tasks_run",
    "task_new",
@@ -18164,7 +18164,7 @@
     "list_join",
     "list_join_space",
     "args",
-    "result2"
+    "joined"
    ],
    "async": false
   },
