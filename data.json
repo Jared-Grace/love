@@ -5691,8 +5691,7 @@
    "firebase_upload_object",
    "file_write_json",
    "ebible_verses_upload",
-   "object_property_set_exists_not",
-   "ebible_index_upload"
+   "object_property_set_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -24855,8 +24854,7 @@
     "index",
     "file_name",
     "joined",
-    "destination",
-    "object"
+    "destination"
    ]
   },
   "app_name_main": {
