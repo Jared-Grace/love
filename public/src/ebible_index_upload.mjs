@@ -6,6 +6,6 @@ export async function ebible_index_upload(bible_folder) {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
-    let value2 = object_property_initialize(object, book_code, []);
+    let book = object_property_initialize(object, book_code, []);
   }
 }
