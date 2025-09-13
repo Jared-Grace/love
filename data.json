@@ -1970,9 +1970,9 @@
   "de ebible_verses",
   "fw ebible_chapter_text ebible_verses",
   "s find",
-  "ps",
   "ebible_verses engbsb GEN01",
-  "r html_parse_find_list_text html_parse_find_list_href_text"
+  "r html_parse_find_list_text html_parse_find_list_href_text",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "html_parse_find_list_href_text",
