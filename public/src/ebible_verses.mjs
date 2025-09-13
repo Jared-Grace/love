@@ -9,6 +9,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     chapter_code,
   );
   let split = string_split_space(text);
-  let filtered = list_filter(list, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   return text;
 }
