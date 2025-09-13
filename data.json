@@ -8275,7 +8275,8 @@
    "firebase_deploy_function_destination",
    "local_function_path",
    "ebible_firebase_upload",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "app_reply_main"
   ],
   "html_update": [
    "html_update",
@@ -12986,7 +12987,8 @@
    "ebible_firebase_folder",
    "ebible_firebase_upload",
    "ebible_index",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "app_reply_main"
   ],
   "unzip": [
    "unzip",
@@ -13426,7 +13428,8 @@
    "firebase_bucket"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version"
+   "firebase_deploy_function_destination_version",
+   "app_reply_main"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -13523,7 +13526,8 @@
   ],
   "ebible_firebase_upload_path": [
    "ebible_firebase_upload",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "app_reply_main"
   ],
   "file_name_with_extension": [
    "ebible_firebase_upload_path"
@@ -23810,6 +23814,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_firebase_upload_path",
     "firebase_storage_download",
     "not",
     "string_starts_with",
@@ -23840,6 +23845,9 @@
     "html_button",
     "marker",
     "app_reply_main",
+    "destination2",
+    "bible_folder",
+    "file_name",
     "buffer",
     "destination",
     "bible",
