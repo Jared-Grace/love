@@ -12606,7 +12606,8 @@
   ],
   "html_parse_find_list_to": [
    "ebible_version_books_testament",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_verses"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -23895,6 +23896,7 @@
     "html_parse_read",
     "ebible_version_download_path_combine",
     "assert_json",
+    "html_parse_find_list_to",
     "ebible_verses",
     "bible_folder",
     "chapter_code",
