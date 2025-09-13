@@ -1897,7 +1897,6 @@
   "s bible",
   "n ebible_version_verses",
   "ebible_version_download engbsb",
-  "s folder",
   "ebible_version_verses engbsb",
   "a fir file_read",
   "as file",
@@ -1990,7 +1989,8 @@
   "s skip",
   "p",
   "ebible_index_upload engbsb",
-  "s firebase,folde"
+  "s firebase,folde",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
