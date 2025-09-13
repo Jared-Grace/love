@@ -5816,8 +5816,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "ebible_verses"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -8489,7 +8488,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "ebible_verses"
   ],
   "remaining": [
    "js_call_new_code",
@@ -8780,13 +8780,13 @@
    "list_skip",
    "list_skip_1",
    "app_replace_rule_parse",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "ebible_verses"
+   "list_second"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -9665,7 +9665,8 @@
    "list_skip",
    "string_prefix_without",
    "string_skip",
-   "list_skip_1"
+   "list_skip_1",
+   "ebible_verses"
   ],
   "slice": [
    "list_slice",
@@ -23934,7 +23935,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "list_second",
+    "list_skip",
     "list_index_of",
     "each_reverse",
     "whitespace_normalize",
@@ -23953,8 +23954,9 @@
     "lambda2",
     "item",
     "index",
-    "second",
-    "list"
+    "skipped",
+    "list",
+    "skip_count"
    ]
   },
   "html_parse_descendants_classes": {
