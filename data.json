@@ -3363,8 +3363,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "sandbox"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19792,8 +19791,7 @@
     "destination",
     "merged",
     "object",
-    "verse",
-    "message"
+    "verse"
    ],
    "async": true
   },
