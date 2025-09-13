@@ -4412,7 +4412,6 @@
    "js_marker_name_get",
    "js_unparse",
    "js_visit",
-   "list_index_of",
    "list_size_1_assert_message",
    "object_merge",
    "object_property_get",
@@ -5634,7 +5633,8 @@
   ],
   "error_json": [
    "error_json",
-   "js_unparse"
+   "js_unparse",
+   "list_index_of"
   ],
   "exit": [
    "exit"
@@ -18075,7 +18075,7 @@
   },
   "list_index_of": {
    "identifiers": [
-    "error",
+    "error_json",
     "list_index_of",
     "list",
     "item",
