@@ -1971,7 +1971,8 @@
   "fw ebible_chapter_text ebible_verses",
   "s find",
   "ps",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "r html_parse_find_list_text html_parse_find_list_href_text"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
