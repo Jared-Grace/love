@@ -3055,7 +3055,6 @@
    "list_index_of_next_outside",
    "list_join_newline_2",
    "list_join_newline",
-   "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_versions_download",
    "html_parse_descendants_classes",
@@ -12610,7 +12609,6 @@
    "ebible_chapter_codes"
   ],
   "html_parse_find_list_to": [
-   "ebible_version_books_testament",
    "html_parse_descendants_classes",
    "ebible_chapter_text"
   ],
@@ -12618,8 +12616,7 @@
    "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
-   "html_parse_href_text_map",
-   "ebible_version_books_testament"
+   "html_parse_href_text_map"
   ],
   "ebible_version_download_path": [
    "ebible_version_download"
@@ -12768,6 +12765,9 @@
   ],
   "verses": [
    "ebible_chapter_text"
+  ],
+  "html_parse_find_list_text": [
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -23724,11 +23724,10 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "html_parse_find_list_text",
     "object_property_get",
     "string_take",
-    "html_parse_href_text_map",
     "object_merge",
-    "html_parse_find_list_to",
     "html_parse_read",
     "list_map",
     "html_parse_find",
@@ -23742,7 +23741,6 @@
     "d",
     "root",
     "bl",
-    "list",
     "mapped",
     "lambda",
     "item",
