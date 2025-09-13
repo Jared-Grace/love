@@ -12781,7 +12781,8 @@
    "ebible_version_books_testament"
   ],
   "verse_numbers": [
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23910,6 +23911,7 @@
     "ebible_verses",
     "bible_folder",
     "chapter_code",
+    "verse_numbers",
     "text"
    ]
   },
