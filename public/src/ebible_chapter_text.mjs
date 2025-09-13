@@ -1,4 +1,4 @@
-import { html_parse_find_list_text } from "./html_parse_find_list_text.mjs";
+import { html_parse_find_list_href_text } from "./html_parse_find_list_href_text.mjs";
 import { marker } from "./marker.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
@@ -37,7 +37,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  let mapped = html_parse_find_list_text(main, ".verse", d);
+  let mapped = html_parse_find_list_href_text(main, ".verse", d);
   log({
     mapped,
   });
