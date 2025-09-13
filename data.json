@@ -1991,7 +1991,6 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "function_path_to_name": [
@@ -2057,7 +2056,6 @@
    "list_remove_all_multiple",
    "app_reply_main",
    "html_parse_descendants_classes",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "js_identifiers_names": [
@@ -2263,7 +2261,8 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2838,7 +2837,6 @@
    "ebible_versions_download",
    "catch_call",
    "html_parse_descendants_classes",
-   "ebible_verses",
    "ebible_version_verses",
    "list_adder_generic_async",
    "ebible_chapter_codes",
@@ -3271,7 +3269,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
    "ebible_verses_exclude",
-   "ebible_verses_include"
+   "ebible_verses_include",
+   "ebible_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3496,7 +3495,6 @@
    "http_firebase_file_path",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses",
    "ebible_chapter_classes",
    "list_join_space",
    "ebible_chapter_text"
@@ -3864,7 +3862,6 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_chapters",
-   "ebible_verses",
    "html_parse_descendants_classes",
    "ebible_chapter_classes",
    "ebible_chapter_text"
@@ -4009,7 +4006,6 @@
    "prompt_previous",
    "visit_unique_async",
    "data_file_update_inner",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "removals": [
@@ -4081,7 +4077,6 @@
    "ebible_chapters",
    "ebible_versions_download",
    "html_parse_descendants_classes",
-   "ebible_verses",
    "list_adder_generic_async",
    "sandbox",
    "ebible_chapter_text"
@@ -4141,7 +4136,6 @@
    "list_index_is",
    "list_last_or_null",
    "data_file_update_inner",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "e": [
@@ -4166,7 +4160,6 @@
    "function_exists_inner",
    "firebase_storage_exists",
    "catch_call",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "object_property_delete": [
@@ -4992,7 +4985,6 @@
    "js_node_atomize",
    "function_current_set",
    "http",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "o": [
@@ -5069,7 +5061,6 @@
    "http_local_text",
    "html_parse_list_text_to",
    "html_parse_text",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "clipboard": [
@@ -7049,7 +7040,6 @@
    "function_names_to_acronyms",
    "list_to_dictionary",
    "ebible_chapter_classes",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "function_name_separator": [
@@ -10723,7 +10713,6 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "marker_up_1": [
@@ -11226,7 +11215,6 @@
    "html_parse",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_text"
   ],
@@ -12528,7 +12516,6 @@
   "html_parse_find": [
    "html_parse_find",
    "ebible_version_books_testament",
-   "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_text"
   ],
@@ -12544,7 +12531,6 @@
   ],
   "html_parse_text": [
    "html_parse_text",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "html_parse_list_text_to": [
@@ -12615,7 +12601,6 @@
    "html_parse_read",
    "ebible_version_books_testament",
    "ebible_chapters",
-   "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_text"
   ],
@@ -12697,12 +12682,10 @@
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
-   "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_text"
   ],
   "main": [
-   "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_text"
   ],
@@ -12713,7 +12696,6 @@
   "html_parse_descendants_classes": [
    "html_parse_descendants_classes",
    "ebible_chapter_classes",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "descendants": [
@@ -12722,27 +12704,22 @@
   "classes": [
    "html_parse_descendants_classes",
    "ebible_chapter_classes",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "ebible_chapter_classes": [
    "ebible_chapter_classes"
   ],
   "include": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "html_parse_classes_preview": [
    "ebible_chapter_classes",
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "exclude": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "html_parse_find_remove": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "book": [
@@ -12766,30 +12743,26 @@
    "ebible_chapters"
   ],
   "extra": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "ebible_verses_include": [
-   "ebible_verses",
    "ebible_verses_include",
    "ebible_chapter_text"
   ],
   "ebible_verses_exclude": [
-   "ebible_verses",
    "ebible_verses_exclude",
    "ebible_chapter_text"
   ],
   "css_class_prefix_combine": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "selector2": [
-   "ebible_verses",
    "ebible_chapter_text"
   ],
   "ebible_chapter_text": [
    "ebible_chapter_text",
-   "sandbox"
+   "sandbox",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23915,39 +23888,12 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "html_parse_text",
-    "css_class_prefix_combine",
-    "ebible_verses_exclude",
-    "ebible_verses_include",
-    "log",
-    "list_empty_is",
-    "list_difference",
-    "html_parse_descendants_classes",
-    "html_parse_find_remove",
-    "each",
-    "html_parse_classes_preview",
-    "html_parse_find",
-    "html_parse_read",
-    "ebible_version_download_path_combine",
-    "assert_json",
+    "ebible_chapter_text",
+    "marker",
     "ebible_verses",
     "bible_folder",
     "chapter_code",
-    "joined",
-    "d",
-    "root",
-    "main",
-    "classes",
-    "include",
-    "exclude",
-    "list2",
-    "extra",
-    "e",
-    "dictionary",
-    "lambda",
-    "item",
-    "selector2",
-    "text"
+    "v"
    ]
   },
   "html_parse_descendants_classes": {
