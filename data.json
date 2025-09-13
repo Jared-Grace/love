@@ -11578,7 +11578,8 @@
    "global_function_property_async"
   ],
   "object_property_lambda": [
-   "object_property_lambda"
+   "object_property_lambda",
+   "global_function_async"
   ],
   "value_set": [
    "object_property_lambda",
@@ -11587,7 +11588,6 @@
   "object_property_lambda_async": [
    "object_property_lambda_async",
    "global_function",
-   "global_function_async",
    "global_function_property_async"
   ],
   "global_function_async": [
@@ -22285,7 +22285,7 @@
   "global_function_async": {
    "async": true,
    "identifiers": [
-    "object_property_lambda_async",
+    "object_property_lambda",
     "global_get",
     "marker",
     "global_function_async",
