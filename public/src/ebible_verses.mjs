@@ -1,4 +1,4 @@
-import { list_join_space } from "./list_join_space.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 import { list_map } from "./list_map.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
@@ -38,7 +38,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   }
   each(exclude, lambda);
   let mapped = list_map(include, css_class_prefix_combine);
-  let joined2 = list_join_space(mapped);
+  let joined2 = list_join_comma_space(mapped);
   log({
     joined2,
   });
