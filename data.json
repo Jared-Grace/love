@@ -3065,7 +3065,8 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "html_parse_find_list_href_text"
+   "html_parse_find_list_href_text",
+   "ebible_chapter_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -12777,9 +12778,6 @@
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
    "ebible_version_books_testament"
-  ],
-  "verses": [
-   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24053,7 +24051,7 @@
     "lambda",
     "item",
     "selector2",
-    "verses",
+    "list",
     "both",
     "mapped",
     "text"
