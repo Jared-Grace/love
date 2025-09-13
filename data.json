@@ -13458,6 +13458,9 @@
   ],
   "ebible_index": [
    "ebible_index_upload"
+  ],
+  "ebible_firebase_folder": [
+   "ebible_verses_upload"
   ]
  },
  "functions": {
@@ -24804,6 +24807,7 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
+    "ebible_firebase_folder",
     "ebible_chapters_each_verses",
     "list_wait",
     "list_map",
