@@ -1980,8 +1980,8 @@
   "s join",
   "p",
   "sandbox",
-  "sb",
-  "s wait"
+  "s wait",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
