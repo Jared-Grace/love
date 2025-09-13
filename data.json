@@ -3077,7 +3077,8 @@
    "sandbox",
    "html_parse_find_list_href_text",
    "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_verses",
+   "list_index_of_last"
   ],
   "v": [
    "data_identifiers_file",
@@ -4096,7 +4097,8 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "sandbox",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "list_index_of_last"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5421,7 +5423,8 @@
    "js_dollar_x",
    "js_expand_generic",
    "list_random_item",
-   "ebible_verses"
+   "ebible_verses",
+   "list_index_of_last"
   ],
   "lists_get": [
    "each_multiple",
@@ -5634,7 +5637,8 @@
   "error_json": [
    "error_json",
    "js_unparse",
-   "list_index_of"
+   "list_index_of",
+   "list_index_of_last"
   ],
   "exit": [
    "exit"
@@ -9559,7 +9563,8 @@
    "list_index_last"
   ],
   "indexOf": [
-   "list_index_of"
+   "list_index_of",
+   "list_index_of_last"
   ],
   "list_index_of_delta": [
    "list_index_of_delta",
@@ -12828,6 +12833,9 @@
   ],
   "ebible_verse": [
    "ebible_verses"
+  ],
+  "list_index_of_last": [
+   "list_index_of_last"
   ]
  },
  "functions": {
@@ -24158,6 +24166,17 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "list_index_of_last": {
+   "async": false,
+   "identifiers": [
+    "error_json",
+    "list_index_of_last",
+    "list",
+    "item",
+    "index",
+    "indexOf"
    ]
   }
  },
