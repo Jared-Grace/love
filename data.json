@@ -3903,8 +3903,7 @@
    "string_split",
    "tasks_run",
    "list_join_newline_2",
-   "list_join_newline",
-   "ebible_index_upload"
+   "list_join_newline"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -6123,8 +6122,7 @@
    "string_split_space",
    "string_split_empty",
    "string_replace",
-   "html_parse_descendants_classes",
-   "ebible_index_upload"
+   "html_parse_descendants_classes"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -6237,8 +6235,7 @@
    "string_replace",
    "html_parse_descendants_classes",
    "string_split_space",
-   "ebible_verses",
-   "ebible_index_upload"
+   "ebible_verses"
   ],
   "results": [
    "functions_combine_name"
@@ -8744,7 +8741,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "ebible_index_upload"
   ],
   "remaining": [
    "js_call_new_code",
@@ -9941,7 +9939,8 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_index_upload"
   ],
   "slice": [
    "list_slice",
@@ -10264,7 +10263,8 @@
   ],
   "string_skip": [
    "string_prefix_without",
-   "string_skip"
+   "string_skip",
+   "ebible_index_upload"
   ],
   "startsWith": [
    "string_starts_with"
@@ -24833,7 +24833,7 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
-    "string_split",
+    "string_skip",
     "object_property_initialize",
     "ebible_chapter_code_to_book",
     "ebible_chapters_each_verses",
@@ -24846,9 +24846,9 @@
     "book_code",
     "book",
     "object",
-    "split",
+    "skipped",
     "s",
-    "separator"
+    "skip_count"
    ]
   },
   "app_name_main": {
