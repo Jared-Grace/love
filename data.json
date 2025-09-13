@@ -1996,7 +1996,8 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3351,7 +3352,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -8488,8 +8490,7 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip",
-   "ebible_verses"
+   "string_skip"
   ],
   "remaining": [
    "js_call_new_code",
@@ -23935,6 +23936,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "list_skip",
     "list_index_of",
     "each_reverse",
@@ -23956,7 +23958,7 @@
     "index",
     "skipped",
     "list",
-    "skip_count"
+    "message"
    ]
   },
   "html_parse_descendants_classes": {
