@@ -2013,7 +2013,8 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3371,8 +3372,7 @@
    "string_lord_bless",
    "string_may_the_lord",
    "ebible_book_code_size",
-   "sandbox",
-   "app_reply_main"
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3442,7 +3442,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_reply_main"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5232,8 +5233,7 @@
    "json_from",
    "storage_local_get",
    "file_write_json",
-   "firebase_storage_download_property",
-   "app_reply_main"
+   "firebase_storage_download_property"
   ],
   "includes": [
    "catch_only_async",
@@ -5623,7 +5623,8 @@
    "list_index_of_delta_outside",
    "list_slice_count",
    "ebible_index_upload",
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ],
   "lists_get": [
    "each_multiple",
@@ -23839,6 +23840,8 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "log",
+    "json_from",
     "buffer_string_to",
     "ebible_index_upload_name",
     "ebible_folder_english",
@@ -23872,15 +23875,14 @@
     "object_property_get",
     "html_button",
     "marker",
-    "json_from",
     "app_reply_main",
     "bible_folder",
     "file_name",
     "destination",
     "buffer",
     "s",
-    "v",
-    "json",
+    "index",
+    "message",
     "bible",
     "properties",
     "reference",
