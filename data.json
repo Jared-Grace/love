@@ -2007,8 +2007,7 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "firebase_upload_generic",
-   "ebible_index_upload"
+   "firebase_upload_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -24846,7 +24845,6 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
-    "log",
     "list_map_property",
     "list_add",
     "ebible_book_code_size",
