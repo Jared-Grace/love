@@ -1975,7 +1975,8 @@
   "n whitespace_normalize",
   "ps",
   "ebible_verses engbsb GEN01",
-  "s pair"
+  "s pair",
+  "s reverse"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
