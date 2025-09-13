@@ -1946,7 +1946,6 @@
   "fd ebible_verses",
   "s dict",
   "c ebible_verses ebible_chapter_classes",
-  "ps",
   "ebible_chapter_classes engbsb GEN01",
   "s class",
   "s sort",
@@ -1971,7 +1970,8 @@
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
   "fw ebible_chapter_text ebible_verses",
-  "s find"
+  "s find",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
