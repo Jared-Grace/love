@@ -8260,7 +8260,6 @@
    "http_firebase_file_path",
    "http_local_file_name",
    "firebase_deploy_function_destination",
-   "ebible_verses_upload",
    "local_function_path",
    "ebible_index_upload"
   ],
@@ -24833,7 +24832,6 @@
     "merged",
     "object",
     "verse",
-    "file_name",
     "mapped"
    ]
   },
