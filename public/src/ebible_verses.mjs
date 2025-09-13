@@ -21,7 +21,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let filtered = list_filter(split, string_empty_not_is);
   function lambda2(item) {
     let index = list_index_of(filtered, item);
-    let skipped = list_skip(list, index + 1);
+    let skipped = list_skip(filtered, index + 1);
     let joined = list_join_space(skipped);
     log(joined);
     filtered = list_take(filtered, index);
