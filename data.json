@@ -3332,8 +3332,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "ebible_verses"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -23915,7 +23914,6 @@
     "selector2",
     "mapped",
     "joined2",
-    "message",
     "result",
     "text"
    ]
