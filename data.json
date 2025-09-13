@@ -4865,8 +4865,7 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get",
-   "folder_find_starts_with"
+   "apps_get"
   ],
   "function_name_extension": [
    "functions_names",
@@ -13556,7 +13555,8 @@
    "ebible_index_upload"
   ],
   "folder_read_async": [
-   "folder_read_async"
+   "folder_read_async",
+   "folder_find_starts_with"
   ],
   "entries": [
    "folder_read_async"
@@ -25391,11 +25391,11 @@
    ]
   },
   "folder_find_starts_with": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "folder_read_async",
     "list_find",
     "string_starts_with",
-    "folder_read",
     "folder_find_starts_with",
     "path_folder",
     "prefix",
