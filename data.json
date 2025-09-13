@@ -1978,9 +1978,9 @@
   "s firebase",
   "is firebase_upload_object",
   "s join",
-  "p",
   "sandbox",
   "s wait",
+  "p",
   "sb"
  ],
  "marker_current": "1",
