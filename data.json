@@ -1995,7 +1995,8 @@
   "o firebase_storage_download",
   "ps",
   "s reply",
-  "s buffer"
+  "s buffer",
+  "is folder_read"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_download",
