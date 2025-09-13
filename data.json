@@ -3510,7 +3510,8 @@
    "ebible_chapters",
    "ebible_chapter_classes",
    "list_join_space",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "watcher": [
    "watch"
@@ -3718,7 +3719,8 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration"
+   "js_code_declaration",
+   "ebible_verses"
   ],
   "lj": [
    "watch",
@@ -3805,7 +3807,8 @@
   "list_join_space": [
    "command_line_node_g",
    "list_join_space",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "command_line_node_g": [
    "watch",
@@ -23936,6 +23939,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_join_space",
     "log",
     "list_skip",
     "list_index_of",
@@ -23958,6 +23962,8 @@
     "index",
     "skipped",
     "list",
+    "joined",
+    "args",
     "message"
    ]
   },
