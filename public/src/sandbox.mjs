@@ -14,7 +14,12 @@ export async function sandbox() {
     async function lambda2(v) {
       let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
-      list_join_slash_forward(["bible", bible_folder, chapter_code, file_name]);
+      let destination = list_join_slash_forward([
+        "bible",
+        bible_folder,
+        chapter_code,
+        file_name,
+      ]);
     }
     await each_async(verses, lambda2);
   }
