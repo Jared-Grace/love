@@ -1,3 +1,4 @@
+import { list_second } from "./list_second.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { each_reverse } from "./each_reverse.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
@@ -17,6 +18,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let filtered = list_filter(split, string_empty_not_is);
   function lambda2(item) {
     let index = list_index_of(filtered, item);
+    let second = list_second(list);
   }
   each_reverse(verse_numbers, lambda2);
   return filtered;
