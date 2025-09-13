@@ -4719,8 +4719,7 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters",
-   "ebible_chapter_text"
+   "ebible_chapters"
   ],
   "functions_names": [
    "functions_names",
@@ -24019,7 +24018,6 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
-    "list_map",
     "html_parse_find_list_to",
     "marker",
     "html_parse_text",
@@ -24056,9 +24054,9 @@
     "selector2",
     "list",
     "both",
-    "verse_numbers",
     "text",
-    "result"
+    "result",
+    "verse_numbers"
    ]
   },
   "html_parse_find_list_href_text": {
