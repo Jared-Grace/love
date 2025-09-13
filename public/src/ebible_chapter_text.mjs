@@ -43,8 +43,8 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     let both = html_parse_text(d, item);
     return both;
   }
-  let mapped = list_map(list, lambda);
-  log(mapped);
+  let verses = list_map(list, lambda);
+  log(verses);
   let text = html_parse_text(d, main);
   return text;
 }
