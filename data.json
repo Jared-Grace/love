@@ -1970,7 +1970,6 @@
   "ebible_verses engbsb GEN01",
   "s index",
   "c list_index_of list_index_of_last",
-  "s firebase",
   "is firebase_upload_object",
   "s join",
   "sandbox",
@@ -1990,7 +1989,8 @@
   "p",
   "ebible_index_upload engbsb",
   "s firebase,folde",
-  "s folder"
+  "s folder",
+  "s firebase"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
