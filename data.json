@@ -6715,7 +6715,8 @@
    "function_exists_inner",
    "function_parse_declaration_inner",
    "app_replace_rule_set",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "sandbox"
   ],
   "u": [
    "function_exists",
@@ -6739,7 +6740,8 @@
    "marker_next_index",
    "string_replace",
    "marker_rename",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "sandbox"
   ],
   "r": [
    "function_format",
@@ -6834,7 +6836,8 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "sandbox"
   ],
   "i": [
    "function_identifier_replace",
@@ -12861,6 +12864,9 @@
    "sandbox"
   ],
   "verses": [
+   "sandbox"
+  ],
+  "to2": [
    "sandbox"
   ]
  },
@@ -19761,6 +19767,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "object_merge",
     "firebase_upload_object",
     "file_name_json",
     "list_join_slash_forward",
@@ -19779,7 +19786,10 @@
     "verse",
     "verse_number",
     "file_name",
-    "destination"
+    "destination",
+    "to2",
+    "to",
+    "from"
    ],
    "async": true
   },
