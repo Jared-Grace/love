@@ -8277,7 +8277,8 @@
    "firebase_deploy_function_destination",
    "local_function_path",
    "ebible_firebase_upload",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "ebible_index_upload"
   ],
   "html_update": [
    "html_update",
@@ -13539,6 +13540,9 @@
   ],
   "ebible_folder_urdu": [
    "sandbox"
+  ],
+  "ebible_index_upload_name": [
+   "ebible_index_upload"
   ]
  },
  "functions": {
@@ -24922,11 +24926,13 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
+    "ebible_index_upload_name",
     "ebible_firebase_upload",
     "ebible_index",
     "ebible_index_upload",
     "bible_folder",
-    "index"
+    "index",
+    "file_name"
    ]
   },
   "app_name_main": {
