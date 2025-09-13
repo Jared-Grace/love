@@ -13,8 +13,8 @@ export async function sandbox() {
   let list = await ebible_chapter_codes(bible_folder);
   async function lambda(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
-    async function lambda2(verse) {
-      let verse_number = object_property_get(verse, "verse_number");
+    async function lambda2(v) {
+      let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
       let destination = list_join_slash_forward([
         "bible",
@@ -22,10 +22,16 @@ export async function sandbox() {
         chapter_code,
         file_name,
       ]);
-      let to2 = object_merge(to, from);
+      let merged = object_merge(
+        {
+          bible_folder,
+          chapter_code,
+        },
+        v,
+      );
       await firebase_upload_object(
         {
-          verse,
+          verse: merged,
         },
         destination,
       );
