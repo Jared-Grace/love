@@ -1,4 +1,4 @@
-export function list_wait(list) {
-  let v = Promise.all(list);
+export async function list_wait(list) {
+  let v = await Promise.all(list);
   return v;
 }
