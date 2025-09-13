@@ -3073,8 +3073,7 @@
    "ebible_chapter_codes",
    "sandbox",
    "html_parse_find_list_href_text",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -23943,8 +23942,7 @@
     "text",
     "split",
     "filtered",
-    "lambda2",
-    "list"
+    "lambda2"
    ]
   },
   "html_parse_descendants_classes": {
