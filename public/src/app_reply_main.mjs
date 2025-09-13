@@ -35,7 +35,6 @@ import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   if (false) {
-  }
   let bible_folder = ebible_folder_english();
   let file_name = ebible_index_upload_name();
   let destination = ebible_firebase_upload_path(bible_folder, file_name);
@@ -43,6 +42,7 @@ export async function app_reply_main() {
   let s = buffer_string_to(buffer);
   let index = json_from(s);
   log(message);
+  }
   let bible = kjv();
   let properties = object_properties(bible);
   let reference = list_random_item(properties);
