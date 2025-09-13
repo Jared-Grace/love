@@ -2019,7 +2019,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "app_reply_main"
+   "app_reply_main",
+   "folder_find_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3452,7 +3453,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "app_reply_main"
+   "app_reply_main",
+   "folder_find_starts_with"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25426,6 +25428,7 @@
   "folder_find_starts_with": {
    "async": true,
    "identifiers": [
+    "log",
     "folder_read_async",
     "list_find",
     "string_starts_with",
@@ -25436,6 +25439,7 @@
     "lambda",
     "item",
     "sw",
+    "message",
     "only"
    ]
   },
