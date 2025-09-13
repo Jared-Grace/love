@@ -33,7 +33,7 @@ export async function sandbox() {
       const object = {
         verse: merged,
       };
-      log(object);
+      log(destination);
       return;
       await firebase_upload_object(object, destination);
     }
