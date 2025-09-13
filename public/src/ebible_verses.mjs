@@ -7,6 +7,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     bible_folder,
     chapter_code,
   );
-  let split2 = string_split_space(s);
+  let split = string_split_space(text);
   return text;
 }
