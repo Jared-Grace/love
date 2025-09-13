@@ -23923,10 +23923,10 @@
     "verse_numbers",
     "text",
     "split",
-    "filtered",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "filtered",
+    "list"
    ]
   },
   "html_parse_descendants_classes": {
