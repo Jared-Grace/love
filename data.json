@@ -5621,7 +5621,8 @@
    "list_empty_not_is",
    "list_empty_not_is_assert",
    "marker_top",
-   "string_empty_not_is"
+   "string_empty_not_is",
+   "ebible_verses"
   ],
   "Error": [
    "error",
@@ -9343,7 +9344,8 @@
    "list_empty_not_is_assert",
    "marker_top",
    "list_first_second_generic",
-   "js_expand_generic"
+   "js_expand_generic",
+   "ebible_verses"
   ],
   "last": [
    "js_return_name",
@@ -10745,7 +10747,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23946,6 +23949,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_empty_not_is",
     "ebible_verse",
     "list_adder",
     "list_take",
@@ -23972,6 +23976,8 @@
     "index",
     "skipped",
     "v",
+    "ne",
+    "list2",
     "list"
    ]
   },
