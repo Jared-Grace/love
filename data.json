@@ -13061,7 +13061,8 @@
    "string_take",
    "ebible_version_books_testament",
    "html_parse_href",
-   "html_parse_href_text"
+   "html_parse_href_text",
+   "ebible_chapter_code_to_book"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -13088,7 +13089,8 @@
    "string_starts_with_not"
   ],
   "string_take": [
-   "string_take"
+   "string_take",
+   "ebible_chapter_code_to_book"
   ],
   "books": [
    "ebible_version_verses",
@@ -13446,6 +13448,12 @@
   "ebible_chapter_code_to_chapter": [
    "ebible_version_books_testament",
    "ebible_index_upload"
+  ],
+  "ebible_chapter_code_to_book": [
+   "ebible_chapter_code_to_book"
+  ],
+  "taken2": [
+   "ebible_chapter_code_to_book"
   ]
  },
  "functions": {
@@ -25782,6 +25790,15 @@
    "identifiers": [
     "string_the_servant_of_god",
     "v2"
+   ]
+  },
+  "ebible_chapter_code_to_book": {
+   "async": false,
+   "identifiers": [
+    "string_take",
+    "ebible_chapter_code_to_book",
+    "href",
+    "taken2"
    ]
   }
  },
