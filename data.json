@@ -3352,8 +3352,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "ebible_verses"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3719,8 +3718,7 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration",
-   "ebible_verses"
+   "js_code_declaration"
   ],
   "lj": [
    "watch",
@@ -23962,9 +23960,7 @@
     "index",
     "skipped",
     "list",
-    "joined",
-    "args",
-    "message"
+    "joined"
    ]
   },
   "html_parse_descendants_classes": {
