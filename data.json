@@ -1976,9 +1976,9 @@
   "ps",
   "p",
   "ebible_verses engbsb GEN01",
-  "sb",
   "s index",
-  "c list_index_of list_index_of_last"
+  "c list_index_of list_index_of_last",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
