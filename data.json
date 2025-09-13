@@ -7830,8 +7830,7 @@
    "marker_down_generic",
    "marker_index",
    "marker_leave",
-   "app_replace_rule_parse",
-   "ebible_verses"
+   "app_replace_rule_parse"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -12835,7 +12834,8 @@
    "ebible_verses"
   ],
   "list_index_of_last": [
-   "list_index_of_last"
+   "list_index_of_last",
+   "ebible_verses"
   ],
   "lastIndexOf": [
    "list_index_of_last"
@@ -23962,12 +23962,12 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_index_of_last",
     "list_empty_not_is",
     "ebible_verse",
     "list_adder",
     "list_take",
     "list_skip",
-    "list_index_of",
     "each_reverse",
     "whitespace_normalize",
     "string_empty_not_is",
