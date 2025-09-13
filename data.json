@@ -4101,7 +4101,6 @@
    "ebible_versions_download",
    "html_parse_descendants_classes",
    "list_adder_generic_async",
-   "sandbox",
    "ebible_chapter_text",
    "list_index_of_last"
   ],
@@ -12735,7 +12734,8 @@
   "chapter_code": [
    "ebible_verses",
    "ebible_chapter_classes",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -19758,7 +19758,7 @@
     "bible_folder",
     "list",
     "lambda",
-    "item",
+    "chapter_code",
     "contents"
    ],
    "async": true
