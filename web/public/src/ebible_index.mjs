@@ -11,11 +11,12 @@ export async function ebible_index(bible_folder) {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
-    let chapters = object_property_initialize(books, book_code, {
+    let book = object_property_initialize(books, book_code, {
       book_code,
       chapters: [],
     });
     let count = ebible_book_code_size();
+    let chapters = book;
     let chapter_name = string_skip(chapter_code, count);
     let verse_numbers = list_map_property(verses, "verse_number");
     const chapter = {
