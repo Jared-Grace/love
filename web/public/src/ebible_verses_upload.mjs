@@ -12,9 +12,9 @@ export async function ebible_verses_upload(bible_folder) {
     async function lambda(v) {
       let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
+      let joined = list_join_slash_forward(["bible", bible_folder]);
       let destination = list_join_slash_forward([
-        "bible",
-        bible_folder,
+        joined,
         chapter_code,
         file_name,
       ]);
