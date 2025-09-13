@@ -5687,8 +5687,7 @@
    "firebase_upload_object",
    "file_write_json",
    "ebible_verses_upload",
-   "object_property_set_exists_not",
-   "ebible_index_upload"
+   "object_property_set_exists_not"
   ],
   "each_pair": [
    "each_pair",
@@ -24861,7 +24860,6 @@
     "verses",
     "book_code",
     "book",
-    "object",
     "count",
     "chapter_name",
     "verse_numbers",
