@@ -10,6 +10,7 @@ import { ebible_verses } from "./ebible_verses.mjs";
 import { ebible_chapter_codes } from "./ebible_chapter_codes.mjs";
 export async function ebible_index_upload(bible_folder) {
   let list = await ebible_chapter_codes(bible_folder);
+  await each_async(list, lambda);
   async function lambda(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     async function lambda2(v) {
@@ -36,5 +37,4 @@ export async function ebible_index_upload(bible_folder) {
     let mapped = list_map(verses, lambda2);
     await list_wait(mapped);
   }
-  await each_async(list, lambda);
 }
