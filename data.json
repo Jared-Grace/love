@@ -1955,7 +1955,6 @@
   "ebible_chapter_codes engbsb",
   "s suff",
   "o sb",
-  "sb",
   "s hpt",
   "u hpt",
   "ebible_verses engbsb GEN02",
@@ -1976,7 +1975,9 @@
   "s json",
   "ps",
   "p",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "sb",
+  "s index"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
