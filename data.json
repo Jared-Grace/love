@@ -13218,7 +13218,8 @@
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "ebible_index"
   ],
   "html_parse_find_a_href_starts_with": [
    "ebible_chapters",
@@ -26013,6 +26014,7 @@
     "verses",
     "book_code",
     "book",
+    "chapters",
     "count",
     "chapter_name",
     "verse_numbers",
