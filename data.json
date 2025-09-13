@@ -2610,7 +2610,8 @@
    "function_rename_identifiers",
    "firebase_deploy_function",
    "app_replace",
-   "app_reply"
+   "app_reply",
+   "firebase_deploy_function_destination"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3080,7 +3081,8 @@
    "html_parse_find_list_href_text",
    "ebible_chapter_text",
    "ebible_verses",
-   "list_index_of_last"
+   "list_index_of_last",
+   "firebase_deploy_function_destination"
   ],
   "v": [
    "data_identifiers_file",
@@ -3692,7 +3694,8 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "html_parse_href"
+   "html_parse_href",
+   "firebase_deploy_function_destination"
   ],
   "output": [
    "watch",
@@ -8022,7 +8025,8 @@
    "file_name_json",
    "html_name_to_path_dev",
    "http_firebase_file_path",
-   "http_local_file_name"
+   "http_local_file_name",
+   "firebase_deploy_function_destination"
   ],
   "html_update": [
    "html_update",
@@ -11501,7 +11505,8 @@
    "firebase_upload_object",
    "firebase_upload_string",
    "firebase_storage_download",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "firebase_deploy_function_destination"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11517,13 +11522,15 @@
    "whitespace_normalize"
   ],
   "file_name_json": [
-   "file_name_json"
+   "file_name_json",
+   "firebase_deploy_function_destination"
   ],
   "version": [
    "firebase_deploy_function"
   ],
   "firebase_deploy_function_destination": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_deploy_function_destination"
   ],
   "destination_version": [
    "firebase_deploy_function"
@@ -12841,6 +12848,9 @@
   ],
   "lastIndexOf": [
    "list_index_of_last"
+  ],
+  "list_join_slash_forward": [
+   "firebase_deploy_function_destination"
   ]
  },
  "functions": {
@@ -24184,6 +24194,19 @@
     "item",
     "index",
     "lastIndexOf"
+   ]
+  },
+  "firebase_deploy_function_destination": {
+   "async": false,
+   "identifiers": [
+    "list_join_slash_forward",
+    "file_name_json",
+    "firebase_deploy_function_destination",
+    "name",
+    "f_name",
+    "file_name",
+    "list",
+    "destination"
    ]
   }
  },
