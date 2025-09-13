@@ -12796,7 +12796,8 @@
    "ebible_verses"
   ],
   "whitespace_normalize": [
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "ebible_verses"
   ],
   "trim": [
    "whitespace_normalize"
@@ -23923,6 +23924,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "whitespace_normalize",
     "string_empty_not_is",
     "list_filter",
     "string_split_space",
