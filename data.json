@@ -3453,8 +3453,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "app_reply_main",
-   "folder_find_starts_with"
+   "app_reply_main"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25439,7 +25438,6 @@
     "lambda",
     "item",
     "sw",
-    "message",
     "only"
    ]
   },
