@@ -1980,8 +1980,8 @@
   "s join",
   "sandbox",
   "s wait",
-  "p",
   "s object_property",
+  "p",
   "sb"
  ],
  "marker_current": "1",
