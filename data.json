@@ -2888,7 +2888,8 @@
    "js_auto_transform_new_inner",
    "list_filter_starts_with",
    "list_map_prefix_without",
-   "promise_wrap"
+   "promise_wrap",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3124,7 +3125,8 @@
    "list_index_of_delta_outside",
    "list_join_slash_forward",
    "list_map_prefix_without",
-   "list_slice_count"
+   "list_slice_count",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4223,7 +4225,8 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5062,7 +5065,8 @@
    "js_calls_to_each",
    "ebible_versions_download",
    "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "f_paths": [
    "data_files_update",
@@ -12951,7 +12955,6 @@
    "ebible_verses",
    "ebible_chapter_classes",
    "ebible_chapter_codes",
-   "sandbox",
    "ebible_chapter_text",
    "ebible_verses_upload",
    "ebible_index_upload",
@@ -13328,7 +13331,6 @@
    "list_join_slash_forward"
   ],
   "ebible_verses_upload": [
-   "sandbox",
    "ebible_verses_upload"
   ],
   "verses": [
@@ -13459,6 +13461,9 @@
   "ebible_firebase_upload": [
    "ebible_verses_upload",
    "ebible_index_upload"
+  ],
+  "bible_folders": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20352,10 +20357,13 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_verses_upload",
+    "each_async",
     "marker",
     "sandbox",
-    "bible_folder"
+    "bible_folders",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
