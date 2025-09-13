@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
 import { firebase_storage_download } from "./firebase_storage_download.mjs";
 import { not } from "./not.mjs";
@@ -29,7 +30,8 @@ import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
-  let destination2 = ebible_firebase_upload_path(bible_folder, file_name);
+  let bible_folder = ebible_folder_english();
+  let destination2 = ebible_firebase_upload_path(bible_folder, "index");
   let buffer = await firebase_storage_download(destination);
   let bible = kjv();
   let properties = object_properties(bible);
