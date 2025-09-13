@@ -1861,7 +1861,6 @@
   "r http_firebase_file_name http_firebase_file_path",
   "c file_overwrite_json file_write_json",
   "is http",
-  "s buffer",
   "is http_json",
   "o buffer_string_to",
   "fd firebase_upload_string",
@@ -1995,7 +1994,8 @@
   "is firebase_storage_download",
   "o firebase_storage_download",
   "ps",
-  "s reply"
+  "s reply",
+  "s buffer"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_download",
