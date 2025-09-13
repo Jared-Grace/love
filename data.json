@@ -6090,7 +6090,8 @@
    "function_dependencies_code",
    "list_map_unordered_async",
    "list_wait",
-   "functions_transform"
+   "functions_transform",
+   "sandbox"
   ],
   "function_format": [
    "functions_format",
@@ -19779,6 +19780,7 @@
     "each_async",
     "ebible_chapter_codes",
     "marker",
+    "list_wait",
     "sandbox",
     "bible_folder",
     "list",
