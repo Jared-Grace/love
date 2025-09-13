@@ -2282,7 +2282,8 @@
    "list_index_of_last",
    "function_new_js_inner",
    "js_auto_transform_new_inner",
-   "js_declaration_param_add_node"
+   "js_declaration_param_add_node",
+   "ebible_chapter_code_to_book"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -25795,6 +25796,7 @@
   "ebible_chapter_code_to_book": {
    "async": false,
    "identifiers": [
+    "marker",
     "string_take",
     "ebible_chapter_code_to_book",
     "href",
