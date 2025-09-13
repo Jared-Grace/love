@@ -1621,7 +1621,6 @@
   "fd date_now_iso",
   "fw date_now_iso date_now_file",
   "date_now_file",
-  "s json",
   "a ff firebase_deploy_function",
   "fd firebase_deploy_function",
   "n global_get",
@@ -1976,7 +1975,8 @@
   "s skip",
   "s take",
   "ps",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "s json"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
