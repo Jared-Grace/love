@@ -9,7 +9,7 @@ import { object_property_get } from "./object_property_get.mjs";
 export async function ebible_index_upload(bible_folder) {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    async function lambda2(v) {
+    async function lambda(v) {
       let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
       let destination = list_join_slash_forward([
@@ -30,7 +30,7 @@ export async function ebible_index_upload(bible_folder) {
       };
       await firebase_upload_object(object, destination);
     }
-    let mapped = list_map(verses, lambda2);
+    let mapped = list_map(verses, lambda);
     await list_wait(mapped);
   }
 }
