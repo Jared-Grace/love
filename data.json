@@ -6090,7 +6090,6 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_chapter_text",
    "html_parse_find_list_href_text"
   ],
   "functions_names_includes": [
@@ -12778,6 +12777,9 @@
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
    "ebible_version_books_testament"
+  ],
+  "verses": [
+   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24053,7 +24055,7 @@
     "selector2",
     "list",
     "both",
-    "mapped",
+    "verses",
     "text"
    ]
   },
