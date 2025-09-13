@@ -1990,7 +1990,8 @@
   "ebible_index_upload engbsb",
   "s firebase,folde",
   "s folder",
-  "s firebase"
+  "s firebase",
+  "s fireba,path"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
