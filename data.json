@@ -3073,7 +3073,8 @@
    "ebible_chapter_codes",
    "sandbox",
    "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -4091,7 +4092,8 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "sandbox",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5416,7 +5418,8 @@
    "app_replace_rule_set",
    "js_dollar_x",
    "js_expand_generic",
-   "list_random_item"
+   "list_random_item",
+   "ebible_verses"
   ],
   "lists_get": [
    "each_multiple",
@@ -7815,7 +7818,8 @@
    "marker_down_generic",
    "marker_index",
    "marker_leave",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "ebible_verses"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -23928,6 +23932,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_index_of",
     "each_reverse",
     "whitespace_normalize",
     "string_empty_not_is",
@@ -23942,7 +23947,10 @@
     "text",
     "split",
     "filtered",
-    "lambda2"
+    "lambda2",
+    "index",
+    "list",
+    "item"
    ]
   },
   "html_parse_descendants_classes": {
