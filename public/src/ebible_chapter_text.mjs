@@ -38,12 +38,12 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  let verses = html_parse_find_list_to(main, ".verse");
+  let list = html_parse_find_list_to(main, ".verse");
   function lambda(item) {
     let both = html_parse_text(d, item);
     return both;
   }
-  let mapped = list_map(verses, lambda);
+  let mapped = list_map(list, lambda);
   log(mapped);
   let text = html_parse_text(d, main);
   return text;
