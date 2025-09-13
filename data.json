@@ -4099,8 +4099,7 @@
    "list_adder_generic_async",
    "sandbox",
    "ebible_chapter_text",
-   "list_index_of_last",
-   "ebible_verses"
+   "list_index_of_last"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10756,8 +10755,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -23995,9 +23993,7 @@
     "skipped",
     "v",
     "list",
-    "ne",
-    "list2",
-    "item"
+    "ne"
    ]
   },
   "html_parse_descendants_classes": {
