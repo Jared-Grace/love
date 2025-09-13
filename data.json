@@ -3065,8 +3065,7 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "html_parse_find_list_href_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -24057,7 +24056,6 @@
     "verses",
     "both",
     "mapped",
-    "list",
     "text"
    ]
   },
