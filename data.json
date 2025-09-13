@@ -4968,7 +4968,8 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "firebase_storage_download_path",
-   "local_function_path"
+   "local_function_path",
+   "folder_read_async"
   ],
   "fs": [
    "folder_read",
@@ -8235,8 +8236,7 @@
   "join": [
    "git_acp_call",
    "list_join",
-   "path_join",
-   "folder_read_async"
+   "path_join"
   ],
   "execSync": [
    "git_acp_timestamp"
@@ -26005,6 +26005,7 @@
   "folder_read_async": {
    "async": true,
    "identifiers": [
+    "path_join",
     "folder_read_async",
     "path_folder",
     "fs",
@@ -26018,7 +26019,6 @@
     "isFile",
     "lambda2",
     "v2",
-    "join",
     "name",
     "files",
     "filter",
