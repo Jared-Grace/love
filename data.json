@@ -4095,8 +4095,7 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "sandbox",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12819,6 +12818,9 @@
   ],
   "trim": [
    "whitespace_normalize"
+  ],
+  "verse_number": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23963,12 +23965,12 @@
     "filtered",
     "lambda",
     "la",
-    "list",
     "lambda2",
-    "item",
+    "verse_number",
     "index",
     "skipped",
-    "joined"
+    "joined",
+    "list"
    ]
   },
   "html_parse_descendants_classes": {
