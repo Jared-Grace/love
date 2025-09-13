@@ -4527,8 +4527,7 @@
   "value2": [
    "error_attention_set",
    "global_function",
-   "app_replace_font_size",
-   "ebible_index_upload"
+   "app_replace_font_size"
   ],
   "error": [
    "watch",
@@ -13254,7 +13253,8 @@
   ],
   "book": [
    "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "ebible_index_upload"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -24839,7 +24839,7 @@
     "chapter_code",
     "verses",
     "book_code",
-    "value2",
+    "book",
     "object"
    ]
   },
