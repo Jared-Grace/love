@@ -37,7 +37,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  let list = html_parse_find_list_to(bl, selector);
+  let list = html_parse_find_list_to(main, ".verse");
   let text = html_parse_text(d, main);
   return text;
 }
