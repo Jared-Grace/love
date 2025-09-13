@@ -3762,7 +3762,8 @@
    "html_parse_find",
    "html_parse",
    "catch_call",
-   "http"
+   "http",
+   "ebible_verses"
   ],
   "separator": [
    "watch",
@@ -12508,7 +12509,8 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_verses"
   ],
   "find": [
    "html_parse_find"
@@ -12737,6 +12739,9 @@
   "ebible_verses_exclude": [
    "ebible_verses",
    "ebible_verses_exclude"
+  ],
+  "root2": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23890,7 +23895,10 @@
     "e",
     "dictionary",
     "lambda",
-    "item"
+    "item",
+    "result",
+    "root2",
+    "selector"
    ]
   },
   "html_parse_descendants_classes": {
