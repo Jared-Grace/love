@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { file_name_json } from "./file_name_json.mjs";
@@ -33,6 +34,7 @@ export async function sandbox() {
         verse: merged,
       };
       await firebase_upload_object(object, destination);
+      log(message);
     }
     await each_async(verses, lambda2);
   }
