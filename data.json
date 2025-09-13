@@ -13470,6 +13470,9 @@
   ],
   "chapter_name": [
    "ebible_index_upload"
+  ],
+  "chapter": [
+   "ebible_index_upload"
   ]
  },
  "functions": {
@@ -24862,7 +24865,8 @@
     "count",
     "chapter_name",
     "verse_numbers",
-    "verse_number"
+    "verse_number",
+    "chapter"
    ]
   },
   "app_name_main": {
