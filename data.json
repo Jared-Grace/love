@@ -3368,7 +3368,8 @@
    "random",
    "string_lord_bless",
    "string_may_the_lord",
-   "ebible_book_code_size"
+   "ebible_book_code_size",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -13531,6 +13532,9 @@
   ],
   "file_name_with_extension": [
    "ebible_firebase_upload_path"
+  ],
+  "ebible_folder_english": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20424,10 +20428,12 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_folder_english",
     "ebible_index_upload",
     "each_async",
     "marker",
     "sandbox",
+    "v",
     "bible_folders"
    ],
    "async": true
