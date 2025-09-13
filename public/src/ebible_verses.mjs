@@ -23,6 +23,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     let skipped = list_skip(list, index + 1);
     let joined = list_join_space(skipped);
     log(joined);
+    lt;
   }
   each_reverse(verse_numbers, lambda2);
   return filtered;
