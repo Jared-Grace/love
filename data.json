@@ -1994,10 +1994,11 @@
   "de ebible_firebase_folder",
   "s reply",
   "s firebase",
-  "is firebase_storage_download"
+  "is firebase_storage_download",
+  "o firebase_storage_download"
  ],
  "marker_current": "1",
- "function_current": "ebible_chapter_code_to_book",
+ "function_current": "firebase_storage_download",
  "terminal": false,
  "identifiers": {
   "log": [
