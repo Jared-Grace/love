@@ -23,10 +23,11 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda2(verse_number) {
       let index = list_index_of(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
+      let joined = list_join_space(skipped);
       la({
         verse_number,
+        text: joined,
       });
-      let joined = list_join_space(skipped);
       filtered = list_take(filtered, index);
     }
     each_reverse(verse_numbers, lambda2);
