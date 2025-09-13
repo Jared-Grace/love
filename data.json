@@ -1317,7 +1317,6 @@
   "c marker_above marker_below",
   "n add",
   "fws add 1",
-  "s data",
   "s data,get",
   "mc dpg",
   "s ident,repl",
@@ -1984,7 +1983,8 @@
   "s object_property",
   "o sb",
   "sb",
-  "c ebible_verses_upload ebible_index_upload"
+  "c ebible_verses_upload ebible_index_upload",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
