@@ -3291,8 +3291,7 @@
    "ebible_verses_exclude",
    "ebible_verses_include",
    "whitespace_normalize",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11541,7 +11540,8 @@
   ],
   "firebase_upload_object": [
    "firebase_deploy_function",
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "sandbox"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -12232,7 +12232,8 @@
    "app_reply_main"
   ],
   "verse": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "preview_refresh": [
    "app_reply_main"
@@ -19760,6 +19761,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "firebase_upload_object",
     "file_name_json",
     "list_join_slash_forward",
     "object_property_get",
@@ -19774,7 +19776,7 @@
     "chapter_code",
     "verses",
     "lambda2",
-    "v",
+    "verse",
     "verse_number",
     "file_name",
     "destination"
