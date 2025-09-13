@@ -4725,8 +4725,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "ebible_index_upload"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -9940,8 +9939,7 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses",
-   "ebible_index_upload"
+   "ebible_verses"
   ],
   "slice": [
    "list_slice",
@@ -13464,6 +13462,9 @@
   ],
   "ebible_book_code_size": [
    "ebible_chapter_code_to_book",
+   "ebible_index_upload"
+  ],
+  "chapter_name": [
    "ebible_index_upload"
   ]
  },
@@ -24853,8 +24854,7 @@
     "book",
     "object",
     "count",
-    "skipped",
-    "s"
+    "chapter_name"
    ]
   },
   "app_name_main": {
