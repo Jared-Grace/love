@@ -1,4 +1,3 @@
-import { json_from } from "./json_from.mjs";
 import { buffer_string_to } from "./buffer_string_to.mjs";
 import { ebible_index_upload_name } from "./ebible_index_upload_name.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -32,6 +31,7 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
+import { json_from } from "./json_from.mjs";
 export async function app_reply_main() {
   let bible_folder = ebible_folder_english();
   let file_name = ebible_index_upload_name();
