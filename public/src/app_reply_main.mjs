@@ -4,6 +4,7 @@ import { buffer_string_to } from "./buffer_string_to.mjs";
 import { ebible_index_upload_name } from "./ebible_index_upload_name.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
+import { firebase_storage_download } from "./firebase_storage_download.mjs";
 import { not } from "./not.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { string_lower_to } from "./string_lower_to.mjs";
@@ -37,6 +38,7 @@ export async function app_reply_main() {
     let bible_folder = ebible_folder_english();
     let file_name = ebible_index_upload_name();
     let destination = ebible_firebase_upload_path(bible_folder, file_name);
+    let buffer = await firebase_storage_download(destination);
     let s = buffer_string_to(buffer);
     let index = json_from(s);
     log(message);
