@@ -38,10 +38,6 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   }
   each(exclude, lambda);
   let list = html_parse_find_list_to(main, ".verse");
-  function lambda(item) {
-    let both = html_parse_text(d, item);
-    return both;
-  }
   let text = html_parse_text(d, main);
   let result = {
     text,
