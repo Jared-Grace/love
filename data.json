@@ -11558,8 +11558,7 @@
   "taken": [
    "list_take",
    "ebible_version_books_testament",
-   "string_take",
-   "ebible_index_upload"
+   "string_take"
   ],
   "app_replace_rule_parse": [
    "app_replace_rule_set",
@@ -13088,7 +13087,8 @@
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
    "string_starts_with_not",
-   "ebible_chapter_code_to_book"
+   "ebible_chapter_code_to_book",
+   "ebible_index_upload"
   ],
   "string_take": [
    "string_take",
@@ -24831,7 +24831,7 @@
     "each_chapter",
     "chapter_code",
     "verses",
-    "taken"
+    "book_code"
    ]
   },
   "app_name_main": {
