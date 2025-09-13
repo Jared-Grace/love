@@ -3272,7 +3272,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
    "ebible_verses_exclude",
-   "ebible_verses_include"
+   "ebible_verses_include",
+   "ebible_chapter_text"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -12778,7 +12779,7 @@
    "html_parse_find_list_href_text",
    "ebible_version_books_testament"
   ],
-  "verses": [
+  "verse_numbers": [
    "ebible_chapter_text"
   ]
  },
@@ -24055,8 +24056,9 @@
     "selector2",
     "list",
     "both",
-    "verses",
-    "text"
+    "verse_numbers",
+    "text",
+    "v"
    ]
   },
   "html_parse_find_list_href_text": {
