@@ -21,7 +21,7 @@ export async function ebible_verses_upload(bible_folder) {
       const object = {
         verse: merged,
       };
-      await ebible_firebase_upload(bible_folder, file_name, object);
+      await ebible_firebase_upload(bible_folder, joined2, object);
     }
     let mapped = list_map(verses, lambda);
     await list_wait(mapped);
