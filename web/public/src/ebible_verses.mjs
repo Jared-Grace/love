@@ -36,8 +36,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let ne = list_empty_not_is(filtered);
   if (ne) {
     const v = ebible_verse(filtered, "0");
-    la(v);
-    list_add(list2, item);
+    list_add(list, v);
   }
   list_reverse(list);
   return list;
