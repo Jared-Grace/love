@@ -2843,7 +2843,8 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3067,7 +3068,8 @@
    "ebible_chapter_codes",
    "sandbox",
    "html_parse_find_list_href_text",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "v": [
    "data_identifiers_file",
@@ -4084,7 +4086,8 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "sandbox",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6138,7 +6141,8 @@
    "prompt_previous",
    "search_generic",
    "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple"
+   "list_filter_starts_with_not_multiple",
+   "ebible_verses"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9177,7 +9181,8 @@
    "list_filter",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_verses"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -23908,6 +23913,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_filter",
     "string_split_space",
     "ebible_chapter_text",
     "marker",
@@ -23916,7 +23922,11 @@
     "chapter_code",
     "verse_numbers",
     "text",
-    "split"
+    "split",
+    "filtered",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "html_parse_descendants_classes": {
