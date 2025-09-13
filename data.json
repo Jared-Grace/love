@@ -1965,7 +1965,6 @@
   "s pair",
   "s reverse",
   "s slice",
-  "s skip",
   "s take",
   "s json",
   "ps",
@@ -1988,7 +1987,8 @@
   "as data",
   "d",
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
-  "s initial"
+  "s initial",
+  "s skip"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
