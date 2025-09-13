@@ -40,7 +40,7 @@ export async function sandbox() {
       log(destination);
     }
     let mapped = list_map(verses, lambda2);
-    await list_wait(mapped, lambda2);
+    await list_wait(mapped);
   }
   await each_async(list, lambda);
 }
