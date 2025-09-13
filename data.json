@@ -9564,8 +9564,7 @@
    "list_index_last"
   ],
   "indexOf": [
-   "list_index_of",
-   "list_index_of_last"
+   "list_index_of"
   ],
   "list_index_of_delta": [
    "list_index_of_delta",
@@ -12836,6 +12835,9 @@
    "ebible_verses"
   ],
   "list_index_of_last": [
+   "list_index_of_last"
+  ],
+  "lastIndexOf": [
    "list_index_of_last"
   ]
  },
@@ -24178,7 +24180,7 @@
     "list",
     "item",
     "index",
-    "indexOf"
+    "lastIndexOf"
    ]
   }
  },
