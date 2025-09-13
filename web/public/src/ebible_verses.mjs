@@ -1,4 +1,3 @@
-import { list_second } from "./list_second.mjs";
 import { ebible_chapter_text } from "./ebible_chapter_text.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
@@ -7,6 +6,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     bible_folder,
     chapter_code,
   );
-  let second = list_second(list);
+  lsp;
   return text;
 }
