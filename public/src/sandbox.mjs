@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_chapter_codes } from "./ebible_chapter_codes.mjs";
@@ -7,9 +8,11 @@ export async function sandbox() {
   const bible_folder = "urdgvu";
   let list = await ebible_chapter_codes(bible_folder);
   async function lambda(chapter_code) {
-    let contents = await ebible_verses(bible_folder, chapter_code);
-    async function lambda2(item) {}
-    await each_async(list2, lambda2);
+    let verses = await ebible_verses(bible_folder, chapter_code);
+    async function lambda2(v) {
+      let verse_number = object_property_get(v, "verse_number");
+    }
+    await each_async(verses, lambda2);
   }
   await each_async(list, lambda);
 }
