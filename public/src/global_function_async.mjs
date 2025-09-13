@@ -5,6 +5,6 @@ export async function global_function_async(fn, lambda) {
   let global = global_get();
   marker("1");
   let value = object_property_lambda(global, fn.name, lambda);
-  let awaited = await value();
+  let awaited = await value;
   return awaited;
 }
