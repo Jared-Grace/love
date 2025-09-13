@@ -4574,7 +4574,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_verses"
   ],
   "a": [
    "string_suffix_without",
@@ -11237,11 +11238,13 @@
   ],
   "string_split_space": [
    "string_split_space",
-   "app_replace_rule_parse"
+   "app_replace_rule_parse",
+   "ebible_verses"
   ],
   "split2": [
    "string_split_space",
-   "string_split_empty"
+   "string_split_empty",
+   "ebible_verses"
   ],
   "list_take": [
    "list_take",
@@ -12782,9 +12785,6 @@
   ],
   "verse_numbers": [
    "ebible_chapter_text",
-   "ebible_verses"
-  ],
-  "lsp": [
    "ebible_verses"
   ]
  },
@@ -23909,6 +23909,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "string_split_space",
     "ebible_chapter_text",
     "marker",
     "ebible_verses",
@@ -23916,7 +23917,8 @@
     "chapter_code",
     "verse_numbers",
     "text",
-    "lsp"
+    "split2",
+    "s"
    ]
   },
   "html_parse_descendants_classes": {
