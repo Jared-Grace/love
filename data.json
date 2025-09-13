@@ -2843,8 +2843,7 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3679,8 +3678,7 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "html_parse_href",
-   "ebible_verses"
+   "html_parse_href"
   ],
   "output": [
    "watch",
@@ -4087,8 +4085,7 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "sandbox",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5614,8 +5611,7 @@
    "list_empty_not_is",
    "list_empty_not_is_assert",
    "marker_top",
-   "string_empty_not_is",
-   "ebible_verses"
+   "string_empty_not_is"
   ],
   "Error": [
    "error",
@@ -23927,10 +23923,6 @@
     "verse_numbers",
     "text",
     "split",
-    "lambda",
-    "item",
-    "ne",
-    "name",
     "filtered",
     "list"
    ]
