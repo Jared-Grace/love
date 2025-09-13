@@ -3697,8 +3697,7 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration",
-   "ebible_verses"
+   "js_code_declaration"
   ],
   "lj": [
    "watch",
@@ -9569,8 +9568,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "http",
-   "ebible_verses"
+   "http"
   ],
   "list_last_is": [
    "list_last_is"
@@ -11268,7 +11266,8 @@
    "functions_names"
   ],
   "joined2": [
-   "function_name_to_path"
+   "function_name_to_path",
+   "ebible_verses"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -23914,8 +23913,7 @@
     "item",
     "selector2",
     "mapped",
-    "result2",
-    "args",
+    "joined2",
     "result",
     "text"
    ]
