@@ -3888,7 +3888,8 @@
    "cache_generic",
    "function_new_js_inner",
    "html_parse_find_remove",
-   "list_map_prefix_without"
+   "list_map_prefix_without",
+   "ebible_index_upload"
   ],
   "separator": [
    "watch",
@@ -24828,6 +24829,7 @@
     "ebible_chapters_each_verses",
     "ebible_index_upload",
     "bible_folder",
+    "result",
     "each_chapter",
     "chapter_code",
     "verses",
