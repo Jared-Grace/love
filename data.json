@@ -1987,7 +1987,8 @@
   "is data_save",
   "as data",
   "d",
-  "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book"
+  "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
+  "s initial"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
