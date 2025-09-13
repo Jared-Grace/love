@@ -11508,7 +11508,8 @@
    "firebase_upload_string",
    "firebase_storage_download",
    "firebase_upload_buffer",
-   "firebase_deploy_function_destination"
+   "firebase_deploy_function_destination",
+   "sandbox"
   ],
   "date_now_file": [
    "date_now_file",
@@ -19775,7 +19776,8 @@
     "lambda2",
     "v",
     "verse_number",
-    "file_name"
+    "file_name",
+    "destination"
    ],
    "async": true
   },
