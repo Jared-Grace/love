@@ -1987,14 +1987,14 @@
   "ebible_index_upload engbsb",
   "s firebase,folde",
   "s folder",
-  "s firebase",
   "s fireba,path",
   "s upload",
   "sb",
   "d",
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
-  "s reply"
+  "s reply",
+  "s firebase"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
