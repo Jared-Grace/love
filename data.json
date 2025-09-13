@@ -3124,8 +3124,7 @@
    "list_index_of_delta_outside",
    "list_join_slash_forward",
    "list_map_prefix_without",
-   "list_slice_count",
-   "sandbox"
+   "list_slice_count"
   ],
   "v": [
    "data_identifiers_file",
@@ -20360,8 +20359,7 @@
     "each_async",
     "marker",
     "sandbox",
-    "bible_folders",
-    "list"
+    "bible_folders"
    ],
    "async": true
   },
