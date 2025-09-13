@@ -1930,7 +1930,6 @@
   "s unique",
   "a lun list_unique",
   "ebible",
-  "s ebible",
   "s try",
   "fd ebible_versions_download",
   "s catch",
@@ -1972,7 +1971,8 @@
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "ps",
   "p",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "html_parse_find_list_href_text",
