@@ -5015,7 +5015,8 @@
    "emoji_phone",
    "emoji_question",
    "emoji_voice",
-   "string_the_servant_of_god"
+   "string_the_servant_of_god",
+   "sandbox"
   ],
   "readdirSync": [
    "folder_read"
@@ -13535,6 +13536,9 @@
   ],
   "ebible_folder_english": [
    "sandbox"
+  ],
+  "ebible_folder_urdu": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20428,12 +20432,14 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_folder_urdu",
     "ebible_folder_english",
     "ebible_index_upload",
     "each_async",
     "marker",
     "sandbox",
     "v",
+    "v2",
     "bible_folders"
    ],
    "async": true
