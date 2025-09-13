@@ -7,6 +7,9 @@ export async function global_function_async(fn, lambda) {
   marker("1");
   let value = object_property_initialize(global, fn.name, lambda);
   let awaited = await value;
-  log(message);
+  log({
+    awaited,
+    value,
+  });
   return awaited;
 }
