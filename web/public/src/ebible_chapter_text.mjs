@@ -41,9 +41,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   each(exclude, lambda);
   let list = html_parse_find_list_to(main, ".verse");
   function lambda2(item) {
-    let both = html_parse_text(d, item);
-    let v = whitespace_normalize(str);
-    return both;
+    let t = html_parse_text(d, item);
+    let n = whitespace_normalize(t);
+    return n;
   }
   let verse_numbers = list_map(list, lambda2);
   let text = html_parse_text(d, main);
