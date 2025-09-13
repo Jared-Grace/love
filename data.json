@@ -12686,8 +12686,7 @@
    "catch_call"
   ],
   "ebible_verses": [
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -12787,7 +12786,8 @@
    "ebible_chapter_text"
   ],
   "ebible_chapter_text": [
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ]
  },
  "functions": {
@@ -19687,9 +19687,9 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_chapter_text",
     "each_async",
     "ebible_chapter_codes",
-    "ebible_verses",
     "marker",
     "sandbox",
     "bible_folder",
