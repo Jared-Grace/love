@@ -1,3 +1,4 @@
+import { firebase_storage_download } from "./firebase_storage_download.mjs";
 import { not } from "./not.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { string_lower_to } from "./string_lower_to.mjs";
@@ -27,6 +28,7 @@ import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
+  let buffer = await firebase_storage_download(destination);
   let bible = kjv();
   let properties = object_properties(bible);
   let reference = list_random_item(properties);
