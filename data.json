@@ -1977,7 +1977,6 @@
   "fd firebase_admin",
   "s object_property",
   "o sb",
-  "sb",
   "c ebible_verses_upload ebible_index_upload",
   "s data",
   "is data_save",
@@ -1992,7 +1991,8 @@
   "s folder",
   "s firebase",
   "s fireba,path",
-  "s upload"
+  "s upload",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
