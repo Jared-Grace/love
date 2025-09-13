@@ -3916,8 +3916,7 @@
    "cache_generic",
    "function_new_js_inner",
    "html_parse_find_remove",
-   "list_map_prefix_without",
-   "sandbox"
+   "list_map_prefix_without"
   ],
   "separator": [
    "watch",
@@ -4974,8 +4973,7 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "firebase_storage_download_path",
-   "local_function_path",
-   "sandbox"
+   "local_function_path"
   ],
   "fs": [
    "folder_read",
@@ -20488,9 +20486,7 @@
     "ebible_index_upload",
     "each_async",
     "marker",
-    "path_join",
     "sandbox",
-    "result",
     "v",
     "v2",
     "bible_folders"
