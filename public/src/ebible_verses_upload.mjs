@@ -1,3 +1,4 @@
+import { ebible_firebase_folder } from "./ebible_firebase_folder.mjs";
 import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
 import { list_wait } from "./list_wait.mjs";
 import { list_map } from "./list_map.mjs";
@@ -12,7 +13,7 @@ export async function ebible_verses_upload(bible_folder) {
     async function lambda(v) {
       let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
-      let joined = list_join_slash_forward(["bible", bible_folder]);
+      let joined = ebible_firebase_folder(bible_folder);
       let destination = list_join_slash_forward([
         joined,
         chapter_code,
