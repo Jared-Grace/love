@@ -2000,8 +2000,7 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -19769,7 +19768,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "log",
     "object_merge",
     "firebase_upload_object",
     "file_name_json",
