@@ -31,5 +31,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     html_parse_find_remove(main, "." + item);
   }
   each(exclude, lambda);
+  let result = html_parse_find(root2, selector);
   return dictionary;
 }
