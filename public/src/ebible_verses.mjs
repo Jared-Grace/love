@@ -44,7 +44,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   log({
     result,
   });
-  let text = html_parse_text(d, result);
+  let text = html_parse_text(d, root);
   log({
     text,
   });
