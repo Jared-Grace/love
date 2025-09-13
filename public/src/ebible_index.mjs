@@ -1,3 +1,4 @@
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { string_skip } from "./string_skip.mjs";
@@ -15,6 +16,7 @@ export async function ebible_index(bible_folder) {
       book_code,
       chapters: [],
     });
+    list_add_if_not_includes(list, item);
     let count = ebible_book_code_size();
     let chapter_name = string_skip(chapter_code, count);
     let verse_numbers = list_map_property(verses, "verse_number");
