@@ -315,7 +315,6 @@
   "n function_new_js",
   "i function_new",
   "i function_new_js",
-  "s slice",
   "c string_slice list_slice",
   "d param",
   "au function_param_new",
@@ -1976,7 +1975,8 @@
   "ps",
   "ebible_verses engbsb GEN01",
   "s pair",
-  "s reverse"
+  "s reverse",
+  "s slice"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
