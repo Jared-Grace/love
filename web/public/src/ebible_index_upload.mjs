@@ -1,3 +1,4 @@
+import { ebible_book_code_size } from "./ebible_book_code_size.mjs";
 import { string_skip } from "./string_skip.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -8,6 +9,7 @@ export async function ebible_index_upload(bible_folder) {
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let book = object_property_initialize(object, book_code, []);
-    let skipped = string_skip(s, skip_count);
+    let count = ebible_book_code_size();
+    let skipped = string_skip(s, count);
   }
 }
