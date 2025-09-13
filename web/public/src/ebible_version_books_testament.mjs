@@ -1,4 +1,4 @@
-import { ebible_chapter_code_to_chapter } from "./ebible_chapter_code_to_chapter.mjs";
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { html_parse_find_list_href_text } from "./html_parse_find_list_href_text.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -15,7 +15,7 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   let mapped = html_parse_find_list_href_text(bl, selector, d);
   function lambda(item) {
     let href = object_property_get(item, "href");
-    let taken = ebible_chapter_code_to_chapter(href);
+    let taken = ebible_chapter_code_to_book(href);
     let to = object_merge(
       {
         book_code: taken,
