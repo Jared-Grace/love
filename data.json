@@ -23943,8 +23943,8 @@
     "text",
     "split",
     "filtered",
-    "list",
-    "lambda2"
+    "lambda2",
+    "list"
    ]
   },
   "html_parse_descendants_classes": {
