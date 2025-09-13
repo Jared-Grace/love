@@ -2263,7 +2263,8 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_verses",
+   "html_parse_find_list_href_text"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -24055,6 +24056,7 @@
   "html_parse_find_list_href_text": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_parse_href_text_map",
     "html_parse_find_list_to",
     "html_parse_find_list_href_text",
