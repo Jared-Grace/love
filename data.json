@@ -1980,7 +1980,8 @@
   "is firebase_upload_object",
   "s join",
   "p",
-  "sandbox"
+  "sandbox",
+  "s wait"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
