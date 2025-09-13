@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { list_add } from "./list_add.mjs";
 import { ebible_book_code_size } from "./ebible_book_code_size.mjs";
 import { string_skip } from "./string_skip.mjs";
@@ -12,6 +13,9 @@ export async function ebible_index_upload(bible_folder) {
     let book = object_property_initialize(object, book_code, []);
     let count = ebible_book_code_size();
     let chapter_name = string_skip(chapter_code, count);
-    list_add(list, item);
+    let mapped = list_map_property(list, property_name);
+    list_add(book, {
+      chapter_name,
+    });
   }
 }
