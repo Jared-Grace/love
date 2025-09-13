@@ -3,5 +3,6 @@ import { marker } from "./marker.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folders = ["engbsb", "urdgvu"];
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
 }
