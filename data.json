@@ -1964,7 +1964,6 @@
   "s slice",
   "s take",
   "s json",
-  "ps",
   "ebible_verses engbsb GEN01",
   "s index",
   "c list_index_of list_index_of_last",
@@ -1995,7 +1994,8 @@
   "s reply",
   "s firebase",
   "is firebase_storage_download",
-  "o firebase_storage_download"
+  "o firebase_storage_download",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_download",
