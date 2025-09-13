@@ -1991,7 +1991,8 @@
   "s firebase,folde",
   "s folder",
   "s firebase",
-  "s fireba,path"
+  "s fireba,path",
+  "s upload"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
