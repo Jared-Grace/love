@@ -1,3 +1,4 @@
+import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { file_name_json } from "./file_name_json.mjs";
 import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -11,8 +12,8 @@ export async function sandbox() {
   let list = await ebible_chapter_codes(bible_folder);
   async function lambda(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
-    async function lambda2(v) {
-      let verse_number = object_property_get(v, "verse_number");
+    async function lambda2(verse) {
+      let verse_number = object_property_get(verse, "verse_number");
       let file_name = file_name_json(verse_number);
       let destination = list_join_slash_forward([
         "bible",
@@ -20,6 +21,12 @@ export async function sandbox() {
         chapter_code,
         file_name,
       ]);
+      await firebase_upload_object(
+        {
+          verse,
+        },
+        destination,
+      );
     }
     await each_async(verses, lambda2);
   }
