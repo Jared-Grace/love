@@ -12522,8 +12522,7 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament",
-   "ebible_chapter_text"
+   "ebible_version_books_testament"
   ],
   "find": [
    "html_parse_find"
@@ -12568,8 +12567,7 @@
    "ebible_version_books_testament_old"
   ],
   "bl": [
-   "ebible_version_books_testament",
-   "ebible_chapter_text"
+   "ebible_version_books_testament"
   ],
   "href": [
    "string_take",
@@ -24042,8 +24040,6 @@
     "item",
     "selector2",
     "list",
-    "bl",
-    "selector",
     "text"
    ]
   }
