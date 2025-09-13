@@ -3786,8 +3786,7 @@
   "list_join_space": [
    "command_line_node_g",
    "list_join_space",
-   "app_replace_rule_set",
-   "ebible_verses"
+   "app_replace_rule_set"
   ],
   "command_line_node_g": [
    "watch",
@@ -8521,7 +8520,8 @@
   ],
   "list_join_comma_space": [
    "js_code_call_args",
-   "list_join_comma_space"
+   "list_join_comma_space",
+   "ebible_verses"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -23882,7 +23882,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "list_join_space",
+    "list_join_comma_space",
     "html_parse_text",
     "list_map",
     "css_class_prefix_combine",
