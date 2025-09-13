@@ -13506,8 +13506,7 @@
    "sandbox"
   ],
   "ebible_firebase_folder": [
-   "ebible_firebase_folder",
-   "ebible_firebase_upload"
+   "ebible_firebase_folder"
   ],
   "file_name_with_extension": [
    "ebible_firebase_upload"
@@ -25899,7 +25898,6 @@
    "identifiers": [
     "firebase_upload_object",
     "list_join_slash_forward",
-    "ebible_firebase_folder",
     "file_name_json",
     "ebible_firebase_upload",
     "bible_folder",
