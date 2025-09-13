@@ -1981,8 +1981,8 @@
   "sandbox",
   "s wait",
   "p",
-  "sb",
-  "s object_property"
+  "s object_property",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
