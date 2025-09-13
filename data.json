@@ -2975,7 +2975,6 @@
    "ebible_chapters",
    "ebible_chapter_text",
    "ebible_verses",
-   "ebible_verses_upload",
    "html_p_text_multiple"
   ],
   "i_name": [
@@ -3112,7 +3111,6 @@
    "ebible_verses",
    "list_index_of_last",
    "firebase_deploy_function_destination",
-   "ebible_verses_upload",
    "ebible_versions",
    "html_parse_find_a_href_starts_with",
    "html_parse_find_list_to",
@@ -5061,8 +5059,7 @@
    "js_calls_to_each",
    "ebible_versions_download",
    "ebible_version_verses",
-   "ebible_chapter_codes",
-   "ebible_verses_upload"
+   "ebible_chapter_codes"
   ],
   "f_paths": [
    "data_files_update",
@@ -13199,8 +13196,7 @@
    "catch_call"
   ],
   "ebible_verses": [
-   "ebible_verses",
-   "ebible_verses_upload"
+   "ebible_verses"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13273,8 +13269,7 @@
    "list_adder_multiple_async"
   ],
   "ebible_chapter_codes": [
-   "ebible_chapter_codes",
-   "ebible_verses_upload"
+   "ebible_chapter_codes"
   ],
   "item2": [
    "ebible_chapters"
@@ -13456,10 +13451,12 @@
    "list_slice_count"
   ],
   "ebible_chapters_each_verses": [
-   "ebible_index_upload"
+   "ebible_index_upload",
+   "ebible_verses_upload"
   ],
   "each_chapter": [
-   "ebible_index_upload"
+   "ebible_index_upload",
+   "ebible_verses_upload"
   ]
  },
  "functions": {
@@ -24806,7 +24803,7 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
-    "each_async",
+    "ebible_chapters_each_verses",
     "list_wait",
     "list_map",
     "firebase_upload_object",
@@ -24814,15 +24811,12 @@
     "list_join_slash_forward",
     "file_name_json",
     "object_property_get",
-    "ebible_verses",
-    "ebible_chapter_codes",
     "ebible_verses_upload",
     "bible_folder",
-    "list",
-    "lambda",
+    "each_chapter",
     "chapter_code",
     "verses",
-    "lambda2",
+    "lambda",
     "v",
     "verse_number",
     "file_name",
