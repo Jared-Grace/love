@@ -2888,8 +2888,7 @@
    "js_auto_transform_new_inner",
    "list_filter_starts_with",
    "list_map_prefix_without",
-   "promise_wrap",
-   "sandbox"
+   "promise_wrap"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4225,8 +4224,7 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not",
-   "sandbox"
+   "string_starts_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -12960,8 +12958,7 @@
    "ebible_index_upload",
    "ebible_version_books",
    "ebible_version_download_path",
-   "ebible_version_download_path_combine",
-   "sandbox"
+   "ebible_version_download_path_combine"
   ],
   "unzip": [
    "unzip",
@@ -20364,9 +20361,6 @@
     "marker",
     "sandbox",
     "bible_folders",
-    "lambda",
-    "item",
-    "bible_folder",
     "list"
    ],
    "async": true
