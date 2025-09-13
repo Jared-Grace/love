@@ -1867,7 +1867,6 @@
   "fd firebase_upload_string",
   "c firebase_upload_string firebase_upload_buffer",
   "fd firebase_storage_download",
-  "is firebase_storage_download",
   "http_firebase https://www.google.com",
   "c file_read file_read_buffer",
   "fd file_write",
@@ -1994,7 +1993,8 @@
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
   "s reply",
-  "s firebase"
+  "s firebase",
+  "is firebase_storage_download"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
