@@ -1969,12 +1969,12 @@
   "fw ebible_chapter_text ebible_verses",
   "s find",
   "r html_parse_find_list_text html_parse_find_list_href_text",
-  "ps",
-  "p",
   "s ebible",
   "s filter,empty",
   "ebible_verses engbsb GEN01",
-  "n whitespace_normalize"
+  "p",
+  "n whitespace_normalize",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
