@@ -20,6 +20,7 @@ export function ebible_verses_exclude() {
     "s",
     "s2",
     "tnav",
+    "verse",
     "xt",
   ];
   return v;
