@@ -1971,9 +1971,9 @@
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "ps",
   "p",
-  "ebible_verses engbsb GEN01",
   "s ebible",
-  "s filter,empty"
+  "s filter,empty",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "html_parse_find_list_href_text",
