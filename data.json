@@ -1988,7 +1988,8 @@
   "d",
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
   "s initial",
-  "s skip"
+  "s skip",
+  "ebible_index_upload engbsb"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
