@@ -28,8 +28,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    let ne = list_empty_not_is(list2);
-    if (false) {
+    let ne = list_empty_not_is(filtered);
+    if (ne) {
+      const v = ebible_verse(filtered, "0");
+      la(v);
     }
     each_reverse(verse_numbers, lambda2);
   }
