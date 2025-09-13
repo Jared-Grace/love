@@ -1996,7 +1996,8 @@
   "ps",
   "s reply",
   "s buffer",
-  "is folder_read"
+  "is folder_read",
+  "is folder_find_starts_with"
  ],
  "marker_current": "1",
  "function_current": "firebase_storage_download",
