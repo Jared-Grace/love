@@ -8027,7 +8027,8 @@
    "html_name_to_path_dev",
    "http_firebase_file_path",
    "http_local_file_name",
-   "firebase_deploy_function_destination"
+   "firebase_deploy_function_destination",
+   "sandbox"
   ],
   "html_update": [
    "html_update",
@@ -11524,7 +11525,8 @@
   ],
   "file_name_json": [
    "file_name_json",
-   "firebase_deploy_function_destination"
+   "firebase_deploy_function_destination",
+   "sandbox"
   ],
   "version": [
    "firebase_deploy_function"
@@ -19757,6 +19759,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "file_name_json",
     "list_join_slash_forward",
     "object_property_get",
     "ebible_verses",
@@ -19771,7 +19774,8 @@
     "verses",
     "lambda2",
     "v",
-    "verse_number"
+    "verse_number",
+    "file_name"
    ],
    "async": true
   },
