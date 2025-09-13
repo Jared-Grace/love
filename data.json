@@ -3291,7 +3291,8 @@
    "ebible_verses_exclude",
    "ebible_verses_include",
    "whitespace_normalize",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4005,7 +4006,8 @@
    "app_reply_main",
    "ebible_version_verses",
    "ebible_version_books_testament",
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ],
   "data_save": [
    "data_file_update",
@@ -4103,8 +4105,7 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "ebible_chapter_text",
-   "list_index_of_last",
-   "sandbox"
+   "list_index_of_last"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5765,7 +5766,6 @@
    "file_overwrite_buffer",
    "file_write_buffer",
    "file_read",
-   "sandbox",
    "html_parse",
    "html_parse_read"
   ],
@@ -10761,8 +10761,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12840,7 +12839,8 @@
    "whitespace_normalize"
   ],
   "verse_number": [
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "ebible_verse": [
    "ebible_verses"
@@ -12854,6 +12854,9 @@
   ],
   "list_join_slash_forward": [
    "firebase_deploy_function_destination"
+  ],
+  "verses": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -19753,6 +19756,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "object_property_get",
     "ebible_verses",
     "each_async",
     "ebible_chapter_codes",
@@ -19762,10 +19766,10 @@
     "list",
     "lambda",
     "chapter_code",
-    "contents",
+    "verses",
     "lambda2",
-    "item",
-    "list2"
+    "v",
+    "verse_number"
    ],
    "async": true
   },
