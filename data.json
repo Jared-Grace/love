@@ -12774,9 +12774,6 @@
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
    "ebible_version_books_testament"
-  ],
-  "verse_numbers": [
-   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24049,8 +24046,7 @@
     "item",
     "selector2",
     "text",
-    "result",
-    "verse_numbers"
+    "result"
    ]
   },
   "html_parse_find_list_href_text": {
