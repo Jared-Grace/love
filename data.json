@@ -13318,8 +13318,7 @@
   "verse_number": [
    "ebible_verses",
    "ebible_verses_upload",
-   "ebible_verse",
-   "ebible_index_upload"
+   "ebible_verse"
   ],
   "ebible_verse": [
    "ebible_verses",
@@ -24864,7 +24863,6 @@
     "count",
     "chapter_name",
     "verse_numbers",
-    "verse_number",
     "chapter"
    ]
   },
