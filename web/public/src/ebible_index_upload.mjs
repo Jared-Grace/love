@@ -6,11 +6,11 @@ import { object_property_initialize } from "./object_property_initialize.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
 export async function ebible_index_upload(bible_folder) {
-  let result = {};
+  let index = {};
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
-    let book = object_property_initialize(result, book_code, []);
+    let book = object_property_initialize(index, book_code, []);
     let count = ebible_book_code_size();
     let chapter_name = string_skip(chapter_code, count);
     let verse_numbers = list_map_property(verses, "verse_number");
@@ -20,5 +20,5 @@ export async function ebible_index_upload(bible_folder) {
     };
     list_add(book, chapter);
   }
-  return result;
+  return index;
 }
