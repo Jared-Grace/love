@@ -9111,8 +9111,7 @@
   ],
   "both": [
    "js_imports_declarations",
-   "html_parse_href_text_map",
-   "ebible_chapter_text"
+   "html_parse_href_text_map"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -24050,7 +24049,6 @@
     "item",
     "selector2",
     "list",
-    "both",
     "text",
     "result"
    ]
