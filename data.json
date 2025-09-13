@@ -3063,7 +3063,8 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox"
+   "sandbox",
+   "html_parse_find_list_href_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -3863,7 +3864,8 @@
    "ebible_chapters",
    "html_parse_descendants_classes",
    "ebible_chapter_classes",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "html_parse_find_list_href_text"
   ],
   "data": [
    "data_all",
@@ -6085,7 +6087,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "html_parse_find_list_href_text"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -12522,7 +12525,8 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_find_list_href_text"
   ],
   "find": [
    "html_parse_find"
@@ -12567,7 +12571,8 @@
    "ebible_version_books_testament_old"
   ],
   "bl": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_parse_find_list_href_text"
   ],
   "href": [
    "string_take",
@@ -12610,13 +12615,15 @@
    "ebible_chapter_codes"
   ],
   "html_parse_find_list_to": [
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "html_parse_find_list_href_text"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
   ],
   "html_parse_href_text_map": [
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "html_parse_find_list_href_text"
   ],
   "ebible_version_download_path": [
    "ebible_version_download"
@@ -12766,6 +12773,9 @@
   "html_parse_find_list_text": [
    "ebible_version_books_testament",
    "ebible_chapter_text"
+  ],
+  "html_parse_find_list_href_text": [
+   "html_parse_find_list_href_text"
   ]
  },
  "functions": {
@@ -24040,6 +24050,19 @@
     "selector2",
     "mapped",
     "text"
+   ]
+  },
+  "html_parse_find_list_href_text": {
+   "async": false,
+   "identifiers": [
+    "html_parse_href_text_map",
+    "html_parse_find_list_to",
+    "html_parse_find_list_href_text",
+    "bl",
+    "selector",
+    "d",
+    "list",
+    "mapped"
    ]
   }
  },
