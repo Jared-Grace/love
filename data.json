@@ -3431,8 +3431,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "ebible_index_upload"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -24866,7 +24865,6 @@
     "count",
     "chapter_name",
     "verse_numbers",
-    "message",
     "chapter"
    ]
   },
