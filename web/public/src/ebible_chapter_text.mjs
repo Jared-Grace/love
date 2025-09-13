@@ -1,3 +1,4 @@
+import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { marker } from "./marker.mjs";
@@ -41,6 +42,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let list = html_parse_find_list_to(main, ".verse");
   function lambda2(item) {
     let both = html_parse_text(d, item);
+    let v = whitespace_normalize(str);
     return both;
   }
   let verse_numbers = list_map(list, lambda2);
