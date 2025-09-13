@@ -1982,7 +1982,8 @@
   "s wait",
   "s object_property",
   "p",
-  "sb"
+  "sb",
+  "fd firebase_admin"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
