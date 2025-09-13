@@ -21,8 +21,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda2(item) {
     let index = list_index_of(filtered, item);
     let skipped = list_skip(list, index + 1);
-    let joined = list_join_space(args);
-    log(message);
+    let joined = list_join_space(skipped);
+    log(joined);
   }
   each_reverse(verse_numbers, lambda2);
   return filtered;
