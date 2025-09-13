@@ -1098,7 +1098,6 @@
   "s function,types",
   "u ft",
   "a fy function_types",
-  "s skip",
   "a lk list_skip",
   "s index,next",
   "a ll list_filter",
@@ -1976,7 +1975,8 @@
   "ebible_verses engbsb GEN01",
   "s pair",
   "s reverse",
-  "s slice"
+  "s slice",
+  "s skip"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
