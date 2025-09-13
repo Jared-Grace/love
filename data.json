@@ -3063,7 +3063,8 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox"
+   "sandbox",
+   "ebible_chapter_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -12521,7 +12522,8 @@
   ],
   "selector": [
    "html_parse_find",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_chapter_text"
   ],
   "find": [
    "html_parse_find"
@@ -12566,7 +12568,8 @@
    "ebible_version_books_testament_old"
   ],
   "bl": [
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_chapter_text"
   ],
   "href": [
    "string_take",
@@ -12610,7 +12613,8 @@
   ],
   "html_parse_find_list_to": [
    "ebible_version_books_testament",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "ebible_chapter_text"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -24003,6 +24007,7 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
+    "html_parse_find_list_to",
     "marker",
     "html_parse_text",
     "css_class_prefix_combine",
@@ -24036,6 +24041,9 @@
     "lambda",
     "item",
     "selector2",
+    "list",
+    "bl",
+    "selector",
     "text"
    ]
   }
