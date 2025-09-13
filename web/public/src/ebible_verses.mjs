@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_verse } from "./ebible_verse.mjs";
@@ -36,6 +37,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   if (ne) {
     const v = ebible_verse(filtered, "0");
     la(v);
+    list_add(list2, item);
   }
   list_reverse(list);
   return list;
