@@ -20,4 +20,5 @@ export async function ebible_index_upload(bible_folder) {
     };
     list_add(book, chapter);
   }
+  return result;
 }
