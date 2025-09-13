@@ -39,7 +39,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
   each(exclude, lambda);
   let mapped = list_map(include, css_class_prefix_combine);
   let joined2 = list_join_space(mapped);
-  log(joined2);
+  log({
+    joined2,
+  });
   let result = html_parse_find_list_to(root, joined2);
   log({
     result,
