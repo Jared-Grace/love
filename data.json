@@ -1971,10 +1971,10 @@
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "s ebible",
   "s filter,empty",
-  "ebible_verses engbsb GEN01",
   "p",
   "n whitespace_normalize",
-  "ps"
+  "ps",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
