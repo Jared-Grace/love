@@ -1992,8 +1992,8 @@
   "s fireba,path",
   "s upload",
   "sb",
-  "is ebible_firebase_folder",
-  "d"
+  "d",
+  "is ebible_firebase_folder"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_code_to_book",
