@@ -13087,7 +13087,8 @@
    "ebible_version_download_path_combine",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "ebible_chapter_code_to_book"
   ],
   "string_take": [
    "string_take",
@@ -13450,9 +13451,6 @@
    "ebible_chapter_code_to_book",
    "ebible_index_upload",
    "ebible_version_books_testament"
-  ],
-  "taken2": [
-   "ebible_chapter_code_to_book"
   ]
  },
  "functions": {
@@ -25798,7 +25796,7 @@
     "string_take",
     "ebible_chapter_code_to_book",
     "href",
-    "taken2"
+    "book_code"
    ]
   }
  },
