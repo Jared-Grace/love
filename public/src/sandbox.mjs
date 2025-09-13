@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { log } from "./log.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
@@ -38,6 +39,7 @@ export async function sandbox() {
       await firebase_upload_object(object, destination);
       log(destination);
     }
+    let mapped = list_map(list2, function lambda3(item) {});
     await list_wait(verses, lambda2);
   }
   await each_async(list, lambda);
