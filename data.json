@@ -1941,7 +1941,6 @@
   "n ebible_verses",
   "ebible_chapters engbsb GEN",
   "s text",
-  "s find",
   "s href",
   "s list_to",
   "fd ebible_verses",
@@ -1971,7 +1970,8 @@
   "ebible_verses engbsb GEN01",
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
-  "fw ebible_chapter_text ebible_verses"
+  "fw ebible_chapter_text ebible_verses",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
