@@ -3272,8 +3272,7 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
    "ebible_verses_exclude",
-   "ebible_verses_include",
-   "ebible_chapter_text"
+   "ebible_verses_include"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3777,7 +3776,8 @@
    "html_parse_find",
    "html_parse",
    "catch_call",
-   "http"
+   "http",
+   "ebible_chapter_text"
   ],
   "separator": [
    "watch",
@@ -24058,7 +24058,7 @@
     "both",
     "verse_numbers",
     "text",
-    "v"
+    "result"
    ]
   },
   "html_parse_find_list_href_text": {
