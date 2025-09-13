@@ -1966,12 +1966,12 @@
   "ebible_verses engbsb GEN02",
   "pp",
   "p",
-  "ebible_verses engbsb GEN01",
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
   "fw ebible_chapter_text ebible_verses",
   "s find",
-  "ps"
+  "ps",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses",
