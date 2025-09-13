@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
 import { ebible_verses_exclude } from "./ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "./ebible_verses_include.mjs";
@@ -33,6 +34,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
+  let mapped = list_map(list, function lambda2(item2) {});
   let result = html_parse_find(main, selector);
   return dictionary;
 }
