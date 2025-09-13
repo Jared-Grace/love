@@ -12853,7 +12853,8 @@
    "list_index_of_last"
   ],
   "list_join_slash_forward": [
-   "firebase_deploy_function_destination"
+   "firebase_deploy_function_destination",
+   "sandbox"
   ],
   "verses": [
    "sandbox"
@@ -19756,6 +19757,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_join_slash_forward",
     "object_property_get",
     "ebible_verses",
     "each_async",
