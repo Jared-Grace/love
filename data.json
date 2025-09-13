@@ -5722,7 +5722,8 @@
    "js_dollar_s",
    "js_dollar_a_generic",
    "string_take",
-   "list_slice_count"
+   "list_slice_count",
+   "ebible_chapter_code_to_book"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -13460,6 +13461,9 @@
    "ebible_chapter_code_to_book",
    "ebible_index_upload",
    "ebible_version_books_testament"
+  ],
+  "ebible_book_code_size": [
+   "ebible_chapter_code_to_book"
   ]
  },
  "functions": {
@@ -25809,10 +25813,12 @@
   "ebible_chapter_code_to_book": {
    "async": false,
    "identifiers": [
+    "ebible_book_code_size",
     "marker",
     "string_take",
     "ebible_chapter_code_to_book",
     "href",
+    "count",
     "book_code"
    ]
   }
