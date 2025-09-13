@@ -1968,10 +1968,11 @@
   "ebible_verses engbsb GEN02",
   "pp",
   "p",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "r ebible_verses ebible_chapter_text"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "ebible_chapter_text",
  "terminal": false,
  "identifiers": {
   "log": [
