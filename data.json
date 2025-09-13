@@ -1973,10 +1973,11 @@
   "p",
   "s ebible",
   "s filter,empty",
-  "ebible_verses engbsb GEN01"
+  "ebible_verses engbsb GEN01",
+  "n whitespace_normalize"
  ],
  "marker_current": "1",
- "function_current": "html_parse_find_list_href_text",
+ "function_current": "whitespace_normalize",
  "terminal": false,
  "identifiers": {
   "log": [
