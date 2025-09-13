@@ -2002,8 +2002,7 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "sandbox",
-   "global_function_async"
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -22288,7 +22287,6 @@
   "global_function_async": {
    "async": true,
    "identifiers": [
-    "log",
     "object_property_initialize",
     "global_get",
     "marker",
