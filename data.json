@@ -3063,8 +3063,7 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox",
-   "ebible_chapter_text"
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -3340,7 +3339,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_chapter_text"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -12765,6 +12765,9 @@
    "ebible_chapter_text",
    "sandbox",
    "ebible_verses"
+  ],
+  "verses": [
+   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24039,7 +24042,8 @@
     "lambda",
     "item",
     "selector2",
-    "list",
+    "verses",
+    "message",
     "text"
    ]
   }
