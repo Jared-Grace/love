@@ -2271,7 +2271,8 @@
    "ebible_chapter_text",
    "ebible_verses",
    "html_parse_find_list_href_text",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "list_index_of_last"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -24171,6 +24172,7 @@
   "list_index_of_last": {
    "async": false,
    "identifiers": [
+    "marker",
     "error_json",
     "list_index_of_last",
     "list",
