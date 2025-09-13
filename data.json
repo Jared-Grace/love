@@ -3371,7 +3371,8 @@
    "string_lord_bless",
    "string_may_the_lord",
    "ebible_book_code_size",
-   "sandbox"
+   "sandbox",
+   "app_reply_main"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5231,7 +5232,8 @@
    "json_from",
    "storage_local_get",
    "file_write_json",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "app_reply_main"
   ],
   "includes": [
    "catch_only_async",
@@ -5982,7 +5984,8 @@
    "json_from",
    "storage_local_get",
    "http_json",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "app_reply_main"
   ],
   "file_write": [
    "file_write",
@@ -13547,9 +13550,6 @@
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload",
-   "app_reply_main"
-  ],
-  "buffer2": [
    "app_reply_main"
   ]
  },
@@ -23839,6 +23839,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "json_from",
     "buffer_string_to",
     "ebible_index_upload_name",
     "ebible_folder_english",
@@ -23878,7 +23879,8 @@
     "destination",
     "buffer",
     "s",
-    "buffer2",
+    "v",
+    "json",
     "bible",
     "properties",
     "reference",
