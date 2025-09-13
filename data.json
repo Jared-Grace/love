@@ -1996,8 +1996,7 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_chapter_text"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -12816,6 +12815,9 @@
   ],
   "trim": [
    "whitespace_normalize"
+  ],
+  "lad": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23941,7 +23943,6 @@
    "identifiers": [
     "list_take",
     "list_join_space",
-    "log",
     "list_skip",
     "list_index_of",
     "each_reverse",
@@ -23958,6 +23959,7 @@
     "text",
     "split",
     "filtered",
+    "lad",
     "lambda2",
     "item",
     "index",
