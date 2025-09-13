@@ -1980,10 +1980,10 @@
   "s join",
   "sandbox",
   "s wait",
-  "s object_property",
   "p",
   "sb",
-  "fd firebase_admin"
+  "fd firebase_admin",
+  "s object_property"
  ],
  "marker_current": "1",
  "function_current": "list_index_of_last",
