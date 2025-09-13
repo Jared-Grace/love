@@ -34,7 +34,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  let mapped = list_map(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let mapped = list_map(list, lambda2);
   let result = html_parse_find(main, selector);
   return dictionary;
 }
