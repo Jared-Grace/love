@@ -12,10 +12,7 @@ export async function ebible_verses_upload(bible_folder) {
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
       let verse_number = object_property_get(v, "verse_number");
-      let file_name = file_name_json(verse_number);
-      let joined = ebible_firebase_folder(bible_folder);
       let joined2 = list_join_slash_forward([joined, chapter_code]);
-      let destination = list_join_slash_forward([joined2, file_name]);
       let merged = object_merge(
         {
           bible_folder,
@@ -26,6 +23,9 @@ export async function ebible_verses_upload(bible_folder) {
       const object = {
         verse: merged,
       };
+      let file_name = file_name_json(verse_number);
+      let joined = ebible_firebase_folder(bible_folder);
+      let destination = list_join_slash_forward([joined2, file_name]);
       await firebase_upload_object(object, destination);
     }
     let mapped = list_map(verses, lambda);
