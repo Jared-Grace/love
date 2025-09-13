@@ -1985,7 +1985,6 @@
   "s folder",
   "s fireba,path",
   "s upload",
-  "sb",
   "d",
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
@@ -1999,7 +1998,9 @@
   "is folder_find_starts_with",
   "n folder_read_async",
   "s index",
-  "s add"
+  "s add",
+  "sb",
+  "s path,join"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
