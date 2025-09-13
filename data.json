@@ -3597,7 +3597,8 @@
    "firebase_storage_download_path",
    "firebase_storage_function_run",
    "list_join_slash_forward",
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_index_upload"
   ],
   "watcher": [
    "watch"
@@ -5690,7 +5691,8 @@
    "firebase_upload_object",
    "file_write_json",
    "ebible_verses_upload",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "ebible_index_upload"
   ],
   "each_pair": [
    "each_pair",
@@ -8261,7 +8263,8 @@
    "http_local_file_name",
    "firebase_deploy_function_destination",
    "ebible_verses_upload",
-   "local_function_path"
+   "local_function_path",
+   "ebible_index_upload"
   ],
   "html_update": [
    "html_update",
@@ -11818,7 +11821,8 @@
    "ebible_verses_upload",
    "firebase_storage_download_path",
    "firebase_storage_function_run",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "ebible_index_upload"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11836,7 +11840,8 @@
   "file_name_json": [
    "file_name_json",
    "firebase_deploy_function_destination",
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_index_upload"
   ],
   "version": [
    "firebase_deploy_function"
@@ -11853,7 +11858,8 @@
   "firebase_upload_object": [
    "firebase_deploy_function",
    "firebase_upload_object",
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_index_upload"
   ],
   "firebase_admin": [
    "firebase_admin",
@@ -13329,7 +13335,8 @@
   "list_join_slash_forward": [
    "firebase_deploy_function_destination",
    "ebible_verses_upload",
-   "list_join_slash_forward"
+   "list_join_slash_forward",
+   "ebible_index_upload"
   ],
   "ebible_verses_upload": [
    "sandbox",
@@ -13390,7 +13397,8 @@
    "firebase_bucket"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version"
+   "firebase_deploy_function_destination_version",
+   "ebible_index_upload"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -13461,7 +13469,8 @@
    "ebible_index_upload"
   ],
   "ebible_firebase_folder": [
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_index_upload"
   ]
  },
  "functions": {
@@ -24837,10 +24846,19 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
+    "firebase_upload_object",
+    "list_join_slash_forward",
+    "ebible_firebase_folder",
+    "file_name_json",
     "ebible_index",
     "ebible_index_upload",
     "bible_folder",
-    "index"
+    "index",
+    "file_name",
+    "joined",
+    "destination",
+    "object",
+    "destination2"
    ]
   },
   "app_name_main": {
