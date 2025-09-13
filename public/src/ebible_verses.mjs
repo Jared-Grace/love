@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_verse } from "./ebible_verse.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { list_take } from "./list_take.mjs";
@@ -27,6 +28,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
+    let ne = list_empty_not_is(list2);
     if (false) {
     }
     each_reverse(verse_numbers, lambda2);
