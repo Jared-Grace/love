@@ -1983,7 +1983,8 @@
   "fd firebase_admin",
   "s object_property",
   "o sb",
-  "sb"
+  "sb",
+  "c ebible_verses_upload ebible_index_upload"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
