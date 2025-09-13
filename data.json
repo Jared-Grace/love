@@ -1973,10 +1973,10 @@
   "s slice",
   "s skip",
   "s take",
-  "ebible_verses engbsb GEN01",
   "p",
   "s json",
-  "ps"
+  "ps",
+  "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
