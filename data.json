@@ -1999,7 +1999,8 @@
    "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3362,7 +3363,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5514,7 +5516,8 @@
    "object_property_lambda_async",
    "object_property_exists_not_assert",
    "firebase_upload_object",
-   "file_write_json"
+   "file_write_json",
+   "sandbox"
   ],
   "each_pair": [
    "each_pair",
@@ -19766,6 +19769,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "object_merge",
     "firebase_upload_object",
     "file_name_json",
@@ -19787,7 +19791,9 @@
     "file_name",
     "destination",
     "merged",
-    "verse"
+    "object",
+    "verse",
+    "message"
    ],
    "async": true
   },
