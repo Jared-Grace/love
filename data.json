@@ -13158,7 +13158,8 @@
   "books": [
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_version_books"
+   "ebible_version_books",
+   "ebible_index"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -26005,6 +26006,7 @@
     "ebible_chapters_each_verses",
     "ebible_index",
     "bible_folder",
+    "books",
     "index",
     "each_chapter",
     "chapter_code",
