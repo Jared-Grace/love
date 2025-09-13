@@ -1973,9 +1973,9 @@
   "s slice",
   "s skip",
   "s take",
-  "p",
   "s json",
   "ps",
+  "p",
   "ebible_verses engbsb GEN01"
  ],
  "marker_current": "1",
