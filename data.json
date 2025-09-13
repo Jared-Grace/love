@@ -4107,8 +4107,7 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "ebible_chapter_text",
-   "list_index_of_last",
-   "sandbox"
+   "list_index_of_last"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4398,8 +4397,7 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download",
-   "sandbox"
+   "ebible_versions_download"
   ],
   "value2": [
    "error_attention_set",
@@ -10771,8 +10769,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19801,10 +19798,7 @@
     "merged",
     "object",
     "verse",
-    "lambda3",
-    "item",
-    "mapped",
-    "list2"
+    "mapped"
    ],
    "async": true
   },
