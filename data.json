@@ -4738,7 +4738,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "app_reply_main"
   ],
   "a": [
    "string_suffix_without",
@@ -12895,7 +12896,8 @@
    "http_json",
    "buffer_string_to",
    "firebase_storage_download_property",
-   "http_local_text"
+   "http_local_text",
+   "app_reply_main"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -13545,6 +13547,9 @@
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload",
+   "app_reply_main"
+  ],
+  "buffer2": [
    "app_reply_main"
   ]
  },
@@ -23834,6 +23839,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "buffer_string_to",
     "ebible_index_upload_name",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
@@ -23871,6 +23877,8 @@
     "file_name",
     "destination",
     "buffer",
+    "s",
+    "buffer2",
     "bible",
     "properties",
     "reference",
