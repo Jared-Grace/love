@@ -6,8 +6,8 @@ export async function sandbox() {
   marker("1");
   const bible_folder = "urdgvu";
   let list = await ebible_chapter_codes(bible_folder);
-  async function lambda(item) {
-    let contents = await ebible_verses(bible_folder, item);
+  async function lambda(chapter_code) {
+    let contents = await ebible_verses(bible_folder, chapter_code);
   }
   await each_async(list, lambda);
 }
