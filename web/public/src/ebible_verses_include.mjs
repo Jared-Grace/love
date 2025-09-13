@@ -12,7 +12,6 @@ export function ebible_verses_include() {
     "q",
     "q2",
     "qr",
-    "verse",
   ];
   return v;
 }
