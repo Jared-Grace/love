@@ -8278,7 +8278,8 @@
    "local_function_path",
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
-   "ebible_index_upload"
+   "ebible_index_upload",
+   "app_reply_main"
   ],
   "html_update": [
    "html_update",
@@ -13542,7 +13543,8 @@
    "sandbox"
   ],
   "ebible_index_upload_name": [
-   "ebible_index_upload"
+   "ebible_index_upload",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23830,6 +23832,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_index_upload_name",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
     "firebase_storage_download",
@@ -23863,6 +23866,7 @@
     "marker",
     "app_reply_main",
     "bible_folder",
+    "file_name",
     "destination2",
     "buffer",
     "destination",
