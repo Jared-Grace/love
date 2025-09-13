@@ -3282,8 +3282,7 @@
    "ebible_chapter_classes",
    "ebible_verses_exclude",
    "ebible_verses_include",
-   "whitespace_normalize",
-   "ebible_chapter_text"
+   "whitespace_normalize"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6338,7 +6337,8 @@
    "storage_local_initialize",
    "promise_not_is",
    "js_calls_to_each",
-   "round"
+   "round",
+   "ebible_chapter_text"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -8257,7 +8257,8 @@
   ],
   "t": [
    "js_auto",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "ebible_chapter_text"
   ],
   "js_imports_all": [
    "js_imports_all",
@@ -9134,8 +9135,7 @@
   ],
   "both": [
    "js_imports_declarations",
-   "html_parse_href_text_map",
-   "ebible_chapter_text"
+   "html_parse_href_text_map"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -12247,8 +12247,7 @@
   ],
   "str": [
    "string_letters_only",
-   "whitespace_normalize",
-   "ebible_chapter_text"
+   "whitespace_normalize"
   ],
   "text2": [
    "app_reply_main"
@@ -24113,9 +24112,8 @@
     "selector2",
     "list",
     "lambda2",
-    "both",
-    "v",
-    "str",
+    "t",
+    "n",
     "verse_numbers",
     "text",
     "result"
