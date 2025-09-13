@@ -6022,7 +6022,8 @@
    "app_replace_rule_parse",
    "string_split_comma",
    "string_replace",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "string_split_space"
   ],
   "results": [
    "functions_combine_name"
@@ -11242,7 +11243,6 @@
    "ebible_verses"
   ],
   "split2": [
-   "string_split_space",
    "string_split_empty",
    "ebible_verses"
   ],
@@ -21603,7 +21603,7 @@
     "string_split",
     "string_split_space",
     "s",
-    "split2"
+    "split"
    ]
   },
   "list_take": {
