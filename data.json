@@ -3696,7 +3696,8 @@
    "js_code_call_args",
    "list_join_comma_space",
    "list_join_space",
-   "js_code_declaration"
+   "js_code_declaration",
+   "ebible_verses"
   ],
   "lj": [
    "watch",
@@ -3783,7 +3784,8 @@
   "list_join_space": [
    "command_line_node_g",
    "list_join_space",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "command_line_node_g": [
    "watch",
@@ -9567,7 +9569,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "http"
+   "http",
+   "ebible_verses"
   ],
   "list_last_is": [
    "list_last_is"
@@ -23876,6 +23879,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_join_space",
     "html_parse_text",
     "list_map",
     "css_class_prefix_combine",
@@ -23910,6 +23914,8 @@
     "item",
     "selector2",
     "mapped",
+    "result2",
+    "args",
     "result",
     "text"
    ]
