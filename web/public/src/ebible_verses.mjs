@@ -20,6 +20,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
   function lambda2(item) {
+    log(message);
     let index = list_index_of(filtered, item);
     let skipped = list_skip(list, index + 1);
     let joined = list_join_space(skipped);
