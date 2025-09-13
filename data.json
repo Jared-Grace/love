@@ -12960,7 +12960,8 @@
    "ebible_index_upload",
    "ebible_version_books",
    "ebible_version_download_path",
-   "ebible_version_download_path_combine"
+   "ebible_version_download_path_combine",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -13341,7 +13342,8 @@
    "firebase_upload_generic"
   ],
   "ebible_index_upload": [
-   "ebible_index_upload"
+   "ebible_index_upload",
+   "sandbox"
   ],
   "list_slice_count": [
    "app_replace_rule_valid",
@@ -20357,12 +20359,14 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_index_upload",
     "each_async",
     "marker",
     "sandbox",
     "bible_folders",
     "lambda",
     "item",
+    "bible_folder",
     "list"
    ],
    "async": true
