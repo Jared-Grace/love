@@ -13,7 +13,7 @@ export async function ebible_index_upload(bible_folder) {
     let book = object_property_initialize(result, book_code, []);
     let count = ebible_book_code_size();
     let chapter_name = string_skip(chapter_code, count);
-    let verse_numbers = list_map_property(verses, verse_number);
+    let verse_numbers = list_map_property(verses, "verse_number");
     const chapter = {
       chapter_name,
       verse_numbers,
