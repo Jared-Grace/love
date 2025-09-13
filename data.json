@@ -4107,7 +4107,8 @@
    "html_parse_descendants_classes",
    "list_adder_generic_async",
    "ebible_chapter_text",
-   "list_index_of_last"
+   "list_index_of_last",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4397,7 +4398,8 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "sandbox"
   ],
   "value2": [
    "error_attention_set",
@@ -4744,7 +4746,8 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_chapters",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "functions_names": [
    "functions_names",
@@ -6124,7 +6127,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "html_parse_find_list_href_text"
+   "html_parse_find_list_href_text",
+   "sandbox"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10767,7 +10771,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -19770,6 +19775,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map",
     "log",
     "object_merge",
     "firebase_upload_object",
@@ -19794,7 +19800,11 @@
     "destination",
     "merged",
     "object",
-    "verse"
+    "verse",
+    "mapped",
+    "list2",
+    "lambda3",
+    "item"
    ],
    "async": true
   },
