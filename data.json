@@ -13397,8 +13397,7 @@
    "firebase_bucket"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version",
-   "ebible_index_upload"
+   "firebase_deploy_function_destination_version"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -24857,8 +24856,7 @@
     "file_name",
     "joined",
     "destination",
-    "object",
-    "destination2"
+    "object"
    ]
   },
   "app_name_main": {
