@@ -1,3 +1,4 @@
+import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -20,6 +21,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda2(item) {
     let index = list_index_of(filtered, item);
     let skipped = list_skip(list, index + 1);
+    let joined = list_join_space(args);
     log(message);
   }
   each_reverse(verse_numbers, lambda2);
