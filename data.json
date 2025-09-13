@@ -12771,12 +12771,10 @@
    "sandbox",
    "ebible_verses"
   ],
-  "html_parse_find_list_text": [
-   "ebible_chapter_text"
-  ],
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24015,7 +24013,7 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
-    "html_parse_find_list_text",
+    "html_parse_find_list_href_text",
     "marker",
     "html_parse_text",
     "css_class_prefix_combine",
