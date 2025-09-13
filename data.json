@@ -2682,8 +2682,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "ebible_index_upload"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3703,8 +3702,7 @@
    "cache_generic",
    "html_style_font_size",
    "js_statement_expression_get",
-   "object_property_set_exists_not",
-   "ebible_index_upload"
+   "object_property_set_exists_not"
   ],
   "name": [
    "watch",
@@ -24842,9 +24840,7 @@
     "verses",
     "book_code",
     "value2",
-    "object",
-    "property_name",
-    "value"
+    "object"
    ]
   },
   "app_name_main": {
