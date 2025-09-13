@@ -12740,7 +12740,10 @@
    "ebible_verses",
    "ebible_verses_exclude"
   ],
-  "root2": [
+  "css_class_prefix_combine": [
+   "ebible_verses"
+  ],
+  "selector2": [
    "ebible_verses"
   ]
  },
@@ -23867,6 +23870,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "css_class_prefix_combine",
     "ebible_verses_exclude",
     "ebible_verses_include",
     "log",
@@ -23896,8 +23900,8 @@
     "dictionary",
     "lambda",
     "item",
+    "selector2",
     "result",
-    "root2",
     "selector"
    ]
   },
