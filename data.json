@@ -1912,7 +1912,6 @@
   "de html_parse_list_text_to",
   "c html_parse_text html_parse_href",
   "c ebible_version_books_testament_old ebible_version_books_testament_new",
-  "s take",
   "s string",
   "n html_parse_read",
   "n html_parse_href_text_map",
@@ -1976,7 +1975,8 @@
   "s pair",
   "s reverse",
   "s slice",
-  "s skip"
+  "s skip",
+  "s take"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
