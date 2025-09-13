@@ -10,6 +10,6 @@ export async function ebible_index_upload(bible_folder) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let book = object_property_initialize(object, book_code, []);
     let count = ebible_book_code_size();
-    let skipped = string_skip(s, count);
+    let chapter_name = string_skip(chapter_code, count);
   }
 }
