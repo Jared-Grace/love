@@ -11268,7 +11268,8 @@
   "list_take": [
    "list_take",
    "app_replace_rule_parse",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "ebible_verses"
   ],
   "taken": [
    "list_take",
@@ -12814,9 +12815,6 @@
   ],
   "trim": [
    "whitespace_normalize"
-  ],
-  "lt": [
-   "ebible_verses"
   ]
  },
  "functions": {
@@ -23940,6 +23938,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "list_take",
     "list_join_space",
     "log",
     "list_skip",
@@ -23963,8 +23962,7 @@
     "index",
     "skipped",
     "list",
-    "joined",
-    "lt"
+    "joined"
    ]
   },
   "html_parse_descendants_classes": {
