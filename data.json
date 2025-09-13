@@ -1952,7 +1952,6 @@
   "r ebible_version_verses ebible_chapter_codes",
   "ebible_chapter_codes engbsb",
   "s suff",
-  "o sb",
   "s hpt",
   "u hpt",
   "ebible_verses engbsb GEN02",
@@ -1983,10 +1982,11 @@
   "p",
   "fd firebase_admin",
   "s object_property",
-  "sb"
+  "sb",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "list_index_of_last",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
