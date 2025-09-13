@@ -1976,7 +1976,6 @@
   "s join",
   "sandbox",
   "s wait",
-  "p",
   "fd firebase_admin",
   "s object_property",
   "o sb",
@@ -1989,6 +1988,7 @@
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
   "s initial",
   "s skip",
+  "p",
   "ebible_index_upload engbsb"
  ],
  "marker_current": "1",
