@@ -1967,7 +1967,6 @@
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "s ebible",
   "s filter,empty",
-  "p",
   "n whitespace_normalize",
   "s pair",
   "s reverse",
@@ -1976,6 +1975,7 @@
   "s take",
   "ps",
   "ebible_verses engbsb GEN01",
+  "p",
   "s json"
  ],
  "marker_current": "1",
