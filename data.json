@@ -1999,8 +1999,8 @@
   "n folder_read_async",
   "s index",
   "s add",
-  "sb",
-  "s path,join"
+  "s path,join",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
