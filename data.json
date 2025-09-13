@@ -1982,8 +1982,8 @@
   "p",
   "fd firebase_admin",
   "s object_property",
-  "sb",
-  "o sb"
+  "o sb",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
