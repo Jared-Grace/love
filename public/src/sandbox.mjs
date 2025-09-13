@@ -16,6 +16,7 @@ export async function sandbox() {
   async function lambda(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     async function lambda2(v) {
+      log(v);
       let verse_number = object_property_get(v, "verse_number");
       let file_name = file_name_json(verse_number);
       let destination = list_join_slash_forward([
