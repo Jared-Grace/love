@@ -1,3 +1,4 @@
+import { list_take } from "./list_take.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -23,7 +24,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     let skipped = list_skip(list, index + 1);
     let joined = list_join_space(skipped);
     log(joined);
-    lt;
+    filtered = list_take(filtered, index);
   }
   each_reverse(verse_numbers, lambda2);
   return filtered;
