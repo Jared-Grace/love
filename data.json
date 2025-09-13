@@ -2682,7 +2682,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "ebible_index_upload"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4222,8 +4223,7 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not",
-   "ebible_index_upload"
+   "string_starts_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6226,7 +6226,8 @@
    "js_imports_declarations",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
-   "html_parse_find_a_href_starts_with"
+   "html_parse_find_a_href_starts_with",
+   "ebible_index_upload"
   ],
   "split": [
    "functions_combine_name",
@@ -6317,7 +6318,8 @@
    "ebible_versions",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
-   "list_map_prefix_without"
+   "list_map_prefix_without",
+   "ebible_index_upload"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -24842,6 +24844,7 @@
   "ebible_index_upload": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "list_add",
     "ebible_book_code_size",
     "string_skip",
@@ -24859,8 +24862,9 @@
     "object",
     "count",
     "chapter_name",
+    "mapped",
     "list",
-    "item"
+    "property_name"
    ]
   },
   "app_name_main": {
