@@ -3891,8 +3891,7 @@
    "cache_generic",
    "function_new_js_inner",
    "html_parse_find_remove",
-   "list_map_prefix_without",
-   "ebible_index_upload"
+   "list_map_prefix_without"
   ],
   "separator": [
    "watch",
@@ -5604,7 +5603,8 @@
    "ebible_verses",
    "list_index_of_last",
    "list_index_of_delta_outside",
-   "list_slice_count"
+   "list_slice_count",
+   "ebible_index_upload"
   ],
   "lists_get": [
    "each_multiple",
@@ -24854,7 +24854,7 @@
     "ebible_chapters_each_verses",
     "ebible_index_upload",
     "bible_folder",
-    "result",
+    "index",
     "each_chapter",
     "chapter_code",
     "verses",
