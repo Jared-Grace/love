@@ -2002,8 +2002,7 @@
    "marker_rename",
    "js_calls_to_each",
    "js_let_add",
-   "ebible_versions_download",
-   "sandbox"
+   "ebible_versions_download"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2856,7 +2855,6 @@
    "ebible_version_verses",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox",
    "ebible_chapter_text",
    "ebible_verses"
   ],
@@ -2950,8 +2948,7 @@
    "ebible_chapter_codes",
    "ebible_chapters",
    "ebible_chapter_text",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3082,7 +3079,6 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "ebible_chapter_codes",
-   "sandbox",
    "html_parse_find_list_href_text",
    "ebible_chapter_text",
    "ebible_verses",
@@ -3295,8 +3291,7 @@
    "ebible_verses_exclude",
    "ebible_verses_include",
    "whitespace_normalize",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4010,8 +4005,7 @@
    "app_reply_main",
    "ebible_version_verses",
    "ebible_version_books_testament",
-   "ebible_chapter_codes",
-   "sandbox"
+   "ebible_chapter_codes"
   ],
   "data_save": [
    "data_file_update",
@@ -4746,8 +4740,7 @@
    "ebible_version_books_testament",
    "html_parse_href_text_map",
    "ebible_chapters",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "functions_names": [
    "functions_names",
@@ -4911,8 +4904,7 @@
    "js_calls_to_each",
    "ebible_versions_download",
    "ebible_version_verses",
-   "ebible_chapter_codes",
-   "sandbox"
+   "ebible_chapter_codes"
   ],
   "f_paths": [
    "data_files_update",
@@ -5519,8 +5511,7 @@
    "object_property_lambda_async",
    "object_property_exists_not_assert",
    "firebase_upload_object",
-   "file_write_json",
-   "sandbox"
+   "file_write_json"
   ],
   "each_pair": [
    "each_pair",
@@ -6093,8 +6084,7 @@
    "function_dependencies_code",
    "list_map_unordered_async",
    "list_wait",
-   "functions_transform",
-   "sandbox"
+   "functions_transform"
   ],
   "function_format": [
    "functions_format",
@@ -6127,8 +6117,7 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
-   "html_parse_find_list_href_text",
-   "sandbox"
+   "html_parse_find_list_href_text"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -6724,8 +6713,7 @@
    "function_exists_inner",
    "function_parse_declaration_inner",
    "app_replace_rule_set",
-   "ebible_version_books_testament",
-   "sandbox"
+   "ebible_version_books_testament"
   ],
   "u": [
    "function_exists",
@@ -8036,8 +8024,7 @@
    "html_name_to_path_dev",
    "http_firebase_file_path",
    "http_local_file_name",
-   "firebase_deploy_function_destination",
-   "sandbox"
+   "firebase_deploy_function_destination"
   ],
   "html_update": [
    "html_update",
@@ -11518,8 +11505,7 @@
    "firebase_upload_string",
    "firebase_storage_download",
    "firebase_upload_buffer",
-   "firebase_deploy_function_destination",
-   "sandbox"
+   "firebase_deploy_function_destination"
   ],
   "date_now_file": [
    "date_now_file",
@@ -11536,8 +11522,7 @@
   ],
   "file_name_json": [
    "file_name_json",
-   "firebase_deploy_function_destination",
-   "sandbox"
+   "firebase_deploy_function_destination"
   ],
   "version": [
    "firebase_deploy_function"
@@ -11551,8 +11536,7 @@
   ],
   "firebase_upload_object": [
    "firebase_deploy_function",
-   "firebase_upload_object",
-   "sandbox"
+   "firebase_upload_object"
   ],
   "firebase_admin": [
    "firebase_admin"
@@ -12243,8 +12227,7 @@
    "app_reply_main"
   ],
   "verse": [
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "preview_refresh": [
    "app_reply_main"
@@ -12745,14 +12728,12 @@
    "catch_call"
   ],
   "ebible_verses": [
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "chapter_code": [
    "ebible_verses",
    "ebible_chapter_classes",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -12810,8 +12791,7 @@
    "list_adder_multiple_async"
   ],
   "ebible_chapter_codes": [
-   "ebible_chapter_codes",
-   "sandbox"
+   "ebible_chapter_codes"
   ],
   "item2": [
    "ebible_chapters"
@@ -12854,8 +12834,7 @@
    "whitespace_normalize"
   ],
   "verse_number": [
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "ebible_verse": [
    "ebible_verses"
@@ -12868,13 +12847,9 @@
    "list_index_of_last"
   ],
   "list_join_slash_forward": [
-   "firebase_deploy_function_destination",
-   "sandbox"
+   "firebase_deploy_function_destination"
   ],
-  "verses": [
-   "sandbox"
-  ],
-  "merged": [
+  "ebible_verses_upload": [
    "sandbox"
   ]
  },
@@ -19775,33 +19750,10 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_map",
-    "log",
-    "object_merge",
-    "firebase_upload_object",
-    "file_name_json",
-    "list_join_slash_forward",
-    "object_property_get",
-    "ebible_verses",
-    "each_async",
-    "ebible_chapter_codes",
+    "ebible_verses_upload",
     "marker",
-    "list_wait",
     "sandbox",
-    "bible_folder",
-    "list",
-    "lambda",
-    "chapter_code",
-    "verses",
-    "lambda2",
-    "v",
-    "verse_number",
-    "file_name",
-    "destination",
-    "merged",
-    "object",
-    "verse",
-    "mapped"
+    "bible_folder"
    ],
    "async": true
   },
