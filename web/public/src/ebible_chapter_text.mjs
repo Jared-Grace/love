@@ -1,3 +1,5 @@
+import { list_map } from "./list_map.mjs";
+import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { marker } from "./marker.mjs";
 import { html_parse_text } from "./html_parse_text.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
@@ -31,6 +33,12 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     extra,
     dictionary,
   });
+  let list = html_parse_find_list_to(main, ".verse");
+  function lambda(item) {
+    let both = html_parse_text(d, item);
+    return both;
+  }
+  let verse_numbers = list_map(list, lambda);
   function lambda(item) {
     let selector2 = css_class_prefix_combine(item);
     html_parse_find_remove(main, selector2);
@@ -38,6 +46,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   each(exclude, lambda);
   let text = html_parse_text(d, main);
   let result = {
+    verse_numbers,
     text,
   };
   return result;
