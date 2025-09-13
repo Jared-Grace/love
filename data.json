@@ -1977,7 +1977,8 @@
   "p",
   "ebible_verses engbsb GEN01",
   "sb",
-  "s index"
+  "s index",
+  "c list_index_of list_index_of_last"
  ],
  "marker_current": "1",
  "function_current": "whitespace_normalize",
