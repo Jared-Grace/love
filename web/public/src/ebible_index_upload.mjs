@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_add } from "./list_add.mjs";
 import { ebible_book_code_size } from "./ebible_book_code_size.mjs";
@@ -14,6 +15,7 @@ export async function ebible_index_upload(bible_folder) {
     let count = ebible_book_code_size();
     let chapter_name = string_skip(chapter_code, count);
     let verse_numbers = list_map_property(verses, "verse_number");
+    log(message);
     const chapter = {
       chapter_name,
       verse_numbers,
