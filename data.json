@@ -3065,7 +3065,8 @@
    "list_adder_generic_async",
    "ebible_chapter_codes",
    "sandbox",
-   "html_parse_find_list_href_text"
+   "html_parse_find_list_href_text",
+   "ebible_chapter_text"
   ],
   "v": [
    "data_identifiers_file",
@@ -4718,7 +4719,8 @@
    "app_reply_main",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_chapter_text"
   ],
   "functions_names": [
    "functions_names",
@@ -9110,7 +9112,8 @@
   ],
   "both": [
    "js_imports_declarations",
-   "html_parse_href_text_map"
+   "html_parse_href_text_map",
+   "ebible_chapter_text"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -12617,7 +12620,8 @@
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
-   "html_parse_find_list_href_text"
+   "html_parse_find_list_href_text",
+   "ebible_chapter_text"
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map"
@@ -12774,6 +12778,9 @@
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
    "ebible_version_books_testament"
+  ],
+  "verse_numbers": [
+   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -24012,6 +24019,8 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
+    "list_map",
+    "html_parse_find_list_to",
     "marker",
     "html_parse_text",
     "css_class_prefix_combine",
@@ -24042,8 +24051,11 @@
     "extra",
     "e",
     "dictionary",
+    "list",
     "lambda",
     "item",
+    "both",
+    "verse_numbers",
     "selector2",
     "text",
     "result"
