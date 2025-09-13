@@ -4,5 +4,5 @@ import { marker } from "./marker.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folders = ["engbsb", "urdgvu"];
-  await each_async(list, ebible_index_upload);
+  await each_async(bible_folders, ebible_index_upload);
 }
