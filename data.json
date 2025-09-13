@@ -2881,7 +2881,8 @@
    "js_auto_transform_new_inner",
    "list_filter_starts_with",
    "list_map_prefix_without",
-   "promise_wrap"
+   "promise_wrap",
+   "ebible_index_upload"
   ],
   "previous": [
    "data_identifiers_file",
@@ -2975,7 +2976,6 @@
    "ebible_chapter_text",
    "ebible_verses",
    "ebible_verses_upload",
-   "ebible_index_upload",
    "html_p_text_multiple"
   ],
   "i_name": [
@@ -24849,7 +24849,7 @@
     "each_chapter",
     "chapter_code",
     "verses",
-    "lambda2",
+    "lambda",
     "v",
     "verse_number",
     "file_name",
