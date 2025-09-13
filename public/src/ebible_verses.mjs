@@ -37,7 +37,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   each(exclude, lambda);
   let mapped = list_map(include, css_class_prefix_combine);
   let result = html_parse_find(main, mapped);
-  let text = html_parse_text(d2, item2);
-  hpt;
-  return dictionary;
+  let text = html_parse_text(d, result);
+  return text;
 }
