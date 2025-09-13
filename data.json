@@ -1985,7 +1985,8 @@
   "sb",
   "c ebible_verses_upload ebible_index_upload",
   "s data",
-  "is data_save"
+  "is data_save",
+  "as data"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
