@@ -14,6 +14,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   text = whitespace_normalize(text);
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
-  each_reverse(list, function lambda2() {});
+  function lambda2() {}
+  each_reverse(list, lambda2);
   return filtered;
 }
