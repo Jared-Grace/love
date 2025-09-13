@@ -6,7 +6,6 @@ import { html_parse_text } from "./html_parse_text.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
 import { ebible_verses_exclude } from "./ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "./ebible_verses_include.mjs";
-import { log } from "./log.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
@@ -19,7 +18,6 @@ import { ebible_version_download_path_combine } from "./ebible_version_download_
 import { assert_json } from "./assert_json.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   marker("1");
-  log(chapter_code);
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
   let { d, root } = await html_parse_read(joined);
   let main = html_parse_find(root, ".main");
