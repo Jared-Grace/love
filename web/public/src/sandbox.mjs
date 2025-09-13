@@ -8,7 +8,8 @@ export async function sandbox() {
   let list = await ebible_chapter_codes(bible_folder);
   async function lambda(chapter_code) {
     let contents = await ebible_verses(bible_folder, chapter_code);
-    await each_async(list2, async function lambda2(item) {});
+    async function lambda2(item) {}
+    await each_async(list2, lambda2);
   }
   await each_async(list, lambda);
 }
