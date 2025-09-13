@@ -4973,7 +4973,8 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "firebase_storage_download_path",
-   "local_function_path"
+   "local_function_path",
+   "sandbox"
   ],
   "fs": [
    "folder_read",
@@ -20486,6 +20487,7 @@
     "ebible_index_upload",
     "each_async",
     "marker",
+    "path_join",
     "sandbox",
     "v",
     "v2",
