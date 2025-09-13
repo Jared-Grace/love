@@ -12814,6 +12814,9 @@
   ],
   "trim": [
    "whitespace_normalize"
+  ],
+  "lt": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -23960,7 +23963,8 @@
     "index",
     "skipped",
     "list",
-    "joined"
+    "joined",
+    "lt"
    ]
   },
   "html_parse_descendants_classes": {
