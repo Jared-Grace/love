@@ -1969,7 +1969,8 @@
   "pp",
   "p",
   "ebible_verses engbsb GEN01",
-  "r ebible_verses ebible_chapter_text"
+  "r ebible_verses ebible_chapter_text",
+  "de ebible_verses"
  ],
  "marker_current": "1",
  "function_current": "ebible_chapter_text",
