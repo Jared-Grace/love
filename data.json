@@ -1964,7 +1964,6 @@
   "s take",
   "s json",
   "ebible_verses engbsb GEN01",
-  "s index",
   "c list_index_of list_index_of_last",
   "is firebase_upload_object",
   "s join",
@@ -1998,7 +1997,8 @@
   "s buffer",
   "is folder_read",
   "is folder_find_starts_with",
-  "n folder_read_async"
+  "n folder_read_async",
+  "s index"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
