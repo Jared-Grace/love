@@ -3269,8 +3269,7 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
    "ebible_verses_exclude",
-   "ebible_verses_include",
-   "ebible_verses"
+   "ebible_verses_include"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5061,7 +5060,8 @@
    "http_local_text",
    "html_parse_list_text_to",
    "html_parse_text",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_verses"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -23893,7 +23893,7 @@
     "ebible_verses",
     "bible_folder",
     "chapter_code",
-    "v"
+    "text"
    ]
   },
   "html_parse_descendants_classes": {
