@@ -11599,7 +11599,8 @@
   "joined2": [
    "function_name_to_path",
    "ebible_version_download_path",
-   "local_function_path"
+   "local_function_path",
+   "ebible_verses_upload"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -24834,6 +24835,7 @@
     "verse_number",
     "file_name",
     "joined",
+    "joined2",
     "destination",
     "merged",
     "object",
