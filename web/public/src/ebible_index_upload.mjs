@@ -8,6 +8,6 @@ export async function ebible_index_upload(bible_folder) {
   let file_name = file_name_json("index");
   let joined = ebible_firebase_folder(bible_folder);
   let destination = list_join_slash_forward([joined, file_name]);
-  await firebase_upload_object(object, destination);
+  await firebase_upload_object(index, destination);
   return index;
 }
