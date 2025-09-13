@@ -2996,7 +2996,8 @@
    "ebible_chapters",
    "ebible_chapter_text",
    "ebible_verses",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "folder_read_async"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3808,7 +3809,8 @@
    "js_auto_transform_new_inner",
    "js_dollar_new_name",
    "local_function_path",
-   "object_property_get_name"
+   "object_property_get_name",
+   "folder_read_async"
   ],
   "output": [
    "watch",
@@ -5032,7 +5034,8 @@
    "emoji_question",
    "emoji_voice",
    "string_the_servant_of_god",
-   "sandbox"
+   "sandbox",
+   "folder_read_async"
   ],
   "readdirSync": [
    "folder_read"
@@ -9919,7 +9922,8 @@
   ],
   "map": [
    "list_map",
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "folder_read_async"
   ],
   "list_map_index": [
    "list_map_index",
@@ -26049,8 +26053,12 @@
     "entry",
     "v",
     "isFile",
+    "lambda2",
+    "v2",
+    "name",
     "files",
-    "filter"
+    "filter",
+    "map"
    ]
   }
  },
