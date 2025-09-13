@@ -1997,10 +1997,11 @@
   "s reply",
   "s buffer",
   "is folder_read",
-  "is folder_find_starts_with"
+  "is folder_find_starts_with",
+  "n folder_read_async"
  ],
  "marker_current": "1",
- "function_current": "firebase_storage_download",
+ "function_current": "folder_read_async",
  "terminal": false,
  "identifiers": {
   "log": [
