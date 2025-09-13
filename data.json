@@ -1979,7 +1979,6 @@
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
   "s initial",
   "s skip",
-  "p",
   "ebible_index_upload engbsb",
   "s firebase,folde",
   "s folder",
@@ -2000,6 +1999,7 @@
   "s index",
   "s add",
   "s path,join",
+  "p",
   "sb"
  ],
  "marker_current": "1",
