@@ -3679,7 +3679,8 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "app_reply",
-   "html_parse_href"
+   "html_parse_href",
+   "ebible_verses"
   ],
   "output": [
    "watch",
@@ -5613,7 +5614,8 @@
    "list_empty_not_is",
    "list_empty_not_is_assert",
    "marker_top",
-   "string_empty_not_is"
+   "string_empty_not_is",
+   "ebible_verses"
   ],
   "Error": [
    "error",
@@ -8780,7 +8782,8 @@
   "string_empty_not_is": [
    "js_dollar",
    "js_identifier_unique",
-   "string_empty_not_is"
+   "string_empty_not_is",
+   "ebible_verses"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -23913,6 +23916,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "string_empty_not_is",
     "list_filter",
     "string_split_space",
     "ebible_chapter_text",
@@ -23925,6 +23929,8 @@
     "split",
     "lambda",
     "item",
+    "ne",
+    "name",
     "filtered",
     "list"
    ]
