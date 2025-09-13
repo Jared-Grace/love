@@ -29,14 +29,14 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    let ne = list_empty_not_is(filtered);
-    if (ne) {
-      const v = ebible_verse(filtered, "0");
-      la(v);
-    }
     each_reverse(verse_numbers, lambda2);
   }
   let list = list_adder(lambda);
+  let ne = list_empty_not_is(filtered);
+  if (ne) {
+    const v = ebible_verse(filtered, "0");
+    la(v);
+  }
   list_reverse(list);
   return list;
 }
