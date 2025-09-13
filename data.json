@@ -1998,7 +1998,8 @@
   "is folder_read",
   "is folder_find_starts_with",
   "n folder_read_async",
-  "s index"
+  "s index",
+  "s add"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
