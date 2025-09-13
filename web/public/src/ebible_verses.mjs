@@ -1,3 +1,4 @@
+import { list_adder } from "./list_adder.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -18,7 +19,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   text = whitespace_normalize(text);
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
-  lad;
+  let list = list_adder(function lambda(la) {});
   function lambda2(item) {
     let index = list_index_of(filtered, item);
     let skipped = list_skip(filtered, index + 1);
