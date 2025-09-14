@@ -5,7 +5,7 @@ import { marker } from "./marker.mjs";
 export function html_loading() {
   marker("1");
   let body = html_document_body();
-  let div = html_div(root);
+  let div = html_div(body);
   let s = {
     position: "fixed",
     top: "0",
