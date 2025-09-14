@@ -13632,9 +13632,6 @@
   ],
   "component4": [
    "app_reply_main"
-  ],
-  "text3": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -23977,11 +23974,10 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
+    "component3",
     "lambda7",
     "component4",
     "parent",
-    "text3",
-    "component3",
     "component2",
     "choices",
     "lambda2",
