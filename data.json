@@ -2000,7 +2000,8 @@
   "s path,join",
   "p",
   "sb",
-  "s index"
+  "s index",
+  "cs ebible_index flat"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
