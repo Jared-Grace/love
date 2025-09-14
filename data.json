@@ -2016,8 +2016,8 @@
   "s verses",
   "s ebible",
   "p",
-  "ebible_verses_upload swhonen",
-  "ps"
+  "ps",
+  "ebible_verses_upload swhonen"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
