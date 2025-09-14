@@ -116,7 +116,7 @@ export async function app_reply_main() {
     let verse = list_first(verses);
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
-    let verse_texts = list_map_property(list, "text");
+    let verse_texts = list_map_property(verses, "text");
     let verse_text = list_join_space(verse_texts);
     let concated = list_concat(
       copied,
