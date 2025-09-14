@@ -1984,7 +1984,6 @@
   "s firebase",
   "is firebase_storage_download",
   "o firebase_storage_download",
-  "ps",
   "s buffer",
   "is folder_read",
   "is folder_find_starts_with",
@@ -2017,7 +2016,8 @@
   "s verses",
   "s ebible",
   "p",
-  "ebible_verses_upload swhonen"
+  "ebible_verses_upload swhonen",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
