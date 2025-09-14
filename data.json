@@ -3402,7 +3402,8 @@
    "ebible_book_code_size",
    "sandbox",
    "folder_read_async",
-   "app_reply_main"
+   "app_reply_main",
+   "object_assign"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -26256,6 +26257,7 @@
    "identifiers": [
     "marker",
     "object_assign",
+    "v",
     "Object",
     "assign"
    ]
