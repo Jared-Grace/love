@@ -5062,8 +5062,7 @@
    "emoji_voice",
    "string_the_servant_of_god",
    "sandbox",
-   "folder_read_async",
-   "app_reply_main"
+   "folder_read_async"
   ],
   "readdirSync": [
    "folder_read"
@@ -5789,8 +5788,7 @@
    "string_take",
    "list_slice_count",
    "ebible_chapter_code_to_book",
-   "ebible_index",
-   "app_reply_main"
+   "ebible_index"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -11653,8 +11651,7 @@
   "taken": [
    "list_take",
    "ebible_version_books_testament",
-   "string_take",
-   "app_reply_main"
+   "string_take"
   ],
   "app_replace_rule_parse": [
    "app_replace_rule_set",
@@ -13169,8 +13166,7 @@
    "ebible_version_books_testament",
    "html_parse_href",
    "html_parse_href_text",
-   "ebible_chapter_code_to_book",
-   "app_reply_main"
+   "ebible_chapter_code_to_book"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -13737,6 +13733,9 @@
   "html_style_assign": [
    "html_style_assign",
    "html_loading"
+  ],
+  "sz": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24079,11 +24078,8 @@
     "lambda6",
     "event",
     "key",
-    "v2",
+    "sz",
     "s",
-    "taken",
-    "href",
-    "count",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
