@@ -13737,9 +13737,6 @@
   "each_chapter2": [
    "ebible_verses_upload"
   ],
-  "j": [
-   "ebible_chapter_text"
-  ],
   "list_empty_is_assert": [
    "ebible_chapter_text"
   ]
@@ -25046,7 +25043,6 @@
     "list2",
     "extra",
     "dictionary",
-    "j",
     "lambda",
     "item",
     "selector2",
