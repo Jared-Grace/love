@@ -2705,8 +2705,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "app_reply_main"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3853,7 +3852,8 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "app_reply_main"
   ],
   "lj": [
    "watch",
@@ -3946,7 +3946,8 @@
    "command_line_node_g",
    "list_join_space",
    "app_replace_rule_set",
-   "ebible_verse"
+   "ebible_verse",
+   "app_reply_main"
   ],
   "command_line_node_g": [
    "watch",
@@ -6364,8 +6365,7 @@
    "ebible_versions",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
-   "list_map_prefix_without",
-   "app_reply_main"
+   "list_map_prefix_without"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -11660,7 +11660,8 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder"
+   "ebible_firebase_folder",
+   "app_reply_main"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -13642,6 +13643,9 @@
    "app_reply_main"
   ],
   "ur": [
+   "app_reply_main"
+  ],
+  "verse_texts": [
    "app_reply_main"
   ]
  },
@@ -23931,6 +23935,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_join_space",
     "list_map_property",
     "list_first",
     "ebible_folder_urdu",
@@ -24012,11 +24017,12 @@
     "lambda3",
     "chapter_code2",
     "verse_number2",
-    "verse_text",
-    "mapped",
+    "verse_texts",
     "list",
-    "property_name",
+    "joined2",
+    "args",
     "concated",
+    "verse_text",
     "joined"
    ]
   },
