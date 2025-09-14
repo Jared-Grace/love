@@ -89,6 +89,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
+  each(list, function lambda5(item2) {});
   let component4 = html_button(root, "Urdu", lambda7);
   marker("1");
   let choices = app_reply_choices();
