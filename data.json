@@ -2036,8 +2036,7 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with",
-   "ebible_chapters_each_verses"
+   "folder_find_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3479,8 +3478,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "ebible_chapters_each_verses"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -8821,7 +8819,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "ebible_chapters_each_verses"
   ],
   "remaining": [
    "js_call_new_code",
@@ -9122,7 +9121,8 @@
    "list_skip_1",
    "app_replace_rule_parse",
    "app_replace_rule_set",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapters_each_verses"
   ],
   "list_second": [
    "js_dollar_r",
@@ -10021,7 +10021,8 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapters_each_verses"
   ],
   "slice": [
    "list_slice",
@@ -11107,7 +11108,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_chapters_each_verses"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -26123,7 +26125,7 @@
   "ebible_chapters_each_verses": {
    "async": true,
    "identifiers": [
-    "log",
+    "list_skip",
     "ebible_verses",
     "each_async",
     "ebible_chapter_codes",
@@ -26133,7 +26135,9 @@
     "list",
     "lambda",
     "chapter_code",
-    "message",
+    "skipped",
+    "list2",
+    "skip_count",
     "verses"
    ]
   },
