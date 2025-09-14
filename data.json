@@ -3852,8 +3852,7 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args",
-   "app_reply_main"
+   "js_code_declaration_args"
   ],
   "lj": [
    "watch",
@@ -11660,8 +11659,7 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder",
-   "app_reply_main"
+   "ebible_firebase_folder"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -24019,10 +24017,8 @@
     "verse_number2",
     "verse_texts",
     "list",
-    "joined2",
-    "args",
-    "concated",
     "verse_text",
+    "concated",
     "joined"
    ]
   },
