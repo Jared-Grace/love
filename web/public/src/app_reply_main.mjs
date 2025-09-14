@@ -62,9 +62,9 @@ export async function app_reply_main() {
     typed = "";
     buttons_refresh();
   }
-  function lambda7() {}
-  let component4 = html_button(parent, text3, lambda7);
   let component3 = html_button(root, "Reset", lambda4);
+  function lambda7() {}
+  let component4 = html_button(parent, "Urdu", lambda7);
   let component2 = html_button(root, "Copy", preview_refresh);
   marker("1");
   let choices = app_reply_choices();
