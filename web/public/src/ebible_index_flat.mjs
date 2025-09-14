@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { marker } from "./marker.mjs";
 import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
@@ -14,6 +15,7 @@ export async function ebible_index_flat(bible_folder) {
           verse_number,
         });
       }
+      each(verse_numbers, lambda2);
     }
   }
   let list = await list_adder_async(lambda);
