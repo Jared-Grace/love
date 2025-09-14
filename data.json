@@ -3165,8 +3165,7 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "list_add_first",
-   "app_reply_main"
+   "list_add_first"
   ],
   "v": [
    "data_identifiers_file",
@@ -24116,7 +24115,6 @@
     "verse_number2",
     "u",
     "component4",
-    "list",
     "choices",
     "lambda2",
     "item",
