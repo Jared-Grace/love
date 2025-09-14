@@ -2306,7 +2306,8 @@
    "js_declaration_param_add_node",
    "ebible_chapter_code_to_book",
    "firebase_storage_download",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "ebible_index_flat_upload"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26115,6 +26116,7 @@
   "ebible_index_flat_upload": {
    "async": true,
    "identifiers": [
+    "marker",
     "ebible_index_upload_name",
     "ebible_firebase_upload",
     "ebible_index",
