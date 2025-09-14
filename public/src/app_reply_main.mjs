@@ -42,7 +42,7 @@ export async function app_reply_main() {
   let languages = [
     {
       name: "",
-      code: ur,
+      bible_folder: ur,
     },
   ];
   let file_name = ebible_index_flat_upload_name();
@@ -79,19 +79,22 @@ export async function app_reply_main() {
     typed = "";
     buttons_refresh();
   }
-  async function lambda7() {
-    let verse = list_first(verses);
-    let chapter_code2 = object_property_get(verse, "chapter_code");
-    let verse_number2 = object_property_get(verse, "verse_number");
-    let u = await ebible_verse_download(ur, chapter_code2, verse_number2);
-    list_add_first(verses, u);
-    preview_refresh();
-  }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
-  function lambda5(item2) {}
+  function lambda5(item2) {
+    let name2 = object_property_get(item2, "name");
+    let bible_folder2 = object_property_get(item2, "bible_folder");
+    async function lambda7() {
+      let verse = list_first(verses);
+      let chapter_code2 = object_property_get(verse, "chapter_code");
+      let verse_number2 = object_property_get(verse, "verse_number");
+      let u = await ebible_verse_download(ur, chapter_code2, verse_number2);
+      list_add_first(verses, u);
+      preview_refresh();
+    }
+    let component4 = html_button(root, "Urdu", lambda7);
+  }
   each(list, lambda5);
-  let component4 = html_button(root, "Urdu", lambda7);
   marker("1");
   let choices = app_reply_choices();
   function buttons_refresh() {
