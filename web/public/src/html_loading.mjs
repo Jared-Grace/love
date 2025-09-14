@@ -20,6 +20,7 @@ export async function html_loading(lambda) {
     zIndex: "1000",
   };
   html_style_assign(div, s);
-  await lambda();
+  let result = await lambda();
   html_remove(div);
+  return result;
 }
