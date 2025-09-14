@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { marker } from "./marker.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -24,6 +25,7 @@ export async function ebible_index_flat(bible_folder) {
       let count = ebible_book_code_size();
       let chapter_name = string_skip(chapter_code, count);
       let verse_numbers = list_map_property(verses, "verse_number");
+      each(list2, function lambda2(item) {});
       const chapter = {
         chapter_name,
         verse_numbers,
