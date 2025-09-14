@@ -1998,12 +1998,12 @@
   "n folder_read_async",
   "s add",
   "s path,join",
-  "sb",
   "cs ebible_index flat",
   "p",
   "ebible_index_flat engbsb",
   "s index",
-  "c ebible_index_upload ebible_index_flat_upload"
+  "c ebible_index_upload ebible_index_flat_upload",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
