@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { equal } from "./equal.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -55,7 +55,8 @@ export async function app_reply_main() {
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
-    $ie
+    if (equal(left, right)) {
+    }
     typed += key;
     buttons_refresh();
   }
