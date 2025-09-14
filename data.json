@@ -11020,7 +11020,8 @@
    "js_stack_last_function"
   ],
   "en": [
-   "js_await_add"
+   "js_await_add",
+   "app_reply_main"
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
@@ -13019,7 +13020,6 @@
    "ebible_firebase_upload",
    "ebible_index",
    "ebible_firebase_upload_path",
-   "app_reply_main",
    "ebible_index_flat",
    "ebible_index_flat_upload"
   ],
@@ -13579,7 +13579,8 @@
    "app_reply_main"
   ],
   "ebible_folder_urdu": [
-   "sandbox"
+   "sandbox",
+   "app_reply_main"
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload"
@@ -13631,6 +13632,9 @@
    "app_reply_main"
   ],
   "component4": [
+   "app_reply_main"
+  ],
+  "ur": [
    "app_reply_main"
   ]
  },
@@ -23920,6 +23924,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_folder_urdu",
     "ebible_verses_upload_name",
     "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
@@ -23952,7 +23957,8 @@
     "html_button",
     "marker",
     "app_reply_main",
-    "bible_folder",
+    "en",
+    "ur",
     "file_name",
     "destination",
     "index",
@@ -23974,11 +23980,11 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
-    "component3",
     "lambda7",
+    "component3",
+    "component2",
     "component4",
     "parent",
-    "component2",
     "choices",
     "lambda2",
     "item",
