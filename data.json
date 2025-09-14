@@ -2014,10 +2014,10 @@
   "s size",
   "s verses",
   "s ebible",
-  "ps",
   "p",
   "ebible_verses_upload swhonen",
-  "s inter"
+  "s inter",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
