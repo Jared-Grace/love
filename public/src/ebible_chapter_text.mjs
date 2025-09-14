@@ -24,10 +24,10 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();
-  let list22 = list_intersect(list3, other);
-  list_empty_is_assert(extra, {
-    extra,
-    dictionary,
+  let i = list_intersect(include, exclude);
+  list_empty_is_assert(i, {
+    include,
+    exclude,
   });
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
