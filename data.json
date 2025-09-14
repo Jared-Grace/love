@@ -13624,6 +13624,9 @@
   "ebible_verses_upload_name": [
    "ebible_verses_upload",
    "app_reply_main"
+  ],
+  "text3": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23954,6 +23957,7 @@
     "n",
     "destination2",
     "verse",
+    "text3",
     "root",
     "copied",
     "buttons",
