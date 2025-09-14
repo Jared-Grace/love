@@ -37,7 +37,7 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_json(destination);
   log(index);
   let { chapter_code, verse_number } = list_random_item(index);
-  let joined2 = ebible_verses_upload_name(chapter_code, verse_number);
+  let n = ebible_verses_upload_name(chapter_code, verse_number);
   let verse = await firebase_storage_download_json(destination);
   const root = html_document_body();
   let copied = [];
