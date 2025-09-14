@@ -6,7 +6,6 @@ export function html_loading() {
   marker("1");
   let body = html_document_body();
   let div = html_div(root);
-  html_style_merge(b, s2);
   let s = {
     position: "fixed",
     top: "0",
@@ -19,4 +18,5 @@ export function html_loading() {
     alignItems: "center",
     zIndex: "1000",
   };
+  html_style_merge(div, s);
 }
