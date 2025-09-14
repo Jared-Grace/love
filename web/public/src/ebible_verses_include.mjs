@@ -17,6 +17,7 @@ export function ebible_verses_include() {
     "pmo",
     "q",
     "q2",
+    "q3",
     "qr",
     "verse",
   ];
