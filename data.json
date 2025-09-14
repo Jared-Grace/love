@@ -13707,8 +13707,7 @@
    "html_loading"
   ],
   "html_style_merge": [
-   "html_style_merge",
-   "html_loading"
+   "html_style_merge"
   ],
   "strict": [
    "object_merge"
@@ -13722,7 +13721,8 @@
    "html_style_assign"
   ],
   "html_style_assign": [
-   "html_style_assign"
+   "html_style_assign",
+   "html_loading"
   ]
  },
  "functions": {
@@ -26232,7 +26232,7 @@
   "html_loading": {
    "async": false,
    "identifiers": [
-    "html_style_merge",
+    "html_style_assign",
     "html_div",
     "html_document_body",
     "marker",
