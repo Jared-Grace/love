@@ -6595,7 +6595,8 @@
    "js_calls_to_each",
    "round",
    "ebible_chapter_text",
-   "ebible_version_books"
+   "ebible_version_books",
+   "app_reply_main"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -11653,8 +11654,7 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder",
-   "app_reply_main"
+   "ebible_firebase_folder"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -23950,7 +23950,7 @@
     "index",
     "chapter_code",
     "verse_number",
-    "joined2",
+    "n",
     "verse",
     "root",
     "copied",
