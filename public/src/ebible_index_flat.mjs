@@ -1,3 +1,4 @@
+import { list_adder_async } from "./list_adder_async.mjs";
 import { marker } from "./marker.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,6 +12,7 @@ export async function ebible_index_flat(bible_folder) {
   marker("1");
   let books = {};
   let index = [];
+  let list = await list_adder_async(async function lambda2() {});
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
