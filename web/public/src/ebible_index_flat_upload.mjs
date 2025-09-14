@@ -6,7 +6,7 @@ import { ebible_index } from "./ebible_index.mjs";
 export async function ebible_index_flat_upload(bible_folder) {
   marker("1");
   let index = await ebible_index(bible_folder);
-  let file_name = ebible_index_upload_name();
-  list_join_slash_forward([joined, file_name_with_extension]);
+  let v = ebible_index_upload_name();
+  let file_name = list_join_slash_forward([v, file_name_with_extension]);
   await ebible_firebase_upload(bible_folder, file_name, index);
 }
