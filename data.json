@@ -2004,7 +2004,7 @@
   "cs ebible_index flat"
  ],
  "marker_current": "1",
- "function_current": "folder_read_async",
+ "function_current": "ebible_index_flat",
  "terminal": false,
  "identifiers": {
   "log": [
