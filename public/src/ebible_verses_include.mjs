@@ -6,6 +6,7 @@ export function ebible_verses_include() {
     "li",
     "li2",
     "m",
+    "nd",
     "p",
     "pc",
     "pmo",
