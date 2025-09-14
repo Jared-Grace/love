@@ -12,14 +12,15 @@ import { assert_json } from "./assert_json.mjs";
 export async function http(url) {
   let b = browser_is();
   if (b) {
-    async function lambda3() {}
-    await html_loading(lambda3);
-    const response = await fetch(url);
-    if (not(response.ok)) {
-      error("Failed to fetch file");
+    async function lambda3() {
+      const response = await fetch(url);
+      if (not(response.ok)) {
+        error("Failed to fetch file");
+      }
+      const buf = await response.arrayBuffer();
+      return buf;
     }
-    const buf = await response.arrayBuffer();
-    return buf;
+    return await html_loading(lambda3);
   }
   await sleep(integer_random(5, 8) * 1000);
   let h = null;
