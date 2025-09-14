@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
 import { firebase_storage_download_json } from "./firebase_storage_download_json.mjs";
@@ -36,7 +37,7 @@ export async function app_reply_main() {
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
-  let verse = await verse_random_get();
+  let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
   let buttons = null;
@@ -48,7 +49,8 @@ export async function app_reply_main() {
     let n = ebible_verses_upload_name(chapter_code, verse_number);
     let destination2 = ebible_firebase_upload_path(en, n);
     let verse = await firebase_storage_download_json(destination2);
-    return verse;
+    let v = [verse];
+    return v;
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
@@ -57,7 +59,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function lambda4() {
-    verse = await verse_random_get();
+    verses = await verse_random_get();
     list_empty(copied);
     preview_refresh();
     chosens = [];
@@ -104,6 +106,7 @@ export async function app_reply_main() {
   preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
+    let first = list_first(list);
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_text = object_property_get(verse, "text");
