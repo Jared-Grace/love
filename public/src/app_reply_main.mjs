@@ -68,7 +68,11 @@ export async function app_reply_main() {
     typed = "";
     buttons_refresh();
   }
-  function lambda7() {}
+  function lambda7() {
+    let verse = list_first(verses);
+    let chapter_code2 = object_property_get(verse, "chapter_code");
+    let verse_number2 = object_property_get(verse, "verse_number");
+  }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
   let component4 = html_button(parent, "Urdu", lambda7);
