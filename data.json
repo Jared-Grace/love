@@ -11603,7 +11603,8 @@
    "ebible_chapter_classes",
    "ebible_chapter_text",
    "ebible_versions",
-   "html_parse_find_a_href_starts_with"
+   "html_parse_find_a_href_starts_with",
+   "html_loading"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -11821,11 +11822,13 @@
   ],
   "div": [
    "app_replace_rule_set",
-   "html_div"
+   "html_div",
+   "html_loading"
   ],
   "html_div": [
    "app_replace_rule_set",
-   "html_div"
+   "html_div",
+   "html_loading"
   ],
   "firebase_deploy": [
    "firebase_deploy"
@@ -13660,9 +13663,6 @@
   ],
   "body_element": [
    "html_document_body"
-  ],
-  "hd": [
-   "html_loading"
   ]
  },
  "functions": {
@@ -26179,11 +26179,13 @@
   "html_loading": {
    "async": false,
    "identifiers": [
+    "html_div",
     "html_document_body",
     "marker",
     "html_loading",
     "body",
-    "hd"
+    "div",
+    "root"
    ]
   }
  },
