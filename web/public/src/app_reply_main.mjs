@@ -34,7 +34,7 @@ export async function app_reply_main() {
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(bible_folder, file_name);
   let index = await firebase_storage_download_json(destination);
-  let { verse_text, verse } = await verse_random_get();
+  let verse_text = await verse_random_get();
   const root = html_document_body();
   let copied = [];
   let buttons = null;
