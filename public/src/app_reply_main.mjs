@@ -39,7 +39,7 @@ export async function app_reply_main() {
   let n = ebible_verses_upload_name(chapter_code, verse_number);
   let destination2 = ebible_firebase_upload_path(bible_folder, n);
   let verse = await firebase_storage_download_json(destination2);
-  let text3 = object_property_get(verse, "text");
+  let verse_text = object_property_get(verse, "text");
   log(verse);
   return;
   const root = html_document_body();
@@ -55,8 +55,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   function lambda4() {
-    let reference = list_random_item(properties);
-    verse = object_property_get(bible, reference);
+    verse_text = object_property_get(verse, "text");
     list_empty(copied);
     preview_refresh();
     chosens = [];
