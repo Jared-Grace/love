@@ -6467,7 +6467,6 @@
    "js_dollar_new",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
-   "app_reply_main",
    "js_property_parse_expression_add"
   ],
   "function_names_to_acronyms": [
@@ -12680,9 +12679,6 @@
    "integer_random",
    "random"
   ],
-  "bible": [
-   "app_reply_main"
-  ],
   "reference": [
    "app_reply_main"
   ],
@@ -13625,7 +13621,7 @@
    "ebible_verses_upload",
    "app_reply_main"
   ],
-  "text3": [
+  "verse_text": [
    "app_reply_main"
   ]
  },
@@ -23957,7 +23953,7 @@
     "n",
     "destination2",
     "verse",
-    "text3",
+    "verse_text",
     "root",
     "copied",
     "buttons",
@@ -23969,9 +23965,6 @@
     "key",
     "buttons_refresh",
     "lambda4",
-    "reference",
-    "properties",
-    "bible",
     "preview_refresh",
     "component3",
     "component2",
@@ -23990,6 +23983,7 @@
     "component",
     "lambda3",
     "concated",
+    "reference",
     "joined"
    ]
   },
