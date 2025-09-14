@@ -5646,7 +5646,8 @@
    "list_slice_count",
    "ebible_index_upload",
    "ebible_index",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_index_flat_upload"
   ],
   "lists_get": [
    "each_multiple",
@@ -8311,7 +8312,8 @@
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
    "ebible_index_upload",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_index_flat_upload"
   ],
   "html_update": [
    "html_update",
@@ -13029,7 +13031,8 @@
    "ebible_index",
    "ebible_firebase_upload_path",
    "app_reply_main",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "ebible_index_flat_upload"
   ],
   "unzip": [
    "unzip",
@@ -13553,12 +13556,14 @@
   ],
   "ebible_index": [
    "ebible_index_upload",
-   "ebible_index"
+   "ebible_index",
+   "ebible_index_flat_upload"
   ],
   "ebible_firebase_upload": [
    "ebible_verses_upload",
    "ebible_index_upload",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "ebible_index_flat_upload"
   ],
   "bible_folders": [
    "sandbox"
@@ -13589,7 +13594,8 @@
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_index_flat_upload"
   ],
   "folder_read_async": [
    "folder_read_async",
@@ -13609,6 +13615,9 @@
   ],
   "ebible_index_flat": [
    "ebible_index_flat"
+  ],
+  "ebible_index_flat_upload": [
+   "ebible_index_flat_upload"
   ]
  },
  "functions": {
@@ -26101,6 +26110,18 @@
     "lambda2",
     "verse_number",
     "list"
+   ]
+  },
+  "ebible_index_flat_upload": {
+   "async": true,
+   "identifiers": [
+    "ebible_index_upload_name",
+    "ebible_firebase_upload",
+    "ebible_index",
+    "ebible_index_flat_upload",
+    "bible_folder",
+    "index",
+    "file_name"
    ]
   }
  },
