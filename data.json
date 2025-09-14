@@ -13739,6 +13739,9 @@
   ],
   "each_chapter2": [
    "ebible_verses_upload"
+  ],
+  "j": [
+   "ebible_chapter_text"
   ]
  },
  "functions": {
@@ -25043,8 +25046,9 @@
     "exclude",
     "list2",
     "extra",
-    "e",
     "dictionary",
+    "j",
+    "e",
     "lambda",
     "item",
     "selector2",
