@@ -38,7 +38,8 @@ export async function app_reply_main() {
   log(index);
   let { chapter_code, verse_number } = list_random_item(index);
   let n = ebible_verses_upload_name(chapter_code, verse_number);
-  let verse = await firebase_storage_download_json(destination);
+  let destination2 = ebible_firebase_upload_path(bible_folder, n);
+  let verse = await firebase_storage_download_json(destination2);
   const root = html_document_body();
   let copied = [];
   let buttons = null;
