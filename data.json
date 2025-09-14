@@ -1934,7 +1934,6 @@
   "s sort",
   "s classes",
   "s list_",
-  "s verses",
   "s list_add",
   "cs list_adder_multiple_async",
   "cs list_adder_multiple async",
@@ -2016,7 +2015,8 @@
   "n object_assign",
   "r html_style_merge html_style_assign ",
   "s remo",
-  "s size"
+  "s size",
+  "s verses"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
