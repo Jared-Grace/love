@@ -2002,10 +2002,10 @@
   "ebible_index_flat engbsb",
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
-  "sb",
   "s reply",
   "s upload,ver",
-  "s verses,up"
+  "s verses,up",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
