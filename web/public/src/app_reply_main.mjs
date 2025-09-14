@@ -73,7 +73,7 @@ export async function app_reply_main() {
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
     let u = await ebible_verse_download(ur, chapter_code2, verse_number2);
-    log(message);
+    log(u);
     list_add_first(verses, u);
   }
   let component3 = html_button(root, "Reset", lambda4);
