@@ -2318,7 +2318,8 @@
    "ebible_index_flat",
    "ebible_index_flat_upload",
    "html_loading",
-   "html_style_merge"
+   "html_style_merge",
+   "object_assign"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -13703,6 +13704,9 @@
   ],
   "object_merge_generic": [
    "object_merge"
+  ],
+  "object_assign": [
+   "object_assign"
   ]
  },
  "functions": {
@@ -26243,6 +26247,13 @@
     "s",
     "b_element",
     "style"
+   ]
+  },
+  "object_assign": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "object_assign"
    ]
   }
  },
