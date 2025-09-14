@@ -2015,9 +2015,9 @@
   "s verses",
   "s ebible",
   "s inter",
-  "ps",
   "p",
-  "ebible_verses_upload swhonen"
+  "ebible_verses_upload swhonen",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
