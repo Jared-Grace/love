@@ -3001,7 +3001,8 @@
    "ebible_chapter_text",
    "ebible_verses",
    "html_p_text_multiple",
-   "folder_read_async"
+   "folder_read_async",
+   "ebible_index_flat"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3145,7 +3146,8 @@
    "list_join_slash_forward",
    "list_map_prefix_without",
    "list_slice_count",
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "ebible_index_flat"
   ],
   "v": [
    "data_identifiers_file",
@@ -6822,7 +6824,8 @@
    "marker_next_delete",
    "marker_next_await",
    "marker_param_add",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_index_flat"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -26090,6 +26093,7 @@
   "ebible_index_flat": {
    "async": true,
    "identifiers": [
+    "list_adder_async",
     "marker",
     "list_add_if_not_includes",
     "list_add",
@@ -26103,6 +26107,8 @@
     "bible_folder",
     "books",
     "index",
+    "list",
+    "lambda2",
     "each_chapter",
     "chapter_code",
     "verses",
