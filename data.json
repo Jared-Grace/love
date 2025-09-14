@@ -2003,7 +2003,8 @@
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
   "sb",
-  "s reply"
+  "s reply",
+  "s upload,ver"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
