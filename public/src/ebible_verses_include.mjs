@@ -15,6 +15,7 @@ export function ebible_verses_include() {
     "pc",
     "pm",
     "pmo",
+    "sc",
     "q",
     "q2",
     "q3",
