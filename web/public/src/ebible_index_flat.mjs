@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -7,6 +8,7 @@ import { object_property_initialize } from "./object_property_initialize.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
 export async function ebible_index_flat(bible_folder) {
+  marker("1");
   let books = {};
   let index = [];
   await ebible_chapters_each_verses(bible_folder, each_chapter);
