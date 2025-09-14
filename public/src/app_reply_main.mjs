@@ -76,7 +76,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
-  let component4 = html_button(parent, "Urdu", lambda7);
+  let component4 = html_button(root, "Urdu", lambda7);
   marker("1");
   let choices = app_reply_choices();
   function buttons_refresh() {
