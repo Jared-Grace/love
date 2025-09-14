@@ -3151,7 +3151,6 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "app_reply_main",
    "list_add_first"
   ],
   "v": [
@@ -24016,7 +24015,6 @@
     "component",
     "lambda3",
     "verse_texts",
-    "list",
     "verse_text",
     "concated",
     "joined"
