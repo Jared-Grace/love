@@ -11186,7 +11186,8 @@
    "html_button",
    "html_button_element",
    "html_button_screen",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_reply_main"
   ],
   "createElement": [
    "html_element"
@@ -12179,7 +12180,8 @@
    "app_replace_font_size_adjust"
   ],
   "lambda7": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "size2": [
    "app_replace_rule_set"
@@ -13626,6 +13628,12 @@
    "app_reply_main"
   ],
   "verse_number2": [
+   "app_reply_main"
+  ],
+  "component4": [
+   "app_reply_main"
+  ],
+  "text3": [
    "app_reply_main"
   ]
  },
@@ -23969,6 +23977,10 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
+    "component4",
+    "parent",
+    "text3",
+    "lambda7",
     "component3",
     "component2",
     "choices",
@@ -26131,7 +26143,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-14T02:44:43.319Z",
+ "git_push_when": "2025-09-14T20:35:27.042Z",
  "error_attention": null,
  "app_current": "replace"
 }
