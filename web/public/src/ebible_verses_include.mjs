@@ -21,6 +21,7 @@ export function ebible_verses_include() {
     "q2",
     "q3",
     "q4",
+    "qm",
     "qr",
     "verse",
   ];
