@@ -1991,7 +1991,6 @@
   "is firebase_storage_download",
   "o firebase_storage_download",
   "ps",
-  "s reply",
   "s buffer",
   "is folder_read",
   "is folder_find_starts_with",
@@ -2003,7 +2002,8 @@
   "ebible_index_flat engbsb",
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
-  "sb"
+  "sb",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
