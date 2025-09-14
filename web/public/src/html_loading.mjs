@@ -21,5 +21,5 @@ export async function html_loading(lambda) {
   };
   html_style_assign(div, s);
   await lambda();
-  html_remove(component);
+  html_remove(div);
 }
