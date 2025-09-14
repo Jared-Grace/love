@@ -103,7 +103,10 @@ export async function app_reply_main() {
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_text = object_property_get(verse, "text");
-    let concated = list_concat(copied, reference + " " + verse_text);
+    let concated = list_concat(
+      copied,
+      chapter_code2 + " " + verse_number2 + " " + verse_text,
+    );
     let joined = list_join_newline_2(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
