@@ -58,8 +58,9 @@ export async function app_reply_main() {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
       typed = string_take_less_1(typed);
+    } else {
+      typed += key;
     }
-    typed += key;
     buttons_refresh();
   }
   html_on_keydown(root, lambda6);
