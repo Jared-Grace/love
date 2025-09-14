@@ -5171,7 +5171,8 @@
    "buffer_string_to",
    "html_disable",
    "html_disable_set",
-   "html_style_set"
+   "html_style_set",
+   "html_style_merge"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11326,7 +11327,8 @@
    "html_attribute_set",
    "html_remove",
    "html_disable_set",
-   "html_style_set"
+   "html_style_set",
+   "html_style_merge"
   ],
   "function_open_app": [
    "function_open_app"
@@ -11753,16 +11755,19 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "html_style_merge"
   ],
   "b_element": [
    "html_style_remove",
    "html_disable_set",
-   "html_style_set"
+   "html_style_set",
+   "html_style_merge"
   ],
   "style": [
    "html_style_remove",
-   "html_style_set"
+   "html_style_set",
+   "html_style_merge"
   ],
   "removeProperty": [
    "html_style_remove"
@@ -13518,7 +13523,8 @@
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "html_style_merge"
   ],
   "label_rules_text": [
    "html_text_set_if"
@@ -13693,6 +13699,9 @@
   ],
   "zIndex": [
    "html_loading"
+  ],
+  "html_style_merge": [
+   "html_style_merge"
   ]
  },
  "functions": {
@@ -26227,6 +26236,18 @@
     "justifyContent",
     "alignItems",
     "zIndex"
+   ]
+  },
+  "html_style_merge": {
+   "async": false,
+   "identifiers": [
+    "html_component_element_get",
+    "html_style_merge",
+    "b",
+    "style_key",
+    "style_value",
+    "b_element",
+    "style"
    ]
   }
  },
