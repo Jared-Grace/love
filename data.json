@@ -20355,11 +20355,11 @@
     "object_merge",
     "to",
     "from",
+    "strict",
     "lambda",
     "p",
     "value",
-    "list",
-    "strict"
+    "list"
    ],
    "async": false
   },
