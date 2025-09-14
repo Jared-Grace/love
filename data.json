@@ -4779,7 +4779,8 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "app_reply_main"
+   "app_reply_main",
+   "string_take"
   ],
   "a": [
    "string_suffix_without",
@@ -13165,7 +13166,6 @@
    "html_parse_find_list_to"
   ],
   "href": [
-   "string_take",
    "ebible_version_books_testament",
    "html_parse_href",
    "html_parse_href_text",
@@ -24753,7 +24753,7 @@
    "identifiers": [
     "string_slice",
     "string_take",
-    "href",
+    "s",
     "count",
     "taken"
    ]
