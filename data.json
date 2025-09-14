@@ -1651,7 +1651,6 @@
   "a he html_element",
   "s att",
   "c html_document_body html_document_root",
-  "s style",
   "is html_update",
   "cs html_name_to_path dev",
   "cs html_update dev",
@@ -2010,7 +2009,8 @@
   "s doc",
   "n html_loading",
   "o html_document_body",
-  "s div"
+  "s div",
+  "s style"
  ],
  "marker_current": "1",
  "function_current": "html_document_body",
