@@ -58,8 +58,8 @@ export async function app_reply_main() {
   function lambda6(event) {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
-      let v2 = string_size(s);
-      let taken = string_take(href, count);
+      let sz = string_size(s);
+      typed = string_take(typed, sz - 1);
     }
     typed += key;
     buttons_refresh();
