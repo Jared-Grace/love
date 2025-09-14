@@ -3460,8 +3460,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "app_reply_main"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -13592,8 +13591,7 @@
    "sandbox"
   ],
   "ebible_index_upload_name": [
-   "ebible_index_upload",
-   "app_reply_main"
+   "ebible_index_upload"
   ],
   "folder_read_async": [
    "folder_read_async",
@@ -13620,7 +13618,8 @@
    "sandbox"
   ],
   "ebible_index_flat_upload_name": [
-   "ebible_index_flat_upload"
+   "ebible_index_flat_upload",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23909,10 +23908,10 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_index_flat_upload_name",
     "log",
     "json_from",
     "buffer_string_to",
-    "ebible_index_upload_name",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
     "firebase_storage_download",
@@ -23951,7 +23950,6 @@
     "buffer",
     "s",
     "index",
-    "message",
     "bible",
     "properties",
     "reference",
