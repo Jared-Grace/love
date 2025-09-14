@@ -12,7 +12,8 @@ import { assert_json } from "./assert_json.mjs";
 export async function http(url) {
   let b = browser_is();
   if (b) {
-    html_loading();
+    async function lambda3() {}
+    await html_loading(lambda3);
     const response = await fetch(url);
     if (not(response.ok)) {
       error("Failed to fetch file");
