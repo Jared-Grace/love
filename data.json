@@ -2007,10 +2007,11 @@
   "s list,add",
   "s new",
   "s new,join",
-  "s doc"
+  "s doc",
+  "n html_loading"
  ],
  "marker_current": "1",
- "function_current": "ebible_index_flat_upload",
+ "function_current": "html_loading",
  "terminal": false,
  "identifiers": {
   "log": [
