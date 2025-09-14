@@ -3166,7 +3166,8 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "list_add_first"
+   "list_add_first",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -9390,7 +9391,8 @@
   "lambda5": [
    "js_identifier_defineds",
    "app_replace_rule_set",
-   "sleep"
+   "sleep",
+   "app_reply_main"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -13376,7 +13378,8 @@
    "ebible_chapters_each_verses"
   ],
   "item2": [
-   "ebible_chapters"
+   "ebible_chapters",
+   "app_reply_main"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -24104,6 +24107,9 @@
     "u",
     "component3",
     "component2",
+    "list",
+    "lambda5",
+    "item2",
     "component4",
     "choices",
     "lambda2",
