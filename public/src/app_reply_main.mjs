@@ -14,7 +14,6 @@ import { object_property_set_exists_not } from "./object_property_set_exists_not
 import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { object_properties } from "./object_properties.mjs";
 import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_choices } from "./app_reply_choices.mjs";
@@ -40,8 +39,7 @@ export async function app_reply_main() {
   let s = buffer_string_to(buffer);
   let index = json_from(s);
   log(index);
-  let properties = object_properties(index);
-  let reference = list_random_item(properties);
+  let reference = list_random_item(index);
   let verse = object_property_get(bible, reference);
   const root = html_document_body();
   let copied = [];
