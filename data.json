@@ -13405,7 +13405,6 @@
   ],
   "list_join_slash_forward": [
    "firebase_deploy_function_destination",
-   "ebible_verses_upload",
    "list_join_slash_forward",
    "ebible_firebase_folder",
    "ebible_firebase_upload_path"
@@ -13617,6 +13616,9 @@
   ],
   "firebase_storage_download_json": [
    "app_reply_main"
+  ],
+  "ebible_verses_upload_name": [
+   "ebible_verses_upload"
   ]
  },
  "functions": {
@@ -24976,12 +24978,12 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
+    "ebible_verses_upload_name",
     "ebible_firebase_upload",
     "ebible_chapters_each_verses",
     "list_wait",
     "list_map",
     "object_merge",
-    "list_join_slash_forward",
     "object_property_get",
     "ebible_verses_upload",
     "bible_folder",
