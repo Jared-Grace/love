@@ -2775,7 +2775,6 @@
    "js_visit_types",
    "js_visit_type_each_async",
    "lambda_invoke",
-   "list_adder_async",
    "list_adder_generic",
    "list_adder_unique",
    "list_adder_unique_async",
@@ -9803,7 +9802,8 @@
   "lambda$la": [
    "list_adder",
    "list_adder_multiple",
-   "list_adder_multiple_async"
+   "list_adder_multiple_async",
+   "list_adder_async"
   ],
   "list_adder_inner": [
    "list_adder_async",
@@ -18515,7 +18515,7 @@
    "identifiers": [
     "list_add",
     "list_adder_async",
-    "lambda",
+    "lambda$la",
     "list",
     "list_adder_inner",
     "item"
