@@ -2013,10 +2013,11 @@
   "s style",
   "c html_style_set html_style_merge",
   "s merge",
-  "s object_"
+  "s object_",
+  "n object_assign"
  ],
  "marker_current": "1",
- "function_current": "html_style_merge",
+ "function_current": "object_assign",
  "terminal": false,
  "identifiers": {
   "log": [
