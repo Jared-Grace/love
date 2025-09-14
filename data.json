@@ -3946,8 +3946,7 @@
    "command_line_node_g",
    "list_join_space",
    "app_replace_rule_set",
-   "ebible_verse",
-   "app_reply_main"
+   "ebible_verse"
   ],
   "command_line_node_g": [
    "watch",
@@ -13645,6 +13644,9 @@
    "app_reply_main"
   ],
   "ebible_verse_download": [
+   "app_reply_main"
+  ],
+  "reference": [
    "app_reply_main"
   ]
  },
@@ -23936,7 +23938,6 @@
    "identifiers": [
     "list_add_first",
     "ebible_verse_download",
-    "list_join_space",
     "list_map_property",
     "list_first",
     "ebible_folder_urdu",
@@ -24016,6 +24017,7 @@
     "component",
     "lambda3",
     "verse_texts",
+    "reference",
     "verse_text",
     "concated",
     "joined"
