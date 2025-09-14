@@ -2036,7 +2036,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "ebible_chapters_each_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3478,7 +3479,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_chapters_each_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -26121,6 +26123,7 @@
   "ebible_chapters_each_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "ebible_verses",
     "each_async",
     "ebible_chapter_codes",
@@ -26130,6 +26133,7 @@
     "list",
     "lambda",
     "chapter_code",
+    "message",
     "verses"
    ]
   },
