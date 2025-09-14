@@ -6598,8 +6598,7 @@
    "js_calls_to_each",
    "round",
    "ebible_chapter_text",
-   "ebible_version_books",
-   "app_reply_main"
+   "ebible_version_books"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -13473,8 +13472,7 @@
    "firebase_bucket"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version",
-   "app_reply_main"
+   "firebase_deploy_function_destination_version"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -13622,8 +13620,7 @@
    "app_reply_main"
   ],
   "ebible_verses_upload_name": [
-   "ebible_verses_upload",
-   "app_reply_main"
+   "ebible_verses_upload"
   ],
   "verse_text": [
    "app_reply_main"
@@ -13644,6 +13641,9 @@
    "app_reply_main"
   ],
   "verse_texts": [
+   "app_reply_main"
+  ],
+  "ebible_verse_download": [
    "app_reply_main"
   ]
  },
@@ -23933,11 +23933,11 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_verse_download",
     "list_join_space",
     "list_map_property",
     "list_first",
     "ebible_folder_urdu",
-    "ebible_verses_upload_name",
     "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
     "ebible_folder_english",
@@ -23984,8 +23984,6 @@
     "typed",
     "chapter_code",
     "verse_number",
-    "n",
-    "destination2",
     "verse",
     "v",
     "lambda6",
