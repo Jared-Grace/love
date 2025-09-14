@@ -7130,8 +7130,7 @@
    "js_imports_paths_fix",
    "js_expand_generic",
    "html_parse_list_text_to",
-   "catch_call",
-   "ebible_chapter_text"
+   "catch_call"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -7331,8 +7330,7 @@
   "list_intersect": [
    "js_imports_missing",
    "list_intersect",
-   "js_expand_generic",
-   "ebible_chapter_text"
+   "js_expand_generic"
   ],
   "function_imports_missing": [
    "function_imports_missing",
@@ -13740,6 +13738,9 @@
    "ebible_verses_upload"
   ],
   "list_empty_is_assert": [
+   "ebible_chapter_text"
+  ],
+  "list_intersect_empty_is_assert": [
    "ebible_chapter_text"
   ]
  },
@@ -25015,7 +25016,7 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
-    "list_intersect",
+    "list_intersect_empty_is_assert",
     "list_empty_is_assert",
     "whitespace_normalize",
     "list_map",
@@ -25043,7 +25044,6 @@
     "classes",
     "include",
     "exclude",
-    "i",
     "list2",
     "extra",
     "dictionary",
