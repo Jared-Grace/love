@@ -2012,7 +2012,8 @@
   "s div",
   "s style",
   "c html_style_set html_style_merge",
-  "s merge"
+  "s merge",
+  "s object_"
  ],
  "marker_current": "1",
  "function_current": "html_style_merge",
