@@ -11653,7 +11653,8 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder"
+   "ebible_firebase_folder",
+   "app_reply_main"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -13273,7 +13274,8 @@
    "ebible_verses_upload",
    "ebible_chapters_each_verses",
    "ebible_index",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "app_reply_main"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13390,7 +13392,8 @@
    "ebible_verses",
    "ebible_verses_upload",
    "ebible_verse",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "app_reply_main"
   ],
   "ebible_verse": [
    "ebible_verses",
@@ -13618,7 +13621,8 @@
    "app_reply_main"
   ],
   "ebible_verses_upload_name": [
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23907,6 +23911,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_verses_upload_name",
     "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
     "log",
@@ -23943,7 +23948,9 @@
     "file_name",
     "destination",
     "index",
-    "reference",
+    "chapter_code",
+    "verse_number",
+    "joined2",
     "verse",
     "root",
     "copied",
@@ -23956,6 +23963,7 @@
     "key",
     "buttons_refresh",
     "lambda4",
+    "reference",
     "properties",
     "bible",
     "preview_refresh",
