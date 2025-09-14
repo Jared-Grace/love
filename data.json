@@ -5644,8 +5644,7 @@
    "list_slice_count",
    "ebible_index_upload",
    "ebible_index",
-   "app_reply_main",
-   "ebible_index_flat"
+   "app_reply_main"
   ],
   "lists_get": [
    "each_multiple",
@@ -13172,8 +13171,7 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_version_books",
-   "ebible_index",
-   "ebible_index_flat"
+   "ebible_index"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -26090,8 +26088,6 @@
     "ebible_chapters_each_verses",
     "ebible_index_flat",
     "bible_folder",
-    "books",
-    "index",
     "lambda",
     "la",
     "each_chapter",
