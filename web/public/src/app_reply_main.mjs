@@ -105,7 +105,7 @@ export async function app_reply_main() {
     let verse_text = object_property_get(verse, "text");
     let concated = list_concat(
       copied,
-      chapter_code2 + " " + verse_number2 + " " + verse_text,
+      chapter_code2 + ":" + verse_number2 + " " + verse_text,
     );
     let joined = list_join_newline_2(concated);
     html_clear(preview);
