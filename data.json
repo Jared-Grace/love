@@ -476,7 +476,6 @@
   "fw each each_index",
   "i each_pair",
   "s identifier",
-  "s inter",
   "o marker_expand",
   "au marker_expand",
   "a x marker_expand",
@@ -2017,7 +2016,8 @@
   "s ebible",
   "ps",
   "p",
-  "ebible_verses_upload swhonen"
+  "ebible_verses_upload swhonen",
+  "s inter"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
