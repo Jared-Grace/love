@@ -2311,7 +2311,8 @@
    "ebible_chapter_code_to_book",
    "firebase_storage_download",
    "ebible_index_flat",
-   "ebible_index_flat_upload"
+   "ebible_index_flat_upload",
+   "html_loading"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -13650,6 +13651,9 @@
   ],
   "reference": [
    "app_reply_main"
+  ],
+  "html_loading": [
+   "html_loading"
   ]
  },
  "functions": {
@@ -26161,6 +26165,13 @@
     "bible_folder",
     "index",
     "file_name"
+   ]
+  },
+  "html_loading": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_loading"
    ]
   }
  },
