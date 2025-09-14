@@ -1,3 +1,4 @@
+import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
@@ -6,7 +7,6 @@ import { html_parse_text } from "./html_parse_text.mjs";
 import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
 import { ebible_verses_exclude } from "./ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "./ebible_verses_include.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
 import { html_parse_find_remove } from "./html_parse_find_remove.mjs";
@@ -15,7 +15,6 @@ import { html_parse_classes_preview } from "./html_parse_classes_preview.mjs";
 import { html_parse_find } from "./html_parse_find.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
 import { ebible_version_download_path_combine } from "./ebible_version_download_path_combine.mjs";
-import { assert_json } from "./assert_json.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   marker("1");
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
@@ -31,8 +30,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     extra,
     dictionary,
   };
-  let e = list_empty_is(extra);
-  assert_json(e, j);
+  list_empty_is_assert(extra, j);
   function lambda(item) {
     let selector2 = css_class_prefix_combine(item);
     html_parse_find_remove(main, selector2);
