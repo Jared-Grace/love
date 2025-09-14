@@ -1196,7 +1196,6 @@
   "a me marker_enter",
   "u lr",
   "a lr list_remove",
-  "s list,add",
   "n marker_above",
   "s marker,index",
   "c marker_previous_index marker_index",
@@ -2005,7 +2004,8 @@
   "s reply",
   "s upload,ver",
   "s verses,up",
-  "sb"
+  "sb",
+  "s list,add"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
