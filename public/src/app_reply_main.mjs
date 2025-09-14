@@ -58,8 +58,7 @@ export async function app_reply_main() {
   function lambda6(event) {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
-      const sz1 = string_size_less_1(typed);
-      typed = string_take(typed, sz1);
+      typed = string_take_less_1(typed);
     }
     typed += key;
     buttons_refresh();
@@ -135,3 +134,9 @@ export async function app_reply_main() {
     await clipboard_copy(joined);
   }
 }
+function string_take_less_1(typed) {
+  const sz1 = string_size_less_1(typed);
+  typed = string_take(typed, sz1);
+  return typed;
+}
+

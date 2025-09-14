@@ -13737,6 +13737,9 @@
   ],
   "string_size_less_1": [
    "app_reply_main"
+  ],
+  "string_take_less_1": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24079,7 +24082,7 @@
     "lambda6",
     "event",
     "key",
-    "sz1",
+    "string_take_less_1",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
@@ -24108,7 +24111,8 @@
     "reference",
     "verse_text",
     "concated",
-    "joined"
+    "joined",
+    "sz1"
    ]
   },
   "browser_is": {
