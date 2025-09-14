@@ -6268,7 +6268,8 @@
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
    "html_parse_find_a_href_starts_with",
-   "ebible_index"
+   "ebible_index",
+   "ebible_index_flat"
   ],
   "split": [
    "functions_combine_name",
@@ -26083,6 +26084,7 @@
   "ebible_index_flat": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "each",
     "list_adder_async",
     "marker",
@@ -26094,9 +26096,9 @@
     "each_chapter",
     "chapter_code",
     "verses",
+    "verse_numbers",
     "lambda2",
     "verse_number",
-    "verse_numbers",
     "list"
    ]
   }
