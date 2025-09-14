@@ -26,12 +26,13 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let exclude = ebible_verses_exclude();
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
-  let e = list_empty_is(extra);
   let dictionary = html_parse_classes_preview(main, d, extra);
-  assert_json(e, {
+  const j = {
     extra,
     dictionary,
-  });
+  };
+  let e = list_empty_is(extra);
+  assert_json(e, j);
   function lambda(item) {
     let selector2 = css_class_prefix_combine(item);
     html_parse_find_remove(main, selector2);
