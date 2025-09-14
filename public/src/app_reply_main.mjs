@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
@@ -106,10 +107,11 @@ export async function app_reply_main() {
   preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
-    let first = list_first(list);
+    let verse = list_first(verses);
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_text = object_property_get(verse, "text");
+    let mapped = list_map_property(list, property_name);
     let concated = list_concat(
       copied,
       chapter_code2 + ":" + verse_number2 + " " + verse_text,
