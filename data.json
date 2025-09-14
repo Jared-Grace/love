@@ -2320,7 +2320,8 @@
    "ebible_index_flat_upload",
    "html_loading",
    "html_style_merge",
-   "object_assign"
+   "object_assign",
+   "html_style_assign"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4770,7 +4771,8 @@
    "string_base64_to",
    "buffer_string_to",
    "html_loading",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
   ],
   "a": [
    "string_suffix_without",
@@ -5171,7 +5173,8 @@
    "html_disable",
    "html_disable_set",
    "html_style_set",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11330,7 +11333,8 @@
    "html_remove",
    "html_disable_set",
    "html_style_set",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
   ],
   "function_open_app": [
    "function_open_app"
@@ -11762,12 +11766,14 @@
    "html_style_remove",
    "html_disable_set",
    "html_style_set",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
   ],
   "style": [
    "html_style_remove",
    "html_style_set",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
   ],
   "removeProperty": [
    "html_style_remove"
@@ -13712,7 +13718,11 @@
   ],
   "object_assign": [
    "object_assign",
-   "html_style_merge"
+   "html_style_merge",
+   "html_style_assign"
+  ],
+  "html_style_assign": [
+   "html_style_assign"
   ]
  },
  "functions": {
@@ -26265,6 +26275,19 @@
     "a",
     "Object",
     "assign"
+   ]
+  },
+  "html_style_assign": {
+   "async": false,
+   "identifiers": [
+    "object_assign",
+    "marker",
+    "html_component_element_get",
+    "html_style_assign",
+    "b",
+    "s",
+    "b_element",
+    "style"
    ]
   }
  },
