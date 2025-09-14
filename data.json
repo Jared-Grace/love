@@ -13032,7 +13032,8 @@
    "ebible_version_download",
    "ebible_version_books_testament",
    "ebible_versions_download",
-   "ebible_version_download_path"
+   "ebible_version_download_path",
+   "ebible_verses_upload"
   ],
   "bible_folder": [
    "ebible_version_download",
@@ -25104,6 +25105,7 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
+    "ebible_version_download",
     "ebible_verses_upload_name",
     "ebible_firebase_upload",
     "ebible_chapters_each_verses",
