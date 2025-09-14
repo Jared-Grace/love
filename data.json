@@ -13586,8 +13586,7 @@
    "app_reply_main"
   ],
   "file_name_with_extension": [
-   "ebible_firebase_upload_path",
-   "ebible_index_flat_upload"
+   "ebible_firebase_upload_path"
   ],
   "ebible_folder_english": [
    "sandbox",
@@ -26128,8 +26127,7 @@
     "bible_folder",
     "index",
     "v",
-    "file_name",
-    "file_name_with_extension"
+    "file_name"
    ]
   }
  },
