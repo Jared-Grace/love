@@ -1,6 +1,6 @@
+import { ebible_index_flat_upload } from "./ebible_index_flat_upload.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_index_upload } from "./ebible_index_upload.mjs";
 import { each_async } from "./each_async.mjs";
 import { marker } from "./marker.mjs";
 export async function sandbox() {
@@ -8,5 +8,5 @@ export async function sandbox() {
   let v = ebible_folder_english();
   let v2 = ebible_folder_urdu();
   const bible_folders = [v, v2];
-  await each_async(bible_folders, ebible_index_upload);
+  await each_async(bible_folders, ebible_index_flat_upload);
 }
