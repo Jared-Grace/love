@@ -6980,8 +6980,7 @@
    "app_replace_rule_set",
    "ebible_version_books_testament",
    "ebible_verses_upload",
-   "firebase_upload_generic",
-   "html_style_merge"
+   "firebase_upload_generic"
   ],
   "u": [
    "function_exists",
@@ -13711,7 +13710,8 @@
    "object_merge"
   ],
   "object_assign": [
-   "object_assign"
+   "object_assign",
+   "html_style_merge"
   ]
  },
  "functions": {
@@ -26244,7 +26244,7 @@
   "html_style_merge": {
    "async": false,
    "identifiers": [
-    "object_merge",
+    "object_assign",
     "marker",
     "html_component_element_get",
     "html_style_merge",
