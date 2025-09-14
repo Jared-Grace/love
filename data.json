@@ -3402,8 +3402,7 @@
    "ebible_book_code_size",
    "sandbox",
    "folder_read_async",
-   "app_reply_main",
-   "object_assign"
+   "app_reply_main"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4858,7 +4857,8 @@
    "js_auto_transform_new_inner",
    "marker_next_declare_single_init",
    "marker_next_declare_single_init_elements",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "object_assign"
   ],
   "without": [
    "string_suffix_without",
@@ -7006,7 +7006,8 @@
    "marker_next_index",
    "string_replace",
    "marker_rename",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "object_assign"
   ],
   "r": [
    "function_format",
@@ -7101,7 +7102,8 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "object_assign"
   ],
   "i": [
    "function_identifier_replace",
@@ -26257,7 +26259,9 @@
    "identifiers": [
     "marker",
     "object_assign",
-    "v",
+    "to",
+    "from",
+    "a",
     "Object",
     "assign"
    ]
