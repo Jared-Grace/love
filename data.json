@@ -2006,7 +2006,8 @@
   "sb",
   "s list,add",
   "s new",
-  "s new,join"
+  "s new,join",
+  "s doc"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
