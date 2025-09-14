@@ -2016,7 +2016,8 @@
   "s remo",
   "s size",
   "s verses",
-  "s ebible"
+  "s ebible",
+  "ebible_verses_upload swhonen"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
