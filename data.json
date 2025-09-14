@@ -2023,7 +2023,6 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "app_reply_main",
    "folder_find_starts_with"
   ],
   "function_path_to_name": [
@@ -13623,6 +13622,9 @@
   ],
   "verse_text": [
    "app_reply_main"
+  ],
+  "verse_random_get": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23914,7 +23916,6 @@
     "ebible_verses_upload_name",
     "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
-    "log",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
     "not",
@@ -23948,18 +23949,19 @@
     "file_name",
     "destination",
     "index",
-    "chapter_code",
-    "verse_number",
-    "n",
-    "destination2",
-    "verse",
     "verse_text",
+    "verse",
+    "verse_random_get",
     "root",
     "copied",
     "buttons",
     "preview",
     "chosens",
     "typed",
+    "chapter_code",
+    "verse_number",
+    "n",
+    "destination2",
     "lambda6",
     "event",
     "key",
