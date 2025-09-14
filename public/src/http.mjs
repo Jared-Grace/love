@@ -1,3 +1,4 @@
+import { html_loading } from "./html_loading.mjs";
 import { catch_call } from "./catch_call.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -11,6 +12,7 @@ import { assert_json } from "./assert_json.mjs";
 export async function http(url) {
   let b = browser_is();
   if (b) {
+    html_loading();
     const response = await fetch(url);
     if (not(response.ok)) {
       error("Failed to fetch file");
