@@ -11193,8 +11193,7 @@
    "html_button",
    "html_button_element",
    "html_button_screen",
-   "html_p_text_multiple",
-   "app_reply_main"
+   "html_p_text_multiple"
   ],
   "createElement": [
    "html_element"
@@ -24002,7 +24001,6 @@
     "component3",
     "component2",
     "component4",
-    "parent",
     "choices",
     "lambda2",
     "item",
