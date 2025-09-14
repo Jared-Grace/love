@@ -2005,7 +2005,8 @@
   "s verses,up",
   "sb",
   "s list,add",
-  "s new"
+  "s new",
+  "s new,join"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
