@@ -24,6 +24,7 @@ export function ebible_verses_exclude() {
     "sp",
     "tl",
     "tnav",
+    "wj",
     "xt",
   ];
   return v;
