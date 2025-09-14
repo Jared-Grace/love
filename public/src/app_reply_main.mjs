@@ -53,6 +53,7 @@ export async function app_reply_main() {
     let verse = await ebible_verse_download(en, chapter_code, verse_number);
     let v = [verse];
     return v;
+    
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
