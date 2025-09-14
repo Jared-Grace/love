@@ -11167,7 +11167,8 @@
    "html_document_body",
    "app_refresh",
    "app_replace_main",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "document": [
    "html_document_body",
@@ -11304,7 +11305,8 @@
    "html_on_keydown",
    "html_meta_viewport",
    "html_style_set_or_remove",
-   "html_text_set_if"
+   "html_text_set_if",
+   "http"
   ],
   "innerHTML": [
    "html_text_set"
@@ -23071,6 +23073,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "html_document_body",
     "catch_call",
     "promise_wrap",
     "integer_random",
@@ -23084,6 +23087,7 @@
     "http",
     "url",
     "b",
+    "component",
     "response",
     "fetch",
     "ok",
