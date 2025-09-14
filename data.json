@@ -3150,7 +3150,8 @@
    "list_map_prefix_without",
    "list_slice_count",
    "ebible_chapters_each_verses",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -3391,7 +3392,8 @@
    "string_may_the_lord",
    "ebible_book_code_size",
    "sandbox",
-   "folder_read_async"
+   "folder_read_async",
+   "app_reply_main"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5664,7 +5666,8 @@
    "list_first",
    "list_single",
    "list_first_second_generic",
-   "js_dollar_a"
+   "js_dollar_a",
+   "app_reply_main"
   ],
   "each_multiple": [
    "each_multiple",
@@ -5685,7 +5688,8 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find_property",
-   "js_dollar_a"
+   "js_dollar_a",
+   "app_reply_main"
   ],
   "items": [
    "each_multiple",
@@ -13414,7 +13418,8 @@
    "ebible_verses_upload",
    "ebible_chapters_each_verses",
    "ebible_index",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "app_reply_main"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -23924,6 +23929,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_first",
     "ebible_folder_urdu",
     "ebible_verses_upload_name",
     "firebase_storage_download_json",
@@ -23962,7 +23968,7 @@
     "file_name",
     "destination",
     "index",
-    "verse",
+    "verses",
     "verse_random_get",
     "root",
     "copied",
@@ -23974,6 +23980,8 @@
     "verse_number",
     "n",
     "destination2",
+    "verse",
+    "v",
     "lambda6",
     "event",
     "key",
@@ -23999,6 +24007,8 @@
     "text",
     "component",
     "lambda3",
+    "first",
+    "list",
     "chapter_code2",
     "verse_number2",
     "verse_text",
