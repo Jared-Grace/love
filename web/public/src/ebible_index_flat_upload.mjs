@@ -7,6 +7,6 @@ export async function ebible_index_flat_upload(bible_folder) {
   marker("1");
   let index = await ebible_index(bible_folder);
   let v = ebible_index_upload_name();
-  let file_name = list_join_slash_forward([v, file_name_with_extension]);
+  let file_name = list_join_slash_forward([v, "flat"]);
   await ebible_firebase_upload(bible_folder, file_name, index);
 }
