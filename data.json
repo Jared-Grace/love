@@ -3406,7 +3406,8 @@
    "ebible_book_code_size",
    "sandbox",
    "folder_read_async",
-   "app_reply_main"
+   "app_reply_main",
+   "http"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -23161,6 +23162,7 @@
     "ok",
     "buf",
     "arrayBuffer",
+    "v",
     "h",
     "sw",
     "buffer",
