@@ -6984,7 +6984,8 @@
    "app_replace_rule_set",
    "ebible_version_books_testament",
    "ebible_verses_upload",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "html_style_merge"
   ],
   "u": [
    "function_exists",
@@ -7009,7 +7010,8 @@
    "marker_next_index",
    "string_replace",
    "marker_rename",
-   "ebible_version_books_testament"
+   "ebible_version_books_testament",
+   "html_style_merge"
   ],
   "r": [
    "function_format",
@@ -7104,7 +7106,8 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer"
+   "firebase_upload_buffer",
+   "html_style_merge"
   ],
   "i": [
    "function_identifier_replace",
@@ -13702,6 +13705,9 @@
    "html_loading"
   ],
   "html_style_merge": [
+   "html_style_merge"
+  ],
+  "to2": [
    "html_style_merge"
   ]
  },
@@ -26242,6 +26248,7 @@
   "html_style_merge": {
    "async": false,
    "identifiers": [
+    "object_merge",
     "marker",
     "html_component_element_get",
     "html_style_merge",
@@ -26249,6 +26256,9 @@
     "style_key",
     "style_value",
     "b_element",
+    "to2",
+    "to",
+    "from",
     "style"
    ]
   }
