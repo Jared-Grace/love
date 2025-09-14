@@ -3164,7 +3164,8 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "list_add_first"
+   "list_add_first",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -6077,7 +6078,8 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "app_reply_main"
   ],
   "list_to": [
    "functions_combine",
@@ -9124,7 +9126,8 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second"
+   "list_second",
+   "app_reply_main"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -24017,6 +24020,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_second",
     "equal",
     "list_add_first",
     "ebible_verse_download",
@@ -24075,6 +24079,8 @@
     "lambda6",
     "event",
     "key",
+    "second",
+    "list",
     "taken",
     "href",
     "count",
