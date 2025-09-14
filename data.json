@@ -1996,11 +1996,11 @@
   "is folder_read",
   "is folder_find_starts_with",
   "n folder_read_async",
-  "s index",
   "s add",
   "s path,join",
   "p",
-  "sb"
+  "sb",
+  "s index"
  ],
  "marker_current": "1",
  "function_current": "folder_read_async",
