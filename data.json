@@ -7266,8 +7266,7 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_update_generic",
-   "app_reply_main"
+   "html_update_generic"
   ],
   "import_": [
    "function_imports_add",
@@ -7279,8 +7278,7 @@
    "js_parse_expression",
    "js_parse_statement",
    "js_parse_statement_module",
-   "marker_above_generic",
-   "app_reply_main"
+   "marker_above_generic"
   ],
   "js_imports_missing": [
    "function_imports_missing",
@@ -24001,8 +23999,6 @@
     "chapter_code2",
     "verse_number2",
     "u",
-    "body",
-    "statement",
     "component3",
     "component2",
     "component4",
