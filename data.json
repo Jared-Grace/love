@@ -3390,7 +3390,8 @@
    "string_may_the_lord",
    "ebible_book_code_size",
    "sandbox",
-   "folder_read_async"
+   "folder_read_async",
+   "ebible_index_flat_upload"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3626,8 +3627,7 @@
    "firebase_storage_download_path",
    "firebase_storage_function_run",
    "list_join_slash_forward",
-   "ebible_firebase_upload_path",
-   "ebible_index_flat_upload"
+   "ebible_firebase_upload_path"
   ],
   "watcher": [
    "watch"
@@ -26127,8 +26127,8 @@
     "ebible_index_flat_upload",
     "bible_folder",
     "index",
+    "v",
     "file_name",
-    "joined",
     "file_name_with_extension"
    ]
   }
