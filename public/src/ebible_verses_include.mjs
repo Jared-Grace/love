@@ -14,6 +14,7 @@ export function ebible_verses_include() {
     "pi",
     "pc",
     "pm",
+    "pmc",
     "pmo",
     "pmr",
     "sc",
