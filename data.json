@@ -2089,7 +2089,8 @@
    "app_reply_main",
    "html_parse_descendants_classes",
    "ebible_chapter_text",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "ebible_index_flat"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -13376,7 +13377,8 @@
   "verse_numbers": [
    "ebible_chapter_text",
    "ebible_verses",
-   "ebible_index"
+   "ebible_index",
+   "ebible_index_flat"
   ],
   "whitespace_normalize": [
    "whitespace_normalize",
@@ -26082,6 +26084,7 @@
   "ebible_index_flat": {
    "async": true,
    "identifiers": [
+    "each",
     "list_adder_async",
     "marker",
     "ebible_chapters_each_verses",
@@ -26096,6 +26099,7 @@
     "verses",
     "lambda2",
     "verse_number",
+    "verse_numbers",
     "list"
    ]
   }
