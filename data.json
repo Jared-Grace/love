@@ -3478,8 +3478,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "app_reply_main"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -24071,7 +24070,6 @@
     "lambda6",
     "event",
     "key",
-    "message",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
