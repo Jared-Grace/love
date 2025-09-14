@@ -1795,7 +1795,6 @@
   "s copy",
   "n browser_is",
   "s main",
-  "s new",
   "s newl",
   "cs list_join_newline 2",
   "s html,hide",
@@ -2005,7 +2004,8 @@
   "s upload,ver",
   "s verses,up",
   "sb",
-  "s list,add"
+  "s list,add",
+  "s new"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat_upload",
