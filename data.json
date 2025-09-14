@@ -5174,7 +5174,8 @@
    "html_disable",
    "html_disable_set",
    "html_style_set",
-   "html_style_merge"
+   "html_style_merge",
+   "html_loading"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -13702,7 +13703,11 @@
    "html_loading"
   ],
   "html_style_merge": [
-   "html_style_merge"
+   "html_style_merge",
+   "html_loading"
+  ],
+  "s2": [
+   "html_loading"
   ]
  },
  "functions": {
@@ -26219,6 +26224,7 @@
   "html_loading": {
    "async": false,
    "identifiers": [
+    "html_style_merge",
     "html_div",
     "html_document_body",
     "marker",
@@ -26226,6 +26232,8 @@
     "body",
     "div",
     "root",
+    "b",
+    "s2",
     "s",
     "position",
     "top",
