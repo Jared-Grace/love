@@ -2569,7 +2569,8 @@
    "firebase_storage_function_run",
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
-   "js_dollar_new_name"
+   "js_dollar_new_name",
+   "app_reply_main"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3833,7 +3834,8 @@
    "js_dollar_new_name",
    "local_function_path",
    "object_property_get_name",
-   "folder_read_async"
+   "folder_read_async",
+   "app_reply_main"
   ],
   "output": [
    "watch",
@@ -13744,6 +13746,9 @@
    "ebible_chapter_text"
   ],
   "swh": [
+   "app_reply_main"
+  ],
+  "languages": [
    "app_reply_main"
   ]
  },
@@ -24069,6 +24074,9 @@
     "en",
     "ur",
     "swh",
+    "languages",
+    "name",
+    "code",
     "file_name",
     "destination",
     "index",
