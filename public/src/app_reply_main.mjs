@@ -1,3 +1,4 @@
+import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
 import { firebase_storage_download_json } from "./firebase_storage_download_json.mjs";
 import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
 import { log } from "./log.mjs";
@@ -35,7 +36,8 @@ export async function app_reply_main() {
   let destination = ebible_firebase_upload_path(bible_folder, file_name);
   let index = await firebase_storage_download_json(destination);
   log(index);
-  let reference = list_random_item(index);
+  let { chapter_code, verse_number } = list_random_item(index);
+  let joined2 = ebible_verses_upload_name(chapter_code, verse_number);
   let verse = await firebase_storage_download_json(destination);
   const root = html_document_body();
   let copied = [];
@@ -50,7 +52,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   function lambda4() {
-    reference = list_random_item(properties);
+    let reference = list_random_item(properties);
     verse = object_property_get(bible, reference);
     list_empty(copied);
     preview_refresh();
