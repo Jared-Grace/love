@@ -12663,8 +12663,7 @@
    "emoji_trinity"
   ],
   "kjv": [
-   "kjv",
-   "app_reply_main"
+   "kjv"
   ],
   "list_random_item": [
    "list_random_item",
@@ -23925,7 +23924,6 @@
     "list_concat",
     "list_random_item",
     "object_properties",
-    "kjv",
     "html_p_text_multiple",
     "html_clear",
     "app_reply_choices",
@@ -23950,10 +23948,10 @@
     "buffer",
     "s",
     "index",
-    "bible",
     "properties",
     "reference",
     "verse",
+    "bible",
     "root",
     "copied",
     "buttons",
