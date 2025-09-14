@@ -5174,8 +5174,7 @@
    "html_disable",
    "html_disable_set",
    "html_style_set",
-   "html_style_merge",
-   "html_loading"
+   "html_style_merge"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -13704,9 +13703,6 @@
   ],
   "html_style_merge": [
    "html_style_merge",
-   "html_loading"
-  ],
-  "s2": [
    "html_loading"
   ]
  },
@@ -26232,8 +26228,6 @@
     "body",
     "div",
     "root",
-    "b",
-    "s2",
     "s",
     "position",
     "top",
