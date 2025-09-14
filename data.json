@@ -13736,6 +13736,9 @@
   ],
   "sz": [
    "app_reply_main"
+  ],
+  "sz1": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24080,6 +24083,7 @@
     "key",
     "sz",
     "s",
+    "sz1",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
