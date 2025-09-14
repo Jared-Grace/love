@@ -2001,7 +2001,8 @@
   "p",
   "sb",
   "s index",
-  "cs ebible_index flat"
+  "cs ebible_index flat",
+  "ebible_index_flat engbsb"
  ],
  "marker_current": "1",
  "function_current": "ebible_index_flat",

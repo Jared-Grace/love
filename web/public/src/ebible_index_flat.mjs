@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { each } from "./each.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { marker } from "./marker.mjs";
@@ -7,6 +8,7 @@ export async function ebible_index_flat(bible_folder) {
   async function lambda(la) {
     await ebible_chapters_each_verses(bible_folder, each_chapter);
     async function each_chapter(chapter_code, verses) {
+      let verse_numbers = list_map_property(verses, "verse_number");
       function lambda2(verse_number) {
         la({
           chapter_code,
