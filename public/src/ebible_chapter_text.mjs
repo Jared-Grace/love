@@ -1,4 +1,4 @@
-import { list_intersect } from "./list_intersect.mjs";
+import { list_intersect_empty_is_assert } from "./list_intersect_empty_is_assert.mjs";
 import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { list_map } from "./list_map.mjs";
@@ -24,11 +24,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();
-  let i = list_intersect(include, exclude);
-  list_empty_is_assert(i, {
-    include,
-    exclude,
-  });
+  list_intersect_empty_is_assert(include, exclude);
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let dictionary = html_parse_classes_preview(main, d, extra);
