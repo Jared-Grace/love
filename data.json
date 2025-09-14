@@ -13668,7 +13668,8 @@
    "app_reply_main"
   ],
   "html_loading": [
-   "html_loading"
+   "html_loading",
+   "http"
   ],
   "body_element": [
    "html_document_body"
@@ -23125,6 +23126,7 @@
   "http": {
    "async": true,
    "identifiers": [
+    "html_loading",
     "catch_call",
     "promise_wrap",
     "integer_random",
