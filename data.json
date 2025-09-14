@@ -13433,8 +13433,7 @@
    "firebase_upload_generic"
   ],
   "ebible_index_upload": [
-   "ebible_index_upload",
-   "sandbox"
+   "ebible_index_upload"
   ],
   "list_slice_count": [
    "app_replace_rule_valid",
@@ -13620,7 +13619,8 @@
    "ebible_index_flat_upload"
   ],
   "ebible_index_flat_upload": [
-   "ebible_index_flat_upload"
+   "ebible_index_flat_upload",
+   "sandbox"
   ]
  },
  "functions": {
@@ -20514,9 +20514,9 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_index_flat_upload",
     "ebible_folder_urdu",
     "ebible_folder_english",
-    "ebible_index_upload",
     "each_async",
     "marker",
     "sandbox",
