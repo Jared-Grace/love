@@ -4778,7 +4778,8 @@
    "buffer_string_to",
    "html_loading",
    "html_style_merge",
-   "html_style_assign"
+   "html_style_assign",
+   "app_reply_main"
   ],
   "a": [
    "string_suffix_without",
@@ -5060,7 +5061,8 @@
    "emoji_voice",
    "string_the_servant_of_god",
    "sandbox",
-   "folder_read_async"
+   "folder_read_async",
+   "app_reply_main"
   ],
   "readdirSync": [
    "folder_read"
@@ -24018,6 +24020,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "string_size",
     "equal",
     "list_add_first",
     "ebible_verse_download",
@@ -24076,7 +24079,8 @@
     "lambda6",
     "event",
     "key",
-    "string_size",
+    "v2",
+    "s",
     "taken",
     "href",
     "count",
