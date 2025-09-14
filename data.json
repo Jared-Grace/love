@@ -5785,7 +5785,8 @@
    "string_take",
    "list_slice_count",
    "ebible_chapter_code_to_book",
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -5829,8 +5830,7 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading",
-   "app_reply_main"
+   "html_loading"
   ],
   "right": [
    "equal",
@@ -5848,8 +5848,7 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "app_reply_main"
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -11650,7 +11649,8 @@
   "taken": [
    "list_take",
    "ebible_version_books_testament",
-   "string_take"
+   "string_take",
+   "app_reply_main"
   ],
   "app_replace_rule_parse": [
    "app_replace_rule_set",
@@ -13166,7 +13166,8 @@
    "ebible_version_books_testament",
    "html_parse_href",
    "html_parse_href_text",
-   "ebible_chapter_code_to_book"
+   "ebible_chapter_code_to_book",
+   "app_reply_main"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -13196,7 +13197,8 @@
   ],
   "string_take": [
    "string_take",
-   "ebible_chapter_code_to_book"
+   "ebible_chapter_code_to_book",
+   "app_reply_main"
   ],
   "books": [
    "ebible_version_verses",
@@ -24051,6 +24053,7 @@
     "object_property_get",
     "html_button",
     "marker",
+    "string_take",
     "app_reply_main",
     "en",
     "ur",
@@ -24072,8 +24075,9 @@
     "lambda6",
     "event",
     "key",
-    "left",
-    "right",
+    "taken",
+    "href",
+    "count",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
