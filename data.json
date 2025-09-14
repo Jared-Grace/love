@@ -11320,8 +11320,7 @@
    "html_on_keydown",
    "html_meta_viewport",
    "html_style_set_or_remove",
-   "html_text_set_if",
-   "html_loading"
+   "html_text_set_if"
   ],
   "innerHTML": [
    "html_text_set"
@@ -26255,8 +26254,7 @@
     "display",
     "justifyContent",
     "alignItems",
-    "zIndex",
-    "component"
+    "zIndex"
    ]
   },
   "html_style_merge": {
