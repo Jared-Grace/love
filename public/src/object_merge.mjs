@@ -15,4 +15,5 @@ export function object_merge(to, from) {
   let list = object_properties(from);
   each(list, lambda);
   return to;
+  let strict = true;
 }
