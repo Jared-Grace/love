@@ -9003,7 +9003,8 @@
    "js_let_add",
    "js_node_atomize",
    "js_expand_generic",
-   "app_new"
+   "app_new",
+   "object_assign"
   ],
   "js_declare_assign": [
    "js_declare_assign",
@@ -10225,7 +10226,8 @@
   ],
   "Object": [
    "object_properties",
-   "object_property_exists"
+   "object_property_exists",
+   "object_assign"
   ],
   "getOwnPropertyNames": [
    "object_properties"
@@ -26253,7 +26255,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "object_assign"
+    "object_assign",
+    "Object",
+    "assign"
    ]
   }
  },

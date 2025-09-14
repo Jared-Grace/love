@@ -1,5 +1,6 @@
 import { marker } from "./marker.mjs";
 export function object_assign() {
   marker("1");
-  return Object.assign({});
+  let v = Object.assign({});
+  return v;
 }
