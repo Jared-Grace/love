@@ -7269,7 +7269,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_update_generic"
+   "html_update_generic",
+   "html_loading"
   ],
   "import_": [
    "function_imports_add",
@@ -11307,8 +11308,7 @@
    "html_on_keydown",
    "html_meta_viewport",
    "html_style_set_or_remove",
-   "html_text_set_if",
-   "html_loading"
+   "html_text_set_if"
   ],
   "innerHTML": [
    "html_text_set"
@@ -26178,7 +26178,7 @@
     "html_document_body",
     "marker",
     "html_loading",
-    "component"
+    "body"
    ]
   }
  },
