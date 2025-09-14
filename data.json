@@ -2035,7 +2035,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3477,7 +3478,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_reply_main"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -24012,6 +24014,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "log",
     "list_add_first",
     "ebible_verse_download",
     "list_map_property",
@@ -24068,6 +24071,7 @@
     "lambda6",
     "event",
     "key",
+    "message",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
