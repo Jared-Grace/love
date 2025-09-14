@@ -2006,7 +2006,7 @@
   "c ebible_index_upload ebible_index_flat_upload"
  ],
  "marker_current": "1",
- "function_current": "ebible_index_flat",
+ "function_current": "ebible_index_flat_upload",
  "terminal": false,
  "identifiers": {
   "log": [
