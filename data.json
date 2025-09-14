@@ -6978,7 +6978,8 @@
   "u": [
    "function_exists",
    "function_aliases_restore",
-   "function_exists_inner"
+   "function_exists_inner",
+   "app_reply_main"
   ],
   "to": [
    "function_parse_declaration",
@@ -7231,7 +7232,8 @@
   "list_add_first": [
    "function_imports_add",
    "list_add_first",
-   "marker_enter"
+   "marker_enter",
+   "app_reply_main"
   ],
   "js_parse_statement_module": [
    "function_imports_add",
@@ -7263,7 +7265,8 @@
    "js_imports_fix",
    "html_document_body",
    "app_refresh",
-   "html_update_generic"
+   "html_update_generic",
+   "app_reply_main"
   ],
   "import_": [
    "function_imports_add",
@@ -7276,7 +7279,8 @@
    "js_parse_statement",
    "js_parse_statement_module",
    "list_add_first",
-   "marker_above_generic"
+   "marker_above_generic",
+   "app_reply_main"
   ],
   "js_imports_missing": [
    "function_imports_missing",
@@ -23933,6 +23937,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_add_first",
     "ebible_verse_download",
     "list_join_space",
     "list_map_property",
@@ -23995,6 +24000,9 @@
     "lambda7",
     "chapter_code2",
     "verse_number2",
+    "u",
+    "body",
+    "statement",
     "component3",
     "component2",
     "component4",
