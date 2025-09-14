@@ -1,3 +1,4 @@
+import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -20,4 +21,5 @@ export async function html_loading(lambda) {
   };
   html_style_assign(div, s);
   await lambda();
+  html_remove(component);
 }
