@@ -5,6 +5,7 @@ export function ebible_verses_include() {
     "it",
     "li",
     "li2",
+    "li4",
     "m",
     "nd",
     "p",
