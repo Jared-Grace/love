@@ -26110,7 +26110,6 @@
     "index",
     "lambda",
     "la",
-    "list",
     "each_chapter",
     "chapter_code",
     "verses",
@@ -26120,7 +26119,8 @@
     "count",
     "chapter_name",
     "verse_numbers",
-    "chapter"
+    "chapter",
+    "list"
    ]
   }
  },
