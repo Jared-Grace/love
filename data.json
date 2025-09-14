@@ -4569,7 +4569,8 @@
    "js_expand_generic",
    "js_calls_to_each",
    "app_reply_main",
-   "ebible_versions_download"
+   "ebible_versions_download",
+   "http"
   ],
   "value2": [
    "error_attention_set",
@@ -23154,6 +23155,7 @@
     "http",
     "url",
     "b",
+    "lambda3",
     "response",
     "fetch",
     "ok",
