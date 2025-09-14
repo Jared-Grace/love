@@ -2304,7 +2304,8 @@
    "js_auto_transform_new_inner",
    "js_declaration_param_add_node",
    "ebible_chapter_code_to_book",
-   "firebase_storage_download"
+   "firebase_storage_download",
+   "ebible_index_flat"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26089,6 +26090,7 @@
   "ebible_index_flat": {
    "async": true,
    "identifiers": [
+    "marker",
     "list_add_if_not_includes",
     "list_add",
     "list_map_property",
