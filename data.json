@@ -4769,7 +4769,8 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to"
+   "buffer_string_to",
+   "html_loading"
   ],
   "a": [
    "string_suffix_without",
@@ -5818,7 +5819,8 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "html_loading"
   ],
   "right": [
    "equal",
@@ -13663,6 +13665,33 @@
   ],
   "body_element": [
    "html_document_body"
+  ],
+  "position": [
+   "html_loading"
+  ],
+  "top": [
+   "html_loading"
+  ],
+  "width": [
+   "html_loading"
+  ],
+  "height": [
+   "html_loading"
+  ],
+  "background": [
+   "html_loading"
+  ],
+  "display": [
+   "html_loading"
+  ],
+  "justifyContent": [
+   "html_loading"
+  ],
+  "alignItems": [
+   "html_loading"
+  ],
+  "zIndex": [
+   "html_loading"
   ]
  },
  "functions": {
@@ -26185,7 +26214,18 @@
     "html_loading",
     "body",
     "div",
-    "root"
+    "root",
+    "s",
+    "position",
+    "top",
+    "left",
+    "width",
+    "height",
+    "background",
+    "display",
+    "justifyContent",
+    "alignItems",
+    "zIndex"
    ]
   }
  },
