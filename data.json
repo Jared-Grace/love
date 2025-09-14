@@ -11169,7 +11169,8 @@
    "html_document_body",
    "app_refresh",
    "app_replace_main",
-   "app_reply_main"
+   "app_reply_main",
+   "html_loading"
   ],
   "document": [
    "html_document_body",
@@ -11306,7 +11307,8 @@
    "html_on_keydown",
    "html_meta_viewport",
    "html_style_set_or_remove",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_loading"
   ],
   "innerHTML": [
    "html_text_set"
@@ -26170,8 +26172,10 @@
   "html_loading": {
    "async": false,
    "identifiers": [
+    "html_document_body",
     "marker",
-    "html_loading"
+    "html_loading",
+    "component"
    ]
   }
  },
