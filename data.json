@@ -11293,7 +11293,6 @@
    "html_text_set",
    "html_button",
    "html_element",
-   "html_document_body",
    "html_on",
    "html_component_element_get",
    "html_on_click",
@@ -13657,6 +13656,9 @@
   ],
   "html_loading": [
    "html_loading"
+  ],
+  "body_element": [
+   "html_document_body"
   ]
  },
  "functions": {
@@ -21998,9 +22000,9 @@
     "html_component_wrap",
     "marker",
     "html_document_body",
-    "body",
+    "body_element",
     "document",
-    "component"
+    "body"
    ]
   },
   "html_element": {
