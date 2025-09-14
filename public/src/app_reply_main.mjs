@@ -1,3 +1,4 @@
+import { string_size } from "./string_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
@@ -56,7 +57,8 @@ export async function app_reply_main() {
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
-    if (equal(key, "Backspace")) {string_size
+    if (equal(key, "Backspace")) {
+      let v2 = string_size(s);
       let taken = string_take(href, count);
     }
     typed += key;
