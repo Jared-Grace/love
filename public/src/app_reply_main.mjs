@@ -41,8 +41,12 @@ export async function app_reply_main() {
   let swh = "swhonen";
   let languages = [
     {
-      name: "",
+      name: "Urdu",
       bible_folder: ur,
+    },
+    {
+      name: "Swhahili",
+      bible_folder: swh,
     },
   ];
   let file_name = ebible_index_flat_upload_name();
@@ -88,13 +92,17 @@ export async function app_reply_main() {
       let verse = list_first(verses);
       let chapter_code2 = object_property_get(verse, "chapter_code");
       let verse_number2 = object_property_get(verse, "verse_number");
-      let u = await ebible_verse_download(ur, chapter_code2, verse_number2);
+      let u = await ebible_verse_download(
+        bible_folder2,
+        chapter_code2,
+        verse_number2,
+      );
       list_add_first(verses, u);
       preview_refresh();
     }
-    let component4 = html_button(root, "Urdu", lambda7);
+    let component4 = html_button(root, name2, lambda7);
   }
-  each(list, lambda5);
+  each(languages, lambda5);
   marker("1");
   let choices = app_reply_choices();
   function buttons_refresh() {
