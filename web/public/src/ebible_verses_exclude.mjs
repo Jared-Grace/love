@@ -17,6 +17,7 @@ export function ebible_verses_exclude() {
     "popup",
     "qa",
     "r",
+    "rq",
     "s",
     "s2",
     "tnav",
