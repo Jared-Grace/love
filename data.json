@@ -2922,7 +2922,8 @@
    "promise_wrap",
    "ebible_chapters_each_verses",
    "folder_read_async",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "html_loading"
   ],
   "previous": [
    "data_identifiers_file",
@@ -26230,13 +26231,14 @@
    ]
   },
   "html_loading": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "html_style_assign",
     "html_div",
     "html_document_body",
     "marker",
     "html_loading",
+    "lambda",
     "body",
     "div",
     "s",
