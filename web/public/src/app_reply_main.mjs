@@ -1,3 +1,4 @@
+import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
 import { firebase_storage_download_json } from "./firebase_storage_download_json.mjs";
 import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
@@ -30,9 +31,10 @@ import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
-  let bible_folder = ebible_folder_english();
+  let en = ebible_folder_english();
+  let ur = ebible_folder_urdu();
   let file_name = ebible_index_flat_upload_name();
-  let destination = ebible_firebase_upload_path(bible_folder, file_name);
+  let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
   let verse = await verse_random_get();
   const root = html_document_body();
@@ -44,7 +46,7 @@ export async function app_reply_main() {
   async function verse_random_get() {
     let { chapter_code, verse_number } = list_random_item(index);
     let n = ebible_verses_upload_name(chapter_code, verse_number);
-    let destination2 = ebible_firebase_upload_path(bible_folder, n);
+    let destination2 = ebible_firebase_upload_path(en, n);
     let verse = await firebase_storage_download_json(destination2);
     return verse;
   }
@@ -62,10 +64,10 @@ export async function app_reply_main() {
     typed = "";
     buttons_refresh();
   }
-  let component3 = html_button(root, "Reset", lambda4);
   function lambda7() {}
-  let component4 = html_button(parent, "Urdu", lambda7);
+  let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
+  let component4 = html_button(parent, "Urdu", lambda7);
   marker("1");
   let choices = app_reply_choices();
   function buttons_refresh() {
