@@ -5704,8 +5704,7 @@
    "object_merge",
    "object_properties",
    "object_properties_delete",
-   "tasks_run",
-   "app_reply_main"
+   "tasks_run"
   ],
   "each_object": [
    "each_object",
@@ -23923,7 +23922,6 @@
     "list_includes",
     "list_concat",
     "list_random_item",
-    "object_properties",
     "html_p_text_multiple",
     "html_clear",
     "app_reply_choices",
@@ -23948,7 +23946,6 @@
     "buffer",
     "s",
     "index",
-    "properties",
     "reference",
     "verse",
     "bible",
@@ -23963,6 +23960,7 @@
     "key",
     "buttons_refresh",
     "lambda4",
+    "properties",
     "preview_refresh",
     "component3",
     "component2",
@@ -26125,7 +26123,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-13T23:12:19.353Z",
+ "git_push_when": "2025-09-14T00:12:30.721Z",
  "error_attention": null,
  "app_current": "replace"
 }
