@@ -4759,8 +4759,7 @@
    "marker_rename",
    "string_lower_to",
    "string_base64_to",
-   "buffer_string_to",
-   "app_reply_main"
+   "buffer_string_to"
   ],
   "a": [
    "string_suffix_without",
@@ -6007,8 +6006,7 @@
    "json_from",
    "storage_local_get",
    "http_json",
-   "firebase_storage_download_property",
-   "app_reply_main"
+   "firebase_storage_download_property"
   ],
   "file_write": [
    "file_write",
@@ -12030,8 +12028,7 @@
   "firebase_storage_download": [
    "firebase_storage_download",
    "firebase_storage_download_property",
-   "http_firebase",
-   "app_reply_main"
+   "http_firebase"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -12868,8 +12865,7 @@
    "http_local_text",
    "unzip",
    "ebible_version_download",
-   "firebase_upload_generic",
-   "app_reply_main"
+   "firebase_upload_generic"
   ],
   "download": [
    "firebase_storage_download"
@@ -12929,8 +12925,7 @@
    "http_json",
    "buffer_string_to",
    "firebase_storage_download_property",
-   "http_local_text",
-   "app_reply_main"
+   "http_local_text"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -13617,6 +13612,9 @@
   ],
   "ebible_index_flat_upload_name": [
    "ebible_index_flat_upload",
+   "app_reply_main"
+  ],
+  "firebase_storage_download_json": [
    "app_reply_main"
   ]
  },
@@ -23906,13 +23904,11 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
     "log",
-    "json_from",
-    "buffer_string_to",
     "ebible_folder_english",
     "ebible_firebase_upload_path",
-    "firebase_storage_download",
     "not",
     "string_starts_with",
     "string_lower_to",
@@ -23943,8 +23939,6 @@
     "bible_folder",
     "file_name",
     "destination",
-    "buffer",
-    "s",
     "index",
     "reference",
     "verse",
