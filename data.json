@@ -2315,7 +2315,8 @@
    "firebase_storage_download",
    "ebible_index_flat",
    "ebible_index_flat_upload",
-   "html_loading"
+   "html_loading",
+   "html_style_merge"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26241,6 +26242,7 @@
   "html_style_merge": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_component_element_get",
     "html_style_merge",
     "b",
