@@ -13735,6 +13735,9 @@
   ],
   "string_take_less_1": [
    "app_reply_main"
+  ],
+  "each_chapter2": [
+   "ebible_verses_upload"
   ]
  },
  "functions": {
@@ -25116,9 +25119,10 @@
     "object_property_get",
     "ebible_verses_upload",
     "bible_folder",
-    "each_chapter",
+    "each_chapter2",
     "chapter_code",
     "verses",
+    "each_chapter",
     "lambda",
     "v",
     "verse_number",
