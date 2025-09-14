@@ -3152,8 +3152,7 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "list_add_first",
-   "app_reply_main"
+   "list_add_first"
   ],
   "v": [
    "data_identifiers_file",
@@ -13345,8 +13344,7 @@
    "ebible_chapters_each_verses"
   ],
   "item2": [
-   "ebible_chapters",
-   "app_reply_main"
+   "ebible_chapters"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -24020,8 +24018,6 @@
     "lambda3",
     "verse_texts",
     "reference",
-    "list",
-    "item2",
     "verse_text",
     "concated",
     "joined"
