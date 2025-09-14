@@ -12678,9 +12678,6 @@
    "integer_random",
    "random"
   ],
-  "reference": [
-   "app_reply_main"
-  ],
   "verse": [
    "app_reply_main",
    "ebible_verses_upload"
@@ -23992,7 +23989,6 @@
     "verse_number2",
     "verse_text",
     "concated",
-    "reference",
     "joined"
    ]
   },
