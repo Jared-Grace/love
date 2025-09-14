@@ -12,25 +12,26 @@ export async function ebible_index_flat(bible_folder) {
   marker("1");
   let books = {};
   let index = [];
-  async function lambda(la) {}
-  let list = await list_adder_async(lambda);
-  await ebible_chapters_each_verses(bible_folder, each_chapter);
-  async function each_chapter(chapter_code, verses) {
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let book = object_property_initialize(books, book_code, {
-      book_code,
-      chapters: [],
-    });
-    list_add_if_not_includes(index, book);
-    let count = ebible_book_code_size();
-    let chapter_name = string_skip(chapter_code, count);
-    let verse_numbers = list_map_property(verses, "verse_number");
-    const chapter = {
-      chapter_name,
-      verse_numbers,
-    };
-    let { chapters } = book;
-    list_add(chapters, chapter);
+  async function lambda(la) {
+    await ebible_chapters_each_verses(bible_folder, each_chapter);
+    async function each_chapter(chapter_code, verses) {
+      let book_code = ebible_chapter_code_to_book(chapter_code);
+      let book = object_property_initialize(books, book_code, {
+        book_code,
+        chapters: [],
+      });
+      list_add_if_not_includes(index, book);
+      let count = ebible_book_code_size();
+      let chapter_name = string_skip(chapter_code, count);
+      let verse_numbers = list_map_property(verses, "verse_number");
+      const chapter = {
+        chapter_name,
+        verse_numbers,
+      };
+      let { chapters } = book;
+      list_add(chapters, chapter);
+    }
   }
+  let list = await list_adder_async(lambda);
   return index;
 }
