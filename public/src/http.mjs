@@ -20,7 +20,8 @@ export async function http(url) {
       const buf = await response.arrayBuffer();
       return buf;
     }
-    return await html_loading(lambda3);
+    let v = await html_loading(lambda3);
+    return v;
   }
   await sleep(integer_random(5, 8) * 1000);
   let h = null;
