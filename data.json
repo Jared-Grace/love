@@ -1992,7 +1992,6 @@
   "s add",
   "s path,join",
   "cs ebible_index flat",
-  "p",
   "ebible_index_flat engbsb",
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
@@ -2017,6 +2016,7 @@
   "s size",
   "s verses",
   "s ebible",
+  "p",
   "ebible_verses_upload swhonen"
  ],
  "marker_current": "1",
