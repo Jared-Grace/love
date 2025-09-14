@@ -13473,7 +13473,8 @@
    "firebase_bucket"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version"
+   "firebase_deploy_function_destination_version",
+   "app_reply_main"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -23951,6 +23952,7 @@
     "chapter_code",
     "verse_number",
     "n",
+    "destination2",
     "verse",
     "root",
     "copied",
