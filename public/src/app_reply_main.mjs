@@ -1,4 +1,4 @@
-import { string_size_less_1 } from "./string_size_less_1.mjs";
+import { string_take_less_1 } from "./string_take_less_1.mjs";
 import { equal } from "./equal.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
@@ -35,7 +35,6 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
-import { string_take } from "./string_take.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let ur = ebible_folder_urdu();
@@ -134,9 +133,3 @@ export async function app_reply_main() {
     await clipboard_copy(joined);
   }
 }
-function string_take_less_1(typed) {
-  const sz1 = string_size_less_1(typed);
-  typed = string_take(typed, sz1);
-  return typed;
-}
-
