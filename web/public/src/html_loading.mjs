@@ -5,4 +5,16 @@ export function html_loading() {
   marker("1");
   let body = html_document_body();
   let div = html_div(root);
+  let s = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    background: "rgba(0, 0, 0, 0.6)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "1000",
+  };
 }
