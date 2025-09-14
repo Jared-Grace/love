@@ -13659,6 +13659,9 @@
   ],
   "body_element": [
    "html_document_body"
+  ],
+  "hd": [
+   "html_loading"
   ]
  },
  "functions": {
@@ -26178,7 +26181,8 @@
     "html_document_body",
     "marker",
     "html_loading",
-    "body"
+    "body",
+    "hd"
    ]
   }
  },
