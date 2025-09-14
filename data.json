@@ -13624,6 +13624,12 @@
   ],
   "verse_random_get": [
    "app_reply_main"
+  ],
+  "chapter_code2": [
+   "app_reply_main"
+  ],
+  "verse_number2": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -23948,7 +23954,7 @@
     "file_name",
     "destination",
     "index",
-    "verse_text",
+    "verse",
     "verse_random_get",
     "root",
     "copied",
@@ -23960,7 +23966,6 @@
     "verse_number",
     "n",
     "destination2",
-    "verse",
     "lambda6",
     "event",
     "key",
@@ -23983,6 +23988,9 @@
     "text",
     "component",
     "lambda3",
+    "chapter_code2",
+    "verse_number2",
+    "verse_text",
     "concated",
     "reference",
     "joined"
