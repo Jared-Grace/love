@@ -8,6 +8,8 @@ import { object_merge } from "./object_merge.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export async function ebible_verses_upload(bible_folder) {
   await ebible_version_download(bible_folder);
+  await ebible_chapters_each_verses(bible_folder, each_chapter2);
+  async function each_chapter2(chapter_code, verses) {}
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
