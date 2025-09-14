@@ -9,6 +9,7 @@ export function ebible_verses_include() {
     "nd",
     "p",
     "pc",
+    "pm",
     "pmo",
     "q",
     "q2",
