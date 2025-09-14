@@ -2014,7 +2014,8 @@
   "c html_style_set html_style_merge",
   "s merge",
   "s object_",
-  "n object_assign"
+  "n object_assign",
+  "r html_style_merge html_style_assign "
  ],
  "marker_current": "1",
  "function_current": "object_assign",
