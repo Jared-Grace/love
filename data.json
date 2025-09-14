@@ -2091,7 +2091,8 @@
    "app_reply_main",
    "html_parse_descendants_classes",
    "ebible_chapter_text",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "ebible_index_flat"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3001,7 +3002,8 @@
    "ebible_chapter_text",
    "ebible_verses",
    "html_p_text_multiple",
-   "folder_read_async"
+   "folder_read_async",
+   "ebible_index_flat"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4252,7 +4254,8 @@
    "list_index_of_delta_outside",
    "list_map_prefix_without",
    "object_property_get_name",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "ebible_index_flat"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11079,7 +11082,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "ebible_index_flat"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -26094,6 +26098,7 @@
   "ebible_index_flat": {
    "async": true,
    "identifiers": [
+    "each",
     "list_adder_async",
     "marker",
     "list_add_if_not_includes",
@@ -26119,6 +26124,9 @@
     "count",
     "chapter_name",
     "verse_numbers",
+    "list2",
+    "lambda2",
+    "item",
     "chapter",
     "list"
    ]
