@@ -4327,8 +4327,7 @@
    "list_empty_not_is",
    "list_index_is",
    "list_last_or_null",
-   "data_file_update_inner",
-   "ebible_chapter_text"
+   "data_file_update_inner"
   ],
   "e": [
    "catch_ignore",
@@ -4352,7 +4351,6 @@
    "function_exists_inner",
    "firebase_storage_exists",
    "catch_call",
-   "ebible_chapter_text",
    "cache_generic",
    "html_parse_classes_preview",
    "promise_wrap"
@@ -5232,8 +5230,7 @@
    "list_is_assert",
    "js_node_atomize",
    "function_current_set",
-   "http",
-   "ebible_chapter_text"
+   "http"
   ],
   "o": [
    "assert_json",
@@ -13741,6 +13738,9 @@
    "ebible_verses_upload"
   ],
   "j": [
+   "ebible_chapter_text"
+  ],
+  "list_empty_is_assert": [
    "ebible_chapter_text"
   ]
  },
@@ -25016,6 +25016,7 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
+    "list_empty_is_assert",
     "whitespace_normalize",
     "list_map",
     "html_parse_find_list_to",
@@ -25024,7 +25025,6 @@
     "css_class_prefix_combine",
     "ebible_verses_exclude",
     "ebible_verses_include",
-    "list_empty_is",
     "list_difference",
     "html_parse_descendants_classes",
     "html_parse_find_remove",
@@ -25033,7 +25033,6 @@
     "html_parse_find",
     "html_parse_read",
     "ebible_version_download_path_combine",
-    "assert_json",
     "ebible_chapter_text",
     "bible_folder",
     "chapter_code",
@@ -25048,7 +25047,6 @@
     "extra",
     "dictionary",
     "j",
-    "e",
     "lambda",
     "item",
     "selector2",
