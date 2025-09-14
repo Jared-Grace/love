@@ -2015,7 +2015,8 @@
   "s merge",
   "s object_",
   "n object_assign",
-  "r html_style_merge html_style_assign "
+  "r html_style_merge html_style_assign ",
+  "s remo"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
