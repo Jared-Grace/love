@@ -26,11 +26,10 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let dictionary = html_parse_classes_preview(main, d, extra);
-  const j = {
+  list_empty_is_assert(extra, {
     extra,
     dictionary,
-  };
-  list_empty_is_assert(extra, j);
+  });
   function lambda(item) {
     let selector2 = css_class_prefix_combine(item);
     html_parse_find_remove(main, selector2);
