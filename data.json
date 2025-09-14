@@ -2024,8 +2024,7 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with",
-   "app_reply_main"
+   "folder_find_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -23934,7 +23933,6 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
-    "log",
     "list_add_first",
     "ebible_verse_download",
     "list_join_space",
