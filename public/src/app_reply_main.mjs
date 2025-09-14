@@ -55,7 +55,7 @@ export async function app_reply_main() {
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
-    log(message);
+    log(key);
     typed += key;
     buttons_refresh();
   }
