@@ -1,6 +1,5 @@
 import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
@@ -118,7 +117,8 @@ export async function app_reply_main() {
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_texts = list_map_property(verses, "text");
-    let verse_text = list_join_space(verse_texts);
+    let reference = chapter_code2 + ":" + verse_number2;
+    let verse_text = list_join_newline_2(verse_texts);
     let concated = list_concat(
       copied,
       chapter_code2 + ":" + verse_number2 + " " + verse_text,
