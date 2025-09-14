@@ -13559,8 +13559,7 @@
   ],
   "ebible_index": [
    "ebible_index_upload",
-   "ebible_index",
-   "ebible_index_flat_upload"
+   "ebible_index"
   ],
   "ebible_firebase_upload": [
    "ebible_verses_upload",
@@ -13617,7 +13616,8 @@
    "folder_read_async"
   ],
   "ebible_index_flat": [
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "ebible_index_flat_upload"
   ],
   "ebible_index_flat_upload": [
    "ebible_index_flat_upload"
@@ -26118,11 +26118,11 @@
   "ebible_index_flat_upload": {
    "async": true,
    "identifiers": [
+    "ebible_index_flat",
     "list_join_slash_forward",
     "marker",
     "ebible_index_upload_name",
     "ebible_firebase_upload",
-    "ebible_index",
     "ebible_index_flat_upload",
     "bible_folder",
     "index",
