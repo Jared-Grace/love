@@ -2008,10 +2008,11 @@
   "s new",
   "s new,join",
   "s doc",
-  "n html_loading"
+  "n html_loading",
+  "o html_document_body"
  ],
  "marker_current": "1",
- "function_current": "html_loading",
+ "function_current": "html_document_body",
  "terminal": false,
  "identifiers": {
   "log": [
