@@ -4772,7 +4772,8 @@
    "string_lower_to",
    "string_base64_to",
    "buffer_string_to",
-   "html_loading"
+   "html_loading",
+   "html_style_merge"
   ],
   "a": [
    "string_suffix_without",
@@ -7010,8 +7011,7 @@
    "marker_next_index",
    "string_replace",
    "marker_rename",
-   "ebible_version_books_testament",
-   "html_style_merge"
+   "ebible_version_books_testament"
   ],
   "r": [
    "function_format",
@@ -7106,8 +7106,7 @@
    "marker_rename",
    "firebase_upload_string",
    "string_base64_to",
-   "firebase_upload_buffer",
-   "html_style_merge"
+   "firebase_upload_buffer"
   ],
   "i": [
    "function_identifier_replace",
@@ -11759,8 +11758,7 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove",
-   "html_style_merge"
+   "html_style_set_or_remove"
   ],
   "b_element": [
    "html_style_remove",
@@ -13527,8 +13525,7 @@
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove",
-   "html_style_merge"
+   "html_style_set_or_remove"
   ],
   "label_rules_text": [
    "html_text_set_if"
@@ -13705,9 +13702,6 @@
    "html_loading"
   ],
   "html_style_merge": [
-   "html_style_merge"
-  ],
-  "to2": [
    "html_style_merge"
   ]
  },
@@ -26253,12 +26247,8 @@
     "html_component_element_get",
     "html_style_merge",
     "b",
-    "style_key",
-    "style_value",
+    "s",
     "b_element",
-    "to2",
-    "to",
-    "from",
     "style"
    ]
   }
