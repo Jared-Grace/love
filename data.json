@@ -2010,7 +2010,8 @@
   "n html_loading",
   "o html_document_body",
   "s div",
-  "s style"
+  "s style",
+  "c html_style_set html_style_merge"
  ],
  "marker_current": "1",
  "function_current": "html_document_body",
