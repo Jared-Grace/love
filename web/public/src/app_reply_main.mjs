@@ -34,6 +34,7 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
+import { string_take } from "./string_take.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let ur = ebible_folder_urdu();
@@ -55,7 +56,8 @@ export async function app_reply_main() {
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
-    if (equal(left, right)) {
+    if (equal(key, "Backspace")) {
+      let taken = string_take(href, count);
     }
     typed += key;
     buttons_refresh();
