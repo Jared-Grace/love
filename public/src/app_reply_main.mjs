@@ -39,6 +39,7 @@ export async function app_reply_main() {
   let n = ebible_verses_upload_name(chapter_code, verse_number);
   let destination2 = ebible_firebase_upload_path(bible_folder, n);
   let verse = await firebase_storage_download_json(destination2);
+  let text3 = object_property_get(verse, "text");
   log(verse);
   return;
   const root = html_document_body();
