@@ -2705,7 +2705,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "app_reply_main"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -5688,8 +5689,7 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find_property",
-   "js_dollar_a",
-   "app_reply_main"
+   "js_dollar_a"
   ],
   "items": [
    "each_multiple",
@@ -6272,7 +6272,8 @@
    "js_dollar_choice_arguments_names",
    "html_parse_find_a_href_starts_with",
    "ebible_index",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "app_reply_main"
   ],
   "split": [
    "functions_combine_name",
@@ -6363,7 +6364,8 @@
    "ebible_versions",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
-   "list_map_prefix_without"
+   "list_map_prefix_without",
+   "app_reply_main"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -23929,6 +23931,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "list_first",
     "ebible_folder_urdu",
     "ebible_verses_upload_name",
@@ -24007,11 +24010,12 @@
     "text",
     "component",
     "lambda3",
-    "first",
-    "list",
     "chapter_code2",
     "verse_number2",
     "verse_text",
+    "mapped",
+    "list",
+    "property_name",
     "concated",
     "joined"
    ]
