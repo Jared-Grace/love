@@ -1998,10 +1998,10 @@
   "n folder_read_async",
   "s add",
   "s path,join",
-  "p",
   "sb",
   "s index",
   "cs ebible_index flat",
+  "p",
   "ebible_index_flat engbsb"
  ],
  "marker_current": "1",
