@@ -5729,7 +5729,6 @@
    "object_property_exists_not_assert",
    "firebase_upload_object",
    "file_write_json",
-   "ebible_verses_upload",
    "object_property_set_exists_not",
    "ebible_firebase_upload"
   ],
@@ -13418,7 +13417,6 @@
    "ebible_index_flat"
   ],
   "merged": [
-   "ebible_verses_upload",
    "firebase_upload_generic"
   ],
   "ebible_index_upload": [
@@ -25005,8 +25003,6 @@
     "v",
     "verse_number",
     "joined2",
-    "merged",
-    "object",
     "verse",
     "mapped"
    ]
