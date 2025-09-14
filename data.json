@@ -13706,6 +13706,9 @@
   "html_style_merge": [
    "html_style_merge",
    "html_loading"
+  ],
+  "strict": [
+   "object_merge"
   ]
  },
  "functions": {
@@ -20355,7 +20358,8 @@
     "lambda",
     "p",
     "value",
-    "list"
+    "list",
+    "strict"
    ],
    "async": false
   },
