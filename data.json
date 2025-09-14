@@ -2569,8 +2569,7 @@
    "firebase_storage_function_run",
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
-   "js_dollar_new_name",
-   "app_reply_main"
+   "js_dollar_new_name"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -11396,7 +11395,8 @@
   ],
   "name2": [
    "app_replace_home",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_reply_main"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -13060,7 +13060,8 @@
    "ebible_index",
    "ebible_firebase_upload_path",
    "ebible_index_flat",
-   "ebible_index_flat_upload"
+   "ebible_index_flat_upload",
+   "app_reply_main"
   ],
   "unzip": [
    "unzip",
@@ -13752,6 +13753,9 @@
    "app_reply_main"
   ],
   "languages": [
+   "app_reply_main"
+  ],
+  "bible_folder2": [
    "app_reply_main"
   ]
  },
@@ -24079,7 +24083,7 @@
     "swh",
     "languages",
     "name",
-    "code",
+    "bible_folder",
     "file_name",
     "destination",
     "index",
@@ -24101,16 +24105,18 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
-    "lambda7",
-    "chapter_code2",
-    "verse_number2",
-    "u",
     "component3",
     "component2",
     "lambda5",
     "item2",
-    "list",
+    "name2",
+    "bible_folder2",
+    "lambda7",
+    "chapter_code2",
+    "verse_number2",
+    "u",
     "component4",
+    "list",
     "choices",
     "lambda2",
     "item",
