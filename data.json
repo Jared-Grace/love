@@ -2906,7 +2906,8 @@
    "list_map_prefix_without",
    "promise_wrap",
    "ebible_chapters_each_verses",
-   "folder_read_async"
+   "folder_read_async",
+   "ebible_index_flat"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3000,8 +3001,7 @@
    "ebible_chapter_text",
    "ebible_verses",
    "html_p_text_multiple",
-   "folder_read_async",
-   "ebible_index_flat"
+   "folder_read_async"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -6863,7 +6863,8 @@
    "html_parse_descendants_classes",
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_index_flat"
   ],
   "node": [
    "function_dependencies",
@@ -26107,8 +26108,9 @@
     "bible_folder",
     "books",
     "index",
-    "lambda2",
     "list",
+    "lambda",
+    "la",
     "each_chapter",
     "chapter_code",
     "verses",
