@@ -12,7 +12,8 @@ export async function ebible_index_flat(bible_folder) {
   marker("1");
   let books = {};
   let index = [];
-  let list = await list_adder_async(async function lambda2() {});
+  async function lambda2() {}
+  let list = await list_adder_async(lambda2);
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
