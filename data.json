@@ -2035,8 +2035,7 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with",
-   "app_reply_main"
+   "folder_find_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -5810,7 +5809,8 @@
    "js_bang_to_not",
    "js_dollar_ie",
    "js_identifier_replace",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_reply_main"
   ],
   "left": [
    "equal",
@@ -5829,7 +5829,8 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading"
+   "html_loading",
+   "app_reply_main"
   ],
   "right": [
    "equal",
@@ -5847,7 +5848,8 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot"
+   "js_code_dot",
+   "app_reply_main"
   ],
   "eq": [
    "equal",
@@ -13730,9 +13732,6 @@
   "html_style_assign": [
    "html_style_assign",
    "html_loading"
-  ],
-  "$ie": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -24016,7 +24015,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
-    "log",
+    "equal",
     "list_add_first",
     "ebible_verse_download",
     "list_map_property",
@@ -24073,7 +24072,8 @@
     "lambda6",
     "event",
     "key",
-    "$ie",
+    "left",
+    "right",
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
