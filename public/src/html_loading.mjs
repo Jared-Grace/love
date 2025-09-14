@@ -1,4 +1,4 @@
-import { html_style_merge } from "./html_style_merge.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { marker } from "./marker.mjs";
@@ -18,5 +18,5 @@ export function html_loading() {
     alignItems: "center",
     zIndex: "1000",
   };
-  html_style_merge(div, s);
+  html_style_assign(div, s);
 }

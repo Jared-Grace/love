@@ -2018,7 +2018,7 @@
   "r html_style_merge html_style_assign "
  ],
  "marker_current": "1",
- "function_current": "object_assign",
+ "function_current": "html_style_assign",
  "terminal": false,
  "identifiers": {
   "log": [
