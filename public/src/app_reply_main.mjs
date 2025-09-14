@@ -36,7 +36,7 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_json(destination);
   log(index);
   let reference = list_random_item(index);
-  let verse = object_property_get(bible, reference);
+  let verse = await firebase_storage_download_json(destination);
   const root = html_document_body();
   let copied = [];
   let buttons = null;
