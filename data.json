@@ -1950,7 +1950,6 @@
   "fw ebible_chapter_text ebible_verses",
   "s find",
   "r html_parse_find_list_text html_parse_find_list_href_text",
-  "s ebible",
   "s filter,empty",
   "n whitespace_normalize",
   "s pair",
@@ -2016,7 +2015,8 @@
   "r html_style_merge html_style_assign ",
   "s remo",
   "s size",
-  "s verses"
+  "s verses",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
@@ -26308,7 +26308,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-14T20:35:27.042Z",
+ "git_push_when": "2025-09-14T21:41:17.746Z",
  "error_attention": null,
  "app_current": "replace"
 }
