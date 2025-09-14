@@ -1154,7 +1154,6 @@
   "ftc jbcgu sb",
   "ob",
   "f_name",
-  "s size",
   "nj bang_to_not",
   "u jv",
   "a jv js_visit",
@@ -2016,7 +2015,8 @@
   "s object_",
   "n object_assign",
   "r html_style_merge html_style_assign ",
-  "s remo"
+  "s remo",
+  "s size"
  ],
  "marker_current": "1",
  "function_current": "html_style_assign",
