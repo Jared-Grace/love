@@ -34,7 +34,7 @@ export async function app_reply_main() {
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(bible_folder, file_name);
   let index = await firebase_storage_download_json(destination);
-  let verse_text = await verse_random_get();
+  let verse = await verse_random_get();
   const root = html_document_body();
   let copied = [];
   let buttons = null;
@@ -46,8 +46,7 @@ export async function app_reply_main() {
     let n = ebible_verses_upload_name(chapter_code, verse_number);
     let destination2 = ebible_firebase_upload_path(bible_folder, n);
     let verse = await firebase_storage_download_json(destination2);
-    let verse_text = object_property_get(verse, "text");
-    return verse_text;
+    return verse;
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
@@ -56,7 +55,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function lambda4() {
-    verse_text = await verse_random_get();
+    verse = await verse_random_get();
     list_empty(copied);
     preview_refresh();
     chosens = [];
@@ -101,6 +100,9 @@ export async function app_reply_main() {
   preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
+    let chapter_code2 = object_property_get(verse, "chapter_code");
+    let verse_number2 = object_property_get(verse, "verse_number");
+    let verse_text = object_property_get(verse, "text");
     let concated = list_concat(copied, reference + " " + verse_text);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
