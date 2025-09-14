@@ -11611,8 +11611,7 @@
    "ebible_chapter_classes",
    "ebible_chapter_text",
    "ebible_versions",
-   "html_parse_find_a_href_starts_with",
-   "html_loading"
+   "html_parse_find_a_href_starts_with"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -26227,7 +26226,6 @@
     "html_loading",
     "body",
     "div",
-    "root",
     "s",
     "position",
     "top",
