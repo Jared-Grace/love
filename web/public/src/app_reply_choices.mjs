@@ -99,7 +99,7 @@ export function app_reply_choices() {
         " Sorry, I have nothing to give you at this time. May the LORD provide. May the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask.",
     },
     {
-      text: emoji_wave() + "Greetings",
+      text: emoji_wave() + " Greetings",
       response:
         emoji_wave() +
         emoji_smile() +
@@ -107,7 +107,7 @@ export function app_reply_choices() {
         emoji_cross(),
     },
     {
-      text: emoji_hands_raising() + "Hallelujah",
+      text: emoji_hands_raising() + " Hallelujah",
       response:
         emoji_hands_raising() +
         " Hallelujah! Hallelujah! Hallelujah! " +
@@ -115,13 +115,17 @@ export function app_reply_choices() {
     },
     heal,
     {
-      text: emoji_pray() + "Health",
+      text: emoji_pray() + " Health",
       response:
         emoji_pray() +
         " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine.",
     },
     {
-      text: emoji_ok() + "How day",
+      text: emoji_pray() + " Help",
+      response: "God help us" + prayer_end(),
+    },
+    {
+      text: emoji_ok() + " How day",
       response:
         emoji_ok() +
         " The day of the " +
