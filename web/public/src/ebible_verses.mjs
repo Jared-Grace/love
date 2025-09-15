@@ -1,3 +1,4 @@
+import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -20,6 +21,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     chapter_code,
   );
   text = whitespace_normalize(text);
+  text = urdu_allah_to_god(text);
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
