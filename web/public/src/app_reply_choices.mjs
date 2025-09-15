@@ -1,3 +1,4 @@
+import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_rainbow } from "./emoji_rainbow.mjs";
 import { string_the_servant_of_god } from "./string_the_servant_of_god.mjs";
 import { emoji_question } from "./emoji_question.mjs";
@@ -254,7 +255,9 @@ export function app_reply_choices() {
       text: emoji_pray() + " Testimony",
       response:
         emoji_pray() +
-        " Jesus died for my sins. " + emoji_rock()+ " Jesus was buried. Jesus rose to life. I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to minstry. " +
+        " Jesus died for my sins. " +
+        emoji_rock() +
+        " Jesus was buried. Jesus rose to life. I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to minstry. " +
         emoji_cross() +
         emoji_smile(),
     },
@@ -280,7 +283,3 @@ export function app_reply_choices() {
   ];
   return v;
 }
-function emoji_rock() {
-  return '🪨';
-}
-
