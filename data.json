@@ -3842,8 +3842,7 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "app_reply_main",
-   "ebible_version_books_testament"
+   "app_reply_main"
   ],
   "output": [
    "watch",
@@ -13134,8 +13133,7 @@
    "html_parse_text",
    "ebible_chapter_text",
    "html_parse_classes_preview",
-   "html_parse_href_text",
-   "ebible_version_books_testament"
+   "html_parse_href_text"
   ],
   "html_parse_list_text_to": [
    "html_parse_list_text_to"
@@ -24755,7 +24753,6 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
-    "html_parse_text",
     "ebible_chapter_code_to_book",
     "html_parse_find_list_href_text",
     "object_property_get",
@@ -24777,7 +24774,6 @@
     "lambda",
     "item",
     "href",
-    "name",
     "taken",
     "to",
     "book_code",
