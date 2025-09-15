@@ -13766,6 +13766,9 @@
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
    "ebible_verses"
+  ],
+  "emoji_rainbow": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -24235,6 +24238,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_rainbow",
     "string_the_servant_of_god",
     "emoji_question",
     "emoji_dove",
