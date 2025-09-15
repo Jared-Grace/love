@@ -3841,7 +3841,8 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_books_testament"
   ],
   "output": [
    "watch",
@@ -9486,8 +9487,7 @@
   "both": [
    "js_imports_declarations",
    "html_parse_href_text_map",
-   "html_parse_href_text",
-   "ebible_version_books_testament"
+   "html_parse_href_text"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -13390,8 +13390,7 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main",
-   "ebible_version_books_testament"
+   "app_reply_main"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13778,9 +13777,6 @@
   ],
   "emoji_rock": [
    "app_reply_choices"
-  ],
-  "d2": [
-   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -24780,9 +24776,7 @@
     "lambda",
     "item",
     "href",
-    "both",
-    "d2",
-    "item2",
+    "name",
     "taken",
     "to",
     "book_code",
