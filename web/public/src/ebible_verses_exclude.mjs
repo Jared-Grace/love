@@ -21,6 +21,7 @@ export function ebible_verses_exclude() {
     "rq",
     "s",
     "s2",
+    "s3",
     "sp",
     "tl",
     "tnav",
