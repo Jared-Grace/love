@@ -57,6 +57,10 @@ export function app_reply_choices() {
         prayer_end(),
     },
     {
+      text: emoji_pray() + " Bless short",
+      response: "God bless you" + prayer_end(),
+    },
+    {
       text: emoji_phone() + " Call why?",
       response:
         emoji_phone() +
