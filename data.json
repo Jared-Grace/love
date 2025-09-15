@@ -2009,7 +2009,6 @@
   "r html_style_merge html_style_assign ",
   "s remo",
   "s size",
-  "s ebible",
   "s inter",
   "ebible_verses_upload swhonen",
   "ps",
@@ -2023,7 +2022,8 @@
   "s emoji",
   "s upload",
   "p",
-  "ebible_verses_upload yor"
+  "ebible_verses_upload yor",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
