@@ -1921,7 +1921,6 @@
   "ebible_versions_download",
   "n ebible_verses",
   "ebible_chapters engbsb GEN",
-  "s text",
   "s href",
   "s list_to",
   "fd ebible_verses",
@@ -2023,7 +2022,8 @@
   "s upload",
   "p",
   "ebible_verses_upload yor",
-  "s ebible"
+  "s ebible",
+  "s text"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
@@ -26372,7 +26372,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-15T20:55:07.344Z",
+ "git_push_when": "2025-09-15T22:22:23.308Z",
  "error_attention": null,
  "app_current": "replace"
 }
