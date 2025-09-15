@@ -2012,13 +2012,13 @@
   "r html_style_merge html_style_assign ",
   "s remo",
   "s size",
-  "s verses",
   "s ebible",
   "s inter",
   "p",
   "ebible_verses_upload swhonen",
   "ps",
-  "n urdu_allah_to_god"
+  "n urdu_allah_to_god",
+  "s verses"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
