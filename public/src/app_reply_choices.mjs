@@ -180,6 +180,13 @@ export function app_reply_choices() {
         "🤝",
     },
     {
+      text: emoji_dove() + " Peace ",
+      response:
+        " 🎵 " +
+        emoji_voice() +
+        " Praise the LORD our God in the name of Jesus Christ! 🎶",
+    },
+    {
       text: "🎵 Praise",
       response:
         " 🎵 " +
