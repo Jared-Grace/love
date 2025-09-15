@@ -284,6 +284,10 @@ export function app_reply_choices() {
       response: emoji_phone() + " WhatsApp: +1-904-314-4052",
     },
     will,
+    {
+      text: emoji_pray() + " Wills",
+      response: emoji_pray() + " If God wills, yes",
+    },
     with2,
   ];
   return v;
