@@ -196,6 +196,7 @@ export function app_reply_choices() {
         string_the_servant_of_god_is() +
         " okay, yes " +
         emoji_100() +
+        " " +
         emoji_pray(),
     },
     {
