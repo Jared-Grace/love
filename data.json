@@ -1975,7 +1975,6 @@
   "s firebase,folde",
   "s folder",
   "s fireba,path",
-  "s upload",
   "d",
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
@@ -2022,7 +2021,8 @@
   "s reply",
   "s roc",
   "s ston",
-  "s emoji"
+  "s emoji",
+  "s upload"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
