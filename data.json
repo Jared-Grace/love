@@ -2017,10 +2017,11 @@
   "s inter",
   "p",
   "ebible_verses_upload swhonen",
-  "ps"
+  "ps",
+  "n urdu_allah_to_god"
  ],
  "marker_current": "1",
- "function_current": "html_style_assign",
+ "function_current": "urdu_allah_to_god",
  "terminal": false,
  "identifiers": {
   "log": [
