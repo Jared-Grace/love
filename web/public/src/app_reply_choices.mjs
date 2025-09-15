@@ -257,7 +257,9 @@ export function app_reply_choices() {
         emoji_pray() +
         " Jesus died for my sins. " +
         emoji_rock() +
-        " Jesus was buried. Jesus rose to life. I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to minstry. " +
+        " Jesus was buried. " +
+        emoji_rock() +
+        " Jesus rose to life. I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to minstry. " +
         emoji_cross() +
         emoji_smile(),
     },
