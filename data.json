@@ -2324,7 +2324,8 @@
    "html_loading",
    "html_style_merge",
    "object_assign",
-   "html_style_assign"
+   "html_style_assign",
+   "urdu_allah_to_god"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -13757,6 +13758,9 @@
   ],
   "bible_folder2": [
    "app_reply_main"
+  ],
+  "urdu_allah_to_god": [
+   "urdu_allah_to_god"
   ]
  },
  "functions": {
@@ -26340,9 +26344,16 @@
     "b_element",
     "style"
    ]
+  },
+  "urdu_allah_to_god": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "urdu_allah_to_god"
+   ]
   }
  },
- "git_push_when": "2025-09-14T21:41:17.746Z",
+ "git_push_when": "2025-09-15T02:34:25.613Z",
  "error_attention": null,
  "app_current": "replace"
 }
