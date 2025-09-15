@@ -9,6 +9,7 @@ export function ebible_verses_exclude() {
     "footnote",
     "ft",
     "fv",
+    "iex",
     "mt",
     "mr",
     "ms",
