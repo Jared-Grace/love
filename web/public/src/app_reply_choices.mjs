@@ -180,7 +180,7 @@ export function app_reply_choices() {
         "🤝",
     },
     {
-      text: emoji_dove() + " Peace ",
+      text: emoji_dove() + " Peace " + "🌈",
       response:
         " 🎵 " +
         emoji_voice() +
