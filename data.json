@@ -2324,8 +2324,7 @@
    "html_loading",
    "html_style_merge",
    "object_assign",
-   "html_style_assign",
-   "urdu_allah_to_god"
+   "html_style_assign"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3410,7 +3409,8 @@
    "sandbox",
    "folder_read_async",
    "app_reply_main",
-   "http"
+   "http",
+   "urdu_allah_to_god"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5316,7 +5316,8 @@
    "ebible_verse",
    "ebible_versions",
    "html_parse_classes_preview",
-   "html_parse_href_text"
+   "html_parse_href_text",
+   "urdu_allah_to_god"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -11929,7 +11930,8 @@
   "replace": [
    "date_now_file",
    "string_letters_only",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "urdu_allah_to_god"
   ],
   "file_name_json": [
    "file_name_json",
@@ -26348,8 +26350,10 @@
   "urdu_allah_to_god": {
    "async": false,
    "identifiers": [
-    "marker",
-    "urdu_allah_to_god"
+    "urdu_allah_to_god",
+    "text",
+    "v",
+    "replace"
    ]
   }
  },
