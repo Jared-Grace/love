@@ -24243,6 +24243,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_rock",
     "emoji_rainbow",
     "string_the_servant_of_god",
     "emoji_question",
@@ -24280,8 +24281,7 @@
     "with2",
     "v",
     "text",
-    "response",
-    "emoji_rock"
+    "response"
    ]
   },
   "string_lord_bless_your": {
