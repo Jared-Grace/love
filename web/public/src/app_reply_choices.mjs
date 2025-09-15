@@ -1,3 +1,4 @@
+import { emoji_rainbow } from "./emoji_rainbow.mjs";
 import { string_the_servant_of_god } from "./string_the_servant_of_god.mjs";
 import { emoji_question } from "./emoji_question.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
@@ -180,7 +181,7 @@ export function app_reply_choices() {
         "🤝",
     },
     {
-      text: emoji_dove() + " Peace " + "🌈",
+      text: emoji_dove() + " Peace " + emoji_rainbow(),
       response:
         " 🎵 " +
         emoji_voice() +
