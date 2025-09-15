@@ -189,6 +189,16 @@ export function app_reply_choices() {
         "🤝",
     },
     {
+      text: emoji_ok() + "Okay",
+      response:
+        emoji_ok() +
+        " " +
+        string_the_servant_of_god_is() +
+        " okay, yes " +
+        emoji_100() +
+        emoji_pray(),
+    },
+    {
       text: emoji_dove() + " Peace",
       response:
         emoji_dove() +
