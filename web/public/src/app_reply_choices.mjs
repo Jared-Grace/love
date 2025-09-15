@@ -254,7 +254,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Testimony",
       response:
         emoji_pray() +
-        " Jesus died for my sins. Jesus was buried. Jesus rose to life. I confessed this truth as a young child. But I never decided to fully obey Jesus as LORD until I was 26. " +
+        " Jesus died for my sins. Jesus was buried. Jesus rose to life. I confessed this truth as a young child. But I never decided to fully obey Jesus as LORD until I was about 26. " +
         emoji_smile(),
     },
     {
