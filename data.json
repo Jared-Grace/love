@@ -1993,7 +1993,6 @@
   "ebible_index_flat engbsb",
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
-  "s reply",
   "s upload,ver",
   "s verses,up",
   "sb",
@@ -2020,7 +2019,8 @@
   "n urdu_allah_to_god",
   "s verses",
   "ebible_verses urdgvu JHN07",
-  "ebible_verses_upload urdgvu"
+  "ebible_verses_upload urdgvu",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
