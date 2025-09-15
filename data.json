@@ -1788,7 +1788,6 @@
   "as app",
   "an reply",
   "s hash",
-  "s emoji",
   "s copy",
   "n browser_is",
   "s main",
@@ -2022,7 +2021,8 @@
   "ebible_verses_upload urdgvu",
   "s reply",
   "s roc",
-  "s ston"
+  "s ston",
+  "s emoji"
  ],
  "marker_current": "1",
  "function_current": "urdu_allah_to_god",
