@@ -9486,7 +9486,8 @@
   "both": [
    "js_imports_declarations",
    "html_parse_href_text_map",
-   "html_parse_href_text"
+   "html_parse_href_text",
+   "ebible_version_books_testament"
   ],
   "imports_self": [
    "js_imports_missing"
@@ -13236,7 +13237,8 @@
   ],
   "html_parse_href_text": [
    "html_parse_href_text_map",
-   "html_parse_href_text"
+   "html_parse_href_text",
+   "ebible_version_books_testament"
   ],
   "html_parse_href_text_map": [
    "html_parse_href_text_map",
@@ -13388,7 +13390,8 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_books_testament"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13775,6 +13778,9 @@
   ],
   "emoji_rock": [
    "app_reply_choices"
+  ],
+  "d2": [
+   "ebible_version_books_testament"
   ]
  },
  "functions": {
@@ -24752,6 +24758,7 @@
   "ebible_version_books_testament": {
    "async": true,
    "identifiers": [
+    "html_parse_href_text",
     "ebible_chapter_code_to_book",
     "html_parse_find_list_href_text",
     "object_property_get",
@@ -24773,6 +24780,9 @@
     "lambda",
     "item",
     "href",
+    "both",
+    "d2",
+    "item2",
     "taken",
     "to",
     "book_code",
