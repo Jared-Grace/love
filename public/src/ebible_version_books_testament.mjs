@@ -16,11 +16,12 @@ export async function ebible_version_books_testament(bible_folder, selector) {
   let mapped = html_parse_find_list_href_text(bl, selector, d);
   function lambda(item) {
     let href = object_property_get(item, "href");
-    let both = html_parse_href_text(d2, item2);
+    let name = html_parse_href_text(d, item);
     let taken = ebible_chapter_code_to_book(href);
     let to = object_merge(
       {
         book_code: taken,
+        name,
       },
       item,
     );
