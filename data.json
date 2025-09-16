@@ -3491,8 +3491,7 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad",
-   "retry"
+   "number_pad"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6074,7 +6073,8 @@
   "success": [
    "file_exists",
    "schtasks_query",
-   "throws_not_async"
+   "throws_not_async",
+   "retry"
   ],
   "F_OK": [
    "file_exists"
@@ -26946,7 +26946,7 @@
     "wait",
     "result",
     "lambda2",
-    "v",
+    "success",
     "e"
    ]
   }
