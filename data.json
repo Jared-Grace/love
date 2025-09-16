@@ -2055,7 +2055,7 @@
   "cs each_range from"
  ],
  "marker_current": "1",
- "function_current": "range_from",
+ "function_current": "each_range_from",
  "terminal": false,
  "identifiers": {
   "log": [
