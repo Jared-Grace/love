@@ -9811,7 +9811,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "sandbox"
   ],
   "fds": [
    "js_outside_move"
@@ -20994,6 +20995,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_filter_property",
     "string_to",
     "list_adder_async",
     "each_pair_async",
