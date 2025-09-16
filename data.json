@@ -2037,7 +2037,8 @@
   "sb",
   "s list,map",
   "cs list_map_prefix_without any",
-  "s starts"
+  "s starts",
+  "is list_any_starts_with"
  ],
  "marker_current": "1",
  "function_current": "list_map_prefix_without_any",
