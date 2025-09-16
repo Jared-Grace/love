@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -62,6 +63,7 @@ export async function sandbox() {
       }
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
+        log(message);
         let result = list_filter_property(verses, "verse_number", verse_number);
         la(result);
       }
