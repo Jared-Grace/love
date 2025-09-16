@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_filter_string_empty_not_is } from "./list_map_filter_string_empty_not_is.mjs";
 import { list_map_split_space } from "./list_map_split_space.mjs";
@@ -22,6 +23,7 @@ export async function sandbox() {
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   function lambda(item) {}
-  let mapped5 = list_map(list, lambda);
+  let first = list_first(list);
+  let mapped5 = list_map(mapped4, lambda);
   return mapped4;
 }
