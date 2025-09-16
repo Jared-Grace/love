@@ -1,3 +1,4 @@
+import { list_adder_async } from "./list_adder_async.mjs";
 import { log } from "./log.mjs";
 import { each_range_async } from "./each_range_async.mjs";
 import { error } from "./error.mjs";
@@ -6,6 +7,7 @@ export async function retry(lambda) {
   let wait = 1000;
   let result = null;
   let success = false;
+  let list = await list_adder_async(async function lambda3(la) {});
   async function lambda2() {
     try {
       result = await lambda();
