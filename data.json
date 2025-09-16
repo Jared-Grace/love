@@ -2104,8 +2104,7 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2807,7 +2806,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "sandbox"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -6493,7 +6493,8 @@
    "ebible_index",
    "ebible_index_flat",
    "app_reply_main",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "split": [
    "functions_combine_name",
@@ -6591,7 +6592,8 @@
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "range_from",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -11361,7 +11363,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -21184,18 +21187,21 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map_property",
     "ebible_version_books_testament_apocrypha",
     "ebible_books_to_chapter_codes",
     "ebible_chapters_each_verses_list",
     "ebible_chapters_each_verses_check",
-    "log",
     "sandbox",
     "bible_folder",
     "books",
     "list",
     "each_chapter",
     "chapter_code",
-    "verses"
+    "verses",
+    "mapped",
+    "list2",
+    "property_name"
    ],
    "async": true
   },
