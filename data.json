@@ -2142,8 +2142,7 @@
    "ebible_chapter_text",
    "html_p_text_multiple",
    "ebible_index_flat",
-   "each_range_from",
-   "each_range_from_async"
+   "each_range_from"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3079,8 +3078,7 @@
    "ebible_index_flat",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox",
-   "each_range_from_async"
+   "sandbox"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4353,8 +4351,7 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "range_from",
-   "each_range_from_async"
+   "range_from"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11236,8 +11233,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "each_range_from_async"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -26794,15 +26790,11 @@
     "each_async",
     "range_from",
     "marker",
-    "each",
     "each_range_from_async",
     "from",
     "to",
     "lambda",
-    "list",
-    "lambda2",
-    "item",
-    "list2"
+    "list"
    ]
   }
  },
