@@ -13341,8 +13341,7 @@
    "ebible_index_flat_upload",
    "app_reply_main",
    "ebible_references_parse",
-   "ebible_verse_download",
-   "sandbox"
+   "ebible_verse_download"
   ],
   "unzip": [
    "unzip",
@@ -21174,7 +21173,6 @@
     "log",
     "ebible_chapters_each_verses_check_with",
     "sandbox",
-    "bible_folder",
     "each_chapter",
     "chapter_code",
     "verses"
