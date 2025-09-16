@@ -3461,8 +3461,7 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god",
-   "sandbox"
+   "urdu_allah_to_god"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10808,7 +10807,8 @@
    "function_aliases_restore"
   ],
   "m": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "sandbox"
   ],
   "mr": [
    "function_aliases_restore"
@@ -20889,7 +20889,7 @@
     "verse_range",
     "verse_start",
     "verse_end",
-    "v",
+    "m",
     "list"
    ],
    "async": true
