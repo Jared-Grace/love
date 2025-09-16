@@ -802,7 +802,6 @@
   "a fnu function_name_unalias",
   "fs data_watch_set",
   "t add_return",
-  "o e",
   "a li list_is",
   "ac li lin",
   "a li list_includes",
@@ -2052,10 +2051,11 @@
   "s add",
   "p",
   "range_from 10 20",
-  "cs each_range from"
+  "cs each_range from",
+  "o e"
  ],
  "marker_current": "1",
- "function_current": "each_range_from",
+ "function_current": "each",
  "terminal": false,
  "identifiers": {
   "log": [
