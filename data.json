@@ -5796,7 +5796,8 @@
    "app_reply_main",
    "ebible_index_flat_upload",
    "each_multiple_async",
-   "each_index_async"
+   "each_index_async",
+   "sandbox"
   ],
   "lists_get": [
    "each_multiple",
@@ -8311,7 +8312,8 @@
    "marker_index",
    "marker_leave",
    "app_replace_rule_parse",
-   "list_index_of_delta_outside"
+   "list_index_of_delta_outside",
+   "sandbox"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -11302,7 +11304,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13601,7 +13604,8 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "sandbox"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -21017,6 +21021,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_index_of",
     "list_map_unordered_async",
     "ebible_folder_urdu",
     "each",
@@ -21084,6 +21089,9 @@
     "m",
     "lambda6",
     "verses",
+    "index",
+    "list2",
+    "item2",
     "verses_all",
     "lambda5",
     "lambda4",
