@@ -3415,7 +3415,6 @@
    "string_lord_bless",
    "string_may_the_lord",
    "ebible_book_code_size",
-   "sandbox",
    "folder_read_async",
    "app_reply_main",
    "http",
@@ -20663,9 +20662,8 @@
     "ebible_version_books",
     "ebible_folder_english",
     "sandbox",
-    "v",
-    "books",
-    "bible_folder"
+    "bible_folder",
+    "books"
    ],
    "async": true
   },
