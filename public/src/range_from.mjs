@@ -6,7 +6,8 @@ export function range_from(from, to) {
   let count = to - from + 1;
   let r = range(count);
   function lambda(item) {
-    return item + count;
+    let v = item + count;
+    return v;
   }
   let mapped = list_map(r, lambda);
   return r;
