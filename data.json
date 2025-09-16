@@ -3212,7 +3212,8 @@
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4330,7 +4331,8 @@
    "list_find_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4516,7 +4518,8 @@
    "js_declaration_param_add_node",
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -20814,6 +20817,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_add",
     "each_pair",
     "list_map_prefix_any",
     "list_map_first",
@@ -20840,6 +20844,8 @@
     "mapped3",
     "mapped4",
     "chapter_verses_list",
+    "list",
+    "item",
     "lambda",
     "book_name",
     "chapter_verses"
