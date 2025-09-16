@@ -1980,7 +1980,6 @@
   "s index",
   "c ebible_index_upload ebible_index_flat_upload",
   "s upload,ver",
-  "s verses,up",
   "s list,add",
   "s new,join",
   "s doc",
@@ -2058,7 +2057,8 @@
   "p",
   "sb",
   "cs each_pair async",
-  "cs each_multiple async"
+  "cs each_multiple async",
+  "s verses,up"
  ],
  "marker_current": "1",
  "function_current": "each_multiple_async",
