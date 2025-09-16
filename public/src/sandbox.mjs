@@ -19,6 +19,7 @@ export async function sandbox() {
       return sw;
     }
     let any = list_any(mapped, lambda2);
+    return any;
   }
   let filtered = list_filter(split, lambda);
 }
