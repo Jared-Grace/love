@@ -4707,7 +4707,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "retry"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -26940,6 +26941,7 @@
    "async": true,
    "identifiers": [
     "each_range_async",
+    "error",
     "retry",
     "lambda",
     "count",
