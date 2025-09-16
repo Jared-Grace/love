@@ -1863,7 +1863,6 @@
   "c file_read file_read_buffer",
   "fd file_write",
   "cs file_overwrite buffer",
-  "s read",
   "s write",
   "cs file_write buffer",
   "http_local https://www.google.com",
@@ -2034,7 +2033,8 @@
   "c string_split_comma string_split_newline",
   "sb",
   "ac flr fdr",
-  "a flr file_read"
+  "a flr file_read",
+  "s read"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
