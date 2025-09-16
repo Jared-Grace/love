@@ -37,7 +37,8 @@ export async function sandbox() {
   let bible_folders = [v2, bible_folder];
   let books = await ebible_version_books(bible_folder);
   async function lambda5(item2) {
-    return await ebible_version_books(item2);
+    let v = await ebible_version_books(item2);
+    return v;
   }
   let mapped5 = list_map(list2, lambda5);
   let mapped = list_map_property(books, "text");
