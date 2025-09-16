@@ -2032,12 +2032,12 @@
   "ac flr fdr",
   "a flr file_read",
   "s read",
-  "s starts",
   "p",
   "as any",
   "sb",
   "s list,map",
-  "cs list_map_prefix_without any"
+  "cs list_map_prefix_without any",
+  "s starts"
  ],
  "marker_current": "1",
  "function_current": "list_map_prefix_without_any",
