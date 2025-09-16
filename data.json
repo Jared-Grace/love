@@ -2042,7 +2042,7 @@
   "c list_any_starts_with list_find_starts_with"
  ],
  "marker_current": "1",
- "function_current": "list_map_prefix_without_any",
+ "function_current": "list_find_starts_with",
  "terminal": false,
  "identifiers": {
   "log": [
