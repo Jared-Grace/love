@@ -11293,8 +11293,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -21062,7 +21061,6 @@
     "verse_number",
     "result",
     "e",
-    "list2",
     "list"
    ],
    "async": true
