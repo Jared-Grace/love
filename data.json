@@ -2769,7 +2769,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "sandbox"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4014,7 +4015,8 @@
    "html_parse_find_remove",
    "list_map_prefix_without",
    "html_loading",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "sandbox"
   ],
   "separator": [
    "watch",
@@ -9763,7 +9765,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "sandbox"
   ],
   "fds": [
    "js_outside_move"
@@ -9991,7 +9994,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "sandbox"
   ],
   "list_find": [
    "list_find",
@@ -13585,7 +13589,8 @@
    "ebible_verses_upload",
    "ebible_verse",
    "ebible_index_flat",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "ebible_verse": [
    "ebible_verses",
@@ -13612,7 +13617,8 @@
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -13818,8 +13824,7 @@
    "app_reply_main"
   ],
   "chapter_code2": [
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "verse_number2": [
    "app_reply_main"
@@ -13910,8 +13915,7 @@
    "app_reply_main"
   ],
   "bible_folder2": [
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -20921,6 +20925,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_filter_property",
     "ebible_verses",
     "equal",
     "number_pad",
@@ -20977,10 +20982,13 @@
     "verse_start",
     "verse_end",
     "m",
+    "verses",
     "lambda4",
+    "verse_number",
+    "result",
     "list2",
-    "bible_folder2",
-    "chapter_code2",
+    "property_name",
+    "property_value",
     "list"
    ],
    "async": true
