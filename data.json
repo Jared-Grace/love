@@ -2956,8 +2956,7 @@
    "ebible_index_flat",
    "html_loading",
    "list_map_prefix_without_any",
-   "list_filter_starts_with_any",
-   "sandbox"
+   "list_filter_starts_with_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4317,8 +4316,7 @@
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4981,8 +4979,7 @@
    "ebible_chapter_text",
    "ebible_verses_upload",
    "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "sandbox"
+   "list_map_prefix_without_any"
   ],
   "functions_names": [
    "functions_names",
@@ -5925,8 +5922,7 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "Error": [
    "error",
@@ -9187,8 +9183,7 @@
    "js_dollar",
    "js_identifier_unique",
    "string_empty_not_is",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -13875,6 +13870,9 @@
    "sandbox"
   ],
   "mapped4": [
+   "sandbox"
+  ],
+  "list_map_string_empty_not_is": [
    "sandbox"
   ]
  },
@@ -20761,8 +20759,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_empty_not_is",
-    "list_map",
+    "list_map_string_empty_not_is",
     "list_map_split_space",
     "list_map_prefix_without_any",
     "marker",
@@ -20782,9 +20779,6 @@
     "verse_references",
     "mapped2",
     "mapped3",
-    "lambda",
-    "item",
-    "ne",
     "mapped4"
    ],
    "async": true
