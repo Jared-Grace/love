@@ -2336,7 +2336,8 @@
    "html_loading",
    "html_style_merge",
    "object_assign",
-   "html_style_assign"
+   "html_style_assign",
+   "string_split_newline"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26384,6 +26385,7 @@
   "string_split_newline": {
    "async": false,
    "identifiers": [
+    "marker",
     "string_split",
     "string_split_newline",
     "f_names",
