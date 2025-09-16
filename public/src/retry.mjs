@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { each_range_async } from "./each_range_async.mjs";
 import { error } from "./error.mjs";
 export async function retry(lambda) {
@@ -10,7 +11,9 @@ export async function retry(lambda) {
       result = await lambda();
       success = true;
       return success;
-    } catch (e) {}
+    } catch (e) {
+      log(message);
+    }
   }
   await each_range_async(count, lambda2);
   if (success) {
