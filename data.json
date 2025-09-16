@@ -1977,7 +1977,6 @@
   "is folder_read",
   "is folder_find_starts_with",
   "n folder_read_async",
-  "s add",
   "s path,join",
   "cs ebible_index flat",
   "ebible_index_flat engbsb",
@@ -2050,7 +2049,8 @@
   "s multi",
   "a lmi list_multiple_is",
   "s range",
-  "fws range from"
+  "fws range from",
+  "s add"
  ],
  "marker_current": "1",
  "function_current": "range_from",
