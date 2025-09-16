@@ -2061,7 +2061,7 @@
   "cs each_multiple async"
  ],
  "marker_current": "1",
- "function_current": "each_pair_async",
+ "function_current": "each_multiple_async",
  "terminal": false,
  "identifiers": {
   "log": [
