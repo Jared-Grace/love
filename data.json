@@ -3180,8 +3180,7 @@
    "ebible_chapters_each_verses",
    "ebible_index_flat",
    "list_add_first",
-   "string_split_newline",
-   "sandbox"
+   "string_split_newline"
   ],
   "v": [
    "data_identifiers_file",
@@ -20682,8 +20681,7 @@
     "bible_folder",
     "books",
     "path",
-    "split",
-    "list"
+    "split"
    ],
    "async": true
   },
