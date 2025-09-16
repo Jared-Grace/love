@@ -1,6 +1,7 @@
 export function ebible_verses_exclude() {
   let v = [
     "b",
+    "bdit",
     "chapterlabel",
     "copyright",
     "f",
