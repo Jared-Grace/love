@@ -20780,10 +20780,10 @@
     "verse_references",
     "mapped2",
     "mapped3",
-    "mapped4",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped4",
+    "list"
    ],
    "async": true
   },
