@@ -5926,8 +5926,7 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading",
-   "sandbox"
+   "html_loading"
   ],
   "right": [
    "equal",
@@ -5945,8 +5944,7 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "sandbox"
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -20967,8 +20965,6 @@
     "first",
     "second",
     "pad_count",
-    "left",
-    "right",
     "v",
     "num",
     "length",
