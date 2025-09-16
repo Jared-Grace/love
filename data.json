@@ -3490,7 +3490,8 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad"
+   "number_pad",
+   "retry"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -26941,6 +26942,7 @@
     "count",
     "wait",
     "lambda2",
+    "v",
     "e"
    ]
   }
