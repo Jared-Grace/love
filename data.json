@@ -2104,7 +2104,8 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3601,7 +3602,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21185,6 +21187,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "list_map_property",
     "ebible_version_books_testament_apocrypha",
     "ebible_books_to_chapter_codes",
@@ -21197,7 +21200,8 @@
     "each_chapter",
     "chapter_code",
     "verses",
-    "mapped"
+    "mapped",
+    "message"
    ],
    "async": true
   },
