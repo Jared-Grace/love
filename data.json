@@ -2054,11 +2054,11 @@
   "sp ad",
   "n number_pad",
   "s ebible",
-  "p",
   "sb",
   "cs each_pair async",
   "cs each_multiple async",
   "s verses,up",
+  "p",
   "ebible_verses_upload hin2017"
  ],
  "marker_current": "1",
