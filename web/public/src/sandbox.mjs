@@ -47,7 +47,7 @@ export async function sandbox() {
       if (equal(book_code, "PSA")) {
         pad_count = 3;
       }
-      let chapter_number = number_pad(first, pad_count);
+      let chapter_padded = number_pad(first, pad_count);
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
       let verse_end = null;
