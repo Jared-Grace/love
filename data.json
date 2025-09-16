@@ -10234,8 +10234,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "firebase_upload_generic"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -25994,7 +25993,6 @@
     "metadata",
     "cacheControl",
     "lambda",
-    "console",
     "url",
     "name",
     "save"
