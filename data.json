@@ -11305,8 +11305,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -11963,8 +11962,7 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set",
-   "sandbox"
+   "app_replace_rule_set"
   ],
   "html_style_remove": [
    "html_style_remove",
@@ -21096,8 +21094,6 @@
     "verses_all",
     "lambda5",
     "item2",
-    "list2",
-    "index2",
     "lambda4",
     "verse_number",
     "result",
