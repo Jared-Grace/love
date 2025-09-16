@@ -4,6 +4,7 @@ import { marker } from "./marker.mjs";
 export function range_from(count) {
   marker("1");
   let r = range(count);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return r;
 }

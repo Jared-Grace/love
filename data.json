@@ -2970,7 +2970,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox"
+   "sandbox",
+   "range_from"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3220,7 +3221,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox"
+   "sandbox",
+   "range_from"
   ],
   "v": [
    "data_identifiers_file",
@@ -4338,7 +4340,8 @@
    "list_find_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "range_from"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5003,7 +5006,8 @@
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "range_from"
   ],
   "functions_names": [
    "functions_names",
@@ -6465,7 +6469,8 @@
    "list_map_prefix_without",
    "sandbox",
    "list_map_prefix_without_any",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "range_from"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -26726,11 +26731,16 @@
   "range_from": {
    "async": false,
    "identifiers": [
+    "list_map",
     "range",
     "marker",
     "range_from",
     "count",
-    "r"
+    "r",
+    "mapped",
+    "list",
+    "lambda",
+    "item"
    ]
   }
  },
