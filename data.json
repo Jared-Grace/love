@@ -20840,11 +20840,11 @@
     "mapped4",
     "chapter_verses",
     "lambda3",
-    "list_a",
-    "list_b",
     "lambda",
     "a",
-    "b"
+    "b",
+    "list_a",
+    "list_b"
    ],
    "async": true
   },
