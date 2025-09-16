@@ -46,6 +46,7 @@ export async function sandbox() {
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
+      log(message);
       let pad_count = 2;
       if (equal(book_code, "PSA")) {
         pad_count = 3;
@@ -63,7 +64,9 @@ export async function sandbox() {
       }
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
-        log(verse_number);
+        log({
+          verse_number,
+        });
         let result = list_filter_property(verses, "verse_number", verse_number);
         la(result);
       }
