@@ -1760,7 +1760,6 @@
   "atn calls_to_each",
   "ts",
   "ftc js_calls_to_each app_new",
-  "s split",
   "s null",
   "s ;et",
   "s let",
@@ -2028,7 +2027,8 @@
   "n sandbox",
   "o sb",
   "s version",
-  "s eng"
+  "s eng",
+  "s split"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
