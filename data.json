@@ -2947,7 +2947,6 @@
    "folder_read_async",
    "ebible_index_flat",
    "html_loading",
-   "list_filter_starts_with_any",
    "list_map_prefix_without_any"
   ],
   "previous": [
@@ -13841,6 +13840,9 @@
   ],
   "prefixes2": [
    "list_map_prefix_without_any"
+  ],
+  "list_any_starts_with": [
+   "list_filter_starts_with_any"
   ]
  },
  "functions": {
@@ -26467,7 +26469,7 @@
     "list_filter_starts_with_any",
     "prefixes",
     "list",
-    "lambda",
+    "list_any_starts_with",
     "item",
     "lambda2",
     "item2",
