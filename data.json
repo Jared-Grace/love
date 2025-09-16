@@ -2086,7 +2086,8 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "sandbox"
+   "sandbox",
+   "each_range_from_async"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3572,7 +3573,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "each_range_from_async"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -26909,6 +26911,7 @@
   "each_range_from_async": {
    "async": true,
    "identifiers": [
+    "log",
     "each_async",
     "range_from",
     "marker",
@@ -26916,7 +26919,8 @@
     "from",
     "to",
     "lambda",
-    "list"
+    "list",
+    "message"
    ]
   },
   "number_pad": {
