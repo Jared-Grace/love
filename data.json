@@ -13997,11 +13997,11 @@
    "each_range_from_async"
   ],
   "each_range_from": [
-   "each_range_from",
-   "sandbox"
+   "each_range_from"
   ],
   "each_range_from_async": [
-   "each_range_from_async"
+   "each_range_from_async",
+   "sandbox"
   ]
  },
  "functions": {
@@ -20887,7 +20887,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "each_range_from",
+    "each_range_from_async",
     "list_multiple_is",
     "list_second",
     "list_first",
