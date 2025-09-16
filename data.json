@@ -2034,7 +2034,7 @@
   "c string_split_comma string_split_newline"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "string_split_newline",
  "terminal": false,
  "identifiers": {
   "log": [
