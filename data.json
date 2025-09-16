@@ -3526,7 +3526,8 @@
    "number_pad",
    "ebible_folder_english",
    "ebible_index_flat_upload_name",
-   "ebible_index_upload_name"
+   "ebible_index_upload_name",
+   "ebible_version_books"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14276,6 +14277,9 @@
   "ebible_books_to_chapter_codes": [
    "ebible_chapter_codes",
    "sandbox"
+  ],
+  "ebible_class_apocrypha": [
+   "ebible_version_books"
   ]
  },
  "functions": {
@@ -25820,6 +25824,7 @@
   "ebible_version_books": {
    "async": true,
    "identifiers": [
+    "ebible_class_apocrypha",
     "ebible_version_books_testament",
     "list_join_comma_space",
     "ebible_class_old",
@@ -25828,6 +25833,7 @@
     "bible_folder",
     "n",
     "o",
+    "v",
     "classes",
     "books"
    ]
