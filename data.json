@@ -3061,7 +3061,8 @@
    "folder_read_async",
    "ebible_index_flat",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "sandbox"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3212,7 +3213,8 @@
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -6954,7 +6956,8 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_verses",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "sandbox"
   ],
   "node": [
    "function_dependencies",
@@ -8242,7 +8245,8 @@
    "list_squash",
    "marker_down_choices_lambda",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -13928,9 +13932,6 @@
    "sandbox"
   ],
   "chapter_verses_list": [
-   "sandbox"
-  ],
-  "lad": [
    "sandbox"
   ]
  },
@@ -20817,6 +20818,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_adder",
     "each_pair",
     "list_map_prefix_any",
     "list_map_first",
@@ -20843,7 +20845,9 @@
     "mapped3",
     "mapped4",
     "chapter_verses_list",
-    "lad",
+    "list",
+    "lambda2",
+    "la",
     "lambda",
     "book_name",
     "chapter_verses"
