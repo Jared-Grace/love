@@ -1,5 +1,5 @@
+import { list_map_prefix_without_any } from "./list_map_prefix_without_any.mjs";
 import { marker } from "./marker.mjs";
-import { list_map_prefix_without } from "./list_map_prefix_without.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { file_read } from "./file_read.mjs";
@@ -15,6 +15,6 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
-  let mapped2 = list_map_prefix_without(list, prefix);
-  return verse_references;
+  let mapped2 = list_map_prefix_without_any(list, prefix);
+  return mapped2;
 }
