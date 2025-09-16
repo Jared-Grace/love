@@ -1,3 +1,4 @@
+import { number_pad } from "./number_pad.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { each_range_from_async } from "./each_range_from_async.mjs";
@@ -41,6 +42,7 @@ export async function sandbox() {
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
+      let v = number_pad(num);
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
       let verse_end = null;
