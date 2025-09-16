@@ -26737,10 +26737,10 @@
     "range_from",
     "count",
     "r",
-    "mapped",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped",
+    "list"
    ]
   }
  },
