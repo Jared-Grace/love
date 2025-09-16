@@ -7196,7 +7196,8 @@
    "list_random_item",
    "integer_random",
    "js_statement_return_empty_add",
-   "range_from"
+   "range_from",
+   "sandbox"
   ],
   "formatted": [
    "function_format",
@@ -14061,7 +14062,8 @@
   "range_from": [
    "range_from",
    "each_range_from",
-   "each_range_from_async"
+   "each_range_from_async",
+   "sandbox"
   ],
   "each_range_from": [
    "each_range_from"
@@ -21023,6 +21025,7 @@
     "string_split_newline",
     "ebible_version_books",
     "ebible_folder_english",
+    "range_from",
     "sandbox",
     "bible_folder",
     "books",
@@ -21057,6 +21060,7 @@
     "lambda4",
     "verse_number",
     "result",
+    "r",
     "list"
    ],
    "async": true
