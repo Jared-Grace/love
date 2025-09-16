@@ -2806,8 +2806,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "sandbox"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -11363,8 +11362,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -21199,9 +21197,7 @@
     "each_chapter",
     "chapter_code",
     "verses",
-    "mapped",
-    "list2",
-    "property_name"
+    "mapped"
    ],
    "async": true
   },
