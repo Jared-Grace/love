@@ -2075,16 +2075,16 @@
   "s text",
   "is ebible_chapter_text",
   "s chapter",
-  "o evu",
   "p",
   "ebible_chapters_each_verses_check engwebu",
   "s ebible",
   "ect engwebu SIR01",
   "o sb",
-  "u evu"
+  "u evu",
+  "o evu"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "ebible_verses_upload",
  "terminal": false,
  "identifiers": {
   "log": [
