@@ -4612,7 +4612,6 @@
   ],
   "lambda3": [
    "error_attention_set",
-   "each_pair",
    "js_call_new_code",
    "js_dollar_a",
    "js_identifier_defineds",
@@ -13921,6 +13920,9 @@
   ],
   "chapter_verses": [
    "sandbox"
+  ],
+  "lambda$a$b": [
+   "each_pair"
   ]
  },
  "functions": {
@@ -14571,7 +14573,7 @@
     "each_pair",
     "list_a",
     "list_b",
-    "lambda3",
+    "lambda$a$b",
     "lists",
     "lambda",
     "items",
