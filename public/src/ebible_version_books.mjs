@@ -5,7 +5,7 @@ import { ebible_class_new } from "./ebible_class_new.mjs";
 export async function ebible_version_books(bible_folder) {
   const n = ebible_class_new();
   let o = ebible_class_old();
-  let classes = list_join_comma_space([o, n]);
+  let classes = list_join_comma_space([o, ".aa", n]);
   let books = await ebible_version_books_testament(bible_folder, classes);
   return books;
 }
