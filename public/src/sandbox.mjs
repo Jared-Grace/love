@@ -90,7 +90,7 @@ export async function sandbox() {
           if (ne) {
             function lambda3(item) {
               let text = object_property_get(item, "text");
-              la(book_name + " " + first + ":" + verse_number + " " + text);
+              la(text2 + " " + first + ":" + verse_number + " " + text);
             }
             each(result, lambda3);
           }
