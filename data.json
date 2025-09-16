@@ -10141,7 +10141,8 @@
   "length": [
    "list_size",
    "string_size",
-   "number_pad"
+   "number_pad",
+   "sandbox"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -20960,6 +20961,7 @@
     "second",
     "v",
     "num",
+    "length",
     "verse_range",
     "verse_start",
     "verse_end",
