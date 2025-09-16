@@ -2033,7 +2033,6 @@
   "s read",
   "p",
   "as any",
-  "sb",
   "s list,map",
   "s starts",
   "is list_any_starts_with",
@@ -2042,7 +2041,8 @@
   "is list_map_prefix_without",
   "cs list_map_prefix_without any",
   "s list_map_prefix_without",
-  "o sb"
+  "o sb",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
