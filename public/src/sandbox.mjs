@@ -1,7 +1,6 @@
 import { string_to } from "./string_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { equal } from "./equal.mjs";
 import { number_pad } from "./number_pad.mjs";
@@ -64,8 +63,8 @@ export async function sandbox() {
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
-        let result = list_filter_property(verses, "verse_number", verse_number);
-        la(result);
+        let result = list_find_property(verses, "verse_number", verse_number);
+        la(book_name + " " + second + " ");
       }
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
