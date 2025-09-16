@@ -11203,8 +11203,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13950,9 +13949,6 @@
   "string_split_colon": [
    "sandbox"
   ],
-  "split3": [
-   "sandbox"
-  ],
   "string_split_dash": [
    "sandbox"
   ],
@@ -13960,6 +13956,9 @@
    "sandbox"
   ],
   "verse_end": [
+   "sandbox"
+  ],
+  "verse_range": [
    "sandbox"
   ]
  },
@@ -20887,11 +20886,10 @@
     "split2",
     "first",
     "second",
-    "split3",
+    "verse_range",
     "verse_start",
     "verse_end",
     "v",
-    "list2",
     "list"
    ],
    "async": true
