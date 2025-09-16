@@ -6587,7 +6587,8 @@
   "functions_search": [
    "functions_search",
    "functions_search_open",
-   "tasks_run"
+   "tasks_run",
+   "retry"
   ],
   "search": [
    "functions_search",
@@ -6595,7 +6596,8 @@
    "function_aliases_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "retry"
   ],
   "function_open": [
    "functions_search_open",
@@ -10125,7 +10127,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "http"
+   "http",
+   "retry"
   ],
   "list_last_is": [
    "list_last_is"
@@ -26949,6 +26952,7 @@
   "retry": {
    "async": true,
    "identifiers": [
+    "functions_search",
     "error_json",
     "list_adder_async",
     "log",
@@ -26964,6 +26968,8 @@
     "lambda2",
     "e",
     "message",
+    "result2",
+    "search",
     "errors"
    ]
   }
