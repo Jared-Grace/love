@@ -1,3 +1,4 @@
+import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
@@ -72,6 +73,7 @@ export async function sandbox() {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
+  let list2 = await list_adder_async(async function lambda3(la2) {});
   let list = list_adder(lambda2);
   return list;
 }
