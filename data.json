@@ -13606,8 +13606,7 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -14134,6 +14133,9 @@
    "sandbox"
   ],
   "books_all": [
+   "sandbox"
+  ],
+  "$r": [
    "sandbox"
   ]
  },
@@ -21086,8 +21088,8 @@
     "verse_end",
     "m",
     "lambda6",
-    "item2",
     "verses",
+    "$r",
     "waited",
     "list2",
     "lambda5",
