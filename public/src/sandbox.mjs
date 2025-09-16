@@ -1,3 +1,4 @@
+import { list_map_prefix_any } from "./list_map_prefix_any.mjs";
 import { list_map_first } from "./list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "./list_map_filter_string_empty_not_is.mjs";
 import { list_map_split_space } from "./list_map_split_space.mjs";
@@ -18,6 +19,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
+  let mapped6 = list_map_prefix_any(verse_references, mapped);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
