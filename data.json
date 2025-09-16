@@ -2028,7 +2028,8 @@
   "s version",
   "s eng",
   "s split",
-  "s new"
+  "s new",
+  "s newline"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
