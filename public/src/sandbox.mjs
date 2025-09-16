@@ -72,7 +72,8 @@ export async function sandbox() {
       la({
         verse_start,
         verse_end,
-      });      log({
+      });
+      log({
         book_name,
         chapter_verses,
         verse_start,
