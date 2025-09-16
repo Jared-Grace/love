@@ -41,6 +41,7 @@ export async function sandbox() {
       if (false) {
         second2 = list_second(split3);
       } else {
+        second2 = first2;
       }
     }
     each_pair(book_names, chapter_verses_list, lambda);
