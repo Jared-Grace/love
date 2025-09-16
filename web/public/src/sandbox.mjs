@@ -1,5 +1,4 @@
-import { list_map } from "./list_map.mjs";
-import { string_split_space } from "./string_split_space.mjs";
+import { list_map_split_space } from "./list_map_split_space.mjs";
 import { list_map_prefix_without_any } from "./list_map_prefix_without_any.mjs";
 import { marker } from "./marker.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
@@ -18,10 +17,6 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
-  function lambda(item) {
-    let split2 = string_split_space(item);
-    return split2;
-  }
-  let mapped3 = list_map(mapped2, lambda);
+  let mapped3 = list_map_split_space(mapped2);
   return mapped3;
 }
