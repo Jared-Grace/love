@@ -1,3 +1,4 @@
+import { list_filter } from "./list_filter.mjs";
 import { file_read } from "./file_read.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -8,5 +9,6 @@ export async function sandbox() {
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
+  let filtered = list_filter(list, function lambda(item) {});
   return split;
 }
