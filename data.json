@@ -1527,7 +1527,6 @@
   "nj imports_paths_fix",
   "fts js_imports_paths_fix",
   "ftc js_imports_paths_fix app_replace",
-  "o r",
   "o oe",
   "fws o app",
   "as html",
@@ -2052,10 +2051,11 @@
   "p",
   "range_from 10 20",
   "cs each_range from",
-  "o e"
+  "o e",
+  "o r"
  ],
  "marker_current": "1",
- "function_current": "each",
+ "function_current": "function_rename",
  "terminal": false,
  "identifiers": {
   "log": [
