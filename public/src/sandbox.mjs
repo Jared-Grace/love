@@ -63,7 +63,7 @@ export async function sandbox() {
       }
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
-        log(message);
+        log(verse_number);
         let result = list_filter_property(verses, "verse_number", verse_number);
         la(result);
       }
