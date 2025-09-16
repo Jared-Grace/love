@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { string_to } from "./string_to.mjs";
@@ -68,7 +69,7 @@ export async function sandbox() {
         let result = list_filter_property(verses, "verse_number", verse_number);
         let ne = list_empty_not_is(result);
         if (ne) {
-          let first2 = list_first(list2);
+          each(list2, function lambda3(item) {});
           la(book_name + " " + second + " ");
         }
       }
