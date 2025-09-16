@@ -2078,7 +2078,8 @@
   "is ebible_chapter_text",
   "o sb",
   "s chapter",
-  "o evu"
+  "o evu",
+  "ebible_chapters_each_verses_check engwebu"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses_upload",
