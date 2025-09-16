@@ -9673,8 +9673,7 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with",
-   "list_find_starts_with"
+   "list_any_starts_with"
   ],
   "match": [
    "js_node_types_is",
@@ -9919,7 +9918,8 @@
   "list_find": [
    "list_find",
    "list_find_property",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "list_find_starts_with"
   ],
   "undefined_not_is_assert_lambda": [
    "list_get",
@@ -26525,8 +26525,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "list_any",
     "string_starts_with",
+    "list_find",
     "list_find_starts_with",
     "item",
     "prefixes",
