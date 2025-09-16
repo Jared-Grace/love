@@ -1938,7 +1938,6 @@
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
   "fw ebible_chapter_text ebible_verses",
-  "s find",
   "r html_parse_find_list_text html_parse_find_list_href_text",
   "s filter,empty",
   "n whitespace_normalize",
@@ -2054,7 +2053,8 @@
   "o r",
   "o rg",
   "s range",
-  "cs each_range_from async"
+  "cs each_range_from async",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "each_range_from_async",
