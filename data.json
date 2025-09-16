@@ -2738,8 +2738,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "sandbox"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -20697,7 +20696,6 @@
     "bible_folder",
     "books",
     "mapped",
-    "property_name",
     "file_path",
     "contents",
     "split",
