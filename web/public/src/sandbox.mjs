@@ -72,6 +72,10 @@ export async function sandbox() {
         let result = list_filter_property(verses, "verse_number", verse_number);
         la(result);
       }
+      log({
+        verse_start,
+        verse_end,
+      });
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
