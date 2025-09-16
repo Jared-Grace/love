@@ -12,6 +12,6 @@ export async function sandbox() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
-    log(message);
+    log(mapped);
   }
 }
