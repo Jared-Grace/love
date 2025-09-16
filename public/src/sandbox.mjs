@@ -18,8 +18,9 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
-  function lambda(item) {}
+  function lambda(item) {
+    let split2 = string_split_space(s);
+  }
   let mapped3 = list_map(list, lambda);
-  let split2 = string_split_space(s);
   return mapped2;
 }
