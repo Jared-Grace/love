@@ -3185,7 +3185,8 @@
    "ebible_chapters_each_verses",
    "ebible_index_flat",
    "list_add_first",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4317,7 +4318,8 @@
    "marker_functionize",
    "visit_unique_async",
    "list_remove_if_exists",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -5310,7 +5312,8 @@
    "string_includes",
    "js_node_types_includes",
    "list_remove_if_exists",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -13415,7 +13418,8 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -20686,6 +20690,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_includes",
     "list_map_property",
     "list_filter",
     "file_read",
@@ -20701,6 +20706,9 @@
     "split",
     "lambda",
     "item",
+    "includes",
+    "list",
+    "item2",
     "filtered"
    ],
    "async": true
