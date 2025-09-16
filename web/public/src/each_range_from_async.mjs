@@ -5,6 +5,8 @@ import { marker } from "./marker.mjs";
 export async function each_range_from_async(from, to, lambda) {
   marker("1");
   let list = range_from(from, to);
-  log(message);
+  log({
+    list,
+  });
   await each_async(list, lambda);
 }
