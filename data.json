@@ -1871,7 +1871,6 @@
   "s app",
   "o an",
   "s js,dec",
-  "s code",
   "n js_code_dot",
   "s dot",
   "s body",
@@ -2081,7 +2080,8 @@
   "u evu",
   "o evu",
   "p",
-  "sb"
+  "sb",
+  "s code"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses_upload",
