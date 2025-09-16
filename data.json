@@ -2083,7 +2083,8 @@
   "sb",
   "s code",
   "s codes",
-  "fws ebible_version_books_testament apocrypha"
+  "fws ebible_version_books_testament apocrypha",
+  "s apoc"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
