@@ -3531,8 +3531,7 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha",
-   "sandbox"
+   "ebible_version_books_testament_apocrypha"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14070,8 +14069,7 @@
    "app_reply_main"
   ],
   "bible_folder2": [
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -21193,11 +21191,9 @@
     "log",
     "sandbox",
     "bible_folder",
+    "books",
     "list",
     "each_chapter",
-    "v",
-    "bible_folder2",
-    "books",
     "chapter_code",
     "verses"
    ],
