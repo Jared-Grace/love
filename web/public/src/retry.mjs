@@ -1,5 +1,4 @@
-import { each_range } from "./each_range.mjs";
-export function retry() {
-  function lambda2() {}
-  each_range(count, lambda2);
+import { each_range_async } from "./each_range_async.mjs";
+export async function retry() {
+  await each_range_async(count, async function lambda2() {});
 }
