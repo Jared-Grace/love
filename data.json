@@ -2054,7 +2054,8 @@
   "o rg",
   "s range",
   "cs each_range_from async",
-  "s find"
+  "s find",
+  "sp ad"
  ],
  "marker_current": "1",
  "function_current": "each_range_from_async",
