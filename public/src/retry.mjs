@@ -1,9 +1,10 @@
 import { each_range_async } from "./each_range_async.mjs";
-export async function retry() {
+export async function retry(lambda) {
   let count = 5;
   let wait = 1000;
   async function lambda2() {
     try {
+      lambda();
       let v = true;
       return v;
     } catch (e) {}
