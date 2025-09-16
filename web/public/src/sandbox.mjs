@@ -13,5 +13,5 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   function lambda(item) {}
   let filtered = list_filter(split, lambda);
-  return split;
+  return books;
 }
