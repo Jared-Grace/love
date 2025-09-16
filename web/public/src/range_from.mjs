@@ -1,9 +1,11 @@
+import { integer_to } from "./integer_to.mjs";
 import { log } from "./log.mjs";
 import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { marker } from "./marker.mjs";
 export function range_from(from, to) {
+  let i = integer_to(input);
   marker("1");
   log({
     from,
