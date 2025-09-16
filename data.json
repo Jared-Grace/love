@@ -14272,8 +14272,7 @@
    "string_split_dash"
   ],
   "ebible_chapters_each_verses_check_with": [
-   "ebible_verses_upload",
-   "sandbox"
+   "ebible_verses_upload"
   ],
   "ebible_chapters_each_verses_list": [
    "ebible_chapters_each_verses",
@@ -21176,7 +21175,6 @@
     "ebible_chapters_each_verses_list",
     "ebible_chapters_each_verses_check",
     "log",
-    "ebible_chapters_each_verses_check_with",
     "sandbox",
     "bible_folder",
     "list",
