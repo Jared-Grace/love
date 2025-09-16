@@ -26930,15 +26930,15 @@
    ]
   },
   "each_pair_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "each_multiple_async",
     "marker",
     "each_pair_async",
     "list_a",
     "list_b",
     "lambda$a$b",
     "lists",
-    "each_multiple_async",
     "lambda",
     "items",
     "a",
