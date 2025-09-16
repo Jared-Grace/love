@@ -38,7 +38,8 @@ export async function sandbox() {
   let bible_folder = ebible_folder_english();
   marker("1");
   let v2 = ebible_folder_urdu();
-  let bible_folders = [v2, bible_folder];
+  let v = ebible_folder_english();
+  let bible_folders = [v2, v];
   let books = await ebible_version_books(bible_folder);
   let books_all = await list_map_unordered_async(
     bible_folders,
