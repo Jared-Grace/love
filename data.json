@@ -10777,8 +10777,7 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep",
-   "retry"
+   "sleep"
   ],
   "Math": [
    "date_diff_ms",
@@ -26967,7 +26966,6 @@
     "lambda2",
     "e",
     "message",
-    "ms",
     "errors"
    ]
   }
