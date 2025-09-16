@@ -42,6 +42,7 @@ export async function sandbox() {
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
+      let pad_count = 2;
       let v = number_pad(num, length);
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
