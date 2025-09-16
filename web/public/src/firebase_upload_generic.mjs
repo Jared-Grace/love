@@ -16,7 +16,8 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     settings,
   );
   await lambda();
-  await retry(async function lambda3() {});
+  async function lambda3() {}
+  await retry(lambda3);
   console.log(`Uploaded data to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   console.log("Accessible at:", url);
