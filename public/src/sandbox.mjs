@@ -22,5 +22,5 @@ export async function sandbox() {
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let mapped5 = list_map_first(mapped4);
-  return mapped4;
+  return mapped5;
 }
