@@ -2361,7 +2361,8 @@
    "list_find_starts_with",
    "sandbox",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "range_from"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -5836,7 +5837,8 @@
    "marker_functionize",
    "range",
    "each_range_async",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "range_from"
   ],
   "each_range": [
    "each_range",
@@ -5857,7 +5859,8 @@
    "list_slice_count",
    "ebible_chapter_code_to_book",
    "ebible_index",
-   "sandbox"
+   "sandbox",
+   "range_from"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -7117,7 +7120,8 @@
    "list_remove_all_multiple",
    "list_random_item",
    "integer_random",
-   "js_statement_return_empty_add"
+   "js_statement_return_empty_add",
+   "range_from"
   ],
   "formatted": [
    "function_format",
@@ -13964,6 +13968,9 @@
   ],
   "verse_range": [
    "sandbox"
+  ],
+  "range_from": [
+   "range_from"
   ]
  },
  "functions": {
@@ -26714,6 +26721,16 @@
     "item",
     "prefix",
     "mapped"
+   ]
+  },
+  "range_from": {
+   "async": false,
+   "identifiers": [
+    "range",
+    "marker",
+    "range_from",
+    "count",
+    "r"
    ]
   }
  },
