@@ -2402,7 +2402,8 @@
    "each_multiple_async",
    "each_index_async",
    "each",
-   "range"
+   "range",
+   "ebible_verses_upload"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -25656,6 +25657,7 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
+    "marker",
     "ebible_version_download",
     "ebible_verses_upload_name",
     "ebible_firebase_upload",
