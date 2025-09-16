@@ -2987,7 +2987,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "each_pair_async"
+   "each_pair_async",
+   "each_multiple_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3085,7 +3086,8 @@
    "ebible_index_flat",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox"
+   "sandbox",
+   "each_multiple_async"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4361,7 +4363,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "range_from"
+   "range_from",
+   "each_multiple_async"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5705,7 +5708,8 @@
    "each_index",
    "each_multiple",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "each_multiple_async"
   ],
   "index": [
    "each_index",
@@ -5762,11 +5766,13 @@
    "ebible_index_upload",
    "ebible_index",
    "app_reply_main",
-   "ebible_index_flat_upload"
+   "ebible_index_flat_upload",
+   "each_multiple_async"
   ],
   "lists_get": [
    "each_multiple",
-   "lists_get"
+   "lists_get",
+   "each_multiple_async"
   ],
   "list_first": [
    "each_multiple",
@@ -5781,7 +5787,8 @@
    "list_first_second_generic",
    "js_dollar_a",
    "app_reply_main",
-   "sandbox"
+   "sandbox",
+   "each_multiple_async"
   ],
   "each_multiple": [
    "each_multiple",
@@ -5792,7 +5799,8 @@
    "each_pair",
    "lists_get",
    "list_concat_multiple",
-   "each_pair_async"
+   "each_pair_async",
+   "each_multiple_async"
   ],
   "first": [
    "each_multiple",
@@ -5804,7 +5812,8 @@
    "function_type_first",
    "list_find_property",
    "js_dollar_a",
-   "sandbox"
+   "sandbox",
+   "each_multiple_async"
   ],
   "items": [
    "each_multiple",
@@ -5814,7 +5823,8 @@
    "list_adder_unique_async",
    "list_add_multiple",
    "marker_functionize",
-   "each_pair_async"
+   "each_pair_async",
+   "each_multiple_async"
   ],
   "object_properties": [
    "each_object",
@@ -14053,7 +14063,8 @@
    "each_pair_async"
   ],
   "each_multiple_async": [
-   "each_pair_async"
+   "each_pair_async",
+   "each_multiple_async"
   ]
  },
  "functions": {
@@ -26889,6 +26900,22 @@
     "items",
     "a",
     "b"
+   ]
+  },
+  "each_multiple_async": {
+   "async": false,
+   "identifiers": [
+    "lists_get",
+    "each_index",
+    "list_first",
+    "each_multiple_async",
+    "lists",
+    "lambda",
+    "first",
+    "lambda2",
+    "item",
+    "index",
+    "items"
    ]
   }
  },
