@@ -5,7 +5,8 @@ import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { marker } from "./marker.mjs";
 export function range_from(from, to) {
-  let i = integer_to(input);
+  from = integer_to(from);
+  to = integer_to(to);
   marker("1");
   log({
     from,
