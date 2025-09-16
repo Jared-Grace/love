@@ -5437,7 +5437,8 @@
    "ebible_versions",
    "html_parse_classes_preview",
    "html_parse_href_text",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "sandbox"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -21067,6 +21068,7 @@
     "ne",
     "lambda3",
     "item",
+    "text",
     "list"
    ],
    "async": true
