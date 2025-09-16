@@ -9,6 +9,7 @@ export async function sandbox() {
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  let filtered = list_filter(list, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   return split;
 }
