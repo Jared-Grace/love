@@ -1,5 +1,5 @@
+import { string_split_colon } from "./string_split_colon.mjs";
 import { list_first_second } from "./list_first_second.mjs";
-import { string_split } from "./string_split.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { list_map_prefix_any } from "./list_map_prefix_any.mjs";
@@ -30,7 +30,7 @@ export async function sandbox() {
   let chapter_verses_list = list_map_first(mapped4);
   function lambda2(la) {
     function lambda(book_name, chapter_verses) {
-      let split2 = string_split(chapter_verses, ":");
+      let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
     }
     each_pair(book_names, chapter_verses_list, lambda);
