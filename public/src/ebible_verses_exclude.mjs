@@ -11,6 +11,7 @@ export function ebible_verses_exclude() {
     "ft",
     "fv",
     "iex",
+    "is",
     "io",
     "iot",
     "ip",
