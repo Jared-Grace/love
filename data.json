@@ -2075,7 +2075,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2769,8 +2770,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "sandbox"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3550,7 +3550,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -9994,8 +9995,7 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda",
-   "sandbox"
+   "object_property_equals_lambda"
   ],
   "list_find": [
    "list_find",
@@ -11245,8 +11245,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -20925,6 +20924,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "list_filter_property",
     "ebible_verses",
     "equal",
@@ -20986,9 +20986,7 @@
     "lambda4",
     "verse_number",
     "result",
-    "list2",
-    "property_name",
-    "property_value",
+    "message",
     "list"
    ],
    "async": true
