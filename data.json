@@ -6587,8 +6587,7 @@
   "functions_search": [
    "functions_search",
    "functions_search_open",
-   "tasks_run",
-   "retry"
+   "tasks_run"
   ],
   "search": [
    "functions_search",
@@ -6596,8 +6595,7 @@
    "function_aliases_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run",
-   "retry"
+   "tasks_run"
   ],
   "function_open": [
    "functions_search_open",
@@ -10127,8 +10125,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "http",
-   "retry"
+   "http"
   ],
   "list_last_is": [
    "list_last_is"
@@ -10780,7 +10777,8 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep"
+   "sleep",
+   "retry"
   ],
   "Math": [
    "date_diff_ms",
@@ -13199,7 +13197,8 @@
   ],
   "sleep": [
    "http",
-   "sleep"
+   "sleep",
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -26952,7 +26951,7 @@
   "retry": {
    "async": true,
    "identifiers": [
-    "functions_search",
+    "sleep",
     "error_json",
     "list_adder_async",
     "log",
@@ -26968,8 +26967,7 @@
     "lambda2",
     "e",
     "message",
-    "result2",
-    "search",
+    "ms",
     "errors"
    ]
   }
