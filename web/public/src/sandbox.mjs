@@ -1,3 +1,4 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { each } from "./each.mjs";
@@ -72,6 +73,7 @@ export async function sandbox() {
         let verses = await ebible_verses(bible_folder, chapter_code);
         return verses;
       }
+      let index = list_index_of(list2, item2);
       let verses_all = await list_map_unordered_async(bible_folders, lambda6);
       async function lambda5(verses, books) {
         async function lambda4(verse_number) {
