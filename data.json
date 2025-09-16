@@ -3531,7 +3531,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4671,7 +4672,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "sandbox"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -20845,6 +20847,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "error",
     "list_multiple_is",
     "list_second",
     "list_first",
@@ -20890,6 +20893,7 @@
     "verse_start",
     "verse_end",
     "m",
+    "message",
     "list"
    ],
    "async": true
