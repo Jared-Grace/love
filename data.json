@@ -3479,8 +3479,7 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad",
-   "sandbox"
+   "number_pad"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10142,8 +10141,7 @@
   ],
   "length": [
    "list_size",
-   "string_size",
-   "sandbox"
+   "string_size"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -14020,8 +14018,7 @@
    "sandbox"
   ],
   "num": [
-   "number_pad",
-   "sandbox"
+   "number_pad"
   ],
   "String": [
    "number_pad"
@@ -14030,6 +14027,9 @@
    "number_pad"
   ],
   "pad_count": [
+   "sandbox"
+  ],
+  "chapter_number": [
    "sandbox"
   ]
  },
@@ -20965,9 +20965,7 @@
     "first",
     "second",
     "pad_count",
-    "v",
-    "num",
-    "length",
+    "chapter_number",
     "verse_range",
     "verse_start",
     "verse_end",
