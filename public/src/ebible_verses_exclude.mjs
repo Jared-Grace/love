@@ -20,6 +20,7 @@ export function ebible_verses_exclude() {
     "mr",
     "ms",
     "ms2",
+    "mt2",
     "nb",
     "notebackref",
     "notemark",
