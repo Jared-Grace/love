@@ -4987,7 +4987,8 @@
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
    "object_assign",
-   "each_pair_async"
+   "each_pair_async",
+   "sandbox"
   ],
   "without": [
    "string_suffix_without",
@@ -5245,8 +5246,7 @@
    "ebible_chapter_codes",
    "ebible_chapters_each_verses",
    "each_range_from_async",
-   "each_index_async",
-   "sandbox"
+   "each_index_async"
   ],
   "f_paths": [
    "data_files_update",
@@ -5308,7 +5308,8 @@
    "html_style_set",
    "html_style_merge",
    "html_style_assign",
-   "each_pair_async"
+   "each_pair_async",
+   "sandbox"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5898,11 +5899,13 @@
   ],
   "list_a": [
    "each_pair",
-   "each_pair_async"
+   "each_pair_async",
+   "sandbox"
   ],
   "list_b": [
    "each_pair",
-   "each_pair_async"
+   "each_pair_async",
+   "sandbox"
   ],
   "range": [
    "each_range",
@@ -11304,8 +11307,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13603,8 +13605,7 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -21020,7 +21021,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "each_async",
     "list_wait",
     "list_map",
     "ebible_folder_urdu",
@@ -21088,9 +21088,11 @@
     "verse_start",
     "verse_end",
     "m",
+    "list_a",
+    "list_b",
     "lambda5",
-    "item2",
-    "list2",
+    "a",
+    "b",
     "verses",
     "lambda4",
     "verse_number",
