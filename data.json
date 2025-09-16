@@ -2365,7 +2365,8 @@
    "sandbox",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26762,6 +26763,7 @@
   "each_range_from": {
    "async": false,
    "identifiers": [
+    "marker",
     "range",
     "each",
     "each_range_from",
