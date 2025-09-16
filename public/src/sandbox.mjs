@@ -70,6 +70,7 @@ export async function sandbox() {
         let ne = list_empty_not_is(result);
         if (ne) {
           function lambda3(item) {
+            let text = object_property_get(item, "text");
             la(book_name + " " + second + " ");
           }
           each(result, lambda3);
