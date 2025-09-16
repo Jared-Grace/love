@@ -11148,8 +11148,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "list_map_prefix_without_any"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13825,17 +13824,14 @@
   ],
   "list_filter_starts_with_any": [
    "sandbox",
-   "list_filter_starts_with_any",
-   "list_map_prefix_without_any"
+   "list_filter_starts_with_any"
   ],
   "list_map_prefix_without_any": [
    "list_map_prefix_without_any"
   ],
-  "prefixes2": [
-   "list_map_prefix_without_any"
-  ],
   "list_any_starts_with": [
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "list_map_prefix_without_any"
   ]
  },
  "functions": {
@@ -26467,7 +26463,7 @@
   "list_map_prefix_without_any": {
    "async": false,
    "identifiers": [
-    "list_filter_starts_with_any",
+    "list_any_starts_with",
     "marker",
     "list_map",
     "string_prefix_without",
@@ -26477,8 +26473,6 @@
     "lambda",
     "item",
     "verse_references",
-    "prefixes2",
-    "list2",
     "result",
     "prefix",
     "mapped"
