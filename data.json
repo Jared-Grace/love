@@ -12972,7 +12972,8 @@
    "whitespace_normalize"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "typed": [
    "app_reply_main"
@@ -13604,8 +13605,7 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -14135,6 +14135,9 @@
    "sandbox"
   ],
   "verses_all": [
+   "sandbox"
+  ],
+  "book2": [
    "sandbox"
   ]
  },
@@ -21093,7 +21096,8 @@
     "index",
     "verses_all",
     "lambda5",
-    "item2",
+    "book2",
+    "text2",
     "lambda4",
     "verse_number",
     "result",
