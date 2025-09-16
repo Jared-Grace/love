@@ -2008,7 +2008,6 @@
   "s emoji",
   "s upload",
   "ebible_verses_upload yor",
-  "s ebible",
   "s text",
   "ebible_version_books_testament_new engbsb",
   "s books",
@@ -2056,7 +2055,8 @@
   "cs each_range_from async",
   "s find",
   "sp ad",
-  "n number_pad"
+  "n number_pad",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "number_pad",
