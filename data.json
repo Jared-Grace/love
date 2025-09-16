@@ -1777,7 +1777,6 @@
   "s return",
   "s object,la",
   "s js,call",
-  "s empty",
   "s brack",
   "c js_code_wrap_braces js_code_wrap_brackets",
   "fw js_code_wrap_brackets js_code_brackets_empty",
@@ -2043,7 +2042,8 @@
   "s list_map_prefix_without",
   "o sb",
   "s map",
-  "sb"
+  "sb",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
