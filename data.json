@@ -2035,7 +2035,8 @@
   "s read",
   "s starts",
   "p",
-  "sb"
+  "sb",
+  "as any"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
