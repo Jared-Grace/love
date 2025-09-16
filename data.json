@@ -5855,8 +5855,7 @@
    "each_range",
    "js_identifier_defineds",
    "js_dollar_a_generic",
-   "sandbox",
-   "each_range_from"
+   "sandbox"
   ],
   "count": [
    "each_range",
@@ -13987,7 +13986,8 @@
    "sandbox"
   ],
   "range_from": [
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "each_range_from": [
    "each_range_from"
@@ -26764,7 +26764,7 @@
   "each_range_from": {
    "async": false,
    "identifiers": [
-    "each_range",
+    "range_from",
     "marker",
     "each",
     "each_range_from",
