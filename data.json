@@ -5742,7 +5742,8 @@
    "list_single",
    "list_first_second_generic",
    "js_dollar_a",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "each_multiple": [
    "each_multiple",
@@ -5763,7 +5764,8 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find_property",
-   "js_dollar_a"
+   "js_dollar_a",
+   "sandbox"
   ],
   "items": [
    "each_multiple",
@@ -20788,6 +20790,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_first",
     "list_map",
     "list_map_filter_string_empty_not_is",
     "list_map_split_space",
@@ -20812,8 +20815,9 @@
     "mapped4",
     "lambda",
     "item",
-    "mapped5",
-    "list"
+    "first",
+    "list",
+    "mapped5"
    ],
    "async": true
   },
