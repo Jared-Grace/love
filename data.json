@@ -2085,7 +2085,8 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3571,7 +3572,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20992,6 +20994,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "list_adder_async",
     "each_pair_async",
     "list_filter_property",
@@ -21037,6 +21040,7 @@
     "lambda",
     "book_name",
     "chapter_verses",
+    "message",
     "book",
     "book_code",
     "split2",
