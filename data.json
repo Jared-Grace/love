@@ -2944,8 +2944,7 @@
    "ebible_chapters_each_verses",
    "folder_read_async",
    "ebible_index_flat",
-   "html_loading",
-   "sandbox"
+   "html_loading"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3040,8 +3039,7 @@
    "ebible_verses",
    "html_p_text_multiple",
    "folder_read_async",
-   "ebible_index_flat",
-   "sandbox"
+   "ebible_index_flat"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4297,8 +4295,7 @@
    "list_map_prefix_without",
    "object_property_get_name",
    "string_starts_with_not",
-   "list_add_first",
-   "sandbox"
+   "list_add_first"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6459,8 +6456,7 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_verses",
-   "list_filter_starts_with",
-   "sandbox"
+   "list_filter_starts_with"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9185,8 +9181,7 @@
    "http",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not",
-   "sandbox"
+   "string_starts_with_not"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -9651,8 +9646,7 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set",
-   "sandbox"
+   "app_replace_rule_set"
   ],
   "match": [
    "js_node_types_is",
@@ -11911,8 +11905,7 @@
    "list_filter_starts_with_not_multiple",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not",
-   "sandbox"
+   "string_starts_with_not"
   ],
   "only": [
    "list_single",
@@ -12261,8 +12254,7 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set",
-   "sandbox"
+   "app_replace_rule_set"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -13420,8 +13412,7 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13809,6 +13800,9 @@
    "sandbox"
   ],
   "verse_references": [
+   "sandbox"
+  ],
+  "list_filter_starts_with_any": [
    "sandbox"
   ]
  },
@@ -20695,10 +20689,8 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_starts_with",
-    "list_any",
+    "list_filter_starts_with_any",
     "list_map_property",
-    "list_filter",
     "file_read",
     "string_split_newline",
     "ebible_version_books",
@@ -20710,12 +20702,6 @@
     "file_path",
     "contents",
     "split",
-    "lambda",
-    "item",
-    "lambda2",
-    "item2",
-    "sw",
-    "any",
     "verse_references"
    ],
    "async": true
