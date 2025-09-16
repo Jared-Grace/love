@@ -1,4 +1,3 @@
-import { each_async } from "./each_async.mjs";
 import { list_wait } from "./list_wait.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
@@ -71,8 +70,7 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
-      async function lambda5(item2) {}
-      await each_async(list2, lambda5);
+      await each_pair_async(list_a, list_b, async function lambda5(a, b) {});
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
