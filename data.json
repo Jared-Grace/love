@@ -4998,7 +4998,8 @@
    "string_split_comma",
    "functions_paths",
    "function_rename_identifiers",
-   "js_expand_generic"
+   "js_expand_generic",
+   "string_split_newline"
   ],
   "path_join": [
    "folder_read",
@@ -6201,7 +6202,8 @@
    "string_split_space",
    "string_split_empty",
    "string_replace",
-   "html_parse_descendants_classes"
+   "html_parse_descendants_classes",
+   "string_split_newline"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -6317,7 +6319,8 @@
    "string_replace",
    "html_parse_descendants_classes",
    "string_split_space",
-   "ebible_verses"
+   "ebible_verses",
+   "string_split_newline"
   ],
   "results": [
    "functions_combine_name"
@@ -13781,6 +13784,9 @@
   ],
   "ssn": [
    "sandbox"
+  ],
+  "string_split_newline": [
+   "string_split_newline"
   ]
  },
  "functions": {
@@ -26373,6 +26379,15 @@
     "text",
     "v",
     "replace"
+   ]
+  },
+  "string_split_newline": {
+   "async": false,
+   "identifiers": [
+    "string_split",
+    "string_split_newline",
+    "f_names",
+    "split"
    ]
   }
  },
