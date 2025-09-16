@@ -73,7 +73,8 @@ export async function sandbox() {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
-  let list2 = await list_adder_async(async function lambda3(la2) {});
+  async function lambda3(la2) {}
+  let list2 = await list_adder_async(lambda3);
   let list = list_adder(lambda2);
   return list;
 }
