@@ -5245,7 +5245,8 @@
    "ebible_chapter_codes",
    "ebible_chapters_each_verses",
    "each_range_from_async",
-   "each_index_async"
+   "each_index_async",
+   "sandbox"
   ],
   "f_paths": [
    "data_files_update",
@@ -9577,7 +9578,8 @@
    "js_identifier_defineds",
    "app_replace_rule_set",
    "sleep",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -11302,7 +11304,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13600,7 +13603,8 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "sandbox"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -21016,6 +21020,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "each_async",
     "list_wait",
     "list_map",
     "ebible_folder_urdu",
@@ -21083,6 +21088,9 @@
     "verse_start",
     "verse_end",
     "m",
+    "list2",
+    "lambda5",
+    "item2",
     "verses",
     "lambda4",
     "verse_number",
