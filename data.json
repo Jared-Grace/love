@@ -5871,8 +5871,7 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "sandbox",
-   "range_from",
-   "each_range_from"
+   "range_from"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -7119,7 +7118,8 @@
    "marker_rename",
    "ebible_version_books_testament",
    "object_assign",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "r": [
    "function_format",
@@ -7217,7 +7217,8 @@
    "string_base64_to",
    "firebase_upload_buffer",
    "object_assign",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "i": [
    "function_identifier_replace",
@@ -26768,7 +26769,8 @@
     "marker",
     "each",
     "each_range_from",
-    "count",
+    "from",
+    "to",
     "lambda",
     "list"
    ]
