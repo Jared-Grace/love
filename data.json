@@ -5818,12 +5818,10 @@
    "sandbox"
   ],
   "list_a": [
-   "each_pair",
-   "sandbox"
+   "each_pair"
   ],
   "list_b": [
-   "each_pair",
-   "sandbox"
+   "each_pair"
   ],
   "range": [
    "each_range",
@@ -13911,9 +13909,6 @@
    "list_map_filter_string_empty_not_is",
    "sandbox"
   ],
-  "mapped5": [
-   "sandbox"
-  ],
   "list_map_first": [
    "sandbox"
   ],
@@ -13921,7 +13916,10 @@
    "list_map_prefix_any",
    "sandbox"
   ],
-  "mapped6": [
+  "book_names": [
+   "sandbox"
+  ],
+  "chapter_verses": [
    "sandbox"
   ]
  },
@@ -20829,13 +20827,11 @@
     "contents",
     "split",
     "verse_references",
-    "mapped6",
+    "book_names",
     "mapped2",
     "mapped3",
     "mapped4",
-    "mapped5",
-    "list_a",
-    "list_b",
+    "chapter_verses",
     "lambda3"
    ],
    "async": true
