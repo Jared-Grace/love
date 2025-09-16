@@ -4006,7 +4006,8 @@
    "tasks_run",
    "list_join_newline_2",
    "list_join_newline",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -4839,7 +4840,8 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "string_take"
+   "string_take",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -6255,7 +6257,8 @@
    "string_split_empty",
    "string_replace",
    "html_parse_descendants_classes",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -13941,6 +13944,9 @@
   ],
   "string_split_colon": [
    "sandbox"
+  ],
+  "split3": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20826,6 +20832,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split",
     "string_split_colon",
     "list_first_second",
     "list_adder",
@@ -20863,6 +20870,9 @@
     "split2",
     "first",
     "second",
+    "split3",
+    "s",
+    "separator",
     "list"
    ],
    "async": true
