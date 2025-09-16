@@ -1,9 +1,8 @@
-import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses_check.mjs";
+import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 import { marker } from "./marker.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
 import { ebible_firebase_upload } from "./ebible_firebase_upload.mjs";
-import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
 import { list_wait } from "./list_wait.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -12,8 +11,7 @@ export async function ebible_verses_upload(bible_folder) {
   marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
-  await ebible_chapters_each_verses_check(bible_folder);
-  await ebible_chapters_each_verses(bible_folder, each_chapter);
+  await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
       let verse_number = object_property_get(v, "verse_number");
