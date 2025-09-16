@@ -4028,7 +4028,8 @@
    "list_map_prefix_without",
    "html_loading",
    "list_map_prefix_without_any",
-   "sandbox"
+   "sandbox",
+   "retry"
   ],
   "separator": [
    "watch",
@@ -26944,6 +26945,7 @@
     "count",
     "wait",
     "lambda2",
+    "result",
     "v",
     "e"
    ]
