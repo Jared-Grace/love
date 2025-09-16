@@ -39,7 +39,7 @@ export async function sandbox() {
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
-  function lambda2(la) {
+  async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
       let book = list_find_property(books, "text", book_name);
       let book_code = object_property_get(book, "book_code");
