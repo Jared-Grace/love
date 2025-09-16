@@ -1,0 +1,15 @@
+import { ebible_verses } from "./ebible_verses.mjs";
+import { log_keep } from "./log_keep.mjs";
+import { each_async } from "./each_async.mjs";
+export async function ebible_chapters_each_verses_list(
+  list,
+  bible_folder,
+  each_chapter,
+) {
+  await each_async(list, lambda);
+  async function lambda(chapter_code) {
+    log_keep(chapter_code);
+    let verses = await ebible_verses(bible_folder, chapter_code);
+    await each_chapter(chapter_code, verses);
+  }
+}
