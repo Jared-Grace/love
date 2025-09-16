@@ -4630,8 +4630,7 @@
    "js_calls_to_each",
    "app_reply_main",
    "ebible_versions_download",
-   "http",
-   "sandbox"
+   "http"
   ],
   "value2": [
    "error_attention_set",
@@ -4926,8 +4925,7 @@
    "marker_next_declare_single_init",
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
-   "object_assign",
-   "sandbox"
+   "object_assign"
   ],
   "without": [
    "string_suffix_without",
@@ -5241,8 +5239,7 @@
    "html_disable_set",
    "html_style_set",
    "html_style_merge",
-   "html_style_assign",
-   "sandbox"
+   "html_style_assign"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5820,12 +5817,10 @@
    "sandbox"
   ],
   "list_a": [
-   "each_pair",
-   "sandbox"
+   "each_pair"
   ],
   "list_b": [
-   "each_pair",
-   "sandbox"
+   "each_pair"
   ],
   "range": [
    "each_range",
@@ -13928,6 +13923,9 @@
   ],
   "lambda$a$b": [
    "each_pair"
+  ],
+  "book_name": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20839,12 +20837,8 @@
     "mapped3",
     "mapped4",
     "chapter_verses",
-    "lambda3",
     "lambda",
-    "a",
-    "b",
-    "list_a",
-    "list_b"
+    "book_name"
    ],
    "async": true
   },
