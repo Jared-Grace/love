@@ -175,7 +175,8 @@
   "fir": "file_read",
   "lun": "list_unique",
   "fdr": "folder_read",
-  "flr": "file_read"
+  "flr": "file_read",
+  "lmi": "list_multiple_is"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2047,7 +2048,8 @@
   "s pair",
   "s colon",
   "s first",
-  "s multi"
+  "s multi",
+  "a lmi list_multiple_is"
  ],
  "marker_current": "1",
  "function_current": "list_map_prefix_any",
