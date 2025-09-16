@@ -5989,8 +5989,7 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "range_from"
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -26898,7 +26897,6 @@
     "r",
     "lambda",
     "item",
-    "right",
     "s",
     "mapped"
    ]
