@@ -230,6 +230,10 @@ export function app_reply_choices() {
         emoji_pray() + "According to the desire of God, may there be prayer",
     },
     {
+      text: emoji_pray() + " " + "Programming",
+      response: emoji_pray() + "I have been computer programming 💻",
+    },
+    {
       text: emoji_pray() + " " + "Replying",
       response: emoji_pray() + "I have been replying to messages 📨",
     },
