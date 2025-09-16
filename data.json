@@ -2075,7 +2075,8 @@
   "is ebible_class_old",
   "ebible_version_books_testament engwebu aa",
   "ebible_version_books_testament engwebu .aa",
-  "s text"
+  "s text",
+  "is ebible_chapter_text"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
