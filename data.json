@@ -5420,7 +5420,8 @@
   "clipboard_copy": [
    "clipboard_copy",
    "function_dependencies_code_copy",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "text": [
    "clipboard_copy",
@@ -11307,8 +11308,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -21112,7 +21112,7 @@
     "text",
     "list",
     "joined",
-    "list2"
+    "clipboard_copy"
    ],
    "async": true
   },
