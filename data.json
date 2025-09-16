@@ -1252,7 +1252,6 @@
   "fw dpg data_identifiers_search",
   "s search",
   "s list_To",
-  "s test",
   "s task",
   "a is data_identifiers_search",
   "is v",
@@ -2071,7 +2070,8 @@
   "s upload",
   "evu benirv",
   "p",
-  "evu tel2017"
+  "evu tel2017",
+  "s test"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
