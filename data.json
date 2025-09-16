@@ -4987,8 +4987,7 @@
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
    "object_assign",
-   "each_pair_async",
-   "sandbox"
+   "each_pair_async"
   ],
   "without": [
    "string_suffix_without",
@@ -5307,8 +5306,7 @@
    "html_style_set",
    "html_style_merge",
    "html_style_assign",
-   "each_pair_async",
-   "sandbox"
+   "each_pair_async"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5898,8 +5896,7 @@
   ],
   "list_a": [
    "each_pair",
-   "each_pair_async",
-   "sandbox"
+   "each_pair_async"
   ],
   "list_b": [
    "each_pair",
@@ -7129,8 +7126,7 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "sandbox"
+   "list_map_unordered_async"
   ],
   "mapped2": [
    "function_dependencies_code",
@@ -11306,8 +11302,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14133,6 +14128,9 @@
    "sandbox"
   ],
   "books_all": [
+   "sandbox"
+  ],
+  "verses_all": [
    "sandbox"
   ]
  },
@@ -21086,12 +21084,8 @@
     "m",
     "lambda6",
     "verses",
-    "waited",
-    "list2",
+    "verses_all",
     "lambda5",
-    "a",
-    "b",
-    "list_a",
     "lambda4",
     "verse_number",
     "result",
