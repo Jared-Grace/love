@@ -71,7 +71,8 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
-      await each_async(list2, async function lambda5(item2) {});
+      async function lambda5(item2) {}
+      await each_async(list2, lambda5);
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
