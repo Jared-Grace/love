@@ -2963,7 +2963,8 @@
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4925,7 +4926,8 @@
    "marker_next_declare_single_init",
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
-   "object_assign"
+   "object_assign",
+   "sandbox"
   ],
   "without": [
    "string_suffix_without",
@@ -5239,7 +5241,8 @@
    "html_disable_set",
    "html_style_set",
    "html_style_merge",
-   "html_style_assign"
+   "html_style_assign",
+   "sandbox"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5817,10 +5820,12 @@
    "sandbox"
   ],
   "list_a": [
-   "each_pair"
+   "each_pair",
+   "sandbox"
   ],
   "list_b": [
-   "each_pair"
+   "each_pair",
+   "sandbox"
   ],
   "range": [
    "each_range",
@@ -20834,7 +20839,12 @@
     "mapped3",
     "mapped4",
     "chapter_verses",
-    "lambda3"
+    "lambda3",
+    "list_a",
+    "list_b",
+    "lambda",
+    "a",
+    "b"
    ],
    "async": true
   },
