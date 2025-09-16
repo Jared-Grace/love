@@ -3054,8 +3054,7 @@
    "folder_read_async",
    "ebible_index_flat",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "list_map_string_empty_not_is"
+   "list_find_starts_with"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5927,8 +5926,7 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "ebible_verses",
-   "list_map_string_empty_not_is"
+   "ebible_verses"
   ],
   "Error": [
    "error",
@@ -13462,8 +13460,7 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "list_map_string_empty_not_is"
+   "list_find_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -26577,9 +26574,6 @@
     "mapped3",
     "lambda",
     "item",
-    "ne",
-    "lambda2",
-    "item2",
     "filtered",
     "list",
     "mapped4"
