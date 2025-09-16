@@ -2074,16 +2074,16 @@
   "ebible_version_books_testament engwebu .aa",
   "s text",
   "is ebible_chapter_text",
-  "o sb",
   "s chapter",
   "o evu",
   "p",
   "ebible_chapters_each_verses_check engwebu",
   "s ebible",
-  "ect engwebu SIR01"
+  "ect engwebu SIR01",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "ebible_verses_upload",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
