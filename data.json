@@ -3969,7 +3969,8 @@
    "string_split",
    "tasks_run",
    "list_join_newline_2",
-   "list_join_newline"
+   "list_join_newline",
+   "string_split_newline"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -12563,7 +12564,8 @@
   "newline": [
    "list_join_newline_2",
    "list_join_newline",
-   "newline"
+   "newline",
+   "string_split_newline"
   ],
   "list_join_newline_2": [
    "list_join_newline_2",
@@ -26385,10 +26387,12 @@
   "string_split_newline": {
    "async": false,
    "identifiers": [
+    "newline",
     "marker",
     "string_split",
     "string_split_newline",
     "f_names",
+    "separator",
     "split"
    ]
   }
