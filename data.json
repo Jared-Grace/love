@@ -13868,7 +13868,6 @@
    "list_slice_count"
   ],
   "ebible_chapters_each_verses": [
-   "ebible_verses_upload",
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat"
@@ -14276,7 +14275,7 @@
   "ebible_references_parse_god_created_man_why": [
    "sandbox"
   ],
-  "ebible_chapters_each_verses_check": [
+  "ebible_chapters_each_verses_check_with": [
    "ebible_verses_upload"
   ]
  },
@@ -25660,12 +25659,11 @@
   "ebible_verses_upload": {
    "async": true,
    "identifiers": [
-    "ebible_chapters_each_verses_check",
+    "ebible_chapters_each_verses_check_with",
     "marker",
     "ebible_version_download",
     "ebible_verses_upload_name",
     "ebible_firebase_upload",
-    "ebible_chapters_each_verses",
     "list_wait",
     "list_map",
     "object_merge",
