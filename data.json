@@ -3464,8 +3464,7 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god",
-   "range_from"
+   "urdu_allah_to_god"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4847,7 +4846,8 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "string_take"
+   "string_take",
+   "range_from"
   ],
   "a": [
    "string_suffix_without",
@@ -26745,7 +26745,7 @@
     "r",
     "lambda",
     "item",
-    "v",
+    "s",
     "mapped"
    ]
   }
