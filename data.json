@@ -3202,8 +3202,7 @@
    "list_add_first",
    "string_split_newline",
    "list_filter_starts_with_any",
-   "list_map_prefix_without_any",
-   "sandbox"
+   "list_map_prefix_without_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -20786,8 +20785,7 @@
     "lambda",
     "item",
     "ne",
-    "mapped4",
-    "list"
+    "mapped4"
    ],
    "async": true
   },
