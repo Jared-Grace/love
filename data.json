@@ -5854,8 +5854,7 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic",
-   "sandbox"
+   "js_dollar_a_generic"
   ],
   "count": [
    "each_range",
@@ -13991,7 +13990,8 @@
    "each_range_from"
   ],
   "each_range_from": [
-   "each_range_from"
+   "each_range_from",
+   "sandbox"
   ]
  },
  "functions": {
@@ -20877,7 +20877,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "each_range",
+    "each_range_from",
     "list_multiple_is",
     "list_second",
     "list_first",
