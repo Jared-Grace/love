@@ -77,7 +77,8 @@ export async function sandbox() {
       let index = list_index_of(books, book);
       let verses_all = await list_map_unordered_async(bible_folders, lambda6);
       async function lambda5(verses, books) {
-        let item2 = list_get(books, index);
+        let book2 = list_get(books, index);
+        let text2 = object_property_get(book2, "text");
         async function lambda4(verse_number) {
           verse_number = string_to(verse_number);
           let result = list_filter_property(
