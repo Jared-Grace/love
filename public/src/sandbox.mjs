@@ -26,6 +26,7 @@ import { file_read } from "./file_read.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { range_from } from "./range_from.mjs";
 export async function sandbox() {
   marker("1");
   let bible_folder = ebible_folder_english();
@@ -46,9 +47,6 @@ export async function sandbox() {
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
-      log({
-        second,
-      });
       let pad_count = 2;
       if (equal(book_code, "PSA")) {
         pad_count = 3;
@@ -73,8 +71,10 @@ export async function sandbox() {
         la(result);
       }
       log({
+        second,
         verse_start,
         verse_end,
+        r: range_from(verse_start, verse_end),
       });
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
