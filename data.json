@@ -3479,7 +3479,8 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad"
+   "number_pad",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14013,10 +14014,12 @@
    "sandbox"
   ],
   "number_pad": [
-   "number_pad"
+   "number_pad",
+   "sandbox"
   ],
   "num": [
-   "number_pad"
+   "number_pad",
+   "sandbox"
   ],
   "String": [
    "number_pad"
@@ -20908,6 +20911,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "number_pad",
     "object_property_get",
     "list_find_property",
     "each_range_from_async",
@@ -20954,6 +20958,8 @@
     "split2",
     "first",
     "second",
+    "v",
+    "num",
     "verse_range",
     "verse_start",
     "verse_end",
