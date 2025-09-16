@@ -2158,8 +2158,7 @@
    "ebible_chapter_text",
    "html_p_text_multiple",
    "ebible_index_flat",
-   "each_range_from",
-   "sandbox"
+   "each_range_from"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2998,7 +2997,6 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox",
    "range_from",
    "each_range_from",
    "each_range_from_async",
@@ -3103,7 +3101,6 @@
    "ebible_index_flat",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox",
    "each_multiple_async",
    "retry",
    "each_index_async"
@@ -3741,8 +3738,7 @@
    "firebase_storage_download_path",
    "firebase_storage_function_run",
    "list_join_slash_forward",
-   "ebible_firebase_upload_path",
-   "sandbox"
+   "ebible_firebase_upload_path"
   ],
   "watcher": [
    "watch"
@@ -4044,7 +4040,6 @@
    "list_map_prefix_without",
    "html_loading",
    "list_map_prefix_without_any",
-   "sandbox",
    "retry"
   ],
   "separator": [
@@ -4103,8 +4098,7 @@
    "file_read_json",
    "function_format",
    "function_read",
-   "html_parse_read",
-   "sandbox"
+   "html_parse_read"
   ],
   "js_parse": [
    "file_js_parse",
@@ -4267,8 +4261,7 @@
    "app_replace_rule_valid",
    "js_statement_expression_get",
    "marker_next_declare_single_init_elements",
-   "object_property_get_name",
-   "sandbox"
+   "object_property_get_name"
   ],
   "data_save": [
    "data_file_update",
@@ -4389,8 +4382,7 @@
    "list_map_prefix_any",
    "range_from",
    "each_multiple_async",
-   "each_index_async",
-   "sandbox"
+   "each_index_async"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4692,8 +4684,7 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "value2": [
    "error_attention_set",
@@ -5421,8 +5412,7 @@
   "clipboard_copy": [
    "clipboard_copy",
    "function_dependencies_code_copy",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "text": [
    "clipboard_copy",
@@ -5444,8 +5434,7 @@
    "ebible_versions",
    "html_parse_classes_preview",
    "html_parse_href_text",
-   "urdu_allah_to_god",
-   "sandbox"
+   "urdu_allah_to_god"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -5800,8 +5789,7 @@
    "app_reply_main",
    "ebible_index_flat_upload",
    "each_multiple_async",
-   "each_index_async",
-   "sandbox"
+   "each_index_async"
   ],
   "lists_get": [
    "each_multiple",
@@ -5821,7 +5809,6 @@
    "list_first_second_generic",
    "js_dollar_a",
    "app_reply_main",
-   "sandbox",
    "each_multiple_async"
   ],
   "each_multiple": [
@@ -5846,7 +5833,6 @@
    "function_type_first",
    "list_find_property",
    "js_dollar_a",
-   "sandbox",
    "each_multiple_async"
   ],
   "items": [
@@ -5960,8 +5946,7 @@
    "js_dollar_ie",
    "js_identifier_replace",
    "js_assign_combine",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "left": [
    "equal",
@@ -6029,8 +6014,7 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "Error": [
    "error",
@@ -6166,8 +6150,7 @@
    "file_read",
    "html_parse",
    "html_parse_read",
-   "file_write_generic",
-   "sandbox"
+   "file_write_generic"
   ],
   "writeFile": [
    "file_overwrite",
@@ -6231,8 +6214,7 @@
    "js_dollar",
    "js_dollar_r",
    "list_second",
-   "list_first_second_generic",
-   "sandbox"
+   "list_first_second_generic"
   ],
   "list_to": [
    "functions_combine",
@@ -6282,8 +6264,7 @@
    "js_call_new_code",
    "list_map_unordered_async",
    "marker_down_choices",
-   "data_files_update",
-   "sandbox"
+   "data_files_update"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -6448,8 +6429,7 @@
    "html_parse_find_a_href_starts_with",
    "ebible_index",
    "ebible_index_flat",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "split": [
    "functions_combine_name",
@@ -6463,8 +6443,7 @@
    "html_parse_descendants_classes",
    "string_split_space",
    "ebible_verses",
-   "string_split_newline",
-   "sandbox"
+   "string_split_newline"
   ],
   "results": [
    "functions_combine_name"
@@ -6543,7 +6522,6 @@
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
    "list_map_prefix_without",
-   "sandbox",
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "range_from"
@@ -7011,8 +6989,7 @@
    "marker_param_add",
    "function_transform_marker_specified",
    "ebible_index_flat",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -7053,7 +7030,6 @@
    "ebible_chapter_codes",
    "ebible_verses",
    "ebible_index_flat",
-   "sandbox",
    "retry"
   ],
   "node": [
@@ -7136,8 +7112,7 @@
   "mapped2": [
    "function_dependencies_code",
    "ebible_version_books_testament",
-   "html_parse_find_a_href_starts_with",
-   "sandbox"
+   "html_parse_find_a_href_starts_with"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -8303,8 +8278,7 @@
    "app_replace_rule_set",
    "js_dollar_x",
    "list_next_try",
-   "list_random_item",
-   "sandbox"
+   "list_random_item"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -8317,8 +8291,7 @@
    "marker_index",
    "marker_leave",
    "app_replace_rule_parse",
-   "list_index_of_delta_outside",
-   "sandbox"
+   "list_index_of_delta_outside"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -9163,8 +9136,7 @@
   ],
   "list_find_property": [
    "js_declaration_param_named",
-   "list_find_property",
-   "sandbox"
+   "list_find_property"
   ],
   "nameds": [
    "js_declaration_single"
@@ -9296,8 +9268,7 @@
   ],
   "list_first_second": [
    "js_dollar",
-   "list_first_second",
-   "sandbox"
+   "list_first_second"
   ],
   "list_skip": [
    "js_dollar",
@@ -9310,8 +9281,7 @@
   "list_second": [
    "js_dollar_r",
    "list_first_second",
-   "list_second",
-   "sandbox"
+   "list_second"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -9564,8 +9534,7 @@
    "app_replace_home",
    "js_expand_generic",
    "app_reply_main",
-   "promise_wrap",
-   "sandbox"
+   "promise_wrap"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9583,8 +9552,7 @@
    "js_identifier_defineds",
    "app_replace_rule_set",
    "sleep",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -9828,8 +9796,7 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused",
-   "sandbox"
+   "js_imports_unused"
   ],
   "fds": [
    "js_outside_move"
@@ -9887,8 +9854,7 @@
    "marker_top",
    "list_first_second_generic",
    "js_expand_generic",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "last": [
    "js_return_name",
@@ -9922,8 +9888,7 @@
   "list_multiple_is": [
    "js_statement_call_get",
    "list_multiple_is",
-   "list_first_second_generic",
-   "sandbox"
+   "list_first_second_generic"
   ],
   "js_statement_call_get": [
    "js_statement_call_get",
@@ -10213,8 +10178,7 @@
   "string_to": [
    "list_size_1_assert",
    "marker_first",
-   "string_to",
-   "sandbox"
+   "string_to"
   ],
   "skipped": [
    "list_skip",
@@ -10912,8 +10876,7 @@
    "function_aliases_restore"
   ],
   "m": [
-   "function_aliases_restore",
-   "sandbox"
+   "function_aliases_restore"
   ],
   "mr": [
    "function_aliases_restore"
@@ -11845,8 +11808,7 @@
    "ebible_verses"
   ],
   "split2": [
-   "string_split_empty",
-   "sandbox"
+   "string_split_empty"
   ],
   "list_take": [
    "list_take",
@@ -12032,8 +11994,7 @@
   "lambda6": [
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "sliced": [
    "list_slice",
@@ -12285,8 +12246,7 @@
   "list_join_newline": [
    "function_dependencies_code",
    "list_join_newline",
-   "firebase_storage_function_run",
-   "sandbox"
+   "firebase_storage_function_run"
   ],
   "firebase_storage_function_run": [
    "app_replace",
@@ -12977,8 +12937,7 @@
    "whitespace_normalize"
   ],
   "text2": [
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "typed": [
    "app_reply_main"
@@ -13277,8 +13236,7 @@
    "ebible_firebase_upload_path",
    "ebible_index_flat",
    "ebible_index_flat_upload",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "unzip": [
    "unzip",
@@ -13412,8 +13370,7 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "ebible_chapter_code_to_book",
-   "ebible_index",
-   "sandbox"
+   "ebible_index"
   ],
   "string_take": [
    "string_take",
@@ -13423,8 +13380,7 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_version_books",
-   "ebible_index",
-   "sandbox"
+   "ebible_index"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13436,8 +13392,7 @@
   "ebible_version_books": [
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_version_books",
-   "sandbox"
+   "ebible_version_books"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -13523,8 +13478,7 @@
   ],
   "ebible_verses": [
    "ebible_verses",
-   "ebible_chapters_each_verses",
-   "sandbox"
+   "ebible_chapters_each_verses"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13534,8 +13488,7 @@
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13590,8 +13543,7 @@
   "book": [
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_index",
-   "sandbox"
+   "ebible_index"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -13657,8 +13609,7 @@
    "ebible_verses_upload",
    "ebible_verse",
    "ebible_index_flat",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "ebible_verse": [
    "ebible_verses",
@@ -13685,8 +13636,7 @@
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -13997,20 +13947,16 @@
    "app_reply_choices"
   ],
   "string_split_newline": [
-   "string_split_newline",
-   "sandbox"
+   "string_split_newline"
   ],
   "verse_references": [
-   "sandbox",
    "list_filter_starts_with_any"
   ],
   "list_filter_starts_with_any": [
-   "sandbox",
    "list_filter_starts_with_any"
   ],
   "list_map_prefix_without_any": [
-   "list_map_prefix_without_any",
-   "sandbox"
+   "list_map_prefix_without_any"
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
@@ -14024,14 +13970,7 @@
   "predicate": [
    "list_find"
   ],
-  "mapped3": [
-   "sandbox"
-  ],
-  "list_map_split_space": [
-   "sandbox"
-  ],
   "mapped4": [
-   "sandbox",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is"
   ],
@@ -14039,46 +13978,14 @@
    "list_map_string_empty_not_is"
   ],
   "list_map_filter_string_empty_not_is": [
-   "list_map_filter_string_empty_not_is",
-   "sandbox"
-  ],
-  "list_map_first": [
-   "sandbox"
+   "list_map_filter_string_empty_not_is"
   ],
   "list_map_prefix_any": [
-   "list_map_prefix_any",
-   "sandbox"
-  ],
-  "book_names": [
-   "sandbox"
-  ],
-  "chapter_verses": [
-   "sandbox"
+   "list_map_prefix_any"
   ],
   "lambda$a$b": [
    "each_pair",
    "each_pair_async"
-  ],
-  "book_name": [
-   "sandbox"
-  ],
-  "chapter_verses_list": [
-   "sandbox"
-  ],
-  "string_split_colon": [
-   "sandbox"
-  ],
-  "string_split_dash": [
-   "sandbox"
-  ],
-  "verse_start": [
-   "sandbox"
-  ],
-  "verse_end": [
-   "sandbox"
-  ],
-  "verse_range": [
-   "sandbox"
   ],
   "range_from": [
    "range_from",
@@ -14089,12 +13996,10 @@
    "each_range_from"
   ],
   "each_range_from_async": [
-   "each_range_from_async",
-   "sandbox"
+   "each_range_from_async"
   ],
   "number_pad": [
-   "number_pad",
-   "sandbox"
+   "number_pad"
   ],
   "num": [
    "number_pad"
@@ -14105,15 +14010,8 @@
   "padStart": [
    "number_pad"
   ],
-  "pad_count": [
-   "sandbox"
-  ],
-  "chapter_padded": [
-   "sandbox"
-  ],
   "each_pair_async": [
-   "each_pair_async",
-   "sandbox"
+   "each_pair_async"
   ],
   "each_multiple_async": [
    "each_pair_async",
@@ -14136,13 +14034,7 @@
   "bible_folders": [
    "sandbox"
   ],
-  "books_all": [
-   "sandbox"
-  ],
-  "verses_all": [
-   "sandbox"
-  ],
-  "book2": [
+  "ebible_references_parse": [
    "sandbox"
   ]
  },
@@ -21029,92 +20921,16 @@
   },
   "sandbox": {
    "identifiers": [
-    "clipboard_copy",
-    "list_join_newline",
-    "list_get",
-    "list_index_of",
-    "list_map_unordered_async",
+    "ebible_references_parse",
     "ebible_folder_urdu",
-    "each",
-    "list_empty_not_is",
-    "list_filter_property",
-    "string_to",
-    "list_adder_async",
-    "each_pair_async",
-    "ebible_verses",
-    "equal",
-    "number_pad",
-    "object_property_get",
-    "list_find_property",
-    "each_range_from_async",
-    "list_multiple_is",
-    "list_second",
-    "list_first",
-    "string_split_dash",
-    "string_split_colon",
-    "list_first_second",
-    "list_map_prefix_any",
-    "list_map_first",
-    "list_map_filter_string_empty_not_is",
-    "list_map_split_space",
-    "list_map_prefix_without_any",
     "marker",
-    "list_filter_starts_with_any",
-    "list_map_property",
-    "file_read",
-    "string_split_newline",
-    "ebible_version_books",
     "ebible_folder_english",
     "sandbox",
     "v2",
     "v",
     "file_path",
     "bible_folders",
-    "bible_folder",
-    "books",
-    "books_all",
-    "mapped",
-    "contents",
-    "split",
-    "verse_references",
-    "book_names",
-    "mapped2",
-    "mapped3",
-    "mapped4",
-    "chapter_verses_list",
-    "lambda2",
-    "la",
-    "lambda",
-    "book_name",
-    "chapter_verses",
-    "book",
-    "book_code",
-    "split2",
-    "first",
-    "second",
-    "pad_count",
-    "chapter_padded",
-    "chapter_code",
-    "verse_range",
-    "verse_start",
-    "verse_end",
-    "m",
-    "lambda6",
-    "verses",
-    "index",
-    "verses_all",
-    "lambda5",
-    "book2",
-    "text2",
-    "lambda4",
-    "verse_number",
-    "result",
-    "ne",
-    "lambda3",
-    "item",
-    "text",
-    "list",
-    "joined"
+    "list"
    ],
    "async": true
   },
