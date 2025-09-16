@@ -13482,7 +13482,8 @@
    "ebible_chapter_codes",
    "ebible_version_books",
    "ebible_index",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -14273,7 +14274,8 @@
    "sandbox"
   ],
   "ebible_books_to_chapter_codes": [
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21166,6 +21168,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_books_to_chapter_codes",
     "ebible_chapters_each_verses_list",
     "ebible_chapters_each_verses_check",
     "log",
@@ -21173,6 +21176,7 @@
     "bible_folder",
     "list",
     "each_chapter",
+    "books",
     "chapter_code",
     "verses"
    ],
