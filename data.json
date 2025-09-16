@@ -2043,7 +2043,6 @@
   "cs each_range_from async",
   "sp ad",
   "n number_pad",
-  "s ebible",
   "cs each_pair async",
   "cs each_multiple async",
   "s verses,up",
@@ -2079,7 +2078,8 @@
   "s chapter",
   "o evu",
   "p",
-  "ebible_chapters_each_verses_check engwebu"
+  "ebible_chapters_each_verses_check engwebu",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses_upload",
