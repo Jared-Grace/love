@@ -2373,7 +2373,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "number_pad"
+   "number_pad",
+   "each_pair_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26874,6 +26875,7 @@
   "each_pair_async": {
    "async": false,
    "identifiers": [
+    "marker",
     "each_multiple",
     "each_pair_async",
     "list_a",
