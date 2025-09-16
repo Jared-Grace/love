@@ -2353,7 +2353,8 @@
    "string_split_newline",
    "list_map_prefix_without_any",
    "list_find_starts_with",
-   "sandbox"
+   "sandbox",
+   "list_map_filter_string_empty_not_is"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26592,6 +26593,7 @@
   "list_map_filter_string_empty_not_is": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_filter",
     "list_map",
     "string_empty_not_is",
