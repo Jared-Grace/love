@@ -9575,8 +9575,7 @@
    "ebible_chapters",
    "ebible_verses",
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with",
-   "sandbox"
+   "list_filter_starts_with"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -13807,6 +13806,9 @@
   ],
   "string_split_newline": [
    "string_split_newline",
+   "sandbox"
+  ],
+  "verse_references": [
    "sandbox"
   ]
  },
@@ -20714,7 +20716,7 @@
     "item2",
     "sw",
     "any",
-    "filtered"
+    "verse_references"
    ],
    "async": true
   },
