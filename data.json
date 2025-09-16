@@ -2379,8 +2379,7 @@
    "each_range_from_async",
    "number_pad",
    "each_pair_async",
-   "each_multiple_async",
-   "retry"
+   "each_multiple_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3092,7 +3091,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "sandbox",
-   "each_multiple_async"
+   "each_multiple_async",
+   "retry"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5890,7 +5890,8 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "retry"
   ],
   "count": [
    "each_range",
@@ -5906,7 +5907,8 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "range_from",
-   "number_pad"
+   "number_pad",
+   "retry"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -26930,8 +26932,10 @@
   "retry": {
    "async": false,
    "identifiers": [
-    "marker",
-    "retry"
+    "each_range",
+    "retry",
+    "count",
+    "lambda2"
    ]
   }
  },
