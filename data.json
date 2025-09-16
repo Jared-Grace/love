@@ -3572,8 +3572,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "list_adder_async"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19011,8 +19010,7 @@
     "lambda$la",
     "list",
     "list_adder_inner",
-    "item",
-    "message"
+    "item"
    ],
    "async": true
   },
