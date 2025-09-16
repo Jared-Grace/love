@@ -108,6 +108,6 @@ export async function sandbox() {
   }
   let list = await list_adder_async(lambda2);
   let joined = list_join_newline(list);
-  await clipboard_copy(text3);
+  await clipboard_copy(joined);
   return list;
 }
