@@ -2155,7 +2155,8 @@
    "ebible_chapter_text",
    "html_p_text_multiple",
    "ebible_index_flat",
-   "each_range_from"
+   "each_range_from",
+   "sandbox"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -4383,7 +4384,8 @@
    "list_map_prefix_any",
    "range_from",
    "each_multiple_async",
-   "each_index_async"
+   "each_index_async",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4685,7 +4687,8 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "value2": [
    "error_attention_set",
@@ -14113,9 +14116,6 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
-  ],
-  "first2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21001,6 +21001,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "each",
     "list_empty_not_is",
     "list_filter_property",
     "string_to",
@@ -21065,8 +21066,9 @@
     "verse_number",
     "result",
     "ne",
-    "first2",
     "list2",
+    "lambda3",
+    "item",
     "list"
    ],
    "async": true
