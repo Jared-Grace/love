@@ -2984,7 +2984,8 @@
    "sandbox",
    "range_from",
    "each_range_from",
-   "each_range_from_async"
+   "each_range_from_async",
+   "each_pair_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4954,7 +4955,8 @@
    "marker_next_declare_single_init",
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
-   "object_assign"
+   "object_assign",
+   "each_pair_async"
   ],
   "without": [
    "string_suffix_without",
@@ -5270,7 +5272,8 @@
    "html_disable_set",
    "html_style_set",
    "html_style_merge",
-   "html_style_assign"
+   "html_style_assign",
+   "each_pair_async"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -5780,13 +5783,15 @@
   ],
   "each_multiple": [
    "each_multiple",
-   "each_pair"
+   "each_pair",
+   "each_pair_async"
   ],
   "lists": [
    "each_multiple",
    "each_pair",
    "lists_get",
-   "list_concat_multiple"
+   "list_concat_multiple",
+   "each_pair_async"
   ],
   "first": [
    "each_multiple",
@@ -5807,7 +5812,8 @@
    "list_adder_unique",
    "list_adder_unique_async",
    "list_add_multiple",
-   "marker_functionize"
+   "marker_functionize",
+   "each_pair_async"
   ],
   "object_properties": [
    "each_object",
@@ -5850,10 +5856,12 @@
    "sandbox"
   ],
   "list_a": [
-   "each_pair"
+   "each_pair",
+   "each_pair_async"
   ],
   "list_b": [
-   "each_pair"
+   "each_pair",
+   "each_pair_async"
   ],
   "range": [
    "each_range",
@@ -13985,7 +13993,8 @@
    "sandbox"
   ],
   "lambda$a$b": [
-   "each_pair"
+   "each_pair",
+   "each_pair_async"
   ],
   "book_name": [
    "sandbox"
@@ -14038,6 +14047,9 @@
   ],
   "chapter_padded": [
    "sandbox"
+  ],
+  "each_pair_async": [
+   "each_pair_async"
   ]
  },
  "functions": {
@@ -26857,6 +26869,21 @@
     "v",
     "String",
     "padStart"
+   ]
+  },
+  "each_pair_async": {
+   "async": false,
+   "identifiers": [
+    "each_multiple",
+    "each_pair_async",
+    "list_a",
+    "list_b",
+    "lambda$a$b",
+    "lists",
+    "lambda",
+    "items",
+    "a",
+    "b"
    ]
   }
  },
