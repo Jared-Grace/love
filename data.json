@@ -2942,7 +2942,8 @@
    "ebible_chapters_each_verses",
    "folder_read_async",
    "ebible_index_flat",
-   "html_loading"
+   "html_loading",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3183,7 +3184,8 @@
    "ebible_chapters_each_verses",
    "ebible_index_flat",
    "list_add_first",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4293,7 +4295,8 @@
    "list_map_prefix_without",
    "object_property_get_name",
    "string_starts_with_not",
-   "list_add_first"
+   "list_add_first",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6452,7 +6455,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_verses",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "sandbox"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9566,7 +9570,8 @@
    "ebible_chapters",
    "ebible_verses",
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "sandbox"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -20679,6 +20684,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_filter",
     "file_read",
     "string_split_newline",
     "ebible_version_books",
@@ -20688,7 +20694,11 @@
     "books",
     "file_path",
     "contents",
-    "split"
+    "split",
+    "filtered",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
