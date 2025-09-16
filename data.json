@@ -1989,7 +1989,6 @@
   "c ebible_index_upload ebible_index_flat_upload",
   "s upload,ver",
   "s verses,up",
-  "sb",
   "s list,add",
   "s new,join",
   "s doc",
@@ -2031,7 +2030,8 @@
   "s newline",
   "s split",
   "n string_split_comma",
-  "c string_split_comma string_split_newline"
+  "c string_split_comma string_split_newline",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
