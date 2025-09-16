@@ -13460,7 +13460,8 @@
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -20966,6 +20967,7 @@
     "second",
     "pad_count",
     "chapter_padded",
+    "chapter_code",
     "verse_range",
     "verse_start",
     "verse_end",
