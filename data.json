@@ -2005,7 +2005,6 @@
   "s roc",
   "s ston",
   "s emoji",
-  "s upload",
   "ebible_verses_upload yor",
   "s text",
   "ebible_version_books_testament_new engbsb",
@@ -2060,7 +2059,8 @@
   "s verses,up",
   "p",
   "ebible_verses_upload hin2017",
-  "s ret"
+  "s ret",
+  "s upload"
  ],
  "marker_current": "1",
  "function_current": "each_multiple_async",
@@ -26923,7 +26923,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-16T03:42:07.256Z",
+ "git_push_when": "2025-09-16T12:40:46.673Z",
  "error_attention": null,
  "app_current": "replace"
 }
