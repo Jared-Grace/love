@@ -2044,7 +2044,6 @@
   "a lmi list_multiple_is",
   "fws range from",
   "s add",
-  "p",
   "range_from 10 20",
   "cs each_range from",
   "o e",
@@ -2056,6 +2055,7 @@
   "sp ad",
   "n number_pad",
   "s ebible",
+  "p",
   "sb"
  ],
  "marker_current": "1",
