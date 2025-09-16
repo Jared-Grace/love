@@ -13775,6 +13775,9 @@
   ],
   "emoji_rock": [
    "app_reply_choices"
+  ],
+  "ssn": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20665,7 +20668,8 @@
     "sandbox",
     "bible_folder",
     "books",
-    "path"
+    "path",
+    "ssn"
    ],
    "async": true
   },
