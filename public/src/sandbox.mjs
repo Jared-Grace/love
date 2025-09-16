@@ -15,6 +15,6 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
-  let mapped2 = list_map_prefix_without_any(list, prefix);
+  let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   return mapped2;
 }
