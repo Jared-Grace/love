@@ -46,7 +46,7 @@ export async function sandbox() {
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
-      log(message);
+      log({second});
       let pad_count = 2;
       if (equal(book_code, "PSA")) {
         pad_count = 3;
