@@ -4823,7 +4823,8 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "string_take"
+   "string_take",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -11695,10 +11696,12 @@
   "string_split_space": [
    "string_split_space",
    "app_replace_rule_parse",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "split2": [
-   "string_split_empty"
+   "string_split_empty",
+   "sandbox"
   ],
   "list_take": [
    "list_take",
@@ -20747,6 +20750,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split_space",
     "list_map_prefix_without_any",
     "marker",
     "list_filter_starts_with_any",
@@ -20763,7 +20767,9 @@
     "contents",
     "split",
     "verse_references",
-    "mapped2"
+    "mapped2",
+    "split2",
+    "s"
    ],
    "async": true
   },
