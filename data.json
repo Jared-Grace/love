@@ -3503,8 +3503,7 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad",
-   "sandbox"
+   "number_pad"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9576,8 +9575,7 @@
    "js_identifier_defineds",
    "app_replace_rule_set",
    "sleep",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -13601,8 +13599,7 @@
    "ebible_chapters",
    "app_reply_main",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -21052,9 +21049,6 @@
     "v2",
     "bible_folders",
     "books",
-    "lambda5",
-    "item2",
-    "v",
     "mapped5",
     "list2",
     "mapped",
