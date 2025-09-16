@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { equal } from "./equal.mjs";
@@ -64,12 +63,12 @@ export async function sandbox() {
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
         let result = list_filter_property(verses, "verse_number", verse_number);
-        log(message);
+        la(result);
       }
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
   let list = list_adder(lambda2);
-  return chapter_verses_list;
+  return list;
 }
