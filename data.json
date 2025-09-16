@@ -2084,7 +2084,8 @@
   "s codes",
   "fws ebible_version_books_testament apocrypha",
   "s apoc",
-  "sb"
+  "sb",
+  "s command"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
