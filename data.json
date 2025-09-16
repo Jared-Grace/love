@@ -2029,7 +2029,9 @@
   "s eng",
   "s new",
   "s newline",
-  "s split"
+  "s split",
+  "n string_split_comma",
+  "c string_split_comma string_split_newline"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
