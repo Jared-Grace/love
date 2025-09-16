@@ -2960,8 +2960,7 @@
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "sandbox"
+   "list_map_filter_string_empty_not_is"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3208,8 +3207,7 @@
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "sandbox"
+   "list_map_filter_string_empty_not_is"
   ],
   "v": [
    "data_identifiers_file",
@@ -4326,8 +4324,7 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "sandbox"
+   "list_map_filter_string_empty_not_is"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5764,8 +5761,7 @@
    "list_first_second_generic",
    "function_type_first",
    "list_find_property",
-   "js_dollar_a",
-   "sandbox"
+   "js_dollar_a"
   ],
   "items": [
    "each_multiple",
@@ -20813,10 +20809,6 @@
     "mapped2",
     "mapped3",
     "mapped4",
-    "lambda",
-    "item",
-    "first",
-    "list",
     "mapped5"
    ],
    "async": true
