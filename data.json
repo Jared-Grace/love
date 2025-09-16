@@ -14134,9 +14134,6 @@
   ],
   "books_all": [
    "sandbox"
-  ],
-  "$r": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21089,7 +21086,6 @@
     "m",
     "lambda6",
     "verses",
-    "$r",
     "waited",
     "list2",
     "lambda5",
