@@ -2766,8 +2766,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "sandbox"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -9985,8 +9984,7 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda",
-   "sandbox"
+   "object_property_equals_lambda"
   ],
   "list_find": [
    "list_find",
@@ -11236,8 +11234,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13335,7 +13332,8 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "ebible_chapter_code_to_book",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "string_take": [
    "string_take",
@@ -14005,9 +14003,6 @@
   ],
   "each_range_from_async": [
    "each_range_from_async",
-   "sandbox"
-  ],
-  "first2": [
    "sandbox"
   ]
  },
@@ -20934,10 +20929,7 @@
     "lambda",
     "book_name",
     "chapter_verses",
-    "first2",
-    "list2",
-    "property_name",
-    "property_value",
+    "book_code",
     "split2",
     "first",
     "second",
