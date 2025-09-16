@@ -4684,7 +4684,8 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "value2": [
    "error_attention_set",
@@ -6996,7 +6997,8 @@
    "marker_param_add",
    "function_transform_marker_specified",
    "ebible_index_flat",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -11288,7 +11290,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14107,6 +14110,9 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
+  ],
+  "la2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20992,6 +20998,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_adder_async",
     "each_pair_async",
     "list_filter_property",
     "ebible_verses",
@@ -21053,6 +21060,9 @@
     "lambda4",
     "verse_number",
     "result",
+    "list2",
+    "lambda3",
+    "la2",
     "list"
    ],
    "async": true
@@ -26998,7 +27008,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-16T12:40:46.673Z",
+ "git_push_when": "2025-09-16T16:31:55.102Z",
  "error_attention": null,
  "app_current": "replace"
 }
