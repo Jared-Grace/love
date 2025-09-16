@@ -2085,7 +2085,8 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry"
+   "retry",
+   "list_adder_async"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3571,7 +3572,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "list_adder_async"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19003,12 +19005,14 @@
   },
   "list_adder_async": {
    "identifiers": [
+    "log",
     "list_add",
     "list_adder_async",
     "lambda$la",
     "list",
     "list_adder_inner",
-    "item"
+    "item",
+    "message"
    ],
    "async": true
   },
