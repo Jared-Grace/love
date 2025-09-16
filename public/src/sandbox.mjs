@@ -22,4 +22,5 @@ export async function sandbox() {
     return any;
   }
   let filtered = list_filter(split, lambda);
+  return filtered;
 }
