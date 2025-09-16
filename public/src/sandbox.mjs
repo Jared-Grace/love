@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -41,6 +42,7 @@ export async function sandbox() {
   let chapter_verses_list = list_map_first(mapped4);
   async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
+      log(message);
       let book = list_find_property(books, "text", book_name);
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
