@@ -2075,7 +2075,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3549,7 +3550,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -20922,6 +20924,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "list_filter_property",
     "ebible_verses",
     "equal",
@@ -20983,6 +20986,7 @@
     "lambda4",
     "verse_number",
     "result",
+    "message",
     "list"
    ],
    "async": true
