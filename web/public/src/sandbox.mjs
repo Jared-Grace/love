@@ -1,5 +1,4 @@
-import { list_wait } from "./list_wait.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -37,8 +36,7 @@ export async function sandbox() {
   let v2 = ebible_folder_urdu();
   let bible_folders = [v2, bible_folder];
   let books = await ebible_version_books(bible_folder);
-  let books_all_promises = list_map(bible_folders, ebible_version_books);
-  let mapped5 = await list_wait(books_all_promises);
+  let books_all = await list_map_unordered_async(bible_folders);
   let mapped = list_map_property(books, "text");
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
@@ -71,7 +69,7 @@ export async function sandbox() {
         verse_end = verse_start;
       }
       async function lambda5(a, b) {}
-      await each_pair_async(list_a, list_b, lambda5);
+      await each_pair_async(list_a, books_all, lambda5);
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
