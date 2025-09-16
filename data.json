@@ -26465,11 +26465,11 @@
    "identifiers": [
     "list_filter",
     "list_filter_starts_with_any",
-    "prefixes",
-    "list",
-    "lambda",
     "item",
-    "verse_references"
+    "prefixes",
+    "lambda",
+    "verse_references",
+    "list"
    ]
   },
   "list_map_prefix_without_any": {
