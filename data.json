@@ -3179,7 +3179,8 @@
    "list_slice_count",
    "ebible_chapters_each_verses",
    "ebible_index_flat",
-   "list_add_first"
+   "list_add_first",
+   "string_split_newline"
   ],
   "v": [
    "data_identifiers_file",
@@ -5000,8 +5001,7 @@
    "string_split_comma",
    "functions_paths",
    "function_rename_identifiers",
-   "js_expand_generic",
-   "string_split_newline"
+   "js_expand_generic"
   ],
   "path_join": [
    "folder_read",
@@ -26391,7 +26391,7 @@
     "marker",
     "string_split",
     "string_split_newline",
-    "f_names",
+    "list",
     "separator",
     "split"
    ]
