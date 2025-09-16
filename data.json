@@ -2025,7 +2025,6 @@
   "is list_map_prefix_without",
   "cs list_map_prefix_without any",
   "s list_map_prefix_without",
-  "o sb",
   "s empty",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
   "c list_map_prefix_without_any list_map_prefix_any",
@@ -2076,10 +2075,11 @@
   "ebible_version_books_testament engwebu aa",
   "ebible_version_books_testament engwebu .aa",
   "s text",
-  "is ebible_chapter_text"
+  "is ebible_chapter_text",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "each_index_async",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
