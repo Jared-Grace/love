@@ -1,5 +1,4 @@
 import { integer_to } from "./integer_to.mjs";
-import { log } from "./log.mjs";
 import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
@@ -8,10 +7,6 @@ export function range_from(from, to) {
   from = integer_to(from);
   to = integer_to(to);
   marker("1");
-  log({
-    from,
-    to,
-  });
   let count = to - from + 1;
   let r = range(count);
   function lambda(item) {
