@@ -2060,10 +2060,11 @@
   "p",
   "ebible_verses_upload hin2017",
   "s ret",
-  "s upload"
+  "s upload",
+  "n retry"
  ],
  "marker_current": "1",
- "function_current": "each_multiple_async",
+ "function_current": "retry",
  "terminal": false,
  "identifiers": {
   "log": [
