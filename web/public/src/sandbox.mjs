@@ -21,6 +21,7 @@ export async function sandbox() {
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let mapped5 = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped5 = list_map(list, lambda);
   return mapped4;
 }
