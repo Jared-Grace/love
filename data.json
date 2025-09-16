@@ -2085,8 +2085,7 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -20993,7 +20992,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "log",
     "list_adder_async",
     "each_pair_async",
     "list_filter_property",
