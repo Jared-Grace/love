@@ -46,7 +46,7 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
-      function lambda4() {}
+      async function lambda4() {}
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
