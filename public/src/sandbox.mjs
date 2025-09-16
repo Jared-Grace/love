@@ -72,22 +72,27 @@ export async function sandbox() {
         let verses = await ebible_verses(bible_folder, chapter_code);
         return verses;
       }
-      let waited = await list_map_unordered_async(list2, lambda6);
-      async function lambda5(a, b) {}
-      await each_pair_async(list_a, books_all, lambda5);
-      async function lambda4(verse_number) {
-        verse_number = string_to(verse_number);
-        let result = list_filter_property(verses, "verse_number", verse_number);
-        let ne = list_empty_not_is(result);
-        if (ne) {
-          function lambda3(item) {
-            let text = object_property_get(item, "text");
-            la(book_name + " " + first + ":" + verse_number + " " + text);
+      let verses_all = await list_map_unordered_async(bible_folders, lambda6);
+      async function lambda5(verses, books) {
+        async function lambda4(verse_number) {
+          verse_number = string_to(verse_number);
+          let result = list_filter_property(
+            verses,
+            "verse_number",
+            verse_number,
+          );
+          let ne = list_empty_not_is(result);
+          if (ne) {
+            function lambda3(item) {
+              let text = object_property_get(item, "text");
+              la(book_name + " " + first + ":" + verse_number + " " + text);
+            }
+            each(result, lambda3);
           }
-          each(result, lambda3);
         }
+        await each_range_from_async(verse_start, verse_end, lambda4);
       }
-      await each_range_from_async(verse_start, verse_end, lambda4);
+      await each_pair_async(verses_all, books_all, lambda5);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
