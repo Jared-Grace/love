@@ -865,7 +865,6 @@
   "s separ",
   "a fsp function_name_separator",
   "s part",
-  "s first",
   "function_name_to_acronym function_name_to_acronym",
   "n function_names_to_acronyms",
   "s lookup",
@@ -2044,7 +2043,8 @@
   "s empty",
   "p",
   "sb",
-  "r list_map_string_empty_not_is list_map_filter_string_empty_not_is"
+  "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
+  "s first"
  ],
  "marker_current": "1",
  "function_current": "list_map_filter_string_empty_not_is",
