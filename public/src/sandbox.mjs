@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_version_books_testament_apocrypha } from "./ebible_version_books_testament_apocrypha.mjs";
 import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.mjs";
@@ -11,5 +12,6 @@ export async function sandbox() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
+    log(message);
   }
 }
