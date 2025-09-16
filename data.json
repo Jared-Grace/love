@@ -2944,7 +2944,8 @@
    "ebible_chapters_each_verses",
    "folder_read_async",
    "ebible_index_flat",
-   "html_loading"
+   "html_loading",
+   "list_filter_starts_with_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3039,7 +3040,8 @@
    "ebible_verses",
    "html_p_text_multiple",
    "folder_read_async",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "list_filter_starts_with_any"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3185,7 +3187,8 @@
    "ebible_chapters_each_verses",
    "ebible_index_flat",
    "list_add_first",
-   "string_split_newline"
+   "string_split_newline",
+   "list_filter_starts_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -4295,7 +4298,8 @@
    "list_map_prefix_without",
    "object_property_get_name",
    "string_starts_with_not",
-   "list_add_first"
+   "list_add_first",
+   "list_filter_starts_with_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6456,7 +6460,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "ebible_verses",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "list_filter_starts_with_any"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9181,7 +9186,8 @@
    "http",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_filter_starts_with_any"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -9646,7 +9652,8 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_filter_starts_with_any"
   ],
   "match": [
    "js_node_types_is",
@@ -11905,7 +11912,8 @@
    "list_filter_starts_with_not_multiple",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_filter_starts_with_any"
   ],
   "only": [
    "list_single",
@@ -12254,7 +12262,8 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_filter_starts_with_any"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -13282,7 +13291,8 @@
   ],
   "prefixes": [
    "list_filter_starts_with_not_multiple",
-   "ebible_chapters"
+   "ebible_chapters",
+   "list_filter_starts_with_any"
   ],
   "list_filter_starts_with_not_multiple": [
    "list_filter_starts_with_not_multiple",
@@ -13412,7 +13422,8 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main"
+   "app_reply_main",
+   "list_filter_starts_with_any"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13800,10 +13811,12 @@
    "sandbox"
   ],
   "verse_references": [
-   "sandbox"
+   "sandbox",
+   "list_filter_starts_with_any"
   ],
   "list_filter_starts_with_any": [
-   "sandbox"
+   "sandbox",
+   "list_filter_starts_with_any"
   ]
  },
  "functions": {
@@ -26415,6 +26428,24 @@
     "list",
     "separator",
     "split"
+   ]
+  },
+  "list_filter_starts_with_any": {
+   "async": false,
+   "identifiers": [
+    "list_filter",
+    "list_any",
+    "string_starts_with",
+    "list_filter_starts_with_any",
+    "prefixes",
+    "list",
+    "lambda",
+    "item",
+    "lambda2",
+    "item2",
+    "sw",
+    "any",
+    "verse_references"
    ]
   }
  },
