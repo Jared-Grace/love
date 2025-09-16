@@ -5880,7 +5880,8 @@
    "list_slice_count",
    "ebible_chapter_code_to_book",
    "ebible_index",
-   "range_from"
+   "range_from",
+   "number_pad"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -10141,7 +10142,6 @@
   "length": [
    "list_size",
    "string_size",
-   "number_pad",
    "sandbox"
   ],
   "string_to": [
@@ -26836,7 +26836,7 @@
     "marker",
     "number_pad",
     "num",
-    "length",
+    "count",
     "v",
     "String",
     "padStart"
