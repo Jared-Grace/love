@@ -45,7 +45,7 @@ export async function sandbox() {
       let { first, second } = list_first_second(split2);
       let pad_count = 2;
       if (equal(book_code, "PSA")) {
-        pad_count;
+        pad_count = 3;
       }
       let v = number_pad(num, length);
       let verse_range = string_split_dash(second);
