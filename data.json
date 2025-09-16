@@ -3221,8 +3221,7 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox",
-   "range_from"
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -7110,7 +7109,8 @@
    "string_replace",
    "marker_rename",
    "ebible_version_books_testament",
-   "object_assign"
+   "object_assign",
+   "range_from"
   ],
   "r": [
    "function_format",
@@ -7207,7 +7207,8 @@
    "firebase_upload_string",
    "string_base64_to",
    "firebase_upload_buffer",
-   "object_assign"
+   "object_assign",
+   "range_from"
   ],
   "i": [
    "function_identifier_replace",
@@ -26735,12 +26736,13 @@
     "range",
     "marker",
     "range_from",
+    "from",
+    "to",
     "count",
     "r",
     "lambda",
     "item",
-    "mapped",
-    "list"
+    "mapped"
    ]
   }
  },
