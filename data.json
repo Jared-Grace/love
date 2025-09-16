@@ -14116,6 +14116,9 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
+  ],
+  "bible_folders": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21033,6 +21036,7 @@
     "ebible_folder_english",
     "sandbox",
     "bible_folder",
+    "bible_folders",
     "books",
     "mapped",
     "file_path",
