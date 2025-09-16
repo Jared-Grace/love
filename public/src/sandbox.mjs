@@ -46,7 +46,8 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
-      each_range(count, function lambda4() {});
+      function lambda4() {}
+      each_range(count, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
