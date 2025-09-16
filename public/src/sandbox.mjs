@@ -15,7 +15,8 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   function lambda(item) {
     function lambda2(item2) {
-      let sw = string_starts_with(s, prefix);
+      let sw = string_starts_with(item, item2);
+      return sw;
     }
     let any = list_any(mapped, lambda2);
   }
