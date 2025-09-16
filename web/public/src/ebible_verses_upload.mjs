@@ -1,3 +1,4 @@
+import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses_check.mjs";
 import { marker } from "./marker.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
@@ -11,8 +12,7 @@ export async function ebible_verses_upload(bible_folder) {
   marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
-  await ebible_chapters_each_verses(bible_folder, each_chapter2);
-  async function each_chapter2(chapter_code, verses) {}
+  await ebible_chapters_each_verses_check(bible_folder);
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
