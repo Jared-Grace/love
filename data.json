@@ -2002,7 +2002,6 @@
   "s ston",
   "s emoji",
   "ebible_verses_upload yor",
-  "s text",
   "ebible_version_books_testament_new engbsb",
   "s books",
   "ebible_version_books engbsb",
@@ -2075,7 +2074,8 @@
   "is ebible_version_books_testament_new",
   "is ebible_class_old",
   "ebible_version_books_testament engwebu aa",
-  "ebible_version_books_testament engwebu .aa"
+  "ebible_version_books_testament engwebu .aa",
+  "s text"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
