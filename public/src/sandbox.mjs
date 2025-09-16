@@ -39,8 +39,8 @@ export async function sandbox() {
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
       let verse_end = null;
-      let v = list_multiple_is(verse_range);
-      if (false) {
+      let m = list_multiple_is(verse_range);
+      if (m) {
         verse_end = list_second(verse_range);
       } else {
         verse_end = verse_start;
