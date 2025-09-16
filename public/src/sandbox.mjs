@@ -71,7 +71,7 @@ export async function sandbox() {
         if (ne) {
           function lambda3(item) {
             let text = object_property_get(item, "text");
-            la(book_name + " " + second + " "+text);
+            la(book_name + " " + second + " " + text);
           }
           each(result, lambda3);
         }
