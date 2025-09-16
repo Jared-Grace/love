@@ -3079,7 +3079,8 @@
    "ebible_index_flat",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox"
+   "sandbox",
+   "each_range_from_async"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4352,7 +4353,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "range_from"
+   "range_from",
+   "each_range_from_async"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5202,7 +5204,8 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "each_range_from_async"
   ],
   "f_paths": [
    "data_files_update",
@@ -11233,7 +11236,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "each_range_from_async"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -26785,8 +26789,9 @@
    ]
   },
   "each_range_from_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "each_async",
     "range_from",
     "marker",
     "each",
@@ -26794,7 +26799,10 @@
     "from",
     "to",
     "lambda",
-    "list"
+    "list",
+    "list2",
+    "lambda2",
+    "item"
    ]
   }
  },
