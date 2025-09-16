@@ -1,6 +1,7 @@
 export function ebible_verses_include() {
   let v = [
     "d",
+    "em",
     "fk",
     "it",
     "li",
