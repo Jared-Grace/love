@@ -4684,8 +4684,7 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "value2": [
    "error_attention_set",
@@ -8335,8 +8334,7 @@
    "list_squash",
    "marker_down_choices_lambda",
    "html_parse_descendants_classes",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -11290,8 +11288,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14110,9 +14107,6 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
-  ],
-  "la2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21013,7 +21007,6 @@
     "string_split_dash",
     "string_split_colon",
     "list_first_second",
-    "list_adder",
     "list_map_prefix_any",
     "list_map_first",
     "list_map_filter_string_empty_not_is",
@@ -21060,9 +21053,6 @@
     "lambda4",
     "verse_number",
     "result",
-    "lambda3",
-    "la2",
-    "list2",
     "list"
    ],
    "async": true
