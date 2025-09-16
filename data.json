@@ -2071,7 +2071,8 @@
   "evu benirv",
   "p",
   "evu tel2017",
-  "s test"
+  "s test",
+  "is ebible_version_books_testament_new"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
@@ -26878,7 +26879,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-16T19:01:08.105Z",
+ "git_push_when": "2025-09-16T21:44:49.117Z",
  "error_attention": null,
  "app_current": "replace"
 }
