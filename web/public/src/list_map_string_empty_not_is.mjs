@@ -4,7 +4,8 @@ import { string_empty_not_is } from "./string_empty_not_is.mjs";
 export function list_map_string_empty_not_is(mapped3) {
   function lambda(item) {
     let ne = string_empty_not_is(item);
-    let filtered = list_filter(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let filtered = list_filter(list, lambda2);
     return ne;
   }
   let mapped4 = list_map(mapped3, lambda);
