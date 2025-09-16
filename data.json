@@ -4711,8 +4711,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists",
-   "retry"
+   "firebase_storage_exists"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -6020,7 +6019,8 @@
    "error_json",
    "js_unparse",
    "list_index_of",
-   "list_index_of_last"
+   "list_index_of_last",
+   "retry"
   ],
   "exit": [
    "exit"
@@ -26949,10 +26949,10 @@
   "retry": {
    "async": true,
    "identifiers": [
+    "error_json",
     "list_adder_async",
     "log",
     "each_range_async",
-    "error",
     "retry",
     "lambda",
     "count",
