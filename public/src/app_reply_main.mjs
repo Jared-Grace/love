@@ -49,6 +49,10 @@ export async function app_reply_main() {
       bible_folder: swh,
     },
     {
+      name: "Luganda",
+      bible_folder: "lug",
+    },
+    {
       name: "Yoruba",
       bible_folder: "yor",
     },
