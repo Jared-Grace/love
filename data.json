@@ -2379,7 +2379,8 @@
    "each_range_from_async",
    "number_pad",
    "each_pair_async",
-   "each_multiple_async"
+   "each_multiple_async",
+   "retry"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14069,6 +14070,9 @@
   "each_multiple_async": [
    "each_pair_async",
    "each_multiple_async"
+  ],
+  "retry": [
+   "retry"
   ]
  },
  "functions": {
@@ -26921,6 +26925,13 @@
     "item",
     "index",
     "items"
+   ]
+  },
+  "retry": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "retry"
    ]
   }
  },
