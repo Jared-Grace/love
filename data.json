@@ -20847,10 +20847,10 @@
     "chapter_verses_list",
     "lambda2",
     "la",
-    "list",
     "lambda",
     "book_name",
-    "chapter_verses"
+    "chapter_verses",
+    "list"
    ],
    "async": true
   },
