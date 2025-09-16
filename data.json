@@ -4006,7 +4006,8 @@
    "tasks_run",
    "list_join_newline_2",
    "list_join_newline",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -4839,7 +4840,8 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "string_take"
+   "string_take",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -6253,7 +6255,8 @@
    "string_split_empty",
    "string_replace",
    "html_parse_descendants_classes",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -11728,7 +11731,8 @@
    "ebible_verses"
   ],
   "split2": [
-   "string_split_empty"
+   "string_split_empty",
+   "sandbox"
   ],
   "list_take": [
    "list_take",
@@ -20819,6 +20823,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split",
     "list_adder",
     "each_pair",
     "list_map_prefix_any",
@@ -20851,6 +20856,9 @@
     "lambda",
     "book_name",
     "chapter_verses",
+    "split2",
+    "s",
+    "separator",
     "list"
    ],
    "async": true
