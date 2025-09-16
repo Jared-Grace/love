@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { marker } from "./marker.mjs";
@@ -6,7 +7,7 @@ export function range_from(from, to) {
   let count = to - from + 1;
   let r = range(count);
   function lambda(item) {
-    let v = item + count;
+    let v = add(item, count);
     return v;
   }
   let mapped = list_map(r, lambda);
