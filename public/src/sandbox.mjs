@@ -1,3 +1,4 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_first } from "./list_first.mjs";
 import { string_split_dash } from "./string_split_dash.mjs";
@@ -38,7 +39,7 @@ export async function sandbox() {
       let split3 = string_split_dash(second);
       let verse_start = list_first(split3);
       let verse_end = null;
-      lmi;
+      let v = list_multiple_is(list2);
       if (false) {
         verse_end = list_second(split3);
       } else {
