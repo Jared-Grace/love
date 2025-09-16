@@ -2057,7 +2057,7 @@
   "cs each_range_from async"
  ],
  "marker_current": "1",
- "function_current": "range",
+ "function_current": "each_range_from_async",
  "terminal": false,
  "identifiers": {
   "log": [
