@@ -1,4 +1,4 @@
-import { each_range_from } from "./each_range_from.mjs";
+import { each_range_from_async } from "./each_range_from_async.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_first } from "./list_first.mjs";
@@ -34,7 +34,7 @@ export async function sandbox() {
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
   function lambda2(la) {
-    function lambda(book_name, chapter_verses) {
+    async function lambda(book_name, chapter_verses) {
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let verse_range = string_split_dash(second);
@@ -47,7 +47,7 @@ export async function sandbox() {
         verse_end = verse_start;
       }
       function lambda4() {}
-      each_range_from(verse_start, verse_end, lambda4);
+      await each_range_from_async(verse_start, verse_end, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
