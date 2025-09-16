@@ -2047,7 +2047,6 @@
   "o rg",
   "s range",
   "cs each_range_from async",
-  "s find",
   "sp ad",
   "n number_pad",
   "s ebible",
@@ -2066,7 +2065,8 @@
   "ebible_verses_upload lug",
   "s inte",
   "p",
-  "sb"
+  "sb",
+  "s find"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
