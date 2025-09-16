@@ -2064,8 +2064,8 @@
   "s each_pair",
   "s multiple",
   "cs each_index async",
-  "p",
-  "sb"
+  "sb",
+  "p"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
