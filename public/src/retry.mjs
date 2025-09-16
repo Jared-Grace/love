@@ -6,8 +6,8 @@ export async function retry(lambda) {
   async function lambda2() {
     try {
       result = await lambda();
-      let v = true;
-      return v;
+      let success = true;
+      return success;
     } catch (e) {}
   }
   await each_range_async(count, lambda2);
