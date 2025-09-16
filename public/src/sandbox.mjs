@@ -1,3 +1,4 @@
+import { list_adder } from "./list_adder.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { list_map_prefix_any } from "./list_map_prefix_any.mjs";
 import { list_map_first } from "./list_map_first.mjs";
@@ -25,7 +26,7 @@ export async function sandbox() {
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
-  lad;
+  let list = list_adder(function lambda2(la) {});
   function lambda(book_name, chapter_verses) {}
   each_pair(book_names, chapter_verses_list, lambda);
   return chapter_verses_list;
