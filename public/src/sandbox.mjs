@@ -13,7 +13,8 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda(item) {
-    let any = list_any(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let any = list_any(list, lambda2);
   }
   let filtered = list_filter(split, lambda);
 }
