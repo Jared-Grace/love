@@ -2042,8 +2042,8 @@
   "cs list_map_prefix_without any",
   "s list_map_prefix_without",
   "o sb",
-  "sb",
-  "s map"
+  "s map",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
