@@ -2077,10 +2077,11 @@
   "s text",
   "is ebible_chapter_text",
   "o sb",
-  "s chapter"
+  "s chapter",
+  "o evu"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "ebible_verses_upload",
  "terminal": false,
  "identifiers": {
   "log": [

@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
 import { ebible_verses_upload_name } from "./ebible_verses_upload_name.mjs";
 import { ebible_firebase_upload } from "./ebible_firebase_upload.mjs";
@@ -7,6 +8,7 @@ import { list_map } from "./list_map.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export async function ebible_verses_upload(bible_folder) {
+  marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
   await ebible_chapters_each_verses(bible_folder, each_chapter2);
