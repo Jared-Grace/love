@@ -4895,7 +4895,8 @@
    "html_style_merge",
    "html_style_assign",
    "string_take",
-   "range_from"
+   "range_from",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -5516,7 +5517,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "sandbox"
   ],
   "process": [
    "command_line_read",
@@ -10199,7 +10201,8 @@
   "string_to": [
    "list_size_1_assert",
    "marker_first",
-   "string_to"
+   "string_to",
+   "sandbox"
   ],
   "skipped": [
    "list_skip",
@@ -14114,9 +14117,6 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
-  ],
-  "string_To": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21031,6 +21031,7 @@
     "ebible_version_books",
     "ebible_folder_english",
     "range_from",
+    "string_to",
     "sandbox",
     "bible_folder",
     "books",
@@ -21064,7 +21065,8 @@
     "verses",
     "lambda4",
     "verse_number",
-    "string_To",
+    "s",
+    "input",
     "result",
     "r",
     "list"
