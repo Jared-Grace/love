@@ -2139,7 +2139,8 @@
    "html_parse_descendants_classes",
    "ebible_chapter_text",
    "html_p_text_multiple",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "each_range_from"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2973,7 +2974,8 @@
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
    "sandbox",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3223,7 +3225,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox"
+   "sandbox",
+   "each_range_from"
   ],
   "v": [
    "data_identifiers_file",
@@ -5844,7 +5847,8 @@
    "range",
    "each_range_async",
    "app_replace_rule_set",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "each_range": [
    "each_range",
@@ -5866,7 +5870,8 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "sandbox",
-   "range_from"
+   "range_from",
+   "each_range_from"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -13981,6 +13986,9 @@
   ],
   "range_from": [
    "range_from"
+  ],
+  "each_range_from": [
+   "each_range_from"
   ]
  },
  "functions": {
@@ -26749,6 +26757,17 @@
     "item",
     "s",
     "mapped"
+   ]
+  },
+  "each_range_from": {
+   "async": false,
+   "identifiers": [
+    "range",
+    "each",
+    "each_range_from",
+    "count",
+    "lambda",
+    "list"
    ]
   }
  },
