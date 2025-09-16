@@ -2080,7 +2080,8 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "retry"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3561,7 +3562,8 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -26940,6 +26942,7 @@
   "retry": {
    "async": true,
    "identifiers": [
+    "log",
     "each_range_async",
     "error",
     "retry",
@@ -26949,7 +26952,8 @@
     "result",
     "success",
     "lambda2",
-    "e"
+    "e",
+    "message"
    ]
   }
  },
