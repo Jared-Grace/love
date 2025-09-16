@@ -4630,7 +4630,8 @@
    "js_calls_to_each",
    "app_reply_main",
    "ebible_versions_download",
-   "http"
+   "http",
+   "sandbox"
   ],
   "value2": [
    "error_attention_set",
@@ -5813,13 +5814,16 @@
   ],
   "each_pair": [
    "each_pair",
-   "js_expand_generic"
+   "js_expand_generic",
+   "sandbox"
   ],
   "list_a": [
-   "each_pair"
+   "each_pair",
+   "sandbox"
   ],
   "list_b": [
-   "each_pair"
+   "each_pair",
+   "sandbox"
   ],
   "range": [
    "each_range",
@@ -20804,6 +20808,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "each_pair",
     "list_map_prefix_any",
     "list_map_first",
     "list_map_filter_string_empty_not_is",
@@ -20828,7 +20833,10 @@
     "mapped2",
     "mapped3",
     "mapped4",
-    "mapped5"
+    "mapped5",
+    "list_a",
+    "list_b",
+    "lambda3"
    ],
    "async": true
   },
