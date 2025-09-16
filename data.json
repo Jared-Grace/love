@@ -2082,10 +2082,11 @@
   "p",
   "sb",
   "s code",
-  "s codes"
+  "s codes",
+  "fws ebible_version_books_testament apocrypha"
  ],
  "marker_current": "1",
- "function_current": "ebible_verses_upload",
+ "function_current": "ebible_version_books_testament_apocrypha",
  "terminal": false,
  "identifiers": {
   "log": [
