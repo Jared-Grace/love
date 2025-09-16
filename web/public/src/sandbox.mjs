@@ -106,6 +106,6 @@ export async function sandbox() {
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
   let list = await list_adder_async(lambda2);
-  let joined = list_join_newline(list2);
+  let joined = list_join_newline(list);clipboard_copy
   return list;
 }
