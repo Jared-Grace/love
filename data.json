@@ -2064,9 +2064,9 @@
   "s each_pair",
   "s multiple",
   "cs each_index async",
-  "sb",
   "p",
-  "ebible_verses_upload lug"
+  "ebible_verses_upload lug",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
