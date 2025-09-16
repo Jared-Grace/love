@@ -3270,7 +3270,6 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "sandbox",
    "each_range_from",
    "each_range_from_async",
    "each_index_async",
@@ -3520,7 +3519,6 @@
    "http",
    "urdu_allah_to_god",
    "number_pad",
-   "sandbox",
    "ebible_folder_english",
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name"
@@ -4207,7 +4205,6 @@
    "ebible_versions_download",
    "ebible_version_download_path_combine",
    "file_parent_exists_ensure",
-   "sandbox",
    "ebible_references_parse"
   ],
   "object_property_get": [
@@ -5219,7 +5216,6 @@
    "emoji_voice",
    "string_the_servant_of_god",
    "folder_read_async",
-   "sandbox",
    "ebible_folder_urdu",
    "emoji_rainbow",
    "emoji_rock"
@@ -13916,14 +13912,12 @@
    "ebible_firebase_upload_path"
   ],
   "ebible_folder_english": [
-   "sandbox",
    "app_reply_main",
    "ebible_folder_english",
    "ebible_references_parse"
   ],
   "ebible_folder_urdu": [
    "app_reply_main",
-   "sandbox",
    "ebible_folder_urdu"
   ],
   "ebible_index_upload_name": [
@@ -14185,11 +14179,9 @@
    "each_multiple_async"
   ],
   "bible_folders": [
-   "sandbox",
    "ebible_references_parse"
   ],
   "ebible_references_parse": [
-   "sandbox",
    "ebible_references_parse"
   ],
   "string_split_dash": [
@@ -14277,6 +14269,9 @@
   ],
   "split4": [
    "string_split_dash"
+  ],
+  "ebible_references_parse_god_created_man_why": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21169,16 +21164,9 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_references_parse",
-    "ebible_folder_urdu",
+    "ebible_references_parse_god_created_man_why",
     "marker",
-    "ebible_folder_english",
-    "sandbox",
-    "v2",
-    "v",
-    "file_path",
-    "bible_folders",
-    "list"
+    "sandbox"
    ],
    "async": true
   },
