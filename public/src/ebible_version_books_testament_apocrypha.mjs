@@ -5,5 +5,6 @@ export async function ebible_version_books_testament_apocrypha(
   selector,
 ) {
   marker("1");
-  return await ebible_version_books_testament(bible_folder, selector);
+  let v = await ebible_version_books_testament(bible_folder, selector);
+  return v;
 }
