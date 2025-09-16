@@ -1,3 +1,4 @@
+import { each_pair_async } from "./each_pair_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { equal } from "./equal.mjs";
@@ -12,7 +13,6 @@ import { string_split_dash } from "./string_split_dash.mjs";
 import { string_split_colon } from "./string_split_colon.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { list_adder } from "./list_adder.mjs";
-import { each_pair } from "./each_pair.mjs";
 import { list_map_prefix_any } from "./list_map_prefix_any.mjs";
 import { list_map_first } from "./list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "./list_map_filter_string_empty_not_is.mjs";
@@ -70,7 +70,7 @@ export async function sandbox() {
       });
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
-    each_pair(book_names, chapter_verses_list, lambda);
+    await each_pair_async(book_names, chapter_verses_list, lambda);
   }
   let list = list_adder(lambda2);
   return list;
