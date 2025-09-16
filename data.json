@@ -2948,7 +2948,8 @@
    "folder_read_async",
    "ebible_index_flat",
    "html_loading",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_filter_starts_with_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -26457,8 +26458,9 @@
     "list_filter_starts_with_any",
     "prefixes",
     "list",
-    "verse_references",
-    "item"
+    "lambda",
+    "item",
+    "verse_references"
    ]
   },
   "list_map_prefix_without_any": {
