@@ -5183,7 +5183,8 @@
    "emoji_question",
    "emoji_voice",
    "string_the_servant_of_god",
-   "folder_read_async"
+   "folder_read_async",
+   "sandbox"
   ],
   "readdirSync": [
    "folder_read"
@@ -13833,7 +13834,8 @@
    "app_reply_main"
   ],
   "ebible_folder_urdu": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload"
@@ -21005,6 +21007,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_folder_urdu",
     "each",
     "list_empty_not_is",
     "list_filter_property",
@@ -21037,6 +21040,7 @@
     "ebible_folder_english",
     "sandbox",
     "bible_folder",
+    "v2",
     "bible_folders",
     "books",
     "mapped",
