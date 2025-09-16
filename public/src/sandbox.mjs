@@ -64,6 +64,7 @@ export async function sandbox() {
       }
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
+        string_To;
         log({
           verse_number,
         });
