@@ -5890,8 +5890,7 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic",
-   "retry"
+   "js_dollar_a_generic"
   ],
   "count": [
    "each_range",
@@ -11224,7 +11223,8 @@
   ],
   "each_range_async": [
    "marker_next_delete_multiple",
-   "each_range_async"
+   "each_range_async",
+   "retry"
   ],
   "js_node_type_not_is_if": [
    "js_node_type_not_is_if",
@@ -26930,12 +26930,12 @@
    ]
   },
   "retry": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "each_range",
+    "each_range_async",
     "retry",
-    "lambda2",
-    "count"
+    "count",
+    "lambda2"
    ]
   }
  },
