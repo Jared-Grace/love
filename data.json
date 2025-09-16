@@ -3459,7 +3459,8 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -9816,7 +9817,8 @@
   "list_multiple_is": [
    "js_statement_call_get",
    "list_multiple_is",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "sandbox"
   ],
   "js_statement_call_get": [
    "js_statement_call_get",
@@ -11199,7 +11201,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13955,9 +13958,6 @@
    "sandbox"
   ],
   "verse_end": [
-   "sandbox"
-  ],
-  "lmi": [
    "sandbox"
   ]
  },
@@ -20844,6 +20844,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_multiple_is",
     "list_second",
     "list_first",
     "string_split_dash",
@@ -20887,7 +20888,8 @@
     "split3",
     "verse_start",
     "verse_end",
-    "lmi",
+    "v",
+    "list2",
     "list"
    ],
    "async": true
