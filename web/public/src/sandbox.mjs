@@ -31,7 +31,7 @@ export async function sandbox() {
   function lambda2(la) {
     function lambda(book_name, chapter_verses) {
       let split2 = string_split(chapter_verses, ":");
-      let result = list_first_second(list2);
+      let { first, second } = list_first_second(split2);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
