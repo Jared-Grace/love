@@ -4,7 +4,6 @@ export async function retry(lambda) {
   let wait = 1000;
   async function lambda2() {
     try {
-      let result = await lambda();
       let v = true;
       return v;
     } catch (e) {}
