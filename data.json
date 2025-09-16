@@ -4439,8 +4439,7 @@
    "list_empty_not_is",
    "list_index_is",
    "list_last_or_null",
-   "data_file_update_inner",
-   "sandbox"
+   "data_file_update_inner"
   ],
   "e": [
    "catch_ignore",
@@ -9872,7 +9871,8 @@
    "marker_top",
    "list_first_second_generic",
    "js_expand_generic",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "last": [
    "js_return_name",
@@ -20997,7 +20997,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_empty_is",
+    "list_empty_not_is",
     "list_filter_property",
     "string_to",
     "list_adder_async",
