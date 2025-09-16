@@ -2056,7 +2056,8 @@
   "n number_pad",
   "s ebible",
   "p",
-  "sb"
+  "sb",
+  "cs each_pair async"
  ],
  "marker_current": "1",
  "function_current": "number_pad",
