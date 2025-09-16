@@ -38,7 +38,8 @@ export async function sandbox() {
       let split3 = string_split_dash(second);
       let first2 = list_first(split3);
       if (false) {
-        let second2 = list_second(list2);
+        let second2 = null;
+        second2 = list_second(split3);
       }
     }
     each_pair(book_names, chapter_verses_list, lambda);
