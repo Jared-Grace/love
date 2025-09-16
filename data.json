@@ -4805,8 +4805,7 @@
    "html_loading",
    "html_style_merge",
    "html_style_assign",
-   "string_take",
-   "sandbox"
+   "string_take"
   ],
   "a": [
    "string_suffix_without",
@@ -8951,8 +8950,7 @@
    "list_filter_starts_with_not_multiple",
    "folder_find_starts_with",
    "js_code_declaration_args",
-   "list_map_prefix_without",
-   "sandbox"
+   "list_map_prefix_without"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -20715,8 +20713,6 @@
     "lambda2",
     "item2",
     "sw",
-    "s",
-    "prefix",
     "any",
     "filtered"
    ],
