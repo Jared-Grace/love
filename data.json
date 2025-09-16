@@ -2068,8 +2068,8 @@
   "u lw",
   "s pair",
   "p",
-  "sb",
-  "s clip"
+  "s clip",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
