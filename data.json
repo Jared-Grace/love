@@ -2946,7 +2946,8 @@
    "folder_read_async",
    "ebible_index_flat",
    "html_loading",
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "list_map_prefix_without_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3190,7 +3191,8 @@
    "list_add_first",
    "string_split_newline",
    "list_filter_starts_with_any",
-   "sandbox"
+   "sandbox",
+   "list_map_prefix_without_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -3967,7 +3969,8 @@
    "function_new_js_inner",
    "html_parse_find_remove",
    "list_map_prefix_without",
-   "html_loading"
+   "html_loading",
+   "list_map_prefix_without_any"
   ],
   "separator": [
    "watch",
@@ -4301,7 +4304,8 @@
    "object_property_get_name",
    "string_starts_with_not",
    "list_add_first",
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "list_map_prefix_without_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4963,7 +4967,8 @@
    "ebible_chapters",
    "ebible_chapter_text",
    "ebible_verses_upload",
-   "list_map_prefix_without"
+   "list_map_prefix_without",
+   "list_map_prefix_without_any"
   ],
   "functions_names": [
    "functions_names",
@@ -6416,7 +6421,8 @@
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
    "list_map_prefix_without",
-   "sandbox"
+   "sandbox",
+   "list_map_prefix_without_any"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -8955,7 +8961,8 @@
    "folder_find_starts_with",
    "js_code_declaration_args",
    "list_map_prefix_without",
-   "sandbox"
+   "sandbox",
+   "list_map_prefix_without_any"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9176,7 +9183,8 @@
   ],
   "string_prefix_without": [
    "string_prefix_without",
-   "list_map_prefix_without"
+   "list_map_prefix_without",
+   "list_map_prefix_without_any"
   ],
   "js_keyword_if": [
    "js_dollar_i",
@@ -13822,6 +13830,9 @@
   "list_filter_starts_with_any": [
    "sandbox",
    "list_filter_starts_with_any"
+  ],
+  "list_map_prefix_without_any": [
+   "list_map_prefix_without_any"
   ]
  },
  "functions": {
@@ -26455,6 +26466,20 @@
     "sw",
     "any",
     "verse_references"
+   ]
+  },
+  "list_map_prefix_without_any": {
+   "async": false,
+   "identifiers": [
+    "list_map",
+    "string_prefix_without",
+    "list_map_prefix_without_any",
+    "list",
+    "prefix",
+    "lambda",
+    "item",
+    "result",
+    "mapped"
    ]
   }
  },
