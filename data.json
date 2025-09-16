@@ -13950,10 +13950,10 @@
   "string_split_dash": [
    "sandbox"
   ],
-  "first2": [
+  "verse_start": [
    "sandbox"
   ],
-  "second2": [
+  "verse_end": [
    "sandbox"
   ]
  },
@@ -20881,8 +20881,8 @@
     "first",
     "second",
     "split3",
-    "first2",
-    "second2",
+    "verse_start",
+    "verse_end",
     "list"
    ],
    "async": true
