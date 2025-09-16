@@ -4,7 +4,8 @@ export async function retry() {
   let wait = 1000;
   async function lambda2() {
     try {
-      return true;
+      let v = true;
+      return v;
     } catch (e) {}
   }
   await each_range_async(count, lambda2);
