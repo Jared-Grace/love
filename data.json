@@ -2995,7 +2995,8 @@
    "each_range_from_async",
    "each_pair_async",
    "each_multiple_async",
-   "retry"
+   "retry",
+   "firebase_upload_generic"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4676,7 +4677,8 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry"
+   "retry",
+   "firebase_upload_generic"
   ],
   "value2": [
    "error_attention_set",
@@ -14086,7 +14088,8 @@
    "each_multiple_async"
   ],
   "retry": [
-   "retry"
+   "retry",
+   "firebase_upload_generic"
   ],
   "wait": [
    "retry"
@@ -25977,6 +25980,7 @@
   "firebase_upload_generic": {
    "async": true,
    "identifiers": [
+    "retry",
     "log",
     "object_merge",
     "firebase_bucket",
@@ -25990,10 +25994,12 @@
     "merged",
     "metadata",
     "cacheControl",
-    "save",
+    "lambda",
+    "lambda3",
     "console",
     "url",
-    "name"
+    "name",
+    "save"
    ]
   },
   "folder_find_starts_with": {
