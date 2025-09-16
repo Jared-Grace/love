@@ -2034,7 +2034,8 @@
   "ac flr fdr",
   "a flr file_read",
   "s read",
-  "sb"
+  "sb",
+  "s starts"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
