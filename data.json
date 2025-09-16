@@ -2079,7 +2079,8 @@
   "o evu",
   "p",
   "ebible_chapters_each_verses_check engwebu",
-  "s ebible"
+  "s ebible",
+  "ect engwebu SIR01"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses_upload",
