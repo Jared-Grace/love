@@ -36,12 +36,12 @@ export async function sandbox() {
     function lambda(book_name, chapter_verses) {
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
-      let split3 = string_split_dash(second);
-      let verse_start = list_first(split3);
+      let verse_range = string_split_dash(second);
+      let verse_start = list_first(verse_range);
       let verse_end = null;
-      let v = list_multiple_is(list2);
+      let v = list_multiple_is(verse_range);
       if (false) {
-        verse_end = list_second(split3);
+        verse_end = list_second(verse_range);
       } else {
         verse_end = verse_start;
       }
