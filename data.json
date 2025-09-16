@@ -13318,7 +13318,8 @@
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "list_map_prefix_without"
   ],
   "list_filter_starts_with_not_multiple": [
    "list_filter_starts_with_not_multiple",
@@ -13856,7 +13857,8 @@
    "list_filter_starts_with_any"
   ],
   "list_find_starts_with": [
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "list_map_prefix_without"
   ],
   "predicate": [
    "list_find"
@@ -26103,6 +26105,7 @@
   "list_map_prefix_without": {
    "async": false,
    "identifiers": [
+    "list_find_starts_with",
     "list_map",
     "string_prefix_without",
     "list_map_prefix_without",
@@ -26110,6 +26113,7 @@
     "prefix",
     "lambda",
     "item",
+    "prefixes",
     "result",
     "mapped"
    ]
