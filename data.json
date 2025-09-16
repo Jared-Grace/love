@@ -2086,8 +2086,7 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry",
-   "each_range_from_async"
+   "retry"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -26913,7 +26912,6 @@
   "each_range_from_async": {
    "async": true,
    "identifiers": [
-    "log",
     "each_async",
     "range_from",
     "marker",
