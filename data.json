@@ -3248,7 +3248,8 @@
    "list_map_prefix_any",
    "sandbox",
    "each_range_from",
-   "each_range_from_async"
+   "each_range_from_async",
+   "retry"
   ],
   "v": [
    "data_identifiers_file",
@@ -4674,7 +4675,8 @@
    "js_calls_to_each",
    "app_reply_main",
    "ebible_versions_download",
-   "http"
+   "http",
+   "retry"
   ],
   "value2": [
    "error_attention_set",
@@ -6985,7 +6987,8 @@
    "marker_next_await",
    "marker_param_add",
    "function_transform_marker_specified",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "retry"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -7026,7 +7029,8 @@
    "ebible_chapter_codes",
    "ebible_verses",
    "ebible_index_flat",
-   "sandbox"
+   "sandbox",
+   "retry"
   ],
   "node": [
    "function_dependencies",
@@ -26942,6 +26946,7 @@
   "retry": {
    "async": true,
    "identifiers": [
+    "list_adder_async",
     "log",
     "each_range_async",
     "error",
@@ -26951,6 +26956,9 @@
     "wait",
     "result",
     "success",
+    "list",
+    "lambda3",
+    "la",
     "lambda2",
     "e",
     "message"
