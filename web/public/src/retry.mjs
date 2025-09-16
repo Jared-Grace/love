@@ -1,3 +1,4 @@
+import { functions_search } from "./functions_search.mjs";
 import { error_json } from "./error_json.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { log } from "./log.mjs";
@@ -16,6 +17,7 @@ export async function retry(lambda) {
       } catch (e) {
         log(message);
         la(e);
+        let result2 = await functions_search(search);
       }
     }
     await each_range_async(count, lambda2);
