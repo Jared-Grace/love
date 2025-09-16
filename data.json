@@ -1996,7 +1996,6 @@
   "s size",
   "s inter",
   "ebible_verses_upload swhonen",
-  "ps",
   "n urdu_allah_to_god",
   "s verses",
   "ebible_verses urdgvu JHN07",
@@ -2062,7 +2061,8 @@
   "s ret",
   "s upload",
   "n retry",
-  "s erro"
+  "s erro",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "retry",
