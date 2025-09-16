@@ -1,3 +1,4 @@
+import { list_find_property } from "./list_find_property.mjs";
 import { each_range_from_async } from "./each_range_from_async.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
@@ -35,6 +36,7 @@ export async function sandbox() {
   let chapter_verses_list = list_map_first(mapped4);
   function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
+      let first2 = list_find_property(list2, property_name, property_value);
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let verse_range = string_split_dash(second);
