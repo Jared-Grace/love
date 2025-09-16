@@ -2058,7 +2058,8 @@
   "sb",
   "cs each_pair async",
   "cs each_multiple async",
-  "s verses,up"
+  "s verses,up",
+  "ebible_verses_upload hin2017"
  ],
  "marker_current": "1",
  "function_current": "each_multiple_async",
