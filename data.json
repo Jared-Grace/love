@@ -13843,8 +13843,7 @@
   ],
   "verse_references": [
    "sandbox",
-   "list_filter_starts_with_any",
-   "list_map_prefix_without_any"
+   "list_filter_starts_with_any"
   ],
   "list_filter_starts_with_any": [
    "sandbox",
@@ -13854,12 +13853,12 @@
    "list_map_prefix_without_any"
   ],
   "list_any_starts_with": [
-   "list_map_prefix_without_any",
    "list_any_starts_with",
    "list_filter_starts_with_any"
   ],
   "list_find_starts_with": [
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "list_map_prefix_without_any"
   ],
   "predicate": [
    "list_find"
@@ -26497,7 +26496,7 @@
   "list_map_prefix_without_any": {
    "async": false,
    "identifiers": [
-    "list_any_starts_with",
+    "list_find_starts_with",
     "marker",
     "list_map",
     "string_prefix_without",
@@ -26506,9 +26505,8 @@
     "prefixes",
     "lambda",
     "item",
-    "verse_references",
-    "result",
     "prefix",
+    "result",
     "mapped"
    ]
   },
