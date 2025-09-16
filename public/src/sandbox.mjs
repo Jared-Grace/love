@@ -1,3 +1,4 @@
+import { string_starts_with } from "./string_starts_with.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -13,8 +14,10 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda(item) {
-    function lambda2(item2) {}
-    let any = list_any(list, lambda2);
+    function lambda2(item2) {
+      let sw = string_starts_with(s, prefix);
+    }
+    let any = list_any(mapped, lambda2);
   }
   let filtered = list_filter(split, lambda);
 }
