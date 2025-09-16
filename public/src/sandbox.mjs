@@ -23,5 +23,5 @@ export async function sandbox() {
     return split2;
   }
   let mapped3 = list_map(mapped2, lambda);
-  return mapped2;
+  return mapped3;
 }
