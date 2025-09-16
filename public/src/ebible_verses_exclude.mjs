@@ -17,6 +17,7 @@ export function ebible_verses_exclude() {
     "ip",
     "k",
     "mt",
+    "mt3",
     "mr",
     "ms",
     "ms2",
