@@ -2686,7 +2686,8 @@
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "sandbox"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3423,7 +3424,8 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7716,7 +7718,8 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read"
+   "function_read",
+   "sandbox"
   ],
   "function_rename": [
    "function_rename",
@@ -20674,6 +20677,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "function_read",
     "string_split_newline",
     "ebible_version_books",
     "ebible_folder_english",
@@ -20681,6 +20685,8 @@
     "bible_folder",
     "books",
     "path",
+    "v",
+    "f_name",
     "split"
    ],
    "async": true
