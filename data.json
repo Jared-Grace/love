@@ -2088,7 +2088,8 @@
    "folder_find_starts_with",
    "retry",
    "sandbox",
-   "each_range_from_async"
+   "each_range_from_async",
+   "range_from"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3574,7 +3575,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "range_from"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -26884,6 +26886,7 @@
   "range_from": {
    "async": false,
    "identifiers": [
+    "log",
     "add",
     "list_map",
     "range",
@@ -26891,6 +26894,7 @@
     "range_from",
     "from",
     "to",
+    "message",
     "count",
     "r",
     "lambda",
