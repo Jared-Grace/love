@@ -65,10 +65,10 @@ export async function sandbox() {
       async function lambda4(verse_number) {
         let result = list_filter_property(verses, "verse_number", verse_number);
       }
-        la({
-          verse_start,
-          verse_end,
-        });
+      la({
+        verse_start,
+        verse_end,
+      });
       log(verses);
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
