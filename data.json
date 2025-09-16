@@ -13926,6 +13926,9 @@
   ],
   "book_name": [
    "sandbox"
+  ],
+  "chapter_verses_list": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20836,9 +20839,10 @@
     "mapped2",
     "mapped3",
     "mapped4",
-    "chapter_verses",
+    "chapter_verses_list",
     "lambda",
-    "book_name"
+    "book_name",
+    "chapter_verses"
    ],
    "async": true
   },
