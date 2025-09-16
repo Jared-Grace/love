@@ -3649,7 +3649,8 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy"
+   "firebase_deploy",
+   "sandbox"
   ],
   "log_keep": [
    "catch_log",
@@ -5505,14 +5506,16 @@
    "command_line_schtasks",
    "git_push_schedule",
    "git_push_schedule_command",
-   "schtasks_query"
+   "schtasks_query",
+   "sandbox"
   ],
   "stdout": [
    "command_line",
    "command_line_read",
    "command_line_schtasks",
    "git_push_schedule",
-   "firebase_deploy"
+   "firebase_deploy",
+   "sandbox"
   ],
   "encoding": [
    "command_line"
@@ -21187,6 +21190,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "command_line",
     "log",
     "list_map_property",
     "ebible_version_books_testament_apocrypha",
@@ -21195,6 +21199,8 @@
     "ebible_chapters_each_verses_check",
     "sandbox",
     "bible_folder",
+    "stdout",
+    "command",
     "books",
     "list",
     "each_chapter",
