@@ -5848,14 +5848,14 @@
    "range",
    "each_range_async",
    "app_replace_rule_set",
-   "range_from",
-   "each_range_from"
+   "range_from"
   ],
   "each_range": [
    "each_range",
    "js_identifier_defineds",
    "js_dollar_a_generic",
-   "sandbox"
+   "sandbox",
+   "each_range_from"
   ],
   "count": [
    "each_range",
@@ -26763,8 +26763,8 @@
   "each_range_from": {
    "async": false,
    "identifiers": [
+    "each_range",
     "marker",
-    "range",
     "each",
     "each_range_from",
     "count",
