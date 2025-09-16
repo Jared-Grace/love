@@ -20778,10 +20778,10 @@
     "mapped2",
     "lambda",
     "item",
-    "mapped3",
-    "list",
     "split2",
-    "s"
+    "s",
+    "mapped3",
+    "list"
    ],
    "async": true
   },
