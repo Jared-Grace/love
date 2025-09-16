@@ -2350,7 +2350,8 @@
    "html_style_assign",
    "string_split_newline",
    "list_map_prefix_without_any",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "sandbox"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -20747,6 +20748,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "marker",
     "list_map_prefix_without",
     "list_filter_starts_with_any",
     "list_map_property",
