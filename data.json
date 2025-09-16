@@ -5906,7 +5906,8 @@
    "js_dollar_ie",
    "js_identifier_replace",
    "js_assign_combine",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "left": [
    "equal",
@@ -5925,7 +5926,8 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading"
+   "html_loading",
+   "sandbox"
   ],
   "right": [
    "equal",
@@ -5943,7 +5945,8 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot"
+   "js_code_dot",
+   "sandbox"
   ],
   "eq": [
    "equal",
@@ -20915,6 +20918,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "equal",
     "number_pad",
     "object_property_get",
     "list_find_property",
@@ -20963,6 +20967,8 @@
     "first",
     "second",
     "pad_count",
+    "left",
+    "right",
     "v",
     "num",
     "length",
