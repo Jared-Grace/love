@@ -6,6 +6,6 @@ export async function sandbox() {
   await ebible_chapters_each_verses_check(bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    log(verses);
+    log(chapter_code);
   }
 }
