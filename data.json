@@ -2032,7 +2032,6 @@
   "s empty",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
   "c list_map_prefix_without_any list_map_prefix_any",
-  "s pair",
   "s colon",
   "s first",
   "s multi",
@@ -2068,7 +2067,8 @@
   "sb",
   "s urdu",
   "s map",
-  "u lw"
+  "u lw",
+  "s pair"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
