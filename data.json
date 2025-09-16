@@ -4451,7 +4451,8 @@
    "catch_call",
    "cache_generic",
    "html_parse_classes_preview",
-   "promise_wrap"
+   "promise_wrap",
+   "retry"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -26939,7 +26940,8 @@
     "retry",
     "count",
     "wait",
-    "lambda2"
+    "lambda2",
+    "e"
    ]
   }
  },
