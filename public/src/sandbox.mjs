@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { string_split_dash } from "./string_split_dash.mjs";
 import { string_split_colon } from "./string_split_colon.mjs";
 import { list_first_second } from "./list_first_second.mjs";
@@ -34,6 +35,7 @@ export async function sandbox() {
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let split3 = string_split_dash(second);
+      let first2 = list_first(list2);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
