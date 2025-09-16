@@ -2076,7 +2076,8 @@
   "ebible_version_books_testament engwebu .aa",
   "s text",
   "is ebible_chapter_text",
-  "o sb"
+  "o sb",
+  "s chapter"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
