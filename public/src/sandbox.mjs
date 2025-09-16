@@ -21,6 +21,6 @@ export async function sandbox() {
     let any = list_any(mapped, lambda2);
     return any;
   }
-  let filtered = list_filter(split, lambda);
-  return filtered;
+  let verse_references = list_filter(split, lambda);
+  return verse_references;
 }
