@@ -14075,6 +14075,9 @@
   ],
   "retry": [
    "retry"
+  ],
+  "wait": [
+   "retry"
   ]
  },
  "functions": {
@@ -26935,6 +26938,7 @@
     "each_range_async",
     "retry",
     "count",
+    "wait",
     "lambda2"
    ]
   }
