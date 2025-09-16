@@ -25,8 +25,7 @@ export async function sandbox() {
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses = list_map_first(mapped4);
-  each_pair(book_names, chapter_verses, lambda3);
-  function lambda(a, b) {}
-  each_pair(list_a, list_b, lambda);
+  function lambda(book_name, chapter_verses) {}
+  each_pair(book_names, chapter_verses, lambda);
   return chapter_verses;
 }
