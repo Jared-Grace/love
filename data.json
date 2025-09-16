@@ -3531,8 +3531,7 @@
    "string_is_assert_message",
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
-   "function_transform_marker_specified",
-   "sandbox"
+   "function_transform_marker_specified"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4672,8 +4671,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists",
-   "sandbox"
+   "firebase_storage_exists"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -5842,7 +5840,8 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "sandbox"
   ],
   "count": [
    "each_range",
@@ -5856,7 +5855,8 @@
    "string_take",
    "list_slice_count",
    "ebible_chapter_code_to_book",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -9466,7 +9466,8 @@
    "app_replace_home",
    "js_expand_generic",
    "app_reply_main",
-   "promise_wrap"
+   "promise_wrap",
+   "sandbox"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -20847,7 +20848,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "error",
+    "each_range",
     "list_multiple_is",
     "list_second",
     "list_first",
@@ -20893,7 +20894,8 @@
     "verse_start",
     "verse_end",
     "m",
-    "message",
+    "count",
+    "lambda4",
     "list"
    ],
    "async": true
