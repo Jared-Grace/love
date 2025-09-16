@@ -2049,10 +2049,11 @@
   "s first",
   "s multi",
   "a lmi list_multiple_is",
-  "s range"
+  "s range",
+  "fws range from"
  ],
  "marker_current": "1",
- "function_current": "list_map_prefix_any",
+ "function_current": "range_from",
  "terminal": false,
  "identifiers": {
   "log": [
