@@ -1,4 +1,5 @@
 import { each_range_async } from "./each_range_async.mjs";
+import { error } from "./error.mjs";
 export async function retry(lambda) {
   let count = 5;
   let wait = 1000;
@@ -15,4 +16,5 @@ export async function retry(lambda) {
   if (success) {
     return result;
   }
+  error();
 }
