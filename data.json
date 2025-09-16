@@ -3005,7 +3005,6 @@
    "list_filter_starts_with",
    "list_map_prefix_without",
    "promise_wrap",
-   "ebible_chapters_each_verses",
    "folder_read_async",
    "ebible_index_flat",
    "html_loading",
@@ -3660,8 +3659,7 @@
    "prompt_previous",
    "server",
    "log_error",
-   "git_push",
-   "ebible_chapters_each_verses"
+   "git_push"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -5281,7 +5279,6 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_chapters_each_verses",
    "each_range_from_async",
    "each_index_async"
   ],
@@ -13587,7 +13584,6 @@
   ],
   "ebible_verses": [
    "ebible_verses",
-   "ebible_chapters_each_verses",
    "ebible_references_parse"
   ],
   "chapter_code": [
@@ -13595,7 +13591,6 @@
    "ebible_chapter_classes",
    "ebible_chapter_text",
    "ebible_verses_upload",
-   "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
    "app_reply_main",
@@ -13756,7 +13751,6 @@
   ],
   "verses": [
    "ebible_verses_upload",
-   "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
    "app_reply_main",
@@ -14278,6 +14272,9 @@
   "ebible_chapters_each_verses_check_with": [
    "ebible_verses_upload",
    "sandbox"
+  ],
+  "ebible_chapters_each_verses_list": [
+   "ebible_chapters_each_verses"
   ]
  },
  "functions": {
@@ -26676,17 +26673,12 @@
   "ebible_chapters_each_verses": {
    "async": true,
    "identifiers": [
-    "ebible_verses",
-    "each_async",
+    "ebible_chapters_each_verses_list",
     "ebible_chapter_codes",
-    "log_keep",
     "ebible_chapters_each_verses",
     "bible_folder",
     "each_chapter",
-    "list",
-    "lambda",
-    "chapter_code",
-    "verses"
+    "list"
    ]
   },
   "ebible_firebase_folder": {
