@@ -2039,7 +2039,9 @@
   "cs list_map_prefix_without any",
   "s starts",
   "is list_any_starts_with",
-  "c list_any_starts_with list_find_starts_with"
+  "c list_any_starts_with list_find_starts_with",
+  "r list_find_starts_withis list_map_prefix_without",
+  "is list_map_prefix_without"
  ],
  "marker_current": "1",
  "function_current": "list_find_starts_with",
