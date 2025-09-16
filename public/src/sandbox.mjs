@@ -1,3 +1,4 @@
+import { list_wait } from "./list_wait.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { each } from "./each.mjs";
@@ -36,7 +37,8 @@ export async function sandbox() {
   let v2 = ebible_folder_urdu();
   let bible_folders = [v2, bible_folder];
   let books = await ebible_version_books(bible_folder);
-  let books_all_promises = list_map(bible_folders, ebible_version_books);lw
+  let books_all_promises = list_map(bible_folders, ebible_version_books);
+  let v = await list_wait(list2);
   let mapped = list_map_property(books, "text");
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
