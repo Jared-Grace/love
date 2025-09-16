@@ -2055,10 +2055,11 @@
   "s range",
   "cs each_range_from async",
   "s find",
-  "sp ad"
+  "sp ad",
+  "n number_pad"
  ],
  "marker_current": "1",
- "function_current": "each_range_from_async",
+ "function_current": "number_pad",
  "terminal": false,
  "identifiers": {
   "log": [
