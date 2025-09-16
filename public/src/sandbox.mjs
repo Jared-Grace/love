@@ -48,6 +48,7 @@ export async function sandbox() {
         pad_count = 3;
       }
       let chapter_padded = number_pad(first, pad_count);
+      let chapter_code = book_code + chapter_padded;
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
       let verse_end = null;
