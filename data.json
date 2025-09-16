@@ -3740,7 +3740,8 @@
    "firebase_storage_download_path",
    "firebase_storage_function_run",
    "list_join_slash_forward",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "sandbox"
   ],
   "watcher": [
    "watch"
@@ -11306,7 +11307,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12282,7 +12284,8 @@
   "list_join_newline": [
    "function_dependencies_code",
    "list_join_newline",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "sandbox"
   ],
   "firebase_storage_function_run": [
    "app_replace",
@@ -21025,6 +21028,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_join_newline",
     "list_get",
     "list_index_of",
     "list_map_unordered_async",
@@ -21106,7 +21110,9 @@
     "lambda3",
     "item",
     "text",
-    "list"
+    "list",
+    "joined",
+    "list2"
    ],
    "async": true
   },
