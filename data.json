@@ -2085,7 +2085,9 @@
   "fws ebible_version_books_testament apocrypha",
   "s apoc",
   "sb",
-  "s command"
+  "s command",
+  "evu cebulb",
+  "evu tglulb"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
