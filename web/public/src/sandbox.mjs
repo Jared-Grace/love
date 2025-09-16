@@ -27,6 +27,7 @@ import { string_split_newline } from "./string_split_newline.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { range_from } from "./range_from.mjs";
+import { string_to } from "./string_to.mjs";
 export async function sandbox() {
   marker("1");
   let bible_folder = ebible_folder_english();
@@ -64,7 +65,7 @@ export async function sandbox() {
       }
       let verses = await ebible_verses(bible_folder, chapter_code);
       async function lambda4(verse_number) {
-        string_To;
+        let s = string_to(input);
         log({
           verse_number,
         });
