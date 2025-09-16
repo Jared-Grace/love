@@ -68,6 +68,10 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
+      let waited = await list_map_unordered_async(
+        list2,
+        async function lambda6(item2) {},
+      );
       async function lambda5(a, b) {}
       await each_pair_async(list_a, books_all, lambda5);
       let verses = await ebible_verses(bible_folder, chapter_code);
