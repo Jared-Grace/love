@@ -3180,7 +3180,8 @@
    "ebible_chapters_each_verses",
    "ebible_index_flat",
    "list_add_first",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -6322,7 +6323,8 @@
    "html_parse_descendants_classes",
    "string_split_space",
    "ebible_verses",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "results": [
    "functions_combine_name"
@@ -13785,11 +13787,9 @@
   "emoji_rock": [
    "app_reply_choices"
   ],
-  "ssn": [
-   "sandbox"
-  ],
   "string_split_newline": [
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ]
  },
  "functions": {
@@ -20675,13 +20675,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split_newline",
     "ebible_version_books",
     "ebible_folder_english",
     "sandbox",
     "bible_folder",
     "books",
     "path",
-    "ssn"
+    "split",
+    "list"
    ],
    "async": true
   },
