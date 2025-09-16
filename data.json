@@ -2045,7 +2045,8 @@
   "s first",
   "sb",
   "c list_map_prefix_without_any list_map_prefix_any",
-  "s pair"
+  "s pair",
+  "s colon"
  ],
  "marker_current": "1",
  "function_current": "list_map_prefix_any",
