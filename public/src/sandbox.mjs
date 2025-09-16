@@ -38,6 +38,7 @@ export async function sandbox() {
       let split3 = string_split_dash(second);
       let verse_start = list_first(split3);
       let verse_end = null;
+      lmi;
       if (false) {
         verse_end = list_second(split3);
       } else {
