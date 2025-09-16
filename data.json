@@ -5516,7 +5516,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "range_from"
   ],
   "process": [
    "command_line_read",
@@ -7300,7 +7301,8 @@
    "js_imports_paths_fix",
    "js_expand_generic",
    "html_parse_list_text_to",
-   "catch_call"
+   "catch_call",
+   "range_from"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -8556,7 +8558,8 @@
    "marker_call_replace_generic",
    "marker_down",
    "marker_up",
-   "js_dollar_a"
+   "js_dollar_a",
+   "range_from"
   ],
   "parseInt": [
    "integer_to"
@@ -26885,6 +26888,7 @@
   "range_from": {
    "async": false,
    "identifiers": [
+    "integer_to",
     "log",
     "add",
     "list_map",
@@ -26893,6 +26897,8 @@
     "range_from",
     "from",
     "to",
+    "i",
+    "input",
     "count",
     "r",
     "lambda",
