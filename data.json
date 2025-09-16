@@ -2766,7 +2766,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "sandbox"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -9092,7 +9093,8 @@
   ],
   "list_find_property": [
    "js_declaration_param_named",
-   "list_find_property"
+   "list_find_property",
+   "sandbox"
   ],
   "nameds": [
    "js_declaration_single"
@@ -9983,7 +9985,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "sandbox"
   ],
   "list_find": [
    "list_find",
@@ -11233,7 +11236,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14001,6 +14005,9 @@
   ],
   "each_range_from_async": [
    "each_range_from_async",
+   "sandbox"
+  ],
+  "first2": [
    "sandbox"
   ]
  },
@@ -20887,6 +20894,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_find_property",
     "each_range_from_async",
     "list_multiple_is",
     "list_second",
@@ -20926,6 +20934,10 @@
     "lambda",
     "book_name",
     "chapter_verses",
+    "first2",
+    "list2",
+    "property_name",
+    "property_value",
     "split2",
     "first",
     "second",
