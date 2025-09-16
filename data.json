@@ -2045,7 +2045,6 @@
   "s first",
   "s multi",
   "a lmi list_multiple_is",
-  "s range",
   "fws range from",
   "s add",
   "p",
@@ -2053,7 +2052,8 @@
   "cs each_range from",
   "o e",
   "o r",
-  "o rg"
+  "o rg",
+  "s range"
  ],
  "marker_current": "1",
  "function_current": "range",
