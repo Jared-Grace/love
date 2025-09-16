@@ -5869,7 +5869,6 @@
    "list_slice_count",
    "ebible_chapter_code_to_book",
    "ebible_index",
-   "sandbox",
    "range_from"
   ],
   "list_copy_reverse": [
@@ -20924,7 +20923,6 @@
     "verse_end",
     "m",
     "lambda4",
-    "count",
     "list"
    ],
    "async": true
