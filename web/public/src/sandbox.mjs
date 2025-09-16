@@ -13,7 +13,6 @@ import { list_first } from "./list_first.mjs";
 import { string_split_dash } from "./string_split_dash.mjs";
 import { string_split_colon } from "./string_split_colon.mjs";
 import { list_first_second } from "./list_first_second.mjs";
-import { list_adder } from "./list_adder.mjs";
 import { list_map_prefix_any } from "./list_map_prefix_any.mjs";
 import { list_map_first } from "./list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "./list_map_filter_string_empty_not_is.mjs";
@@ -73,8 +72,6 @@ export async function sandbox() {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
-  async function lambda3(la2) {}
-  let list2 = await list_adder_async(lambda3);
-  let list = list_adder(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }
