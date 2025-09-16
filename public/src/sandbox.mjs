@@ -1,3 +1,4 @@
+import { ebible_verses } from "./ebible_verses.mjs";
 import { equal } from "./equal.mjs";
 import { number_pad } from "./number_pad.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -58,7 +59,9 @@ export async function sandbox() {
       } else {
         verse_end = verse_start;
       }
-      async function lambda4() {}
+      async function lambda4() {
+        let list2 = await ebible_verses(bible_folder2, chapter_code2);
+      }
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
