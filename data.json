@@ -4677,8 +4677,7 @@
    "app_reply_main",
    "ebible_versions_download",
    "http",
-   "retry",
-   "firebase_upload_generic"
+   "retry"
   ],
   "value2": [
    "error_attention_set",
@@ -25995,7 +25994,6 @@
     "metadata",
     "cacheControl",
     "lambda",
-    "lambda3",
     "console",
     "url",
     "name",
