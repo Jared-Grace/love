@@ -33,7 +33,7 @@ export async function sandbox() {
     function lambda(book_name, chapter_verses) {
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
-      let split3 = string_split(s, separator);
+      let split3 = string_split(s, "-");
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
