@@ -20,11 +20,11 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
-  let mapped6 = list_map_prefix_any(verse_references, mapped);
+  let book_names = list_map_prefix_any(verse_references, mapped);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let mapped5 = list_map_first(mapped4);
-  each_pair(list_a, list_b, lambda3);
-  return mapped5;
+  let chapter_verses = list_map_first(mapped4);
+  each_pair(book_names, chapter_verses, lambda3);
+  return chapter_verses;
 }
