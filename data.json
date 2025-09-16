@@ -2068,7 +2068,7 @@
   "cs each_index async"
  ],
  "marker_current": "1",
- "function_current": "retry",
+ "function_current": "each_index_async",
  "terminal": false,
  "identifiers": {
   "log": [
