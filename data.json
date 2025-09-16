@@ -14114,6 +14114,9 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
+  ],
+  "string_To": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21061,6 +21064,7 @@
     "verses",
     "lambda4",
     "verse_number",
+    "string_To",
     "result",
     "r",
     "list"
