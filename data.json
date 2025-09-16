@@ -2075,8 +2075,7 @@
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with",
-   "sandbox"
+   "folder_find_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -20923,7 +20922,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "log",
     "list_filter_property",
     "ebible_verses",
     "equal",
