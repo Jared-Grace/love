@@ -2050,7 +2050,8 @@
   "a lmi list_multiple_is",
   "s range",
   "fws range from",
-  "s add"
+  "s add",
+  "range_from 10 20"
  ],
  "marker_current": "1",
  "function_current": "range_from",
