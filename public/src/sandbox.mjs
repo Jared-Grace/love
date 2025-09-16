@@ -7,11 +7,11 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function sandbox() {
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
-  let mapped = list_map_property(books, property_name);
+  return books;
+  let mapped = list_map_property(books, "text");
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda(item) {}
   let filtered = list_filter(split, lambda);
-  return books;
 }

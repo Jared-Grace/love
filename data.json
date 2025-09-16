@@ -2018,7 +2018,6 @@
   "ebible_verses_upload yor",
   "s ebible",
   "s text",
-  "p",
   "ebible_version_books_testament_new engbsb",
   "s books",
   "ebible_version_books engbsb",
@@ -2035,6 +2034,7 @@
   "a flr file_read",
   "s read",
   "s starts",
+  "p",
   "sb"
  ],
  "marker_current": "1",
