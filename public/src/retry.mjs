@@ -17,7 +17,8 @@ export async function retry(lambda) {
       } catch (e) {
         log(message);
         la(e);
-        await sleep(ms);
+        await sleep(wait);
+        wait *= 2;
       }
     }
     await each_range_async(count, lambda2);
