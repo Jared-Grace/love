@@ -14029,7 +14029,7 @@
   "pad_count": [
    "sandbox"
   ],
-  "chapter_number": [
+  "chapter_padded": [
    "sandbox"
   ]
  },
@@ -20965,7 +20965,7 @@
     "first",
     "second",
     "pad_count",
-    "chapter_number",
+    "chapter_padded",
     "verse_range",
     "verse_start",
     "verse_end",
