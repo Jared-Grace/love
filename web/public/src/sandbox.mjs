@@ -1,3 +1,4 @@
+import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -31,7 +32,8 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function sandbox() {
   let bible_folder = ebible_folder_english();
   marker("1");
-  let bible_folders = [bible_folder];
+  let v2 = ebible_folder_urdu();
+  let bible_folders = [v2, bible_folder];
   let books = await ebible_version_books(bible_folder);
   let mapped = list_map_property(books, "text");
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
