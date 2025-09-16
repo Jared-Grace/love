@@ -3993,7 +3993,8 @@
    "html_parse_find_remove",
    "list_map_prefix_without",
    "html_loading",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "sandbox"
   ],
   "separator": [
    "watch",
@@ -9191,7 +9192,8 @@
   ],
   "list_first_second": [
    "js_dollar",
-   "list_first_second"
+   "list_first_second",
+   "sandbox"
   ],
   "list_skip": [
    "js_dollar",
@@ -11194,7 +11196,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -20821,6 +20824,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_first_second",
     "string_split",
     "list_adder",
     "each_pair",
@@ -20855,6 +20859,8 @@
     "book_name",
     "chapter_verses",
     "split2",
+    "result",
+    "list2",
     "list"
    ],
    "async": true
