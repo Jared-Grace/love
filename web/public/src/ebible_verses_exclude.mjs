@@ -13,6 +13,7 @@ export function ebible_verses_exclude() {
     "iex",
     "io",
     "iot",
+    "ip",
     "mt",
     "mr",
     "ms",
