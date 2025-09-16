@@ -3872,8 +3872,7 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "output": [
    "watch",
@@ -20787,7 +20786,6 @@
     "lambda",
     "item",
     "ne",
-    "name",
     "mapped4",
     "list"
    ],
