@@ -2062,7 +2062,6 @@
   "u lw",
   "s pair",
   "s clip",
-  "sb",
   "s upload",
   "evu benirv",
   "evu tel2017",
@@ -2081,7 +2080,8 @@
   "ect engwebu SIR01",
   "o sb",
   "u evu",
-  "o evu"
+  "o evu",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_verses_upload",
