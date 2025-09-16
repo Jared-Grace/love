@@ -9811,8 +9811,7 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused",
-   "sandbox"
+   "js_imports_unused"
   ],
   "fds": [
    "js_outside_move"
@@ -20998,7 +20997,6 @@
     "string_to",
     "list_adder_async",
     "each_pair_async",
-    "list_filter_property",
     "ebible_verses",
     "equal",
     "number_pad",
