@@ -2087,8 +2087,7 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "each_range_from_async",
-   "range_from"
+   "each_range_from_async"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -26883,7 +26882,6 @@
    "async": false,
    "identifiers": [
     "integer_to",
-    "log",
     "add",
     "list_map",
     "range",
