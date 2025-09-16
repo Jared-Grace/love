@@ -331,7 +331,6 @@
   "i function_wrap",
   "de function_params_new",
   "fw function_param_new function_params_new",
-  "n sandbox",
   "i sandbox",
   "a sb sandbox",
   "au sb",
@@ -1962,7 +1961,6 @@
   "s wait",
   "fd firebase_admin",
   "s object_property",
-  "o sb",
   "c ebible_verses_upload ebible_index_upload",
   "s data",
   "is data_save",
@@ -2026,10 +2024,12 @@
   "p",
   "ebible_version_books_testament_new engbsb",
   "s books",
-  "ebible_version_books engbsb"
+  "ebible_version_books engbsb",
+  "n sandbox",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "urdu_allah_to_god",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
