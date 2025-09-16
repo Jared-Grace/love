@@ -53,6 +53,10 @@ export async function app_reply_main() {
       bible_folder: "lug",
     },
     {
+      name: "Bengali",
+      bible_folder: "benirv",
+    },
+    {
       name: "Yoruba",
       bible_folder: "yor",
     },
