@@ -3505,7 +3505,8 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad"
+   "number_pad",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -21067,6 +21068,7 @@
     "sandbox",
     "bible_folder",
     "v2",
+    "v",
     "bible_folders",
     "books",
     "books_all",
