@@ -11300,8 +11300,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14125,7 +14124,7 @@
   "bible_folders": [
    "sandbox"
   ],
-  "mapped5": [
+  "books_all": [
    "sandbox"
   ]
  },
@@ -21049,8 +21048,7 @@
     "v2",
     "bible_folders",
     "books",
-    "mapped5",
-    "list2",
+    "books_all",
     "mapped",
     "file_path",
     "contents",
