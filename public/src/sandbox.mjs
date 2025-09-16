@@ -36,7 +36,7 @@ export async function sandbox() {
   let chapter_verses_list = list_map_first(mapped4);
   function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
-      let first2 = list_find_property(list2, property_name, property_value);
+      let book_code = list_find_property(books, "text", book_name);
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let verse_range = string_split_dash(second);
