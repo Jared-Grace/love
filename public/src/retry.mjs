@@ -1,4 +1,5 @@
 import { each_range } from "./each_range.mjs";
 export function retry() {
-  each_range(count, function lambda2() {});
+  function lambda2() {}
+  each_range(count, lambda2);
 }
