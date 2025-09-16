@@ -2087,7 +2087,6 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "sandbox",
    "each_range_from_async",
    "range_from"
   ],
@@ -7197,8 +7196,7 @@
    "list_random_item",
    "integer_random",
    "js_statement_return_empty_add",
-   "range_from",
-   "sandbox"
+   "range_from"
   ],
   "formatted": [
    "function_format",
@@ -14065,8 +14063,7 @@
   "range_from": [
    "range_from",
    "each_range_from",
-   "each_range_from_async",
-   "sandbox"
+   "each_range_from_async"
   ],
   "each_range_from": [
    "each_range_from"
@@ -21001,7 +20998,6 @@
   "sandbox": {
    "identifiers": [
     "string_to",
-    "log",
     "list_adder_async",
     "each_pair_async",
     "list_filter_property",
@@ -21029,7 +21025,6 @@
     "string_split_newline",
     "ebible_version_books",
     "ebible_folder_english",
-    "range_from",
     "sandbox",
     "bible_folder",
     "books",
@@ -21064,7 +21059,6 @@
     "lambda4",
     "verse_number",
     "result",
-    "r",
     "list"
    ],
    "async": true
