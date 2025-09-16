@@ -38,6 +38,7 @@ export async function sandbox() {
   marker("1");
   let v2 = ebible_folder_urdu();
   let v = ebible_folder_english();
+  let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let bible_folders = [v2, v];
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
@@ -46,7 +47,6 @@ export async function sandbox() {
     ebible_version_books,
   );
   let mapped = list_map_property(books, "text");
-  let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
