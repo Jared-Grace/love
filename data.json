@@ -3478,7 +3478,8 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "number_pad"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10138,7 +10139,8 @@
   ],
   "length": [
    "list_size",
-   "string_size"
+   "string_size",
+   "number_pad"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -14011,6 +14013,15 @@
    "sandbox"
   ],
   "number_pad": [
+   "number_pad"
+  ],
+  "num": [
+   "number_pad"
+  ],
+  "String": [
+   "number_pad"
+  ],
+  "padStart": [
    "number_pad"
   ]
  },
@@ -26815,7 +26826,12 @@
    "async": false,
    "identifiers": [
     "marker",
-    "number_pad"
+    "number_pad",
+    "num",
+    "v",
+    "String",
+    "padStart",
+    "length"
    ]
   }
  },
