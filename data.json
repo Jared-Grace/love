@@ -13914,7 +13914,11 @@
    "sandbox"
   ],
   "list_map_prefix_any": [
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
+  ],
+  "mapped6": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20800,6 +20804,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map_prefix_any",
     "list_map_first",
     "list_map_filter_string_empty_not_is",
     "list_map_split_space",
@@ -20819,6 +20824,7 @@
     "contents",
     "split",
     "verse_references",
+    "mapped6",
     "mapped2",
     "mapped3",
     "mapped4",
