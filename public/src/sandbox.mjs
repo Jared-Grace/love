@@ -1,5 +1,4 @@
 import { string_to } from "./string_to.mjs";
-import { log } from "./log.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -27,7 +26,6 @@ import { file_read } from "./file_read.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { range_from } from "./range_from.mjs";
 export async function sandbox() {
   marker("1");
   let bible_folder = ebible_folder_english();
@@ -69,12 +67,6 @@ export async function sandbox() {
         let result = list_filter_property(verses, "verse_number", verse_number);
         la(result);
       }
-      log({
-        second,
-        verse_start,
-        verse_end,
-        r: range_from(verse_start, verse_end),
-      });
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
