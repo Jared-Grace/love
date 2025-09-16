@@ -2343,7 +2343,8 @@
    "html_style_merge",
    "object_assign",
    "html_style_assign",
-   "string_split_newline"
+   "string_split_newline",
+   "list_map_prefix_without_any"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26471,6 +26472,7 @@
   "list_map_prefix_without_any": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_map",
     "string_prefix_without",
     "list_map_prefix_without_any",
