@@ -4989,8 +4989,7 @@
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "sandbox"
+   "list_map_filter_string_empty_not_is"
   ],
   "functions_names": [
    "functions_names",
@@ -5739,8 +5738,7 @@
    "list_single",
    "list_first_second_generic",
    "js_dollar_a",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "each_multiple": [
    "each_multiple",
@@ -13901,6 +13899,9 @@
   ],
   "mapped5": [
    "sandbox"
+  ],
+  "list_map_first": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20786,8 +20787,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_first",
-    "list_map",
+    "list_map_first",
     "list_map_filter_string_empty_not_is",
     "list_map_split_space",
     "list_map_prefix_without_any",
