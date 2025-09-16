@@ -2073,7 +2073,8 @@
   "s test",
   "d",
   "is ebible_version_books_testament_new",
-  "is ebible_class_old"
+  "is ebible_class_old",
+  "ebible_version_books_testament engwebu aa"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
