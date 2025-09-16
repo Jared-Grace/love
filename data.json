@@ -4895,8 +4895,7 @@
    "html_style_merge",
    "html_style_assign",
    "string_take",
-   "range_from",
-   "sandbox"
+   "range_from"
   ],
   "a": [
    "string_suffix_without",
@@ -5517,8 +5516,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "sandbox"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -21065,8 +21063,6 @@
     "verses",
     "lambda4",
     "verse_number",
-    "s",
-    "input",
     "result",
     "r",
     "list"
