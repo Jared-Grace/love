@@ -3044,7 +3044,8 @@
    "ebible_verses",
    "html_p_text_multiple",
    "folder_read_async",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "list_any_starts_with"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4306,7 +4307,8 @@
    "string_starts_with_not",
    "list_add_first",
    "list_map_prefix_without_any",
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "list_any_starts_with"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -9199,7 +9201,8 @@
    "http",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_any_starts_with"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -9664,7 +9667,8 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_any_starts_with"
   ],
   "match": [
    "js_node_types_is",
@@ -11923,7 +11927,8 @@
    "list_filter_starts_with_not_multiple",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_any_starts_with"
   ],
   "only": [
    "list_single",
@@ -12272,7 +12277,8 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "list_any_starts_with"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -13302,7 +13308,8 @@
    "list_filter_starts_with_not_multiple",
    "ebible_chapters",
    "list_filter_starts_with_any",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_any_starts_with"
   ],
   "list_filter_starts_with_not_multiple": [
    "list_filter_starts_with_not_multiple",
@@ -13432,7 +13439,8 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main"
+   "app_reply_main",
+   "list_any_starts_with"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13833,7 +13841,8 @@
    "list_map_prefix_without_any"
   ],
   "list_any_starts_with": [
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_any_starts_with"
   ]
  },
  "functions": {
@@ -26479,6 +26488,20 @@
     "result",
     "prefix",
     "mapped"
+   ]
+  },
+  "list_any_starts_with": {
+   "async": false,
+   "identifiers": [
+    "list_any",
+    "string_starts_with",
+    "list_any_starts_with",
+    "item",
+    "prefixes",
+    "lambda2",
+    "item2",
+    "sw",
+    "any"
    ]
   }
  },
