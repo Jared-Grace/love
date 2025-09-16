@@ -34,7 +34,8 @@ export async function sandbox() {
   marker("1");
   let v2 = ebible_folder_urdu();
   let bible_folders = [v2, bible_folder];
-  let books = await ebible_version_books(bible_folder);lma
+  let books = await ebible_version_books(bible_folder);
+  lma;
   let mapped = list_map_property(books, "text");
   let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
   let contents = await file_read(file_path);
