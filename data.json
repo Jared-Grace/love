@@ -2042,9 +2042,9 @@
   "s map",
   "s empty",
   "p",
-  "sb",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
-  "s first"
+  "s first",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "list_map_filter_string_empty_not_is",
