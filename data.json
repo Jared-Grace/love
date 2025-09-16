@@ -174,7 +174,8 @@
   "jt": "json_to",
   "fir": "file_read",
   "lun": "list_unique",
-  "fdr": "folder_read"
+  "fdr": "folder_read",
+  "flr": "file_read"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2032,7 +2033,8 @@
   "n string_split_comma",
   "c string_split_comma string_split_newline",
   "sb",
-  "ac flr fdr"
+  "ac flr fdr",
+  "a flr file_read"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
