@@ -4318,8 +4318,7 @@
    "marker_functionize",
    "visit_unique_async",
    "list_remove_if_exists",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "list_remove": [
    "js_dollar_s",
@@ -4484,7 +4483,8 @@
    "js_declaration_param_add_node",
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -5312,8 +5312,7 @@
    "string_includes",
    "js_node_types_includes",
    "list_remove_if_exists",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -20690,7 +20689,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_includes",
+    "list_add",
     "list_map_property",
     "list_filter",
     "file_read",
@@ -20706,7 +20705,6 @@
     "split",
     "lambda",
     "item",
-    "includes",
     "list",
     "item2",
     "filtered"
