@@ -3040,7 +3040,8 @@
    "ebible_verses",
    "html_p_text_multiple",
    "folder_read_async",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "sandbox"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4484,8 +4485,7 @@
    "js_declaration_param_add_node",
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
-   "ebible_index",
-   "sandbox"
+   "ebible_index"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -9652,7 +9652,8 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "sandbox"
   ],
   "match": [
    "js_node_types_is",
@@ -12260,7 +12261,8 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "sandbox"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -20690,7 +20692,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_add",
+    "list_any",
     "list_map_property",
     "list_filter",
     "file_read",
@@ -20706,7 +20708,9 @@
     "split",
     "lambda",
     "item",
+    "any",
     "list",
+    "lambda2",
     "item2",
     "filtered"
    ],
