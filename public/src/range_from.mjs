@@ -5,7 +5,10 @@ import { range } from "./range.mjs";
 import { marker } from "./marker.mjs";
 export function range_from(from, to) {
   marker("1");
-  log(message);
+  log({
+    from,
+    to,
+  });
   let count = to - from + 1;
   let r = range(count);
   function lambda(item) {
