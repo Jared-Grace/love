@@ -5,5 +5,6 @@ export async function sandbox() {
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
   let path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
-  let split = string_split_newline(list);
+  let split = string_split_newline(path);
+  return split;
 }
