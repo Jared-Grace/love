@@ -20894,8 +20894,8 @@
     "verse_start",
     "verse_end",
     "m",
-    "count",
     "lambda4",
+    "count",
     "list"
    ],
    "async": true
