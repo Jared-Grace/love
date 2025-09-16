@@ -2142,7 +2142,8 @@
    "ebible_chapter_text",
    "html_p_text_multiple",
    "ebible_index_flat",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -2368,7 +2369,8 @@
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
    "range_from",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2978,7 +2980,8 @@
    "list_map_prefix_any",
    "sandbox",
    "range_from",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3229,7 +3232,8 @@
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
    "sandbox",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "v": [
    "data_identifiers_file",
@@ -7118,7 +7122,8 @@
    "ebible_version_books_testament",
    "object_assign",
    "range_from",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "r": [
    "function_format",
@@ -7217,7 +7222,8 @@
    "firebase_upload_buffer",
    "object_assign",
    "range_from",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "i": [
    "function_identifier_replace",
@@ -13987,11 +13993,15 @@
   ],
   "range_from": [
    "range_from",
-   "each_range_from"
+   "each_range_from",
+   "each_range_from_async"
   ],
   "each_range_from": [
    "each_range_from",
    "sandbox"
+  ],
+  "each_range_from_async": [
+   "each_range_from_async"
   ]
  },
  "functions": {
@@ -26768,6 +26778,19 @@
     "marker",
     "each",
     "each_range_from",
+    "from",
+    "to",
+    "lambda",
+    "list"
+   ]
+  },
+  "each_range_from_async": {
+   "async": false,
+   "identifiers": [
+    "range_from",
+    "marker",
+    "each",
+    "each_range_from_async",
     "from",
     "to",
     "lambda",
