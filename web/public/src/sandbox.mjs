@@ -10,6 +10,6 @@ export async function sandbox() {
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    let mapped = list_map_property(list2, property_name);
+    let mapped = list_map_property(verses, "text");
   }
 }
