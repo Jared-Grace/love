@@ -26,5 +26,6 @@ export async function sandbox() {
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses = list_map_first(mapped4);
   each_pair(book_names, chapter_verses, lambda3);
+  each_pair(list_a, list_b, function lambda(a, b) {});
   return chapter_verses;
 }
