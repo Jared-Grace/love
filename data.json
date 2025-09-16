@@ -11241,7 +11241,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13450,7 +13451,8 @@
   ],
   "ebible_verses": [
    "ebible_verses",
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "sandbox"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13816,7 +13818,8 @@
    "app_reply_main"
   ],
   "chapter_code2": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "verse_number2": [
    "app_reply_main"
@@ -13907,7 +13910,8 @@
    "app_reply_main"
   ],
   "bible_folder2": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -20917,6 +20921,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_verses",
     "equal",
     "number_pad",
     "object_property_get",
@@ -20973,6 +20978,9 @@
     "verse_end",
     "m",
     "lambda4",
+    "list2",
+    "bible_folder2",
+    "chapter_code2",
     "list"
    ],
    "async": true
