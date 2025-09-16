@@ -849,7 +849,6 @@
   "fc fs t",
   "lm",
   "a lm list_map",
-  "s list,map",
   "a lmu list_map_unordered_async",
   "s fill",
   "u fnu",
@@ -2036,7 +2035,8 @@
   "s starts",
   "p",
   "as any",
-  "sb"
+  "sb",
+  "s list,map"
  ],
  "marker_current": "1",
  "function_current": "string_split_newline",
