@@ -3464,7 +3464,8 @@
    "folder_read_async",
    "app_reply_main",
    "http",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "range_from"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -26742,6 +26743,7 @@
     "r",
     "lambda",
     "item",
+    "v",
     "mapped"
    ]
   }
