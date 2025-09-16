@@ -1,5 +1,4 @@
-import { string_empty_not_is } from "./string_empty_not_is.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_string_empty_not_is } from "./list_map_string_empty_not_is.mjs";
 import { list_map_split_space } from "./list_map_split_space.mjs";
 import { list_map_prefix_without_any } from "./list_map_prefix_without_any.mjs";
 import { marker } from "./marker.mjs";
@@ -20,10 +19,6 @@ export async function sandbox() {
   let verse_references = list_filter_starts_with_any(mapped, split);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
-  function lambda(item) {
-    let ne = string_empty_not_is(item);
-    return ne;
-  }
-  let mapped4 = list_map(mapped3, lambda);
+  let mapped4 = list_map_string_empty_not_is(mapped3);
   return mapped4;
 }
