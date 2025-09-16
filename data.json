@@ -3504,8 +3504,7 @@
    "app_reply_main",
    "http",
    "urdu_allah_to_god",
-   "number_pad",
-   "sandbox"
+   "number_pad"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -11303,8 +11302,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14129,6 +14127,9 @@
    "sandbox"
   ],
   "books_all_promises": [
+   "sandbox"
+  ],
+  "mapped5": [
    "sandbox"
   ]
  },
@@ -21054,8 +21055,7 @@
     "bible_folders",
     "books",
     "books_all_promises",
-    "v",
-    "list2",
+    "mapped5",
     "mapped",
     "file_path",
     "contents",
