@@ -1,4 +1,4 @@
-import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { file_read } from "./file_read.mjs";
@@ -13,7 +13,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda(item) {
-    let includes = list_includes(list, item2);
+    list_add(list, item2);
   }
   let filtered = list_filter(split, lambda);
 }
