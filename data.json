@@ -2992,7 +2992,8 @@
    "each_range_from",
    "each_range_from_async",
    "each_pair_async",
-   "each_multiple_async"
+   "each_multiple_async",
+   "retry"
   ],
   "previous": [
    "data_identifiers_file",
@@ -26939,6 +26940,7 @@
    "identifiers": [
     "each_range_async",
     "retry",
+    "lambda",
     "count",
     "wait",
     "lambda2",
