@@ -2052,10 +2052,11 @@
   "range_from 10 20",
   "cs each_range from",
   "o e",
-  "o r"
+  "o r",
+  "o rg"
  ],
  "marker_current": "1",
- "function_current": "function_rename",
+ "function_current": "range",
  "terminal": false,
  "identifiers": {
   "log": [
