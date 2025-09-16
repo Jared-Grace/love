@@ -231,7 +231,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " " + "Replying",
-      response: emoji_pray() + "I am replying to messages 📨",
+      response: emoji_pray() + "I have been replying to messages 📨",
     },
     {
       text: emoji_pray() + " Share",
