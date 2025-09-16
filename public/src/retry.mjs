@@ -12,6 +12,7 @@ export async function retry(lambda) {
     } catch (e) {}
   }
   await each_range_async(count, lambda2);
-  if (false) {
+  if (success) {
+    return result;
   }
 }
