@@ -2154,8 +2154,7 @@
    "ebible_chapter_text",
    "html_p_text_multiple",
    "ebible_index_flat",
-   "each_range_from",
-   "each_index_async"
+   "each_range_from"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -5237,7 +5236,8 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_chapters_each_verses",
-   "each_range_from_async"
+   "each_range_from_async",
+   "each_index_async"
   ],
   "f_paths": [
    "data_files_update",
@@ -26985,10 +26985,10 @@
    ]
   },
   "each_index_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
-    "each",
+    "each_async",
     "each_index_async",
     "list",
     "lambda$item$index",
