@@ -2064,7 +2064,8 @@
   "ps",
   "ebible_verses_upload hin2017",
   "s each_pair",
-  "s multiple"
+  "s multiple",
+  "cs each_index async"
  ],
  "marker_current": "1",
  "function_current": "retry",
