@@ -5747,7 +5747,8 @@
    "list_single",
    "list_first_second_generic",
    "js_dollar_a",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "each_multiple": [
    "each_multiple",
@@ -11196,7 +11197,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13946,6 +13948,9 @@
    "sandbox"
   ],
   "string_split_dash": [
+   "sandbox"
+  ],
+  "first2": [
    "sandbox"
   ]
  },
@@ -20832,6 +20837,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_first",
     "string_split_dash",
     "string_split_colon",
     "list_first_second",
@@ -20871,6 +20877,8 @@
     "first",
     "second",
     "split3",
+    "first2",
+    "list2",
     "list"
    ],
    "async": true
