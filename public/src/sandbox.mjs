@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { number_pad } from "./number_pad.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -43,7 +44,7 @@ export async function sandbox() {
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let pad_count = 2;
-      if (false) {
+      if (equal(left, right)) {
       }
       let v = number_pad(num, length);
       let verse_range = string_split_dash(second);
