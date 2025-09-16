@@ -4232,7 +4232,8 @@
    "app_replace_rule_valid",
    "js_statement_expression_get",
    "marker_next_declare_single_init_elements",
-   "object_property_get_name"
+   "object_property_get_name",
+   "sandbox"
   ],
   "data_save": [
    "data_file_update",
@@ -13508,7 +13509,8 @@
   "book": [
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -20889,6 +20891,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "object_property_get",
     "list_find_property",
     "each_range_from_async",
     "list_multiple_is",
@@ -20929,6 +20932,7 @@
     "lambda",
     "book_name",
     "chapter_verses",
+    "book",
     "book_code",
     "split2",
     "first",
