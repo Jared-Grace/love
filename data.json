@@ -2036,7 +2036,6 @@
   "s map",
   "s empty",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
-  "sb",
   "c list_map_prefix_without_any list_map_prefix_any",
   "s pair",
   "s colon",
@@ -2056,7 +2055,8 @@
   "s find",
   "sp ad",
   "n number_pad",
-  "s ebible"
+  "s ebible",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "number_pad",
