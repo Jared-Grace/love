@@ -2311,7 +2311,6 @@
    "html_parse_list_text_to",
    "html_parse_href",
    "ebible_version_books_testament_new",
-   "sandbox",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "catch_call",
@@ -5072,7 +5071,6 @@
    "emoji_question",
    "emoji_voice",
    "string_the_servant_of_god",
-   "sandbox",
    "folder_read_async"
   ],
   "readdirSync": [
@@ -5131,7 +5129,6 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "sandbox",
    "ebible_chapters_each_verses"
   ],
   "f_paths": [
@@ -13074,7 +13071,8 @@
    "ebible_firebase_upload_path",
    "ebible_index_flat",
    "ebible_index_flat_upload",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -13218,7 +13216,8 @@
    "ebible_version_verses",
    "ebible_chapter_codes",
    "ebible_version_books",
-   "ebible_index"
+   "ebible_index",
+   "sandbox"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13230,7 +13229,8 @@
   "ebible_version_books": [
    "ebible_version_verses",
    "ebible_chapter_codes",
-   "ebible_version_books"
+   "ebible_version_books",
+   "sandbox"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -13460,8 +13460,7 @@
    "ebible_firebase_upload_path"
   ],
   "ebible_verses_upload": [
-   "ebible_verses_upload",
-   "sandbox"
+   "ebible_verses_upload"
   ],
   "verses": [
    "ebible_verses_upload",
@@ -13607,9 +13606,6 @@
    "ebible_firebase_upload",
    "ebible_index_flat_upload"
   ],
-  "bible_folders": [
-   "sandbox"
-  ],
   "ebible_firebase_folder": [
    "ebible_firebase_folder"
   ],
@@ -13632,7 +13628,6 @@
    "app_reply_main"
   ],
   "ebible_folder_urdu": [
-   "sandbox",
    "app_reply_main"
   ],
   "ebible_index_upload_name": [
@@ -20665,15 +20660,12 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_verses_upload",
-    "ebible_folder_urdu",
+    "ebible_version_books",
     "ebible_folder_english",
-    "each_async",
-    "marker",
     "sandbox",
     "v",
-    "v2",
-    "bible_folders"
+    "books",
+    "bible_folder"
    ],
    "async": true
   },
