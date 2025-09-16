@@ -1,4 +1,4 @@
-import { each_range } from "./each_range.mjs";
+import { each_range_from } from "./each_range_from.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_first } from "./list_first.mjs";
@@ -47,7 +47,7 @@ export async function sandbox() {
         verse_end = verse_start;
       }
       function lambda4() {}
-      each_range(count, lambda4);
+      each_range_from(count, lambda4);
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
