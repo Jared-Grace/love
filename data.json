@@ -4304,7 +4304,8 @@
    "object_property_get_name",
    "string_starts_with_not",
    "list_add_first",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_filter_starts_with_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -13831,7 +13832,6 @@
    "list_map_prefix_without_any"
   ],
   "list_any_starts_with": [
-   "list_filter_starts_with_any",
    "list_map_prefix_without_any"
   ]
  },
@@ -26453,12 +26453,12 @@
   "list_filter_starts_with_any": {
    "async": false,
    "identifiers": [
-    "list_any_starts_with",
     "list_filter",
     "list_filter_starts_with_any",
     "prefixes",
     "list",
-    "verse_references"
+    "verse_references",
+    "item"
    ]
   },
   "list_map_prefix_without_any": {
