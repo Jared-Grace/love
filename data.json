@@ -5516,8 +5516,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "range_from"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -7301,8 +7300,7 @@
    "js_imports_paths_fix",
    "js_expand_generic",
    "html_parse_list_text_to",
-   "catch_call",
-   "range_from"
+   "catch_call"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -26897,8 +26895,6 @@
     "range_from",
     "from",
     "to",
-    "i",
-    "input",
     "count",
     "r",
     "lambda",
