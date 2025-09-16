@@ -2960,7 +2960,8 @@
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3207,7 +3208,8 @@
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4324,7 +4326,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4989,7 +4992,8 @@
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "sandbox"
   ],
   "functions_names": [
    "functions_names",
@@ -13891,11 +13895,14 @@
    "list_map_filter_string_empty_not_is"
   ],
   "list_map_string_empty_not_is": [
-   "sandbox",
    "list_map_string_empty_not_is"
   ],
   "list_map_filter_string_empty_not_is": [
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "sandbox"
+  ],
+  "mapped5": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20781,7 +20788,8 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_map_string_empty_not_is",
+    "list_map",
+    "list_map_filter_string_empty_not_is",
     "list_map_split_space",
     "list_map_prefix_without_any",
     "marker",
@@ -20801,7 +20809,11 @@
     "verse_references",
     "mapped2",
     "mapped3",
-    "mapped4"
+    "mapped4",
+    "mapped5",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
