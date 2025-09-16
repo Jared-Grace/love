@@ -2047,7 +2047,7 @@
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "list_map_filter_string_empty_not_is",
  "terminal": false,
  "identifiers": {
   "log": [
