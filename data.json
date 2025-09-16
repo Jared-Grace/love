@@ -2027,9 +2027,9 @@
   "o sb",
   "s version",
   "s eng",
-  "s split",
   "s new",
-  "s newline"
+  "s newline",
+  "s split"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
