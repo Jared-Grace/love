@@ -29,7 +29,7 @@ export async function sandbox() {
   let chapter_verses_list = list_map_first(mapped4);
   function lambda2(la) {
     function lambda(book_name, chapter_verses) {
-      let split2 = string_split(s, separator);
+      let split2 = string_split(chapter_verses, ":");
     }
     each_pair(book_names, chapter_verses_list, lambda);
   }
