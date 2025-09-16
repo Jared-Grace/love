@@ -6,7 +6,8 @@ export async function retry(lambda) {
   async function lambda2() {
     try {
       result = await lambda();
-      let success = true;
+      let success = null;
+      success = true;
       return success;
     } catch (e) {}
   }
