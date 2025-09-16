@@ -5059,8 +5059,7 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
-   "range_from",
-   "sandbox"
+   "range_from"
   ],
   "functions_names": [
    "functions_names",
@@ -5904,8 +5903,7 @@
   ],
   "list_b": [
    "each_pair",
-   "each_pair_async",
-   "sandbox"
+   "each_pair_async"
   ],
   "range": [
    "each_range",
@@ -6282,7 +6280,8 @@
    "js_call_new_code",
    "list_map_unordered_async",
    "marker_down_choices",
-   "data_files_update"
+   "data_files_update",
+   "sandbox"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -6503,8 +6502,7 @@
    "list_map_unordered_async",
    "list_wait",
    "functions_transform",
-   "ebible_verses_upload",
-   "sandbox"
+   "ebible_verses_upload"
   ],
   "function_format": [
    "functions_format",
@@ -14131,10 +14129,7 @@
   "bible_folders": [
    "sandbox"
   ],
-  "books_all_promises": [
-   "sandbox"
-  ],
-  "mapped5": [
+  "books_all": [
    "sandbox"
   ]
  },
@@ -21021,8 +21016,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_wait",
-    "list_map",
+    "list_map_unordered_async",
     "ebible_folder_urdu",
     "each",
     "list_empty_not_is",
@@ -21059,8 +21053,7 @@
     "v2",
     "bible_folders",
     "books",
-    "books_all_promises",
-    "mapped5",
+    "books_all",
     "mapped",
     "file_path",
     "contents",
@@ -21092,7 +21085,6 @@
     "a",
     "b",
     "list_a",
-    "list_b",
     "verses",
     "lambda4",
     "verse_number",
