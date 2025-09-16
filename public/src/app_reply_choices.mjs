@@ -59,7 +59,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Bless short",
-      response: "God bless you" + prayer_end(),
+      response: "God bless" + prayer_end(),
     },
     {
       text: emoji_phone() + " Call why?",
