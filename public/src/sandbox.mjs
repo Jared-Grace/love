@@ -1,5 +1,4 @@
-import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_first } from "./list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "./list_map_filter_string_empty_not_is.mjs";
 import { list_map_split_space } from "./list_map_split_space.mjs";
 import { list_map_prefix_without_any } from "./list_map_prefix_without_any.mjs";
@@ -22,6 +21,6 @@ export async function sandbox() {
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let mapped5 = list_map(mapped4, list_first);
+  let mapped5 = list_map_first(mapped4);
   return mapped4;
 }
