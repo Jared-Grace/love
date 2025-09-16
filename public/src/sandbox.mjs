@@ -69,7 +69,8 @@ export async function sandbox() {
         let result = list_filter_property(verses, "verse_number", verse_number);
         let ne = list_empty_not_is(result);
         if (ne) {
-          each(list2, function lambda3(item) {});
+          function lambda3(item) {}
+          each(list2, lambda3);
           la(book_name + " " + second + " ");
         }
       }
