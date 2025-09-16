@@ -3200,7 +3200,6 @@
    "list_add_first",
    "string_split_newline",
    "list_filter_starts_with_any",
-   "sandbox",
    "list_map_prefix_without_any"
   ],
   "v": [
@@ -8971,7 +8970,6 @@
    "folder_find_starts_with",
    "js_code_declaration_args",
    "list_map_prefix_without",
-   "sandbox",
    "list_map_prefix_without_any"
   ],
   "js_keyword_from": [
@@ -20764,9 +20762,7 @@
     "contents",
     "split",
     "verse_references",
-    "mapped2",
-    "list",
-    "prefix"
+    "mapped2"
    ],
    "async": true
   },
