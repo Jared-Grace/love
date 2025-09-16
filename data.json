@@ -6255,8 +6255,7 @@
    "string_split_empty",
    "string_replace",
    "html_parse_descendants_classes",
-   "string_split_newline",
-   "sandbox"
+   "string_split_newline"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -13939,6 +13938,9 @@
   ],
   "chapter_verses_list": [
    "sandbox"
+  ],
+  "string_split_colon": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20824,8 +20826,8 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split_colon",
     "list_first_second",
-    "string_split",
     "list_adder",
     "each_pair",
     "list_map_prefix_any",
