@@ -2346,7 +2346,8 @@
    "object_assign",
    "html_style_assign",
    "string_split_newline",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_find_starts_with"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26523,6 +26524,7 @@
   "list_find_starts_with": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_any",
     "string_starts_with",
     "list_find_starts_with",
