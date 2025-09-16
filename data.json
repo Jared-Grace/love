@@ -2371,7 +2371,8 @@
    "list_map_prefix_any",
    "range_from",
    "each_range_from",
-   "each_range_from_async"
+   "each_range_from_async",
+   "number_pad"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14008,6 +14009,9 @@
   "each_range_from_async": [
    "each_range_from_async",
    "sandbox"
+  ],
+  "number_pad": [
+   "number_pad"
   ]
  },
  "functions": {
@@ -26805,6 +26809,13 @@
     "to",
     "lambda",
     "list"
+   ]
+  },
+  "number_pad": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "number_pad"
    ]
   }
  },
