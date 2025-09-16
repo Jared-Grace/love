@@ -10775,7 +10775,8 @@
   ],
   "add": [
    "add",
-   "add_1"
+   "add_1",
+   "range_from"
   ],
   "sum": [
    "add",
@@ -26733,6 +26734,7 @@
   "range_from": {
    "async": false,
    "identifiers": [
+    "add",
     "list_map",
     "range",
     "marker",
