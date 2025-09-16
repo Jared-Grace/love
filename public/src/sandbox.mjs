@@ -66,7 +66,9 @@ export async function sandbox() {
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
         let result = list_filter_property(verses, "verse_number", verse_number);
-        let e = list_empty_is(list2);
+        let e = list_empty_is(result);
+        if (false) {
+        }
         la(book_name + " " + second + " ");
       }
       await each_range_from_async(verse_start, verse_end, lambda4);
