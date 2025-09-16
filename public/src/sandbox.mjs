@@ -72,6 +72,11 @@ export async function sandbox() {
       la({
         verse_start,
         verse_end,
+      });      log({
+        book_name,
+        chapter_verses,
+        verse_start,
+        verse_end,
       });
       await each_range_from_async(verse_start, verse_end, lambda4);
     }
