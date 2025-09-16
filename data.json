@@ -2071,8 +2071,8 @@
   "p",
   "evu tel2017",
   "s test",
-  "is ebible_version_books_testament_new",
-  "d"
+  "d",
+  "is ebible_version_books_testament_new"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
