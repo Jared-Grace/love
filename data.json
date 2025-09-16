@@ -2052,7 +2052,6 @@
   "sp ad",
   "n number_pad",
   "s ebible",
-  "sb",
   "cs each_pair async",
   "cs each_multiple async",
   "s verses,up",
@@ -2065,7 +2064,8 @@
   "ebible_verses_upload hin2017",
   "s each_pair",
   "s multiple",
-  "cs each_index async"
+  "cs each_index async",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
