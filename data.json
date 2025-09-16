@@ -14027,6 +14027,9 @@
   ],
   "padStart": [
    "number_pad"
+  ],
+  "pad_count": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -20959,6 +20962,7 @@
     "split2",
     "first",
     "second",
+    "pad_count",
     "v",
     "num",
     "length",
