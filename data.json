@@ -3042,8 +3042,7 @@
    "ebible_verses",
    "html_p_text_multiple",
    "folder_read_async",
-   "ebible_index_flat",
-   "list_filter_starts_with_any"
+   "ebible_index_flat"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4304,7 +4303,6 @@
    "object_property_get_name",
    "string_starts_with_not",
    "list_add_first",
-   "list_filter_starts_with_any",
    "list_map_prefix_without_any"
   ],
   "list_includes": [
@@ -9198,8 +9196,7 @@
    "http",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not",
-   "list_filter_starts_with_any"
+   "string_starts_with_not"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -9664,8 +9661,7 @@
    "js_node_types_is",
    "list_any",
    "marker_functionize",
-   "app_replace_rule_set",
-   "list_filter_starts_with_any"
+   "app_replace_rule_set"
   ],
   "match": [
    "js_node_types_is",
@@ -11925,8 +11921,7 @@
    "list_filter_starts_with_not_multiple",
    "folder_find_starts_with",
    "list_filter_starts_with",
-   "string_starts_with_not",
-   "list_filter_starts_with_any"
+   "string_starts_with_not"
   ],
   "only": [
    "list_single",
@@ -12275,8 +12270,7 @@
   ],
   "any": [
    "list_any",
-   "app_replace_rule_set",
-   "list_filter_starts_with_any"
+   "app_replace_rule_set"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -13436,8 +13430,7 @@
   ],
   "item2": [
    "ebible_chapters",
-   "app_reply_main",
-   "list_filter_starts_with_any"
+   "app_reply_main"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -26463,18 +26456,11 @@
   "list_filter_starts_with_any": {
    "async": false,
    "identifiers": [
+    "list_any_starts_with",
     "list_filter",
-    "list_any",
-    "string_starts_with",
     "list_filter_starts_with_any",
     "prefixes",
     "list",
-    "list_any_starts_with",
-    "item",
-    "lambda2",
-    "item2",
-    "sw",
-    "any",
     "verse_references"
    ]
   },
