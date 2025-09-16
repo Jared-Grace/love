@@ -14143,6 +14143,9 @@
   ],
   "book2": [
    "sandbox"
+  ],
+  "text3": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21028,6 +21031,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "clipboard_copy",
     "list_join_newline",
     "list_get",
     "list_index_of",
@@ -21112,7 +21116,7 @@
     "text",
     "list",
     "joined",
-    "clipboard_copy"
+    "text3"
    ],
    "async": true
   },
