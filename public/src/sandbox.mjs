@@ -24,8 +24,8 @@ export async function sandbox() {
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let chapter_verses = list_map_first(mapped4);
+  let chapter_verses_list = list_map_first(mapped4);
   function lambda(book_name, chapter_verses) {}
-  each_pair(book_names, chapter_verses, lambda);
-  return chapter_verses;
+  each_pair(book_names, chapter_verses_list, lambda);
+  return chapter_verses_list;
 }
