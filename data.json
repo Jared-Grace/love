@@ -2355,7 +2355,8 @@
    "list_map_prefix_without_any",
    "list_find_starts_with",
    "sandbox",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_map_prefix_any"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2961,7 +2962,8 @@
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_map_prefix_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3208,7 +3210,8 @@
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_map_prefix_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -3986,7 +3989,8 @@
    "html_parse_find_remove",
    "list_map_prefix_without",
    "html_loading",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_map_prefix_any"
   ],
   "separator": [
    "watch",
@@ -4325,7 +4329,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_map_prefix_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4990,7 +4995,8 @@
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_map_prefix_any"
   ],
   "functions_names": [
    "functions_names",
@@ -6443,7 +6449,8 @@
    "list_filter_starts_with",
    "list_map_prefix_without",
    "sandbox",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_map_prefix_any"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -8984,7 +8991,8 @@
    "folder_find_starts_with",
    "js_code_declaration_args",
    "list_map_prefix_without",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_map_prefix_any"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9208,7 +9216,8 @@
   "string_prefix_without": [
    "string_prefix_without",
    "list_map_prefix_without",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_map_prefix_any"
   ],
   "js_keyword_if": [
    "js_dollar_i",
@@ -13338,7 +13347,8 @@
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "list_map_prefix_any"
   ],
   "list_filter_starts_with_not_multiple": [
    "list_filter_starts_with_not_multiple",
@@ -13875,7 +13885,8 @@
   ],
   "list_find_starts_with": [
    "list_find_starts_with",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "list_map_prefix_any"
   ],
   "predicate": [
    "list_find"
@@ -13903,6 +13914,9 @@
   ],
   "list_map_first": [
    "sandbox"
+  ],
+  "list_map_prefix_any": [
+   "list_map_prefix_any"
   ]
  },
  "functions": {
@@ -26612,6 +26626,23 @@
     "item",
     "filtered",
     "mapped4"
+   ]
+  },
+  "list_map_prefix_any": {
+   "async": false,
+   "identifiers": [
+    "list_find_starts_with",
+    "marker",
+    "list_map",
+    "string_prefix_without",
+    "list_map_prefix_any",
+    "list",
+    "prefixes",
+    "lambda",
+    "item",
+    "prefix",
+    "result",
+    "mapped"
    ]
   }
  },
