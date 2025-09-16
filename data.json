@@ -1991,7 +1991,6 @@
   "s verses,up",
   "sb",
   "s list,add",
-  "s new",
   "s new,join",
   "s doc",
   "n html_loading",
@@ -2028,7 +2027,8 @@
   "o sb",
   "s version",
   "s eng",
-  "s split"
+  "s split",
+  "s new"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
