@@ -1,3 +1,4 @@
+import { clipboard_copy } from "./clipboard_copy.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -106,6 +107,7 @@ export async function sandbox() {
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
   let list = await list_adder_async(lambda2);
-  let joined = list_join_newline(list);clipboard_copy
+  let joined = list_join_newline(list);
+  await clipboard_copy(text3);
   return list;
 }
