@@ -4439,7 +4439,8 @@
    "list_empty_not_is",
    "list_index_is",
    "list_last_or_null",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "sandbox"
   ],
   "e": [
    "catch_ignore",
@@ -4466,7 +4467,8 @@
    "cache_generic",
    "html_parse_classes_preview",
    "promise_wrap",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -11291,7 +11293,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -20995,6 +20998,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_empty_is",
     "list_filter_property",
     "string_to",
     "list_adder_async",
@@ -21057,6 +21061,8 @@
     "lambda4",
     "verse_number",
     "result",
+    "e",
+    "list2",
     "list"
    ],
    "async": true
