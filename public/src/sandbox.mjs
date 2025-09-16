@@ -1,3 +1,4 @@
+import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { string_to } from "./string_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -65,6 +66,7 @@ export async function sandbox() {
       async function lambda4(verse_number) {
         verse_number = string_to(verse_number);
         let result = list_filter_property(verses, "verse_number", verse_number);
+        let e = list_empty_is(list2);
         la(book_name + " " + second + " ");
       }
       await each_range_from_async(verse_start, verse_end, lambda4);
