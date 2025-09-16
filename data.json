@@ -2051,7 +2051,8 @@
   "fws range from",
   "s add",
   "p",
-  "range_from 10 20"
+  "range_from 10 20",
+  "cs each_range from"
  ],
  "marker_current": "1",
  "function_current": "range_from",
