@@ -11198,8 +11198,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "sandbox"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -20884,7 +20883,6 @@
     "split3",
     "first2",
     "second2",
-    "list2",
     "list"
    ],
    "async": true
