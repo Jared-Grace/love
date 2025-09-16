@@ -2995,7 +2995,6 @@
    "html_parse_descendants_classes",
    "ebible_version_verses",
    "list_adder_generic_async",
-   "ebible_chapter_codes",
    "ebible_chapter_text",
    "ebible_verses",
    "ebible_verses_upload",
@@ -3112,7 +3111,6 @@
    "list_filter_starts_with_not_multiple",
    "html_parse_descendants_classes",
    "ebible_version_verses",
-   "ebible_chapter_codes",
    "ebible_chapters",
    "ebible_chapter_text",
    "ebible_verses",
@@ -4285,7 +4283,6 @@
    "app_reply_main",
    "ebible_version_verses",
    "ebible_version_books_testament",
-   "ebible_chapter_codes",
    "ebible_verses_upload",
    "app_replace_rule_valid",
    "js_statement_expression_get",
@@ -5280,7 +5277,6 @@
    "js_calls_to_each",
    "ebible_versions_download",
    "ebible_version_verses",
-   "ebible_chapter_codes",
    "each_range_from_async",
    "each_index_async"
   ],
@@ -7095,7 +7091,6 @@
    "function_transform_marker_specified",
    "html_parse_descendants_classes",
    "ebible_version_verses",
-   "ebible_chapter_codes",
    "ebible_verses",
    "ebible_index_flat",
    "retry",
@@ -13469,7 +13464,6 @@
    "ebible_version_verses",
    "list_filter_starts_with_not",
    "ebible_chapters",
-   "ebible_chapter_codes",
    "ebible_version_download_path_combine",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
@@ -13547,13 +13541,11 @@
   ],
   "ebible_chapters": [
    "ebible_version_verses",
-   "ebible_chapters",
-   "ebible_chapter_codes"
+   "ebible_chapters"
   ],
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses",
-   "ebible_chapter_codes",
    "ebible_index"
   ],
   "html_parse_find_a_href_starts_with": [
@@ -13656,14 +13648,12 @@
   ],
   "book": [
    "ebible_version_verses",
-   "ebible_chapter_codes",
    "ebible_index",
    "ebible_references_parse"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
-   "ebible_version_verses",
-   "ebible_chapter_codes"
+   "ebible_version_verses"
   ],
   "list_adder_generic_async": [
    "list_adder_generic_async",
@@ -14281,6 +14271,9 @@
   ],
   "ebible_chapters_each_verses_check": [
    "sandbox"
+  ],
+  "ebible_books_to_chapter_codes": [
+   "ebible_chapter_codes"
   ]
  },
  "functions": {
@@ -25538,21 +25531,12 @@
   "ebible_chapter_codes": {
    "async": true,
    "identifiers": [
+    "ebible_books_to_chapter_codes",
     "marker",
-    "list_adder_multiple_async",
-    "each_async",
-    "ebible_chapters",
     "ebible_version_books",
-    "object_property_get",
     "ebible_chapter_codes",
     "bible_folder",
     "books",
-    "lambda2",
-    "la",
-    "lambda",
-    "book",
-    "book_code",
-    "chapters",
     "list"
    ]
   },
