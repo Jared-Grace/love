@@ -1,3 +1,4 @@
+import { retry } from "./retry.mjs";
 import { log } from "./log.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
@@ -14,8 +15,12 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     },
     settings,
   );
-  await file.save(buffer, merged);
+  await lambda();
+  await retry(async function lambda3() {});
   console.log(`Uploaded data to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   console.log("Accessible at:", url);
+  async function lambda() {
+    await file.save(buffer, merged);
+  }
 }
