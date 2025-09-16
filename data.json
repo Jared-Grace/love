@@ -3279,7 +3279,8 @@
    "each_range_from_async",
    "each_index_async",
    "ebible_references_parse",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -13338,7 +13339,8 @@
    "ebible_index_flat_upload",
    "app_reply_main",
    "ebible_references_parse",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -14274,7 +14276,11 @@
    "sandbox"
   ],
   "ebible_chapters_each_verses_list": [
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "sandbox"
+  ],
+  "ebible_chapters_each_verses_check": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21167,9 +21173,13 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_chapters_each_verses_list",
+    "ebible_chapters_each_verses_check",
     "log",
     "ebible_chapters_each_verses_check_with",
     "sandbox",
+    "bible_folder",
+    "list",
     "each_chapter",
     "chapter_code",
     "verses"
