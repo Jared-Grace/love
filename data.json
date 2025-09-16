@@ -12278,7 +12278,8 @@
   "any": [
    "list_any",
    "app_replace_rule_set",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "list_filter_starts_with_any"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -13440,7 +13441,8 @@
   "item2": [
    "ebible_chapters",
    "app_reply_main",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "list_filter_starts_with_any"
   ],
   "extra": [
    "ebible_chapter_text"
@@ -13842,7 +13844,11 @@
   ],
   "list_any_starts_with": [
    "list_map_prefix_without_any",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "list_filter_starts_with_any"
+  ],
+  "prefixes2": [
+   "list_filter_starts_with_any"
   ]
  },
  "functions": {
@@ -26463,13 +26469,17 @@
   "list_filter_starts_with_any": {
    "async": false,
    "identifiers": [
+    "list_any_starts_with",
     "list_filter",
     "list_filter_starts_with_any",
-    "item",
     "prefixes",
+    "list",
     "lambda",
-    "verse_references",
-    "list"
+    "item",
+    "any",
+    "item2",
+    "prefixes2",
+    "verse_references"
    ]
   },
   "list_map_prefix_without_any": {
