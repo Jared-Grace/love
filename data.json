@@ -14030,9 +14030,6 @@
   ],
   "pad_count": [
    "sandbox"
-  ],
-  "$i": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -20966,7 +20963,6 @@
     "first",
     "second",
     "pad_count",
-    "$i",
     "v",
     "num",
     "length",
