@@ -20810,10 +20810,10 @@
     "mapped2",
     "mapped3",
     "mapped4",
-    "mapped5",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped5",
+    "list"
    ],
    "async": true
   },
