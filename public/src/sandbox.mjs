@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { list_map_prefix_without } from "./list_map_prefix_without.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -6,6 +7,7 @@ import { string_split_newline } from "./string_split_newline.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function sandbox() {
+  marker("1");
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
   let mapped = list_map_property(books, "text");

@@ -2021,7 +2021,6 @@
   "s books",
   "ebible_version_books engbsb",
   "n sandbox",
-  "o sb",
   "s version",
   "s eng",
   "s new",
@@ -2042,10 +2041,11 @@
   "r list_find_starts_withis list_map_prefix_without",
   "is list_map_prefix_without",
   "cs list_map_prefix_without any",
-  "s list_map_prefix_without"
+  "s list_map_prefix_without",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "list_find_starts_with",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
