@@ -5506,8 +5506,7 @@
    "command_line_schtasks",
    "git_push_schedule",
    "git_push_schedule_command",
-   "schtasks_query",
-   "sandbox"
+   "schtasks_query"
   ],
   "stdout": [
    "command_line",
@@ -21200,7 +21199,6 @@
     "sandbox",
     "bible_folder",
     "stdout",
-    "command",
     "books",
     "list",
     "each_chapter",
@@ -27424,7 +27422,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-16T21:44:49.117Z",
+ "git_push_when": "2025-09-16T22:46:48.569Z",
  "error_attention": null,
  "app_current": "replace"
 }
