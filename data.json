@@ -4466,8 +4466,7 @@
    "cache_generic",
    "html_parse_classes_preview",
    "promise_wrap",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -6018,7 +6017,8 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "Error": [
    "error",
@@ -11293,7 +11293,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14112,6 +14113,9 @@
   "each_index_async": [
    "each_index_async",
    "each_multiple_async"
+  ],
+  "first2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21060,7 +21064,9 @@
     "lambda4",
     "verse_number",
     "result",
-    "e",
+    "ne",
+    "first2",
+    "list2",
     "list"
    ],
    "async": true
