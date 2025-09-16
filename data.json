@@ -2053,7 +2053,8 @@
   "o e",
   "o r",
   "o rg",
-  "s range"
+  "s range",
+  "cs each_range_from async"
  ],
  "marker_current": "1",
  "function_current": "range",
