@@ -3682,7 +3682,8 @@
    "firebase_storage_exists",
    "file_parent_exists_ensure",
    "firebase_path_fix",
-   "folder_read_async"
+   "folder_read_async",
+   "sandbox"
   ],
   "value": [
    "watch",
@@ -20663,7 +20664,8 @@
     "ebible_folder_english",
     "sandbox",
     "bible_folder",
-    "books"
+    "books",
+    "path"
    ],
    "async": true
   },
