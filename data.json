@@ -3872,7 +3872,8 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "output": [
    "watch",
@@ -5926,7 +5927,8 @@
    "list_empty_not_is_assert",
    "marker_top",
    "string_empty_not_is",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "Error": [
    "error",
@@ -9187,7 +9189,8 @@
    "js_dollar",
    "js_identifier_unique",
    "string_empty_not_is",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -20760,6 +20763,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_empty_not_is",
     "list_map",
     "list_map_split_space",
     "list_map_prefix_without_any",
@@ -20782,6 +20786,8 @@
     "mapped3",
     "lambda",
     "item",
+    "ne",
+    "name",
     "mapped4",
     "list"
    ],
