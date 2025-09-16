@@ -1,6 +1,8 @@
-import { ebible_references_parse_god_created_man_why } from "./ebible_references_parse_god_created_man_why.mjs";
-import { marker } from "./marker.mjs";
+import { log } from "./log.mjs";
+import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 export async function sandbox() {
-  marker("1");
-  await ebible_references_parse_god_created_man_why();
+  await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
+  async function each_chapter(chapter_code, verses) {
+    log(message);
+  }
 }
