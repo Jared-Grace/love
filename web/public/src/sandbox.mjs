@@ -24,6 +24,6 @@ export async function sandbox() {
     let ne = string_empty_not_is(item);
     return ne;
   }
-  let mapped4 = list_map(list, lambda);
-  return mapped3;
+  let mapped4 = list_map(mapped3, lambda);
+  return mapped4;
 }
