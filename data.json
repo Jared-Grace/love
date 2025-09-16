@@ -2086,7 +2086,6 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "list_adder_async",
    "sandbox"
   ],
   "function_path_to_name": [
@@ -19005,7 +19004,6 @@
   },
   "list_adder_async": {
    "identifiers": [
-    "log",
     "list_add",
     "list_adder_async",
     "lambda$la",
