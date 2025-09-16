@@ -2958,7 +2958,8 @@
    "html_loading",
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3204,7 +3205,8 @@
    "string_split_newline",
    "list_filter_starts_with_any",
    "list_map_prefix_without_any",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "v": [
    "data_identifiers_file",
@@ -4320,7 +4322,8 @@
    "list_filter_starts_with_any",
    "list_any_starts_with",
    "list_find_starts_with",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4984,7 +4987,8 @@
    "ebible_verses_upload",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "functions_names": [
    "functions_names",
@@ -6485,7 +6489,8 @@
    "ebible_verses",
    "list_filter_starts_with",
    "list_filter_starts_with_any",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -9190,7 +9195,8 @@
    "js_identifier_unique",
    "string_empty_not_is",
    "ebible_verses",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -9606,7 +9612,8 @@
    "ebible_verses",
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -13879,11 +13886,15 @@
   ],
   "mapped4": [
    "sandbox",
-   "list_map_string_empty_not_is"
+   "list_map_string_empty_not_is",
+   "list_map_filter_string_empty_not_is"
   ],
   "list_map_string_empty_not_is": [
    "sandbox",
    "list_map_string_empty_not_is"
+  ],
+  "list_map_filter_string_empty_not_is": [
+   "list_map_filter_string_empty_not_is"
   ]
  },
  "functions": {
@@ -26571,6 +26582,20 @@
     "list_map",
     "string_empty_not_is",
     "list_map_string_empty_not_is",
+    "list",
+    "lambda",
+    "item",
+    "filtered",
+    "mapped4"
+   ]
+  },
+  "list_map_filter_string_empty_not_is": {
+   "async": false,
+   "identifiers": [
+    "list_filter",
+    "list_map",
+    "string_empty_not_is",
+    "list_map_filter_string_empty_not_is",
     "list",
     "lambda",
     "item",
