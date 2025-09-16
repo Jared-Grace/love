@@ -2052,7 +2052,6 @@
   "cs each_multiple async",
   "s verses,up",
   "s ret",
-  "s upload",
   "n retry",
   "s erro",
   "ps",
@@ -2069,7 +2068,8 @@
   "s pair",
   "p",
   "s clip",
-  "sb"
+  "sb",
+  "s upload"
  ],
  "marker_current": "1",
  "function_current": "each_index_async",
