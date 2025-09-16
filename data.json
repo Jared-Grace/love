@@ -2039,7 +2039,6 @@
   "o sb",
   "s map",
   "s empty",
-  "p",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
   "sb",
   "c list_map_prefix_without_any list_map_prefix_any",
@@ -2051,6 +2050,7 @@
   "s range",
   "fws range from",
   "s add",
+  "p",
   "range_from 10 20"
  ],
  "marker_current": "1",
