@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { file_write } from "./file_write.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -20,6 +21,7 @@ export async function sandbox_2() {
       text,
       output_path,
     };
+    let v2 = json_to(object);
     await file_write(temp_path, contents);
     let v = await command_line(
       "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
