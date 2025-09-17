@@ -14325,6 +14325,12 @@
   ],
   "uuidv4": [
    "uuid"
+  ],
+  "folder_user": [
+   "firebase_storage_download_path"
+  ],
+  "folder": [
+   "firebase_storage_download_path"
   ]
  },
  "functions": {
@@ -26122,9 +26128,11 @@
   "firebase_storage_download_path": {
    "async": false,
    "identifiers": [
+    "folder_user",
     "path_join",
     "firebase_storage_download_path",
     "destination",
+    "folder",
     "result",
     "joined"
    ]
