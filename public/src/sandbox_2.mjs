@@ -13,17 +13,22 @@ export async function sandbox_2() {
   const bible_folder = "engwebu";
   let u = await uuid();
   let temp_path = folder_user_combine("temp", u);
-  let stdout = await command_line(
-    "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " + file_path,
-  );
+  let stdout = await lambda();
   try {
   } finally {
-    await file_delete_if_exists(file_path2);
+    await file_delete_if_exists(temp_path);
   }
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
+  async function lambda() {
+    let v = await command_line(
+      "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
+        file_path,
+    );
+    return v;
+  }
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
     let joined = list_join_space(mapped);
