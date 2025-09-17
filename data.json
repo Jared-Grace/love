@@ -7259,7 +7259,8 @@
    "app_replace_rule_set",
    "ebible_version_books_testament",
    "ebible_verses_upload",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "command_line"
   ],
   "u": [
    "function_exists",
@@ -14733,6 +14734,7 @@
   },
   "command_line": {
    "identifiers": [
+    "object_merge",
     "exec",
     "promisify",
     "execAsync",
