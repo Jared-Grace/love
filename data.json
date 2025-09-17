@@ -4094,8 +4094,7 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse",
-   "sandbox_2"
+   "ebible_references_parse"
   ],
   "separator": [
    "watch",
@@ -7246,8 +7245,7 @@
    "function_aliases_restore",
    "function_exists_inner",
    "app_reply_main",
-   "uuid",
-   "sandbox_2"
+   "uuid"
   ],
   "to": [
    "function_parse_declaration",
@@ -14330,8 +14328,7 @@
    "sandbox_2"
   ],
   "uuid": [
-   "uuid",
-   "sandbox_2"
+   "uuid"
   ],
   "uuidv4": [
    "uuid"
@@ -14340,14 +14337,15 @@
    "firebase_storage_download_path"
   ],
   "folder_user_combine": [
-   "firebase_storage_download_path",
-   "sandbox_2"
+   "firebase_storage_download_path"
   ],
   "temp_path": [
    "sandbox_2"
   ],
   "file_delete_if_exists": [
-   "file_delete_if_exists",
+   "file_delete_if_exists"
+  ],
+  "file_temp": [
    "sandbox_2"
   ]
  },
@@ -27462,9 +27460,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
-    "file_delete_if_exists",
-    "folder_user_combine",
-    "uuid",
+    "file_temp",
     "list_join_space",
     "log",
     "list_map_property",
@@ -27475,13 +27471,11 @@
     "command_line",
     "sandbox_2",
     "bible_folder",
-    "u",
-    "temp_path",
-    "result",
     "lambda",
     "books",
     "list",
     "each_chapter",
+    "temp_path",
     "v",
     "file_path",
     "chapter_code",
