@@ -5254,8 +5254,7 @@
    "folder_read_async",
    "ebible_folder_urdu",
    "emoji_rainbow",
-   "emoji_rock",
-   "sandbox_2"
+   "emoji_rock"
   ],
   "readdirSync": [
    "folder_read"
@@ -5966,8 +5965,7 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload",
-   "sandbox_2"
+   "ebible_firebase_upload"
   ],
   "each_pair": [
    "each_pair",
@@ -27494,8 +27492,6 @@
     "o",
     "text",
     "output_path",
-    "v2",
-    "object",
     "contents",
     "v",
     "file_path",
