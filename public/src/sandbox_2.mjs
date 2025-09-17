@@ -1,3 +1,4 @@
+import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_chapters_each_verses_list } from "./ebible_chapters_each_verses_list.mjs";
@@ -14,6 +15,7 @@ export async function sandbox_2() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
+    let joined = list_join_space(args);
     log(mapped);
   }
 }
