@@ -14401,9 +14401,6 @@
   ],
   "command_line_cmd": [
    "sandbox_2"
-  ],
-  "cwd": [
-   "sandbox_2"
   ]
  },
  "functions": {
@@ -27545,7 +27542,6 @@
     "o",
     "output_path",
     "contents",
-    "cwd",
     "c",
     "stdout",
     "books",
