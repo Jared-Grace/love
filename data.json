@@ -11965,8 +11965,7 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder",
-   "sandbox_2"
+   "ebible_firebase_folder"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -14330,6 +14329,9 @@
   ],
   "folder_user_combine": [
    "firebase_storage_download_path",
+   "sandbox_2"
+  ],
+  "temp_path": [
    "sandbox_2"
   ]
  },
@@ -27457,7 +27459,7 @@
     "sandbox_2",
     "bible_folder",
     "u",
-    "joined2",
+    "temp_path",
     "stdout",
     "file_path",
     "books",
