@@ -12,7 +12,7 @@ import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses
 import { command_line } from "./command_line.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
-  let result = await ebible_chapter_text(bible_folder2, chapter_code2);
+  let result = await ebible_chapter_text(bible_folder, "SIR01");
   await file_temp(lambda);
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
