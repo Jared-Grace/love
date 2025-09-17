@@ -5567,8 +5567,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "sandbox"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -21199,7 +21198,6 @@
     "lambda",
     "item",
     "s",
-    "input",
     "mapped"
    ],
    "async": true
