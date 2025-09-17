@@ -4085,8 +4085,7 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse",
-   "firebase_storage_download_path"
+   "ebible_references_parse"
   ],
   "separator": [
    "watch",
@@ -5179,7 +5178,6 @@
    "http_firebase_file_path",
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
-   "firebase_storage_download_path",
    "local_function_path"
   ],
   "fs": [
@@ -14326,10 +14324,10 @@
   "uuidv4": [
    "uuid"
   ],
-  "folder_user": [
+  "folder": [
    "firebase_storage_download_path"
   ],
-  "folder": [
+  "folder_user_combine": [
    "firebase_storage_download_path"
   ]
  },
@@ -26128,12 +26126,10 @@
   "firebase_storage_download_path": {
    "async": false,
    "identifiers": [
-    "folder_user",
-    "path_join",
+    "folder_user_combine",
     "firebase_storage_download_path",
     "destination",
     "folder",
-    "result",
     "joined"
    ]
   },
