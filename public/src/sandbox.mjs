@@ -14,4 +14,5 @@ export async function sandbox() {
     return s;
   }
   let mapped = list_map(list, lambda);
+  return mapped;
 }
