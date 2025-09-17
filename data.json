@@ -5982,8 +5982,7 @@
    "ebible_index",
    "range_from",
    "number_pad",
-   "retry",
-   "sandbox"
+   "retry"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -21194,7 +21193,6 @@
     "left",
     "right",
     "list",
-    "count",
     "lambda",
     "item",
     "s",
