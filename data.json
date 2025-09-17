@@ -2098,7 +2098,8 @@
   "uuid",
   "s fina",
   "s if,exists",
-  "s file,ex"
+  "s file,ex",
+  "s del,fil"
  ],
  "marker_current": "1",
  "function_current": "uuid",
