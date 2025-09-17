@@ -1,3 +1,4 @@
+import { range } from "./range.mjs";
 import { list_map } from "./list_map.mjs";
 import { equal } from "./equal.mjs";
 export async function sandbox() {
@@ -6,6 +7,7 @@ export async function sandbox() {
   let right = 2;
   if (equal(left, right)) {
   }
+  let r = range(count);
   function lambda(item) {}
   let mapped = list_map(list, lambda);
 }
