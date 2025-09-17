@@ -5375,7 +5375,8 @@
    "assert_file_exists_not",
    "file_exists",
    "function_exists_inner",
-   "http_local"
+   "http_local",
+   "file_delete_if_exists"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -14347,7 +14348,7 @@
   "file_delete_if_exists": [
    "file_delete_if_exists"
   ],
-  "fe": [
+  "file_path2": [
    "file_delete_if_exists"
   ]
  },
@@ -27500,11 +27501,12 @@
   "file_delete_if_exists": {
    "async": true,
    "identifiers": [
+    "file_exists",
     "file_delete",
     "marker",
     "file_delete_if_exists",
     "file_path",
-    "fe",
+    "file_path2",
     "v"
    ]
   }
