@@ -4253,7 +4253,6 @@
    "ebible_version_download_path_combine",
    "file_parent_exists_ensure",
    "ebible_references_parse",
-   "sandbox_2",
    "file_delete_if_exists"
   ],
   "object_property_get": [
@@ -27525,7 +27524,6 @@
     "output_path",
     "contents",
     "v",
-    "file_path",
     "books",
     "list",
     "each_chapter",
@@ -27570,7 +27568,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-17T18:55:46.900Z",
+ "git_push_when": "2025-09-17T20:09:42.671Z",
  "error_attention": null,
  "app_current": "replace"
 }
