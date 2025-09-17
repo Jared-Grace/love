@@ -3542,7 +3542,8 @@
    "ebible_index_upload_name",
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
-   "uuid"
+   "uuid",
+   "sandbox_2"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14317,7 +14318,8 @@
    "sandbox_2"
   ],
   "uuid": [
-   "uuid"
+   "uuid",
+   "sandbox_2"
   ],
   "uuidv4": [
    "uuid"
@@ -27433,6 +27435,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "uuid",
     "list_join_space",
     "log",
     "list_map_property",
@@ -27443,6 +27446,7 @@
     "command_line",
     "sandbox_2",
     "bible_folder",
+    "v",
     "stdout",
     "file_path",
     "books",
