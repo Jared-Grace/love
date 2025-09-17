@@ -5203,7 +5203,8 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "local_function_path",
-   "sandbox_2"
+   "sandbox_2",
+   "folder_user"
   ],
   "fs": [
    "folder_read",
@@ -9621,7 +9622,8 @@
    "js_await_add",
    "function_aliases_restore",
    "marker_param_add",
-   "js_stack_last_function"
+   "js_stack_last_function",
+   "folder_user"
   ],
   "async": [
    "js_function_last_asyncify"
@@ -14356,7 +14358,8 @@
   ],
   "folder": [
    "firebase_storage_download_path",
-   "sandbox_2"
+   "sandbox_2",
+   "folder_user"
   ],
   "folder_user_combine": [
    "firebase_storage_download_path"
@@ -14374,7 +14377,8 @@
    "sandbox_2"
   ],
   "folder_user": [
-   "sandbox_2"
+   "sandbox_2",
+   "folder_user"
   ],
   "sandbox_3": [
    "sandbox_3"
@@ -27552,6 +27556,15 @@
     "log",
     "marker",
     "sandbox_3"
+   ]
+  },
+  "folder_user": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "folder_user",
+    "folder",
+    "f"
    ]
   }
  },
