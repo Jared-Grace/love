@@ -5537,27 +5537,32 @@
    "clipboard_copy"
   ],
   "exec": [
-   "command_line"
+   "command_line",
+   "command_line_generic"
   ],
   "promisify": [
-   "command_line"
+   "command_line",
+   "command_line_generic"
   ],
   "execAsync": [
-   "command_line"
+   "command_line",
+   "command_line_generic"
   ],
   "command": [
    "command_line",
    "command_line_schtasks",
    "git_push_schedule",
    "git_push_schedule_command",
-   "schtasks_query"
+   "schtasks_query",
+   "command_line_generic"
   ],
   "stdout": [
    "command_line",
    "command_line_read",
    "command_line_schtasks",
    "git_push_schedule",
-   "firebase_deploy"
+   "firebase_deploy",
+   "command_line_generic"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -7257,7 +7262,8 @@
    "app_replace_rule_set",
    "ebible_version_books_testament",
    "ebible_verses_upload",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "command_line_generic"
   ],
   "u": [
    "function_exists",
@@ -13734,7 +13740,8 @@
   "extra": [
    "ebible_chapter_text",
    "list_empty_is_assert",
-   "command_line"
+   "command_line",
+   "command_line_generic"
   ],
   "ebible_verses_include": [
    "ebible_verses_include",
@@ -14384,7 +14391,14 @@
    "sandbox_3"
   ],
   "command_line_generic": [
-   "command_line"
+   "command_line",
+   "command_line_generic"
+  ],
+  "options": [
+   "command_line_generic"
+  ],
+  "encoding": [
+   "command_line_generic"
   ]
  },
  "functions": {
@@ -27570,6 +27584,21 @@
     "folder_user",
     "folder",
     "f"
+   ]
+  },
+  "command_line_generic": {
+   "async": true,
+   "identifiers": [
+    "object_merge",
+    "command_line_generic",
+    "command",
+    "extra",
+    "exec",
+    "promisify",
+    "execAsync",
+    "options",
+    "encoding",
+    "stdout"
    ]
   }
  },
