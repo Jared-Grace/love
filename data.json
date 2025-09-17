@@ -3542,7 +3542,6 @@
    "ebible_index_upload_name",
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
-   "uuid",
    "sandbox_2"
   ],
   "file_overwrite": [
@@ -7235,7 +7234,8 @@
    "function_exists",
    "function_aliases_restore",
    "function_exists_inner",
-   "app_reply_main"
+   "app_reply_main",
+   "uuid"
   ],
   "to": [
    "function_parse_declaration",
@@ -27465,7 +27465,7 @@
     "uuid",
     "v4",
     "uuidv4",
-    "v"
+    "u"
    ]
   }
  },
