@@ -4098,7 +4098,8 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "separator": [
    "watch",
@@ -13739,7 +13740,8 @@
   ],
   "ebible_chapter_text": [
    "ebible_chapter_text",
-   "ebible_verses"
+   "ebible_verses",
+   "sandbox_2"
   ],
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
@@ -14014,7 +14016,8 @@
    "app_reply_main"
   ],
   "chapter_code2": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox_2"
   ],
   "verse_number2": [
    "app_reply_main"
@@ -14109,7 +14112,8 @@
    "app_reply_main"
   ],
   "bible_folder2": [
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox_2"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -27472,6 +27476,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "ebible_chapter_text",
     "json_to",
     "file_write",
     "file_temp",
@@ -27485,6 +27490,9 @@
     "command_line",
     "sandbox_2",
     "bible_folder",
+    "result",
+    "bible_folder2",
+    "chapter_code2",
     "lambda",
     "books",
     "list",
