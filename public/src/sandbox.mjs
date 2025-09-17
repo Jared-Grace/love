@@ -7,7 +7,7 @@ export async function sandbox() {
   let right = 2;
   if (equal(left, right)) {
   }
-  let r = range(count);
+  let rr = range(count);
   function lambda(item) {}
   let mapped = list_map(list, lambda);
 }
