@@ -2443,7 +2443,8 @@
    "ebible_version_books_testament_apocrypha",
    "file_delete_if_exists",
    "sandbox_3",
-   "sandbox_2"
+   "sandbox_2",
+   "command_line"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14742,6 +14743,7 @@
   },
   "command_line": {
    "identifiers": [
+    "marker",
     "command_line_generic",
     "command_line",
     "command",
