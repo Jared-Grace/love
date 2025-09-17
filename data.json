@@ -2115,7 +2115,8 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "sandbox_2"
+   "sandbox_2",
+   "uuid"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2420,8 +2421,7 @@
    "each",
    "range",
    "ebible_verses_upload",
-   "ebible_version_books_testament_apocrypha",
-   "uuid"
+   "ebible_version_books_testament_apocrypha"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3542,7 +3542,8 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "uuid"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3649,7 +3650,8 @@
    "chalk_color",
    "import_install",
    "unzip",
-   "html_parse"
+   "html_parse",
+   "uuid"
   ],
   "command_line": [
    "command_line",
@@ -3973,7 +3975,8 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "app_reply_main"
+   "app_reply_main",
+   "uuid"
   ],
   "output": [
    "watch",
@@ -9842,7 +9845,8 @@
    "js_calls_to_each"
   ],
   "v4": [
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "uuid"
   ],
   "v5": [
    "js_marker_name_get"
@@ -10335,7 +10339,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "uuid"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -14315,6 +14320,9 @@
    "sandbox_2"
   ],
   "uuid": [
+   "uuid"
+  ],
+  "uuidv4": [
    "uuid"
   ]
  },
@@ -27450,10 +27458,16 @@
    ]
   },
   "uuid": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "uuid"
+    "log",
+    "import_install",
+    "uuid",
+    "name",
+    "v4",
+    "uuidv4",
+    "v",
+    "console"
    ]
   }
  },
