@@ -7266,8 +7266,7 @@
    "list_random_item",
    "integer_random",
    "js_statement_return_empty_add",
-   "range_from",
-   "sandbox"
+   "range_from"
   ],
   "formatted": [
    "function_format",
@@ -14293,6 +14292,9 @@
   ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha"
+  ],
+  "rr": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21191,7 +21193,7 @@
     "sandbox",
     "left",
     "right",
-    "r",
+    "rr",
     "count",
     "lambda",
     "item",
