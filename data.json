@@ -14016,8 +14016,7 @@
    "app_reply_main"
   ],
   "chapter_code2": [
-   "app_reply_main",
-   "sandbox_2"
+   "app_reply_main"
   ],
   "verse_number2": [
    "app_reply_main"
@@ -14112,8 +14111,7 @@
    "app_reply_main"
   ],
   "bible_folder2": [
-   "app_reply_main",
-   "sandbox_2"
+   "app_reply_main"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -27491,8 +27489,6 @@
     "sandbox_2",
     "bible_folder",
     "result",
-    "bible_folder2",
-    "chapter_code2",
     "lambda",
     "books",
     "list",
