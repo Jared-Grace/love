@@ -2110,10 +2110,10 @@
   "s3",
   "u l",
   "o s2",
-  "s2",
   "u cl",
   "p",
-  "o command_line"
+  "o command_line",
+  "s2"
  ],
  "marker_current": "1",
  "function_current": "command_line",
