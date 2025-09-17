@@ -64,6 +64,14 @@ export async function app_reply_main() {
       name: "Yoruba",
       bible_folder: "yor",
     },
+    {
+      name: "Cebuano",
+      bible_folder: "cebulb",
+    },
+    {
+      name: "Tagalog",
+      bible_folder: "tglulb",
+    },
   ];
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
