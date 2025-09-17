@@ -21187,10 +21187,10 @@
     "sandbox",
     "left",
     "right",
-    "mapped",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped",
+    "list"
    ],
    "async": true
   },
