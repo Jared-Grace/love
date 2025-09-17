@@ -4094,7 +4094,8 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "separator": [
    "watch",
@@ -5537,8 +5538,7 @@
    "command_line_read",
    "command_line_schtasks",
    "git_push_schedule",
-   "firebase_deploy",
-   "sandbox_2"
+   "firebase_deploy"
   ],
   "encoding": [
    "command_line"
@@ -27477,7 +27477,7 @@
     "bible_folder",
     "u",
     "temp_path",
-    "stdout",
+    "result",
     "lambda",
     "books",
     "list",
