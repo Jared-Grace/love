@@ -2809,8 +2809,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "sandbox"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3731,8 +3730,7 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic",
-   "sandbox"
+   "object_merge_generic"
   ],
   "watch": [
    "watch"
@@ -3882,8 +3880,7 @@
    "html_style_font_size",
    "js_statement_expression_get",
    "object_property_set_exists_not",
-   "object_merge_generic",
-   "sandbox"
+   "object_merge_generic"
   ],
   "name": [
    "watch",
@@ -4940,7 +4937,8 @@
    "string_take",
    "range_from",
    "firebase_storage_download_json",
-   "path_join"
+   "path_join",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -5569,7 +5567,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "sandbox"
   ],
   "process": [
    "command_line_read",
@@ -5941,8 +5940,7 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload",
-   "sandbox"
+   "ebible_firebase_upload"
   ],
   "each_pair": [
    "each_pair",
@@ -10284,7 +10282,8 @@
    "list_size_1_assert",
    "marker_first",
    "string_to",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "skipped": [
    "list_skip",
@@ -21188,7 +21187,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "object_property_set",
+    "string_to",
     "range",
     "list_map",
     "equal",
@@ -21199,9 +21198,8 @@
     "count",
     "lambda",
     "item",
-    "object",
-    "property_name",
-    "value",
+    "s",
+    "input",
     "mapped"
    ],
    "async": true
