@@ -32,7 +32,7 @@ export async function sandbox_2() {
     let contents = json_to(o);
     await file_write(temp_path, contents);
     let v = await command_line(
-      "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
+      "D:\\programs\\WPy64-312100\\python\\python.exe ./py/kokoro.py " +
         temp_path,
     );
     return v;
