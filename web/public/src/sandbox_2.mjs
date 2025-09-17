@@ -1,3 +1,4 @@
+import { folder_user } from "./folder_user.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { json_to } from "./json_to.mjs";
 import { file_write } from "./file_write.mjs";
@@ -15,6 +16,7 @@ export async function sandbox_2() {
   let verses = await ebible_verses(bible_folder, "SIR01");
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
+  folder_user(folder);
   await file_temp(lambda);
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
