@@ -21,7 +21,7 @@ export async function sandbox_2() {
       text,
       output_path,
     };
-    let v2 = json_to(object);
+    let contents = json_to(o);
     await file_write(temp_path, contents);
     let v = await command_line(
       "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
