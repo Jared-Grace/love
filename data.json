@@ -5192,7 +5192,8 @@
    "http_firebase_file_path",
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
-   "local_function_path"
+   "local_function_path",
+   "sandbox_2"
   ],
   "fs": [
    "folder_read",
@@ -14363,6 +14364,9 @@
    "sandbox_2"
   ],
   "folder_user": [
+   "sandbox_2"
+  ],
+  "engwebu": [
    "sandbox_2"
   ]
  },
@@ -27490,6 +27494,7 @@
     "ebible_version_books_testament_apocrypha",
     "ebible_chapters_each_verses_check",
     "command_line",
+    "path_join",
     "sandbox_2",
     "bible_folder",
     "verses",
@@ -27501,6 +27506,7 @@
     "each_chapter",
     "temp_path",
     "folder",
+    "engwebu",
     "o",
     "output_path",
     "contents",
