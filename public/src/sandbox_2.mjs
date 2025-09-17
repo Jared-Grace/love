@@ -1,3 +1,4 @@
+import { function_wrap } from "./function_wrap.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
@@ -15,6 +16,7 @@ export async function sandbox_2() {
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
+    await function_wrap(f_name, f_name_wrapped);
     let v = await command_line(
       "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
         file_path,
