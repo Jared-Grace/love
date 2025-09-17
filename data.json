@@ -14282,9 +14282,6 @@
   ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha"
-  ],
-  "sandbox_2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21177,7 +21174,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "sandbox_2",
     "sandbox"
    ],
    "async": true
