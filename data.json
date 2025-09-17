@@ -4001,8 +4001,7 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args",
-   "sandbox_2"
+   "js_code_declaration_args"
   ],
   "lj": [
    "watch",
@@ -27438,8 +27437,7 @@
     "chapter_code",
     "verses",
     "mapped",
-    "joined",
-    "args"
+    "joined"
    ]
   }
  },
