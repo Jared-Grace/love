@@ -13735,7 +13735,8 @@
   ],
   "extra": [
    "ebible_chapter_text",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "command_line"
   ],
   "ebible_verses_include": [
    "ebible_verses_include",
@@ -14737,6 +14738,7 @@
     "execAsync",
     "command_line",
     "command",
+    "extra",
     "options",
     "encoding",
     "stdout"
