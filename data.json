@@ -3541,8 +3541,7 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha",
-   "sandbox_2"
+   "ebible_version_books_testament_apocrypha"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7235,7 +7234,8 @@
    "function_aliases_restore",
    "function_exists_inner",
    "app_reply_main",
-   "uuid"
+   "uuid",
+   "sandbox_2"
   ],
   "to": [
    "function_parse_declaration",
@@ -27446,7 +27446,7 @@
     "command_line",
     "sandbox_2",
     "bible_folder",
-    "v",
+    "u",
     "stdout",
     "file_path",
     "books",
