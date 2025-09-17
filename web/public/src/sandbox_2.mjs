@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { folder_user } from "./folder_user.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { json_to } from "./json_to.mjs";
@@ -13,6 +14,7 @@ import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses
 import { command_line } from "./command_line.mjs";
 import { path_join } from "./path_join.mjs";
 export async function sandbox_2() {
+  marker("1");
   const bible_folder = "engwebu";
   const chapter_code = "SIR01";
   let verses = await ebible_verses(bible_folder, chapter_code);
