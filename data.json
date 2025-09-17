@@ -2495,7 +2495,8 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic"
+   "file_write_generic",
+   "sandbox_2"
   ],
   "ast": [
    "data_identifiers_file",
@@ -2780,8 +2781,7 @@
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
-   "js_code_declaration_args",
-   "sandbox_2"
+   "js_code_declaration_args"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4816,8 +4816,7 @@
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "function_wrap",
-   "function_wrap_suffix_add",
-   "sandbox_2"
+   "function_wrap_suffix_add"
   ],
   "function_watch_suffix_change": [
    "function_watch_suffix_change"
@@ -4856,8 +4855,7 @@
   "f_name_wrapped": [
    "function_watch_suffix_change",
    "function_wrap",
-   "function_wrap_suffix_add",
-   "sandbox_2"
+   "function_wrap_suffix_add"
   ],
   "function_watch_ending_change": [
    "function_watch_ending_change"
@@ -6239,7 +6237,8 @@
    "html_parse",
    "html_parse_read",
    "file_write_generic",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "writeFile": [
    "file_overwrite",
@@ -6260,7 +6259,8 @@
   "file_write": [
    "file_write",
    "function_new_declaration",
-   "file_write_json"
+   "file_write_json",
+   "sandbox_2"
   ],
   "folder_current": [
    "folder_current",
@@ -27466,7 +27466,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
-    "function_wrap",
+    "file_write",
     "file_temp",
     "list_join_space",
     "log",
@@ -27483,8 +27483,8 @@
     "list",
     "each_chapter",
     "temp_path",
-    "f_name",
-    "f_name_wrapped",
+    "f_path",
+    "contents",
     "v",
     "file_path",
     "chapter_code",
