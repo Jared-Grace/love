@@ -2127,7 +2127,8 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox_3"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3628,7 +3629,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "sandbox_3"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -27540,8 +27542,10 @@
   "sandbox_3": {
    "async": false,
    "identifiers": [
+    "log",
     "marker",
-    "sandbox_3"
+    "sandbox_3",
+    "message"
    ]
   }
  },
