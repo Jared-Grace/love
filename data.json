@@ -1878,7 +1878,6 @@
   "ebible_version_verses engbsb",
   "a fir file_read",
   "as file",
-  "s sand",
   "fd ebible_version_verses",
   "n html_parse_list_text_to",
   "de html_parse_list_text_to",
@@ -2089,7 +2088,8 @@
   "s reply",
   "s ebible",
   "is ebible_chapters_each_verses_list",
-  "is ebible_version_books_testament_apocrypha"
+  "is ebible_version_books_testament_apocrypha",
+  "s sand"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
