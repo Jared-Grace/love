@@ -2809,7 +2809,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "sandbox"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3730,7 +3731,8 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "watch": [
    "watch"
@@ -3880,7 +3882,8 @@
    "html_style_font_size",
    "js_statement_expression_get",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "name": [
    "watch",
@@ -5938,7 +5941,8 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "sandbox"
   ],
   "each_pair": [
    "each_pair",
@@ -14292,9 +14296,6 @@
   ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha"
-  ],
-  "rr": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21187,18 +21188,21 @@
   },
   "sandbox": {
    "identifiers": [
+    "object_property_set",
     "range",
     "list_map",
     "equal",
     "sandbox",
     "left",
     "right",
-    "rr",
+    "list",
     "count",
     "lambda",
     "item",
-    "mapped",
-    "list"
+    "object",
+    "property_name",
+    "value",
+    "mapped"
    ],
    "async": true
   },
