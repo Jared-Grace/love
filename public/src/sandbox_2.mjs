@@ -16,13 +16,13 @@ export async function sandbox_2() {
   let verses = await ebible_verses(bible_folder, "SIR01");
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
-  folder_user(folder);
   await file_temp(lambda);
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
+    folder_user(folder);
     let o = {
       text,
       output_path,
