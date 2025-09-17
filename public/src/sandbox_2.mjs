@@ -23,7 +23,6 @@ export async function sandbox_2() {
   let v2 = await file_temp(lambda);
   return v2;
   async function lambda(temp_path) {
-    await file_write(temp_path, text);
     let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
     let f = folder_user(folder);
     let o = {
