@@ -2115,8 +2115,7 @@
    "firebase_upload_generic",
    "folder_find_starts_with",
    "retry",
-   "sandbox_2",
-   "uuid"
+   "sandbox_2"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -10338,8 +10337,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "uuid"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -27459,13 +27457,11 @@
   "uuid": {
    "async": true,
    "identifiers": [
-    "log",
     "import_install",
     "uuid",
     "v4",
     "uuidv4",
-    "v",
-    "console"
+    "v"
    ]
   }
  },
