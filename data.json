@@ -2111,7 +2111,8 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
-   "retry"
+   "retry",
+   "sandbox_2"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3287,7 +3288,8 @@
    "each_range_from_async",
    "each_index_async",
    "ebible_references_parse",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -3653,7 +3655,8 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy"
+   "firebase_deploy",
+   "sandbox_2"
   ],
   "log_keep": [
    "catch_log",
@@ -3773,7 +3776,8 @@
    "list_join_slash_forward",
    "ebible_firebase_upload_path",
    "ebible_references_parse",
-   "ebible_verses_upload_name"
+   "ebible_verses_upload_name",
+   "sandbox_2"
   ],
   "watcher": [
    "watch"
@@ -3997,7 +4001,8 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "sandbox_2"
   ],
   "lj": [
    "watch",
@@ -4095,7 +4100,8 @@
    "command_line_node_g",
    "list_join_space",
    "app_replace_rule_set",
-   "ebible_verse"
+   "ebible_verse",
+   "sandbox_2"
   ],
   "command_line_node_g": [
    "watch",
@@ -5516,7 +5522,8 @@
    "command_line_read",
    "command_line_schtasks",
    "git_push_schedule",
-   "firebase_deploy"
+   "firebase_deploy",
+   "sandbox_2"
   ],
   "encoding": [
    "command_line"
@@ -6498,7 +6505,8 @@
    "ebible_index",
    "ebible_index_flat",
    "app_reply_main",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "split": [
    "functions_combine_name",
@@ -6596,7 +6604,8 @@
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "range_from",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -13346,7 +13355,8 @@
    "app_reply_main",
    "ebible_references_parse",
    "ebible_verse_download",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "sandbox_2"
   ],
   "unzip": [
    "unzip",
@@ -13494,7 +13504,8 @@
    "ebible_chapter_codes",
    "ebible_version_books",
    "ebible_index",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13603,7 +13614,8 @@
    "app_reply_main",
    "ebible_references_parse",
    "ebible_verses_upload_name",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "sandbox_2"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13758,7 +13770,8 @@
    "ebible_index",
    "ebible_index_flat",
    "app_reply_main",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -13875,7 +13888,8 @@
    "ebible_verses_upload",
    "ebible_chapters_each_verses",
    "ebible_index",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "sandbox_2"
   ],
   "ebible_chapter_code_to_book": [
    "ebible_chapter_code_to_book",
@@ -14275,17 +14289,26 @@
    "ebible_verses_upload"
   ],
   "ebible_chapters_each_verses_list": [
-   "ebible_chapters_each_verses"
+   "ebible_chapters_each_verses",
+   "sandbox_2"
   ],
   "ebible_books_to_chapter_codes": [
-   "ebible_chapter_codes"
+   "ebible_chapter_codes",
+   "sandbox_2"
   ],
   "ebible_class_apocrypha": [
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha"
   ],
   "ebible_version_books_testament_apocrypha": [
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "sandbox_2"
+  ],
+  "ebible_chapters_each_verses_check": [
+   "sandbox_2"
+  ],
+  "sandbox_2": [
+   "sandbox_2"
   ]
  },
  "functions": {
@@ -27393,6 +27416,30 @@
     "bible_folder",
     "selector",
     "v"
+   ]
+  },
+  "sandbox_2": {
+   "async": true,
+   "identifiers": [
+    "list_join_space",
+    "log",
+    "list_map_property",
+    "ebible_chapters_each_verses_list",
+    "ebible_books_to_chapter_codes",
+    "ebible_version_books_testament_apocrypha",
+    "ebible_chapters_each_verses_check",
+    "command_line",
+    "sandbox_2",
+    "bible_folder",
+    "stdout",
+    "books",
+    "list",
+    "each_chapter",
+    "chapter_code",
+    "verses",
+    "mapped",
+    "joined",
+    "args"
    ]
   }
  },
