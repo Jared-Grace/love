@@ -2101,7 +2101,8 @@
   "s file,ex",
   "s del,fil",
   "fws file_delete if_exists",
-  "u fe"
+  "u fe",
+  "as write"
  ],
  "marker_current": "1",
  "function_current": "file_delete_if_exists",
