@@ -31,9 +31,11 @@ export async function sandbox_2() {
     };
     let contents = json_to(o);
     await file_write(temp_path, contents);
-    const cwd = "D:\\programs\\WPy64-312100\\python\\";
-    const c = cwd + "python.exe ./py/kokoro.py " + temp_path;
-    let stdout = await command_line_cmd(c, cwd);
+    const c = "python.exe ./py/kokoro.py " + temp_path;
+    let stdout = await command_line_cmd(
+      c,
+      "D:\\programs\\WPy64-312100\\python\\",
+    );
     return stdout;
   }
   await ebible_chapters_each_verses_check(bible_folder);
