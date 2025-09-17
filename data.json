@@ -27518,9 +27518,6 @@
     "mapped",
     "text",
     "lambda",
-    "books",
-    "list",
-    "each_chapter",
     "temp_path",
     "folder",
     "f",
@@ -27529,6 +27526,9 @@
     "contents",
     "v",
     "file_path",
+    "books",
+    "list",
+    "each_chapter",
     "joined"
    ]
   },
