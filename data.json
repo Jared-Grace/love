@@ -3566,8 +3566,7 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha",
-   "sandbox_2"
+   "ebible_version_books_testament_apocrypha"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3685,8 +3684,7 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy",
-   "sandbox_2"
+   "firebase_deploy"
   ],
   "log_keep": [
    "catch_log",
@@ -5560,7 +5558,8 @@
    "command_line_schtasks",
    "git_push_schedule",
    "firebase_deploy",
-   "command_line_generic"
+   "command_line_generic",
+   "sandbox_2"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -10733,7 +10732,8 @@
    "js_dollar",
    "js_calls_to_each",
    "html_parse_descendants_classes",
-   "html_parse_classes_preview"
+   "html_parse_classes_preview",
+   "sandbox_2"
   ],
   "found": [
    "visit_unique_async"
@@ -14397,6 +14397,12 @@
   ],
   "encoding": [
    "command_line_generic"
+  ],
+  "command_line_cmd": [
+   "sandbox_2"
+  ],
+  "cwd": [
+   "sandbox_2"
   ]
  },
  "functions": {
@@ -27509,6 +27515,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "command_line_cmd",
     "marker",
     "folder_user",
     "ebible_verses",
@@ -27522,7 +27529,6 @@
     "ebible_books_to_chapter_codes",
     "ebible_version_books_testament_apocrypha",
     "ebible_chapters_each_verses_check",
-    "command_line",
     "path_join",
     "sandbox_2",
     "bible_folder",
@@ -27538,7 +27544,9 @@
     "o",
     "output_path",
     "contents",
-    "v",
+    "cwd",
+    "c",
+    "stdout",
     "books",
     "list",
     "each_chapter",
