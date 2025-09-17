@@ -14365,9 +14365,6 @@
   ],
   "folder_user": [
    "sandbox_2"
-  ],
-  "engwebu": [
-   "sandbox_2"
   ]
  },
  "functions": {
@@ -27497,6 +27494,7 @@
     "path_join",
     "sandbox_2",
     "bible_folder",
+    "chapter_code",
     "verses",
     "mapped",
     "text",
@@ -27506,13 +27504,11 @@
     "each_chapter",
     "temp_path",
     "folder",
-    "engwebu",
     "o",
     "output_path",
     "contents",
     "v",
     "file_path",
-    "chapter_code",
     "joined"
    ]
   },
