@@ -3043,7 +3043,8 @@
    "firebase_upload_generic",
    "ebible_references_parse",
    "list_map_split_space",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox_2"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3549,7 +3550,8 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "sandbox_2"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14346,9 +14348,6 @@
   ],
   "file_delete_if_exists": [
    "file_delete_if_exists",
-   "sandbox_2"
-  ],
-  "file_path2": [
    "sandbox_2"
   ]
  },
@@ -27479,11 +27478,12 @@
     "u",
     "temp_path",
     "stdout",
-    "file_path",
-    "file_path2",
+    "lambda",
     "books",
     "list",
     "each_chapter",
+    "v",
+    "file_path",
     "chapter_code",
     "verses",
     "mapped",
