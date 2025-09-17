@@ -21,10 +21,6 @@ export async function sandbox_2() {
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
   await file_temp(lambda);
-  await ebible_chapters_each_verses_check(bible_folder);
-  let books = await ebible_version_books_testament_apocrypha(bible_folder);
-  let list = await ebible_books_to_chapter_codes(books, bible_folder);
-  await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
     let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
     let f = folder_user(folder);
@@ -40,6 +36,11 @@ export async function sandbox_2() {
     );
     return v;
   }
+  return;
+  await ebible_chapters_each_verses_check(bible_folder);
+  let books = await ebible_version_books_testament_apocrypha(bible_folder);
+  let list = await ebible_books_to_chapter_codes(books, bible_folder);
+  await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
     let joined = list_join_space(mapped);
