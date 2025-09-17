@@ -1,4 +1,4 @@
-import { object_property_set } from "./object_property_set.mjs";
+import { string_to } from "./string_to.mjs";
 import { range } from "./range.mjs";
 import { list_map } from "./list_map.mjs";
 import { equal } from "./equal.mjs";
@@ -10,7 +10,7 @@ export async function sandbox() {
   }
   let list = range(count);
   function lambda(item) {
-    object_property_set(object, property_name, value);
+    let s = string_to(input);
   }
   let mapped = list_map(list, lambda);
 }
