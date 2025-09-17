@@ -760,7 +760,6 @@
   "s before",
   "s previous",
   "a lg list_get",
-  "u st",
   "fs js_declaration_param_add",
   "mf 1 2 js_declaration_params_get",
   "s js_dollar_g",
@@ -2087,7 +2086,8 @@
   "evu cebulb",
   "evu tglulb",
   "u u",
-  "u e"
+  "u e",
+  "u st"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
