@@ -3027,8 +3027,7 @@
    "firebase_upload_generic",
    "ebible_references_parse",
    "list_map_split_space",
-   "object_merge_generic",
-   "sandbox"
+   "object_merge_generic"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3284,8 +3283,7 @@
    "each_range_from_async",
    "each_index_async",
    "ebible_references_parse",
-   "object_merge_generic",
-   "sandbox"
+   "object_merge_generic"
   ],
   "v": [
    "data_identifiers_file",
@@ -4420,8 +4418,7 @@
    "each_multiple_async",
    "each_index_async",
    "ebible_references_parse",
-   "list_map_split_space",
-   "sandbox"
+   "list_map_split_space"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4937,8 +4934,7 @@
    "string_take",
    "range_from",
    "firebase_storage_download_json",
-   "path_join",
-   "sandbox"
+   "path_join"
   ],
   "a": [
    "string_suffix_without",
@@ -5101,8 +5097,7 @@
    "list_map_prefix_any",
    "range_from",
    "list_map_first",
-   "list_map_split_space",
-   "sandbox"
+   "list_map_split_space"
   ],
   "functions_names": [
    "functions_names",
@@ -5959,8 +5954,7 @@
    "range",
    "each_range_async",
    "app_replace_rule_set",
-   "range_from",
-   "sandbox"
+   "range_from"
   ],
   "each_range": [
    "each_range",
@@ -6008,8 +6002,7 @@
    "js_identifier_replace",
    "js_assign_combine",
    "app_reply_main",
-   "ebible_references_parse",
-   "sandbox"
+   "ebible_references_parse"
   ],
   "left": [
    "equal",
@@ -6028,8 +6021,7 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading",
-   "sandbox"
+   "html_loading"
   ],
   "right": [
    "equal",
@@ -6047,8 +6039,7 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot",
-   "sandbox"
+   "js_code_dot"
   ],
   "eq": [
    "equal",
@@ -6601,8 +6592,7 @@
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "range_from",
-   "ebible_references_parse",
-   "sandbox"
+   "ebible_references_parse"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10280,8 +10270,7 @@
    "list_size_1_assert",
    "marker_first",
    "string_to",
-   "ebible_references_parse",
-   "sandbox"
+   "ebible_references_parse"
   ],
   "skipped": [
    "list_skip",
@@ -21185,18 +21174,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_to",
-    "range",
-    "list_map",
-    "equal",
-    "sandbox",
-    "left",
-    "right",
-    "list",
-    "lambda",
-    "item",
-    "s",
-    "mapped"
+    "sandbox"
    ],
    "async": true
   },
