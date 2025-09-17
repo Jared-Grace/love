@@ -14344,7 +14344,8 @@
    "uuid"
   ],
   "folder": [
-   "firebase_storage_download_path"
+   "firebase_storage_download_path",
+   "sandbox_2"
   ],
   "folder_user_combine": [
    "firebase_storage_download_path"
@@ -14359,6 +14360,9 @@
    "sandbox_2"
   ],
   "output_path": [
+   "sandbox_2"
+  ],
+  "folder_user": [
    "sandbox_2"
   ]
  },
@@ -27473,6 +27477,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "folder_user",
     "ebible_verses",
     "json_to",
     "file_write",
@@ -27490,6 +27495,7 @@
     "verses",
     "mapped",
     "text",
+    "folder",
     "lambda",
     "books",
     "list",
