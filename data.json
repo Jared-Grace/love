@@ -2099,10 +2099,11 @@
   "s fina",
   "s if,exists",
   "s file,ex",
-  "s del,fil"
+  "s del,fil",
+  "fws file_delete if_exists"
  ],
  "marker_current": "1",
- "function_current": "uuid",
+ "function_current": "file_delete_if_exists",
  "terminal": false,
  "identifiers": {
   "log": [
