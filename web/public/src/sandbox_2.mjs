@@ -13,9 +13,9 @@ export async function sandbox_2() {
   const bible_folder = "engwebu";
   let u = await uuid();
   let temp_path = folder_user_combine("temp", u);
+  let result = null;
   try {
-    let stdout = null;
-    stdout = await lambda();
+    result = await lambda();
   } finally {
     await file_delete_if_exists(temp_path);
   }
