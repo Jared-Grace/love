@@ -14383,6 +14383,9 @@
   ],
   "sandbox_3": [
    "sandbox_3"
+  ],
+  "options": [
+   "command_line"
   ]
  },
  "functions": {
@@ -14734,8 +14737,9 @@
     "execAsync",
     "command_line",
     "command",
-    "stdout",
-    "encoding"
+    "options",
+    "encoding",
+    "stdout"
    ],
    "async": true
   },
