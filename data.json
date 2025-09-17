@@ -3027,7 +3027,8 @@
    "firebase_upload_generic",
    "ebible_references_parse",
    "list_map_split_space",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3283,7 +3284,8 @@
    "each_range_from_async",
    "each_index_async",
    "ebible_references_parse",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4418,7 +4420,8 @@
    "each_multiple_async",
    "each_index_async",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5097,7 +5100,8 @@
    "list_map_prefix_any",
    "range_from",
    "list_map_first",
-   "list_map_split_space"
+   "list_map_split_space",
+   "sandbox"
   ],
   "functions_names": [
    "functions_names",
@@ -6595,7 +6599,8 @@
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "range_from",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -21177,10 +21182,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map",
     "equal",
     "sandbox",
     "left",
-    "right"
+    "right",
+    "mapped",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },

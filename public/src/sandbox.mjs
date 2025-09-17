@@ -6,5 +6,6 @@ export async function sandbox() {
   let right = 2;
   if (equal(left, right)) {
   }
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
 }
