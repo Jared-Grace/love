@@ -2104,7 +2104,8 @@
   "fws file_delete if_exists",
   "u fe",
   "as write",
-  "a flw file_write"
+  "a flw file_write",
+  "s ebible,te"
  ],
  "marker_current": "1",
  "function_current": "file_delete_if_exists",
