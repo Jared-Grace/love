@@ -2100,7 +2100,8 @@
   "s if,exists",
   "s file,ex",
   "s del,fil",
-  "fws file_delete if_exists"
+  "fws file_delete if_exists",
+  "u fe"
  ],
  "marker_current": "1",
  "function_current": "file_delete_if_exists",
