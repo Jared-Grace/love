@@ -5537,15 +5537,12 @@
    "clipboard_copy"
   ],
   "exec": [
-   "command_line",
    "command_line_generic"
   ],
   "promisify": [
-   "command_line",
    "command_line_generic"
   ],
   "execAsync": [
-   "command_line",
    "command_line_generic"
   ],
   "command": [
@@ -14746,9 +14743,6 @@
   "command_line": {
    "identifiers": [
     "command_line_generic",
-    "exec",
-    "promisify",
-    "execAsync",
     "command_line",
     "command",
     "extra",
