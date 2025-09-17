@@ -4,6 +4,6 @@ import { promisify } from "util";
 const execAsync = promisify(exec);
 export async function command_line(command) {
   let extra = {};
-  const stdout = await command_line_generic(extra, command);
+  const stdout = await command_line_generic(command, extra);
   return stdout;
 }
