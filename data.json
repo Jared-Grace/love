@@ -14345,6 +14345,9 @@
   ],
   "file_delete_if_exists": [
    "file_delete_if_exists"
+  ],
+  "fe": [
+   "file_delete_if_exists"
   ]
  },
  "functions": {
@@ -27500,6 +27503,7 @@
     "marker",
     "file_delete_if_exists",
     "file_path",
+    "fe",
     "v"
    ]
   }
