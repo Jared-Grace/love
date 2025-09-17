@@ -178,7 +178,8 @@
   "flr": "file_read",
   "lmi": "list_multiple_is",
   "s2": "sandbox_2",
-  "flw": "file_write"
+  "flw": "file_write",
+  "s3": "sandbox_3"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2107,7 +2108,8 @@
   "a flw file_write",
   "s ebible,te",
   "n sandbox_3",
-  "sandbox_3"
+  "sandbox_3",
+  "a s3 sandbox_3"
  ],
  "marker_current": "1",
  "function_current": "sandbox_3",
