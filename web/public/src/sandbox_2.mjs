@@ -1,3 +1,4 @@
+import { uuid } from "./uuid.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -8,6 +9,7 @@ import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses
 import { command_line } from "./command_line.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
+  let v = await uuid();
   let stdout = await command_line(
     "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " + file_path,
   );
