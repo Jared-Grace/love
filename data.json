@@ -13629,7 +13629,8 @@
   ],
   "ebible_verses": [
    "ebible_verses",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13740,8 +13741,7 @@
   ],
   "ebible_chapter_text": [
    "ebible_chapter_text",
-   "ebible_verses",
-   "sandbox_2"
+   "ebible_verses"
   ],
   "html_parse_find_list_href_text": [
    "html_parse_find_list_href_text",
@@ -27474,7 +27474,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
-    "ebible_chapter_text",
+    "ebible_verses",
     "json_to",
     "file_write",
     "file_temp",
