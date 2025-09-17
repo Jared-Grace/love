@@ -4098,8 +4098,7 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse",
-   "sandbox_2"
+   "ebible_references_parse"
   ],
   "separator": [
    "watch",
@@ -27488,21 +27487,20 @@
     "command_line",
     "sandbox_2",
     "bible_folder",
-    "result",
+    "verses",
+    "mapped",
+    "text",
     "lambda",
     "books",
     "list",
     "each_chapter",
     "temp_path",
     "o",
-    "text",
     "output_path",
     "contents",
     "v",
     "file_path",
     "chapter_code",
-    "verses",
-    "mapped",
     "joined"
    ]
   },
