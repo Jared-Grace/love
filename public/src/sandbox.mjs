@@ -8,7 +8,7 @@ export async function sandbox() {
   let right = 2;
   if (equal(left, right)) {
   }
-  let list = range(count);
+  let list = range(5);
   function lambda(item) {
     let s = string_to(item);
     return s;
