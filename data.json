@@ -5254,7 +5254,8 @@
    "folder_read_async",
    "ebible_folder_urdu",
    "emoji_rainbow",
-   "emoji_rock"
+   "emoji_rock",
+   "sandbox_2"
   ],
   "readdirSync": [
    "folder_read"
@@ -5415,7 +5416,8 @@
    "function_transform_marker_specified",
    "firebase_upload_object",
    "app_replace_rule_valid",
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "sandbox_2"
   ],
   "assert_json": [
    "assert_json",
@@ -5964,7 +5966,8 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "sandbox_2"
   ],
   "each_pair": [
    "each_pair",
@@ -27470,6 +27473,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "json_to",
     "file_write",
     "file_temp",
     "list_join_space",
@@ -27490,6 +27494,8 @@
     "o",
     "text",
     "output_path",
+    "v2",
+    "object",
     "contents",
     "v",
     "file_path",
