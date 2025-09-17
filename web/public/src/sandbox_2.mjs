@@ -15,7 +15,7 @@ export async function sandbox_2() {
   let temp_path = folder_user_combine("temp", u);
   let result = null;
   try {
-    result = await lambda();
+    result = await lambda(temp_path);
   } finally {
     await file_delete_if_exists(temp_path);
   }
