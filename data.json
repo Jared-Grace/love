@@ -1993,7 +1993,6 @@
   "s verses",
   "ebible_verses urdgvu JHN07",
   "ebible_verses_upload urdgvu",
-  "s reply",
   "s roc",
   "s ston",
   "s emoji",
@@ -2087,7 +2086,8 @@
   "u e",
   "u st",
   "p",
-  "sb"
+  "sb",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
