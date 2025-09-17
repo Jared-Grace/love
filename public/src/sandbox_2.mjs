@@ -30,7 +30,7 @@ export async function sandbox_2() {
     let f = folder_user(folder);
     let o = {
       text,
-      output_path,
+      output_path: f,
     };
     let contents = json_to(o);
     await file_write(temp_path, contents);
