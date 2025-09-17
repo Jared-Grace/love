@@ -6165,7 +6165,6 @@
    "file_exists"
   ],
   "success": [
-   "file_exists",
    "schtasks_query",
    "throws_not_async",
    "retry"
@@ -6895,7 +6894,8 @@
    "function_exists_inner",
    "object_property_lambda",
    "object_property_lambda_async",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "file_exists"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -15134,7 +15134,7 @@
     "access",
     "promises",
     "constants",
-    "success",
+    "exists",
     "lambda",
     "F_OK"
    ],
