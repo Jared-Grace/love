@@ -9,7 +9,7 @@ import { command_line } from "./command_line.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
   let stdout = await command_line(
-    "D:\\programs\\WPy64-312100\\python>python.exe ",
+    "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " + file_path,
   );
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
