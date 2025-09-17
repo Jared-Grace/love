@@ -2135,7 +2135,8 @@
    "folder_find_starts_with",
    "retry",
    "sandbox_2",
-   "sandbox_3"
+   "sandbox_3",
+   "command_line_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -27593,6 +27594,7 @@
   "command_line_generic": {
    "async": true,
    "identifiers": [
+    "log",
     "object_merge",
     "command_line_generic",
     "command",
