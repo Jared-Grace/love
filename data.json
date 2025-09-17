@@ -1338,7 +1338,6 @@
   "u ope",
   "de object_property_exists_not",
   "s data_tr",
-  "u e",
   "c function_alias_rename function_aliases_restor",
   "c function_alias_rename function_aliases_restore",
   "function_aliases_restore",
@@ -2087,7 +2086,8 @@
   "s command",
   "evu cebulb",
   "evu tglulb",
-  "u u"
+  "u u",
+  "u e"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
