@@ -2420,7 +2420,8 @@
    "each",
    "range",
    "ebible_verses_upload",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "uuid"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14312,6 +14313,9 @@
   ],
   "sandbox_2": [
    "sandbox_2"
+  ],
+  "uuid": [
+   "uuid"
   ]
  },
  "functions": {
@@ -27444,9 +27448,16 @@
     "mapped",
     "joined"
    ]
+  },
+  "uuid": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "uuid"
+   ]
   }
  },
- "git_push_when": "2025-09-17T03:56:28.416Z",
+ "git_push_when": "2025-09-17T18:55:46.900Z",
  "error_attention": null,
  "app_current": "replace"
 }
