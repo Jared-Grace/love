@@ -2506,7 +2506,8 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic"
+   "file_write_generic",
+   "sandbox_2"
   ],
   "ast": [
    "data_identifiers_file",
@@ -14383,6 +14384,9 @@
   ],
   "sandbox_3": [
    "sandbox_3"
+  ],
+  "contents2": [
+   "sandbox_2"
   ]
  },
  "functions": {
@@ -27520,6 +27524,8 @@
     "v2",
     "lambda",
     "temp_path",
+    "f_path",
+    "contents2",
     "folder",
     "f",
     "o",
