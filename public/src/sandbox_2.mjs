@@ -11,6 +11,7 @@ import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.m
 import { ebible_version_books_testament_apocrypha } from "./ebible_version_books_testament_apocrypha.mjs";
 import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses_check.mjs";
 import { command_line } from "./command_line.mjs";
+import { path_join } from "./path_join.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
   let verses = await ebible_verses(bible_folder, "SIR01");
@@ -22,6 +23,7 @@ export async function sandbox_2() {
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
+    let folder = path_join(["folder", engwebu]);
     folder_user(folder);
     let o = {
       text,
