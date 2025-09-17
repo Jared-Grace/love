@@ -4225,7 +4225,8 @@
    "ebible_versions_download",
    "ebible_version_download_path_combine",
    "file_parent_exists_ensure",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox_2"
   ],
   "object_property_get": [
    "chalk_color",
@@ -27432,6 +27433,7 @@
     "sandbox_2",
     "bible_folder",
     "stdout",
+    "file_path",
     "books",
     "list",
     "each_chapter",
