@@ -1,3 +1,4 @@
+import { command_line_cmd } from "./command_line_cmd.mjs";
 import { marker } from "./marker.mjs";
 import { folder_user } from "./folder_user.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
@@ -11,7 +12,6 @@ import { ebible_chapters_each_verses_list } from "./ebible_chapters_each_verses_
 import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.mjs";
 import { ebible_version_books_testament_apocrypha } from "./ebible_version_books_testament_apocrypha.mjs";
 import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses_check.mjs";
-import { command_line } from "./command_line.mjs";
 import { path_join } from "./path_join.mjs";
 export async function sandbox_2() {
   marker("1");
@@ -31,11 +31,12 @@ export async function sandbox_2() {
     };
     let contents = json_to(o);
     await file_write(temp_path, contents);
-    let v = await command_line(
-      "D:\\programs\\WPy64-312100\\python\\python.exe ./py/kokoro.py " +
-        temp_path,
+    const c = "python.exe ./py/kokoro.py " + temp_path;
+    let stdout = await command_line_cmd(
+      c,
+      "D:\\programs\\WPy64-312100\\python\\",
     );
-    return v;
+    return stdout;
   }
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);

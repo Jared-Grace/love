@@ -1586,7 +1586,6 @@
   "n list_concat_multiple",
   "s fire",
   "n firebase_deploy",
-  "u cl",
   "a f firebase_deploy",
   "a fd firebase_deploy",
   "a fb firebase_deploy",
@@ -2112,7 +2111,9 @@
   "u l",
   "o s2",
   "p",
-  "s2"
+  "s2",
+  "u cl",
+  "o command_line"
  ],
  "marker_current": "1",
  "function_current": "sandbox_2",
@@ -5558,9 +5559,6 @@
    "git_push_schedule",
    "firebase_deploy"
   ],
-  "encoding": [
-   "command_line"
-  ],
   "command_line_git_prefix": [
    "command_line_git",
    "command_line_git_prefix",
@@ -7259,8 +7257,7 @@
    "app_replace_rule_set",
    "ebible_version_books_testament",
    "ebible_verses_upload",
-   "firebase_upload_generic",
-   "command_line"
+   "firebase_upload_generic"
   ],
   "u": [
    "function_exists",
@@ -14386,7 +14383,7 @@
   "sandbox_3": [
    "sandbox_3"
   ],
-  "options": [
+  "command_line_generic": [
    "command_line"
   ]
  },
@@ -14734,15 +14731,13 @@
   },
   "command_line": {
    "identifiers": [
-    "object_merge",
+    "command_line_generic",
     "exec",
     "promisify",
     "execAsync",
     "command_line",
     "command",
     "extra",
-    "options",
-    "encoding",
     "stdout"
    ],
    "async": true

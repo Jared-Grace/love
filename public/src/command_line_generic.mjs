@@ -1,5 +1,8 @@
 import { object_merge } from "./object_merge.mjs";
-export async function command_line_generic(extra, command) {
+export async function command_line_generic(command, extra) {
+  const { exec } = await import("child_process");
+  const { promisify } = await import("util");
+  const execAsync = promisify(exec);
   const options = {
     encoding: "utf8",
   };
