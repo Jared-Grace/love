@@ -1562,7 +1562,6 @@
   "s rule_set",
   "unlias s",
   "u s",
-  "u u",
   "function_name_unalias s",
   "u ss",
   "fw list_slice list_take",
@@ -2087,7 +2086,8 @@
   "sb",
   "s command",
   "evu cebulb",
-  "evu tglulb"
+  "evu tglulb",
+  "u u"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
