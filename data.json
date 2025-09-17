@@ -176,7 +176,8 @@
   "lun": "list_unique",
   "fdr": "folder_read",
   "flr": "file_read",
-  "lmi": "list_multiple_is"
+  "lmi": "list_multiple_is",
+  "s2": "sandbox_2"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2089,7 +2090,8 @@
   "s ebible",
   "is ebible_chapters_each_verses_list",
   "is ebible_version_books_testament_apocrypha",
-  "s sand"
+  "s sand",
+  "a s2 sandbox_2"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
