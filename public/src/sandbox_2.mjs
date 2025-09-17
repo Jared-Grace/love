@@ -23,7 +23,7 @@ export async function sandbox_2() {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
-  async function lambda() {
+  async function lambda(temp_path) {
     let v = await command_line(
       "D:\\programs\\WPy64-312100\\python>python.exe ./py/kokoro.py " +
         file_path,
