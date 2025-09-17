@@ -10,7 +10,8 @@ export async function sandbox() {
   }
   let list = range(count);
   function lambda(item) {
-    let s = string_to(input);
+    let s = string_to(item);
+    return s;
   }
   let mapped = list_map(list, lambda);
 }
