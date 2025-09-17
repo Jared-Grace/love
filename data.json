@@ -9623,7 +9623,8 @@
    "function_aliases_restore",
    "marker_param_add",
    "js_stack_last_function",
-   "folder_user"
+   "folder_user",
+   "sandbox_2"
   ],
   "async": [
    "js_function_last_asyncify"
@@ -27522,6 +27523,7 @@
     "each_chapter",
     "temp_path",
     "folder",
+    "f",
     "o",
     "output_path",
     "contents",
