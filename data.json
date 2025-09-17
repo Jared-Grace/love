@@ -14345,7 +14345,11 @@
    "sandbox_2"
   ],
   "file_delete_if_exists": [
-   "file_delete_if_exists"
+   "file_delete_if_exists",
+   "sandbox_2"
+  ],
+  "file_path2": [
+   "sandbox_2"
   ]
  },
  "functions": {
@@ -27459,6 +27463,7 @@
   "sandbox_2": {
    "async": true,
    "identifiers": [
+    "file_delete_if_exists",
     "folder_user_combine",
     "uuid",
     "list_join_space",
@@ -27475,6 +27480,7 @@
     "temp_path",
     "stdout",
     "file_path",
+    "file_path2",
     "books",
     "list",
     "each_chapter",
