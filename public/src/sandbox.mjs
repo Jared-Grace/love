@@ -1,4 +1,5 @@
+import { equal } from "./equal.mjs";
 export async function sandbox() {
-  if (false) {
+  if (equal(left, right)) {
   }
 }
