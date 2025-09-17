@@ -2110,13 +2110,13 @@
   "s3",
   "u l",
   "o s2",
-  "p",
   "s2",
   "u cl",
+  "p",
   "o command_line"
  ],
  "marker_current": "1",
- "function_current": "sandbox_2",
+ "function_current": "command_line",
  "terminal": false,
  "identifiers": {
   "log": [
