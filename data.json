@@ -5958,7 +5958,8 @@
    "range",
    "each_range_async",
    "app_replace_rule_set",
-   "range_from"
+   "range_from",
+   "sandbox"
   ],
   "each_range": [
    "each_range",
@@ -5980,7 +5981,8 @@
    "ebible_index",
    "range_from",
    "number_pad",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -7264,7 +7266,8 @@
    "list_random_item",
    "integer_random",
    "js_statement_return_empty_add",
-   "range_from"
+   "range_from",
+   "sandbox"
   ],
   "formatted": [
    "function_format",
@@ -21182,11 +21185,14 @@
   },
   "sandbox": {
    "identifiers": [
+    "range",
     "list_map",
     "equal",
     "sandbox",
     "left",
     "right",
+    "r",
+    "count",
     "lambda",
     "item",
     "mapped",
