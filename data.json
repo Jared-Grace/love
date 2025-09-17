@@ -2111,10 +2111,11 @@
   "sandbox_3",
   "a s3 sandbox_3",
   "s3",
-  "u l"
+  "u l",
+  "o s2"
  ],
  "marker_current": "1",
- "function_current": "sandbox_3",
+ "function_current": "sandbox_2",
  "terminal": false,
  "identifiers": {
   "log": [
