@@ -2087,7 +2087,8 @@
   "p",
   "sb",
   "s reply",
-  "s ebible"
+  "s ebible",
+  "is ebible_chapters_each_verses_list"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
