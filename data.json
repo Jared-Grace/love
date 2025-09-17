@@ -2070,7 +2070,6 @@
   "is ebible_chapter_text",
   "s chapter",
   "ebible_chapters_each_verses_check engwebu",
-  "s ebible",
   "ect engwebu SIR01",
   "o sb",
   "u evu",
@@ -2087,7 +2086,8 @@
   "u st",
   "p",
   "sb",
-  "s reply"
+  "s reply",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books_testament_apocrypha",
