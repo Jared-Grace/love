@@ -12200,8 +12200,7 @@
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
    "app_reply_main",
-   "firebase_storage_download_json",
-   "sandbox_2"
+   "firebase_storage_download_json"
   ],
   "date_now_file": [
    "date_now_file",
@@ -14327,8 +14326,7 @@
    "uuid"
   ],
   "folder": [
-   "firebase_storage_download_path",
-   "sandbox_2"
+   "firebase_storage_download_path"
   ],
   "folder_user_combine": [
    "firebase_storage_download_path",
@@ -27460,8 +27458,6 @@
     "bible_folder",
     "u",
     "joined2",
-    "folder",
-    "destination",
     "stdout",
     "file_path",
     "books",
