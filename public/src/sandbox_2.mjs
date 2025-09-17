@@ -1,6 +1,4 @@
-import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
-import { folder_user_combine } from "./folder_user_combine.mjs";
-import { uuid } from "./uuid.mjs";
+import { file_temp } from "./file_temp.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -11,14 +9,7 @@ import { ebible_chapters_each_verses_check } from "./ebible_chapters_each_verses
 import { command_line } from "./command_line.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
-  let u = await uuid();
-  let temp_path = folder_user_combine("temp", u);
-  let result = null;
-  try {
-    result = await lambda(temp_path);
-  } finally {
-    await file_delete_if_exists(temp_path);
-  }
+  await file_temp(lambda);
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
