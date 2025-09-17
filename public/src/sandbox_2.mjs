@@ -14,7 +14,8 @@ import { command_line } from "./command_line.mjs";
 import { path_join } from "./path_join.mjs";
 export async function sandbox_2() {
   const bible_folder = "engwebu";
-  let verses = await ebible_verses(bible_folder, "SIR01");
+  const chapter_code = "SIR01";
+  let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
   await file_temp(lambda);
@@ -23,7 +24,7 @@ export async function sandbox_2() {
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
-    let folder = path_join(["folder", engwebu]);
+    let folder = path_join(["audio", "bible", bible_folder]);
     folder_user(folder);
     let o = {
       text,
