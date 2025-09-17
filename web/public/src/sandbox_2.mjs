@@ -37,7 +37,6 @@ export async function sandbox_2() {
     );
     return v;
   }
-  return;
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);

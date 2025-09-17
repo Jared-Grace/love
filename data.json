@@ -5266,7 +5266,8 @@
    "folder_read_async",
    "ebible_folder_urdu",
    "emoji_rainbow",
-   "emoji_rock"
+   "emoji_rock",
+   "sandbox_2"
   ],
   "readdirSync": [
    "folder_read"
@@ -27516,6 +27517,7 @@
     "verses",
     "mapped",
     "text",
+    "v2",
     "lambda",
     "temp_path",
     "folder",
