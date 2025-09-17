@@ -27,7 +27,7 @@ export async function sandbox_2() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function lambda(temp_path) {
     let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
-    folder_user(folder);
+    let f = folder_user(folder);
     let o = {
       text,
       output_path,
