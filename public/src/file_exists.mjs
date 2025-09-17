@@ -8,9 +8,9 @@ export async function file_exists(file_path) {
   let fs = await import("fs");
   let { access } = fs.promises;
   let { constants } = fs;
-  let success = await throws_not_async(lambda);
-  return success;
+  let exists = await throws_not_async(lambda);
   async function lambda() {
     await access(file_path, constants.F_OK);
   }
+  return exists;
 }
