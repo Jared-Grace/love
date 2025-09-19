@@ -2145,7 +2145,8 @@
   "o ev",
   "s second",
   "p",
-  "ev tel,en EZK18:31"
+  "ev tel,en EZK18:31",
+  "s temp"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
