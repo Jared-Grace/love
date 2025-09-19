@@ -975,7 +975,6 @@
   "n data_property_new",
   "o n",
   "fr o",
-  "u fo",
   "fs file_open",
   "fr file_open",
   "js_parse 1",
@@ -2146,7 +2145,8 @@
   "p",
   "ev tel,en EZK18:31",
   "s temp",
-  "s open"
+  "s open",
+  "u fo"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
