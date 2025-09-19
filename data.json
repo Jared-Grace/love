@@ -3644,8 +3644,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "ebible_verses"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25574,7 +25573,6 @@
     "text",
     "split",
     "filtered",
-    "message",
     "lambda",
     "la",
     "lambda2",
