@@ -1990,7 +1990,6 @@
   "s inter",
   "ebible_verses_upload swhonen",
   "n urdu_allah_to_god",
-  "s verses",
   "ebible_verses urdgvu JHN07",
   "ebible_verses_upload urdgvu",
   "s roc",
@@ -2114,7 +2113,9 @@
   "p",
   "s2",
   "s text",
-  "ebible_chapter_text engbsb EZR08"
+  "ebible_chapter_text engbsb EZR08",
+  "o verses",
+  "s verses"
  ],
  "marker_current": "1",
  "function_current": "command_line",
