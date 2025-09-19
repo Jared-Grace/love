@@ -20,7 +20,7 @@ export function ebible_languages() {
     {
       name: "Luganda",
       bible_folder: "lug",
-      language_code: "TODO",
+      language_code: "lug",
     },
     {
       name: "Bengali",
