@@ -2066,7 +2066,6 @@
   "is ebible_class_old",
   "ebible_version_books_testament engwebu aa",
   "ebible_version_books_testament engwebu .aa",
-  "s text",
   "is ebible_chapter_text",
   "s chapter",
   "ebible_chapters_each_verses_check engwebu",
@@ -2113,7 +2112,8 @@
   "u cl",
   "o command_line",
   "p",
-  "s2"
+  "s2",
+  "s text"
  ],
  "marker_current": "1",
  "function_current": "command_line",
