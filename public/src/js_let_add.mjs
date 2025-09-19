@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -25,7 +24,6 @@ export function js_let_add(ast) {
     }
     let name = object_property_get(left, "name");
     let defineds = js_identifier_defineds(v);
-    log(defineds);
     let includes = list_includes(defineds, name);
     if (includes) {
       return;
