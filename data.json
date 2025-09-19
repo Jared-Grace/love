@@ -2137,7 +2137,6 @@
    "search_generic",
    "js_log_remove",
    "marker_rename",
-   "js_calls_to_each",
    "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
@@ -12825,9 +12824,6 @@
    "js_code_brackets_empty",
    "js_calls_to_each"
   ],
-  "expression4": [
-   "js_calls_to_each"
-  ],
   "js_dollar_l": [
    "js_dollar_l",
    "js_dollar_choices"
@@ -17134,7 +17130,6 @@
     "list_get_end_1",
     "object_property_get",
     "js_node_type_is_if",
-    "log",
     "js_visit_type",
     "each_async",
     "js_unparse",
@@ -17168,7 +17163,6 @@
     "code2",
     "array_expression",
     "elements",
-    "expression4",
     "d",
     "a",
     "b"
