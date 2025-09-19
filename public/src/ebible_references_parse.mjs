@@ -50,8 +50,10 @@ export async function ebible_references_parse(bible_folders, file_path) {
   let chapter_verses_list = list_map_first(mapped4);
   async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
-      let book = list_find_property(books, "text", book_name);
-      let book_code = object_property_get(book, "book_code");
+      const name_first = "text";
+      const name_second = "book_code";
+      let book = list_find_property(books, name_first, book_name);
+      let book_code = object_property_get(book, name_second);
       let split2 = string_split_colon(chapter_verses);
       let { first, second } = list_first_second(split2);
       let pad_count = 2;
