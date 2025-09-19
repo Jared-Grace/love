@@ -2150,7 +2150,8 @@
   "ebible_version_books_upload engbsb",
   "s reply",
   "u lt",
-  "s is list_take"
+  "s is list_take",
+  "is string_take"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
