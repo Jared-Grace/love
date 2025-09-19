@@ -2128,7 +2128,6 @@
   "rs ebible_verse new",
   "ps",
   "fw ev ebible_verse",
-  "s reply",
   "s upper",
   "s case",
   "n string_upper_to",
@@ -2137,7 +2136,8 @@
   "a ev ebible_verse",
   "ev ur MAT01 1",
   "u lma",
-  "s list_map"
+  "s list_map",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
