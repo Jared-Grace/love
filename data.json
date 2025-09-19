@@ -13568,8 +13568,7 @@
   "href": [
    "ebible_version_books_testament",
    "html_parse_href",
-   "html_parse_href_text",
-   "app_reply_main"
+   "html_parse_href_text"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -14529,9 +14528,6 @@
    "app_reply_main"
   ],
   "file_name2": [
-   "app_reply_main"
-  ],
-  "book_code2": [
    "app_reply_main"
   ]
  },
@@ -24904,10 +24900,8 @@
     "text",
     "component",
     "lambda3",
-    "book_code2",
-    "href",
-    "book",
     "book_code",
+    "book",
     "book_name",
     "verse_texts",
     "reference",
