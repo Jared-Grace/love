@@ -14521,6 +14521,12 @@
   ],
   "file_name2": [
    "app_reply_main"
+  ],
+  "name_first": [
+   "ebible_references_parse"
+  ],
+  "name_second": [
+   "ebible_references_parse"
   ]
  },
  "functions": {
@@ -27458,6 +27464,8 @@
     "lambda",
     "book_name",
     "chapter_verses",
+    "name_first",
+    "name_second",
     "book",
     "book_code",
     "split2",
