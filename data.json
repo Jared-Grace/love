@@ -24878,7 +24878,6 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
-    "newline",
     "emoji_rock",
     "emoji_rainbow",
     "string_the_servant_of_god",
@@ -24917,7 +24916,8 @@
     "with2",
     "v",
     "text",
-    "response"
+    "response",
+    "newline"
    ]
   },
   "string_lord_bless_your": {
