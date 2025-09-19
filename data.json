@@ -4521,8 +4521,7 @@
    "js_dollar_x",
    "list_remove_if_exists",
    "list_remove_multiple",
-   "js_assign_combine",
-   "app_reply_main"
+   "js_assign_combine"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -9301,8 +9300,7 @@
    "js_declaration_param_named",
    "list_find_property",
    "ebible_references_parse",
-   "ebible_verse",
-   "app_reply_main"
+   "ebible_verse"
   ],
   "nameds": [
    "js_declaration_single"
@@ -10772,8 +10770,7 @@
    "sandbox_2"
   ],
   "found": [
-   "visit_unique_async",
-   "app_reply_main"
+   "visit_unique_async"
   ],
   "functions_paths": [
    "data_files_update",
@@ -24757,8 +24754,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
-    "list_remove",
-    "list_find_property",
+    "list_remove_property",
     "ebible_languages",
     "string_take_less_1",
     "equal",
@@ -24800,7 +24796,6 @@
     "en",
     "property_name",
     "languages",
-    "list_remove_property",
     "file_name",
     "destination",
     "index",
@@ -24851,8 +24846,7 @@
     "reference",
     "verse_text",
     "concated",
-    "joined",
-    "found"
+    "joined"
    ]
   },
   "browser_is": {
