@@ -97,7 +97,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Give",
       response:
         emoji_pray() +
-        " Sorry, I have nothing to give you at this time. May the LORD provide. May the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask.",
+        " Sorry, I have nothing to give you at this time. According to the desire of the LORD: May the LORD provide and may the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask.",
     },
     {
       text: emoji_wave() + " Greetings",
