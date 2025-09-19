@@ -2124,7 +2124,8 @@
   "o sb",
   "sb",
   "s reply",
-  "s new"
+  "s new",
+  "fw ebv ebible_verse"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
