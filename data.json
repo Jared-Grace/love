@@ -2456,8 +2456,7 @@
    "command_line",
    "sandbox",
    "ebible_verse",
-   "ebible_verse_new",
-   "string_upper_to"
+   "ebible_verse_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3580,7 +3579,8 @@
    "ebible_index_upload_name",
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "string_upper_to"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4987,7 +4987,8 @@
    "string_take",
    "range_from",
    "firebase_storage_download_json",
-   "path_join"
+   "path_join",
+   "string_upper_to"
   ],
   "a": [
    "string_suffix_without",
@@ -14438,6 +14439,9 @@
    "ebible_verse"
   ],
   "string_upper_to": [
+   "string_upper_to"
+  ],
+  "toUpperCase": [
    "string_upper_to"
   ]
  },
@@ -27666,8 +27670,10 @@
   "string_upper_to": {
    "async": false,
    "identifiers": [
-    "marker",
-    "string_upper_to"
+    "string_upper_to",
+    "s",
+    "v",
+    "toUpperCase"
    ]
   }
  },
