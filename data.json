@@ -3063,7 +3063,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3320,7 +3321,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4461,7 +4463,8 @@
    "each_multiple_async",
    "each_index_async",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5329,7 +5332,8 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "each_range_from_async",
-   "each_index_async"
+   "each_index_async",
+   "sandbox"
   ],
   "f_paths": [
    "data_files_update",
@@ -14405,6 +14409,9 @@
   ],
   "newLocal": [
    "sandbox_2"
+  ],
+  "versions": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21293,8 +21300,13 @@
   },
   "sandbox": {
    "identifiers": [
+    "each_async",
     "marker",
-    "sandbox"
+    "sandbox",
+    "versions",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
