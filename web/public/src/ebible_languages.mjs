@@ -4,7 +4,7 @@ export function ebible_languages() {
     {
       name: "English",
       bible_folder: ebible_folder_engbsb(),
-      language_code: "ur",
+      language_code: "en",
     },
     {
       name: "Urdu",
