@@ -14456,6 +14456,12 @@
   "ebible_chapter_code_normalize": [
    "ebible_verse",
    "ebible_chapter_code_normalize"
+  ],
+  "language_codes": [
+   "ebible_verse"
+  ],
+  "lma": [
+   "ebible_verse"
   ]
  },
  "functions": {
@@ -25962,11 +25968,13 @@
     "ebible_verses",
     "marker",
     "ebible_verse",
-    "language_code",
+    "language_codes",
     "chapter_code",
     "verse_number",
+    "lma",
     "languages",
     "l",
+    "language_code",
     "bible_folder",
     "vs",
     "v"
