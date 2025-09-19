@@ -1,4 +1,3 @@
-import { function_wrap } from "./function_wrap.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { list_first_second } from "./list_first_second.mjs";
 import { string_split_colon } from "./string_split_colon.mjs";
@@ -27,7 +26,7 @@ export async function ebible_verse(language_codes, chapter_verse) {
   }
   let verse_texts = await list_map_unordered_async(split, lambda);
   async function lambda2(temp_path) {
-    await function_wrap(f_name, f_name_wrapped);
+    fiw;
   }
   await file_temp(lambda2);
   return verse_texts;
