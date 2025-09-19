@@ -14428,7 +14428,8 @@
    "ebible_verse"
   ],
   "language_code": [
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_verse"
   ]
  },
  "functions": {
@@ -25932,11 +25933,12 @@
     "ebible_verses",
     "marker",
     "ebible_verse",
-    "bible_folder",
+    "language_code",
     "chapter_code",
     "verse_number",
     "languages",
-    "v"
+    "v",
+    "bible_folder"
    ]
   },
   "ebible_versions": {
