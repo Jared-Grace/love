@@ -14015,7 +14015,8 @@
   "ebible_folder_english": [
    "app_reply_main",
    "ebible_folder_english",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_languages"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -14471,9 +14472,6 @@
   ],
   "list_remove_property": [
    "app_reply_main"
-  ],
-  "ebible_folder_eng": [
-   "ebible_languages"
   ]
  },
  "functions": {
@@ -27700,12 +27698,12 @@
   "ebible_languages": {
    "async": false,
    "identifiers": [
+    "ebible_folder_english",
     "ebible_folder_urdu",
     "ebible_languages",
     "languages",
     "name",
     "bible_folder",
-    "ebible_folder_eng",
     "language_code"
    ]
   },
