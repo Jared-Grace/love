@@ -2113,7 +2113,8 @@
   "o command_line",
   "p",
   "s2",
-  "s text"
+  "s text",
+  "ebible_chapter_text engbsb EZR08"
  ],
  "marker_current": "1",
  "function_current": "command_line",
@@ -27604,7 +27605,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-17T20:09:42.671Z",
+ "git_push_when": "2025-09-19T09:44:45.010Z",
  "error_attention": null,
  "app_current": "replace"
 }
