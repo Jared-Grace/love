@@ -2144,7 +2144,8 @@
   "fws ebible_version_books upload",
   "ev en,lug EZK16:36",
   "o ev",
-  "s second"
+  "s second",
+  "ev tel,en EZK18:31"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
