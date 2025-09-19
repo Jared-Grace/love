@@ -14426,6 +14426,9 @@
    "app_reply_main",
    "ebible_languages",
    "ebible_verse"
+  ],
+  "language_code": [
+   "ebible_languages"
   ]
  },
  "functions": {
@@ -27643,7 +27646,8 @@
     "ebible_languages",
     "languages",
     "name",
-    "bible_folder"
+    "bible_folder",
+    "language_code"
    ]
   }
  },
