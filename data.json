@@ -10644,8 +10644,7 @@
   ],
   "string_pad": [
    "string_pad",
-   "tasks_run",
-   "ebible_verses"
+   "tasks_run"
   ],
   "padding": [
    "string_pad"
@@ -14404,6 +14403,9 @@
   ],
   "command_line_cmd": [
    "sandbox_2"
+  ],
+  "string_pad_space": [
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -25546,7 +25548,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "string_pad",
+    "string_pad_space",
     "urdu_allah_to_god",
     "list_add",
     "list_index_of_last",
