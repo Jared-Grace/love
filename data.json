@@ -3078,7 +3078,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3335,7 +3336,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "v": [
    "data_identifiers_file",
@@ -4477,7 +4479,8 @@
    "each_multiple_async",
    "each_index_async",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "ebible_verse"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6395,7 +6398,8 @@
    "list_map_unordered_async",
    "marker_down_choices",
    "data_files_update",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_verse"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -7249,7 +7253,8 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async"
+   "list_map_unordered_async",
+   "ebible_verse"
   ],
   "mapped2": [
    "function_dependencies_code",
@@ -14460,9 +14465,6 @@
    "ebible_chapter_code_normalize"
   ],
   "language_codes": [
-   "ebible_verse"
-  ],
-  "lma": [
    "ebible_verse"
   ]
  },
@@ -25963,6 +25965,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "list_map_unordered_async",
     "object_property_get",
     "ebible_chapter_code_normalize",
     "list_find_property",
@@ -25973,7 +25976,10 @@
     "language_codes",
     "chapter_code",
     "verse_number",
-    "lma",
+    "waited",
+    "list",
+    "lambda",
+    "item",
     "languages",
     "l",
     "language_code",
