@@ -4099,7 +4099,6 @@
    "js_code_parenthesis_open_close",
    "js_declaration_param_named",
    "js_node_types",
-   "list_filter_property",
    "list_range",
    "list_slice_end",
    "ternary",
@@ -9858,7 +9857,8 @@
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "list_filter_property"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -19541,7 +19541,7 @@
     "property_name",
     "property_value",
     "filter",
-    "result"
+    "filtered"
    ],
    "async": false
   },
