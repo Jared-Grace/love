@@ -3356,8 +3356,7 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2",
-   "app_reply_main"
+   "sandbox_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -24936,7 +24935,6 @@
     "reference",
     "verse_text",
     "other",
-    "list",
     "item3",
     "concated",
     "joined"
