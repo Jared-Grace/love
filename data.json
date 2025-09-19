@@ -12875,7 +12875,8 @@
    "list_join_newline_2",
    "list_join_newline",
    "newline",
-   "string_split_newline"
+   "string_split_newline",
+   "app_reply_choices"
   ],
   "list_join_newline_2": [
    "list_join_newline_2",
@@ -24877,6 +24878,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "newline",
     "emoji_rock",
     "emoji_rainbow",
     "string_the_servant_of_god",
