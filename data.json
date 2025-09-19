@@ -5209,8 +5209,7 @@
    "string_split_comma",
    "functions_paths",
    "function_rename_identifiers",
-   "js_expand_generic",
-   "ebible_verse"
+   "js_expand_generic"
   ],
   "path_join": [
    "folder_read",
@@ -25979,7 +25978,6 @@
     "chapter_code",
     "verse_number",
     "split",
-    "f_names",
     "lambda",
     "language_code",
     "languages",
