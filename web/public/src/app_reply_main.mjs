@@ -41,8 +41,7 @@ export async function app_reply_main() {
   let en = ebible_folder_english();
   let property_name = "language_code";
   let languages = ebible_languages();
-  let found = list_find_property(languages, property_name, en);
-  list_remove(languages, found);
+  list_remove_property(languages, property_name, en);
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
@@ -148,3 +147,8 @@ export async function app_reply_main() {
     await clipboard_copy(joined);
   }
 }
+function list_remove_property(languages, property_name, en) {
+  let found = list_find_property(languages, property_name, en);
+  list_remove(languages, found);
+}
+
