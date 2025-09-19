@@ -3349,7 +3349,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "v": [
    "data_identifiers_file",
@@ -3840,7 +3841,8 @@
    "ebible_references_parse",
    "ebible_verses_upload_name",
    "sandbox_2",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_verse"
   ],
   "watcher": [
    "watch"
@@ -12932,7 +12934,8 @@
   ],
   "list_join_newline_2": [
    "list_join_newline_2",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verse"
   ],
   "html_remove": [
    "html_remove",
@@ -26031,6 +26034,7 @@
     "ebible_languages",
     "ebible_verses",
     "marker",
+    "list_join_newline_2",
     "ebible_verse",
     "language_codes",
     "chapter_verse",
@@ -26048,6 +26052,8 @@
     "v",
     "text",
     "verse_texts",
+    "joined",
+    "list",
     "lambda2",
     "temp_path",
     "f_path",
