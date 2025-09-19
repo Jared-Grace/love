@@ -14545,6 +14545,9 @@
    "ebible_index",
    "app_reply_main",
    "ebible_chapter_code_to_name"
+  ],
+  "language": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24886,6 +24889,7 @@
     "verse_number",
     "verse",
     "v",
+    "language",
     "lambda6",
     "event",
     "key",
