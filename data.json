@@ -13843,7 +13843,6 @@
    "ebible_verses_upload_name",
    "ebible_verse_download",
    "ebible_verse_new",
-   "ebible_verse",
    "ebible_version_books_upload"
   ],
   "ebible_verse": [
@@ -26026,7 +26025,6 @@
     "bible_folder",
     "vs",
     "v",
-    "verse_number",
     "text",
     "verse_texts"
    ]
@@ -27780,7 +27778,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-19T14:16:38.837Z",
+ "git_push_when": "2025-09-19T15:30:28.703Z",
  "error_attention": null,
  "app_current": "replace"
 }
