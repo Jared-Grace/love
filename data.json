@@ -2139,7 +2139,8 @@
   "p",
   "ev ur,en MAT01 1",
   "s ebible",
-  "s books"
+  "s books",
+  "is ebible_version_books"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
