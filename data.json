@@ -2137,7 +2137,6 @@
    "search_generic",
    "js_log_remove",
    "marker_rename",
-   "js_let_add",
    "ebible_versions_download",
    "firebase_upload_generic",
    "folder_find_starts_with",
@@ -18387,7 +18386,6 @@
   },
   "js_let_add": {
    "identifiers": [
-    "log",
     "js_identifier_is",
     "not",
     "list_includes",
