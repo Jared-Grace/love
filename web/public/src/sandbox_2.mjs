@@ -6,7 +6,6 @@ import { json_to } from "./json_to.mjs";
 import { file_write } from "./file_write.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_chapters_each_verses_list } from "./ebible_chapters_each_verses_list.mjs";
 import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.mjs";
@@ -33,10 +32,7 @@ export async function sandbox_2() {
     await file_write(temp_path, contents);
     const c = "python.exe ./py/kokoro.py " + temp_path;
     const newLocal = "D:\\programs\\WPy64-312100\\python\\";
-    let stdout = await command_line_cmd(
-      c,
-      newLocal,
-    );
+    let stdout = await command_line_cmd(c, newLocal);
     return stdout;
   }
   await ebible_chapters_each_verses_check(bible_folder);
@@ -46,6 +42,5 @@ export async function sandbox_2() {
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
     let joined = list_join_space(mapped);
-    log(joined);
   }
 }
