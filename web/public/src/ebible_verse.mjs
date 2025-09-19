@@ -1,3 +1,4 @@
+import { list_first_second } from "./list_first_second.mjs";
 import { string_split_colon } from "./string_split_colon.mjs";
 import { string_split_comma } from "./string_split_comma.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -9,7 +10,8 @@ import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_verse(language_codes, chapter_verse) {
   marker("1");
-  let split2 = string_split_colon(f_names);
+  let split2 = string_split_colon(chapter_verse);
+  let result = list_first_second(list);
   let split = string_split_comma(language_codes);
   async function lambda(language_code) {
     let chapter_code = ebible_chapter_code_normalize(chapter_code);
