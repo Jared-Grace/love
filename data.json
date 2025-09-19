@@ -5553,7 +5553,8 @@
    "urdu_allah_to_god",
    "ebible_references_parse",
    "sandbox_2",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_verse"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -25992,6 +25993,7 @@
     "bible_folder",
     "vs",
     "v",
+    "text",
     "verse_texts"
    ]
   },
