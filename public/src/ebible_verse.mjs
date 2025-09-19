@@ -31,7 +31,7 @@ export async function ebible_verse(language_codes, chapter_verse) {
   let joined = list_join_newline_2(verse_texts);
   async function lambda2(temp_path) {
     await file_write(temp_path, joined);
-    await file_open(f_path);
+    await file_open(temp_path);
   }
   await file_temp(lambda2);
   return verse_texts;
