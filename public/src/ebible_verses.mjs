@@ -1,3 +1,4 @@
+import { string_pad } from "./string_pad.mjs";
 import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
@@ -26,6 +27,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
     function lambda2(verse_number) {
+      verse_number = string_pad();
       let index = list_index_of_last(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse(skipped, verse_number);
