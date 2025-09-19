@@ -3809,7 +3809,6 @@
    "ebible_chapter_classes",
    "list_join_space",
    "ebible_chapter_text",
-   "ebible_verse",
    "ebible_version_download_path_combine",
    "firebase_storage_download_path",
    "firebase_storage_function_run",
@@ -4140,7 +4139,6 @@
    "command_line_node_g",
    "list_join_space",
    "app_replace_rule_set",
-   "ebible_verse",
    "sandbox_2",
    "ebible_verse_new"
   ],
@@ -5536,7 +5534,6 @@
    "ebible_chapter_text",
    "ebible_verses",
    "app_reply_pray",
-   "ebible_verse",
    "ebible_versions",
    "html_parse_classes_preview",
    "html_parse_href_text",
@@ -13412,7 +13409,8 @@
    "ebible_references_parse",
    "ebible_verse_download",
    "ebible_version_books_testament_apocrypha",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "unzip": [
    "unzip",
@@ -13659,7 +13657,8 @@
   "ebible_verses": [
    "ebible_verses",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13672,7 +13671,8 @@
    "ebible_references_parse",
    "ebible_verses_upload_name",
    "ebible_verse_download",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13795,7 +13795,6 @@
   "verse_number": [
    "ebible_verses",
    "ebible_verses_upload",
-   "ebible_verse",
    "ebible_index_flat",
    "app_reply_main",
    "ebible_references_parse",
@@ -13855,7 +13854,6 @@
    "app_reply_pray"
   ],
   "tokens": [
-   "ebible_verse",
    "ebible_verse_new"
   ],
   "list_map_prefix_without": [
@@ -25927,16 +25925,14 @@
    ]
   },
   "ebible_verse": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "ebible_verses",
     "marker",
-    "list_join_space",
     "ebible_verse",
-    "tokens",
-    "verse_number",
-    "joined",
-    "v",
-    "text"
+    "bible_folder",
+    "chapter_code",
+    "v"
    ]
   },
   "ebible_versions": {
