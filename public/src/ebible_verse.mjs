@@ -8,7 +8,7 @@ import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_verse(language_codes, chapter_code, verse_number) {
   marker("1");
-  let split = string_split_comma(f_names);
+  let split = string_split_comma(language_codes);
   async function lambda(language_code) {
     chapter_code = ebible_chapter_code_normalize(chapter_code);
     let languages = ebible_languages();
@@ -18,6 +18,6 @@ export async function ebible_verse(language_codes, chapter_code, verse_number) {
     let v = list_find_property(vs, "verse_number", verse_number);
     return v;
   }
-  let verse_texts = await list_map_unordered_async(language_codes, lambda);
+  let verse_texts = await list_map_unordered_async(split, lambda);
   return verse_texts;
 }
