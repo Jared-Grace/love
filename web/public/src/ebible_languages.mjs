@@ -2,6 +2,11 @@ import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 export function ebible_languages() {
   let languages = [
     {
+      name: "English",
+      bible_folder: ebible_folder_engbsb(),
+      language_code: "ur",
+    },
+    {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
       language_code: "ur",
