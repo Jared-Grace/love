@@ -10,6 +10,7 @@ import { list_find_property } from "./list_find_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
+import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 export async function ebible_verse(language_codes, chapter_verse) {
   marker("1");
   let split2 = string_split_colon(chapter_verse);
@@ -26,6 +27,7 @@ export async function ebible_verse(language_codes, chapter_verse) {
     return text;
   }
   let verse_texts = await list_map_unordered_async(split, lambda);
+  let joined = list_join_newline_2(list);
   async function lambda2(temp_path) {
     await file_write(f_path, contents);
   }
