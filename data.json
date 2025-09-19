@@ -2137,7 +2137,8 @@
   "u lma",
   "s list_map",
   "s reply",
-  "s remove"
+  "s remove",
+  "s ps"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
