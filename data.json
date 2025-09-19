@@ -2147,7 +2147,8 @@
   "p",
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
-  "o sb"
+  "o sb",
+  "ebible_version_books_upload engbsb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
