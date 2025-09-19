@@ -95,7 +95,7 @@ export async function app_reply_main() {
         verse_number2,
       );
       list_add_first(verses, u);
-      list_add_first(languages_chosens, u);
+      list_add_first(languages_chosens, language_code);
       preview_refresh();
     }
     let component4 = html_button(root, name2, lambda7);
@@ -148,7 +148,7 @@ export async function app_reply_main() {
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
-    let concated = list_concat(copied, [verse_text]);
+    let concated = list_concat(copied, [verse_text, languages_chosens]);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
