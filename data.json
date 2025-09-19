@@ -2138,7 +2138,6 @@
    "js_log_remove",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "retry",
    "command_line_generic",
    "ebible_verses"
   ],
@@ -3705,7 +3704,8 @@
    "prompt_previous",
    "server",
    "log_error",
-   "git_push"
+   "git_push",
+   "retry"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -27197,8 +27197,8 @@
     "sleep",
     "error_json",
     "list_adder_async",
-    "log",
     "each_range_async",
+    "log_keep",
     "retry",
     "count",
     "lambda",
