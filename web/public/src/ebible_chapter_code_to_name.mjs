@@ -6,6 +6,6 @@ export function ebible_chapter_code_to_name(chapter_code) {
   let count = ebible_book_code_size();
   let s = string_skip(chapter_code, count);
   let i = integer_to(s);
-  let s2 = string_to(input);
+  let chapter_name = string_to(i);
   return chapter_name;
 }
