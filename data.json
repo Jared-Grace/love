@@ -2152,8 +2152,8 @@
   "s is list_take",
   "is string_take",
   "s ebible,to",
-  "s integer",
-  "s parse"
+  "s parse",
+  "s integer"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
