@@ -14305,7 +14305,8 @@
   ],
   "string_split_colon": [
    "ebible_references_parse",
-   "string_split_colon"
+   "string_split_colon",
+   "ebible_verse"
   ],
   "list_map_first": [
    "ebible_references_parse",
@@ -25997,6 +25998,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "string_split_colon",
     "string_split_comma",
     "list_map_unordered_async",
     "object_property_get",
