@@ -149,7 +149,9 @@ export async function app_reply_main() {
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [verse_text];
-    list_add(list, item3);
+    if (false) {
+    }
+    list_add(other, item3);
     let concated = list_concat(copied, other);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
