@@ -4521,7 +4521,8 @@
    "js_dollar_x",
    "list_remove_if_exists",
    "list_remove_multiple",
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_reply_main"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -24796,6 +24797,7 @@
     "property_name",
     "languages",
     "found",
+    "list_remove",
     "file_name",
     "destination",
     "index",
