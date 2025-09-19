@@ -256,6 +256,15 @@ export function app_reply_choices() {
         emoji_sleep_face(),
     },
     {
+      text: "Song",
+      response:
+        "https://www.facebook.com/share/v/1S8cfXxtpZ/" +
+        ' Jesus gave me the grace to write this song'
+    },
+
+    
+
+    {
       text: emoji_pray() + " Testimony",
       response:
         emoji_pray() +
