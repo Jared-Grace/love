@@ -46,7 +46,7 @@ export async function app_reply_main() {
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let file_name2 = ebible_version_books_upload_name();
-  let books = await firebase_storage_download_ebible(en, file_name2);
+  let { books } = await firebase_storage_download_ebible(en, file_name2);
   let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
