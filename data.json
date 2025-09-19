@@ -2125,7 +2125,6 @@
   "s rename",
   "as rename",
   "rs ebible_verse new",
-  "ps",
   "fw ev ebible_verse",
   "s upper",
   "s case",
@@ -2138,7 +2137,8 @@
   "s list_map",
   "s reply",
   "s remove",
-  "s ps"
+  "s ps",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
