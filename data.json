@@ -179,7 +179,8 @@
   "lmi": "list_multiple_is",
   "s2": "sandbox_2",
   "flw": "file_write",
-  "s3": "sandbox_3"
+  "s3": "sandbox_3",
+  "ev": "ebible_verses"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2120,7 +2121,8 @@
   "p",
   "ect engbsb EZR08",
   "ev",
-  "u ev"
+  "u ev",
+  "a ev ebible_verses"
  ],
  "marker_current": "1",
  "function_current": "command_line",
