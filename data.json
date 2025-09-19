@@ -3089,7 +3089,8 @@
    "list_map_split_space",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_verse"
+   "ebible_verse",
+   "file_temp"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4139,7 +4140,8 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "file_temp"
   ],
   "separator": [
    "watch",
@@ -7311,7 +7313,8 @@
    "app_reply_main",
    "uuid",
    "string_upper_to",
-   "ebible_chapter_code_normalize"
+   "ebible_chapter_code_normalize",
+   "file_temp"
   ],
   "to": [
    "function_parse_declaration",
@@ -14416,7 +14419,8 @@
    "sandbox_2"
   ],
   "uuid": [
-   "uuid"
+   "uuid",
+   "file_temp"
   ],
   "uuidv4": [
    "uuid"
@@ -14427,16 +14431,20 @@
    "folder_user"
   ],
   "folder_user_combine": [
-   "firebase_storage_download_path"
+   "firebase_storage_download_path",
+   "file_temp"
   ],
   "temp_path": [
-   "sandbox_2"
+   "sandbox_2",
+   "file_temp"
   ],
   "file_delete_if_exists": [
-   "file_delete_if_exists"
+   "file_delete_if_exists",
+   "file_temp"
   ],
   "file_temp": [
-   "sandbox_2"
+   "sandbox_2",
+   "file_temp"
   ],
   "output_path": [
    "sandbox_2"
@@ -14502,6 +14510,9 @@
   ],
   "chapter_verse": [
    "ebible_verse"
+  ],
+  "lambda$temp_path": [
+   "file_temp"
   ]
  },
  "functions": {
@@ -27777,6 +27788,20 @@
     "joined2",
     "chapter_code",
     "verse"
+   ]
+  },
+  "file_temp": {
+   "async": true,
+   "identifiers": [
+    "file_delete_if_exists",
+    "folder_user_combine",
+    "uuid",
+    "file_temp",
+    "lambda$temp_path",
+    "u",
+    "temp_path",
+    "result",
+    "lambda"
    ]
   }
  },
