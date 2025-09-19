@@ -11,7 +11,6 @@ import { list_next_try } from "./list_next_try.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
-import { log } from "./log.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { each_async } from "./each_async.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -75,9 +74,6 @@ export function js_calls_to_each(ast) {
     let code2 = js_code_brackets_empty();
     let array_expression = js_parse_expression(code2);
     let elements = object_property_get(array_expression, "elements");
-    log({
-      expression4: array_expression,
-    });
     async function d() {
       await a(b);
       await a(c);
