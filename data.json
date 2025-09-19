@@ -1624,7 +1624,6 @@
   "u jf",
   "a jf json_from",
   "o ff",
-  "s rename",
   "as rename",
   "a rs function_rename_suffix_add",
   "rs firebase_storage_url project",
@@ -2127,7 +2126,8 @@
   "s new",
   "fw ebv ebible_verse",
   "fw ev ebible_verse",
-  "o ebible_verse"
+  "o ebible_verse",
+  "s rename"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
