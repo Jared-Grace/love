@@ -84,6 +84,7 @@ export async function app_reply_main() {
   function lambda5(item2) {
     let name2 = object_property_get(item2, "name");
     let bible_folder2 = object_property_get(item2, "bible_folder");
+    let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
       let verse = list_first(verses);
       let chapter_code2 = object_property_get(verse, "chapter_code");
@@ -94,6 +95,7 @@ export async function app_reply_main() {
         verse_number2,
       );
       list_add_first(verses, u);
+      list_add_first(languages_chosens, u);
       preview_refresh();
     }
     let component4 = html_button(root, name2, lambda7);
