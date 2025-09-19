@@ -1,4 +1,4 @@
-import { list_filter_property } from "./list_filter_property.mjs";
+import { list_find_property } from "./list_find_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { string_take_less_1 } from "./string_take_less_1.mjs";
 import { equal } from "./equal.mjs";
@@ -39,8 +39,8 @@ import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let property_name = "language_code";
-  let filtered = list_filter_property(list, property_name, property_value);
   let languages = ebible_languages();
+  let found = list_find_property(languages, property_name, en);
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
