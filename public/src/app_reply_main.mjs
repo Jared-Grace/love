@@ -1,10 +1,10 @@
+import { ebible_languages } from "./ebible_languages.mjs";
 import { string_take_less_1 } from "./string_take_less_1.mjs";
 import { equal } from "./equal.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
-import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 import { firebase_storage_download_json } from "./firebase_storage_download_json.mjs";
 import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -37,40 +37,7 @@ import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
-  let languages = [
-    {
-      name: "Urdu",
-      bible_folder: ebible_folder_urdu(),
-    },
-    {
-      name: "Swhahili",
-      bible_folder: "swhonen",
-    },
-    {
-      name: "Luganda",
-      bible_folder: "lug",
-    },
-    {
-      name: "Bengali",
-      bible_folder: "benirv",
-    },
-    {
-      name: "Telugu",
-      bible_folder: "tel2017",
-    },
-    {
-      name: "Yoruba",
-      bible_folder: "yor",
-    },
-    {
-      name: "Cebuano",
-      bible_folder: "cebulb",
-    },
-    {
-      name: "Tagalog",
-      bible_folder: "tglulb",
-    },
-  ];
+  let languages = ebible_languages();
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
