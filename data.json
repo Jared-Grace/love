@@ -3356,7 +3356,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -9310,7 +9311,8 @@
    "list_difference",
    "list_intersect",
    "marker_functionize",
-   "prompt_previous"
+   "prompt_previous",
+   "app_reply_main"
   ],
   "declaration_id": [
    "js_declaration_name"
@@ -14548,6 +14550,9 @@
    "ebible_chapter_code_to_name"
   ],
   "languages_chosens": [
+   "app_reply_main"
+  ],
+  "item3": [
    "app_reply_main"
   ]
  },
@@ -24930,6 +24935,9 @@
     "verse_texts",
     "reference",
     "verse_text",
+    "other",
+    "list",
+    "item3",
     "concated",
     "joined"
    ]
