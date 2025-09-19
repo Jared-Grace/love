@@ -2139,7 +2139,6 @@
    "marker_rename",
    "ebible_versions_download",
    "firebase_upload_generic",
-   "folder_find_starts_with",
    "retry",
    "sandbox_2",
    "sandbox_3",
@@ -26250,7 +26249,6 @@
   "folder_find_starts_with": {
    "async": true,
    "identifiers": [
-    "log",
     "folder_read_async",
     "list_find",
     "string_starts_with",
