@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -148,10 +149,11 @@ export async function app_reply_main() {
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
+    let ne = list_empty_not_is(list);
     const other = [verse_text];
     if (false) {
+      list_add(other, item3);
     }
-    list_add(other, item3);
     let concated = list_concat(copied, other);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
