@@ -4987,8 +4987,7 @@
    "range_from",
    "firebase_storage_download_json",
    "path_join",
-   "string_upper_to",
-   "ebible_verse"
+   "string_upper_to"
   ],
   "a": [
    "string_suffix_without",
@@ -7285,8 +7284,7 @@
    "function_exists_inner",
    "app_reply_main",
    "uuid",
-   "string_upper_to",
-   "ebible_verse"
+   "string_upper_to"
   ],
   "to": [
    "function_parse_declaration",
@@ -14441,11 +14439,13 @@
    "ebible_verse"
   ],
   "string_upper_to": [
-   "string_upper_to",
-   "ebible_verse"
+   "string_upper_to"
   ],
   "toUpperCase": [
    "string_upper_to"
+  ],
+  "ebible_chapter_code_normalize": [
+   "ebible_verse"
   ]
  },
  "functions": {
@@ -25945,7 +25945,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
-    "string_upper_to",
+    "ebible_chapter_code_normalize",
     "list_find_property",
     "ebible_languages",
     "ebible_verses",
@@ -25954,8 +25954,6 @@
     "language_code",
     "chapter_code",
     "verse_number",
-    "u",
-    "s",
     "languages",
     "filtered",
     "v",
