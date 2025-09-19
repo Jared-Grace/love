@@ -5209,7 +5209,8 @@
    "string_split_comma",
    "functions_paths",
    "function_rename_identifiers",
-   "js_expand_generic"
+   "js_expand_generic",
+   "ebible_verse"
   ],
   "path_join": [
    "folder_read",
@@ -6445,7 +6446,8 @@
   ],
   "string_split_comma": [
    "functions_combine_name",
-   "string_split_comma"
+   "string_split_comma",
+   "ebible_verse"
   ],
   "string_split": [
    "function_name_to_parts",
@@ -6582,7 +6584,8 @@
    "ebible_verses",
    "string_split_newline",
    "ebible_references_parse",
-   "path_join"
+   "path_join",
+   "ebible_verse"
   ],
   "results": [
    "functions_combine_name"
@@ -25963,6 +25966,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "string_split_comma",
     "list_map_unordered_async",
     "object_property_get",
     "ebible_chapter_code_normalize",
@@ -25974,6 +25978,8 @@
     "language_codes",
     "chapter_code",
     "verse_number",
+    "split",
+    "f_names",
     "lambda",
     "language_code",
     "languages",
