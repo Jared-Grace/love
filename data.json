@@ -2131,7 +2131,6 @@
   "s reply",
   "s remove",
   "s ps",
-  "ps",
   "ev ur,en MAT01 1",
   "s ebible",
   "s books",
@@ -2146,7 +2145,8 @@
   "ev tel,en EZK18:31",
   "s temp",
   "s open",
-  "u fo"
+  "u fo",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
