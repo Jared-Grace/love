@@ -4008,8 +4008,7 @@
    "js_dollar_new_name",
    "local_function_path",
    "object_property_get_name",
-   "folder_read_async",
-   "app_reply_main"
+   "folder_read_async"
   ],
   "output": [
    "watch",
@@ -13405,7 +13404,6 @@
    "ebible_firebase_upload_path",
    "ebible_index_flat",
    "ebible_index_flat_upload",
-   "app_reply_main",
    "ebible_references_parse",
    "ebible_verse_download",
    "ebible_version_books_testament_apocrypha",
@@ -13995,7 +13993,6 @@
    "ebible_references_parse"
   ],
   "ebible_folder_urdu": [
-   "app_reply_main",
    "ebible_folder_urdu"
   ],
   "ebible_index_upload_name": [
@@ -14419,6 +14416,9 @@
   "ebible_verse_new": [
    "ebible_verse_new",
    "ebible_verses"
+  ],
+  "ebible_languages": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24700,13 +24700,13 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_languages",
     "string_take_less_1",
     "equal",
     "list_add_first",
     "ebible_verse_download",
     "list_map_property",
     "list_first",
-    "ebible_folder_urdu",
     "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
     "ebible_folder_english",
@@ -24740,8 +24740,6 @@
     "app_reply_main",
     "en",
     "languages",
-    "name",
-    "bible_folder",
     "file_name",
     "destination",
     "index",
