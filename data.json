@@ -3190,7 +3190,8 @@
    "each_multiple_async",
    "retry",
    "each_index_async",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_verse"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -14436,7 +14437,8 @@
   ],
   "temp_path": [
    "sandbox_2",
-   "file_temp"
+   "file_temp",
+   "ebible_verse"
   ],
   "file_delete_if_exists": [
    "file_delete_if_exists",
@@ -14444,7 +14446,8 @@
   ],
   "file_temp": [
    "sandbox_2",
-   "file_temp"
+   "file_temp",
+   "ebible_verse"
   ],
   "output_path": [
    "sandbox_2"
@@ -26013,6 +26016,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "file_temp",
     "list_first_second",
     "string_split_colon",
     "string_split_comma",
@@ -26039,7 +26043,9 @@
     "vs",
     "v",
     "text",
-    "verse_texts"
+    "verse_texts",
+    "lambda2",
+    "temp_path"
    ]
   },
   "ebible_versions": {
