@@ -14149,8 +14149,7 @@
    "ebible_verse"
   ],
   "bible_folder2": [
-   "app_reply_main",
-   "ebible_verse"
+   "app_reply_main"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -25963,9 +25962,8 @@
     "verse_number",
     "languages",
     "l",
-    "bible_folder2",
-    "v",
-    "bible_folder"
+    "bible_folder",
+    "v"
    ]
   },
   "ebible_versions": {
