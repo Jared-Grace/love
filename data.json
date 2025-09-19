@@ -2003,7 +2003,6 @@
   "n sandbox",
   "s version",
   "s eng",
-  "s new",
   "s newline",
   "s split",
   "n string_split_comma",
@@ -2124,7 +2123,8 @@
   "is ebible_verses_upload",
   "o sb",
   "sb",
-  "s reply"
+  "s reply",
+  "s new"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
