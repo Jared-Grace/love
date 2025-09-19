@@ -13800,7 +13800,8 @@
    "ebible_references_parse",
    "ebible_verses_upload_name",
    "ebible_verse_download",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_verse"
   ],
   "ebible_verse": [
    "ebible_verse"
@@ -25932,6 +25933,7 @@
     "ebible_verse",
     "bible_folder",
     "chapter_code",
+    "verse_number",
     "v"
    ]
   },
