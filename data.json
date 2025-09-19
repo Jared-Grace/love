@@ -2136,7 +2136,6 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "command_line_generic",
    "ebible_verses"
   ],
   "function_path_to_name": [
@@ -27587,7 +27586,6 @@
   "command_line_generic": {
    "async": true,
    "identifiers": [
-    "log",
     "object_merge",
     "command_line_generic",
     "command",
