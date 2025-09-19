@@ -77,6 +77,7 @@ export async function app_reply_main() {
     list_empty(copied);
     preview_refresh();
     chosens = [];
+    languages_chosens = [];
     typed = "";
     buttons_refresh();
   }
