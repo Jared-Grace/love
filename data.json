@@ -2134,7 +2134,6 @@
   "s remove",
   "s ps",
   "ps",
-  "p",
   "ev ur,en MAT01 1",
   "s ebible",
   "s books",
@@ -2145,6 +2144,7 @@
   "ev en,lug EZK16:36",
   "o ev",
   "s second",
+  "p",
   "ev tel,en EZK18:31"
  ],
  "marker_current": "1",
