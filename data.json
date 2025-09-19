@@ -14030,7 +14030,8 @@
    "ebible_firebase_folder"
   ],
   "chapter_name": [
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ],
   "chapter": [
    "ebible_index"
@@ -14531,7 +14532,8 @@
    "app_reply_main"
   ],
   "ebible_chapter_code_to_name": [
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24813,6 +24815,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_chapter_code_to_name",
     "ebible_chapter_code_to_book",
     "list_find_property",
     "ebible_version_books_upload_name",
@@ -24904,6 +24907,7 @@
     "component",
     "lambda3",
     "book_code",
+    "chapter_name",
     "book",
     "book_name",
     "verse_texts",
