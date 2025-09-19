@@ -1,7 +1,6 @@
 import { js_string } from "./js_string.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { log } from "./log.mjs";
 import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
@@ -15,7 +14,6 @@ export async function marker_rename(from, to) {
     if (not(s1)) {
       return;
     }
-    log(arguments2);
     let a0 = list_single(arguments2);
     let nti = js_node_type_not_is(a0, "Literal");
     if (nti) {
