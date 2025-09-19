@@ -2113,7 +2113,6 @@
   "p",
   "ect engbsb EZR08",
   "ev",
-  "u ev",
   "a ev ebible_verses",
   "ev engbsb EZR08",
   "s upload",
@@ -2131,7 +2130,8 @@
   "s reply",
   "s upper",
   "s case",
-  "n string_upper_to"
+  "n string_upper_to",
+  "u ev"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
