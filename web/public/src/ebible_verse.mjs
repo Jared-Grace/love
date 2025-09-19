@@ -27,9 +27,10 @@ export async function ebible_verse(language_codes, chapter_verse) {
     return text;
   }
   let verse_texts = await list_map_unordered_async(split, lambda);
-  let joined = list_join_newline_2(list);
+  let joined = list_join_newline_2(verse_texts);
   async function lambda2(temp_path) {
-    await file_write(f_path, contents);
+    await file_write(temp_path, joined);
+    fo;
   }
   await file_temp(lambda2);
   return verse_texts;
