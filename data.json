@@ -2139,7 +2139,6 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "retry",
-   "sandbox_3",
    "command_line_generic",
    "ebible_verses"
   ],
@@ -27574,7 +27573,6 @@
   "sandbox_3": {
    "async": false,
    "identifiers": [
-    "log",
     "marker",
     "sandbox_3"
    ]
