@@ -2141,10 +2141,12 @@
   "is ebible_version_books",
   "ebible_version_books engbsb",
   "o sb",
-  "fws ebible_version_books upload"
+  "fws ebible_version_books upload",
+  "ev en,lug EZK16:36",
+  "o ev"
  ],
  "marker_current": "1",
- "function_current": "ebible_version_books_upload",
+ "function_current": "ebible_verse",
  "terminal": false,
  "identifiers": {
   "log": [
