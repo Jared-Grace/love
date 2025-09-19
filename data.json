@@ -9322,7 +9322,8 @@
    "js_declaration_param_named",
    "list_find_property",
    "ebible_references_parse",
-   "ebible_verse"
+   "ebible_verse",
+   "app_reply_main"
   ],
   "nameds": [
    "js_declaration_single"
@@ -13591,7 +13592,8 @@
    "string_starts_with_not",
    "ebible_chapter_code_to_book",
    "ebible_index",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ],
   "string_take": [
    "string_take",
@@ -13778,7 +13780,8 @@
   "book": [
    "ebible_version_verses",
    "ebible_index",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -14332,7 +14335,8 @@
    "ebible_references_parse"
   ],
   "book_name": [
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ],
   "chapter_verses": [
    "ebible_references_parse",
@@ -24802,6 +24806,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_find_property",
     "ebible_version_books_upload_name",
     "firebase_storage_download_ebible",
     "list_remove_property",
@@ -24847,6 +24852,9 @@
     "index",
     "file_name2",
     "books",
+    "book",
+    "book_code",
+    "book_name",
     "verses",
     "verse_random_get",
     "root",
