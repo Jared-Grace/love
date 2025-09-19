@@ -3356,7 +3356,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -6165,7 +6166,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -10064,7 +10066,8 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ],
   "last": [
    "js_return_name",
@@ -24834,6 +24837,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_empty_not_is",
     "ebible_chapter_code_to_name",
     "ebible_chapter_code_to_book",
     "list_find_property",
@@ -24934,6 +24938,8 @@
     "verse_texts",
     "reference",
     "verse_text",
+    "ne",
+    "list",
     "other",
     "item3",
     "concated",
