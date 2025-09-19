@@ -38,6 +38,7 @@ import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
+  let property_name = "language_code";
   let filtered = list_filter_property(list, property_name, property_value);
   let languages = ebible_languages();
   let file_name = ebible_index_flat_upload_name();
