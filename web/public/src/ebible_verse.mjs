@@ -25,6 +25,7 @@ export async function ebible_verse(language_codes, chapter_verse) {
     return text;
   }
   let verse_texts = await list_map_unordered_async(split, lambda);
-  await file_temp(async function lambda2(temp_path) {});
+  async function lambda2(temp_path) {}
+  await file_temp(lambda2);
   return verse_texts;
 }
