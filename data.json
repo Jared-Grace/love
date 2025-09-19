@@ -14056,9 +14056,6 @@
   "component4": [
    "app_reply_main"
   ],
-  "ur": [
-   "app_reply_main"
-  ],
   "verse_texts": [
    "app_reply_main"
   ],
@@ -24742,7 +24739,6 @@
     "marker",
     "app_reply_main",
     "en",
-    "ur",
     "languages",
     "name",
     "bible_folder",
