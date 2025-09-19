@@ -9,7 +9,7 @@ export async function ebible_verse(language_code, chapter_code, verse_number) {
   chapter_code = ebible_chapter_code_normalize(chapter_code);
   let languages = ebible_languages();
   let l = list_find_property(languages, "language_code", language_code);
-  let bible_folder2 = object_property_get(l, "bible_folder");
+  let bible_folder = object_property_get(l, "bible_folder");
   let v = await ebible_verses(bible_folder, chapter_code);
   return v;
 }
