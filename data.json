@@ -3337,8 +3337,7 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2",
-   "app_reply_main"
+   "sandbox_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -14474,9 +14473,6 @@
   ],
   "ebible_folder_engbsb": [
    "ebible_languages"
-  ],
-  "item3": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -24802,8 +24798,6 @@
     "property_name",
     "languages",
     "found",
-    "list",
-    "item3",
     "file_name",
     "destination",
     "index",
