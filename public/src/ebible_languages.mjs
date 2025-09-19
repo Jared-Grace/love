@@ -1,6 +1,6 @@
 import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 export function ebible_languages() {
-  let v2 = [
+  let languages = [
     {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
@@ -34,5 +34,5 @@ export function ebible_languages() {
       bible_folder: "tglulb",
     },
   ];
-  return v2;
+  return languages;
 }
