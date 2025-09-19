@@ -13605,7 +13605,8 @@
    "ebible_index",
    "ebible_references_parse",
    "sandbox_2",
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "app_reply_main"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -14515,7 +14516,11 @@
    "ebible_verse_download"
   ],
   "ebible_version_books_upload_name": [
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "app_reply_main"
+  ],
+  "file_name2": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24797,6 +24802,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_version_books_upload_name",
     "firebase_storage_download_ebible",
     "list_remove_property",
     "ebible_languages",
@@ -24839,6 +24845,8 @@
     "languages",
     "file_name",
     "index",
+    "file_name2",
+    "books",
     "verses",
     "verse_random_get",
     "root",
