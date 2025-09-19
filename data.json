@@ -4119,8 +4119,7 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse",
-   "ebible_verse"
+   "ebible_references_parse"
   ],
   "separator": [
    "watch",
@@ -9281,7 +9280,8 @@
   "list_find_property": [
    "js_declaration_param_named",
    "list_find_property",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_verse"
   ],
   "nameds": [
    "js_declaration_single"
@@ -9858,7 +9858,8 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property"
+   "list_filter_property",
+   "ebible_verse"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -9950,8 +9951,7 @@
    "js_outside_move",
    "list_filter_property",
    "js_imports_unused",
-   "ebible_references_parse",
-   "ebible_verse"
+   "ebible_references_parse"
   ],
   "fds": [
    "js_outside_move"
@@ -25931,7 +25931,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
-    "list_filter_property",
+    "list_find_property",
     "ebible_languages",
     "ebible_verses",
     "marker",
@@ -25940,7 +25940,7 @@
     "chapter_code",
     "verse_number",
     "languages",
-    "result",
+    "filtered",
     "v",
     "bible_folder"
    ]
