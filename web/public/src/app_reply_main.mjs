@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_version_books_upload_name } from "./ebible_version_books_upload_name.mjs";
@@ -136,11 +137,12 @@ export async function app_reply_main() {
     let verse = list_first(verses);
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let book_code = ebible_chapter_code_to_book(chapter_code2);
+    let chapter_name = ebible_chapter_code_to_name(chapter_code2);
     let book = list_find_property(books, "book_code", book_code);
     let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_texts = list_map_property(verses, "text");
-    let reference = book_name + ":" + verse_number2;
+    let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     let concated = list_concat(copied, [verse_text]);
