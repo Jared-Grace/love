@@ -135,7 +135,7 @@ export async function app_reply_main() {
   async function preview_refresh() {
     let verse = list_first(verses);
     let chapter_code2 = object_property_get(verse, "chapter_code");
-    let book_code2 = ebible_chapter_code_to_book(href);
+    let book_code = ebible_chapter_code_to_book(chapter_code2);
     let book = list_find_property(books, "book_code", book_code);
     let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
