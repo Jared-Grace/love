@@ -8966,7 +8966,8 @@
    "js_visit_each_async",
    "js_visit_type_each_async",
    "marker_down_choices",
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "ebible_verse"
   ],
   "edges": [
    "js_block_child_graph",
@@ -25963,6 +25964,7 @@
     "languages",
     "l",
     "bible_folder",
+    "vs",
     "v"
    ]
   },
