@@ -16,6 +16,8 @@ export async function ebible_version_books_upload(bible_folder) {
     },
     books,
   );
-  await ebible_firebase_upload(bible_folder, joined2, verse);
+  await ebible_firebase_upload(bible_folder, joined2, {
+    books,
+  });
   return books;
 }
