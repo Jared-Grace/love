@@ -2041,7 +2041,6 @@
   "s ret",
   "n retry",
   "s erro",
-  "ps",
   "ebible_verses_upload hin2017",
   "s each_pair",
   "s multiple",
@@ -2128,7 +2127,8 @@
   "o ebible_verse",
   "s rename",
   "as rename",
-  "rs ebible_verse new"
+  "rs ebible_verse new",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse_new",
