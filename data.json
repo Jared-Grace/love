@@ -2113,7 +2113,6 @@
   "ev engbsb EZR08",
   "s upload",
   "is ebible_verses_upload",
-  "o sb",
   "sb",
   "s new",
   "fw ebv ebible_verse",
@@ -2140,10 +2139,11 @@
   "s ebible",
   "s books",
   "is ebible_version_books",
-  "ebible_version_books engbsb"
+  "ebible_version_books engbsb",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "string_upper_to",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
