@@ -7284,7 +7284,8 @@
    "function_exists_inner",
    "app_reply_main",
    "uuid",
-   "string_upper_to"
+   "string_upper_to",
+   "ebible_chapter_code_normalize"
   ],
   "to": [
    "function_parse_declaration",
@@ -13679,7 +13680,8 @@
    "ebible_verses_upload_name",
    "ebible_verse_download",
    "sandbox_2",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_chapter_code_normalize"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -14439,13 +14441,15 @@
    "ebible_verse"
   ],
   "string_upper_to": [
-   "string_upper_to"
+   "string_upper_to",
+   "ebible_chapter_code_normalize"
   ],
   "toUpperCase": [
    "string_upper_to"
   ],
   "ebible_chapter_code_normalize": [
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_chapter_code_normalize"
   ]
  },
  "functions": {
@@ -27678,6 +27682,15 @@
     "s",
     "u",
     "toUpperCase"
+   ]
+  },
+  "ebible_chapter_code_normalize": {
+   "async": false,
+   "identifiers": [
+    "string_upper_to",
+    "ebible_chapter_code_normalize",
+    "chapter_code",
+    "u"
    ]
   }
  },
