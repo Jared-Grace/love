@@ -2536,8 +2536,7 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic",
-   "ebible_verse"
+   "file_write_generic"
   ],
   "ast": [
    "data_identifiers_file",
@@ -26054,8 +26053,7 @@
     "verse_texts",
     "joined",
     "lambda2",
-    "temp_path",
-    "f_path"
+    "temp_path"
    ]
   },
   "ebible_versions": {
