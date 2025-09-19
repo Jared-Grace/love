@@ -2821,7 +2821,8 @@
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "ebible_verse"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4861,7 +4862,8 @@
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "function_wrap",
-   "function_wrap_suffix_add"
+   "function_wrap_suffix_add",
+   "ebible_verse"
   ],
   "function_watch_suffix_change": [
    "function_watch_suffix_change"
@@ -4900,7 +4902,8 @@
   "f_name_wrapped": [
    "function_watch_suffix_change",
    "function_wrap",
-   "function_wrap_suffix_add"
+   "function_wrap_suffix_add",
+   "ebible_verse"
   ],
   "function_watch_ending_change": [
    "function_watch_ending_change"
@@ -26016,6 +26019,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "function_wrap",
     "file_temp",
     "list_first_second",
     "string_split_colon",
@@ -26045,7 +26049,9 @@
     "text",
     "verse_texts",
     "lambda2",
-    "temp_path"
+    "temp_path",
+    "f_name",
+    "f_name_wrapped"
    ]
   },
   "ebible_versions": {
