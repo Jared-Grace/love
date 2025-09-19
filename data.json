@@ -2135,7 +2135,8 @@
   "u ev",
   "ac ev evs",
   "a ev ebible_verse",
-  "ev ur MAT01 1"
+  "ev ur MAT01 1",
+  "u lma"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
