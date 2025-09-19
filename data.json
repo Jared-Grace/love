@@ -2153,7 +2153,8 @@
   "s ebible,to",
   "s parse",
   "s integer",
-  "s ebible"
+  "s ebible",
+  "is string_skip"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
