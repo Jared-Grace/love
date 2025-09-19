@@ -2077,7 +2077,6 @@
   "u u",
   "u e",
   "u st",
-  "s ebible",
   "is ebible_chapters_each_verses_list",
   "is ebible_version_books_testament_apocrypha",
   "s sand",
@@ -2139,7 +2138,8 @@
   "s ps",
   "ps",
   "p",
-  "ev ur,en MAT01 1"
+  "ev ur,en MAT01 1",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
