@@ -2129,7 +2129,8 @@
   "ps",
   "fw ev ebible_verse",
   "s reply",
-  "s upper"
+  "s upper",
+  "s case"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
