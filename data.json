@@ -13804,7 +13804,6 @@
    "ebible_verse_new"
   ],
   "ebible_verse": [
-   "ebible_verses",
    "ebible_verse"
   ],
   "list_index_of_last": [
@@ -14425,7 +14424,8 @@
    "sandbox"
   ],
   "ebible_verse_new": [
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_verses"
   ]
  },
  "functions": {
@@ -25572,7 +25572,7 @@
     "list_add",
     "list_index_of_last",
     "list_empty_not_is",
-    "ebible_verse",
+    "ebible_verse_new",
     "list_adder",
     "list_take",
     "list_skip",
