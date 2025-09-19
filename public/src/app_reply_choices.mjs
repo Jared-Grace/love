@@ -259,11 +259,8 @@ export function app_reply_choices() {
       text: "Song",
       response:
         "https://www.facebook.com/share/v/1S8cfXxtpZ/" +
-        ' Jesus gave me the grace to write this song'
+        " Jesus gave me the grace to write this song",
     },
-
-    
-
     {
       text: emoji_pray() + " Testimony",
       response:
