@@ -14135,7 +14135,8 @@
   ],
   "languages": [
    "app_reply_main",
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_verse"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -14423,7 +14424,8 @@
   ],
   "ebible_languages": [
    "app_reply_main",
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_verse"
   ]
  },
  "functions": {
@@ -25923,12 +25925,14 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "ebible_languages",
     "ebible_verses",
     "marker",
     "ebible_verse",
     "bible_folder",
     "chapter_code",
     "verse_number",
+    "languages",
     "v"
    ]
   },
