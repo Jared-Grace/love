@@ -4347,7 +4347,8 @@
    "marker_next_declare_single_init_elements",
    "object_property_get_name",
    "ebible_references_parse",
-   "object_merge_generic"
+   "object_merge_generic",
+   "ebible_verse"
   ],
   "data_save": [
    "data_file_update",
@@ -9540,7 +9541,8 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x"
+   "js_dollar_x",
+   "ebible_verse"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -9864,8 +9866,7 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property",
-   "ebible_verse"
+   "list_filter_property"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -14148,7 +14149,8 @@
    "ebible_verse"
   ],
   "bible_folder2": [
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verse"
   ],
   "urdu_allah_to_god": [
    "urdu_allah_to_god",
@@ -25949,6 +25951,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "ebible_chapter_code_normalize",
     "list_find_property",
     "ebible_languages",
@@ -25959,7 +25962,8 @@
     "chapter_code",
     "verse_number",
     "languages",
-    "filtered",
+    "l",
+    "bible_folder2",
     "v",
     "bible_folder"
    ]
