@@ -30,7 +30,7 @@ export function ebible_languages() {
     {
       name: "Telugu",
       bible_folder: "tel2017",
-      language_code: "TODO",
+      language_code: "tel",
     },
     {
       name: "Yoruba",
