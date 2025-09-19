@@ -1,3 +1,4 @@
+import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { string_take_less_1 } from "./string_take_less_1.mjs";
@@ -6,10 +7,8 @@ import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_download } from "./ebible_verse_download.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_first } from "./list_first.mjs";
-import { firebase_storage_download_json } from "./firebase_storage_download_json.mjs";
 import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
 import { not } from "./not.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { string_lower_to } from "./string_lower_to.mjs";
@@ -41,8 +40,7 @@ export async function app_reply_main() {
   let languages = ebible_languages();
   list_remove_property(languages, "language_code", "en");
   let file_name = ebible_index_flat_upload_name();
-  let destination = ebible_firebase_upload_path(en, file_name);
-  let index = await firebase_storage_download_json(destination);
+  let index = await firebase_storage_download_ebible(en, file_name);
   let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
