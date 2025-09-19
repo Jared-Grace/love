@@ -37,11 +37,10 @@ import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
-  let ur = ebible_folder_urdu();
   let languages = [
     {
       name: "Urdu",
-      bible_folder: ur,
+      bible_folder: ebible_folder_urdu(),
     },
     {
       name: "Swhahili",
