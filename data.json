@@ -10644,7 +10644,8 @@
   ],
   "string_pad": [
    "string_pad",
-   "tasks_run"
+   "tasks_run",
+   "ebible_verses"
   ],
   "padding": [
    "string_pad"
@@ -25545,6 +25546,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "string_pad",
     "urdu_allah_to_god",
     "list_add",
     "list_index_of_last",
