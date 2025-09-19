@@ -3,7 +3,7 @@ export function ebible_languages() {
   let languages = [
     {
       name: "English",
-      bible_folder: ebible_folder_engbsb(),
+      bible_folder: ebible_folder_eng(),
       language_code: "en",
     },
     {
