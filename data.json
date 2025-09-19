@@ -2141,7 +2141,8 @@
    "retry",
    "sandbox_2",
    "sandbox_3",
-   "command_line_generic"
+   "command_line_generic",
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3643,7 +3644,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "ebible_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -14406,9 +14408,6 @@
   ],
   "command_line_cmd": [
    "sandbox_2"
-  ],
-  "string_pad_space": [
-   "ebible_verses"
   ]
  },
  "functions": {
@@ -25551,7 +25550,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "string_pad_space",
+    "log",
     "urdu_allah_to_god",
     "list_add",
     "list_index_of_last",
@@ -25575,6 +25574,7 @@
     "text",
     "split",
     "filtered",
+    "message",
     "lambda",
     "la",
     "lambda2",
