@@ -3337,7 +3337,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -14473,6 +14474,9 @@
   ],
   "ebible_folder_engbsb": [
    "ebible_languages"
+  ],
+  "item3": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24754,6 +24758,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "list_remove",
     "list_find_property",
     "ebible_languages",
     "string_take_less_1",
@@ -24797,7 +24802,8 @@
     "property_name",
     "languages",
     "found",
-    "list_remove",
+    "list",
+    "item3",
     "file_name",
     "destination",
     "index",
