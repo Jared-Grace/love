@@ -148,7 +148,9 @@ export async function app_reply_main() {
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
-    let concated = list_concat(copied, [verse_text, languages_chosens]);
+    const other = [verse_text];
+    list_add(list, item3);
+    let concated = list_concat(copied, other);
     let joined = list_join_newline_2(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
