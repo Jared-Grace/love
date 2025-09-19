@@ -2850,8 +2850,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "ebible_verse"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3327,8 +3326,7 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2",
-   "ebible_verse"
+   "sandbox_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -10183,8 +10181,7 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda",
-   "ebible_verse"
+   "object_property_equals_lambda"
   ],
   "list_find": [
    "list_find",
@@ -25944,9 +25941,6 @@
     "verse_number",
     "languages",
     "result",
-    "list",
-    "property_name",
-    "property_value",
     "v",
     "bible_folder"
    ]
