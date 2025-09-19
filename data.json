@@ -5654,8 +5654,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "ebible_chapter_code_to_name"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -14545,9 +14544,6 @@
   "ebible_chapter_code_to_name": [
    "ebible_index",
    "app_reply_main",
-   "ebible_chapter_code_to_name"
-  ],
-  "s2": [
    "ebible_chapter_code_to_name"
   ]
  },
@@ -27857,8 +27853,6 @@
     "count",
     "s",
     "i",
-    "s2",
-    "input",
     "chapter_name"
    ]
   }
