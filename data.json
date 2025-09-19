@@ -2123,15 +2123,15 @@
   "s reply",
   "s new",
   "fw ebv ebible_verse",
-  "fw ev ebible_verse",
   "o ebible_verse",
   "s rename",
   "as rename",
   "rs ebible_verse new",
-  "ps"
+  "ps",
+  "fw ev ebible_verse"
  ],
  "marker_current": "1",
- "function_current": "ebible_verse_new",
+ "function_current": "ebible_verse",
  "terminal": false,
  "identifiers": {
   "log": [
