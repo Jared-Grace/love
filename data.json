@@ -180,7 +180,8 @@
   "s2": "sandbox_2",
   "flw": "file_write",
   "s3": "sandbox_3",
-  "evs": "ebible_verses"
+  "evs": "ebible_verses",
+  "ev": "ebible_verse"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2132,7 +2133,8 @@
   "s case",
   "n string_upper_to",
   "u ev",
-  "ac ev evs"
+  "ac ev evs",
+  "a ev ebible_verse"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
