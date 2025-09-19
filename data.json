@@ -2122,7 +2122,8 @@
   "ect engbsb EZR08",
   "ev",
   "u ev",
-  "a ev ebible_verses"
+  "a ev ebible_verses",
+  "ev engbsb EZR08"
  ],
  "marker_current": "1",
  "function_current": "command_line",
