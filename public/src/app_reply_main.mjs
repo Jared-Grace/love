@@ -38,7 +38,6 @@ import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let ur = ebible_folder_urdu();
-  let swh = "swhonen";
   let languages = [
     {
       name: "Urdu",
@@ -46,7 +45,7 @@ export async function app_reply_main() {
     },
     {
       name: "Swhahili",
-      bible_folder: swh,
+      bible_folder: "swhonen",
     },
     {
       name: "Luganda",
