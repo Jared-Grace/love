@@ -2137,7 +2137,6 @@
    "search_generic",
    "js_log_remove",
    "ebible_versions_download",
-   "firebase_upload_generic",
    "command_line_generic",
    "ebible_verses"
   ],
@@ -3705,7 +3704,8 @@
    "server",
    "log_error",
    "git_push",
-   "retry"
+   "retry",
+   "firebase_upload_generic"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -26226,10 +26226,10 @@
    "async": true,
    "identifiers": [
     "retry",
-    "log",
     "object_merge",
     "firebase_bucket",
     "firebase_path_fix",
+    "log_keep",
     "firebase_upload_generic",
     "destination",
     "settings",
