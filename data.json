@@ -5217,7 +5217,8 @@
    "string_split_comma",
    "functions_paths",
    "function_rename_identifiers",
-   "js_expand_generic"
+   "js_expand_generic",
+   "ebible_verse"
   ],
   "path_join": [
    "folder_read",
@@ -11999,7 +12000,8 @@
   "split2": [
    "string_split_empty",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "ebible_verse"
   ],
   "list_take": [
    "list_take",
@@ -14492,6 +14494,9 @@
   ],
   "ebible_version_books_upload": [
    "ebible_version_books_upload"
+  ],
+  "chapter_verse": [
+   "ebible_verse"
   ]
  },
  "functions": {
@@ -26002,16 +26007,19 @@
     "marker",
     "ebible_verse",
     "language_codes",
-    "chapter_code",
-    "verse_number",
+    "chapter_verse",
+    "split2",
+    "f_names",
     "split",
     "lambda",
     "language_code",
+    "chapter_code",
     "languages",
     "l",
     "bible_folder",
     "vs",
     "v",
+    "verse_number",
     "text",
     "verse_texts"
    ]
