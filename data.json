@@ -2456,7 +2456,8 @@
    "command_line",
    "sandbox",
    "ebible_verse",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "string_upper_to"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14435,6 +14436,9 @@
   "language_code": [
    "ebible_languages",
    "ebible_verse"
+  ],
+  "string_upper_to": [
+   "string_upper_to"
   ]
  },
  "functions": {
@@ -27657,6 +27661,13 @@
     "name",
     "bible_folder",
     "language_code"
+   ]
+  },
+  "string_upper_to": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_upper_to"
    ]
   }
  },
