@@ -2136,7 +2136,6 @@
   "s books",
   "is ebible_version_books",
   "ebible_version_books engbsb",
-  "o sb",
   "fws ebible_version_books upload",
   "ev en,lug EZK16:36",
   "o ev",
@@ -2147,7 +2146,8 @@
   "ps",
   "p",
   "ev tel,en EZK18:31",
-  "ev tel,en NUM32:19"
+  "ev tel,en NUM32:19",
+  "o sb"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
@@ -4369,8 +4369,7 @@
    "object_property_get_name",
    "ebible_references_parse",
    "object_merge_generic",
-   "ebible_verse",
-   "ebible_version_books_upload"
+   "ebible_verse"
   ],
   "data_save": [
    "data_file_update",
@@ -7307,8 +7306,7 @@
    "ebible_version_books_testament",
    "ebible_verses_upload",
    "firebase_upload_generic",
-   "command_line_generic",
-   "ebible_version_books_upload"
+   "command_line_generic"
   ],
   "u": [
    "function_exists",
@@ -12057,8 +12055,7 @@
    "ebible_version_download_path",
    "local_function_path",
    "ebible_verses_upload",
-   "ebible_firebase_folder",
-   "ebible_version_books_upload"
+   "ebible_firebase_folder"
   ],
   "lines": [
    "function_transform_marker_specified"
@@ -13105,8 +13102,7 @@
   "verse": [
    "app_reply_main",
    "ebible_verses_upload",
-   "ebible_verse_download",
-   "ebible_version_books_upload"
+   "ebible_verse_download"
   ],
   "preview_refresh": [
    "app_reply_main"
@@ -13723,8 +13719,7 @@
    "ebible_verse_download",
    "sandbox_2",
    "ebible_verse",
-   "ebible_chapter_code_normalize",
-   "ebible_version_books_upload"
+   "ebible_chapter_code_normalize"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13852,8 +13847,7 @@
    "ebible_references_parse",
    "ebible_verses_upload_name",
    "ebible_verse_download",
-   "ebible_verse_new",
-   "ebible_version_books_upload"
+   "ebible_verse_new"
   ],
   "ebible_verse": [
    "ebible_verse"
@@ -14093,8 +14087,7 @@
   "ebible_verses_upload_name": [
    "ebible_verses_upload",
    "ebible_verses_upload_name",
-   "ebible_verse_download",
-   "ebible_version_books_upload"
+   "ebible_verse_download"
   ],
   "verse_text": [
    "app_reply_main"
@@ -27790,18 +27783,11 @@
    "async": true,
    "identifiers": [
     "ebible_firebase_upload",
-    "object_merge",
-    "ebible_verses_upload_name",
-    "object_property_get",
     "ebible_version_books",
     "marker",
     "ebible_version_books_upload",
     "bible_folder",
-    "books",
-    "verse_number",
-    "joined2",
-    "chapter_code",
-    "verse"
+    "books"
    ]
   },
   "file_temp": {
@@ -27818,7 +27804,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-19T15:30:28.703Z",
+ "git_push_when": "2025-09-19T17:05:27.171Z",
  "error_attention": null,
  "app_current": "replace"
 }
