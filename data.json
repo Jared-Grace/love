@@ -2057,7 +2057,6 @@
   "u lw",
   "s pair",
   "s clip",
-  "s upload",
   "evu benirv",
   "evu tel2017",
   "s test",
@@ -2123,7 +2122,8 @@
   "ev",
   "u ev",
   "a ev ebible_verses",
-  "ev engbsb EZR08"
+  "ev engbsb EZR08",
+  "s upload"
  ],
  "marker_current": "1",
  "function_current": "command_line",
