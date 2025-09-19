@@ -14546,7 +14546,7 @@
    "app_reply_main",
    "ebible_chapter_code_to_name"
   ],
-  "language": [
+  "languages_chosens": [
    "app_reply_main"
   ]
  },
@@ -24881,6 +24881,7 @@
     "verse_random_get",
     "root",
     "copied",
+    "languages_chosens",
     "buttons",
     "preview",
     "chosens",
@@ -24889,7 +24890,6 @@
     "verse_number",
     "verse",
     "v",
-    "language",
     "lambda6",
     "event",
     "key",
