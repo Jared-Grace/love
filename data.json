@@ -847,7 +847,6 @@
   "as function_new_transform",
   "a fnt function_new_transform",
   "u jsp",
-  "s parse",
   "a jps js_parse_statement",
   "a fc functions_combine",
   "fc fs t",
@@ -2153,7 +2152,8 @@
   "s is list_take",
   "is string_take",
   "s ebible,to",
-  "s integer"
+  "s integer",
+  "s parse"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
