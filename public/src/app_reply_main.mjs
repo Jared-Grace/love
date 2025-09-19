@@ -42,7 +42,7 @@ export async function app_reply_main() {
   let property_name = "language_code";
   let languages = ebible_languages();
   let found = list_find_property(languages, property_name, en);
-  list_remove(list, item3);
+  list_remove(languages, found);
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
