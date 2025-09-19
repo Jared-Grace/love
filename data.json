@@ -2120,7 +2120,6 @@
   "is ebible_verses_upload",
   "o sb",
   "sb",
-  "s reply",
   "s new",
   "fw ebv ebible_verse",
   "o ebible_verse",
@@ -2128,7 +2127,8 @@
   "as rename",
   "rs ebible_verse new",
   "ps",
-  "fw ev ebible_verse"
+  "fw ev ebible_verse",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
