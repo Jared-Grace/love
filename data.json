@@ -1484,7 +1484,6 @@
   "a fpc folder_public_combine",
   "mc fpc",
   "ir second file_name",
-  "s open",
   "mc file_open",
   "ir f_path combined",
   "a oh app_html_open",
@@ -2146,7 +2145,8 @@
   "s second",
   "p",
   "ev tel,en EZK18:31",
-  "s temp"
+  "s temp",
+  "s open"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
