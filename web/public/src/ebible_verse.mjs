@@ -1,3 +1,4 @@
+import { file_open } from "./file_open.mjs";
 import { file_write } from "./file_write.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { list_first_second } from "./list_first_second.mjs";
@@ -30,7 +31,7 @@ export async function ebible_verse(language_codes, chapter_verse) {
   let joined = list_join_newline_2(verse_texts);
   async function lambda2(temp_path) {
     await file_write(temp_path, joined);
-    fo;
+    await file_open(f_path);
   }
   await file_temp(lambda2);
   return verse_texts;
