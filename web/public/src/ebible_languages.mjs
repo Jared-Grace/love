@@ -4,6 +4,7 @@ export function ebible_languages() {
     {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
+      language_code: "ur",
     },
     {
       name: "Swhahili",
