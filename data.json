@@ -13569,7 +13569,8 @@
    "ebible_version_books_testament",
    "html_parse_href",
    "html_parse_href_text",
-   "ebible_chapter_code_to_book"
+   "ebible_chapter_code_to_book",
+   "app_reply_main"
   ],
   "ebible_class_old": [
    "ebible_version_books_testament_old",
@@ -14007,7 +14008,8 @@
   "ebible_chapter_code_to_book": [
    "ebible_chapter_code_to_book",
    "ebible_version_books_testament",
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ],
   "ebible_book_code_size": [
    "ebible_chapter_code_to_book",
@@ -14527,6 +14529,9 @@
    "app_reply_main"
   ],
   "file_name2": [
+   "app_reply_main"
+  ],
+  "book_code2": [
    "app_reply_main"
   ]
  },
@@ -24809,6 +24814,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_chapter_code_to_book",
     "list_find_property",
     "ebible_version_books_upload_name",
     "firebase_storage_download_ebible",
@@ -24855,9 +24861,6 @@
     "index",
     "file_name2",
     "books",
-    "book",
-    "book_code",
-    "book_name",
     "verses",
     "verse_random_get",
     "root",
@@ -24901,6 +24904,11 @@
     "text",
     "component",
     "lambda3",
+    "book_code2",
+    "href",
+    "book",
+    "book_code",
+    "book_name",
     "verse_texts",
     "reference",
     "verse_text",
