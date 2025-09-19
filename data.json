@@ -3356,8 +3356,7 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2",
-   "app_reply_main"
+   "sandbox_2"
   ],
   "v": [
    "data_identifiers_file",
@@ -14553,9 +14552,6 @@
   ],
   "languages_chosens": [
    "app_reply_main"
-  ],
-  "item3": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -24938,10 +24934,8 @@
     "verse_texts",
     "reference",
     "verse_text",
-    "ne",
-    "list",
     "other",
-    "item3",
+    "ne",
     "concated",
     "joined"
    ]
