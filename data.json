@@ -14469,11 +14469,11 @@
   "language_codes": [
    "ebible_verse"
   ],
-  "ebible_folder_engbsb": [
-   "ebible_languages"
-  ],
   "list_remove_property": [
    "app_reply_main"
+  ],
+  "ebible_folder_eng": [
+   "ebible_languages"
   ]
  },
  "functions": {
@@ -27705,7 +27705,7 @@
     "languages",
     "name",
     "bible_folder",
-    "ebible_folder_engbsb",
+    "ebible_folder_eng",
     "language_code"
    ]
   },
