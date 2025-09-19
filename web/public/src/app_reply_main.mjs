@@ -39,7 +39,7 @@ import { marker } from "./marker.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let languages = ebible_languages();
-  list_remove_property(languages, "language_code", en);
+  list_remove_property(languages, "language_code", "en");
   let file_name = ebible_index_flat_upload_name();
   let destination = ebible_firebase_upload_path(en, file_name);
   let index = await firebase_storage_download_json(destination);
