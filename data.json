@@ -2081,8 +2081,6 @@
   "u u",
   "u e",
   "u st",
-  "sb",
-  "s reply",
   "s ebible",
   "is ebible_chapters_each_verses_list",
   "is ebible_version_books_testament_apocrypha",
@@ -2124,7 +2122,9 @@
   "ev engbsb EZR08",
   "s upload",
   "is ebible_verses_upload",
-  "o sb"
+  "o sb",
+  "sb",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
