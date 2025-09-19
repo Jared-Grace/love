@@ -2069,7 +2069,6 @@
   "s chapter",
   "ebible_chapters_each_verses_check engwebu",
   "ect engwebu SIR01",
-  "o sb",
   "u evu",
   "o evu",
   "s code",
@@ -2124,10 +2123,11 @@
   "a ev ebible_verses",
   "ev engbsb EZR08",
   "s upload",
-  "is ebible_verses_upload"
+  "is ebible_verses_upload",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "command_line",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
