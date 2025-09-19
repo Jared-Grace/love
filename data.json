@@ -12289,7 +12289,6 @@
    "firebase_upload_generic",
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
-   "app_reply_main",
    "firebase_storage_download_json"
   ],
   "date_now_file": [
@@ -14031,7 +14030,6 @@
   "ebible_firebase_upload_path": [
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
-   "app_reply_main",
    "ebible_verse_download"
   ],
   "file_name_with_extension": [
@@ -14081,7 +14079,6 @@
    "ebible_index_flat_upload_name"
   ],
   "firebase_storage_download_json": [
-   "app_reply_main",
    "ebible_verse_download",
    "firebase_storage_download_json"
   ],
@@ -14514,6 +14511,9 @@
   ],
   "lambda$temp_path": [
    "file_temp"
+  ],
+  "firebase_storage_download_ebible": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24795,6 +24795,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download_ebible",
     "list_remove_property",
     "ebible_languages",
     "string_take_less_1",
@@ -24803,10 +24804,8 @@
     "ebible_verse_download",
     "list_map_property",
     "list_first",
-    "firebase_storage_download_json",
     "ebible_index_flat_upload_name",
     "ebible_folder_english",
-    "ebible_firebase_upload_path",
     "not",
     "string_starts_with",
     "string_lower_to",
@@ -24837,7 +24836,6 @@
     "en",
     "languages",
     "file_name",
-    "destination",
     "index",
     "verses",
     "verse_random_get",
