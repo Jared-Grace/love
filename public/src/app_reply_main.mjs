@@ -1,5 +1,4 @@
-import { list_remove } from "./list_remove.mjs";
-import { list_find_property } from "./list_find_property.mjs";
+import { list_remove_property } from "./list_remove_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { string_take_less_1 } from "./string_take_less_1.mjs";
 import { equal } from "./equal.mjs";
@@ -147,8 +146,3 @@ export async function app_reply_main() {
     await clipboard_copy(joined);
   }
 }
-function list_remove_property(languages, property_name, en) {
-  let found = list_find_property(languages, property_name, en);
-  list_remove(languages, found);
-}
-
