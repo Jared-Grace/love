@@ -2859,8 +2859,7 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not",
-   "app_reply_main"
+   "object_property_set_exists_not"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -24794,7 +24793,6 @@
     "marker",
     "app_reply_main",
     "en",
-    "property_name",
     "languages",
     "file_name",
     "destination",
