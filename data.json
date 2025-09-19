@@ -2128,7 +2128,6 @@
   "ev ur MAT01 1",
   "u lma",
   "s list_map",
-  "s reply",
   "s remove",
   "s ps",
   "ev ur,en MAT01 1",
@@ -2148,7 +2147,8 @@
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
   "o sb",
-  "ebible_version_books_upload engbsb"
+  "ebible_version_books_upload engbsb",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
