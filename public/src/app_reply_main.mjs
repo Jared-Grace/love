@@ -140,7 +140,7 @@ export async function app_reply_main() {
     let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_texts = list_map_property(verses, "text");
-    let reference = chapter_code2 + ":" + verse_number2;
+    let reference = book_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     let concated = list_concat(copied, [verse_text]);
