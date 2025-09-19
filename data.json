@@ -2128,7 +2128,8 @@
   "rs ebible_verse new",
   "ps",
   "fw ev ebible_verse",
-  "s reply"
+  "s reply",
+  "s upper"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
