@@ -2136,7 +2136,6 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "ebible_versions_download",
    "command_line_generic",
    "ebible_verses"
   ],
@@ -25513,7 +25512,6 @@
   "ebible_versions_download": {
    "async": true,
    "identifiers": [
-    "log",
     "catch_ignore_async",
     "each_async",
     "ebible_version_download",
