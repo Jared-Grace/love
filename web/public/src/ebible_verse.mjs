@@ -16,6 +16,6 @@ export async function ebible_verse(language_codes, chapter_code, verse_number) {
     let v = list_find_property(vs, "verse_number", verse_number);
     return v;
   }
-  let waited = await list_map_unordered_async(language_codes, lambda);
-  return waited;
+  let verse_texts = await list_map_unordered_async(language_codes, lambda);
+  return verse_texts;
 }
