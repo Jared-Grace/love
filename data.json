@@ -2123,7 +2123,8 @@
   "u ev",
   "a ev ebible_verses",
   "ev engbsb EZR08",
-  "s upload"
+  "s upload",
+  "is ebible_verses_upload"
  ],
  "marker_current": "1",
  "function_current": "command_line",
