@@ -2130,10 +2130,11 @@
   "fw ev ebible_verse",
   "s reply",
   "s upper",
-  "s case"
+  "s case",
+  "n string_upper_to"
  ],
  "marker_current": "1",
- "function_current": "ebible_verse",
+ "function_current": "string_upper_to",
  "terminal": false,
  "identifiers": {
   "log": [
