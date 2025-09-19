@@ -13,9 +13,9 @@ export async function ebible_verse(language_codes, chapter_verse) {
   let split2 = string_split_colon(chapter_verse);
   let { first, second } = list_first_second(split2);
   let split = string_split_comma(language_codes);
+  let languages = ebible_languages();
   async function lambda(language_code) {
     let chapter_code = ebible_chapter_code_normalize(first);
-    let languages = ebible_languages();
     let l = list_find_property(languages, "language_code", language_code);
     let bible_folder = object_property_get(l, "bible_folder");
     let vs = await ebible_verses(bible_folder, chapter_code);
