@@ -2148,7 +2148,8 @@
   "ev tel,en NUM32:19",
   "o sb",
   "ebible_version_books_upload engbsb",
-  "s reply"
+  "s reply",
+  "u lt"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
