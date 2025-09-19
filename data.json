@@ -2152,7 +2152,8 @@
   "u lt",
   "s is list_take",
   "is string_take",
-  "s ebible,to"
+  "s ebible,to",
+  "s integer"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
