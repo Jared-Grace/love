@@ -1996,7 +1996,6 @@
   "s emoji",
   "ebible_verses_upload yor",
   "ebible_version_books_testament_new engbsb",
-  "s books",
   "ebible_version_books engbsb",
   "n sandbox",
   "s version",
@@ -2139,7 +2138,8 @@
   "ps",
   "p",
   "ev ur,en MAT01 1",
-  "s ebible"
+  "s ebible",
+  "s books"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
