@@ -2878,7 +2878,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "ebible_chapter_code_to_name"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3805,7 +3806,8 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "ebible_chapter_code_to_name"
   ],
   "watch": [
    "watch"
@@ -3957,7 +3959,8 @@
    "html_style_font_size",
    "js_statement_expression_get",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "ebible_chapter_code_to_name"
   ],
   "name": [
    "watch",
@@ -5017,7 +5020,8 @@
    "range_from",
    "firebase_storage_download_json",
    "path_join",
-   "string_upper_to"
+   "string_upper_to",
+   "ebible_chapter_code_to_name"
   ],
   "a": [
    "string_suffix_without",
@@ -5653,8 +5657,7 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to",
-   "ebible_chapter_code_to_name"
+   "string_to"
   ],
   "process": [
    "command_line_read",
@@ -6028,7 +6031,8 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "ebible_chapter_code_to_name"
   ],
   "each_pair": [
    "each_pair",
@@ -27843,15 +27847,19 @@
   "ebible_chapter_code_to_name": {
    "async": false,
    "identifiers": [
+    "object_property_set",
     "integer_to",
     "string_skip",
     "ebible_book_code_size",
     "ebible_chapter_code_to_name",
     "chapter_code",
     "count",
-    "chapter_name",
+    "s",
     "i",
-    "input"
+    "object",
+    "property_name",
+    "value",
+    "chapter_name"
    ]
   }
  },
