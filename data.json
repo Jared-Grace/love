@@ -2536,7 +2536,8 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic"
+   "file_write_generic",
+   "ebible_verse"
   ],
   "ast": [
    "data_identifiers_file",
@@ -6293,7 +6294,8 @@
    "html_parse_read",
    "file_write_generic",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "writeFile": [
    "file_overwrite",
@@ -6315,7 +6317,8 @@
    "file_write",
    "function_new_declaration",
    "file_write_json",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "folder_current": [
    "folder_current",
@@ -14516,9 +14519,6 @@
   ],
   "lambda$temp_path": [
    "file_temp"
-  ],
-  "fiw": [
-   "ebible_verse"
   ]
  },
  "functions": {
@@ -26019,6 +26019,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "file_write",
     "file_temp",
     "list_first_second",
     "string_split_colon",
@@ -26049,7 +26050,8 @@
     "verse_texts",
     "lambda2",
     "temp_path",
-    "fiw"
+    "f_path",
+    "contents"
    ]
   },
   "ebible_versions": {
