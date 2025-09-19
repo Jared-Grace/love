@@ -2850,7 +2850,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "ebible_verse"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3326,7 +3327,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse"
   ],
   "v": [
    "data_identifiers_file",
@@ -4120,7 +4122,8 @@
    "html_loading",
    "list_map_prefix_without_any",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_verse"
   ],
   "separator": [
    "watch",
@@ -9949,7 +9952,8 @@
    "js_outside_move",
    "list_filter_property",
    "js_imports_unused",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_verse"
   ],
   "fds": [
    "js_outside_move"
@@ -10179,7 +10183,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "ebible_verse"
   ],
   "list_find": [
    "list_find",
@@ -25929,6 +25934,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "list_filter_property",
     "ebible_languages",
     "ebible_verses",
     "marker",
@@ -25937,6 +25943,10 @@
     "chapter_code",
     "verse_number",
     "languages",
+    "result",
+    "list",
+    "property_name",
+    "property_value",
     "v",
     "bible_folder"
    ]
