@@ -2142,11 +2142,11 @@
   "o ev",
   "s second",
   "p",
-  "ev tel,en EZK18:31",
   "s temp",
   "s open",
   "u fo",
-  "ps"
+  "ps",
+  "ev tel,en EZK18:31"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
