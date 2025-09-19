@@ -2450,7 +2450,8 @@
    "sandbox_3",
    "sandbox_2",
    "command_line",
-   "sandbox"
+   "sandbox",
+   "ebible_verse"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -25917,6 +25918,7 @@
   "ebible_verse": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_join_space",
     "ebible_verse",
     "tokens",
