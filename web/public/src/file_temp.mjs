@@ -6,7 +6,7 @@ export async function file_temp(lambda$temp_path) {
   let temp_path = folder_user_combine("temp", u);
   let result = null;
   try {
-    result = await lambda(temp_path);
+    result = await lambda$temp_path(temp_path);
   } finally {
     await file_delete_if_exists(temp_path);
   }
