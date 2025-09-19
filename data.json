@@ -2110,7 +2110,6 @@
   "o s2",
   "u cl",
   "o command_line",
-  "p",
   "s2",
   "s text",
   "ebible_chapter_text engbsb EZR08",
@@ -2118,6 +2117,7 @@
   "s verses",
   "ebible_verses engbsb EZR08",
   "ebible_chapter_text EZR08",
+  "p",
   "ect engbsb EZR08"
  ],
  "marker_current": "1",
