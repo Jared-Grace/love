@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_version_books_upload_name } from "./ebible_version_books_upload_name.mjs";
 import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
@@ -45,8 +46,6 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_ebible(en, file_name);
   let file_name2 = ebible_version_books_upload_name();
   let books = await firebase_storage_download_ebible(en, file_name2);
-  let book = list_find_property(books, "book_code", book_code);
-  let book_name = object_property_get(book, "text");
   let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
@@ -136,6 +135,9 @@ export async function app_reply_main() {
   async function preview_refresh() {
     let verse = list_first(verses);
     let chapter_code2 = object_property_get(verse, "chapter_code");
+    let book_code2 = ebible_chapter_code_to_book(href);
+    let book = list_find_property(books, "book_code", book_code);
+    let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
     let verse_texts = list_map_property(verses, "text");
     let reference = chapter_code2 + ":" + verse_number2;
