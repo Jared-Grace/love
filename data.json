@@ -7251,8 +7251,7 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "ebible_verse"
+   "list_map_unordered_async"
   ],
   "mapped2": [
    "function_dependencies_code",
@@ -14077,7 +14076,8 @@
    "app_reply_main"
   ],
   "verse_texts": [
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verse"
   ],
   "ebible_verse_download": [
    "app_reply_main",
@@ -25981,7 +25981,7 @@
     "bible_folder",
     "vs",
     "v",
-    "waited"
+    "verse_texts"
    ]
   },
   "ebible_versions": {
