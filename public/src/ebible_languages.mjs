@@ -4,47 +4,47 @@ export function ebible_languages() {
     {
       name: "English",
       bible_folder: ebible_folder_engbsb(),
-      code: "en",
+      language_code: "en",
     },
     {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
-      code: "ur",
+      language_code: "ur",
     },
     {
       name: "Swhahili",
       bible_folder: "swhonen",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Luganda",
       bible_folder: "lug",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Bengali",
       bible_folder: "benirv",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Telugu",
       bible_folder: "tel2017",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Yoruba",
       bible_folder: "yor",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Cebuano",
       bible_folder: "cebulb",
-      code: "TODO",
+      language_code: "TODO",
     },
     {
       name: "Tagalog",
       bible_folder: "tglulb",
-      code: "TODO",
+      language_code: "TODO",
     },
   ];
   return languages;
