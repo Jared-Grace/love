@@ -14473,6 +14473,9 @@
   ],
   "ebible_folder_engbsb": [
    "ebible_languages"
+  ],
+  "list_remove_property": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -24797,7 +24800,7 @@
     "en",
     "property_name",
     "languages",
-    "found",
+    "list_remove_property",
     "file_name",
     "destination",
     "index",
@@ -24848,7 +24851,8 @@
     "reference",
     "verse_text",
     "concated",
-    "joined"
+    "joined",
+    "found"
    ]
   },
   "browser_is": {
