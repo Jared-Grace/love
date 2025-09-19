@@ -3579,8 +3579,7 @@
    "ebible_index_upload_name",
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
-   "ebible_verse_new",
-   "string_upper_to"
+   "ebible_verse_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7284,7 +7283,8 @@
    "function_aliases_restore",
    "function_exists_inner",
    "app_reply_main",
-   "uuid"
+   "uuid",
+   "string_upper_to"
   ],
   "to": [
    "function_parse_declaration",
@@ -27672,7 +27672,7 @@
    "identifiers": [
     "string_upper_to",
     "s",
-    "v",
+    "u",
     "toUpperCase"
    ]
   }
