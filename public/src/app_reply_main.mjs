@@ -57,7 +57,12 @@ export async function app_reply_main() {
   async function verse_random_get() {
     let { chapter_code, verse_number } = list_random_item(index);
     let verse = await ebible_verse_download(en, chapter_code, verse_number);
-    let v = [verse];
+    let v = [
+      {
+        verse,
+        language: en,
+      },
+    ];
     return v;
   }
   function lambda6(event) {
