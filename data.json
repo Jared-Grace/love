@@ -14136,9 +14136,6 @@
    "ebible_chapter_text",
    "list_intersect_empty_is_assert"
   ],
-  "swh": [
-   "app_reply_main"
-  ],
   "languages": [
    "app_reply_main"
   ],
@@ -24746,7 +24743,6 @@
     "app_reply_main",
     "en",
     "ur",
-    "swh",
     "languages",
     "name",
     "bible_folder",
