@@ -2131,7 +2131,7 @@
   "rs ebible_verse new"
  ],
  "marker_current": "1",
- "function_current": "ebible_verse",
+ "function_current": "ebible_verse_new",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -2452,7 +2452,8 @@
    "sandbox_2",
    "command_line",
    "sandbox",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_verse_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3574,7 +3575,8 @@
    "ebible_index_flat_upload_name",
    "ebible_index_upload_name",
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "ebible_verse_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3815,7 +3817,8 @@
    "ebible_firebase_upload_path",
    "ebible_references_parse",
    "ebible_verses_upload_name",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse_new"
   ],
   "watcher": [
    "watch"
@@ -4138,7 +4141,8 @@
    "list_join_space",
    "app_replace_rule_set",
    "ebible_verse",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse_new"
   ],
   "command_line_node_g": [
    "watch",
@@ -5538,7 +5542,8 @@
    "html_parse_href_text",
    "urdu_allah_to_god",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_verse_new"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -13795,7 +13800,8 @@
    "app_reply_main",
    "ebible_references_parse",
    "ebible_verses_upload_name",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "ebible_verse_new"
   ],
   "ebible_verse": [
    "ebible_verses",
@@ -13850,7 +13856,8 @@
    "app_reply_pray"
   ],
   "tokens": [
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_verse_new"
   ],
   "list_map_prefix_without": [
    "ebible_versions",
@@ -14416,6 +14423,9 @@
   ],
   "versions": [
    "sandbox"
+  ],
+  "ebible_verse_new": [
+   "ebible_verse_new"
   ]
  },
  "functions": {
@@ -27614,6 +27624,19 @@
     "options",
     "encoding",
     "stdout"
+   ]
+  },
+  "ebible_verse_new": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "list_join_space",
+    "ebible_verse_new",
+    "tokens",
+    "verse_number",
+    "joined",
+    "v",
+    "text"
    ]
   }
  },
