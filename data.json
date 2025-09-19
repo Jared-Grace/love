@@ -2127,7 +2127,8 @@
   "fw ev ebible_verse",
   "o ebible_verse",
   "s rename",
-  "as rename"
+  "as rename",
+  "rs ebible_verse new"
  ],
  "marker_current": "1",
  "function_current": "ebible_verse",
