@@ -2139,7 +2139,6 @@
    "ebible_versions_download",
    "firebase_upload_generic",
    "retry",
-   "sandbox_2",
    "sandbox_3",
    "command_line_generic",
    "ebible_verses"
@@ -14403,6 +14402,9 @@
    "command_line_generic"
   ],
   "command_line_cmd": [
+   "sandbox_2"
+  ],
+  "newLocal": [
    "sandbox_2"
   ]
  },
@@ -27520,7 +27522,6 @@
     "file_write",
     "file_temp",
     "list_join_space",
-    "log",
     "list_map_property",
     "ebible_chapters_each_verses_list",
     "ebible_books_to_chapter_codes",
@@ -27542,6 +27543,7 @@
     "output_path",
     "contents",
     "c",
+    "newLocal",
     "stdout",
     "books",
     "list",
