@@ -2,7 +2,7 @@ import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { ebible_verse } from "./ebible_verse.mjs";
+import { ebible_verse_new } from "./ebible_verse_new.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -28,7 +28,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda2(verse_number) {
       let index = list_index_of_last(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
-      const v = ebible_verse(skipped, verse_number);
+      const v = ebible_verse_new(skipped, verse_number);
       la(v);
       filtered = list_take(filtered, index);
     }
@@ -37,7 +37,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let list = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
   if (ne) {
-    const v = ebible_verse(filtered, "0");
+    const v = ebible_verse_new(filtered, "0");
     list_add(list, v);
   }
   list_reverse(list);
