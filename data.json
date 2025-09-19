@@ -2446,7 +2446,8 @@
    "file_delete_if_exists",
    "sandbox_3",
    "sandbox_2",
-   "command_line"
+   "command_line",
+   "sandbox"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -21292,6 +21293,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "marker",
     "sandbox"
    ],
    "async": true
