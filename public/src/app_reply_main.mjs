@@ -1,3 +1,4 @@
+import { list_find_property } from "./list_find_property.mjs";
 import { ebible_version_books_upload_name } from "./ebible_version_books_upload_name.mjs";
 import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
@@ -44,6 +45,8 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_ebible(en, file_name);
   let file_name2 = ebible_version_books_upload_name();
   let books = await firebase_storage_download_ebible(en, file_name2);
+  let book = list_find_property(books, "book_code", book_code);
+  let book_name = object_property_get(book, "text");
   let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
