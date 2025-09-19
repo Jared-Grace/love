@@ -1,3 +1,4 @@
+import { newline } from "./newline.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_rainbow } from "./emoji_rainbow.mjs";
 import { string_the_servant_of_god } from "./string_the_servant_of_god.mjs";
@@ -258,7 +259,9 @@ export function app_reply_choices() {
     {
       text: "Song",
       response:
-        "https://www.facebook.com/share/v/1S8cfXxtpZ/" +newline()+newline()+
+        "https://www.facebook.com/share/v/1S8cfXxtpZ/" +
+        newline() +
+        newline() +
         " Jesus gave me the grace to write this song",
     },
     {
