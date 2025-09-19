@@ -3089,8 +3089,7 @@
    "list_map_split_space",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_verse",
-   "file_temp"
+   "ebible_verse"
   ],
   "previous": [
    "data_identifiers_file",
@@ -27814,8 +27813,7 @@
     "lambda$temp_path",
     "u",
     "temp_path",
-    "result",
-    "lambda"
+    "result"
    ]
   }
  },
