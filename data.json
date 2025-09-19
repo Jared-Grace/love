@@ -14502,7 +14502,8 @@
   ],
   "language_code": [
    "ebible_languages",
-   "ebible_verse"
+   "ebible_verse",
+   "app_reply_main"
   ],
   "string_upper_to": [
    "string_upper_to",
@@ -24902,6 +24903,7 @@
     "item2",
     "name2",
     "bible_folder2",
+    "language_code",
     "lambda7",
     "chapter_code2",
     "verse_number2",
