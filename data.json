@@ -5653,7 +5653,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "ebible_chapter_code_to_name"
   ],
   "process": [
    "command_line_read",
@@ -6068,7 +6069,8 @@
    "ebible_chapter_code_to_book",
    "range_from",
    "number_pad",
-   "retry"
+   "retry",
+   "ebible_chapter_code_to_name"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -7468,7 +7470,8 @@
    "js_expand_generic",
    "html_parse_list_text_to",
    "catch_call",
-   "list_intersect_empty_is_assert"
+   "list_intersect_empty_is_assert",
+   "ebible_chapter_code_to_name"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -8731,7 +8734,8 @@
    "marker_down",
    "marker_up",
    "js_dollar_a",
-   "range_from"
+   "range_from",
+   "ebible_chapter_code_to_name"
   ],
   "parseInt": [
    "integer_to"
@@ -10715,7 +10719,8 @@
   ],
   "string_skip": [
    "string_prefix_without",
-   "string_skip"
+   "string_skip",
+   "ebible_chapter_code_to_name"
   ],
   "startsWith": [
    "string_starts_with"
@@ -13728,7 +13733,8 @@
    "sandbox_2",
    "ebible_verse",
    "ebible_chapter_code_normalize",
-   "ebible_chapter_code_to_book"
+   "ebible_chapter_code_to_book",
+   "ebible_chapter_code_to_name"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -14014,7 +14020,8 @@
   ],
   "ebible_book_code_size": [
    "ebible_chapter_code_to_book",
-   "ebible_book_code_size"
+   "ebible_book_code_size",
+   "ebible_chapter_code_to_name"
   ],
   "ebible_index": [
    "ebible_index_upload",
@@ -14032,7 +14039,8 @@
   ],
   "chapter_name": [
    "ebible_index",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_chapter_code_to_name"
   ],
   "chapter": [
    "ebible_index"
@@ -14534,7 +14542,8 @@
   ],
   "ebible_chapter_code_to_name": [
    "ebible_index",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_chapter_code_to_name"
   ]
  },
  "functions": {
@@ -27829,6 +27838,20 @@
     "u",
     "temp_path",
     "result"
+   ]
+  },
+  "ebible_chapter_code_to_name": {
+   "async": false,
+   "identifiers": [
+    "integer_to",
+    "string_skip",
+    "ebible_book_code_size",
+    "ebible_chapter_code_to_name",
+    "chapter_code",
+    "count",
+    "chapter_name",
+    "i",
+    "input"
    ]
   }
  },
