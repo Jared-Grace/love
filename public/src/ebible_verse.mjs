@@ -11,7 +11,7 @@ import { marker } from "./marker.mjs";
 export async function ebible_verse(language_codes, chapter_verse) {
   marker("1");
   let split2 = string_split_colon(chapter_verse);
-  let result = list_first_second(list);
+  let { first, second } = list_first_second(split2);
   let split = string_split_comma(language_codes);
   async function lambda(language_code) {
     let chapter_code = ebible_chapter_code_normalize(chapter_code);
