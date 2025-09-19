@@ -1786,7 +1786,6 @@
   "s html,hide",
   "s html,hid",
   "s vis",
-  "s remove",
   "c html_style_remove html_remove",
   "r prayer_ending prayer_end",
   "s clear",
@@ -2137,7 +2136,8 @@
   "ev ur MAT01 1",
   "u lma",
   "s list_map",
-  "s reply"
+  "s reply",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "string_upper_to",
