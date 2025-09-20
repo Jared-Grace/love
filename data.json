@@ -13607,7 +13607,8 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "ebible_references_parse",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_verse"
   ],
   "string_take": [
    "string_take",
@@ -26085,6 +26086,7 @@
     "list_join_newline_2",
     "ebible_verse",
     "language_codes",
+    "book_code",
     "chapter_verse",
     "split2",
     "first",
