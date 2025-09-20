@@ -2160,7 +2160,8 @@
   "c list_map_split_space list_map_split_comma",
   "d",
   "ps",
-  "sb"
+  "sb",
+  "s normal"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
