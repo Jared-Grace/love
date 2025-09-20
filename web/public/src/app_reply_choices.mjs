@@ -259,7 +259,7 @@ export function app_reply_choices() {
     {
       text: "Song",
       response:
-        "https://www.facebook.com/share/v/1S8cfXxtpZ/" +
+        "https://youtu.be/rNhSoUKPgMQ" +
         newline() +
         newline() +
         " Jesus gave me the grace to write this song",
