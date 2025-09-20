@@ -2003,7 +2003,6 @@
   "a flr file_read",
   "s read",
   "as any",
-  "s list,map",
   "s starts",
   "is list_any_starts_with",
   "c list_any_starts_with list_find_starts_with",
@@ -2159,7 +2158,8 @@
   "as file",
   "a flo file_open",
   "s newl",
-  "sb"
+  "sb",
+  "s list,map"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
