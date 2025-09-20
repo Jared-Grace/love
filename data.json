@@ -1779,7 +1779,6 @@
   "s copy",
   "n browser_is",
   "s main",
-  "s newl",
   "cs list_join_newline 2",
   "s html,hide",
   "s html,hid",
@@ -2159,7 +2158,8 @@
   "o sb",
   "as file",
   "a flo file_open",
-  "sb"
+  "sb",
+  "s newl"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
