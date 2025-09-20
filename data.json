@@ -2144,7 +2144,6 @@
   "p",
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
-  "o sb",
   "ebible_version_books_upload engbsb",
   "u lt",
   "s is list_take",
@@ -2157,7 +2156,8 @@
   "is ebible_chapter_code_to_name",
   "s reply",
   "ev Hebrew 11:6",
-  "ev swh,en Hebrew 11:6"
+  "ev swh,en Hebrew 11:6",
+  "o sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
