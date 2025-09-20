@@ -12202,7 +12202,8 @@
    "ternary",
    "html_enable_if",
    "html_style_set_or_remove",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_reply_main"
   ],
   "html_text_set_if": [
    "app_replace_rule_set",
@@ -24921,6 +24922,7 @@
     "lower",
     "sw",
     "includes",
+    "condition",
     "lambda",
     "choice",
     "response2",
@@ -27869,7 +27871,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-20T18:28:50.096Z",
+ "git_push_when": "2025-09-20T21:17:16.130Z",
  "error_attention": null,
  "app_current": "replace"
 }
