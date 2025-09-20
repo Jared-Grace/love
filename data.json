@@ -181,7 +181,8 @@
   "flw": "file_write",
   "s3": "sandbox_3",
   "evs": "ebible_verses",
-  "ev": "ebible_verse"
+  "ev": "ebible_verse",
+  "flo": "file_open"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2157,7 +2158,8 @@
   "ev Hebrew 11:6",
   "ev swh,en Hebrew 11:6",
   "o sb",
-  "as file"
+  "as file",
+  "a flo file_open"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
