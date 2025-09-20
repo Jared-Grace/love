@@ -12985,12 +12985,10 @@
    "html_style_set_or_remove"
   ],
   "html_display_none": [
-   "html_display_none",
-   "app_reply_main"
+   "html_display_none"
   ],
   "html_display_block": [
-   "html_display_block",
-   "app_reply_main"
+   "html_display_block"
   ],
   "app_reply_choices": [
    "app_reply_main",
@@ -14552,6 +14550,9 @@
    "ebible_chapter_code_to_name"
   ],
   "languages_chosens": [
+   "app_reply_main"
+  ],
+  "html_display_none_or_block": [
    "app_reply_main"
   ]
  },
@@ -24834,6 +24835,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "html_display_none_or_block",
     "list_empty_not_is",
     "ebible_chapter_code_to_name",
     "ebible_chapter_code_to_book",
@@ -24862,8 +24864,6 @@
     "html_p_text_multiple",
     "html_clear",
     "app_reply_choices",
-    "html_display_block",
-    "html_display_none",
     "each",
     "list_map",
     "list_empty",
