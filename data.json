@@ -21578,10 +21578,10 @@
     "contents",
     "split",
     "mapped3",
-    "mapped",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped",
+    "list"
    ],
    "async": true
   },
