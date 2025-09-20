@@ -7327,7 +7327,8 @@
    "html_parse_find_a_href_starts_with",
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "sandbox"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -14428,7 +14429,8 @@
   "mapped3": [
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "sandbox"
   ],
   "chapter_verses_list": [
    "ebible_references_parse"
@@ -14658,7 +14660,8 @@
    "folder_user_docs_path"
   ],
   "list_map_split_comma": [
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "sandbox"
   ],
   "cmd": [
    "command_line_cmd"
@@ -21559,6 +21562,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map_split_comma",
     "string_split_newline",
     "file_read",
     "folder_user_docs_path",
@@ -21566,7 +21570,9 @@
     "sandbox",
     "file_path",
     "contents",
-    "split"
+    "split",
+    "mapped3",
+    "mapped2"
    ],
    "async": true
   },
