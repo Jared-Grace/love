@@ -12,7 +12,7 @@ import { ebible_languages } from "./ebible_languages.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
-export async function ebible_verse(language_codes, chapter_verse) {
+export async function ebible_verse(language_codes, book_code, chapter_verse) {
   marker("1");
   let split2 = string_split_colon(chapter_verse);
   let { first, second } = list_first_second(split2);
