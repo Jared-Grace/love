@@ -6,5 +6,6 @@ export async function sandbox() {
   marker("1");
   let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
   let contents = await file_read(file_path);
-  let split = string_split_newline(list);
+  let split = string_split_newline(contents);
+  return split;
 }
