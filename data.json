@@ -6286,8 +6286,7 @@
    "function_open",
    "app_html_open",
    "html_update_generic",
-   "ebible_verse",
-   "sandbox"
+   "ebible_verse"
   ],
   "terminal": [
    "file_open"
@@ -14574,9 +14573,6 @@
   "folder_user_docs_path": [
    "ebible_references_parse_god_created_man_why",
    "sandbox"
-  ],
-  "file_path2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21466,13 +21462,11 @@
   "sandbox": {
    "identifiers": [
     "file_read",
-    "file_open",
     "folder_user_docs_path",
     "marker",
     "sandbox",
     "file_path",
-    "contents",
-    "file_path2"
+    "contents"
    ],
    "async": true
   },
