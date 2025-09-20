@@ -4301,7 +4301,8 @@
    "file_parent_exists_ensure",
    "ebible_references_parse",
    "file_delete_if_exists",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "sandbox"
   ],
   "object_property_get": [
    "chalk_color",
@@ -14566,7 +14567,8 @@
    "ebible_references_parse_god_created_man_why"
   ],
   "folder_user_docs_path": [
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21455,8 +21457,10 @@
   },
   "sandbox": {
    "identifiers": [
+    "folder_user_docs_path",
     "marker",
-    "sandbox"
+    "sandbox",
+    "file_path"
    ],
    "async": true
   },
