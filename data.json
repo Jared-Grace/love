@@ -14564,6 +14564,9 @@
   ],
   "ebible_references_parse_god_created_man_why": [
    "ebible_references_parse_god_created_man_why"
+  ],
+  "folder_user_docs_path": [
+   "ebible_references_parse_god_created_man_why"
   ]
  },
  "functions": {
@@ -27881,6 +27884,7 @@
   "ebible_references_parse_god_created_man_why": {
    "async": true,
    "identifiers": [
+    "folder_user_docs_path",
     "ebible_references_parse",
     "ebible_folder_english",
     "ebible_folder_urdu",
