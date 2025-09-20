@@ -1,3 +1,4 @@
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -26,8 +27,6 @@ import { list_random_item } from "./list_random_item.mjs";
 import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_choices } from "./app_reply_choices.mjs";
-import { html_display_block } from "./html_display_block.mjs";
-import { html_display_none } from "./html_display_none.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_empty } from "./list_empty.mjs";
@@ -113,11 +112,7 @@ export async function app_reply_main() {
       let sw = string_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
       const condition = includes || not(sw);
-      if (condition) {
-        html_display_none(item);
-      } else {
-        html_display_block(item);
-      }
+      html_display_none_or_block(condition, item);
     }
     each(buttons, lambda2);
   }
