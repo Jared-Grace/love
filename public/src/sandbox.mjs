@@ -1,3 +1,4 @@
+import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_split_comma } from "./list_map_split_comma.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
@@ -11,6 +12,6 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let mapped3 = list_map_split_comma(split);
   function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(list, whitespace_normalize);
   return mapped3;
 }
