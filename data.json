@@ -13926,7 +13926,8 @@
   "whitespace_normalize": [
    "whitespace_normalize",
    "ebible_verses",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "sandbox"
   ],
   "trim": [
    "whitespace_normalize"
@@ -21567,6 +21568,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "whitespace_normalize",
     "list_map",
     "list_map_split_comma",
     "string_split_newline",
