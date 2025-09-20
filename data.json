@@ -2159,7 +2159,8 @@
   "a flo file_open",
   "s newl",
   "sb",
-  "s list,map"
+  "s list,map",
+  "c list_map_split_space list_map_split_comma"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
