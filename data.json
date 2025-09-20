@@ -2155,7 +2155,9 @@
   "s ebible",
   "is string_skip",
   "is ebible_chapter_code_to_name",
-  "s reply"
+  "s reply",
+  "ev Hebrew 11:6",
+  "ev swh,en Hebrew 11:6"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
