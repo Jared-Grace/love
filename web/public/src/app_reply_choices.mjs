@@ -127,6 +127,12 @@ export function app_reply_choices() {
       response: "God help us" + prayer_end(),
     },
     {
+      text: emoji_question() + " Help what",
+      response:
+        emoji_pray() +
+        "What help are you asking for? What are you asking me to do?",
+    },
+    {
       text: emoji_ok() + " How day",
       response:
         emoji_ok() +
