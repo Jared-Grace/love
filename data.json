@@ -8687,7 +8687,8 @@
    "app_reply_main",
    "ebible_index_flat_upload",
    "ebible_index_flat_upload_name",
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "ebible_references_parse_god_created_man_why"
   ],
   "html_update": [
    "html_update",
@@ -27886,6 +27887,7 @@
     "ebible_references_parse_god_created_man_why",
     "v2",
     "v",
+    "file_name",
     "file_path",
     "bible_folders",
     "list"
