@@ -3358,7 +3358,8 @@
    "each_index_async",
    "ebible_references_parse",
    "object_merge_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_references_parse_god_created_man_why"
   ],
   "v": [
    "data_identifiers_file",
@@ -3608,7 +3609,8 @@
    "ebible_index_upload_name",
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_references_parse_god_created_man_why"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4298,7 +4300,8 @@
    "ebible_version_download_path_combine",
    "file_parent_exists_ensure",
    "ebible_references_parse",
-   "file_delete_if_exists"
+   "file_delete_if_exists",
+   "ebible_references_parse_god_created_man_why"
   ],
   "object_property_get": [
    "chalk_color",
@@ -5315,7 +5318,8 @@
    "ebible_folder_urdu",
    "emoji_rainbow",
    "emoji_rock",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_references_parse_god_created_man_why"
   ],
   "readdirSync": [
    "folder_read"
@@ -14060,11 +14064,13 @@
    "app_reply_main",
    "ebible_folder_english",
    "ebible_references_parse",
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_references_parse_god_created_man_why"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_references_parse_god_created_man_why"
   ],
   "ebible_index_upload_name": [
    "ebible_index_upload",
@@ -14317,10 +14323,12 @@
    "each_multiple_async"
   ],
   "bible_folders": [
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_references_parse_god_created_man_why"
   ],
   "ebible_references_parse": [
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_references_parse_god_created_man_why"
   ],
   "string_split_dash": [
    "ebible_references_parse",
@@ -14552,6 +14560,9 @@
   ],
   "html_display_none_or_block": [
    "app_reply_main"
+  ],
+  "ebible_references_parse_god_created_man_why": [
+   "ebible_references_parse_god_created_man_why"
   ]
  },
  "functions": {
@@ -27864,6 +27875,20 @@
     "s",
     "i",
     "chapter_name"
+   ]
+  },
+  "ebible_references_parse_god_created_man_why": {
+   "async": true,
+   "identifiers": [
+    "ebible_references_parse",
+    "ebible_folder_english",
+    "ebible_folder_urdu",
+    "ebible_references_parse_god_created_man_why",
+    "v2",
+    "v",
+    "file_path",
+    "bible_folders",
+    "list"
    ]
   }
  },
