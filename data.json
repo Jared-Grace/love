@@ -4217,7 +4217,8 @@
    "function_format",
    "function_read",
    "html_parse_read",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "js_parse": [
    "file_js_parse",
@@ -6314,7 +6315,8 @@
    "html_parse_read",
    "file_write_generic",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "writeFile": [
    "file_overwrite",
@@ -14572,6 +14574,9 @@
   "folder_user_docs_path": [
    "ebible_references_parse_god_created_man_why",
    "sandbox"
+  ],
+  "file_path2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21460,11 +21465,14 @@
   },
   "sandbox": {
    "identifiers": [
+    "file_read",
     "file_open",
     "folder_user_docs_path",
     "marker",
     "sandbox",
-    "file_path"
+    "file_path",
+    "contents",
+    "file_path2"
    ],
    "async": true
   },
