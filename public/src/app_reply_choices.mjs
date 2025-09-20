@@ -293,6 +293,10 @@ export function app_reply_choices() {
     },
     travel_pray,
     {
+      text: emoji_question() + " What",
+      response: emoji_pray() + "What do you mean?",
+    },
+    {
       text: emoji_phone() + " WhatsApp",
       response: emoji_phone() + " WhatsApp: +1-904-314-4052",
     },
