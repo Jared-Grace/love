@@ -3106,7 +3106,6 @@
    "object_merge_generic",
    "sandbox_2",
    "ebible_verse",
-   "list_map_split_comma",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list"
   ],
@@ -4525,7 +4524,6 @@
    "each_index_async",
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma",
    "html_display_none_or_block"
   ],
   "list_includes": [
@@ -12079,8 +12077,7 @@
    "string_split_empty",
    "ebible_references_parse",
    "list_map_split_space",
-   "ebible_verse",
-   "list_map_split_comma"
+   "ebible_verse"
   ],
   "list_take": [
    "list_take",
@@ -28025,9 +28022,6 @@
     "list_map",
     "list_map_split_comma",
     "mapped2",
-    "lambda",
-    "item",
-    "split2",
     "mapped3"
    ]
   },
