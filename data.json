@@ -4183,7 +4183,8 @@
    "tasks_run",
    "list_join_newline_2",
    "list_join_newline",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -5043,7 +5044,8 @@
    "firebase_storage_download_json",
    "path_join",
    "string_upper_to",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -6526,7 +6528,8 @@
    "html_parse_descendants_classes",
    "string_split_newline",
    "string_split_colon",
-   "string_split_dash"
+   "string_split_dash",
+   "sandbox"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -12077,7 +12080,8 @@
    "string_split_empty",
    "ebible_references_parse",
    "list_map_split_space",
-   "ebible_verse"
+   "ebible_verse",
+   "sandbox"
   ],
   "list_take": [
    "list_take",
@@ -21562,6 +21566,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split",
     "whitespace_normalize",
     "list_map",
     "list_map_split_comma",
@@ -21574,6 +21579,9 @@
     "contents",
     "split",
     "mapped",
+    "split2",
+    "s",
+    "separator",
     "mapped3"
    ],
    "async": true
