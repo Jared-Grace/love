@@ -2049,7 +2049,6 @@
   "evu benirv",
   "evu tel2017",
   "s test",
-  "d",
   "is ebible_version_books_testament_new",
   "is ebible_class_old",
   "ebible_version_books_testament engwebu aa",
@@ -2160,7 +2159,8 @@
   "s newl",
   "sb",
   "s list,map",
-  "c list_map_split_space list_map_split_comma"
+  "c list_map_split_space list_map_split_comma",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
@@ -2883,7 +2883,8 @@
    "global_function_property_async",
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "list_remove_property"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3104,7 +3105,9 @@
    "object_merge_generic",
    "sandbox_2",
    "ebible_verse",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters_each_verses_list"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3205,7 +3208,8 @@
    "retry",
    "each_index_async",
    "ebible_references_parse",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_books_to_chapter_codes"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3363,7 +3367,9 @@
    "ebible_references_parse",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters_each_verses_list"
   ],
   "v": [
    "data_identifiers_file",
@@ -3614,7 +3620,9 @@
    "ebible_version_books",
    "ebible_version_books_testament_apocrypha",
    "ebible_verse_new",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "ebible_class_apocrypha",
+   "ebible_version_books_upload_name"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3750,7 +3758,8 @@
    "log_error",
    "git_push",
    "retry",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "ebible_chapters_each_verses_list"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -3856,7 +3865,8 @@
    "ebible_verses_upload_name",
    "sandbox_2",
    "ebible_verse_new",
-   "ebible_verse"
+   "ebible_verse",
+   "folder_user_combine"
   ],
   "watcher": [
    "watch"
@@ -4159,7 +4169,8 @@
    "list_map_prefix_without_any",
    "retry",
    "ebible_references_parse",
-   "file_temp"
+   "file_temp",
+   "folder_user_combine"
   ],
   "separator": [
    "watch",
@@ -4388,7 +4399,8 @@
    "object_property_get_name",
    "ebible_references_parse",
    "object_merge_generic",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_books_to_chapter_codes"
   ],
   "data_save": [
    "data_file_update",
@@ -4512,7 +4524,8 @@
    "each_index_async",
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "html_display_none_or_block"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4554,7 +4567,8 @@
    "js_dollar_x",
    "list_remove_if_exists",
    "list_remove_multiple",
-   "js_assign_combine"
+   "js_assign_combine",
+   "list_remove_property"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -5262,7 +5276,8 @@
    "ebible_version_download_path_combine",
    "local_function_path",
    "sandbox_2",
-   "folder_user"
+   "folder_user",
+   "folder_user_combine"
   ],
   "fs": [
    "folder_read",
@@ -5384,7 +5399,9 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "each_range_from_async",
-   "each_index_async"
+   "each_index_async",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters_each_verses_list"
   ],
   "f_paths": [
    "data_files_update",
@@ -5611,7 +5628,8 @@
    "git_push_schedule",
    "git_push_schedule_command",
    "schtasks_query",
-   "command_line_generic"
+   "command_line_generic",
+   "command_line_cmd"
   ],
   "stdout": [
    "command_line",
@@ -5946,7 +5964,8 @@
    "each_index_async",
    "ebible_references_parse",
    "firebase_storage_download_json",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "firebase_storage_download_ebible"
   ],
   "lists_get": [
    "each_multiple",
@@ -7221,7 +7240,8 @@
    "ebible_verses",
    "ebible_index_flat",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "ebible_books_to_chapter_codes"
   ],
   "node": [
    "function_dependencies",
@@ -7374,7 +7394,6 @@
    "js_if_blockify_generic",
    "list_remove_multiple",
    "marker_functionize",
-   "range",
    "function_aliases_restore",
    "each_range_async",
    "app_replace_rule_set",
@@ -8699,7 +8718,9 @@
    "ebible_index_flat_upload",
    "ebible_index_flat_upload_name",
    "ebible_version_books_upload",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "firebase_storage_download_ebible",
+   "folder_user_docs_path"
   ],
   "html_update": [
    "html_update",
@@ -9352,7 +9373,8 @@
    "list_find_property",
    "ebible_references_parse",
    "ebible_verse",
-   "app_reply_main"
+   "app_reply_main",
+   "list_remove_property"
   ],
   "nameds": [
    "js_declaration_single"
@@ -9902,7 +9924,9 @@
    "js_marker_name_get",
    "js_stack_list_block_is",
    "js_statement_call_get",
-   "http"
+   "http",
+   "command_line_cmd",
+   "folder_user_docs_path"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -10730,13 +10754,15 @@
   ],
   "string_pad": [
    "string_pad",
-   "tasks_run"
+   "tasks_run",
+   "string_pad_space"
   ],
   "padding": [
    "string_pad"
   ],
   "padded": [
-   "string_pad"
+   "string_pad",
+   "string_pad_space"
   ],
   "string_skip": [
    "string_prefix_without",
@@ -10825,7 +10851,8 @@
    "sandbox_2"
   ],
   "found": [
-   "visit_unique_async"
+   "visit_unique_async",
+   "list_remove_property"
   ],
   "functions_paths": [
    "data_files_update",
@@ -11449,7 +11476,9 @@
   ],
   "en": [
    "js_await_add",
-   "app_reply_main"
+   "app_reply_main",
+   "firebase_storage_download_ebible",
+   "list_remove_property"
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
@@ -12222,7 +12251,8 @@
    "html_enable_if",
    "html_style_set_or_remove",
    "html_text_set_if",
-   "app_reply_main"
+   "app_reply_main",
+   "html_display_none_or_block"
   ],
   "html_text_set_if": [
    "app_replace_rule_set",
@@ -12326,7 +12356,9 @@
    "firebase_upload_generic",
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
-   "firebase_storage_download_json"
+   "firebase_storage_download_json",
+   "firebase_storage_download_ebible",
+   "folder_user_combine"
   ],
   "date_now_file": [
    "date_now_file",
@@ -13004,10 +13036,12 @@
    "html_style_set_or_remove"
   ],
   "html_display_none": [
-   "html_display_none"
+   "html_display_none",
+   "html_display_none_or_block"
   ],
   "html_display_block": [
-   "html_display_block"
+   "html_display_block",
+   "html_display_none_or_block"
   ],
   "app_reply_choices": [
    "app_reply_main",
@@ -13488,7 +13522,11 @@
    "sandbox_2",
    "ebible_verse",
    "ebible_languages",
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters_each_verses_check",
+   "ebible_chapters_each_verses_check_with",
+   "ebible_chapters_each_verses_list"
   ],
   "unzip": [
    "unzip",
@@ -13625,7 +13663,8 @@
    "ebible_index",
    "ebible_references_parse",
    "app_reply_main",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_books_to_chapter_codes"
   ],
   "string_take": [
    "string_take",
@@ -13640,7 +13679,8 @@
    "ebible_references_parse",
    "sandbox_2",
    "ebible_version_books_upload",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_books_to_chapter_codes"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13700,12 +13740,14 @@
   ],
   "ebible_chapters": [
    "ebible_version_verses",
-   "ebible_chapters"
+   "ebible_chapters",
+   "ebible_books_to_chapter_codes"
   ],
   "chapters": [
    "ebible_chapters",
    "ebible_version_verses",
-   "ebible_index"
+   "ebible_index",
+   "ebible_books_to_chapter_codes"
   ],
   "html_parse_find_a_href_starts_with": [
    "ebible_chapters",
@@ -13740,7 +13782,8 @@
    "ebible_verses",
    "ebible_references_parse",
    "sandbox_2",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_chapters_each_verses_list"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13757,7 +13800,9 @@
    "ebible_verse",
    "ebible_chapter_code_normalize",
    "ebible_chapter_code_to_book",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "ebible_chapters_each_verses_check",
+   "ebible_chapters_each_verses_list"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13815,11 +13860,13 @@
    "ebible_version_verses",
    "ebible_index",
    "ebible_references_parse",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_books_to_chapter_codes"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
-   "ebible_version_verses"
+   "ebible_version_verses",
+   "ebible_books_to_chapter_codes"
   ],
   "list_adder_generic_async": [
    "list_adder_generic_async",
@@ -13886,7 +13933,8 @@
    "ebible_references_parse",
    "ebible_verses_upload_name",
    "ebible_verse_download",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "string_pad_space"
   ],
   "ebible_verse": [
    "ebible_verse"
@@ -13915,7 +13963,9 @@
    "ebible_index_flat",
    "app_reply_main",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_chapters_each_verses_check",
+   "ebible_chapters_each_verses_list"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -14025,14 +14075,18 @@
   "ebible_chapters_each_verses": [
    "ebible_chapters_each_verses",
    "ebible_index",
-   "ebible_index_flat"
+   "ebible_index_flat",
+   "ebible_chapters_each_verses_check",
+   "ebible_chapters_each_verses_check_with"
   ],
   "each_chapter": [
    "ebible_verses_upload",
    "ebible_chapters_each_verses",
    "ebible_index",
    "ebible_index_flat",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_chapters_each_verses_check_with",
+   "ebible_chapters_each_verses_list"
   ],
   "ebible_chapter_code_to_book": [
    "ebible_chapter_code_to_book",
@@ -14069,7 +14123,8 @@
   ],
   "ebible_firebase_upload_path": [
    "ebible_firebase_upload",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "firebase_storage_download_ebible"
   ],
   "file_name_with_extension": [
    "ebible_firebase_upload_path"
@@ -14120,7 +14175,8 @@
    "ebible_index_flat_upload_name"
   ],
   "firebase_storage_download_json": [
-   "firebase_storage_download_json"
+   "firebase_storage_download_json",
+   "firebase_storage_download_ebible"
   ],
   "ebible_verses_upload_name": [
    "ebible_verses_upload",
@@ -14223,7 +14279,8 @@
   "languages": [
    "app_reply_main",
    "ebible_languages",
-   "ebible_verse"
+   "ebible_verse",
+   "list_remove_property"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -14435,26 +14492,32 @@
    "string_split_dash"
   ],
   "ebible_chapters_each_verses_check_with": [
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_chapters_each_verses_check_with"
   ],
   "ebible_chapters_each_verses_list": [
    "ebible_chapters_each_verses",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_chapters_each_verses_list"
   ],
   "ebible_books_to_chapter_codes": [
    "ebible_chapter_codes",
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_books_to_chapter_codes"
   ],
   "ebible_class_apocrypha": [
    "ebible_version_books",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "ebible_class_apocrypha"
   ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha",
    "sandbox_2"
   ],
   "ebible_chapters_each_verses_check": [
-   "sandbox_2"
+   "sandbox_2",
+   "ebible_chapters_each_verses_check",
+   "ebible_chapters_each_verses_check_with"
   ],
   "sandbox_2": [
    "sandbox_2"
@@ -14469,11 +14532,13 @@
   "folder": [
    "firebase_storage_download_path",
    "sandbox_2",
-   "folder_user"
+   "folder_user",
+   "folder_user_combine"
   ],
   "folder_user_combine": [
    "firebase_storage_download_path",
-   "file_temp"
+   "file_temp",
+   "folder_user_combine"
   ],
   "temp_path": [
    "sandbox_2",
@@ -14494,14 +14559,16 @@
   ],
   "folder_user": [
    "sandbox_2",
-   "folder_user"
+   "folder_user",
+   "folder_user_combine"
   ],
   "sandbox_3": [
    "sandbox_3"
   ],
   "command_line_generic": [
    "command_line",
-   "command_line_generic"
+   "command_line_generic",
+   "command_line_cmd"
   ],
   "options": [
    "command_line_generic"
@@ -14510,7 +14577,8 @@
    "command_line_generic"
   ],
   "command_line_cmd": [
-   "sandbox_2"
+   "sandbox_2",
+   "command_line_cmd"
   ],
   "newLocal": [
    "sandbox_2"
@@ -14544,7 +14612,8 @@
    "ebible_verse"
   ],
   "list_remove_property": [
-   "app_reply_main"
+   "app_reply_main",
+   "list_remove_property"
   ],
   "ebible_version_books_upload": [
    "ebible_version_books_upload"
@@ -14557,11 +14626,13 @@
   ],
   "firebase_storage_download_ebible": [
    "app_reply_main",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "firebase_storage_download_ebible"
   ],
   "ebible_version_books_upload_name": [
    "ebible_version_books_upload",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_version_books_upload_name"
   ],
   "file_name2": [
    "app_reply_main"
@@ -14575,17 +14646,31 @@
    "app_reply_main"
   ],
   "html_display_none_or_block": [
-   "app_reply_main"
+   "app_reply_main",
+   "html_display_none_or_block"
   ],
   "ebible_references_parse_god_created_man_why": [
    "ebible_references_parse_god_created_man_why"
   ],
   "folder_user_docs_path": [
    "ebible_references_parse_god_created_man_why",
-   "sandbox"
+   "sandbox",
+   "folder_user_docs_path"
   ],
   "list_map_split_comma": [
    "list_map_split_comma"
+  ],
+  "cmd": [
+   "command_line_cmd"
+  ],
+  "each_chapter2": [
+   "ebible_chapters_each_verses_check"
+  ],
+  "rr": [
+   "range"
+  ],
+  "string_pad_space": [
+   "string_pad_space"
   ]
  },
  "functions": {
@@ -21467,7 +21552,7 @@
     "list_add",
     "range",
     "count",
-    "r",
+    "rr",
     "i"
    ],
    "async": false
@@ -27933,6 +28018,148 @@
     "item",
     "split2",
     "mapped3"
+   ]
+  },
+  "command_line_cmd": {
+   "async": true,
+   "identifiers": [
+    "command_line_generic",
+    "command_line_cmd",
+    "command",
+    "cmd",
+    "v3"
+   ]
+  },
+  "ebible_books_to_chapter_codes": {
+   "async": true,
+   "identifiers": [
+    "list_adder_multiple_async",
+    "ebible_chapters",
+    "object_property_get",
+    "each_async",
+    "ebible_books_to_chapter_codes",
+    "books",
+    "bible_folder",
+    "lambda2",
+    "la",
+    "lambda",
+    "book",
+    "book_code",
+    "chapters",
+    "list"
+   ]
+  },
+  "ebible_chapters_each_verses_check": {
+   "async": true,
+   "identifiers": [
+    "ebible_chapters_each_verses",
+    "ebible_chapters_each_verses_check",
+    "bible_folder",
+    "each_chapter2",
+    "chapter_code",
+    "verses"
+   ]
+  },
+  "ebible_chapters_each_verses_check_with": {
+   "async": true,
+   "identifiers": [
+    "ebible_chapters_each_verses",
+    "ebible_chapters_each_verses_check",
+    "ebible_chapters_each_verses_check_with",
+    "bible_folder",
+    "each_chapter"
+   ]
+  },
+  "ebible_chapters_each_verses_list": {
+   "async": true,
+   "identifiers": [
+    "ebible_verses",
+    "log_keep",
+    "each_async",
+    "ebible_chapters_each_verses_list",
+    "list",
+    "bible_folder",
+    "each_chapter",
+    "lambda",
+    "chapter_code",
+    "verses"
+   ]
+  },
+  "ebible_class_apocrypha": {
+   "async": false,
+   "identifiers": [
+    "ebible_class_apocrypha",
+    "v"
+   ]
+  },
+  "ebible_version_books_upload_name": {
+   "async": false,
+   "identifiers": [
+    "ebible_version_books_upload_name",
+    "v"
+   ]
+  },
+  "firebase_storage_download_ebible": {
+   "async": true,
+   "identifiers": [
+    "firebase_storage_download_json",
+    "ebible_firebase_upload_path",
+    "firebase_storage_download_ebible",
+    "en",
+    "file_name",
+    "destination",
+    "index"
+   ]
+  },
+  "folder_user_combine": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "folder_user",
+    "folder_user_combine",
+    "folder",
+    "destination",
+    "result",
+    "joined"
+   ]
+  },
+  "folder_user_docs_path": {
+   "async": false,
+   "identifiers": [
+    "folder_user_docs_path",
+    "file_name",
+    "v3"
+   ]
+  },
+  "html_display_none_or_block": {
+   "async": false,
+   "identifiers": [
+    "html_display_block",
+    "html_display_none",
+    "html_display_none_or_block",
+    "condition",
+    "item"
+   ]
+  },
+  "list_remove_property": {
+   "async": false,
+   "identifiers": [
+    "list_remove",
+    "list_find_property",
+    "list_remove_property",
+    "languages",
+    "property_name",
+    "en",
+    "found"
+   ]
+  },
+  "string_pad_space": {
+   "async": false,
+   "identifiers": [
+    "string_pad",
+    "string_pad_space",
+    "verse_number",
+    "padded"
    ]
   }
  },
