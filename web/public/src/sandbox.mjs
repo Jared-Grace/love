@@ -10,6 +10,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let mapped3 = list_map_split_comma(split);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return mapped3;
 }
