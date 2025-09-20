@@ -6509,7 +6509,8 @@
   "string_split_comma": [
    "functions_combine_name",
    "string_split_comma",
-   "ebible_verse"
+   "ebible_verse",
+   "list_map_split_comma"
   ],
   "string_split": [
    "function_name_to_parts",
@@ -12069,8 +12070,7 @@
    "string_split_space",
    "app_replace_rule_parse",
    "ebible_verses",
-   "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_space"
   ],
   "split2": [
    "string_split_empty",
@@ -28010,8 +28010,8 @@
   "list_map_split_comma": {
    "async": false,
    "identifiers": [
+    "string_split_comma",
     "list_map",
-    "string_split_space",
     "list_map_split_comma",
     "mapped2",
     "lambda",
