@@ -3361,7 +3361,8 @@
    "ebible_references_parse",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -6624,7 +6625,8 @@
    "string_split_newline",
    "ebible_references_parse",
    "path_join",
-   "ebible_verse"
+   "ebible_verse",
+   "sandbox"
   ],
   "results": [
    "functions_combine_name"
@@ -14234,7 +14236,8 @@
   ],
   "string_split_newline": [
    "string_split_newline",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "verse_references": [
    "list_filter_starts_with_any",
@@ -21461,12 +21464,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split_newline",
     "file_read",
     "folder_user_docs_path",
     "marker",
     "sandbox",
     "file_path",
-    "contents"
+    "contents",
+    "split",
+    "list"
    ],
    "async": true
   },
