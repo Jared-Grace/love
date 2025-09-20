@@ -4,7 +4,7 @@ import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
 export async function ebible_references_parse_god_created_man_why() {
   let v2 = ebible_folder_urdu();
   let v = ebible_folder_english();
-  let file_path = "C:\\Users\\chris\\Documents\\god_created_man_why.txt";
+  let file_path = "C:\\Users\\chris\\Documents\\" + "god_created_man_why.txt";
   let bible_folders = [v2, v];
   let list = await ebible_references_parse(bible_folders, file_path);
 }
