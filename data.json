@@ -5372,8 +5372,7 @@
    "ebible_versions_download",
    "ebible_version_verses",
    "each_range_from_async",
-   "each_index_async",
-   "sandbox"
+   "each_index_async"
   ],
   "f_paths": [
    "data_files_update",
@@ -13890,8 +13889,7 @@
    "ebible_verses_upload_name"
   ],
   "ebible_verses_upload": [
-   "ebible_verses_upload",
-   "sandbox"
+   "ebible_verses_upload"
   ],
   "verses": [
    "ebible_verses_upload",
@@ -14492,9 +14490,6 @@
   ],
   "newLocal": [
    "sandbox_2"
-  ],
-  "versions": [
-   "sandbox"
   ],
   "ebible_verse_new": [
    "ebible_verse_new",
@@ -21445,11 +21440,8 @@
   },
   "sandbox": {
    "identifiers": [
-    "ebible_verses_upload",
-    "each_async",
     "marker",
-    "sandbox",
-    "versions"
+    "sandbox"
    ],
    "async": true
   },
