@@ -3361,8 +3361,7 @@
    "ebible_references_parse",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_references_parse_god_created_man_why",
-   "sandbox"
+   "ebible_references_parse_god_created_man_why"
   ],
   "v": [
    "data_identifiers_file",
@@ -21471,8 +21470,7 @@
     "sandbox",
     "file_path",
     "contents",
-    "split",
-    "list"
+    "split"
    ],
    "async": true
   },
