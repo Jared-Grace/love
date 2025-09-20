@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { list_map_split_comma } from "./list_map_split_comma.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
 import { file_read } from "./file_read.mjs";
@@ -9,5 +10,6 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let mapped3 = list_map_split_comma(split);
+  let mapped = list_map(list, function lambda(item) {});
   return mapped3;
 }
