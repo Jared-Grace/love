@@ -2110,7 +2110,6 @@
   "ev engbsb EZR08",
   "s upload",
   "is ebible_verses_upload",
-  "sb",
   "s new",
   "fw ebv ebible_verse",
   "o ebible_verse",
@@ -2159,7 +2158,8 @@
   "ev swh,en Hebrew 11:6",
   "o sb",
   "as file",
-  "a flo file_open"
+  "a flo file_open",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
