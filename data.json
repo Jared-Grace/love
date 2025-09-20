@@ -2158,8 +2158,8 @@
   "o sb",
   "as file",
   "a flo file_open",
-  "sb",
-  "s newl"
+  "s newl",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
