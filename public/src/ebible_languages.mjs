@@ -38,6 +38,11 @@ export function ebible_languages() {
       language_code: "yor",
     },
     {
+      name: "Hindi",
+      bible_folder: "hin2017",
+      language_code: "hin",
+    },
+    {
       name: "Cebuano",
       bible_folder: "cebulb",
       language_code: "ceb",
