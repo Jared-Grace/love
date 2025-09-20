@@ -112,7 +112,8 @@ export async function app_reply_main() {
       let lower = string_lower_to(letters);
       let sw = string_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
-      if (includes || not(sw)) {
+      const condition = includes || not(sw);
+      if (condition) {
         html_display_none(item);
       } else {
         html_display_block(item);
