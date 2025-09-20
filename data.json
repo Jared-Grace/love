@@ -3108,7 +3108,8 @@
    "ebible_verse",
    "list_map_split_comma",
    "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3370,7 +3371,8 @@
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
    "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4526,7 +4528,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "list_map_split_comma",
-   "html_display_none_or_block"
+   "html_display_none_or_block",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5209,7 +5212,8 @@
    "range_from",
    "list_map_first",
    "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "sandbox"
   ],
   "functions_names": [
    "functions_names",
@@ -6733,7 +6737,8 @@
    "list_map_prefix_any",
    "range_from",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -21562,6 +21567,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map",
     "list_map_split_comma",
     "string_split_newline",
     "file_read",
@@ -21571,7 +21577,11 @@
     "file_path",
     "contents",
     "split",
-    "mapped3"
+    "mapped3",
+    "mapped",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
