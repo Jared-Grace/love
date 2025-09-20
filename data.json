@@ -3103,7 +3103,8 @@
    "list_map_split_space",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_verse"
+   "ebible_verse",
+   "list_map_split_comma"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4510,7 +4511,8 @@
    "each_multiple_async",
    "each_index_async",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "list_map_split_comma"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5191,7 +5193,8 @@
    "list_map_prefix_any",
    "range_from",
    "list_map_first",
-   "list_map_split_space"
+   "list_map_split_space",
+   "list_map_split_comma"
   ],
   "functions_names": [
    "functions_names",
@@ -7302,7 +7305,8 @@
    "ebible_version_books_testament",
    "html_parse_find_a_href_starts_with",
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "list_map_split_comma"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -12036,13 +12040,15 @@
    "string_split_space",
    "app_replace_rule_parse",
    "ebible_verses",
-   "list_map_split_space"
+   "list_map_split_space",
+   "list_map_split_comma"
   ],
   "split2": [
    "string_split_empty",
    "ebible_references_parse",
    "list_map_split_space",
-   "ebible_verse"
+   "ebible_verse",
+   "list_map_split_comma"
   ],
   "list_take": [
    "list_take",
@@ -14364,7 +14370,8 @@
   ],
   "mapped3": [
    "ebible_references_parse",
-   "list_map_split_space"
+   "list_map_split_space",
+   "list_map_split_comma"
   ],
   "chapter_verses_list": [
    "ebible_references_parse"
@@ -14576,6 +14583,9 @@
   "folder_user_docs_path": [
    "ebible_references_parse_god_created_man_why",
    "sandbox"
+  ],
+  "list_map_split_comma": [
+   "list_map_split_comma"
   ]
  },
  "functions": {
@@ -27910,6 +27920,19 @@
     "file_path",
     "bible_folders",
     "list"
+   ]
+  },
+  "list_map_split_comma": {
+   "async": false,
+   "identifiers": [
+    "list_map",
+    "string_split_space",
+    "list_map_split_comma",
+    "mapped2",
+    "lambda",
+    "item",
+    "split2",
+    "mapped3"
    ]
   }
  },
