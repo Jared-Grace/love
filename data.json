@@ -2136,7 +2136,6 @@
   "s temp",
   "s open",
   "u fo",
-  "ps",
   "p",
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
@@ -2160,7 +2159,8 @@
   "sb",
   "s list,map",
   "c list_map_split_space list_map_split_comma",
-  "d"
+  "d",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
