@@ -10,8 +10,7 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  let mapped3 = list_map_split_comma(split);
-  function lambda(item) {}
-  let mapped = list_map(list, whitespace_normalize);
+  let mapped = list_map(split, whitespace_normalize);
+  let mapped3 = list_map_split_comma(mapped);
   return mapped3;
 }
