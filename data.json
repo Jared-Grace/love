@@ -1874,7 +1874,6 @@
   "ebible_version_download engbsb",
   "ebible_version_verses engbsb",
   "a fir file_read",
-  "as file",
   "fd ebible_version_verses",
   "n html_parse_list_text_to",
   "de html_parse_list_text_to",
@@ -2157,7 +2156,8 @@
   "s reply",
   "ev Hebrew 11:6",
   "ev swh,en Hebrew 11:6",
-  "o sb"
+  "o sb",
+  "as file"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
