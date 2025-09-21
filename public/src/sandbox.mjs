@@ -18,7 +18,7 @@ export async function sandbox() {
     let second = list_second(item);
     let split3 = string_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
-    return item;
+    return mapped2;
   }
   let mapped = list_map(mapped3, lambda);
   return mapped;
