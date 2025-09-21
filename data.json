@@ -3109,8 +3109,7 @@
    "sandbox_2",
    "ebible_verse",
    "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list",
-   "sandbox"
+   "ebible_chapters_each_verses_list"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3372,8 +3371,7 @@
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
    "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list",
-   "sandbox"
+   "ebible_chapters_each_verses_list"
   ],
   "v": [
    "data_identifiers_file",
@@ -4528,8 +4526,7 @@
    "each_index_async",
    "ebible_references_parse",
    "list_map_split_space",
-   "html_display_none_or_block",
-   "sandbox"
+   "html_display_none_or_block"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -21592,10 +21589,7 @@
     "mapped",
     "split2",
     "s",
-    "lambda",
-    "item",
     "mapped2",
-    "list",
     "mapped3"
    ],
    "async": true
