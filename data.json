@@ -2488,7 +2488,8 @@
    "sandbox",
    "ebible_verse",
    "ebible_verse_new",
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "string_split_semicolon"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -5045,7 +5046,8 @@
    "path_join",
    "string_upper_to",
    "ebible_chapter_code_to_name",
-   "sandbox"
+   "sandbox",
+   "string_split_semicolon"
   ],
   "a": [
    "string_suffix_without",
@@ -6528,7 +6530,8 @@
    "html_parse_descendants_classes",
    "string_split_newline",
    "string_split_colon",
-   "string_split_dash"
+   "string_split_dash",
+   "string_split_semicolon"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -14491,7 +14494,8 @@
    "string_take_less_1"
   ],
   "split3": [
-   "string_split_colon"
+   "string_split_colon",
+   "string_split_semicolon"
   ],
   "split4": [
    "string_split_dash"
@@ -14680,6 +14684,9 @@
   ],
   "string_split_semicolon_space": [
    "sandbox"
+  ],
+  "string_split_semicolon": [
+   "string_split_semicolon"
   ]
  },
  "functions": {
@@ -28175,9 +28182,19 @@
     "verse_number",
     "padded"
    ]
+  },
+  "string_split_semicolon": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_split",
+    "string_split_semicolon",
+    "s",
+    "split3"
+   ]
   }
  },
- "git_push_when": "2025-09-20T22:22:51.917Z",
+ "git_push_when": "2025-09-21T00:31:39.956Z",
  "error_attention": null,
  "app_current": "replace"
 }
