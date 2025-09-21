@@ -3377,8 +3377,7 @@
    "ebible_references_parse_god_created_man_why",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "list_set",
-   "sandbox"
+   "list_set"
   ],
   "v": [
    "data_identifiers_file",
@@ -21614,7 +21613,6 @@
     "lambda",
     "item",
     "first",
-    "list",
     "second",
     "split3",
     "mapped2",
