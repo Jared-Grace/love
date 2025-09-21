@@ -20,6 +20,7 @@ export async function sandbox() {
     let second = list_second(item);
     log(second);
     let split3 = string_split_semicolon(second);
+    let mapped2 = list_map_whitespace_normalize(split4);
     list_set(item, 1, split3);
     return item;
   }
