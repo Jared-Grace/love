@@ -182,7 +182,8 @@
   "s3": "sandbox_3",
   "evs": "ebible_verses",
   "ev": "ebible_verse",
-  "flo": "file_open"
+  "flo": "file_open",
+  "lst": "list_set"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2162,7 +2163,8 @@
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
   "ps",
-  "sb"
+  "sb",
+  "a lst list_set"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
