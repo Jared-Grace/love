@@ -2889,7 +2889,8 @@
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
    "object_property_set_exists_not",
-   "list_remove_property"
+   "list_remove_property",
+   "sandbox"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3827,7 +3828,8 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "watch": [
    "watch"
@@ -3980,7 +3982,8 @@
    "html_style_font_size",
    "js_statement_expression_get",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "sandbox"
   ],
   "name": [
    "watch",
@@ -6067,7 +6070,8 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "sandbox"
   ],
   "each_pair": [
    "each_pair",
@@ -14692,9 +14696,6 @@
   "string_split_semicolon": [
    "string_split_semicolon",
    "sandbox"
-  ],
-  "list_set": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21583,6 +21584,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "object_property_set",
     "list_second",
     "string_split_semicolon",
     "whitespace_normalize",
@@ -21603,7 +21605,9 @@
     "item",
     "second",
     "split3",
-    "list_set",
+    "object",
+    "property_name",
+    "value",
     "mapped"
    ],
    "async": true
