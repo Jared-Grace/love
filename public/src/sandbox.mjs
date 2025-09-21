@@ -1,3 +1,4 @@
+import { list_set } from "./list_set.mjs";
 import { list_map_whitespace_normalize } from "./list_map_whitespace_normalize.mjs";
 import { list_second } from "./list_second.mjs";
 import { string_split_semicolon } from "./string_split_semicolon.mjs";
@@ -18,6 +19,7 @@ export async function sandbox() {
     let second = list_second(item);
     let split3 = string_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
+    list_set(list, index, value);
     return mapped2;
   }
   let mapped = list_map(mapped3, lambda);
