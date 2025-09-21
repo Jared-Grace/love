@@ -7343,8 +7343,7 @@
    "html_parse_find_a_href_starts_with",
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma",
-   "sandbox"
+   "list_map_split_comma"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -21607,7 +21606,6 @@
     "split",
     "split2",
     "mapped3",
-    "mapped2",
     "lambda",
     "item",
     "second",
