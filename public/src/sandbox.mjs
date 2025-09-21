@@ -21,7 +21,8 @@ export async function sandbox() {
     let second = list_second(item);
     let split3 = string_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
-    await each_async(list, async function lambda2(item2) {});
+    async function lambda2(item2) {}
+    await each_async(list, lambda2);
     let v = [first, mapped2];
     return v;
   }
