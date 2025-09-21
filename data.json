@@ -2891,7 +2891,8 @@
    "object_property_exists_not_assert",
    "object_property_set_exists_not",
    "list_remove_property",
-   "sandbox"
+   "sandbox",
+   "list_set"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3984,7 +3985,8 @@
    "js_statement_expression_get",
    "object_property_set_exists_not",
    "object_merge_generic",
-   "sandbox"
+   "sandbox",
+   "list_set"
   ],
   "name": [
    "watch",
@@ -6072,7 +6074,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "sandbox"
+   "sandbox",
+   "list_set"
   ],
   "each_pair": [
    "each_pair",
@@ -14697,6 +14700,9 @@
   "string_split_semicolon": [
    "string_split_semicolon",
    "sandbox"
+  ],
+  "list_set": [
+   "list_set"
   ]
  },
  "functions": {
@@ -28210,6 +28216,15 @@
     "string_split_semicolon",
     "s",
     "split3"
+   ]
+  },
+  "list_set": {
+   "async": false,
+   "identifiers": [
+    "list_set",
+    "object",
+    "property_name",
+    "value"
    ]
   }
  },
