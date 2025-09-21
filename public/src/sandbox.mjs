@@ -21,6 +21,7 @@ export async function sandbox() {
     log(second);
     let split3 = string_split_semicolon(second);
     list_set(item, 1, split3);
+    return item;
   }
   let mapped = list_map(mapped3, lambda);
   return mapped;
