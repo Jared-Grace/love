@@ -19,7 +19,7 @@ export async function sandbox() {
   function lambda(item) {
     let second = list_second(item);
     let split3 = string_split_semicolon(second);
-    list_set(list, index, value);
+    list_set(item, 1, split3);
   }
   let mapped = list_map(mapped3, lambda);
   return mapped3;
