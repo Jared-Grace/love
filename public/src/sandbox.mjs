@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_set } from "./list_set.mjs";
 import { list_second } from "./list_second.mjs";
 import { string_split_semicolon } from "./string_split_semicolon.mjs";
@@ -18,6 +19,7 @@ export async function sandbox() {
   let mapped2 = list_map(mapped3, string_split_semicolon);
   function lambda(item) {
     let second = list_second(item);
+    log(message);
     let split3 = string_split_semicolon(second);
     list_set(item, 1, split3);
   }

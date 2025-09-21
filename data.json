@@ -2162,10 +2162,10 @@
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
   "ps",
-  "sb",
   "a lst list_set",
   "s list",
-  "c object_property_set list_set"
+  "c object_property_set list_set",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
