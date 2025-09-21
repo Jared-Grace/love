@@ -6736,8 +6736,7 @@
    "list_map_prefix_any",
    "range_from",
    "ebible_references_parse",
-   "sandbox_2",
-   "sandbox"
+   "sandbox_2"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -21585,9 +21584,8 @@
     "file_path",
     "contents",
     "split",
-    "mapped",
-    "mapped2",
     "split2",
+    "mapped2",
     "mapped3"
    ],
    "async": true
