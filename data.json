@@ -2157,7 +2157,6 @@
   "s list,map",
   "c list_map_split_space list_map_split_comma",
   "d",
-  "s normal",
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
   "ps",
@@ -2165,7 +2164,8 @@
   "s list",
   "c object_property_set list_set",
   "p",
-  "sb"
+  "sb",
+  "s normal"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
