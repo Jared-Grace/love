@@ -2178,7 +2178,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "sandbox"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3701,7 +3702,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "sandbox"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -21589,6 +21591,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "log",
     "list_set",
     "list_second",
     "string_split_semicolon",
@@ -21609,6 +21612,7 @@
     "lambda",
     "item",
     "second",
+    "message",
     "split3",
     "mapped"
    ],
