@@ -2164,7 +2164,8 @@
   "ps",
   "sb",
   "a lst list_set",
-  "s list"
+  "s list",
+  "c object_property_set list_set"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
