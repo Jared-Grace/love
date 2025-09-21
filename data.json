@@ -2164,8 +2164,8 @@
   "s list",
   "c object_property_set list_set",
   "p",
-  "sb",
-  "s normal"
+  "s normal",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
