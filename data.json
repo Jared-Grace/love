@@ -14682,11 +14682,9 @@
   "string_pad_space": [
    "string_pad_space"
   ],
-  "string_split_semicolon_space": [
-   "sandbox"
-  ],
   "string_split_semicolon": [
-   "string_split_semicolon"
+   "string_split_semicolon",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21575,7 +21573,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_split_semicolon_space",
+    "string_split_semicolon",
     "whitespace_normalize",
     "list_map",
     "list_map_split_comma",
