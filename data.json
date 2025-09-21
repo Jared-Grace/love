@@ -2163,8 +2163,8 @@
   "a lst list_set",
   "s list",
   "c object_property_set list_set",
-  "p",
   "s normal",
+  "p",
   "sb"
  ],
  "marker_current": "1",
