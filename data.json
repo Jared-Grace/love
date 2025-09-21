@@ -2178,8 +2178,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "sandbox"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -14699,8 +14698,7 @@
    "sandbox"
   ],
   "list_set": [
-   "list_set",
-   "sandbox"
+   "list_set"
   ],
   "list_map_whitespace_normalize": [
    "sandbox"
@@ -21593,8 +21591,6 @@
   "sandbox": {
    "identifiers": [
     "list_map_whitespace_normalize",
-    "log",
-    "list_set",
     "list_second",
     "string_split_semicolon",
     "list_map",
