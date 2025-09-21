@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_map_whitespace_normalize } from "./list_map_whitespace_normalize.mjs";
 import { list_second } from "./list_second.mjs";
@@ -15,11 +16,12 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let split2 = list_map_whitespace_normalize(split);
   let mapped3 = list_map_split_comma(split2);
-  function lambda(item) {
+  async function lambda(item) {
     let first = list_first(item);
     let second = list_second(item);
     let split3 = string_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
+    await each_async(list, async function lambda2(item2) {});
     let v = [first, mapped2];
     return v;
   }
