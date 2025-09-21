@@ -2161,7 +2161,8 @@
   "ps",
   "s normal",
   "sb",
-  "s split"
+  "s split",
+  "c string_split_semicolon_space string_split_semicolon"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
