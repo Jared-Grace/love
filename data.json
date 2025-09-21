@@ -7343,7 +7343,8 @@
    "html_parse_find_a_href_starts_with",
    "ebible_references_parse",
    "list_map_split_space",
-   "list_map_split_comma"
+   "list_map_split_comma",
+   "sandbox"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -14509,7 +14510,8 @@
    "sandbox"
   ],
   "split4": [
-   "string_split_dash"
+   "string_split_dash",
+   "sandbox"
   ],
   "ebible_chapters_each_verses_check_with": [
    "ebible_verses_upload",
@@ -21612,6 +21614,8 @@
     "item",
     "second",
     "split3",
+    "mapped2",
+    "split4",
     "mapped"
    ],
    "async": true
