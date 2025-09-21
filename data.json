@@ -1787,7 +1787,6 @@
   "c html_style_remove html_remove",
   "r prayer_ending prayer_end",
   "s clear",
-  "s list",
   "c html_style_font_size html_display_none",
   "c html_display_none html_display_block",
   "s dove",
@@ -2164,7 +2163,8 @@
   "c string_split_semicolon_space string_split_semicolon",
   "ps",
   "sb",
-  "a lst list_set"
+  "a lst list_set",
+  "s list"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
