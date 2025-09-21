@@ -2492,7 +2492,8 @@
    "ebible_verse",
    "ebible_verse_new",
    "ebible_version_books_upload",
-   "string_split_semicolon"
+   "string_split_semicolon",
+   "list_set"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -28221,6 +28222,7 @@
   "list_set": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_set",
     "object",
     "property_name",
