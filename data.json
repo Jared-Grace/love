@@ -21591,10 +21591,10 @@
     "split2",
     "mapped3",
     "mapped2",
-    "mapped",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "mapped",
+    "list"
    ],
    "async": true
   },
