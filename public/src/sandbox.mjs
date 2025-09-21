@@ -12,7 +12,8 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let split2 = list_map(split, whitespace_normalize);
-  let mapped2 = list_map(split2, string_split_semicolon);
-  let mapped3 = list_map_split_comma(mapped2);
+  let mapped3 = list_map_split_comma(split2);
+  let mapped2 = list_map(mapped3, string_split_semicolon);
+  let mapped = list_map(list, function lambda(item) {});
   return mapped3;
 }

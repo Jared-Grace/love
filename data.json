@@ -2161,8 +2161,8 @@
   "s normal",
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
-  "sb",
-  "ps"
+  "ps",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
