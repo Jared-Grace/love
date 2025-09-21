@@ -3374,8 +3374,7 @@
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
    "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list",
-   "sandbox"
+   "ebible_chapters_each_verses_list"
   ],
   "v": [
    "data_identifiers_file",
@@ -14694,7 +14693,7 @@
    "string_split_semicolon",
    "sandbox"
   ],
-  "second2": [
+  "list_set": [
    "sandbox"
   ]
  },
@@ -21604,8 +21603,7 @@
     "item",
     "second",
     "split3",
-    "second2",
-    "list",
+    "list_set",
     "mapped"
    ],
    "async": true
