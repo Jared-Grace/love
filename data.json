@@ -3630,7 +3630,8 @@
    "ebible_verse_new",
    "ebible_references_parse_god_created_man_why",
    "ebible_class_apocrypha",
-   "ebible_version_books_upload_name"
+   "ebible_version_books_upload_name",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14700,8 +14701,7 @@
    "sandbox"
   ],
   "list_set": [
-   "list_set",
-   "sandbox"
+   "list_set"
   ],
   "list_map_whitespace_normalize": [
    "sandbox"
@@ -21594,7 +21594,6 @@
   "sandbox": {
    "identifiers": [
     "list_first",
-    "list_set",
     "list_map_whitespace_normalize",
     "list_second",
     "string_split_semicolon",
@@ -21616,6 +21615,7 @@
     "second",
     "split3",
     "mapped2",
+    "v",
     "mapped"
    ],
    "async": true
