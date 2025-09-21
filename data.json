@@ -2159,10 +2159,10 @@
   "c list_map_split_space list_map_split_comma",
   "d",
   "s normal",
-  "sb",
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
-  "ps"
+  "ps",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
