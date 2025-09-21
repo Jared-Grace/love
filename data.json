@@ -14510,8 +14510,7 @@
    "sandbox"
   ],
   "split4": [
-   "string_split_dash",
-   "sandbox"
+   "string_split_dash"
   ],
   "ebible_chapters_each_verses_check_with": [
    "ebible_verses_upload",
@@ -21615,7 +21614,6 @@
     "second",
     "split3",
     "mapped2",
-    "split4",
     "mapped"
    ],
    "async": true
