@@ -2891,8 +2891,7 @@
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
    "object_property_set_exists_not",
-   "list_remove_property",
-   "sandbox"
+   "list_remove_property"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3378,7 +3377,8 @@
    "ebible_references_parse_god_created_man_why",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "list_set"
+   "list_set",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -3831,8 +3831,7 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic",
-   "sandbox"
+   "object_merge_generic"
   ],
   "watch": [
    "watch"
@@ -5980,7 +5979,8 @@
    "firebase_storage_download_json",
    "ebible_verse_download",
    "firebase_storage_download_ebible",
-   "list_set"
+   "list_set",
+   "sandbox"
   ],
   "lists_get": [
    "each_multiple",
@@ -6075,8 +6075,7 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload",
-   "sandbox"
+   "ebible_firebase_upload"
   ],
   "each_pair": [
    "each_pair",
@@ -14703,7 +14702,8 @@
    "sandbox"
   ],
   "list_set": [
-   "list_set"
+   "list_set",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21592,7 +21592,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "object_property_set",
+    "list_set",
     "list_second",
     "string_split_semicolon",
     "whitespace_normalize",
@@ -21613,8 +21613,8 @@
     "item",
     "second",
     "split3",
-    "object",
-    "property_name",
+    "list",
+    "index",
     "value",
     "mapped"
    ],
