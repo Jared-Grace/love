@@ -13,6 +13,7 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let mapped = list_map(split, whitespace_normalize);
   let split2 = string_split_semicolon(s);
-  let mapped3 = list_map_split_comma(split2);
+  let mapped2 = list_map(list, function lambda(item) {});
+  let mapped3 = list_map_split_comma(mapped);
   return mapped3;
 }
