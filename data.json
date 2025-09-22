@@ -6480,7 +6480,8 @@
    "marker_down_choices",
    "data_files_update",
    "ebible_references_parse",
-   "ebible_verse"
+   "ebible_verse",
+   "sandbox"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -6652,7 +6653,8 @@
    "ebible_index_flat",
    "app_reply_main",
    "ebible_references_parse",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "split": [
    "functions_combine_name",
@@ -13704,7 +13706,8 @@
    "sandbox_2",
    "ebible_version_books_upload",
    "app_reply_main",
-   "ebible_books_to_chapter_codes"
+   "ebible_books_to_chapter_codes",
+   "sandbox"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13718,7 +13721,8 @@
    "ebible_chapter_codes",
    "ebible_version_books",
    "ebible_references_parse",
-   "ebible_version_books_upload"
+   "ebible_version_books_upload",
+   "sandbox"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -14329,11 +14333,13 @@
   ],
   "verse_references": [
    "list_filter_starts_with_any",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "list_filter_starts_with_any": [
    "list_filter_starts_with_any",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "list_map_prefix_without_any": [
    "list_map_prefix_without_any",
@@ -14421,7 +14427,8 @@
   ],
   "bible_folders": [
    "ebible_references_parse",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "sandbox"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -14445,7 +14452,8 @@
    "list_map_split_space"
   ],
   "books_all": [
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "sandbox"
   ],
   "book_names": [
    "ebible_references_parse"
@@ -21598,6 +21606,10 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_filter_starts_with_any",
+    "list_map_property",
+    "ebible_version_books",
+    "list_map_unordered_async",
     "each_async",
     "list_first",
     "list_map_whitespace_normalize",
@@ -21623,9 +21635,13 @@
     "mapped2",
     "lambda2",
     "item2",
+    "books_all",
+    "bible_folders",
+    "mapped",
+    "books",
+    "verse_references",
     "list",
-    "v",
-    "mapped"
+    "v"
    ],
    "async": true
   },
