@@ -2497,7 +2497,8 @@
    "ebible_verse_new",
    "ebible_version_books_upload",
    "string_split_semicolon",
-   "list_set"
+   "list_set",
+   "app_message"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14724,6 +14725,9 @@
   ],
   "emoji_handshake": [
    "app_reply_choices"
+  ],
+  "app_message": [
+   "app_message"
   ]
  },
  "functions": {
@@ -28260,9 +28264,16 @@
     "index",
     "value"
    ]
+  },
+  "app_message": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_message"
+   ]
   }
  },
- "git_push_when": "2025-09-23T14:17:08.945Z",
+ "git_push_when": "2025-09-23T22:16:54.481Z",
  "error_attention": null,
  "app_current": "replace"
 }
