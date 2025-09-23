@@ -13,7 +13,8 @@ export async function app_new_step_2(name) {
   let a_name = app_name_prefixed(name);
   let combined = app_name_main(name);
   async function lambda(ast) {
-    let declaration = js_declaration_single(ast2);
+    let declaration = js_declaration_single(ast);
+    declaration.async = true;
     let assign = app_new_assign(combined);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let p = parsed;
