@@ -2168,10 +2168,11 @@
   "s god",
   "s choice",
   "evu arbnav",
-  "s reply"
+  "s reply",
+  "an message"
  ],
  "marker_current": "1",
- "function_current": "string_split_semicolon",
+ "function_current": "app_message",
  "terminal": false,
  "identifiers": {
   "log": [
