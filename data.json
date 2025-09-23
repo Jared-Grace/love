@@ -9778,7 +9778,8 @@
    "sandbox_2"
   ],
   "async": [
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "app_new_step_2"
   ],
   "b2": [
    "js_identifiers_to_names"
@@ -14748,9 +14749,6 @@
   ],
   "app_new_step_2": [
    "app_new",
-   "app_new_step_2"
-  ],
-  "ast2": [
    "app_new_step_2"
   ]
  },
@@ -28313,7 +28311,7 @@
     "lambda",
     "ast",
     "declaration",
-    "ast2",
+    "async",
     "assign",
     "parsed",
     "p",
