@@ -5026,8 +5026,7 @@
    "string_suffix_without",
    "file_open",
    "string_ends_with",
-   "string_prefix_without",
-   "function_rename_suffix_add"
+   "string_prefix_without"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -6362,8 +6361,7 @@
   ],
   "ew": [
    "file_open",
-   "string_ends_with",
-   "function_rename_suffix_add"
+   "string_ends_with"
   ],
   "filePath": [
    "file_open_editor"
@@ -9612,8 +9610,7 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "function_rename_suffix_add"
+   "list_find_starts_with"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12379,8 +12376,7 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with",
-   "function_rename_suffix_add"
+   "list_find_starts_with"
   ],
   "only": [
    "list_single",
@@ -14772,6 +14768,9 @@
   "app_message_main": [
    "app_message",
    "app_message_main"
+  ],
+  "string_padded_is": [
+   "function_rename_suffix_add"
   ]
  },
  "functions": {
@@ -23391,9 +23390,8 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
+    "string_padded_is",
     "assert_not",
-    "string_ends_with",
-    "string_starts_with",
     "function_name_combine",
     "function_rename",
     "marker",
@@ -23402,8 +23400,6 @@
     "suffix",
     "s",
     "padding",
-    "sw",
-    "ew",
     "p",
     "f_name_after",
     "v"
