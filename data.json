@@ -2184,7 +2184,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "app_new_assign"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2745,7 +2746,8 @@
    "firebase_storage_function_run",
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
-   "js_dollar_new_name"
+   "js_dollar_new_name",
+   "app_new_assign"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3638,7 +3640,8 @@
    "ebible_references_parse_god_created_man_why",
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
-   "sandbox"
+   "sandbox",
+   "app_new_assign"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3709,7 +3712,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "app_new_assign"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -6582,7 +6586,8 @@
    "js_await_wrap",
    "js_calls_to_each",
    "js_auto_transform_new_inner",
-   "js_property_parse_expression"
+   "js_property_parse_expression",
+   "app_new_assign"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6622,7 +6627,8 @@
    "ebible_chapters",
    "app_name_main",
    "function_new_js_inner",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "app_new_assign"
   ],
   "body_block": [
    "functions_combine",
@@ -7997,7 +8003,8 @@
    "js_calls_to_each",
    "js_call_callee_name",
    "js_auto_transform_new_inner",
-   "js_property_parse_expression"
+   "js_property_parse_expression",
+   "app_new_assign"
   ],
   "type": [
    "function_params_consolidate",
@@ -8932,7 +8939,8 @@
    "js_dollar_s",
    "js_let_add",
    "js_node_atomize",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_new_assign"
   ],
   "list_get_end_2": [
    "js_atomize_function",
@@ -9440,7 +9448,8 @@
    "js_node_atomize",
    "js_expand_generic",
    "app_new",
-   "object_assign"
+   "object_assign",
+   "app_new_assign"
   ],
   "js_declare_assign": [
    "js_declare_assign",
@@ -13578,7 +13587,8 @@
    "app_reply_choices"
   ],
   "js_code_dot": [
-   "js_code_dot"
+   "js_code_dot",
+   "app_new_assign"
   ],
   "ebible_version_verses": [
    "ebible_version_verses"
@@ -14727,7 +14737,8 @@
    "app_message"
   ],
   "app_new_assign": [
-   "app_new"
+   "app_new",
+   "app_new_assign"
   ]
  },
  "functions": {
@@ -28266,6 +28277,22 @@
    "identifiers": [
     "marker",
     "app_message"
+   ]
+  },
+  "app_new_assign": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "js_declare",
+    "js_parse_expression",
+    "js_code_dot",
+    "app_new_assign",
+    "combined",
+    "v",
+    "code",
+    "message",
+    "expression",
+    "assign"
    ]
   }
  },
