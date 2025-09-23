@@ -1863,7 +1863,6 @@
   "s html",
   "n unzip",
   "s app",
-  "o an",
   "s js,dec",
   "n js_code_dot",
   "s dot",
@@ -2169,10 +2168,11 @@
   "s choice",
   "evu arbnav",
   "s reply",
-  "an message"
+  "an message",
+  "o an"
  ],
  "marker_current": "1",
- "function_current": "app_message",
+ "function_current": "app_new",
  "terminal": false,
  "identifiers": {
   "log": [
