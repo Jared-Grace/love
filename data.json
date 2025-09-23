@@ -2150,7 +2150,6 @@
   "s newl",
   "s list,map",
   "c list_map_split_space list_map_split_comma",
-  "d",
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
   "a lst list_set",
@@ -2179,7 +2178,8 @@
   "function_name_to_acronym a_b_C",
   "p",
   "rs sandbox_4 a",
-  "o rs"
+  "o rs",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "function_rename_suffix_add",
@@ -2192,7 +2192,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "function_name_to_acronym"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2509,7 +2510,8 @@
    "string_split_semicolon",
    "list_set",
    "app_message",
-   "app_message_main"
+   "app_message_main",
+   "sandbox_4_a"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3131,7 +3133,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "sandbox",
-   "app_new_step_2"
+   "app_new_step_2",
+   "sandbox_4_a"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3234,7 +3237,8 @@
    "ebible_references_parse",
    "ebible_verse",
    "ebible_books_to_chapter_codes",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3396,7 +3400,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -3650,7 +3655,8 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "sandbox",
-   "app_new_assign"
+   "app_new_assign",
+   "sandbox_4_a"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4262,7 +4268,8 @@
    "function_read",
    "html_parse_read",
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "js_parse": [
    "file_js_parse",
@@ -4349,7 +4356,8 @@
    "ebible_references_parse",
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4556,7 +4564,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5026,7 +5035,8 @@
    "string_suffix_without",
    "file_open",
    "string_ends_with",
-   "string_prefix_without"
+   "string_prefix_without",
+   "string_padded_is"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -5076,7 +5086,9 @@
    "path_join",
    "string_upper_to",
    "ebible_chapter_code_to_name",
-   "string_split_semicolon"
+   "string_split_semicolon",
+   "string_padded_is",
+   "string_split_semicolon_space"
   ],
   "a": [
    "string_suffix_without",
@@ -5241,7 +5253,9 @@
    "list_map_first",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox"
+   "sandbox",
+   "list_map_whitespace_normalize",
+   "sandbox_4_a"
   ],
   "functions_names": [
    "functions_names",
@@ -5281,7 +5295,8 @@
    "js_property_parse_expression_add",
    "object_merge_generic",
    "app_new_step_2",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "string_padded_is"
   ],
   "f_names": [
    "functions_names",
@@ -5377,7 +5392,8 @@
    "emoji_rainbow",
    "emoji_rock",
    "sandbox_2",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "emoji_handshake"
   ],
   "readdirSync": [
    "folder_read"
@@ -5437,7 +5453,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "f_paths": [
    "data_files_update",
@@ -5833,7 +5850,8 @@
    "function_transform_marker_specified",
    "app_replace_rule_set",
    "list_random_item",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "function_name_to_acronym"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -6026,7 +6044,8 @@
    "each_multiple_async",
    "ebible_references_parse",
    "list_map_first",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "each_multiple": [
    "each_multiple",
@@ -6053,7 +6072,8 @@
    "each_multiple_async",
    "ebible_references_parse",
    "ebible_verse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "items": [
    "each_multiple",
@@ -6243,7 +6263,8 @@
   "Error": [
    "error",
    "function_import",
-   "buffer_string_to"
+   "buffer_string_to",
+   "function_run_line_git"
   ],
   "error_json": [
    "error_json",
@@ -6360,7 +6381,8 @@
   ],
   "ew": [
    "file_open",
-   "string_ends_with"
+   "string_ends_with",
+   "string_padded_is"
   ],
   "filePath": [
    "file_open_editor"
@@ -6378,7 +6400,8 @@
    "file_write_generic",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "writeFile": [
    "file_overwrite",
@@ -6449,7 +6472,8 @@
    "ebible_references_parse",
    "string_split_dash",
    "ebible_verse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_to": [
    "functions_combine",
@@ -6502,7 +6526,8 @@
    "data_files_update",
    "ebible_references_parse",
    "ebible_verse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -6569,7 +6594,8 @@
    "string_split_newline",
    "string_split_colon",
    "string_split_dash",
-   "string_split_semicolon"
+   "string_split_semicolon",
+   "string_split_semicolon_space"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -6676,7 +6702,8 @@
    "app_reply_main",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "split": [
    "functions_combine_name",
@@ -6694,7 +6721,9 @@
    "ebible_references_parse",
    "path_join",
    "ebible_verse",
-   "sandbox"
+   "sandbox",
+   "list_map_whitespace_normalize",
+   "sandbox_4_a"
   ],
   "results": [
    "functions_combine_name"
@@ -6778,7 +6807,8 @@
    "range_from",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -7024,7 +7054,8 @@
   ],
   "list_sort_number_mapper": [
    "list_sort_number_mapper",
-   "list_sort_string_size"
+   "list_sort_string_size",
+   "function_name_to_acronym"
   ],
   "list_sort_string": [
    "function_types",
@@ -7374,7 +7405,9 @@
    "ebible_references_parse",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox"
+   "sandbox",
+   "list_map_whitespace_normalize",
+   "sandbox_4_a"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -9575,7 +9608,8 @@
    "list_first_second",
    "list_second",
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -9609,7 +9643,8 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "string_padded_is"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -10813,7 +10848,8 @@
    "string_pad_space"
   ],
   "padding": [
-   "string_pad"
+   "string_pad",
+   "string_padded_is"
   ],
   "padded": [
    "string_pad",
@@ -12132,7 +12168,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "ebible_verse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_take": [
    "list_take",
@@ -12374,7 +12411,8 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "string_padded_is"
   ],
   "only": [
    "list_single",
@@ -13737,7 +13775,8 @@
    "ebible_version_books_upload",
    "app_reply_main",
    "ebible_books_to_chapter_codes",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13752,7 +13791,8 @@
    "ebible_version_books",
    "ebible_references_parse",
    "ebible_version_books_upload",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -13939,7 +13979,8 @@
    "app_reply_main",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -13979,7 +14020,8 @@
   "whitespace_normalize": [
    "whitespace_normalize",
    "ebible_verses",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "list_map_whitespace_normalize"
   ],
   "trim": [
    "whitespace_normalize"
@@ -14359,17 +14401,20 @@
   "string_split_newline": [
    "string_split_newline",
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "verse_references": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_filter_starts_with_any": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_map_prefix_without_any": [
    "list_map_prefix_without_any",
@@ -14458,7 +14503,8 @@
   "bible_folders": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -14483,7 +14529,8 @@
   ],
   "books_all": [
    "ebible_references_parse",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "book_names": [
    "ebible_references_parse"
@@ -14492,7 +14539,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "chapter_verses_list": [
    "ebible_references_parse"
@@ -14552,7 +14600,9 @@
   "split3": [
    "string_split_colon",
    "string_split_semicolon",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a",
+   "string_split_semicolon_space"
   ],
   "split4": [
    "string_split_dash"
@@ -14721,11 +14771,13 @@
   "folder_user_docs_path": [
    "ebible_references_parse_god_created_man_why",
    "sandbox",
-   "folder_user_docs_path"
+   "folder_user_docs_path",
+   "sandbox_4_a"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "cmd": [
    "command_line_cmd"
@@ -14741,16 +14793,20 @@
   ],
   "string_split_semicolon": [
    "string_split_semicolon",
-   "sandbox"
+   "sandbox",
+   "sandbox_4_a"
   ],
   "list_set": [
    "list_set"
   ],
   "list_map_whitespace_normalize": [
-   "sandbox"
+   "sandbox",
+   "list_map_whitespace_normalize",
+   "sandbox_4_a"
   ],
   "emoji_handshake": [
-   "app_reply_choices"
+   "app_reply_choices",
+   "emoji_handshake"
   ],
   "app_message": [
    "app_message"
@@ -14768,7 +14824,20 @@
    "app_message_main"
   ],
   "string_padded_is": [
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "string_padded_is"
+  ],
+  "stackTraceLimit": [
+   "function_run_line_git"
+  ],
+  "Infinity": [
+   "function_run_line_git"
+  ],
+  "sandbox_4_a": [
+   "sandbox_4_a"
+  ],
+  "string_split_semicolon_space": [
+   "string_split_semicolon_space"
   ]
  },
  "functions": {
@@ -16380,6 +16449,9 @@
     "list_first",
     "list_map",
     "function_name_to_parts",
+    "log",
+    "list_size",
+    "list_sort_number_mapper",
     "function_name_to_acronym",
     "f_name",
     "parts",
@@ -16761,6 +16833,9 @@
    "identifiers": [
     "function_run_line_parse",
     "function_run_git",
+    "Error",
+    "stackTraceLimit",
+    "Infinity",
     "function_run_line_git",
     "line",
     "f_name",
@@ -28349,6 +28424,86 @@
    "identifiers": [
     "marker",
     "app_message_main"
+   ]
+  },
+  "emoji_handshake": {
+   "async": false,
+   "identifiers": [
+    "emoji_handshake",
+    "v2"
+   ]
+  },
+  "list_map_whitespace_normalize": {
+   "async": false,
+   "identifiers": [
+    "whitespace_normalize",
+    "list_map",
+    "list_map_whitespace_normalize",
+    "split",
+    "mapped2"
+   ]
+  },
+  "sandbox_4_a": {
+   "async": true,
+   "identifiers": [
+    "list_filter_starts_with_any",
+    "list_map_property",
+    "ebible_version_books",
+    "list_map_unordered_async",
+    "each_async",
+    "list_first",
+    "list_map_whitespace_normalize",
+    "list_second",
+    "string_split_semicolon",
+    "list_map",
+    "list_map_split_comma",
+    "string_split_newline",
+    "file_read",
+    "folder_user_docs_path",
+    "marker",
+    "sandbox_4_a",
+    "file_path",
+    "contents",
+    "split",
+    "split2",
+    "mapped3",
+    "lambda",
+    "item",
+    "first",
+    "second",
+    "split3",
+    "mapped2",
+    "lambda2",
+    "item2",
+    "books_all",
+    "bible_folders",
+    "mapped",
+    "books",
+    "verse_references",
+    "list",
+    "v"
+   ]
+  },
+  "string_padded_is": {
+   "async": false,
+   "identifiers": [
+    "string_ends_with",
+    "string_starts_with",
+    "string_padded_is",
+    "s",
+    "padding",
+    "sw",
+    "ew",
+    "p"
+   ]
+  },
+  "string_split_semicolon_space": {
+   "async": false,
+   "identifiers": [
+    "string_split",
+    "string_split_semicolon_space",
+    "s",
+    "split3"
    ]
   }
  },
