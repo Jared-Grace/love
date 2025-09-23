@@ -179,6 +179,10 @@ export function app_reply_choices() {
         emoji_pray(),
     },
     {
+      text: emoji_question() + " Languages",
+      response: " Do you speak any languages besides English? " + emoji_pray(),
+    },
+    {
       text: emoji_globe_americas() + " Location",
       response:
         emoji_globe_americas() +
