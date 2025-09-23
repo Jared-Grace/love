@@ -2741,7 +2741,6 @@
    "js_code_wrap_brackets",
    "js_code_brackets_empty",
    "js_code_dot",
-   "app_new",
    "firebase_storage_function_run",
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
@@ -3586,7 +3585,6 @@
    "kjv",
    "file_read_buffer",
    "sleep",
-   "app_new",
    "html_parse_list_text_to",
    "list_filter_starts_with_not_multiple",
    "ebible_chapter_classes",
@@ -6582,7 +6580,6 @@
    "marker_screen_add",
    "js_await_wrap",
    "js_calls_to_each",
-   "app_new",
    "js_auto_transform_new_inner",
    "js_property_parse_expression"
   ],
@@ -7998,7 +7995,6 @@
    "js_dollar_ien",
    "js_calls_to_each",
    "js_call_callee_name",
-   "app_new",
    "js_auto_transform_new_inner",
    "js_property_parse_expression"
   ],
@@ -8935,8 +8931,7 @@
    "js_dollar_s",
    "js_let_add",
    "js_node_atomize",
-   "js_expand_generic",
-   "app_new"
+   "js_expand_generic"
   ],
   "list_get_end_2": [
    "js_atomize_function",
@@ -13582,8 +13577,7 @@
    "app_reply_choices"
   ],
   "js_code_dot": [
-   "js_code_dot",
-   "app_new"
+   "js_code_dot"
   ],
   "ebible_version_verses": [
    "ebible_version_verses"
@@ -14730,6 +14724,9 @@
   ],
   "app_message": [
    "app_message"
+  ],
+  "app_new_assign": [
+   "app_new"
   ]
  },
  "functions": {
@@ -23037,13 +23034,11 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "app_new_assign",
     "js_call_new",
     "firebase_storage_function_run",
     "list_add",
     "js_declaration_single_block_body",
-    "js_parse_expression",
-    "js_code_dot",
-    "js_declare",
     "function_transform",
     "app_name_main",
     "app_name_prefixed",
@@ -23056,9 +23051,6 @@
     "combined",
     "lambda",
     "ast",
-    "v",
-    "code",
-    "expression",
     "assign",
     "parsed",
     "p",
