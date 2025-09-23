@@ -2166,7 +2166,8 @@
   "s normal",
   "p",
   "sb",
-  "s god"
+  "s god",
+  "s choice"
  ],
  "marker_current": "1",
  "function_current": "string_split_semicolon",
