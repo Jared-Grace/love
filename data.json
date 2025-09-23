@@ -2169,7 +2169,8 @@
   "evu arbnav",
   "s reply",
   "an message",
-  "o an"
+  "o an",
+  "app_name_main t"
  ],
  "marker_current": "1",
  "function_current": "app_new",
