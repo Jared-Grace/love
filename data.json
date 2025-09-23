@@ -5076,8 +5076,7 @@
    "path_join",
    "string_upper_to",
    "ebible_chapter_code_to_name",
-   "string_split_semicolon",
-   "function_rename_suffix_add"
+   "string_split_semicolon"
   ],
   "a": [
    "string_suffix_without",
@@ -23397,7 +23396,6 @@
     "function_rename_suffix_add",
     "f_name_before",
     "suffix",
-    "s",
     "p",
     "f_name_after",
     "v"
