@@ -5282,7 +5282,8 @@
    "js_property_parse_expression",
    "js_property_parse_expression_add",
    "object_merge_generic",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_rename_suffix_add"
   ],
   "f_names": [
    "functions_names",
@@ -9360,8 +9361,7 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any",
-   "function_rename_suffix_add"
+   "list_map_prefix_any"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -14771,9 +14771,6 @@
   "app_message_main": [
    "app_message",
    "app_message_main"
-  ],
-  "suffix2": [
-   "function_rename_suffix_add"
   ]
  },
  "functions": {
@@ -23404,9 +23401,8 @@
     "padding",
     "sw",
     "s",
-    "prefix",
     "ew",
-    "suffix2",
+    "p",
     "f_name_after",
     "v"
    ]
