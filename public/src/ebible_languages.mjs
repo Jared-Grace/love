@@ -43,6 +43,11 @@ export function ebible_languages() {
       language_code: "hin",
     },
     {
+      name: "Arabic",
+      bible_folder: "arbnav",
+      language_code: "arb",
+    },
+    {
       name: "Cebuano",
       bible_folder: "cebulb",
       language_code: "ceb",
