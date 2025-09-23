@@ -2192,8 +2192,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "function_name_to_acronym"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -5850,8 +5849,7 @@
    "function_transform_marker_specified",
    "app_replace_rule_set",
    "list_random_item",
-   "app_replace_rule_valid",
-   "function_name_to_acronym"
+   "app_replace_rule_valid"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -7054,8 +7052,7 @@
   ],
   "list_sort_number_mapper": [
    "list_sort_number_mapper",
-   "list_sort_string_size",
-   "function_name_to_acronym"
+   "list_sort_string_size"
   ],
   "list_sort_string": [
    "function_types",
@@ -16449,9 +16446,6 @@
     "list_first",
     "list_map",
     "function_name_to_parts",
-    "log",
-    "list_size",
-    "list_sort_number_mapper",
     "function_name_to_acronym",
     "f_name",
     "parts",
