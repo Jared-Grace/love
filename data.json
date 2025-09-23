@@ -5020,7 +5020,8 @@
    "js_calls_to_each",
    "app_reply_main",
    "js_declare_single",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "function_rename_suffix_add"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -23392,6 +23393,7 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
+    "not",
     "assert",
     "string_ends_with",
     "string_starts_with",
