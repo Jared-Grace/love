@@ -1967,7 +1967,6 @@
   "s upload,ver",
   "s list,add",
   "s new,join",
-  "s doc",
   "n html_loading",
   "o html_document_body",
   "s div",
@@ -2179,7 +2178,8 @@
   "p",
   "rs sandbox_4 a",
   "o rs",
-  "d"
+  "d",
+  "s doc"
  ],
  "marker_current": "1",
  "function_current": "function_rename_suffix_add",
