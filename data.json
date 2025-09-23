@@ -5076,7 +5076,8 @@
    "path_join",
    "string_upper_to",
    "ebible_chapter_code_to_name",
-   "string_split_semicolon"
+   "string_split_semicolon",
+   "function_rename_suffix_add"
   ],
   "a": [
    "string_suffix_without",
@@ -9357,7 +9358,8 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "function_rename_suffix_add"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9607,7 +9609,8 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "function_rename_suffix_add"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12372,7 +12375,8 @@
    "list_filter_starts_with",
    "string_starts_with_not",
    "list_any_starts_with",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "function_rename_suffix_add"
   ],
   "only": [
    "list_single",
@@ -23383,12 +23387,16 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "function_name_combine",
     "function_rename",
     "marker",
     "function_rename_suffix_add",
     "f_name_before",
     "suffix",
+    "sw",
+    "s",
+    "prefix",
     "f_name_after",
     "v"
    ]
