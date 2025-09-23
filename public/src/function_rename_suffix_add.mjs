@@ -1,5 +1,5 @@
+import { assert_not } from "./assert_not.mjs";
 import { not } from "./not.mjs";
-import { assert } from "./assert.mjs";
 import { string_ends_with } from "./string_ends_with.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
@@ -12,7 +12,7 @@ export async function function_rename_suffix_add(f_name_before, suffix) {
   let ew = string_ends_with(s, padding);
   let p = sw || ew;
   let b = not(p);
-  assert(b);
+  assert_not(b);
   let f_name_after = function_name_combine(f_name_before, suffix);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
