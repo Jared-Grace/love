@@ -5458,7 +5458,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "null_not_is_assert",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "function_rename_suffix_add"
   ],
   "b": [
    "assert",
@@ -5501,7 +5502,8 @@
    "html_style_set",
    "html_style_merge",
    "html_style_assign",
-   "each_pair_async"
+   "each_pair_async",
+   "function_rename_suffix_add"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -7928,8 +7930,7 @@
    "function_new_js",
    "js_auto_transform_new",
    "function_new_js_name",
-   "js_auto_transform_new_inner",
-   "function_rename_suffix_add"
+   "js_auto_transform_new_inner"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -12897,8 +12898,7 @@
    "js_auto_transform_new_inner"
   ],
   "js_auto_transform_new": [
-   "js_auto_transform_new",
-   "function_rename_suffix_add"
+   "js_auto_transform_new"
   ],
   "marker_next_declare_single_init_elements": [
    "js_dollar_new",
@@ -23392,7 +23392,7 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
-    "js_auto_transform_new",
+    "assert",
     "string_ends_with",
     "string_starts_with",
     "function_name_combine",
@@ -23406,7 +23406,7 @@
     "s",
     "ew",
     "p",
-    "f_name_unprefixed",
+    "b",
     "f_name_after",
     "v"
    ]
