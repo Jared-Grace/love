@@ -4089,8 +4089,7 @@
    "folder_read_async",
    "ebible_languages",
    "app_new_step_2",
-   "app_message",
-   "function_rename_suffix_add"
+   "app_message"
   ],
   "output": [
    "watch",
@@ -7929,7 +7928,8 @@
    "function_new_js",
    "js_auto_transform_new",
    "function_new_js_name",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "function_rename_suffix_add"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -11669,8 +11669,7 @@
    "app_new_step_2"
   ],
   "app_new": [
-   "app_new",
-   "function_rename_suffix_add"
+   "app_new"
   ],
   "app_replace": [
    "app_replace",
@@ -12898,7 +12897,8 @@
    "js_auto_transform_new_inner"
   ],
   "js_auto_transform_new": [
-   "js_auto_transform_new"
+   "js_auto_transform_new",
+   "function_rename_suffix_add"
   ],
   "marker_next_declare_single_init_elements": [
    "js_dollar_new",
@@ -23392,7 +23392,7 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
-    "app_new",
+    "js_auto_transform_new",
     "string_ends_with",
     "string_starts_with",
     "function_name_combine",
@@ -23406,7 +23406,7 @@
     "s",
     "ew",
     "p",
-    "name",
+    "f_name_unprefixed",
     "f_name_after",
     "v"
    ]
