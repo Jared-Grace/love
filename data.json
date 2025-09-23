@@ -2163,7 +2163,6 @@
   "s god",
   "s choice",
   "evu arbnav",
-  "s reply",
   "an message",
   "o an",
   "app_name_main t",
@@ -2172,7 +2171,8 @@
   "s wait",
   "s declar",
   "ps",
-  "app_new_step_2 message"
+  "app_new_step_2 message",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "app_message_main",
