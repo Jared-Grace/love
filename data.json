@@ -2535,7 +2535,8 @@
    "function_parse_strict",
    "http_json",
    "js_calls_to_each",
-   "html_parse_read"
+   "html_parse_read",
+   "app_new_step_2"
   ],
   "f_path": [
    "data_identifiers_file",
@@ -2685,7 +2686,8 @@
    "js_dollar_l",
    "function_new_js_inner",
    "js_auto_transform_new_inner",
-   "js_dollar_new_args_inner"
+   "js_dollar_new_args_inner",
+   "app_new_step_2"
   ],
   "code": [
    "data_identifiers_file",
@@ -3120,7 +3122,8 @@
    "ebible_verse",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox"
+   "sandbox",
+   "app_new_step_2"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4076,7 +4079,8 @@
    "local_function_path",
    "object_property_get_name",
    "folder_read_async",
-   "ebible_languages"
+   "ebible_languages",
+   "app_new_step_2"
   ],
   "output": [
    "watch",
@@ -4090,7 +4094,8 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "app_new_step_2"
   ],
   "args": [
    "watch",
@@ -4731,7 +4736,8 @@
    "js_declaration_param_add_node",
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
-   "ebible_index"
+   "ebible_index",
+   "app_new_step_2"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -5264,7 +5270,8 @@
    "floor",
    "js_property_parse_expression",
    "js_property_parse_expression_add",
-   "object_merge_generic"
+   "object_merge_generic",
+   "app_new_step_2"
   ],
   "f_names": [
    "functions_names",
@@ -6621,7 +6628,8 @@
    "app_name_main",
    "function_new_js_inner",
    "js_auto_transform_new_inner",
-   "app_new_assign"
+   "app_new_assign",
+   "app_new_step_2"
   ],
   "body_block": [
    "functions_combine",
@@ -6636,7 +6644,8 @@
    "js_expand_generic",
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir",
-   "js_statement_return_empty_add"
+   "js_statement_return_empty_add",
+   "app_new_step_2"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -7123,7 +7132,8 @@
    "function_rename_identifiers",
    "js_dollar_new",
    "js_dollar_new_args",
-   "function_new_js_inner"
+   "function_new_js_inner",
+   "app_new_step_2"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -7720,7 +7730,8 @@
    "js_declaration_single_name",
    "function_parse_declaration_inner",
    "js_declaration_single_block_body",
-   "js_dollar_new_args_inner"
+   "js_dollar_new_args_inner",
+   "app_new_step_2"
   ],
   "list_concat": [
    "js_identifier_unique",
@@ -7830,7 +7841,8 @@
    "function_new_app_screen",
    "marker_screen_add",
    "js_dollar_new",
-   "function_new_js_inner"
+   "function_new_js_inner",
+   "app_new_step_2"
   ],
   "code_declaration": [
    "function_new",
@@ -7881,7 +7893,8 @@
    "js_assign_combine",
    "js_declaration_param_add_node",
    "js_declare_single",
-   "js_dollar_new_args_inner"
+   "js_dollar_new_args_inner",
+   "app_new_step_2"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -8758,7 +8771,8 @@
    "html_update_generic"
   ],
   "html_new": [
-   "html_new"
+   "html_new",
+   "app_new_step_2"
   ],
   "npm_install": [
    "import_install",
@@ -9147,7 +9161,8 @@
    "js_call_fill",
    "js_call_new",
    "marker_call",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new_step_2"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -9437,7 +9452,8 @@
    "js_node_atomize",
    "js_expand_generic",
    "object_assign",
-   "app_new_assign"
+   "app_new_assign",
+   "app_new_step_2"
   ],
   "js_declare_assign": [
    "js_declare_assign",
@@ -10622,7 +10638,8 @@
    "function_new_app_screen",
    "marker_screen_add",
    "js_expand_generic",
-   "app_name_main"
+   "app_name_main",
+   "app_new_step_2"
   ],
   "marker_first_index": [
    "marker_first",
@@ -11631,7 +11648,8 @@
    "function_open_app",
    "marker_screen_add",
    "html_update_public",
-   "app_name_main"
+   "app_name_main",
+   "app_new_step_2"
   ],
   "app_new": [
    "app_new"
@@ -12552,7 +12570,8 @@
   "firebase_storage_function_run": [
    "app_replace",
    "app_reply",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "app_new_step_2"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -12629,7 +12648,8 @@
   "app_name_main": [
    "firebase_deploy_function_app_current",
    "html_update_dev",
-   "app_name_main"
+   "app_name_main",
+   "app_new_step_2"
   ],
   "lambda$fn_get": [
    "html_update_generic"
@@ -12779,7 +12799,8 @@
    "marker_top",
    "js_declaration_single_block_body_add_return",
    "function_wrap",
-   "js_return_name"
+   "js_return_name",
+   "app_new_step_2"
   ],
   "choice_name": [
    "js_dollar"
@@ -14722,10 +14743,15 @@
    "app_message"
   ],
   "app_new_assign": [
-   "app_new_assign"
+   "app_new_assign",
+   "app_new_step_2"
   ],
   "app_new_step_2": [
-   "app_new"
+   "app_new",
+   "app_new_step_2"
+  ],
+  "ast2": [
+   "app_new_step_2"
   ]
  },
  "functions": {
@@ -28264,6 +28290,35 @@
     "code",
     "expression",
     "assign"
+   ]
+  },
+  "app_new_step_2": {
+   "async": true,
+   "identifiers": [
+    "js_declaration_single",
+    "html_new",
+    "function_new",
+    "function_transform",
+    "list_add",
+    "js_declaration_single_block_body",
+    "firebase_storage_function_run",
+    "js_call_new",
+    "app_new_assign",
+    "app_name_main",
+    "app_name_prefixed",
+    "app_new_step_2",
+    "name",
+    "a_name",
+    "combined",
+    "lambda",
+    "ast",
+    "declaration",
+    "ast2",
+    "assign",
+    "parsed",
+    "p",
+    "body_block",
+    "output"
    ]
   }
  },
