@@ -2165,7 +2165,6 @@
   "s declar",
   "app_new_step_2 message",
   "s reply",
-  "s sand",
   "rs sandbox_4",
   "rs sandbox _4",
   "u rs",
@@ -2179,7 +2178,9 @@
   "d",
   "s doc",
   "n sandbox",
-  "o sb"
+  "o sb",
+  "o s4",
+  "s sand"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
