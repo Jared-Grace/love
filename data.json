@@ -2851,7 +2851,8 @@
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "app_message"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4080,7 +4081,8 @@
    "object_property_get_name",
    "folder_read_async",
    "ebible_languages",
-   "app_new_step_2"
+   "app_new_step_2",
+   "app_message"
   ],
   "output": [
    "watch",
@@ -12572,7 +12574,8 @@
    "app_replace",
    "app_reply",
    "firebase_storage_function_run",
-   "app_new_step_2"
+   "app_new_step_2",
+   "app_message"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -14750,6 +14753,9 @@
   "app_new_step_2": [
    "app_new",
    "app_new_step_2"
+  ],
+  "app_message_main": [
+   "app_message"
   ]
  },
  "functions": {
@@ -28269,10 +28275,14 @@
    ]
   },
   "app_message": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "firebase_storage_function_run",
+    "app_message_main",
     "marker",
-    "app_message"
+    "app_message",
+    "f_name",
+    "name"
    ]
   },
   "app_new_assign": {
