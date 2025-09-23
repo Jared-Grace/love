@@ -2157,7 +2157,6 @@
   "d",
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
-  "ps",
   "a lst list_set",
   "s list",
   "c object_property_set list_set",
@@ -2171,7 +2170,8 @@
   "o an",
   "app_name_main t",
   "p",
-  "app_new_assign t"
+  "app_new_assign t",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "app_new",
