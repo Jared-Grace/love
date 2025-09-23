@@ -3132,7 +3132,6 @@
    "ebible_verse",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox",
    "app_new_step_2",
    "sandbox_4_a"
   ],
@@ -3237,7 +3236,6 @@
    "ebible_references_parse",
    "ebible_verse",
    "ebible_books_to_chapter_codes",
-   "sandbox",
    "sandbox_4_a"
   ],
   "i_name": [
@@ -3400,7 +3398,6 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox",
    "sandbox_4_a"
   ],
   "v": [
@@ -3654,7 +3651,6 @@
    "ebible_references_parse_god_created_man_why",
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
-   "sandbox",
    "app_new_assign",
    "sandbox_4_a"
   ],
@@ -4268,7 +4264,6 @@
    "function_read",
    "html_parse_read",
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "js_parse": [
@@ -4564,7 +4559,6 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_includes": [
@@ -5253,7 +5247,6 @@
    "list_map_first",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox",
    "list_map_whitespace_normalize",
    "sandbox_4_a"
   ],
@@ -5453,7 +5446,6 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox",
    "sandbox_4_a"
   ],
   "f_paths": [
@@ -6043,7 +6035,6 @@
    "each_multiple_async",
    "ebible_references_parse",
    "list_map_first",
-   "sandbox",
    "sandbox_4_a"
   ],
   "each_multiple": [
@@ -6071,7 +6062,6 @@
    "each_multiple_async",
    "ebible_references_parse",
    "ebible_verse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "items": [
@@ -6399,7 +6389,6 @@
    "file_write_generic",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox",
    "sandbox_4_a"
   ],
   "writeFile": [
@@ -6471,7 +6460,6 @@
    "ebible_references_parse",
    "string_split_dash",
    "ebible_verse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_to": [
@@ -6525,7 +6513,6 @@
    "data_files_update",
    "ebible_references_parse",
    "ebible_verse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "js_declaration_single_block_blody": [
@@ -6701,7 +6688,6 @@
    "app_reply_main",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox",
    "sandbox_4_a"
   ],
   "split": [
@@ -6720,7 +6706,6 @@
    "ebible_references_parse",
    "path_join",
    "ebible_verse",
-   "sandbox",
    "list_map_whitespace_normalize",
    "sandbox_4_a"
   ],
@@ -6806,7 +6791,6 @@
    "range_from",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox",
    "sandbox_4_a"
   ],
   "functions_names_includes": [
@@ -7403,7 +7387,6 @@
    "ebible_references_parse",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox",
    "list_map_whitespace_normalize",
    "sandbox_4_a"
   ],
@@ -9606,7 +9589,6 @@
    "list_first_second",
    "list_second",
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "string_empty_not_is": [
@@ -12166,7 +12148,6 @@
    "ebible_references_parse",
    "list_map_split_space",
    "ebible_verse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_take": [
@@ -13773,7 +13754,6 @@
    "ebible_version_books_upload",
    "app_reply_main",
    "ebible_books_to_chapter_codes",
-   "sandbox",
    "sandbox_4_a"
   ],
   "html_parse_read": [
@@ -13789,7 +13769,6 @@
    "ebible_version_books",
    "ebible_references_parse",
    "ebible_version_books_upload",
-   "sandbox",
    "sandbox_4_a"
   ],
   "html_parse_find_list_to": [
@@ -13977,7 +13956,6 @@
    "app_reply_main",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox",
    "sandbox_4_a"
   ],
   "extra": [
@@ -14399,19 +14377,16 @@
   "string_split_newline": [
    "string_split_newline",
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "verse_references": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_filter_starts_with_any": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_map_prefix_without_any": [
@@ -14501,7 +14476,6 @@
   "bible_folders": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
-   "sandbox",
    "sandbox_4_a"
   ],
   "ebible_references_parse": [
@@ -14527,7 +14501,6 @@
   ],
   "books_all": [
    "ebible_references_parse",
-   "sandbox",
    "sandbox_4_a"
   ],
   "book_names": [
@@ -14537,7 +14510,6 @@
    "ebible_references_parse",
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox",
    "sandbox_4_a"
   ],
   "chapter_verses_list": [
@@ -14598,7 +14570,6 @@
   "split3": [
    "string_split_colon",
    "string_split_semicolon",
-   "sandbox",
    "sandbox_4_a",
    "string_split_semicolon_space"
   ],
@@ -14774,7 +14745,6 @@
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
-   "sandbox",
    "sandbox_4_a"
   ],
   "cmd": [
@@ -14791,14 +14761,12 @@
   ],
   "string_split_semicolon": [
    "string_split_semicolon",
-   "sandbox",
    "sandbox_4_a"
   ],
   "list_set": [
    "list_set"
   ],
   "list_map_whitespace_normalize": [
-   "sandbox",
    "list_map_whitespace_normalize",
    "sandbox_4_a"
   ],
@@ -21727,42 +21695,10 @@
   },
   "sandbox": {
    "identifiers": [
-    "list_filter_starts_with_any",
-    "list_map_property",
-    "ebible_version_books",
-    "list_map_unordered_async",
-    "each_async",
-    "list_first",
-    "list_map_whitespace_normalize",
-    "list_second",
-    "string_split_semicolon",
-    "list_map",
-    "list_map_split_comma",
-    "string_split_newline",
-    "file_read",
     "folder_user_docs_path",
     "marker",
     "sandbox",
-    "file_path",
-    "contents",
-    "split",
-    "split2",
-    "mapped3",
-    "lambda",
-    "item",
-    "first",
-    "second",
-    "split3",
-    "mapped2",
-    "lambda2",
-    "item2",
-    "books_all",
-    "bible_folders",
-    "mapped",
-    "books",
-    "verse_references",
-    "list",
-    "v"
+    "file_path"
    ],
    "async": true
   },
