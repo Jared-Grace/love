@@ -4089,7 +4089,8 @@
    "folder_read_async",
    "ebible_languages",
    "app_new_step_2",
-   "app_message"
+   "app_message",
+   "function_rename_suffix_add"
   ],
   "output": [
    "watch",
@@ -11668,7 +11669,8 @@
    "app_new_step_2"
   ],
   "app_new": [
-   "app_new"
+   "app_new",
+   "function_rename_suffix_add"
   ],
   "app_replace": [
    "app_replace",
@@ -23390,6 +23392,7 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
+    "app_new",
     "string_ends_with",
     "string_starts_with",
     "function_name_combine",
@@ -23403,6 +23406,7 @@
     "s",
     "ew",
     "p",
+    "name",
     "f_name_after",
     "v"
    ]
