@@ -5026,7 +5026,8 @@
    "string_suffix_without",
    "file_open",
    "string_ends_with",
-   "string_prefix_without"
+   "string_prefix_without",
+   "function_rename_suffix_add"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -6359,7 +6360,8 @@
   ],
   "ew": [
    "file_open",
-   "string_ends_with"
+   "string_ends_with",
+   "function_rename_suffix_add"
   ],
   "filePath": [
    "file_open_editor"
@@ -14768,6 +14770,12 @@
   "app_message_main": [
    "app_message",
    "app_message_main"
+  ],
+  "s2": [
+   "function_rename_suffix_add"
+  ],
+  "suffix2": [
+   "function_rename_suffix_add"
   ]
  },
  "functions": {
@@ -23387,6 +23395,7 @@
   "function_rename_suffix_add": {
    "async": true,
    "identifiers": [
+    "string_ends_with",
     "string_starts_with",
     "function_name_combine",
     "function_rename",
@@ -23397,6 +23406,9 @@
     "sw",
     "s",
     "prefix",
+    "ew",
+    "s2",
+    "suffix2",
     "f_name_after",
     "v"
    ]
