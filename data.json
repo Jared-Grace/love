@@ -5020,8 +5020,7 @@
    "js_calls_to_each",
    "app_reply_main",
    "js_declare_single",
-   "string_starts_with_not",
-   "function_rename_suffix_add"
+   "string_starts_with_not"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5502,8 +5501,7 @@
    "html_style_set",
    "html_style_merge",
    "html_style_assign",
-   "each_pair_async",
-   "function_rename_suffix_add"
+   "each_pair_async"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -23394,7 +23392,6 @@
    "async": true,
    "identifiers": [
     "assert_not",
-    "not",
     "string_ends_with",
     "string_starts_with",
     "function_name_combine",
@@ -23403,12 +23400,11 @@
     "function_rename_suffix_add",
     "f_name_before",
     "suffix",
+    "s",
     "padding",
     "sw",
-    "s",
     "ew",
     "p",
-    "b",
     "f_name_after",
     "v"
    ]
