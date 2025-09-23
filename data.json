@@ -1988,7 +1988,6 @@
   "s emoji",
   "ebible_verses_upload yor",
   "ebible_version_books_testament_new engbsb",
-  "n sandbox",
   "s version",
   "s eng",
   "s newline",
@@ -2143,7 +2142,6 @@
   "is ebible_chapter_code_to_name",
   "ev Hebrew 11:6",
   "ev swh,en Hebrew 11:6",
-  "o sb",
   "as file",
   "a flo file_open",
   "s newl",
@@ -2179,10 +2177,12 @@
   "rs sandbox_4 a",
   "o rs",
   "d",
-  "s doc"
+  "s doc",
+  "n sandbox",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "function_rename_suffix_add",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
