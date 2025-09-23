@@ -2502,7 +2502,8 @@
    "ebible_version_books_upload",
    "string_split_semicolon",
    "list_set",
-   "app_message"
+   "app_message",
+   "app_message_main"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14755,7 +14756,8 @@
    "app_new_step_2"
   ],
   "app_message_main": [
-   "app_message"
+   "app_message",
+   "app_message_main"
   ]
  },
  "functions": {
@@ -28327,6 +28329,13 @@
     "p",
     "body_block",
     "output"
+   ]
+  },
+  "app_message_main": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_message_main"
    ]
   }
  },
