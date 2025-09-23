@@ -146,7 +146,10 @@ export async function app_reply_main() {
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
-    const other = [verse_text];
+    const other = [
+      "Here is a random verse; Be blessed only; no curse",
+      verse_text,
+    ];
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
