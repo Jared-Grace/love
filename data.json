@@ -5266,7 +5266,8 @@
    "floor",
    "js_property_parse_expression",
    "js_property_parse_expression_add",
-   "object_merge_generic"
+   "object_merge_generic",
+   "app_new"
   ],
   "f_names": [
    "functions_names",
@@ -23061,6 +23062,7 @@
     "assign",
     "body_block",
     "parsed",
+    "p",
     "output"
    ]
   },
