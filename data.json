@@ -14720,6 +14720,9 @@
   ],
   "list_map_whitespace_normalize": [
    "sandbox"
+  ],
+  "emoji_handshake": [
+   "app_reply_choices"
   ]
  },
  "functions": {
@@ -25228,6 +25231,7 @@
   "app_reply_choices": {
    "async": false,
    "identifiers": [
+    "emoji_handshake",
     "newline",
     "emoji_rock",
     "emoji_rainbow",
@@ -28257,7 +28261,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-23T12:52:10.368Z",
+ "git_push_when": "2025-09-23T14:17:08.945Z",
  "error_attention": null,
  "app_current": "replace"
 }
