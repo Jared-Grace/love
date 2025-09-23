@@ -2105,7 +2105,6 @@
   "s new",
   "fw ebv ebible_verse",
   "o ebible_verse",
-  "s rename",
   "as rename",
   "rs ebible_verse new",
   "fw ev ebible_verse",
@@ -2165,7 +2164,6 @@
   "an message",
   "o an",
   "app_name_main t",
-  "p",
   "app_new_assign t",
   "s wait",
   "s declar",
@@ -2173,10 +2171,18 @@
   "s reply",
   "s sand",
   "rs sandbox_4",
-  "ps"
+  "rs sandbox _4",
+  "u rs",
+  "s rename",
+  "s a",
+  "ps",
+  "function_name_to_acronym a_b_C",
+  "p",
+  "rs sandbox_4 a",
+  "o rs"
  ],
  "marker_current": "1",
- "function_current": "app_message_main",
+ "function_current": "function_rename_suffix_add",
  "terminal": false,
  "identifiers": {
   "log": [
