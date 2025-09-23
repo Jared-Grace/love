@@ -10814,8 +10814,7 @@
    "string_pad_space"
   ],
   "padding": [
-   "string_pad",
-   "function_rename_suffix_add"
+   "string_pad"
   ],
   "padded": [
    "string_pad",
@@ -23399,7 +23398,6 @@
     "f_name_before",
     "suffix",
     "s",
-    "padding",
     "p",
     "f_name_after",
     "v"
