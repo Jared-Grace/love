@@ -1699,7 +1699,6 @@
   "js_dollar_new_args",
   "s para,",
   "s param",
-  "s declar",
   "s func,code",
   "s code,dec",
   "is js_keyword_function",
@@ -2172,7 +2171,8 @@
   "app_new_assign t",
   "ps",
   "app_new_step_2 message",
-  "s wait"
+  "s wait",
+  "s declar"
  ],
  "marker_current": "1",
  "function_current": "app_new",
