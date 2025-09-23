@@ -1,10 +1,8 @@
+import { app_new_assign } from "./app_new_assign.mjs";
 import { js_call_new } from "./js_call_new.mjs";
 import { firebase_storage_function_run } from "./firebase_storage_function_run.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { js_code_dot } from "./js_code_dot.mjs";
-import { js_declare } from "./js_declare.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { app_name_main } from "./app_name_main.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
@@ -17,10 +15,7 @@ export async function app_new(name) {
   let combined = app_name_main(name);
   await function_new(a_name);
   async function lambda(ast) {
-    const v = "f_name";
-    let code = js_code_dot(combined, "name");
-    let expression = js_parse_expression(code);
-    let assign = js_declare(v, expression);
+    let assign = app_new_assign(combined);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let p = parsed;
     let body_block = js_declaration_single_block_body(ast);
