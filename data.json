@@ -2534,7 +2534,6 @@
    "function_parse_strict",
    "http_json",
    "js_calls_to_each",
-   "app_new",
    "html_parse_read"
   ],
   "f_path": [
@@ -2683,7 +2682,6 @@
    "js_dollar_ir",
    "js_declaration_single_block_body_add_return",
    "js_dollar_l",
-   "app_new",
    "function_new_js_inner",
    "js_auto_transform_new_inner",
    "js_dollar_new_args_inner"
@@ -3078,7 +3076,6 @@
    "app_reply_main",
    "html_on_keydown",
    "http",
-   "app_new",
    "html_parse_list_text_to",
    "ebible_version_books_testament",
    "html_parse_href_text_map",
@@ -4092,8 +4089,7 @@
    "marker_call",
    "marker_call_replace_generic",
    "functions_transform",
-   "function_rename_identifiers",
-   "app_new"
+   "function_rename_identifiers"
   ],
   "args": [
    "watch",
@@ -4729,7 +4725,6 @@
    "js_dollar_new",
    "js_expand_generic",
    "app_reply_main",
-   "app_new",
    "ebible_verses",
    "js_auto_transform_new_inner",
    "js_declaration_param_add_node",
@@ -5268,8 +5263,7 @@
    "floor",
    "js_property_parse_expression",
    "js_property_parse_expression_add",
-   "object_merge_generic",
-   "app_new"
+   "object_merge_generic"
   ],
   "f_names": [
    "functions_names",
@@ -6619,7 +6613,6 @@
    "marker_screen_add",
    "list_concat_multiple",
    "firebase_deploy_function_app_current",
-   "app_new",
    "js_dollar_new",
    "js_dollar_new_args",
    "function_open_dollar_choice",
@@ -6642,7 +6635,6 @@
    "js_expand_generic",
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir",
-   "app_new",
    "js_statement_return_empty_add"
   ],
   "list_map_property": [
@@ -7130,7 +7122,6 @@
    "function_rename_identifiers",
    "js_dollar_new",
    "js_dollar_new_args",
-   "app_new",
    "function_new_js_inner"
   ],
   "js_arrow_blockify": [
@@ -8766,8 +8757,7 @@
    "html_update_generic"
   ],
   "html_new": [
-   "html_new",
-   "app_new"
+   "html_new"
   ],
   "npm_install": [
    "import_install",
@@ -9156,8 +9146,7 @@
    "js_call_fill",
    "js_call_new",
    "marker_call",
-   "js_calls_to_each",
-   "app_new"
+   "js_calls_to_each"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -9446,7 +9435,6 @@
    "js_let_add",
    "js_node_atomize",
    "js_expand_generic",
-   "app_new",
    "object_assign",
    "app_new_assign"
   ],
@@ -12563,7 +12551,6 @@
   "firebase_storage_function_run": [
    "app_replace",
    "app_reply",
-   "app_new",
    "firebase_storage_function_run"
   ],
   "firebase_deploy_function_app_current": [
@@ -12641,7 +12628,6 @@
   "app_name_main": [
    "firebase_deploy_function_app_current",
    "html_update_dev",
-   "app_new",
    "app_name_main"
   ],
   "lambda$fn_get": [
@@ -12791,7 +12777,6 @@
    "task_new",
    "marker_top",
    "js_declaration_single_block_body_add_return",
-   "app_new",
    "function_wrap",
    "js_return_name"
   ],
@@ -14736,8 +14721,10 @@
    "app_message"
   ],
   "app_new_assign": [
-   "app_new",
    "app_new_assign"
+  ],
+  "app_new_step_2": [
+   "app_new"
   ]
  },
  "functions": {
@@ -23045,28 +23032,13 @@
   "app_new": {
    "async": true,
    "identifiers": [
-    "app_new_assign",
-    "js_call_new",
-    "firebase_storage_function_run",
-    "list_add",
-    "js_declaration_single_block_body",
-    "function_transform",
-    "app_name_main",
+    "app_new_step_2",
     "app_name_prefixed",
     "function_new",
-    "html_new",
     "marker",
     "app_new",
     "name",
-    "a_name",
-    "combined",
-    "lambda",
-    "ast",
-    "assign",
-    "parsed",
-    "p",
-    "body_block",
-    "output"
+    "a_name"
    ]
   },
   "app_name_prefixed": {
