@@ -2185,8 +2185,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "app_new_assign"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -28290,7 +28289,6 @@
   "app_new_assign": {
    "async": false,
    "identifiers": [
-    "log",
     "js_declare",
     "js_parse_expression",
     "js_code_dot",
