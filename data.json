@@ -3712,8 +3712,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "app_new_assign"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -28290,7 +28289,6 @@
     "combined",
     "v",
     "code",
-    "message",
     "expression",
     "assign"
    ]
