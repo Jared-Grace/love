@@ -10816,7 +10816,8 @@
    "string_pad_space"
   ],
   "padding": [
-   "string_pad"
+   "string_pad",
+   "function_rename_suffix_add"
   ],
   "padded": [
    "string_pad",
@@ -14770,9 +14771,6 @@
   "app_message_main": [
    "app_message",
    "app_message_main"
-  ],
-  "s2": [
-   "function_rename_suffix_add"
   ],
   "suffix2": [
    "function_rename_suffix_add"
@@ -23403,11 +23401,11 @@
     "function_rename_suffix_add",
     "f_name_before",
     "suffix",
+    "padding",
     "sw",
     "s",
     "prefix",
     "ew",
-    "s2",
     "suffix2",
     "f_name_after",
     "v"
