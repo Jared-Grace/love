@@ -1,3 +1,4 @@
+import { emoji_handshake } from "./emoji_handshake.mjs";
 import { newline } from "./newline.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_rainbow } from "./emoji_rainbow.mjs";
@@ -192,13 +193,17 @@ export function app_reply_choices() {
         emoji_pray(),
     },
     {
+      text: emoji_wave() + " Meet",
+      response: emoji_pray() + " Nice to meet you! " + emoji_handshake(),
+    },
+    {
       text: emoji_wave() + " Name",
       response:
         emoji_pray() +
         " " +
         string_the_servant_of_god_is() +
         " called Jared Patten Mathis " +
-        "🤝",
+        emoji_handshake(),
     },
     {
       text: emoji_ok() + "Okay",
