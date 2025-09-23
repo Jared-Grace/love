@@ -1938,7 +1938,6 @@
   "is firebase_upload_object",
   "s join",
   "sandbox",
-  "s wait",
   "fd firebase_admin",
   "s object_property",
   "c ebible_verses_upload ebible_index_upload",
@@ -2171,7 +2170,9 @@
   "app_name_main t",
   "p",
   "app_new_assign t",
-  "ps"
+  "ps",
+  "app_new_step_2 message",
+  "s wait"
  ],
  "marker_current": "1",
  "function_current": "app_new",
