@@ -1997,7 +1997,6 @@
   "a flr file_read",
   "s read",
   "as any",
-  "s starts",
   "is list_any_starts_with",
   "c list_any_starts_with list_find_starts_with",
   "r list_find_starts_withis list_map_prefix_without",
@@ -2181,7 +2180,8 @@
   "o sb",
   "o s4",
   "s sand",
-  "s digit"
+  "s digit",
+  "s starts"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
