@@ -5029,7 +5029,8 @@
    "js_calls_to_each",
    "app_reply_main",
    "js_declare_single",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "sandbox"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -21716,6 +21717,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "not",
     "string_starts_with_digit",
     "list_map",
     "string_split_newline",
