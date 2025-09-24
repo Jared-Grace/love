@@ -5441,7 +5441,8 @@
    "emoji_rock",
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
-   "emoji_handshake"
+   "emoji_handshake",
+   "app_reply_main"
   ],
   "readdirSync": [
    "folder_read"
@@ -25153,6 +25154,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "bible_verses_encouragement",
     "ebible_references_parse_lines",
     "ebible_version_books",
     "html_display_none_or_block",
@@ -25210,7 +25212,7 @@
     "preview",
     "chosens",
     "typed",
-    "bible_verses_encouragement",
+    "v2",
     "list",
     "bible_folders",
     "lines",
