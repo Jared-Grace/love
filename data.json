@@ -13636,7 +13636,8 @@
    "ebible_chapters_each_verses_check",
    "ebible_chapters_each_verses_check_with",
    "ebible_chapters_each_verses_list",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_verse"
   ],
   "unzip": [
    "unzip",
@@ -13894,7 +13895,8 @@
   "ebible_verses": [
    "ebible_verses",
    "sandbox_2",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "ebible_verse"
   ],
   "chapter_code": [
    "ebible_verses",
@@ -13911,7 +13913,8 @@
    "ebible_chapter_code_to_book",
    "ebible_chapter_code_to_name",
    "ebible_chapters_each_verses_check",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "ebible_verse"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -14076,7 +14079,8 @@
    "app_reply_main",
    "sandbox_2",
    "ebible_chapters_each_verses_check",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "ebible_verse"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -14311,8 +14315,7 @@
    "app_reply_main"
   ],
   "verse_texts": [
-   "app_reply_main",
-   "ebible_verse"
+   "app_reply_main"
   ],
   "ebible_verse_download": [
    "app_reply_main",
@@ -26375,12 +26378,15 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "ebible_verses",
     "marker",
     "ebible_verse",
     "language_codes",
     "book_code",
     "chapter_verse",
-    "verse_texts"
+    "verses",
+    "bible_folder",
+    "chapter_code"
    ]
   },
   "ebible_versions": {
