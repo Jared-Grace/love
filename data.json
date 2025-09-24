@@ -10110,8 +10110,7 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with",
-   "sandbox"
+   "list_any_starts_with"
   ],
   "match": [
    "js_node_types_is",
@@ -14406,7 +14405,8 @@
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "sandbox"
   ],
   "list_find_starts_with": [
    "list_find_starts_with",
@@ -21709,8 +21709,8 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_any_starts_with",
     "string_starts_with",
-    "list_any",
     "file_read",
     "folder_user_docs_path",
     "marker",
