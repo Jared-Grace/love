@@ -3,7 +3,6 @@ import { ebible_references_parse_lines } from "./ebible_references_parse_lines.m
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -155,7 +154,6 @@ export async function app_reply_main() {
     function lambda9(item3) {}
     each(list, lambda9);
     let chapter_code2 = object_property_get(verse, "chapter_code");
-    let book_code = ebible_chapter_code_to_book(chapter_code2);
     let verses = list_map_property(verses_list, "verses");
     let verse_texts = list_map_property(verses, "text");
     list_add_first(verse_texts, reference);
