@@ -6667,7 +6667,8 @@
    "js_calls_to_each",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign"
+   "app_new_assign",
+   "sandbox"
   ],
   "functions_combine": [
    "functions_combine",
@@ -8099,7 +8100,8 @@
    "js_call_callee_name",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign"
+   "app_new_assign",
+   "sandbox"
   ],
   "type": [
    "function_params_consolidate",
@@ -10006,7 +10008,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "sandbox"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -21825,6 +21828,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "js_parse_expression",
     "list_add",
     "list_empty",
     "js_declaration_single_block_body",
@@ -21868,6 +21872,8 @@
     "lambda3",
     "ast",
     "body_block",
+    "expression",
+    "code_expression",
     "item",
     "output"
    ],
