@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { ebible_verse } from "./ebible_verse.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
@@ -86,7 +87,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
-      await each_pair_async(books_all, lambda5);
+      await each_async(books_all, lambda5);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
