@@ -2188,7 +2188,6 @@
   "o sb",
   "s book",
   "is ebible_version_books",
-  "d",
   "v",
   "s reply",
   "s starts,any",
@@ -2206,7 +2205,8 @@
   "u fo",
   "as ope",
   "p",
-  "sb"
+  "sb",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "bible_verses_encouragement",
