@@ -3134,8 +3134,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4565,8 +4564,7 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5089,8 +5087,7 @@
    "ebible_chapter_code_to_name",
    "string_split_semicolon",
    "string_padded_is",
-   "string_split_semicolon_space",
-   "sandbox"
+   "string_split_semicolon_space"
   ],
   "a": [
    "string_suffix_without",
@@ -9638,8 +9635,7 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is",
-   "sandbox"
+   "string_padded_is"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12406,8 +12402,7 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is",
-   "sandbox"
+   "string_padded_is"
   ],
   "only": [
    "list_single",
@@ -21723,7 +21718,6 @@
     "list_map",
     "string_split_newline",
     "list_any_starts_with",
-    "string_starts_with",
     "file_read",
     "folder_user_docs_path",
     "marker",
@@ -21734,10 +21728,6 @@
     "lambda2",
     "item2",
     "d",
-    "lambda",
-    "item",
-    "sw",
-    "s",
     "any",
     "mapped"
    ],
