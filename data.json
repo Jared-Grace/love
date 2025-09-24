@@ -11675,8 +11675,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "app_reply_main"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14979,12 +14978,6 @@
    "app_reply_main"
   ],
   "reference2": [
-   "app_reply_main"
-  ],
-  "lambda10": [
-   "app_reply_main"
-  ],
-  "item4": [
    "app_reply_main"
   ]
  },
@@ -25352,9 +25345,6 @@
     "text",
     "component",
     "lambda3",
-    "lambda10",
-    "item4",
-    "list2",
     "lambda9",
     "item3",
     "list",
