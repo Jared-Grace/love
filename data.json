@@ -2171,7 +2171,6 @@
   "function_name_to_acronym a_b_C",
   "rs sandbox_4 a",
   "o rs",
-  "d",
   "s doc",
   "n sandbox",
   "o s4",
@@ -2197,7 +2196,8 @@
   "o sb",
   "sb",
   "s book",
-  "is ebible_version_books"
+  "is ebible_version_books",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
@@ -3675,7 +3675,8 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "app_new_assign",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "string_dot"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4329,7 +4330,8 @@
    "html_parse_classes_preview",
    "html_parse_find_a_href_starts_with",
    "html_parse_href_text",
-   "digits"
+   "digits",
+   "string_starts_with_digit"
   ],
   "data": [
    "data_all",
@@ -5116,7 +5118,8 @@
    "string_skip_while",
    "string_starts_with_space",
    "string_trim_right",
-   "string_ends_with_space"
+   "string_ends_with_space",
+   "string_starts_with_dot"
   ],
   "a": [
    "string_suffix_without",
@@ -9665,7 +9668,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "string_padded_is",
-   "string_starts_with_space"
+   "string_starts_with_space",
+   "string_starts_with_dot"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12793,7 +12797,8 @@
    "list_filter_starts_with_any",
    "list_find_starts_with",
    "string_skip_while",
-   "string_trim_right"
+   "string_trim_right",
+   "string_starts_with_digit"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14003,7 +14008,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "sandbox_4_a",
-   "sandbox"
+   "sandbox",
+   "string_starts_with_digit"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -14444,7 +14450,8 @@
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
-   "list_filter_starts_with_any"
+   "list_filter_starts_with_any",
+   "string_starts_with_digit"
   ],
   "list_find_starts_with": [
    "list_find_starts_with",
@@ -14855,24 +14862,28 @@
    "string_split_semicolon_space"
   ],
   "digits": [
-   "digits"
+   "digits",
+   "string_starts_with_digit"
   ],
   "string_starts_with_digit": [
-   "sandbox"
+   "sandbox",
+   "string_starts_with_digit"
   ],
   "string_skip_while": [
    "sandbox",
    "string_skip_while"
   ],
   "string_dot": [
-   "js_code_dot"
+   "js_code_dot",
+   "string_dot"
   ],
   "lambda$s": [
    "string_skip_while",
    "string_trim_right"
   ],
   "string_starts_with_dot": [
-   "sandbox"
+   "sandbox",
+   "string_starts_with_dot"
   ],
   "string_starts_with_space": [
    "string_starts_with_space",
@@ -14880,7 +14891,8 @@
   ],
   "sw2": [
    "string_starts_with_space",
-   "string_ends_with_space"
+   "string_ends_with_space",
+   "string_starts_with_dot"
   ],
   "string_trim_right": [
    "string_trim_right",
@@ -28595,6 +28607,33 @@
     "string_ends_with",
     "marker",
     "string_ends_with_space",
+    "s",
+    "sw2"
+   ]
+  },
+  "string_dot": {
+   "async": false,
+   "identifiers": [
+    "string_dot",
+    "v"
+   ]
+  },
+  "string_starts_with_digit": {
+   "async": false,
+   "identifiers": [
+    "list_any_starts_with",
+    "digits",
+    "string_starts_with_digit",
+    "item2",
+    "d",
+    "any"
+   ]
+  },
+  "string_starts_with_dot": {
+   "async": false,
+   "identifiers": [
+    "string_starts_with",
+    "string_starts_with_dot",
     "s",
     "sw2"
    ]
