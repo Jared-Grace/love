@@ -2190,7 +2190,8 @@
   "c string_starts_with_dot string_starts_with_space",
   "p",
   "sb",
-  "s white"
+  "s white",
+  "c string_skip_while string_trim_right"
  ],
  "marker_current": "1",
  "function_current": "string_starts_with_space",
