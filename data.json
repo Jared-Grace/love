@@ -184,7 +184,8 @@
   "ev": "ebible_verse",
   "flo": "file_open",
   "lst": "list_set",
-  "ssk": "string_skip"
+  "ssk": "string_skip",
+  "sz": "string_size"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2193,7 +2194,8 @@
   "s white",
   "c string_skip_while string_trim_right",
   "s z",
-  "as z"
+  "as z",
+  "a sz string_size"
  ],
  "marker_current": "1",
  "function_current": "string_trim_right",
