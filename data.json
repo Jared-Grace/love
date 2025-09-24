@@ -2541,8 +2541,7 @@
    "sandbox_4_a",
    "string_starts_with_space",
    "string_trim_right",
-   "string_ends_with_space",
-   "bible_verses_encouragement"
+   "string_ends_with_space"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -28706,7 +28705,6 @@
   "bible_verses_encouragement": {
    "async": false,
    "identifiers": [
-    "marker",
     "bible_verses_encouragement"
    ]
   }
