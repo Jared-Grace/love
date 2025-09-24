@@ -3141,8 +3141,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "previous": [
    "data_identifiers_file",
@@ -14843,14 +14842,8 @@
   "string_dot": [
    "js_code_dot"
   ],
-  "s2": [
-   "sandbox"
-  ],
   "lambda$s": [
    "string_skip_while"
-  ],
-  "s3": [
-   "sandbox"
   ],
   "string_starts_with_dot": [
    "sandbox"
@@ -21760,9 +21753,6 @@
     "lambda2",
     "item2",
     "mapped",
-    "s3",
-    "lambda",
-    "s2",
     "mapped2"
    ],
    "async": true
