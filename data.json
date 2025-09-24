@@ -9484,7 +9484,8 @@
    "js_declaration_param_named",
    "list_find_property",
    "app_reply_main",
-   "list_remove_property"
+   "list_remove_property",
+   "ebible_verse"
   ],
   "nameds": [
    "js_declaration_single"
@@ -10156,8 +10157,7 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused",
-   "ebible_verse"
+   "js_imports_unused"
   ],
   "fds": [
    "js_outside_move"
@@ -26375,7 +26375,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
-    "list_filter_property",
+    "list_find_property",
     "ebible_verses",
     "marker",
     "ebible_verse",
