@@ -14806,9 +14806,6 @@
   ],
   "string_split_semicolon_space": [
    "string_split_semicolon_space"
-  ],
-  "file_path2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21705,8 +21702,7 @@
     "marker",
     "sandbox",
     "file_path",
-    "contents",
-    "file_path2"
+    "contents"
    ],
    "async": true
   },
