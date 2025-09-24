@@ -4912,8 +4912,7 @@
    "ebible_versions_download",
    "http",
    "retry",
-   "function_list_generate",
-   "ebible_references_parse_lines"
+   "function_list_generate"
   ],
   "value2": [
    "error_attention_set",
@@ -28726,7 +28725,6 @@
     "result",
     "text",
     "item",
-    "lambda3",
     "list"
    ]
   }
