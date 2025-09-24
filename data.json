@@ -3694,7 +3694,8 @@
    "app_new_assign",
    "sandbox_4_a",
    "string_dot",
-   "bible_verses_encouragement"
+   "bible_verses_encouragement",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -21853,7 +21854,8 @@
    "identifiers": [
     "bible_verses_encouragement",
     "marker",
-    "sandbox"
+    "sandbox",
+    "v"
    ],
    "async": true
   },
