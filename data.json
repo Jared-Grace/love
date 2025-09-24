@@ -2203,14 +2203,14 @@
   "p",
   "s return",
   "is js_statement_return_empty",
-  "sb",
   "bible_verses_encouragement",
   "s without",
   "o sb",
   "s god",
   "s reply",
   "ebible_index_flat_upload_name",
-  "s verses"
+  "s verses",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
