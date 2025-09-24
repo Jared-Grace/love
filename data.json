@@ -3666,8 +3666,7 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "app_new_assign",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -13313,8 +13312,7 @@
   ],
   "str": [
    "string_letters_only",
-   "whitespace_normalize",
-   "sandbox"
+   "whitespace_normalize"
   ],
   "text2": [
    "app_reply_main",
@@ -21774,8 +21772,6 @@
     "fns",
     "lambda2",
     "item2",
-    "v",
-    "str",
     "lambda",
     "fn",
     "mapped"
