@@ -2119,7 +2119,6 @@
   "s ps",
   "ev ur,en MAT01 1",
   "s books",
-  "is ebible_version_books",
   "ebible_version_books engbsb",
   "fws ebible_version_books upload",
   "ev en,lug EZK16:36",
@@ -2197,7 +2196,8 @@
   "s z",
   "o sb",
   "sb",
-  "s book"
+  "s book",
+  "is ebible_version_books"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
