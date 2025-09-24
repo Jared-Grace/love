@@ -16,7 +16,8 @@ export async function sandbox() {
   }
   let mapped = list_map(split, lambda2);
   function lambda2(item2) {
-    let s3 = string_skip_while(function lambda(s) {}, s2);
+    function lambda(s) {}
+    let s3 = string_skip_while(lambda, s2);
     item2 = string_skip_while(string_starts_with_digit, item2);
     return item2;
   }
