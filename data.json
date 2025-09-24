@@ -3166,7 +3166,6 @@
    "list_map_split_space",
    "object_merge_generic",
    "sandbox_2",
-   "ebible_verse",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
@@ -3271,7 +3270,6 @@
    "each_multiple_async",
    "retry",
    "each_index_async",
-   "ebible_verse",
    "ebible_books_to_chapter_codes",
    "sandbox_4_a",
    "bible_verses_encouragement_generate"
@@ -3652,7 +3650,6 @@
    "css_class_prefix_combine",
    "ebible_class_new",
    "ebible_class_old",
-   "ebible_verse",
    "emoji_100",
    "emoji_book_open",
    "emoji_cross",
@@ -3937,7 +3934,6 @@
    "ebible_verses_upload_name",
    "sandbox_2",
    "ebible_verse_new",
-   "ebible_verse",
    "folder_user_combine"
   ],
   "watcher": [
@@ -4478,7 +4474,6 @@
    "marker_next_declare_single_init_elements",
    "object_property_get_name",
    "object_merge_generic",
-   "ebible_verse",
    "ebible_books_to_chapter_codes"
   ],
   "data_save": [
@@ -5707,8 +5702,7 @@
    "html_parse_href_text",
    "urdu_allah_to_god",
    "sandbox_2",
-   "ebible_verse_new",
-   "ebible_verse"
+   "ebible_verse_new"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6116,7 +6110,6 @@
    "list_find_property",
    "js_dollar_a",
    "each_multiple_async",
-   "ebible_verse",
    "sandbox_4_a"
   ],
   "items": [
@@ -6411,8 +6404,7 @@
    "function_copy",
    "function_open",
    "app_html_open",
-   "html_update_generic",
-   "ebible_verse"
+   "html_update_generic"
   ],
   "terminal": [
    "file_open"
@@ -6465,8 +6457,7 @@
    "file_write",
    "function_new_declaration",
    "file_write_json",
-   "sandbox_2",
-   "ebible_verse"
+   "sandbox_2"
   ],
   "folder_current": [
    "folder_current",
@@ -6512,7 +6503,6 @@
    "list_second",
    "list_first_second_generic",
    "string_split_dash",
-   "ebible_verse",
    "sandbox_4_a"
   ],
   "list_to": [
@@ -6564,7 +6554,6 @@
    "list_map_unordered_async",
    "marker_down_choices",
    "data_files_update",
-   "ebible_verse",
    "sandbox_4_a"
   ],
   "js_declaration_single_block_blody": [
@@ -6614,7 +6603,6 @@
   "string_split_comma": [
    "functions_combine_name",
    "string_split_comma",
-   "ebible_verse",
    "list_map_split_comma"
   ],
   "string_split": [
@@ -6759,7 +6747,6 @@
    "string_split_newline",
    "ebible_references_parse",
    "path_join",
-   "ebible_verse",
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "string_split_empty",
@@ -9173,8 +9160,7 @@
    "js_visit_each_async",
    "js_visit_type_each_async",
    "marker_down_choices",
-   "js_imports_declarations",
-   "ebible_verse"
+   "js_imports_declarations"
   ],
   "edges": [
    "js_block_child_graph",
@@ -9496,7 +9482,6 @@
   "list_find_property": [
    "js_declaration_param_named",
    "list_find_property",
-   "ebible_verse",
    "app_reply_main",
    "list_remove_property"
   ],
@@ -9631,8 +9616,7 @@
   ],
   "list_first_second": [
    "js_dollar",
-   "list_first_second",
-   "ebible_verse"
+   "list_first_second"
   ],
   "list_skip": [
    "js_dollar",
@@ -9755,8 +9739,7 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x",
-   "ebible_verse"
+   "js_dollar_x"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -12201,7 +12184,6 @@
   ],
   "split2": [
    "list_map_split_space",
-   "ebible_verse",
    "sandbox_4_a"
   ],
   "list_take": [
@@ -13129,8 +13111,7 @@
   ],
   "list_join_newline_2": [
    "list_join_newline_2",
-   "app_reply_main",
-   "ebible_verse"
+   "app_reply_main"
   ],
   "html_remove": [
    "html_remove",
@@ -13649,7 +13630,6 @@
    "ebible_verse_download",
    "ebible_version_books_testament_apocrypha",
    "sandbox_2",
-   "ebible_verse",
    "ebible_languages",
    "ebible_version_books_upload",
    "ebible_books_to_chapter_codes",
@@ -13914,7 +13894,6 @@
   "ebible_verses": [
    "ebible_verses",
    "sandbox_2",
-   "ebible_verse",
    "ebible_chapters_each_verses_list"
   ],
   "chapter_code": [
@@ -13928,7 +13907,6 @@
    "ebible_verses_upload_name",
    "ebible_verse_download",
    "sandbox_2",
-   "ebible_verse",
    "ebible_chapter_code_normalize",
    "ebible_chapter_code_to_book",
    "ebible_chapter_code_to_name",
@@ -14413,7 +14391,6 @@
   "languages": [
    "app_reply_main",
    "ebible_languages",
-   "ebible_verse",
    "list_remove_property"
   ],
   "bible_folder2": [
@@ -14538,8 +14515,7 @@
    "string_split_dash"
   ],
   "string_split_colon": [
-   "string_split_colon",
-   "ebible_verse"
+   "string_split_colon"
   ],
   "list_map_first": [
    "list_map_first"
@@ -14644,8 +14620,7 @@
   ],
   "temp_path": [
    "sandbox_2",
-   "file_temp",
-   "ebible_verse"
+   "file_temp"
   ],
   "file_delete_if_exists": [
    "file_delete_if_exists",
@@ -14653,8 +14628,7 @@
   ],
   "file_temp": [
    "sandbox_2",
-   "file_temp",
-   "ebible_verse"
+   "file_temp"
   ],
   "output_path": [
    "sandbox_2"
@@ -14691,12 +14665,10 @@
   ],
   "ebible_languages": [
    "app_reply_main",
-   "ebible_languages",
-   "ebible_verse"
+   "ebible_languages"
   ],
   "language_code": [
    "ebible_languages",
-   "ebible_verse",
    "app_reply_main"
   ],
   "string_upper_to": [
@@ -14707,7 +14679,6 @@
    "string_upper_to"
   ],
   "ebible_chapter_code_normalize": [
-   "ebible_verse",
    "ebible_chapter_code_normalize"
   ],
   "language_codes": [
@@ -26404,41 +26375,12 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
-    "file_open",
-    "file_write",
-    "file_temp",
-    "list_first_second",
-    "string_split_colon",
-    "string_split_comma",
-    "list_map_unordered_async",
-    "object_property_get",
-    "ebible_chapter_code_normalize",
-    "list_find_property",
-    "ebible_languages",
-    "ebible_verses",
     "marker",
-    "list_join_newline_2",
     "ebible_verse",
     "language_codes",
     "book_code",
     "chapter_verse",
-    "split2",
-    "first",
-    "second",
-    "split",
-    "languages",
-    "lambda",
-    "language_code",
-    "chapter_code",
-    "l",
-    "bible_folder",
-    "vs",
-    "v",
-    "text",
-    "verse_texts",
-    "joined",
-    "lambda2",
-    "temp_path"
+    "verse_texts"
    ]
   },
   "ebible_versions": {
