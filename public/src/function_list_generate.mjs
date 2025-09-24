@@ -8,7 +8,8 @@ import { js_declaration_single_block_body } from "./js_declaration_single_block_
 import { function_new } from "./function_new.mjs";
 import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
-export async function function_list_generate(f_name, list) {
+export async function function_list_generate(f_generate, list) {
+  let f_generate_name = f_generate.name;
   let { exists } = await function_exists(f_name);
   if (not(exists)) {
     await function_new(f_name);
