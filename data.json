@@ -8195,8 +8195,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "sandbox"
+   "function_param_swap_task_simple"
   ],
   "function_read": [
    "function_read"
@@ -21852,8 +21851,7 @@
     "mapped2",
     "verse_references",
     "f_name",
-    "e",
-    "f_name2"
+    "e"
    ],
    "async": true
   },
