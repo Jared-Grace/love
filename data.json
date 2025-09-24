@@ -2002,7 +2002,6 @@
   "is list_map_prefix_without",
   "cs list_map_prefix_without any",
   "s list_map_prefix_without",
-  "s empty",
   "r list_map_string_empty_not_is list_map_filter_string_empty_not_is",
   "c list_map_prefix_without_any list_map_prefix_any",
   "s colon",
@@ -2205,7 +2204,8 @@
   "u fe",
   "a fe function_exists",
   "s body",
-  "s clear"
+  "s clear",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
