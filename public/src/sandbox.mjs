@@ -10,9 +10,8 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  let predicate = string_starts_with_digit;
   function lambda2(item2) {
-    item2 = string_skip_while(predicate, item2);
+    item2 = string_skip_while(string_starts_with_digit, item2);
     return item2;
   }
   let mapped = list_map(split, lambda2);
