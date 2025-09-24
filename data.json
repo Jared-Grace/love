@@ -2214,7 +2214,8 @@
   "nd ib",
   "p",
   "sb",
-  "o ebible_version_books"
+  "o ebible_version_books",
+  "s squa"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books",
