@@ -11,12 +11,12 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda2(item2) {
-    let digits = "1234567890";
+    let d = "1234567890";
     function lambda(item) {
       let sw = string_starts_with(s, item);
       return sw;
     }
-    let any = list_any_starts_with(digits, lambda);
+    let any = list_any_starts_with(d, lambda);
   }
   let mapped = list_map(split, lambda2);
 }
