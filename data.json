@@ -1867,7 +1867,6 @@
   "s app",
   "s js,dec",
   "n js_code_dot",
-  "s body",
   "s call",
   "s bible",
   "n ebible_version_verses",
@@ -2205,7 +2204,8 @@
   "s list",
   "s function,ex",
   "u fe",
-  "a fe function_exists"
+  "a fe function_exists",
+  "s body"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
