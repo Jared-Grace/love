@@ -2205,9 +2205,9 @@
   "as ope",
   "d",
   "p",
-  "sb",
   "s return",
-  "is js_statement_return_empty"
+  "is js_statement_return_empty",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "bible_verses_encouragement",
