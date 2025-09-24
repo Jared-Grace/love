@@ -1,3 +1,4 @@
+import { ebible_verse } from "./ebible_verse.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -60,7 +61,7 @@ export async function app_reply_main() {
     let encouragement = bible_verses_encouragement();
     let r = list_random_item(encouragement);
     let list = await ebible_references_parse_lines([en], [r]);
-    let verse = await ebible_verse_download(en, chapter_code, verse_number);
+    let verse = await ebible_verse(en, chapter_code, verse_number);
     let v = [verse];
     return v;
   }
