@@ -5034,7 +5034,8 @@
    "js_calls_to_each",
    "app_reply_main",
    "js_declare_single",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "string_skip_while"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5094,7 +5095,8 @@
    "string_split_semicolon",
    "string_padded_is",
    "string_split_semicolon_space",
-   "sandbox"
+   "sandbox",
+   "string_skip_while"
   ],
   "a": [
    "string_suffix_without",
@@ -10857,7 +10859,8 @@
   "string_skip": [
    "string_prefix_without",
    "string_skip",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "string_skip_while"
   ],
   "startsWith": [
    "string_starts_with"
@@ -12767,7 +12770,8 @@
    "app_replace_rule_set",
    "list_any_starts_with",
    "list_filter_starts_with_any",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "string_skip_while"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14834,13 +14838,17 @@
    "sandbox"
   ],
   "string_skip_while": [
-   "sandbox"
+   "sandbox",
+   "string_skip_while"
   ],
   "string_dot": [
    "js_code_dot"
   ],
   "s2": [
    "sandbox"
+  ],
+  "lambda$s": [
+   "string_skip_while"
   ]
  },
  "functions": {
@@ -28496,6 +28504,17 @@
     "digits",
     "d",
     "split"
+   ]
+  },
+  "string_skip_while": {
+   "async": false,
+   "identifiers": [
+    "string_skip",
+    "not",
+    "string_skip_while",
+    "lambda$s",
+    "s",
+    "any"
    ]
   }
  },
