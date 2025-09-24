@@ -5092,8 +5092,7 @@
    "ebible_chapter_code_to_name",
    "string_split_semicolon",
    "string_padded_is",
-   "string_split_semicolon_space",
-   "sandbox"
+   "string_split_semicolon_space"
   ],
   "a": [
    "string_suffix_without",
@@ -9288,8 +9287,7 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip",
-   "sandbox"
+   "string_skip"
   ],
   "remaining": [
    "js_call_new_code",
@@ -10531,8 +10529,7 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses",
-   "sandbox"
+   "ebible_verses"
   ],
   "slice": [
    "list_slice",
@@ -21739,9 +21736,6 @@
     "lambda2",
     "item2",
     "any",
-    "skipped",
-    "s",
-    "skip_count",
     "mapped"
    ],
    "async": true
