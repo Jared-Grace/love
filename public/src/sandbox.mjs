@@ -21,7 +21,7 @@ export async function sandbox() {
     string_ends_with_space,
   ];
   function lambda2(item2) {
-    let v = whitespace_normalize(str);
+    item2 = whitespace_normalize(item2);
     each(fns, lambda);
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
