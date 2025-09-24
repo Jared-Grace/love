@@ -7444,8 +7444,7 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "ebible_references_parse_lines"
+   "list_map_unordered_async"
   ],
   "mapped2": [
    "function_dependencies_code",
@@ -11681,8 +11680,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "ebible_references_parse_lines"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12412,8 +12410,7 @@
   "lambda6": [
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_reply_main",
-   "ebible_references_parse_lines"
+   "app_reply_main"
   ],
   "sliced": [
    "list_slice",
@@ -14040,8 +14037,7 @@
    "list_find_starts_with",
    "sandbox_4_a",
    "string_starts_with_digit",
-   "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "bible_verses_encouragement_generate"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -14101,7 +14097,8 @@
    "ebible_references_parse_lines"
   ],
   "ebible_verse": [
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "list_index_of_last": [
    "list_index_of_last",
@@ -28666,6 +28663,7 @@
   "ebible_references_parse_lines": {
    "async": true,
    "identifiers": [
+    "ebible_verse",
     "list_adder_async",
     "each_pair_async",
     "each_range_from_async",
@@ -28733,10 +28731,6 @@
     "lambda4",
     "verse_number",
     "result",
-    "lambda6",
-    "item2",
-    "waited",
-    "list2",
     "ne",
     "lambda3",
     "item",
