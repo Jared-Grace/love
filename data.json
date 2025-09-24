@@ -13775,7 +13775,6 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "app_reply_main",
-   "ebible_verse",
    "ebible_books_to_chapter_codes"
   ],
   "string_take": [
@@ -26380,7 +26379,6 @@
     "marker",
     "ebible_verse",
     "bible_folder",
-    "book_code",
     "chapter_code",
     "verse_number",
     "verses",
