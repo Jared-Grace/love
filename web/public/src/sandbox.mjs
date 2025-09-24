@@ -1,3 +1,4 @@
+import { function_open } from "./function_open.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
@@ -61,6 +62,6 @@ export async function sandbox() {
     list_add(body_block, expression);
   }
   let output = await function_transform(f_name, lambda3);
-  fo;
+  await function_open(f_name2);
   return verse_references;
 }
