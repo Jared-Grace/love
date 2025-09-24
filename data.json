@@ -3238,7 +3238,8 @@
    "ebible_references_parse",
    "ebible_verse",
    "ebible_books_to_chapter_codes",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3400,7 +3401,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -5253,7 +5255,8 @@
    "list_map_split_space",
    "list_map_split_comma",
    "list_map_whitespace_normalize",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "functions_names": [
    "functions_names",
@@ -6798,7 +6801,8 @@
    "range_from",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -13966,7 +13970,8 @@
    "app_reply_main",
    "list_any_starts_with",
    "list_find_starts_with",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -21710,6 +21715,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_map",
     "string_split_newline",
     "list_any_starts_with",
     "string_starts_with",
@@ -21720,6 +21726,10 @@
     "file_path",
     "contents",
     "split",
+    "mapped",
+    "list",
+    "lambda2",
+    "item2",
     "digits",
     "lambda",
     "item",
