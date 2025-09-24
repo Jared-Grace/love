@@ -13808,7 +13808,6 @@
    "string_starts_with_not",
    "ebible_chapter_code_to_book",
    "ebible_index",
-   "app_reply_main",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines"
   ],
@@ -14246,8 +14245,7 @@
   "ebible_chapter_code_to_book": [
    "ebible_chapter_code_to_book",
    "ebible_version_books_testament",
-   "ebible_index",
-   "app_reply_main"
+   "ebible_index"
   ],
   "ebible_book_code_size": [
    "ebible_chapter_code_to_book",
@@ -25243,7 +25241,6 @@
     "ebible_version_books",
     "html_display_none_or_block",
     "list_empty_not_is",
-    "ebible_chapter_code_to_book",
     "firebase_storage_download_ebible",
     "list_remove_property",
     "ebible_languages",
@@ -25338,7 +25335,6 @@
     "lambda9",
     "item3",
     "list",
-    "book_code",
     "verse_texts",
     "verse_text",
     "other",
