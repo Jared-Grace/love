@@ -147,7 +147,7 @@ export async function app_reply_main() {
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [
-      "Here is a random verse; Be blessed only; no curse",
+      "Here is a random verse; May this verse bless you; May there be no curse",
       verse_text,
     ];
     let ne = list_empty_not_is(languages_chosens);
