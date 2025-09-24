@@ -2086,7 +2086,6 @@
   "s text",
   "ebible_chapter_text engbsb EZR08",
   "o verses",
-  "s verses",
   "ebible_verses engbsb EZR08",
   "ebible_chapter_text EZR08",
   "ect engbsb EZR08",
@@ -2210,7 +2209,8 @@
   "o sb",
   "s god",
   "s reply",
-  "ebible_index_flat_upload_name"
+  "ebible_index_flat_upload_name",
+  "s verses"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
