@@ -14917,6 +14917,9 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
+  ],
+  "fe": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21838,7 +21841,8 @@
     "bible_folder",
     "books",
     "mapped2",
-    "verse_references"
+    "verse_references",
+    "fe"
    ],
    "async": true
   },
