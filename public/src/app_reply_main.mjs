@@ -167,8 +167,8 @@ export async function app_reply_main() {
       let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
     let verses = list_map_property(verses_list, "verses");
-    let squashed = list_squash(list2);
-    let verse_texts = list_map_property(verses, "text");
+    let squashed = list_squash(verses);
+    let verse_texts = list_map_property(squashed, "text");
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [
