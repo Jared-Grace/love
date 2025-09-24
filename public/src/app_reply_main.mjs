@@ -97,7 +97,7 @@ export async function app_reply_main() {
     async function lambda7() {
       let verses_list_first = list_first(verses_list);
       let verses2 = object_property_get(verses_list_first, "verses");
-      let reference2 = object_property_get(verses_list_first, "reference");
+      let reference = object_property_get(verses_list_first, "reference");
       async function lambda8(verse) {
         let chapter_code2 = object_property_get(verse, "chapter_code");
         let verse_number2 = object_property_get(verse, "verse_number");
@@ -108,8 +108,11 @@ export async function app_reply_main() {
         );
         return d;
       }
-      let verses3 = await list_map_unordered_async(verses2, lambda8);
-      list_add_first(verses_list, verses3);
+      let verses = await list_map_unordered_async(verses2, lambda8);
+      list_add_first(verses_list, {
+        verses,
+        reference,
+      });
       list_add_first(languages_chosens, language_code);
       preview_refresh();
     }
