@@ -4989,7 +4989,8 @@
    "js_identifier_unique",
    "string_ends_with",
    "function_rename_suffix_add",
-   "functions_names"
+   "functions_names",
+   "function_list_generate"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -5025,7 +5026,8 @@
    "functions_names",
    "function_identifier_replace_ending_remove",
    "string_suffix_change",
-   "ebible_chapters"
+   "ebible_chapters",
+   "function_list_generate"
   ],
   "not": [
    "string_suffix_without",
@@ -5236,7 +5238,8 @@
    "string_suffix_without",
    "string_suffix_change",
    "functions_names",
-   "ebible_chapters"
+   "ebible_chapters",
+   "function_list_generate"
   ],
   "ending_old": [
    "function_watch_ending_change",
@@ -9448,8 +9451,7 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any",
-   "function_list_generate"
+   "list_map_prefix_any"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9702,8 +9704,7 @@
    "list_find_starts_with",
    "string_padded_is",
    "string_starts_with_space",
-   "string_starts_with_dot",
-   "function_list_generate"
+   "string_starts_with_dot"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12472,8 +12473,7 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is",
-   "function_list_generate"
+   "string_padded_is"
   ],
   "only": [
    "list_single",
@@ -28724,7 +28724,7 @@
   "function_list_generate": {
    "async": true,
    "identifiers": [
-    "string_starts_with",
+    "string_suffix_without",
     "function_open",
     "function_transform",
     "js_statement_return_add",
@@ -28740,9 +28740,9 @@
     "list",
     "f_generate_name",
     "name",
-    "sw",
+    "without",
     "s",
-    "prefix",
+    "suffix",
     "exists",
     "f_name",
     "lambda3",
