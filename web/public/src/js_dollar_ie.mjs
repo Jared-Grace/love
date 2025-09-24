@@ -3,6 +3,7 @@ import { object_property_set } from "./object_property_set.mjs";
 import { js_dollar_i } from "./js_dollar_i.mjs";
 import { equal } from "./equal.mjs";
 export async function js_dollar_ie({ stack1, ast }) {
+  let fn = equal;
   js_dollar_i({
     stack1,
   });
