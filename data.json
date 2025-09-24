@@ -14944,14 +14944,14 @@
    "bible_verses_encouragement_generate"
   ],
   "bible_verses_encouragement": [
-   "bible_verses_encouragement"
+   "bible_verses_encouragement",
+   "sandbox"
   ],
   "js_statement_return_add": [
    "js_if_blockify_generic",
    "function_list_generate"
   ],
   "bible_verses_encouragement_generate": [
-   "sandbox",
    "bible_verses_encouragement_generate"
   ],
   "function_list_generate": [
@@ -21851,7 +21851,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "bible_verses_encouragement_generate",
+    "bible_verses_encouragement",
     "marker",
     "sandbox"
    ],
