@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { function_open } from "./function_open.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -52,6 +53,7 @@ export async function sandbox() {
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
   if (not(e)) {
+    log(message);
     await function_new(f_name);
   }
   async function lambda3(ast) {
