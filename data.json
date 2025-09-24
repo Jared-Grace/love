@@ -3693,7 +3693,6 @@
    "app_new_assign",
    "sandbox_4_a",
    "string_dot",
-   "bible_verses_encouragement",
    "sandbox"
   ],
   "file_overwrite": [
@@ -14890,6 +14889,9 @@
   "ebible_references_parse_lines": [
    "ebible_references_parse",
    "app_reply_main"
+  ],
+  "encouragement": [
+   "bible_verses_encouragement"
   ]
  },
  "functions": {
@@ -28548,7 +28550,7 @@
    "identifiers": [
     "marker",
     "bible_verses_encouragement",
-    "v"
+    "encouragement"
    ]
   },
   "bible_verses_encouragement_generate": {
