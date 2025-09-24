@@ -2181,7 +2181,8 @@
   "o s4",
   "s sand",
   "s digit",
-  "s starts"
+  "s starts",
+  "string_starts_with_digit tt"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
