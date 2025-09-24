@@ -3,6 +3,9 @@ import { ebible_references_parse_lines } from "./ebible_references_parse_lines.m
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
+import { list_find_property } from "./list_find_property.mjs";
 import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -154,8 +157,14 @@ export async function app_reply_main() {
     function lambda9(item3) {}
     each(list, lambda9);
     let chapter_code2 = object_property_get(verse, "chapter_code");
+    let book_code = ebible_chapter_code_to_book(chapter_code2);
+    let chapter_name = ebible_chapter_code_to_name(chapter_code2);
+    let book = list_find_property(books, "book_code", book_code);
+    let book_name = object_property_get(book, "text");
+    let verse_number2 = object_property_get(verse, "verse_number");
     let verses = list_map_property(verses_list, "verses");
     let verse_texts = list_map_property(verses, "text");
+    let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [
