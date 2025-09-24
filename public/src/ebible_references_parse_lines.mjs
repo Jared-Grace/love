@@ -1,4 +1,3 @@
-import { object_merge } from "./object_merge.mjs";
 import { ebible_verse } from "./ebible_verse.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
@@ -72,11 +71,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             verse_number,
           );
-          let to2 = object_merge(result, {
-            book_name,
-            chapter_name,
-            chapter_code,
-          });
           la(result);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
