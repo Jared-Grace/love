@@ -14866,7 +14866,8 @@
   ],
   "bible_verses_encouragement": [
    "bible_verses_encouragement",
-   "sandbox"
+   "sandbox",
+   "app_reply_main"
   ],
   "js_statement_return_add": [
    "js_if_blockify_generic",
@@ -25209,6 +25210,7 @@
     "preview",
     "chosens",
     "typed",
+    "bible_verses_encouragement",
     "list",
     "bible_folders",
     "lines",
