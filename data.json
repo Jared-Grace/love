@@ -2188,7 +2188,8 @@
   "sb",
   "s trim",
   "s dot",
-  "s const"
+  "s const",
+  "c string_starts_with_dot string_starts_with_space"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
