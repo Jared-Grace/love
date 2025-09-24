@@ -161,7 +161,8 @@ export async function app_reply_main() {
     let book = list_find_property(books, "book_code", book_code);
     let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
-    let verse_texts = list_map_property(verses_list, "text");
+    let verses = list_map_property(verses_list, "verses");
+    let verse_texts = list_map_property(verses, "text");
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
