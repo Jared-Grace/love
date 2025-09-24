@@ -56,12 +56,10 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
-  let verses_first = null;
   async function verse_random_get() {
     let encouragement = bible_verses_encouragement();
     let r = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [r]);
-    verses_first = verses;
     let v = [verses];
     return v;
   }
@@ -91,9 +89,9 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(item2, "bible_folder");
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
-      let verse = list_first(verses);
-      let chapter_code2 = object_property_get(verse, "chapter_code");
-      let verse_number2 = object_property_get(verse, "verse_number");
+      let verses_first = list_first(verses);
+      let chapter_code2 = object_property_get(verses_first, "chapter_code");
+      let verse_number2 = object_property_get(verses_first, "verse_number");
       let u = await ebible_verse_download(
         bible_folder2,
         chapter_code2,
