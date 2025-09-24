@@ -5562,7 +5562,8 @@
    "html_style_set",
    "html_style_merge",
    "html_style_assign",
-   "each_pair_async"
+   "each_pair_async",
+   "ebible_version_books"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -13088,7 +13089,8 @@
    "http",
    "string_base64_to",
    "firebase_storage_download",
-   "buffer_string_to"
+   "buffer_string_to",
+   "ebible_version_books"
   ],
   "window": [
    "browser_is"
@@ -14879,9 +14881,6 @@
   ],
   "ebible_references_parse_lines": [
    "ebible_references_parse"
-  ],
-  "wi": [
-   "ebible_version_books"
   ]
  },
  "functions": {
@@ -26438,6 +26437,7 @@
   "ebible_version_books": {
    "async": true,
    "identifiers": [
+    "browser_is",
     "ebible_class_apocrypha",
     "ebible_version_books_testament",
     "list_join_comma_space",
@@ -26445,7 +26445,7 @@
     "ebible_class_new",
     "ebible_version_books",
     "bible_folder",
-    "wi",
+    "b",
     "n",
     "o",
     "v",
