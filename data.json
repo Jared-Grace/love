@@ -5506,7 +5506,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "f_paths": [
    "data_files_update",
@@ -28725,21 +28726,22 @@
     "m",
     "index",
     "lambda5",
-    "verses",
     "book2",
     "text2",
     "lambda4",
     "verse_number",
     "result",
+    "verses",
     "ne",
     "lambda3",
     "item",
     "text",
+    "each_async",
     "list"
    ]
   }
  },
- "git_push_when": "2025-09-24T10:27:14.826Z",
+ "git_push_when": "2025-09-24T11:27:25.481Z",
  "error_attention": null,
  "app_current": "replace"
 }
