@@ -2521,7 +2521,8 @@
    "list_set",
    "app_message",
    "app_message_main",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "string_starts_with_space"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -28533,6 +28534,7 @@
   "string_starts_with_space": {
    "async": false,
    "identifiers": [
+    "marker",
     "string_starts_with",
     "string_starts_with_space",
     "s",
