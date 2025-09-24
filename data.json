@@ -6936,7 +6936,8 @@
    "function_open",
    "function_open_app",
    "function_open_dollar_choice",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "sandbox"
   ],
   "list_single": [
    "functions_search_open",
@@ -8207,7 +8208,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "sandbox"
   ],
   "function_read": [
    "function_read"
@@ -14937,9 +14939,6 @@
   ],
   "string_ends_with_space": [
    "string_ends_with_space",
-   "sandbox"
-  ],
-  "fo": [
    "sandbox"
   ]
  },
@@ -21832,6 +21831,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "function_open",
     "js_unparse",
     "js_parse_expression",
     "list_add",
@@ -21880,7 +21880,7 @@
     "code",
     "expression",
     "output",
-    "fo"
+    "f_name2"
    ],
    "async": true
   },
