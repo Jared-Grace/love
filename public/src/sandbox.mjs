@@ -1,5 +1,4 @@
-import { string_skip } from "./string_skip.mjs";
-import { not } from "./not.mjs";
+import { string_skip_while } from "./string_skip_while.mjs";
 import { string_starts_with_digit } from "./string_starts_with_digit.mjs";
 import { list_map } from "./list_map.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
@@ -13,13 +12,7 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   function lambda2(item2) {
     let predicate = string_starts_with_digit;
-    while (true) {
-      let any = predicate(item2);
-      if (not(any)) {
-        break;
-      }
-      item2 = string_skip(item2, 1);
-    }
+    item2 = string_skip_while(predicate, item2);
     return item2;
   }
   let mapped = list_map(split, lambda2);
