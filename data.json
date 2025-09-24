@@ -5140,8 +5140,7 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "string_starts_with_dot",
-   "function_list_generate"
+   "string_starts_with_dot"
   ],
   "a": [
    "string_suffix_without",
@@ -5237,8 +5236,7 @@
    "string_suffix_without",
    "string_suffix_change",
    "functions_names",
-   "ebible_chapters",
-   "function_list_generate"
+   "ebible_chapters"
   ],
   "ending_old": [
    "function_watch_ending_change",
@@ -28739,10 +28737,8 @@
     "list",
     "f_generate_name",
     "name",
-    "without",
-    "s",
-    "exists",
     "f_name",
+    "exists",
     "lambda3",
     "ast",
     "body_block",
