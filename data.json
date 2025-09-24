@@ -2890,7 +2890,8 @@
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
    "js_code_declaration_args",
-   "app_message"
+   "app_message",
+   "sandbox"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4680,7 +4681,8 @@
    "html_parse_classes_preview",
    "promise_wrap",
    "retry",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "sandbox"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5931,7 +5933,8 @@
   "function_exists": [
    "function_current_set",
    "function_delete_if_exists",
-   "function_exists"
+   "function_exists",
+   "sandbox"
   ],
   "marker_first": [
    "function_current_set",
@@ -14920,9 +14923,6 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
-  ],
-  "fe": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21814,6 +21814,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "function_exists",
     "ebible_folder_english",
     "list_filter_starts_with_any",
     "list_map_property",
@@ -21845,7 +21846,8 @@
     "books",
     "mapped2",
     "verse_references",
-    "fe"
+    "e",
+    "f_name"
    ],
    "async": true
   },
