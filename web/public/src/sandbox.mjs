@@ -17,7 +17,7 @@ export async function sandbox() {
       let sw = string_starts_with(s, item);
       return sw;
     }
-    let any = list_any_starts_with(d, lambda);
+    let any = list_any_starts_with(item2, lambda);
   }
   let mapped = list_map(split, lambda2);
 }
