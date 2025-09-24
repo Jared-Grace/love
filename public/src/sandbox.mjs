@@ -5,4 +5,5 @@ export async function sandbox() {
   marker("1");
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
+  let digits = "1234567890";
 }
