@@ -1,7 +1,7 @@
 import { ebible_verses } from "./ebible_verses.mjs";
 import { marker } from "./marker.mjs";
 export async function ebible_verse(
-  language_codes,
+  bible_folder,
   book_code,
   chapter_code,
   verse_number,
