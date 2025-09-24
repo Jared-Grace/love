@@ -2210,7 +2210,8 @@
   "ebible_index_flat_upload_name",
   "s verses",
   "sb",
-  "s ebible"
+  "s ebible",
+  "is ebible_verse"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
