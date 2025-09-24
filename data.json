@@ -6719,7 +6719,8 @@
    "ebible_verse",
    "list_map_whitespace_normalize",
    "sandbox_4_a",
-   "sandbox"
+   "sandbox",
+   "string_split_empty"
   ],
   "results": [
    "functions_combine_name"
@@ -12158,7 +12159,6 @@
    "list_map_split_space"
   ],
   "split2": [
-   "string_split_empty",
    "ebible_references_parse",
    "list_map_split_space",
    "ebible_verse",
@@ -24012,7 +24012,7 @@
     "string_split",
     "string_split_empty",
     "s",
-    "split2"
+    "split"
    ]
   },
   "html_enable": {
