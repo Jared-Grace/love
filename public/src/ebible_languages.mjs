@@ -50,7 +50,7 @@ export function ebible_languages() {
     {
       name: "Ekegusii",
       bible_folder: "guz",
-      language_code: "arb",
+      language_code: "guz",
     },
     {
       name: "Cebuano",
