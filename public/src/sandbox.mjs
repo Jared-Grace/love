@@ -22,8 +22,8 @@ export async function sandbox() {
     each(fns, lambda);
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
-      return item2;
     }
+    return item2;
   }
   let mapped = list_map(split, lambda2);
   return mapped;
