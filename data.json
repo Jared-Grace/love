@@ -14272,7 +14272,8 @@
   "chapter_name": [
    "ebible_index",
    "app_reply_main",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "ebible_references_parse_lines"
   ],
   "chapter": [
    "ebible_index"
@@ -28718,6 +28719,7 @@
     "book_code",
     "split2",
     "first",
+    "chapter_name",
     "second",
     "pad_count",
     "chapter_padded",
