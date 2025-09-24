@@ -5063,7 +5063,8 @@
    "js_declare_single",
    "string_starts_with_not",
    "string_skip_while",
-   "string_trim_right"
+   "string_trim_right",
+   "sandbox"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -21814,6 +21815,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "not",
     "function_exists",
     "ebible_folder_english",
     "list_filter_starts_with_any",
