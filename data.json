@@ -2186,7 +2186,6 @@
   "s book",
   "is ebible_version_books",
   "v",
-  "s reply",
   "s starts,any",
   "is list_any_starts_with",
   "is list_filter_starts_with_any",
@@ -2209,7 +2208,8 @@
   "bible_verses_encouragement",
   "s without",
   "o sb",
-  "s god"
+  "s god",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
