@@ -6241,8 +6241,7 @@
    "js_identifier_replace",
    "js_assign_combine",
    "app_reply_main",
-   "ebible_references_parse_lines",
-   "js_dollar_ib"
+   "ebible_references_parse_lines"
   ],
   "left": [
    "equal",
@@ -14106,7 +14105,8 @@
   ],
   "ebible_verse": [
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "js_dollar_ib"
   ],
   "list_index_of_last": [
    "list_index_of_last",
@@ -28752,8 +28752,8 @@
   "js_dollar_ib": {
    "async": true,
    "identifiers": [
+    "ebible_verse",
     "object_property_set",
-    "equal",
     "js_call_new_expression",
     "js_dollar_i",
     "js_dollar_ib",
