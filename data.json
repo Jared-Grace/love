@@ -2729,7 +2729,8 @@
    "function_new_js_inner",
    "js_auto_transform_new_inner",
    "js_dollar_new_args_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "code": [
    "data_identifiers_file",
@@ -2790,7 +2791,8 @@
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
    "js_dollar_new_name",
-   "app_new_assign"
+   "app_new_assign",
+   "function_list_generate"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -2894,7 +2896,8 @@
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
    "js_code_declaration_args",
-   "app_message"
+   "app_message",
+   "function_list_generate"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3433,7 +3436,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "function_list_generate"
   ],
   "v": [
    "data_identifiers_file",
@@ -4127,7 +4131,8 @@
    "folder_read_async",
    "ebible_languages",
    "app_new_step_2",
-   "app_message"
+   "app_message",
+   "function_list_generate"
   ],
   "output": [
    "watch",
@@ -4142,7 +4147,8 @@
    "marker_call_replace_generic",
    "functions_transform",
    "function_rename_identifiers",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "args": [
    "watch",
@@ -4904,7 +4910,8 @@
    "ebible_versions_download",
    "http",
    "retry",
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "function_list_generate"
   ],
   "value2": [
    "error_attention_set",
@@ -5064,7 +5071,8 @@
    "js_declare_single",
    "string_starts_with_not",
    "string_skip_while",
-   "string_trim_right"
+   "string_trim_right",
+   "function_list_generate"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5600,7 +5608,8 @@
    "firebase_upload_object",
    "app_replace_rule_valid",
    "js_identifier_defineds",
-   "sandbox_2"
+   "sandbox_2",
+   "function_list_generate"
   ],
   "assert_json": [
    "assert_json",
@@ -5934,7 +5943,8 @@
   "function_exists": [
    "function_current_set",
    "function_delete_if_exists",
-   "function_exists"
+   "function_exists",
+   "function_list_generate"
   ],
   "marker_first": [
    "function_current_set",
@@ -6661,7 +6671,8 @@
    "js_calls_to_each",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign"
+   "app_new_assign",
+   "function_list_generate"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6718,7 +6729,8 @@
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir",
    "js_statement_return_empty_add",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -6926,7 +6938,8 @@
    "function_open",
    "function_open_app",
    "function_open_dollar_choice",
-   "js_auto_transform_new_inner"
+   "js_auto_transform_new_inner",
+   "function_list_generate"
   ],
   "list_single": [
    "functions_search_open",
@@ -7122,7 +7135,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "firebase_storage_exists",
-   "file_exists"
+   "file_exists",
+   "function_list_generate"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -7212,7 +7226,8 @@
    "js_dollar_new",
    "js_dollar_new_args",
    "function_new_js_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -7922,7 +7937,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "function_new_js_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "code_declaration": [
    "function_new",
@@ -8012,7 +8028,8 @@
   "list_empty": [
    "function_params_consolidate",
    "list_empty",
-   "app_reply_main"
+   "app_reply_main",
+   "function_list_generate"
   ],
   "js_identifiers_to_names": [
    "function_params_consolidate",
@@ -8088,7 +8105,8 @@
    "js_call_callee_name",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign"
+   "app_new_assign",
+   "function_list_generate"
   ],
   "type": [
    "function_params_consolidate",
@@ -12891,7 +12909,8 @@
    "js_declaration_single_block_body_add_return",
    "function_wrap",
    "js_return_name",
-   "app_new_step_2"
+   "app_new_step_2",
+   "function_list_generate"
   ],
   "choice_name": [
    "js_dollar"
@@ -14926,14 +14945,22 @@
    "bible_verses_encouragement"
   ],
   "js_statement_return_add": [
-   "js_if_blockify_generic"
+   "js_if_blockify_generic",
+   "function_list_generate"
   ],
   "bible_verses_encouragement_generate": [
    "sandbox",
    "bible_verses_encouragement_generate"
   ],
   "function_list_generate": [
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "function_list_generate"
+  ],
+  "f_generate": [
+   "function_list_generate"
+  ],
+  "f_generate_name": [
+   "function_list_generate"
   ]
  },
  "functions": {
@@ -28687,6 +28714,34 @@
     "books",
     "mapped2",
     "verse_references"
+   ]
+  },
+  "function_list_generate": {
+   "async": true,
+   "identifiers": [
+    "function_open",
+    "function_transform",
+    "js_statement_return_add",
+    "js_parse_expression",
+    "json_to",
+    "list_empty",
+    "js_declaration_single_block_body",
+    "function_new",
+    "not",
+    "function_exists",
+    "function_list_generate",
+    "f_generate",
+    "list",
+    "f_generate_name",
+    "name",
+    "exists",
+    "f_name",
+    "lambda3",
+    "ast",
+    "body_block",
+    "code",
+    "expression",
+    "output"
    ]
   }
  },
