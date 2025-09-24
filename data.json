@@ -14877,6 +14877,9 @@
   ],
   "string_trim_right": [
    "string_trim_right"
+  ],
+  "z": [
+   "string_trim_right"
   ]
  },
  "functions": {
@@ -28567,7 +28570,8 @@
     "string_trim_right",
     "lambda$s",
     "s",
-    "any"
+    "any",
+    "z"
    ]
   }
  },
