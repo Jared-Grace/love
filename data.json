@@ -7413,8 +7413,7 @@
    "list_map_split_space",
    "list_map_split_comma",
    "list_map_whitespace_normalize",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -21770,8 +21769,7 @@
     "item2",
     "lambda",
     "fn",
-    "mapped",
-    "mapped2"
+    "mapped"
    ],
    "async": true
   },
