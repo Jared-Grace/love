@@ -11,7 +11,7 @@ import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
 export async function function_list_generate(f_generate, list) {
   let f_generate_name = f_generate.name;
-  let without = string_suffix_without(s, "_generate");
+  let f_name = string_suffix_without(f_generate_name, "_generate");
   let { exists } = await function_exists(f_name);
   if (not(exists)) {
     await function_new(f_name);
