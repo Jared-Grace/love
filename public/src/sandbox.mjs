@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { function_open } from "./function_open.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -57,6 +58,7 @@ export async function sandbox() {
   async function lambda3(ast) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
+    let v = json_to(object);
     let code = js_parse(verse_references);
     let expression = js_parse_expression(code);
     list_add(body_block, expression);
