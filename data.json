@@ -1764,7 +1764,6 @@
   "s _if",
   "as dollar",
   "nd ir",
-  "s dollar",
   "od I",
   "s body,get",
   "s block",
@@ -2211,7 +2210,8 @@
   "s ebible",
   "is ebible_verse",
   "p",
-  "sb"
+  "sb",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
