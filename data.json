@@ -1865,7 +1865,6 @@
   "s app",
   "s js,dec",
   "n js_code_dot",
-  "s dot",
   "s body",
   "s call",
   "s bible",
@@ -2187,7 +2186,8 @@
   "as skip",
   "a ssk string_skip",
   "sb",
-  "s trim"
+  "s trim",
+  "s dot"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
