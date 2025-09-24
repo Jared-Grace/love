@@ -2953,7 +2953,8 @@
    "firebase_storage_download_property",
    "object_property_exists_not_assert",
    "object_property_set_exists_not",
-   "list_remove_property"
+   "list_remove_property",
+   "object_merge_generic"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4949,8 +4950,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists",
-   "object_merge_generic"
+   "firebase_storage_exists"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -5347,7 +5347,6 @@
    "floor",
    "js_property_parse_expression",
    "js_property_parse_expression_add",
-   "object_merge_generic",
    "app_new_step_2",
    "function_rename_suffix_add",
    "string_padded_is"
@@ -6321,7 +6320,8 @@
    "js_unparse",
    "list_index_of",
    "list_index_of_last",
-   "retry"
+   "retry",
+   "object_merge_generic"
   ],
   "exit": [
    "exit"
@@ -27959,14 +27959,14 @@
     "object_properties",
     "object_property_set",
     "object_property_get",
-    "error",
     "object_property_exists",
+    "error_json",
     "object_merge_generic",
     "strict",
     "to",
     "from",
     "lambda",
-    "p",
+    "property_name",
     "value",
     "list"
    ]
