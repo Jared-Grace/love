@@ -1,13 +1,4 @@
-import { js_statement_return_add } from "./js_statement_return_add.mjs";
-import { json_to } from "./json_to.mjs";
-import { function_open } from "./function_open.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { list_empty } from "./list_empty.mjs";
-import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_new } from "./function_new.mjs";
-import { not } from "./not.mjs";
-import { function_exists } from "./function_exists.mjs";
+import { function_list_generate } from "./function_list_generate.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -50,18 +41,6 @@ export async function sandbox() {
   let mapped2 = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
-  let { exists } = await function_exists(f_name);
-  if (not(exists)) {
-    await function_new(f_name);
-  }
-  async function lambda3(ast) {
-    let body_block = js_declaration_single_block_body(ast);
-    list_empty(body_block);
-    let code = json_to(verse_references);
-    let expression = js_parse_expression(code);
-    js_statement_return_add(expression, body_block);
-  }
-  let output = await function_transform(f_name, lambda3);
-  await function_open(f_name);
+  await function_list_generate(f_name, verse_references);
   return verse_references;
 }
