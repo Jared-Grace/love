@@ -28664,6 +28664,7 @@
   "ebible_references_parse_lines": {
    "async": true,
    "identifiers": [
+    "each_async",
     "ebible_verse",
     "list_adder_async",
     "each_pair_async",
@@ -28736,7 +28737,6 @@
     "lambda3",
     "item",
     "text",
-    "each_async",
     "list"
    ]
   }
