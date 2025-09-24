@@ -10,7 +10,7 @@ export function string_trim_right(lambda$s, s) {
       break;
     }
     let z = string_size(s);
-    s = string_take(s);
+    s = string_take(s, z - 1);
   }
   return s;
 }
