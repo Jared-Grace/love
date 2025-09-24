@@ -16,6 +16,7 @@ export function ebible_verses_exclude() {
     "imt",
     "is",
     "io",
+    "io2",
     "ior",
     "iot",
     "ip",
