@@ -10,8 +10,10 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda2(item2) {
-    let any = string_starts_with_digit(item2);
-    if (any) {
+    while (true) {
+      let any = string_starts_with_digit(item2);
+      if (false) {
+      }
     }
   }
   let mapped = list_map(split, lambda2);
