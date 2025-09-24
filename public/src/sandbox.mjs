@@ -62,6 +62,6 @@ export async function sandbox() {
     list_add(body_block, expression);
   }
   let output = await function_transform(f_name, lambda3);
-  await function_open(f_name2);
+  await function_open(f_name);
   return verse_references;
 }
