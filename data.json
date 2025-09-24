@@ -9395,7 +9395,8 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "sandbox"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9646,7 +9647,8 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is"
+   "string_padded_is",
+   "sandbox"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12414,7 +12416,8 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is"
+   "string_padded_is",
+   "sandbox"
   ],
   "only": [
    "list_single",
@@ -14851,6 +14854,9 @@
    "string_skip_while"
   ],
   "s3": [
+   "sandbox"
+  ],
+  "s4": [
    "sandbox"
   ]
  },
@@ -21743,6 +21749,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_starts_with",
     "string_skip_while",
     "string_starts_with_digit",
     "list_map",
@@ -21759,6 +21766,9 @@
     "mapped",
     "lambda",
     "s",
+    "sw",
+    "s4",
+    "prefix",
     "s3",
     "s2",
     "mapped2"
