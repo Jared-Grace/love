@@ -2787,7 +2787,8 @@
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
    "js_dollar_new_name",
-   "app_new_assign"
+   "app_new_assign",
+   "sandbox"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3714,7 +3715,8 @@
    "marker_next",
    "marker_next_await",
    "js_expand_generic",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "sandbox"
   ],
   "js_format": [
    "file_js_unparse",
@@ -14937,6 +14939,9 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
+  ],
+  "ast2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21828,6 +21833,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "js_unparse",
     "js_parse_expression",
     "list_add",
     "list_empty",
@@ -21872,6 +21878,8 @@
     "lambda3",
     "ast",
     "body_block",
+    "code",
+    "ast2",
     "expression",
     "code_expression",
     "item",
