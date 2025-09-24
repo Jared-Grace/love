@@ -9505,7 +9505,6 @@
   "list_find_property": [
    "js_declaration_param_named",
    "list_find_property",
-   "app_reply_main",
    "list_remove_property",
    "ebible_verse",
    "ebible_references_parse_lines"
@@ -14010,7 +14009,6 @@
   "book": [
    "ebible_version_verses",
    "ebible_index",
-   "app_reply_main",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines"
   ],
@@ -14272,7 +14270,6 @@
   ],
   "chapter_name": [
    "ebible_index",
-   "app_reply_main",
    "ebible_chapter_code_to_name",
    "ebible_references_parse_lines"
   ],
@@ -14593,7 +14590,6 @@
    "ebible_references_parse_lines"
   ],
   "book_name": [
-   "app_reply_main",
    "ebible_references_parse_lines"
   ],
   "chapter_verses": [
@@ -14770,7 +14766,6 @@
   ],
   "ebible_chapter_code_to_name": [
    "ebible_index",
-   "app_reply_main",
    "ebible_chapter_code_to_name"
   ],
   "languages_chosens": [
@@ -25248,9 +25243,7 @@
     "ebible_version_books",
     "html_display_none_or_block",
     "list_empty_not_is",
-    "ebible_chapter_code_to_name",
     "ebible_chapter_code_to_book",
-    "list_find_property",
     "firebase_storage_download_ebible",
     "list_remove_property",
     "ebible_languages",
@@ -25346,9 +25339,6 @@
     "item3",
     "list",
     "book_code",
-    "chapter_name",
-    "book",
-    "book_name",
     "verse_texts",
     "verse_text",
     "other",
