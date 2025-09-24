@@ -73,6 +73,10 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             "verse_number",
             verse_number,
           );
+          let waited = await list_map_unordered_async(
+            list2,
+            async function lambda6(item2) {},
+          );
           let ne = list_empty_not_is(result);
           if (ne) {
             function lambda3(item) {
