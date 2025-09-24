@@ -3431,7 +3431,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -8020,7 +8021,8 @@
   "list_empty": [
    "function_params_consolidate",
    "list_empty",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "js_identifiers_to_names": [
    "function_params_consolidate",
@@ -14931,9 +14933,6 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
-  ],
-  "ast2": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21825,6 +21824,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_empty",
     "js_declaration_single_block_body",
     "function_transform",
     "function_new",
@@ -21866,7 +21866,7 @@
     "lambda3",
     "ast",
     "body_block",
-    "ast2",
+    "list",
     "output"
    ],
    "async": true
