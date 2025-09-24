@@ -1,3 +1,4 @@
+import { list_squash } from "./list_squash.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -166,6 +167,7 @@ export async function app_reply_main() {
       let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
     let verses = list_map_property(verses_list, "verses");
+    let squashed = list_squash(list2);
     let verse_texts = list_map_property(verses, "text");
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
