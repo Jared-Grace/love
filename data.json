@@ -4847,7 +4847,8 @@
    "http_local_file_name",
    "list_adder_multiple_async",
    "list_adder_generic_async",
-   "local_function_path"
+   "local_function_path",
+   "sandbox"
   ],
   "colored": [
    "chalk_color",
@@ -21736,6 +21737,7 @@
     "split",
     "lambda2",
     "item2",
+    "fn",
     "any",
     "mapped"
    ],
