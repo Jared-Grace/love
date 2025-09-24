@@ -4694,8 +4694,7 @@
    "html_parse_classes_preview",
    "promise_wrap",
    "retry",
-   "list_empty_is_assert",
-   "app_reply_main"
+   "list_empty_is_assert"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -11676,7 +11675,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "app_reply_main"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14979,6 +14979,12 @@
    "app_reply_main"
   ],
   "reference2": [
+   "app_reply_main"
+  ],
+  "lambda10": [
+   "app_reply_main"
+  ],
+  "item4": [
    "app_reply_main"
   ]
  },
@@ -25346,7 +25352,9 @@
     "text",
     "component",
     "lambda3",
-    "e",
+    "list2",
+    "lambda10",
+    "item4",
     "lambda9",
     "item3",
     "list",
