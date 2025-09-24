@@ -3717,8 +3717,7 @@
    "marker_next",
    "marker_next_await",
    "js_expand_generic",
-   "js_calls_to_each",
-   "sandbox"
+   "js_calls_to_each"
   ],
   "js_format": [
    "file_js_unparse",
@@ -4311,7 +4310,8 @@
    "function_new_declaration",
    "js_parse",
    "js_parse_statement",
-   "js_parse_statement_module"
+   "js_parse_statement_module",
+   "sandbox"
   ],
   "data_all": [
    "data_file_update",
@@ -21834,8 +21834,8 @@
   },
   "sandbox": {
    "identifiers": [
+    "js_parse",
     "function_open",
-    "js_unparse",
     "js_parse_expression",
     "list_add",
     "list_empty",
