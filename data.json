@@ -5138,7 +5138,8 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "string_starts_with_dot"
+   "string_starts_with_dot",
+   "function_list_generate"
   ],
   "a": [
    "string_suffix_without",
@@ -9446,7 +9447,8 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "function_list_generate"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -9699,7 +9701,8 @@
    "list_find_starts_with",
    "string_padded_is",
    "string_starts_with_space",
-   "string_starts_with_dot"
+   "string_starts_with_dot",
+   "function_list_generate"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -12468,7 +12471,8 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is"
+   "string_padded_is",
+   "function_list_generate"
   ],
   "only": [
    "list_single",
@@ -28719,6 +28723,7 @@
   "function_list_generate": {
    "async": true,
    "identifiers": [
+    "string_starts_with",
     "function_open",
     "function_transform",
     "js_statement_return_add",
@@ -28734,6 +28739,9 @@
     "list",
     "f_generate_name",
     "name",
+    "sw",
+    "s",
+    "prefix",
     "exists",
     "f_name",
     "lambda3",
