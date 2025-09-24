@@ -14969,9 +14969,6 @@
   ],
   "verses_first": [
    "app_reply_main"
-  ],
-  "item3": [
-   "app_reply_main"
   ]
  },
  "functions": {
@@ -25317,11 +25314,11 @@
     "lambda7",
     "verses_first",
     "lambda8",
-    "item3",
-    "list",
+    "verse",
     "chapter_code2",
     "verse_number2",
     "u",
+    "list",
     "component4",
     "choices",
     "lambda2",
@@ -25338,7 +25335,6 @@
     "text",
     "component",
     "lambda3",
-    "verse",
     "book_code",
     "chapter_name",
     "book",
