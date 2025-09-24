@@ -57,7 +57,7 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_get() {
-    let v2 = bible_verses_encouragement();
+    let encouragement = bible_verses_encouragement();
     let list = await ebible_references_parse_lines(bible_folders, lines);
     let { chapter_code, verse_number } = list_random_item(index);
     let verse = await ebible_verse_download(en, chapter_code, verse_number);
