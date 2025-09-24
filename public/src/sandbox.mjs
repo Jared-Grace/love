@@ -10,7 +10,8 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  let mapped = list_map(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let mapped = list_map(list, lambda2);
   let digits = "1234567890";
   function lambda(item) {
     let sw = string_starts_with(s, item);
