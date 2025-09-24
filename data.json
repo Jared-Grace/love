@@ -2192,11 +2192,11 @@
   "sb",
   "s white",
   "c string_skip_while string_trim_right",
-  "s z",
   "as z",
   "a sz string_size",
   "ps",
-  "c string_starts_with_space string_ends_with_space"
+  "c string_starts_with_space string_ends_with_space",
+  "s z"
  ],
  "marker_current": "1",
  "function_current": "string_ends_with_space",
