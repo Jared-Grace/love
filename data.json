@@ -11619,8 +11619,7 @@
    "firebase_storage_download_ebible",
    "list_remove_property",
    "ebible_version_books",
-   "sandbox",
-   "ebible_verse"
+   "sandbox"
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
@@ -26480,7 +26479,6 @@
     "verse_number",
     "b",
     "verse",
-    "en",
     "verses",
     "result"
    ]
