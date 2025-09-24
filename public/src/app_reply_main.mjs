@@ -179,6 +179,7 @@ export async function app_reply_main() {
     const other = [verse_text];
     log({
       a: "a",
+      languages_chosens,
     });
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
