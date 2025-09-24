@@ -1,3 +1,4 @@
+import { function_new } from "./function_new.mjs";
 import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -44,6 +45,7 @@ export async function sandbox() {
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
   if (not(e)) {
+    await function_new(f_name2);
   }
   return verse_references;
 }
