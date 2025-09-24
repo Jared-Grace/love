@@ -1,3 +1,4 @@
+import { string_split } from "./string_split.mjs";
 import { not } from "./not.mjs";
 import { string_starts_with_digit } from "./string_starts_with_digit.mjs";
 import { list_map } from "./list_map.mjs";
@@ -16,6 +17,7 @@ export async function sandbox() {
       if (not(any)) {
         break;
       }
+      let split2 = string_split(s, separator);
     }
   }
   let mapped = list_map(split, lambda2);
