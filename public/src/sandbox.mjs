@@ -1,3 +1,6 @@
+import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { ebible_version_books } from "./ebible_version_books.mjs";
 import { string_starts_with_space } from "./string_starts_with_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { string_ends_with_space } from "./string_ends_with_space.mjs";
@@ -31,5 +34,8 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map(split, lambda2);
+  let books = await ebible_version_books(bible_folder);
+  let mapped2 = list_map_property(books, "text");
+  let verse_references = list_filter_starts_with_any(mapped2, split);
   return mapped;
 }
