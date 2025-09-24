@@ -51,11 +51,11 @@ export async function sandbox() {
   let mapped2 = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
-  let e = await function_exists(f_name);
+  let { exists } = await function_exists(f_name);
   log({
     e,
   });
-  if (not(e)) {
+  if (not(exists)) {
     await function_new(f_name);
   }
   async function lambda3(ast) {
