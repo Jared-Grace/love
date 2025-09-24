@@ -3400,7 +3400,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -6713,7 +6714,8 @@
    "path_join",
    "ebible_verse",
    "list_map_whitespace_normalize",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "results": [
    "functions_combine_name"
@@ -14386,7 +14388,8 @@
   "string_split_newline": [
    "string_split_newline",
    "ebible_references_parse",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "verse_references": [
    "list_filter_starts_with_any",
@@ -21708,6 +21711,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split_newline",
     "list_any_starts_with",
     "string_starts_with",
     "file_read",
@@ -21716,6 +21720,8 @@
     "sandbox",
     "file_path",
     "contents",
+    "split",
+    "list",
     "digits",
     "lambda",
     "item",
