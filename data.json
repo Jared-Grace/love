@@ -3401,8 +3401,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -21728,14 +21727,13 @@
     "split",
     "lambda2",
     "item2",
-    "mapped",
-    "list",
     "digits",
     "lambda",
     "item",
     "sw",
     "s",
-    "any"
+    "any",
+    "mapped"
    ],
    "async": true
   },
