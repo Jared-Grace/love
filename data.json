@@ -2212,10 +2212,11 @@
   "p",
   "sb",
   "s dollar",
-  "as doll"
+  "as doll",
+  "nd ib"
  ],
  "marker_current": "1",
- "function_current": "sandbox",
+ "function_current": "js_dollar_ib",
  "terminal": false,
  "identifiers": {
   "log": [
