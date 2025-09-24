@@ -2188,7 +2188,6 @@
   "s const",
   "c string_starts_with_dot string_starts_with_space",
   "p",
-  "sb",
   "s white",
   "c string_skip_while string_trim_right",
   "as z",
@@ -2196,7 +2195,8 @@
   "ps",
   "c string_starts_with_space string_ends_with_space",
   "s z",
-  "o sb"
+  "o sb",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
