@@ -11620,7 +11620,6 @@
    "app_reply_main",
    "firebase_storage_download_ebible",
    "list_remove_property",
-   "ebible_version_books",
    "sandbox"
   ],
   "marker_if_test_replace": [
@@ -26529,7 +26528,6 @@
     "b",
     "file_name2",
     "books",
-    "en",
     "n",
     "o",
     "v",
