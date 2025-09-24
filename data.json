@@ -2175,7 +2175,6 @@
   "d",
   "s doc",
   "n sandbox",
-  "o sb",
   "o s4",
   "s sand",
   "s digit",
@@ -2196,10 +2195,11 @@
   "a sz string_size",
   "ps",
   "c string_starts_with_space string_ends_with_space",
-  "s z"
+  "s z",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "string_ends_with_space",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
