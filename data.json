@@ -3435,7 +3435,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -9125,7 +9126,8 @@
    "js_return_name",
    "js_return_on",
    "js_return_on_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "sandbox"
   ],
   "arguments2": [
    "js_bang_to_not",
@@ -14942,7 +14944,8 @@
    "bible_verses_encouragement"
   ],
   "js_statement_return_add": [
-   "js_if_blockify_generic"
+   "js_if_blockify_generic",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21831,6 +21834,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "js_statement_return_add",
     "json_to",
     "function_open",
     "js_parse_expression",
@@ -21879,6 +21883,8 @@
     "body_block",
     "code",
     "expression",
+    "argument",
+    "list",
     "output"
    ],
    "async": true
