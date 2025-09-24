@@ -42,5 +42,4 @@ export async function sandbox() {
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
   await function_list_generate(f_name, verse_references);
-  return verse_references;
 }
