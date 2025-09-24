@@ -3436,7 +3436,8 @@
    "ebible_chapters_each_verses_list",
    "list_set",
    "sandbox_4_a",
-   "function_list_generate"
+   "function_list_generate",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -12244,7 +12245,8 @@
    "ebible_firebase_folder"
   ],
   "lines": [
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "app_reply_main"
   ],
   "html_p": [
    "html_p",
@@ -14522,7 +14524,8 @@
   "bible_folders": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "app_reply_main"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -14883,7 +14886,8 @@
    "function_list_generate"
   ],
   "ebible_references_parse_lines": [
-   "ebible_references_parse"
+   "ebible_references_parse",
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -25148,6 +25152,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "ebible_references_parse_lines",
     "ebible_version_books",
     "html_display_none_or_block",
     "list_empty_not_is",
@@ -25204,6 +25209,9 @@
     "preview",
     "chosens",
     "typed",
+    "list",
+    "bible_folders",
+    "lines",
     "chapter_code",
     "verse_number",
     "verse",
