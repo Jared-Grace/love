@@ -9395,8 +9395,7 @@
    "js_code_declaration_args",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
-   "list_map_prefix_any",
-   "sandbox"
+   "list_map_prefix_any"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -14854,9 +14853,6 @@
    "string_skip_while"
   ],
   "s3": [
-   "sandbox"
-  ],
-  "s4": [
    "sandbox"
   ]
  },
@@ -21767,8 +21763,6 @@
     "lambda",
     "s",
     "sw",
-    "s4",
-    "prefix",
     "s3",
     "s2",
     "mapped2"
