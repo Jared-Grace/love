@@ -2148,7 +2148,6 @@
   "s split",
   "c string_split_semicolon_space string_split_semicolon",
   "a lst list_set",
-  "s list",
   "c object_property_set list_set",
   "s normal",
   "s god",
@@ -2202,7 +2201,8 @@
   "is ebible_references_parse",
   "ebible_references_parse_god_created_man_why",
   "p",
-  "sb"
+  "sb",
+  "s list"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
