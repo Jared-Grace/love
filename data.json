@@ -10870,8 +10870,7 @@
    "string_prefix_without",
    "string_skip",
    "ebible_chapter_code_to_name",
-   "string_skip_while",
-   "string_trim_right"
+   "string_skip_while"
   ],
   "startsWith": [
    "string_starts_with"
@@ -13778,7 +13777,8 @@
   "string_take": [
    "string_take",
    "ebible_chapter_code_to_book",
-   "string_take_less_1"
+   "string_take_less_1",
+   "string_trim_right"
   ],
   "books": [
    "ebible_version_verses",
@@ -14871,6 +14871,9 @@
    "string_starts_with_space"
   ],
   "string_trim_right": [
+   "string_trim_right"
+  ],
+  "ssz": [
    "string_trim_right"
   ]
  },
@@ -28555,13 +28558,14 @@
   "string_trim_right": {
    "async": false,
    "identifiers": [
+    "string_take",
     "marker",
-    "string_skip",
     "not",
     "string_trim_right",
     "lambda$s",
     "s",
-    "any"
+    "any",
+    "ssz"
    ]
   }
  },
