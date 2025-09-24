@@ -2548,7 +2548,8 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "bible_verses_encouragement"
+   "bible_verses_encouragement",
+   "js_dollar_ib"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2734,7 +2735,8 @@
    "js_auto_transform_new_inner",
    "js_dollar_new_args_inner",
    "app_new_step_2",
-   "function_list_generate"
+   "function_list_generate",
+   "js_dollar_ib"
   ],
   "code": [
    "data_identifiers_file",
@@ -7430,7 +7432,8 @@
    "js_calls_to_each",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_statement_expression_get"
+   "js_statement_expression_get",
+   "js_dollar_ib"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -8548,7 +8551,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ib"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -8584,7 +8588,8 @@
    "js_expand_generic",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ib"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -9350,7 +9355,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ib"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -9560,7 +9566,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ib"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -9715,7 +9722,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ib"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -14956,6 +14964,9 @@
   ],
   "book2": [
    "ebible_references_parse_lines"
+  ],
+  "js_dollar_ib": [
+   "js_dollar_ib"
   ]
  },
  "functions": {
@@ -28734,6 +28745,20 @@
     "result",
     "text",
     "list"
+   ]
+  },
+  "js_dollar_ib": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_ib",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
