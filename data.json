@@ -9507,7 +9507,8 @@
    "list_find_property",
    "list_remove_property",
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "nameds": [
    "js_declaration_single"
@@ -13809,7 +13810,8 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "ebible_books_to_chapter_codes",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "string_take": [
    "string_take",
@@ -14009,7 +14011,8 @@
    "ebible_version_verses",
    "ebible_index",
    "ebible_books_to_chapter_codes",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -14245,7 +14248,8 @@
   "ebible_chapter_code_to_book": [
    "ebible_chapter_code_to_book",
    "ebible_version_books_testament",
-   "ebible_index"
+   "ebible_index",
+   "app_reply_main"
   ],
   "ebible_book_code_size": [
    "ebible_chapter_code_to_book",
@@ -14269,7 +14273,8 @@
   "chapter_name": [
    "ebible_index",
    "ebible_chapter_code_to_name",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "chapter": [
    "ebible_index"
@@ -14588,7 +14593,8 @@
    "ebible_references_parse_lines"
   ],
   "book_name": [
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "chapter_verses": [
    "string_split_colon",
@@ -14764,7 +14770,8 @@
   ],
   "ebible_chapter_code_to_name": [
    "ebible_index",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "app_reply_main"
   ],
   "languages_chosens": [
    "app_reply_main"
@@ -14968,6 +14975,9 @@
    "app_reply_main"
   ],
   "verses2": [
+   "app_reply_main"
+  ],
+  "reference2": [
    "app_reply_main"
   ]
  },
@@ -25241,6 +25251,9 @@
     "ebible_version_books",
     "html_display_none_or_block",
     "list_empty_not_is",
+    "ebible_chapter_code_to_name",
+    "ebible_chapter_code_to_book",
+    "list_find_property",
     "firebase_storage_download_ebible",
     "list_remove_property",
     "ebible_languages",
@@ -25335,7 +25348,12 @@
     "lambda9",
     "item3",
     "list",
+    "book_code",
+    "chapter_name",
+    "book",
+    "book_name",
     "verse_texts",
+    "reference2",
     "verse_text",
     "other",
     "ne",
