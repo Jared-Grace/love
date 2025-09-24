@@ -2729,8 +2729,7 @@
    "function_new_js_inner",
    "js_auto_transform_new_inner",
    "js_dollar_new_args_inner",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "code": [
    "data_identifiers_file",
@@ -2791,8 +2790,7 @@
    "js_auto_transform_new_inner",
    "js_code_declaration_args",
    "js_dollar_new_name",
-   "app_new_assign",
-   "sandbox"
+   "app_new_assign"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -4145,8 +4143,7 @@
    "marker_call_replace_generic",
    "functions_transform",
    "function_rename_identifiers",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "args": [
    "watch",
@@ -4908,8 +4905,7 @@
    "ebible_versions_download",
    "http",
    "retry",
-   "ebible_references_parse",
-   "sandbox"
+   "ebible_references_parse"
   ],
   "value2": [
    "error_attention_set",
@@ -5069,8 +5065,7 @@
    "js_declare_single",
    "string_starts_with_not",
    "string_skip_while",
-   "string_trim_right",
-   "sandbox"
+   "string_trim_right"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5606,8 +5601,7 @@
    "firebase_upload_object",
    "app_replace_rule_valid",
    "js_identifier_defineds",
-   "sandbox_2",
-   "sandbox"
+   "sandbox_2"
   ],
   "assert_json": [
    "assert_json",
@@ -5941,8 +5935,7 @@
   "function_exists": [
    "function_current_set",
    "function_delete_if_exists",
-   "function_exists",
-   "sandbox"
+   "function_exists"
   ],
   "marker_first": [
    "function_current_set",
@@ -6669,8 +6662,7 @@
    "js_calls_to_each",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign",
-   "sandbox"
+   "app_new_assign"
   ],
   "functions_combine": [
    "functions_combine",
@@ -6727,8 +6719,7 @@
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir",
    "js_statement_return_empty_add",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -6936,8 +6927,7 @@
    "function_open",
    "function_open_app",
    "function_open_dollar_choice",
-   "js_auto_transform_new_inner",
-   "sandbox"
+   "js_auto_transform_new_inner"
   ],
   "list_single": [
    "functions_search_open",
@@ -7133,8 +7123,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "firebase_storage_exists",
-   "file_exists",
-   "sandbox"
+   "file_exists"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -7224,8 +7213,7 @@
    "js_dollar_new",
    "js_dollar_new_args",
    "function_new_js_inner",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "js_arrow_blockify": [
    "js_arrow_blockify",
@@ -7935,8 +7923,7 @@
    "marker_screen_add",
    "js_dollar_new",
    "function_new_js_inner",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "code_declaration": [
    "function_new",
@@ -8026,8 +8013,7 @@
   "list_empty": [
    "function_params_consolidate",
    "list_empty",
-   "app_reply_main",
-   "sandbox"
+   "app_reply_main"
   ],
   "js_identifiers_to_names": [
    "function_params_consolidate",
@@ -8103,8 +8089,7 @@
    "js_call_callee_name",
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
-   "app_new_assign",
-   "sandbox"
+   "app_new_assign"
   ],
   "type": [
    "function_params_consolidate",
@@ -12907,8 +12892,7 @@
    "js_declaration_single_block_body_add_return",
    "function_wrap",
    "js_return_name",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "choice_name": [
    "js_dollar"
@@ -14943,7 +14927,9 @@
    "bible_verses_encouragement"
   ],
   "js_statement_return_add": [
-   "js_if_blockify_generic",
+   "js_if_blockify_generic"
+  ],
+  "function_list_generate": [
    "sandbox"
   ]
  },
@@ -21833,16 +21819,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "js_statement_return_add",
-    "json_to",
-    "function_open",
-    "js_parse_expression",
-    "list_empty",
-    "js_declaration_single_block_body",
-    "function_transform",
-    "function_new",
-    "not",
-    "function_exists",
+    "function_list_generate",
     "ebible_folder_english",
     "list_filter_starts_with_any",
     "list_map_property",
@@ -21874,14 +21851,7 @@
     "books",
     "mapped2",
     "verse_references",
-    "f_name",
-    "exists",
-    "lambda3",
-    "ast",
-    "body_block",
-    "code",
-    "expression",
-    "output"
+    "f_name"
    ],
    "async": true
   },
