@@ -1,5 +1,5 @@
+import { js_parse } from "./js_parse.mjs";
 import { function_open } from "./function_open.mjs";
-import { js_unparse } from "./js_unparse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
@@ -57,7 +57,7 @@ export async function sandbox() {
   async function lambda3(ast) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
-    let code = js_unparse(verse_references);
+    let code = js_parse(verse_references);
     let expression = js_parse_expression(code);
     list_add(body_block, expression);
   }
