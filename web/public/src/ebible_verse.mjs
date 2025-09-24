@@ -10,5 +10,5 @@ export async function ebible_verse(
   marker("1");
   let verses = await ebible_verses(bible_folder, chapter_code);
   let result = list_find_property(verses, "verse_number", verse_number);
-  return;
+  return result;
 }
