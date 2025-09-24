@@ -1,3 +1,4 @@
+import { list_empty } from "./list_empty.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
@@ -50,7 +51,8 @@ export async function sandbox() {
     await function_new(f_name);
   }
   async function lambda3(ast) {
-    let body_block = js_declaration_single_block_body(ast2);
+    let body_block = js_declaration_single_block_body(ast);
+    list_empty(list);
   }
   let output = await function_transform(f_name, lambda3);
   return verse_references;
