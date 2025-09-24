@@ -9,4 +9,5 @@ export async function ebible_references_parse_god_created_man_why() {
   let file_path = folder_user_docs_path(file_name);
   let bible_folders = [v2, v];
   let list = await ebible_references_parse(bible_folders, file_path);
+  return list;
 }
