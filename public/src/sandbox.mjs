@@ -12,5 +12,5 @@ export async function sandbox() {
     let sw = string_starts_with(s, item);
     return sw;
   }
-  let any = list_any_starts_with(list, lambda);
+  let any = list_any_starts_with(digits, lambda);
 }
