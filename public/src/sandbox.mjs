@@ -1,3 +1,4 @@
+import { js_unparse } from "./js_unparse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
@@ -55,6 +56,7 @@ export async function sandbox() {
   async function lambda3(ast) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
+    let code = js_unparse(ast2);
     let expression = js_parse_expression(code_expression);
     list_add(body_block, item);
   }
