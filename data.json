@@ -14347,9 +14347,6 @@
   "verse_text": [
    "app_reply_main"
   ],
-  "verse_random_get": [
-   "app_reply_main"
-  ],
   "chapter_code2": [
    "app_reply_main"
   ],
@@ -14973,6 +14970,9 @@
    "app_reply_main"
   ],
   "item3": [
+   "app_reply_main"
+  ],
+  "verse_random_reset": [
    "app_reply_main"
   ]
  },
@@ -25292,7 +25292,7 @@
     "index",
     "books",
     "verses",
-    "verse_random_get",
+    "verse_random_reset",
     "root",
     "copied",
     "languages_chosens",
@@ -28765,7 +28765,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-24T11:27:25.481Z",
+ "git_push_when": "2025-09-24T17:15:45.379Z",
  "error_attention": null,
  "app_current": "replace"
 }
