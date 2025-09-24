@@ -53,7 +53,7 @@ export async function sandbox() {
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
   if (not(e)) {
-    log(message);
+    log("here");
     await function_new(f_name);
   }
   async function lambda3(ast) {
