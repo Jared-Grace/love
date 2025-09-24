@@ -3445,7 +3445,8 @@
    "sandbox_4_a",
    "function_list_generate",
    "sandbox",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -14968,6 +14969,12 @@
   ],
   "us": [
    "app_reply_main"
+  ],
+  "lambda9": [
+   "app_reply_main"
+  ],
+  "item3": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -25334,6 +25341,9 @@
     "text",
     "component",
     "lambda3",
+    "list",
+    "lambda9",
+    "item3",
     "book_code",
     "chapter_name",
     "book",
