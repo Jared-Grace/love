@@ -7515,8 +7515,7 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic",
-   "ebible_references_parse_lines"
+   "object_merge_generic"
   ],
   "r": [
    "function_format",
@@ -7617,8 +7616,7 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic",
-   "ebible_references_parse_lines"
+   "object_merge_generic"
   ],
   "i": [
    "function_identifier_replace",
@@ -28735,8 +28733,6 @@
     "verse_number",
     "result",
     "to2",
-    "to",
-    "from",
     "list"
    ]
   },
