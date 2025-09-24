@@ -4604,8 +4604,7 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -28722,7 +28721,6 @@
     "verse_number",
     "result",
     "text",
-    "item",
     "list"
    ]
   }
