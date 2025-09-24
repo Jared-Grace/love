@@ -1,3 +1,4 @@
+import { function_exists } from "./function_exists.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -39,7 +40,7 @@ export async function sandbox() {
   let books = await ebible_version_books(bible_folder);
   let mapped2 = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
-  fe;
+  let e = await function_exists(f_name);
   if (false) {
   }
   return verse_references;
