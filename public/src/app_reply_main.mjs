@@ -84,12 +84,12 @@ export async function app_reply_main() {
   async function lambda4() {
     await verse_random_reset();
     list_empty(copied);
-    preview_refresh();
     list_empty(chosens);
     list_empty(languages_chosens);
     log(languages_chosens);
     typed = "";
     buttons_refresh();
+    preview_refresh();
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
