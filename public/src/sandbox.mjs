@@ -1,5 +1,5 @@
+import { list_any_starts_with } from "./list_any_starts_with.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
-import { list_any } from "./list_any.mjs";
 import { file_read } from "./file_read.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { marker } from "./marker.mjs";
@@ -12,5 +12,5 @@ export async function sandbox() {
     let sw = string_starts_with(s, item);
     return sw;
   }
-  let any = list_any(list, lambda);
+  let any = list_any_starts_with(list, lambda);
 }
