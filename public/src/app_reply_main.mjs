@@ -85,11 +85,8 @@ export async function app_reply_main() {
     await verse_random_reset();
     list_empty(copied);
     preview_refresh();
-    chosens = [];
-    languages_chosens = [];
-    log({
-      languages_chosens,
-    });
+    list_empty(chosens);
+    list_empty(languages_chosens);
     typed = "";
     buttons_refresh();
   }
@@ -179,9 +176,6 @@ export async function app_reply_main() {
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [verse_text];
-    log({
-      languages_chosens,
-    });
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
