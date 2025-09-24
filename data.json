@@ -7483,8 +7483,7 @@
    "ebible_version_books_testament",
    "ebible_verses_upload",
    "firebase_upload_generic",
-   "command_line_generic",
-   "ebible_references_parse_lines"
+   "command_line_generic"
   ],
   "u": [
    "function_exists",
@@ -14963,9 +14962,6 @@
   "js_dollar_if_call": [
    "js_dollar_ie",
    "js_dollar_ib"
-  ],
-  "to2": [
-   "ebible_references_parse_lines"
   ],
   "verses_first": [
    "app_reply_main"
@@ -28682,7 +28678,6 @@
   "ebible_references_parse_lines": {
    "async": true,
    "identifiers": [
-    "object_merge",
     "ebible_verse",
     "list_adder_async",
     "each_pair_async",
@@ -28747,7 +28742,6 @@
     "lambda4",
     "verse_number",
     "result",
-    "to2",
     "list"
    ]
   },
