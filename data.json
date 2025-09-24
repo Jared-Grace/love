@@ -4308,7 +4308,6 @@
    "html_parse_classes_preview",
    "html_parse_find_a_href_starts_with",
    "html_parse_href_text",
-   "sandbox",
    "digits"
   ],
   "data": [
@@ -14409,8 +14408,7 @@
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
-   "list_filter_starts_with_any",
-   "sandbox"
+   "list_filter_starts_with_any"
   ],
   "list_find_starts_with": [
    "list_find_starts_with",
@@ -14821,8 +14819,10 @@
    "string_split_semicolon_space"
   ],
   "digits": [
-   "sandbox",
    "digits"
+  ],
+  "string_starts_with_digit": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21714,10 +21714,9 @@
   },
   "sandbox": {
    "identifiers": [
-    "digits",
+    "string_starts_with_digit",
     "list_map",
     "string_split_newline",
-    "list_any_starts_with",
     "file_read",
     "folder_user_docs_path",
     "marker",
@@ -21727,7 +21726,6 @@
     "split",
     "lambda2",
     "item2",
-    "d",
     "any",
     "mapped"
    ],
