@@ -2169,7 +2169,6 @@
   "u rs",
   "s rename",
   "s a",
-  "ps",
   "function_name_to_acronym a_b_C",
   "rs sandbox_4 a",
   "o rs",
@@ -2195,7 +2194,8 @@
   "c string_skip_while string_trim_right",
   "s z",
   "as z",
-  "a sz string_size"
+  "a sz string_size",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_trim_right",
