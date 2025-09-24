@@ -107,7 +107,7 @@ export async function app_reply_main() {
         );
         return d;
       }
-      let us = await list_map_unordered_async(verses_list_first, lambda8);
+      let us = await list_map_unordered_async(verses2, lambda8);
       list_add_first(verses_list, us);
       list_add_first(languages_chosens, language_code);
       preview_refresh();
