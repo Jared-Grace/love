@@ -2184,7 +2184,6 @@
   "ps",
   "c string_starts_with_space string_ends_with_space",
   "s z",
-  "o sb",
   "s book",
   "is ebible_version_books",
   "v",
@@ -2209,10 +2208,11 @@
   "is js_statement_return_empty",
   "sb",
   "bible_verses_encouragement",
-  "s without"
+  "s without",
+  "o sb"
  ],
  "marker_current": "1",
- "function_current": "bible_verses_encouragement",
+ "function_current": "sandbox",
  "terminal": false,
  "identifiers": {
   "log": [
