@@ -2541,7 +2541,8 @@
    "sandbox_4_a",
    "string_starts_with_space",
    "string_trim_right",
-   "string_ends_with_space"
+   "string_ends_with_space",
+   "bible_verses_encouragement"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14939,6 +14940,9 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
+  ],
+  "bible_verses_encouragement": [
+   "bible_verses_encouragement"
   ]
  },
  "functions": {
@@ -28697,6 +28701,13 @@
     "string_starts_with_dot",
     "s",
     "sw2"
+   ]
+  },
+  "bible_verses_encouragement": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "bible_verses_encouragement"
    ]
   }
  },
