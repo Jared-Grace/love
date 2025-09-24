@@ -7,6 +7,7 @@ export function ebible_verses_exclude() {
     "f",
     "fq",
     "fqa",
+    "fr",
     "footnote",
     "fl",
     "ft",
