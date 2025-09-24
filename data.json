@@ -2295,8 +2295,7 @@
    "ebible_index_flat",
    "each_range_from",
    "object_merge_generic",
-   "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "bible_verses_encouragement_generate"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -28662,7 +28661,6 @@
     "list_adder_async",
     "each_pair_async",
     "each_range_from_async",
-    "each",
     "string_to",
     "list_get",
     "list_index_of",
