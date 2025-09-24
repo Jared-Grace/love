@@ -14821,6 +14821,9 @@
   ],
   "string_split_semicolon_space": [
    "string_split_semicolon_space"
+  ],
+  "digits": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21712,6 +21715,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "digits",
     "list_map",
     "string_split_newline",
     "list_any_starts_with",
