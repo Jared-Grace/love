@@ -2199,7 +2199,7 @@
   "c string_starts_with_space string_ends_with_space"
  ],
  "marker_current": "1",
- "function_current": "string_trim_right",
+ "function_current": "string_ends_with_space",
  "terminal": false,
  "identifiers": {
   "log": [
