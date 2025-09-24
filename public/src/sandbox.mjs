@@ -19,6 +19,7 @@ export async function sandbox() {
   function lambda2(item2) {
     function lambda(s) {
       let sw = string_starts_with(s, ".");
+      return sw;
     }
     let s3 = string_skip_while(lambda, s2);
     item2 = string_skip_while(string_starts_with_digit, item2);
