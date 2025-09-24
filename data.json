@@ -3141,7 +3141,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -14428,8 +14429,7 @@
    "list_map_prefix_any"
   ],
   "predicate": [
-   "list_find",
-   "sandbox"
+   "list_find"
   ],
   "mapped4": [
    "list_map_string_empty_not_is",
@@ -14849,6 +14849,9 @@
   ],
   "lambda$s": [
    "string_skip_while"
+  ],
+  "s3": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21754,9 +21757,10 @@
     "lambda2",
     "item2",
     "mapped",
-    "s2",
-    "predicate",
+    "s3",
+    "lambda",
     "s",
+    "s2",
     "mapped2"
    ],
    "async": true
