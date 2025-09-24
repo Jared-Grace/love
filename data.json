@@ -2575,8 +2575,7 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic",
-   "sandbox"
+   "file_write_generic"
   ],
   "ast": [
    "data_identifiers_file",
@@ -21701,8 +21700,7 @@
     "folder_user_docs_path",
     "marker",
     "sandbox",
-    "file_path",
-    "f_path"
+    "file_path"
    ],
    "async": true
   },
