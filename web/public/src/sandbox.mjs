@@ -1,3 +1,4 @@
+import { string_trim_right } from "./string_trim_right.mjs";
 import { string_starts_with_space } from "./string_starts_with_space.mjs";
 import { each } from "./each.mjs";
 import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
@@ -23,6 +24,7 @@ export async function sandbox() {
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
     }
+    item2 = string_trim_right(fn, item2);
     return item2;
   }
   let mapped = list_map(split, lambda2);
