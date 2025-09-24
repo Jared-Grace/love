@@ -2153,7 +2153,6 @@
   "s list",
   "c object_property_set list_set",
   "s normal",
-  "sb",
   "s god",
   "s choice",
   "evu arbnav",
@@ -2186,7 +2185,8 @@
   "string_starts_with_digit tt",
   "string_starts_with_digit 5t",
   "as skip",
-  "a ssk string_skip"
+  "a ssk string_skip",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
