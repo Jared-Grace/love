@@ -4242,7 +4242,8 @@
    "list_map_prefix_without_any",
    "retry",
    "file_temp",
-   "folder_user_combine"
+   "folder_user_combine",
+   "ebible_verse"
   ],
   "separator": [
    "watch",
@@ -10155,7 +10156,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "ebible_verse"
   ],
   "fds": [
    "js_outside_move"
@@ -26373,6 +26375,7 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "list_filter_property",
     "ebible_verses",
     "marker",
     "ebible_verse",
@@ -26380,7 +26383,8 @@
     "book_code",
     "chapter_code",
     "verse_number",
-    "verses"
+    "verses",
+    "result"
    ]
   },
   "ebible_versions": {
