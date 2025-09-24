@@ -2122,7 +2122,6 @@
   "s second",
   "s temp",
   "s open",
-  "u fo",
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
   "ebible_version_books_upload engbsb",
@@ -2205,7 +2204,8 @@
   "a fe function_exists",
   "s body",
   "s clear",
-  "s empty"
+  "s empty",
+  "u fo"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
