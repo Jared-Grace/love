@@ -3672,8 +3672,7 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "app_new_assign",
-   "sandbox_4_a",
-   "string_trim_right"
+   "sandbox_4_a"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14877,9 +14876,6 @@
    "string_starts_with_space"
   ],
   "string_trim_right": [
-   "string_trim_right"
-  ],
-  "s2": [
    "string_trim_right"
   ]
  },
@@ -28571,9 +28567,7 @@
     "string_trim_right",
     "lambda$s",
     "s",
-    "any",
-    "v",
-    "s2"
+    "any"
    ]
   }
  },
