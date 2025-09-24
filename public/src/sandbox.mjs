@@ -1,3 +1,4 @@
+import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
 import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
@@ -47,5 +48,9 @@ export async function sandbox() {
   if (not(e)) {
     await function_new(f_name);
   }
+  let output = await function_transform(
+    f_name2,
+    async function lambda3(ast) {},
+  );
   return verse_references;
 }
