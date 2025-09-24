@@ -6732,7 +6732,8 @@
    "app_reply_main",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "split": [
    "functions_combine_name",
@@ -7436,7 +7437,8 @@
    "list_map_split_space",
    "list_map_split_comma",
    "list_map_whitespace_normalize",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -13654,7 +13656,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_check",
    "ebible_chapters_each_verses_check_with",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "sandbox"
   ],
   "unzip": [
    "unzip",
@@ -13810,7 +13813,8 @@
    "ebible_version_books_upload",
    "app_reply_main",
    "ebible_books_to_chapter_codes",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13825,7 +13829,8 @@
    "ebible_version_books",
    "ebible_references_parse",
    "ebible_version_books_upload",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -14442,12 +14447,14 @@
   "verse_references": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "list_filter_starts_with_any": [
    "list_filter_starts_with_any",
    "ebible_references_parse",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "list_map_prefix_without_any": [
    "list_map_prefix_without_any",
@@ -21800,6 +21807,9 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_filter_starts_with_any",
+    "list_map_property",
+    "ebible_version_books",
     "string_starts_with_space",
     "whitespace_normalize",
     "string_ends_with_space",
@@ -21822,7 +21832,11 @@
     "item2",
     "lambda",
     "fn",
-    "mapped"
+    "mapped",
+    "books",
+    "bible_folder",
+    "mapped2",
+    "verse_references"
    ],
    "async": true
   },
