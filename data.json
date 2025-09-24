@@ -4887,7 +4887,8 @@
    "list_adder_multiple_async",
    "list_adder_generic_async",
    "local_function_path",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "js_dollar_ie"
   ],
   "colored": [
    "chalk_color",
@@ -18427,6 +18428,7 @@
     "js_dollar_ie",
     "stack1",
     "ast",
+    "fn",
     "expression",
     "name"
    ],
