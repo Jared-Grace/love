@@ -2549,7 +2549,8 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "bible_verses_encouragement"
+   "bible_verses_encouragement",
+   "ebible_version_books"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -26514,6 +26515,7 @@
   "ebible_version_books": {
    "async": true,
    "identifiers": [
+    "marker",
     "firebase_storage_download_ebible",
     "ebible_version_books_upload_name",
     "browser_is",
