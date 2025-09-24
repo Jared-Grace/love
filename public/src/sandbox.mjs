@@ -45,7 +45,7 @@ export async function sandbox() {
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
   if (not(e)) {
-    await function_new(f_name2);
+    await function_new(f_name);
   }
   return verse_references;
 }
