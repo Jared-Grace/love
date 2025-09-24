@@ -9646,8 +9646,7 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is",
-   "sandbox"
+   "string_padded_is"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -14853,6 +14852,9 @@
    "string_skip_while"
   ],
   "s3": [
+   "sandbox"
+  ],
+  "string_starts_with_dot": [
    "sandbox"
   ]
  },
@@ -21745,7 +21747,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_starts_with",
+    "string_starts_with_dot",
     "string_skip_while",
     "string_starts_with_digit",
     "list_map",
