@@ -56,9 +56,9 @@ export async function sandbox() {
   async function lambda3(ast) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
-    let code = js_unparse(ast2);
-    let expression = js_parse_expression(code_expression);
-    list_add(body_block, item);
+    let code = js_unparse(verse_references);
+    let expression = js_parse_expression(code);
+    list_add(body_block, expression);
   }
   let output = await function_transform(f_name, lambda3);
   return verse_references;
