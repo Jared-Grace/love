@@ -7,7 +7,6 @@ import { list_filter_property } from "./list_filter_property.mjs";
 import { string_to } from "./string_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { ebible_verses } from "./ebible_verses.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -63,12 +62,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
       } else {
         verse_end = verse_start;
       }
-      async function lambda6(bible_folder) {
-        let verses = await ebible_verses(bible_folder, chapter_code);
-        return verses;
-      }
       let index = list_index_of(books, book);
-      let verses_all = await list_map_unordered_async(bible_folders, lambda6);
       async function lambda5(verses, books) {
         let book2 = list_get(books, index);
         let text2 = object_property_get(book2, "text");
@@ -90,7 +84,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
-      await each_pair_async(verses_all, books_all, lambda5);
+      await each_pair_async(books_all, lambda5);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
