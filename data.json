@@ -2197,7 +2197,6 @@
   "is ebible_references_parse",
   "ebible_references_parse_god_created_man_why",
   "p",
-  "sb",
   "s list",
   "s function,ex",
   "u fe",
@@ -2206,7 +2205,8 @@
   "s clear",
   "s empty",
   "u fo",
-  "as ope"
+  "as ope",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
