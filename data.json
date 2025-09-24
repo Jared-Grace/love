@@ -3674,7 +3674,8 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "app_new_assign",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -13326,7 +13327,8 @@
   ],
   "str": [
    "string_letters_only",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "sandbox"
   ],
   "text2": [
    "app_reply_main",
@@ -14043,7 +14045,8 @@
    "whitespace_normalize",
    "ebible_verses",
    "ebible_chapter_text",
-   "list_map_whitespace_normalize"
+   "list_map_whitespace_normalize",
+   "sandbox"
   ],
   "trim": [
    "whitespace_normalize"
@@ -14873,8 +14876,7 @@
    "sandbox"
   ],
   "string_starts_with_space": [
-   "string_starts_with_space",
-   "sandbox"
+   "string_starts_with_space"
   ],
   "sw2": [
    "string_starts_with_space",
@@ -14888,7 +14890,8 @@
    "string_trim_right"
   ],
   "string_ends_with_space": [
-   "string_ends_with_space"
+   "string_ends_with_space",
+   "sandbox"
   ]
  },
  "functions": {
@@ -21780,8 +21783,9 @@
   },
   "sandbox": {
    "identifiers": [
+    "whitespace_normalize",
+    "string_ends_with_space",
     "string_trim_right",
-    "string_starts_with_space",
     "each",
     "string_starts_with_dot",
     "string_skip_while",
@@ -21798,6 +21802,8 @@
     "fns",
     "lambda2",
     "item2",
+    "v",
+    "str",
     "lambda",
     "fn",
     "mapped"
