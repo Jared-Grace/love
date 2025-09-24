@@ -1768,7 +1768,6 @@
   "od I",
   "s body,get",
   "s block",
-  "s return",
   "s object,la",
   "s js,call",
   "s brack",
@@ -2206,7 +2205,8 @@
   "as ope",
   "d",
   "p",
-  "sb"
+  "sb",
+  "s return"
  ],
  "marker_current": "1",
  "function_current": "bible_verses_encouragement",
