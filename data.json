@@ -4694,7 +4694,8 @@
    "html_parse_classes_preview",
    "promise_wrap",
    "retry",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "app_reply_main"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -25345,6 +25346,7 @@
     "text",
     "component",
     "lambda3",
+    "e",
     "lambda9",
     "item3",
     "list",
