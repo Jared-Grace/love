@@ -3442,7 +3442,8 @@
    "sandbox_4_a",
    "function_list_generate",
    "sandbox",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "app_reply_main"
   ],
   "v": [
    "data_identifiers_file",
@@ -5505,7 +5506,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "app_reply_main"
   ],
   "f_paths": [
    "data_files_update",
@@ -12825,7 +12827,8 @@
    "app_replace_rule_set"
   ],
   "lambda8": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_reply_main"
   ],
   "object_property_exists_not_assert": [
    "object_property_exists_not_assert",
@@ -14965,6 +14968,9 @@
    "ebible_references_parse_lines"
   ],
   "verses_first": [
+   "app_reply_main"
+  ],
+  "item3": [
    "app_reply_main"
   ]
  },
@@ -25233,6 +25239,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "each_async",
     "bible_verses_encouragement",
     "ebible_references_parse_lines",
     "ebible_version_books",
@@ -25309,6 +25316,9 @@
     "language_code",
     "lambda7",
     "verses_first",
+    "list",
+    "lambda8",
+    "item3",
     "chapter_code2",
     "verse_number2",
     "u",
