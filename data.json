@@ -2208,7 +2208,8 @@
   "s return",
   "is js_statement_return_empty",
   "sb",
-  "bible_verses_encouragement"
+  "bible_verses_encouragement",
+  "s without"
  ],
  "marker_current": "1",
  "function_current": "bible_verses_encouragement",
