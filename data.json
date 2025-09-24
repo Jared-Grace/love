@@ -3867,7 +3867,6 @@
    "js_declaration_asyncify",
    "js_declare_assign",
    "js_declare_init_set",
-   "js_dollar_ie",
    "js_dollar_r",
    "js_function_id_add",
    "js_function_last_asyncify",
@@ -4076,7 +4075,6 @@
    "js_dollar",
    "js_dollar_a",
    "js_dollar_g",
-   "js_dollar_ie",
    "js_identifier_unique",
    "js_imports_missing",
    "js_let_add",
@@ -8087,7 +8085,6 @@
    "js_bang_to_not",
    "js_call_fill",
    "js_call_new_expression",
-   "js_dollar_ie",
    "js_dollar_s",
    "js_if_else_if_combine",
    "js_left_right_set",
@@ -9366,7 +9363,6 @@
   ],
   "js_call_new_expression": [
    "js_call_new_expression",
-   "js_dollar_ie",
    "js_dollar_ien",
    "js_dollar_ib"
   ],
@@ -9611,7 +9607,6 @@
   ],
   "js_dollar_i": [
    "js_dollar_i",
-   "js_dollar_ie",
    "js_dollar_choices",
    "js_dollar_ien",
    "js_dollar_ir",
@@ -14969,6 +14964,9 @@
   "js_dollar_ib": [
    "js_dollar_ib",
    "js_dollar_choices"
+  ],
+  "js_dollar_if_call": [
+   "js_dollar_ie"
   ]
  },
  "functions": {
@@ -18421,16 +18419,12 @@
   },
   "js_dollar_ie": {
    "identifiers": [
-    "js_call_new_expression",
-    "object_property_set",
-    "js_dollar_i",
+    "js_dollar_if_call",
     "equal",
     "js_dollar_ie",
     "stack1",
     "ast",
-    "fn",
-    "expression",
-    "name"
+    "fn"
    ],
    "async": true
   },
