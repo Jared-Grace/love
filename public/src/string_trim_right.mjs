@@ -1,5 +1,5 @@
+import { string_take } from "./string_take.mjs";
 import { marker } from "./marker.mjs";
-import { string_skip } from "./string_skip.mjs";
 import { not } from "./not.mjs";
 export function string_trim_right(lambda$s, s) {
   marker("1");
@@ -8,7 +8,8 @@ export function string_trim_right(lambda$s, s) {
     if (not(any)) {
       break;
     }
-    s = string_skip(s, 1);
+    ssz;
+    s = string_take(s);
   }
   return s;
 }
