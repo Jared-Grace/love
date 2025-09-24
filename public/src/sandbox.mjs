@@ -17,7 +17,7 @@ export async function sandbox() {
       if (not(any)) {
         break;
       }
-      let skipped = string_skip(s, skip_count);
+      item2 = string_skip(item2, 1);
     }
   }
   let mapped = list_map(split, lambda2);
