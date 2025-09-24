@@ -9,7 +9,7 @@ export function string_trim_right(lambda$s, s) {
     if (not(any)) {
       break;
     }
-    s = string_size(s);
+    let z = string_size(s);
     s = string_take(s);
   }
   return s;
