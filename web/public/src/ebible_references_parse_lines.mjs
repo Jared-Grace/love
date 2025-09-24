@@ -3,7 +3,6 @@ import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { each_range_from_async } from "./each_range_from_async.mjs";
 import { each } from "./each.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { string_to } from "./string_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -68,15 +67,16 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let text2 = object_property_get(book2, "text");
         async function lambda4(verse_number) {
           verse_number = string_to(verse_number);
-          await ebible_verse(bible_folder, chapter_code, verse_number);
-          let ne = list_empty_not_is(result);
-          if (ne) {
-            function lambda3(item) {
-              let text = object_property_get(item, "text");
-              la(text2 + " " + first + ":" + verse_number + " " + text);
-            }
-            each(result, lambda3);
+          let result = await ebible_verse(
+            bible_folder,
+            chapter_code,
+            verse_number,
+          );
+          function lambda3(item) {
+            let text = object_property_get(item, "text");
+            la(text2 + " " + first + ":" + verse_number + " " + text);
           }
+          each(result, lambda3);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
