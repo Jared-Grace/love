@@ -3134,7 +3134,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3399,7 +3400,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -4561,7 +4563,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10105,7 +10108,8 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "sandbox"
   ],
   "match": [
    "js_node_types_is",
@@ -12751,7 +12755,8 @@
    "app_replace_rule_set",
    "list_any_starts_with",
    "list_filter_starts_with_any",
-   "list_find_starts_with"
+   "list_find_starts_with",
+   "sandbox"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -21701,13 +21706,18 @@
   },
   "sandbox": {
    "identifiers": [
+    "list_any",
     "file_read",
     "folder_user_docs_path",
     "marker",
     "sandbox",
     "file_path",
     "contents",
-    "digits"
+    "digits",
+    "any",
+    "list",
+    "lambda",
+    "item"
    ],
    "async": true
   },
