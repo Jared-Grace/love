@@ -2129,7 +2129,6 @@
   "s ebible,to",
   "s parse",
   "s integer",
-  "s ebible",
   "is string_skip",
   "is ebible_chapter_code_to_name",
   "ev Hebrew 11:6",
@@ -2210,7 +2209,8 @@
   "s reply",
   "ebible_index_flat_upload_name",
   "s verses",
-  "sb"
+  "sb",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
