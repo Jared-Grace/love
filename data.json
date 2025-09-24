@@ -11368,7 +11368,8 @@
    "function_aliases_restore"
   ],
   "fns": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "sandbox"
   ],
   "l1": [
    "function_aliases_restore"
@@ -21750,6 +21751,7 @@
     "file_path",
     "contents",
     "split",
+    "fns",
     "lambda2",
     "item2",
     "mapped",
