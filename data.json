@@ -6722,7 +6722,8 @@
    "js_declaration_single_block_body_add_return",
    "js_dollar_ir",
    "js_statement_return_empty_add",
-   "app_new_step_2"
+   "app_new_step_2",
+   "sandbox"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -8199,8 +8200,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "sandbox"
+   "function_param_swap_task_simple"
   ],
   "function_read": [
    "function_read"
@@ -12900,7 +12900,8 @@
    "js_declaration_single_block_body_add_return",
    "function_wrap",
    "js_return_name",
-   "app_new_step_2"
+   "app_new_step_2",
+   "sandbox"
   ],
   "choice_name": [
    "js_dollar"
@@ -14929,6 +14930,9 @@
   ],
   "string_ends_with_space": [
    "string_ends_with_space",
+   "sandbox"
+  ],
+  "ast2": [
    "sandbox"
   ]
  },
@@ -21821,6 +21825,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "js_declaration_single_block_body",
     "function_transform",
     "function_new",
     "not",
@@ -21860,8 +21865,9 @@
     "e",
     "lambda3",
     "ast",
-    "output",
-    "f_name2"
+    "body_block",
+    "ast2",
+    "output"
    ],
    "async": true
   },
