@@ -20,7 +20,8 @@ export async function sandbox() {
     string_starts_with_space,
   ];
   function lambda2(item2) {
-    whitespace_normalize: each(fns, lambda);
+    let v = whitespace_normalize(str);
+    each(fns, lambda);
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
     }
