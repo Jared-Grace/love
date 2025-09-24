@@ -2219,8 +2219,7 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove",
-   "sandbox"
+   "js_log_remove"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -4687,8 +4686,7 @@
    "html_parse_classes_preview",
    "promise_wrap",
    "retry",
-   "list_empty_is_assert",
-   "sandbox"
+   "list_empty_is_assert"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -21832,7 +21830,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "log",
     "function_open",
     "js_unparse",
     "js_parse_expression",
@@ -21876,7 +21873,6 @@
     "verse_references",
     "f_name",
     "exists",
-    "e",
     "lambda3",
     "ast",
     "body_block",
