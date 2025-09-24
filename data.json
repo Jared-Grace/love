@@ -14937,6 +14937,9 @@
   "string_ends_with_space": [
    "string_ends_with_space",
    "sandbox"
+  ],
+  "fo": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21875,7 +21878,8 @@
     "body_block",
     "code",
     "expression",
-    "output"
+    "output",
+    "fo"
    ],
    "async": true
   },
