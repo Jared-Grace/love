@@ -74,7 +74,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
           );
           let text = object_property_get(item, "text");
           la(text2 + " " + first + ":" + verse_number + " " + text);
-          each(result, lambda3);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
