@@ -10,12 +10,13 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  function lambda2(item2) {}
-  let mapped = list_map(list, lambda2);
-  let digits = "1234567890";
-  function lambda(item) {
-    let sw = string_starts_with(s, item);
-    return sw;
+  function lambda2(item2) {
+    let digits = "1234567890";
+    function lambda(item) {
+      let sw = string_starts_with(s, item);
+      return sw;
+    }
+    let any = list_any_starts_with(digits, lambda);
   }
-  let any = list_any_starts_with(digits, lambda);
+  let mapped = list_map(split, lambda2);
 }
