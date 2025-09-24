@@ -3773,8 +3773,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "app_reply_main"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25321,7 +25320,6 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
-    "message",
     "component3",
     "component2",
     "lambda5",
