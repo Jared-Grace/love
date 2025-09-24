@@ -14959,9 +14959,6 @@
    "js_dollar_ie",
    "js_dollar_ib"
   ],
-  "verses_first": [
-   "app_reply_main"
-  ],
   "lambda9": [
    "app_reply_main"
   ],
@@ -25345,7 +25342,6 @@
     "text",
     "component",
     "lambda3",
-    "verses_first",
     "lambda9",
     "item3",
     "list",
