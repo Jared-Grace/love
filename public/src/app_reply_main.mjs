@@ -1,9 +1,9 @@
+import { ebible_version_books } from "./ebible_version_books.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_find_property } from "./list_find_property.mjs";
-import { ebible_version_books_upload_name } from "./ebible_version_books_upload_name.mjs";
 import { firebase_storage_download_ebible } from "./firebase_storage_download_ebible.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -45,8 +45,7 @@ export async function app_reply_main() {
   list_remove_property(languages, "language_code", "en");
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
-  let file_name2 = ebible_version_books_upload_name();
-  let { books } = await firebase_storage_download_ebible(en, file_name2);
+  let books = await ebible_version_books(en);
   let verses = await verse_random_get();
   const root = html_document_body();
   let copied = [];
