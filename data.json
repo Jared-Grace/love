@@ -7480,7 +7480,8 @@
    "ebible_version_books_testament",
    "ebible_verses_upload",
    "firebase_upload_generic",
-   "command_line_generic"
+   "command_line_generic",
+   "ebible_references_parse_lines"
   ],
   "u": [
    "function_exists",
@@ -7514,7 +7515,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic"
+   "object_merge_generic",
+   "ebible_references_parse_lines"
   ],
   "r": [
    "function_format",
@@ -7615,7 +7617,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic"
+   "object_merge_generic",
+   "ebible_references_parse_lines"
   ],
   "i": [
    "function_identifier_replace",
@@ -13358,8 +13361,7 @@
    "whitespace_normalize"
   ],
   "text2": [
-   "app_reply_main",
-   "ebible_references_parse_lines"
+   "app_reply_main"
   ],
   "typed": [
    "app_reply_main",
@@ -14959,6 +14961,9 @@
   "js_dollar_if_call": [
    "js_dollar_ie",
    "js_dollar_ib"
+  ],
+  "to2": [
+   "ebible_references_parse_lines"
   ]
  },
  "functions": {
@@ -28665,6 +28670,7 @@
   "ebible_references_parse_lines": {
    "async": true,
    "identifiers": [
+    "object_merge",
     "ebible_verse",
     "list_adder_async",
     "each_pair_async",
@@ -28725,10 +28731,12 @@
     "index",
     "lambda5",
     "book2",
-    "text2",
     "lambda4",
     "verse_number",
     "result",
+    "to2",
+    "to",
+    "from",
     "list"
    ]
   },
