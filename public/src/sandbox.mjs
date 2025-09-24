@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { function_open } from "./function_open.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -52,9 +51,6 @@ export async function sandbox() {
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
   let { exists } = await function_exists(f_name);
-  log({
-    e,
-  });
   if (not(exists)) {
     await function_new(f_name);
   }
