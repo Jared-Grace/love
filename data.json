@@ -14876,7 +14876,8 @@
    "string_starts_with_space"
   ],
   "string_trim_right": [
-   "string_trim_right"
+   "string_trim_right",
+   "sandbox"
   ],
   "z": [
    "string_trim_right"
@@ -21771,6 +21772,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_trim_right",
     "string_starts_with_space",
     "each",
     "string_starts_with_dot",
