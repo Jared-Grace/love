@@ -13,14 +13,14 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let fns = [string_starts_with_digit, string_starts_with_dot];
-  function lambda(fn) {
-    function lambda2(item2) {
-      item2 = string_skip_while(fn, item2);
+  function lambda2(item2) {
+    item2 = string_skip_while(fn, item2);
+    function lambda(fn) {
+      each(fns, lambda);
       return item2;
     }
     let mapped = list_map(split, lambda2);
   }
-  each(fns, lambda);
   function lambda2(item2) {
     item2 = string_skip_while(string_starts_with_dot, item2);
     return item2;
