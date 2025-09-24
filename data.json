@@ -5235,7 +5235,8 @@
    "marker_next_declare_single_init_elements",
    "string_starts_with_not",
    "object_assign",
-   "each_pair_async"
+   "each_pair_async",
+   "app_reply_main"
   ],
   "without": [
    "string_suffix_without",
@@ -25363,6 +25364,7 @@
     "verse_texts",
     "verse_text",
     "other",
+    "a",
     "ne",
     "concated",
     "joined"
