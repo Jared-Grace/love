@@ -6307,8 +6307,7 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main",
-   "ebible_references_parse_lines"
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -10244,8 +10243,7 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main",
-   "ebible_references_parse_lines"
+   "app_reply_main"
   ],
   "last": [
    "js_return_name",
@@ -28666,7 +28664,6 @@
     "each_pair_async",
     "each_range_from_async",
     "each",
-    "list_empty_not_is",
     "string_to",
     "list_get",
     "list_index_of",
@@ -28726,7 +28723,6 @@
     "text2",
     "lambda4",
     "verse_number",
-    "ne",
     "result",
     "lambda3",
     "item",
