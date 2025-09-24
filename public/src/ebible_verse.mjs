@@ -7,10 +7,12 @@ export async function ebible_verse(bible_folder, chapter_code, verse_number) {
   marker("1");
   let b = browser_is();
   if (b) {
-    let verse = await ebible_verse_download(en, chapter_code, verse_number);
+    let verse = await ebible_verse_download(
+      bible_folder,
+      chapter_code,
+      verse_number,
+    );
     return verse;
-    if (browser_is()) {
-    }
   }
   let verses = await ebible_verses(bible_folder, chapter_code);
   let result = list_find_property(verses, "verse_number", verse_number);
