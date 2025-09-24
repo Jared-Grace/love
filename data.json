@@ -2186,7 +2186,8 @@
   "string_starts_with_digit 5t",
   "as skip",
   "a ssk string_skip",
-  "sb"
+  "sb",
+  "s trim"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
