@@ -22,4 +22,5 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map(split, lambda2);
+  return mapped;
 }
