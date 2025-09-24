@@ -2210,10 +2210,10 @@
   "s ebible",
   "is ebible_verse",
   "p",
-  "sb",
   "s dollar",
   "as doll",
-  "nd ib"
+  "nd ib",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ib",
