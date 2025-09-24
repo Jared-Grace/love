@@ -185,7 +185,8 @@
   "flo": "file_open",
   "lst": "list_set",
   "ssk": "string_skip",
-  "sz": "string_size"
+  "sz": "string_size",
+  "fe": "function_exists"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2203,7 +2204,8 @@
   "sb",
   "s list",
   "s function,ex",
-  "u fe"
+  "u fe",
+  "a fe function_exists"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
