@@ -14,9 +14,9 @@ export async function sandbox() {
   let split = string_split_newline(contents);
   let fns = [string_starts_with_digit, string_starts_with_dot];
   function lambda2(item2) {
-    item2 = string_skip_while(fn, item2);
     each(fns, lambda);
     function lambda(fn) {
+      item2 = string_skip_while(fn, item2);
       return item2;
     }
   }
