@@ -2192,7 +2192,8 @@
   "sb",
   "s white",
   "c string_skip_while string_trim_right",
-  "s z"
+  "s z",
+  "as z"
  ],
  "marker_current": "1",
  "function_current": "string_trim_right",
