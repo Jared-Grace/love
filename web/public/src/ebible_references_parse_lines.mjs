@@ -75,6 +75,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
           let to2 = object_merge(result, {
             book_name,
             chapter_name,
+            chapter_code,
           });
           la(result);
         }
