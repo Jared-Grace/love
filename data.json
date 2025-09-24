@@ -2524,7 +2524,8 @@
    "app_message",
    "app_message_main",
    "sandbox_4_a",
-   "string_starts_with_space"
+   "string_starts_with_space",
+   "string_trim_right"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -28554,6 +28555,7 @@
   "string_trim_right": {
    "async": false,
    "identifiers": [
+    "marker",
     "string_skip",
     "not",
     "string_trim_right",
