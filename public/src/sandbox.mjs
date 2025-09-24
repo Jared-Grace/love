@@ -7,6 +7,6 @@ export async function sandbox() {
   let v = bible_verses_encouragement();
   let en = ebible_folder_english();
   let r = "Proverbs 3:5-6";
-  let list = await ebible_references_parse_lines([en], [r]);
+  let list = await ebible_references_parse_lines([en, "urdgvu"], [r]);
   return list;
 }
