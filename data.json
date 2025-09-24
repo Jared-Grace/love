@@ -4308,7 +4308,8 @@
    "html_parse_attr",
    "html_parse_classes_preview",
    "html_parse_find_a_href_starts_with",
-   "html_parse_href_text"
+   "html_parse_href_text",
+   "sandbox"
   ],
   "data": [
    "data_all",
@@ -14820,9 +14821,6 @@
   ],
   "string_split_semicolon_space": [
    "string_split_semicolon_space"
-  ],
-  "digits": [
-   "sandbox"
   ]
  },
  "functions": {
@@ -21727,7 +21725,7 @@
     "split",
     "lambda2",
     "item2",
-    "digits",
+    "d",
     "lambda",
     "item",
     "sw",
