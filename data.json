@@ -2193,12 +2193,12 @@
   "c string_starts_with_space string_ends_with_space",
   "s z",
   "o sb",
-  "sb",
   "s book",
   "is ebible_version_books",
   "d",
   "v",
-  "s reply"
+  "s reply",
+  "sb"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
