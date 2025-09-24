@@ -39,6 +39,7 @@ export async function sandbox() {
   let books = await ebible_version_books(bible_folder);
   let mapped2 = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
+  fe;
   if (false) {
   }
   return verse_references;
