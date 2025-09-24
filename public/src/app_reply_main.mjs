@@ -1,3 +1,4 @@
+import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -55,8 +56,7 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_get() {
-
-    ebible_references_parse_lines
+    let list = await ebible_references_parse_lines(bible_folders, lines);
     let { chapter_code, verse_number } = list_random_item(index);
     let verse = await ebible_verse_download(en, chapter_code, verse_number);
     let v = [verse];
