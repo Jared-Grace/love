@@ -33,6 +33,8 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function ebible_references_parse(bible_folders, file_path) {
+  let contents = await file_read(file_path);
+  let split = string_split_newline(contents);
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
   let books_all = await list_map_unordered_async(
@@ -40,8 +42,6 @@ export async function ebible_references_parse(bible_folders, file_path) {
     ebible_version_books,
   );
   let mapped = list_map_property(books, "text");
-  let contents = await file_read(file_path);
-  let split = string_split_newline(contents);
   let verse_references = list_filter_starts_with_any(mapped, split);
   let book_names = list_map_prefix_any(verse_references, mapped);
   let mapped2 = list_map_prefix_without_any(verse_references, mapped);
