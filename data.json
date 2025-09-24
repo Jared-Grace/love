@@ -2170,7 +2170,6 @@
   "s a",
   "ps",
   "function_name_to_acronym a_b_C",
-  "p",
   "rs sandbox_4 a",
   "o rs",
   "d",
@@ -2189,6 +2188,7 @@
   "s dot",
   "s const",
   "c string_starts_with_dot string_starts_with_space",
+  "p",
   "sb"
  ],
  "marker_current": "1",
