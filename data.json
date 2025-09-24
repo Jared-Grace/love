@@ -3435,8 +3435,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -4790,8 +4789,7 @@
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
    "ebible_index",
-   "app_new_step_2",
-   "sandbox"
+   "app_new_step_2"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -9126,8 +9124,7 @@
    "js_return_name",
    "js_return_on",
    "js_return_on_async",
-   "js_expand_generic",
-   "sandbox"
+   "js_expand_generic"
   ],
   "arguments2": [
    "js_bang_to_not",
@@ -21838,7 +21835,6 @@
     "json_to",
     "function_open",
     "js_parse_expression",
-    "list_add",
     "list_empty",
     "js_declaration_single_block_body",
     "function_transform",
@@ -21883,8 +21879,6 @@
     "body_block",
     "code",
     "expression",
-    "argument",
-    "list",
     "output"
    ],
    "async": true
