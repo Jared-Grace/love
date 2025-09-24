@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { string_starts_with_digit } from "./string_starts_with_digit.mjs";
 import { list_map } from "./list_map.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
@@ -12,7 +13,8 @@ export async function sandbox() {
   function lambda2(item2) {
     while (true) {
       let any = string_starts_with_digit(item2);
-      if (false) {
+      if (not(any)) {
+        break;
       }
     }
   }
