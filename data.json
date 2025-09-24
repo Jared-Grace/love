@@ -3896,8 +3896,7 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic",
-   "js_dollar_ib"
+   "object_merge_generic"
   ],
   "watch": [
    "watch"
@@ -4135,8 +4134,7 @@
    "ebible_languages",
    "app_new_step_2",
    "app_message",
-   "function_list_generate",
-   "js_dollar_ib"
+   "function_list_generate"
   ],
   "output": [
    "watch",
@@ -4886,7 +4884,8 @@
    "list_adder_generic_async",
    "local_function_path",
    "bible_verses_encouragement_generate",
-   "js_dollar_ie"
+   "js_dollar_ie",
+   "js_dollar_ib"
   ],
   "colored": [
    "chalk_color",
@@ -8104,8 +8103,7 @@
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
    "app_new_assign",
-   "function_list_generate",
-   "js_dollar_ib"
+   "function_list_generate"
   ],
   "type": [
    "function_params_consolidate",
@@ -9363,8 +9361,7 @@
   ],
   "js_call_new_expression": [
    "js_call_new_expression",
-   "js_dollar_ien",
-   "js_dollar_ib"
+   "js_dollar_ien"
   ],
   "js_code_braces_empty": [
    "js_code_arrow",
@@ -9609,8 +9606,7 @@
    "js_dollar_i",
    "js_dollar_choices",
    "js_dollar_ien",
-   "js_dollar_ir",
-   "js_dollar_ib"
+   "js_dollar_ir"
   ],
   "js_dollar_r": [
    "js_dollar_r",
@@ -14966,7 +14962,8 @@
    "js_dollar_choices"
   ],
   "js_dollar_if_call": [
-   "js_dollar_ie"
+   "js_dollar_ie",
+   "js_dollar_ib"
   ]
  },
  "functions": {
@@ -28748,15 +28745,12 @@
   "js_dollar_ib": {
    "async": true,
    "identifiers": [
-    "object_property_set",
-    "js_call_new_expression",
-    "js_dollar_i",
+    "js_dollar_if_call",
     "browser_is",
     "js_dollar_ib",
     "stack1",
     "ast",
-    "expression",
-    "name"
+    "fn"
    ]
   }
  },
