@@ -14963,6 +14963,9 @@
   ],
   "to2": [
    "ebible_references_parse_lines"
+  ],
+  "verses_first": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -25288,6 +25291,7 @@
     "preview",
     "chosens",
     "typed",
+    "verses_first",
     "encouragement",
     "r",
     "v",
