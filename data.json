@@ -14833,6 +14833,9 @@
   ],
   "string_skip_while": [
    "sandbox"
+  ],
+  "string_dot": [
+   "js_code_dot"
   ]
  },
  "functions": {
@@ -25714,6 +25717,7 @@
   "js_code_dot": {
    "async": false,
    "identifiers": [
+    "string_dot",
     "marker",
     "js_code_dot",
     "left",
