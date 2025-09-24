@@ -19,6 +19,7 @@ export async function sandbox() {
       }
       item2 = string_skip(item2, 1);
     }
+    return item2;
   }
   let mapped = list_map(split, lambda2);
 }
