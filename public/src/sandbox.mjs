@@ -2,7 +2,6 @@ import { js_statement_return_add } from "./js_statement_return_add.mjs";
 import { json_to } from "./json_to.mjs";
 import { function_open } from "./function_open.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -60,8 +59,7 @@ export async function sandbox() {
     list_empty(body_block);
     let code = json_to(verse_references);
     let expression = js_parse_expression(code);
-    js_statement_return_add(argument, list);
-    list_add(body_block, expression);
+    js_statement_return_add(expression, body_block);
   }
   let output = await function_transform(f_name, lambda3);
   await function_open(f_name);
