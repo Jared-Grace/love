@@ -37,6 +37,7 @@ export function ebible_verses_exclude() {
     "tl",
     "tnav",
     "x",
+    "xo",
     "xt",
   ];
   return v;
