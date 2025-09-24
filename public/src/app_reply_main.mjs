@@ -61,6 +61,7 @@ export async function app_reply_main() {
     let encouragement = bible_verses_encouragement();
     let r = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [r]);
+    verses_first = verses;
     let v = [verses];
     return v;
   }
