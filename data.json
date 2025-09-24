@@ -5093,7 +5093,8 @@
    "ebible_chapter_code_to_name",
    "string_split_semicolon",
    "string_padded_is",
-   "string_split_semicolon_space"
+   "string_split_semicolon_space",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -7405,7 +7406,8 @@
    "list_map_split_space",
    "list_map_split_comma",
    "list_map_whitespace_normalize",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -14422,7 +14424,8 @@
    "list_map_prefix_any"
   ],
   "predicate": [
-   "list_find"
+   "list_find",
+   "sandbox"
   ],
   "mapped4": [
    "list_map_string_empty_not_is",
@@ -14835,6 +14838,9 @@
   ],
   "string_dot": [
    "js_code_dot"
+  ],
+  "s2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21739,7 +21745,11 @@
     "split",
     "lambda2",
     "item2",
-    "mapped"
+    "mapped",
+    "s2",
+    "predicate",
+    "s",
+    "mapped2"
    ],
    "async": true
   },
