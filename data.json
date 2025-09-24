@@ -3669,7 +3669,8 @@
    "ebible_class_apocrypha",
    "ebible_version_books_upload_name",
    "app_new_assign",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "string_trim_right"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5067,7 +5068,8 @@
    "string_prefix_without",
    "string_size",
    "string_skip",
-   "string_size_less_1"
+   "string_size_less_1",
+   "string_trim_right"
   ],
   "s": [
    "string_suffix_without",
@@ -14874,7 +14876,7 @@
   "string_trim_right": [
    "string_trim_right"
   ],
-  "ssz": [
+  "s2": [
    "string_trim_right"
   ]
  },
@@ -28559,6 +28561,7 @@
   "string_trim_right": {
    "async": false,
    "identifiers": [
+    "string_size",
     "string_take",
     "marker",
     "not",
@@ -28566,7 +28569,8 @@
     "lambda$s",
     "s",
     "any",
-    "ssz"
+    "v",
+    "s2"
    ]
   }
  },
