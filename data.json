@@ -2189,7 +2189,8 @@
   "s const",
   "c string_starts_with_dot string_starts_with_space",
   "p",
-  "sb"
+  "sb",
+  "s white"
  ],
  "marker_current": "1",
  "function_current": "string_starts_with_space",
