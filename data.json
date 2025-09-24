@@ -14685,9 +14685,6 @@
   "ebible_chapter_code_normalize": [
    "ebible_chapter_code_normalize"
   ],
-  "language_codes": [
-   "ebible_verse"
-  ],
   "list_remove_property": [
    "app_reply_main",
    "list_remove_property"
@@ -26379,12 +26376,11 @@
     "ebible_verses",
     "marker",
     "ebible_verse",
-    "language_codes",
+    "bible_folder",
     "book_code",
     "chapter_code",
     "verse_number",
-    "verses",
-    "bible_folder"
+    "verses"
    ]
   },
   "ebible_versions": {
