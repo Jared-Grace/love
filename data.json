@@ -3689,7 +3689,8 @@
    "ebible_version_books_upload_name",
    "app_new_assign",
    "sandbox_4_a",
-   "string_dot"
+   "string_dot",
+   "sandbox"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5607,7 +5608,8 @@
    "firebase_upload_object",
    "app_replace_rule_valid",
    "js_identifier_defineds",
-   "sandbox_2"
+   "sandbox_2",
+   "sandbox"
   ],
   "assert_json": [
    "assert_json",
@@ -6166,7 +6168,8 @@
    "firebase_upload_object",
    "file_write_json",
    "object_property_set_exists_not",
-   "ebible_firebase_upload"
+   "ebible_firebase_upload",
+   "sandbox"
   ],
   "each_pair": [
    "each_pair",
@@ -21834,6 +21837,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "json_to",
     "js_parse",
     "function_open",
     "js_parse_expression",
@@ -21880,6 +21884,8 @@
     "lambda3",
     "ast",
     "body_block",
+    "v",
+    "object",
     "code",
     "expression",
     "output"
