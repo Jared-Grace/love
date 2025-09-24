@@ -87,6 +87,7 @@ export async function app_reply_main() {
     preview_refresh();
     list_empty(chosens);
     list_empty(languages_chosens);
+    log(languages_chosens);
     typed = "";
     buttons_refresh();
   }
