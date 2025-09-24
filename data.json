@@ -14049,7 +14049,8 @@
    "ebible_verses_upload_name",
    "ebible_verse_download",
    "ebible_verse_new",
-   "string_pad_space"
+   "string_pad_space",
+   "ebible_verse"
   ],
   "ebible_verse": [
    "ebible_verse"
@@ -14693,9 +14694,6 @@
   ],
   "ebible_version_books_upload": [
    "ebible_version_books_upload"
-  ],
-  "chapter_verse": [
-   "ebible_verse"
   ],
   "lambda$temp_path": [
    "file_temp"
@@ -26383,10 +26381,10 @@
     "ebible_verse",
     "language_codes",
     "book_code",
-    "chapter_verse",
+    "chapter_code",
+    "verse_number",
     "verses",
-    "bible_folder",
-    "chapter_code"
+    "bible_folder"
    ]
   },
   "ebible_versions": {
