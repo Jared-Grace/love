@@ -7519,7 +7519,8 @@
    "list_random_item",
    "integer_random",
    "js_statement_return_empty_add",
-   "range_from"
+   "range_from",
+   "app_reply_main"
   ],
   "formatted": [
    "function_format",
@@ -12244,8 +12245,7 @@
    "ebible_firebase_folder"
   ],
   "lines": [
-   "function_transform_marker_specified",
-   "app_reply_main"
+   "function_transform_marker_specified"
   ],
   "html_p": [
    "html_p",
@@ -25214,8 +25214,8 @@
     "chosens",
     "typed",
     "encouragement",
+    "r",
     "list",
-    "lines",
     "chapter_code",
     "verse_number",
     "verse",
