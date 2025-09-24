@@ -1,4 +1,3 @@
-import { ebible_verse } from "./ebible_verse.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
