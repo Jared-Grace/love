@@ -2182,7 +2182,8 @@
   "s sand",
   "s digit",
   "s starts",
-  "string_starts_with_digit tt"
+  "string_starts_with_digit tt",
+  "string_starts_with_digit 5t"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
