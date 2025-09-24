@@ -18,6 +18,8 @@ export async function sandbox() {
       return sw;
     }
     let any = list_any_starts_with(item2, lambda);
+    if (false) {
+    }
   }
   let mapped = list_map(split, lambda2);
 }
