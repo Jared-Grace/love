@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -90,6 +91,7 @@ export async function app_reply_main() {
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
       let verses_first = list_first(verses);
+      await each_async(list, async function lambda8(item3) {});
       let chapter_code2 = object_property_get(verses_first, "chapter_code");
       let verse_number2 = object_property_get(verses_first, "verse_number");
       let u = await ebible_verse_download(
