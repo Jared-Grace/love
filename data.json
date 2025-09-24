@@ -4599,8 +4599,7 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10010,8 +10009,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "sandbox"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -14938,9 +14936,6 @@
   ],
   "string_ends_with_space": [
    "string_ends_with_space",
-   "sandbox"
-  ],
-  "ast2": [
    "sandbox"
   ]
  },
@@ -21879,10 +21874,7 @@
     "ast",
     "body_block",
     "code",
-    "ast2",
     "expression",
-    "code_expression",
-    "item",
     "output"
    ],
    "async": true
