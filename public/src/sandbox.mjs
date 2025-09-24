@@ -7,5 +7,6 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
   let digits = "1234567890";
-  let any = list_any(list, function lambda(item) {});
+  function lambda(item) {}
+  let any = list_any(list, lambda);
 }
