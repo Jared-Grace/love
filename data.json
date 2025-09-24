@@ -4847,8 +4847,7 @@
    "http_local_file_name",
    "list_adder_multiple_async",
    "list_adder_generic_async",
-   "local_function_path",
-   "sandbox"
+   "local_function_path"
   ],
   "colored": [
    "chalk_color",
@@ -14425,7 +14424,8 @@
    "list_map_prefix_any"
   ],
   "predicate": [
-   "list_find"
+   "list_find",
+   "sandbox"
   ],
   "mapped4": [
    "list_map_string_empty_not_is",
@@ -21737,7 +21737,7 @@
     "split",
     "lambda2",
     "item2",
-    "fn",
+    "predicate",
     "any",
     "mapped"
    ],
