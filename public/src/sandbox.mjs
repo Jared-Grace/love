@@ -1,3 +1,4 @@
+import { string_starts_with_space } from "./string_starts_with_space.mjs";
 import { each } from "./each.mjs";
 import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
 import { string_skip_while } from "./string_skip_while.mjs";
@@ -12,7 +13,11 @@ export async function sandbox() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
-  let fns = [string_starts_with_digit, string_starts_with_dot];
+  let fns = [
+    string_starts_with_digit,
+    string_starts_with_dot,
+    string_starts_with_space,
+  ];
   function lambda2(item2) {
     each(fns, lambda);
     function lambda(fn) {
