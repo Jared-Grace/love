@@ -3409,8 +3409,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "list_set",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "v": [
    "data_identifiers_file",
@@ -4573,8 +4572,7 @@
    "ebible_references_parse",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "sandbox"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4852,7 +4850,8 @@
    "http_local_file_name",
    "list_adder_multiple_async",
    "list_adder_generic_async",
-   "local_function_path"
+   "local_function_path",
+   "sandbox"
   ],
   "colored": [
    "chalk_color",
@@ -21758,8 +21757,7 @@
     "split",
     "fns",
     "lambda",
-    "item",
-    "list",
+    "fn",
     "lambda2",
     "item2",
     "mapped",
