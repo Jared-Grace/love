@@ -2213,10 +2213,11 @@
   "as doll",
   "nd ib",
   "p",
-  "sb"
+  "sb",
+  "o ebible_version_books"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_ib",
+ "function_current": "ebible_version_books",
  "terminal": false,
  "identifiers": {
   "log": [
