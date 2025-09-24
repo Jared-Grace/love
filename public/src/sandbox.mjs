@@ -1,5 +1,6 @@
+import { whitespace_normalize } from "./whitespace_normalize.mjs";
+import { string_ends_with_space } from "./string_ends_with_space.mjs";
 import { string_trim_right } from "./string_trim_right.mjs";
-import { string_starts_with_space } from "./string_starts_with_space.mjs";
 import { each } from "./each.mjs";
 import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
 import { string_skip_while } from "./string_skip_while.mjs";
@@ -17,9 +18,10 @@ export async function sandbox() {
   let fns = [
     string_starts_with_digit,
     string_starts_with_dot,
-    string_starts_with_space,
+    string_ends_with_space,
   ];
   function lambda2(item2) {
+    let v = whitespace_normalize(str);
     each(fns, lambda);
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
