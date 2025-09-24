@@ -1,3 +1,4 @@
+import { digits } from "./digits.mjs";
 import { list_map } from "./list_map.mjs";
 import { string_split_newline } from "./string_split_newline.mjs";
 import { list_any_starts_with } from "./list_any_starts_with.mjs";
@@ -11,7 +12,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda2(item2) {
-    let d = "1234567890";
+    let d = digits();
     function lambda(item) {
       let sw = string_starts_with(s, item);
       return sw;
