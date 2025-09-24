@@ -33,6 +33,7 @@ export function ebible_verses_exclude() {
     "notemark",
     "popup",
     "qa",
+    "qd",
     "r",
     "rq",
     "s",
