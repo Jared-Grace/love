@@ -14028,8 +14028,7 @@
    "whitespace_normalize",
    "ebible_verses",
    "ebible_chapter_text",
-   "list_map_whitespace_normalize",
-   "sandbox"
+   "list_map_whitespace_normalize"
   ],
   "trim": [
    "whitespace_normalize"
@@ -21754,7 +21753,6 @@
   },
   "sandbox": {
    "identifiers": [
-    "whitespace_normalize",
     "string_starts_with_space",
     "each",
     "string_starts_with_dot",
