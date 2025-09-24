@@ -1,4 +1,4 @@
-import { string_starts_with } from "./string_starts_with.mjs";
+import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
 import { string_skip_while } from "./string_skip_while.mjs";
 import { string_starts_with_digit } from "./string_starts_with_digit.mjs";
 import { list_map } from "./list_map.mjs";
@@ -18,7 +18,7 @@ export async function sandbox() {
   let mapped = list_map(split, lambda2);
   function lambda2(item2) {
     function lambda(s) {
-      let sw = string_starts_with(s, ".");
+      let sw = string_starts_with_dot(s);
       return sw;
     }
     let s3 = string_skip_while(lambda, s2);
