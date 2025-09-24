@@ -7533,7 +7533,6 @@
    "integer_random",
    "js_statement_return_empty_add",
    "range_from",
-   "app_reply_main",
    "sandbox"
   ],
   "formatted": [
@@ -25302,7 +25301,7 @@
     "chosens",
     "typed",
     "encouragement",
-    "r",
+    "reference",
     "v",
     "lambda6",
     "event",
@@ -25349,7 +25348,6 @@
     "book",
     "book_name",
     "verse_texts",
-    "reference",
     "verse_text",
     "other",
     "ne",
