@@ -3864,7 +3864,6 @@
    "js_function_id_add",
    "js_function_last_asyncify",
    "js_identifier_replace",
-   "js_if_blockify_generic",
    "js_if_else_if_combine",
    "js_left_right_set",
    "js_return_code_replace",
@@ -4769,7 +4768,6 @@
    "js_dollar_g",
    "js_dollar_s",
    "js_identifier_unique",
-   "js_if_blockify_generic",
    "list_add",
    "list_adder",
    "list_adder_async",
@@ -7523,7 +7521,6 @@
   ],
   "r": [
    "function_format",
-   "js_if_blockify_generic",
    "list_remove_multiple",
    "marker_functionize",
    "function_aliases_restore",
@@ -12898,7 +12895,6 @@
    "function_new_js_inner"
   ],
   "js_statement_return_empty": [
-   "js_if_blockify_generic",
    "js_statement_return_empty",
    "js_statement_return_empty_add"
   ],
@@ -14944,6 +14940,9 @@
   ],
   "bible_verses_encouragement": [
    "bible_verses_encouragement"
+  ],
+  "js_statement_return_add": [
+   "js_if_blockify_generic"
   ]
  },
  "functions": {
@@ -18734,12 +18733,10 @@
   },
   "js_if_blockify_generic": {
    "identifiers": [
-    "js_statement_return_empty",
+    "js_statement_return_add",
     "not",
     "js_visit_type_each_async",
     "object_replace",
-    "list_add",
-    "object_property_set",
     "list_includes",
     "js_node_type",
     "object_copy",
@@ -18757,8 +18754,7 @@
     "copy",
     "nt",
     "includes",
-    "bs_body",
-    "r"
+    "bs_body"
    ],
    "async": true
   },
