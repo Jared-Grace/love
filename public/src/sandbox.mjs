@@ -38,6 +38,6 @@ export async function sandbox() {
   let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
   let mapped2 = list_map_property(books, "text");
-  let verse_references = list_filter_starts_with_any(mapped2, split);
+  let verse_references = list_filter_starts_with_any(mapped2, mapped);
   return verse_references;
 }
