@@ -176,7 +176,7 @@ export async function app_reply_main() {
     let verse_texts = list_map_property(squashed, "text");
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
-    const other = [verse_text];
+    const other = [verse_text];log({a:'a',languages_chosens})
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
