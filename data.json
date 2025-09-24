@@ -14962,9 +14962,6 @@
   "verses_first": [
    "app_reply_main"
   ],
-  "us": [
-   "app_reply_main"
-  ],
   "lambda9": [
    "app_reply_main"
   ],
@@ -14981,6 +14978,12 @@
    "app_reply_main"
   ],
   "verses2": [
+   "app_reply_main"
+  ],
+  "reference2": [
+   "app_reply_main"
+  ],
+  "verses3": [
    "app_reply_main"
   ]
  },
@@ -25327,12 +25330,13 @@
     "lambda7",
     "verses_list_first",
     "verses2",
+    "reference2",
     "lambda8",
     "verse",
     "chapter_code2",
     "verse_number2",
     "d",
-    "us",
+    "verses3",
     "component4",
     "choices",
     "lambda2",
