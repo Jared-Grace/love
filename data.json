@@ -5057,7 +5057,8 @@
    "file_open",
    "string_ends_with",
    "string_prefix_without",
-   "string_padded_is"
+   "string_padded_is",
+   "string_ends_with_space"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -14887,9 +14888,6 @@
    "string_trim_right"
   ],
   "string_ends_with_space": [
-   "string_ends_with_space"
-  ],
-  "string_endss_with": [
    "string_ends_with_space"
   ]
  },
@@ -28589,11 +28587,11 @@
   "string_ends_with_space": {
    "async": false,
    "identifiers": [
+    "string_ends_with",
     "marker",
     "string_ends_with_space",
     "s",
-    "sw2",
-    "string_endss_with"
+    "sw2"
    ]
   }
  },
