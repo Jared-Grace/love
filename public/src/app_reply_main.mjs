@@ -142,7 +142,8 @@ export async function app_reply_main() {
   preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
-    let verse = list_first(verses);
+    let verses_first = list_first(verses);
+    each(list, function lambda9(item3) {});
     let chapter_code2 = object_property_get(verse, "chapter_code");
     let book_code = ebible_chapter_code_to_book(chapter_code2);
     let chapter_name = ebible_chapter_code_to_name(chapter_code2);
