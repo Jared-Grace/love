@@ -13,6 +13,7 @@ export function ebible_verses_exclude() {
     "ft",
     "fv",
     "iex",
+    "im",
     "imt",
     "is",
     "io",
