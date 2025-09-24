@@ -4989,8 +4989,7 @@
    "js_identifier_unique",
    "string_ends_with",
    "function_rename_suffix_add",
-   "functions_names",
-   "function_list_generate"
+   "functions_names"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -28742,7 +28741,6 @@
     "name",
     "without",
     "s",
-    "suffix",
     "exists",
     "f_name",
     "lambda3",
