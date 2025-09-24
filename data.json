@@ -3685,7 +3685,6 @@
    "string_may_the_lord",
    "ebible_book_code_size",
    "folder_read_async",
-   "app_reply_main",
    "http",
    "urdu_allah_to_god",
    "number_pad",
@@ -4355,7 +4354,8 @@
    "html_parse_find_a_href_starts_with",
    "html_parse_href_text",
    "digits",
-   "string_starts_with_digit"
+   "string_starts_with_digit",
+   "app_reply_main"
   ],
   "data": [
    "data_all",
@@ -7490,7 +7490,6 @@
    "function_exists",
    "function_aliases_restore",
    "function_exists_inner",
-   "app_reply_main",
    "uuid",
    "string_upper_to",
    "ebible_chapter_code_normalize",
@@ -14976,6 +14975,12 @@
    "app_reply_main"
   ],
   "verses_list": [
+   "app_reply_main"
+  ],
+  "verses_list_first": [
+   "app_reply_main"
+  ],
+  "verses2": [
    "app_reply_main"
   ]
  },
@@ -25305,7 +25310,6 @@
     "typed",
     "encouragement",
     "reference",
-    "v",
     "verses",
     "lambda6",
     "event",
@@ -25321,12 +25325,13 @@
     "bible_folder2",
     "language_code",
     "lambda7",
-    "verses_first",
+    "verses_list_first",
+    "verses2",
     "lambda8",
     "verse",
     "chapter_code2",
     "verse_number2",
-    "u",
+    "d",
     "us",
     "component4",
     "choices",
@@ -25344,6 +25349,7 @@
     "text",
     "component",
     "lambda3",
+    "verses_first",
     "lambda9",
     "item3",
     "list",
