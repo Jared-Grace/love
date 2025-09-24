@@ -2228,7 +2228,8 @@
    "log_keep",
    "prompt_previous",
    "search_generic",
-   "js_log_remove"
+   "js_log_remove",
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3772,7 +3773,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "app_reply_main"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25249,6 +25251,7 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "log",
     "list_squash",
     "bible_verses_encouragement",
     "ebible_references_parse_lines",
@@ -25318,6 +25321,7 @@
     "buttons_refresh",
     "lambda4",
     "preview_refresh",
+    "message",
     "component3",
     "component2",
     "lambda5",
