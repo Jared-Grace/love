@@ -2201,7 +2201,8 @@
   "s starts,any",
   "is list_any_starts_with",
   "is list_filter_starts_with_any",
-  "is ebible_references_parse"
+  "is ebible_references_parse",
+  "ebible_references_parse_god_created_man_why"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
