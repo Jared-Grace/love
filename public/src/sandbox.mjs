@@ -48,9 +48,7 @@ export async function sandbox() {
   if (not(e)) {
     await function_new(f_name);
   }
-  let output = await function_transform(
-    f_name2,
-    async function lambda3(ast) {},
-  );
+  async function lambda3(ast) {}
+  let output = await function_transform(f_name2, lambda3);
   return verse_references;
 }
