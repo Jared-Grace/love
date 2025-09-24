@@ -4,6 +4,7 @@ import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { ebible_class_old } from "./ebible_class_old.mjs";
 import { ebible_class_new } from "./ebible_class_new.mjs";
 export async function ebible_version_books(bible_folder) {
+  wi;
   if (false) {
   }
   const n = ebible_class_new();
