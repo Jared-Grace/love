@@ -6,7 +6,7 @@ import { ebible_class_old } from "./ebible_class_old.mjs";
 import { ebible_class_new } from "./ebible_class_new.mjs";
 export async function ebible_version_books(bible_folder) {
   let b = browser_is();
-  if (false) {
+  if (b) {
   }
   const n = ebible_class_new();
   let o = ebible_class_old();
