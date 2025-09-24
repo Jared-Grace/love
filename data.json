@@ -5042,7 +5042,8 @@
    "app_reply_main",
    "js_declare_single",
    "string_starts_with_not",
-   "string_skip_while"
+   "string_skip_while",
+   "string_trim_right"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5103,7 +5104,8 @@
    "string_padded_is",
    "string_split_semicolon_space",
    "string_skip_while",
-   "string_starts_with_space"
+   "string_starts_with_space",
+   "string_trim_right"
   ],
   "a": [
    "string_suffix_without",
@@ -10867,7 +10869,8 @@
    "string_prefix_without",
    "string_skip",
    "ebible_chapter_code_to_name",
-   "string_skip_while"
+   "string_skip_while",
+   "string_trim_right"
   ],
   "startsWith": [
    "string_starts_with"
@@ -12779,7 +12782,8 @@
    "list_any_starts_with",
    "list_filter_starts_with_any",
    "list_find_starts_with",
-   "string_skip_while"
+   "string_skip_while",
+   "string_trim_right"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14852,7 +14856,8 @@
    "js_code_dot"
   ],
   "lambda$s": [
-   "string_skip_while"
+   "string_skip_while",
+   "string_trim_right"
   ],
   "string_starts_with_dot": [
    "sandbox"
@@ -14863,6 +14868,9 @@
   ],
   "sw2": [
    "string_starts_with_space"
+  ],
+  "string_trim_right": [
+   "string_trim_right"
   ]
  },
  "functions": {
@@ -28541,6 +28549,17 @@
     "string_starts_with_space",
     "s",
     "sw2"
+   ]
+  },
+  "string_trim_right": {
+   "async": false,
+   "identifiers": [
+    "string_skip",
+    "not",
+    "string_trim_right",
+    "lambda$s",
+    "s",
+    "any"
    ]
   }
  },
