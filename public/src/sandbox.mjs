@@ -1,3 +1,4 @@
+import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
 import { not } from "./not.mjs";
@@ -48,7 +49,9 @@ export async function sandbox() {
   if (not(e)) {
     await function_new(f_name);
   }
-  async function lambda3(ast) {}
-  let output = await function_transform(f_name2, lambda3);
+  async function lambda3(ast) {
+    let body_block = js_declaration_single_block_body(ast2);
+  }
+  let output = await function_transform(f_name, lambda3);
   return verse_references;
 }
