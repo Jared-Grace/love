@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
 import { string_skip_while } from "./string_skip_while.mjs";
 import { string_starts_with_digit } from "./string_starts_with_digit.mjs";
@@ -12,6 +13,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let fns = [string_starts_with_digit, string_starts_with_dot];
+  each(list, function lambda(item) {});
   function lambda2(item2) {
     item2 = string_skip_while(string_starts_with_digit, item2);
     return item2;
