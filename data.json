@@ -7134,7 +7134,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "firebase_storage_exists",
-   "file_exists"
+   "file_exists",
+   "sandbox"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -21874,6 +21875,7 @@
     "mapped2",
     "verse_references",
     "f_name",
+    "exists",
     "e",
     "lambda3",
     "ast",
