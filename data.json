@@ -5566,7 +5566,8 @@
    "html_style_merge",
    "html_style_assign",
    "each_pair_async",
-   "ebible_version_books"
+   "ebible_version_books",
+   "ebible_verse"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -11617,7 +11618,8 @@
    "firebase_storage_download_ebible",
    "list_remove_property",
    "ebible_version_books",
-   "sandbox"
+   "sandbox",
+   "ebible_verse"
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
@@ -13109,7 +13111,8 @@
    "string_base64_to",
    "firebase_storage_download",
    "buffer_string_to",
-   "ebible_version_books"
+   "ebible_version_books",
+   "ebible_verse"
   ],
   "window": [
    "browser_is"
@@ -13313,7 +13316,8 @@
   ],
   "verse": [
    "app_reply_main",
-   "ebible_verses_upload"
+   "ebible_verses_upload",
+   "ebible_verse"
   ],
   "preview_refresh": [
    "app_reply_main"
@@ -14360,7 +14364,8 @@
   ],
   "ebible_verse_download": [
    "app_reply_main",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "ebible_verse"
   ],
   "reference": [
    "app_reply_main"
@@ -26456,6 +26461,8 @@
   "ebible_verse": {
    "async": true,
    "identifiers": [
+    "ebible_verse_download",
+    "browser_is",
     "list_find_property",
     "ebible_verses",
     "marker",
@@ -26463,6 +26470,9 @@
     "bible_folder",
     "chapter_code",
     "verse_number",
+    "b",
+    "verse",
+    "en",
     "verses",
     "result"
    ]
