@@ -19,8 +19,8 @@ export async function sandbox() {
       each(fns, lambda);
       return item2;
     }
-    let mapped = list_map(split, lambda2);
   }
+  let mapped = list_map(split, lambda2);
   function lambda2(item2) {
     item2 = string_skip_while(string_starts_with_dot, item2);
     return item2;
