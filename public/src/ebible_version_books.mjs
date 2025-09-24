@@ -11,6 +11,7 @@ export async function ebible_version_books(bible_folder) {
   if (b) {
     let file_name2 = ebible_version_books_upload_name();
     let { books } = await firebase_storage_download_ebible(en, file_name2);
+    return books;
   }
   const n = ebible_class_new();
   let o = ebible_class_old();
