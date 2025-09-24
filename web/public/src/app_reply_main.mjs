@@ -60,9 +60,8 @@ export async function app_reply_main() {
   async function verse_random_get() {
     let encouragement = bible_verses_encouragement();
     let r = list_random_item(encouragement);
-    let list = await ebible_references_parse_lines([en], [r]);
-    let verse = await ebible_verse(en, chapter_code, verse_number);
-    let v = [verse];
+    let verses = await ebible_references_parse_lines([en], [r]);
+    let v = [verses];
     return v;
   }
   function lambda6(event) {
