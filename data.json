@@ -2206,7 +2206,8 @@
   "d",
   "p",
   "sb",
-  "s return"
+  "s return",
+  "is js_statement_return_empty"
  ],
  "marker_current": "1",
  "function_current": "bible_verses_encouragement",
