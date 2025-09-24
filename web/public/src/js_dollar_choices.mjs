@@ -1,3 +1,4 @@
+import { js_dollar_ib } from "./js_dollar_ib.mjs";
 import { js_dollar_l } from "./js_dollar_l.mjs";
 import { js_dollar_ir } from "./js_dollar_ir.mjs";
 import { js_dollar_ien } from "./js_dollar_ien.mjs";
@@ -66,6 +67,10 @@ export function js_dollar_choices() {
     {
       name: "l",
       fn: js_dollar_l,
+    },
+    {
+      name: "ib",
+      fn: js_dollar_ib,
     },
   ];
   return choices;
