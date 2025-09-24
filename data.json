@@ -2196,7 +2196,8 @@
   "c string_starts_with_space string_ends_with_space",
   "s z",
   "o sb",
-  "sb"
+  "sb",
+  "s book"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
