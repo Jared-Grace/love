@@ -183,7 +183,8 @@
   "evs": "ebible_verses",
   "ev": "ebible_verse",
   "flo": "file_open",
-  "lst": "list_set"
+  "lst": "list_set",
+  "ssk": "string_skip"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2184,7 +2185,8 @@
   "s starts",
   "string_starts_with_digit tt",
   "string_starts_with_digit 5t",
-  "as skip"
+  "as skip",
+  "a ssk string_skip"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
