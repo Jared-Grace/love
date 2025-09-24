@@ -2295,7 +2295,8 @@
    "ebible_index_flat",
    "each_range_from",
    "object_merge_generic",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3170,7 +3171,8 @@
    "ebible_chapters_each_verses_list",
    "app_new_step_2",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3272,7 +3274,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3437,7 +3440,8 @@
    "sandbox_4_a",
    "function_list_generate",
    "app_reply_main",
-   "sandbox"
+   "sandbox",
+   "ebible_references_parse_lines"
   ],
   "v": [
    "data_identifiers_file",
@@ -4243,7 +4247,8 @@
    "retry",
    "file_temp",
    "folder_user_combine",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "separator": [
    "watch",
@@ -4475,7 +4480,8 @@
    "marker_next_declare_single_init_elements",
    "object_property_get_name",
    "object_merge_generic",
-   "ebible_books_to_chapter_codes"
+   "ebible_books_to_chapter_codes",
+   "ebible_references_parse_lines"
   ],
   "data_save": [
    "data_file_update",
@@ -4599,7 +4605,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4905,7 +4912,8 @@
    "ebible_versions_download",
    "http",
    "retry",
-   "function_list_generate"
+   "function_list_generate",
+   "ebible_references_parse_lines"
   ],
   "value2": [
    "error_attention_set",
@@ -5703,7 +5711,8 @@
    "html_parse_href_text",
    "urdu_allah_to_god",
    "sandbox_2",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "ebible_references_parse_lines"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -6064,7 +6073,8 @@
    "firebase_storage_download_json",
    "ebible_verse_download",
    "firebase_storage_download_ebible",
-   "list_set"
+   "list_set",
+   "ebible_references_parse_lines"
   ],
   "lists_get": [
    "each_multiple",
@@ -6086,7 +6096,8 @@
    "app_reply_main",
    "each_multiple_async",
    "list_map_first",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "each_multiple": [
    "each_multiple",
@@ -6111,7 +6122,8 @@
    "list_find_property",
    "js_dollar_a",
    "each_multiple_async",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "items": [
    "each_multiple",
@@ -6225,7 +6237,8 @@
    "js_dollar_ie",
    "js_identifier_replace",
    "js_assign_combine",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "left": [
    "equal",
@@ -6294,7 +6307,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "Error": [
    "error",
@@ -6504,7 +6518,8 @@
    "list_second",
    "list_first_second_generic",
    "string_split_dash",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "list_to": [
    "functions_combine",
@@ -6555,7 +6570,8 @@
    "list_map_unordered_async",
    "marker_down_choices",
    "data_files_update",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -6731,7 +6747,8 @@
    "app_reply_main",
    "sandbox_2",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "split": [
    "functions_combine_name",
@@ -6836,7 +6853,8 @@
    "range_from",
    "sandbox_2",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -7306,7 +7324,8 @@
    "marker_param_add",
    "function_transform_marker_specified",
    "ebible_index_flat",
-   "retry"
+   "retry",
+   "ebible_references_parse_lines"
   ],
   "function_dependencies": [
    "function_dependencies",
@@ -7347,7 +7366,8 @@
    "ebible_verses",
    "ebible_index_flat",
    "retry",
-   "ebible_books_to_chapter_codes"
+   "ebible_books_to_chapter_codes",
+   "ebible_references_parse_lines"
   ],
   "node": [
    "function_dependencies",
@@ -7434,7 +7454,8 @@
    "list_map_split_comma",
    "list_map_whitespace_normalize",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -8617,7 +8638,8 @@
    "app_replace_rule_set",
    "js_dollar_x",
    "list_next_try",
-   "list_random_item"
+   "list_random_item",
+   "ebible_references_parse_lines"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -8630,7 +8652,8 @@
    "marker_index",
    "marker_leave",
    "app_replace_rule_parse",
-   "list_index_of_delta_outside"
+   "list_index_of_delta_outside",
+   "ebible_references_parse_lines"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -9485,7 +9508,8 @@
    "list_find_property",
    "app_reply_main",
    "list_remove_property",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "nameds": [
    "js_declaration_single"
@@ -9618,7 +9642,8 @@
   ],
   "list_first_second": [
    "js_dollar",
-   "list_first_second"
+   "list_first_second",
+   "ebible_references_parse_lines"
   ],
   "list_skip": [
    "js_dollar",
@@ -9632,7 +9657,8 @@
    "js_dollar_r",
    "list_first_second",
    "list_second",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "string_empty_not_is": [
    "js_dollar",
@@ -9891,7 +9917,8 @@
    "app_replace_home",
    "js_expand_generic",
    "app_reply_main",
-   "promise_wrap"
+   "promise_wrap",
+   "ebible_references_parse_lines"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -9909,7 +9936,8 @@
    "js_identifier_defineds",
    "app_replace_rule_set",
    "sleep",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -10157,7 +10185,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "ebible_references_parse_lines"
   ],
   "fds": [
    "js_outside_move"
@@ -10216,7 +10245,8 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "last": [
    "js_return_name",
@@ -10250,7 +10280,8 @@
   "list_multiple_is": [
    "js_statement_call_get",
    "list_multiple_is",
-   "list_first_second_generic"
+   "list_first_second_generic",
+   "ebible_references_parse_lines"
   ],
   "js_statement_call_get": [
    "js_statement_call_get",
@@ -10544,7 +10575,8 @@
    "list_size_1_assert",
    "marker_first",
    "string_to",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "ebible_references_parse_lines"
   ],
   "skipped": [
    "list_skip",
@@ -11246,7 +11278,8 @@
    "function_aliases_restore"
   ],
   "m": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "ebible_references_parse_lines"
   ],
   "mr": [
    "function_aliases_restore"
@@ -12186,7 +12219,8 @@
   ],
   "split2": [
    "list_map_split_space",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "list_take": [
    "list_take",
@@ -12233,7 +12267,8 @@
    "ebible_firebase_folder"
   ],
   "lines": [
-   "function_transform_marker_specified"
+   "function_transform_marker_specified",
+   "ebible_references_parse_lines"
   ],
   "html_p": [
    "html_p",
@@ -13326,7 +13361,8 @@
    "whitespace_normalize"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "typed": [
    "app_reply_main",
@@ -13639,7 +13675,8 @@
    "ebible_chapters_each_verses_check_with",
    "ebible_chapters_each_verses_list",
    "bible_verses_encouragement_generate",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "unzip": [
    "unzip",
@@ -13775,7 +13812,8 @@
    "ebible_chapter_code_to_book",
    "ebible_index",
    "app_reply_main",
-   "ebible_books_to_chapter_codes"
+   "ebible_books_to_chapter_codes",
+   "ebible_references_parse_lines"
   ],
   "string_take": [
    "string_take",
@@ -13793,7 +13831,8 @@
    "app_reply_main",
    "ebible_books_to_chapter_codes",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "html_parse_read": [
    "html_parse_read",
@@ -13809,7 +13848,8 @@
    "ebible_version_books_upload",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "html_parse_find_list_to": [
    "html_parse_descendants_classes",
@@ -13915,7 +13955,8 @@
    "ebible_chapter_code_to_name",
    "ebible_chapters_each_verses_check",
    "ebible_chapters_each_verses_list",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -13973,7 +14014,8 @@
    "ebible_version_verses",
    "ebible_index",
    "app_reply_main",
-   "ebible_books_to_chapter_codes"
+   "ebible_books_to_chapter_codes",
+   "ebible_references_parse_lines"
   ],
   "list_adder_multiple_async": [
    "list_adder_multiple_async",
@@ -14051,7 +14093,8 @@
    "ebible_verse_download",
    "ebible_verse_new",
    "string_pad_space",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "ebible_verse": [
    "ebible_verse"
@@ -14082,7 +14125,8 @@
    "sandbox_2",
    "ebible_chapters_each_verses_check",
    "ebible_chapters_each_verses_list",
-   "ebible_verse"
+   "ebible_verse",
+   "ebible_references_parse_lines"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -14252,7 +14296,8 @@
    "ebible_languages",
    "ebible_references_parse_god_created_man_why",
    "bible_verses_encouragement_generate",
-   "sandbox"
+   "sandbox",
+   "ebible_references_parse_lines"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -14422,15 +14467,18 @@
   "verse_references": [
    "list_filter_starts_with_any",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "list_filter_starts_with_any": [
    "list_filter_starts_with_any",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "ebible_references_parse_lines"
   ],
   "list_map_prefix_without_any": [
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "ebible_references_parse_lines"
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
@@ -14448,16 +14496,19 @@
   "mapped4": [
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_map_first"
+   "list_map_first",
+   "ebible_references_parse_lines"
   ],
   "list_map_string_empty_not_is": [
    "list_map_string_empty_not_is"
   ],
   "list_map_filter_string_empty_not_is": [
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "ebible_references_parse_lines"
   ],
   "list_map_prefix_any": [
-   "list_map_prefix_any"
+   "list_map_prefix_any",
+   "ebible_references_parse_lines"
   ],
   "lambda$a$b": [
    "each_pair",
@@ -14472,10 +14523,12 @@
    "each_range_from"
   ],
   "each_range_from_async": [
-   "each_range_from_async"
+   "each_range_from_async",
+   "ebible_references_parse_lines"
   ],
   "number_pad": [
-   "number_pad"
+   "number_pad",
+   "ebible_references_parse_lines"
   ],
   "num": [
    "number_pad"
@@ -14487,7 +14540,8 @@
    "number_pad"
   ],
   "each_pair_async": [
-   "each_pair_async"
+   "each_pair_async",
+   "ebible_references_parse_lines"
   ],
   "each_multiple_async": [
    "each_pair_async",
@@ -14510,37 +14564,46 @@
   "bible_folders": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why"
   ],
   "string_split_dash": [
-   "string_split_dash"
+   "string_split_dash",
+   "ebible_references_parse_lines"
   ],
   "string_split_colon": [
-   "string_split_colon"
+   "string_split_colon",
+   "ebible_references_parse_lines"
   ],
   "list_map_first": [
-   "list_map_first"
+   "list_map_first",
+   "ebible_references_parse_lines"
   ],
   "list_map_split_space": [
-   "list_map_split_space"
+   "list_map_split_space",
+   "ebible_references_parse_lines"
   ],
   "books_all": [
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "mapped3": [
    "list_map_split_space",
    "list_map_split_comma",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "ebible_references_parse_lines"
   ],
   "book_name": [
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_references_parse_lines"
   ],
   "chapter_verses": [
-   "string_split_colon"
+   "string_split_colon",
+   "ebible_references_parse_lines"
   ],
   "j": [
    "list_empty_is_assert"
@@ -14862,11 +14925,36 @@
   "ebible_references_parse_lines": [
    "ebible_references_parse",
    "app_reply_main",
-   "sandbox"
+   "sandbox",
+   "ebible_references_parse_lines"
   ],
   "encouragement": [
    "bible_verses_encouragement",
    "app_reply_main"
+  ],
+  "book_names": [
+   "ebible_references_parse_lines"
+  ],
+  "chapter_verses_list": [
+   "ebible_references_parse_lines"
+  ],
+  "pad_count": [
+   "ebible_references_parse_lines"
+  ],
+  "chapter_padded": [
+   "ebible_references_parse_lines"
+  ],
+  "verse_range": [
+   "ebible_references_parse_lines"
+  ],
+  "verse_start": [
+   "ebible_references_parse_lines"
+  ],
+  "verse_end": [
+   "ebible_references_parse_lines"
+  ],
+  "book2": [
+   "ebible_references_parse_lines"
   ]
  },
  "functions": {
@@ -28569,6 +28657,83 @@
     "code",
     "expression",
     "output"
+   ]
+  },
+  "ebible_references_parse_lines": {
+   "async": true,
+   "identifiers": [
+    "list_adder_async",
+    "each_pair_async",
+    "each_range_from_async",
+    "each",
+    "list_empty_not_is",
+    "list_filter_property",
+    "string_to",
+    "list_get",
+    "list_index_of",
+    "list_second",
+    "list_multiple_is",
+    "list_first",
+    "string_split_dash",
+    "number_pad",
+    "equal",
+    "list_first_second",
+    "string_split_colon",
+    "object_property_get",
+    "list_find_property",
+    "list_map_first",
+    "list_map_filter_string_empty_not_is",
+    "list_map_split_space",
+    "list_map_prefix_without_any",
+    "list_map_prefix_any",
+    "list_filter_starts_with_any",
+    "list_map_property",
+    "ebible_version_books",
+    "list_map_unordered_async",
+    "ebible_folder_english",
+    "ebible_references_parse_lines",
+    "bible_folders",
+    "lines",
+    "bible_folder",
+    "books_all",
+    "books",
+    "mapped",
+    "verse_references",
+    "book_names",
+    "mapped2",
+    "mapped3",
+    "mapped4",
+    "chapter_verses_list",
+    "lambda2",
+    "la",
+    "lambda",
+    "book_name",
+    "chapter_verses",
+    "book",
+    "book_code",
+    "split2",
+    "first",
+    "second",
+    "pad_count",
+    "chapter_padded",
+    "chapter_code",
+    "verse_range",
+    "verse_start",
+    "verse_end",
+    "m",
+    "index",
+    "lambda5",
+    "verses",
+    "book2",
+    "text2",
+    "lambda4",
+    "verse_number",
+    "result",
+    "ne",
+    "lambda3",
+    "item",
+    "text",
+    "list"
    ]
   }
  },
