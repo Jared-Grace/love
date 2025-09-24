@@ -1,4 +1,4 @@
-import { list_adder } from "./list_adder.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -54,8 +54,7 @@ export async function sandbox() {
   async function lambda3(ast) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
-    function lambda4(la) {}
-    let list = list_adder(lambda4);
+    list_add(list, item);
   }
   let output = await function_transform(f_name, lambda3);
   return verse_references;
