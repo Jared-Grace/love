@@ -7924,7 +7924,8 @@
    "marker_screen_add",
    "js_dollar_new",
    "function_new_js_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "sandbox"
   ],
   "code_declaration": [
    "function_new",
@@ -8194,7 +8195,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "sandbox"
   ],
   "function_read": [
    "function_read"
@@ -21815,6 +21817,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "function_new",
     "not",
     "function_exists",
     "ebible_folder_english",
@@ -21849,7 +21852,8 @@
     "mapped2",
     "verse_references",
     "f_name",
-    "e"
+    "e",
+    "f_name2"
    ],
    "async": true
   },
