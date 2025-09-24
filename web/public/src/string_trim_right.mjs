@@ -1,3 +1,4 @@
+import { string_size } from "./string_size.mjs";
 import { string_take } from "./string_take.mjs";
 import { marker } from "./marker.mjs";
 import { not } from "./not.mjs";
@@ -8,7 +9,7 @@ export function string_trim_right(lambda$s, s) {
     if (not(any)) {
       break;
     }
-    ssz;
+    let v = string_size(s2);
     s = string_take(s);
   }
   return s;
