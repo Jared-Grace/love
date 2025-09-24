@@ -5711,8 +5711,7 @@
    "html_parse_href_text",
    "urdu_allah_to_god",
    "sandbox_2",
-   "ebible_verse_new",
-   "ebible_references_parse_lines"
+   "ebible_verse_new"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -28730,7 +28729,6 @@
     "lambda4",
     "verse_number",
     "result",
-    "text",
     "list"
    ]
   },
