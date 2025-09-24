@@ -14523,8 +14523,7 @@
   "bible_folders": [
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
-   "sandbox_4_a",
-   "app_reply_main"
+   "sandbox_4_a"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -25216,7 +25215,6 @@
     "typed",
     "encouragement",
     "list",
-    "bible_folders",
     "lines",
     "chapter_code",
     "verse_number",
