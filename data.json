@@ -13121,7 +13121,8 @@
    "firebase_storage_download",
    "buffer_string_to",
    "ebible_version_books",
-   "ebible_verse"
+   "ebible_verse",
+   "js_dollar_ib"
   ],
   "window": [
    "browser_is"
@@ -14105,8 +14106,7 @@
   ],
   "ebible_verse": [
    "ebible_verse",
-   "ebible_references_parse_lines",
-   "js_dollar_ib"
+   "ebible_references_parse_lines"
   ],
   "list_index_of_last": [
    "list_index_of_last",
@@ -28752,10 +28752,10 @@
   "js_dollar_ib": {
    "async": true,
    "identifiers": [
-    "ebible_verse",
     "object_property_set",
     "js_call_new_expression",
     "js_dollar_i",
+    "browser_is",
     "js_dollar_ib",
     "stack1",
     "ast",
