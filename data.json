@@ -3437,7 +3437,8 @@
    "list_set",
    "sandbox_4_a",
    "function_list_generate",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "v": [
    "data_identifiers_file",
@@ -7520,7 +7521,8 @@
    "integer_random",
    "js_statement_return_empty_add",
    "range_from",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "formatted": [
    "function_format",
@@ -11601,7 +11603,8 @@
    "app_reply_main",
    "firebase_storage_download_ebible",
    "list_remove_property",
-   "ebible_version_books"
+   "ebible_version_books",
+   "sandbox"
   ],
   "marker_if_test_replace": [
    "marker_if_test_replace"
@@ -14263,7 +14266,8 @@
    "ebible_folder_english",
    "ebible_languages",
    "ebible_references_parse_god_created_man_why",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "sandbox"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -14886,7 +14890,8 @@
   ],
   "ebible_references_parse_lines": [
    "ebible_references_parse",
-   "app_reply_main"
+   "app_reply_main",
+   "sandbox"
   ],
   "encouragement": [
    "bible_verses_encouragement",
@@ -21779,10 +21784,15 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_references_parse_lines",
+    "ebible_folder_english",
     "bible_verses_encouragement",
     "marker",
     "sandbox",
-    "v"
+    "v",
+    "en",
+    "r",
+    "list"
    ],
    "async": true
   },
