@@ -2074,7 +2074,6 @@
   "s file,ex",
   "s del,fil",
   "fws file_delete if_exists",
-  "u fe",
   "as write",
   "a flw file_write",
   "s ebible,te",
@@ -2203,7 +2202,8 @@
   "p",
   "sb",
   "s list",
-  "s function,ex"
+  "s function,ex",
+  "u fe"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
