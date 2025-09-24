@@ -14879,6 +14879,9 @@
   ],
   "ebible_references_parse_lines": [
    "ebible_references_parse"
+  ],
+  "wi": [
+   "ebible_version_books"
   ]
  },
  "functions": {
@@ -26442,6 +26445,7 @@
     "ebible_class_new",
     "ebible_version_books",
     "bible_folder",
+    "wi",
     "n",
     "o",
     "v",
