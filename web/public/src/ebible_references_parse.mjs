@@ -36,11 +36,11 @@ export async function ebible_references_parse(bible_folders, file_path) {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   let bible_folder = ebible_folder_english();
-  let books = await ebible_version_books(bible_folder);
   let books_all = await list_map_unordered_async(
     bible_folders,
     ebible_version_books,
   );
+  let books = await ebible_version_books(bible_folder);
   let mapped = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped, split);
   let book_names = list_map_prefix_any(verse_references, mapped);
