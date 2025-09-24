@@ -5033,8 +5033,7 @@
    "js_calls_to_each",
    "app_reply_main",
    "js_declare_single",
-   "string_starts_with_not",
-   "sandbox"
+   "string_starts_with_not"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -10855,8 +10854,7 @@
   "string_skip": [
    "string_prefix_without",
    "string_skip",
-   "ebible_chapter_code_to_name",
-   "sandbox"
+   "ebible_chapter_code_to_name"
   ],
   "startsWith": [
    "string_starts_with"
@@ -12766,8 +12764,7 @@
    "app_replace_rule_set",
    "list_any_starts_with",
    "list_filter_starts_with_any",
-   "list_find_starts_with",
-   "sandbox"
+   "list_find_starts_with"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14831,6 +14828,9 @@
    "digits"
   ],
   "string_starts_with_digit": [
+   "sandbox"
+  ],
+  "string_skip_while": [
    "sandbox"
   ]
  },
@@ -21723,8 +21723,7 @@
   },
   "sandbox": {
    "identifiers": [
-    "string_skip",
-    "not",
+    "string_skip_while",
     "string_starts_with_digit",
     "list_map",
     "string_split_newline",
@@ -21738,7 +21737,6 @@
     "lambda2",
     "item2",
     "predicate",
-    "any",
     "mapped"
    ],
    "async": true
