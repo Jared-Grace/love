@@ -2,7 +2,6 @@ import { ebible_verse } from "./ebible_verse.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_pair_async } from "./each_pair_async.mjs";
 import { each_range_from_async } from "./each_range_from_async.mjs";
-import { each } from "./each.mjs";
 import { string_to } from "./string_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_index_of } from "./list_index_of.mjs";
