@@ -154,8 +154,8 @@ export async function app_reply_main() {
   async function preview_refresh() {
     let verses_list_first = list_first(verses_list);
     let reference = object_property_get(verses_list_first, "reference");
-    function lambda10(item4) {}
-    each(list2, lambda10);
+    if (false) {
+    }
     function lambda9(item3) {}
     each(list, lambda9);
     let chapter_code2 = object_property_get(verse, "chapter_code");
