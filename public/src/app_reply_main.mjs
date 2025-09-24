@@ -61,10 +61,10 @@ export async function app_reply_main() {
   async function verse_random_reset() {
     let encouragement = bible_verses_encouragement();
     let reference = list_random_item(encouragement);
-    let v = await ebible_references_parse_lines([en], [reference]);
+    let verses = await ebible_references_parse_lines([en], [reference]);
     verses_list = [
       {
-        verses: v,
+        verses,
         reference,
       },
     ];
@@ -95,18 +95,19 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(item2, "bible_folder");
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
-      let verses_first = list_first(verses_list);
+      let verses_list_first = list_first(verses_list);
+      let verses2 = object_property_get(verses_list_first, "verses");
       async function lambda8(verse) {
         let chapter_code2 = object_property_get(verse, "chapter_code");
         let verse_number2 = object_property_get(verse, "verse_number");
-        let u = await ebible_verse_download(
+        let d = await ebible_verse_download(
           bible_folder2,
           chapter_code2,
           verse_number2,
         );
-        return u;
+        return d;
       }
-      let us = await list_map_unordered_async(verses_first, lambda8);
+      let us = await list_map_unordered_async(verses_list_first, lambda8);
       list_add_first(verses_list, us);
       list_add_first(languages_chosens, language_code);
       preview_refresh();
