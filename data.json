@@ -4264,7 +4264,8 @@
    "function_read",
    "html_parse_read",
    "ebible_references_parse",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "js_parse": [
    "file_js_parse",
@@ -6359,8 +6360,7 @@
    "function_open",
    "app_html_open",
    "html_update_generic",
-   "ebible_verse",
-   "sandbox"
+   "ebible_verse"
   ],
   "terminal": [
    "file_open"
@@ -6390,7 +6390,8 @@
    "file_write_generic",
    "ebible_references_parse",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "writeFile": [
    "file_overwrite",
@@ -14805,6 +14806,9 @@
   ],
   "string_split_semicolon_space": [
    "string_split_semicolon_space"
+  ],
+  "file_path2": [
+   "sandbox"
   ]
  },
  "functions": {
@@ -21696,11 +21700,13 @@
   },
   "sandbox": {
    "identifiers": [
-    "file_open",
+    "file_read",
     "folder_user_docs_path",
     "marker",
     "sandbox",
-    "file_path"
+    "file_path",
+    "contents",
+    "file_path2"
    ],
    "async": true
   },
