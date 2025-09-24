@@ -14974,6 +14974,9 @@
   ],
   "verse_random_reset": [
    "app_reply_main"
+  ],
+  "verses_list": [
+   "app_reply_main"
   ]
  },
  "functions": {
@@ -25291,7 +25294,7 @@
     "file_name",
     "index",
     "books",
-    "verses",
+    "verses_list",
     "verse_random_reset",
     "root",
     "copied",
@@ -25303,6 +25306,7 @@
     "encouragement",
     "reference",
     "v",
+    "verses",
     "lambda6",
     "event",
     "key",
