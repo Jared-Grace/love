@@ -11678,8 +11678,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "app_reply_main"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -25359,7 +25358,6 @@
     "book_name",
     "reference2",
     "squashed",
-    "list2",
     "verse_texts",
     "verse_text",
     "other",
