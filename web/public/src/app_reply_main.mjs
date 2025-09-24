@@ -1,4 +1,3 @@
-import { each_async } from "./each_async.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -42,6 +41,7 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { marker } from "./marker.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function app_reply_main() {
   let en = ebible_folder_english();
   let languages = ebible_languages();
@@ -99,9 +99,10 @@ export async function app_reply_main() {
           chapter_code2,
           verse_number2,
         );
-        list_add_first(verses, u);
+        return u;
       }
-      await each_async(list, lambda8);
+      let us = await list_map_unordered_async(verses_first, lambda8);
+      list_add_first(verses, us);
       list_add_first(languages_chosens, language_code);
       preview_refresh();
     }
