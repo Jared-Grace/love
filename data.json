@@ -5506,8 +5506,7 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "sandbox_4_a"
   ],
   "f_paths": [
    "data_files_update",
@@ -10186,8 +10185,7 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused",
-   "ebible_references_parse_lines"
+   "js_imports_unused"
   ],
   "fds": [
    "js_outside_move"
@@ -14127,8 +14125,7 @@
    "sandbox_2",
    "ebible_chapters_each_verses_check",
    "ebible_chapters_each_verses_list",
-   "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_verse"
   ],
   "merged": [
    "firebase_upload_generic"
@@ -28664,14 +28661,12 @@
   "ebible_references_parse_lines": {
    "async": true,
    "identifiers": [
-    "each_async",
     "ebible_verse",
     "list_adder_async",
     "each_pair_async",
     "each_range_from_async",
     "each",
     "list_empty_not_is",
-    "list_filter_property",
     "string_to",
     "list_get",
     "list_index_of",
@@ -28731,9 +28726,8 @@
     "text2",
     "lambda4",
     "verse_number",
-    "result",
-    "verses",
     "ne",
+    "result",
     "lambda3",
     "item",
     "text",
