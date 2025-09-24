@@ -1,8 +1,8 @@
 import { string_skip } from "./string_skip.mjs";
 import { not } from "./not.mjs";
-export function string_skip_while(predicate, s) {
+export function string_skip_while(lambda$s, s) {
   while (true) {
-    let any = predicate(s);
+    let any = lambda$s(s);
     if (not(any)) {
       break;
     }
