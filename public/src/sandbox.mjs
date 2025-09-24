@@ -9,7 +9,8 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let digits = "1234567890";
   function lambda(item) {
-    let sw = string_starts_with(s, prefix);
+    let sw = string_starts_with(s, item);
+    return sw;
   }
   let any = list_any(list, lambda);
 }
