@@ -6720,7 +6720,8 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "sandbox",
-   "string_split_empty"
+   "string_split_empty",
+   "digits"
   ],
   "results": [
    "functions_combine_name"
@@ -12162,8 +12163,7 @@
    "ebible_references_parse",
    "list_map_split_space",
    "ebible_verse",
-   "sandbox_4_a",
-   "digits"
+   "sandbox_4_a"
   ],
   "list_take": [
    "list_take",
@@ -28485,7 +28485,7 @@
     "string_split_empty",
     "digits",
     "d",
-    "split2",
+    "split",
     "s"
    ]
   }
