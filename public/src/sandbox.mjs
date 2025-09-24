@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
@@ -34,6 +35,7 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map(split, lambda2);
+  let bible_folder = ebible_folder_english();
   let books = await ebible_version_books(bible_folder);
   let mapped2 = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(mapped2, split);
