@@ -2575,7 +2575,8 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic"
+   "file_write_generic",
+   "sandbox"
   ],
   "ast": [
    "data_identifiers_file",
@@ -6359,7 +6360,8 @@
    "function_open",
    "app_html_open",
    "html_update_generic",
-   "ebible_verse"
+   "ebible_verse",
+   "sandbox"
   ],
   "terminal": [
    "file_open"
@@ -21695,10 +21697,12 @@
   },
   "sandbox": {
    "identifiers": [
+    "file_open",
     "folder_user_docs_path",
     "marker",
     "sandbox",
-    "file_path"
+    "file_path",
+    "f_path"
    ],
    "async": true
   },
