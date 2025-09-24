@@ -45,12 +45,12 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
       let book = list_find_property(books, "text", book_name);
       let book_code = object_property_get(book, "book_code");
       let split2 = string_split_colon(chapter_verses);
-      let { first, second } = list_first_second(split2);
+      let { first: chapter_name, second } = list_first_second(split2);
       let pad_count = 2;
       if (equal(book_code, "PSA")) {
         pad_count = 3;
       }
-      let chapter_padded = number_pad(first, pad_count);
+      let chapter_padded = number_pad(chapter_name, pad_count);
       let chapter_code = book_code + chapter_padded;
       let verse_range = string_split_dash(second);
       let verse_start = list_first(verse_range);
@@ -74,6 +74,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
           );
           let to2 = object_merge(result, {
             book_name,
+            chapter_name,
           });
           la(result);
         }
