@@ -1,4 +1,3 @@
-import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { string_starts_with_space } from "./string_starts_with_space.mjs";
 import { each } from "./each.mjs";
 import { string_starts_with_dot } from "./string_starts_with_dot.mjs";
@@ -20,7 +19,6 @@ export async function sandbox() {
     string_starts_with_space,
   ];
   function lambda2(item2) {
-    item2 = whitespace_normalize(item2);
     each(fns, lambda);
     function lambda(fn) {
       item2 = string_skip_while(fn, item2);
