@@ -2202,7 +2202,8 @@
   "ebible_references_parse_god_created_man_why",
   "p",
   "sb",
-  "s list"
+  "s list",
+  "s function,ex"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
