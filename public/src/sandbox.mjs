@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_filter_starts_with_any } from "./list_filter_starts_with_any.mjs";
@@ -42,7 +43,7 @@ export async function sandbox() {
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
-  if (false) {
+  if (not(e)) {
   }
   return verse_references;
 }
