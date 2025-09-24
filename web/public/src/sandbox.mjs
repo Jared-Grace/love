@@ -12,6 +12,7 @@ export async function sandbox() {
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);
   function lambda2(item2) {
+    let fn = string_starts_with_digit;
     while (true) {
       let any = string_starts_with_digit(item2);
       if (not(any)) {
