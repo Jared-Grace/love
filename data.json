@@ -14874,7 +14874,8 @@
    "sandbox"
   ],
   "string_starts_with_space": [
-   "string_starts_with_space"
+   "string_starts_with_space",
+   "sandbox"
   ],
   "sw2": [
    "string_starts_with_space",
@@ -21781,6 +21782,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_starts_with_space",
     "whitespace_normalize",
     "string_ends_with_space",
     "string_trim_right",
