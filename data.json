@@ -2145,7 +2145,6 @@
   "a lst list_set",
   "c object_property_set list_set",
   "s normal",
-  "s god",
   "s choice",
   "evu arbnav",
   "an message",
@@ -2209,7 +2208,8 @@
   "sb",
   "bible_verses_encouragement",
   "s without",
-  "o sb"
+  "o sb",
+  "s god"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
