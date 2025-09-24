@@ -9663,8 +9663,7 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "string_padded_is",
-   "string_starts_with_space",
-   "string_ends_with_space"
+   "string_starts_with_space"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -14888,6 +14887,9 @@
    "string_trim_right"
   ],
   "string_ends_with_space": [
+   "string_ends_with_space"
+  ],
+  "string_endss_with": [
    "string_ends_with_space"
   ]
  },
@@ -28588,10 +28590,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "string_starts_with",
     "string_ends_with_space",
     "s",
-    "sw2"
+    "sw2",
+    "string_endss_with"
    ]
   }
  },
