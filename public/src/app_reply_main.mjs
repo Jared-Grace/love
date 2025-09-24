@@ -155,18 +155,18 @@ export async function app_reply_main() {
     let verses_list_first = list_first(verses_list);
     let reference = object_property_get(verses_list_first, "reference");
     if (false) {
+      function lambda9(item3) {}
+      each(list, lambda9);
+      let chapter_code2 = object_property_get(verse, "chapter_code");
+      let book_code = ebible_chapter_code_to_book(chapter_code2);
+      let chapter_name = ebible_chapter_code_to_name(chapter_code2);
+      let book = list_find_property(books, "book_code", book_code);
+      let book_name = object_property_get(book, "text");
+      let verse_number2 = object_property_get(verse, "verse_number");
+      let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
-    function lambda9(item3) {}
-    each(list, lambda9);
-    let chapter_code2 = object_property_get(verse, "chapter_code");
-    let book_code = ebible_chapter_code_to_book(chapter_code2);
-    let chapter_name = ebible_chapter_code_to_name(chapter_code2);
-    let book = list_find_property(books, "book_code", book_code);
-    let book_name = object_property_get(book, "text");
-    let verse_number2 = object_property_get(verse, "verse_number");
     let verses = list_map_property(verses_list, "verses");
     let verse_texts = list_map_property(verses, "text");
-    let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [
