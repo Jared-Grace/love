@@ -14275,7 +14275,8 @@
    "ebible_folder_english",
    "ebible_references_parse",
    "ebible_languages",
-   "ebible_references_parse_god_created_man_why"
+   "ebible_references_parse_god_created_man_why",
+   "sandbox"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -21807,6 +21808,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "ebible_folder_english",
     "list_filter_starts_with_any",
     "list_map_property",
     "ebible_version_books",
@@ -21833,8 +21835,8 @@
     "lambda",
     "fn",
     "mapped",
-    "books",
     "bible_folder",
+    "books",
     "mapped2",
     "verse_references"
    ],
