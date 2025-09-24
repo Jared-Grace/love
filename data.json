@@ -14422,8 +14422,7 @@
    "list_map_prefix_any"
   ],
   "predicate": [
-   "list_find",
-   "sandbox"
+   "list_find"
   ],
   "mapped4": [
    "list_map_string_empty_not_is",
@@ -21738,7 +21737,6 @@
     "file_path",
     "contents",
     "split",
-    "predicate",
     "lambda2",
     "item2",
     "mapped"
