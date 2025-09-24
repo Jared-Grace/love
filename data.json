@@ -2183,7 +2183,8 @@
   "s digit",
   "s starts",
   "string_starts_with_digit tt",
-  "string_starts_with_digit 5t"
+  "string_starts_with_digit 5t",
+  "as skip"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
