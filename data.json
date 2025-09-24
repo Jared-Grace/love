@@ -2187,7 +2187,8 @@
   "a ssk string_skip",
   "sb",
   "s trim",
-  "s dot"
+  "s dot",
+  "s const"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
