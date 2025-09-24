@@ -52,8 +52,10 @@ export async function sandbox() {
   let verse_references = list_filter_starts_with_any(mapped2, mapped);
   let f_name = "bible_verses_encouragement";
   let e = await function_exists(f_name);
+  log({
+    e,
+  });
   if (not(e)) {
-    log("here");
     await function_new(f_name);
   }
   async function lambda3(ast) {
