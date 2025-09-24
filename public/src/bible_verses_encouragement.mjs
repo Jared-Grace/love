@@ -1,7 +1,5 @@
-import { marker } from "./marker.mjs";
 export function bible_verses_encouragement() {
-  marker("1");
-  [
+  let v = [
     "Deuteronomy 31:6",
     "Deuteronomy 31:8",
     "Joshua 1:9",
@@ -31,4 +29,5 @@ export function bible_verses_encouragement() {
     "1 John 4:18",
     "Revelation 1:17",
   ];
+  return v;
 }
