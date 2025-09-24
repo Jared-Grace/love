@@ -1,4 +1,4 @@
-import { string_starts_with } from "./string_starts_with.mjs";
+import { string_suffix_without } from "./string_suffix_without.mjs";
 import { function_open } from "./function_open.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_statement_return_add } from "./js_statement_return_add.mjs";
@@ -11,7 +11,7 @@ import { not } from "./not.mjs";
 import { function_exists } from "./function_exists.mjs";
 export async function function_list_generate(f_generate, list) {
   let f_generate_name = f_generate.name;
-  let sw = string_starts_with(s, prefix);
+  let without = string_suffix_without(s, suffix);
   let { exists } = await function_exists(f_name);
   if (not(exists)) {
     await function_new(f_name);
