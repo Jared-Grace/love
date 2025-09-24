@@ -1998,7 +1998,6 @@
   "a flr file_read",
   "s read",
   "as any",
-  "is list_any_starts_with",
   "c list_any_starts_with list_find_starts_with",
   "r list_find_starts_withis list_map_prefix_without",
   "is list_map_prefix_without",
@@ -2199,7 +2198,8 @@
   "v",
   "s reply",
   "sb",
-  "s starts,any"
+  "s starts,any",
+  "is list_any_starts_with"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
