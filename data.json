@@ -1788,7 +1788,6 @@
   "s vis",
   "c html_style_remove html_remove",
   "r prayer_ending prayer_end",
-  "s clear",
   "c html_style_font_size html_display_none",
   "c html_display_none html_display_block",
   "s dove",
@@ -2205,7 +2204,8 @@
   "s function,ex",
   "u fe",
   "a fe function_exists",
-  "s body"
+  "s body",
+  "s clear"
  ],
  "marker_current": "1",
  "function_current": "sandbox",
