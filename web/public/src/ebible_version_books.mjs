@@ -12,7 +12,10 @@ export async function ebible_version_books(bible_folder) {
   let b = browser_is();
   if (b) {
     let file_name2 = ebible_version_books_upload_name();
-    let { books } = await firebase_storage_download_ebible(en, file_name2);
+    let { books } = await firebase_storage_download_ebible(
+      bible_folder,
+      file_name2,
+    );
     return books;
   }
   const n = ebible_class_new();
