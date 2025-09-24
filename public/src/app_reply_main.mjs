@@ -56,6 +56,7 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
+  let verses_first = null;
   async function verse_random_get() {
     let encouragement = bible_verses_encouragement();
     let r = list_random_item(encouragement);
