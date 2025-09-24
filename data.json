@@ -5099,7 +5099,8 @@
    "string_split_semicolon",
    "string_padded_is",
    "string_split_semicolon_space",
-   "string_skip_while"
+   "string_skip_while",
+   "string_starts_with_space"
   ],
   "a": [
    "string_suffix_without",
@@ -9648,7 +9649,8 @@
    "string_starts_with_not",
    "list_any_starts_with",
    "list_find_starts_with",
-   "string_padded_is"
+   "string_padded_is",
+   "string_starts_with_space"
   ],
   "js_dollar_rt": [
    "js_dollar_rt",
@@ -14852,6 +14854,12 @@
   ],
   "string_starts_with_dot": [
    "sandbox"
+  ],
+  "string_starts_with_space": [
+   "string_starts_with_space"
+  ],
+  "sw2": [
+   "string_starts_with_space"
   ]
  },
  "functions": {
@@ -28520,6 +28528,15 @@
     "lambda$s",
     "s",
     "any"
+   ]
+  },
+  "string_starts_with_space": {
+   "async": false,
+   "identifiers": [
+    "string_starts_with",
+    "string_starts_with_space",
+    "s",
+    "sw2"
    ]
   }
  },
