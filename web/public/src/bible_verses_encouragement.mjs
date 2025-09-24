@@ -1,4 +1,3 @@
-import { marker } from "./marker.mjs";
 export function bible_verses_encouragement() {
   [
     "Deuteronomy 31:6",
