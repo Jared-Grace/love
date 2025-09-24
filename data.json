@@ -4220,7 +4220,8 @@
    "tasks_run",
    "list_join_newline_2",
    "list_join_newline",
-   "string_split_newline"
+   "string_split_newline",
+   "sandbox"
   ],
   "list_join_space": [
    "command_line_node_g",
@@ -5089,7 +5090,8 @@
    "ebible_chapter_code_to_name",
    "string_split_semicolon",
    "string_padded_is",
-   "string_split_semicolon_space"
+   "string_split_semicolon_space",
+   "sandbox"
   ],
   "a": [
    "string_suffix_without",
@@ -6590,7 +6592,8 @@
    "string_split_colon",
    "string_split_dash",
    "string_split_semicolon",
-   "string_split_semicolon_space"
+   "string_split_semicolon_space",
+   "sandbox"
   ],
   "js_parse_expression": [
    "functions_combine",
@@ -12160,7 +12163,8 @@
    "ebible_references_parse",
    "list_map_split_space",
    "ebible_verse",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "sandbox"
   ],
   "list_take": [
    "list_take",
@@ -21717,6 +21721,7 @@
   },
   "sandbox": {
    "identifiers": [
+    "string_split",
     "not",
     "string_starts_with_digit",
     "list_map",
@@ -21731,6 +21736,9 @@
     "lambda2",
     "item2",
     "any",
+    "split2",
+    "s",
+    "separator",
     "mapped"
    ],
    "async": true
