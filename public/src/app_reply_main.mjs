@@ -49,8 +49,8 @@ export async function app_reply_main() {
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
-  let verses = null;
-  verses = await verse_random_reset();
+  let verses_list = null;
+  await verse_random_reset();
   const root = html_document_body();
   let copied = [];
   let languages_chosens = [];
@@ -62,7 +62,7 @@ export async function app_reply_main() {
     let encouragement = bible_verses_encouragement();
     let reference = list_random_item(encouragement);
     let v = await ebible_references_parse_lines([en], [reference]);
-    verses = [
+    verses_list = [
       {
         verses: v,
         reference,
@@ -80,7 +80,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function lambda4() {
-    verses = await verse_random_reset();
+    await verse_random_reset();
     list_empty(copied);
     preview_refresh();
     chosens = [];
@@ -95,7 +95,7 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(item2, "bible_folder");
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
-      let verses_first = list_first(verses);
+      let verses_first = list_first(verses_list);
       async function lambda8(verse) {
         let chapter_code2 = object_property_get(verse, "chapter_code");
         let verse_number2 = object_property_get(verse, "verse_number");
@@ -107,7 +107,7 @@ export async function app_reply_main() {
         return u;
       }
       let us = await list_map_unordered_async(verses_first, lambda8);
-      list_add_first(verses, us);
+      list_add_first(verses_list, us);
       list_add_first(languages_chosens, language_code);
       preview_refresh();
     }
@@ -147,7 +147,7 @@ export async function app_reply_main() {
   preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
-    let verses_first = list_first(verses);
+    let verses_first = list_first(verses_list);
     function lambda9(item3) {}
     each(list, lambda9);
     let chapter_code2 = object_property_get(verse, "chapter_code");
@@ -156,7 +156,7 @@ export async function app_reply_main() {
     let book = list_find_property(books, "book_code", book_code);
     let book_name = object_property_get(book, "text");
     let verse_number2 = object_property_get(verse, "verse_number");
-    let verse_texts = list_map_property(verses, "text");
+    let verse_texts = list_map_property(verses_list, "text");
     let reference = book_name + " " + chapter_name + ":" + verse_number2;
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
