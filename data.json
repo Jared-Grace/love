@@ -2542,8 +2542,7 @@
    "sandbox_4_a",
    "string_starts_with_space",
    "string_trim_right",
-   "string_ends_with_space",
-   "bible_verses_encouragement"
+   "string_ends_with_space"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3690,7 +3689,8 @@
    "ebible_version_books_upload_name",
    "app_new_assign",
    "sandbox_4_a",
-   "string_dot"
+   "string_dot",
+   "bible_verses_encouragement"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -28703,8 +28703,8 @@
   "bible_verses_encouragement": {
    "async": false,
    "identifiers": [
-    "marker",
-    "bible_verses_encouragement"
+    "bible_verses_encouragement",
+    "v"
    ]
   }
  },
