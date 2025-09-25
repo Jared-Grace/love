@@ -16,8 +16,13 @@ export async function messenger_reply() {
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 1000,
   });
+  function lambda() {
+    let v = document.querySelectorAll(unreadSpanSelector);
+    const spans = Array.from(v);
+    return spans;
+  }
+  const span = await page.evaluateHandle(lambda);
   console.log("Found unread span!");
-  const [span] = await page.$x('\\textarea[name="q"]');
   await sleep(100000);
   if (span) {
     console.log("Found unread span!");
