@@ -20,14 +20,9 @@ export async function messenger_reply() {
   await sleep(2000);
   log("here");
   await p.type("test");
+  let s = await page.waitForSelector('div[aria-label="Press Enter to send"]', {
+    timeout: 10000,
+  });
   await sleep(100000);
-  const inputBox = await page.waitForSelector(
-    'div[aria-label="Press Enter to send"]',
-    {
-      timeout: 10000,
-    },
-  );
-  await inputBox.focus();
-  await page.keyboard.type("Hello world!");
-  await page.keyboard.press("Enter");
+  s.click();
 }
