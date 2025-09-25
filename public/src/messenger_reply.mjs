@@ -13,6 +13,7 @@ export async function messenger_reply() {
   const page = await browser.newPage();
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
   const unreadSpanSelector = "//span[contains(text(), 'Unread')]";
+  await sleep(100000);
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
   });
