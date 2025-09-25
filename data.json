@@ -3201,8 +3201,7 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "roman_to_integer",
-   "messenger_reply"
+   "roman_to_integer"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3727,8 +3726,7 @@
    "string_dot",
    "sandbox",
    "roman_to_integer",
-   "messenger_reply_user_data_path",
-   "messenger_reply"
+   "messenger_reply_user_data_path"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5382,7 +5380,8 @@
    "js_property_parse_expression_add",
    "app_new_step_2",
    "function_rename_suffix_add",
-   "string_padded_is"
+   "string_padded_is",
+   "messenger_reply"
   ],
   "f_names": [
    "functions_names",
@@ -7652,8 +7651,7 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic",
-   "messenger_reply"
+   "object_merge_generic"
   ],
   "i": [
    "function_identifier_replace",
@@ -10546,8 +10544,7 @@
   ],
   "Array": [
    "list_is",
-   "list_to",
-   "messenger_reply"
+   "list_to"
   ],
   "isArray": [
    "list_is"
@@ -11821,8 +11818,7 @@
    "html_element",
    "html_document_head",
    "html_document_root",
-   "browser_is",
-   "messenger_reply"
+   "browser_is"
   ],
   "tag_name": [
    "html_element",
@@ -15188,15 +15184,6 @@
    "messenger_reply"
   ],
   "timeout": [
-   "messenger_reply"
-  ],
-  "querySelectorAll": [
-   "messenger_reply"
-  ],
-  "spans": [
-   "messenger_reply"
-  ],
-  "evaluateHandle": [
    "messenger_reply"
   ]
  },
@@ -29017,16 +29004,9 @@
     "unreadSpanSelector",
     "waitForSelector",
     "timeout",
+    "p",
     "$",
-    "lambda",
-    "v",
-    "document",
-    "querySelectorAll",
-    "spans",
-    "Array",
-    "from",
     "span",
-    "evaluateHandle",
     "type",
     "console"
    ]
