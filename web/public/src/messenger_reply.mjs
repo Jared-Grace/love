@@ -17,10 +17,7 @@ export async function messenger_reply() {
     timeout: 1000,
   });
   let p = page.$('textarea[name="q"]');
-  if (span) {
-    await span.type("test");
-  }
-  console.log(span);
+  console.log(p);
   await sleep(100000);
   if (span) {
     console.log("Found unread span!");
