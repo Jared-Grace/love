@@ -2560,7 +2560,8 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "messenger_reply"
+   "messenger_reply",
+   "roman_to_integer"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14995,6 +14996,9 @@
   ],
   "messenger_reply": [
    "messenger_reply"
+  ],
+  "roman_to_integer": [
+   "roman_to_integer"
   ]
  },
  "functions": {
@@ -28795,6 +28799,13 @@
    "identifiers": [
     "marker",
     "messenger_reply"
+   ]
+  },
+  "roman_to_integer": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "roman_to_integer"
    ]
   }
  },
