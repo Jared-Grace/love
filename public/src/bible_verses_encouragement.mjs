@@ -16,7 +16,6 @@ export function bible_verses_encouragement() {
     "Isaiah 43:1",
     "Jeremiah 29:11",
     "Zephaniah 3:17",
-    "Matthew 6:25-34",
     "Matthew 11:28-30",
     "Mark 5:36",
     "John 14:1",
