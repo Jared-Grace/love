@@ -22,4 +22,13 @@ export async function messenger_reply() {
   let p = await page.$(unreadSpanSelector);
   await p.type("test");
   await sleep(100000);
+  const inputBox = await page.waitForSelector(
+    'div[aria-label="Press Enter to send"]',
+    {
+      timeout: 10000,
+    },
+  );
+  await inputBox.focus();
+  await page.keyboard.type("Hello world!");
+  await page.keyboard.press("Enter");
 }
