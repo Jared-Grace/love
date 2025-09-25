@@ -16,7 +16,7 @@ function romanToInt(roman) {
   for (let i = 0; i < roman.length; i++) {
     const v1 = values[roman[i]];
     const v2 = values[roman[i+1]] || 0;
-    total += v1 < v2 ? -v1 : v1;
+    total += v1 < v2 ? -v1 : v1; 
   }  
   return total;
 }
