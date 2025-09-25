@@ -26,6 +26,8 @@ export function js_assign_combine(ast) {
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
+      if (false) {
+      }
     }
     let declaration2 = js_declare_single(next);
     if (null_is(declaration2)) {
