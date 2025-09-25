@@ -12,7 +12,11 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
-  let p = await page.$('span[dir="auto"]');
+  const unreadSpanSelector = 'span[dir="auto"]';
+  await page.waitForSelector(unreadSpanSelector, {
+    timeout: 1000,
+  });
+  let p = await page.$(unreadSpanSelector);
   await p.click();
   await sleep(100000);
   if (span) {
@@ -23,8 +27,4 @@ export async function messenger_reply() {
   }
   await sleep(100000);
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
-  const unreadSpanSelector = 'textarea[name="q"]';
-  await page.waitForSelector(unreadSpanSelector, {
-    timeout: 1000,
-  });
 }
