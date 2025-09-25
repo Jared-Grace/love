@@ -2217,7 +2217,8 @@
   "s squa",
   "p",
   "evu guz",
-  "s message"
+  "s message",
+  "de app_message"
  ],
  "marker_current": "1",
  "function_current": "ebible_version_books",
