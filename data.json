@@ -2220,7 +2220,8 @@
   "de app_message",
   "de app_message_main",
   "n messenger_reply",
-  "s ebible"
+  "s ebible",
+  "ebible_chapter_text guz GEN01"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply",
