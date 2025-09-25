@@ -24,7 +24,7 @@ export async function messenger_reply() {
   const span = await page.evaluateHandle(lambda);
   if (span) {
     console.log("Found unread span!");
-    await span.click();
+    await span.type();
   }
   console.log(span);
   await sleep(100000);
