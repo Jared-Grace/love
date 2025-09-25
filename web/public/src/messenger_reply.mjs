@@ -22,6 +22,10 @@ export async function messenger_reply() {
     return spans;
   }
   const span = await page.evaluateHandle(lambda);
+  if (span) {
+    console.log("Found unread span!");
+    await span.click();
+  }
   console.log(span);
   await sleep(100000);
   if (span) {
