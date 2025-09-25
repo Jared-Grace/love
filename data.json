@@ -10668,8 +10668,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "messenger_reply"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -15174,9 +15173,6 @@
    "messenger_reply"
   ],
   "unreadSpanSelector": [
-   "messenger_reply"
-  ],
-  "span": [
    "messenger_reply"
   ],
   "waitForSelector": [
@@ -29008,9 +29004,7 @@
     "timeout",
     "p",
     "$",
-    "click",
-    "span",
-    "console"
+    "click"
    ]
   },
   "roman_to_integer": {
