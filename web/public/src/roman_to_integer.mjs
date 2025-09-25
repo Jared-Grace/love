@@ -12,7 +12,7 @@ function unicodeToAscii(roman) {
 // Convert ASCII Roman numerals (I,V,X,L,C,D,M) to integer
 function romanToInt(roman) {
   const values = {I:1,V:5,X:10,L:50,C:100,D:500,M:1000};
-  let total = 0;
+  let total = 0; 
   for (let i = 0; i < roman.length; i++) {
     const v1 = values[roman[i]];
     const v2 = values[roman[i+1]] || 0;
