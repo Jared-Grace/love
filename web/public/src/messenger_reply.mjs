@@ -15,7 +15,7 @@ export async function messenger_reply() {
   const unreadSpanSelector =
     '//span[@dir="auto" and contains(text(), "Unread")]';
   await page.waitForSelector(unreadSpanSelector, {
-    timeout: 10000,
+    timeout: 1000000,
   });
   const [span] = await page.$x(unreadSpanSelector);
   if (span) {
