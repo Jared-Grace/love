@@ -11,7 +11,7 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
-  await page.goto("https://www.facebook.com/messages/e2ee/t/");
+  await page.goto("https://www.facebook.com/messages/e2ee/t/9895223143834311");
   const unreadSpanSelector = 'span[dir="auto"]';
   log("here2");
   await page.waitForSelector(unreadSpanSelector, {
