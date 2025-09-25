@@ -2219,10 +2219,11 @@
   "evu guz",
   "s message",
   "de app_message",
-  "de app_message_main"
+  "de app_message_main",
+  "n messenger_reply"
  ],
  "marker_current": "1",
- "function_current": "ebible_version_books",
+ "function_current": "messenger_reply",
  "terminal": false,
  "identifiers": {
   "log": [
