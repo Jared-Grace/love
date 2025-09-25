@@ -9,5 +9,5 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
-  await page.goto("https://www.facebook.com/");
+  await page.goto("https://www.facebook.com/messages/e2ee/t/");
 }
