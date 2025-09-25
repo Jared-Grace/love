@@ -16,7 +16,7 @@ export async function messenger_reply() {
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 1000,
   });
-  let p = page.$('textarea[name="q"]');
+  let p = await page.$('textarea[name="q"]');
   console.log(p);
   await sleep(100000);
   if (span) {
