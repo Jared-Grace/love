@@ -15131,6 +15131,30 @@
   ],
   "asciiRoman": [
    "roman_to_integer"
+  ],
+  "puppeteer": [
+   "messenger_reply"
+  ],
+  "browser": [
+   "messenger_reply"
+  ],
+  "launch": [
+   "messenger_reply"
+  ],
+  "headless": [
+   "messenger_reply"
+  ],
+  "userDataDir": [
+   "messenger_reply"
+  ],
+  "page": [
+   "messenger_reply"
+  ],
+  "newPage": [
+   "messenger_reply"
+  ],
+  "goto": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28930,10 +28954,18 @@
    ]
   },
   "messenger_reply": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
-    "messenger_reply"
+    "messenger_reply",
+    "puppeteer",
+    "browser",
+    "launch",
+    "headless",
+    "userDataDir",
+    "page",
+    "newPage",
+    "goto"
    ]
   },
   "roman_to_integer": {
