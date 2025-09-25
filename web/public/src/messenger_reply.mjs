@@ -12,7 +12,7 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.google.com");
-  const unreadSpanSelector = 'spytran[name="q"]';
+  const unreadSpanSelector = 'textarea[name="q"]';
   const [span] = await page.$x(unreadSpanSelector);
   if (span) {
     console.log("Found unread span!");
