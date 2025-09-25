@@ -13802,7 +13802,8 @@
    "html_parse_list_text_to"
   ],
   "$": [
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "messenger_reply"
   ],
   "cheerio": [
    "html_parse"
@@ -29016,6 +29017,7 @@
     "unreadSpanSelector",
     "waitForSelector",
     "timeout",
+    "$",
     "lambda",
     "v",
     "document",
