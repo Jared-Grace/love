@@ -1803,7 +1803,6 @@
   "s web",
   "s client",
   "s bro",
-  "s import",
   "u ii",
   "a ii import_install",
   "http https://google.com",
@@ -2231,7 +2230,8 @@
   "s deploy",
   "as deploy",
   "firebase_deploy_function app_reply_main",
-  "n messenger_reply"
+  "n messenger_reply",
+  "s import"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
