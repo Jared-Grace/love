@@ -2228,7 +2228,8 @@
   "roman_to_integer adsf",
   "rti 9a",
   "o app_reply",
-  "s deply"
+  "s deply",
+  "s deploy"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
