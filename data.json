@@ -15177,10 +15177,16 @@
   "click": [
    "messenger_reply"
   ],
-  "waitForTimeout": [
+  "puppeteerModule": [
    "messenger_reply"
   ],
-  "puppeteerModule": [
+  "unreadSpanSelector": [
+   "messenger_reply"
+  ],
+  "waitForSelector": [
+   "messenger_reply"
+  ],
+  "timeout": [
    "messenger_reply"
   ]
  },
@@ -28998,7 +29004,9 @@
     "page",
     "newPage",
     "goto",
-    "waitForTimeout",
+    "unreadSpanSelector",
+    "waitForSelector",
+    "timeout",
     "span",
     "$x",
     "console",
