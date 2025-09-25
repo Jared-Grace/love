@@ -15157,6 +15157,9 @@
   ],
   "goto": [
    "messenger_reply"
+  ],
+  "messenger_reply_user_data_path": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28958,6 +28961,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_user_data_path",
     "import_install",
     "marker",
     "messenger_reply",
