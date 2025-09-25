@@ -1,5 +1,5 @@
 import { not } from "./not.mjs";
-export function roman_to_integer() {
+export function roman_to_integer(input) {
   function unicodeToAscii(roman) {
     const map = {
       Ⅰ: "I",
@@ -65,4 +65,5 @@ export function roman_to_integer() {
     };
     return v5;
   }
+  return parseRomanOrInteger(input);
 }
