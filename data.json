@@ -15187,6 +15187,9 @@
   ],
   "focus": [
    "messenger_reply"
+  ],
+  "keyboard": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29008,6 +29011,7 @@
     "waitForSelector",
     "timeout",
     "focus",
+    "keyboard",
     "type",
     "s",
     "click"
