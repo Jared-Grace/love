@@ -2248,7 +2248,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -10666,7 +10667,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "messenger_reply"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -15164,6 +15166,15 @@
   "messenger_reply_user_data_path": [
    "messenger_reply",
    "messenger_reply_user_data_path"
+  ],
+  "span": [
+   "messenger_reply"
+  ],
+  "$x": [
+   "messenger_reply"
+  ],
+  "click": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28965,6 +28976,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "log",
     "messenger_reply_user_data_path",
     "import_install",
     "marker",
@@ -28976,7 +28988,11 @@
     "userDataDir",
     "page",
     "newPage",
-    "goto"
+    "goto",
+    "span",
+    "$x",
+    "console",
+    "click"
    ]
   },
   "roman_to_integer": {
