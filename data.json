@@ -15181,6 +15181,18 @@
   ],
   "timeout": [
    "messenger_reply"
+  ],
+  "inputBox": [
+   "messenger_reply"
+  ],
+  "focus": [
+   "messenger_reply"
+  ],
+  "keyboard": [
+   "messenger_reply"
+  ],
+  "press": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29002,7 +29014,11 @@
     "timeout",
     "p",
     "$",
-    "type"
+    "type",
+    "inputBox",
+    "focus",
+    "keyboard",
+    "press"
    ]
   },
   "roman_to_integer": {
