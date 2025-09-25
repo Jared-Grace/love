@@ -1,7 +1,8 @@
+import { import_install } from "./import_install.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
   marker("1");
-  const puppeteer = await import("puppeteer");
+  const puppeteer = await import_install("puppeteer");
   const browser = await puppeteer.launch({
     headless: false,
     userDataDir:
