@@ -12,7 +12,7 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.google.com");
-  const unreadSpanSelector = '//textarea[name="q"]';
+  const unreadSpanSelector = 'textarea[name="q"]';
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 1000,
   });
