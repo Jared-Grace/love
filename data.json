@@ -2216,7 +2216,6 @@
   "s message",
   "de app_message",
   "de app_message_main",
-  "n messenger_reply",
   "s ebible",
   "n roman_to_integer",
   "s list,not",
@@ -2231,7 +2230,8 @@
   "s deply",
   "s deploy",
   "as deploy",
-  "firebase_deploy_function app_reply_main"
+  "firebase_deploy_function app_reply_main",
+  "n messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
