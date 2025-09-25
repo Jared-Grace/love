@@ -2557,7 +2557,8 @@
    "string_trim_right",
    "string_ends_with_space",
    "bible_verses_encouragement",
-   "ebible_version_books"
+   "ebible_version_books",
+   "messenger_reply"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -14989,6 +14990,9 @@
   ],
   "reference2": [
    "app_reply_main"
+  ],
+  "messenger_reply": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28782,6 +28786,13 @@
     "stack1",
     "ast",
     "fn"
+   ]
+  },
+  "messenger_reply": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "messenger_reply"
    ]
   }
  },
