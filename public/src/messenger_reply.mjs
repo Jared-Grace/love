@@ -23,7 +23,7 @@ export async function messenger_reply() {
   }
   const span = await page.evaluateHandle(lambda);
   if (span) {
-    await span.type();
+    await span.type("test");
   }
   console.log(span);
   await sleep(100000);
