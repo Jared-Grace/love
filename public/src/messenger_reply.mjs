@@ -12,7 +12,7 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.facebook.com/messages/e2ee/t/9895223143834311");
-  const unreadSpanSelector = 'span[dir="auto"]';
+  const unreadSpanSelector = 'p[dir="auto"]';
   log("here2");
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
@@ -20,6 +20,6 @@ export async function messenger_reply() {
   await sleep(2000);
   log("here");
   let p = await page.$(unreadSpanSelector);
-  await p.click();
+  await p.type("test");
   await sleep(100000);
 }
