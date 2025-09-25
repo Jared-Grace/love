@@ -15196,6 +15196,9 @@
   ],
   "evaluateHandle": [
    "messenger_reply"
+  ],
+  "click": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29024,7 +29027,8 @@
     "from",
     "span",
     "evaluateHandle",
-    "console"
+    "console",
+    "click"
    ]
   },
   "roman_to_integer": {
