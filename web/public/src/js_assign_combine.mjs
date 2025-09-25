@@ -1,6 +1,4 @@
 import { list_not_is } from "./list_not_is.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { log } from "./log.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -20,16 +18,13 @@ export function js_assign_combine(ast) {
       return;
     }
     let e1 = list_get_end_1(stack);
-    let code = js_unparse(node);
-    log({
-      e1,
-    });
+    let nl = list_not_is(e1);
+    if (nl) {
+      return;
+    }
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
-      let l = list_not_is(value);
-      if (false) {
-      }
     }
     let declaration2 = js_declare_single(next);
     if (null_is(declaration2)) {
