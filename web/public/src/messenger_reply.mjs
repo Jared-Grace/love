@@ -12,8 +12,7 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.google.com");
-  const unreadSpanSelector =
-    '//span[@dir="auto" and contains(text(), "Unread")]';
+  const unreadSpanSelector = '//span[@name="q"]';
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 1000000,
   });
