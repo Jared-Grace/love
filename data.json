@@ -2220,11 +2220,11 @@
   "de app_message_main",
   "n messenger_reply",
   "s ebible",
-  "ebible_chapter_text guz GEN01",
   "n roman_to_integer",
   "s list,not",
   "u lni",
-  "ps"
+  "ps",
+  "ebible_chapter_text guz GEN01"
  ],
  "marker_current": "1",
  "function_current": "roman_to_integer",
