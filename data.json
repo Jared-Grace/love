@@ -2213,7 +2213,6 @@
   "sb",
   "o ebible_version_books",
   "s squa",
-  "evu guz",
   "s message",
   "de app_message",
   "de app_message_main",
@@ -2224,7 +2223,9 @@
   "u lni",
   "ps",
   "p",
-  "ebible_chapter_text guz GEN01"
+  "ebible_chapter_text guz GEN01",
+  "evu guz",
+  "roman_to_integer adsf"
  ],
  "marker_current": "1",
  "function_current": "roman_to_integer",
