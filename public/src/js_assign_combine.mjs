@@ -20,7 +20,9 @@ export function js_assign_combine(ast) {
     }
     let e1 = list_get_end_1(stack);
     let code = js_unparse(node);
-    log(code);
+    log({
+      node,
+    });
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
