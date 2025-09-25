@@ -1,3 +1,5 @@
+import { sleep } from "./sleep.mjs";
+import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
@@ -10,8 +12,14 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.google.com");
-  const unreadSpanSelector = 'textarea[name="q"]';
-  await page.waitForSelector(unreadSpanSelector, {
-    timeout: 1000,
-  });
+  const unreadSpanSelector = 'spytran[name="q"]';
+  const [span] = await page.$x(unreadSpanSelector);
+  if (span) {
+    console.log("Found unread span!");
+    console.log(span);
+  } else {
+    console.log("Unread span not found");
+  }
+  await sleep(100000);
+  await page.goto("https://www.facebook.com/messages/e2ee/t/");
 }
