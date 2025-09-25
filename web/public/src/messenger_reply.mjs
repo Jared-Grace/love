@@ -14,7 +14,7 @@ export async function messenger_reply() {
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
   const unreadSpanSelector = 'span[dir="auto"]';
   await page.waitForSelector(unreadSpanSelector, {
-    timeout: 1000,
+    timeout: 10000,
   });
   let p = await page.$(unreadSpanSelector);
   await p.click();
