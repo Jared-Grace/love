@@ -59,7 +59,8 @@ export function roman_to_integer(input) {
     const romanPart = match[1];
     const suffix = match[2] || "";
     const asciiRoman = unicodeToAscii(romanPart);
-    return romanToInt(asciiRoman)+suffix;
+    let v5 = romanToInt(asciiRoman) + suffix;
+    return v5;
   }
   let v6 = parseRomanOrInteger(input);
   return v6;
