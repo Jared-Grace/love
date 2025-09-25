@@ -28931,6 +28931,7 @@
    "identifiers": [
     "not",
     "roman_to_integer",
+    "input",
     "unicodeToAscii",
     "roman",
     "map",
@@ -28971,7 +28972,6 @@
     "v1",
     "v2",
     "parseRomanOrInteger",
-    "input",
     "match",
     "num",
     "parseInt",
