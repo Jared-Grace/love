@@ -21,9 +21,5 @@ export async function messenger_reply() {
   log("here");
   await p.focus();
   await page.keyboard.type("Greetings!");
-  let s = await page.waitForSelector('div[aria-label="Press enter to send"]', {
-    timeout: 10000,
-  });
-  await sleep(100000);
-  await s.click();
+  await page.keyboard.press("Enter");
 }
