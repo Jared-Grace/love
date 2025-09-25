@@ -16,13 +16,7 @@ export async function messenger_reply() {
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 1000,
   });
-  page.$();
-  function lambda() {
-    let v = document.querySelectorAll('textarea[name="q"]');
-    const spans = Array.from(v);
-    return spans;
-  }
-  const span = await page.evaluateHandle(lambda);
+  let p = page.$('textarea[name="q"]');
   if (span) {
     await span.type("test");
   }
