@@ -11,9 +11,6 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
-  log({
-    page,
-  });
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
   await page.waitForTimeout(10000);
   const [span] = await page.$x("//span[contains(text(), 'unread')]");
