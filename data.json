@@ -2238,8 +2238,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "js_assign_combine"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2813,8 +2812,7 @@
    "js_code_declaration_args",
    "js_dollar_new_name",
    "app_new_assign",
-   "function_list_generate",
-   "js_assign_combine"
+   "function_list_generate"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3743,8 +3741,7 @@
    "marker_next",
    "marker_next_await",
    "js_expand_generic",
-   "js_calls_to_each",
-   "js_assign_combine"
+   "js_calls_to_each"
   ],
   "js_format": [
    "file_js_unparse",
@@ -4067,8 +4064,7 @@
    "js_statement_expression_get",
    "object_property_set_exists_not",
    "object_merge_generic",
-   "list_set",
-   "js_assign_combine"
+   "list_set"
   ],
   "name": [
    "watch",
@@ -9783,8 +9779,7 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x",
-   "js_assign_combine"
+   "js_dollar_x"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -15008,7 +15003,8 @@
    "roman_to_integer"
   ],
   "nl": [
-   "list_not_is"
+   "list_not_is",
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -25111,8 +25107,6 @@
    "async": false,
    "identifiers": [
     "list_not_is",
-    "js_unparse",
-    "log",
     "js_identifier_not_is",
     "list_next_try",
     "list_remove",
@@ -25132,10 +25126,8 @@
     "stack",
     "declaration",
     "e1",
-    "code",
+    "nl",
     "next",
-    "l",
-    "value",
     "declaration2",
     "init2",
     "nti",
