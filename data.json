@@ -8159,7 +8159,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "messenger_reply"
   ],
   "key": [
    "object_invert",
@@ -29005,8 +29006,9 @@
     "timeout",
     "p",
     "$",
-    "console",
-    "span"
+    "type",
+    "span",
+    "console"
    ]
   },
   "roman_to_integer": {
