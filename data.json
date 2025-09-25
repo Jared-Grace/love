@@ -29025,8 +29025,8 @@
     "from",
     "span",
     "evaluateHandle",
-    "console",
-    "type"
+    "type",
+    "console"
    ]
   },
   "roman_to_integer": {
