@@ -13,7 +13,7 @@ export async function messenger_reply() {
   const page = await browser.newPage();
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
   let p = await page.$('span[dir="auto"]');
-  await p.type("test");
+  await p.click();
   await sleep(100000);
   if (span) {
     console.log("Found unread span!");
