@@ -2248,8 +2248,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -10667,8 +10666,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "messenger_reply"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -13663,8 +13661,7 @@
   "sleep": [
    "http",
    "sleep",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -15167,12 +15164,6 @@
   "messenger_reply_user_data_path": [
    "messenger_reply",
    "messenger_reply_user_data_path"
-  ],
-  "span": [
-   "messenger_reply"
-  ],
-  "$x": [
-   "messenger_reply"
   ],
   "puppeteerModule": [
    "messenger_reply"
@@ -28986,8 +28977,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "sleep",
-    "log",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
@@ -29003,10 +28992,7 @@
     "goto",
     "unreadSpanSelector",
     "waitForSelector",
-    "timeout",
-    "span",
-    "$x",
-    "console"
+    "timeout"
    ]
   },
   "roman_to_integer": {
