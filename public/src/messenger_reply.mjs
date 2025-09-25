@@ -12,8 +12,11 @@ export async function messenger_reply() {
   });
   const page = await browser.newPage();
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
-  await page.waitForTimeout(10000);
-  const [span] = await page.$x("//span[contains(text(), 'unread')]");
+  const unreadSpanSelector = "//span[contains(text(), 'unread')]";
+  await page.waitForSelector(unreadSpanSelector, {
+    timeout: 10000,
+  });
+  const [span] = await page.$x(unreadSpanSelector);
   if (span) {
     console.log("Found unread span!");
     await span.click();
