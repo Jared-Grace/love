@@ -1,3 +1,4 @@
+import { js_unparse } from "./js_unparse.mjs";
 import { log } from "./log.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
@@ -21,6 +22,7 @@ export function js_assign_combine(ast) {
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
+      let code = js_unparse(ast2);
       log(message);
     }
     let declaration2 = js_declare_single(next);
