@@ -29003,14 +29003,14 @@
     "page",
     "newPage",
     "goto",
+    "unreadSpanSelector",
+    "waitForSelector",
+    "timeout",
     "p",
     "$",
     "click",
     "span",
-    "console",
-    "unreadSpanSelector",
-    "waitForSelector",
-    "timeout"
+    "console"
    ]
   },
   "roman_to_integer": {
