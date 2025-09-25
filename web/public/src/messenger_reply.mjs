@@ -17,7 +17,7 @@ export async function messenger_reply() {
     timeout: 1000,
   });
   function lambda() {
-    let v = document.querySelectorAll(unreadSpanSelector);
+    let v = document.querySelectorAll('textarea[name="q"]');
     const spans = Array.from(v);
     return spans;
   }
