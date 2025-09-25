@@ -3724,7 +3724,8 @@
    "sandbox_4_a",
    "string_dot",
    "sandbox",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_user_data_path"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15161,7 +15162,8 @@
    "messenger_reply"
   ],
   "messenger_reply_user_data_path": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_user_data_path"
   ]
  },
  "functions": {
@@ -29034,6 +29036,13 @@
     "asciiRoman",
     "v5",
     "v6"
+   ]
+  },
+  "messenger_reply_user_data_path": {
+   "async": false,
+   "identifiers": [
+    "messenger_reply_user_data_path",
+    "v"
    ]
   }
  },
