@@ -15176,6 +15176,9 @@
   ],
   "click": [
    "messenger_reply"
+  ],
+  "waitForTimeout": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28991,6 +28994,7 @@
     "page",
     "newPage",
     "goto",
+    "waitForTimeout",
     "span",
     "$x",
     "console",
