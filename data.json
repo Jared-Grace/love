@@ -3834,7 +3834,8 @@
    "import_install",
    "unzip",
    "html_parse",
-   "uuid"
+   "uuid",
+   "messenger_reply"
   ],
   "command_line": [
    "command_line",
@@ -3937,8 +3938,7 @@
    "chalk_color",
    "clipboard_copy",
    "firebase_admin_get",
-   "unzip",
-   "messenger_reply"
+   "unzip"
   ],
   "joined": [
    "watch",
@@ -15175,9 +15175,6 @@
    "messenger_reply"
   ],
   "click": [
-   "messenger_reply"
-  ],
-  "puppeteerModule": [
    "messenger_reply"
   ]
  },
@@ -28983,11 +28980,10 @@
     "sleep",
     "log",
     "messenger_reply_user_data_path",
+    "import_install",
     "marker",
     "messenger_reply",
-    "puppeteerModule",
     "puppeteer",
-    "default",
     "browser",
     "launch",
     "headless",
