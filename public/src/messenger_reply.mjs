@@ -1,3 +1,4 @@
+import { sleep } from "./sleep.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { import_install } from "./import_install.mjs";
@@ -18,4 +19,5 @@ export async function messenger_reply() {
   } else {
     console.log("Unread span not found");
   }
+  await sleep(100000);
 }
