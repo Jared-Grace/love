@@ -65,5 +65,6 @@ export function roman_to_integer(input) {
     };
     return v5;
   }
-  return parseRomanOrInteger(input);
+  let v6 = parseRomanOrInteger(input);
+  return v6;
 }
