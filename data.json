@@ -15184,6 +15184,9 @@
   ],
   "click": [
    "messenger_reply"
+  ],
+  "focus": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29004,6 +29007,7 @@
     "p",
     "waitForSelector",
     "timeout",
+    "focus",
     "type",
     "s",
     "click"
