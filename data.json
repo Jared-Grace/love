@@ -2811,7 +2811,8 @@
    "js_code_declaration_args",
    "js_dollar_new_name",
    "app_new_assign",
-   "function_list_generate"
+   "function_list_generate",
+   "js_assign_combine"
   ],
   "f_name": [
    "data_identifiers_file",
@@ -3740,7 +3741,8 @@
    "marker_next",
    "marker_next_await",
    "js_expand_generic",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "js_assign_combine"
   ],
   "js_format": [
    "file_js_unparse",
@@ -15001,6 +15003,9 @@
   ],
   "roman_to_integer": [
    "roman_to_integer"
+  ],
+  "ast2": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -25102,6 +25107,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "js_unparse",
     "log",
     "js_identifier_not_is",
     "list_next_try",
@@ -25123,6 +25129,8 @@
     "declaration",
     "e1",
     "next",
+    "code",
+    "ast2",
     "message",
     "declaration2",
     "init2",
