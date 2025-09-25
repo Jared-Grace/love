@@ -17,6 +17,7 @@ export async function messenger_reply() {
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
   });
+  await sleep(2000);
   log("here");
   let p = await page.$(unreadSpanSelector);
   await p.click();
