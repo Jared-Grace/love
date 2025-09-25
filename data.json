@@ -5172,8 +5172,7 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "string_starts_with_dot",
-   "messenger_reply"
+   "string_starts_with_dot"
   ],
   "a": [
    "string_suffix_without",
@@ -15182,13 +15181,13 @@
   "unreadSpanSelector": [
    "messenger_reply"
   ],
-  "click": [
-   "messenger_reply"
-  ],
   "focus": [
    "messenger_reply"
   ],
   "keyboard": [
+   "messenger_reply"
+  ],
+  "press": [
    "messenger_reply"
   ]
  },
@@ -29013,8 +29012,7 @@
     "focus",
     "keyboard",
     "type",
-    "s",
-    "click"
+    "press"
    ]
   },
   "roman_to_integer": {
