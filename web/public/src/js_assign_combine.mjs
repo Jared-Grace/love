@@ -26,6 +26,7 @@ export function js_assign_combine(ast) {
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
+      lni;
       if (false) {
       }
     }
