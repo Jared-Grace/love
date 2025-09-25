@@ -29001,14 +29001,14 @@
     "page",
     "newPage",
     "goto",
-    "unreadSpanSelector",
-    "waitForSelector",
-    "timeout",
     "p",
     "$",
     "type",
     "span",
-    "console"
+    "console",
+    "unreadSpanSelector",
+    "waitForSelector",
+    "timeout"
    ]
   },
   "roman_to_integer": {
