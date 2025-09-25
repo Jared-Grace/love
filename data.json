@@ -3785,8 +3785,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "js_assign_combine"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -15003,9 +15002,6 @@
   ],
   "roman_to_integer": [
    "roman_to_integer"
-  ],
-  "ast2": [
-   "js_assign_combine"
   ]
  },
  "functions": {
@@ -25128,10 +25124,8 @@
     "stack",
     "declaration",
     "e1",
-    "next",
     "code",
-    "ast2",
-    "message",
+    "next",
     "declaration2",
     "init2",
     "nti",
