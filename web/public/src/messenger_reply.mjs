@@ -11,7 +11,9 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
+  await page.goto("https://www.google.com");
   await page.goto("https://www.facebook.com/messages/e2ee/t/");
+  await sleep(100000);
   const unreadSpanSelector =
     '//span[@dir="auto" and contains(text(), "Unread")]';
   await page.waitForSelector(unreadSpanSelector, {
@@ -24,5 +26,4 @@ export async function messenger_reply() {
   } else {
     console.log("Unread span not found");
   }
-  await sleep(100000);
 }
