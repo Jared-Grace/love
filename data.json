@@ -2231,7 +2231,8 @@
   "as deploy",
   "firebase_deploy_function app_reply_main",
   "n messenger_reply",
-  "s import"
+  "s import",
+  "messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
