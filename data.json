@@ -2213,7 +2213,6 @@
   "sb",
   "o ebible_version_books",
   "s squa",
-  "p",
   "evu guz",
   "s message",
   "de app_message",
@@ -2224,6 +2223,7 @@
   "s list,not",
   "u lni",
   "ps",
+  "p",
   "ebible_chapter_text guz GEN01"
  ],
  "marker_current": "1",
