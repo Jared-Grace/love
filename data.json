@@ -2226,10 +2226,11 @@
   "evu guz",
   "p",
   "roman_to_integer adsf",
-  "rti 9a"
+  "rti 9a",
+  "o app_reply"
  ],
  "marker_current": "1",
- "function_current": "roman_to_integer",
+ "function_current": "app_reply",
  "terminal": false,
  "identifiers": {
   "log": [
