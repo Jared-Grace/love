@@ -2562,8 +2562,7 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "messenger_reply",
-   "roman_to_integer"
+   "messenger_reply"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3190,7 +3189,8 @@
    "app_new_step_2",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "roman_to_integer"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3713,7 +3713,8 @@
    "app_new_assign",
    "sandbox_4_a",
    "string_dot",
-   "sandbox"
+   "sandbox",
+   "roman_to_integer"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5005,7 +5006,8 @@
    "js_identifier_unique",
    "string_ends_with",
    "function_rename_suffix_add",
-   "functions_names"
+   "functions_names",
+   "roman_to_integer"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -5090,7 +5092,8 @@
    "string_starts_with_not",
    "string_skip_while",
    "string_trim_right",
-   "function_list_generate"
+   "function_list_generate",
+   "roman_to_integer"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5461,7 +5464,8 @@
    "emoji_rock",
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
-   "emoji_handshake"
+   "emoji_handshake",
+   "roman_to_integer"
   ],
   "readdirSync": [
    "folder_read"
@@ -5807,7 +5811,8 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "roman_to_integer"
   ],
   "process": [
    "command_line_read",
@@ -6785,7 +6790,8 @@
    "sandbox_4_a",
    "string_split_empty",
    "digits",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "roman_to_integer"
   ],
   "results": [
    "functions_combine_name"
@@ -7651,7 +7657,8 @@
    "html_parse_list_text_to",
    "catch_call",
    "list_intersect_empty_is_assert",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "roman_to_integer"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -8806,7 +8813,8 @@
   "join": [
    "git_acp_call",
    "list_join",
-   "path_join"
+   "path_join",
+   "roman_to_integer"
   ],
   "execSync": [
    "git_acp_timestamp"
@@ -8927,10 +8935,12 @@
    "ebible_chapter_code_to_name"
   ],
   "parseInt": [
-   "integer_to"
+   "integer_to",
+   "roman_to_integer"
   ],
   "isNaN": [
-   "integer_to"
+   "integer_to",
+   "roman_to_integer"
   ],
   "JSON": [
    "json_format_to",
@@ -9942,7 +9952,8 @@
    "js_identifier_defineds"
   ],
   "values": [
-   "js_identifier_defineds"
+   "js_identifier_defineds",
+   "roman_to_integer"
   ],
   "lambda5": [
    "js_identifier_defineds",
@@ -10077,7 +10088,8 @@
    "js_statement_call_get",
    "http",
    "command_line_cmd",
-   "folder_user_docs_path"
+   "folder_user_docs_path",
+   "roman_to_integer"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -10141,10 +10153,12 @@
   ],
   "v4": [
    "js_marker_name_get",
-   "uuid"
+   "uuid",
+   "roman_to_integer"
   ],
   "v5": [
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "roman_to_integer"
   ],
   "v6": [
    "js_marker_name_get"
@@ -10188,7 +10202,8 @@
   ],
   "match": [
    "js_node_types_is",
-   "log_unparse_try"
+   "log_unparse_try",
+   "roman_to_integer"
   ],
   "init_code": [
    "js_null",
@@ -10530,7 +10545,8 @@
   "map": [
    "list_map",
    "html_parse_list_text_to",
-   "folder_read_async"
+   "folder_read_async",
+   "roman_to_integer"
   ],
   "list_map_index": [
    "list_map_index",
@@ -10580,7 +10596,8 @@
   "length": [
    "list_size",
    "string_size",
-   "path_join"
+   "path_join",
+   "roman_to_integer"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -14542,7 +14559,8 @@
    "ebible_references_parse_lines"
   ],
   "num": [
-   "number_pad"
+   "number_pad",
+   "roman_to_integer"
   ],
   "String": [
    "number_pad"
@@ -15005,6 +15023,105 @@
   "nl": [
    "list_not_is",
    "js_assign_combine"
+  ],
+  "unicodeToAscii": [
+   "roman_to_integer"
+  ],
+  "roman": [
+   "roman_to_integer"
+  ],
+  "Ⅰ": [
+   "roman_to_integer"
+  ],
+  "Ⅱ": [
+   "roman_to_integer"
+  ],
+  "Ⅲ": [
+   "roman_to_integer"
+  ],
+  "Ⅳ": [
+   "roman_to_integer"
+  ],
+  "Ⅴ": [
+   "roman_to_integer"
+  ],
+  "Ⅵ": [
+   "roman_to_integer"
+  ],
+  "Ⅶ": [
+   "roman_to_integer"
+  ],
+  "Ⅷ": [
+   "roman_to_integer"
+  ],
+  "Ⅸ": [
+   "roman_to_integer"
+  ],
+  "Ⅹ": [
+   "roman_to_integer"
+  ],
+  "Ⅺ": [
+   "roman_to_integer"
+  ],
+  "Ⅻ": [
+   "roman_to_integer"
+  ],
+  "Ⅼ": [
+   "roman_to_integer"
+  ],
+  "Ⅽ": [
+   "roman_to_integer"
+  ],
+  "Ⅾ": [
+   "roman_to_integer"
+  ],
+  "Ⅿ": [
+   "roman_to_integer"
+  ],
+  "ch": [
+   "roman_to_integer"
+  ],
+  "romanToInt": [
+   "roman_to_integer"
+  ],
+  "I": [
+   "roman_to_integer"
+  ],
+  "V": [
+   "roman_to_integer"
+  ],
+  "X": [
+   "roman_to_integer"
+  ],
+  "L": [
+   "roman_to_integer"
+  ],
+  "C": [
+   "roman_to_integer"
+  ],
+  "D": [
+   "roman_to_integer"
+  ],
+  "M": [
+   "roman_to_integer"
+  ],
+  "total": [
+   "roman_to_integer"
+  ],
+  "v1": [
+   "roman_to_integer"
+  ],
+  "parseRomanOrInteger": [
+   "roman_to_integer"
+  ],
+  "number": [
+   "roman_to_integer"
+  ],
+  "romanPart": [
+   "roman_to_integer"
+  ],
+  "asciiRoman": [
+   "roman_to_integer"
   ]
  },
  "functions": {
@@ -28812,8 +28929,59 @@
   "roman_to_integer": {
    "async": false,
    "identifiers": [
-    "marker",
-    "roman_to_integer"
+    "not",
+    "roman_to_integer",
+    "unicodeToAscii",
+    "roman",
+    "map",
+    "Ⅰ",
+    "Ⅱ",
+    "Ⅲ",
+    "Ⅳ",
+    "Ⅴ",
+    "Ⅵ",
+    "Ⅶ",
+    "Ⅷ",
+    "Ⅸ",
+    "Ⅹ",
+    "Ⅺ",
+    "Ⅻ",
+    "Ⅼ",
+    "Ⅽ",
+    "Ⅾ",
+    "Ⅿ",
+    "lambda",
+    "ch",
+    "v",
+    "v3",
+    "split",
+    "join",
+    "romanToInt",
+    "values",
+    "I",
+    "V",
+    "X",
+    "L",
+    "C",
+    "D",
+    "M",
+    "total",
+    "i",
+    "length",
+    "v1",
+    "v2",
+    "parseRomanOrInteger",
+    "input",
+    "match",
+    "num",
+    "parseInt",
+    "v4",
+    "isNaN",
+    "number",
+    "suffix",
+    "romanPart",
+    "asciiRoman",
+    "v5"
    ]
   }
  },
