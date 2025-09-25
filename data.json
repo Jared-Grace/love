@@ -2207,7 +2207,6 @@
   "s reply",
   "ebible_index_flat_upload_name",
   "s verses",
-  "s ebible",
   "is ebible_verse",
   "s dollar",
   "as doll",
@@ -2220,7 +2219,8 @@
   "s message",
   "de app_message",
   "de app_message_main",
-  "n messenger_reply"
+  "n messenger_reply",
+  "s ebible"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply",
