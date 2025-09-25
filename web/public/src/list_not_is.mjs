@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export function list_not_is(value) {
   marker("1");
   let a = list_is(value);
-  let l = not(a);
-  return l;
+  let nl = not(a);
+  return nl;
 }
