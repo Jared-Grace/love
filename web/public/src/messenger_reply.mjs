@@ -11,8 +11,9 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
-  await page.goto('//span[@dir="auto" and contains(text(), "Unread")]');
-  const unreadSpanSelector = "div";
+  await page.goto("https://www.facebook.com/messages/e2ee/t/");
+  const unreadSpanSelector =
+    '//span[@dir="auto" and contains(text(), "Unread")]';
   await sleep(10000000);
   await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
