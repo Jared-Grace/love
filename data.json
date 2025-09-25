@@ -15003,6 +15003,9 @@
   ],
   "roman_to_integer": [
    "roman_to_integer"
+  ],
+  "lni": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -25127,6 +25130,7 @@
     "e1",
     "code",
     "next",
+    "lni",
     "declaration2",
     "init2",
     "nti",
