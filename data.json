@@ -2248,7 +2248,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -5379,7 +5380,8 @@
    "js_property_parse_expression_add",
    "app_new_step_2",
    "function_rename_suffix_add",
-   "string_padded_is"
+   "string_padded_is",
+   "messenger_reply"
   ],
   "f_names": [
    "functions_names",
@@ -13662,7 +13664,8 @@
   "sleep": [
    "http",
    "sleep",
-   "retry"
+   "retry",
+   "messenger_reply"
   ],
   "setTimeout": [
    "sleep"
@@ -15185,6 +15188,9 @@
    "messenger_reply"
   ],
   "press": [
+   "messenger_reply"
+  ],
+  "unreadSpanSelector": [
    "messenger_reply"
   ]
  },
@@ -28987,6 +28993,8 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "sleep",
+    "log",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
@@ -29000,12 +29008,14 @@
     "page",
     "newPage",
     "goto",
-    "inputBox",
+    "unreadSpanSelector",
+    "p",
     "waitForSelector",
     "timeout",
+    "type",
+    "inputBox",
     "focus",
     "keyboard",
-    "type",
     "press"
    ]
   },
