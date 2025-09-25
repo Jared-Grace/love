@@ -1,3 +1,4 @@
+import { list_not_is } from "./list_not_is.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { log } from "./log.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
@@ -26,7 +27,7 @@ export function js_assign_combine(ast) {
     let next = list_next_try(e1, node);
     if (null_is(next)) {
       return;
-      lni;
+      let l = list_not_is(value);
       if (false) {
       }
     }
