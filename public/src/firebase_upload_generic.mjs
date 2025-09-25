@@ -18,8 +18,7 @@ export async function firebase_upload_generic(destination, settings, buffer) {
   await retry(5, lambda);
   log_keep(`Uploaded data to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
-  log_keep(`Uploaded data to ${destination}`);
-  ("Accessible at:", url);
+  log_keep("Accessible at:", url);
   async function lambda() {
     await file.save(buffer, merged);
   }
