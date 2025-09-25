@@ -15179,6 +15179,12 @@
   ],
   "$x": [
    "messenger_reply"
+  ],
+  "waitForSelector": [
+   "messenger_reply"
+  ],
+  "timeout": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -28996,9 +29002,11 @@
     "newPage",
     "goto",
     "unreadSpanSelector",
+    "waitForSelector",
+    "timeout",
+    "console",
     "span",
-    "$x",
-    "console"
+    "$x"
    ]
   },
   "roman_to_integer": {
