@@ -3201,7 +3201,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3726,7 +3727,8 @@
    "string_dot",
    "sandbox",
    "roman_to_integer",
-   "messenger_reply_user_data_path"
+   "messenger_reply_user_data_path",
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7650,7 +7652,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic"
+   "object_merge_generic",
+   "messenger_reply"
   ],
   "i": [
    "function_identifier_replace",
@@ -10542,7 +10545,8 @@
   ],
   "Array": [
    "list_is",
-   "list_to"
+   "list_to",
+   "messenger_reply"
   ],
   "isArray": [
    "list_is"
@@ -11816,7 +11820,8 @@
    "html_element",
    "html_document_head",
    "html_document_root",
-   "browser_is"
+   "browser_is",
+   "messenger_reply"
   ],
   "tag_name": [
    "html_element",
@@ -15177,13 +15182,19 @@
   "span": [
    "messenger_reply"
   ],
-  "$x": [
-   "messenger_reply"
-  ],
   "waitForSelector": [
    "messenger_reply"
   ],
   "timeout": [
+   "messenger_reply"
+  ],
+  "querySelectorAll": [
+   "messenger_reply"
+  ],
+  "spans": [
+   "messenger_reply"
+  ],
+  "evaluateHandle": [
    "messenger_reply"
   ]
  },
@@ -29004,9 +29015,16 @@
     "unreadSpanSelector",
     "waitForSelector",
     "timeout",
-    "console",
+    "lambda",
+    "v",
+    "document",
+    "querySelectorAll",
+    "spans",
+    "Array",
+    "from",
     "span",
-    "$x"
+    "evaluateHandle",
+    "console"
    ]
   },
   "roman_to_integer": {
