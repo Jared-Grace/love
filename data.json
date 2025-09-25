@@ -15174,9 +15174,6 @@
   "$x": [
    "messenger_reply"
   ],
-  "click": [
-   "messenger_reply"
-  ],
   "puppeteerModule": [
    "messenger_reply"
   ],
@@ -29009,8 +29006,7 @@
     "timeout",
     "span",
     "$x",
-    "console",
-    "click"
+    "console"
    ]
   },
   "roman_to_integer": {
