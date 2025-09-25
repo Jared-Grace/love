@@ -2230,7 +2230,8 @@
   "o app_reply",
   "s deply",
   "s deploy",
-  "as deploy"
+  "as deploy",
+  "firebase_deploy_function app_reply_main"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
