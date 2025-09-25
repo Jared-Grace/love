@@ -2248,8 +2248,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -5380,8 +5379,7 @@
    "js_property_parse_expression_add",
    "app_new_step_2",
    "function_rename_suffix_add",
-   "string_padded_is",
-   "messenger_reply"
+   "string_padded_is"
   ],
   "f_names": [
    "functions_names",
@@ -13664,8 +13662,7 @@
   "sleep": [
    "http",
    "sleep",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -13797,8 +13794,7 @@
    "html_parse_list_text_to"
   ],
   "$": [
-   "html_parse_list_text_to",
-   "messenger_reply"
+   "html_parse_list_text_to"
   ],
   "cheerio": [
    "html_parse"
@@ -15171,9 +15167,6 @@
    "messenger_reply_user_data_path"
   ],
   "puppeteerModule": [
-   "messenger_reply"
-  ],
-  "unreadSpanSelector": [
    "messenger_reply"
   ],
   "waitForSelector": [
@@ -28994,8 +28987,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "sleep",
-    "log",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
@@ -29009,15 +29000,12 @@
     "page",
     "newPage",
     "goto",
-    "unreadSpanSelector",
+    "inputBox",
     "waitForSelector",
     "timeout",
-    "p",
-    "$",
-    "type",
-    "inputBox",
     "focus",
     "keyboard",
+    "type",
     "press"
    ]
   },
