@@ -2236,7 +2236,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main"
+   "app_reply_main",
+   "js_assign_combine"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3782,7 +3783,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "js_assign_combine"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -25100,6 +25102,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "log",
     "js_identifier_not_is",
     "list_next_try",
     "list_remove",
@@ -25120,6 +25123,7 @@
     "declaration",
     "e1",
     "next",
+    "message",
     "declaration2",
     "init2",
     "nti",
