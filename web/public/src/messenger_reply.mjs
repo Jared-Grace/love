@@ -20,7 +20,6 @@ export async function messenger_reply() {
   const [span] = await page.$x(unreadSpanSelector);
   if (span) {
     console.log("Found unread span!");
-    await span.click();
   } else {
     console.log("Unread span not found");
   }
