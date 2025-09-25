@@ -9780,7 +9780,6 @@
    "list_filter",
    "list_intersect",
    "list_is",
-   "list_not_is",
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
@@ -15007,6 +15006,9 @@
   ],
   "roman_to_integer": [
    "roman_to_integer"
+  ],
+  "nl": [
+   "list_not_is"
   ]
  },
  "functions": {
@@ -20570,7 +20572,7 @@
     "list_not_is",
     "value",
     "a",
-    "l"
+    "nl"
    ],
    "async": false
   },
