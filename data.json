@@ -10161,7 +10161,8 @@
    "roman_to_integer"
   ],
   "v6": [
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "roman_to_integer"
   ],
   "a_first": [
    "js_marker_name_get"
@@ -28981,7 +28982,8 @@
     "suffix",
     "romanPart",
     "asciiRoman",
-    "v5"
+    "v5",
+    "v6"
    ]
   }
  },
