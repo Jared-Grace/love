@@ -24,5 +24,5 @@ export async function messenger_reply() {
     timeout: 10000,
   });
   await sleep(100000);
-  s.click();
+  await s.click();
 }
