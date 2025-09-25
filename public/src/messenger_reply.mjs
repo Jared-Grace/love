@@ -22,12 +22,4 @@ export async function messenger_reply() {
   let p = await page.$(unreadSpanSelector);
   await p.click();
   await sleep(100000);
-  if (span) {
-    console.log("Found unread span!");
-    console.log(span);
-  } else {
-    console.log("Unread span not found");
-  }
-  await sleep(100000);
-  await page.goto("https://www.facebook.com/messages/e2ee/t/");
 }
