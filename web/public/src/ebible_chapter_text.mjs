@@ -1,3 +1,4 @@
+import { roman_to_integer } from "./roman_to_integer.mjs";
 import { list_intersect_empty_is_assert } from "./list_intersect_empty_is_assert.mjs";
 import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
@@ -44,8 +45,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     return n;
   }
   let verse_numbers = list_map(list, lambda2);
-  function lambda3(item2) {}
-  let mapped = list_map(list3, lambda3);
+  verse_numbers = list_map(verse_numbers, roman_to_integer);
   let text = html_parse_text(d, main);
   let result = {
     verse_numbers,
