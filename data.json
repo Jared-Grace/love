@@ -5172,7 +5172,8 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "string_starts_with_dot"
+   "string_starts_with_dot",
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -15178,19 +15179,10 @@
   "timeout": [
    "messenger_reply"
   ],
-  "inputBox": [
-   "messenger_reply"
-  ],
-  "focus": [
-   "messenger_reply"
-  ],
-  "keyboard": [
-   "messenger_reply"
-  ],
-  "press": [
-   "messenger_reply"
-  ],
   "unreadSpanSelector": [
+   "messenger_reply"
+  ],
+  "click": [
    "messenger_reply"
   ]
  },
@@ -29013,10 +29005,8 @@
     "waitForSelector",
     "timeout",
     "type",
-    "inputBox",
-    "focus",
-    "keyboard",
-    "press"
+    "s",
+    "click"
    ]
   },
   "roman_to_integer": {
