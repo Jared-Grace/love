@@ -2229,7 +2229,8 @@
   "rti 9a",
   "o app_reply",
   "s deply",
-  "s deploy"
+  "s deploy",
+  "as deploy"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
