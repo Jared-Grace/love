@@ -28,7 +28,7 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    log(message);
+    log(messages);
     let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
