@@ -46,8 +46,10 @@ export async function messenger_reply() {
     });
     list_remove(urls, url);
     let urls_new = await messenger_reply_messages_urls_add_page(page);
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(url_new) {
+      laien;
+    }
+    each(urls_new, lambda2);
     await http_sleep();
   }
   await each_async(urls, lambda);
