@@ -5604,7 +5604,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "null_not_is_assert",
-   "object_property_exists_not_assert"
+   "object_property_exists_not_assert",
+   "messenger_reply"
   ],
   "b": [
    "assert",
@@ -5649,7 +5650,8 @@
    "html_style_assign",
    "each_pair_async",
    "ebible_version_books",
-   "ebible_verse"
+   "ebible_verse",
+   "messenger_reply"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -29178,6 +29180,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "assert",
     "log",
     "bind_property",
     "object_property_get",
@@ -29214,6 +29217,7 @@
     "keyboard",
     "locator",
     "count",
+    "b",
     "console",
     "nth",
     "i",
