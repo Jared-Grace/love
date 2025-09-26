@@ -10,7 +10,10 @@ export function reply_sequence(sequence) {
       let input_item = list_get(input, index);
       if (sequence_item !== input_item) {
         matches = false;
-        log(message);
+        log({
+          sequence_item,
+          input_item,
+        });
       }
     }
     each_index(sequence, lambda);
