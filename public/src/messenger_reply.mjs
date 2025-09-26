@@ -23,7 +23,8 @@ export async function messenger_reply() {
   await messenger_reply_unread_click(page);
   await messenger_reply_wait(page);
   let urls = await messenger_reply_messages_urls_add_page(page);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   log(urls);
   let answer = await command_line_read_empty();
   return;
