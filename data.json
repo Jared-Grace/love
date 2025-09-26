@@ -5706,8 +5706,7 @@
   ],
   "message_fragment": [
    "catch_only_async",
-   "catch_only_run_async",
-   "messenger_reply"
+   "catch_only_run_async"
   ],
   "json": [
    "file_overwrite_json",
@@ -29047,7 +29046,6 @@
     "lambda2",
     "launch",
     "headless",
-    "message_fragment",
     "on_error",
     "page",
     "newPage",
