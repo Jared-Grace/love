@@ -2,13 +2,10 @@ import { sleep } from "./sleep.mjs";
 import { each_async } from "./each_async.mjs";
 import { string_list_to } from "./string_list_to.mjs";
 import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
-import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
   marker("1");
-  log(r);
-  return;
   const puppeteerModule = await import("puppeteer");
   const puppeteer = puppeteerModule.default ?? puppeteerModule;
   const browser = await puppeteer.launch({
