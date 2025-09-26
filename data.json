@@ -5972,7 +5972,8 @@
   "close": [
    "command_line_read",
    "messenger_reply_login",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_unread_collect"
   ],
   "command_line_schtasks": [
    "command_line_schtasks",
@@ -30063,7 +30064,8 @@
     "state",
     "urls_new",
     "lambda2",
-    "url_new"
+    "url_new",
+    "close"
    ]
   }
  },
