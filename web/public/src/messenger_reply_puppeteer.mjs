@@ -12,5 +12,4 @@ export async function messenger_reply_puppeteer(lambda$page) {
   } finally {
     await browser.close();
   }
-  return page;
 }
