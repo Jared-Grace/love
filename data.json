@@ -2235,10 +2235,11 @@
   "p",
   "messenger_reply",
   "s random",
-  "s string,list"
+  "s string,list",
+  "n string_list_to"
  ],
  "marker_current": "1",
- "function_current": "app_reply",
+ "function_current": "string_list_to",
  "terminal": false,
  "identifiers": {
   "log": [
