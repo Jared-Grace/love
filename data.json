@@ -4464,7 +4464,8 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages"
   ],
   "file_path": [
    "data_file_update",
@@ -4501,7 +4502,8 @@
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply_messages"
   ],
   "object_property_get": [
    "chalk_color",
@@ -5977,7 +5979,8 @@
    "data_get",
    "file_read_json",
    "firebase_service_account",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages"
   ],
   "data_get": [
    "data_get",
@@ -6087,7 +6090,8 @@
   ],
   "file_overwrite_json": [
    "data_save",
-   "file_overwrite_json"
+   "file_overwrite_json",
+   "messenger_reply_messages"
   ],
   "data_terminal_get": [
    "data_terminal_get",
@@ -6326,7 +6330,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "messenger_reply_messages"
   ],
   "each_pair": [
    "each_pair",
@@ -15025,7 +15030,8 @@
    "folder_user_docs_path",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -15624,6 +15630,9 @@
   "messages": [
    "messenger_reply_messages",
    "messenger_reply"
+  ],
+  "fb": [
+   "messenger_reply_messages"
   ]
  },
  "functions": {
@@ -29859,6 +29868,9 @@
   "messenger_reply_messages": {
    "async": true,
    "identifiers": [
+    "file_overwrite_json",
+    "file_read_json",
+    "folder_user_docs_path",
     "string_empty_is",
     "string_trim",
     "list_adder_async",
@@ -29867,6 +29879,10 @@
     "page",
     "url",
     "goto",
+    "fb",
+    "data",
+    "file_path",
+    "object",
     "s",
     "p",
     "waitForSelector",
