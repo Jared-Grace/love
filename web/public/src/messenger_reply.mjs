@@ -1,3 +1,4 @@
+import { sleep } from "./sleep.mjs";
 import { each_async } from "./each_async.mjs";
 import { string_list_to } from "./string_list_to.mjs";
 import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
@@ -25,6 +26,7 @@ export async function messenger_reply() {
   let list = string_list_to(str);
   async function lambda(item) {
     let delay_ms = keyboard_typing_delay();
+    await sleep(ms);
     await page.keyboard.type(message);
   }
   await each_async(list2, lambda);
