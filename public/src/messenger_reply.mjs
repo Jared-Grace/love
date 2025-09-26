@@ -15,7 +15,7 @@ export async function messenger_reply() {
   const context = await browser.newContext({
     storageState: "fb-session.json",
   });
-  const page = await browser.newPage();
+  const page = await context.newPage();
   let v = messenger_reply_url();
   await page.goto(v);
   await command_line_read_empty();
