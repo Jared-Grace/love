@@ -819,7 +819,6 @@
   "as alias",
   "ad log",
   "a l log",
-  "o a",
   "fw list_sort_string list_sort_string_mapper",
   "de list_sort_string_mapper",
   "c list_sort_string list_sort_number_mapper",
@@ -2278,10 +2277,11 @@
   "s lower",
   "u sss",
   "a sss",
-  "a sss string_split_space"
+  "a sss string_split_space",
+  "o a"
  ],
  "marker_current": "1",
- "function_current": "reply",
+ "function_current": "function_alias_add",
  "terminal": false,
  "identifiers": {
   "log": [
