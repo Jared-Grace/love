@@ -27,8 +27,7 @@ export async function messenger_reply() {
   log(urls);
   async function lambda(url) {
     await http_sleep();
-    await page.goto(url);
-    await messenger_reply_wait(page);
+    await messenger_reply_messages(page, url);
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
