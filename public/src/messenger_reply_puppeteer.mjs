@@ -29,7 +29,7 @@ export async function messenger_reply_puppeteer() {
       console.log(txt);
     }
   }
-  console.log(`Found ${matches.length} matches`);
+  await matches[0].click();
   return;
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
