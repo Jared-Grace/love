@@ -31,7 +31,7 @@ export async function messenger_reply() {
   );
   await input.focus();
   let fn = page.keyboard.type.bind(page.keyboard);
-  await keyboard_type_delay("123", fn);
+  await keyboard_type_delay(pin, fn);
   await command_line_read_empty();
   await browser.close();
 }
