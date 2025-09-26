@@ -60,7 +60,7 @@ export async function messenger_reply_puppeteer() {
         } else {
           name = "them";
         }
-        list_add(list2, item);
+        list_add(list2, la);
       }
     }
   }
