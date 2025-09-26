@@ -15679,6 +15679,9 @@
   ],
   "messages_urls": [
    "messenger_reply_messages_urls_add_multiple"
+  ],
+  "transform_inner": [
+   "messenger_reply_messages_urls_add_multiple"
   ]
  },
  "functions": {
@@ -30001,6 +30004,7 @@
     "transform",
     "data",
     "messages_urls",
+    "transform_inner",
     "lambda",
     "url"
    ]
