@@ -15,8 +15,10 @@ export async function reply(a) {
   let b = ["en"];
   let concated = list_concat(language_codes, b);
   let languages = ebible_languages();
-  function lambda2(item) {}
-  let mapped = list_map(list2, lambda2);
+  function lambda2(c) {
+    lfi;
+  }
+  let mapped = list_map(concated, lambda2);
   return list;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
