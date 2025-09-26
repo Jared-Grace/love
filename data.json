@@ -4051,7 +4051,8 @@
    "ebible_verses_upload_name",
    "sandbox_2",
    "ebible_verse_new",
-   "folder_user_combine"
+   "folder_user_combine",
+   "messenger_reply"
   ],
   "watcher": [
    "watch"
@@ -4283,7 +4284,8 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "messenger_reply"
   ],
   "lj": [
    "watch",
@@ -4384,7 +4386,8 @@
    "list_join_space",
    "app_replace_rule_set",
    "sandbox_2",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "messenger_reply"
   ],
   "command_line_node_g": [
    "watch",
@@ -29529,6 +29532,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_join_space",
     "messenger_reply_messages_message",
     "list_map_property",
     "messenger_reply_unreplied",
@@ -29563,6 +29567,8 @@
     "skipped",
     "property_name",
     "mapped2",
+    "joined",
+    "args",
     "answer",
     "p",
     "focus",
