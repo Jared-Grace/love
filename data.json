@@ -15444,8 +15444,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply_login",
    "messenger_reply_playwright",
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
@@ -15544,7 +15543,8 @@
   ],
   "click": [
    "messenger_reply_playwright",
-   "messenger_reply_unread_click"
+   "messenger_reply_unread_click",
+   "messenger_reply"
   ],
   "puppeteer_matches": [
    "puppeteer_matches",
@@ -29503,7 +29503,7 @@
     "url",
     "link",
     "$",
-    "goto",
+    "click",
     "answer",
     "p",
     "focus",
