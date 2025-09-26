@@ -8,6 +8,6 @@ export function string_list_to(str) {
     return v;
   }
   let v2 = segmenter.segment(str);
-  const chars = Array.from(v2, lambda);
-  return chars;
+  const list = Array.from(v2, lambda);
+  return list;
 }
