@@ -5696,7 +5696,8 @@
    "string_is_assert_message",
    "null_not_is_assert",
    "object_property_exists_not_assert",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_alias_add"
   ],
   "b": [
    "assert",
@@ -5742,7 +5743,8 @@
    "each_pair_async",
    "ebible_version_books",
    "ebible_verse",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_alias_add"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -16879,6 +16881,7 @@
   },
   "function_alias_add": {
    "identifiers": [
+    "assert",
     "marker",
     "list_sort_string_size",
     "function_alias_generic",
@@ -16887,6 +16890,7 @@
     "function_alias_add",
     "first",
     "second",
+    "b",
     "list",
     "alias",
     "f_name",
