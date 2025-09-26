@@ -2298,7 +2298,8 @@
   "n reply_on_match",
   "s set",
   "p",
-  "rt"
+  "rt",
+  "s add,mult"
  ],
  "marker_current": "1",
  "function_current": "reply_on_match",
