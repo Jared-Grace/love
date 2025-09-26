@@ -15439,7 +15439,8 @@
    "messenger_reply_puppeteer",
    "messenger_reply_login",
    "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
@@ -15666,7 +15667,8 @@
    "puppeteer_hrefs_starts_with"
   ],
   "http_sleep": [
-   "http"
+   "http",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29463,6 +29465,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "http_sleep",
     "each_async",
     "command_line_read_empty",
     "messenger_reply_wait",
@@ -29488,6 +29491,7 @@
     "urls",
     "lambda",
     "url",
+    "goto",
     "answer",
     "p",
     "focus",
