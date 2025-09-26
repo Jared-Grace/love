@@ -15251,7 +15251,8 @@
    "keyboard_typing_delay"
   ],
   "delay_ms": [
-   "keyboard_typing_delay"
+   "keyboard_typing_delay",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29081,6 +29082,7 @@
     "str",
     "lambda",
     "item",
+    "delay_ms",
     "keyboard",
     "type",
     "list2",
