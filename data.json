@@ -14878,8 +14878,7 @@
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "ebible_references_parse_lines",
-   "reply"
+   "ebible_references_parse_lines"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -30228,7 +30227,6 @@
     "input",
     "reference",
     "list",
-    "bible_folders",
     "lines",
     "fn",
     "r",
