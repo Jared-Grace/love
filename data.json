@@ -15333,7 +15333,8 @@
    "messenger_reply"
   ],
   "command_line_read_empty": [
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29131,6 +29132,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "command_line_read_empty",
     "messenger_reply_url",
     "retry_on_error",
     "import_install",
