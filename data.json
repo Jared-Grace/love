@@ -3572,8 +3572,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "messenger_reply"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -10536,8 +10535,7 @@
    "list_last",
    "list_last_is",
    "marker_if_test_replace",
-   "js_expand_generic",
-   "messenger_reply"
+   "js_expand_generic"
   ],
   "identifier_if": [
    "js_return_name",
@@ -15868,6 +15866,9 @@
    "messenger_reply"
   ],
   "mine_last_lines": [
+   "messenger_reply"
+  ],
+  "mine_last_lines_last": [
    "messenger_reply"
   ]
  },
@@ -29704,8 +29705,7 @@
     "mine_last",
     "unreplied",
     "mine_last_lines",
-    "last",
-    "list",
+    "mine_last_lines_last",
     "property_name",
     "mapped2",
     "joined",
