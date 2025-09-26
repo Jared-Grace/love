@@ -3392,8 +3392,7 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert",
-   "reply_sequence"
+   "undefined_not_is_assert"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -6414,8 +6413,7 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic",
-   "reply_sequence"
+   "js_dollar_a_generic"
   ],
   "count": [
    "each_range",
@@ -6433,8 +6431,7 @@
    "number_pad",
    "retry",
    "ebible_chapter_code_to_name",
-   "messenger_reply_playwright",
-   "reply_sequence"
+   "messenger_reply_playwright"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -15824,6 +15821,9 @@
    "reply_sequence"
   ],
   "reply_sequence_matches": [
+   "reply_sequence"
+  ],
+  "ei": [
    "reply_sequence"
   ]
  },
@@ -30252,15 +30252,13 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
-    "each_range",
     "reply_sequence",
     "items",
     "v",
     "reply_sequence_matches",
     "input",
     "index",
-    "lambda2",
-    "count"
+    "ei"
    ]
   }
  },
