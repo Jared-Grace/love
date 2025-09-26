@@ -20,7 +20,7 @@ export async function messenger_reply_puppeteer() {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
-  const children = await el.$$('[data-virtualized="false"]');
+  const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
     function lambda(node) {
       let v2 = node.textContent;
