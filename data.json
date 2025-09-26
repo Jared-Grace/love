@@ -7757,7 +7757,8 @@
    "js_statement_return_empty_add",
    "range_from",
    "sandbox",
-   "js_statement_return_add"
+   "js_statement_return_add",
+   "reply"
   ],
   "formatted": [
    "function_format",
@@ -30188,6 +30189,7 @@
     "whitespace_normalize",
     "reply",
     "input",
+    "r",
     "reply_sequence"
    ]
   },
