@@ -1,3 +1,4 @@
+import { list_find_property } from "./list_find_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -16,7 +17,7 @@ export async function reply(a) {
   let concated = list_concat(language_codes, b);
   let languages = ebible_languages();
   function lambda2(c) {
-    lfi;
+    let first = list_find_property(list2, property_name, property_value);
   }
   let mapped = list_map(concated, lambda2);
   return list;
