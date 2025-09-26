@@ -7021,7 +7021,8 @@
    "sandbox_2",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10289,7 +10290,8 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property"
+   "list_filter_property",
+   "messenger_reply"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -14056,7 +14058,8 @@
    "ebible_index",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "string_take": [
    "string_take",
@@ -14447,7 +14450,8 @@
   ],
   "list_filter_starts_with": [
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "html_parse_list_to": [
    "html_parse_find_list_to",
@@ -29445,6 +29449,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_filter_starts_with",
     "messenger_reply_messages",
     "messenger_reply_unread_click",
     "marker",
@@ -29476,6 +29481,9 @@
     "hrefs",
     "$$eval",
     "prefix",
+    "filtered",
+    "mapped",
+    "book_code",
     "console",
     "p",
     "focus",
