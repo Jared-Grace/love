@@ -15883,12 +15883,6 @@
   "language_codes": [
    "reply",
    "reply_test"
-  ],
-  "input2": [
-   "reply"
-  ],
-  "language_codes2": [
-   "reply"
   ]
  },
  "functions": {
@@ -30273,11 +30267,9 @@
     "string_split_space",
     "whitespace_normalize",
     "reply",
+    "a",
     "input",
     "language_codes",
-    "input2",
-    "a",
-    "language_codes2",
     "reference",
     "b",
     "concated",
