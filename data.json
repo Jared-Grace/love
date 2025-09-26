@@ -12208,7 +12208,8 @@
    "app_replace_main",
    "app_replace_font_size_adjust",
    "app_replace_font_size",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply"
   ],
   "html_clear": [
    "app_refresh",
@@ -15324,10 +15325,12 @@
    "messenger_reply_login"
   ],
   "newContext": [
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply"
   ],
   "storageState": [
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply"
   ],
   "command_line_read_empty": [
    "messenger_reply_login"
@@ -29140,6 +29143,9 @@
     "launch",
     "headless",
     "command",
+    "context",
+    "newContext",
+    "storageState",
     "page",
     "newPage",
     "v",
