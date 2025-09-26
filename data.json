@@ -1274,7 +1274,6 @@
   "c list_first_second list_first_remaining",
   "s assert,size",
   "s reve",
-  "s equal",
   "s filter",
   "u lfp",
   "a lfp list_filter_property",
@@ -2253,7 +2252,8 @@
   "s messenger",
   "messenger_reply",
   "p",
-  "mr"
+  "mr",
+  "s equal"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
