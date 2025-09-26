@@ -22,7 +22,8 @@ export async function messenger_reply() {
     }
     let properties = object_properties(messages_urls);
     let skips = ["7632130373481137"];
-    let mapped = list_map(list2, function lambda4(item3) {});
+    function lambda4(item3) {}
+    let mapped = list_map(list2, lambda4);
     function lambda(item) {
       function lambda3(item2) {}
       let any = list_any(list, lambda3);
