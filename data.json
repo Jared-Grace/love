@@ -13693,7 +13693,8 @@
   ],
   "integer_random": [
    "integer_random",
-   "http"
+   "http",
+   "keyboard_typing_delay"
   ],
   "max": [
    "integer_random"
@@ -15209,7 +15210,8 @@
    "messenger_reply"
   ],
   "keyboard_typing_delay": [
-   "messenger_reply"
+   "messenger_reply",
+   "keyboard_typing_delay"
   ],
   "string_list_to": [
    "string_list_to",
@@ -15229,6 +15231,27 @@
   ],
   "segment": [
    "string_list_to"
+  ],
+  "characters_per_minute": [
+   "keyboard_typing_delay"
+  ],
+  "seconds_per_minute": [
+   "keyboard_typing_delay"
+  ],
+  "ms_per_second": [
+   "keyboard_typing_delay"
+  ],
+  "ms_per_minute": [
+   "keyboard_typing_delay"
+  ],
+  "ms_per_character": [
+   "keyboard_typing_delay"
+  ],
+  "high": [
+   "keyboard_typing_delay"
+  ],
+  "delay": [
+   "keyboard_typing_delay"
   ]
  },
  "functions": {
@@ -29148,6 +29171,20 @@
     "list",
     "Array",
     "from"
+   ]
+  },
+  "keyboard_typing_delay": {
+   "async": false,
+   "identifiers": [
+    "integer_random",
+    "keyboard_typing_delay",
+    "characters_per_minute",
+    "seconds_per_minute",
+    "ms_per_second",
+    "ms_per_minute",
+    "ms_per_character",
+    "high",
+    "delay"
    ]
   }
  },
