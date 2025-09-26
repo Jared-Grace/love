@@ -4185,8 +4185,7 @@
    "object_merge_generic",
    "list_set",
    "bind_property",
-   "undefined_not_is_assert",
-   "function_alias_add"
+   "undefined_not_is_assert"
   ],
   "name": [
    "watch",
@@ -16910,7 +16909,6 @@
     "alias",
     "f_name",
     "v",
-    "value",
     "lambda",
     "a",
     "exists",
