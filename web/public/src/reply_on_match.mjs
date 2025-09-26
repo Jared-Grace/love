@@ -1,4 +1,4 @@
 import { marker } from "./marker.mjs";
-export function reply_on_match() {
+export function reply_on_match(fn, on_match) {
   marker("1");
 }
