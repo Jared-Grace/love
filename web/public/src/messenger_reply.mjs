@@ -14,6 +14,7 @@ export async function messenger_reply() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
+  let messages = await messenger_reply_messages(page, v);
   function lambda3(links) {
     function lambda(link) {
       let v2 = link.href;
@@ -29,7 +30,6 @@ export async function messenger_reply() {
   console.log(hrefs);
   return;
   let v = messenger_reply_url();
-  let messages = await messenger_reply_messages(page, v);
   log(messages);
   return;
   await messenger_reply_unread_click(page);
