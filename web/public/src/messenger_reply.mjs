@@ -1,7 +1,4 @@
-import { each_async } from "./each_async.mjs";
-import { sleep } from "./sleep.mjs";
-import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
-import { string_list_to } from "./string_list_to.mjs";
+import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { retry_on_error } from "./retry_on_error.mjs";
@@ -26,13 +23,7 @@ export async function messenger_reply() {
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
   await input.focus();
-  let list = string_list_to("1");
-  async function lambda(item) {
-    let delay_ms = keyboard_typing_delay();
-    await sleep(delay_ms);
-    await page.keyboard.type(item);
-  }
-  await each_async(list, lambda);
+  await keyboard_type_delay("123", page.keyboard.type);
   await command_line_read_empty();
   await browser.close();
 }
