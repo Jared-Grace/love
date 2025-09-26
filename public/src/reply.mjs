@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
@@ -24,6 +25,7 @@ export async function reply(a) {
     list_add(outputs);
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
     let mapped = list_map_property(list, "text");
+    list_add_multiple(list2, items);
     return list;
   }
   let r = reply_on_match(fn, lambda);
