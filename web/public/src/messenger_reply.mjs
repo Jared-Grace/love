@@ -12,7 +12,7 @@ export async function messenger_reply() {
   }
   const command = "npx playwright install";
   async function lambda() {
-    log(message);
+    log("running: " + command);
     let stdout = await command_line(command);
     log(stdout);
     await lambda2();
