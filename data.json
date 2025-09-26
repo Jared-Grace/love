@@ -13857,7 +13857,8 @@
   "sleep": [
    "sleep",
    "retry",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "messenger_reply"
   ],
   "setTimeout": [
    "sleep"
@@ -15442,7 +15443,8 @@
    "messenger_reply_puppeteer",
    "messenger_reply_login",
    "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
@@ -15672,8 +15674,7 @@
    "puppeteer_hrefs_starts_with"
   ],
   "http_sleep": [
-   "http",
-   "messenger_reply"
+   "http"
   ]
  },
  "functions": {
@@ -29470,7 +29471,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "http_sleep",
     "each_async",
     "command_line_read_empty",
     "messenger_reply_wait",
@@ -29483,6 +29483,7 @@
     "keyboard_type_delay",
     "messenger_reply_url",
     "messenger_reply_user_data_path",
+    "sleep",
     "messenger_reply",
     "puppeteer",
     "browser",
@@ -29496,6 +29497,7 @@
     "urls",
     "lambda",
     "url",
+    "goto",
     "answer",
     "p",
     "focus",
