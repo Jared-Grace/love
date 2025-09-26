@@ -4948,7 +4948,8 @@
    "js_dollar_ie",
    "js_dollar_ib",
    "messenger_reply",
-   "bind"
+   "bind",
+   "bind_property"
   ],
   "colored": [
    "chalk_color",
@@ -6335,7 +6336,8 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind"
+   "bind",
+   "bind_property"
   ],
   "right": [
    "equal",
@@ -6354,7 +6356,8 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind"
+   "bind",
+   "bind_property"
   ],
   "eq": [
    "equal",
@@ -15352,7 +15355,8 @@
   ],
   "bind": [
    "messenger_reply",
-   "bind"
+   "bind",
+   "bind_property"
   ],
   "bind_property": [
    "bind_property"
@@ -29367,12 +29371,16 @@
   "bind_property": {
    "async": false,
    "identifiers": [
+    "bind",
     "object_property_get",
     "marker",
     "bind_property",
     "object",
     "property_name",
-    "value"
+    "value",
+    "fn",
+    "left",
+    "right"
    ]
   }
  },
