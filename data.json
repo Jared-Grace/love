@@ -3473,7 +3473,8 @@
    "function_list_generate",
    "sandbox",
    "ebible_references_parse_lines",
-   "app_reply_main"
+   "app_reply_main",
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -15225,7 +15226,6 @@
    "string_list_to"
   ],
   "chars": [
-   "string_list_to",
    "messenger_reply"
   ]
  },
@@ -29139,7 +29139,7 @@
     "v",
     "segment",
     "v2",
-    "chars",
+    "list",
     "Array",
     "from"
    ]
