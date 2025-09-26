@@ -25,6 +25,7 @@ export async function messenger_reply() {
   await messenger_reply_wait(page);
   let urls = await messenger_reply_messages_urls_add_page(page);
   async function lambda(url) {
+    let prefix = "https://www.facebook.com";
     const link = await page.$(`a[href="${url}"]`);
     await link.click();
     await sleep(1000000);
