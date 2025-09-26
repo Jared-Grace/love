@@ -2633,7 +2633,6 @@
    "messenger_reply",
    "messenger_reply_unread_click",
    "list_filter_ends_with_not_any",
-   "reply",
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert"
@@ -30133,7 +30132,6 @@
     "list_filter_empty_not_is",
     "string_split_space",
     "whitespace_normalize",
-    "marker",
     "reply",
     "input"
    ]
