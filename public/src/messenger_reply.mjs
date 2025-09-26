@@ -1,3 +1,4 @@
+import { assert } from "./assert.mjs";
 import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -35,6 +36,7 @@ export async function messenger_reply() {
   await keyboard_type_delay(pin, fn);
   const locator = page.locator("text=Unread");
   const count = await locator.count();
+  assert(b);
   console.log(`Found ${count} matches`);
   if (false) {
     await locator.nth(i).click();
