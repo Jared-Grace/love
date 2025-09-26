@@ -24,12 +24,17 @@ export async function messenger_reply_puppeteer() {
   for (const c of children) {
     const children2 = await c.$$('[role="none"]');
     for (const c of children2) {
+      function lambda2(node) {
+        let v3 = node.parentElement?.tagName;
+        return v3;
+      }
+      const parentTag = await el.evaluate(lambda2);
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
       }
       console.log(await c.evaluate(lambda));
-      ("");
+      log(message);
     }
   }
   return;
