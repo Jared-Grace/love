@@ -189,7 +189,8 @@
   "mr": "messenger_reply",
   "lfl": "list_filter",
   "ll": "list_last",
-  "str": "string_trim"
+  "str": "string_trim",
+  "sss": "string_split_space"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2276,7 +2277,8 @@
   "a str string_trim",
   "s lower",
   "u sss",
-  "a sss"
+  "a sss",
+  "a sss string_split_space"
  ],
  "marker_current": "1",
  "function_current": "reply",
