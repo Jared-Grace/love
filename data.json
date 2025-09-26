@@ -4714,7 +4714,8 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "messenger_reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4757,7 +4758,8 @@
    "list_remove_if_exists",
    "list_remove_multiple",
    "js_assign_combine",
-   "list_remove_property"
+   "list_remove_property",
+   "messenger_reply"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -6289,8 +6291,7 @@
    "js_dollar_a",
    "each_multiple_async",
    "sandbox_4_a",
-   "ebible_references_parse_lines",
-   "messenger_reply"
+   "ebible_references_parse_lines"
   ],
   "items": [
    "each_multiple",
@@ -29488,6 +29489,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_remove",
     "list_first",
     "list_empty_is",
     "http_sleep",
@@ -29518,8 +29520,6 @@
     "lambda",
     "url",
     "e",
-    "first",
-    "list",
     "prefix",
     "without",
     "selector",
@@ -29528,6 +29528,8 @@
     "click",
     "waitForSelector",
     "state",
+    "list",
+    "item",
     "answer",
     "p",
     "focus",
