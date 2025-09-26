@@ -3014,8 +3014,7 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property",
-   "messenger_reply_messages"
+   "bind_property"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4148,8 +4147,7 @@
    "object_property_set_exists_not",
    "object_merge_generic",
    "list_set",
-   "bind_property",
-   "messenger_reply_messages"
+   "bind_property"
   ],
   "name": [
    "watch",
@@ -6333,8 +6331,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "messenger_reply_messages"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -29890,9 +29887,6 @@
     "fb_path",
     "data",
     "message_urls",
-    "object",
-    "property_name",
-    "value",
     "s",
     "p",
     "waitForSelector",
