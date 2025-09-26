@@ -15309,7 +15309,8 @@
    "messenger_reply_puppeteer"
   ],
   "waitForSelector": [
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply"
   ],
   "timeout": [
    "messenger_reply_puppeteer"
@@ -29152,6 +29153,7 @@
     "storageState",
     "page",
     "newPage",
+    "waitForSelector",
     "v",
     "goto",
     "close"
