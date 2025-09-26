@@ -6,4 +6,5 @@ export async function messenger_reply_messages_urls_add_page(page) {
   let filtered = await puppeteer_hrefs_starts_with(page, prefix);
   list_remove_if_exists(filtered, "https://www.facebook.com/messages/new/");
   await messenger_reply_messages_urls_add_multiple(filtered);
+  return filtered;
 }
