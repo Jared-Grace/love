@@ -3532,8 +3532,7 @@
    "string_list_to",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with",
-   "messenger_reply"
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -29521,9 +29520,8 @@
     "item",
     "lambda3",
     "item2",
-    "any",
-    "list",
     "ew",
+    "any",
     "filtered",
     "first",
     "messages",
