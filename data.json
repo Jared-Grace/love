@@ -3915,8 +3915,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "reply"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30290,7 +30289,6 @@
     "reference",
     "b",
     "concated",
-    "message",
     "languages",
     "lambda2",
     "c",
