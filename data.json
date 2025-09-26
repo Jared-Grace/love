@@ -2278,8 +2278,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "messenger_reply_messages"
+   "retry_on_error"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2608,8 +2607,7 @@
    "bind_property",
    "messenger_reply_playwright",
    "messenger_reply",
-   "messenger_reply_unread_click",
-   "messenger_reply_messages"
+   "messenger_reply_unread_click"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -5013,8 +5011,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
    "js_dollar_if_call",
-   "keyboard_type_delay",
-   "messenger_reply_messages"
+   "keyboard_type_delay"
   ],
   "colored": [
    "chalk_color",
@@ -15363,8 +15360,7 @@
   "messenger_reply_user_data_path": [
    "messenger_reply_user_data_path",
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "messenger_reply_messages"
+   "messenger_reply"
   ],
   "keyboard_typing_delay": [
    "keyboard_typing_delay",
@@ -15427,22 +15423,19 @@
    "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_login",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "launch": [
    "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_login",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "headless": [
    "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_login",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "page": [
    "messenger_reply",
@@ -15457,8 +15450,7 @@
    "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_login",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "goto": [
    "messenger_reply",
@@ -15484,21 +15476,18 @@
    "messenger_reply",
    "messenger_reply_login",
    "messenger_reply_url",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "messenger_reply_puppeteer": [
    "messenger_reply_puppeteer"
   ],
   "puppeteer": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "messenger_reply_messages"
+   "messenger_reply"
   ],
   "userDataDir": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "messenger_reply_messages"
+   "messenger_reply"
   ],
   "waitForSelector": [
    "messenger_reply_puppeteer",
@@ -15514,19 +15503,16 @@
   "focus": [
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "keyboard": [
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "press": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "messenger_reply_messages"
+   "messenger_reply"
   ],
   "messenger_reply_login": [
    "messenger_reply_login"
@@ -15548,8 +15534,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply",
    "messenger_reply_playwright",
-   "keyboard_type_delay",
-   "messenger_reply_messages"
+   "keyboard_type_delay"
   ],
   "bind": [
    "bind",
@@ -15559,8 +15544,7 @@
    "bind_property",
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_playwright",
-   "messenger_reply_messages"
+   "messenger_reply_playwright"
   ],
   "pin": [
    "messenger_reply_playwright"
@@ -15669,8 +15653,7 @@
   ],
   "messenger_reply_unread_click": [
    "messenger_reply_unread_click",
-   "messenger_reply",
-   "messenger_reply_messages"
+   "messenger_reply"
   ],
   "command_line_log": [
    "command_line_log",
@@ -29958,27 +29941,14 @@
   "messenger_reply_messages": {
    "async": true,
    "identifiers": [
-    "messenger_reply_unread_click",
-    "marker",
-    "log",
     "string_empty_is",
     "string_trim",
     "list_adder_async",
     "list_empty_is",
-    "bind_property",
-    "keyboard_type_delay",
-    "messenger_reply_url",
-    "messenger_reply_user_data_path",
     "messenger_reply_messages",
-    "puppeteer",
-    "browser",
-    "launch",
-    "headless",
-    "userDataDir",
     "page",
-    "newPage",
-    "v",
     "goto",
+    "v",
     "s",
     "p",
     "waitForSelector",
@@ -30019,11 +29989,7 @@
     "v2",
     "textContent",
     "name",
-    "list",
-    "focus",
-    "fn",
-    "keyboard",
-    "press"
+    "list"
    ]
   }
  },
