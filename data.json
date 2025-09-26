@@ -710,7 +710,6 @@
   "de js_call_fill_test_test_test_test_test",
   "n function_name_combine_multiple",
   "na tasks_run tr",
-  "o s",
   "s task_",
   "s prop",
   "a op object_properties",
@@ -2280,10 +2279,11 @@
   "a sss",
   "a sss string_split_space",
   "o a",
-  "a sss "
+  "a sss ",
+  "o s"
  ],
  "marker_current": "1",
- "function_current": "function_alias_add",
+ "function_current": "functions_search",
  "terminal": false,
  "identifiers": {
   "log": [
