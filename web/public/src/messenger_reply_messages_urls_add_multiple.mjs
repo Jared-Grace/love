@@ -8,6 +8,9 @@ export async function messenger_reply_messages_urls_add_multiple(urls) {
   await file_json_transform(fb_path, transform);
   function transform(data) {
     let messages_urls = messenger_reply_messages_urls_get(data);
+    transform_inner(messages_urls);
+  }
+  function transform_inner(messages_urls) {
     function lambda(url) {
       object_property_set(messages_urls, url, 1);
     }
