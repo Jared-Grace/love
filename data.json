@@ -3063,7 +3063,8 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "reply"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4051,7 +4052,8 @@
    "js_dollar_if_call",
    "js_statement_return_add",
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "watch": [
    "watch"
@@ -4209,7 +4211,8 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "reply"
   ],
   "name": [
    "watch",
@@ -6422,7 +6425,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "reply"
   ],
   "each_pair": [
    "each_pair",
@@ -30305,6 +30309,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "object_property_set",
     "reply_on_match",
     "ebible_languages_to_bible_folders",
     "log",
@@ -30327,7 +30332,10 @@
     "fn",
     "lambda",
     "list",
-    "r"
+    "r",
+    "object",
+    "property_name",
+    "value"
    ]
   },
   "undefined_not_is_assert": {
