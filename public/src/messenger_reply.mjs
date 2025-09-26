@@ -1,3 +1,4 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { messenger_reply_unreplied } from "./messenger_reply_unreplied.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
@@ -31,6 +32,7 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let skipped = messenger_reply_unreplied(messages);
+    let mapped2 = list_map_property(list, property_name);
     log(skipped);
     let answer = await command_line_read_empty();
   }
