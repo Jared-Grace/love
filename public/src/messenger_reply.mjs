@@ -1,6 +1,4 @@
-import { puppeteer_hrefs_starts_with } from "./puppeteer_hrefs_starts_with.mjs";
-import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
-import { messenger_reply_messages_urls_add_multiple } from "./messenger_reply_messages_urls_add_multiple.mjs";
+import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_unread_click } from "./messenger_reply_unread_click.mjs";
 import { marker } from "./marker.mjs";
@@ -20,10 +18,7 @@ export async function messenger_reply() {
   let v = messenger_reply_url();
   let messages = await messenger_reply_messages(page, v);
   await messenger_reply_unread_click(page);
-  let prefix = "https://www.facebook.com/messages/";
-  let filtered = await puppeteer_hrefs_starts_with(page, prefix);
-  list_remove_if_exists(filtered, "https://www.facebook.com/messages/new/");
-  await messenger_reply_messages_urls_add_multiple(filtered);
+  await messenger_reply_messages_urls_add_page(page);
   return;
   log(messages);
   return;
