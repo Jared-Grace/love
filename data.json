@@ -5737,7 +5737,8 @@
    "string_is_assert_message",
    "null_not_is_assert",
    "object_property_exists_not_assert",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "list_concat"
   ],
   "b": [
    "assert",
@@ -10158,7 +10159,8 @@
    "app_new_step_2"
   ],
   "b2": [
-   "js_identifiers_to_names"
+   "js_identifiers_to_names",
+   "list_concat"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -20896,11 +20898,13 @@
   },
   "list_concat": {
    "identifiers": [
+    "assert",
     "list_concat",
     "a",
     "b",
     "concated",
-    "concat"
+    "concat",
+    "b2"
    ],
    "async": false
   },
