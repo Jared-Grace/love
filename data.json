@@ -2262,8 +2262,8 @@
   "s empty,read",
   "is sleep",
   "p",
-  "mr",
-  "s list_add"
+  "s list_add",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
