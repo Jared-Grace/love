@@ -15872,6 +15872,9 @@
   ],
   "mine_last_lines_last": [
    "messenger_reply"
+  ],
+  "language_codes": [
+   "reply"
   ]
  },
  "functions": {
@@ -30254,6 +30257,7 @@
     "whitespace_normalize",
     "reply",
     "input",
+    "language_codes",
     "reference",
     "list",
     "fn",
