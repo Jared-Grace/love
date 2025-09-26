@@ -1,3 +1,4 @@
+import { object_property_set } from "./object_property_set.mjs";
 import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { messenger_reply_messages_message } from "./messenger_reply_messages_message.mjs";
@@ -34,12 +35,14 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_not_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    async function lambda(messages2) {}
-    await messenger_reply_messages_transform(lambda);
     let skipped = messenger_reply_unreplied(messages);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(skipped, property_name);
     let joined = list_join_space(mapped2);
+    async function lambda(messages2) {
+      object_property_set(object, property_name2, value);
+    }
+    await messenger_reply_messages_transform(lambda);
     log(joined);
     let answer = await command_line_read_empty();
   }
