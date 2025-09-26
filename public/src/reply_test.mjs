@@ -12,7 +12,7 @@ export async function reply_test() {
   let first = list_first(properties);
   let input = await reply({
     input: first,
-    language_codes: "ur",
+    language_codes: ["ur"],
   });
   return input;
 }
