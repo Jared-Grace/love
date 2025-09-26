@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
@@ -15,6 +16,20 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
   });
+  const elements = await page.$$("span");
+  const matches = [];
+  for (const el of elements) {
+    function lambda(n) {
+      let v2 = n.textContent;
+      return v2;
+    }
+    const txt = await el.evaluate(lambda);
+    if (txt.includes("Unread")) {
+      matches.push(el);
+    }
+  }
+  console.log(`Found ${matches.length} matches`);
+  return;
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay("Greetings!", fn);
