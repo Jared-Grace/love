@@ -3060,7 +3060,8 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "reply"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -6361,7 +6362,8 @@
    "sandbox_4_a",
    "ebible_references_parse_lines",
    "messenger_reply",
-   "reply_test"
+   "reply_test",
+   "reply"
   ],
   "items": [
    "each_multiple",
@@ -9785,7 +9787,8 @@
    "list_remove_property",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "app_reply_main"
+   "app_reply_main",
+   "reply"
   ],
   "nameds": [
    "js_declaration_single"
@@ -10716,7 +10719,8 @@
    "list_find_property",
    "object_property_equals",
    "object_property_equals_lambda",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "reply"
   ],
   "list_find": [
    "list_find",
@@ -11994,7 +11998,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -15892,9 +15897,6 @@
   "language_codes": [
    "reply",
    "reply_test"
-  ],
-  "lfi": [
-   "reply"
   ]
  },
  "functions": {
@@ -30269,6 +30271,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "list_find_property",
     "list_map",
     "ebible_languages",
     "object_property_get",
@@ -30289,7 +30292,10 @@
     "languages",
     "lambda2",
     "c",
-    "lfi",
+    "first",
+    "list2",
+    "property_name",
+    "property_value",
     "mapped",
     "list",
     "fn",
