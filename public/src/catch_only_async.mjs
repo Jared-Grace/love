@@ -1,16 +1,5 @@
-import { json_to } from "./json_to.mjs";
-import { log } from "./log.mjs";
+import { noop } from "./noop.mjs";
+import { catch_only_run_async } from "./catch_only_run_async.mjs";
 export async function catch_only_async(lambda, message_fragment) {
-  try {
-    await lambda();
-  } catch (e) {
-    let json = json_to(e);
-    const message = e.message;
-    if (
-      !message.includes(message_fragment) &&
-      !json.includes(message_fragment)
-    ) {
-      throw e;
-    }
-  }
+  await catch_only_run_async(lambda, message_fragment, noop);
 }
