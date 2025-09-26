@@ -1,4 +1,3 @@
-import { sleep } from "./sleep.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
