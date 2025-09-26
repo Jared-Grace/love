@@ -2223,7 +2223,6 @@
   "s deploy",
   "as deploy",
   "firebase_deploy_function app_reply_main",
-  "n messenger_reply",
   "s import",
   "messenger_reply_user_data_path",
   "pp",
@@ -2246,10 +2245,12 @@
   "messenger_reply",
   "s readline",
   "s line",
-  "command_line_read"
+  "command_line_read",
+  "n messenger_reply",
+  "n messenger_reply_login"
  ],
  "marker_current": "1",
- "function_current": "catch_only_run_async",
+ "function_current": "messenger_reply_login",
  "terminal": false,
  "identifiers": {
   "log": [
