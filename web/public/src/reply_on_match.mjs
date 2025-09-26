@@ -5,7 +5,7 @@ export function reply_on_match(wrapped_fn, on_match) {
     let matches = wrapped_fn(a);
     if (matches) {
       let outputs = object_property_get(a, "outputs");
-      list_add(list, item);
+      list_add(outputs, on_match);
     }
   };
   return fn;
