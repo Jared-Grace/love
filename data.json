@@ -11533,7 +11533,8 @@
    "function_aliases_restore"
   ],
   "sei": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "messenger_reply_puppeteer"
   ],
   "lf": [
    "function_aliases_restore"
@@ -29480,6 +29481,7 @@
     "evaluate",
     "message",
     "lambda",
+    "sei",
     "lambda4",
     "imgs",
     "lambda3",
