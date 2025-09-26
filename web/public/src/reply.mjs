@@ -30,7 +30,7 @@ export async function reply(a) {
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
   let result = r({
-    lines: [],
+    outputs: [],
     input,
   });
   return result;
