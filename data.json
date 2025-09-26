@@ -2233,7 +2233,6 @@
   "s string,list",
   "n string_list_to",
   "ps",
-  "p",
   "keyboard_typing_delay",
   "mr",
   "s finally",
@@ -2242,6 +2241,7 @@
   "u cl",
   "a cl command_line",
   "messenger_reply",
+  "p",
   "s retry"
  ],
  "marker_current": "1",
