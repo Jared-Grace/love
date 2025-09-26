@@ -15423,6 +15423,9 @@
   ],
   "conversation": [
    "messenger_reply_puppeteer"
+  ],
+  "children2": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29411,6 +29414,7 @@
     "children",
     "$$",
     "c",
+    "children2",
     "lambda",
     "node",
     "v2",
@@ -29498,7 +29502,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-26T15:04:46.365Z",
+ "git_push_when": "2025-09-26T16:05:12.893Z",
  "error_attention": null,
  "app_current": "replace"
 }
