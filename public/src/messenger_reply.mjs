@@ -11,6 +11,9 @@ export async function messenger_reply() {
   }
   const command = "npx playwright install";
   await retry_on_error(command, lambda2, command);
+  const context = await browser.newContext({
+    storageState: "fb-session.json",
+  });
   const page = await browser.newPage();
   let v = messenger_reply_url();
   await page.goto(v);
