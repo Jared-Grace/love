@@ -188,7 +188,8 @@
   "cl": "command_line",
   "mr": "messenger_reply",
   "lfl": "list_filter",
-  "ll": "list_last"
+  "ll": "list_last",
+  "str": "string_trim"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2272,7 +2273,8 @@
   "mr",
   "s reply",
   "n reply",
-  "s normal"
+  "s normal",
+  "a str string_trim"
  ],
  "marker_current": "1",
  "function_current": "reply",
