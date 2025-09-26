@@ -15878,7 +15878,8 @@
    "messenger_reply"
   ],
   "language_codes": [
-   "reply"
+   "reply",
+   "reply_test"
   ]
  },
  "functions": {
@@ -30313,7 +30314,8 @@
     "m",
     "properties",
     "first",
-    "input"
+    "input",
+    "language_codes"
    ]
   },
   "reply_sequence": {
