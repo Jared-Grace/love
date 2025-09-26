@@ -3242,7 +3242,6 @@
    "catch_only_run_async",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "keyboard_type_delay",
    "retry_on_error",
    "messenger_reply_messages"
@@ -3349,7 +3348,6 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
    "retry_on_error",
@@ -3522,7 +3520,6 @@
    "app_reply_main",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "js_statement_return_add",
    "keyboard_type_delay"
   ],
@@ -4236,7 +4233,6 @@
    "app_message",
    "function_list_generate",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "js_dollar_if_call",
    "messenger_reply_messages"
   ],
@@ -4774,7 +4770,6 @@
    "data_file_update_inner",
    "list_empty_is_assert",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "e": [
@@ -4805,7 +4800,6 @@
    "list_empty_is_assert",
    "catch_only_run_async",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "object_property_delete": [
@@ -5039,7 +5033,6 @@
    "retry",
    "function_list_generate",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "value2": [
@@ -5273,7 +5266,6 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "a": [
@@ -5590,7 +5582,6 @@
    "string_list_to",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "command_line_read_empty",
    "messenger_reply_messages"
   ],
@@ -5608,7 +5599,6 @@
    "visit_filter_recursive_async",
    "folder_read_async",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "data_file_update_all": [
@@ -7500,7 +7490,6 @@
    "retry",
    "ebible_references_parse_lines",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "function_dependencies": [
@@ -7545,7 +7534,6 @@
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "node": [
@@ -7612,7 +7600,6 @@
    "js_dollar_l",
    "js_statement_expression_get",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "function_dependencies_code": [
@@ -9866,7 +9853,6 @@
    "string_empty_is",
    "string_empty_not_is",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "string_prefix_without": [
@@ -10115,7 +10101,6 @@
    "promise_wrap",
    "ebible_references_parse_lines",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "bs": [
@@ -10138,7 +10123,6 @@
    "app_reply_main",
    "ebible_references_parse_lines",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "defineds": [
@@ -10269,7 +10253,6 @@
    "command_line_cmd",
    "roman_to_integer",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "js_marker_named_ast": [
@@ -10337,21 +10320,18 @@
    "uuid",
    "roman_to_integer",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "v5": [
    "js_marker_name_get",
    "roman_to_integer",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "v6": [
    "js_marker_name_get",
    "roman_to_integer",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "a_first": [
@@ -10745,7 +10725,6 @@
    "folder_read_async",
    "roman_to_integer",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "list_map_index": [
@@ -11211,7 +11190,6 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "c": [
@@ -11226,7 +11204,6 @@
    "html_parse_classes_preview",
    "sandbox_2",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "found": [
@@ -11974,7 +11951,6 @@
    "html_update_dev",
    "html_update_public",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "app_code": [
@@ -12656,7 +12632,6 @@
    "js_calls_to_each",
    "app_reply_main",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "sliced": [
@@ -14007,7 +13982,6 @@
   "$": [
    "html_parse_list_text_to",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "cheerio": [
@@ -15452,7 +15426,6 @@
    "messenger_reply_playwright"
   ],
   "goto": [
-   "messenger_reply",
    "messenger_reply_puppeteer",
    "messenger_reply_login",
    "messenger_reply_playwright",
@@ -15490,13 +15463,11 @@
   ],
   "waitForSelector": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_playwright",
    "messenger_reply_messages"
   ],
   "timeout": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "focus": [
@@ -15565,13 +15536,11 @@
   "$$": [
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "textContent": [
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "txt": [
@@ -15580,7 +15549,6 @@
   "evaluate": [
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "messenger_reply_puppeteer_unread_click": [
@@ -15588,62 +15556,50 @@
   ],
   "conversation": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "children2": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "parentElement": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "tagName": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "parentTag": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "imgs": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "img": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "getComputedStyle": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "borderRadius": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "$$eval": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "c2": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "messenger_reply_messages"
   ],
   "string_trim": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "string_trim",
    "messenger_reply_messages"
   ],
@@ -15662,10 +15618,12 @@
    "retry_on_error"
   ],
   "messenger_reply_messages": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "messages": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29463,13 +29421,10 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages",
     "messenger_reply_unread_click",
     "marker",
     "log",
-    "string_empty_is",
-    "string_trim",
-    "list_adder_async",
-    "list_empty_is",
     "bind_property",
     "keyboard_type_delay",
     "messenger_reply_url",
@@ -29483,48 +29438,9 @@
     "page",
     "newPage",
     "v",
-    "goto",
-    "s",
-    "p",
-    "waitForSelector",
-    "timeout",
-    "conversation",
-    "$",
-    "lambda6",
-    "la",
-    "children",
-    "$$",
-    "c",
-    "children2",
-    "c2",
-    "lambda2",
-    "node",
-    "v3",
-    "parentElement",
-    "tagName",
-    "parentTag",
-    "evaluate",
+    "messages",
     "message",
-    "lambda",
-    "e",
-    "lambda4",
-    "imgs",
-    "lambda3",
-    "img",
-    "v4",
-    "getComputedStyle",
-    "borderRadius",
-    "lambda5",
-    "v6",
-    "src",
-    "v5",
-    "filter",
-    "map",
-    "$$eval",
-    "v2",
-    "textContent",
-    "name",
-    "list",
+    "p",
     "focus",
     "fn",
     "keyboard",
