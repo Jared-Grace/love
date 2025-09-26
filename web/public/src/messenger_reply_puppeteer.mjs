@@ -37,7 +37,11 @@ export async function messenger_reply_puppeteer() {
           let v4 = getComputedStyle(img).borderRadius === "50%";
           return v4;
         }
-        let v5 = imgs.filter(lambda3);
+        function lambda5(img) {
+          let v6 = img.src;
+          return v6;
+        }
+        let v5 = imgs.filter(lambda3).map(lambda5);
         return v5;
       }
       const imgs = await c.$$eval("img", lambda4);
