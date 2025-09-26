@@ -29,9 +29,6 @@ export async function reply(a) {
   input = string_split_space(input);
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
-  let result = r({
-    outputs: [],
-    input,
-  });
+  let result = r(a);
   return result;
 }
