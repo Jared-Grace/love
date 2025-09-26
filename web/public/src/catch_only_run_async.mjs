@@ -1,7 +1,7 @@
 import { marker } from "./marker.mjs";
 import { not } from "./not.mjs";
 import { json_to } from "./json_to.mjs";
-export async function catch_only_run_async(lambda, message_fragment) {
+export async function catch_only_run_async(lambda, message_fragment, on_error) {
   marker("1");
   try {
     await lambda();
@@ -13,5 +13,6 @@ export async function catch_only_run_async(lambda, message_fragment) {
     if (not(a) && not(a2)) {
       throw e;
     }
+    await on_error();
   }
 }
