@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
@@ -22,6 +23,7 @@ export async function messenger_reply() {
   await messenger_reply_unread_click(page);
   await messenger_reply_wait(page);
   let urls = await messenger_reply_messages_urls_add_page(page);
+  await each_async(list, async function lambda(item) {});
   log(urls);
   let answer = await command_line_read_empty();
   return;
