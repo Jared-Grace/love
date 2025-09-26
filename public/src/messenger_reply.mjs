@@ -15,7 +15,6 @@ export async function messenger_reply() {
   let p = await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
   });
-  await sleep(2000);
   await p.focus();
   await page.keyboard.type("Greetings!");
   await page.keyboard.press("Enter");
