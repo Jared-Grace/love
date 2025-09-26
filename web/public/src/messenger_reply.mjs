@@ -24,8 +24,8 @@ export async function messenger_reply() {
   await messenger_reply_unread_click(page);
   await messenger_reply_wait(page);
   let urls = await messenger_reply_messages_urls_add_page(page);
-  log(urls);
   async function lambda(url) {
+    const link = await page.$(`a[href="${v}"]`);
     await page.goto(url);
     await sleep(1000000);
   }
