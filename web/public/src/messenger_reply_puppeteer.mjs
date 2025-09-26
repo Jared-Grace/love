@@ -23,7 +23,7 @@ export async function messenger_reply_puppeteer() {
   );
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
-    const children2 = await conversation.$$('[role="none"]');
+    const children2 = await c.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
       let e = list_empty_is(elements);
