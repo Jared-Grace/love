@@ -17,8 +17,17 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
-  const el = await page.$('[aria-label^="Messages in conversation with"]');
-  log(el);
+  let conversation = await page.$(
+    '[aria-label^="Messages in conversation with"]',
+  );
+  const children = await el.$$('[data-virtualized="false"]');
+  for (const c of children) {
+    function lambda(node) {
+      let v2 = node.textContent;
+      return v2;
+    }
+    console.log(await c.evaluate(lambda));
+  }
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
