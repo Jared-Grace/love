@@ -3803,7 +3803,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -13621,7 +13622,8 @@
   "str": [
    "string_letters_only",
    "whitespace_normalize",
-   "string_list_to"
+   "string_list_to",
+   "reply"
   ],
   "text2": [
    "app_reply_main"
@@ -14343,7 +14345,8 @@
    "ebible_verses",
    "ebible_chapter_text",
    "list_map_whitespace_normalize",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "reply"
   ],
   "trim": [
    "whitespace_normalize",
@@ -30109,9 +30112,12 @@
   "reply": {
    "async": false,
    "identifiers": [
+    "whitespace_normalize",
     "marker",
     "reply",
-    "input"
+    "input",
+    "v",
+    "str"
    ]
   }
  },
