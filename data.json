@@ -4423,7 +4423,8 @@
    "data_value",
    "file_read_json",
    "function_alias_add_generic",
-   "data_file_update_inner"
+   "data_file_update_inner",
+   "messenger_reply"
   ],
   "file_path": [
    "data_file_update",
@@ -4460,7 +4461,8 @@
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "object_property_get": [
    "chalk_color",
@@ -5903,7 +5905,8 @@
    "data_all",
    "data_get",
    "file_read_json",
-   "firebase_service_account"
+   "firebase_service_account",
+   "messenger_reply"
   ],
   "data_get": [
    "data_get",
@@ -29158,6 +29161,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "file_read_json",
     "bind",
     "folder_user_docs_path",
     "keyboard_type_delay",
@@ -29167,6 +29171,8 @@
     "import_install",
     "messenger_reply",
     "p",
+    "data",
+    "file_path",
     "chromium",
     "firefox",
     "webkit",
