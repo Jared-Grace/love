@@ -2268,7 +2268,8 @@
    "search_generic",
    "js_log_remove",
    "app_reply_main",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3225,7 +3226,8 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5525,7 +5527,8 @@
    "ebible_references_parse_god_created_man_why",
    "emoji_handshake",
    "roman_to_integer",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "readdirSync": [
    "folder_read"
@@ -5765,7 +5768,8 @@
    "js_node_types_includes",
    "list_remove_if_exists",
    "app_reply_main",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -7188,7 +7192,8 @@
    "round",
    "ebible_chapter_text",
    "ebible_version_books",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "messenger_reply_puppeteer"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -10454,7 +10459,8 @@
    "js_visit_types"
   ],
   "matches": [
-   "js_visit_match"
+   "js_visit_match",
+   "messenger_reply_puppeteer"
   ],
   "v_match": [
    "js_visit_match",
@@ -10478,7 +10484,8 @@
    "list_add",
    "list_add_multiple",
    "http",
-   "path_join"
+   "path_join",
+   "messenger_reply_puppeteer"
   ],
   "list_adder_generic": [
    "list_adder",
@@ -10674,7 +10681,8 @@
    "list_size",
    "string_size",
    "path_join",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_puppeteer"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -10731,7 +10739,8 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -12981,7 +12990,8 @@
    "js_calls_to_each",
    "js_auto_transform_new_inner",
    "js_identifier_defineds",
-   "marker_next_declare_single_init_elements"
+   "marker_next_declare_single_init_elements",
+   "messenger_reply_puppeteer"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -13860,7 +13870,8 @@
    "html_parse_list_text_to"
   ],
   "el": [
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "messenger_reply_puppeteer"
   ],
   "$": [
    "html_parse_list_text_to"
@@ -15380,6 +15391,18 @@
   ],
   "click": [
    "messenger_reply"
+  ],
+  "$$": [
+   "messenger_reply_puppeteer"
+  ],
+  "textContent": [
+   "messenger_reply_puppeteer"
+  ],
+  "txt": [
+   "messenger_reply_puppeteer"
+  ],
+  "evaluate": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29343,6 +29366,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "log",
     "bind_property",
     "keyboard_type_delay",
     "messenger_reply_url",
@@ -29361,6 +29385,20 @@
     "p",
     "waitForSelector",
     "timeout",
+    "elements",
+    "$$",
+    "matches",
+    "el",
+    "lambda",
+    "n",
+    "v2",
+    "textContent",
+    "txt",
+    "evaluate",
+    "includes",
+    "push",
+    "console",
+    "length",
     "focus",
     "fn",
     "keyboard",
