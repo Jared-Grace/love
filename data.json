@@ -15640,7 +15640,6 @@
    "messenger_reply"
   ],
   "messenger_reply_messages_urls_add": [
-   "messenger_reply_messages",
    "messenger_reply_messages_urls_add"
   ],
   "links": [
@@ -15656,7 +15655,8 @@
    "messenger_reply_messages_urls_add"
   ],
   "messenger_reply_messages_urls_add_multiple": [
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_messages_urls_add",
+   "messenger_reply_messages"
   ]
  },
  "functions": {
@@ -29908,7 +29908,7 @@
   "messenger_reply_messages": {
    "async": true,
    "identifiers": [
-    "messenger_reply_messages_urls_add",
+    "messenger_reply_messages_urls_add_multiple",
     "string_empty_is",
     "string_trim",
     "list_adder_async",
