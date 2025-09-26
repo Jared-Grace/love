@@ -1,3 +1,4 @@
+import { list_any } from "./list_any.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -25,6 +26,7 @@ export async function messenger_reply_puppeteer() {
     const children2 = await conversation.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
+      let any = list_any(list, function lambda2(item) {});
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
