@@ -1,3 +1,4 @@
+import { messenger_reply_messages_urls_add_multiple } from "./messenger_reply_messages_urls_add_multiple.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_unread_click } from "./messenger_reply_unread_click.mjs";
@@ -30,7 +31,8 @@ export async function messenger_reply() {
   }
   const hrefs = await page.$$eval("a", lambda3);
   let prefix = "https://www.facebook.com/messages/";
-  let filtered = list_filter_starts_with(hrefs, prefix);messenger_reply_messages_urls_add_multiple
+  let filtered = list_filter_starts_with(hrefs, prefix);
+  await messenger_reply_messages_urls_add_multiple(urls);
   console.log(filtered);
   return;
   log(messages);
