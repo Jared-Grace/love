@@ -2241,7 +2241,8 @@
   "c catch_only_async catch_only_run_async",
   "u cl",
   "a cl command_line",
-  "messenger_reply"
+  "messenger_reply",
+  "s retry"
  ],
  "marker_current": "1",
  "function_current": "catch_only_run_async",
