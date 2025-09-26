@@ -1,4 +1,4 @@
-import { object_property_set } from "./object_property_set.mjs";
+import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { reply_on_match } from "./reply_on_match.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
 import { log } from "./log.mjs";
@@ -30,6 +30,6 @@ export async function reply(a) {
   input = string_split_space(input);
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
-  object_property_set(object, property_name, value);
+  object_property_set_exists_not(a, "tokens", input);
   r(a);
 }
