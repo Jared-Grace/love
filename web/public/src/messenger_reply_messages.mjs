@@ -1,7 +1,6 @@
+import { file_json_transform } from "./file_json_transform.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
@@ -10,10 +9,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   let fb_path = folder_user_docs_path("fb.json");
-  let data = await file_read_json(fb_path);
-  let message_urls = object_property_initialize(data, "message_urls", {});
-  object_property_set(message_urls, url, 1);
-  await file_overwrite_json(fb_path, data);
+  await file_json_transform(fb_path, transform);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
     timeout: 10000,
@@ -21,6 +17,10 @@ export async function messenger_reply_messages(page, url) {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
+  function transform(data) {
+    let message_urls = object_property_initialize(data, "message_urls", {});
+    object_property_set(message_urls, url, 1);
+  }
   async function lambda6(la) {
     const children = await conversation.$$('[data-virtualized="false"]');
     for (const c of children) {
