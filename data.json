@@ -3249,7 +3249,6 @@
    "list_map_prefix_without_any",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
    "range_from",
    "each_range_from",
@@ -4739,7 +4738,6 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
    "list_map_prefix_any",
    "range_from",
    "each_multiple_async",
@@ -10334,7 +10332,6 @@
    "html_parse_find_a_href_starts_with",
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
    "list_filter_property",
    "puppeteer_hrefs_starts_with",
    "messenger_reply",
@@ -28468,9 +28465,6 @@
     "list_map",
     "list_map_filter_string_empty_not_is",
     "list",
-    "lambda",
-    "item",
-    "filtered",
     "mapped4"
    ]
   },
