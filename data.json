@@ -15247,6 +15247,9 @@
   ],
   "command_line_log": [
    "messenger_reply"
+  ],
+  "error_text": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29056,6 +29059,7 @@
     "lambda2",
     "launch",
     "headless",
+    "error_text",
     "command",
     "lambda",
     "stdout",
