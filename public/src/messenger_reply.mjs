@@ -11,7 +11,7 @@ export async function messenger_reply() {
   let ms_per_character = ms_per_minute / characters_per_minute;
   let high = ms_per_character * 1.5;
   let r = integer_random(ms_per_character, high);
-  log(message);
+  log(r);
   return;
   const puppeteerModule = await import("puppeteer");
   const puppeteer = puppeteerModule.default ?? puppeteerModule;
