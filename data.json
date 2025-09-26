@@ -2310,8 +2310,7 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses",
-   "messenger_reply_unreplied"
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -30325,7 +30324,6 @@
   "messenger_reply_unreplied": {
    "async": false,
    "identifiers": [
-    "log",
     "list_skip",
     "list_index_of",
     "list_last",
