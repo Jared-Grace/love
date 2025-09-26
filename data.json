@@ -6304,7 +6304,8 @@
    "object_properties",
    "object_properties_delete",
    "tasks_run",
-   "object_merge_generic"
+   "object_merge_generic",
+   "messenger_reply"
   ],
   "each_object": [
    "each_object",
@@ -7131,7 +7132,8 @@
    "js_dollar_new",
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
-   "js_property_parse_expression_add"
+   "js_property_parse_expression_add",
+   "messenger_reply"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11011,7 +11013,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "messenger_reply"
   ],
   "Object": [
    "object_properties",
@@ -29472,6 +29475,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "object_properties",
     "messenger_reply_messages_urls_transform",
     "messenger_reply_messages",
     "messenger_reply_url",
@@ -29488,6 +29492,8 @@
     "messages_urls",
     "transform_inner",
     "mu",
+    "properties",
+    "obj",
     "v",
     "messages",
     "page2",
