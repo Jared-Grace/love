@@ -2234,7 +2234,8 @@
   "fd messenger_reply",
   "p",
   "messenger_reply",
-  "s random"
+  "s random",
+  "s string,list"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
