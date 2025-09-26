@@ -4026,7 +4026,8 @@
    "object_merge_generic",
    "js_dollar_if_call",
    "js_statement_return_add",
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply"
   ],
   "watch": [
    "watch"
@@ -4184,7 +4185,8 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "messenger_reply"
   ],
   "name": [
    "watch",
@@ -6373,7 +6375,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "messenger_reply"
   ],
   "each_pair": [
    "each_pair",
@@ -15787,6 +15790,9 @@
    "messenger_reply_messages_transform"
   ],
   "messages2": [
+   "messenger_reply"
+  ],
+  "property_name2": [
    "messenger_reply"
   ]
  },
@@ -29583,6 +29589,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "object_property_set",
     "messenger_reply_messages_transform",
     "list_join_space",
     "messenger_reply_messages_message",
@@ -29616,12 +29623,15 @@
     "filtered",
     "first",
     "messages",
-    "lambda",
-    "messages2",
     "skipped",
     "property_name",
     "mapped2",
     "joined",
+    "lambda",
+    "messages2",
+    "object",
+    "property_name2",
+    "value",
     "answer",
     "p",
     "focus",
