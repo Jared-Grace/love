@@ -30,7 +30,7 @@ export async function messenger_reply_puppeteer() {
       }
       const parentTag = await c.evaluate(lambda2);
       if (parentTag === "H5") {
-        return;
+        continue;
       }
       function lambda(node) {
         let v2 = node.textContent;
