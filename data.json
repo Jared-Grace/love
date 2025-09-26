@@ -3833,7 +3833,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -14618,7 +14619,8 @@
    "ebible_references_parse_god_created_man_why",
    "bible_verses_encouragement_generate",
    "sandbox",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -30249,6 +30251,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "ebible_folder_english",
     "ebible_references_parse_lines",
     "reply_sequence",
     "list_map_lower",
@@ -30259,6 +30262,7 @@
     "input",
     "language_codes",
     "reference",
+    "v",
     "list",
     "fn",
     "r",
