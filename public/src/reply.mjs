@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
@@ -15,6 +16,7 @@ export async function reply(a) {
   let reference = "Isaiah 26:9";
   let b = ["en"];
   let concated = list_concat(language_codes, b);
+  log(message);
   let languages = ebible_languages();
   function lambda2(c) {
     let item = list_find_property(languages, "language_code", c);

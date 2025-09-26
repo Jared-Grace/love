@@ -2286,7 +2286,6 @@
   "n reply_test",
   "reply_test",
   "s lower",
-  "rt",
   "n reply_sequence",
   "u ei",
   "a ei each_index",
@@ -2296,7 +2295,8 @@
   "mr",
   "s language",
   "as find",
-  "a lfdp list_find_property"
+  "a lfdp list_find_property",
+  "rt"
  ],
  "marker_current": "1",
  "function_current": "reply_sequence",
