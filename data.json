@@ -3861,8 +3861,7 @@
    "messenger_reply_puppeteer",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "puppeteer_hrefs_starts_with"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29971,8 +29970,7 @@
     "page",
     "prefix",
     "hrefs",
-    "filtered",
-    "message"
+    "filtered"
    ]
   },
   "messenger_reply_messages_urls_add_page": {
