@@ -11,5 +11,6 @@ export async function reply_test() {
   let properties = object_properties(messages);
   let first = list_first(properties);
   reply(first);
-  return properties;
+  let input = reply(first);
+  return input;
 }
