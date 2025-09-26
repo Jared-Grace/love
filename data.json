@@ -2286,10 +2286,11 @@
   "reply_test",
   "s lower",
   "p",
-  "rt"
+  "rt",
+  "n reply_sequence"
  ],
  "marker_current": "1",
- "function_current": "reply_test",
+ "function_current": "reply_sequence",
  "terminal": false,
  "identifiers": {
   "log": [
