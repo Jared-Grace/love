@@ -15926,8 +15926,7 @@
    "reply_on_match"
   ],
   "outputs": [
-   "reply_on_match",
-   "reply"
+   "reply_on_match"
   ]
  },
  "functions": {
@@ -30328,8 +30327,7 @@
     "lambda",
     "list",
     "r",
-    "result",
-    "outputs"
+    "result"
    ]
   },
   "undefined_not_is_assert": {
