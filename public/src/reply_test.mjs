@@ -6,5 +6,6 @@ export async function reply_test() {
     messages = m;
   }
   await messenger_reply_messages_transform(lambda);
-  let properties = object_properties(obj);
+  let properties = object_properties(messages);
+  return properties;
 }
