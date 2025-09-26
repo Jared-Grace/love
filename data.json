@@ -4940,8 +4940,7 @@
    "local_function_path",
    "bible_verses_encouragement_generate",
    "js_dollar_ie",
-   "js_dollar_ib",
-   "messenger_reply_puppeteer"
+   "js_dollar_ib"
   ],
   "colored": [
    "chalk_color",
@@ -29299,7 +29298,6 @@
     "timeout",
     "focus",
     "message",
-    "fn",
     "keyboard",
     "type",
     "press"
