@@ -1,4 +1,3 @@
-import { http_sleep } from "./http_sleep.mjs";
 import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
@@ -11,6 +10,7 @@ import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
+import { sleep } from "./sleep.mjs";
 export async function messenger_reply() {
   marker("1");
   const puppeteer = await import("puppeteer");
@@ -26,8 +26,8 @@ export async function messenger_reply() {
   let urls = await messenger_reply_messages_urls_add_page(page);
   log(urls);
   async function lambda(url) {
-    await http_sleep();
-    await messenger_reply_messages(page, url);
+    await page.goto(url);
+    await sleep(1000000);
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
