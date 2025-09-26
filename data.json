@@ -2350,7 +2350,8 @@
    "ebible_index_flat",
    "each_range_from",
    "object_merge_generic",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply_messages_urls_add"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3246,7 +3247,8 @@
    "keyboard_type_delay",
    "retry_on_error",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_messages_urls_add"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3525,7 +3527,8 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply_messages_urls_add"
   ],
   "v": [
    "data_identifiers_file",
@@ -4715,7 +4718,8 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "messenger_reply_messages_urls_add"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -29976,6 +29980,7 @@
   "messenger_reply_messages_urls_add": {
    "async": true,
    "identifiers": [
+    "each",
     "object_property_set",
     "object_property_initialize",
     "file_json_transform",
@@ -29986,7 +29991,10 @@
     "fb_path",
     "transform",
     "data",
-    "messages_urls"
+    "messages_urls",
+    "list",
+    "lambda",
+    "item"
    ]
   }
  },
