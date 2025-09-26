@@ -8942,7 +8942,8 @@
    "ebible_version_books_upload",
    "ebible_references_parse_god_created_man_why",
    "firebase_storage_download_ebible",
-   "folder_user_docs_path"
+   "folder_user_docs_path",
+   "messenger_reply"
   ],
   "html_update": [
    "html_update",
@@ -10153,7 +10154,8 @@
    "http",
    "command_line_cmd",
    "folder_user_docs_path",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -14893,7 +14895,8 @@
    "ebible_references_parse_god_created_man_why",
    "folder_user_docs_path",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -29156,12 +29159,16 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "bind",
+    "folder_user_docs_path",
     "keyboard_type_delay",
     "command_line_read_empty",
     "messenger_reply_url",
     "retry_on_error",
     "import_install",
     "messenger_reply",
+    "v3",
+    "file_name",
     "chromium",
     "firefox",
     "webkit",
@@ -29183,7 +29190,6 @@
     "fn",
     "keyboard",
     "type",
-    "bind",
     "close"
    ]
   },
