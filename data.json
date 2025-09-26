@@ -2256,10 +2256,11 @@
   "s trim",
   "p",
   "mr",
-  "s reply"
+  "s reply",
+  "rs messenger_reply playwright"
  ],
  "marker_current": "1",
- "function_current": "bind_property",
+ "function_current": "messenger_reply_playwright",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -29581,7 +29582,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-26T16:05:12.893Z",
+ "git_push_when": "2025-09-26T17:09:01.660Z",
  "error_attention": null,
  "app_current": "replace"
 }
