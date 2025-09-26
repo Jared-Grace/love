@@ -15675,6 +15675,9 @@
   "messenger_reply_messages_urls_transform": [
    "messenger_reply_messages_urls_add_multiple",
    "messenger_reply"
+  ],
+  "skips": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29488,6 +29491,7 @@
     "transform_inner",
     "mu",
     "properties",
+    "skips",
     "first",
     "messages",
     "answer",
