@@ -3501,7 +3501,8 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "v": [
    "data_identifiers_file",
@@ -6412,7 +6413,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply_puppeteer"
   ],
   "Error": [
    "error",
@@ -10366,7 +10368,8 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply_puppeteer"
   ],
   "last": [
    "js_return_name",
@@ -29427,6 +29430,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "list_empty_not_is",
     "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29479,6 +29483,8 @@
     "v2",
     "textContent",
     "console",
+    "ne",
+    "list",
     "focus",
     "fn",
     "keyboard",
