@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { reply_on_match } from "./reply_on_match.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -17,7 +18,9 @@ export async function reply(a) {
   let concated = list_concat(language_codes, b);
   let bible_folders = ebible_languages_to_bible_folders(concated);
   let fn = reply_sequence(["good", "evening"]);
-  async function lambda() {
+  async function lambda(a) {
+    let outputs = object_property_get(a, "outputs");
+    list_add(outputs);
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
     return list;
   }
