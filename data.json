@@ -2262,9 +2262,9 @@
   "s empty,read",
   "is sleep",
   "s list_add",
-  "p",
   "s prop,obj",
   "mr",
+  "p",
   "s collect"
  ],
  "marker_current": "1",
