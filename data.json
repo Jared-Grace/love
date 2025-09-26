@@ -6328,7 +6328,8 @@
    "app_replace_rule_parse",
    "js_code_dot",
    "app_replace_rule_valid",
-   "html_loading"
+   "html_loading",
+   "bind"
   ],
   "right": [
    "equal",
@@ -6346,7 +6347,8 @@
    "add",
    "app_replace_rule_set",
    "app_replace_rule_parse",
-   "js_code_dot"
+   "js_code_dot",
+   "bind"
   ],
   "eq": [
    "equal",
@@ -8199,8 +8201,7 @@
    "js_property_generic",
    "js_dollar_new",
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "bind"
+   "messenger_reply"
   ],
   "key": [
    "object_invert",
@@ -15264,8 +15265,7 @@
   "page": [
    "messenger_reply",
    "messenger_reply_puppeteer",
-   "messenger_reply_login",
-   "bind"
+   "messenger_reply_login"
   ],
   "newPage": [
    "messenger_reply",
@@ -15320,8 +15320,7 @@
   ],
   "keyboard": [
    "messenger_reply_puppeteer",
-   "messenger_reply",
-   "bind"
+   "messenger_reply"
   ],
   "press": [
    "messenger_reply_puppeteer"
@@ -29351,10 +29350,9 @@
    "identifiers": [
     "marker",
     "bind",
-    "fn",
-    "page",
-    "keyboard",
-    "type"
+    "left",
+    "right",
+    "fn"
    ]
   }
  },
