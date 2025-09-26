@@ -15654,8 +15654,7 @@
    "messenger_reply"
   ],
   "urls": [
-   "messenger_reply_messages_urls_add",
-   "messenger_reply"
+   "messenger_reply_messages_urls_add"
   ],
   "messenger_reply_messages_urls_add_multiple": [
    "messenger_reply_messages_urls_add",
@@ -29494,7 +29493,6 @@
     "prefix",
     "filtered",
     "console",
-    "urls",
     "p",
     "focus",
     "fn",
