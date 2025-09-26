@@ -3282,7 +3282,8 @@
    "messenger_reply_messages_urls_add_multiple",
    "list_filter_ends_with_not_any",
    "messenger_reply",
-   "reply_test"
+   "reply_test",
+   "reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3562,7 +3563,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4754,7 +4756,8 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5482,7 +5485,8 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "functions_names": [
    "functions_names",
@@ -7073,7 +7077,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -30176,11 +30181,16 @@
   "reply": {
    "async": false,
    "identifiers": [
+    "list_map",
     "list_filter_empty_not_is",
     "string_split_space",
     "whitespace_normalize",
     "reply",
-    "input"
+    "input",
+    "mapped",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "undefined_not_is_assert": {
