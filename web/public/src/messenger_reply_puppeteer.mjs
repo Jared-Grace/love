@@ -20,8 +20,8 @@ export async function messenger_reply_puppeteer() {
   const tag_name = "span";
   const text = "Unread";
   const matches = await puppeteer_matches(page, tag_name, text);
-  let item = list_get(list, index);
-  await matches[2].click();
+  let m = list_get(matches, 2);
+  await m.click();
   return;
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
