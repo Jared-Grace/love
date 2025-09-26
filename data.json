@@ -14769,7 +14769,8 @@
   "languages": [
    "app_reply_main",
    "ebible_languages",
-   "list_remove_property"
+   "list_remove_property",
+   "reply"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -15062,7 +15063,8 @@
   ],
   "ebible_languages": [
    "app_reply_main",
-   "ebible_languages"
+   "ebible_languages",
+   "reply"
   ],
   "language_code": [
    "ebible_languages",
@@ -30258,6 +30260,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "ebible_languages",
     "object_property_get",
     "list_concat",
     "ebible_folder_english",
@@ -30274,6 +30277,7 @@
     "reference",
     "b",
     "concated",
+    "languages",
     "list",
     "fn",
     "lambda",
