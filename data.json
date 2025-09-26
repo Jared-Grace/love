@@ -4654,8 +4654,7 @@
    "messenger_reply",
    "reply",
    "ebible_languages_to_bible_folders",
-   "reply_sequence",
-   "reply_on_match"
+   "reply_sequence"
   ],
   "data_save": [
    "data_file_update",
@@ -6027,8 +6026,7 @@
    "messenger_reply_playwright",
    "reply",
    "reply_test",
-   "reply_sequence",
-   "reply_on_match"
+   "reply_sequence"
   ],
   "process": [
    "command_line_read",
@@ -30428,13 +30426,11 @@
   "reply_on_match": {
    "async": false,
    "identifiers": [
-    "object_property_get",
     "reply_on_match",
     "wrapped_fn",
     "on_match",
     "fn",
     "reply_on_match_inner",
-    "input",
     "a"
    ]
   }
