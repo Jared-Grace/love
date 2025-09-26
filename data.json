@@ -2310,7 +2310,8 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses"
+   "ebible_verses",
+   "ebible_chapter_text"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3906,7 +3907,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "ebible_chapter_text"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -27132,6 +27134,7 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
+    "log",
     "roman_to_integer",
     "list_intersect_empty_is_assert",
     "list_empty_is_assert",
@@ -27168,6 +27171,7 @@
     "item",
     "selector2",
     "list",
+    "message",
     "lambda2",
     "t",
     "n",
