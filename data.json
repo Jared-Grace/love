@@ -3526,8 +3526,7 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with",
-   "messenger_reply"
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -29523,7 +29522,6 @@
     "waitForSelector",
     "state",
     "ne",
-    "list",
     "answer",
     "p",
     "focus",
