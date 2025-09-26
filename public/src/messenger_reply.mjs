@@ -1,3 +1,4 @@
+import { list_any } from "./list_any.mjs";
 import { string_ends_with } from "./string_ends_with.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
@@ -21,7 +22,8 @@ export async function messenger_reply() {
     let properties = object_properties(messages_urls);
     let skips = ["7632130373481137"];
     function lambda(item) {
-      let ew = string_ends_with(s, suffix);
+      let any = list_any(list, function lambda3(item2) {});
+      let ew = string_ends_with(item);
     }
     let filtered = list_filter(properties, lambda);
     let first = list_first(properties);
