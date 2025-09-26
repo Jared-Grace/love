@@ -12,7 +12,7 @@ export async function messenger_reply_messages(page, url) {
   let fb_path = folder_user_docs_path("fb.json");
   let data = await file_read_json(fb_path);
   let message_urls = object_property_initialize(data, "message_urls", {});
-  object_property_set(object, property_name, value);
+  object_property_set(message_urls, url, 1);
   await file_overwrite_json(fb_path, data);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
