@@ -2635,7 +2635,8 @@
    "list_filter_ends_with_not_any",
    "reply",
    "function_alias_add",
-   "functions_search"
+   "functions_search",
+   "undefined_not_is_assert"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3276,7 +3277,8 @@
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "undefined_not_is_assert"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3817,7 +3819,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "undefined_not_is_assert"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4180,7 +4183,8 @@
    "object_property_set_exists_not",
    "object_merge_generic",
    "list_set",
-   "bind_property"
+   "bind_property",
+   "undefined_not_is_assert"
   ],
   "name": [
    "watch",
@@ -10681,7 +10685,8 @@
   "undefined_not_is_assert_lambda": [
    "list_get",
    "object_property_get",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "undefined_not_is_assert"
   ],
   "object_get": [
    "list_get",
@@ -15762,6 +15767,9 @@
   ],
   "sss": [
    "reply"
+  ],
+  "undefined_not_is_assert": [
+   "undefined_not_is_assert"
   ]
  },
  "functions": {
@@ -30142,6 +30150,17 @@
     "item",
     "mapped",
     "list"
+   ]
+  },
+  "undefined_not_is_assert": {
+   "async": false,
+   "identifiers": [
+    "undefined_not_is_assert_lambda",
+    "marker",
+    "undefined_not_is_assert",
+    "value",
+    "lambda",
+    "v"
    ]
   }
  },
