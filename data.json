@@ -3386,7 +3386,8 @@
    "retry_on_error",
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "undefined_not_is_assert"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5623,7 +5624,8 @@
    "roman_to_integer",
    "string_list_to",
    "puppeteer_matches",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "undefined_not_is_assert"
   ],
   "readdirSync": [
    "folder_read"
@@ -30160,6 +30162,8 @@
     "undefined_not_is_assert",
     "value",
     "lambda",
+    "lambda2",
+    "v2",
     "v"
    ]
   }
