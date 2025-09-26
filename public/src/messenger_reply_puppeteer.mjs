@@ -37,7 +37,6 @@ export async function messenger_reply_puppeteer() {
         return v2;
       }
       console.log(await c.evaluate(lambda));
-      log(parentTag);
     }
   }
   return;
