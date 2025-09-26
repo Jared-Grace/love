@@ -3838,7 +3838,8 @@
    "import_install",
    "unzip",
    "html_parse",
-   "uuid"
+   "uuid",
+   "messenger_reply"
   ],
   "command_line": [
    "command_line",
@@ -29021,6 +29022,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "import_install",
     "messenger_reply",
     "chromium",
     "firefox",
