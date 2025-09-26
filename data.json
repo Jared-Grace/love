@@ -4187,8 +4187,7 @@
    "ebible_languages",
    "app_new_step_2",
    "app_message",
-   "function_list_generate",
-   "messenger_reply_login"
+   "function_list_generate"
   ],
   "output": [
    "watch",
@@ -15232,13 +15231,16 @@
    "messenger_reply_puppeteer"
   ],
   "chromium": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "firefox": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "webkit": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "browser": [
    "messenger_reply",
@@ -29286,7 +29288,9 @@
     "import_install",
     "marker",
     "messenger_reply_login",
-    "name"
+    "chromium",
+    "firefox",
+    "webkit"
    ]
   }
  },
