@@ -3226,7 +3226,8 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "puppeteer_matches"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5527,7 +5528,8 @@
    "ebible_references_parse_god_created_man_why",
    "emoji_handshake",
    "roman_to_integer",
-   "string_list_to"
+   "string_list_to",
+   "puppeteer_matches"
   ],
   "readdirSync": [
    "folder_read"
@@ -5797,7 +5799,8 @@
    "urdu_allah_to_god",
    "sandbox_2",
    "ebible_verse_new",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "puppeteer_matches"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -7191,7 +7194,8 @@
    "round",
    "ebible_chapter_text",
    "ebible_version_books",
-   "ebible_verse_download"
+   "ebible_verse_download",
+   "puppeteer_matches"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -10459,7 +10463,8 @@
   ],
   "matches": [
    "js_visit_match",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "puppeteer_matches"
   ],
   "v_match": [
    "js_visit_match",
@@ -10483,7 +10488,8 @@
    "list_add",
    "list_add_multiple",
    "http",
-   "path_join"
+   "path_join",
+   "puppeteer_matches"
   ],
   "list_adder_generic": [
    "list_adder",
@@ -11891,7 +11897,8 @@
   "tag_name": [
    "html_element",
    "html_button_element",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "puppeteer_matches"
   ],
   "html_element": [
    "html_element",
@@ -12988,7 +12995,8 @@
    "js_calls_to_each",
    "js_auto_transform_new_inner",
    "js_identifier_defineds",
-   "marker_next_declare_single_init_elements"
+   "marker_next_declare_single_init_elements",
+   "puppeteer_matches"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -13867,7 +13875,8 @@
    "html_parse_list_text_to"
   ],
   "el": [
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "puppeteer_matches"
   ],
   "$": [
    "html_parse_list_text_to"
@@ -15291,7 +15300,8 @@
   "page": [
    "messenger_reply",
    "messenger_reply_puppeteer",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "puppeteer_matches"
   ],
   "newPage": [
    "messenger_reply",
@@ -15387,7 +15397,20 @@
    "messenger_reply_puppeteer"
   ],
   "puppeteer_matches": [
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "puppeteer_matches"
+  ],
+  "$$": [
+   "puppeteer_matches"
+  ],
+  "textContent": [
+   "puppeteer_matches"
+  ],
+  "txt": [
+   "puppeteer_matches"
+  ],
+  "evaluate": [
+   "puppeteer_matches"
   ]
  },
  "functions": {
@@ -29427,6 +29450,26 @@
     "property_name",
     "value",
     "fn"
+   ]
+  },
+  "puppeteer_matches": {
+   "async": true,
+   "identifiers": [
+    "puppeteer_matches",
+    "page",
+    "tag_name",
+    "text",
+    "elements",
+    "$$",
+    "matches",
+    "el",
+    "lambda",
+    "n",
+    "v2",
+    "textContent",
+    "txt",
+    "evaluate",
+    "push"
    ]
   }
  },
