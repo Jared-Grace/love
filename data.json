@@ -2639,7 +2639,8 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "reply_test"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15790,6 +15791,9 @@
   ],
   "messages2": [
    "messenger_reply"
+  ],
+  "reply_test": [
+   "reply_test"
   ]
  },
  "functions": {
@@ -30192,6 +30196,13 @@
     "transform",
     "data",
     "value"
+   ]
+  },
+  "reply_test": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "reply_test"
    ]
   }
  },
