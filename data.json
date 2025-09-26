@@ -13,7 +13,6 @@
   "fa": "functions_format",
   "v": "server",
   "m": "marker_top",
-  "mr": "marker_remove",
   "md": "marker_down",
   "ma": "marker_assign_replace",
   "mc": "marker_call",
@@ -187,7 +186,8 @@
   "ssk": "string_skip",
   "sz": "string_size",
   "fe": "function_exists",
-  "cl": "command_line"
+  "cl": "command_line",
+  "mr": "messenger_reply"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2251,7 +2251,8 @@
   "messenger_reply",
   "n bind",
   "n bind_property",
-  "s doc"
+  "s doc",
+  "ar mr messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
