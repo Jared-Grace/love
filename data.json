@@ -13872,10 +13872,12 @@
   ],
   "el": [
    "html_parse_list_text_to",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "$": [
-   "html_parse_list_text_to"
+   "html_parse_list_text_to",
+   "messenger_reply_puppeteer"
   ],
   "cheerio": [
    "html_parse"
@@ -29391,6 +29393,8 @@
     "p",
     "waitForSelector",
     "timeout",
+    "el",
+    "$",
     "focus",
     "fn",
     "keyboard",
