@@ -43,7 +43,6 @@ export async function messenger_reply() {
       object_property_set(messages2, joined, 1);
     }
     await messenger_reply_messages_transform(lambda);
-    log(joined);
     let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
