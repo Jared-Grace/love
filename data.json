@@ -14232,8 +14232,7 @@
    "bible_verses_encouragement_generate"
   ],
   "trim": [
-   "whitespace_normalize",
-   "messenger_reply_puppeteer"
+   "whitespace_normalize"
   ],
   "verse_number": [
    "ebible_verses",
@@ -15473,6 +15472,9 @@
    "messenger_reply_puppeteer"
   ],
   "lda": [
+   "messenger_reply_puppeteer"
+  ],
+  "string_trim": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29437,6 +29439,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "string_trim",
     "list_adder_async",
     "list_empty_is",
     "messenger_reply_puppeteer_unread_click",
@@ -29477,7 +29480,6 @@
     "evaluate",
     "message",
     "lambda",
-    "trim",
     "lambda4",
     "imgs",
     "lambda3",
