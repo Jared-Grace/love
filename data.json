@@ -2160,7 +2160,6 @@
   "string_starts_with_digit 5t",
   "as skip",
   "a ssk string_skip",
-  "s trim",
   "s dot",
   "s const",
   "c string_starts_with_dot string_starts_with_space",
@@ -2256,7 +2255,8 @@
   "",
   "p",
   "mr",
-  "as adder"
+  "as adder",
+  "s trim"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
