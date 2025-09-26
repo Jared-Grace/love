@@ -3060,8 +3060,7 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied",
-   "reply"
+   "messenger_reply_unreplied"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4777,7 +4776,8 @@
    "sandbox_4_a",
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
-   "list_find_property"
+   "list_find_property",
+   "reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6362,8 +6362,7 @@
    "sandbox_4_a",
    "ebible_references_parse_lines",
    "messenger_reply",
-   "reply_test",
-   "reply"
+   "reply_test"
   ],
   "items": [
    "each_multiple",
@@ -10719,8 +10718,7 @@
    "list_find_property",
    "object_property_equals",
    "object_property_equals_lambda",
-   "messenger_reply_unreplied",
-   "reply"
+   "messenger_reply_unreplied"
   ],
   "list_find": [
    "list_find",
@@ -11998,8 +11996,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -14011,7 +14008,8 @@
    "ebible_chapters_each_verses_list",
    "bible_verses_encouragement_generate",
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "unzip": [
    "unzip",
@@ -30292,10 +30290,8 @@
     "languages",
     "lambda2",
     "c",
-    "first",
-    "list2",
-    "property_name",
-    "property_value",
+    "item",
+    "bible_folder",
     "mapped",
     "list",
     "fn",
