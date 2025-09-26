@@ -5,7 +5,6 @@ import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { http_sleep } from "./http_sleep.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
-import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
@@ -52,7 +51,6 @@ export async function messenger_reply() {
     each(urls_new, lambda2);
     await http_sleep();
   }
-  await each_async(urls, lambda);
   let answer = await command_line_read_empty();
   return;
   log(messages);
