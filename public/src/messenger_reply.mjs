@@ -1,3 +1,4 @@
+import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { retry_on_error } from "./retry_on_error.mjs";
@@ -19,6 +20,7 @@ export async function messenger_reply() {
   const input = await page.waitForSelector(
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
+  await keyboard_type_delay("Greetings!", input);
   let v = messenger_reply_url();
   await page.goto(v);
   await command_line_read_empty();
