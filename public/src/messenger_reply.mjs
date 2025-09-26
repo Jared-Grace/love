@@ -24,7 +24,8 @@ export async function messenger_reply() {
   });
   await p.focus();
   let list = string_list_to(str);
-  await each_async(list2, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list2, lambda);
   await page.keyboard.type(message);
   await page.keyboard.press("Enter");
 }
