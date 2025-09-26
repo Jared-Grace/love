@@ -7021,8 +7021,7 @@
    "sandbox_2",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines",
-   "messenger_reply"
+   "ebible_references_parse_lines"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -14058,8 +14057,7 @@
    "ebible_index",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "string_take": [
    "string_take",
@@ -29482,8 +29480,6 @@
     "$$eval",
     "prefix",
     "filtered",
-    "mapped",
-    "book_code",
     "console",
     "p",
     "focus",
