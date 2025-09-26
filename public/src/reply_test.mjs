@@ -10,6 +10,9 @@ export async function reply_test() {
   await messenger_reply_messages_transform(lambda);
   let properties = object_properties(messages);
   let first = list_first(properties);
-  let input = reply(first);
+  let input = await reply({
+    input: first,
+    language_codes: "ur",
+  });
   return input;
 }
