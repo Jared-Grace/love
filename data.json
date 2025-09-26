@@ -15187,6 +15187,9 @@
   ],
   "press": [
    "messenger_reply"
+  ],
+  "characters_per_minute": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29006,6 +29009,7 @@
     "waitForSelector",
     "timeout",
     "focus",
+    "characters_per_minute",
     "keyboard",
     "type",
     "press"
