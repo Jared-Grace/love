@@ -14677,7 +14677,8 @@
    "ebible_verse"
   ],
   "reference": [
-   "app_reply_main"
+   "app_reply_main",
+   "reply"
   ],
   "html_loading": [
    "html_loading",
@@ -30219,6 +30220,7 @@
     "whitespace_normalize",
     "reply",
     "input",
+    "reference",
     "fn",
     "r",
     "reply_on_match",
