@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -50,7 +51,7 @@ export async function messenger_reply_puppeteer() {
         return v2;
       }
       console.log(await c2.evaluate(lambda));
-      console.log(imgs);
+      let ne = list_empty_not_is(list);
     }
   }
   return;
