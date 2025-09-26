@@ -11740,8 +11740,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "messenger_reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -13424,8 +13423,7 @@
   "str": [
    "string_letters_only",
    "whitespace_normalize",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "text2": [
    "app_reply_main"
@@ -29062,7 +29060,6 @@
     "log",
     "messenger_reply_user_data_path",
     "marker",
-    "message",
     "messenger_reply",
     "r",
     "puppeteerModule",
@@ -29080,14 +29077,13 @@
     "waitForSelector",
     "timeout",
     "focus",
+    "message",
     "list",
-    "str",
     "lambda",
     "item",
     "delay_ms",
     "keyboard",
     "type",
-    "list2",
     "press"
    ]
   },
