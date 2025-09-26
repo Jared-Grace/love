@@ -12566,8 +12566,7 @@
   ],
   "lines": [
    "function_transform_marker_specified",
-   "ebible_references_parse_lines",
-   "reply"
+   "ebible_references_parse_lines"
   ],
   "html_p": [
    "html_p",
@@ -30227,7 +30226,6 @@
     "input",
     "reference",
     "list",
-    "lines",
     "fn",
     "r",
     "reply_on_match",
