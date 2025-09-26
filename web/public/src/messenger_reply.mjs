@@ -37,8 +37,8 @@ export async function messenger_reply() {
   const count = await locator.count();
   console.log(`Found ${count} matches`);
   if (false) {
+    await locator.nth(i).click();
   }
-  await locator.nth(i).click();
   await command_line_read_empty();
   await browser.close();
 }
