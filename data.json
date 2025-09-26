@@ -2263,9 +2263,9 @@
   "is sleep",
   "s list_add",
   "s prop,obj",
-  "mr",
   "p",
-  "s collect"
+  "s collect",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
