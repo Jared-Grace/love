@@ -38,6 +38,7 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let { mine_last, unreplied } = messenger_reply_unreplied(messages);
+    log(message);
     let mine_last_lines = string_split_newline(mine_last);
     let mine_last_lines_last = list_last(mine_last_lines);
     log({
