@@ -4202,7 +4202,8 @@
    "ebible_languages",
    "app_new_step_2",
    "app_message",
-   "function_list_generate"
+   "function_list_generate",
+   "messenger_reply_puppeteer"
   ],
   "output": [
    "watch",
@@ -4735,7 +4736,8 @@
    "list_index_is",
    "list_last_or_null",
    "data_file_update_inner",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "messenger_reply_puppeteer"
   ],
   "e": [
    "catch_ignore",
@@ -6412,8 +6414,7 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main",
-   "messenger_reply_puppeteer"
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -10367,8 +10368,7 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main",
-   "messenger_reply_puppeteer"
+   "app_reply_main"
   ],
   "last": [
    "js_return_name",
@@ -29429,7 +29429,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
-    "list_empty_not_is",
+    "list_empty_is",
     "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29482,7 +29482,7 @@
     "v2",
     "textContent",
     "console",
-    "ne",
+    "name",
     "focus",
     "fn",
     "keyboard",
