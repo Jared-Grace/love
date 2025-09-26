@@ -8,7 +8,7 @@ export async function messenger_reply_login() {
   const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto("https://www.facebook.com/");
-  let v = await command_line_read(prompt);
+  let v = await command_line_read("");
   await context.storageState({
     path: "fb-session.json",
   });
