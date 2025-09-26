@@ -2314,7 +2314,8 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses"
+   "ebible_verses",
+   "reply"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3914,7 +3915,8 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30269,6 +30271,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "log",
     "list_find_property",
     "list_map",
     "ebible_languages",
@@ -30287,6 +30290,7 @@
     "reference",
     "b",
     "concated",
+    "message",
     "languages",
     "lambda2",
     "c",
