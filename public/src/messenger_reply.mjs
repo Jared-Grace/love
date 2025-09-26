@@ -30,8 +30,8 @@ export async function messenger_reply() {
   }
   const hrefs = await page.$$eval("a", lambda3);
   let prefix = "https://www.facebook.com/messages/";
-  let filtered = list_filter_starts_with(mapped, book_code);
-  console.log(hrefs);
+  let filtered = list_filter_starts_with(hrefs, prefix);
+  console.log(filtered);
   return;
   log(messages);
   return;
