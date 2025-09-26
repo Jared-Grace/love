@@ -6,7 +6,7 @@ import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 export async function messenger_reply() {
   marker("1");
-  var { messages, page } = await messenger_reply_unread_collect();
+  await messenger_reply_unread_collect();
   let answer = await command_line_read_empty();
   return;
   log(messages);
