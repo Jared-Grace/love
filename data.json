@@ -3906,8 +3906,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "ebible_verses"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -27028,7 +27027,6 @@
     "la",
     "lambda2",
     "verse_number",
-    "message",
     "index",
     "skipped",
     "v",
