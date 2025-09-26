@@ -1,3 +1,4 @@
+import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { each_async } from "./each_async.mjs";
 import { sleep } from "./sleep.mjs";
 import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
@@ -11,7 +12,8 @@ export async function messenger_reply_puppeteer() {
     userDataDir: messenger_reply_user_data_path(),
   });
   const page = await browser.newPage();
-  await page.goto("https://www.facebook.com/messages/e2ee/t/9895223143834311");
+  let v = messenger_reply_url();
+  await page.goto(v);
   const unreadSpanSelector = 'p[dir="auto"]';
   let p = await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
