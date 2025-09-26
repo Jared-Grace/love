@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { roman_to_integer } from "./roman_to_integer.mjs";
 import { list_intersect_empty_is_assert } from "./list_intersect_empty_is_assert.mjs";
 import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
@@ -39,6 +40,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   }
   each(exclude, lambda);
   let list = html_parse_find_list_to(main, ".verse");
+  log(message);
   function lambda2(item) {
     let t = html_parse_text(d, item);
     let n = whitespace_normalize(t);
