@@ -2310,8 +2310,7 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses",
-   "ebible_chapter_text"
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -27126,7 +27125,6 @@
   "ebible_chapter_text": {
    "async": true,
    "identifiers": [
-    "log",
     "roman_to_integer",
     "list_intersect_empty_is_assert",
     "list_empty_is_assert",
