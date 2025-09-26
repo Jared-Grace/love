@@ -11,7 +11,7 @@ export async function function_alias_add(first, second) {
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
-  log(message);
+  log(list);
   let ne = string_empty_not_is(f_name);
   assert(ne);
   function lambda(a) {
