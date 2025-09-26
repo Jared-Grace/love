@@ -3249,8 +3249,7 @@
    "messenger_reply_puppeteer",
    "keyboard_type_delay",
    "retry_on_error",
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5655,8 +5654,7 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "sandbox_4_a",
-   "keyboard_type_delay",
-   "messenger_reply"
+   "keyboard_type_delay"
   ],
   "f_paths": [
    "data_files_update",
@@ -29503,7 +29501,6 @@
     "list_empty_is",
     "http_sleep",
     "string_prefix_without",
-    "each_async",
     "command_line_read_empty",
     "messenger_reply_wait",
     "messenger_reply_messages_urls_add_page",
@@ -29539,7 +29536,6 @@
     "urls_new",
     "lambda2",
     "url_new",
-    "lambda",
     "answer",
     "p",
     "focus",
