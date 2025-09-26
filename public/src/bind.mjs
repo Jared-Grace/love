@@ -1,6 +1,6 @@
 import { marker } from "./marker.mjs";
-export function bind() {
+export function bind(left, right) {
   marker("1");
-  let fn = page.keyboard.type.bind(page.keyboard);
+  let fn = left.bind(right);
   return fn;
 }
