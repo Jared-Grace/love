@@ -8,7 +8,8 @@ import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function reply({ input, language_codes }) {
   let reference = "Isaiah 26:9";
-  let concated = list_concat(a, b);
+  let b = ebible_folder_english();
+  let concated = list_concat(language_codes, b);
   let v = ebible_folder_english();
   let list = await ebible_references_parse_lines([v], [reference]);
   return list;
