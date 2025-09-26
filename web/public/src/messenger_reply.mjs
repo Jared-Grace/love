@@ -16,7 +16,7 @@ export async function messenger_reply() {
   const page = await browser.newPage();
   let v = messenger_reply_url();
   let messages = await messenger_reply_messages(v);
-  log(message);
+  log(messages);
   return;
   await messenger_reply_unread_click(page);
   return;
