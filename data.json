@@ -13675,8 +13675,7 @@
   ],
   "integer_random": [
    "integer_random",
-   "http",
-   "messenger_reply"
+   "http"
   ],
   "max": [
    "integer_random"
@@ -15191,22 +15190,7 @@
   "press": [
    "messenger_reply"
   ],
-  "characters_per_minute": [
-   "messenger_reply"
-  ],
-  "seconds_per_minute": [
-   "messenger_reply"
-  ],
-  "ms_per_second": [
-   "messenger_reply"
-  ],
-  "ms_per_minute": [
-   "messenger_reply"
-  ],
-  "ms_per_character": [
-   "messenger_reply"
-  ],
-  "high": [
+  "keyboard_typing_delay": [
    "messenger_reply"
   ]
  },
@@ -29009,17 +28993,11 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "keyboard_typing_delay",
     "log",
-    "integer_random",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
-    "characters_per_minute",
-    "seconds_per_minute",
-    "ms_per_second",
-    "ms_per_minute",
-    "ms_per_character",
-    "high",
     "r",
     "puppeteerModule",
     "puppeteer",
