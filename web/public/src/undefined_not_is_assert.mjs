@@ -6,6 +6,5 @@ export function undefined_not_is_assert(value) {
     let v2 = {};
     return v2;
   }
-  let v = undefined_not_is_assert_lambda(value, lambda2);
-  return v;
+  undefined_not_is_assert_lambda(value, lambda2);
 }
