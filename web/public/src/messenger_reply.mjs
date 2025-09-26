@@ -35,6 +35,7 @@ export async function messenger_reply() {
       state: "detached",
     });
     await http_sleep();
+    await messenger_reply_messages_urls_add_page(page);
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
