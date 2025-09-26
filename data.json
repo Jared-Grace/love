@@ -4655,7 +4655,8 @@
    "messenger_reply_playwright",
    "messenger_reply",
    "reply",
-   "ebible_languages_to_bible_folders"
+   "ebible_languages_to_bible_folders",
+   "reply_sequence"
   ],
   "data_save": [
    "data_file_update",
@@ -5435,7 +5436,8 @@
    "each_pair_async",
    "app_reply_main",
    "catch_only_run_async",
-   "reply"
+   "reply",
+   "reply_sequence"
   ],
   "without": [
    "string_suffix_without",
@@ -30366,12 +30368,14 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "list_get",
     "each_index",
     "reply_sequence",
     "sequence",
     "fn",
     "reply_sequence_matches",
+    "a",
     "input",
     "matches",
     "lambda",
