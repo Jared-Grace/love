@@ -10661,7 +10661,8 @@
    "js_visit_match",
    "puppeteer_matches",
    "messenger_reply_unread_click",
-   "reply_sequence"
+   "reply_sequence",
+   "reply_on_match"
   ],
   "v_match": [
    "js_visit_match",
@@ -30431,7 +30432,8 @@
     "on_match",
     "fn",
     "reply_on_match_inner",
-    "a"
+    "a",
+    "matches"
    ]
   }
  },
