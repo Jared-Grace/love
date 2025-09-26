@@ -4772,8 +4772,7 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any",
-   "reply"
+   "list_filter_ends_with_not_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11299,7 +11298,8 @@
    "html_parse_descendants_classes",
    "html_parse_classes_preview",
    "sandbox_2",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "reply"
   ],
   "found": [
    "visit_unique_async",
@@ -11991,8 +11991,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -15890,6 +15889,9 @@
   "language_codes": [
    "reply",
    "reply_test"
+  ],
+  "lfi": [
+   "reply"
   ]
  },
  "functions": {
@@ -30283,9 +30285,9 @@
     "concated",
     "languages",
     "lambda2",
-    "item",
+    "c",
+    "lfi",
     "mapped",
-    "list2",
     "list",
     "fn",
     "lambda",
