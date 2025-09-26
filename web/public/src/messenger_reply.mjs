@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
@@ -8,7 +7,7 @@ export async function messenger_reply() {
   let ms_per_second = 1000;
   let ms_per_minute = seconds_per_minute * ms_per_second;
   let ms_per_character = ms_per_minute / characters_per_minute;
-  log(ms_per_character);
+  let high = ms_per_character * 1.5;
   return;
   const puppeteerModule = await import("puppeteer");
   const puppeteer = puppeteerModule.default ?? puppeteerModule;
