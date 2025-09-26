@@ -2250,10 +2250,11 @@
   "p",
   "fd messenger_reply",
   "messenger_reply",
-  "n bind"
+  "n bind",
+  "n bind_property"
  ],
  "marker_current": "1",
- "function_current": "bind",
+ "function_current": "bind_property",
  "terminal": false,
  "identifiers": {
   "log": [
