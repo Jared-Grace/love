@@ -15808,6 +15808,9 @@
   ],
   "list_map_lower": [
    "reply"
+  ],
+  "reply_sequence": [
+   "reply"
   ]
  },
  "functions": {
@@ -30184,7 +30187,8 @@
     "string_split_space",
     "whitespace_normalize",
     "reply",
-    "input"
+    "input",
+    "reply_sequence"
    ]
   },
   "undefined_not_is_assert": {
