@@ -40,7 +40,7 @@ export async function messenger_reply() {
   let b = equal(count, 4);
   assert(b);
   console.log(`Found ${count} matches`);
-  await locator.nth().click();
+  await locator.nth(0).click();
   if (false) {
   }
   await command_line_read_empty();
