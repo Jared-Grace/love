@@ -3532,7 +3532,8 @@
    "string_list_to",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -5040,7 +5041,8 @@
    "http",
    "retry",
    "function_list_generate",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "value2": [
    "error_attention_set",
@@ -5117,8 +5119,7 @@
    "string_ends_with",
    "function_rename_suffix_add",
    "functions_names",
-   "roman_to_integer",
-   "messenger_reply"
+   "roman_to_integer"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -5274,8 +5275,7 @@
    "string_ends_with_space",
    "string_starts_with_dot",
    "string_list_to",
-   "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply_wait"
   ],
   "a": [
    "string_suffix_without",
@@ -10386,7 +10386,8 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "messenger_reply"
   ],
   "match": [
    "js_node_types_is",
@@ -13059,7 +13060,8 @@
    "list_find_starts_with",
    "string_skip_while",
    "string_trim_right",
-   "string_starts_with_digit"
+   "string_starts_with_digit",
+   "messenger_reply"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14280,7 +14282,8 @@
    "list_find_starts_with",
    "sandbox_4_a",
    "string_starts_with_digit",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -29483,6 +29486,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_any",
     "string_ends_with",
     "list_filter",
     "list_first",
@@ -29505,9 +29509,11 @@
     "skips",
     "lambda",
     "item",
+    "any",
+    "list",
+    "lambda3",
+    "item2",
     "ew",
-    "s",
-    "suffix",
     "filtered",
     "first",
     "messages",
