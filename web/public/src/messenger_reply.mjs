@@ -1,3 +1,4 @@
+import { emoji_question } from "./emoji_question.mjs";
 import { assert } from "./assert.mjs";
 import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -36,6 +37,7 @@ export async function messenger_reply() {
   await keyboard_type_delay(pin, fn);
   const locator = page.locator("text=Unread");
   const count = await locator.count();
+  let v2 = emoji_question();
   assert(b);
   console.log(`Found ${count} matches`);
   if (false) {
