@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { http_sleep } from "./http_sleep.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
@@ -32,6 +33,7 @@ export async function messenger_reply() {
     if (e) {
       break;
     }
+    let first = list_first(list);
     let prefix = "https://www.facebook.com";
     let without = string_prefix_without(url, prefix);
     const selector = `a[href="${without}"]`;
