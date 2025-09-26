@@ -15716,8 +15716,7 @@
   ],
   "messages_urls": [
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply",
-   "messenger_reply_messages_transform"
+   "messenger_reply"
   ],
   "transform_inner": [
    "messenger_reply_messages_urls_add_multiple",
@@ -30179,8 +30178,7 @@
     "fb_path",
     "transform",
     "data",
-    "value",
-    "messages_urls"
+    "value"
    ]
   }
  },
