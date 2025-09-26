@@ -1,3 +1,4 @@
+import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_unread_click } from "./messenger_reply_unread_click.mjs";
@@ -17,6 +18,7 @@ export async function messenger_reply() {
   const page = await browser.newPage();
   let v = messenger_reply_url();
   let messages = await messenger_reply_messages(page, v);
+  await messenger_reply_wait(page);
   await messenger_reply_unread_click(page);
   await messenger_reply_messages_urls_add_page(page);
   return;
