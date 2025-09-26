@@ -18,7 +18,7 @@ export async function messenger_reply() {
     log(stdout);
     await lambda2();
   }
-  await catch_only_run_async(lambda2, command, lambda);
+  await catch_only_run_async(lambda2, error_text, lambda);
   const page = await browser.newPage();
   await page.goto("https://facebook.com");
   await browser.close();
