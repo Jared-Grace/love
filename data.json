@@ -191,7 +191,8 @@
   "ll": "list_last",
   "str": "string_trim",
   "sss": "string_split_space",
-  "": "sss"
+  "": "sss",
+  "ei": "each_index"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2288,7 +2289,8 @@
   "p",
   "rt",
   "n reply_sequence",
-  "u ei"
+  "u ei",
+  "a ei each_index"
  ],
  "marker_current": "1",
  "function_current": "reply_sequence",
