@@ -3333,7 +3333,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3832,7 +3833,8 @@
    "js_node_atomize",
    "function_transform_marker_specified",
    "retry",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -10174,7 +10176,8 @@
    "js_statement_call_get",
    "http",
    "command_line_cmd",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_puppeteer"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -13879,7 +13882,8 @@
   ],
   "el": [
    "html_parse_list_text_to",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "$": [
    "html_parse_list_text_to",
@@ -15425,6 +15429,15 @@
    "messenger_reply_puppeteer"
   ],
   "children2": [
+   "messenger_reply_puppeteer"
+  ],
+  "parentElement": [
+   "messenger_reply_puppeteer"
+  ],
+  "tagName": [
+   "messenger_reply_puppeteer"
+  ],
+  "parentTag": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29415,12 +29428,19 @@
     "$$",
     "c",
     "children2",
-    "lambda",
+    "lambda2",
     "node",
+    "v3",
+    "parentElement",
+    "tagName",
+    "parentTag",
+    "el",
+    "evaluate",
+    "lambda",
     "v2",
     "textContent",
     "console",
-    "evaluate",
+    "message",
     "focus",
     "fn",
     "keyboard",
