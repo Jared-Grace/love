@@ -1,7 +1,5 @@
+import { list_filter_ends_with_any } from "./list_filter_ends_with_any.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_any } from "./list_any.mjs";
-import { string_ends_with } from "./string_ends_with.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { messenger_reply_messages_urls_transform } from "./messenger_reply_messages_urls_transform.mjs";
@@ -27,16 +25,8 @@ export async function messenger_reply() {
       return v;
     }
     let mapped = list_map(skips, lambda4);
-    function lambda(item) {
-      function lambda3(item2) {
-        let ew = string_ends_with(item, item2);
-        return ew;
-      }
-      let any = list_any(mapped, lambda3);
-      return any;
-    }
-    let filtered = list_filter(properties, lambda);
-    let first = list_first(properties);
+    let filtered = list_filter_ends_with_any(mapped, properties);
+    let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let answer = await command_line_read_empty();
   }
