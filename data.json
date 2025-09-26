@@ -14232,7 +14232,8 @@
    "bible_verses_encouragement_generate"
   ],
   "trim": [
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "messenger_reply_puppeteer"
   ],
   "verse_number": [
    "ebible_verses",
@@ -29476,6 +29477,7 @@
     "evaluate",
     "message",
     "lambda",
+    "trim",
     "lambda4",
     "imgs",
     "lambda3",
