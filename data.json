@@ -4028,7 +4028,8 @@
    "file_parent_exists_ensure",
    "firebase_path_fix",
    "folder_read_async",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply"
   ],
   "value": [
    "watch",
@@ -29198,6 +29199,7 @@
     "focus",
     "fn",
     "keyboard",
+    "path",
     "close"
    ]
   },
