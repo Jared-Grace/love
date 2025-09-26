@@ -17,12 +17,12 @@ export async function messenger_reply() {
     storageState: "fb-session.json",
   });
   const page = await context.newPage();
+  let v = messenger_reply_url();
+  await page.goto(v);
   const input = await page.waitForSelector(
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
   await keyboard_type_delay("123", input);
-  let v = messenger_reply_url();
-  await page.goto(v);
   await command_line_read_empty();
   await browser.close();
 }
