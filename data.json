@@ -548,7 +548,6 @@
   "s declarat",
   "c list_add list_add_multiple",
   "mf 1 2",
-  "",
   "au export function js_stack_last(stack, type) {",
   "au js_stack_last",
   "n range",
@@ -2255,6 +2254,7 @@
   "messenger_reply_puppeteer",
   "ar mr messenger_reply_puppeteer",
   "p",
+  "",
   "mr"
  ],
  "marker_current": "1",
