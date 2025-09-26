@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -43,9 +44,10 @@ export async function messenger_reply() {
     await page.waitForSelector(selector, {
       state: "detached",
     });
-    list_remove(list, item);
+    list_remove(urls, url);
+    let urls_new = await messenger_reply_messages_urls_add_page(page);
+    each(list, function lambda2(item) {});
     await http_sleep();
-    await messenger_reply_messages_urls_add_page(page);
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
