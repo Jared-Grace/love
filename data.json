@@ -2622,7 +2622,8 @@
    "messenger_reply_playwright",
    "messenger_reply",
    "messenger_reply_unread_click",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15736,6 +15737,9 @@
   "messenger_reply_messages_message": [
    "messenger_reply_messages",
    "messenger_reply"
+  ],
+  "reply": [
+   "reply"
   ]
  },
  "functions": {
@@ -30099,6 +30103,13 @@
     "ewn",
     "any",
     "filtered"
+   ]
+  },
+  "reply": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "reply"
    ]
   }
  },
