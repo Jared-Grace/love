@@ -6,7 +6,8 @@ import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function reply(input) {
   let reference = "Isaiah 26:9";
-  let list = await ebible_references_parse_lines(["engbsb"], lines);
+  let list = await ebible_references_parse_lines(["engbsb"], [reference]);
+  return list;
   let fn = reply_sequence(["good", "evening"]);
   let r = reply_on_match(fn);
   input = whitespace_normalize(input);
