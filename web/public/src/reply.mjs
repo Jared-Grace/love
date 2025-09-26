@@ -16,7 +16,9 @@ export async function reply(a) {
   let reference = "Isaiah 26:9";
   let b = ["en"];
   let concated = list_concat(language_codes, b);
-  log(message);
+  log({
+    concated,
+  });
   let languages = ebible_languages();
   function lambda2(c) {
     let item = list_find_property(languages, "language_code", c);
