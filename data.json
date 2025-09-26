@@ -1790,7 +1790,6 @@
   "s dove",
   "n kjv",
   "s propert",
-  "s random",
   "n list_random_item",
   "s click",
   "c html_on_click html_on_keydown",
@@ -2234,7 +2233,8 @@
   "fd",
   "fd messenger_reply",
   "p",
-  "messenger_reply"
+  "messenger_reply",
+  "s random"
  ],
  "marker_current": "1",
  "function_current": "app_reply",
