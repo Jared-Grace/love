@@ -1,3 +1,4 @@
+import { messenger_reply_messages_name } from "./messenger_reply_messages_name.mjs";
 import { messenger_reply_messages_me } from "./messenger_reply_messages_me.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add } from "./messenger_reply_messages_urls_add.mjs";
@@ -55,7 +56,7 @@ export async function messenger_reply_messages(page, url) {
           name = "them";
         }
         la({
-          name,
+          [messenger_reply_messages_name()]: name,
           message,
         });
       }
