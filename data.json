@@ -2242,7 +2242,7 @@
   "c catch_only_async catch_only_run_async"
  ],
  "marker_current": "1",
- "function_current": "string_list_to",
+ "function_current": "catch_only_run_async",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -2576,7 +2576,8 @@
    "string_trim_right",
    "string_ends_with_space",
    "bible_verses_encouragement",
-   "ebible_version_books"
+   "ebible_version_books",
+   "catch_only_run_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -29154,6 +29155,7 @@
   "catch_only_run_async": {
    "async": true,
    "identifiers": [
+    "marker",
     "not",
     "json_to",
     "catch_only_run_async",
