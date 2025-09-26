@@ -4284,8 +4284,7 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args",
-   "messenger_reply"
+   "js_code_declaration_args"
   ],
   "lj": [
    "watch",
@@ -29568,7 +29567,6 @@
     "property_name",
     "mapped2",
     "joined",
-    "args",
     "answer",
     "p",
     "focus",
