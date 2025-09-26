@@ -40,8 +40,8 @@ export async function messenger_reply() {
     let mine = list_filter_property(messages, property_name, property_value);
     let last = list_last(mine);
     let index_last = list_index_of(messages, last);
-    let skipped = list_skip(list, skip_count);
-    log(last);
+    let skipped = list_skip(messages, index_last + 1);
+    log(skipped);
     let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
