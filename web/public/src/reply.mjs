@@ -1,7 +1,5 @@
+import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
 import { log } from "./log.mjs";
-import { list_find_property } from "./list_find_property.mjs";
-import { list_map } from "./list_map.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
@@ -19,13 +17,7 @@ export async function reply(a) {
   log({
     concated,
   });
-  let languages = ebible_languages();
-  function lambda2(c) {
-    let item = list_find_property(languages, "language_code", c);
-    let bible_folder = object_property_get(item, "bible_folder");
-    return bible_folder;
-  }
-  let mapped = list_map(concated, lambda2);
+  let mapped = ebible_languages_to_bible_folders(concated);
   return mapped;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
