@@ -3406,8 +3406,7 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert",
-   "reply"
+   "undefined_not_is_assert"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4777,8 +4776,7 @@
    "sandbox_4_a",
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
-   "list_find_property",
-   "reply"
+   "list_find_property"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5509,8 +5507,7 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply",
-   "reply"
+   "messenger_reply"
   ],
   "functions_names": [
    "functions_names",
@@ -9789,8 +9786,7 @@
    "list_remove_property",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "app_reply_main",
-   "reply"
+   "app_reply_main"
   ],
   "nameds": [
    "js_declaration_single"
@@ -11307,8 +11303,7 @@
    "html_parse_descendants_classes",
    "html_parse_classes_preview",
    "sandbox_2",
-   "messenger_reply_messages",
-   "reply"
+   "messenger_reply_messages"
   ],
   "found": [
    "visit_unique_async",
@@ -14012,8 +14007,7 @@
    "ebible_chapters_each_verses_list",
    "bible_verses_encouragement_generate",
    "ebible_verse",
-   "ebible_references_parse_lines",
-   "reply"
+   "ebible_references_parse_lines"
   ],
   "unzip": [
    "unzip",
@@ -14782,8 +14776,7 @@
   "languages": [
    "app_reply_main",
    "ebible_languages",
-   "list_remove_property",
-   "reply"
+   "list_remove_property"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -15076,8 +15069,7 @@
   ],
   "ebible_languages": [
    "app_reply_main",
-   "ebible_languages",
-   "reply"
+   "ebible_languages"
   ],
   "language_code": [
    "ebible_languages",
@@ -15899,6 +15891,9 @@
   "language_codes": [
    "reply",
    "reply_test"
+  ],
+  "ebible_languages_to_bible_folders": [
+   "reply"
   ]
  },
  "functions": {
@@ -30276,10 +30271,8 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "ebible_languages_to_bible_folders",
     "log",
-    "list_find_property",
-    "list_map",
-    "ebible_languages",
     "object_property_get",
     "list_concat",
     "ebible_references_parse_lines",
@@ -30295,11 +30288,6 @@
     "reference",
     "b",
     "concated",
-    "languages",
-    "lambda2",
-    "c",
-    "item",
-    "bible_folder",
     "mapped",
     "fn",
     "lambda",
