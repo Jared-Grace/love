@@ -5832,7 +5832,8 @@
    "urdu_allah_to_god",
    "sandbox_2",
    "ebible_verse_new",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_unread_click"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -8779,7 +8780,8 @@
    "js_dollar_x",
    "list_next_try",
    "list_random_item",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_unread_click"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -10514,7 +10516,8 @@
   ],
   "matches": [
    "js_visit_match",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_unread_click"
   ],
   "v_match": [
    "js_visit_match",
@@ -11454,7 +11457,8 @@
   ],
   "m": [
    "function_aliases_restore",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_unread_click"
   ],
   "mr": [
    "function_aliases_restore"
@@ -11954,7 +11958,8 @@
   "tag_name": [
    "html_element",
    "html_button_element",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_unread_click"
   ],
   "html_element": [
    "html_element",
@@ -15366,7 +15371,8 @@
    "messenger_reply_puppeteer",
    "messenger_reply_login",
    "puppeteer_matches",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_unread_click"
   ],
   "newPage": [
    "messenger_reply",
@@ -15471,10 +15477,12 @@
    "messenger_reply_playwright"
   ],
   "click": [
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_unread_click"
   ],
   "puppeteer_matches": [
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_unread_click"
   ],
   "$$": [
    "puppeteer_matches",
@@ -15548,6 +15556,9 @@
   ],
   "messenger_reply_playwright": [
    "messenger_reply_playwright"
+  ],
+  "messenger_reply_unread_click": [
+   "messenger_reply_unread_click"
   ]
  },
  "functions": {
@@ -29722,6 +29733,20 @@
     "nth",
     "click",
     "close"
+   ]
+  },
+  "messenger_reply_unread_click": {
+   "async": true,
+   "identifiers": [
+    "list_get",
+    "puppeteer_matches",
+    "messenger_reply_unread_click",
+    "page",
+    "tag_name",
+    "text",
+    "matches",
+    "m",
+    "click"
    ]
   }
  },
