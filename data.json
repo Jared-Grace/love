@@ -5215,7 +5215,8 @@
    "string_trim_right",
    "string_ends_with_space",
    "string_starts_with_dot",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "a": [
    "string_suffix_without",
@@ -15324,9 +15325,6 @@
    "messenger_reply_puppeteer"
   ],
   "userDataDir": [
-   "messenger_reply_puppeteer"
-  ],
-  "unreadSpanSelector": [
    "messenger_reply_puppeteer"
   ],
   "waitForSelector": [
@@ -29369,7 +29367,7 @@
     "newPage",
     "v",
     "goto",
-    "unreadSpanSelector",
+    "s",
     "p",
     "waitForSelector",
     "timeout",
