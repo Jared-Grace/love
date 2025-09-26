@@ -2282,7 +2282,8 @@
   "o a",
   "s def",
   "fw undefined_not_is_assert_lambda undefined_not_is_assert",
-  "s empty"
+  "s empty",
+  "c messenger_reply_messages_urls_transform messenger_reply_messages_transform"
  ],
  "marker_current": "1",
  "function_current": "undefined_not_is_assert",
