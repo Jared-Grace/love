@@ -40,7 +40,8 @@ export async function messenger_reply() {
   }
   while (true) {
     let e = list_empty_is(urls);
-    if (false) {
+    if (e) {
+      break;
     }
   }
   await each_async(urls, lambda);
