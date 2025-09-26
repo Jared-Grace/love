@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
@@ -9,7 +10,8 @@ export async function messenger_reply() {
   let ms_per_minute = seconds_per_minute * ms_per_second;
   let ms_per_character = ms_per_minute / characters_per_minute;
   let high = ms_per_character * 1.5;
-  let r = integer_random(min, max);
+  let r = integer_random(ms_per_character, high);
+  log(message);
   return;
   const puppeteerModule = await import("puppeteer");
   const puppeteer = puppeteerModule.default ?? puppeteerModule;
