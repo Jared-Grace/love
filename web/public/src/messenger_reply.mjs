@@ -1,3 +1,4 @@
+import { object_properties } from "./object_properties.mjs";
 import { messenger_reply_messages_urls_transform } from "./messenger_reply_messages_urls_transform.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
@@ -17,6 +18,7 @@ export async function messenger_reply() {
     function transform_inner(mu) {
       messages_urls = mu;
     }
+    let properties = object_properties(obj);
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
   }
