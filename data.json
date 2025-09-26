@@ -5306,7 +5306,8 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "a": [
    "string_suffix_without",
@@ -6980,7 +6981,8 @@
    "string_split_empty",
    "digits",
    "bible_verses_encouragement_generate",
-   "roman_to_integer"
+   "roman_to_integer",
+   "reply"
   ],
   "results": [
    "functions_combine_name"
@@ -12490,7 +12492,8 @@
    "string_split_space",
    "app_replace_rule_parse",
    "ebible_verses",
-   "list_map_split_space"
+   "list_map_split_space",
+   "reply"
   ],
   "split2": [
    "list_map_split_space",
@@ -15763,9 +15766,6 @@
    "messenger_reply"
   ],
   "reply": [
-   "reply"
-  ],
-  "sss": [
    "reply"
   ],
   "undefined_not_is_assert": [
@@ -30142,12 +30142,14 @@
   "reply": {
    "async": false,
    "identifiers": [
+    "string_split_space",
     "list_map",
     "whitespace_normalize",
     "marker",
     "reply",
     "input",
-    "sss",
+    "split",
+    "s",
     "lambda",
     "item",
     "mapped",
