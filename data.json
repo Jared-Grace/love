@@ -5583,7 +5583,8 @@
    "puppeteer_matches",
    "messenger_reply_puppeteer",
    "command_line_read_empty",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "readdirSync": [
    "folder_read"
@@ -15497,7 +15498,8 @@
   "command_line_read_empty": [
    "messenger_reply_login",
    "messenger_reply_playwright",
-   "command_line_read_empty"
+   "command_line_read_empty",
+   "messenger_reply"
   ],
   "keyboard_type_delay": [
    "messenger_reply_puppeteer",
@@ -29438,6 +29440,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "command_line_read_empty",
     "messenger_reply_wait",
     "messenger_reply_messages_urls_add_page",
     "messenger_reply_messages",
@@ -29458,6 +29461,7 @@
     "newPage",
     "v",
     "messages",
+    "v2",
     "p",
     "focus",
     "fn",
