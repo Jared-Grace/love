@@ -2247,7 +2247,8 @@
   "s line",
   "command_line_read",
   "n messenger_reply",
-  "n messenger_reply_login"
+  "n messenger_reply_login",
+  "messenger_reply_login"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_login",
