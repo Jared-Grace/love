@@ -2252,7 +2252,8 @@
   "n bind_property",
   "s doc",
   "ar mr messenger_reply",
-  "mr"
+  "mr",
+  "s messenger"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
