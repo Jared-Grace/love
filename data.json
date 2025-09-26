@@ -4767,7 +4767,8 @@
    "promise_wrap",
    "retry",
    "list_empty_is_assert",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -9789,7 +9790,8 @@
   "string_empty_is": [
    "js_identifier_unique",
    "string_empty_is",
-   "string_empty_not_is"
+   "string_empty_not_is",
+   "messenger_reply_puppeteer"
   ],
   "string_prefix_without": [
    "string_prefix_without",
@@ -11533,8 +11535,7 @@
    "function_aliases_restore"
   ],
   "sei": [
-   "function_aliases_restore",
-   "messenger_reply_puppeteer"
+   "function_aliases_restore"
   ],
   "lf": [
    "function_aliases_restore"
@@ -15476,6 +15477,9 @@
    "messenger_reply_puppeteer"
   ],
   "string_trim": [
+   "messenger_reply_puppeteer"
+  ],
+  "s2": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29440,6 +29444,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "string_empty_is",
     "string_trim",
     "list_adder_async",
     "list_empty_is",
@@ -29481,7 +29486,8 @@
     "evaluate",
     "message",
     "lambda",
-    "sei",
+    "e",
+    "s2",
     "lambda4",
     "imgs",
     "lambda3",
