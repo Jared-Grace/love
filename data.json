@@ -4262,7 +4262,8 @@
    "app_message",
    "function_list_generate",
    "js_dollar_if_call",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "function_alias_add"
   ],
   "output": [
    "watch",
@@ -6508,7 +6509,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "function_alias_add"
   ],
   "Error": [
    "error",
@@ -9896,7 +9898,8 @@
    "string_empty_not_is",
    "ebible_verses",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "function_alias_add"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -16881,6 +16884,7 @@
   },
   "function_alias_add": {
    "identifiers": [
+    "string_empty_not_is",
     "assert",
     "marker",
     "list_sort_string_size",
@@ -16890,6 +16894,8 @@
     "function_alias_add",
     "first",
     "second",
+    "ne",
+    "name",
     "b",
     "list",
     "alias",
