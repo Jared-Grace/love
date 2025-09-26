@@ -7,11 +7,11 @@ import { error } from "./error.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 export async function function_alias_add(first, second) {
   marker("1");
-  let ne = string_empty_not_is(second);
-  assert(ne);
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
+  let ne = string_empty_not_is(f_name);
+  assert(ne);
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
