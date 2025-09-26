@@ -4,15 +4,15 @@ import { list_get } from "./list_get.mjs";
 import { each_index } from "./each_index.mjs";
 export function reply_sequence(sequence) {
   let fn = function reply_sequence_matches(a) {
-    let input = object_property_get(a, "input");
+    let tokens = object_property_get(a, "tokens");
     let matches = true;
     function lambda(sequence_item, index) {
-      let input_item = list_get(input, index);
-      if (sequence_item !== input_item) {
+      let token = list_get(tokens, index);
+      if (sequence_item !== token) {
         matches = false;
         log({
           sequence_item,
-          input_item,
+          token,
         });
       }
     }
