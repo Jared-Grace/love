@@ -1,15 +1,13 @@
-import { not } from "./not.mjs";
+import { string_ends_with_not } from "./string_ends_with_not.mjs";
 import { marker } from "./marker.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_any } from "./list_any.mjs";
-import { string_ends_with } from "./string_ends_with.mjs";
 export function list_filter_ends_with_not_any(suffixes, list) {
   marker("1");
   function lambda(item) {
     function lambda3(suffix) {
-      let a = string_ends_with(item, suffix);
-      let ew = not(a);
-      return ew;
+      let ewn = string_ends_with_not(item, suffix);
+      return ewn;
     }
     let any = list_any(suffixes, lambda3);
     return any;
