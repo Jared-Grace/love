@@ -1,3 +1,4 @@
+import { file_read_json } from "./file_read_json.mjs";
 import { bind } from "./bind.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
@@ -7,6 +8,7 @@ import { retry_on_error } from "./retry_on_error.mjs";
 import { import_install } from "./import_install.mjs";
 export async function messenger_reply() {
   let p = folder_user_docs_path("fb.json");
+  let data = await file_read_json(file_path);
   const { chromium, firefox, webkit } = await import_install("playwright");
   let browser = null;
   async function lambda2() {
