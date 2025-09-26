@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -33,6 +34,11 @@ export async function messenger_reply() {
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay(pin, fn);
   const locator = page.locator("text=Unread");
+  const count = await locator.count();
+  console.log(`Found ${count} matches`);
+  for (let i = 0; i < count; i++) {
+    await locator.nth(i).click();
+  }
   await command_line_read_empty();
   await browser.close();
 }
