@@ -2153,7 +2153,6 @@
   "function_name_to_acronym a_b_C",
   "rs sandbox_4 a",
   "o rs",
-  "s doc",
   "n sandbox",
   "o s4",
   "s sand",
@@ -2251,7 +2250,8 @@
   "fd messenger_reply",
   "messenger_reply",
   "n bind",
-  "n bind_property"
+  "n bind_property",
+  "s doc"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
