@@ -1,3 +1,4 @@
+import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -37,7 +38,8 @@ export async function messenger_reply_puppeteer() {
           continue;
         }
         let message = await c2.evaluate(lambda);
-        message = string_trim(message);sei
+        message = string_trim(message);
+        let e = string_empty_is(s2);
         function lambda4(imgs) {
           function lambda3(img) {
             let v4 = getComputedStyle(img).borderRadius === "50%";
