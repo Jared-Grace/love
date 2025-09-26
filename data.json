@@ -4390,7 +4390,8 @@
    "file_temp",
    "folder_user_combine",
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "separator": [
    "watch",
@@ -30190,7 +30191,8 @@
     "reply",
     "input",
     "r",
-    "reply_sequence"
+    "reply_sequence",
+    "result"
    ]
   },
   "undefined_not_is_assert": {
