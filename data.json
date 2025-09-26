@@ -3879,8 +3879,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "reply"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -10376,8 +10375,7 @@
   ],
   "v7": [
    "js_marker_name_get",
-   "string_trim",
-   "reply"
+   "string_trim"
   ],
   "variable_name": [
    "js_node_atomize"
@@ -15614,8 +15612,7 @@
   ],
   "string_trim": [
    "string_trim",
-   "messenger_reply_messages",
-   "reply"
+   "messenger_reply_messages"
   ],
   "messenger_reply_playwright": [
    "messenger_reply_playwright"
@@ -30115,13 +30112,10 @@
   "reply": {
    "async": false,
    "identifiers": [
-    "string_trim",
     "whitespace_normalize",
     "marker",
     "reply",
-    "input",
-    "v7",
-    "message"
+    "input"
    ]
   }
  },
