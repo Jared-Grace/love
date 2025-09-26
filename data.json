@@ -3828,8 +3828,7 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply",
-   "reply_sequence"
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5054,7 +5053,8 @@
    "bind_property",
    "messenger_reply_playwright",
    "js_dollar_if_call",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "reply_sequence"
   ],
   "colored": [
    "chalk_color",
@@ -30268,7 +30268,7 @@
     "each_index",
     "reply_sequence",
     "sequence",
-    "v",
+    "fn",
     "reply_sequence_matches",
     "input",
     "matches",
