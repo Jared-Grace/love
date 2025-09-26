@@ -4410,7 +4410,6 @@
    "folder_user_combine",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "reply",
    "messenger_reply_unreplied"
   ],
   "separator": [
@@ -30327,8 +30326,7 @@
     "fn",
     "lambda",
     "list",
-    "r",
-    "result"
+    "r"
    ]
   },
   "undefined_not_is_assert": {
