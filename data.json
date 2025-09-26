@@ -3523,7 +3523,8 @@
    "string_list_to",
    "messenger_reply_puppeteer",
    "js_statement_return_add",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -7013,7 +7014,6 @@
    "ebible_verses_upload",
    "ebible_versions",
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with",
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_prefix_any",
@@ -9629,7 +9629,8 @@
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_prefix_any",
-   "messenger_reply"
+   "messenger_reply",
+   "list_filter_starts_with"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -14052,7 +14053,6 @@
    "ebible_chapters",
    "ebible_version_download_path_combine",
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with",
    "string_starts_with_not",
    "ebible_chapter_code_to_book",
    "ebible_index",
@@ -27867,8 +27867,8 @@
     "list_filter",
     "string_starts_with",
     "list_filter_starts_with",
-    "mapped",
-    "book_code",
+    "list",
+    "prefix",
     "lambda",
     "item",
     "sw",
