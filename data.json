@@ -4351,8 +4351,7 @@
    "file_temp",
    "folder_user_combine",
    "ebible_verse",
-   "ebible_references_parse_lines",
-   "messenger_reply"
+   "ebible_references_parse_lines"
   ],
   "separator": [
    "watch",
@@ -5270,8 +5269,7 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply_wait"
   ],
   "a": [
    "string_suffix_without",
@@ -5369,7 +5367,8 @@
    "string_suffix_without",
    "string_suffix_change",
    "functions_names",
-   "ebible_chapters"
+   "ebible_chapters",
+   "messenger_reply"
   ],
   "ending_old": [
    "function_watch_ending_change",
@@ -15682,9 +15681,6 @@
    "http"
   ],
   "link": [
-   "messenger_reply"
-  ],
-  "prefix2": [
    "messenger_reply"
   ]
  },
@@ -29510,9 +29506,7 @@
     "lambda",
     "url",
     "prefix",
-    "result",
-    "s",
-    "prefix2",
+    "without",
     "link",
     "$",
     "click",
