@@ -1,3 +1,4 @@
+import { reply_on_match } from "./reply_on_match.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
 import { log } from "./log.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -28,6 +29,9 @@ export async function reply(a) {
   input = string_split_space(input);
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
-  let result = r(input);
+  let result = r({
+    lines: [],
+    input,
+  });
   return result;
 }
