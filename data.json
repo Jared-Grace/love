@@ -14625,8 +14625,7 @@
    "ebible_references_parse_god_created_man_why",
    "bible_verses_encouragement_generate",
    "sandbox",
-   "ebible_references_parse_lines",
-   "reply"
+   "ebible_references_parse_lines"
   ],
   "ebible_folder_urdu": [
    "ebible_folder_urdu",
@@ -30263,7 +30262,6 @@
     "ebible_languages",
     "object_property_get",
     "list_concat",
-    "ebible_folder_english",
     "ebible_references_parse_lines",
     "reply_sequence",
     "list_map_lower",
