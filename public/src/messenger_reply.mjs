@@ -1,3 +1,4 @@
+import { string_prefix_without } from "./string_prefix_without.mjs";
 import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
@@ -26,6 +27,7 @@ export async function messenger_reply() {
   let urls = await messenger_reply_messages_urls_add_page(page);
   async function lambda(url) {
     let prefix = "https://www.facebook.com";
+    let result = string_prefix_without(s, prefix2);
     const link = await page.$(`a[href="${url}"]`);
     await link.click();
     await sleep(1000000);
