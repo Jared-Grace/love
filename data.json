@@ -4977,7 +4977,8 @@
    "js_statement_return_empty_add",
    "ebible_index",
    "app_new_step_2",
-   "js_statement_return_add"
+   "js_statement_return_add",
+   "reply"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -15922,7 +15923,8 @@
    "reply_on_match"
   ],
   "outputs": [
-   "reply_test"
+   "reply_test",
+   "reply"
   ],
   "token": [
    "reply_sequence"
@@ -30303,6 +30305,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "list_add",
     "object_property_set_exists_not",
     "reply_on_match",
     "ebible_languages_to_bible_folders",
@@ -30324,6 +30327,7 @@
     "bible_folders",
     "fn",
     "lambda",
+    "outputs",
     "list",
     "r"
    ]
