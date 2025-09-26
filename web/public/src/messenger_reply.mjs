@@ -27,5 +27,6 @@ export async function messenger_reply() {
     await page.keyboard.type(item);
   }
   await each_async(list, lambda);
+  return;
   await page.keyboard.press("Enter");
 }
