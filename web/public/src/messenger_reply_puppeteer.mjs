@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -73,6 +74,7 @@ export async function messenger_reply_puppeteer() {
     }
   }
   let list = await list_adder_async(lambda6);
+  log(message2);
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
