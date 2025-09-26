@@ -3797,8 +3797,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29022,7 +29021,6 @@
     "ms_per_character",
     "high",
     "r",
-    "message",
     "puppeteerModule",
     "puppeteer",
     "default",
