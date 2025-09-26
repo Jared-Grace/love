@@ -13,8 +13,8 @@ export async function messenger_reply_puppeteer() {
   const page = await browser.newPage();
   let v = messenger_reply_url();
   await page.goto(v);
-  const unreadSpanSelector = 'p[dir="auto"]';
-  let p = await page.waitForSelector(unreadSpanSelector, {
+  const s = 'p[dir="auto"]';
+  let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
   const tag_name = "span";
