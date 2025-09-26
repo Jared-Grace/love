@@ -35,11 +35,7 @@ export async function messenger_reply() {
     function lambda(item) {}
     let property_name = messenger_reply_messages_name();
     let property_value = messenger_reply_messages_me();
-    let filtered2 = list_filter_property(
-      messages,
-      property_name,
-      property_value,
-    );
+    let mine = list_filter_property(messages, property_name, property_value);
     log(messages);
     let answer = await command_line_read_empty();
   }
