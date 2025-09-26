@@ -12602,7 +12602,8 @@
   ],
   "lines": [
    "function_transform_marker_specified",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "html_p": [
    "html_p",
@@ -30304,6 +30305,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "reply_on_match",
     "ebible_languages_to_bible_folders",
     "log",
     "object_property_get",
@@ -30326,8 +30328,8 @@
     "lambda",
     "list",
     "r",
-    "reply_on_match",
-    "result"
+    "result",
+    "lines"
    ]
   },
   "undefined_not_is_assert": {
