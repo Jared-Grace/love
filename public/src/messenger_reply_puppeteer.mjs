@@ -32,11 +32,21 @@ export async function messenger_reply_puppeteer() {
       if (parentTag === "H5") {
         continue;
       }
+      function lambda4(imgs) {
+        function lambda3(img) {
+          let v4 = getComputedStyle(img).borderRadius === "50%";
+          return v4;
+        }
+        let v5 = imgs.filter(lambda3);
+        return v5;
+      }
+      const imgs = await c.$$eval("img", lambda4);
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
       }
       console.log(await c.evaluate(lambda));
+      console.log(imgs);
     }
   }
   return;
