@@ -37,8 +37,8 @@ export async function messenger_reply() {
     let property_name = messenger_reply_messages_name();
     let property_value = messenger_reply_messages_me();
     let mine = list_filter_property(messages, property_name, property_value);
-    let last = list_last(list);
-    log(messages);
+    let last = list_last(mine);
+    log(last);
     let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
