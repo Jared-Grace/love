@@ -15637,7 +15637,8 @@
    "messenger_reply"
   ],
   "messenger_reply_wait": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29436,6 +29437,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_wait",
     "messenger_reply_messages_urls_add_page",
     "messenger_reply_messages",
     "messenger_reply_unread_click",
