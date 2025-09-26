@@ -2231,7 +2231,6 @@
   "n string_list_to",
   "ps",
   "keyboard_typing_delay",
-  "mr",
   "s finally",
   "s catch",
   "c catch_only_async catch_only_run_async",
@@ -2252,7 +2251,8 @@
   "n bind",
   "n bind_property",
   "s doc",
-  "ar mr messenger_reply"
+  "ar mr messenger_reply",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "bind_property",

@@ -1,6 +1,6 @@
+import { bind_property } from "./bind_property.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { bind } from "./bind.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
@@ -30,7 +30,7 @@ export async function messenger_reply() {
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
   await input.focus();
-  let fn = page.keyboard.type.bind(page.keyboard);
+  let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay(pin, fn);
   await command_line_read_empty();
   await browser.close();
