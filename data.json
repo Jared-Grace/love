@@ -2309,7 +2309,8 @@
    "messenger_reply",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "ebible_verses"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3905,7 +3906,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "ebible_verses"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -26998,6 +27000,7 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
+    "log",
     "urdu_allah_to_god",
     "list_add",
     "list_index_of_last",
@@ -27025,6 +27028,7 @@
     "la",
     "lambda2",
     "verse_number",
+    "message",
     "index",
     "skipped",
     "v",
