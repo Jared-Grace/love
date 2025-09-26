@@ -10,6 +10,6 @@ export function messenger_reply_unreplied(messages) {
   let mine = list_filter_property(messages, property_name, property_value);
   let last = list_last(mine);
   let index_last = list_index_of(messages, last);
-  let skipped = list_skip(messages, index_last + 1);
-  return skipped;
+  let unreplied = list_skip(messages, index_last + 1);
+  return unreplied;
 }
