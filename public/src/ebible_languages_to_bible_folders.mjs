@@ -9,6 +9,6 @@ export function ebible_languages_to_bible_folders(language_codes) {
     let bible_folder = object_property_get(item, "bible_folder");
     return bible_folder;
   }
-  let mapped = list_map(language_codes, lambda2);
-  return mapped;
+  let bible_folders = list_map(language_codes, lambda2);
+  return bible_folders;
 }
