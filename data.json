@@ -3758,7 +3758,8 @@
    "string_list_to",
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply_url"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15321,7 +15322,8 @@
   "messenger_reply_url": [
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "messenger_reply_url"
   ],
   "messenger_reply_puppeteer": [
    "messenger_reply_puppeteer"
@@ -29460,6 +29462,13 @@
     "txt",
     "evaluate",
     "push"
+   ]
+  },
+  "messenger_reply_url": {
+   "async": false,
+   "identifiers": [
+    "messenger_reply_url",
+    "v"
    ]
   }
  },
