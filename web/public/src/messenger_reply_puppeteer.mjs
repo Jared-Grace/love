@@ -1,3 +1,4 @@
+import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
@@ -16,6 +17,7 @@ export async function messenger_reply_puppeteer() {
     timeout: 10000,
   });
   await p.focus();
+  let fn = bind_property(object, property_name);
   await keyboard_type_delay("Greetings!", page.keyboard.type);
   return;
   await page.keyboard.press("Enter");
