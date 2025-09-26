@@ -3497,7 +3497,8 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "v": [
    "data_identifiers_file",
@@ -4672,7 +4673,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply_puppeteer"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6164,7 +6166,8 @@
    "ebible_verse_download",
    "firebase_storage_download_ebible",
    "list_set",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_puppeteer"
   ],
   "lists_get": [
    "each_multiple",
@@ -8736,7 +8739,8 @@
    "js_dollar_x",
    "list_next_try",
    "list_random_item",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_puppeteer"
   ],
   "list_index_of": [
    "js_block_insert",
@@ -29351,6 +29355,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "list_get",
     "puppeteer_matches",
     "bind_property",
     "keyboard_type_delay",
@@ -29373,6 +29378,9 @@
     "tag_name",
     "text",
     "matches",
+    "item",
+    "list",
+    "index",
     "click",
     "focus",
     "fn",
