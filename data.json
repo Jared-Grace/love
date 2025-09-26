@@ -2266,8 +2266,6 @@
   "ac ll lfl",
   "a ll list_last",
   "s last",
-  "p",
-  "mr",
   "s reply",
   "n reply",
   "s normal",
@@ -2283,7 +2281,9 @@
   "s def",
   "fw undefined_not_is_assert_lambda undefined_not_is_assert",
   "s empty",
-  "c messenger_reply_messages_urls_transform messenger_reply_messages_transform"
+  "p",
+  "c messenger_reply_messages_urls_transform messenger_reply_messages_transform",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages_transform",
