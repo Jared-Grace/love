@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { catch_only_run_async } from "./catch_only_run_async.mjs";
 import { import_install } from "./import_install.mjs";
 export async function messenger_reply() {
@@ -8,7 +9,9 @@ export async function messenger_reply() {
       headless: false,
     });
   }
-  function lambda() {}
+  function lambda() {
+    log(message);
+  }
   await catch_only_run_async(lambda2, "npx playwright install", lambda);
   const page = await browser.newPage();
   await page.goto("https://facebook.com");
