@@ -40,7 +40,8 @@ export async function messenger_reply_puppeteer() {
         let message = await c2.evaluate(lambda);
         message = string_trim(message);
         let e = string_empty_is(s2);
-        if (false) {
+        if (e) {
+          continue;
         }
         function lambda4(imgs) {
           function lambda3(img) {
