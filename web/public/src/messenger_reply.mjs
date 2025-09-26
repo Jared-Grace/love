@@ -1,3 +1,4 @@
+import { http_sleep } from "./http_sleep.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
 import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
@@ -11,7 +12,6 @@ import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
-import { sleep } from "./sleep.mjs";
 export async function messenger_reply() {
   marker("1");
   const puppeteer = await import("puppeteer");
@@ -28,9 +28,13 @@ export async function messenger_reply() {
   async function lambda(url) {
     let prefix = "https://www.facebook.com";
     let without = string_prefix_without(url, prefix);
-    const link = await page.$(`a[href="${without}"]`);
+    const selector = `a[href="${without}"]`;
+    const link = await page.$(selector);
     await link.click();
-    await sleep(1000000);
+    await page.waitForSelector(selector, {
+      state: "detached",
+    });
+    await http_sleep();
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
