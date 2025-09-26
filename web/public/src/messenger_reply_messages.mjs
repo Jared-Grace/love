@@ -1,3 +1,4 @@
+import { messenger_reply_messages_me } from "./messenger_reply_messages_me.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add } from "./messenger_reply_messages_urls_add.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
@@ -49,7 +50,7 @@ export async function messenger_reply_messages(page, url) {
         }
         let name = null;
         if (list_empty_is(imgs)) {
-          name = "me";
+          name = messenger_reply_messages_me();
         } else {
           name = "them";
         }
