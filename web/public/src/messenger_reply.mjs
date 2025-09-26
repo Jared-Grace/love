@@ -16,7 +16,7 @@ export async function messenger_reply() {
     storageState: "fb-session.json",
   });
   const page = await context.newPage();
-  await page.waitForSelector(
+  const input = await page.waitForSelector(
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
   let v = messenger_reply_url();
