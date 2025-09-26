@@ -2636,7 +2636,8 @@
    "list_filter_ends_with_not_any",
    "function_alias_add",
    "functions_search",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "messenger_reply_messages_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -30170,6 +30171,7 @@
   "messenger_reply_messages_transform": {
    "async": true,
    "identifiers": [
+    "marker",
     "messenger_reply_messages_urls_get",
     "file_json_transform",
     "folder_user_docs_path",
