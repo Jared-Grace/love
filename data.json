@@ -2140,7 +2140,6 @@
   "rs sandbox _4",
   "u rs",
   "s rename",
-  "s a",
   "function_name_to_acronym a_b_C",
   "rs sandbox_4 a",
   "o rs",
@@ -2280,7 +2279,8 @@
   "a sss string_split_space",
   "o a",
   "a sss ",
-  "o s"
+  "o s",
+  "s a"
  ],
  "marker_current": "1",
  "function_current": "functions_search",
