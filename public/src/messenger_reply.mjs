@@ -22,9 +22,9 @@ export async function messenger_reply() {
     log({
       messages,
     });
+    let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
-  let answer = await command_line_read_empty();
   return;
   log(messages);
   return;
