@@ -3333,8 +3333,7 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5776,8 +5775,7 @@
    "js_node_types_includes",
    "list_remove_if_exists",
    "app_reply_main",
-   "catch_only_run_async",
-   "messenger_reply_puppeteer"
+   "catch_only_run_async"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -10178,8 +10176,7 @@
    "js_statement_call_get",
    "http",
    "command_line_cmd",
-   "roman_to_integer",
-   "messenger_reply_puppeteer"
+   "roman_to_integer"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -10497,8 +10494,7 @@
    "list_add_multiple",
    "http",
    "path_join",
-   "puppeteer_matches",
-   "messenger_reply_puppeteer"
+   "puppeteer_matches"
   ],
   "list_adder_generic": [
    "list_adder",
@@ -12497,8 +12493,7 @@
    "html_style_remove",
    "html_style_set",
    "html_style_merge",
-   "html_style_assign",
-   "messenger_reply_puppeteer"
+   "html_style_assign"
   ],
   "removeProperty": [
    "html_style_remove"
@@ -13888,8 +13883,7 @@
   ],
   "el": [
    "html_parse_list_text_to",
-   "puppeteer_matches",
-   "messenger_reply_puppeteer"
+   "puppeteer_matches"
   ],
   "$": [
    "html_parse_list_text_to",
@@ -15435,12 +15429,6 @@
    "messenger_reply_puppeteer"
   ],
   "children2": [
-   "messenger_reply_puppeteer"
-  ],
-  "children3": [
-   "messenger_reply_puppeteer"
-  ],
-  "cssText": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29431,24 +29419,16 @@
     "children",
     "$$",
     "c",
-    "children3",
-    "filtered",
-    "el",
-    "lambda2",
-    "node",
-    "v3",
-    "style",
-    "cssText",
-    "evaluate",
-    "includes",
-    "push",
     "children2",
     "elements",
     "e",
     "lambda",
+    "node",
     "v2",
     "textContent",
+    "filtered",
     "console",
+    "evaluate",
     "focus",
     "fn",
     "keyboard",
