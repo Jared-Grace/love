@@ -2642,8 +2642,7 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "reply_sequence"
+   "messenger_reply_messages_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3825,7 +3824,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_sequence"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15816,6 +15816,9 @@
   ],
   "reply_sequence": [
    "reply",
+   "reply_sequence"
+  ],
+  "reply_sequence_matches": [
    "reply_sequence"
   ]
  },
@@ -30244,9 +30247,10 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
-    "marker",
     "reply_sequence",
-    "items"
+    "items",
+    "v",
+    "reply_sequence_matches"
    ]
   }
  },
