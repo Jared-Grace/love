@@ -3541,7 +3541,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -10463,7 +10464,8 @@
    "list_last_is",
    "list_last_or_null",
    "prompt_previous",
-   "js_expand_generic"
+   "js_expand_generic",
+   "messenger_reply"
   ],
   "list_empty_not_is": [
    "js_return_name",
@@ -10484,7 +10486,8 @@
    "list_last",
    "list_last_is",
    "marker_if_test_replace",
-   "js_expand_generic"
+   "js_expand_generic",
+   "messenger_reply"
   ],
   "identifier_if": [
    "js_return_name",
@@ -29528,6 +29531,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_last",
     "messenger_reply_messages_me",
     "messenger_reply_messages_name",
     "list_filter_property",
@@ -29564,6 +29568,8 @@
     "property_name",
     "property_value",
     "mine",
+    "last",
+    "list",
     "answer",
     "p",
     "focus",
