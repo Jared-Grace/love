@@ -40,12 +40,12 @@ export async function messenger_reply() {
     let without = string_prefix_without(url, prefix);
     const selector = `a[href="${without}"]`;
     const link = await page.$(selector);
-    if (false) {
+    if (link !== null) {
+      await link.click();
+      await page.waitForSelector(selector, {
+        state: "detached",
+      });
     }
-    await link.click();
-    await page.waitForSelector(selector, {
-      state: "detached",
-    });
     list_remove(urls, url);
     let urls_new = await messenger_reply_messages_urls_add_page(page);
     function lambda2(url_new) {
