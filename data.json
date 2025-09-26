@@ -2270,7 +2270,8 @@
    "search_generic",
    "js_log_remove",
    "app_reply_main",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -10001,7 +10002,8 @@
   ],
   "message2": [
    "js_identifiers_to_names",
-   "list_size_1_assert"
+   "list_size_1_assert",
+   "messenger_reply_puppeteer"
   ],
   "js_stack_filtered_multiple_each": [
    "js_identifier_defineds",
@@ -29438,6 +29440,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "log",
     "string_empty_is",
     "string_trim",
     "list_adder_async",
@@ -29498,6 +29501,7 @@
     "textContent",
     "name",
     "list",
+    "message2",
     "focus",
     "fn",
     "keyboard",
