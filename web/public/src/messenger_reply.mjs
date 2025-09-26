@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { string_list_to } from "./string_list_to.mjs";
 import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
 import { log } from "./log.mjs";
@@ -22,7 +23,8 @@ export async function messenger_reply() {
     timeout: 10000,
   });
   await p.focus();
-  let chars = string_list_to(str);
+  let list = string_list_to(str);
+  await each_async(list2, async function lambda(item) {});
   await page.keyboard.type(message);
   await page.keyboard.press("Enter");
 }
