@@ -1,4 +1,4 @@
-import { command_line } from "./command_line.mjs";
+import { command_line_log } from "./command_line_log.mjs";
 import { log } from "./log.mjs";
 import { catch_only_run_async } from "./catch_only_run_async.mjs";
 import { import_install } from "./import_install.mjs";
@@ -12,8 +12,7 @@ export async function messenger_reply() {
   }
   const command = "npx playwright install";
   async function lambda() {
-    log("running: " + command);
-    let stdout = await command_line(command);
+    let stdout = await command_line_log(command);
     log(stdout);
     await lambda2();
   }
