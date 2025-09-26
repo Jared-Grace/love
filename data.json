@@ -29462,12 +29462,12 @@
     "bind_property",
     "keyboard_type_delay",
     "messenger_reply",
-    "messages",
-    "page",
     "answer",
+    "messages",
     "p",
     "focus",
     "fn",
+    "page",
     "keyboard",
     "press"
    ]
