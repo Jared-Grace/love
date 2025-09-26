@@ -2269,8 +2269,7 @@
    "search_generic",
    "js_log_remove",
    "app_reply_main",
-   "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3833,7 +3832,8 @@
    "js_node_atomize",
    "function_transform_marker_specified",
    "retry",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -10756,8 +10756,7 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -29430,7 +29429,6 @@
    "async": true,
    "identifiers": [
     "list_empty_is",
-    "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
     "keyboard_type_delay",
@@ -29481,7 +29479,7 @@
     "lambda",
     "v2",
     "textContent",
-    "console",
+    "message",
     "name",
     "focus",
     "fn",
