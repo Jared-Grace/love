@@ -38,7 +38,7 @@ export async function messenger_reply_puppeteer() {
         }
         let message = await c2.evaluate(lambda);
         message = string_trim(message);
-        let e = string_empty_is(s2);
+        let e = string_empty_is(message);
         if (e) {
           continue;
         }
