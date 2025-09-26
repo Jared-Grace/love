@@ -2096,7 +2096,6 @@
   "ev ur MAT01 1",
   "u lma",
   "s list_map",
-  "s remove",
   "s ps",
   "ev ur,en MAT01 1",
   "s books",
@@ -2260,7 +2259,8 @@
   "p",
   "mr",
   "s starts",
-  "s without"
+  "s without",
+  "s remove"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
