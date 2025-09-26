@@ -3500,8 +3500,7 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to",
-   "messenger_reply_puppeteer"
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -7478,8 +7477,7 @@
    "ebible_index_flat",
    "retry",
    "ebible_books_to_chapter_codes",
-   "ebible_references_parse_lines",
-   "messenger_reply_puppeteer"
+   "ebible_references_parse_lines"
   ],
   "node": [
    "function_dependencies",
@@ -8799,8 +8797,7 @@
    "list_squash",
    "marker_down_choices_lambda",
    "html_parse_descendants_classes",
-   "ebible_verses",
-   "messenger_reply_puppeteer"
+   "ebible_verses"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -12551,8 +12548,7 @@
   "lambda6": [
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_reply_main",
-   "messenger_reply_puppeteer"
+   "app_reply_main"
   ],
   "sliced": [
    "list_slice",
@@ -15468,6 +15464,9 @@
    "messenger_reply_puppeteer"
   ],
   "c2": [
+   "messenger_reply_puppeteer"
+  ],
+  "lda": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29432,7 +29431,6 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
-    "list_adder",
     "list_empty_is",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29453,9 +29451,7 @@
     "p",
     "waitForSelector",
     "timeout",
-    "lambda6",
-    "la",
-    "list",
+    "lda",
     "conversation",
     "$",
     "children",
