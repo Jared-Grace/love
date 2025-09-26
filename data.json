@@ -5581,8 +5581,7 @@
    "string_list_to",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
   "readdirSync": [
    "folder_read"
@@ -5957,7 +5956,8 @@
   ],
   "answer": [
    "command_line_read",
-   "command_line_read_empty"
+   "command_line_read_empty",
+   "messenger_reply"
   ],
   "close": [
    "command_line_read",
@@ -29459,7 +29459,7 @@
     "newPage",
     "v",
     "messages",
-    "v2",
+    "answer",
     "p",
     "focus",
     "fn",
