@@ -7732,8 +7732,7 @@
    "catch_call",
    "list_intersect_empty_is_assert",
    "ebible_chapter_code_to_name",
-   "roman_to_integer",
-   "messenger_reply"
+   "roman_to_integer"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -29222,7 +29221,6 @@
     "b",
     "console",
     "nth",
-    "i",
     "click",
     "close"
    ]
