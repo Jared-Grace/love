@@ -5798,7 +5798,8 @@
    "html_parse_href_text",
    "urdu_allah_to_god",
    "sandbox_2",
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "messenger_reply_puppeteer"
   ],
   "clipboard": [
    "clipboard_copy"
@@ -7025,8 +7026,7 @@
    "function_aliases_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run",
-   "messenger_reply_puppeteer"
+   "tasks_run"
   ],
   "function_open": [
    "functions_search_open",
@@ -11893,7 +11893,8 @@
   ],
   "tag_name": [
    "html_element",
-   "html_button_element"
+   "html_button_element",
+   "messenger_reply_puppeteer"
   ],
   "html_element": [
    "html_element",
@@ -29386,9 +29387,10 @@
     "p",
     "waitForSelector",
     "timeout",
+    "tag_name",
+    "text",
     "elements",
     "$$",
-    "search",
     "matches",
     "el",
     "lambda",
