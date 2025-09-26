@@ -2310,7 +2310,8 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses"
+   "ebible_verses",
+   "messenger_reply_unreplied"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3907,7 +3908,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply_unreplied"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30320,6 +30322,7 @@
   "messenger_reply_unreplied": {
    "async": false,
    "identifiers": [
+    "log",
     "list_skip",
     "list_index_of",
     "list_last",
@@ -30331,6 +30334,7 @@
     "property_name",
     "property_value",
     "mine",
+    "message",
     "mine_last",
     "index_last",
     "unreplied",
