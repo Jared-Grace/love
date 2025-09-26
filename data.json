@@ -2239,7 +2239,6 @@
   "c catch_only_async catch_only_run_async",
   "u cl",
   "a cl command_line",
-  "p",
   "s retry",
   "s messenger_reply",
   "s readline",
@@ -2248,6 +2247,7 @@
   "n messenger_reply",
   "n messenger_reply_login",
   "messenger_reply_login",
+  "p",
   "messenger_reply"
  ],
  "marker_current": "1",
