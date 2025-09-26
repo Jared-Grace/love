@@ -19,6 +19,7 @@ export async function messenger_reply() {
   const page = await browser.newPage();
   let v = messenger_reply_url();
   let messages = await messenger_reply_messages(page, v);
+  await messenger_reply_unread_click(page);
   function lambda3(links) {
     function lambda(link) {
       let v2 = link.href;
@@ -38,7 +39,6 @@ export async function messenger_reply() {
   return;
   log(messages);
   return;
-  await messenger_reply_unread_click(page);
   return;
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
