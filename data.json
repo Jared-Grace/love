@@ -4107,7 +4107,8 @@
    "js_statement_expression_get",
    "object_property_set_exists_not",
    "object_merge_generic",
-   "list_set"
+   "list_set",
+   "bind_property"
   ],
   "name": [
    "watch",
@@ -15354,9 +15355,6 @@
    "bind"
   ],
   "bind_property": [
-   "bind_property"
-  ],
-  "property_name2": [
    "bind_property"
   ]
  },
@@ -29374,7 +29372,7 @@
     "bind_property",
     "object",
     "property_name",
-    "property_name2"
+    "value"
    ]
   }
  },
