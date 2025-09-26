@@ -1,4 +1,3 @@
-import { list_adder } from "./list_adder.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -18,8 +17,7 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
-  function lambda6(la) {}
-  let list = list_adder(lambda6);
+  lda;
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
