@@ -2216,7 +2216,6 @@
   "n roman_to_integer",
   "s list,not",
   "u lni",
-  "ps",
   "ebible_chapter_text guz GEN01",
   "evu guz",
   "roman_to_integer adsf",
@@ -2236,7 +2235,8 @@
   "messenger_reply",
   "s random",
   "s string,list",
-  "n string_list_to"
+  "n string_list_to",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
