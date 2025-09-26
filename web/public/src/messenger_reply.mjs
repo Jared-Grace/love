@@ -32,7 +32,7 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let skipped = messenger_reply_unreplied(messages);
-    let mapped2 = list_map_property(list, property_name);
+    let mapped2 = list_map_property(skipped, property_name);
     log(skipped);
     let answer = await command_line_read_empty();
   }
