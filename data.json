@@ -6382,7 +6382,8 @@
    "list_add_multiple",
    "marker_functionize",
    "each_pair_async",
-   "each_multiple_async"
+   "each_multiple_async",
+   "reply"
   ],
   "object_properties": [
    "each_object",
@@ -10712,7 +10713,8 @@
    "list_adder_multiple",
    "list_add_multiple",
    "marker_functionize",
-   "list_adder_multiple_async"
+   "list_adder_multiple_async",
+   "reply"
   ],
   "original": [
    "list_copy"
@@ -12009,7 +12011,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -30308,6 +30311,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "list_add_multiple",
     "list_map_property",
     "list_add",
     "object_property_set_exists_not",
@@ -30334,6 +30338,8 @@
     "outputs",
     "list",
     "mapped",
+    "list2",
+    "items",
     "r"
    ]
   },
