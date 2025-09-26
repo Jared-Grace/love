@@ -1,5 +1,4 @@
 import { list_empty_is } from "./list_empty_is.mjs";
-import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
@@ -50,7 +49,7 @@ export async function messenger_reply_puppeteer() {
         let v2 = node.textContent;
         return v2;
       }
-      console.log(await c2.evaluate(lambda));
+      let message = await c2.evaluate(lambda);
       let name = null;
       if (list_empty_is(imgs)) {
         name = "me";
