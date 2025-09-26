@@ -2270,7 +2270,6 @@
   "n reply",
   "s normal",
   "a str string_trim",
-  "s lower",
   "u sss",
   "a sss string_split_space",
   "a sss ",
@@ -2286,7 +2285,8 @@
   "mr",
   "n reply_test",
   "reply_test",
-  "rt"
+  "rt",
+  "s lower"
  ],
  "marker_current": "1",
  "function_current": "reply_test",
