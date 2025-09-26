@@ -38,7 +38,7 @@ export async function messenger_reply() {
     await http_sleep();
     await messenger_reply_messages_urls_add_page(page);
   }
-  let ne = list_empty_not_is(list);
+  let ne = list_empty_not_is(urls);
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
   return;
