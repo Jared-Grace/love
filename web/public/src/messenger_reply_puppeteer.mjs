@@ -51,7 +51,7 @@ export async function messenger_reply_puppeteer() {
         return v2;
       }
       console.log(await c2.evaluate(lambda));
-      let ne = list_empty_not_is(list);
+      let ne = list_empty_not_is(imgs);
     }
   }
   return;
