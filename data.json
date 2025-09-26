@@ -2281,10 +2281,11 @@
   "s a",
   "a sss",
   "o a",
-  "s def"
+  "s def",
+  "fw undefined_not_is_assert_lambda undefined_not_is_assert"
  ],
  "marker_current": "1",
- "function_current": "function_alias_add",
+ "function_current": "undefined_not_is_assert",
  "terminal": false,
  "identifiers": {
   "log": [
