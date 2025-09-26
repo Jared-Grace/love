@@ -4469,8 +4469,7 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "messenger_reply_playwright",
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_playwright"
   ],
   "file_path": [
    "data_file_update",
@@ -15023,8 +15022,7 @@
    "folder_user_docs_path",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply_playwright",
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_playwright"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -15665,22 +15663,13 @@
   "lambda$page": [
    "messenger_reply_puppeteer"
   ],
-  "messenger_reply_messages_urls_get": [
-   "messenger_reply_messages_urls_add_multiple"
-  ],
-  "file_json_transform": [
-   "messenger_reply_messages_urls_add_multiple"
-  ],
-  "fb_path": [
-   "messenger_reply_messages_urls_add_multiple"
-  ],
-  "transform": [
-   "messenger_reply_messages_urls_add_multiple"
-  ],
   "messages_urls": [
    "messenger_reply_messages_urls_add_multiple"
   ],
   "transform_inner": [
+   "messenger_reply_messages_urls_add_multiple"
+  ],
+  "messenger_reply_messages_urls_transform": [
    "messenger_reply_messages_urls_add_multiple"
   ]
  },
@@ -29993,18 +29982,13 @@
   "messenger_reply_messages_urls_add_multiple": {
    "async": true,
    "identifiers": [
-    "messenger_reply_messages_urls_get",
+    "messenger_reply_messages_urls_transform",
     "each",
     "object_property_set",
-    "file_json_transform",
-    "folder_user_docs_path",
     "messenger_reply_messages_urls_add_multiple",
     "urls",
-    "fb_path",
-    "transform",
-    "data",
-    "messages_urls",
     "transform_inner",
+    "messages_urls",
     "lambda",
     "url"
    ]
