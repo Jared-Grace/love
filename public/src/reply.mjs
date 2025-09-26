@@ -15,7 +15,8 @@ export async function reply(a) {
   let b = ["en"];
   let concated = list_concat(language_codes, b);
   let languages = ebible_languages();
-  let mapped = list_map(list2, function lambda2(item) {});
+  function lambda2(item) {}
+  let mapped = list_map(list2, lambda2);
   return list;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
