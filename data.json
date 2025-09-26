@@ -2127,7 +2127,6 @@
   "c string_split_semicolon_space string_split_semicolon",
   "a lst list_set",
   "c object_property_set list_set",
-  "s normal",
   "s choice",
   "evu arbnav",
   "an message",
@@ -2272,7 +2271,8 @@
   "p",
   "mr",
   "s reply",
-  "n reply"
+  "n reply",
+  "s normal"
  ],
  "marker_current": "1",
  "function_current": "reply",
