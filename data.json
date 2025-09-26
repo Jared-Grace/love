@@ -3526,7 +3526,8 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4773,7 +4774,8 @@
    "data_file_update_inner",
    "list_empty_is_assert",
    "messenger_reply_puppeteer",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "e": [
    "catch_ignore",
@@ -4803,7 +4805,8 @@
    "list_empty_is_assert",
    "catch_only_run_async",
    "messenger_reply_puppeteer",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -29485,6 +29488,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_empty_is",
     "list_empty_not_is",
     "http_sleep",
     "string_prefix_without",
@@ -29522,6 +29526,8 @@
     "waitForSelector",
     "state",
     "ne",
+    "e",
+    "list",
     "answer",
     "p",
     "focus",
