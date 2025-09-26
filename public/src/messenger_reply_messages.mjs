@@ -1,12 +1,15 @@
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
-  
   let fb = folder_user_docs_path("fb.json");
   let data = await file_read_json(fb);
+  await file_overwrite_json(file_path, object);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
     timeout: 10000,
