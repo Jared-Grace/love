@@ -2584,7 +2584,8 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_login"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15304,6 +15305,9 @@
   ],
   "press": [
    "messenger_reply_puppeteer"
+  ],
+  "messenger_reply_login": [
+   "messenger_reply_login"
   ]
  },
  "functions": {
@@ -29272,6 +29276,13 @@
     "keyboard",
     "type",
     "press"
+   ]
+  },
+  "messenger_reply_login": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "messenger_reply_login"
    ]
   }
  },
