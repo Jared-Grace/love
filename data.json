@@ -3842,7 +3842,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_on_match"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15912,6 +15913,9 @@
    "ebible_languages_to_bible_folders"
   ],
   "on_match": [
+   "reply_on_match"
+  ],
+  "reply_on_match_inner": [
    "reply_on_match"
   ]
  },
@@ -30419,7 +30423,9 @@
     "marker",
     "reply_on_match",
     "fn",
-    "on_match"
+    "on_match",
+    "v",
+    "reply_on_match_inner"
    ]
   }
  },
