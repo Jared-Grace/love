@@ -16,8 +16,9 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(unreadSpanSelector, {
     timeout: 10000,
   });
-  const elements = await page.$$("span");
-  const search = "Unread";
+  const tag_name = "span";
+  const text = "Unread";
+  const elements = await page.$$(tag_name);
   const matches = [];
   for (const el of elements) {
     function lambda(n) {
@@ -25,7 +26,7 @@ export async function messenger_reply_puppeteer() {
       return v2;
     }
     const txt = await el.evaluate(lambda);
-    if (txt === search) {
+    if (txt === text) {
       matches.push(el);
       console.log(txt);
     }
