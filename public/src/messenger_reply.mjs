@@ -1,7 +1,9 @@
-import { messenger_reply_puppeteer } from "./messenger_reply_puppeteer.mjs";
-import { marker } from "./marker.mjs";
 export async function messenger_reply() {
-  marker("1");
-  let v = await messenger_reply_puppeteer();
-  return v;
+  const { chromium, firefox, webkit } = await import("playwright");
+  const browser = await chromium.launch({
+    headless: false,
+  });
+  const page = await browser.newPage();
+  await page.goto("https://example.com");
+  await browser.close();
 }
