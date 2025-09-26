@@ -2247,7 +2247,6 @@
  "identifiers": {
   "log": [
    "data_identifiers_file",
-   "catch_only_async",
    "log",
    "log_keep",
    "prompt_previous",
@@ -3787,7 +3786,6 @@
    "assert_json",
    "assert_message",
    "catch_log_async",
-   "catch_only_async",
    "error",
    "error_json",
    "git_acp",
@@ -4709,7 +4707,6 @@
    "catch_ignore_async",
    "catch_log",
    "catch_log_async",
-   "catch_only_async",
    "function_exists",
    "git_rebase",
    "js_parse",
@@ -5646,7 +5643,6 @@
   ],
   "json_to": [
    "assert_json",
-   "catch_only_async",
    "json_to",
    "js_identifiers_to_names",
    "log_json",
@@ -5712,7 +5708,6 @@
    "catch_only_run_async"
   ],
   "json": [
-   "catch_only_async",
    "file_overwrite_json",
    "file_read_json",
    "json_from",
@@ -5722,7 +5717,6 @@
    "catch_only_run_async"
   ],
   "includes": [
-   "catch_only_async",
    "js_block_child_graph",
    "js_if_blockify_generic",
    "js_let_add",
@@ -8757,7 +8751,8 @@
    "js_return_atomize",
    "marker",
    "noop",
-   "js_expand_generic"
+   "js_expand_generic",
+   "catch_only_async"
   ],
   "function_transform_marker_empty": [
    "function_transform_marker_empty"
@@ -15236,7 +15231,8 @@
    "messenger_reply"
   ],
   "catch_only_run_async": [
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "catch_only_async"
   ],
   "on_error": [
    "catch_only_run_async"
@@ -15558,15 +15554,11 @@
   },
   "catch_only_async": {
    "identifiers": [
-    "json_to",
-    "log",
+    "noop",
+    "catch_only_run_async",
     "catch_only_async",
     "lambda",
-    "message_fragment",
-    "e",
-    "json",
-    "message",
-    "includes"
+    "message_fragment"
    ],
    "async": true
   },
