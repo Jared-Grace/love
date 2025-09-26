@@ -2252,9 +2252,9 @@
   "s messenger",
   "messenger_reply",
   "s equal",
-  "p",
   "messenger_reply_puppeteer",
   "ar mr messenger_reply_puppeteer",
+  "p",
   "mr"
  ],
  "marker_current": "1",
