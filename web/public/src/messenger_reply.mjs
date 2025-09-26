@@ -8,7 +8,8 @@ export async function messenger_reply() {
       headless: false,
     });
   }
-  await catch_only_run_async(lambda2, "npx playwright install", on_error);
+  function lambda() {}
+  await catch_only_run_async(lambda2, "npx playwright install", lambda);
   const page = await browser.newPage();
   await page.goto("https://facebook.com");
   await browser.close();
