@@ -2280,8 +2280,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "puppeteer_hrefs_starts_with"
+   "retry_on_error"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -29963,7 +29962,6 @@
   "puppeteer_hrefs_starts_with": {
    "async": true,
    "identifiers": [
-    "log",
     "puppeteer_hrefs",
     "list_filter_starts_with",
     "puppeteer_hrefs_starts_with",
