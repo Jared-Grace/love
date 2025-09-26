@@ -19,7 +19,7 @@ export async function messenger_reply() {
       messages_urls = mu;
     }
     let properties = object_properties(messages_urls);
-    let first = list_first(list);
+    let first = list_first(properties);
     let messages = await messenger_reply_messages(page, first);
     log({
       messages,
