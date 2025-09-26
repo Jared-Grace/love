@@ -3406,7 +3406,8 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "ebible_languages_to_bible_folders"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -4650,7 +4651,8 @@
    "bind_property",
    "messenger_reply_playwright",
    "messenger_reply",
-   "reply"
+   "reply",
+   "ebible_languages_to_bible_folders"
   ],
   "data_save": [
    "data_file_update",
@@ -4776,7 +4778,8 @@
    "sandbox_4_a",
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
-   "list_find_property"
+   "list_find_property",
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5507,7 +5510,8 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply"
+   "messenger_reply",
+   "ebible_languages_to_bible_folders"
   ],
   "functions_names": [
    "functions_names",
@@ -9786,7 +9790,8 @@
    "list_remove_property",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "app_reply_main"
+   "app_reply_main",
+   "ebible_languages_to_bible_folders"
   ],
   "nameds": [
    "js_declaration_single"
@@ -11303,7 +11308,8 @@
    "html_parse_descendants_classes",
    "html_parse_classes_preview",
    "sandbox_2",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "ebible_languages_to_bible_folders"
   ],
   "found": [
    "visit_unique_async",
@@ -14007,7 +14013,8 @@
    "ebible_chapters_each_verses_list",
    "bible_verses_encouragement_generate",
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "ebible_languages_to_bible_folders"
   ],
   "unzip": [
    "unzip",
@@ -14776,7 +14783,8 @@
   "languages": [
    "app_reply_main",
    "ebible_languages",
-   "list_remove_property"
+   "list_remove_property",
+   "ebible_languages_to_bible_folders"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -14901,7 +14909,8 @@
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "ebible_languages_to_bible_folders"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -15069,7 +15078,8 @@
   ],
   "ebible_languages": [
    "app_reply_main",
-   "ebible_languages"
+   "ebible_languages",
+   "ebible_languages_to_bible_folders"
   ],
   "language_code": [
    "ebible_languages",
@@ -15890,10 +15900,12 @@
   ],
   "language_codes": [
    "reply",
-   "reply_test"
+   "reply_test",
+   "ebible_languages_to_bible_folders"
   ],
   "ebible_languages_to_bible_folders": [
-   "reply"
+   "reply",
+   "ebible_languages_to_bible_folders"
   ]
  },
  "functions": {
@@ -30375,6 +30387,23 @@
     "index_last",
     "unreplied",
     "result"
+   ]
+  },
+  "ebible_languages_to_bible_folders": {
+   "async": false,
+   "identifiers": [
+    "list_map",
+    "object_property_get",
+    "list_find_property",
+    "ebible_languages",
+    "ebible_languages_to_bible_folders",
+    "language_codes",
+    "languages",
+    "lambda2",
+    "c",
+    "item",
+    "bible_folder",
+    "bible_folders"
    ]
   }
  },
