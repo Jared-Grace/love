@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 export async function puppeteer_matches(page, tag_name, text) {
   const elements = await page.$$(tag_name);
   const matches = [];
@@ -10,7 +9,6 @@ export async function puppeteer_matches(page, tag_name, text) {
     const txt = await el.evaluate(lambda);
     if (txt === text) {
       matches.push(el);
-      console.log(txt);
     }
   }
   return matches;
