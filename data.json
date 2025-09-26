@@ -11232,7 +11232,8 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep"
+   "sleep",
+   "messenger_reply"
   ],
   "Math": [
    "date_diff_ms",
@@ -13683,7 +13684,8 @@
   "sleep": [
    "http",
    "sleep",
-   "retry"
+   "retry",
+   "messenger_reply"
   ],
   "setTimeout": [
    "sleep"
@@ -29054,6 +29056,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "sleep",
     "each_async",
     "string_list_to",
     "keyboard_typing_delay",
@@ -29083,6 +29086,7 @@
     "lambda",
     "item",
     "delay_ms",
+    "ms",
     "keyboard",
     "type",
     "list2",
