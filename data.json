@@ -3261,8 +3261,7 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4728,8 +4727,7 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -29562,8 +29560,6 @@
     "filtered",
     "first",
     "messages",
-    "lambda",
-    "item",
     "property_name",
     "property_value",
     "mine",
