@@ -2297,8 +2297,7 @@
    "messenger_reply",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "function_alias_add"
+   "retry_on_error"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -5700,8 +5699,7 @@
    "string_is_assert_message",
    "null_not_is_assert",
    "object_property_exists_not_assert",
-   "messenger_reply_playwright",
-   "function_alias_add"
+   "messenger_reply_playwright"
   ],
   "b": [
    "assert",
@@ -6511,8 +6509,7 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main",
-   "function_alias_add"
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -9900,8 +9897,7 @@
    "string_empty_not_is",
    "ebible_verses",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "function_alias_add"
+   "list_map_filter_string_empty_not_is"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -16887,9 +16883,6 @@
   },
   "function_alias_add": {
    "identifiers": [
-    "log",
-    "string_empty_not_is",
-    "assert",
     "marker",
     "list_sort_string_size",
     "function_alias_generic",
@@ -16901,7 +16894,6 @@
     "list",
     "alias",
     "f_name",
-    "ne",
     "lambda",
     "a",
     "exists",
