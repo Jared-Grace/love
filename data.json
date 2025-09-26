@@ -4734,8 +4734,7 @@
    "list_index_is",
    "list_last_or_null",
    "data_file_update_inner",
-   "list_empty_is_assert",
-   "messenger_reply_puppeteer"
+   "list_empty_is_assert"
   ],
   "e": [
    "catch_ignore",
@@ -4763,8 +4762,7 @@
    "promise_wrap",
    "retry",
    "list_empty_is_assert",
-   "catch_only_run_async",
-   "messenger_reply_puppeteer"
+   "catch_only_run_async"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -10205,8 +10203,7 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property",
-   "messenger_reply_puppeteer"
+   "list_filter_property"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -29392,7 +29389,6 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
-    "list_empty_is",
     "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29423,8 +29419,6 @@
     "node",
     "v2",
     "textContent",
-    "e",
-    "filtered",
     "console",
     "evaluate",
     "focus",
