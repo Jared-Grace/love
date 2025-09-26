@@ -2193,7 +2193,6 @@
   "s without",
   "o sb",
   "s god",
-  "s reply",
   "ebible_index_flat_upload_name",
   "s verses",
   "is ebible_verse",
@@ -2256,7 +2255,8 @@
   "as adder",
   "s trim",
   "p",
-  "mr"
+  "mr",
+  "s reply"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
