@@ -3536,8 +3536,7 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -7087,8 +7086,7 @@
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -10411,7 +10409,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "messenger_reply"
   ],
   "fds": [
    "js_outside_move"
@@ -29515,7 +29514,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "list_filter",
+    "list_filter_property",
     "messenger_reply_wait",
     "list_filter_ends_with_not_any",
     "list_map",
@@ -29542,12 +29541,11 @@
     "v",
     "mapped",
     "filtered",
+    "first",
+    "messages",
     "lambda",
     "item",
     "filtered2",
-    "list",
-    "first",
-    "messages",
     "answer",
     "p",
     "focus",
