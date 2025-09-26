@@ -5210,8 +5210,7 @@
    "string_trim_right",
    "function_list_generate",
    "roman_to_integer",
-   "catch_only_run_async",
-   "list_filter_ends_with_not_any"
+   "catch_only_run_async"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5219,8 +5218,7 @@
    "string_ends_with",
    "string_prefix_without",
    "string_padded_is",
-   "string_ends_with_space",
-   "list_filter_ends_with_not_any"
+   "string_ends_with_space"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -5373,8 +5371,7 @@
    "object_assign",
    "each_pair_async",
    "app_reply_main",
-   "catch_only_run_async",
-   "list_filter_ends_with_not_any"
+   "catch_only_run_async"
   ],
   "without": [
    "string_suffix_without",
@@ -6613,8 +6610,7 @@
   "ew": [
    "file_open",
    "string_ends_with",
-   "string_padded_is",
-   "list_filter_ends_with_not_any"
+   "string_padded_is"
   ],
   "filePath": [
    "file_open_editor"
@@ -15708,6 +15704,12 @@
    "list_filter_ends_with_not_any"
   ],
   "suffixes": [
+   "list_filter_ends_with_not_any"
+  ],
+  "string_ends_with_not": [
+   "list_filter_ends_with_not_any"
+  ],
+  "ewn": [
    "list_filter_ends_with_not_any"
   ]
  },
@@ -30046,11 +30048,10 @@
   "list_filter_ends_with_not_any": {
    "async": false,
    "identifiers": [
-    "not",
+    "string_ends_with_not",
     "marker",
     "list_filter",
     "list_any",
-    "string_ends_with",
     "list_filter_ends_with_not_any",
     "suffixes",
     "list",
@@ -30058,8 +30059,7 @@
     "item",
     "lambda3",
     "suffix",
-    "a",
-    "ew",
+    "ewn",
     "any",
     "filtered"
    ]
