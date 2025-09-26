@@ -2227,7 +2227,6 @@
   "messenger_reply_user_data_path",
   "pp",
   "fd",
-  "fd messenger_reply",
   "s random",
   "s string,list",
   "n string_list_to",
@@ -2249,7 +2248,8 @@
   "messenger_reply_login",
   "s user",
   "p",
-  "messenger_reply"
+  "messenger_reply",
+  "fd messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_login",
