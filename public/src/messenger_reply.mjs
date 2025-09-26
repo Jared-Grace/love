@@ -22,7 +22,7 @@ export async function messenger_reply() {
   const input = await page.waitForSelector(
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
-  input.focus();
+  await input.focus();
   await keyboard_type_delay("123", page.keyboard.type);
   await command_line_read_empty();
   await browser.close();
