@@ -2266,7 +2266,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -6298,7 +6299,8 @@
    "range_from",
    "number_pad",
    "retry",
-   "ebible_chapter_code_to_name"
+   "ebible_chapter_code_to_name",
+   "messenger_reply"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -7727,7 +7729,8 @@
    "catch_call",
    "list_intersect_empty_is_assert",
    "ebible_chapter_code_to_name",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "function_identifier_replace_ending_remove": [
    "function_identifier_replace_ending_remove"
@@ -10725,7 +10728,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "messenger_reply"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -15370,6 +15374,12 @@
    "messenger_reply"
   ],
   "locator": [
+   "messenger_reply"
+  ],
+  "nth": [
+   "messenger_reply"
+  ],
+  "click": [
    "messenger_reply"
   ]
  },
@@ -29168,6 +29178,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "log",
     "bind_property",
     "object_property_get",
     "file_read_json",
@@ -29202,6 +29213,11 @@
     "fn",
     "keyboard",
     "locator",
+    "count",
+    "console",
+    "i",
+    "nth",
+    "click",
     "close"
    ]
   },
