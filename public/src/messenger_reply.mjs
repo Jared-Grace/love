@@ -1,5 +1,4 @@
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { http_sleep } from "./http_sleep.mjs";
 import { string_prefix_without } from "./string_prefix_without.mjs";
 import { each_async } from "./each_async.mjs";
@@ -39,9 +38,10 @@ export async function messenger_reply() {
     await http_sleep();
     await messenger_reply_messages_urls_add_page(page);
   }
-  let ne = list_empty_not_is(urls);
   while (true) {
-    let e = list_empty_is(list);
+    let e = list_empty_is(urls);
+    if (false) {
+    }
   }
   await each_async(urls, lambda);
   let answer = await command_line_read_empty();
