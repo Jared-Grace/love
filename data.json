@@ -2264,7 +2264,8 @@
   "s list_add",
   "p",
   "s prop,obj",
-  "mr"
+  "mr",
+  "s collect"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
