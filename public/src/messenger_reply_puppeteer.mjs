@@ -32,6 +32,7 @@ export async function messenger_reply_puppeteer() {
       if (parentTag === "H5") {
         continue;
       }
+      let message = await c2.evaluate(lambda);
       function lambda4(imgs) {
         function lambda3(img) {
           let v4 = getComputedStyle(img).borderRadius === "50%";
@@ -49,7 +50,6 @@ export async function messenger_reply_puppeteer() {
         let v2 = node.textContent;
         return v2;
       }
-      let message = await c2.evaluate(lambda);
       let name = null;
       if (list_empty_is(imgs)) {
         name = "me";
