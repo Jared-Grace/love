@@ -3809,7 +3809,8 @@
    "js_node_atomize",
    "function_transform_marker_specified",
    "retry",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29056,6 +29057,7 @@
     "headless",
     "command",
     "lambda",
+    "message",
     "stdout",
     "page",
     "newPage",
