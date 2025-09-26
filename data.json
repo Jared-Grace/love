@@ -4746,8 +4746,7 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any",
-   "reply"
+   "list_filter_ends_with_not_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -15767,9 +15766,6 @@
   ],
   "list_filter_empty_not_is": [
    "list_map_filter_string_empty_not_is",
-   "reply"
-  ],
-  "filtered2": [
    "reply"
   ]
  },
@@ -30145,8 +30141,6 @@
     "marker",
     "reply",
     "input",
-    "filtered2",
-    "item",
     "mapped",
     "list",
     "lambda"
