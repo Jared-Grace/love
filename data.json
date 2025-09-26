@@ -11013,8 +11013,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "messenger_reply"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -29493,7 +29492,6 @@
     "transform_inner",
     "mu",
     "properties",
-    "obj",
     "v",
     "messages",
     "page2",
