@@ -2642,7 +2642,8 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "reply_sequence"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15813,7 +15814,8 @@
    "reply"
   ],
   "reply_sequence": [
-   "reply"
+   "reply",
+   "reply_sequence"
   ]
  },
  "functions": {
@@ -30236,6 +30238,13 @@
     "properties",
     "first",
     "input"
+   ]
+  },
+  "reply_sequence": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "reply_sequence"
    ]
   }
  },
