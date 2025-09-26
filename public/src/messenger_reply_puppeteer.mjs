@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
@@ -17,6 +18,7 @@ export async function messenger_reply_puppeteer() {
     timeout: 10000,
   });
   const el = await page.$('[aria-label^="Messages in conversation with"]');
+  log(message);
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
