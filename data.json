@@ -3063,7 +3063,8 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "reply"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -7004,7 +7005,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "split": [
    "functions_combine_name",
@@ -7111,7 +7113,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "reply"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -12006,7 +12009,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -30305,6 +30309,7 @@
   "reply": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "list_add",
     "object_property_set_exists_not",
     "reply_on_match",
@@ -30329,6 +30334,9 @@
     "lambda",
     "outputs",
     "list",
+    "mapped",
+    "list2",
+    "property_name",
     "r"
    ]
   },
