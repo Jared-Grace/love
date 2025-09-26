@@ -4680,8 +4680,7 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "messenger_reply_puppeteer"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -29498,7 +29497,6 @@
     "textContent",
     "name",
     "list2",
-    "item",
     "list",
     "focus",
     "fn",
