@@ -636,7 +636,6 @@
   "de js_declarator_init_set",
   "s uniqu",
   "fs marker_top",
-  "mr",
   "o mr",
   "c md marker_bottom",
   "a mb marker_bottom",
@@ -2237,7 +2236,8 @@
   "ps",
   "messenger_reply",
   "p",
-  "keyboard_typing_delay"
+  "keyboard_typing_delay",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
