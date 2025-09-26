@@ -1,3 +1,4 @@
 export function reply_sequence(items) {
-  return function reply_sequence_matches() {};
+  let v = function reply_sequence_matches() {};
+  return v;
 }
