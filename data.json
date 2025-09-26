@@ -3501,8 +3501,7 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to",
-   "messenger_reply_puppeteer"
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -29484,7 +29483,6 @@
     "textContent",
     "console",
     "ne",
-    "list",
     "focus",
     "fn",
     "keyboard",
