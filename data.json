@@ -9625,7 +9625,6 @@
    "list_map_prefix_without",
    "list_map_prefix_without_any",
    "list_map_prefix_any",
-   "messenger_reply",
    "list_filter_starts_with"
   ],
   "js_keyword_from": [
@@ -10286,8 +10285,7 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property",
-   "messenger_reply"
+   "list_filter_property"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -12865,8 +12863,7 @@
   "list_remove_if_exists": [
    "function_rename_identifiers",
    "list_remove_multiple_if_exists",
-   "list_remove_if_exists",
-   "messenger_reply"
+   "list_remove_if_exists"
   ],
   "string_replace": [
    "string_replace",
@@ -15638,10 +15635,9 @@
    "messenger_reply_messages_urls_add"
   ],
   "messenger_reply_messages_urls_add_multiple": [
-   "messenger_reply_messages_urls_add",
-   "messenger_reply"
+   "messenger_reply_messages_urls_add"
   ],
-  "puppeteer_hrefs_starts_with": [
+  "messenger_reply_messages_urls_add_page": [
    "messenger_reply"
   ]
  },
@@ -29441,9 +29437,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "puppeteer_hrefs_starts_with",
-    "list_remove_if_exists",
-    "messenger_reply_messages_urls_add_multiple",
+    "messenger_reply_messages_urls_add_page",
     "messenger_reply_messages",
     "messenger_reply_unread_click",
     "marker",
@@ -29462,8 +29456,6 @@
     "newPage",
     "v",
     "messages",
-    "prefix",
-    "filtered",
     "p",
     "focus",
     "fn",
