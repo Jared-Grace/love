@@ -6028,8 +6028,7 @@
    "roman_to_integer",
    "messenger_reply_playwright",
    "reply",
-   "reply_test",
-   "reply_sequence"
+   "reply_test"
   ],
   "process": [
    "command_line_read",
@@ -14500,7 +14499,8 @@
    "app_reply_pray"
   ],
   "tokens": [
-   "ebible_verse_new"
+   "ebible_verse_new",
+   "reply_sequence"
   ],
   "list_map_prefix_without": [
    "ebible_versions",
@@ -15885,9 +15885,6 @@
   "sequence_item": [
    "reply_sequence"
   ],
-  "input_item": [
-   "reply_sequence"
-  ],
   "reply_on_match": [
    "reply",
    "reply_on_match"
@@ -15930,6 +15927,9 @@
   "outputs": [
    "reply_on_match",
    "reply_test"
+  ],
+  "token": [
+   "reply_sequence"
   ]
  },
  "functions": {
@@ -30389,12 +30389,12 @@
     "fn",
     "reply_sequence_matches",
     "a",
-    "input",
+    "tokens",
     "matches",
     "lambda",
     "sequence_item",
     "index",
-    "input_item"
+    "token"
    ]
   },
   "messenger_reply_unreplied": {
