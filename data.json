@@ -1888,7 +1888,6 @@
   "ebible",
   "s try",
   "fd ebible_versions_download",
-  "s catch",
   "n catch_call",
   "fd http",
   "ebible_version_download khm-h",
@@ -2238,7 +2237,8 @@
   "keyboard_typing_delay",
   "mr",
   "messenger_reply",
-  "s finally"
+  "s finally",
+  "s catch"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
