@@ -3917,8 +3917,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "reply_sequence"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30392,8 +30391,7 @@
     "lambda",
     "sequence_item",
     "index",
-    "input_item",
-    "message"
+    "input_item"
    ]
   },
   "messenger_reply_unreplied": {
