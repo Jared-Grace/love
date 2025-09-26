@@ -2277,13 +2277,13 @@
   "u sss",
   "a sss",
   "a sss string_split_space",
-  "o a",
   "a sss ",
   "o s",
-  "s a"
+  "s a",
+  "o a"
  ],
  "marker_current": "1",
- "function_current": "functions_search",
+ "function_current": "function_alias_add",
  "terminal": false,
  "identifiers": {
   "log": [
