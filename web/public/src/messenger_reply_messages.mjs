@@ -11,8 +11,8 @@ export async function messenger_reply_messages(page, url) {
   let fb_path = folder_user_docs_path("fb.json");
   await file_json_transform(fb_path, transform);
   function transform(data) {
-    let message_urls = object_property_initialize(data, "messages_urls", {});
-    object_property_set(message_urls, url, 1);
+    let messages_urls = object_property_initialize(data, "messages_urls", {});
+    object_property_set(messages_urls, url, 1);
   }
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
