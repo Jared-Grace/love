@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
 export async function reply_test() {
@@ -7,5 +8,6 @@ export async function reply_test() {
   }
   await messenger_reply_messages_transform(lambda);
   let properties = object_properties(messages);
+  let first = list_first(list);
   return properties;
 }
