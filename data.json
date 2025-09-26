@@ -2245,7 +2245,8 @@
   "s messenger_reply",
   "messenger_reply",
   "s readline",
-  "s line"
+  "s line",
+  "command_line_read"
  ],
  "marker_current": "1",
  "function_current": "catch_only_run_async",
