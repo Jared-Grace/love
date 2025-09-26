@@ -3568,7 +3568,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -12565,7 +12566,8 @@
   ],
   "lines": [
    "function_transform_marker_specified",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "html_p": [
    "html_p",
@@ -14876,7 +14878,8 @@
    "ebible_references_parse",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -15240,7 +15243,8 @@
    "ebible_references_parse",
    "app_reply_main",
    "sandbox",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply"
   ],
   "encouragement": [
    "bible_verses_encouragement",
@@ -30212,8 +30216,9 @@
    ]
   },
   "reply": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "ebible_references_parse_lines",
     "reply_sequence",
     "list_map_lower",
     "list_filter_empty_not_is",
@@ -30222,6 +30227,9 @@
     "reply",
     "input",
     "reference",
+    "list",
+    "bible_folders",
+    "lines",
     "fn",
     "r",
     "reply_on_match",
