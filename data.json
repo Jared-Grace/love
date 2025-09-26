@@ -4351,7 +4351,8 @@
    "file_temp",
    "folder_user_combine",
    "ebible_verse",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "separator": [
    "watch",
@@ -5269,7 +5270,8 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply_wait"
+   "messenger_reply_wait",
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -9869,7 +9871,8 @@
   "string_prefix_without": [
    "string_prefix_without",
    "list_map_prefix_without",
-   "list_map_prefix_without_any"
+   "list_map_prefix_without_any",
+   "messenger_reply"
   ],
   "js_keyword_if": [
    "js_dollar_i",
@@ -15679,6 +15682,9 @@
    "http"
   ],
   "link": [
+   "messenger_reply"
+  ],
+  "prefix2": [
    "messenger_reply"
   ]
  },
@@ -29476,6 +29482,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "string_prefix_without",
     "each_async",
     "command_line_read_empty",
     "messenger_reply_wait",
@@ -29503,6 +29510,9 @@
     "lambda",
     "url",
     "prefix",
+    "result",
+    "s",
+    "prefix2",
     "link",
     "$",
     "click",
