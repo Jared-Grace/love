@@ -2247,12 +2247,13 @@
   "n messenger_reply_login",
   "messenger_reply_login",
   "s user",
-  "messenger_reply",
   "p",
-  "fd messenger_reply"
+  "fd messenger_reply",
+  "messenger_reply",
+  "n bind"
  ],
  "marker_current": "1",
- "function_current": "messenger_reply_login",
+ "function_current": "bind",
  "terminal": false,
  "identifiers": {
   "log": [
