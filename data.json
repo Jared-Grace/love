@@ -3333,7 +3333,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5775,7 +5776,8 @@
    "js_node_types_includes",
    "list_remove_if_exists",
    "app_reply_main",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -10176,7 +10178,8 @@
    "js_statement_call_get",
    "http",
    "command_line_cmd",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_puppeteer"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -10205,7 +10208,8 @@
    "list_filter_starts_with",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_property"
+   "list_filter_property",
+   "messenger_reply_puppeteer"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -10493,7 +10497,8 @@
    "list_add_multiple",
    "http",
    "path_join",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "list_adder_generic": [
    "list_adder",
@@ -12492,7 +12497,8 @@
    "html_style_remove",
    "html_style_set",
    "html_style_merge",
-   "html_style_assign"
+   "html_style_assign",
+   "messenger_reply_puppeteer"
   ],
   "removeProperty": [
    "html_style_remove"
@@ -13882,7 +13888,8 @@
   ],
   "el": [
    "html_parse_list_text_to",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "$": [
    "html_parse_list_text_to",
@@ -15431,6 +15438,9 @@
    "messenger_reply_puppeteer"
   ],
   "children3": [
+   "messenger_reply_puppeteer"
+  ],
+  "cssText": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29422,15 +29432,23 @@
     "$$",
     "c",
     "children3",
+    "filtered",
+    "el",
+    "lambda2",
+    "node",
+    "v3",
+    "style",
+    "cssText",
+    "evaluate",
+    "includes",
+    "push",
     "children2",
     "elements",
     "e",
     "lambda",
-    "node",
     "v2",
     "textContent",
     "console",
-    "evaluate",
     "focus",
     "fn",
     "keyboard",
