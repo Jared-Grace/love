@@ -3968,8 +3968,7 @@
    "chalk_color",
    "clipboard_copy",
    "firebase_admin_get",
-   "unzip",
-   "messenger_reply_puppeteer"
+   "unzip"
   ],
   "joined": [
    "watch",
@@ -15312,9 +15311,6 @@
    "messenger_reply_login"
   ],
   "messenger_reply_puppeteer": [
-   "messenger_reply_puppeteer"
-  ],
-  "puppeteerModule": [
    "messenger_reply_puppeteer"
   ],
   "puppeteer": [
@@ -29351,9 +29347,7 @@
     "messenger_reply_url",
     "messenger_reply_user_data_path",
     "messenger_reply_puppeteer",
-    "puppeteerModule",
     "puppeteer",
-    "default",
     "browser",
     "launch",
     "headless",
