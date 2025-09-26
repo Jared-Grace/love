@@ -15332,7 +15332,8 @@
    "messenger_reply"
   ],
   "keyboard_type_delay": [
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29130,6 +29131,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "keyboard_type_delay",
     "command_line_read_empty",
     "messenger_reply_url",
     "retry_on_error",
