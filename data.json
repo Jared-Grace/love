@@ -5769,8 +5769,7 @@
    "js_node_types_includes",
    "list_remove_if_exists",
    "app_reply_main",
-   "catch_only_run_async",
-   "messenger_reply_puppeteer"
+   "catch_only_run_async"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -29396,7 +29395,6 @@
     "textContent",
     "txt",
     "evaluate",
-    "includes",
     "push",
     "console",
     "length",
