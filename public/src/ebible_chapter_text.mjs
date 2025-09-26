@@ -40,9 +40,6 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   }
   each(exclude, lambda);
   let list = html_parse_find_list_to(main, ".verse");
-  log({
-    list,
-  });
   function lambda2(item) {
     let t = html_parse_text(d, item);
     let n = whitespace_normalize(t);
@@ -50,6 +47,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   }
   let verse_numbers = list_map(list, lambda2);
   verse_numbers = list_map(verse_numbers, roman_to_integer);
+  log({
+    verse_numbers,
+  });
   let text = html_parse_text(d, main);
   let result = {
     verse_numbers,
