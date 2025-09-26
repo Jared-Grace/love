@@ -7106,8 +7106,7 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply",
-   "reply"
+   "messenger_reply"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -14910,7 +14909,8 @@
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
    "ebible_references_parse_lines",
-   "ebible_languages_to_bible_folders"
+   "ebible_languages_to_bible_folders",
+   "reply"
   ],
   "ebible_references_parse": [
    "ebible_references_parse",
@@ -30300,7 +30300,7 @@
     "reference",
     "b",
     "concated",
-    "mapped",
+    "bible_folders",
     "fn",
     "lambda",
     "list",
