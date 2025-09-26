@@ -3500,8 +3500,7 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to",
-   "messenger_reply_puppeteer"
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -4735,7 +4734,8 @@
    "list_index_is",
    "list_last_or_null",
    "data_file_update_inner",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "messenger_reply_puppeteer"
   ],
   "e": [
    "catch_ignore",
@@ -4763,7 +4763,8 @@
    "promise_wrap",
    "retry",
    "list_empty_is_assert",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -6410,8 +6411,7 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main",
-   "messenger_reply_puppeteer"
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -10359,8 +10359,7 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main",
-   "messenger_reply_puppeteer"
+   "app_reply_main"
   ],
   "last": [
    "js_return_name",
@@ -29393,7 +29392,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
-    "list_empty_not_is",
+    "list_empty_is",
     "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29421,8 +29420,7 @@
     "c",
     "children2",
     "elements",
-    "ne",
-    "list",
+    "e",
     "lambda",
     "node",
     "v2",
