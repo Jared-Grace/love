@@ -3063,8 +3063,7 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied",
-   "reply"
+   "messenger_reply_unreplied"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -12009,8 +12008,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -30335,8 +30333,6 @@
     "outputs",
     "list",
     "mapped",
-    "list2",
-    "property_name",
     "r"
    ]
   },
