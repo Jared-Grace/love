@@ -18,7 +18,7 @@ export async function messenger_reply() {
     function transform_inner(mu) {
       messages_urls = mu;
     }
-    let properties = object_properties(obj);
+    let properties = object_properties(messages_urls);
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
   }
