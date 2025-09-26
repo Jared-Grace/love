@@ -12999,7 +12999,8 @@
    "js_auto_transform_new_inner",
    "js_identifier_defineds",
    "marker_next_declare_single_init_elements",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -29415,6 +29416,7 @@
     "$$",
     "c",
     "children2",
+    "elements",
     "lambda",
     "node",
     "v2",
