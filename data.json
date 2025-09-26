@@ -2275,12 +2275,12 @@
   "a str string_trim",
   "s lower",
   "u sss",
-  "a sss",
   "a sss string_split_space",
   "a sss ",
   "o s",
   "s a",
-  "o a"
+  "o a",
+  "a sss"
  ],
  "marker_current": "1",
  "function_current": "function_alias_add",

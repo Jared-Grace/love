@@ -1,6 +1,3 @@
-import { log } from "./log.mjs";
-import { string_empty_not_is } from "./string_empty_not_is.mjs";
-import { assert } from "./assert.mjs";
 import { marker } from "./marker.mjs";
 import { list_sort_string_size } from "./list_sort_string_size.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
@@ -11,9 +8,6 @@ export async function function_alias_add(first, second) {
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
-  log(list);
-  let ne = string_empty_not_is(f_name);
-  assert(ne);
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
