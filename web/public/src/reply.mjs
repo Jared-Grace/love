@@ -31,5 +31,5 @@ export async function reply(a) {
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
   object_property_set_exists_not(a, "tokens", input);
-  r(a);
+  await r(a);
 }
