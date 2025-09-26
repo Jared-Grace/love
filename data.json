@@ -5581,7 +5581,6 @@
    "string_list_to",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "command_line_read_empty",
    "messenger_reply_messages",
    "messenger_reply"
   ],
@@ -5957,7 +5956,8 @@
    "command_line_read"
   ],
   "answer": [
-   "command_line_read"
+   "command_line_read",
+   "command_line_read_empty"
   ],
   "close": [
    "command_line_read",
@@ -29808,7 +29808,7 @@
    "identifiers": [
     "command_line_read",
     "command_line_read_empty",
-    "v2"
+    "answer"
    ]
   },
   "js_dollar_if_call": {
