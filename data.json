@@ -2186,7 +2186,6 @@
   "s empty",
   "u fo",
   "as ope",
-  "d",
   "s return",
   "is js_statement_return_empty",
   "bible_verses_encouragement",
@@ -2259,7 +2258,8 @@
   "s reply",
   "rs messenger_reply playwright",
   "r messenger_reply_puppeteer messenger_reply",
-  "r messenger_reply_puppeteer_unread_click messenger_reply_unread_click"
+  "r messenger_reply_puppeteer_unread_click messenger_reply_unread_click",
+  "d"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_unread_click",
@@ -2275,7 +2275,9 @@
    "app_reply_main",
    "messenger_reply",
    "messenger_reply_puppeteer",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "command_line_log",
+   "retry_on_error"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2791,7 +2793,8 @@
    "js_dollar_new_args_inner",
    "app_new_step_2",
    "function_list_generate",
-   "js_dollar_ib"
+   "js_dollar_ib",
+   "js_dollar_if_call"
   ],
   "code": [
    "data_identifiers_file",
@@ -3238,7 +3241,9 @@
    "catch_only_run_async",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "keyboard_type_delay",
+   "retry_on_error"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3344,7 +3349,8 @@
    "ebible_references_parse_lines",
    "messenger_reply",
    "messenger_reply_puppeteer",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "retry_on_error"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3513,7 +3519,9 @@
    "app_reply_main",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "js_statement_return_add",
+   "keyboard_type_delay"
   ],
   "v": [
    "data_identifiers_file",
@@ -3848,7 +3856,9 @@
    "retry",
    "catch_only_run_async",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "keyboard_type_delay",
+   "string_trim"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3897,7 +3907,8 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy"
+   "firebase_deploy",
+   "command_line_log"
   ],
   "log_keep": [
    "catch_log",
@@ -3977,7 +3988,9 @@
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
-   "object_merge_generic"
+   "object_merge_generic",
+   "js_dollar_if_call",
+   "js_statement_return_add"
   ],
   "watch": [
    "watch"
@@ -4219,7 +4232,8 @@
    "app_message",
    "function_list_generate",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "js_dollar_if_call"
   ],
   "output": [
    "watch",
@@ -4694,7 +4708,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "keyboard_type_delay"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4849,7 +4864,8 @@
   ],
   "command_line_read": [
    "function_run_prompt",
-   "command_line_read"
+   "command_line_read",
+   "command_line_read_empty"
   ],
   "function_run_git": [
    "function_run_git",
@@ -4887,7 +4903,8 @@
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
    "ebible_index",
-   "app_new_step_2"
+   "app_new_step_2",
+   "js_statement_return_add"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -4983,7 +5000,9 @@
    "bind",
    "bind_property",
    "messenger_reply_puppeteer",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "js_dollar_if_call",
+   "keyboard_type_delay"
   ],
   "colored": [
    "chalk_color",
@@ -5561,7 +5580,8 @@
    "string_list_to",
    "puppeteer_matches",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "command_line_read_empty"
   ],
   "readdirSync": [
    "folder_read"
@@ -5623,7 +5643,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "keyboard_type_delay"
   ],
   "f_paths": [
    "data_files_update",
@@ -5859,7 +5880,9 @@
    "schtasks_query",
    "command_line_generic",
    "command_line_cmd",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "command_line_log",
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -5868,7 +5891,9 @@
    "git_push_schedule",
    "firebase_deploy",
    "command_line_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "command_line_log",
+   "retry_on_error"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -7672,7 +7697,8 @@
    "integer_random",
    "js_statement_return_empty_add",
    "range_from",
-   "sandbox"
+   "sandbox",
+   "js_statement_return_add"
   ],
   "formatted": [
    "function_format",
@@ -8245,7 +8271,8 @@
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
    "app_new_assign",
-   "function_list_generate"
+   "function_list_generate",
+   "js_dollar_if_call"
   ],
   "type": [
    "function_params_consolidate",
@@ -8691,7 +8718,8 @@
    "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_dollar_ib"
+   "js_dollar_ib",
+   "js_dollar_if_call"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -9273,7 +9301,8 @@
    "js_return_name",
    "js_return_on",
    "js_return_on_async",
-   "js_expand_generic"
+   "js_expand_generic",
+   "js_statement_return_add"
   ],
   "arguments2": [
    "js_bang_to_not",
@@ -9508,7 +9537,8 @@
   ],
   "js_call_new_expression": [
    "js_call_new_expression",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_if_call"
   ],
   "js_code_braces_empty": [
    "js_code_arrow",
@@ -9754,7 +9784,8 @@
    "js_dollar_i",
    "js_dollar_choices",
    "js_dollar_ien",
-   "js_dollar_ir"
+   "js_dollar_ir",
+   "js_dollar_if_call"
   ],
   "js_dollar_r": [
    "js_dollar_r",
@@ -10304,7 +10335,8 @@
    "js_marker_name_get"
   ],
   "v7": [
-   "js_marker_name_get"
+   "js_marker_name_get",
+   "string_trim"
   ],
   "variable_name": [
    "js_node_atomize"
@@ -13084,7 +13116,8 @@
   ],
   "js_statement_return_empty": [
    "js_statement_return_empty",
-   "js_statement_return_empty_add"
+   "js_statement_return_empty_add",
+   "js_statement_return_add"
   ],
   "js_declaration_single_block_body": [
    "js_declaration_single_block_body",
@@ -13809,7 +13842,8 @@
   "sleep": [
    "http",
    "sleep",
-   "retry"
+   "retry",
+   "keyboard_type_delay"
   ],
   "setTimeout": [
    "sleep"
@@ -14277,7 +14311,8 @@
    "bible_verses_encouragement_generate"
   ],
   "trim": [
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "string_trim"
   ],
   "verse_number": [
    "ebible_verses",
@@ -15102,7 +15137,8 @@
   ],
   "js_statement_return_add": [
    "js_if_blockify_generic",
-   "function_list_generate"
+   "function_list_generate",
+   "js_statement_return_add"
   ],
   "bible_verses_encouragement_generate": [
    "bible_verses_encouragement_generate"
@@ -15157,7 +15193,8 @@
   ],
   "js_dollar_if_call": [
    "js_dollar_ie",
-   "js_dollar_ib"
+   "js_dollar_ib",
+   "js_dollar_if_call"
   ],
   "lambda9": [
    "app_reply_main"
@@ -15296,10 +15333,12 @@
    "messenger_reply"
   ],
   "keyboard_typing_delay": [
-   "keyboard_typing_delay"
+   "keyboard_typing_delay",
+   "keyboard_type_delay"
   ],
   "string_list_to": [
-   "string_list_to"
+   "string_list_to",
+   "keyboard_type_delay"
   ],
   "segmenter": [
    "string_list_to"
@@ -15335,7 +15374,8 @@
    "keyboard_typing_delay"
   ],
   "delay_ms": [
-   "keyboard_typing_delay"
+   "keyboard_typing_delay",
+   "keyboard_type_delay"
   ],
   "chromium": [
    "messenger_reply_login",
@@ -15389,13 +15429,15 @@
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
-   "catch_only_async"
+   "catch_only_async",
+   "retry_on_error"
   ],
   "on_error": [
    "catch_only_run_async"
   ],
   "retry_on_error": [
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "retry_on_error"
   ],
   "messenger_reply_url": [
    "messenger_reply_puppeteer",
@@ -15451,12 +15493,14 @@
   ],
   "command_line_read_empty": [
    "messenger_reply_login",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "command_line_read_empty"
   ],
   "keyboard_type_delay": [
    "messenger_reply_puppeteer",
    "messenger_reply",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "keyboard_type_delay"
   ],
   "bind": [
    "bind",
@@ -15553,13 +15597,21 @@
   ],
   "string_trim": [
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "string_trim"
   ],
   "messenger_reply_playwright": [
    "messenger_reply_playwright"
   ],
   "messenger_reply_unread_click": [
    "messenger_reply_unread_click"
+  ],
+  "command_line_log": [
+   "command_line_log",
+   "retry_on_error"
+  ],
+  "error_text": [
+   "retry_on_error"
   ]
  },
  "functions": {
@@ -29749,6 +29801,89 @@
     "matches",
     "m",
     "click"
+   ]
+  },
+  "command_line_log": {
+   "async": true,
+   "identifiers": [
+    "command_line",
+    "log",
+    "command_line_log",
+    "command",
+    "stdout"
+   ]
+  },
+  "command_line_read_empty": {
+   "async": true,
+   "identifiers": [
+    "command_line_read",
+    "command_line_read_empty",
+    "v2"
+   ]
+  },
+  "js_dollar_if_call": {
+   "async": true,
+   "identifiers": [
+    "object_property_set",
+    "js_call_new_expression",
+    "js_dollar_i",
+    "js_dollar_if_call",
+    "stack1",
+    "fn",
+    "ast",
+    "expression",
+    "name"
+   ]
+  },
+  "js_statement_return_add": {
+   "async": false,
+   "identifiers": [
+    "list_add",
+    "object_property_set",
+    "js_statement_return_empty",
+    "js_statement_return_add",
+    "argument",
+    "list",
+    "r"
+   ]
+  },
+  "keyboard_type_delay": {
+   "async": true,
+   "identifiers": [
+    "each_async",
+    "sleep",
+    "keyboard_typing_delay",
+    "string_list_to",
+    "keyboard_type_delay",
+    "message",
+    "fn",
+    "list",
+    "lambda",
+    "item",
+    "delay_ms"
+   ]
+  },
+  "retry_on_error": {
+   "async": true,
+   "identifiers": [
+    "catch_only_run_async",
+    "log",
+    "command_line_log",
+    "retry_on_error",
+    "command",
+    "lambda2",
+    "error_text",
+    "lambda",
+    "stdout"
+   ]
+  },
+  "string_trim": {
+   "async": false,
+   "identifiers": [
+    "string_trim",
+    "message",
+    "v7",
+    "trim"
    ]
   }
  },
