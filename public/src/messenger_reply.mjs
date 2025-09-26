@@ -1,3 +1,4 @@
+import { list_join_space } from "./list_join_space.mjs";
 import { messenger_reply_messages_message } from "./messenger_reply_messages_message.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { messenger_reply_unreplied } from "./messenger_reply_unreplied.mjs";
@@ -35,6 +36,7 @@ export async function messenger_reply() {
     let skipped = messenger_reply_unreplied(messages);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(skipped, property_name);
+    let joined = list_join_space(args);
     log(skipped);
     let answer = await command_line_read_empty();
   }
