@@ -6027,7 +6027,8 @@
    "data_get",
    "data_transform",
    "storage_local_initialize",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "object_property_initialize"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -22382,8 +22383,9 @@
     "object_property_initialize",
     "object",
     "property_name",
-    "value",
-    "exists"
+    "value_initial",
+    "exists",
+    "value"
    ],
    "async": false
   },
