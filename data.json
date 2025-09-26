@@ -5306,8 +5306,7 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply",
-   "reply"
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -6981,8 +6980,7 @@
    "string_split_empty",
    "digits",
    "bible_verses_encouragement_generate",
-   "roman_to_integer",
-   "reply"
+   "roman_to_integer"
   ],
   "results": [
    "functions_combine_name"
@@ -30148,8 +30146,6 @@
     "marker",
     "reply",
     "input",
-    "split",
-    "s",
     "lambda",
     "item",
     "mapped",
