@@ -29150,10 +29150,10 @@
     "storageState",
     "page",
     "newPage",
-    "input",
-    "waitForSelector",
     "v",
     "goto",
+    "input",
+    "waitForSelector",
     "close"
    ]
   },
