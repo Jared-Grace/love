@@ -4680,7 +4680,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply_puppeteer"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4870,7 +4871,8 @@
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
    "ebible_index",
-   "app_new_step_2"
+   "app_new_step_2",
+   "messenger_reply_puppeteer"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -11818,7 +11820,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "messenger_reply_puppeteer"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -29436,6 +29439,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "list_add",
     "list_adder_async",
     "list_empty_is",
     "messenger_reply_puppeteer_unread_click",
@@ -29493,6 +29497,8 @@
     "v2",
     "textContent",
     "name",
+    "list2",
+    "item",
     "list",
     "focus",
     "fn",
