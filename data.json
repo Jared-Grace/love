@@ -2603,7 +2603,8 @@
    "bind",
    "bind_property",
    "messenger_reply_playwright",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_unread_click"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -29738,6 +29739,7 @@
   "messenger_reply_unread_click": {
    "async": true,
    "identifiers": [
+    "marker",
     "list_get",
     "puppeteer_matches",
     "messenger_reply_unread_click",
