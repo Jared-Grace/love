@@ -7006,8 +7006,7 @@
    "string_split_empty",
    "digits",
    "bible_verses_encouragement_generate",
-   "roman_to_integer",
-   "messenger_reply"
+   "roman_to_integer"
   ],
   "results": [
    "functions_combine_name"
@@ -10515,7 +10514,8 @@
    "list_last_or_null",
    "prompt_previous",
    "js_expand_generic",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "messenger_reply"
   ],
   "list_empty_not_is": [
    "js_return_name",
@@ -10536,7 +10536,8 @@
    "list_last",
    "list_last_is",
    "marker_if_test_replace",
-   "js_expand_generic"
+   "js_expand_generic",
+   "messenger_reply"
   ],
   "identifier_if": [
    "js_return_name",
@@ -15864,6 +15865,9 @@
   ],
   "mine_last": [
    "messenger_reply_unreplied",
+   "messenger_reply"
+  ],
+  "mine_last_lines": [
    "messenger_reply"
   ]
  },
@@ -29661,6 +29665,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_last",
     "string_split_newline",
     "object_property_set",
     "messenger_reply_messages_transform",
@@ -29698,7 +29703,8 @@
     "messages",
     "mine_last",
     "unreplied",
-    "split",
+    "mine_last_lines",
+    "last",
     "list",
     "property_name",
     "mapped2",
