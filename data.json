@@ -2302,8 +2302,7 @@
    "data_file_update_inner",
    "global_function",
    "global_function_property_async",
-   "ebible_index",
-   "messenger_reply_messages_urls_add"
+   "ebible_index"
   ],
   "each": [
    "data_identifiers_file",
@@ -2350,8 +2349,7 @@
    "ebible_index_flat",
    "each_range_from",
    "object_merge_generic",
-   "bible_verses_encouragement_generate",
-   "messenger_reply_messages_urls_add"
+   "bible_verses_encouragement_generate"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3247,8 +3245,7 @@
    "keyboard_type_delay",
    "retry_on_error",
    "messenger_reply_messages",
-   "messenger_reply",
-   "messenger_reply_messages_urls_add"
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3996,8 +3993,7 @@
    "object_property_set_exists_not",
    "object_merge_generic",
    "js_dollar_if_call",
-   "js_statement_return_add",
-   "messenger_reply_messages_urls_add"
+   "js_statement_return_add"
   ],
   "watch": [
    "watch"
@@ -4471,8 +4467,7 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "messenger_reply_playwright",
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_playwright"
   ],
   "file_path": [
    "data_file_update",
@@ -15043,8 +15038,7 @@
    "folder_user_docs_path",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply_playwright",
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_playwright"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -15658,19 +15652,10 @@
   "hrefs": [
    "messenger_reply"
   ],
-  "file_json_transform": [
-   "messenger_reply_messages_urls_add"
-  ],
   "urls": [
    "messenger_reply_messages_urls_add"
   ],
-  "fb_path": [
-   "messenger_reply_messages_urls_add"
-  ],
-  "transform": [
-   "messenger_reply_messages_urls_add"
-  ],
-  "messages_urls": [
+  "messenger_reply_messages_urls_add_multiple": [
    "messenger_reply_messages_urls_add"
   ]
  },
@@ -29978,19 +29963,10 @@
   "messenger_reply_messages_urls_add": {
    "async": true,
    "identifiers": [
-    "each",
-    "object_property_set",
-    "object_property_initialize",
-    "file_json_transform",
-    "folder_user_docs_path",
+    "messenger_reply_messages_urls_add_multiple",
     "messenger_reply_messages_urls_add",
     "url",
-    "urls",
-    "fb_path",
-    "transform",
-    "data",
-    "messages_urls",
-    "lambda"
+    "urls"
    ]
   }
  },
