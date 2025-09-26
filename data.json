@@ -3857,7 +3857,8 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy"
+   "firebase_deploy",
+   "messenger_reply"
   ],
   "log_keep": [
    "catch_log",
@@ -5785,7 +5786,8 @@
    "git_push_schedule_command",
    "schtasks_query",
    "command_line_generic",
-   "command_line_cmd"
+   "command_line_cmd",
+   "messenger_reply"
   ],
   "stdout": [
    "command_line",
@@ -5794,7 +5796,8 @@
    "git_push_schedule",
    "firebase_deploy",
    "command_line_generic",
-   "sandbox_2"
+   "sandbox_2",
+   "messenger_reply"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -15242,9 +15245,6 @@
   ],
   "on_error": [
    "catch_only_run_async"
-  ],
-  "cl": [
-   "messenger_reply"
   ]
  },
  "functions": {
@@ -29042,6 +29042,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "command_line",
     "log",
     "catch_only_run_async",
     "import_install",
@@ -29054,7 +29055,8 @@
     "launch",
     "headless",
     "lambda",
-    "cl",
+    "stdout",
+    "command",
     "page",
     "newPage",
     "goto",
