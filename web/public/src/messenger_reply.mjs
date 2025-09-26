@@ -34,8 +34,8 @@ export async function messenger_reply() {
   let prefix = "https://www.facebook.com/messages/";
   let filtered = list_filter_starts_with(hrefs, prefix);
   list_remove_if_exists(filtered, "https://www.facebook.com/messages/new/");
-  await messenger_reply_messages_urls_add_multiple(urls);
   console.log(filtered);
+  await messenger_reply_messages_urls_add_multiple(urls);
   return;
   log(messages);
   return;
