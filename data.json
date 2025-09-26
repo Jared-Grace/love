@@ -15653,10 +15653,12 @@
    "messenger_reply"
   ],
   "urls": [
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_messages_urls_add",
+   "messenger_reply"
   ],
   "messenger_reply_messages_urls_add_multiple": [
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_messages_urls_add",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29455,6 +29457,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages_urls_add_multiple",
     "list_filter_starts_with",
     "messenger_reply_messages",
     "messenger_reply_unread_click",
@@ -29488,6 +29491,7 @@
     "$$eval",
     "prefix",
     "filtered",
+    "urls",
     "console",
     "p",
     "focus",
