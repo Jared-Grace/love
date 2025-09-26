@@ -74,7 +74,7 @@ export async function messenger_reply_puppeteer() {
     }
   }
   let list = await list_adder_async(lambda6);
-  log(message2);
+  log(list);
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
