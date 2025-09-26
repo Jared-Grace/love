@@ -3256,7 +3256,8 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3535,7 +3536,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4722,7 +4724,8 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -7084,7 +7087,8 @@
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -15712,6 +15716,9 @@
   ],
   "message_box": [
    "messenger_reply_wait"
+  ],
+  "filtered2": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29508,6 +29515,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_filter",
     "messenger_reply_wait",
     "list_filter_ends_with_not_any",
     "list_map",
@@ -29534,6 +29542,10 @@
     "v",
     "mapped",
     "filtered",
+    "filtered2",
+    "list",
+    "lambda",
+    "item",
     "first",
     "messages",
     "answer",
