@@ -11066,8 +11066,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "reply_test"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -30213,8 +30212,7 @@
     "messages",
     "lambda",
     "m",
-    "properties",
-    "obj"
+    "properties"
    ]
   }
  },
