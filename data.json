@@ -3526,7 +3526,8 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -6261,7 +6262,8 @@
    "each_multiple_async",
    "list_map_first",
    "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "each_multiple": [
    "each_multiple",
@@ -6287,7 +6289,8 @@
    "js_dollar_a",
    "each_multiple_async",
    "sandbox_4_a",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "items": [
    "each_multiple",
@@ -29485,6 +29488,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_first",
     "list_empty_is",
     "http_sleep",
     "string_prefix_without",
@@ -29514,6 +29518,8 @@
     "lambda",
     "url",
     "e",
+    "first",
+    "list",
     "prefix",
     "without",
     "selector",
