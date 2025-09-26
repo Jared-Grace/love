@@ -4870,8 +4870,7 @@
    "js_property_parse_expression_add",
    "js_statement_return_empty_add",
    "ebible_index",
-   "app_new_step_2",
-   "messenger_reply_puppeteer"
+   "app_new_step_2"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -11819,8 +11818,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "messenger_reply_puppeteer"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -29438,7 +29436,6 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
-    "list_add",
     "list_adder_async",
     "list_empty_is",
     "messenger_reply_puppeteer_unread_click",
@@ -29496,7 +29493,6 @@
     "v2",
     "textContent",
     "name",
-    "list2",
     "list",
     "focus",
     "fn",
