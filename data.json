@@ -15720,8 +15720,7 @@
   ],
   "transform_inner": [
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply",
-   "messenger_reply_messages_transform"
+   "messenger_reply"
   ],
   "messenger_reply_messages_urls_transform": [
    "messenger_reply_messages_urls_add_multiple",
@@ -15780,6 +15779,9 @@
    "messenger_reply_messages_transform"
   ],
   "transform": [
+   "messenger_reply_messages_transform"
+  ],
+  "lambda$messages": [
    "messenger_reply_messages_transform"
   ]
  },
@@ -30174,7 +30176,7 @@
     "file_json_transform",
     "folder_user_docs_path",
     "messenger_reply_messages_transform",
-    "transform_inner",
+    "lambda$messages",
     "fb_path",
     "transform",
     "data",
