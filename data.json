@@ -8213,8 +8213,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "messenger_reply"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -15358,13 +15357,13 @@
    "messenger_reply"
   ],
   "bind": [
-   "messenger_reply",
    "bind",
    "bind_property"
   ],
   "bind_property": [
    "bind_property",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply"
   ],
   "pin": [
    "messenger_reply"
@@ -29165,9 +29164,9 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "bind_property",
     "object_property_get",
     "file_read_json",
-    "bind",
     "folder_user_docs_path",
     "keyboard_type_delay",
     "command_line_read_empty",
@@ -29198,7 +29197,6 @@
     "focus",
     "fn",
     "keyboard",
-    "type",
     "close"
    ]
   },
