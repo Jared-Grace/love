@@ -2260,8 +2260,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply_login"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -10712,8 +10711,7 @@
    "list_wait"
   ],
   "console": [
-   "log_keep",
-   "messenger_reply_login"
+   "log_keep"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -29306,7 +29304,6 @@
    "async": true,
    "identifiers": [
     "command_line_read",
-    "log",
     "import_install",
     "marker",
     "messenger_reply_login",
@@ -29321,7 +29318,6 @@
     "page",
     "newPage",
     "goto",
-    "console",
     "v",
     "prompt",
     "storageState",
