@@ -2239,9 +2239,9 @@
   "s finally",
   "s catch",
   "c catch_only_async catch_only_run_async",
-  "messenger_reply",
   "u cl",
-  "a cl command_line"
+  "a cl command_line",
+  "messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "catch_only_run_async",
