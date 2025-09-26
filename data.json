@@ -2654,7 +2654,8 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "reply_on_match"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15880,7 +15881,8 @@
    "reply_sequence"
   ],
   "reply_on_match": [
-   "reply"
+   "reply",
+   "reply_on_match"
   ],
   "mine": [
    "messenger_reply_unreplied"
@@ -30405,6 +30407,13 @@
     "item",
     "bible_folder",
     "bible_folders"
+   ]
+  },
+  "reply_on_match": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "reply_on_match"
    ]
   }
  },
