@@ -1,3 +1,5 @@
+import { messenger_reply_messages_me } from "./messenger_reply_messages_me.mjs";
+import { messenger_reply_messages_name } from "./messenger_reply_messages_name.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
@@ -31,7 +33,13 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     function lambda(item) {}
-    let filtered2 = list_filter_property(messages, lambda);
+    let property_name = messenger_reply_messages_name();
+    let property_value = messenger_reply_messages_me();
+    let filtered2 = list_filter_property(
+      messages,
+      property_name,
+      property_value,
+    );
     log(messages);
     let answer = await command_line_read_empty();
   }
