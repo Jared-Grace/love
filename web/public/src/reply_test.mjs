@@ -11,7 +11,7 @@ export async function reply_test() {
   let properties = object_properties(messages);
   let first = list_first(properties);
   const outputs = [];
-  let input = await reply({
+  await reply({
     input: first,
     language_codes: ["ur"],
     outputs,
