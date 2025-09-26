@@ -2293,7 +2293,8 @@
   "reply",
   "p",
   "mr",
-  "s language"
+  "s language",
+  "as find"
  ],
  "marker_current": "1",
  "function_current": "reply_sequence",
