@@ -14,6 +14,7 @@ export async function messenger_reply() {
   async function lambda() {
     let stdout = await command_line(command);
     log(stdout);
+    await lambda2();
   }
   await catch_only_run_async(lambda2, command, lambda);
   const page = await browser.newPage();
