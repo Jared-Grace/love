@@ -1,3 +1,4 @@
+import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -21,6 +22,7 @@ export async function messenger_reply_puppeteer() {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
+  let list = await list_adder_async(async function lambda6(la) {});
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
     const children2 = await c.$$('[role="none"]');
