@@ -6336,8 +6336,7 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind",
-   "bind_property"
+   "bind"
   ],
   "right": [
    "equal",
@@ -6356,8 +6355,7 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind",
-   "bind_property"
+   "bind"
   ],
   "eq": [
    "equal",
@@ -29378,9 +29376,7 @@
     "object",
     "property_name",
     "value",
-    "fn",
-    "left",
-    "right"
+    "fn"
    ]
   }
  },
