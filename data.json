@@ -3210,7 +3210,8 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3481,7 +3482,8 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "v": [
    "data_identifiers_file",
@@ -3738,7 +3740,8 @@
    "sandbox",
    "roman_to_integer",
    "messenger_reply_user_data_path",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3809,7 +3812,8 @@
    "js_node_atomize",
    "function_transform_marker_specified",
    "retry",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply_puppeteer"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3950,7 +3954,8 @@
    "chalk_color",
    "clipboard_copy",
    "firebase_admin_get",
-   "unzip"
+   "unzip",
+   "messenger_reply_puppeteer"
   ],
   "joined": [
    "watch",
@@ -4647,7 +4652,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply_puppeteer"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5395,7 +5401,8 @@
    "js_property_parse_expression_add",
    "app_new_step_2",
    "function_rename_suffix_add",
-   "string_padded_is"
+   "string_padded_is",
+   "messenger_reply_puppeteer"
   ],
   "f_names": [
    "functions_names",
@@ -5554,7 +5561,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply_puppeteer"
   ],
   "f_paths": [
    "data_files_update",
@@ -8178,7 +8186,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "messenger_reply_puppeteer"
   ],
   "key": [
    "object_invert",
@@ -13687,7 +13696,8 @@
   "sleep": [
    "http",
    "sleep",
-   "retry"
+   "retry",
+   "messenger_reply_puppeteer"
   ],
   "setTimeout": [
    "sleep"
@@ -15165,13 +15175,16 @@
    "roman_to_integer"
   ],
   "messenger_reply_user_data_path": [
-   "messenger_reply_user_data_path"
+   "messenger_reply_user_data_path",
+   "messenger_reply_puppeteer"
   ],
   "keyboard_typing_delay": [
-   "keyboard_typing_delay"
+   "keyboard_typing_delay",
+   "messenger_reply_puppeteer"
   ],
   "string_list_to": [
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "segmenter": [
    "string_list_to"
@@ -15207,7 +15220,8 @@
    "keyboard_typing_delay"
   ],
   "delay_ms": [
-   "keyboard_typing_delay"
+   "keyboard_typing_delay",
+   "messenger_reply_puppeteer"
   ],
   "chromium": [
    "messenger_reply"
@@ -15219,22 +15233,28 @@
    "messenger_reply"
   ],
   "browser": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "launch": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "headless": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "page": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "newPage": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "goto": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
@@ -15245,6 +15265,39 @@
   ],
   "retry_on_error": [
    "messenger_reply"
+  ],
+  "messenger_reply_url": [
+   "messenger_reply_puppeteer"
+  ],
+  "messenger_reply_puppeteer": [
+   "messenger_reply_puppeteer"
+  ],
+  "puppeteerModule": [
+   "messenger_reply_puppeteer"
+  ],
+  "puppeteer": [
+   "messenger_reply_puppeteer"
+  ],
+  "userDataDir": [
+   "messenger_reply_puppeteer"
+  ],
+  "unreadSpanSelector": [
+   "messenger_reply_puppeteer"
+  ],
+  "waitForSelector": [
+   "messenger_reply_puppeteer"
+  ],
+  "timeout": [
+   "messenger_reply_puppeteer"
+  ],
+  "focus": [
+   "messenger_reply_puppeteer"
+  ],
+  "keyboard": [
+   "messenger_reply_puppeteer"
+  ],
+  "press": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29175,6 +29228,42 @@
     "a",
     "includes",
     "a2"
+   ]
+  },
+  "messenger_reply_puppeteer": {
+   "async": true,
+   "identifiers": [
+    "messenger_reply_url",
+    "each_async",
+    "sleep",
+    "keyboard_typing_delay",
+    "string_list_to",
+    "messenger_reply_user_data_path",
+    "messenger_reply_puppeteer",
+    "puppeteerModule",
+    "puppeteer",
+    "default",
+    "browser",
+    "launch",
+    "headless",
+    "userDataDir",
+    "page",
+    "newPage",
+    "v",
+    "goto",
+    "unreadSpanSelector",
+    "p",
+    "waitForSelector",
+    "timeout",
+    "focus",
+    "message",
+    "list",
+    "lambda",
+    "item",
+    "delay_ms",
+    "keyboard",
+    "type",
+    "press"
    ]
   }
  },
