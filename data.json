@@ -2575,8 +2575,7 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "messenger_reply",
-   "string_list_to"
+   "messenger_reply"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3204,7 +3203,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "roman_to_integer"
+   "roman_to_integer",
+   "string_list_to"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3729,7 +3729,8 @@
    "string_dot",
    "sandbox",
    "roman_to_integer",
-   "messenger_reply_user_data_path"
+   "messenger_reply_user_data_path",
+   "string_list_to"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5175,7 +5176,8 @@
    "string_starts_with_space",
    "string_trim_right",
    "string_ends_with_space",
-   "string_starts_with_dot"
+   "string_starts_with_dot",
+   "string_list_to"
   ],
   "a": [
    "string_suffix_without",
@@ -5482,7 +5484,8 @@
    "sandbox_2",
    "ebible_references_parse_god_created_man_why",
    "emoji_handshake",
-   "roman_to_integer"
+   "roman_to_integer",
+   "string_list_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -7655,7 +7658,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic"
+   "object_merge_generic",
+   "string_list_to"
   ],
   "i": [
    "function_identifier_replace",
@@ -10548,7 +10552,8 @@
   ],
   "Array": [
    "list_is",
-   "list_to"
+   "list_to",
+   "string_list_to"
   ],
   "isArray": [
    "list_is"
@@ -10994,7 +10999,8 @@
    "visit_async"
   ],
   "undefined": [
-   "undefined"
+   "undefined",
+   "string_list_to"
   ],
   "visit": [
    "visit"
@@ -13410,7 +13416,8 @@
   ],
   "str": [
    "string_letters_only",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "string_list_to"
   ],
   "text2": [
    "app_reply_main"
@@ -15197,6 +15204,24 @@
    "messenger_reply"
   ],
   "string_list_to": [
+   "string_list_to"
+  ],
+  "segmenter": [
+   "string_list_to"
+  ],
+  "Intl": [
+   "string_list_to"
+  ],
+  "Segmenter": [
+   "string_list_to"
+  ],
+  "granularity": [
+   "string_list_to"
+  ],
+  "segment": [
+   "string_list_to"
+  ],
+  "chars": [
    "string_list_to"
   ]
  },
@@ -29094,8 +29119,21 @@
   "string_list_to": {
    "async": false,
    "identifiers": [
-    "marker",
-    "string_list_to"
+    "undefined",
+    "string_list_to",
+    "str",
+    "segmenter",
+    "Intl",
+    "Segmenter",
+    "granularity",
+    "lambda",
+    "s",
+    "v",
+    "segment",
+    "v2",
+    "chars",
+    "Array",
+    "from"
    ]
   }
  },
