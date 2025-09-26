@@ -15926,7 +15926,8 @@
    "reply_on_match"
   ],
   "outputs": [
-   "reply_on_match"
+   "reply_on_match",
+   "reply_test"
   ]
  },
  "functions": {
@@ -30370,7 +30371,8 @@
     "properties",
     "first",
     "input",
-    "language_codes"
+    "language_codes",
+    "outputs"
    ]
   },
   "reply_sequence": {
