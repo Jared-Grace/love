@@ -190,7 +190,8 @@
   "lfl": "list_filter",
   "ll": "list_last",
   "str": "string_trim",
-  "sss": "string_split_space"
+  "sss": "string_split_space",
+  "": "sss"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2278,7 +2279,8 @@
   "u sss",
   "a sss",
   "a sss string_split_space",
-  "o a"
+  "o a",
+  "a sss "
  ],
  "marker_current": "1",
  "function_current": "function_alias_add",
