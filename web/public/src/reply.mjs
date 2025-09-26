@@ -6,7 +6,7 @@ import { marker } from "./marker.mjs";
 export function reply(input) {
   input = whitespace_normalize(input);
   input = string_split_space(input);
-  let filtered2 = list_filter_empty_not_is(item);
+  input = list_filter_empty_not_is(input);
   let mapped = list_map(list, lambda);
   marker("1");
 }
