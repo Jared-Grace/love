@@ -1,3 +1,4 @@
+import { string_split_newline } from "./string_split_newline.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -36,6 +37,7 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let { mine_last, unreplied } = messenger_reply_unreplied(messages);
+    let split = string_split_newline(list);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(unreplied, property_name);
     let joined = list_join_space(mapped2);
