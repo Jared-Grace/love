@@ -23,12 +23,12 @@ export async function messenger_reply_puppeteer() {
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
     const children2 = await c.$$('[role="none"]');
-    for (const c of children2) {
+    for (const c2 of children2) {
       function lambda2(node) {
         let v3 = node.parentElement?.tagName;
         return v3;
       }
-      const parentTag = await c.evaluate(lambda2);
+      const parentTag = await c2.evaluate(lambda2);
       if (parentTag === "H5") {
         continue;
       }
@@ -45,7 +45,7 @@ export async function messenger_reply_puppeteer() {
         let v2 = node.textContent;
         return v2;
       }
-      console.log(await c.evaluate(lambda));
+      console.log(await c2.evaluate(lambda));
       console.log(imgs);
     }
   }
