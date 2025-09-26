@@ -29,6 +29,8 @@ export async function messenger_reply_puppeteer() {
         return v3;
       }
       const parentTag = await c.evaluate(lambda2);
+      if (false) {
+      }
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
