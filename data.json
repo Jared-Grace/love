@@ -2654,8 +2654,7 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "reply_on_match"
+   "messenger_reply_messages_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3842,8 +3841,7 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply",
-   "reply_on_match"
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4656,7 +4654,8 @@
    "messenger_reply",
    "reply",
    "ebible_languages_to_bible_folders",
-   "reply_sequence"
+   "reply_sequence",
+   "reply_on_match"
   ],
   "data_save": [
    "data_file_update",
@@ -5437,7 +5436,8 @@
    "app_reply_main",
    "catch_only_run_async",
    "reply",
-   "reply_sequence"
+   "reply_sequence",
+   "reply_on_match"
   ],
   "without": [
    "string_suffix_without",
@@ -6027,7 +6027,8 @@
    "messenger_reply_playwright",
    "reply",
    "reply_test",
-   "reply_sequence"
+   "reply_sequence",
+   "reply_on_match"
   ],
   "process": [
    "command_line_read",
@@ -15918,6 +15919,9 @@
    "reply_on_match"
   ],
   "reply_on_match_inner": [
+   "reply_on_match"
+  ],
+  "wrapped_fn": [
    "reply_on_match"
   ]
  },
@@ -30424,12 +30428,14 @@
   "reply_on_match": {
    "async": false,
    "identifiers": [
-    "marker",
+    "object_property_get",
     "reply_on_match",
-    "fn",
+    "wrapped_fn",
     "on_match",
-    "v",
-    "reply_on_match_inner"
+    "fn",
+    "reply_on_match_inner",
+    "input",
+    "a"
    ]
   }
  },
