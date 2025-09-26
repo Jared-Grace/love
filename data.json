@@ -3286,7 +3286,8 @@
    "messenger_reply_messages_urls_add_multiple",
    "list_filter_ends_with_not_any",
    "messenger_reply",
-   "reply_test"
+   "reply_test",
+   "reply_sequence"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3566,7 +3567,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply_sequence"
   ],
   "v": [
    "data_identifiers_file",
@@ -4760,7 +4762,8 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "reply_sequence"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6221,7 +6224,8 @@
    "each_index",
    "each_multiple",
    "app_replace_home",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "reply_sequence"
   ],
   "index": [
    "each_index",
@@ -12634,7 +12638,8 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "reply_sequence"
   ],
   "html_style_remove": [
    "html_style_remove",
@@ -15824,9 +15829,6 @@
    "reply_sequence"
   ],
   "reply_sequence_matches": [
-   "reply_sequence"
-  ],
-  "ei": [
    "reply_sequence"
   ]
  },
@@ -30255,13 +30257,17 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
+    "each_index",
     "reply_sequence",
     "items",
     "v",
     "reply_sequence_matches",
     "input",
     "index",
-    "ei"
+    "list",
+    "lambda",
+    "item",
+    "index2"
    ]
   }
  },
