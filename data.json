@@ -9167,12 +9167,10 @@
    "ebible_chapter_code_to_name"
   ],
   "parseInt": [
-   "integer_to",
-   "roman_to_integer"
+   "integer_to"
   ],
   "isNaN": [
-   "integer_to",
-   "roman_to_integer"
+   "integer_to"
   ],
   "JSON": [
    "json_format_to",
@@ -10399,7 +10397,6 @@
   "v4": [
    "js_marker_name_get",
    "uuid",
-   "roman_to_integer",
    "messenger_reply_messages"
   ],
   "v5": [
@@ -14845,8 +14842,7 @@
    "ebible_references_parse_lines"
   ],
   "num": [
-   "number_pad",
-   "roman_to_integer"
+   "number_pad"
   ],
   "String": [
    "number_pad"
@@ -29737,10 +29733,6 @@
     "v2",
     "parseRomanOrInteger",
     "match",
-    "num",
-    "parseInt",
-    "v4",
-    "isNaN",
     "romanPart",
     "suffix",
     "asciiRoman",
