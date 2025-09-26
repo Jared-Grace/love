@@ -8,7 +8,9 @@ export async function messenger_reply_puppeteer(lambda) {
   });
   const page = await browser.newPage();
   try {
-    await lambda();
+    await lambda({
+      page,
+    });
   } finally {
     await browser.close();
   }
