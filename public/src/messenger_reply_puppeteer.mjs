@@ -47,7 +47,7 @@ export async function messenger_reply_puppeteer() {
           let v2 = node.textContent;
           return v2;
         }
-        let e = list_empty_is(children3);
+        let e = list_empty_is(filtered);
         log(e);
         console.log(await c.evaluate(lambda));
         ("");
