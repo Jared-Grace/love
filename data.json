@@ -3562,8 +3562,7 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any",
-   "reply"
+   "list_filter_ends_with_not_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -5483,8 +5482,7 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply",
-   "reply"
+   "messenger_reply"
   ],
   "functions_names": [
    "functions_names",
@@ -13667,8 +13665,7 @@
   ],
   "string_lower_to": [
    "string_lower_to",
-   "app_reply_main",
-   "reply"
+   "app_reply_main"
   ],
   "toLowerCase": [
    "string_lower_to"
@@ -15808,6 +15805,9 @@
   ],
   "reply_test": [
    "reply_test"
+  ],
+  "list_map_lower": [
+   "reply"
   ]
  },
  "functions": {
@@ -30179,14 +30179,12 @@
   "reply": {
    "async": false,
    "identifiers": [
-    "string_lower_to",
-    "list_map",
+    "list_map_lower",
     "list_filter_empty_not_is",
     "string_split_space",
     "whitespace_normalize",
     "reply",
-    "input",
-    "list"
+    "input"
    ]
   },
   "undefined_not_is_assert": {
