@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { list_map_lower } from "./list_map_lower.mjs";
@@ -6,7 +7,8 @@ import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function reply({ input, language_codes }) {
   let reference = "Isaiah 26:9";
-  let list = await ebible_references_parse_lines(["engbsb"], [reference]);
+  let v = ebible_folder_english();
+  let list = await ebible_references_parse_lines([v], [reference]);
   return list;
   let fn = reply_sequence(["good", "evening"]);
   let r = reply_on_match(fn);
