@@ -2639,8 +2639,7 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "reply_test"
+   "messenger_reply_messages_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -6350,7 +6349,8 @@
    "object_properties_delete",
    "tasks_run",
    "object_merge_generic",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "each_object": [
    "each_object",
@@ -7180,7 +7180,8 @@
    "js_dollar_choice_arguments_name",
    "js_dollar_choice_arguments_names",
    "js_property_parse_expression_add",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11065,7 +11066,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "reply_test"
   ],
   "Object": [
    "object_properties",
@@ -30205,12 +30207,14 @@
   "reply_test": {
    "async": true,
    "identifiers": [
+    "object_properties",
     "messenger_reply_messages_transform",
-    "marker",
     "reply_test",
     "messages",
     "lambda",
-    "m"
+    "m",
+    "properties",
+    "obj"
    ]
   }
  },
