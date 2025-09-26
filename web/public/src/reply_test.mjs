@@ -10,7 +10,6 @@ export async function reply_test() {
   await messenger_reply_messages_transform(lambda);
   let properties = object_properties(messages);
   let first = list_first(properties);
-  reply(first);
   let input = reply(first);
   return input;
 }
