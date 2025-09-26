@@ -40,6 +40,8 @@ export async function messenger_reply() {
     let without = string_prefix_without(url, prefix);
     const selector = `a[href="${without}"]`;
     const link = await page.$(selector);
+    if (false) {
+    }
     await link.click();
     await page.waitForSelector(selector, {
       state: "detached",
