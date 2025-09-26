@@ -3216,8 +3216,7 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async",
-   "messenger_reply"
+   "catch_only_run_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3488,8 +3487,7 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -4661,8 +4659,7 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "messenger_reply"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5570,8 +5567,7 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a",
-   "messenger_reply"
+   "sandbox_4_a"
   ],
   "f_paths": [
    "data_files_update",
@@ -13710,8 +13706,7 @@
   "sleep": [
    "http",
    "sleep",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -15193,12 +15188,10 @@
    "messenger_reply_puppeteer"
   ],
   "keyboard_typing_delay": [
-   "keyboard_typing_delay",
-   "messenger_reply"
+   "keyboard_typing_delay"
   ],
   "string_list_to": [
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "segmenter": [
    "string_list_to"
@@ -15234,8 +15227,7 @@
    "keyboard_typing_delay"
   ],
   "delay_ms": [
-   "keyboard_typing_delay",
-   "messenger_reply"
+   "keyboard_typing_delay"
   ],
   "chromium": [
    "messenger_reply",
@@ -15343,7 +15335,8 @@
    "messenger_reply"
   ],
   "keyboard_type_delay": [
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29141,10 +29134,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "each_async",
-    "sleep",
-    "keyboard_typing_delay",
-    "string_list_to",
+    "keyboard_type_delay",
     "command_line_read_empty",
     "messenger_reply_url",
     "retry_on_error",
@@ -29168,10 +29158,6 @@
     "input",
     "waitForSelector",
     "focus",
-    "list",
-    "lambda",
-    "item",
-    "delay_ms",
     "keyboard",
     "type",
     "close"
