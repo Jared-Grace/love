@@ -4,7 +4,7 @@ import { whitespace_normalize } from "./whitespace_normalize.mjs";
 import { marker } from "./marker.mjs";
 export function reply(input) {
   input = whitespace_normalize(input);
-  let split = string_split_space(s);
+  input = string_split_space(input);
   function lambda(item) {}
   let mapped = list_map(list, lambda);
   marker("1");
