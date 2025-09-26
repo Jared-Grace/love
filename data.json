@@ -2275,7 +2275,8 @@
   "s normal",
   "a str string_trim",
   "s lower",
-  "u sss"
+  "u sss",
+  "a sss"
  ],
  "marker_current": "1",
  "function_current": "reply",
