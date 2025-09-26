@@ -1,3 +1,4 @@
+import { list_remove } from "./list_remove.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { http_sleep } from "./http_sleep.mjs";
@@ -33,7 +34,7 @@ export async function messenger_reply() {
     if (e) {
       break;
     }
-    let first = list_first(list);
+    let url = list_first(urls);
     let prefix = "https://www.facebook.com";
     let without = string_prefix_without(url, prefix);
     const selector = `a[href="${without}"]`;
@@ -42,6 +43,7 @@ export async function messenger_reply() {
     await page.waitForSelector(selector, {
       state: "detached",
     });
+    list_remove(list, item);
     await http_sleep();
     await messenger_reply_messages_urls_add_page(page);
   }
