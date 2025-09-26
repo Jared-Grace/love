@@ -26,7 +26,8 @@ export async function messenger_reply_puppeteer() {
     const children2 = await conversation.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
-      let any = list_any(list, function lambda2(item) {});
+      function lambda2(item) {}
+      let any = list_any(list, lambda2);
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
