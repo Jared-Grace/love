@@ -3860,7 +3860,8 @@
    "messenger_reply_puppeteer",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29481,6 +29482,7 @@
     "v",
     "messages",
     "urls",
+    "message",
     "answer",
     "p",
     "focus",
