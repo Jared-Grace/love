@@ -2250,8 +2250,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -7578,8 +7577,7 @@
    "integer_random",
    "js_statement_return_empty_add",
    "range_from",
-   "sandbox",
-   "messenger_reply"
+   "sandbox"
   ],
   "formatted": [
    "function_format",
@@ -29057,11 +29055,9 @@
     "each_async",
     "string_list_to",
     "keyboard_typing_delay",
-    "log",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
-    "r",
     "puppeteerModule",
     "puppeteer",
     "default",
