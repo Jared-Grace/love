@@ -1920,7 +1920,6 @@
   "s reverse",
   "s slice",
   "s take",
-  "s json",
   "ebible_verses engbsb GEN01",
   "c list_index_of list_index_of_last",
   "is firebase_upload_object",
@@ -2260,7 +2259,8 @@
   "mr",
   "s reply",
   "s transform",
-  "s initial"
+  "s initial",
+  "s json"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
