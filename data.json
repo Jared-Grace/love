@@ -15475,9 +15475,6 @@
   ],
   "string_trim": [
    "messenger_reply_puppeteer"
-  ],
-  "s2": [
-   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29483,7 +29480,6 @@
     "message",
     "lambda",
     "e",
-    "s2",
     "lambda4",
     "imgs",
     "lambda3",
