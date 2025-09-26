@@ -1,3 +1,4 @@
+import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { list_first } from "./list_first.mjs";
@@ -47,7 +48,7 @@ export async function messenger_reply() {
     list_remove(urls, url);
     let urls_new = await messenger_reply_messages_urls_add_page(page);
     function lambda2(url_new) {
-      laien;
+      list_add_if_not_includes(list, item);
     }
     each(urls_new, lambda2);
     await http_sleep();
