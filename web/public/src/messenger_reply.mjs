@@ -10,11 +10,12 @@ export async function messenger_reply() {
       headless: false,
     });
   }
+  const command = "npx playwright install";
   async function lambda() {
-    log("hereeee");
     let stdout = await command_line(command);
+    log(stdout);
   }
-  await catch_only_run_async(lambda2, "npx playwright install", lambda);
+  await catch_only_run_async(lambda2, command, lambda);
   const page = await browser.newPage();
   await page.goto("https://facebook.com");
   await browser.close();
