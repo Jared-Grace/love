@@ -48,7 +48,7 @@ export async function messenger_reply() {
     list_remove(urls, url);
     let urls_new = await messenger_reply_messages_urls_add_page(page);
     function lambda2(url_new) {
-      list_add_if_not_includes(list, item);
+      list_add_if_not_includes(urls, url_new);
     }
     each(urls_new, lambda2);
     await http_sleep();
