@@ -3205,7 +3205,8 @@
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
    "roman_to_integer",
-   "string_list_to"
+   "string_list_to",
+   "catch_only_run_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3803,7 +3804,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "catch_only_run_async"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4727,7 +4729,8 @@
    "html_parse_classes_preview",
    "promise_wrap",
    "retry",
-   "list_empty_is_assert"
+   "list_empty_is_assert",
+   "catch_only_run_async"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5112,7 +5115,8 @@
    "string_skip_while",
    "string_trim_right",
    "function_list_generate",
-   "roman_to_integer"
+   "roman_to_integer",
+   "catch_only_run_async"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5270,7 +5274,8 @@
    "string_starts_with_not",
    "object_assign",
    "each_pair_async",
-   "app_reply_main"
+   "app_reply_main",
+   "catch_only_run_async"
   ],
   "without": [
    "string_suffix_without",
@@ -5654,7 +5659,8 @@
    "app_replace_rule_valid",
    "js_identifier_defineds",
    "sandbox_2",
-   "function_list_generate"
+   "function_list_generate",
+   "catch_only_run_async"
   ],
   "assert_json": [
    "assert_json",
@@ -5701,7 +5707,8 @@
    "git_commit"
   ],
   "message_fragment": [
-   "catch_only_async"
+   "catch_only_async",
+   "catch_only_run_async"
   ],
   "json": [
    "catch_only_async",
@@ -5710,7 +5717,8 @@
    "json_from",
    "storage_local_get",
    "file_write_json",
-   "firebase_storage_download_property"
+   "firebase_storage_download_property",
+   "catch_only_run_async"
   ],
   "includes": [
    "catch_only_async",
@@ -5723,7 +5731,8 @@
    "string_includes",
    "js_node_types_includes",
    "list_remove_if_exists",
-   "app_reply_main"
+   "app_reply_main",
+   "catch_only_run_async"
   ],
   "clipboard_copy": [
    "clipboard_copy",
@@ -10377,7 +10386,8 @@
    "js_unparse",
    "js_imports_declarations",
    "js_marker_name_get",
-   "js_stack_list_block_is"
+   "js_stack_list_block_is",
+   "catch_only_run_async"
   ],
   "a3": [
    "js_unparse",
@@ -15223,6 +15233,9 @@
   ],
   "goto": [
    "messenger_reply"
+  ],
+  "catch_only_run_async": [
+   "catch_only_run_async"
   ]
  },
  "functions": {
@@ -29136,6 +29149,22 @@
     "ms_per_character",
     "high",
     "delay_ms"
+   ]
+  },
+  "catch_only_run_async": {
+   "async": true,
+   "identifiers": [
+    "not",
+    "json_to",
+    "catch_only_run_async",
+    "lambda",
+    "message_fragment",
+    "e",
+    "json",
+    "message",
+    "a",
+    "includes",
+    "a2"
    ]
   }
  },
