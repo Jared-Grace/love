@@ -3527,8 +3527,7 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with",
-   "messenger_reply_messages_urls_add"
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -4718,8 +4717,7 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay",
-   "messenger_reply_messages_urls_add"
+   "keyboard_type_delay"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -29992,9 +29990,7 @@
     "transform",
     "data",
     "messages_urls",
-    "lambda",
-    "item",
-    "list"
+    "lambda"
    ]
   }
  },
