@@ -24,12 +24,12 @@ export async function messenger_reply_puppeteer() {
   for (const c of children) {
     const children2 = await conversation.$$('[role="none"]');
     for (const c of children) {
+      function lambda(node) {
+        let v2 = node.textContent;
+        return v2;
+      }
+      console.log(await c.evaluate(lambda));
     }
-    function lambda(node) {
-      let v2 = node.textContent;
-      return v2;
-    }
-    console.log(await c.evaluate(lambda));
   }
   return;
   await messenger_reply_puppeteer_unread_click(page);
