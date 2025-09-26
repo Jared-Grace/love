@@ -2255,8 +2255,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3210,8 +3209,7 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async",
-   "messenger_reply"
+   "catch_only_run_async"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3810,8 +3808,7 @@
    "js_node_atomize",
    "function_transform_marker_specified",
    "retry",
-   "catch_only_run_async",
-   "messenger_reply"
+   "catch_only_run_async"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5797,8 +5794,7 @@
    "git_push_schedule",
    "firebase_deploy",
    "command_line_generic",
-   "sandbox_2",
-   "messenger_reply"
+   "sandbox_2"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -15241,16 +15237,12 @@
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
-   "catch_only_async",
-   "messenger_reply"
+   "catch_only_async"
   ],
   "on_error": [
    "catch_only_run_async"
   ],
-  "command_line_log": [
-   "messenger_reply"
-  ],
-  "error_text": [
+  "retry_on_error": [
    "messenger_reply"
   ]
  },
@@ -29049,9 +29041,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "command_line_log",
-    "log",
-    "catch_only_run_async",
+    "retry_on_error",
     "import_install",
     "messenger_reply",
     "chromium",
@@ -29062,10 +29052,6 @@
     "launch",
     "headless",
     "command",
-    "message",
-    "error_text",
-    "lambda",
-    "stdout",
     "page",
     "newPage",
     "goto",
