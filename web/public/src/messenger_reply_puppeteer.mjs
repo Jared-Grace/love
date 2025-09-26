@@ -1,4 +1,4 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -26,7 +26,9 @@ export async function messenger_reply_puppeteer() {
     const children2 = await conversation.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
-      let ne = list_empty_not_is(list);
+      let e = list_empty_is(elements);
+      if (false) {
+      }
       function lambda(node) {
         let v2 = node.textContent;
         return v2;
