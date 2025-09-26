@@ -7115,7 +7115,6 @@
    "list_filter_starts_with",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
    "list_filter_ends_with_not_any"
   ],
   "function_name_to_path_unalias": [
@@ -9902,8 +9901,7 @@
    "js_identifier_unique",
    "string_empty_not_is",
    "ebible_verses",
-   "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_string_empty_not_is"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -15769,6 +15767,9 @@
   "undefined_not_is_assert": [
    "undefined_not_is_assert",
    "function_alias_add"
+  ],
+  "list_filter_empty_not_is": [
+   "list_map_filter_string_empty_not_is"
   ]
  },
  "functions": {
@@ -28462,10 +28463,9 @@
   "list_map_filter_string_empty_not_is": {
    "async": false,
    "identifiers": [
+    "list_filter_empty_not_is",
     "marker",
-    "list_filter",
     "list_map",
-    "string_empty_not_is",
     "list_map_filter_string_empty_not_is",
     "list",
     "lambda",
