@@ -2574,8 +2574,7 @@
    "string_trim_right",
    "string_ends_with_space",
    "bible_verses_encouragement",
-   "ebible_version_books",
-   "messenger_reply"
+   "ebible_version_books"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3731,8 +3730,7 @@
    "sandbox",
    "roman_to_integer",
    "messenger_reply_user_data_path",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5848,7 +5846,8 @@
    "command_line_read"
   ],
   "close": [
-   "command_line_read"
+   "command_line_read",
+   "messenger_reply"
   ],
   "command_line_schtasks": [
    "command_line_schtasks",
@@ -15195,7 +15194,31 @@
   "delay_ms": [
    "keyboard_typing_delay"
   ],
-  "messenger_reply_puppeteer": [
+  "chromium": [
+   "messenger_reply"
+  ],
+  "firefox": [
+   "messenger_reply"
+  ],
+  "webkit": [
+   "messenger_reply"
+  ],
+  "browser": [
+   "messenger_reply"
+  ],
+  "launch": [
+   "messenger_reply"
+  ],
+  "headless": [
+   "messenger_reply"
+  ],
+  "page": [
+   "messenger_reply"
+  ],
+  "newPage": [
+   "messenger_reply"
+  ],
+  "goto": [
    "messenger_reply"
   ]
  },
@@ -28998,10 +29021,17 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "messenger_reply_puppeteer",
-    "marker",
     "messenger_reply",
-    "v"
+    "chromium",
+    "firefox",
+    "webkit",
+    "browser",
+    "launch",
+    "headless",
+    "page",
+    "newPage",
+    "goto",
+    "close"
    ]
   },
   "roman_to_integer": {
