@@ -12,8 +12,11 @@ export async function messenger_reply() {
   marker("1");
   await messenger_reply_unread_collect();
   async function lambda2(page) {
+    let messages_urls = null;
     await messenger_reply_messages_urls_transform(transform_inner);
-    function transform_inner() {}
+    function transform_inner(mu) {
+      messages_urls = mu;
+    }
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
   }
