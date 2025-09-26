@@ -2287,7 +2287,8 @@
   "s lower",
   "p",
   "rt",
-  "n reply_sequence"
+  "n reply_sequence",
+  "u ei"
  ],
  "marker_current": "1",
  "function_current": "reply_sequence",
