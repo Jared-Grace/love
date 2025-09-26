@@ -1,7 +1,6 @@
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { reply_on_match } from "./reply_on_match.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
-import { log } from "./log.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
