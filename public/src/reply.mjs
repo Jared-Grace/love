@@ -16,9 +16,6 @@ export async function reply(a) {
   let reference = "Isaiah 26:9";
   let b = ["en"];
   let concated = list_concat(language_codes, b);
-  log({
-    concated,
-  });
   let bible_folders = ebible_languages_to_bible_folders(concated);
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
