@@ -13,7 +13,7 @@ export async function reply({ input, language_codes }) {
   let list = await ebible_references_parse_lines(concated, [reference]);
   return list;
   let fn = reply_sequence(["good", "evening"]);
-  function lambda() {}
+  async function lambda() {}
   let r = reply_on_match(fn, lambda);
   input = whitespace_normalize(input);
   input = string_split_space(input);
