@@ -23,6 +23,9 @@ export async function messenger_reply_puppeteer() {
   );
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
+    const children3 = await conversation.$$(
+      '[style="--x-paddingBottom: 0px; --x-paddingInlineEnd: 0px;"]',
+    );
     const children2 = await c.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
@@ -33,7 +36,7 @@ export async function messenger_reply_puppeteer() {
           return v2;
         }
         console.log(await c.evaluate(lambda));
-        ("--x-paddingBottom: 0px; --x-paddingInlineEnd: 0px;");
+        ("");
       }
     }
   }
