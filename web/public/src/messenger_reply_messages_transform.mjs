@@ -8,6 +8,6 @@ export async function messenger_reply_messages_transform(transform_inner) {
   await file_json_transform(fb_path, transform);
   function transform(data) {
     let value = object_property_initialize(data, "messages", {});
-    transform_inner(messages_urls);
+    transform_inner(value);
   }
 }
