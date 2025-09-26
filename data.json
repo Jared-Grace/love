@@ -3204,8 +3204,7 @@
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
    "roman_to_integer",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3475,8 +3474,7 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "v": [
    "data_identifiers_file",
@@ -3733,7 +3731,8 @@
    "sandbox",
    "roman_to_integer",
    "messenger_reply_user_data_path",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3804,8 +3803,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3945,8 +3943,7 @@
    "chalk_color",
    "clipboard_copy",
    "firebase_admin_get",
-   "unzip",
-   "messenger_reply"
+   "unzip"
   ],
   "joined": [
    "watch",
@@ -4643,8 +4640,7 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a",
-   "messenger_reply"
+   "sandbox_4_a"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5390,8 +5386,7 @@
    "js_property_parse_expression_add",
    "app_new_step_2",
    "function_rename_suffix_add",
-   "string_padded_is",
-   "messenger_reply"
+   "string_padded_is"
   ],
   "f_names": [
    "functions_names",
@@ -5550,8 +5545,7 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a",
-   "messenger_reply"
+   "sandbox_4_a"
   ],
   "f_paths": [
    "data_files_update",
@@ -8172,8 +8166,7 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new",
-   "messenger_reply"
+   "js_dollar_new"
   ],
   "key": [
    "object_invert",
@@ -13680,8 +13673,7 @@
   "sleep": [
    "http",
    "sleep",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -15158,62 +15150,14 @@
   "asciiRoman": [
    "roman_to_integer"
   ],
-  "puppeteer": [
-   "messenger_reply"
-  ],
-  "browser": [
-   "messenger_reply"
-  ],
-  "launch": [
-   "messenger_reply"
-  ],
-  "headless": [
-   "messenger_reply"
-  ],
-  "userDataDir": [
-   "messenger_reply"
-  ],
-  "page": [
-   "messenger_reply"
-  ],
-  "newPage": [
-   "messenger_reply"
-  ],
-  "goto": [
-   "messenger_reply"
-  ],
   "messenger_reply_user_data_path": [
-   "messenger_reply",
    "messenger_reply_user_data_path"
   ],
-  "puppeteerModule": [
-   "messenger_reply"
-  ],
-  "waitForSelector": [
-   "messenger_reply"
-  ],
-  "timeout": [
-   "messenger_reply"
-  ],
-  "unreadSpanSelector": [
-   "messenger_reply"
-  ],
-  "focus": [
-   "messenger_reply"
-  ],
-  "keyboard": [
-   "messenger_reply"
-  ],
-  "press": [
-   "messenger_reply"
-  ],
   "keyboard_typing_delay": [
-   "messenger_reply",
    "keyboard_typing_delay"
   ],
   "string_list_to": [
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "segmenter": [
    "string_list_to"
@@ -15249,7 +15193,9 @@
    "keyboard_typing_delay"
   ],
   "delay_ms": [
-   "keyboard_typing_delay",
+   "keyboard_typing_delay"
+  ],
+  "messenger_reply_puppeteer": [
    "messenger_reply"
   ]
  },
@@ -29052,36 +28998,10 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "sleep",
-    "each_async",
-    "string_list_to",
-    "keyboard_typing_delay",
-    "messenger_reply_user_data_path",
+    "messenger_reply_puppeteer",
     "marker",
     "messenger_reply",
-    "puppeteerModule",
-    "puppeteer",
-    "default",
-    "browser",
-    "launch",
-    "headless",
-    "userDataDir",
-    "page",
-    "newPage",
-    "goto",
-    "unreadSpanSelector",
-    "p",
-    "waitForSelector",
-    "timeout",
-    "focus",
-    "message",
-    "list",
-    "lambda",
-    "item",
-    "delay_ms",
-    "keyboard",
-    "type",
-    "press"
+    "v"
    ]
   },
   "roman_to_integer": {
