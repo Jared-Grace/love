@@ -8,7 +8,8 @@ import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 export async function messenger_reply() {
   marker("1");
   await messenger_reply_unread_collect();
-  let page2 = await messenger_reply_puppeteer(async function lambda2() {});
+  async function lambda2() {}
+  let page2 = await messenger_reply_puppeteer(lambda2);
   let answer = await command_line_read_empty();
   return;
   log(messages);
