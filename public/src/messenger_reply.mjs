@@ -19,7 +19,8 @@ export async function messenger_reply() {
     }
     let properties = object_properties(messages_urls);
     let skips = ["7632130373481137"];
-    let filtered = list_filter(list, function lambda(item) {});
+    function lambda(item) {}
+    let filtered = list_filter(list, lambda);
     let first = list_first(properties);
     let messages = await messenger_reply_messages(page, first);
     let answer = await command_line_read_empty();
