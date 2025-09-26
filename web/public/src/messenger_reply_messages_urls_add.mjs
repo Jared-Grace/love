@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 import { file_json_transform } from "./file_json_transform.mjs";
@@ -8,6 +9,7 @@ export async function messenger_reply_messages_urls_add(url) {
   await file_json_transform(fb_path, transform);
   function transform(data) {
     let messages_urls = object_property_initialize(data, "messages_urls", {});
+    each(list, function lambda(item) {});
     object_property_set(messages_urls, url, 1);
   }
 }
