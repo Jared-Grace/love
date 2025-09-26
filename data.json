@@ -3245,7 +3245,6 @@
    "string_list_to",
    "catch_only_run_async",
    "puppeteer_matches",
-   "messenger_reply_puppeteer",
    "keyboard_type_delay",
    "retry_on_error",
    "messenger_reply_messages",
@@ -15653,6 +15652,9 @@
    "messenger_reply"
   ],
   "protocolTimeout": [
+   "messenger_reply_puppeteer"
+  ],
+  "lambda$page": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29596,7 +29598,7 @@
    "identifiers": [
     "messenger_reply_user_data_path",
     "messenger_reply_puppeteer",
-    "lambda",
+    "lambda$page",
     "puppeteer",
     "browser",
     "launch",
