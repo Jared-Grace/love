@@ -3524,8 +3524,7 @@
    "messenger_reply_puppeteer",
    "messenger_reply",
    "js_statement_return_add",
-   "keyboard_type_delay",
-   "messenger_reply_messages"
+   "keyboard_type_delay"
   ],
   "v": [
    "data_identifiers_file",
@@ -15663,6 +15662,9 @@
    "retry_on_error"
   ],
   "messenger_reply_messages": [
+   "messenger_reply_messages"
+  ],
+  "messages": [
    "messenger_reply_messages"
   ]
  },
@@ -29989,7 +29991,7 @@
     "v2",
     "textContent",
     "name",
-    "list"
+    "messages"
    ]
   }
  },
