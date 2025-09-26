@@ -1,3 +1,4 @@
+import { list_index_of } from "./list_index_of.mjs";
 import { list_last } from "./list_last.mjs";
 import { messenger_reply_messages_me } from "./messenger_reply_messages_me.mjs";
 import { messenger_reply_messages_name } from "./messenger_reply_messages_name.mjs";
@@ -37,6 +38,7 @@ export async function messenger_reply() {
     let property_value = messenger_reply_messages_me();
     let mine = list_filter_property(messages, property_name, property_value);
     let last = list_last(mine);
+    let index = list_index_of(list, item);
     log(last);
     let answer = await command_line_read_empty();
   }
