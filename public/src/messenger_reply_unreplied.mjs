@@ -11,9 +11,9 @@ export function messenger_reply_unreplied(messages) {
   let mine_last = list_last(mine);
   let index_last = list_index_of(messages, mine_last);
   let unreplied = list_skip(messages, index_last + 1);
-  let v = {
+  let result = {
     mine_last,
     unreplied,
   };
-  return v;
+  return result;
 }
