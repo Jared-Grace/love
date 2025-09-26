@@ -1,3 +1,4 @@
+import { list_filter } from "./list_filter.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
 import { list_map } from "./list_map.mjs";
@@ -27,6 +28,7 @@ export async function messenger_reply() {
     }
     let mapped = list_map(skips, lambda4);
     let filtered = list_filter_ends_with_not_any(mapped, properties);
+    let filtered2 = list_filter(list, function lambda(item) {});
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     log(messages);
