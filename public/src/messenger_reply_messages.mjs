@@ -2,7 +2,7 @@ import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export async function messenger_reply_messages(url) {
+export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
