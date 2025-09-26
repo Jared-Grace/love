@@ -1,7 +1,9 @@
+import { string_list_to } from "./string_list_to.mjs";
 import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
+const message = "Greetings!";
 export async function messenger_reply() {
   marker("1");
   let r = keyboard_typing_delay();
@@ -20,6 +22,7 @@ export async function messenger_reply() {
     timeout: 10000,
   });
   await p.focus();
-  await page.keyboard.type("Greetings!");
+  let chars = string_list_to(str);
+  await page.keyboard.type(message);
   await page.keyboard.press("Enter");
 }
