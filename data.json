@@ -2280,7 +2280,8 @@
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "puppeteer_hrefs_starts_with"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3860,7 +3861,8 @@
    "messenger_reply_puppeteer",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "puppeteer_hrefs_starts_with"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29962,13 +29964,15 @@
   "puppeteer_hrefs_starts_with": {
    "async": true,
    "identifiers": [
+    "log",
     "puppeteer_hrefs",
     "list_filter_starts_with",
     "puppeteer_hrefs_starts_with",
     "page",
     "prefix",
     "hrefs",
-    "filtered"
+    "filtered",
+    "message"
    ]
   },
   "messenger_reply_messages_urls_add_page": {
