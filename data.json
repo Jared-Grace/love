@@ -1901,7 +1901,6 @@
   "s sort",
   "s classes",
   "s list_",
-  "s list_add",
   "cs list_adder_multiple_async",
   "cs list_adder_multiple async",
   "cs list_adder_generic async",
@@ -2263,7 +2262,8 @@
   "s empty,read",
   "is sleep",
   "p",
-  "mr"
+  "mr",
+  "s list_add"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
