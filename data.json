@@ -187,7 +187,7 @@
   "sz": "string_size",
   "fe": "function_exists",
   "cl": "command_line",
-  "mr": "messenger_reply_puppeteer"
+  "mr": "messenger_reply"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2257,10 +2257,11 @@
   "p",
   "mr",
   "s reply",
-  "rs messenger_reply playwright"
+  "rs messenger_reply playwright",
+  "r messenger_reply_puppeteer messenger_reply"
  ],
  "marker_current": "1",
- "function_current": "messenger_reply_playwright",
+ "function_current": "messenger_reply",
  "terminal": false,
  "identifiers": {
   "log": [
