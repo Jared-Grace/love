@@ -3541,8 +3541,7 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -29569,7 +29568,6 @@
     "property_value",
     "mine",
     "last",
-    "list",
     "answer",
     "p",
     "focus",
