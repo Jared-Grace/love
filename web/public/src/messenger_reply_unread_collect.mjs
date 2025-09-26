@@ -48,9 +48,4 @@ export async function messenger_reply_unread_collect() {
     each(urls_new, lambda2);
     await http_sleep();
   }
-  let v2 = {
-    messages,
-    page,
-  };
-  return v2;
 }
