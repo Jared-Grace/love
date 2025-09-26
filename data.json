@@ -3572,7 +3572,8 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -7005,7 +7006,8 @@
    "string_split_empty",
    "digits",
    "bible_verses_encouragement_generate",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "results": [
    "functions_combine_name"
@@ -14779,7 +14781,8 @@
    "string_split_newline",
    "ebible_references_parse",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "verse_references": [
    "list_filter_starts_with_any",
@@ -29658,6 +29661,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "string_split_newline",
     "object_property_set",
     "messenger_reply_messages_transform",
     "list_join_space",
@@ -29694,6 +29698,8 @@
     "messages",
     "mine_last",
     "unreplied",
+    "split",
+    "list",
     "property_name",
     "mapped2",
     "joined",
