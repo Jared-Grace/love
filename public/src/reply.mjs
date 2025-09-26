@@ -22,6 +22,7 @@ export async function reply(a) {
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
+    return list;
   }
   let r = reply_on_match(fn, lambda);
   input = whitespace_normalize(input);
