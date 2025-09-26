@@ -3228,7 +3228,8 @@
    "roman_to_integer",
    "string_list_to",
    "catch_only_run_async",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "previous": [
    "data_identifiers_file",
@@ -5531,7 +5532,8 @@
    "emoji_handshake",
    "roman_to_integer",
    "string_list_to",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "readdirSync": [
    "folder_read"
@@ -7534,7 +7536,8 @@
    "js_calls_to_each",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_statement_expression_get"
+   "js_statement_expression_get",
+   "messenger_reply_puppeteer"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -10741,7 +10744,8 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -11096,7 +11100,8 @@
   "children": [
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async"
+   "visit_unique_async",
+   "messenger_reply_puppeteer"
   ],
   "c": [
    "visit_filter_recursive",
@@ -11108,7 +11113,8 @@
    "js_calls_to_each",
    "html_parse_descendants_classes",
    "html_parse_classes_preview",
-   "sandbox_2"
+   "sandbox_2",
+   "messenger_reply_puppeteer"
   ],
   "found": [
    "visit_unique_async",
@@ -15399,18 +15405,24 @@
    "puppeteer_matches"
   ],
   "$$": [
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "textContent": [
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "txt": [
    "puppeteer_matches"
   ],
   "evaluate": [
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "messenger_reply_puppeteer"
   ],
   "messenger_reply_puppeteer_unread_click": [
+   "messenger_reply_puppeteer"
+  ],
+  "conversation": [
    "messenger_reply_puppeteer"
   ]
  },
@@ -29395,8 +29407,18 @@
     "p",
     "waitForSelector",
     "timeout",
-    "el",
+    "conversation",
     "$",
+    "children",
+    "el",
+    "$$",
+    "c",
+    "lambda",
+    "node",
+    "v2",
+    "textContent",
+    "console",
+    "evaluate",
     "focus",
     "fn",
     "keyboard",
