@@ -2245,7 +2245,6 @@
   "n messenger_reply_login",
   "messenger_reply_login",
   "s user",
-  "p",
   "fd messenger_reply",
   "n bind",
   "n bind_property",
@@ -2253,6 +2252,7 @@
   "ar mr messenger_reply",
   "s messenger",
   "messenger_reply",
+  "p",
   "mr"
  ],
  "marker_current": "1",
