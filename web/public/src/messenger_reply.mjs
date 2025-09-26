@@ -32,6 +32,7 @@ export async function messenger_reply() {
   await input.focus();
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay(pin, fn);
+  const locator = page.locator("text=Unread");
   await command_line_read_empty();
   await browser.close();
 }
