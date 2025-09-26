@@ -25,18 +25,14 @@ export async function messenger_reply_puppeteer() {
   for (const c of children) {
     const children2 = await c.$$('[role="none"]');
     for (const c of children2) {
-      const elements = await c.$$(`h5 > [data-virtualized="false"]`);
-      let e = list_empty_is(elements);
-      if (e) {
-        function lambda(node) {
-          let v2 = node.textContent;
-          return v2;
-        }
-        let e = list_empty_is(filtered);
-        log(e);
-        console.log(await c.evaluate(lambda));
-        ("");
+      function lambda(node) {
+        let v2 = node.textContent;
+        return v2;
       }
+      let e = list_empty_is(filtered);
+      log(e);
+      console.log(await c.evaluate(lambda));
+      ("");
     }
   }
   return;
