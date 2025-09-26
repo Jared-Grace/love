@@ -26,6 +26,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
     function lambda2(verse_number) {
+      verse_number += "";
       let index = list_index_of_last(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, verse_number);
