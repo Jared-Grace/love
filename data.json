@@ -3027,8 +3027,7 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property",
-   "messenger_reply"
+   "bind_property"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -8852,8 +8851,7 @@
    "marker_leave",
    "app_replace_rule_parse",
    "list_index_of_delta_outside",
-   "ebible_references_parse_lines",
-   "messenger_reply"
+   "ebible_references_parse_lines"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -9861,8 +9859,7 @@
    "list_skip_1",
    "app_replace_rule_parse",
    "app_replace_rule_set",
-   "ebible_verses",
-   "messenger_reply"
+   "ebible_verses"
   ],
   "list_second": [
    "js_dollar_r",
@@ -10414,8 +10411,7 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused",
-   "messenger_reply"
+   "js_imports_unused"
   ],
   "fds": [
    "js_outside_move"
@@ -10463,8 +10459,7 @@
    "list_last_is",
    "list_last_or_null",
    "prompt_previous",
-   "js_expand_generic",
-   "messenger_reply"
+   "js_expand_generic"
   ],
   "list_empty_not_is": [
    "js_return_name",
@@ -10485,8 +10480,7 @@
    "list_last",
    "list_last_is",
    "marker_if_test_replace",
-   "js_expand_generic",
-   "messenger_reply"
+   "js_expand_generic"
   ],
   "identifier_if": [
    "js_return_name",
@@ -10651,8 +10645,7 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda",
-   "messenger_reply"
+   "object_property_equals_lambda"
   ],
   "list_find": [
    "list_find",
@@ -10694,8 +10687,7 @@
   ],
   "index_last": [
    "list_index_is",
-   "list_index_last",
-   "messenger_reply"
+   "list_index_last"
   ],
   "indexOf": [
    "list_index_of"
@@ -15727,14 +15719,12 @@
    "messenger_reply_wait"
   ],
   "messenger_reply_messages_me": [
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
   "messenger_reply_messages_name": [
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
-  "mine": [
+  "messenger_reply_unreplied": [
    "messenger_reply"
   ]
  },
@@ -29532,12 +29522,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "list_skip",
-    "list_index_of",
-    "list_last",
-    "messenger_reply_messages_me",
-    "messenger_reply_messages_name",
-    "list_filter_property",
+    "messenger_reply_unreplied",
     "messenger_reply_wait",
     "list_filter_ends_with_not_any",
     "list_map",
@@ -29566,11 +29551,6 @@
     "filtered",
     "first",
     "messages",
-    "property_name",
-    "property_value",
-    "mine",
-    "last",
-    "index_last",
     "skipped",
     "answer",
     "p",
