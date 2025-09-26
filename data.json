@@ -106,7 +106,6 @@
   "mrt": "marker_remove_marker_top",
   "fy": "function_types",
   "lk": "list_skip",
-  "ll": "list_filter",
   "jnt": "js_node_type",
   "lx": "list_index_of",
   "x": "exit",
@@ -187,7 +186,8 @@
   "sz": "string_size",
   "fe": "function_exists",
   "cl": "command_line",
-  "mr": "messenger_reply"
+  "mr": "messenger_reply",
+  "lfl": "list_filter"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2268,7 +2268,8 @@
   "c list_filter_ends_with_any list_filter_ends_with_not_any",
   "mr",
   "s last",
-  "export async function messenger_reply_messages(page, url) {"
+  "export async function messenger_reply_messages(page, url) {",
+  "ac ll lfl"
  ],
  "marker_current": "1",
  "function_current": "list_filter_ends_with_not_any",
