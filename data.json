@@ -636,7 +636,6 @@
   "de js_declarator_init_set",
   "s uniqu",
   "fs marker_top",
-  "o mr",
   "c md marker_bottom",
   "a mb marker_bottom",
   "n list_last_is",
@@ -2259,10 +2258,11 @@
   "rs messenger_reply playwright",
   "r messenger_reply_puppeteer messenger_reply",
   "r messenger_reply_puppeteer_unread_click messenger_reply_unread_click",
-  "d"
+  "d",
+  "o mr"
  ],
  "marker_current": "1",
- "function_current": "messenger_reply_unread_click",
+ "function_current": "messenger_reply",
  "terminal": false,
  "identifiers": {
   "log": [
