@@ -1,4 +1,3 @@
-import { list_add } from "./list_add.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
@@ -60,7 +59,10 @@ export async function messenger_reply_puppeteer() {
         } else {
           name = "them";
         }
-        list_add(list2, la);
+        la({
+          name,
+          message,
+        });
       }
     }
   }
