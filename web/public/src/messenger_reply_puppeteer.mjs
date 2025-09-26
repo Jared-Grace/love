@@ -1,5 +1,4 @@
-import { list_get } from "./list_get.mjs";
-import { puppeteer_matches } from "./puppeteer_matches.mjs";
+import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 import { messenger_reply_url } from "./messenger_reply_url.mjs";
@@ -17,11 +16,7 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
-  const tag_name = "span";
-  const text = "Unread";
-  const matches = await puppeteer_matches(page, tag_name, text);
-  let m = list_get(matches, 2);
-  await m.click();
+  await messenger_reply_puppeteer_unread_click(page);
   return;
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
