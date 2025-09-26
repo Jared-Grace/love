@@ -7025,7 +7025,8 @@
    "function_aliases_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "messenger_reply_puppeteer"
   ],
   "function_open": [
    "functions_search_open",
@@ -29387,6 +29388,7 @@
     "timeout",
     "elements",
     "$$",
+    "search",
     "matches",
     "el",
     "lambda",
