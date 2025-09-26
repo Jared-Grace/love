@@ -23,7 +23,7 @@ export async function reply(a) {
     let outputs = object_property_get(a, "outputs");
     list_add(outputs);
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
-    let mapped = list_map_property(list2, property_name);
+    let mapped = list_map_property(list, "text");
     return list;
   }
   let r = reply_on_match(fn, lambda);
