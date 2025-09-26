@@ -3253,8 +3253,7 @@
    "retry_on_error",
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
-   "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply"
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4718,8 +4717,7 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay",
-   "messenger_reply"
+   "keyboard_type_delay"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5041,8 +5039,7 @@
    "http",
    "retry",
    "function_list_generate",
-   "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply_messages"
   ],
   "value2": [
    "error_attention_set",
@@ -5214,8 +5211,7 @@
    "string_ends_with",
    "string_prefix_without",
    "string_padded_is",
-   "string_ends_with_space",
-   "messenger_reply"
+   "string_ends_with_space"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -6607,8 +6603,7 @@
   "ew": [
    "file_open",
    "string_ends_with",
-   "string_padded_is",
-   "messenger_reply"
+   "string_padded_is"
   ],
   "filePath": [
    "file_open_editor"
@@ -7082,8 +7077,7 @@
    "list_filter_starts_with",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is",
-   "messenger_reply"
+   "list_map_filter_string_empty_not_is"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -10390,8 +10384,7 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with",
-   "messenger_reply"
+   "list_any_starts_with"
   ],
   "match": [
    "js_node_types_is",
@@ -13064,8 +13057,7 @@
    "list_find_starts_with",
    "string_skip_while",
    "string_trim_right",
-   "string_starts_with_digit",
-   "messenger_reply"
+   "string_starts_with_digit"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -14286,8 +14278,7 @@
    "list_find_starts_with",
    "sandbox_4_a",
    "string_starts_with_digit",
-   "bible_verses_encouragement_generate",
-   "messenger_reply"
+   "bible_verses_encouragement_generate"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -15693,6 +15684,9 @@
    "messenger_reply"
   ],
   "skips": [
+   "messenger_reply"
+  ],
+  "list_filter_ends_with_any": [
    "messenger_reply"
   ]
  },
@@ -29490,10 +29484,8 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_filter_ends_with_any",
     "list_map",
-    "list_any",
-    "string_ends_with",
-    "list_filter",
     "list_first",
     "object_properties",
     "messenger_reply_messages_urls_transform",
@@ -29516,12 +29508,6 @@
     "s",
     "v",
     "mapped",
-    "lambda",
-    "item",
-    "lambda3",
-    "item2",
-    "ew",
-    "any",
     "filtered",
     "first",
     "messages",
