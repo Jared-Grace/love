@@ -60,6 +60,6 @@ export async function messenger_reply_messages() {
       }
     }
   }
-  let list = await list_adder_async(lambda6);
-  return list;
+  let messages = await list_adder_async(lambda6);
+  return messages;
 }
