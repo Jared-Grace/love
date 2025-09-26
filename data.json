@@ -2373,8 +2373,7 @@
    "object_merge_generic",
    "bible_verses_encouragement_generate",
    "messenger_reply_unread_collect",
-   "messenger_reply_messages_urls_add_multiple",
-   "function_alias_add"
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3387,8 +3386,7 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert",
-   "function_alias_add"
+   "undefined_not_is_assert"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3821,8 +3819,7 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply",
-   "function_alias_add"
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4752,8 +4749,7 @@
    "sandbox_4_a",
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
-   "reply",
-   "function_alias_add"
+   "reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11954,8 +11950,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "function_alias_add"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -16899,7 +16894,6 @@
   },
   "function_alias_add": {
    "identifiers": [
-    "each",
     "undefined_not_is_assert",
     "marker",
     "list_sort_string_size",
@@ -16912,10 +16906,6 @@
     "list",
     "alias",
     "f_name",
-    "lambda2",
-    "item",
-    "list2",
-    "v",
     "lambda",
     "a",
     "exists",
