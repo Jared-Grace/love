@@ -3204,7 +3204,8 @@
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
    "roman_to_integer",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3474,7 +3475,8 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4641,7 +4643,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5547,7 +5550,8 @@
    "each_index_async",
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply"
   ],
   "f_paths": [
    "data_files_update",
@@ -11736,7 +11740,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "messenger_reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -15224,9 +15229,6 @@
   ],
   "segment": [
    "string_list_to"
-  ],
-  "chars": [
-   "messenger_reply"
   ]
  },
  "functions": {
@@ -29028,6 +29030,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "each_async",
     "string_list_to",
     "keyboard_typing_delay",
     "log",
@@ -29051,8 +29054,11 @@
     "waitForSelector",
     "timeout",
     "focus",
-    "chars",
+    "list",
     "str",
+    "list2",
+    "lambda",
+    "item",
     "keyboard",
     "type",
     "press"
