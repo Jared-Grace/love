@@ -3580,8 +3580,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "reply_on_match"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4783,8 +4782,7 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders",
-   "reply_on_match"
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -30443,9 +30441,7 @@
     "reply_on_match_inner",
     "a",
     "matches",
-    "outputs",
-    "list",
-    "item"
+    "outputs"
    ]
   }
  },
