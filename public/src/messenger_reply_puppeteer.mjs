@@ -20,6 +20,7 @@ export async function messenger_reply_puppeteer() {
   });
   await p.focus();
   const message = "Greetings!";
+  let fn = page.keyboard.type;
   let list = string_list_to(message);
   async function lambda(item) {
     let delay_ms = keyboard_typing_delay();
