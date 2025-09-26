@@ -1,3 +1,4 @@
+import { list_first } from "./list_first.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { messenger_reply_messages_urls_transform } from "./messenger_reply_messages_urls_transform.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
@@ -19,6 +20,7 @@ export async function messenger_reply() {
       messages_urls = mu;
     }
     let properties = object_properties(messages_urls);
+    let first = list_first(list);
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
   }
