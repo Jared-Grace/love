@@ -2629,7 +2629,8 @@
    "messenger_reply",
    "messenger_reply_unread_click",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "function_alias_add"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16878,6 +16879,7 @@
   },
   "function_alias_add": {
    "identifiers": [
+    "marker",
     "list_sort_string_size",
     "function_alias_generic",
     "error",
