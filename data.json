@@ -2251,8 +2251,8 @@
   "ar mr messenger_reply",
   "s messenger",
   "messenger_reply",
-  "p",
   "mr",
+  "p",
   "s equal"
  ],
  "marker_current": "1",
