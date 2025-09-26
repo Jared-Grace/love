@@ -3540,7 +3540,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -9546,7 +9547,8 @@
   "skip_count": [
    "js_call_new_code",
    "list_skip",
-   "string_skip"
+   "string_skip",
+   "messenger_reply"
   ],
   "remaining": [
    "js_call_new_code",
@@ -9861,7 +9863,8 @@
    "list_skip_1",
    "app_replace_rule_parse",
    "app_replace_rule_set",
-   "ebible_verses"
+   "ebible_verses",
+   "messenger_reply"
   ],
   "list_second": [
    "js_dollar_r",
@@ -10823,7 +10826,8 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses"
+   "ebible_verses",
+   "messenger_reply"
   ],
   "slice": [
    "list_slice",
@@ -29530,6 +29534,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_skip",
     "list_index_of",
     "list_last",
     "messenger_reply_messages_me",
@@ -29568,6 +29573,9 @@
     "mine",
     "last",
     "index_last",
+    "skipped",
+    "list",
+    "skip_count",
     "answer",
     "p",
     "focus",
