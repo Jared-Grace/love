@@ -3392,7 +3392,8 @@
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "reply_sequence"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3899,8 +3900,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "reply_sequence"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5116,8 +5116,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists",
-   "reply_sequence"
+   "firebase_storage_exists"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -6415,7 +6414,8 @@
   "each_range": [
    "each_range",
    "js_identifier_defineds",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "reply_sequence"
   ],
   "count": [
    "each_range",
@@ -6433,7 +6433,8 @@
    "number_pad",
    "retry",
    "ebible_chapter_code_to_name",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "reply_sequence"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -30251,14 +30252,15 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
-    "error",
+    "each_range",
     "reply_sequence",
     "items",
     "v",
     "reply_sequence_matches",
     "input",
     "index",
-    "message"
+    "count",
+    "lambda2"
    ]
   }
  },
