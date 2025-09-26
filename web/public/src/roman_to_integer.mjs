@@ -48,12 +48,7 @@ export function roman_to_integer(input) {
     const match = input.match(/^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯIVXLCDM]+)([a-zA-Z]*)$/);
     if (not(match)) {
       const num = parseInt(input, 10);
-      let v4 = isNaN(num)
-        ? input
-        : {
-            number: num,
-            suffix: "",
-          };
+      let v4 = isNaN(num) ? input : num + "";
       return v4;
     }
     const romanPart = match[1];
