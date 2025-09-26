@@ -25,7 +25,7 @@ export async function messenger_reply_puppeteer() {
   async function lambda(item) {
     let delay_ms = keyboard_typing_delay();
     await sleep(delay_ms);
-    await page.keyboard.type(item);
+    await fn(item);
   }
   await each_async(list, lambda);
   return;
