@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -14,6 +15,7 @@ export async function reply(a) {
   let b = ["en"];
   let concated = list_concat(language_codes, b);
   let languages = ebible_languages();
+  let mapped = list_map(list2, function lambda2(item) {});
   return list;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
