@@ -2151,7 +2151,6 @@
   "o s4",
   "s sand",
   "s digit",
-  "s starts",
   "string_starts_with_digit tt",
   "string_starts_with_digit 5t",
   "as skip",
@@ -2260,7 +2259,8 @@
   "s initial",
   "s json",
   "p",
-  "mr"
+  "mr",
+  "s starts"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
