@@ -2584,8 +2584,7 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "catch_only_run_async",
-   "messenger_reply_login"
+   "catch_only_run_async"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -29305,7 +29304,6 @@
    "identifiers": [
     "command_line_read",
     "import_install",
-    "marker",
     "messenger_reply_login",
     "chromium",
     "firefox",
