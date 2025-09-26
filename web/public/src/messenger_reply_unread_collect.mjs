@@ -50,5 +50,6 @@ export async function messenger_reply_unread_collect() {
       await http_sleep();
     }
   } finally {
+    await browser.close();
   }
 }
