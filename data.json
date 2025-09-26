@@ -2236,7 +2236,8 @@
   "n string_list_to",
   "ps",
   "p",
-  "messenger_reply"
+  "messenger_reply",
+  "keyboard_typing_delay"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
