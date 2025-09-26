@@ -23,9 +23,21 @@ export async function messenger_reply_puppeteer() {
   );
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
-    const children3 = await conversation.$$(
-      '[style="--x-paddingBottom: 0px; --x-paddingInlineEnd: 0px;"]',
-    );
+    const children3 = await conversation.$$("*");
+    const filtered = [];
+    for (const el of children3) {
+      function lambda2(node) {
+        let v3 = node.style.cssText;
+        return v3;
+      }
+      const style = await el.evaluate(lambda2);
+      if (
+        style.includes("--x-paddingBottom: 0px") &&
+        style.includes("--x-paddingInlineEnd: 0px")
+      ) {
+        filtered.push(el);
+      }
+    }
     const children2 = await c.$$('[role="none"]');
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
