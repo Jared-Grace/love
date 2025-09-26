@@ -3027,7 +3027,8 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property"
+   "bind_property",
+   "messenger_reply"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -3539,7 +3540,8 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -6931,7 +6933,8 @@
    "sandbox_2",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "split": [
    "functions_combine_name",
@@ -7645,7 +7648,8 @@
    "list_map_whitespace_normalize",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -29522,6 +29526,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_map_property",
     "messenger_reply_unreplied",
     "messenger_reply_wait",
     "list_filter_ends_with_not_any",
@@ -29552,6 +29557,9 @@
     "first",
     "messages",
     "skipped",
+    "mapped2",
+    "list",
+    "property_name",
     "answer",
     "p",
     "focus",
