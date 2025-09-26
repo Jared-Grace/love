@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
@@ -7,6 +8,7 @@ import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function reply({ input, language_codes }) {
   let reference = "Isaiah 26:9";
+  let concated = list_concat(a, b);
   let v = ebible_folder_english();
   let list = await ebible_references_parse_lines([v], [reference]);
   return list;
