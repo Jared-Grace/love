@@ -15406,9 +15406,6 @@
   "parseRomanOrInteger": [
    "roman_to_integer"
   ],
-  "number": [
-   "roman_to_integer"
-  ],
   "romanPart": [
    "roman_to_integer"
   ],
@@ -29744,9 +29741,8 @@
     "parseInt",
     "v4",
     "isNaN",
-    "number",
-    "suffix",
     "romanPart",
+    "suffix",
     "asciiRoman",
     "v5",
     "v6"
