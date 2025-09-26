@@ -3540,8 +3540,7 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -4728,8 +4727,7 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "list_filter_ends_with_not_any"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6250,8 +6248,7 @@
    "ebible_verse_download",
    "firebase_storage_download_ebible",
    "list_set",
-   "ebible_references_parse_lines",
-   "messenger_reply"
+   "ebible_references_parse_lines"
   ],
   "lists_get": [
    "each_multiple",
@@ -10696,7 +10693,8 @@
   ],
   "index_last": [
    "list_index_is",
-   "list_index_last"
+   "list_index_last",
+   "messenger_reply"
   ],
   "indexOf": [
    "list_index_of"
@@ -11928,8 +11926,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "messenger_reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12596,8 +12593,7 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set",
-   "messenger_reply"
+   "app_replace_rule_set"
   ],
   "html_style_remove": [
    "html_style_remove",
@@ -14303,8 +14299,7 @@
    "list_find_starts_with",
    "sandbox_4_a",
    "string_starts_with_digit",
-   "bible_verses_encouragement_generate",
-   "messenger_reply"
+   "bible_verses_encouragement_generate"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -14369,8 +14364,7 @@
   ],
   "list_index_of_last": [
    "list_index_of_last",
-   "ebible_verses",
-   "messenger_reply"
+   "ebible_verses"
   ],
   "lastIndexOf": [
    "list_index_of_last"
@@ -29536,7 +29530,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "list_index_of_last",
     "list_index_of",
     "list_last",
     "messenger_reply_messages_me",
@@ -29574,12 +29567,7 @@
     "property_value",
     "mine",
     "last",
-    "index",
-    "list",
-    "item",
-    "index2",
-    "list2",
-    "item2",
+    "index_last",
     "answer",
     "p",
     "focus",
