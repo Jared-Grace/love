@@ -4942,7 +4942,8 @@
    "bible_verses_encouragement_generate",
    "js_dollar_ie",
    "js_dollar_ib",
-   "messenger_reply"
+   "messenger_reply",
+   "bind"
   ],
   "colored": [
    "chalk_color",
@@ -8198,7 +8199,8 @@
    "js_property_generic",
    "js_dollar_new",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "bind"
   ],
   "key": [
    "object_invert",
@@ -15262,7 +15264,8 @@
   "page": [
    "messenger_reply",
    "messenger_reply_puppeteer",
-   "messenger_reply_login"
+   "messenger_reply_login",
+   "bind"
   ],
   "newPage": [
    "messenger_reply",
@@ -15317,7 +15320,8 @@
   ],
   "keyboard": [
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "bind"
   ],
   "press": [
    "messenger_reply_puppeteer"
@@ -29346,7 +29350,11 @@
    "async": false,
    "identifiers": [
     "marker",
-    "bind"
+    "bind",
+    "fn",
+    "page",
+    "keyboard",
+    "type"
    ]
   }
  },
