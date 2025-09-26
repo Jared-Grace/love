@@ -15429,6 +15429,9 @@
   ],
   "children2": [
    "messenger_reply_puppeteer"
+  ],
+  "children3": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29418,6 +29421,7 @@
     "children",
     "$$",
     "c",
+    "children3",
     "children2",
     "elements",
     "e",
