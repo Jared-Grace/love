@@ -3024,7 +3024,8 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property"
+   "bind_property",
+   "messenger_reply"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -10645,7 +10646,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "messenger_reply"
   ],
   "list_find": [
    "list_find",
@@ -15721,10 +15723,12 @@
    "messenger_reply"
   ],
   "messenger_reply_messages_me": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "messenger_reply_messages_name": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29521,6 +29525,8 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages_me",
+    "messenger_reply_messages_name",
     "list_filter_property",
     "messenger_reply_wait",
     "list_filter_ends_with_not_any",
@@ -29552,6 +29558,8 @@
     "messages",
     "lambda",
     "item",
+    "property_name",
+    "property_value",
     "filtered2",
     "answer",
     "p",
