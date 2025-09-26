@@ -25,7 +25,7 @@ export async function messenger_reply() {
       messages,
     });
   }
-  let page2 = await messenger_reply_puppeteer(lambda2);
+  await messenger_reply_puppeteer(lambda2);
   let answer = await command_line_read_empty();
   return;
   log(messages);
