@@ -2265,7 +2265,8 @@
   "s prop,obj",
   "s collect",
   "p",
-  "mr"
+  "mr",
+  "s ends"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
