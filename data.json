@@ -12602,8 +12602,7 @@
   ],
   "lines": [
    "function_transform_marker_specified",
-   "ebible_references_parse_lines",
-   "reply"
+   "ebible_references_parse_lines"
   ],
   "html_p": [
    "html_p",
@@ -15927,7 +15926,8 @@
    "reply_on_match"
   ],
   "outputs": [
-   "reply_on_match"
+   "reply_on_match",
+   "reply"
   ]
  },
  "functions": {
@@ -30329,7 +30329,7 @@
     "list",
     "r",
     "result",
-    "lines"
+    "outputs"
    ]
   },
   "undefined_not_is_assert": {
