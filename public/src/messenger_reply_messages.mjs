@@ -4,6 +4,9 @@ import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
+  
+  let fb = folder_user_docs_path("fb.json");
+  let data = await file_read_json(fb);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
     timeout: 10000,
