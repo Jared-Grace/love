@@ -4185,8 +4185,7 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "messenger_reply"
+   "messenger_reply_messages_transform"
   ],
   "name": [
    "watch",
@@ -6375,8 +6374,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "messenger_reply"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -15790,9 +15788,6 @@
    "messenger_reply_messages_transform"
   ],
   "messages2": [
-   "messenger_reply"
-  ],
-  "property_name2": [
    "messenger_reply"
   ]
  },
@@ -29629,9 +29624,6 @@
     "joined",
     "lambda",
     "messages2",
-    "object",
-    "property_name2",
-    "value",
     "answer",
     "p",
     "focus",
