@@ -2251,9 +2251,9 @@
   "ar mr messenger_reply",
   "s messenger",
   "messenger_reply",
-  "mr",
   "p",
-  "s equal"
+  "s equal",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
