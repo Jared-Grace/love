@@ -10874,8 +10874,7 @@
    "string_prefix_without",
    "string_skip",
    "list_skip_1",
-   "ebible_verses",
-   "messenger_reply"
+   "ebible_verses"
   ],
   "slice": [
    "list_slice",
@@ -15857,7 +15856,8 @@
    "messenger_reply_unreplied"
   ],
   "unreplied": [
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "messenger_reply"
   ],
   "mine_last": [
    "messenger_reply_unreplied"
@@ -29691,7 +29691,7 @@
     "filtered",
     "first",
     "messages",
-    "skipped",
+    "unreplied",
     "property_name",
     "mapped2",
     "joined",
