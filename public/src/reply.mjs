@@ -7,9 +7,9 @@ import { list_map_lower } from "./list_map_lower.mjs";
 import { list_filter_empty_not_is } from "./list_filter_empty_not_is.mjs";
 import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
-export async function reply({ input, language_codes }) {
-  let input2 = object_property_get(a, "input");
-  let language_codes2 = object_property_get(a, "language_codes");
+export async function reply(a) {
+  let input = object_property_get(a, "input");
+  let language_codes = object_property_get(a, "language_codes");
   let reference = "Isaiah 26:9";
   let b = ebible_folder_english();
   let concated = list_concat(language_codes, b);
