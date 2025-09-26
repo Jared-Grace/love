@@ -3309,7 +3309,8 @@
    "ebible_books_to_chapter_codes",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -5705,7 +5706,8 @@
   ],
   "message_fragment": [
    "catch_only_async",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply"
   ],
   "json": [
    "file_overwrite_json",
@@ -15232,10 +15234,12 @@
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
-   "catch_only_async"
+   "catch_only_async",
+   "messenger_reply"
   ],
   "on_error": [
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29033,11 +29037,15 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "catch_only_run_async",
     "import_install",
     "messenger_reply",
     "chromium",
     "firefox",
     "webkit",
+    "lambda2",
+    "message_fragment",
+    "on_error",
     "browser",
     "launch",
     "headless",
