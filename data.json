@@ -2297,7 +2297,8 @@
    "messenger_reply",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "function_alias_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3889,7 +3890,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "function_alias_add"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -16886,6 +16888,7 @@
   },
   "function_alias_add": {
    "identifiers": [
+    "log",
     "string_empty_not_is",
     "assert",
     "marker",
@@ -16899,6 +16902,7 @@
     "list",
     "alias",
     "f_name",
+    "message",
     "ne",
     "lambda",
     "a",
