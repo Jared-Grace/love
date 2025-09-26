@@ -8,6 +8,6 @@ export function reply(input) {
   input = string_split_space(input);
   input = list_filter_empty_not_is(input);
   input = list_map_lower(input);
-  r(input);
-  return input;
+  let result = r(input);
+  return result;
 }
