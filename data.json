@@ -3055,7 +3055,8 @@
    "list_remove_property",
    "object_merge_generic",
    "bind_property",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_unreplied"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -8904,7 +8905,8 @@
    "marker_leave",
    "app_replace_rule_parse",
    "list_index_of_delta_outside",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_unreplied"
   ],
   "js_stack_list_block_is": [
    "js_stack_list_block_is",
@@ -9910,7 +9912,8 @@
    "list_skip_1",
    "app_replace_rule_parse",
    "app_replace_rule_set",
-   "ebible_verses"
+   "ebible_verses",
+   "messenger_reply_unreplied"
   ],
   "list_second": [
    "js_dollar_r",
@@ -10459,7 +10462,8 @@
   "list_filter_property": [
    "js_outside_move",
    "list_filter_property",
-   "js_imports_unused"
+   "js_imports_unused",
+   "messenger_reply_unreplied"
   ],
   "fds": [
    "js_outside_move"
@@ -10507,7 +10511,8 @@
    "list_last_is",
    "list_last_or_null",
    "prompt_previous",
-   "js_expand_generic"
+   "js_expand_generic",
+   "messenger_reply_unreplied"
   ],
   "list_empty_not_is": [
    "js_return_name",
@@ -10528,7 +10533,8 @@
    "list_last",
    "list_last_is",
    "marker_if_test_replace",
-   "js_expand_generic"
+   "js_expand_generic",
+   "messenger_reply_unreplied"
   ],
   "identifier_if": [
    "js_return_name",
@@ -10694,7 +10700,8 @@
    "list_filter_property",
    "list_find_property",
    "object_property_equals",
-   "object_property_equals_lambda"
+   "object_property_equals_lambda",
+   "messenger_reply_unreplied"
   ],
   "list_find": [
    "list_find",
@@ -10737,7 +10744,8 @@
   ],
   "index_last": [
    "list_index_is",
-   "list_index_last"
+   "list_index_last",
+   "messenger_reply_unreplied"
   ],
   "indexOf": [
    "list_index_of"
@@ -15678,7 +15686,8 @@
    "messenger_reply_messages",
    "messenger_reply",
    "messenger_reply_unread_collect",
-   "reply_test"
+   "reply_test",
+   "messenger_reply_unreplied"
   ],
   "messenger_reply_messages_urls_add": [
    "messenger_reply_messages_urls_add",
@@ -15772,13 +15781,16 @@
    "messenger_reply_wait"
   ],
   "messenger_reply_messages_me": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply_unreplied"
   ],
   "messenger_reply_messages_name": [
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply_unreplied"
   ],
   "messenger_reply_unreplied": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_unreplied"
   ],
   "messenger_reply_messages_message": [
    "messenger_reply_messages",
@@ -15840,6 +15852,12 @@
   ],
   "reply_on_match": [
    "reply"
+  ],
+  "mine": [
+   "messenger_reply_unreplied"
+  ],
+  "unreplied": [
+   "messenger_reply_unreplied"
   ]
  },
  "functions": {
@@ -30280,6 +30298,25 @@
     "sequence_item",
     "index",
     "input_item"
+   ]
+  },
+  "messenger_reply_unreplied": {
+   "async": false,
+   "identifiers": [
+    "list_skip",
+    "list_index_of",
+    "list_last",
+    "list_filter_property",
+    "messenger_reply_messages_me",
+    "messenger_reply_messages_name",
+    "messenger_reply_unreplied",
+    "messages",
+    "property_name",
+    "property_value",
+    "mine",
+    "last",
+    "index_last",
+    "unreplied"
    ]
   }
  },
