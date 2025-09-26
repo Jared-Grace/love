@@ -9625,7 +9625,8 @@
    "list_map_prefix_without_any",
    "list_map_prefix_any",
    "list_filter_starts_with",
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "messenger_reply_messages_urls_add_page"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -10286,7 +10287,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_filter_property",
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "messenger_reply_messages_urls_add_page"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -12864,7 +12866,8 @@
   "list_remove_if_exists": [
    "function_rename_identifiers",
    "list_remove_multiple_if_exists",
-   "list_remove_if_exists"
+   "list_remove_if_exists",
+   "messenger_reply_messages_urls_add_page"
   ],
   "string_replace": [
    "string_replace",
@@ -15422,7 +15425,8 @@
    "messenger_reply_playwright",
    "messenger_reply_unread_click",
    "messenger_reply_messages",
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "messenger_reply_messages_urls_add_page"
   ],
   "newPage": [
    "messenger_reply",
@@ -15637,10 +15641,12 @@
    "messenger_reply_messages_urls_add"
   ],
   "messenger_reply_messages_urls_add_multiple": [
-   "messenger_reply_messages_urls_add"
+   "messenger_reply_messages_urls_add",
+   "messenger_reply_messages_urls_add_page"
   ],
   "messenger_reply_messages_urls_add_page": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_messages_urls_add_page"
   ],
   "messenger_reply_wait": [
    "messenger_reply_messages",
@@ -15650,7 +15656,8 @@
    "puppeteer_hrefs_starts_with"
   ],
   "puppeteer_hrefs_starts_with": [
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "messenger_reply_messages_urls_add_page"
   ],
   "hrefs": [
    "puppeteer_hrefs_starts_with"
@@ -29959,6 +29966,18 @@
     "page",
     "prefix",
     "hrefs",
+    "filtered"
+   ]
+  },
+  "messenger_reply_messages_urls_add_page": {
+   "async": true,
+   "identifiers": [
+    "messenger_reply_messages_urls_add_multiple",
+    "list_remove_if_exists",
+    "puppeteer_hrefs_starts_with",
+    "messenger_reply_messages_urls_add_page",
+    "page",
+    "prefix",
     "filtered"
    ]
   }
