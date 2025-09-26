@@ -3801,7 +3801,8 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry"
+   "retry",
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -13417,7 +13418,8 @@
   "str": [
    "string_letters_only",
    "whitespace_normalize",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ],
   "text2": [
    "app_reply_main"
@@ -15204,7 +15206,8 @@
    "messenger_reply"
   ],
   "string_list_to": [
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ],
   "segmenter": [
    "string_list_to"
@@ -15222,7 +15225,8 @@
    "string_list_to"
   ],
   "chars": [
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29024,10 +29028,12 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "string_list_to",
     "keyboard_typing_delay",
     "log",
     "messenger_reply_user_data_path",
     "marker",
+    "message",
     "messenger_reply",
     "r",
     "puppeteerModule",
@@ -29045,6 +29051,8 @@
     "waitForSelector",
     "timeout",
     "focus",
+    "chars",
+    "str",
     "keyboard",
     "type",
     "press"
