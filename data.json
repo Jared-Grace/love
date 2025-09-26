@@ -2271,10 +2271,11 @@
   "s last",
   "p",
   "mr",
-  "s reply"
+  "s reply",
+  "n reply"
  ],
  "marker_current": "1",
- "function_current": "list_filter_ends_with_not_any",
+ "function_current": "reply",
  "terminal": false,
  "identifiers": {
   "log": [
