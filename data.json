@@ -7565,7 +7565,8 @@
    "integer_random",
    "js_statement_return_empty_add",
    "range_from",
-   "sandbox"
+   "sandbox",
+   "messenger_reply"
   ],
   "formatted": [
    "function_format",
@@ -13673,13 +13674,16 @@
   ],
   "integer_random": [
    "integer_random",
-   "http"
+   "http",
+   "messenger_reply"
   ],
   "max": [
-   "integer_random"
+   "integer_random",
+   "messenger_reply"
   ],
   "min": [
-   "integer_random"
+   "integer_random",
+   "messenger_reply"
   ],
   "ebible_version_download": [
    "ebible_version_download",
@@ -29006,6 +29010,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "integer_random",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
@@ -29015,6 +29020,9 @@
     "ms_per_minute",
     "ms_per_character",
     "high",
+    "r",
+    "min",
+    "max",
     "puppeteerModule",
     "puppeteer",
     "default",
