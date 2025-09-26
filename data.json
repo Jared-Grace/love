@@ -13663,8 +13663,7 @@
   "sleep": [
    "http",
    "sleep",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "setTimeout": [
    "sleep"
@@ -28989,7 +28988,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "sleep",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
