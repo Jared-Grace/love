@@ -3907,8 +3907,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "ebible_chapter_text"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -27171,7 +27170,6 @@
     "item",
     "selector2",
     "list",
-    "message",
     "lambda2",
     "t",
     "n",
