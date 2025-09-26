@@ -4,7 +4,7 @@ import { list_map_lower } from "./list_map_lower.mjs";
 import { list_filter_empty_not_is } from "./list_filter_empty_not_is.mjs";
 import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
-export async function reply(input) {
+export async function reply({ input, language_codes }) {
   let reference = "Isaiah 26:9";
   let list = await ebible_references_parse_lines(["engbsb"], [reference]);
   return list;
