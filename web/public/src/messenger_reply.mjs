@@ -7,7 +7,6 @@ import { marker } from "./marker.mjs";
 const message = "Greetings!";
 export async function messenger_reply() {
   marker("1");
-  let r = keyboard_typing_delay();
   log(r);
   return;
   const puppeteerModule = await import("puppeteer");
@@ -25,6 +24,7 @@ export async function messenger_reply() {
   await p.focus();
   let list = string_list_to(str);
   async function lambda(item) {
+    let delay_ms = keyboard_typing_delay();
     await page.keyboard.type(message);
   }
   await each_async(list2, lambda);
