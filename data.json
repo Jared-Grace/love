@@ -4939,7 +4939,8 @@
    "local_function_path",
    "bible_verses_encouragement_generate",
    "js_dollar_ie",
-   "js_dollar_ib"
+   "js_dollar_ib",
+   "messenger_reply"
   ],
   "colored": [
    "chalk_color",
@@ -15336,6 +15337,9 @@
   ],
   "keyboard_type_delay": [
    "messenger_reply_puppeteer",
+   "messenger_reply"
+  ],
+  "bind": [
    "messenger_reply"
   ]
  },
@@ -29158,8 +29162,10 @@
     "input",
     "waitForSelector",
     "focus",
+    "fn",
     "keyboard",
     "type",
+    "bind",
     "close"
    ]
   },
