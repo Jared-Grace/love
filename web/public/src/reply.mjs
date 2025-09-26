@@ -19,6 +19,7 @@ export async function reply(a) {
   function lambda2(c) {
     let item = list_find_property(languages, "language_code", c);
     let bible_folder = object_property_get(item, "bible_folder");
+    return bible_folder;
   }
   let mapped = list_map(concated, lambda2);
   return list;
