@@ -27,13 +27,13 @@ export async function messenger_reply_puppeteer() {
     for (const c of children2) {
       const elements = await c.$$(`h5 > [data-virtualized="false"]`);
       let e = list_empty_is(elements);
-      if (false) {
+      if (e) {
+        function lambda(node) {
+          let v2 = node.textContent;
+          return v2;
+        }
+        console.log(await c.evaluate(lambda));
       }
-      function lambda(node) {
-        let v2 = node.textContent;
-        return v2;
-      }
-      console.log(await c.evaluate(lambda));
     }
   }
   return;
