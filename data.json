@@ -15457,6 +15457,9 @@
   ],
   "$$eval": [
    "messenger_reply_puppeteer"
+  ],
+  "c2": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29446,6 +29449,7 @@
     "$$",
     "c",
     "children2",
+    "c2",
     "lambda2",
     "node",
     "v3",
