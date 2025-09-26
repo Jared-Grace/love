@@ -5210,7 +5210,8 @@
    "string_trim_right",
    "function_list_generate",
    "roman_to_integer",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "list_filter_ends_with_not_any"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -5372,7 +5373,8 @@
    "object_assign",
    "each_pair_async",
    "app_reply_main",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "list_filter_ends_with_not_any"
   ],
   "without": [
    "string_suffix_without",
@@ -30044,6 +30046,7 @@
   "list_filter_ends_with_not_any": {
    "async": false,
    "identifiers": [
+    "not",
     "marker",
     "list_filter",
     "list_any",
@@ -30055,6 +30058,7 @@
     "item",
     "lambda3",
     "suffix",
+    "a",
     "ew",
     "any",
     "filtered"
