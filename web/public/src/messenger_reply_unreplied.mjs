@@ -8,8 +8,12 @@ export function messenger_reply_unreplied(messages) {
   let property_name = messenger_reply_messages_name();
   let property_value = messenger_reply_messages_me();
   let mine = list_filter_property(messages, property_name, property_value);
-  let last = list_last(mine);
-  let index_last = list_index_of(messages, last);
+  let mine_last = list_last(mine);
+  let index_last = list_index_of(messages, mine_last);
   let unreplied = list_skip(messages, index_last + 1);
-  return unreplied;
+  let v = {
+    mine_last,
+    unreplied,
+  };
+  return v;
 }
