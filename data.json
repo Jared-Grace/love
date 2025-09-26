@@ -4207,8 +4207,7 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "list_concat"
+   "messenger_reply_messages_transform"
   ],
   "name": [
    "watch",
@@ -10162,8 +10161,7 @@
    "app_new_step_2"
   ],
   "b2": [
-   "js_identifiers_to_names",
-   "list_concat"
+   "js_identifiers_to_names"
   ],
   "message2": [
    "js_identifiers_to_names",
@@ -20906,11 +20904,9 @@
     "list_concat",
     "a",
     "b",
-    "concated",
-    "concat",
     "l",
-    "value",
-    "b2"
+    "concated",
+    "concat"
    ],
    "async": false
   },
