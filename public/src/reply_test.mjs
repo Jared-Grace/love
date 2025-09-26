@@ -13,6 +13,7 @@ export async function reply_test() {
   let input = await reply({
     input: first,
     language_codes: ["ur"],
+    outputs: [],
   });
   return input;
 }
