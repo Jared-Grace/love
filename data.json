@@ -5275,7 +5275,8 @@
    "string_ends_with_space",
    "string_starts_with_dot",
    "string_list_to",
-   "messenger_reply_wait"
+   "messenger_reply_wait",
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -11912,8 +11913,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "messenger_reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -15222,8 +15222,7 @@
    "app_reply_main"
   ],
   "item3": [
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "verse_random_reset": [
    "app_reply_main"
@@ -29514,9 +29513,8 @@
     "properties",
     "skips",
     "lambda4",
-    "item3",
+    "s",
     "mapped",
-    "list2",
     "lambda",
     "item",
     "lambda3",
