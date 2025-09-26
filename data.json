@@ -2260,7 +2260,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply_login"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3747,7 +3748,8 @@
    "messenger_reply_user_data_path",
    "string_list_to",
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4021,7 +4023,8 @@
    "firebase_storage_exists",
    "file_parent_exists_ensure",
    "firebase_path_fix",
-   "folder_read_async"
+   "folder_read_async",
+   "messenger_reply_login"
   ],
   "value": [
    "watch",
@@ -4811,7 +4814,8 @@
   ],
   "command_line_read": [
    "function_run_prompt",
-   "command_line_read"
+   "command_line_read",
+   "messenger_reply_login"
   ],
   "function_run_git": [
    "function_run_git",
@@ -4899,7 +4903,8 @@
    "function_run_prompt",
    "chalk_color",
    "command_line_read",
-   "log_error"
+   "log_error",
+   "messenger_reply_login"
   ],
   "color": [
    "chalk_green",
@@ -5875,7 +5880,8 @@
   ],
   "close": [
    "command_line_read",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "command_line_schtasks": [
    "command_line_schtasks",
@@ -10706,7 +10712,8 @@
    "list_wait"
   ],
   "console": [
-   "log_keep"
+   "log_keep",
+   "messenger_reply_login"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -12204,7 +12211,8 @@
    "app_replace_font_size_refresh",
    "app_replace_main",
    "app_replace_font_size_adjust",
-   "app_replace_font_size"
+   "app_replace_font_size",
+   "messenger_reply_login"
   ],
   "html_clear": [
    "app_refresh",
@@ -15244,27 +15252,33 @@
   ],
   "browser": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "launch": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "headless": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "page": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "newPage": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "goto": [
    "messenger_reply",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_login"
   ],
   "catch_only_run_async": [
    "catch_only_run_async",
@@ -15311,6 +15325,12 @@
    "messenger_reply_puppeteer"
   ],
   "messenger_reply_login": [
+   "messenger_reply_login"
+  ],
+  "newContext": [
+   "messenger_reply_login"
+  ],
+  "storageState": [
    "messenger_reply_login"
   ]
  },
@@ -29285,12 +29305,28 @@
   "messenger_reply_login": {
    "async": true,
    "identifiers": [
+    "command_line_read",
+    "log",
     "import_install",
     "marker",
     "messenger_reply_login",
     "chromium",
     "firefox",
-    "webkit"
+    "webkit",
+    "browser",
+    "launch",
+    "headless",
+    "context",
+    "newContext",
+    "page",
+    "newPage",
+    "goto",
+    "console",
+    "v",
+    "prompt",
+    "storageState",
+    "path",
+    "close"
    ]
   }
  },
