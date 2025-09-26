@@ -3253,7 +3253,8 @@
    "retry_on_error",
    "messenger_reply_messages",
    "messenger_reply_unread_collect",
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3531,7 +3532,8 @@
    "string_list_to",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4716,7 +4718,8 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "messenger_reply"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -7073,7 +7076,8 @@
    "list_filter_starts_with",
    "list_filter_starts_with_any",
    "list_map_string_empty_not_is",
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "messenger_reply"
   ],
   "function_name_to_path_unalias": [
    "function_copy",
@@ -10293,7 +10297,8 @@
    "list_map_string_empty_not_is",
    "list_map_filter_string_empty_not_is",
    "list_filter_property",
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "messenger_reply"
   ],
   "marker_v": [
    "js_marker_named_ast"
@@ -29475,6 +29480,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_filter",
     "list_first",
     "object_properties",
     "messenger_reply_messages_urls_transform",
@@ -29493,6 +29499,10 @@
     "mu",
     "properties",
     "skips",
+    "filtered",
+    "list",
+    "lambda",
+    "item",
     "first",
     "messages",
     "answer",
