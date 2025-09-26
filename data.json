@@ -15698,6 +15698,9 @@
   ],
   "url_new": [
    "messenger_reply"
+  ],
+  "protocolTimeout": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29518,6 +29521,7 @@
     "launch",
     "headless",
     "userDataDir",
+    "protocolTimeout",
     "page",
     "newPage",
     "v",
