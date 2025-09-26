@@ -4902,8 +4902,7 @@
    "function_run_prompt",
    "chalk_color",
    "command_line_read",
-   "log_error",
-   "messenger_reply_login"
+   "log_error"
   ],
   "color": [
    "chalk_green",
@@ -29318,7 +29317,6 @@
     "newPage",
     "goto",
     "v",
-    "prompt",
     "storageState",
     "path",
     "close"
