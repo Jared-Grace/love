@@ -1,3 +1,4 @@
+import { messenger_reply_url } from "./messenger_reply_url.mjs";
 import { retry_on_error } from "./retry_on_error.mjs";
 import { import_install } from "./import_install.mjs";
 export async function messenger_reply() {
@@ -11,6 +12,7 @@ export async function messenger_reply() {
   const command = "npx playwright install";
   await retry_on_error(command, lambda2, command);
   const page = await browser.newPage();
-  await page.goto("https://facebook.com");
+  let v = messenger_reply_url();
+  await page.goto(v);
   await browser.close();
 }
