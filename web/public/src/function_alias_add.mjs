@@ -9,7 +9,7 @@ export async function function_alias_add(first, second) {
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
-  let v = undefined_not_is_assert(value);
+  let v = undefined_not_is_assert(f_name);
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
