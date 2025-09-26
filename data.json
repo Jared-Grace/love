@@ -4654,8 +4654,7 @@
    "messenger_reply",
    "reply",
    "ebible_languages_to_bible_folders",
-   "reply_sequence",
-   "reply_on_match"
+   "reply_sequence"
   ],
   "data_save": [
    "data_file_update",
@@ -4978,8 +4977,7 @@
    "js_statement_return_empty_add",
    "ebible_index",
    "app_new_step_2",
-   "js_statement_return_add",
-   "reply_on_match"
+   "js_statement_return_add"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -15924,7 +15922,6 @@
    "reply_on_match"
   ],
   "outputs": [
-   "reply_on_match",
    "reply_test"
   ],
   "token": [
@@ -30435,16 +30432,13 @@
   "reply_on_match": {
    "async": false,
    "identifiers": [
-    "list_add",
-    "object_property_get",
     "reply_on_match",
     "wrapped_fn",
     "on_match",
     "fn",
     "reply_on_match_inner",
     "a",
-    "matches",
-    "outputs"
+    "matches"
    ]
   }
  },
