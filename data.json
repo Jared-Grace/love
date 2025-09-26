@@ -3561,8 +3561,7 @@
    "js_statement_return_add",
    "keyboard_type_delay",
    "list_filter_starts_with",
-   "list_filter_ends_with_not_any",
-   "reply_test"
+   "list_filter_ends_with_not_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -15771,7 +15770,8 @@
    "messenger_reply"
   ],
   "reply": [
-   "reply"
+   "reply",
+   "reply_test"
   ],
   "undefined_not_is_assert": [
    "undefined_not_is_assert",
@@ -30210,6 +30210,7 @@
   "reply_test": {
    "async": true,
    "identifiers": [
+    "reply",
     "list_first",
     "object_properties",
     "messenger_reply_messages_transform",
@@ -30218,8 +30219,7 @@
     "lambda",
     "m",
     "properties",
-    "first",
-    "list"
+    "first"
    ]
   }
  },
