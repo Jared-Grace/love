@@ -35,7 +35,7 @@ export async function messenger_reply_puppeteer() {
           let v2 = node.textContent;
           return v2;
         }
-        log(message);
+        log(children3);
         console.log(await c.evaluate(lambda));
         ("");
       }
