@@ -21,7 +21,9 @@ export async function messenger_reply() {
     let properties = object_properties(messages_urls);
     let first = list_first(list);
     let messages = await messenger_reply_messages(page, first);
-    log(messages);
+    log({
+      messages,
+    });
   }
   let page2 = await messenger_reply_puppeteer(lambda2);
   let answer = await command_line_read_empty();
