@@ -1,3 +1,4 @@
+import { puppeteer_hrefs } from "./puppeteer_hrefs.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { messenger_reply_messages_urls_add_multiple } from "./messenger_reply_messages_urls_add_multiple.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
@@ -20,18 +21,7 @@ export async function messenger_reply() {
   let v = messenger_reply_url();
   let messages = await messenger_reply_messages(page, v);
   await messenger_reply_unread_click(page);
-  function lambda3(links) {
-    function lambda(link) {
-      let v2 = link.href;
-      return v2;
-    }
-    function lambda2(href) {
-      return href;
-    }
-    let v3 = links.map(lambda).filter(lambda2);
-    return v3;
-  }
-  const hrefs = await page.$$eval("a", lambda3);
+  const hrefs = await puppeteer_hrefs(page);
   let prefix = "https://www.facebook.com/messages/";
   let filtered = list_filter_starts_with(hrefs, prefix);
   list_remove_if_exists(filtered, "https://www.facebook.com/messages/new/");
