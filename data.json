@@ -187,7 +187,8 @@
   "fe": "function_exists",
   "cl": "command_line",
   "mr": "messenger_reply",
-  "lfl": "list_filter"
+  "lfl": "list_filter",
+  "ll": "list_last"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2269,7 +2270,8 @@
   "mr",
   "s last",
   "export async function messenger_reply_messages(page, url) {",
-  "ac ll lfl"
+  "ac ll lfl",
+  "a ll list_last"
  ],
  "marker_current": "1",
  "function_current": "list_filter_ends_with_not_any",
