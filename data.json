@@ -3206,7 +3206,8 @@
    "ebible_references_parse_lines",
    "roman_to_integer",
    "string_list_to",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "messenger_reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -15237,8 +15238,7 @@
    "messenger_reply"
   ],
   "on_error": [
-   "catch_only_run_async",
-   "messenger_reply"
+   "catch_only_run_async"
   ]
  },
  "functions": {
@@ -29046,7 +29046,7 @@
     "lambda2",
     "launch",
     "headless",
-    "on_error",
+    "lambda",
     "page",
     "newPage",
     "goto",
