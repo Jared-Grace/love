@@ -2263,8 +2263,8 @@
   "is sleep",
   "s list_add",
   "s prop,obj",
-  "p",
   "s collect",
+  "p",
   "mr"
  ],
  "marker_current": "1",
