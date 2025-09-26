@@ -16,6 +16,7 @@ export async function messenger_reply() {
   });
   await p.focus();
   let characters_per_minute = 190;
+  let seconds_per_minute = 60;
   await page.keyboard.type("Greetings!");
   await page.keyboard.press("Enter");
 }
