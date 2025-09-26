@@ -1,3 +1,4 @@
+import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add } from "./messenger_reply_messages_urls_add.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
@@ -6,10 +7,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   await messenger_reply_messages_urls_add(url);
-  const s = 'p[dir="auto"]';
-  let p = await page.waitForSelector(s, {
-    timeout: 10000,
-  });
+  await messenger_reply_wait(page);
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
