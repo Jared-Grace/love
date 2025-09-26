@@ -4499,7 +4499,8 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages_transform"
   ],
   "file_path": [
    "data_file_update",
@@ -15072,7 +15073,8 @@
    "folder_user_docs_path",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages_transform"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -15711,11 +15713,13 @@
   ],
   "messages_urls": [
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_messages_transform"
   ],
   "transform_inner": [
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_messages_transform"
   ],
   "messenger_reply_messages_urls_transform": [
    "messenger_reply_messages_urls_add_multiple",
@@ -15763,6 +15767,21 @@
   "list_filter_empty_not_is": [
    "list_map_filter_string_empty_not_is",
    "reply"
+  ],
+  "messenger_reply_messages_urls_get": [
+   "messenger_reply_messages_transform"
+  ],
+  "file_json_transform": [
+   "messenger_reply_messages_transform"
+  ],
+  "messenger_reply_messages_transform": [
+   "messenger_reply_messages_transform"
+  ],
+  "fb_path": [
+   "messenger_reply_messages_transform"
+  ],
+  "transform": [
+   "messenger_reply_messages_transform"
   ]
  },
  "functions": {
@@ -30146,6 +30165,20 @@
     "value",
     "lambda2",
     "v2"
+   ]
+  },
+  "messenger_reply_messages_transform": {
+   "async": true,
+   "identifiers": [
+    "messenger_reply_messages_urls_get",
+    "file_json_transform",
+    "folder_user_docs_path",
+    "messenger_reply_messages_transform",
+    "transform_inner",
+    "fb_path",
+    "transform",
+    "data",
+    "messages_urls"
    ]
   }
  },
