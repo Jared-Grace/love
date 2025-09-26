@@ -10626,7 +10626,8 @@
   "matches": [
    "js_visit_match",
    "puppeteer_matches",
-   "messenger_reply_unread_click"
+   "messenger_reply_unread_click",
+   "reply_sequence"
   ],
   "v_match": [
    "js_visit_match",
@@ -15834,7 +15835,7 @@
   "sequence_item": [
    "reply_sequence"
   ],
-  "input_tem": [
+  "input_item": [
    "reply_sequence"
   ]
  },
@@ -30270,10 +30271,11 @@
     "v",
     "reply_sequence_matches",
     "input",
+    "matches",
     "lambda",
     "sequence_item",
     "index",
-    "input_tem"
+    "input_item"
    ]
   }
  },
