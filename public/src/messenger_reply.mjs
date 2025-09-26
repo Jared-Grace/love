@@ -10,9 +10,11 @@ export async function messenger_reply() {
       headless: false,
     });
   }
-  let error_text = "npx playwright install";
+  const command = "npx playwright install";
+  log(message);
+  let error_text = command;
   async function lambda() {
-    let stdout = await command_line_log(error_text);
+    let stdout = await command_line_log(command);
     log(stdout);
     await lambda2();
   }
