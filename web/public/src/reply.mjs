@@ -4,6 +4,7 @@ import { list_filter_empty_not_is } from "./list_filter_empty_not_is.mjs";
 import { string_split_space } from "./string_split_space.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export function reply(input) {
+  let reference = "Isaiah 26:9";
   let fn = reply_sequence(["good", "evening"]);
   let r = reply_on_match(fn);
   input = whitespace_normalize(input);
