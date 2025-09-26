@@ -34,9 +34,8 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_not_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    await messenger_reply_messages_transform(
-      async function lambda(messages2) {},
-    );
+    async function lambda(messages2) {}
+    await messenger_reply_messages_transform(lambda);
     let skipped = messenger_reply_unreplied(messages);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(skipped, property_name);
