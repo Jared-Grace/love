@@ -15644,7 +15644,8 @@
   "messenger_reply_wait": [
    "messenger_reply_messages",
    "messenger_reply_wait",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply"
   ],
   "puppeteer_hrefs": [
    "puppeteer_hrefs_starts_with"
@@ -29507,6 +29508,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_wait",
     "list_filter_ends_with_not_any",
     "list_map",
     "list_first",
