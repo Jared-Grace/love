@@ -10,6 +10,10 @@ export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   let fb_path = folder_user_docs_path("fb.json");
   await file_json_transform(fb_path, transform);
+  function transform(data) {
+    let message_urls = object_property_initialize(data, "messages_urls", {});
+    object_property_set(message_urls, url, 1);
+  }
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
     timeout: 10000,
@@ -17,10 +21,6 @@ export async function messenger_reply_messages(page, url) {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
-  function transform(data) {
-    let message_urls = object_property_initialize(data, "message_urls", {});
-    object_property_set(message_urls, url, 1);
-  }
   async function lambda6(la) {
     const children = await conversation.$$('[data-virtualized="false"]');
     for (const c of children) {
