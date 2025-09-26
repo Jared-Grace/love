@@ -3890,8 +3890,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "function_alias_add"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -16902,7 +16901,6 @@
     "list",
     "alias",
     "f_name",
-    "message",
     "ne",
     "lambda",
     "a",
