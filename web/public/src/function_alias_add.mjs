@@ -1,3 +1,4 @@
+import { undefined_not_is_assert } from "./undefined_not_is_assert.mjs";
 import { marker } from "./marker.mjs";
 import { list_sort_string_size } from "./list_sort_string_size.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
@@ -8,6 +9,7 @@ export async function function_alias_add(first, second) {
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
+  let v = undefined_not_is_assert(value);
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
