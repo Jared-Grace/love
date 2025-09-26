@@ -15667,10 +15667,12 @@
    "messenger_reply_messages_urls_add_multiple"
   ],
   "transform_inner": [
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply"
   ],
   "messenger_reply_messages_urls_transform": [
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29467,6 +29469,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages_urls_transform",
     "messenger_reply_messages",
     "messenger_reply_url",
     "messenger_reply_puppeteer",
@@ -29479,6 +29482,7 @@
     "messenger_reply",
     "lambda2",
     "page",
+    "transform_inner",
     "v",
     "messages",
     "page2",
