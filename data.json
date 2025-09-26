@@ -3524,8 +3524,7 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with",
-   "messenger_reply"
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -4713,8 +4712,7 @@
    "list_map_split_space",
    "html_display_none_or_block",
    "sandbox_4_a",
-   "keyboard_type_delay",
-   "messenger_reply"
+   "keyboard_type_delay"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -29495,8 +29493,6 @@
     "$$eval",
     "prefix",
     "filtered",
-    "list",
-    "item",
     "urls",
     "console",
     "p",
