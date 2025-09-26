@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { messenger_reply_user_data_path } from "./messenger_reply_user_data_path.mjs";
 import { marker } from "./marker.mjs";
 export async function messenger_reply() {
@@ -20,6 +21,7 @@ export async function messenger_reply() {
   let ms_per_second = 1000;
   let ms_per_minute = seconds_per_minute * ms_per_second;
   let ms_per_character = ms_per_minute / characters_per_minute;
+  log(message);
   await page.keyboard.type("Greetings!");
   await page.keyboard.press("Enter");
 }
