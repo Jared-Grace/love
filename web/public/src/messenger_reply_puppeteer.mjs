@@ -24,7 +24,7 @@ export async function messenger_reply_puppeteer() {
       return v2;
     }
     const txt = await el.evaluate(lambda);
-    if (txt.includes("Unread")) {
+    if (txt === "Unread") {
       matches.push(txt);
       console.log(txt);
     }
