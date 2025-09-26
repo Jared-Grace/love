@@ -4461,8 +4461,7 @@
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate",
-   "messenger_reply"
+   "bible_verses_encouragement_generate"
   ],
   "object_property_get": [
    "chalk_color",
@@ -4544,7 +4543,8 @@
    "object_merge_generic",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
-   "bind_property"
+   "bind_property",
+   "messenger_reply"
   ],
   "data_save": [
    "data_file_update",
@@ -15364,6 +15364,9 @@
   "bind_property": [
    "bind_property",
    "messenger_reply_puppeteer"
+  ],
+  "pin": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29161,6 +29164,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_read_json",
     "bind",
     "folder_user_docs_path",
@@ -29172,7 +29176,7 @@
     "messenger_reply",
     "p",
     "data",
-    "file_path",
+    "pin",
     "chromium",
     "firefox",
     "webkit",
