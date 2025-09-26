@@ -3856,7 +3856,6 @@
    "retry",
    "catch_only_run_async",
    "messenger_reply_puppeteer",
-   "messenger_reply",
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages"
@@ -29439,7 +29438,6 @@
     "newPage",
     "v",
     "messages",
-    "message",
     "p",
     "focus",
     "fn",
