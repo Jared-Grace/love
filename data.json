@@ -2589,7 +2589,8 @@
    "bible_verses_encouragement",
    "ebible_version_books",
    "catch_only_run_async",
-   "bind"
+   "bind",
+   "bind_property"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15348,6 +15349,9 @@
   "bind": [
    "messenger_reply",
    "bind"
+  ],
+  "bind_property": [
+   "bind_property"
   ]
  },
  "functions": {
@@ -29354,6 +29358,13 @@
     "left",
     "right",
     "fn"
+   ]
+  },
+  "bind_property": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "bind_property"
    ]
   }
  },
