@@ -36,8 +36,8 @@ export async function messenger_reply() {
     let skipped = messenger_reply_unreplied(messages);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(skipped, property_name);
-    let joined = list_join_space(args);
-    log(skipped);
+    let joined = list_join_space(mapped2);
+    log(joined);
     let answer = await command_line_read_empty();
   }
   await messenger_reply_puppeteer(lambda2);
