@@ -10050,7 +10050,8 @@
    "app_replace_rule_set",
    "sleep",
    "app_reply_main",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply_puppeteer"
   ],
   "defineds": [
    "js_identifier_defineds",
@@ -10254,7 +10255,8 @@
   ],
   "v6": [
    "js_marker_name_get",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_puppeteer"
   ],
   "a_first": [
    "js_marker_name_get"
@@ -10643,7 +10645,8 @@
    "list_map",
    "html_parse_list_text_to",
    "folder_read_async",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply_puppeteer"
   ],
   "list_map_index": [
    "list_map_index",
@@ -11865,7 +11868,8 @@
   "src": [
    "folder_src",
    "html_update_dev",
-   "html_update_public"
+   "html_update_public",
+   "messenger_reply_puppeteer"
   ],
   "app_code": [
    "app_code"
@@ -29464,8 +29468,12 @@
     "v4",
     "getComputedStyle",
     "borderRadius",
+    "lambda5",
+    "v6",
+    "src",
     "v5",
     "filter",
+    "map",
     "$$eval",
     "lambda",
     "v2",
