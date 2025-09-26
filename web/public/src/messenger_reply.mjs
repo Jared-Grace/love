@@ -35,7 +35,7 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_not_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    let unreplied = messenger_reply_unreplied(messages);
+    let { mine_last, unreplied } = messenger_reply_unreplied(messages);
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(unreplied, property_name);
     let joined = list_join_space(mapped2);
