@@ -3532,8 +3532,7 @@
    "string_list_to",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with",
-   "messenger_reply"
+   "list_filter_starts_with"
   ],
   "v": [
    "data_identifiers_file",
@@ -5118,7 +5117,8 @@
    "string_ends_with",
    "function_rename_suffix_add",
    "functions_names",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "unaliased": [
    "function_watch_suffix_change",
@@ -5213,7 +5213,8 @@
    "string_ends_with",
    "string_prefix_without",
    "string_padded_is",
-   "string_ends_with_space"
+   "string_ends_with_space",
+   "messenger_reply"
   ],
   "string_slice": [
    "string_suffix_without",
@@ -5273,7 +5274,8 @@
    "string_ends_with_space",
    "string_starts_with_dot",
    "string_list_to",
-   "messenger_reply_wait"
+   "messenger_reply_wait",
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -6603,7 +6605,8 @@
   "ew": [
    "file_open",
    "string_ends_with",
-   "string_padded_is"
+   "string_padded_is",
+   "messenger_reply"
   ],
   "filePath": [
    "file_open_editor"
@@ -29480,6 +29483,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "string_ends_with",
     "list_filter",
     "list_first",
     "object_properties",
@@ -29501,8 +29505,10 @@
     "skips",
     "lambda",
     "item",
+    "ew",
+    "s",
+    "suffix",
     "filtered",
-    "list",
     "first",
     "messages",
     "answer",
