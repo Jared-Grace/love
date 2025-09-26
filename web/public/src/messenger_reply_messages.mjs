@@ -1,19 +1,11 @@
-import { file_json_transform } from "./file_json_transform.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { object_property_initialize } from "./object_property_initialize.mjs";
-import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
+import { messenger_reply_messages_urls_add } from "./messenger_reply_messages_urls_add.mjs";
 import { string_empty_is } from "./string_empty_is.mjs";
 import { string_trim } from "./string_trim.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
-  let fb_path = folder_user_docs_path("fb.json");
-  await file_json_transform(fb_path, transform);
-  function transform(data) {
-    let messages_urls = object_property_initialize(data, "messages_urls", {});
-    object_property_set(messages_urls, url, 1);
-  }
+  await messenger_reply_messages_urls_add(url);
   const s = 'p[dir="auto"]';
   let p = await page.waitForSelector(s, {
     timeout: 10000,
