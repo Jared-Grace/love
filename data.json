@@ -3899,7 +3899,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "reply_sequence"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -5115,7 +5116,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "http",
-   "firebase_storage_exists"
+   "firebase_storage_exists",
+   "reply_sequence"
   ],
   "json_format_to": [
    "function_run_prompt",
@@ -30249,12 +30251,14 @@
   "reply_sequence": {
    "async": false,
    "identifiers": [
+    "error",
     "reply_sequence",
     "items",
     "v",
     "reply_sequence_matches",
     "input",
-    "index"
+    "index",
+    "message"
    ]
   }
  },
