@@ -2265,8 +2265,9 @@
   "s prop,obj",
   "s collect",
   "p",
+  "s ends",
   "mr",
-  "s ends"
+  "c list_filter_ends_with_any list_filter_ends_with_not_any"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
