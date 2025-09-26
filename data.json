@@ -3797,8 +3797,7 @@
    "undefined_not_is_assert_lambda",
    "js_node_atomize",
    "function_transform_marker_specified",
-   "retry",
-   "messenger_reply"
+   "retry"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -29009,6 +29008,11 @@
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
+    "characters_per_minute",
+    "seconds_per_minute",
+    "ms_per_second",
+    "ms_per_minute",
+    "ms_per_character",
     "puppeteerModule",
     "puppeteer",
     "default",
@@ -29024,12 +29028,6 @@
     "waitForSelector",
     "timeout",
     "focus",
-    "characters_per_minute",
-    "seconds_per_minute",
-    "ms_per_second",
-    "ms_per_minute",
-    "ms_per_character",
-    "message",
     "keyboard",
     "type",
     "press"
