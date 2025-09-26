@@ -15250,7 +15250,7 @@
   "high": [
    "keyboard_typing_delay"
   ],
-  "delay": [
+  "delay_ms": [
    "keyboard_typing_delay"
   ]
  },
@@ -29184,7 +29184,7 @@
     "ms_per_minute",
     "ms_per_character",
     "high",
-    "delay"
+    "delay_ms"
    ]
   }
  },
