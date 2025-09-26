@@ -15289,7 +15289,8 @@
   ],
   "messenger_reply_url": [
    "messenger_reply_puppeteer",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_login"
   ],
   "messenger_reply_puppeteer": [
    "messenger_reply_puppeteer"
@@ -29312,6 +29313,7 @@
   "messenger_reply_login": {
    "async": true,
    "identifiers": [
+    "messenger_reply_url",
     "command_line_read_empty",
     "import_install",
     "messenger_reply_login",
@@ -29325,8 +29327,8 @@
     "newContext",
     "page",
     "newPage",
-    "goto",
     "v",
+    "goto",
     "storageState",
     "path",
     "close"
