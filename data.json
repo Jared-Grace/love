@@ -2995,7 +2995,8 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property"
+   "bind_property",
+   "messenger_reply_puppeteer"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -4949,7 +4950,8 @@
    "js_dollar_ib",
    "messenger_reply",
    "bind",
-   "bind_property"
+   "bind_property",
+   "messenger_reply_puppeteer"
   ],
   "colored": [
    "chalk_color",
@@ -6248,7 +6250,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "messenger_reply_puppeteer"
   ],
   "each_pair": [
    "each_pair",
@@ -15357,7 +15360,8 @@
    "bind_property"
   ],
   "bind_property": [
-   "bind_property"
+   "bind_property",
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29307,6 +29311,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "bind_property",
     "keyboard_type_delay",
     "messenger_reply_url",
     "messenger_reply_user_data_path",
@@ -29327,6 +29332,9 @@
     "waitForSelector",
     "timeout",
     "focus",
+    "fn",
+    "object",
+    "property_name",
     "keyboard",
     "type",
     "press"
