@@ -5076,7 +5076,8 @@
    "js_dollar_if_call",
    "keyboard_type_delay",
    "reply_sequence",
-   "reply"
+   "reply",
+   "reply_on_match"
   ],
   "colored": [
    "chalk_color",
@@ -15909,6 +15910,9 @@
   "ebible_languages_to_bible_folders": [
    "reply",
    "ebible_languages_to_bible_folders"
+  ],
+  "on_match": [
+   "reply_on_match"
   ]
  },
  "functions": {
@@ -30413,7 +30417,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "reply_on_match"
+    "reply_on_match",
+    "fn",
+    "on_match"
    ]
   }
  },
