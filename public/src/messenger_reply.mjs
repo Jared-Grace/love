@@ -1,3 +1,4 @@
+import { http_sleep } from "./http_sleep.mjs";
 import { each_async } from "./each_async.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
@@ -25,7 +26,8 @@ export async function messenger_reply() {
   let urls = await messenger_reply_messages_urls_add_page(page);
   log(urls);
   async function lambda(url) {
-    const page = await browser.newPage();
+    await page.goto(url);
+    await http_sleep();
     await messenger_reply_wait(page);
   }
   await each_async(urls, lambda);
