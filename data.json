@@ -2234,10 +2234,11 @@
   "s string,list",
   "n string_list_to",
   "ps",
-  "messenger_reply",
   "p",
   "keyboard_typing_delay",
-  "mr"
+  "mr",
+  "messenger_reply",
+  "s finally"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
