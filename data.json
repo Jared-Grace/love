@@ -13860,8 +13860,7 @@
   "sleep": [
    "sleep",
    "retry",
-   "keyboard_type_delay",
-   "messenger_reply"
+   "keyboard_type_delay"
   ],
   "setTimeout": [
    "sleep"
@@ -13970,7 +13969,8 @@
    "html_parse_find_list_href_text",
    "html_parse_find_list_to",
    "html_parse_find_remove",
-   "ebible_version_books_testament_apocrypha"
+   "ebible_version_books_testament_apocrypha",
+   "messenger_reply"
   ],
   "find": [
    "html_parse_find"
@@ -15482,7 +15482,8 @@
   "waitForSelector": [
    "messenger_reply_puppeteer",
    "messenger_reply_playwright",
-   "messenger_reply_wait"
+   "messenger_reply_wait",
+   "messenger_reply"
   ],
   "timeout": [
    "messenger_reply_puppeteer",
@@ -15678,9 +15679,13 @@
    "puppeteer_hrefs_starts_with"
   ],
   "http_sleep": [
-   "http"
+   "http",
+   "messenger_reply"
   ],
   "link": [
+   "messenger_reply"
+  ],
+  "state": [
    "messenger_reply"
   ]
  },
@@ -29478,6 +29483,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "http_sleep",
     "string_prefix_without",
     "each_async",
     "command_line_read_empty",
@@ -29491,7 +29497,6 @@
     "keyboard_type_delay",
     "messenger_reply_url",
     "messenger_reply_user_data_path",
-    "sleep",
     "messenger_reply",
     "puppeteer",
     "browser",
@@ -29507,9 +29512,12 @@
     "url",
     "prefix",
     "without",
+    "selector",
     "link",
     "$",
     "click",
+    "waitForSelector",
+    "state",
     "answer",
     "p",
     "focus",
