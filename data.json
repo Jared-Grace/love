@@ -3908,7 +3908,8 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -4642,7 +4643,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
    "bind_property",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply"
   ],
   "data_save": [
    "data_file_update",
@@ -29667,6 +29669,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "list_last",
     "string_split_newline",
     "object_property_set",
@@ -29705,6 +29708,7 @@
     "messages",
     "mine_last",
     "unreplied",
+    "message",
     "mine_last_lines",
     "mine_last_lines_last",
     "property_name",
