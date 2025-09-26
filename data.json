@@ -2248,8 +2248,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "app_reply_main",
-   "messenger_reply"
+   "app_reply_main"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -15202,6 +15201,9 @@
    "messenger_reply"
   ],
   "ms_per_character": [
+   "messenger_reply"
+  ],
+  "high": [
    "messenger_reply"
   ]
  },
@@ -29004,7 +29006,6 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "log",
     "messenger_reply_user_data_path",
     "marker",
     "messenger_reply",
@@ -29013,6 +29014,7 @@
     "ms_per_second",
     "ms_per_minute",
     "ms_per_character",
+    "high",
     "puppeteerModule",
     "puppeteer",
     "default",
