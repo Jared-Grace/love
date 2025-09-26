@@ -36,9 +36,9 @@ export async function messenger_reply() {
   const locator = page.locator("text=Unread");
   const count = await locator.count();
   console.log(`Found ${count} matches`);
-  for (let i = 0; i < count; i++) {
-    await locator.nth(i).click();
+  if (false) {
   }
+  await locator.nth(i).click();
   await command_line_read_empty();
   await browser.close();
 }
