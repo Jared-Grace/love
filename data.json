@@ -2257,10 +2257,10 @@
   "s initial",
   "s json",
   "p",
-  "mr",
   "s starts",
   "s without",
-  "s remove"
+  "s remove",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
