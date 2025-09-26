@@ -3908,8 +3908,7 @@
    "catch_only_run_async",
    "keyboard_type_delay",
    "string_trim",
-   "messenger_reply_messages",
-   "messenger_reply_unreplied"
+   "messenger_reply_messages"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30334,7 +30333,6 @@
     "property_name",
     "property_value",
     "mine",
-    "message",
     "mine_last",
     "index_last",
     "unreplied",
