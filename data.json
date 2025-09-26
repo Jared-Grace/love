@@ -2587,7 +2587,8 @@
    "string_ends_with_space",
    "bible_verses_encouragement",
    "ebible_version_books",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "bind"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15341,7 +15342,8 @@
    "messenger_reply"
   ],
   "bind": [
-   "messenger_reply"
+   "messenger_reply",
+   "bind"
   ]
  },
  "functions": {
@@ -29339,9 +29341,16 @@
     "path",
     "close"
    ]
+  },
+  "bind": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "bind"
+   ]
   }
  },
- "git_push_when": "2025-09-26T03:56:26.930Z",
+ "git_push_when": "2025-09-26T15:04:46.365Z",
  "error_attention": null,
  "app_current": "replace"
 }
