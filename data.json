@@ -15193,6 +15193,9 @@
   ],
   "seconds_per_minute": [
    "messenger_reply"
+  ],
+  "ms_per_second": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29014,6 +29017,7 @@
     "focus",
     "characters_per_minute",
     "seconds_per_minute",
+    "ms_per_second",
     "keyboard",
     "type",
     "press"
