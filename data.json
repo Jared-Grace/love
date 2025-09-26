@@ -5054,7 +5054,8 @@
    "messenger_reply_playwright",
    "js_dollar_if_call",
    "keyboard_type_delay",
-   "reply_sequence"
+   "reply_sequence",
+   "reply"
   ],
   "colored": [
    "chalk_color",
@@ -15837,6 +15838,9 @@
   ],
   "input_item": [
    "reply_sequence"
+  ],
+  "reply_on_match": [
+   "reply"
   ]
  },
  "functions": {
@@ -30208,14 +30212,16 @@
   "reply": {
    "async": false,
    "identifiers": [
+    "reply_sequence",
     "list_map_lower",
     "list_filter_empty_not_is",
     "string_split_space",
     "whitespace_normalize",
     "reply",
     "input",
+    "fn",
     "r",
-    "reply_sequence",
+    "reply_on_match",
     "result"
    ]
   },
