@@ -15237,6 +15237,9 @@
   ],
   "catch_only_run_async": [
    "catch_only_run_async"
+  ],
+  "on_error": [
+   "catch_only_run_async"
   ]
  },
  "functions": {
@@ -29161,6 +29164,7 @@
     "catch_only_run_async",
     "lambda",
     "message_fragment",
+    "on_error",
     "e",
     "json",
     "message",
