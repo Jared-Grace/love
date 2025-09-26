@@ -22,45 +22,47 @@ export async function messenger_reply_puppeteer() {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
-  let list = await list_adder_async(async function lambda6(la) {
-  const children = await conversation.$$('[data-virtualized="false"]');
-  for (const c of children) {
-    const children2 = await c.$$('[role="none"]');
-    for (const c2 of children2) {
-      function lambda2(node) {
-        let v3 = node.parentElement?.tagName;
-        return v3;
-      }
-      const parentTag = await c2.evaluate(lambda2);
-      if (parentTag === "H5") {
-        continue;
-      }
-      let message = await c2.evaluate(lambda);
-      function lambda4(imgs) {
-        function lambda3(img) {
-          let v4 = getComputedStyle(img).borderRadius === "50%";
-          return v4;
+  async function lambda6(la) {
+    const children = await conversation.$$('[data-virtualized="false"]');
+    for (const c of children) {
+      const children2 = await c.$$('[role="none"]');
+      for (const c2 of children2) {
+        function lambda2(node) {
+          let v3 = node.parentElement?.tagName;
+          return v3;
         }
-        function lambda5(img) {
-          let v6 = img.src;
-          return v6;
+        const parentTag = await c2.evaluate(lambda2);
+        if (parentTag === "H5") {
+          continue;
         }
-        let v5 = imgs.filter(lambda3).map(lambda5);
-        return v5;
-      }
-      const imgs = await c.$$eval("img", lambda4);
-      function lambda(node) {
-        let v2 = node.textContent;
-        return v2;
-      }
-      let name = null;
-      if (list_empty_is(imgs)) {
-        name = "me";
-      } else {
-        name = "them";
+        let message = await c2.evaluate(lambda);
+        function lambda4(imgs) {
+          function lambda3(img) {
+            let v4 = getComputedStyle(img).borderRadius === "50%";
+            return v4;
+          }
+          function lambda5(img) {
+            let v6 = img.src;
+            return v6;
+          }
+          let v5 = imgs.filter(lambda3).map(lambda5);
+          return v5;
+        }
+        const imgs = await c.$$eval("img", lambda4);
+        function lambda(node) {
+          let v2 = node.textContent;
+          return v2;
+        }
+        let name = null;
+        if (list_empty_is(imgs)) {
+          name = "me";
+        } else {
+          name = "them";
+        }
       }
     }
-  }});
+  }
+  let list = await list_adder_async(lambda6);
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
