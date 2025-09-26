@@ -1,4 +1,3 @@
-import { list_empty_is } from "./list_empty_is.mjs";
 import { log } from "./log.mjs";
 import { messenger_reply_puppeteer_unread_click } from "./messenger_reply_puppeteer_unread_click.mjs";
 import { bind_property } from "./bind_property.mjs";
@@ -29,8 +28,6 @@ export async function messenger_reply_puppeteer() {
         let v2 = node.textContent;
         return v2;
       }
-      let e = list_empty_is(filtered);
-      log(e);
       console.log(await c.evaluate(lambda));
       ("");
     }
