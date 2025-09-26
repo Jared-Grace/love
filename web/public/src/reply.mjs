@@ -22,7 +22,7 @@ export async function reply(a) {
     return bible_folder;
   }
   let mapped = list_map(concated, lambda2);
-  return list;
+  return mapped;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
     let list = await ebible_references_parse_lines(concated, [reference]);
