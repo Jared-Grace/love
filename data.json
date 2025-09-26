@@ -4262,8 +4262,7 @@
    "app_message",
    "function_list_generate",
    "js_dollar_if_call",
-   "messenger_reply_messages",
-   "function_alias_add"
+   "messenger_reply_messages"
   ],
   "output": [
    "watch",
@@ -5744,8 +5743,7 @@
    "each_pair_async",
    "ebible_version_books",
    "ebible_verse",
-   "messenger_reply_playwright",
-   "function_alias_add"
+   "messenger_reply_playwright"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -16895,8 +16893,6 @@
     "first",
     "second",
     "ne",
-    "name",
-    "b",
     "list",
     "alias",
     "f_name",
