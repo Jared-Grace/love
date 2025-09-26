@@ -10002,8 +10002,7 @@
   ],
   "message2": [
    "js_identifiers_to_names",
-   "list_size_1_assert",
-   "messenger_reply_puppeteer"
+   "list_size_1_assert"
   ],
   "js_stack_filtered_multiple_each": [
    "js_identifier_defineds",
@@ -29501,7 +29500,6 @@
     "textContent",
     "name",
     "list",
-    "message2",
     "focus",
     "fn",
     "keyboard",
