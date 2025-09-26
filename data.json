@@ -2616,7 +2616,8 @@
    "bind_property",
    "messenger_reply_playwright",
    "messenger_reply",
-   "messenger_reply_unread_click"
+   "messenger_reply_unread_click",
+   "list_filter_ends_with_not_any"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -30043,6 +30044,7 @@
   "list_filter_ends_with_not_any": {
    "async": false,
    "identifiers": [
+    "marker",
     "list_filter",
     "list_any",
     "string_ends_with",
