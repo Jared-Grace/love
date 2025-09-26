@@ -13002,8 +13002,7 @@
    "js_auto_transform_new_inner",
    "js_identifier_defineds",
    "marker_next_declare_single_init_elements",
-   "puppeteer_matches",
-   "messenger_reply_puppeteer"
+   "puppeteer_matches"
   ],
   "marker_next_declare_single_init": [
    "marker_screen_add",
@@ -29420,12 +29419,11 @@
     "$$",
     "c",
     "children2",
-    "elements",
-    "e",
     "lambda",
     "node",
     "v2",
     "textContent",
+    "e",
     "filtered",
     "console",
     "evaluate",
