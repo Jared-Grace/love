@@ -192,7 +192,8 @@
   "str": "string_trim",
   "sss": "string_split_space",
   "": "sss",
-  "ei": "each_index"
+  "ei": "each_index",
+  "lfdp": "list_find_property"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2294,7 +2295,8 @@
   "p",
   "mr",
   "s language",
-  "as find"
+  "as find",
+  "a lfdp list_find_property"
  ],
  "marker_current": "1",
  "function_current": "reply_sequence",
