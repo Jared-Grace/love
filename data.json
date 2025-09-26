@@ -15697,11 +15697,9 @@
   "skips": [
    "messenger_reply"
   ],
-  "list_filter_ends_with_any": [
-   "messenger_reply"
-  ],
   "list_filter_ends_with_not_any": [
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "messenger_reply"
   ],
   "suffixes": [
    "list_filter_ends_with_not_any"
@@ -29507,7 +29505,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "list_filter_ends_with_any",
+    "list_filter_ends_with_not_any",
     "list_map",
     "list_first",
     "object_properties",
