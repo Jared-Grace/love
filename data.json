@@ -5525,8 +5525,7 @@
    "ebible_references_parse_god_created_man_why",
    "emoji_handshake",
    "roman_to_integer",
-   "string_list_to",
-   "messenger_reply"
+   "string_list_to"
   ],
   "readdirSync": [
    "folder_read"
@@ -6329,7 +6328,8 @@
    "js_identifier_replace",
    "js_assign_combine",
    "app_reply_main",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "left": [
    "equal",
@@ -13449,8 +13449,7 @@
   ],
   "emoji_question": [
    "app_reply_choices",
-   "emoji_question",
-   "messenger_reply"
+   "emoji_question"
   ],
   "string_the_servant_of_god": [
    "string_the_servant_of_god_is",
@@ -29182,7 +29181,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "emoji_question",
+    "equal",
     "assert",
     "log",
     "bind_property",
@@ -29220,7 +29219,6 @@
     "keyboard",
     "locator",
     "count",
-    "v2",
     "b",
     "console",
     "nth",
