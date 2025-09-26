@@ -3526,7 +3526,8 @@
    "messenger_reply_puppeteer",
    "js_statement_return_add",
    "keyboard_type_delay",
-   "list_filter_starts_with"
+   "list_filter_starts_with",
+   "messenger_reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -6474,7 +6475,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "Error": [
    "error",
@@ -10457,7 +10459,8 @@
    "list_first_second_generic",
    "js_expand_generic",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "last": [
    "js_return_name",
@@ -29483,6 +29486,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_empty_not_is",
     "http_sleep",
     "string_prefix_without",
     "each_async",
@@ -29518,6 +29522,8 @@
     "click",
     "waitForSelector",
     "state",
+    "ne",
+    "list",
     "answer",
     "p",
     "focus",
