@@ -10,7 +10,7 @@ import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 export async function messenger_reply() {
   marker("1");
   await messenger_reply_unread_collect();
-  async function lambda2() {
+  async function lambda2(page) {
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
   }
