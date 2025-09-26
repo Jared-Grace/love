@@ -2280,7 +2280,8 @@
   "o s",
   "s a",
   "a sss",
-  "o a"
+  "o a",
+  "s def"
  ],
  "marker_current": "1",
  "function_current": "function_alias_add",
