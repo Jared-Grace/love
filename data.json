@@ -13853,7 +13853,6 @@
    "ebible_versions"
   ],
   "sleep": [
-   "http",
    "sleep",
    "retry",
    "keyboard_type_delay"
@@ -13866,7 +13865,6 @@
   ],
   "integer_random": [
    "integer_random",
-   "http",
    "keyboard_typing_delay"
   ],
   "max": [
@@ -15666,6 +15664,9 @@
   ],
   "hrefs": [
    "puppeteer_hrefs_starts_with"
+  ],
+  "http_sleep": [
+   "http"
   ]
  },
  "functions": {
@@ -25060,11 +25061,10 @@
   "http": {
    "async": true,
    "identifiers": [
+    "http_sleep",
     "html_loading",
     "catch_call",
     "promise_wrap",
-    "integer_random",
-    "sleep",
     "round",
     "string_starts_with",
     "browser_is",
