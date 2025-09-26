@@ -10844,8 +10844,7 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright",
-   "messenger_reply"
+   "messenger_reply_playwright"
   ],
   "marker_index": [
    "marker_delete_above",
@@ -29492,7 +29491,6 @@
     "$$eval",
     "prefix",
     "filtered",
-    "console",
     "p",
     "focus",
     "fn",
