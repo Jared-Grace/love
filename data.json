@@ -11928,7 +11928,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "messenger_reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -12595,7 +12596,8 @@
    "app_replace_rule_set"
   ],
   "index2": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "messenger_reply"
   ],
   "html_style_remove": [
    "html_style_remove",
@@ -14301,7 +14303,8 @@
    "list_find_starts_with",
    "sandbox_4_a",
    "string_starts_with_digit",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "extra": [
    "ebible_chapter_text",
@@ -14366,7 +14369,8 @@
   ],
   "list_index_of_last": [
    "list_index_of_last",
-   "ebible_verses"
+   "ebible_verses",
+   "messenger_reply"
   ],
   "lastIndexOf": [
    "list_index_of_last"
@@ -29532,6 +29536,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_index_of_last",
     "list_index_of",
     "list_last",
     "messenger_reply_messages_me",
@@ -29572,6 +29577,9 @@
     "index",
     "list",
     "item",
+    "index2",
+    "list2",
+    "item2",
     "answer",
     "p",
     "focus",
