@@ -6346,7 +6346,8 @@
    "list_add_multiple",
    "marker_functionize",
    "each_pair_async",
-   "each_multiple_async"
+   "each_multiple_async",
+   "reply_sequence"
   ],
   "object_properties": [
    "each_object",
@@ -30244,7 +30245,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "reply_sequence"
+    "reply_sequence",
+    "items"
    ]
   }
  },
