@@ -2246,9 +2246,9 @@
   "command_line_read",
   "n messenger_reply",
   "n messenger_reply_login",
-  "p",
   "messenger_reply_login",
   "s user",
+  "p",
   "messenger_reply"
  ],
  "marker_current": "1",
