@@ -18,7 +18,6 @@ export async function reply(a) {
     concated,
   });
   let bible_folders = ebible_languages_to_bible_folders(concated);
-  return bible_folders;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
