@@ -14442,8 +14442,7 @@
   ],
   "list_filter_starts_with": [
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with",
-   "messenger_reply"
+   "list_filter_starts_with"
   ],
   "html_parse_list_to": [
    "html_parse_find_list_to",
@@ -15635,9 +15634,6 @@
    "messenger_reply_messages_urls_add",
    "messenger_reply_messages"
   ],
-  "hrefs": [
-   "messenger_reply"
-  ],
   "urls": [
    "messenger_reply_messages_urls_add"
   ],
@@ -15645,7 +15641,7 @@
    "messenger_reply_messages_urls_add",
    "messenger_reply"
   ],
-  "puppeteer_hrefs": [
+  "puppeteer_hrefs_starts_with": [
    "messenger_reply"
   ]
  },
@@ -29445,10 +29441,9 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "puppeteer_hrefs",
+    "puppeteer_hrefs_starts_with",
     "list_remove_if_exists",
     "messenger_reply_messages_urls_add_multiple",
-    "list_filter_starts_with",
     "messenger_reply_messages",
     "messenger_reply_unread_click",
     "marker",
@@ -29467,7 +29462,6 @@
     "newPage",
     "v",
     "messages",
-    "hrefs",
     "prefix",
     "filtered",
     "p",
