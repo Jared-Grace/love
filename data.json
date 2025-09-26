@@ -15719,15 +15719,15 @@
   "message_box": [
    "messenger_reply_wait"
   ],
-  "filtered2": [
-   "messenger_reply"
-  ],
   "messenger_reply_messages_me": [
    "messenger_reply_messages",
    "messenger_reply"
   ],
   "messenger_reply_messages_name": [
    "messenger_reply_messages",
+   "messenger_reply"
+  ],
+  "mine": [
    "messenger_reply"
   ]
  },
@@ -29560,7 +29560,7 @@
     "item",
     "property_name",
     "property_value",
-    "filtered2",
+    "mine",
     "answer",
     "p",
     "focus",
