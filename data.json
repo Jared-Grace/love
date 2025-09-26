@@ -2353,7 +2353,8 @@
    "each_range_from",
    "object_merge_generic",
    "bible_verses_encouragement_generate",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3248,7 +3249,8 @@
    "keyboard_type_delay",
    "retry_on_error",
    "messenger_reply_messages",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3993,7 +3995,8 @@
    "object_property_set_exists_not",
    "object_merge_generic",
    "js_dollar_if_call",
-   "js_statement_return_add"
+   "js_statement_return_add",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "watch": [
    "watch"
@@ -4466,7 +4469,8 @@
    "file_read_json",
    "function_alias_add_generic",
    "data_file_update_inner",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "file_path": [
    "data_file_update",
@@ -7871,7 +7875,8 @@
    "firebase_upload_generic",
    "messenger_reply_messages",
    "messenger_reply_messages_urls_add",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "__dirname": [
    "function_import",
@@ -15018,7 +15023,8 @@
    "folder_user_docs_path",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "list_map_split_comma": [
    "list_map_split_comma",
@@ -15603,11 +15609,13 @@
   "urls": [
    "messenger_reply_messages_urls_add",
    "messenger_reply_messages_urls_add_page",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "messenger_reply_messages_urls_add_multiple": [
    "messenger_reply_messages_urls_add",
-   "messenger_reply_messages_urls_add_page"
+   "messenger_reply_messages_urls_add_page",
+   "messenger_reply_messages_urls_add_multiple"
   ],
   "messenger_reply_messages_urls_add_page": [
    "messenger_reply_messages_urls_add_page",
@@ -15656,6 +15664,21 @@
   ],
   "lambda$page": [
    "messenger_reply_puppeteer"
+  ],
+  "messenger_reply_messages_urls_get": [
+   "messenger_reply_messages_urls_add_multiple"
+  ],
+  "file_json_transform": [
+   "messenger_reply_messages_urls_add_multiple"
+  ],
+  "fb_path": [
+   "messenger_reply_messages_urls_add_multiple"
+  ],
+  "transform": [
+   "messenger_reply_messages_urls_add_multiple"
+  ],
+  "messages_urls": [
+   "messenger_reply_messages_urls_add_multiple"
   ]
  },
  "functions": {
@@ -29962,6 +29985,24 @@
     "urls_new",
     "lambda2",
     "url_new"
+   ]
+  },
+  "messenger_reply_messages_urls_add_multiple": {
+   "async": true,
+   "identifiers": [
+    "messenger_reply_messages_urls_get",
+    "each",
+    "object_property_set",
+    "file_json_transform",
+    "folder_user_docs_path",
+    "messenger_reply_messages_urls_add_multiple",
+    "urls",
+    "fb_path",
+    "transform",
+    "data",
+    "messages_urls",
+    "lambda",
+    "url"
    ]
   }
  },
