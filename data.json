@@ -2317,7 +2317,6 @@
    "command_line_log",
    "retry_on_error",
    "ebible_verses",
-   "reply",
    "reply_sequence"
   ],
   "function_path_to_name": [
@@ -30310,7 +30309,6 @@
     "object_property_set_exists_not",
     "reply_on_match",
     "ebible_languages_to_bible_folders",
-    "log",
     "object_property_get",
     "list_concat",
     "ebible_references_parse_lines",
