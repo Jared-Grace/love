@@ -10681,8 +10681,7 @@
    "list_size",
    "string_size",
    "path_join",
-   "roman_to_integer",
-   "messenger_reply_puppeteer"
+   "roman_to_integer"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -15390,7 +15389,8 @@
    "messenger_reply"
   ],
   "click": [
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "$$": [
    "messenger_reply_puppeteer"
@@ -29397,7 +29397,7 @@
     "evaluate",
     "push",
     "console",
-    "length",
+    "click",
     "focus",
     "fn",
     "keyboard",
