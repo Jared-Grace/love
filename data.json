@@ -6282,7 +6282,8 @@
    "ebible_verse_download",
    "firebase_storage_download_ebible",
    "list_set",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "reply_sequence"
   ],
   "lists_get": [
    "each_multiple",
@@ -30252,7 +30253,8 @@
     "items",
     "v",
     "reply_sequence_matches",
-    "input"
+    "input",
+    "index"
    ]
   }
  },
