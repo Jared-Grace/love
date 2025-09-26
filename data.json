@@ -15632,13 +15632,13 @@
   "fb_path": [
    "messenger_reply_messages"
   ],
-  "message_urls": [
-   "messenger_reply_messages"
-  ],
   "file_json_transform": [
    "messenger_reply_messages"
   ],
   "transform": [
+   "messenger_reply_messages"
+  ],
+  "messages_urls": [
    "messenger_reply_messages"
   ]
  },
@@ -29890,7 +29890,7 @@
     "fb_path",
     "transform",
     "data",
-    "message_urls",
+    "messages_urls",
     "s",
     "p",
     "waitForSelector",
