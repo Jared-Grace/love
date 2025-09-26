@@ -5861,7 +5861,8 @@
    "marker_call_replace_generic",
    "string_suffix_change",
    "string_to",
-   "roman_to_integer"
+   "roman_to_integer",
+   "messenger_reply"
   ],
   "process": [
    "command_line_read",
@@ -29153,6 +29154,7 @@
     "storageState",
     "page",
     "newPage",
+    "input",
     "waitForSelector",
     "v",
     "goto",
