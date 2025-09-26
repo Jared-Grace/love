@@ -15730,6 +15730,9 @@
   ],
   "messenger_reply_unreplied": [
    "messenger_reply"
+  ],
+  "messenger_reply_messages_message": [
+   "messenger_reply_messages"
   ]
  },
  "functions": {
@@ -29927,6 +29930,7 @@
   "messenger_reply_messages": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages_message",
     "messenger_reply_messages_name",
     "messenger_reply_messages_me",
     "messenger_reply_wait",
