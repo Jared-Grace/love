@@ -10,6 +10,7 @@ export async function messenger_reply() {
       headless: false,
     });
   }
+  error_text;
   const command = "npx playwright install";
   async function lambda() {
     let stdout = await command_line_log(command);
