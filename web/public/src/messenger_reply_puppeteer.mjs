@@ -22,8 +22,7 @@ export async function messenger_reply_puppeteer() {
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
-  async function lambda6(la) {}
-  let list = await list_adder_async(lambda6);
+  let list = await list_adder_async(async function lambda6(la) {
   const children = await conversation.$$('[data-virtualized="false"]');
   for (const c of children) {
     const children2 = await c.$$('[role="none"]');
@@ -61,7 +60,7 @@ export async function messenger_reply_puppeteer() {
         name = "them";
       }
     }
-  }
+  }});
   return;
   await messenger_reply_puppeteer_unread_click(page);
   return;
