@@ -17,6 +17,7 @@ export async function messenger_reply_puppeteer() {
     timeout: 10000,
   });
   const elements = await page.$$("span");
+  const search = "Unread";
   const matches = [];
   for (const el of elements) {
     function lambda(n) {
@@ -24,7 +25,7 @@ export async function messenger_reply_puppeteer() {
       return v2;
     }
     const txt = await el.evaluate(lambda);
-    if (txt === "Unread") {
+    if (txt === search) {
       matches.push(el);
       console.log(txt);
     }
