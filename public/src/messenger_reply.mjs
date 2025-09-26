@@ -26,7 +26,7 @@ export async function messenger_reply() {
   let list = string_list_to(str);
   async function lambda(item) {
     let delay_ms = keyboard_typing_delay();
-    await sleep(ms);
+    await sleep(delay_ms);
     await page.keyboard.type(message);
   }
   await each_async(list2, lambda);
