@@ -10,8 +10,7 @@ export async function reply({ input, language_codes }) {
   let reference = "Isaiah 26:9";
   let b = ebible_folder_english();
   let concated = list_concat(language_codes, b);
-  let v = ebible_folder_english();
-  let list = await ebible_references_parse_lines([v], [reference]);
+  let list = await ebible_references_parse_lines(concated, [reference]);
   return list;
   let fn = reply_sequence(["good", "evening"]);
   let r = reply_on_match(fn);
