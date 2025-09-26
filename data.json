@@ -5445,7 +5445,8 @@
    "list_map_split_comma",
    "list_map_whitespace_normalize",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate"
+   "bible_verses_encouragement_generate",
+   "messenger_reply"
   ],
   "functions_names": [
    "functions_names",
@@ -7030,7 +7031,8 @@
    "sandbox_2",
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
-   "ebible_references_parse_lines"
+   "ebible_references_parse_lines",
+   "messenger_reply"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10120,7 +10122,8 @@
    "app_reply_main",
    "promise_wrap",
    "ebible_references_parse_lines",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -11909,7 +11912,8 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text"
+   "ebible_chapter_text",
+   "messenger_reply"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -15218,7 +15222,8 @@
    "app_reply_main"
   ],
   "item3": [
-   "app_reply_main"
+   "app_reply_main",
+   "messenger_reply"
   ],
   "verse_random_reset": [
    "app_reply_main"
@@ -29486,6 +29491,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "list_map",
     "list_any",
     "string_ends_with",
     "list_filter",
@@ -29507,6 +29513,10 @@
     "mu",
     "properties",
     "skips",
+    "mapped",
+    "list2",
+    "lambda4",
+    "item3",
     "lambda",
     "item",
     "lambda3",
