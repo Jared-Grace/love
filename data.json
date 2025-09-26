@@ -3280,7 +3280,8 @@
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
    "list_filter_ends_with_not_any",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4029,7 +4030,8 @@
    "js_dollar_if_call",
    "js_statement_return_add",
    "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "watch": [
    "watch"
@@ -4073,7 +4075,8 @@
    "sandbox_2",
    "ebible_verse_new",
    "folder_user_combine",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "watcher": [
    "watch"
@@ -15778,7 +15781,8 @@
   ],
   "messenger_reply_messages_transform": [
    "messenger_reply_messages_transform",
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "fb_path": [
    "messenger_reply_messages_transform"
@@ -15790,7 +15794,8 @@
    "messenger_reply_messages_transform"
   ],
   "messages2": [
-   "messenger_reply"
+   "messenger_reply",
+   "reply_test"
   ],
   "reply_test": [
    "reply_test"
@@ -30199,10 +30204,15 @@
    ]
   },
   "reply_test": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "messenger_reply_messages_transform",
+    "object_property_set",
     "marker",
-    "reply_test"
+    "reply_test",
+    "lambda",
+    "messages2",
+    "joined"
    ]
   }
  },
