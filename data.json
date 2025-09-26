@@ -2286,7 +2286,7 @@
   "c messenger_reply_messages_urls_transform messenger_reply_messages_transform"
  ],
  "marker_current": "1",
- "function_current": "undefined_not_is_assert",
+ "function_current": "messenger_reply_messages_transform",
  "terminal": false,
  "identifiers": {
   "log": [
