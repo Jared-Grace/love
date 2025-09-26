@@ -15199,6 +15199,9 @@
   ],
   "ms_per_minute": [
    "messenger_reply"
+  ],
+  "ms_per_character": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29022,6 +29025,7 @@
     "seconds_per_minute",
     "ms_per_second",
     "ms_per_minute",
+    "ms_per_character",
     "keyboard",
     "type",
     "press"
