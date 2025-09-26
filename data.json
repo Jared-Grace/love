@@ -11232,8 +11232,7 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep",
-   "messenger_reply"
+   "sleep"
   ],
   "Math": [
    "date_diff_ms",
@@ -29086,7 +29085,6 @@
     "lambda",
     "item",
     "delay_ms",
-    "ms",
     "keyboard",
     "type",
     "list2",
