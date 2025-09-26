@@ -15766,7 +15766,11 @@
    "function_alias_add"
   ],
   "list_filter_empty_not_is": [
-   "list_map_filter_string_empty_not_is"
+   "list_map_filter_string_empty_not_is",
+   "reply"
+  ],
+  "filtered2": [
+   "reply"
   ]
  },
  "functions": {
@@ -30134,16 +30138,18 @@
   "reply": {
    "async": false,
    "identifiers": [
+    "list_filter_empty_not_is",
     "string_split_space",
     "list_map",
     "whitespace_normalize",
     "marker",
     "reply",
     "input",
-    "lambda",
+    "filtered2",
     "item",
     "mapped",
-    "list"
+    "list",
+    "lambda"
    ]
   },
   "undefined_not_is_assert": {
