@@ -17,8 +17,7 @@ export async function messenger_reply_puppeteer() {
   });
   await p.focus();
   const message = "Greetings!";
-  let fn = page.keyboard.type;
-  await keyboard_type_delay(message, fn);
+  await keyboard_type_delay(message, page.keyboard.type);
   return;
   await page.keyboard.press("Enter");
 }
