@@ -1933,7 +1933,6 @@
   "is data_save",
   "as data",
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
-  "s initial",
   "s skip",
   "ebible_index_upload engbsb",
   "s firebase,folde",
@@ -2260,7 +2259,8 @@
   "p",
   "mr",
   "s reply",
-  "s transform"
+  "s transform",
+  "s initial"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
