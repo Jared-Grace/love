@@ -1,3 +1,4 @@
+import { ebible_languages } from "./ebible_languages.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -13,6 +14,7 @@ export async function reply(a) {
   let reference = "Isaiah 26:9";
   let b = ebible_folder_english();
   let concated = list_concat(language_codes, b);
+  let languages = ebible_languages();
   return list;
   let fn = reply_sequence(["good", "evening"]);
   async function lambda() {
