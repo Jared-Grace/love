@@ -15719,6 +15719,9 @@
   ],
   "filtered2": [
    "messenger_reply"
+  ],
+  "messenger_reply_messages_me": [
+   "messenger_reply_messages"
   ]
  },
  "functions": {
@@ -29914,6 +29917,7 @@
   "messenger_reply_messages": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages_me",
     "messenger_reply_wait",
     "messenger_reply_messages_urls_add",
     "string_empty_is",
