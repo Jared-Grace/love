@@ -15368,6 +15368,9 @@
   ],
   "pin": [
    "messenger_reply"
+  ],
+  "locator": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29198,6 +29201,7 @@
     "focus",
     "fn",
     "keyboard",
+    "locator",
     "close"
    ]
   },
