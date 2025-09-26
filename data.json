@@ -15240,6 +15240,9 @@
   ],
   "on_error": [
    "catch_only_run_async"
+  ],
+  "cl": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29049,6 +29052,7 @@
     "launch",
     "headless",
     "lambda",
+    "cl",
     "page",
     "newPage",
     "goto",
