@@ -33,7 +33,6 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_not_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    function lambda(item) {}
     let property_name = messenger_reply_messages_name();
     let property_value = messenger_reply_messages_me();
     let mine = list_filter_property(messages, property_name, property_value);
