@@ -3820,7 +3820,8 @@
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "function_alias_add"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4184,7 +4185,8 @@
    "object_merge_generic",
    "list_set",
    "bind_property",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "function_alias_add"
   ],
   "name": [
    "watch",
@@ -15770,7 +15772,8 @@
    "reply"
   ],
   "undefined_not_is_assert": [
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "function_alias_add"
   ]
  },
  "functions": {
@@ -16894,6 +16897,7 @@
   },
   "function_alias_add": {
    "identifiers": [
+    "undefined_not_is_assert",
     "marker",
     "list_sort_string_size",
     "function_alias_generic",
@@ -16905,6 +16909,8 @@
     "list",
     "alias",
     "f_name",
+    "v",
+    "value",
     "lambda",
     "a",
     "exists",
