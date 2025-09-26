@@ -4207,7 +4207,8 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "list_concat"
   ],
   "name": [
    "watch",
@@ -8608,7 +8609,8 @@
    "list_squash",
    "log_unparse_try",
    "marker_down_choices",
-   "js_dollar_x"
+   "js_dollar_x",
+   "list_concat"
   ],
   "js_node_type_is": [
    "js_atomize_function",
@@ -10048,7 +10050,8 @@
    "list_squash",
    "marker_down_choices",
    "function_aliases_restore",
-   "js_dollar_x"
+   "js_dollar_x",
+   "list_concat"
   ],
   "after": [
    "js_dollar_a_generic",
@@ -20898,12 +20901,15 @@
   },
   "list_concat": {
    "identifiers": [
+    "list_is",
     "assert",
     "list_concat",
     "a",
     "b",
     "concated",
     "concat",
+    "l",
+    "value",
     "b2"
    ],
    "async": false
