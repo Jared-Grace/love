@@ -2263,7 +2263,8 @@
   "is sleep",
   "s list_add",
   "p",
-  "mr"
+  "mr",
+  "s prop,obj"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_messages",
