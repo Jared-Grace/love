@@ -1,3 +1,4 @@
+import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { list_filter_ends_with_not_any } from "./list_filter_ends_with_not_any.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
@@ -36,6 +37,7 @@ export async function messenger_reply() {
   log(messages);
   return;
   return;
+  await messenger_reply_wait(page);
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay("Greetings!", fn);
