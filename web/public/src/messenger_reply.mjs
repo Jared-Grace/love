@@ -5,6 +5,6 @@ export async function messenger_reply() {
     headless: false,
   });
   const page = await browser.newPage();
-  await page.goto("https://example.com");
+  await page.goto("https://facebook.com");
   await browser.close();
 }
