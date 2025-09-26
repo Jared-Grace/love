@@ -2253,10 +2253,10 @@
   "messenger_reply_puppeteer",
   "ar mr messenger_reply_puppeteer",
   "",
-  "mr",
   "as adder",
+  "s trim",
   "p",
-  "s trim"
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
