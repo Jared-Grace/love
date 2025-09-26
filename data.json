@@ -2242,13 +2242,13 @@
   "p",
   "s retry",
   "s messenger_reply",
-  "messenger_reply",
   "s readline",
   "s line",
   "command_line_read",
   "n messenger_reply",
   "n messenger_reply_login",
-  "messenger_reply_login"
+  "messenger_reply_login",
+  "messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "messenger_reply_login",
