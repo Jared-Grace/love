@@ -1,8 +1,7 @@
+import { http_sleep } from "./http_sleep.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { catch_call } from "./catch_call.mjs";
 import { promise_wrap } from "./promise_wrap.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { sleep } from "./sleep.mjs";
 import { round } from "./round.mjs";
 import { string_starts_with } from "./string_starts_with.mjs";
 import { browser_is } from "./browser_is.mjs";
@@ -23,7 +22,7 @@ export async function http(url) {
     let v = await html_loading(lambda3);
     return v;
   }
-  await sleep(integer_random(5, 8) * 1000);
+  await http_sleep();
   let h = null;
   let sw = string_starts_with(url, "https://");
   if (sw) {
