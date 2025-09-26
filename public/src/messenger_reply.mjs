@@ -10,7 +10,7 @@ export async function messenger_reply() {
     });
   }
   function lambda() {
-    log(message);
+    log("hereeee");
   }
   await catch_only_run_async(lambda2, "npx playwright install", lambda);
   const page = await browser.newPage();
