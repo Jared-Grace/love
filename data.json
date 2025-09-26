@@ -3580,7 +3580,8 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "reply_on_match"
   ],
   "v": [
    "data_identifiers_file",
@@ -4782,7 +4783,8 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders"
+   "ebible_languages_to_bible_folders",
+   "reply_on_match"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4978,7 +4980,8 @@
    "js_statement_return_empty_add",
    "ebible_index",
    "app_new_step_2",
-   "js_statement_return_add"
+   "js_statement_return_add",
+   "reply_on_match"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -30431,6 +30434,7 @@
   "reply_on_match": {
    "async": false,
    "identifiers": [
+    "list_add",
     "object_property_get",
     "reply_on_match",
     "wrapped_fn",
@@ -30439,7 +30443,9 @@
     "reply_on_match_inner",
     "a",
     "matches",
-    "outputs"
+    "outputs",
+    "list",
+    "item"
    ]
   }
  },
