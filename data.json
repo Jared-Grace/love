@@ -3333,7 +3333,8 @@
    "sandbox_4_a",
    "bible_verses_encouragement_generate",
    "ebible_references_parse_lines",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_puppeteer"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3500,7 +3501,8 @@
    "sandbox",
    "ebible_references_parse_lines",
    "app_reply_main",
-   "string_list_to"
+   "string_list_to",
+   "messenger_reply_puppeteer"
   ],
   "v": [
    "data_identifiers_file",
@@ -4676,7 +4678,8 @@
    "each_index_async",
    "list_map_split_space",
    "html_display_none_or_block",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "messenger_reply_puppeteer"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10284,7 +10287,8 @@
    "list_any",
    "marker_functionize",
    "app_replace_rule_set",
-   "list_any_starts_with"
+   "list_any_starts_with",
+   "messenger_reply_puppeteer"
   ],
   "match": [
    "js_node_types_is",
@@ -12950,7 +12954,8 @@
    "list_find_starts_with",
    "string_skip_while",
    "string_trim_right",
-   "string_starts_with_digit"
+   "string_starts_with_digit",
+   "messenger_reply_puppeteer"
   ],
   "eq2": [
    "app_replace_rule_set"
@@ -29390,6 +29395,7 @@
   "messenger_reply_puppeteer": {
    "async": true,
    "identifiers": [
+    "list_any",
     "log",
     "messenger_reply_puppeteer_unread_click",
     "bind_property",
@@ -29417,6 +29423,10 @@
     "c",
     "children2",
     "elements",
+    "any",
+    "list",
+    "lambda2",
+    "item",
     "lambda",
     "node",
     "v2",
