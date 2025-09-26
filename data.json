@@ -5268,7 +5268,8 @@
    "string_ends_with_space",
    "string_starts_with_dot",
    "string_list_to",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_wait"
   ],
   "a": [
    "string_suffix_without",
@@ -5481,7 +5482,8 @@
    "messenger_reply_puppeteer",
    "folder_user_docs_path",
    "messenger_reply",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_wait"
   ],
   "f_names": [
    "functions_names",
@@ -15427,7 +15429,8 @@
    "messenger_reply_unread_click",
    "messenger_reply_messages",
    "puppeteer_hrefs_starts_with",
-   "messenger_reply_messages_urls_add_page"
+   "messenger_reply_messages_urls_add_page",
+   "messenger_reply_wait"
   ],
   "newPage": [
    "messenger_reply",
@@ -15474,10 +15477,12 @@
   ],
   "waitForSelector": [
    "messenger_reply_puppeteer",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "messenger_reply_wait"
   ],
   "timeout": [
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply_wait"
   ],
   "focus": [
    "messenger_reply_puppeteer",
@@ -15654,7 +15659,8 @@
   ],
   "messenger_reply_wait": [
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "messenger_reply_wait"
   ],
   "puppeteer_hrefs": [
    "puppeteer_hrefs_starts_with"
@@ -29992,6 +29998,17 @@
     "page",
     "prefix",
     "urls"
+   ]
+  },
+  "messenger_reply_wait": {
+   "async": true,
+   "identifiers": [
+    "messenger_reply_wait",
+    "page",
+    "s",
+    "p",
+    "waitForSelector",
+    "timeout"
    ]
   }
  },
