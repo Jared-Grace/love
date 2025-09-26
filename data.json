@@ -9632,7 +9632,8 @@
    "list_map_prefix_any",
    "list_filter_starts_with",
    "puppeteer_hrefs_starts_with",
-   "messenger_reply_messages_urls_add_page"
+   "messenger_reply_messages_urls_add_page",
+   "messenger_reply"
   ],
   "js_keyword_from": [
    "js_code_import_single",
@@ -29501,6 +29502,7 @@
     "urls",
     "lambda",
     "url",
+    "prefix",
     "link",
     "$",
     "click",
