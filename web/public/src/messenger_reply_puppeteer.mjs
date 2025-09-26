@@ -1,3 +1,4 @@
+import { list_get } from "./list_get.mjs";
 import { puppeteer_matches } from "./puppeteer_matches.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
@@ -19,6 +20,7 @@ export async function messenger_reply_puppeteer() {
   const tag_name = "span";
   const text = "Unread";
   const matches = await puppeteer_matches(page, tag_name, text);
+  let item = list_get(list, index);
   await matches[2].click();
   return;
   await p.focus();
