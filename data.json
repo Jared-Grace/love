@@ -1306,7 +1306,6 @@
   "c md marker_up",
   "a mu marker_up",
   "o mc",
-  "s last",
   "o jaa",
   "o mab",
   "c marker_above marker_below",
@@ -2267,7 +2266,8 @@
   "p",
   "s ends",
   "c list_filter_ends_with_any list_filter_ends_with_not_any",
-  "mr"
+  "mr",
+  "s last"
  ],
  "marker_current": "1",
  "function_current": "list_filter_ends_with_not_any",
