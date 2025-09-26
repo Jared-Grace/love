@@ -1,3 +1,4 @@
+import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
 import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
@@ -21,6 +22,7 @@ export async function messenger_reply() {
   await messenger_reply_wait(page);
   await messenger_reply_unread_click(page);
   await messenger_reply_messages_urls_add_page(page);
+  let v2 = await command_line_read_empty();
   return;
   log(messages);
   return;
