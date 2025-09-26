@@ -2995,8 +2995,7 @@
    "object_property_set_exists_not",
    "list_remove_property",
    "object_merge_generic",
-   "bind_property",
-   "messenger_reply_puppeteer"
+   "bind_property"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -6250,8 +6249,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "messenger_reply_puppeteer"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -8210,7 +8208,6 @@
    "js_node_type_not_is_if",
    "js_property_generic",
    "js_dollar_new",
-   "messenger_reply_puppeteer",
    "messenger_reply"
   ],
   "key": [
@@ -29333,10 +29330,7 @@
     "timeout",
     "focus",
     "fn",
-    "object",
-    "property_name",
     "keyboard",
-    "type",
     "press"
    ]
   },
