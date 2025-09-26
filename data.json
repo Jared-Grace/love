@@ -187,7 +187,7 @@
   "sz": "string_size",
   "fe": "function_exists",
   "cl": "command_line",
-  "mr": "messenger_reply"
+  "mr": "messenger_reply_puppeteer"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2252,9 +2252,10 @@
   "s messenger",
   "messenger_reply",
   "s equal",
-  "mr",
   "p",
-  "messenger_reply_puppeteer"
+  "messenger_reply_puppeteer",
+  "mr",
+  "ar mr messenger_reply_puppeteer"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
