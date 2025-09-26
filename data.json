@@ -13993,7 +13993,8 @@
   "$": [
    "html_parse_list_text_to",
    "messenger_reply_puppeteer",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "messenger_reply"
   ],
   "cheerio": [
    "html_parse"
@@ -15675,6 +15676,9 @@
   ],
   "http_sleep": [
    "http"
+  ],
+  "link": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29497,6 +29501,8 @@
     "urls",
     "lambda",
     "url",
+    "link",
+    "$",
     "goto",
     "answer",
     "p",
@@ -30012,7 +30018,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-26T17:09:01.660Z",
+ "git_push_when": "2025-09-26T18:11:53.602Z",
  "error_attention": null,
  "app_current": "replace"
 }
