@@ -20,7 +20,6 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
-  lda;
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
