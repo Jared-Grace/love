@@ -4813,8 +4813,7 @@
   ],
   "command_line_read": [
    "function_run_prompt",
-   "command_line_read",
-   "messenger_reply_login"
+   "command_line_read"
   ],
   "function_run_git": [
    "function_run_git",
@@ -15328,6 +15327,9 @@
    "messenger_reply_login"
   ],
   "storageState": [
+   "messenger_reply_login"
+  ],
+  "command_line_read_empty": [
    "messenger_reply_login"
   ]
  },
@@ -29302,7 +29304,7 @@
   "messenger_reply_login": {
    "async": true,
    "identifiers": [
-    "command_line_read",
+    "command_line_read_empty",
     "import_install",
     "messenger_reply_login",
     "chromium",
