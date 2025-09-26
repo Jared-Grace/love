@@ -15659,9 +15659,6 @@
   "url_new": [
    "messenger_reply_unread_collect"
   ],
-  "page2": [
-   "messenger_reply"
-  ],
   "protocolTimeout": [
    "messenger_reply_puppeteer"
   ],
@@ -29496,7 +29493,6 @@
     "first",
     "list",
     "messages",
-    "page2",
     "answer",
     "p",
     "focus",
