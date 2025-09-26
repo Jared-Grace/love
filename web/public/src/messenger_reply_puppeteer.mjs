@@ -36,6 +36,7 @@ export async function messenger_reply_puppeteer() {
           continue;
         }
         let message = await c2.evaluate(lambda);
+        message = message.trim;
         function lambda4(imgs) {
           function lambda3(img) {
             let v4 = getComputedStyle(img).borderRadius === "50%";
