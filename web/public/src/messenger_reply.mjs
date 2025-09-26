@@ -1,3 +1,4 @@
+import { object_property_get } from "./object_property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { bind } from "./bind.mjs";
 import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
@@ -8,7 +9,8 @@ import { retry_on_error } from "./retry_on_error.mjs";
 import { import_install } from "./import_install.mjs";
 export async function messenger_reply() {
   let p = folder_user_docs_path("fb.json");
-  let data = await file_read_json(file_path);
+  let data = await file_read_json(p);
+  let pin = object_property_get(data, "pin");
   const { chromium, firefox, webkit } = await import_install("playwright");
   let browser = null;
   async function lambda2() {
