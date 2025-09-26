@@ -46,6 +46,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     return n;
   }
   let verse_numbers = list_map(list, lambda2);
+  log({
+    verse_numbers,
+  });
   verse_numbers = list_map(verse_numbers, roman_to_integer);
   log({
     verse_numbers,
