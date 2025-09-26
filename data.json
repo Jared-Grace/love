@@ -2266,8 +2266,8 @@
   "s collect",
   "p",
   "s ends",
-  "mr",
-  "c list_filter_ends_with_any list_filter_ends_with_not_any"
+  "c list_filter_ends_with_any list_filter_ends_with_not_any",
+  "mr"
  ],
  "marker_current": "1",
  "function_current": "list_filter_ends_with_not_any",
