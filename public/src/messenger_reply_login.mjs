@@ -11,8 +11,6 @@ export async function messenger_reply_login() {
   let v = messenger_reply_url();
   await page.goto(v);
   await command_line_read_empty();
-  await page.goto(v);
-  await command_line_read_empty();
   await context.storageState({
     path: "fb-session.json",
   });
