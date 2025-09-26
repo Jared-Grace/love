@@ -18,7 +18,8 @@ export async function messenger_reply_puppeteer() {
   let p = await page.waitForSelector(s, {
     timeout: 10000,
   });
-  let list = list_adder(function lambda6(la) {});
+  function lambda6(la) {}
+  let list = list_adder(lambda6);
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
