@@ -2238,7 +2238,8 @@
   "mr",
   "messenger_reply",
   "s finally",
-  "s catch"
+  "s catch",
+  "c catch_only_async catch_only_run_async"
  ],
  "marker_current": "1",
  "function_current": "string_list_to",
