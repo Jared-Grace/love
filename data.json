@@ -2247,13 +2247,13 @@
   "s user",
   "p",
   "fd messenger_reply",
-  "messenger_reply",
   "n bind",
   "n bind_property",
   "s doc",
   "ar mr messenger_reply",
   "mr",
-  "s messenger"
+  "s messenger",
+  "messenger_reply"
  ],
  "marker_current": "1",
  "function_current": "bind_property",
