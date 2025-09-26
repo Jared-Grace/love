@@ -186,7 +186,8 @@
   "lst": "list_set",
   "ssk": "string_skip",
   "sz": "string_size",
-  "fe": "function_exists"
+  "fe": "function_exists",
+  "cl": "command_line"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2239,7 +2240,8 @@
   "s catch",
   "c catch_only_async catch_only_run_async",
   "messenger_reply",
-  "u cl"
+  "u cl",
+  "a cl command_line"
  ],
  "marker_current": "1",
  "function_current": "catch_only_run_async",
