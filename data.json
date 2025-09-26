@@ -3857,8 +3857,7 @@
    "file_open_editor",
    "npm_install",
    "schtasks_query",
-   "firebase_deploy",
-   "messenger_reply"
+   "firebase_deploy"
   ],
   "log_keep": [
    "catch_log",
@@ -15245,6 +15244,9 @@
   ],
   "on_error": [
    "catch_only_run_async"
+  ],
+  "command_line_log": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29042,7 +29044,7 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
-    "command_line",
+    "command_line_log",
     "log",
     "catch_only_run_async",
     "import_install",
