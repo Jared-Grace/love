@@ -4776,7 +4776,8 @@
    "html_display_none_or_block",
    "sandbox_4_a",
    "keyboard_type_delay",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "list_find_property"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6356,7 +6357,6 @@
    "list_first",
    "list_first_second_generic",
    "function_type_first",
-   "list_find_property",
    "js_dollar_a",
    "each_multiple_async",
    "sandbox_4_a",
@@ -21026,7 +21026,7 @@
     "property_name",
     "property_value",
     "filter",
-    "first"
+    "item"
    ],
    "async": false
   },
