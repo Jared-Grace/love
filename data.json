@@ -15481,6 +15481,9 @@
   ],
   "s2": [
    "messenger_reply_puppeteer"
+  ],
+  "$i": [
+   "messenger_reply_puppeteer"
   ]
  },
  "functions": {
@@ -29488,6 +29491,7 @@
     "lambda",
     "e",
     "s2",
+    "$i",
     "lambda4",
     "imgs",
     "lambda3",
