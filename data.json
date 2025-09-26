@@ -3291,7 +3291,8 @@
    "list_filter_ends_with_not_any",
    "messenger_reply",
    "reply_test",
-   "reply_sequence"
+   "reply_sequence",
+   "reply"
   ],
   "previous": [
    "data_identifiers_file",
@@ -30270,6 +30271,7 @@
     "concated",
     "list",
     "fn",
+    "lambda",
     "r",
     "reply_on_match",
     "result"
