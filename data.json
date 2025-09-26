@@ -3791,7 +3791,8 @@
    "messenger_reply_login",
    "messenger_reply_url",
    "messenger_reply_playwright",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15469,7 +15470,8 @@
    "messenger_reply_login",
    "messenger_reply_url",
    "messenger_reply_playwright",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply"
   ],
   "messenger_reply_puppeteer": [
    "messenger_reply_puppeteer",
@@ -15643,7 +15645,8 @@
   ],
   "messenger_reply_messages": [
    "messenger_reply_messages",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "messenger_reply"
   ],
   "messages": [
    "messenger_reply_messages",
@@ -29500,6 +29503,8 @@
   "messenger_reply": {
    "async": true,
    "identifiers": [
+    "messenger_reply_messages",
+    "messenger_reply_url",
     "messenger_reply_puppeteer",
     "messenger_reply_unread_collect",
     "command_line_read_empty",
@@ -29509,13 +29514,14 @@
     "keyboard_type_delay",
     "messenger_reply",
     "lambda2",
+    "v",
+    "messages",
+    "page",
     "page2",
     "answer",
-    "messages",
     "p",
     "focus",
     "fn",
-    "page",
     "keyboard",
     "press"
    ]
