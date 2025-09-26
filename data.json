@@ -15190,6 +15190,9 @@
   ],
   "characters_per_minute": [
    "messenger_reply"
+  ],
+  "seconds_per_minute": [
+   "messenger_reply"
   ]
  },
  "functions": {
@@ -29010,6 +29013,7 @@
     "timeout",
     "focus",
     "characters_per_minute",
+    "seconds_per_minute",
     "keyboard",
     "type",
     "press"
