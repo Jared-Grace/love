@@ -19,6 +19,7 @@ export async function messenger_reply() {
   let seconds_per_minute = 60;
   let ms_per_second = 1000;
   let ms_per_minute = seconds_per_minute * ms_per_second;
+  let ms_per_character = ms_per_minute / characters_per_minute;
   await page.keyboard.type("Greetings!");
   await page.keyboard.press("Enter");
 }
