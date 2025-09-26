@@ -33,5 +33,8 @@ export async function messenger_reply() {
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay(pin, fn);
   await command_line_read_empty();
+  await context.storageState({
+    path: "fb-session.json",
+  });
   await browser.close();
 }
