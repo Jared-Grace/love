@@ -2174,7 +2174,6 @@
   "a fe function_exists",
   "s body",
   "s clear",
-  "s empty",
   "u fo",
   "as ope",
   "s return",
@@ -2282,7 +2281,8 @@
   "a sss",
   "o a",
   "s def",
-  "fw undefined_not_is_assert_lambda undefined_not_is_assert"
+  "fw undefined_not_is_assert_lambda undefined_not_is_assert",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "undefined_not_is_assert",
