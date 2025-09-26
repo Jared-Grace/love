@@ -28,9 +28,10 @@ export async function messenger_reply() {
     }
     let mapped = list_map(skips, lambda4);
     function lambda(item) {
-      function lambda3(item2) {}
-      let any = list_any(list, lambda3);
-      let ew = string_ends_with(item);
+      function lambda3(item2) {
+        let ew = string_ends_with(item);
+      }
+      let any = list_any(mapped, lambda3);
     }
     let filtered = list_filter(properties, lambda);
     let first = list_first(properties);
