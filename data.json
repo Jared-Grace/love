@@ -8194,7 +8194,8 @@
    "js_node_type_not_is_if",
    "js_property_generic",
    "js_dollar_new",
-   "messenger_reply_puppeteer"
+   "messenger_reply_puppeteer",
+   "messenger_reply"
   ],
   "key": [
    "object_invert",
@@ -29154,6 +29155,7 @@
     "goto",
     "input",
     "waitForSelector",
+    "type",
     "close"
    ]
   },
