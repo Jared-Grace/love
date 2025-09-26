@@ -11808,7 +11808,8 @@
    "function_aliases_restore"
   ],
   "mu": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "messenger_reply"
   ],
   "mb": [
    "function_aliases_restore"
@@ -15664,7 +15665,8 @@
    "messenger_reply_puppeteer"
   ],
   "messages_urls": [
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply"
   ],
   "transform_inner": [
    "messenger_reply_messages_urls_add_multiple",
@@ -29482,7 +29484,9 @@
     "messenger_reply",
     "lambda2",
     "page",
+    "messages_urls",
     "transform_inner",
+    "mu",
     "v",
     "messages",
     "page2",
