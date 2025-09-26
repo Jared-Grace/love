@@ -16,8 +16,7 @@ export async function messenger_reply_puppeteer() {
     timeout: 10000,
   });
   await p.focus();
-  const message = "Greetings!";
-  await keyboard_type_delay(message, page.keyboard.type);
+  await keyboard_type_delay("Greetings!", page.keyboard.type);
   return;
   await page.keyboard.press("Enter");
 }
