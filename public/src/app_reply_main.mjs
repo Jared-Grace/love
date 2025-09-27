@@ -86,7 +86,6 @@ export async function app_reply_main() {
     list_empty(copied);
     list_empty(chosens);
     list_empty(languages_chosens);
-    log(languages_chosens);
     typed = "";
     buttons_refresh();
     preview_refresh();
@@ -117,9 +116,6 @@ export async function app_reply_main() {
         reference,
       });
       list_add_first(languages_chosens, language_code);
-      log({
-        languages_chosens,
-      });
       preview_refresh();
     }
     let component4 = html_button(root, name2, lambda7);
@@ -177,10 +173,6 @@ export async function app_reply_main() {
     list_add_first(verse_texts, reference);
     let verse_text = list_join_newline_2(verse_texts);
     const other = [verse_text];
-    log({
-      a: "a",
-      languages_chosens,
-    });
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
