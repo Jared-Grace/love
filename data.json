@@ -6619,7 +6619,8 @@
   ],
   "equal_not": [
    "equal_not",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_ien"
   ],
   "ne": [
    "equal_not",
@@ -10172,7 +10173,6 @@
    "storage_local_get_or",
    "storage_local_get",
    "storage_local_initialize",
-   "js_dollar_ien",
    "js_assign_combine",
    "list_next_try",
    "js_calls_to_each"
@@ -26231,8 +26231,8 @@
   "js_dollar_ien": {
    "async": true,
    "identifiers": [
+    "equal_not",
     "js_dollar_ien_generic",
-    "null_is",
     "js_dollar_ien",
     "remaining",
     "node",
