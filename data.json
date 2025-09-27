@@ -6594,7 +6594,8 @@
    "number_pad",
    "retry",
    "ebible_chapter_code_to_name",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "js_identifiers_named_count"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -11511,7 +11512,6 @@
   ],
   "count_import": [
    "js_imports_unused",
-   "js_identifiers_named_count",
    "js_assign_combine"
   ],
   "js_identifiers_named_count": [
@@ -23999,7 +23999,7 @@
     "v",
     "node",
     "name",
-    "count_import"
+    "count"
    ]
   },
   "list_first_second_generic": {
