@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { bible_verses_encouragement } from "./bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "./ebible_references_parse_lines.mjs";
