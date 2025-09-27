@@ -3483,7 +3483,8 @@
   "i_name": [
    "data_identifiers_file",
    "data_file_update_inner",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "js_assign_combine"
   ],
   "list": [
    "data_identifiers_file",
@@ -11510,11 +11511,13 @@
   ],
   "count_import": [
    "js_imports_unused",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "js_assign_combine"
   ],
   "js_identifiers_named_count": [
    "js_imports_unused",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "js_assign_combine"
   ],
   "js_imports_declarations": [
    "js_imports_declarations",
@@ -16267,6 +16270,9 @@
   ],
   "d_path": [
    "data_file_update"
+  ],
+  "ast2": [
+   "js_assign_combine"
   ]
  },
  "functions": {
@@ -26405,6 +26411,7 @@
   "js_assign_combine": {
    "async": false,
    "identifiers": [
+    "js_identifiers_named_count",
     "list_not_is",
     "js_identifier_not_is",
     "list_next_try",
@@ -26434,6 +26441,9 @@
     "id",
     "nti2",
     "name",
+    "count_import",
+    "ast2",
+    "i_name",
     "init"
    ]
   },
