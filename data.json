@@ -3616,8 +3616,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "function_params_new"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4826,8 +4825,7 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders",
-   "function_params_new"
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -17940,8 +17938,6 @@
     "lambda3",
     "value_default",
     "expression2",
-    "list",
-    "item",
     "ast2",
     "name",
     "expression"
