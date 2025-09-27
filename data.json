@@ -2300,10 +2300,11 @@
   "s param",
   "s call",
   "is function_params_new",
-  "s transform"
+  "s transform",
+  "fw cl python_install"
  ],
  "marker_current": "1",
- "function_current": "user_repo_set",
+ "function_current": "python_install",
  "terminal": false,
  "identifiers": {
   "log": [
