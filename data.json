@@ -2326,7 +2326,8 @@
   "s js,type",
   "s js,each",
   "data_identifiers_search a",
-  "s transform"
+  "s transform",
+  "s ien"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
