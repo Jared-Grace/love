@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { list_to } from "./list_to.mjs";
 import { list_size_1_assert } from "./list_size_1_assert.mjs";
 import { js_auto } from "./js_auto.mjs";
@@ -8,6 +9,7 @@ import { each_async } from "./each_async.mjs";
 import { function_new_transform } from "./function_new_transform.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
+  marker("1");
   let list = list_to(arguments);
   list_size_1_assert(list);
   let { f_names, combined } = await functions_combine_name(f_names_comma);

@@ -2331,10 +2331,12 @@
   "fc",
   "as current",
   "s clone",
-  "s data"
+  "s data",
+  "fc data_all",
+  "o fc"
  ],
  "marker_current": "1",
- "function_current": "watch",
+ "function_current": "functions_combine",
  "terminal": false,
  "identifiers": {
   "log": [
