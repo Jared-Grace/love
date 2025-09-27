@@ -5,8 +5,10 @@ import { chalk_green } from "./chalk_green.mjs";
 import { function_run_line_git } from "./function_run_line_git.mjs";
 import { command_line_read } from "./command_line_read.mjs";
 import { json_format_to } from "./json_format_to.mjs";
+import { data_path } from "./data_path.mjs";
 export async function function_run_prompt() {
   const property_name = "error_attention";
+    let d_path = data_path();
   let ea = await data_property_get(property_name, d_path);
   let nn = null_not_is(ea);
   if (nn) {
