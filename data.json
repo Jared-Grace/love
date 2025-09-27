@@ -15993,8 +15993,7 @@
    "git_history_delete"
   ],
   "folder_path": [
-   "folder_delete",
-   "git_history_delete"
+   "folder_delete"
   ],
   "rm": [
    "folder_delete"
@@ -30544,8 +30543,7 @@
     "stdout",
     "process",
     "chdir",
-    "stdout2",
-    "folder_path"
+    "stdout2"
    ]
   },
   "sandbox_5": {
