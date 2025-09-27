@@ -2237,7 +2237,6 @@
   "d",
   "o mr",
   "c messenger_reply messenger_reply_messages",
-  "s transform",
   "s initial",
   "s json",
   "s starts",
@@ -2326,7 +2325,8 @@
   "s each",
   "s js,type",
   "s js,each",
-  "data_identifiers_search a"
+  "data_identifiers_search a",
+  "s transform"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
