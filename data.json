@@ -1931,7 +1931,6 @@
   "s skip",
   "ebible_index_upload engbsb",
   "s firebase,folde",
-  "s folder",
   "s fireba,path",
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
@@ -2313,7 +2312,8 @@
   "a clg",
   "a clg command_line_git",
   "a td todo",
-  "fd git_history_delete"
+  "fd git_history_delete",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
