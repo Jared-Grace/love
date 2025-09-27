@@ -6045,7 +6045,8 @@
   ],
   "process": [
    "command_line_read",
-   "exit"
+   "exit",
+   "git_history_delete"
   ],
   "stdin": [
    "command_line_read"
@@ -15978,6 +15979,9 @@
   ],
   "description": [
    "todo"
+  ],
+  "chdir": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30518,6 +30522,8 @@
     "git_repo_url",
     "repo_folder",
     "stdout",
+    "process",
+    "chdir",
     "stdout2"
    ]
   },
