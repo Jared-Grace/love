@@ -2333,10 +2333,11 @@
   "s data",
   "fc data_all",
   "o fc",
-  "as current"
+  "as current",
+  "fs data_all"
  ],
  "marker_current": "1",
- "function_current": "functions_combine",
+ "function_current": "data_all",
  "terminal": false,
  "identifiers": {
   "log": [
