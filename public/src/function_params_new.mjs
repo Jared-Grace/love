@@ -30,6 +30,7 @@ export async function function_params_new(
     each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
-  await each_async(list, async function lambda4(item) {});
+  async function lambda4(item) {}
+  await each_async(list, lambda4);
   let name = js_call_callee_name(expression);
 }
