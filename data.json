@@ -4582,7 +4582,6 @@
   "d": [
    "data_file_update",
    "data_property_get",
-   "data_transform",
    "data_files_update",
    "data_file_update_inner",
    "date_iso_to",
@@ -4753,7 +4752,6 @@
   "data_save": [
    "data_file_update",
    "data_save",
-   "data_transform",
    "function_alias_generic",
    "data_files_update"
   ],
@@ -16798,7 +16796,6 @@
   },
   "data_transform": {
    "identifiers": [
-    "data_save",
     "object_property_set",
     "data_get",
     "data_path",
@@ -16807,7 +16804,6 @@
     "value_initial",
     "lambda$previous",
     "d_path",
-    "d",
     "data",
     "value",
     "value_previous"
