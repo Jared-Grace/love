@@ -6002,7 +6002,8 @@
   ],
   "command_git": [
    "command_line_git",
-   "git_push"
+   "git_push",
+   "git_history_delete"
   ],
   "readline": [
    "command_line_read"
@@ -15966,9 +15967,6 @@
    "git_history_delete"
   ],
   "git_repo_url": [
-   "git_history_delete"
-  ],
-  "clg": [
    "git_history_delete"
   ]
  },
@@ -30507,7 +30505,7 @@
     "git_repo_url",
     "stdout",
     "stdout2",
-    "clg"
+    "command_git"
    ]
   },
   "sandbox_5": {
