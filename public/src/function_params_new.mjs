@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -20,6 +21,7 @@ export async function function_params_new(
   function lambda2(v) {
     let { node } = v;
     let arguments2 = object_property_get(node, "arguments");
+    each(list, function lambda3(item) {});
     let expression2 = js_parse_expression(code_expression);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
