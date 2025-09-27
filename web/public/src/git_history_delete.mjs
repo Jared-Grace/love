@@ -4,7 +4,9 @@ import { uuid } from "./uuid.mjs";
 import { marker } from "./marker.mjs";
 export async function git_history_delete(user, repo, f_path) {
   marker("1");
-  todo("make sure all changes are in repo first like pushing");
+  todo(
+    "make sure all changes are in repo first like pushing; may need to coordinate with other users",
+  );
   const git_repo_url = "https://github.com/" + user + "/" + repo + ".git";
   let stdout = await command_line_git(
     "clone --mirror " +
