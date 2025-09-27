@@ -3960,8 +3960,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "js_dollar"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19461,7 +19460,6 @@
     "second",
     "ne",
     "remaining",
-    "message",
     "a"
    ],
    "async": true
