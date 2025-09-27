@@ -5976,8 +5976,7 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "git_filter_repo",
-   "git_filter_repo_install"
+   "git_filter_repo"
   ],
   "stdout": [
    "command_line",
@@ -30511,7 +30510,6 @@
     "command_line",
     "marker",
     "git_filter_repo_install",
-    "command",
     "v"
    ]
   }
