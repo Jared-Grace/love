@@ -6032,8 +6032,7 @@
   ],
   "command_git": [
    "command_line_git",
-   "git_push",
-   "git_repo_clone"
+   "git_push"
   ],
   "readline": [
    "command_line_read"
@@ -30687,8 +30686,7 @@
     "git_repo_clone",
     "user",
     "repo",
-    "url",
-    "command_git"
+    "url"
    ]
   }
  },
