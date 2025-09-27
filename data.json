@@ -6981,7 +6981,8 @@
    "js_auto_transform_new_inner",
    "js_property_parse_expression",
    "app_new_assign",
-   "function_list_generate"
+   "function_list_generate",
+   "function_params_new"
   ],
   "functions_combine": [
    "functions_combine",
@@ -10367,7 +10368,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "function_params_new"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -13480,7 +13482,8 @@
    "js_calls_to_each"
   ],
   "expression2": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "function_params_new"
   ],
   "object_property_get_name": [
    "js_call_callee_name",
@@ -16090,6 +16093,9 @@
   ],
   "values_default_comma": [
    "function_params_new"
+  ],
+  "values_default": [
+   "function_params_new"
   ]
  },
  "functions": {
@@ -17901,6 +17907,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "js_parse_expression",
     "object_property_get",
     "js_visit_type",
     "js_call_callee_name",
@@ -17916,10 +17923,13 @@
     "ast",
     "result",
     "s",
+    "values_default",
     "lambda2",
     "v",
     "node",
     "arguments2",
+    "expression2",
+    "code_expression",
     "ast2",
     "name",
     "expression"
