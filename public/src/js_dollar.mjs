@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { list_get_end_3 } from "./list_get_end_3.mjs";
@@ -31,6 +32,7 @@ export async function js_dollar(ast) {
       }
       let remaining = list_skip(split, 2);
       if (second === choice_name) {
+        log(message);
         marker("choice_arguments");
         const a = {
           remaining,
