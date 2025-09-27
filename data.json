@@ -2327,8 +2327,8 @@
   "data_identifiers_search a",
   "s transform",
   "s ien",
-  "s dollar",
-  "js_dollar_new ine"
+  "js_dollar_new ine",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ine",
