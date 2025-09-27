@@ -16098,9 +16098,6 @@
    "repos",
    "git_repo_clone"
   ],
-  "ast2": [
-   "function_params_new"
-  ],
   "values_default_comma": [
    "function_params_new"
   ],
@@ -17952,7 +17949,6 @@
     "lambda3",
     "value_default",
     "expression2",
-    "ast2",
     "output",
     "name",
     "expression"
