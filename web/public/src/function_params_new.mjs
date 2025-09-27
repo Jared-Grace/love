@@ -1,3 +1,4 @@
+import { data_function_current_get } from "./data_function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -29,7 +30,8 @@ export async function function_params_new(
     each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
-  let result = await data_identifiers_search(s);
+  let f_name = await data_function_current_get();
+  let result = await data_identifiers_search(f_name);
   async function lambda4(item) {}
   await each_async(list, lambda4);
   let name = js_call_callee_name(expression);
