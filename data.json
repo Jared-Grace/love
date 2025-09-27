@@ -3972,7 +3972,8 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log"
+   "command_line_log",
+   "git_history_delete"
   ],
   "log_keep": [
    "catch_log",
@@ -5969,7 +5970,8 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "git_history_delete"
   ],
   "stdout": [
    "command_line",
@@ -15956,6 +15958,9 @@
    "git_history_delete"
   ],
   "repo": [
+   "git_history_delete"
+  ],
+  "stdout2": [
    "git_history_delete"
   ]
  },
@@ -30485,13 +30490,16 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "command_line",
     "command_line_git",
     "uuid",
     "marker",
     "git_history_delete",
     "user",
     "repo",
-    "stdout"
+    "stdout",
+    "stdout2",
+    "command"
    ]
   },
   "sandbox_5": {
