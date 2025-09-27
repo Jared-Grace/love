@@ -1762,7 +1762,6 @@
   "s body,get",
   "s block",
   "s object,la",
-  "s js,call",
   "s brack",
   "c js_code_wrap_braces js_code_wrap_brackets",
   "fw js_code_wrap_brackets js_code_brackets_empty",
@@ -2324,7 +2323,8 @@
   "p",
   "repos",
   "n git_repo_clone",
-  "s param"
+  "s param",
+  "s js,call"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
