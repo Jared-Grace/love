@@ -5698,8 +5698,7 @@
    "undefined_not_is_assert"
   ],
   "readdirSync": [
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "filter": [
    "list_filter",
@@ -14725,7 +14724,8 @@
    "folder_read_async"
   ],
   "readdir": [
-   "folder_read_async"
+   "folder_read_async",
+   "folder_read"
   ],
   "withFileTypes": [
    "folder_read_async"
@@ -16243,7 +16243,7 @@
     "path_folder",
     "fs",
     "all",
-    "readdirSync"
+    "readdir"
    ],
    "async": true
   },
