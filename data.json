@@ -2332,10 +2332,10 @@
   "fc data_all",
   "o fc",
   "as current",
-  "fs data_all",
   "u pn",
   "pn f_path \"data.json\"",
-  "s data"
+  "s data",
+  "fs data_all"
  ],
  "marker_current": "1",
  "function_current": "data_all",
