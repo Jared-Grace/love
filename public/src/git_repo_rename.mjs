@@ -5,4 +5,5 @@ export async function git_repo_rename(from, to) {
   let stdout = await command_line(
     "gh repo rename " + from + " --new-name " + to,
   );
+  return stdout;
 }
