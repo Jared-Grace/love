@@ -15963,6 +15963,9 @@
   ],
   "git_repo_url": [
    "git_history_delete"
+  ],
+  "clg": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30499,7 +30502,8 @@
     "repo",
     "git_repo_url",
     "stdout",
-    "stdout2"
+    "stdout2",
+    "clg"
    ]
   },
   "sandbox_5": {
