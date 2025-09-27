@@ -34,10 +34,8 @@ export async function function_params_new(
       each(values_default, lambda3);
     }
     js_visit_type(ast2, "CallExpression", lambda2);
-    let output = await function_transform(
-      f_name2,
-      async function lambda5(ast3) {},
-    );
+    async function lambda5(ast3) {}
+    let output = await function_transform(f_name2, lambda5);
   }
   await each_async(result, lambda4);
   let name = js_call_callee_name(expression);
