@@ -2672,7 +2672,8 @@
    "git_history_delete",
    "sandbox_5",
    "folder_delete",
-   "git_repo_rename"
+   "git_repo_rename",
+   "git_repo_rename_normalize"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3861,7 +3862,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "git_repo_rename_normalize"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -7814,7 +7816,8 @@
    "each_range_from",
    "each_range_from_async",
    "object_merge_generic",
-   "git_repo_rename"
+   "git_repo_rename",
+   "git_repo_rename_normalize"
   ],
   "r": [
    "function_format",
@@ -7918,7 +7921,8 @@
    "each_range_from_async",
    "object_merge_generic",
    "string_list_to",
-   "git_repo_rename"
+   "git_repo_rename",
+   "git_repo_rename_normalize"
   ],
   "i": [
    "function_identifier_replace",
@@ -16010,7 +16014,11 @@
    "folder_delete"
   ],
   "git_repo_rename": [
-   "git_repo_rename"
+   "git_repo_rename",
+   "git_repo_rename_normalize"
+  ],
+  "git_repo_rename_normalize": [
+   "git_repo_rename_normalize"
   ]
  },
  "functions": {
@@ -30586,6 +30594,17 @@
     "from",
     "to",
     "stdout"
+   ]
+  },
+  "git_repo_rename_normalize": {
+   "async": true,
+   "identifiers": [
+    "git_repo_rename",
+    "marker",
+    "git_repo_rename_normalize",
+    "from",
+    "to",
+    "v"
    ]
   }
  },
