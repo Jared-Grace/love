@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
@@ -28,7 +29,7 @@ export async function function_params_new(
       function lambda2(v) {
         let { node } = v;
         let name = js_call_callee_name(node);
-        if (false) {
+        if (equal_not(left, right)) {
         }
         let arguments2 = object_property_get(node, "arguments");
         function lambda3(value_default) {
