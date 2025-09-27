@@ -2342,7 +2342,8 @@
    "search_generic",
    "js_log_remove",
    "messenger_reply_playwright",
-   "js_dollar"
+   "js_dollar",
+   "js_await_add"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3960,7 +3961,8 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "js_await_add"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -18727,6 +18729,7 @@
   },
   "js_await_add": {
    "identifiers": [
+    "log",
     "not",
     "object_replace",
     "js_await",
@@ -18756,7 +18759,8 @@
     "stack1",
     "lambda4",
     "copy",
-    "awaited"
+    "awaited",
+    "message"
    ],
    "async": true
   },
