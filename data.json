@@ -15974,6 +15974,9 @@
   ],
   "repo_folder": [
    "git_history_delete"
+  ],
+  "description": [
+   "todo"
   ]
  },
  "functions": {
@@ -23224,7 +23227,8 @@
   "todo": {
    "identifiers": [
     "error",
-    "todo"
+    "todo",
+    "description"
    ],
    "async": false
   },
