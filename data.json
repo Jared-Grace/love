@@ -2319,10 +2319,11 @@
   "s replace",
   "git_repo_rename_normalize karate-code",
   "p",
-  "grrn Jared-Grace karate-code"
+  "grrn Jared-Grace karate-code",
+  "n repos"
  ],
  "marker_current": "1",
- "function_current": "git_repo_rename_normalize",
+ "function_current": "repos",
  "terminal": false,
  "identifiers": {
   "log": [
