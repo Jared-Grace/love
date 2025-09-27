@@ -34,7 +34,7 @@ export async function function_params_new(
         }
         each(values_default, lambda3);
       }
-      js_visit_type(ast2, "CallExpression", lambda2);
+      js_visit_type(ast, "CallExpression", lambda2);
     }
     let output = await function_transform(f_name, lambda5);
   }
