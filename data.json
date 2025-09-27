@@ -5984,8 +5984,7 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "git_repo_rename"
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -7813,7 +7812,8 @@
    "range_from",
    "each_range_from",
    "each_range_from_async",
-   "object_merge_generic"
+   "object_merge_generic",
+   "git_repo_rename"
   ],
   "r": [
    "function_format",
@@ -7916,7 +7916,8 @@
    "each_range_from",
    "each_range_from_async",
    "object_merge_generic",
-   "string_list_to"
+   "string_list_to",
+   "git_repo_rename"
   ],
   "i": [
    "function_identifier_replace",
@@ -30581,8 +30582,9 @@
     "command_line",
     "marker",
     "git_repo_rename",
-    "stdout",
-    "command"
+    "from",
+    "to",
+    "stdout"
    ]
   }
  },
