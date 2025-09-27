@@ -2330,7 +2330,8 @@
   "d",
   "as param",
   "fc",
-  "as current"
+  "as current",
+  "s clone"
  ],
  "marker_current": "1",
  "function_current": "watch",
