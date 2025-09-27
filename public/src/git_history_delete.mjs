@@ -1,4 +1,3 @@
-import { command_line } from "./command_line.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 import { uuid } from "./uuid.mjs";
 import { marker } from "./marker.mjs";
@@ -10,14 +9,15 @@ export async function git_history_delete(user, repo) {
       user +
       "/" +
       repo +
-      ".git " +
+      ".git" +
+      " " +
       repo +
       "-clean-" +
       (await uuid()) +
       ".git",
   );
   ("cd into directory");
-  let stdout2 = await command_line(
-    "git remote add origin https://github.com/Jared-Grace/love.git",
+  let stdout2 = await command_line_git(
+    "remote add origin https://github.com/Jared-Grace/love.git",
   );
 }
