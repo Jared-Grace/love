@@ -8,14 +8,9 @@ export async function git_history_delete(user, repo, f_path) {
     "make sure all changes are in repo first like pushing; may need to coordinate with other users",
   );
   const git_repo_url = "https://github.com/" + user + "/" + repo + ".git";
+  const repo_folder = repo + "-clean-" + (await uuid()) + ".git";
   let stdout = await command_line_git(
-    "clone --mirror " +
-      git_repo_url +
-      " " +
-      repo +
-      "-clean-" +
-      (await uuid()) +
-      ".git",
+    "clone --mirror " + git_repo_url + " " + repo_folder,
   );
   todo("cd into directory");
   let stdout2 = await command_line_git("remote add origin " + git_repo_url);
