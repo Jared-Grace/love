@@ -12096,7 +12096,8 @@
    "folder_find_starts_with",
    "folder_read_async",
    "folder_read_files",
-   "folder_read"
+   "folder_read",
+   "repos"
   ],
   "fop": [
    "apps_get",
@@ -16070,6 +16071,9 @@
   ],
   "folder_name": [
    "git_repo_clone"
+  ],
+  "repos_folder": [
+   "repos"
   ]
  },
  "functions": {
@@ -30666,9 +30670,11 @@
   "repos": {
    "async": true,
    "identifiers": [
+    "repos_folder",
     "folder_read",
     "marker",
     "repos",
+    "path_folder",
     "all"
    ]
   },
