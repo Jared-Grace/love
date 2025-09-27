@@ -12086,8 +12086,7 @@
    "folder_find_starts_with",
    "folder_read_async",
    "folder_read_files",
-   "folder_read",
-   "repos"
+   "folder_read"
   ],
   "fop": [
    "apps_get",
@@ -12841,7 +12840,6 @@
   "files": [
    "folder_find_starts_with",
    "folder_read_async",
-   "repos",
    "folder_read_files"
   ],
   "sw": [
@@ -16050,7 +16048,6 @@
   ],
   "folder_read_files": [
    "folder_read_files",
-   "repos",
    "functions_names"
   ]
  },
@@ -30641,12 +30638,9 @@
    "async": true,
    "identifiers": [
     "folder_read",
-    "folder_read_files",
     "marker",
     "repos",
-    "files",
-    "all",
-    "path_folder"
+    "all"
    ]
   },
   "folder_read_files": {
