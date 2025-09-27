@@ -2301,10 +2301,11 @@
   "s call",
   "is function_params_new",
   "s transform",
-  "fw cl python_install"
+  "fw cl python_install",
+  "fw cl git_filter_repo"
  ],
  "marker_current": "1",
- "function_current": "python_install",
+ "function_current": "git_filter_repo",
  "terminal": false,
  "identifiers": {
   "log": [
