@@ -2653,7 +2653,8 @@
    "functions_search",
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
-   "git_history_delete"
+   "git_history_delete",
+   "sandbox_5"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15939,6 +15940,9 @@
   ],
   "git_history_delete": [
    "git_history_delete"
+  ],
+  "sandbox_5": [
+   "sandbox_5"
   ]
  },
  "functions": {
@@ -30469,6 +30473,13 @@
    "identifiers": [
     "marker",
     "git_history_delete"
+   ]
+  },
+  "sandbox_5": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "sandbox_5"
    ]
   }
  },
