@@ -2329,11 +2329,11 @@
   "d",
   "as param",
   "fc",
-  "as current",
   "s clone",
   "s data",
   "fc data_all",
-  "o fc"
+  "o fc",
+  "as current"
  ],
  "marker_current": "1",
  "function_current": "functions_combine",
