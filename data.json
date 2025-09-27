@@ -2329,13 +2329,13 @@
   "as param",
   "fc",
   "s clone",
-  "s data",
   "fc data_all",
   "o fc",
   "as current",
   "fs data_all",
   "u pn",
-  "pn f_path \"data.json\""
+  "pn f_path \"data.json\"",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "data_all",
