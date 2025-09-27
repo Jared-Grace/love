@@ -3349,7 +3349,8 @@
    "function_open_app",
    "folder_previous",
    "html_update_dev",
-   "git_history_delete"
+   "git_history_delete",
+   "path_join"
   ],
   "i_names": [
    "data_identifiers_file",
@@ -3874,7 +3875,8 @@
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "folder_read_files"
+   "folder_read_files",
+   "path_join"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5309,7 +5311,8 @@
    "string_trim_right",
    "function_list_generate",
    "roman_to_integer",
-   "catch_only_run_async"
+   "catch_only_run_async",
+   "path_join"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -12880,7 +12883,8 @@
    "firebase_service_account",
    "html_update_dev",
    "folder_previous",
-   "git_history_delete"
+   "git_history_delete",
+   "path_join"
   ],
   "service_account": [
    "firebase_service_account",
@@ -22861,6 +22865,8 @@
   },
   "path_join": {
    "identifiers": [
+    "not",
+    "folder_previous",
     "path_join",
     "segments",
     "parts",
@@ -22869,7 +22875,9 @@
     "s",
     "length",
     "pop",
+    "previous",
     "push",
+    "v",
     "join"
    ],
    "async": false
