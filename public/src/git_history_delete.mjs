@@ -1,7 +1,7 @@
 import { command_line_git } from "./command_line_git.mjs";
 import { uuid } from "./uuid.mjs";
 import { marker } from "./marker.mjs";
-export async function git_history_delete(user, repo, file_name) {
+export async function git_history_delete(user, repo, f_path) {
   marker("1");
   ("make sure all changes are in repo first like pushing");
   const git_repo_url = "https://github.com/" + user + "/" + repo + ".git";
@@ -16,7 +16,7 @@ export async function git_history_delete(user, repo, file_name) {
   );
   ("cd into directory");
   let stdout2 = await command_line_git("remote add origin " + git_repo_url);
-  await command_line_git("filter-repo --path fb-session.json --invert-paths");
+  await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
   await command_line_git("push --force --tags origin");
 }
