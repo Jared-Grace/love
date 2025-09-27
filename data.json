@@ -2314,7 +2314,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "sandbox_5"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3917,7 +3918,8 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "sandbox_5"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30478,8 +30480,10 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
+    "log",
     "marker",
-    "sandbox_5"
+    "sandbox_5",
+    "message"
    ]
   }
  },
