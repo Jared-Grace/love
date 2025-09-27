@@ -8025,7 +8025,8 @@
    "messenger_reply_messages_urls_add",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "git_history_delete"
+   "git_history_delete",
+   "git_repo_clone"
   ],
   "__dirname": [
    "function_import",
@@ -16000,16 +16001,19 @@
    "sandbox_5"
   ],
   "user": [
-   "git_history_delete"
+   "git_history_delete",
+   "git_repo_clone"
   ],
   "repo": [
-   "git_history_delete"
+   "git_history_delete",
+   "git_repo_clone"
   ],
   "stdout2": [
    "git_history_delete"
   ],
   "git_repo_url": [
-   "git_history_delete"
+   "git_history_delete",
+   "git_repo_clone"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -30675,8 +30679,12 @@
   "git_repo_clone": {
    "async": false,
    "identifiers": [
+    "git_repo_url",
     "marker",
-    "git_repo_clone"
+    "git_repo_clone",
+    "url",
+    "user",
+    "repo"
    ]
   }
  },
