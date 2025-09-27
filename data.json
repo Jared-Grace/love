@@ -3972,8 +3972,7 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log",
-   "git_history_delete"
+   "command_line_log"
   ],
   "log_keep": [
    "catch_log",
@@ -30489,7 +30488,6 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
-    "command_line",
     "command_line_git",
     "uuid",
     "marker",
