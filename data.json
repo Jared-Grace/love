@@ -15976,8 +15976,7 @@
    "git_history_delete"
   ],
   "description": [
-   "todo",
-   "git_history_delete"
+   "todo"
   ]
  },
  "functions": {
@@ -30515,7 +30514,6 @@
     "user",
     "repo",
     "f_path",
-    "description",
     "git_repo_url",
     "repo_folder",
     "stdout",
