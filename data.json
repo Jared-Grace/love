@@ -6242,7 +6242,8 @@
    "js_import_inside_task_simple",
    "js_let_add_task_simple",
    "task_new",
-   "todo"
+   "todo",
+   "git_history_delete"
   ],
   "data_watch_set_task_add_return": [
    "data_watch_set_task_add_return"
@@ -30496,6 +30497,7 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "todo",
     "command_line_git",
     "uuid",
     "marker",
