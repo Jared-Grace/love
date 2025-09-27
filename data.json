@@ -193,7 +193,8 @@
   "sss": "string_split_space",
   "ei": "each_index",
   "lfdp": "list_find_property",
-  "clg": "command_line_git"
+  "clg": "command_line_git",
+  "td": "todo"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2310,7 +2311,8 @@
   "s git",
   "u clg",
   "a clg",
-  "a clg command_line_git"
+  "a clg command_line_git",
+  "a td todo"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
