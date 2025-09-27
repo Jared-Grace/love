@@ -12,6 +12,6 @@ export function js_identifiers_named_count(ast, i_name) {
     }
     js_visit_type(ast, "Identifier", lambda2);
   }
-  let count_import = counter(lambda3);
-  return count_import;
+  let count = counter(lambda3);
+  return count;
 }
