@@ -3579,8 +3579,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "function_params_new"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4782,8 +4781,7 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders",
-   "function_params_new"
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -6109,7 +6107,8 @@
    "marker_call",
    "marker_param_add",
    "data_function_current_restore",
-   "marker_rename"
+   "marker_rename",
+   "function_params_new"
   ],
   "value_initial": [
    "data_get",
@@ -11130,8 +11129,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "function_params_new"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -17769,14 +17767,12 @@
     "param_names",
     "lambda",
     "ast",
-    "f_name",
+    "f_name_current",
     "result",
     "properties",
-    "obj",
     "lambda2",
-    "item",
-    "waited",
-    "list"
+    "f_name",
+    "waited"
    ],
    "async": true
   },
