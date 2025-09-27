@@ -12,7 +12,7 @@ export async function function_params_new(param_names_comma, value_default) {
   }
   let result = await data_identifiers_search(s);
   function lambda2(v) {
-    let node = v;
+    let { node } = v;
   }
   js_visit_type(ast2, "CallExpression", lambda2);
   let name = js_call_callee_name(expression);
