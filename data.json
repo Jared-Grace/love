@@ -2683,7 +2683,8 @@
    "git_repo_rename_normalize",
    "repos",
    "folder_read_files",
-   "folder_read"
+   "folder_read",
+   "git_repo_clone"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16052,6 +16053,9 @@
   "folder_read_files": [
    "folder_read_files",
    "functions_names"
+  ],
+  "git_repo_clone": [
+   "git_repo_clone"
   ]
  },
  "functions": {
@@ -30666,6 +30670,13 @@
     "readdirSync",
     "files",
     "filter"
+   ]
+  },
+  "git_repo_clone": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "git_repo_clone"
    ]
   }
  },
