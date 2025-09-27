@@ -5499,10 +5499,8 @@
    "error_attention_clear"
   ],
   "folder_read": [
-   "functions_names",
    "folder_read",
-   "apps_get",
-   "repos"
+   "apps_get"
   ],
   "function_name_extension": [
    "functions_names",
@@ -16052,7 +16050,9 @@
    "repos"
   ],
   "folder_read_files": [
-   "folder_read_files"
+   "folder_read_files",
+   "repos",
+   "functions_names"
   ]
  },
  "functions": {
@@ -16225,7 +16225,7 @@
   "functions_names": {
    "identifiers": [
     "functions_path",
-    "folder_read",
+    "folder_read_files",
     "function_name_extension",
     "string_suffix_without",
     "list_map",
@@ -30648,7 +30648,7 @@
   "repos": {
    "async": false,
    "identifiers": [
-    "folder_read",
+    "folder_read_files",
     "marker",
     "repos",
     "files"
