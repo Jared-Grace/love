@@ -2341,10 +2341,11 @@
   "o export async function data_property_get(property_name, d_path) {",
   "",
   "p",
-  "o data_property_get"
+  "o data_property_get",
+  "fs data_get"
  ],
  "marker_current": "1",
- "function_current": "data_property_get",
+ "function_current": "data_get",
  "terminal": false,
  "identifiers": {
   "log": [
