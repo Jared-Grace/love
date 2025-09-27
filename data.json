@@ -172,7 +172,7 @@
   "jt": "json_to",
   "fir": "file_read",
   "lun": "list_unique",
-  "fdr": "folder_read",
+  "fdr": "folder_read_files",
   "flr": "file_read",
   "lmi": "list_multiple_is",
   "s2": "sandbox_2",
@@ -2325,7 +2325,7 @@
   "r folder_read folder_read_files"
  ],
  "marker_current": "1",
- "function_current": "repos",
+ "function_current": "folder_read_files",
  "terminal": false,
  "identifiers": {
   "log": [
