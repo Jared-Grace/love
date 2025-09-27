@@ -2651,7 +2651,8 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "git_history_delete"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3964,7 +3965,8 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log"
+   "command_line_log",
+   "git_history_delete"
   ],
   "log_keep": [
    "catch_log",
@@ -5961,7 +5963,8 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "git_history_delete"
   ],
   "stdout": [
    "command_line",
@@ -5972,7 +5975,8 @@
    "command_line_generic",
    "sandbox_2",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "git_history_delete"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -15934,6 +15938,9 @@
   ],
   "token": [
    "reply_sequence"
+  ],
+  "git_history_delete": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30458,9 +30465,19 @@
     "a",
     "matches"
    ]
+  },
+  "git_history_delete": {
+   "async": true,
+   "identifiers": [
+    "command_line",
+    "marker",
+    "git_history_delete",
+    "stdout",
+    "command"
+   ]
   }
  },
- "git_push_when": "2025-09-27T18:09:29.911Z",
+ "git_push_when": "2025-09-27T21:31:08.905Z",
  "error_attention": null,
  "app_current": "replace"
 }
