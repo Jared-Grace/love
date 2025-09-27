@@ -2334,8 +2334,8 @@
   "o fc",
   "as current",
   "fs data_all",
-  "u pn",
-  "pn f_path \"data.json\""
+  "pn f_path \"data.json\"",
+  "u pn"
  ],
  "marker_current": "1",
  "function_current": "data_all",
