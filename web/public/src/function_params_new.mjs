@@ -24,7 +24,7 @@ export async function function_params_new(
     let arguments2 = object_property_get(node, "arguments");
     function lambda3(value_default) {
       let expression2 = js_parse_expression(value_default);
-      list_add(list, item);
+      list_add(arguments2, expression2);
     }
     each(values_default, lambda3);
   }
