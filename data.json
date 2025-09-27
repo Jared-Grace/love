@@ -2656,7 +2656,8 @@
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
    "python_install",
-   "git_filter_repo"
+   "git_filter_repo",
+   "git_filter_repo_install"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3847,7 +3848,8 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "python_install",
-   "git_filter_repo"
+   "git_filter_repo",
+   "git_filter_repo_install"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3974,7 +3976,8 @@
    "firebase_deploy",
    "command_line_log",
    "python_install",
-   "git_filter_repo"
+   "git_filter_repo",
+   "git_filter_repo_install"
   ],
   "log_keep": [
    "catch_log",
@@ -5973,7 +5976,8 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "git_filter_repo"
+   "git_filter_repo",
+   "git_filter_repo_install"
   ],
   "stdout": [
    "command_line",
@@ -15954,6 +15958,9 @@
   ],
   "git_filter_repo": [
    "git_filter_repo"
+  ],
+  "git_filter_repo_install": [
+   "git_filter_repo_install"
   ]
  },
  "functions": {
@@ -30494,6 +30501,16 @@
     "command_line",
     "marker",
     "git_filter_repo",
+    "command",
+    "v"
+   ]
+  },
+  "git_filter_repo_install": {
+   "async": true,
+   "identifiers": [
+    "command_line",
+    "marker",
+    "git_filter_repo_install",
     "command",
     "v"
    ]
