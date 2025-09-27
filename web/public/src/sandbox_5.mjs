@@ -1,7 +1,8 @@
+import { command_line } from "./command_line.mjs";
 import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
-export function sandbox_5() {
+export async function sandbox_5() {
   marker("1");
   log("hi ish");
-  log(message);
+  let stdout = await command_line(command);
 }
