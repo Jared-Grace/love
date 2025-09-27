@@ -6027,11 +6027,13 @@
    "git_commit",
    "git_push",
    "git_rebase",
-   "git_history_delete"
+   "git_history_delete",
+   "git_repo_clone"
   ],
   "command_git": [
    "command_line_git",
-   "git_push"
+   "git_push",
+   "git_repo_clone"
   ],
   "readline": [
    "command_line_read"
@@ -30677,14 +30679,16 @@
    ]
   },
   "git_repo_clone": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "command_line_git",
     "git_repo_url",
     "marker",
     "git_repo_clone",
     "user",
     "repo",
-    "url"
+    "url",
+    "command_git"
    ]
   }
  },
