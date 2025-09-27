@@ -16022,6 +16022,9 @@
   ],
   "git_repo_rename_normalize": [
    "git_repo_rename_normalize"
+  ],
+  "owner": [
+   "git_repo_rename"
   ]
  },
  "functions": {
@@ -30594,6 +30597,7 @@
     "command_line",
     "marker",
     "git_repo_rename",
+    "owner",
     "from",
     "to",
     "stdout"
