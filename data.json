@@ -6396,7 +6396,8 @@
    "tasks_run",
    "object_merge_generic",
    "messenger_reply",
-   "reply_test"
+   "reply_test",
+   "function_params_new"
   ],
   "each_object": [
    "each_object",
@@ -7230,7 +7231,8 @@
    "js_dollar_choice_arguments_names",
    "js_property_parse_expression_add",
    "messenger_reply",
-   "reply_test"
+   "reply_test",
+   "function_params_new"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11128,7 +11130,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "function_params_new"
   ],
   "Object": [
    "object_properties",
@@ -17754,6 +17757,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "object_properties",
     "list_map_unordered_async",
     "data_function_current_get",
     "data_identifiers_search",
@@ -17767,6 +17771,8 @@
     "ast",
     "f_name",
     "result",
+    "properties",
+    "obj",
     "lambda2",
     "item",
     "waited",
