@@ -30682,9 +30682,9 @@
     "git_repo_url",
     "marker",
     "git_repo_clone",
-    "url",
     "user",
-    "repo"
+    "repo",
+    "url"
    ]
   }
  },
