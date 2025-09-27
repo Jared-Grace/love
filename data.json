@@ -3328,8 +3328,7 @@
    "reply_test",
    "reply_sequence",
    "reply",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3872,8 +3871,7 @@
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
    "messenger_reply",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4446,8 +4444,7 @@
    "ebible_references_parse_lines",
    "messenger_reply_unreplied",
    "git_repo_rename_normalize",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "separator": [
    "watch",
@@ -5625,8 +5622,7 @@
    "sandbox_2",
    "folder_user",
    "folder_user_combine",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "fs": [
    "file_copy",
@@ -5647,17 +5643,14 @@
    "firebase_storage_exists",
    "firebase_storage_download",
    "firebase_upload_generic",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "statSync": [
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "isFile": [
    "folder_read_async",
-   "folder_read_files",
-   "folder_read"
+   "folder_read_files"
   ],
   "v2": [
    "function_identifier_replace",
@@ -16245,18 +16238,11 @@
   },
   "folder_read": {
    "identifiers": [
-    "path_join",
     "marker",
     "folder_read",
     "path_folder",
-    "lambda",
-    "file",
-    "result",
-    "v",
-    "fs",
-    "statSync",
-    "isFile",
     "all",
+    "fs",
     "readdirSync"
    ],
    "async": false
