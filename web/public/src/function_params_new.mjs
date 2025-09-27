@@ -18,7 +18,6 @@ export async function function_params_new(
   function lambda(ast) {
     js_declaration_single_params_add(ast, param_names);
   }
-  let result = await data_identifiers_search(s);
   let values_default = string_split(values_default_comma, ",");
   function lambda2(v) {
     let { node } = v;
@@ -30,6 +29,7 @@ export async function function_params_new(
     each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
+  let result = await data_identifiers_search(s);
   async function lambda4(item) {}
   await each_async(list, lambda4);
   let name = js_call_callee_name(expression);
