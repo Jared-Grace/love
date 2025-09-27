@@ -2316,7 +2316,6 @@
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error",
-   "ebible_verses",
    "reply_sequence"
   ],
   "function_path_to_name": [
@@ -27084,7 +27083,6 @@
   "ebible_verses": {
    "async": true,
    "identifiers": [
-    "log",
     "urdu_allah_to_god",
     "list_add",
     "list_index_of_last",
