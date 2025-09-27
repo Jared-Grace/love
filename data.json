@@ -4088,7 +4088,6 @@
    "js_await_wrap",
    "object_property_lambda",
    "object_property_lambda_async",
-   "js_dollar_ien",
    "js_assign_combine",
    "html_disable_set",
    "object_property_set_exists_not",
@@ -4323,7 +4322,6 @@
    "js_dollar_choice_arguments",
    "js_dollar_choice_arguments_name",
    "js_expand_generic",
-   "js_dollar_ien",
    "js_assign_combine",
    "js_calls_to_each",
    "js_call_callee_name",
@@ -8449,7 +8447,6 @@
    "js_imports_paths_fix",
    "js_await_wrap",
    "js_expand_generic",
-   "js_dollar_ien",
    "js_calls_to_each",
    "js_call_callee_name",
    "js_auto_transform_new_inner",
@@ -9727,7 +9724,6 @@
   ],
   "js_call_new_expression": [
    "js_call_new_expression",
-   "js_dollar_ien",
    "js_dollar_if_call"
   ],
   "js_code_braces_empty": [
@@ -9979,7 +9975,6 @@
   "js_dollar_i": [
    "js_dollar_i",
    "js_dollar_choices",
-   "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_if_call"
   ],
@@ -16122,6 +16117,9 @@
   "js_dollar_ine": [
    "js_dollar_ine",
    "js_dollar_choices"
+  ],
+  "js_dollar_ien_generic": [
+   "js_dollar_ien"
   ]
  },
  "functions": {
@@ -26233,9 +26231,7 @@
   "js_dollar_ien": {
    "async": true,
    "identifiers": [
-    "object_property_set",
-    "js_call_new_expression",
-    "js_dollar_i",
+    "js_dollar_ien_generic",
     "null_is",
     "js_dollar_ien",
     "remaining",
@@ -26245,9 +26241,7 @@
     "stack3",
     "ast",
     "afters",
-    "fn",
-    "expression",
-    "name"
+    "fn"
    ]
   },
   "js_assign_combine": {
