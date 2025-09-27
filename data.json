@@ -1624,7 +1624,6 @@
   "data_app_current_get",
   "u ff",
   "fws firebase_deploy_function app_current",
-  "s combine",
   "a ffc firebase_deploy_function_app_current",
   "c html_document_body html_document_head",
   "s element",
@@ -2343,7 +2342,8 @@
   "fs data_get",
   "p",
   "pn d_path d_path",
-  "fs data_transform"
+  "fs data_transform",
+  "s combine"
  ],
  "marker_current": "1",
  "function_current": "data_transform",
