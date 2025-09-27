@@ -13,7 +13,7 @@ export async function git_history_delete(user, repo, f_path) {
   let stdout = await command_line_git(
     "clone --mirror " + git_repo_url + " " + repo_folder,
   );
-  todo("cd into directory");
+  process.chdir(repo_folder);
   let stdout2 = await command_line_git("remote add origin " + git_repo_url);
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
