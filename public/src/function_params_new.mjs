@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -23,6 +24,7 @@ export async function function_params_new(
     let arguments2 = object_property_get(node, "arguments");
     function lambda3(value_default) {
       let expression2 = js_parse_expression(value_default);
+      list_add(list, item);
     }
     each(values_default, lambda3);
   }
