@@ -2658,7 +2658,8 @@
    "functions_search",
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
-   "git_history_delete"
+   "git_history_delete",
+   "sandbox_5"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -30480,8 +30481,9 @@
    ]
   },
   "sandbox_5": {
-   "async": true,
+   "async": false,
    "identifiers": [
+    "marker",
     "sandbox_5"
    ]
   }
