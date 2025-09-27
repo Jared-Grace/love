@@ -3034,7 +3034,8 @@
    "js_code_declaration_args",
    "app_message",
    "function_list_generate",
-   "function_params_new"
+   "function_params_new",
+   "repos"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3866,7 +3867,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "repos"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -8526,7 +8528,8 @@
    "function_param_swap_task_simple"
   ],
   "function_read": [
-   "function_read"
+   "function_read",
+   "repos"
   ],
   "function_rename": [
    "function_rename",
@@ -30627,10 +30630,13 @@
    ]
   },
   "repos": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_read",
     "marker",
-    "repos"
+    "repos",
+    "v",
+    "f_name"
    ]
   }
  },
