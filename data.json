@@ -2289,7 +2289,6 @@
   "n reply_on_match",
   "s set",
   "rt",
-  "p",
   "s add,mult",
   "np",
   "n user_repo_set",
@@ -2319,6 +2318,7 @@
   "fws git_repo_rename normalize",
   "s replace",
   "git_repo_rename_normalize karate-code",
+  "p",
   "grrn Jared-Grace karate-code"
  ],
  "marker_current": "1",
