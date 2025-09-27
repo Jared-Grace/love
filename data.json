@@ -2676,7 +2676,8 @@
    "sandbox_5",
    "folder_delete",
    "git_repo_rename",
-   "git_repo_rename_normalize"
+   "git_repo_rename_normalize",
+   "repos"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16030,6 +16031,9 @@
   ],
   "name_old": [
    "git_repo_rename_normalize"
+  ],
+  "repos": [
+   "repos"
   ]
  },
  "functions": {
@@ -30621,9 +30625,16 @@
     "stdout",
     "result"
    ]
+  },
+  "repos": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "repos"
+   ]
   }
  },
- "git_push_when": "2025-09-27T21:31:08.905Z",
+ "git_push_when": "2025-09-27T22:35:23.049Z",
  "error_attention": null,
  "app_current": "replace"
 }
