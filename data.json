@@ -2316,10 +2316,11 @@
   "s folder",
   "s git",
   "s git,rename",
-  "n git_repo_rename"
+  "n git_repo_rename",
+  "fws git_repo_rename normalize"
  ],
  "marker_current": "1",
- "function_current": "git_repo_rename",
+ "function_current": "git_repo_rename_normalize",
  "terminal": false,
  "identifiers": {
   "log": [
