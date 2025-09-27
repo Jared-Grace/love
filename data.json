@@ -191,7 +191,6 @@
   "ll": "list_last",
   "str": "string_trim",
   "sss": "string_split_space",
-  "": "sss",
   "ei": "each_index",
   "lfdp": "list_find_property"
  },
@@ -1524,7 +1523,6 @@
   "s ident",
   "s data,f",
   "r html_button html_button_element",
-  "np",
   "nj imports_paths_fix",
   "fts js_imports_paths_fix",
   "ftc js_imports_paths_fix app_replace",
@@ -2299,7 +2297,8 @@
   "s set",
   "rt",
   "p",
-  "s add,mult"
+  "s add,mult",
+  "np"
  ],
  "marker_current": "1",
  "function_current": "reply_on_match",
@@ -30443,7 +30442,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-27T02:28:18.346Z",
+ "git_push_when": "2025-09-27T18:09:29.911Z",
  "error_attention": null,
  "app_current": "replace"
 }
