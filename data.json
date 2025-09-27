@@ -1856,7 +1856,6 @@
   "s app",
   "s js,dec",
   "n js_code_dot",
-  "s call",
   "s bible",
   "n ebible_version_verses",
   "ebible_version_download engbsb",
@@ -2299,7 +2298,8 @@
   "np",
   "n user_repo_set",
   "s data",
-  "s param"
+  "s param",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "user_repo_set",
