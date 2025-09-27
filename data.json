@@ -2173,7 +2173,6 @@
   "ebible_index_flat_upload_name",
   "s verses",
   "is ebible_verse",
-  "s dollar",
   "as doll",
   "nd ib",
   "sb",
@@ -2327,7 +2326,8 @@
   "s js,each",
   "data_identifiers_search a",
   "s transform",
-  "s ien"
+  "s ien",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
