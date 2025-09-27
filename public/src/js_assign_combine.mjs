@@ -43,6 +43,8 @@ export function js_assign_combine(ast) {
     }
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
+      if (false) {
+      }
       let init = object_property_get(declaration, "init");
       object_property_set(declaration2, "init", init);
       list_remove(e1, node);
