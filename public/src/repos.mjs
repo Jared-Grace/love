@@ -1,6 +1,6 @@
-import { function_read } from "./function_read.mjs";
+import { file_read } from "./file_read.mjs";
 import { marker } from "./marker.mjs";
 export async function repos() {
   marker("1");
-  let v = await function_read(f_name);
+  let contents = await file_read(file_path);
 }
