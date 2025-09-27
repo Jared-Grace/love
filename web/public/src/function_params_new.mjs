@@ -1,3 +1,4 @@
+import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
@@ -33,6 +34,10 @@ export async function function_params_new(
       each(values_default, lambda3);
     }
     js_visit_type(ast2, "CallExpression", lambda2);
+    let output = await function_transform(
+      f_name2,
+      async function lambda5(ast3) {},
+    );
   }
   await each_async(result, lambda4);
   let name = js_call_callee_name(expression);
