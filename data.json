@@ -15969,6 +15969,9 @@
   ],
   "git_repo_url": [
    "git_history_delete"
+  ],
+  "repo_folder": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30506,6 +30509,7 @@
     "repo",
     "f_path",
     "git_repo_url",
+    "repo_folder",
     "stdout",
     "stdout2"
    ]
