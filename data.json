@@ -2302,7 +2302,8 @@
   "is function_params_new",
   "s transform",
   "fw cl python_install",
-  "fw cl git_filter_repo"
+  "fw cl git_filter_repo",
+  "r git_filter_repo git_filter_repo_install"
  ],
  "marker_current": "1",
  "function_current": "git_filter_repo",
