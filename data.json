@@ -347,7 +347,6 @@
   "au function_new_js",
   "n function_name_combine",
   "a fw function_wrap",
-  "u pn",
   "i function_wrap",
   "de function_params_new",
   "fw function_param_new function_params_new",
@@ -2334,7 +2333,8 @@
   "fc data_all",
   "o fc",
   "as current",
-  "fs data_all"
+  "fs data_all",
+  "u pn"
  ],
  "marker_current": "1",
  "function_current": "data_all",
