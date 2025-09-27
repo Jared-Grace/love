@@ -1,3 +1,4 @@
+import { object_properties } from "./object_properties.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
@@ -12,6 +13,7 @@ export async function function_params_new(param_names_comma) {
   }
   let f_name = await data_function_current_get();
   let result = await data_identifiers_search(f_name);
+  let properties = object_properties(obj);
   async function lambda2(item) {}
   let waited = await list_map_unordered_async(list, lambda2);
 }
