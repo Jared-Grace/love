@@ -1,3 +1,4 @@
+import { object_properties } from "./object_properties.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
@@ -24,6 +25,7 @@ export async function function_params_new(
   let values_default = string_split(values_default_comma, ",");
   let f_name_current = await data_function_current_get();
   let result = await data_identifiers_search(f_name_current);
+  let properties = object_properties(obj);
   async function lambda4(f_name) {
     async function lambda5(ast) {
       function lambda2(v) {
