@@ -1050,8 +1050,6 @@
   "ars terminal",
   "oe ft",
   "s function_run",
-  "fc",
-  "as current",
   "fp jaa",
   "ir type \"CallExpression\"",
   "oe ir",
@@ -2330,7 +2328,9 @@
   "o w",
   "data_functions_get",
   "d",
-  "as param"
+  "as param",
+  "fc",
+  "as current"
  ],
  "marker_current": "1",
  "function_current": "watch",
