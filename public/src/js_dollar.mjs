@@ -32,7 +32,9 @@ export async function js_dollar(ast) {
       }
       let remaining = list_skip(split, 2);
       if (second === choice_name) {
-        log(message);
+        log({
+          second,
+        });
         marker("choice_arguments");
         const a = {
           remaining,
