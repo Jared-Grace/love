@@ -1,3 +1,4 @@
+import { null_is } from "./null_is.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
@@ -28,6 +29,8 @@ export async function function_params_new(
       function lambda2(v) {
         let { node } = v;
         let name = js_call_callee_name(node);
+        if (null_is(value)) {
+        }
         let arguments2 = object_property_get(node, "arguments");
         function lambda3(value_default) {
           let expression2 = js_parse_expression(value_default);
