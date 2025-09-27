@@ -2702,7 +2702,8 @@
    "git_filter_repo_install",
    "python_install",
    "user_repo_set",
-   "functions_combine"
+   "functions_combine",
+   "data_all"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16654,6 +16655,7 @@
   },
   "data_all": {
    "identifiers": [
+    "marker",
     "file_read_json",
     "data_all",
     "file_path",
