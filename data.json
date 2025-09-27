@@ -3005,7 +3005,8 @@
    "firebase_storage_function_run",
    "js_code_declaration_args",
    "app_message",
-   "function_list_generate"
+   "function_list_generate",
+   "function_params_new"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -5339,8 +5340,7 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply",
-   "function_params_new"
+   "messenger_reply"
   ],
   "a": [
    "string_suffix_without",
@@ -6094,7 +6094,8 @@
    "marker_next_await",
    "marker_param_add",
    "data_function_current_restore",
-   "marker_rename"
+   "marker_rename",
+   "function_params_new"
   ],
   "f_name_current": [
    "data_function_current_get",
@@ -17747,6 +17748,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "data_function_current_get",
     "data_identifiers_search",
     "function_transform_current",
     "js_declaration_single_params_add",
@@ -17756,8 +17758,8 @@
     "param_names",
     "lambda",
     "ast",
-    "result",
-    "s"
+    "f_name",
+    "result"
    ],
    "async": true
   },
