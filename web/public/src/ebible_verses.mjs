@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_index_of_last } from "./list_index_of_last.mjs";
@@ -28,7 +27,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda(la) {
     function lambda2(verse_number) {
       verse_number += "";
-      log(verse_number);
       let index = list_index_of_last(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, verse_number);
