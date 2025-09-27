@@ -12,8 +12,6 @@ export async function function_params_new(param_names_comma) {
   }
   let f_name = await data_function_current_get();
   let result = await data_identifiers_search(f_name);
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda2(item) {},
-  );
+  async function lambda2(item) {}
+  let waited = await list_map_unordered_async(list, lambda2);
 }
