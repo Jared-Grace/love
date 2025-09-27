@@ -2306,7 +2306,7 @@
   "r git_filter_repo git_filter_repo_install"
  ],
  "marker_current": "1",
- "function_current": "git_filter_repo",
+ "function_current": "git_filter_repo_install",
  "terminal": false,
  "identifiers": {
   "log": [
