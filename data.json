@@ -2323,10 +2323,11 @@
   "r folder_read folder_read_files",
   "n folder_read",
   "p",
-  "repos"
+  "repos",
+  "n git_repo_clone"
  ],
  "marker_current": "1",
- "function_current": "folder_read",
+ "function_current": "git_repo_clone",
  "terminal": false,
  "identifiers": {
   "log": [
