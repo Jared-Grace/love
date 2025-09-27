@@ -4,5 +4,6 @@ import { marker } from "./marker.mjs";
 export async function sandbox_5() {
   marker("1");
   log("hi ish");
-  let stdout = await command_line(command);
+  let stdout = await command_line("dir");
+  return stdout;
 }
