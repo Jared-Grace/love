@@ -3877,7 +3877,8 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "folder_read_files",
-   "path_join"
+   "path_join",
+   "function_params_new"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4822,8 +4823,7 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders",
-   "function_params_new"
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5480,8 +5480,7 @@
    "catch_only_run_async",
    "reply",
    "reply_sequence",
-   "reply_on_match",
-   "function_params_new"
+   "reply_on_match"
   ],
   "without": [
    "string_suffix_without",
@@ -8460,7 +8459,8 @@
    "js_visit_type_each_async",
    "js_node_type_not_is_if",
    "js_property_generic",
-   "js_dollar_new"
+   "js_dollar_new",
+   "function_params_new"
   ],
   "key": [
    "object_invert",
@@ -8747,7 +8747,8 @@
    "marker_functionize",
    "js_identifiers_named_count",
    "js_log_remove",
-   "js_assign_combine"
+   "js_assign_combine",
+   "function_params_new"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -10676,8 +10677,7 @@
   ],
   "js_visit_each": [
    "js_unparse",
-   "js_visit_each",
-   "function_params_new"
+   "js_visit_each"
   ],
   "js_visit_filter": [
    "js_unparse",
@@ -16082,6 +16082,9 @@
   "repos_folder": [
    "repos",
    "git_repo_clone"
+  ],
+  "ast2": [
+   "function_params_new"
   ]
  },
  "functions": {
@@ -17893,7 +17896,7 @@
   },
   "function_params_new": {
    "identifiers": [
-    "js_visit_each",
+    "js_visit_type",
     "js_call_callee_name",
     "data_identifiers_search",
     "function_transform_current",
@@ -17906,9 +17909,10 @@
     "ast",
     "result",
     "s",
+    "ast2",
+    "type",
     "lambda2",
-    "item",
-    "a",
+    "v",
     "name",
     "expression"
    ],
