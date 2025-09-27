@@ -5365,7 +5365,8 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply",
+   "git_repo_rename_normalize"
   ],
   "a": [
    "string_suffix_without",
@@ -11043,7 +11044,8 @@
    "marker_call_replace_generic",
    "string_replace",
    "firebase_storage_url",
-   "firebase_path_fix"
+   "firebase_path_fix",
+   "git_repo_rename_normalize"
   ],
   "marker_call_replace": [
    "marker_call_replace"
@@ -13019,7 +13021,8 @@
   "string_replace": [
    "string_replace",
    "firebase_storage_url",
-   "firebase_path_fix"
+   "firebase_path_fix",
+   "git_repo_rename_normalize"
   ],
   "firebase_storage_url": [
    "firebase_storage_url",
@@ -16018,6 +16021,12 @@
    "git_repo_rename_normalize"
   ],
   "git_repo_rename_normalize": [
+   "git_repo_rename_normalize"
+  ],
+  "from2": [
+   "git_repo_rename_normalize"
+  ],
+  "to2": [
    "git_repo_rename_normalize"
   ]
  },
@@ -30599,12 +30608,17 @@
   "git_repo_rename_normalize": {
    "async": true,
    "identifiers": [
+    "string_replace",
     "git_repo_rename",
     "marker",
     "git_repo_rename_normalize",
     "from",
-    "to",
-    "v"
+    "replaced",
+    "s",
+    "from2",
+    "to2",
+    "v",
+    "to"
    ]
   }
  },
