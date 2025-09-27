@@ -1,4 +1,3 @@
-import { marker } from "./marker.mjs";
 import { data_save } from "./data_save.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { data_get } from "./data_get.mjs";
@@ -8,7 +7,6 @@ export async function data_transform(
   value_initial,
   lambda$previous,
 ) {
-  marker("1");
   let d_path = data_path();
   let { data, value: value_previous } = await data_get(
     property_name,
