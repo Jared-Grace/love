@@ -2315,10 +2315,11 @@
   "s file",
   "s folder",
   "s git",
-  "s git,rename"
+  "s git,rename",
+  "n git_repo_rename"
  ],
  "marker_current": "1",
- "function_current": "folder_delete",
+ "function_current": "git_repo_rename",
  "terminal": false,
  "identifiers": {
   "log": [
