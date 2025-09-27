@@ -13,6 +13,7 @@ import { js_call_function_if } from "./js_call_function_if.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
+  log("here");
   let functions = await data_functions_get();
   async function lambda(v) {
     let node = object_property_get(v, "node");
@@ -42,5 +43,4 @@ export async function js_await_add(ast) {
   }
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
-  log("here");
 }
