@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { not } from "./not.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_await } from "./js_await.mjs";
@@ -40,4 +41,6 @@ export async function js_await_add(ast) {
     await js_call_function_if(node, lambda3);
   }
   await js_visit_type_each_async(ast, "CallExpression", lambda);
+  return;
+  log(message);
 }
