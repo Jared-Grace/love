@@ -2301,7 +2301,8 @@
   "s call",
   "n git_history_delete",
   "s sand",
-  "n sandbox_5"
+  "n sandbox_5",
+  "sandbox_5"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
