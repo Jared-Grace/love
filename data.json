@@ -5970,8 +5970,7 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "sandbox_5"
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -30490,8 +30489,7 @@
     "log",
     "marker",
     "sandbox_5",
-    "stdout",
-    "command"
+    "stdout"
    ]
   }
  },
