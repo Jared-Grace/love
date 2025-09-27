@@ -3617,7 +3617,8 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "function_params_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -4826,7 +4827,8 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders"
+   "ebible_languages_to_bible_folders",
+   "function_params_new"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5775,7 +5777,8 @@
    "ebible_books_to_chapter_codes",
    "ebible_chapters_each_verses_list",
    "sandbox_4_a",
-   "keyboard_type_delay"
+   "keyboard_type_delay",
+   "function_params_new"
   ],
   "f_paths": [
    "data_files_update",
@@ -10280,7 +10283,8 @@
    "promise_wrap",
    "ebible_references_parse_lines",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "function_params_new"
   ],
   "bs": [
    "js_identifier_defineds"
@@ -17913,6 +17917,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "each_async",
     "list_add",
     "each",
     "js_parse_expression",
@@ -17940,6 +17945,9 @@
     "value_default",
     "expression2",
     "ast2",
+    "list",
+    "lambda4",
+    "item",
     "name",
     "expression"
    ],
