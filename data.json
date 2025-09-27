@@ -1444,7 +1444,6 @@
   "ir to node",
   "ir from awaited",
   "fs js_auto",
-  "s await",
   "fs jaa",
   "ml",
   "mu 3",
@@ -2328,7 +2327,8 @@
   "s transform",
   "s ien",
   "js_dollar_new ine",
-  "s dollar"
+  "s dollar",
+  "s await"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_ine",
