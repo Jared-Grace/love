@@ -5500,7 +5500,8 @@
   ],
   "folder_read": [
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "repos"
   ],
   "function_name_extension": [
    "functions_names",
@@ -10992,7 +10993,8 @@
   "all": [
    "list_wait",
    "folder_read_files",
-   "folder_read"
+   "folder_read",
+   "repos"
   ],
   "console": [
    "log_keep",
@@ -12084,7 +12086,8 @@
    "folder_find_starts_with",
    "folder_read_async",
    "folder_read_files",
-   "folder_read"
+   "folder_read",
+   "repos"
   ],
   "fop": [
    "apps_get",
@@ -30635,12 +30638,15 @@
    ]
   },
   "repos": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "folder_read",
     "folder_read_files",
     "marker",
     "repos",
-    "files"
+    "files",
+    "all",
+    "path_folder"
    ]
   },
   "folder_read_files": {
