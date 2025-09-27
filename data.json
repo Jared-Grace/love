@@ -2689,7 +2689,8 @@
    "repos",
    "folder_read_files",
    "folder_read",
-   "git_repo_clone"
+   "git_repo_clone",
+   "js_dollar_ine"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2878,7 +2879,8 @@
    "app_new_step_2",
    "function_list_generate",
    "js_dollar_ib",
-   "js_dollar_if_call"
+   "js_dollar_if_call",
+   "js_dollar_ine"
   ],
   "code": [
    "data_identifiers_file",
@@ -7767,7 +7769,8 @@
    "js_dollar_l",
    "js_statement_expression_get",
    "messenger_reply_messages",
-   "function_params_new"
+   "function_params_new",
+   "js_dollar_ine"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -8901,7 +8904,8 @@
    "js_dollar_ir",
    "js_dollar_l",
    "js_dollar_ib",
-   "js_dollar_if_call"
+   "js_dollar_if_call",
+   "js_dollar_ine"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -8937,7 +8941,8 @@
    "js_expand_generic",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ine"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -9710,7 +9715,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ine"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -9926,7 +9932,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ine"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -10083,7 +10090,8 @@
    "js_dollar_x",
    "js_dollar_ien",
    "js_dollar_ir",
-   "js_dollar_l"
+   "js_dollar_l",
+   "js_dollar_ine"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -16109,6 +16117,9 @@
   ],
   "value_default": [
    "function_params_new"
+  ],
+  "js_dollar_ine": [
+   "js_dollar_ine"
   ]
  },
  "functions": {
@@ -30765,6 +30776,20 @@
     "url",
     "path_folder",
     "folder_name"
+   ]
+  },
+  "js_dollar_ine": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_ine",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
