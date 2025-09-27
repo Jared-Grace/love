@@ -2312,9 +2312,9 @@
   "a clg command_line_git",
   "a td todo",
   "fd git_history_delete",
-  "s folder",
   "n folder_delete",
-  "s file"
+  "s file",
+  "s folder"
  ],
  "marker_current": "1",
  "function_current": "folder_delete",
