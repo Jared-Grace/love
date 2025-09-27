@@ -11,9 +11,9 @@ export async function function_params_new(param_names_comma) {
   function lambda(ast) {
     js_declaration_single_params_add(ast, param_names);
   }
-  let f_name = await data_function_current_get();
-  let result = await data_identifiers_search(f_name);
-  let properties = object_properties(obj);
-  async function lambda2(item) {}
-  let waited = await list_map_unordered_async(list, lambda2);
+  let f_name_current = await data_function_current_get();
+  let result = await data_identifiers_search(f_name_current);
+  let properties = object_properties(result);
+  async function lambda2(f_name) {}
+  let waited = await list_map_unordered_async(properties, lambda2);
 }
