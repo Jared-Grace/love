@@ -5970,8 +5970,7 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "git_history_delete"
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -30482,8 +30481,7 @@
     "command_line",
     "marker",
     "git_history_delete",
-    "stdout",
-    "command"
+    "stdout"
    ]
   },
   "sandbox_5": {
