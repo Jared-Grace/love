@@ -4407,7 +4407,8 @@
    "folder_user_combine",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "function_params_new"
   ],
   "separator": [
    "watch",
@@ -5338,7 +5339,8 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply",
+   "function_params_new"
   ],
   "a": [
    "string_suffix_without",
@@ -11324,7 +11326,8 @@
    "functions_paths"
   ],
   "data_identifiers_search": [
-   "data_identifiers_search"
+   "data_identifiers_search",
+   "function_params_new"
   ],
   "js_imports_unused": [
    "js_imports_unused",
@@ -17744,6 +17747,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "data_identifiers_search",
     "function_transform_current",
     "js_declaration_single_params_add",
     "string_split",
@@ -17751,7 +17755,9 @@
     "param_names_comma",
     "param_names",
     "lambda",
-    "ast"
+    "ast",
+    "result",
+    "s"
    ],
    "async": true
   },
@@ -30443,7 +30449,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-27T18:09:29.911Z",
+ "git_push_when": "2025-09-27T19:12:57.432Z",
  "error_attention": null,
  "app_current": "replace"
 }
