@@ -29,7 +29,8 @@ export async function function_params_new(
       function lambda2(v) {
         let { node } = v;
         let name = js_call_callee_name(node);
-        if (equal_not(left, right)) {
+        if (equal_not(name, f_name_current)) {
+          return;
         }
         let arguments2 = object_property_get(node, "arguments");
         function lambda3(value_default) {
