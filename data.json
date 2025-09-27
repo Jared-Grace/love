@@ -1458,7 +1458,6 @@
   "mi n",
   "n apps_get",
   "s files",
-  "s file",
   "mc fr",
   "u fr",
   "a for folder_read",
@@ -2314,7 +2313,8 @@
   "a td todo",
   "fd git_history_delete",
   "s folder",
-  "n folder_delete"
+  "n folder_delete",
+  "s file"
  ],
  "marker_current": "1",
  "function_current": "folder_delete",
