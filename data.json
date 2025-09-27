@@ -4704,7 +4704,8 @@
    "reply",
    "ebible_languages_to_bible_folders",
    "reply_sequence",
-   "function_params_new"
+   "function_params_new",
+   "command_line_node_g"
   ],
   "data_save": [
    "data_file_update",
@@ -6036,7 +6037,8 @@
    "retry_on_error",
    "git_history_delete",
    "git_repo_rename",
-   "git_repo_rename_normalize"
+   "git_repo_rename_normalize",
+   "command_line_node_g"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -16488,6 +16490,7 @@
   },
   "command_line_node_g": {
    "identifiers": [
+    "object_property_get",
     "log_keep",
     "command_line",
     "list_join_space",
@@ -16495,7 +16498,8 @@
     "f_name",
     "args",
     "result",
-    "output"
+    "output",
+    "stdout"
    ],
    "async": true
   },
