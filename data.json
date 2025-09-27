@@ -2329,7 +2329,8 @@
   "s await",
   "o w",
   "data_functions_get",
-  "d"
+  "d",
+  "as param"
  ],
  "marker_current": "1",
  "function_current": "watch",
