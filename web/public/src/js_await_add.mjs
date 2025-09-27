@@ -17,6 +17,7 @@ export async function js_await_add(ast) {
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
+      log(name);
       let en = object_property_exists_not(functions, name);
       if (en) {
         return;
@@ -28,7 +29,6 @@ export async function js_await_add(ast) {
         marker("1");
         return;
       }
-      log(name);
       let stack = object_property_get(v, "stack");
       js_function_last_asyncify(stack, async_is);
       let stack1 = list_get_end_1(stack);
