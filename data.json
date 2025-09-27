@@ -3483,8 +3483,7 @@
   "i_name": [
    "data_identifiers_file",
    "data_file_update_inner",
-   "js_identifiers_named_count",
-   "js_assign_combine"
+   "js_identifiers_named_count"
   ],
   "list": [
    "data_identifiers_file",
@@ -6595,7 +6594,8 @@
    "retry",
    "ebible_chapter_code_to_name",
    "messenger_reply_playwright",
-   "js_identifiers_named_count"
+   "js_identifiers_named_count",
+   "js_assign_combine"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -11511,8 +11511,7 @@
    "counter"
   ],
   "count_import": [
-   "js_imports_unused",
-   "js_assign_combine"
+   "js_imports_unused"
   ],
   "js_identifiers_named_count": [
    "js_imports_unused",
@@ -16270,9 +16269,6 @@
   ],
   "d_path": [
    "data_file_update"
-  ],
-  "ast2": [
-   "js_assign_combine"
   ]
  },
  "functions": {
@@ -26441,9 +26437,7 @@
     "id",
     "nti2",
     "name",
-    "count_import",
-    "ast2",
-    "i_name",
+    "count",
     "init"
    ]
   },
