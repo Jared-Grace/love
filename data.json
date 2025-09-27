@@ -17767,10 +17767,10 @@
     "ast",
     "f_name",
     "result",
-    "waited",
-    "list",
     "lambda2",
-    "item"
+    "item",
+    "waited",
+    "list"
    ],
    "async": true
   },
