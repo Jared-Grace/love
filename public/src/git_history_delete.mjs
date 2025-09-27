@@ -5,7 +5,7 @@ export async function git_history_delete(user, repo) {
   marker("1");
   ("make sure all changes are in repo first like pushing");
   let stdout = await command_line_git(
-    "git clone --mirror https://github.com/" +
+    "clone --mirror https://github.com/" +
       user +
       "/" +
       repo +
