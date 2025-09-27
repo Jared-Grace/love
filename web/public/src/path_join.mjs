@@ -1,22 +1,28 @@
+import { not } from "./not.mjs";
+import { folder_previous } from "./folder_previous.mjs";
 export function path_join(segments) {
   let parts = [];
-
   for (let seg of segments) {
-    if (!seg) continue;
+    if (not(seg)) {
+      continue;
+    }
     let split = seg.split(/[\\/]+/);
     for (let s of split) {
-      if (s === "" || s === ".") continue;
-      if (s === "..") {
-        if (parts.length > 0 && parts[parts.length - 1] !== "..") {
+      if (s === "" || s === ".") {
+        continue;
+      }
+      if (s === folder_previous()) {
+        if (parts.length > 0 && parts[parts.length - 1] !== folder_previous()) {
           parts.pop();
         } else {
-          parts.push(".."); // preserve leading ..
+          let previous = folder_previous();
+          parts.push(previous);
         }
       } else {
         parts.push(s);
       }
     }
   }
-
-  return parts.join("/");
+  let v = parts.join("/");
+  return v;
 }
