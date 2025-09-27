@@ -8449,8 +8449,7 @@
    "js_property_parse_expression",
    "app_new_assign",
    "function_list_generate",
-   "js_dollar_if_call",
-   "function_params_new"
+   "js_dollar_if_call"
   ],
   "type": [
    "function_params_consolidate",
@@ -17945,13 +17944,12 @@
     "lambda2",
     "v",
     "node",
+    "name",
     "arguments2",
     "lambda3",
     "value_default",
     "expression2",
-    "output",
-    "name",
-    "expression"
+    "output"
    ],
    "async": true
   },
