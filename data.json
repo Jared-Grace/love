@@ -2652,7 +2652,8 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform"
+   "messenger_reply_messages_transform",
+   "python_install"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3841,7 +3842,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "python_install"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3966,7 +3968,8 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log"
+   "command_line_log",
+   "python_install"
   ],
   "log_keep": [
    "catch_log",
@@ -5964,7 +5967,8 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "python_install"
   ],
   "stdout": [
    "command_line",
@@ -15939,6 +15943,9 @@
   ],
   "token": [
    "reply_sequence"
+  ],
+  "python_install": [
+   "python_install"
   ]
  },
  "functions": {
@@ -30462,6 +30469,16 @@
     "reply_on_match_inner",
     "a",
     "matches"
+   ]
+  },
+  "python_install": {
+   "async": true,
+   "identifiers": [
+    "command_line",
+    "marker",
+    "python_install",
+    "command",
+    "v"
    ]
   }
  },
