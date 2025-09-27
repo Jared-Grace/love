@@ -2328,7 +2328,8 @@
   "js_dollar_new ine",
   "s dollar",
   "s await",
-  "o w"
+  "o w",
+  "data_functions_get"
  ],
  "marker_current": "1",
  "function_current": "watch",
