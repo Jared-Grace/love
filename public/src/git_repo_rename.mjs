@@ -1,4 +1,6 @@
+import { command_line } from "./command_line.mjs";
 import { marker } from "./marker.mjs";
-export function git_repo_rename() {
+export async function git_repo_rename() {
   marker("1");
+  let stdout = await command_line(command);
 }
