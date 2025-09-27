@@ -21,9 +21,10 @@ export async function function_params_new(
   function lambda2(v) {
     let { node } = v;
     let arguments2 = object_property_get(node, "arguments");
-    function lambda3(item) {}
-    each(list, lambda3);
-    let expression2 = js_parse_expression(code_expression);
+    function lambda3(value_default) {
+      let expression2 = js_parse_expression(value_default);
+    }
+    each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
   let name = js_call_callee_name(expression);
