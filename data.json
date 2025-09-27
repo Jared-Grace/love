@@ -5131,7 +5131,8 @@
    "keyboard_type_delay",
    "reply_sequence",
    "reply",
-   "reply_on_match"
+   "reply_on_match",
+   "js_dollar_ien"
   ],
   "colored": [
    "chalk_color",
@@ -26244,6 +26245,7 @@
     "stack3",
     "ast",
     "afters",
+    "fn",
     "expression",
     "name"
    ]
