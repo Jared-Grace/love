@@ -2142,7 +2142,6 @@
   "o rs",
   "n sandbox",
   "o s4",
-  "s sand",
   "s digit",
   "string_starts_with_digit tt",
   "string_starts_with_digit 5t",
@@ -2300,7 +2299,8 @@
   "s data",
   "s param",
   "s call",
-  "n git_history_delete"
+  "n git_history_delete",
+  "s sand"
  ],
  "marker_current": "1",
  "function_current": "git_history_delete",
