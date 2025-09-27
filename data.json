@@ -1288,7 +1288,6 @@
   "dpg git_push_when",
   "x",
   "fs gp",
-  "s git",
   "s decl",
   "s red",
   "s error_attention",
@@ -2306,7 +2305,8 @@
   "de sandbox_5",
   "s sand",
   "n sandbox_5",
-  "u n"
+  "u n",
+  "s git"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
