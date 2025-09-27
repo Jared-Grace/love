@@ -1161,7 +1161,6 @@
   "nj bang_to_not",
   "u jv",
   "a jv js_visit",
-  "s js,type",
   "a jvt js_visit_type",
   "nj js_dollar_ie",
   "de js_js_dollar_ie",
@@ -2324,7 +2323,8 @@
   "n git_repo_clone",
   "s param",
   "s js,call",
-  "s each"
+  "s each",
+  "s js,type"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
