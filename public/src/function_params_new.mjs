@@ -25,7 +25,7 @@ export async function function_params_new(
   let values_default = string_split(values_default_comma, ",");
   let f_name_current = await data_function_current_get();
   let result = await data_identifiers_search(f_name_current);
-  let properties = object_properties(obj);
+  let properties = object_properties(result);
   async function lambda4(f_name) {
     async function lambda5(ast) {
       function lambda2(v) {
@@ -45,5 +45,5 @@ export async function function_params_new(
     }
     let output = await function_transform(f_name, lambda5);
   }
-  await each_async(result, lambda4);
+  await each_async(properties, lambda4);
 }
