@@ -2313,8 +2313,7 @@
    "search_generic",
    "js_log_remove",
    "messenger_reply_playwright",
-   "command_line_log",
-   "retry_on_error"
+   "command_line_log"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -30110,7 +30109,6 @@
    "async": true,
    "identifiers": [
     "catch_only_run_async",
-    "log",
     "command_line_log",
     "retry_on_error",
     "command",
