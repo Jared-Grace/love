@@ -1697,7 +1697,6 @@
   "n js_dollar_new_args",
   "js_dollar_new_args",
   "s para,",
-  "s param",
   "s func,code",
   "s code,dec",
   "is js_keyword_function",
@@ -2299,7 +2298,8 @@
   "s add,mult",
   "np",
   "n user_repo_set",
-  "s data"
+  "s data",
+  "s param"
  ],
  "marker_current": "1",
  "function_current": "user_repo_set",
