@@ -12011,8 +12011,7 @@
    "list_difference",
    "list_all",
    "list_intersect",
-   "ebible_chapter_text",
-   "reply"
+   "ebible_chapter_text"
   ],
   "marker_up_1": [
    "marker_up_1"
@@ -30338,7 +30337,6 @@
     "outputs",
     "list",
     "mapped",
-    "list2",
     "items",
     "r"
    ]
@@ -30457,7 +30455,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-26T23:15:26.612Z",
+ "git_push_when": "2025-09-27T02:28:18.346Z",
  "error_attention": null,
  "app_current": "replace"
 }
