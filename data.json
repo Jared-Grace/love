@@ -2312,8 +2312,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "messenger_reply_playwright",
-   "command_line_log"
+   "messenger_reply_playwright"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3982,7 +3981,8 @@
    "git_push",
    "retry",
    "firebase_upload_generic",
-   "ebible_chapters_each_verses_list"
+   "ebible_chapters_each_verses_list",
+   "command_line_log"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -30048,8 +30048,8 @@
   "command_line_log": {
    "async": true,
    "identifiers": [
+    "log_keep",
     "command_line",
-    "log",
     "command_line_log",
     "command",
     "stdout"
