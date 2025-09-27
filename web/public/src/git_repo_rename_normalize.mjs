@@ -5,9 +5,9 @@ export async function git_repo_rename_normalize(from) {
   marker("1");
   let name = string_replace(from, "-", "_");
   let stdout = await git_repo_rename(from, name);
-  let v = {
+  let result = {
     name,
     stdout,
   };
-  return v;
+  return result;
 }
