@@ -8,4 +8,5 @@ export function folder_read() {
     return v;
   }
   const all = fs.readdirSync(path_folder);
+  return all;
 }
