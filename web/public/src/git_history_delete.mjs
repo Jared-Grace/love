@@ -1,3 +1,4 @@
+import { folder_previous } from "./folder_previous.mjs";
 import { git_repo_url } from "./git_repo_url.mjs";
 import { folder_delete } from "./folder_delete.mjs";
 import { todo } from "./todo.mjs";
@@ -20,6 +21,7 @@ export async function git_history_delete(user, repo, f_path) {
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
   await command_line_git("push --force --tags origin");
-  process.chdir("..");
+  let previous = folder_previous();
+  process.chdir(previous);
   await folder_delete(repo_folder);
 }
