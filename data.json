@@ -1425,7 +1425,6 @@
   "c function_exists function_exists_strict",
   "s log",
   "nj log_remove",
-  "s each",
   "o js_type",
   "s functions",
   "c functions_format functions_log_remove",
@@ -2324,7 +2323,8 @@
   "repos",
   "n git_repo_clone",
   "s param",
-  "s js,call"
+  "s js,call",
+  "s each"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
