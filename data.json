@@ -2342,10 +2342,11 @@
   "o data_property_get",
   "fs data_get",
   "p",
-  "pn d_path d_path"
+  "pn d_path d_path",
+  "fs data_transform"
  ],
  "marker_current": "1",
- "function_current": "data_get",
+ "function_current": "data_transform",
  "terminal": false,
  "identifiers": {
   "log": [
