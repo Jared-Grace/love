@@ -2317,12 +2317,12 @@
   "fws git_repo_rename normalize",
   "s replace",
   "git_repo_rename_normalize karate-code",
-  "p",
   "grrn Jared-Grace karate-code",
   "n repos",
   "is folder_read",
   "r folder_read folder_read_files",
   "n folder_read",
+  "p",
   "repos"
  ],
  "marker_current": "1",
