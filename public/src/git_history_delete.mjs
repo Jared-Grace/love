@@ -20,5 +20,5 @@ export async function git_history_delete(user, repo, f_path) {
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
   await command_line_git("push --force --tags origin");
-  todo();
+  todo("delete directory");
 }
