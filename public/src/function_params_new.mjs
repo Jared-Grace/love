@@ -11,6 +11,7 @@ export async function function_params_new(param_names_comma) {
     js_declaration_single_params_add(ast, param_names);
   }
   let result = await data_identifiers_search(s);
-  js_visit_each(a, function lambda2(item) {});
+  function lambda2(item) {}
+  js_visit_each(a, lambda2);
   let name = js_call_callee_name(expression);
 }
