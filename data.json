@@ -2222,7 +2222,6 @@
   "s equal",
   "messenger_reply_puppeteer",
   "ar mr messenger_reply_puppeteer",
-  "",
   "as adder",
   "s trim",
   "rs messenger_reply playwright",
@@ -2339,7 +2338,10 @@
   "fs data_file_update",
   "p",
   "fs data_value",
-  "pn d_path d_path"
+  "pn d_path d_path",
+  "o export async function data_property_get(property_name, d_path) {",
+  "",
+  "o data_property_get"
  ],
  "marker_current": "1",
  "function_current": "data_value",
