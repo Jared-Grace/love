@@ -2336,8 +2336,8 @@
   "pn f_path \"data.json\"",
   "s data",
   "fs data_all",
-  "pn d_path d_path",
-  "fs data_property_get"
+  "fs data_property_get",
+  "pn d_path d_path"
  ],
  "marker_current": "1",
  "function_current": "data_property_get",
