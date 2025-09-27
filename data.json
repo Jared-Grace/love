@@ -2313,10 +2313,11 @@
   "a clg command_line_git",
   "a td todo",
   "fd git_history_delete",
-  "s folder"
+  "s folder",
+  "n folder_delete"
  ],
  "marker_current": "1",
- "function_current": "sandbox_5",
+ "function_current": "folder_delete",
  "terminal": false,
  "identifiers": {
   "log": [
