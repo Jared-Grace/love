@@ -2327,10 +2327,11 @@
   "data_identifiers_search a",
   "s transform",
   "s ien",
-  "s dollar"
+  "s dollar",
+  "js_dollar_new ine"
  ],
  "marker_current": "1",
- "function_current": "git_repo_clone",
+ "function_current": "js_dollar_ine",
  "terminal": false,
  "identifiers": {
   "log": [
