@@ -2318,7 +2318,8 @@
   "n git_repo_rename",
   "fws git_repo_rename normalize",
   "s replace",
-  "git_repo_rename_normalize karate-code"
+  "git_repo_rename_normalize karate-code",
+  "grrn Jared-Grace karate-code"
  ],
  "marker_current": "1",
  "function_current": "git_repo_rename_normalize",
