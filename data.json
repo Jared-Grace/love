@@ -2314,7 +2314,8 @@
   "n folder_delete",
   "s file",
   "s folder",
-  "s git"
+  "s git",
+  "s git,rename"
  ],
  "marker_current": "1",
  "function_current": "folder_delete",
