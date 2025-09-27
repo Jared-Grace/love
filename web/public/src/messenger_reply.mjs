@@ -17,7 +17,6 @@ import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
 import { messenger_reply_puppeteer } from "./messenger_reply_puppeteer.mjs";
 import { command_line_read_empty } from "./command_line_read_empty.mjs";
 import { marker } from "./marker.mjs";
-import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { keyboard_type_delay } from "./keyboard_type_delay.mjs";
 export async function messenger_reply() {
