@@ -3876,7 +3876,8 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "folder_read_files",
-   "path_join"
+   "path_join",
+   "git_repo_clone"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5629,7 +5630,8 @@
    "sandbox_2",
    "folder_user",
    "folder_user_combine",
-   "folder_read_files"
+   "folder_read_files",
+   "git_repo_clone"
   ],
   "fs": [
    "file_copy",
@@ -12097,7 +12099,8 @@
    "folder_read_async",
    "folder_read_files",
    "folder_read",
-   "repos"
+   "repos",
+   "git_repo_clone"
   ],
   "fop": [
    "apps_get",
@@ -15037,7 +15040,8 @@
    "list_map_first"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "git_repo_clone"
   ],
   "seg": [
    "path_join"
@@ -16073,7 +16077,8 @@
    "git_repo_clone"
   ],
   "repos_folder": [
-   "repos"
+   "repos",
+   "git_repo_clone"
   ]
  },
  "functions": {
@@ -30701,6 +30706,8 @@
   "git_repo_clone": {
    "async": true,
    "identifiers": [
+    "path_join",
+    "repos_folder",
     "command_line_git",
     "git_repo_url",
     "marker",
@@ -30708,6 +30715,9 @@
     "user",
     "repo",
     "url",
+    "path_folder",
+    "v",
+    "segments",
     "folder_name"
    ]
   }
