@@ -42,9 +42,6 @@ export async function messenger_reply() {
     let message = object_property_get(mine_last, "message");
     let mine_last_lines = string_split_newline(message);
     let mine_last_lines_last = list_last(mine_last_lines);
-    log({
-      mine_last_lines_last,
-    });
     let property_name = messenger_reply_messages_message();
     let mapped2 = list_map_property(unreplied, property_name);
     let joined = list_join_space(mapped2);
