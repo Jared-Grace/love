@@ -2245,6 +2245,7 @@
   "d",
   "o mr",
   "c messenger_reply messenger_reply_messages",
+  "s transform",
   "s initial",
   "s json",
   "s starts",
@@ -2298,15 +2299,10 @@
   "n user_repo_set",
   "s data",
   "s param",
-  "s call",
-  "is function_params_new",
-  "s transform",
-  "fw cl python_install",
-  "fw cl git_filter_repo",
-  "r git_filter_repo git_filter_repo_install"
+  "s call"
  ],
  "marker_current": "1",
- "function_current": "git_filter_repo_install",
+ "function_current": "user_repo_set",
  "terminal": false,
  "identifiers": {
   "log": [
@@ -2654,10 +2650,7 @@
    "function_alias_add",
    "functions_search",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "python_install",
-   "git_filter_repo",
-   "git_filter_repo_install"
+   "messenger_reply_messages_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3412,8 +3405,7 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "undefined_not_is_assert",
-   "ebible_languages_to_bible_folders",
-   "function_params_new"
+   "ebible_languages_to_bible_folders"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3846,10 +3838,7 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply",
-   "python_install",
-   "git_filter_repo",
-   "git_filter_repo_install"
+   "messenger_reply"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -3974,10 +3963,7 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log",
-   "python_install",
-   "git_filter_repo",
-   "git_filter_repo_install"
+   "command_line_log"
   ],
   "log_keep": [
    "catch_log",
@@ -4422,8 +4408,7 @@
    "folder_user_combine",
    "ebible_verse",
    "ebible_references_parse_lines",
-   "messenger_reply_unreplied",
-   "function_params_new"
+   "messenger_reply_unreplied"
   ],
   "separator": [
    "watch",
@@ -5975,8 +5960,7 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "git_filter_repo"
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -6408,8 +6392,7 @@
    "tasks_run",
    "object_merge_generic",
    "messenger_reply",
-   "reply_test",
-   "function_params_new"
+   "reply_test"
   ],
   "each_object": [
    "each_object",
@@ -7243,8 +7226,7 @@
    "js_dollar_choice_arguments_names",
    "js_property_parse_expression_add",
    "messenger_reply",
-   "reply_test",
-   "function_params_new"
+   "reply_test"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -15951,15 +15933,6 @@
   ],
   "token": [
    "reply_sequence"
-  ],
-  "python_install": [
-   "python_install"
-  ],
-  "git_filter_repo": [
-   "git_filter_repo"
-  ],
-  "git_filter_repo_install": [
-   "git_filter_repo_install"
   ]
  },
  "functions": {
@@ -30484,37 +30457,9 @@
     "a",
     "matches"
    ]
-  },
-  "python_install": {
-   "async": true,
-   "identifiers": [
-    "command_line",
-    "marker",
-    "python_install",
-    "v"
-   ]
-  },
-  "git_filter_repo": {
-   "async": true,
-   "identifiers": [
-    "command_line",
-    "marker",
-    "git_filter_repo",
-    "command",
-    "v"
-   ]
-  },
-  "git_filter_repo_install": {
-   "async": true,
-   "identifiers": [
-    "command_line",
-    "marker",
-    "git_filter_repo_install",
-    "v"
-   ]
   }
  },
- "git_push_when": "2025-09-27T19:12:57.432Z",
+ "git_push_when": "2025-09-27T18:09:29.911Z",
  "error_attention": null,
  "app_current": "replace"
 }
