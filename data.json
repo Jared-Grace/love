@@ -2281,7 +2281,6 @@
   "s add,mult",
   "np",
   "n user_repo_set",
-  "s data",
   "s call",
   "n git_history_delete",
   "sandbox_5",
@@ -2331,7 +2330,8 @@
   "as param",
   "fc",
   "as current",
-  "s clone"
+  "s clone",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "watch",
