@@ -16241,11 +16241,11 @@
     "marker",
     "folder_read",
     "path_folder",
-    "all",
     "fs",
+    "all",
     "readdirSync"
    ],
-   "async": false
+   "async": true
   },
   "data_file_update_all": {
    "identifiers": [
