@@ -30,9 +30,9 @@ export async function function_params_new(
     each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
-  let f_name = await data_function_current_get();
-  let result = await data_identifiers_search(f_name);
-  async function lambda4(item) {}
-  await each_async(list, lambda4);
+  let f_name_current = await data_function_current_get();
+  let result = await data_identifiers_search(f_name_current);
+  async function lambda4(f_name) {}
+  await each_async(result, lambda4);
   let name = js_call_callee_name(expression);
 }
