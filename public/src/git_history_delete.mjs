@@ -15,7 +15,5 @@ export async function git_history_delete(user, repo) {
       ".git",
   );
   ("cd into directory");
-  let stdout2 = await command_line_git(
-    "remote add origin https://github.com/Jared-Grace/love.git",
-  );
+  let stdout2 = await command_line_git("remote add origin " + git_repo_url);
 }
