@@ -4252,8 +4252,7 @@
    "list_set",
    "bind_property",
    "undefined_not_is_assert",
-   "messenger_reply_messages_transform",
-   "function_params_new"
+   "messenger_reply_messages_transform"
   ],
   "name": [
    "watch",
@@ -10175,8 +10174,7 @@
    "js_dollar_ien",
    "js_assign_combine",
    "list_next_try",
-   "js_calls_to_each",
-   "function_params_new"
+   "js_calls_to_each"
   ],
   "list_next_index": [
    "js_dollar_s",
@@ -17933,7 +17931,6 @@
   },
   "function_params_new": {
    "identifiers": [
-    "null_is",
     "function_transform",
     "data_function_current_get",
     "each_async",
@@ -17963,7 +17960,6 @@
     "v",
     "node",
     "name",
-    "value",
     "arguments2",
     "lambda3",
     "value_default",
