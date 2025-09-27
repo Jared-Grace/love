@@ -7,8 +7,12 @@ export async function data_transform(
   value_initial,
   lambda$previous,
 ) {
-  var d = await data_get(property_name, value_initial, data_path());
-  let { data, value: value_previous } = d;
+  let d_path = data_path();
+  let { data, value: value_previous } = await data_get(
+    property_name,
+    value_initial,
+    d_path,
+  );
   const value = await lambda$previous(value_previous);
   object_property_set(data, property_name, value);
   await data_save(d);
