@@ -2292,7 +2292,6 @@
   "np",
   "n user_repo_set",
   "s data",
-  "s param",
   "s call",
   "n git_history_delete",
   "sandbox_5",
@@ -2324,7 +2323,8 @@
   "n folder_read",
   "p",
   "repos",
-  "n git_repo_clone"
+  "n git_repo_clone",
+  "s param"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
