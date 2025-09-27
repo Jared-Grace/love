@@ -2337,9 +2337,9 @@
   "fs data_all",
   "fs data_property_get",
   "fs data_file_update",
-  "fs data_value",
   "p",
-  "pn d_path d_path"
+  "pn d_path d_path",
+  "fs data_value"
  ],
  "marker_current": "1",
  "function_current": "data_value",
