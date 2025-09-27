@@ -1,3 +1,4 @@
+import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { function_transform_current } from "./function_transform_current.mjs";
 import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
@@ -9,4 +10,5 @@ export async function function_params_new(param_names_comma) {
     js_declaration_single_params_add(ast, param_names);
   }
   let result = await data_identifiers_search(s);
+  let name = js_call_callee_name(expression);
 }
