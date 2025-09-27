@@ -2727,7 +2727,8 @@
    "function_parse_strict",
    "html_update_generic",
    "file_write_buffer",
-   "file_write_generic"
+   "file_write_generic",
+   "git_history_delete"
   ],
   "ast": [
    "data_identifiers_file",
@@ -9153,8 +9154,7 @@
    "ebible_version_books_upload",
    "ebible_references_parse_god_created_man_why",
    "firebase_storage_download_ebible",
-   "folder_user_docs_path",
-   "git_history_delete"
+   "folder_user_docs_path"
   ],
   "html_update": [
    "html_update",
@@ -30502,7 +30502,7 @@
     "git_history_delete",
     "user",
     "repo",
-    "file_name",
+    "f_path",
     "git_repo_url",
     "stdout",
     "stdout2"
