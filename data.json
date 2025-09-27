@@ -2337,12 +2337,12 @@
   "fs data_property_get",
   "fs data_file_update",
   "fs data_value",
-  "pn d_path d_path",
   "o export async function data_property_get(property_name, d_path) {",
   "",
   "p",
   "o data_property_get",
-  "fs data_get"
+  "fs data_get",
+  "pn d_path d_path"
  ],
  "marker_current": "1",
  "function_current": "data_get",
