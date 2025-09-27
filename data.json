@@ -3325,7 +3325,8 @@
    "messenger_reply",
    "reply_test",
    "reply_sequence",
-   "reply"
+   "reply",
+   "folder_read_files"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3868,7 +3869,8 @@
    "messenger_reply_url",
    "messenger_reply_playwright",
    "messenger_reply_unread_collect",
-   "messenger_reply"
+   "messenger_reply",
+   "folder_read_files"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4441,7 +4443,8 @@
    "ebible_verse",
    "ebible_references_parse_lines",
    "messenger_reply_unreplied",
-   "git_repo_rename_normalize"
+   "git_repo_rename_normalize",
+   "folder_read_files"
   ],
   "separator": [
    "watch",
@@ -5621,7 +5624,8 @@
    "local_function_path",
    "sandbox_2",
    "folder_user",
-   "folder_user_combine"
+   "folder_user_combine",
+   "folder_read_files"
   ],
   "fs": [
    "folder_read",
@@ -5635,20 +5639,24 @@
    "file_overwrite_buffer",
    "file_parent_exists_ensure",
    "folder_read_async",
-   "folder_delete"
+   "folder_delete",
+   "folder_read_files"
   ],
   "file": [
    "folder_read",
    "firebase_storage_exists",
    "firebase_storage_download",
-   "firebase_upload_generic"
+   "firebase_upload_generic",
+   "folder_read_files"
   ],
   "statSync": [
-   "folder_read"
+   "folder_read",
+   "folder_read_files"
   ],
   "isFile": [
    "folder_read",
-   "folder_read_async"
+   "folder_read_async",
+   "folder_read_files"
   ],
   "v2": [
    "function_identifier_replace",
@@ -5696,7 +5704,8 @@
    "undefined_not_is_assert"
   ],
   "readdirSync": [
-   "folder_read"
+   "folder_read",
+   "folder_read_files"
   ],
   "filter": [
    "folder_read",
@@ -5708,7 +5717,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "folder_read_async",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "folder_read_files"
   ],
   "data_file_update_all": [
    "data_file_update_all"
@@ -12079,7 +12089,8 @@
    "folder_read",
    "firebase_service_account",
    "folder_find_starts_with",
-   "folder_read_async"
+   "folder_read_async",
+   "folder_read_files"
   ],
   "fop": [
    "apps_get",
@@ -12834,7 +12845,8 @@
    "folder_read",
    "folder_find_starts_with",
    "folder_read_async",
-   "repos"
+   "repos",
+   "folder_read_files"
   ],
   "sw": [
    "string_starts_with",
@@ -16038,6 +16050,9 @@
   ],
   "repos": [
    "repos"
+  ],
+  "folder_read_files": [
+   "folder_read_files"
   ]
  },
  "functions": {
@@ -30637,6 +30652,24 @@
     "marker",
     "repos",
     "files"
+   ]
+  },
+  "folder_read_files": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "fs",
+    "folder_read_files",
+    "path_folder",
+    "lambda",
+    "file",
+    "result",
+    "v",
+    "statSync",
+    "isFile",
+    "files",
+    "readdirSync",
+    "filter"
    ]
   }
  },
