@@ -5434,7 +5434,6 @@
    "string_starts_with_not",
    "object_assign",
    "each_pair_async",
-   "app_reply_main",
    "catch_only_run_async",
    "reply",
    "reply_sequence",
@@ -26316,7 +26315,6 @@
     "verse_texts",
     "verse_text",
     "other",
-    "a",
     "ne",
     "concated",
     "joined"
