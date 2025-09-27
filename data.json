@@ -2318,8 +2318,7 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "messenger_reply_playwright",
-   "sandbox_5"
+   "messenger_reply_playwright"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -2658,8 +2657,7 @@
    "functions_search",
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
-   "git_history_delete",
-   "sandbox_5"
+   "git_history_delete"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3972,8 +3970,7 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log",
-   "sandbox_5"
+   "command_line_log"
   ],
   "log_keep": [
    "catch_log",
@@ -5981,8 +5978,7 @@
    "command_line_generic",
    "sandbox_2",
    "command_line_log",
-   "retry_on_error",
-   "sandbox_5"
+   "retry_on_error"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -30485,11 +30481,7 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "command_line",
-    "log",
-    "marker",
-    "sandbox_5",
-    "stdout"
+    "sandbox_5"
    ]
   }
  },
