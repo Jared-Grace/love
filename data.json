@@ -16061,6 +16061,9 @@
   ],
   "git_repo_clone": [
    "git_repo_clone"
+  ],
+  "folder_name": [
+   "git_repo_clone"
   ]
  },
  "functions": {
@@ -30686,7 +30689,8 @@
     "git_repo_clone",
     "user",
     "repo",
-    "url"
+    "url",
+    "folder_name"
    ]
   }
  },
