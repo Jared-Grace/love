@@ -16119,7 +16119,8 @@
    "function_params_new"
   ],
   "js_dollar_ine": [
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -25924,6 +25925,7 @@
   "js_dollar_choices": {
    "async": false,
    "identifiers": [
+    "js_dollar_ine",
     "js_dollar_ib",
     "js_dollar_l",
     "js_dollar_ir",
