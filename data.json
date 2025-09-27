@@ -7924,8 +7924,7 @@
    "each_range_from_async",
    "object_merge_generic",
    "string_list_to",
-   "git_repo_rename",
-   "git_repo_rename_normalize"
+   "git_repo_rename"
   ],
   "i": [
    "function_identifier_replace",
@@ -16026,6 +16025,9 @@
   ],
   "owner": [
    "git_repo_rename",
+   "git_repo_rename_normalize"
+  ],
+  "name_old": [
    "git_repo_rename_normalize"
   ]
  },
@@ -30613,7 +30615,7 @@
     "marker",
     "git_repo_rename_normalize",
     "owner",
-    "from",
+    "name_old",
     "name",
     "stdout",
     "result"
