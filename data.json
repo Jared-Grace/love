@@ -3040,8 +3040,7 @@
    "firebase_storage_function_run",
    "js_code_declaration_args",
    "app_message",
-   "function_list_generate",
-   "function_params_new"
+   "function_list_generate"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4333,7 +4332,8 @@
    "function_list_generate",
    "js_dollar_if_call",
    "messenger_reply_messages",
-   "git_repo_rename_normalize"
+   "git_repo_rename_normalize",
+   "function_params_new"
   ],
   "output": [
    "watch",
@@ -4449,7 +4449,8 @@
    "ebible_references_parse_lines",
    "messenger_reply_unreplied",
    "git_repo_rename_normalize",
-   "folder_read_files"
+   "folder_read_files",
+   "function_params_new"
   ],
   "separator": [
    "watch",
@@ -5381,7 +5382,8 @@
    "string_starts_with_dot",
    "string_list_to",
    "messenger_reply_wait",
-   "messenger_reply"
+   "messenger_reply",
+   "function_params_new"
   ],
   "a": [
    "string_suffix_without",
@@ -6144,8 +6146,7 @@
    "marker_next_await",
    "marker_param_add",
    "data_function_current_restore",
-   "marker_rename",
-   "function_params_new"
+   "marker_rename"
   ],
   "f_name_current": [
    "data_function_current_get",
@@ -6155,8 +6156,7 @@
    "marker_call",
    "marker_param_add",
    "data_function_current_restore",
-   "marker_rename",
-   "function_params_new"
+   "marker_rename"
   ],
   "value_initial": [
    "data_get",
@@ -6879,8 +6879,7 @@
    "data_files_update",
    "sandbox_4_a",
    "ebible_references_parse_lines",
-   "app_reply_main",
-   "function_params_new"
+   "app_reply_main"
   ],
   "js_declaration_single_block_blody": [
    "js_declaration_single_block_blody"
@@ -7763,8 +7762,7 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "function_params_new"
+   "list_map_unordered_async"
   ],
   "mapped2": [
    "function_dependencies_code",
@@ -8436,7 +8434,8 @@
    "js_property_parse_expression",
    "app_new_assign",
    "function_list_generate",
-   "js_dollar_if_call"
+   "js_dollar_if_call",
+   "function_params_new"
   ],
   "type": [
    "function_params_consolidate",
@@ -13482,7 +13481,8 @@
   ],
   "js_call_callee_name": [
    "js_calls_to_each",
-   "js_call_callee_name"
+   "js_call_callee_name",
+   "function_params_new"
   ],
   "jin2": [
    "js_call_callee_name",
@@ -17888,9 +17888,7 @@
   },
   "function_params_new": {
    "identifiers": [
-    "object_properties",
-    "list_map_unordered_async",
-    "data_function_current_get",
+    "js_call_callee_name",
     "data_identifiers_search",
     "function_transform_current",
     "js_declaration_single_params_add",
@@ -17900,12 +17898,10 @@
     "param_names",
     "lambda",
     "ast",
-    "f_name_current",
     "result",
-    "properties",
-    "lambda2",
-    "f_name",
-    "waited"
+    "s",
+    "name",
+    "expression"
    ],
    "async": true
   },
