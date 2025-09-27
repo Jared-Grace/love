@@ -15039,7 +15039,8 @@
   ],
   "uuid": [
    "uuid",
-   "file_temp"
+   "file_temp",
+   "git_history_delete"
   ],
   "uuidv4": [
    "uuid"
@@ -30484,6 +30485,7 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "uuid",
     "command_line",
     "marker",
     "git_history_delete",
