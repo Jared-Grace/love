@@ -11,6 +11,7 @@ export async function js_dollar_ien({
   ast,
   afters,
 }) {
+  let fn = null_is;
   js_dollar_i({
     stack1,
   });
