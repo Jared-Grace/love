@@ -7,6 +7,9 @@ export async function git_history_delete(user, repo) {
       user +
       "/" +
       repo +
-      ".git repo-clean.git",
+      ".git " +
+      repo +
+      "-clean-" +
+      ".git",
   );
 }
