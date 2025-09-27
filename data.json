@@ -1303,7 +1303,6 @@
   "n marker_leave",
   "a ml marker_leave",
   "s assert,list",
-  "o w",
   "o md",
   "c md marker_up",
   "a mu marker_up",
@@ -2328,10 +2327,11 @@
   "s ien",
   "js_dollar_new ine",
   "s dollar",
-  "s await"
+  "s await",
+  "o w"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_ine",
+ "function_current": "watch",
  "terminal": false,
  "identifiers": {
   "log": [
