@@ -2312,7 +2312,6 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "messenger_reply",
    "messenger_reply_playwright",
    "command_line_log",
    "retry_on_error"
@@ -29744,7 +29743,6 @@
     "messenger_reply_puppeteer",
     "command_line_read_empty",
     "marker",
-    "log",
     "bind_property",
     "keyboard_type_delay",
     "messenger_reply",
