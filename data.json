@@ -1927,7 +1927,6 @@
   "fd firebase_admin",
   "s object_property",
   "c ebible_verses_upload ebible_index_upload",
-  "s data",
   "is data_save",
   "as data",
   "r ebible_chapter_code_to_chapter ebible_chapter_code_to_book",
@@ -2299,7 +2298,8 @@
   "p",
   "s add,mult",
   "np",
-  "n user_repo_set"
+  "n user_repo_set",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "user_repo_set",
