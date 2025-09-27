@@ -1,3 +1,4 @@
+import { command_line } from "./command_line.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 import { uuid } from "./uuid.mjs";
 import { marker } from "./marker.mjs";
@@ -16,4 +17,5 @@ export async function git_history_delete(user, repo) {
       ".git",
   );
   ("cd into directory");
+  let stdout2 = await command_line(command);
 }
