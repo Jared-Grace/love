@@ -3912,7 +3912,8 @@
    "messenger_reply_messages_me",
    "messenger_reply_messages_message",
    "messenger_reply_messages_name",
-   "python_install"
+   "python_install",
+   "data_get"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -6175,7 +6176,6 @@
   ],
   "file_read_json": [
    "data_all",
-   "data_get",
    "file_read_json",
    "firebase_service_account",
    "messenger_reply_playwright",
@@ -16697,13 +16697,13 @@
    "identifiers": [
     "data_all",
     "object_property_initialize",
-    "file_read_json",
     "data_get",
     "property_name",
     "value_initial",
     "data",
     "file_path",
-    "value"
+    "value",
+    "v"
    ],
    "async": true
   },
