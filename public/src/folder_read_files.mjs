@@ -8,6 +8,7 @@ export function folder_read_files(path_folder) {
     let v = fs.statSync(result).isFile();
     return v;
   }
-  let files = fs.readdirSync(path_folder).filter(lambda);
+  const all = fs.readdirSync(path_folder);
+  let files = all.filter(lambda);
   return files;
 }
