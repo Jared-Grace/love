@@ -2341,7 +2341,8 @@
    "prompt_previous",
    "search_generic",
    "js_log_remove",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "js_dollar"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -3959,7 +3960,8 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "js_dollar"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -19423,6 +19425,7 @@
   },
   "js_dollar": {
    "identifiers": [
+    "log",
     "marker",
     "js_dollar_choices",
     "list_get_end_3",
@@ -19458,6 +19461,7 @@
     "second",
     "ne",
     "remaining",
+    "message",
     "a"
    ],
    "async": true
