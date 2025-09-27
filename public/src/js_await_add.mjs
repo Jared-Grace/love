@@ -20,14 +20,12 @@ export async function js_await_add(ast) {
       log(name);
       let en = object_property_exists_not(functions, name);
       if (en) {
-        log("1");
         return;
       }
       let f = object_property_get(functions, name);
       let async_is = object_property_get(f, "async");
       let n = not(async_is);
       if (n) {
-        log("2");
         marker("1");
         return;
       }
