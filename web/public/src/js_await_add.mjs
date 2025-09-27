@@ -42,5 +42,5 @@ export async function js_await_add(ast) {
   }
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
-  log(message);
+  log("here");
 }
