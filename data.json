@@ -3615,8 +3615,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "function_params_new"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -5152,8 +5151,7 @@
    "retry",
    "function_list_generate",
    "messenger_reply_messages",
-   "list_filter_ends_with_not_any",
-   "function_params_new"
+   "list_filter_ends_with_not_any"
   ],
   "value2": [
    "error_attention_set",
@@ -7690,8 +7688,7 @@
    "retry",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
-   "messenger_reply_messages",
-   "function_params_new"
+   "messenger_reply_messages"
   ],
   "node": [
    "function_dependencies",
@@ -9032,8 +9029,7 @@
    "list_squash",
    "marker_down_choices_lambda",
    "html_parse_descendants_classes",
-   "ebible_verses",
-   "function_params_new"
+   "ebible_verses"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -16092,7 +16088,7 @@
   "ast2": [
    "function_params_new"
   ],
-  "value_default": [
+  "values_default_comma": [
    "function_params_new"
   ]
  },
@@ -17905,7 +17901,6 @@
   },
   "function_params_new": {
    "identifiers": [
-    "list_adder",
     "object_property_get",
     "js_visit_type",
     "js_call_callee_name",
@@ -17915,7 +17910,7 @@
     "string_split",
     "function_params_new",
     "param_names_comma",
-    "value_default",
+    "values_default_comma",
     "param_names",
     "lambda",
     "ast",
@@ -17925,9 +17920,6 @@
     "v",
     "node",
     "arguments2",
-    "lambda3",
-    "la",
-    "list",
     "ast2",
     "name",
     "expression"
