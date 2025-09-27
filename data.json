@@ -2338,8 +2338,8 @@
   "fs data_property_get",
   "fs data_file_update",
   "p",
-  "pn d_path d_path",
-  "fs data_value"
+  "fs data_value",
+  "pn d_path d_path"
  ],
  "marker_current": "1",
  "function_current": "data_value",
