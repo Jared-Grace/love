@@ -2681,7 +2681,8 @@
    "git_repo_rename",
    "git_repo_rename_normalize",
    "repos",
-   "folder_read_files"
+   "folder_read_files",
+   "folder_read"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3096,7 +3097,6 @@
   "lambda": [
    "data_identifiers_file",
    "watch",
-   "folder_read",
    "catch_ignore",
    "catch_ignore_async",
    "catch_log",
@@ -3621,7 +3621,6 @@
    "function_watch_suffix_change",
    "function_watch_ending_change",
    "error_attention_clear",
-   "folder_read",
    "data_file_update_all",
    "data_boolean_set",
    "data_terminal_set",
@@ -4383,7 +4382,6 @@
   "result": [
    "watch",
    "data_file_update",
-   "folder_read",
    "command_line_node_g",
    "folder_current_join",
    "functions_search",
@@ -5609,7 +5607,6 @@
    "js_expand_generic"
   ],
   "path_join": [
-   "folder_read",
    "folder_public_combine",
    "function_import",
    "function_name_to_path",
@@ -5628,7 +5625,6 @@
    "folder_read_files"
   ],
   "fs": [
-   "folder_read",
    "file_copy",
    "file_delete",
    "file_exists",
@@ -5643,18 +5639,15 @@
    "folder_read_files"
   ],
   "file": [
-   "folder_read",
    "firebase_storage_exists",
    "firebase_storage_download",
    "firebase_upload_generic",
    "folder_read_files"
   ],
   "statSync": [
-   "folder_read",
    "folder_read_files"
   ],
   "isFile": [
-   "folder_read",
    "folder_read_async",
    "folder_read_files"
   ],
@@ -5704,11 +5697,9 @@
    "undefined_not_is_assert"
   ],
   "readdirSync": [
-   "folder_read",
    "folder_read_files"
   ],
   "filter": [
-   "folder_read",
    "list_filter",
    "list_filter_property",
    "list_find_property",
@@ -12087,7 +12078,6 @@
    "apps_get"
   ],
   "path_folder": [
-   "folder_read",
    "firebase_service_account",
    "folder_find_starts_with",
    "folder_read_async",
@@ -12843,7 +12833,6 @@
    "firebase_deploy_function_app_current"
   ],
   "files": [
-   "folder_read",
    "folder_find_starts_with",
    "folder_read_async",
    "repos",
@@ -16245,19 +16234,8 @@
   },
   "folder_read": {
    "identifiers": [
-    "path_join",
-    "fs",
-    "folder_read",
-    "path_folder",
-    "lambda",
-    "file",
-    "result",
-    "v",
-    "statSync",
-    "isFile",
-    "files",
-    "readdirSync",
-    "filter"
+    "marker",
+    "folder_read"
    ],
    "async": false
   },
