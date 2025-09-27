@@ -3876,8 +3876,7 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "folder_read_files",
-   "path_join",
-   "git_repo_clone"
+   "path_join"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -15040,8 +15039,7 @@
    "list_map_first"
   ],
   "segments": [
-   "path_join",
-   "git_repo_clone"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -30716,8 +30714,6 @@
     "repo",
     "url",
     "path_folder",
-    "v",
-    "segments",
     "folder_name"
    ]
   }
