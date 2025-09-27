@@ -2769,7 +2769,8 @@
    "html_update_generic",
    "file_write_buffer",
    "file_write_generic",
-   "git_history_delete"
+   "git_history_delete",
+   "data_all"
   ],
   "ast": [
    "data_identifiers_file",
@@ -16662,6 +16663,7 @@
     "marker",
     "file_read_json",
     "data_all",
+    "f_path",
     "file_path",
     "data",
     "v"
