@@ -192,7 +192,8 @@
   "str": "string_trim",
   "sss": "string_split_space",
   "ei": "each_index",
-  "lfdp": "list_find_property"
+  "lfdp": "list_find_property",
+  "s5": "sandbox_5"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2302,7 +2303,8 @@
   "n git_history_delete",
   "s sand",
   "n sandbox_5",
-  "sandbox_5"
+  "sandbox_5",
+  "a s5 sandbox_5"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
