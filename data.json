@@ -16265,10 +16265,12 @@
   ],
   "data_path": [
    "data_all",
-   "data_file_update"
+   "data_file_update",
+   "data_transform"
   ],
   "d_path": [
-   "data_file_update"
+   "data_file_update",
+   "data_transform"
   ]
  },
  "functions": {
@@ -16799,10 +16801,12 @@
     "data_save",
     "object_property_set",
     "data_get",
+    "data_path",
     "data_transform",
     "property_name",
     "value_initial",
     "lambda$previous",
+    "d_path",
     "d",
     "data",
     "value",
