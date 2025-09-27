@@ -3972,7 +3972,8 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log"
+   "command_line_log",
+   "git_history_delete"
   ],
   "log_keep": [
    "catch_log",
@@ -5969,7 +5970,8 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "git_history_delete"
   ],
   "stdout": [
    "command_line",
@@ -5980,7 +5982,8 @@
    "command_line_generic",
    "sandbox_2",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "git_history_delete"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -30474,10 +30477,13 @@
    ]
   },
   "git_history_delete": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "command_line",
     "marker",
-    "git_history_delete"
+    "git_history_delete",
+    "stdout",
+    "command"
    ]
   },
   "sandbox_5": {
