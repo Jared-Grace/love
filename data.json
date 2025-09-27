@@ -6577,7 +6577,8 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind"
+   "bind",
+   "function_params_new"
   ],
   "right": [
    "equal",
@@ -6596,7 +6597,8 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind"
+   "bind",
+   "function_params_new"
   ],
   "eq": [
    "equal",
@@ -6620,7 +6622,8 @@
   "equal_not": [
    "equal_not",
    "js_dollar_ine",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "function_params_new"
   ],
   "ne": [
    "equal_not",
@@ -17932,6 +17935,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "equal_not",
     "function_transform",
     "data_function_current_get",
     "each_async",
@@ -17961,6 +17965,8 @@
     "v",
     "node",
     "name",
+    "left",
+    "right",
     "arguments2",
     "lambda3",
     "value_default",
