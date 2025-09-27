@@ -15960,6 +15960,9 @@
   ],
   "stdout2": [
    "git_history_delete"
+  ],
+  "git_repo_url": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30494,6 +30497,7 @@
     "git_history_delete",
     "user",
     "repo",
+    "git_repo_url",
     "stdout",
     "stdout2"
    ]
