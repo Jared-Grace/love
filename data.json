@@ -2700,7 +2700,8 @@
    "git_repo_clone",
    "git_filter_repo_install",
    "python_install",
-   "user_repo_set"
+   "user_repo_set",
+   "functions_combine"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -17179,6 +17180,7 @@
   },
   "functions_combine": {
    "identifiers": [
+    "marker",
     "list_to",
     "list_size_1_assert",
     "js_auto",
