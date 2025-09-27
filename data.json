@@ -15950,6 +15950,12 @@
   ],
   "sandbox_5": [
    "sandbox_5"
+  ],
+  "user": [
+   "git_history_delete"
+  ],
+  "repo": [
+   "git_history_delete"
   ]
  },
  "functions": {
@@ -30481,6 +30487,8 @@
     "command_line",
     "marker",
     "git_history_delete",
+    "user",
+    "repo",
     "stdout"
    ]
   },
