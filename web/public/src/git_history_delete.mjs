@@ -1,3 +1,4 @@
+import { task_new } from "./task_new.mjs";
 import { todo } from "./todo.mjs";
 import { command_line_git } from "./command_line_git.mjs";
 import { uuid } from "./uuid.mjs";
@@ -7,6 +8,7 @@ export async function git_history_delete(user, repo, f_path) {
   todo(
     "make sure all changes are in repo first like pushing; may need to coordinate with other users",
   );
+  await task_new(task_name);
   const git_repo_url = "https://github.com/" + user + "/" + repo + ".git";
   const repo_folder = repo + "-clean-" + (await uuid()) + ".git";
   let stdout = await command_line_git(
