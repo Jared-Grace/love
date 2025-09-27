@@ -16,7 +16,8 @@ export async function function_params_new(param_names_comma, value_default) {
   function lambda2(v) {
     let { node } = v;
     let arguments2 = object_property_get(node, "arguments");
-    let list = list_adder(function lambda3(la) {});
+    function lambda3(la) {}
+    let list = list_adder(lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
   let name = js_call_callee_name(expression);
