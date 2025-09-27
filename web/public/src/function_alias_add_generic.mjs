@@ -1,8 +1,10 @@
 import { data_get } from "./data_get.mjs";
+import { data_path } from "./data_path.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 export async function function_alias_add_generic(alias) {
   let unaliased = null;
+  let d_path = data_path();
   var {
     value: aliases,
     file_path,
