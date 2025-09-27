@@ -2679,7 +2679,8 @@
    "folder_delete",
    "git_repo_rename",
    "git_repo_rename_normalize",
-   "repos"
+   "repos",
+   "folder_read_files"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -10996,7 +10997,8 @@
    "list_swap"
   ],
   "all": [
-   "list_wait"
+   "list_wait",
+   "folder_read_files"
   ],
   "console": [
    "log_keep",
@@ -30657,6 +30659,7 @@
   "folder_read_files": {
    "async": false,
    "identifiers": [
+    "marker",
     "path_join",
     "fs",
     "folder_read_files",
@@ -30667,8 +30670,9 @@
     "v",
     "statSync",
     "isFile",
-    "files",
+    "all",
     "readdirSync",
+    "files",
     "filter"
    ]
   }
