@@ -2324,7 +2324,8 @@
   "s param",
   "s js,call",
   "s each",
-  "s js,type"
+  "s js,type",
+  "s js,each"
  ],
  "marker_current": "1",
  "function_current": "git_repo_clone",
