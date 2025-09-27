@@ -1,3 +1,4 @@
+import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
 import { list_not_is } from "./list_not_is.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { list_next_try } from "./list_next_try.mjs";
@@ -43,6 +44,7 @@ export function js_assign_combine(ast) {
     }
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
+      let count_import = js_identifiers_named_count(ast2, i_name);
       if (false) {
       }
       let init = object_property_get(declaration, "init");
