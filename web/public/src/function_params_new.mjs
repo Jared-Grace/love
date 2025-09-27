@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -29,5 +30,6 @@ export async function function_params_new(
     each(values_default, lambda3);
   }
   js_visit_type(ast2, "CallExpression", lambda2);
+  await each_async(list, async function lambda4(item) {});
   let name = js_call_callee_name(expression);
 }
