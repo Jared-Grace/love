@@ -20,19 +20,20 @@ export async function function_params_new(
     js_declaration_single_params_add(ast, param_names);
   }
   let values_default = string_split(values_default_comma, ",");
-  function lambda2(v) {
-    let { node } = v;
-    let arguments2 = object_property_get(node, "arguments");
-    function lambda3(value_default) {
-      let expression2 = js_parse_expression(value_default);
-      list_add(arguments2, expression2);
-    }
-    each(values_default, lambda3);
-  }
-  js_visit_type(ast2, "CallExpression", lambda2);
   let f_name_current = await data_function_current_get();
   let result = await data_identifiers_search(f_name_current);
-  async function lambda4(f_name) {}
+  async function lambda4(f_name) {
+    function lambda2(v) {
+      let { node } = v;
+      let arguments2 = object_property_get(node, "arguments");
+      function lambda3(value_default) {
+        let expression2 = js_parse_expression(value_default);
+        list_add(arguments2, expression2);
+      }
+      each(values_default, lambda3);
+    }
+    js_visit_type(ast2, "CallExpression", lambda2);
+  }
   await each_async(result, lambda4);
   let name = js_call_callee_name(expression);
 }
