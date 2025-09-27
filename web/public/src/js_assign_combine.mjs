@@ -44,12 +44,12 @@ export function js_assign_combine(ast) {
     }
     let name = object_property_get(id, "name");
     if (equal(name2, name)) {
-      let count_import = js_identifiers_named_count(ast2, i_name);
-      if (false) {
+      let count = js_identifiers_named_count(ast, name);
+      if (count === 2) {
+        let init = object_property_get(declaration, "init");
+        object_property_set(declaration2, "init", init);
+        list_remove(e1, node);
       }
-      let init = object_property_get(declaration, "init");
-      object_property_set(declaration2, "init", init);
-      list_remove(e1, node);
     }
   }
   js_visit_type(ast, "VariableDeclaration", lambda);
