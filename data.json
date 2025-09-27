@@ -6622,8 +6622,7 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind",
-   "function_params_new"
+   "bind"
   ],
   "right": [
    "equal",
@@ -6642,8 +6641,7 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind",
-   "function_params_new"
+   "bind"
   ],
   "eq": [
    "equal",
@@ -18083,8 +18081,6 @@
     "v",
     "node",
     "name",
-    "left",
-    "right",
     "arguments2",
     "lambda3",
     "value_default",
