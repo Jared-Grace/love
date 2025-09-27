@@ -53,9 +53,6 @@ export async function messenger_reply() {
   }
   await messenger_reply_puppeteer(lambda2);
   return;
-  log(messages);
-  return;
-  return;
   await messenger_reply_wait(page);
   await p.focus();
   let fn = bind_property(page.keyboard, "type");
