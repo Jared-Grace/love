@@ -1812,7 +1812,6 @@
   "file_path_safe_to http://www.google.com",
   "firebase_storage_exists http/http%3A%2F%2Fwww.google.com",
   "firebase_storage_exists http\\http%3A%2F%2Fwww.google.com",
-  "s replace",
   "http_firebase http://www.google.com",
   "s roudn",
   "s round",
@@ -2317,7 +2316,8 @@
   "s git",
   "s git,rename",
   "n git_repo_rename",
-  "fws git_repo_rename normalize"
+  "fws git_repo_rename normalize",
+  "s replace"
  ],
  "marker_current": "1",
  "function_current": "git_repo_rename_normalize",
