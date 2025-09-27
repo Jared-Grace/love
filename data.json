@@ -3615,7 +3615,8 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply"
+   "reply",
+   "function_params_new"
   ],
   "v": [
    "data_identifiers_file",
@@ -5151,7 +5152,8 @@
    "retry",
    "function_list_generate",
    "messenger_reply_messages",
-   "list_filter_ends_with_not_any"
+   "list_filter_ends_with_not_any",
+   "function_params_new"
   ],
   "value2": [
    "error_attention_set",
@@ -7688,7 +7690,8 @@
    "retry",
    "ebible_books_to_chapter_codes",
    "ebible_references_parse_lines",
-   "messenger_reply_messages"
+   "messenger_reply_messages",
+   "function_params_new"
   ],
   "node": [
    "function_dependencies",
@@ -9029,7 +9032,8 @@
    "list_squash",
    "marker_down_choices_lambda",
    "html_parse_descendants_classes",
-   "ebible_verses"
+   "ebible_verses",
+   "function_params_new"
   ],
   "marker_next_get": [
    "marker_assign_replace",
@@ -17901,6 +17905,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "list_adder",
     "object_property_get",
     "js_visit_type",
     "js_call_callee_name",
@@ -17920,6 +17925,9 @@
     "v",
     "node",
     "arguments2",
+    "list",
+    "lambda3",
+    "la",
     "ast2",
     "name",
     "expression"
