@@ -12077,8 +12077,7 @@
    "folder_read",
    "firebase_service_account",
    "folder_find_starts_with",
-   "folder_read_async",
-   "repos"
+   "folder_read_async"
   ],
   "fop": [
    "apps_get",
@@ -30635,8 +30634,7 @@
     "folder_read",
     "marker",
     "repos",
-    "files",
-    "path_folder"
+    "files"
    ]
   }
  },
