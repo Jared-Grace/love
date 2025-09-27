@@ -3616,8 +3616,7 @@
    "keyboard_type_delay",
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
-   "reply",
-   "function_params_new"
+   "reply"
   ],
   "v": [
    "data_identifiers_file",
@@ -4826,8 +4825,7 @@
    "keyboard_type_delay",
    "list_filter_ends_with_not_any",
    "list_find_property",
-   "ebible_languages_to_bible_folders",
-   "function_params_new"
+   "ebible_languages_to_bible_folders"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10372,8 +10370,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "function_params_new"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -16100,6 +16097,9 @@
   ],
   "values_default": [
    "function_params_new"
+  ],
+  "value_default": [
+   "function_params_new"
   ]
  },
  "functions": {
@@ -17934,10 +17934,8 @@
     "node",
     "arguments2",
     "lambda3",
-    "item",
-    "list",
+    "value_default",
     "expression2",
-    "code_expression",
     "ast2",
     "name",
     "expression"
