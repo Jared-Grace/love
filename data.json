@@ -16247,6 +16247,9 @@
   ],
   "user_repo_set": [
    "user_repo_set"
+  ],
+  "default_value": [
+   "function_param_new"
   ]
  },
  "functions": {
@@ -18105,7 +18108,8 @@
    "identifiers": [
     "function_params_new",
     "function_param_new",
-    "param_name"
+    "param_name",
+    "default_value"
    ],
    "async": true
   },
