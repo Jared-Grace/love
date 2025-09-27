@@ -4502,8 +4502,7 @@
    "html_parse_read",
    "ebible_references_parse",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate",
-   "repos"
+   "bible_verses_encouragement_generate"
   ],
   "js_parse": [
    "file_js_parse",
@@ -4596,8 +4595,7 @@
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate",
-   "repos"
+   "bible_verses_encouragement_generate"
   ],
   "object_property_get": [
    "chalk_color",
@@ -5498,7 +5496,8 @@
   "folder_read": [
    "functions_names",
    "folder_read",
-   "apps_get"
+   "apps_get",
+   "repos"
   ],
   "function_name_extension": [
    "functions_names",
@@ -6744,8 +6743,7 @@
    "ebible_references_parse",
    "sandbox_2",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate",
-   "repos"
+   "bible_verses_encouragement_generate"
   ],
   "writeFile": [
    "file_overwrite",
@@ -12079,7 +12077,8 @@
    "folder_read",
    "firebase_service_account",
    "folder_find_starts_with",
-   "folder_read_async"
+   "folder_read_async",
+   "repos"
   ],
   "fop": [
    "apps_get",
@@ -12833,7 +12832,8 @@
   "files": [
    "folder_read",
    "folder_find_starts_with",
-   "folder_read_async"
+   "folder_read_async",
+   "repos"
   ],
   "sw": [
    "string_starts_with",
@@ -30630,13 +30630,13 @@
    ]
   },
   "repos": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "file_read",
+    "folder_read",
     "marker",
     "repos",
-    "contents",
-    "file_path"
+    "files",
+    "path_folder"
    ]
   }
  },
