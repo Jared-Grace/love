@@ -2689,8 +2689,7 @@
    "repos",
    "folder_read_files",
    "folder_read",
-   "git_repo_clone",
-   "js_dollar_ine"
+   "git_repo_clone"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -5130,7 +5129,8 @@
    "reply_sequence",
    "reply",
    "reply_on_match",
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ine"
   ],
   "colored": [
    "chalk_color",
@@ -6618,7 +6618,8 @@
    "js_if_else_if_combine"
   ],
   "equal_not": [
-   "equal_not"
+   "equal_not",
+   "js_dollar_ine"
   ],
   "ne": [
    "equal_not",
@@ -16119,7 +16120,8 @@
    "js_dollar_choices"
   ],
   "js_dollar_ien_generic": [
-   "js_dollar_ien"
+   "js_dollar_ien",
+   "js_dollar_ine"
   ]
  },
  "functions": {
@@ -30779,7 +30781,8 @@
   "js_dollar_ine": {
    "async": false,
    "identifiers": [
-    "marker",
+    "js_dollar_ien_generic",
+    "equal_not",
     "js_dollar_ine",
     "remaining",
     "node",
@@ -30787,7 +30790,8 @@
     "stack2",
     "stack3",
     "ast",
-    "afters"
+    "afters",
+    "fn"
    ]
   }
  },
