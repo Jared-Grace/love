@@ -2667,7 +2667,8 @@
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
    "git_history_delete",
-   "sandbox_5"
+   "sandbox_5",
+   "folder_delete"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -15983,6 +15984,9 @@
   ],
   "chdir": [
    "git_history_delete"
+  ],
+  "folder_delete": [
+   "folder_delete"
   ]
  },
  "functions": {
@@ -30533,6 +30537,13 @@
    "identifiers": [
     "marker",
     "sandbox_5"
+   ]
+  },
+  "folder_delete": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "folder_delete"
    ]
   }
  },
