@@ -7549,7 +7549,8 @@
   "task_new": [
    "function_current_set_task_new",
    "task_new",
-   "task_new_simple"
+   "task_new_simple",
+   "git_history_delete"
   ],
   "function_current_set_task_new": [
    "function_current_set_task_new",
@@ -7557,7 +7558,8 @@
   ],
   "task_name": [
    "function_current_set_task_new",
-   "task_new"
+   "task_new",
+   "git_history_delete"
   ],
   "function_current_set_task_new_simple": [
    "function_current_set_task_new_simple"
@@ -30500,6 +30502,7 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "task_new",
     "todo",
     "command_line_git",
     "uuid",
@@ -30508,6 +30511,7 @@
     "user",
     "repo",
     "f_path",
+    "task_name",
     "git_repo_url",
     "repo_folder",
     "stdout",
