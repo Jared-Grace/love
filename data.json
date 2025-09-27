@@ -3922,8 +3922,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "sandbox_5"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -3973,7 +3972,8 @@
    "npm_install",
    "schtasks_query",
    "firebase_deploy",
-   "command_line_log"
+   "command_line_log",
+   "sandbox_5"
   ],
   "log_keep": [
    "catch_log",
@@ -5970,7 +5970,8 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "sandbox_5"
   ],
   "stdout": [
    "command_line",
@@ -5981,7 +5982,8 @@
    "command_line_generic",
    "sandbox_2",
    "command_line_log",
-   "retry_on_error"
+   "retry_on_error",
+   "sandbox_5"
   ],
   "command_line_git_prefix": [
    "command_line_git",
@@ -30482,12 +30484,14 @@
    ]
   },
   "sandbox_5": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "command_line",
     "log",
     "marker",
     "sandbox_5",
-    "message"
+    "stdout",
+    "command"
    ]
   }
  },
