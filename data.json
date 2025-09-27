@@ -15989,10 +15989,12 @@
    "git_history_delete"
   ],
   "folder_delete": [
-   "folder_delete"
+   "folder_delete",
+   "git_history_delete"
   ],
   "folder_path": [
-   "folder_delete"
+   "folder_delete",
+   "git_history_delete"
   ],
   "rm": [
    "folder_delete"
@@ -30528,6 +30530,7 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "folder_delete",
     "todo",
     "command_line_git",
     "uuid",
@@ -30541,7 +30544,8 @@
     "stdout",
     "process",
     "chdir",
-    "stdout2"
+    "stdout2",
+    "folder_path"
    ]
   },
   "sandbox_5": {
