@@ -2306,7 +2306,6 @@
   "s sand",
   "n sandbox_5",
   "u n",
-  "s git",
   "u clg",
   "a clg",
   "a clg command_line_git",
@@ -2314,7 +2313,8 @@
   "fd git_history_delete",
   "n folder_delete",
   "s file",
-  "s folder"
+  "s folder",
+  "s git"
  ],
  "marker_current": "1",
  "function_current": "folder_delete",
