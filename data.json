@@ -16262,7 +16262,11 @@
    "function_param_new"
   ],
   "data_path": [
-   "data_all"
+   "data_all",
+   "data_file_update"
+  ],
+  "d_path": [
+   "data_file_update"
   ]
  },
  "functions": {
@@ -16273,8 +16277,10 @@
     "data_save",
     "data_all",
     "marker",
+    "data_path",
     "data_file_update",
     "f_path",
+    "d_path",
     "d",
     "parsed"
    ],
