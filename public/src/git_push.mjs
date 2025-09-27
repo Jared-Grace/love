@@ -1,3 +1,4 @@
+import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 import { date_diff_hours } from "./date_diff_hours.mjs";
 import { lambda_get } from "./lambda_get.mjs";
@@ -19,6 +20,7 @@ export async function git_push() {
     const now = date_now();
     let now_iso = date_iso_to(now);
     let property_name = function_name_combine(git_push.name, "when");
+    let d_path = data_path();
     let before_iso = await data_property_get(property_name, d_path);
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
