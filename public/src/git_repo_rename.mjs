@@ -3,7 +3,7 @@ import { marker } from "./marker.mjs";
 export async function git_repo_rename(owner, from, to) {
   marker("1");
   let stdout = await command_line(
-    "gh repo rename " + owner + "/" + from + " --name " + to,
+    "gh repo rename " + to + " --repo <OWNER>/<REPO>" + owner + "/" + from,
   );
   return stdout;
 }
