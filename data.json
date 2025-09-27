@@ -3918,8 +3918,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "sandbox_5"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -30482,8 +30481,7 @@
    "identifiers": [
     "log",
     "marker",
-    "sandbox_5",
-    "message"
+    "sandbox_5"
    ]
   }
  },
