@@ -5967,8 +5967,7 @@
    "command_line_cmd",
    "messenger_reply_playwright",
    "command_line_log",
-   "retry_on_error",
-   "python_install"
+   "retry_on_error"
   ],
   "stdout": [
    "command_line",
@@ -30477,7 +30476,6 @@
     "command_line",
     "marker",
     "python_install",
-    "command",
     "v"
    ]
   }
