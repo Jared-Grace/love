@@ -2670,7 +2670,8 @@
    "messenger_reply_messages_transform",
    "git_history_delete",
    "sandbox_5",
-   "folder_delete"
+   "folder_delete",
+   "git_repo_rename"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16002,6 +16003,9 @@
   ],
   "force": [
    "folder_delete"
+  ],
+  "git_repo_rename": [
+   "git_repo_rename"
   ]
  },
  "functions": {
@@ -30566,6 +30570,13 @@
     "rm",
     "recursive",
     "force"
+   ]
+  },
+  "git_repo_rename": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "git_repo_rename"
    ]
   }
  },
