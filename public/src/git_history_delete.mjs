@@ -1,7 +1,7 @@
 import { command_line_git } from "./command_line_git.mjs";
 import { uuid } from "./uuid.mjs";
 import { marker } from "./marker.mjs";
-export async function git_history_delete(user, repo) {
+export async function git_history_delete(user, repo, file_name) {
   marker("1");
   ("make sure all changes are in repo first like pushing");
   const git_repo_url = "https://github.com/" + user + "/" + repo + ".git";
