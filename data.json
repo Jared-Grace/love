@@ -2337,10 +2337,11 @@
   "s data",
   "fs data_all",
   "fs data_property_get",
-  "pn d_path d_path"
+  "pn d_path d_path",
+  "fs data_file_update"
  ],
  "marker_current": "1",
- "function_current": "data_property_get",
+ "function_current": "data_file_update",
  "terminal": false,
  "identifiers": {
   "log": [
