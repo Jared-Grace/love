@@ -1,6 +1,3 @@
-import { object_properties } from "./object_properties.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { function_transform_current } from "./function_transform_current.mjs";
 import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
@@ -11,9 +8,5 @@ export async function function_params_new(param_names_comma) {
   function lambda(ast) {
     js_declaration_single_params_add(ast, param_names);
   }
-  let f_name_current = await data_function_current_get();
-  let result = await data_identifiers_search(f_name_current);
-  let properties = object_properties(result);
-  async function lambda2(f_name) {}
-  let waited = await list_map_unordered_async(properties, lambda2);
+  let result = await data_identifiers_search(s);
 }
