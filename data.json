@@ -4696,7 +4696,8 @@
    "messenger_reply",
    "reply",
    "ebible_languages_to_bible_folders",
-   "reply_sequence"
+   "reply_sequence",
+   "function_params_new"
   ],
   "data_save": [
    "data_file_update",
@@ -9479,7 +9480,8 @@
    "marker_call_replace_generic",
    "js_expand_generic",
    "marker_rename",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "function_params_new"
   ],
   "log_unparse_try": [
    "js_block_child_graph",
@@ -17899,6 +17901,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "object_property_get",
     "js_visit_type",
     "js_call_callee_name",
     "data_identifiers_search",
@@ -17916,6 +17919,7 @@
     "lambda2",
     "v",
     "node",
+    "arguments2",
     "ast2",
     "name",
     "expression"
