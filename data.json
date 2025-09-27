@@ -192,7 +192,8 @@
   "str": "string_trim",
   "sss": "string_split_space",
   "ei": "each_index",
-  "lfdp": "list_find_property"
+  "lfdp": "list_find_property",
+  "clg": "command_line_git"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2307,7 +2308,9 @@
   "n sandbox_5",
   "u n",
   "s git",
-  "u clg"
+  "u clg",
+  "a clg",
+  "a clg command_line_git"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5",
