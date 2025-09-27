@@ -2300,10 +2300,11 @@
   "s param",
   "s call",
   "n git_history_delete",
-  "s sand"
+  "s sand",
+  "n sandbox_5"
  ],
  "marker_current": "1",
- "function_current": "git_history_delete",
+ "function_current": "sandbox_5",
  "terminal": false,
  "identifiers": {
   "log": [
