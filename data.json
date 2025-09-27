@@ -2309,7 +2309,6 @@
   "is folder_read",
   "r folder_read folder_read_files",
   "n folder_read",
-  "p",
   "repos",
   "n git_repo_clone",
   "s param",
@@ -2338,10 +2337,12 @@
   "fs data_all",
   "fs data_property_get",
   "pn d_path d_path",
-  "fs data_file_update"
+  "fs data_file_update",
+  "p",
+  "fs data_value"
  ],
  "marker_current": "1",
- "function_current": "data_file_update",
+ "function_current": "data_value",
  "terminal": false,
  "identifiers": {
   "log": [
