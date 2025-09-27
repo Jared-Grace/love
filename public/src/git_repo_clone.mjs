@@ -7,6 +7,6 @@ export async function git_repo_clone(user, repo) {
   marker("1");
   const url = git_repo_url(user, repo);
   let path_folder = repos_folder();
-  let v = path_join(segments);
+  let folder_name = path_join(path_folder, repo);
   await command_line_git("clone " + url + " " + folder_name);
 }
