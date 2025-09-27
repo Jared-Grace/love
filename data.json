@@ -2336,10 +2336,11 @@
   "pn f_path \"data.json\"",
   "s data",
   "fs data_all",
-  "pn d_path d_path"
+  "pn d_path d_path",
+  "fs data_property_get"
  ],
  "marker_current": "1",
- "function_current": "data_all",
+ "function_current": "data_property_get",
  "terminal": false,
  "identifiers": {
   "log": [
