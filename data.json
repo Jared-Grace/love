@@ -8022,7 +8022,8 @@
    "messenger_reply_messages",
    "messenger_reply_messages_urls_add",
    "messenger_reply_unread_collect",
-   "messenger_reply_messages_urls_add_multiple"
+   "messenger_reply_messages_urls_add_multiple",
+   "git_history_delete"
   ],
   "__dirname": [
    "function_import",
@@ -30573,6 +30574,7 @@
   "git_history_delete": {
    "async": true,
    "identifiers": [
+    "git_repo_url",
     "folder_delete",
     "todo",
     "command_line_git",
@@ -30582,7 +30584,7 @@
     "user",
     "repo",
     "f_path",
-    "git_repo_url",
+    "url",
     "repo_folder",
     "stdout",
     "process",
