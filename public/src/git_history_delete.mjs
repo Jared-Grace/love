@@ -15,4 +15,5 @@ export async function git_history_delete(user, repo) {
       (await uuid()) +
       ".git",
   );
+  ("cd into directory");
 }
