@@ -5619,7 +5619,8 @@
    "file_read_buffer",
    "file_overwrite_buffer",
    "file_parent_exists_ensure",
-   "folder_read_async"
+   "folder_read_async",
+   "folder_delete"
   ],
   "file": [
    "folder_read",
@@ -6617,7 +6618,8 @@
    "file_read",
    "file_read_buffer",
    "file_overwrite_buffer",
-   "file_parent_exists_ensure"
+   "file_parent_exists_ensure",
+   "folder_delete"
   ],
   "copyFile": [
    "file_copy"
@@ -14549,7 +14551,8 @@
    "file_parent_exists_ensure"
   ],
   "recursive": [
-   "file_parent_exists_ensure"
+   "file_parent_exists_ensure",
+   "folder_delete"
   ],
   "storage": [
    "firebase_bucket"
@@ -15986,6 +15989,15 @@
    "git_history_delete"
   ],
   "folder_delete": [
+   "folder_delete"
+  ],
+  "folder_path": [
+   "folder_delete"
+  ],
+  "rm": [
+   "folder_delete"
+  ],
+  "force": [
    "folder_delete"
   ]
  },
@@ -30540,10 +30552,16 @@
    ]
   },
   "folder_delete": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
-    "folder_delete"
+    "folder_delete",
+    "folder_path",
+    "fs",
+    "promises",
+    "rm",
+    "recursive",
+    "force"
    ]
   }
  },
