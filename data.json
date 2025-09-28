@@ -16347,11 +16347,13 @@
    "data_all",
    "data_file_update",
    "data_transform",
-   "error_attention_set"
+   "error_attention_set",
+   "marker_current_set"
   ],
   "d_path": [
    "data_file_update",
-   "error_attention_set"
+   "error_attention_set",
+   "marker_current_set"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -22552,11 +22554,13 @@
   },
   "marker_current_set": {
    "identifiers": [
+    "data_path",
     "data_transform",
     "marker_current_set",
     "name_marker",
     "lambda",
-    "previous"
+    "previous",
+    "d_path"
    ],
    "async": true
   },
