@@ -2364,7 +2364,8 @@
   "s key",
   "s declar",
   "u lam",
-  "a lam list_add_multiple"
+  "a lam list_add_multiple",
+  "s list, replace"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
