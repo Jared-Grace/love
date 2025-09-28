@@ -1126,7 +1126,6 @@
   "is marker_delete_above",
   "r marker_delete_above marker_above_delete",
   "n function_alias_rename",
-  "s invert",
   "function_alias_rename",
   "u ope",
   "de object_property_exists_not",
@@ -2218,6 +2217,7 @@
   "s dictionary",
   "cs list_to_dictionary async",
   "s unordered",
-  "de list_map_wait"
+  "de list_map_wait",
+  "s invert"
  ]
 }
