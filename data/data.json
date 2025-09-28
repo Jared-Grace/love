@@ -2761,7 +2761,8 @@
    "data_backup",
    "function_new",
    "task_new",
-   "data_set"
+   "data_set",
+   "data_aliases_path"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16474,6 +16475,9 @@
   ],
   "d_path2": [
    "git_push"
+  ],
+  "data_aliases_path": [
+   "data_aliases_path"
   ]
  },
  "functions": {
@@ -31517,6 +31521,13 @@
     "data_path_generic",
     "inner",
     "f_path"
+   ]
+  },
+  "data_aliases_path": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "data_aliases_path"
    ]
   }
  },
