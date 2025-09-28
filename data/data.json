@@ -7947,7 +7947,8 @@
    "folder_read",
    "folder_read_files",
    "list_wait",
-   "repos"
+   "repos",
+   "function_run_git"
   ],
   "readdir": [
    "folder_read",
@@ -13556,7 +13557,8 @@
    "reply_test"
   ],
   "repos": [
-   "repos"
+   "repos",
+   "function_run_git"
   ],
   "wait": [
    "retry"
@@ -19174,12 +19176,14 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
+    "repos",
     "git_acp_call",
     "function_run_log",
     "function_run_git",
     "f_name",
     "args",
-    "result"
+    "result",
+    "all"
    ]
   },
   "function_run_line": {
