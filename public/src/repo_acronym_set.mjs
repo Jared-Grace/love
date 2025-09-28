@@ -11,5 +11,5 @@ export async function repo_acronym_set(repo, value) {
   async function lambda(previous) {
     return value;
   }
-  await data_set(lambda, "acronym", joined);
+  await data_set(lambda, "acronym", joined2);
 }
