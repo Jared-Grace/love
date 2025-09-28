@@ -14005,6 +14005,9 @@
   ],
   "git_publish_initial": [
    "git_publish_initial"
+  ],
+  "commands": [
+   "git_publish_initial"
   ]
  },
  "functions": {
@@ -28999,6 +29002,7 @@
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
+    "commands",
     "folder",
     "command_git"
    ]
