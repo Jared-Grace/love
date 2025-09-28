@@ -1,4 +1,6 @@
+import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 export function data_backup() {
   marker("1");
+  data_path();
 }
