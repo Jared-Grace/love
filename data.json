@@ -196,7 +196,8 @@
   "clg": "command_line_git",
   "td": "todo",
   "eq": "equal",
-  "le": "list_empty"
+  "le": "list_empty",
+  "lam": "list_add_multiple"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2362,7 +2363,8 @@
   "a le list_empty",
   "s key",
   "s declar",
-  "u lam"
+  "u lam",
+  "a lam list_add_multiple"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
