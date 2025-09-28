@@ -4157,7 +4157,6 @@
    "sandbox_2",
    "watch",
    "repo_acronym_set",
-   "path_repo",
    "git_push_folder"
   ],
   "string_may_the_lord": [
@@ -14053,6 +14052,9 @@
   ],
   "list_map_combine": [
    "git_publish_initial"
+  ],
+  "r_path": [
+   "path_repo"
   ]
  },
  "functions": {
@@ -29037,7 +29039,7 @@
     "path_repo",
     "repo_name",
     "previous",
-    "joined"
+    "r_path"
    ]
   },
   "git_publish_initial": {
