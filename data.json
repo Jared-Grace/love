@@ -2813,7 +2813,8 @@
    "file_write_buffer",
    "file_write_generic",
    "git_history_delete",
-   "data_path"
+   "data_path",
+   "data_backup"
   ],
   "ast": [
    "data_identifiers_file",
@@ -5829,8 +5830,7 @@
    "puppeteer_matches",
    "messenger_reply_messages",
    "undefined_not_is_assert",
-   "puppeteer_hrefs",
-   "data_backup"
+   "puppeteer_hrefs"
   ],
   "readdirSync": [
    "folder_read_files"
@@ -31429,7 +31429,7 @@
     "data_path",
     "marker",
     "data_backup",
-    "v2"
+    "f_path"
    ]
   },
   "data_path": {
