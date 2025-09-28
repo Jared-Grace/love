@@ -11,7 +11,7 @@ export async function git_publish_initial(acronym) {
   let all = await repos();
   let dictionary = await list_to_dictionary_async(all, repo_acronym_get);
   let inverted = object_invert(dictionary);
-  let value = object_property_get(object, property_name);
+  let value = object_property_get(inverted, acronym);
   return inverted;
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
