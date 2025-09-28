@@ -1453,8 +1453,7 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "ast": [
    "app_new_step_2",
@@ -2386,8 +2385,7 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "index": [
    "app_replace_home",
@@ -4069,8 +4067,7 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "book_code": [
    "app_reply_main",
@@ -4170,8 +4167,7 @@
    "path_join",
    "sandbox_2",
    "watch",
-   "git_push_folder",
-   "repos_gitignore_overwrite"
+   "git_push_folder"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5546,8 +5542,7 @@
    "server",
    "path_repo",
    "git_push_folder",
-   "repo_path",
-   "repos_gitignore_overwrite"
+   "repo_path"
   ],
   "file_copy": [
    "data_backup",
@@ -14132,6 +14127,9 @@
   ],
   "repo_path": [
    "repo_path",
+   "repos_gitignore_overwrite"
+  ],
+  "list_map_path_join": [
    "repos_gitignore_overwrite"
   ]
  },
@@ -29220,7 +29218,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
-    "path_join",
+    "list_map_path_join",
     "repo_path",
     "list_map",
     "repos_names",
@@ -29229,11 +29227,7 @@
     "repos",
     "f_name",
     "mapped",
-    "lambda",
-    "item",
-    "joined",
-    "mapped2",
-    "list"
+    "mapped2"
    ]
   },
   "repos_names": {
