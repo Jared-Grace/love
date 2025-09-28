@@ -4414,8 +4414,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "repos_gitignore_overwrite"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -29248,7 +29247,6 @@
     "lambda",
     "p",
     "to",
-    "message",
     "waited"
    ]
   },
