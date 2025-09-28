@@ -13,6 +13,7 @@ export async function data_files_update() {
   var d = await data_all(d_path);
   let f_paths = functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
+  let properties = ["identifiers", "functions"];
   async function lambda(parsed) {
     await data_file_update_inner(parsed, d);
   }
