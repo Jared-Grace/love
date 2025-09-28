@@ -2650,7 +2650,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "string_trim_right",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "data_all"
   ],
   "html_enable_if": [
    "app_replace_rule_set",
@@ -13972,9 +13973,6 @@
   "file_name_json_folder": [
    "data_path_generic",
    "user_repo_set"
-  ],
-  "file_path2": [
-   "data_all"
   ]
  },
  "functions": {
@@ -15031,6 +15029,7 @@
   "data_all": {
    "async": true,
    "identifiers": [
+    "not",
     "file_exists",
     "marker",
     "file_read_json",
@@ -15038,8 +15037,7 @@
     "file_path",
     "data",
     "v",
-    "exists",
-    "file_path2"
+    "exists"
    ]
   },
   "data_app_current_get": {
