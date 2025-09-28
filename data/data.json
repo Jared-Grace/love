@@ -13483,8 +13483,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "git_push_folder"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -29081,7 +29080,6 @@
     "name",
     "d_path",
     "joined",
-    "segments",
     "before_iso",
     "before",
     "hours",
