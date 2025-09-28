@@ -7130,8 +7130,7 @@
    "marker_call_replace_generic",
    "js_expand_generic",
    "marker_rename",
-   "catch_call",
-   "path_join"
+   "catch_call"
   ],
   "combined": [
    "functions_combine",
@@ -16349,8 +16348,7 @@
   "assert_arguments": [
    "assert_arguments",
    "js_dollar_aa",
-   "js_assert_arguments_args",
-   "path_join"
+   "js_assert_arguments_args"
   ],
   "assert_equal": [
    "assert_arguments"
@@ -23204,12 +23202,10 @@
   },
   "path_join": {
    "identifiers": [
-    "assert_arguments",
     "not",
     "folder_previous",
     "path_join",
     "segments",
-    "arguments",
     "parts",
     "seg",
     "split",
