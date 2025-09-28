@@ -5,9 +5,9 @@ import { data_path_generic } from "./data_path_generic.mjs";
 import { marker } from "./marker.mjs";
 export async function repo_acronym_set(value) {
   marker("1");
-  let value2 = await user_repo_get();
+  let repo = await user_repo_get();
   let f_path = data_path_generic("", "about");
-  let joined = path_join(["..", "", f_path]);
+  let joined = path_join(["..", repo, f_path]);
   async function lambda(previous) {
     return value;
   }
