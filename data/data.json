@@ -26,7 +26,8 @@
    "js_code_let_assign",
    "js_code_or",
    "js_left_right_set",
-   "js_let_add"
+   "js_let_add",
+   "repos_gitignore_overwrite"
   ],
   "right": [
    "add",
@@ -46,7 +47,8 @@
    "js_left_right_set",
    "js_let_add",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "repos_gitignore_overwrite"
   ],
   "sum": [
    "add",
@@ -7271,7 +7273,8 @@
   "equal_not": [
    "equal_not",
    "js_dollar_ine",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "repos_gitignore_overwrite"
   ],
   "error_attention_set": [
    "error_attention_clear",
@@ -29225,6 +29228,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "equal_not",
     "path_resolve",
     "list_map_unordered_async",
     "list_map_path_join",
@@ -29241,6 +29245,8 @@
     "lambda",
     "p",
     "result",
+    "left",
+    "right",
     "waited"
    ]
   },
