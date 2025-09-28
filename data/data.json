@@ -6618,7 +6618,8 @@
    "object_merge_generic",
    "messenger_reply",
    "reply_test",
-   "function_params_new"
+   "function_params_new",
+   "file_json_isolate"
   ],
   "each_object": [
    "each_object",
@@ -6645,8 +6646,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "file_json_isolate"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -7479,7 +7479,8 @@
    "js_property_parse_expression_add",
    "messenger_reply",
    "reply_test",
-   "function_params_new"
+   "function_params_new",
+   "file_json_isolate"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11418,7 +11419,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "file_json_isolate"
   ],
   "Object": [
    "object_properties",
@@ -16521,9 +16523,6 @@
   ],
   "lambda$data": [
    "file_json_transform"
-  ],
-  "property_name2": [
-   "file_json_isolate"
   ]
  },
  "functions": {
@@ -31603,6 +31602,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "object_properties",
     "object_property_get",
     "file_json_transform",
     "marker",
@@ -31612,8 +31612,8 @@
     "lambda",
     "data",
     "value",
-    "object",
-    "property_name2",
+    "properties",
+    "obj",
     "fb_path"
    ]
   }
