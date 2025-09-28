@@ -1973,8 +1973,7 @@
    "marker_top",
    "task_new",
    "watch",
-   "data_path_generic",
-   "data_all"
+   "data_path_generic"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4527,7 +4526,8 @@
    "html_parse",
    "html_parse_read",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "data_all"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -5419,7 +5419,8 @@
    "git_history_delete",
    "html_update_generic",
    "js_outside_move",
-   "user_repo_set"
+   "user_repo_set",
+   "data_all"
   ],
   "file_read_json": [
    "data_all",
@@ -7568,7 +7569,8 @@
    "file_write",
    "file_write_json",
    "function_new_declaration",
-   "sandbox_2"
+   "sandbox_2",
+   "data_all"
   ],
   "overwrite": [
    "file_write",
@@ -9960,8 +9962,7 @@
   "function_wrap": [
    "function_watch_ending_change",
    "function_wrap",
-   "function_wrap_suffix_add",
-   "data_all"
+   "function_wrap_suffix_add"
   ],
   "function_watch_ending_change": [
    "function_watch_ending_change"
@@ -10002,8 +10003,7 @@
   ],
   "f_name_wrapped": [
    "function_wrap",
-   "function_wrap_suffix_add",
-   "data_all"
+   "function_wrap_suffix_add"
   ],
   "declaration_call": [
    "function_wrap",
@@ -15032,7 +15032,7 @@
   "data_all": {
    "async": true,
    "identifiers": [
-    "function_wrap",
+    "file_write",
     "not",
     "file_exists",
     "marker",
@@ -15040,8 +15040,8 @@
     "data_all",
     "file_path",
     "exists",
-    "f_name",
-    "f_name_wrapped",
+    "f_path",
+    "contents",
     "data",
     "v"
    ]
