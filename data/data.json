@@ -1975,7 +1975,8 @@
    "marker_top",
    "task_new",
    "watch",
-   "data_path_generic"
+   "data_path_generic",
+   "repos_gitignore_overwrite"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -29194,7 +29195,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "repos_gitignore_overwrite"
+    "repos_gitignore_overwrite",
+    "f_name"
    ]
   }
  },
