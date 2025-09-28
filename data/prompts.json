@@ -2198,6 +2198,7 @@
   "data_partition propmts",
   "ps",
   "data_partition prompts",
-  "s delete"
+  "s delete",
+  "rs object_properties_delete all"
  ]
 }
