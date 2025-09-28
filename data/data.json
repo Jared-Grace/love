@@ -1454,8 +1454,7 @@
    "visit_unique_async",
    "watch",
    "user_repo_set",
-   "repo_acronym_set",
-   "user_repo_get"
+   "repo_acronym_set"
   ],
   "ast": [
    "app_new_step_2",
@@ -4714,8 +4713,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "user_repo_get"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -5515,8 +5513,7 @@
    "function_run_line_parse",
    "function_run_prompt",
    "git_push",
-   "marker_current_set",
-   "user_repo_get"
+   "marker_current_set"
   ],
   "path_join": [
    "data_backup",
@@ -5588,8 +5585,7 @@
    "function_open_app",
    "git_push",
    "user_repo_set",
-   "repo_acronym_set",
-   "user_repo_get"
+   "repo_acronym_set"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5615,8 +5611,7 @@
    "prompt_previous",
    "repos_folder",
    "user_repo_set",
-   "repo_acronym_set",
-   "user_repo_get"
+   "repo_acronym_set"
   ],
   "data_copy": [
    "data_copy",
@@ -5937,8 +5932,7 @@
    "data_transform",
    "object_property_initialize",
    "storage_local_initialize",
-   "storage_local_initialize_context",
-   "user_repo_get"
+   "storage_local_initialize_context"
   ],
   "data_identifiers_get": [
    "data_identifiers_get",
@@ -28982,17 +28976,11 @@
    "identifiers": [
     "data_get",
     "user_repo_path",
-    "data_set",
     "marker",
     "user_repo_get",
     "value",
     "f_path",
-    "lambda",
-    "previous",
-    "v",
-    "property_name",
-    "value_initial",
-    "d_path"
+    "v"
    ]
   }
  }
