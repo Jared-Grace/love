@@ -2107,8 +2107,7 @@
    "repo_acronym_set",
    "user_repo_get",
    "list_to_dictionary_async",
-   "repo_acronym_get",
-   "git_publish_initial"
+   "repo_acronym_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -6698,7 +6697,8 @@
    "ebible_chapter_text",
    "list_all",
    "list_difference",
-   "list_intersect"
+   "list_intersect",
+   "git_publish_initial"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -6892,7 +6892,8 @@
    "js_dollar_r",
    "list_first_second",
    "list_second",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "git_publish_initial"
   ],
   "list_multiple_is": [
    "ebible_references_parse_lines",
@@ -6982,7 +6983,8 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash"
+   "string_split_dash",
+   "git_publish_initial"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -14088,6 +14090,9 @@
   ],
   "list_to_dictionary_async": [
    "list_to_dictionary_async",
+   "git_publish_initial"
+  ],
+  "repos_matching": [
    "git_publish_initial"
   ]
  },
@@ -29073,6 +29078,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "list_second",
     "object_property_get",
     "object_invert",
     "list_to_dictionary_async",
@@ -29087,7 +29093,9 @@
     "all",
     "dictionary",
     "inverted",
-    "value",
+    "repos_matching",
+    "second",
+    "list2",
     "lambda",
     "item",
     "mapped2",
