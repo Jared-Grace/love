@@ -13,6 +13,7 @@ export function js_assert_arguments_args(ast) {
   function lambda2({ args }) {
     let code_expression = js_keyword_arguments();
     let expression = js_parse_expression(code_expression);
+    let expression2 = js_parse_expression(code_expression2);
     let args_new = [expression, size];
     list_replace_all(args, args_new);
   }
