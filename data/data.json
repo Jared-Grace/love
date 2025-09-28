@@ -1451,7 +1451,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "ast": [
    "app_new_step_2",
@@ -2102,7 +2103,8 @@
    "undefined_not_is_assert",
    "undefined_not_is_assert_lambda",
    "watch",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -5576,7 +5578,8 @@
    "data_set",
    "function_open_app",
    "git_push",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5601,7 +5604,8 @@
    "path_join",
    "prompt_previous",
    "repos_folder",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "data_copy": [
    "data_copy",
@@ -28938,12 +28942,16 @@
    ]
   },
   "repo_acronym_set": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "data_set",
     "data_path_generic",
     "marker",
     "repo_acronym_set",
-    "f_path"
+    "f_path",
+    "lambda",
+    "previous",
+    "value"
    ]
   }
  }
