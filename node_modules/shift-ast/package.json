@@ -1,0 +1,48 @@
+{
+  "name": "shift-ast",
+  "version": "7.0.0",
+  "description": "constructors for the Shift AST format",
+  "author": "Shape Security",
+  "homepage": "https://github.com/shapesecurity/shift-ast-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shapesecurity/shift-ast-js.git"
+  },
+  "main": "gen/index.js",
+  "types": "gen/index.d.ts",
+  "files": [
+    "checked.js",
+    "gen"
+  ],
+  "scripts": {
+    "test": "mocha --inline-diffs --check-leaks --ui bdd --reporter dot test && tsc -p test",
+    "build": "mkdirp gen && node scripts/generate.js && node scripts/generate-checked.js && node scripts/generate-dts.js",
+    "lint": "eslint scripts gen test",
+    "prepare": "rimraf gen && npm run build"
+  },
+  "devDependencies": {
+    "@types/assert": "^1.4.2",
+    "@types/mocha": "^5.2.6",
+    "eslint": "^5.6.1",
+    "esutils": "^2.0.2",
+    "mkdirp": "^0.5.1",
+    "mocha": "^8.1.3",
+    "rimraf": "^2.6.3",
+    "shift-spec": "2019.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "keywords": [
+    "Shift",
+    "AST",
+    "node",
+    "constructor",
+    "class",
+    "abstract",
+    "syntax",
+    "tree"
+  ],
+  "bugs": {
+    "url": "https://github.com/shapesecurity/shift-ast-js/issues"
+  },
+  "license": "Apache-2.0"
+}
