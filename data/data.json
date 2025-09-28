@@ -7095,8 +7095,7 @@
    "ebible_verses_upload",
    "ebible_version_download_path",
    "function_name_to_path",
-   "local_function_path",
-   "repo_acronym_set"
+   "local_function_path"
   ],
   "tokens": [
    "ebible_verse_new",
@@ -14054,7 +14053,8 @@
    "git_publish_initial"
   ],
   "r_path": [
-   "path_repo"
+   "path_repo",
+   "repo_acronym_set"
   ]
  },
  "functions": {
@@ -29005,8 +29005,8 @@
     "repo",
     "value",
     "f_path",
+    "r_path",
     "joined",
-    "joined2",
     "lambda",
     "previous"
    ]
