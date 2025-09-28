@@ -2200,8 +2200,8 @@
   "d",
   "s data",
   "s gitif",
-  "user_repo_set love",
   "s file,exis",
-  "ps"
+  "ps",
+  "user_repo_set love"
  ]
 }
