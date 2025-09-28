@@ -1453,8 +1453,7 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "ast": [
    "app_new_step_2",
@@ -7815,8 +7814,7 @@
    "git_acp_call",
    "function_run_git",
    "git_publish_initial",
-   "git_push_folder",
-   "repos_gitignore_overwrite"
+   "git_push_folder"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -14046,7 +14044,6 @@
    "path_repo",
    "function_run_git",
    "repo_acronym_to_name",
-   "repos_gitignore_overwrite",
    "repo_path"
   ],
   "command_line_git_folder": [
@@ -29224,9 +29221,6 @@
     "repos_gitignore_overwrite",
     "repos",
     "f_name",
-    "lambda",
-    "repo_name",
-    "folder",
     "mapped"
    ]
   },
