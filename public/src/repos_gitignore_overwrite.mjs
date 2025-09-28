@@ -1,4 +1,4 @@
-import { function_copy } from "./function_copy.mjs";
+import { file_copy } from "./file_copy.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -17,7 +17,7 @@ export async function repos_gitignore_overwrite() {
   async function lambda(p) {
     let result = await path_resolve(p);
     if (equal_not(result, source)) {
-      await function_copy(f_name_old, f_name_new);
+      await file_copy(file_path_old, file_path_new);
     }
   }
   let waited = await list_map_unordered_async(mapped2, lambda);
