@@ -3682,8 +3682,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "js_dollar_aa"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -4917,8 +4916,7 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not",
-   "js_dollar_aa"
+   "string_ends_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -31282,9 +31280,7 @@
     "body_block",
     "code",
     "name",
-    "expression",
-    "list",
-    "item"
+    "expression"
    ]
   },
   "assert_arguments": {
