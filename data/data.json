@@ -5551,8 +5551,7 @@
    "data_backup",
    "data_copy",
    "file_copy",
-   "function_copy",
-   "repos_gitignore_overwrite"
+   "function_copy"
   ],
   "date_now_file": [
    "data_backup",
@@ -14137,7 +14136,8 @@
    "repos_gitignore_overwrite"
   ],
   "file_copy_overwrite": [
-   "file_copy"
+   "file_copy",
+   "repos_gitignore_overwrite"
   ]
  },
  "functions": {
@@ -29222,8 +29222,8 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "file_copy_overwrite",
     "log",
-    "file_copy",
     "equal_not",
     "path_resolve",
     "list_map_unordered_async",
