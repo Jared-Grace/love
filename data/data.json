@@ -2775,7 +2775,8 @@
    "data_aliases_path",
    "data_path_generic",
    "data_copy",
-   "file_json_isolate"
+   "file_json_isolate",
+   "file_json_property_delete"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16521,6 +16522,9 @@
   ],
   "lambda$data": [
    "file_json_transform"
+  ],
+  "file_json_property_delete": [
+   "file_json_property_delete"
   ]
  },
  "functions": {
@@ -31608,6 +31612,13 @@
     "lambda",
     "data",
     "value"
+   ]
+  },
+  "file_json_property_delete": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "file_json_property_delete"
    ]
   }
  },
