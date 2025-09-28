@@ -1,4 +1,6 @@
+import { data_path_generic } from "./data_path_generic.mjs";
 import { marker } from "./marker.mjs";
 export function data_aliases_path() {
   marker("1");
+  return data_path_generic;
 }
