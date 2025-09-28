@@ -8,7 +8,9 @@ export async function command_line_generic(command, extra) {
     encoding: "utf8",
   };
   object_merge(options, extra);
-  log(command);
+  log({
+    command,
+  });
   const stdout = await execAsync(command, options);
   return stdout;
 }
