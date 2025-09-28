@@ -2219,6 +2219,7 @@
   "de list_map_wait",
   "s invert",
   "p",
-  "git_publish_initial k"
+  "git_publish_initial k",
+  "s undefined"
  ]
 }
