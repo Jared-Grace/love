@@ -16390,7 +16390,6 @@
    "function_alias_rename",
    "function_run_line_parse",
    "function_current_set",
-   "function_aliases_restore",
    "data_files_update",
    "data_backup",
    "data_path",
@@ -16485,7 +16484,8 @@
    "git_push"
   ],
   "data_aliases_path": [
-   "data_aliases_path"
+   "data_aliases_path",
+   "function_aliases_restore"
   ]
  },
  "functions": {
@@ -24456,7 +24456,7 @@
   "function_aliases_restore": {
    "async": true,
    "identifiers": [
-    "data_path",
+    "data_aliases_path",
     "marker",
     "data_transform",
     "function_aliases_restore",
