@@ -2355,7 +2355,6 @@
   "git_repo_clone Jared-Grace karate_code",
   "n user_repo_set",
   "s user",
-  "s data",
   "pn data_transform d_path data_path()",
   "s sand",
   "fs data_transform",
@@ -2391,7 +2390,9 @@
   "dc aliases",
   "n file_json_isolate",
   "s delete",
-  "s prop"
+  "s prop",
+  "file_json_isolate data/aliases.json aliases",
+  "s data"
  ],
  "marker_current": "1",
  "function_current": "file_json_isolate",
