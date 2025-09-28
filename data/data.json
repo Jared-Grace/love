@@ -31602,9 +31602,9 @@
     "file_json_isolate",
     "f_path",
     "property_name",
-    "fb_path",
     "lambda",
-    "data"
+    "data",
+    "fb_path"
    ]
   }
  },
