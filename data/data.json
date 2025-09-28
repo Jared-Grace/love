@@ -4375,7 +4375,6 @@
    "error_json",
    "function_transform_marker_specified",
    "git_acp",
-   "git_acp_call",
    "git_acp_timestamp",
    "git_commit",
    "js_declaration_params_names_node",
@@ -10019,12 +10018,10 @@
    "git_acp_timestamp"
   ],
   "concat": [
-   "git_acp_call",
    "http",
    "list_concat"
   ],
   "join": [
-   "git_acp_call",
    "list_join",
    "path_join",
    "roman_to_integer"
@@ -13995,7 +13992,9 @@
    "git_push"
   ],
   "git_acp_folder": [
-   "git_acp",
+   "git_acp"
+  ],
+  "git_acp_call_folder": [
    "git_acp_call"
   ]
  },
@@ -19521,14 +19520,11 @@
   "git_acp_call": {
    "async": true,
    "identifiers": [
-    "git_acp_folder",
+    "git_acp_call_folder",
     "git_acp_call",
     "f_name",
     "args",
-    "folder",
-    "message",
-    "concat",
-    "join"
+    "folder"
    ]
   },
   "git_acp_timestamp": {
