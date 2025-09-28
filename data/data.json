@@ -3552,8 +3552,7 @@
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
    "puppeteer_hrefs",
-   "js_assert_arguments_args",
-   "file_json_isolate"
+   "js_assert_arguments_args"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3726,8 +3725,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "file_json_isolate"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -4968,8 +4966,7 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not",
-   "file_json_isolate"
+   "string_ends_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5070,7 +5067,8 @@
    "object_properties_delete",
    "object_property_delete",
    "data_file_update_inner",
-   "js_string"
+   "js_string",
+   "file_json_isolate"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -31605,6 +31603,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "object_property_delete",
     "each",
     "object_properties",
     "object_property_get",
@@ -31617,9 +31616,6 @@
     "data",
     "value",
     "properties",
-    "lambda2",
-    "item",
-    "list",
     "fb_path"
    ]
   }
