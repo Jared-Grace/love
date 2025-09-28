@@ -2023,7 +2023,6 @@
   "s codes",
   "fws ebible_version_books_testament apocrypha",
   "s apoc",
-  "s command",
   "evu cebulb",
   "evu tglulb",
   "u u",
@@ -2353,7 +2352,8 @@
   "n assert_arguments",
   "a eq equal",
   "s assert",
-  "r assert_equal equal_assert"
+  "r assert_equal equal_assert",
+  "s command"
  ],
  "marker_current": "1",
  "function_current": "equal_assert",
