@@ -3,6 +3,7 @@ import { not } from "./not.mjs";
 import { folder_previous } from "./folder_previous.mjs";
 export function path_join(segments) {
   assert_arguments(arguments, 1);
+  assert_arguments(arguments, 1);
   let parts = [];
   for (let seg of segments) {
     if (not(seg)) {
