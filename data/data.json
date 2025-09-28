@@ -2372,8 +2372,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "git_publish_initial"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4051,8 +4050,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "git_publish_initial"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5250,8 +5248,7 @@
    "git_repo_clone"
   ],
   "command_git": [
-   "command_line_git",
-   "git_publish_initial"
+   "command_line_git"
   ],
   "command_line_log": [
    "command_line_log",
@@ -29023,10 +29020,7 @@
     "v",
     "mapped",
     "lambda2",
-    "item",
-    "list",
-    "folder",
-    "command_git"
+    "folder"
    ]
   }
  },
