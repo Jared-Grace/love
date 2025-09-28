@@ -1,6 +1,6 @@
-import { emoji_question } from "./emoji_question.mjs";
+import { equal } from "./equal.mjs";
 import { assert } from "./assert.mjs";
 export function assert_arguments(args, count) {
-  let v2 = emoji_question();
+  let eq2 = equal(left, right);
   assert(b);
 }
