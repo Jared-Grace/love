@@ -14027,14 +14027,12 @@
   ],
   "path_repo": [
    "path_repo",
-   "function_run_git",
-   "git_publish_initial"
+   "function_run_git"
   ],
   "repo_name": [
    "path_repo",
    "function_run_git",
-   "repo_acronym_to_name",
-   "git_publish_initial"
+   "repo_acronym_to_name"
   ],
   "command_line_git_folder": [
    "command_line_git",
@@ -14092,7 +14090,6 @@
    "repo_acronym_to_name"
   ],
   "repo_acronym_to_name": [
-   "git_publish_initial",
    "repo_acronym_to_name"
   ],
   "repos_matching": [
@@ -14100,6 +14097,9 @@
   ],
   "repos_gitignore_overwrite": [
    "repos_gitignore_overwrite"
+  ],
+  "repo_acronym_to_path": [
+   "git_publish_initial"
   ]
  },
  "functions": {
@@ -29084,14 +29084,12 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
-    "path_repo",
-    "repo_acronym_to_name",
+    "repo_acronym_to_path",
     "list_map_combine",
     "each_async",
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
-    "repo_name",
     "folder",
     "branch_name",
     "commands",
