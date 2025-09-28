@@ -3945,7 +3945,6 @@
    "messenger_reply_unread_collect",
    "messenger_reply",
    "folder_read_files",
-   "path_join",
    "git_filter_repo_install",
    "git_repo_url",
    "messenger_reply_messages_me",
@@ -4211,7 +4210,8 @@
    "sandbox_2",
    "ebible_verse_new",
    "folder_user_combine",
-   "messenger_reply"
+   "messenger_reply",
+   "path_join"
   ],
   "watcher": [
    "watch"
@@ -23219,7 +23219,7 @@
     "pop",
     "previous",
     "push",
-    "v",
+    "joined",
     "join"
    ],
    "async": false
