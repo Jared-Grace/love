@@ -18,7 +18,10 @@ export async function repos_gitignore_overwrite() {
   async function lambda(p) {
     let to = await path_resolve(p);
     if (equal_not(to, from)) {
-      log(message);
+      log({
+        from,
+        to,
+      });
       await file_copy(from, to);
     }
   }
