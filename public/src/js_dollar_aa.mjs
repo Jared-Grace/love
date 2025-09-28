@@ -15,6 +15,7 @@ export function js_dollar_aa({
   ast,
   afters,
 }) {
+  list_remove(stack2, stack1);
   let body_block = js_declaration_single_block_body(ast);
   let code = js_code_call(assert_arguments.name);
   log({
@@ -22,7 +23,6 @@ export function js_dollar_aa({
   });
   let expression = js_parse_statement(code);
   list_add_first(body_block, expression);
-  list_remove(list, item);
   marker("1");
   return;
 }
