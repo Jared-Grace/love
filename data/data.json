@@ -2386,10 +2386,11 @@
   "n data_aliases_path",
   "fs data_path_generic",
   "pn f_name \"data\"",
-  "ps"
+  "ps",
+  "o db"
  ],
  "marker_current": "1",
- "function_current": "data_path_generic",
+ "function_current": "data_backup",
  "terminal": false,
  "identifiers": {
   "log": [
