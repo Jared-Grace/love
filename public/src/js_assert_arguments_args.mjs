@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
@@ -12,6 +13,7 @@ export function js_assert_arguments_args(ast) {
   return;
   let declaration = js_declaration_single(ast);
   let params = js_declaration_params_get(declaration);
+  let size = list_size(list);
   function lambda2({ args }) {
     list_empty(args);
     let code_expression = js_keyword_arguments();
