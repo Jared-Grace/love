@@ -6022,7 +6022,8 @@
   "lambda$previous": [
    "data_set",
    "data_transform",
-   "git_push"
+   "git_push",
+   "repo_acronym_set"
   ],
   "data_terminal_get": [
    "data_terminal_get",
@@ -10085,7 +10086,8 @@
   ],
   "lambda_get": [
    "git_push",
-   "lambda_get"
+   "lambda_get",
+   "repo_acronym_set"
   ],
   "git_push_command": [
    "git_push",
@@ -28944,6 +28946,7 @@
   "repo_acronym_set": {
    "async": true,
    "identifiers": [
+    "lambda_get",
     "data_set",
     "data_path_generic",
     "marker",
@@ -28951,7 +28954,8 @@
     "f_path",
     "lambda",
     "previous",
-    "value"
+    "value",
+    "lambda$previous"
    ]
   }
  }
