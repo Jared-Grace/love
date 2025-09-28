@@ -2336,7 +2336,6 @@
   "s count",
   "s repo",
   "fd git_repo_clone",
-  "git_repo_clone Jared-Grace karate_code",
   "nd aa",
   "s decl,sing",
   "s fill",
@@ -2368,7 +2367,8 @@
   "n sandbox_5_a",
   "p",
   "sandbox_5",
-  "ps"
+  "ps",
+  "git_repo_clone Jared-Grace karate_code"
  ],
  "marker_current": "1",
  "function_current": "sandbox_5_a",
