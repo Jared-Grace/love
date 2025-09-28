@@ -14029,8 +14029,7 @@
    "git_push",
    "data_copy",
    "data_partition",
-   "function_run_line_parse",
-   "data_prompts"
+   "function_run_line_parse"
   ],
   "d_path": [
    "data_file_update",
@@ -14151,7 +14150,8 @@
    "data_partition"
   ],
   "data_prompts_path": [
-   "data_prompts_path"
+   "data_prompts_path",
+   "data_prompts"
   ]
  },
  "functions": {
@@ -14627,7 +14627,7 @@
   },
   "data_prompts": {
    "identifiers": [
-    "data_path",
+    "data_prompts_path",
     "list_slice_end",
     "data_value",
     "data_prompts",
