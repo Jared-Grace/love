@@ -2121,7 +2121,6 @@
   "a eq equal",
   "s assert",
   "r assert_equal equal_assert",
-  "s command",
   "s auto",
   "as auto",
   "atn assert_arguments_args",
@@ -2211,6 +2210,7 @@
   "s git",
   "s repo,name",
   "s repo",
-  "n git_publish_initial"
+  "n git_publish_initial",
+  "s command"
  ]
 }
