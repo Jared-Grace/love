@@ -1735,7 +1735,6 @@
   "fs marker_rename",
   "s js,string",
   "marker_rename a b",
-  "s auto",
   "atn calls_to_each",
   "ts",
   "ftc js_calls_to_each app_new",
@@ -2353,7 +2352,8 @@
   "a eq equal",
   "s assert",
   "r assert_equal equal_assert",
-  "s command"
+  "s command",
+  "s auto"
  ],
  "marker_current": "1",
  "function_current": "equal_assert",
