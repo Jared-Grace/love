@@ -2740,7 +2740,8 @@
    "functions_combine",
    "data_all",
    "js_dollar_aa",
-   "equal_assert"
+   "equal_assert",
+   "data_transform"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16919,6 +16920,7 @@
   },
   "data_transform": {
    "identifiers": [
+    "marker",
     "data_save",
     "object_property_set",
     "data_get",
