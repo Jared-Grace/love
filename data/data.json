@@ -1990,8 +1990,7 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set",
-   "repo_acronym_set"
+   "error_attention_set"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
@@ -10080,7 +10079,8 @@
    "git_history_delete",
    "git_repo_clone",
    "git_repo_url",
-   "user_repo_get"
+   "user_repo_get",
+   "repo_acronym_set"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -28966,7 +28966,7 @@
     "marker",
     "repo_acronym_set",
     "value",
-    "value2",
+    "repo",
     "f_path",
     "joined",
     "lambda",
