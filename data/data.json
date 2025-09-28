@@ -2652,8 +2652,7 @@
    "file_json_isolate",
    "file_json_transform",
    "file_json_property_delete",
-   "data_prompts_path",
-   "data_partition"
+   "data_prompts_path"
   ],
   "ast": [
    "data_identifiers_file",
@@ -16349,9 +16348,6 @@
    "data_prompts_path",
    "data_prompts",
    "function_run_line_parse"
-  ],
-  "property_name2": [
-   "data_partition"
   ]
  },
  "functions": {
@@ -31463,9 +31459,7 @@
     "marker",
     "data_partition",
     "property_name",
-    "f_path_to",
-    "f_path",
-    "property_name2"
+    "f_path_to"
    ]
   },
   "data_prompts_path": {
