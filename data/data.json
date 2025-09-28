@@ -2832,7 +2832,8 @@
    "file_write_generic",
    "git_history_delete",
    "data_path",
-   "data_path_generic"
+   "data_path_generic",
+   "data_aliases_path"
   ],
   "ast": [
    "data_identifiers_file",
@@ -3132,7 +3133,8 @@
    "function_list_generate",
    "function_params_new",
    "js_visit_calls_named",
-   "data_path_generic"
+   "data_path_generic",
+   "data_aliases_path"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -14581,7 +14583,8 @@
    "catch_call",
    "data_path",
    "data_path_generic",
-   "data_backup"
+   "data_backup",
+   "data_aliases_path"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -31539,7 +31542,10 @@
    "identifiers": [
     "data_path_generic",
     "marker",
-    "data_aliases_path"
+    "data_aliases_path",
+    "f_path",
+    "inner",
+    "f_name"
    ]
   }
  },
