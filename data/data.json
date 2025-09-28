@@ -6698,8 +6698,7 @@
    "list_all",
    "list_difference",
    "list_intersect",
-   "git_publish_initial",
-   "list_to_dictionary_async"
+   "git_publish_initial"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -29167,8 +29166,7 @@
     "item",
     "value",
     "mapped",
-    "v",
-    "list2"
+    "v"
    ]
   }
  },
