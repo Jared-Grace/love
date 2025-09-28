@@ -2798,7 +2798,8 @@
    "messenger_reply",
    "range_from",
    "sandbox_4_a",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -2904,7 +2905,8 @@
    "reply",
    "sandbox_2",
    "sandbox_4_a",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -5673,8 +5675,7 @@
    "tasks_run",
    "visit_filter_recursive_async",
    "function_run_git",
-   "git_publish_initial",
-   "list_to_dictionary_async"
+   "git_publish_initial"
   ],
   "data_files_update": [
    "data_files_update"
@@ -29151,7 +29152,7 @@
   "list_to_dictionary_async": {
    "async": true,
    "identifiers": [
-    "each_async",
+    "list_map",
     "marker",
     "object_property_set",
     "list_to_dictionary_async",
@@ -29160,7 +29161,8 @@
     "dictionary",
     "lambda",
     "item",
-    "value"
+    "value",
+    "mapped"
    ]
   }
  },
