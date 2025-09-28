@@ -16211,7 +16211,6 @@
    "function_param_new"
   ],
   "data_path": [
-   "data_all",
    "data_file_update",
    "error_attention_set",
    "marker_current_set",
@@ -16750,7 +16749,6 @@
   },
   "data_all": {
    "identifiers": [
-    "data_path",
     "marker",
     "file_read_json",
     "data_all",
@@ -31436,7 +31434,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-28T17:30:48.972Z",
+ "git_push_when": "2025-09-28T18:30:56.731Z",
  "error_attention": null,
  "app_current": "replace"
 }
