@@ -9,7 +9,7 @@ import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let all = await repos();
   let dictionary = await list_to_dictionary_async(list2, repo_acronym_get);
-  let inverted = object_invert(object);
+  let inverted = object_invert(dictionary);
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
   let branch_name = " main";
