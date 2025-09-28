@@ -980,7 +980,6 @@
   "js_parse 'a'",
   "de data_property_new",
   "n data_property_new",
-  "o n",
   "fr o",
   "fs file_open",
   "fr file_open",
@@ -2366,7 +2365,6 @@
   "pn data_transform d_path data_path()",
   "s sand",
   "fs data_transform",
-  "p",
   "function_exists data_identifiers_file",
   "ps",
   "pn d_path data_path()",
@@ -2377,10 +2375,12 @@
   "s copy",
   "as copy",
   "a flc file_copy",
-  "data_backup"
+  "p",
+  "data_backup",
+  "o n"
  ],
  "marker_current": "1",
- "function_current": "data_backup",
+ "function_current": "function_new",
  "terminal": false,
  "identifiers": {
   "log": [
