@@ -4605,8 +4605,7 @@
    "html_parse_href_text",
    "digits",
    "string_starts_with_digit",
-   "app_reply_main",
-   "data_transform"
+   "app_reply_main"
   ],
   "data": [
    "data_all",
@@ -4754,8 +4753,7 @@
    "data_file_update",
    "data_save",
    "function_alias_generic",
-   "data_files_update",
-   "data_transform"
+   "data_files_update"
   ],
   "identifiers": [
    "js_identifiers_named",
@@ -16798,7 +16796,6 @@
   },
   "data_transform": {
    "identifiers": [
-    "data_save",
     "object_property_set",
     "data_get",
     "data_path",
@@ -16807,7 +16804,6 @@
     "value_initial",
     "lambda$previous",
     "d_path",
-    "d",
     "data",
     "value",
     "value_previous"
