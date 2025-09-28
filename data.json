@@ -2355,7 +2355,8 @@
   "s auto",
   "p",
   "as auto",
-  "atn assert_arguments_args"
+  "atn assert_arguments_args",
+  "s visit,call"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
