@@ -33,6 +33,6 @@ export async function git_push() {
     }
     await command_line_git(command_git);
     let lambda$previous = lambda_get(now_iso);
-    await data_set(lambda$previous, property_name, d_path2);
+    await data_set(lambda$previous, property_name, d_path);
   }
 }
