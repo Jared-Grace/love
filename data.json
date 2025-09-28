@@ -5595,8 +5595,7 @@
    "reply_sequence",
    "reply_on_match",
    "string_ends_with_not",
-   "sandbox_5_a",
-   "function_params_new"
+   "sandbox_5_a"
   ],
   "without": [
    "string_suffix_without",
@@ -18253,7 +18252,6 @@
     "lambda4",
     "f_name",
     "exists",
-    "a",
     "lambda5",
     "lambda",
     "output",
