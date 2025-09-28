@@ -2763,7 +2763,8 @@
    "function_new",
    "task_new",
    "data_set",
-   "data_aliases_path"
+   "data_aliases_path",
+   "data_path_generic"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -31520,6 +31521,7 @@
   "data_path_generic": {
    "async": false,
    "identifiers": [
+    "marker",
     "path_join",
     "file_name_json",
     "data_path_generic",
