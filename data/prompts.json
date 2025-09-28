@@ -2217,6 +2217,7 @@
   "c repo_acronym_set repo_acronym_get",
   "s dictionary",
   "cs list_to_dictionary async",
-  "s unordered"
+  "s unordered",
+  "de list_map_wait"
  ]
 }
