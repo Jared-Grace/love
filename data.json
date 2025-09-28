@@ -197,7 +197,8 @@
   "td": "todo",
   "eq": "equal",
   "le": "list_empty",
-  "lam": "list_add_multiple"
+  "lam": "list_add_multiple",
+  "flc": "file_copy"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2374,7 +2375,8 @@
   "s now",
   "s json",
   "s copy",
-  "as copy"
+  "as copy",
+  "a flc file_copy"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
