@@ -2218,6 +2218,7 @@
   "cs list_to_dictionary async",
   "s unordered",
   "de list_map_wait",
-  "s invert"
+  "s invert",
+  "git_publish_initial k"
  ]
 }
