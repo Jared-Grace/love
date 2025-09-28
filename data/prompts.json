@@ -2215,6 +2215,7 @@
   "urg",
   "s acro",
   "c repo_acronym_set repo_acronym_get",
-  "s dictionary"
+  "s dictionary",
+  "cs list_to_dictionary async"
  ]
 }
