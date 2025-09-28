@@ -8,4 +8,6 @@ export async function data_all(file_path) {
     file_path,
   };
   return v;
+  if (false) {
+  }
 }
