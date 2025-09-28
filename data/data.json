@@ -10011,7 +10011,6 @@
    "git_commit"
   ],
   "git_push": [
-   "git_acp",
    "git_push"
   ],
   "git_acp": [
@@ -13995,7 +13994,8 @@
    "git_acp"
   ],
   "git_push_folder": [
-   "git_push"
+   "git_push",
+   "git_acp"
   ]
  },
  "functions": {
@@ -19511,9 +19511,9 @@
   "git_acp": {
    "async": true,
    "identifiers": [
+    "git_push_folder",
     "command_line_git_folder",
     "git_commit_folder",
-    "git_push",
     "git_acp",
     "message",
     "folder"
