@@ -16350,7 +16350,7 @@
   "lambda_inner": [
    "js_visit_calls_named"
   ],
-  "list_clear": [
+  "le": [
    "js_assert_arguments_args"
   ]
  },
@@ -31280,7 +31280,7 @@
     "ast",
     "lambda2",
     "args",
-    "list_clear",
+    "le",
     "name"
    ]
   },
