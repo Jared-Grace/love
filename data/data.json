@@ -809,7 +809,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "list_to_dictionary_async"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -6697,7 +6698,8 @@
    "list_all",
    "list_difference",
    "list_intersect",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -7098,7 +7100,8 @@
    "functions_transform",
    "function_dependencies_code",
    "list_map_unordered_async",
-   "list_wait"
+   "list_wait",
+   "list_to_dictionary_async"
   ],
   "ebible_verses_upload": [
    "ebible_verses_upload"
@@ -29152,6 +29155,7 @@
   "list_to_dictionary_async": {
    "async": true,
    "identifiers": [
+    "list_wait",
     "list_map",
     "marker",
     "object_property_set",
@@ -29162,7 +29166,9 @@
     "lambda",
     "item",
     "value",
-    "mapped"
+    "mapped",
+    "v",
+    "list2"
    ]
   }
  },
