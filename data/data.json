@@ -3435,7 +3435,8 @@
    "folder_read_files",
    "list_filter_ends_with_any",
    "puppeteer_hrefs",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "file_json_isolate"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4704,7 +4705,8 @@
    "messenger_reply_messages_transform",
    "file_json_transform",
    "messenger_reply_messages_urls_get",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "file_json_isolate"
   ],
   "file_path": [
    "data_file_update",
@@ -16201,8 +16203,7 @@
   "transform": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform",
-   "file_json_isolate"
+   "messenger_reply_messages_urls_transform"
   ],
   "lambda$messages": [
    "messenger_reply_messages_transform"
@@ -31602,7 +31603,8 @@
     "f_path",
     "property_name",
     "fb_path",
-    "transform"
+    "lambda",
+    "data"
    ]
   }
  },
