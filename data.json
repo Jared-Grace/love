@@ -2305,7 +2305,6 @@
   "repos",
   "n git_repo_clone",
   "s param",
-  "s js,call",
   "s each",
   "s js,type",
   "s js,each",
@@ -2356,7 +2355,8 @@
   "p",
   "as auto",
   "atn assert_arguments_args",
-  "s visit,call"
+  "s visit,call",
+  "s js,call"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
