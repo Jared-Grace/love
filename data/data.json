@@ -11148,7 +11148,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "git_push_folder"
   ],
   "js_node_type_not_is_if": [
    "js_await_add",
@@ -29135,6 +29136,7 @@
   "git_push_folder": {
    "async": true,
    "identifiers": [
+    "log",
     "path_join",
     "data_set",
     "lambda_get",
