@@ -14000,9 +14000,6 @@
   ],
   "path_repo": [
    "repo_acronym_set"
-  ],
-  "previous2": [
-   "server"
   ]
  },
  "functions": {
@@ -27947,7 +27944,6 @@
     "dirname",
     "result",
     "previous",
-    "previous2",
     "result2",
     "v",
     "static",
