@@ -2224,6 +2224,7 @@
   "user_repo_path",
   "git_publish_initial k",
   "s gitignore",
-  "n repos_gitignore_overwrite"
+  "n repos_gitignore_overwrite",
+  "r repos repos_names"
  ]
 }
