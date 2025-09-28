@@ -16427,6 +16427,9 @@
   ],
   "data_backup": [
    "data_backup"
+  ],
+  "data_path_generic": [
+   "data_path"
   ]
  },
  "functions": {
@@ -31436,6 +31439,7 @@
   "data_path": {
    "async": false,
    "identifiers": [
+    "data_path_generic",
     "data_path",
     "inner",
     "f_path"
