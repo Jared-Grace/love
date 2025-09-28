@@ -13,8 +13,8 @@ export async function git_publish_initial(acronym) {
   let dictionary = await list_to_dictionary_async(all, repo_acronym_get);
   let inverted = object_invert(dictionary);
   let repos_matching = object_property_get(inverted, acronym);
-  let only = list_single(list2);
-  return inverted;
+  let only = list_single(repos_matching);
+  return only;
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
   let branch_name = " main";
