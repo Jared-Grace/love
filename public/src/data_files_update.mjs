@@ -13,12 +13,12 @@ export async function data_files_update() {
   marker("1");
   let d_path = data_path();
   var d = await data_all(d_path);
-  let data = d;
+  let { data } = d;
   let f_paths = functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   let properties = ["identifiers", "functions"];
   function lambda2(p) {
-    object_property_delete(object, p);
+    object_property_delete(data, p);
   }
   each(properties, lambda2);
   async function lambda(parsed) {
