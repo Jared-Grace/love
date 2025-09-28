@@ -2190,10 +2190,11 @@
   "s data",
   "data_copy aliases",
   "ps",
-  "p",
   "file_json_isolate data/aliases.json aliases",
   "n file_json_property_delete",
-  "file_json_property_delete data/data.json aliases"
+  "file_json_property_delete data/data.json aliases",
+  "n data_partition",
+  "p"
  ],
  "marker_current": "1",
  "function_current": "file_json_property_delete",
