@@ -2371,10 +2371,11 @@
   "function_exists data_identifiers_file",
   "ps",
   "pn d_path data_path()",
-  "o d"
+  "o d",
+  "n data_backup"
  ],
  "marker_current": "1",
- "function_current": "data_files_update",
+ "function_current": "data_backup",
  "terminal": false,
  "identifiers": {
   "log": [
