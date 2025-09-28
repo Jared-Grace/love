@@ -2376,7 +2376,8 @@
   "s json",
   "s copy",
   "as copy",
-  "a flc file_copy"
+  "a flc file_copy",
+  "data_backup"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
