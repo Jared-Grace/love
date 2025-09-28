@@ -3678,8 +3678,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "js_assert_arguments_args"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -5111,8 +5110,7 @@
    "app_new_step_2",
    "js_statement_return_add",
    "reply",
-   "function_params_new",
-   "js_assert_arguments_args"
+   "function_params_new"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -16366,6 +16364,12 @@
   ],
   "lambda_inner": [
    "js_visit_calls_named"
+  ],
+  "args_new": [
+   "js_assert_arguments_args"
+  ],
+  "lam": [
+   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31292,7 +31296,6 @@
     "js_declaration_single",
     "js_keyword_arguments",
     "js_parse_expression",
-    "list_add",
     "list_empty",
     "assert_arguments",
     "js_visit_calls_named",
@@ -31302,11 +31305,12 @@
     "declaration",
     "params",
     "size",
-    "list",
     "lambda2",
     "args",
     "code_expression",
     "expression",
+    "args_new",
+    "lam",
     "name"
    ]
   },
