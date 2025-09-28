@@ -16390,7 +16390,6 @@
    "error_attention_set",
    "marker_current_set",
    "function_alias_rename",
-   "data_set",
    "function_run_line_parse",
    "function_current_set",
    "function_aliases_restore",
@@ -16463,6 +16462,9 @@
   ],
   "string_empty_not_is_assert": [
    "task_new"
+  ],
+  "dp": [
+   "data_set"
   ]
  },
  "functions": {
@@ -24068,7 +24070,7 @@
     "lambda",
     "previous",
     "v2",
-    "d_path"
+    "dp"
    ],
    "async": true
   },
