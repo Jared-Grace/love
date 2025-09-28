@@ -2227,7 +2227,7 @@
   "s resol",
   "ps",
   "p",
-  "repos_gitignore_overwrite",
-  "s git"
+  "s git",
+  "repos_gitignore_overwrite"
  ]
 }
