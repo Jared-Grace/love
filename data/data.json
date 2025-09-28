@@ -1453,7 +1453,8 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "ast": [
    "app_new_step_2",
@@ -2385,7 +2386,8 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "index": [
    "app_replace_home",
@@ -4067,7 +4069,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "book_code": [
    "app_reply_main",
@@ -4629,7 +4632,8 @@
    "list_map_split_space",
    "list_map_whitespace_normalize",
    "messenger_reply",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_gitignore_overwrite"
   ],
   "verse_references": [
    "bible_verses_encouragement_generate",
@@ -29221,7 +29225,11 @@
     "repos_gitignore_overwrite",
     "repos",
     "f_name",
-    "mapped"
+    "mapped",
+    "lambda",
+    "item",
+    "mapped2",
+    "list"
    ]
   },
   "repos_names": {
