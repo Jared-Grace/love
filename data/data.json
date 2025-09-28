@@ -7086,7 +7086,8 @@
    "ebible_verses_upload",
    "ebible_version_download_path",
    "function_name_to_path",
-   "local_function_path"
+   "local_function_path",
+   "repo_acronym_set"
   ],
   "tokens": [
    "ebible_verse_new",
@@ -13471,7 +13472,8 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "repo_acronym_set"
   ],
   "seg": [
    "path_join"
@@ -28967,6 +28969,8 @@
     "f_path",
     "previous2",
     "joined",
+    "joined2",
+    "segments",
     "lambda",
     "previous"
    ]
