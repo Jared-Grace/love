@@ -14601,8 +14601,7 @@
    "catch_call",
    "data_path",
    "data_path_generic",
-   "data_backup",
-   "data_copy"
+   "data_backup"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -31593,8 +31592,7 @@
     "data_copy",
     "f_name",
     "f_path_from",
-    "f_path_to",
-    "inner"
+    "f_path_to"
    ]
   },
   "file_json_isolate": {
