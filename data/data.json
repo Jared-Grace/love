@@ -4157,8 +4157,7 @@
    "path_join",
    "sandbox_2",
    "watch",
-   "git_push_folder",
-   "repo_acronym_get"
+   "git_push_folder"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -14059,7 +14058,8 @@
    "repo_acronym_set"
   ],
   "a_path": [
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_acronym_get"
   ]
  },
  "functions": {
@@ -29106,7 +29106,7 @@
     "marker",
     "repo_acronym_get",
     "repo",
-    "joined"
+    "a_path"
    ]
   }
  },
