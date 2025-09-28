@@ -29281,5 +29281,8 @@
  },
  "git_push_when": "2025-09-28T18:30:56.731Z",
  "error_attention": null,
- "app_current": "replace"
+ "app_current": "replace",
+ "prompts": [
+  "s data,update"
+ ]
 }
