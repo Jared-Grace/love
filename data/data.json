@@ -325,8 +325,7 @@
    "watch",
    "whitespace_normalize",
    "repo_acronym_set",
-   "user_repo_get",
-   "git_publish_initial"
+   "user_repo_get"
   ],
   "apps_get": [
    "apps_get"
@@ -807,7 +806,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "git_publish_initial"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -10066,7 +10066,8 @@
   ],
   "git_push_command": [
    "git_push_command",
-   "git_push_schedule_command"
+   "git_push_schedule_command",
+   "git_publish_initial"
   ],
   "git_push_schedule_command": [
    "git_push_schedule",
@@ -28993,8 +28994,9 @@
   "git_publish_initial": {
    "async": false,
    "identifiers": [
-    "marker",
-    "git_publish_initial"
+    "git_push_command",
+    "git_publish_initial",
+    "v"
    ]
   }
  },
