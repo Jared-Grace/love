@@ -814,7 +814,6 @@
   "t arrow_to_function_should_add_return",
   "s arrow",
   "de au_task_arrow_to_function_should_add_return",
-  "o t",
   "a fnu function_name_unalias",
   "fs data_watch_set",
   "t add_return",
@@ -2382,10 +2381,11 @@
   "t",
   "fc",
   "p",
-  "function_name_to_acronym data_set"
+  "function_name_to_acronym data_set",
+  "o t"
  ],
  "marker_current": "1",
- "function_current": "function_new",
+ "function_current": "task_new",
  "terminal": false,
  "identifiers": {
   "log": [
