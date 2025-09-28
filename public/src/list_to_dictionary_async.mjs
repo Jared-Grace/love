@@ -4,8 +4,8 @@ import { object_property_set } from "./object_property_set.mjs";
 export async function list_to_dictionary_async(list, lambda$item) {
   marker("1");
   let dictionary = {};
-  function lambda(item) {
-    let value = lambda$item(item);
+  async function lambda(item) {
+    let value = await lambda$item(item);
     object_property_set(dictionary, item, value);
   }
   await each_async(list, lambda);
