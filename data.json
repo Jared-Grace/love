@@ -3677,8 +3677,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "js_assert_arguments_args"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -31283,7 +31282,6 @@
     "ast",
     "lambda2",
     "args",
-    "list",
     "name"
    ]
   },
