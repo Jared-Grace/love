@@ -16381,9 +16381,6 @@
   ],
   "size_expression": [
    "js_assert_arguments_args"
-  ],
-  "$aa": [
-   "path_join"
   ]
  },
  "functions": {
@@ -23219,8 +23216,7 @@
     "previous",
     "push",
     "v",
-    "join",
-    "$aa"
+    "join"
    ],
    "async": false
   },
