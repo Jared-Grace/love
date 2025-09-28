@@ -2199,6 +2199,7 @@
   "s delete",
   "rs object_properties_delete all",
   "d",
-  "s data"
+  "s data",
+  "s gitif"
  ]
 }
