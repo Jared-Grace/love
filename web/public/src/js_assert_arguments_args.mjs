@@ -1,3 +1,4 @@
+import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
@@ -9,6 +10,7 @@ export function js_assert_arguments_args(ast) {
   return;
   function lambda2({ args }) {
     list_empty(args);
+    let code_expression = js_keyword_arguments();
     let expression = js_parse_expression(code_expression);
     list_add(args, item);
   }
