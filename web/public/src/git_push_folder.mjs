@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { path_join } from "./path_join.mjs";
 import { data_set } from "./data_set.mjs";
 import { lambda_get } from "./lambda_get.mjs";
@@ -15,6 +16,9 @@ import { catch_log_async } from "./catch_log_async.mjs";
 import { git_push_command } from "./git_push_command.mjs";
 import { marker } from "./marker.mjs";
 export async function git_push_folder(folder) {
+  log({
+    folder,
+  });
   marker("1");
   const command_git = git_push_command();
   await catch_log_async(lambda);
