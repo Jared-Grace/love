@@ -2962,8 +2962,7 @@
    "marker_functionize",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "retry",
-   "git_publish_initial"
+   "retry"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -3775,8 +3774,7 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "sandbox_4_a",
-   "string_starts_with_digit",
-   "git_publish_initial"
+   "string_starts_with_digit"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -29079,8 +29077,6 @@
     "git_publish_initial",
     "acronym",
     "all",
-    "lambda3",
-    "item2",
     "dictionary",
     "list2",
     "lambda",
