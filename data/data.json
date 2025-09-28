@@ -327,7 +327,8 @@
    "repo_acronym_set",
    "user_repo_get",
    "git_push_folder",
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "list_to_dictionary_async"
   ],
   "apps_get": [
    "apps_get"
@@ -1449,7 +1450,8 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "ast": [
    "app_new_step_2",
@@ -2102,7 +2104,8 @@
    "watch",
    "user_repo_set",
    "repo_acronym_set",
-   "user_repo_get"
+   "user_repo_get",
+   "list_to_dictionary_async"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -2377,7 +2380,8 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "index": [
    "app_replace_home",
@@ -2727,7 +2731,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "search_generic",
-   "visit_filter_recursive"
+   "visit_filter_recursive",
+   "list_to_dictionary_async"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -4057,7 +4062,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "book_code": [
    "app_reply_main",
@@ -5746,7 +5752,8 @@
    "object_property_set",
    "object_property_set_exists_not",
    "search_generic",
-   "watch"
+   "watch",
+   "list_to_dictionary_async"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -6167,7 +6174,8 @@
    "list_map",
    "list_map_unordered_async",
    "list_sort_number_mapper",
-   "list_to_dictionary"
+   "list_to_dictionary",
+   "list_to_dictionary_async"
   ],
   "lambda$item$index": [
    "each_index",
@@ -6585,7 +6593,8 @@
    "ebible_chapter_text",
    "function_names_to_acronyms",
    "html_parse_classes_preview",
-   "list_to_dictionary"
+   "list_to_dictionary",
+   "list_to_dictionary_async"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -14068,6 +14077,9 @@
   ],
   "path_repo_combine": [
    "path_repo_about"
+  ],
+  "list_to_dictionary_async": [
+   "list_to_dictionary_async"
   ]
  },
  "functions": {
@@ -29126,6 +29138,21 @@
     "repo",
     "f_path",
     "a_path"
+   ]
+  },
+  "list_to_dictionary_async": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "object_property_set",
+    "each",
+    "list_to_dictionary_async",
+    "list",
+    "lambda$item",
+    "dictionary",
+    "lambda",
+    "item",
+    "value"
    ]
   }
  },
