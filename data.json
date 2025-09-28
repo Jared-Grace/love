@@ -3682,7 +3682,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_dollar_aa"
   ],
   "v": [
    "data_identifiers_file",
@@ -4916,7 +4917,8 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "js_dollar_aa"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -4960,7 +4962,8 @@
    "list_remove_multiple",
    "js_assign_combine",
    "list_remove_property",
-   "messenger_reply_unread_collect"
+   "messenger_reply_unread_collect",
+   "js_dollar_aa"
   ],
   "list_remove_all": [
    "list_remove_all",
@@ -7025,7 +7028,8 @@
    "js_statement_return",
    "marker_delete_above",
    "marker_functionize",
-   "marker_above_generic"
+   "marker_above_generic",
+   "js_dollar_aa"
   ],
   "function_parse_declaration": [
    "function_dependencies_code",
@@ -7108,7 +7112,6 @@
    "app_new_assign",
    "function_list_generate",
    "function_params_new",
-   "js_dollar_aa",
    "js_assert_arguments_args"
   ],
   "functions_combine": [
@@ -31260,13 +31263,14 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "list_remove",
     "log",
-    "js_parse_expression",
     "js_code_call",
     "assert_arguments",
     "list_add_first",
     "js_declaration_single_block_body",
     "marker",
+    "js_parse_statement",
     "js_dollar_aa",
     "remaining",
     "node",
@@ -31278,7 +31282,9 @@
     "body_block",
     "code",
     "name",
-    "expression"
+    "expression",
+    "list",
+    "item"
    ]
   },
   "assert_arguments": {
