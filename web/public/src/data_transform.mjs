@@ -9,8 +9,8 @@ export async function data_transform(
   lambda$previous,
 ) {
   marker("1");
-  let d_path = data_path();
-  var d = await data_get(property_name, value_initial, d_path);
+  let dp = data_path();
+  var d = await data_get(property_name, value_initial, dp);
   let { data, value: value_previous } = d;
   const value = await lambda$previous(value_previous);
   object_property_set(data, property_name, value);
