@@ -9,6 +9,7 @@ import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let all = await repos();
   let dictionary = await list_to_dictionary_async(all, repo_acronym_get);
+  return dictionary;
   let inverted = object_invert(dictionary);
   return inverted;
   function lambda(item) {}
