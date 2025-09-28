@@ -5,5 +5,5 @@ export async function user_repo_set() {
   marker("1");
   let f_path = file_name_json_folder("gitignore", "user");
   async function lambda(previous) {}
-  await data_set(lambda, property_name, d_path);
+  await data_set(lambda, property_name, f_path);
 }
