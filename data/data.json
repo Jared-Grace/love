@@ -3138,8 +3138,7 @@
    "marker_functionize",
    "range_from",
    "reply",
-   "sandbox",
-   "repos_gitignore_overwrite"
+   "sandbox"
   ],
   "any": [
    "app_replace_rule_set",
@@ -29217,9 +29216,8 @@
     "repos",
     "f_name",
     "lambda",
-    "r",
-    "folder",
     "repo_name",
+    "folder",
     "mapped"
    ]
   },
