@@ -1988,8 +1988,7 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set",
-   "object_invert"
+   "error_attention_set"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
@@ -27145,8 +27144,7 @@
     "lambda",
     "value",
     "key",
-    "list",
-    "value2"
+    "list"
    ]
   },
   "object_merge": {
