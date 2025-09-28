@@ -2484,8 +2484,7 @@
    "bible_verses_encouragement_generate",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "function_params_new",
-   "file_json_isolate"
+   "function_params_new"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -5067,8 +5066,7 @@
    "object_properties_delete",
    "object_property_delete",
    "data_file_update_inner",
-   "js_string",
-   "file_json_isolate"
+   "js_string"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -6620,8 +6618,7 @@
    "object_merge_generic",
    "messenger_reply",
    "reply_test",
-   "function_params_new",
-   "file_json_isolate"
+   "function_params_new"
   ],
   "each_object": [
    "each_object",
@@ -7481,8 +7478,7 @@
    "js_property_parse_expression_add",
    "messenger_reply",
    "reply_test",
-   "function_params_new",
-   "file_json_isolate"
+   "function_params_new"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -11421,8 +11417,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "file_json_isolate"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -31606,9 +31601,6 @@
    "async": true,
    "identifiers": [
     "object_properties_delete",
-    "object_property_delete",
-    "each",
-    "object_properties",
     "object_property_get",
     "file_json_transform",
     "marker",
@@ -31618,8 +31610,6 @@
     "lambda",
     "data",
     "value",
-    "obj",
-    "properties",
     "fb_path"
    ]
   }
