@@ -2105,7 +2105,8 @@
    "undefined_not_is_assert_lambda",
    "watch",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -5461,8 +5462,7 @@
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
    "messenger_reply_playwright",
-   "object_properties_delete",
-   "user_repo_get"
+   "object_properties_delete"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -28978,7 +28978,7 @@
     "marker",
     "user_repo_get",
     "f_path",
-    "data"
+    "value"
    ]
   }
  }
