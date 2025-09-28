@@ -4268,8 +4268,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "data_files_update"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -14392,7 +14391,6 @@
     "properties",
     "lambda2",
     "p",
-    "object",
     "lambda",
     "parsed"
    ],
