@@ -5248,7 +5248,6 @@
   "command_line_git": [
    "command_line_git",
    "git_history_delete",
-   "git_push",
    "git_rebase",
    "git_repo_clone"
   ],
@@ -7786,7 +7785,8 @@
    "data_path_generic",
    "git_acp",
    "command_line_git",
-   "git_commit"
+   "git_commit",
+   "git_push"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -14012,7 +14012,8 @@
   ],
   "command_line_git_folder": [
    "command_line_git",
-   "git_acp"
+   "git_acp",
+   "git_push"
   ],
   "git_commit_folder": [
    "git_commit",
@@ -19605,6 +19606,7 @@
   "git_push": {
    "async": true,
    "identifiers": [
+    "command_line_git_folder",
     "user_repo_path",
     "marker",
     "date_diff_hours",
@@ -19616,10 +19618,10 @@
     "function_name_combine",
     "data_set",
     "git_push_command",
-    "command_line_git",
     "catch_log_async",
     "log_keep",
     "git_push",
+    "folder",
     "command_git",
     "lambda",
     "now",
