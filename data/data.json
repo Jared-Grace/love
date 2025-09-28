@@ -331,7 +331,8 @@
    "undefined_not_is_assert",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "repo_acronym_set"
   ],
   "apps_get": [
    "apps_get"
@@ -5376,7 +5377,8 @@
    "data_copy",
    "data_path",
    "data_path_generic",
-   "data_prompts_path"
+   "data_prompts_path",
+   "repo_acronym_set"
   ],
   "data_aliases_path": [
    "data_aliases_path",
@@ -5419,7 +5421,8 @@
    "git_history_delete",
    "html_update_generic",
    "js_outside_move",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "file_read_json": [
    "data_all",
@@ -8160,7 +8163,8 @@
    "string_ends_with",
    "string_ends_with_not",
    "string_suffix_without",
-   "data_path_generic"
+   "data_path_generic",
+   "repo_acronym_set"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -13971,11 +13975,15 @@
    "watch"
   ],
   "f_name_unsuffixed": [
-   "data_path_generic"
+   "data_path_generic",
+   "repo_acronym_set"
   ],
   "file_name_json_folder": [
    "data_path_generic",
    "user_repo_set"
+  ],
+  "repo_acronym_set": [
+   "repo_acronym_set"
   ]
  },
  "functions": {
@@ -28929,6 +28937,17 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "repo_acronym_set": {
+   "async": false,
+   "identifiers": [
+    "data_path_generic",
+    "marker",
+    "repo_acronym_set",
+    "f_path",
+    "suffix",
+    "f_name_unsuffixed"
    ]
   }
  }
