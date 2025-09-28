@@ -806,8 +806,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "git_publish_initial"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1444,8 +1443,7 @@
    "user_repo_set",
    "repo_acronym_set",
    "server",
-   "function_run_git",
-   "git_publish_initial"
+   "function_run_git"
   ],
   "ast": [
    "app_new_step_2",
@@ -2788,8 +2786,7 @@
    "marker_top",
    "messenger_reply",
    "range_from",
-   "sandbox_4_a",
-   "git_publish_initial"
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -14016,6 +14013,9 @@
    "git_publish_initial"
   ],
   "branch_name": [
+   "git_publish_initial"
+  ],
+  "list_map_combine": [
    "git_publish_initial"
   ]
  },
@@ -29008,18 +29008,16 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "list_map_combine",
     "each_async",
-    "list_map",
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
     "branch_name",
     "commands",
-    "lambda",
-    "command",
-    "v",
     "mapped",
     "lambda2",
+    "command",
     "folder"
    ]
   }
