@@ -2248,7 +2248,6 @@
   "o a",
   "s def",
   "fw undefined_not_is_assert_lambda undefined_not_is_assert",
-  "s empty",
   "c messenger_reply_messages_urls_transform messenger_reply_messages_transform",
   "n reply_test",
   "reply_test",
@@ -2382,7 +2381,8 @@
   "fc",
   "p",
   "function_name_to_acronym data_set",
-  "o t"
+  "o t",
+  "s empty"
  ],
  "marker_current": "1",
  "function_current": "task_new",
