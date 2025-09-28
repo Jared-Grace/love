@@ -1,3 +1,4 @@
+import { marker } from "./marker.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { task_function_name_part } from "./task_function_name_part.mjs";
@@ -9,6 +10,7 @@ import { function_new } from "./function_new.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
+  marker("1");
   let f_name = await data_function_current_get();
   let result2 = task_function_name_part();
   let { unaliased } = await function_name_unalias(f_name);
