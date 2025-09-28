@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { not } from "./not.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_await } from "./js_await.mjs";
@@ -17,7 +16,6 @@ export async function js_await_add(ast) {
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
-      log(name);
       let en = object_property_exists_not(functions, name);
       if (en) {
         return;
