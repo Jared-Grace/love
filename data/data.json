@@ -2391,7 +2391,7 @@
   "c data_backup data_copy"
  ],
  "marker_current": "1",
- "function_current": "data_backup",
+ "function_current": "data_copy",
  "terminal": false,
  "identifiers": {
   "log": [
