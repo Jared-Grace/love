@@ -4370,7 +4370,8 @@
    "bind_property",
    "undefined_not_is_assert",
    "messenger_reply_messages_transform",
-   "messenger_reply_messages_urls_get"
+   "messenger_reply_messages_urls_get",
+   "file_json_isolate"
   ],
   "name": [
    "watch",
@@ -4833,7 +4834,8 @@
    "reply_sequence",
    "command_line_node_g",
    "assert_arguments",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "file_json_isolate"
   ],
   "data_save": [
    "data_file_update",
@@ -6643,7 +6645,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "file_json_isolate"
   ],
   "each_pair": [
    "each_pair",
@@ -16518,6 +16521,9 @@
   ],
   "lambda$data": [
    "file_json_transform"
+  ],
+  "property_name2": [
+   "file_json_isolate"
   ]
  },
  "functions": {
@@ -31597,6 +31603,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_json_transform",
     "marker",
     "file_json_isolate",
@@ -31604,6 +31611,9 @@
     "property_name",
     "lambda",
     "data",
+    "value",
+    "object",
+    "property_name2",
     "fb_path"
    ]
   }
