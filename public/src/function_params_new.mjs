@@ -1,3 +1,4 @@
+import { function_exists } from "./function_exists.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { object_properties } from "./object_properties.mjs";
@@ -26,6 +27,7 @@ export async function function_params_new(
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
+    let e = await function_exists(f_name2);
     async function lambda5(ast) {
       js_visit_calls_named(f_name_current, lambda, ast);
     }
