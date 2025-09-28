@@ -4444,7 +4444,8 @@
    "js_code_declaration_args",
    "assert_arguments",
    "function_params_new",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "js_assert_arguments_args"
   ],
   "lj": [
    "watch",
@@ -16348,6 +16349,9 @@
   ],
   "lambda_inner": [
    "js_visit_calls_named"
+  ],
+  "list_clear": [
+   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31275,6 +31279,8 @@
     "js_assert_arguments_args",
     "ast",
     "lambda2",
+    "args",
+    "list_clear",
     "name"
    ]
   },
