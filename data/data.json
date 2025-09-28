@@ -2398,7 +2398,8 @@
    "messenger_reply_playwright",
    "js_dollar",
    "js_await_add",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "function_name_to_acronym"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -18078,6 +18079,7 @@
     "list_first",
     "list_map",
     "function_name_to_parts",
+    "log",
     "function_name_to_acronym",
     "f_name",
     "parts",
