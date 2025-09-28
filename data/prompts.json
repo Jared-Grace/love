@@ -2200,6 +2200,8 @@
   "rs object_properties_delete all",
   "d",
   "s data",
-  "s gitif"
+  "s gitif",
+  "user_repo_set love",
+  "s file,exis"
  ]
 }
