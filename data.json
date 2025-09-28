@@ -4396,7 +4396,8 @@
    "messenger_reply_messages",
    "git_repo_rename_normalize",
    "function_params_new",
-   "js_dollar_ien_generic"
+   "js_dollar_ien_generic",
+   "js_dollar_aa"
   ],
   "output": [
    "watch",
@@ -5330,8 +5331,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "js_dollar_aa"
+   "task_new"
   ],
   "f_name_wrapped": [
    "function_watch_suffix_change",
@@ -16313,7 +16313,8 @@
    "js_dollar_choices"
   ],
   "assert_arguments": [
-   "assert_arguments"
+   "assert_arguments",
+   "js_dollar_aa"
   ],
   "assert_equal": [
    "assert_arguments"
@@ -31200,6 +31201,7 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "assert_arguments",
     "js_code_call_args",
     "list_add_first",
     "js_declaration_single_block_body",
@@ -31214,7 +31216,7 @@
     "afters",
     "body_block",
     "code",
-    "unaliased",
+    "name",
     "args_code",
     "item"
    ]
