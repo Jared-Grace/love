@@ -159,7 +159,7 @@ export async function function_aliases_restore() {
     };
     return v2;
   }
-  let d_path = data_path();
+  let d_path = data_aliases_path();
   let v = await data_transform("aliases", {}, lambda, d_path);
   return v;
 }
