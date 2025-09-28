@@ -10099,9 +10099,6 @@
    "git_push_command",
    "git_push_schedule_command"
   ],
-  "d_path2": [
-   "git_push"
-  ],
   "git_push_schedule_command": [
    "git_push_schedule",
    "git_push_schedule_command"
@@ -19608,8 +19605,7 @@
     "before_iso",
     "before",
     "hours",
-    "lambda$previous",
-    "d_path2"
+    "lambda$previous"
    ]
   },
   "git_push_command": {
