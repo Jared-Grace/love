@@ -14,6 +14,8 @@ export async function repos_gitignore_overwrite() {
   let mapped2 = list_map_path_join(mapped, f_name);
   async function lambda(p) {
     let result = await path_resolve(p);
+    if (false) {
+    }
   }
   let waited = await list_map_unordered_async(mapped2, lambda);
   return mapped2;
