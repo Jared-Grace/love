@@ -16330,6 +16330,9 @@
   "js_assert_arguments_args": [
    "js_assert_arguments_args",
    "js_auto_transforms"
+  ],
+  "lambda1": [
+   "function_params_new"
   ]
  },
  "functions": {
@@ -18169,7 +18172,7 @@
     "param_names_comma",
     "values_default_comma",
     "param_names",
-    "lambda",
+    "lambda1",
     "ast",
     "values_default",
     "f_name_current",
@@ -18183,10 +18186,11 @@
     "node",
     "name",
     "args",
+    "lambda",
+    "output",
     "lambda3",
     "value_default",
-    "expression2",
-    "output"
+    "expression2"
    ],
    "async": true
   },
