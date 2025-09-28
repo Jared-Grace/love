@@ -16396,7 +16396,6 @@
    "data_file_update",
    "error_attention_set",
    "marker_current_set",
-   "function_alias_rename",
    "function_run_line_parse",
    "function_current_set",
    "data_files_update",
@@ -16500,7 +16499,8 @@
   "data_aliases_path": [
    "data_aliases_path",
    "function_aliases_restore",
-   "function_alias_add_generic"
+   "function_alias_add_generic",
+   "function_alias_rename"
   ],
   "data_copy": [
    "data_copy"
@@ -24440,7 +24440,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
-    "data_path",
+    "data_aliases_path",
     "each",
     "object_property_set",
     "data_transform",
