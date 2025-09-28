@@ -4150,7 +4150,8 @@
    "path_join",
    "sandbox_2",
    "watch",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "path_repo"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5528,7 +5529,8 @@
    "path_join",
    "sandbox_2",
    "server",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "path_repo"
   ],
   "file_copy": [
    "data_backup",
@@ -5602,7 +5604,8 @@
    "repos_folder",
    "user_repo_set",
    "repo_acronym_set",
-   "server"
+   "server",
+   "path_repo"
   ],
   "data_copy": [
    "data_copy",
@@ -7713,7 +7716,8 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server"
+   "server",
+   "path_repo"
   ],
   "prefix": [
    "firebase_service_account",
@@ -13999,7 +14003,11 @@
    "repo_acronym_set"
   ],
   "path_repo": [
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "path_repo"
+  ],
+  "repo_name": [
+   "path_repo"
   ]
  },
  "functions": {
@@ -28995,6 +29003,17 @@
     "file_name_json_folder",
     "user_repo_path",
     "f_path"
+   ]
+  },
+  "path_repo": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "folder_previous",
+    "path_repo",
+    "repo_name",
+    "previous",
+    "joined"
    ]
   }
  }
