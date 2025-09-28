@@ -21,5 +21,4 @@ export async function repos_gitignore_overwrite() {
     }
   }
   let waited = await list_map_unordered_async(mapped2, lambda);
-  return mapped2;
 }
