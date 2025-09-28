@@ -7,4 +7,5 @@ export function data_backup() {
   let f_path_from = data_path();
   let inner = date_now_file();
   let f_path_to = data_path_generic(inner);
+  cp;
 }
