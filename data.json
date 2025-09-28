@@ -2358,7 +2358,7 @@
   "atn assert_arguments_args"
  ],
  "marker_current": "1",
- "function_current": "js_assert_arguments_args",
+ "function_current": "js_auto_transforms",
  "terminal": false,
  "identifiers": {
   "log": [
