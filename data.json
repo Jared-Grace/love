@@ -1195,7 +1195,6 @@
   "r js_marker_enter marker_enter",
   "ac me mx",
   "a me marker_enter",
-  "u lr",
   "a lr list_remove",
   "n marker_above",
   "s marker,index",
@@ -2366,7 +2365,8 @@
   "a lam list_add_multiple",
   "s list, replace",
   "s list,repl",
-  "s dollar"
+  "s dollar",
+  "u lr"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
