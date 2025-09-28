@@ -332,7 +332,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "apps_get": [
    "apps_get"
@@ -1452,7 +1453,8 @@
    "visit_unique_async",
    "watch",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "ast": [
    "app_new_step_2",
@@ -2104,7 +2106,8 @@
    "undefined_not_is_assert_lambda",
    "watch",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -5425,7 +5428,8 @@
    "html_update_generic",
    "js_outside_move",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "file_read_json": [
    "data_all",
@@ -5581,7 +5585,8 @@
    "function_open_app",
    "git_push",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5607,7 +5612,8 @@
    "prompt_previous",
    "repos_folder",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "user_repo_get"
   ],
   "data_copy": [
    "data_copy",
@@ -13990,7 +13996,11 @@
    "repo_acronym_set"
   ],
   "user_repo_path": [
-   "user_repo_set"
+   "user_repo_set",
+   "user_repo_get"
+  ],
+  "user_repo_get": [
+   "user_repo_get"
   ]
  },
  "functions": {
@@ -28958,6 +28968,19 @@
     "f_path",
     "joined",
     "segments",
+    "lambda",
+    "previous"
+   ]
+  },
+  "user_repo_get": {
+   "async": true,
+   "identifiers": [
+    "user_repo_path",
+    "data_set",
+    "marker",
+    "user_repo_get",
+    "value",
+    "f_path",
     "lambda",
     "previous"
    ]
