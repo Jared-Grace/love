@@ -2147,7 +2147,6 @@
   "sandbox_5",
   "git_repo_clone Jared-Grace karate_code",
   "n user_repo_set",
-  "s user",
   "pn data_transform d_path data_path()",
   "s sand",
   "fs data_transform",
@@ -2208,6 +2207,7 @@
   "repo_acronym_set l",
   "urs karate_code",
   "ras k",
-  "s git"
+  "s git",
+  "s user"
  ]
 }
