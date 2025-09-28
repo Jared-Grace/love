@@ -4157,7 +4157,6 @@
    "path_join",
    "sandbox_2",
    "watch",
-   "repo_acronym_set",
    "git_push_folder",
    "repo_acronym_get"
   ],
@@ -14057,6 +14056,9 @@
   ],
   "path_repo_about": [
    "repo_acronym_get",
+   "repo_acronym_set"
+  ],
+  "a_path": [
    "repo_acronym_set"
   ]
  },
@@ -29002,7 +29004,7 @@
     "repo_acronym_set",
     "repo",
     "value",
-    "joined",
+    "a_path",
     "lambda",
     "previous"
    ]
