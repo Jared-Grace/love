@@ -11421,7 +11421,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete"
+   "object_properties_delete",
+   "file_json_isolate"
   ],
   "Object": [
    "object_properties",
@@ -11433,7 +11434,8 @@
   ],
   "object_properties_delete": [
    "object_properties_delete",
-   "object_replace"
+   "object_replace",
+   "file_json_isolate"
   ],
   "undefined_is": [
    "object_property_get",
@@ -31603,6 +31605,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "object_properties_delete",
     "object_property_delete",
     "each",
     "object_properties",
@@ -31615,6 +31618,7 @@
     "lambda",
     "data",
     "value",
+    "obj",
     "properties",
     "fb_path"
    ]
