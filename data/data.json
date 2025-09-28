@@ -2369,8 +2369,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "function_run_git"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -7765,7 +7764,8 @@
    "command_line_git",
    "git_commit",
    "git_push",
-   "git_acp_call"
+   "git_acp_call",
+   "function_run_git"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -9611,7 +9611,6 @@
    "tasks_run"
   ],
   "git_acp_call": [
-   "function_run_git",
    "git_acp_call"
   ],
   "function_run_log": [
@@ -13977,10 +13976,12 @@
   ],
   "path_repo": [
    "repo_acronym_set",
-   "path_repo"
+   "path_repo",
+   "function_run_git"
   ],
   "repo_name": [
-   "path_repo"
+   "path_repo",
+   "function_run_git"
   ],
   "command_line_git_folder": [
    "command_line_git"
@@ -13995,7 +13996,8 @@
    "git_acp"
   ],
   "git_acp_call_folder": [
-   "git_acp_call"
+   "git_acp_call",
+   "function_run_git"
   ]
  },
  "functions": {
@@ -19162,9 +19164,10 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
+    "path_repo",
+    "git_acp_call_folder",
     "each_async",
     "repos",
-    "git_acp_call",
     "function_run_log",
     "function_run_git",
     "f_name",
@@ -19172,7 +19175,8 @@
     "result",
     "all",
     "lambda",
-    "item"
+    "repo_name",
+    "folder"
    ]
   },
   "function_run_line": {
