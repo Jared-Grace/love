@@ -4667,8 +4667,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "git_publish_initial"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -4723,8 +4722,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "git_push_folder",
-   "git_publish_initial"
+   "git_push_folder"
   ],
   "browser_is": [
    "browser_is",
@@ -29090,8 +29088,6 @@
     "dictionary",
     "inverted",
     "value",
-    "object",
-    "property_name",
     "lambda",
     "item",
     "mapped2",
