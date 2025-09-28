@@ -13999,9 +13999,6 @@
   "data_user_path": [
    "data_function_current_get",
    "function_current_set"
-  ],
-  "f_path2": [
-   "data_marker_current_get"
   ]
  },
  "functions": {
@@ -15283,9 +15280,8 @@
     "data_property_get",
     "data_marker_current_get",
     "property_name",
-    "f_path2",
-    "f_name",
-    "d_path"
+    "d_path",
+    "f_name"
    ]
   },
   "data_partition": {
