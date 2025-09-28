@@ -2727,7 +2727,8 @@
    "functions_combine",
    "data_all",
    "js_dollar_aa",
-   "equal_assert"
+   "equal_assert",
+   "js_assert_arguments_args"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2919,7 +2920,8 @@
    "js_dollar_if_call",
    "js_dollar_ine",
    "js_dollar_ien_generic",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_assert_arguments_args"
   ],
   "code": [
    "data_identifiers_file",
@@ -16323,6 +16325,9 @@
   ],
   "equal_assert": [
    "equal_assert"
+  ],
+  "js_assert_arguments_args": [
+   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31244,6 +31249,14 @@
     "left",
     "right",
     "eq"
+   ]
+  },
+  "js_assert_arguments_args": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_assert_arguments_args",
+    "ast"
    ]
   }
  },
