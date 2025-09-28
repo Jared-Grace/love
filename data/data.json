@@ -5929,7 +5929,8 @@
    "object_property_exists_not_assert",
    "messenger_reply_playwright",
    "list_concat",
-   "equal_assert"
+   "equal_assert",
+   "task_new"
   ],
   "b": [
    "assert",
@@ -5976,7 +5977,8 @@
    "ebible_version_books",
    "ebible_verse",
    "messenger_reply_playwright",
-   "reply"
+   "reply",
+   "task_new"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -12576,8 +12578,7 @@
   "name2": [
    "app_replace_home",
    "js_assign_combine",
-   "app_reply_main",
-   "task_new"
+   "app_reply_main"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -23704,6 +23705,7 @@
   },
   "task_new": {
    "identifiers": [
+    "assert",
     "string_empty_not_is",
     "marker",
     "data_function_current_restore",
@@ -23719,7 +23721,7 @@
     "task_new",
     "task_name",
     "ne",
-    "name2",
+    "b",
     "f_name",
     "result2",
     "unaliased",
