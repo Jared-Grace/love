@@ -4605,7 +4605,8 @@
    "html_parse_href_text",
    "digits",
    "string_starts_with_digit",
-   "app_reply_main"
+   "app_reply_main",
+   "data_transform"
   ],
   "data": [
    "data_all",
@@ -4753,7 +4754,8 @@
    "data_file_update",
    "data_save",
    "function_alias_generic",
-   "data_files_update"
+   "data_files_update",
+   "data_transform"
   ],
   "identifiers": [
    "js_identifiers_named",
@@ -16796,6 +16798,7 @@
   },
   "data_transform": {
    "identifiers": [
+    "data_save",
     "object_property_set",
     "data_get",
     "data_path",
@@ -16804,6 +16807,7 @@
     "value_initial",
     "lambda$previous",
     "d_path",
+    "d",
     "data",
     "value",
     "value_previous"
@@ -31143,7 +31147,7 @@
    ]
   }
  },
- "git_push_when": "2025-09-27T23:51:51.914Z",
+ "git_push_when": "2025-09-28T02:05:17.379Z",
  "error_attention": null,
  "app_current": "replace"
 }
