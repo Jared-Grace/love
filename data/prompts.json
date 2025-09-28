@@ -2202,6 +2202,7 @@
   "s file,exis",
   "ps",
   "user_repo_set love",
-  "repos"
+  "repos",
+  "n repo_acronym_set"
  ]
 }
