@@ -1,3 +1,4 @@
 export function sandbox_5_a(a) {
-  return a * 2;
+  let v = a * 2;
+  return v;
 }
