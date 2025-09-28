@@ -326,7 +326,8 @@
    "whitespace_normalize",
    "repo_acronym_set",
    "user_repo_get",
-   "git_push_folder"
+   "git_push_folder",
+   "repo_acronym_get"
   ],
   "apps_get": [
    "apps_get"
@@ -1448,7 +1449,8 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "git_publish_initial"
+   "git_publish_initial",
+   "repo_acronym_get"
   ],
   "ast": [
    "app_new_step_2",
@@ -2101,7 +2103,8 @@
    "watch",
    "user_repo_set",
    "repo_acronym_set",
-   "user_repo_get"
+   "user_repo_get",
+   "repo_acronym_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4157,7 +4160,8 @@
    "sandbox_2",
    "watch",
    "repo_acronym_set",
-   "git_push_folder"
+   "git_push_folder",
+   "repo_acronym_get"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5379,7 +5383,8 @@
    "data_path",
    "data_path_generic",
    "data_prompts_path",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_acronym_get"
   ],
   "data_aliases_path": [
    "data_aliases_path",
@@ -5425,7 +5430,8 @@
    "user_repo_set",
    "repo_acronym_set",
    "user_repo_get",
-   "user_repo_path"
+   "user_repo_path",
+   "repo_acronym_get"
   ],
   "file_read_json": [
    "data_all",
@@ -5532,7 +5538,8 @@
    "server",
    "repo_acronym_set",
    "path_repo",
-   "git_push_folder"
+   "git_push_folder",
+   "repo_acronym_get"
   ],
   "file_copy": [
    "data_backup",
@@ -5579,7 +5586,8 @@
    "function_open_app",
    "user_repo_set",
    "repo_acronym_set",
-   "git_push_folder"
+   "git_push_folder",
+   "repo_acronym_get"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5607,7 +5615,8 @@
    "user_repo_set",
    "repo_acronym_set",
    "server",
-   "path_repo"
+   "path_repo",
+   "repo_acronym_get"
   ],
   "data_copy": [
    "data_copy",
@@ -10084,7 +10093,8 @@
    "git_repo_clone",
    "git_repo_url",
    "user_repo_get",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_acronym_get"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14012,7 +14022,8 @@
   "path_repo": [
    "repo_acronym_set",
    "path_repo",
-   "function_run_git"
+   "function_run_git",
+   "repo_acronym_get"
   ],
   "repo_name": [
    "path_repo",
@@ -14051,7 +14062,11 @@
   ],
   "r_path": [
    "path_repo",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_acronym_get"
+  ],
+  "repo_acronym_get": [
+   "repo_acronym_get"
   ]
  },
  "functions": {
@@ -29092,6 +29107,24 @@
     "before",
     "hours",
     "lambda$previous"
+   ]
+  },
+  "repo_acronym_get": {
+   "async": true,
+   "identifiers": [
+    "path_repo",
+    "path_join",
+    "data_set",
+    "data_path_generic",
+    "marker",
+    "repo_acronym_get",
+    "repo",
+    "value",
+    "f_path",
+    "r_path",
+    "joined",
+    "lambda",
+    "previous"
    ]
   }
  },
