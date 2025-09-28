@@ -8163,8 +8163,7 @@
    "string_ends_with",
    "string_ends_with_not",
    "string_suffix_without",
-   "data_path_generic",
-   "repo_acronym_set"
+   "data_path_generic"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -13975,8 +13974,7 @@
    "watch"
   ],
   "f_name_unsuffixed": [
-   "data_path_generic",
-   "repo_acronym_set"
+   "data_path_generic"
   ],
   "file_name_json_folder": [
    "data_path_generic",
@@ -28945,9 +28943,7 @@
     "data_path_generic",
     "marker",
     "repo_acronym_set",
-    "f_path",
-    "suffix",
-    "f_name_unsuffixed"
+    "f_path"
    ]
   }
  }
