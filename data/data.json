@@ -809,8 +809,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "list_to_dictionary_async"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2799,8 +2798,7 @@
    "messenger_reply",
    "range_from",
    "sandbox_4_a",
-   "git_publish_initial",
-   "list_to_dictionary_async"
+   "git_publish_initial"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -2906,8 +2904,7 @@
    "reply",
    "sandbox_2",
    "sandbox_4_a",
-   "git_publish_initial",
-   "list_to_dictionary_async"
+   "git_publish_initial"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -7099,8 +7096,7 @@
    "functions_transform",
    "function_dependencies_code",
    "list_map_unordered_async",
-   "list_wait",
-   "list_to_dictionary_async"
+   "list_wait"
   ],
   "ebible_verses_upload": [
    "ebible_verses_upload"
@@ -14087,6 +14083,9 @@
   "list_to_dictionary_async": [
    "list_to_dictionary_async",
    "git_publish_initial"
+  ],
+  "list_map_wait": [
+   "list_to_dictionary_async"
   ]
  },
  "functions": {
@@ -29154,8 +29153,7 @@
   "list_to_dictionary_async": {
    "async": true,
    "identifiers": [
-    "list_wait",
-    "list_map",
+    "list_map_wait",
     "marker",
     "object_property_set",
     "list_to_dictionary_async",
@@ -29164,9 +29162,7 @@
     "dictionary",
     "lambda",
     "item",
-    "value",
-    "mapped",
-    "v"
+    "value"
    ]
   }
  },
