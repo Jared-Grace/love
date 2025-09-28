@@ -5789,7 +5789,8 @@
    "puppeteer_matches",
    "messenger_reply_messages",
    "undefined_not_is_assert",
-   "puppeteer_hrefs"
+   "puppeteer_hrefs",
+   "assert_arguments"
   ],
   "readdirSync": [
    "folder_read_files"
@@ -13886,7 +13887,8 @@
   ],
   "emoji_question": [
    "app_reply_choices",
-   "emoji_question"
+   "emoji_question",
+   "assert_arguments"
   ],
   "string_the_servant_of_god": [
    "string_the_servant_of_god_is",
@@ -31207,10 +31209,12 @@
   "assert_arguments": {
    "async": false,
    "identifiers": [
+    "emoji_question",
     "assert",
     "assert_arguments",
     "args",
     "count",
+    "v2",
     "b"
    ]
   }
