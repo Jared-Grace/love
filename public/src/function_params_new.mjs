@@ -30,6 +30,7 @@ export async function function_params_new(
   async function lambda4(f_name) {
     let e = await function_exists(f_name);
     if (not(e)) {
+      return;
     }
     async function lambda5(ast) {
       js_visit_calls_named(f_name_current, lambda, ast);
