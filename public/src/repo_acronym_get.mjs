@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export async function repo_acronym_get(repo) {
   marker("1");
   let a_path = path_repo_about(repo);
-  let v = await data_get("acronym", null, a_path);
-  return v;
+  let a = await data_get("acronym", null, a_path);
+  return a;
 }
