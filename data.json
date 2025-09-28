@@ -1653,7 +1653,6 @@
   "s list_any",
   "a lan list_any",
   "o list_any",
-  "s assert",
   "c object_property_exists_assert object_property_exists_not_assert",
   "ffc",
   "is app_name_prefixed",
@@ -2345,9 +2344,10 @@
   "s combine",
   "s count",
   "s repo",
-  "git_repo_clone Jared-Grace karate_code",
   "fd git_repo_clone",
-  "ps"
+  "ps",
+  "git_repo_clone Jared-Grace karate_code",
+  "s assert"
  ],
  "marker_current": "1",
  "function_current": "data_transform",
