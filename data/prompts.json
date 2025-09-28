@@ -2188,7 +2188,6 @@
   "d",
   "s gitif",
   "s file,exis",
-  "ps",
   "user_repo_set love",
   "repos",
   "n repo_acronym_set",
@@ -2228,6 +2227,7 @@
   "r path_repo repo_path",
   "s resol",
   "p",
-  "repos_gitignore_overwrite"
+  "repos_gitignore_overwrite",
+  "ps"
  ]
 }
