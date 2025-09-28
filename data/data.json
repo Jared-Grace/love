@@ -2757,7 +2757,8 @@
    "data_transform",
    "data_files_update",
    "data_backup",
-   "function_new"
+   "function_new",
+   "task_new"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -23700,6 +23701,7 @@
   },
   "task_new": {
    "identifiers": [
+    "marker",
     "data_function_current_restore",
     "function_name_unalias",
     "task_function_name_part",
