@@ -5791,8 +5791,7 @@
    "puppeteer_matches",
    "messenger_reply_messages",
    "undefined_not_is_assert",
-   "puppeteer_hrefs",
-   "assert_arguments"
+   "puppeteer_hrefs"
   ],
   "readdirSync": [
    "folder_read_files"
@@ -6641,7 +6640,8 @@
    "js_assign_combine",
    "app_reply_main",
    "ebible_references_parse_lines",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "assert_arguments"
   ],
   "left": [
    "equal",
@@ -6661,7 +6661,8 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind"
+   "bind",
+   "assert_arguments"
   ],
   "right": [
    "equal",
@@ -6680,7 +6681,8 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind"
+   "bind",
+   "assert_arguments"
   ],
   "eq": [
    "equal",
@@ -13370,7 +13372,8 @@
    "list_filter_ends_with_any"
   ],
   "eq2": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "assert_arguments"
   ],
   "lambda8": [
    "app_replace_rule_set",
@@ -13889,8 +13892,7 @@
   ],
   "emoji_question": [
    "app_reply_choices",
-   "emoji_question",
-   "assert_arguments"
+   "emoji_question"
   ],
   "string_the_servant_of_god": [
    "string_the_servant_of_god_is",
@@ -31211,12 +31213,14 @@
   "assert_arguments": {
    "async": false,
    "identifiers": [
-    "emoji_question",
+    "equal",
     "assert",
     "assert_arguments",
     "args",
     "count",
-    "v2",
+    "eq2",
+    "left",
+    "right",
     "b"
    ]
   }
