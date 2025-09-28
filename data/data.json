@@ -7969,7 +7969,8 @@
    "list_wait",
    "repos",
    "function_run_git",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repos_gitignore_overwrite"
   ],
   "readdir": [
    "folder_read",
@@ -13580,7 +13581,8 @@
   "repos": [
    "repos",
    "function_run_git",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repos_gitignore_overwrite"
   ],
   "wait": [
    "retry"
@@ -29190,11 +29192,13 @@
    ]
   },
   "repos_gitignore_overwrite": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "repos",
     "marker",
     "repos_gitignore_overwrite",
-    "f_name"
+    "f_name",
+    "all"
    ]
   }
  },
