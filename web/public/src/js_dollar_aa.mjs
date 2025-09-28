@@ -21,7 +21,7 @@ export function js_dollar_aa({
     code,
   });
   let expression = js_parse_statement(code);
-  list_add_first(body_block, expression);
+  list_add_first(body_block, expression);lr
   marker("1");
   return;
 }
