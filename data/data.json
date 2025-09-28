@@ -11114,7 +11114,6 @@
    "marker_next_await"
   ],
   "log": [
-   "js_await_add",
    "js_dollar",
    "js_dollar_aa",
    "js_log_remove",
@@ -20983,7 +20982,6 @@
   "js_await_add": {
    "async": true,
    "identifiers": [
-    "log",
     "not",
     "object_replace",
     "js_await",
