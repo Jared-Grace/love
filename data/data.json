@@ -4324,7 +4324,8 @@
    "file_delete_if_exists",
    "file_exists",
    "function_exists_inner",
-   "http_local"
+   "http_local",
+   "data_all"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -7354,7 +7355,8 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "data_all"
   ],
   "F_OK": [
    "file_exists"
@@ -13970,6 +13972,9 @@
   "file_name_json_folder": [
    "data_path_generic",
    "user_repo_set"
+  ],
+  "file_path2": [
+   "data_all"
   ]
  },
  "functions": {
@@ -15026,12 +15031,15 @@
   "data_all": {
    "async": true,
    "identifiers": [
+    "file_exists",
     "marker",
     "file_read_json",
     "data_all",
     "file_path",
     "data",
-    "v"
+    "v",
+    "exists",
+    "file_path2"
    ]
   },
   "data_app_current_get": {
