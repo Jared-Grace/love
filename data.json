@@ -1787,7 +1787,6 @@
   "a ii import_install",
   "http https://google.com",
   "s storage",
-  "u fd",
   "o function_dependencies_code_copy",
   "is function_dependencies",
   "is function_dependencies_code",
@@ -2378,7 +2377,8 @@
   "p",
   "data_backup",
   "o n",
-  "db"
+  "db",
+  "u fd"
  ],
  "marker_current": "1",
  "function_current": "function_new",
