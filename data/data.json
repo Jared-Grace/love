@@ -16241,7 +16241,8 @@
    "function_open_app",
    "git_push",
    "data_set",
-   "function_alias_add_generic"
+   "function_alias_add_generic",
+   "data_prompts"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16340,7 +16341,8 @@
    "data_partition"
   ],
   "data_prompts_path": [
-   "data_prompts_path"
+   "data_prompts_path",
+   "data_prompts"
   ]
  },
  "functions": {
@@ -16816,9 +16818,11 @@
   },
   "data_prompts": {
    "identifiers": [
+    "data_prompts_path",
     "list_slice_end",
     "data_value",
     "data_prompts",
+    "d_path",
     "prompts",
     "offset",
     "result"
