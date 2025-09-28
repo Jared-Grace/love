@@ -16327,7 +16327,8 @@
    "equal_assert"
   ],
   "js_assert_arguments_args": [
-   "js_assert_arguments_args"
+   "js_assert_arguments_args",
+   "js_auto_transforms"
   ]
  },
  "functions": {
@@ -26420,6 +26421,7 @@
   "js_auto_transforms": {
    "async": false,
    "identifiers": [
+    "js_assert_arguments_args",
     "js_assign_combine",
     "js_atomize",
     "js_outside_move",
