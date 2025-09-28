@@ -16348,12 +16348,14 @@
    "data_file_update",
    "data_transform",
    "error_attention_set",
-   "marker_current_set"
+   "marker_current_set",
+   "function_alias_rename"
   ],
   "d_path": [
    "data_file_update",
    "error_attention_set",
-   "marker_current_set"
+   "marker_current_set",
+   "function_alias_rename"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -24320,6 +24322,7 @@
   "function_alias_rename": {
    "async": true,
    "identifiers": [
+    "data_path",
     "each",
     "object_property_set",
     "data_transform",
@@ -24336,6 +24339,7 @@
     "acronyms",
     "lambda2",
     "acronym",
+    "d_path",
     "v"
    ]
   },
