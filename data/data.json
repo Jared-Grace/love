@@ -328,7 +328,8 @@
    "user_repo_get",
    "git_push_folder",
    "repo_acronym_get",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "apps_get": [
    "apps_get"
@@ -14095,6 +14096,9 @@
   ],
   "repos_matching": [
    "repo_acronym_to_name"
+  ],
+  "repos_gitignore_overwrite": [
+   "repos_gitignore_overwrite"
   ]
  },
  "functions": {
@@ -29184,6 +29188,13 @@
     "inverted",
     "repos_matching",
     "repo_name"
+   ]
+  },
+  "repos_gitignore_overwrite": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "repos_gitignore_overwrite"
    ]
   }
  },
