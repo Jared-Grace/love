@@ -4120,7 +4120,6 @@
   "joined": [
    "app_reply_main",
    "data_backup",
-   "data_path_generic",
    "ebible_chapters",
    "ebible_chapter_classes",
    "ebible_chapter_text",
@@ -5508,7 +5507,6 @@
   ],
   "path_join": [
    "data_backup",
-   "data_path_generic",
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "firebase_service_account",
@@ -5966,7 +5964,6 @@
    "data_partition"
   ],
   "file_name_json": [
-   "data_path_generic",
    "ebible_firebase_upload_path",
    "file_name_json",
    "firebase_deploy_function_destination"
@@ -13972,6 +13969,9 @@
   ],
   "f_name_unsuffixed": [
    "data_path_generic"
+  ],
+  "file_name_json_folder": [
+   "data_path_generic"
   ]
  },
  "functions": {
@@ -15276,15 +15276,13 @@
   "data_path_generic": {
    "async": false,
    "identifiers": [
+    "file_name_json_folder",
     "marker",
-    "path_join",
-    "file_name_json",
     "data_path_generic",
     "suffix",
     "f_name_unsuffixed",
     "f_name",
     "folder",
-    "joined",
     "f_path"
    ]
   },
