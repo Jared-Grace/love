@@ -16184,7 +16184,8 @@
   "file_json_transform": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "file_json_isolate"
   ],
   "messenger_reply_messages_transform": [
    "messenger_reply_messages_transform",
@@ -16194,12 +16195,14 @@
   "fb_path": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "file_json_isolate"
   ],
   "transform": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "file_json_isolate"
   ],
   "lambda$messages": [
    "messenger_reply_messages_transform"
@@ -16510,9 +16513,6 @@
    "data_copy"
   ],
   "file_json_isolate": [
-   "file_json_isolate"
-  ],
-  "fjr": [
    "file_json_isolate"
   ]
  },
@@ -31590,13 +31590,15 @@
    ]
   },
   "file_json_isolate": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "file_json_transform",
     "marker",
     "file_json_isolate",
     "f_path",
     "property_name",
-    "fjr"
+    "fb_path",
+    "transform"
    ]
   }
  },
