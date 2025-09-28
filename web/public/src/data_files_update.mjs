@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
@@ -14,6 +15,7 @@ export async function data_files_update() {
   let f_paths = functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   let properties = ["identifiers", "functions"];
+  each(list, function lambda2(item) {});
   async function lambda(parsed) {
     await data_file_update_inner(parsed, d);
   }
