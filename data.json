@@ -4912,8 +4912,7 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not",
-   "js_assert_arguments_args"
+   "string_ends_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -31294,7 +31293,6 @@
     "args",
     "code_expression",
     "expression",
-    "item",
     "name"
    ]
   },
