@@ -5624,8 +5624,7 @@
   "f_name_new": [
    "function_watch_ending_change",
    "function_copy",
-   "marker_functionize",
-   "data_backup"
+   "marker_functionize"
   ],
   "string_suffix_change": [
    "function_watch_ending_change",
@@ -5985,7 +5984,8 @@
   ],
   "file_path_new": [
    "assert_file_exists_not",
-   "file_copy"
+   "file_copy",
+   "data_backup"
   ],
   "assert_message": [
    "assert_json",
@@ -6782,10 +6782,12 @@
   ],
   "file_copy": [
    "file_copy",
-   "function_copy"
+   "function_copy",
+   "data_backup"
   ],
   "file_path_old": [
-   "file_copy"
+   "file_copy",
+   "data_backup"
   ],
   "promises": [
    "file_copy",
@@ -7716,13 +7718,11 @@
   "function_copy": [
    "function_copy",
    "function_copy_suffix_add",
-   "function_rename",
-   "data_backup"
+   "function_rename"
   ],
   "f_name_old": [
    "function_copy",
-   "function_copy_suffix_add",
-   "data_backup"
+   "function_copy_suffix_add"
   ],
   "f_path_old": [
    "function_copy"
@@ -31448,7 +31448,7 @@
   "data_backup": {
    "async": true,
    "identifiers": [
-    "function_copy",
+    "file_copy",
     "date_now_file",
     "data_path_generic",
     "data_path",
@@ -31457,8 +31457,8 @@
     "f_path_from",
     "inner",
     "f_path_to",
-    "f_name_old",
-    "f_name_new"
+    "file_path_old",
+    "file_path_new"
    ]
   },
   "data_path": {
