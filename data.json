@@ -2366,10 +2366,11 @@
   "s list, replace",
   "s list,repl",
   "s dollar",
-  "u lr"
+  "u lr",
+  "o s5"
  ],
  "marker_current": "1",
- "function_current": "js_auto_transforms",
+ "function_current": "sandbox_5",
  "terminal": false,
  "identifiers": {
   "log": [
