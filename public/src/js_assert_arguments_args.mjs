@@ -12,7 +12,7 @@ export function js_assert_arguments_args(ast) {
     list_empty(args);
     let code_expression = js_keyword_arguments();
     let expression = js_parse_expression(code_expression);
-    list_add(args, item);
+    list_add(args, expression);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
