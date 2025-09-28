@@ -2845,7 +2845,8 @@
    "data_path",
    "data_path_generic",
    "data_aliases_path",
-   "file_json_isolate"
+   "file_json_isolate",
+   "file_json_transform"
   ],
   "ast": [
    "data_identifiers_file",
@@ -16208,7 +16209,6 @@
   ],
   "fb_path": [
    "messenger_reply_messages_transform",
-   "file_json_transform",
    "messenger_reply_messages_urls_transform",
    "file_json_property_delete"
   ],
@@ -31262,7 +31262,7 @@
     "file_overwrite_json",
     "file_read_json",
     "file_json_transform",
-    "fb_path",
+    "f_path",
     "lambda$data",
     "data"
    ]
