@@ -13991,11 +13991,15 @@
    "git_push",
    "data_marker_current_get",
    "data_function_current_get",
-   "function_current_set"
+   "function_current_set",
+   "data_app_current_get"
   ],
   "user_repo_get": [
    "user_repo_get",
    "repo_acronym_set"
+  ],
+  "f_path2": [
+   "data_app_current_get"
   ]
  },
  "functions": {
@@ -15071,7 +15075,9 @@
    "identifiers": [
     "null_not_is_assert",
     "data_property_get",
+    "user_repo_path",
     "data_app_current_get",
+    "f_path2",
     "a",
     "d_path"
    ]
