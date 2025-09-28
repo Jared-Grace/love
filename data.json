@@ -5014,8 +5014,7 @@
    "list_empty_is_assert",
    "catch_only_run_async",
    "messenger_reply_messages",
-   "messenger_reply_unread_collect",
-   "function_params_new"
+   "messenger_reply_unread_collect"
   ],
   "object_property_delete": [
    "function_alias_change",
@@ -5595,7 +5594,8 @@
    "reply_sequence",
    "reply_on_match",
    "string_ends_with_not",
-   "sandbox_5_a"
+   "sandbox_5_a",
+   "function_params_new"
   ],
   "without": [
    "string_suffix_without",
@@ -7598,7 +7598,8 @@
    "object_property_lambda_async",
    "firebase_storage_exists",
    "file_exists",
-   "function_list_generate"
+   "function_list_generate",
+   "function_params_new"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -18252,7 +18253,8 @@
     "properties",
     "lambda4",
     "f_name",
-    "e",
+    "exists",
+    "a",
     "lambda5",
     "lambda",
     "output",
