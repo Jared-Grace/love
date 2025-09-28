@@ -2194,7 +2194,6 @@
   "p",
   "s partit",
   "data_partition propmts",
-  "ps",
   "data_partition prompts",
   "s delete",
   "rs object_properties_delete all",
@@ -2202,6 +2201,7 @@
   "s data",
   "s gitif",
   "user_repo_set love",
-  "s file,exis"
+  "s file,exis",
+  "ps"
  ]
 }
