@@ -2370,7 +2370,8 @@
   "fs data_transform",
   "ps",
   "p",
-  "pn d_path data_path()"
+  "pn d_path data_path()",
+  "function_exists data_identifiers_file"
  ],
  "marker_current": "1",
  "function_current": "data_transform",
