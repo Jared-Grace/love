@@ -16205,7 +16205,6 @@
   ],
   "transform": [
    "messenger_reply_messages_transform",
-   "file_json_transform",
    "messenger_reply_messages_urls_transform"
   ],
   "lambda$messages": [
@@ -31253,8 +31252,7 @@
     "file_json_transform",
     "fb_path",
     "lambda$data",
-    "data",
-    "transform"
+    "data"
    ]
   },
   "git_filter_repo_install": {
