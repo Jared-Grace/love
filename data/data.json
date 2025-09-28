@@ -2484,7 +2484,8 @@
    "bible_verses_encouragement_generate",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "function_params_new"
+   "function_params_new",
+   "file_json_isolate"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -3551,7 +3552,8 @@
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
    "puppeteer_hrefs",
-   "js_assert_arguments_args"
+   "js_assert_arguments_args",
+   "file_json_isolate"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -3724,7 +3726,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "file_json_isolate"
   ],
   "v": [
    "data_identifiers_file",
@@ -4965,7 +4968,8 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "file_json_isolate"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -11419,8 +11423,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete",
-   "file_json_isolate"
+   "object_properties_delete"
   ],
   "Object": [
    "object_properties",
@@ -31602,6 +31605,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "each",
     "object_properties",
     "object_property_get",
     "file_json_transform",
@@ -31613,7 +31617,9 @@
     "data",
     "value",
     "properties",
-    "obj",
+    "list",
+    "lambda2",
+    "item",
     "fb_path"
    ]
   }
