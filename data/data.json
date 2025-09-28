@@ -1988,7 +1988,8 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set"
+   "error_attention_set",
+   "object_invert"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
@@ -8780,7 +8781,8 @@
   ],
   "undefined_not_is_assert": [
    "function_alias_add",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "object_invert"
   ],
   "list_sort_string_size": [
    "function_alias_add",
@@ -27133,6 +27135,7 @@
   "object_invert": {
    "async": false,
    "identifiers": [
+    "undefined_not_is_assert",
     "object_property_initialize",
     "each_object",
     "list_add",
@@ -27142,7 +27145,8 @@
     "lambda",
     "value",
     "key",
-    "list"
+    "list",
+    "value2"
    ]
   },
   "object_merge": {
