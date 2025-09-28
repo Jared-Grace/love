@@ -3496,7 +3496,6 @@
    "messenger_reply",
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
-   "function_params_new",
    "puppeteer_hrefs"
   ],
   "i_name": [
@@ -3933,7 +3932,6 @@
    "messenger_reply",
    "folder_read_files",
    "path_join",
-   "function_params_new",
    "git_filter_repo_install",
    "git_repo_url",
    "messenger_reply_messages_me",
@@ -4400,7 +4398,6 @@
    "js_dollar_if_call",
    "messenger_reply_messages",
    "git_repo_rename_normalize",
-   "function_params_new",
    "js_dollar_ien_generic",
    "js_dollar_aa"
   ],
@@ -4769,7 +4766,6 @@
    "reply",
    "ebible_languages_to_bible_folders",
    "reply_sequence",
-   "function_params_new",
    "command_line_node_g",
    "assert_arguments"
   ],
@@ -6713,8 +6709,7 @@
   ],
   "equal_not": [
    "equal_not",
-   "js_dollar_ine",
-   "function_params_new"
+   "js_dollar_ine"
   ],
   "ne": [
    "equal_not",
@@ -7872,7 +7867,6 @@
    "js_dollar_l",
    "js_statement_expression_get",
    "messenger_reply_messages",
-   "function_params_new",
    "js_dollar_ine",
    "js_dollar_aa"
   ],
@@ -8869,8 +8863,7 @@
    "marker_functionize",
    "js_identifiers_named_count",
    "js_log_remove",
-   "js_assign_combine",
-   "function_params_new"
+   "js_assign_combine"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -13631,8 +13624,7 @@
   ],
   "js_call_callee_name": [
    "js_calls_to_each",
-   "js_call_callee_name",
-   "function_params_new"
+   "js_call_callee_name"
   ],
   "jin2": [
    "js_call_callee_name",
@@ -16333,6 +16325,9 @@
   ],
   "lambda1": [
    "function_params_new"
+  ],
+  "js_visit_calls_named": [
+   "function_params_new"
   ]
  },
  "functions": {
@@ -18153,17 +18148,14 @@
   },
   "function_params_new": {
    "identifiers": [
+    "js_visit_calls_named",
     "object_properties",
-    "equal_not",
     "function_transform",
     "data_function_current_get",
     "each_async",
     "list_add",
     "each",
     "js_parse_expression",
-    "object_property_get",
-    "js_visit_type",
-    "js_call_callee_name",
     "data_identifiers_search",
     "function_transform_current",
     "js_declaration_single_params_add",
@@ -18181,13 +18173,9 @@
     "lambda4",
     "f_name",
     "lambda5",
-    "lambda2",
-    "v",
-    "node",
-    "name",
-    "args",
     "lambda",
     "output",
+    "args",
     "lambda3",
     "value_default",
     "expression2"
