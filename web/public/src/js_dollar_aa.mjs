@@ -1,5 +1,4 @@
 import { list_remove } from "./list_remove.mjs";
-import { log } from "./log.mjs";
 import { js_code_call } from "./js_code_call.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
 import { list_add_first } from "./list_add_first.mjs";
@@ -18,9 +17,6 @@ export function js_dollar_aa({
   list_remove(stack2, stack1);
   let body_block = js_declaration_single_block_body(ast);
   let code = js_code_call(assert_arguments.name);
-  log({
-    code,
-  });
   let expression = js_parse_statement(code);
   list_add_first(body_block, expression);
   marker("1");
