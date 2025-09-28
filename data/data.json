@@ -5381,8 +5381,7 @@
    "data_path",
    "data_path_generic",
    "data_prompts_path",
-   "repo_acronym_set",
-   "repo_acronym_get"
+   "repo_acronym_set"
   ],
   "data_aliases_path": [
    "data_aliases_path",
@@ -5428,8 +5427,7 @@
    "user_repo_set",
    "repo_acronym_set",
    "user_repo_get",
-   "user_repo_path",
-   "repo_acronym_get"
+   "user_repo_path"
   ],
   "file_read_json": [
    "data_all",
@@ -14062,7 +14060,7 @@
   "repo_acronym_get": [
    "repo_acronym_get"
   ],
-  "path_repo_combine": [
+  "path_repo_about": [
    "repo_acronym_get"
   ]
  },
@@ -29109,13 +29107,11 @@
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
-    "path_repo_combine",
+    "path_repo_about",
     "data_get",
-    "data_path_generic",
     "marker",
     "repo_acronym_get",
     "repo",
-    "f_path",
     "joined"
    ]
   }
