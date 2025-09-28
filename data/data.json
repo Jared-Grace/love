@@ -1286,7 +1286,6 @@
    "function_transform_marker_specified",
    "function_type_first",
    "function_wrap",
-   "git_commit",
    "git_push",
    "global_function_async",
    "global_function_property_async",
@@ -5069,8 +5068,7 @@
    "retry_on_error"
   ],
   "catch_only_async": [
-   "catch_only_async",
-   "git_commit"
+   "catch_only_async"
   ],
   "message_fragment": [
    "catch_only_async",
@@ -14015,7 +14013,9 @@
   ],
   "command_line_git_folder": [
    "command_line_git",
-   "git_acp",
+   "git_acp"
+  ],
+  "git_commit_folder": [
    "git_commit"
   ]
  },
@@ -19564,12 +19564,10 @@
   "git_commit": {
    "async": true,
    "identifiers": [
-    "command_line_git_folder",
-    "catch_only_async",
+    "git_commit_folder",
     "git_commit",
     "message",
-    "folder",
-    "lambda"
+    "folder"
    ]
   },
   "git_filter_repo_install": {
