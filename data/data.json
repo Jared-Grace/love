@@ -3440,7 +3440,8 @@
    "list_filter_ends_with_any",
    "puppeteer_hrefs",
    "js_visit_calls_named",
-   "file_json_isolate"
+   "file_json_isolate",
+   "file_json_property_delete"
   ],
   "previous": [
    "data_identifiers_file",
@@ -4712,7 +4713,8 @@
    "file_json_transform",
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
-   "file_json_isolate"
+   "file_json_isolate",
+   "file_json_property_delete"
   ],
   "file_path": [
    "data_file_update",
@@ -16193,7 +16195,8 @@
    "messenger_reply_messages_transform",
    "file_json_transform",
    "messenger_reply_messages_urls_transform",
-   "file_json_isolate"
+   "file_json_isolate",
+   "file_json_property_delete"
   ],
   "messenger_reply_messages_transform": [
    "messenger_reply_messages_transform",
@@ -16203,7 +16206,8 @@
   "fb_path": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "file_json_property_delete"
   ],
   "transform": [
    "messenger_reply_messages_transform",
@@ -31615,10 +31619,14 @@
    ]
   },
   "file_json_property_delete": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "file_json_transform",
     "marker",
-    "file_json_property_delete"
+    "file_json_property_delete",
+    "fb_path",
+    "lambda",
+    "data"
    ]
   }
  },
