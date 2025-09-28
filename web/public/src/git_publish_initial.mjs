@@ -4,7 +4,8 @@ export async function git_publish_initial(acronym) {
   let branch_name = " main";
   let commands = ["checkout -b", "push -u origin"];
   function lambda(command) {
-    return command + branch_name;
+    let v = command + branch_name;
+    return v;
   }
   let mapped = list_map(commands, lambda);
   await command_line_git_folder(folder, command_git);
