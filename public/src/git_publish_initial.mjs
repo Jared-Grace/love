@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
+import { git_push_command } from "./git_push_command.mjs";
 export function git_publish_initial() {
-  marker("1");
+  let v = git_push_command();
 }
