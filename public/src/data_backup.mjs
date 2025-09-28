@@ -8,5 +8,5 @@ export async function data_backup() {
   let f_path_from = data_path();
   let inner = date_now_file();
   let f_path_to = data_path_generic("." + inner);
-  await file_copy(file_path_old, file_path_new);
+  await file_copy(f_path_from, f_path_to);
 }
