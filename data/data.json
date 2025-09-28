@@ -14040,8 +14040,7 @@
   ],
   "path_repo": [
    "path_repo",
-   "function_run_git",
-   "repos_gitignore_overwrite"
+   "function_run_git"
   ],
   "repo_name": [
    "path_repo",
@@ -14129,7 +14128,8 @@
    "repos_acronyms_to_names"
   ],
   "repo_path": [
-   "repo_path"
+   "repo_path",
+   "repos_gitignore_overwrite"
   ]
  },
  "functions": {
@@ -29217,7 +29217,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
-    "path_repo",
+    "repo_path",
     "list_map",
     "repos_names",
     "marker",
