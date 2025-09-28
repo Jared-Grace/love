@@ -1330,7 +1330,6 @@
   "is mda",
   "is marker_delete_above",
   "r marker_delete_above marker_above_delete",
-  "s alias",
   "n function_alias_rename",
   "s invert",
   "function_alias_rename",
@@ -2388,7 +2387,8 @@
   "pn f_name \"data\"",
   "ps",
   "o db",
-  "c data_backup data_copy"
+  "c data_backup data_copy",
+  "s alias"
  ],
  "marker_current": "1",
  "function_current": "data_copy",
