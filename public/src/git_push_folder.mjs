@@ -1,3 +1,4 @@
+import { path_join } from "./path_join.mjs";
 import { data_set } from "./data_set.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { command_line_git_folder } from "./command_line_git_folder.mjs";
@@ -22,6 +23,7 @@ export async function git_push_folder(folder) {
     let now_iso = date_iso_to(now);
     let property_name = function_name_combine(git_push.name, "when");
     let d_path = user_repo_path();
+    let joined = path_join(segments);
     let before_iso = await data_property_get(property_name, d_path);
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
