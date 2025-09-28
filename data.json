@@ -2335,7 +2335,6 @@
   "",
   "o data_property_get",
   "fs data_get",
-  "p",
   "pn d_path d_path",
   "fs data_transform",
   "s combine",
@@ -2354,6 +2353,7 @@
   "r assert_equal equal_assert",
   "s command",
   "s auto",
+  "p",
   "as auto"
  ],
  "marker_current": "1",
