@@ -6,5 +6,5 @@ export async function git_acp_folder(folder, message) {
   await command_line_git_folder(folder, "add -A");
   await git_commit_folder(folder, message);
   await git_push_folder(folder);
-  log("git_acp_folder" + folder);
+  log("git_acp_folder " + folder);
 }
