@@ -4718,8 +4718,7 @@
    "file_delete_if_exists",
    "ebible_references_parse_god_created_man_why",
    "sandbox_4_a",
-   "bible_verses_encouragement_generate",
-   "data_files_update"
+   "bible_verses_encouragement_generate"
   ],
   "object_property_get": [
    "chalk_color",
@@ -16682,7 +16681,6 @@
     "each_async",
     "data_files_update",
     "d_path",
-    "file_path",
     "d",
     "f_paths",
     "parseds",
