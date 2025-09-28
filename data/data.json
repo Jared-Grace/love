@@ -90,7 +90,8 @@
    "bible_verses_encouragement_generate",
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
-   "function_params_new"
+   "function_params_new",
+   "data_files_update"
   ],
   "js_identifiers_names": [
    "data_identifiers_file",
@@ -1166,7 +1167,8 @@
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
    "puppeteer_hrefs",
-   "js_assert_arguments_args"
+   "js_assert_arguments_args",
+   "data_files_update"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -1339,7 +1341,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "data_files_update"
   ],
   "v": [
    "data_identifiers_file",
@@ -2582,7 +2585,8 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "data_files_update"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -14366,6 +14370,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "each",
     "data_path",
     "marker",
     "file_js_parse",
@@ -14381,6 +14386,9 @@
     "f_paths",
     "parseds",
     "properties",
+    "list",
+    "lambda2",
+    "item",
     "lambda",
     "parsed"
    ],
