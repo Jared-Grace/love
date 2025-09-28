@@ -1451,7 +1451,8 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "ast": [
    "app_new_step_2",
@@ -2383,7 +2384,8 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "index": [
    "app_replace_home",
@@ -2799,7 +2801,8 @@
    "marker_top",
    "messenger_reply",
    "range_from",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_gitignore_overwrite"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -2905,7 +2908,8 @@
    "reply",
    "sandbox_2",
    "sandbox_4_a",
-   "git_publish_initial"
+   "git_publish_initial",
+   "repos_gitignore_overwrite"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4063,7 +4067,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "book_code": [
    "app_reply_main",
@@ -29194,11 +29199,16 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "list_map",
     "repos",
     "marker",
     "repos_gitignore_overwrite",
     "f_name",
-    "all"
+    "all",
+    "lambda",
+    "item",
+    "mapped",
+    "list"
    ]
   }
  },
