@@ -2381,7 +2381,6 @@
   "n data_aliases_path",
   "fs data_path_generic",
   "pn f_name \"data\"",
-  "ps",
   "o db",
   "c data_backup data_copy",
   "s alias",
@@ -2393,7 +2392,8 @@
   "file_json_isolate data/aliases.json aliases",
   "s data",
   "p",
-  "data_copy aliases"
+  "data_copy aliases",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "file_json_isolate",
