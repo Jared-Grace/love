@@ -5557,7 +5557,6 @@
    "data_path",
    "data_terminal_get",
    "error_attention_set",
-   "function_current_set",
    "function_open_app",
    "function_run_prompt",
    "marker_current_set"
@@ -13998,7 +13997,8 @@
    "repo_acronym_set"
   ],
   "data_user_path": [
-   "data_function_current_get"
+   "data_function_current_get",
+   "function_current_set"
   ]
  },
  "functions": {
@@ -18237,7 +18237,6 @@
   "function_current_set": {
    "async": true,
    "identifiers": [
-    "data_path",
     "marker",
     "marker_top",
     "function_parse_declaration_js_unparse",
@@ -18253,6 +18252,7 @@
     "lambda",
     "previous",
     "d_path",
+    "data_user_path",
     "name",
     "v"
    ]
