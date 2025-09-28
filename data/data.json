@@ -2385,7 +2385,8 @@
   "fs data_set",
   "pn d_path data_path()",
   "n data_aliases_path",
-  "fs data_path_generic"
+  "fs data_path_generic",
+  "pn f_name \"data\""
  ],
  "marker_current": "1",
  "function_current": "data_path_generic",
