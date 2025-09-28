@@ -5878,7 +5878,8 @@
    "null_not_is_assert",
    "object_property_exists_not_assert",
    "messenger_reply_playwright",
-   "list_concat"
+   "list_concat",
+   "equal_assert"
   ],
   "b": [
    "assert",
@@ -6613,7 +6614,8 @@
    "messenger_reply_playwright",
    "js_identifiers_named_count",
    "js_assign_combine",
-   "assert_arguments"
+   "assert_arguments",
+   "equal_assert"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -6640,7 +6642,8 @@
    "js_assign_combine",
    "app_reply_main",
    "ebible_references_parse_lines",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "equal_assert"
   ],
   "left": [
    "equal",
@@ -6688,7 +6691,8 @@
    "js_if_else_if_combine",
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "equal_assert"
   ],
   "equal_by": [
    "equal_by",
@@ -11083,7 +11087,8 @@
    "string_size",
    "path_join",
    "roman_to_integer",
-   "assert_arguments"
+   "assert_arguments",
+   "equal_assert"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -16311,6 +16316,9 @@
   ],
   "assert_equal": [
    "assert_arguments"
+  ],
+  "equal_assert": [
+   "equal_assert"
   ]
  },
  "functions": {
@@ -31219,6 +31227,17 @@
     "args",
     "count",
     "length"
+   ]
+  },
+  "equal_assert": {
+   "async": false,
+   "identifiers": [
+    "assert",
+    "equal",
+    "equal_assert",
+    "length",
+    "count",
+    "eq"
    ]
   }
  },
