@@ -2211,6 +2211,7 @@
   "s repo",
   "n git_publish_initial",
   "s command",
-  "s list_map"
+  "s list_map",
+  "s user,repo"
  ]
 }
