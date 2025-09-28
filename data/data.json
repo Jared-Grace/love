@@ -13148,8 +13148,7 @@
   "date_now_file": [
    "date_now_file",
    "firebase_deploy_function",
-   "data_backup",
-   "data_copy"
+   "data_backup"
   ],
   "now_file": [
    "date_now_file",
@@ -31587,15 +31586,14 @@
    "async": true,
    "identifiers": [
     "file_copy",
-    "date_now_file",
     "data_path_generic",
     "data_path",
     "marker",
     "data_copy",
     "f_name",
     "f_path_from",
-    "inner",
-    "f_path_to"
+    "f_path_to",
+    "inner"
    ]
   },
   "file_json_isolate": {
