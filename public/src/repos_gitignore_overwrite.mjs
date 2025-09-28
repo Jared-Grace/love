@@ -9,7 +9,7 @@ export async function repos_gitignore_overwrite() {
   let f_name = ".gitignore";
   let mapped = list_map(repos, repo_path);
   function lambda(item) {
-    let joined = path_join(segments);
+    let joined = path_join([item, f_name]);
   }
   let mapped2 = list_map(list, lambda);
 }
