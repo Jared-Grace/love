@@ -2369,8 +2369,8 @@
   "s sand",
   "fs data_transform",
   "p",
-  "pn d_path data_path()",
-  "ps"
+  "ps",
+  "pn d_path data_path()"
  ],
  "marker_current": "1",
  "function_current": "data_transform",
