@@ -6892,8 +6892,7 @@
    "js_dollar_r",
    "list_first_second",
    "list_second",
-   "sandbox_4_a",
-   "git_publish_initial"
+   "sandbox_4_a"
   ],
   "list_multiple_is": [
    "ebible_references_parse_lines",
@@ -6983,8 +6982,7 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash",
-   "git_publish_initial"
+   "string_split_dash"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -7765,7 +7763,8 @@
    "firebase_service_account",
    "folder_find_starts_with",
    "list_find",
-   "list_single"
+   "list_single",
+   "git_publish_initial"
   ],
   "http": [
    "firebase_storage_download",
@@ -8244,7 +8243,8 @@
    "js_visit_match",
    "list_find",
    "list_single",
-   "marker_rename"
+   "marker_rename",
+   "git_publish_initial"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -29078,7 +29078,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
-    "list_second",
+    "list_single",
     "object_property_get",
     "object_invert",
     "list_to_dictionary_async",
@@ -29094,7 +29094,7 @@
     "dictionary",
     "inverted",
     "repos_matching",
-    "second",
+    "only",
     "list2",
     "lambda",
     "item",
