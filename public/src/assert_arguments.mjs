@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
-export function assert_arguments() {
-  marker("1");
+import { assert } from "./assert.mjs";
+export function assert_arguments(args, count) {
+  assert(b);
 }
