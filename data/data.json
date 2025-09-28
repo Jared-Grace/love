@@ -2384,10 +2384,11 @@
   "s empty",
   "fs data_set",
   "pn d_path data_path()",
-  "n data_aliases_path"
+  "n data_aliases_path",
+  "fs data_path_generic"
  ],
  "marker_current": "1",
- "function_current": "data_aliases_path",
+ "function_current": "data_path_generic",
  "terminal": false,
  "identifiers": {
   "log": [
