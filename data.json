@@ -859,7 +859,6 @@
   "lm",
   "a lm list_map",
   "a lmu list_map_unordered_async",
-  "s fill",
   "u fnu",
   "de function_current_set_task_new",
   "fc fs,t",
@@ -2349,7 +2348,8 @@
   "git_repo_clone Jared-Grace karate_code",
   "s assert",
   "nd aa",
-  "s decl,sing"
+  "s decl,sing",
+  "s fill"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_aa",
