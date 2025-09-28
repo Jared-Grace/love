@@ -541,7 +541,8 @@
    "string_slice",
    "string_starts_with_not",
    "string_suffix_without",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "repo_acronym_get"
   ],
   "app_name_prefix": [
    "app_name_prefix",
@@ -809,8 +810,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "repo_acronym_get"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -29140,7 +29140,7 @@
     "repo_acronym_get",
     "repo",
     "a_path",
-    "v"
+    "a"
    ]
   },
   "path_repo_about": {
