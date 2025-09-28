@@ -814,7 +814,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "user_repo_get"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4713,7 +4714,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "user_repo_get"
   ],
   "browser_is": [
    "browser_is",
@@ -5513,7 +5515,8 @@
    "function_run_line_parse",
    "function_run_prompt",
    "git_push",
-   "marker_current_set"
+   "marker_current_set",
+   "user_repo_get"
   ],
   "path_join": [
    "data_backup",
@@ -5926,14 +5929,16 @@
    "data_get",
    "data_property_get",
    "data_transform",
-   "function_alias_add_generic"
+   "function_alias_add_generic",
+   "user_repo_get"
   ],
   "value_initial": [
    "data_get",
    "data_transform",
    "object_property_initialize",
    "storage_local_initialize",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "user_repo_get"
   ],
   "data_identifiers_get": [
    "data_identifiers_get",
@@ -28975,6 +28980,7 @@
   "user_repo_get": {
    "async": true,
    "identifiers": [
+    "data_get",
     "user_repo_path",
     "data_set",
     "marker",
@@ -28982,7 +28988,11 @@
     "value",
     "f_path",
     "lambda",
-    "previous"
+    "previous",
+    "v",
+    "property_name",
+    "value_initial",
+    "d_path"
    ]
   }
  }
