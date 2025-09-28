@@ -811,7 +811,8 @@
    "file_json_isolate",
    "file_json_property_delete",
    "data_partition",
-   "data_copy"
+   "data_copy",
+   "data_files_update"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -1341,8 +1342,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "data_files_update"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -2585,8 +2585,7 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not",
-   "data_files_update"
+   "string_ends_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -2688,7 +2687,8 @@
    "object_property_delete",
    "data_file_update_inner",
    "js_string",
-   "file_json_property_delete"
+   "file_json_property_delete",
+   "data_files_update"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -3382,7 +3382,8 @@
    "string_padded_is",
    "folder_user_docs_path",
    "messenger_reply",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "data_files_update"
   ],
   "f_names": [
    "functions_names",
@@ -4267,7 +4268,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "data_files_update"
   ],
   "each_pair": [
    "each_pair",
@@ -14370,6 +14372,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "object_property_delete",
     "each",
     "data_path",
     "marker",
@@ -14387,8 +14390,9 @@
     "parseds",
     "properties",
     "lambda2",
-    "item",
-    "list",
+    "p",
+    "object",
+    "property_name",
     "lambda",
     "parsed"
    ],
