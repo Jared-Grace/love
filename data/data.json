@@ -330,7 +330,8 @@
    "repo_acronym_get",
    "list_to_dictionary_async",
    "repos_gitignore_overwrite",
-   "repos_names"
+   "repos_names",
+   "repo_path"
   ],
   "apps_get": [
    "apps_get"
@@ -5540,7 +5541,8 @@
    "sandbox_2",
    "server",
    "path_repo",
-   "git_push_folder"
+   "git_push_folder",
+   "repo_path"
   ],
   "file_copy": [
    "data_backup",
@@ -5615,7 +5617,8 @@
    "user_repo_set",
    "repo_acronym_set",
    "server",
-   "path_repo"
+   "path_repo",
+   "repo_path"
   ],
   "data_copy": [
    "data_copy",
@@ -7733,7 +7736,8 @@
    "path_join",
    "repos_folder",
    "server",
-   "path_repo"
+   "path_repo",
+   "repo_path"
   ],
   "prefix": [
    "firebase_service_account",
@@ -14043,7 +14047,8 @@
    "path_repo",
    "function_run_git",
    "repo_acronym_to_name",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "repo_path"
   ],
   "command_line_git_folder": [
    "command_line_git",
@@ -14077,7 +14082,8 @@
    "git_publish_initial"
   ],
   "r_path": [
-   "path_repo"
+   "path_repo",
+   "repo_path"
   ],
   "repo_acronym_get": [
    "repo_acronym_get",
@@ -14121,6 +14127,9 @@
    "repos_gitignore_overwrite",
    "function_run_git",
    "repos_acronyms_to_names"
+  ],
+  "repo_path": [
+   "repo_path"
   ]
  },
  "functions": {
@@ -29243,6 +29252,18 @@
     "repos",
     "dictionary",
     "inverted"
+   ]
+  },
+  "repo_path": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "path_join",
+    "folder_previous",
+    "repo_path",
+    "repo_name",
+    "previous",
+    "r_path"
    ]
   }
  },
