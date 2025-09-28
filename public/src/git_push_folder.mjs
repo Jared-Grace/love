@@ -40,6 +40,6 @@ export async function git_push_folder(folder) {
     }
     await command_line_git_folder(folder, command_git);
     let lambda$previous = lambda_get(now_iso);
-    await data_set(lambda$previous, property_name, d_path);
+    await data_set(lambda$previous, property_name, joined);
   }
 }
