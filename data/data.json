@@ -11115,7 +11115,6 @@
   ],
   "log": [
    "js_dollar",
-   "js_dollar_aa",
    "js_log_remove",
    "log",
    "log_keep",
@@ -21904,7 +21903,6 @@
    "async": false,
    "identifiers": [
     "list_remove",
-    "log",
     "js_code_call",
     "assert_arguments",
     "list_add_first",
