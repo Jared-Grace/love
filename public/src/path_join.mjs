@@ -2,8 +2,7 @@ import { assert_arguments } from "./assert_arguments.mjs";
 import { not } from "./not.mjs";
 import { folder_previous } from "./folder_previous.mjs";
 export function path_join(segments) {
-  let v2 = assert_arguments();
-  v2;
+  assert_arguments();
   let parts = [];
   for (let seg of segments) {
     if (not(seg)) {
