@@ -9,7 +9,8 @@ import { functions_paths } from "./functions_paths.mjs";
 import { each_async } from "./each_async.mjs";
 export async function data_files_update() {
   marker("1");
-  var d = await data_all(data_path);
+  let d_path = data_path();
+  var d = await data_all(d_path);
   let f_paths = functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   async function lambda(parsed) {
