@@ -5378,7 +5378,8 @@
    "data_copy",
    "data_path",
    "data_path_generic",
-   "data_prompts_path"
+   "data_prompts_path",
+   "path_repo_about"
   ],
   "data_aliases_path": [
    "data_aliases_path",
@@ -5423,7 +5424,8 @@
    "js_outside_move",
    "user_repo_set",
    "user_repo_get",
-   "user_repo_path"
+   "user_repo_path",
+   "path_repo_about"
   ],
   "file_read_json": [
    "data_all",
@@ -10083,7 +10085,8 @@
    "git_repo_url",
    "user_repo_get",
    "repo_acronym_set",
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "path_repo_about"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14055,11 +14058,16 @@
   ],
   "path_repo_about": [
    "repo_acronym_get",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "path_repo_about"
   ],
   "a_path": [
    "repo_acronym_set",
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "path_repo_about"
+  ],
+  "path_repo_combine": [
+   "path_repo_about"
   ]
  },
  "functions": {
@@ -29106,6 +29114,17 @@
     "marker",
     "repo_acronym_get",
     "repo",
+    "a_path"
+   ]
+  },
+  "path_repo_about": {
+   "async": false,
+   "identifiers": [
+    "path_repo_combine",
+    "data_path_generic",
+    "path_repo_about",
+    "repo",
+    "f_path",
     "a_path"
    ]
   }
