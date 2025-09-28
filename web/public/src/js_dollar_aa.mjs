@@ -13,7 +13,7 @@ export function js_dollar_aa({
   afters,
 }) {
   let body_block = js_declaration_single_block_body(ast);
-  let code = js_code_call(assert_arguments.name, []);
+  let code = js_code_call(assert_arguments.name);
   list_add_first(body_block, item);
   marker("1");
   return;
