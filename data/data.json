@@ -814,8 +814,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "user_repo_get"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -28978,9 +28977,8 @@
     "user_repo_path",
     "marker",
     "user_repo_get",
-    "value",
     "f_path",
-    "v"
+    "value"
    ]
   }
  }
