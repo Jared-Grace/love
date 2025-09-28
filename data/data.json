@@ -2188,7 +2188,6 @@
   "s prop",
   "s data",
   "data_copy aliases",
-  "ps",
   "file_json_isolate data/aliases.json aliases",
   "n file_json_property_delete",
   "file_json_property_delete data/data.json aliases",
@@ -2196,7 +2195,8 @@
   "s alias",
   "c data_aliases_path data_prompts_path",
   "p",
-  "s partit"
+  "s partit",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "data_prompts_path",
