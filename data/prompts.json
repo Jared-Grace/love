@@ -2212,6 +2212,7 @@
   "n git_publish_initial",
   "s command",
   "s list_map",
-  "s user,repo"
+  "s user,repo",
+  "urg"
  ]
 }
