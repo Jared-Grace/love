@@ -7,6 +7,7 @@ export async function data_transform(
   property_name,
   value_initial,
   lambda$previous,
+  d_path,
 ) {
   marker("1");
   let dp = data_path();
