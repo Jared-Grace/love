@@ -16352,7 +16352,8 @@
    "function_alias_rename",
    "data_set",
    "function_run_line_parse",
-   "function_current_set"
+   "function_current_set",
+   "function_aliases_restore"
   ],
   "d_path": [
    "data_file_update",
@@ -16361,7 +16362,8 @@
    "function_alias_rename",
    "data_set",
    "function_run_line_parse",
-   "function_current_set"
+   "function_current_set",
+   "function_aliases_restore"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -24370,6 +24372,7 @@
   "function_aliases_restore": {
    "async": true,
    "identifiers": [
+    "data_path",
     "marker",
     "data_transform",
     "function_aliases_restore",
@@ -24526,7 +24529,8 @@
     "fop",
     "fpc",
     "oh",
-    "an"
+    "an",
+    "d_path"
    ]
   },
   "marker_next_await": {
