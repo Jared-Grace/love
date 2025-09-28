@@ -2348,7 +2348,8 @@
   "ps",
   "git_repo_clone Jared-Grace karate_code",
   "s assert",
-  "nd aa"
+  "nd aa",
+  "s decl,sing"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_aa",
