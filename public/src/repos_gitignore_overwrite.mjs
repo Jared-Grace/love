@@ -1,5 +1,4 @@
 import { file_copy_overwrite } from "./file_copy_overwrite.mjs";
-import { log } from "./log.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
