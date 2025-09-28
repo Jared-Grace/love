@@ -2771,7 +2771,8 @@
    "data_set",
    "data_aliases_path",
    "data_path_generic",
-   "data_copy"
+   "data_copy",
+   "file_json_isolate"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16505,6 +16506,9 @@
   ],
   "data_copy": [
    "data_copy"
+  ],
+  "file_json_isolate": [
+   "file_json_isolate"
   ]
  },
  "functions": {
@@ -31578,6 +31582,13 @@
     "f_path_from",
     "inner",
     "f_path_to"
+   ]
+  },
+  "file_json_isolate": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "file_json_isolate"
    ]
   }
  },
