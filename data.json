@@ -2275,7 +2275,6 @@
   "s add,mult",
   "np",
   "n user_repo_set",
-  "s call",
   "n git_history_delete",
   "sandbox_5",
   "a s5 sandbox_5",
@@ -2349,7 +2348,8 @@
   "s assert",
   "nd aa",
   "s decl,sing",
-  "s fill"
+  "s fill",
+  "s call"
  ],
  "marker_current": "1",
  "function_current": "js_dollar_aa",
