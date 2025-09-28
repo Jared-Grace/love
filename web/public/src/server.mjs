@@ -1,3 +1,4 @@
+import { folder_previous } from "./folder_previous.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { path_join } from "./path_join.mjs";
 import express from "express";
@@ -10,10 +11,13 @@ export function server() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   let result = folder_public();
-  let result2 = path_join([__dirname, "..", "..", result]);
+  let previous = folder_previous();
+  let previous2 = folder_previous();
+  let result2 = path_join([__dirname, previous, previous2, result]);
   let v = express.static(result2);
   app.use(v);
-  app.listen(port, () => {
+  function lambda() {
     log_keep(`Static server running at http://localhost:${port}`);
-  });
+  }
+  app.listen(port, lambda);
 }
