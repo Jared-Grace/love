@@ -3677,7 +3677,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_assert_arguments_args"
   ],
   "v": [
    "data_identifiers_file",
@@ -4911,7 +4912,8 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "js_assert_arguments_args"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -5109,7 +5111,8 @@
    "app_new_step_2",
    "js_statement_return_add",
    "reply",
-   "function_params_new"
+   "function_params_new",
+   "js_assert_arguments_args"
   ],
   "list_unique": [
    "list_adder_unique",
@@ -31274,6 +31277,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "list_add",
     "list_empty",
     "assert_arguments",
     "js_visit_calls_named",
@@ -31282,6 +31286,8 @@
     "ast",
     "lambda2",
     "args",
+    "list",
+    "item",
     "name"
    ]
   },
