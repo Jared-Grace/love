@@ -1447,7 +1447,8 @@
    "repo_acronym_set",
    "server",
    "function_run_git",
-   "git_push_folder"
+   "git_push_folder",
+   "git_publish_initial"
   ],
   "ast": [
    "app_new_step_2",
@@ -2374,7 +2375,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "git_publish_initial"
   ],
   "index": [
    "app_replace_home",
@@ -2790,7 +2792,8 @@
    "marker_top",
    "messenger_reply",
    "range_from",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "git_publish_initial"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -4052,7 +4055,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "git_publish_initial"
   ],
   "book_code": [
    "app_reply_main",
@@ -4616,7 +4620,8 @@
    "list_map_split_space",
    "list_map_whitespace_normalize",
    "messenger_reply",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "git_publish_initial"
   ],
   "verse_references": [
    "bible_verses_encouragement_generate",
@@ -29040,6 +29045,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "list_map",
     "repos",
     "list_map_combine",
     "each_async",
@@ -29047,6 +29053,10 @@
     "git_publish_initial",
     "acronym",
     "all",
+    "lambda",
+    "item",
+    "mapped2",
+    "list",
     "branch_name",
     "commands",
     "mapped",
