@@ -16353,7 +16353,8 @@
    "data_set",
    "function_run_line_parse",
    "function_current_set",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "data_files_update"
   ],
   "d_path": [
    "data_file_update",
@@ -16364,8 +16365,7 @@
    "function_run_line_parse",
    "function_current_set",
    "function_aliases_restore",
-   "data_transform",
-   "data_files_update"
+   "data_transform"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16629,6 +16629,7 @@
   },
   "data_files_update": {
    "identifiers": [
+    "data_path",
     "marker",
     "file_js_parse",
     "list_map_unordered_async",
@@ -16639,7 +16640,6 @@
     "each_async",
     "data_files_update",
     "d",
-    "d_path",
     "f_paths",
     "parseds",
     "lambda",
