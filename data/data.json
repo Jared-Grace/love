@@ -31624,9 +31624,9 @@
     "file_json_transform",
     "marker",
     "file_json_property_delete",
-    "fb_path",
     "lambda",
-    "data"
+    "data",
+    "fb_path"
    ]
   }
  },
