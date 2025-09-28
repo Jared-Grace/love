@@ -13353,7 +13353,8 @@
   "file_parent_exists_ensure": [
    "file_overwrite",
    "file_overwrite_buffer",
-   "file_parent_exists_ensure"
+   "file_parent_exists_ensure",
+   "file_copy"
   ],
   "app_name_main": [
    "firebase_deploy_function_app_current",
@@ -17207,6 +17208,7 @@
   },
   "file_copy": {
    "identifiers": [
+    "file_parent_exists_ensure",
     "assert_file_exists_not",
     "file_copy",
     "file_path_old",
