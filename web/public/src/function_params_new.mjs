@@ -18,8 +18,8 @@ export async function function_params_new(
   values_default_comma,
 ) {
   let param_names = string_split(param_names_comma, ",");
-  await function_transform_current(lambda);
-  function lambda(ast) {
+  await function_transform_current(lambda1);
+  function lambda1(ast) {
     js_declaration_single_params_add(ast, param_names);
   }
   let values_default = string_split(values_default_comma, ",");
@@ -35,15 +35,21 @@ export async function function_params_new(
           return;
         }
         let args = object_property_get(node, "arguments");
-        function lambda3(value_default) {
-          let expression2 = js_parse_expression(value_default);
-          list_add(args, expression2);
-        }
-        each(values_default, lambda3);
+        lambda({
+          v,
+          args,
+        });
       }
       js_visit_type(ast, "CallExpression", lambda2);
     }
     let output = await function_transform(f_name, lambda5);
   }
   await each_async(properties, lambda4);
+  function lambda(args) {
+    function lambda3(value_default) {
+      let expression2 = js_parse_expression(value_default);
+      list_add(args, expression2);
+    }
+    each(values_default, lambda3);
+  }
 }
