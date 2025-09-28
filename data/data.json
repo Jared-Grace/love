@@ -7977,7 +7977,6 @@
    "list_wait",
    "repos",
    "function_run_git",
-   "repos_gitignore_overwrite",
    "repos_names"
   ],
   "readdir": [
@@ -29214,7 +29213,6 @@
     "repos_gitignore_overwrite",
     "repos",
     "f_name",
-    "all",
     "lambda",
     "item",
     "mapped",
