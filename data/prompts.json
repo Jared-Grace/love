@@ -2216,6 +2216,7 @@
   "s acro",
   "c repo_acronym_set repo_acronym_get",
   "s dictionary",
-  "cs list_to_dictionary async"
+  "cs list_to_dictionary async",
+  "s unordered"
  ]
 }
