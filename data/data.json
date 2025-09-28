@@ -16387,7 +16387,8 @@
    "data_backup",
    "data_path",
    "data_boolean_set",
-   "function_open_app"
+   "function_open_app",
+   "git_push"
   ],
   "d_path": [
    "data_file_update",
@@ -16400,7 +16401,8 @@
    "data_transform",
    "data_files_update",
    "data_boolean_set",
-   "function_open_app"
+   "function_open_app",
+   "git_push"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16471,6 +16473,9 @@
   ],
   "dp": [
    "data_set"
+  ],
+  "d_path2": [
+   "git_push"
   ]
  },
  "functions": {
@@ -18799,6 +18804,7 @@
   },
   "git_push": {
    "identifiers": [
+    "data_path",
     "marker",
     "date_diff_hours",
     "lambda_get",
@@ -18819,10 +18825,12 @@
     "now_iso",
     "property_name",
     "name",
+    "d_path",
     "before_iso",
     "before",
     "hours",
-    "lambda$previous"
+    "lambda$previous",
+    "d_path2"
    ],
    "async": true
   },
