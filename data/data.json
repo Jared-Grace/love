@@ -7709,7 +7709,8 @@
    "git_history_delete",
    "html_update_dev",
    "path_join",
-   "repos_folder"
+   "repos_folder",
+   "repo_acronym_set"
   ],
   "prefix": [
    "firebase_service_account",
@@ -13992,6 +13993,9 @@
   ],
   "user_repo_get": [
    "user_repo_get",
+   "repo_acronym_set"
+  ],
+  "previous2": [
    "repo_acronym_set"
   ]
  },
@@ -28956,10 +28960,12 @@
     "data_set",
     "data_path_generic",
     "marker",
+    "folder_previous",
     "repo_acronym_set",
     "value",
     "repo",
     "f_path",
+    "previous2",
     "joined",
     "lambda",
     "previous"
