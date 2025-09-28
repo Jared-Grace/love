@@ -13517,8 +13517,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "repos_gitignore_overwrite"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -29233,7 +29232,6 @@
     "lambda",
     "item",
     "joined",
-    "segments",
     "mapped2",
     "list"
    ]
