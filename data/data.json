@@ -4459,8 +4459,7 @@
   "file_delete": [
    "file_delete",
    "function_delete",
-   "file_delete_if_exists",
-   "data_files_update"
+   "file_delete_if_exists"
   ],
   "unlink": [
    "file_delete"
@@ -14366,7 +14365,6 @@
   },
   "data_files_update": {
    "identifiers": [
-    "file_delete",
     "data_path",
     "marker",
     "file_js_parse",
