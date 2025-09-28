@@ -2369,7 +2369,8 @@
    "messenger_reply_playwright",
    "js_dollar",
    "js_await_add",
-   "command_line_generic"
+   "command_line_generic",
+   "js_dollar_aa"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -4010,7 +4011,8 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply"
+   "messenger_reply",
+   "js_dollar_aa"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -31201,6 +31203,7 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "log",
     "js_parse_expression",
     "js_code_call",
     "assert_arguments",
@@ -31218,6 +31221,7 @@
     "body_block",
     "code",
     "name",
+    "message",
     "expression"
    ]
   },
