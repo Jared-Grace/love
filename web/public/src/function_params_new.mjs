@@ -1,14 +1,11 @@
+import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { object_properties } from "./object_properties.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
-import { js_call_callee_name } from "./js_call_callee_name.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { function_transform_current } from "./function_transform_current.mjs";
 import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
@@ -28,19 +25,7 @@ export async function function_params_new(
   let properties = object_properties(result);
   async function lambda4(f_name) {
     async function lambda5(ast) {
-      function lambda2(v) {
-        let { node } = v;
-        let name = js_call_callee_name(node);
-        if (equal_not(name, f_name_current)) {
-          return;
-        }
-        let args = object_property_get(node, "arguments");
-        lambda({
-          v,
-          args,
-        });
-      }
-      js_visit_type(ast, "CallExpression", lambda2);
+      js_visit_calls_named(f_name_current, lambda, ast);
     }
     let output = await function_transform(f_name, lambda5);
   }
