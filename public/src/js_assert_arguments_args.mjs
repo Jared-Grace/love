@@ -6,7 +6,7 @@ export function js_assert_arguments_args(ast) {
   marker("1");
   return;
   function lambda2({ args }) {
-    list_empty(list);
+    list_empty(args);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
