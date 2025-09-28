@@ -16357,7 +16357,8 @@
    "function_run_line_parse",
    "function_current_set",
    "function_aliases_restore",
-   "data_files_update"
+   "data_files_update",
+   "data_backup"
   ],
   "d_path": [
    "data_file_update",
@@ -31422,6 +31423,7 @@
   "data_backup": {
    "async": false,
    "identifiers": [
+    "data_path",
     "marker",
     "data_backup"
    ]
