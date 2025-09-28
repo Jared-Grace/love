@@ -2759,7 +2759,8 @@
    "data_files_update",
    "data_backup",
    "function_new",
-   "task_new"
+   "task_new",
+   "data_set"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -24063,6 +24064,7 @@
   },
   "data_set": {
    "identifiers": [
+    "marker",
     "data_path",
     "data_transform",
     "data_set",
