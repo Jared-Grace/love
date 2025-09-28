@@ -13997,8 +13997,7 @@
   ],
   "data_user_path": [
    "data_function_current_get",
-   "function_current_set",
-   "data_marker_current_get"
+   "function_current_set"
   ]
  },
  "functions": {
@@ -15279,7 +15278,6 @@
     "data_property_get",
     "data_marker_current_get",
     "property_name",
-    "data_user_path",
     "f_name",
     "d_path"
    ]
