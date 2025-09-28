@@ -7128,7 +7128,8 @@
    "js_dollar_ir",
    "js_statement_return_empty_add",
    "app_new_step_2",
-   "function_list_generate"
+   "function_list_generate",
+   "js_dollar_aa"
   ],
   "list_map_property": [
    "functions_combine_name",
@@ -13438,7 +13439,8 @@
    "function_wrap",
    "js_return_name",
    "app_new_step_2",
-   "function_list_generate"
+   "function_list_generate",
+   "js_dollar_aa"
   ],
   "choice_name": [
    "js_dollar"
@@ -16289,6 +16291,9 @@
   "js_dollar_aa": [
    "js_dollar_aa",
    "js_dollar_choices"
+  ],
+  "ast2": [
+   "js_dollar_aa"
   ]
  },
  "functions": {
@@ -31169,6 +31174,7 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "js_declaration_single_block_body",
     "marker",
     "js_dollar_aa",
     "remaining",
@@ -31177,7 +31183,9 @@
     "stack2",
     "stack3",
     "ast",
-    "afters"
+    "afters",
+    "body_block",
+    "ast2"
    ]
   }
  },
