@@ -8273,7 +8273,8 @@
   "acronym": [
    "function_acronym_to_names",
    "function_alias_rename",
-   "function_name_to_acronym"
+   "function_name_to_acronym",
+   "git_publish_initial"
   ],
   "function_alias_add_generic": [
    "function_aliases",
@@ -28997,6 +28998,7 @@
    "identifiers": [
     "command_line_git_folder",
     "git_publish_initial",
+    "acronym",
     "folder",
     "command_git"
    ]
