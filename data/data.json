@@ -14068,7 +14068,8 @@
    "path_repo"
   ],
   "repo_acronym_get": [
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "git_publish_initial"
   ],
   "path_repo_about": [
    "repo_acronym_get",
@@ -29068,6 +29069,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "repo_acronym_get",
     "list_to_dictionary",
     "list_map",
     "repos",
