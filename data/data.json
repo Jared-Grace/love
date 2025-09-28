@@ -2962,7 +2962,8 @@
    "marker_functionize",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "git_publish_initial"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -3774,7 +3775,8 @@
    "list_any_starts_with",
    "list_find_starts_with",
    "sandbox_4_a",
-   "string_starts_with_digit"
+   "string_starts_with_digit",
+   "git_publish_initial"
   ],
   "bible_folder2": [
    "app_reply_main"
@@ -5961,7 +5963,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic"
+   "search_generic",
+   "git_publish_initial"
   ],
   "data_identifiers_search": [
    "data_identifiers_search",
@@ -6594,7 +6597,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "git_publish_initial"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -6694,7 +6698,8 @@
    "ebible_chapter_text",
    "list_all",
    "list_difference",
-   "list_intersect"
+   "list_intersect",
+   "git_publish_initial"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -29063,6 +29068,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "list_to_dictionary",
     "list_map",
     "repos",
     "list_map_combine",
@@ -29071,6 +29077,10 @@
     "git_publish_initial",
     "acronym",
     "all",
+    "lambda3",
+    "item2",
+    "dictionary",
+    "list2",
     "lambda",
     "item",
     "mapped2",
