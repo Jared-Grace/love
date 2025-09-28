@@ -2369,7 +2369,6 @@
    "messenger_reply_playwright",
    "js_dollar",
    "js_await_add",
-   "command_line_generic",
    "js_dollar_aa"
   ],
   "function_path_to_name": [
@@ -29496,7 +29495,6 @@
   "command_line_generic": {
    "async": true,
    "identifiers": [
-    "log",
     "object_merge",
     "command_line_generic",
     "command",
