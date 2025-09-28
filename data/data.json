@@ -4170,7 +4170,8 @@
    "path_join",
    "sandbox_2",
    "watch",
-   "git_push_folder"
+   "git_push_folder",
+   "repos_gitignore_overwrite"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5545,7 +5546,8 @@
    "server",
    "path_repo",
    "git_push_folder",
-   "repo_path"
+   "repo_path",
+   "repos_gitignore_overwrite"
   ],
   "file_copy": [
    "data_backup",
@@ -13515,7 +13517,8 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "repos_gitignore_overwrite"
   ],
   "seg": [
    "path_join"
@@ -29218,6 +29221,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "path_join",
     "repo_path",
     "list_map",
     "repos_names",
@@ -29228,6 +29232,8 @@
     "mapped",
     "lambda",
     "item",
+    "joined",
+    "segments",
     "mapped2",
     "list"
    ]
