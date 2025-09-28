@@ -7,4 +7,5 @@ export async function data_copy(f_name) {
   let f_path_from = data_path();
   let f_path_to = data_path_generic("", f_name);
   await file_copy(f_path_from, f_path_to);
+  return f_path_to;
 }
