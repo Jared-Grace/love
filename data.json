@@ -2148,7 +2148,6 @@
   "is list_filter_starts_with_any",
   "is ebible_references_parse",
   "ebible_references_parse_god_created_man_why",
-  "s list",
   "s function,ex",
   "u fe",
   "a fe function_exists",
@@ -2357,7 +2356,8 @@
   "atn assert_arguments_args",
   "s visit,call",
   "s js,call",
-  "s js_visit_calls_named"
+  "s js_visit_calls_named",
+  "s list"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
