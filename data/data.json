@@ -1,6 +1,6 @@
 {
  "marker_current": "1",
- "function_current": "data_prompts_path",
+ "function_current": "object_properties_delete_all",
  "terminal": false,
  "identifiers": {
   "log": [
