@@ -1,3 +1,4 @@
+import { assert_arguments } from "./assert_arguments.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
@@ -12,7 +13,7 @@ export function js_dollar_aa({
   afters,
 }) {
   let body_block = js_declaration_single_block_body(ast);
-  let code = js_code_call_args(unaliased, args_code);
+  let code = js_code_call_args(assert_arguments.name, args_code);
   list_add_first(body_block, item);
   marker("1");
   return;
