@@ -2364,7 +2364,6 @@
   "fs data_transform",
   "function_exists data_identifiers_file",
   "ps",
-  "pn d_path data_path()",
   "o d",
   "n data_backup",
   "s now",
@@ -2383,7 +2382,8 @@
   "function_name_to_acronym data_set",
   "o t",
   "s empty",
-  "fs data_set"
+  "fs data_set",
+  "pn d_path data_path()"
  ],
  "marker_current": "1",
  "function_current": "data_set",
