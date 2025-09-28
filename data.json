@@ -2357,7 +2357,8 @@
   "s visit,call",
   "s js,call",
   "s js_visit_calls_named",
-  "s list"
+  "s list",
+  "u le"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
