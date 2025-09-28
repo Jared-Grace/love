@@ -5249,7 +5249,6 @@
   ],
   "command_line_git": [
    "command_line_git",
-   "git_acp",
    "git_commit",
    "git_history_delete",
    "git_push",
@@ -14015,7 +14014,8 @@
    "path_repo"
   ],
   "command_line_git_folder": [
-   "command_line_git"
+   "command_line_git",
+   "git_acp"
   ]
  },
  "functions": {
@@ -19531,9 +19531,9 @@
   "git_acp": {
    "async": true,
    "identifiers": [
+    "command_line_git_folder",
     "git_commit",
     "git_push",
-    "command_line_git",
     "git_acp",
     "message",
     "folder"
