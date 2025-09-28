@@ -2346,13 +2346,13 @@
   "fd git_repo_clone",
   "ps",
   "git_repo_clone Jared-Grace karate_code",
-  "s assert",
   "nd aa",
   "s decl,sing",
   "s fill",
   "s call",
   "n assert_arguments",
-  "a eq equal"
+  "a eq equal",
+  "s assert"
  ],
  "marker_current": "1",
  "function_current": "assert_arguments",
