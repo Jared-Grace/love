@@ -6770,7 +6770,8 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main"
+   "app_reply_main",
+   "task_new"
   ],
   "Error": [
    "error",
@@ -10207,7 +10208,8 @@
    "string_empty_not_is",
    "ebible_verses",
    "list_map_string_empty_not_is",
-   "list_filter_empty_not_is"
+   "list_filter_empty_not_is",
+   "task_new"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -12574,7 +12576,8 @@
   "name2": [
    "app_replace_home",
    "js_assign_combine",
-   "app_reply_main"
+   "app_reply_main",
+   "task_new"
   ],
   "storage_local_key_get": [
    "storage_local_set",
@@ -23701,6 +23704,7 @@
   },
   "task_new": {
    "identifiers": [
+    "string_empty_not_is",
     "marker",
     "data_function_current_restore",
     "function_name_unalias",
@@ -23714,6 +23718,8 @@
     "todo",
     "task_new",
     "task_name",
+    "ne",
+    "name2",
     "f_name",
     "result2",
     "unaliased",
