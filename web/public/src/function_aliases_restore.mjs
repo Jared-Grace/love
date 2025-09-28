@@ -1,4 +1,4 @@
-import { data_aliases_path } from "./data_aliases_path.mjs";
+import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 import { data_transform } from "./data_transform.mjs";
 export async function function_aliases_restore() {
@@ -159,7 +159,7 @@ export async function function_aliases_restore() {
     };
     return v2;
   }
-  let d_path = data_aliases_path();
+  let d_path = data_path();
   let v = await data_transform("aliases", {}, lambda, d_path);
   return v;
 }
