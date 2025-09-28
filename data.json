@@ -2312,7 +2312,6 @@
   "s transform",
   "s ien",
   "js_dollar_new ine",
-  "s dollar",
   "s await",
   "o w",
   "data_functions_get",
@@ -2366,7 +2365,8 @@
   "u lam",
   "a lam list_add_multiple",
   "s list, replace",
-  "s list,repl"
+  "s list,repl",
+  "s dollar"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
