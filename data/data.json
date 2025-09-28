@@ -1446,7 +1446,8 @@
    "visit_unique_async",
    "watch",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "server"
   ],
   "ast": [
    "app_new_step_2",
@@ -5600,7 +5601,8 @@
    "prompt_previous",
    "repos_folder",
    "user_repo_set",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "server"
   ],
   "data_copy": [
    "data_copy",
@@ -7710,7 +7712,8 @@
    "git_history_delete",
    "html_update_dev",
    "path_join",
-   "repos_folder"
+   "repos_folder",
+   "server"
   ],
   "prefix": [
    "firebase_service_account",
@@ -13997,6 +14000,9 @@
   ],
   "path_repo": [
    "repo_acronym_set"
+  ],
+  "previous2": [
+   "server"
   ]
  },
  "functions": {
@@ -27923,6 +27929,7 @@
   "server": {
    "async": false,
    "identifiers": [
+    "folder_previous",
     "log_keep",
     "path_join",
     "express",
@@ -27939,10 +27946,13 @@
     "__dirname",
     "dirname",
     "result",
+    "previous",
+    "previous2",
     "result2",
     "v",
     "static",
     "use",
+    "lambda",
     "listen"
    ]
   },
