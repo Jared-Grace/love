@@ -2739,8 +2739,7 @@
    "functions_combine",
    "data_all",
    "js_dollar_aa",
-   "equal_assert",
-   "sandbox_5_a"
+   "equal_assert"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -3953,7 +3952,8 @@
    "messenger_reply_messages_name",
    "python_install",
    "data_get",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "sandbox_5_a"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5588,7 +5588,8 @@
    "reply",
    "reply_sequence",
    "reply_on_match",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "sandbox_5_a"
   ],
   "without": [
    "string_suffix_without",
@@ -31352,8 +31353,9 @@
   "sandbox_5_a": {
    "async": false,
    "identifiers": [
-    "marker",
-    "sandbox_5_a"
+    "sandbox_5_a",
+    "a",
+    "v"
    ]
   }
  },
