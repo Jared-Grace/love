@@ -8,7 +8,7 @@ export async function file_json_isolate(f_path, property_name) {
   async function lambda(data) {
     let value = object_property_get(data, property_name);
     object_properties_delete(data);
-    object_property_set(object, property_name2, value2);
+    object_property_set(data, property_name, value);
   }
-  await file_json_transform(fb_path, lambda);
+  await file_json_transform(f_path, lambda);
 }
