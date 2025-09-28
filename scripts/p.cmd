@@ -1,4 +1,4 @@
 @echo off
 :loop
-node p.mjs
+node ./scripts/p.mjs
 goto loop
