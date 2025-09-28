@@ -2721,7 +2721,8 @@
    "user_repo_set",
    "functions_combine",
    "data_all",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "assert_arguments"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16298,6 +16299,9 @@
   "js_dollar_aa": [
    "js_dollar_aa",
    "js_dollar_choices"
+  ],
+  "assert_arguments": [
+   "assert_arguments"
   ]
  },
  "functions": {
@@ -31195,6 +31199,13 @@
     "unaliased",
     "args_code",
     "item"
+   ]
+  },
+  "assert_arguments": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "assert_arguments"
    ]
   }
  },
