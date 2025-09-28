@@ -806,8 +806,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "git_publish_initial"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -5243,7 +5242,8 @@
    "git_repo_clone"
   ],
   "command_git": [
-   "command_line_git"
+   "command_line_git",
+   "git_publish_initial"
   ],
   "command_line_log": [
    "command_line_log",
@@ -7766,7 +7766,8 @@
    "git_commit",
    "git_push",
    "git_acp_call",
-   "function_run_git"
+   "function_run_git",
+   "git_publish_initial"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -10066,8 +10067,7 @@
   ],
   "git_push_command": [
    "git_push_command",
-   "git_push_schedule_command",
-   "git_publish_initial"
+   "git_push_schedule_command"
   ],
   "git_push_schedule_command": [
    "git_push_schedule",
@@ -13986,7 +13986,8 @@
    "function_run_git"
   ],
   "command_line_git_folder": [
-   "command_line_git"
+   "command_line_git",
+   "git_publish_initial"
   ],
   "git_commit_folder": [
    "git_commit"
@@ -28992,11 +28993,12 @@
    ]
   },
   "git_publish_initial": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "git_push_command",
+    "command_line_git_folder",
     "git_publish_initial",
-    "v"
+    "folder",
+    "command_git"
    ]
   }
  },
