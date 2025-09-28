@@ -1,4 +1,4 @@
-import { list_map_wait } from "./list_map_wait.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { marker } from "./marker.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 export async function list_to_dictionary_async(list, lambda$item) {
@@ -8,6 +8,6 @@ export async function list_to_dictionary_async(list, lambda$item) {
     let value = await lambda$item(item);
     object_property_set(dictionary, item, value);
   }
-  await list_map_wait(list, lambda);
+  await list_map_unordered_async(list, lambda);
   return dictionary;
 }
