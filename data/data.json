@@ -16379,7 +16379,6 @@
    "error_attention_set",
    "marker_current_set",
    "function_alias_rename",
-   "data_set",
    "function_run_line_parse",
    "function_current_set",
    "function_aliases_restore",
@@ -16402,7 +16401,8 @@
    "data_files_update",
    "data_boolean_set",
    "function_open_app",
-   "git_push"
+   "git_push",
+   "data_set"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16470,9 +16470,6 @@
   ],
   "string_empty_not_is_assert": [
    "task_new"
-  ],
-  "dp": [
-   "data_set"
   ],
   "d_path2": [
    "git_push"
@@ -24079,15 +24076,14 @@
   "data_set": {
    "identifiers": [
     "marker",
-    "data_path",
     "data_transform",
     "data_set",
     "lambda$previous",
     "property_name",
+    "d_path",
     "lambda",
     "previous",
-    "v2",
-    "dp"
+    "v2"
    ],
    "async": true
   },
