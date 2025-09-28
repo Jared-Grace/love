@@ -2387,7 +2387,8 @@
   "fs data_path_generic",
   "pn f_name \"data\"",
   "ps",
-  "o db"
+  "o db",
+  "c data_backup data_copy"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
