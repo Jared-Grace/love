@@ -9061,8 +9061,7 @@
   ],
   "object_properties_delete": [
    "object_properties_delete",
-   "object_replace",
-   "file_json_isolate"
+   "object_replace"
   ],
   "undefined_is": [
    "object_property_get",
@@ -14168,7 +14167,8 @@
    "function_run_line_parse"
   ],
   "object_properties_delete_all": [
-   "object_properties_delete_all"
+   "object_properties_delete_all",
+   "file_json_isolate"
   ]
  },
  "functions": {
@@ -29252,7 +29252,7 @@
    "async": true,
    "identifiers": [
     "object_property_set",
-    "object_properties_delete",
+    "object_properties_delete_all",
     "object_property_get",
     "file_json_transform",
     "marker",
