@@ -5552,7 +5552,6 @@
    "data_files_update",
    "data_file_update",
    "data_functions_get",
-   "data_function_current_get",
    "data_identifiers_get",
    "data_partition",
    "data_path",
@@ -13997,6 +13996,9 @@
   "user_repo_get": [
    "user_repo_get",
    "repo_acronym_set"
+  ],
+  "data_user_path": [
+   "data_function_current_get"
   ]
  },
  "functions": {
@@ -15212,11 +15214,11 @@
   "data_function_current_get": {
    "async": true,
    "identifiers": [
-    "data_path",
     "data_property_get",
     "data_function_current_get",
     "property_name",
     "d_path",
+    "data_user_path",
     "f_name_current"
    ]
   },
