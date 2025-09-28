@@ -1990,7 +1990,8 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set"
+   "error_attention_set",
+   "repo_acronym_set"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
@@ -13484,8 +13485,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "repo_acronym_set"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -13998,7 +13998,8 @@
    "user_repo_get"
   ],
   "user_repo_get": [
-   "user_repo_get"
+   "user_repo_get",
+   "repo_acronym_set"
   ]
  },
  "functions": {
@@ -28957,15 +28958,16 @@
   "repo_acronym_set": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "path_join",
     "data_set",
     "data_path_generic",
     "marker",
     "repo_acronym_set",
     "value",
+    "value2",
     "f_path",
     "joined",
-    "segments",
     "lambda",
     "previous"
    ]
