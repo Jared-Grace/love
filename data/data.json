@@ -5586,8 +5586,7 @@
    "function_open_app",
    "user_repo_set",
    "repo_acronym_set",
-   "git_push_folder",
-   "repo_acronym_get"
+   "git_push_folder"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5932,7 +5931,8 @@
    "data_property_get",
    "data_transform",
    "function_alias_add_generic",
-   "user_repo_get"
+   "user_repo_get",
+   "repo_acronym_get"
   ],
   "value_initial": [
    "data_get",
@@ -29112,9 +29112,9 @@
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
+    "data_get",
     "path_repo",
     "path_join",
-    "data_set",
     "data_path_generic",
     "marker",
     "repo_acronym_get",
