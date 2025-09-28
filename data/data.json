@@ -7956,7 +7956,8 @@
    "folder_read_files",
    "list_wait",
    "repos",
-   "function_run_git"
+   "function_run_git",
+   "git_publish_initial"
   ],
   "readdir": [
    "folder_read",
@@ -13562,7 +13563,8 @@
   ],
   "repos": [
    "repos",
-   "function_run_git"
+   "function_run_git",
+   "git_publish_initial"
   ],
   "wait": [
    "retry"
@@ -29038,11 +29040,13 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "repos",
     "list_map_combine",
     "each_async",
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
+    "all",
     "branch_name",
     "commands",
     "mapped",
