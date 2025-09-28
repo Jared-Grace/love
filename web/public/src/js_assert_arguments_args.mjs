@@ -4,6 +4,8 @@ import { marker } from "./marker.mjs";
 export function js_assert_arguments_args(ast) {
   marker("1");
   return;
-  function lambda2() {}
+  function lambda2({ args }) {
+    list_clear;
+  }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
