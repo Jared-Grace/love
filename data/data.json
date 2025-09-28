@@ -2273,7 +2273,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "git_publish_initial"
   ],
   "item": [
    "app_replace_home",
@@ -2371,7 +2372,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "git_publish_initial"
   ],
   "index": [
    "app_replace_home",
@@ -4049,7 +4051,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "git_publish_initial"
   ],
   "book_code": [
    "app_reply_main",
@@ -5653,7 +5656,8 @@
    "sandbox_4_a",
    "tasks_run",
    "visit_filter_recursive_async",
-   "function_run_git"
+   "function_run_git",
+   "git_publish_initial"
   ],
   "data_files_update": [
    "data_files_update"
@@ -29007,6 +29011,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "each_async",
     "list_map",
     "command_line_git_folder",
     "git_publish_initial",
@@ -29017,6 +29022,9 @@
     "command",
     "v",
     "mapped",
+    "list",
+    "lambda2",
+    "item",
     "folder",
     "command_git"
    ]
