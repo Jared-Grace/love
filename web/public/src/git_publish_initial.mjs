@@ -1,3 +1,4 @@
+import { object_invert } from "./object_invert.mjs";
 import { list_to_dictionary_async } from "./list_to_dictionary_async.mjs";
 import { repo_acronym_get } from "./repo_acronym_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -8,6 +9,7 @@ import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let all = await repos();
   let dictionary = await list_to_dictionary_async(list2, repo_acronym_get);
+  let inverted = object_invert(object);
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
   let branch_name = " main";
