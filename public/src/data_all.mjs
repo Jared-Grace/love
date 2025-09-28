@@ -1,4 +1,4 @@
-import { function_wrap } from "./function_wrap.mjs";
+import { file_write } from "./file_write.mjs";
 import { not } from "./not.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { marker } from "./marker.mjs";
@@ -7,7 +7,7 @@ export async function data_all(file_path) {
   marker("1");
   let exists = await file_exists(file_path);
   if (not(exists)) {
-    await function_wrap(f_name, f_name_wrapped);
+    await file_write(f_path, contents);
   }
   let data = await file_read_json(file_path);
   let v = {
