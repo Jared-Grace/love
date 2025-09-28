@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
@@ -7,6 +8,7 @@ export function js_assert_arguments_args(ast) {
   return;
   function lambda2({ args }) {
     list_empty(args);
+    list_add(list, item);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
