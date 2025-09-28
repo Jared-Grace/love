@@ -1,5 +1,5 @@
+import { list_remove } from "./list_remove.mjs";
 import { log } from "./log.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_call } from "./js_code_call.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
 import { list_add_first } from "./list_add_first.mjs";
@@ -21,7 +21,8 @@ export function js_dollar_aa({
     code,
   });
   let expression = js_parse_statement(code);
-  list_add_first(body_block, expression);lr
+  list_add_first(body_block, expression);
+  list_remove(list, item);
   marker("1");
   return;
 }
