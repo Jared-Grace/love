@@ -5828,7 +5828,8 @@
    "puppeteer_matches",
    "messenger_reply_messages",
    "undefined_not_is_assert",
-   "puppeteer_hrefs"
+   "puppeteer_hrefs",
+   "data_backup"
   ],
   "readdirSync": [
    "folder_read_files"
@@ -31425,7 +31426,8 @@
    "identifiers": [
     "data_path",
     "marker",
-    "data_backup"
+    "data_backup",
+    "v2"
    ]
   }
  },
