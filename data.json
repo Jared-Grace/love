@@ -3952,8 +3952,7 @@
    "messenger_reply_messages_name",
    "python_install",
    "data_get",
-   "js_visit_calls_named",
-   "sandbox_5"
+   "js_visit_calls_named"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -5743,8 +5742,7 @@
    "folder_user",
    "folder_user_combine",
    "folder_read_files",
-   "git_repo_clone",
-   "sandbox_5"
+   "git_repo_clone"
   ],
   "fs": [
    "file_copy",
@@ -15222,8 +15220,7 @@
    "list_map_first"
   ],
   "segments": [
-   "path_join",
-   "sandbox_5"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -30964,11 +30961,8 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
-    "path_join",
     "marker",
-    "sandbox_5",
-    "v",
-    "segments"
+    "sandbox_5"
    ]
   },
   "folder_delete": {
