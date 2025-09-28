@@ -14030,7 +14030,8 @@
   ],
   "path_repo": [
    "path_repo",
-   "function_run_git"
+   "function_run_git",
+   "git_publish_initial"
   ],
   "repo_name": [
    "path_repo",
@@ -29083,6 +29084,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "path_repo",
     "repo_acronym_to_name",
     "list_map",
     "list_map_combine",
@@ -29091,6 +29093,7 @@
     "git_publish_initial",
     "acronym",
     "repo_name",
+    "folder",
     "lambda",
     "item",
     "mapped2",
@@ -29099,8 +29102,7 @@
     "commands",
     "mapped",
     "lambda2",
-    "command",
-    "folder"
+    "command"
    ]
   },
   "git_push_folder": {
