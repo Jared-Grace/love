@@ -1,5 +1,5 @@
+import { file_copy_overwrite } from "./file_copy_overwrite.mjs";
 import { log } from "./log.mjs";
-import { file_copy } from "./file_copy.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -22,7 +22,7 @@ export async function repos_gitignore_overwrite() {
         from,
         to,
       });
-      await file_copy(from, to);
+      await file_copy_overwrite(from, to);
     }
   }
   let waited = await list_map_unordered_async(mapped2, lambda);
