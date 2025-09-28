@@ -91,7 +91,6 @@
    "messenger_reply_unread_collect",
    "messenger_reply_messages_urls_add_multiple",
    "function_params_new",
-   "data_files_update",
    "object_properties_delete_all"
   ],
   "js_identifiers_names": [
@@ -1170,8 +1169,7 @@
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
    "puppeteer_hrefs",
-   "js_assert_arguments_args",
-   "data_files_update"
+   "js_assert_arguments_args"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -2693,7 +2691,6 @@
    "data_file_update_inner",
    "js_string",
    "file_json_property_delete",
-   "data_files_update",
    "object_properties_delete_all"
   ],
   "data_boolean_set": [
@@ -3389,7 +3386,6 @@
    "folder_user_docs_path",
    "messenger_reply",
    "messenger_reply_playwright",
-   "data_files_update",
    "object_properties_delete_all"
   ],
   "f_names": [
@@ -9061,7 +9057,8 @@
   ],
   "object_properties_delete": [
    "object_properties_delete",
-   "object_replace"
+   "object_replace",
+   "data_files_update"
   ],
   "undefined_is": [
    "object_property_get",
@@ -14383,8 +14380,7 @@
   },
   "data_files_update": {
    "identifiers": [
-    "object_property_delete",
-    "each",
+    "object_properties_delete",
     "data_path",
     "marker",
     "file_js_parse",
@@ -14401,8 +14397,6 @@
     "f_paths",
     "parseds",
     "properties",
-    "lambda2",
-    "p",
     "lambda",
     "parsed"
    ],
