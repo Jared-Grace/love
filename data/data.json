@@ -5425,7 +5425,8 @@
    "js_outside_move",
    "user_repo_set",
    "repo_acronym_set",
-   "user_repo_get"
+   "user_repo_get",
+   "user_repo_path"
   ],
   "file_read_json": [
    "data_all",
@@ -13980,7 +13981,8 @@
    "data_path_generic"
   ],
   "file_name_json_folder": [
-   "data_path_generic"
+   "data_path_generic",
+   "user_repo_path"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -13992,7 +13994,8 @@
    "data_marker_current_get",
    "data_function_current_get",
    "function_current_set",
-   "data_app_current_get"
+   "data_app_current_get",
+   "user_repo_path"
   ],
   "user_repo_get": [
    "user_repo_get",
@@ -28980,6 +28983,14 @@
     "f_path",
     "value",
     "repo"
+   ]
+  },
+  "user_repo_path": {
+   "async": false,
+   "identifiers": [
+    "file_name_json_folder",
+    "user_repo_path",
+    "f_path"
    ]
   }
  },
