@@ -4011,8 +4011,7 @@
    "keyboard_type_delay",
    "string_trim",
    "messenger_reply_messages",
-   "messenger_reply",
-   "js_dollar_aa"
+   "messenger_reply"
   ],
   "object_property_exists_equals": [
    "watch",
@@ -31221,7 +31220,6 @@
     "body_block",
     "code",
     "name",
-    "message",
     "expression"
    ]
   },
