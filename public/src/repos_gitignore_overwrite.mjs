@@ -9,11 +9,12 @@ export async function repos_gitignore_overwrite() {
   marker("1");
   let repos = await repos_names();
   let f_name = ".gitignore";
+  let source = await path_resolve(f_name);
   let mapped = list_map(repos, repo_path);
   let mapped2 = list_map_path_join(mapped, f_name);
-  async function lambda(item) {
-    let result = await path_resolve(paths);
+  async function lambda(p) {
+    let result = await path_resolve(p);
   }
-  let waited = await list_map_unordered_async(list, lambda);
+  let waited = await list_map_unordered_async(mapped2, lambda);
   return mapped2;
 }
