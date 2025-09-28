@@ -3,5 +3,5 @@ export async function marker_current_set(name_marker) {
   function lambda(previous) {
     return name_marker;
   }
-  await data_transform("marker_current", null, lambda);
+  await data_transform("marker_current", null, lambda, data_path());
 }

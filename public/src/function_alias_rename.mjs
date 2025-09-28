@@ -18,6 +18,6 @@ export async function function_alias_rename(before, after) {
     each(acronyms, lambda2);
     return aliases;
   }
-  let v = await data_transform("aliases", {}, lambda);
+  let v = await data_transform("aliases", {}, lambda, data_path());
   return v;
 }
