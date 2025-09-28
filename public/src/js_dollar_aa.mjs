@@ -5,6 +5,7 @@ import { assert_arguments } from "./assert_arguments.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { marker } from "./marker.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_dollar_aa({
   remaining,
   node,
@@ -19,7 +20,7 @@ export function js_dollar_aa({
   log({
     code,
   });
-  let expression = js_parse_expression(code);
+  let expression = js_parse_statement(code);
   list_add_first(body_block, expression);
   marker("1");
   return;
