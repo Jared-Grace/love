@@ -1,6 +1,8 @@
+import { data_path } from "./data_path.mjs";
 import { data_set } from "./data_set.mjs";
 export async function data_boolean_set(property_name, value) {
-  await data_set(value_get, property_name, data_path());
+  let d_path = data_path();
+  await data_set(value_get, property_name, d_path);
   function value_get(previous) {
     let v = null;
     if (value === "1") {
