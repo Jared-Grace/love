@@ -11114,7 +11114,6 @@
    "marker_next_await"
   ],
   "log": [
-   "js_dollar",
    "js_log_remove",
    "log",
    "log_keep",
@@ -21824,7 +21823,6 @@
   "js_dollar": {
    "async": true,
    "identifiers": [
-    "log",
     "marker",
     "js_dollar_choices",
     "list_get_end_3",
