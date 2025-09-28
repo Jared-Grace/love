@@ -2362,7 +2362,8 @@
    "js_log_remove",
    "messenger_reply_playwright",
    "js_dollar",
-   "js_await_add"
+   "js_await_add",
+   "command_line_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -29447,6 +29448,7 @@
   "command_line_generic": {
    "async": true,
    "identifiers": [
+    "log",
     "object_merge",
     "command_line_generic",
     "command",
