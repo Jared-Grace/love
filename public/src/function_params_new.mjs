@@ -34,10 +34,10 @@ export async function function_params_new(
         if (equal_not(name, f_name_current)) {
           return;
         }
-        let arguments2 = object_property_get(node, "arguments");
+        let args = object_property_get(node, "arguments");
         function lambda3(value_default) {
           let expression2 = js_parse_expression(value_default);
-          list_add(arguments2, expression2);
+          list_add(args, expression2);
         }
         each(values_default, lambda3);
       }
