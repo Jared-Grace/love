@@ -3136,7 +3136,8 @@
    "function_list_generate",
    "function_params_new",
    "js_visit_calls_named",
-   "data_path_generic"
+   "data_path_generic",
+   "data_copy"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4247,8 +4248,7 @@
    "messenger_reply",
    "path_join",
    "data_backup",
-   "data_path_generic",
-   "data_copy"
+   "data_path_generic"
   ],
   "watcher": [
    "watch"
@@ -5784,8 +5784,7 @@
    "folder_read_files",
    "git_repo_clone",
    "data_backup",
-   "data_path_generic",
-   "data_copy"
+   "data_path_generic"
   ],
   "fs": [
    "file_copy",
@@ -31562,17 +31561,16 @@
   "data_copy": {
    "async": true,
    "identifiers": [
-    "path_join",
     "file_copy",
     "date_now_file",
     "data_path_generic",
     "data_path",
     "marker",
     "data_copy",
+    "f_name",
     "f_path_from",
     "inner",
-    "f_path_to",
-    "joined"
+    "f_path_to"
    ]
   }
  },
