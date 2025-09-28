@@ -25,6 +25,6 @@ export function path_join(segments) {
       }
     }
   }
-  let v = parts.join("/");
-  return v;
+  let joined = parts.join("/");
+  return joined;
 }
