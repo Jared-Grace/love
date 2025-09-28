@@ -1,3 +1,4 @@
+import { js_assert_arguments_args } from "./js_assert_arguments_args.mjs";
 import { js_assign_combine } from "./js_assign_combine.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
@@ -34,6 +35,8 @@ export function js_auto_transforms() {
     js_outside_move,
     js_atomize,
     js_assign_combine,
+    js_assert_arguments_args,
   ];
   return transforms;
+  return;
 }
