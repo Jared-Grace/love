@@ -2221,7 +2221,8 @@
   "s undefined",
   "export async function git_publish_initial(acronym) {",
   "p",
+  "user_repo_path",
   "git_publish_initial k",
-  "user_repo_path"
+  "s gitignore"
  ]
 }
