@@ -2356,7 +2356,7 @@
   "r assert_equal equal_assert"
  ],
  "marker_current": "1",
- "function_current": "assert_arguments",
+ "function_current": "equal_assert",
  "terminal": false,
  "identifiers": {
   "log": [
