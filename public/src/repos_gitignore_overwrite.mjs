@@ -10,6 +10,7 @@ export async function repos_gitignore_overwrite() {
   let mapped = list_map(repos, repo_path);
   function lambda(item) {
     let joined = path_join([item, f_name]);
+    return joined;
   }
   let mapped2 = list_map(list, lambda);
 }
