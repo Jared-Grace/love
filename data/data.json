@@ -16327,7 +16327,8 @@
    "function_alias_rename"
   ],
   "data_copy": [
-   "data_copy"
+   "data_copy",
+   "data_partition"
   ],
   "file_json_isolate": [
    "file_json_isolate"
@@ -31449,8 +31450,9 @@
    ]
   },
   "data_partition": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "data_copy",
     "marker",
     "data_partition",
     "property_name"
