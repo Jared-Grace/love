@@ -5427,7 +5427,8 @@
    "roman_to_integer",
    "catch_only_run_async",
    "path_join",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "function_params_new"
   ],
   "string_ends_with": [
    "string_suffix_without",
@@ -18217,6 +18218,7 @@
   },
   "function_params_new": {
    "identifiers": [
+    "not",
     "function_exists",
     "assert_arguments",
     "js_visit_calls_named",
