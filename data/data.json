@@ -2192,11 +2192,11 @@
   "file_json_isolate data/aliases.json aliases",
   "n file_json_property_delete",
   "file_json_property_delete data/data.json aliases",
-  "p",
   "n data_partition",
   "s alias",
   "c data_aliases_path data_prompts_path",
-  "s partit"
+  "s partit",
+  "p"
  ],
  "marker_current": "1",
  "function_current": "data_prompts_path",
