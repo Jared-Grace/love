@@ -1778,8 +1778,7 @@
    "object_property_lambda_async",
    "prompt_previous",
    "reply",
-   "reply_sequence",
-   "git_publish_initial"
+   "reply_sequence"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -6596,8 +6595,7 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "list_to_dictionary_async",
-   "git_publish_initial"
+   "list_to_dictionary_async"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -7972,8 +7970,7 @@
    "folder_read_files",
    "list_wait",
    "repos",
-   "function_run_git",
-   "git_publish_initial"
+   "function_run_git"
   ],
   "readdir": [
    "folder_read",
@@ -8242,8 +8239,7 @@
    "js_visit_match",
    "list_find",
    "list_single",
-   "marker_rename",
-   "git_publish_initial"
+   "marker_rename"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -8345,8 +8341,7 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "function_names_to_acronyms",
-   "object_invert",
-   "git_publish_initial"
+   "object_invert"
   ],
   "function_aliases_inverted": [
    "function_aliases_inverted",
@@ -8357,8 +8352,7 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "object_invert",
-   "prompt_previous",
-   "git_publish_initial"
+   "prompt_previous"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -13582,8 +13576,7 @@
   ],
   "repos": [
    "repos",
-   "function_run_git",
-   "git_publish_initial"
+   "function_run_git"
   ],
   "wait": [
    "retry"
@@ -14071,8 +14064,7 @@
    "path_repo"
   ],
   "repo_acronym_get": [
-   "repo_acronym_get",
-   "git_publish_initial"
+   "repo_acronym_get"
   ],
   "path_repo_about": [
    "repo_acronym_get",
@@ -14088,10 +14080,9 @@
    "path_repo_about"
   ],
   "list_to_dictionary_async": [
-   "list_to_dictionary_async",
-   "git_publish_initial"
+   "list_to_dictionary_async"
   ],
-  "repos_matching": [
+  "repo_acronym_to_name": [
    "git_publish_initial"
   ]
  },
@@ -29077,22 +29068,13 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
-    "list_single",
-    "object_property_get",
-    "object_invert",
-    "list_to_dictionary_async",
-    "repo_acronym_get",
+    "repo_acronym_to_name",
     "list_map",
-    "repos",
     "list_map_combine",
     "each_async",
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
-    "all",
-    "dictionary",
-    "inverted",
-    "repos_matching",
     "only",
     "lambda",
     "item",
