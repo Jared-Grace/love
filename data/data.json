@@ -811,8 +811,7 @@
    "file_json_isolate",
    "file_json_property_delete",
    "data_partition",
-   "data_copy",
-   "data_files_update"
+   "data_copy"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -2327,7 +2326,8 @@
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
    "file_json_isolate",
-   "file_json_property_delete"
+   "file_json_property_delete",
+   "data_files_update"
   ],
   "file_path": [
    "data_file_update",
@@ -14386,13 +14386,13 @@
     "data_files_update",
     "d_path",
     "d",
+    "data",
     "f_paths",
     "parseds",
     "properties",
     "lambda2",
     "p",
     "object",
-    "property_name",
     "lambda",
     "parsed"
    ],
