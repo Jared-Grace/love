@@ -383,7 +383,8 @@
    "file_json_isolate",
    "file_json_property_delete",
    "data_partition",
-   "data_prompts_path"
+   "data_prompts_path",
+   "object_properties_delete_all"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -29302,6 +29303,7 @@
   "object_properties_delete_all": {
    "async": false,
    "identifiers": [
+    "marker",
     "object_property_delete",
     "each",
     "object_properties",
