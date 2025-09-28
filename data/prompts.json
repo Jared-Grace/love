@@ -2203,6 +2203,7 @@
   "n repo_acronym_set",
   "s data",
   "o w",
-  "s lambda"
+  "s lambda",
+  "c user_repo_set user_repo_get"
  ]
 }
