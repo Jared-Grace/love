@@ -6,7 +6,7 @@ export async function repos_gitignore_overwrite() {
   marker("1");
   let repos = await repos_names();
   let f_name = ".gitignore";
-  function lambda(r) {
+  function lambda(repo_name) {
     let folder = path_repo(repo_name);
   }
   let mapped = list_map(repos, lambda);
