@@ -2086,7 +2086,6 @@
   "is folder_read",
   "r folder_read folder_read_files",
   "n folder_read",
-  "repos",
   "n git_repo_clone",
   "s param",
   "s each",
@@ -2202,6 +2201,7 @@
   "s gitif",
   "s file,exis",
   "ps",
-  "user_repo_set love"
+  "user_repo_set love",
+  "repos"
  ]
 }
