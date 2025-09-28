@@ -9,7 +9,8 @@ export async function git_publish_initial(acronym) {
     return v;
   }
   let mapped = list_map(commands, lambda);
-  async function lambda2(item) {}
-  await each_async(list, lambda2);
-  await command_line_git_folder(folder, command_git);
+  async function lambda2(command) {
+    await command_line_git_folder(folder, command);
+  }
+  await each_async(mapped, lambda2);
 }
