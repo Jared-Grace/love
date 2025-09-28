@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { file_copy } from "./file_copy.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { path_resolve } from "./path_resolve.mjs";
@@ -17,6 +18,7 @@ export async function repos_gitignore_overwrite() {
   async function lambda(p) {
     let to = await path_resolve(p);
     if (equal_not(to, from)) {
+      log(message);
       await file_copy(from, to);
     }
   }
