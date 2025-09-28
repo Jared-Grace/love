@@ -4414,7 +4414,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "repos_gitignore_overwrite"
   ],
   "assert_not": [
    "assert_not",
@@ -11155,7 +11156,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "repos_gitignore_overwrite"
   ],
   "js_node_type_not_is_if": [
    "js_await_add",
@@ -29227,6 +29229,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "log",
     "file_copy",
     "equal_not",
     "path_resolve",
@@ -29245,6 +29248,7 @@
     "lambda",
     "p",
     "to",
+    "message",
     "waited"
    ]
   },
