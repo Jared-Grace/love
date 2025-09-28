@@ -2814,7 +2814,6 @@
    "file_write_generic",
    "git_history_delete",
    "data_path",
-   "data_backup",
    "data_path_generic"
   ],
   "ast": [
@@ -4602,8 +4601,7 @@
    "function_parse_strict"
   ],
   "f_path2": [
-   "data_file_update",
-   "data_backup"
+   "data_file_update"
   ],
   "file_read": [
    "file_js_parse",
@@ -16437,6 +16435,12 @@
   "data_path_generic": [
    "data_path",
    "data_path_generic",
+   "data_backup"
+  ],
+  "f_path_from": [
+   "data_backup"
+  ],
+  "f_path_to": [
    "data_backup"
   ]
  },
@@ -31443,9 +31447,9 @@
     "data_path",
     "marker",
     "data_backup",
-    "f_path",
+    "f_path_from",
     "inner",
-    "f_path2"
+    "f_path_to"
    ]
   },
   "data_path": {
