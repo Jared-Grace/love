@@ -685,7 +685,6 @@
   "n git_push_schedule",
   "n path_resolve",
   "jis",
-  "s acro",
   "n function_acronym_to_names",
   "a atn function_acronym_to_names",
   "atn ii",
@@ -2213,6 +2212,7 @@
   "s command",
   "s list_map",
   "s user,repo",
-  "urg"
+  "urg",
+  "s acro"
  ]
 }
