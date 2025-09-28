@@ -2372,7 +2372,8 @@
   "ps",
   "pn d_path data_path()",
   "o d",
-  "n data_backup"
+  "n data_backup",
+  "s now"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
