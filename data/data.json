@@ -2577,7 +2577,8 @@
    "data_path_generic",
    "data_copy",
    "file_json_isolate",
-   "file_json_property_delete"
+   "file_json_property_delete",
+   "data_partition"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16331,6 +16332,9 @@
   ],
   "file_json_property_delete": [
    "file_json_property_delete"
+  ],
+  "data_partition": [
+   "data_partition"
   ]
  },
  "functions": {
@@ -31431,6 +31435,13 @@
     "property_name",
     "lambda",
     "data"
+   ]
+  },
+  "data_partition": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "data_partition"
    ]
   }
  },
