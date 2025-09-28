@@ -2731,8 +2731,7 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "search_generic",
-   "visit_filter_recursive",
-   "list_to_dictionary_async"
+   "visit_filter_recursive"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -5674,7 +5673,8 @@
    "tasks_run",
    "visit_filter_recursive_async",
    "function_run_git",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "data_files_update": [
    "data_files_update"
@@ -29141,11 +29141,11 @@
    ]
   },
   "list_to_dictionary_async": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "each_async",
     "marker",
     "object_property_set",
-    "each",
     "list_to_dictionary_async",
     "list",
     "lambda$item",
