@@ -7,5 +7,5 @@ export async function repo_acronym_set() {
   async function lambda(previous) {
     return value;
   }
-  await data_set(lambda, "repo_current", f_path);
+  await data_set(lambda, "acronym", f_path);
 }
