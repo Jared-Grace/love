@@ -10043,9 +10043,6 @@
    "path_join",
    "roman_to_integer"
   ],
-  "execSync": [
-   "git_acp_timestamp"
-  ],
   "git_acp_timestamp": [
    "git_acp_timestamp"
   ],
@@ -19530,7 +19527,6 @@
    "identifiers": [
     "date_now_iso",
     "git_acp",
-    "execSync",
     "git_acp_timestamp",
     "message"
    ]
