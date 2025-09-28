@@ -8358,7 +8358,8 @@
    "function_alias_rename",
    "object_invert",
    "prompt_previous",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repos_gitignore_overwrite"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -14103,7 +14104,8 @@
    "git_publish_initial"
   ],
   "repos_acronyms_to_names": [
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repos_gitignore_overwrite"
   ]
  },
  "functions": {
@@ -29191,10 +29193,12 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "repos_acronyms_to_names",
     "list_map",
     "repos",
     "marker",
     "repos_gitignore_overwrite",
+    "inverted",
     "f_name",
     "all",
     "lambda",
