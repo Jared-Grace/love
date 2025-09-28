@@ -2718,7 +2718,8 @@
    "python_install",
    "user_repo_set",
    "functions_combine",
-   "data_all"
+   "data_all",
+   "js_dollar_aa"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2909,7 +2910,8 @@
    "js_dollar_ib",
    "js_dollar_if_call",
    "js_dollar_ine",
-   "js_dollar_ien_generic"
+   "js_dollar_ien_generic",
+   "js_dollar_aa"
   ],
   "code": [
    "data_identifiers_file",
@@ -7846,7 +7848,8 @@
    "js_statement_expression_get",
    "messenger_reply_messages",
    "function_params_new",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_aa"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -8982,7 +8985,8 @@
    "js_dollar_ib",
    "js_dollar_if_call",
    "js_dollar_ine",
-   "js_dollar_ien_generic"
+   "js_dollar_ien_generic",
+   "js_dollar_aa"
   ],
   "stack2": [
    "function_transform_marker_arg",
@@ -9019,7 +9023,8 @@
    "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_aa"
   ],
   "function_transform_marker_current": [
    "function_transform_marker_current",
@@ -9793,7 +9798,8 @@
    "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_aa"
   ],
   "lamda_name": [
    "js_call_new_code"
@@ -10010,7 +10016,8 @@
    "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_aa"
   ],
   "js_null": [
    "js_declare_assign_null",
@@ -10169,7 +10176,8 @@
    "js_dollar_ien",
    "js_dollar_ir",
    "js_dollar_l",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_dollar_aa"
   ],
   "js_dollar_a_generic": [
    "js_dollar_a",
@@ -16276,6 +16284,9 @@
   "d_path": [
    "data_file_update",
    "data_transform"
+  ],
+  "js_dollar_aa": [
+   "js_dollar_aa"
   ]
  },
  "functions": {
@@ -31150,6 +31161,20 @@
    "identifiers": [
     "marker",
     "user_repo_set"
+   ]
+  },
+  "js_dollar_aa": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "js_dollar_aa",
+    "remaining",
+    "node",
+    "stack1",
+    "stack2",
+    "stack3",
+    "ast",
+    "afters"
    ]
   }
  },
