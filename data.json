@@ -1253,7 +1253,6 @@
   "a fntp function_name_to_path",
   "u d",
   "a d data_files_update",
-  "o d",
   "fw dpg data_identifiers_search",
   "s search",
   "s list_To",
@@ -2371,10 +2370,11 @@
   "p",
   "function_exists data_identifiers_file",
   "ps",
-  "pn d_path data_path()"
+  "pn d_path data_path()",
+  "o d"
  ],
  "marker_current": "1",
- "function_current": "data_transform",
+ "function_current": "data_files_update",
  "terminal": false,
  "identifiers": {
   "log": [
