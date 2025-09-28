@@ -1867,7 +1867,6 @@
   "a ev ebible_verse",
   "ev ur MAT01 1",
   "u lma",
-  "s list_map",
   "s ps",
   "ev ur,en MAT01 1",
   "s books",
@@ -2211,6 +2210,7 @@
   "s repo,name",
   "s repo",
   "n git_publish_initial",
-  "s command"
+  "s command",
+  "s list_map"
  ]
 }
