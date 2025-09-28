@@ -2202,7 +2202,6 @@
   "s user,path",
   "s user",
   "np",
-  "s git",
   "s repo,name",
   "s repo",
   "n git_publish_initial",
@@ -2228,6 +2227,7 @@
   "s resol",
   "ps",
   "p",
-  "repos_gitignore_overwrite"
+  "repos_gitignore_overwrite",
+  "s git"
  ]
 }
