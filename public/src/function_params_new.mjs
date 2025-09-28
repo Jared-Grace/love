@@ -27,7 +27,8 @@ export async function function_params_new(
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
-    let e = await function_exists(f_name2);
+    let e = await function_exists(f_name);
+    $in;
     async function lambda5(ast) {
       js_visit_calls_named(f_name_current, lambda, ast);
     }
