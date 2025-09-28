@@ -16386,7 +16386,8 @@
    "data_files_update",
    "data_backup",
    "data_path",
-   "data_boolean_set"
+   "data_boolean_set",
+   "function_open_app"
   ],
   "d_path": [
    "data_file_update",
@@ -16398,7 +16399,8 @@
    "function_aliases_restore",
    "data_transform",
    "data_files_update",
-   "data_boolean_set"
+   "data_boolean_set",
+   "function_open_app"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -24934,6 +24936,7 @@
   "function_open_app": {
    "async": true,
    "identifiers": [
+    "data_path",
     "data_set",
     "app_name_prefixed",
     "function_open",
@@ -24943,7 +24946,8 @@
     "a_name",
     "v",
     "lambda",
-    "previous"
+    "previous",
+    "d_path"
    ]
   },
   "html_button_element": {
