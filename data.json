@@ -2361,7 +2361,8 @@
   "u le",
   "a le list_empty",
   "s key",
-  "s declar"
+  "s declar",
+  "u lam"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
