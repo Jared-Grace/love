@@ -13587,9 +13587,7 @@
    "reply_test"
   ],
   "repos": [
-   "repos",
-   "function_run_git",
-   "repos_gitignore_overwrite"
+   "repos"
   ],
   "wait": [
    "retry"
@@ -14113,7 +14111,9 @@
    "repos_gitignore_overwrite"
   ],
   "repos_names": [
-   "repos_names"
+   "repos_names",
+   "repos_gitignore_overwrite",
+   "function_run_git"
   ]
  },
  "functions": {
@@ -19283,7 +19283,7 @@
     "path_repo",
     "git_acp_call_folder",
     "each_async",
-    "repos",
+    "repos_names",
     "function_run_log",
     "function_run_git",
     "f_name",
@@ -29203,7 +29203,7 @@
    "identifiers": [
     "repos_acronyms_to_names",
     "list_map",
-    "repos",
+    "repos_names",
     "marker",
     "repos_gitignore_overwrite",
     "inverted",
