@@ -3094,7 +3094,8 @@
    "app_message",
    "function_list_generate",
    "function_params_new",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "js_assert_arguments_args"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3500,7 +3501,8 @@
    "messenger_reply",
    "undefined_not_is_assert",
    "ebible_languages_to_bible_folders",
-   "puppeteer_hrefs"
+   "puppeteer_hrefs",
+   "js_assert_arguments_args"
   ],
   "i_name": [
    "data_identifiers_file",
@@ -16340,10 +16342,14 @@
   ],
   "js_visit_calls_named": [
    "function_params_new",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "js_assert_arguments_args"
   ],
   "lambda_inner": [
    "js_visit_calls_named"
+  ],
+  "ast2": [
+   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31265,9 +31271,13 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "js_visit_calls_named",
     "marker",
     "js_assert_arguments_args",
-    "ast"
+    "ast",
+    "lambda2",
+    "f_name",
+    "ast2"
    ]
   },
   "js_visit_calls_named": {
