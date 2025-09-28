@@ -1453,7 +1453,8 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "ast": [
    "app_new_step_2",
@@ -2385,7 +2386,8 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "index": [
    "app_replace_home",
@@ -3668,7 +3670,8 @@
    "list_map_unordered_async",
    "marker_down_choices",
    "sandbox_4_a",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "en": [
    "app_reply_main",
@@ -4067,7 +4070,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_gitignore_overwrite"
   ],
   "book_code": [
    "app_reply_main",
@@ -9062,7 +9066,8 @@
   "waited": [
    "function_dependencies_code",
    "js_block_child_graph_unparse",
-   "list_map_unordered_async"
+   "list_map_unordered_async",
+   "repos_gitignore_overwrite"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -29218,6 +29223,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "list_map_unordered_async",
     "list_map_path_join",
     "repo_path",
     "list_map",
@@ -29227,7 +29233,11 @@
     "repos",
     "f_name",
     "mapped",
-    "mapped2"
+    "mapped2",
+    "lambda",
+    "item",
+    "waited",
+    "list"
    ]
   },
   "repos_names": {
