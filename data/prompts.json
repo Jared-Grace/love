@@ -2184,7 +2184,6 @@
   "u dc",
   "dc aliases",
   "n file_json_isolate",
-  "s delete",
   "s prop",
   "s data",
   "data_copy aliases",
@@ -2198,6 +2197,7 @@
   "s partit",
   "data_partition propmts",
   "ps",
-  "data_partition prompts"
+  "data_partition prompts",
+  "s delete"
  ]
 }
