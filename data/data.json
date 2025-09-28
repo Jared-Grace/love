@@ -5306,8 +5306,7 @@
   "value2": [
    "error_attention_set",
    "global_function",
-   "app_replace_font_size",
-   "file_json_isolate"
+   "app_replace_font_size"
   ],
   "error": [
    "watch",
@@ -6647,8 +6646,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "file_json_isolate"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -16203,8 +16201,7 @@
   "fb_path": [
    "messenger_reply_messages_transform",
    "file_json_transform",
-   "messenger_reply_messages_urls_transform",
-   "file_json_isolate"
+   "messenger_reply_messages_urls_transform"
   ],
   "transform": [
    "messenger_reply_messages_transform",
@@ -16524,9 +16521,6 @@
   ],
   "lambda$data": [
    "file_json_transform"
-  ],
-  "property_name2": [
-   "file_json_isolate"
   ]
  },
  "functions": {
@@ -31616,11 +31610,7 @@
     "property_name",
     "lambda",
     "data",
-    "value",
-    "object",
-    "property_name2",
-    "value2",
-    "fb_path"
+    "value"
    ]
   }
  },
