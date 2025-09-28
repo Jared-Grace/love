@@ -2195,8 +2195,8 @@
   "n data_partition",
   "s alias",
   "c data_aliases_path data_prompts_path",
-  "s partit",
-  "p"
+  "p",
+  "s partit"
  ],
  "marker_current": "1",
  "function_current": "data_prompts_path",
