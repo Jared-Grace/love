@@ -6,6 +6,7 @@ export async function data_transform(
   property_name,
   value_initial,
   lambda$previous,
+  d_path,
 ) {
   marker("1");
   var d = await data_get(property_name, value_initial, d_path);
