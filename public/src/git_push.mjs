@@ -1,3 +1,4 @@
+import { command_line_git_folder } from "./command_line_git_folder.mjs";
 import { user_repo_path } from "./user_repo_path.mjs";
 import { marker } from "./marker.mjs";
 import { date_diff_hours } from "./date_diff_hours.mjs";
@@ -9,10 +10,10 @@ import { data_property_get } from "./data_property_get.mjs";
 import { function_name_combine } from "./function_name_combine.mjs";
 import { data_set } from "./data_set.mjs";
 import { git_push_command } from "./git_push_command.mjs";
-import { command_line_git } from "./command_line_git.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { log_keep } from "./log_keep.mjs";
 export async function git_push() {
+  let folder = ".";
   marker("1");
   const command_git = git_push_command();
   await catch_log_async(lambda);
@@ -31,7 +32,7 @@ export async function git_push() {
       }
       return;
     }
-    await command_line_git(command_git);
+    await command_line_git_folder(folder, command_git);
     let lambda$previous = lambda_get(now_iso);
     await data_set(lambda$previous, property_name, d_path);
   }
