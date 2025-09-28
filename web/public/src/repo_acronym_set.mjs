@@ -5,9 +5,6 @@ import { marker } from "./marker.mjs";
 export async function repo_acronym_set() {
   marker("1");
   let f_path = data_path_generic("", "about");
-  async function lambda(previous) {
-    return value;
-  }
   let lambda$previous = lambda_get(value);
   await data_set(lambda$previous, "acronym", f_path);
 }
