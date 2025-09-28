@@ -1,5 +1,5 @@
 import { file_name_json } from "./file_name_json.mjs";
 export function data_path_generic(inner) {
-  let v = file_name_json("data" + inner);
-  return v;
+  let f_path = file_name_json("data" + inner);
+  return f_path;
 }
