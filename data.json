@@ -2368,9 +2368,9 @@
   "pn data_transform d_path data_path()",
   "s sand",
   "fs data_transform",
-  "pn d_path data_path()",
   "p",
-  "ps"
+  "ps",
+  "pn d_path data_path()"
  ],
  "marker_current": "1",
  "function_current": "data_transform",
