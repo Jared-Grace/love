@@ -7978,8 +7978,7 @@
    "repos",
    "function_run_git",
    "repos_gitignore_overwrite",
-   "repos_names",
-   "repos_acronyms_to_names"
+   "repos_names"
   ],
   "readdir": [
    "folder_read",
@@ -13591,7 +13590,8 @@
    "reply_test"
   ],
   "repos": [
-   "repos"
+   "repos",
+   "repos_acronyms_to_names"
   ],
   "wait": [
    "retry"
@@ -29242,7 +29242,7 @@
     "repo_acronym_get",
     "list_to_dictionary_async",
     "repos_acronyms_to_names",
-    "all",
+    "repos",
     "dictionary",
     "inverted"
    ]
