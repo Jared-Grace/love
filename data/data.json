@@ -4664,8 +4664,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "git_publish_initial"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -29084,7 +29083,6 @@
     "dictionary",
     "list2",
     "inverted",
-    "object",
     "lambda",
     "item",
     "mapped2",
