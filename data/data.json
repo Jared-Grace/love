@@ -16514,6 +16514,9 @@
   ],
   "file_json_isolate": [
    "file_json_isolate"
+  ],
+  "lambda$data": [
+   "file_json_transform"
   ]
  },
  "functions": {
@@ -31245,8 +31248,9 @@
     "file_read_json",
     "file_json_transform",
     "fb_path",
-    "transform",
-    "data"
+    "lambda$data",
+    "data",
+    "transform"
    ]
   },
   "git_filter_repo_install": {
