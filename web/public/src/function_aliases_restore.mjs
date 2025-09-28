@@ -158,6 +158,6 @@ export async function function_aliases_restore() {
     };
     return v2;
   }
-  let v = await data_transform("aliases", {}, lambda);
+  let v = await data_transform("aliases", {}, lambda, data_path());
   return v;
 }
