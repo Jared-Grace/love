@@ -3,6 +3,7 @@ import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let branch_name = "main";
   let commands = ["checkout -b", "push -u origin"];
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   await command_line_git_folder(folder, command_git);
 }
