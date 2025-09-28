@@ -1,3 +1,5 @@
+import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
+import { js_declaration_single } from "./js_declaration_single.mjs";
 import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { list_add } from "./list_add.mjs";
@@ -8,6 +10,8 @@ import { marker } from "./marker.mjs";
 export function js_assert_arguments_args(ast) {
   marker("1");
   return;
+  let declaration = js_declaration_single(ast);
+  let params = js_declaration_params_get(declaration);
   function lambda2({ args }) {
     list_empty(args);
     let code_expression = js_keyword_arguments();
