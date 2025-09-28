@@ -3008,7 +3008,8 @@
    "messenger_reply",
    "messenger_reply_unreplied",
    "file_json_isolate",
-   "file_json_property_delete"
+   "file_json_property_delete",
+   "data_partition"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -31451,7 +31452,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "data_partition"
+    "data_partition",
+    "property_name"
    ]
   },
   "data_prompts_path": {
