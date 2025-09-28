@@ -5562,7 +5562,6 @@
    "function_current_set",
    "function_open_app",
    "function_run_prompt",
-   "git_push",
    "marker_current_set"
   ],
   "data_backup": [
@@ -13996,7 +13995,8 @@
   ],
   "user_repo_path": [
    "user_repo_set",
-   "user_repo_get"
+   "user_repo_get",
+   "git_push"
   ],
   "user_repo_get": [
    "user_repo_get",
@@ -19583,7 +19583,7 @@
   "git_push": {
    "async": true,
    "identifiers": [
-    "data_path",
+    "user_repo_path",
     "marker",
     "date_diff_hours",
     "lambda_get",
