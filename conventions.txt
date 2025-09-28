@@ -2,3 +2,4 @@ this repo is in a folder
 
 all folders in that folder represent repos
 
+one day enforce no shadowing or anything: identifiers are defined in one place per file
