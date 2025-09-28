@@ -1450,7 +1450,6 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "git_publish_initial",
    "list_to_dictionary_async"
   ],
   "ast": [
@@ -2382,7 +2381,6 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "git_publish_initial",
    "list_to_dictionary_async"
   ],
   "index": [
@@ -2799,8 +2797,7 @@
    "marker_top",
    "messenger_reply",
    "range_from",
-   "sandbox_4_a",
-   "git_publish_initial"
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -4064,7 +4061,6 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "git_publish_initial",
    "list_to_dictionary_async"
   ],
   "book_code": [
@@ -4627,8 +4623,7 @@
    "list_map_split_space",
    "list_map_whitespace_normalize",
    "messenger_reply",
-   "sandbox_4_a",
-   "git_publish_initial"
+   "sandbox_4_a"
   ],
   "verse_references": [
    "bible_verses_encouragement_generate",
@@ -29086,7 +29081,6 @@
    "identifiers": [
     "path_repo",
     "repo_acronym_to_name",
-    "list_map",
     "list_map_combine",
     "each_async",
     "command_line_git_folder",
@@ -29094,10 +29088,6 @@
     "acronym",
     "repo_name",
     "folder",
-    "lambda",
-    "item",
-    "mapped2",
-    "list",
     "branch_name",
     "commands",
     "mapped",
