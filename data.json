@@ -2721,8 +2721,7 @@
    "user_repo_set",
    "functions_combine",
    "data_all",
-   "js_dollar_aa",
-   "assert_arguments"
+   "js_dollar_aa"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -4427,7 +4426,8 @@
    "list_join_comma_space",
    "list_join_space",
    "js_code_declaration",
-   "js_code_declaration_args"
+   "js_code_declaration_args",
+   "assert_arguments"
   ],
   "lj": [
    "watch",
@@ -5874,7 +5874,8 @@
    "null_not_is_assert",
    "object_property_exists_not_assert",
    "messenger_reply_playwright",
-   "list_concat"
+   "list_concat",
+   "assert_arguments"
   ],
   "b": [
    "assert",
@@ -5921,7 +5922,8 @@
    "ebible_version_books",
    "ebible_verse",
    "messenger_reply_playwright",
-   "reply"
+   "reply",
+   "assert_arguments"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6608,7 +6610,8 @@
    "ebible_chapter_code_to_name",
    "messenger_reply_playwright",
    "js_identifiers_named_count",
-   "js_assign_combine"
+   "js_assign_combine",
+   "assert_arguments"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -31204,8 +31207,11 @@
   "assert_arguments": {
    "async": false,
    "identifiers": [
-    "marker",
-    "assert_arguments"
+    "assert",
+    "assert_arguments",
+    "args",
+    "count",
+    "b"
    ]
   }
  },
