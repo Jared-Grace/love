@@ -3964,7 +3964,8 @@
    "data_get",
    "js_visit_calls_named",
    "sandbox_5_a",
-   "sandbox_5"
+   "sandbox_5",
+   "data_path_generic"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -10605,7 +10606,8 @@
    "command_line_cmd",
    "roman_to_integer",
    "messenger_reply_messages",
-   "puppeteer_hrefs"
+   "puppeteer_hrefs",
+   "data_path_generic"
   ],
   "js_marker_named_ast": [
    "js_marker_named_ast",
@@ -13117,7 +13119,8 @@
   "file_name_json": [
    "file_name_json",
    "firebase_deploy_function_destination",
-   "ebible_firebase_upload_path"
+   "ebible_firebase_upload_path",
+   "data_path_generic"
   ],
   "version": [
    "firebase_deploy_function"
@@ -14550,7 +14553,8 @@
   ],
   "inner": [
    "catch_call",
-   "data_path"
+   "data_path",
+   "data_path_generic"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -16429,7 +16433,8 @@
    "data_backup"
   ],
   "data_path_generic": [
-   "data_path"
+   "data_path",
+   "data_path_generic"
   ]
  },
  "functions": {
@@ -31443,6 +31448,16 @@
     "data_path",
     "inner",
     "f_path"
+   ]
+  },
+  "data_path_generic": {
+   "async": false,
+   "identifiers": [
+    "file_name_json",
+    "data_path_generic",
+    "inner",
+    "v",
+    "v3"
    ]
   }
  },
