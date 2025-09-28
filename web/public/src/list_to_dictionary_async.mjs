@@ -10,6 +10,6 @@ export async function list_to_dictionary_async(list, lambda$item) {
     object_property_set(dictionary, item, value);
   }
   let mapped = list_map(list, lambda);
-  let v = await list_wait(list2);
+  let v = await list_wait(mapped);
   return dictionary;
 }
