@@ -2348,7 +2348,6 @@
   "r assert_equal equal_assert",
   "s command",
   "s auto",
-  "p",
   "as auto",
   "atn assert_arguments_args",
   "s visit,call",
@@ -2368,6 +2367,7 @@
   "o s5",
   "s5",
   "n sandbox_5_a",
+  "p",
   "sandbox_5"
  ],
  "marker_current": "1",
