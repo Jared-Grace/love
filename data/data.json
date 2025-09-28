@@ -4357,7 +4357,8 @@
   ],
   "file_path_new": [
    "assert_file_exists_not",
-   "file_copy"
+   "file_copy",
+   "repos_gitignore_overwrite"
   ],
   "assert_message": [
    "assert_json",
@@ -5552,7 +5553,8 @@
    "data_backup",
    "data_copy",
    "file_copy",
-   "function_copy"
+   "function_copy",
+   "repos_gitignore_overwrite"
   ],
   "date_now_file": [
    "data_backup",
@@ -7310,7 +7312,8 @@
    "file_parent_exists_ensure"
   ],
   "file_path_old": [
-   "file_copy"
+   "file_copy",
+   "repos_gitignore_overwrite"
   ],
   "fs": [
    "file_copy",
@@ -8889,19 +8892,16 @@
   "function_copy": [
    "function_copy",
    "function_copy_suffix_add",
-   "function_rename",
-   "repos_gitignore_overwrite"
+   "function_rename"
   ],
   "f_name_old": [
    "function_copy",
-   "function_copy_suffix_add",
-   "repos_gitignore_overwrite"
+   "function_copy_suffix_add"
   ],
   "f_name_new": [
    "function_copy",
    "function_watch_ending_change",
-   "marker_functionize",
-   "repos_gitignore_overwrite"
+   "marker_functionize"
   ],
   "f_path_old": [
    "function_copy"
@@ -29229,7 +29229,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
-    "function_copy",
+    "file_copy",
     "equal_not",
     "path_resolve",
     "list_map_unordered_async",
@@ -29247,8 +29247,8 @@
     "lambda",
     "p",
     "result",
-    "f_name_old",
-    "f_name_new",
+    "file_path_old",
+    "file_path_new",
     "waited"
    ]
   },
