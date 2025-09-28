@@ -1876,7 +1876,6 @@
    "command_line_node_g",
    "data_file_update_inner",
    "data_marker_current_get",
-   "data_path_generic",
    "firebase_deploy_function",
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
@@ -13969,6 +13968,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "f_name_unsuffixed": [
+   "data_path_generic"
   ]
  },
  "functions": {
@@ -15278,7 +15280,7 @@
     "file_name_json",
     "data_path_generic",
     "suffix",
-    "f_name",
+    "f_name_unsuffixed",
     "newLocal",
     "joined",
     "f_path"
