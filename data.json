@@ -3677,8 +3677,7 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any",
-   "js_assert_arguments_args"
+   "list_filter_ends_with_any"
   ],
   "v": [
    "data_identifiers_file",
@@ -7105,7 +7104,8 @@
    "app_new_assign",
    "function_list_generate",
    "function_params_new",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_assert_arguments_args"
   ],
   "functions_combine": [
    "functions_combine",
@@ -8575,7 +8575,8 @@
    "function_list_generate",
    "js_dollar_if_call",
    "js_dollar_ien_generic",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_assert_arguments_args"
   ],
   "type": [
    "function_params_consolidate",
@@ -10515,7 +10516,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_assert_arguments_args"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -31277,6 +31279,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "js_parse_expression",
     "list_add",
     "list_empty",
     "assert_arguments",
@@ -31286,7 +31289,8 @@
     "ast",
     "lambda2",
     "args",
-    "list",
+    "expression",
+    "code_expression",
     "item",
     "name"
    ]
