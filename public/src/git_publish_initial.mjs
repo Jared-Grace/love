@@ -7,7 +7,6 @@ import { each_async } from "./each_async.mjs";
 import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let all = await repos();
-  function lambda3(item2) {}
   let dictionary = await list_to_dictionary_async(list2, repo_acronym_get);
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
