@@ -2650,8 +2650,7 @@
    "string_starts_with_not",
    "string_suffix_without",
    "string_trim_right",
-   "visit_filter_recursive_async",
-   "data_all"
+   "visit_filter_recursive_async"
   ],
   "html_enable_if": [
    "app_replace_rule_set",
@@ -15029,15 +15028,14 @@
   "data_all": {
    "async": true,
    "identifiers": [
-    "not",
     "file_exists",
     "marker",
     "file_read_json",
     "data_all",
     "file_path",
+    "exists",
     "data",
-    "v",
-    "exists"
+    "v"
    ]
   },
   "data_app_current_get": {
