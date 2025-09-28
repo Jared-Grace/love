@@ -13997,9 +13997,6 @@
   "user_repo_get": [
    "user_repo_get",
    "repo_acronym_set"
-  ],
-  "f_path2": [
-   "data_app_current_get"
   ]
  },
  "functions": {
@@ -15077,9 +15074,8 @@
     "data_property_get",
     "user_repo_path",
     "data_app_current_get",
-    "f_path2",
-    "a",
-    "d_path"
+    "d_path",
+    "a"
    ]
   },
   "data_backup": {
