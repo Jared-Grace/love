@@ -1451,7 +1451,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "ast": [
    "app_new_step_2",
@@ -5603,7 +5604,8 @@
    "path_join",
    "prompt_previous",
    "repos_folder",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_acronym_set"
   ],
   "data_copy": [
    "data_copy",
@@ -6020,8 +6022,7 @@
   "lambda$previous": [
    "data_set",
    "data_transform",
-   "git_push",
-   "repo_acronym_set"
+   "git_push"
   ],
   "data_terminal_get": [
    "data_terminal_get",
@@ -10084,8 +10085,7 @@
   ],
   "lambda_get": [
    "git_push",
-   "lambda_get",
-   "repo_acronym_set"
+   "lambda_get"
   ],
   "git_push_command": [
    "git_push",
@@ -28944,13 +28944,13 @@
   "repo_acronym_set": {
    "async": true,
    "identifiers": [
-    "lambda_get",
     "data_set",
     "data_path_generic",
     "marker",
     "repo_acronym_set",
     "f_path",
-    "lambda$previous",
+    "lambda",
+    "previous",
     "value"
    ]
   }
