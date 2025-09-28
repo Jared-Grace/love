@@ -2354,10 +2354,11 @@
   "s command",
   "s auto",
   "p",
-  "as auto"
+  "as auto",
+  "atn assert_arguments_args"
  ],
  "marker_current": "1",
- "function_current": "equal_assert",
+ "function_current": "js_assert_arguments_args",
  "terminal": false,
  "identifiers": {
   "log": [
