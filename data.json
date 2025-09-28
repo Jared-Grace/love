@@ -5877,8 +5877,7 @@
    "null_not_is_assert",
    "object_property_exists_not_assert",
    "messenger_reply_playwright",
-   "list_concat",
-   "assert_arguments"
+   "list_concat"
   ],
   "b": [
    "assert",
@@ -6640,8 +6639,7 @@
    "js_assign_combine",
    "app_reply_main",
    "ebible_references_parse_lines",
-   "messenger_reply_playwright",
-   "assert_arguments"
+   "messenger_reply_playwright"
   ],
   "left": [
    "equal",
@@ -6689,8 +6687,7 @@
    "js_if_else_if_combine",
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_replace_rule_valid",
-   "assert_arguments"
+   "app_replace_rule_valid"
   ],
   "equal_by": [
    "equal_by",
@@ -16309,6 +16306,9 @@
    "js_dollar_choices"
   ],
   "assert_arguments": [
+   "assert_arguments"
+  ],
+  "assert_equal": [
    "assert_arguments"
   ]
  },
@@ -31212,14 +31212,12 @@
   "assert_arguments": {
    "async": false,
    "identifiers": [
+    "assert_equal",
     "object_property_get",
-    "equal",
-    "assert",
     "assert_arguments",
     "args",
     "count",
-    "length",
-    "eq"
+    "length"
    ]
   }
  },
