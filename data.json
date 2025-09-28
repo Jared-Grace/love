@@ -2738,8 +2738,7 @@
    "functions_combine",
    "data_all",
    "js_dollar_aa",
-   "equal_assert",
-   "js_assert_arguments_args"
+   "equal_assert"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -31303,7 +31302,6 @@
     "js_parse_expression",
     "assert_arguments",
     "js_visit_calls_named",
-    "marker",
     "js_assert_arguments_args",
     "ast",
     "declaration",
