@@ -2219,7 +2219,8 @@
   "de list_map_wait",
   "s invert",
   "p",
-  "git_publish_initial k",
-  "s undefined"
+  "s undefined",
+  "export async function git_publish_initial(acronym) {",
+  "git_publish_initial k"
  ]
 }
