@@ -1,4 +1,4 @@
 export function data_path() {
-  let v2 = "data.json";
-  return v2;
+  let f_path = "data.json";
+  return f_path;
 }
