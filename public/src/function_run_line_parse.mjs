@@ -8,7 +8,7 @@ export async function function_run_line_parse(line) {
     let unique = list_unique_reverse(previous);
     return unique;
   }
-  await data_transform("prompts", [], lambda);
+  await data_transform("prompts", [], lambda, data_path());
   let v = {
     f_name,
     args,
