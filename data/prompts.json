@@ -2059,7 +2059,6 @@
   "s set",
   "rt",
   "s add,mult",
-  "np",
   "n git_history_delete",
   "a s5 sandbox_5",
   "ad s5",
@@ -2208,6 +2207,7 @@
   "urs karate_code",
   "ras k",
   "s git",
-  "s user"
+  "s user",
+  "np"
  ]
 }
