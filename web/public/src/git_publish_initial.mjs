@@ -1,4 +1,4 @@
-import { git_push_command } from "./git_push_command.mjs";
-export function git_publish_initial() {
-  let v = git_push_command();
+import { command_line_git_folder } from "./command_line_git_folder.mjs";
+export async function git_publish_initial() {
+  await command_line_git_folder(folder, command_git);
 }
