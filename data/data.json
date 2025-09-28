@@ -7161,7 +7161,8 @@
    "catch_call",
    "path_join",
    "sandbox_5_a",
-   "function_params_new"
+   "function_params_new",
+   "task_new"
   ],
   "combined": [
    "functions_combine",
@@ -16406,7 +16407,8 @@
    "js_assert_arguments_args",
    "path_join",
    "sandbox_5_a",
-   "function_params_new"
+   "function_params_new",
+   "task_new"
   ],
   "assert_equal": [
    "assert_arguments"
@@ -23704,6 +23706,7 @@
   },
   "task_new": {
    "identifiers": [
+    "assert_arguments",
     "string_empty_not_is_assert",
     "marker",
     "data_function_current_restore",
@@ -23718,6 +23721,7 @@
     "todo",
     "task_new",
     "task_name",
+    "arguments",
     "f_name",
     "result2",
     "unaliased",
