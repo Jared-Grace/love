@@ -9,6 +9,6 @@ export async function function_open_app(f_name) {
   async function lambda(previous) {
     return f_name;
   }
-  await data_set(lambda, "app_current");
+  await data_set(lambda, "app_current", data_path());
   return v;
 }
