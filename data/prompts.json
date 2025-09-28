@@ -2208,6 +2208,7 @@
   "ras k",
   "s git",
   "s user",
-  "np"
+  "np",
+  "s user,path"
  ]
 }
