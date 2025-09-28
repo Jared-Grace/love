@@ -2363,7 +2363,6 @@
   "s sand",
   "fs data_transform",
   "function_exists data_identifiers_file",
-  "ps",
   "o d",
   "n data_backup",
   "s now",
@@ -2386,7 +2385,8 @@
   "pn d_path data_path()",
   "n data_aliases_path",
   "fs data_path_generic",
-  "pn f_name \"data\""
+  "pn f_name \"data\"",
+  "ps"
  ],
  "marker_current": "1",
  "function_current": "data_path_generic",
