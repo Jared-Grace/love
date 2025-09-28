@@ -1,3 +1,4 @@
+import { assert_arguments } from "./assert_arguments.mjs";
 import { string_empty_not_is_assert } from "./string_empty_not_is_assert.mjs";
 import { marker } from "./marker.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
@@ -11,6 +12,7 @@ import { function_new } from "./function_new.mjs";
 import { data_function_current_get } from "./data_function_current_get.mjs";
 import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
+  assert_arguments(arguments, 1);
   marker("1");
   string_empty_not_is_assert(task_name);
   let f_name = await data_function_current_get();
