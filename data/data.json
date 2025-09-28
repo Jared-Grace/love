@@ -16420,7 +16420,8 @@
    "data_boolean_set",
    "function_open_app",
    "git_push",
-   "data_set"
+   "data_set",
+   "function_alias_add_generic"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16498,7 +16499,8 @@
   ],
   "data_aliases_path": [
    "data_aliases_path",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_alias_add_generic"
   ],
   "data_copy": [
    "data_copy"
@@ -17660,11 +17662,13 @@
   "function_alias_add_generic": {
    "identifiers": [
     "data_get",
+    "data_aliases_path",
     "object_property_exists",
     "object_property_get",
     "function_alias_add_generic",
     "alias",
     "unaliased",
+    "d_path",
     "value",
     "aliases",
     "file_path",
