@@ -809,7 +809,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "repo_acronym_get"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -29138,7 +29139,8 @@
     "marker",
     "repo_acronym_get",
     "repo",
-    "a_path"
+    "a_path",
+    "v"
    ]
   },
   "path_repo_about": {
