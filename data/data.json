@@ -7765,7 +7765,8 @@
    "git_acp",
    "command_line_git",
    "git_commit",
-   "git_push"
+   "git_push",
+   "git_acp_call"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -10015,7 +10016,6 @@
   ],
   "git_acp": [
    "git_acp",
-   "git_acp_call",
    "git_acp_timestamp"
   ],
   "concat": [
@@ -13995,7 +13995,8 @@
    "git_push"
   ],
   "git_acp_folder": [
-   "git_acp"
+   "git_acp",
+   "git_acp_call"
   ]
  },
  "functions": {
@@ -19520,10 +19521,11 @@
   "git_acp_call": {
    "async": true,
    "identifiers": [
-    "git_acp",
+    "git_acp_folder",
     "git_acp_call",
     "f_name",
     "args",
+    "folder",
     "message",
     "concat",
     "join"
