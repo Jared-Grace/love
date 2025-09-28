@@ -6599,7 +6599,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_acronyms_to_names"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -7977,7 +7978,8 @@
    "repos",
    "function_run_git",
    "repos_gitignore_overwrite",
-   "repos_names"
+   "repos_names",
+   "repos_acronyms_to_names"
   ],
   "readdir": [
    "folder_read",
@@ -8350,7 +8352,8 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "function_names_to_acronyms",
-   "object_invert"
+   "object_invert",
+   "repos_acronyms_to_names"
   ],
   "function_aliases_inverted": [
    "function_aliases_inverted",
@@ -8363,7 +8366,8 @@
    "object_invert",
    "prompt_previous",
    "repo_acronym_to_name",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "repos_acronyms_to_names"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -14076,7 +14080,8 @@
    "path_repo"
   ],
   "repo_acronym_get": [
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "repos_acronyms_to_names"
   ],
   "path_repo_about": [
    "repo_acronym_get",
@@ -14092,7 +14097,8 @@
    "path_repo_about"
   ],
   "list_to_dictionary_async": [
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repos_acronyms_to_names"
   ],
   "repo_acronym_to_name": [
    "repo_acronym_to_name"
@@ -14108,12 +14114,14 @@
   ],
   "repos_acronyms_to_names": [
    "repo_acronym_to_name",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "repos_acronyms_to_names"
   ],
   "repos_names": [
    "repos_names",
    "repos_gitignore_overwrite",
-   "function_run_git"
+   "function_run_git",
+   "repos_acronyms_to_names"
   ]
  },
  "functions": {
@@ -29224,6 +29232,19 @@
     "repos_names",
     "path_folder",
     "all"
+   ]
+  },
+  "repos_acronyms_to_names": {
+   "async": true,
+   "identifiers": [
+    "repos_names",
+    "object_invert",
+    "repo_acronym_get",
+    "list_to_dictionary_async",
+    "repos_acronyms_to_names",
+    "all",
+    "dictionary",
+    "inverted"
    ]
   }
  },
