@@ -938,7 +938,8 @@
    "messenger_reply_playwright",
    "object_properties_delete",
    "object_properties_delete_all",
-   "string_padded_is"
+   "string_padded_is",
+   "repos_gitignore_overwrite"
   ],
   "app_new_step_2": [
    "app_new",
@@ -2386,8 +2387,7 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "index": [
    "app_replace_home",
@@ -4070,8 +4070,7 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "book_code": [
    "app_reply_main",
@@ -8194,8 +8193,7 @@
   "paths": [
    "functions_names",
    "git_push_schedule_command",
-   "path_resolve",
-   "repos_gitignore_overwrite"
+   "path_resolve"
   ],
   "suffix": [
    "functions_names",
@@ -12124,7 +12122,8 @@
    "js_imports_declarations"
   ],
   "source": [
-   "js_imports_declarations"
+   "js_imports_declarations",
+   "repos_gitignore_overwrite"
   ],
   "a3": [
    "js_imports_declarations",
@@ -29236,14 +29235,13 @@
     "repos_gitignore_overwrite",
     "repos",
     "f_name",
+    "source",
     "mapped",
     "mapped2",
     "lambda",
-    "item",
+    "p",
     "result",
-    "paths",
-    "waited",
-    "list"
+    "waited"
    ]
   },
   "repos_names": {
