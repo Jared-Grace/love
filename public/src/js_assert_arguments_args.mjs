@@ -12,9 +12,9 @@ export function js_assert_arguments_args(ast) {
   let size = list_size(params);
   function lambda2({ args }) {
     let code_expression = js_keyword_arguments();
-    let expression = js_parse_expression(code_expression);
-    let expression2 = js_parse_expression(code_expression2);
-    let args_new = [expression, size];
+    let args_expression = js_parse_expression(code_expression);
+    let size_expression = js_parse_expression(size);
+    let args_new = [args_expression, size];
     list_replace_all(args, args_new);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
