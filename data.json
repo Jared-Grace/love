@@ -5984,8 +5984,7 @@
   ],
   "file_path_new": [
    "assert_file_exists_not",
-   "file_copy",
-   "data_backup"
+   "file_copy"
   ],
   "assert_message": [
    "assert_json",
@@ -6786,8 +6785,7 @@
    "data_backup"
   ],
   "file_path_old": [
-   "file_copy",
-   "data_backup"
+   "file_copy"
   ],
   "promises": [
    "file_copy",
@@ -31456,9 +31454,7 @@
     "data_backup",
     "f_path_from",
     "inner",
-    "f_path_to",
-    "file_path_old",
-    "file_path_new"
+    "f_path_to"
    ]
   },
   "data_path": {
