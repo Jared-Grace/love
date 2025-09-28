@@ -16349,13 +16349,17 @@
    "data_transform",
    "error_attention_set",
    "marker_current_set",
-   "function_alias_rename"
+   "function_alias_rename",
+   "data_set",
+   "function_run_line_parse"
   ],
   "d_path": [
    "data_file_update",
    "error_attention_set",
    "marker_current_set",
-   "function_alias_rename"
+   "function_alias_rename",
+   "data_set",
+   "function_run_line_parse"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -18445,6 +18449,7 @@
   },
   "function_run_line_parse": {
    "identifiers": [
+    "data_path",
     "list_unique_reverse",
     "list_add",
     "data_transform",
@@ -18456,6 +18461,7 @@
     "lambda",
     "previous",
     "unique",
+    "d_path",
     "v"
    ],
    "async": true
@@ -23992,13 +23998,15 @@
   },
   "data_set": {
    "identifiers": [
+    "data_path",
     "data_transform",
     "data_set",
     "lambda$previous",
     "property_name",
     "lambda",
     "previous",
-    "v2"
+    "v2",
+    "d_path"
    ],
    "async": true
   },
