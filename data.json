@@ -5621,7 +5621,8 @@
   "f_name_new": [
    "function_watch_ending_change",
    "function_copy",
-   "marker_functionize"
+   "marker_functionize",
+   "data_backup"
   ],
   "string_suffix_change": [
    "function_watch_ending_change",
@@ -7712,11 +7713,13 @@
   "function_copy": [
    "function_copy",
    "function_copy_suffix_add",
-   "function_rename"
+   "function_rename",
+   "data_backup"
   ],
   "f_name_old": [
    "function_copy",
-   "function_copy_suffix_add"
+   "function_copy_suffix_add",
+   "data_backup"
   ],
   "f_path_old": [
    "function_copy"
@@ -16441,9 +16444,6 @@
    "data_backup"
   ],
   "f_path_to": [
-   "data_backup"
-  ],
-  "cp": [
    "data_backup"
   ]
  },
@@ -31443,8 +31443,9 @@
    ]
   },
   "data_backup": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_copy",
     "date_now_file",
     "data_path_generic",
     "data_path",
@@ -31453,7 +31454,8 @@
     "f_path_from",
     "inner",
     "f_path_to",
-    "cp"
+    "f_name_old",
+    "f_name_new"
    ]
   },
   "data_path": {
