@@ -2181,7 +2181,6 @@
   "pn f_name \"data\"",
   "o db",
   "c data_backup data_copy",
-  "s alias",
   "u dc",
   "dc aliases",
   "n file_json_isolate",
@@ -2194,7 +2193,8 @@
   "n file_json_property_delete",
   "file_json_property_delete data/data.json aliases",
   "p",
-  "n data_partition"
+  "n data_partition",
+  "s alias"
  ],
  "marker_current": "1",
  "function_current": "data_partition",
