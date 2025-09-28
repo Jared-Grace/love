@@ -4357,8 +4357,7 @@
   ],
   "file_path_new": [
    "assert_file_exists_not",
-   "file_copy",
-   "repos_gitignore_overwrite"
+   "file_copy"
   ],
   "assert_message": [
    "assert_json",
@@ -4982,8 +4981,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "repos_gitignore_overwrite"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -6329,7 +6327,8 @@
    "range_from",
    "string_base64_to",
    "string_list_to",
-   "string_replace"
+   "string_replace",
+   "repos_gitignore_overwrite"
   ],
   "to": [
    "each_range_from",
@@ -6354,7 +6353,8 @@
    "object_property_from",
    "object_replace",
    "range_from",
-   "string_replace"
+   "string_replace",
+   "repos_gitignore_overwrite"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -7312,8 +7312,7 @@
    "file_parent_exists_ensure"
   ],
   "file_path_old": [
-   "file_copy",
-   "repos_gitignore_overwrite"
+   "file_copy"
   ],
   "fs": [
    "file_copy",
@@ -12126,8 +12125,7 @@
    "js_imports_declarations"
   ],
   "source": [
-   "js_imports_declarations",
-   "repos_gitignore_overwrite"
+   "js_imports_declarations"
   ],
   "a3": [
    "js_imports_declarations",
@@ -29241,14 +29239,12 @@
     "repos_gitignore_overwrite",
     "repos",
     "f_name",
-    "source",
+    "from",
     "mapped",
     "mapped2",
     "lambda",
     "p",
-    "result",
-    "file_path_old",
-    "file_path_new",
+    "to",
     "waited"
    ]
   },
