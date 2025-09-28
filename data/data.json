@@ -5673,7 +5673,8 @@
    "tasks_run",
    "visit_filter_recursive_async",
    "function_run_git",
-   "git_publish_initial"
+   "git_publish_initial",
+   "list_to_dictionary_async"
   ],
   "data_files_update": [
    "data_files_update"
@@ -7096,8 +7097,7 @@
    "functions_transform",
    "function_dependencies_code",
    "list_map_unordered_async",
-   "list_wait",
-   "list_to_dictionary_async"
+   "list_wait"
   ],
   "ebible_verses_upload": [
    "ebible_verses_upload"
@@ -29151,7 +29151,7 @@
   "list_to_dictionary_async": {
    "async": true,
    "identifiers": [
-    "list_wait",
+    "each_async",
     "marker",
     "object_property_set",
     "list_to_dictionary_async",
