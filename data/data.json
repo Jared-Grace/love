@@ -10079,7 +10079,8 @@
   "repo": [
    "git_history_delete",
    "git_repo_clone",
-   "git_repo_url"
+   "git_repo_url",
+   "user_repo_get"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -28980,7 +28981,8 @@
     "marker",
     "user_repo_get",
     "f_path",
-    "value"
+    "value",
+    "repo"
    ]
   }
  }
