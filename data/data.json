@@ -13472,8 +13472,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "repo_acronym_set"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -28970,7 +28969,6 @@
     "previous2",
     "joined",
     "joined2",
-    "segments",
     "lambda",
     "previous"
    ]
