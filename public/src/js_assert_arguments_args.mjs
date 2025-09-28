@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
@@ -18,7 +19,7 @@ export function js_assert_arguments_args(ast) {
     let code_expression = js_keyword_arguments();
     let expression = js_parse_expression(code_expression);
     let args_new = [expression, size];
-    lam;
+    list_add_multiple(list, items);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
