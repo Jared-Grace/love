@@ -2388,7 +2388,8 @@
   "ps",
   "o db",
   "c data_backup data_copy",
-  "s alias"
+  "s alias",
+  "u dc"
  ],
  "marker_current": "1",
  "function_current": "data_copy",
