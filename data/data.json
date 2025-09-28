@@ -4664,7 +4664,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "git_publish_initial"
   ],
   "property_name": [
    "bind_property",
@@ -8342,7 +8343,8 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "function_names_to_acronyms",
-   "object_invert"
+   "object_invert",
+   "git_publish_initial"
   ],
   "function_aliases_inverted": [
    "function_aliases_inverted",
@@ -8353,7 +8355,8 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "object_invert",
-   "prompt_previous"
+   "prompt_previous",
+   "git_publish_initial"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -29067,6 +29070,7 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "object_invert",
     "list_to_dictionary_async",
     "repo_acronym_get",
     "list_map",
@@ -29079,6 +29083,8 @@
     "all",
     "dictionary",
     "list2",
+    "inverted",
+    "object",
     "lambda",
     "item",
     "mapped2",
