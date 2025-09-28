@@ -7306,7 +7306,6 @@
    "exit"
   ],
   "file_parent_exists_ensure": [
-   "file_copy",
    "file_overwrite",
    "file_overwrite_buffer",
    "file_parent_exists_ensure"
@@ -7315,7 +7314,6 @@
    "file_copy"
   ],
   "fs": [
-   "file_copy",
    "file_delete",
    "file_exists",
    "file_overwrite",
@@ -7330,7 +7328,6 @@
    "function_aliases_restore"
   ],
   "promises": [
-   "file_copy",
    "file_delete",
    "file_exists",
    "file_overwrite",
@@ -7340,9 +7337,6 @@
    "file_read_buffer",
    "folder_delete",
    "folder_read"
-  ],
-  "copyFile": [
-   "file_copy"
   ],
   "file_delete": [
    "file_delete",
@@ -14141,6 +14135,9 @@
   ],
   "list_map_path_join": [
    "repos_gitignore_overwrite"
+  ],
+  "file_copy_overwrite": [
+   "file_copy"
   ]
  },
  "functions": {
@@ -16988,14 +16985,11 @@
   "file_copy": {
    "async": true,
    "identifiers": [
-    "file_parent_exists_ensure",
+    "file_copy_overwrite",
     "assert_file_exists_not",
     "file_copy",
     "file_path_old",
-    "file_path_new",
-    "fs",
-    "promises",
-    "copyFile"
+    "file_path_new"
    ]
   },
   "file_delete": {
