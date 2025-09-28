@@ -13991,14 +13991,12 @@
    "user_repo_get",
    "git_push",
    "data_marker_current_get",
-   "data_function_current_get"
+   "data_function_current_get",
+   "function_current_set"
   ],
   "user_repo_get": [
    "user_repo_get",
    "repo_acronym_set"
-  ],
-  "data_user_path": [
-   "function_current_set"
   ]
  },
  "functions": {
@@ -18238,6 +18236,7 @@
   "function_current_set": {
    "async": true,
    "identifiers": [
+    "user_repo_path",
     "marker",
     "marker_top",
     "function_parse_declaration_js_unparse",
@@ -18253,7 +18252,6 @@
     "lambda",
     "previous",
     "d_path",
-    "data_user_path",
     "name",
     "v"
    ]
