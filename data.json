@@ -8292,7 +8292,8 @@
    "function_parse_declaration_inner",
    "js_declaration_single_block_body",
    "js_dollar_new_args_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "js_assert_arguments_args"
   ],
   "list_concat": [
    "js_identifier_unique",
@@ -8457,7 +8458,8 @@
    "js_declaration_param_add_node",
    "js_declare_single",
    "js_dollar_new_args_inner",
-   "app_new_step_2"
+   "app_new_step_2",
+   "js_assert_arguments_args"
   ],
   "function_new_aliased": [
    "function_new_aliased"
@@ -8519,7 +8521,8 @@
    "function_params_consolidate",
    "js_declaration_params_get",
    "js_declaration_params_names",
-   "js_declaration_param_add_node"
+   "js_declaration_param_add_node",
+   "js_assert_arguments_args"
   ],
   "function_params_consolidate": [
    "function_params_consolidate"
@@ -8531,7 +8534,8 @@
    "js_declaration_params_names",
    "js_declaration_param_named",
    "js_node_atomize",
-   "js_declaration_param_add_node"
+   "js_declaration_param_add_node",
+   "js_assert_arguments_args"
   ],
   "params_names": [
    "function_params_consolidate",
@@ -31280,6 +31284,8 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "js_declaration_params_get",
+    "js_declaration_single",
     "js_keyword_arguments",
     "js_parse_expression",
     "list_add",
@@ -31289,6 +31295,8 @@
     "marker",
     "js_assert_arguments_args",
     "ast",
+    "declaration",
+    "params",
     "lambda2",
     "args",
     "code_expression",
