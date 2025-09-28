@@ -2840,7 +2840,8 @@
    "git_history_delete",
    "data_path",
    "data_path_generic",
-   "data_aliases_path"
+   "data_aliases_path",
+   "file_json_isolate"
   ],
   "ast": [
    "data_identifiers_file",
@@ -3194,7 +3195,8 @@
    "object_merge_generic",
    "bind_property",
    "messenger_reply",
-   "messenger_reply_unreplied"
+   "messenger_reply_unreplied",
+   "file_json_isolate"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -31588,7 +31590,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "file_json_isolate"
+    "file_json_isolate",
+    "f_path",
+    "property_name"
    ]
   }
  },
