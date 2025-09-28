@@ -1,3 +1,4 @@
+import { data_path } from "./data_path.mjs";
 import { data_set } from "./data_set.mjs";
 import { app_name_prefixed } from "./app_name_prefixed.mjs";
 import { function_open } from "./function_open.mjs";
@@ -9,6 +10,7 @@ export async function function_open_app(f_name) {
   async function lambda(previous) {
     return f_name;
   }
-  await data_set(lambda, "app_current", data_path());
+  let d_path = data_path();
+  await data_set(lambda, "app_current", d_path);
   return v;
 }
