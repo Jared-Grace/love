@@ -3681,7 +3681,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_assert_arguments_args"
   ],
   "v": [
    "data_identifiers_file",
@@ -6549,7 +6550,8 @@
    "marker_functionize",
    "each_pair_async",
    "each_multiple_async",
-   "reply"
+   "reply",
+   "js_assert_arguments_args"
   ],
   "object_properties": [
    "each_object",
@@ -10939,7 +10941,8 @@
    "list_add_multiple",
    "marker_functionize",
    "list_adder_multiple_async",
-   "reply"
+   "reply",
+   "js_assert_arguments_args"
   ],
   "original": [
    "list_copy"
@@ -16369,9 +16372,6 @@
    "js_visit_calls_named"
   ],
   "args_new": [
-   "js_assert_arguments_args"
-  ],
-  "lam": [
    "js_assert_arguments_args"
   ]
  },
@@ -31294,6 +31294,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "list_add_multiple",
     "list_size",
     "js_declaration_params_get",
     "js_declaration_single",
@@ -31313,7 +31314,8 @@
     "code_expression",
     "expression",
     "args_new",
-    "lam",
+    "list",
+    "items",
     "name"
    ]
   },
