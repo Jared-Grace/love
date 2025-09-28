@@ -5500,8 +5500,7 @@
    "function_run_line_parse",
    "function_run_prompt",
    "git_push",
-   "marker_current_set",
-   "user_repo_set"
+   "marker_current_set"
   ],
   "path_join": [
    "data_backup",
@@ -28757,8 +28756,7 @@
     "f_path",
     "lambda",
     "previous",
-    "property_name",
-    "d_path"
+    "property_name"
    ]
   },
   "uuid": {
