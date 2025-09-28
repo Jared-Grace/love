@@ -329,7 +329,8 @@
    "git_push_folder",
    "repo_acronym_get",
    "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "repos_names"
   ],
   "apps_get": [
    "apps_get"
@@ -7757,7 +7758,8 @@
    "folder_read_async",
    "folder_read_files",
    "git_repo_clone",
-   "repos"
+   "repos",
+   "repos_names"
   ],
   "only": [
    "firebase_service_account",
@@ -7965,7 +7967,8 @@
   ],
   "folder_read": [
    "folder_read",
-   "repos"
+   "repos",
+   "repos_names"
   ],
   "all": [
    "folder_read",
@@ -7973,7 +7976,8 @@
    "list_wait",
    "repos",
    "function_run_git",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "repos_names"
   ],
   "readdir": [
    "folder_read",
@@ -10157,7 +10161,8 @@
   "repos_folder": [
    "git_repo_clone",
    "repos",
-   "repos_folder"
+   "repos_folder",
+   "repos_names"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14106,6 +14111,9 @@
   "repos_acronyms_to_names": [
    "repo_acronym_to_name",
    "repos_gitignore_overwrite"
+  ],
+  "repos_names": [
+   "repos_names"
   ]
  },
  "functions": {
@@ -29205,6 +29213,17 @@
     "item",
     "mapped",
     "list"
+   ]
+  },
+  "repos_names": {
+   "async": true,
+   "identifiers": [
+    "repos_folder",
+    "folder_read",
+    "marker",
+    "repos_names",
+    "path_folder",
+    "all"
    ]
   }
  },
