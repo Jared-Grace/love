@@ -7790,7 +7790,8 @@
    "folder_user_combine",
    "sandbox_2",
    "data_path_generic",
-   "git_acp"
+   "git_acp",
+   "command_line_git"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -14966,7 +14967,8 @@
     "command_line_git_prefix",
     "command_line",
     "command_line_git",
-    "command_git"
+    "command_git",
+    "folder"
    ]
   },
   "command_line_git_prefix": {
