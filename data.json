@@ -1760,7 +1760,6 @@
   "as app",
   "an reply",
   "s hash",
-  "s copy",
   "n browser_is",
   "s main",
   "cs list_join_newline 2",
@@ -2373,7 +2372,8 @@
   "o d",
   "n data_backup",
   "s now",
-  "s json"
+  "s json",
+  "s copy"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
