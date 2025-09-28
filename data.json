@@ -10465,7 +10465,8 @@
   ],
   "js_keyword_arguments": [
    "js_identifier_unique",
-   "js_keyword_arguments"
+   "js_keyword_arguments",
+   "js_assert_arguments_args"
   ],
   "string_is_assert": [
    "js_identifier_unique",
@@ -31280,6 +31281,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "js_keyword_arguments",
     "js_parse_expression",
     "list_add",
     "list_empty",
@@ -31290,8 +31292,8 @@
     "ast",
     "lambda2",
     "args",
-    "expression",
     "code_expression",
+    "expression",
     "item",
     "name"
    ]
