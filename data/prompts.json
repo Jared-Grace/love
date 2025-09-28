@@ -2184,7 +2184,6 @@
   "dc aliases",
   "n file_json_isolate",
   "s prop",
-  "s data",
   "data_copy aliases",
   "file_json_isolate data/aliases.json aliases",
   "n file_json_property_delete",
@@ -2199,6 +2198,7 @@
   "data_partition prompts",
   "s delete",
   "rs object_properties_delete all",
-  "d"
+  "d",
+  "s data"
  ]
 }
