@@ -7762,8 +7762,7 @@
    "firebase_service_account",
    "folder_find_starts_with",
    "list_find",
-   "list_single",
-   "git_publish_initial"
+   "list_single"
   ],
   "http": [
    "firebase_storage_download",
@@ -14036,7 +14035,8 @@
   "repo_name": [
    "path_repo",
    "function_run_git",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "git_publish_initial"
   ],
   "command_line_git_folder": [
    "command_line_git",
@@ -29090,7 +29090,7 @@
     "command_line_git_folder",
     "git_publish_initial",
     "acronym",
-    "only",
+    "repo_name",
     "lambda",
     "item",
     "mapped2",
