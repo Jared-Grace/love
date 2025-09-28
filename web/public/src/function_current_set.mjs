@@ -1,3 +1,4 @@
+import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
@@ -16,7 +17,8 @@ export async function function_current_set(f_name) {
   function lambda(previous) {
     return unaliased;
   }
-  await data_transform("function_current", null, lambda, data_path());
+  let d_path = data_path();
+  await data_transform("function_current", null, lambda, d_path);
   await marker_top();
   let name = marker_first();
   await marker_current_set(name);
