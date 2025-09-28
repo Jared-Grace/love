@@ -1447,7 +1447,8 @@
    "watch",
    "user_repo_set",
    "repo_acronym_set",
-   "server"
+   "server",
+   "function_run_git"
   ],
   "ast": [
    "app_new_step_2",
@@ -2373,7 +2374,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "function_run_git"
   ],
   "index": [
    "app_replace_home",
@@ -5665,7 +5667,8 @@
    "keyboard_type_delay",
    "sandbox_4_a",
    "tasks_run",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "function_run_git"
   ],
   "data_files_update": [
    "data_files_update"
@@ -19176,6 +19179,7 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
+    "each_async",
     "repos",
     "git_acp_call",
     "function_run_log",
@@ -19183,7 +19187,9 @@
     "f_name",
     "args",
     "result",
-    "all"
+    "all",
+    "lambda",
+    "item"
    ]
   },
   "function_run_line": {
