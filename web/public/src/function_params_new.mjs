@@ -1,3 +1,4 @@
+import { assert_arguments } from "./assert_arguments.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -14,6 +15,7 @@ export async function function_params_new(
   param_names_comma,
   values_default_comma,
 ) {
+  assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
   await function_transform_current(lambda1);
   function lambda1(ast) {
