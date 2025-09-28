@@ -10,6 +10,7 @@ export async function repo_acronym_set(value) {
   let f_path = data_path_generic("", "about");
   let previous2 = folder_previous();
   let joined = path_join([previous2, repo, f_path]);
+  let joined2 = path_join(segments);
   async function lambda(previous) {
     return value;
   }
