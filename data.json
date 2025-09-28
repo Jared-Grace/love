@@ -2814,7 +2814,8 @@
    "file_write_generic",
    "git_history_delete",
    "data_path",
-   "data_backup"
+   "data_backup",
+   "data_path_generic"
   ],
   "ast": [
    "data_identifiers_file",
@@ -3964,8 +3965,7 @@
    "data_get",
    "js_visit_calls_named",
    "sandbox_5_a",
-   "sandbox_5",
-   "data_path_generic"
+   "sandbox_5"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -31455,7 +31455,7 @@
     "file_name_json",
     "data_path_generic",
     "inner",
-    "v"
+    "f_path"
    ]
   }
  },
