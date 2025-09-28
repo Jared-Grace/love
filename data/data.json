@@ -2194,7 +2194,8 @@
   "file_json_property_delete data/data.json aliases",
   "p",
   "n data_partition",
-  "s alias"
+  "s alias",
+  "c data_aliases_path data_prompts_path"
  ],
  "marker_current": "1",
  "function_current": "data_partition",
