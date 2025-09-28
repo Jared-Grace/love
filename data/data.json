@@ -2389,11 +2389,11 @@
   "n file_json_isolate",
   "s delete",
   "s prop",
-  "file_json_isolate data/aliases.json aliases",
   "s data",
   "p",
   "data_copy aliases",
-  "ps"
+  "ps",
+  "file_json_isolate data/aliases.json aliases"
  ],
  "marker_current": "1",
  "function_current": "file_json_isolate",
