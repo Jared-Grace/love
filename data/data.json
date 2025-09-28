@@ -325,7 +325,8 @@
    "watch",
    "whitespace_normalize",
    "repo_acronym_set",
-   "user_repo_get"
+   "user_repo_get",
+   "git_publish_initial"
   ],
   "apps_get": [
    "apps_get"
@@ -13998,6 +13999,9 @@
   "git_acp_call_folder": [
    "git_acp_call",
    "function_run_git"
+  ],
+  "git_publish_initial": [
+   "git_publish_initial"
   ]
  },
  "functions": {
@@ -28984,6 +28988,13 @@
     "repo_name",
     "previous",
     "joined"
+   ]
+  },
+  "git_publish_initial": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "git_publish_initial"
    ]
   }
  },
