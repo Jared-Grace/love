@@ -13,4 +13,5 @@ export async function repos_gitignore_overwrite() {
     return joined;
   }
   let mapped2 = list_map(list, lambda);
+  return mapped2;
 }
