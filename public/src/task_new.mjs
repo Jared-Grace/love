@@ -1,3 +1,4 @@
+import { string_empty_not_is } from "./string_empty_not_is.mjs";
 import { marker } from "./marker.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -11,6 +12,7 @@ import { data_function_current_get } from "./data_function_current_get.mjs";
 import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   marker("1");
+  let ne = string_empty_not_is(name2);
   let f_name = await data_function_current_get();
   let result2 = task_function_name_part();
   let { unaliased } = await function_name_unalias(f_name);
