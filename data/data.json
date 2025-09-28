@@ -5419,8 +5419,7 @@
    "git_history_delete",
    "html_update_generic",
    "js_outside_move",
-   "user_repo_set",
-   "data_all"
+   "user_repo_set"
   ],
   "file_read_json": [
    "data_all",
@@ -7257,7 +7256,8 @@
    "function_run_prompt",
    "json_format_to",
    "js_declaration_params_names_node",
-   "watch"
+   "watch",
+   "data_all"
   ],
   "error_json": [
    "error_json",
@@ -15037,10 +15037,10 @@
     "file_exists",
     "marker",
     "file_read_json",
+    "json_format_to",
     "data_all",
     "file_path",
     "exists",
-    "f_path",
     "contents",
     "data",
     "v"
