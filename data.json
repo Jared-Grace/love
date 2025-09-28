@@ -16365,7 +16365,8 @@
    "function_run_line_parse",
    "function_current_set",
    "function_aliases_restore",
-   "data_transform"
+   "data_transform",
+   "data_files_update"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16639,6 +16640,7 @@
     "functions_paths",
     "each_async",
     "data_files_update",
+    "d_path",
     "d",
     "f_paths",
     "parseds",
