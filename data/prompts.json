@@ -2096,7 +2096,6 @@
   "s ien",
   "js_dollar_new ine",
   "s await",
-  "o w",
   "data_functions_get",
   "as param",
   "s clone",
@@ -2203,6 +2202,7 @@
   "user_repo_set love",
   "repos",
   "n repo_acronym_set",
-  "s data"
+  "s data",
+  "o w"
  ]
 }
