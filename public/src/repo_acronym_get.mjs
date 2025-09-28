@@ -8,8 +8,5 @@ export async function repo_acronym_get(repo) {
   let f_path = data_path_generic("", "about");
   let r_path = path_repo(repo);
   let joined = path_join([r_path, f_path]);
-  async function lambda(previous) {
-    return value;
-  }
-  await data_get(lambda, "acronym", joined);
+  await data_get("acronym", null, joined);
 }
