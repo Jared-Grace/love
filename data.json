@@ -4602,7 +4602,8 @@
    "function_parse_strict"
   ],
   "f_path2": [
-   "data_file_update"
+   "data_file_update",
+   "data_backup"
   ],
   "file_read": [
    "file_js_parse",
@@ -14553,7 +14554,8 @@
   "inner": [
    "catch_call",
    "data_path",
-   "data_path_generic"
+   "data_path_generic",
+   "data_backup"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -16433,7 +16435,8 @@
   ],
   "data_path_generic": [
    "data_path",
-   "data_path_generic"
+   "data_path_generic",
+   "data_backup"
   ]
  },
  "functions": {
@@ -31434,10 +31437,13 @@
   "data_backup": {
    "async": false,
    "identifiers": [
+    "data_path_generic",
     "data_path",
     "marker",
     "data_backup",
-    "f_path"
+    "f_path",
+    "f_path2",
+    "inner"
    ]
   },
   "data_path": {
