@@ -3133,8 +3133,7 @@
    "function_list_generate",
    "function_params_new",
    "js_visit_calls_named",
-   "data_path_generic",
-   "data_aliases_path"
+   "data_path_generic"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -14583,8 +14582,7 @@
    "catch_call",
    "data_path",
    "data_path_generic",
-   "data_backup",
-   "data_aliases_path"
+   "data_backup"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -31543,9 +31541,7 @@
     "data_path_generic",
     "marker",
     "data_aliases_path",
-    "f_path",
-    "inner",
-    "f_name"
+    "f_path"
    ]
   }
  },
