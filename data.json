@@ -7086,7 +7086,8 @@
    "js_property_parse_expression",
    "app_new_assign",
    "function_list_generate",
-   "function_params_new"
+   "function_params_new",
+   "js_dollar_aa"
   ],
   "functions_combine": [
    "functions_combine",
@@ -8554,7 +8555,8 @@
    "app_new_assign",
    "function_list_generate",
    "js_dollar_if_call",
-   "js_dollar_ien_generic"
+   "js_dollar_ien_generic",
+   "js_dollar_aa"
   ],
   "type": [
    "function_params_consolidate",
@@ -10495,7 +10497,8 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap"
+   "js_await_wrap",
+   "js_dollar_aa"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -31200,6 +31203,7 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "js_parse_expression",
     "js_code_call",
     "assert_arguments",
     "list_add_first",
@@ -31216,6 +31220,8 @@
     "body_block",
     "code",
     "name",
+    "expression",
+    "code_expression",
     "item"
    ]
   },
