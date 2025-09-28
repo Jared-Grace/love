@@ -2188,7 +2188,6 @@
   "n data_partition",
   "s alias",
   "c data_aliases_path data_prompts_path",
-  "p",
   "s partit",
   "data_partition propmts",
   "data_partition prompts",
@@ -2205,6 +2204,7 @@
   "o w",
   "s lambda",
   "c user_repo_set user_repo_get",
+  "p",
   "user_repo_get"
  ]
 }
