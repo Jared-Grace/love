@@ -2578,7 +2578,8 @@
    "data_copy",
    "file_json_isolate",
    "file_json_property_delete",
-   "data_partition"
+   "data_partition",
+   "data_prompts_path"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -2649,7 +2650,8 @@
    "data_aliases_path",
    "file_json_isolate",
    "file_json_transform",
-   "file_json_property_delete"
+   "file_json_property_delete",
+   "data_prompts_path"
   ],
   "ast": [
    "data_identifiers_file",
@@ -16299,7 +16301,8 @@
    "data_path_generic",
    "data_backup",
    "data_aliases_path",
-   "data_copy"
+   "data_copy",
+   "data_prompts_path"
   ],
   "f_path_from": [
    "data_backup",
@@ -16335,6 +16338,9 @@
   ],
   "data_partition": [
    "data_partition"
+  ],
+  "data_prompts_path": [
+   "data_prompts_path"
   ]
  },
  "functions": {
@@ -31441,6 +31447,15 @@
    "identifiers": [
     "marker",
     "data_partition"
+   ]
+  },
+  "data_prompts_path": {
+   "async": false,
+   "identifiers": [
+    "data_path_generic",
+    "marker",
+    "data_prompts_path",
+    "f_path"
    ]
   }
  },
