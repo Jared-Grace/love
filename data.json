@@ -14549,7 +14549,8 @@
    "http"
   ],
   "inner": [
-   "catch_call"
+   "catch_call",
+   "data_path"
   ],
   "ebible_verses": [
    "ebible_verses",
@@ -31436,6 +31437,7 @@
    "async": false,
    "identifiers": [
     "data_path",
+    "inner",
     "f_path"
    ]
   }
