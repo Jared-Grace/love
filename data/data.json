@@ -2392,7 +2392,8 @@
   "s delete",
   "s prop",
   "file_json_isolate data/aliases.json aliases",
-  "s data"
+  "s data",
+  "data_copy aliases"
  ],
  "marker_current": "1",
  "function_current": "file_json_isolate",
