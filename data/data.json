@@ -4994,7 +4994,8 @@
    "catch_call",
    "data_backup",
    "data_path",
-   "data_path_generic"
+   "data_path_generic",
+   "user_repo_set"
   ],
   "arguments": [
    "catch_call",
@@ -5375,7 +5376,8 @@
    "data_copy",
    "data_path",
    "data_path_generic",
-   "data_prompts_path"
+   "data_prompts_path",
+   "user_repo_set"
   ],
   "data_aliases_path": [
    "data_aliases_path",
@@ -5417,7 +5419,8 @@
    "function_read",
    "git_history_delete",
    "html_update_generic",
-   "js_outside_move"
+   "js_outside_move",
+   "user_repo_set"
   ],
   "file_read_json": [
    "data_all",
@@ -28744,9 +28747,12 @@
   "user_repo_set": {
    "async": true,
    "identifiers": [
+    "data_path_generic",
     "data_set",
     "marker",
     "user_repo_set",
+    "f_path",
+    "inner",
     "lambda",
     "previous",
     "property_name",
