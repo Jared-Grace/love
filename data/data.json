@@ -1,10 +1,6 @@
 {
  "terminal": false,
  "error_attention": null,
- "app_current": "replace",
- "prompts": [
-  "s data,update"
- ],
  "identifiers": {
   "add": [
    "add",
@@ -28993,6 +28989,5 @@
     "f_path"
    ]
   }
- },
- "git_push_when": "2025-09-28T19:18:21.759Z"
+ }
 }
