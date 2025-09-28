@@ -1973,7 +1973,8 @@
    "marker_top",
    "task_new",
    "watch",
-   "data_path_generic"
+   "data_path_generic",
+   "data_all"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -2650,7 +2651,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "string_trim_right",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "data_all"
   ],
   "html_enable_if": [
    "app_replace_rule_set",
@@ -9958,7 +9960,8 @@
   "function_wrap": [
    "function_watch_ending_change",
    "function_wrap",
-   "function_wrap_suffix_add"
+   "function_wrap_suffix_add",
+   "data_all"
   ],
   "function_watch_ending_change": [
    "function_watch_ending_change"
@@ -9999,7 +10002,8 @@
   ],
   "f_name_wrapped": [
    "function_wrap",
-   "function_wrap_suffix_add"
+   "function_wrap_suffix_add",
+   "data_all"
   ],
   "declaration_call": [
    "function_wrap",
@@ -15028,12 +15032,16 @@
   "data_all": {
    "async": true,
    "identifiers": [
+    "function_wrap",
+    "not",
     "file_exists",
     "marker",
     "file_read_json",
     "data_all",
     "file_path",
     "exists",
+    "f_name",
+    "f_name_wrapped",
     "data",
     "v"
    ]
