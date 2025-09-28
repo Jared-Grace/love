@@ -13648,7 +13648,8 @@
   ],
   "expression2": [
    "js_calls_to_each",
-   "function_params_new"
+   "function_params_new",
+   "js_assert_arguments_args"
   ],
   "object_property_get_name": [
    "js_call_callee_name",
@@ -16372,6 +16373,9 @@
    "js_assert_arguments_args"
   ],
   "list_replace_all": [
+   "js_assert_arguments_args"
+  ],
+  "code_expression2": [
    "js_assert_arguments_args"
   ]
  },
@@ -31311,6 +31315,8 @@
     "args",
     "code_expression",
     "expression",
+    "expression2",
+    "code_expression2",
     "args_new",
     "name"
    ]
