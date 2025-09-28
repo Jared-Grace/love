@@ -6697,8 +6697,7 @@
    "ebible_chapter_text",
    "list_all",
    "list_difference",
-   "list_intersect",
-   "git_publish_initial"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -29095,7 +29094,6 @@
     "inverted",
     "repos_matching",
     "only",
-    "list2",
     "lambda",
     "item",
     "mapped2",
