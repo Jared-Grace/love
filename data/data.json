@@ -1778,7 +1778,8 @@
    "object_property_lambda_async",
    "prompt_previous",
    "reply",
-   "reply_sequence"
+   "reply_sequence",
+   "repo_acronym_to_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -6595,7 +6596,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repo_acronym_to_name"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -7970,7 +7972,8 @@
    "folder_read_files",
    "list_wait",
    "repos",
-   "function_run_git"
+   "function_run_git",
+   "repo_acronym_to_name"
   ],
   "readdir": [
    "folder_read",
@@ -8239,7 +8242,8 @@
    "js_visit_match",
    "list_find",
    "list_single",
-   "marker_rename"
+   "marker_rename",
+   "repo_acronym_to_name"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -8315,7 +8319,8 @@
    "function_acronym_to_names",
    "function_alias_rename",
    "function_name_to_acronym",
-   "git_publish_initial"
+   "git_publish_initial",
+   "repo_acronym_to_name"
   ],
   "function_alias_add_generic": [
    "function_aliases",
@@ -8341,7 +8346,8 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "function_names_to_acronyms",
-   "object_invert"
+   "object_invert",
+   "repo_acronym_to_name"
   ],
   "function_aliases_inverted": [
    "function_aliases_inverted",
@@ -8352,7 +8358,8 @@
    "function_aliases_inverted",
    "function_alias_rename",
    "object_invert",
-   "prompt_previous"
+   "prompt_previous",
+   "repo_acronym_to_name"
   ],
   "function_aliases_restore": [
    "function_aliases_restore"
@@ -13576,7 +13583,8 @@
   ],
   "repos": [
    "repos",
-   "function_run_git"
+   "function_run_git",
+   "repo_acronym_to_name"
   ],
   "wait": [
    "retry"
@@ -14027,7 +14035,8 @@
   ],
   "repo_name": [
    "path_repo",
-   "function_run_git"
+   "function_run_git",
+   "repo_acronym_to_name"
   ],
   "command_line_git_folder": [
    "command_line_git",
@@ -14064,7 +14073,8 @@
    "path_repo"
   ],
   "repo_acronym_get": [
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "repo_acronym_to_name"
   ],
   "path_repo_about": [
    "repo_acronym_get",
@@ -14080,10 +14090,15 @@
    "path_repo_about"
   ],
   "list_to_dictionary_async": [
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repo_acronym_to_name"
   ],
   "repo_acronym_to_name": [
-   "git_publish_initial"
+   "git_publish_initial",
+   "repo_acronym_to_name"
+  ],
+  "repos_matching": [
+   "repo_acronym_to_name"
   ]
  },
  "functions": {
@@ -29159,6 +29174,24 @@
     "lambda",
     "item",
     "value"
+   ]
+  },
+  "repo_acronym_to_name": {
+   "async": true,
+   "identifiers": [
+    "list_single",
+    "object_property_get",
+    "object_invert",
+    "repo_acronym_get",
+    "list_to_dictionary_async",
+    "repos",
+    "repo_acronym_to_name",
+    "acronym",
+    "all",
+    "dictionary",
+    "inverted",
+    "repos_matching",
+    "repo_name"
    ]
   }
  },
