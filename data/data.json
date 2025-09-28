@@ -5095,7 +5095,8 @@
    "js_property_parse_expression_add",
    "messenger_reply",
    "reply_test",
-   "function_params_new"
+   "function_params_new",
+   "data_files_update"
   ],
   "function_names_to_acronyms": [
    "function_acronym_to_name",
@@ -14379,6 +14380,7 @@
     "d",
     "f_paths",
     "parseds",
+    "properties",
     "lambda",
     "parsed"
    ],
