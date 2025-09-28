@@ -4208,7 +4208,8 @@
    "js_statement_return_add",
    "messenger_reply_messages_urls_add_multiple",
    "messenger_reply",
-   "js_dollar_ien_generic"
+   "js_dollar_ien_generic",
+   "file_json_isolate"
   ],
   "watch": [
    "watch"
@@ -5305,7 +5306,8 @@
   "value2": [
    "error_attention_set",
    "global_function",
-   "app_replace_font_size"
+   "app_replace_font_size",
+   "file_json_isolate"
   ],
   "error": [
    "watch",
@@ -6645,7 +6647,8 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property"
+   "bind_property",
+   "file_json_isolate"
   ],
   "each_pair": [
    "each_pair",
@@ -16521,6 +16524,9 @@
   ],
   "lambda$data": [
    "file_json_transform"
+  ],
+  "property_name2": [
+   "file_json_isolate"
   ]
  },
  "functions": {
@@ -31600,6 +31606,7 @@
   "file_json_isolate": {
    "async": true,
    "identifiers": [
+    "object_property_set",
     "object_properties_delete",
     "object_property_get",
     "file_json_transform",
@@ -31610,6 +31617,9 @@
     "lambda",
     "data",
     "value",
+    "object",
+    "property_name2",
+    "value2",
     "fb_path"
    ]
   }
