@@ -10029,7 +10029,6 @@
    "function_wrap_suffix_add"
   ],
   "git_commit": [
-   "git_acp",
    "git_commit"
   ],
   "git_push": [
@@ -14016,7 +14015,8 @@
    "git_acp"
   ],
   "git_commit_folder": [
-   "git_commit"
+   "git_commit",
+   "git_acp"
   ]
  },
  "functions": {
@@ -19533,7 +19533,7 @@
    "async": true,
    "identifiers": [
     "command_line_git_folder",
-    "git_commit",
+    "git_commit_folder",
     "git_push",
     "git_acp",
     "message",
