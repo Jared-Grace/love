@@ -16346,7 +16346,6 @@
   "data_path": [
    "data_all",
    "data_file_update",
-   "data_transform",
    "error_attention_set",
    "marker_current_set",
    "function_alias_rename",
@@ -16363,7 +16362,8 @@
    "data_set",
    "function_run_line_parse",
    "function_current_set",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "data_transform"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16413,9 +16413,6 @@
   "sandbox_5_a": [
    "sandbox_5_a",
    "sandbox_5"
-  ],
-  "dp": [
-   "data_transform"
   ]
  },
  "functions": {
@@ -16945,7 +16942,6 @@
   },
   "data_transform": {
    "identifiers": [
-    "data_path",
     "marker",
     "data_save",
     "object_property_set",
@@ -16954,7 +16950,7 @@
     "property_name",
     "value_initial",
     "lambda$previous",
-    "dp",
+    "d_path",
     "d",
     "data",
     "value",
