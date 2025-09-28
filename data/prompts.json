@@ -2209,6 +2209,7 @@
   "s user,path",
   "s user",
   "np",
-  "s git"
+  "s git",
+  "s repo,name"
  ]
 }
