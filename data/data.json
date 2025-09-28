@@ -541,8 +541,7 @@
    "string_slice",
    "string_starts_with_not",
    "string_suffix_without",
-   "visit_filter_recursive_async",
-   "repo_acronym_get"
+   "visit_filter_recursive_async"
   ],
   "app_name_prefix": [
    "app_name_prefix",
@@ -2106,7 +2105,8 @@
    "user_repo_set",
    "repo_acronym_set",
    "user_repo_get",
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "repo_acronym_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -29140,7 +29140,7 @@
     "repo_acronym_get",
     "repo",
     "a_path",
-    "a"
+    "value"
    ]
   },
   "path_repo_about": {
