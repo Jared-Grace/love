@@ -8582,8 +8582,7 @@
    "function_list_generate",
    "js_dollar_if_call",
    "js_dollar_ien_generic",
-   "js_dollar_aa",
-   "js_assert_arguments_args"
+   "js_dollar_aa"
   ],
   "type": [
    "function_params_consolidate",
@@ -13648,8 +13647,7 @@
   ],
   "expression2": [
    "js_calls_to_each",
-   "function_params_new",
-   "js_assert_arguments_args"
+   "function_params_new"
   ],
   "object_property_get_name": [
    "js_call_callee_name",
@@ -16375,7 +16373,10 @@
   "list_replace_all": [
    "js_assert_arguments_args"
   ],
-  "code_expression2": [
+  "args_expression": [
+   "js_assert_arguments_args"
+  ],
+  "size_expression": [
    "js_assert_arguments_args"
   ]
  },
@@ -31314,9 +31315,8 @@
     "lambda2",
     "args",
     "code_expression",
-    "expression",
-    "expression2",
-    "code_expression2",
+    "args_expression",
+    "size_expression",
     "args_new",
     "name"
    ]
