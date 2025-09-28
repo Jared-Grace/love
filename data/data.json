@@ -2210,7 +2210,8 @@
    "messenger_reply_playwright",
    "js_dollar",
    "js_await_add",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "function_alias_add_generic"
   ],
   "function_path_to_name": [
    "data_identifiers_file",
@@ -17488,6 +17489,7 @@
   },
   "function_alias_add_generic": {
    "identifiers": [
+    "log",
     "data_get",
     "data_aliases_path",
     "object_property_exists",
