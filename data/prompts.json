@@ -2213,6 +2213,7 @@
   "s list_map",
   "s user,repo",
   "urg",
-  "s acro"
+  "s acro",
+  "c repo_acronym_set repo_acronym_get"
  ]
 }
