@@ -16385,7 +16385,8 @@
    "function_aliases_restore",
    "data_files_update",
    "data_backup",
-   "data_path"
+   "data_path",
+   "data_boolean_set"
   ],
   "d_path": [
    "data_file_update",
@@ -16396,7 +16397,8 @@
    "function_current_set",
    "function_aliases_restore",
    "data_transform",
-   "data_files_update"
+   "data_files_update",
+   "data_boolean_set"
   ],
   "js_dollar_aa": [
    "js_dollar_aa",
@@ -16897,10 +16899,12 @@
   },
   "data_boolean_set": {
    "identifiers": [
+    "data_path",
     "data_set",
     "data_boolean_set",
     "property_name",
     "value",
+    "d_path",
     "value_get",
     "previous",
     "v"
