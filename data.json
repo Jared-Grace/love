@@ -4761,7 +4761,8 @@
    "ebible_languages_to_bible_folders",
    "reply_sequence",
    "function_params_new",
-   "command_line_node_g"
+   "command_line_node_g",
+   "assert_arguments"
   ],
   "data_save": [
    "data_file_update",
@@ -11085,7 +11086,8 @@
    "list_size",
    "string_size",
    "path_join",
-   "roman_to_integer"
+   "roman_to_integer",
+   "assert_arguments"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -31213,11 +31215,13 @@
   "assert_arguments": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "equal",
     "assert",
     "assert_arguments",
     "args",
     "count",
+    "length",
     "eq2",
     "left",
     "right",
