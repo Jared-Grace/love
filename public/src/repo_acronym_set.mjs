@@ -1,7 +1,7 @@
 import { data_set } from "./data_set.mjs";
 import { data_path_generic } from "./data_path_generic.mjs";
 import { marker } from "./marker.mjs";
-export async function repo_acronym_set() {
+export async function repo_acronym_set(value) {
   marker("1");
   let f_path = data_path_generic("", "about");
   async function lambda(previous) {
