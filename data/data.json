@@ -6655,8 +6655,7 @@
    "file_write_json",
    "object_property_set_exists_not",
    "ebible_firebase_upload",
-   "bind_property",
-   "file_json_property_delete"
+   "bind_property"
   ],
   "each_pair": [
    "each_pair",
@@ -31628,11 +31627,10 @@
     "file_json_transform",
     "marker",
     "file_json_property_delete",
-    "lambda",
-    "data",
-    "object",
+    "fb_path",
     "property_name",
-    "fb_path"
+    "lambda",
+    "data"
    ]
   }
  },
