@@ -4238,7 +4238,8 @@
    "folder_user_combine",
    "messenger_reply",
    "path_join",
-   "data_backup"
+   "data_backup",
+   "data_path_generic"
   ],
   "watcher": [
    "watch"
@@ -5773,7 +5774,8 @@
    "folder_user_combine",
    "folder_read_files",
    "git_repo_clone",
-   "data_backup"
+   "data_backup",
+   "data_path_generic"
   ],
   "fs": [
    "file_copy",
@@ -15264,7 +15266,8 @@
    "list_map_first"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "data_path_generic"
   ],
   "seg": [
    "path_join"
@@ -31517,10 +31520,13 @@
   "data_path_generic": {
    "async": false,
    "identifiers": [
+    "path_join",
     "file_name_json",
     "data_path_generic",
     "inner",
-    "f_path"
+    "f_path",
+    "joined",
+    "segments"
    ]
   },
   "data_aliases_path": {
