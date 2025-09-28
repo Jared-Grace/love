@@ -4414,7 +4414,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "git_acp_folder"
   ],
   "assert_not": [
    "assert_not",
@@ -7815,7 +7816,8 @@
    "git_acp_call",
    "function_run_git",
    "git_publish_initial",
-   "git_push_folder"
+   "git_push_folder",
+   "git_acp_folder"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -11148,7 +11150,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "git_acp_folder"
   ],
   "js_node_type_not_is_if": [
    "js_await_add",
@@ -14052,17 +14055,21 @@
   "command_line_git_folder": [
    "command_line_git",
    "git_publish_initial",
-   "git_push_folder"
+   "git_push_folder",
+   "git_acp_folder"
   ],
   "git_commit_folder": [
-   "git_commit"
+   "git_commit",
+   "git_acp_folder"
   ],
   "git_push_folder": [
    "git_push",
-   "git_push_folder"
+   "git_push_folder",
+   "git_acp_folder"
   ],
   "git_acp_folder": [
-   "git_acp"
+   "git_acp",
+   "git_acp_folder"
   ],
   "git_acp_call_folder": [
    "git_acp_call",
@@ -29276,6 +29283,18 @@
     "repo_name",
     "previous",
     "r_path"
+   ]
+  },
+  "git_acp_folder": {
+   "async": true,
+   "identifiers": [
+    "log",
+    "git_push_folder",
+    "git_commit_folder",
+    "command_line_git_folder",
+    "git_acp_folder",
+    "folder",
+    "message"
    ]
   }
  },
