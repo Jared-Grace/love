@@ -5,6 +5,6 @@ import { marker } from "./marker.mjs";
 export async function data_copy(f_name) {
   marker("1");
   let f_path_from = data_path();
-  let f_path_to = data_path_generic("." + inner, f_name);
+  let f_path_to = data_path_generic("", f_name);
   await file_copy(f_path_from, f_path_to);
 }
