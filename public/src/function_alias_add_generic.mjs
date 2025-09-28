@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { data_get } from "./data_get.mjs";
 import { data_aliases_path } from "./data_aliases_path.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
@@ -11,7 +10,6 @@ export async function function_alias_add_generic(alias) {
     file_path,
     data,
   } = await data_get("aliases", {}, d_path);
-  log(aliases);
   const exists = object_property_exists(aliases, alias);
   if (exists) {
     unaliased = object_property_get(aliases, alias);
