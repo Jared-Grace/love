@@ -6,10 +6,10 @@ import { marker } from "./marker.mjs";
 export async function repo_acronym_set(repo, value) {
   marker("1");
   let f_path = data_path_generic("", "about");
-  let joined = path_repo(repo);
-  let joined2 = path_join([joined, f_path]);
+  let r_path = path_repo(repo);
+  let joined = path_join([r_path, f_path]);
   async function lambda(previous) {
     return value;
   }
-  await data_set(lambda, "acronym", joined2);
+  await data_set(lambda, "acronym", joined);
 }
