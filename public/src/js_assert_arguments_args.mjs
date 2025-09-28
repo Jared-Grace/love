@@ -6,10 +6,7 @@ import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
-import { marker } from "./marker.mjs";
 export function js_assert_arguments_args(ast) {
-  marker("1");
-  return;
   let declaration = js_declaration_single(ast);
   let params = js_declaration_params_get(declaration);
   let size = list_size(params);
