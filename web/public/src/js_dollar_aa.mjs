@@ -16,7 +16,9 @@ export function js_dollar_aa({
 }) {
   let body_block = js_declaration_single_block_body(ast);
   let code = js_code_call(assert_arguments.name);
-  log(message);
+  log({
+    code,
+  });
   let expression = js_parse_expression(code);
   list_add_first(body_block, expression);
   marker("1");
