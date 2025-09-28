@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map_path_join } from "./list_map_path_join.mjs";
@@ -14,7 +15,7 @@ export async function repos_gitignore_overwrite() {
   let mapped2 = list_map_path_join(mapped, f_name);
   async function lambda(p) {
     let result = await path_resolve(p);
-    if (false) {
+    if (equal_not(left, right)) {
     }
   }
   let waited = await list_map_unordered_async(mapped2, lambda);
