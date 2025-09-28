@@ -5536,8 +5536,7 @@
    "server",
    "repo_acronym_set",
    "path_repo",
-   "git_push_folder",
-   "repo_acronym_get"
+   "git_push_folder"
   ],
   "file_copy": [
    "data_backup",
@@ -14019,8 +14018,7 @@
   "path_repo": [
    "repo_acronym_set",
    "path_repo",
-   "function_run_git",
-   "repo_acronym_get"
+   "function_run_git"
   ],
   "repo_name": [
    "path_repo",
@@ -14059,10 +14057,12 @@
   ],
   "r_path": [
    "path_repo",
-   "repo_acronym_set",
-   "repo_acronym_get"
+   "repo_acronym_set"
   ],
   "repo_acronym_get": [
+   "repo_acronym_get"
+  ],
+  "path_repo_combine": [
    "repo_acronym_get"
   ]
  },
@@ -29109,15 +29109,13 @@
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
+    "path_repo_combine",
     "data_get",
-    "path_repo",
-    "path_join",
     "data_path_generic",
     "marker",
     "repo_acronym_get",
     "repo",
     "f_path",
-    "r_path",
     "joined"
    ]
   }
