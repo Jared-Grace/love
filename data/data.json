@@ -16405,7 +16405,8 @@
    "data_boolean_set",
    "function_open_app",
    "git_push",
-   "data_copy"
+   "data_copy",
+   "function_aliases_restore"
   ],
   "d_path": [
    "data_file_update",
@@ -24472,7 +24473,7 @@
   "function_aliases_restore": {
    "async": true,
    "identifiers": [
-    "data_aliases_path",
+    "data_path",
     "marker",
     "data_transform",
     "function_aliases_restore",
@@ -24630,7 +24631,8 @@
     "fpc",
     "oh",
     "an",
-    "d_path"
+    "d_path",
+    "data_aliases_path"
    ]
   },
   "marker_next_await": {
