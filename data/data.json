@@ -19568,8 +19568,8 @@
     "catch_only_async",
     "git_commit",
     "message",
-    "lambda",
-    "folder"
+    "folder",
+    "lambda"
    ]
   },
   "git_filter_repo_install": {
