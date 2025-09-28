@@ -1,9 +1,5 @@
-import { command_line_git_folder } from "./command_line_git_folder.mjs";
-import { catch_only_async } from "./catch_only_async.mjs";
+import { git_commit_folder } from "./git_commit_folder.mjs";
 export async function git_commit(message) {
   let folder = ".";
-  async function lambda() {
-    await command_line_git_folder(folder, `commit -m "${message}"`);
-  }
-  await catch_only_async(lambda, "nothing to commit");
+  await git_commit_folder(folder, message);
 }
