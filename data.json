@@ -4209,7 +4209,8 @@
    "ebible_verse_new",
    "folder_user_combine",
    "messenger_reply",
-   "path_join"
+   "path_join",
+   "sandbox_5"
   ],
   "watcher": [
    "watch"
@@ -5741,7 +5742,8 @@
    "folder_user",
    "folder_user_combine",
    "folder_read_files",
-   "git_repo_clone"
+   "git_repo_clone",
+   "sandbox_5"
   ],
   "fs": [
    "file_copy",
@@ -15219,7 +15221,8 @@
    "list_map_first"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "sandbox_5"
   ],
   "seg": [
    "path_join"
@@ -30960,7 +30963,10 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
-    "sandbox_5"
+    "path_join",
+    "sandbox_5",
+    "joined",
+    "segments"
    ]
   },
   "folder_delete": {
