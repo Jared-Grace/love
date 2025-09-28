@@ -2112,7 +2112,6 @@
   "pn d_path d_path",
   "s combine",
   "s count",
-  "s repo",
   "fd git_repo_clone",
   "nd aa",
   "s decl,sing",
@@ -2210,6 +2209,7 @@
   "s user",
   "np",
   "s git",
-  "s repo,name"
+  "s repo,name",
+  "s repo"
  ]
 }
