@@ -3677,7 +3677,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_assert_arguments_args"
   ],
   "v": [
    "data_identifiers_file",
@@ -8493,7 +8494,8 @@
    "function_params_consolidate",
    "list_empty",
    "app_reply_main",
-   "function_list_generate"
+   "function_list_generate",
+   "js_assert_arguments_args"
   ],
   "js_identifiers_to_names": [
    "function_params_consolidate",
@@ -16352,9 +16354,6 @@
   ],
   "lambda_inner": [
    "js_visit_calls_named"
-  ],
-  "le": [
-   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31276,6 +31275,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "list_empty",
     "assert_arguments",
     "js_visit_calls_named",
     "marker",
@@ -31283,7 +31283,7 @@
     "ast",
     "lambda2",
     "args",
-    "le",
+    "list",
     "name"
    ]
   },
