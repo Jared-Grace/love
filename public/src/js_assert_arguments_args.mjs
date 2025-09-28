@@ -15,11 +15,11 @@ export function js_assert_arguments_args(ast) {
   let params = js_declaration_params_get(declaration);
   let size = list_size(params);
   function lambda2({ args }) {
-    list_empty(args);
     let code_expression = js_keyword_arguments();
     let expression = js_parse_expression(code_expression);
     let args_new = [expression, size];
-    list_add_multiple(list, items);
+    list_empty(args);
+    list_add_multiple(args, args_new);
   }
   js_visit_calls_named(assert_arguments.name, lambda2, ast);
 }
