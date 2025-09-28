@@ -4982,7 +4982,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "repos_gitignore_overwrite"
   ],
   "catch_call": [
    "catch_call",
@@ -8193,7 +8194,8 @@
   "paths": [
    "functions_names",
    "git_push_schedule_command",
-   "path_resolve"
+   "path_resolve",
+   "repos_gitignore_overwrite"
   ],
   "suffix": [
    "functions_names",
@@ -10158,7 +10160,8 @@
   ],
   "path_resolve": [
    "git_push_schedule_command",
-   "path_resolve"
+   "path_resolve",
+   "repos_gitignore_overwrite"
   ],
   "git_rebase": [
    "git_rebase"
@@ -29223,6 +29226,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "path_resolve",
     "list_map_unordered_async",
     "list_map_path_join",
     "repo_path",
@@ -29236,6 +29240,8 @@
     "mapped2",
     "lambda",
     "item",
+    "result",
+    "paths",
     "waited",
     "list"
    ]
