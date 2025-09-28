@@ -2099,7 +2099,6 @@
   "s await",
   "o w",
   "data_functions_get",
-  "d",
   "as param",
   "s clone",
   "fc data_all",
@@ -2199,6 +2198,7 @@
   "ps",
   "data_partition prompts",
   "s delete",
-  "rs object_properties_delete all"
+  "rs object_properties_delete all",
+  "d"
  ]
 }
