@@ -1,5 +1,4 @@
-import { object_property_delete } from "./object_property_delete.mjs";
-import { each } from "./each.mjs";
+import { object_properties_delete } from "./object_properties_delete.mjs";
 import { data_path } from "./data_path.mjs";
 import { marker } from "./marker.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
@@ -17,10 +16,7 @@ export async function data_files_update() {
   let f_paths = functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   let properties = ["identifiers", "functions"];
-  function lambda2(p) {
-    object_property_delete(data, p);
-  }
-  each(properties, lambda2);
+  object_properties_delete(data, properties);
   async function lambda(parsed) {
     await data_file_update_inner(parsed, d);
   }
