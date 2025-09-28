@@ -3662,7 +3662,8 @@
    "js_call_new_code",
    "list_map_unordered_async",
    "marker_down_choices",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "list_to_dictionary_async"
   ],
   "en": [
    "app_reply_main",
@@ -14083,9 +14084,6 @@
   "list_to_dictionary_async": [
    "list_to_dictionary_async",
    "git_publish_initial"
-  ],
-  "list_map_wait": [
-   "list_to_dictionary_async"
   ]
  },
  "functions": {
@@ -29153,7 +29151,7 @@
   "list_to_dictionary_async": {
    "async": true,
    "identifiers": [
-    "list_map_wait",
+    "list_map_unordered_async",
     "marker",
     "object_property_set",
     "list_to_dictionary_async",
