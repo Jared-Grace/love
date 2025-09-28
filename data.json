@@ -2116,7 +2116,6 @@
   "app_name_main t",
   "app_new_assign t",
   "s wait",
-  "s declar",
   "app_new_step_2 message",
   "rs sandbox_4",
   "rs sandbox _4",
@@ -2361,7 +2360,8 @@
   "s list",
   "u le",
   "a le list_empty",
-  "s key"
+  "s key",
+  "s declar"
  ],
  "marker_current": "1",
  "function_current": "js_auto_transforms",
