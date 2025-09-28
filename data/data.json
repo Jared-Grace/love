@@ -2953,7 +2953,8 @@
    "function_params_new",
    "js_visit_calls_named",
    "data_path_generic",
-   "data_copy"
+   "data_copy",
+   "data_partition"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -16312,7 +16313,8 @@
   ],
   "f_path_to": [
    "data_backup",
-   "data_copy"
+   "data_copy",
+   "data_partition"
   ],
   "string_empty_not_is_assert": [
    "task_new"
@@ -31455,7 +31457,9 @@
     "data_copy",
     "marker",
     "data_partition",
-    "property_name"
+    "property_name",
+    "f_path_to",
+    "f_name"
    ]
   },
   "data_prompts_path": {
