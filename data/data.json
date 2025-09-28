@@ -2193,11 +2193,11 @@
   "file_json_isolate data/aliases.json aliases",
   "n file_json_property_delete",
   "file_json_property_delete data/data.json aliases",
-  "n data_partition",
-  "p"
+  "p",
+  "n data_partition"
  ],
  "marker_current": "1",
- "function_current": "file_json_property_delete",
+ "function_current": "data_partition",
  "terminal": false,
  "identifiers": {
   "log": [
