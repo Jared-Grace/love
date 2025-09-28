@@ -3094,8 +3094,7 @@
    "app_message",
    "function_list_generate",
    "function_params_new",
-   "js_visit_calls_named",
-   "js_assert_arguments_args"
+   "js_visit_calls_named"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -4407,7 +4406,8 @@
    "git_repo_rename_normalize",
    "js_dollar_ien_generic",
    "js_dollar_aa",
-   "js_visit_calls_named"
+   "js_visit_calls_named",
+   "js_assert_arguments_args"
   ],
   "output": [
    "watch",
@@ -16325,7 +16325,8 @@
   ],
   "assert_arguments": [
    "assert_arguments",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_assert_arguments_args"
   ],
   "assert_equal": [
    "assert_arguments"
@@ -16347,9 +16348,6 @@
   ],
   "lambda_inner": [
    "js_visit_calls_named"
-  ],
-  "ast2": [
-   "js_assert_arguments_args"
   ]
  },
  "functions": {
@@ -31271,13 +31269,13 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "assert_arguments",
     "js_visit_calls_named",
     "marker",
     "js_assert_arguments_args",
     "ast",
     "lambda2",
-    "f_name",
-    "ast2"
+    "name"
    ]
   },
   "js_visit_calls_named": {
