@@ -2739,7 +2739,8 @@
    "functions_combine",
    "data_all",
    "js_dollar_aa",
-   "equal_assert"
+   "equal_assert",
+   "sandbox_5_a"
   ],
   "data_identifiers_file": [
    "data_identifiers_file",
@@ -16382,6 +16383,9 @@
   ],
   "size_expression": [
    "js_assert_arguments_args"
+  ],
+  "sandbox_5_a": [
+   "sandbox_5_a"
   ]
  },
  "functions": {
@@ -31343,6 +31347,13 @@
     "node",
     "name",
     "args"
+   ]
+  },
+  "sandbox_5_a": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "sandbox_5_a"
    ]
   }
  },
