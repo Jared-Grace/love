@@ -4895,8 +4895,7 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not",
-   "js_dollar_aa"
+   "string_ends_with_not"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -10497,8 +10496,7 @@
    "js_if_else_if_combine",
    "js_parse_expression",
    "js_await",
-   "js_await_wrap",
-   "js_dollar_aa"
+   "js_await_wrap"
   ],
   "specifiers": [
    "js_imports_declarations"
@@ -31220,9 +31218,7 @@
     "body_block",
     "code",
     "name",
-    "expression",
-    "code_expression",
-    "item"
+    "expression"
    ]
   },
   "assert_arguments": {
