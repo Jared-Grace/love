@@ -13990,14 +13990,14 @@
    "user_repo_set",
    "user_repo_get",
    "git_push",
-   "data_marker_current_get"
+   "data_marker_current_get",
+   "data_function_current_get"
   ],
   "user_repo_get": [
    "user_repo_get",
    "repo_acronym_set"
   ],
   "data_user_path": [
-   "data_function_current_get",
    "function_current_set"
   ]
  },
@@ -15214,11 +15214,11 @@
   "data_function_current_get": {
    "async": true,
    "identifiers": [
+    "user_repo_path",
     "data_property_get",
     "data_function_current_get",
     "property_name",
     "d_path",
-    "data_user_path",
     "f_name_current"
    ]
   },
