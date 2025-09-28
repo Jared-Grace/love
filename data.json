@@ -198,7 +198,8 @@
   "eq": "equal",
   "le": "list_empty",
   "lam": "list_add_multiple",
-  "flc": "file_copy"
+  "flc": "file_copy",
+  "fld": "file_delete"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2378,7 +2379,8 @@
   "data_backup",
   "o n",
   "db",
-  "u fd"
+  "u fd",
+  "a fld file_delete"
  ],
  "marker_current": "1",
  "function_current": "function_new",
