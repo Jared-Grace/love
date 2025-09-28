@@ -26,8 +26,7 @@
    "js_code_let_assign",
    "js_code_or",
    "js_left_right_set",
-   "js_let_add",
-   "repos_gitignore_overwrite"
+   "js_let_add"
   ],
   "right": [
    "add",
@@ -47,8 +46,7 @@
    "js_left_right_set",
    "js_let_add",
    "log_json",
-   "log_unparse_try",
-   "repos_gitignore_overwrite"
+   "log_unparse_try"
   ],
   "sum": [
    "add",
@@ -8085,12 +8083,14 @@
   ],
   "functions_combine": [
    "functions_combine",
-   "functions_combine_test"
+   "functions_combine_test",
+   "repos_gitignore_overwrite"
   ],
   "f_names_comma": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test"
+   "functions_combine_test",
+   "repos_gitignore_overwrite"
   ],
   "f_names": [
    "functions_combine",
@@ -29228,6 +29228,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "functions_combine",
     "equal_not",
     "path_resolve",
     "list_map_unordered_async",
@@ -29245,8 +29246,7 @@
     "lambda",
     "p",
     "result",
-    "left",
-    "right",
+    "f_names_comma",
     "waited"
    ]
   },
