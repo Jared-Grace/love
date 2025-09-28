@@ -6615,8 +6615,7 @@
    "messenger_reply_playwright",
    "js_identifiers_named_count",
    "js_assign_combine",
-   "assert_arguments",
-   "equal_assert"
+   "assert_arguments"
   ],
   "list_copy_reverse": [
    "each_reverse",
@@ -6664,7 +6663,8 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind"
+   "bind",
+   "equal_assert"
   ],
   "right": [
    "equal",
@@ -6683,7 +6683,8 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind"
+   "bind",
+   "equal_assert"
   ],
   "eq": [
    "equal",
@@ -11088,8 +11089,7 @@
    "string_size",
    "path_join",
    "roman_to_integer",
-   "assert_arguments",
-   "equal_assert"
+   "assert_arguments"
   ],
   "string_to": [
    "list_size_1_assert",
@@ -31237,8 +31237,8 @@
     "assert",
     "equal",
     "equal_assert",
-    "length",
-    "count",
+    "left",
+    "right",
     "eq"
    ]
   }
