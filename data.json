@@ -3659,7 +3659,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_dollar_aa"
   ],
   "v": [
    "data_identifiers_file",
@@ -4886,7 +4887,8 @@
    "ebible_languages_to_bible_folders",
    "list_filter_empty_not_is",
    "list_filter_ends_with_any",
-   "string_ends_with_not"
+   "string_ends_with_not",
+   "js_dollar_aa"
   ],
   "list_includes": [
    "functions_names_includes",
@@ -8190,7 +8192,8 @@
    "function_imports_add",
    "list_add_first",
    "marker_enter",
-   "app_reply_main"
+   "app_reply_main",
+   "js_dollar_aa"
   ],
   "js_parse_statement_module": [
    "function_imports_add",
@@ -16291,9 +16294,6 @@
   "js_dollar_aa": [
    "js_dollar_aa",
    "js_dollar_choices"
-  ],
-  "ast2": [
-   "js_dollar_aa"
   ]
  },
  "functions": {
@@ -31174,6 +31174,7 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "list_add_first",
     "js_declaration_single_block_body",
     "marker",
     "js_dollar_aa",
@@ -31185,7 +31186,8 @@
     "ast",
     "afters",
     "body_block",
-    "ast2"
+    "list",
+    "item"
    ]
   }
  },
