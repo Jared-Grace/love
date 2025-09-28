@@ -806,7 +806,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "git_publish_initial"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2370,8 +2371,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "git_publish_initial"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4049,8 +4049,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "git_publish_initial"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5180,7 +5179,8 @@
    "git_push_schedule_command",
    "messenger_reply_playwright",
    "retry_on_error",
-   "schtasks_query"
+   "schtasks_query",
+   "git_publish_initial"
   ],
   "extra": [
    "command_line",
@@ -29014,9 +29014,9 @@
     "branch_name",
     "commands",
     "lambda",
-    "item",
+    "command",
+    "v",
     "mapped",
-    "list",
     "folder",
     "command_git"
    ]
