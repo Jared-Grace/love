@@ -4,5 +4,5 @@ export async function data_set(lambda$previous, property_name) {
     let v2 = lambda$previous(previous);
     return v2;
   }
-  await data_transform(property_name, null, lambda);
+  await data_transform(property_name, null, lambda, data_path());
 }

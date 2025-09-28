@@ -16,7 +16,7 @@ export async function function_current_set(f_name) {
   function lambda(previous) {
     return unaliased;
   }
-  await data_transform("function_current", null, lambda);
+  await data_transform("function_current", null, lambda, data_path());
   await marker_top();
   let name = marker_first();
   await marker_current_set(name);
