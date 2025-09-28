@@ -9,6 +9,6 @@ export async function data_backup() {
   let f_path_from = data_path();
   let inner = date_now_file();
   let f_path_to = data_path_generic("." + inner);
-  let joined = path_join("backups", f_path_to);
+  let joined = path_join(["backups", f_path_to]);
   await file_copy(f_path_from, joined);
 }
