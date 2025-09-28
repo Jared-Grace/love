@@ -718,7 +718,6 @@
   "n function_name_combine_multiple",
   "na tasks_run tr",
   "s task_",
-  "s prop",
   "a op object_properties",
   "a ea each_async",
   "s function",
@@ -2391,7 +2390,8 @@
   "u dc",
   "dc aliases",
   "n file_json_isolate",
-  "s delete"
+  "s delete",
+  "s prop"
  ],
  "marker_current": "1",
  "function_current": "file_json_isolate",
