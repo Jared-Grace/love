@@ -174,7 +174,6 @@
    "function_watch_ending_change",
    "git_filter_repo_install",
    "git_history_delete",
-   "git_push",
    "git_push_schedule_check",
    "git_repo_clone",
    "git_repo_rename",
@@ -818,7 +817,6 @@
    "function_new_js_name",
    "function_rename_suffix_add",
    "function_wrap_suffix_add",
-   "git_push",
    "js_dollar_new_name",
    "marker_screen_add"
   ],
@@ -841,7 +839,6 @@
    "function_list_generate",
    "function_new_declaration",
    "function_param_swap_task_simple",
-   "git_push",
    "git_push_schedule_check",
    "git_push_schedule_task_name",
    "git_repo_rename_normalize",
@@ -1286,7 +1283,6 @@
    "function_transform_marker_specified",
    "function_type_first",
    "function_wrap",
-   "git_push",
    "global_function_async",
    "global_function_property_async",
    "html_button",
@@ -3051,8 +3047,7 @@
    "app_replace_rule_set",
    "date_diff_hours",
    "date_diff_ms",
-   "function_alias_rename",
-   "git_push"
+   "function_alias_rename"
   ],
   "size": [
    "app_replace_rule_set",
@@ -4676,7 +4671,6 @@
    "file_json_property_delete",
    "firebase_storage_download_property",
    "function_run_prompt",
-   "git_push",
    "global_function_property_async",
    "js_arrow_blockify",
    "js_dollar_g",
@@ -5028,7 +5022,6 @@
    "file_open",
    "firebase_upload_generic",
    "function_run_log",
-   "git_push",
    "git_rebase",
    "js_parse",
    "log",
@@ -5048,7 +5041,6 @@
   ],
   "catch_log_async": [
    "catch_log_async",
-   "git_push",
    "watch"
   ],
   "message_get": [
@@ -5252,8 +5244,7 @@
    "git_repo_clone"
   ],
   "command_git": [
-   "command_line_git",
-   "git_push"
+   "command_line_git"
   ],
   "command_line_log": [
    "command_line_log",
@@ -5468,8 +5459,7 @@
    "data_property_get",
    "data_terminal_get",
    "data_watch_get",
-   "function_run_prompt",
-   "git_push"
+   "function_run_prompt"
   ],
   "data_app_current_get": [
    "data_app_current_get",
@@ -5502,7 +5492,6 @@
    "function_open_app",
    "function_run_line_parse",
    "function_run_prompt",
-   "git_push",
    "marker_current_set"
   ],
   "path_join": [
@@ -5570,7 +5559,6 @@
    "data_boolean_set",
    "data_set",
    "function_open_app",
-   "git_push",
    "user_repo_set",
    "repo_acronym_set"
   ],
@@ -6018,8 +6006,7 @@
   ],
   "lambda$previous": [
    "data_set",
-   "data_transform",
-   "git_push"
+   "data_transform"
   ],
   "data_terminal_get": [
    "data_terminal_get",
@@ -6069,15 +6056,13 @@
    "date_diff_ms"
   ],
   "date_diff_hours": [
-   "date_diff_hours",
-   "git_push"
+   "date_diff_hours"
   ],
   "now": [
    "date_diff_hours",
    "date_diff_ms",
    "date_now",
-   "date_now_iso",
-   "git_push"
+   "date_now_iso"
   ],
   "ms": [
    "date_diff_hours",
@@ -6086,8 +6071,7 @@
    "sleep"
   ],
   "hours": [
-   "date_diff_hours",
-   "git_push"
+   "date_diff_hours"
   ],
   "Math": [
    "date_diff_ms",
@@ -6100,16 +6084,14 @@
   ],
   "date_iso_to": [
    "date_iso_to",
-   "date_now_iso",
-   "git_push"
+   "date_now_iso"
   ],
   "toISOString": [
    "date_iso_to"
   ],
   "date_now": [
    "date_now",
-   "date_now_iso",
-   "git_push"
+   "date_now_iso"
   ],
   "Date": [
    "date_now",
@@ -6122,8 +6104,7 @@
   ],
   "now_iso": [
    "date_now_file",
-   "date_now_iso",
-   "git_push"
+   "date_now_iso"
   ],
   "now_file": [
    "date_now_file",
@@ -6136,12 +6117,10 @@
    "whitespace_normalize"
   ],
   "date_to": [
-   "date_to",
-   "git_push"
+   "date_to"
   ],
   "before_iso": [
-   "date_to",
-   "git_push"
+   "date_to"
   ],
   "digits": [
    "digits",
@@ -10087,11 +10066,9 @@
    "git_history_delete"
   ],
   "lambda_get": [
-   "git_push",
    "lambda_get"
   ],
   "git_push_command": [
-   "git_push",
    "git_push_command",
    "git_push_schedule_command"
   ],
@@ -13991,7 +13968,6 @@
   "user_repo_path": [
    "user_repo_set",
    "user_repo_get",
-   "git_push",
    "data_marker_current_get",
    "data_function_current_get",
    "function_current_set",
@@ -14012,12 +13988,14 @@
   ],
   "command_line_git_folder": [
    "command_line_git",
-   "git_acp",
-   "git_push"
+   "git_acp"
   ],
   "git_commit_folder": [
    "git_commit",
    "git_acp"
+  ],
+  "git_push_folder": [
+   "git_push"
   ]
  },
  "functions": {
@@ -19606,33 +19584,9 @@
   "git_push": {
    "async": true,
    "identifiers": [
-    "command_line_git_folder",
-    "user_repo_path",
-    "marker",
-    "date_diff_hours",
-    "lambda_get",
-    "date_to",
-    "date_iso_to",
-    "date_now",
-    "data_property_get",
-    "function_name_combine",
-    "data_set",
-    "git_push_command",
-    "catch_log_async",
-    "log_keep",
+    "git_push_folder",
     "git_push",
-    "folder",
-    "command_git",
-    "lambda",
-    "now",
-    "now_iso",
-    "property_name",
-    "name",
-    "d_path",
-    "before_iso",
-    "before",
-    "hours",
-    "lambda$previous"
+    "folder"
    ]
   },
   "git_push_command": {
