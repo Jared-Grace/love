@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export async function user_repo_get() {
   marker("1");
   let f_path = user_repo_path();
-  let { data } = await data_get("repo_current", null, f_path);
-  return data;
+  let { value } = await data_get("repo_current", null, f_path);
+  return value;
 }
