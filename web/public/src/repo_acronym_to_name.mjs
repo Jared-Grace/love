@@ -9,6 +9,6 @@ export async function repo_acronym_to_name(acronym) {
   let dictionary = await list_to_dictionary_async(all, repo_acronym_get);
   let inverted = object_invert(dictionary);
   let repos_matching = object_property_get(inverted, acronym);
-  let only = list_single(repos_matching);
-  return only;
+  let repo_name = list_single(repos_matching);
+  return repo_name;
 }
