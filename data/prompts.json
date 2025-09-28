@@ -2210,6 +2210,7 @@
   "np",
   "s git",
   "s repo,name",
-  "s repo"
+  "s repo",
+  "n git_publish_initial"
  ]
 }
