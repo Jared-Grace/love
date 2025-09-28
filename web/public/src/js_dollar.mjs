@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { js_dollar_choices } from "./js_dollar_choices.mjs";
 import { list_get_end_3 } from "./list_get_end_3.mjs";
