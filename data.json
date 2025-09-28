@@ -2349,10 +2349,11 @@
   "nd aa",
   "s decl,sing",
   "s fill",
-  "s call"
+  "s call",
+  "n assert_arguments"
  ],
  "marker_current": "1",
- "function_current": "js_dollar_aa",
+ "function_current": "assert_arguments",
  "terminal": false,
  "identifiers": {
   "log": [
