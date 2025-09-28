@@ -2196,7 +2196,6 @@
   "o w",
   "s lambda",
   "c user_repo_set user_repo_get",
-  "p",
   "user_repo_get",
   "repo_acronym_set l",
   "urs karate_code",
@@ -2219,6 +2218,7 @@
   "s unordered",
   "de list_map_wait",
   "s invert",
-  "git_publish_initial k"
+  "git_publish_initial k",
+  "p"
  ]
 }
