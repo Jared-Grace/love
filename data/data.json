@@ -1972,7 +1972,8 @@
    "marker_remove",
    "marker_top",
    "task_new",
-   "watch"
+   "watch",
+   "data_path_generic"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -7773,7 +7774,8 @@
    "firebase_storage_download_path",
    "folder_user",
    "folder_user_combine",
-   "sandbox_2"
+   "sandbox_2",
+   "data_path_generic"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -13669,8 +13671,7 @@
    "sandbox_2"
   ],
   "newLocal": [
-   "sandbox_2",
-   "data_path_generic"
+   "sandbox_2"
   ],
   "sandbox_3": [
    "sandbox_3"
@@ -15281,7 +15282,8 @@
     "data_path_generic",
     "suffix",
     "f_name_unsuffixed",
-    "newLocal",
+    "f_name",
+    "folder",
     "joined",
     "f_path"
    ]
