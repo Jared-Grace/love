@@ -5929,8 +5929,7 @@
    "object_property_exists_not_assert",
    "messenger_reply_playwright",
    "list_concat",
-   "equal_assert",
-   "task_new"
+   "equal_assert"
   ],
   "b": [
    "assert",
@@ -5977,8 +5976,7 @@
    "ebible_version_books",
    "ebible_verse",
    "messenger_reply_playwright",
-   "reply",
-   "task_new"
+   "reply"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6772,8 +6770,7 @@
    "marker_top",
    "string_empty_not_is",
    "ebible_verses",
-   "app_reply_main",
-   "task_new"
+   "app_reply_main"
   ],
   "Error": [
    "error",
@@ -10210,8 +10207,7 @@
    "string_empty_not_is",
    "ebible_verses",
    "list_map_string_empty_not_is",
-   "list_filter_empty_not_is",
-   "task_new"
+   "list_filter_empty_not_is"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -16462,6 +16458,9 @@
   ],
   "f_path_to": [
    "data_backup"
+  ],
+  "string_empty_not_is_assert": [
+   "task_new"
   ]
  },
  "functions": {
@@ -23705,8 +23704,7 @@
   },
   "task_new": {
    "identifiers": [
-    "assert",
-    "string_empty_not_is",
+    "string_empty_not_is_assert",
     "marker",
     "data_function_current_restore",
     "function_name_unalias",
@@ -23720,8 +23718,6 @@
     "todo",
     "task_new",
     "task_name",
-    "ne",
-    "b",
     "f_name",
     "result2",
     "unaliased",
