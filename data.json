@@ -3678,7 +3678,8 @@
    "list_filter_starts_with",
    "list_filter_ends_with_not_any",
    "reply",
-   "list_filter_ends_with_any"
+   "list_filter_ends_with_any",
+   "js_assert_arguments_args"
   ],
   "v": [
    "data_identifiers_file",
@@ -6306,7 +6307,8 @@
    "function_transform_marker_specified",
    "app_replace_rule_set",
    "list_random_item",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "js_assert_arguments_args"
   ],
   "list_slice": [
    "js_call_new_code",
@@ -8934,7 +8936,8 @@
    "list_size",
    "function_transform_marker_specified",
    "app_replace_rule_set",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "js_assert_arguments_args"
   ],
   "js_markers": [
    "function_transform_marker_all",
@@ -31284,6 +31287,7 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
+    "list_size",
     "js_declaration_params_get",
     "js_declaration_single",
     "js_keyword_arguments",
@@ -31297,6 +31301,8 @@
     "ast",
     "declaration",
     "params",
+    "size",
+    "list",
     "lambda2",
     "args",
     "code_expression",
