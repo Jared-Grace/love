@@ -7723,7 +7723,8 @@
   "js_code_call": [
    "js_bang_to_not",
    "js_code_call",
-   "js_code_call_statement"
+   "js_code_call_statement",
+   "js_dollar_aa"
   ],
   "function_delete": [
    "function_delete",
@@ -9749,8 +9750,7 @@
    "js_code_call_args",
    "js_code_call_args_await_maybe",
    "js_dollar_g",
-   "js_code_declaration_args",
-   "js_dollar_aa"
+   "js_code_declaration_args"
   ],
   "js_call_insert": [
    "js_call_insert",
@@ -31200,8 +31200,8 @@
   "js_dollar_aa": {
    "async": false,
    "identifiers": [
+    "js_code_call",
     "assert_arguments",
-    "js_code_call_args",
     "list_add_first",
     "js_declaration_single_block_body",
     "marker",
