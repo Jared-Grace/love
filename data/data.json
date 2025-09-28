@@ -5963,8 +5963,7 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic",
-   "git_publish_initial"
+   "search_generic"
   ],
   "data_identifiers_search": [
    "data_identifiers_search",
@@ -14085,7 +14084,8 @@
    "path_repo_about"
   ],
   "list_to_dictionary_async": [
-   "list_to_dictionary_async"
+   "list_to_dictionary_async",
+   "git_publish_initial"
   ]
  },
  "functions": {
@@ -29069,8 +29069,8 @@
   "git_publish_initial": {
    "async": true,
    "identifiers": [
+    "list_to_dictionary_async",
     "repo_acronym_get",
-    "list_to_dictionary",
     "list_map",
     "repos",
     "list_map_combine",
