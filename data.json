@@ -16286,7 +16286,8 @@
    "data_transform"
   ],
   "js_dollar_aa": [
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_dollar_choices"
   ]
  },
  "functions": {
@@ -26104,6 +26105,7 @@
   "js_dollar_choices": {
    "async": false,
    "identifiers": [
+    "js_dollar_aa",
     "js_dollar_ine",
     "js_dollar_ib",
     "js_dollar_l",
