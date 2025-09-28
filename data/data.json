@@ -2385,8 +2385,7 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "index": [
    "app_replace_home",
@@ -3139,7 +3138,8 @@
    "marker_functionize",
    "range_from",
    "reply",
-   "sandbox"
+   "sandbox",
+   "repos_gitignore_overwrite"
   ],
   "any": [
    "app_replace_rule_set",
@@ -4068,8 +4068,7 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "list_to_dictionary_async",
-   "repos_gitignore_overwrite"
+   "list_to_dictionary_async"
   ],
   "book_code": [
    "app_reply_main",
@@ -7813,7 +7812,8 @@
    "git_acp_call",
    "function_run_git",
    "git_publish_initial",
-   "git_push_folder"
+   "git_push_folder",
+   "repos_gitignore_overwrite"
   ],
   "firebase_storage_download_property": [
    "firebase_storage_download_property",
@@ -14037,12 +14037,14 @@
   ],
   "path_repo": [
    "path_repo",
-   "function_run_git"
+   "function_run_git",
+   "repos_gitignore_overwrite"
   ],
   "repo_name": [
    "path_repo",
    "function_run_git",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repos_gitignore_overwrite"
   ],
   "command_line_git_folder": [
    "command_line_git",
@@ -29207,6 +29209,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
+    "path_repo",
     "list_map",
     "repos_names",
     "marker",
@@ -29214,9 +29217,10 @@
     "repos",
     "f_name",
     "lambda",
-    "item",
-    "mapped",
-    "list"
+    "r",
+    "folder",
+    "repo_name",
+    "mapped"
    ]
   },
   "repos_names": {
