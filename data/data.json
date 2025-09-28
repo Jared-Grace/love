@@ -1451,8 +1451,7 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "user_repo_set",
-   "repo_acronym_set"
+   "user_repo_set"
   ],
   "ast": [
    "app_new_step_2",
@@ -5604,8 +5603,7 @@
    "path_join",
    "prompt_previous",
    "repos_folder",
-   "user_repo_set",
-   "repo_acronym_set"
+   "user_repo_set"
   ],
   "data_copy": [
    "data_copy",
@@ -28952,10 +28950,8 @@
     "marker",
     "repo_acronym_set",
     "f_path",
-    "lambda",
-    "previous",
-    "value",
-    "lambda$previous"
+    "lambda$previous",
+    "value"
    ]
   }
  }
