@@ -5925,8 +5925,7 @@
    "ebible_version_books",
    "ebible_verse",
    "messenger_reply_playwright",
-   "reply",
-   "assert_arguments"
+   "reply"
   ],
   "file_exists": [
    "assert_file_exists_not",
@@ -6662,8 +6661,7 @@
    "js_code_dot",
    "app_replace_rule_valid",
    "html_loading",
-   "bind",
-   "assert_arguments"
+   "bind"
   ],
   "right": [
    "equal",
@@ -6682,8 +6680,7 @@
    "app_replace_rule_set",
    "app_replace_rule_parse",
    "js_code_dot",
-   "bind",
-   "assert_arguments"
+   "bind"
   ],
   "eq": [
    "equal",
@@ -6692,7 +6689,8 @@
    "js_if_else_if_combine",
    "app_replace_rule_set",
    "js_calls_to_each",
-   "app_replace_rule_valid"
+   "app_replace_rule_valid",
+   "assert_arguments"
   ],
   "equal_by": [
    "equal_by",
@@ -13374,8 +13372,7 @@
    "list_filter_ends_with_any"
   ],
   "eq2": [
-   "app_replace_rule_set",
-   "assert_arguments"
+   "app_replace_rule_set"
   ],
   "lambda8": [
    "app_replace_rule_set",
@@ -31222,10 +31219,7 @@
     "args",
     "count",
     "length",
-    "eq2",
-    "left",
-    "right",
-    "b"
+    "eq"
    ]
   }
  },
