@@ -2652,7 +2652,8 @@
    "file_json_isolate",
    "file_json_transform",
    "file_json_property_delete",
-   "data_prompts_path"
+   "data_prompts_path",
+   "data_partition"
   ],
   "ast": [
    "data_identifiers_file",
@@ -2952,8 +2953,7 @@
    "function_list_generate",
    "function_params_new",
    "js_visit_calls_named",
-   "data_path_generic",
-   "data_partition"
+   "data_path_generic"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -16333,7 +16333,8 @@
    "data_partition"
   ],
   "file_json_isolate": [
-   "file_json_isolate"
+   "file_json_isolate",
+   "data_partition"
   ],
   "lambda$data": [
    "file_json_transform"
@@ -16348,6 +16349,9 @@
    "data_prompts_path",
    "data_prompts",
    "function_run_line_parse"
+  ],
+  "property_name2": [
+   "data_partition"
   ]
  },
  "functions": {
@@ -31454,12 +31458,14 @@
   "data_partition": {
    "async": true,
    "identifiers": [
+    "file_json_isolate",
     "data_copy",
     "marker",
     "data_partition",
     "property_name",
     "f_path_to",
-    "f_name"
+    "f_path",
+    "property_name2"
    ]
   },
   "data_prompts_path": {
