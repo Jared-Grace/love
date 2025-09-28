@@ -8503,8 +8503,7 @@
    "function_params_consolidate",
    "list_empty",
    "app_reply_main",
-   "function_list_generate",
-   "js_assert_arguments_args"
+   "function_list_generate"
   ],
   "js_identifiers_to_names": [
    "function_params_consolidate",
@@ -10941,8 +10940,7 @@
    "list_add_multiple",
    "marker_functionize",
    "list_adder_multiple_async",
-   "reply",
-   "js_assert_arguments_args"
+   "reply"
   ],
   "original": [
    "list_copy"
@@ -16372,6 +16370,9 @@
    "js_visit_calls_named"
   ],
   "args_new": [
+   "js_assert_arguments_args"
+  ],
+  "list_replace_all": [
    "js_assert_arguments_args"
   ]
  },
@@ -31294,13 +31295,12 @@
   "js_assert_arguments_args": {
    "async": false,
    "identifiers": [
-    "list_add_multiple",
+    "list_replace_all",
     "list_size",
     "js_declaration_params_get",
     "js_declaration_single",
     "js_keyword_arguments",
     "js_parse_expression",
-    "list_empty",
     "assert_arguments",
     "js_visit_calls_named",
     "marker",
