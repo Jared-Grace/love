@@ -2222,7 +2222,6 @@
   "o mr",
   "c messenger_reply messenger_reply_messages",
   "s initial",
-  "s json",
   "s starts",
   "s without",
   "s remove",
@@ -2373,7 +2372,8 @@
   "pn d_path data_path()",
   "o d",
   "n data_backup",
-  "s now"
+  "s now",
+  "s json"
  ],
  "marker_current": "1",
  "function_current": "data_backup",
