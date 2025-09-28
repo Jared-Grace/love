@@ -2100,7 +2100,8 @@
    "undefined_is",
    "undefined_not_is_assert",
    "undefined_not_is_assert_lambda",
-   "watch"
+   "watch",
+   "user_repo_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4702,8 +4703,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "user_repo_set"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -28753,10 +28753,10 @@
     "data_set",
     "marker",
     "user_repo_set",
+    "value",
     "f_path",
     "lambda",
-    "previous",
-    "property_name"
+    "previous"
    ]
   },
   "uuid": {
