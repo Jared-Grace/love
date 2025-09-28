@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_code_call } from "./js_code_call.mjs";
 import { assert_arguments } from "./assert_arguments.mjs";
@@ -15,6 +16,7 @@ export function js_dollar_aa({
 }) {
   let body_block = js_declaration_single_block_body(ast);
   let code = js_code_call(assert_arguments.name);
+  log(message);
   let expression = js_parse_expression(code);
   list_add_first(body_block, expression);
   marker("1");
