@@ -2922,7 +2922,8 @@
    "js_dollar_ine",
    "js_dollar_ien_generic",
    "js_dollar_aa",
-   "js_assert_arguments_args"
+   "js_assert_arguments_args",
+   "js_visit_calls_named"
   ],
   "code": [
    "data_identifiers_file",
@@ -3091,7 +3092,8 @@
    "js_code_declaration_args",
    "app_message",
    "function_list_generate",
-   "function_params_new"
+   "function_params_new",
+   "js_visit_calls_named"
   ],
   "property_name": [
    "data_identifiers_file",
@@ -3382,7 +3384,8 @@
    "reply",
    "folder_read_files",
    "list_filter_ends_with_any",
-   "puppeteer_hrefs"
+   "puppeteer_hrefs",
+   "js_visit_calls_named"
   ],
   "previous": [
    "data_identifiers_file",
@@ -3938,7 +3941,8 @@
    "messenger_reply_messages_message",
    "messenger_reply_messages_name",
    "python_install",
-   "data_get"
+   "data_get",
+   "js_visit_calls_named"
   ],
   "file_overwrite": [
    "file_js_unparse",
@@ -4399,7 +4403,8 @@
    "messenger_reply_messages",
    "git_repo_rename_normalize",
    "js_dollar_ien_generic",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_visit_calls_named"
   ],
   "output": [
    "watch",
@@ -4435,7 +4440,8 @@
    "js_code_declaration",
    "js_code_declaration_args",
    "assert_arguments",
-   "function_params_new"
+   "function_params_new",
+   "js_visit_calls_named"
   ],
   "lj": [
    "watch",
@@ -4767,7 +4773,8 @@
    "ebible_languages_to_bible_folders",
    "reply_sequence",
    "command_line_node_g",
-   "assert_arguments"
+   "assert_arguments",
+   "js_visit_calls_named"
   ],
   "data_save": [
    "data_file_update",
@@ -6709,7 +6716,8 @@
   ],
   "equal_not": [
    "equal_not",
-   "js_dollar_ine"
+   "js_dollar_ine",
+   "js_visit_calls_named"
   ],
   "ne": [
    "equal_not",
@@ -7868,7 +7876,8 @@
    "js_statement_expression_get",
    "messenger_reply_messages",
    "js_dollar_ine",
-   "js_dollar_aa"
+   "js_dollar_aa",
+   "js_visit_calls_named"
   ],
   "function_dependencies_code": [
    "function_dependencies_code",
@@ -8863,7 +8872,8 @@
    "marker_functionize",
    "js_identifiers_named_count",
    "js_log_remove",
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_visit_calls_named"
   ],
   "function_transform_marker": [
    "function_transform_marker",
@@ -13624,7 +13634,8 @@
   ],
   "js_call_callee_name": [
    "js_calls_to_each",
-   "js_call_callee_name"
+   "js_call_callee_name",
+   "js_visit_calls_named"
   ],
   "jin2": [
    "js_call_callee_name",
@@ -16327,7 +16338,11 @@
    "function_params_new"
   ],
   "js_visit_calls_named": [
-   "function_params_new"
+   "function_params_new",
+   "js_visit_calls_named"
+  ],
+  "lambda_inner": [
+   "js_visit_calls_named"
   ]
  },
  "functions": {
@@ -31252,6 +31267,24 @@
     "marker",
     "js_assert_arguments_args",
     "ast"
+   ]
+  },
+  "js_visit_calls_named": {
+   "async": false,
+   "identifiers": [
+    "js_visit_type",
+    "object_property_get",
+    "equal_not",
+    "js_call_callee_name",
+    "js_visit_calls_named",
+    "f_name",
+    "lambda",
+    "ast",
+    "lambda_inner",
+    "v",
+    "node",
+    "name",
+    "args"
    ]
   }
  },
