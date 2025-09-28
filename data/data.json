@@ -1449,8 +1449,7 @@
    "server",
    "function_run_git",
    "git_push_folder",
-   "git_publish_initial",
-   "repo_acronym_get"
+   "git_publish_initial"
   ],
   "ast": [
    "app_new_step_2",
@@ -2103,8 +2102,7 @@
    "watch",
    "user_repo_set",
    "repo_acronym_set",
-   "user_repo_get",
-   "repo_acronym_get"
+   "user_repo_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -5614,8 +5612,7 @@
    "user_repo_set",
    "repo_acronym_set",
    "server",
-   "path_repo",
-   "repo_acronym_get"
+   "path_repo"
   ],
   "data_copy": [
    "data_copy",
@@ -29121,10 +29118,7 @@
     "repo",
     "f_path",
     "r_path",
-    "joined",
-    "lambda",
-    "previous",
-    "value"
+    "joined"
    ]
   }
  },
