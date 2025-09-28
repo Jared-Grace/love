@@ -2953,7 +2953,6 @@
    "function_params_new",
    "js_visit_calls_named",
    "data_path_generic",
-   "data_copy",
    "data_partition"
   ],
   "property_name": [
@@ -3010,7 +3009,8 @@
    "messenger_reply_unreplied",
    "file_json_isolate",
    "file_json_property_delete",
-   "data_partition"
+   "data_partition",
+   "data_copy"
   ],
   "lambda": [
    "data_identifiers_file",
@@ -31417,7 +31417,7 @@
     "data_path",
     "marker",
     "data_copy",
-    "f_name",
+    "property_name",
     "f_path_from",
     "f_path_to"
    ]
