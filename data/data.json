@@ -13986,15 +13986,15 @@
    "path_repo"
   ],
   "command_line_git_folder": [
-   "command_line_git",
-   "git_acp"
+   "command_line_git"
   ],
   "git_commit_folder": [
-   "git_commit",
-   "git_acp"
+   "git_commit"
   ],
   "git_push_folder": [
-   "git_push",
+   "git_push"
+  ],
+  "git_acp_folder": [
    "git_acp"
   ]
  },
@@ -19511,9 +19511,7 @@
   "git_acp": {
    "async": true,
    "identifiers": [
-    "git_push_folder",
-    "command_line_git_folder",
-    "git_commit_folder",
+    "git_acp_folder",
     "git_acp",
     "message",
     "folder"
