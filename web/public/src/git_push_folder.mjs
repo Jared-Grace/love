@@ -16,9 +16,6 @@ import { catch_log_async } from "./catch_log_async.mjs";
 import { git_push_command } from "./git_push_command.mjs";
 import { marker } from "./marker.mjs";
 export async function git_push_folder(folder) {
-  log({
-    folder,
-  });
   marker("1");
   const command_git = git_push_command();
   await catch_log_async(lambda);
@@ -28,6 +25,9 @@ export async function git_push_folder(folder) {
     let property_name = function_name_combine(git_push.name, "when");
     let d_path = user_repo_path();
     let joined = path_join([folder, d_path]);
+    log({
+      joined,
+    });
     let before_iso = await data_property_get(property_name, joined);
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
