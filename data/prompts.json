@@ -1399,7 +1399,6 @@
   "fd firebase_deploy_function",
   "n global_get",
   "n global_function",
-  "s lambda",
   "c object_property_initialize object_property_lambda",
   "c object_property_lambda object_property_lambda_async",
   "r global_function global_function_async",
@@ -2203,6 +2202,7 @@
   "repos",
   "n repo_acronym_set",
   "s data",
-  "o w"
+  "o w",
+  "s lambda"
  ]
 }
