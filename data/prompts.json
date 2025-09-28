@@ -2205,6 +2205,7 @@
   "s lambda",
   "c user_repo_set user_repo_get",
   "p",
-  "user_repo_get"
+  "user_repo_get",
+  "repo_acronym_set l"
  ]
 }
