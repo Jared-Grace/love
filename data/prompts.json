@@ -2214,6 +2214,7 @@
   "s user,repo",
   "urg",
   "s acro",
-  "c repo_acronym_set repo_acronym_get"
+  "c repo_acronym_set repo_acronym_get",
+  "s dictionary"
  ]
 }
