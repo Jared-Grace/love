@@ -11148,8 +11148,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "repos_gitignore_overwrite"
+   "search_generic"
   ],
   "js_node_type_not_is_if": [
    "js_await_add",
@@ -29223,7 +29222,6 @@
    "async": true,
    "identifiers": [
     "file_copy_overwrite",
-    "log",
     "equal_not",
     "path_resolve",
     "list_map_unordered_async",
