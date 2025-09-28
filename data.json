@@ -2353,7 +2353,8 @@
   "s assert",
   "r assert_equal equal_assert",
   "s command",
-  "s auto"
+  "s auto",
+  "as auto"
  ],
  "marker_current": "1",
  "function_current": "equal_assert",
