@@ -28,8 +28,9 @@ export async function function_params_new(
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
-    let e = await function_exists(f_name);
-    if (not(e)) {
+    let { exists } = await function_exists(f_name);
+    let a = not(exists);
+    if (not(a)) {
       return;
     }
     async function lambda5(ast) {
