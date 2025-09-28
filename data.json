@@ -194,7 +194,8 @@
   "ei": "each_index",
   "lfdp": "list_find_property",
   "clg": "command_line_git",
-  "td": "todo"
+  "td": "todo",
+  "eq": "equal"
  },
  "prompts": [
   "f function_run_prompt",
@@ -2350,7 +2351,8 @@
   "s decl,sing",
   "s fill",
   "s call",
-  "n assert_arguments"
+  "n assert_arguments",
+  "a eq equal"
  ],
  "marker_current": "1",
  "function_current": "assert_arguments",
