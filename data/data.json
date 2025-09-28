@@ -8083,14 +8083,12 @@
   ],
   "functions_combine": [
    "functions_combine",
-   "functions_combine_test",
-   "repos_gitignore_overwrite"
+   "functions_combine_test"
   ],
   "f_names_comma": [
    "functions_combine",
    "functions_combine_name",
-   "functions_combine_test",
-   "repos_gitignore_overwrite"
+   "functions_combine_test"
   ],
   "f_names": [
    "functions_combine",
@@ -8891,16 +8889,19 @@
   "function_copy": [
    "function_copy",
    "function_copy_suffix_add",
-   "function_rename"
+   "function_rename",
+   "repos_gitignore_overwrite"
   ],
   "f_name_old": [
    "function_copy",
-   "function_copy_suffix_add"
+   "function_copy_suffix_add",
+   "repos_gitignore_overwrite"
   ],
   "f_name_new": [
    "function_copy",
    "function_watch_ending_change",
-   "marker_functionize"
+   "marker_functionize",
+   "repos_gitignore_overwrite"
   ],
   "f_path_old": [
    "function_copy"
@@ -29228,7 +29229,7 @@
   "repos_gitignore_overwrite": {
    "async": true,
    "identifiers": [
-    "functions_combine",
+    "function_copy",
     "equal_not",
     "path_resolve",
     "list_map_unordered_async",
@@ -29246,7 +29247,8 @@
     "lambda",
     "p",
     "result",
-    "f_names_comma",
+    "f_name_old",
+    "f_name_new",
     "waited"
    ]
   },
