@@ -5556,7 +5556,6 @@
    "data_path",
    "data_terminal_get",
    "error_attention_set",
-   "function_open_app",
    "function_run_prompt",
    "marker_current_set"
   ],
@@ -13995,7 +13994,8 @@
    "data_function_current_get",
    "function_current_set",
    "data_app_current_get",
-   "user_repo_path"
+   "user_repo_path",
+   "function_open_app"
   ],
   "user_repo_get": [
    "user_repo_get",
@@ -18830,7 +18830,7 @@
   "function_open_app": {
    "async": true,
    "identifiers": [
-    "data_path",
+    "user_repo_path",
     "data_set",
     "app_name_prefixed",
     "function_open",
