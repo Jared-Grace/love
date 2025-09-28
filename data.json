@@ -2812,7 +2812,8 @@
    "html_update_generic",
    "file_write_buffer",
    "file_write_generic",
-   "git_history_delete"
+   "git_history_delete",
+   "data_path"
   ],
   "ast": [
    "data_identifiers_file",
@@ -16359,7 +16360,8 @@
    "function_current_set",
    "function_aliases_restore",
    "data_files_update",
-   "data_backup"
+   "data_backup",
+   "data_path"
   ],
   "d_path": [
    "data_file_update",
@@ -31428,6 +31430,13 @@
     "marker",
     "data_backup",
     "v2"
+   ]
+  },
+  "data_path": {
+   "async": false,
+   "identifiers": [
+    "data_path",
+    "f_path"
    ]
   }
  },
