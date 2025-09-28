@@ -4,6 +4,8 @@ import { marker } from "./marker.mjs";
 export async function user_repo_set(value) {
   marker("1");
   let f_path = file_name_json_folder("gitignore", "user");
-  async function lambda(previous) {}
+  async function lambda(previous) {
+    return value;
+  }
   await data_set(lambda, "repo_current", f_path);
 }
