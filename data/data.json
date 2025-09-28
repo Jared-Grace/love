@@ -5166,7 +5166,6 @@
   ],
   "command_line": [
    "command_line",
-   "command_line_git",
    "command_line_log",
    "command_line_node_g",
    "command_line_schtasks",
@@ -5245,7 +5244,6 @@
    "command_line_generic"
   ],
   "command_line_git_prefix": [
-   "command_line_git",
    "command_line_git_prefix",
    "git_push_schedule_command"
   ],
@@ -14015,6 +14013,9 @@
   ],
   "repo_name": [
    "path_repo"
+  ],
+  "command_line_git_folder": [
+   "command_line_git"
   ]
  },
  "functions": {
@@ -14964,8 +14965,7 @@
   "command_line_git": {
    "async": true,
    "identifiers": [
-    "command_line_git_prefix",
-    "command_line",
+    "command_line_git_folder",
     "command_line_git",
     "command_git",
     "folder"
