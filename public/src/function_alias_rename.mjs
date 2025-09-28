@@ -1,3 +1,4 @@
+import { data_path } from "./data_path.mjs";
 import { each } from "./each.mjs";
 import { object_property_set } from "./object_property_set.mjs";
 import { data_transform } from "./data_transform.mjs";
@@ -18,6 +19,7 @@ export async function function_alias_rename(before, after) {
     each(acronyms, lambda2);
     return aliases;
   }
-  let v = await data_transform("aliases", {}, lambda, data_path());
+  let d_path = data_path();
+  let v = await data_transform("aliases", {}, lambda, d_path);
   return v;
 }
