@@ -5,7 +5,6 @@ import { each_async } from "./each_async.mjs";
 import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_publish_initial(acronym) {
   let repo_name = await repo_acronym_to_name(acronym);
-  return repo_name;
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
   let branch_name = " main";
