@@ -178,6 +178,7 @@
    "function_transform_marker_current",
    "function_transform_marker_empty",
    "function_watch_ending_change",
+   "git_acp_folder",
    "git_filter_repo_install",
    "git_history_delete",
    "git_push_folder",
@@ -338,8 +339,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "git_acp_folder"
+   "whitespace_normalize"
   ],
   "apps_get": [
    "apps_get"
@@ -1189,6 +1189,7 @@
    "js_dollar_new",
    "js_dollar_s",
    "js_expand_generic",
+   "js_function_last_asyncify",
    "js_identifier_unique",
    "js_property_parse_expression_add",
    "js_statement_return_add",
@@ -1205,8 +1206,7 @@
    "reply",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async",
-   "js_function_last_asyncify"
+   "visit_unique_async"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_2",
@@ -3641,6 +3641,7 @@
    "list_add_if_not_includes",
    "list_difference",
    "list_includes",
+   "list_includes_assert",
    "list_intersect",
    "list_remove_all",
    "list_remove_if_exists",
@@ -3918,6 +3919,7 @@
    "js_node_types_includes",
    "js_types_function_includes",
    "list_includes",
+   "list_includes_assert",
    "list_remove_if_exists",
    "marker_down_choices_lambda",
    "string_includes"
@@ -4307,6 +4309,7 @@
    "list_empty_not_is_assert",
    "list_filter",
    "list_get",
+   "list_includes_assert",
    "list_insert_generic",
    "marker_functionize",
    "messenger_reply_playwright",
@@ -5932,12 +5935,12 @@
   "list_difference": [
    "data_file_update_inner",
    "ebible_chapter_text",
+   "js_function_last_asyncify",
    "js_imports_missing",
    "list_difference",
    "marker_functionize",
    "prompt_previous",
-   "visit_unique_async",
-   "js_function_last_asyncify"
+   "visit_unique_async"
   ],
   "list_add_if_not_includes": [
    "data_file_update_inner",
@@ -6266,9 +6269,9 @@
   "ms": [
    "date_diff_hours",
    "date_ms_to_hours",
+   "functions_names",
    "function_aliases_restore",
-   "sleep",
-   "functions_names"
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -8095,8 +8098,10 @@
    "folder_read",
    "folder_read_files",
    "function_run_git",
+   "list_includes_assert",
    "list_wait",
-   "repos_names"
+   "repos_names",
+   "repo_exists_assert"
   ],
   "readdir": [
    "folder_read",
@@ -8294,6 +8299,14 @@
   "functions_log_remove": [
    "functions_log_remove"
   ],
+  "sleep": [
+   "functions_names",
+   "http_sleep",
+   "keyboard_type_delay",
+   "retry",
+   "s5_inner",
+   "sleep"
+  ],
   "functions_path": [
    "functions_names",
    "functions_path",
@@ -8307,13 +8320,6 @@
    "functions_names",
    "git_push_schedule_command",
    "path_resolve"
-  ],
-  "sleep": [
-   "http_sleep",
-   "keyboard_type_delay",
-   "retry",
-   "sleep",
-   "functions_names"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -9531,8 +9537,10 @@
   "repo_name": [
    "function_new_declaration",
    "function_run_git",
+   "list_includes_assert",
    "repo_acronym_to_name",
    "repo_acronym_to_path",
+   "repo_exists_assert",
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
@@ -9822,7 +9830,8 @@
    "function_run_git",
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite",
-   "repos_names"
+   "repos_names",
+   "repo_exists_assert"
   ],
   "function_run_log": [
    "function_run_git",
@@ -11325,6 +11334,12 @@
    "js_await_add_inner",
    "js_function_last_asyncify"
   ],
+  "visited": [
+   "js_await_add",
+   "js_await_add_inner",
+   "js_call_fill",
+   "js_function_last_asyncify"
+  ],
   "js_visit_type_each_async": [
    "js_await_add_inner",
    "js_call_fill",
@@ -11537,6 +11552,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
+   "s5_inner",
    "search_generic"
   ],
   "js_identifier_is": [
@@ -12166,6 +12182,12 @@
    "js_function_last_asyncify",
    "js_stack_last_function",
    "marker_param_add"
+  ],
+  "difference": [
+   "js_function_last_asyncify",
+   "list_difference",
+   "list_get_end",
+   "prompt_previous"
   ],
   "list_adder_unique": [
    "js_identifiers",
@@ -12865,11 +12887,9 @@
   "index_from_end": [
    "list_get_end"
   ],
-  "difference": [
-   "list_get_end",
-   "prompt_previous",
-   "list_difference",
-   "js_function_last_asyncify"
+  "list_includes_assert": [
+   "list_includes_assert",
+   "repo_exists_assert"
   ],
   "list_index_is": [
    "list_index_is",
@@ -13839,6 +13859,11 @@
   "path_repo": [
    "repo_acronym_to_path"
   ],
+  "repo_exists_assert": [
+   "repo_exists_assert",
+   "user_repo_get",
+   "user_repo_set"
+  ],
   "wait": [
    "retry"
   ],
@@ -13948,6 +13973,13 @@
   ],
   "asciiRoman": [
    "roman_to_integer"
+  ],
+  "s5": [
+   "s5"
+  ],
+  "s5_inner": [
+   "s5_inner",
+   "sandbox_5"
   ],
   "sandbox": [
    "sandbox"
@@ -14256,19 +14288,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "visited": [
-   "js_await_add",
-   "js_await_add_inner",
-   "js_call_fill",
-   "js_function_last_asyncify"
-  ],
-  "repo_exists_assert": [
-   "user_repo_get",
-   "user_repo_set"
-  ],
-  "s5_inner": [
-   "sandbox_5"
   ]
  },
  "functions": {
@@ -18126,7 +18145,7 @@
    ]
   },
   "function_acronym_to_names": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "object_property_get",
     "function_names_to_acronyms",
@@ -18880,7 +18899,7 @@
    ]
   },
   "function_names_to_acronyms": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "object_invert",
     "function_name_to_acronym",
@@ -25094,6 +25113,17 @@
     "includes"
    ]
   },
+  "list_includes_assert": {
+   "async": false,
+   "identifiers": [
+    "assert",
+    "list_includes",
+    "list_includes_assert",
+    "all",
+    "repo_name",
+    "includes"
+   ]
+  },
   "list_index_is": {
    "async": false,
    "identifiers": [
@@ -28240,6 +28270,16 @@
     "folder"
    ]
   },
+  "repo_exists_assert": {
+   "async": true,
+   "identifiers": [
+    "list_includes_assert",
+    "repos_names",
+    "repo_exists_assert",
+    "repo_name",
+    "all"
+   ]
+  },
   "repo_path": {
    "async": false,
    "identifiers": [
@@ -28360,6 +28400,20 @@
     "n",
     "rounded",
     "Math"
+   ]
+  },
+  "s5": {
+   "async": false,
+   "identifiers": [
+    "s5"
+   ]
+  },
+  "s5_inner": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "s5_inner",
+    "sleep"
    ]
   },
   "sandbox": {
