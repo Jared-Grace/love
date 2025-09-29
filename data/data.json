@@ -7681,8 +7681,7 @@
    "path_resolve",
    "server",
    "watch",
-   "repos_paths_map_unordered_combine",
-   "function_exists_inner"
+   "repos_paths_map_unordered_combine"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -14326,8 +14325,7 @@
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
-   "functions_names",
-   "function_exists_inner"
+   "functions_names"
   ]
  },
  "functions": {
@@ -18748,9 +18746,7 @@
     "exists",
     "to",
     "e",
-    "result",
-    "path",
-    "mapper"
+    "result"
    ]
   },
   "function_exists_strict": {
