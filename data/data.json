@@ -18753,10 +18753,10 @@
     "to",
     "e",
     "result",
-    "filtered",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "filtered",
+    "list"
    ]
   },
   "function_exists_strict": {
