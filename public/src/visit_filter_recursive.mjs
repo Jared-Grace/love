@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
@@ -10,14 +11,16 @@ export function visit_filter_recursive(
   on_each,
   stack,
 ) {
-  if (!filter(node)) {
+  let a = filter(node);
+  if (not(a)) {
     return;
   }
   list_add(stack, node);
   let children = children_get(node);
-  each(children, (c) => {
+  function lambda(c) {
     visit_filter_recursive(c, children_get, filter, on_each, stack);
-  });
+  }
+  each(children, lambda);
   let copy = list_copy(stack);
   on_each({
     node,
