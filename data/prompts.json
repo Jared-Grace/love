@@ -2294,6 +2294,7 @@
   "s5",
   "s repos",
   "is repos_names",
-  "r repos_path_each_unordered repos_paths_map_unordered"
+  "r repos_path_each_unordered repos_paths_map_unordered",
+  "as squa"
  ]
 }
