@@ -23210,7 +23210,7 @@
    ]
   },
   "js_imports_missing": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "js_declaration_single_name",
     "list_intersect",
