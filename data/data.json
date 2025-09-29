@@ -21548,6 +21548,7 @@
     "object_replace",
     "js_call_fill",
     "ast",
+    "functions",
     "lambda",
     "v",
     "node",
@@ -21557,8 +21558,7 @@
     "unaliased",
     "valid",
     "parsed",
-    "async_is",
-    "functions"
+    "async_is"
    ]
   },
   "js_call_function_if": {
