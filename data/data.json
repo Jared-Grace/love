@@ -9843,8 +9843,7 @@
    "function_run_line_git"
   ],
   "each_folder": [
-   "function_run_git",
-   "repos_paths_map_unordered"
+   "function_run_git"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -14305,6 +14304,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "lambda$folder": [
+   "repos_paths_map_unordered"
   ]
  },
  "functions": {
@@ -28254,7 +28256,7 @@
     "repo_path",
     "repos_names",
     "repos_paths_map_unordered",
-    "each_folder",
+    "lambda$folder",
     "all",
     "lambda",
     "repo_name",
