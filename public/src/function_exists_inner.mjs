@@ -1,3 +1,4 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { true_is } from "./true_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
@@ -13,4 +14,5 @@ export async function function_exists_inner(u) {
   return e;
   let bools = await repos_paths_map_unordered_combine(f_path, file_exists);
   let filtered = list_filter(bools, true_is);
+  let v = list_multiple_is(list);
 }
