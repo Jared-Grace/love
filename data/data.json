@@ -825,8 +825,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "repos_paths_map_unordered"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -5032,7 +5031,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "repos_paths_map_unordered"
   ],
   "catch_call": [
    "catch_call",
@@ -28259,7 +28259,7 @@
     "lambda",
     "repo_name",
     "folder",
-    "v"
+    "result"
    ]
   },
   "repo_acronym_get": {
