@@ -12315,8 +12315,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "search_generic",
-   "js_function_last_asyncify",
-   "js_await_add"
+   "js_function_last_asyncify"
   ],
   "e2": [
    "js_log_remove",
@@ -21273,7 +21272,6 @@
   "js_await_add": {
    "async": true,
    "identifiers": [
-    "log",
     "not",
     "object_replace",
     "js_await",
