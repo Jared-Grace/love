@@ -1481,7 +1481,8 @@
    "watch",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths"
+   "functions_paths",
+   "functions_names_to_paths"
   ],
   "ast": [
    "app_new_step_2",
@@ -2017,7 +2018,8 @@
    "repos_gitignore_overwrite",
    "task_new",
    "functions_paths",
-   "function_name_folder_to_path"
+   "function_name_folder_to_path",
+   "functions_names_to_paths"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4241,7 +4243,8 @@
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
    "function_name_to_path_search",
-   "function_name_folder_to_path"
+   "function_name_folder_to_path",
+   "functions_names_to_paths"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -29928,6 +29931,9 @@
     "mapper",
     "folder",
     "f_names",
+    "lambda",
+    "f_name",
+    "joined",
     "dictionary",
     "squashed"
    ]
