@@ -1591,7 +1591,8 @@
    "marker_move",
    "marker_top",
    "promise_not_is",
-   "task_new"
+   "task_new",
+   "js_function_last_asyncify"
   ],
   "declaration": [
    "app_new_step_2",
@@ -22767,6 +22768,7 @@
     "js_function_last_asyncify",
     "stack",
     "async_is",
+    "ast",
     "f",
     "property_name",
     "async"
