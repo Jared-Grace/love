@@ -6023,9 +6023,7 @@
    "marker_next_delete",
    "marker_param_add",
    "marker_remove",
-   "marker_rename",
-   "marker_top",
-   "task_new"
+   "marker_rename"
   ],
   "f_name_current": [
    "data_function_current_get",
@@ -14218,7 +14216,9 @@
   "function_current_get": [
    "function_current_get",
    "function_transform_current",
-   "marker_expand"
+   "marker_expand",
+   "marker_top",
+   "task_new"
   ]
  },
  "functions": {
@@ -26889,7 +26889,7 @@
     "js_marker_insert",
     "js_declaration_single_block_body",
     "js_imports_missing_add",
-    "data_function_current_get",
+    "function_current_get",
     "function_transform",
     "marker",
     "js_markers",
@@ -29141,7 +29141,7 @@
     "js_call_insert",
     "function_transform",
     "function_new",
-    "data_function_current_get",
+    "function_current_get",
     "todo",
     "task_new",
     "task_name",
