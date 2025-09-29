@@ -2641,7 +2641,8 @@
    "marker_previous_index",
    "object_copy",
    "object_merge",
-   "object_replace"
+   "object_replace",
+   "function_exists_inner"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -6510,7 +6511,8 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace"
+   "string_replace",
+   "function_exists_inner"
   ],
   "to": [
    "each_range_from",
@@ -6535,7 +6537,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "function_exists_inner"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -14356,6 +14359,9 @@
   ],
   "f_path2": [
    "function_exists_inner"
+  ],
+  "to2": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18767,6 +18773,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "object_merge",
     "object_property_set_exists_not",
     "list_single",
     "true_is",
@@ -18790,6 +18797,9 @@
     "ti2",
     "filtered",
     "multiple",
+    "to2",
+    "to",
+    "from",
     "result",
     "only",
     "f_path2"
