@@ -2329,6 +2329,7 @@
   "urg",
   "n reduce",
   "s pair",
-  "functions_names_to_paths"
+  "functions_names_to_paths",
+  "is function_name_to_path_import"
  ]
 }
