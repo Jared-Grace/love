@@ -2258,7 +2258,7 @@
   "au functions_names",
   "is js_await_add_inner",
   "fs js_await_add_inner",
-  "pnd visited",
-  "fs js_function_last_asyncify"
+  "fs js_function_last_asyncify",
+  "pnd visited"
  ]
 }
