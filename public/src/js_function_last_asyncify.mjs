@@ -33,7 +33,7 @@ export async function js_function_last_asyncify(
       object_property_set(value, property_name, true);
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
-      let list2 = list_difference(list, other);
+      let difference = list_difference(properties, visited);
       async function lambda(f_name) {
         async function lambda2(ast) {
           list_add(visited, name);
@@ -42,7 +42,7 @@ export async function js_function_last_asyncify(
         }
         let output = await function_transform(f_name, lambda2);
       }
-      await each_async(properties, lambda);
+      await each_async(difference, lambda);
     }
   }
 }
