@@ -337,7 +337,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "sandbox_5"
+   "sandbox_5",
+   "functions_names"
   ],
   "apps_get": [
    "apps_get"
@@ -17973,6 +17974,7 @@
   "functions_names": {
    "async": false,
    "identifiers": [
+    "marker",
     "functions_path",
     "folder_read_files",
     "function_name_extension",
