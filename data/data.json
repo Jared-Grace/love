@@ -18102,7 +18102,7 @@
    ]
   },
   "function_acronym_to_name": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "list_single",
     "list_size_1",
