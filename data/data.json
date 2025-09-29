@@ -824,8 +824,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "function_exists_inner"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2144,8 +2143,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "true_is",
-   "function_exists_inner"
+   "true_is"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -2630,7 +2628,6 @@
    "ebible_verses_upload",
    "ebible_version_books_testament",
    "firebase_upload_generic",
-   "function_exists_inner",
    "function_imports_missing",
    "function_parse",
    "function_parse_declaration_inner",
@@ -4225,8 +4222,7 @@
    "sandbox_2",
    "watch",
    "functions_names",
-   "repos_paths_map_unordered_combine",
-   "function_exists_inner"
+   "repos_paths_map_unordered_combine"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4403,7 +4399,6 @@
    "data_all",
    "file_delete_if_exists",
    "file_exists",
-   "function_exists_inner",
    "http_local"
   ],
   "assert_file_exists_not": [
@@ -4734,8 +4729,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "function_exists_inner"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -4790,8 +4784,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "function_exists_inner"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -18780,29 +18773,22 @@
     "list_multiple_is",
     "list_filter",
     "repos_paths_map_unordered_combine",
-    "object_merge",
-    "file_exists",
     "function_exists_inner",
     "u",
     "f_path",
-    "exists",
-    "to",
-    "e",
-    "lambda",
-    "joined",
-    "v",
     "mapped",
+    "lambda",
     "lambda2",
     "m",
     "exists2",
     "ti2",
     "filtered",
     "multiple",
+    "exists",
+    "to",
     "only",
     "f_path2",
-    "object",
-    "property_name",
-    "value"
+    "e"
    ]
   },
   "function_exists_strict": {
