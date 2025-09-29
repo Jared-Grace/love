@@ -2292,7 +2292,6 @@
   "functions_names",
   "fns",
   "np",
-  "n test",
   "s repos",
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
@@ -2307,6 +2306,8 @@
   "p",
   "function_exists sb",
   "u rs",
-  "urs k"
+  "urs k",
+  "n test",
+  "s exists"
  ]
 }
