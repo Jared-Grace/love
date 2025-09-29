@@ -22793,9 +22793,9 @@
     "result",
     "s",
     "properties",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ]
   },
   "js_identifiers": {
