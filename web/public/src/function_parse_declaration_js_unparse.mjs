@@ -10,6 +10,6 @@ export async function function_parse_declaration_js_unparse(f_name) {
     properties,
   });
   console.log("here");
-  let output = await js_unparse(declaration);
+  let output = js_unparse(declaration);
   return output;
 }
