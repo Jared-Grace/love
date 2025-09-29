@@ -35,5 +35,5 @@ export async function function_exists_inner(u) {
     let f_path2 = object_property_get(only, "f_path");
     object_property_set_exists_not(to, "f_path", f_path2);
   }
-  return e;
+  return to;
 }
