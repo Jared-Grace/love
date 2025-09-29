@@ -8,6 +8,7 @@ import { list_filter } from "./list_filter.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { file_exists } from "./file_exists.mjs";
 export async function function_exists_inner(u) {
+  let { f_path } = u;
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {
