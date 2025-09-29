@@ -1038,7 +1038,6 @@
   "de fs",
   "o fs",
   "function_imports_missing folder_read",
-  "functions_names",
   "s data,update",
   "fws data_file_update all",
   "r data_file_update_all data_files_update",
@@ -2252,6 +2251,7 @@
   "s sleep",
   "d",
   "o s5",
-  "s fill"
+  "s fill",
+  "functions_names"
  ]
 }
