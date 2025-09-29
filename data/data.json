@@ -827,8 +827,7 @@
    "whitespace_normalize",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths",
-   "functions_names_to_paths"
+   "functions_paths"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2019,8 +2018,7 @@
    "repos_gitignore_overwrite",
    "task_new",
    "functions_paths",
-   "function_name_folder_to_path",
-   "functions_names_to_paths"
+   "function_name_folder_to_path"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -2334,8 +2332,7 @@
    "watch",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths",
-   "functions_names_to_paths"
+   "functions_paths"
   ],
   "item": [
    "app_replace_home",
@@ -2856,8 +2853,7 @@
    "range_from",
    "repos_gitignore_overwrite",
    "sandbox_4_a",
-   "functions_paths",
-   "functions_names_to_paths"
+   "functions_paths"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -4137,8 +4133,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "functions_names_to_paths"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -29932,18 +29927,13 @@
     "marker",
     "functions_names_from_path",
     "function_name_folder_to_path",
-    "list_map",
     "functions_names_to_paths",
     "lambda",
     "item",
-    "dictionary",
-    "list",
     "mapper",
     "folder",
     "f_names",
-    "lambda2",
-    "f_name",
-    "v",
+    "dictionary",
     "mapped",
     "squashed"
    ]
