@@ -4504,8 +4504,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "function_name_to_path_import"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -11652,8 +11651,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "function_name_to_path_import"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -19224,7 +19222,6 @@
   "function_name_to_path_import": {
    "async": false,
    "identifiers": [
-    "log",
     "js_code_string",
     "object_property_get",
     "path_join",
@@ -19236,8 +19233,7 @@
     "previous",
     "previous2",
     "joined",
-    "c",
-    "message"
+    "c"
    ]
   },
   "function_name_to_path_unalias": {
