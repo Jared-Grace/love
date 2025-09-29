@@ -2242,11 +2242,11 @@
   "s declar,sing",
   "ps",
   "d",
-  "is functions_names",
   "s declar,name",
   "o function_names",
   "o functions_name",
   "o s5",
-  "o functions_names"
+  "o functions_names",
+  "is functions_names"
  ]
 }
