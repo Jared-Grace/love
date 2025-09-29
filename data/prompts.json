@@ -2128,7 +2128,6 @@
   "s list,repl",
   "s dollar",
   "u lr",
-  "o s5",
   "s5",
   "n sandbox_5_a",
   "sandbox_5",
@@ -2243,6 +2242,7 @@
   "as current",
   "fs js_function_last_asyncify",
   "pnd ast",
-  "s declar,sing"
+  "s declar,sing",
+  "o s5"
  ]
 }
