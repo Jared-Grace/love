@@ -3,74 +3,9 @@
  "error_attention": null,
  "marker_current": "1",
  "identifiers": {
-  "add": [
-   "add",
-   "add_1",
-   "range_from"
-  ],
-  "left": [
-   "add",
-   "add_1",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "app_replace_rule_valid",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "html_loading",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine"
-  ],
-  "right": [
-   "add",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine",
-   "log_json",
-   "log_unparse_try"
-  ],
-  "sum": [
-   "add",
-   "add_1"
-  ],
-  "add_1": [
-   "add_1",
-   "marker_below"
-  ],
-  "folder_public": [
-   "apps_get",
-   "folder_public",
-   "folder_public_combine",
-   "server"
-  ],
-  "folder_read_files": [
-   "apps_get",
-   "folder_read_files",
-   "functions_names_from_path"
-  ],
   "marker": [
+   "t2",
+   "test2",
    "apps_get",
    "app_code",
    "app_html_open",
@@ -152,6 +87,8 @@
    "functions_combine",
    "functions_log_remove",
    "functions_names",
+   "functions_names_to_paths",
+   "functions_paths",
    "functions_search",
    "function_aliases_restore",
    "function_alias_add",
@@ -313,6 +250,7 @@
    "python_install",
    "range",
    "range_from",
+   "reduce",
    "repos_gitignore_overwrite",
    "repos_names",
    "repos_paths_map_unordered",
@@ -340,10 +278,85 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "functions_names_to_paths",
-   "reduce",
-   "t3"
+   "whitespace_normalize"
+  ],
+  "t2": [
+   "t2"
+  ],
+  "test": [
+   "test",
+   "js_if_else_if_combine"
+  ],
+  "test2": [
+   "test2",
+   "js_if_else_if_combine"
+  ],
+  "add": [
+   "add",
+   "add_1",
+   "range_from"
+  ],
+  "left": [
+   "add",
+   "add_1",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "app_replace_rule_valid",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "html_loading",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine"
+  ],
+  "right": [
+   "add",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine",
+   "log_json",
+   "log_unparse_try"
+  ],
+  "sum": [
+   "add",
+   "add_1"
+  ],
+  "add_1": [
+   "add_1",
+   "marker_below"
+  ],
+  "folder_public": [
+   "apps_get",
+   "folder_public",
+   "folder_public_combine",
+   "server"
+  ],
+  "folder_read_files": [
+   "apps_get",
+   "folder_read_files",
+   "functions_names_from_path"
   ],
   "apps_get": [
    "apps_get"
@@ -628,6 +641,7 @@
    "folder_read_async",
    "folder_read_files",
    "functions_log_remove",
+   "functions_paths",
    "functions_transform",
    "function_acronym_to_name",
    "function_aliases_restore",
@@ -639,10 +653,12 @@
    "function_current_set",
    "function_current_set_task_new_simple",
    "function_dependencies",
+   "function_exists_inner",
    "function_identifier_replace",
    "function_identifier_replace_ending_remove",
    "function_identifier_replace_suffix_add",
    "function_name_to_path",
+   "function_name_to_path_search",
    "function_name_unalias",
    "function_new_app_screen",
    "function_new_transform",
@@ -826,10 +842,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "functions_paths"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1287,6 +1300,7 @@
    "functions_combine",
    "functions_log_remove",
    "functions_names_from_path",
+   "functions_names_to_paths",
    "functions_transform",
    "function_aliases_restore",
    "function_aliases_search",
@@ -1299,8 +1313,10 @@
    "function_copy",
    "function_current_set",
    "function_dependencies",
+   "function_exists_inner",
    "function_identifier_replace",
    "function_imports_add",
+   "function_name_to_path_search",
    "function_new_js_inner",
    "function_open_app",
    "function_params_consolidate",
@@ -1459,6 +1475,7 @@
    "puppeteer_hrefs",
    "puppeteer_matches",
    "range_from",
+   "reduce",
    "reply",
    "reply_sequence",
    "reply_test",
@@ -1480,12 +1497,7 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "functions_paths",
-   "functions_names_to_paths",
-   "reduce"
+   "watch"
   ],
   "ast": [
    "app_new_step_2",
@@ -1756,6 +1768,9 @@
    "function_aliases_search",
    "function_alias_add_generic",
    "function_alias_rename",
+   "function_exists_inner",
+   "function_name_to_path_import",
+   "function_name_to_path_search",
    "function_rename_identifiers",
    "html_component_element_get",
    "js_assign_combine",
@@ -1817,10 +1832,7 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "function_name_to_path_import"
+   "repo_acronym_to_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -1926,6 +1938,8 @@
    "firebase_deploy_function_destination_version",
    "firebase_storage_function_run",
    "functions_combine",
+   "functions_names_to_paths",
+   "functions_paths",
    "functions_search_open",
    "functions_transform",
    "function_alias_add",
@@ -1950,6 +1964,7 @@
    "function_imports_missing",
    "function_imports_missing_add",
    "function_list_generate",
+   "function_name_folder_to_path",
    "function_name_to_acronym",
    "function_name_to_base",
    "function_name_to_parts",
@@ -2020,10 +2035,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "functions_paths",
-   "function_name_folder_to_path",
-   "functions_names_to_paths"
+   "task_new"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -2085,6 +2097,7 @@
    "firebase_storage_download_property",
    "function_aliases_search",
    "function_alias_add_generic",
+   "function_name_to_path_import",
    "global_function_async",
    "global_function_property_async",
    "html_attribute_set",
@@ -2151,14 +2164,13 @@
    "string_is_assert",
    "string_is_assert_json",
    "string_is_assert_message",
+   "true_is",
    "undefined_is",
    "undefined_not_is_assert",
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "true_is",
-   "function_name_to_path_import"
+   "watch"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -2268,10 +2280,13 @@
    "ebible_verses",
    "folder_read_async",
    "functions_combine",
+   "functions_paths",
    "functions_transform",
    "function_alias_rename",
    "function_dependencies",
+   "function_exists_inner",
    "function_identifier_replace",
+   "function_name_to_path_search",
    "function_params_consolidate",
    "function_rename_identifiers",
    "function_transform_marker_specified",
@@ -2335,10 +2350,7 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "functions_paths"
+   "watch"
   ],
   "item": [
    "app_replace_home",
@@ -2644,7 +2656,10 @@
    "ebible_verses_upload",
    "ebible_version_books_testament",
    "firebase_upload_generic",
+   "functions_names_to_paths",
+   "function_exists_inner",
    "function_imports_missing",
+   "function_name_to_path_unalias",
    "function_parse",
    "function_parse_declaration_inner",
    "function_transform_marker_arg",
@@ -2656,10 +2671,7 @@
    "marker_previous_index",
    "object_copy",
    "object_merge",
-   "object_replace",
-   "function_exists_inner",
-   "function_name_to_path_unalias",
-   "functions_names_to_paths"
+   "object_replace"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -2789,9 +2801,9 @@
    "object_merge_generic",
    "object_properties_delete",
    "object_properties_delete_all",
+   "reduce",
    "search_generic",
-   "visit_filter_recursive",
-   "reduce"
+   "visit_filter_recursive"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -2828,6 +2840,7 @@
    "ebible_version_books_testament",
    "functions_format",
    "functions_names_from_path",
+   "functions_paths",
    "functions_transform",
    "function_dependencies_code",
    "function_name_to_acronym",
@@ -2859,8 +2872,7 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "functions_paths"
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -2941,8 +2953,11 @@
    "ebible_version_books_testament_new",
    "ebible_version_books_testament_old",
    "functions_format",
+   "functions_paths",
    "functions_transform",
    "function_dependencies_code",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "git_publish_initial",
    "html_parse_find_a_href_starts_with",
    "html_parse_find_list_href_text",
@@ -2968,12 +2983,9 @@
    "range_from",
    "reply",
    "repos_gitignore_overwrite",
-   "sandbox_2",
-   "sandbox_4_a",
    "repos_paths_map_unordered",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "functions_paths"
+   "sandbox_2",
+   "sandbox_4_a"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -3469,10 +3481,9 @@
   ],
   "list_squash": [
    "app_reply_main",
+   "functions_paths",
    "list_map_squash",
    "list_squash",
-   "functions_names",
-   "functions_paths",
    "repos_paths_map_unordered_combine_squash"
   ],
   "bible_verses_encouragement": [
@@ -4135,14 +4146,14 @@
    "object_invert",
    "object_merge_generic",
    "object_properties_delete_all",
+   "reduce",
    "reply",
    "sandbox",
    "sandbox_2",
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "reduce"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -4178,11 +4189,11 @@
   ],
   "squashed": [
    "app_reply_main",
-   "list_squash",
    "functions_names",
+   "functions_names_to_paths",
    "functions_paths",
-   "repos_paths_map_unordered_combine_squash",
-   "functions_names_to_paths"
+   "list_squash",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -4230,8 +4241,14 @@
    "firebase_storage_download_path",
    "firebase_storage_function_run",
    "folder_user_combine",
+   "functions_names",
+   "functions_names_to_paths",
    "functions_path",
+   "function_exists_inner",
    "function_import",
+   "function_name_folder_to_path",
+   "function_name_to_path_import",
+   "function_name_to_path_search",
    "git_push_folder",
    "html_name_to_path_dev",
    "http_firebase_file_path",
@@ -4247,15 +4264,9 @@
    "messenger_reply",
    "path_join",
    "path_repo_combine",
-   "sandbox_2",
-   "watch",
-   "functions_names",
    "repos_paths_map_unordered_combine",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "function_name_folder_to_path",
-   "functions_names_to_paths",
-   "function_name_to_path_import"
+   "sandbox_2",
+   "watch"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4431,9 +4442,9 @@
    "data_all",
    "file_delete_if_exists",
    "file_exists",
-   "http_local",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "http_local"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -5024,6 +5035,10 @@
    "functions_search",
    "functions_search_open",
    "function_aliases_search",
+   "function_exists_inner",
+   "function_exists_strict",
+   "function_name_to_path_search",
+   "function_name_to_path_unalias",
    "function_new_js_inner",
    "function_params_consolidate",
    "function_params_new",
@@ -5066,21 +5081,15 @@
    "object_property_exists_assert",
    "object_property_exists_not",
    "object_property_exists_not_assert",
+   "repos_paths_map_unordered",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash",
    "retry",
    "search_generic",
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "repos_paths_map_unordered",
-   "functions_names",
-   "repos_paths_map_unordered_combine",
-   "function_exists_inner",
-   "function_name_to_path_unalias",
-   "function_exists_strict",
-   "function_name_to_path_search",
-   "functions_paths",
-   "repos_paths_map_unordered_combine_squash"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -5388,6 +5397,10 @@
    "firebase_storage_download_path",
    "folder_user",
    "folder_user_combine",
+   "functions_names_to_paths",
+   "functions_paths",
+   "function_name_folder_to_path",
+   "function_name_to_path",
    "function_run_git",
    "git_acp",
    "git_acp_call",
@@ -5399,13 +5412,9 @@
    "git_push",
    "git_push_folder",
    "repos_paths_map_unordered",
-   "repo_acronym_to_path",
-   "sandbox_2",
    "repos_paths_map_unordered_combine",
-   "function_name_to_path",
-   "functions_paths",
-   "function_name_folder_to_path",
-   "functions_names_to_paths"
+   "repo_acronym_to_path",
+   "sandbox_2"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5509,6 +5518,7 @@
    "counter",
    "ebible_languages_to_bible_folders",
    "function_aliases_restore",
+   "function_name_to_path_import",
    "html_parse_classes_preview",
    "html_parse_descendants_classes",
    "js_calls_to_each",
@@ -5517,8 +5527,7 @@
    "messenger_reply_messages",
    "sandbox_2",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "function_name_to_path_import"
+   "visit_filter_recursive_async"
   ],
   "css_class_prefix_combine": [
    "css_class_prefix_combine",
@@ -5562,6 +5571,7 @@
    "function_exists_inner",
    "function_format",
    "function_import",
+   "function_name_to_path_search",
    "function_new_declaration",
    "function_open",
    "function_open_editor",
@@ -5578,8 +5588,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set",
-   "function_name_to_path_search"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -5624,6 +5633,7 @@
    "function_delete_if_exists",
    "function_exists_inner",
    "function_list_generate",
+   "function_name_to_path_search",
    "function_name_unalias",
    "function_params_new",
    "git_push_schedule_check",
@@ -5633,8 +5643,7 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "function_name_to_path_search"
+   "object_property_lambda_async"
   ],
   "data": [
    "data_all",
@@ -5728,6 +5737,8 @@
    "folder_user",
    "folder_user_combine",
    "function_import",
+   "function_name_folder_to_path",
+   "function_name_to_path_import",
    "git_push_folder",
    "html_name_to_path_dev",
    "html_update_generic",
@@ -5736,13 +5747,11 @@
    "local_function_path",
    "path_join",
    "path_repo_combine",
+   "repos_paths_map_unordered_combine",
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server",
-   "repos_paths_map_unordered_combine",
-   "function_name_folder_to_path",
-   "function_name_to_path_import"
+   "server"
   ],
   "file_copy": [
    "data_backup",
@@ -5803,6 +5812,7 @@
    "folder_previous",
    "function_aliases_restore",
    "function_current_set",
+   "function_name_to_path_import",
    "function_open_app",
    "function_run_line_parse",
    "git_history_delete",
@@ -5817,8 +5827,7 @@
    "repo_acronym_set",
    "repo_path",
    "server",
-   "user_repo_set",
-   "function_name_to_path_import"
+   "user_repo_set"
   ],
   "data_copy": [
    "data_copy",
@@ -5897,6 +5906,7 @@
    "functions_search_open",
    "function_params_consolidate",
    "function_params_new",
+   "function_parse_declaration_js_unparse",
    "js_declaration_params_names_node",
    "js_dollar_choice_arguments_names",
    "js_dollar_new",
@@ -5909,8 +5919,7 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run",
-   "function_parse_declaration_js_unparse"
+   "tasks_run"
   ],
   "data_file_update": [
    "data_file_update",
@@ -5924,6 +5933,8 @@
    "function_alias_change",
    "function_alias_rename",
    "function_alias_replace",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "html_disable_set",
    "js_arrow_to_function",
    "js_assign_combine",
@@ -5961,9 +5972,7 @@
    "object_property_set",
    "object_property_set_exists_not",
    "search_generic",
-   "watch",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "watch"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -6162,21 +6171,21 @@
   "function_name_to_path": [
    "data_identifiers_search",
    "functions_search",
+   "function_copy",
    "function_delete",
    "function_name_to_path",
+   "function_name_to_path_search",
    "function_new_declaration",
    "function_parse_strict",
-   "js_outside_move",
-   "function_name_to_path_search",
-   "function_copy"
+   "js_outside_move"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
+   "functions_names_to_paths",
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic",
-   "functions_names_to_paths"
+   "search_generic"
   ],
   "data_identifiers_search": [
    "data_identifiers_search",
@@ -6331,7 +6340,6 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "s5_inner",
    "sleep"
   ],
   "hours": [
@@ -6473,6 +6481,7 @@
    "functions_search_open",
    "function_aliases_search",
    "function_params_new",
+   "function_parse_declaration_js_unparse",
    "js_function_last_asyncify",
    "js_visit_children_get",
    "messenger_reply",
@@ -6480,8 +6489,7 @@
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run",
-   "function_parse_declaration_js_unparse"
+   "tasks_run"
   ],
   "each_object": [
    "each_object",
@@ -6560,6 +6568,7 @@
    "each_range_from_async",
    "ebible_version_books_testament",
    "function_imports_missing",
+   "function_name_to_path_unalias",
    "function_parse",
    "function_parse_declaration",
    "function_parse_declaration_inner",
@@ -6578,8 +6587,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "function_name_to_path_unalias"
+   "string_replace"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -6694,6 +6702,8 @@
   "filtered": [
    "ebible_chapters",
    "ebible_verses",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "html_parse_find_a_href_starts_with",
    "js_marker_named_ast",
    "js_stack_filtered",
@@ -6711,9 +6721,7 @@
    "list_filter_starts_with_not_multiple",
    "list_find",
    "messenger_reply",
-   "puppeteer_hrefs_starts_with",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "puppeteer_hrefs_starts_with"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -6830,15 +6838,15 @@
   "dictionary": [
    "ebible_chapter_classes",
    "ebible_chapter_text",
-   "function_names_to_acronyms",
-   "html_parse_classes_preview",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "repos_acronyms_to_names",
    "functions_names_to_paths",
    "function_imports_add",
+   "function_names_to_acronyms",
+   "function_name_to_path_import",
+   "html_parse_classes_preview",
    "js_imports_paths_fix",
-   "function_name_to_path_import"
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "repos_acronyms_to_names"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -6853,9 +6861,9 @@
    "function_aliases_restore",
    "function_exists",
    "function_exists_inner",
+   "function_name_to_path_unalias",
    "string_upper_to",
-   "uuid",
-   "function_name_to_path_unalias"
+   "uuid"
   ],
   "string_take": [
    "ebible_chapter_code_to_book",
@@ -7142,11 +7150,11 @@
   ],
   "list_multiple_is": [
    "ebible_references_parse_lines",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "js_statement_call_get",
    "list_first_second_generic",
-   "list_multiple_is",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "list_multiple_is"
   ],
   "string_split_dash": [
    "ebible_references_parse_lines",
@@ -7224,13 +7232,13 @@
    "folder_public_combine",
    "functions_path",
    "function_alias_add",
+   "function_name_folder_to_path",
    "js_dollar",
    "js_dollar_r",
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash",
-   "function_name_folder_to_path"
+   "string_split_dash"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -7250,10 +7258,10 @@
   "m": [
    "ebible_references_parse_lines",
    "function_aliases_restore",
-   "messenger_reply_unread_click",
-   "reply_test",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "messenger_reply_unread_click",
+   "reply_test"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -7299,6 +7307,8 @@
   ],
   "list_filter": [
    "ebible_verses",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "js_identifiers_named",
    "js_markers",
    "js_marker_named_ast",
@@ -7316,9 +7326,7 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "list_find",
-   "search_generic",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "search_generic"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -7734,18 +7742,16 @@
    "firebase_path_fix",
    "firebase_storage_exists",
    "folder_read_async",
-   "functions_names",
    "functions_names_from_path",
    "function_import",
    "messenger_reply_login",
    "object_property_exists_equals",
    "path_name",
    "path_resolve",
-   "server",
-   "watch",
    "repos_paths_map_unordered_combine",
-   "functions_paths",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "server",
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -7949,12 +7955,12 @@
   "folder_previous": [
    "firebase_service_account",
    "folder_previous",
+   "function_name_to_path_import",
    "git_history_delete",
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server",
-   "function_name_to_path_import"
+   "server"
   ],
   "prefix": [
    "firebase_service_account",
@@ -7982,10 +7988,10 @@
   "only": [
    "firebase_service_account",
    "folder_find_starts_with",
-   "list_find",
-   "list_single",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "list_find",
+   "list_single"
   ],
   "http": [
    "firebase_storage_download",
@@ -8123,12 +8129,12 @@
   ],
   "js_code_string": [
    "folder_current_join_code",
+   "function_name_to_path_import",
    "js_code_string",
    "js_dollar_g",
    "js_dollar_new",
    "js_marker_insert",
-   "marker_assign_replace_string",
-   "function_name_to_path_import"
+   "marker_assign_replace_string"
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
@@ -8288,21 +8294,22 @@
   "f_names": [
    "functions_combine",
    "functions_combine_name",
+   "functions_names",
    "functions_names_from_path",
+   "functions_names_to_paths",
+   "functions_paths",
    "functions_search",
    "function_names_to_acronyms",
    "function_params_consolidate",
    "function_rename_identifiers",
    "js_expand_generic",
    "js_imports_missing",
-   "string_split_comma",
-   "functions_names",
    "repos_paths_map_unordered_combine",
-   "functions_paths",
-   "functions_names_to_paths"
+   "string_split_comma"
   ],
   "function_name_unalias": [
    "functions_combine_name",
+   "function_copy",
    "function_copy_suffix_add",
    "function_import",
    "function_name_to_path_unalias",
@@ -8311,8 +8318,7 @@
    "function_watch_ending_change",
    "function_wrap_suffix_add",
    "js_call_fill",
-   "task_new",
-   "function_copy"
+   "task_new"
   ],
   "string_split_comma": [
    "functions_combine_name",
@@ -8380,36 +8386,24 @@
   "functions_log_remove": [
    "functions_log_remove"
   ],
-  "functions_names_from_path": [
+  "repos_paths_map_unordered_combine_squash": [
    "functions_names",
-   "functions_names_from_path",
-   "functions_paths",
-   "functions_names_to_paths"
-  ],
-  "repos_names": [
-   "repos_acronyms_to_names",
-   "repos_gitignore_overwrite",
-   "repos_names",
-   "repos_paths_map_unordered",
-   "repo_exists_assert"
-  ],
-  "sleep": [
-   "http_sleep",
-   "keyboard_type_delay",
-   "retry",
-   "s5_inner",
-   "sleep"
-  ],
-  "functions_path": [
-   "functions_names",
-   "functions_path",
-   "function_name_to_path",
-   "watch",
+   "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine_squash"
   ],
-  "rns": [
-   "repos_names"
+  "functions_names_from_path": [
+   "functions_names",
+   "functions_names_from_path",
+   "functions_names_to_paths",
+   "functions_paths"
+  ],
+  "mapper": [
+   "functions_names",
+   "functions_names_to_paths",
+   "functions_paths",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "paths": [
    "functions_names_from_path",
@@ -8420,6 +8414,35 @@
    "functions_names_includes",
    "js_call_fill",
    "js_call_function_if"
+  ],
+  "reduce": [
+   "functions_names_to_paths",
+   "reduce"
+  ],
+  "function_name_folder_to_path": [
+   "functions_names_to_paths",
+   "functions_paths",
+   "function_name_folder_to_path",
+   "function_name_to_path"
+  ],
+  "functions_names_to_paths": [
+   "functions_names_to_paths",
+   "function_imports_add",
+   "js_imports_paths_fix"
+  ],
+  "functions_path": [
+   "functions_path",
+   "functions_paths",
+   "function_name_to_path",
+   "repos_paths_map_unordered_combine_squash",
+   "watch"
+  ],
+  "repos_paths_map_unordered_combine": [
+   "functions_paths",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "search_generic": [
    "functions_search",
@@ -8451,6 +8474,8 @@
   "list_single": [
    "functions_search_open",
    "function_acronym_to_name",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "js_declaration_single",
    "js_declare_single",
    "js_imports_declarations",
@@ -8460,24 +8485,22 @@
    "list_find",
    "list_single",
    "marker_rename",
-   "repo_acronym_to_name",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "repo_acronym_to_name"
   ],
   "functions_search_open": [
    "functions_search_open"
   ],
   "list_size_1": [
    "function_acronym_to_name",
+   "function_exists_inner",
+   "function_name_to_path_search",
    "js_declare_single",
    "js_dollar_a",
    "js_dollar_s",
    "js_imports_declarations",
    "list_size_1",
    "list_size_1_assert_message",
-   "marker_rename",
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "marker_rename"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -9036,6 +9059,7 @@
    "function_copy_suffix_add",
    "function_current_set",
    "function_import",
+   "function_name_to_path_search",
    "function_name_to_path_unalias",
    "function_name_unalias",
    "function_parse",
@@ -9046,8 +9070,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "function_name_to_path_search"
+   "task_new"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -9083,6 +9106,17 @@
   "function_auto_path": [
    "function_auto_path",
    "watch"
+  ],
+  "repo_path_combine": [
+   "function_copy",
+   "function_new_declaration",
+   "repo_path_combine"
+  ],
+  "user_repo_get": [
+   "function_copy",
+   "function_new_declaration",
+   "user_repo_get",
+   "user_repo_set"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9120,10 +9154,23 @@
   "unaliased_old": [
    "function_copy"
   ],
-  "f_path_new": [
+  "unaliased_new": [
    "function_copy"
   ],
-  "unaliased_new": [
+  "repo_name": [
+   "function_copy",
+   "function_new_declaration",
+   "list_includes_assert",
+   "repos_paths_map_unordered",
+   "repo_acronym_to_name",
+   "repo_acronym_to_path",
+   "repo_exists_assert",
+   "repo_path",
+   "repo_path_combine",
+   "user_repo_get",
+   "user_repo_set"
+  ],
+  "f_path_new": [
    "function_copy"
   ],
   "function_copy_suffix_add": [
@@ -9290,8 +9337,30 @@
   "function_dependencies_code_copy": [
    "function_dependencies_code_copy"
   ],
+  "true_is": [
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "true_is"
+  ],
   "function_exists_inner": [
    "function_exists_inner"
+  ],
+  "ti2": [
+   "function_exists_inner",
+   "function_name_to_path_search"
+  ],
+  "multiple": [
+   "function_exists_inner",
+   "function_name_to_path_search"
+  ],
+  "f_path2": [
+   "function_exists_inner",
+   "function_name_to_path_search"
+  ],
+  "function_name_to_path_search": [
+   "function_exists_strict",
+   "function_name_to_path_search",
+   "function_name_to_path_unalias"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -9372,9 +9441,9 @@
   ],
   "function_name_to_base": [
    "function_import",
+   "function_name_folder_to_path",
    "function_name_to_base",
-   "html_update_generic",
-   "function_name_folder_to_path"
+   "html_update_generic"
   ],
   "function_import": [
    "function_import",
@@ -9540,6 +9609,9 @@
    "string_split_newline",
    "tasks_run"
   ],
+  "base": [
+   "function_name_folder_to_path"
+  ],
   "list_join_empty": [
    "function_name_to_acronym",
    "list_join_empty"
@@ -9571,6 +9643,9 @@
    "search_generic",
    "string_includes"
   ],
+  "previous2": [
+   "function_name_to_path_import"
+  ],
   "unaliased_actual": [
    "function_name_unalias"
   ],
@@ -9598,17 +9673,6 @@
   "function_new_app_screen": [
    "function_new_app_screen"
   ],
-  "repo_path_combine": [
-   "function_new_declaration",
-   "repo_path_combine",
-   "function_copy"
-  ],
-  "user_repo_get": [
-   "function_new_declaration",
-   "user_repo_get",
-   "function_copy",
-   "user_repo_set"
-  ],
   "js_code_export": [
    "function_new_declaration",
    "js_code_export"
@@ -9635,19 +9699,6 @@
   ],
   "contents_import": [
    "function_new_declaration"
-  ],
-  "repo_name": [
-   "function_new_declaration",
-   "list_includes_assert",
-   "repos_paths_map_unordered",
-   "repo_acronym_to_name",
-   "repo_acronym_to_path",
-   "repo_exists_assert",
-   "repo_path",
-   "repo_path_combine",
-   "user_repo_get",
-   "user_repo_set",
-   "function_copy"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -9915,6 +9966,11 @@
    "function_run_line",
    "function_run_log",
    "tasks_run"
+  ],
+  "repos_paths_map_unordered": [
+   "function_run_git",
+   "repos_paths_map_unordered",
+   "repos_paths_map_unordered_combine"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -10940,6 +10996,12 @@
    "integer_random",
    "keyboard_typing_delay"
   ],
+  "sleep": [
+   "http_sleep",
+   "keyboard_type_delay",
+   "retry",
+   "sleep"
+  ],
   "npm_install": [
    "import_install",
    "npm_install"
@@ -11645,14 +11707,6 @@
   "jin": [
    "js_call_callee_name",
    "js_identifier_not_is"
-  ],
-  "log": [
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "s5_inner",
-   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -12398,12 +12452,6 @@
   "consequent2": [
    "js_if_else_if_combine"
   ],
-  "test": [
-   "js_if_else_if_combine"
-  ],
-  "test2": [
-   "js_if_else_if_combine"
-  ],
   "js_imports_declarations": [
    "js_imports",
    "js_imports_declarations",
@@ -12485,6 +12533,13 @@
   ],
   "js_let_add_task_simple": [
    "js_let_add_task_simple"
+  ],
+  "log": [
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "search_generic"
   ],
   "e2": [
    "js_log_remove",
@@ -13819,10 +13874,6 @@
    "object_property_exists_not_assert",
    "object_property_set_exists_not"
   ],
-  "undefined_is": [
-   "undefined_is",
-   "undefined_not_is_assert_lambda"
-  ],
   "value_set": [
    "object_property_lambda",
    "object_property_lambda_async"
@@ -13883,6 +13934,12 @@
   "rr": [
    "range"
   ],
+  "lambda$before$current": [
+   "reduce"
+  ],
+  "reduced": [
+   "reduce"
+  ],
   "reply_on_match": [
    "reply",
    "reply_on_match"
@@ -13923,6 +13980,13 @@
   "reply_test": [
    "reply_test"
   ],
+  "repos_names": [
+   "repos_acronyms_to_names",
+   "repos_gitignore_overwrite",
+   "repos_names",
+   "repos_paths_map_unordered",
+   "repo_exists_assert"
+  ],
   "repo_acronym_get": [
    "repos_acronyms_to_names",
    "repo_acronym_get"
@@ -13943,10 +14007,11 @@
   "repos_gitignore_overwrite": [
    "repos_gitignore_overwrite"
   ],
-  "repos_paths_map_unordered": [
-   "repos_paths_map_unordered",
-   "function_run_git",
-   "repos_paths_map_unordered_combine"
+  "rns": [
+   "repos_names"
+  ],
+  "lambda$folder": [
+   "repos_paths_map_unordered"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -14080,10 +14145,6 @@
   "s5": [
    "s5"
   ],
-  "s5_inner": [
-   "s5_inner",
-   "sandbox_5"
-  ],
   "sandbox": [
    "sandbox"
   ],
@@ -14111,6 +14172,9 @@
    "string_split_colon",
    "string_split_semicolon",
    "string_split_semicolon_space"
+  ],
+  "s5_inner": [
+   "sandbox_5"
   ],
   "sandbox_5": [
    "sandbox_5"
@@ -14334,6 +14398,13 @@
   "trinity_green": [
    "trinity_green"
   ],
+  "ti": [
+   "true_is"
+  ],
+  "undefined_is": [
+   "undefined_is",
+   "undefined_not_is_assert_lambda"
+  ],
   "AdmZip": [
    "unzip"
   ],
@@ -14344,6 +14415,9 @@
    "unzip"
   ],
   "user_repo_set": [
+   "user_repo_set"
+  ],
+  "repo_name2": [
    "user_repo_set"
   ],
   "uuidv4": [
@@ -14391,88 +14465,29 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "lambda$folder": [
-   "repos_paths_map_unordered"
-  ],
-  "repos_paths_map_unordered_combine": [
-   "repos_paths_map_unordered_combine",
-   "functions_names",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "functions_paths",
-   "repos_paths_map_unordered_combine_squash"
-  ],
-  "mapper": [
-   "repos_paths_map_unordered_combine",
-   "functions_names",
-   "repos_paths_map_unordered_combine_squash",
-   "functions_names_to_paths"
-  ],
-  "true_is": [
-   "true_is",
-   "function_exists_inner",
-   "function_name_to_path_search"
-  ],
-  "multiple": [
-   "function_exists_inner",
-   "function_name_to_path_search"
-  ],
-  "ti": [
-   "true_is"
-  ],
-  "ti2": [
-   "function_exists_inner",
-   "function_name_to_path_search"
-  ],
-  "f_path2": [
-   "function_exists_inner",
-   "function_name_to_path_search"
-  ],
-  "function_name_to_path_search": [
-   "function_name_to_path_unalias",
-   "function_exists_strict",
-   "function_name_to_path_search"
-  ],
-  "function_name_folder_to_path": [
-   "function_name_to_path",
-   "functions_paths",
-   "function_name_folder_to_path",
-   "functions_names_to_paths"
-  ],
-  "base": [
-   "function_name_folder_to_path"
-  ],
-  "repos_paths_map_unordered_combine_squash": [
-   "repos_paths_map_unordered_combine_squash",
-   "functions_names_to_paths"
-  ],
-  "repo_name2": [
-   "user_repo_set"
-  ],
-  "functions_names_to_paths": [
-   "functions_names_to_paths",
-   "function_imports_add",
-   "js_imports_paths_fix"
-  ],
-  "reduce": [
-   "functions_names_to_paths",
-   "reduce"
-  ],
-  "lambda$before$current": [
-   "reduce"
-  ],
-  "reduced": [
-   "reduce"
-  ],
-  "previous2": [
-   "function_name_to_path_import"
-  ],
-  "t3": [
-   "t3"
   ]
  },
  "functions": {
+  "t2": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "t2"
+   ]
+  },
+  "test": {
+   "async": false,
+   "identifiers": [
+    "test"
+   ]
+  },
+  "test2": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "test2"
+   ]
+  },
   "add": {
    "async": false,
    "identifiers": [
@@ -18215,16 +18230,12 @@
   "functions_names": {
    "async": true,
    "identifiers": [
-    "list_squash",
-    "repos_paths_map_unordered_combine",
+    "repos_paths_map_unordered_combine_squash",
     "functions_names_from_path",
     "marker",
-    "functions_path",
     "functions_names",
-    "path",
-    "result",
-    "mapper",
     "squashed",
+    "mapper",
     "joined",
     "f_names"
    ]
@@ -18257,6 +18268,27 @@
     "valid"
    ]
   },
+  "functions_names_to_paths": {
+   "async": true,
+   "identifiers": [
+    "reduce",
+    "list_to_dictionary",
+    "repos_paths_map_unordered_combine_squash",
+    "marker",
+    "functions_names_from_path",
+    "function_name_folder_to_path",
+    "object_merge",
+    "functions_names_to_paths",
+    "mapper",
+    "folder",
+    "f_names",
+    "lambda",
+    "f_name",
+    "joined",
+    "dictionary",
+    "squashed"
+   ]
+  },
   "functions_path": {
    "async": false,
    "identifiers": [
@@ -18270,6 +18302,8 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
+    "repos_paths_map_unordered_combine_squash",
+    "marker",
     "functions_names_from_path",
     "list_squash",
     "repos_paths_map_unordered_combine",
@@ -18277,15 +18311,13 @@
     "functions_path",
     "list_map",
     "functions_paths",
-    "lambda",
+    "mapper",
     "folder",
     "f_names",
     "lambda2",
     "f_name",
     "v",
     "mapped",
-    "path",
-    "result",
     "squashed"
    ]
   },
@@ -19169,6 +19201,19 @@
     "ext"
    ]
   },
+  "function_name_folder_to_path": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "function_name_to_base",
+    "function_name_folder_to_path",
+    "f_name",
+    "folder",
+    "base",
+    "second",
+    "joined"
+   ]
+  },
   "function_name_separator": {
    "async": false,
    "identifiers": [
@@ -19238,6 +19283,38 @@
     "previous2",
     "joined",
     "c"
+   ]
+  },
+  "function_name_to_path_search": {
+   "async": true,
+   "identifiers": [
+    "object_property_set",
+    "list_single",
+    "list_size_1",
+    "list_multiple_is",
+    "list_filter",
+    "true_is",
+    "object_property_get",
+    "repos_paths_map_unordered_combine",
+    "file_exists",
+    "function_name_to_path",
+    "function_name_to_path_search",
+    "unaliased",
+    "f_path",
+    "lambda",
+    "joined",
+    "exists",
+    "v",
+    "mapped",
+    "lambda2",
+    "m",
+    "exists2",
+    "ti2",
+    "filtered",
+    "multiple",
+    "result",
+    "only",
+    "f_path2"
    ]
   },
   "function_name_to_path_unalias": {
@@ -28312,6 +28389,20 @@
     "mapped"
    ]
   },
+  "reduce": {
+   "async": false,
+   "identifiers": [
+    "each",
+    "marker",
+    "reduce",
+    "start",
+    "list",
+    "lambda$before$current",
+    "reduced",
+    "lambda",
+    "current"
+   ]
+  },
   "reply": {
    "async": true,
    "identifiers": [
@@ -28466,6 +28557,34 @@
     "folder",
     "mapped",
     "result"
+   ]
+  },
+  "repos_paths_map_unordered_combine": {
+   "async": true,
+   "identifiers": [
+    "path_join",
+    "repos_paths_map_unordered",
+    "repos_paths_map_unordered_combine",
+    "path",
+    "mapper",
+    "result",
+    "each_folder",
+    "folder",
+    "joined",
+    "f_names"
+   ]
+  },
+  "repos_paths_map_unordered_combine_squash": {
+   "async": true,
+   "identifiers": [
+    "list_squash",
+    "repos_paths_map_unordered_combine",
+    "functions_path",
+    "repos_paths_map_unordered_combine_squash",
+    "mapper",
+    "path",
+    "result",
+    "squashed"
    ]
   },
   "repo_acronym_get": {
@@ -28654,15 +28773,6 @@
    "async": false,
    "identifiers": [
     "s5"
-   ]
-  },
-  "s5_inner": {
-   "async": true,
-   "identifiers": [
-    "sleep",
-    "log",
-    "s5_inner",
-    "ms"
    ]
   },
   "sandbox": {
@@ -29625,6 +29735,15 @@
     "s"
    ]
   },
+  "true_is": {
+   "async": false,
+   "identifiers": [
+    "equal",
+    "true_is",
+    "value",
+    "ti"
+   ]
+  },
   "undefined": {
    "async": false,
    "identifiers": [
@@ -29878,130 +29997,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "repos_paths_map_unordered_combine": {
-   "async": true,
-   "identifiers": [
-    "path_join",
-    "repos_paths_map_unordered",
-    "repos_paths_map_unordered_combine",
-    "path",
-    "mapper",
-    "result",
-    "each_folder",
-    "folder",
-    "joined",
-    "f_names"
-   ]
-  },
-  "true_is": {
-   "async": false,
-   "identifiers": [
-    "equal",
-    "true_is",
-    "value",
-    "ti"
-   ]
-  },
-  "function_name_to_path_search": {
-   "async": true,
-   "identifiers": [
-    "object_property_set",
-    "list_single",
-    "list_size_1",
-    "list_multiple_is",
-    "list_filter",
-    "true_is",
-    "object_property_get",
-    "repos_paths_map_unordered_combine",
-    "file_exists",
-    "function_name_to_path",
-    "function_name_to_path_search",
-    "unaliased",
-    "f_path",
-    "lambda",
-    "joined",
-    "exists",
-    "v",
-    "mapped",
-    "lambda2",
-    "m",
-    "exists2",
-    "ti2",
-    "filtered",
-    "multiple",
-    "result",
-    "only",
-    "f_path2"
-   ]
-  },
-  "function_name_folder_to_path": {
-   "async": false,
-   "identifiers": [
-    "path_join",
-    "function_name_to_base",
-    "function_name_folder_to_path",
-    "f_name",
-    "folder",
-    "base",
-    "second",
-    "joined"
-   ]
-  },
-  "repos_paths_map_unordered_combine_squash": {
-   "async": true,
-   "identifiers": [
-    "list_squash",
-    "repos_paths_map_unordered_combine",
-    "functions_path",
-    "repos_paths_map_unordered_combine_squash",
-    "mapper",
-    "path",
-    "result",
-    "squashed"
-   ]
-  },
-  "functions_names_to_paths": {
-   "async": true,
-   "identifiers": [
-    "reduce",
-    "list_to_dictionary",
-    "repos_paths_map_unordered_combine_squash",
-    "marker",
-    "functions_names_from_path",
-    "function_name_folder_to_path",
-    "object_merge",
-    "functions_names_to_paths",
-    "mapper",
-    "folder",
-    "f_names",
-    "lambda",
-    "f_name",
-    "joined",
-    "dictionary",
-    "squashed"
-   ]
-  },
-  "reduce": {
-   "async": false,
-   "identifiers": [
-    "each",
-    "marker",
-    "reduce",
-    "start",
-    "list",
-    "lambda$before$current",
-    "reduced",
-    "lambda",
-    "current"
-   ]
-  },
-  "t3": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "t3"
    ]
   }
  }
