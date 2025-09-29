@@ -2016,7 +2016,8 @@
    "repos_gitignore_overwrite",
    "task_new",
    "functions_paths",
-   "function_name_folder_to_path"
+   "function_name_folder_to_path",
+   "function_copy"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -8285,7 +8286,8 @@
    "function_watch_ending_change",
    "function_wrap_suffix_add",
    "js_call_fill",
-   "task_new"
+   "task_new",
+   "function_copy"
   ],
   "string_split_comma": [
    "functions_combine_name",
@@ -18653,6 +18655,7 @@
   "function_copy": {
    "async": true,
    "identifiers": [
+    "function_name_unalias",
     "function_current_set",
     "js_identifier_replace",
     "function_transform",
@@ -18666,8 +18669,9 @@
     "f_path_old",
     "unaliased",
     "unaliased_old",
-    "f_path_new",
     "unaliased_new",
+    "f_name",
+    "f_path_new",
     "lambda",
     "ast"
    ]
