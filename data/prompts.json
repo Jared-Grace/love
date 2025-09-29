@@ -2228,6 +2228,7 @@
   "s git",
   "p",
   "repos_gitignore_overwrite",
-  "np"
+  "np",
+  "is git_acp_folder"
  ]
 }
