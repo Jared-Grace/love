@@ -4105,8 +4105,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "js_function_last_asyncify"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -4156,8 +4155,7 @@
    "list_difference",
    "list_intersect",
    "marker_functionize",
-   "prompt_previous",
-   "js_function_last_asyncify"
+   "prompt_previous"
   ],
   "ne": [
    "app_reply_main",
@@ -6869,8 +6867,7 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect",
-   "js_function_last_asyncify"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -12872,7 +12869,8 @@
   "difference": [
    "list_get_end",
    "prompt_previous",
-   "list_difference"
+   "list_difference",
+   "js_function_last_asyncify"
   ],
   "list_index_is": [
    "list_index_is",
@@ -22863,9 +22861,7 @@
     "value",
     "result",
     "properties",
-    "list2",
-    "list",
-    "other",
+    "difference",
     "lambda",
     "f_name",
     "lambda2",
