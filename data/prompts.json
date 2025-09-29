@@ -506,7 +506,6 @@
   "as task_new",
   "a t task_new",
   "de js_call_fill_test",
-  "de",
   "f_name_task",
   "t test",
   "de js_call_fill_test_test",
@@ -2279,6 +2278,8 @@
   "n s5",
   "s s5",
   "s5",
-  "d"
+  "d",
+  "de",
+  "de s5_inner"
  ]
 }
