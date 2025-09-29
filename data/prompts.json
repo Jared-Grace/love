@@ -1962,7 +1962,6 @@
   "s deploy",
   "as deploy",
   "firebase_deploy_function app_reply_main",
-  "s import",
   "messenger_reply_user_data_path",
   "pp",
   "fd",
@@ -2319,6 +2318,7 @@
   "functions_paths",
   "o functions_paths",
   "urg",
-  "n test2"
+  "n test2",
+  "s import"
  ]
 }
