@@ -2068,7 +2068,6 @@
   "fd git_history_delete",
   "n folder_delete",
   "s file",
-  "s folder",
   "s git,rename",
   "n git_repo_rename",
   "fws git_repo_rename normalize",
@@ -2231,6 +2230,7 @@
   "is git_acp_folder",
   "is git_acp_call_folder",
   "o an",
-  "function_name_to_path test"
+  "function_name_to_path test",
+  "s folder"
  ]
 }
