@@ -2308,9 +2308,9 @@
   "u rs",
   "urs k",
   "n test",
-  "function_name_to_path_unalias test",
   "s exists",
   "is function_name_to_path_unalias",
-  "function_exists test"
+  "function_exists test",
+  "function_name_to_path_unalias test"
  ]
 }
