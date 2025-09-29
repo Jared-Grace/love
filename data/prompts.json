@@ -2236,7 +2236,6 @@
   "as current",
   "pnd ast",
   "s declar,sing",
-  "ps",
   "s declar,name",
   "o function_names",
   "o functions_name",
@@ -2251,6 +2250,7 @@
   "pnd functions",
   "is js_function_last_asyncify",
   "s awawit",
-  "s await"
+  "s await",
+  "ps"
  ]
 }
