@@ -6814,7 +6814,8 @@
    "function_exists",
    "function_exists_inner",
    "string_upper_to",
-   "uuid"
+   "uuid",
+   "function_name_to_path_unalias"
   ],
   "string_take": [
    "ebible_chapter_code_to_book",
@@ -14382,6 +14383,9 @@
    "function_name_to_path_unalias",
    "function_exists_strict",
    "function_name_to_path_search"
+  ],
+  "om": [
+   "function_name_to_path_unalias"
   ]
  },
  "functions": {
@@ -19138,8 +19142,10 @@
     "function_name_unalias",
     "function_name_to_path_unalias",
     "f_name",
+    "u",
+    "result",
     "unaliased",
-    "result"
+    "om"
    ]
   },
   "function_name_unalias": {
