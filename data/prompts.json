@@ -2244,6 +2244,9 @@
   "d",
   "is functions_names",
   "s declar,name",
-  "o s5"
+  "o s5",
+  "o function_names",
+  "o functions_name",
+  "o functions_names"
  ]
 }
