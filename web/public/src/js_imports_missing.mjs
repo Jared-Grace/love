@@ -1,11 +1,11 @@
-import { js_declaration_single_name } from "./js_declaration_single_name.mjs";
-import { list_intersect } from "./list_intersect.mjs";
-import { functions_names } from "./functions_names.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { js_imports } from "./js_imports.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
+import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
+import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
+import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
+import { js_imports } from "../../../love/public/src/js_imports.mjs";
+import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 export async function js_imports_missing(ast) {
   let name = js_declaration_single_name(ast);
   let declaration = js_declaration_single(ast);

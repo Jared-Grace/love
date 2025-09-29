@@ -1,4 +1,4 @@
-import { marker } from "./marker.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function catch_call(reject, lambda) {
   let i = function inner() {
     let result = null;

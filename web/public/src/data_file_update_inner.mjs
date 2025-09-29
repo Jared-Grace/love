@@ -1,15 +1,15 @@
-import { object_property_get } from "./object_property_get.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { object_property_delete } from "./object_property_delete.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_remove_all } from "./list_remove_all.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { each } from "./each.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { object_property_initialize } from "./object_property_initialize.mjs";
-import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { function_path_to_name } from "./function_path_to_name.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
+import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
+import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 export async function data_file_update_inner(parsed, d) {
   let { f_path } = parsed;
   let f_name = function_path_to_name(f_path);

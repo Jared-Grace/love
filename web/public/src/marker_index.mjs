@@ -1,6 +1,6 @@
-import { marker } from "./marker.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { object_merge } from "./object_merge.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function marker_index(a) {
   marker("1");
   let { stack2, stack1 } = a;

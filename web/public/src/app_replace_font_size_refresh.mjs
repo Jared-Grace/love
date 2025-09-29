@@ -1,6 +1,6 @@
-import { app_replace_font_size } from "./app_replace_font_size.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_document_root } from "./html_document_root.mjs";
+import { app_replace_font_size } from "../../../love/public/src/app_replace_font_size.mjs";
+import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
+import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 export function app_replace_font_size_refresh(context) {
   let html = html_document_root();
   let value = app_replace_font_size(context);

@@ -1,13 +1,13 @@
-import { js_statement_call_get } from "./js_statement_call_get.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
-import { list_get } from "./list_get.mjs";
-import { marker_next_get } from "./marker_next_get.mjs";
-import { function_transform_marker } from "./function_transform_marker.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { function_current_get } from "./function_current_get.mjs";
-import { integer_to } from "./integer_to.mjs";
-import { object_merge } from "./object_merge.mjs";
+import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { list_get } from "../../../love/public/src/list_get.mjs";
+import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
+import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function marker_call_replace_generic(input, lambda$a) {
   let arg_index = integer_to(input);
   let f_name = await function_current_get();

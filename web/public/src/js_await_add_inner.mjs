@@ -1,15 +1,15 @@
-import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
-import { js_call_function_if } from "./js_call_function_if.mjs";
-import { js_node_type_not_is_if } from "./js_node_type_not_is_if.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { js_await } from "./js_await.mjs";
-import { object_copy } from "./object_copy.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
-import { marker } from "./marker.mjs";
-import { not } from "./not.mjs";
-import { object_property_exists_not } from "./object_property_exists_not.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
+import { js_call_function_if } from "../../../love/public/src/js_call_function_if.mjs";
+import { js_node_type_not_is_if } from "../../../love/public/src/js_node_type_not_is_if.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { js_await } from "../../../love/public/src/js_await.mjs";
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
     let node = object_property_get(v, "node");

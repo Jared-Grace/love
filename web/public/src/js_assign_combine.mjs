@@ -1,16 +1,16 @@
-import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
-import { list_not_is } from "./list_not_is.mjs";
-import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
-import { list_next_try } from "./list_next_try.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { equal } from "./equal.mjs";
-import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { null_is } from "./null_is.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { js_declare_single } from "./js_declare_single.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
+import { js_identifiers_named_count } from "../../../love/public/src/js_identifiers_named_count.mjs";
+import { list_not_is } from "../../../love/public/src/list_not_is.mjs";
+import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
+import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
+import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_assign_combine(ast) {
   function lambda(v) {
     let { node, stack } = v;

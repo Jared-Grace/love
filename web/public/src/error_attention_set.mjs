@@ -1,5 +1,5 @@
-import { data_path } from "./data_path.mjs";
-import { data_transform } from "./data_transform.mjs";
+import { data_path } from "../../../love/public/src/data_path.mjs";
+import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function error_attention_set(value) {
   async function lambda3(previous) {
     return value;

@@ -1,6 +1,6 @@
-import { data_aliases_path } from "./data_aliases_path.mjs";
-import { marker } from "./marker.mjs";
-import { data_transform } from "./data_transform.mjs";
+import { data_aliases_path } from "../../../love/public/src/data_aliases_path.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function function_aliases_restore() {
   marker("1");
   async function lambda(previous) {

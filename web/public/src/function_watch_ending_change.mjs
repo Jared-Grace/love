@@ -1,7 +1,7 @@
-import { string_suffix_change } from "./string_suffix_change.mjs";
-import { marker } from "./marker.mjs";
-import { function_name_unalias } from "./function_name_unalias.mjs";
-import { function_wrap } from "./function_wrap.mjs";
+import { string_suffix_change } from "../../../love/public/src/string_suffix_change.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
+import { function_wrap } from "../../../love/public/src/function_wrap.mjs";
 export async function function_watch_ending_change(
   f_name,
   ending_old,

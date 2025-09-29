@@ -1,7 +1,7 @@
-import { reply } from "./reply.mjs";
-import { list_first } from "./list_first.mjs";
-import { object_properties } from "./object_properties.mjs";
-import { messenger_reply_messages_transform } from "./messenger_reply_messages_transform.mjs";
+import { reply } from "../../../love/public/src/reply.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { messenger_reply_messages_transform } from "../../../love/public/src/messenger_reply_messages_transform.mjs";
 export async function reply_test() {
   let messages = null;
   async function lambda(m) {

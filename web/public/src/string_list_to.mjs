@@ -1,4 +1,4 @@
-import { undefined } from "./undefined.mjs";
+import { undefined } from "../../../love/public/src/undefined.mjs";
 export function string_list_to(str) {
   const segmenter = new Intl.Segmenter(undefined, {
     granularity: "grapheme",

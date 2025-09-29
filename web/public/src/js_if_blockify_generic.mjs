@@ -1,12 +1,12 @@
-import { js_statement_return_add } from "./js_statement_return_add.mjs";
-import { not } from "./not.mjs";
-import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { js_node_type } from "./js_node_type.mjs";
-import { object_copy } from "./object_copy.mjs";
-import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { js_statement_return_add } from "../../../love/public/src/js_statement_return_add.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
+import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
+import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function js_if_blockify_generic(ast, type, property_name) {
   async function lambda(v) {
     let { node } = v;

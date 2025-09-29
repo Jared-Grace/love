@@ -1,6 +1,6 @@
-import { object_merge } from "./object_merge.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
-import { list_get } from "./list_get.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
+import { list_get } from "../../../love/public/src/list_get.mjs";
 export function marker_next_get(a) {
   let ni = marker_next_index(a);
   let { index, stack2 } = ni;

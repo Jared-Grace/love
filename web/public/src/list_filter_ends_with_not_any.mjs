@@ -1,7 +1,7 @@
-import { string_ends_with_not } from "./string_ends_with_not.mjs";
-import { marker } from "./marker.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_any } from "./list_any.mjs";
+import { string_ends_with_not } from "../../../love/public/src/string_ends_with_not.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_any } from "../../../love/public/src/list_any.mjs";
 export function list_filter_ends_with_not_any(suffixes, list) {
   marker("1");
   function lambda(item) {

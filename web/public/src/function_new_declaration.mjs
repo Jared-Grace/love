@@ -1,13 +1,13 @@
-import { repo_path_combine } from "./repo_path_combine.mjs";
-import { user_repo_get } from "./user_repo_get.mjs";
-import { js_format } from "./js_format.mjs";
-import { file_write } from "./file_write.mjs";
-import { js_code_export } from "./js_code_export.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
-import { js_declaration_name } from "./js_declaration_name.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
+import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
+import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
+import { js_format } from "../../../love/public/src/js_format.mjs";
+import { file_write } from "../../../love/public/src/file_write.mjs";
+import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
+import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { js_parse } from "../../../love/public/src/js_parse.mjs";
+import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
   let name = js_declaration_name(declaration);
   const f_path = function_name_to_path(name);

@@ -1,19 +1,19 @@
-import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_index_of_last } from "./list_index_of_last.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { ebible_verse_new } from "./ebible_verse_new.mjs";
-import { list_adder } from "./list_adder.mjs";
-import { list_take } from "./list_take.mjs";
-import { list_skip } from "./list_skip.mjs";
-import { each_reverse } from "./each_reverse.mjs";
-import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { string_empty_not_is } from "./string_empty_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { string_split_space } from "./string_split_space.mjs";
-import { ebible_chapter_text } from "./ebible_chapter_text.mjs";
-import { marker } from "./marker.mjs";
-import { list_reverse } from "./list_reverse.mjs";
+import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
+import { ebible_verse_new } from "../../../love/public/src/ebible_verse_new.mjs";
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { list_take } from "../../../love/public/src/list_take.mjs";
+import { list_skip } from "../../../love/public/src/list_skip.mjs";
+import { each_reverse } from "../../../love/public/src/each_reverse.mjs";
+import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
+import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
+import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   marker("1");
   let { verse_numbers, text } = await ebible_chapter_text(

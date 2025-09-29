@@ -1,6 +1,6 @@
-import { add_1 } from "./add_1.mjs";
-import { marker } from "./marker.mjs";
-import { marker_above_generic } from "./marker_above_generic.mjs";
+import { add_1 } from "../../../love/public/src/add_1.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { marker_above_generic } from "../../../love/public/src/marker_above_generic.mjs";
 export async function marker_below(code) {
   marker("1");
   let fn = add_1;
