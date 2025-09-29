@@ -9578,7 +9578,8 @@
    "js_declaration_single_params_add",
    "js_expand_generic",
    "js_property_identifier",
-   "marker_param_add"
+   "marker_param_add",
+   "function_param_new_double"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -9618,7 +9619,8 @@
   ],
   "function_params_new": [
    "function_params_new",
-   "function_param_new"
+   "function_param_new",
+   "function_param_new_double"
   ],
   "param_names_comma": [
    "function_params_new"
@@ -9648,7 +9650,8 @@
    "marker_screen_add"
   ],
   "default_value": [
-   "function_param_new"
+   "function_param_new",
+   "function_param_new_double"
   ],
   "list_swap": [
    "function_param_swap",
@@ -14204,6 +14207,9 @@
   ],
   "repo_path_combine": [
    "function_new_declaration"
+  ],
+  "function_param_new_double": [
+   "function_param_new_double"
   ]
  },
  "functions": {
@@ -29443,6 +29449,15 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "function_param_new_double": {
+   "async": true,
+   "identifiers": [
+    "function_params_new",
+    "function_param_new_double",
+    "param_name",
+    "default_value"
    ]
   }
  }
