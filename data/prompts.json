@@ -2275,6 +2275,7 @@
   "o git_acp_folder",
   "o urg",
   "s includes",
-  "s repo"
+  "s repo",
+  "a lina list_includes_assert"
  ]
 }
