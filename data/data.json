@@ -1475,8 +1475,7 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "function_exists_inner"
+   "watch"
   ],
   "ast": [
    "app_new_step_2",
@@ -2419,8 +2418,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "function_exists_inner"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -18762,8 +18760,6 @@
     "to",
     "e",
     "bools",
-    "lambda",
-    "item",
     "filtered"
    ]
   },
