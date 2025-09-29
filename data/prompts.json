@@ -2253,6 +2253,7 @@
   "o s5",
   "s fill",
   "functions_names",
-  "functions_names_includes sleep"
+  "functions_names_includes sleep",
+  "is js_call_fill"
  ]
 }
