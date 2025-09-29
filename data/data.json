@@ -336,7 +336,8 @@
    "whitespace_normalize",
    "js_function_last_asyncify",
    "function_param_new_double",
-   "function_current_get"
+   "function_current_get",
+   "sandbox_5"
   ],
   "apps_get": [
    "apps_get"
@@ -28361,6 +28362,7 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
+    "marker",
     "sandbox_5_a",
     "sandbox_5",
     "v"
