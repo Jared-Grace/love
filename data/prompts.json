@@ -2288,6 +2288,7 @@
   "s overwrite",
   "de s5_inner",
   "o w",
-  "fd watch"
+  "fd watch",
+  "de s5c"
  ]
 }
