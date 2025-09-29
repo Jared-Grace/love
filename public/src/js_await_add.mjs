@@ -13,6 +13,10 @@ import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
   let functions = await data_functions_get();
+  return await js_await_add_inner(functions, ast);
+}
+
+async function js_await_add_inner(functions, ast) {
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
