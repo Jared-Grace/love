@@ -14,4 +14,5 @@ export async function functions_names() {
     let f_names = functions_names_from_path(joined);
     return f_names;
   }
+  lsq;
 }
