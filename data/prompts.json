@@ -1900,7 +1900,6 @@
   "app_new_step_2 message",
   "rs sandbox_4",
   "rs sandbox _4",
-  "u rs",
   "s rename",
   "function_name_to_acronym a_b_C",
   "rs sandbox_4 a",
@@ -2307,6 +2306,7 @@
   "function_exists_inner sandbox",
   "function_exists_inner",
   "p",
-  "function_exists sb"
+  "function_exists sb",
+  "u rs"
  ]
 }
