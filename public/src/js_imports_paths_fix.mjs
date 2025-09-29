@@ -12,7 +12,7 @@ export async function js_imports_paths_fix(ast) {
   function lambda(i) {
     let name = object_property_get(i, "name");
     let declaration = object_property_get(i, "declaration");
-    const from = function_name_to_path_import(name);
+    const from = function_name_to_path_import(name, dictionary);
     let expression = js_parse_expression(from);
     object_property_set(declaration, "source", expression);
   }
