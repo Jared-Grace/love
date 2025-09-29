@@ -11538,8 +11538,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "search_generic",
-   "functions_names",
-   "js_function_last_asyncify"
+   "functions_names"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -22832,7 +22831,6 @@
    "async": true,
    "identifiers": [
     "list_add",
-    "log",
     "js_await_add_inner",
     "js_declaration_name",
     "function_transform",
