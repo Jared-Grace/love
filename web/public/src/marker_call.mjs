@@ -24,6 +24,6 @@ export async function marker_call(f_name_call) {
       js_stack_declaration_asyncify(stack, declaration);
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }

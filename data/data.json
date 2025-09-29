@@ -6007,7 +6007,6 @@
    "function_identifier_replace",
    "function_open_editor_current",
    "function_params_new",
-   "function_transform_current",
    "function_transform_marker_current",
    "function_transform_marker_empty",
    "function_types",
@@ -6016,7 +6015,6 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_down_choices",
-   "marker_expand",
    "marker_functionize",
    "marker_move",
    "marker_new",
@@ -14218,7 +14216,9 @@
    "function_param_new_double"
   ],
   "function_current_get": [
-   "function_current_get"
+   "function_current_get",
+   "function_transform_current",
+   "marker_expand"
   ]
  },
  "functions": {
@@ -19557,7 +19557,7 @@
    "async": true,
    "identifiers": [
     "function_transform",
-    "data_function_current_get",
+    "function_current_get",
     "function_transform_current",
     "lambda",
     "f_name"
@@ -26432,7 +26432,7 @@
     "js_expand_generic",
     "marker_next_get",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "marker_expand",
     "f_name",
     "v",
