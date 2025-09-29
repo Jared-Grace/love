@@ -2318,7 +2318,6 @@
   "s repo",
   "p",
   "n t2",
-  "ps",
   "c functions_paths functions_names_to_paths",
   "s dictionary",
   "s diction",
@@ -2341,6 +2340,7 @@
   "urs l",
   "c functions_log_remove functions_imports_fix",
   "functions_imports_fix",
-  "d"
+  "d",
+  "ps"
  ]
 }
