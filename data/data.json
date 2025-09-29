@@ -1481,8 +1481,7 @@
    "watch",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths",
-   "functions_names_to_paths"
+   "functions_paths"
   ],
   "ast": [
    "app_new_step_2",
@@ -2432,8 +2431,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "functions_names_to_paths"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -2964,8 +2962,7 @@
    "repos_paths_map_unordered",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths",
-   "functions_names_to_paths"
+   "functions_paths"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -29928,13 +29925,10 @@
     "functions_names_from_path",
     "function_name_folder_to_path",
     "functions_names_to_paths",
-    "lambda",
-    "item",
     "mapper",
     "folder",
     "f_names",
     "dictionary",
-    "mapped",
     "squashed"
    ]
   }
