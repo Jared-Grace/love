@@ -2287,6 +2287,7 @@
   "is data_file_update_inner",
   "s overwrite",
   "de s5_inner",
-  "o w"
+  "o w",
+  "fd watch"
  ]
 }
