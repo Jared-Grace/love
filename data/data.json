@@ -14337,7 +14337,8 @@
    "function_exists_inner"
   ],
   "true_is": [
-   "true_is"
+   "true_is",
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18749,6 +18750,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "true_is",
     "list_filter",
     "repos_paths_map_unordered_combine",
     "object_merge",
