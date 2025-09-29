@@ -1346,7 +1346,6 @@
   "function_name_unalias s",
   "u ss",
   "fw list_slice list_take",
-  "u ls",
   "a lsk list_skip",
   "s get_or",
   "r storage_local_get_or storage_local_initialize",
@@ -2295,6 +2294,7 @@
   "s repos",
   "is repos_names",
   "r repos_path_each_unordered repos_paths_map_unordered",
-  "as squa"
+  "as squa",
+  "u ls"
  ]
 }
