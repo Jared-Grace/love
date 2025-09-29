@@ -44,5 +44,5 @@ export async function js_await_add_inner(functions, ast, visited) {
   return;
   let declaration = js_declaration_single(ast);
   let name = js_declaration_name(declaration);
-  list_add(list, item);
+  list_add(visited, name);
 }
