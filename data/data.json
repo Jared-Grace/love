@@ -319,7 +319,6 @@
    "sandbox_2",
    "sandbox_3",
    "sandbox_4_a",
-   "sandbox_5",
    "storage_local_get",
    "storage_local_initialize",
    "storage_local_initialize_context",
@@ -10806,7 +10805,6 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sandbox_5",
    "sleep"
   ],
   "npm_install": [
@@ -28383,10 +28381,8 @@
    ]
   },
   "sandbox_5": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "sleep",
-    "marker",
     "sandbox_5"
    ]
   },
