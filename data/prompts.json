@@ -2231,7 +2231,6 @@
   "is functions_names",
   "s await",
   "is js_function_last_asyncify",
-  "fs js_function_last_asyncify",
   "u pn",
   "cs function_param_new double",
   "a pnd function_param_new_double",
@@ -2242,6 +2241,7 @@
   "s current",
   "data_function_current_get",
   "r data_function_current_get function_current_get",
-  "as current"
+  "as current",
+  "fs js_function_last_asyncify"
  ]
 }
