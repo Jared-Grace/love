@@ -2644,7 +2644,8 @@
    "object_copy",
    "object_merge",
    "object_replace",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_unalias"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -6543,7 +6544,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "function_name_to_path_unalias"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -14383,9 +14385,6 @@
    "function_name_to_path_unalias",
    "function_exists_strict",
    "function_name_to_path_search"
-  ],
-  "om": [
-   "function_name_to_path_unalias"
   ]
  },
  "functions": {
@@ -19140,12 +19139,13 @@
    "identifiers": [
     "function_name_to_path_search",
     "function_name_unalias",
+    "object_merge",
     "function_name_to_path_unalias",
     "f_name",
     "u",
-    "result",
     "unaliased",
-    "om"
+    "result",
+    "to"
    ]
   },
   "function_name_unalias": {
