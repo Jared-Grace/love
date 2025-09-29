@@ -1,3 +1,4 @@
+import { functions_names_from_path } from "./functions_names_from_path.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { function_name_folder_to_path } from "./function_name_folder_to_path.mjs";
@@ -11,6 +12,7 @@ export async function functions_paths() {
   return f_paths;
   let path = functions_path();
   function lambda(r) {
+    let f_names = functions_names_from_path(joined);
     let v = function_name_folder_to_path(f_name, folder);
   }
   let result = await repos_paths_map_unordered_combine(path, lambda);
