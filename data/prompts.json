@@ -2246,9 +2246,9 @@
   "o s5",
   "o functions_names",
   "is functions_names",
-  "s await",
   "s repo_path_combine",
   "urs l",
-  "s repo"
+  "s repo",
+  "s await"
  ]
 }
