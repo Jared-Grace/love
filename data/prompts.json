@@ -2281,6 +2281,7 @@
   "s5",
   "d",
   "de s5_inner",
-  "is sleep"
+  "is sleep",
+  "s data_fun"
  ]
 }
