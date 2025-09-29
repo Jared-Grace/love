@@ -1475,7 +1475,8 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "function_exists_inner"
   ],
   "ast": [
    "app_new_step_2",
@@ -2417,7 +2418,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "function_exists_inner"
   ],
   "index": [
    "app_replace_home",
@@ -6662,7 +6664,8 @@
    "list_filter_starts_with_not_multiple",
    "list_find",
    "messenger_reply",
-   "puppeteer_hrefs_starts_with"
+   "puppeteer_hrefs_starts_with",
+   "function_exists_inner"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -7256,7 +7259,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "list_find",
-   "search_generic"
+   "search_generic",
+   "function_exists_inner"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -12147,8 +12151,7 @@
    "list_last_or_null",
    "messenger_reply",
    "messenger_reply_unreplied",
-   "prompt_previous",
-   "function_exists_inner"
+   "prompt_previous"
   ],
   "list_intersect": [
    "js_expand_generic",
@@ -12181,8 +12184,7 @@
    "js_stack_last_multiple",
    "list_last",
    "list_last_is",
-   "marker_if_test_replace",
-   "function_exists_inner"
+   "marker_if_test_replace"
   ],
   "prettier": [
    "js_format"
@@ -18740,7 +18742,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
-    "list_last",
+    "list_filter",
     "repos_paths_map_unordered_combine",
     "object_merge",
     "file_exists",
@@ -18751,8 +18753,10 @@
     "to",
     "e",
     "result",
-    "last",
-    "list"
+    "filtered",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "function_exists_strict": {
