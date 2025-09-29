@@ -5861,8 +5861,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "s5_inner"
+   "search_generic"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14289,6 +14288,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "s5b": [
+   "s5_inner"
   ]
  },
  "functions": {
@@ -29632,7 +29634,7 @@
   "s5_inner": {
    "async": false,
    "identifiers": [
-    "log",
+    "s5b",
     "s5_inner"
    ]
   }
