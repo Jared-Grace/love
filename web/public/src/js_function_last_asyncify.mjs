@@ -26,6 +26,7 @@ export async function js_function_last_asyncify(
     if (equal(f, declaration)) {
       let name = js_declaration_name(declaration);
       let value = object_property_get(functions, name);
+      object_property_set(object, property_name2, value2);
       let declaration = js_declaration_single(ast);
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
