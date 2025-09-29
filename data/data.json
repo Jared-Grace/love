@@ -6012,7 +6012,6 @@
    "function_types",
    "function_type_first",
    "marker_assign_replace",
-   "marker_call",
    "marker_call_replace_generic",
    "marker_down_choices",
    "marker_functionize",
@@ -14218,7 +14217,8 @@
    "task_new",
    "marker_new",
    "marker_next_delete",
-   "marker_param_add"
+   "marker_param_add",
+   "marker_call"
   ]
  },
  "functions": {
@@ -26207,7 +26207,7 @@
     "js_unparse",
     "function_transform_marker",
     "list_adder_async",
-    "data_function_current_get",
+    "function_current_get",
     "marker_next_index",
     "marker_call",
     "f_name_call",
