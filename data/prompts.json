@@ -2182,7 +2182,6 @@
   "s user,repo",
   "s acro",
   "c repo_acronym_set repo_acronym_get",
-  "s dictionary",
   "cs list_to_dictionary async",
   "s unordered",
   "de list_map_wait",
@@ -2326,6 +2325,7 @@
   "n t2",
   "ps",
   "urs l",
-  "c functions_paths functions_names_to_paths"
+  "c functions_paths functions_names_to_paths",
+  "s dictionary"
  ]
 }
