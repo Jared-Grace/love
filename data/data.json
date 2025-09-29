@@ -4188,7 +4188,8 @@
    "path_join",
    "path_repo_combine",
    "sandbox_2",
-   "watch"
+   "watch",
+   "function_new_declaration"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5657,7 +5658,8 @@
    "path_repo_combine",
    "repo_path",
    "sandbox_2",
-   "server"
+   "server",
+   "function_new_declaration"
   ],
   "file_copy": [
    "data_backup",
@@ -13655,7 +13657,8 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "function_new_declaration"
   ],
   "seg": [
    "path_join"
@@ -18984,6 +18987,7 @@
   "function_new_declaration": {
    "async": true,
    "identifiers": [
+    "path_join",
     "repo_path",
     "user_repo_get",
     "js_format",
@@ -19004,7 +19008,9 @@
     "contents_import",
     "formatted",
     "repo_name",
-    "folder_name"
+    "folder_name",
+    "joined",
+    "segments"
    ]
   },
   "function_new_js": {
