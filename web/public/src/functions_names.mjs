@@ -14,5 +14,5 @@ export function functions_names() {
     return without;
   }
   let f_names = list_map(paths, lambda);
-  return f_names;
+  return f_names;sleep
 }
