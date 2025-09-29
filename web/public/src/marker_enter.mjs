@@ -12,8 +12,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
   async function lambda(a) {
     marker("1");
-    let ni = marker_next_index(a);
-    let { index, stack1, stack2 } = ni;
+    let { index, stack1, stack2 } = marker_next_index(a);
     let body = null;
     while (body === null) {
       let next = list_get(stack2, index);
