@@ -1,5 +1,5 @@
-import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { list_squash } from "./list_squash.mjs";
+import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { functions_names_from_path } from "./functions_names_from_path.mjs";
 import { marker } from "./marker.mjs";
 import { functions_path } from "./functions_path.mjs";
