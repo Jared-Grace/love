@@ -2144,7 +2144,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "true_is"
+   "true_is",
+   "function_exists_inner"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3101,7 +3102,8 @@
    "equal_by_async",
    "js_calls_to_each",
    "js_if_else_if_combine",
-   "true_is"
+   "true_is",
+   "function_exists_inner"
   ],
   "before": [
    "app_replace_rule_set",
@@ -4282,8 +4284,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "function_exists_inner"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -14343,7 +14344,8 @@
    "functions_names"
   ],
   "true_is": [
-   "true_is"
+   "true_is",
+   "function_exists_inner"
   ],
   "multiple": [
    "function_exists_inner"
@@ -18758,6 +18760,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "true_is",
     "object_property_get",
     "list_size_1",
     "list_multiple_is",
@@ -18778,7 +18781,8 @@
     "lambda2",
     "m",
     "exists2",
-    "v2",
+    "eq",
+    "value",
     "filtered",
     "multiple"
    ]
