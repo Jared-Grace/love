@@ -4665,7 +4665,8 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence"
+   "reply_sequence",
+   "functions_names_to_paths"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -14436,6 +14437,9 @@
    "user_repo_set"
   ],
   "functions_names_to_paths": [
+   "functions_names_to_paths"
+  ],
+  "reduce": [
    "functions_names_to_paths"
   ]
  },
@@ -29935,7 +29939,9 @@
     "f_name",
     "joined",
     "dictionary",
-    "squashed"
+    "squashed",
+    "reduce",
+    "fn"
    ]
   }
  }
