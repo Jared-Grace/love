@@ -48,5 +48,5 @@ export async function watch() {
     }
     await catch_log_async(lambda);
   }
-  watcher.on("change", lambda2);
+  watcher.on("change", lambda2).on("add", lambda2);
 }
