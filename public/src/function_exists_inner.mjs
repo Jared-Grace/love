@@ -7,14 +7,19 @@ import { object_merge } from "./object_merge.mjs";
 import { file_exists } from "./file_exists.mjs";
 export async function function_exists_inner(u) {
   let { f_path } = u;
+  let exists = await file_exists(f_path);
+  let to = {
+    exists,
+  };
+  let e = object_merge(to, u);
+  return e;
   let bools = await repos_paths_map_unordered_combine(f_path, file_exists);
   let filtered = list_filter(bools, true_is);
   let multiple = list_multiple_is(filtered);
-  let exists = list_size_1(filtered);
-  let to = {
+  exists = list_size_1(filtered);
+  to = {
     exists,
-    multiple,
   };
-  let e = object_merge(to, u);
+  e = object_merge(to, u);
   return e;
 }
