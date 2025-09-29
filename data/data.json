@@ -5658,8 +5658,7 @@
    "path_repo_combine",
    "repo_path",
    "sandbox_2",
-   "server",
-   "function_new_declaration"
+   "server"
   ],
   "file_copy": [
    "data_backup",
@@ -9746,8 +9745,7 @@
    "function_run_git",
    "repos_gitignore_overwrite",
    "repo_path",
-   "git_repo_clone",
-   "function_new_declaration"
+   "git_repo_clone"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -10304,8 +10302,7 @@
    "git_repo_clone"
   ],
   "folder_name": [
-   "git_repo_clone",
-   "function_new_declaration"
+   "git_repo_clone"
   ],
   "git_repo_rename": [
    "git_repo_rename",
@@ -14203,6 +14200,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "repo_path_combine": [
+   "function_new_declaration"
   ]
  },
  "functions": {
@@ -18986,8 +18986,6 @@
   "function_new_declaration": {
    "async": true,
    "identifiers": [
-    "path_join",
-    "repo_path",
     "user_repo_get",
     "js_format",
     "file_write",
@@ -19007,8 +19005,8 @@
     "contents_import",
     "formatted",
     "repo_name",
-    "folder_name",
-    "combined"
+    "combined",
+    "repo_path_combine"
    ]
   },
   "function_new_js": {
