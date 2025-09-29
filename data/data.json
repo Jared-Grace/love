@@ -21562,8 +21562,8 @@
     "stack",
     "expression",
     "name",
-    "unaliased",
     "valid",
+    "unaliased",
     "parsed",
     "async_is"
    ]
