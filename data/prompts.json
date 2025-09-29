@@ -2338,6 +2338,7 @@
   "o file_exists",
   "o function_exists",
   "de t3",
-  "s transform,fun"
+  "s transform,fun",
+  "is functions_transform"
  ]
 }
