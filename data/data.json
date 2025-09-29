@@ -5835,7 +5835,8 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "js_function_last_asyncify"
   ],
   "data_file_update": [
    "data_file_update",
@@ -6387,7 +6388,8 @@
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "js_function_last_asyncify"
   ],
   "each_object": [
    "each_object",
@@ -13629,7 +13631,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete_all"
+   "object_properties_delete_all",
+   "js_function_last_asyncify"
   ],
   "getOwnPropertyNames": [
    "object_properties"
@@ -22766,6 +22769,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "object_properties",
     "data_identifiers_search",
     "equal",
     "js_declaration_single",
@@ -22783,7 +22787,9 @@
     "async",
     "declaration",
     "result",
-    "s"
+    "s",
+    "properties",
+    "obj"
    ]
   },
   "js_identifiers": {
