@@ -6272,7 +6272,8 @@
    "date_ms_to_hours",
    "functions_names",
    "function_aliases_restore",
-   "sleep"
+   "sleep",
+   "sandbox_5"
   ],
   "hours": [
    "date_diff_hours",
@@ -8305,7 +8306,8 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep"
+   "sleep",
+   "sandbox_5"
   ],
   "functions_path": [
    "functions_names",
@@ -28508,9 +28510,11 @@
    ]
   },
   "sandbox_5": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "sandbox_5"
+    "sleep",
+    "sandbox_5",
+    "ms"
    ]
   },
   "sandbox_5_a": {
