@@ -2234,7 +2234,6 @@
   "u pn",
   "cs function_param_new double",
   "a pnd function_param_new_double",
-  "pnd ast",
   "fc",
   "u fs",
   "fcg",
@@ -2242,6 +2241,7 @@
   "data_function_current_get",
   "r data_function_current_get function_current_get",
   "as current",
-  "fs js_function_last_asyncify"
+  "fs js_function_last_asyncify",
+  "pnd ast"
  ]
 }
