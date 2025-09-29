@@ -12,10 +12,6 @@ import { function_name_unalias } from "./function_name_unalias.mjs";
 export async function function_name_to_path_unalias(f_name) {
   let { unaliased } = await function_name_unalias(f_name);
   let f_path = function_name_to_path(unaliased);
-  let v = {
-    f_path,
-    unaliased,
-  };
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {
