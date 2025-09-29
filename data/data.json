@@ -5045,7 +5045,8 @@
    "ternary",
    "repos_paths_map_unordered",
    "functions_names",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_exists_inner"
   ],
   "catch_call": [
    "catch_call",
@@ -6515,7 +6516,6 @@
    "each_range_from",
    "each_range_from_async",
    "ebible_version_books_testament",
-   "function_exists_inner",
    "function_imports_missing",
    "function_parse",
    "function_parse_declaration",
@@ -18790,7 +18790,7 @@
     "ti2",
     "filtered",
     "multiple",
-    "to",
+    "result",
     "only",
     "f_path2"
    ]
