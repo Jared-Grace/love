@@ -29964,9 +29964,9 @@
     "start",
     "list",
     "lambda$before$current",
-    "list2",
     "lambda",
-    "item"
+    "item",
+    "list2"
    ]
   }
  }
