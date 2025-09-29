@@ -5547,8 +5547,7 @@
    "file_write_json",
    "function_run_prompt",
    "json_format_to",
-   "js_declaration_params_names_node",
-   "watch"
+   "js_declaration_params_names_node"
   ],
   "data_all": [
    "data_all",
@@ -7457,8 +7456,7 @@
   ],
   "error_attention_set": [
    "error_attention_clear",
-   "error_attention_set",
-   "watch"
+   "error_attention_set"
   ],
   "error_attention_clear": [
    "error_attention_clear"
@@ -29583,7 +29581,6 @@
    "async": true,
    "identifiers": [
     "error",
-    "error_attention_set",
     "command_line_node_g",
     "marker",
     "object_property_exists_equals",
@@ -29593,7 +29590,6 @@
     "import_install",
     "data_file_update",
     "object_property_set",
-    "json_format_to",
     "watch",
     "chokidar",
     "default",
