@@ -700,6 +700,7 @@
    "js_declare_assign",
    "js_dollar",
    "js_function_id_add",
+   "js_function_last_asyncify",
    "js_identifiers",
    "js_identifiers_named",
    "js_identifiers_named_count",
@@ -821,8 +822,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "js_function_last_asyncify"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2080,6 +2080,7 @@
    "js_declare_assign_null",
    "js_dollar_s",
    "js_function_id_add",
+   "js_function_last_asyncify",
    "js_identifiers_names",
    "js_identifier_defineds",
    "js_imports_declarations",
@@ -2137,8 +2138,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -2271,6 +2271,7 @@
    "js_dollar_new",
    "js_dollar_s",
    "js_expand_generic",
+   "js_function_last_asyncify",
    "js_identifiers",
    "js_identifiers_named_count",
    "js_identifiers_names",
@@ -2314,8 +2315,7 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "item": [
    "app_replace_home",
@@ -4443,6 +4443,7 @@
    "git_acp_timestamp",
    "git_commit",
    "git_commit_folder",
+   "js_call_fill",
    "js_declaration_params_names_node",
    "js_node_atomize",
    "keyboard_type_delay",
@@ -4457,9 +4458,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "js_call_fill",
-   "functions_names"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -5992,8 +5991,8 @@
    "data_functions_get",
    "js_await_add",
    "js_await_add_inner",
-   "js_function_last_asyncify",
-   "js_call_fill"
+   "js_call_fill",
+   "js_function_last_asyncify"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -8307,6 +8306,14 @@
    "functions_names",
    "git_push_schedule_command",
    "path_resolve"
+  ],
+  "sleep": [
+   "functions_names",
+   "http_sleep",
+   "keyboard_type_delay",
+   "retry",
+   "sandbox_5",
+   "sleep"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -10824,13 +10831,6 @@
    "integer_random",
    "keyboard_typing_delay"
   ],
-  "sleep": [
-   "http_sleep",
-   "keyboard_type_delay",
-   "retry",
-   "sandbox_5",
-   "sleep"
-  ],
   "npm_install": [
    "import_install",
    "npm_install"
@@ -11530,6 +11530,14 @@
   "jin": [
    "js_call_callee_name",
    "js_identifier_not_is"
+  ],
+  "log": [
+   "js_call_fill",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -12356,15 +12364,6 @@
   ],
   "js_let_add_task_simple": [
    "js_let_add_task_simple"
-  ],
-  "log": [
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "search_generic",
-   "js_call_fill",
-   "functions_names"
   ],
   "e2": [
    "js_log_remove",
@@ -18000,7 +17999,6 @@
   "functions_names": {
    "async": false,
    "identifiers": [
-    "log",
     "marker",
     "functions_path",
     "folder_read_files",
@@ -18015,7 +18013,7 @@
     "suffix",
     "without",
     "f_names",
-    "message"
+    "sleep"
    ]
   },
   "functions_names_includes": {
