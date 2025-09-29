@@ -2340,6 +2340,7 @@
   "is functions_transform",
   "urg",
   "urs l",
-  "c functions_log_remove functions_imports_fix"
+  "c functions_log_remove functions_imports_fix",
+  "functions_imports_fix"
  ]
 }
