@@ -4215,7 +4215,8 @@
    "path_repo_combine",
    "sandbox_2",
    "watch",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5036,7 +5037,8 @@
    "task_new",
    "ternary",
    "repos_paths_map_unordered",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "catch_call": [
    "catch_call",
@@ -5357,7 +5359,8 @@
    "repos_paths_map_unordered",
    "repo_acronym_to_path",
    "sandbox_2",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5692,7 +5695,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "file_copy": [
    "data_backup",
@@ -7677,7 +7681,8 @@
    "path_name",
    "path_resolve",
    "server",
-   "watch"
+   "watch",
+   "repos_paths_map_unordered_combine"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8227,7 +8232,8 @@
    "js_expand_generic",
    "js_imports_missing",
    "string_split_comma",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -9847,7 +9853,8 @@
   ],
   "each_folder": [
    "function_run_git",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -13864,7 +13871,8 @@
   "repos_paths_map_unordered": [
    "repos_paths_map_unordered",
    "function_run_git",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -14312,6 +14320,12 @@
   ],
   "lambda$folder": [
    "repos_paths_map_unordered"
+  ],
+  "repos_paths_map_unordered_combine": [
+   "repos_paths_map_unordered_combine"
+  ],
+  "mapper": [
+   "repos_paths_map_unordered_combine"
   ]
  },
  "functions": {
@@ -29682,6 +29696,21 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "repos_paths_map_unordered_combine": {
+   "async": true,
+   "identifiers": [
+    "path_join",
+    "repos_paths_map_unordered",
+    "repos_paths_map_unordered_combine",
+    "path",
+    "mapper",
+    "result",
+    "each_folder",
+    "folder",
+    "joined",
+    "f_names"
    ]
   }
  }
