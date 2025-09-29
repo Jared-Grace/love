@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 import { command_line_node_g } from "./command_line_node_g.mjs";
 import { marker } from "./marker.mjs";
 import { object_property_exists_equals } from "./object_property_exists_equals.mjs";
@@ -30,11 +29,9 @@ export async function watch() {
         const args = [path];
         try {
           await command_line_node_g(data_file_update.name, args);
-        } catch (error) {
-          let f_name = data_file_update.name;
-          throw error;
+        } finally {
+          object_property_set(in_progress, path, false);
         }
-        object_property_set(in_progress, path, false);
       }
     }
     await catch_log_async(lambda);
