@@ -2264,7 +2264,6 @@
   "n s5",
   "s s5",
   "de",
-  "o de",
   "d",
   "is sleep",
   "s data_fun",
@@ -2313,6 +2312,7 @@
   "o function_exists",
   "is function_exists_inner",
   "function_exists test",
-  "urg"
+  "urg",
+  "o de"
  ]
 }
