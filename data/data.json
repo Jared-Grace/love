@@ -4965,7 +4965,6 @@
    "data_file_update_inner",
    "firebase_storage_exists",
    "function_aliases_restore",
-   "function_exists",
    "function_exists_strict",
    "git_rebase",
    "html_element",
@@ -9245,7 +9244,6 @@
    "function_dependencies_code_copy"
   ],
   "function_exists_inner": [
-   "function_exists",
    "function_exists_inner",
    "function_exists_strict"
   ],
@@ -18779,12 +18777,10 @@
   "function_exists": {
    "async": true,
    "identifiers": [
-    "function_exists_inner",
     "function_name_to_path_unalias",
     "function_exists",
     "f_name",
-    "u",
-    "e"
+    "u"
    ]
   },
   "function_exists_inner": {
