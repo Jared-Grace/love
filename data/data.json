@@ -341,7 +341,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "reduce"
   ],
   "apps_get": [
    "apps_get"
@@ -29948,6 +29949,7 @@
   "reduce": {
    "async": false,
    "identifiers": [
+    "marker",
     "reduce"
    ]
   }
