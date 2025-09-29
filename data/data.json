@@ -2436,8 +2436,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "reduce"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -2914,7 +2913,8 @@
    "app_replace_rule_set",
    "folder_current",
    "folder_current_join",
-   "js_unparse"
+   "js_unparse",
+   "reduce"
   ],
   "index_selected": [
    "app_replace_rule_set",
@@ -6930,8 +6930,7 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect",
-   "reduce"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -29967,8 +29966,7 @@
     "lambda$before$current",
     "value",
     "lambda",
-    "item",
-    "list2"
+    "current"
    ]
   }
  }
