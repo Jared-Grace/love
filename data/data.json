@@ -8785,7 +8785,8 @@
    "list_intersect",
    "list_is",
    "list_squash",
-   "marker_down_choices"
+   "marker_down_choices",
+   "function_name_to_path_import"
   ],
   "at": [
    "function_aliases_restore"
@@ -14465,9 +14466,6 @@
   ],
   "previous2": [
    "function_name_to_path_import"
-  ],
-  "ops": [
-   "function_name_to_path_import"
   ]
  },
  "functions": {
@@ -19231,7 +19229,7 @@
     "function_name_to_path_import",
     "import_",
     "dictionary",
-    "ops",
+    "l",
     "value",
     "previous",
     "previous2",
