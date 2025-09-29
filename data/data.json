@@ -6279,7 +6279,8 @@
    "date_ms_to_hours",
    "functions_names",
    "function_aliases_restore",
-   "sleep"
+   "sleep",
+   "s5_inner"
   ],
   "hours": [
    "date_diff_hours",
@@ -8311,7 +8312,8 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep"
+   "sleep",
+   "s5_inner"
   ],
   "functions_path": [
    "functions_names",
@@ -29622,10 +29624,12 @@
    ]
   },
   "s5_inner": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "sleep",
     "log",
-    "s5_inner"
+    "s5_inner",
+    "ms"
    ]
   }
  }
