@@ -2045,7 +2045,6 @@
   "as find",
   "a lfdp list_find_property",
   "n reply_on_match",
-  "s set",
   "rt",
   "s add,mult",
   "n git_history_delete",
@@ -2303,6 +2302,7 @@
   "s true",
   "urg",
   "urs l",
-  "n true_is"
+  "n true_is",
+  "s set"
  ]
 }
