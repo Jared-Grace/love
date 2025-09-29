@@ -5517,7 +5517,8 @@
    "messenger_reply_messages",
    "sandbox_2",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "function_name_to_path_import"
   ],
   "css_class_prefix_combine": [
    "css_class_prefix_combine",
@@ -8140,7 +8141,8 @@
    "function_name_to_base",
    "html_update_dev",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "function_name_to_path_import"
   ],
   "folder_delete": [
    "folder_delete",
@@ -19225,6 +19227,7 @@
   "function_name_to_path_import": {
    "async": false,
    "identifiers": [
+    "js_code_string",
     "object_property_get",
     "path_join",
     "marker",
@@ -19234,12 +19237,13 @@
     "function_name_to_path_import",
     "import_",
     "dictionary",
+    "f_name_ext",
+    "from",
     "value",
     "previous",
     "previous2",
     "joined",
-    "from",
-    "js_code_string"
+    "c"
    ]
   },
   "function_name_to_path_unalias": {
