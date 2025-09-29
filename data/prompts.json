@@ -2305,6 +2305,8 @@
   "n true_is",
   "s set",
   "s set,object",
-  "function_exists_inner sandbox"
+  "function_exists_inner sandbox",
+  "function_exists_inner",
+  "function_exists sb"
  ]
 }
