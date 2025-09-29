@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { equal } from "./equal.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { marker } from "./marker.mjs";
@@ -14,6 +15,7 @@ export function js_function_last_asyncify(stack, async_is, ast) {
     object_property_set(f, property_name, true);
     let declaration = js_declaration_single(ast);
     if (equal(f, declaration)) {
+      log(message);
     }
   }
 }
