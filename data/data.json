@@ -1466,7 +1466,8 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "ast": [
    "app_new_step_2",
@@ -2404,7 +2405,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "js_function_last_asyncify"
   ],
   "index": [
    "app_replace_home",
@@ -4093,7 +4095,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "js_function_last_asyncify"
   ],
   "book_code": [
    "app_reply_main",
@@ -5807,7 +5810,8 @@
    "keyboard_type_delay",
    "sandbox_4_a",
    "tasks_run",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_function_last_asyncify"
   ],
   "data_files_update": [
    "data_files_update"
@@ -22768,6 +22772,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "each_async",
     "object_properties",
     "data_identifiers_search",
     "equal",
@@ -22787,7 +22792,10 @@
     "declaration",
     "result",
     "s",
-    "properties"
+    "properties",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "js_identifiers": {
