@@ -2309,6 +2309,7 @@
   "urs k",
   "n test",
   "function_name_to_path_unalias test",
-  "s exists"
+  "s exists",
+  "is function_name_to_path_unalias"
  ]
 }
