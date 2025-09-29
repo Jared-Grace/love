@@ -6869,7 +6869,6 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_difference",
    "list_intersect",
    "js_function_last_asyncify"
   ],
@@ -12872,7 +12871,8 @@
   ],
   "difference": [
    "list_get_end",
-   "prompt_previous"
+   "prompt_previous",
+   "list_difference"
   ],
   "list_index_is": [
    "list_index_is",
@@ -24749,7 +24749,7 @@
     "lambda",
     "l",
     "a",
-    "list2"
+    "difference"
    ]
   },
   "list_empty": {
