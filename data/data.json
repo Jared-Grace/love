@@ -8223,7 +8223,8 @@
    "function_rename_identifiers",
    "js_expand_generic",
    "js_imports_missing",
-   "string_split_comma"
+   "string_split_comma",
+   "functions_names"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -18063,7 +18064,8 @@
     "v",
     "each_folder",
     "folder",
-    "joined"
+    "joined",
+    "f_names"
    ]
   },
   "functions_names_from_path": {
