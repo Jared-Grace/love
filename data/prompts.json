@@ -2093,7 +2093,6 @@
   "fc data_all",
   "o fc",
   "as current",
-  "u pn",
   "pn f_path \"data.json\"",
   "fs data_all",
   "fs data_property_get",
@@ -2236,6 +2235,7 @@
   "is functions_names",
   "s await",
   "is js_function_last_asyncify",
-  "fs js_function_last_asyncify"
+  "fs js_function_last_asyncify",
+  "u pn"
  ]
 }
