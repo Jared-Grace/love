@@ -1,4 +1,4 @@
-import { sleep } from "./sleep.mjs";
+import { log } from "./log.mjs";
 export async function sandbox_5() {
-  await sleep(ms);
+  log(message);
 }
