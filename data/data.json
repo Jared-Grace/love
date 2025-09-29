@@ -2006,8 +2006,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "watch"
+   "task_new"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4297,8 +4296,7 @@
    "todo",
    "undefined_not_is_assert_lambda",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "watch"
+   "visit_filter_recursive_async"
   ],
   "assert": [
    "assert",
@@ -29580,7 +29578,6 @@
   "watch": {
    "async": true,
    "identifiers": [
-    "error",
     "command_line_node_g",
     "marker",
     "object_property_exists_equals",
@@ -29604,7 +29601,6 @@
     "value",
     "name",
     "args",
-    "f_name",
     "on"
    ]
   },
