@@ -8305,6 +8305,7 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
+   "s5_inner",
    "sleep"
   ],
   "functions_path": [
@@ -11552,6 +11553,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
+   "s5_inner",
    "search_generic"
   ],
   "js_identifier_is": [
@@ -13976,6 +13978,10 @@
   "s5": [
    "s5"
   ],
+  "s5_inner": [
+   "s5_inner",
+   "sandbox_5"
+  ],
   "sandbox": [
    "sandbox"
   ],
@@ -14283,9 +14289,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "s5_inner": [
-   "sandbox_5"
   ]
  },
  "functions": {
@@ -28406,6 +28409,14 @@
    "async": false,
    "identifiers": [
     "s5"
+   ]
+  },
+  "s5_inner": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "s5_inner",
+    "sleep"
    ]
   },
   "sandbox": {
