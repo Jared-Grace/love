@@ -28,6 +28,7 @@ export async function watch() {
       object_property_set(in_progress, path, value);
       try {
         await command_line_node_g(function_auto_path.name, [path]);
+      } finally {
         const args = [path];
         try {
           await command_line_node_g(data_file_update.name, args);
@@ -42,7 +43,6 @@ export async function watch() {
           }
           throw error;
         }
-      } finally {
         object_property_set(in_progress, path, false);
       }
     }
