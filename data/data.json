@@ -10523,7 +10523,8 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "repo_path",
-   "repo_path_combine"
+   "repo_path_combine",
+   "repo_acronym_to_path"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14032,9 +14033,6 @@
   ],
   "repos_matching": [
    "repo_acronym_to_name"
-  ],
-  "path_repo": [
-   "repo_acronym_to_path"
   ],
   "repo_exists_assert": [
    "repo_exists_assert",
@@ -28645,8 +28643,8 @@
   "repo_acronym_to_path": {
    "async": true,
    "identifiers": [
-    "path_repo",
     "repo_acronym_to_name",
+    "repo_path",
     "repo_acronym_to_path",
     "acronym",
     "repo_name",
