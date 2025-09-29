@@ -22802,10 +22802,10 @@
     "properties",
     "lambda",
     "f_name",
-    "output",
-    "f_name2",
     "lambda2",
-    "ast2"
+    "ast2",
+    "output",
+    "f_name2"
    ]
   },
   "js_identifiers": {
