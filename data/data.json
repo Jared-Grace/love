@@ -11552,7 +11552,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "data_file_update"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -15447,6 +15448,7 @@
   "data_file_update": {
    "async": true,
    "identifiers": [
+    "log",
     "file_js_parse",
     "data_file_update_inner",
     "data_save",
