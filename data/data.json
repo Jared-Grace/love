@@ -1475,7 +1475,8 @@
    "visit_unique_async",
    "watch",
    "repos_path_each_unordered",
-   "functions_names_from_path"
+   "functions_names_from_path",
+   "repos_paths_map_unordered"
   ],
   "ast": [
    "app_new_step_2",
@@ -3706,7 +3707,8 @@
    "marker_down_choices",
    "repos_gitignore_overwrite",
    "sandbox_4_a",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "en": [
    "app_reply_main",
@@ -5350,7 +5352,8 @@
    "git_push_folder",
    "repo_acronym_to_path",
    "sandbox_2",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -8111,7 +8114,8 @@
    "list_includes_assert",
    "list_wait",
    "repo_exists_assert",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "readdir": [
    "folder_read",
@@ -9551,7 +9555,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_set",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -9826,7 +9831,8 @@
    "repos_gitignore_overwrite",
    "repo_path",
    "repo_path_combine",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -9839,7 +9845,8 @@
    "repos_names",
    "repo_exists_assert",
    "functions_names",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "function_run_log": [
    "function_run_git",
@@ -14294,7 +14301,8 @@
   ],
   "each_folder": [
    "function_run_git",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "repos_paths_map_unordered"
   ],
   "repos_path_each_unordered": [
    "function_run_git",
@@ -14303,6 +14311,9 @@
   "functions_names_from_path": [
    "functions_names",
    "functions_names_from_path"
+  ],
+  "repos_paths_map_unordered": [
+   "repos_paths_map_unordered"
   ]
  },
  "functions": {
@@ -29666,6 +29677,20 @@
     "suffix",
     "without",
     "f_names"
+   ]
+  },
+  "repos_paths_map_unordered": {
+   "async": true,
+   "identifiers": [
+    "list_map_unordered_async",
+    "repo_path",
+    "repos_names",
+    "repos_paths_map_unordered",
+    "each_folder",
+    "all",
+    "lambda",
+    "repo_name",
+    "folder"
    ]
   }
  }
