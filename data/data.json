@@ -2418,8 +2418,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "js_await_add_inner"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4108,8 +4107,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "js_await_add_inner"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -21373,9 +21371,7 @@
     "lambda4",
     "copy",
     "awaited",
-    "declaration",
-    "list",
-    "item"
+    "declaration"
    ]
   },
   "js_await_add_task_simple": {
