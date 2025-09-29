@@ -2241,6 +2241,7 @@
   "u fs",
   "fcg",
   "s current",
-  "data_function_current_get"
+  "data_function_current_get",
+  "r data_function_current_get function_current_get"
  ]
 }
