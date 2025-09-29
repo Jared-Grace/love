@@ -4112,8 +4112,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "function_exists_inner"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5041,8 +5040,7 @@
    "ternary",
    "repos_paths_map_unordered",
    "functions_names",
-   "repos_paths_map_unordered_combine",
-   "function_exists_inner"
+   "repos_paths_map_unordered_combine"
   ],
   "catch_call": [
    "catch_call",
@@ -14331,6 +14329,9 @@
   "mapper": [
    "repos_paths_map_unordered_combine",
    "functions_names"
+  ],
+  "bools": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18752,11 +18753,10 @@
     "exists",
     "to",
     "e",
-    "result",
+    "bools",
     "lambda",
     "item",
-    "filtered",
-    "list"
+    "filtered"
    ]
   },
   "function_exists_strict": {
