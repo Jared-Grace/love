@@ -2417,8 +2417,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "user_repo_get"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -3648,8 +3647,7 @@
    "list_unique",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "visit_unique_async",
-   "user_repo_get"
+   "visit_unique_async"
   ],
   "list_concat": [
    "app_reply_main",
@@ -3922,8 +3920,7 @@
    "list_includes",
    "list_remove_if_exists",
    "marker_down_choices_lambda",
-   "string_includes",
-   "user_repo_get"
+   "string_includes"
   ],
   "condition": [
    "app_reply_main",
@@ -4318,8 +4315,7 @@
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
    "string_is_assert",
-   "string_is_assert_message",
-   "user_repo_get"
+   "string_is_assert_message"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -14269,6 +14265,9 @@
    "js_await_add_inner",
    "js_call_fill",
    "js_function_last_asyncify"
+  ],
+  "list_includes_assert": [
+   "user_repo_get"
   ]
  },
  "functions": {
@@ -29386,9 +29385,8 @@
   "user_repo_get": {
    "async": true,
    "identifiers": [
-    "assert",
+    "list_includes_assert",
     "repos_names",
-    "list_includes",
     "data_get",
     "user_repo_path",
     "marker",
@@ -29396,9 +29394,7 @@
     "f_path",
     "value",
     "repo_name",
-    "all",
-    "includes",
-    "item"
+    "all"
    ]
   },
   "user_repo_path": {
