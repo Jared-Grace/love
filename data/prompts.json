@@ -2301,6 +2301,7 @@
   "n test",
   "s repos",
   "is repos_paths_map_unordered",
-  "o repos_paths_map_unordered_combine"
+  "o repos_paths_map_unordered_combine",
+  "s true"
  ]
 }
