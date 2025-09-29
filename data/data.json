@@ -2844,8 +2844,7 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "object_merge_generic"
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -8591,8 +8590,7 @@
    "function_aliases_restore"
   ],
   "ps": [
-   "function_aliases_restore",
-   "object_merge_generic"
+   "function_aliases_restore"
   ],
   "pn": [
    "function_aliases_restore"
@@ -27716,12 +27714,10 @@
     "object_property_get",
     "object_property_exists",
     "error_json",
-    "list_map",
     "object_merge_generic",
     "strict",
     "to",
     "from",
-    "ps",
     "lambda",
     "property_name",
     "value",
