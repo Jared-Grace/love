@@ -9828,9 +9828,6 @@
    "function_run_log",
    "tasks_run"
   ],
-  "repos_path_each_unordered": [
-   "function_run_git"
-  ],
   "git_acp_call_folder": [
    "function_run_git",
    "git_acp_call",
@@ -13861,7 +13858,8 @@
    "repos_gitignore_overwrite"
   ],
   "repos_paths_map_unordered": [
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "function_run_git"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -19533,7 +19531,7 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
-    "repos_path_each_unordered",
+    "repos_paths_map_unordered",
     "git_acp_call_folder",
     "function_run_log",
     "function_run_git",
