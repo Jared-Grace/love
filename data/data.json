@@ -825,8 +825,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "repos_paths_map_unordered"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2945,7 +2944,8 @@
    "reply",
    "repos_gitignore_overwrite",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_paths_map_unordered"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -28274,7 +28274,7 @@
     "lambda",
     "repo_name",
     "folder",
-    "v",
+    "mapped",
     "result"
    ]
   },
