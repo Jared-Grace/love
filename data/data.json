@@ -7840,7 +7840,6 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "repo_path",
    "server"
   ],
   "prefix": [
@@ -10296,7 +10295,8 @@
   "repos_folder": [
    "git_repo_clone",
    "repos_folder",
-   "repos_names"
+   "repos_names",
+   "repo_path"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -28116,9 +28116,9 @@
   "repo_path": {
    "async": false,
    "identifiers": [
+    "repos_folder",
     "marker",
     "path_join",
-    "folder_previous",
     "repo_path",
     "repo_name",
     "previous",
