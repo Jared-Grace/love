@@ -28520,7 +28520,7 @@
    ]
   },
   "sandbox_5": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "marker",
     "sandbox_5"
