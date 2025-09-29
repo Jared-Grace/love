@@ -2126,7 +2126,6 @@
   "s list,repl",
   "s dollar",
   "u lr",
-  "s5",
   "n sandbox_5_a",
   "sandbox_5",
   "git_repo_clone Jared-Grace karate_code",
@@ -2267,6 +2266,7 @@
   "is function_names",
   "is functions_names",
   "is functions_names_includes",
-  "o s5"
+  "o s5",
+  "s5"
  ]
 }
