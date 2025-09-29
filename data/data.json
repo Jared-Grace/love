@@ -13977,11 +13977,7 @@
   "s5": [
    "s5"
   ],
-  "s5c": [
-   "s5b"
-  ],
   "s5b": [
-   "s5b",
    "s5_inner"
   ],
   "s5_inner": [
@@ -28416,13 +28412,6 @@
    "async": false,
    "identifiers": [
     "s5"
-   ]
-  },
-  "s5b": {
-   "async": false,
-   "identifiers": [
-    "s5c",
-    "s5b"
    ]
   },
   "s5_inner": {
