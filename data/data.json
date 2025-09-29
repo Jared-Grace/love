@@ -9581,7 +9581,8 @@
   ],
   "user_repo_get": [
    "function_new_declaration",
-   "user_repo_get"
+   "user_repo_get",
+   "function_copy"
   ],
   "js_code_export": [
    "function_new_declaration",
@@ -9620,7 +9621,8 @@
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set"
+   "user_repo_set",
+   "function_copy"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -18657,6 +18659,7 @@
   "function_copy": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "function_name_to_path",
     "function_name_unalias",
     "function_current_set",
@@ -18675,6 +18678,7 @@
     "unaliased_new",
     "f_name",
     "v",
+    "repo_name",
     "f_path_new",
     "lambda",
     "ast"
