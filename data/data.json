@@ -28,7 +28,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine"
+   "list_map_combine",
+   "true_is"
   ],
   "right": [
    "add",
@@ -49,7 +50,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "true_is"
   ],
   "sum": [
    "add",
@@ -3157,7 +3159,8 @@
    "app_reply_main"
   ],
   "eq2": [
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "true_is"
   ],
   "size2": [
    "app_replace_rule_set"
@@ -3535,7 +3538,8 @@
    "js_dollar_ie",
    "js_function_last_asyncify",
    "js_identifier_replace",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "true_is"
   ],
   "list_add_first": [
    "app_reply_main",
@@ -29730,7 +29734,11 @@
   "true_is": {
    "async": false,
    "identifiers": [
+    "equal",
     "true_is",
+    "eq2",
+    "left",
+    "right",
     "eq"
    ]
   }
