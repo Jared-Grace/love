@@ -280,7 +280,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "functions_imports_fix"
   ],
   "t2": [
    "t2"
@@ -844,7 +845,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "functions_imports_fix"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1499,7 +1501,8 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "functions_imports_fix"
   ],
   "ast": [
    "app_new_step_2",
@@ -8380,11 +8383,13 @@
   ],
   "functions_transform": [
    "functions_log_remove",
-   "functions_transform"
+   "functions_transform",
+   "functions_imports_fix"
   ],
   "js_log_remove": [
    "functions_log_remove",
-   "js_log_remove"
+   "js_log_remove",
+   "functions_imports_fix"
   ],
   "functions_log_remove": [
    "functions_log_remove"
@@ -14469,6 +14474,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "functions_imports_fix": [
+   "functions_imports_fix"
   ]
  },
  "functions": {
@@ -30005,6 +30013,17 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "functions_imports_fix": {
+   "async": true,
+   "identifiers": [
+    "functions_transform",
+    "marker",
+    "js_log_remove",
+    "functions_imports_fix",
+    "lambda",
+    "v"
    ]
   }
  }
