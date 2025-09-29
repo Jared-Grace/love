@@ -13,6 +13,6 @@ export async function marker_param_add(param_name) {
       js_declaration_param_add(f, param_name);
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }
