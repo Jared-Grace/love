@@ -315,6 +315,7 @@
    "range_from",
    "repos_gitignore_overwrite",
    "repos_names",
+   "repos_paths_map_unordered",
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_path",
@@ -624,6 +625,7 @@
    "folder_read_async",
    "folder_read_files",
    "functions_log_remove",
+   "functions_names",
    "functions_transform",
    "function_acronym_to_name",
    "function_aliases_restore",
@@ -823,8 +825,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "functions_names"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -934,6 +935,7 @@
    "each_object",
    "floor",
    "folder_user_docs_path",
+   "functions_names_from_path",
    "function_aliases_restore",
    "function_rename_suffix_add",
    "html_p_text",
@@ -951,8 +953,7 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
-   "string_padded_is",
-   "functions_names_from_path"
+   "string_padded_is"
   ],
   "app_new_step_2": [
    "app_new",
@@ -1281,6 +1282,7 @@
    "folder_read_files",
    "functions_combine",
    "functions_log_remove",
+   "functions_names_from_path",
    "functions_transform",
    "function_aliases_restore",
    "function_aliases_search",
@@ -1457,6 +1459,7 @@
    "reply_sequence",
    "reply_test",
    "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
    "repo_acronym_set",
    "retry",
    "retry_on_error",
@@ -1473,10 +1476,7 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "repos_path_each_unordered",
-   "functions_names_from_path",
-   "repos_paths_map_unordered"
+   "watch"
   ],
   "ast": [
    "app_new_step_2",
@@ -2804,6 +2804,7 @@
    "ebible_verses_upload",
    "ebible_version_books_testament",
    "functions_format",
+   "functions_names_from_path",
    "functions_paths",
    "functions_transform",
    "function_dependencies_code",
@@ -2836,8 +2837,7 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "functions_names_from_path"
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -3706,9 +3706,8 @@
    "list_to_dictionary_async",
    "marker_down_choices",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "sandbox_4_a"
   ],
   "en": [
    "app_reply_main",
@@ -5350,10 +5349,9 @@
    "git_publish_initial",
    "git_push",
    "git_push_folder",
+   "repos_paths_map_unordered",
    "repo_acronym_to_path",
-   "sandbox_2",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
+   "sandbox_2"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5856,15 +5854,6 @@
    "reply_test",
    "tasks_run"
   ],
-  "log": [
-   "js_call_fill",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "search_generic",
-   "s5_inner"
-  ],
   "data_file_update": [
    "data_file_update",
    "watch"
@@ -6156,6 +6145,7 @@
   ],
   "suffix": [
    "data_path_generic",
+   "functions_names_from_path",
    "function_copy_suffix_add",
    "function_rename_suffix_add",
    "function_wrap_suffix_add",
@@ -6165,8 +6155,7 @@
    "roman_to_integer",
    "string_ends_with",
    "string_ends_with_not",
-   "string_suffix_without",
-   "functions_names_from_path"
+   "string_suffix_without"
   ],
   "f_name_unsuffixed": [
    "data_path_generic"
@@ -6283,8 +6272,8 @@
    "date_ms_to_hours",
    "functions_names",
    "function_aliases_restore",
-   "sleep",
-   "s5_inner"
+   "s5_inner",
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -6615,11 +6604,11 @@
   ],
   "string_suffix_without": [
    "ebible_chapters",
+   "functions_names_from_path",
    "function_identifier_replace_ending_remove",
    "function_list_generate",
    "string_suffix_change",
-   "string_suffix_without",
-   "functions_names_from_path"
+   "string_suffix_without"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -6676,10 +6665,10 @@
   ],
   "without": [
    "ebible_chapters",
+   "functions_names_from_path",
    "messenger_reply_unread_collect",
    "string_suffix_change",
-   "string_suffix_without",
-   "functions_names_from_path"
+   "string_suffix_without"
   ],
   "ebible_chapters_each_verses_list": [
    "ebible_chapters_each_verses",
@@ -7626,9 +7615,9 @@
   ],
   "function_name_extension": [
    "file_open",
+   "functions_names_from_path",
    "function_name_extension",
-   "function_name_to_base",
-   "functions_names_from_path"
+   "function_name_to_base"
   ],
   "string_ends_with": [
    "file_open",
@@ -7674,15 +7663,15 @@
    "firebase_path_fix",
    "firebase_storage_exists",
    "folder_read_async",
+   "functions_names",
+   "functions_names_from_path",
    "function_import",
    "messenger_reply_login",
    "object_property_exists_equals",
    "path_name",
    "path_resolve",
    "server",
-   "watch",
-   "functions_names",
-   "functions_names_from_path"
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8113,9 +8102,8 @@
    "folder_read_files",
    "list_includes_assert",
    "list_wait",
-   "repo_exists_assert",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "repo_exists_assert"
   ],
   "readdir": [
    "folder_read",
@@ -8224,6 +8212,7 @@
   "f_names": [
    "functions_combine",
    "functions_combine_name",
+   "functions_names_from_path",
    "functions_paths",
    "functions_search",
    "function_names_to_acronyms",
@@ -8231,8 +8220,7 @@
    "function_rename_identifiers",
    "js_expand_generic",
    "js_imports_missing",
-   "string_split_comma",
-   "functions_names_from_path"
+   "string_split_comma"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8313,13 +8301,25 @@
   "functions_log_remove": [
    "functions_log_remove"
   ],
+  "functions_names_from_path": [
+   "functions_names",
+   "functions_names_from_path"
+  ],
+  "repos_names": [
+   "functions_names",
+   "repos_acronyms_to_names",
+   "repos_gitignore_overwrite",
+   "repos_names",
+   "repos_paths_map_unordered",
+   "repo_exists_assert"
+  ],
   "sleep": [
    "functions_names",
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep",
-   "s5_inner"
+   "s5_inner",
+   "sleep"
   ],
   "functions_path": [
    "functions_names",
@@ -8327,10 +8327,14 @@
    "function_name_to_path",
    "watch"
   ],
+  "rns": [
+   "functions_names",
+   "repos_names"
+  ],
   "paths": [
+   "functions_names_from_path",
    "git_push_schedule_command",
-   "path_resolve",
-   "functions_names_from_path"
+   "path_resolve"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -9548,15 +9552,14 @@
   "repo_name": [
    "function_new_declaration",
    "list_includes_assert",
+   "repos_paths_map_unordered",
    "repo_acronym_to_name",
    "repo_acronym_to_path",
    "repo_exists_assert",
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
+   "user_repo_set"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -9825,28 +9828,13 @@
    "function_run_log",
    "tasks_run"
   ],
-  "repo_path": [
-   "git_repo_clone",
-   "path_repo_combine",
-   "repos_gitignore_overwrite",
-   "repo_path",
-   "repo_path_combine",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
+  "repos_path_each_unordered": [
+   "function_run_git"
   ],
   "git_acp_call_folder": [
    "function_run_git",
    "git_acp_call",
    "git_acp_call_folder"
-  ],
-  "repos_names": [
-   "repos_acronyms_to_names",
-   "repos_gitignore_overwrite",
-   "repos_names",
-   "repo_exists_assert",
-   "functions_names",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
   ],
   "function_run_log": [
    "function_run_git",
@@ -9855,6 +9843,10 @@
   "function_run_git": [
    "function_run_git",
    "function_run_line_git"
+  ],
+  "each_folder": [
+   "function_run_git",
+   "repos_paths_map_unordered"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -10374,6 +10366,14 @@
   ],
   "abortErr": [
    "git_rebase"
+  ],
+  "repo_path": [
+   "git_repo_clone",
+   "path_repo_combine",
+   "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
+   "repo_path",
+   "repo_path_combine"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -11560,6 +11560,15 @@
   "jin": [
    "js_call_callee_name",
    "js_identifier_not_is"
+  ],
+  "log": [
+   "js_call_fill",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "s5_inner",
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13851,6 +13860,9 @@
   "repos_gitignore_overwrite": [
    "repos_gitignore_overwrite"
   ],
+  "repos_paths_map_unordered": [
+   "repos_paths_map_unordered"
+  ],
   "repo_acronym_set": [
    "repo_acronym_set"
   ],
@@ -13982,6 +13994,10 @@
   ],
   "s5": [
    "s5"
+  ],
+  "s5_inner": [
+   "s5_inner",
+   "sandbox_5"
   ],
   "sandbox": [
    "sandbox"
@@ -14290,30 +14306,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "s5_inner": [
-   "sandbox_5",
-   "s5_inner"
-  ],
-  "rns": [
-   "repos_names",
-   "functions_names"
-  ],
-  "each_folder": [
-   "function_run_git",
-   "repos_path_each_unordered",
-   "repos_paths_map_unordered"
-  ],
-  "repos_path_each_unordered": [
-   "function_run_git",
-   "repos_path_each_unordered"
-  ],
-  "functions_names_from_path": [
-   "functions_names",
-   "functions_names_from_path"
-  ],
-  "repos_paths_map_unordered": [
-   "repos_paths_map_unordered"
   ]
  },
  "functions": {
@@ -18069,6 +18061,23 @@
     "v",
     "ms",
     "rns"
+   ]
+  },
+  "functions_names_from_path": {
+   "async": false,
+   "identifiers": [
+    "list_map",
+    "string_suffix_without",
+    "function_name_extension",
+    "folder_read_files",
+    "functions_names_from_path",
+    "path",
+    "paths",
+    "lambda",
+    "p",
+    "suffix",
+    "without",
+    "f_names"
    ]
   },
   "functions_names_includes": {
@@ -28238,6 +28247,21 @@
     "rns"
    ]
   },
+  "repos_paths_map_unordered": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "list_map_unordered_async",
+    "repo_path",
+    "repos_names",
+    "repos_paths_map_unordered",
+    "each_folder",
+    "all",
+    "lambda",
+    "repo_name",
+    "folder"
+   ]
+  },
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
@@ -28424,6 +28448,15 @@
    "async": false,
    "identifiers": [
     "s5"
+   ]
+  },
+  "s5_inner": {
+   "async": true,
+   "identifiers": [
+    "sleep",
+    "log",
+    "s5_inner",
+    "ms"
    ]
   },
   "sandbox": {
@@ -29637,60 +29670,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "s5_inner": {
-   "async": true,
-   "identifiers": [
-    "sleep",
-    "log",
-    "s5_inner",
-    "ms"
-   ]
-  },
-  "repos_path_each_unordered": {
-   "async": true,
-   "identifiers": [
-    "list_map_unordered_async",
-    "repo_path",
-    "repos_names",
-    "repos_path_each_unordered",
-    "each_folder",
-    "all",
-    "lambda",
-    "repo_name",
-    "folder"
-   ]
-  },
-  "functions_names_from_path": {
-   "async": false,
-   "identifiers": [
-    "list_map",
-    "string_suffix_without",
-    "function_name_extension",
-    "folder_read_files",
-    "functions_names_from_path",
-    "path",
-    "paths",
-    "lambda",
-    "p",
-    "suffix",
-    "without",
-    "f_names"
-   ]
-  },
-  "repos_paths_map_unordered": {
-   "async": true,
-   "identifiers": [
-    "list_map_unordered_async",
-    "repo_path",
-    "repos_names",
-    "repos_paths_map_unordered",
-    "each_folder",
-    "all",
-    "lambda",
-    "repo_name",
-    "folder"
    ]
   }
  }
