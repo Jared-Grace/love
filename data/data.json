@@ -8107,7 +8107,6 @@
    "function_run_git",
    "list_includes_assert",
    "list_wait",
-   "repos_names",
    "repo_exists_assert",
    "functions_names"
   ],
@@ -14288,6 +14287,9 @@
   "s5_inner": [
    "sandbox_5",
    "s5_inner"
+  ],
+  "rns": [
+   "repos_names"
   ]
  },
  "functions": {
@@ -28221,7 +28223,7 @@
     "marker",
     "repos_names",
     "path_folder",
-    "all"
+    "rns"
    ]
   },
   "repo_acronym_get": {
