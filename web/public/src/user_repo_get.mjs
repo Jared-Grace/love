@@ -10,6 +10,6 @@ export async function user_repo_get() {
   let { value: repo_name } = await data_get("repo_current", null, f_path);
   let all = await repos_names();
   let includes = list_includes(all, item);
-  assert(b);
+  assert(includes);
   return repo_name;
 }
