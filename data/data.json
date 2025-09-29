@@ -3683,7 +3683,8 @@
    "list_to_dictionary_async",
    "marker_down_choices",
    "repos_gitignore_overwrite",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "function_run_git"
   ],
   "en": [
    "app_reply_main",
@@ -5778,7 +5779,6 @@
    "function_imports_add",
    "function_params_new",
    "function_rename_identifiers",
-   "function_run_git",
    "function_transform_marker_all",
    "function_transform_marker_specified",
    "git_publish_initial",
@@ -19396,9 +19396,9 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
+    "list_map_unordered_async",
     "repo_path",
     "git_acp_call_folder",
-    "each_async",
     "repos_names",
     "function_run_log",
     "function_run_git",
