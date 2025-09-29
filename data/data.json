@@ -28,8 +28,7 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine",
-   "js_function_last_asyncify"
+   "list_map_combine"
   ],
   "right": [
    "add",
@@ -50,8 +49,7 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try",
-   "js_function_last_asyncify"
+   "log_unparse_try"
   ],
   "sum": [
    "add",
@@ -22779,9 +22777,7 @@
     "f",
     "property_name",
     "async",
-    "declaration",
-    "left",
-    "right"
+    "declaration"
    ]
   },
   "js_identifiers": {
