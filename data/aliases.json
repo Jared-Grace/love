@@ -19,7 +19,7 @@
   "u": "function_name_unalias",
   "ft": "function_transform",
   "fm": "function_format",
-  "f": "data_function_current_get",
+  "f": "function_current_get",
   "fs": "function_current_set",
   "ai": "function_aliases_inverted",
   "np": "noop",

@@ -18,7 +18,7 @@ import { list_range } from "./list_range.mjs";
 import { marker_previous_index } from "./marker_previous_index.mjs";
 import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
@@ -33,7 +33,7 @@ import { list_includes } from "./list_includes.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { functions_names } from "./functions_names.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
