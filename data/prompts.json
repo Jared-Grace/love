@@ -2239,7 +2239,6 @@
   "s repo_path_combine",
   "urs l",
   "s repo",
-  "fs js_function_last_asyncify",
   "pnd functions",
   "is js_function_last_asyncify",
   "s awawit",
@@ -2259,6 +2258,7 @@
   "au functions_names",
   "is js_await_add_inner",
   "fs js_await_add_inner",
-  "pnd visited"
+  "pnd visited",
+  "fs js_function_last_asyncify"
  ]
 }
