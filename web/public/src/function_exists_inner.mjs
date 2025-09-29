@@ -6,24 +6,8 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
-import { object_merge } from "./object_merge.mjs";
-import { file_exists } from "./file_exists.mjs";
 export async function function_exists_inner(u) {
   let { f_path } = u;
-  let exists = await file_exists(f_path);
-  let to = {
-    exists,
-  };
-  let e = object_merge(to, u);
-  return e;
-  async function lambda(joined) {
-    let exists = await file_exists(joined);
-    let v = {
-      exists,
-      f_path: joined,
-    };
-    return v;
-  }
   let mapped = await repos_paths_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
     let exists2 = object_property_get(m, "exists");
@@ -32,16 +16,15 @@ export async function function_exists_inner(u) {
   }
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
-  exists = list_size_1(filtered);
-  to = {
+  let exists = list_size_1(filtered);
+  let to = {
     exists,
     multiple,
   };
   if (exists) {
     let only = list_single(filtered);
     let f_path2 = object_property_get(only, "f_path");
-    object_property_set_exists_not(object, property_name, value);
+    object_property_set_exists_not(to, "f_path", f_path2);
   }
-  e = object_merge(to, u);
   return e;
 }
