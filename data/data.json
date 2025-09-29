@@ -2008,7 +2008,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "functions_names"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4354,7 +4355,8 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch"
+   "watch",
+   "functions_names"
   ],
   "count": [
    "assert_arguments",
@@ -5032,7 +5034,8 @@
    "tasks_run",
    "task_new",
    "ternary",
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "functions_names"
   ],
   "catch_call": [
    "catch_call",
@@ -5352,7 +5355,8 @@
    "git_push_folder",
    "repos_paths_map_unordered",
    "repo_acronym_to_path",
-   "sandbox_2"
+   "sandbox_2",
+   "functions_names"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -8307,7 +8311,6 @@
    "functions_names_from_path"
   ],
   "repos_names": [
-   "functions_names",
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite",
    "repos_names",
@@ -8329,7 +8332,6 @@
    "watch"
   ],
   "rns": [
-   "functions_names",
    "repos_names"
   ],
   "paths": [
@@ -9832,7 +9834,8 @@
   "git_acp_call_folder": [
    "function_run_git",
    "git_acp_call",
-   "git_acp_call_folder"
+   "git_acp_call_folder",
+   "functions_names"
   ],
   "function_run_log": [
    "function_run_git",
@@ -9843,7 +9846,8 @@
    "function_run_line_git"
   ],
   "each_folder": [
-   "function_run_git"
+   "function_run_git",
+   "functions_names"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -13859,7 +13863,8 @@
   ],
   "repos_paths_map_unordered": [
    "repos_paths_map_unordered",
-   "function_run_git"
+   "function_run_git",
+   "functions_names"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -18052,8 +18057,9 @@
   "functions_names": {
    "async": true,
    "identifiers": [
+    "git_acp_call_folder",
+    "repos_paths_map_unordered",
     "functions_names_from_path",
-    "repos_names",
     "sleep",
     "marker",
     "functions_path",
@@ -18061,7 +18067,11 @@
     "path",
     "v",
     "ms",
-    "rns"
+    "each_folder",
+    "result",
+    "folder",
+    "f_name",
+    "args"
    ]
   },
   "functions_names_from_path": {
