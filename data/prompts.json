@@ -2266,6 +2266,7 @@
   "is difference",
   "is fns",
   "is function_names",
-  "is functions_names"
+  "is functions_names",
+  "is functions_names_includes"
  ]
 }
