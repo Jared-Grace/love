@@ -199,6 +199,7 @@
   "le": "list_empty",
   "lam": "list_add_multiple",
   "flc": "file_copy",
-  "fld": "file_delete"
+  "fld": "file_delete",
+  "pnd": "function_param_new_double"
  }
 }
