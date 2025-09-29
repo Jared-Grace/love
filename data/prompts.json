@@ -2337,6 +2337,7 @@
   "n t3",
   "o file_exists",
   "o function_exists",
-  "de t3"
+  "de t3",
+  "s transform,fun"
  ]
 }
