@@ -850,7 +850,6 @@
   "fp jaa",
   "ir type \"CallExpression\"",
   "oe ir",
-  "s current",
   "c marker_down_generic marker_down_choices",
   "a mdc marker_down_choices",
   "dts 1",
@@ -2239,6 +2238,8 @@
   "a pnd function_param_new_double",
   "pnd ast",
   "fc",
-  "u fs"
+  "u fs",
+  "fcg",
+  "s current"
  ]
 }
