@@ -11150,8 +11150,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "git_acp_folder"
+   "search_generic"
   ],
   "js_node_type_not_is_if": [
    "js_await_add",
@@ -29288,7 +29287,6 @@
   "git_acp_folder": {
    "async": true,
    "identifiers": [
-    "log",
     "git_push_folder",
     "git_commit_folder",
     "command_line_git_folder",
