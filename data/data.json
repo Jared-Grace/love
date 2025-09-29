@@ -155,6 +155,7 @@
    "function_aliases_restore",
    "function_alias_add",
    "function_auto",
+   "function_current_get",
    "function_current_set",
    "function_dependencies_code_copy",
    "function_exists_strict",
@@ -168,6 +169,7 @@
    "function_open_app",
    "function_open_dollar_choice",
    "function_open_editor",
+   "function_param_new_double",
    "function_parse_strict_declaration",
    "function_rename",
    "function_rename_suffix_add",
@@ -232,6 +234,7 @@
    "js_dollar_rf",
    "js_dollar_rt",
    "js_dollar_x",
+   "js_function_last_asyncify",
    "js_imports_declarations",
    "js_imports_paths_fix",
    "js_imports_unused",
@@ -316,6 +319,7 @@
    "sandbox_2",
    "sandbox_3",
    "sandbox_4_a",
+   "sandbox_5",
    "storage_local_get",
    "storage_local_initialize",
    "storage_local_initialize_context",
@@ -333,11 +337,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "js_function_last_asyncify",
-   "function_param_new_double",
-   "function_current_get",
-   "sandbox_5"
+   "whitespace_normalize"
   ],
   "apps_get": [
    "apps_get"
@@ -427,6 +427,7 @@
    "function_name_combine",
    "function_name_combine_multiple",
    "function_new_app_screen",
+   "function_new_declaration",
    "function_new_js",
    "function_new_js_inner",
    "function_open_dollar_choice",
@@ -435,8 +436,7 @@
    "js_dollar_new_args",
    "list_concat_multiple",
    "list_map_combine",
-   "marker_screen_add",
-   "function_new_declaration"
+   "marker_screen_add"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -1132,9 +1132,9 @@
    "js_declaration_single_name",
    "js_declaration_single_params_add",
    "js_dollar_new_args_inner",
+   "js_function_last_asyncify",
    "js_imports_missing",
-   "marker_down_choices_lambda",
-   "js_function_last_asyncify"
+   "marker_down_choices_lambda"
   ],
   "html_new": [
    "app_new_step_2",
@@ -1159,11 +1159,11 @@
    "function_transform_marker_specified",
    "js_dollar_new",
    "js_dollar_new_args",
+   "js_function_last_asyncify",
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new",
-   "js_function_last_asyncify"
+   "task_new"
   ],
   "list_add": [
    "app_new_step_2",
@@ -1343,6 +1343,7 @@
    "js_dollar_s",
    "js_expand_generic",
    "js_function_id_add",
+   "js_function_last_asyncify",
    "js_identifiers",
    "js_identifiers_named",
    "js_identifiers_names",
@@ -1467,8 +1468,7 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "ast": [
    "app_new_step_2",
@@ -1541,6 +1541,7 @@
    "js_dollar_x",
    "js_expand_generic",
    "js_function_id_add",
+   "js_function_last_asyncify",
    "js_identifiers",
    "js_identifiers_named",
    "js_identifiers_named_count",
@@ -1594,8 +1595,7 @@
    "marker_move",
    "marker_top",
    "promise_not_is",
-   "task_new",
-   "js_function_last_asyncify"
+   "task_new"
   ],
   "declaration": [
    "app_new_step_2",
@@ -1629,6 +1629,7 @@
    "js_dollar_new_args_inner",
    "js_dollar_s",
    "js_expand_generic",
+   "js_function_last_asyncify",
    "js_imports_declarations",
    "js_imports_fix",
    "js_imports_missing",
@@ -1641,8 +1642,7 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize",
-   "js_function_last_asyncify"
+   "marker_functionize"
   ],
   "async": [
    "app_new_step_2",
@@ -1706,10 +1706,10 @@
    "function_path_declaration_unparse",
    "function_rename_identifiers",
    "function_transform",
+   "js_function_last_asyncify",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic",
-   "js_function_last_asyncify"
+   "marker_call_replace_generic"
   ],
   "object_property_get": [
    "app_refresh",
@@ -1981,6 +1981,7 @@
    "js_code_call_statement",
    "js_code_declaration",
    "js_code_declaration_args",
+   "js_function_last_asyncify",
    "js_marker_insert",
    "js_outside_move",
    "js_visit_calls_named",
@@ -1999,8 +2000,7 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -3519,9 +3519,9 @@
    "js_assign_combine",
    "js_bang_to_not",
    "js_dollar_ie",
+   "js_function_last_asyncify",
    "js_identifier_replace",
-   "messenger_reply_playwright",
-   "js_function_last_asyncify"
+   "messenger_reply_playwright"
   ],
   "list_add_first": [
    "app_reply_main",
@@ -3689,14 +3689,14 @@
    "ebible_references_parse_lines",
    "functions_combine_name",
    "function_dependencies_code",
+   "function_run_git",
    "js_block_child_graph_unparse",
    "js_call_new_code",
    "list_map_unordered_async",
    "list_to_dictionary_async",
    "marker_down_choices",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "function_run_git"
+   "sandbox_4_a"
   ],
   "en": [
    "app_reply_main",
@@ -4714,7 +4714,6 @@
    "data_boolean_set",
    "data_copy",
    "data_file_update_inner",
-   "data_function_current_get",
    "data_get",
    "data_marker_current_get",
    "data_partition",
@@ -4729,6 +4728,7 @@
    "file_json_isolate",
    "file_json_property_delete",
    "firebase_storage_download_property",
+   "function_current_get",
    "function_run_prompt",
    "git_push_folder",
    "global_function_property_async",
@@ -4762,8 +4762,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "function_current_get"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -4816,6 +4815,7 @@
    "html_loading",
    "html_style_assign",
    "js_dollar_s",
+   "js_function_last_asyncify",
    "js_string",
    "marker_rename",
    "messenger_reply",
@@ -4849,8 +4849,7 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green",
-   "js_function_last_asyncify"
+   "trinity_green"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -4994,6 +4993,7 @@
    "js_code_parenthesis_open_close",
    "js_declaration_param_named",
    "js_dollar_choice_arguments",
+   "js_function_last_asyncify",
    "js_identifiers",
    "js_marker_named_ast",
    "js_node_types",
@@ -5019,8 +5019,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "js_function_last_asyncify"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -5596,27 +5595,25 @@
   "data_property_get": [
    "data_app_current_get",
    "data_functions_get",
-   "data_function_current_get",
    "data_identifiers_get",
    "data_marker_current_get",
    "data_property_get",
    "data_terminal_get",
    "data_watch_get",
+   "function_current_get",
    "function_run_prompt",
-   "git_push_folder",
-   "function_current_get"
+   "git_push_folder"
   ],
   "user_repo_path": [
    "data_app_current_get",
-   "data_function_current_get",
    "data_marker_current_get",
+   "function_current_get",
    "function_current_set",
    "function_open_app",
    "git_push_folder",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set",
-   "function_current_get"
+   "user_repo_set"
   ],
   "data_app_current_get": [
    "data_app_current_get",
@@ -5630,7 +5627,6 @@
    "data_files_update",
    "data_file_update",
    "data_functions_get",
-   "data_function_current_get",
    "data_get",
    "data_identifiers_get",
    "data_marker_current_get",
@@ -5645,13 +5641,13 @@
    "function_aliases_restore",
    "function_alias_add_generic",
    "function_alias_rename",
+   "function_current_get",
    "function_current_set",
    "function_open_app",
    "function_run_line_parse",
    "function_run_prompt",
    "git_push_folder",
-   "marker_current_set",
-   "function_current_get"
+   "marker_current_set"
   ],
   "path_join": [
    "data_backup",
@@ -5804,6 +5800,7 @@
    "js_auto",
    "js_calls_to_each",
    "js_dollar",
+   "js_function_last_asyncify",
    "js_outside_move",
    "js_return_atomize",
    "js_visit_each_async",
@@ -5811,8 +5808,7 @@
    "keyboard_type_delay",
    "sandbox_4_a",
    "tasks_run",
-   "visit_filter_recursive_async",
-   "js_function_last_asyncify"
+   "visit_filter_recursive_async"
   ],
   "data_files_update": [
    "data_files_update"
@@ -5832,6 +5828,7 @@
    "js_declaration_params_names_node",
    "js_dollar_choice_arguments_names",
    "js_dollar_new",
+   "js_function_last_asyncify",
    "js_identifier_defineds",
    "js_property_parse_expression_add",
    "list_map_squash",
@@ -5840,8 +5837,7 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run",
-   "js_function_last_asyncify"
+   "tasks_run"
   ],
   "data_file_update": [
    "data_file_update",
@@ -6012,37 +6008,6 @@
    "data_functions_get",
    "js_await_add"
   ],
-  "data_function_current_get": [
-   "data_function_current_get",
-   "data_function_current_restore",
-   "function_current_declaration_code",
-   "function_identifier_replace",
-   "function_open_editor_current",
-   "function_params_new",
-   "function_transform_marker_current",
-   "function_transform_marker_empty",
-   "function_types",
-   "function_type_first",
-   "marker_assign_replace",
-   "marker_down_choices",
-   "marker_move",
-   "marker_next",
-   "marker_next_await",
-   "marker_remove",
-   "marker_rename"
-  ],
-  "f_name_current": [
-   "data_function_current_get",
-   "data_function_current_restore",
-   "function_current_declaration_code",
-   "function_open_editor_current",
-   "function_params_new",
-   "function_transform_marker_current",
-   "marker_call",
-   "marker_param_add",
-   "marker_rename",
-   "function_current_get"
-  ],
   "function_current_set": [
    "data_function_current_restore",
    "function_copy",
@@ -6050,9 +6015,49 @@
    "function_current_set_task_new",
    "function_open"
   ],
+  "function_current_get": [
+   "data_function_current_restore",
+   "function_current_declaration_code",
+   "function_current_get",
+   "function_identifier_replace",
+   "function_open_editor_current",
+   "function_params_new",
+   "function_transform_current",
+   "function_transform_marker_current",
+   "function_transform_marker_empty",
+   "function_types",
+   "function_type_first",
+   "marker_assign_replace",
+   "marker_call",
+   "marker_call_replace_generic",
+   "marker_down_choices",
+   "marker_expand",
+   "marker_functionize",
+   "marker_move",
+   "marker_new",
+   "marker_next",
+   "marker_next_await",
+   "marker_next_delete",
+   "marker_param_add",
+   "marker_remove",
+   "marker_rename",
+   "marker_top",
+   "task_new"
+  ],
   "data_function_current_restore": [
    "data_function_current_restore",
    "task_new"
+  ],
+  "f_name_current": [
+   "data_function_current_restore",
+   "function_current_declaration_code",
+   "function_current_get",
+   "function_open_editor_current",
+   "function_params_new",
+   "function_transform_marker_current",
+   "marker_call",
+   "marker_param_add",
+   "marker_rename"
   ],
   "data_get": [
    "data_get",
@@ -6387,14 +6392,14 @@
    "functions_search_open",
    "function_aliases_search",
    "function_params_new",
+   "js_function_last_asyncify",
    "js_visit_children_get",
    "messenger_reply",
    "object_merge_generic",
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run",
-   "js_function_last_asyncify"
+   "tasks_run"
   ],
   "each_object": [
    "each_object",
@@ -9465,6 +9470,10 @@
   "function_new_app_screen": [
    "function_new_app_screen"
   ],
+  "user_repo_get": [
+   "function_new_declaration",
+   "user_repo_get"
+  ],
   "js_code_export": [
    "function_new_declaration",
    "js_code_export"
@@ -9489,6 +9498,17 @@
    "marker_top"
   ],
   "contents_import": [
+   "function_new_declaration"
+  ],
+  "repo_name": [
+   "function_new_declaration",
+   "function_run_git",
+   "repo_acronym_to_name",
+   "repo_acronym_to_path",
+   "repo_path",
+   "user_repo_get"
+  ],
+  "repo_path_combine": [
    "function_new_declaration"
   ],
   "function_new_js_inner": [
@@ -9584,13 +9604,13 @@
   "param_name": [
    "function_params_consolidate",
    "function_param_new",
+   "function_param_new_double",
    "js_declaration_param_add",
    "js_declaration_param_named",
    "js_declaration_single_params_add",
    "js_expand_generic",
    "js_property_identifier",
-   "marker_param_add",
-   "function_param_new_double"
+   "marker_param_add"
   ],
   "arg_new": [
    "function_params_consolidate"
@@ -9662,6 +9682,9 @@
   ],
   "default_value": [
    "function_param_new"
+  ],
+  "function_param_new_double": [
+   "function_param_new_double"
   ],
   "list_swap": [
    "function_param_swap",
@@ -9757,9 +9780,9 @@
   ],
   "repo_path": [
    "function_run_git",
+   "git_repo_clone",
    "repos_gitignore_overwrite",
-   "repo_path",
-   "git_repo_clone"
+   "repo_path"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -9779,14 +9802,6 @@
   "function_run_git": [
    "function_run_git",
    "function_run_line_git"
-  ],
-  "repo_name": [
-   "function_run_git",
-   "repo_acronym_to_name",
-   "repo_acronym_to_path",
-   "repo_path",
-   "user_repo_get",
-   "function_new_declaration"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -10307,11 +10322,6 @@
   "abortErr": [
    "git_rebase"
   ],
-  "repos_folder": [
-   "repos_folder",
-   "repos_names",
-   "repo_path"
-  ],
   "git_repo_clone": [
    "git_repo_clone"
   ],
@@ -10795,8 +10805,8 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep",
-   "sandbox_5"
+   "sandbox_5",
+   "sleep"
   ],
   "npm_install": [
    "import_install",
@@ -13781,6 +13791,11 @@
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite"
   ],
+  "repos_folder": [
+   "repos_folder",
+   "repos_names",
+   "repo_path"
+  ],
   "repos_gitignore_overwrite": [
    "repos_gitignore_overwrite"
   ],
@@ -13932,11 +13947,11 @@
    "string_split_semicolon",
    "string_split_semicolon_space"
   ],
-  "sandbox_5_a": [
-   "sandbox_5_a"
-  ],
   "sandbox_5": [
    "sandbox_5"
+  ],
+  "sandbox_5_a": [
+   "sandbox_5_a"
   ],
   "terms": [
    "search_generic"
@@ -14163,10 +14178,6 @@
   "extractAllTo": [
    "unzip"
   ],
-  "user_repo_get": [
-   "user_repo_get",
-   "function_new_declaration"
-  ],
   "user_repo_set": [
    "user_repo_set"
   ],
@@ -14215,25 +14226,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "repo_path_combine": [
-   "function_new_declaration"
-  ],
-  "function_param_new_double": [
-   "function_param_new_double"
-  ],
-  "function_current_get": [
-   "function_current_get",
-   "function_transform_current",
-   "marker_expand",
-   "marker_top",
-   "task_new",
-   "marker_new",
-   "marker_next_delete",
-   "marker_param_add",
-   "marker_call",
-   "marker_call_replace_generic",
-   "marker_functionize"
   ]
  },
  "functions": {
@@ -15457,22 +15449,11 @@
     "functions"
    ]
   },
-  "data_function_current_get": {
-   "async": true,
-   "identifiers": [
-    "user_repo_path",
-    "data_property_get",
-    "data_function_current_get",
-    "property_name",
-    "d_path",
-    "f_name_current"
-   ]
-  },
   "data_function_current_restore": {
    "async": true,
    "identifiers": [
     "function_current_set",
-    "data_function_current_get",
+    "function_current_get",
     "data_function_current_restore",
     "lambda",
     "f_name_current"
@@ -18495,11 +18476,23 @@
   "function_current_declaration_code": {
    "async": true,
    "identifiers": [
-    "data_function_current_get",
+    "function_current_get",
     "function_parse_declaration_js_unparse",
     "function_current_declaration_code",
     "f_name_current",
     "v"
+   ]
+  },
+  "function_current_get": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "user_repo_path",
+    "data_property_get",
+    "function_current_get",
+    "property_name",
+    "d_path",
+    "f_name_current"
    ]
   },
   "function_current_set": {
@@ -18667,7 +18660,7 @@
    "identifiers": [
     "list_empty_is",
     "assert_not",
-    "data_function_current_get",
+    "function_current_get",
     "object_replace",
     "js_parse_expression",
     "js_identifiers_named",
@@ -19139,7 +19132,7 @@
   "function_open_editor_current": {
    "async": true,
    "identifiers": [
-    "data_function_current_get",
+    "function_current_get",
     "function_open_editor",
     "function_open_editor_current",
     "f_name_current",
@@ -19191,7 +19184,7 @@
     "js_visit_calls_named",
     "object_properties",
     "function_transform",
-    "data_function_current_get",
+    "function_current_get",
     "each_async",
     "list_add",
     "each",
@@ -19230,6 +19223,15 @@
     "function_param_new",
     "param_name",
     "default_value"
+   ]
+  },
+  "function_param_new_double": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "function_params_new",
+    "function_param_new_double",
+    "param_name"
    ]
   },
   "function_param_swap": {
@@ -19626,7 +19628,7 @@
   "function_transform_marker_current": {
    "async": true,
    "identifiers": [
-    "data_function_current_get",
+    "function_current_get",
     "function_transform_marker",
     "marker",
     "function_transform_marker_current",
@@ -19640,7 +19642,7 @@
    "identifiers": [
     "marker",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "noop",
     "function_transform_marker_empty",
     "f_name",
@@ -19695,7 +19697,7 @@
    "identifiers": [
     "list_sort_string",
     "js_node_types",
-    "data_function_current_get",
+    "function_current_get",
     "function_parse",
     "function_types",
     "f_name",
@@ -19706,7 +19708,7 @@
   "function_type_first": {
    "async": true,
    "identifiers": [
-    "data_function_current_get",
+    "function_current_get",
     "js_visit_nodes",
     "list_adder",
     "function_parse",
@@ -26175,7 +26177,7 @@
     "js_unparse",
     "list_adder_async",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "marker_assign_replace",
     "init_code",
     "f_name",
@@ -26367,7 +26369,7 @@
     "list_is",
     "list_map_property",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "js_unparse",
     "marker_down_choices",
     "f_name",
@@ -26632,7 +26634,7 @@
     "js_marker_named_ast_arg",
     "marker_next_index",
     "marker_next_get",
-    "data_function_current_get",
+    "function_current_get",
     "marker",
     "function_transform",
     "list_insert",
@@ -26678,7 +26680,7 @@
     "js_unparse",
     "list_adder_async",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "marker_next",
     "f_name",
     "lambda2",
@@ -26700,7 +26702,7 @@
     "list_adder_async",
     "marker_next_get",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "js_unparse",
     "marker_next_await",
     "f_name",
@@ -26834,7 +26836,7 @@
    "async": true,
    "identifiers": [
     "function_transform_marker_all",
-    "data_function_current_get",
+    "function_current_get",
     "list_remove",
     "marker_remove",
     "f_name",
@@ -26864,7 +26866,7 @@
     "not",
     "list_size_1",
     "function_transform_marker_specified",
-    "data_function_current_get",
+    "function_current_get",
     "marker_rename",
     "from",
     "to",
@@ -29488,27 +29490,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "function_param_new_double": {
-   "async": true,
-   "identifiers": [
-    "marker",
-    "function_params_new",
-    "function_param_new_double",
-    "param_name"
-   ]
-  },
-  "function_current_get": {
-   "async": true,
-   "identifiers": [
-    "marker",
-    "user_repo_path",
-    "data_property_get",
-    "function_current_get",
-    "property_name",
-    "d_path",
-    "f_name_current"
    ]
   }
  }
