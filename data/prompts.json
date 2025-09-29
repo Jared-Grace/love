@@ -2226,8 +2226,8 @@
   "r path_repo repo_path",
   "s resol",
   "ps",
-  "p",
   "s git",
+  "p",
   "repos_gitignore_overwrite"
  ]
 }
