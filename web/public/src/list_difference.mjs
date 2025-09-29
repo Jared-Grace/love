@@ -12,6 +12,6 @@ export function list_difference(list, other) {
     }
     each(list, lambda);
   }
-  let list2 = list_adder(lambda2);
-  return list2;
+  let difference = list_adder(lambda2);
+  return difference;
 }
