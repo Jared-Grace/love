@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { not } from "./not.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_await } from "./js_await.mjs";
@@ -13,7 +12,6 @@ import { js_call_function_if } from "./js_call_function_if.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { marker } from "./marker.mjs";
 export async function js_await_add(ast) {
-  log("js_await_add");
   let functions = await data_functions_get();
   async function lambda(v) {
     let node = object_property_get(v, "node");
