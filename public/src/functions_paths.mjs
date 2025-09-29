@@ -17,6 +17,7 @@ export async function functions_paths() {
       let v = function_name_folder_to_path(f_name, folder);
     }
     let mapped = list_map(f_names, lambda2);
+    return mapped;
   }
   let result = await repos_paths_map_unordered_combine(path, lambda);
   let squashed = list_squash(result);
