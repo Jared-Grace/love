@@ -440,7 +440,8 @@
    "list_concat_multiple",
    "list_map_combine",
    "marker_screen_add",
-   "repo_path_combine"
+   "repo_path_combine",
+   "function_copy"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -9577,7 +9578,8 @@
   ],
   "repo_path_combine": [
    "function_new_declaration",
-   "repo_path_combine"
+   "repo_path_combine",
+   "function_copy"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -14401,7 +14403,8 @@
   ],
   "f_path2": [
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "function_copy"
   ],
   "function_name_to_path_search": [
    "function_name_to_path_unalias",
@@ -14418,6 +14421,9 @@
   ],
   "repos_paths_map_unordered_combine_squash": [
    "repos_paths_map_unordered_combine_squash"
+  ],
+  "repo_name2": [
+   "function_copy"
   ]
  },
  "functions": {
@@ -18659,6 +18665,7 @@
   "function_copy": {
    "async": true,
    "identifiers": [
+    "repo_path_combine",
     "user_repo_get",
     "function_name_to_path",
     "function_name_unalias",
@@ -18679,6 +18686,9 @@
     "f_name",
     "v",
     "repo_name",
+    "combined",
+    "repo_name2",
+    "f_path2",
     "f_path_new",
     "lambda",
     "ast"
