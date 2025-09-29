@@ -2201,7 +2201,6 @@
   "ras k",
   "s user,path",
   "s user",
-  "np",
   "s repo,name",
   "s repo",
   "n git_publish_initial",
@@ -2228,6 +2227,7 @@
   "ps",
   "s git",
   "p",
-  "repos_gitignore_overwrite"
+  "repos_gitignore_overwrite",
+  "np"
  ]
 }
