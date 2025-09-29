@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { log } from "./log.mjs";
 import { js_await_add_inner } from "./js_await_add_inner.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
@@ -37,6 +38,7 @@ export async function js_function_last_asyncify(
           f_name,
         });
         async function lambda2(ast) {
+          list_add(visited, name);
           let v = await js_await_add_inner(functions, ast, visited);
           return v;
         }
