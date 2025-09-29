@@ -2235,6 +2235,7 @@
   "urg",
   "is functions_names",
   "s await",
-  "is js_function_last_asyncify"
+  "is js_function_last_asyncify",
+  "fs js_function_last_asyncify"
  ]
 }
