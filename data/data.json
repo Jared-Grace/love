@@ -3051,7 +3051,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "user_repo_get"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4109,8 +4110,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "user_repo_get"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -4319,7 +4319,8 @@
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "user_repo_get"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -29386,6 +29387,7 @@
   "user_repo_get": {
    "async": true,
    "identifiers": [
+    "assert",
     "repos_names",
     "list_includes",
     "data_get",
@@ -29397,8 +29399,8 @@
     "repo_name",
     "all",
     "includes",
-    "list",
-    "item"
+    "item",
+    "b"
    ]
   },
   "user_repo_path": {
