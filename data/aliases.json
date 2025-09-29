@@ -200,6 +200,7 @@
   "lam": "list_add_multiple",
   "flc": "file_copy",
   "fld": "file_delete",
-  "pnd": "function_param_new_double"
+  "pnd": "function_param_new_double",
+  "ldf": "list_difference"
  }
 }
