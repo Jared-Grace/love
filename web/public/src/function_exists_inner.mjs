@@ -13,7 +13,10 @@ export async function function_exists_inner(u) {
   };
   let e = object_merge(to, u);
   return e;
-  let bools = await repos_paths_map_unordered_combine(f_path, file_exists);
+  async function lambda(joined) {
+    let exists2 = await file_exists(file_path);
+  }
+  let bools = await repos_paths_map_unordered_combine(f_path, lambda);
   let filtered = list_filter(bools, true_is);
   let multiple = list_multiple_is(filtered);
   exists = list_size_1(filtered);
