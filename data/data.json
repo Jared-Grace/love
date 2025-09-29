@@ -4113,8 +4113,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "function_exists_inner"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -8463,8 +8462,7 @@
    "js_dollar_a",
    "js_dollar_s",
    "list_size_1",
-   "marker_rename",
-   "function_exists_inner"
+   "marker_rename"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -18765,14 +18763,12 @@
     "function_exists_inner",
     "u",
     "f_path",
-    "exists",
-    "to",
-    "e",
     "bools",
     "filtered",
     "multiple",
-    "s1",
-    "list"
+    "exists",
+    "to",
+    "e"
    ]
   },
   "function_exists_strict": {
