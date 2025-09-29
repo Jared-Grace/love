@@ -2233,6 +2233,7 @@
   "is function_name_to_path",
   "is repos_folder",
   "s repo",
-  "urg"
+  "urg",
+  "is functions_names"
  ]
 }
