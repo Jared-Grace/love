@@ -14465,6 +14465,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "t3": [
+   "t3"
   ]
  },
  "functions": {
@@ -29997,6 +30000,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "t3": {
+   "async": false,
+   "identifiers": [
+    "t3"
    ]
   }
  }
