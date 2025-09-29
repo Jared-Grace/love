@@ -2304,6 +2304,7 @@
   "urs l",
   "n true_is",
   "s set",
-  "s set,object"
+  "s set,object",
+  "function_exists_inner sandbox"
  ]
 }
