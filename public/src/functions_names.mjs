@@ -1,3 +1,4 @@
+import { path_join } from "./path_join.mjs";
 import { repos_paths_map_unordered } from "./repos_paths_map_unordered.mjs";
 import { functions_names_from_path } from "./functions_names_from_path.mjs";
 import { marker } from "./marker.mjs";
@@ -9,6 +10,7 @@ export async function functions_names() {
   return v;
   await repos_paths_map_unordered(each_folder);
   async function each_folder(folder) {
+    let joined = path_join(segments);
     let v = functions_names_from_path(path);
   }
 }
