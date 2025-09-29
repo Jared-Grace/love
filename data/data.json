@@ -4816,7 +4816,6 @@
    "html_loading",
    "html_style_assign",
    "js_dollar_s",
-   "js_function_last_asyncify",
    "js_string",
    "marker_rename",
    "messenger_reply",
@@ -11053,8 +11052,7 @@
    "marker_next_get"
   ],
   "declaration2": [
-   "js_assign_combine",
-   "js_function_last_asyncify"
+   "js_assign_combine"
   ],
   "init2": [
    "js_assign_combine",
@@ -22801,9 +22799,7 @@
     "async",
     "declaration",
     "name",
-    "declaration2",
     "result",
-    "s",
     "properties",
     "lambda",
     "f_name",
