@@ -67,8 +67,7 @@
   ],
   "folder_read_files": [
    "apps_get",
-   "folder_read_files",
-   "functions_names"
+   "folder_read_files"
   ],
   "marker": [
    "apps_get",
@@ -823,7 +822,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "functions_names"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -933,7 +933,6 @@
    "each_object",
    "floor",
    "folder_user_docs_path",
-   "functions_names",
    "function_aliases_restore",
    "function_rename_suffix_add",
    "html_p_text",
@@ -1280,7 +1279,6 @@
    "folder_read_files",
    "functions_combine",
    "functions_log_remove",
-   "functions_names",
    "functions_transform",
    "function_aliases_restore",
    "function_aliases_search",
@@ -2802,7 +2800,6 @@
    "ebible_verses_upload",
    "ebible_version_books_testament",
    "functions_format",
-   "functions_names",
    "functions_paths",
    "functions_transform",
    "function_dependencies_code",
@@ -6152,7 +6149,6 @@
   ],
   "suffix": [
    "data_path_generic",
-   "functions_names",
    "function_copy_suffix_add",
    "function_rename_suffix_add",
    "function_wrap_suffix_add",
@@ -6611,7 +6607,6 @@
   ],
   "string_suffix_without": [
    "ebible_chapters",
-   "functions_names",
    "function_identifier_replace_ending_remove",
    "function_list_generate",
    "string_suffix_change",
@@ -6672,7 +6667,6 @@
   ],
   "without": [
    "ebible_chapters",
-   "functions_names",
    "messenger_reply_unread_collect",
    "string_suffix_change",
    "string_suffix_without"
@@ -7622,7 +7616,6 @@
   ],
   "function_name_extension": [
    "file_open",
-   "functions_names",
    "function_name_extension",
    "function_name_to_base"
   ],
@@ -8218,7 +8211,6 @@
   "f_names": [
    "functions_combine",
    "functions_combine_name",
-   "functions_names",
    "functions_paths",
    "functions_search",
    "function_names_to_acronyms",
@@ -8322,7 +8314,6 @@
    "watch"
   ],
   "paths": [
-   "functions_names",
    "git_push_schedule_command",
    "path_resolve"
   ],
@@ -14297,6 +14288,9 @@
   "repos_path_each_unordered": [
    "function_run_git",
    "repos_path_each_unordered"
+  ],
+  "functions_names_from_path": [
+   "functions_names"
   ]
  },
  "functions": {
@@ -18042,22 +18036,14 @@
   "functions_names": {
    "async": true,
    "identifiers": [
+    "functions_names_from_path",
     "repos_names",
     "sleep",
     "marker",
     "functions_path",
-    "folder_read_files",
-    "function_name_extension",
-    "string_suffix_without",
-    "list_map",
     "functions_names",
     "path",
-    "paths",
-    "lambda",
-    "p",
-    "suffix",
-    "without",
-    "f_names",
+    "v",
     "ms",
     "rns"
    ]
