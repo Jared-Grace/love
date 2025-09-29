@@ -14455,7 +14455,8 @@
   ],
   "reduced": [
    "reduce",
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "function_imports_add"
   ]
  },
  "functions": {
@@ -19025,6 +19026,7 @@
   "function_imports_add": {
    "async": true,
    "identifiers": [
+    "functions_names_to_paths",
     "function_name_to_path_import",
     "each_async",
     "js_code_import_single",
@@ -19033,13 +19035,13 @@
     "function_imports_add",
     "ast",
     "imports",
-    "functions_names_to_paths",
     "body",
     "lambda",
     "import_",
     "from",
     "code",
-    "statement"
+    "statement",
+    "reduced"
    ]
   },
   "function_imports_fix": {
