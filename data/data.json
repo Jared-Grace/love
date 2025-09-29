@@ -1204,7 +1204,8 @@
    "reply",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async"
+   "visit_unique_async",
+   "js_function_last_asyncify"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_2",
@@ -22830,6 +22831,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "list_add",
     "log",
     "js_await_add_inner",
     "js_declaration_name",
