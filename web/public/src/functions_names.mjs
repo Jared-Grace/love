@@ -10,7 +10,7 @@ export async function functions_names() {
   let squashed = list_squash(result);
   return squashed;
   function mapper(joined) {
-    let f_names2 = functions_names_from_path(joined);
-    return f_names2;
+    let f_names = functions_names_from_path(joined);
+    return f_names;
   }
 }
