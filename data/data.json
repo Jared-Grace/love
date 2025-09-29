@@ -1473,7 +1473,8 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "repos_path_each_unordered"
   ],
   "ast": [
    "app_new_step_2",
@@ -3703,7 +3704,8 @@
    "list_to_dictionary_async",
    "marker_down_choices",
    "repos_gitignore_overwrite",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_path_each_unordered"
   ],
   "en": [
    "app_reply_main",
@@ -5346,7 +5348,8 @@
    "git_push",
    "git_push_folder",
    "repo_acronym_to_path",
-   "sandbox_2"
+   "sandbox_2",
+   "repos_path_each_unordered"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -8105,7 +8108,8 @@
    "folder_read_files",
    "list_includes_assert",
    "list_wait",
-   "repo_exists_assert"
+   "repo_exists_assert",
+   "repos_path_each_unordered"
   ],
   "readdir": [
    "folder_read",
@@ -9544,7 +9548,8 @@
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set"
+   "user_repo_set",
+   "repos_path_each_unordered"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -9818,7 +9823,8 @@
    "path_repo_combine",
    "repos_gitignore_overwrite",
    "repo_path",
-   "repo_path_combine"
+   "repo_path_combine",
+   "repos_path_each_unordered"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -9830,7 +9836,8 @@
    "repos_gitignore_overwrite",
    "repos_names",
    "repo_exists_assert",
-   "functions_names"
+   "functions_names",
+   "repos_path_each_unordered"
   ],
   "function_run_log": [
    "function_run_git",
@@ -14284,10 +14291,12 @@
    "functions_names"
   ],
   "each_folder": [
-   "function_run_git"
+   "function_run_git",
+   "repos_path_each_unordered"
   ],
   "repos_path_each_unordered": [
-   "function_run_git"
+   "function_run_git",
+   "repos_path_each_unordered"
   ]
  },
  "functions": {
@@ -29628,6 +29637,20 @@
     "log",
     "s5_inner",
     "ms"
+   ]
+  },
+  "repos_path_each_unordered": {
+   "async": true,
+   "identifiers": [
+    "list_map_unordered_async",
+    "repo_path",
+    "repos_names",
+    "repos_path_each_unordered",
+    "each_folder",
+    "all",
+    "lambda",
+    "repo_name",
+    "folder"
    ]
   }
  }
