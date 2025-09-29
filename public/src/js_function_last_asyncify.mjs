@@ -1,3 +1,4 @@
+import { object_properties } from "./object_properties.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { equal } from "./equal.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
@@ -17,6 +18,7 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
     if (equal(f, declaration)) {
       return;
       let result = await data_identifiers_search(s);
+      let properties = object_properties(obj);
     }
   }
 }
