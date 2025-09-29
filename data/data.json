@@ -3101,8 +3101,7 @@
    "equal_by",
    "equal_by_async",
    "js_calls_to_each",
-   "js_if_else_if_combine",
-   "function_exists_inner"
+   "js_if_else_if_combine"
   ],
   "before": [
    "app_replace_rule_set",
@@ -14351,6 +14350,9 @@
   ],
   "ti": [
    "true_is"
+  ],
+  "ti2": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18783,7 +18785,7 @@
     "lambda2",
     "m",
     "exists2",
-    "eq",
+    "ti2",
     "value",
     "filtered",
     "multiple"
