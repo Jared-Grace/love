@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { list_single } from "./list_single.mjs";
 import { true_is } from "./true_is.mjs";
 import { object_property_get } from "./object_property_get.mjs";
@@ -32,13 +33,15 @@ export async function function_exists_inner(u) {
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
   exists = list_size_1(filtered);
+  to = {
+    exists,
+    multiple,
+  };
   if (exists) {
     let only = list_single(filtered);
     let f_path2 = object_property_get(only, "f_path");
+    object_property_set_exists_not(object, property_name, value);
   }
-  to = {
-    exists,
-  };
   e = object_merge(to, u);
   return e;
 }
