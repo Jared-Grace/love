@@ -11552,8 +11552,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "sandbox_5"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -14284,6 +14283,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "s5_inner": [
+   "sandbox_5"
   ]
  },
  "functions": {
@@ -28511,7 +28513,7 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "log",
+    "s5_inner",
     "sandbox_5"
    ]
   },
