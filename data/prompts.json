@@ -2297,7 +2297,6 @@
   "s exists",
   "is function_name_to_path_unalias",
   "function_name_to_path_unalias test",
-  "o function_exists",
   "is function_exists_inner",
   "function_exists test",
   "o de",
@@ -2337,6 +2336,7 @@
   "urs k",
   "n t3",
   "de t3",
-  "o file_exists"
+  "o file_exists",
+  "o function_exists"
  ]
 }
