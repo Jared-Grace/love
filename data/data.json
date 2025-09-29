@@ -8675,7 +8675,8 @@
    "function_aliases_restore"
   ],
   "op": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_parse_declaration_inner"
   ],
   "ea": [
    "function_aliases_restore",
@@ -19490,7 +19491,8 @@
     "parsed",
     "ast",
     "declaration",
-    "to"
+    "to",
+    "op"
    ]
   },
   "function_parse_declaration_js_unparse": {
