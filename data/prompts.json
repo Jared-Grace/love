@@ -2225,7 +2225,6 @@
   "is js_function_last_asyncify",
   "s awawit",
   "s await",
-  "ps",
   "o functions_names",
   "s sleep",
   "is js_call_fill",
@@ -2316,6 +2315,7 @@
   "o de",
   "o opg",
   "function_parse_declaration_js_unparse test",
-  "function_name_unalias test"
+  "function_name_unalias test",
+  "ps"
  ]
 }
