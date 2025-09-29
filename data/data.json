@@ -6830,7 +6830,8 @@
    "list_to_dictionary_async",
    "repos_acronyms_to_names",
    "functions_names_to_paths",
-   "function_imports_add"
+   "function_imports_add",
+   "js_imports_paths_fix"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -14445,7 +14446,8 @@
   ],
   "functions_names_to_paths": [
    "functions_names_to_paths",
-   "function_imports_add"
+   "function_imports_add",
+   "js_imports_paths_fix"
   ],
   "reduce": [
    "functions_names_to_paths",
@@ -23481,8 +23483,9 @@
    ]
   },
   "js_imports_paths_fix": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "functions_names_to_paths",
     "js_parse_expression",
     "object_property_set",
     "function_name_to_path_import",
@@ -23492,6 +23495,7 @@
     "marker",
     "js_imports_paths_fix",
     "ast",
+    "dictionary",
     "imports_declarations",
     "lambda",
     "i",
