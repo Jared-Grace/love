@@ -7,4 +7,5 @@ export function reduce(start, list, lambda$before$current) {
   }
   each(list, lambda);
   marker("1");
+  (lambda$before$current, value);
 }
