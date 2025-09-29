@@ -2319,6 +2319,7 @@
   "o functions_paths",
   "urg",
   "n test2",
-  "s import"
+  "s import",
+  "function_name_to_path_import test"
  ]
 }
