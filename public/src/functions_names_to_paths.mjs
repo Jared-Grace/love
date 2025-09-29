@@ -6,7 +6,8 @@ import { function_name_folder_to_path } from "./function_name_folder_to_path.mjs
 import { list_map } from "./list_map.mjs";
 export async function functions_names_to_paths() {
   marker("1");
-  let dictionary = list_to_dictionary(list, function lambda(item) {});
+  function lambda(item) {}
+  let dictionary = list_to_dictionary(list, lambda);
   function mapper(folder) {
     let f_names = functions_names_from_path(folder);
     function lambda2(f_name) {
