@@ -2283,6 +2283,7 @@
   "is sleep",
   "s data_fun",
   "is data_functions_get",
-  "s fill"
+  "s fill",
+  "function_name_unalias sleep"
  ]
 }
