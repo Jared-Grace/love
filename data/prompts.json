@@ -2243,6 +2243,7 @@
   "o s5",
   "ps",
   "d",
-  "is functions_names"
+  "is functions_names",
+  "s declar,name"
  ]
 }
