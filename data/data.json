@@ -28524,7 +28524,7 @@
    ]
   },
   "sandbox_5": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "s5_inner",
     "sandbox_5"
