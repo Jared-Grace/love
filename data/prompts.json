@@ -2235,7 +2235,6 @@
   "o functions_names",
   "s sleep",
   "functions_names",
-  "functions_names_includes sleep",
   "is js_call_fill",
   "a functions_names",
   "au functions_names",
@@ -2284,6 +2283,7 @@
   "s data_fun",
   "is data_functions_get",
   "s fill",
-  "function_name_unalias sleep"
+  "function_name_unalias sleep",
+  "functions_names_includes sleep"
  ]
 }
