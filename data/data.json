@@ -640,7 +640,6 @@
    "function_identifier_replace_ending_remove",
    "function_identifier_replace_suffix_add",
    "function_name_to_path",
-   "function_name_to_path_unalias",
    "function_name_unalias",
    "function_new_app_screen",
    "function_new_transform",
@@ -1477,8 +1476,7 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "ast": [
    "app_new_step_2",
@@ -1811,8 +1809,7 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2324,8 +2321,7 @@
    "undefined_not_is_assert",
    "visit_unique_async",
    "watch",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "item": [
    "app_replace_home",
@@ -2953,8 +2949,7 @@
    "sandbox_2",
    "sandbox_4_a",
    "repos_paths_map_unordered",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4228,8 +4223,7 @@
    "watch",
    "functions_names",
    "repos_paths_map_unordered_combine",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4407,8 +4401,7 @@
    "file_delete_if_exists",
    "file_exists",
    "http_local",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -5530,7 +5523,6 @@
    "function_exists_strict",
    "function_format",
    "function_import",
-   "function_name_to_path_unalias",
    "function_new_declaration",
    "function_open",
    "function_open_editor",
@@ -5601,8 +5593,7 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "function_name_to_path_unalias"
+   "object_property_lambda_async"
   ],
   "data": [
    "data_all",
@@ -5928,8 +5919,7 @@
    "object_property_set_exists_not",
    "search_generic",
    "watch",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -6132,7 +6122,6 @@
    "function_delete",
    "function_exists_strict",
    "function_name_to_path",
-   "function_name_to_path_unalias",
    "function_new_declaration",
    "function_parse_strict",
    "js_outside_move"
@@ -6677,8 +6666,7 @@
    "list_find",
    "messenger_reply",
    "puppeteer_hrefs_starts_with",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -7105,8 +7093,7 @@
    "js_statement_call_get",
    "list_first_second_generic",
    "list_multiple_is",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "string_split_dash": [
    "ebible_references_parse_lines",
@@ -7212,8 +7199,7 @@
    "function_aliases_restore",
    "messenger_reply_unread_click",
    "reply_test",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -7277,8 +7263,7 @@
    "list_filter_starts_with_not_multiple",
    "list_find",
    "search_generic",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -7942,8 +7927,7 @@
    "folder_find_starts_with",
    "list_find",
    "list_single",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "http": [
    "firebase_storage_download",
@@ -8415,8 +8399,7 @@
    "list_single",
    "marker_rename",
    "repo_acronym_to_name",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -8430,8 +8413,7 @@
    "list_size_1",
    "list_size_1_assert_message",
    "marker_rename",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -8478,8 +8460,7 @@
   ],
   "exists2": [
    "function_acronym_to_name",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "s1": [
    "function_acronym_to_name",
@@ -14351,8 +14332,7 @@
   "repos_paths_map_unordered_combine": [
    "repos_paths_map_unordered_combine",
    "functions_names",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
@@ -14360,22 +14340,21 @@
   ],
   "true_is": [
    "true_is",
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "multiple": [
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "ti": [
    "true_is"
   ],
   "ti2": [
-   "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_exists_inner"
   ],
   "f_path2": [
-   "function_exists_inner",
+   "function_exists_inner"
+  ],
+  "function_name_to_path_search": [
    "function_name_to_path_unalias"
   ]
  },
@@ -19131,35 +19110,12 @@
   "function_name_to_path_unalias": {
    "async": true,
    "identifiers": [
-    "object_property_set",
-    "list_single",
-    "list_size_1",
-    "list_multiple_is",
-    "list_filter",
-    "true_is",
-    "object_property_get",
-    "repos_paths_map_unordered_combine",
-    "file_exists",
-    "function_name_to_path",
+    "function_name_to_path_search",
     "function_name_unalias",
     "function_name_to_path_unalias",
     "f_name",
     "unaliased",
-    "f_path",
-    "lambda",
-    "joined",
-    "exists",
-    "v",
-    "mapped",
-    "lambda2",
-    "m",
-    "exists2",
-    "ti2",
-    "filtered",
-    "multiple",
-    "result",
-    "only",
-    "f_path2"
+    "result"
    ]
   },
   "function_name_unalias": {
