@@ -4445,8 +4445,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "js_function_last_asyncify"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -22780,8 +22779,7 @@
     "f",
     "property_name",
     "async",
-    "declaration",
-    "message"
+    "declaration"
    ]
   },
   "js_identifiers": {
