@@ -14290,7 +14290,11 @@
    "watch"
   ],
   "s5b": [
-   "s5_inner"
+   "s5_inner",
+   "s5b"
+  ],
+  "s5c": [
+   "s5b"
   ]
  },
  "functions": {
@@ -29636,6 +29640,13 @@
    "identifiers": [
     "s5b",
     "s5_inner"
+   ]
+  },
+  "s5b": {
+   "async": false,
+   "identifiers": [
+    "s5c",
+    "s5b"
    ]
   }
  }
