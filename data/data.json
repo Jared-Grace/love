@@ -334,7 +334,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "function_param_new_double"
   ],
   "apps_get": [
    "apps_get"
@@ -29454,6 +29455,7 @@
   "function_param_new_double": {
    "async": true,
    "identifiers": [
+    "marker",
     "function_params_new",
     "function_param_new_double",
     "param_name",
