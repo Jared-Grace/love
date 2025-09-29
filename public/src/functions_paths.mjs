@@ -11,11 +11,12 @@ export async function functions_paths() {
   let f_paths = list_map(f_names, function_name_to_path);
   return f_paths;
   let path = functions_path();
-  function lambda(r) {
-    let f_names = functions_names_from_path(joined);
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
-    let v = function_name_folder_to_path(f_name, folder);
+  function lambda(folder) {
+    let f_names = functions_names_from_path(folder);
+    function lambda2(f_name) {
+      let v = function_name_folder_to_path(f_name, folder);
+    }
+    let mapped = list_map(f_names, lambda2);
   }
   let result = await repos_paths_map_unordered_combine(path, lambda);
   let squashed = list_squash(result);
