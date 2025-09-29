@@ -13,7 +13,7 @@ export async function data_files_update() {
   let d_path = data_path();
   var d = await data_all(d_path);
   let { data } = d;
-  let f_paths = functions_paths();
+  let f_paths = await functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
   let properties = ["identifiers", "functions"];
   object_properties_delete(data, properties);
