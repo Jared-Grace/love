@@ -3460,7 +3460,8 @@
    "list_map_squash",
    "list_squash",
    "functions_names",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "bible_verses_encouragement": [
    "app_reply_main",
@@ -4166,7 +4167,8 @@
    "app_reply_main",
    "list_squash",
    "functions_names",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -5061,7 +5063,8 @@
    "function_name_to_path_unalias",
    "function_exists_strict",
    "function_name_to_path_search",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "catch_call": [
    "catch_call",
@@ -7716,7 +7719,8 @@
    "server",
    "watch",
    "repos_paths_map_unordered_combine",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8373,7 +8377,8 @@
    "functions_path",
    "function_name_to_path",
    "watch",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "rns": [
    "repos_names"
@@ -14364,11 +14369,13 @@
    "functions_names",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths"
+   "functions_paths",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
-   "functions_names"
+   "functions_names",
+   "repos_paths_map_unordered_combine_squash"
   ],
   "true_is": [
    "true_is",
@@ -14402,6 +14409,9 @@
   ],
   "base": [
    "function_name_folder_to_path"
+  ],
+  "repos_paths_map_unordered_combine_squash": [
+   "repos_paths_map_unordered_combine_squash"
   ]
  },
  "functions": {
@@ -29862,6 +29872,19 @@
     "base",
     "second",
     "joined"
+   ]
+  },
+  "repos_paths_map_unordered_combine_squash": {
+   "async": true,
+   "identifiers": [
+    "list_squash",
+    "repos_paths_map_unordered_combine",
+    "functions_path",
+    "repos_paths_map_unordered_combine_squash",
+    "mapper",
+    "path",
+    "result",
+    "squashed"
    ]
   }
  }
