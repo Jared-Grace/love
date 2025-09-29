@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { path_join } from "./path_join.mjs";
 import { repos_paths_map_unordered } from "./repos_paths_map_unordered.mjs";
@@ -16,8 +15,5 @@ export async function functions_names() {
     return f_names;
   }
   let squashed = list_squash(result);
-  log({
-    squashed,
-  });
   return squashed;
 }
