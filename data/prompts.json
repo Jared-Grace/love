@@ -2274,7 +2274,6 @@
   "s s5",
   "de",
   "o de",
-  "s5",
   "d",
   "is sleep",
   "s data_fun",
@@ -2291,6 +2290,7 @@
   "de s5b",
   "de s5_inner",
   "o w",
-  "de s5i"
+  "de s5i",
+  "s5"
  ]
 }
