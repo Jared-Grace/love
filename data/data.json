@@ -14453,7 +14453,8 @@
    "reduce"
   ],
   "reduced": [
-   "reduce"
+   "reduce",
+   "functions_names_to_paths"
   ]
  },
  "functions": {
@@ -29954,7 +29955,8 @@
     "f_name",
     "joined",
     "dictionary",
-    "squashed"
+    "squashed",
+    "reduced"
    ]
   },
   "reduce": {
