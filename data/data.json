@@ -13977,6 +13977,17 @@
   "s5": [
    "s5"
   ],
+  "s5c": [
+   "s5b"
+  ],
+  "s5b": [
+   "s5b",
+   "s5_inner"
+  ],
+  "s5_inner": [
+   "s5_inner",
+   "sandbox_5"
+  ],
   "sandbox": [
    "sandbox"
   ],
@@ -14007,10 +14018,6 @@
   ],
   "sandbox_5": [
    "sandbox_5"
-  ],
-  "s5_inner": [
-   "sandbox_5",
-   "s5_inner"
   ],
   "sandbox_5_a": [
    "sandbox_5_a"
@@ -14288,13 +14295,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "s5b": [
-   "s5_inner",
-   "s5b"
-  ],
-  "s5c": [
-   "s5b"
   ]
  },
  "functions": {
@@ -28418,6 +28418,20 @@
     "s5"
    ]
   },
+  "s5b": {
+   "async": false,
+   "identifiers": [
+    "s5c",
+    "s5b"
+   ]
+  },
+  "s5_inner": {
+   "async": false,
+   "identifiers": [
+    "s5b",
+    "s5_inner"
+   ]
+  },
   "sandbox": {
    "async": true,
    "identifiers": [
@@ -29633,20 +29647,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "s5_inner": {
-   "async": false,
-   "identifiers": [
-    "s5b",
-    "s5_inner"
-   ]
-  },
-  "s5b": {
-   "async": false,
-   "identifiers": [
-    "s5c",
-    "s5b"
    ]
   }
  }
