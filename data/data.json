@@ -3442,7 +3442,8 @@
   "list_squash": [
    "app_reply_main",
    "list_map_squash",
-   "list_squash"
+   "list_squash",
+   "functions_names"
   ],
   "bible_verses_encouragement": [
    "app_reply_main",
@@ -4109,7 +4110,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "functions_names"
   ],
   "book_code": [
    "app_reply_main",
@@ -4145,7 +4147,8 @@
   ],
   "squashed": [
    "app_reply_main",
-   "list_squash"
+   "list_squash",
+   "functions_names"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -14310,9 +14313,6 @@
   ],
   "lambda$folder": [
    "repos_paths_map_unordered"
-  ],
-  "lsq": [
-   "functions_names"
   ]
  },
  "functions": {
@@ -18058,6 +18058,7 @@
   "functions_names": {
    "async": true,
    "identifiers": [
+    "list_squash",
     "path_join",
     "repos_paths_map_unordered",
     "functions_names_from_path",
@@ -18071,7 +18072,8 @@
     "folder",
     "joined",
     "f_names",
-    "lsq"
+    "squashed",
+    "list"
    ]
   },
   "functions_names_from_path": {
