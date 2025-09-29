@@ -827,8 +827,7 @@
    "whitespace_normalize",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths",
-   "function_copy"
+   "functions_paths"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14403,8 +14402,7 @@
   ],
   "f_path2": [
    "function_exists_inner",
-   "function_name_to_path_search",
-   "function_copy"
+   "function_name_to_path_search"
   ],
   "function_name_to_path_search": [
    "function_name_to_path_unalias",
@@ -14421,9 +14419,6 @@
   ],
   "repos_paths_map_unordered_combine_squash": [
    "repos_paths_map_unordered_combine_squash"
-  ],
-  "repo_name2": [
-   "function_copy"
   ]
  },
  "functions": {
@@ -18684,11 +18679,8 @@
     "unaliased_old",
     "unaliased_new",
     "f_name",
-    "v",
     "repo_name",
     "combined",
-    "repo_name2",
-    "f_path2",
     "f_path_new",
     "lambda",
     "ast"
