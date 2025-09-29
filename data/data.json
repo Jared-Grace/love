@@ -18048,7 +18048,7 @@
    ]
   },
   "functions_paths": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "function_name_to_path",
     "list_map",
