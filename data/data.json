@@ -321,7 +321,6 @@
    "sandbox_2",
    "sandbox_3",
    "sandbox_4_a",
-   "sandbox_5",
    "storage_local_get",
    "storage_local_initialize",
    "storage_local_initialize_context",
@@ -28522,7 +28521,6 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
-    "marker",
     "sandbox_5"
    ]
   },
