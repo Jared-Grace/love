@@ -14345,6 +14345,9 @@
   ],
   "multiple": [
    "function_exists_inner"
+  ],
+  "f_pat": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18772,6 +18775,7 @@
     "lambda",
     "joined",
     "v",
+    "f_pat",
     "bools",
     "filtered",
     "multiple"
