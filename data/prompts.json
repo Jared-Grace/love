@@ -1032,7 +1032,6 @@
   "fwc error_attention_set set clear",
   "s update",
   "functions_path",
-  "functions_paths",
   "de functions_paths",
   "de fs",
   "o fs",
@@ -2316,6 +2315,7 @@
   "function_name_unalias test",
   "ps",
   "function_parse_declaration_js_unparse test",
-  "de s5_inner"
+  "de s5_inner",
+  "functions_paths"
  ]
 }
