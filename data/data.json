@@ -6017,7 +6017,8 @@
   ],
   "data_functions_get": [
    "data_functions_get",
-   "js_await_add"
+   "js_await_add",
+   "js_call_fill"
   ],
   "function_current_set": [
    "data_function_current_restore",
@@ -21537,6 +21538,7 @@
   "js_call_fill": {
    "async": true,
    "identifiers": [
+    "data_functions_get",
     "js_function_last_asyncify",
     "function_name_unalias",
     "js_visit_type_each_async",
