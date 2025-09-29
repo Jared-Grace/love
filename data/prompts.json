@@ -2277,7 +2277,6 @@
   "o de",
   "s5",
   "d",
-  "de s5_inner",
   "is sleep",
   "s data_fun",
   "is data_functions_get",
@@ -2287,6 +2286,7 @@
   "s data,update",
   "is data_file_update",
   "is data_file_update_inner",
-  "s overwrite"
+  "s overwrite",
+  "de s5_inner"
  ]
 }
