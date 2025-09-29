@@ -2307,7 +2307,8 @@
   "function_exists sb",
   "u rs",
   "urs k",
+  "s exists",
   "n test",
-  "s exists"
+  "function_name_to_path_unalias test"
  ]
 }
