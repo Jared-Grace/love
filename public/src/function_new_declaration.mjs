@@ -1,3 +1,4 @@
+import { user_repo_get } from "./user_repo_get.mjs";
 import { js_format } from "./js_format.mjs";
 import { file_write } from "./file_write.mjs";
 import { js_code_export } from "./js_code_export.mjs";
@@ -15,5 +16,6 @@ export async function function_new_declaration(declaration) {
   await js_imports_missing_add(ast);
   let contents_import = js_unparse(ast);
   let formatted = await js_format(contents_import);
+  let repo = await user_repo_get();
   await file_write(f_path, formatted);
 }
