@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { marker } from "./marker.mjs";
 import { functions_path } from "./functions_path.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
@@ -15,5 +16,5 @@ export function functions_names() {
   }
   let f_names = list_map(paths, lambda);
   return f_names;
-  sleep;
+  log(message);
 }
