@@ -14,7 +14,7 @@ export async function function_copy(f_name_old, f_name_new) {
   let { unaliased: unaliased_new } = await function_name_unalias(f_name);
   let f_path = function_name_to_path(f_name_new);
   let repo_name = await user_repo_get();
-  let combined = repo_path_combine(repo_name, f_path);
+  let f_path_new = repo_path_combine(repo_name, f_path);
   await file_copy(f_path_old, f_path_new);
   function lambda(ast) {
     js_identifier_replace(ast, unaliased_old, unaliased_new);
