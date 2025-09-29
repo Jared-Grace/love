@@ -1,3 +1,4 @@
+import { object_merge } from "./object_merge.mjs";
 import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 import { list_single } from "./list_single.mjs";
 import { true_is } from "./true_is.mjs";
@@ -26,6 +27,7 @@ export async function function_exists_inner(u) {
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
+  let to2 = object_merge(to, from);
   let result = {
     exists,
     multiple,
