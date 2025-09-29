@@ -6017,10 +6017,8 @@
    "marker_down_choices",
    "marker_functionize",
    "marker_move",
-   "marker_new",
    "marker_next",
    "marker_next_await",
-   "marker_next_delete",
    "marker_param_add",
    "marker_remove",
    "marker_rename"
@@ -14218,7 +14216,9 @@
    "function_transform_current",
    "marker_expand",
    "marker_top",
-   "task_new"
+   "task_new",
+   "marker_new",
+   "marker_next_delete"
   ]
  },
  "functions": {
@@ -26630,7 +26630,7 @@
     "marker",
     "marker_next_index",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "marker_new",
     "f_name",
     "v",
@@ -26714,7 +26714,7 @@
     "marker_next_index",
     "list_adder_async",
     "function_transform_marker",
-    "data_function_current_get",
+    "function_current_get",
     "marker_next_delete",
     "f_name",
     "lambda2",
