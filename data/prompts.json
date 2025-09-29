@@ -2274,6 +2274,7 @@
   "repos_names",
   "user_repo_get",
   "o git_acp_folder",
-  "o urg"
+  "o urg",
+  "s includes"
  ]
 }
