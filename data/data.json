@@ -5038,7 +5038,8 @@
    "ternary",
    "repos_paths_map_unordered",
    "functions_names",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_exists_inner"
   ],
   "catch_call": [
    "catch_call",
@@ -7680,7 +7681,8 @@
    "path_resolve",
    "server",
    "watch",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_exists_inner"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -14319,11 +14321,13 @@
   ],
   "repos_paths_map_unordered_combine": [
    "repos_paths_map_unordered_combine",
-   "functions_names"
+   "functions_names",
+   "function_exists_inner"
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
-   "functions_names"
+   "functions_names",
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18735,6 +18739,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "repos_paths_map_unordered_combine",
     "object_merge",
     "file_exists",
     "function_exists_inner",
@@ -18742,7 +18747,10 @@
     "f_path",
     "exists",
     "to",
-    "e"
+    "e",
+    "result",
+    "path",
+    "mapper"
    ]
   },
   "function_exists_strict": {
