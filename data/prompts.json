@@ -2251,7 +2251,6 @@
   "s function,new",
   "",
   "export async function user_repo_get() {",
-  "urs l",
   "s git",
   "si git_acp_folder",
   "is git_acp_folder",
@@ -2302,6 +2301,7 @@
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
   "s true",
-  "urg"
+  "urg",
+  "urs l"
  ]
 }
