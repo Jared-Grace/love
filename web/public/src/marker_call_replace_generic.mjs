@@ -41,6 +41,6 @@ export async function marker_call_replace_generic(input, lambda$a) {
       la(output);
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }
