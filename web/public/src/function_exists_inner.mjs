@@ -33,7 +33,8 @@ export async function function_exists_inner(u) {
   let multiple = list_multiple_is(filtered);
   exists = list_size_1(filtered);
   if (exists) {
-    let only = list_single(list);
+    let only = list_single(filtered);
+    let f_path2 = object_property_get(only, "f_path");
   }
   to = {
     exists,
