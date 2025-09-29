@@ -340,8 +340,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "true_is"
+   "whitespace_normalize"
   ],
   "apps_get": [
    "apps_get"
@@ -3097,7 +3096,8 @@
    "equal_by",
    "equal_by_async",
    "js_calls_to_each",
-   "js_if_else_if_combine"
+   "js_if_else_if_combine",
+   "true_is"
   ],
   "before": [
    "app_replace_rule_set",
@@ -29730,8 +29730,8 @@
   "true_is": {
    "async": false,
    "identifiers": [
-    "marker",
-    "true_is"
+    "true_is",
+    "eq"
    ]
   }
  }
