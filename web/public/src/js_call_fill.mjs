@@ -8,7 +8,6 @@ import { js_call_new } from "./js_call_new.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
-  log("js_call_fill");
   let functions = await data_functions_get();
   let visited = [];
   async function lambda(v) {
