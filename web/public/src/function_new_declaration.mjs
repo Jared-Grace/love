@@ -16,6 +16,6 @@ export async function function_new_declaration(declaration) {
   await js_imports_missing_add(ast);
   let contents_import = js_unparse(ast);
   let formatted = await js_format(contents_import);
-  let repo = await user_repo_get();
+  let repo_name = await user_repo_get();
   await file_write(f_path, formatted);
 }
