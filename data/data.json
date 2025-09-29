@@ -11600,7 +11600,6 @@
    "js_identifier_not_is"
   ],
   "log": [
-   "js_call_fill",
    "js_log_remove",
    "log",
    "log_keep",
@@ -21706,7 +21705,6 @@
   "js_call_fill": {
    "async": true,
    "identifiers": [
-    "log",
     "data_functions_get",
     "js_function_last_asyncify",
     "function_name_unalias",
