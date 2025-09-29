@@ -2576,8 +2576,7 @@
    "app_replace_rule_set",
    "app_reply_main",
    "object_property_set_exists_not",
-   "reply",
-   "function_exists_inner"
+   "reply"
   ],
   "range": [
    "app_replace_rule_set",
@@ -5921,7 +5920,8 @@
    "object_property_set",
    "object_property_set_exists_not",
    "search_generic",
-   "watch"
+   "watch",
+   "function_exists_inner"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -6511,8 +6511,7 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace",
-   "function_exists_inner"
+   "string_replace"
   ],
   "to": [
    "each_range_from",
@@ -6537,8 +6536,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "function_exists_inner"
+   "string_replace"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -14359,9 +14357,6 @@
   ],
   "f_path2": [
    "function_exists_inner"
-  ],
-  "to2": [
-   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18773,8 +18768,8 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "object_property_set",
     "object_merge",
-    "object_property_set_exists_not",
     "list_single",
     "true_is",
     "object_property_get",
@@ -18797,9 +18792,6 @@
     "ti2",
     "filtered",
     "multiple",
-    "to2",
-    "to",
-    "from",
     "result",
     "only",
     "f_path2"
