@@ -21324,8 +21324,8 @@
     "js_await_add",
     "ast",
     "functions",
-    "v2",
-    "visited"
+    "visited",
+    "v2"
    ]
   },
   "js_await_add_inner": {
