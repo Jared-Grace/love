@@ -1,1 +1,1 @@
-export async function sandbox_5() {}
+export function sandbox_5() {}
