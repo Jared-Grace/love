@@ -4282,7 +4282,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "function_exists_inner"
   ],
   "error": [
    "assert",
@@ -18777,6 +18778,7 @@
     "lambda2",
     "m",
     "exists2",
+    "v2",
     "filtered",
     "multiple"
    ]
