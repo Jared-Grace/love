@@ -1,4 +1,1 @@
-import { s5i } from "./s5i.mjs";
-export async function sandbox_5() {
-  await s5i();
-}
+export function sandbox_5() {}
