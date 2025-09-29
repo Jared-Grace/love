@@ -12,4 +12,5 @@ export async function user_repo_set(value) {
     return repo_name;
   }
   await data_set(lambda, "repo_current", f_path);
+  return urg;
 }
