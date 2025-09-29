@@ -1,4 +1,6 @@
+import { watch } from "./watch.mjs";
 import { log } from "./log.mjs";
-export function s5i() {
+export async function s5i() {
   log(message);
+  await watch();
 }
