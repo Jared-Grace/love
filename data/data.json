@@ -6272,8 +6272,7 @@
    "date_ms_to_hours",
    "functions_names",
    "function_aliases_restore",
-   "sleep",
-   "s5_inner"
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -8306,7 +8305,6 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "s5_inner",
    "sleep"
   ],
   "functions_path": [
@@ -11554,7 +11552,6 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "s5_inner",
    "search_generic"
   ],
   "js_identifier_is": [
@@ -13979,10 +13976,6 @@
   "s5": [
    "s5"
   ],
-  "s5_inner": [
-   "s5_inner",
-   "sandbox_5"
-  ],
   "sandbox": [
    "sandbox"
   ],
@@ -14010,6 +14003,9 @@
    "string_split_colon",
    "string_split_semicolon",
    "string_split_semicolon_space"
+  ],
+  "s5_inner": [
+   "sandbox_5"
   ],
   "sandbox_5": [
    "sandbox_5"
@@ -28410,15 +28406,6 @@
    "async": false,
    "identifiers": [
     "s5"
-   ]
-  },
-  "s5_inner": {
-   "async": true,
-   "identifiers": [
-    "sleep",
-    "log",
-    "s5_inner",
-    "ms"
    ]
   },
   "sandbox": {
