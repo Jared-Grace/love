@@ -2277,7 +2277,6 @@
   "fd watch",
   "de s5c",
   "de s5b",
-  "de s5_inner",
   "o w",
   "de s5i",
   "s5",
@@ -2316,6 +2315,7 @@
   "o opg",
   "function_name_unalias test",
   "ps",
-  "function_parse_declaration_js_unparse test"
+  "function_parse_declaration_js_unparse test",
+  "de s5_inner"
  ]
 }
