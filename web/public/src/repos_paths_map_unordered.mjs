@@ -7,8 +7,8 @@ export async function repos_paths_map_unordered(lambda$folder) {
   let all = await repos_names();
   async function lambda(repo_name) {
     let folder = repo_path(repo_name);
-    let v = await lambda$folder(folder);
-    return v;
+    let mapped = await lambda$folder(folder);
+    return mapped;
   }
   let result = await list_map_unordered_async(all, lambda);
   return result;
