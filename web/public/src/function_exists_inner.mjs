@@ -26,14 +26,14 @@ export async function function_exists_inner(u) {
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
-  let to = {
+  let result = {
     exists,
     multiple,
   };
   if (exists) {
     let only = list_single(filtered);
     let f_path2 = object_property_get(only, "f_path");
-    object_property_set_exists_not(to, "f_path", f_path2);
+    object_property_set_exists_not(result, "f_path", f_path2);
   }
-  return to;
+  return result;
 }
