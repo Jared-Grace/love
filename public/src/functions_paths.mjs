@@ -3,12 +3,8 @@ import { list_squash } from "./list_squash.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { function_name_folder_to_path } from "./function_name_folder_to_path.mjs";
 import { functions_path } from "./functions_path.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
 import { list_map } from "./list_map.mjs";
-import { functions_names } from "./functions_names.mjs";
 export async function functions_paths() {
-  let f_names = await functions_names();
-  let f_paths = list_map(f_names, function_name_to_path);
   let path = functions_path();
   function lambda(folder) {
     let f_names = functions_names_from_path(folder);
