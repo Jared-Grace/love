@@ -1133,7 +1133,8 @@
    "js_declaration_single_params_add",
    "js_dollar_new_args_inner",
    "js_imports_missing",
-   "marker_down_choices_lambda"
+   "marker_down_choices_lambda",
+   "js_function_last_asyncify"
   ],
   "html_new": [
    "app_new_step_2",
@@ -1638,7 +1639,8 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize"
+   "marker_functionize",
+   "js_function_last_asyncify"
   ],
   "async": [
    "app_new_step_2",
@@ -14220,6 +14222,9 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_functionize"
+  ],
+  "ast2": [
+   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22760,6 +22765,7 @@
   "js_function_last_asyncify": {
    "async": false,
    "identifiers": [
+    "js_declaration_single",
     "marker",
     "not",
     "js_stack_last_function",
@@ -22771,7 +22777,9 @@
     "ast",
     "f",
     "property_name",
-    "async"
+    "async",
+    "declaration",
+    "ast2"
    ]
   },
   "js_identifiers": {
