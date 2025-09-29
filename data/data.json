@@ -8416,8 +8416,7 @@
    "function_name_to_acronym",
    "git_publish_initial",
    "repo_acronym_to_name",
-   "repo_acronym_to_path",
-   "user_repo_set"
+   "repo_acronym_to_path"
   ],
   "function_alias_add_generic": [
    "function_aliases",
@@ -29338,7 +29337,6 @@
     "user_repo_set",
     "value",
     "repo_name",
-    "acronym",
     "f_path",
     "lambda",
     "previous"
