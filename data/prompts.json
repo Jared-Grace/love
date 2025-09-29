@@ -2320,6 +2320,7 @@
   "n test2",
   "s import",
   "function_name_to_path_import test",
-  "functions_paths"
+  "functions_paths",
+  "s to,path"
  ]
 }
