@@ -2240,7 +2240,6 @@
   "o function_names",
   "o functions_name",
   "o s5",
-  "is functions_names",
   "s repo_path_combine",
   "urs l",
   "s repo",
@@ -2251,6 +2250,7 @@
   "s awawit",
   "s await",
   "ps",
-  "o functions_names"
+  "o functions_names",
+  "is functions_names"
  ]
 }
