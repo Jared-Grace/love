@@ -6832,7 +6832,8 @@
    "repos_acronyms_to_names",
    "functions_names_to_paths",
    "function_imports_add",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "function_name_to_path_import"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -19220,6 +19221,7 @@
     "function_name_to_base",
     "function_name_to_path_import",
     "import_",
+    "dictionary",
     "f_name_ext",
     "from"
    ]
