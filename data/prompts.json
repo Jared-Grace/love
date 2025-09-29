@@ -2239,7 +2239,6 @@
   "pnd ast",
   "s declar,sing",
   "ps",
-  "d",
   "s declar,name",
   "o function_names",
   "o functions_name",
@@ -2249,6 +2248,7 @@
   "s repo_path_combine",
   "urs l",
   "s repo",
-  "s await"
+  "s await",
+  "d"
  ]
 }

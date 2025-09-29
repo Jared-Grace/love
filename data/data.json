@@ -151,6 +151,7 @@
    "folder_read_files",
    "functions_combine",
    "functions_log_remove",
+   "functions_names",
    "functions_search",
    "function_aliases_restore",
    "function_alias_add",
@@ -212,7 +213,7 @@
    "js_atomize_function",
    "js_auto_transforms",
    "js_auto_transform_new_inner",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
@@ -319,6 +320,7 @@
    "sandbox_2",
    "sandbox_3",
    "sandbox_4_a",
+   "sandbox_5",
    "storage_local_get",
    "storage_local_initialize",
    "storage_local_initialize_context",
@@ -336,9 +338,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "sandbox_5",
-   "functions_names"
+   "whitespace_normalize"
   ],
   "apps_get": [
    "apps_get"
@@ -437,7 +437,8 @@
    "js_dollar_new_args",
    "list_concat_multiple",
    "list_map_combine",
-   "marker_screen_add"
+   "marker_screen_add",
+   "repo_path_combine"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -676,7 +677,7 @@
    "js_assign_combine",
    "js_atomize",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_block_child_graph",
    "js_calls_to_each",
@@ -875,7 +876,7 @@
    "js_assign_combine",
    "js_atomize_function",
    "js_auto_transform_new_inner",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_calls_to_each",
    "js_call_callee_name",
@@ -896,6 +897,7 @@
    "js_dollar_new",
    "js_dollar_new_name",
    "js_expand_generic",
+   "js_function_last_asyncify",
    "js_identifiers_named_count",
    "js_identifier_unique",
    "js_imports_declarations",
@@ -921,8 +923,7 @@
    "storage_local_key_get",
    "string_empty_not_is",
    "task_new",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "p": [
    "app_name_prefixed",
@@ -1324,7 +1325,7 @@
    "js_atomize_function",
    "js_auto",
    "js_auto_transform_new_inner",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
@@ -1509,6 +1510,7 @@
    "js_auto",
    "js_auto_transform_new_inner",
    "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_block_child_graph",
    "js_block_child_graph_unparse",
@@ -1743,7 +1745,7 @@
    "function_rename_identifiers",
    "html_component_element_get",
    "js_assign_combine",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_calls_to_each",
    "js_call_callee_name",
@@ -2211,7 +2213,7 @@
    "app_reply_main",
    "ebible_references_parse_lines",
    "function_params_new",
-   "js_await_add",
+   "js_await_add_inner",
    "js_expand_generic",
    "js_identifier_defineds",
    "messenger_reply",
@@ -2649,7 +2651,7 @@
    "function_list_generate",
    "function_params_new",
    "http",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_calls_to_each",
    "js_declare_single",
@@ -2977,7 +2979,7 @@
    "function_list_generate",
    "function_params_new",
    "http",
-   "js_await_add",
+   "js_await_add_inner",
    "js_calls_to_each",
    "js_call_new_code",
    "js_dollar_a",
@@ -3703,7 +3705,7 @@
   "en": [
    "app_reply_main",
    "firebase_storage_download_ebible",
-   "js_await_add",
+   "js_await_add_inner",
    "list_remove_property",
    "sandbox"
   ],
@@ -4236,6 +4238,7 @@
    "function_identifier_replace",
    "http",
    "import_install",
+   "js_await_add",
    "js_code_or",
    "js_identifier_unique",
    "js_keyword_await",
@@ -5510,6 +5513,7 @@
    "js_outside_move",
    "path_repo_about",
    "path_repo_combine",
+   "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
    "user_repo_set"
@@ -5671,6 +5675,7 @@
    "path_join",
    "path_repo_combine",
    "repo_path",
+   "repo_path_combine",
    "sandbox_2",
    "server"
   ],
@@ -5980,14 +5985,15 @@
   "functions": [
    "data_file_update_inner",
    "data_functions_get",
-   "js_await_add"
+   "js_await_add",
+   "js_await_add_inner"
   ],
   "f_this": [
    "data_file_update_inner"
   ],
   "async_is": [
    "data_file_update_inner",
-   "js_await_add",
+   "js_await_add_inner",
    "js_calls_to_each",
    "js_call_fill",
    "js_call_new",
@@ -6252,8 +6258,8 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep",
-   "sandbox_5"
+   "sandbox_5",
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -6870,7 +6876,7 @@
    "function_aliases_restore",
    "function_aliases_search",
    "function_alias_rename",
-   "js_await_add",
+   "js_await_add_inner",
    "js_calls_to_each",
    "js_declare_assign",
    "js_node_is",
@@ -8147,7 +8153,7 @@
   "f": [
    "folder_user",
    "function_aliases_restore",
-   "js_await_add",
+   "js_await_add_inner",
    "js_function_last_asyncify",
    "js_stack_last_function",
    "marker_param_add",
@@ -8936,7 +8942,7 @@
   ],
   "object_property_exists_not": [
    "function_alias_rename",
-   "js_await_add",
+   "js_await_add_inner",
    "object_property_exists_not",
    "object_property_exists_not_assert"
   ],
@@ -9075,7 +9081,7 @@
    "js_arrow_to_function",
    "js_assign_combine",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_block_child_graph",
    "js_calls_to_each",
@@ -9178,7 +9184,7 @@
   "object_replace": [
    "function_identifier_replace",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_call_fill",
    "js_dollar_a",
@@ -9472,6 +9478,10 @@
   "function_new_app_screen": [
    "function_new_app_screen"
   ],
+  "repo_path_combine": [
+   "function_new_declaration",
+   "repo_path_combine"
+  ],
   "user_repo_get": [
    "function_new_declaration",
    "user_repo_get"
@@ -9486,8 +9496,8 @@
    "js_declaration_name",
    "js_declaration_single_name",
    "js_expand_generic",
-   "js_outside_move",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "js_outside_move"
   ],
   "js_imports_missing_add": [
    "function_new_declaration",
@@ -9509,11 +9519,9 @@
    "repo_acronym_to_name",
    "repo_acronym_to_path",
    "repo_path",
+   "repo_path_combine",
    "user_repo_get",
    "user_repo_set"
-  ],
-  "repo_path_combine": [
-   "function_new_declaration"
   ],
   "function_new_js_inner": [
    "function_new_js",
@@ -9785,9 +9793,10 @@
   "repo_path": [
    "function_run_git",
    "git_repo_clone",
+   "path_repo_combine",
    "repos_gitignore_overwrite",
    "repo_path",
-   "path_repo_combine"
+   "repo_path_combine"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -9950,7 +9959,7 @@
    "js_assign_combine",
    "js_atomize",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_block_child_graph",
    "js_block_insert",
    "js_calls_to_each",
@@ -9990,7 +9999,7 @@
    "function_transform_marker_arg",
    "js_atomize",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_dollar",
    "js_dollar_a",
    "js_dollar_aa",
@@ -10331,7 +10340,8 @@
    "git_repo_clone"
   ],
   "folder_name": [
-   "git_repo_clone"
+   "git_repo_clone",
+   "repo_path_combine"
   ],
   "git_repo_rename": [
    "git_repo_rename",
@@ -10364,7 +10374,7 @@
   "awaited": [
    "global_function_async",
    "js_await",
-   "js_await_add",
+   "js_await_add_inner",
    "js_await_wrap",
    "marker_next_await"
   ],
@@ -10810,8 +10820,8 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep",
-   "sandbox_5"
+   "sandbox_5",
+   "sleep"
   ],
   "npm_install": [
    "import_install",
@@ -11004,7 +11014,7 @@
    "js_assign_combine",
    "js_atomize",
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_calls_to_each",
    "js_dollar",
    "js_if_else_if_combine",
@@ -11139,7 +11149,7 @@
   ],
   "object_copy": [
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_dollar_a",
    "js_if_blockify_generic",
@@ -11199,7 +11209,7 @@
   ],
   "copy": [
    "js_atomize_function",
-   "js_await_add",
+   "js_await_add_inner",
    "js_bang_to_not",
    "js_if_blockify_generic",
    "js_node_atomize",
@@ -11300,20 +11310,15 @@
   ],
   "js_await": [
    "js_await",
-   "js_await_add",
+   "js_await_add_inner",
    "marker_next_await"
   ],
-  "js_node_type_not_is_if": [
+  "js_await_add_inner": [
    "js_await_add",
-   "js_node_type_not_is_if"
-  ],
-  "js_function_last_asyncify": [
-   "js_await_add",
-   "js_call_fill",
-   "js_function_last_asyncify"
+   "js_await_add_inner"
   ],
   "js_visit_type_each_async": [
-   "js_await_add",
+   "js_await_add_inner",
    "js_call_fill",
    "js_dollar",
    "js_if_blockify_generic",
@@ -11321,9 +11326,18 @@
    "js_visit_type_each_async"
   ],
   "js_call_function_if": [
-   "js_await_add",
+   "js_await_add_inner",
    "js_call_function_if",
    "js_node_atomize"
+  ],
+  "js_node_type_not_is_if": [
+   "js_await_add_inner",
+   "js_node_type_not_is_if"
+  ],
+  "js_function_last_asyncify": [
+   "js_await_add_inner",
+   "js_call_fill",
+   "js_function_last_asyncify"
   ],
   "js_await_add_task_simple": [
    "js_await_add_task_simple"
@@ -13704,9 +13718,6 @@
    "repo_acronym_get",
    "repo_acronym_set"
   ],
-  "path_repo": [
-   "repo_acronym_to_path"
-  ],
   "r_path": [
    "path_repo_combine",
    "repo_path"
@@ -13813,6 +13824,9 @@
   ],
   "repos_matching": [
    "repo_acronym_to_name"
+  ],
+  "path_repo": [
+   "repo_acronym_to_path"
   ],
   "wait": [
    "retry"
@@ -21290,22 +21304,32 @@
   "js_await_add": {
    "async": true,
    "identifiers": [
-    "not",
-    "object_replace",
-    "js_await",
-    "object_copy",
-    "js_node_type_not_is_if",
-    "list_get_end_1",
-    "js_function_last_asyncify",
-    "object_property_exists_not",
-    "js_visit_type_each_async",
     "data_functions_get",
-    "js_call_function_if",
-    "object_property_get",
-    "marker",
     "js_await_add",
     "ast",
     "functions",
+    "v2",
+    "js_await_add_inner"
+   ]
+  },
+  "js_await_add_inner": {
+   "async": true,
+   "identifiers": [
+    "js_visit_type_each_async",
+    "js_call_function_if",
+    "js_node_type_not_is_if",
+    "object_replace",
+    "js_await",
+    "object_copy",
+    "list_get_end_1",
+    "js_function_last_asyncify",
+    "marker",
+    "not",
+    "object_property_exists_not",
+    "object_property_get",
+    "js_await_add_inner",
+    "functions",
+    "ast",
     "lambda",
     "v",
     "node",
@@ -28185,6 +28209,18 @@
     "repo_name",
     "previous",
     "r_path"
+   ]
+  },
+  "repo_path_combine": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "repo_path",
+    "repo_path_combine",
+    "repo_name",
+    "f_path",
+    "folder_name",
+    "combined"
    ]
   },
   "retry": {
