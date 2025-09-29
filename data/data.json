@@ -2846,7 +2846,8 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "functions_paths"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -5137,8 +5138,7 @@
   "identity": [
    "catch_log_async",
    "identity",
-   "marker_above",
-   "functions_paths"
+   "marker_above"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -5858,7 +5858,8 @@
    "function_delete"
   ],
   "f_paths": [
-   "data_files_update"
+   "data_files_update",
+   "functions_paths"
   ],
   "parseds": [
    "data_files_update"
@@ -6138,7 +6139,8 @@
    "function_new_declaration",
    "function_parse_strict",
    "js_outside_move",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
@@ -8261,7 +8263,8 @@
    "js_imports_missing",
    "string_split_comma",
    "functions_names",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "functions_paths"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8325,7 +8328,8 @@
    "function_params_consolidate",
    "js_expand_generic",
    "js_imports_missing",
-   "marker_functionize"
+   "marker_functionize",
+   "functions_paths"
   ],
   "functions_format": [
    "functions_format"
@@ -18188,19 +18192,23 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
-    "identity",
-    "list_squash",
-    "repos_paths_map_unordered_combine",
-    "functions_path",
+    "function_name_to_path",
+    "list_map",
+    "functions_names",
     "functions_paths",
+    "f_names",
+    "f_paths",
     "path",
+    "functions_path",
     "result",
+    "repos_paths_map_unordered_combine",
     "r",
     "v",
     "function_name_folder_to_path",
     "f_name",
     "folder",
-    "squashed"
+    "squashed",
+    "list_squash"
    ]
   },
   "functions_search": {
