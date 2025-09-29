@@ -13657,8 +13657,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "function_new_declaration"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -19009,8 +19008,7 @@
     "formatted",
     "repo_name",
     "folder_name",
-    "joined",
-    "segments"
+    "joined"
    ]
   },
   "function_new_js": {
