@@ -14257,7 +14257,8 @@
    "watch"
   ],
   "visited": [
-   "js_await_add"
+   "js_await_add",
+   "js_await_add_inner"
   ]
  },
  "functions": {
@@ -21346,6 +21347,7 @@
     "js_await_add_inner",
     "functions",
     "ast",
+    "visited",
     "lambda",
     "v",
     "node",
