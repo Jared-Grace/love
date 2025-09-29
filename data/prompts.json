@@ -2249,9 +2249,9 @@
   "ps",
   "o functions_names",
   "is functions_names",
-  "s fill",
   "s sleep",
   "d",
-  "o s5"
+  "o s5",
+  "s fill"
  ]
 }
