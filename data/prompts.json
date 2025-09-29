@@ -2203,7 +2203,6 @@
   "s command",
   "s list_map",
   "s user,repo",
-  "urg",
   "s acro",
   "c repo_acronym_set repo_acronym_get",
   "s dictionary",
@@ -2233,6 +2232,7 @@
   "s folder",
   "is function_name_to_path",
   "is repos_folder",
-  "s repo"
+  "s repo",
+  "urg"
  ]
 }
