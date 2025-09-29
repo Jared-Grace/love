@@ -2313,7 +2313,6 @@
   "functions_path",
   "o fns",
   "o functions_paths",
-  "urg",
   "n test2",
   "s import",
   "function_name_to_path_import test",
@@ -2325,6 +2324,7 @@
   "s repo",
   "ps",
   "p",
-  "c functions_paths functions_names_to_paths"
+  "c functions_paths functions_names_to_paths",
+  "urg"
  ]
 }
