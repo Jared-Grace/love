@@ -2333,6 +2333,7 @@
   "is js_imports_paths_fix",
   "is function_name_to_path_import",
   "fs function_name_to_path_import",
-  "pnd dictionary"
+  "pnd dictionary",
+  "o t2"
  ]
 }
