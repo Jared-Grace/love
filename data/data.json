@@ -21305,11 +21305,11 @@
    "async": true,
    "identifiers": [
     "data_functions_get",
+    "js_await_add_inner",
     "js_await_add",
     "ast",
     "functions",
-    "v2",
-    "js_await_add_inner"
+    "v2"
    ]
   },
   "js_await_add_inner": {
