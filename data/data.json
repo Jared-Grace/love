@@ -14222,9 +14222,6 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_functionize"
-  ],
-  "ast2": [
-   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22778,8 +22775,7 @@
     "f",
     "property_name",
     "async",
-    "declaration",
-    "ast2"
+    "declaration"
    ]
   },
   "js_identifiers": {
