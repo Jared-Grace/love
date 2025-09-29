@@ -9,7 +9,6 @@ import { functions_names } from "./functions_names.mjs";
 export async function functions_paths() {
   let f_names = await functions_names();
   let f_paths = list_map(f_names, function_name_to_path);
-  return f_paths;
   let path = functions_path();
   function lambda(folder) {
     let f_names = functions_names_from_path(folder);
