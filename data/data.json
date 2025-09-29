@@ -4443,7 +4443,6 @@
    "git_acp_timestamp",
    "git_commit",
    "git_commit_folder",
-   "js_call_fill",
    "js_declaration_params_names_node",
    "js_node_atomize",
    "keyboard_type_delay",
@@ -21566,8 +21565,7 @@
     "unaliased",
     "valid",
     "parsed",
-    "async_is",
-    "message"
+    "async_is"
    ]
   },
   "js_call_function_if": {
