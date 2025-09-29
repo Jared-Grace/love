@@ -2317,6 +2317,7 @@
   "functions_path",
   "o fns",
   "p",
-  "functions_paths"
+  "functions_paths",
+  "o functions_paths"
  ]
 }
