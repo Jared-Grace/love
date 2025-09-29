@@ -6829,7 +6829,8 @@
    "list_to_dictionary",
    "list_to_dictionary_async",
    "repos_acronyms_to_names",
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "function_imports_add"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -14454,8 +14455,7 @@
    "reduce"
   ],
   "reduced": [
-   "reduce",
-   "function_imports_add"
+   "reduce"
   ]
  },
  "functions": {
@@ -19040,7 +19040,7 @@
     "from",
     "code",
     "statement",
-    "reduced"
+    "dictionary"
    ]
   },
   "function_imports_fix": {
