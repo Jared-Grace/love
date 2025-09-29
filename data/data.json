@@ -5359,7 +5359,6 @@
    "repos_paths_map_unordered",
    "repo_acronym_to_path",
    "sandbox_2",
-   "functions_names",
    "repos_paths_map_unordered_combine"
   ],
   "command_line_git_prefix": [
@@ -5695,7 +5694,6 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "functions_names",
    "repos_paths_map_unordered_combine"
   ],
   "file_copy": [
@@ -9853,7 +9851,6 @@
   ],
   "each_folder": [
    "function_run_git",
-   "functions_names",
    "repos_paths_map_unordered_combine"
   ],
   "function_run_line_parse": [
@@ -13871,7 +13868,6 @@
   "repos_paths_map_unordered": [
    "repos_paths_map_unordered",
    "function_run_git",
-   "functions_names",
    "repos_paths_map_unordered_combine"
   ],
   "repo_acronym_set": [
@@ -14322,10 +14318,12 @@
    "repos_paths_map_unordered"
   ],
   "repos_paths_map_unordered_combine": [
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "functions_names"
   ],
   "mapper": [
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "functions_names"
   ]
  },
  "functions": {
@@ -18072,19 +18070,17 @@
    "async": true,
    "identifiers": [
     "list_squash",
-    "path_join",
-    "repos_paths_map_unordered",
+    "repos_paths_map_unordered_combine",
     "functions_names_from_path",
     "marker",
     "functions_path",
     "functions_names",
     "path",
     "result",
-    "each_folder",
-    "folder",
+    "mapper",
+    "squashed",
     "joined",
-    "f_names",
-    "squashed"
+    "f_names"
    ]
   },
   "functions_names_from_path": {
