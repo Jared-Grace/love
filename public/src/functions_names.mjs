@@ -1,4 +1,3 @@
-import { git_acp_call_folder } from "./git_acp_call_folder.mjs";
 import { repos_paths_map_unordered } from "./repos_paths_map_unordered.mjs";
 import { functions_names_from_path } from "./functions_names_from_path.mjs";
 import { marker } from "./marker.mjs";
@@ -10,6 +9,6 @@ export async function functions_names() {
   return v;
   await repos_paths_map_unordered(each_folder);
   async function each_folder(folder) {
-    await git_acp_call_folder(f_name, args, folder);
+    let v = functions_names_from_path(path);
   }
 }
