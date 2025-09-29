@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { s5c } from "./s5c.mjs";
 export function s5b() {
-  log("message");
+  s5c();
 }
