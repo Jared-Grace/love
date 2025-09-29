@@ -28,7 +28,7 @@ export async function js_await_add(ast) {
         return;
       }
       let stack = object_property_get(v, "stack");
-      js_function_last_asyncify(stack, async_is);
+      js_function_last_asyncify(stack, async_is, ast);
       let stack1 = list_get_end_1(stack);
       function lambda4() {
         let copy = object_copy(node);
