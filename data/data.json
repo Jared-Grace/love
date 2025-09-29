@@ -11606,8 +11606,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "function_parse_declaration_js_unparse"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13158,8 +13157,7 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright",
-   "function_parse_declaration_js_unparse"
+   "messenger_reply_playwright"
   ],
   "log_unparse": [
    "log_unparse",
@@ -19503,7 +19501,6 @@
   "function_parse_declaration_js_unparse": {
    "async": true,
    "identifiers": [
-    "log",
     "js_unparse",
     "function_parse_declaration",
     "object_properties",
@@ -19511,7 +19508,6 @@
     "f_name",
     "declaration",
     "properties",
-    "console",
     "output"
    ]
   },
