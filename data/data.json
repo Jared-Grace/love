@@ -338,7 +338,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_delete"
   ],
   "apps_get": [
    "apps_get"
@@ -18605,6 +18606,7 @@
   "function_delete": {
    "async": true,
    "identifiers": [
+    "marker",
     "function_name_to_path",
     "file_delete",
     "function_delete",
