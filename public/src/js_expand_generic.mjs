@@ -40,7 +40,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     if (list_empty_not_is(intesection)) {
     }
     let identifiers_all = list_concat(identifiers, identifiers_call);
-    let f_names = functions_names();
+    let f_names = await functions_names();
     list_remove_all_multiple(f_names, identifiers_all);
     function lambda2(i) {
       let unique = js_identifier_unique(identifiers_all, i);
