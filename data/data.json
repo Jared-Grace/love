@@ -2308,8 +2308,7 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "js_function_last_asyncify"
+   "watch"
   ],
   "item": [
    "app_replace_home",
@@ -9694,8 +9693,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "js_function_last_asyncify"
+   "function_param_swap_task_simple"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -14236,9 +14234,6 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_functionize"
-  ],
-  "ast2": [
-   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22804,10 +22799,7 @@
     "properties",
     "lambda",
     "f_name",
-    "lambda2",
-    "ast2",
-    "output",
-    "f_name2"
+    "output"
    ]
   },
   "js_identifiers": {
