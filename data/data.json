@@ -4979,8 +4979,7 @@
    "promise_wrap",
    "retry",
    "string_empty_is",
-   "throws_not_async",
-   "function_exists_strict"
+   "throws_not_async"
   ],
   "result": [
    "cache_generic",
@@ -5548,7 +5547,6 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "function_exists_strict",
    "function_name_to_path_search"
   ],
   "file_write": [
@@ -6132,7 +6130,6 @@
    "functions_paths",
    "functions_search",
    "function_delete",
-   "function_exists_strict",
    "function_name_to_path",
    "function_new_declaration",
    "function_parse_strict",
@@ -9247,8 +9244,7 @@
    "function_dependencies_code_copy"
   ],
   "function_exists_inner": [
-   "function_exists_inner",
-   "function_exists_strict"
+   "function_exists_inner"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -18827,13 +18823,9 @@
    "async": true,
    "identifiers": [
     "function_name_to_path_search",
-    "function_name_to_path",
     "marker",
-    "function_exists_inner",
     "function_exists_strict",
     "f_name",
-    "f_path",
-    "e",
     "result"
    ]
   },
