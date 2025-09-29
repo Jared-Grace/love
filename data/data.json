@@ -4753,7 +4753,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "function_current_get"
   ],
   "browser_is": [
    "browser_is",
@@ -5591,7 +5592,8 @@
    "data_terminal_get",
    "data_watch_get",
    "function_run_prompt",
-   "git_push_folder"
+   "git_push_folder",
+   "function_current_get"
   ],
   "user_repo_path": [
    "data_app_current_get",
@@ -5602,7 +5604,8 @@
    "git_push_folder",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set"
+   "user_repo_set",
+   "function_current_get"
   ],
   "data_app_current_get": [
    "data_app_current_get",
@@ -5636,7 +5639,8 @@
    "function_run_line_parse",
    "function_run_prompt",
    "git_push_folder",
-   "marker_current_set"
+   "marker_current_set",
+   "function_current_get"
   ],
   "path_join": [
    "data_backup",
@@ -6033,7 +6037,8 @@
    "function_transform_marker_current",
    "marker_call",
    "marker_param_add",
-   "marker_rename"
+   "marker_rename",
+   "function_current_get"
   ],
   "function_current_set": [
    "data_function_current_restore",
@@ -14210,6 +14215,9 @@
   ],
   "function_param_new_double": [
    "function_param_new_double"
+  ],
+  "function_current_get": [
+   "function_current_get"
   ]
  },
  "functions": {
@@ -29458,6 +29466,17 @@
     "function_params_new",
     "function_param_new_double",
     "param_name"
+   ]
+  },
+  "function_current_get": {
+   "async": true,
+   "identifiers": [
+    "user_repo_path",
+    "data_property_get",
+    "function_current_get",
+    "property_name",
+    "d_path",
+    "f_name_current"
    ]
   }
  }
