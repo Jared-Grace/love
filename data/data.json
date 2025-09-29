@@ -8107,8 +8107,7 @@
    "function_run_git",
    "list_includes_assert",
    "list_wait",
-   "repo_exists_assert",
-   "functions_names"
+   "repo_exists_assert"
   ],
   "readdir": [
    "folder_read",
@@ -14289,7 +14288,8 @@
    "s5_inner"
   ],
   "rns": [
-   "repos_names"
+   "repos_names",
+   "functions_names"
   ]
  },
  "functions": {
@@ -18052,7 +18052,7 @@
     "without",
     "f_names",
     "ms",
-    "all"
+    "rns"
    ]
   },
   "functions_names_includes": {
