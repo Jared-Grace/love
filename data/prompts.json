@@ -2322,6 +2322,7 @@
   "function_name_to_path_import test",
   "functions_paths",
   "s to,path",
-  "s functions_paths"
+  "s functions_paths",
+  "c functions_paths functions_names_to_paths"
  ]
 }
