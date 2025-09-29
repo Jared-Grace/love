@@ -1037,7 +1037,6 @@
   "de fs",
   "o fs",
   "function_imports_missing folder_read",
-  "s data,update",
   "fws data_file_update all",
   "r data_file_update_all data_files_update",
   "u fntp",
@@ -2284,6 +2283,7 @@
   "is data_functions_get",
   "s fill",
   "function_name_unalias sleep",
-  "functions_names_includes sleep"
+  "functions_names_includes sleep",
+  "s data,update"
  ]
 }
