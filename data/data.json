@@ -824,7 +824,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1476,7 +1477,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "ast": [
    "app_new_step_2",
@@ -1809,7 +1811,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2321,7 +2324,8 @@
    "undefined_not_is_assert",
    "visit_unique_async",
    "watch",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "item": [
    "app_replace_home",
@@ -2949,7 +2953,8 @@
    "sandbox_2",
    "sandbox_4_a",
    "repos_paths_map_unordered",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4223,7 +4228,8 @@
    "watch",
    "functions_names",
    "repos_paths_map_unordered_combine",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4401,7 +4407,8 @@
    "file_delete_if_exists",
    "file_exists",
    "http_local",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -5046,7 +5053,8 @@
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
    "function_name_to_path_unalias",
-   "function_exists_strict"
+   "function_exists_strict",
+   "function_name_to_path_search"
   ],
   "catch_call": [
    "catch_call",
@@ -5540,7 +5548,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "function_exists_strict"
+   "function_exists_strict",
+   "function_name_to_path_search"
   ],
   "file_write": [
    "data_all",
@@ -5594,7 +5603,8 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "function_name_to_path_search"
   ],
   "data": [
    "data_all",
@@ -5920,7 +5930,8 @@
    "object_property_set_exists_not",
    "search_generic",
    "watch",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -6125,7 +6136,8 @@
    "function_name_to_path",
    "function_new_declaration",
    "function_parse_strict",
-   "js_outside_move"
+   "js_outside_move",
+   "function_name_to_path_search"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
@@ -6667,7 +6679,8 @@
    "list_find",
    "messenger_reply",
    "puppeteer_hrefs_starts_with",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -7094,7 +7107,8 @@
    "js_statement_call_get",
    "list_first_second_generic",
    "list_multiple_is",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "string_split_dash": [
    "ebible_references_parse_lines",
@@ -7200,7 +7214,8 @@
    "function_aliases_restore",
    "messenger_reply_unread_click",
    "reply_test",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -7264,7 +7279,8 @@
    "list_filter_starts_with_not_multiple",
    "list_find",
    "search_generic",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -7928,7 +7944,8 @@
    "folder_find_starts_with",
    "list_find",
    "list_single",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "http": [
    "firebase_storage_download",
@@ -8400,7 +8417,8 @@
    "list_single",
    "marker_rename",
    "repo_acronym_to_name",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -8414,7 +8432,8 @@
    "list_size_1",
    "list_size_1_assert_message",
    "marker_rename",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -8461,7 +8480,8 @@
   ],
   "exists2": [
    "function_acronym_to_name",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "s1": [
    "function_acronym_to_name",
@@ -8982,7 +9002,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "function_name_to_path_search"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -14333,7 +14354,8 @@
   "repos_paths_map_unordered_combine": [
    "repos_paths_map_unordered_combine",
    "functions_names",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
@@ -14341,23 +14363,28 @@
   ],
   "true_is": [
    "true_is",
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "multiple": [
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "ti": [
    "true_is"
   ],
   "ti2": [
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "f_path2": [
-   "function_exists_inner"
+   "function_exists_inner",
+   "function_name_to_path_search"
   ],
   "function_name_to_path_search": [
    "function_name_to_path_unalias",
-   "function_exists_strict"
+   "function_exists_strict",
+   "function_name_to_path_search"
   ]
  },
  "functions": {
@@ -29768,6 +29795,38 @@
     "true_is",
     "value",
     "ti"
+   ]
+  },
+  "function_name_to_path_search": {
+   "async": true,
+   "identifiers": [
+    "object_property_set",
+    "list_single",
+    "list_size_1",
+    "list_multiple_is",
+    "list_filter",
+    "true_is",
+    "object_property_get",
+    "repos_paths_map_unordered_combine",
+    "file_exists",
+    "function_name_to_path",
+    "function_name_to_path_search",
+    "unaliased",
+    "f_path",
+    "lambda",
+    "joined",
+    "exists",
+    "v",
+    "mapped",
+    "lambda2",
+    "m",
+    "exists2",
+    "ti2",
+    "filtered",
+    "multiple",
+    "result",
+    "only",
+    "f_path2"
    ]
   }
  }
