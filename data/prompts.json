@@ -2229,7 +2229,6 @@
   "o function_names",
   "o functions_name",
   "s repo_path_combine",
-  "s repo",
   "pnd functions",
   "is js_function_last_asyncify",
   "s awawit",
@@ -2275,6 +2274,7 @@
   "user_repo_get",
   "o git_acp_folder",
   "o urg",
-  "s includes"
+  "s includes",
+  "s repo"
  ]
 }
