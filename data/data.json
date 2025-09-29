@@ -824,8 +824,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "function_exists_inner"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -8409,7 +8408,8 @@
    "js_imports_declarations",
    "list_size_1",
    "list_size_1_assert_message",
-   "marker_rename"
+   "marker_rename",
+   "function_exists_inner"
   ],
   "object_property_exists": [
    "function_acronym_to_name",
@@ -8463,7 +8463,8 @@
    "js_dollar_a",
    "js_dollar_s",
    "list_size_1",
-   "marker_rename"
+   "marker_rename",
+   "function_exists_inner"
   ],
   "function_acronym_to_names": [
    "function_acronym_to_names"
@@ -14340,6 +14341,9 @@
   "true_is": [
    "true_is",
    "function_exists_inner"
+  ],
+  "multiple": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18751,6 +18755,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "list_size_1",
     "list_multiple_is",
     "true_is",
     "list_filter",
@@ -18765,7 +18770,8 @@
     "e",
     "bools",
     "filtered",
-    "v",
+    "multiple",
+    "s1",
     "list"
    ]
   },
