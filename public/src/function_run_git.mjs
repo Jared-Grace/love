@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { repo_path } from "./repo_path.mjs";
 import { git_acp_call_folder } from "./git_acp_call_folder.mjs";
 import { each_async } from "./each_async.mjs";
@@ -11,5 +12,9 @@ export async function function_run_git(f_name, args) {
     await git_acp_call_folder(f_name, args, folder);
   }
   await each_async(all, lambda);
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda2(item) {},
+  );
   return result;
 }
