@@ -3,7 +3,7 @@ import { js_identifier_unique } from "./js_identifier_unique.mjs";
 import { js_marker_insert } from "./js_marker_insert.mjs";
 import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
 import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { marker } from "./marker.mjs";
 import { js_markers } from "./js_markers.mjs";
@@ -11,7 +11,7 @@ import { list_map } from "./list_map.mjs";
 import { js_marker_name_get } from "./js_marker_name_get.mjs";
 export async function marker_top() {
   marker("1");
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   let v = await function_transform(f_name, lambda);
   return v;
   async function lambda(ast) {
