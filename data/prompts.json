@@ -2323,6 +2323,7 @@
   "functions_paths",
   "s to,path",
   "s functions_paths",
-  "c functions_paths functions_names_to_paths"
+  "c functions_paths functions_names_to_paths",
+  "s name_to"
  ]
 }
