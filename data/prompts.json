@@ -2248,7 +2248,7 @@
   "s repo_path_combine",
   "urs l",
   "s repo",
-  "s await",
-  "d"
+  "d",
+  "s await"
  ]
 }
