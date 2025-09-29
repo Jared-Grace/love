@@ -9651,8 +9651,7 @@
    "marker_screen_add"
   ],
   "default_value": [
-   "function_param_new",
-   "function_param_new_double"
+   "function_param_new"
   ],
   "list_swap": [
    "function_param_swap",
@@ -29458,8 +29457,7 @@
     "marker",
     "function_params_new",
     "function_param_new_double",
-    "param_name",
-    "default_value"
+    "param_name"
    ]
   }
  }
