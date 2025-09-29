@@ -1,3 +1,4 @@
+import { function_transform } from "./function_transform.mjs";
 import { each_async } from "./each_async.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
@@ -20,8 +21,13 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
       return;
       let result = await data_identifiers_search(s);
       let properties = object_properties(result);
-      async function lambda(item) {}
-      await each_async(list, lambda);
+      async function lambda(f_name) {
+        let output = await function_transform(
+          f_name2,
+          async function lambda2(ast2) {},
+        );
+      }
+      await each_async(properties, lambda);
     }
   }
 }
