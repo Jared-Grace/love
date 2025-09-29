@@ -2014,7 +2014,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "functions_paths"
+   "functions_paths",
+   "function_name_folder_to_path"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4233,7 +4234,8 @@
    "functions_names",
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "function_name_folder_to_path"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5380,7 +5382,8 @@
    "sandbox_2",
    "repos_paths_map_unordered_combine",
    "function_name_to_path",
-   "functions_paths"
+   "functions_paths",
+   "function_name_folder_to_path"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5714,7 +5717,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_name_folder_to_path"
   ],
   "file_copy": [
    "data_backup",
@@ -7197,7 +7201,8 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash"
+   "string_split_dash",
+   "function_name_folder_to_path"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -9336,7 +9341,8 @@
    "function_import",
    "function_name_to_base",
    "function_name_to_path_import",
-   "html_update_generic"
+   "html_update_generic",
+   "function_name_folder_to_path"
   ],
   "function_import": [
    "function_import",
@@ -14391,7 +14397,11 @@
   ],
   "function_name_folder_to_path": [
    "function_name_to_path",
-   "functions_paths"
+   "functions_paths",
+   "function_name_folder_to_path"
+  ],
+  "base": [
+   "function_name_folder_to_path"
   ]
  },
  "functions": {
@@ -29839,6 +29849,19 @@
     "result",
     "only",
     "f_path2"
+   ]
+  },
+  "function_name_folder_to_path": {
+   "async": false,
+   "identifiers": [
+    "path_join",
+    "function_name_to_base",
+    "function_name_folder_to_path",
+    "f_name",
+    "folder",
+    "base",
+    "second",
+    "joined"
    ]
   }
  }
