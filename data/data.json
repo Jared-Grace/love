@@ -1819,7 +1819,8 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "function_name_to_path_import"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2156,7 +2157,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "true_is"
+   "true_is",
+   "function_name_to_path_import"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4761,7 +4763,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_name_to_path_import"
   ],
   "property_name": [
    "bind_property",
@@ -4816,7 +4819,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "function_name_to_path_import"
   ],
   "browser_is": [
    "browser_is",
@@ -19223,6 +19227,7 @@
   "function_name_to_path_import": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "path_join",
     "marker",
     "folder_current_join_code",
@@ -19233,6 +19238,9 @@
     "dictionary",
     "f_name_ext",
     "from",
+    "value",
+    "object",
+    "property_name",
     "previous",
     "previous2",
     "joined"
