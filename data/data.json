@@ -18027,7 +18027,7 @@
    ]
   },
   "functions_names_includes": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "list_includes",
     "functions_names",
