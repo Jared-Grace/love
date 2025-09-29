@@ -2216,7 +2216,6 @@
   "p",
   "repos_gitignore_overwrite",
   "np",
-  "d",
   "is git_acp_folder",
   "is git_acp_call_folder",
   "o an",
@@ -2243,6 +2242,7 @@
   "s declar,sing",
   "o s5",
   "ps",
-  "is functions_names"
+  "is functions_names",
+  "d"
  ]
 }
