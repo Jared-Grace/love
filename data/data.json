@@ -68,6 +68,7 @@
    "error_attention_clear",
    "exit",
    "file_delete_if_exists",
+   "file_exists",
    "file_json_isolate",
    "file_json_property_delete",
    "file_overwrite_buffer",
@@ -97,6 +98,7 @@
    "function_current_set",
    "function_delete",
    "function_dependencies_code_copy",
+   "function_exists",
    "function_exists_strict",
    "function_identifier_replace",
    "function_identifier_replace_ending_remove",
@@ -278,9 +280,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "file_exists",
-   "function_exists"
+   "whitespace_normalize"
   ],
   "t2": [
    "t2"
@@ -4358,6 +4358,7 @@
   "assert": [
    "assert",
    "equal_assert",
+   "function_delete",
    "js_dollar_s",
    "js_node_type_is_assert",
    "list_concat",
@@ -4373,8 +4374,7 @@
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
    "string_is_assert",
-   "string_is_assert_message",
-   "function_delete"
+   "string_is_assert_message"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -5633,6 +5633,7 @@
    "function_alias_delete",
    "function_alias_replace",
    "function_current_set",
+   "function_delete",
    "function_delete_if_exists",
    "function_exists_inner",
    "function_list_generate",
@@ -5646,8 +5647,7 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "function_delete"
+   "object_property_lambda_async"
   ],
   "data": [
    "data_all",
@@ -9196,11 +9196,11 @@
   ],
   "function_exists": [
    "function_current_set",
+   "function_delete",
    "function_delete_if_exists",
    "function_exists",
    "function_list_generate",
-   "function_params_new",
-   "function_delete"
+   "function_params_new"
   ],
   "marker_first": [
    "function_current_set",
