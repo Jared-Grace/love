@@ -342,7 +342,8 @@
    "watch",
    "whitespace_normalize",
    "functions_names_to_paths",
-   "reduce"
+   "reduce",
+   "function_name_to_path_import"
   ],
   "apps_get": [
    "apps_get"
@@ -19214,6 +19215,7 @@
   "function_name_to_path_import": {
    "async": false,
    "identifiers": [
+    "marker",
     "folder_current_join_code",
     "function_name_to_base",
     "function_name_to_path_import",
