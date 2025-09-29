@@ -6237,8 +6237,7 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep",
-   "sandbox_5"
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -28366,8 +28365,7 @@
    "identifiers": [
     "sleep",
     "marker",
-    "sandbox_5",
-    "ms"
+    "sandbox_5"
    ]
   },
   "sandbox_5_a": {
