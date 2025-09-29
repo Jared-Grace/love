@@ -13,6 +13,7 @@ export async function function_exists_inner(u) {
   let exists = list_size_1(filtered);
   let to = {
     exists,
+    multiple,
   };
   let e = object_merge(to, u);
   return e;
