@@ -4958,7 +4958,6 @@
    "data_file_update_inner",
    "firebase_storage_exists",
    "function_aliases_restore",
-   "function_exists_strict",
    "git_rebase",
    "html_element",
    "html_parse_classes_preview",
@@ -5045,7 +5044,8 @@
    "functions_names",
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "function_exists_strict"
   ],
   "catch_call": [
    "catch_call",
@@ -5520,7 +5520,6 @@
    "function_copy",
    "function_delete",
    "function_exists_inner",
-   "function_exists_strict",
    "function_format",
    "function_import",
    "function_new_declaration",
@@ -14355,7 +14354,8 @@
    "function_exists_inner"
   ],
   "function_name_to_path_search": [
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "function_exists_strict"
   ]
  },
  "functions": {
@@ -18802,8 +18802,8 @@
     "function_exists_inner",
     "function_exists_strict",
     "f_name",
-    "f_path",
-    "e"
+    "result",
+    "function_name_to_path_search"
    ]
   },
   "function_format": {
