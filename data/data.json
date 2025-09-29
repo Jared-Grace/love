@@ -4460,8 +4460,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "s5i"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -5859,8 +5858,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "s5i"
+   "search_generic"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14003,6 +14001,9 @@
    "string_split_semicolon",
    "string_split_semicolon_space"
   ],
+  "s5i": [
+   "sandbox_5"
+  ],
   "sandbox_5": [
    "sandbox_5"
   ],
@@ -14269,8 +14270,7 @@
    "visit_filter_recursive_async"
   ],
   "watch": [
-   "watch",
-   "s5i"
+   "watch"
   ],
   "chokidar": [
    "watch"
@@ -14283,10 +14283,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "s5i": [
-   "sandbox_5",
-   "s5i"
   ]
  },
  "functions": {
@@ -29621,15 +29617,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "s5i": {
-   "async": true,
-   "identifiers": [
-    "watch",
-    "log",
-    "s5i",
-    "message"
    ]
   }
  }
