@@ -14265,7 +14265,8 @@
    "js_function_last_asyncify"
   ],
   "repo_exists_assert": [
-   "user_repo_get"
+   "user_repo_get",
+   "user_repo_set"
   ]
  },
  "functions": {
@@ -29404,6 +29405,7 @@
   "user_repo_set": {
    "async": true,
    "identifiers": [
+    "repo_exists_assert",
     "repo_acronym_to_name",
     "user_repo_path",
     "data_set",
