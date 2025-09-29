@@ -10,7 +10,7 @@ import { marker } from "./marker.mjs";
 import { not } from "./not.mjs";
 import { object_property_exists_not } from "./object_property_exists_not.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-export async function js_await_add_inner(functions, ast) {
+export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
