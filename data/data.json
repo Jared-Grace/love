@@ -9581,7 +9581,8 @@
   "user_repo_get": [
    "function_new_declaration",
    "user_repo_get",
-   "function_copy"
+   "function_copy",
+   "user_repo_set"
   ],
   "js_code_export": [
    "function_new_declaration",
@@ -14418,7 +14419,7 @@
   "repos_paths_map_unordered_combine_squash": [
    "repos_paths_map_unordered_combine_squash"
   ],
-  "urg": [
+  "repo_name2": [
    "user_repo_set"
   ]
  },
@@ -29649,6 +29650,7 @@
   "user_repo_set": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "repo_exists_assert",
     "repo_acronym_to_name",
     "user_repo_path",
@@ -29660,7 +29662,7 @@
     "f_path",
     "lambda",
     "previous",
-    "urg"
+    "repo_name2"
    ]
   },
   "uuid": {
