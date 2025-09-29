@@ -4458,7 +4458,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "sandbox_5"
   ],
   "assert_not": [
    "assert_not",
@@ -11536,7 +11537,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "sandbox_5"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -28458,8 +28460,10 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
+    "log",
     "marker",
-    "sandbox_5"
+    "sandbox_5",
+    "message"
    ]
   },
   "sandbox_5_a": {
