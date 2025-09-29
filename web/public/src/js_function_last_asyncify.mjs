@@ -22,7 +22,7 @@ export async function js_function_last_asyncify(
   let property_name = "async";
   let async = object_property_get(f, property_name);
   if (async_is && not(async)) {
-    object_property_set(f, property_name, true);
+    object_property_set(f, property_name, true);opg
     let declaration = js_declaration_single(ast);
     if (equal(f, declaration)) {
       let name = js_declaration_name(declaration);
