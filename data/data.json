@@ -6552,7 +6552,8 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace"
+   "string_replace",
+   "function_name_to_path_import"
   ],
   "to": [
    "each_range_from",
@@ -8126,11 +8127,13 @@
    "js_dollar_g",
    "js_dollar_new",
    "js_marker_insert",
-   "marker_assign_replace_string"
+   "marker_assign_replace_string",
+   "function_name_to_path_import"
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
-   "html_update_generic"
+   "html_update_generic",
+   "function_name_to_path_import"
   ],
   "f_name_ext": [
    "folder_current_join_code",
@@ -8785,8 +8788,7 @@
    "list_intersect",
    "list_is",
    "list_squash",
-   "marker_down_choices",
-   "function_name_to_path_import"
+   "marker_down_choices"
   ],
   "at": [
    "function_aliases_restore"
@@ -9373,7 +9375,8 @@
    "function_import",
    "function_name_to_base",
    "html_update_generic",
-   "function_name_folder_to_path"
+   "function_name_folder_to_path",
+   "function_name_to_path_import"
   ],
   "function_import": [
    "function_import",
@@ -11651,8 +11654,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "function_name_to_path_import"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13203,8 +13205,7 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright",
-   "function_name_to_path_import"
+   "messenger_reply_playwright"
   ],
   "log_unparse": [
    "log_unparse",
@@ -19227,6 +19228,8 @@
     "object_property_get",
     "path_join",
     "marker",
+    "folder_current_join_code",
+    "function_name_to_base",
     "folder_previous",
     "function_name_to_path_import",
     "import_",
@@ -19235,9 +19238,8 @@
     "previous",
     "previous2",
     "joined",
-    "console",
-    "log",
-    "l"
+    "from",
+    "js_code_string"
    ]
   },
   "function_name_to_path_unalias": {
