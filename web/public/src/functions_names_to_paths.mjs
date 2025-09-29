@@ -15,5 +15,6 @@ export async function functions_names_to_paths() {
     return dictionary;
   }
   let squashed = await repos_paths_map_unordered_combine_squash(mapper);
+  reduce({}, squashed, fn);
   return squashed;
 }
