@@ -2813,7 +2813,6 @@
    "ebible_version_books_testament",
    "functions_format",
    "functions_names_from_path",
-   "functions_paths",
    "functions_transform",
    "function_dependencies_code",
    "function_name_to_acronym",
@@ -3453,7 +3452,8 @@
    "app_reply_main",
    "list_map_squash",
    "list_squash",
-   "functions_names"
+   "functions_names",
+   "functions_paths"
   ],
   "bible_verses_encouragement": [
    "app_reply_main",
@@ -4158,7 +4158,8 @@
   "squashed": [
    "app_reply_main",
    "list_squash",
-   "functions_names"
+   "functions_names",
+   "functions_paths"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -5052,7 +5053,8 @@
    "function_exists_inner",
    "function_name_to_path_unalias",
    "function_exists_strict",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "catch_call": [
    "catch_call",
@@ -5852,8 +5854,7 @@
    "function_delete"
   ],
   "f_paths": [
-   "data_files_update",
-   "functions_paths"
+   "data_files_update"
   ],
   "parseds": [
    "data_files_update"
@@ -6127,7 +6128,6 @@
   ],
   "function_name_to_path": [
    "data_identifiers_search",
-   "functions_paths",
    "functions_search",
    "function_delete",
    "function_name_to_path",
@@ -7706,7 +7706,8 @@
    "path_resolve",
    "server",
    "watch",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "functions_paths"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8250,7 +8251,6 @@
    "functions_combine",
    "functions_combine_name",
    "functions_names_from_path",
-   "functions_paths",
    "functions_search",
    "function_names_to_acronyms",
    "function_params_consolidate",
@@ -8317,7 +8317,6 @@
    "functions_format",
    "functions_names",
    "functions_names_includes",
-   "functions_paths",
    "functions_search",
    "functions_transform",
    "function_names_to_acronyms",
@@ -8362,7 +8361,8 @@
    "functions_names",
    "functions_path",
    "function_name_to_path",
-   "watch"
+   "watch",
+   "functions_paths"
   ],
   "rns": [
    "repos_names"
@@ -14352,11 +14352,13 @@
    "repos_paths_map_unordered_combine",
    "functions_names",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
-   "functions_names"
+   "functions_names",
+   "functions_paths"
   ],
   "true_is": [
    "true_is",
@@ -18182,12 +18184,14 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
-    "function_name_to_path",
-    "list_map",
-    "functions_names",
+    "list_squash",
+    "repos_paths_map_unordered_combine",
+    "functions_path",
     "functions_paths",
-    "f_names",
-    "f_paths"
+    "path",
+    "result",
+    "mapper",
+    "squashed"
    ]
   },
   "functions_search": {
