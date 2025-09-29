@@ -5861,7 +5861,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "s5_inner"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14009,7 +14010,8 @@
    "sandbox_5"
   ],
   "s5_inner": [
-   "sandbox_5"
+   "sandbox_5",
+   "s5_inner"
   ],
   "sandbox_5_a": [
    "sandbox_5_a"
@@ -29625,6 +29627,13 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "s5_inner": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "s5_inner"
    ]
   }
  }
