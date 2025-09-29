@@ -67,7 +67,8 @@
   ],
   "folder_read_files": [
    "apps_get",
-   "folder_read_files"
+   "folder_read_files",
+   "functions_names_from_path"
   ],
   "marker": [
    "apps_get",
@@ -950,7 +951,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
-   "string_padded_is"
+   "string_padded_is",
+   "functions_names_from_path"
   ],
   "app_new_step_2": [
    "app_new",
@@ -1472,7 +1474,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "repos_path_each_unordered"
+   "repos_path_each_unordered",
+   "functions_names_from_path"
   ],
   "ast": [
    "app_new_step_2",
@@ -2832,7 +2835,8 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "functions_names_from_path"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -6158,7 +6162,8 @@
    "roman_to_integer",
    "string_ends_with",
    "string_ends_with_not",
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names_from_path"
   ],
   "f_name_unsuffixed": [
    "data_path_generic"
@@ -6610,7 +6615,8 @@
    "function_identifier_replace_ending_remove",
    "function_list_generate",
    "string_suffix_change",
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names_from_path"
   ],
   "ebible_version_download_path_combine": [
    "ebible_chapters",
@@ -6669,7 +6675,8 @@
    "ebible_chapters",
    "messenger_reply_unread_collect",
    "string_suffix_change",
-   "string_suffix_without"
+   "string_suffix_without",
+   "functions_names_from_path"
   ],
   "ebible_chapters_each_verses_list": [
    "ebible_chapters_each_verses",
@@ -7617,7 +7624,8 @@
   "function_name_extension": [
    "file_open",
    "function_name_extension",
-   "function_name_to_base"
+   "function_name_to_base",
+   "functions_names_from_path"
   ],
   "string_ends_with": [
    "file_open",
@@ -7670,7 +7678,8 @@
    "path_resolve",
    "server",
    "watch",
-   "functions_names"
+   "functions_names",
+   "functions_names_from_path"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8218,7 +8227,8 @@
    "function_rename_identifiers",
    "js_expand_generic",
    "js_imports_missing",
-   "string_split_comma"
+   "string_split_comma",
+   "functions_names_from_path"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8315,7 +8325,8 @@
   ],
   "paths": [
    "git_push_schedule_command",
-   "path_resolve"
+   "path_resolve",
+   "functions_names_from_path"
   ],
   "functions_names_includes": [
    "functions_names_includes",
@@ -14290,7 +14301,8 @@
    "repos_path_each_unordered"
   ],
   "functions_names_from_path": [
-   "functions_names"
+   "functions_names",
+   "functions_names_from_path"
   ]
  },
  "functions": {
@@ -29637,6 +29649,23 @@
     "lambda",
     "repo_name",
     "folder"
+   ]
+  },
+  "functions_names_from_path": {
+   "async": false,
+   "identifiers": [
+    "list_map",
+    "string_suffix_without",
+    "function_name_extension",
+    "folder_read_files",
+    "functions_names_from_path",
+    "path",
+    "paths",
+    "lambda",
+    "p",
+    "suffix",
+    "without",
+    "f_names"
    ]
   }
  }
