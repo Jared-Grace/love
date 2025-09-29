@@ -13820,7 +13820,8 @@
   ],
   "repos": [
    "repos_acronyms_to_names",
-   "repos_gitignore_overwrite"
+   "repos_gitignore_overwrite",
+   "user_repo_get"
   ],
   "repos_folder": [
    "repos_folder",
@@ -29392,6 +29393,7 @@
     "f_path",
     "value",
     "repo_name",
+    "repos",
     "includes",
     "list",
     "item"
