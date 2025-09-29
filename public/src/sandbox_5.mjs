@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { s5i } from "./s5i.mjs";
 export async function sandbox_5() {
-  log(message);
+  s5i();
 }
