@@ -13,6 +13,6 @@ export async function marker_new() {
     let { index, stack2 } = marker_next_index(a);
     let name = "2";
     await js_marker_insert(name, stack2, index);
-    marker_current_set(name);
+    await marker_current_set(name);
   }
 }
