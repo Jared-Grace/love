@@ -2224,7 +2224,6 @@
   "is function_name_to_path",
   "is repos_folder",
   "urg",
-  "is js_function_last_asyncify",
   "u pn",
   "cs function_param_new double",
   "a pnd function_param_new_double",
@@ -2250,6 +2249,7 @@
   "d",
   "s await",
   "fs js_function_last_asyncify",
-  "pnd functions"
+  "pnd functions",
+  "is js_function_last_asyncify"
  ]
 }
