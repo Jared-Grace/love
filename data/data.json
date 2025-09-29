@@ -4960,7 +4960,6 @@
    "firebase_storage_exists",
    "function_aliases_restore",
    "function_exists",
-   "function_exists_inner",
    "function_exists_strict",
    "git_rebase",
    "html_element",
@@ -18793,8 +18792,7 @@
     "multiple",
     "to",
     "only",
-    "f_path2",
-    "e"
+    "f_path2"
    ]
   },
   "function_exists_strict": {
