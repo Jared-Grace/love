@@ -11247,7 +11247,8 @@
   ],
   "js_await_add": [
    "js_auto_transforms",
-   "js_await_add"
+   "js_await_add",
+   "js_function_last_asyncify"
   ],
   "js_bang_to_not": [
    "js_auto_transforms",
@@ -22778,6 +22779,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "js_await_add",
     "function_transform",
     "each_async",
     "object_properties",
