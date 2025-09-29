@@ -17,6 +17,7 @@ export async function js_function_last_asyncify(
   async_is,
   ast,
   functions,
+  visited,
 ) {
   marker("1");
   let f = js_stack_last_function(stack);
