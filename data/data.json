@@ -7675,7 +7675,8 @@
    "path_name",
    "path_resolve",
    "server",
-   "watch"
+   "watch",
+   "functions_names"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8318,9 +8319,6 @@
    "functions_path",
    "function_name_to_path",
    "watch"
-  ],
-  "dirPath": [
-   "functions_names"
   ],
   "paths": [
    "functions_names",
@@ -18044,7 +18042,7 @@
     "string_suffix_without",
     "list_map",
     "functions_names",
-    "dirPath",
+    "path",
     "paths",
     "lambda",
     "p",
