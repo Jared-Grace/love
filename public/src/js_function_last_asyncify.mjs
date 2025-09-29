@@ -18,7 +18,7 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
     if (equal(f, declaration)) {
       return;
       let result = await data_identifiers_search(s);
-      let properties = object_properties(obj);
+      let properties = object_properties(result);
     }
   }
 }
