@@ -14,5 +14,5 @@ export async function user_repo_set(value) {
   }
   await data_set(lambda, "repo_current", f_path);
   let repo_name2 = await user_repo_get();
-  return;
+  return repo_name2;
 }
