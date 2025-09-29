@@ -2199,7 +2199,6 @@
   "s user,path",
   "s user",
   "s repo,name",
-  "s repo",
   "n git_publish_initial",
   "s command",
   "s list_map",
@@ -2233,6 +2232,7 @@
   "function_name_to_path test",
   "s folder",
   "is function_name_to_path",
-  "is repos_folder"
+  "is repos_folder",
+  "s repo"
  ]
 }
