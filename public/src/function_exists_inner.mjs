@@ -26,6 +26,7 @@ export async function function_exists_inner(u) {
   function lambda2(m) {
     let exists2 = object_property_get(m, "exists");
     let ti2 = true_is(value);
+    return ti2;
   }
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
