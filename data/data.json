@@ -5989,7 +5989,8 @@
    "data_functions_get",
    "js_await_add",
    "js_await_add_inner",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "js_call_fill"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -21554,7 +21555,8 @@
     "unaliased",
     "valid",
     "parsed",
-    "async_is"
+    "async_is",
+    "functions"
    ]
   },
   "js_call_function_if": {
