@@ -16,7 +16,7 @@ export async function js_call_fill(ast) {
     if (js_identifier_is(expression)) {
       let { name } = expression;
       log({
-        valid,
+        name,
       });
       let { unaliased } = await function_name_unalias(name);
       const valid = functions_names_includes(unaliased);
