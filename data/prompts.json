@@ -2240,7 +2240,6 @@
   "o function_names",
   "o functions_name",
   "o s5",
-  "o functions_names",
   "is functions_names",
   "s repo_path_combine",
   "urs l",
@@ -2251,6 +2250,7 @@
   "is js_function_last_asyncify",
   "s awawit",
   "s await",
-  "ps"
+  "ps",
+  "o functions_names"
  ]
 }
