@@ -4,7 +4,7 @@ import { assert_arguments } from "./assert_arguments.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { function_transform } from "./function_transform.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -24,7 +24,7 @@ export async function function_params_new(
     js_declaration_single_params_add(ast, param_names);
   }
   let values_default = string_split(values_default_comma, ",");
-  let f_name_current = await data_function_current_get();
+  let f_name_current = await function_current_get();
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
