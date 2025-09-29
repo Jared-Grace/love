@@ -11570,8 +11570,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "functions_names"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -18059,7 +18058,6 @@
   "functions_names": {
    "async": true,
    "identifiers": [
-    "log",
     "list_squash",
     "path_join",
     "repos_paths_map_unordered",
