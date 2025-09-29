@@ -1900,7 +1900,6 @@
   "s choice",
   "evu arbnav",
   "an message",
-  "o an",
   "app_name_main t",
   "app_new_assign t",
   "s wait",
@@ -2230,6 +2229,7 @@
   "np",
   "d",
   "is git_acp_folder",
-  "is git_acp_call_folder"
+  "is git_acp_call_folder",
+  "o an"
  ]
 }
