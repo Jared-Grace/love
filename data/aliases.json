@@ -201,6 +201,7 @@
   "flc": "file_copy",
   "fld": "file_delete",
   "pnd": "function_param_new_double",
-  "ldf": "list_difference"
+  "ldf": "list_difference",
+  "lina": "list_includes_assert"
  }
 }
