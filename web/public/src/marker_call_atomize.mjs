@@ -1,7 +1,7 @@
-import { js_node_atomize } from "./js_node_atomize.mjs";
-import { js_visit_match } from "./js_visit_match.mjs";
-import { js_identifiers } from "./js_identifiers.mjs";
-import { marker_call_replace_generic } from "./marker_call_replace_generic.mjs";
+import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
+import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
+import { js_identifiers } from "../../../love/public/src/js_identifiers.mjs";
+import { marker_call_replace_generic } from "../../../love/public/src/marker_call_replace_generic.mjs";
 export async function marker_call_atomize(input) {
   let v = await marker_call_replace_generic(input, lambda);
   return v;

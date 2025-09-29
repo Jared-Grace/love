@@ -1,6 +1,6 @@
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { marker } from "./marker.mjs";
-import { object_property_set } from "./object_property_set.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function list_to_dictionary_async(list, lambda$item) {
   marker("1");
   let dictionary = {};

@@ -1,6 +1,6 @@
-import { string_starts_with_not } from "./string_starts_with_not.mjs";
-import { marker } from "./marker.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { string_starts_with_not } from "../../../love/public/src/string_starts_with_not.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 export function list_filter_starts_with_not(mapped, book_code) {
   marker("1");
   function lambda(item) {

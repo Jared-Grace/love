@@ -1,6 +1,6 @@
-import { marker } from "./marker.mjs";
-import { marker_down_generic } from "./marker_down_generic.mjs";
-import { list_index_last } from "./list_index_last.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { marker_down_generic } from "../../../love/public/src/marker_down_generic.mjs";
+import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 export async function marker_bottom() {
   marker("1");
   let v2 = await marker_down_generic(delta_get);

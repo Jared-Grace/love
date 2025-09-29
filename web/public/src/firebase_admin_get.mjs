@@ -1,6 +1,6 @@
-import { firebase_storage_url_project } from "./firebase_storage_url_project.mjs";
-import { firebase_service_account } from "./firebase_service_account.mjs";
-import { marker } from "./marker.mjs";
+import { firebase_storage_url_project } from "../../../love/public/src/firebase_storage_url_project.mjs";
+import { firebase_service_account } from "../../../love/public/src/firebase_service_account.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function firebase_admin_get() {
   const admin = (await import("firebase-admin")).default;
   marker("1");

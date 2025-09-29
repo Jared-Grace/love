@@ -1,5 +1,5 @@
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 export function ebible_languages() {
   let languages = [
     {

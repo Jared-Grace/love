@@ -1,6 +1,6 @@
-import { not } from "./not.mjs";
-import { js_visit } from "./js_visit.mjs";
-import { js_node_is } from "./js_node_is.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { js_visit } from "../../../love/public/src/js_visit.mjs";
+import { js_node_is } from "../../../love/public/src/js_node_is.mjs";
 export function js_visit_nodes(parsed, on_each) {
   function lambda(v) {
     let { node } = v;

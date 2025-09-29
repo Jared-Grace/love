@@ -1,4 +1,4 @@
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_return_on(node, identifier_if, identifier_not) {
   if (js_node_type_is(node, "ReturnStatement")) {
     let { argument } = node;

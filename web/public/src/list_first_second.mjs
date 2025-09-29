@@ -1,5 +1,5 @@
-import { list_first_second_generic } from "./list_first_second_generic.mjs";
-import { list_second } from "./list_second.mjs";
+import { list_first_second_generic } from "../../../love/public/src/list_first_second_generic.mjs";
+import { list_second } from "../../../love/public/src/list_second.mjs";
 export function list_first_second(list) {
   const property_name = "second";
   let value_get = list_second;

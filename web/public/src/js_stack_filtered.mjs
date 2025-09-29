@@ -1,5 +1,5 @@
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 export function js_stack_filtered(stack, type) {
   function lambda(n) {
     let type_is = js_node_type_is(n, type);

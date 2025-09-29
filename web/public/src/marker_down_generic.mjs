@@ -1,7 +1,7 @@
-import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { list_remove } from "./list_remove.mjs";
+import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 export async function marker_down_generic(delta_get) {
   let v = await function_transform_marker_current(lambda);
   return v;

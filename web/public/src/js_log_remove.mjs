@@ -1,10 +1,10 @@
-import { list_remove } from "./list_remove.mjs";
-import { list_get_end_2 } from "./list_get_end_2.mjs";
-import { log } from "./log.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
-import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
-import { marker } from "./marker.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function js_log_remove(ast) {
   marker("1");
   function lambda(v) {

@@ -1,10 +1,10 @@
-import { file_open } from "./file_open.mjs";
-import { html_overwrite } from "./html_overwrite.mjs";
-import { js_code_import_single } from "./js_code_import_single.mjs";
-import { folder_current_join_code } from "./folder_current_join_code.mjs";
-import { path_join } from "./path_join.mjs";
-import { function_name_to_base } from "./function_name_to_base.mjs";
-import { js_code_call_statement } from "./js_code_call_statement.mjs";
+import { file_open } from "../../../love/public/src/file_open.mjs";
+import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
+import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
+import { folder_current_join_code } from "../../../love/public/src/folder_current_join_code.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
+import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
+import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 export async function html_update_generic(
   name,
   file_path,

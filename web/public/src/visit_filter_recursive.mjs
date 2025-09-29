@@ -1,8 +1,8 @@
-import { each } from "./each.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_pop } from "./list_pop.mjs";
-import { list_copy } from "./list_copy.mjs";
-import { error } from "./error.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_pop } from "../../../love/public/src/list_pop.mjs";
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
+import { error } from "../../../love/public/src/error.mjs";
 export function visit_filter_recursive(
   node,
   children_get,

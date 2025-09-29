@@ -1,7 +1,7 @@
-import { function_name_to_path_unalias } from "./function_name_to_path_unalias.mjs";
-import { file_read } from "./file_read.mjs";
-import { js_format } from "./js_format.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
+import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
+import { file_read } from "../../../love/public/src/file_read.mjs";
+import { js_format } from "../../../love/public/src/js_format.mjs";
+import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 export async function function_format(f_name) {
   const { f_path } = await function_name_to_path_unalias(f_name);
   let r = await file_read(f_path);

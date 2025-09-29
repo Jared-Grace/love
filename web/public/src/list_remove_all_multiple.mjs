@@ -1,6 +1,6 @@
-import { marker } from "./marker.mjs";
-import { list_remove_all } from "./list_remove_all.mjs";
-import { each } from "./each.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 export function list_remove_all_multiple(removals, list) {
   marker("1");
   function lambda(r) {

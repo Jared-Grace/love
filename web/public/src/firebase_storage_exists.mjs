@@ -1,6 +1,6 @@
-import { firebase_path_fix } from "./firebase_path_fix.mjs";
-import { error } from "./error.mjs";
-import { firebase_bucket } from "./firebase_bucket.mjs";
+import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
 export async function firebase_storage_exists(path) {
   path = firebase_path_fix(path);
   const bucket = await firebase_bucket();

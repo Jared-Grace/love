@@ -1,8 +1,8 @@
-import { list_single } from "./list_single.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { object_property_exists } from "./object_property_exists.mjs";
-import { function_names_to_acronyms } from "./function_names_to_acronyms.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { function_names_to_acronyms } from "../../../love/public/src/function_names_to_acronyms.mjs";
 export async function function_acronym_to_name(alias) {
   let expanded = null;
   let expandeds = null;
