@@ -2306,7 +2306,6 @@
   "o function_exists",
   "is function_exists_inner",
   "function_exists test",
-  "urg",
   "o de",
   "o opg",
   "function_name_unalias test",
@@ -2318,6 +2317,7 @@
   "o fns",
   "p",
   "functions_paths",
-  "o functions_paths"
+  "o functions_paths",
+  "urg"
  ]
 }
