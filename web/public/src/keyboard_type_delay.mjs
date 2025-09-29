@@ -1,7 +1,7 @@
-import { each_async } from "./each_async.mjs";
-import { sleep } from "./sleep.mjs";
-import { keyboard_typing_delay } from "./keyboard_typing_delay.mjs";
-import { string_list_to } from "./string_list_to.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
+import { keyboard_typing_delay } from "../../../love/public/src/keyboard_typing_delay.mjs";
+import { string_list_to } from "../../../love/public/src/string_list_to.mjs";
 export async function keyboard_type_delay(message, fn) {
   let list = string_list_to(message);
   async function lambda(item) {

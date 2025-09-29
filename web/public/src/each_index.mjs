@@ -1,4 +1,4 @@
-import { each } from "./each.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 export function each_index(list, lambda$item$index) {
   let index = 0;
   function lambda2(item) {

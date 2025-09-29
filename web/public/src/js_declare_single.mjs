@@ -1,7 +1,7 @@
-import { list_size_1 } from "./list_size_1.mjs";
-import { not } from "./not.mjs";
-import { list_single } from "./list_single.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_declare_single(vd) {
   let b = js_node_type_is(vd, "VariableDeclaration");
   let declaration = null;

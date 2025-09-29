@@ -1,7 +1,7 @@
-import { string_size } from "./string_size.mjs";
-import { string_take } from "./string_take.mjs";
-import { marker } from "./marker.mjs";
-import { not } from "./not.mjs";
+import { string_size } from "../../../love/public/src/string_size.mjs";
+import { string_take } from "../../../love/public/src/string_take.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 export function string_trim_right(lambda$s, s) {
   marker("1");
   while (true) {

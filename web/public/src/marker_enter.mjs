@@ -1,14 +1,14 @@
-import { list_get } from "./list_get.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { js_declaration_to_block_body } from "./js_declaration_to_block_body.mjs";
-import { list_add_first } from "./list_add_first.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { js_node_type } from "./js_node_type.mjs";
-import { js_types_function_includes } from "./js_types_function_includes.mjs";
-import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
-import { marker } from "./marker.mjs";
+import { list_get } from "../../../love/public/src/list_get.mjs";
+import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
+import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
+import { js_types_function_includes } from "../../../love/public/src/js_types_function_includes.mjs";
+import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
   async function lambda(a) {
     marker("1");

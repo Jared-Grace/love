@@ -1,7 +1,7 @@
-import { file_copy } from "./file_copy.mjs";
-import { data_path_generic } from "./data_path_generic.mjs";
-import { data_path } from "./data_path.mjs";
-import { marker } from "./marker.mjs";
+import { file_copy } from "../../../love/public/src/file_copy.mjs";
+import { data_path_generic } from "../../../love/public/src/data_path_generic.mjs";
+import { data_path } from "../../../love/public/src/data_path.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function data_copy(property_name) {
   marker("1");
   let f_path_from = data_path();

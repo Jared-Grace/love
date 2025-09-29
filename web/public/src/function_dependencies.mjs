@@ -1,6 +1,6 @@
-import { list_adder_unique_async } from "./list_adder_unique_async.mjs";
-import { visit_unique_async } from "./visit_unique_async.mjs";
-import { function_imports } from "./function_imports.mjs";
+import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
+import { visit_unique_async } from "../../../love/public/src/visit_unique_async.mjs";
+import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_name) {
   async function lambda2(la) {
     function lambda(v) {

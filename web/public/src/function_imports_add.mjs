@@ -1,9 +1,9 @@
-import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
-import { function_name_to_path_import } from "./function_name_to_path_import.mjs";
-import { each_async } from "./each_async.mjs";
-import { js_code_import_single } from "./js_code_import_single.mjs";
-import { list_add_first } from "./list_add_first.mjs";
-import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
+import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
+import { function_name_to_path_import } from "../../../love/public/src/function_name_to_path_import.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
+import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 export async function function_imports_add(ast, imports) {
   let dictionary = await functions_names_to_paths();
   let { body } = ast;

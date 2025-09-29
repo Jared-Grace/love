@@ -1,10 +1,10 @@
-import { emoji_gear } from "./emoji_gear.mjs";
-import { app_screen_set } from "./app_screen_set.mjs";
-import { html_button } from "./html_button.mjs";
-import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
-import { each_index } from "./each_index.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
+import { app_screen_set } from "../../../love/public/src/app_screen_set.mjs";
+import { html_button } from "../../../love/public/src/html_button.mjs";
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
+import { each_index } from "../../../love/public/src/each_index.mjs";
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {

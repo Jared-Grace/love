@@ -1,13 +1,13 @@
-import { http_sleep } from "./http_sleep.mjs";
-import { html_loading } from "./html_loading.mjs";
-import { catch_call } from "./catch_call.mjs";
-import { promise_wrap } from "./promise_wrap.mjs";
-import { round } from "./round.mjs";
-import { string_starts_with } from "./string_starts_with.mjs";
-import { browser_is } from "./browser_is.mjs";
-import { error } from "./error.mjs";
-import { not } from "./not.mjs";
-import { assert_json } from "./assert_json.mjs";
+import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
+import { html_loading } from "../../../love/public/src/html_loading.mjs";
+import { catch_call } from "../../../love/public/src/catch_call.mjs";
+import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
+import { round } from "../../../love/public/src/round.mjs";
+import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function http(url) {
   let b = browser_is();
   if (b) {

@@ -1,9 +1,9 @@
-import { marker_current_set } from "./marker_current_set.mjs";
-import { js_marker_insert } from "./js_marker_insert.mjs";
-import { marker } from "./marker.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
-import { function_transform_marker } from "./function_transform_marker.mjs";
-import { function_current_get } from "./function_current_get.mjs";
+import { marker_current_set } from "../../../love/public/src/marker_current_set.mjs";
+import { js_marker_insert } from "../../../love/public/src/js_marker_insert.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
+import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 export async function marker_new() {
   marker("1");
   let f_name = await function_current_get();

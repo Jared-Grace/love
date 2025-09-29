@@ -1,4 +1,4 @@
-import { browser_is } from "./browser_is.mjs";
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export function string_base64_to(s) {
   let b = browser_is();
   if (b) {

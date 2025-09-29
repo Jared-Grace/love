@@ -1,10 +1,10 @@
-import { folder_previous } from "./folder_previous.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { path_join } from "./path_join.mjs";
+import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { folder_public } from "./folder_public.mjs";
+import { folder_public } from "../../../love/public/src/folder_public.mjs";
 export function server() {
   const app = express();
   const port = 8080;

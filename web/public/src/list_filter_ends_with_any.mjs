@@ -1,6 +1,6 @@
-import { list_filter } from "./list_filter.mjs";
-import { list_any } from "./list_any.mjs";
-import { string_ends_with } from "./string_ends_with.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_any } from "../../../love/public/src/list_any.mjs";
+import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 export function list_filter_ends_with_any(suffixes, list) {
   function lambda(item) {
     function lambda3(suffix) {

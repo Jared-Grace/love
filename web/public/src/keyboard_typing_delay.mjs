@@ -1,4 +1,4 @@
-import { integer_random } from "./integer_random.mjs";
+import { integer_random } from "../../../love/public/src/integer_random.mjs";
 export function keyboard_typing_delay() {
   let characters_per_minute = 500;
   let seconds_per_minute = 60;

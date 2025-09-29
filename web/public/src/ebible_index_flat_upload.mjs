@@ -1,7 +1,7 @@
-import { ebible_index_flat_upload_name } from "./ebible_index_flat_upload_name.mjs";
-import { ebible_index_flat } from "./ebible_index_flat.mjs";
-import { marker } from "./marker.mjs";
-import { ebible_firebase_upload } from "./ebible_firebase_upload.mjs";
+import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
+import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { ebible_firebase_upload } from "../../../love/public/src/ebible_firebase_upload.mjs";
 export async function ebible_index_flat_upload(bible_folder) {
   marker("1");
   let index = await ebible_index_flat(bible_folder);

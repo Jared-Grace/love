@@ -1,7 +1,7 @@
-import { folder_user_docs_path } from "./folder_user_docs_path.mjs";
-import { ebible_references_parse } from "./ebible_references_parse.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
+import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
+import { ebible_references_parse } from "../../../love/public/src/ebible_references_parse.mjs";
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 export async function ebible_references_parse_god_created_man_why() {
   let v2 = ebible_folder_urdu();
   let v = ebible_folder_english();

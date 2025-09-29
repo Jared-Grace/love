@@ -1,9 +1,9 @@
-import { file_write } from "./file_write.mjs";
-import { not } from "./not.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { marker } from "./marker.mjs";
-import { file_read_json } from "./file_read_json.mjs";
-import { json_format_to } from "./json_format_to.mjs";
+import { file_write } from "../../../love/public/src/file_write.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 export async function data_all(file_path) {
   marker("1");
   let exists = await file_exists(file_path);

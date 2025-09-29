@@ -1,8 +1,8 @@
-import { list_map_property } from "./list_map_property.mjs";
-import { each } from "./each.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { marker } from "./marker.mjs";
-import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 export async function ebible_index_flat(bible_folder) {
   marker("1");
   async function lambda(la) {

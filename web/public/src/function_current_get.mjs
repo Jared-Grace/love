@@ -1,6 +1,6 @@
-import { marker } from "./marker.mjs";
-import { user_repo_path } from "./user_repo_path.mjs";
-import { data_property_get } from "./data_property_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
+import { data_property_get } from "../../../love/public/src/data_property_get.mjs";
 export async function function_current_get() {
   marker("1");
   const property_name = "function_current";

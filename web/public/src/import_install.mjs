@@ -1,4 +1,4 @@
-import { npm_install } from "./npm_install.mjs";
+import { npm_install } from "../../../love/public/src/npm_install.mjs";
 export async function import_install(name) {
   try {
     let v = await import(name);

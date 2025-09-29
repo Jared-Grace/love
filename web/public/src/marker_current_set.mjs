@@ -1,5 +1,5 @@
-import { data_path } from "./data_path.mjs";
-import { data_transform } from "./data_transform.mjs";
+import { data_path } from "../../../love/public/src/data_path.mjs";
+import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function marker_current_set(name_marker) {
   function lambda(previous) {
     return name_marker;

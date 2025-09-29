@@ -1,5 +1,5 @@
-import { user_repo_path } from "./user_repo_path.mjs";
-import { data_property_get } from "./data_property_get.mjs";
+import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
+import { data_property_get } from "../../../love/public/src/data_property_get.mjs";
 export async function data_marker_current_get() {
   const property_name = "marker_current";
   let d_path = user_repo_path();

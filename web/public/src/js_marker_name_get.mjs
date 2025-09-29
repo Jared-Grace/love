@@ -1,12 +1,12 @@
-import { not } from "./not.mjs";
-import { error } from "./error.mjs";
-import { list_is } from "./list_is.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { marker } from "./marker.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_node_is } from "./js_node_is.mjs";
-import { list_get_end } from "./list_get_end.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { js_node_is } from "../../../love/public/src/js_node_is.mjs";
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 export function js_marker_name_get(v) {
   let { stack } = v;
   let stack1 = list_get_end(stack, 1);

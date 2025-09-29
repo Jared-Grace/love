@@ -1,20 +1,20 @@
-import { js_return_name } from "./js_return_name.mjs";
-import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { each } from "./each.mjs";
-import { js_declaration_param_add } from "./js_declaration_param_add.mjs";
-import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
-import { js_code_declaration } from "./js_code_declaration.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_first } from "./list_first.mjs";
-import { string_split } from "./string_split.mjs";
-import { js_identifier_unique } from "./js_identifier_unique.mjs";
-import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
-import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
+import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
+import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
+import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { string_split } from "../../../love/public/src/string_split.mjs";
+import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
+import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 export async function js_call_new_code(f_name_call, ast) {
   let {
     declaration,

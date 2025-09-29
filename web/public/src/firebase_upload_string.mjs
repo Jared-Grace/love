@@ -1,4 +1,4 @@
-import { firebase_upload_generic } from "./firebase_upload_generic.mjs";
+import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 export async function firebase_upload_string(content, destination) {
   let buffer = Buffer.from(content);
   const settings = {

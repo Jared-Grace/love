@@ -1,13 +1,13 @@
-import { marker } from "./marker.mjs";
-import { list_to } from "./list_to.mjs";
-import { list_size_1_assert } from "./list_size_1_assert.mjs";
-import { js_auto } from "./js_auto.mjs";
-import { functions_combine_name } from "./functions_combine_name.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { each_async } from "./each_async.mjs";
-import { function_new_transform } from "./function_new_transform.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_to } from "../../../love/public/src/list_to.mjs";
+import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
+import { js_auto } from "../../../love/public/src/js_auto.mjs";
+import { functions_combine_name } from "../../../love/public/src/functions_combine_name.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
   marker("1");
   let list = list_to(arguments);

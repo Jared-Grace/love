@@ -1,5 +1,5 @@
-import { list_any_starts_with } from "./list_any_starts_with.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { list_any_starts_with } from "../../../love/public/src/list_any_starts_with.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 export function list_filter_starts_with_any(prefixes, list) {
   function lambda(item) {
     let any = list_any_starts_with(item, prefixes);
