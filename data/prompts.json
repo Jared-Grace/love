@@ -2234,6 +2234,7 @@
   "s repo",
   "urg",
   "is functions_names",
-  "s await"
+  "s await",
+  "is js_function_last_asyncify"
  ]
 }
