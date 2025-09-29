@@ -1,3 +1,4 @@
+import { js_declaration_single } from "./js_declaration_single.mjs";
 import { marker } from "./marker.mjs";
 import { not } from "./not.mjs";
 import { js_stack_last_function } from "./js_stack_last_function.mjs";
@@ -9,6 +10,7 @@ export function js_function_last_asyncify(stack, async_is, ast) {
   let property_name = "async";
   let async = object_property_get(f, property_name);
   if (async_is && not(async)) {
+    let declaration = js_declaration_single(ast2);
     object_property_set(f, property_name, true);
   }
 }
