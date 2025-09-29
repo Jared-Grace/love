@@ -4462,7 +4462,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "sandbox_5"
   ],
   "assert_not": [
    "assert_not",
@@ -6272,8 +6273,7 @@
    "date_ms_to_hours",
    "functions_names",
    "function_aliases_restore",
-   "sleep",
-   "sandbox_5"
+   "sleep"
   ],
   "hours": [
    "date_diff_hours",
@@ -8306,8 +8306,7 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep",
-   "sandbox_5"
+   "sleep"
   ],
   "functions_path": [
    "functions_names",
@@ -11554,7 +11553,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "sandbox_5"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -28512,9 +28512,9 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "sleep",
+    "log",
     "sandbox_5",
-    "ms"
+    "message"
    ]
   },
   "sandbox_5_a": {
