@@ -2242,6 +2242,7 @@
   "r data_function_current_get function_current_get",
   "as current",
   "fs js_function_last_asyncify",
-  "pnd ast"
+  "pnd ast",
+  "s declar,sing"
  ]
 }
