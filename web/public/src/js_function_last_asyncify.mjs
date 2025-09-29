@@ -28,7 +28,6 @@ export async function js_function_last_asyncify(
       let name = js_declaration_name(declaration);
       let value = object_property_get(functions, name);
       object_property_set(value, property_name, true);
-      let declaration = js_declaration_single(ast);
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
       async function lambda(f_name) {
