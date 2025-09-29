@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { data_file_update_inner } from "./data_file_update_inner.mjs";
 import { data_save } from "./data_save.mjs";
@@ -6,8 +5,6 @@ import { data_all } from "./data_all.mjs";
 import { marker } from "./marker.mjs";
 import { data_path } from "./data_path.mjs";
 export async function data_file_update(f_path) {
-  log("data_file_update");
-  log(f_path);
   let d_path = data_path();
   var d = await data_all(d_path);
   let parsed = await file_js_parse(f_path);
