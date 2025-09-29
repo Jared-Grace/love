@@ -2263,7 +2263,6 @@
   "s function,new",
   "",
   "export async function user_repo_get() {",
-  "user_repo_get",
   "urs l",
   "urg",
   "s git",
@@ -2272,6 +2271,7 @@
   "is git_acp_folder",
   "is git_acp_call_folder",
   "p",
-  "repos_names"
+  "repos_names",
+  "user_repo_get"
  ]
 }
