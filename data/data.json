@@ -14443,7 +14443,8 @@
    "user_repo_set"
   ],
   "functions_names_to_paths": [
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "function_imports_add"
   ],
   "reduce": [
    "functions_names_to_paths",
@@ -19032,6 +19033,7 @@
     "function_imports_add",
     "ast",
     "imports",
+    "functions_names_to_paths",
     "body",
     "lambda",
     "import_",
