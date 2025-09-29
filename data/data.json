@@ -13742,8 +13742,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "functions_names"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -18064,8 +18063,7 @@
     "v",
     "each_folder",
     "folder",
-    "joined",
-    "segments"
+    "joined"
    ]
   },
   "functions_names_from_path": {
