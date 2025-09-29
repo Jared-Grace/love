@@ -2324,7 +2324,6 @@
   "c functions_paths functions_names_to_paths",
   "s dictionary",
   "s diction",
-  "urg",
   "n reduce",
   "s pair",
   "functions_names_to_paths",
@@ -2339,6 +2338,7 @@
   "o function_exists",
   "de t3",
   "s transform,fun",
-  "is functions_transform"
+  "is functions_transform",
+  "urg"
  ]
 }
