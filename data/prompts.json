@@ -2288,7 +2288,6 @@
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
   "s true",
-  "urs l",
   "n true_is",
   "s set",
   "s set,object",
@@ -2325,6 +2324,7 @@
   "ps",
   "p",
   "c functions_paths functions_names_to_paths",
-  "urg"
+  "urg",
+  "urs l"
  ]
 }
