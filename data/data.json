@@ -1809,7 +1809,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "function_exists_inner"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -8460,7 +8461,8 @@
    "function_names_to_acronyms"
   ],
   "exists2": [
-   "function_acronym_to_name"
+   "function_acronym_to_name",
+   "function_exists_inner"
   ],
   "s1": [
    "function_acronym_to_name",
@@ -14344,9 +14346,6 @@
   ],
   "multiple": [
    "function_exists_inner"
-  ],
-  "f_pat": [
-   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18758,6 +18757,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "list_size_1",
     "list_multiple_is",
     "list_filter",
@@ -18773,10 +18773,10 @@
     "lambda",
     "joined",
     "v",
-    "f_pat",
     "mapped",
     "lambda2",
     "m",
+    "exists2",
     "filtered",
     "multiple"
    ]
