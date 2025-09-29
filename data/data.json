@@ -5135,7 +5135,8 @@
   "identity": [
    "catch_log_async",
    "identity",
-   "marker_above"
+   "marker_above",
+   "functions_paths"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -14357,8 +14358,7 @@
   ],
   "mapper": [
    "repos_paths_map_unordered_combine",
-   "functions_names",
-   "functions_paths"
+   "functions_names"
   ],
   "true_is": [
    "true_is",
@@ -18184,13 +18184,13 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
+    "identity",
     "list_squash",
     "repos_paths_map_unordered_combine",
     "functions_path",
     "functions_paths",
     "path",
     "result",
-    "mapper",
     "squashed"
    ]
   },
