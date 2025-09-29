@@ -6019,7 +6019,6 @@
    "marker_move",
    "marker_next",
    "marker_next_await",
-   "marker_param_add",
    "marker_remove",
    "marker_rename"
   ],
@@ -14218,7 +14217,8 @@
    "marker_top",
    "task_new",
    "marker_new",
-   "marker_next_delete"
+   "marker_next_delete",
+   "marker_param_add"
   ]
  },
  "functions": {
@@ -26774,7 +26774,7 @@
     "js_stack_last_function",
     "function_transform_marker",
     "list_adder_async",
-    "data_function_current_get",
+    "function_current_get",
     "marker_param_add",
     "param_name",
     "f_name_current",
