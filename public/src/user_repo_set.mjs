@@ -1,3 +1,4 @@
+import { user_repo_get } from "./user_repo_get.mjs";
 import { repo_exists_assert } from "./repo_exists_assert.mjs";
 import { repo_acronym_to_name } from "./repo_acronym_to_name.mjs";
 import { user_repo_path } from "./user_repo_path.mjs";
@@ -12,5 +13,6 @@ export async function user_repo_set(value) {
     return repo_name;
   }
   await data_set(lambda, "repo_current", f_path);
-  return urg;
+  let repo_name2 = await user_repo_get();
+  return;
 }
