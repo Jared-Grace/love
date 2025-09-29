@@ -3,7 +3,7 @@ import { each_async } from "./each_async.mjs";
 import { js_code_import_single } from "./js_code_import_single.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
-export async function function_imports_add(ast, imports) {
+export async function function_imports_add(ast, imports) {functions_names_to_paths
   let { body } = ast;
   async function lambda(import_) {
     const from = function_name_to_path_import(import_);
