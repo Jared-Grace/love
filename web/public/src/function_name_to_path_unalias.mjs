@@ -43,4 +43,5 @@ export async function function_name_to_path_unalias(f_name) {
     let f_path2 = object_property_get(only, "f_path");
     object_property_set(result, "f_path", f_path2);
   }
+  return result;
 }
