@@ -9,13 +9,13 @@ import { js_declaration_single_block_body } from "./js_declaration_single_block_
 import { js_call_insert } from "./js_call_insert.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_new } from "./function_new.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   assert_arguments(arguments, 1);
   marker("1");
   string_empty_not_is_assert(task_name);
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   let result2 = task_function_name_part();
   let { unaliased } = await function_name_unalias(f_name);
   let f_name_task = function_name_combine_multiple([
