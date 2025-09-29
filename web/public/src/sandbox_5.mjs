@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { s5_inner } from "./s5_inner.mjs";
 export function sandbox_5() {
-  log("hi ish");
+  s5_inner();
 }
