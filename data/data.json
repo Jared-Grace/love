@@ -4110,7 +4110,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "function_exists_inner"
   ],
   "book_code": [
    "app_reply_main",
@@ -12146,7 +12147,8 @@
    "list_last_or_null",
    "messenger_reply",
    "messenger_reply_unreplied",
-   "prompt_previous"
+   "prompt_previous",
+   "function_exists_inner"
   ],
   "list_intersect": [
    "js_expand_generic",
@@ -12179,7 +12181,8 @@
    "js_stack_last_multiple",
    "list_last",
    "list_last_is",
-   "marker_if_test_replace"
+   "marker_if_test_replace",
+   "function_exists_inner"
   ],
   "prettier": [
    "js_format"
@@ -18737,6 +18740,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "list_last",
     "repos_paths_map_unordered_combine",
     "object_merge",
     "file_exists",
@@ -18746,7 +18750,9 @@
     "exists",
     "to",
     "e",
-    "result"
+    "result",
+    "last",
+    "list"
    ]
   },
   "function_exists_strict": {
