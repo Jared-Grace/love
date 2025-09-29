@@ -2155,7 +2155,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "true_is"
+   "true_is",
+   "reduce"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -29964,6 +29965,7 @@
     "start",
     "list",
     "lambda$before$current",
+    "value",
     "lambda",
     "item",
     "list2"
