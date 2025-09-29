@@ -340,7 +340,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "true_is"
   ],
   "apps_get": [
    "apps_get"
@@ -29729,6 +29730,7 @@
   "true_is": {
    "async": false,
    "identifiers": [
+    "marker",
     "true_is"
    ]
   }
