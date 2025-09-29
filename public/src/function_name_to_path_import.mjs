@@ -7,6 +7,6 @@ export function function_name_to_path_import(import_, dictionary) {
   let value = object_property_get(dictionary, import_);
   let previous = folder_previous();
   let previous2 = folder_previous();
-  let joined = path_join([previous, previous2, value]);
+  let joined = path_join([previous, previous2, value]);console.log({joined})
   return joined;l
 }
