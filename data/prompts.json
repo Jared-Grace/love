@@ -2320,12 +2320,12 @@
   "s name_to",
   "function_name_to_path te",
   "s repo",
-  "ps",
   "p",
   "c functions_paths functions_names_to_paths",
   "urs l",
   "urg",
   "urs k",
-  "n t2"
+  "n t2",
+  "ps"
  ]
 }
