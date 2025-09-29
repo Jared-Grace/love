@@ -9827,8 +9827,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "function_copy"
+   "function_param_swap_task_simple"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -18676,7 +18675,6 @@
     "unaliased_new",
     "f_name",
     "v",
-    "f_name2",
     "f_path_new",
     "lambda",
     "ast"
