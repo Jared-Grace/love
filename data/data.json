@@ -1138,8 +1138,7 @@
    "js_dollar_new_args_inner",
    "js_function_last_asyncify",
    "js_imports_missing",
-   "marker_down_choices_lambda",
-   "js_await_add_inner"
+   "marker_down_choices_lambda"
   ],
   "html_new": [
    "app_new_step_2",
@@ -1205,8 +1204,7 @@
    "reply",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async",
-   "js_await_add_inner"
+   "visit_unique_async"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_2",
@@ -1649,8 +1647,7 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize",
-   "js_await_add_inner"
+   "marker_functionize"
   ],
   "async": [
    "app_new_step_2",
@@ -9514,8 +9511,7 @@
    "js_declaration_single_name",
    "js_expand_generic",
    "js_function_last_asyncify",
-   "js_outside_move",
-   "js_await_add_inner"
+   "js_outside_move"
   ],
   "js_imports_missing_add": [
    "function_new_declaration",
@@ -21338,9 +21334,6 @@
   "js_await_add_inner": {
    "async": true,
    "identifiers": [
-    "list_add",
-    "js_declaration_name",
-    "js_declaration_single",
     "js_visit_type_each_async",
     "js_call_function_if",
     "js_node_type_not_is_if",
@@ -21370,8 +21363,7 @@
     "stack1",
     "lambda4",
     "copy",
-    "awaited",
-    "declaration"
+    "awaited"
    ]
   },
   "js_await_add_task_simple": {
