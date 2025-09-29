@@ -2335,8 +2335,8 @@
   "o t2",
   "urs k",
   "n t3",
-  "de t3",
   "o file_exists",
-  "o function_exists"
+  "o function_exists",
+  "de t3"
  ]
 }
