@@ -1,3 +1,4 @@
+import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_await_add } from "./js_await_add.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { each_async } from "./each_async.mjs";
@@ -19,6 +20,7 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
     object_property_set(f, property_name, true);
     let declaration = js_declaration_single(ast);
     if (equal(f, declaration)) {
+      let name = js_declaration_name(declaration2);
       let result = await data_identifiers_search(s);
       let properties = object_properties(result);
       async function lambda(f_name) {
