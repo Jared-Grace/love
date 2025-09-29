@@ -6251,7 +6251,8 @@
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
-   "sleep"
+   "sleep",
+   "sandbox_5"
   ],
   "hours": [
    "date_diff_hours",
@@ -10806,7 +10807,8 @@
    "http_sleep",
    "keyboard_type_delay",
    "retry",
-   "sleep"
+   "sleep",
+   "sandbox_5"
   ],
   "npm_install": [
    "import_install",
@@ -28382,10 +28384,12 @@
    ]
   },
   "sandbox_5": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "sleep",
     "marker",
-    "sandbox_5"
+    "sandbox_5",
+    "ms"
    ]
   },
   "sandbox_5_a": {
