@@ -4236,7 +4236,8 @@
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
    "function_name_to_path_search",
-   "function_name_folder_to_path"
+   "function_name_folder_to_path",
+   "functions_paths"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -8353,7 +8354,8 @@
   ],
   "functions_names_from_path": [
    "functions_names",
-   "functions_names_from_path"
+   "functions_names_from_path",
+   "functions_paths"
   ],
   "repos_names": [
    "repos_acronyms_to_names",
@@ -18203,6 +18205,7 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
+    "functions_names_from_path",
     "list_squash",
     "repos_paths_map_unordered_combine",
     "function_name_folder_to_path",
@@ -18216,6 +18219,7 @@
     "path",
     "lambda",
     "r",
+    "joined",
     "v",
     "f_name",
     "folder",
