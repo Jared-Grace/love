@@ -2238,7 +2238,6 @@
   "s declar,name",
   "o function_names",
   "o functions_name",
-  "o s5",
   "s repo_path_combine",
   "urs l",
   "s repo",
@@ -2252,6 +2251,7 @@
   "is functions_names",
   "s fill",
   "s sleep",
-  "d"
+  "d",
+  "o s5"
  ]
 }
