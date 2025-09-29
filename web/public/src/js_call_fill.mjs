@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { data_functions_get } from "./data_functions_get.mjs";
 import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
@@ -15,9 +14,6 @@ export async function js_call_fill(ast) {
     let { expression } = node;
     if (js_identifier_is(expression)) {
       let { name } = expression;
-      log({
-        name,
-      });
       let { unaliased } = await function_name_unalias(name);
       const valid = await functions_names_includes(unaliased);
       if (valid) {
