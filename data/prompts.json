@@ -2236,7 +2236,6 @@
   "ps",
   "o functions_names",
   "s sleep",
-  "d",
   "s fill",
   "functions_names",
   "functions_names_includes sleep",
@@ -2279,6 +2278,7 @@
   "o urs",
   "n s5",
   "s s5",
-  "s5"
+  "s5",
+  "d"
  ]
 }
