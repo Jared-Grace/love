@@ -7,7 +7,11 @@ export async function functions_names_to_paths() {
   marker("1");
   function mapper(folder) {
     let f_names = functions_names_from_path(folder);
-    let dictionary = list_to_dictionary(f_names, function_name_folder_to_path);
+    function lambda(f_name) {
+      let joined = function_name_folder_to_path(f_name, folder);
+      return joined;
+    }
+    let dictionary = list_to_dictionary(f_names, lambda);
     return dictionary;
   }
   let squashed = await repos_paths_map_unordered_combine_squash(mapper);
