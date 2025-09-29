@@ -3094,7 +3094,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "function_delete"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4373,7 +4374,8 @@
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "function_delete"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -6175,7 +6177,6 @@
    "data_identifiers_search",
    "functions_search",
    "function_copy",
-   "function_delete",
    "function_name_to_path",
    "function_name_to_path_search",
    "function_new_declaration",
@@ -18853,15 +18854,16 @@
   "function_delete": {
    "async": true,
    "identifiers": [
+    "assert",
     "function_exists",
     "data_files_update",
     "marker",
-    "function_name_to_path",
     "file_delete",
     "function_delete",
     "f_name",
     "f_path",
-    "exists"
+    "exists",
+    "b"
    ]
   },
   "function_delete_if_exists": {
