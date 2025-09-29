@@ -23,7 +23,13 @@ export async function js_call_fill(ast) {
       if (valid) {
         let { parsed, async_is } = await js_call_new(name, ast);
         object_replace(node, parsed);
-        await js_function_last_asyncify(stack, async_is, ast, functions);
+        await js_function_last_asyncify(
+          stack,
+          async_is,
+          ast,
+          functions,
+          visited,
+        );
       }
     }
   }
