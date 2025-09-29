@@ -2248,6 +2248,7 @@
   "is functions_names",
   "s await",
   "s repo_path_combine",
-  "s repo"
+  "s repo",
+  "urs l"
  ]
 }
