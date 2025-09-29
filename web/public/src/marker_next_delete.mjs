@@ -12,6 +12,6 @@ export async function marker_next_delete() {
       list_remove_at(stack2, index);
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }
