@@ -2254,6 +2254,8 @@
   "s fill",
   "functions_names",
   "functions_names_includes sleep",
-  "is js_call_fill"
+  "is js_call_fill",
+  "a functions_names",
+  "au functions_names"
  ]
 }
