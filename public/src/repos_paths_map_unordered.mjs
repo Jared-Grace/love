@@ -9,6 +9,6 @@ export async function repos_paths_map_unordered(each_folder) {
     let folder = repo_path(repo_name);
     await each_folder(folder);
   }
-  let v = await list_map_unordered_async(all, lambda);
-  return v;
+  let result = await list_map_unordered_async(all, lambda);
+  return result;
 }
