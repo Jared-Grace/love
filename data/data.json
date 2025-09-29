@@ -14466,6 +14466,9 @@
   ],
   "previous2": [
    "function_name_to_path_import"
+  ],
+  "t3": [
+   "t3"
   ]
  },
  "functions": {
@@ -29991,6 +29994,12 @@
     "reduced",
     "lambda",
     "current"
+   ]
+  },
+  "t3": {
+   "async": false,
+   "identifiers": [
+    "t3"
    ]
   }
  }
