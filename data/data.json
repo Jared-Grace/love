@@ -4763,8 +4763,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "function_name_to_path_import"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -4819,8 +4818,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "function_name_to_path_import"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -6534,7 +6532,6 @@
    "folder_current_join_code",
    "function_identifier_replace",
    "function_imports_add",
-   "function_name_to_path_import",
    "git_repo_rename",
    "html_update_generic",
    "js_code_import_single",
@@ -8133,13 +8130,11 @@
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
-   "function_name_to_path_import",
    "html_update_generic"
   ],
   "f_name_ext": [
    "folder_current_join_code",
    "function_name_to_base",
-   "function_name_to_path_import",
    "html_update_dev",
    "html_update_generic",
    "html_update_public"
@@ -9376,7 +9371,6 @@
   "function_name_to_base": [
    "function_import",
    "function_name_to_base",
-   "function_name_to_path_import",
    "html_update_generic",
    "function_name_folder_to_path"
   ],
@@ -19230,17 +19224,11 @@
     "object_property_get",
     "path_join",
     "marker",
-    "folder_current_join_code",
-    "function_name_to_base",
     "folder_previous",
     "function_name_to_path_import",
     "import_",
     "dictionary",
-    "f_name_ext",
-    "from",
     "value",
-    "object",
-    "property_name",
     "previous",
     "previous2",
     "joined"
