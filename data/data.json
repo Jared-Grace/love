@@ -22828,6 +22828,7 @@
     "stack",
     "async_is",
     "ast",
+    "functions",
     "f",
     "property_name",
     "async",
@@ -22839,7 +22840,6 @@
     "f_name",
     "lambda2",
     "v",
-    "functions",
     "output"
    ]
   },
