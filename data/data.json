@@ -2656,7 +2656,8 @@
    "object_merge",
    "object_replace",
    "function_exists_inner",
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "functions_names_to_paths"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -4672,8 +4673,7 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence",
-   "functions_names_to_paths"
+   "reply_sequence"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -29937,11 +29937,13 @@
   "functions_names_to_paths": {
    "async": true,
    "identifiers": [
+    "reduce",
     "list_to_dictionary",
     "repos_paths_map_unordered_combine_squash",
     "marker",
     "functions_names_from_path",
     "function_name_folder_to_path",
+    "object_merge",
     "functions_names_to_paths",
     "mapper",
     "folder",
@@ -29950,9 +29952,7 @@
     "f_name",
     "joined",
     "dictionary",
-    "squashed",
-    "reduce",
-    "fn"
+    "squashed"
    ]
   },
   "reduce": {
