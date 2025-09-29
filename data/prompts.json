@@ -2105,7 +2105,6 @@
   "fd git_repo_clone",
   "nd aa",
   "s decl,sing",
-  "s fill",
   "s call",
   "n assert_arguments",
   "a eq equal",
@@ -2251,6 +2250,7 @@
   "s await",
   "ps",
   "o functions_names",
-  "is functions_names"
+  "is functions_names",
+  "s fill"
  ]
 }
