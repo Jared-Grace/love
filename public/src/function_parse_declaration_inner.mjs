@@ -9,5 +9,5 @@ export function function_parse_declaration_inner(parsed) {
     },
     parsed,
   );
-  return to;
+  return to;op
 }
