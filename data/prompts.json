@@ -2240,10 +2240,10 @@
   "fs js_function_last_asyncify",
   "pnd ast",
   "s declar,sing",
-  "o s5",
   "ps",
   "d",
   "is functions_names",
-  "s declar,name"
+  "s declar,name",
+  "o s5"
  ]
 }
