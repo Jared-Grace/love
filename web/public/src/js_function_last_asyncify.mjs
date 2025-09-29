@@ -13,7 +13,7 @@ export function js_function_last_asyncify(stack, async_is, ast) {
   if (async_is && not(async)) {
     object_property_set(f, property_name, true);
     let declaration = js_declaration_single(ast);
-    if (equal(left, right)) {
+    if (equal(f, declaration)) {
     }
   }
 }
