@@ -1,3 +1,4 @@
+import { list_difference } from "./list_difference.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_await_add_inner } from "./js_await_add_inner.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
@@ -32,6 +33,7 @@ export async function js_function_last_asyncify(
       object_property_set(value, property_name, true);
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
+      let list2 = list_difference(list, other);
       async function lambda(f_name) {
         async function lambda2(ast) {
           list_add(visited, name);
