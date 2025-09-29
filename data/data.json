@@ -342,8 +342,7 @@
    "watch",
    "whitespace_normalize",
    "functions_names_to_paths",
-   "reduce",
-   "function_name_to_path_import"
+   "reduce"
   ],
   "apps_get": [
    "apps_get"
@@ -6553,8 +6552,7 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace",
-   "function_name_to_path_import"
+   "string_replace"
   ],
   "to": [
    "each_range_from",
@@ -8133,16 +8131,14 @@
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
-   "html_update_generic",
-   "function_name_to_path_import"
+   "html_update_generic"
   ],
   "f_name_ext": [
    "folder_current_join_code",
    "function_name_to_base",
    "html_update_dev",
    "html_update_generic",
-   "html_update_public",
-   "function_name_to_path_import"
+   "html_update_public"
   ],
   "folder_delete": [
    "folder_delete",
@@ -9377,8 +9373,7 @@
    "function_import",
    "function_name_to_base",
    "html_update_generic",
-   "function_name_folder_to_path",
-   "function_name_to_path_import"
+   "function_name_folder_to_path"
   ],
   "function_import": [
    "function_import",
@@ -19230,15 +19225,10 @@
     "js_code_string",
     "object_property_get",
     "path_join",
-    "marker",
-    "folder_current_join_code",
-    "function_name_to_base",
     "folder_previous",
     "function_name_to_path_import",
     "import_",
     "dictionary",
-    "f_name_ext",
-    "from",
     "value",
     "previous",
     "previous2",
