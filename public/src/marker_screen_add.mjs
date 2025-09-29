@@ -14,8 +14,7 @@ export async function marker_screen_add(screen_name) {
   let prefixed = app_name_prefixed(a_name);
   let combined = function_name_combine(prefixed, "screens");
   async function lambda(a) {
-    let oe = marker_next_declare_single_init(a);
-    let { properties } = oe;
+    let { properties } = marker_next_declare_single_init(a);
     let key = js_parse_expression(screen_name);
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
