@@ -1479,7 +1479,8 @@
    "visit_unique_async",
    "watch",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "ast": [
    "app_new_step_2",
@@ -18202,6 +18203,10 @@
   "functions_paths": {
    "async": true,
    "identifiers": [
+    "list_squash",
+    "repos_paths_map_unordered_combine",
+    "function_name_folder_to_path",
+    "functions_path",
     "function_name_to_path",
     "list_map",
     "functions_names",
@@ -18209,16 +18214,13 @@
     "f_names",
     "f_paths",
     "path",
-    "functions_path",
-    "result",
-    "repos_paths_map_unordered_combine",
+    "lambda",
     "r",
     "v",
-    "function_name_folder_to_path",
     "f_name",
     "folder",
-    "squashed",
-    "list_squash"
+    "result",
+    "squashed"
    ]
   },
   "functions_search": {
