@@ -2185,7 +2185,6 @@
   "data_partition prompts",
   "s delete",
   "rs object_properties_delete all",
-  "d",
   "s gitif",
   "s file,exis",
   "user_repo_set love",
@@ -2229,6 +2228,7 @@
   "p",
   "repos_gitignore_overwrite",
   "np",
-  "is git_acp_folder"
+  "is git_acp_folder",
+  "d"
  ]
 }
