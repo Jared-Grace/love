@@ -2236,6 +2236,7 @@
   "s await",
   "is js_function_last_asyncify",
   "fs js_function_last_asyncify",
-  "u pn"
+  "u pn",
+  "cs function_param_new double"
  ]
 }
