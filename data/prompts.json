@@ -2230,6 +2230,7 @@
   "d",
   "is git_acp_folder",
   "is git_acp_call_folder",
-  "o an"
+  "o an",
+  "function_name_to_path test"
  ]
 }
