@@ -4586,8 +4586,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "function_exists_inner"
+   "unzip"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -8457,8 +8456,7 @@
    "function_names_to_acronyms"
   ],
   "exists2": [
-   "function_acronym_to_name",
-   "function_exists_inner"
+   "function_acronym_to_name"
   ],
   "s1": [
    "function_acronym_to_name",
@@ -18772,8 +18770,6 @@
     "e",
     "lambda",
     "joined",
-    "exists2",
-    "file_path",
     "bools",
     "filtered",
     "multiple"
