@@ -1,5 +1,5 @@
 import { equal } from "./equal.mjs";
-export function true_is(left) {
-  let eq = equal(left, true);
+export function true_is(value) {
+  let eq = equal(value, true);
   return eq;
 }
