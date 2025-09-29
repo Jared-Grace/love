@@ -10,6 +10,7 @@ import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
   log("js_call_fill");
   let functions = await data_functions_get();
+  let visited = [];
   async function lambda(v) {
     let { node, stack } = v;
     let { expression } = node;
@@ -35,5 +36,4 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
-  let visited = [];
 }
