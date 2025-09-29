@@ -10219,7 +10219,8 @@
    "path_repo_combine",
    "repo_acronym_get",
    "repo_acronym_set",
-   "user_repo_get"
+   "user_repo_get",
+   "function_new_declaration"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14147,7 +14148,8 @@
    "unzip"
   ],
   "user_repo_get": [
-   "user_repo_get"
+   "user_repo_get",
+   "function_new_declaration"
   ],
   "user_repo_set": [
    "user_repo_set"
@@ -18980,6 +18982,7 @@
   "function_new_declaration": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "js_format",
     "file_write",
     "js_code_export",
@@ -18996,7 +18999,8 @@
     "contents",
     "ast",
     "contents_import",
-    "formatted"
+    "formatted",
+    "repo"
    ]
   },
   "function_new_js": {
