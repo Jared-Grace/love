@@ -1,3 +1,4 @@
+import { list_add } from "./list_add.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { js_declaration_single } from "./js_declaration_single.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
@@ -42,5 +43,6 @@ export async function js_await_add_inner(functions, ast, visited) {
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
   let declaration = js_declaration_single(ast);
-  let name = js_declaration_name(declaration);la
+  let name = js_declaration_name(declaration);
+  list_add(list, item);
 }
