@@ -2263,6 +2263,7 @@
   "s diff",
   "a ldf list_difference",
   "as names",
-  "o fns"
+  "o fns",
+  "is difference"
  ]
 }
