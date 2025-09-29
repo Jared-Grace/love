@@ -1,5 +1,4 @@
 import { error } from "./error.mjs";
-import { error_attention_set } from "./error_attention_set.mjs";
 import { command_line_node_g } from "./command_line_node_g.mjs";
 import { marker } from "./marker.mjs";
 import { object_property_exists_equals } from "./object_property_exists_equals.mjs";
@@ -9,7 +8,6 @@ import { functions_path } from "./functions_path.mjs";
 import { import_install } from "./import_install.mjs";
 import { data_file_update } from "./data_file_update.mjs";
 import { object_property_set } from "./object_property_set.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 export async function watch() {
   marker("1");
   const chokidar = (await import_install("chokidar")).default;
@@ -34,13 +32,6 @@ export async function watch() {
           await command_line_node_g(data_file_update.name, args);
         } catch (error) {
           let f_name = data_file_update.name;
-          if (false) {
-            await error_attention_set({
-              f_name,
-              args,
-              error: json_format_to(error),
-            });
-          }
           throw error;
         }
         object_property_set(in_progress, path, false);
