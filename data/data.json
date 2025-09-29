@@ -5854,6 +5854,16 @@
    "reply_test",
    "tasks_run"
   ],
+  "log": [
+   "data_file_update",
+   "js_call_fill",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "sandbox_5",
+   "search_generic"
+  ],
   "data_file_update": [
    "data_file_update",
    "watch"
@@ -11546,15 +11556,6 @@
    "js_call_callee_name",
    "js_identifier_not_is"
   ],
-  "log": [
-   "js_call_fill",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "search_generic",
-   "data_file_update"
-  ],
   "js_identifier_is": [
    "js_call_fill",
    "js_declaration_params_names_node",
@@ -14008,6 +14009,9 @@
   "sandbox_5": [
    "sandbox_5"
   ],
+  "s5_inner": [
+   "sandbox_5"
+  ],
   "sandbox_5_a": [
    "sandbox_5_a"
   ],
@@ -14284,9 +14288,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "s5_inner": [
-   "sandbox_5"
   ]
  },
  "functions": {
@@ -28515,8 +28516,9 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "s5_inner",
-    "sandbox_5"
+    "log",
+    "sandbox_5",
+    "s5_inner"
    ]
   },
   "sandbox_5_a": {
