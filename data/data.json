@@ -11651,7 +11651,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic"
+   "search_generic",
+   "function_name_to_path_import"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13202,7 +13203,8 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_name_to_path_import"
   ],
   "log_unparse": [
    "log_unparse",
@@ -19233,6 +19235,8 @@
     "previous",
     "previous2",
     "joined",
+    "console",
+    "log",
     "l"
    ]
   },
