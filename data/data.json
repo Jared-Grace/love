@@ -18826,6 +18826,7 @@
   "function_exists_strict": {
    "async": true,
    "identifiers": [
+    "function_name_to_path_search",
     "function_name_to_path",
     "marker",
     "function_exists_inner",
@@ -18833,8 +18834,7 @@
     "f_name",
     "f_path",
     "e",
-    "result",
-    "function_name_to_path_search"
+    "result"
    ]
   },
   "function_format": {
