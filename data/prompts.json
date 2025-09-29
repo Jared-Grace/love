@@ -2285,6 +2285,7 @@
   "function_name_unalias sleep",
   "functions_names_includes sleep",
   "s data,update",
-  "is data_file_update"
+  "is data_file_update",
+  "is data_file_update_inner"
  ]
 }
