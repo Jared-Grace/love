@@ -11605,8 +11605,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "object_merge_generic"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13157,8 +13156,7 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright",
-   "object_merge_generic"
+   "messenger_reply_playwright"
   ],
   "log_unparse": [
    "log_unparse",
@@ -27712,7 +27710,6 @@
   "object_merge_generic": {
    "async": false,
    "identifiers": [
-    "log",
     "each",
     "object_properties",
     "object_property_set",
@@ -27725,7 +27722,6 @@
     "to",
     "from",
     "ps",
-    "console",
     "lambda",
     "property_name",
     "value",
