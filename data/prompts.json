@@ -2256,6 +2256,7 @@
   "is js_call_fill",
   "a functions_names",
   "p",
-  "au functions_names"
+  "au functions_names",
+  "is js_await_add_inner"
  ]
 }
