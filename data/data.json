@@ -4458,7 +4458,8 @@
    "string_is_assert_message",
    "string_trim",
    "undefined_not_is_assert_lambda",
-   "functions_names"
+   "functions_names",
+   "js_function_last_asyncify"
   ],
   "assert_not": [
    "assert_not",
@@ -11537,7 +11538,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "search_generic",
-   "functions_names"
+   "functions_names",
+   "js_function_last_asyncify"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -22820,6 +22822,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "log",
     "js_await_add_inner",
     "js_declaration_name",
     "function_transform",
@@ -22848,6 +22851,7 @@
     "properties",
     "lambda",
     "f_name",
+    "message",
     "lambda2",
     "v",
     "output"
