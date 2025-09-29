@@ -1,8 +1,8 @@
-import { app_name_prefixed } from "./app_name_prefixed.mjs";
-import { folder_src } from "./folder_src.mjs";
-import { html_update_generic } from "./html_update_generic.mjs";
-import { marker } from "./marker.mjs";
-import { html_name_to_path } from "./html_name_to_path.mjs";
+import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
+import { folder_src } from "../../../love/public/src/folder_src.mjs";
+import { html_update_generic } from "../../../love/public/src/html_update_generic.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 export async function html_update_public(name) {
   marker("1");
   let file_path = html_name_to_path(name);

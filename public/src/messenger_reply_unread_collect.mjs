@@ -1,16 +1,16 @@
-import { messenger_reply_puppeteer } from "./messenger_reply_puppeteer.mjs";
-import { http_sleep } from "./http_sleep.mjs";
-import { each } from "./each.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { string_prefix_without } from "./string_prefix_without.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { messenger_reply_messages_urls_add_page } from "./messenger_reply_messages_urls_add_page.mjs";
-import { messenger_reply_wait } from "./messenger_reply_wait.mjs";
-import { messenger_reply_unread_click } from "./messenger_reply_unread_click.mjs";
-import { messenger_reply_messages } from "./messenger_reply_messages.mjs";
-import { messenger_reply_url } from "./messenger_reply_url.mjs";
+import { messenger_reply_puppeteer } from "../../../love/public/src/messenger_reply_puppeteer.mjs";
+import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { messenger_reply_messages_urls_add_page } from "../../../love/public/src/messenger_reply_messages_urls_add_page.mjs";
+import { messenger_reply_wait } from "../../../love/public/src/messenger_reply_wait.mjs";
+import { messenger_reply_unread_click } from "../../../love/public/src/messenger_reply_unread_click.mjs";
+import { messenger_reply_messages } from "../../../love/public/src/messenger_reply_messages.mjs";
+import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
 export async function messenger_reply_unread_collect() {
   const page = await messenger_reply_puppeteer(lambda);
   async function lambda(page) {

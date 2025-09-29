@@ -1,8 +1,8 @@
-import { list_remove_at } from "./list_remove_at.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { function_transform_marker } from "./function_transform_marker.mjs";
-import { function_current_get } from "./function_current_get.mjs";
+import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
+import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 export async function marker_next_delete() {
   let f_name = await function_current_get();
   async function lambda2(la) {

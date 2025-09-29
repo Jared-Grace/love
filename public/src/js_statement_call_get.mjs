@@ -1,8 +1,8 @@
-import { not } from "./not.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { list_single } from "./list_single.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_statement_call_get(node) {
   let expression = null;
   let declaration = null;

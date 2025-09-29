@@ -1,4 +1,4 @@
-import { list_map } from "./list_map.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 export function list_map_combine(right, list) {
   function lambda(left) {
     let combined = left + right;

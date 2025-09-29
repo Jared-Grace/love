@@ -1,8 +1,8 @@
-import { retry } from "./retry.mjs";
-import { object_merge } from "./object_merge.mjs";
-import { firebase_bucket } from "./firebase_bucket.mjs";
-import { firebase_path_fix } from "./firebase_path_fix.mjs";
-import { log_keep } from "./log_keep.mjs";
+import { retry } from "../../../love/public/src/retry.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
+import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function firebase_upload_generic(destination, settings, buffer) {
   destination = firebase_path_fix(destination);
   const bucket = await firebase_bucket();

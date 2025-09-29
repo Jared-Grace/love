@@ -1,7 +1,7 @@
-import { each_index_async } from "./each_index_async.mjs";
-import { marker } from "./marker.mjs";
-import { lists_get } from "./lists_get.mjs";
-import { list_first } from "./list_first.mjs";
+import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { lists_get } from "../../../love/public/src/lists_get.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function each_multiple_async(lists, lambda) {
   marker("1");
   let first = list_first(lists);

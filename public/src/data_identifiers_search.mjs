@@ -1,8 +1,8 @@
-import { data_identifiers_get } from "./data_identifiers_get.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
-import { list_to_dictionary } from "./list_to_dictionary.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { marker } from "./marker.mjs";
+import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
+import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function data_identifiers_search(s) {
   marker("1");
   let identifiers = await data_identifiers_get();

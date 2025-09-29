@@ -1,12 +1,12 @@
-import { file_copy_overwrite } from "./file_copy_overwrite.mjs";
-import { equal_not } from "./equal_not.mjs";
-import { path_resolve } from "./path_resolve.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_map_path_join } from "./list_map_path_join.mjs";
-import { repo_path } from "./repo_path.mjs";
-import { list_map } from "./list_map.mjs";
-import { repos_names } from "./repos_names.mjs";
-import { marker } from "./marker.mjs";
+import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrite.mjs";
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
+import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { list_map_path_join } from "../../../love/public/src/list_map_path_join.mjs";
+import { repo_path } from "../../../love/public/src/repo_path.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { repos_names } from "../../../love/public/src/repos_names.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function repos_gitignore_overwrite() {
   marker("1");
   let repos = await repos_names();

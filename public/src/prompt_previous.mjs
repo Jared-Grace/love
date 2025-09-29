@@ -1,12 +1,12 @@
-import { marker } from "./marker.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { data_prompts } from "./data_prompts.mjs";
-import { function_aliases_inverted } from "./function_aliases_inverted.mjs";
-import { function_run_line } from "./function_run_line.mjs";
-import { list_last } from "./list_last.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
+import { function_aliases_inverted } from "../../../love/public/src/function_aliases_inverted.mjs";
+import { function_run_line } from "../../../love/public/src/function_run_line.mjs";
+import { list_last } from "../../../love/public/src/list_last.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function prompt_previous() {
   marker("1");
   let inverted = await function_aliases_inverted();

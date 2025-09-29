@@ -1,6 +1,6 @@
-import { each_range_async } from "./each_range_async.mjs";
-import { marker_next_delete } from "./marker_next_delete.mjs";
-import { marker } from "./marker.mjs";
+import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
+import { marker_next_delete } from "../../../love/public/src/marker_next_delete.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_next_delete_multiple(count) {
   marker("1");
   let code = null;

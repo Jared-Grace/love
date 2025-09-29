@@ -1,11 +1,11 @@
-import { list_join_newline } from "./list_join_newline.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_wait } from "./list_wait.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { function_dependencies } from "./function_dependencies.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { list_map_property } from "./list_map_property.mjs";
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { list_wait } from "../../../love/public/src/list_wait.mjs";
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
+import { function_dependencies } from "../../../love/public/src/function_dependencies.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export async function function_dependencies_code(f_name) {
   let ds = await function_dependencies(f_name);
   let mapped = list_map(ds, function_parse_declaration);

@@ -1,6 +1,6 @@
-import { object_property_lambda } from "./object_property_lambda.mjs";
-import { global_get } from "./global_get.mjs";
-import { marker } from "./marker.mjs";
+import { object_property_lambda } from "../../../love/public/src/object_property_lambda.mjs";
+import { global_get } from "../../../love/public/src/global_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function global_function_async(fn, lambda) {
   let global = global_get();
   marker("1");

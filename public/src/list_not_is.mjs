@@ -1,6 +1,6 @@
-import { not } from "./not.mjs";
-import { list_is } from "./list_is.mjs";
-import { marker } from "./marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function list_not_is(value) {
   marker("1");
   let a = list_is(value);

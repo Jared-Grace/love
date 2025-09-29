@@ -1,9 +1,9 @@
-import { marker } from "./marker.mjs";
-import { http } from "./http.mjs";
-import { firebase_bucket } from "./firebase_bucket.mjs";
-import { browser_is } from "./browser_is.mjs";
-import { firebase_path_fix } from "./firebase_path_fix.mjs";
-import { firebase_storage_url } from "./firebase_storage_url.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { http } from "../../../love/public/src/http.mjs";
+import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
+import { firebase_storage_url } from "../../../love/public/src/firebase_storage_url.mjs";
 export async function firebase_storage_download(destination) {
   marker("1");
   destination = firebase_path_fix(destination);

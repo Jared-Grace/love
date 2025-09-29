@@ -1,6 +1,6 @@
-import { log_keep } from "./log_keep.mjs";
-import { function_run } from "./function_run.mjs";
-import { function_name_unalias } from "./function_name_unalias.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { function_run } from "../../../love/public/src/function_run.mjs";
+import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 export async function function_run_log(f_name, args) {
   let { unaliased } = await function_name_unalias(f_name);
   log_keep("🏃 " + unaliased);
