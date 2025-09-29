@@ -2223,7 +2223,6 @@
   "s folder",
   "is function_name_to_path",
   "is repos_folder",
-  "s repo",
   "urg",
   "is js_function_last_asyncify",
   "u pn",
@@ -2248,6 +2247,7 @@
   "o functions_names",
   "is functions_names",
   "s await",
-  "s repo_path_combine"
+  "s repo_path_combine",
+  "s repo"
  ]
 }
