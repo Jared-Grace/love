@@ -12,5 +12,6 @@ export async function functions_names() {
   async function each_folder(folder) {
     let joined = path_join([folder, path]);
     let f_names = functions_names_from_path(joined);
+    return f_names;
   }
 }
