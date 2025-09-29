@@ -3051,8 +3051,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "user_repo_get"
+   "string_slice"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -29399,8 +29398,7 @@
     "repo_name",
     "all",
     "includes",
-    "item",
-    "b"
+    "item"
    ]
   },
   "user_repo_path": {
