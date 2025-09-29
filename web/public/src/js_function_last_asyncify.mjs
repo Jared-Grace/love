@@ -32,7 +32,7 @@ export async function js_function_last_asyncify(
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
       async function lambda(f_name) {
-        log(message);
+        log({f_name});
         async function lambda2(ast) {
           let v = await js_await_add_inner(functions, ast);
           return v;
