@@ -5858,8 +5858,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "sandbox_5"
+   "search_generic"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14281,6 +14280,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "s5_inner": [
+   "sandbox_5"
   ]
  },
  "functions": {
@@ -28509,7 +28511,7 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
-    "log",
+    "s5_inner",
     "sandbox_5"
    ]
   },
