@@ -2225,7 +2225,6 @@
   "is repos_folder",
   "s repo",
   "urg",
-  "s await",
   "is js_function_last_asyncify",
   "u pn",
   "cs function_param_new double",
@@ -2247,6 +2246,7 @@
   "o functions_name",
   "o s5",
   "o functions_names",
-  "is functions_names"
+  "is functions_names",
+  "s await"
  ]
 }
