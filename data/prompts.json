@@ -2235,7 +2235,6 @@
   "data_function_current_get",
   "r data_function_current_get function_current_get",
   "as current",
-  "fs js_function_last_asyncify",
   "pnd ast",
   "s declar,sing",
   "ps",
@@ -2249,6 +2248,7 @@
   "urs l",
   "s repo",
   "d",
-  "s await"
+  "s await",
+  "fs js_function_last_asyncify"
  ]
 }
