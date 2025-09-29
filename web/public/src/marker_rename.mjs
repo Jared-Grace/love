@@ -5,7 +5,7 @@ import { list_single } from "./list_single.mjs";
 import { not } from "./not.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 export async function marker_rename(from, to) {
   async function lambda(a) {
     let { node } = a;
@@ -22,7 +22,7 @@ export async function marker_rename(from, to) {
     let s = js_string(to);
     object_replace(a0, s);
   }
-  let f_name_current = await data_function_current_get();
+  let f_name_current = await function_current_get();
   let v = await function_transform_marker_specified(
     f_name_current,
     from,
