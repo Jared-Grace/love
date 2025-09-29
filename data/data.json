@@ -6012,7 +6012,6 @@
    "function_types",
    "function_type_first",
    "marker_assign_replace",
-   "marker_call_replace_generic",
    "marker_down_choices",
    "marker_functionize",
    "marker_move",
@@ -14218,7 +14217,8 @@
    "marker_new",
    "marker_next_delete",
    "marker_param_add",
-   "marker_call"
+   "marker_call",
+   "marker_call_replace_generic"
   ]
  },
  "functions": {
@@ -26270,7 +26270,7 @@
     "marker_next_get",
     "function_transform_marker",
     "list_adder_async",
-    "data_function_current_get",
+    "function_current_get",
     "integer_to",
     "object_merge",
     "marker_call_replace_generic",
