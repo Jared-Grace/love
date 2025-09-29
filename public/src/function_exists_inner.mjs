@@ -10,7 +10,7 @@ export async function function_exists_inner(u) {
   };
   let e = object_merge(to, u);
   return e;
-  let result = await repos_paths_map_unordered_combine(f_path, file_exists);
+  let bools = await repos_paths_map_unordered_combine(f_path, file_exists);
   function lambda(item) {}
-  let filtered = list_filter(list, lambda);
+  let filtered = list_filter(bools, lambda);
 }
