@@ -826,7 +826,8 @@
    "whitespace_normalize",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths"
+   "functions_paths",
+   "function_copy"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -6148,7 +6149,8 @@
    "function_new_declaration",
    "function_parse_strict",
    "js_outside_move",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "function_copy"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
@@ -9825,7 +9827,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "function_copy"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -18655,6 +18658,7 @@
   "function_copy": {
    "async": true,
    "identifiers": [
+    "function_name_to_path",
     "function_name_unalias",
     "function_current_set",
     "js_identifier_replace",
@@ -18671,6 +18675,8 @@
     "unaliased_old",
     "unaliased_new",
     "f_name",
+    "v",
+    "f_name2",
     "f_path_new",
     "lambda",
     "ast"
