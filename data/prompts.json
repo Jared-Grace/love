@@ -1785,7 +1785,6 @@
   "s urdu",
   "s map",
   "u lw",
-  "s pair",
   "s clip",
   "evu benirv",
   "evu tel2017",
@@ -2328,6 +2327,7 @@
   "s dictionary",
   "s diction",
   "urg",
-  "n reduce"
+  "n reduce",
+  "s pair"
  ]
 }
