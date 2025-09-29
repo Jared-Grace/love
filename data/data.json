@@ -821,7 +821,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "js_function_last_asyncify"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2312,7 +2313,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "item": [
    "app_replace_home",
@@ -5986,7 +5988,8 @@
    "data_file_update_inner",
    "data_functions_get",
    "js_await_add",
-   "js_await_add_inner"
+   "js_await_add_inner",
+   "js_function_last_asyncify"
   ],
   "f_this": [
    "data_file_update_inner"
@@ -11270,8 +11273,7 @@
   ],
   "js_await_add": [
    "js_auto_transforms",
-   "js_await_add",
-   "js_function_last_asyncify"
+   "js_await_add"
   ],
   "js_bang_to_not": [
    "js_auto_transforms",
@@ -11315,7 +11317,8 @@
   ],
   "js_await_add_inner": [
    "js_await_add",
-   "js_await_add_inner"
+   "js_await_add_inner",
+   "js_function_last_asyncify"
   ],
   "js_visit_type_each_async": [
    "js_await_add_inner",
@@ -22806,8 +22809,8 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "js_await_add_inner",
     "js_declaration_name",
-    "js_await_add",
     "function_transform",
     "each_async",
     "object_properties",
@@ -22832,6 +22835,9 @@
     "properties",
     "lambda",
     "f_name",
+    "lambda2",
+    "v",
+    "functions",
     "output"
    ]
   },
