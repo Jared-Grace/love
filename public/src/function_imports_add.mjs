@@ -14,5 +14,5 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
-  let reduced = await functions_names_to_paths();
+  let dictionary = await functions_names_to_paths();
 }
