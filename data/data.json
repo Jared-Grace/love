@@ -14332,6 +14332,9 @@
   ],
   "bools": [
    "function_exists_inner"
+  ],
+  "true_is": [
+   "true_is"
   ]
  },
  "functions": {
@@ -29721,6 +29724,12 @@
     "folder",
     "joined",
     "f_names"
+   ]
+  },
+  "true_is": {
+   "async": false,
+   "identifiers": [
+    "true_is"
    ]
   }
  }
