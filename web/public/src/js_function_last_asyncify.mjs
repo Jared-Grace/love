@@ -10,7 +10,9 @@ export function js_function_last_asyncify(stack, async_is, ast) {
   let property_name = "async";
   let async = object_property_get(f, property_name);
   if (async_is && not(async)) {
-    let declaration = js_declaration_single(ast);
     object_property_set(f, property_name, true);
+    let declaration = js_declaration_single(ast);
+    if (false) {
+    }
   }
 }
