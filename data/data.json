@@ -4465,8 +4465,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "functions_names"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -18074,8 +18073,7 @@
     "folder",
     "joined",
     "f_names",
-    "squashed",
-    "message"
+    "squashed"
    ]
   },
   "functions_names_from_path": {
