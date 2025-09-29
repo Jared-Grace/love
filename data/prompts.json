@@ -2314,6 +2314,8 @@
   "function_exists test",
   "urg",
   "o de",
-  "o opg"
+  "o opg",
+  "function_parse_declaration_js_unparse test",
+  "function_name_unalias test"
  ]
 }
