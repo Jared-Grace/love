@@ -8100,7 +8100,8 @@
    "folder_read_files",
    "function_run_git",
    "list_wait",
-   "repos_names"
+   "repos_names",
+   "user_repo_get"
   ],
   "readdir": [
    "folder_read",
@@ -9826,7 +9827,8 @@
    "function_run_git",
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite",
-   "repos_names"
+   "repos_names",
+   "user_repo_get"
   ],
   "function_run_log": [
    "function_run_git",
@@ -13820,8 +13822,7 @@
   ],
   "repos": [
    "repos_acronyms_to_names",
-   "repos_gitignore_overwrite",
-   "user_repo_get"
+   "repos_gitignore_overwrite"
   ],
   "repos_folder": [
    "repos_folder",
@@ -29385,6 +29386,7 @@
   "user_repo_get": {
    "async": true,
    "identifiers": [
+    "repos_names",
     "list_includes",
     "data_get",
     "user_repo_path",
@@ -29393,7 +29395,7 @@
     "f_path",
     "value",
     "repo_name",
-    "repos",
+    "all",
     "includes",
     "list",
     "item"
