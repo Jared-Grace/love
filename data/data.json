@@ -28508,7 +28508,7 @@
    ]
   },
   "sandbox_5": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "sandbox_5"
    ]
