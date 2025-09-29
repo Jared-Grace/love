@@ -2242,7 +2242,6 @@
   "s repo_path_combine",
   "urs l",
   "s repo",
-  "d",
   "fs js_function_last_asyncify",
   "pnd functions",
   "is js_function_last_asyncify",
@@ -2252,6 +2251,7 @@
   "o functions_names",
   "is functions_names",
   "s fill",
-  "s sleep"
+  "s sleep",
+  "d"
  ]
 }
