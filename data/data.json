@@ -8416,7 +8416,8 @@
    "function_name_to_acronym",
    "git_publish_initial",
    "repo_acronym_to_name",
-   "repo_acronym_to_path"
+   "repo_acronym_to_path",
+   "user_repo_set"
   ],
   "function_alias_add_generic": [
    "function_aliases",
@@ -9509,7 +9510,8 @@
    "repo_acronym_to_name",
    "repo_acronym_to_path",
    "repo_path",
-   "user_repo_get"
+   "user_repo_get",
+   "user_repo_set"
   ],
   "repo_path_combine": [
    "function_new_declaration"
@@ -13807,7 +13809,8 @@
   ],
   "repo_acronym_to_name": [
    "repo_acronym_to_name",
-   "repo_acronym_to_path"
+   "repo_acronym_to_path",
+   "user_repo_set"
   ],
   "repos_matching": [
    "repo_acronym_to_name"
@@ -29328,11 +29331,14 @@
   "user_repo_set": {
    "async": true,
    "identifiers": [
+    "repo_acronym_to_name",
     "user_repo_path",
     "data_set",
     "marker",
     "user_repo_set",
     "value",
+    "repo_name",
+    "acronym",
     "f_path",
     "lambda",
     "previous"
