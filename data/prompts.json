@@ -2011,7 +2011,6 @@
   "s remove",
   "s puppeteer_hrefs_starts_with",
   "s empty,read",
-  "is sleep",
   "s list_add",
   "s prop,obj",
   "s collect",
@@ -2281,6 +2280,7 @@
   "o de",
   "s5",
   "d",
-  "de s5_inner"
+  "de s5_inner",
+  "is sleep"
  ]
 }
