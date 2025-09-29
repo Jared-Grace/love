@@ -14440,7 +14440,8 @@
    "functions_names_to_paths"
   ],
   "reduce": [
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "reduce"
   ]
  },
  "functions": {
@@ -29942,6 +29943,12 @@
     "squashed",
     "reduce",
     "fn"
+   ]
+  },
+  "reduce": {
+   "async": false,
+   "identifiers": [
+    "reduce"
    ]
   }
  }
