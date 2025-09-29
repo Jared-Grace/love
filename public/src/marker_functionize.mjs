@@ -75,7 +75,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     }
     let missing = list_adder_unique(lambda3);
     list_remove(missing, f_name_new);
-    let other = functions_names();
+    let other = await functions_names();
     missing = list_difference(missing, other);
     let list = object_property_get(declaration, "params");
     let items = list_map(missing, js_parse_expression);
