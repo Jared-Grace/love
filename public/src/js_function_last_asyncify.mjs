@@ -22,10 +22,8 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
       let result = await data_identifiers_search(s);
       let properties = object_properties(result);
       async function lambda(f_name) {
-        let output = await function_transform(
-          f_name2,
-          async function lambda2(ast2) {},
-        );
+        async function lambda2(ast2) {}
+        let output = await function_transform(f_name2, lambda2);
       }
       await each_async(properties, lambda);
     }
