@@ -2302,7 +2302,6 @@
   "n test",
   "s exists",
   "is function_name_to_path_unalias",
-  "p",
   "function_name_to_path_unalias test",
   "o function_exists",
   "is function_exists_inner",
@@ -2317,6 +2316,7 @@
   "s name,path",
   "functions_path",
   "o fns",
+  "p",
   "functions_paths"
  ]
 }
