@@ -2144,8 +2144,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "true_is",
-   "function_exists_inner"
+   "true_is"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4118,7 +4117,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "function_exists_inner"
   ],
   "book_code": [
    "app_reply_main",
@@ -7930,7 +7930,8 @@
    "firebase_service_account",
    "folder_find_starts_with",
    "list_find",
-   "list_single"
+   "list_single",
+   "function_exists_inner"
   ],
   "http": [
    "firebase_storage_download",
@@ -8401,7 +8402,8 @@
    "list_find",
    "list_single",
    "marker_rename",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "function_exists_inner"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -18764,6 +18766,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "list_single",
     "true_is",
     "object_property_get",
     "list_size_1",
@@ -18786,9 +18789,10 @@
     "m",
     "exists2",
     "ti2",
-    "value",
     "filtered",
-    "multiple"
+    "multiple",
+    "only",
+    "list"
    ]
   },
   "function_exists_strict": {
