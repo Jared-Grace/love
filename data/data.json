@@ -14310,6 +14310,9 @@
   ],
   "lambda$folder": [
    "repos_paths_map_unordered"
+  ],
+  "lsq": [
+   "functions_names"
   ]
  },
  "functions": {
@@ -18067,7 +18070,8 @@
     "each_folder",
     "folder",
     "joined",
-    "f_names"
+    "f_names",
+    "lsq"
    ]
   },
   "functions_names_from_path": {
