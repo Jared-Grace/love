@@ -1,3 +1,4 @@
+import { list_squash } from "./list_squash.mjs";
 import { path_join } from "./path_join.mjs";
 import { repos_paths_map_unordered } from "./repos_paths_map_unordered.mjs";
 import { functions_names_from_path } from "./functions_names_from_path.mjs";
@@ -14,5 +15,5 @@ export async function functions_names() {
     let f_names = functions_names_from_path(joined);
     return f_names;
   }
-  lsq;
+  let squashed = list_squash(list);
 }
