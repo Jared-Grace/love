@@ -13977,13 +13977,6 @@
   "s5": [
    "s5"
   ],
-  "s5b": [
-   "s5_inner"
-  ],
-  "s5_inner": [
-   "s5_inner",
-   "sandbox_5"
-  ],
   "sandbox": [
    "sandbox"
   ],
@@ -14011,6 +14004,9 @@
    "string_split_colon",
    "string_split_semicolon",
    "string_split_semicolon_space"
+  ],
+  "s5_inner": [
+   "sandbox_5"
   ],
   "sandbox_5": [
    "sandbox_5"
@@ -28412,13 +28408,6 @@
    "async": false,
    "identifiers": [
     "s5"
-   ]
-  },
-  "s5_inner": {
-   "async": false,
-   "identifiers": [
-    "s5b",
-    "s5_inner"
    ]
   },
   "sandbox": {
