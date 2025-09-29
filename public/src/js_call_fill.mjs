@@ -1,3 +1,4 @@
+import { data_functions_get } from "./data_functions_get.mjs";
 import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
@@ -22,4 +23,5 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
+  let functions = await data_functions_get();
 }
