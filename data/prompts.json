@@ -2295,6 +2295,7 @@
   "is repos_names",
   "r repos_path_each_unordered repos_paths_map_unordered",
   "as squa",
-  "u ls"
+  "u ls",
+  "a lsq list_squash"
  ]
 }
