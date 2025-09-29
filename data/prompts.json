@@ -2256,7 +2256,6 @@
   "n s5",
   "s s5",
   "de",
-  "d",
   "is sleep",
   "s data_fun",
   "is data_functions_get",
@@ -2341,6 +2340,7 @@
   "urg",
   "urs l",
   "c functions_log_remove functions_imports_fix",
-  "functions_imports_fix"
+  "functions_imports_fix",
+  "d"
  ]
 }
