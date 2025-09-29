@@ -1,3 +1,4 @@
 export function string_empty() {
-  return "";
+  let v = "";
+  return v;
 }
