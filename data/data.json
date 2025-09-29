@@ -2016,8 +2016,7 @@
    "repos_gitignore_overwrite",
    "task_new",
    "functions_paths",
-   "function_name_folder_to_path",
-   "function_copy"
+   "function_name_folder_to_path"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -18677,7 +18676,6 @@
     "unaliased",
     "unaliased_old",
     "unaliased_new",
-    "f_name",
     "repo_name",
     "f_path_new",
     "lambda",
