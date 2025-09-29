@@ -4,7 +4,8 @@ import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_c
 import { functions_path } from "./functions_path.mjs";
 export async function functions_paths() {
   let path = functions_path();
-  let result = await repos_paths_map_unordered_combine(path, identity);
+  let result = await repos_paths_map_unordered_combine(path, r=>{
+    let v = function_name_folder_to_path(f_name, folder);});
   let squashed = list_squash(result);
   return squashed;
 }
