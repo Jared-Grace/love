@@ -86,6 +86,7 @@
    "folder_read",
    "folder_read_files",
    "functions_combine",
+   "functions_imports_fix",
    "functions_log_remove",
    "functions_names",
    "functions_names_to_paths",
@@ -280,8 +281,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "functions_imports_fix"
+   "whitespace_normalize"
   ],
   "t2": [
    "t2"
@@ -643,6 +643,7 @@
    "folder_public",
    "folder_read_async",
    "folder_read_files",
+   "functions_imports_fix",
    "functions_log_remove",
    "functions_paths",
    "functions_transform",
@@ -845,8 +846,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "functions_imports_fix"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1302,6 +1302,7 @@
    "folder_read_async",
    "folder_read_files",
    "functions_combine",
+   "functions_imports_fix",
    "functions_log_remove",
    "functions_names_from_path",
    "functions_names_to_paths",
@@ -1501,8 +1502,7 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "functions_imports_fix"
+   "watch"
   ],
   "ast": [
    "app_new_step_2",
@@ -8382,8 +8382,16 @@
    "functions_format"
   ],
   "functions_transform": [
+   "functions_imports_fix",
    "functions_log_remove",
-   "functions_transform",
+   "functions_transform"
+  ],
+  "js_imports_paths_fix": [
+   "functions_imports_fix",
+   "function_rename_identifiers",
+   "js_imports_paths_fix"
+  ],
+  "functions_imports_fix": [
    "functions_imports_fix"
   ],
   "js_log_remove": [
@@ -9958,11 +9966,6 @@
    "list_remove_if_exists",
    "messenger_reply_messages_urls_add_page"
   ],
-  "js_imports_paths_fix": [
-   "function_rename_identifiers",
-   "js_imports_paths_fix",
-   "functions_imports_fix"
-  ],
   "string_padded_is": [
    "function_rename_suffix_add",
    "string_padded_is"
@@ -10522,9 +10525,9 @@
    "path_repo_combine",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
+   "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine",
-   "repo_acronym_to_path"
+   "repo_path_combine"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14472,9 +14475,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "functions_imports_fix": [
-   "functions_imports_fix"
   ]
  },
  "functions": {
@@ -18225,6 +18225,17 @@
     "list_map",
     "functions_format",
     "mapped"
+   ]
+  },
+  "functions_imports_fix": {
+   "async": true,
+   "identifiers": [
+    "functions_transform",
+    "marker",
+    "js_imports_paths_fix",
+    "functions_imports_fix",
+    "lambda",
+    "v"
    ]
   },
   "functions_log_remove": {
@@ -30011,17 +30022,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "functions_imports_fix": {
-   "async": true,
-   "identifiers": [
-    "functions_transform",
-    "marker",
-    "js_imports_paths_fix",
-    "functions_imports_fix",
-    "lambda",
-    "v"
    ]
   }
  }
