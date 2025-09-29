@@ -28,7 +28,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine"
+   "list_map_combine",
+   "js_function_last_asyncify"
   ],
   "right": [
    "add",
@@ -49,7 +50,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "js_function_last_asyncify"
   ],
   "sum": [
    "add",
@@ -3516,7 +3518,8 @@
    "js_bang_to_not",
    "js_dollar_ie",
    "js_identifier_replace",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "js_function_last_asyncify"
   ],
   "list_add_first": [
    "app_reply_main",
@@ -22762,6 +22765,7 @@
   "js_function_last_asyncify": {
    "async": false,
    "identifiers": [
+    "equal",
     "js_declaration_single",
     "marker",
     "not",
@@ -22775,7 +22779,9 @@
     "f",
     "property_name",
     "async",
-    "declaration"
+    "declaration",
+    "left",
+    "right"
    ]
   },
   "js_identifiers": {
