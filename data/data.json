@@ -2137,7 +2137,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4714,7 +4715,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_function_last_asyncify"
   ],
   "property_name": [
    "bind_property",
@@ -14250,6 +14252,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "property_name2": [
+   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22834,6 +22839,9 @@
     "f",
     "property_name",
     "async",
+    "value",
+    "object",
+    "property_name2",
     "declaration",
     "name",
     "result",
