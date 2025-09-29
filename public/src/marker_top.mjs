@@ -1,14 +1,14 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { js_identifier_unique } from "./js_identifier_unique.mjs";
-import { js_marker_insert } from "./js_marker_insert.mjs";
-import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
-import { function_current_get } from "./function_current_get.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { marker } from "./marker.mjs";
-import { js_markers } from "./js_markers.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_marker_name_get } from "./js_marker_name_get.mjs";
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
+import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
+import { js_marker_insert } from "../../../love/public/src/js_marker_insert.mjs";
+import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { js_markers } from "../../../love/public/src/js_markers.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_marker_name_get } from "../../../love/public/src/js_marker_name_get.mjs";
 export async function marker_top() {
   marker("1");
   let f_name = await function_current_get();

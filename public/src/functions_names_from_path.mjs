@@ -1,7 +1,7 @@
-import { list_map } from "./list_map.mjs";
-import { string_suffix_without } from "./string_suffix_without.mjs";
-import { function_name_extension } from "./function_name_extension.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
+import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
+import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 export function functions_names_from_path(path) {
   let paths = folder_read_files(path);
   function lambda(p) {

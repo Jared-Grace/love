@@ -1,5 +1,5 @@
-import { list_any } from "./list_any.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_any } from "../../../love/public/src/list_any.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_node_types_is(item, types) {
   function lambda2(type) {
     let type_is = js_node_type_is(item, type);

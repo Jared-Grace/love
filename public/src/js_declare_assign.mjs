@@ -1,7 +1,7 @@
-import { js_visit_type } from "./js_visit_type.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
-import { list_get_end } from "./list_get_end.mjs";
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 export function js_declare_assign(ast, lambda) {
   function lambda2(v) {
     let { node, stack } = v;

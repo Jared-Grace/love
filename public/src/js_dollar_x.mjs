@@ -1,9 +1,9 @@
-import { list_remove } from "./list_remove.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_next_index } from "./list_next_index.mjs";
-import { list_is } from "./list_is.mjs";
-import { js_expand_generic } from "./js_expand_generic.mjs";
-import { marker } from "./marker.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { list_get } from "../../../love/public/src/list_get.mjs";
+import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_dollar_x({
   remaining,
   node,

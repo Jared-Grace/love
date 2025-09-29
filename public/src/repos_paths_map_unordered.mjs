@@ -1,7 +1,7 @@
-import { marker } from "./marker.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { repo_path } from "./repo_path.mjs";
-import { repos_names } from "./repos_names.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { repo_path } from "../../../love/public/src/repo_path.mjs";
+import { repos_names } from "../../../love/public/src/repos_names.mjs";
 export async function repos_paths_map_unordered(lambda$folder) {
   marker("1");
   let all = await repos_names();

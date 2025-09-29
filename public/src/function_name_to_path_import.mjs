@@ -1,7 +1,7 @@
-import { js_code_string } from "./js_code_string.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { path_join } from "./path_join.mjs";
-import { folder_previous } from "./folder_previous.mjs";
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
+import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export function function_name_to_path_import(import_, dictionary) {
   let value = object_property_get(dictionary, import_);
   let previous = folder_previous();

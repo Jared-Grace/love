@@ -1,14 +1,14 @@
-import { js_statement_return } from "./js_statement_return.mjs";
-import { js_declaration_single_block_body } from "./js_declaration_single_block_body.mjs";
-import { object_property_from } from "./object_property_from.mjs";
-import { js_declaration_asyncify } from "./js_declaration_asyncify.mjs";
-import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
-import { js_declaration_params_names } from "./js_declaration_params_names.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { function_new_transform } from "./function_new_transform.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_imports_missing_add } from "./js_imports_missing_add.mjs";
+import { js_statement_return } from "../../../love/public/src/js_statement_return.mjs";
+import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
+import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
+import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
+import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
+import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
+import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);

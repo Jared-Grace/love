@@ -1,10 +1,10 @@
-import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
-import { js_auto } from "./js_auto.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { js_parse_statement } from "./js_parse_statement.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { marker_index } from "./marker_index.mjs";
-import { marker } from "./marker.mjs";
+import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
+import { js_auto } from "../../../love/public/src/js_auto.mjs";
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { marker_index } from "../../../love/public/src/marker_index.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_above_generic(lambda$index, code) {
   marker("1");
   async function lambda(a) {

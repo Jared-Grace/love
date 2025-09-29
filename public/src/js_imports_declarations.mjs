@@ -1,14 +1,14 @@
-import { marker } from "./marker.mjs";
-import { not } from "./not.mjs";
-import { js_imports_all } from "./js_imports_all.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { string_starts_with } from "./string_starts_with.mjs";
-import { list_single } from "./list_single.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_adder_unique } from "./list_adder_unique.mjs";
-import { each } from "./each.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { js_imports_all } from "../../../love/public/src/js_imports_all.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
+import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 export function js_imports_declarations(ast) {
   marker("1");
   let vs = js_imports_all(ast);

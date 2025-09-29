@@ -1,4 +1,4 @@
-import { browser_is } from "./browser_is.mjs";
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export function buffer_string_to(buffer) {
   let s = null;
   let b = browser_is();

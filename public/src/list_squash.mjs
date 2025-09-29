@@ -1,6 +1,6 @@
-import { list_is } from "./list_is.mjs";
-import { each } from "./each.mjs";
-import { list_adder } from "./list_adder.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_squash(list) {
   function lambda2(la) {
     list_process(list);

@@ -1,12 +1,12 @@
-import { list_size_1_assert_message } from "./list_size_1_assert_message.mjs";
-import { list_size } from "./list_size.mjs";
-import { json_to } from "./json_to.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { each_async } from "./each_async.mjs";
-import { function_transform_marker_arg } from "./function_transform_marker_arg.mjs";
-import { js_marker_named } from "./js_marker_named.mjs";
-import { js_type } from "./js_type.mjs";
-import { function_transform } from "./function_transform.mjs";
+import { list_size_1_assert_message } from "../../../love/public/src/list_size_1_assert_message.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { function_transform_marker_arg } from "../../../love/public/src/function_transform_marker_arg.mjs";
+import { js_marker_named } from "../../../love/public/src/js_marker_named.mjs";
+import { js_type } from "../../../love/public/src/js_type.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_transform_marker_specified(
   f_name,
   marker_name,

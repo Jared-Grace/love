@@ -1,6 +1,6 @@
-import { ebible_verses } from "./ebible_verses.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { each_async } from "./each_async.mjs";
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function ebible_chapters_each_verses_list(
   list,
   bible_folder,

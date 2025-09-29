@@ -1,14 +1,14 @@
-import { marker_next_declare_single_init } from "./marker_next_declare_single_init.mjs";
-import { function_param_new } from "./function_param_new.mjs";
-import { function_new } from "./function_new.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_property } from "./js_property.mjs";
-import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
-import { app_name_prefixed } from "./app_name_prefixed.mjs";
-import { function_name_combine } from "./function_name_combine.mjs";
-import { data_app_current_get } from "./data_app_current_get.mjs";
-import { marker } from "./marker.mjs";
+import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
+import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
+import { function_new } from "../../../love/public/src/function_new.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { js_property } from "../../../love/public/src/js_property.mjs";
+import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
+import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
+import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
+import { data_app_current_get } from "../../../love/public/src/data_app_current_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_screen_add(screen_name) {
   let a_name = await data_app_current_get();
   let prefixed = app_name_prefixed(a_name);

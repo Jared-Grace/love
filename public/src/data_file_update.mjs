@@ -1,9 +1,9 @@
-import { file_js_parse } from "./file_js_parse.mjs";
-import { data_file_update_inner } from "./data_file_update_inner.mjs";
-import { data_save } from "./data_save.mjs";
-import { data_all } from "./data_all.mjs";
-import { marker } from "./marker.mjs";
-import { data_path } from "./data_path.mjs";
+import { file_js_parse } from "../../../love/public/src/file_js_parse.mjs";
+import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
+import { data_save } from "../../../love/public/src/data_save.mjs";
+import { data_all } from "../../../love/public/src/data_all.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function data_file_update(f_path) {
   let d_path = data_path();
   var d = await data_all(d_path);

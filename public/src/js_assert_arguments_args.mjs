@@ -1,11 +1,11 @@
-import { list_replace_all } from "./list_replace_all.mjs";
-import { list_size } from "./list_size.mjs";
-import { js_declaration_params_get } from "./js_declaration_params_get.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
-import { js_keyword_arguments } from "./js_keyword_arguments.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { assert_arguments } from "./assert_arguments.mjs";
-import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
+import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { js_declaration_params_get } from "../../../love/public/src/js_declaration_params_get.mjs";
+import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
+import { js_keyword_arguments } from "../../../love/public/src/js_keyword_arguments.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 export function js_assert_arguments_args(ast) {
   let declaration = js_declaration_single(ast);
   let params = js_declaration_params_get(declaration);

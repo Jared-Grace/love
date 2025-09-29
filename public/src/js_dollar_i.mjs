@@ -1,10 +1,10 @@
-import { marker } from "./marker.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { js_code_braces_empty } from "./js_code_braces_empty.mjs";
-import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
-import { js_keyword_if } from "./js_keyword_if.mjs";
-import { js_parse_statement } from "./js_parse_statement.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { js_keyword_false } from "../../../love/public/src/js_keyword_false.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
+import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
+import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 export function js_dollar_i({ stack1 }) {
   marker("1");
   let inside = js_keyword_false();

@@ -1,7 +1,7 @@
-import { buffer_string_to } from "./buffer_string_to.mjs";
-import { json_from } from "./json_from.mjs";
-import { http } from "./http.mjs";
-import { marker } from "./marker.mjs";
+import { buffer_string_to } from "../../../love/public/src/buffer_string_to.mjs";
+import { json_from } from "../../../love/public/src/json_from.mjs";
+import { http } from "../../../love/public/src/http.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function http_json(url) {
   marker("1");
   let buffer = await http(url);

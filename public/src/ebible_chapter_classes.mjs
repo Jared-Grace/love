@@ -1,9 +1,9 @@
-import { html_parse_classes_preview } from "./html_parse_classes_preview.mjs";
-import { marker } from "./marker.mjs";
-import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
-import { html_parse_find } from "./html_parse_find.mjs";
-import { html_parse_read } from "./html_parse_read.mjs";
-import { ebible_version_download_path_combine } from "./ebible_version_download_path_combine.mjs";
+import { html_parse_classes_preview } from "../../../love/public/src/html_parse_classes_preview.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { html_parse_descendants_classes } from "../../../love/public/src/html_parse_descendants_classes.mjs";
+import { html_parse_find } from "../../../love/public/src/html_parse_find.mjs";
+import { html_parse_read } from "../../../love/public/src/html_parse_read.mjs";
+import { ebible_version_download_path_combine } from "../../../love/public/src/ebible_version_download_path_combine.mjs";
 export async function ebible_chapter_classes(bible_folder, chapter_code) {
   marker("1");
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);

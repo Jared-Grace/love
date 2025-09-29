@@ -1,13 +1,13 @@
-import { object_property_set } from "./object_property_set.mjs";
-import { list_single } from "./list_single.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { true_is } from "./true_is.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { true_is } from "../../../love/public/src/true_is.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { repos_paths_map_unordered_combine } from "../../../love/public/src/repos_paths_map_unordered_combine.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
   async function lambda(joined) {

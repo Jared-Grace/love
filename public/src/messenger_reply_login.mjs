@@ -1,6 +1,6 @@
-import { messenger_reply_url } from "./messenger_reply_url.mjs";
-import { command_line_read_empty } from "./command_line_read_empty.mjs";
-import { import_install } from "./import_install.mjs";
+import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
+import { command_line_read_empty } from "../../../love/public/src/command_line_read_empty.mjs";
+import { import_install } from "../../../love/public/src/import_install.mjs";
 export async function messenger_reply_login() {
   const { chromium, firefox, webkit } = await import_install("playwright");
   const browser = await chromium.launch({

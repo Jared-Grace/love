@@ -1,11 +1,11 @@
-import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
-import { marker_next_index } from "./marker_next_index.mjs";
-import { marker_next_get } from "./marker_next_get.mjs";
-import { function_current_get } from "./function_current_get.mjs";
-import { marker } from "./marker.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { list_remove } from "./list_remove.mjs";
+import { js_marker_named_ast_arg } from "../../../love/public/src/js_marker_named_ast_arg.mjs";
+import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
+import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 export async function marker_move(m_name_from, m_name_to) {
   marker("1");
   let f_name = await function_current_get();

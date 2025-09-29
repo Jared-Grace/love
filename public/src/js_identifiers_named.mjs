@@ -1,6 +1,6 @@
-import { object_property_get } from "./object_property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { js_identifiers } from "./js_identifiers.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { js_identifiers } from "../../../love/public/src/js_identifiers.mjs";
 export function js_identifiers_named(ast, identifier_name) {
   let identifiers = js_identifiers(ast);
   function lambda(i) {

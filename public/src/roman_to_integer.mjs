@@ -1,4 +1,4 @@
-import { not } from "./not.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 export function roman_to_integer(input) {
   function unicodeToAscii(roman) {
     const map = {

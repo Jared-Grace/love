@@ -1,13 +1,13 @@
-import { list_remove_multiple } from "./list_remove_multiple.mjs";
-import { list_first } from "./list_first.mjs";
-import { integer_to } from "./integer_to.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { marker } from "./marker.mjs";
-import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
-import { each } from "./each.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { object_copy } from "./object_copy.mjs";
-import { js_identifiers_named } from "./js_identifiers_named.mjs";
+import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
+import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
 export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   let count = 1;
   let s1 = list_size_1(remaining);

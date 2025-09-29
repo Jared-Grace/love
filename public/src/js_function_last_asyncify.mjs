@@ -1,18 +1,18 @@
-import { list_difference } from "./list_difference.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_await_add_inner } from "./js_await_add_inner.mjs";
-import { js_declaration_name } from "./js_declaration_name.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { each_async } from "./each_async.mjs";
-import { object_properties } from "./object_properties.mjs";
-import { data_identifiers_search } from "./data_identifiers_search.mjs";
-import { equal } from "./equal.mjs";
-import { js_declaration_single } from "./js_declaration_single.mjs";
-import { marker } from "./marker.mjs";
-import { not } from "./not.mjs";
-import { js_stack_last_function } from "./js_stack_last_function.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { js_await_add_inner } from "../../../love/public/src/js_await_add_inner.mjs";
+import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
+import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { js_stack_last_function } from "../../../love/public/src/js_stack_last_function.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function js_function_last_asyncify(
   stack,
   async_is,

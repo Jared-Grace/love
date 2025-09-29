@@ -1,5 +1,5 @@
-import { marker } from "./marker.mjs";
-import { path_join } from "./path_join.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import fs from "fs";
 export function folder_read_files(path_folder) {
   marker("1");

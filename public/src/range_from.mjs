@@ -1,8 +1,8 @@
-import { integer_to } from "./integer_to.mjs";
-import { add } from "./add.mjs";
-import { list_map } from "./list_map.mjs";
-import { range } from "./range.mjs";
-import { marker } from "./marker.mjs";
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { add } from "../../../love/public/src/add.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { range } from "../../../love/public/src/range.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function range_from(from, to) {
   from = integer_to(from);
   to = integer_to(to);

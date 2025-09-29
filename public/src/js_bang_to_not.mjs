@@ -1,14 +1,14 @@
-import { js_declaration_single_name } from "./js_declaration_single_name.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { object_copy } from "./object_copy.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { not } from "./not.mjs";
-import { js_code_call } from "./js_code_call.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { equal } from "./equal.mjs";
-import { js_visit_type } from "./js_visit_type.mjs";
-import { marker } from "./marker.mjs";
-import { list_add } from "./list_add.mjs";
+import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
 export function js_bang_to_not(ast) {
   marker("1");
   let name = js_declaration_single_name(ast);
