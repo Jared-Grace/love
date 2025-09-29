@@ -824,7 +824,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_exists_inner"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4113,7 +4114,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "function_exists_inner"
   ],
   "book_code": [
    "app_reply_main",
@@ -7090,7 +7092,8 @@
    "ebible_references_parse_lines",
    "js_statement_call_get",
    "list_first_second_generic",
-   "list_multiple_is"
+   "list_multiple_is",
+   "function_exists_inner"
   ],
   "string_split_dash": [
    "ebible_references_parse_lines",
@@ -18748,6 +18751,7 @@
   "function_exists_inner": {
    "async": true,
    "identifiers": [
+    "list_multiple_is",
     "true_is",
     "list_filter",
     "repos_paths_map_unordered_combine",
@@ -18760,7 +18764,9 @@
     "to",
     "e",
     "bools",
-    "filtered"
+    "filtered",
+    "v",
+    "list"
    ]
   },
   "function_exists_strict": {
