@@ -4110,8 +4110,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "functions_names"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -18072,8 +18071,7 @@
     "folder",
     "joined",
     "f_names",
-    "squashed",
-    "list"
+    "squashed"
    ]
   },
   "functions_names_from_path": {
