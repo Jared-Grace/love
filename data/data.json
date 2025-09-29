@@ -5861,7 +5861,6 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "sandbox_5",
    "search_generic"
   ],
   "data_file_update": [
@@ -28516,9 +28515,8 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "log",
-    "sandbox_5",
-    "s5_inner"
+    "s5_inner",
+    "sandbox_5"
    ]
   },
   "sandbox_5_a": {
