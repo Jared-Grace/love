@@ -2175,7 +2175,6 @@
   "repos",
   "n repo_acronym_set",
   "s data",
-  "o w",
   "s lambda",
   "c user_repo_set user_repo_get",
   "repo_acronym_set l",
@@ -2287,6 +2286,7 @@
   "is data_file_update",
   "is data_file_update_inner",
   "s overwrite",
-  "de s5_inner"
+  "de s5_inner",
+  "o w"
  ]
 }
