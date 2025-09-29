@@ -9744,7 +9744,8 @@
    "function_run_git",
    "repos_gitignore_overwrite",
    "repo_path",
-   "git_repo_clone"
+   "git_repo_clone",
+   "function_new_declaration"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -10301,7 +10302,8 @@
    "git_repo_clone"
   ],
   "folder_name": [
-   "git_repo_clone"
+   "git_repo_clone",
+   "function_new_declaration"
   ],
   "git_repo_rename": [
    "git_repo_rename",
@@ -18982,6 +18984,7 @@
   "function_new_declaration": {
    "async": true,
    "identifiers": [
+    "repo_path",
     "user_repo_get",
     "js_format",
     "file_write",
@@ -19000,7 +19003,8 @@
     "ast",
     "contents_import",
     "formatted",
-    "repo_name"
+    "repo_name",
+    "folder_name"
    ]
   },
   "function_new_js": {
