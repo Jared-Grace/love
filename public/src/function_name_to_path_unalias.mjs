@@ -16,7 +16,6 @@ export async function function_name_to_path_unalias(f_name) {
     f_path,
     unaliased,
   };
-  return v;
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {
