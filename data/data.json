@@ -8388,8 +8388,7 @@
   ],
   "js_log_remove": [
    "functions_log_remove",
-   "js_log_remove",
-   "functions_imports_fix"
+   "js_log_remove"
   ],
   "functions_log_remove": [
    "functions_log_remove"
@@ -9961,7 +9960,8 @@
   ],
   "js_imports_paths_fix": [
    "function_rename_identifiers",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "functions_imports_fix"
   ],
   "string_padded_is": [
    "function_rename_suffix_add",
@@ -30020,7 +30020,7 @@
    "identifiers": [
     "functions_transform",
     "marker",
-    "js_log_remove",
+    "js_imports_paths_fix",
     "functions_imports_fix",
     "lambda",
     "v"
