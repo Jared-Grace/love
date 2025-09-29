@@ -36,7 +36,7 @@ export async function js_function_last_asyncify(
           f_name,
         });
         async function lambda2(ast) {
-          let v = await js_await_add_inner(functions, ast);
+          let v = await js_await_add_inner(functions, ast, visited);
           return v;
         }
         let output = await function_transform(f_name, lambda2);
