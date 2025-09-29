@@ -14288,6 +14288,9 @@
   "rns": [
    "repos_names",
    "functions_names"
+  ],
+  "each_folder": [
+   "function_run_git"
   ]
  },
  "functions": {
@@ -19518,7 +19521,8 @@
     "all",
     "lambda",
     "repo_name",
-    "folder"
+    "folder",
+    "each_folder"
    ]
   },
   "function_run_line": {
