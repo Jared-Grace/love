@@ -5876,7 +5876,8 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "function_parse_declaration_js_unparse"
   ],
   "data_file_update": [
    "data_file_update",
@@ -6445,7 +6446,8 @@
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "function_parse_declaration_js_unparse"
   ],
   "each_object": [
    "each_object",
@@ -11603,7 +11605,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic"
+   "search_generic",
+   "function_parse_declaration_js_unparse"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13154,7 +13157,8 @@
   ],
   "console": [
    "log_keep",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_parse_declaration_js_unparse"
   ],
   "log_unparse": [
    "log_unparse",
@@ -19496,11 +19500,15 @@
   "function_parse_declaration_js_unparse": {
    "async": true,
    "identifiers": [
+    "log",
     "js_unparse",
     "function_parse_declaration",
+    "object_properties",
     "function_parse_declaration_js_unparse",
     "f_name",
     "declaration",
+    "properties",
+    "console",
     "output"
    ]
   },
