@@ -1475,7 +1475,8 @@
    "user_repo_set",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "function_exists_inner"
   ],
   "ast": [
    "app_new_step_2",
@@ -4219,7 +4220,8 @@
    "sandbox_2",
    "watch",
    "functions_names",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_exists_inner"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4584,7 +4586,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "function_exists_inner"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -8454,7 +8457,8 @@
    "function_names_to_acronyms"
   ],
   "exists2": [
-   "function_acronym_to_name"
+   "function_acronym_to_name",
+   "function_exists_inner"
   ],
   "s1": [
    "function_acronym_to_name",
@@ -18766,6 +18770,10 @@
     "exists",
     "to",
     "e",
+    "lambda",
+    "joined",
+    "exists2",
+    "file_path",
     "bools",
     "filtered",
     "multiple"
