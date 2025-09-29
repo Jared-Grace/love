@@ -5825,7 +5825,8 @@
    "visit_filter_recursive_async"
   ],
   "data_files_update": [
-   "data_files_update"
+   "data_files_update",
+   "function_delete"
   ],
   "f_paths": [
    "data_files_update",
@@ -18606,6 +18607,7 @@
   "function_delete": {
    "async": true,
    "identifiers": [
+    "data_files_update",
     "marker",
     "function_name_to_path",
     "file_delete",
