@@ -2231,7 +2231,6 @@
   "ps",
   "o functions_names",
   "s sleep",
-  "functions_names",
   "is js_call_fill",
   "a functions_names",
   "au functions_names",
@@ -2296,6 +2295,7 @@
   "r repos_path_each_unordered repos_paths_map_unordered",
   "as squa",
   "u ls",
-  "a lsq list_squash"
+  "a lsq list_squash",
+  "functions_names"
  ]
 }
