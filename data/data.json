@@ -4460,8 +4460,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "sandbox_5"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -28511,8 +28510,7 @@
    "async": false,
    "identifiers": [
     "log",
-    "sandbox_5",
-    "message"
+    "sandbox_5"
    ]
   },
   "sandbox_5_a": {
