@@ -1483,7 +1483,8 @@
    "function_exists_inner",
    "function_name_to_path_search",
    "functions_paths",
-   "functions_names_to_paths"
+   "functions_names_to_paths",
+   "reduce"
   ],
   "ast": [
    "app_new_step_2",
@@ -2434,7 +2435,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "reduce"
   ],
   "index": [
    "app_replace_home",
@@ -2785,7 +2787,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "search_generic",
-   "visit_filter_recursive"
+   "visit_filter_recursive",
+   "reduce"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -2903,7 +2906,8 @@
   "start": [
    "app_replace_rule_set",
    "app_replace_rule_sets",
-   "list_slice_end"
+   "list_slice_end",
+   "reduce"
   ],
   "current": [
    "app_replace_rule_set",
@@ -4133,7 +4137,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "reduce"
   ],
   "book_code": [
    "app_reply_main",
@@ -6924,7 +6929,8 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "reduce"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -14442,6 +14448,9 @@
   ],
   "reduce": [
    "functions_names_to_paths",
+   "reduce"
+  ],
+  "lambda$before$current": [
    "reduce"
   ]
  },
@@ -29949,8 +29958,15 @@
   "reduce": {
    "async": false,
    "identifiers": [
+    "each",
     "marker",
-    "reduce"
+    "reduce",
+    "start",
+    "list",
+    "lambda$before$current",
+    "list2",
+    "lambda",
+    "item"
    ]
   }
  }
