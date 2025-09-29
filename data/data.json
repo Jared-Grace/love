@@ -1301,7 +1301,6 @@
    "function_params_new",
    "function_param_swap",
    "function_rename_identifiers",
-   "function_run_git",
    "function_run_line_parse",
    "function_transform_current",
    "function_transform_marker_all",
@@ -3698,7 +3697,6 @@
    "ebible_references_parse_lines",
    "functions_combine_name",
    "function_dependencies_code",
-   "function_run_git",
    "js_block_child_graph_unparse",
    "js_call_new_code",
    "list_map_unordered_async",
@@ -8105,7 +8103,6 @@
   "all": [
    "folder_read",
    "folder_read_files",
-   "function_run_git",
    "list_includes_assert",
    "list_wait",
    "repo_exists_assert"
@@ -9540,7 +9537,6 @@
   ],
   "repo_name": [
    "function_new_declaration",
-   "function_run_git",
    "list_includes_assert",
    "repo_acronym_to_name",
    "repo_acronym_to_path",
@@ -9818,7 +9814,6 @@
    "tasks_run"
   ],
   "repo_path": [
-   "function_run_git",
    "git_repo_clone",
    "path_repo_combine",
    "repos_gitignore_overwrite",
@@ -9831,7 +9826,6 @@
    "git_acp_call_folder"
   ],
   "repos_names": [
-   "function_run_git",
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite",
    "repos_names",
@@ -14290,6 +14284,9 @@
    "functions_names"
   ],
   "each_folder": [
+   "function_run_git"
+  ],
+  "repos_path_each_unordered": [
    "function_run_git"
   ]
  },
@@ -19509,20 +19506,15 @@
   "function_run_git": {
    "async": true,
    "identifiers": [
-    "list_map_unordered_async",
-    "repo_path",
+    "repos_path_each_unordered",
     "git_acp_call_folder",
-    "repos_names",
     "function_run_log",
     "function_run_git",
     "f_name",
     "args",
     "result",
-    "all",
-    "lambda",
-    "repo_name",
-    "folder",
-    "each_folder"
+    "each_folder",
+    "folder"
    ]
   },
   "function_run_line": {
