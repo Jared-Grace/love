@@ -11,7 +11,6 @@ export async function functions_names() {
   return v;
   await sleep(ms);
   await repos_paths_map_unordered(each_folder);
-  return result;
   async function each_folder(folder) {
     await git_acp_call_folder(f_name, args, folder);
   }
