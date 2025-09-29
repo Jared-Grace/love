@@ -9786,7 +9786,8 @@
    "function_run_git",
    "git_repo_clone",
    "repos_gitignore_overwrite",
-   "repo_path"
+   "repo_path",
+   "path_repo_combine"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -13704,7 +13705,6 @@
    "repo_acronym_set"
   ],
   "path_repo": [
-   "path_repo_combine",
    "repo_acronym_to_path"
   ],
   "r_path": [
@@ -27796,8 +27796,8 @@
   "path_repo_combine": {
    "async": false,
    "identifiers": [
+    "repo_path",
     "path_join",
-    "path_repo",
     "path_repo_combine",
     "repo",
     "f_path",
