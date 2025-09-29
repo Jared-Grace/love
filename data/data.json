@@ -13631,8 +13631,7 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete_all",
-   "js_function_last_asyncify"
+   "object_properties_delete_all"
   ],
   "getOwnPropertyNames": [
    "object_properties"
@@ -22788,8 +22787,7 @@
     "declaration",
     "result",
     "s",
-    "properties",
-    "obj"
+    "properties"
    ]
   },
   "js_identifiers": {
