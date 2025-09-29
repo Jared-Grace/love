@@ -4117,8 +4117,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "function_exists_inner"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -14355,6 +14354,9 @@
   ],
   "ti2": [
    "function_exists_inner"
+  ],
+  "f_path2": [
+   "function_exists_inner"
   ]
  },
  "functions": {
@@ -18792,7 +18794,7 @@
     "filtered",
     "multiple",
     "only",
-    "list"
+    "f_path2"
    ]
   },
   "function_exists_strict": {
