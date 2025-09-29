@@ -2330,6 +2330,7 @@
   "n reduce",
   "s pair",
   "functions_names_to_paths",
-  "is function_name_to_path_import"
+  "is function_name_to_path_import",
+  "is js_imports_paths_fix"
  ]
 }
