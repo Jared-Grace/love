@@ -29,8 +29,7 @@ export function js_imports_declarations(ast) {
       if (not(a3)) {
         return;
       }
-      let specifier = list_single(specifiers);
-      let { imported, local } = specifier;
+      let { imported, local } = list_single(specifiers);
       let both = [imported, local];
       let mapped = list_map_property(both, "name");
       let unique = list_unique(mapped);
