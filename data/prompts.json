@@ -2314,9 +2314,9 @@
   "ps",
   "function_parse_declaration_js_unparse test",
   "de s5_inner",
-  "functions_paths",
   "s name,path",
   "functions_path",
-  "o fns"
+  "o fns",
+  "functions_paths"
  ]
 }
