@@ -1,10 +1,7 @@
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { functions_names_from_path } from "../../../love/public/src/functions_names_from_path.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { repos_paths_map_unordered_combine } from "../../../love/public/src/repos_paths_map_unordered_combine.mjs";
 import { function_name_folder_to_path } from "../../../love/public/src/function_name_folder_to_path.mjs";
-import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export async function functions_paths() {
   marker("1");
