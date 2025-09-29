@@ -14183,9 +14183,6 @@
    "string_split_semicolon",
    "string_split_semicolon_space"
   ],
-  "s5_inner": [
-   "sandbox_5"
-  ],
   "sandbox_5": [
    "sandbox_5"
   ],
@@ -28905,7 +28902,6 @@
   "sandbox_5": {
    "async": true,
    "identifiers": [
-    "s5_inner",
     "sandbox_5"
    ]
   },
