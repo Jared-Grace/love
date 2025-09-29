@@ -824,7 +824,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_exists_inner"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4222,7 +4223,8 @@
    "sandbox_2",
    "watch",
    "functions_names",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_exists_inner"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4399,7 +4401,8 @@
    "data_all",
    "file_delete_if_exists",
    "file_exists",
-   "http_local"
+   "http_local",
+   "function_exists_inner"
   ],
   "assert_file_exists_not": [
    "assert_file_exists_not",
@@ -18773,18 +18776,21 @@
     "list_multiple_is",
     "list_filter",
     "repos_paths_map_unordered_combine",
+    "file_exists",
     "function_exists_inner",
     "u",
+    "lambda",
+    "joined",
+    "exists",
+    "v",
     "f_path",
     "mapped",
-    "lambda",
     "lambda2",
     "m",
     "exists2",
     "ti2",
     "filtered",
     "multiple",
-    "exists",
     "to",
     "only",
     "f_path2",
