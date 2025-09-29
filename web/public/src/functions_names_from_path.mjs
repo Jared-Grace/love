@@ -1,0 +1,14 @@
+import { list_map } from "./list_map.mjs";
+import { string_suffix_without } from "./string_suffix_without.mjs";
+import { function_name_extension } from "./function_name_extension.mjs";
+import { folder_read_files } from "./folder_read_files.mjs";
+export function functions_names_from_path(path) {
+  let paths = folder_read_files(path);
+  function lambda(p) {
+    let suffix = function_name_extension();
+    let without = string_suffix_without(p, suffix);
+    return without;
+  }
+  let f_names = list_map(paths, lambda);
+  return f_names;
+}
