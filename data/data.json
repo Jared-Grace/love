@@ -28,8 +28,7 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine",
-   "true_is"
+   "list_map_combine"
   ],
   "right": [
    "add",
@@ -2142,7 +2141,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "true_is"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -29734,7 +29734,7 @@
    "identifiers": [
     "equal",
     "true_is",
-    "left",
+    "value",
     "eq"
    ]
   }
