@@ -2295,7 +2295,6 @@
   "function_exists_inner",
   "function_exists sb",
   "u rs",
-  "urs k",
   "n test",
   "s exists",
   "is function_name_to_path_unalias",
@@ -2325,6 +2324,7 @@
   "p",
   "c functions_paths functions_names_to_paths",
   "urs l",
-  "urg"
+  "urg",
+  "urs k"
  ]
 }
