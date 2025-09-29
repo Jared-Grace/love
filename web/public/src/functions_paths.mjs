@@ -13,6 +13,7 @@ export async function functions_paths() {
   let path = functions_path();
   function lambda(r) {
     let f_names = functions_names_from_path(joined);
+    let mapped = list_map(list, function lambda2(item) {});
     let v = function_name_folder_to_path(f_name, folder);
   }
   let result = await repos_paths_map_unordered_combine(path, lambda);
