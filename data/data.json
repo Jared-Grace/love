@@ -4845,7 +4845,8 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green"
+   "trinity_green",
+   "js_function_last_asyncify"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -5014,7 +5015,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "js_function_last_asyncify"
   ],
   "catch_call": [
    "catch_call",
@@ -6087,7 +6089,8 @@
   ],
   "data_identifiers_search": [
    "data_identifiers_search",
-   "function_params_new"
+   "function_params_new",
+   "js_function_last_asyncify"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -12314,8 +12317,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic",
-   "js_function_last_asyncify"
+   "search_generic"
   ],
   "e2": [
    "js_log_remove",
@@ -22762,9 +22764,9 @@
    ]
   },
   "js_function_last_asyncify": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "log",
+    "data_identifiers_search",
     "equal",
     "js_declaration_single",
     "marker",
@@ -22779,7 +22781,9 @@
     "f",
     "property_name",
     "async",
-    "declaration"
+    "declaration",
+    "result",
+    "s"
    ]
   },
   "js_identifiers": {
