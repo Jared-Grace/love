@@ -9769,7 +9769,8 @@
    "function_run_git",
    "repo_acronym_to_name",
    "repo_acronym_to_path",
-   "repo_path"
+   "repo_path",
+   "user_repo_get"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -10219,7 +10220,6 @@
    "path_repo_combine",
    "repo_acronym_get",
    "repo_acronym_set",
-   "user_repo_get",
    "function_new_declaration"
   ],
   "repo_folder": [
@@ -29253,7 +29253,7 @@
     "user_repo_get",
     "f_path",
     "value",
-    "repo"
+    "repo_name"
    ]
   },
   "user_repo_path": {
