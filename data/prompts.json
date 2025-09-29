@@ -2262,6 +2262,7 @@
   "pnd visited",
   "s diff",
   "a ldf list_difference",
-  "as names"
+  "as names",
+  "o fns"
  ]
 }
