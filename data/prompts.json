@@ -2279,8 +2279,8 @@
   "s s5",
   "de",
   "o de",
-  "de s5_inner",
   "s5",
-  "d"
+  "d",
+  "de s5_inner"
  ]
 }
