@@ -4465,7 +4465,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "functions_names"
   ],
   "assert_not": [
    "assert_not",
@@ -11569,7 +11570,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic"
+   "search_generic",
+   "functions_names"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -18057,6 +18059,7 @@
   "functions_names": {
    "async": true,
    "identifiers": [
+    "log",
     "list_squash",
     "path_join",
     "repos_paths_map_unordered",
@@ -18071,7 +18074,8 @@
     "folder",
     "joined",
     "f_names",
-    "squashed"
+    "squashed",
+    "message"
    ]
   },
   "functions_names_from_path": {
