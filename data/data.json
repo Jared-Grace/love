@@ -19034,13 +19034,13 @@
     "function_imports_add",
     "ast",
     "imports",
+    "dictionary",
     "body",
     "lambda",
     "import_",
     "from",
     "code",
-    "statement",
-    "dictionary"
+    "statement"
    ]
   },
   "function_imports_fix": {
