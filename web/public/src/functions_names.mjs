@@ -15,5 +15,6 @@ export async function functions_names() {
     let f_names = functions_names_from_path(joined);
     return f_names;
   }
-  let squashed = list_squash(list);
+  let squashed = list_squash(result);
+  return squashed;
 }
