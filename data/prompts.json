@@ -2249,6 +2249,7 @@
   "s repo",
   "d",
   "s await",
-  "fs js_function_last_asyncify"
+  "fs js_function_last_asyncify",
+  "pnd functions"
  ]
 }
