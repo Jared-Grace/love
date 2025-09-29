@@ -2257,7 +2257,6 @@
   "is functions_names",
   "is functions_names_includes",
   "o s5",
-  "s5",
   "o s5_inner",
   "s function,new",
   "",
@@ -2279,6 +2278,7 @@
   "a lina list_includes_assert",
   "o urs",
   "n s5",
-  "s s5"
+  "s s5",
+  "s5"
  ]
 }
