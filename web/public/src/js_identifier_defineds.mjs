@@ -41,7 +41,8 @@ export function js_identifier_defineds(v) {
               let value = object_property_get(id, "name");
               la([value]);
             } else {
-              error(json_to(id));
+              let message = json_to(id);
+              error(message);
             }
           }
           each(ids, lambda);
