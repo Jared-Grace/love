@@ -2417,7 +2417,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "user_repo_get"
   ],
   "index": [
    "app_replace_home",
@@ -3647,7 +3648,8 @@
    "list_unique",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "visit_unique_async"
+   "visit_unique_async",
+   "user_repo_get"
   ],
   "list_concat": [
    "app_reply_main",
@@ -3920,7 +3922,8 @@
    "list_includes",
    "list_remove_if_exists",
    "marker_down_choices_lambda",
-   "string_includes"
+   "string_includes",
+   "user_repo_get"
   ],
   "condition": [
    "app_reply_main",
@@ -4106,7 +4109,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "user_repo_get"
   ],
   "book_code": [
    "app_reply_main",
@@ -29380,13 +29384,17 @@
   "user_repo_get": {
    "async": true,
    "identifiers": [
+    "list_includes",
     "data_get",
     "user_repo_path",
     "marker",
     "user_repo_get",
     "f_path",
     "value",
-    "repo_name"
+    "repo_name",
+    "includes",
+    "list",
+    "item"
    ]
   },
   "user_repo_path": {
