@@ -8,8 +8,8 @@ import { string_suffix_without } from "./string_suffix_without.mjs";
 import { list_map } from "./list_map.mjs";
 export async function functions_names() {
   marker("1");
-  let dirPath = functions_path();
-  let paths = folder_read_files(dirPath);
+  let path = functions_path();
+  let paths = folder_read_files(path);
   function lambda(p) {
     let suffix = function_name_extension();
     let without = string_suffix_without(p, suffix);
