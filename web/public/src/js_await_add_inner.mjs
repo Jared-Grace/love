@@ -42,7 +42,5 @@ export async function js_await_add_inner(functions, ast, visited) {
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
   let declaration = js_declaration_single(ast);
-  let name = js_declaration_name(declaration);
-  if (false) {
-  }
+  let name = js_declaration_name(declaration);la
 }
