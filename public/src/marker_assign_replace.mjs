@@ -16,6 +16,6 @@ export async function marker_assign_replace(init_code) {
       la(await js_unparse(next));
     }
   }
-  let list = list_adder_async(lambda2);
+  let list = await list_adder_async(lambda2);
   return list;
 }

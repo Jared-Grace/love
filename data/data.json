@@ -335,7 +335,8 @@
    "watch",
    "whitespace_normalize",
    "js_function_last_asyncify",
-   "function_param_new_double"
+   "function_param_new_double",
+   "function_current_get"
   ],
   "apps_get": [
    "apps_get"
@@ -29471,6 +29472,7 @@
   "function_current_get": {
    "async": true,
    "identifiers": [
+    "marker",
     "user_repo_path",
     "data_property_get",
     "function_current_get",
