@@ -3,10 +3,10 @@ import { js_marker_insert } from "./js_marker_insert.mjs";
 import { marker } from "./marker.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 export async function marker_new() {
   marker("1");
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   let v = await function_transform_marker(f_name, lambda);
   return v;
   async function lambda(a) {
