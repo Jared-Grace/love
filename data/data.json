@@ -8675,8 +8675,7 @@
    "function_aliases_restore"
   ],
   "op": [
-   "function_aliases_restore",
-   "function_parse_declaration_inner"
+   "function_aliases_restore"
   ],
   "ea": [
    "function_aliases_restore",
@@ -8765,7 +8764,8 @@
    "function_aliases_restore"
   ],
   "lm": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "function_parse_declaration_inner"
   ],
   "lmu": [
    "function_aliases_restore"
@@ -19492,7 +19492,7 @@
     "ast",
     "declaration",
     "to",
-    "op"
+    "lm"
    ]
   },
   "function_parse_declaration_js_unparse": {
