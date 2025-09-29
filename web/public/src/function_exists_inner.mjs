@@ -1,3 +1,4 @@
+import { true_is } from "./true_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { repos_paths_map_unordered_combine } from "./repos_paths_map_unordered_combine.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -12,5 +13,5 @@ export async function function_exists_inner(u) {
   return e;
   let bools = await repos_paths_map_unordered_combine(f_path, file_exists);
   function lambda(item) {}
-  let filtered = list_filter(bools, lambda);
+  let filtered = list_filter(bools, true_is);
 }
