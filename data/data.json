@@ -5648,7 +5648,6 @@
    "function_import",
    "function_name_to_path",
    "git_push_folder",
-   "git_repo_clone",
    "html_name_to_path_dev",
    "html_update_generic",
    "http_firebase_file_path",
@@ -7863,7 +7862,6 @@
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "git_repo_clone",
    "repos_names"
   ],
   "only": [
@@ -9745,7 +9743,8 @@
   "repo_path": [
    "function_run_git",
    "repos_gitignore_overwrite",
-   "repo_path"
+   "repo_path",
+   "git_repo_clone"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -10293,7 +10292,6 @@
    "git_rebase"
   ],
   "repos_folder": [
-   "git_repo_clone",
    "repos_folder",
    "repos_names",
    "repo_path"
@@ -19973,8 +19971,7 @@
   "git_repo_clone": {
    "async": true,
    "identifiers": [
-    "path_join",
-    "repos_folder",
+    "repo_path",
     "command_line_git",
     "git_repo_url",
     "marker",
@@ -19982,7 +19979,6 @@
     "user",
     "repo",
     "url",
-    "path_folder",
     "folder_name"
    ]
   },
