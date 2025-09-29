@@ -2282,6 +2282,7 @@
   "d",
   "de s5_inner",
   "is sleep",
-  "s data_fun"
+  "s data_fun",
+  "is data_functions_get"
  ]
 }
