@@ -2229,6 +2229,7 @@
   "repos_gitignore_overwrite",
   "np",
   "d",
-  "is git_acp_folder"
+  "is git_acp_folder",
+  "is git_acp_call_folder"
  ]
 }
