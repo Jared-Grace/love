@@ -4460,7 +4460,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "s5i"
   ],
   "assert_not": [
    "assert_not",
@@ -5858,7 +5859,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "s5i"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14282,7 +14284,8 @@
    "watch"
   ],
   "s5i": [
-   "sandbox_5"
+   "sandbox_5",
+   "s5i"
   ]
  },
  "functions": {
@@ -29617,6 +29620,14 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "s5i": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "s5i",
+    "message"
    ]
   }
  }
