@@ -2212,7 +2212,6 @@
   "r repos repos_names",
   "r path_repo repo_path",
   "s resol",
-  "ps",
   "s git",
   "p",
   "repos_gitignore_overwrite",
@@ -2243,6 +2242,7 @@
   "fs js_function_last_asyncify",
   "pnd ast",
   "s declar,sing",
-  "o s5"
+  "o s5",
+  "ps"
  ]
 }
