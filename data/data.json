@@ -5858,7 +5858,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "s5_inner"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14282,7 +14283,8 @@
    "watch"
   ],
   "s5_inner": [
-   "sandbox_5"
+   "sandbox_5",
+   "s5_inner"
   ]
  },
  "functions": {
@@ -29617,6 +29619,13 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "s5_inner": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "s5_inner"
    ]
   }
  }
