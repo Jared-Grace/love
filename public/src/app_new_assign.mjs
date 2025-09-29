@@ -1,6 +1,6 @@
-import { js_declare } from "./js_declare.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { js_code_dot } from "./js_code_dot.mjs";
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { js_code_dot } from "../../../love/public/src/js_code_dot.mjs";
 export function app_new_assign(combined) {
   const v = "f_name";
   let code = js_code_dot(combined, "name");

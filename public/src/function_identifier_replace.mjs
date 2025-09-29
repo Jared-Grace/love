@@ -1,12 +1,12 @@
-import { list_empty_is } from "./list_empty_is.mjs";
-import { assert_not } from "./assert_not.mjs";
-import { function_current_get } from "./function_current_get.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { js_identifiers_named } from "./js_identifiers_named.mjs";
-import { each } from "./each.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { marker } from "./marker.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { assert_not } from "../../../love/public/src/assert_not.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_identifier_replace(
   identifier_name,
   replacement,

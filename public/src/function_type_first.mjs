@@ -1,9 +1,9 @@
-import { function_current_get } from "./function_current_get.mjs";
-import { js_visit_nodes } from "./js_visit_nodes.mjs";
-import { list_adder } from "./list_adder.mjs";
-import { function_parse } from "./function_parse.mjs";
-import { js_node_type } from "./js_node_type.mjs";
-import { list_first } from "./list_first.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { js_visit_nodes } from "../../../love/public/src/js_visit_nodes.mjs";
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { function_parse } from "../../../love/public/src/function_parse.mjs";
+import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function function_type_first(type) {
   let f_name = await function_current_get();
   let { ast } = await function_parse(f_name);

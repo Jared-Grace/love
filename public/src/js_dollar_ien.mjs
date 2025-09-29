@@ -1,5 +1,5 @@
-import { js_dollar_ien_generic } from "./js_dollar_ien_generic.mjs";
-import { null_is } from "./null_is.mjs";
+import { js_dollar_ien_generic } from "../../../love/public/src/js_dollar_ien_generic.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 export async function js_dollar_ien({
   remaining,
   node,

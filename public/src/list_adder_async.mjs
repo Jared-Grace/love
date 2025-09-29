@@ -1,4 +1,4 @@
-import { list_add } from "./list_add.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
 export async function list_adder_async(lambda$la) {
   let list = [];
   function list_adder_inner(item) {

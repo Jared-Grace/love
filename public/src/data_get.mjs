@@ -1,6 +1,6 @@
-import { marker } from "./marker.mjs";
-import { data_all } from "./data_all.mjs";
-import { object_property_initialize } from "./object_property_initialize.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { data_all } from "../../../love/public/src/data_all.mjs";
+import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 export async function data_get(property_name, value_initial, d_path) {
   marker("1");
   var { data, file_path } = await data_all(d_path);

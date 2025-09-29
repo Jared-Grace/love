@@ -1,8 +1,8 @@
-import { list_remove } from "./list_remove.mjs";
-import { each } from "./each.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { js_imports_unused } from "./js_imports_unused.mjs";
-import { marker } from "./marker.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_imports_unused } from "../../../love/public/src/js_imports_unused.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_imports_unused_remove(ast) {
   marker("1");
   let unuseds = js_imports_unused(ast);

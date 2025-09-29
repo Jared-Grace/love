@@ -1,8 +1,8 @@
-import { each_range } from "./each_range.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_next } from "./list_next.mjs";
-import { list_is } from "./list_is.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
+import { each_range } from "../../../love/public/src/each_range.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_next } from "../../../love/public/src/list_next.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_dollar_a_generic({
   stack1,
   stack2,

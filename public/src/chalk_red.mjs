@@ -1,5 +1,5 @@
-import { marker } from "./marker.mjs";
-import { chalk_color } from "./chalk_color.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { chalk_color } from "../../../love/public/src/chalk_color.mjs";
 export async function chalk_red(prompt) {
   marker("1");
   const color = "red";

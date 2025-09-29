@@ -1,8 +1,8 @@
-import { html_remove } from "./html_remove.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_document_body } from "./html_document_body.mjs";
-import { marker } from "./marker.mjs";
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
+import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_loading(lambda) {
   marker("1");
   let body = html_document_body();

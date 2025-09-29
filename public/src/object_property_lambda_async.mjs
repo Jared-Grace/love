@@ -1,8 +1,8 @@
-import { marker } from "./marker.mjs";
-import { not } from "./not.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { object_property_exists } from "./object_property_exists.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 export async function object_property_lambda_async(
   object,
   property_name,

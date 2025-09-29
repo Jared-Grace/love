@@ -1,7 +1,7 @@
-import { marker } from "./marker.mjs";
-import { object_property_delete } from "./object_property_delete.mjs";
-import { each } from "./each.mjs";
-import { object_properties } from "./object_properties.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
 export function object_properties_delete_all(obj) {
   marker("1");
   function lambda(p) {

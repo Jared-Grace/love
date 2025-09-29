@@ -1,6 +1,6 @@
-import { repos_folder } from "./repos_folder.mjs";
-import { folder_read } from "./folder_read.mjs";
-import { marker } from "./marker.mjs";
+import { repos_folder } from "../../../love/public/src/repos_folder.mjs";
+import { folder_read } from "../../../love/public/src/folder_read.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function repos_names() {
   marker("1");
   let path_folder = repos_folder();

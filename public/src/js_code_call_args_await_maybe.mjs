@@ -1,6 +1,6 @@
-import { js_code_await } from "./js_code_await.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { js_code_call_args } from "./js_code_call_args.mjs";
+import { js_code_await } from "../../../love/public/src/js_code_await.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 export function js_code_call_args_await_maybe(
   unaliased,
   args_code,

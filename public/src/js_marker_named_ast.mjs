@@ -1,7 +1,7 @@
-import { list_single } from "./list_single.mjs";
-import { js_marker_named } from "./js_marker_named.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { js_type } from "./js_type.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { js_marker_named } from "../../../love/public/src/js_marker_named.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { js_type } from "../../../love/public/src/js_type.mjs";
 export function js_marker_named_ast(ast, m_name_from) {
   let visitors = js_type(ast, "CallExpression");
   function lambda(v) {

@@ -1,7 +1,7 @@
-import { js_statement_return_empty_add } from "./js_statement_return_empty_add.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { js_dollar_i } from "./js_dollar_i.mjs";
-import { marker } from "./marker.mjs";
+import { js_statement_return_empty_add } from "../../../love/public/src/js_statement_return_empty_add.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function js_dollar_ir({
   remaining,
   node,

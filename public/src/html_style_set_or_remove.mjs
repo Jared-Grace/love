@@ -1,5 +1,5 @@
-import { html_style_remove } from "./html_style_remove.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_style_remove } from "../../../love/public/src/html_style_remove.mjs";
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 export function html_style_set_or_remove(
   condition,
   component,

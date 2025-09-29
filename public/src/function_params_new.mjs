@@ -1,18 +1,18 @@
-import { not } from "./not.mjs";
-import { function_exists } from "./function_exists.mjs";
-import { assert_arguments } from "./assert_arguments.mjs";
-import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
-import { object_properties } from "./object_properties.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_current_get } from "./function_current_get.mjs";
-import { each_async } from "./each_async.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { data_identifiers_search } from "./data_identifiers_search.mjs";
-import { function_transform_current } from "./function_transform_current.mjs";
-import { js_declaration_single_params_add } from "./js_declaration_single_params_add.mjs";
-import { string_split } from "./string_split.mjs";
+import { not } from "../../../love/public/src/not.mjs";
+import { function_exists } from "../../../love/public/src/function_exists.mjs";
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
+import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
+import { js_declaration_single_params_add } from "../../../love/public/src/js_declaration_single_params_add.mjs";
+import { string_split } from "../../../love/public/src/string_split.mjs";
 export async function function_params_new(
   param_names_comma,
   values_default_comma,

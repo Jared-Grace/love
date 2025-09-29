@@ -1,7 +1,7 @@
-import { marker } from "./marker.mjs";
-import { data_save } from "./data_save.mjs";
-import { object_property_set } from "./object_property_set.mjs";
-import { data_get } from "./data_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { data_save } from "../../../love/public/src/data_save.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { data_get } from "../../../love/public/src/data_get.mjs";
 export async function data_transform(
   property_name,
   value_initial,

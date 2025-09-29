@@ -1,11 +1,11 @@
-import { data_functions_get } from "./data_functions_get.mjs";
-import { js_function_last_asyncify } from "./js_function_last_asyncify.mjs";
-import { function_name_unalias } from "./function_name_unalias.mjs";
-import { js_visit_type_each_async } from "./js_visit_type_each_async.mjs";
-import { functions_names_includes } from "./functions_names_includes.mjs";
-import { js_call_new } from "./js_call_new.mjs";
-import { js_identifier_is } from "./js_identifier_is.mjs";
-import { object_replace } from "./object_replace.mjs";
+import { data_functions_get } from "../../../love/public/src/data_functions_get.mjs";
+import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
+import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
+import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
+import { functions_names_includes } from "../../../love/public/src/functions_names_includes.mjs";
+import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
+import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export async function js_call_fill(ast) {
   let functions = await data_functions_get();
   let visited = [];

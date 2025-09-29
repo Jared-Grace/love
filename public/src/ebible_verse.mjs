@@ -1,8 +1,8 @@
-import { ebible_verse_download } from "./ebible_verse_download.mjs";
-import { browser_is } from "./browser_is.mjs";
-import { list_find_property } from "./list_find_property.mjs";
-import { ebible_verses } from "./ebible_verses.mjs";
-import { marker } from "./marker.mjs";
+import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_verse(bible_folder, chapter_code, verse_number) {
   marker("1");
   let b = browser_is();

@@ -1,5 +1,5 @@
 import * as acorn from "acorn";
-import { log_keep } from "./log_keep.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_parse(code) {
   let ast = null;
   try {

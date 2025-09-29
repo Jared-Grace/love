@@ -1,18 +1,18 @@
-import { each_reverse } from "./each_reverse.mjs";
-import { list_size_1_assert } from "./list_size_1_assert.mjs";
-import { list_first_remaining } from "./list_first_remaining.mjs";
-import { list_add } from "./list_add.mjs";
-import { js_declare } from "./js_declare.mjs";
-import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { object_replace } from "./object_replace.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { js_code_call_args } from "./js_code_call_args.mjs";
-import { js_code_string } from "./js_code_string.mjs";
-import { list_insert } from "./list_insert.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { list_index_of_next_outside } from "./list_index_of_next_outside.mjs";
+import { each_reverse } from "../../../love/public/src/each_reverse.mjs";
+import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
+import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 export async function js_dollar_g({
   remaining,
   node,

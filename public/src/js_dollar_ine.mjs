@@ -1,5 +1,5 @@
-import { js_dollar_ien_generic } from "./js_dollar_ien_generic.mjs";
-import { equal_not } from "./equal_not.mjs";
+import { js_dollar_ien_generic } from "../../../love/public/src/js_dollar_ien_generic.mjs";
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export async function js_dollar_ine({
   remaining,
   node,

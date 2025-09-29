@@ -1,8 +1,8 @@
-import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
-import { marker } from "./marker.mjs";
-import { function_imports_add } from "./function_imports_add.mjs";
-import { function_imports_missing } from "./function_imports_missing.mjs";
-import { file_js_unparse } from "./file_js_unparse.mjs";
+import { js_imports_unused_remove } from "../../../love/public/src/js_imports_unused_remove.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { function_imports_add } from "../../../love/public/src/function_imports_add.mjs";
+import { function_imports_missing } from "../../../love/public/src/function_imports_missing.mjs";
+import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 export async function function_imports_fix(f_name) {
   marker("1");
   let parsed = await function_imports_missing(f_name);

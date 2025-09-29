@@ -1,5 +1,5 @@
-import { marker } from "./marker.mjs";
-import { each_async } from "./each_async.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function each_index_async(list, lambda$item$index) {
   marker("1");
   let index = 0;

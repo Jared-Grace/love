@@ -1,10 +1,10 @@
-import { list_filter_property } from "./list_filter_property.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_imports_declarations } from "./js_imports_declarations.mjs";
-import { js_identifiers_named_count } from "./js_identifiers_named_count.mjs";
-import { object_property_get } from "./object_property_get.mjs";
-import { marker } from "./marker.mjs";
-import { object_merge } from "./object_merge.mjs";
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_imports_declarations } from "../../../love/public/src/js_imports_declarations.mjs";
+import { js_identifiers_named_count } from "../../../love/public/src/js_identifiers_named_count.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function js_imports_unused(ast) {
   marker("1");
   let imports = js_imports_declarations(ast);

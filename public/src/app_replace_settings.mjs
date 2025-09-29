@@ -1,11 +1,11 @@
-import { emoji_home } from "./emoji_home.mjs";
-import { html_button_screen } from "./html_button_screen.mjs";
-import { app_replace_font_size_adjust } from "./app_replace_font_size_adjust.mjs";
-import { app_replace_font_size_factor } from "./app_replace_font_size_factor.mjs";
-import { emoji_font_smaller } from "./emoji_font_smaller.mjs";
-import { emoji_font_larger } from "./emoji_font_larger.mjs";
-import { html_button } from "./html_button.mjs";
-import { marker } from "./marker.mjs";
+import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
+import { html_button_screen } from "../../../love/public/src/html_button_screen.mjs";
+import { app_replace_font_size_adjust } from "../../../love/public/src/app_replace_font_size_adjust.mjs";
+import { app_replace_font_size_factor } from "../../../love/public/src/app_replace_font_size_factor.mjs";
+import { emoji_font_smaller } from "../../../love/public/src/emoji_font_smaller.mjs";
+import { emoji_font_larger } from "../../../love/public/src/emoji_font_larger.mjs";
+import { html_button } from "../../../love/public/src/html_button.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   let { root } = context;
