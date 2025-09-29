@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { js_await_add_inner } from "./js_await_add_inner.mjs";
 import { js_declaration_name } from "./js_declaration_name.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -31,6 +32,7 @@ export async function js_function_last_asyncify(
       let result = await data_identifiers_search(name);
       let properties = object_properties(result);
       async function lambda(f_name) {
+        log(message);
         async function lambda2(ast) {
           let v = await js_await_add_inner(functions, ast);
           return v;
