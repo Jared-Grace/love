@@ -6274,7 +6274,6 @@
   "ms": [
    "date_diff_hours",
    "date_ms_to_hours",
-   "functions_names",
    "function_aliases_restore",
    "s5_inner",
    "sleep"
@@ -8317,7 +8316,6 @@
    "repo_exists_assert"
   ],
   "sleep": [
-   "functions_names",
    "http_sleep",
    "keyboard_type_delay",
    "retry",
@@ -18059,13 +18057,11 @@
     "git_acp_call_folder",
     "repos_paths_map_unordered",
     "functions_names_from_path",
-    "sleep",
     "marker",
     "functions_path",
     "functions_names",
     "path",
     "v",
-    "ms",
     "each_folder",
     "folder",
     "f_name",
