@@ -1,22 +1,13 @@
+import { functions_names_from_path } from "./functions_names_from_path.mjs";
 import { repos_names } from "./repos_names.mjs";
 import { sleep } from "./sleep.mjs";
 import { marker } from "./marker.mjs";
 import { functions_path } from "./functions_path.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
-import { function_name_extension } from "./function_name_extension.mjs";
-import { string_suffix_without } from "./string_suffix_without.mjs";
-import { list_map } from "./list_map.mjs";
 export async function functions_names() {
   marker("1");
   let path = functions_path();
-  let paths = folder_read_files(path);
-  function lambda(p) {
-    let suffix = function_name_extension();
-    let without = string_suffix_without(p, suffix);
-    return without;
-  }
-  let f_names = list_map(paths, lambda);
-  return f_names;
+  let v = functions_names_from_path(path);
+  return v;
   await sleep(ms);
   let rns = await repos_names();
 }
