@@ -18209,7 +18209,6 @@
     "functions_path",
     "list_map",
     "functions_paths",
-    "path",
     "lambda",
     "folder",
     "f_names",
@@ -18217,6 +18216,7 @@
     "f_name",
     "v",
     "mapped",
+    "path",
     "result",
     "squashed"
    ]
