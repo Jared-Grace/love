@@ -17,7 +17,7 @@ export async function function_exists_inner(u) {
     let exists = await file_exists(joined);
     let v = {
       exists,
-      f_path,
+      f_pat: joined,
     };
     return v;
   }
