@@ -3,10 +3,8 @@ import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function js_parse_statement(code) {
   let code2 = js_code_declaration("a", code, true);
-  let ast = js_parse(code2);
-  let { body } = ast;
-  let declaration = list_first(body);
-  let { body: block } = declaration;
+  let { body } = js_parse(code2);
+  let { body: block } = list_first(body);
   let { body: statements } = block;
   const statement = list_first(statements);
   return statement;
