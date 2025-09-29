@@ -5814,7 +5814,8 @@
    "repo_acronym_set",
    "repo_path",
    "server",
-   "user_repo_set"
+   "user_repo_set",
+   "function_name_to_path_import"
   ],
   "data_copy": [
    "data_copy",
@@ -7950,7 +7951,8 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server"
+   "server",
+   "function_name_to_path_import"
   ],
   "prefix": [
    "firebase_service_account",
@@ -13826,8 +13828,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "function_name_to_path_import"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -14463,6 +14464,9 @@
   ],
   "reduced": [
    "reduce"
+  ],
+  "previous2": [
+   "function_name_to_path_import"
   ]
  },
  "functions": {
@@ -19223,13 +19227,15 @@
     "marker",
     "folder_current_join_code",
     "function_name_to_base",
+    "folder_previous",
     "function_name_to_path_import",
     "import_",
     "dictionary",
     "f_name_ext",
     "from",
-    "joined",
-    "segments"
+    "previous",
+    "previous2",
+    "joined"
    ]
   },
   "function_name_to_path_unalias": {
