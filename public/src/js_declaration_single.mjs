@@ -10,7 +10,6 @@ export function js_declaration_single(ast) {
     js_visit_type(ast, "ExportNamedDeclaration", lambda);
   }
   let nameds = list_adder(lambda2);
-  let named = list_single(nameds);
-  let { declaration } = named;
+  let { declaration } = list_single(nameds);
   return declaration;
 }
