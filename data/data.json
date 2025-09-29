@@ -5033,7 +5033,8 @@
    "tasks_run",
    "task_new",
    "ternary",
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "functions_names"
   ],
   "catch_call": [
    "catch_call",
@@ -18062,6 +18063,7 @@
     "functions_names",
     "path",
     "v",
+    "result",
     "each_folder",
     "folder",
     "joined",
