@@ -14259,7 +14259,8 @@
   "visited": [
    "js_await_add",
    "js_await_add_inner",
-   "js_call_fill"
+   "js_call_fill",
+   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22848,6 +22849,7 @@
     "async_is",
     "ast",
     "functions",
+    "visited",
     "f",
     "property_name",
     "async",
