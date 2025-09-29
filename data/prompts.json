@@ -2245,7 +2245,6 @@
   "s await",
   "ps",
   "o functions_names",
-  "is functions_names",
   "s sleep",
   "d",
   "o s5",
@@ -2265,6 +2264,8 @@
   "as names",
   "o fns",
   "is difference",
-  "is fns"
+  "is fns",
+  "is function_names",
+  "is functions_names"
  ]
 }
