@@ -440,8 +440,7 @@
    "list_concat_multiple",
    "list_map_combine",
    "marker_screen_add",
-   "repo_path_combine",
-   "function_copy"
+   "repo_path_combine"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -18680,7 +18679,6 @@
     "unaliased_new",
     "f_name",
     "repo_name",
-    "combined",
     "f_path_new",
     "lambda",
     "ast"
