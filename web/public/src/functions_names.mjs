@@ -10,7 +10,7 @@ export async function functions_names() {
   return v;
   await repos_paths_map_unordered(each_folder);
   async function each_folder(folder) {
-    let joined = path_join(segments);
-    let v = functions_names_from_path(path);
+    let joined = path_join([folder, path]);
+    let v = functions_names_from_path(joined);
   }
 }
