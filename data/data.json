@@ -11553,8 +11553,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "s5_inner",
-   "search_generic",
-   "sandbox_5"
+   "search_generic"
   ],
   "js_identifier_is": [
    "js_call_fill",
@@ -13979,7 +13978,8 @@
    "s5"
   ],
   "s5_inner": [
-   "s5_inner"
+   "s5_inner",
+   "sandbox_5"
   ],
   "sandbox": [
    "sandbox"
@@ -28522,7 +28522,7 @@
   "sandbox_5": {
    "async": false,
    "identifiers": [
-    "log",
+    "s5_inner",
     "sandbox_5"
    ]
   },
