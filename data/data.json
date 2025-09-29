@@ -2430,8 +2430,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "functions_paths"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -3191,8 +3190,7 @@
    "marker_functionize",
    "range_from",
    "reply",
-   "sandbox",
-   "functions_paths"
+   "sandbox"
   ],
   "any": [
    "app_replace_rule_set",
@@ -4130,8 +4128,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "functions_paths"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -4240,8 +4237,7 @@
    "repos_paths_map_unordered_combine",
    "function_exists_inner",
    "function_name_to_path_search",
-   "function_name_folder_to_path",
-   "functions_paths"
+   "function_name_folder_to_path"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -18222,15 +18218,11 @@
     "f_paths",
     "path",
     "lambda",
-    "r",
-    "joined",
-    "lambda2",
-    "item",
-    "mapped",
-    "list",
-    "v",
-    "f_name",
     "folder",
+    "lambda2",
+    "f_name",
+    "v",
+    "mapped",
     "result",
     "squashed"
    ]
