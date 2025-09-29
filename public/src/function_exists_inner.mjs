@@ -15,10 +15,11 @@ export async function function_exists_inner(u) {
   return e;
   async function lambda(joined) {
     let exists = await file_exists(joined);
-    return {
+    let v = {
       exists,
       f_path,
     };
+    return v;
   }
   let bools = await repos_paths_map_unordered_combine(f_path, lambda);
   let filtered = list_filter(bools, true_is);
