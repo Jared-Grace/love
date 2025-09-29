@@ -2296,7 +2296,6 @@
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
   "s true",
-  "urg",
   "urs l",
   "n true_is",
   "s set",
@@ -2313,6 +2312,7 @@
   "function_name_to_path_unalias test",
   "o function_exists",
   "is function_exists_inner",
-  "function_exists test"
+  "function_exists test",
+  "urg"
  ]
 }
