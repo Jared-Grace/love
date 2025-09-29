@@ -4,6 +4,6 @@ import { marker } from "./marker.mjs";
 export async function repos_names() {
   marker("1");
   let path_folder = repos_folder();
-  let all = await folder_read(path_folder);
-  return all;
+  let rns = await folder_read(path_folder);
+  return rns;
 }
