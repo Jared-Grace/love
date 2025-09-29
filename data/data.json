@@ -278,7 +278,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "file_exists"
   ],
   "t2": [
    "t2"
@@ -17373,6 +17374,7 @@
   "file_exists": {
    "async": true,
    "identifiers": [
+    "marker",
     "throws_not_async",
     "error",
     "promise_is",
