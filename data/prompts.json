@@ -2254,7 +2254,6 @@
   "si git_acp_folder",
   "is git_acp_folder",
   "is git_acp_call_folder",
-  "p",
   "repos_names",
   "user_repo_get",
   "o git_acp_folder",
@@ -2307,6 +2306,7 @@
   "s set,object",
   "function_exists_inner sandbox",
   "function_exists_inner",
+  "p",
   "function_exists sb"
  ]
 }
