@@ -19014,6 +19014,7 @@
   "function_new_declaration": {
    "async": true,
    "identifiers": [
+    "repo_path_combine",
     "user_repo_get",
     "js_format",
     "file_write",
@@ -19033,8 +19034,7 @@
     "contents_import",
     "formatted",
     "repo_name",
-    "combined",
-    "repo_path_combine"
+    "combined"
    ]
   },
   "function_new_js": {
