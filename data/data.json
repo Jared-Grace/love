@@ -6013,7 +6013,6 @@
    "function_type_first",
    "marker_assign_replace",
    "marker_down_choices",
-   "marker_functionize",
    "marker_move",
    "marker_next",
    "marker_next_await",
@@ -14218,7 +14217,8 @@
    "marker_next_delete",
    "marker_param_add",
    "marker_call",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "marker_functionize"
   ]
  },
  "functions": {
@@ -26485,7 +26485,7 @@
     "marker_previous_index",
     "js_marker_named_ast_arg",
     "marker_next_index",
-    "data_function_current_get",
+    "function_current_get",
     "js_node_type_is",
     "list_get_end",
     "js_visit_type",
