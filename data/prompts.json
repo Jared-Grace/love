@@ -1031,7 +1031,6 @@
   "a fwc function_watch_ending_change",
   "fwc error_attention_set set clear",
   "s update",
-  "functions_path",
   "de functions_paths",
   "de fs",
   "o fs",
@@ -2317,6 +2316,7 @@
   "function_parse_declaration_js_unparse test",
   "de s5_inner",
   "functions_paths",
-  "s name,path"
+  "s name,path",
+  "functions_path"
  ]
 }
