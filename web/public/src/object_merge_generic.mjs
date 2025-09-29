@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { each } from "./each.mjs";
 import { object_properties } from "./object_properties.mjs";
 import { object_property_set } from "./object_property_set.mjs";
@@ -8,9 +7,6 @@ import { error_json } from "./error_json.mjs";
 import { list_map } from "./list_map.mjs";
 export function object_merge_generic(strict, to, from) {
   let ps = list_map([to, from], object_properties);
-  console.log({
-    ps,
-  });
   function lambda(property_name) {
     if (strict) {
       if (object_property_exists(to, property_name)) {
