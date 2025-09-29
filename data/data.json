@@ -4445,7 +4445,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_function_last_asyncify"
   ],
   "assert_not": [
    "assert_not",
@@ -12313,7 +12314,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "search_generic"
+   "search_generic",
+   "js_function_last_asyncify"
   ],
   "e2": [
    "js_log_remove",
@@ -22763,6 +22765,7 @@
   "js_function_last_asyncify": {
    "async": false,
    "identifiers": [
+    "log",
     "equal",
     "js_declaration_single",
     "marker",
@@ -22777,7 +22780,8 @@
     "f",
     "property_name",
     "async",
-    "declaration"
+    "declaration",
+    "message"
    ]
   },
   "js_identifiers": {
