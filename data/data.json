@@ -825,7 +825,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "repos_paths_map_unordered"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -28257,7 +28258,8 @@
     "all",
     "lambda",
     "repo_name",
-    "folder"
+    "folder",
+    "v"
    ]
   },
   "repo_acronym_get": {
