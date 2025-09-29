@@ -14255,6 +14255,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "visited": [
+   "js_await_add"
   ]
  },
  "functions": {
@@ -21321,7 +21324,8 @@
     "js_await_add",
     "ast",
     "functions",
-    "v2"
+    "v2",
+    "visited"
    ]
   },
   "js_await_add_inner": {
