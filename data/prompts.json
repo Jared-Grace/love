@@ -2090,7 +2090,6 @@
   "s clone",
   "fc data_all",
   "o fc",
-  "as current",
   "pn f_path \"data.json\"",
   "fs data_all",
   "fs data_property_get",
@@ -2242,6 +2241,7 @@
   "fcg",
   "s current",
   "data_function_current_get",
-  "r data_function_current_get function_current_get"
+  "r data_function_current_get function_current_get",
+  "as current"
  ]
 }
