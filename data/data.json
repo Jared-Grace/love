@@ -5034,8 +5034,7 @@
    "tasks_run",
    "task_new",
    "ternary",
-   "repos_paths_map_unordered",
-   "functions_names"
+   "repos_paths_map_unordered"
   ],
   "catch_call": [
    "catch_call",
@@ -18068,7 +18067,6 @@
     "v",
     "ms",
     "each_folder",
-    "result",
     "folder",
     "f_name",
     "args"
