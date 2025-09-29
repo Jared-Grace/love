@@ -2247,7 +2247,6 @@
   "o functions_names",
   "s sleep",
   "d",
-  "o s5",
   "s fill",
   "functions_names",
   "functions_names_includes sleep",
@@ -2267,6 +2266,7 @@
   "is fns",
   "is function_names",
   "is functions_names",
-  "is functions_names_includes"
+  "is functions_names_includes",
+  "o s5"
  ]
 }
