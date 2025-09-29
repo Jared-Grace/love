@@ -21571,6 +21571,7 @@
     "js_call_fill",
     "ast",
     "functions",
+    "visited",
     "lambda",
     "v",
     "node",
@@ -21580,8 +21581,7 @@
     "unaliased",
     "valid",
     "parsed",
-    "async_is",
-    "visited"
+    "async_is"
    ]
   },
   "js_call_function_if": {
