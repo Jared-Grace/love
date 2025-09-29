@@ -4458,7 +4458,8 @@
    "string_is_assert_message",
    "string_trim",
    "undefined_not_is_assert_lambda",
-   "js_call_fill"
+   "js_call_fill",
+   "functions_names"
   ],
   "assert_not": [
    "assert_not",
@@ -12362,7 +12363,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "search_generic",
-   "js_call_fill"
+   "js_call_fill",
+   "functions_names"
   ],
   "e2": [
    "js_log_remove",
@@ -17998,6 +18000,7 @@
   "functions_names": {
    "async": false,
    "identifiers": [
+    "log",
     "marker",
     "functions_path",
     "folder_read_files",
@@ -18011,7 +18014,8 @@
     "p",
     "suffix",
     "without",
-    "f_names"
+    "f_names",
+    "message"
    ]
   },
   "functions_names_includes": {
