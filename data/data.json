@@ -1162,7 +1162,8 @@
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new"
+   "task_new",
+   "js_function_last_asyncify"
   ],
   "list_add": [
    "app_new_step_2",
@@ -1707,7 +1708,8 @@
    "function_transform",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "js_function_last_asyncify"
   ],
   "object_property_get": [
    "app_refresh",
@@ -1997,7 +1999,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -2305,7 +2308,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "item": [
    "app_replace_home",
@@ -2405,8 +2409,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "js_function_last_asyncify"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4095,8 +4098,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "js_function_last_asyncify"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -9692,7 +9694,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "js_function_last_asyncify"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -14232,6 +14235,9 @@
    "marker_call",
    "marker_call_replace_generic",
    "marker_functionize"
+  ],
+  "ast2": [
+   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22772,6 +22778,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "function_transform",
     "each_async",
     "object_properties",
     "data_identifiers_search",
@@ -22794,8 +22801,11 @@
     "s",
     "properties",
     "lambda",
-    "item",
-    "list"
+    "f_name",
+    "output",
+    "f_name2",
+    "lambda2",
+    "ast2"
    ]
   },
   "js_identifiers": {
