@@ -5852,7 +5852,6 @@
    "tasks_run"
   ],
   "log": [
-   "data_file_update",
    "js_call_fill",
    "js_log_remove",
    "log",
@@ -15448,7 +15447,6 @@
   "data_file_update": {
    "async": true,
    "identifiers": [
-    "log",
     "file_js_parse",
     "data_file_update_inner",
     "data_save",
