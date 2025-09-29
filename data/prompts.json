@@ -2180,7 +2180,6 @@
   "urs karate_code",
   "ras k",
   "s user,path",
-  "s user",
   "s repo,name",
   "n git_publish_initial",
   "s command",
@@ -2253,7 +2252,6 @@
   "",
   "export async function user_repo_get() {",
   "urs l",
-  "urg",
   "s git",
   "np",
   "si git_acp_folder",
@@ -2296,6 +2294,8 @@
   "as squa",
   "u ls",
   "a lsq list_squash",
+  "urg",
+  "s user",
   "functions_names"
  ]
 }
