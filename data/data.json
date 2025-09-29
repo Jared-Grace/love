@@ -14269,7 +14269,8 @@
    "visit_filter_recursive_async"
   ],
   "watch": [
-   "watch"
+   "watch",
+   "s5i"
   ],
   "chokidar": [
    "watch"
@@ -29623,8 +29624,9 @@
    ]
   },
   "s5i": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "watch",
     "log",
     "s5i",
     "message"
