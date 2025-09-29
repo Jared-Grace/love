@@ -1590,7 +1590,8 @@
    "marker_move",
    "marker_top",
    "promise_not_is",
-   "task_new"
+   "task_new",
+   "function_param_new_double"
   ],
   "declaration": [
    "app_new_step_2",
@@ -29457,7 +29458,8 @@
     "marker",
     "function_params_new",
     "function_param_new_double",
-    "param_name"
+    "param_name",
+    "ast"
    ]
   }
  }
