@@ -3234,7 +3234,6 @@
    "js_identifiers_to_names",
    "js_identifier_defineds",
    "log_json",
-   "object_property_get",
    "sandbox_2",
    "storage_local_set",
    "string_includes",
@@ -4309,7 +4308,6 @@
    "js_unparse",
    "js_visit",
    "list_size_1_assert_message",
-   "object_property_get",
    "string_prefix_without",
    "string_suffix_without",
    "todo",
@@ -13775,7 +13773,6 @@
    "object_property_set_exists_not"
   ],
   "undefined_is": [
-   "object_property_get",
    "undefined_is",
    "undefined_not_is_assert_lambda"
   ],
@@ -27873,9 +27870,6 @@
    "async": false,
    "identifiers": [
     "undefined_not_is_assert_lambda",
-    "json_to",
-    "error",
-    "undefined_is",
     "object_property_get",
     "object",
     "property_name",
