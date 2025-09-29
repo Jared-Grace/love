@@ -825,7 +825,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2012,7 +2013,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "functions_paths"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -3183,7 +3185,8 @@
    "marker_functionize",
    "range_from",
    "reply",
-   "sandbox"
+   "sandbox",
+   "functions_paths"
   ],
   "any": [
    "app_replace_rule_set",
@@ -5376,7 +5379,8 @@
    "repo_acronym_to_path",
    "sandbox_2",
    "repos_paths_map_unordered_combine",
-   "function_name_to_path"
+   "function_name_to_path",
+   "functions_paths"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -14382,7 +14386,8 @@
    "function_name_to_path_search"
   ],
   "function_name_folder_to_path": [
-   "function_name_to_path"
+   "function_name_to_path",
+   "functions_paths"
   ]
  },
  "functions": {
@@ -18190,6 +18195,11 @@
     "functions_paths",
     "path",
     "result",
+    "r",
+    "v",
+    "function_name_folder_to_path",
+    "f_name",
+    "folder",
     "squashed"
    ]
   },
