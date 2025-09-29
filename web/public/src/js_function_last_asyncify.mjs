@@ -20,7 +20,8 @@ export async function js_function_last_asyncify(stack, async_is, ast) {
       return;
       let result = await data_identifiers_search(s);
       let properties = object_properties(result);
-      await each_async(list, async function lambda(item) {});
+      async function lambda(item) {}
+      await each_async(list, lambda);
     }
   }
 }
