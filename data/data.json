@@ -2008,8 +2008,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "functions_names"
+   "task_new"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -4355,8 +4354,7 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch",
-   "functions_names"
+   "watch"
   ],
   "count": [
    "assert_arguments",
@@ -9831,8 +9829,7 @@
   "git_acp_call_folder": [
    "function_run_git",
    "git_acp_call",
-   "git_acp_call_folder",
-   "functions_names"
+   "git_acp_call_folder"
   ],
   "function_run_log": [
    "function_run_git",
@@ -18054,7 +18051,6 @@
   "functions_names": {
    "async": true,
    "identifiers": [
-    "git_acp_call_folder",
     "repos_paths_map_unordered",
     "functions_names_from_path",
     "marker",
@@ -18063,9 +18059,7 @@
     "path",
     "v",
     "each_folder",
-    "folder",
-    "f_name",
-    "args"
+    "folder"
    ]
   },
   "functions_names_from_path": {
