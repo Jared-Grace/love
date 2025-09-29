@@ -2019,8 +2019,7 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set",
-   "js_function_last_asyncify"
+   "error_attention_set"
   ],
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
@@ -4716,8 +4715,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "js_function_last_asyncify"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -14253,9 +14251,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "property_name2": [
-   "js_function_last_asyncify"
   ]
  },
  "functions": {
@@ -22843,9 +22838,6 @@
     "declaration",
     "name",
     "value",
-    "object",
-    "property_name2",
-    "value2",
     "result",
     "properties",
     "lambda",
