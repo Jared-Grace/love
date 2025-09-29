@@ -920,7 +920,8 @@
    "storage_local_key_get",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "js_function_last_asyncify"
   ],
   "p": [
    "app_name_prefixed",
@@ -9484,7 +9485,8 @@
    "js_declaration_name",
    "js_declaration_single_name",
    "js_expand_generic",
-   "js_outside_move"
+   "js_outside_move",
+   "js_function_last_asyncify"
   ],
   "js_imports_missing_add": [
    "function_new_declaration",
@@ -11051,7 +11053,8 @@
    "marker_next_get"
   ],
   "declaration2": [
-   "js_assign_combine"
+   "js_assign_combine",
+   "js_function_last_asyncify"
   ],
   "init2": [
    "js_assign_combine",
@@ -22776,6 +22779,7 @@
   "js_function_last_asyncify": {
    "async": true,
    "identifiers": [
+    "js_declaration_name",
     "js_await_add",
     "function_transform",
     "each_async",
@@ -22796,6 +22800,8 @@
     "property_name",
     "async",
     "declaration",
+    "name",
+    "declaration2",
     "result",
     "s",
     "properties",
