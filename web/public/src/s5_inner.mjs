@@ -1,4 +1,6 @@
+import { sleep } from "./sleep.mjs";
 import { log } from "./log.mjs";
-export function s5_inner() {
+export async function s5_inner() {
   log("hi ish");
+  await sleep(ms);
 }
