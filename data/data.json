@@ -2329,7 +2329,8 @@
    "visit_unique_async",
    "watch",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "item": [
    "app_replace_home",
@@ -2429,7 +2430,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "functions_paths"
   ],
   "index": [
    "app_replace_home",
@@ -2959,7 +2961,8 @@
    "sandbox_4_a",
    "repos_paths_map_unordered",
    "function_exists_inner",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "functions_paths"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4127,7 +4130,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "functions_paths"
   ],
   "book_code": [
    "app_reply_main",
@@ -18220,6 +18224,10 @@
     "lambda",
     "r",
     "joined",
+    "mapped",
+    "list",
+    "lambda2",
+    "item",
     "v",
     "f_name",
     "folder",
