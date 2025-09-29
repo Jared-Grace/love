@@ -4458,8 +4458,7 @@
    "string_is_assert_message",
    "string_trim",
    "undefined_not_is_assert_lambda",
-   "functions_names",
-   "js_function_last_asyncify"
+   "functions_names"
   ],
   "assert_not": [
    "assert_not",
@@ -22851,7 +22850,6 @@
     "properties",
     "lambda",
     "f_name",
-    "message",
     "lambda2",
     "v",
     "output"
