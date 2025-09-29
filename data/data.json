@@ -8108,7 +8108,8 @@
    "list_includes_assert",
    "list_wait",
    "repos_names",
-   "repo_exists_assert"
+   "repo_exists_assert",
+   "functions_names"
   ],
   "readdir": [
    "folder_read",
@@ -9838,7 +9839,8 @@
    "repos_acronyms_to_names",
    "repos_gitignore_overwrite",
    "repos_names",
-   "repo_exists_assert"
+   "repo_exists_assert",
+   "functions_names"
   ],
   "function_run_log": [
    "function_run_git",
@@ -18031,6 +18033,7 @@
   "functions_names": {
    "async": true,
    "identifiers": [
+    "repos_names",
     "sleep",
     "marker",
     "functions_path",
@@ -18046,7 +18049,8 @@
     "suffix",
     "without",
     "f_names",
-    "ms"
+    "ms",
+    "all"
    ]
   },
   "functions_names_includes": {
