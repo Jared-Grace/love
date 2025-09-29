@@ -338,7 +338,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "git_acp_folder"
   ],
   "apps_get": [
    "apps_get"
@@ -19859,6 +19860,7 @@
   "git_acp_folder": {
    "async": true,
    "identifiers": [
+    "marker",
     "git_push_folder",
     "git_commit_folder",
     "command_line_git_folder",
