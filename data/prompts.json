@@ -2331,6 +2331,7 @@
   "s pair",
   "functions_names_to_paths",
   "is js_imports_paths_fix",
-  "is function_name_to_path_import"
+  "is function_name_to_path_import",
+  "fs function_name_to_path_import"
  ]
 }
