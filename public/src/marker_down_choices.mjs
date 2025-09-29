@@ -3,10 +3,10 @@ import { marker_down_choices_lambda } from "./marker_down_choices_lambda.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export async function marker_down_choices() {
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   let choices = null;
   let v = await function_transform_marker(f_name, lambda);
   return choices;

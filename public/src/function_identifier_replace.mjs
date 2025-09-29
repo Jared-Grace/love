@@ -1,6 +1,6 @@
 import { list_empty_is } from "./list_empty_is.mjs";
 import { assert_not } from "./assert_not.mjs";
-import { data_function_current_get } from "./data_function_current_get.mjs";
+import { function_current_get } from "./function_current_get.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
@@ -11,7 +11,7 @@ export async function function_identifier_replace(
   identifier_name,
   replacement,
 ) {
-  let f_name = await data_function_current_get();
+  let f_name = await function_current_get();
   function lambda2(ast) {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     let b = list_empty_is(identifiers_named);
