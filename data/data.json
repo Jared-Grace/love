@@ -1482,7 +1482,8 @@
    "watch",
    "function_exists_inner",
    "function_name_to_path_search",
-   "functions_paths"
+   "functions_paths",
+   "functions_names_to_paths"
   ],
   "ast": [
    "app_new_step_2",
@@ -2434,7 +2435,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "functions_names_to_paths"
   ],
   "index": [
    "app_replace_home",
@@ -4135,7 +4137,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "functions_names_to_paths"
   ],
   "book_code": [
    "app_reply_main",
@@ -6163,7 +6166,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic"
+   "search_generic",
+   "functions_names_to_paths"
   ],
   "data_identifiers_search": [
    "data_identifiers_search",
@@ -6822,7 +6826,8 @@
    "html_parse_classes_preview",
    "list_to_dictionary",
    "list_to_dictionary_async",
-   "repos_acronyms_to_names"
+   "repos_acronyms_to_names",
+   "functions_names_to_paths"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -29922,12 +29927,17 @@
   "functions_names_to_paths": {
    "async": true,
    "identifiers": [
+    "list_to_dictionary",
     "repos_paths_map_unordered_combine_squash",
     "marker",
     "functions_names_from_path",
     "function_name_folder_to_path",
     "list_map",
     "functions_names_to_paths",
+    "dictionary",
+    "list",
+    "lambda",
+    "item",
     "mapper",
     "folder",
     "f_names",
