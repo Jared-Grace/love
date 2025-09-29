@@ -278,8 +278,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "t3"
+   "whitespace_normalize"
   ],
   "t2": [
    "t2"
@@ -14466,9 +14465,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "t3": [
-   "t3"
   ]
  },
  "functions": {
@@ -30001,13 +29997,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "t3": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "t3"
    ]
   }
  }
