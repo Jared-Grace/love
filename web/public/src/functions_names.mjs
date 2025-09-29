@@ -1,3 +1,4 @@
+import { repos_names } from "./repos_names.mjs";
 import { sleep } from "./sleep.mjs";
 import { marker } from "./marker.mjs";
 import { functions_path } from "./functions_path.mjs";
@@ -17,4 +18,5 @@ export async function functions_names() {
   let f_names = list_map(paths, lambda);
   return f_names;
   await sleep(ms);
+  let all = await repos_names();
 }
