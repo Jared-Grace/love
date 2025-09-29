@@ -2320,7 +2320,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "function_exists_inner"
   ],
   "item": [
    "app_replace_home",
@@ -2947,7 +2948,8 @@
    "repos_gitignore_overwrite",
    "sandbox_2",
    "sandbox_4_a",
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "function_exists_inner"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -7199,7 +7201,8 @@
    "ebible_references_parse_lines",
    "function_aliases_restore",
    "messenger_reply_unread_click",
-   "reply_test"
+   "reply_test",
+   "function_exists_inner"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -14336,12 +14339,8 @@
    "repos_paths_map_unordered_combine",
    "functions_names"
   ],
-  "bools": [
-   "function_exists_inner"
-  ],
   "true_is": [
-   "true_is",
-   "function_exists_inner"
+   "true_is"
   ],
   "multiple": [
    "function_exists_inner"
@@ -18761,7 +18760,6 @@
    "identifiers": [
     "list_size_1",
     "list_multiple_is",
-    "true_is",
     "list_filter",
     "repos_paths_map_unordered_combine",
     "object_merge",
@@ -18776,7 +18774,9 @@
     "joined",
     "v",
     "f_pat",
-    "bools",
+    "mapped",
+    "lambda2",
+    "m",
     "filtered",
     "multiple"
    ]
