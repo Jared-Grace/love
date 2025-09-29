@@ -342,7 +342,8 @@
    "watch",
    "whitespace_normalize",
    "functions_names_to_paths",
-   "reduce"
+   "reduce",
+   "t3"
   ],
   "apps_get": [
    "apps_get"
@@ -29999,6 +30000,7 @@
   "t3": {
    "async": false,
    "identifiers": [
+    "marker",
     "t3"
    ]
   }
