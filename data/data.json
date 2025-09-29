@@ -4209,7 +4209,6 @@
    "folder_user_combine",
    "functions_path",
    "function_import",
-   "function_name_to_path",
    "git_push_folder",
    "html_name_to_path_dev",
    "http_firebase_file_path",
@@ -5376,7 +5375,8 @@
    "repos_paths_map_unordered",
    "repo_acronym_to_path",
    "sandbox_2",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "function_name_to_path"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5698,7 +5698,6 @@
    "folder_user",
    "folder_user_combine",
    "function_import",
-   "function_name_to_path",
    "git_push_folder",
    "html_name_to_path_dev",
    "html_update_generic",
@@ -7187,7 +7186,6 @@
    "folder_public_combine",
    "functions_path",
    "function_alias_add",
-   "function_name_to_path",
    "js_dollar",
    "js_dollar_r",
    "list_first_second_generic",
@@ -7322,7 +7320,6 @@
   "joined2": [
    "ebible_verses_upload",
    "ebible_version_download_path",
-   "function_name_to_path",
    "local_function_path"
   ],
   "tokens": [
@@ -9330,7 +9327,6 @@
   "function_name_to_base": [
    "function_import",
    "function_name_to_base",
-   "function_name_to_path",
    "function_name_to_path_import",
    "html_update_generic"
   ],
@@ -14384,6 +14380,9 @@
    "function_name_to_path_unalias",
    "function_exists_strict",
    "function_name_to_path_search"
+  ],
+  "function_name_folder_to_path": [
+   "function_name_to_path"
   ]
  },
  "functions": {
@@ -19111,17 +19110,14 @@
   "function_name_to_path": {
    "async": false,
    "identifiers": [
-    "path_join",
+    "function_name_folder_to_path",
     "string_includes",
     "error",
-    "function_name_to_base",
     "functions_path",
     "function_name_to_path",
     "f_name",
-    "joined2",
-    "v",
-    "second",
-    "joined"
+    "folder",
+    "v"
    ]
   },
   "function_name_to_path_import": {
