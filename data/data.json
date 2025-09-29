@@ -431,7 +431,8 @@
    "js_dollar_new_args",
    "list_concat_multiple",
    "list_map_combine",
-   "marker_screen_add"
+   "marker_screen_add",
+   "function_new_declaration"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -4188,8 +4189,7 @@
    "path_join",
    "path_repo_combine",
    "sandbox_2",
-   "watch",
-   "function_new_declaration"
+   "watch"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -19008,7 +19008,7 @@
     "formatted",
     "repo_name",
     "folder_name",
-    "joined"
+    "combined"
    ]
   },
   "function_new_js": {
