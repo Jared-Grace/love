@@ -14465,6 +14465,9 @@
   ],
   "previous2": [
    "function_name_to_path_import"
+  ],
+  "ops": [
+   "function_name_to_path_import"
   ]
  },
  "functions": {
@@ -19228,6 +19231,7 @@
     "function_name_to_path_import",
     "import_",
     "dictionary",
+    "ops",
     "value",
     "previous",
     "previous2",
