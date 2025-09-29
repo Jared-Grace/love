@@ -2309,10 +2309,10 @@
   "n test",
   "s exists",
   "is function_name_to_path_unalias",
-  "function_exists test",
   "p",
   "function_name_to_path_unalias test",
   "o function_exists",
-  "is function_exists_inner"
+  "is function_exists_inner",
+  "function_exists test"
  ]
 }
