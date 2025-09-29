@@ -12,9 +12,7 @@ export async function function_run_git(f_name, args) {
     await git_acp_call_folder(f_name, args, folder);
   }
   await each_async(all, lambda);
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda2(item) {},
-  );
+  async function lambda2(item) {}
+  let waited = await list_map_unordered_async(list, lambda2);
   return result;
 }
