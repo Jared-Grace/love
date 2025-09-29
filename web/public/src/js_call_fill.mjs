@@ -7,6 +7,7 @@ import { js_call_new } from "./js_call_new.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_call_fill(ast) {
+  let functions = await data_functions_get();
   async function lambda(v) {
     let { node, stack } = v;
     let { expression } = node;
@@ -23,5 +24,4 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
-  let functions = await data_functions_get();
 }
