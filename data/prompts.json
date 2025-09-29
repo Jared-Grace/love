@@ -858,7 +858,6 @@
   "o o",
   "oe o",
   "o p",
-  "u fs",
   "c marker_down_choices function_transform_marker_empty",
   "function_transform_marker_empty",
   "m",
@@ -2154,7 +2153,6 @@
   "u fd",
   "a fld file_delete",
   "t",
-  "fc",
   "function_name_to_acronym data_set",
   "o t",
   "s empty",
@@ -2239,6 +2237,8 @@
   "u pn",
   "cs function_param_new double",
   "a pnd function_param_new_double",
-  "pnd ast"
+  "pnd ast",
+  "fc",
+  "u fs"
  ]
 }
