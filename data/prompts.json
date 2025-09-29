@@ -2237,6 +2237,7 @@
   "is js_function_last_asyncify",
   "fs js_function_last_asyncify",
   "u pn",
-  "cs function_param_new double"
+  "cs function_param_new double",
+  "a pnd function_param_new_double"
  ]
 }
