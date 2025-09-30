@@ -2520,7 +2520,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "function_name_to_path_search"
   ],
   "index": [
    "app_replace_home",
@@ -2875,7 +2876,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "reduce",
-   "visit_filter_recursive"
+   "visit_filter_recursive",
+   "function_name_to_path_search"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -3118,7 +3120,8 @@
    "marker_functionize",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "function_name_to_path_search"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -4227,7 +4230,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "function_name_to_path_search"
   ],
   "book_code": [
    "app_reply_main",
@@ -5085,8 +5089,7 @@
    "promise_wrap",
    "retry",
    "string_empty_is",
-   "throws_not_async",
-   "function_name_to_path_search"
+   "throws_not_async"
   ],
   "result": [
    "cache_generic",
@@ -6004,7 +6007,6 @@
    "function_alias_rename",
    "function_alias_replace",
    "function_exists_inner",
-   "function_name_to_path_search",
    "html_disable_set",
    "js_arrow_to_function",
    "js_assign_combine",
@@ -19482,9 +19484,9 @@
   "function_name_to_path_search": {
    "async": true,
    "identifiers": [
+    "each",
     "object_property_from",
     "repos_paths_names_map_unordered_combine",
-    "object_property_set",
     "list_single",
     "list_size_1",
     "list_multiple_is",
@@ -19509,7 +19511,9 @@
     "multiple",
     "result",
     "only",
-    "e"
+    "list",
+    "lambda3",
+    "item"
    ]
   },
   "function_name_to_path_unalias": {
