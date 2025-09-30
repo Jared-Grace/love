@@ -1,3 +1,4 @@
+import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,6 +20,9 @@ export async function html_update_public(name) {
   let file_path = html_name_to_path(name);
   let joined = path_join([r_path, file_path]);
   let code = await function_dependencies_code(a_name);
+  let call = js_code_call_statement(name_prefixed);
+  const middle = `${code}
+    ${call}`;
   let body = html_code_script_module(middle);
   await html_overwrite(name, joined, body);
   await file_open(joined);
