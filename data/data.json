@@ -1872,7 +1872,8 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize"
+   "marker_functionize",
+   "file_overwrite"
   ],
   "body_block": [
    "app_new_step_3",
@@ -7784,7 +7785,8 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
    "server",
-   "watch"
+   "watch",
+   "file_overwrite"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -11096,7 +11098,8 @@
   "parse": [
    "json_from",
    "js_parse",
-   "path_name"
+   "path_name",
+   "file_overwrite"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -17572,8 +17575,11 @@
     "file_path",
     "contents",
     "fs",
+    "path",
     "promises",
-    "writeFile"
+    "writeFile",
+    "parsed",
+    "parse"
    ]
   },
   "file_overwrite_buffer": {
