@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
@@ -11,6 +12,7 @@ import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mj
 export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
   let search = await function_name_to_path_search(a_name);
+  let repo_name = object_property_get(search, "repo_name");
   let code = await function_dependencies_code(a_name);
   let body = html_code_script_module(middle);
   await html_overwrite(name, file_path, body);
