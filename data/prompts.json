@@ -2408,6 +2408,7 @@
   "s search",
   "ps",
   "p",
-  "fdf app_karate_main"
+  "fdf app_karate_main",
+  "o firebase_storage_url_project"
  ]
 }
