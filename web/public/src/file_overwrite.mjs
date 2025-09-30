@@ -7,6 +7,8 @@ export async function file_overwrite(file_path, contents) {
   return;
   let path = await import("path");
   let parsed = path.parse(file_path);
+  if (false) {
+  }
   let root = object_property_get(parsed, "root");
   if (false) {
     await fs.access(parsed.root);
