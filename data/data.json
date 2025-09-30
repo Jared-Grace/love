@@ -943,7 +943,8 @@
    "storage_local_key_get",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "string_and_empty_not_is_assert"
   ],
   "p": [
    "app_name_prefixed",
@@ -12423,7 +12424,8 @@
   ],
   "string_is_assert": [
    "js_identifier_unique",
-   "string_is_assert"
+   "string_is_assert",
+   "string_and_empty_not_is_assert"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -14250,7 +14252,8 @@
   "string_empty_not_is_assert": [
    "string_empty_not_is_assert",
    "task_new",
-   "app_new_step_1"
+   "app_new_step_1",
+   "string_and_empty_not_is_assert"
   ],
   "endsWith": [
    "string_ends_with"
@@ -14460,7 +14463,8 @@
    "watch"
   ],
   "string_and_empty_not_is_assert": [
-   "app_new"
+   "app_new",
+   "string_and_empty_not_is_assert"
   ]
  },
  "functions": {
@@ -29986,6 +29990,15 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "string_and_empty_not_is_assert": {
+   "async": false,
+   "identifiers": [
+    "string_empty_not_is_assert",
+    "string_is_assert",
+    "string_and_empty_not_is_assert",
+    "name"
    ]
   }
  }
