@@ -1,17 +1,18 @@
+import { identity } from "../../../love/public/src/identity.mjs";
+import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_exists_equals } from "../../../love/public/src/object_property_exists_equals.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
 import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
-import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function watch() {
   marker("1");
   const chokidar = (await import_install("chokidar")).default;
-  let joined = functions_path();
-  const watcher = chokidar.watch(joined, {
+  let squashed = await repos_paths_map_unordered_combine_squash(identity);
+  const watcher = chokidar.watch(squashed, {
     persistent: true,
     ignoreInitial: true,
   });
