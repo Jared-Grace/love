@@ -2296,7 +2296,8 @@
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
    "html_p_text",
-   "file_root_exists"
+   "file_root_exists",
+   "file_root_exists_assert"
   ],
   "lambda4": [
    "app_replace_home",
@@ -4520,7 +4521,8 @@
    "integer_is_assert",
    "js_node_atomize",
    "list_empty_is_assert",
-   "list_is_assert"
+   "list_is_assert",
+   "file_root_exists_assert"
   ],
   "o": [
    "assert_json",
@@ -4563,7 +4565,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "file_root_exists_assert"
   ],
   "assert_not": [
    "assert_not",
@@ -4679,7 +4682,8 @@
    "path_name",
    "sandbox_4_a",
    "unzip",
-   "file_root_exists"
+   "file_root_exists",
+   "file_root_exists_assert"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5684,7 +5688,8 @@
    "object_property_initialize",
    "object_property_lambda",
    "object_property_lambda_async",
-   "file_root_exists"
+   "file_root_exists",
+   "file_root_exists_assert"
   ],
   "data": [
    "data_all",
@@ -14524,10 +14529,12 @@
    "string_is"
   ],
   "file_root_exists": [
-   "file_root_exists"
+   "file_root_exists",
+   "file_root_exists_assert"
   ],
   "file_root_exists_assert": [
-   "file_overwrite"
+   "file_overwrite",
+   "file_root_exists_assert"
   ]
  },
  "functions": {
@@ -30134,6 +30141,18 @@
     "promises",
     "access",
     "v"
+   ]
+  },
+  "file_root_exists_assert": {
+   "async": true,
+   "identifiers": [
+    "assert_json",
+    "file_root_exists",
+    "file_root_exists_assert",
+    "file_path",
+    "exists",
+    "root",
+    "message"
    ]
   }
  }
