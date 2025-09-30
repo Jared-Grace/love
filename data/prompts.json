@@ -2162,7 +2162,6 @@
   "s command",
   "s list_map",
   "s user,repo",
-  "s acro",
   "c repo_acronym_set repo_acronym_get",
   "cs list_to_dictionary async",
   "s unordered",
@@ -2397,6 +2396,7 @@
   "of fns",
   "html_update_public karate",
   "o v",
-  "s firebase"
+  "s firebase",
+  "s acro"
  ]
 }
