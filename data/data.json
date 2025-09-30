@@ -397,7 +397,6 @@
    "app_html_open",
    "app_name_main",
    "app_name_prefixed",
-   "app_new",
    "app_new_step_2",
    "function_new_app_screen",
    "function_open_app",
@@ -462,7 +461,6 @@
   "app_name_prefixed": [
    "app_name_main",
    "app_name_prefixed",
-   "app_new",
    "app_new_step_2",
    "function_open_app",
    "html_update_public",
@@ -980,7 +978,6 @@
    "app_new_step_2"
   ],
   "function_new": [
-   "app_new",
    "app_new_step_2",
    "function_list_generate",
    "function_new",
@@ -14546,14 +14543,11 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "app_new_step_1",
     "app_new_step_2",
-    "app_name_prefixed",
-    "function_new",
     "marker",
     "app_new",
-    "name",
-    "app_new_step_1",
-    "a_name"
+    "name"
    ]
   },
   "app_new_assign": {
