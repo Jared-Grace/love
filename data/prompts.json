@@ -1544,7 +1544,6 @@
   "an reply",
   "s hash",
   "n browser_is",
-  "s main",
   "cs list_join_newline 2",
   "s html,hide",
   "s html,hid",
@@ -2392,6 +2391,7 @@
   "html_update_public karate",
   "o an",
   "is app_new_assign",
-  "s call,args"
+  "s call,args",
+  "s main"
  ]
 }
