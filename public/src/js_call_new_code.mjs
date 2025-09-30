@@ -24,19 +24,19 @@ export async function js_call_new_code(f_name_call, ast) {
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   async function lambda3(arg_name) {
-    let arg_code = js_identifier_unique(existing, arg_name);
+    let arg_code = await js_identifier_unique(existing, arg_name);
     let split = string_split(arg_name, "$");
     const lambda = "lambda";
     if (list_first(split) === lambda) {
       let skip_count = 1;
       let b = list_size(split);
       let remaining = list_slice(split, skip_count, b);
-      let lamda_name = js_identifier_unique(existing, lambda);
+      let lamda_name = await js_identifier_unique(existing, lambda);
       let async_is = object_property_get(declaration, "async");
       let code = js_code_declaration(lamda_name, "", async_is);
       let declaration_lambda = js_parse_statement_module(code);
-      function lambda2(p) {
-        let unique = js_identifier_unique(existing, p);
+      async function lambda2(p) {
+        let unique = await js_identifier_unique(existing, p);
         js_declaration_param_add(declaration_lambda, unique);
       }
       each(remaining, lambda2);
