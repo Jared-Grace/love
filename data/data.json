@@ -14452,6 +14452,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "app_new_step_1": [
+   "app_new"
   ]
  },
  "functions": {
@@ -14549,6 +14552,7 @@
     "marker",
     "app_new",
     "name",
+    "app_new_step_1",
     "a_name"
    ]
   },
