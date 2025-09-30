@@ -2388,6 +2388,7 @@
   "app_karate",
   "p",
   "fd app_karate_code",
-  "fd app_karate"
+  "fd app_karate",
+  "s exists,assert"
  ]
 }
