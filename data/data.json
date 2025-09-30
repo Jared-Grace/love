@@ -8101,7 +8101,8 @@
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
    "string_starts_with",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "firebase_storage_url_project"
   ],
   "path_folder": [
    "folder_find_starts_with",
@@ -18189,6 +18190,7 @@
    "identifiers": [
     "marker",
     "firebase_storage_url_project",
+    "prefix",
     "url"
    ]
   },
