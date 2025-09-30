@@ -12,7 +12,7 @@ export async function repos_paths_names_map_unordered_combine(path, mapper) {
     let v = {
       mapped,
       name,
-    };log({v})
+    };
     return v;
   }
   return result;
