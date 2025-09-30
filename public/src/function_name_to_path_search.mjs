@@ -12,7 +12,7 @@ import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
-  async function lambda(joined) {
+  async function lambda(a) {
   let file_path = object_property_get(a, "file_path");
     let exists = await file_exists(file_path);
   let v = object_merge(
