@@ -9315,7 +9315,6 @@
   ],
   "f_path_new": [
    "function_copy",
-   "user_repo_path_combine",
    "firebase_name"
   ],
   "function_copy_suffix_add": [
@@ -14699,6 +14698,9 @@
    "function_copy",
    "user_repo_path_combine",
    "firebase_name"
+  ],
+  "f_path_repo": [
+   "user_repo_path_combine"
   ]
  },
  "functions": {
@@ -30526,7 +30528,7 @@
     "user_repo_path_combine",
     "f_path",
     "repo_name",
-    "f_path_new"
+    "f_path_repo"
    ]
   }
  }
