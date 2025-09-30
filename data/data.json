@@ -9236,7 +9236,8 @@
    "function_copy",
    "function_new_declaration",
    "user_repo_get",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_firebase_service_account_get"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9291,7 +9292,8 @@
    "user_repo_set",
    "repos_paths_names_map_unordered_combine",
    "repos_paths_names_map_unordered",
-   "html_update_public"
+   "html_update_public",
+   "repo_firebase_service_account_get"
   ],
   "f_path_new": [
    "function_copy"
@@ -30420,10 +30422,12 @@
   "repo_firebase_service_account_get": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "marker",
     "repo_about_get",
     "repo_firebase_service_account_get",
     "repo",
+    "repo_name",
     "key",
     "v"
    ]
