@@ -14006,8 +14006,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "html_update_public"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -21454,7 +21453,6 @@
     "r_path",
     "file_path",
     "joined",
-    "segments",
     "code",
     "body",
     "middle",
