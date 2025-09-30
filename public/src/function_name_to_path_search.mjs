@@ -13,17 +13,14 @@ import { function_name_to_path } from "../../../love/public/src/function_name_to
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
   async function lambda(joined) {
-  let file_path = object_property_get(a, "file_path");
     let exists = await file_exists(joined);
-  let v = object_merge(
-    {
-      exists, 
-    },
-    a,
-  );
+    let v = {
+      exists,
+      f_path: joined,
+    };
     return v;
   }
-  let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
+  let mapped = await repos_paths_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
     let exists2 = object_property_get(m, "exists");
     let ti2 = true_is(exists2);
@@ -43,4 +40,11 @@ export async function function_name_to_path_search(unaliased) {
   }
   return result;
   let result2 = await repos_paths_names_map_unordered_combine(path, mapper);
+  let file_path = object_property_get(a, "file_path");
+  let v = object_merge(
+    {
+      exists,
+    },
+    a,
+  );
 }
