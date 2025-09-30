@@ -1071,7 +1071,8 @@
    "whitespace_normalize",
    "function_name_to_path_search",
    "html_code_script_module",
-   "app_new_step_3"
+   "app_new_step_3",
+   "firebase_service_account_love"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4706,7 +4707,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "firebase_service_account_love"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5827,7 +5829,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "html_update_public"
+   "html_update_public",
+   "firebase_service_account_love"
   ],
   "file_copy": [
    "data_backup",
@@ -8052,7 +8055,8 @@
    "string_replace"
   ],
   "folder_find_starts_with": [
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "firebase_service_account_love"
   ],
   "folder_previous": [
    "folder_previous",
@@ -8061,7 +8065,8 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server"
+   "server",
+   "firebase_service_account_love"
   ],
   "prefix": [
    "folder_find_starts_with",
@@ -8075,21 +8080,24 @@
    "messenger_reply_unread_collect",
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
-   "string_starts_with"
+   "string_starts_with",
+   "firebase_service_account_love"
   ],
   "path_folder": [
    "folder_find_starts_with",
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "repos_names"
+   "repos_names",
+   "firebase_service_account_love"
   ],
   "only": [
    "folder_find_starts_with",
    "function_exists_inner",
    "function_name_to_path_search",
    "list_find",
-   "list_single"
+   "list_single",
+   "firebase_service_account_love"
   ],
   "http": [
    "firebase_storage_download",
@@ -14622,7 +14630,8 @@
    "html_update_public"
   ],
   "firebase_service_account_love": [
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_service_account_love"
   ]
  },
  "functions": {
@@ -30346,6 +30355,20 @@
     "html_code_script_module",
     "middle",
     "v"
+   ]
+  },
+  "firebase_service_account_love": {
+   "async": true,
+   "identifiers": [
+    "folder_find_starts_with",
+    "path_join",
+    "folder_previous",
+    "firebase_service_account_love",
+    "prefix",
+    "v",
+    "path_folder",
+    "only",
+    "file_path"
    ]
   }
  }
