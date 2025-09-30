@@ -2271,7 +2271,6 @@
   "s user",
   "functions_names",
   "fns",
-  "s repos",
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
   "s true",
@@ -2368,6 +2367,7 @@
   "p",
   "s json",
   "function_run_output_file_temp functions_names_to_paths",
-  "o w"
+  "o w",
+  "s repos"
  ]
 }
