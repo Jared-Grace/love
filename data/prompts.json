@@ -2390,11 +2390,11 @@
   "s call,args",
   "s main",
   "s code,string",
-  "p",
   "s call",
   "s js,call",
   "sps",
   "ps",
+  "p",
   "app_new_step_3 karate"
  ]
 }
