@@ -9215,8 +9215,7 @@
   ],
   "task_name": [
    "function_current_set_task_new",
-   "task_new",
-   "app_new"
+   "task_new"
   ],
   "function_current_set_task_new_simple": [
    "function_current_set_task_new_simple"
@@ -14553,8 +14552,7 @@
     "marker",
     "app_new",
     "name",
-    "arguments",
-    "task_name"
+    "arguments"
    ]
   },
   "app_new_assign": {
