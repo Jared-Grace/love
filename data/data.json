@@ -295,7 +295,8 @@
    "whitespace_normalize",
    "server",
    "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set"
+   "repo_firebase_service_account_set",
+   "firebase_service_account_karate"
   ],
   "app_karate": [
    "app_karate"
@@ -30477,6 +30478,7 @@
   "firebase_service_account_karate": {
    "async": true,
    "identifiers": [
+    "marker",
     "firebase_service_account_love_generic",
     "firebase_service_account_karate",
     "name",
