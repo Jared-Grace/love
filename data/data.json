@@ -508,7 +508,8 @@
    "task_new",
    "watch",
    "firebase_service_account_love",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "firebase_service_account_karate"
   ],
   "add": [
    "add",
@@ -4723,7 +4724,8 @@
    "sandbox_4_a",
    "unzip",
    "firebase_service_account_love",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "firebase_service_account_karate"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -14672,7 +14674,11 @@
   ],
   "firebase_service_account_love_generic": [
    "firebase_service_account_love",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "firebase_service_account_karate"
+  ],
+  "firebase_service_account_karate": [
+   "firebase_service_account_karate"
   ]
  },
  "functions": {
@@ -30465,6 +30471,15 @@
     "v",
     "path_folder",
     "only",
+    "file_path"
+   ]
+  },
+  "firebase_service_account_karate": {
+   "async": true,
+   "identifiers": [
+    "firebase_service_account_love_generic",
+    "firebase_service_account_karate",
+    "name",
     "file_path"
    ]
   }
