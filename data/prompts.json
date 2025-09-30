@@ -2391,10 +2391,10 @@
   "s main",
   "s code,string",
   "p",
-  "app_new_step_3 karate",
   "s call",
   "s js,call",
   "sps",
-  "ps"
+  "ps",
+  "app_new_step_3 karate"
  ]
 }
