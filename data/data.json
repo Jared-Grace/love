@@ -1073,7 +1073,8 @@
    "html_code_script_module",
    "app_new_step_3",
    "firebase_service_account_love",
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "repo_about_get"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2237,7 +2238,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "repo_about_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3922,7 +3924,8 @@
    "storage_local_key_get",
    "storage_local_set",
    "storage_local_set_context",
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "repo_about_get"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -6232,7 +6235,8 @@
    "data_property_get",
    "data_transform",
    "function_alias_add_generic",
-   "user_repo_get"
+   "user_repo_get",
+   "repo_about_get"
   ],
   "value_initial": [
    "data_get",
@@ -10566,7 +10570,8 @@
    "path_repo_about",
    "path_repo_combine",
    "repo_acronym_get",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_about_get"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14022,11 +14027,13 @@
   ],
   "path_repo_about": [
    "path_repo_about",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_about_get"
   ],
   "a_path": [
    "path_repo_about",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_about_get"
   ],
   "r_path": [
    "path_repo_combine",
@@ -14632,7 +14639,8 @@
    "firebase_service_account_love"
   ],
   "repo_about_get": [
-   "repo_acronym_get"
+   "repo_acronym_get",
+   "repo_about_get"
   ]
  },
  "functions": {
@@ -30369,6 +30377,19 @@
     "path_folder",
     "only",
     "file_path"
+   ]
+  },
+  "repo_about_get": {
+   "async": true,
+   "identifiers": [
+    "data_get",
+    "path_repo_about",
+    "repo_about_get",
+    "repo",
+    "key",
+    "a_path",
+    "value",
+    "v"
    ]
   }
  }
