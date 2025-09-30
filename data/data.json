@@ -498,7 +498,8 @@
    "string_empty_not_is",
    "task_new",
    "watch",
-   "app_new_step_2"
+   "app_new_step_2",
+   "repos_paths_names_map_unordered"
   ],
   "firebase_storage_function_run": [
    "app_karate",
@@ -5468,8 +5469,7 @@
    "repos_paths_map_unordered_combine",
    "repo_acronym_to_path",
    "sandbox_2",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered"
+   "repos_paths_map_unordered_combine_folders"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -7817,7 +7817,8 @@
    "server",
    "watch",
    "file_root_exists",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -30220,8 +30221,9 @@
     "all",
     "lambda",
     "repo_name",
-    "folder",
+    "path",
     "mapped",
+    "name",
     "result"
    ]
   }
