@@ -507,7 +507,8 @@
    "string_empty_not_is",
    "task_new",
    "watch",
-   "firebase_service_account_love"
+   "firebase_service_account_love",
+   "firebase_service_account_love_generic"
   ],
   "add": [
    "add",
@@ -1076,7 +1077,8 @@
    "app_new_step_3",
    "repo_acronym_get",
    "repo_about_get",
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "firebase_service_account_love_generic"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4720,7 +4722,8 @@
    "path_name",
    "sandbox_4_a",
    "unzip",
-   "firebase_service_account_love"
+   "firebase_service_account_love",
+   "firebase_service_account_love_generic"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5841,7 +5844,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "html_update_public"
+   "html_update_public",
+   "firebase_service_account_love_generic"
   ],
   "file_copy": [
    "data_backup",
@@ -8066,7 +8070,8 @@
    "string_replace"
   ],
   "folder_find_starts_with": [
-   "folder_find_starts_with"
+   "folder_find_starts_with",
+   "firebase_service_account_love_generic"
   ],
   "folder_previous": [
    "folder_previous",
@@ -8075,7 +8080,8 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server"
+   "server",
+   "firebase_service_account_love_generic"
   ],
   "prefix": [
    "folder_find_starts_with",
@@ -8089,21 +8095,24 @@
    "messenger_reply_unread_collect",
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
-   "string_starts_with"
+   "string_starts_with",
+   "firebase_service_account_love_generic"
   ],
   "path_folder": [
    "folder_find_starts_with",
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "repos_names"
+   "repos_names",
+   "firebase_service_account_love_generic"
   ],
   "only": [
    "folder_find_starts_with",
    "function_exists_inner",
    "function_name_to_path_search",
    "list_find",
-   "list_single"
+   "list_single",
+   "firebase_service_account_love_generic"
   ],
   "http": [
    "firebase_storage_download",
@@ -14662,7 +14671,8 @@
    "repo_firebase_service_account_set"
   ],
   "firebase_service_account_love_generic": [
-   "firebase_service_account_love"
+   "firebase_service_account_love",
+   "firebase_service_account_love_generic"
   ]
  },
  "functions": {
@@ -30441,6 +30451,21 @@
     "value",
     "key",
     "repo_name"
+   ]
+  },
+  "firebase_service_account_love_generic": {
+   "async": true,
+   "identifiers": [
+    "folder_find_starts_with",
+    "path_join",
+    "folder_previous",
+    "firebase_service_account_love_generic",
+    "name",
+    "prefix",
+    "v",
+    "path_folder",
+    "only",
+    "file_path"
    ]
   }
  }
