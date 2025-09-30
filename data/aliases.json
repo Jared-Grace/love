@@ -203,6 +203,7 @@
   "pnd": "function_param_new_double",
   "ldf": "list_difference",
   "lina": "list_includes_assert",
-  "lsq": "list_squash"
+  "lsq": "list_squash",
+  "fo": "file_overwrite"
  }
 }
