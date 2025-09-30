@@ -840,8 +840,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "app_new"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14556,7 +14555,6 @@
     "app_new",
     "name",
     "arguments",
-    "v",
     "value"
    ]
   },
