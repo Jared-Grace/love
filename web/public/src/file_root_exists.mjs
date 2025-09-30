@@ -8,10 +8,11 @@ export async function file_root_exists(file_path) {
   let en = string_empty_not_is(root);
   let exists = true;
   if (en) {
-    async function lambda2() {}
-    let success = await throws_not_async(lambda2);
-    let fs = await import("fs");
-    exists = await fs.promises.access(root);
+    async function lambda2() {
+      let fs = await import("fs");
+      await fs.promises.access(root);
+    }
+    exists = await throws_not_async(lambda2);
   }
   return exists;
 }
