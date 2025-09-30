@@ -9215,7 +9215,8 @@
   "task_name": [
    "function_current_set_task_new",
    "string_empty_not_is_assert",
-   "task_new"
+   "task_new",
+   "app_new"
   ],
   "function_current_set_task_new_simple": [
    "function_current_set_task_new_simple"
@@ -14250,7 +14251,8 @@
   ],
   "string_empty_not_is_assert": [
    "string_empty_not_is_assert",
-   "task_new"
+   "task_new",
+   "app_new"
   ],
   "endsWith": [
    "string_ends_with"
@@ -14543,13 +14545,15 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "string_empty_not_is_assert",
     "assert_arguments",
     "app_new_step_1",
     "app_new_step_2",
     "marker",
     "app_new",
     "name",
-    "arguments"
+    "arguments",
+    "task_name"
    ]
   },
   "app_new_assign": {
