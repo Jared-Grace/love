@@ -12643,7 +12643,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "repos_paths_names_map_unordered_combine"
   ],
   "e2": [
    "js_log_remove",
@@ -28835,7 +28836,8 @@
     "r_path",
     "joined",
     "mapped",
-    "v"
+    "v",
+    "log"
    ]
   },
   "repo_acronym_get": {
