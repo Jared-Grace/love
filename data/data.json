@@ -4558,7 +4558,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_run_output_file_temp"
   ],
   "assert_not": [
    "assert_not",
@@ -12576,7 +12577,8 @@
    "js_log_remove",
    "log",
    "log_keep",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_run_output_file_temp"
   ],
   "e2": [
    "js_log_remove",
@@ -30077,6 +30079,7 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "log",
     "file_open",
     "json_to",
     "function_run",
@@ -30088,6 +30091,7 @@
     "result",
     "lambda",
     "temp_path",
+    "message",
     "json"
    ]
   }
