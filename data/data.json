@@ -14711,7 +14711,7 @@
    "js_identifier_unique",
    "js_keyword_default"
   ],
-  "$g$f$default": [
+  "$g$f$d": [
    "firebase_name"
   ]
  },
@@ -30534,7 +30534,7 @@
     "combined",
     "f",
     "projects",
-    "$g$f$default",
+    "$g$f$d",
     "v"
    ]
   },
