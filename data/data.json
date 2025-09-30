@@ -13983,7 +13983,8 @@
   ],
   "r_path": [
    "path_repo_combine",
-   "repo_path"
+   "repo_path",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "then": [
    "promise_is"
@@ -30212,6 +30213,7 @@
     "result",
     "each_folder",
     "name",
+    "r_path",
     "joined",
     "f_names",
     "lambda",
