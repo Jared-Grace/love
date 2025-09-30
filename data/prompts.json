@@ -2384,6 +2384,8 @@
   "s repos,combine",
   "s object_property",
   "p",
-  "function_name_to_path_search app_karate"
+  "function_name_to_path_search app_karate",
+  "fd app_karate_code",
+  "function_imports app_karate"
  ]
 }
