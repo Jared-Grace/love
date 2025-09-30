@@ -1662,7 +1662,6 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
    "repo_acronym_set",
    "retry",
    "retry_on_error",
@@ -28836,7 +28835,6 @@
     "joined",
     "f_names",
     "mapped",
-    "lambda",
     "v"
    ]
   },
