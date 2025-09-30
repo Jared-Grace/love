@@ -5216,7 +5216,8 @@
    "identity",
    "marker_above",
    "sandbox_3",
-   "watch"
+   "watch",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -30179,6 +30180,7 @@
   "repos_paths_map_unordered_combine_folders": {
    "async": true,
    "identifiers": [
+    "identity",
     "marker",
     "path_join",
     "repos_paths_map_unordered",
