@@ -1666,7 +1666,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "function_run_output_file_temp"
   ],
   "ast": [
    "app_new_step_3",
@@ -7836,14 +7837,16 @@
   ],
   "file_temp": [
    "file_temp",
-   "sandbox_2"
+   "sandbox_2",
+   "function_run_output_file_temp"
   ],
   "lambda$temp_path": [
    "file_temp"
   ],
   "temp_path": [
    "file_temp",
-   "sandbox_2"
+   "sandbox_2",
+   "function_run_output_file_temp"
   ],
   "file_write_generic": [
    "file_write",
@@ -30065,10 +30068,13 @@
    ]
   },
   "function_run_output_file_temp": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "file_temp",
     "marker",
-    "function_run_output_file_temp"
+    "function_run_output_file_temp",
+    "lambda",
+    "temp_path"
    ]
   }
  }
