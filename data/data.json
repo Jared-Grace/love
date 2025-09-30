@@ -5650,7 +5650,6 @@
    "js_outside_move",
    "path_repo_about",
    "path_repo_combine",
-   "repos_paths_names_map_unordered_combine",
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
@@ -12529,8 +12528,7 @@
   "string_is_assert": [
    "js_identifier_unique",
    "string_and_empty_not_is_assert",
-   "string_is_assert",
-   "repos_paths_names_map_unordered_combine"
+   "string_is_assert"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -28818,7 +28816,6 @@
    "identifiers": [
     "list_map",
     "repos_paths_names_map_unordered",
-    "string_is_assert",
     "marker",
     "path_join",
     "repos_paths_names_map_unordered_combine",
@@ -28830,10 +28827,9 @@
     "r_path",
     "joined",
     "f_names",
-    "lambda",
-    "f_path",
     "v",
-    "mapped"
+    "mapped",
+    "lambda"
    ]
   },
   "repo_acronym_get": {
