@@ -4897,8 +4897,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "function_name_to_path_search"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -6629,8 +6628,7 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace",
-   "function_name_to_path_search"
+   "string_replace"
   ],
   "to": [
    "each_range_from",
@@ -6656,8 +6654,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "function_name_to_path_search"
+   "string_replace"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -9456,8 +9453,7 @@
    "function_name_to_path_search"
   ],
   "f_path2": [
-   "function_exists_inner",
-   "function_name_to_path_search"
+   "function_exists_inner"
   ],
   "function_name_to_path_search": [
    "function_exists_strict",
@@ -19511,11 +19507,7 @@
     "filtered",
     "multiple",
     "result",
-    "only",
-    "f_path2",
-    "to",
-    "property_name",
-    "from"
+    "only"
    ]
   },
   "function_name_to_path_unalias": {
