@@ -797,7 +797,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "function_name_to_path_search"
   ],
   "app_name_prefix": [
    "app_name_prefix",
@@ -4701,7 +4702,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "function_name_to_path_search"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -6631,8 +6633,7 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace",
-   "function_name_to_path_search"
+   "string_replace"
   ],
   "to": [
    "each_range_from",
@@ -6658,8 +6659,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "function_name_to_path_search"
+   "string_replace"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -14584,9 +14584,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "to2": [
-   "function_name_to_path_search"
   ]
  },
  "functions": {
@@ -19519,9 +19516,8 @@
     "result2",
     "path",
     "mapper",
-    "to2",
-    "to",
-    "from"
+    "a",
+    "file_path"
    ]
   },
   "function_name_to_path_unalias": {
