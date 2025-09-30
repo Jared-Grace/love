@@ -1,3 +1,4 @@
+import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -20,7 +21,7 @@ export async function app_new_step_3(name) {
   string_and_empty_not_is_assert(name);
   let call_name = firebase_storage_function_run.name;
   let { declaration: declaration_call, unaliased } =
-    await function_parse_declaration(f_name);
+    await function_parse_declaration(call_name);
   let a_name = app_name_prefixed(name);
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
@@ -30,6 +31,11 @@ export async function app_new_step_3(name) {
     let expression2 = js_parse_expression(code_string);
     const v = "f_name";
     let assign = js_declare(v, expression2);
+    let code = js_code_call_args_await_maybe(
+      unaliased2,
+      args_code,
+      declaration2,
+    );
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let arguments2 = object_property_get(parsed, "arguments");
     list_empty(arguments2);
