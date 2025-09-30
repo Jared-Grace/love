@@ -1070,7 +1070,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "file_root_exists"
+   "file_root_exists",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2514,8 +2515,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "repos_paths_map_unordered_combine_folders"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -5647,7 +5647,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set"
+   "user_repo_set",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "file_write": [
    "data_all",
@@ -30214,7 +30215,8 @@
     "joined",
     "f_names",
     "lambda",
-    "item",
+    "f_path",
+    "v",
     "mapped"
    ]
   },
