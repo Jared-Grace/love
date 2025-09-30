@@ -859,7 +859,6 @@
    "error_attention_clear",
    "file_read_buffer",
    "file_root_exists",
-   "firebase_service_account",
    "folder_public",
    "folder_read_async",
    "folder_read_files",
@@ -5807,7 +5806,6 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "file_name_json_folder",
-   "firebase_service_account",
    "folder_public_combine",
    "folder_read_files",
    "folder_user",
@@ -8054,11 +8052,9 @@
    "string_replace"
   ],
   "folder_find_starts_with": [
-   "firebase_service_account",
    "folder_find_starts_with"
   ],
   "folder_previous": [
-   "firebase_service_account",
    "folder_previous",
    "function_name_to_path_import",
    "git_history_delete",
@@ -8068,7 +8064,6 @@
    "server"
   ],
   "prefix": [
-   "firebase_service_account",
    "folder_find_starts_with",
    "js_code_declaration_args",
    "list_filter_starts_with",
@@ -8083,7 +8078,6 @@
    "string_starts_with"
   ],
   "path_folder": [
-   "firebase_service_account",
    "folder_find_starts_with",
    "folder_read",
    "folder_read_async",
@@ -8091,7 +8085,6 @@
    "repos_names"
   ],
   "only": [
-   "firebase_service_account",
    "folder_find_starts_with",
    "function_exists_inner",
    "function_name_to_path_search",
@@ -14627,6 +14620,9 @@
    "html_update_generic",
    "html_code_script_module",
    "html_update_public"
+  ],
+  "firebase_service_account_love": [
+   "firebase_service_account"
   ]
  },
  "functions": {
@@ -18004,15 +18000,9 @@
   "firebase_service_account": {
    "async": true,
    "identifiers": [
+    "firebase_service_account_love",
     "file_read_json",
-    "folder_find_starts_with",
-    "path_join",
-    "folder_previous",
     "firebase_service_account",
-    "prefix",
-    "v",
-    "path_folder",
-    "only",
     "file_path",
     "service_account"
    ]
