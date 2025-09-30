@@ -1073,7 +1073,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "html_code_script_module"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2670,7 +2671,8 @@
   ],
   "middle": [
    "app_replace_rule_parse",
-   "html_update_generic"
+   "html_update_generic",
+   "html_code_script_module"
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
@@ -14608,7 +14610,8 @@
    "function_exists_assert"
   ],
   "html_code_script_module": [
-   "html_update_generic"
+   "html_update_generic",
+   "html_code_script_module"
   ]
  },
  "functions": {
@@ -30315,6 +30318,14 @@
     "function_exists_assert",
     "f_name",
     "exists"
+   ]
+  },
+  "html_code_script_module": {
+   "async": false,
+   "identifiers": [
+    "html_code_script_module",
+    "middle",
+    "v"
    ]
   }
  }
