@@ -5713,7 +5713,8 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "function_dependencies"
   ],
   "data": [
    "data_all",
@@ -6934,8 +6935,7 @@
    "function_exists_inner",
    "function_name_to_path_unalias",
    "string_upper_to",
-   "uuid",
-   "function_dependencies"
+   "uuid"
   ],
   "string_take": [
    "ebible_chapter_code_to_book",
@@ -10012,8 +10012,7 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple",
-   "function_dependencies"
+   "function_param_swap_task_simple"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -19086,8 +19085,7 @@
     "function_imports",
     "function_dependencies",
     "f_name",
-    "u",
-    "f_name2",
+    "exists",
     "lambda2",
     "la",
     "lambda",
