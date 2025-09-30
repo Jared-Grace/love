@@ -2341,7 +2341,6 @@
   "as delete",
   "de test2",
   "s t",
-  "o an",
   "de test",
   "app_new_step_1",
   "s empty,string",
@@ -2355,6 +2354,7 @@
   "p",
   "r function_parse_declaration_js_unparsefunction_parse_declaration_unparse",
   "ps",
-  "app_new_step_2 karate"
+  "app_new_step_2 karate",
+  "o an"
  ]
 }
