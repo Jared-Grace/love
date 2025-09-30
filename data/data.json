@@ -4583,8 +4583,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "visit_unique_async"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -30225,7 +30224,6 @@
     "node",
     "children_get",
     "on_each",
-    "message",
     "found",
     "lambda",
     "children",
