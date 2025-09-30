@@ -4607,8 +4607,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "function_import"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -19362,8 +19361,7 @@
     "joined",
     "imported",
     "imported_fn",
-    "Error",
-    "message"
+    "Error"
    ]
   },
   "function_imports": {
