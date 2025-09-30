@@ -414,7 +414,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert"
+   "function_exists_assert",
+   "html_update_public"
   ],
   "name": [
    "app_karate",
@@ -1264,7 +1265,8 @@
    "marker_down_choices",
    "marker_functionize",
    "marker_next_await",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "html_update_public"
   ],
   "expression": [
    "app_new_assign",
@@ -8008,7 +8010,8 @@
   "function_dependencies_code": [
    "firebase_deploy_function",
    "function_dependencies_code",
-   "function_dependencies_code_copy"
+   "function_dependencies_code_copy",
+   "html_update_public"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function",
@@ -21410,6 +21413,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "function_dependencies_code",
     "function_name_to_path_search",
     "app_name_prefixed",
     "folder_src",
@@ -21420,6 +21424,8 @@
     "name",
     "a_name",
     "result",
+    "code",
+    "f_name",
     "file_path",
     "paths_get",
     "f_name_ext",
