@@ -2370,6 +2370,7 @@
   "s html",
   "o an",
   "html_name_to_path karate",
-  "s name,path"
+  "s name,path",
+  "function_name_to_path_search karate"
  ]
 }
