@@ -7648,7 +7648,8 @@
    "promise_not_is"
   ],
   "access": [
-   "file_exists"
+   "file_exists",
+   "file_overwrite"
   ],
   "constants": [
    "file_exists"
@@ -17583,7 +17584,8 @@
     "path",
     "parsed",
     "parse",
-    "root"
+    "root",
+    "access"
    ]
   },
   "file_overwrite_buffer": {
