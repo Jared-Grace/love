@@ -14581,6 +14581,9 @@
   ],
   "tst1": [
    "tst1"
+  ],
+  "$g$only$name": [
+   "function_name_to_path_search"
   ]
  },
  "functions": {
@@ -19507,6 +19510,7 @@
     "multiple",
     "result",
     "only",
+    "$g$only$name",
     "f_path2"
    ]
   },
