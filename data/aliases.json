@@ -205,6 +205,7 @@
   "lina": "list_includes_assert",
   "lsq": "list_squash",
   "fo": "file_overwrite",
-  "si": "string_is"
+  "si": "string_is",
+  "of": "function_run_output_file_temp"
  }
 }
