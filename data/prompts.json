@@ -2381,9 +2381,9 @@
   "de tst1",
   "s string_is",
   "o repos_paths_names_map_unordered",
-  "p",
   "s repos,combine",
   "s object_property",
+  "p",
   "function_name_to_path_search app_karate"
  ]
 }
