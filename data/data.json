@@ -2523,8 +2523,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "app_new_step_3"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -11237,8 +11236,7 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression",
-   "app_new_step_3"
+   "js_parse_expression"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -14819,8 +14817,6 @@
     "parsed",
     "arguments2",
     "expression",
-    "code_expression",
-    "item",
     "body_block",
     "output"
    ]
