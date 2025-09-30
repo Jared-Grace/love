@@ -2296,7 +2296,8 @@
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
    "html_p_text",
-   "file_root_exists"
+   "file_root_exists",
+   "file_overwrite"
   ],
   "lambda4": [
    "app_replace_home",
@@ -3152,8 +3153,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "file_overwrite"
+   "string_slice"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4430,8 +4430,7 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert",
-   "file_overwrite"
+   "string_is_assert"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -4522,7 +4521,8 @@
    "integer_is_assert",
    "js_node_atomize",
    "list_empty_is_assert",
-   "list_is_assert"
+   "list_is_assert",
+   "file_overwrite"
   ],
   "o": [
    "assert_json",
@@ -17591,18 +17591,18 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
-    "assert",
     "file_root_exists",
     "log",
     "file_parent_exists_ensure",
+    "assert_json",
     "file_overwrite",
     "file_path",
     "contents",
     "exists",
+    "root",
     "fs",
     "promises",
-    "writeFile",
-    "b"
+    "writeFile"
    ]
   },
   "file_overwrite_buffer": {
