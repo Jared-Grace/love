@@ -4712,7 +4712,6 @@
    "file_root_exists",
    "file_root_exists_assert",
    "file_write_json",
-   "firebase_service_account",
    "function_alias_add_generic",
    "html_name_to_path",
    "html_name_to_path_dev",
@@ -18068,8 +18067,7 @@
     "firebase_service_account",
     "fn",
     "result",
-    "service_account",
-    "file_path"
+    "service_account"
    ]
   },
   "firebase_storage_download": {
