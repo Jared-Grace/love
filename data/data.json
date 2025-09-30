@@ -14545,12 +14545,12 @@
   "app_karate": {
    "async": true,
    "identifiers": [
+    "firebase_storage_function_run",
+    "app_karate_main",
     "marker",
     "app_karate",
     "f_name",
-    "app_karate_main",
-    "name",
-    "firebase_storage_function_run"
+    "name"
    ]
   },
   "add": {
