@@ -1072,7 +1072,8 @@
    "function_name_to_path_search",
    "html_code_script_module",
    "app_new_step_3",
-   "firebase_service_account_love"
+   "firebase_service_account_love",
+   "repo_acronym_get"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -3921,7 +3922,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "repo_acronym_get"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -28904,8 +28906,10 @@
     "marker",
     "repo_acronym_get",
     "repo",
+    "key",
     "a_path",
-    "value"
+    "value",
+    "v"
    ]
   },
   "repo_acronym_set": {
