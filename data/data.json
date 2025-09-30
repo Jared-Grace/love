@@ -12592,8 +12592,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "function_run_output_file_temp",
-   "file_overwrite",
-   "file_root_exists"
+   "file_overwrite"
   ],
   "e2": [
    "js_log_remove",
@@ -30126,7 +30125,6 @@
    "identifiers": [
     "string_empty_not_is",
     "object_property_get",
-    "log",
     "file_root_exists",
     "file_path",
     "path",
