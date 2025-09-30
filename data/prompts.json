@@ -2400,6 +2400,7 @@
   "c repo_acronym_get repo_firebase_service_account_get",
   "c repo_acronym_set repo_firebase_service_account_set",
   "urg",
-  "rfsas firebase_service_account_love"
+  "rfsas firebase_service_account_love",
+  "s love"
  ]
 }
