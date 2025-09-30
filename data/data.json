@@ -12591,7 +12591,6 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "function_run_output_file_temp",
    "file_overwrite"
   ],
   "e2": [
@@ -30105,7 +30104,6 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
-    "log",
     "file_open",
     "json_to",
     "function_run",
