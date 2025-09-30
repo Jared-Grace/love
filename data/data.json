@@ -3168,8 +3168,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "function_dependencies"
+   "string_slice"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4448,8 +4447,7 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert",
-   "function_dependencies"
+   "string_is_assert"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -5715,8 +5713,7 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "function_dependencies"
+   "object_property_lambda_async"
   ],
   "data": [
    "data_all",
@@ -9300,8 +9297,7 @@
    "function_delete_if_exists",
    "function_exists",
    "function_list_generate",
-   "function_params_new",
-   "function_dependencies"
+   "function_params_new"
   ],
   "marker_first": [
    "function_current_set",
@@ -14599,6 +14595,9 @@
   ],
   "property": [
    "object_properties_from"
+  ],
+  "function_exists_assert": [
+   "function_dependencies"
   ]
  },
  "functions": {
@@ -19081,15 +19080,12 @@
   "function_dependencies": {
    "async": true,
    "identifiers": [
-    "assert",
-    "function_exists",
+    "function_exists_assert",
     "list_adder_unique_async",
     "visit_unique_async",
     "function_imports",
     "function_dependencies",
     "f_name",
-    "exists",
-    "b",
     "lambda2",
     "la",
     "lambda",
