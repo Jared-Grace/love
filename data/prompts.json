@@ -2082,7 +2082,6 @@
   "fd git_repo_clone",
   "nd aa",
   "s decl,sing",
-  "s call",
   "n assert_arguments",
   "a eq equal",
   "s assert",
@@ -2394,6 +2393,7 @@
   "s main",
   "s code,string",
   "p",
-  "app_new_step_3 karate"
+  "app_new_step_3 karate",
+  "s call"
  ]
 }
