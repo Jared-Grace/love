@@ -11792,7 +11792,8 @@
    "js_calls_to_each"
   ],
   "call_name": [
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "app_new_step_3"
   ],
   "call2": [
    "js_calls_to_each"
@@ -14809,6 +14810,7 @@
     "app_name_prefixed",
     "app_new_step_3",
     "name",
+    "call_name",
     "declaration",
     "declaration_call",
     "unaliased",
