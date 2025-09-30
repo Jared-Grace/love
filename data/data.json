@@ -5681,8 +5681,7 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "user_repo_path_combine",
-   "firebase_name"
+   "user_repo_path_combine"
   ],
   "file_write": [
    "data_all",
@@ -9255,7 +9254,6 @@
    "user_repo_set",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "firebase_name",
    "user_repo_path_combine"
   ],
   "js_identifier_replace": [
@@ -9313,7 +9311,6 @@
    "html_update_public",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "firebase_name",
    "user_repo_path_combine"
   ],
   "f_path_new": [
@@ -10684,8 +10681,7 @@
    "repo_acronym_to_path",
    "repo_path",
    "repo_path_combine",
-   "html_update_public",
-   "firebase_name"
+   "html_update_public"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14072,8 +14068,7 @@
    "path_repo_combine",
    "repos_paths_names_map_unordered_combine",
    "repo_path",
-   "html_update_public",
-   "firebase_name"
+   "html_update_public"
   ],
   "then": [
    "promise_is"
@@ -30517,14 +30512,9 @@
    "async": true,
    "identifiers": [
     "user_repo_path_combine",
-    "repo_path",
-    "user_repo_get",
     "file_open",
     "firebase_name",
     "f_path_new",
-    "f_path",
-    "repo_name",
-    "r_path",
     "v"
    ]
   },
