@@ -4325,7 +4325,8 @@
    "path_join",
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
-   "sandbox_2"
+   "sandbox_2",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5142,7 +5143,8 @@
    "tasks_run",
    "task_new",
    "ternary",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "catch_call": [
    "catch_call",
@@ -5458,7 +5460,8 @@
    "repos_paths_map_unordered",
    "repos_paths_map_unordered_combine",
    "repo_acronym_to_path",
-   "sandbox_2"
+   "sandbox_2",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -5799,7 +5802,8 @@
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server"
+   "server",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "file_copy": [
    "data_backup",
@@ -7804,7 +7808,8 @@
    "repos_paths_map_unordered_combine_squash",
    "server",
    "watch",
-   "file_root_exists"
+   "file_root_exists",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8360,7 +8365,8 @@
    "js_expand_generic",
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
-   "string_split_comma"
+   "string_split_comma",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8469,7 +8475,8 @@
    "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "paths": [
    "functions_names_from_path",
@@ -10027,7 +10034,8 @@
   "repos_paths_map_unordered": [
    "function_run_git",
    "repos_paths_map_unordered",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -10044,7 +10052,8 @@
   ],
   "each_folder": [
    "function_run_git",
-   "repos_paths_map_unordered_combine"
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -14539,6 +14548,9 @@
    "file_overwrite",
    "file_root_exists_assert",
    "file_parent_exists_ensure"
+  ],
+  "repos_paths_map_unordered_combine_folders": [
+   "repos_paths_map_unordered_combine_folders"
   ]
  },
  "functions": {
@@ -30161,6 +30173,21 @@
     "exists",
     "root",
     "message"
+   ]
+  },
+  "repos_paths_map_unordered_combine_folders": {
+   "async": true,
+   "identifiers": [
+    "path_join",
+    "repos_paths_map_unordered",
+    "repos_paths_map_unordered_combine_folders",
+    "path",
+    "mapper",
+    "result",
+    "each_folder",
+    "folder",
+    "joined",
+    "f_names"
    ]
   }
  }
