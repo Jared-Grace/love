@@ -4558,8 +4558,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "function_run_output_file_temp"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -30091,7 +30090,6 @@
     "result",
     "lambda",
     "temp_path",
-    "message",
     "json"
    ]
   }
