@@ -2376,6 +2376,7 @@
   "is repos_paths_map_unordered_combine",
   "cs repos_paths_map_unordered_combine folders",
   "repos_paths_map_unordered_combine_folders test.mjs",
-  "c repos_paths_map_unordered repos_paths_names_map_unordered"
+  "c repos_paths_map_unordered repos_paths_names_map_unordered",
+  "r repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine"
  ]
 }
