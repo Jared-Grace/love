@@ -1,3 +1,4 @@
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -32,6 +33,7 @@ export async function app_new_step_3(name) {
     const v = "f_name";
     let assign = js_declare(v, expression2);
     let code = js_code_call_args_await_maybe(unaliased, [v], declaration_call);
+    let statement = js_parse_statement(code2);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let arguments2 = object_property_get(parsed, "arguments");
     list_empty(arguments2);
