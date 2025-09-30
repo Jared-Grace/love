@@ -1067,7 +1067,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_run_output_file_temp"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -3324,7 +3325,8 @@
    "sandbox_2",
    "storage_local_set",
    "string_is_assert_json",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_run_output_file_temp"
   ],
   "equal_by": [
    "app_replace_rule_valid",
@@ -4450,8 +4452,7 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch",
-   "function_run_output_file_temp"
+   "watch"
   ],
   "count": [
    "assert_arguments",
@@ -4817,7 +4818,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_run_output_file_temp"
   ],
   "property_name": [
    "bind_property",
@@ -30076,16 +30078,18 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "json_to",
     "function_run",
     "file_overwrite",
     "file_temp",
     "marker",
     "function_run_output_file_temp",
-    "result",
     "f_name",
-    "args",
+    "result",
     "lambda",
     "temp_path",
+    "v",
+    "object",
     "contents"
    ]
   }
