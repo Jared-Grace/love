@@ -2366,8 +2366,8 @@
   "s catch",
   "s throws",
   "ps",
-  "p",
   "is folder_user_combine",
+  "p",
   "function_run_output_file_temp functions_names_to_paths"
  ]
 }
