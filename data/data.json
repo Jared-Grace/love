@@ -2010,7 +2010,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public"
+   "html_update_public",
+   "app_new_step_3"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -11679,7 +11680,8 @@
    "js_expand_generic",
    "js_marker_name_get",
    "marker_call_replace_generic",
-   "marker_rename"
+   "marker_rename",
+   "app_new_step_3"
   ],
   "log_unparse_try": [
    "js_block_child_graph",
@@ -14782,6 +14784,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "list_add_multiple",
     "list_empty",
     "js_parse_expression",
@@ -14809,6 +14812,7 @@
     "v",
     "assign",
     "parsed",
+    "arguments2",
     "body_block",
     "output"
    ]
