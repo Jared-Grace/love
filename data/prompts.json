@@ -2407,6 +2407,7 @@
   "rfsag",
   "ps",
   "fdf app_karate_main",
-  "function_name_unalias add"
+  "function_name_unalias add",
+  "function_alias_add_generic add"
  ]
 }
