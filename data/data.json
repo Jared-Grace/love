@@ -1361,7 +1361,6 @@
    "task_new"
   ],
   "list_add": [
-   "app_new_step_3",
    "app_reply_main",
    "ebible_index",
    "ebible_verses",
@@ -6553,8 +6552,7 @@
    "list_adder_unique_async",
    "list_add_multiple",
    "marker_functionize",
-   "reply",
-   "app_new_step_3"
+   "reply"
   ],
   "each_multiple_async": [
    "each_multiple_async",
@@ -14799,7 +14797,6 @@
     "marker",
     "string_and_empty_not_is_assert",
     "function_transform",
-    "list_add",
     "js_declaration_single_block_body",
     "firebase_storage_function_run",
     "js_call_new",
@@ -14823,7 +14820,6 @@
     "parsed",
     "body_block",
     "list",
-    "items",
     "output"
    ]
   },
