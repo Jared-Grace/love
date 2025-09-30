@@ -1,6 +1,6 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
 import { repos_paths_names_map_unordered_combine } from "../../../love/public/src/repos_paths_names_map_unordered_combine.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -36,7 +36,8 @@ export async function function_name_to_path_search(unaliased) {
   if (exists) {
     let only = list_single(filtered);
     let mapped = object_property_get(only, "mapped");
-  object_property_from(only,  "f_path", result);
+    object_property_from(result, "f_path", mapped);
   }
-  return result;e
+  return result;
+  each(list, function lambda3(item) {});
 }
