@@ -8238,7 +8238,8 @@
    "folder_current_join",
    "folder_current_join_code",
    "js_code_string",
-   "js_string"
+   "js_string",
+   "app_new_step_3"
   ],
   "js_code_string": [
    "folder_current_join_code",
@@ -14811,6 +14812,7 @@
     "ast",
     "declaration",
     "async",
+    "value_string",
     "code_string",
     "v2",
     "expression2",
