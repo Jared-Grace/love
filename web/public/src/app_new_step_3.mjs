@@ -31,7 +31,6 @@ export async function app_new_step_3(name) {
     let assign = js_declare(v, expression2);
     let code = js_code_call_args_await_maybe(unaliased, [v], declaration_call);
     let statement = js_parse_statement(code);
-    let expression = js_parse_expression(v);
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
     list_add_multiple(body_block, [assign, statement]);
