@@ -1871,7 +1871,8 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize"
+   "marker_functionize",
+   "file_root_exists"
   ],
   "body_block": [
    "app_new_step_3",
@@ -1997,7 +1998,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "file_root_exists"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2292,7 +2294,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "file_root_exists"
   ],
   "lambda4": [
    "app_replace_home",
@@ -4672,7 +4675,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "file_root_exists"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5677,7 +5681,8 @@
    "object_property_initialize",
    "object_property_lambda",
    "object_property_lambda_async",
-   "file_overwrite"
+   "file_overwrite",
+   "file_root_exists"
   ],
   "data": [
    "data_all",
@@ -7605,7 +7610,8 @@
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "file_root_exists"
   ],
   "promises": [
    "file_copy_overwrite",
@@ -7617,7 +7623,8 @@
    "file_read",
    "file_read_buffer",
    "folder_delete",
-   "folder_read"
+   "folder_read",
+   "file_root_exists"
   ],
   "copyFile": [
    "file_copy_overwrite"
@@ -7645,7 +7652,8 @@
    "promise_not_is"
   ],
   "access": [
-   "file_exists"
+   "file_exists",
+   "file_root_exists"
   ],
   "constants": [
    "file_exists"
@@ -7784,7 +7792,8 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
    "server",
-   "watch"
+   "watch",
+   "file_root_exists"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -10816,7 +10825,8 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "file_root_exists"
   ],
   "descendants": [
    "html_parse_descendants_classes"
@@ -11096,7 +11106,8 @@
   "parse": [
    "json_from",
    "js_parse",
-   "path_name"
+   "path_name",
+   "file_root_exists"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -14509,10 +14520,12 @@
    "function_run_output_file_temp"
   ],
   "si": [
-   "string_is"
+   "string_is",
+   "file_root_exists"
   ],
   "file_root_exists": [
-   "file_overwrite"
+   "file_overwrite",
+   "file_root_exists"
   ]
  },
  "functions": {
@@ -30101,6 +30114,24 @@
     "lambda",
     "temp_path",
     "json"
+   ]
+  },
+  "file_root_exists": {
+   "async": true,
+   "identifiers": [
+    "string_is",
+    "object_property_get",
+    "file_root_exists",
+    "file_path",
+    "path",
+    "parsed",
+    "parse",
+    "root",
+    "si",
+    "exists",
+    "fs",
+    "promises",
+    "access"
    ]
   }
  }
