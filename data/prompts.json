@@ -2336,7 +2336,6 @@
   "urs l",
   "c functions_log_remove functions_imports_fix",
   "d",
-  "ps",
   "p",
   "functions_imports_fix",
   "de t2",
@@ -2347,6 +2346,8 @@
   "s t",
   "o an",
   "de test",
-  "urs k"
+  "urs k",
+  "app_new_step_1",
+  "ps"
  ]
 }
