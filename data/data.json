@@ -4583,8 +4583,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "visit_filter_recursive_async"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -30208,7 +30207,6 @@
     "a",
     "copy",
     "children",
-    "message",
     "lambda",
     "c",
     "removed"
