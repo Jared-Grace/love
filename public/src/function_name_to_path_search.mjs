@@ -18,7 +18,7 @@ export async function function_name_to_path_search(unaliased) {
     };
     return v;
   }
-  let mapped = await repos_paths_map_unordered_combine(f_path, lambda);
+  let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
     let exists2 = object_property_get(m, "exists");
     let ti2 = true_is(exists2);
