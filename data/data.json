@@ -12423,8 +12423,7 @@
   ],
   "string_is_assert": [
    "js_identifier_unique",
-   "string_is_assert",
-   "app_new"
+   "string_is_assert"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -14251,7 +14250,6 @@
   "string_empty_not_is_assert": [
    "string_empty_not_is_assert",
    "task_new",
-   "app_new",
    "app_new_step_1"
   ],
   "endsWith": [
@@ -14460,6 +14458,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "string_and_empty_not_is_assert": [
+   "app_new"
   ]
  },
  "functions": {
@@ -14545,8 +14546,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
-    "string_is_assert",
-    "string_empty_not_is_assert",
+    "string_and_empty_not_is_assert",
     "assert_arguments",
     "app_new_step_1",
     "app_new_step_2",
