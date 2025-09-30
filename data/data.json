@@ -502,7 +502,6 @@
    "object_property_get_name",
    "path_name",
    "prompt_previous",
-   "repos_paths_names_map_unordered",
    "schtasks_query",
    "storage_local_key_get",
    "string_and_empty_not_is_assert",
@@ -9266,7 +9265,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_set",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "repos_paths_names_map_unordered"
   ],
   "f_path_new": [
    "function_copy"
@@ -28814,7 +28814,7 @@
     "lambda$name$path",
     "all",
     "lambda",
-    "name",
+    "repo_name",
     "path",
     "mapped",
     "result"
