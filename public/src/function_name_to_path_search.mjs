@@ -22,7 +22,8 @@ export async function function_name_to_path_search(unaliased) {
   }
   let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
-    let exists2 = object_property_get(m, "exists");
+    let mapped = object_property_get(m, "mapped");
+    let exists2 = object_property_get(mapped, "exists");
     let ti2 = true_is(exists2);
     return ti2;
   }
