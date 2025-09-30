@@ -4375,7 +4375,6 @@
    "function_alias_change",
    "function_alias_delete",
    "function_alias_replace",
-   "function_name_to_path",
    "http",
    "js_declaration_params_names_node",
    "js_identifier_defineds",
@@ -7551,7 +7550,8 @@
    "list_index_of",
    "list_index_of_last",
    "object_merge_generic",
-   "retry"
+   "retry",
+   "function_name_to_path"
   ],
   "exit": [
    "exit"
@@ -19265,8 +19265,8 @@
    "identifiers": [
     "function_name_folder_to_path",
     "string_includes",
-    "error",
     "functions_path",
+    "error_json",
     "function_name_to_path",
     "f_name",
     "folder",
