@@ -13,16 +13,12 @@ import { function_name_to_path } from "../../../love/public/src/function_name_to
 import { log } from "./log.mjs";
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
-  async function lambda(a) {log({a})
-  let file_path = object_property_get(a, "file_path");
+  async function lambda(file_path) {
     let exists = await file_exists(file_path);
-  let v = object_merge(
-    {
-      exists, 
-    },
-    a,
-  );
-    return v;
+
+    return {
+      exists, file_path
+    };
   }
   let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
