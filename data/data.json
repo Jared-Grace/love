@@ -9168,8 +9168,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "html_update_public"
+   "task_new"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -21412,7 +21411,6 @@
     "name",
     "a_name",
     "result",
-    "unaliased",
     "file_path",
     "paths_get",
     "f_name_ext",
