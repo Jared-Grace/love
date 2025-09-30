@@ -5926,7 +5926,8 @@
    "repo_path",
    "server",
    "user_repo_set",
-   "repo_about_set"
+   "repo_about_set",
+   "function_import"
   ],
   "data_copy": [
    "data_copy",
@@ -19361,7 +19362,8 @@
     "joined",
     "imported",
     "imported_fn",
-    "Error"
+    "Error",
+    "previous"
    ]
   },
   "function_imports": {
