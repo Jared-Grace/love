@@ -14512,6 +14512,9 @@
   ],
   "function_run_output_file_temp": [
    "function_run_output_file_temp"
+  ],
+  "si": [
+   "file_overwrite"
   ]
  },
  "functions": {
@@ -17585,6 +17588,7 @@
     "parsed",
     "parse",
     "root",
+    "si",
     "access"
    ]
   },
