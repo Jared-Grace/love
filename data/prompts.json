@@ -2343,6 +2343,7 @@
   "functions_imports_fix",
   "de t2",
   "np",
-  "file_delete C:/Users/chris/repos/love/.git/index.lock"
+  "file_delete C:/Users/chris/repos/love/.git/index.lock",
+  "as delete"
  ]
 }
