@@ -1085,7 +1085,8 @@
    "repo_firebase_service_account_get",
    "firebase_service_account_love_generic",
    "firebase_name",
-   "js_identifier_unique"
+   "js_identifier_unique",
+   "js_keyword_default"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14710,7 +14711,8 @@
    "firebase_name"
   ],
   "js_keyword_default": [
-   "js_identifier_unique"
+   "js_identifier_unique",
+   "js_keyword_default"
   ]
  },
  "functions": {
@@ -30545,6 +30547,13 @@
     "f_path",
     "repo_name",
     "combined"
+   ]
+  },
+  "js_keyword_default": {
+   "async": false,
+   "identifiers": [
+    "js_keyword_default",
+    "v"
    ]
   }
  }
