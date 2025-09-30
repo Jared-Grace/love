@@ -1672,7 +1672,8 @@
    "visit_unique_async",
    "watch",
    "function_run_output_file_temp",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "ast": [
    "app_new_step_3",
@@ -2513,7 +2514,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "index": [
    "app_replace_home",
@@ -2937,7 +2939,8 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -3051,7 +3054,8 @@
    "repos_paths_map_unordered",
    "sandbox_2",
    "sandbox_4_a",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4218,7 +4222,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "book_code": [
    "app_reply_main",
@@ -30196,6 +30201,7 @@
   "repos_paths_map_unordered_combine_folders": {
    "async": true,
    "identifiers": [
+    "list_map",
     "repos_paths_names_map_unordered",
     "identity",
     "marker",
@@ -30207,7 +30213,11 @@
     "each_folder",
     "name",
     "joined",
-    "f_names"
+    "f_names",
+    "mapped",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "repos_paths_names_map_unordered": {
