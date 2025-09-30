@@ -3329,8 +3329,7 @@
    "sandbox_2",
    "storage_local_set",
    "string_is_assert_json",
-   "undefined_not_is_assert_lambda",
-   "function_run_output_file_temp"
+   "undefined_not_is_assert_lambda"
   ],
   "equal_by": [
    "app_replace_rule_valid",
@@ -5654,7 +5653,8 @@
    "file_write_json",
    "function_run_prompt",
    "json_format_to",
-   "js_declaration_params_names_node"
+   "js_declaration_params_names_node",
+   "function_run_output_file_temp"
   ],
   "data_all": [
    "data_all",
@@ -30110,8 +30110,8 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "json_format_to",
     "file_open",
-    "json_to",
     "function_run",
     "file_overwrite",
     "file_temp",
