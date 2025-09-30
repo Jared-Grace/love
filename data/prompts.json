@@ -2392,6 +2392,7 @@
   "o an",
   "is app_new_assign",
   "s call,args",
-  "s main"
+  "s main",
+  "s code,string"
  ]
 }
