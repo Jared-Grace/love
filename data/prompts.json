@@ -2397,6 +2397,7 @@
   "html_update_public karate",
   "o v",
   "s firebase",
-  "s acro"
+  "s acro",
+  "c repo_acronym_get repo_firebase_service_account_get"
  ]
 }
