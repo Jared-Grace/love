@@ -2379,7 +2379,6 @@
   "s object_property",
   "function_name_to_path_search app_karate",
   "function_imports app_karate",
-  "ps",
   "app_karate",
   "fd app_karate_code",
   "fd app_karate",
@@ -2395,6 +2394,7 @@
   "app_new_step_3 karate",
   "s call",
   "s js,call",
-  "sps"
+  "sps",
+  "ps"
  ]
 }
