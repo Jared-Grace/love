@@ -1,3 +1,4 @@
+import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { folder_src } from "../../../love/public/src/folder_src.mjs";
@@ -7,6 +8,7 @@ import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mj
 export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
   let result = await function_name_to_path_search(a_name);
+  let code = await function_dependencies_code(f_name);
   marker("1");
   let file_path = html_name_to_path(name);
   function paths_get(f_name_ext) {
