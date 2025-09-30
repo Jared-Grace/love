@@ -2170,8 +2170,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "app_new"
+   "watch"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -14554,8 +14553,7 @@
     "marker",
     "app_new",
     "name",
-    "arguments",
-    "value"
+    "arguments"
    ]
   },
   "app_new_assign": {
