@@ -5211,7 +5211,8 @@
   "identity": [
    "catch_log_async",
    "identity",
-   "marker_above"
+   "marker_above",
+   "sandbox_3"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -8466,8 +8467,7 @@
    "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash",
-   "sandbox_3"
+   "repos_paths_map_unordered_combine_squash"
   ],
   "paths": [
    "functions_names_from_path",
@@ -28924,9 +28924,9 @@
    "async": true,
    "identifiers": [
     "repos_paths_map_unordered_combine_squash",
+    "identity",
     "sandbox_3",
-    "squashed",
-    "mapper"
+    "squashed"
    ]
   },
   "sandbox_4_a": {
