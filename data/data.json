@@ -3800,7 +3800,8 @@
    "function_list_generate",
    "function_params_consolidate",
    "list_empty",
-   "list_replace_all"
+   "list_replace_all",
+   "app_new_step_3"
   ],
   "list_join_newline_2": [
    "app_reply_main",
@@ -4238,7 +4239,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "app_new_step_3"
   ],
   "book_code": [
    "app_reply_main",
@@ -14787,6 +14789,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "list_empty",
     "js_parse_expression",
     "js_code_string",
     "js_declare",
@@ -14816,6 +14819,7 @@
     "assign",
     "parsed",
     "body_block",
+    "list",
     "output"
    ]
   },
