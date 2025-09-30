@@ -1407,7 +1407,6 @@
    "task_new"
   ],
   "js_call_new": [
-   "app_new_step_3",
    "js_calls_to_each",
    "js_call_fill",
    "js_call_new",
@@ -1859,7 +1858,6 @@
    "js_function_last_asyncify"
   ],
   "parsed": [
-   "app_new_step_3",
    "data_files_update",
    "data_file_update",
    "data_file_update_inner",
@@ -2013,8 +2011,7 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public",
-   "app_new_step_3"
+   "html_update_public"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -11822,8 +11819,7 @@
    "js_dollar_choice_arguments",
    "js_dollar_new",
    "js_parse_statement",
-   "js_statement_return",
-   "app_new_step_3"
+   "js_statement_return"
   ],
   "array_expression": [
    "js_calls_to_each",
@@ -14799,7 +14795,6 @@
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
     "list_add",
-    "object_property_get",
     "list_add_multiple",
     "list_empty",
     "js_parse_expression",
@@ -14810,7 +14805,6 @@
     "function_transform",
     "js_declaration_single_block_body",
     "firebase_storage_function_run",
-    "js_call_new",
     "js_declaration_single",
     "app_name_main",
     "app_name_prefixed",
@@ -14831,10 +14825,8 @@
     "assign",
     "code",
     "statement",
-    "code2",
-    "parsed",
-    "arguments2",
     "expression",
+    "arguments2",
     "body_block",
     "output"
    ]
