@@ -2318,7 +2318,6 @@
   "s transform,fun",
   "is functions_transform",
   "c functions_log_remove functions_imports_fix",
-  "d",
   "functions_imports_fix",
   "de t2",
   "np",
@@ -2377,6 +2376,7 @@
   "cs repos_paths_map_unordered_combine folders",
   "repos_paths_map_unordered_combine_folders test.mjs",
   "c repos_paths_map_unordered repos_paths_names_map_unordered",
-  "r repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine"
+  "r repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine",
+  "d"
  ]
 }
