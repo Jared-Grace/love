@@ -1074,7 +1074,6 @@
    "function_name_to_path_search",
    "html_code_script_module",
    "app_new_step_3",
-   "firebase_service_account_love",
    "repo_acronym_get",
    "repo_about_get",
    "repo_firebase_service_account_get"
@@ -5842,8 +5841,7 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "html_update_public",
-   "firebase_service_account_love"
+   "html_update_public"
   ],
   "file_copy": [
    "data_backup",
@@ -8068,8 +8066,7 @@
    "string_replace"
   ],
   "folder_find_starts_with": [
-   "folder_find_starts_with",
-   "firebase_service_account_love"
+   "folder_find_starts_with"
   ],
   "folder_previous": [
    "folder_previous",
@@ -8078,8 +8075,7 @@
    "html_update_dev",
    "path_join",
    "repos_folder",
-   "server",
-   "firebase_service_account_love"
+   "server"
   ],
   "prefix": [
    "folder_find_starts_with",
@@ -8093,24 +8089,21 @@
    "messenger_reply_unread_collect",
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
-   "string_starts_with",
-   "firebase_service_account_love"
+   "string_starts_with"
   ],
   "path_folder": [
    "folder_find_starts_with",
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "repos_names",
-   "firebase_service_account_love"
+   "repos_names"
   ],
   "only": [
    "folder_find_starts_with",
    "function_exists_inner",
    "function_name_to_path_search",
    "list_find",
-   "list_single",
-   "firebase_service_account_love"
+   "list_single"
   ],
   "http": [
    "firebase_storage_download",
@@ -14667,6 +14660,9 @@
   ],
   "repo_firebase_service_account_set": [
    "repo_firebase_service_account_set"
+  ],
+  "firebase_service_account_love_generic": [
+   "firebase_service_account_love"
   ]
  },
  "functions": {
@@ -30390,15 +30386,9 @@
   "firebase_service_account_love": {
    "async": true,
    "identifiers": [
-    "folder_find_starts_with",
-    "path_join",
-    "folder_previous",
+    "firebase_service_account_love_generic",
     "firebase_service_account_love",
     "name",
-    "prefix",
-    "v",
-    "path_folder",
-    "only",
     "file_path"
    ]
   },
