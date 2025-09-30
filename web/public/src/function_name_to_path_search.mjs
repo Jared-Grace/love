@@ -39,5 +39,6 @@ export async function function_name_to_path_search(unaliased) {
     object_property_from(result, "f_path", mapped);
   }
   return result;
-  each(list, function lambda3(item) {});
+  function lambda3(item) {}
+  each(list, lambda3);
 }
