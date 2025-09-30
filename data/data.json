@@ -5679,7 +5679,8 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async"
+   "object_property_lambda_async",
+   "file_overwrite"
   ],
   "data": [
    "data_all",
@@ -17591,6 +17592,7 @@
     "parse",
     "root",
     "si",
+    "exists",
     "access"
    ]
   },
