@@ -40,5 +40,11 @@ export async function function_name_to_path_search(unaliased) {
   }
   return result;
   let result2 = await repos_paths_names_map_unordered_combine(path, mapper);
-  let to2 = object_merge(to, from);
+  let v = object_merge(
+    {
+      exists,
+    },
+    a,
+  );
+  let file_path = object_property_get(a, "file_path");
 }
