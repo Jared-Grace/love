@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
 import { repos_paths_names_map_unordered_combine } from "../../../love/public/src/repos_paths_names_map_unordered_combine.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -39,8 +39,5 @@ export async function function_name_to_path_search(unaliased) {
     object_property_from(result, "f_path", mapped);
   }
   return result;
-  function lambda3(property) {
-    object_property_from(result, property, mapped);
-  }
-  each(properties, lambda3);
+  object_properties_from(result, mapped);
 }
