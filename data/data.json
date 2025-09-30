@@ -263,7 +263,6 @@
    "repo_path",
    "sandbox",
    "sandbox_2",
-   "sandbox_3",
    "sandbox_4_a",
    "storage_local_get",
    "storage_local_initialize",
@@ -4252,7 +4251,8 @@
    "functions_names_to_paths",
    "functions_paths",
    "list_squash",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "sandbox_3"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -8452,7 +8452,8 @@
    "functions_names",
    "functions_names_to_paths",
    "functions_paths",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "sandbox_3"
   ],
   "functions_names_from_path": [
    "functions_names",
@@ -8465,7 +8466,8 @@
    "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "sandbox_3"
   ],
   "paths": [
    "functions_names_from_path",
@@ -28919,10 +28921,12 @@
    ]
   },
   "sandbox_3": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
-    "sandbox_3"
+    "repos_paths_map_unordered_combine_squash",
+    "sandbox_3",
+    "squashed",
+    "mapper"
    ]
   },
   "sandbox_4_a": {
