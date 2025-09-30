@@ -1999,7 +1999,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "file_overwrite"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2294,7 +2295,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "file_overwrite"
   ],
   "lambda4": [
    "app_replace_home",
@@ -17570,6 +17572,7 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_parent_exists_ensure",
     "file_overwrite",
     "file_path",
@@ -17579,7 +17582,8 @@
     "promises",
     "writeFile",
     "parsed",
-    "parse"
+    "parse",
+    "root"
    ]
   },
   "file_overwrite_buffer": {
