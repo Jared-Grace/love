@@ -18193,7 +18193,7 @@
    ]
   },
   "firebase_storage_url_project": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "firebase_name",
     "marker",
