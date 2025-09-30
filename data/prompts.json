@@ -2333,7 +2333,6 @@
   "u f",
   "s temp",
   "n function_run_output_file_temp",
-  "urg",
   "as over",
   "u fo",
   "a fo file_overwrite",
@@ -2398,6 +2397,7 @@
   "o v",
   "s firebase",
   "s acro",
-  "c repo_acronym_get repo_firebase_service_account_get"
+  "c repo_acronym_get repo_firebase_service_account_get",
+  "urg"
  ]
 }
