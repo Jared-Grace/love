@@ -503,7 +503,6 @@
    "path_name",
    "prompt_previous",
    "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
    "schtasks_query",
    "storage_local_key_get",
    "string_and_empty_not_is_assert",
@@ -9266,7 +9265,8 @@
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set"
+   "user_repo_set",
+   "repos_paths_names_map_unordered_combine"
   ],
   "f_path_new": [
    "function_copy"
@@ -28833,7 +28833,7 @@
     "mapper",
     "result",
     "each_folder",
-    "name",
+    "repo_name",
     "r_path",
     "joined",
     "mapped",
