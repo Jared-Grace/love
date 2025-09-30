@@ -399,7 +399,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "function_run_output_file_temp"
   ],
   "app_karate_main": [
    "app_karate"
@@ -4449,7 +4450,8 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch"
+   "watch",
+   "function_run_output_file_temp"
   ],
   "count": [
    "assert_arguments",
@@ -4671,8 +4673,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "function_run_output_file_temp"
+   "unzip"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5132,7 +5133,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "function_run_output_file_temp"
   ],
   "catch_call": [
    "catch_call",
@@ -9997,7 +9999,8 @@
    "function_run",
    "function_run_line",
    "function_run_log",
-   "tasks_run"
+   "tasks_run",
+   "function_run_output_file_temp"
   ],
   "repos_paths_map_unordered": [
    "function_run_git",
@@ -30073,13 +30076,16 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "function_run",
     "file_overwrite",
     "file_temp",
     "marker",
     "function_run_output_file_temp",
+    "result",
+    "f_name",
+    "args",
     "lambda",
     "temp_path",
-    "file_path",
     "contents"
    ]
   }
