@@ -1,19 +1,11 @@
+import { file_root_exists } from "../../../love/public/src/file_root_exists.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { string_is } from "../../../love/public/src/string_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 export async function file_overwrite(file_path, contents) {
   let fs = await import("fs");
   await file_parent_exists_ensure(file_path);
   await fs.promises.writeFile(file_path, contents, "utf-8");
   return;
-  let path = await import("path");
-  let parsed = path.parse(file_path);
-  let root = object_property_get(parsed, "root");
-  let si = string_is(root);
-  let exists = false;
-  if (si) {
-    exists = await fs.access(parsed.root);
-  }
-  log(message);
+  let exists = await file_root_exists(file_path);
+  log(exists);
 }
