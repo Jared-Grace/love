@@ -2348,7 +2348,6 @@
   "app_new_step_1 karate",
   "rs app_new_step_2 next",
   "urg",
-  "app_new_step_2",
   "urs l",
   "p",
   "r function_parse_declaration_js_unparsefunction_parse_declaration_unparse",
@@ -2356,6 +2355,7 @@
   "app_new_step_2 karate",
   "o an",
   "r app_new_step_2 app_new_step_3",
-  "urs k"
+  "urs k",
+  "app_new_step_2"
  ]
 }
