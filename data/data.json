@@ -294,7 +294,8 @@
    "watch",
    "whitespace_normalize",
    "server",
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "repo_firebase_service_account_set"
   ],
   "app_karate": [
    "app_karate"
@@ -2241,7 +2242,8 @@
    "user_repo_set",
    "watch",
    "repo_about_get",
-   "repo_about_set"
+   "repo_about_set",
+   "repo_firebase_service_account_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3930,7 +3932,8 @@
    "repo_about_get",
    "repo_acronym_set",
    "repo_about_set",
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "repo_firebase_service_account_set"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -10579,7 +10582,8 @@
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_about_get",
-   "repo_about_set"
+   "repo_about_set",
+   "repo_firebase_service_account_set"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14653,10 +14657,14 @@
   ],
   "repo_about_set": [
    "repo_acronym_set",
-   "repo_about_set"
+   "repo_about_set",
+   "repo_firebase_service_account_set"
   ],
   "repo_firebase_service_account_get": [
    "repo_firebase_service_account_get"
+  ],
+  "repo_firebase_service_account_set": [
+   "repo_firebase_service_account_set"
   ]
  },
  "functions": {
@@ -30428,6 +30436,17 @@
     "key",
     "repo_name",
     "v"
+   ]
+  },
+  "repo_firebase_service_account_set": {
+   "async": true,
+   "identifiers": [
+    "repo_about_set",
+    "marker",
+    "repo_firebase_service_account_set",
+    "repo",
+    "value",
+    "key"
    ]
   }
  }
