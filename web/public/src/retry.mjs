@@ -2,6 +2,7 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function retry(count, lambda) {
   let wait = 1000;
   let result = null;
@@ -13,6 +14,9 @@ export async function retry(count, lambda) {
         success = true;
         return success;
       } catch (e) {
+        log_keep({
+          e,
+        });
         la(e);
         await sleep(wait);
         wait *= 2;
