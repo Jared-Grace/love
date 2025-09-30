@@ -8,7 +8,7 @@ import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mj
 export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
   let result = await function_name_to_path_search(a_name);
-  let code = await function_dependencies_code(f_name);
+  let code = await function_dependencies_code(a_name);
   marker("1");
   let file_path = html_name_to_path(name);
   function paths_get(f_name_ext) {
