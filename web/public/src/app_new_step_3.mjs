@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -25,6 +26,7 @@ export async function app_new_step_3(name) {
     const v = "f_name";
     let assign = js_declare(v, expression2);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
+    let arguments2 = object_property_get(parsed, "arguments");
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
     list_add_multiple(body_block, [assign, parsed]);
