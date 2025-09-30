@@ -1291,7 +1291,8 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await"
+   "marker_next_await",
+   "app_new_step_3"
   ],
   "assign": [
    "app_new_assign",
@@ -4236,8 +4237,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_new_step_3"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -11237,7 +11237,8 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression"
+   "js_parse_expression",
+   "app_new_step_3"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -14817,9 +14818,10 @@
     "assign",
     "parsed",
     "arguments2",
-    "body_block",
-    "list",
+    "expression",
+    "code_expression",
     "item",
+    "body_block",
     "output"
    ]
   },
