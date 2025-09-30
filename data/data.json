@@ -14091,8 +14091,7 @@
    "repos_names"
   ],
   "lambda$folder": [
-   "repos_paths_map_unordered",
-   "repos_paths_names_map_unordered"
+   "repos_paths_map_unordered"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -14566,6 +14565,9 @@
    "repos_paths_map_unordered_combine_folders"
   ],
   "repos_paths_names_map_unordered": [
+   "repos_paths_names_map_unordered"
+  ],
+  "lambda$name$path": [
    "repos_paths_names_map_unordered"
   ]
  },
@@ -30216,7 +30218,7 @@
     "repo_path",
     "repos_names",
     "repos_paths_names_map_unordered",
-    "lambda$folder",
+    "lambda$name$path",
     "all",
     "lambda",
     "name",
