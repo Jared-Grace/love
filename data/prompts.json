@@ -2288,7 +2288,6 @@
   "function_name_unalias test",
   "function_parse_declaration_js_unparse test",
   "de s5_inner",
-  "s name,path",
   "functions_path",
   "o fns",
   "o functions_paths",
@@ -2370,6 +2369,7 @@
   "s index",
   "s html",
   "o an",
-  "html_name_to_path karate"
+  "html_name_to_path karate",
+  "s name,path"
  ]
 }
