@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_reverse } from "../../../love/public/src/each_reverse.mjs";
 import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
@@ -33,6 +34,7 @@ export async function js_dollar_g({
     if (js_node_type_is(stack1, "ExpressionStatement")) {
       let unique = await js_identifier_unique_ast(ast, property_name);
       let assign = js_declare(unique, parsed);
+      log(message);
       let index = list_index_of_next_outside(stack2, stack1);
       list_insert(stack2, index, assign);
       function lambda() {
