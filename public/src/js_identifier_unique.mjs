@@ -1,4 +1,3 @@
-import { js_keyword_default } from "../../../love/public/src/js_keyword_default.mjs";
 import { js_keyword_arguments } from "../../../love/public/src/js_keyword_arguments.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
@@ -9,7 +8,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function js_identifier_unique(existing, name) {
   let v2 = js_keyword_arguments();
-  let v = js_keyword_default();
   let used = list_concat(existing, [v2]);
   list_all(used, string_is_assert);
   let unique = null;
