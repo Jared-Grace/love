@@ -595,7 +595,8 @@
   ],
   "alert": [
    "app_code",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_karate_main"
   ],
   "file_open": [
    "app_html_open",
@@ -14695,7 +14696,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "app_karate_main"
+    "app_karate_main",
+    "alert"
    ]
   },
   "add": {
