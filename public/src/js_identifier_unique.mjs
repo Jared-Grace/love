@@ -8,7 +8,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function js_identifier_unique(existing, name) {
   let v2 = js_keyword_arguments();
-  let used = list_concat(existing, [v2]);
+  let used = list_concat(existing, [v2, "default"]);
   list_all(used, string_is_assert);
   let unique = null;
   let attempt = 1;
