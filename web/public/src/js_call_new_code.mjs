@@ -40,7 +40,7 @@ export async function js_call_new_code(f_name_call, ast) {
         js_declaration_param_add(declaration_lambda, unique);
       }
       each(remaining, lambda2);
-      arg_code = await js_unparse(declaration_lambda);
+      arg_code = js_unparse(declaration_lambda);
     }
     return arg_code;
   }
