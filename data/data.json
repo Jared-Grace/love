@@ -14456,6 +14456,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "$aa": [
+   "app_new"
   ]
  },
  "functions": {
@@ -14545,7 +14548,8 @@
     "app_new_step_2",
     "marker",
     "app_new",
-    "name"
+    "name",
+    "$aa"
    ]
   },
   "app_new_assign": {
