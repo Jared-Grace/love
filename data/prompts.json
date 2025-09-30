@@ -2382,11 +2382,11 @@
   "o repos_paths_names_map_unordered",
   "s repos,combine",
   "s object_property",
-  "p",
   "function_name_to_path_search app_karate",
   "function_imports app_karate",
   "ps",
   "app_karate",
+  "p",
   "fd app_karate_code"
  ]
 }
