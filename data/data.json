@@ -14704,6 +14704,9 @@
   ],
   "projects": [
    "firebase_name"
+  ],
+  "$g$projects$default": [
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30523,6 +30526,7 @@
     "combined",
     "f",
     "projects",
+    "$g$projects$default",
     "v"
    ]
   },
