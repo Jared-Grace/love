@@ -4,7 +4,7 @@ import { html_update_generic } from "../../../love/public/src/html_update_generi
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 export async function html_update_public(name) {
-  let a_name = app_name_prefixed(name2);
+  let a_name = app_name_prefixed(name);
   marker("1");
   let file_path = html_name_to_path(name);
   function paths_get(f_name_ext) {
