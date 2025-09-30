@@ -2260,7 +2260,6 @@
   "u ls",
   "a lsq list_squash",
   "s user",
-  "fns",
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
   "s true",
@@ -2396,6 +2395,7 @@
   "app_new_step_3 karate",
   "p",
   "functions_names",
-  "of fns"
+  "of fns",
+  "fns"
  ]
 }
