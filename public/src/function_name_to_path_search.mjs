@@ -28,15 +28,15 @@ export async function function_name_to_path_search(unaliased) {
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
-  let result = {
+  let search = {
     exists,
     multiple,
   };
   if (exists) {
     let only = list_single(filtered);
     let mapped = object_property_get(only, "mapped");
-    object_property_from(result, "f_path", mapped);
-    object_property_from(result, "repo_name", only);
+    object_property_from(search, "f_path", mapped);
+    object_property_from(search, "repo_name", only);
   }
-  return result;
+  return search;
 }
