@@ -1965,7 +1965,6 @@
   "n string_list_to",
   "keyboard_typing_delay",
   "s finally",
-  "s catch",
   "c catch_only_async catch_only_run_async",
   "u cl",
   "a cl command_line",
@@ -2366,6 +2365,7 @@
   "p",
   "u seni",
   "ps",
-  "function_run_output_file_temp functions_names_to_paths"
+  "function_run_output_file_temp functions_names_to_paths",
+  "s catch"
  ]
 }
