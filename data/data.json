@@ -4728,7 +4728,8 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "firebase_service_account"
+   "firebase_service_account",
+   "firebase_name"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5696,7 +5697,8 @@
    "file_json_transform",
    "file_read_json",
    "firebase_service_account",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "firebase_name"
   ],
   "json_format_to": [
    "data_all",
@@ -5762,7 +5764,8 @@
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
    "messenger_reply_playwright",
-   "object_properties_delete"
+   "object_properties_delete",
+   "firebase_name"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -14697,9 +14700,6 @@
   "user_repo_path_combine": [
    "function_copy",
    "user_repo_path_combine",
-   "firebase_name"
-  ],
-  "frd": [
    "firebase_name"
   ]
  },
@@ -30513,10 +30513,12 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "file_read_json",
     "user_repo_path_combine",
     "firebase_name",
     "combined",
-    "frd",
+    "data",
+    "file_path",
     "v"
    ]
   },
