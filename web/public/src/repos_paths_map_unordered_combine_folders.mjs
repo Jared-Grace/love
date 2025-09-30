@@ -6,8 +6,8 @@ export async function repos_paths_map_unordered_combine_folders(path, mapper) {
   marker("1");
   mapper = identity;
   let result = await repos_paths_names_map_unordered(each_folder);
-  async function each_folder(folder) {
-    let joined = path_join([folder, path]);
+  async function each_folder(name, path) {
+    let joined = path_join([path, path]);
     let f_names = mapper(joined);
     return f_names;
   }
