@@ -23747,7 +23747,7 @@
    ]
   },
   "js_identifier_unique_ast": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "js_identifier_unique",
     "js_identifiers_names",
