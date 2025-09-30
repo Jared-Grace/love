@@ -414,7 +414,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert"
+   "function_exists_assert",
+   "firebase_service_account"
   ],
   "name": [
    "app_name_prefixed",
@@ -4498,7 +4499,8 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch"
+   "watch",
+   "firebase_service_account"
   ],
   "count": [
    "assert_arguments",
@@ -4783,7 +4785,8 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence"
+   "reply_sequence",
+   "firebase_service_account"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -5189,7 +5192,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "firebase_service_account"
   ],
   "catch_call": [
    "catch_call",
@@ -10108,7 +10112,8 @@
    "function_run_line",
    "function_run_log",
    "function_run_output_file_temp",
-   "tasks_run"
+   "tasks_run",
+   "firebase_service_account"
   ],
   "repos_paths_map_unordered": [
    "function_run_git",
@@ -18059,11 +18064,16 @@
   "firebase_service_account": {
    "async": true,
    "identifiers": [
+    "function_run",
     "repo_firebase_service_account_get",
     "file_read_json",
     "firebase_service_account",
-    "file_path",
-    "service_account"
+    "fn",
+    "result",
+    "f_name",
+    "args",
+    "service_account",
+    "file_path"
    ]
   },
   "firebase_storage_download": {
