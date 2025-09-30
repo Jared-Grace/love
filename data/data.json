@@ -494,7 +494,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "app_new_step_2"
   ],
   "firebase_storage_function_run": [
    "app_karate",
@@ -668,7 +669,8 @@
    "list_concat_multiple",
    "list_map_combine",
    "marker_screen_add",
-   "repo_path_combine"
+   "repo_path_combine",
+   "app_new_step_2"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -690,7 +692,8 @@
    "app_name_main",
    "app_new_step_3",
    "firebase_deploy_function_app_current",
-   "html_update_dev"
+   "html_update_dev",
+   "app_new_step_2"
   ],
   "a": [
    "app_name_main",
@@ -1304,7 +1307,8 @@
    "function_param_swap_task_simple",
    "js_dollar_new",
    "marker_screen_add",
-   "task_new"
+   "task_new",
+   "app_new_step_2"
   ],
   "html_new": [
    "app_new_step_2_next",
@@ -14484,7 +14488,8 @@
    "watch"
   ],
   "app_new_step_2": [
-   "app_new_step_2_next"
+   "app_new_step_2_next",
+   "app_new_step_2"
   ]
  },
  "functions": {
@@ -30041,6 +30046,16 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_new_step_2": {
+   "async": true,
+   "identifiers": [
+    "function_new",
+    "app_name_main",
+    "app_new_step_2",
+    "name",
+    "combined"
    ]
   }
  }
