@@ -1825,7 +1825,6 @@
   "n sandbox_3",
   "sandbox_3",
   "a s3 sandbox_3",
-  "s3",
   "u l",
   "o s2",
   "o command_line",
@@ -2368,6 +2367,7 @@
   "function_run_output_file_temp functions_names_to_paths",
   "o w",
   "s repos",
-  "s sand"
+  "s sand",
+  "s3"
  ]
 }
