@@ -2,7 +2,6 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -13,7 +12,6 @@ import { string_and_empty_not_is_assert } from "../../../love/public/src/string_
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
 import { firebase_storage_function_run } from "../../../love/public/src/firebase_storage_function_run.mjs";
-import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
@@ -33,15 +31,12 @@ export async function app_new_step_3(name) {
     const v = "f_name";
     let assign = js_declare(v, expression2);
     let code = js_code_call_args_await_maybe(unaliased, [v], declaration_call);
-    let statement = js_parse_statement(code2);
-    let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
-    let arguments2 = object_property_get(parsed, "arguments");
-    list_empty(arguments2);
+    let statement = js_parse_statement(code);
     let expression = js_parse_expression(v);
     list_add(arguments2, expression);
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
-    list_add_multiple(body_block, [assign, parsed]);
+    list_add_multiple(body_block, [assign, statement]);
   }
   let output = await function_transform(a_name, lambda);
 }
