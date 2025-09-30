@@ -8087,7 +8087,8 @@
    "path_join",
    "repos_folder",
    "server",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "function_import"
   ],
   "prefix": [
    "folder_find_starts_with",
@@ -19347,6 +19348,7 @@
     "function_name_to_base",
     "function_name_unalias",
     "function_name_to_path_search",
+    "folder_previous",
     "function_import",
     "f_name",
     "path",
