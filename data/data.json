@@ -160,7 +160,6 @@
    "html_style_assign",
    "html_style_remove",
    "html_update_dev",
-   "html_update_public",
    "http_firebase_file_path",
    "http_json",
    "http_local",
@@ -8255,8 +8254,7 @@
    "folder_current_join_code",
    "function_name_to_base",
    "html_update_dev",
-   "html_update_generic",
-   "html_update_public"
+   "html_update_generic"
   ],
   "folder_delete": [
    "folder_delete",
@@ -8345,13 +8343,11 @@
   "folder_src": [
    "folder_src",
    "functions_path",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "src": [
    "folder_src",
    "html_update_dev",
-   "html_update_public",
    "messenger_reply_messages"
   ],
   "folder_user": [
@@ -11011,17 +11007,14 @@
   ],
   "html_update_generic": [
    "html_update_dev",
-   "html_update_generic",
-   "html_update_public"
+   "html_update_generic"
   ],
   "paths_get": [
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "from_paths": [
    "html_update_dev",
-   "html_update_generic",
-   "html_update_public"
+   "html_update_generic"
   ],
   "lambda$f_name_ext": [
    "html_update_generic"
@@ -21444,9 +21437,6 @@
     "function_dependencies_code",
     "function_name_to_path_search",
     "app_name_prefixed",
-    "folder_src",
-    "html_update_generic",
-    "marker",
     "html_name_to_path",
     "html_update_public",
     "name",
@@ -21459,11 +21449,7 @@
     "code",
     "call",
     "middle",
-    "body",
-    "paths_get",
-    "f_name_ext",
-    "src",
-    "from_paths"
+    "body"
    ]
   },
   "http": {
