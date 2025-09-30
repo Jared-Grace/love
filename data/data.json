@@ -4607,7 +4607,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_import"
   ],
   "assert_not": [
    "assert_not",
@@ -12698,7 +12699,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "function_import"
   ],
   "e2": [
    "js_log_remove",
@@ -19339,6 +19341,7 @@
   "function_import": {
    "async": true,
    "identifiers": [
+    "log",
     "path_join",
     "fileURLToPath",
     "function_name_to_base",
@@ -19359,7 +19362,8 @@
     "joined",
     "imported",
     "imported_fn",
-    "Error"
+    "Error",
+    "message"
    ]
   },
   "function_imports": {
