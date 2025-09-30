@@ -2395,7 +2395,6 @@
   "s acro",
   "c repo_acronym_get repo_firebase_service_account_get",
   "c repo_acronym_set repo_firebase_service_account_set",
-  "urg",
   "rfsas firebase_service_account_love",
   "s love",
   "urs k",
@@ -2409,6 +2408,7 @@
   "ps",
   "p",
   "fdf app_karate_main",
-  "o firebase_storage_url_project"
+  "o firebase_storage_url_project",
+  "urg"
  ]
 }
