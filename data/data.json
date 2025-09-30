@@ -4560,7 +4560,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "file_overwrite"
   ],
   "assert_not": [
    "assert_not",
@@ -12584,7 +12585,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "file_overwrite"
   ],
   "e2": [
    "js_log_remove",
@@ -17578,6 +17580,7 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
+    "log",
     "string_is",
     "object_property_get",
     "file_parent_exists_ensure",
@@ -17593,7 +17596,8 @@
     "root",
     "si",
     "exists",
-    "access"
+    "access",
+    "message"
    ]
   },
   "file_overwrite_buffer": {
