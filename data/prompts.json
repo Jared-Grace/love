@@ -2386,7 +2386,6 @@
   "s js,call",
   "sps",
   "app_new_step_3 karate",
-  "p",
   "functions_names",
   "fns",
   "of fns",
@@ -2408,6 +2407,7 @@
   "function_alias_add_generic add",
   "s search",
   "ps",
+  "p",
   "fdf app_karate_main"
  ]
 }
