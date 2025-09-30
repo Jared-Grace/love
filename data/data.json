@@ -1085,7 +1085,8 @@
    "repo_firebase_service_account_get",
    "firebase_service_account_love_generic",
    "firebase_name",
-   "js_keyword_default"
+   "js_keyword_default",
+   "js_identifier_unique"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14705,7 +14706,8 @@
    "firebase_name"
   ],
   "js_keyword_default": [
-   "js_keyword_default"
+   "js_keyword_default",
+   "js_identifier_unique"
   ],
   "projects": [
    "firebase_name"
@@ -23734,6 +23736,7 @@
   "js_identifier_unique": {
    "async": false,
    "identifiers": [
+    "js_keyword_default",
     "js_keyword_arguments",
     "list_concat",
     "string_is_assert",
@@ -23746,6 +23749,7 @@
     "existing",
     "name",
     "v2",
+    "v",
     "used",
     "unique",
     "attempt",
