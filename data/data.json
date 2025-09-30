@@ -1072,7 +1072,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_name_to_path_search"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2741,8 +2742,7 @@
    "marker_previous_index",
    "object_copy",
    "object_merge",
-   "object_replace",
-   "function_name_to_path_search"
+   "object_replace"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -4342,7 +4342,8 @@
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
-   "sandbox_2"
+   "sandbox_2",
+   "function_name_to_path_search"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4699,8 +4700,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "function_name_to_path_search"
+   "unzip"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -12643,8 +12643,7 @@
    "js_log_remove",
    "log",
    "log_keep",
-   "messenger_reply_playwright",
-   "function_name_to_path_search"
+   "messenger_reply_playwright"
   ],
   "e2": [
    "js_log_remove",
@@ -14129,8 +14128,7 @@
    "repos_paths_names_map_unordered"
   ],
   "repos_paths_names_map_unordered_combine": [
-   "repos_paths_names_map_unordered_combine",
-   "function_name_to_path_search"
+   "repos_paths_names_map_unordered_combine"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -19486,8 +19484,6 @@
   "function_name_to_path_search": {
    "async": true,
    "identifiers": [
-    "object_merge",
-    "repos_paths_names_map_unordered_combine",
     "object_property_set",
     "list_single",
     "list_size_1",
@@ -19498,13 +19494,13 @@
     "repos_paths_map_unordered_combine",
     "file_exists",
     "function_name_to_path",
-    "log",
     "function_name_to_path_search",
     "unaliased",
     "f_path",
     "lambda",
-    "file_path",
+    "joined",
     "exists",
+    "v",
     "mapped",
     "lambda2",
     "m",
