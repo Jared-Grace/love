@@ -9,7 +9,7 @@ export async function firebase_storage_download(destination) {
   destination = firebase_path_fix(destination);
   let b = browser_is();
   if (b) {
-    let url = firebase_storage_url(destination);
+    let url = await firebase_storage_url(destination);
     let buffer = await http(url);
     return buffer;
   }
