@@ -8,12 +8,12 @@ export async function repos_paths_names_map_unordered_combine(path, mapper) {
   async function each_folder(name, r_path) {
     let joined = path_join([r_path, path]);
     let f_names = mapper(joined);
+    let mapped = list_map(f_names, lambda);
     let v = {
       mapped,
       name,
     };
-    let mapped = list_map(f_names, lambda);
-    return mapped;
+    return v;
   }
   return result;
 }
