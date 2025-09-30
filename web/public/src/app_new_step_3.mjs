@@ -19,7 +19,7 @@ export async function app_new_step_3(name) {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
-    let v2 = js_code_call_args(fn_name, args);
+    let v2 = js_code_call_args(app_name_main.name, args);
     let assign = js_declare(v, expression);
     app_new_assign(combined);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
