@@ -14534,7 +14534,8 @@
   ],
   "file_root_exists_assert": [
    "file_overwrite",
-   "file_root_exists_assert"
+   "file_root_exists_assert",
+   "file_parent_exists_ensure"
   ]
  },
  "functions": {
@@ -17633,6 +17634,7 @@
   "file_parent_exists_ensure": {
    "async": true,
    "identifiers": [
+    "file_root_exists_assert",
     "file_parent_exists_ensure",
     "file_path",
     "fs",
