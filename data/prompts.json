@@ -1619,7 +1619,6 @@
   "s rand",
   "n integer_random",
   "n ebible_version_download",
-  "s html",
   "n unzip",
   "s app",
   "s js,dec",
@@ -2369,6 +2368,7 @@
   "s sand",
   "s3",
   "a of function_run_output_file_temp",
-  "s index"
+  "s index",
+  "s html"
  ]
 }
