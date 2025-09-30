@@ -2,6 +2,8 @@ import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_run_output_file_temp() {
   marker("1");
-  async function lambda(temp_path) {}
+  async function lambda(temp_path) {
+    fo;
+  }
   await file_temp(lambda);
 }
