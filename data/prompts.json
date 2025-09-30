@@ -2382,7 +2382,6 @@
   "fd app_karate",
   "s exists,assert",
   "u fd",
-  "html_update_public karate",
   "o an",
   "is app_new_assign",
   "s call,args",
@@ -2396,6 +2395,7 @@
   "p",
   "functions_names",
   "fns",
-  "of fns"
+  "of fns",
+  "html_update_public karate"
  ]
 }
