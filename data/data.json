@@ -9240,7 +9240,8 @@
    "function_new_declaration",
    "user_repo_get",
    "user_repo_set",
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "repo_firebase_service_account_set"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9296,7 +9297,8 @@
    "repos_paths_names_map_unordered_combine",
    "repos_paths_names_map_unordered",
    "html_update_public",
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "repo_firebase_service_account_set"
   ],
   "f_path_new": [
    "function_copy"
@@ -10582,8 +10584,7 @@
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_about_get",
-   "repo_about_set",
-   "repo_firebase_service_account_set"
+   "repo_about_set"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -30441,12 +30442,13 @@
   "repo_firebase_service_account_set": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "repo_about_set",
     "marker",
     "repo_firebase_service_account_set",
     "value",
     "key",
-    "repo"
+    "repo_name"
    ]
   }
  }
