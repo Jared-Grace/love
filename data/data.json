@@ -5005,7 +5005,8 @@
    "buffer_string_to",
    "error",
    "function_import",
-   "function_run_line_git"
+   "function_run_line_git",
+   "function_run_git"
   ],
   "toString": [
    "buffer_string_to",
@@ -10110,10 +10111,12 @@
    "function_run_prompt"
   ],
   "stackTraceLimit": [
-   "function_run_line_git"
+   "function_run_line_git",
+   "function_run_git"
   ],
   "Infinity": [
-   "function_run_line_git"
+   "function_run_line_git",
+   "function_run_git"
   ],
   "function_run_line_git": [
    "function_run_line_git",
@@ -20021,6 +20024,9 @@
     "repos_paths_map_unordered",
     "git_acp_call_folder",
     "function_run_log",
+    "Error",
+    "stackTraceLimit",
+    "Infinity",
     "function_run_git",
     "f_name",
     "args",
