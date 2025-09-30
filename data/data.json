@@ -601,7 +601,8 @@
    "function_copy",
    "function_open",
    "function_run_output_file_temp",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -2087,7 +2088,8 @@
    "js_parse_statement_module",
    "marker_enter",
    "marker_functionize",
-   "marker_top"
+   "marker_top",
+   "html_update_public"
   ],
   "screen_name": [
    "app_refresh",
@@ -2672,7 +2674,8 @@
   "middle": [
    "app_replace_rule_parse",
    "html_update_generic",
-   "html_code_script_module"
+   "html_code_script_module",
+   "html_update_public"
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
@@ -10879,7 +10882,8 @@
   ],
   "html_overwrite": [
    "html_overwrite",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "cheerio": [
    "html_parse"
@@ -14611,7 +14615,8 @@
   ],
   "html_code_script_module": [
    "html_update_generic",
-   "html_code_script_module"
+   "html_code_script_module",
+   "html_update_public"
   ]
  },
  "functions": {
@@ -21421,6 +21426,9 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "file_open",
+    "html_overwrite",
+    "html_code_script_module",
     "function_dependencies_code",
     "function_name_to_path_search",
     "app_name_prefixed",
@@ -21433,6 +21441,8 @@
     "a_name",
     "result",
     "code",
+    "body",
+    "middle",
     "file_path",
     "paths_get",
     "f_name_ext",
