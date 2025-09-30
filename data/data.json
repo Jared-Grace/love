@@ -1292,8 +1292,7 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await",
-   "app_new_step_3"
+   "marker_next_await"
   ],
   "assign": [
    "app_new_assign",
@@ -14822,7 +14821,6 @@
     "assign",
     "code",
     "statement",
-    "expression",
     "body_block",
     "output"
    ]
