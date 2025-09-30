@@ -2332,7 +2332,6 @@
   "de t3",
   "s transform,fun",
   "is functions_transform",
-  "urg",
   "c functions_log_remove functions_imports_fix",
   "d",
   "p",
@@ -2352,6 +2351,7 @@
   "urs k",
   "app_new_step_1 karate",
   "urs l",
-  "rs app_new_step_2 next"
+  "rs app_new_step_2 next",
+  "urg"
  ]
 }
