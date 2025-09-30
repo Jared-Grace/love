@@ -5680,8 +5680,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set",
-   "firebase_name"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -30508,7 +30507,6 @@
    "identifiers": [
     "file_open",
     "firebase_name",
-    "f_path",
     "v"
    ]
   }
