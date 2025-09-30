@@ -20,8 +20,8 @@ export async function html_update_public(name) {
   let joined = path_join([r_path, file_path]);
   let code = await function_dependencies_code(a_name);
   let body = html_code_script_module(middle);
-  await html_overwrite(name, file_path, body);
-  await file_open(file_path);
+  await html_overwrite(name, joined, body);
+  await file_open(joined);
   marker("1");
   function paths_get(f_name_ext) {
     let src = folder_src();
