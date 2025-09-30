@@ -2371,6 +2371,7 @@
   "o an",
   "html_name_to_path karate",
   "s name,path",
-  "function_name_to_path_search karate"
+  "function_name_to_path_search karate",
+  "function_name_to_path_search app_karate"
  ]
 }
