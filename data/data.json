@@ -912,7 +912,6 @@
    "integer_to",
    "json_format_to",
    "json_from",
-   "json_to",
    "js_arrow_to_function",
    "js_assign_combine",
    "js_atomize",
@@ -5246,7 +5245,8 @@
    "file_write_json",
    "firebase_storage_download_property",
    "json_from",
-   "storage_local_get"
+   "storage_local_get",
+   "json_to"
   ],
   "a2": [
    "catch_only_run_async",
@@ -21501,7 +21501,7 @@
    "identifiers": [
     "json_to",
     "object",
-    "v",
+    "json",
     "JSON",
     "stringify"
    ]
