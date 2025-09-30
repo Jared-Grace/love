@@ -2398,7 +2398,7 @@
   "s firebase",
   "s acro",
   "c repo_acronym_get repo_firebase_service_account_get",
-  "urg",
-  "c repo_acronym_set repo_firebase_service_account_set"
+  "c repo_acronym_set repo_firebase_service_account_set",
+  "urg"
  ]
 }
