@@ -1,4 +1,3 @@
-import { test2 } from "../../../karate_code/public/src/test2.mjs";
 import { test } from "../../../karate_code/public/src/test.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
