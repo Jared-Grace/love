@@ -1066,8 +1066,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "file_overwrite"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2226,8 +2225,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "file_overwrite"
+   "watch"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -14516,7 +14514,8 @@
    "function_run_output_file_temp"
   ],
   "si": [
-   "string_is"
+   "string_is",
+   "file_overwrite"
   ]
  },
  "functions": {
@@ -17591,8 +17590,7 @@
     "parsed",
     "parse",
     "root",
-    "v",
-    "value",
+    "si",
     "access"
    ]
   },
