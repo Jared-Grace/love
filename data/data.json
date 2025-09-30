@@ -4412,8 +4412,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "app_new_step_3"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -11849,8 +11848,7 @@
    "js_code_call_args",
    "js_code_call_args_await_maybe",
    "js_code_declaration_args",
-   "js_dollar_g",
-   "app_new_step_3"
+   "js_dollar_g"
   ],
   "js_parse_statement": [
    "js_call_insert",
@@ -14791,7 +14789,6 @@
    "identifiers": [
     "js_parse_expression",
     "js_code_string",
-    "js_code_call_args",
     "js_declare",
     "marker",
     "string_and_empty_not_is_assert",
@@ -14814,7 +14811,6 @@
     "async",
     "value_string",
     "code_string",
-    "v2",
     "expression2",
     "v",
     "assign",
