@@ -4352,7 +4352,8 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "html_update_public"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5831,7 +5832,8 @@
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server"
+   "server",
+   "html_update_public"
   ],
   "file_copy": [
    "data_backup",
@@ -14004,7 +14006,8 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "html_update_public"
   ],
   "seg": [
    "path_join"
@@ -14556,8 +14559,7 @@
    "user_repo_set"
   ],
   "repo_name2": [
-   "user_repo_set",
-   "html_update_public"
+   "user_repo_set"
   ],
   "uuidv4": [
    "uuid"
@@ -21431,6 +21433,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "path_join",
     "repo_path",
     "object_property_get",
     "file_open",
@@ -21449,11 +21452,12 @@
     "search",
     "repo_name",
     "r_path",
-    "repo_name2",
+    "file_path",
+    "joined",
+    "segments",
     "code",
     "body",
     "middle",
-    "file_path",
     "paths_get",
     "f_name_ext",
     "src",
