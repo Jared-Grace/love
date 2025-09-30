@@ -283,7 +283,8 @@
    "watch",
    "whitespace_normalize",
    "function_run_output_file_temp",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered"
   ],
   "app_karate": [
    "app_karate"
@@ -1668,7 +1669,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "repos_paths_names_map_unordered"
   ],
   "ast": [
    "app_new_step_3",
@@ -3046,7 +3048,8 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_paths_names_map_unordered"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -3808,7 +3811,8 @@
    "marker_down_choices",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repos_paths_names_map_unordered"
   ],
   "en": [
    "app_reply_main",
@@ -5145,7 +5149,8 @@
    "task_new",
    "ternary",
    "function_run_output_file_temp",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered"
   ],
   "catch_call": [
    "catch_call",
@@ -5463,7 +5468,8 @@
    "repos_paths_map_unordered_combine",
    "repo_acronym_to_path",
    "sandbox_2",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -8247,7 +8253,8 @@
    "list_includes_assert",
    "list_wait",
    "repos_paths_map_unordered",
-   "repo_exists_assert"
+   "repo_exists_assert",
+   "repos_paths_names_map_unordered"
   ],
   "readdir": [
    "folder_read",
@@ -9231,7 +9238,8 @@
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set"
+   "user_repo_set",
+   "repos_paths_names_map_unordered"
   ],
   "f_path_new": [
    "function_copy"
@@ -10583,7 +10591,8 @@
    "repos_paths_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine"
+   "repo_path_combine",
+   "repos_paths_names_map_unordered"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14055,7 +14064,8 @@
    "repos_gitignore_overwrite",
    "repos_names",
    "repos_paths_map_unordered",
-   "repo_exists_assert"
+   "repo_exists_assert",
+   "repos_paths_names_map_unordered"
   ],
   "repo_acronym_get": [
    "repos_acronyms_to_names",
@@ -14081,7 +14091,8 @@
    "repos_names"
   ],
   "lambda$folder": [
-   "repos_paths_map_unordered"
+   "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -14553,6 +14564,9 @@
   ],
   "repos_paths_map_unordered_combine_folders": [
    "repos_paths_map_unordered_combine_folders"
+  ],
+  "repos_paths_names_map_unordered": [
+   "repos_paths_names_map_unordered"
   ]
  },
  "functions": {
@@ -30192,6 +30206,23 @@
     "folder",
     "joined",
     "f_names"
+   ]
+  },
+  "repos_paths_names_map_unordered": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "list_map_unordered_async",
+    "repo_path",
+    "repos_names",
+    "repos_paths_names_map_unordered",
+    "lambda$folder",
+    "all",
+    "lambda",
+    "repo_name",
+    "folder",
+    "mapped",
+    "result"
    ]
   }
  }
