@@ -10579,8 +10579,7 @@
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_about_get",
-   "repo_about_set",
-   "repo_firebase_service_account_get"
+   "repo_about_set"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -30426,7 +30425,6 @@
     "marker",
     "repo_about_get",
     "repo_firebase_service_account_get",
-    "repo",
     "key",
     "repo_name",
     "v"
