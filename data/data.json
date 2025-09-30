@@ -2588,8 +2588,7 @@
   "name2": [
    "app_replace_home",
    "app_reply_main",
-   "js_assign_combine",
-   "html_update_public"
+   "js_assign_combine"
   ],
   "html_meta_viewport": [
    "app_replace_main",
@@ -21408,7 +21407,6 @@
     "html_update_public",
     "name",
     "a_name",
-    "name2",
     "file_path",
     "paths_get",
     "f_name_ext",
