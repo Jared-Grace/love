@@ -13987,7 +13987,8 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction"
+   "newFunction",
+   "js_identifier_unique"
   ],
   "package_name": [
    "npm_install"
@@ -23726,7 +23727,7 @@
    ]
   },
   "js_identifier_unique": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "js_keyword_arguments",
     "list_concat",
@@ -23741,6 +23742,7 @@
     "name",
     "v2",
     "used",
+    "newFunction",
     "unique",
     "attempt",
     "suffix"
