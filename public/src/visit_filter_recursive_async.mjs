@@ -23,7 +23,9 @@ export async function visit_filter_recursive_async(
     stack: copy,
   });
   let children = await children_get(node);
-  log(message);
+  log({
+    children,
+  });
   async function lambda(c) {
     await visit_filter_recursive_async(c, children_get, filter, on_each, stack);
   }
