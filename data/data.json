@@ -2024,7 +2024,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public"
+   "html_update_public",
+   "firebase_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -14707,7 +14708,10 @@
    "js_identifier_unique",
    "js_keyword_default"
   ],
-  "$g$f$projects": [
+  "projects": [
+   "firebase_name"
+  ],
+  "$g$projects$default": [
    "firebase_name"
   ]
  },
@@ -30523,12 +30527,14 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_read_json",
     "user_repo_path_combine",
     "firebase_name",
     "combined",
     "f",
-    "$g$f$projects",
+    "projects",
+    "$g$projects$default",
     "v"
    ]
   },
