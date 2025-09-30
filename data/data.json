@@ -1678,7 +1678,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "repo_about_set"
   ],
   "ast": [
    "app_new_step_3",
@@ -2237,7 +2238,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_about_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3924,7 +3926,8 @@
    "storage_local_set_context",
    "repo_acronym_get",
    "repo_about_get",
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_about_set"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -5879,7 +5882,8 @@
    "data_set",
    "function_open_app",
    "git_push_folder",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_about_set"
   ],
   "data_boolean_set": [
    "data_boolean_set",
@@ -5907,7 +5911,8 @@
    "repos_folder",
    "repo_path",
    "server",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_about_set"
   ],
   "data_copy": [
    "data_copy",
@@ -10568,7 +10573,8 @@
    "path_repo_combine",
    "repo_acronym_get",
    "repo_acronym_set",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_about_set"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14024,11 +14030,13 @@
   ],
   "path_repo_about": [
    "path_repo_about",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_about_set"
   ],
   "a_path": [
    "path_repo_about",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_about_set"
   ],
   "r_path": [
    "path_repo_combine",
@@ -14638,7 +14646,8 @@
    "repo_about_get"
   ],
   "repo_about_set": [
-   "repo_acronym_set"
+   "repo_acronym_set",
+   "repo_about_set"
   ]
  },
  "functions": {
@@ -30384,6 +30393,20 @@
     "a_path",
     "value",
     "v"
+   ]
+  },
+  "repo_about_set": {
+   "async": true,
+   "identifiers": [
+    "data_set",
+    "path_repo_about",
+    "repo_about_set",
+    "repo",
+    "value",
+    "key",
+    "a_path",
+    "lambda",
+    "previous"
    ]
   }
  }
