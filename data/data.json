@@ -1197,8 +1197,7 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_if_test_replace",
-   "marker_screen_add",
-   "app_new_step_3"
+   "marker_screen_add"
   ],
   "js_code_dot": [
    "app_new_assign",
@@ -4413,7 +4412,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "app_new_step_3"
   ],
   "error": [
    "assert",
@@ -4487,7 +4487,8 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch"
+   "watch",
+   "app_new_step_3"
   ],
   "count": [
    "assert_arguments",
@@ -9985,8 +9986,7 @@
   ],
   "expression2": [
    "function_params_new",
-   "js_calls_to_each",
-   "app_new_step_3"
+   "js_calls_to_each"
   ],
   "function_param_new": [
    "function_param_new",
@@ -11236,8 +11236,7 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression",
-   "app_new_step_3"
+   "js_parse_expression"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -11848,7 +11847,8 @@
    "js_code_call_args",
    "js_code_call_args_await_maybe",
    "js_code_declaration_args",
-   "js_dollar_g"
+   "js_dollar_g",
+   "app_new_step_3"
   ],
   "js_parse_statement": [
    "js_call_insert",
@@ -11997,7 +11997,8 @@
   ],
   "fn_name": [
    "js_code_call",
-   "js_code_call_args"
+   "js_code_call_args",
+   "app_new_step_3"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -14786,7 +14787,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
-    "js_parse_expression",
+    "js_code_call_args",
     "js_declare",
     "marker",
     "string_and_empty_not_is_assert",
@@ -14807,8 +14808,9 @@
     "ast",
     "declaration",
     "async",
-    "expression2",
-    "code_expression",
+    "v2",
+    "fn_name",
+    "args",
     "assign",
     "v",
     "expression",
