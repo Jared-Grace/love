@@ -12642,7 +12642,6 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "function_name_to_path_search",
    "repos_paths_names_map_unordered_combine"
   ],
   "e2": [
@@ -19495,7 +19494,6 @@
     "object_property_get",
     "file_exists",
     "function_name_to_path",
-    "log",
     "function_name_to_path_search",
     "unaliased",
     "f_path",
