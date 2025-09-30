@@ -11997,8 +11997,7 @@
   ],
   "fn_name": [
    "js_code_call",
-   "js_code_call_args",
-   "app_new_step_3"
+   "js_code_call_args"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -14809,7 +14808,6 @@
     "declaration",
     "async",
     "v2",
-    "fn_name",
     "args",
     "assign",
     "v",
