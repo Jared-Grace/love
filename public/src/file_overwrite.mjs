@@ -6,6 +6,7 @@ export async function file_overwrite(file_path, contents) {
   assert_json(exists, {
     file_path,
     root,
+    message: "root does not exist",
   });
   let fs = await import("fs");
   await file_parent_exists_ensure(file_path);

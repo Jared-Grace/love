@@ -2362,11 +2362,11 @@
   "s parse",
   "u si",
   "a si string_is",
-  "p",
   "u seni",
   "s catch",
   "s throws",
   "ps",
+  "p",
   "function_run_output_file_temp functions_names_to_paths"
  ]
 }
