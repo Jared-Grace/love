@@ -293,7 +293,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "server"
   ],
   "app_karate": [
    "app_karate"
@@ -29242,6 +29243,7 @@
   "server": {
    "async": false,
    "identifiers": [
+    "marker",
     "folder_previous",
     "log_keep",
     "path_join",
