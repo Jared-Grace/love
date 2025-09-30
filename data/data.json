@@ -5233,7 +5233,6 @@
    "catch_log_async",
    "identity",
    "marker_above",
-   "repos_paths_names_map_unordered_combine",
    "sandbox_3",
    "watch"
   ],
@@ -28829,7 +28828,7 @@
    "identifiers": [
     "list_map",
     "repos_paths_names_map_unordered",
-    "identity",
+    "string_is_assert",
     "marker",
     "path_join",
     "repos_paths_names_map_unordered_combine",
@@ -28839,7 +28838,6 @@
     "each_folder",
     "name",
     "r_path",
-    "string_is_assert",
     "joined",
     "f_names",
     "lambda",
