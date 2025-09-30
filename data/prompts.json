@@ -1711,7 +1711,6 @@
   "s path,join",
   "cs ebible_index flat",
   "ebible_index_flat engbsb",
-  "s index",
   "c ebible_index_upload ebible_index_flat_upload",
   "s upload,ver",
   "s list,add",
@@ -2369,6 +2368,7 @@
   "s repos",
   "s sand",
   "s3",
-  "a of function_run_output_file_temp"
+  "a of function_run_output_file_temp",
+  "s index"
  ]
 }
