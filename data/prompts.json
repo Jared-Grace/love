@@ -2261,7 +2261,6 @@
   "fd watch",
   "de s5c",
   "de s5b",
-  "o w",
   "de s5i",
   "s5",
   "is repos_names",
@@ -2368,6 +2367,7 @@
   "is folder_user_combine",
   "p",
   "s json",
-  "function_run_output_file_temp functions_names_to_paths"
+  "function_run_output_file_temp functions_names_to_paths",
+  "o w"
  ]
 }
