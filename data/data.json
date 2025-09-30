@@ -5171,8 +5171,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "html_update_public"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -8572,7 +8571,8 @@
    "js_visit_match",
    "search_generic",
    "tasks_run",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "html_update_public"
   ],
   "function_open": [
    "functions_search_open",
@@ -21439,7 +21439,7 @@
     "html_update_public",
     "name",
     "a_name",
-    "result",
+    "search",
     "code",
     "body",
     "middle",
