@@ -13231,7 +13231,8 @@
   "list_is_assert": [
    "list_is_assert",
    "list_size",
-   "marker_leave"
+   "marker_leave",
+   "list_map"
   ],
   "string_empty": [
    "list_join_empty",
@@ -25946,7 +25947,8 @@
     "list",
     "lambda$item",
     "mapped",
-    "map"
+    "map",
+    "list_is_assert"
    ]
   },
   "list_map_combine": {
