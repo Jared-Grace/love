@@ -1,3 +1,4 @@
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -17,6 +18,8 @@ import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mj
 export async function app_new_step_3(name) {
   marker("1");
   string_and_empty_not_is_assert(name);
+  let { declaration: declaration_call, unaliased } =
+    await function_parse_declaration(f_name);
   let a_name = app_name_prefixed(name);
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
