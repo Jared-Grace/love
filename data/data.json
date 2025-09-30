@@ -3,78 +3,13 @@
  "error_attention": null,
  "marker_current": "1",
  "identifiers": {
-  "add": [
-   "add",
-   "add_1",
-   "range_from"
-  ],
-  "left": [
-   "add",
-   "add_1",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "app_replace_rule_valid",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "html_loading",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine"
-  ],
-  "right": [
-   "add",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine",
-   "log_json",
-   "log_unparse_try"
-  ],
-  "sum": [
-   "add",
-   "add_1"
-  ],
-  "add_1": [
-   "add_1",
-   "marker_below"
-  ],
-  "folder_public": [
-   "apps_get",
-   "folder_public",
-   "folder_public_combine",
-   "server"
-  ],
-  "folder_read_files": [
-   "apps_get",
-   "folder_read_files",
-   "functions_names_from_path"
-  ],
   "marker": [
+   "app_karate",
    "apps_get",
    "app_code",
    "app_html_open",
    "app_new",
+   "app_new_step_2_next",
    "app_refresh",
    "app_replace",
    "app_replace_rule_set",
@@ -346,8 +281,77 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "app_new_step_2_next"
+   "whitespace_normalize"
+  ],
+  "app_karate": [
+   "app_karate"
+  ],
+  "add": [
+   "add",
+   "add_1",
+   "range_from"
+  ],
+  "left": [
+   "add",
+   "add_1",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "app_replace_rule_valid",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "html_loading",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine"
+  ],
+  "right": [
+   "add",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine",
+   "log_json",
+   "log_unparse_try"
+  ],
+  "sum": [
+   "add",
+   "add_1"
+  ],
+  "add_1": [
+   "add_1",
+   "marker_below"
+  ],
+  "folder_public": [
+   "apps_get",
+   "folder_public",
+   "folder_public_combine",
+   "server"
+  ],
+  "folder_read_files": [
+   "apps_get",
+   "folder_read_files",
+   "functions_names_from_path"
   ],
   "apps_get": [
    "apps_get"
@@ -395,12 +399,11 @@
    "app_name_main",
    "app_name_prefixed",
    "app_new_step_1",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "function_new_app_screen",
    "function_open_app",
    "js_expand_generic",
-   "marker_screen_add",
-   "app_new_step_2_next"
+   "marker_screen_add"
   ],
   "file_name": [
    "app_html_open",
@@ -427,7 +430,7 @@
    "app_html_open",
    "app_name_main",
    "app_new_assign",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "ebible_chapters",
    "firebase_deploy_function_app_current",
    "folder_public_combine",
@@ -448,8 +451,7 @@
    "list_concat_multiple",
    "list_map_combine",
    "marker_screen_add",
-   "repo_path_combine",
-   "app_new_step_2_next"
+   "repo_path_combine"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -462,18 +464,16 @@
    "app_name_main",
    "app_name_prefixed",
    "app_new_step_1",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "function_open_app",
    "html_update_public",
-   "marker_screen_add",
-   "app_new_step_2_next"
+   "marker_screen_add"
   ],
   "app_name_main": [
    "app_name_main",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "firebase_deploy_function_app_current",
-   "html_update_dev",
-   "app_new_step_2_next"
+   "html_update_dev"
   ],
   "a": [
    "app_name_main",
@@ -864,7 +864,7 @@
    "app_name_prefixed",
    "app_new",
    "app_new_step_1",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "app_replace",
    "app_replace_rule_set",
    "app_replace_rule_sets",
@@ -946,15 +946,14 @@
    "prompt_previous",
    "schtasks_query",
    "storage_local_key_get",
+   "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch",
-   "string_and_empty_not_is_assert",
-   "app_new_step_2_next"
+   "watch"
   ],
   "p": [
    "app_name_prefixed",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "each_object",
    "floor",
    "folder_user_docs_path",
@@ -976,19 +975,45 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
-   "string_padded_is",
-   "app_new_step_2_next"
+   "string_padded_is"
+  ],
+  "string_and_empty_not_is_assert": [
+   "app_new",
+   "app_new_step_1",
+   "string_and_empty_not_is_assert"
+  ],
+  "assert_arguments": [
+   "app_new",
+   "assert_arguments",
+   "function_params_new",
+   "js_assert_arguments_args",
+   "js_dollar_aa",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
   ],
   "app_new_step_1": [
    "app_new",
    "app_new_step_1"
   ],
   "app_new_step_2": [
-   "app_new",
-   "app_new_step_2"
+   "app_new"
   ],
   "app_new": [
    "app_new"
+  ],
+  "arguments": [
+   "app_new",
+   "catch_call",
+   "functions_combine",
+   "function_params_new",
+   "js_expand_generic",
+   "js_marker_name_get",
+   "marker_call_replace_generic",
+   "marker_rename",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
   ],
   "js_declare": [
    "app_new_assign",
@@ -1038,7 +1063,6 @@
   ],
   "app_new_assign": [
    "app_new_assign",
-   "app_new_step_2",
    "app_new_step_2_next"
   ],
   "code": [
@@ -1132,19 +1156,18 @@
   ],
   "assign": [
    "app_new_assign",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "js_declare",
    "js_dollar_g",
    "js_dollar_s",
    "js_expand_generic",
    "js_let_add",
    "js_node_atomize",
-   "object_assign",
-   "app_new_step_2_next"
+   "object_assign"
   ],
   "function_new": [
    "app_new_step_1",
-   "app_new_step_2",
+   "app_new_step_2_next",
    "function_list_generate",
    "function_new",
    "function_new_aliased",
@@ -1154,11 +1177,10 @@
    "function_param_swap_task_simple",
    "js_dollar_new",
    "marker_screen_add",
-   "task_new",
-   "app_new_step_2_next"
+   "task_new"
   ],
   "js_declaration_single": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "data_file_update_inner",
    "function_params_consolidate",
    "function_param_swap",
@@ -1172,16 +1194,14 @@
    "js_dollar_new_args_inner",
    "js_function_last_asyncify",
    "js_imports_missing",
-   "marker_down_choices_lambda",
-   "app_new_step_2_next"
+   "marker_down_choices_lambda"
   ],
   "html_new": [
-   "app_new_step_2",
-   "html_new",
-   "app_new_step_2_next"
+   "app_new_step_2_next",
+   "html_new"
   ],
   "function_transform": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "functions_transform",
    "function_auto",
    "function_copy",
@@ -1203,11 +1223,10 @@
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new",
-   "app_new_step_2_next"
+   "task_new"
   ],
   "list_add": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "app_reply_main",
    "ebible_index",
    "ebible_verses",
@@ -1241,11 +1260,10 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_new_step_2_next"
+   "visit_filter_recursive_async"
   ],
   "js_declaration_single_block_body": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "functions_combine",
    "function_list_generate",
    "function_wrap",
@@ -1254,26 +1272,26 @@
    "js_dollar_aa",
    "js_return_name",
    "marker_top",
-   "task_new",
-   "app_new_step_2_next"
+   "task_new"
   ],
   "firebase_storage_function_run": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "app_replace",
    "app_reply",
-   "firebase_storage_function_run",
-   "app_new_step_2_next"
+   "firebase_storage_function_run"
   ],
   "js_call_new": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "js_calls_to_each",
    "js_call_fill",
    "js_call_new",
-   "marker_call",
+   "marker_call"
+  ],
+  "app_new_step_2_next": [
    "app_new_step_2_next"
   ],
   "lambda": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "app_replace_home",
    "app_replace_rule_set",
    "app_reply_main",
@@ -1520,11 +1538,10 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "app_new_step_2_next"
+   "watch"
   ],
   "ast": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "data_file_update_inner",
    "file_js_parse",
    "file_js_unparse",
@@ -1647,11 +1664,10 @@
    "marker_move",
    "marker_top",
    "promise_not_is",
-   "task_new",
-   "app_new_step_2_next"
+   "task_new"
   ],
   "declaration": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "data_file_update_inner",
    "function_new",
    "function_new_declaration",
@@ -1694,16 +1710,14 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize",
-   "app_new_step_2_next"
+   "marker_functionize"
   ],
   "async": [
-   "app_new_step_2",
-   "js_function_last_asyncify",
-   "app_new_step_2_next"
+   "app_new_step_2_next",
+   "js_function_last_asyncify"
   ],
   "parsed": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "data_files_update",
    "data_file_update",
    "data_file_update_inner",
@@ -1728,11 +1742,10 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize",
-   "app_new_step_2_next"
+   "marker_functionize"
   ],
   "body_block": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "functions_combine",
    "function_list_generate",
    "function_wrap",
@@ -1746,11 +1759,10 @@
    "js_statement_return_empty_add",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "task_new",
-   "app_new_step_2_next"
+   "task_new"
   ],
   "output": [
-   "app_new_step_2",
+   "app_new_step_2_next",
    "command_line_node_g",
    "command_line_read",
    "file_open",
@@ -1764,8 +1776,7 @@
    "js_function_last_asyncify",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic",
-   "app_new_step_2_next"
+   "marker_call_replace_generic"
   ],
   "object_property_get": [
    "app_refresh",
@@ -4401,16 +4412,6 @@
    "assert_arguments",
    "equal_assert"
   ],
-  "assert_arguments": [
-   "assert_arguments",
-   "function_params_new",
-   "js_assert_arguments_args",
-   "js_dollar_aa",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "app_new"
-  ],
   "args": [
    "assert_arguments",
    "command_line_node_g",
@@ -4913,6 +4914,7 @@
    "range_from",
    "string_base64_to",
    "string_empty_is",
+   "string_empty_not_is_assert",
    "string_ends_with",
    "string_ends_with_space",
    "string_list_to",
@@ -4938,8 +4940,7 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green",
-   "string_empty_not_is_assert"
+   "trinity_green"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -5148,19 +5149,6 @@
    "catch_call",
    "data_backup",
    "data_path"
-  ],
-  "arguments": [
-   "catch_call",
-   "functions_combine",
-   "function_params_new",
-   "js_expand_generic",
-   "js_marker_name_get",
-   "marker_call_replace_generic",
-   "marker_rename",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "app_new"
   ],
   "catch_ignore": [
    "catch_ignore"
@@ -12448,8 +12436,8 @@
   ],
   "string_is_assert": [
    "js_identifier_unique",
-   "string_is_assert",
-   "string_and_empty_not_is_assert"
+   "string_and_empty_not_is_assert",
+   "string_is_assert"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -12466,14 +12454,14 @@
   "bs_body": [
    "js_if_blockify_generic"
   ],
-  "test": [
-   "js_if_else_if_combine"
-  ],
   "js_node_type_is_if_async": [
    "js_if_else_if_combine",
    "js_node_type_is_if_async"
   ],
   "consequent2": [
+   "js_if_else_if_combine"
+  ],
+  "test": [
    "js_if_else_if_combine"
   ],
   "test2": [
@@ -14264,6 +14252,11 @@
   "setItem": [
    "storage_local_set"
   ],
+  "string_empty_not_is_assert": [
+   "string_and_empty_not_is_assert",
+   "string_empty_not_is_assert",
+   "task_new"
+  ],
   "b64": [
    "string_base64_to"
   ],
@@ -14272,11 +14265,6 @@
   ],
   "b64node": [
    "string_base64_to"
-  ],
-  "string_empty_not_is_assert": [
-   "string_empty_not_is_assert",
-   "task_new",
-   "string_and_empty_not_is_assert"
   ],
   "endsWith": [
    "string_ends_with"
@@ -14484,17 +14472,16 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "string_and_empty_not_is_assert": [
-   "app_new",
-   "string_and_empty_not_is_assert",
-   "app_new_step_1"
-  ],
-  "app_new_step_2_next": [
-   "app_new_step_2_next"
   ]
  },
  "functions": {
+  "app_karate": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_karate"
+   ]
+  },
   "add": {
    "async": false,
    "identifiers": [
@@ -14612,9 +14599,10 @@
     "a_name"
    ]
   },
-  "app_new_step_2": {
+  "app_new_step_2_next": {
    "async": true,
    "identifiers": [
+    "marker",
     "js_declaration_single",
     "html_new",
     "function_new",
@@ -14626,7 +14614,7 @@
     "app_new_assign",
     "app_name_main",
     "app_name_prefixed",
-    "app_new_step_2",
+    "app_new_step_2_next",
     "name",
     "a_name",
     "combined",
@@ -29083,6 +29071,15 @@
     "app_fn"
    ]
   },
+  "string_and_empty_not_is_assert": {
+   "async": false,
+   "identifiers": [
+    "string_empty_not_is_assert",
+    "string_is_assert",
+    "string_and_empty_not_is_assert",
+    "name"
+   ]
+  },
   "string_base64_to": {
    "async": false,
    "identifiers": [
@@ -30017,45 +30014,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "string_and_empty_not_is_assert": {
-   "async": false,
-   "identifiers": [
-    "string_empty_not_is_assert",
-    "string_is_assert",
-    "string_and_empty_not_is_assert",
-    "name"
-   ]
-  },
-  "app_new_step_2_next": {
-   "async": true,
-   "identifiers": [
-    "marker",
-    "js_declaration_single",
-    "html_new",
-    "function_new",
-    "function_transform",
-    "list_add",
-    "js_declaration_single_block_body",
-    "firebase_storage_function_run",
-    "js_call_new",
-    "app_new_assign",
-    "app_name_main",
-    "app_name_prefixed",
-    "app_new_step_2_next",
-    "name",
-    "a_name",
-    "combined",
-    "lambda",
-    "ast",
-    "declaration",
-    "async",
-    "assign",
-    "parsed",
-    "p",
-    "body_block",
-    "output"
    ]
   }
  }
