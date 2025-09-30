@@ -1,11 +1,9 @@
-import { assert } from "../../../love/public/src/assert.mjs";
-import { function_exists } from "../../../love/public/src/function_exists.mjs";
+import { function_exists_assert } from "../../../love/public/src/function_exists_assert.mjs";
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { visit_unique_async } from "../../../love/public/src/visit_unique_async.mjs";
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_name) {
-  let { exists } = await function_exists(f_name);
-  assert(b);
+  await function_exists_assert(f_name);
   async function lambda2(la) {
     function lambda(v) {
       let { node } = v;
