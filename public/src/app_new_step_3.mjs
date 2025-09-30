@@ -1,7 +1,6 @@
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -33,7 +32,6 @@ export async function app_new_step_3(name) {
     let code = js_code_call_args_await_maybe(unaliased, [v], declaration_call);
     let statement = js_parse_statement(code);
     let expression = js_parse_expression(v);
-    list_add(arguments2, expression);
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
     list_add_multiple(body_block, [assign, statement]);
