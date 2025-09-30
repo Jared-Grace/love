@@ -5085,7 +5085,8 @@
    "promise_wrap",
    "retry",
    "string_empty_is",
-   "throws_not_async"
+   "throws_not_async",
+   "function_name_to_path_search"
   ],
   "result": [
    "cache_generic",
@@ -19507,7 +19508,8 @@
     "filtered",
     "multiple",
     "result",
-    "only"
+    "only",
+    "e"
    ]
   },
   "function_name_to_path_unalias": {
