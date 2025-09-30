@@ -16,7 +16,6 @@ export async function app_new_step_3(name) {
   marker("1");
   string_and_empty_not_is_assert(name);
   let a_name = app_name_prefixed(name);
-  let combined = app_name_main(name);
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
