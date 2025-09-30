@@ -11,11 +11,9 @@
    "firebase_storage_function_run"
   ],
   "app_karate_main": [
-   "app_karate",
    "app_karate_main"
   ],
   "marker": [
-   "app_karate",
    "app_karate_main",
    "apps_get",
    "app_code",
@@ -416,7 +414,6 @@
    "function_exists_assert"
   ],
   "name": [
-   "app_karate",
    "app_name_prefixed",
    "app_new",
    "app_new_step_1",
@@ -10027,7 +10024,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "app_karate"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -14630,11 +14628,9 @@
    "async": true,
    "identifiers": [
     "firebase_storage_function_run",
-    "app_karate_main",
-    "marker",
     "app_karate",
     "f_name",
-    "name"
+    "f_name2"
    ]
   },
   "app_karate_main": {
