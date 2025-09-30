@@ -2390,6 +2390,7 @@
   "s exists,assert",
   "u fd",
   "html_update_public karate",
-  "o an"
+  "o an",
+  "is app_new_assign"
  ]
 }
