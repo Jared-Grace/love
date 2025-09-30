@@ -2382,6 +2382,7 @@
   "n tst1",
   "p",
   "de tst1",
-  "s string_is"
+  "s string_is",
+  "o repos_paths_names_map_unordered"
  ]
 }
