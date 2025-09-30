@@ -5680,7 +5680,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set"
+   "user_repo_set",
+   "user_repo_path_combine"
   ],
   "file_write": [
    "data_all",
@@ -9244,7 +9245,8 @@
   ],
   "repo_path_combine": [
    "function_new_declaration",
-   "repo_path_combine"
+   "repo_path_combine",
+   "user_repo_path_combine"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -9252,7 +9254,8 @@
    "user_repo_set",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "firebase_name"
+   "firebase_name",
+   "user_repo_path_combine"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9309,10 +9312,12 @@
    "html_update_public",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "firebase_name"
+   "firebase_name",
+   "user_repo_path_combine"
   ],
   "f_path_new": [
-   "function_copy"
+   "function_copy",
+   "user_repo_path_combine"
   ],
   "function_copy_suffix_add": [
    "function_copy_suffix_add"
@@ -14694,7 +14699,8 @@
    "firebase_name"
   ],
   "user_repo_path_combine": [
-   "function_copy"
+   "function_copy",
+   "user_repo_path_combine"
   ]
  },
  "functions": {
@@ -30514,6 +30520,17 @@
     "repo_name",
     "r_path",
     "v"
+   ]
+  },
+  "user_repo_path_combine": {
+   "async": true,
+   "identifiers": [
+    "repo_path_combine",
+    "user_repo_get",
+    "user_repo_path_combine",
+    "f_path",
+    "repo_name",
+    "f_path_new"
    ]
   }
  }
