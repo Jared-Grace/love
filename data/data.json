@@ -9440,7 +9440,6 @@
   ],
   "repos_paths_map_unordered_combine": [
    "function_exists_inner",
-   "function_name_to_path_search",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash"
   ],
@@ -19494,7 +19493,6 @@
     "list_filter",
     "true_is",
     "object_property_get",
-    "repos_paths_map_unordered_combine",
     "file_exists",
     "function_name_to_path",
     "log",
