@@ -411,8 +411,7 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert",
-   "app_new_step_3"
+   "function_exists_assert"
   ],
   "name": [
    "app_name_prefixed",
@@ -1264,7 +1263,8 @@
    "marker_functionize",
    "marker_next_await",
    "marker_next_delete_multiple",
-   "html_update_public"
+   "html_update_public",
+   "app_new_step_3"
   ],
   "expression": [
    "app_new_assign",
@@ -10481,7 +10481,8 @@
    "function_wrap",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "marker_functionize"
+   "marker_functionize",
+   "app_new_step_3"
   ],
   "js_declaration_params_names": [
    "function_wrap",
@@ -11372,7 +11373,8 @@
    "marker_next_get"
   ],
   "declaration2": [
-   "js_assign_combine"
+   "js_assign_combine",
+   "app_new_step_3"
   ],
   "init2": [
    "js_assign_combine",
@@ -11878,7 +11880,8 @@
    "js_call_insert",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "js_marker_insert"
+   "js_marker_insert",
+   "app_new_step_3"
   ],
   "js_call_new_code": [
    "js_call_new",
@@ -14630,6 +14633,9 @@
    "html_update_generic",
    "html_code_script_module",
    "html_update_public"
+  ],
+  "unaliased2": [
+   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14791,6 +14797,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "js_code_call_args_await_maybe",
     "function_parse_declaration",
     "list_add",
     "object_property_get",
@@ -14814,7 +14821,6 @@
     "declaration",
     "declaration_call",
     "unaliased",
-    "f_name",
     "a_name",
     "lambda",
     "ast",
@@ -14824,6 +14830,10 @@
     "expression2",
     "v",
     "assign",
+    "code",
+    "unaliased2",
+    "args_code",
+    "declaration2",
     "parsed",
     "arguments2",
     "expression",
