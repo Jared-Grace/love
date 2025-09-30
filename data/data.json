@@ -14252,7 +14252,8 @@
   "string_empty_not_is_assert": [
    "string_empty_not_is_assert",
    "task_new",
-   "app_new"
+   "app_new",
+   "app_new_step_1"
   ],
   "endsWith": [
    "string_ends_with"
@@ -14573,6 +14574,7 @@
   "app_new_step_1": {
    "async": true,
    "identifiers": [
+    "string_empty_not_is_assert",
     "function_new",
     "app_name_prefixed",
     "app_new_step_1",
