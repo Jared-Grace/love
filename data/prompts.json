@@ -2353,7 +2353,6 @@
   "u seni",
   "s catch",
   "s throws",
-  "ps",
   "is folder_user_combine",
   "s json",
   "function_run_output_file_temp functions_names_to_paths",
@@ -2386,6 +2385,7 @@
   "p",
   "function_name_to_path_search app_karate",
   "fd app_karate_code",
-  "function_imports app_karate"
+  "function_imports app_karate",
+  "ps"
  ]
 }
