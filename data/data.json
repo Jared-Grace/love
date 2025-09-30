@@ -4252,7 +4252,8 @@
    "functions_paths",
    "list_squash",
    "repos_paths_map_unordered_combine_squash",
-   "sandbox_3"
+   "sandbox_3",
+   "watch"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -4324,8 +4325,7 @@
    "path_join",
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
-   "sandbox_2",
-   "watch"
+   "sandbox_2"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5212,7 +5212,8 @@
    "catch_log_async",
    "identity",
    "marker_above",
-   "sandbox_3"
+   "sandbox_3",
+   "watch"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -8454,7 +8455,8 @@
    "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine_squash",
-   "sandbox_3"
+   "sandbox_3",
+   "watch"
   ],
   "functions_names_from_path": [
    "functions_names",
@@ -8497,8 +8499,7 @@
   "functions_path": [
    "functions_path",
    "function_name_to_path",
-   "repos_paths_map_unordered_combine_squash",
-   "watch"
+   "repos_paths_map_unordered_combine_squash"
   ],
   "search_generic": [
    "functions_search",
@@ -30063,19 +30064,20 @@
   "watch": {
    "async": true,
    "identifiers": [
+    "identity",
+    "repos_paths_map_unordered_combine_squash",
     "command_line_node_g",
     "marker",
     "object_property_exists_equals",
     "catch_log_async",
     "function_auto_path",
-    "functions_path",
     "import_install",
     "data_file_update",
     "object_property_set",
     "watch",
     "chokidar",
     "default",
-    "joined",
+    "squashed",
     "watcher",
     "persistent",
     "ignoreInitial",
