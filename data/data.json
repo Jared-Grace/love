@@ -1309,9 +1309,6 @@
    "marker_screen_add",
    "task_new"
   ],
-  "app_new_step_2": [
-   "app_new_step_2_next"
-  ],
   "html_new": [
    "app_new_step_2_next",
    "html_new"
@@ -1415,7 +1412,8 @@
    "marker_down_choices_lambda"
   ],
   "app_new_step_3": [
-   "app_new_step_3"
+   "app_new_step_3",
+   "app_new_step_2_next"
   ],
   "lambda": [
    "app_new_step_3",
@@ -14621,7 +14619,7 @@
   "app_new_step_2_next": {
    "async": true,
    "identifiers": [
-    "app_new_step_2",
+    "app_new_step_3",
     "marker",
     "html_new",
     "function_new",
