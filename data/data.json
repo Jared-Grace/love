@@ -7,8 +7,74 @@
    "test",
    "js_if_else_if_combine"
   ],
+  "add": [
+   "add",
+   "add_1",
+   "range_from"
+  ],
+  "left": [
+   "add",
+   "add_1",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "app_replace_rule_valid",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "html_loading",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine"
+  ],
+  "right": [
+   "add",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine",
+   "log_json",
+   "log_unparse_try"
+  ],
+  "sum": [
+   "add",
+   "add_1"
+  ],
+  "add_1": [
+   "add_1",
+   "marker_below"
+  ],
+  "folder_public": [
+   "apps_get",
+   "folder_public",
+   "folder_public_combine",
+   "server"
+  ],
+  "folder_read_files": [
+   "apps_get",
+   "folder_read_files",
+   "functions_names_from_path"
+  ],
   "marker": [
-   "test2",
    "apps_get",
    "app_code",
    "app_html_open",
@@ -285,77 +351,6 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize"
-  ],
-  "test2": [
-   "test2",
-   "js_if_else_if_combine"
-  ],
-  "add": [
-   "add",
-   "add_1",
-   "range_from"
-  ],
-  "left": [
-   "add",
-   "add_1",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "app_replace_rule_valid",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "html_loading",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine"
-  ],
-  "right": [
-   "add",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine",
-   "log_json",
-   "log_unparse_try"
-  ],
-  "sum": [
-   "add",
-   "add_1"
-  ],
-  "add_1": [
-   "add_1",
-   "marker_below"
-  ],
-  "folder_public": [
-   "apps_get",
-   "folder_public",
-   "folder_public_combine",
-   "server"
-  ],
-  "folder_read_files": [
-   "apps_get",
-   "folder_read_files",
-   "functions_names_from_path"
   ],
   "apps_get": [
    "apps_get"
@@ -12443,6 +12438,9 @@
   "bs_body": [
    "js_if_blockify_generic"
   ],
+  "test2": [
+   "js_if_else_if_combine"
+  ],
   "js_node_type_is_if_async": [
    "js_if_else_if_combine",
    "js_node_type_is_if_async"
@@ -14461,13 +14459,6 @@
    "async": false,
    "identifiers": [
     "test"
-   ]
-  },
-  "test2": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "test2"
    ]
   },
   "add": {
