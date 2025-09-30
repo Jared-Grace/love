@@ -1662,7 +1662,6 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
-   "repo_acronym_set",
    "retry",
    "retry_on_error",
    "roman_to_integer",
@@ -3924,7 +3923,8 @@
    "storage_local_set",
    "storage_local_set_context",
    "repo_acronym_get",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_acronym_set"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -5879,7 +5879,6 @@
    "data_set",
    "function_open_app",
    "git_push_folder",
-   "repo_acronym_set",
    "user_repo_set"
   ],
   "data_boolean_set": [
@@ -5906,7 +5905,6 @@
    "path_join",
    "prompt_previous",
    "repos_folder",
-   "repo_acronym_set",
    "repo_path",
    "server",
    "user_repo_set"
@@ -14026,12 +14024,10 @@
   ],
   "path_repo_about": [
    "path_repo_about",
-   "repo_acronym_set",
    "repo_about_get"
   ],
   "a_path": [
    "path_repo_about",
-   "repo_acronym_set",
    "repo_about_get"
   ],
   "r_path": [
@@ -14640,6 +14636,9 @@
   "repo_about_get": [
    "repo_acronym_get",
    "repo_about_get"
+  ],
+  "repo_about_set": [
+   "repo_acronym_set"
   ]
  },
  "functions": {
@@ -28917,15 +28916,12 @@
   "repo_acronym_set": {
    "async": true,
    "identifiers": [
-    "path_repo_about",
-    "data_set",
+    "repo_about_set",
     "marker",
     "repo_acronym_set",
     "repo",
     "value",
-    "a_path",
-    "lambda",
-    "previous"
+    "key"
    ]
   },
   "repo_acronym_to_name": {
