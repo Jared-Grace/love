@@ -1296,8 +1296,7 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await",
-   "app_new_step_3"
+   "marker_next_await"
   ],
   "assign": [
    "app_new_assign",
@@ -11238,8 +11237,7 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression",
-   "app_new_step_3"
+   "js_parse_expression"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -14816,10 +14814,8 @@
     "code_string",
     "v2",
     "expression2",
-    "code_expression",
     "v",
     "assign",
-    "expression",
     "parsed",
     "body_block",
     "output"
