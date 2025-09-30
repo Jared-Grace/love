@@ -683,7 +683,8 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -9315,8 +9316,7 @@
    "user_repo_path_combine"
   ],
   "f_path_new": [
-   "function_copy",
-   "firebase_name"
+   "function_copy"
   ],
   "function_copy_suffix_add": [
    "function_copy_suffix_add"
@@ -30514,7 +30514,7 @@
     "user_repo_path_combine",
     "file_open",
     "firebase_name",
-    "f_path_new",
+    "combined",
     "v"
    ]
   },
