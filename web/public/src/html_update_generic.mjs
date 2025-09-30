@@ -18,9 +18,10 @@ export async function html_update_generic(
   let f_path = path_join(from_paths);
   const from = folder_current_join_code(f_path);
   let code = js_code_import_single(name_prefixed, from);
+  const middle = `${code}
+    ${call}`;
   let body = `<script type="module"> 
-    ${`${code}
-    ${call}`}
+    ${middle}
   </script>`;
   await html_overwrite(name, file_path, body);
   await file_open(file_path);
