@@ -10044,8 +10044,7 @@
   "repos_paths_map_unordered": [
    "function_run_git",
    "repos_paths_map_unordered",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine"
   ],
   "git_acp_call_folder": [
    "function_run_git",
@@ -14565,7 +14564,8 @@
    "repos_paths_map_unordered_combine_folders"
   ],
   "repos_paths_names_map_unordered": [
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_map_unordered_combine_folders"
   ],
   "lambda$name$path": [
    "repos_paths_names_map_unordered"
@@ -30196,10 +30196,10 @@
   "repos_paths_map_unordered_combine_folders": {
    "async": true,
    "identifiers": [
+    "repos_paths_names_map_unordered",
     "identity",
     "marker",
     "path_join",
-    "repos_paths_map_unordered",
     "repos_paths_map_unordered_combine_folders",
     "path",
     "mapper",
