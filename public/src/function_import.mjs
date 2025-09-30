@@ -11,6 +11,10 @@ export async function function_import(f_name) {
   let { unaliased } = await function_name_unalias(f_name);
   let { f_path: f } = await function_name_to_path_search(unaliased);
   let joined = function_name_to_base(unaliased);
+  log({
+    f,
+    __dirname,
+  });
   const f_path = path_join([__dirname, joined]);
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
@@ -20,5 +24,4 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
-  log(message);
 }
