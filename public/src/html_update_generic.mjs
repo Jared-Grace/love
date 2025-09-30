@@ -1,3 +1,4 @@
+import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
@@ -20,9 +21,7 @@ export async function html_update_generic(
   let code = js_code_import_single(name_prefixed, from);
   const middle = `${code}
     ${call}`;
-  let body = `<script type="module"> 
-    ${middle}
-  </script>`;
+  let body = html_code_script_module(middle);
   await html_overwrite(name, file_path, body);
   await file_open(file_path);
 }
