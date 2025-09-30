@@ -14089,8 +14089,7 @@
   "success": [
    "retry",
    "schtasks_query",
-   "throws_not_async",
-   "file_root_exists"
+   "throws_not_async"
   ],
   "errors": [
    "retry"
@@ -30136,7 +30135,6 @@
     "en",
     "exists",
     "lambda2",
-    "success",
     "fs",
     "promises",
     "access"
