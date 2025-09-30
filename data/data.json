@@ -14707,12 +14707,12 @@
   "projects": [
    "firebase_name"
   ],
-  "$g$projects$default": [
-   "firebase_name"
-  ],
   "js_keyword_default": [
    "js_identifier_unique",
    "js_keyword_default"
+  ],
+  "$g$projects$d": [
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30534,7 +30534,7 @@
     "combined",
     "f",
     "projects",
-    "$g$projects$default",
+    "$g$projects$d",
     "v"
    ]
   },
