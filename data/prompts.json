@@ -1871,7 +1871,6 @@
   "s is list_take",
   "is string_take",
   "s ebible,to",
-  "s parse",
   "s integer",
   "is string_skip",
   "is ebible_chapter_code_to_name",
@@ -2342,7 +2341,6 @@
   "s string,is",
   "app_new_step_1 karate",
   "rs app_new_step_2 next",
-  "p",
   "r function_parse_declaration_js_unparsefunction_parse_declaration_unparse",
   "o an",
   "r app_new_step_2 app_new_step_3",
@@ -2363,6 +2361,8 @@
   "function_run_output_file_temp functions_names_to_paths\\",
   "ps",
   "functions_names_to_paths",
-  "function_run_output_file_temp functions_names_to_paths"
+  "p",
+  "function_run_output_file_temp functions_names_to_paths",
+  "s parse"
  ]
 }
