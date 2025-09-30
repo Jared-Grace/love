@@ -2406,7 +2406,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "file_root_exists"
   ],
   "item": [
    "app_replace_home",
@@ -7648,7 +7649,8 @@
   "throws_not_async": [
    "file_exists",
    "schtasks_query",
-   "throws_not_async"
+   "throws_not_async",
+   "file_root_exists"
   ],
   "promise_is": [
    "file_exists",
@@ -14087,7 +14089,8 @@
   "success": [
    "retry",
    "schtasks_query",
-   "throws_not_async"
+   "throws_not_async",
+   "file_root_exists"
   ],
   "errors": [
    "retry"
@@ -30121,6 +30124,7 @@
   "file_root_exists": {
    "async": true,
    "identifiers": [
+    "throws_not_async",
     "string_empty_not_is",
     "object_property_get",
     "file_root_exists",
@@ -30131,6 +30135,8 @@
     "root",
     "en",
     "exists",
+    "success",
+    "lambda2",
     "fs",
     "promises",
     "access"
