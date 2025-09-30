@@ -1053,7 +1053,6 @@
    "string_dot",
    "string_empty",
    "string_includes",
-   "string_is",
    "string_is_assert_message",
    "string_list_to",
    "string_lord_bless",
@@ -14515,6 +14514,9 @@
   ],
   "function_run_output_file_temp": [
    "function_run_output_file_temp"
+  ],
+  "si": [
+   "string_is"
   ]
  },
  "functions": {
@@ -29253,7 +29255,7 @@
    "identifiers": [
     "string_is",
     "value",
-    "v"
+    "si"
    ]
   },
   "string_is_assert": {
