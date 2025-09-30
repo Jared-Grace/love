@@ -5248,7 +5248,8 @@
    "log_error",
    "log_keep",
    "prompt_previous",
-   "server"
+   "server",
+   "retry"
   ],
   "catch_log": [
    "catch_log"
@@ -29038,6 +29039,7 @@
     "error_json",
     "list_adder_async",
     "each_range_async",
+    "log_keep",
     "retry",
     "count",
     "lambda",
