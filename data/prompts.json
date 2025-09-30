@@ -2368,6 +2368,7 @@
   "o w",
   "s repos",
   "s sand",
-  "s3"
+  "s3",
+  "a of function_run_output_file_temp"
  ]
 }
