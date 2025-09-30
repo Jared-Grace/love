@@ -2362,7 +2362,6 @@
   "a of function_run_output_file_temp",
   "s index",
   "s html",
-  "o an",
   "html_name_to_path karate",
   "s name,path",
   "function_name_to_path_search karate",
@@ -2390,6 +2389,7 @@
   "fd app_karate",
   "s exists,assert",
   "u fd",
-  "html_update_public karate"
+  "html_update_public karate",
+  "o an"
  ]
 }
