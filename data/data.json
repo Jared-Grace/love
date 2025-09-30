@@ -411,7 +411,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert"
+   "function_exists_assert",
+   "app_new_step_3"
   ],
   "name": [
    "app_name_prefixed",
@@ -9182,7 +9183,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "app_new_step_3"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -9436,7 +9438,8 @@
    "function_parse_declaration_js_unparse",
    "function_wrap",
    "js_call_new_code",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_new_step_3"
   ],
   "ds": [
    "function_dependencies_code"
@@ -10493,7 +10496,8 @@
   ],
   "declaration_call": [
    "function_wrap",
-   "js_expand_generic"
+   "js_expand_generic",
+   "app_new_step_3"
   ],
   "arg_names": [
    "function_wrap",
@@ -14786,6 +14790,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "function_parse_declaration",
     "list_add",
     "object_property_get",
     "list_add_multiple",
@@ -14804,10 +14809,13 @@
     "app_name_prefixed",
     "app_new_step_3",
     "name",
+    "declaration",
+    "declaration_call",
+    "unaliased",
+    "f_name",
     "a_name",
     "lambda",
     "ast",
-    "declaration",
     "async",
     "value_string",
     "code_string",
