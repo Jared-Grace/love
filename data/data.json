@@ -30444,9 +30444,9 @@
     "repo_about_set",
     "marker",
     "repo_firebase_service_account_set",
-    "repo",
     "value",
-    "key"
+    "key",
+    "repo"
    ]
   }
  }
