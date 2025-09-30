@@ -10,5 +10,6 @@ export async function file_root_exists(file_path) {
     let fs = await import("fs");
     exists = await fs.promises.access(parsed.root);
   }
+  seni
   return exists;
 }
