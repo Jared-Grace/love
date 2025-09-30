@@ -4487,8 +4487,7 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch",
-   "app_new_step_3"
+   "watch"
   ],
   "count": [
    "assert_arguments",
@@ -8239,8 +8238,7 @@
    "folder_current_join",
    "folder_current_join_code",
    "js_code_string",
-   "js_string",
-   "app_new_step_3"
+   "js_string"
   ],
   "js_code_string": [
    "folder_current_join_code",
@@ -14812,9 +14810,7 @@
     "declaration",
     "async",
     "code_string",
-    "value_string",
     "v2",
-    "args",
     "assign",
     "v",
     "expression",
