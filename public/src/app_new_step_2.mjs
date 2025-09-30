@@ -1,3 +1,4 @@
+import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
@@ -8,6 +9,7 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 export async function app_new_step_2(name) {
+  string_and_empty_not_is_assert(name);
   let a_name = app_name_prefixed(name);
   let combined = app_name_main(name);
   async function lambda(ast) {
