@@ -2375,6 +2375,7 @@
   "function_name_to_path_search app_karate",
   "is repos_paths_map_unordered_combine",
   "cs repos_paths_map_unordered_combine folders",
-  "repos_paths_map_unordered_combine_folders test.mjs"
+  "repos_paths_map_unordered_combine_folders test.mjs",
+  "c repos_paths_map_unordered repos_paths_names_map_unordered"
  ]
 }
