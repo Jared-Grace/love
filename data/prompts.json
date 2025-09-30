@@ -2386,7 +2386,6 @@
   "s call",
   "s js,call",
   "sps",
-  "ps",
   "app_new_step_3 karate",
   "p",
   "functions_names",
@@ -2406,6 +2405,7 @@
   "rfsas firebase_service_account_karate",
   "s karate",
   "fdf app_karate_main",
-  "rfsag"
+  "rfsag",
+  "ps"
  ]
 }
