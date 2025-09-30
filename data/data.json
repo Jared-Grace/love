@@ -4671,7 +4671,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "function_run_output_file_temp"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -4688,7 +4689,8 @@
    "html_parse",
    "html_parse_read",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "function_run_output_file_temp"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -7676,7 +7678,8 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite"
+   "html_overwrite",
+   "function_run_output_file_temp"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -14497,9 +14500,6 @@
    "app_new_step_2"
   ],
   "function_run_output_file_temp": [
-   "function_run_output_file_temp"
-  ],
-  "fo": [
    "function_run_output_file_temp"
   ]
  },
@@ -30073,12 +30073,14 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "file_overwrite",
     "file_temp",
     "marker",
     "function_run_output_file_temp",
     "lambda",
     "temp_path",
-    "fo"
+    "file_path",
+    "contents"
    ]
   }
  }
