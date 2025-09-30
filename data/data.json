@@ -10640,7 +10640,8 @@
    "repos_paths_names_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine"
+   "repo_path_combine",
+   "html_update_public"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -14025,7 +14026,8 @@
   "r_path": [
    "path_repo_combine",
    "repos_paths_names_map_unordered_combine",
-   "repo_path"
+   "repo_path",
+   "html_update_public"
   ],
   "then": [
    "promise_is"
@@ -14554,7 +14556,8 @@
    "user_repo_set"
   ],
   "repo_name2": [
-   "user_repo_set"
+   "user_repo_set",
+   "html_update_public"
   ],
   "uuidv4": [
    "uuid"
@@ -21428,6 +21431,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "repo_path",
     "object_property_get",
     "file_open",
     "html_overwrite",
@@ -21444,6 +21448,8 @@
     "a_name",
     "search",
     "repo_name",
+    "r_path",
+    "repo_name2",
     "code",
     "body",
     "middle",
