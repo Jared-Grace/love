@@ -2280,7 +2280,6 @@
   "s user",
   "functions_names",
   "fns",
-  "np",
   "s repos",
   "is repos_paths_map_unordered",
   "o repos_paths_map_unordered_combine",
@@ -2341,6 +2340,9 @@
   "d",
   "ps",
   "p",
-  "functions_imports_fix"
+  "functions_imports_fix",
+  "de t2",
+  "np",
+  "file_delete C:/Users/chris/repos/love/.git/index.lock"
  ]
 }
