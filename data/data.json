@@ -1205,8 +1205,7 @@
    "js_code_dot"
   ],
   "app_new_assign": [
-   "app_new_assign",
-   "app_new_step_3"
+   "app_new_assign"
   ],
   "code": [
    "app_new_assign",
@@ -14800,7 +14799,6 @@
     "js_declaration_single_block_body",
     "firebase_storage_function_run",
     "js_call_new",
-    "app_new_assign",
     "js_declaration_single",
     "app_name_main",
     "app_name_prefixed",
