@@ -3168,7 +3168,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "function_dependencies"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4447,7 +4448,8 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert"
+   "string_is_assert",
+   "function_dependencies"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -19079,6 +19081,7 @@
   "function_dependencies": {
    "async": true,
    "identifiers": [
+    "assert",
     "function_exists",
     "list_adder_unique_async",
     "visit_unique_async",
@@ -19086,6 +19089,7 @@
     "function_dependencies",
     "f_name",
     "exists",
+    "b",
     "lambda2",
     "la",
     "lambda",
