@@ -2875,8 +2875,7 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "reduce",
-   "visit_filter_recursive",
-   "function_name_to_path_search"
+   "visit_filter_recursive"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -3119,8 +3118,7 @@
    "marker_functionize",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "retry",
-   "function_name_to_path_search"
+   "retry"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -5990,8 +5988,7 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run",
-   "function_name_to_path_search"
+   "tasks_run"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14584,7 +14581,7 @@
   "tst1": [
    "tst1"
   ],
-  "property": [
+  "object_properties_from": [
    "function_name_to_path_search"
   ]
  },
@@ -19486,7 +19483,7 @@
   "function_name_to_path_search": {
    "async": true,
    "identifiers": [
-    "each",
+    "object_properties_from",
     "object_property_from",
     "repos_paths_names_map_unordered_combine",
     "list_single",
@@ -19512,10 +19509,7 @@
     "filtered",
     "multiple",
     "result",
-    "only",
-    "lambda3",
-    "property",
-    "properties"
+    "only"
    ]
   },
   "function_name_to_path_unalias": {
