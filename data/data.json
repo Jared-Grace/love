@@ -605,7 +605,8 @@
    "function_open",
    "function_run_output_file_temp",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "firebase_name"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -5679,7 +5680,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set"
+   "user_repo_set",
+   "firebase_name"
   ],
   "file_write": [
    "data_all",
@@ -30502,9 +30504,11 @@
    ]
   },
   "firebase_name": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "file_open",
     "firebase_name",
+    "f_path",
     "v"
    ]
   }
