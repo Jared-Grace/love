@@ -4602,7 +4602,6 @@
    "log_keep",
    "messenger_reply",
    "messenger_reply_messages",
-   "retry",
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
@@ -5249,7 +5248,6 @@
    "log_error",
    "log_keep",
    "prompt_previous",
-   "retry",
    "server"
   ],
   "catch_log": [
@@ -29040,7 +29038,6 @@
     "error_json",
     "list_adder_async",
     "each_range_async",
-    "log_keep",
     "retry",
     "count",
     "lambda",
@@ -29051,7 +29048,6 @@
     "la",
     "lambda2",
     "e",
-    "message",
     "errors"
    ]
   },
