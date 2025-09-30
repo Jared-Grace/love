@@ -9,7 +9,6 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
 import { firebase_storage_function_run } from "../../../love/public/src/firebase_storage_function_run.mjs";
 import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
-import { app_new_assign } from "../../../love/public/src/app_new_assign.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
@@ -26,7 +25,6 @@ export async function app_new_step_3(name) {
     let expression2 = js_parse_expression(code_string);
     const v = "f_name";
     let assign = js_declare(v, expression2);
-    app_new_assign(combined);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
