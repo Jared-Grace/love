@@ -2348,10 +2348,10 @@
   "ps",
   "s empty,string",
   "s string,is",
-  "urs k",
   "app_new_step_1 karate",
   "urs l",
   "rs app_new_step_2 next",
-  "urg"
+  "urg",
+  "urs k"
  ]
 }
