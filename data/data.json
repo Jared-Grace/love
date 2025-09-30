@@ -14648,7 +14648,6 @@
    "html_update_public"
   ],
   "firebase_service_account_love": [
-   "firebase_service_account",
    "firebase_service_account_love"
   ],
   "repo_about_get": [
@@ -14662,7 +14661,8 @@
    "repo_firebase_service_account_set"
   ],
   "repo_firebase_service_account_get": [
-   "repo_firebase_service_account_get"
+   "repo_firebase_service_account_get",
+   "firebase_service_account"
   ],
   "repo_firebase_service_account_set": [
    "repo_firebase_service_account_set"
@@ -18043,7 +18043,7 @@
   "firebase_service_account": {
    "async": true,
    "identifiers": [
-    "firebase_service_account_love",
+    "repo_firebase_service_account_get",
     "file_read_json",
     "firebase_service_account",
     "file_path",
