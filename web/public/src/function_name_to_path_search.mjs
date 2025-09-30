@@ -14,7 +14,7 @@ export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
   async function lambda(joined) {
   let file_path = object_property_get(a, "file_path");
-    let exists = await file_exists(joined);
+    let exists = await file_exists(file_path);
   let v = object_merge(
     {
       exists, 
