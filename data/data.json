@@ -4611,8 +4611,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "js_dollar_g"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -23110,7 +23109,6 @@
     "parsed",
     "unique",
     "assign",
-    "message",
     "index",
     "lambda"
    ]
