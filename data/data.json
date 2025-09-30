@@ -270,7 +270,6 @@
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
-   "repo_acronym_get",
    "repo_acronym_set",
    "repo_path",
    "sandbox",
@@ -28909,7 +28908,6 @@
    "async": true,
    "identifiers": [
     "repo_about_get",
-    "marker",
     "repo_acronym_get",
     "repo",
     "key",
