@@ -12533,7 +12533,8 @@
   "string_is_assert": [
    "js_identifier_unique",
    "string_and_empty_not_is_assert",
-   "string_is_assert"
+   "string_is_assert",
+   "repos_paths_names_map_unordered_combine"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -28838,6 +28839,7 @@
     "each_folder",
     "name",
     "r_path",
+    "string_is_assert",
     "joined",
     "f_names",
     "lambda",
