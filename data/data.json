@@ -1074,7 +1074,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "function_name_to_path_search",
-   "html_code_script_module"
+   "html_code_script_module",
+   "app_new_step_3"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1162,7 +1163,8 @@
    "js_dollar_s",
    "js_expand_generic",
    "js_let_add",
-   "js_node_atomize"
+   "js_node_atomize",
+   "app_new_step_3"
   ],
   "js_parse_expression": [
    "app_new_assign",
@@ -1293,7 +1295,8 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await"
+   "marker_next_await",
+   "app_new_step_3"
   ],
   "assign": [
    "app_new_assign",
@@ -14780,6 +14783,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "js_declare",
     "marker",
     "string_and_empty_not_is_assert",
     "function_transform",
@@ -14800,6 +14804,8 @@
     "declaration",
     "async",
     "assign",
+    "v",
+    "expression",
     "parsed",
     "body_block",
     "output"
