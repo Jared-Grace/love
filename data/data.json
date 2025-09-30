@@ -9253,7 +9253,8 @@
    "user_repo_get",
    "user_repo_set",
    "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set"
+   "repo_firebase_service_account_set",
+   "firebase_name"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9310,7 +9311,8 @@
    "repos_paths_names_map_unordered",
    "html_update_public",
    "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set"
+   "repo_firebase_service_account_set",
+   "firebase_name"
   ],
   "f_path_new": [
    "function_copy"
@@ -30505,8 +30507,10 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "file_open",
     "firebase_name",
+    "repo_name",
     "v"
    ]
   }
