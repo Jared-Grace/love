@@ -2349,6 +2349,7 @@
   "urs k",
   "app_new_step_1",
   "ps",
-  "s empty,string"
+  "s empty,string",
+  "s string,is"
  ]
 }
