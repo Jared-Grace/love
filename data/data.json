@@ -5163,7 +5163,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "html_update_public"
   ],
   "catch_call": [
    "catch_call",
@@ -9167,7 +9168,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "html_update_public"
   ],
   "function_alias_change": [
    "function_alias_change"
@@ -9463,7 +9465,8 @@
   "function_name_to_path_search": [
    "function_exists_strict",
    "function_name_to_path_search",
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "html_update_public"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -21399,6 +21402,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "function_name_to_path_search",
     "app_name_prefixed",
     "folder_src",
     "html_update_generic",
@@ -21407,6 +21411,8 @@
     "html_update_public",
     "name",
     "a_name",
+    "result",
+    "unaliased",
     "file_path",
     "paths_get",
     "f_name_ext",
