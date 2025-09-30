@@ -14460,6 +14460,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "si": [
+   "app_new"
   ]
  },
  "functions": {
@@ -14552,7 +14555,8 @@
     "marker",
     "app_new",
     "name",
-    "arguments"
+    "arguments",
+    "si"
    ]
   },
   "app_new_assign": {
