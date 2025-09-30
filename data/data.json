@@ -414,8 +414,7 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert",
-   "html_update_public"
+   "function_exists_assert"
   ],
   "name": [
    "app_karate",
@@ -21425,7 +21424,6 @@
     "a_name",
     "result",
     "code",
-    "f_name",
     "file_path",
     "paths_get",
     "f_name_ext",
