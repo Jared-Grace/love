@@ -10,7 +10,7 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function js_identifier_unique(existing, name) {
   let v2 = js_keyword_arguments();
   let v = js_keyword_default();
-  let used = list_concat(existing, [v2, v]);
+  let used = list_concat(existing, [v2]);
   list_all(used, string_is_assert);
   let unique = null;
   let attempt = 1;
