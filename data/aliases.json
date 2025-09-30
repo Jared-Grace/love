@@ -204,6 +204,7 @@
   "ldf": "list_difference",
   "lina": "list_includes_assert",
   "lsq": "list_squash",
-  "fo": "file_overwrite"
+  "fo": "file_overwrite",
+  "si": "string_is"
  }
 }
