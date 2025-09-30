@@ -3150,7 +3150,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "file_overwrite"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -4427,7 +4428,8 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert"
+   "string_is_assert",
+   "file_overwrite"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -17587,16 +17589,18 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
+    "assert",
     "file_root_exists",
     "log",
     "file_parent_exists_ensure",
     "file_overwrite",
     "file_path",
     "contents",
+    "exists",
     "fs",
     "promises",
     "writeFile",
-    "exists"
+    "b"
    ]
   },
   "file_overwrite_buffer": {
