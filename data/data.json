@@ -293,7 +293,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "server"
+   "server",
+   "repo_firebase_service_account_get"
   ],
   "app_karate": [
    "app_karate"
@@ -30419,6 +30420,7 @@
   "repo_firebase_service_account_get": {
    "async": true,
    "identifiers": [
+    "marker",
     "repo_about_get",
     "repo_firebase_service_account_get",
     "repo",
