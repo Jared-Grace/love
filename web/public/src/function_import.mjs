@@ -16,6 +16,7 @@ export async function function_import(f_name) {
     f,
     __dirname,
   });
+  let previous = folder_previous();
   const f_path = path_join([__dirname, joined]);
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
@@ -25,5 +26,4 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
-  let previous = folder_previous();
 }
