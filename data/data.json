@@ -2875,7 +2875,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "reduce",
-   "visit_filter_recursive"
+   "visit_filter_recursive",
+   "object_properties_from"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -3118,7 +3119,8 @@
    "marker_functionize",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "object_properties_from"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -5988,7 +5990,8 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "object_properties_from"
   ],
   "data_file_update": [
    "data_file_update",
@@ -6627,7 +6630,8 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace"
+   "string_replace",
+   "object_properties_from"
   ],
   "to": [
    "each_range_from",
@@ -6653,7 +6657,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "object_properties_from"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -10441,7 +10446,8 @@
   "object_property_from": [
    "function_wrap",
    "object_property_from",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "object_properties_from"
   ],
   "js_declaration_asyncify": [
    "function_wrap",
@@ -14582,7 +14588,11 @@
    "tst1"
   ],
   "object_properties_from": [
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "object_properties_from"
+  ],
+  "property": [
+   "object_properties_from"
   ]
  },
  "functions": {
@@ -30259,6 +30269,19 @@
    "async": false,
    "identifiers": [
     "tst1"
+   ]
+  },
+  "object_properties_from": {
+   "async": false,
+   "identifiers": [
+    "each",
+    "object_property_from",
+    "object_properties_from",
+    "to",
+    "properties",
+    "from",
+    "lambda3",
+    "property"
    ]
   }
  }
