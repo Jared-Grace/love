@@ -7834,8 +7834,7 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "server",
-   "watch",
-   "function_name_to_path_search"
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8513,8 +8512,7 @@
    "functions_paths",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
-   "repos_paths_names_map_unordered_combine",
-   "function_name_to_path_search"
+   "repos_paths_names_map_unordered_combine"
   ],
   "paths": [
    "functions_names_from_path",
@@ -11075,8 +11073,7 @@
    "http",
    "server",
    "tasks_run",
-   "task_new",
-   "function_name_to_path_search"
+   "task_new"
   ],
   "http_firebase_file_path": [
    "http_firebase",
@@ -19517,10 +19514,7 @@
     "multiple",
     "result",
     "only",
-    "f_path2",
-    "result2",
-    "path",
-    "mapper"
+    "f_path2"
    ]
   },
   "function_name_to_path_unalias": {
