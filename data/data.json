@@ -8400,7 +8400,6 @@
    "js_expand_generic",
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
-   "repos_paths_names_map_unordered_combine",
    "string_split_comma"
   ],
   "function_name_unalias": [
@@ -28833,7 +28832,6 @@
     "name",
     "r_path",
     "joined",
-    "f_names",
     "mapped",
     "v"
    ]
