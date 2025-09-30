@@ -28827,6 +28827,7 @@
     "repos_paths_names_map_unordered",
     "marker",
     "path_join",
+    "log",
     "repos_paths_names_map_unordered_combine",
     "path",
     "mapper",
@@ -28836,8 +28837,7 @@
     "r_path",
     "joined",
     "mapped",
-    "v",
-    "log"
+    "v"
    ]
   },
   "repo_acronym_get": {
