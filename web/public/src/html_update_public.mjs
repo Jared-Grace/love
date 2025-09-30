@@ -1,3 +1,6 @@
+import { file_open } from "../../../love/public/src/file_open.mjs";
+import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
+import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
@@ -9,6 +12,9 @@ export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
   let result = await function_name_to_path_search(a_name);
   let code = await function_dependencies_code(a_name);
+  let body = html_code_script_module(middle);
+  await html_overwrite(name, file_path, body);
+  await file_open(file_path);
   marker("1");
   let file_path = html_name_to_path(name);
   function paths_get(f_name_ext) {
