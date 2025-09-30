@@ -39,5 +39,4 @@ export async function function_name_to_path_search(unaliased) {
     object_property_set(result, "f_path", f_path2);
   }
   return result;
-  let result2 = await repos_paths_names_map_unordered_combine(path, mapper);
 }
