@@ -7018,8 +7018,7 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect",
-   "list_map"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -25949,8 +25948,7 @@
     "list",
     "lambda$item",
     "mapped",
-    "map",
-    "list2"
+    "map"
    ]
   },
   "list_map_combine": {
