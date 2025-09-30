@@ -2121,7 +2121,6 @@
   "data_backup",
   "o n",
   "db",
-  "u fd",
   "a fld file_delete",
   "t",
   "function_name_to_acronym data_set",
@@ -2389,6 +2388,7 @@
   "p",
   "fd app_karate_code",
   "fd app_karate",
-  "s exists,assert"
+  "s exists,assert",
+  "u fd"
  ]
 }
