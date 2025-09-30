@@ -1690,7 +1690,6 @@
   "s join",
   "sandbox",
   "fd firebase_admin",
-  "s object_property",
   "c ebible_verses_upload ebible_index_upload",
   "is data_save",
   "as data",
@@ -2384,6 +2383,7 @@
   "s string_is",
   "o repos_paths_names_map_unordered",
   "p",
-  "s repos,combine"
+  "s repos,combine",
+  "s object_property"
  ]
 }
