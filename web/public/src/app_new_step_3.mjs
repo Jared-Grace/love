@@ -21,7 +21,8 @@ export async function app_new_step_3(name) {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
-    let code_string = js_code_string(a_name);
+    let value_string = app_name_main(a_name);
+    let code_string = js_code_string(value_string);
     let v2 = js_code_call_args(app_name_main.name, [code_string]);
     let expression2 = js_parse_expression(v2);
     const v = "f_name";
