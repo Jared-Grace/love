@@ -11,6 +11,6 @@ export async function file_overwrite(file_path, contents) {
   let root = object_property_get(parsed, "root");
   let si = string_is(root);
   if (si) {
-    await fs.access(parsed.root);
+    let exists = await fs.access(parsed.root);
   }
 }
