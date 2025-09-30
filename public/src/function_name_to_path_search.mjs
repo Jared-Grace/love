@@ -36,7 +36,7 @@ export async function function_name_to_path_search(unaliased) {
     let only = list_single(filtered);
     let mapped = object_property_get(only, "mapped");
     object_property_from(result, "f_path", mapped);
-    object_property_from(result, "name", only);
+    object_property_from(result, "repo_name", only);
   }
   return result;
 }
