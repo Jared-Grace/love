@@ -2114,7 +2114,6 @@
   "git_repo_clone Jared-Grace karate_code",
   "n user_repo_set",
   "pn data_transform d_path data_path()",
-  "s sand",
   "fs data_transform",
   "function_exists data_identifiers_file",
   "o d",
@@ -2368,6 +2367,7 @@
   "s json",
   "function_run_output_file_temp functions_names_to_paths",
   "o w",
-  "s repos"
+  "s repos",
+  "s sand"
  ]
 }
