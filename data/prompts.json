@@ -2349,9 +2349,11 @@
   "s empty,string",
   "s string,is",
   "app_new_step_1 karate",
-  "urs l",
   "rs app_new_step_2 next",
   "urg",
-  "urs k"
+  "urs k",
+  "app_new_step_2",
+  "r function_parse_declaration_js_unparsefunction_parse_declaration_unparse",
+  "urs l"
  ]
 }
