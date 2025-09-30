@@ -627,7 +627,8 @@
    "function_new_app_screen",
    "function_open_app",
    "js_expand_generic",
-   "marker_screen_add"
+   "marker_screen_add",
+   "html_update_public"
   ],
   "file_name": [
    "app_html_open",
@@ -2587,7 +2588,8 @@
   "name2": [
    "app_replace_home",
    "app_reply_main",
-   "js_assign_combine"
+   "js_assign_combine",
+   "html_update_public"
   ],
   "html_meta_viewport": [
    "app_replace_main",
@@ -21405,6 +21407,8 @@
     "html_name_to_path",
     "html_update_public",
     "name",
+    "a_name",
+    "name2",
     "file_path",
     "paths_get",
     "f_name_ext",
