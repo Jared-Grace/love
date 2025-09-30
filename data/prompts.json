@@ -2344,7 +2344,6 @@
   "rs app_new_step_2 next",
   "p",
   "r function_parse_declaration_js_unparsefunction_parse_declaration_unparse",
-  "ps",
   "o an",
   "r app_new_step_2 app_new_step_3",
   "urs k",
@@ -2361,6 +2360,8 @@
   "urs l",
   "as over",
   "u fo",
-  "a fo file_overwrite"
+  "a fo file_overwrite",
+  "function_run_output_file_temp functions_names_to_paths\\",
+  "ps"
  ]
 }
