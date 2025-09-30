@@ -11030,8 +11030,7 @@
    "html_update_generic"
   ],
   "name_prefixed": [
-   "html_update_generic",
-   "html_update_public"
+   "html_update_generic"
   ],
   "http_sleep": [
    "http",
@@ -21459,7 +21458,6 @@
     "joined",
     "code",
     "call",
-    "name_prefixed",
     "middle",
     "body",
     "paths_get",
