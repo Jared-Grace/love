@@ -596,7 +596,8 @@
    "file_open",
    "function_copy",
    "function_open",
-   "html_update_generic"
+   "html_update_generic",
+   "function_run_output_file_temp"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -1066,8 +1067,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "function_run_output_file_temp"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -4690,8 +4690,7 @@
    "html_parse",
    "html_parse_read",
    "sandbox_2",
-   "sandbox_4_a",
-   "function_run_output_file_temp"
+   "sandbox_4_a"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -4817,8 +4816,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "function_run_output_file_temp"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -5246,7 +5244,8 @@
    "firebase_storage_download_property",
    "json_from",
    "storage_local_get",
-   "json_to"
+   "json_to",
+   "function_run_output_file_temp"
   ],
   "a2": [
    "catch_only_run_async",
@@ -5622,7 +5621,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set"
+   "user_repo_set",
+   "function_run_output_file_temp"
   ],
   "file_write": [
    "data_all",
@@ -30078,6 +30078,7 @@
   "function_run_output_file_temp": {
    "async": true,
    "identifiers": [
+    "file_open",
     "json_to",
     "function_run",
     "file_overwrite",
@@ -30088,9 +30089,8 @@
     "result",
     "lambda",
     "temp_path",
-    "v",
-    "object",
-    "contents"
+    "json",
+    "f_path"
    ]
   }
  }
