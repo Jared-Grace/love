@@ -1,3 +1,4 @@
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -19,6 +20,7 @@ export async function app_new_step_3(name) {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
+    let code_string = js_code_string(value_string);
     let v2 = js_code_call_args(app_name_main.name, args);
     let assign = js_declare(v, expression);
     app_new_assign(combined);
