@@ -24,4 +24,5 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
+  previous();
 }
