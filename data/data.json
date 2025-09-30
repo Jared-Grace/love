@@ -509,7 +509,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "function_name_to_path_search"
   ],
   "add": [
    "add",
@@ -14581,9 +14582,6 @@
   ],
   "tst1": [
    "tst1"
-  ],
-  "$g$only$name": [
-   "function_name_to_path_search"
   ]
  },
  "functions": {
@@ -19510,8 +19508,8 @@
     "multiple",
     "result",
     "only",
-    "$g$only$name",
-    "f_path2"
+    "f_path2",
+    "name"
    ]
   },
   "function_name_to_path_unalias": {
