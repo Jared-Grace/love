@@ -14124,7 +14124,8 @@
    "repos_paths_names_map_unordered"
   ],
   "repos_paths_names_map_unordered_combine": [
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "function_name_to_path_search"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -19495,6 +19496,7 @@
     "exists",
     "v",
     "mapped",
+    "repos_paths_names_map_unordered_combine",
     "lambda2",
     "m",
     "exists2",
