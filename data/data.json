@@ -28827,9 +28827,9 @@
     "r_path",
     "joined",
     "f_names",
-    "v",
     "mapped",
-    "lambda"
+    "lambda",
+    "v"
    ]
   },
   "repo_acronym_get": {
