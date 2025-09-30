@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { repos_paths_names_map_unordered_combine } from "../../../love/public/src/repos_paths_names_map_unordered_combine.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -39,4 +40,5 @@ export async function function_name_to_path_search(unaliased) {
   }
   return result;
   let result2 = await repos_paths_names_map_unordered_combine(path, mapper);
+  let to2 = object_merge(to, from);
 }
