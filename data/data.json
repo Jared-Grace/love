@@ -9653,7 +9653,8 @@
    "js_parse_expression",
    "js_parse_statement",
    "js_parse_statement_module",
-   "marker_above_generic"
+   "marker_above_generic",
+   "app_new_step_3"
   ],
   "js_imports_unused_remove": [
    "function_imports_fix",
@@ -11821,7 +11822,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_new",
    "js_parse_statement",
-   "js_statement_return"
+   "js_statement_return",
+   "app_new_step_3"
   ],
   "array_expression": [
    "js_calls_to_each",
@@ -11868,7 +11870,8 @@
    "js_return_empty",
    "js_statement_return",
    "marker_above_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "app_new_step_3"
   ],
   "js_call_insert": [
    "js_call_insert",
@@ -14792,6 +14795,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "js_parse_statement",
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
     "list_add",
@@ -14826,6 +14830,8 @@
     "v",
     "assign",
     "code",
+    "statement",
+    "code2",
     "parsed",
     "arguments2",
     "expression",
