@@ -2520,8 +2520,7 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run",
-   "function_name_to_path_search"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4230,8 +4229,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "function_name_to_path_search"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5992,7 +5990,8 @@
    "object_properties",
    "object_properties_delete",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "function_name_to_path_search"
   ],
   "data_file_update": [
    "data_file_update",
@@ -14584,6 +14583,9 @@
   ],
   "tst1": [
    "tst1"
+  ],
+  "property": [
+   "function_name_to_path_search"
   ]
  },
  "functions": {
@@ -19512,8 +19514,8 @@
     "result",
     "only",
     "lambda3",
-    "item",
-    "list"
+    "property",
+    "properties"
    ]
   },
   "function_name_to_path_unalias": {
