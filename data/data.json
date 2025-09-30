@@ -4726,7 +4726,8 @@
    "unzip",
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
-   "firebase_service_account_karate"
+   "firebase_service_account_karate",
+   "firebase_service_account"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5189,8 +5190,7 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "firebase_service_account"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -18066,7 +18066,7 @@
     "file_read_json",
     "firebase_service_account",
     "fn",
-    "result",
+    "file_path",
     "service_account"
    ]
   },
