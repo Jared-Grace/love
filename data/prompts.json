@@ -2393,6 +2393,7 @@
   "is app_new_assign",
   "s call,args",
   "s main",
-  "s code,string"
+  "s code,string",
+  "app_new_step_3 karate"
  ]
 }
