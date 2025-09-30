@@ -9239,8 +9239,7 @@
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
-   "user_repo_set",
-   "repos_paths_names_map_unordered"
+   "user_repo_set"
   ],
   "f_path_new": [
    "function_copy"
@@ -30220,10 +30219,9 @@
     "lambda$folder",
     "all",
     "lambda",
-    "repo_name",
+    "name",
     "path",
     "mapped",
-    "name",
     "result"
    ]
   }
