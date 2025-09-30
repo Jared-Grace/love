@@ -2383,6 +2383,7 @@
   "p",
   "de tst1",
   "s string_is",
-  "o repos_paths_names_map_unordered"
+  "o repos_paths_names_map_unordered",
+  "s repos,combine"
  ]
 }
