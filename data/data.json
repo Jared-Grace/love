@@ -3,8 +3,20 @@
  "error_attention": null,
  "marker_current": "1",
  "identifiers": {
+  "firebase_storage_function_run": [
+   "app_karate",
+   "app_new_step_3",
+   "app_replace",
+   "app_reply",
+   "firebase_storage_function_run"
+  ],
+  "app_karate_main": [
+   "app_karate",
+   "app_karate_main"
+  ],
   "marker": [
    "app_karate",
+   "app_karate_main",
    "apps_get",
    "app_code",
    "app_html_open",
@@ -116,6 +128,7 @@
    "function_parse_strict_declaration",
    "function_rename",
    "function_rename_suffix_add",
+   "function_run_output_file_temp",
    "function_transform_marker",
    "function_transform_marker_current",
    "function_transform_marker_empty",
@@ -258,6 +271,8 @@
    "repos_gitignore_overwrite",
    "repos_names",
    "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_path",
@@ -281,11 +296,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "function_run_output_file_temp",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine"
+   "whitespace_normalize"
   ],
   "app_karate": [
    "app_karate"
@@ -362,6 +373,7 @@
    "function_run_line_git",
    "function_run_line_parse",
    "function_run_log",
+   "function_run_output_file_temp",
    "function_transform",
    "function_transform_command",
    "function_transform_command_self",
@@ -401,17 +413,14 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "function_run_output_file_temp"
-  ],
-  "app_karate_main": [
-   "app_karate"
+   "task_new"
   ],
   "name": [
    "app_karate",
    "app_name_prefixed",
    "app_new",
    "app_new_step_1",
+   "app_new_step_2",
    "app_new_step_2_next",
    "app_new_step_3",
    "app_replace",
@@ -493,23 +502,14 @@
    "object_property_get_name",
    "path_name",
    "prompt_previous",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
    "schtasks_query",
    "storage_local_key_get",
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch",
-   "app_new_step_2",
-   "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
-  ],
-  "firebase_storage_function_run": [
-   "app_karate",
-   "app_new_step_3",
-   "app_replace",
-   "app_reply",
-   "firebase_storage_function_run"
+   "watch"
   ],
   "add": [
    "add",
@@ -601,8 +601,8 @@
    "file_open",
    "function_copy",
    "function_open",
-   "html_update_generic",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "html_update_generic"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -656,6 +656,7 @@
    "app_html_open",
    "app_name_main",
    "app_new_assign",
+   "app_new_step_2",
    "app_new_step_3",
    "ebible_chapters",
    "firebase_deploy_function_app_current",
@@ -677,8 +678,7 @@
    "list_concat_multiple",
    "list_map_combine",
    "marker_screen_add",
-   "repo_path_combine",
-   "app_new_step_2"
+   "repo_path_combine"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -698,10 +698,10 @@
   ],
   "app_name_main": [
    "app_name_main",
+   "app_new_step_2",
    "app_new_step_3",
    "firebase_deploy_function_app_current",
-   "html_update_dev",
-   "app_new_step_2"
+   "html_update_dev"
   ],
   "a": [
    "app_name_main",
@@ -861,6 +861,7 @@
    "emoji_wave",
    "error_attention_clear",
    "file_read_buffer",
+   "file_root_exists",
    "firebase_service_account",
    "folder_public",
    "folder_read_async",
@@ -1047,6 +1048,7 @@
    "prompt_previous",
    "python_install",
    "random",
+   "repos_paths_names_map_unordered_combine",
    "roman_to_integer",
    "sandbox",
    "sandbox_4_a",
@@ -1071,10 +1073,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "file_root_exists",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "whitespace_normalize"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1118,9 +1117,9 @@
   "string_and_empty_not_is_assert": [
    "app_new",
    "app_new_step_1",
+   "app_new_step_2",
    "app_new_step_3",
-   "string_and_empty_not_is_assert",
-   "app_new_step_2"
+   "string_and_empty_not_is_assert"
   ],
   "assert_arguments": [
    "app_new",
@@ -1308,6 +1307,7 @@
   ],
   "function_new": [
    "app_new_step_1",
+   "app_new_step_2",
    "function_list_generate",
    "function_new",
    "function_new_aliased",
@@ -1317,8 +1317,15 @@
    "function_param_swap_task_simple",
    "js_dollar_new",
    "marker_screen_add",
-   "task_new",
-   "app_new_step_2"
+   "task_new"
+  ],
+  "app_new_step_2": [
+   "app_new_step_2",
+   "app_new_step_2_next"
+  ],
+  "app_new_step_3": [
+   "app_new_step_2_next",
+   "app_new_step_3"
   ],
   "html_new": [
    "app_new_step_2_next",
@@ -1422,10 +1429,6 @@
    "js_imports_missing",
    "marker_down_choices_lambda"
   ],
-  "app_new_step_3": [
-   "app_new_step_3",
-   "app_new_step_2_next"
-  ],
   "lambda": [
    "app_new_step_3",
    "app_replace_home",
@@ -1499,6 +1502,7 @@
    "function_param_swap",
    "function_rename_identifiers",
    "function_run_line_parse",
+   "function_run_output_file_temp",
    "function_transform_current",
    "function_transform_marker_all",
    "function_transform_marker_specified",
@@ -1657,6 +1661,8 @@
    "reply_test",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
    "repo_acronym_set",
    "retry",
    "retry_on_error",
@@ -1674,11 +1680,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "function_run_output_file_temp",
-   "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "watch"
   ],
   "ast": [
    "app_new_step_3",
@@ -1863,6 +1865,7 @@
    "data_file_update_inner",
    "file_js_parse",
    "file_js_unparse",
+   "file_root_exists",
    "function_imports_fix",
    "function_imports_missing",
    "function_imports_missing_add",
@@ -1882,8 +1885,7 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize",
-   "file_root_exists"
+   "marker_functionize"
   ],
   "body_block": [
    "app_new_step_3",
@@ -1940,6 +1942,7 @@
    "ebible_verses_upload",
    "ebible_version_books_testament",
    "file_json_isolate",
+   "file_root_exists",
    "firebase_storage_download_property",
    "function_acronym_to_name",
    "function_acronym_to_names",
@@ -2009,8 +2012,7 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name",
-   "file_root_exists"
+   "repo_acronym_to_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2300,14 +2302,14 @@
    "ebible_chapter_text",
    "ebible_versions",
    "ebible_version_books_testament",
+   "file_root_exists",
+   "file_root_exists_assert",
    "html_div",
    "html_p",
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text",
-   "file_root_exists",
-   "file_root_exists_assert"
+   "html_p_text"
   ],
   "lambda4": [
    "app_replace_home",
@@ -2346,6 +2348,7 @@
    "ebible_languages_to_bible_folders",
    "ebible_references_parse_lines",
    "ebible_verses",
+   "file_root_exists",
    "folder_read_async",
    "functions_combine",
    "functions_paths",
@@ -2418,8 +2421,7 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "file_root_exists"
+   "watch"
   ],
   "item": [
    "app_replace_home",
@@ -2943,9 +2945,8 @@
    "messenger_reply",
    "range_from",
    "repos_gitignore_overwrite",
-   "sandbox_4_a",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "sandbox_4_a"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -3057,11 +3058,10 @@
    "reply",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
-   "sandbox_2",
-   "sandbox_4_a",
    "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "sandbox_2",
+   "sandbox_4_a"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -3823,16 +3823,16 @@
    "marker_down_choices",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
-   "sandbox_4_a",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "sandbox_4_a"
   ],
   "en": [
    "app_reply_main",
+   "file_root_exists",
    "firebase_storage_download_ebible",
    "js_await_add_inner",
    "list_remove_property",
-   "sandbox",
-   "file_root_exists"
+   "sandbox"
   ],
   "languages": [
    "app_reply_main",
@@ -4342,9 +4342,8 @@
    "path_join",
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
-   "sandbox_2",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "sandbox_2"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4534,13 +4533,13 @@
   ],
   "assert_json": [
    "assert_json",
+   "file_root_exists_assert",
    "function_current_set",
    "http",
    "integer_is_assert",
    "js_node_atomize",
    "list_empty_is_assert",
-   "list_is_assert",
-   "file_root_exists_assert"
+   "list_is_assert"
   ],
   "o": [
    "assert_json",
@@ -4561,6 +4560,7 @@
    "catch_only_run_async",
    "error",
    "error_json",
+   "file_root_exists_assert",
    "function_transform_marker_specified",
    "git_acp",
    "git_acp_call_folder",
@@ -4583,8 +4583,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "file_root_exists_assert"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -4686,6 +4685,8 @@
    "file_read",
    "file_read_buffer",
    "file_read_json",
+   "file_root_exists",
+   "file_root_exists_assert",
    "file_write_json",
    "firebase_service_account",
    "function_alias_add_generic",
@@ -4699,9 +4700,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "file_root_exists",
-   "file_root_exists_assert"
+   "unzip"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5116,6 +5115,7 @@
    "function_run",
    "function_run_git",
    "function_run_log",
+   "function_run_output_file_temp",
    "function_transform_result",
    "git_push_schedule_command",
    "git_repo_rename_normalize",
@@ -5155,16 +5155,14 @@
    "repos_paths_map_unordered",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
    "retry",
    "search_generic",
    "server",
    "tasks_run",
    "task_new",
-   "ternary",
-   "function_run_output_file_temp",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -5234,10 +5232,9 @@
    "catch_log_async",
    "identity",
    "marker_above",
+   "repos_paths_names_map_unordered_combine",
    "sandbox_3",
-   "watch",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "watch"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -5277,10 +5274,10 @@
    "file_read_json",
    "file_write_json",
    "firebase_storage_download_property",
+   "function_run_output_file_temp",
    "json_from",
-   "storage_local_get",
    "json_to",
-   "function_run_output_file_temp"
+   "storage_local_get"
   ],
   "a2": [
    "catch_only_run_async",
@@ -5653,12 +5650,11 @@
    "js_outside_move",
    "path_repo_about",
    "path_repo_combine",
+   "repos_paths_names_map_unordered_combine",
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -5679,10 +5675,10 @@
    "error_json",
    "file_overwrite_json",
    "file_write_json",
+   "function_run_output_file_temp",
    "function_run_prompt",
    "json_format_to",
-   "js_declaration_params_names_node",
-   "function_run_output_file_temp"
+   "js_declaration_params_names_node"
   ],
   "data_all": [
    "data_all",
@@ -5694,6 +5690,8 @@
   "exists": [
    "data_all",
    "file_exists",
+   "file_root_exists",
+   "file_root_exists_assert",
    "firebase_storage_exists",
    "function_alias_add",
    "function_alias_add_generic",
@@ -5715,9 +5713,7 @@
    "object_property_exists",
    "object_property_initialize",
    "object_property_lambda",
-   "object_property_lambda_async",
-   "file_root_exists",
-   "file_root_exists_assert"
+   "object_property_lambda_async"
   ],
   "data": [
    "data_all",
@@ -5822,12 +5818,11 @@
    "path_join",
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
+   "repos_paths_names_map_unordered_combine",
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "server"
   ],
   "file_copy": [
    "data_backup",
@@ -7373,12 +7368,12 @@
   ],
   "string_empty_not_is": [
    "ebible_verses",
+   "file_root_exists",
    "js_dollar",
    "js_identifier_unique",
    "list_filter_empty_not_is",
    "string_empty_not_is",
-   "string_empty_not_is_assert",
-   "file_root_exists"
+   "string_empty_not_is_assert"
   ],
   "list_filter": [
    "ebible_verses",
@@ -7644,12 +7639,12 @@
    "file_parent_exists_ensure",
    "file_read",
    "file_read_buffer",
+   "file_root_exists",
    "folder_delete",
    "folder_read",
    "folder_read_async",
    "folder_read_files",
-   "function_aliases_restore",
-   "file_root_exists"
+   "function_aliases_restore"
   ],
   "promises": [
    "file_copy_overwrite",
@@ -7660,9 +7655,9 @@
    "file_parent_exists_ensure",
    "file_read",
    "file_read_buffer",
+   "file_root_exists",
    "folder_delete",
-   "folder_read",
-   "file_root_exists"
+   "folder_read"
   ],
   "copyFile": [
    "file_copy_overwrite"
@@ -7681,9 +7676,9 @@
   ],
   "throws_not_async": [
    "file_exists",
+   "file_root_exists",
    "schtasks_query",
-   "throws_not_async",
-   "file_root_exists"
+   "throws_not_async"
   ],
   "promise_is": [
    "file_exists",
@@ -7728,8 +7723,8 @@
    "file_overwrite_json",
    "file_write",
    "function_format",
-   "html_overwrite",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "html_overwrite"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -7809,6 +7804,11 @@
   "filePath": [
    "file_open_editor"
   ],
+  "file_root_exists_assert": [
+   "file_overwrite",
+   "file_parent_exists_ensure",
+   "file_root_exists_assert"
+  ],
   "writeFile": [
    "file_overwrite",
    "file_overwrite_buffer"
@@ -7819,6 +7819,7 @@
   ],
   "path": [
    "file_parent_exists_ensure",
+   "file_root_exists",
    "firebase_path_fix",
    "firebase_storage_exists",
    "folder_read_async",
@@ -7830,12 +7831,10 @@
    "path_resolve",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
-   "server",
-   "watch",
-   "file_root_exists",
-   "repos_paths_map_unordered_combine_folders",
    "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "server",
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -7882,6 +7881,16 @@
    "json_from",
    "storage_local_get"
   ],
+  "file_root_exists": [
+   "file_root_exists",
+   "file_root_exists_assert"
+  ],
+  "parse": [
+   "file_root_exists",
+   "json_from",
+   "js_parse",
+   "path_name"
+  ],
   "folder_user_combine": [
    "file_temp",
    "firebase_storage_download_path",
@@ -7894,16 +7903,16 @@
   ],
   "file_temp": [
    "file_temp",
-   "sandbox_2",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "sandbox_2"
   ],
   "lambda$temp_path": [
    "file_temp"
   ],
   "temp_path": [
    "file_temp",
-   "sandbox_2",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "sandbox_2"
   ],
   "file_write_generic": [
    "file_write",
@@ -8271,8 +8280,8 @@
    "list_includes_assert",
    "list_wait",
    "repos_paths_map_unordered",
-   "repo_exists_assert",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repo_exists_assert"
   ],
   "readdir": [
    "folder_read",
@@ -8392,9 +8401,8 @@
    "js_expand_generic",
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
-   "string_split_comma",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "string_split_comma"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8504,7 +8512,6 @@
    "functions_paths",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
-   "repos_paths_map_unordered_combine_folders",
    "repos_paths_names_map_unordered_combine"
   ],
   "paths": [
@@ -10057,8 +10064,8 @@
    "function_run",
    "function_run_line",
    "function_run_log",
-   "tasks_run",
-   "function_run_output_file_temp"
+   "function_run_output_file_temp",
+   "tasks_run"
   ],
   "repos_paths_map_unordered": [
    "function_run_git",
@@ -10081,7 +10088,6 @@
   "each_folder": [
    "function_run_git",
    "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_folders",
    "repos_paths_names_map_unordered_combine"
   ],
   "function_run_line_parse": [
@@ -10115,6 +10121,9 @@
   ],
   "function_run_log_task_duplicate_lines_to_each": [
    "function_run_log_task_duplicate_lines_to_each"
+  ],
+  "function_run_output_file_temp": [
+   "function_run_output_file_temp"
   ],
   "log_error": [
    "function_run_prompt",
@@ -10608,10 +10617,10 @@
    "path_repo_combine",
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine",
-   "repos_paths_names_map_unordered"
+   "repo_path_combine"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -11152,12 +11161,6 @@
   "stringify": [
    "json_format_to",
    "json_to"
-  ],
-  "parse": [
-   "json_from",
-   "js_parse",
-   "path_name",
-   "file_root_exists"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -13998,9 +14001,8 @@
   ],
   "r_path": [
    "path_repo_combine",
-   "repo_path",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "repo_path"
   ],
   "then": [
    "promise_is"
@@ -14085,8 +14087,8 @@
    "repos_gitignore_overwrite",
    "repos_names",
    "repos_paths_map_unordered",
-   "repo_exists_assert",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repo_exists_assert"
   ],
   "repo_acronym_get": [
    "repos_acronyms_to_names",
@@ -14113,6 +14115,16 @@
   ],
   "lambda$folder": [
    "repos_paths_map_unordered"
+  ],
+  "repos_paths_names_map_unordered": [
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine"
+  ],
+  "lambda$name$path": [
+   "repos_paths_names_map_unordered"
+  ],
+  "repos_paths_names_map_unordered_combine": [
+   "repos_paths_names_map_unordered_combine"
   ],
   "repo_acronym_set": [
    "repo_acronym_set"
@@ -14371,6 +14383,9 @@
   "string": [
    "string_includes"
   ],
+  "si": [
+   "string_is"
+  ],
   "string_is_assert_message": [
    "string_is_assert_json",
    "string_is_assert_message"
@@ -14562,39 +14577,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "app_new_step_2": [
-   "app_new_step_2_next",
-   "app_new_step_2"
-  ],
-  "function_run_output_file_temp": [
-   "function_run_output_file_temp"
-  ],
-  "si": [
-   "string_is"
-  ],
-  "file_root_exists": [
-   "file_root_exists",
-   "file_root_exists_assert"
-  ],
-  "file_root_exists_assert": [
-   "file_overwrite",
-   "file_root_exists_assert",
-   "file_parent_exists_ensure"
-  ],
-  "repos_paths_map_unordered_combine_folders": [
-   "repos_paths_map_unordered_combine_folders"
-  ],
-  "repos_paths_names_map_unordered": [
-   "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered_combine"
-  ],
-  "lambda$name$path": [
-   "repos_paths_names_map_unordered"
-  ],
-  "repos_paths_names_map_unordered_combine": [
-   "repos_paths_names_map_unordered_combine"
   ]
  },
  "functions": {
@@ -14607,6 +14589,13 @@
     "app_karate",
     "f_name",
     "name"
+   ]
+  },
+  "app_karate_main": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "app_karate_main"
    ]
   },
   "add": {
@@ -14724,6 +14713,17 @@
     "app_new_step_1",
     "name",
     "a_name"
+   ]
+  },
+  "app_new_step_2": {
+   "async": true,
+   "identifiers": [
+    "string_and_empty_not_is_assert",
+    "function_new",
+    "app_name_main",
+    "app_new_step_2",
+    "name",
+    "combined"
    ]
   },
   "app_new_step_2_next": {
@@ -17749,6 +17749,39 @@
     "data"
    ]
   },
+  "file_root_exists": {
+   "async": true,
+   "identifiers": [
+    "throws_not_async",
+    "string_empty_not_is",
+    "object_property_get",
+    "file_root_exists",
+    "file_path",
+    "path",
+    "parsed",
+    "parse",
+    "root",
+    "en",
+    "exists",
+    "lambda2",
+    "fs",
+    "promises",
+    "access",
+    "v"
+   ]
+  },
+  "file_root_exists_assert": {
+   "async": true,
+   "identifiers": [
+    "assert_json",
+    "file_root_exists",
+    "file_root_exists_assert",
+    "file_path",
+    "exists",
+    "root",
+    "message"
+   ]
+  },
   "file_temp": {
    "async": true,
    "identifiers": [
@@ -20046,6 +20079,23 @@
    "identifiers": [
     "todo",
     "function_run_log_task_duplicate_lines_to_each"
+   ]
+  },
+  "function_run_output_file_temp": {
+   "async": true,
+   "identifiers": [
+    "json_format_to",
+    "file_open",
+    "function_run",
+    "file_overwrite",
+    "file_temp",
+    "marker",
+    "function_run_output_file_temp",
+    "f_name",
+    "result",
+    "lambda",
+    "temp_path",
+    "json"
    ]
   },
   "function_run_prompt": {
@@ -28735,6 +28785,46 @@
     "squashed"
    ]
   },
+  "repos_paths_names_map_unordered": {
+   "async": true,
+   "identifiers": [
+    "marker",
+    "list_map_unordered_async",
+    "repo_path",
+    "repos_names",
+    "repos_paths_names_map_unordered",
+    "lambda$name$path",
+    "all",
+    "lambda",
+    "name",
+    "path",
+    "mapped",
+    "result"
+   ]
+  },
+  "repos_paths_names_map_unordered_combine": {
+   "async": true,
+   "identifiers": [
+    "list_map",
+    "repos_paths_names_map_unordered",
+    "identity",
+    "marker",
+    "path_join",
+    "repos_paths_names_map_unordered_combine",
+    "path",
+    "mapper",
+    "result",
+    "each_folder",
+    "name",
+    "r_path",
+    "joined",
+    "f_names",
+    "lambda",
+    "f_path",
+    "v",
+    "mapped"
+   ]
+  },
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
@@ -30156,130 +30246,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "app_new_step_2": {
-   "async": true,
-   "identifiers": [
-    "string_and_empty_not_is_assert",
-    "function_new",
-    "app_name_main",
-    "app_new_step_2",
-    "name",
-    "combined"
-   ]
-  },
-  "function_run_output_file_temp": {
-   "async": true,
-   "identifiers": [
-    "json_format_to",
-    "file_open",
-    "function_run",
-    "file_overwrite",
-    "file_temp",
-    "marker",
-    "function_run_output_file_temp",
-    "f_name",
-    "result",
-    "lambda",
-    "temp_path",
-    "json"
-   ]
-  },
-  "file_root_exists": {
-   "async": true,
-   "identifiers": [
-    "throws_not_async",
-    "string_empty_not_is",
-    "object_property_get",
-    "file_root_exists",
-    "file_path",
-    "path",
-    "parsed",
-    "parse",
-    "root",
-    "en",
-    "exists",
-    "lambda2",
-    "fs",
-    "promises",
-    "access",
-    "v"
-   ]
-  },
-  "file_root_exists_assert": {
-   "async": true,
-   "identifiers": [
-    "assert_json",
-    "file_root_exists",
-    "file_root_exists_assert",
-    "file_path",
-    "exists",
-    "root",
-    "message"
-   ]
-  },
-  "repos_paths_map_unordered_combine_folders": {
-   "async": true,
-   "identifiers": [
-    "list_map",
-    "repos_paths_names_map_unordered",
-    "identity",
-    "marker",
-    "path_join",
-    "repos_paths_map_unordered_combine_folders",
-    "path",
-    "mapper",
-    "result",
-    "each_folder",
-    "name",
-    "r_path",
-    "joined",
-    "f_names",
-    "lambda",
-    "f_path",
-    "v",
-    "mapped"
-   ]
-  },
-  "repos_paths_names_map_unordered": {
-   "async": true,
-   "identifiers": [
-    "marker",
-    "list_map_unordered_async",
-    "repo_path",
-    "repos_names",
-    "repos_paths_names_map_unordered",
-    "lambda$name$path",
-    "all",
-    "lambda",
-    "name",
-    "path",
-    "mapped",
-    "result"
-   ]
-  },
-  "repos_paths_names_map_unordered_combine": {
-   "async": true,
-   "identifiers": [
-    "list_map",
-    "repos_paths_names_map_unordered",
-    "identity",
-    "marker",
-    "path_join",
-    "repos_paths_names_map_unordered_combine",
-    "path",
-    "mapper",
-    "result",
-    "each_folder",
-    "name",
-    "r_path",
-    "joined",
-    "f_names",
-    "lambda",
-    "f_path",
-    "v",
-    "mapped"
    ]
   }
  }
