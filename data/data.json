@@ -827,7 +827,6 @@
    "string_empty",
    "string_includes",
    "string_is",
-   "string_is_assert",
    "string_is_assert_message",
    "string_list_to",
    "string_lord_bless",
@@ -29174,8 +29173,7 @@
     "string_is",
     "string_is_assert",
     "value",
-    "b",
-    "v"
+    "b"
    ]
   },
   "string_is_assert_json": {
