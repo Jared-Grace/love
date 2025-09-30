@@ -2344,6 +2344,7 @@
   "de t2",
   "np",
   "file_delete C:/Users/chris/repos/love/.git/index.lock",
-  "as delete"
+  "as delete",
+  "de test2"
  ]
 }
