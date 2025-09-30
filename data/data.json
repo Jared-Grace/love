@@ -2014,7 +2014,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "html_update_public"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -9279,7 +9280,8 @@
    "user_repo_get",
    "user_repo_set",
    "repos_paths_names_map_unordered_combine",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "html_update_public"
   ],
   "f_path_new": [
    "function_copy"
@@ -21426,6 +21428,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_open",
     "html_overwrite",
     "html_code_script_module",
@@ -21440,6 +21443,7 @@
     "name",
     "a_name",
     "search",
+    "repo_name",
     "code",
     "body",
     "middle",
