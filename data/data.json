@@ -282,7 +282,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_run_output_file_temp"
   ],
   "app_karate": [
    "app_karate"
@@ -4554,7 +4555,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "function_run_output_file_temp"
   ],
   "assert_not": [
    "assert_not",
@@ -12565,7 +12567,8 @@
    "js_log_remove",
    "log",
    "log_keep",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_run_output_file_temp"
   ],
   "e2": [
    "js_log_remove",
@@ -14491,6 +14494,9 @@
   "app_new_step_2": [
    "app_new_step_2_next",
    "app_new_step_2"
+  ],
+  "function_run_output_file_temp": [
+   "function_run_output_file_temp"
   ]
  },
  "functions": {
@@ -30058,6 +30064,15 @@
     "app_new_step_2",
     "name",
     "combined"
+   ]
+  },
+  "function_run_output_file_temp": {
+   "async": false,
+   "identifiers": [
+    "log",
+    "marker",
+    "function_run_output_file_temp",
+    "message"
    ]
   }
  }
