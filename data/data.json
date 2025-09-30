@@ -605,8 +605,7 @@
    "function_open",
    "function_run_output_file_temp",
    "html_update_generic",
-   "html_update_public",
-   "firebase_name"
+   "html_update_public"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -14698,6 +14697,9 @@
   "user_repo_path_combine": [
    "function_copy",
    "user_repo_path_combine",
+   "firebase_name"
+  ],
+  "frd": [
    "firebase_name"
   ]
  },
@@ -30512,9 +30514,9 @@
    "async": true,
    "identifiers": [
     "user_repo_path_combine",
-    "file_open",
     "firebase_name",
     "combined",
+    "frd",
     "v"
    ]
   },
