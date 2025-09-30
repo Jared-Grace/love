@@ -14588,7 +14588,6 @@
    "tst1"
   ],
   "object_properties_from": [
-   "function_name_to_path_search",
    "object_properties_from"
   ],
   "property": [
@@ -19493,7 +19492,6 @@
   "function_name_to_path_search": {
    "async": true,
    "identifiers": [
-    "object_properties_from",
     "object_property_from",
     "repos_paths_names_map_unordered_combine",
     "list_single",
