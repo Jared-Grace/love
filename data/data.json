@@ -23432,7 +23432,6 @@
   "js_if_else_if_combine": {
    "async": true,
    "identifiers": [
-    "test",
     "js_visit_type_each_async",
     "object_property_set",
     "js_left_right_set",
@@ -23454,6 +23453,7 @@
     "consequent2",
     "consequent",
     "eq",
+    "test",
     "test2",
     "code_expression",
     "expression"
