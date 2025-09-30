@@ -33,7 +33,7 @@ export async function function_name_to_path_search(unaliased) {
     multiple,
   };
   if (exists) {
-    let only = list_single(filtered);
+    let only = list_single(filtered);$g$only$name
     let mapped = object_property_get(only, "mapped");
     let f_path2 = object_property_get(mapped, "f_path");
     object_property_set(result, "f_path", f_path2);
