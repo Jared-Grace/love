@@ -14606,6 +14606,9 @@
   "function_exists_assert": [
    "function_dependencies",
    "function_exists_assert"
+  ],
+  "html_code_script_module": [
+   "html_update_generic"
   ]
  },
  "functions": {
@@ -21388,6 +21391,7 @@
   "html_update_generic": {
    "async": true,
    "identifiers": [
+    "html_code_script_module",
     "file_open",
     "html_overwrite",
     "js_code_import_single",
