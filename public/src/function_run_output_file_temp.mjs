@@ -13,4 +13,5 @@ export async function function_run_output_file_temp(f_name) {
     await file_open(temp_path);
   }
   await file_temp(lambda);
+  ("function_run_output_file_temp functions_names_to_paths");
 }
