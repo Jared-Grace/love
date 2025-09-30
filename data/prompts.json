@@ -2391,6 +2391,7 @@
   "u fd",
   "html_update_public karate",
   "o an",
-  "is app_new_assign"
+  "is app_new_assign",
+  "s call,args"
  ]
 }
