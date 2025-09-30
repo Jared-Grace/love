@@ -14,5 +14,9 @@ export async function file_root_exists(file_path) {
     }
     exists = await throws_not_async(lambda2);
   }
-  return exists;
+  let v = {
+    exists,
+    root,
+  };
+  return v;
 }
