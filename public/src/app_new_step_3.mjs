@@ -1,3 +1,4 @@
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -17,7 +18,8 @@ export async function app_new_step_3(name) {
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
-    let assign = app_new_assign(combined);
+    let assign = js_declare(v, expression);
+    app_new_assign(combined);
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let body_block = js_declaration_single_block_body(ast);
     list_add(body_block, assign);
