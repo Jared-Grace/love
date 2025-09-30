@@ -2054,7 +2054,6 @@
   "a td todo",
   "fd git_history_delete",
   "n folder_delete",
-  "s file",
   "s git,rename",
   "n git_repo_rename",
   "fws git_repo_rename normalize",
@@ -2358,6 +2357,7 @@
   "app_new_step_2 karate",
   "s fix",
   "functions_names_to_paths",
-  "s output"
+  "s output",
+  "s file"
  ]
 }
