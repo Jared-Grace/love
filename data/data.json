@@ -12642,7 +12642,8 @@
    "js_log_remove",
    "log",
    "log_keep",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "function_name_to_path_search"
   ],
   "e2": [
    "js_log_remove",
@@ -19495,6 +19496,7 @@
     "repos_paths_map_unordered_combine",
     "file_exists",
     "function_name_to_path",
+    "log",
     "function_name_to_path_search",
     "unaliased",
     "f_path",
