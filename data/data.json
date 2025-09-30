@@ -3813,7 +3813,8 @@
    "firebase_storage_download_ebible",
    "js_await_add_inner",
    "list_remove_property",
-   "sandbox"
+   "sandbox",
+   "file_root_exists"
   ],
   "languages": [
    "app_reply_main",
@@ -7340,7 +7341,8 @@
    "js_identifier_unique",
    "list_filter_empty_not_is",
    "string_empty_not_is",
-   "string_empty_not_is_assert"
+   "string_empty_not_is_assert",
+   "file_root_exists"
   ],
   "list_filter": [
    "ebible_verses",
@@ -10825,8 +10827,7 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message",
-   "file_root_exists"
+   "string_is_assert_message"
   ],
   "descendants": [
    "html_parse_descendants_classes"
@@ -14520,8 +14521,7 @@
    "function_run_output_file_temp"
   ],
   "si": [
-   "string_is",
-   "file_root_exists"
+   "string_is"
   ],
   "file_root_exists": [
    "file_overwrite",
@@ -30119,7 +30119,7 @@
   "file_root_exists": {
    "async": true,
    "identifiers": [
-    "string_is",
+    "string_empty_not_is",
     "object_property_get",
     "file_root_exists",
     "file_path",
@@ -30127,7 +30127,7 @@
     "parsed",
     "parse",
     "root",
-    "si",
+    "en",
     "exists",
     "fs",
     "promises",
