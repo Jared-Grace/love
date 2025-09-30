@@ -36,7 +36,7 @@ export async function function_name_to_path_search(unaliased) {
   if (exists) {
     let only = list_single(filtered);
     let mapped = object_property_get(only, "mapped");
-  object_property_from(mapped,  "f_path", result);
+  object_property_from(only,  "f_path", result);
   }
   return result;e
 }
