@@ -5681,7 +5681,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "file_write": [
    "data_all",
@@ -9317,7 +9318,8 @@
   ],
   "f_path_new": [
    "function_copy",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "function_copy_suffix_add": [
    "function_copy_suffix_add"
@@ -14700,7 +14702,8 @@
   ],
   "user_repo_path_combine": [
    "function_copy",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30513,10 +30516,13 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "user_repo_path_combine",
     "repo_path",
     "user_repo_get",
     "file_open",
     "firebase_name",
+    "f_path_new",
+    "f_path",
     "repo_name",
     "r_path",
     "v"
