@@ -2022,7 +2022,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public"
+   "html_update_public",
+   "firebase_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -4728,8 +4729,7 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "firebase_service_account",
-   "firebase_name"
+   "firebase_service_account"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -5764,8 +5764,7 @@
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
    "messenger_reply_playwright",
-   "object_properties_delete",
-   "firebase_name"
+   "object_properties_delete"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -8391,7 +8390,8 @@
    "js_stack_last_function",
    "marker_param_add",
    "sandbox_2",
-   "function_import"
+   "function_import",
+   "firebase_name"
   ],
   "list_to": [
    "functions_combine",
@@ -14700,6 +14700,9 @@
   "user_repo_path_combine": [
    "function_copy",
    "user_repo_path_combine",
+   "firebase_name"
+  ],
+  "projects": [
    "firebase_name"
   ]
  },
@@ -30513,12 +30516,13 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "file_read_json",
     "user_repo_path_combine",
     "firebase_name",
     "combined",
-    "data",
-    "file_path",
+    "f",
+    "projects",
     "v"
    ]
   },
