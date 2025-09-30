@@ -11879,8 +11879,7 @@
    "js_call_insert",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "js_marker_insert",
-   "app_new_step_3"
+   "js_marker_insert"
   ],
   "js_call_new_code": [
    "js_call_new",
@@ -14827,7 +14826,6 @@
     "v",
     "assign",
     "code",
-    "args_code",
     "parsed",
     "arguments2",
     "expression",
