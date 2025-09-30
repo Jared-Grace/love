@@ -1699,7 +1699,6 @@
   "s fireba,path",
   "is ebible_firebase_folder",
   "de ebible_firebase_folder",
-  "s firebase",
   "is firebase_storage_download",
   "o firebase_storage_download",
   "s buffer",
@@ -2397,6 +2396,7 @@
   "fns",
   "of fns",
   "html_update_public karate",
-  "o v"
+  "o v",
+  "s firebase"
  ]
 }
