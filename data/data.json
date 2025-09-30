@@ -1084,7 +1084,8 @@
    "repo_about_get",
    "repo_firebase_service_account_get",
    "firebase_service_account_love_generic",
-   "firebase_name"
+   "firebase_name",
+   "js_identifier_unique"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -13987,8 +13988,7 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction",
-   "js_identifier_unique"
+   "newFunction"
   ],
   "package_name": [
    "npm_install"
@@ -14708,6 +14708,9 @@
   ],
   "$g$projects$default": [
    "firebase_name"
+  ],
+  "js_keyword_default": [
+   "js_identifier_unique"
   ]
  },
  "functions": {
@@ -23727,8 +23730,9 @@
    ]
   },
   "js_identifier_unique": {
-   "async": true,
+   "async": false,
    "identifiers": [
+    "js_keyword_default",
     "js_keyword_arguments",
     "list_concat",
     "string_is_assert",
@@ -23741,8 +23745,8 @@
     "existing",
     "name",
     "v2",
+    "v",
     "used",
-    "newFunction",
     "unique",
     "attempt",
     "suffix"
