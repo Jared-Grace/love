@@ -5621,8 +5621,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path",
-   "user_repo_set",
-   "function_run_output_file_temp"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -30089,8 +30088,7 @@
     "result",
     "lambda",
     "temp_path",
-    "json",
-    "f_path"
+    "json"
    ]
   }
  }
