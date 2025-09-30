@@ -9,7 +9,9 @@ export async function function_run_output_file_temp(f_name) {
   marker("1");
   let result = await function_run(f_name, []);
   async function lambda(temp_path) {
-    log(message);
+    log({
+      temp_path,
+    });
     let json = json_to(result);
     await file_overwrite(temp_path, json);
     await file_open(temp_path);
