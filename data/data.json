@@ -1871,8 +1871,7 @@
    "js_dollar_g",
    "js_visit_nodes",
    "marker_call",
-   "marker_functionize",
-   "file_overwrite"
+   "marker_functionize"
   ],
   "body_block": [
    "app_new_step_3",
@@ -1998,8 +1997,7 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name",
-   "file_overwrite"
+   "repo_acronym_to_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2294,8 +2292,7 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text",
-   "file_overwrite"
+   "html_p_text"
   ],
   "lambda4": [
    "app_replace_home",
@@ -4560,8 +4557,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "file_overwrite"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -7649,8 +7645,7 @@
    "promise_not_is"
   ],
   "access": [
-   "file_exists",
-   "file_overwrite"
+   "file_exists"
   ],
   "constants": [
    "file_exists"
@@ -7789,8 +7784,7 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
    "server",
-   "watch",
-   "file_overwrite"
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -10822,8 +10816,7 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message",
-   "file_overwrite"
+   "string_is_assert_message"
   ],
   "descendants": [
    "html_parse_descendants_classes"
@@ -11103,8 +11096,7 @@
   "parse": [
    "json_from",
    "js_parse",
-   "path_name",
-   "file_overwrite"
+   "path_name"
   ],
   "js_if_blockify_generic": [
    "js_arrow_blockify",
@@ -14517,7 +14509,9 @@
    "function_run_output_file_temp"
   ],
   "si": [
-   "string_is",
+   "string_is"
+  ],
+  "file_root_exists": [
    "file_overwrite"
   ]
  },
@@ -17580,9 +17574,8 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
+    "file_root_exists",
     "log",
-    "string_is",
-    "object_property_get",
     "file_parent_exists_ensure",
     "file_overwrite",
     "file_path",
@@ -17590,14 +17583,7 @@
     "fs",
     "promises",
     "writeFile",
-    "path",
-    "parsed",
-    "parse",
-    "root",
-    "si",
-    "exists",
-    "access",
-    "message"
+    "exists"
    ]
   },
   "file_overwrite_buffer": {
