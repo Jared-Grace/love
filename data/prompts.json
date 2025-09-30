@@ -1863,7 +1863,6 @@
   "ev en,lug EZK16:36",
   "o ev",
   "s second",
-  "s temp",
   "s open",
   "ev tel,en EZK18:31",
   "ev tel,en NUM32:19",
@@ -2358,6 +2357,7 @@
   "functions_names_to_paths",
   "s output",
   "s file",
-  "u f"
+  "u f",
+  "s temp"
  ]
 }
