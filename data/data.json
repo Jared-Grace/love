@@ -401,7 +401,8 @@
    "function_new_app_screen",
    "function_open_app",
    "js_expand_generic",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_new_step_1"
   ],
   "file_name": [
    "app_html_open",
@@ -464,7 +465,8 @@
    "app_new_step_2",
    "function_open_app",
    "html_update_public",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_new_step_1"
   ],
   "app_name_main": [
    "app_name_main",
@@ -945,7 +947,8 @@
    "storage_local_key_get",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "app_new_step_1"
   ],
   "p": [
    "app_name_prefixed",
@@ -988,7 +991,8 @@
    "function_param_swap_task_simple",
    "js_dollar_new",
    "marker_screen_add",
-   "task_new"
+   "task_new",
+   "app_new_step_1"
   ],
   "app_new": [
    "app_new"
@@ -14451,7 +14455,8 @@
    "watch"
   ],
   "app_new_step_1": [
-   "app_new"
+   "app_new",
+   "app_new_step_1"
   ]
  },
  "functions": {
@@ -29970,6 +29975,16 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_new_step_1": {
+   "async": true,
+   "identifiers": [
+    "function_new",
+    "app_name_prefixed",
+    "app_new_step_1",
+    "name",
+    "a_name"
    ]
   }
  }
