@@ -2378,6 +2378,7 @@
   "c repos_paths_map_unordered repos_paths_names_map_unordered",
   "r repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine",
   "d",
-  "function_rename_identifiers repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine"
+  "function_rename_identifiers repos_paths_map_unordered_combine_folders repos_paths_names_map_unordered_combine",
+  "s list_is"
  ]
 }
