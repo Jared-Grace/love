@@ -14685,6 +14685,9 @@
   ],
   "firebase_service_account_karate": [
    "firebase_service_account_karate"
+  ],
+  "firebase_name": [
+   "firebase_storage_url_project"
   ]
  },
  "functions": {
@@ -18188,6 +18191,7 @@
   "firebase_storage_url_project": {
    "async": false,
    "identifiers": [
+    "firebase_name",
     "marker",
     "firebase_storage_url_project",
     "prefix",
