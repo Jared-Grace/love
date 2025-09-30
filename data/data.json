@@ -11373,8 +11373,7 @@
    "marker_next_get"
   ],
   "declaration2": [
-   "js_assign_combine",
-   "app_new_step_3"
+   "js_assign_combine"
   ],
   "init2": [
    "js_assign_combine",
@@ -14633,9 +14632,6 @@
    "html_update_generic",
    "html_code_script_module",
    "html_update_public"
-  ],
-  "unaliased2": [
-   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14831,9 +14827,7 @@
     "v",
     "assign",
     "code",
-    "unaliased2",
     "args_code",
-    "declaration2",
     "parsed",
     "arguments2",
     "expression",
