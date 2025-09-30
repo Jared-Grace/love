@@ -12593,8 +12593,7 @@
    "js_log_remove",
    "log",
    "log_keep",
-   "messenger_reply_playwright",
-   "file_overwrite"
+   "messenger_reply_playwright"
   ],
   "e2": [
    "js_log_remove",
@@ -17592,7 +17591,6 @@
    "async": true,
    "identifiers": [
     "file_root_exists",
-    "log",
     "file_parent_exists_ensure",
     "assert_json",
     "file_overwrite",
