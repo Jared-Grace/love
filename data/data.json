@@ -1081,7 +1081,8 @@
    "repo_acronym_get",
    "repo_about_get",
    "repo_firebase_service_account_get",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "firebase_name"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14687,7 +14688,8 @@
    "firebase_service_account_karate"
   ],
   "firebase_name": [
-   "firebase_storage_url_project"
+   "firebase_storage_url_project",
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30497,6 +30499,13 @@
     "firebase_service_account_karate",
     "name",
     "file_path"
+   ]
+  },
+  "firebase_name": {
+   "async": false,
+   "identifiers": [
+    "firebase_name",
+    "v"
    ]
   }
  }
