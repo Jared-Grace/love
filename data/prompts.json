@@ -2195,7 +2195,6 @@
   "r path_repo repo_path",
   "s resol",
   "repos_gitignore_overwrite",
-  "o an",
   "function_name_to_path test",
   "s folder",
   "is function_name_to_path",
@@ -2346,6 +2345,7 @@
   "file_delete C:/Users/chris/repos/love/.git/index.lock",
   "as delete",
   "de test2",
-  "s t"
+  "s t",
+  "o an"
  ]
 }
