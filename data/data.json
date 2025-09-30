@@ -797,8 +797,7 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "function_name_to_path_search"
+   "visit_filter_recursive_async"
   ],
   "app_name_prefix": [
    "app_name_prefix",
@@ -886,7 +885,6 @@
    "function_identifier_replace_ending_remove",
    "function_identifier_replace_suffix_add",
    "function_name_to_path",
-   "function_name_to_path_search",
    "function_name_unalias",
    "function_new_app_screen",
    "function_new_transform",
@@ -19508,10 +19506,8 @@
     "unaliased",
     "f_path",
     "lambda",
-    "a",
     "file_path",
     "exists",
-    "v",
     "mapped",
     "lambda2",
     "m",
