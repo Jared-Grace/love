@@ -8382,7 +8382,8 @@
    "js_function_last_asyncify",
    "js_stack_last_function",
    "marker_param_add",
-   "sandbox_2"
+   "sandbox_2",
+   "function_import"
   ],
   "list_to": [
    "functions_combine",
@@ -9505,7 +9506,8 @@
    "function_exists_strict",
    "function_name_to_path_search",
    "function_name_to_path_unalias",
-   "html_update_public"
+   "html_update_public",
+   "function_import"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -19341,6 +19343,7 @@
     "fileURLToPath",
     "function_name_to_base",
     "function_name_unalias",
+    "function_name_to_path_search",
     "function_import",
     "f_name",
     "path",
@@ -19351,8 +19354,9 @@
     "__dirname",
     "dirname",
     "unaliased",
-    "joined",
     "f_path",
+    "f",
+    "joined",
     "imported",
     "imported_fn",
     "Error"
