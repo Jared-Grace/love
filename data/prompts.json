@@ -2120,7 +2120,6 @@
   "o d",
   "n data_backup",
   "s now",
-  "s json",
   "s copy",
   "as copy",
   "a flc file_copy",
@@ -2368,6 +2367,7 @@
   "ps",
   "is folder_user_combine",
   "p",
-  "function_run_output_file_temp functions_names_to_paths"
+  "function_run_output_file_temp functions_names_to_paths",
+  "s json"
  ]
 }
