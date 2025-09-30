@@ -20,7 +20,7 @@ export async function html_update_public(name) {
   let file_path = html_name_to_path(name);
   let joined = path_join([r_path, file_path]);
   let code = await function_dependencies_code(a_name);
-  let call = js_code_call_statement(name_prefixed);
+  let call = js_code_call_statement(a_name);
   const middle = `${call}
     ${code}`;
   let body = html_code_script_module(middle);
