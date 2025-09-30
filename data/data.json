@@ -8153,12 +8153,14 @@
   "js_code_call_statement": [
    "firebase_storage_function_run",
    "html_update_generic",
-   "js_code_call_statement"
+   "js_code_call_statement",
+   "html_update_public"
   ],
   "call": [
    "firebase_storage_function_run",
    "html_update_generic",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "html_update_public"
   ],
   "eval": [
    "firebase_storage_function_run"
@@ -11028,7 +11030,8 @@
    "html_update_generic"
   ],
   "name_prefixed": [
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_public"
   ],
   "http_sleep": [
    "http",
@@ -21432,6 +21435,7 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "js_code_call_statement",
     "path_join",
     "repo_path",
     "object_property_get",
@@ -21454,8 +21458,10 @@
     "file_path",
     "joined",
     "code",
-    "body",
+    "call",
+    "name_prefixed",
     "middle",
+    "body",
     "paths_get",
     "f_name_ext",
     "src",
