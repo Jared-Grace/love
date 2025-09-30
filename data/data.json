@@ -2296,8 +2296,7 @@
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
    "html_p_text",
-   "file_root_exists",
-   "file_overwrite"
+   "file_root_exists"
   ],
   "lambda4": [
    "app_replace_home",
@@ -4521,8 +4520,7 @@
    "integer_is_assert",
    "js_node_atomize",
    "list_empty_is_assert",
-   "list_is_assert",
-   "file_overwrite"
+   "list_is_assert"
   ],
   "o": [
    "assert_json",
@@ -4565,8 +4563,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "file_overwrite"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -5687,7 +5684,6 @@
    "object_property_initialize",
    "object_property_lambda",
    "object_property_lambda_async",
-   "file_overwrite",
    "file_root_exists"
   ],
   "data": [
@@ -14528,8 +14524,10 @@
    "string_is"
   ],
   "file_root_exists": [
-   "file_overwrite",
    "file_root_exists"
+  ],
+  "file_root_exists_assert": [
+   "file_overwrite"
   ]
  },
  "functions": {
@@ -17591,15 +17589,11 @@
   "file_overwrite": {
    "async": true,
    "identifiers": [
-    "file_root_exists",
+    "file_root_exists_assert",
     "file_parent_exists_ensure",
-    "assert_json",
     "file_overwrite",
     "file_path",
     "contents",
-    "exists",
-    "root",
-    "message",
     "fs",
     "promises",
     "writeFile"
