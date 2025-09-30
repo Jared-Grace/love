@@ -14,7 +14,7 @@ export function server() {
   const __dirname = path.dirname(__filename);
   let result = folder_public();
   let previous = folder_previous();
-  let result2 = path_join([__dirname, previous, previous, result]);
+  let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   app.use(v);
   function lambda() {
