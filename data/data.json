@@ -284,7 +284,8 @@
    "whitespace_normalize",
    "function_run_output_file_temp",
    "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine"
   ],
   "app_karate": [
    "app_karate"
@@ -500,7 +501,8 @@
    "watch",
    "app_new_step_2",
    "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "firebase_storage_function_run": [
    "app_karate",
@@ -1071,7 +1073,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "file_root_exists",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -1674,7 +1677,8 @@
    "watch",
    "function_run_output_file_temp",
    "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "ast": [
    "app_new_step_3",
@@ -2940,7 +2944,8 @@
    "range_from",
    "repos_gitignore_overwrite",
    "sandbox_4_a",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -3055,7 +3060,8 @@
    "sandbox_2",
    "sandbox_4_a",
    "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4337,7 +4343,8 @@
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
    "sandbox_2",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5156,7 +5163,8 @@
    "ternary",
    "function_run_output_file_temp",
    "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine"
   ],
   "catch_call": [
    "catch_call",
@@ -5228,7 +5236,8 @@
    "marker_above",
    "sandbox_3",
    "watch",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "catch_log_async": [
    "catch_log_async",
@@ -5648,7 +5657,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "file_write": [
    "data_all",
@@ -5816,7 +5826,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "file_copy": [
    "data_backup",
@@ -7823,7 +7834,8 @@
    "watch",
    "file_root_exists",
    "repos_paths_map_unordered_combine_folders",
-   "repos_paths_names_map_unordered"
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -8381,7 +8393,8 @@
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
    "string_split_comma",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -8491,7 +8504,8 @@
    "functions_paths",
    "repos_paths_map_unordered_combine",
    "repos_paths_map_unordered_combine_squash",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "paths": [
    "functions_names_from_path",
@@ -10067,7 +10081,8 @@
   "each_folder": [
    "function_run_git",
    "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "function_run_line_parse": [
    "function_run_line",
@@ -13984,7 +13999,8 @@
   "r_path": [
    "path_repo_combine",
    "repo_path",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "then": [
    "promise_is"
@@ -14571,10 +14587,14 @@
   ],
   "repos_paths_names_map_unordered": [
    "repos_paths_names_map_unordered",
-   "repos_paths_map_unordered_combine_folders"
+   "repos_paths_map_unordered_combine_folders",
+   "repos_paths_names_map_unordered_combine"
   ],
   "lambda$name$path": [
    "repos_paths_names_map_unordered"
+  ],
+  "repos_paths_names_map_unordered_combine": [
+   "repos_paths_names_map_unordered_combine"
   ]
  },
  "functions": {
@@ -30237,6 +30257,29 @@
     "path",
     "mapped",
     "result"
+   ]
+  },
+  "repos_paths_names_map_unordered_combine": {
+   "async": true,
+   "identifiers": [
+    "list_map",
+    "repos_paths_names_map_unordered",
+    "identity",
+    "marker",
+    "path_join",
+    "repos_paths_names_map_unordered_combine",
+    "path",
+    "mapper",
+    "result",
+    "each_folder",
+    "name",
+    "r_path",
+    "joined",
+    "f_names",
+    "lambda",
+    "f_path",
+    "v",
+    "mapped"
    ]
   }
  }
