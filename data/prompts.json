@@ -1041,7 +1041,6 @@
   "u d",
   "a d data_files_update",
   "fw dpg data_identifiers_search",
-  "s search",
   "s list_To",
   "s task",
   "a is data_identifiers_search",
@@ -2408,6 +2407,7 @@
   "ps",
   "fdf app_karate_main",
   "function_name_unalias add",
-  "function_alias_add_generic add"
+  "function_alias_add_generic add",
+  "s search"
  ]
 }
