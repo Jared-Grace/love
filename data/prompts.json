@@ -2358,6 +2358,7 @@
   "s output",
   "s file",
   "u f",
-  "s temp"
+  "s temp",
+  "n function_run_output_file_temp"
  ]
 }
