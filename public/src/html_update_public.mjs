@@ -17,7 +17,7 @@ export async function html_update_public(name) {
   let repo_name = object_property_get(search, "repo_name");
   let r_path = repo_path(repo_name);
   let file_path = html_name_to_path(name);
-  let joined = path_join(segments);
+  let joined = path_join([r_path, file_path]);
   let code = await function_dependencies_code(a_name);
   let body = html_code_script_module(middle);
   await html_overwrite(name, file_path, body);
