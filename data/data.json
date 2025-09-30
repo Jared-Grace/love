@@ -4565,7 +4565,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "file_overwrite"
   ],
   "assert_not": [
    "assert_not",
@@ -17598,6 +17599,7 @@
     "contents",
     "exists",
     "root",
+    "message",
     "fs",
     "promises",
     "writeFile"
