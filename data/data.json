@@ -2220,7 +2220,6 @@
    "object_property_set",
    "object_property_set_exists_not",
    "promise_is",
-   "repo_acronym_get",
    "repo_acronym_set",
    "storage_local_get",
    "storage_local_get_context",
@@ -6233,7 +6232,6 @@
    "data_property_get",
    "data_transform",
    "function_alias_add_generic",
-   "repo_acronym_get",
    "user_repo_get"
   ],
   "value_initial": [
@@ -14024,12 +14022,10 @@
   ],
   "path_repo_about": [
    "path_repo_about",
-   "repo_acronym_get",
    "repo_acronym_set"
   ],
   "a_path": [
    "path_repo_about",
-   "repo_acronym_get",
    "repo_acronym_set"
   ],
   "r_path": [
@@ -14634,6 +14630,9 @@
   "firebase_service_account_love": [
    "firebase_service_account",
    "firebase_service_account_love"
+  ],
+  "repo_about_get": [
+   "repo_acronym_get"
   ]
  },
  "functions": {
@@ -28901,14 +28900,11 @@
   "repo_acronym_get": {
    "async": true,
    "identifiers": [
-    "path_repo_about",
-    "data_get",
+    "repo_about_get",
     "marker",
     "repo_acronym_get",
     "repo",
     "key",
-    "a_path",
-    "value",
     "v"
    ]
   },
