@@ -10,4 +10,5 @@ export async function file_temp(lambda$temp_path) {
   } finally {
     await file_delete_if_exists(temp_path);
   }
+  return result;
 }
