@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -22,6 +23,7 @@ export async function visit_filter_recursive_async(
     stack: copy,
   });
   let children = await children_get(node);
+  log(message);
   async function lambda(c) {
     await visit_filter_recursive_async(c, children_get, filter, on_each, stack);
   }
