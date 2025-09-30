@@ -2394,6 +2394,7 @@
   "p",
   "app_new_step_3 karate",
   "s call",
-  "s js,call"
+  "s js,call",
+  "sps"
  ]
 }
