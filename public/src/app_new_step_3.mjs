@@ -1,6 +1,5 @@
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
-import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
@@ -23,8 +22,7 @@ export async function app_new_step_3(name) {
     declaration.async = true;
     let value_string = app_name_main(a_name);
     let code_string = js_code_string(value_string);
-    let v2 = js_code_call_args(app_name_main.name, [code_string]);
-    let expression2 = js_parse_expression(v2);
+    let expression2 = js_parse_expression(code_string);
     const v = "f_name";
     let assign = js_declare(v, expression2);
     app_new_assign(combined);
