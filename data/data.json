@@ -14587,6 +14587,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "tst1": [
+   "tst1"
   ]
  },
  "functions": {
@@ -30266,6 +30269,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "tst1": {
+   "async": false,
+   "identifiers": [
+    "tst1"
    ]
   }
  }
