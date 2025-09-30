@@ -4583,7 +4583,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "visit_unique_async"
   ],
   "assert_not": [
    "assert_not",
@@ -12648,7 +12649,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "visit_unique_async"
   ],
   "e2": [
    "js_log_remove",
@@ -30215,6 +30217,7 @@
   "visit_unique_async": {
    "async": true,
    "identifiers": [
+    "log",
     "list_add_if_not_includes",
     "list_difference",
     "visit_async",
@@ -30222,6 +30225,7 @@
     "node",
     "children_get",
     "on_each",
+    "message",
     "found",
     "lambda",
     "children",
