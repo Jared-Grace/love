@@ -1391,8 +1391,7 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_new_step_3"
+   "visit_filter_recursive_async"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_3",
@@ -11685,8 +11684,7 @@
    "js_expand_generic",
    "js_marker_name_get",
    "marker_call_replace_generic",
-   "marker_rename",
-   "app_new_step_3"
+   "marker_rename"
   ],
   "log_unparse_try": [
    "js_block_child_graph",
@@ -14794,7 +14792,6 @@
     "js_parse_statement",
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
-    "list_add",
     "list_add_multiple",
     "list_empty",
     "js_parse_expression",
@@ -14826,7 +14823,6 @@
     "code",
     "statement",
     "expression",
-    "arguments2",
     "body_block",
     "output"
    ]
