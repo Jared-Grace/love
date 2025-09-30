@@ -2384,8 +2384,9 @@
   "s object_property",
   "p",
   "function_name_to_path_search app_karate",
-  "fd app_karate_code",
   "function_imports app_karate",
-  "ps"
+  "ps",
+  "app_karate",
+  "fd app_karate_code"
  ]
 }
