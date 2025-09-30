@@ -12647,8 +12647,7 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine",
-   "visit_filter_recursive_async"
+   "repos_paths_names_map_unordered_combine"
   ],
   "e2": [
    "js_log_remove",
@@ -30191,7 +30190,6 @@
   "visit_filter_recursive_async": {
    "async": true,
    "identifiers": [
-    "log",
     "not",
     "each_async",
     "list_add",
