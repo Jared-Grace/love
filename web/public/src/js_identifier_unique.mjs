@@ -6,9 +6,9 @@ import { string_empty_not_is } from "../../../love/public/src/string_empty_not_i
 import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-export function js_identifier_unique(existing, name) {
+export async function js_identifier_unique(existing, name) {
   let v2 = js_keyword_arguments();
-  let used = list_concat(existing, [v2, newFunction()]);
+  let used = list_concat(existing, [v2, await newFunction()]);
   list_all(used, string_is_assert);
   let unique = null;
   let attempt = 1;
@@ -23,4 +23,3 @@ export function js_identifier_unique(existing, name) {
 function newFunction() {
   return "default";
 }
-
