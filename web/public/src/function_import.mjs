@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { fileURLToPath } from "url";
 import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
@@ -19,4 +20,5 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
+  log(message);
 }
