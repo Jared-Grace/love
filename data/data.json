@@ -414,8 +414,7 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "function_exists_assert",
-   "firebase_service_account"
+   "function_exists_assert"
   ],
   "name": [
    "app_name_prefixed",
@@ -4499,8 +4498,7 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch",
-   "firebase_service_account"
+   "watch"
   ],
   "count": [
    "assert_arguments",
@@ -18070,8 +18068,6 @@
     "firebase_service_account",
     "fn",
     "result",
-    "f_name",
-    "args",
     "service_account",
     "file_path"
    ]
