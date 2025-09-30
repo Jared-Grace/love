@@ -31,7 +31,7 @@ export async function function_name_to_path_search(unaliased) {
   let result = {
     exists,
     multiple,
-  };
+  }; 
   if (exists) {
     let only = list_single(filtered);
     let f_path2 = object_property_get(only, "f_path");
