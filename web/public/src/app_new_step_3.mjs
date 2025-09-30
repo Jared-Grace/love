@@ -32,9 +32,9 @@ export async function app_new_step_3(name) {
     const v = "f_name";
     let assign = js_declare(v, expression2);
     let code = js_code_call_args_await_maybe(
-      unaliased2,
+      unaliased,
       args_code,
-      declaration2,
+      declaration_call,
     );
     let { parsed } = await js_call_new(firebase_storage_function_run.name, ast);
     let arguments2 = object_property_get(parsed, "arguments");
