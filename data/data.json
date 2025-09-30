@@ -983,7 +983,8 @@
   "string_and_empty_not_is_assert": [
    "app_new",
    "app_new_step_1",
-   "string_and_empty_not_is_assert"
+   "string_and_empty_not_is_assert",
+   "app_new_step_2"
   ],
   "assert_arguments": [
    "app_new",
@@ -30007,6 +30008,7 @@
   "app_new_step_2": {
    "async": true,
    "identifiers": [
+    "string_and_empty_not_is_assert",
     "function_transform",
     "list_add",
     "js_declaration_single_block_body",
