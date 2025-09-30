@@ -509,8 +509,7 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch",
-   "function_name_to_path_search"
+   "watch"
   ],
   "add": [
    "add",
@@ -10443,7 +10442,8 @@
   ],
   "object_property_from": [
    "function_wrap",
-   "object_property_from"
+   "object_property_from",
+   "function_name_to_path_search"
   ],
   "js_declaration_asyncify": [
    "function_wrap",
@@ -19509,7 +19509,7 @@
     "result",
     "only",
     "f_path2",
-    "name"
+    "object_property_from"
    ]
   },
   "function_name_to_path_unalias": {
