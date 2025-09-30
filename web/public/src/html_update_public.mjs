@@ -10,7 +10,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
-  let result = await function_name_to_path_search(a_name);
+  let search = await function_name_to_path_search(a_name);
   let code = await function_dependencies_code(a_name);
   let body = html_code_script_module(middle);
   await html_overwrite(name, file_path, body);
