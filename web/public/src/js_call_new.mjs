@@ -9,7 +9,7 @@ export async function js_call_new(f_name_call, ast) {
     ast,
   );
   if (return_name !== null) {
-    let unique = js_identifier_unique(existing, return_name);
+    let unique = await js_identifier_unique(existing, return_name);
     code = js_code_let_assign(unique, code);
   }
   let parsed = js_parse_statement(code);
