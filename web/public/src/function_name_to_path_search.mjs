@@ -9,6 +9,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { repos_paths_map_unordered_combine } from "../../../love/public/src/repos_paths_map_unordered_combine.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
+import { log } from "./log.mjs";
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
   async function lambda(joined) {
@@ -16,7 +17,7 @@ export async function function_name_to_path_search(unaliased) {
     let v = {
       exists,
       f_path: joined,
-    };
+    };log({v})
     return v;
   }
   let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
