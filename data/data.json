@@ -841,7 +841,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "app_new"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2171,7 +2172,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "app_new"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -12424,7 +12426,8 @@
   ],
   "string_is_assert": [
    "js_identifier_unique",
-   "string_is_assert"
+   "string_is_assert",
+   "app_new"
   ],
   "string_empty_is": [
    "js_identifier_unique",
@@ -14460,9 +14463,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "si": [
-   "app_new"
   ]
  },
  "functions": {
@@ -14548,6 +14548,7 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "string_is_assert",
     "string_empty_not_is_assert",
     "assert_arguments",
     "app_new_step_1",
@@ -14556,7 +14557,8 @@
     "app_new",
     "name",
     "arguments",
-    "si"
+    "v",
+    "value"
    ]
   },
   "app_new_assign": {
