@@ -2320,7 +2320,6 @@
   "s diction",
   "n reduce",
   "s pair",
-  "functions_names_to_paths",
   "is js_imports_paths_fix",
   "is function_name_to_path_import",
   "fs function_name_to_path_import",
@@ -2357,6 +2356,7 @@
   "urs k",
   "app_new_step_2",
   "app_new_step_2 karate",
-  "s fix"
+  "s fix",
+  "functions_names_to_paths"
  ]
 }
