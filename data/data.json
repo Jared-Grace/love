@@ -4384,7 +4384,8 @@
    "js_dollar_aa",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "app_new"
   ],
   "args": [
    "assert_arguments",
@@ -5133,7 +5134,8 @@
    "marker_rename",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "app_new"
   ],
   "catch_ignore": [
    "catch_ignore"
@@ -14456,9 +14458,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "$aa": [
-   "app_new"
   ]
  },
  "functions": {
@@ -14544,12 +14543,13 @@
   "app_new": {
    "async": true,
    "identifiers": [
+    "assert_arguments",
     "app_new_step_1",
     "app_new_step_2",
     "marker",
     "app_new",
     "name",
-    "$aa"
+    "arguments"
    ]
   },
   "app_new_assign": {
