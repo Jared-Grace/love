@@ -4611,7 +4611,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_dollar_g"
   ],
   "assert_not": [
    "assert_not",
@@ -12707,7 +12708,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "js_dollar_g"
   ],
   "e2": [
    "js_log_remove",
@@ -23074,6 +23076,7 @@
   "js_dollar_g": {
    "async": true,
    "identifiers": [
+    "log",
     "each_reverse",
     "list_size_1_assert",
     "list_first_remaining",
@@ -23107,6 +23110,7 @@
     "parsed",
     "unique",
     "assign",
+    "message",
     "index",
     "lambda"
    ]
