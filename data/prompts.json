@@ -2383,7 +2383,6 @@
   "function_imports app_karate",
   "ps",
   "app_karate",
-  "p",
   "fd app_karate_code",
   "fd app_karate",
   "s exists,assert",
@@ -2394,6 +2393,7 @@
   "s call,args",
   "s main",
   "s code,string",
+  "p",
   "app_new_step_3 karate"
  ]
 }
