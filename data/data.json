@@ -4239,7 +4239,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "app_new_step_3"
   ],
   "book_code": [
    "app_reply_main",
@@ -6552,7 +6553,8 @@
    "list_adder_unique_async",
    "list_add_multiple",
    "marker_functionize",
-   "reply"
+   "reply",
+   "app_new_step_3"
   ],
   "each_multiple_async": [
    "each_multiple_async",
@@ -13063,7 +13065,8 @@
    "list_add_multiple",
    "list_replace_all",
    "marker_functionize",
-   "reply"
+   "reply",
+   "app_new_step_3"
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
@@ -14788,6 +14791,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "list_add_multiple",
     "list_empty",
     "js_parse_expression",
     "js_code_string",
@@ -14818,6 +14822,8 @@
     "assign",
     "parsed",
     "body_block",
+    "list",
+    "items",
     "output"
    ]
   },
