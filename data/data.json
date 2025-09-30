@@ -5117,7 +5117,6 @@
    "function_aliases_search",
    "function_exists_inner",
    "function_exists_strict",
-   "function_name_to_path_search",
    "function_name_to_path_unalias",
    "function_new_js_inner",
    "function_params_consolidate",
@@ -8572,7 +8571,8 @@
    "function_aliases_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "function_name_to_path_search"
   ],
   "function_open": [
    "functions_search_open",
@@ -19542,7 +19542,7 @@
     "ti2",
     "filtered",
     "multiple",
-    "result",
+    "search",
     "only"
    ]
   },
