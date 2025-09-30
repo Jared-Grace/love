@@ -1,3 +1,4 @@
+import { repos_paths_names_map_unordered_combine } from "../../../love/public/src/repos_paths_names_map_unordered_combine.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -18,7 +19,7 @@ export async function function_name_to_path_search(unaliased) {
     };
     return v;
   }
-  let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
+  let mapped = await repos_paths_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
     let exists2 = object_property_get(m, "exists");
     let ti2 = true_is(exists2);
@@ -37,4 +38,5 @@ export async function function_name_to_path_search(unaliased) {
     object_property_set(result, "f_path", f_path2);
   }
   return result;
+  let result2 = await repos_paths_names_map_unordered_combine(path, mapper);
 }
