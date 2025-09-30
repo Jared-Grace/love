@@ -1073,7 +1073,8 @@
    "app_new_step_3",
    "firebase_service_account_love",
    "repo_acronym_get",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_firebase_service_account_get"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -3927,7 +3928,8 @@
    "repo_acronym_get",
    "repo_about_get",
    "repo_acronym_set",
-   "repo_about_set"
+   "repo_about_set",
+   "repo_firebase_service_account_get"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -10574,7 +10576,8 @@
    "repo_acronym_get",
    "repo_acronym_set",
    "repo_about_get",
-   "repo_about_set"
+   "repo_about_set",
+   "repo_firebase_service_account_get"
   ],
   "repo_folder": [
    "git_history_delete"
@@ -14643,11 +14646,15 @@
   ],
   "repo_about_get": [
    "repo_acronym_get",
-   "repo_about_get"
+   "repo_about_get",
+   "repo_firebase_service_account_get"
   ],
   "repo_about_set": [
    "repo_acronym_set",
    "repo_about_set"
+  ],
+  "repo_firebase_service_account_get": [
+   "repo_firebase_service_account_get"
   ]
  },
  "functions": {
@@ -30407,6 +30414,16 @@
     "a_path",
     "lambda",
     "previous"
+   ]
+  },
+  "repo_firebase_service_account_get": {
+   "async": true,
+   "identifiers": [
+    "repo_about_get",
+    "repo_firebase_service_account_get",
+    "repo",
+    "key",
+    "v"
    ]
   }
  }
