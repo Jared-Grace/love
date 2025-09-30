@@ -4,7 +4,7 @@ import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export async function firebase_service_account_love_generic(name) {
   let prefix = name + "-firebase-adminsdk-";
   let v = folder_previous();
-  let path_folder = path_join([v, "secret"]);
+  let path_folder = path_join([v, v, "secret"]);
   let only = await folder_find_starts_with(path_folder, prefix);
   let file_path = path_join([path_folder, only]);
   return file_path;
