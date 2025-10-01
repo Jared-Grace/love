@@ -10232,14 +10232,14 @@
    "js_calls_to_each"
   ],
   "function_param_new": [
-   "function_param_new",
-   "marker_screen_add"
+   "function_param_new"
   ],
   "default_value": [
    "function_param_new"
   ],
   "function_param_new_double": [
-   "function_param_new_double"
+   "function_param_new_double",
+   "marker_screen_add"
   ],
   "list_swap": [
    "function_param_swap",
@@ -27940,8 +27940,8 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_param_new_double",
     "marker_next_declare_single_init",
-    "function_param_new",
     "function_new",
     "js_parse_expression",
     "list_add",
