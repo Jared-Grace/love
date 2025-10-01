@@ -2494,6 +2494,7 @@
   "n firebase_promote_function",
   "fws firebase_promote_function app_karate_main",
   "u fp",
-  "a fpk firebase_promote_function_app_karate_main"
+  "a fpk firebase_promote_function_app_karate_main",
+  "fpk"
  ]
 }
