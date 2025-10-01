@@ -753,7 +753,6 @@
   "o html_overwrite",
   "fs html_new",
   "mf 1 2 html_update",
-  "s brace",
   "i function_imports_add",
   "au function_imports_add",
   "ftc js_outside_move function_imports_add",
@@ -2419,6 +2418,7 @@
   "app_new_step_3 karate",
   "o an",
   "html_new karate",
-  "s code,assign"
+  "s code,assign",
+  "s brace"
  ]
 }
