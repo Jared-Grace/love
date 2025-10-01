@@ -15272,6 +15272,9 @@
   ],
   "main_name": [
    "app_new_step_3_generic"
+  ],
+  "app_new_update": [
+   "app_new_update"
   ]
  },
  "functions": {
@@ -31752,6 +31755,12 @@
     "statement",
     "body_block",
     "output"
+   ]
+  },
+  "app_new_update": {
+   "async": false,
+   "identifiers": [
+    "app_new_update"
    ]
   }
  }
