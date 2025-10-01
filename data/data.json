@@ -514,7 +514,8 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "global_function_initialize"
+   "global_function_initialize",
+   "global_function_get"
   ],
   "add": [
    "add",
@@ -2026,7 +2027,8 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "html_update_public",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "global_function_get"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -2257,7 +2259,8 @@
    "repo_firebase_service_account_set",
    "storage_local_specify_set",
    "global_function_property",
-   "firebase_name"
+   "firebase_name",
+   "global_function_get"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -4794,7 +4797,8 @@
    "firebase_service_account",
    "global_function_property",
    "global_function_initialize",
-   "firebase_name"
+   "firebase_name",
+   "global_function_get"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -10730,13 +10734,15 @@
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize"
+   "global_function_initialize",
+   "global_function_get"
   ],
   "global": [
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize"
+   "global_function_initialize",
+   "global_function_get"
   ],
   "awaited": [
    "global_function_async",
@@ -14763,7 +14769,8 @@
    "app_main"
   ],
   "global_function_get": [
-   "firebase_name"
+   "firebase_name",
+   "global_function_get"
   ]
  },
  "functions": {
@@ -30662,6 +30669,18 @@
     "initial",
     "global",
     "fn_object",
+    "name"
+   ]
+  },
+  "global_function_get": {
+   "async": false,
+   "identifiers": [
+    "object_property_get",
+    "global_get",
+    "global_function_get",
+    "fn",
+    "global",
+    "value",
     "name"
    ]
   }
