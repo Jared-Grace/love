@@ -586,7 +586,8 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_div_text"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -674,7 +675,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "html_div_text"
   ],
   "lambda": [
    "app_karate_home",
@@ -4021,7 +4023,8 @@
    "html_clear",
    "html_p_text",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_div_text"
   ],
   "clipboard_copy": [
    "app_reply_main",
@@ -30878,11 +30881,14 @@
   "html_div_text": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "html_div",
     "marker",
     "html_div_text",
     "root",
-    "div"
+    "div",
+    "component",
+    "text"
    ]
   }
  }
