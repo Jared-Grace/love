@@ -2076,7 +2076,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_main"
   ],
   "screens": [
    "app_refresh",
@@ -3945,8 +3946,7 @@
    "repo_acronym_set",
    "repo_about_set",
    "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set",
-   "app_main"
+   "repo_firebase_service_account_set"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -30567,9 +30567,9 @@
     "firebase_storage_function_run",
     "marker",
     "app_main",
+    "app_fn",
     "f_name",
     "name",
-    "key",
     "value"
    ]
   }
