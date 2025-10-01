@@ -902,7 +902,8 @@
    "app_karate_container",
    "app_karate_email",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_div_text"
   ],
   "padding": [
    "string_pad",
@@ -945,7 +946,6 @@
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
    "string_padded_is",
-   "app_karate_div_text",
    "app_karate_div"
   ],
   "storage_local_initialize_context": [
@@ -31183,7 +31183,7 @@
     "app_karate_div_text",
     "parent",
     "explanation",
-    "p"
+    "div"
    ]
   },
   "emoji_email": {
