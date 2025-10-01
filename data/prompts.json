@@ -2478,6 +2478,7 @@
   "s repo_path",
   "firebase_deploy",
   "as firebase_deploy",
-  "fb"
+  "fb",
+  "ff app_karate_main"
  ]
 }
