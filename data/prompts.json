@@ -2506,6 +2506,7 @@
   "app_new_step_4 karate",
   "p",
   "anu karate",
-  "c html_name_to_path_dev html_name_to_path_staging"
+  "c html_name_to_path_dev html_name_to_path_staging",
+  "c html_update_public html_update_staging"
  ]
 }
