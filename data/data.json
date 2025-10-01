@@ -14880,6 +14880,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_div_text",
     "html_div",
     "html_style_assign",
     "person_outline",
@@ -14908,8 +14909,7 @@
     "padding",
     "width",
     "color",
-    "p",
-    "html_div_text"
+    "p"
    ]
   },
   "app_karate_main": {
