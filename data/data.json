@@ -514,7 +514,6 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "firebase_name",
    "global_function_initialize"
   ],
   "add": [
@@ -2027,8 +2026,7 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "html_update_public",
-   "firebase_name_repo",
-   "firebase_name"
+   "firebase_name_repo"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -10732,15 +10730,13 @@
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize",
-   "firebase_name"
+   "global_function_initialize"
   ],
   "global": [
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize",
-   "firebase_name"
+   "global_function_initialize"
   ],
   "awaited": [
    "global_function_async",
@@ -14765,6 +14761,9 @@
    "global_function_property",
    "global_function_initialize",
    "app_main"
+  ],
+  "global_function_get": [
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30571,16 +30570,13 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
-    "object_property_get",
-    "global_get",
+    "global_function_get",
     "browser_is",
     "firebase_name_repo",
     "user_repo_get",
     "firebase_name",
     "fn",
-    "global",
     "value",
-    "name",
     "repo_name",
     "default2"
    ]
