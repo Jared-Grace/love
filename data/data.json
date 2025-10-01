@@ -14802,6 +14802,9 @@
   "app_karate_screens": [
    "app_karate_screens",
    "app_karate_main"
+  ],
+  "app_karate_home": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -30748,6 +30751,12 @@
     "marker",
     "app_karate_screens",
     "v"
+   ]
+  },
+  "app_karate_home": {
+   "async": false,
+   "identifiers": [
+    "app_karate_home"
    ]
   }
  }
