@@ -15167,6 +15167,9 @@
    "app_karate_container",
    "app_karate_container_background",
    "app_karate_email"
+  ],
+  "button_next": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15304,7 +15307,8 @@
     "check2",
     "a",
     "li",
-    "background"
+    "background",
+    "button_next"
    ]
   },
   "app_karate_green_dark": {
