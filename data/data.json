@@ -15164,7 +15164,8 @@
   ],
   "app_karate_container_background": [
    "app_karate_container",
-   "app_karate_container_background"
+   "app_karate_container_background",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15300,7 +15301,8 @@
     "text2",
     "check2",
     "a",
-    "li"
+    "li",
+    "app_karate_container_background"
    ]
   },
   "app_karate_green_dark": {
