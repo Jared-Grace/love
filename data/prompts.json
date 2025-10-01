@@ -2412,9 +2412,9 @@
   "s step",
   "s app,main",
   "n app_main",
-  "s storage,local",
   "s search",
   "p",
-  "app_new_step_3 karate"
+  "app_new_step_3 karate",
+  "s storage,local"
  ]
 }
