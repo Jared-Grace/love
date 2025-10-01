@@ -1079,7 +1079,6 @@
    "whitespace_normalize",
    "function_name_to_path_search",
    "html_code_script_module",
-   "app_new_step_3",
    "repo_acronym_get",
    "repo_about_get",
    "repo_firebase_service_account_get",
@@ -1173,8 +1172,7 @@
    "js_dollar_s",
    "js_expand_generic",
    "js_let_add",
-   "js_node_atomize",
-   "app_new_step_3"
+   "js_node_atomize"
   ],
   "js_parse_expression": [
    "app_new_assign",
@@ -1207,8 +1205,7 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_if_test_replace",
-   "marker_screen_add",
-   "app_new_step_3"
+   "marker_screen_add"
   ],
   "js_code_dot": [
    "app_new_assign",
@@ -10019,8 +10016,7 @@
   ],
   "expression2": [
    "function_params_new",
-   "js_calls_to_each",
-   "app_new_step_3"
+   "js_calls_to_each"
   ],
   "function_param_new": [
    "function_param_new",
@@ -14879,9 +14875,7 @@
     "function_parse_declaration",
     "list_add_multiple",
     "list_empty",
-    "js_parse_expression",
     "js_code_string",
-    "js_declare",
     "marker",
     "string_and_empty_not_is_assert",
     "function_transform",
@@ -14902,12 +14896,10 @@
     "async",
     "value_string",
     "code_string",
-    "expression2",
-    "v",
-    "assign",
     "code",
     "statement",
     "body_block",
+    "assign",
     "output"
    ]
   },
