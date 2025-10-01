@@ -14720,6 +14720,9 @@
   ],
   "app_main": [
    "app_main"
+  ],
+  "firebase_name_value": [
+   "app_main"
   ]
  },
  "functions": {
@@ -30569,6 +30572,7 @@
     "app_main",
     "app_fn",
     "f_name",
+    "firebase_name_value",
     "name",
     "value"
    ]
