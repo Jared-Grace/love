@@ -2009,8 +2009,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "firebase_deploy_function_app_karate_main"
+   "task_new"
   ],
   "destination2": [
    "firebase_deploy_function_destination_latest",
@@ -2649,7 +2648,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "firebase_deploy_function_app_karate_main"
   ],
   "p": [
    "app_name_prefixed",
@@ -7667,8 +7667,7 @@
    "ebible_chapter_classes",
    "ebible_chapter_text",
    "html_parse_classes_preview",
-   "html_parse_find_remove",
-   "firebase_deploy_function_app_karate_main"
+   "html_parse_find_remove"
   ],
   "classes": [
    "ebible_chapter_classes",
@@ -31667,10 +31666,9 @@
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_karate_main",
-    "f_name",
     "v",
     "app_karate_code",
-    "main"
+    "name"
    ]
   }
  }
