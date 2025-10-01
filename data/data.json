@@ -932,7 +932,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "emoji_add"
+   "emoji_add",
+   "emoji_secure"
   ],
   "home": [
    "app_karate_screens",
@@ -14824,6 +14825,9 @@
   "emoji_add": [
    "app_karate_home",
    "emoji_add"
+  ],
+  "emoji_secure": [
+   "emoji_secure"
   ]
  },
  "functions": {
@@ -30797,6 +30801,13 @@
    "async": false,
    "identifiers": [
     "emoji_add",
+    "v"
+   ]
+  },
+  "emoji_secure": {
+   "async": false,
+   "identifiers": [
+    "emoji_secure",
     "v"
    ]
   }
