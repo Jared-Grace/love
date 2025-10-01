@@ -1,5 +1,5 @@
+import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
 import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
-import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -21,7 +21,7 @@ export async function marker_screen_add(screen_name) {
     let p = js_property(key, value);
     list_add(properties, p);
     await function_new(combined_screen);
-    await function_param_new("context");
+    await function_param_new_double("context");
   }
   let v2 = await function_transform_marker_specified(
     combined,
