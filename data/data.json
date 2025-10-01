@@ -909,7 +909,6 @@
    "app_karate_email"
   ],
   "lambda2": [
-   "app_karate_email",
    "app_replace_home",
    "app_replace_rule_set",
    "app_replace_settings",
@@ -15158,6 +15157,9 @@
    "app_karate_container_centered",
    "app_karate_container",
    "app_karate_email"
+  ],
+  "validate": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15285,7 +15287,7 @@
     "input",
     "div_checks",
     "ul",
-    "lambda2",
+    "validate",
     "value",
     "trimmed",
     "lambda",
