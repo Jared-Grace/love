@@ -2826,16 +2826,14 @@
    "html_index_generate",
    "app_html_open",
    "file_name_html",
-   "html_name_to_path",
-   "html_name_to_path_dev"
+   "html_name_to_path"
   ],
   "folder_public_combine": [
    "html_index_generate",
    "app_html_open",
    "folder_public_combine",
    "functions_path",
-   "html_name_to_path",
-   "html_name_to_path_dev"
+   "html_name_to_path"
   ],
   "user_repo_path_combine": [
    "html_index_generate",
@@ -3229,7 +3227,6 @@
    "firebase_storage_download_ebible",
    "folder_user_docs_path",
    "html_name_to_path",
-   "html_name_to_path_dev",
    "http_firebase_file_path",
    "http_local_file_name",
    "local_function_path"
@@ -5241,7 +5238,6 @@
    "function_name_to_path_import",
    "function_name_to_path_search",
    "git_push_folder",
-   "html_name_to_path_dev",
    "html_update_dev",
    "html_update_public",
    "http_firebase_file_path",
@@ -6690,7 +6686,6 @@
    "function_name_folder_to_path",
    "function_name_to_path_import",
    "git_push_folder",
-   "html_name_to_path_dev",
    "html_update_dev",
    "http_firebase_file_path",
    "list_map_path_join",
@@ -15313,6 +15308,9 @@
   ],
   "app_karate_staging": [
    "app_karate_staging"
+  ],
+  "html_name_to_path_folder": [
+   "html_name_to_path_dev"
   ]
  },
  "functions": {
@@ -22370,15 +22368,11 @@
   "html_name_to_path_dev": {
    "async": false,
    "identifiers": [
-    "path_join",
+    "html_name_to_path_folder",
     "marker",
-    "folder_public_combine",
-    "file_name_html",
     "html_name_to_path_dev",
     "name",
     "folder",
-    "file_name",
-    "joined",
     "file_path"
    ]
   },
