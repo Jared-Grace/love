@@ -2125,7 +2125,8 @@
    "js_return_empty",
    "js_statement_return",
    "marker_above_generic",
-   "marker_functionize"
+   "marker_functionize",
+   "marker_screen_add"
   ],
   "js_code_call_args_await_maybe": [
    "app_new_step_3",
@@ -2466,7 +2467,8 @@
    "js_parse_expression",
    "js_parse_statement",
    "js_parse_statement_module",
-   "marker_above_generic"
+   "marker_above_generic",
+   "marker_screen_add"
   ],
   "body_block": [
    "app_new_step_3",
@@ -5664,8 +5666,7 @@
    "js_statement_call_get",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "roman_to_integer",
-   "marker_screen_add"
+   "roman_to_integer"
   ],
   "exec": [
    "command_line_generic"
@@ -12075,7 +12076,8 @@
    "js_dollar_choice_arguments",
    "js_dollar_new",
    "js_parse_statement",
-   "js_statement_return"
+   "js_statement_return",
+   "marker_screen_add"
   ],
   "array_expression": [
    "js_calls_to_each",
@@ -14904,7 +14906,8 @@
    "marker_screen_add"
   ],
   "code_assign": [
-   "js_code_let_assign"
+   "js_code_let_assign",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -28074,6 +28077,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_parse_statement",
     "js_code_let_assign",
     "html_clear_context",
     "js_code_call_args",
@@ -28105,7 +28109,9 @@
     "lambda2",
     "code",
     "name",
-    "v3",
+    "code_assign",
+    "statement",
+    "code2",
     "output",
     "v2"
    ]
