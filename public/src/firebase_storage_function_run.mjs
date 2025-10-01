@@ -1,3 +1,4 @@
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -17,7 +18,8 @@ export async function firebase_storage_function_run(f_name) {
   let joined = list_join_newline([call, code]);
   if (browser_is()) {
     let body = html_document_body();
-    let component = html_element(parent, tag_name);
+    let component = html_element(body, "script");
+    html_attribute_set(component2, key, value);
     return;
   }
   eval(joined);
