@@ -14916,6 +14916,12 @@
    "function_wrap",
    "js_declaration_single_block_body_add",
    "marker_screen_add"
+  ],
+  "div2": [
+   "app_karate_home"
+  ],
+  "root2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14953,6 +14959,8 @@
     "app_karate_home",
     "context",
     "root",
+    "div2",
+    "root2",
     "lambda2",
     "component",
     "html_button_karate",
