@@ -1667,7 +1667,6 @@
   "ebible_chapter_codes engbsb",
   "s suff",
   "s hpt",
-  "u hpt",
   "ebible_verses engbsb GEN02",
   "r ebible_verses ebible_chapter_text",
   "de ebible_verses",
@@ -2439,6 +2438,7 @@
   "de html_button_s",
   "s width",
   "s stylew",
-  "s style"
+  "s style",
+  "u hpt"
  ]
 }
