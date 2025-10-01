@@ -2424,6 +2424,7 @@
   "html_update_dev karate",
   "s karate",
   "s screens",
-  "is app_replace_screens"
+  "is app_replace_screens",
+  "c app_replace_screens app_karate_screens"
  ]
 }
