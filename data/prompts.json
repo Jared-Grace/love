@@ -2415,6 +2415,7 @@
   "s search",
   "p",
   "app_new_step_3 karate",
-  "s storage,local"
+  "s storage,local",
+  "s global"
  ]
 }
