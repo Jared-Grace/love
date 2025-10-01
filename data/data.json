@@ -4937,8 +4937,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_karate_email"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -15197,7 +15196,6 @@
     "div_checks",
     "ul",
     "lambda2",
-    "message",
     "value",
     "trimmed",
     "lambda",
