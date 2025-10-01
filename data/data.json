@@ -2347,8 +2347,7 @@
    "reply",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "js_declaration_single_block_body_add",
-   "app_karate_email"
+   "js_declaration_single_block_body_add"
   ],
   "firebase_name_repo": [
    "app_new_step_3",
@@ -2972,8 +2971,7 @@
    "string_starts_with_not",
    "tasks_run",
    "js_declaration_single_block_body_add",
-   "string_includes_lambda",
-   "app_karate_email"
+   "string_includes_lambda"
   ],
   "index": [
    "app_replace_home",
@@ -4583,8 +4581,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_karate_email"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -15140,6 +15137,9 @@
   ],
   "check2": [
    "app_karate_email"
+  ],
+  "ul": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15153,7 +15153,6 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
-    "list_add",
     "not",
     "object_property_get",
     "html_clear",
@@ -15193,9 +15192,7 @@
     "div",
     "input",
     "div_checks",
-    "component2",
-    "parent",
-    "tag_name",
+    "ul",
     "lambda2",
     "value",
     "trimmed",
@@ -15204,8 +15201,9 @@
     "text2",
     "check2",
     "a",
-    "list",
-    "item"
+    "component2",
+    "parent",
+    "tag_name"
    ]
   },
   "app_karate_home": {
