@@ -8606,8 +8606,7 @@
    "search_generic",
    "tasks_run",
    "function_name_to_path_search",
-   "html_update_public",
-   "app_new_step_3"
+   "html_update_public"
   ],
   "function_open": [
    "functions_search_open",
@@ -9320,7 +9319,8 @@
    "html_update_public",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "app_new_step_3"
   ],
   "f_path_new": [
    "function_copy"
@@ -14730,9 +14730,6 @@
   ],
   "a_name_identifier": [
    "app_new_step_3"
-  ],
-  "unaliased2": [
-   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14912,8 +14909,7 @@
     "app_name_prefixed",
     "app_new_step_3",
     "name",
-    "search",
-    "unaliased2",
+    "repo_name",
     "call_name",
     "declaration",
     "declaration_call",
