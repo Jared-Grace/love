@@ -716,7 +716,6 @@
   "s code,fn",
   "s code,fun",
   "s function,ke",
-  "s assign",
   "fst function_params_consolidate simple",
   "fw fst",
   "s wrap",
@@ -2445,6 +2444,7 @@
   "fws html_div text",
   "msa email",
   "o msa",
-  "s code,call"
+  "s code,call",
+  "s assign"
  ]
 }
