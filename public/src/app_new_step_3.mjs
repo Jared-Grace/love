@@ -3,9 +3,7 @@ import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
-import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -26,10 +24,11 @@ export async function app_new_step_3(name) {
     declaration.async = true;
     let value_string = app_name_main(name);
     let code_string = js_code_string(value_string);
-    let expression2 = js_parse_expression(code_string);
-    const v = "f_name";
-    let assign = js_declare(v, expression2);
-    let code = js_code_call_args_await_maybe(unaliased, [v], declaration_call);
+    let code = js_code_call_args_await_maybe(
+      unaliased,
+      [code_string],
+      declaration_call,
+    );
     let statement = js_parse_statement(code);
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
