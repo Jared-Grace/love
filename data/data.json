@@ -1836,7 +1836,8 @@
    "html_meta_viewport"
   ],
   "app_karate_main": [
-   "app_karate_main"
+   "app_karate_main",
+   "firebase_deploy_function_app_karate_main"
   ],
   "app_fn": [
    "app_karate_main",
@@ -15228,9 +15229,6 @@
    "watch"
   ],
   "firebase_deploy_function_app_karate_main": [
-   "firebase_deploy_function_app_karate_main"
-  ],
-  "app_karate_code": [
    "firebase_deploy_function_app_karate_main"
   ]
  },
@@ -31663,11 +31661,11 @@
   "firebase_deploy_function_app_karate_main": {
    "async": true,
    "identifiers": [
+    "app_karate_main",
     "firebase_deploy_function",
     "marker",
     "firebase_deploy_function_app_karate_main",
     "v",
-    "app_karate_code",
     "name"
    ]
   }
