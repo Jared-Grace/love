@@ -2075,7 +2075,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_main"
   ],
   "screens": [
    "app_refresh",
@@ -2253,7 +2254,8 @@
    "watch",
    "repo_about_get",
    "repo_about_set",
-   "repo_firebase_service_account_set"
+   "repo_firebase_service_account_set",
+   "app_main"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3943,7 +3945,8 @@
    "repo_acronym_set",
    "repo_about_set",
    "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set"
+   "repo_firebase_service_account_set",
+   "app_main"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -14416,7 +14419,8 @@
   "storage_local_set": [
    "storage_local_initialize",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_main"
   ],
   "ley": [
    "storage_local_key_get"
@@ -30557,10 +30561,14 @@
   "app_main": {
    "async": true,
    "identifiers": [
+    "storage_local_set",
     "firebase_storage_function_run",
     "marker",
     "app_main",
-    "f_name"
+    "f_name",
+    "app_fn",
+    "key",
+    "value"
    ]
   }
  }
