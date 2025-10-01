@@ -584,8 +584,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -15137,7 +15136,6 @@
     "div",
     "input",
     "lambda2",
-    "component2",
     "checks",
     "text",
     "check"
