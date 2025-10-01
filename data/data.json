@@ -5598,8 +5598,7 @@
    "js_expand_generic",
    "js_return_atomize",
    "marker",
-   "noop",
-   "app_karate_email"
+   "noop"
   ],
   "catch_only_run_async": [
    "catch_only_async",
@@ -15075,7 +15074,8 @@
    "string_regex_match_lambda"
   ],
   "string_regex_match_lambda": [
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "app_karate_email"
   ],
   "string_includes_lambda_inner": [
    "string_includes_lambda"
@@ -15095,6 +15095,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "string_regex_match_lambda",
     "string_includes_lambda",
     "string_empty_not_is",
     "app_karate_container_main",
@@ -15112,7 +15113,6 @@
     "html_clear_context",
     "marker",
     "html_element",
-    "noop",
     "app_karate_email",
     "context",
     "root",
