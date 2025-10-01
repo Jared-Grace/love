@@ -31351,8 +31351,8 @@
   "string_regex_match_lambda": {
    "async": false,
    "identifiers": [
-    "string_regex_match",
     "string_includes_lambda",
+    "string_regex_match",
     "marker",
     "string_regex_match_lambda",
     "regex",
