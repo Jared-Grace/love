@@ -606,7 +606,6 @@
   "c function_current_set data_watch_set",
   "fs au",
   "t arrow_to_function_should_add_return",
-  "s arrow",
   "de au_task_arrow_to_function_should_add_return",
   "a fnu function_name_unalias",
   "fs data_watch_set",
@@ -2450,6 +2449,7 @@
   "s home",
   "s back",
   "s rarow",
-  "s arrpw"
+  "s arrpw",
+  "s arrow"
  ]
 }
