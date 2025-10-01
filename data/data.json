@@ -14880,7 +14880,11 @@
    "app_karate_home"
   ],
   "app_karate_email": [
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_screens"
+  ],
+  "email": [
+   "app_karate_screens"
   ]
  },
  "functions": {
@@ -14952,11 +14956,13 @@
   "app_karate_screens": {
    "async": false,
    "identifiers": [
+    "app_karate_email",
     "app_karate_home",
     "marker",
     "app_karate_screens",
     "v",
-    "home"
+    "home",
+    "email"
    ]
   },
   "emoji_add": {
