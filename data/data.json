@@ -639,7 +639,8 @@
    "js_expand_generic",
    "marker_screen_add",
    "html_update_public",
-   "function_name_repo_path_combine"
+   "function_name_repo_path_combine",
+   "html_update_dev"
   ],
   "file_name": [
    "app_html_open",
@@ -705,7 +706,8 @@
    "app_new_step_3",
    "function_open_app",
    "html_update_public",
-   "marker_screen_add"
+   "marker_screen_add",
+   "html_update_dev"
   ],
   "app_name_main": [
    "app_name_main",
@@ -4382,7 +4384,8 @@
    "sandbox_2",
    "function_name_to_path_search",
    "html_update_public",
-   "function_name_repo_path_combine"
+   "function_name_repo_path_combine",
+   "html_update_dev"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -14800,7 +14803,8 @@
   ],
   "function_name_repo_path_combine": [
    "html_update_public",
-   "function_name_repo_path_combine"
+   "function_name_repo_path_combine",
+   "html_update_dev"
   ]
  },
  "functions": {
@@ -21570,6 +21574,8 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
+    "function_name_repo_path_combine",
+    "app_name_prefixed",
     "file_open",
     "html_overwrite",
     "html_code_script_module",
@@ -21586,6 +21592,8 @@
     "html_update_dev",
     "name",
     "file_path",
+    "a_name",
+    "joined",
     "paths_get",
     "f_name_ext",
     "src",
