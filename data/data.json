@@ -5427,8 +5427,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "html_index_generate"
+   "unzip"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -31630,9 +31629,8 @@
     "f_name",
     "combined2",
     "combined",
-    "result",
-    "file_path",
-    "contents"
+    "contents",
+    "result"
    ]
   }
  }
