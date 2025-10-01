@@ -2364,7 +2364,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "html_update_public_generic"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -31879,10 +31880,11 @@
     "function_dependencies_code",
     "function_name_repo_path_combine",
     "html_update_public_generic",
-    "a_name",
+    "f_name",
     "file_path",
     "name",
     "joined",
+    "a_name",
     "code",
     "call",
     "right",
