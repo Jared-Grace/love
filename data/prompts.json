@@ -2479,6 +2479,7 @@
   "fb",
   "ff app_karate_main",
   "p",
-  "s body"
+  "s body",
+  "ff app_karate"
  ]
 }
