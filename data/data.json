@@ -2252,7 +2252,8 @@
    "app_refresh",
    "app_replace_rule_set",
    "app_reply_main",
-   "html_clear"
+   "html_clear",
+   "app_karate_home"
   ],
   "body": [
    "app_refresh",
@@ -30766,6 +30767,7 @@
    "identifiers": [
     "object_property_get",
     "marker",
+    "html_clear",
     "app_karate_home",
     "context",
     "root"
