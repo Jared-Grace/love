@@ -15067,7 +15067,7 @@
    ]
   },
   "app_replace_rule_set": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "object_property_set_exists_not",
     "range",
