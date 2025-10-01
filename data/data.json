@@ -11075,7 +11075,8 @@
    "html_element",
    "html_meta_viewport",
    "html_p",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_home"
   ],
   "tag_name": [
    "html_button_element",
@@ -15066,6 +15067,7 @@
     "html_div",
     "marker",
     "html_style_set",
+    "html_element",
     "app_karate_home",
     "context",
     "root",
