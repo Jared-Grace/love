@@ -3164,7 +3164,6 @@
    "html_parse_descendants_classes",
    "html_p_text_multiple",
    "js_block_child_graph",
-   "js_call_new_code",
    "js_declaration_single_params_add",
    "js_dollar_a",
    "js_dollar_s",
@@ -6215,7 +6214,8 @@
    "keyboard_type_delay",
    "sandbox_4_a",
    "tasks_run",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_call_new_code"
   ],
   "data_files_update": [
    "data_files_update",
@@ -22749,11 +22749,11 @@
   "js_call_new_code": {
    "async": true,
    "identifiers": [
+    "each_async",
     "js_return_name",
     "js_code_call_args_await_maybe",
     "list_map_unordered_async",
     "js_unparse",
-    "each",
     "js_declaration_param_add",
     "js_parse_statement_module",
     "js_code_declaration",
