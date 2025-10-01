@@ -1,3 +1,4 @@
+import { app_main } from "../../../karate_code/public/src/app_main.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -10,7 +11,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
-import { firebase_storage_function_run } from "../../../love/public/src/firebase_storage_function_run.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
@@ -21,7 +21,7 @@ export async function app_new_step_3(name) {
   let { repo_name } = await function_name_to_path_search(a_name);
   let default2 = await firebase_name_repo(repo_name);
   let f_name = js_code_string(default2);
-  let call_name = firebase_storage_function_run.name;
+  let call_name = app_main.name;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(call_name);
   async function lambda(ast) {
