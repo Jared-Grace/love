@@ -5,7 +5,6 @@
  "identifiers": {
   "firebase_storage_function_run": [
    "app_karate",
-   "app_new_step_3",
    "app_replace",
    "app_reply",
    "firebase_storage_function_run",
@@ -14733,7 +14732,8 @@
    "app_new_step_3"
   ],
   "app_main": [
-   "app_main"
+   "app_main",
+   "app_new_step_3"
   ],
   "firebase_name_value": [
    "app_main"
@@ -14938,6 +14938,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "app_main",
     "list_add",
     "firebase_name_repo",
     "function_name_to_path_search",
@@ -14950,7 +14951,6 @@
     "string_and_empty_not_is_assert",
     "function_transform",
     "js_declaration_single_block_body",
-    "firebase_storage_function_run",
     "js_declaration_single",
     "app_name_main",
     "app_name_prefixed",
