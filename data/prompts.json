@@ -2393,7 +2393,6 @@
   "s love",
   "c firebase_service_account_love firebase_service_account_karate",
   "rfsas firebase_service_account_karate",
-  "s karate",
   "rfsag",
   "function_name_unalias add",
   "function_alias_add_generic add",
@@ -2423,6 +2422,7 @@
   "s repo_path",
   "s html",
   "de html_update_generic",
-  "html_update_dev karate"
+  "html_update_dev karate",
+  "s karate"
  ]
 }
