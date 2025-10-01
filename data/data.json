@@ -1341,7 +1341,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "firebase_promote_function"
   ],
   "trimmed": [
    "app_karate_email"
@@ -1894,7 +1895,8 @@
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "firebase_promote_function"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -3608,8 +3610,7 @@
    "marker_next_get",
    "marker_next_index",
    "marker_previous_index",
-   "reply_sequence",
-   "firebase_promote_function"
+   "reply_sequence"
   ],
   "name2": [
    "app_replace_home",
@@ -7883,8 +7884,7 @@
    "firebase_upload_generic",
    "firebase_upload_object",
    "firebase_upload_string",
-   "folder_user_combine",
-   "firebase_promote_function"
+   "folder_user_combine"
   ],
   "list_join_slash_forward": [
    "ebible_firebase_upload_path",
@@ -8758,8 +8758,7 @@
    "firebase_deploy_function_app_karate_main"
   ],
   "version": [
-   "firebase_deploy_function",
-   "firebase_promote_function"
+   "firebase_deploy_function"
   ],
   "destination_version": [
    "firebase_deploy_function",
@@ -15243,6 +15242,9 @@
    "firebase_promote_function"
   ],
   "destination_production": [
+   "firebase_promote_function"
+  ],
+  "destination_latest": [
    "firebase_promote_function"
   ]
  },
@@ -31686,16 +31688,16 @@
   "firebase_promote_function": {
    "async": true,
    "identifiers": [
+    "firebase_deploy_function_destination_latest",
     "firebase_storage_download_json",
     "firebase_upload_object",
     "marker",
     "firebase_deploy_function_destination_production",
     "firebase_promote_function",
-    "index",
-    "destination",
-    "destination_production",
+    "destination_latest",
     "f_name",
-    "version"
+    "value",
+    "destination_production"
    ]
   }
  }
