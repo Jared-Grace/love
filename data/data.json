@@ -633,7 +633,8 @@
    "urdu_allah_to_god",
    "app_karate_button_screen_uncolored",
    "app_karate_button_screen_green",
-   "html_span_text"
+   "html_span_text",
+   "html_em_text"
   ],
   "explanation": [
    "app_karate_div_text"
@@ -1523,7 +1524,8 @@
    "html_text_set_if",
    "app_karate_div_text",
    "app_karate_home",
-   "html_span_text"
+   "html_span_text",
+   "html_em_text"
   ],
   "add": [
    "add",
@@ -11079,7 +11081,8 @@
    "html_meta_viewport",
    "html_p",
    "app_karate_email",
-   "html_span_text"
+   "html_span_text",
+   "html_em_text"
   ],
   "tag_name": [
    "html_button_element",
@@ -14956,7 +14959,8 @@
   ],
   "container": [
    "app_karate_home",
-   "html_span_text"
+   "html_span_text",
+   "html_em_text"
   ],
   "app_karate_container": [
    "app_karate_home",
@@ -15024,7 +15028,11 @@
    "html_span_text"
   ],
   "span": [
-   "html_span_text"
+   "html_span_text",
+   "html_em_text"
+  ],
+  "html_em_text": [
+   "html_em_text"
   ]
  },
  "functions": {
@@ -31241,6 +31249,17 @@
     "html_text_set",
     "html_element",
     "html_span_text",
+    "container",
+    "text",
+    "span"
+   ]
+  },
+  "html_em_text": {
+   "async": false,
+   "identifiers": [
+    "html_text_set",
+    "html_element",
+    "html_em_text",
     "container",
     "text",
     "span"
