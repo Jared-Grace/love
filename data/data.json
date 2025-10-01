@@ -513,7 +513,8 @@
    "watch",
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
-   "firebase_service_account_karate"
+   "firebase_service_account_karate",
+   "app_main"
   ],
   "add": [
    "add",
@@ -2075,8 +2076,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_main"
+   "storage_local_set_context"
   ],
   "screens": [
    "app_refresh",
@@ -14700,7 +14700,8 @@
   ],
   "firebase_name": [
    "firebase_storage_url_project",
-   "firebase_name"
+   "firebase_name",
+   "app_main"
   ],
   "user_repo_path_combine": [
    "function_copy",
@@ -30561,12 +30562,13 @@
   "app_main": {
    "async": true,
    "identifiers": [
+    "firebase_name",
     "storage_local_set",
     "firebase_storage_function_run",
     "marker",
     "app_main",
     "f_name",
-    "app_fn",
+    "name",
     "key",
     "value"
    ]
