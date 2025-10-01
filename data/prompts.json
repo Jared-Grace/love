@@ -2496,6 +2496,7 @@
   "a fpk firebase_promote_function_app_karate_main",
   "fpk",
   "s index",
-  "s html,dev"
+  "s html,dev",
+  "u hup"
  ]
 }
