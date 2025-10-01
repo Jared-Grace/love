@@ -392,7 +392,6 @@
    "emoji_add"
   ],
   "html_button": [
-   "app_karate_home",
    "app_replace_home",
    "app_replace_rule_set",
    "app_replace_settings",
@@ -626,7 +625,6 @@
    "app_karate_home"
   ],
   "lambda": [
-   "app_karate_home",
    "app_new_step_3",
    "app_replace_home",
    "app_replace_rule_set",
@@ -2743,7 +2741,8 @@
    "app_refresh",
    "function_new_app_screen",
    "html_button_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_karate_home"
   ],
   "screen": [
    "app_refresh"
@@ -3384,7 +3383,8 @@
   "html_button_screen": [
    "app_replace_rule_set",
    "app_replace_settings",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_home"
   ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
@@ -14957,6 +14957,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_button_screen",
     "app_karate_container",
     "app_karate_email",
     "emoji_person_outline",
@@ -14967,7 +14968,6 @@
     "html_clear_context",
     "html_div",
     "html_style_assign",
-    "html_button",
     "marker",
     "html_style_set",
     "app_karate_home",
@@ -14984,7 +14984,7 @@
     "parent",
     "text",
     "explanation",
-    "lambda",
+    "screen_name",
     "div",
     "margin_y",
     "padding",
