@@ -1,8 +1,8 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
@@ -39,7 +39,7 @@ export async function js_call_new_code(f_name_call, ast) {
         let unique = await js_identifier_unique(existing, p);
         js_declaration_param_add(declaration_lambda, unique);
       }
-      each(remaining, lambda2);
+      await each_async(remaining, lambda2);
       arg_code = js_unparse(declaration_lambda);
     }
     return arg_code;
