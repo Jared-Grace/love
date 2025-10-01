@@ -908,7 +908,8 @@
    "chalk_color",
    "chalk_green",
    "chalk_red",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_home"
   ],
   "p": [
    "app_karate_home",
@@ -15014,6 +15015,7 @@
     "explanation",
     "screen_name",
     "div",
+    "color",
     "p",
     "margin_y2"
    ]
