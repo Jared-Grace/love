@@ -14853,10 +14853,10 @@
     "lambda3",
     "component2",
     "parent2",
+    "lambda4",
     "component3",
     "parent3",
-    "text",
-    "lambda4"
+    "text"
    ]
   },
   "app_karate_main": {
