@@ -2331,7 +2331,6 @@
   "o w",
   "s repos",
   "s sand",
-  "s3",
   "a of function_run_output_file_temp",
   "s index",
   "html_name_to_path karate",
@@ -2476,6 +2475,7 @@
   "s element,get",
   "s firebase",
   "command_line dir",
-  "o s3"
+  "o s3",
+  "s3"
  ]
 }
