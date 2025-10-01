@@ -1776,7 +1776,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "app_karate_container_background",
-   "app_karate_button_background"
+   "app_karate_button_background",
+   "sandbox_3"
   ],
   "html_span_text": [
    "app_karate_home",
@@ -30345,6 +30346,7 @@
     "command_line_generic",
     "marker",
     "sandbox_3",
+    "v",
     "cwd"
    ]
   },
