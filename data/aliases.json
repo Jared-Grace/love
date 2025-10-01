@@ -208,6 +208,7 @@
   "si": "string_is",
   "of": "function_run_output_file_temp",
   "hpt": "html_p_text",
-  "hd": "html_div"
+  "hd": "html_div",
+  "sin": "string_includes"
  }
 }
