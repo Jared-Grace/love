@@ -298,8 +298,7 @@
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
    "firebase_service_account_karate",
-   "app_main",
-   "global_function_property"
+   "app_main"
   ],
   "app_karate": [
    "app_karate"
@@ -30637,7 +30636,6 @@
     "object_property_lambda",
     "object_property_initialize",
     "global_get",
-    "marker",
     "global_function_property",
     "fn",
     "property_name",
