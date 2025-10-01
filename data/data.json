@@ -1394,7 +1394,8 @@
    "whitespace_normalize",
    "app_karate_margin_y",
    "emoji_arrow_left",
-   "app_karate_green_dark"
+   "app_karate_green_dark",
+   "emoji_arrow_right"
   ],
   "home": [
    "app_karate_screens",
@@ -15005,7 +15006,8 @@
    "app_karate_email"
   ],
   "emoji_arrow_right": [
-   "app_karate_email"
+   "app_karate_email",
+   "emoji_arrow_right"
   ]
  },
  "functions": {
@@ -31197,6 +31199,13 @@
     "screen_name",
     "component",
     "color"
+   ]
+  },
+  "emoji_arrow_right": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_right",
+    "v"
    ]
   }
  }
