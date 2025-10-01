@@ -515,8 +515,7 @@
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
    "app_main",
-   "firebase_name",
-   "global_function_property"
+   "firebase_name"
   ],
   "add": [
    "add",
@@ -6142,8 +6141,7 @@
    "messenger_reply_messages_transform",
    "messenger_reply_messages_urls_get",
    "object_invert",
-   "object_property_initialize",
-   "global_function_property"
+   "object_property_initialize"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -10730,14 +10728,12 @@
   "global_get": [
    "global_function_async",
    "global_function_property_async",
-   "global_get",
-   "global_function_property"
+   "global_get"
   ],
   "global": [
    "global_function_async",
    "global_function_property_async",
-   "global_get",
-   "global_function_property"
+   "global_get"
   ],
   "awaited": [
    "global_function_async",
@@ -14756,6 +14752,9 @@
    "global_function_property"
   ],
   "initial": [
+   "global_function_property"
+  ],
+  "global_function_initialize": [
    "global_function_property"
   ]
  },
@@ -30636,17 +30635,14 @@
   "global_function_property": {
    "async": true,
    "identifiers": [
+    "global_function_initialize",
     "object_property_lambda",
-    "object_property_initialize",
-    "global_get",
     "global_function_property",
     "fn",
     "property_name",
     "lambda",
     "initial",
-    "global",
     "fn_object",
-    "name",
     "value"
    ]
   }
