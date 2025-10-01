@@ -529,7 +529,8 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_button_screen"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -21357,6 +21358,7 @@
     "text",
     "context",
     "screen_name",
+    "component",
     "lambda"
    ]
   },
