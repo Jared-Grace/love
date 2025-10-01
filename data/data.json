@@ -384,7 +384,8 @@
    "html_loading",
    "html_style_assign",
    "app_karate_container",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
   ],
   "emoji_secure": [
    "app_karate_home",
@@ -534,7 +535,8 @@
    "html_text_set",
    "html_text_set_if",
    "html_button_screen",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -624,7 +626,8 @@
    "puppeteer_matches",
    "sandbox_2",
    "urdu_allah_to_god",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
   ],
   "explanation": [
    "app_karate_home"
@@ -2747,7 +2750,8 @@
    "html_button_screen",
    "marker_screen_add",
    "app_karate_home",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
   ],
   "screen": [
    "app_refresh"
@@ -14948,7 +14952,8 @@
   ],
   "app_karate_button_screen_uncolored": [
    "app_karate_home",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
   ],
   "margin_y": [
    "app_karate_button_screen_uncolored"
@@ -14965,13 +14970,18 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_style_assign",
+    "app_karate_button_screen_uncolored",
     "app_karate_container",
     "html_clear_context",
     "marker",
     "app_karate_email",
     "context",
     "root",
-    "div"
+    "component",
+    "div",
+    "text",
+    "screen_name"
    ]
   },
   "app_karate_home": {
