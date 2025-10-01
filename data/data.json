@@ -4214,8 +4214,7 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main",
-   "app_karate_home"
+   "app_reply_main"
   ],
   "letters": [
    "app_reply_main",
@@ -14846,9 +14845,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "root2": [
-   "app_karate_home"
   ]
  },
  "functions": {
@@ -14878,8 +14874,6 @@
     "component",
     "html_button_karate",
     "p",
-    "root2",
-    "text2",
     "lambda3",
     "component2",
     "lambda4",
