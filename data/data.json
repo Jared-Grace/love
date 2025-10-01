@@ -2029,7 +2029,8 @@
    "firebase_deploy_function_destination_production",
    "firebase_promote_function",
    "app_new_step_3",
-   "app_karate"
+   "app_karate",
+   "app_new_step_4"
   ],
   "html_em_text": [
    "html_em_text"
@@ -2483,7 +2484,8 @@
    "html_update_public",
    "js_expand_generic",
    "marker_screen_add",
-   "app_new_step_3_generic"
+   "app_new_step_3_generic",
+   "app_new_step_4"
   ],
   "file_name": [
    "app_html_open",
@@ -2541,7 +2543,8 @@
    "html_update_dev",
    "html_update_public",
    "marker_screen_add",
-   "app_new_step_3_generic"
+   "app_new_step_3_generic",
+   "app_new_step_4"
   ],
   "app_name_main": [
    "app_name_main",
@@ -2667,7 +2670,8 @@
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
    "app_new_step_3_generic",
-   "app_new_update"
+   "app_new_update",
+   "app_new_step_4"
   ],
   "p": [
    "app_name_prefixed",
@@ -15265,11 +15269,13 @@
    "firebase_storage_function_run",
    "app_main",
    "app_new_step_3",
-   "app_new_step_3_generic"
+   "app_new_step_3_generic",
+   "app_new_step_4"
   ],
   "app_new_step_3_generic": [
    "app_new_step_3",
-   "app_new_step_3_generic"
+   "app_new_step_3_generic",
+   "app_new_step_4"
   ],
   "f_name_transformed": [
    "app_new_step_3_generic"
@@ -15279,6 +15285,9 @@
   ],
   "app_new_update": [
    "app_new_update"
+  ],
+  "app_new_step_4": [
+   "app_new_step_4"
   ]
  },
  "functions": {
@@ -31769,6 +31778,18 @@
     "marker",
     "app_new_update",
     "name"
+   ]
+  },
+  "app_new_step_4": {
+   "async": true,
+   "identifiers": [
+    "app_new_step_3_generic",
+    "firebase_deploy_function_destination_production",
+    "app_name_prefixed",
+    "app_new_step_4",
+    "name",
+    "a_name",
+    "version_get"
    ]
   }
  }
