@@ -15123,8 +15123,7 @@
    "app_karate_email"
   ],
   "html_on_change": [
-   "html_on_change",
-   "app_karate_email"
+   "html_on_change"
   ],
   "html_value_get": [
    "app_karate_email",
@@ -15147,7 +15146,8 @@
    "app_karate_email"
   ],
   "html_on_input": [
-   "html_on_input"
+   "html_on_input",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15161,6 +15161,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_on_input",
     "log",
     "html_text_set",
     "not",
@@ -15171,7 +15172,6 @@
     "html_value_set",
     "html_value_get",
     "string_trim",
-    "html_on_change",
     "string_regex_match_lambda",
     "string_includes_lambda",
     "string_empty_not_is",
