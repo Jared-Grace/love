@@ -2070,7 +2070,8 @@
    "html_update_dev",
    "html_update_public",
    "marker_screen_add",
-   "app_name_staging"
+   "app_name_staging",
+   "html_update_staging"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -2189,7 +2190,8 @@
    "app_new_step_4",
    "app_name_staging",
    "html_name_to_path_staging",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "html_update_staging"
   ],
   "version_get": [
    "app_new_step_3_generic",
@@ -2216,7 +2218,8 @@
    "js_expand_generic",
    "marker_screen_add",
    "app_name_staging",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "html_update_staging"
   ],
   "repo_name": [
    "app_new_step_3_generic",
@@ -5621,7 +5624,8 @@
    "sandbox_4_a",
    "unzip",
    "html_name_to_path_staging",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "html_update_staging"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -11570,7 +11574,8 @@
   "html_name_to_path": [
    "html_name_to_path",
    "html_new",
-   "html_update_public"
+   "html_update_public",
+   "html_update_staging"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -15322,10 +15327,14 @@
   ],
   "html_update_public_generic": [
    "html_update_public",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "html_update_staging"
   ],
   "global_init": [
    "html_update_public_generic"
+  ],
+  "html_update_staging": [
+   "html_update_staging"
   ]
  },
  "functions": {
@@ -31879,6 +31888,18 @@
     "global_init",
     "middle",
     "body"
+   ]
+  },
+  "html_update_staging": {
+   "async": true,
+   "identifiers": [
+    "html_update_public_generic",
+    "app_name_prefixed",
+    "html_name_to_path",
+    "html_update_staging",
+    "name",
+    "a_name",
+    "file_path"
    ]
   }
  }
