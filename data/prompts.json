@@ -2422,6 +2422,7 @@
   "html_update_public karate",
   "s repo_path",
   "s html",
-  "de html_update_generic"
+  "de html_update_generic",
+  "html_update_dev karate"
  ]
 }
