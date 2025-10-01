@@ -416,7 +416,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "html_div_text"
+   "html_div_text",
+   "app_karate_email"
   ],
   "html_clear": [
    "app_karate_home",
@@ -446,7 +447,8 @@
    "messenger_reply_playwright",
    "storage_local_get_context",
    "storage_local_initialize_context",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_email"
   ],
   "root": [
    "app_karate_home",
@@ -30916,7 +30918,9 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
-    "app_karate_email"
+    "marker",
+    "app_karate_email",
+    "context"
    ]
   }
  }
