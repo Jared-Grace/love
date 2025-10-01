@@ -2491,6 +2491,7 @@
   "functions_names",
   "o u",
   "a fk firebase_deploy_function_app_karate_main",
-  "s download"
+  "s download",
+  "n firebase_promote_function"
  ]
 }
