@@ -2480,6 +2480,7 @@
   "ff app_karate_main",
   "p",
   "s body",
-  "ff app_karate"
+  "ff app_karate",
+  "s html,public"
  ]
 }
