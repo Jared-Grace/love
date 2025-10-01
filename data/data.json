@@ -379,9 +379,6 @@
    "html_loading",
    "html_style_assign"
   ],
-  "person_outline": [
-   "app_karate_home"
-  ],
   "emoji_secure": [
    "app_karate_home",
    "emoji_secure"
@@ -1384,7 +1381,8 @@
    "app_karate_screens"
   ],
   "emoji_person_outline": [
-   "emoji_person_outline"
+   "emoji_person_outline",
+   "app_karate_home"
   ],
   "html_clear": [
    "html_clear_context",
@@ -14941,7 +14939,7 @@
     "html_style_margin_y",
     "html_div",
     "html_style_assign",
-    "person_outline",
+    "emoji_person_outline",
     "emoji_secure",
     "emoji_add",
     "html_button",
