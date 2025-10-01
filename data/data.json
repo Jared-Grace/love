@@ -15061,8 +15061,7 @@
   ],
   "string_includes_lambda": [
    "string_includes_lambda",
-   "app_karate_email",
-   "string_regex_match_lambda"
+   "app_karate_email"
   ],
   "part": [
    "string_includes"
@@ -15080,6 +15079,9 @@
   ],
   "string_includes_lambda_inner": [
    "string_includes_lambda"
+  ],
+  "string_regex_match_lambda_inner": [
+   "string_regex_match_lambda"
   ]
  },
  "functions": {
@@ -31355,12 +31357,12 @@
   "string_regex_match_lambda": {
    "async": false,
    "identifiers": [
-    "string_includes_lambda",
     "string_regex_match",
     "marker",
     "string_regex_match_lambda",
     "regex",
     "l",
+    "string_regex_match_lambda_inner",
     "input",
     "m"
    ]
