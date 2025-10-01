@@ -11000,8 +11000,7 @@
    "html_display_none",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove",
-   "app_karate_home"
+   "html_style_set_or_remove"
   ],
   "html_display_block": [
    "html_display_block",
@@ -11044,7 +11043,8 @@
   ],
   "html_style_assign": [
    "html_loading",
-   "html_style_assign"
+   "html_style_assign",
+   "app_karate_home"
   ],
   "html_loading": [
    "html_loading",
@@ -14854,7 +14854,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "html_style_set",
+    "html_style_assign",
     "person_outline",
     "emoji_secure",
     "emoji_add",
