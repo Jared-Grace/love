@@ -4737,8 +4737,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "string_includes_lambda"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -14766,7 +14765,8 @@
    "string_is_assert_json"
   ],
   "si": [
-   "string_is"
+   "string_is",
+   "string_includes_lambda"
   ],
   "string_is_assert_message": [
    "string_is_assert_json",
@@ -31312,7 +31312,7 @@
     "item",
     "v",
     "input",
-    "v2"
+    "si"
    ]
   }
  }
