@@ -3608,7 +3608,8 @@
    "marker_next_get",
    "marker_next_index",
    "marker_previous_index",
-   "reply_sequence"
+   "reply_sequence",
+   "firebase_promote_function"
   ],
   "name2": [
    "app_replace_home",
@@ -7882,7 +7883,8 @@
    "firebase_upload_generic",
    "firebase_upload_object",
    "firebase_upload_string",
-   "folder_user_combine"
+   "folder_user_combine",
+   "firebase_promote_function"
   ],
   "list_join_slash_forward": [
    "ebible_firebase_upload_path",
@@ -8919,7 +8921,8 @@
   ],
   "firebase_storage_download_json": [
    "firebase_storage_download_ebible",
-   "firebase_storage_download_json"
+   "firebase_storage_download_json",
+   "firebase_promote_function"
   ],
   "firebase_storage_download_path": [
    "firebase_storage_download_path"
@@ -31681,10 +31684,13 @@
   "firebase_promote_function": {
    "async": true,
    "identifiers": [
+    "firebase_storage_download_json",
     "firebase_upload_object",
     "marker",
     "firebase_deploy_function_destination_production",
     "firebase_promote_function",
+    "index",
+    "destination",
     "destination_version",
     "f_name",
     "version"
