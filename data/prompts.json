@@ -2417,9 +2417,9 @@
   "html_new karate",
   "s code,assign",
   "s brace",
-  "html_update_public karate",
   "oa karate",
   "s step",
-  "app_new_step_3 karate"
+  "app_new_step_3 karate",
+  "html_update_public karate"
  ]
 }
