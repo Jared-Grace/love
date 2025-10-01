@@ -1520,7 +1520,8 @@
    "html_p_text",
    "html_text_set",
    "html_text_set_if",
-   "app_karate_div_text"
+   "app_karate_div_text",
+   "app_karate_home"
   ],
   "add": [
    "add",
@@ -4316,7 +4317,8 @@
    "string_starts_with_digit"
   ],
   "component4": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "choices": [
    "app_reply_main",
@@ -4328,7 +4330,8 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "letters": [
    "app_reply_main",
@@ -15051,6 +15054,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "app_karate_div",
     "app_karate_button_screen_green",
     "app_karate_container",
@@ -15067,6 +15071,8 @@
     "container",
     "component",
     "html_button_karate",
+    "component4",
+    "text2",
     "component2",
     "component3",
     "parent",
