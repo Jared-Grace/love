@@ -586,7 +586,8 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_style_margin_y"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -2671,7 +2672,8 @@
    "user_repo_set",
    "watch",
    "app_karate_main",
-   "app_karate_home"
+   "app_karate_home",
+   "html_style_margin_y"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -11061,7 +11063,8 @@
   "html_style_assign": [
    "html_loading",
    "html_style_assign",
-   "app_karate_home"
+   "app_karate_home",
+   "html_style_margin_y"
   ],
   "html_loading": [
    "html_loading",
@@ -14869,7 +14872,8 @@
    "html_div_text"
   ],
   "html_style_margin_y": [
-   "app_karate_home"
+   "app_karate_home",
+   "html_style_margin_y"
   ]
  },
  "functions": {
@@ -30893,6 +30897,15 @@
     "root",
     "text",
     "div"
+   ]
+  },
+  "html_style_margin_y": {
+   "async": false,
+   "identifiers": [
+    "html_style_assign",
+    "html_style_margin_y",
+    "component",
+    "value"
    ]
   }
  }
