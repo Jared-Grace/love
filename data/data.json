@@ -14867,6 +14867,9 @@
   "html_div_text": [
    "app_karate_home",
    "html_div_text"
+  ],
+  "html_style_margin_y": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14880,6 +14883,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_style_margin_y",
     "html_div_text",
     "html_div",
     "html_style_assign",
