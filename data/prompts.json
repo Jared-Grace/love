@@ -2228,7 +2228,6 @@
   "is sleep",
   "s data_fun",
   "is data_functions_get",
-  "s fill",
   "function_name_unalias sleep",
   "functions_names_includes sleep",
   "s data,update",
@@ -2445,6 +2444,7 @@
   "msa email",
   "o msa",
   "s code,call",
-  "s assign"
+  "s assign",
+  "s fill"
  ]
 }
