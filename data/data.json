@@ -514,7 +514,6 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "app_main",
    "firebase_name",
    "global_function_initialize"
   ],
@@ -4796,7 +4795,8 @@
    "reply_sequence",
    "firebase_service_account",
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "app_main"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -14432,8 +14432,7 @@
   "storage_local_set": [
    "storage_local_initialize",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_main"
+   "storage_local_set_context"
   ],
   "ley": [
    "storage_local_key_get"
@@ -14710,8 +14709,7 @@
   ],
   "firebase_name": [
    "firebase_storage_url_project",
-   "firebase_name",
-   "app_main"
+   "firebase_name"
   ],
   "user_repo_path_combine": [
    "function_copy",
@@ -14759,11 +14757,13 @@
   ],
   "initial": [
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "app_main"
   ],
   "global_function_initialize": [
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "app_main"
   ]
  },
  "functions": {
@@ -30602,15 +30602,15 @@
   "app_main": {
    "async": true,
    "identifiers": [
-    "firebase_name",
-    "storage_local_set",
+    "global_function_initialize",
     "firebase_storage_function_run",
     "marker",
     "app_main",
     "app_fn",
     "f_name",
     "firebase_name_value",
-    "name"
+    "fn",
+    "initial"
    ]
   },
   "firebase_name_repo": {
