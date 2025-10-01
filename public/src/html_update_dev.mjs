@@ -34,6 +34,6 @@ export async function html_update_dev(name) {
   const middle = `${code}
     ${call}`;
   let body = html_code_script_module(middle);
-  await html_overwrite(name, file_path, body);
-  await file_open(file_path);
+  await html_overwrite(name, joined, body);
+  await file_open(joined);
 }
