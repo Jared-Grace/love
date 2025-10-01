@@ -5,8 +5,8 @@ import { function_name_folder_to_path } from "../../../love/public/src/function_
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export async function functions_paths() {
   marker("1");
-  function mapper(folder) {
-    let f_names = functions_names_from_path(folder);
+  async function mapper(folder) {
+    let f_names = await functions_names_from_path(folder);
     function lambda2(f_name) {
       let v = function_name_folder_to_path(f_name, folder);
       return v;
