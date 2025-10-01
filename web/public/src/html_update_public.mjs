@@ -21,8 +21,8 @@ export async function html_update_public(name) {
   let code = await function_dependencies_code(a_name);
   let call = js_code_call_statement(a_name);
   let right = js_code_braces_empty();
-  let v = js_code_let_assign("global", right);
-  const middle = `${v}
+  let global_init = js_code_let_assign("global", right);
+  const middle = `${global_init}
     ${call}
     ${code}`;
   let body = html_code_script_module(middle);
