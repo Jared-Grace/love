@@ -1901,7 +1901,8 @@
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
-   "firebase_promote_function"
+   "firebase_promote_function",
+   "app_new_step_4"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -2030,8 +2031,7 @@
    "firebase_deploy_function_destination_production",
    "firebase_promote_function",
    "app_new_step_3",
-   "app_karate",
-   "app_new_step_4"
+   "app_karate"
   ],
   "html_em_text": [
    "html_em_text"
@@ -31784,9 +31784,9 @@
   "app_new_step_4": {
    "async": true,
    "identifiers": [
+    "firebase_deploy_function_destination_latest",
     "marker",
     "app_new_step_3_generic",
-    "firebase_deploy_function_destination_production",
     "app_name_prefixed",
     "app_new_step_4",
     "name",
