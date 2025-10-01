@@ -15290,7 +15290,8 @@
    "app_new_update"
   ],
   "app_new_step_4": [
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_2_next"
   ]
  },
  "functions": {
@@ -15872,6 +15873,7 @@
   "app_new_step_2_next": {
    "async": true,
    "identifiers": [
+    "app_new_step_4",
     "app_new_step_2",
     "app_new_step_3",
     "marker",
