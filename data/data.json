@@ -4937,7 +4937,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_karate_email"
   ],
   "assert_not": [
    "assert_not",
@@ -12645,7 +12646,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "app_karate_email"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -15152,6 +15154,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "log",
     "html_text_set",
     "not",
     "object_property_get",
@@ -15194,6 +15197,7 @@
     "div_checks",
     "ul",
     "lambda2",
+    "message",
     "value",
     "trimmed",
     "lambda",
