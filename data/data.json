@@ -933,7 +933,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "emoji_add",
-   "emoji_secure"
+   "emoji_secure",
+   "person_outline"
   ],
   "home": [
    "app_karate_screens",
@@ -14829,6 +14830,10 @@
   "emoji_secure": [
    "emoji_secure",
    "app_karate_home"
+  ],
+  "person_outline": [
+   "app_karate_home",
+   "person_outline"
   ]
  },
  "functions": {
@@ -14842,6 +14847,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "person_outline",
     "emoji_secure",
     "emoji_add",
     "html_button",
@@ -30810,6 +30816,13 @@
    "async": false,
    "identifiers": [
     "emoji_secure",
+    "v"
+   ]
+  },
+  "person_outline": {
+   "async": false,
+   "identifiers": [
+    "person_outline",
     "v"
    ]
   }
