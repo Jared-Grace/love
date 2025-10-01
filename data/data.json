@@ -304,7 +304,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "firebase_deploy_function_app_karate_main"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -794,7 +795,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "firebase_deploy_function_app_karate_main"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -2007,7 +2009,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "firebase_deploy_function_app_karate_main"
   ],
   "destination2": [
    "firebase_deploy_function_destination_latest",
@@ -8743,7 +8746,8 @@
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function",
-   "firebase_deploy_function_app_current"
+   "firebase_deploy_function_app_current",
+   "firebase_deploy_function_app_karate_main"
   ],
   "version": [
    "firebase_deploy_function"
@@ -31654,9 +31658,13 @@
    ]
   },
   "firebase_deploy_function_app_karate_main": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "firebase_deploy_function_app_karate_main"
+    "firebase_deploy_function",
+    "marker",
+    "firebase_deploy_function_app_karate_main",
+    "f_name",
+    "v"
    ]
   }
  }
