@@ -1578,8 +1578,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "marker_screen_add"
+   "task_new"
   ],
   "firebase_name_value": [
    "app_main"
@@ -28092,7 +28091,6 @@
     "p",
     "lambda2",
     "output",
-    "f_name",
     "v2"
    ]
   },
