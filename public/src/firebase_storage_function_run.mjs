@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -8,6 +9,7 @@ import { js_code_call_statement } from "../../../love/public/src/js_code_call_st
 import { firebase_storage_download_property } from "../../../love/public/src/firebase_storage_download_property.mjs";
 import { firebase_deploy_function_destination_latest } from "../../../karate_code/public/src/firebase_deploy_function_destination_latest.mjs";
 export async function firebase_storage_function_run(f_name) {
+  marker("1");
   let destination_version = firebase_deploy_function_destination_latest(f_name);
   let destination = await firebase_storage_download_property(
     destination_version,
