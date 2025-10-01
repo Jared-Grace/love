@@ -501,8 +501,7 @@
    "html_button_screen",
    "html_element",
    "html_p_text_multiple",
-   "app_karate_container",
-   "firebase_storage_function_run"
+   "app_karate_container"
   ],
   "padding": [
    "app_karate_style_control",
@@ -846,7 +845,8 @@
   "html_attribute_set": [
    "app_karate_email",
    "html_attribute_set",
-   "html_meta_viewport"
+   "html_meta_viewport",
+   "firebase_storage_function_run"
   ],
   "emoji_email": [
    "app_karate_email",
@@ -1108,7 +1108,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "firebase_storage_function_run"
   ],
   "trimmed": [
    "app_karate_email"
@@ -1807,7 +1808,8 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main"
+   "app_reply_main",
+   "firebase_storage_function_run"
   ],
   "component3": [
    "app_karate_home",
@@ -4643,7 +4645,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "firebase_storage_function_run"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -11329,8 +11332,7 @@
    "html_button_element",
    "html_element",
    "messenger_reply_unread_click",
-   "puppeteer_matches",
-   "firebase_storage_function_run"
+   "puppeteer_matches"
   ],
   "html_code_script_module": [
    "html_code_script_module",
@@ -19129,6 +19131,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "html_attribute_set",
     "html_element",
     "html_document_body",
     "browser_is",
@@ -19145,8 +19148,9 @@
     "joined",
     "body",
     "component",
-    "parent",
-    "tag_name",
+    "component2",
+    "key",
+    "value",
     "eval"
    ]
   },
