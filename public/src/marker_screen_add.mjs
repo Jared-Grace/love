@@ -28,10 +28,10 @@ export async function marker_screen_add(screen_name) {
     await function_new(combined_screen);
     const v = "context";
     await function_param_new_double(v);
-    async function lambda2() {
+    async function lambda2(ast) {
       let code = js_code_call_args(html_clear_context.name, [v]);
       let code_assign = js_code_let_assign("root", code);
-      let statement = js_parse_statement(code2);
+      let statement = js_parse_statement(code_assign);
     }
     let output = await function_transform(combined_screen, lambda2);
   }
