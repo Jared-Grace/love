@@ -508,8 +508,7 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god",
-   "app_karate_home"
+   "urdu_allah_to_god"
   ],
   "lambda2": [
    "app_karate_home",
@@ -14855,8 +14854,7 @@
     "parent2",
     "lambda4",
     "component3",
-    "parent3",
-    "text"
+    "parent3"
    ]
   },
   "app_karate_main": {
