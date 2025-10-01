@@ -10,22 +10,22 @@ export function app_replace_settings(context) {
   marker("1");
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
-  function lambda2() {
+  async function lambda2() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
       value *= factor;
       return value;
     }
-    app_replace_font_size_adjust(context, value_get);
+    await app_replace_font_size_adjust(context, value_get);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
-  function lambda3() {
+  async function lambda3() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
       value /= factor;
       return value;
     }
-    app_replace_font_size_adjust(context, value_get);
+    await app_replace_font_size_adjust(context, value_get);
   }
   let component = html_button(
     root,
