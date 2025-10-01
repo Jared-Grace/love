@@ -12,7 +12,8 @@
   "app_main": [
    "app_karate",
    "app_new_step_3_generic",
-   "app_main"
+   "app_main",
+   "app_karate_staging"
   ],
   "app_karate": [
    "app_karate",
@@ -809,8 +810,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "app_karate_staging"
+   "whitespace_normalize"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -2705,7 +2705,8 @@
    "app_new_step_5",
    "firebase_deploy_function_destination_latest",
    "firebase_promote_function",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "app_karate_staging"
   ],
   "app_new_step_5": [
    "app_new_step_5",
@@ -31841,9 +31842,10 @@
    ]
   },
   "app_karate_staging": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "marker",
+    "firebase_deploy_function_destination_latest",
+    "app_main",
     "app_karate_staging"
    ]
   }
