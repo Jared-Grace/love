@@ -803,7 +803,8 @@
    "firebase_storage_function_run",
    "app_new_step_3_generic",
    "app_new_update",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -1902,7 +1903,8 @@
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
    "firebase_promote_function",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -2113,7 +2115,8 @@
    "repo_path_combine",
    "user_repo_path_combine",
    "app_new_step_4",
-   "app_new_step_2_next"
+   "app_new_step_2_next",
+   "app_new_step_5"
   ],
   "contents": [
    "html_index_generate",
@@ -2488,7 +2491,8 @@
    "js_expand_generic",
    "marker_screen_add",
    "app_new_step_3_generic",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "file_name": [
    "app_html_open",
@@ -2547,7 +2551,8 @@
    "html_update_public",
    "marker_screen_add",
    "app_new_step_3_generic",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "app_name_main": [
    "app_name_main",
@@ -2573,7 +2578,8 @@
    "git_push_folder",
    "js_dollar_new_name",
    "marker_screen_add",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "name": [
    "app_name_prefixed",
@@ -2676,7 +2682,8 @@
    "firebase_promote_function_app_karate_main",
    "app_new_step_3_generic",
    "app_new_update",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "p": [
    "app_name_prefixed",
@@ -15276,12 +15283,14 @@
    "app_main",
    "app_new_step_3",
    "app_new_step_3_generic",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "app_new_step_3_generic": [
    "app_new_step_3",
    "app_new_step_3_generic",
-   "app_new_step_4"
+   "app_new_step_4",
+   "app_new_step_5"
   ],
   "f_name_transformed": [
    "app_new_step_3_generic"
@@ -15296,6 +15305,9 @@
    "app_new_step_4",
    "app_new_step_2_next",
    "app_new_update"
+  ],
+  "app_new_step_5": [
+   "app_new_step_5"
   ]
  },
  "functions": {
@@ -31802,6 +31814,21 @@
     "app_new_step_3_generic",
     "app_name_prefixed",
     "app_new_step_4",
+    "name",
+    "a_name",
+    "combined",
+    "version_get"
+   ]
+  },
+  "app_new_step_5": {
+   "async": true,
+   "identifiers": [
+    "function_name_combine",
+    "firebase_deploy_function_destination_latest",
+    "marker",
+    "app_new_step_3_generic",
+    "app_name_prefixed",
+    "app_new_step_5",
     "name",
     "a_name",
     "combined",
