@@ -2952,7 +2952,6 @@
    "range_from",
    "sandbox_4_a",
    "string_ends_with_not",
-   "string_includes",
    "string_starts_with_not",
    "tasks_run",
    "js_declaration_single_block_body_add",
@@ -15056,6 +15055,9 @@
   ],
   "string_includes_lambda": [
    "string_includes_lambda"
+  ],
+  "part": [
+   "string_includes"
   ]
  },
  "functions": {
@@ -30282,7 +30284,7 @@
     "string_is_assert_json",
     "string_includes",
     "string",
-    "item",
+    "part",
     "o",
     "v",
     "includes"
