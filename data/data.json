@@ -19,7 +19,8 @@
    "app_replace_settings",
    "app_reply_main",
    "html_button",
-   "html_button_screen"
+   "html_button_screen",
+   "html_button_s"
   ],
   "object_property_get": [
    "app_karate_home",
@@ -403,7 +404,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "html_button_s"
   ],
   "html_clear": [
    "app_karate_home",
@@ -476,7 +478,8 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "html_button_s"
   ],
   "parent": [
    "html_button",
@@ -484,7 +487,8 @@
    "html_button_screen",
    "html_element",
    "html_p_text_multiple",
-   "app_karate_home"
+   "app_karate_home",
+   "html_button_s"
   ],
   "text": [
    "app_replace_rule_set",
@@ -509,7 +513,8 @@
    "puppeteer_matches",
    "sandbox_2",
    "urdu_allah_to_god",
-   "app_karate_home"
+   "app_karate_home",
+   "html_button_s"
   ],
   "lambda2": [
    "app_karate_home",
@@ -2237,7 +2242,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "app_karate_home"
+   "app_karate_home",
+   "html_button_s"
   ],
   "ast": [
    "app_new_step_3",
@@ -30842,7 +30848,13 @@
   "html_button_s": {
    "async": false,
    "identifiers": [
-    "html_button_s"
+    "html_button",
+    "marker",
+    "html_button_s",
+    "parent",
+    "text",
+    "lambda",
+    "component"
    ]
   }
  }
