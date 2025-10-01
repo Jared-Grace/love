@@ -2762,8 +2762,7 @@
    "marker_screen_add",
    "app_karate_home",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "app_karate_email"
+   "app_karate_button_screen_green"
   ],
   "screen": [
    "app_refresh"
@@ -15041,8 +15040,7 @@
     "component",
     "color",
     "div",
-    "input",
-    "screen_name"
+    "input"
    ]
   },
   "app_karate_home": {
