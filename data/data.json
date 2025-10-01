@@ -1529,7 +1529,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_value_get"
+   "html_value_get",
+   "app_karate_email"
   ],
   "html_text_set": [
    "html_div_text",
@@ -4351,7 +4352,8 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_email"
   ],
   "letters": [
    "app_reply_main",
@@ -5953,7 +5955,8 @@
    "messenger_reply_messages",
    "sandbox_2",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_karate_email"
   ],
   "css_class_prefix_combine": [
    "css_class_prefix_combine",
@@ -15126,6 +15129,9 @@
   ],
   "div_checks": [
    "app_karate_email"
+  ],
+  "check2": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15139,6 +15145,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_clear",
     "each",
     "app_karate_div",
@@ -15179,7 +15186,10 @@
     "lambda2",
     "value",
     "trimmed",
-    "lambda"
+    "lambda",
+    "c",
+    "text2",
+    "check2"
    ]
   },
   "app_karate_home": {
