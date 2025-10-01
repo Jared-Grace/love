@@ -3,6 +3,6 @@ import { html_style_font_size } from "../../../love/public/src/html_style_font_s
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 export async function app_replace_font_size_refresh(context) {
   let html = html_document_root();
-  let value = await app_replace_font_size(context);
+  let value = app_replace_font_size(context);
   html_style_font_size(html, value + "px");
 }
