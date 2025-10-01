@@ -8606,7 +8606,8 @@
    "search_generic",
    "tasks_run",
    "function_name_to_path_search",
-   "html_update_public"
+   "html_update_public",
+   "app_new_step_3"
   ],
   "function_open": [
    "functions_search_open",
@@ -9519,7 +9520,8 @@
    "function_name_to_path_search",
    "function_name_to_path_unalias",
    "html_update_public",
-   "function_import"
+   "function_import",
+   "app_new_step_3"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -14728,6 +14730,9 @@
   ],
   "a_name_identifier": [
    "app_new_step_3"
+  ],
+  "unaliased2": [
+   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14889,6 +14894,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "function_name_to_path_search",
     "js_parse_expression",
     "js_parse_statement",
     "js_code_call_args_await_maybe",
@@ -14906,6 +14912,8 @@
     "app_name_prefixed",
     "app_new_step_3",
     "name",
+    "search",
+    "unaliased2",
     "call_name",
     "declaration",
     "declaration_call",
