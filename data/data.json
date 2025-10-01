@@ -2006,8 +2006,7 @@
    "app_name_main",
    "app_new_step_2",
    "firebase_deploy_function_app_current",
-   "html_update_dev",
-   "app_new_step_4"
+   "html_update_dev"
   ],
   "js_declaration_single": [
    "app_new_step_3_generic",
@@ -15306,7 +15305,8 @@
   ],
   "app_name_staging": [
    "app_new_step_5",
-   "app_name_staging"
+   "app_name_staging",
+   "app_new_step_4"
   ]
  },
  "functions": {
@@ -31818,8 +31818,8 @@
   "app_new_step_4": {
    "async": true,
    "identifiers": [
+    "app_name_staging",
     "function_new",
-    "app_name_main",
     "app_new_step_4",
     "name",
     "combined"
