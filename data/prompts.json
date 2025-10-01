@@ -2403,7 +2403,6 @@
   "function_name_unalias add",
   "function_alias_add_generic add",
   "s search",
-  "ps",
   "p",
   "fdf app_karate_main",
   "o firebase_storage_url_project",
@@ -2411,6 +2410,7 @@
   "repo_path a",
   "urs l",
   "is js_identifier_unique",
-  "urs k"
+  "urs k",
+  "ps"
  ]
 }
