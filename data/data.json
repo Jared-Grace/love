@@ -371,7 +371,6 @@
    "app_karate_margin_y_set"
   ],
   "html_div": [
-   "app_karate_home",
    "html_div_text",
    "app_replace_rule_set",
    "html_div",
@@ -405,7 +404,6 @@
    "html_button_screen"
   ],
   "html_style_set": [
-   "app_karate_home",
    "app_karate_main",
    "html_display_block",
    "html_display_none",
@@ -14269,8 +14267,7 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction",
-   "app_karate_home"
+   "newFunction"
   ],
   "package_name": [
    "npm_install"
@@ -15034,6 +15031,9 @@
   ],
   "html_em_text": [
    "html_em_text"
+  ],
+  "app_karate_container_main": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15071,8 +15071,9 @@
    ]
   },
   "app_karate_home": {
-   "async": true,
+   "async": false,
    "identifiers": [
+    "app_karate_container_main",
     "html_span_text",
     "html_text_set",
     "app_karate_div",
@@ -15082,14 +15083,11 @@
     "emoji_add",
     "emoji_secure",
     "html_clear_context",
-    "html_div",
     "marker",
-    "html_style_set",
     "app_karate_home",
     "context",
     "root",
     "container",
-    "newFunction",
     "component",
     "html_button_karate",
     "component2",
