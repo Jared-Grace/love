@@ -2480,12 +2480,12 @@
   "s html,public",
   "p",
   "html_update_public karate",
-  "fb",
   "s index",
   "n html_index_generate",
   "html_index_generate",
   "apps_get",
   "s file,html",
-  "html_index_generate karate"
+  "html_index_generate karate",
+  "fb"
  ]
 }
