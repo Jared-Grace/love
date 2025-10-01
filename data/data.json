@@ -14827,7 +14827,8 @@
    "emoji_add"
   ],
   "emoji_secure": [
-   "emoji_secure"
+   "emoji_secure",
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14841,6 +14842,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "emoji_secure",
     "emoji_add",
     "html_button",
     "object_property_get",
