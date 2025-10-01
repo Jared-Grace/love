@@ -2458,6 +2458,7 @@
   "s karate",
   "s home",
   "s email",
-  "n string_includes_lambda"
+  "n string_includes_lambda",
+  "a sin string_includes"
  ]
 }
