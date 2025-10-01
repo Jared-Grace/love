@@ -2685,7 +2685,6 @@
    "js_statement_return_empty_add",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "marker_screen_add",
    "task_new",
    "js_declaration_single_block_body_add"
   ],
@@ -28162,7 +28161,6 @@
     "name",
     "code_assign",
     "statement",
-    "body_block",
     "output",
     "v2"
    ]
