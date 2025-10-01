@@ -2666,7 +2666,8 @@
    "watch",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
-   "app_new_step_3_generic"
+   "app_new_step_3_generic",
+   "app_new_update"
   ],
   "p": [
    "app_name_prefixed",
@@ -11520,7 +11521,8 @@
   ],
   "html_update": [
    "html_new",
-   "html_update"
+   "html_update",
+   "app_new_update"
   ],
   "addEventListener": [
    "html_on"
@@ -31759,10 +31761,12 @@
    ]
   },
   "app_new_update": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "html_update",
     "marker",
-    "app_new_update"
+    "app_new_update",
+    "name"
    ]
   }
  }
