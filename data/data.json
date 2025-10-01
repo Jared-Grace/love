@@ -609,7 +609,8 @@
    "function_open",
    "function_run_output_file_temp",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "folder_public_combine": [
    "app_html_open",
@@ -1279,7 +1280,8 @@
    "marker_next_await",
    "marker_next_delete_multiple",
    "html_update_public",
-   "app_new_step_3"
+   "app_new_step_3",
+   "html_update_dev"
   ],
   "expression": [
    "app_new_assign",
@@ -2102,7 +2104,8 @@
    "marker_enter",
    "marker_functionize",
    "marker_top",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "screen_name": [
    "app_refresh",
@@ -2693,7 +2696,8 @@
    "app_replace_rule_parse",
    "html_update_generic",
    "html_code_script_module",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
@@ -5696,7 +5700,8 @@
    "user_repo_path",
    "user_repo_set",
    "user_repo_path_combine",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "html_update_dev"
   ],
   "file_write": [
    "data_all",
@@ -5867,7 +5872,8 @@
    "sandbox_2",
    "server",
    "html_update_public",
-   "firebase_service_account_love_generic"
+   "firebase_service_account_love_generic",
+   "html_update_dev"
   ],
   "file_copy": [
    "data_backup",
@@ -6678,7 +6684,8 @@
    "string_base64_to",
    "string_list_to",
    "string_replace",
-   "object_properties_from"
+   "object_properties_from",
+   "html_update_dev"
   ],
   "to": [
    "each_range_from",
@@ -8190,13 +8197,15 @@
    "firebase_storage_function_run",
    "html_update_generic",
    "js_code_call_statement",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "call": [
    "firebase_storage_function_run",
    "html_update_generic",
    "js_calls_to_each",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "eval": [
    "firebase_storage_function_run"
@@ -8287,7 +8296,8 @@
   ],
   "folder_current_join_code": [
    "folder_current_join_code",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_dev"
   ],
   "f_name_ext": [
    "folder_current_join_code",
@@ -9615,7 +9625,8 @@
   "function_name_to_base": [
    "function_name_folder_to_path",
    "function_name_to_base",
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_dev"
   ],
   "function_import": [
    "function_import",
@@ -9676,7 +9687,8 @@
   "js_code_import_single": [
    "function_imports_add",
    "html_update_generic",
-   "js_code_import_single"
+   "js_code_import_single",
+   "html_update_dev"
   ],
   "js_parse_statement_module": [
    "function_imports_add",
@@ -10952,7 +10964,8 @@
   "html_overwrite": [
    "html_overwrite",
    "html_update_generic",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "cheerio": [
    "html_parse"
@@ -11072,7 +11085,6 @@
    "html_update_public"
   ],
   "html_update_generic": [
-   "html_update_dev",
    "html_update_generic"
   ],
   "paths_get": [
@@ -11089,7 +11101,8 @@
    "html_update_generic"
   ],
   "name_prefixed": [
-   "html_update_generic"
+   "html_update_generic",
+   "html_update_dev"
   ],
   "http_sleep": [
    "http",
@@ -14681,7 +14694,8 @@
   "html_code_script_module": [
    "html_update_generic",
    "html_code_script_module",
-   "html_update_public"
+   "html_update_public",
+   "html_update_dev"
   ],
   "firebase_service_account_love": [
    "firebase_service_account_love"
@@ -14776,6 +14790,12 @@
   ],
   "global_init": [
    "html_update_public"
+  ],
+  "f_name_ext2": [
+   "html_update_dev"
+  ],
+  "from_paths2": [
+   "html_update_dev"
   ]
  },
  "functions": {
@@ -21545,11 +21565,18 @@
   "html_update_dev": {
    "async": true,
    "identifiers": [
+    "file_open",
+    "html_overwrite",
+    "html_code_script_module",
+    "js_code_import_single",
+    "folder_current_join_code",
+    "path_join",
+    "function_name_to_base",
+    "js_code_call_statement",
     "app_name_main",
     "folder_previous",
     "folder_src",
     "html_name_to_path_dev",
-    "html_update_generic",
     "marker",
     "html_update_dev",
     "name",
@@ -21558,7 +21585,16 @@
     "f_name_ext",
     "src",
     "previous",
-    "from_paths"
+    "from_paths",
+    "name_prefixed",
+    "call",
+    "f_name_ext2",
+    "from_paths2",
+    "f_path",
+    "from",
+    "code",
+    "middle",
+    "body"
    ]
   },
   "html_update_generic": {
