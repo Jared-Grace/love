@@ -5898,8 +5898,7 @@
    "storage_local_specify_get",
    "tasks_run",
    "task_new",
-   "ternary",
-   "html_index_generate"
+   "ternary"
   ],
   "catch_call": [
    "catch_call",
@@ -31629,8 +31628,7 @@
     "f_name",
     "combined2",
     "combined",
-    "contents",
-    "result"
+    "contents"
    ]
   }
  }
