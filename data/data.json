@@ -11459,7 +11459,6 @@
    "html_enable_if"
   ],
   "log": [
-   "html_enable_if",
    "js_dollar_g",
    "js_log_remove",
    "log",
@@ -22149,7 +22148,6 @@
   "html_enable_if": {
    "async": false,
    "identifiers": [
-    "log",
     "html_disable",
     "html_enable",
     "html_enable_if",
