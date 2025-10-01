@@ -5594,7 +5594,8 @@
    "js_expand_generic",
    "js_return_atomize",
    "marker",
-   "noop"
+   "noop",
+   "app_karate_email"
   ],
   "catch_only_run_async": [
    "catch_only_async",
@@ -15075,6 +15076,7 @@
     "html_clear_context",
     "marker",
     "html_element",
+    "noop",
     "app_karate_email",
     "context",
     "root",
