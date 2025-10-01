@@ -1842,7 +1842,8 @@
   ],
   "app_karate_main": [
    "app_karate_main",
-   "firebase_deploy_function_app_karate_main"
+   "firebase_deploy_function_app_karate_main",
+   "firebase_promote_function_app_karate_main"
   ],
   "app_fn": [
    "app_karate_main",
@@ -2659,7 +2660,8 @@
    "string_empty_not_is",
    "task_new",
    "watch",
-   "firebase_deploy_function_app_karate_main"
+   "firebase_deploy_function_app_karate_main",
+   "firebase_promote_function_app_karate_main"
   ],
   "p": [
    "app_name_prefixed",
@@ -31710,11 +31712,13 @@
   "firebase_promote_function_app_karate_main": {
    "async": true,
    "identifiers": [
+    "app_karate_main",
     "firebase_promote_function",
     "marker",
     "firebase_promote_function_app_karate_main",
     "f_name",
-    "v"
+    "v",
+    "name"
    ]
   }
  }
