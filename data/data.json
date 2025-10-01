@@ -2256,7 +2256,6 @@
    "repo_about_get",
    "repo_about_set",
    "repo_firebase_service_account_set",
-   "firebase_name",
    "storage_local_specify_set",
    "global_function_property"
   ],
@@ -4794,7 +4793,8 @@
    "reply_sequence",
    "firebase_service_account",
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6142,7 +6142,8 @@
    "messenger_reply_messages_urls_get",
    "object_invert",
    "object_property_initialize",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -10730,13 +10731,15 @@
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "global": [
    "global_function_async",
    "global_function_property_async",
    "global_get",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "awaited": [
    "global_function_async",
@@ -10755,7 +10758,8 @@
   "fn_object": [
    "global_function_property_async",
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "html_component_element_get": [
    "html_attribute_set",
@@ -14748,15 +14752,15 @@
    "storage_local_specify_set"
   ],
   "storage_local_specify_get": [
-   "storage_local_get",
-   "firebase_name"
+   "storage_local_get"
   ],
   "global_function_property": [
    "global_function_property"
   ],
   "initial": [
    "global_function_property",
-   "global_function_initialize"
+   "global_function_initialize",
+   "firebase_name"
   ],
   "global_function_initialize": [
    "global_function_property",
@@ -30568,13 +30572,17 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
-    "storage_local_specify_get",
+    "object_property_initialize",
+    "global_get",
     "browser_is",
     "firebase_name_repo",
     "user_repo_get",
     "firebase_name",
-    "value",
+    "fn",
+    "global",
+    "fn_object",
     "name",
+    "initial",
     "repo_name",
     "default2"
    ]
