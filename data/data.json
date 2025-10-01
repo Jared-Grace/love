@@ -1063,7 +1063,6 @@
    "search_generic",
    "server",
    "sleep",
-   "storage_local_set",
    "string_dot",
    "string_empty",
    "string_includes",
@@ -3366,7 +3365,6 @@
    "js_identifier_defineds",
    "log_json",
    "sandbox_2",
-   "storage_local_set",
    "string_is_assert_json",
    "undefined_not_is_assert_lambda"
   ],
@@ -13999,8 +13997,7 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction",
-   "storage_local_set"
+   "newFunction"
   ],
   "package_name": [
    "npm_install"
@@ -14420,8 +14417,7 @@
    "storage_local_set"
   ],
   "localStorage": [
-   "storage_local_get",
-   "storage_local_set"
+   "storage_local_get"
   ],
   "getItem": [
    "storage_local_get"
@@ -14434,9 +14430,6 @@
   ],
   "ley": [
    "storage_local_key_get"
-  ],
-  "setItem": [
-   "storage_local_set"
   ],
   "string_empty_not_is_assert": [
    "string_and_empty_not_is_assert",
@@ -14742,6 +14735,9 @@
   ],
   "projects": [
    "firebase_name_repo"
+  ],
+  "storage_local_specify_set": [
+   "storage_local_set"
   ]
  },
  "functions": {
@@ -29460,19 +29456,15 @@
    ]
   },
   "storage_local_set": {
-   "async": true,
+   "async": false,
    "identifiers": [
-    "json_to",
+    "storage_local_specify_set",
     "storage_local_key_get",
     "storage_local_set",
     "app_fn",
     "key",
     "value",
-    "storage_local_key",
-    "newFunction",
-    "v",
-    "localStorage",
-    "setItem"
+    "storage_local_key"
    ]
   },
   "storage_local_set_context": {
