@@ -15246,6 +15246,9 @@
   ],
   "destination_latest": [
    "firebase_promote_function"
+  ],
+  "firebase_promote_function_app_karate_main": [
+   "firebase_promote_function_app_karate_main"
   ]
  },
  "functions": {
@@ -31698,6 +31701,12 @@
     "destination_latest",
     "value",
     "destination_production"
+   ]
+  },
+  "firebase_promote_function_app_karate_main": {
+   "async": false,
+   "identifiers": [
+    "firebase_promote_function_app_karate_main"
    ]
   }
  }
