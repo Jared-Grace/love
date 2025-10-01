@@ -545,7 +545,8 @@
    "app_karate_email",
    "app_karate_style_control",
    "app_karate_margin_y_set",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "html_on_change"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -896,7 +897,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "html_on_change"
   ],
   "div": [
    "app_karate_home",
@@ -11216,12 +11218,14 @@
   "html_on": [
    "html_on",
    "html_on_click",
-   "html_on_keydown"
+   "html_on_keydown",
+   "html_on_change"
   ],
   "name_event": [
    "html_on",
    "html_on_click",
-   "html_on_keydown"
+   "html_on_keydown",
+   "html_on_change"
   ],
   "addEventListener": [
    "html_on"
@@ -15085,6 +15089,9 @@
   ],
   "checks": [
    "app_karate_email"
+  ],
+  "html_on_change": [
+   "html_on_change"
   ]
  },
  "functions": {
@@ -31369,6 +31376,16 @@
     "string_regex_match_lambda_inner",
     "input",
     "m"
+   ]
+  },
+  "html_on_change": {
+   "async": false,
+   "identifiers": [
+    "html_on",
+    "html_on_change",
+    "component",
+    "lambda",
+    "name_event"
    ]
   }
  }
