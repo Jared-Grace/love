@@ -7716,7 +7716,8 @@
    "function_exists_inner",
    "function_name_to_path_search",
    "messenger_reply_unread_click",
-   "reply_test"
+   "reply_test",
+   "string_regex_match_lambda"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -10114,7 +10115,6 @@
    "function_name_to_path",
    "search_generic",
    "string_includes",
-   "string_regex_match_lambda",
    "string_includes_lambda"
   ],
   "previous2": [
@@ -14775,7 +14775,6 @@
   ],
   "si": [
    "string_is",
-   "string_regex_match_lambda",
    "string_includes_lambda"
   ],
   "string_is_assert_message": [
@@ -15063,16 +15062,19 @@
   ],
   "string_includes_lambda": [
    "string_includes_lambda",
-   "app_karate_email"
+   "app_karate_email",
+   "string_regex_match_lambda"
   ],
   "part": [
    "string_includes"
   ],
   "string_regex_match": [
-   "string_regex_match"
+   "string_regex_match",
+   "string_regex_match_lambda"
   ],
   "regex": [
-   "string_regex_match"
+   "string_regex_match",
+   "string_regex_match_lambda"
   ],
   "string_regex_match_lambda": [
    "string_regex_match_lambda"
@@ -31350,13 +31352,15 @@
   "string_regex_match_lambda": {
    "async": false,
    "identifiers": [
-    "string_includes",
+    "string_regex_match",
+    "string_includes_lambda",
     "marker",
     "string_regex_match_lambda",
     "item",
     "l",
     "input",
-    "si"
+    "m",
+    "regex"
    ]
   }
  }
