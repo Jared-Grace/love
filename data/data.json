@@ -4,7 +4,6 @@
  "marker_current": "1",
  "identifiers": {
   "firebase_storage_function_run": [
-   "app_karate",
    "app_replace",
    "app_reply",
    "firebase_storage_function_run",
@@ -297,8 +296,7 @@
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
    "firebase_service_account_karate",
-   "app_main",
-   "app_karate"
+   "app_main"
   ],
   "app_karate": [
    "app_karate"
@@ -14733,7 +14731,8 @@
   ],
   "app_main": [
    "app_main",
-   "app_new_step_3"
+   "app_new_step_3",
+   "app_karate"
   ],
   "firebase_name_value": [
    "app_main"
@@ -14783,8 +14782,7 @@
   "app_karate": {
    "async": true,
    "identifiers": [
-    "marker",
-    "firebase_storage_function_run",
+    "app_main",
     "app_karate"
    ]
   },
