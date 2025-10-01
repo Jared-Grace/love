@@ -2397,7 +2397,6 @@
   "s step",
   "app_new_step_3 karate",
   "html_update_public karate",
-  "s repo_path",
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
@@ -2476,6 +2475,7 @@
   "command_line dir",
   "o s3",
   "p",
-  "s3"
+  "s3",
+  "s repo_path"
  ]
 }
