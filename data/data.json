@@ -1523,8 +1523,7 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name",
-   "app_karate_email"
+   "repo_acronym_to_name"
   ],
   "html_text_set": [
    "html_div_text",
@@ -4926,8 +4925,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_karate_email"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -11066,8 +11064,7 @@
    "html_style_assign",
    "html_style_remove",
    "html_style_set",
-   "html_text_set",
-   "app_karate_email"
+   "html_text_set"
   ],
   "html_attribute_set": [
    "html_attribute_set",
@@ -11083,8 +11080,7 @@
    "html_on",
    "html_remove",
    "html_text_set",
-   "html_component_element_get",
-   "app_karate_email"
+   "html_component_element_get"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -15102,6 +15098,9 @@
   "html_on_change": [
    "html_on_change",
    "app_karate_email"
+  ],
+  "html_value_get": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15115,9 +15114,8 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_value_get",
     "string_trim",
-    "object_property_get",
-    "html_component_element_get",
     "html_on_change",
     "string_regex_match_lambda",
     "string_includes_lambda",
@@ -15146,10 +15144,8 @@
     "div",
     "input",
     "lambda2",
-    "element",
     "value",
     "v7",
-    "message",
     "checks",
     "text",
     "check"
