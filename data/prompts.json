@@ -2503,6 +2503,7 @@
   "hup karate",
   "n app_new_update",
   "c app_new_step_3 app_new_step_4",
-  "r app_new_step_4 app_new_step_5"
+  "r app_new_step_4 app_new_step_5",
+  "app_new_step_4 karate"
  ]
 }
