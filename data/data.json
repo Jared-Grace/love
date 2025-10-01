@@ -908,7 +908,6 @@
    "chalk_color",
    "chalk_green",
    "chalk_red",
-   "app_karate_button_screen_uncolored",
    "app_karate_email"
   ],
   "p": [
@@ -31078,7 +31077,6 @@
     "component",
     "padding",
     "width",
-    "color",
     "margin_y"
    ]
   }
