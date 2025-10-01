@@ -2492,6 +2492,7 @@
   "o u",
   "a fk firebase_deploy_function_app_karate_main",
   "s download",
-  "n firebase_promote_function"
+  "n firebase_promote_function",
+  "fws firebase_promote_function app_karate_main"
  ]
 }
