@@ -15003,6 +15003,9 @@
    "app_karate_home",
    "app_karate_button_screen_green",
    "app_karate_email"
+  ],
+  "emoji_arrow_right": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15016,6 +15019,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "emoji_arrow_right",
     "app_karate_button_screen_green",
     "html_attribute_set",
     "emoji_email",
