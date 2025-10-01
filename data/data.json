@@ -2199,7 +2199,8 @@
    "js_dollar_aa",
    "js_return_name",
    "marker_top",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "js_declaration_single": [
    "app_new_step_3",
@@ -2486,7 +2487,8 @@
    "js_statement_return_empty_add",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "output": [
    "app_new_step_3",
@@ -14907,6 +14909,9 @@
   ],
   "code_assign": [
    "js_code_let_assign",
+   "marker_screen_add"
+  ],
+  "ast2": [
    "marker_screen_add"
   ]
  },
@@ -28077,6 +28082,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_declaration_single_block_body",
     "js_parse_statement",
     "js_code_let_assign",
     "html_clear_context",
@@ -28112,6 +28118,8 @@
     "name",
     "code_assign",
     "statement",
+    "body_block",
+    "ast2",
     "output",
     "v2"
    ]
