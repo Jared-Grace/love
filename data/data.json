@@ -5857,7 +5857,8 @@
    "reply_test",
    "roman_to_integer",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "app_karate_email"
   ],
   "process": [
    "command_line_read",
@@ -14987,7 +14988,8 @@
     "root",
     "component",
     "color",
-    "div"
+    "div",
+    "input"
    ]
   },
   "app_karate_home": {
