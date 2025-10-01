@@ -2188,7 +2188,8 @@
    "watch",
    "app_new_step_4",
    "app_name_staging",
-   "html_name_to_path_staging"
+   "html_name_to_path_staging",
+   "html_update_public_generic"
   ],
   "version_get": [
    "app_new_step_3_generic",
@@ -2214,7 +2215,8 @@
    "html_update_public",
    "js_expand_generic",
    "marker_screen_add",
-   "app_name_staging"
+   "app_name_staging",
+   "html_update_public_generic"
   ],
   "repo_name": [
    "app_new_step_3_generic",
@@ -2642,7 +2644,8 @@
    "marker_functionize",
    "marker_next_await",
    "marker_next_delete_multiple",
-   "marker_screen_add"
+   "marker_screen_add",
+   "html_update_public_generic"
   ],
   "statement": [
    "app_new_step_3_generic",
@@ -3161,7 +3164,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "html_update_public_generic"
   ],
   "sum": [
    "add",
@@ -3205,7 +3209,8 @@
    "function_copy",
    "function_open",
    "function_run_output_file_temp",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "app_html_open": [
    "app_html_open"
@@ -3429,7 +3434,8 @@
    "js_parse_statement_module",
    "marker_enter",
    "marker_functionize",
-   "marker_top"
+   "marker_top",
+   "html_update_public_generic"
   ],
   "screen": [
    "app_refresh"
@@ -3773,7 +3779,8 @@
   "middle": [
    "app_replace_rule_parse",
    "html_code_script_module",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
@@ -5251,7 +5258,8 @@
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
-   "sandbox_2"
+   "sandbox_2",
+   "html_update_public_generic"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -5612,7 +5620,8 @@
    "path_name",
    "sandbox_4_a",
    "unzip",
-   "html_name_to_path_staging"
+   "html_name_to_path_staging",
+   "html_update_public_generic"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -8823,7 +8832,8 @@
   "function_dependencies_code": [
    "firebase_deploy_function",
    "function_dependencies_code",
-   "function_dependencies_code_copy"
+   "function_dependencies_code_copy",
+   "html_update_public_generic"
   ],
   "version": [
    "firebase_deploy_function"
@@ -9007,12 +9017,14 @@
   "js_code_call_statement": [
    "firebase_storage_function_run",
    "html_update_dev",
-   "js_code_call_statement"
+   "js_code_call_statement",
+   "html_update_public_generic"
   ],
   "call": [
    "firebase_storage_function_run",
    "html_update_dev",
-   "js_calls_to_each"
+   "js_calls_to_each",
+   "html_update_public_generic"
   ],
   "eval": [
    "firebase_storage_function_run"
@@ -10478,7 +10490,8 @@
   ],
   "function_name_repo_path_combine": [
    "function_name_repo_path_combine",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "list_join_empty": [
    "function_name_to_acronym",
@@ -11461,7 +11474,8 @@
   ],
   "html_code_script_module": [
    "html_code_script_module",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "html_component_wrap": [
    "html_component_wrap",
@@ -11567,7 +11581,8 @@
   ],
   "html_overwrite": [
    "html_overwrite",
-   "html_update_dev"
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "cheerio": [
    "html_parse"
@@ -11704,13 +11719,15 @@
   "js_code_braces_empty": [
    "js_code_arrow",
    "js_code_braces_empty",
-   "js_dollar_i"
+   "js_dollar_i",
+   "html_update_public_generic"
   ],
   "js_code_let_assign": [
    "js_call_new",
    "js_code_let_assign",
    "js_declare",
-   "marker_screen_add"
+   "marker_screen_add",
+   "html_update_public_generic"
   ],
   "http_sleep": [
    "http",
@@ -15304,7 +15321,11 @@
    "html_name_to_path_staging"
   ],
   "html_update_public_generic": [
-   "html_update_public"
+   "html_update_public",
+   "html_update_public_generic"
+  ],
+  "global_init": [
+   "html_update_public_generic"
   ]
  },
  "functions": {
@@ -31834,6 +31855,30 @@
     "name",
     "folder",
     "file_path"
+   ]
+  },
+  "html_update_public_generic": {
+   "async": true,
+   "identifiers": [
+    "file_open",
+    "html_overwrite",
+    "html_code_script_module",
+    "js_code_let_assign",
+    "js_code_braces_empty",
+    "js_code_call_statement",
+    "function_dependencies_code",
+    "function_name_repo_path_combine",
+    "html_update_public_generic",
+    "a_name",
+    "file_path",
+    "name",
+    "joined",
+    "code",
+    "call",
+    "right",
+    "global_init",
+    "middle",
+    "body"
    ]
   }
  }
