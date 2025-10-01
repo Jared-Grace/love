@@ -12,18 +12,167 @@
    "app_karate",
    "app_karate_main"
   ],
-  "html_clear_context": [
+  "app_karate_green_dark": [
+   "app_karate_button_screen_green",
+   "app_karate_email",
+   "app_karate_green_dark"
+  ],
+  "html_style_assign": [
+   "app_karate_button_screen_green",
+   "app_karate_container_centered",
+   "app_karate_email",
+   "app_karate_style_control",
+   "html_loading",
+   "html_style_assign",
+   "html_style_margin_y"
+  ],
+  "app_karate_button_screen_uncolored": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_email"
+  ],
+  "app_karate_button_screen_green": [
+   "app_karate_button_screen_green",
+   "app_karate_email",
+   "app_karate_home"
+  ],
+  "div": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_container_centered",
+   "app_karate_div",
+   "app_karate_div_text",
    "app_karate_email",
    "app_karate_home",
+   "app_replace_rule_set",
+   "html_div",
+   "html_div_text",
+   "html_loading"
+  ],
+  "text": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_email",
+   "app_karate_home",
+   "html_em_text",
+   "html_span_text",
+   "app_replace_rule_set",
+   "app_reply_choices",
+   "app_reply_main",
+   "app_reply_pray",
+   "clipboard_copy",
+   "ebible_chapter_text",
+   "ebible_verses",
+   "ebible_verse_new",
+   "ebible_versions",
+   "html_button",
+   "html_button_screen",
+   "html_div_text",
+   "html_parse_classes_preview",
+   "html_parse_href_text",
+   "html_parse_text",
+   "html_p_text",
+   "html_text_set",
+   "http_json",
+   "http_local_text",
+   "messenger_reply_unread_click",
+   "puppeteer_matches",
+   "sandbox_2",
+   "urdu_allah_to_god"
+  ],
+  "context": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_email",
+   "app_karate_home",
+   "app_karate_main",
+   "app_refresh",
+   "app_replace_font_size",
+   "app_replace_font_size_adjust",
+   "app_replace_font_size_refresh",
+   "app_replace_home",
+   "app_replace_main",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_screen_set",
+   "html_button_screen",
    "html_clear_context",
+   "messenger_reply_login",
+   "messenger_reply_playwright",
+   "storage_local_get_context",
+   "storage_local_initialize_context",
+   "storage_local_set_context"
+  ],
+  "screen_name": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_home",
+   "app_refresh",
+   "function_new_app_screen",
+   "html_button_screen",
    "marker_screen_add"
   ],
+  "component": [
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_email",
+   "app_karate_home",
+   "app_karate_margin_y_set",
+   "app_karate_style_control",
+   "html_on_change",
+   "html_on_input",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "html_attribute_set",
+   "html_button",
+   "html_button_screen",
+   "html_component_element_get",
+   "html_document_head",
+   "html_element",
+   "html_enable_if",
+   "html_meta_viewport",
+   "html_on",
+   "html_on_click",
+   "html_on_keydown",
+   "html_p",
+   "html_remove",
+   "html_style_margin_y",
+   "html_style_set_or_remove",
+   "html_text_set",
+   "html_text_set_if"
+  ],
+  "color": [
+   "app_karate_button_screen_green",
+   "app_karate_email",
+   "chalk_color",
+   "chalk_green",
+   "chalk_red"
+  ],
+  "app_karate_style_control": [
+   "app_karate_button_screen_uncolored",
+   "app_karate_email",
+   "app_karate_style_control"
+  ],
+  "html_button_screen": [
+   "app_karate_button_screen_uncolored",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "html_button_screen"
+  ],
   "marker": [
+   "app_karate_container_centered",
+   "app_karate_div_text",
    "app_karate_email",
    "app_karate_home",
    "app_karate_screens",
-   "emoji_person_outline",
-   "html_div_text",
+   "html_em_text",
+   "html_on_change",
+   "html_on_input",
+   "html_value_set",
+   "string_includes_lambda",
+   "string_regex_match",
+   "string_regex_match_lambda",
    "apps_get",
    "app_code",
    "app_html_open",
@@ -84,6 +233,7 @@
    "ebible_version_books_testament_new",
    "ebible_version_books_upload",
    "ebible_version_download",
+   "emoji_person_outline",
    "equal_assert",
    "equal_not",
    "error_attention_clear",
@@ -156,6 +306,7 @@
    "html_button_element",
    "html_display_block",
    "html_display_none",
+   "html_div_text",
    "html_document_body",
    "html_document_head",
    "html_document_root",
@@ -306,49 +457,63 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "app_karate_div_text",
-   "html_em_text",
-   "string_includes_lambda",
-   "string_regex_match",
-   "string_regex_match_lambda",
-   "html_on_change",
-   "html_value_set",
-   "html_on_input"
+   "whitespace_normalize"
   ],
-  "app_karate_email": [
-   "app_karate_email",
-   "app_karate_screens"
-  ],
-  "context": [
-   "app_karate_email",
-   "app_karate_home",
+  "html_style_set": [
+   "app_karate_container_centered",
+   "app_karate_container_main",
    "app_karate_main",
-   "html_clear_context",
-   "app_refresh",
-   "app_replace_font_size",
-   "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
-   "app_replace_home",
-   "app_replace_main",
+   "html_display_block",
+   "html_display_none",
+   "html_element",
+   "html_style_font_size",
+   "html_style_set",
+   "html_style_set_or_remove"
+  ],
+  "html_style_margin_y": [
+   "app_karate_container_centered",
+   "app_karate_margin_y_set",
+   "html_style_margin_y"
+  ],
+  "html_div": [
+   "app_karate_container_centered",
+   "app_karate_container_main",
+   "app_karate_div",
    "app_replace_rule_set",
-   "app_replace_settings",
-   "app_screen_set",
+   "html_div",
+   "html_div_text",
+   "html_loading"
+  ],
+  "app_karate_container_centered": [
+   "app_karate_container_centered"
+  ],
+  "parent": [
+   "app_karate_container_centered",
+   "app_karate_div",
+   "app_karate_div_text",
+   "app_karate_home",
+   "html_button",
+   "html_button_element",
    "html_button_screen",
-   "messenger_reply_login",
-   "messenger_reply_playwright",
-   "storage_local_get_context",
-   "storage_local_initialize_context",
-   "storage_local_set_context",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "html_element",
+   "html_p_text_multiple"
+  ],
+  "padding": [
+   "app_karate_container_centered",
+   "app_karate_style_control",
+   "string_pad",
+   "string_padded_is"
+  ],
+  "app_karate_container_main": [
+   "app_karate_container_main",
+   "app_karate_email",
+   "app_karate_home"
   ],
   "root": [
+   "app_karate_container_main",
    "app_karate_email",
    "app_karate_home",
    "app_karate_main",
-   "html_clear_context",
-   "html_div_text",
    "app_replace_home",
    "app_replace_main",
    "app_replace_rule_set",
@@ -361,76 +526,390 @@
    "ebible_version_books_testament",
    "file_root_exists",
    "file_root_exists_assert",
+   "html_clear_context",
    "html_div",
+   "html_div_text",
    "html_p",
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text",
-   "app_karate_container_main"
+   "html_p_text"
   ],
-  "html_div_text": [
-   "html_div_text"
-  ],
-  "html_style_margin_y": [
-   "html_style_margin_y",
-   "app_karate_container",
-   "app_karate_margin_y_set",
-   "app_karate_container_centered"
-  ],
-  "html_div": [
-   "html_div_text",
-   "app_replace_rule_set",
-   "html_div",
-   "html_loading",
-   "app_karate_container",
-   "app_karate_div",
+  "container": [
    "app_karate_container_main",
-   "app_karate_container_centered"
-  ],
-  "html_style_assign": [
-   "html_style_margin_y",
-   "html_loading",
-   "html_style_assign",
-   "app_karate_container",
    "app_karate_email",
-   "app_karate_style_control",
-   "app_karate_button_screen_green",
-   "app_karate_container_centered"
-  ],
-  "emoji_secure": [
    "app_karate_home",
-   "emoji_secure"
+   "html_em_text",
+   "html_span_text"
   ],
-  "emoji_add": [
+  "app_karate_margin_y_set": [
+   "app_karate_div",
+   "app_karate_margin_y_set",
+   "app_karate_style_control"
+  ],
+  "app_karate_div": [
+   "app_karate_div",
+   "app_karate_div_text",
+   "app_karate_email",
+   "app_karate_home"
+  ],
+  "html_text_set": [
+   "app_karate_div_text",
+   "app_karate_email",
    "app_karate_home",
-   "emoji_add"
-  ],
-  "html_button": [
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_replace_settings",
+   "html_em_text",
+   "html_span_text",
    "app_reply_main",
    "html_button",
-   "html_button_screen"
+   "html_clear",
+   "html_div_text",
+   "html_p_text",
+   "html_text_set",
+   "html_text_set_if"
   ],
-  "html_style_set": [
-   "app_karate_main",
-   "html_display_block",
-   "html_display_none",
-   "html_style_font_size",
-   "html_style_set",
-   "html_style_set_or_remove",
-   "app_karate_container",
-   "html_element",
-   "app_karate_container_main",
-   "app_karate_container_centered"
+  "app_karate_div_text": [
+   "app_karate_div_text",
+   "app_karate_email"
   ],
-  "app_karate_home": [
+  "explanation": [
+   "app_karate_div_text"
+  ],
+  "html_on_input": [
+   "app_karate_email",
+   "html_on_input"
+  ],
+  "log": [
+   "app_karate_email",
+   "js_dollar_g",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "repos_paths_names_map_unordered_combine"
+  ],
+  "not": [
+   "app_karate_email",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "assert",
+   "assert_message",
+   "catch_only_run_async",
+   "data_all",
+   "equal_not",
+   "function_alias_change",
+   "function_alias_delete",
+   "function_alias_replace",
+   "function_list_generate",
+   "function_params_new",
+   "http",
+   "js_await_add_inner",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_declare_single",
+   "js_function_last_asyncify",
+   "js_if_blockify_generic",
+   "js_imports_declarations",
+   "js_let_add",
+   "js_marker_name_get",
+   "js_node_type_not_is",
+   "js_stack_list_block_is",
+   "js_statement_call_get",
+   "js_unparse",
+   "js_visit",
+   "js_visit_nodes",
+   "list_add_if_not_includes",
+   "list_difference",
+   "list_empty_not_is",
+   "list_index_of_delta",
+   "list_not_is",
+   "list_size_1_assert_message",
+   "list_unique",
+   "log_unparse_try",
+   "marker_functionize",
+   "marker_rename",
+   "not",
+   "object_property_exists_not",
+   "object_property_initialize",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "path_join",
+   "promise_not_is",
+   "roman_to_integer",
+   "string_empty_not_is",
+   "string_ends_with_not",
+   "string_prefix_without",
+   "string_skip_while",
+   "string_starts_with_not",
+   "string_suffix_without",
+   "string_trim_right",
+   "visit_filter_recursive",
+   "visit_filter_recursive_async"
+  ],
+  "object_property_get": [
+   "app_karate_email",
+   "html_value_get",
+   "app_refresh",
+   "app_replace_home",
+   "app_replace_rule_set",
+   "app_replace_rule_valid",
+   "app_reply_main",
+   "assert_arguments",
+   "bind_property",
+   "chalk_color",
+   "command_line_node_g",
+   "data_file_update_inner",
+   "data_identifiers_search",
+   "data_property_get",
+   "data_value",
+   "each_object",
+   "ebible_books_to_chapter_codes",
+   "ebible_languages_to_bible_folders",
+   "ebible_references_parse_lines",
+   "ebible_verses_upload",
+   "ebible_version_books_testament",
+   "file_json_isolate",
+   "file_root_exists",
+   "firebase_name_repo",
+   "firebase_storage_download_property",
+   "function_acronym_to_name",
+   "function_acronym_to_names",
+   "function_aliases_search",
+   "function_alias_add_generic",
+   "function_alias_rename",
+   "function_exists_inner",
+   "function_name_repo_path_combine",
+   "function_name_to_path_import",
+   "function_name_to_path_search",
+   "function_rename_identifiers",
+   "global_function_get",
+   "html_clear_context",
+   "html_component_element_get",
+   "js_assign_combine",
+   "js_await_add_inner",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_call_callee_name",
+   "js_call_new",
+   "js_call_new_code",
+   "js_code_call_args_await_maybe",
+   "js_declaration_asyncify",
+   "js_declaration_name",
+   "js_declaration_params_names_node",
+   "js_declare_single_init",
+   "js_dollar",
+   "js_dollar_g",
+   "js_dollar_ir",
+   "js_dollar_s",
+   "js_function_id_add",
+   "js_function_last_asyncify",
+   "js_identifiers_named",
+   "js_identifiers_named_count",
+   "js_identifiers_names",
+   "js_identifier_defineds",
+   "js_identifier_replace",
+   "js_if_blockify_generic",
+   "js_if_else_if_combine",
+   "js_imports_fix",
+   "js_imports_paths_fix",
+   "js_imports_unused",
+   "js_imports_unused_remove",
+   "js_let_add",
+   "js_node_atomize",
+   "js_node_type",
+   "js_parse_expression",
+   "js_stack_declaration_asyncify",
+   "js_statement_call_get",
+   "js_statement_expression_get",
+   "js_visit_calls_named",
+   "js_visit_children_get",
+   "list_map_property",
+   "marker_above_delete",
+   "marker_above_generic",
+   "marker_enter",
+   "marker_functionize",
+   "marker_next_await",
+   "marker_next_declare_single_init_elements",
+   "messenger_reply",
+   "messenger_reply_playwright",
+   "object_merge_generic",
+   "object_property_equals",
+   "object_property_from",
+   "object_property_get",
+   "object_property_get_name",
+   "object_property_initialize",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "prompt_previous",
+   "reply",
+   "reply_sequence",
+   "repo_acronym_to_name"
+  ],
+  "html_clear": [
+   "app_karate_email",
+   "app_refresh",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "html_clear",
+   "html_clear_context"
+  ],
+  "each": [
+   "app_karate_email",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "bible_verses_encouragement_generate",
+   "data_file_update_inner",
+   "each",
+   "each_index",
+   "each_object",
+   "each_range",
+   "each_range_from",
+   "each_reverse",
+   "ebible_chapter_text",
+   "ebible_index_flat",
+   "function_alias_rename",
+   "function_identifier_replace",
+   "function_params_new",
+   "html_parse_descendants_classes",
+   "html_p_text_multiple",
+   "js_block_child_graph",
+   "js_declaration_single_params_add",
+   "js_dollar_a",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_identifier_defineds",
+   "js_imports_declarations",
+   "js_imports_fix",
+   "js_imports_paths_fix",
+   "js_imports_unused_remove",
+   "js_outside_move",
+   "js_stack_filtered_multiple_each",
+   "js_visit_each",
+   "lambda_invoke_multiple",
+   "list_concat_multiple",
+   "list_difference",
+   "list_intersect",
+   "list_remove_all_multiple",
+   "list_remove_multiple",
+   "list_squash",
+   "list_to_dictionary",
+   "list_unique",
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply_unread_collect",
+   "object_merge_generic",
+   "object_properties_delete",
+   "object_properties_delete_all",
+   "object_properties_from",
+   "reduce",
+   "visit_filter_recursive"
+  ],
+  "html_value_set": [
+   "app_karate_email",
+   "html_value_set"
+  ],
+  "html_value_get": [
+   "app_karate_email",
+   "html_value_get"
+  ],
+  "string_trim": [
+   "app_karate_email",
+   "messenger_reply_messages",
+   "string_trim"
+  ],
+  "string_regex_match_lambda": [
+   "app_karate_email",
+   "string_regex_match_lambda"
+  ],
+  "string_includes_lambda": [
+   "app_karate_email",
+   "string_includes_lambda"
+  ],
+  "string_empty_not_is": [
+   "app_karate_email",
+   "ebible_verses",
+   "file_root_exists",
+   "js_dollar",
+   "js_identifier_unique",
+   "list_filter_empty_not_is",
+   "string_empty_not_is",
+   "string_empty_not_is_assert"
+  ],
+  "emoji_arrow_right": [
+   "app_karate_email",
+   "emoji_arrow_right"
+  ],
+  "html_attribute_set": [
+   "app_karate_email",
+   "html_attribute_set",
+   "html_meta_viewport"
+  ],
+  "emoji_email": [
+   "app_karate_email",
+   "emoji_email"
+  ],
+  "emoji_arrow_left": [
+   "app_karate_email",
+   "emoji_arrow_left"
+  ],
+  "app_karate_container": [
+   "app_karate_email",
+   "app_karate_home"
+  ],
+  "html_clear_context": [
+   "app_karate_email",
    "app_karate_home",
+   "html_clear_context",
+   "marker_screen_add"
+  ],
+  "html_element": [
+   "app_karate_email",
+   "html_em_text",
+   "html_span_text",
+   "html_button_element",
+   "html_div",
+   "html_document_root",
+   "html_element",
+   "html_meta_viewport",
+   "html_p"
+  ],
+  "app_karate_email": [
+   "app_karate_email",
    "app_karate_screens"
   ],
+  "checks": [
+   "app_karate_email"
+  ],
+  "check": [
+   "app_karate_email"
+  ],
+  "input": [
+   "app_karate_email",
+   "html_value_get",
+   "html_value_set",
+   "string_includes_lambda",
+   "string_regex_match",
+   "string_regex_match_lambda",
+   "command_line_read",
+   "integer_to",
+   "list_map_lower",
+   "marker_call_atomize",
+   "marker_call_replace",
+   "marker_call_replace_generic",
+   "messenger_reply_playwright",
+   "reply",
+   "reply_test",
+   "roman_to_integer",
+   "string_includes",
+   "string_suffix_change",
+   "string_to"
+  ],
+  "div_checks": [
+   "app_karate_email"
+  ],
+  "ul": [
+   "app_karate_email"
+  ],
   "lambda2": [
+   "app_karate_email",
    "app_replace_home",
    "app_replace_rule_set",
    "app_replace_settings",
@@ -524,139 +1003,118 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "app_karate_email"
+   "watch"
   ],
-  "component": [
-   "app_karate_home",
-   "html_style_margin_y",
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_reply_main",
-   "html_attribute_set",
-   "html_button",
-   "html_component_element_get",
-   "html_document_head",
-   "html_element",
-   "html_enable_if",
-   "html_meta_viewport",
-   "html_on",
-   "html_on_click",
-   "html_on_keydown",
-   "html_p",
-   "html_remove",
-   "html_style_set_or_remove",
-   "html_text_set",
-   "html_text_set_if",
-   "html_button_screen",
-   "app_karate_button_screen_uncolored",
+  "value": [
    "app_karate_email",
-   "app_karate_style_control",
-   "app_karate_margin_y_set",
-   "app_karate_button_screen_green",
-   "html_on_change",
-   "html_on_input"
-  ],
-  "html_button_karate": [
-   "app_karate_home"
-  ],
-  "lambda3": [
-   "app_replace_rule_set",
+   "app_karate_main",
+   "html_value_get",
+   "html_value_set",
+   "app_replace_font_size_adjust",
+   "app_replace_font_size_refresh",
    "app_replace_settings",
-   "app_reply_main",
-   "ebible_versions_download",
+   "app_screen_set",
+   "bind_property",
+   "cache_generic",
+   "data_boolean_set",
+   "data_get",
+   "data_property_get",
+   "data_transform",
+   "data_value",
+   "each_object",
    "error_attention_set",
-   "function_list_generate",
-   "function_params_new",
-   "http",
-   "js_await_add_inner",
-   "js_calls_to_each",
-   "js_call_new_code",
-   "js_dollar_a",
-   "js_dollar_a_generic",
-   "js_expand_generic",
-   "js_identifiers_named_count",
+   "file_json_isolate",
+   "firebase_name",
+   "firebase_storage_download_property",
+   "function_aliases_search",
+   "function_alias_add_generic",
+   "function_name_to_path_import",
+   "global_function_async",
+   "global_function_get",
+   "global_function_property",
+   "global_function_property_async",
+   "html_attribute_set",
+   "html_style_font_size",
+   "html_style_margin_y",
+   "http_firebase",
+   "integer_is",
+   "js_declaration_asyncify",
+   "js_declaration_params_names_node",
+   "js_declare_assign",
+   "js_declare_assign_null",
+   "js_dollar_s",
+   "js_function_id_add",
+   "js_function_last_asyncify",
+   "js_identifiers_names",
    "js_identifier_defineds",
-   "js_if_else_if_combine",
-   "js_log_remove",
-   "js_outside_move",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "marker_down_choices_lambda",
-   "marker_functionize",
-   "messenger_reply_messages",
-   "object_properties_from",
-   "puppeteer_hrefs",
-   "retry"
+   "js_imports_declarations",
+   "js_marker_name_get",
+   "js_property",
+   "js_property_generic",
+   "js_property_identifier",
+   "js_statement_expression_get",
+   "js_visit_children_get",
+   "lambda_get",
+   "lambda_value",
+   "list_insert",
+   "list_insert_generic",
+   "list_is",
+   "list_map_index",
+   "list_map_property",
+   "list_not_is",
+   "list_replace",
+   "list_set",
+   "list_splice",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "marker_assign_replace_string",
+   "marker_screen_add",
+   "messenger_reply_messages_transform",
+   "messenger_reply_messages_urls_get",
+   "null_is",
+   "null_not_is",
+   "number_is",
+   "object_invert",
+   "object_merge_generic",
+   "object_property_exists_equals",
+   "object_property_from",
+   "object_property_get",
+   "object_property_initialize",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "object_property_set",
+   "object_property_set_exists_not",
+   "promise_is",
+   "repo_about_get",
+   "repo_about_set",
+   "repo_acronym_set",
+   "repo_firebase_service_account_set",
+   "storage_local_get_context",
+   "storage_local_initialize",
+   "storage_local_initialize_context",
+   "storage_local_set",
+   "storage_local_set_context",
+   "storage_local_specify_get",
+   "storage_local_specify_set",
+   "string_is",
+   "string_is_assert",
+   "string_is_assert_json",
+   "string_is_assert_message",
+   "true_is",
+   "undefined_is",
+   "undefined_not_is_assert",
+   "undefined_not_is_assert_lambda",
+   "user_repo_get",
+   "user_repo_set",
+   "watch"
   ],
-  "component2": [
-   "app_karate_home",
-   "app_reply_main"
-  ],
-  "lambda4": [
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_reply_main",
-   "ebible_references_parse_lines",
-   "function_params_new",
-   "js_await_add_inner",
-   "js_expand_generic",
-   "js_identifier_defineds",
-   "messenger_reply",
-   "messenger_reply_messages",
-   "promise_wrap"
-  ],
-  "component3": [
-   "app_karate_home",
-   "app_reply_main"
-  ],
-  "parent": [
-   "app_karate_home",
-   "html_button",
-   "html_button_element",
-   "html_button_screen",
-   "html_element",
-   "html_p_text_multiple",
-   "app_karate_container",
-   "app_karate_div_text",
-   "app_karate_div",
-   "app_karate_container_centered"
-  ],
-  "text": [
-   "app_karate_home",
-   "html_div_text",
-   "app_replace_rule_set",
-   "app_reply_choices",
-   "app_reply_main",
-   "app_reply_pray",
-   "clipboard_copy",
-   "ebible_chapter_text",
-   "ebible_verses",
-   "ebible_verse_new",
-   "ebible_versions",
-   "html_button",
-   "html_button_screen",
-   "html_parse_classes_preview",
-   "html_parse_href_text",
-   "html_parse_text",
-   "html_p_text",
-   "html_text_set",
-   "http_json",
-   "http_local_text",
-   "messenger_reply_unread_click",
-   "puppeteer_matches",
-   "sandbox_2",
-   "urdu_allah_to_god",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "html_span_text",
-   "html_em_text",
+  "trimmed": [
    "app_karate_email"
-  ],
-  "explanation": [
-   "app_karate_div_text"
   ],
   "lambda": [
+   "app_karate_email",
+   "html_on_change",
+   "html_on_input",
    "app_new_step_3",
    "app_replace_home",
    "app_replace_rule_set",
@@ -907,242 +1365,139 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "html_on_change",
+   "watch"
+  ],
+  "c": [
    "app_karate_email",
-   "html_on_input"
-  ],
-  "div": [
-   "app_karate_home",
-   "html_div_text",
-   "app_replace_rule_set",
-   "html_div",
-   "html_loading",
-   "app_karate_container",
-   "app_karate_email",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "app_karate_div_text",
-   "app_karate_div",
-   "app_karate_container_centered"
-  ],
-  "padding": [
-   "string_pad",
-   "string_padded_is",
-   "app_karate_container",
-   "app_karate_style_control",
-   "app_karate_container_centered"
-  ],
-  "width": [
-   "html_loading",
-   "app_karate_style_control"
-  ],
-  "color": [
-   "chalk_color",
-   "chalk_green",
-   "chalk_red",
-   "app_karate_email",
-   "app_karate_button_screen_green"
-  ],
-  "p": [
-   "app_name_prefixed",
-   "each_object",
-   "floor",
-   "folder_user_docs_path",
-   "functions_names_from_path",
+   "counter",
+   "ebible_languages_to_bible_folders",
    "function_aliases_restore",
-   "function_rename_suffix_add",
-   "html_p_text",
-   "js_call_new_code",
-   "js_property",
-   "js_property_parse_expression",
-   "js_property_parse_expression_add",
-   "js_visit_children_get",
-   "list_random_item",
-   "marker_above_delete",
-   "marker_previous_index",
-   "marker_screen_add",
-   "messenger_reply",
-   "messenger_reply_playwright",
-   "object_properties_delete",
-   "object_properties_delete_all",
-   "repos_gitignore_overwrite",
-   "string_padded_is"
-  ],
-  "storage_local_initialize_context": [
-   "app_karate_main",
-   "app_replace_font_size",
-   "app_replace_rule_set",
-   "storage_local_initialize_context"
-  ],
-  "html_document_root": [
-   "app_karate_main",
-   "app_replace_font_size_refresh",
-   "html_document_root"
-  ],
-  "app_karate_screens": [
-   "app_karate_main",
-   "app_karate_screens"
-  ],
-  "app_replace_font_size_refresh": [
-   "app_karate_main",
-   "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
-   "app_replace_main"
-  ],
-  "app_refresh": [
-   "app_karate_main",
-   "app_refresh",
-   "app_replace_main",
-   "app_screen_set"
-  ],
-  "html_document_body": [
-   "app_karate_main",
-   "app_refresh",
-   "app_replace_main",
-   "app_reply_main",
-   "html_document_body",
-   "html_loading"
-  ],
-  "html_meta_viewport": [
-   "app_karate_main",
-   "app_replace_main",
-   "html_meta_viewport"
-  ],
-  "app_karate_main": [
-   "app_karate_main"
-  ],
-  "app_fn": [
-   "app_karate_main",
-   "app_refresh",
-   "app_replace_main",
-   "storage_local_get",
-   "storage_local_get_context",
-   "storage_local_initialize",
-   "storage_local_initialize_context",
-   "storage_local_key_get",
-   "storage_local_set",
-   "storage_local_set_context"
-  ],
-  "screens": [
-   "app_karate_main",
-   "app_refresh",
-   "app_replace_main"
-  ],
-  "html": [
-   "app_karate_main",
-   "app_replace_font_size_refresh",
-   "html_document_root",
-   "html_style_font_size"
-  ],
-  "value": [
-   "app_karate_main",
-   "html_style_margin_y",
-   "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
-   "app_replace_settings",
-   "app_screen_set",
-   "bind_property",
-   "cache_generic",
-   "data_boolean_set",
-   "data_get",
-   "data_property_get",
-   "data_transform",
-   "data_value",
-   "each_object",
-   "error_attention_set",
-   "file_json_isolate",
-   "firebase_name",
-   "firebase_storage_download_property",
-   "function_aliases_search",
-   "function_alias_add_generic",
    "function_name_to_path_import",
-   "global_function_async",
-   "global_function_get",
-   "global_function_property",
-   "global_function_property_async",
-   "html_attribute_set",
-   "html_style_font_size",
-   "http_firebase",
-   "integer_is",
-   "js_declaration_asyncify",
-   "js_declaration_params_names_node",
-   "js_declare_assign",
-   "js_declare_assign_null",
-   "js_dollar_s",
-   "js_function_id_add",
-   "js_function_last_asyncify",
-   "js_identifiers_names",
-   "js_identifier_defineds",
-   "js_imports_declarations",
-   "js_marker_name_get",
-   "js_property",
-   "js_property_generic",
-   "js_property_identifier",
-   "js_statement_expression_get",
-   "js_visit_children_get",
-   "lambda_get",
-   "lambda_value",
-   "list_insert",
-   "list_insert_generic",
-   "list_is",
-   "list_map_index",
-   "list_map_property",
-   "list_not_is",
-   "list_replace",
-   "list_set",
-   "list_splice",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "marker_assign_replace_string",
-   "marker_screen_add",
-   "messenger_reply_messages_transform",
-   "messenger_reply_messages_urls_get",
-   "null_is",
-   "null_not_is",
-   "number_is",
-   "object_invert",
-   "object_merge_generic",
-   "object_property_exists_equals",
-   "object_property_from",
-   "object_property_get",
-   "object_property_initialize",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "object_property_set",
-   "object_property_set_exists_not",
-   "promise_is",
-   "repo_about_get",
-   "repo_about_set",
-   "repo_acronym_set",
-   "repo_firebase_service_account_set",
-   "storage_local_get_context",
-   "storage_local_initialize",
-   "storage_local_initialize_context",
-   "storage_local_set",
-   "storage_local_set_context",
-   "storage_local_specify_get",
-   "storage_local_specify_set",
-   "string_is",
-   "string_is_assert",
-   "string_is_assert_json",
-   "string_is_assert_message",
-   "true_is",
-   "undefined_is",
-   "undefined_not_is_assert",
-   "undefined_not_is_assert_lambda",
-   "user_repo_get",
-   "user_repo_set",
-   "watch",
+   "html_parse_classes_preview",
+   "html_parse_descendants_classes",
+   "js_calls_to_each",
+   "js_dollar",
+   "js_identifiers_named_count",
+   "messenger_reply_messages",
+   "sandbox_2",
+   "visit_filter_recursive",
+   "visit_filter_recursive_async"
+  ],
+  "text2": [
    "app_karate_email",
-   "html_value_get",
-   "html_value_set"
+   "app_reply_main"
+  ],
+  "check2": [
+   "app_karate_email"
+  ],
+  "a": [
+   "app_karate_email",
+   "app_name_main",
+   "catch_only_run_async",
+   "data_app_current_get",
+   "data_save",
+   "each_pair",
+   "each_pair_async",
+   "equal_by",
+   "equal_by_async",
+   "equal_not",
+   "firebase_deploy_function_app_current",
+   "function_aliases_restore",
+   "function_alias_add",
+   "function_alias_change",
+   "function_alias_delete",
+   "function_alias_generic",
+   "function_alias_replace",
+   "function_param_swap",
+   "function_transform_marker_all",
+   "function_transform_marker_arg",
+   "function_transform_marker_specified",
+   "identity",
+   "js_auto_transform_new_inner",
+   "js_block_child_graph_unparse",
+   "js_calls_to_each",
+   "js_dollar",
+   "js_dollar_choice_arguments",
+   "js_dollar_new",
+   "js_imports_declarations",
+   "js_keyword_arguments",
+   "js_marker_name_get",
+   "js_stack_list_block_is",
+   "js_statement_call_get",
+   "js_visit",
+   "js_visit_each",
+   "js_visit_each_async",
+   "js_visit_nodes",
+   "list_all",
+   "list_concat",
+   "list_difference",
+   "list_empty_not_is",
+   "list_not_is",
+   "list_range",
+   "list_size_1_assert_message",
+   "list_slice",
+   "list_sort_number_mapper",
+   "list_swap",
+   "list_to",
+   "list_unique",
+   "log_unparse_try",
+   "marker_above_delete",
+   "marker_above_generic",
+   "marker_assign_replace",
+   "marker_bottom",
+   "marker_call",
+   "marker_call_atomize",
+   "marker_call_replace",
+   "marker_call_replace_generic",
+   "marker_down_choices",
+   "marker_down_generic",
+   "marker_enter",
+   "marker_expand",
+   "marker_functionize",
+   "marker_if_test_replace",
+   "marker_index",
+   "marker_leave",
+   "marker_new",
+   "marker_next",
+   "marker_next_await",
+   "marker_next_declare_single_init",
+   "marker_next_declare_single_init_elements",
+   "marker_next_delete",
+   "marker_next_get",
+   "marker_next_index",
+   "marker_param_add",
+   "marker_previous_index",
+   "marker_remove",
+   "marker_rename",
+   "marker_screen_add",
+   "not",
+   "null_not_is_assert",
+   "object_assign",
+   "promise_not_is",
+   "reply",
+   "reply_on_match",
+   "reply_sequence",
+   "sandbox_5_a",
+   "string_empty_not_is",
+   "string_ends_with_not",
+   "string_prefix_without",
+   "string_slice",
+   "string_starts_with_not",
+   "string_suffix_without",
+   "visit_filter_recursive",
+   "visit_filter_recursive_async"
+  ],
+  "li": [
+   "app_karate_email",
+   "function_aliases_restore"
   ],
   "v": [
+   "app_karate_green_dark",
+   "app_karate_margin_y",
    "app_karate_screens",
-   "emoji_add",
-   "emoji_person_outline",
-   "emoji_secure",
+   "emoji_arrow_left",
+   "emoji_arrow_right",
+   "string_regex_match",
    "app_name_prefix",
    "app_new_assign",
    "app_replace_font_size_factor",
@@ -1181,6 +1536,7 @@
    "ebible_version_books_testament_apocrypha",
    "ebible_version_books_upload_name",
    "emoji_100",
+   "emoji_add",
    "emoji_book_open",
    "emoji_cross",
    "emoji_dove",
@@ -1191,7 +1547,9 @@
    "emoji_globe_americas",
    "emoji_home",
    "emoji_ok",
+   "emoji_person_outline",
    "emoji_pray",
+   "emoji_secure",
    "emoji_sleep_face",
    "emoji_sleep_z",
    "emoji_smile",
@@ -1417,12 +1775,111 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
+   "whitespace_normalize"
+  ],
+  "html_span_text": [
+   "app_karate_home",
+   "html_span_text"
+  ],
+  "emoji_person_outline": [
+   "app_karate_home",
+   "emoji_person_outline"
+  ],
+  "emoji_add": [
+   "app_karate_home",
+   "emoji_add"
+  ],
+  "emoji_secure": [
+   "app_karate_home",
+   "emoji_secure"
+  ],
+  "app_karate_home": [
+   "app_karate_home",
+   "app_karate_screens"
+  ],
+  "html_button_karate": [
+   "app_karate_home"
+  ],
+  "component2": [
+   "app_karate_home",
+   "app_reply_main"
+  ],
+  "component3": [
+   "app_karate_home",
+   "app_reply_main"
+  ],
+  "storage_local_initialize_context": [
+   "app_karate_main",
+   "app_replace_font_size",
+   "app_replace_rule_set",
+   "storage_local_initialize_context"
+  ],
+  "html_document_root": [
+   "app_karate_main",
+   "app_replace_font_size_refresh",
+   "html_document_root"
+  ],
+  "app_karate_screens": [
+   "app_karate_main",
+   "app_karate_screens"
+  ],
+  "app_replace_font_size_refresh": [
+   "app_karate_main",
+   "app_replace_font_size_adjust",
+   "app_replace_font_size_refresh",
+   "app_replace_main"
+  ],
+  "app_refresh": [
+   "app_karate_main",
+   "app_refresh",
+   "app_replace_main",
+   "app_screen_set"
+  ],
+  "html_document_body": [
+   "app_karate_main",
+   "app_refresh",
+   "app_replace_main",
+   "app_reply_main",
+   "html_document_body",
+   "html_loading"
+  ],
+  "html_meta_viewport": [
+   "app_karate_main",
+   "app_replace_main",
+   "html_meta_viewport"
+  ],
+  "app_karate_main": [
+   "app_karate_main"
+  ],
+  "app_fn": [
+   "app_karate_main",
+   "app_refresh",
+   "app_replace_main",
+   "storage_local_get",
+   "storage_local_get_context",
+   "storage_local_initialize",
+   "storage_local_initialize_context",
+   "storage_local_key_get",
+   "storage_local_set",
+   "storage_local_set_context"
+  ],
+  "screens": [
+   "app_karate_main",
+   "app_refresh",
+   "app_replace_main"
+  ],
+  "html": [
+   "app_karate_main",
+   "app_replace_font_size_refresh",
+   "html_document_root",
+   "html_style_font_size"
+  ],
+  "app_karate_margin_y": [
    "app_karate_margin_y",
-   "emoji_arrow_left",
-   "app_karate_green_dark",
-   "emoji_arrow_right",
-   "string_regex_match"
+   "app_karate_margin_y_set"
+  ],
+  "margin_y": [
+   "app_karate_margin_y_set"
   ],
   "home": [
    "app_karate_screens",
@@ -1431,130 +1888,290 @@
   "email": [
    "app_karate_screens"
   ],
-  "emoji_person_outline": [
-   "emoji_person_outline",
-   "app_karate_home"
+  "width": [
+   "app_karate_style_control",
+   "html_loading"
   ],
-  "html_clear": [
-   "html_clear_context",
-   "app_refresh",
-   "app_replace_rule_set",
-   "app_reply_main",
-   "html_clear",
-   "app_karate_email"
+  "emoji": [
+   "emoji_email"
   ],
-  "object_property_get": [
-   "html_clear_context",
-   "app_refresh",
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_replace_rule_valid",
-   "app_reply_main",
-   "assert_arguments",
-   "bind_property",
-   "chalk_color",
-   "command_line_node_g",
-   "data_file_update_inner",
-   "data_identifiers_search",
-   "data_property_get",
-   "data_value",
-   "each_object",
-   "ebible_books_to_chapter_codes",
-   "ebible_languages_to_bible_folders",
-   "ebible_references_parse_lines",
-   "ebible_verses_upload",
-   "ebible_version_books_testament",
-   "file_json_isolate",
-   "file_root_exists",
-   "firebase_name_repo",
-   "firebase_storage_download_property",
-   "function_acronym_to_name",
-   "function_acronym_to_names",
-   "function_aliases_search",
-   "function_alias_add_generic",
-   "function_alias_rename",
-   "function_exists_inner",
-   "function_name_repo_path_combine",
-   "function_name_to_path_import",
-   "function_name_to_path_search",
-   "function_rename_identifiers",
-   "global_function_get",
+  "html_em_text": [
+   "html_em_text"
+  ],
+  "span": [
+   "html_em_text",
+   "html_span_text"
+  ],
+  "html_on": [
+   "html_on_change",
+   "html_on_input",
+   "html_on",
+   "html_on_click",
+   "html_on_keydown"
+  ],
+  "html_on_change": [
+   "html_on_change"
+  ],
+  "name_event": [
+   "html_on_change",
+   "html_on_input",
+   "html_on",
+   "html_on_click",
+   "html_on_keydown"
+  ],
+  "html_component_element_get": [
+   "html_value_get",
+   "html_value_set",
+   "html_attribute_set",
    "html_component_element_get",
+   "html_disable_set",
+   "html_element",
+   "html_on",
+   "html_remove",
+   "html_style_assign",
+   "html_style_remove",
+   "html_style_set",
+   "html_text_set"
+  ],
+  "element": [
+   "html_value_get",
+   "html_value_set",
+   "html_attribute_set",
+   "html_clear",
+   "html_component_element_get",
+   "html_component_wrap",
+   "html_display_block",
+   "html_display_none",
+   "html_on",
+   "html_remove",
+   "html_text_set"
+  ],
+  "assert_arguments": [
+   "html_value_set",
+   "app_new",
+   "assert_arguments",
+   "function_params_new",
+   "js_assert_arguments_args",
+   "js_dollar_aa",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
+  ],
+  "object_property_set": [
+   "html_value_set",
+   "data_file_update_inner",
+   "data_transform",
+   "file_json_isolate",
+   "function_alias_add",
+   "function_alias_change",
+   "function_alias_rename",
+   "function_alias_replace",
+   "function_exists_inner",
+   "html_disable_set",
+   "js_arrow_to_function",
    "js_assign_combine",
-   "js_await_add_inner",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_call_callee_name",
-   "js_call_new",
-   "js_call_new_code",
-   "js_code_call_args_await_maybe",
+   "js_await",
+   "js_await_wrap",
    "js_declaration_asyncify",
-   "js_declaration_name",
-   "js_declaration_params_names_node",
-   "js_declare_single_init",
-   "js_dollar",
-   "js_dollar_g",
-   "js_dollar_ir",
-   "js_dollar_s",
+   "js_declare_assign",
+   "js_declare_init_set",
+   "js_dollar_ien_generic",
+   "js_dollar_if_call",
+   "js_dollar_r",
    "js_function_id_add",
    "js_function_last_asyncify",
-   "js_identifiers_named",
-   "js_identifiers_named_count",
-   "js_identifiers_names",
-   "js_identifier_defineds",
    "js_identifier_replace",
-   "js_if_blockify_generic",
    "js_if_else_if_combine",
-   "js_imports_fix",
    "js_imports_paths_fix",
-   "js_imports_unused",
-   "js_imports_unused_remove",
-   "js_let_add",
-   "js_node_atomize",
-   "js_node_type",
-   "js_parse_expression",
+   "js_left_right_set",
+   "js_return_code_replace",
    "js_stack_declaration_asyncify",
-   "js_statement_call_get",
-   "js_statement_expression_get",
-   "js_visit_calls_named",
-   "js_visit_children_get",
-   "list_map_property",
-   "marker_above_delete",
-   "marker_above_generic",
-   "marker_enter",
-   "marker_functionize",
+   "js_statement_return_add",
+   "js_string",
+   "list_empty",
+   "list_map_property_to",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "marker_if_test_replace",
    "marker_next_await",
-   "marker_next_declare_single_init_elements",
    "messenger_reply",
-   "messenger_reply_playwright",
+   "messenger_reply_messages_urls_add_multiple",
    "object_merge_generic",
-   "object_property_equals",
    "object_property_from",
-   "object_property_get",
-   "object_property_get_name",
    "object_property_initialize",
    "object_property_lambda",
    "object_property_lambda_async",
-   "prompt_previous",
-   "reply",
-   "reply_sequence",
-   "repo_acronym_to_name",
-   "html_value_get",
-   "app_karate_email"
+   "object_property_set",
+   "object_property_set_exists_not",
+   "watch"
   ],
-  "html_text_set": [
-   "html_div_text",
+  "arguments": [
+   "html_value_set",
+   "app_new",
+   "catch_call",
+   "functions_combine",
+   "function_params_new",
+   "js_expand_generic",
+   "js_marker_name_get",
+   "marker_call_replace_generic",
+   "marker_rename",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
+  ],
+  "string_includes": [
+   "string_includes_lambda",
+   "function_name_to_path",
+   "search_generic",
+   "string_includes"
+  ],
+  "item": [
+   "string_includes_lambda",
+   "app_replace_home",
+   "app_replace_rule_set",
    "app_reply_main",
-   "html_button",
-   "html_clear",
-   "html_p_text",
-   "html_text_set",
-   "html_text_set_if",
-   "app_karate_div_text",
-   "app_karate_home",
-   "html_span_text",
-   "html_em_text",
-   "app_karate_email"
+   "css_class_prefix_combine",
+   "data_file_update_inner",
+   "each",
+   "each_async",
+   "each_index",
+   "each_index_async",
+   "each_multiple",
+   "each_multiple_async",
+   "ebible_chapters",
+   "ebible_chapter_text",
+   "ebible_languages_to_bible_folders",
+   "ebible_versions_download",
+   "ebible_version_books_testament",
+   "folder_find_starts_with",
+   "functions_combine",
+   "function_wrap",
+   "html_display_none_or_block",
+   "html_parse_attr",
+   "html_parse_descendants_classes",
+   "html_parse_href",
+   "html_parse_href_text",
+   "html_parse_href_text_map",
+   "html_parse_text",
+   "html_p_text_multiple",
+   "js_declaration_param_add",
+   "js_declaration_param_add_node",
+   "js_declaration_single_block_body_add",
+   "js_dollar_a",
+   "js_expand_generic",
+   "js_identifier_defineds",
+   "js_node_types_is",
+   "js_stack_filtered_multiple",
+   "js_statement_return",
+   "js_statement_return_empty",
+   "js_types_function_includes",
+   "keyboard_type_delay",
+   "lists_get",
+   "list_add",
+   "list_adder_async",
+   "list_adder_generic",
+   "list_adder_generic_async",
+   "list_add_first",
+   "list_add_if_not_includes",
+   "list_any_starts_with",
+   "list_concat_multiple",
+   "list_filter_empty_not_is",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "list_filter_starts_with",
+   "list_filter_starts_with_any",
+   "list_filter_starts_with_not",
+   "list_filter_starts_with_not_multiple",
+   "list_find_property",
+   "list_find_starts_with",
+   "list_get",
+   "list_get_end",
+   "list_get_end_3",
+   "list_includes",
+   "list_index_of",
+   "list_index_of_delta",
+   "list_index_of_delta_outside",
+   "list_index_of_last",
+   "list_index_of_next",
+   "list_index_of_next_outside",
+   "list_index_of_previous",
+   "list_last_is",
+   "list_last_or_null",
+   "list_map_index",
+   "list_map_path_join",
+   "list_map_prefix_any",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_map_property",
+   "list_map_property_to",
+   "list_map_split_space",
+   "list_next",
+   "list_next_index",
+   "list_next_try",
+   "list_previous",
+   "list_remove",
+   "list_remove_all",
+   "list_remove_if_exists",
+   "list_squash",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "list_unique",
+   "marker_down_choices",
+   "object_property_equals",
+   "object_property_equals_lambda",
+   "object_property_get_name",
+   "range_from",
+   "sandbox_4_a",
+   "string_ends_with_not",
+   "string_starts_with_not",
+   "tasks_run"
+  ],
+  "l": [
+   "string_includes_lambda",
+   "string_regex_match_lambda",
+   "function_aliases_restore",
+   "js_dollar_a_generic",
+   "js_dollar_x",
+   "list_concat",
+   "list_difference",
+   "list_filter",
+   "list_intersect",
+   "list_is",
+   "list_squash",
+   "marker_down_choices"
+  ],
+  "string_includes_lambda_inner": [
+   "string_includes_lambda"
+  ],
+  "si": [
+   "string_includes_lambda",
+   "string_is"
+  ],
+  "string_regex_match": [
+   "string_regex_match",
+   "string_regex_match_lambda"
+  ],
+  "regex": [
+   "string_regex_match",
+   "string_regex_match_lambda"
+  ],
+  "match": [
+   "string_regex_match",
+   "js_node_types_is",
+   "log_unparse_try",
+   "roman_to_integer"
+  ],
+  "string_regex_match_lambda_inner": [
+   "string_regex_match_lambda"
+  ],
+  "m": [
+   "string_regex_match_lambda",
+   "ebible_references_parse_lines",
+   "function_aliases_restore",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "messenger_reply_unread_click",
+   "reply_test"
   ],
   "add": [
    "add",
@@ -1890,103 +2507,6 @@
    "firebase_deploy_function_app_current",
    "html_update_dev"
   ],
-  "a": [
-   "app_name_main",
-   "catch_only_run_async",
-   "data_app_current_get",
-   "data_save",
-   "each_pair",
-   "each_pair_async",
-   "equal_by",
-   "equal_by_async",
-   "equal_not",
-   "firebase_deploy_function_app_current",
-   "function_aliases_restore",
-   "function_alias_add",
-   "function_alias_change",
-   "function_alias_delete",
-   "function_alias_generic",
-   "function_alias_replace",
-   "function_param_swap",
-   "function_transform_marker_all",
-   "function_transform_marker_arg",
-   "function_transform_marker_specified",
-   "identity",
-   "js_auto_transform_new_inner",
-   "js_block_child_graph_unparse",
-   "js_calls_to_each",
-   "js_dollar",
-   "js_dollar_choice_arguments",
-   "js_dollar_new",
-   "js_imports_declarations",
-   "js_keyword_arguments",
-   "js_marker_name_get",
-   "js_stack_list_block_is",
-   "js_statement_call_get",
-   "js_visit",
-   "js_visit_each",
-   "js_visit_each_async",
-   "js_visit_nodes",
-   "list_all",
-   "list_concat",
-   "list_difference",
-   "list_empty_not_is",
-   "list_not_is",
-   "list_range",
-   "list_size_1_assert_message",
-   "list_slice",
-   "list_sort_number_mapper",
-   "list_swap",
-   "list_to",
-   "list_unique",
-   "log_unparse_try",
-   "marker_above_delete",
-   "marker_above_generic",
-   "marker_assign_replace",
-   "marker_bottom",
-   "marker_call",
-   "marker_call_atomize",
-   "marker_call_replace",
-   "marker_call_replace_generic",
-   "marker_down_choices",
-   "marker_down_generic",
-   "marker_enter",
-   "marker_expand",
-   "marker_functionize",
-   "marker_if_test_replace",
-   "marker_index",
-   "marker_leave",
-   "marker_new",
-   "marker_next",
-   "marker_next_await",
-   "marker_next_declare_single_init",
-   "marker_next_declare_single_init_elements",
-   "marker_next_delete",
-   "marker_next_get",
-   "marker_next_index",
-   "marker_param_add",
-   "marker_previous_index",
-   "marker_remove",
-   "marker_rename",
-   "marker_screen_add",
-   "not",
-   "null_not_is_assert",
-   "object_assign",
-   "promise_not_is",
-   "reply",
-   "reply_on_match",
-   "reply_sequence",
-   "sandbox_5_a",
-   "string_empty_not_is",
-   "string_ends_with_not",
-   "string_prefix_without",
-   "string_slice",
-   "string_starts_with_not",
-   "string_suffix_without",
-   "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_karate_email"
-  ],
   "app_name_prefix": [
    "app_name_prefix",
    "app_name_prefixed"
@@ -2102,23 +2622,37 @@
    "task_new",
    "watch"
   ],
+  "p": [
+   "app_name_prefixed",
+   "each_object",
+   "floor",
+   "folder_user_docs_path",
+   "functions_names_from_path",
+   "function_aliases_restore",
+   "function_rename_suffix_add",
+   "html_p_text",
+   "js_call_new_code",
+   "js_property",
+   "js_property_parse_expression",
+   "js_property_parse_expression_add",
+   "js_visit_children_get",
+   "list_random_item",
+   "marker_above_delete",
+   "marker_previous_index",
+   "marker_screen_add",
+   "messenger_reply",
+   "messenger_reply_playwright",
+   "object_properties_delete",
+   "object_properties_delete_all",
+   "repos_gitignore_overwrite",
+   "string_padded_is"
+  ],
   "string_and_empty_not_is_assert": [
    "app_new",
    "app_new_step_1",
    "app_new_step_2",
    "app_new_step_3",
    "string_and_empty_not_is_assert"
-  ],
-  "assert_arguments": [
-   "app_new",
-   "assert_arguments",
-   "function_params_new",
-   "js_assert_arguments_args",
-   "js_dollar_aa",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "html_value_set"
   ],
   "app_new_step_1": [
    "app_new",
@@ -2130,20 +2664,6 @@
   ],
   "app_new": [
    "app_new"
-  ],
-  "arguments": [
-   "app_new",
-   "catch_call",
-   "functions_combine",
-   "function_params_new",
-   "js_expand_generic",
-   "js_marker_name_get",
-   "marker_call_replace_generic",
-   "marker_rename",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "html_value_set"
   ],
   "js_declare": [
    "app_new_assign",
@@ -2335,6 +2855,7 @@
    "js_auto_transform_new_inner",
    "js_bang_to_not",
    "js_declaration_param_add_node",
+   "js_declaration_single_block_body_add",
    "js_dollar_a_generic",
    "js_dollar_f",
    "js_dollar_g",
@@ -2357,8 +2878,7 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "js_declaration_single_block_body_add"
+   "visit_filter_recursive_async"
   ],
   "firebase_name_repo": [
    "app_new_step_3",
@@ -2455,12 +2975,12 @@
    "functions_combine",
    "function_list_generate",
    "js_declaration_single_block_body",
+   "js_declaration_single_block_body_add",
    "js_declaration_single_block_body_add_return",
    "js_dollar_aa",
    "js_return_name",
    "marker_top",
-   "task_new",
-   "js_declaration_single_block_body_add"
+   "task_new"
   ],
   "js_declaration_single": [
    "app_new_step_3",
@@ -2630,6 +3150,7 @@
    "js_call_new_expression",
    "js_declaration_single",
    "js_declaration_single_block_body",
+   "js_declaration_single_block_body_add",
    "js_declaration_single_block_body_add_return",
    "js_declaration_single_name",
    "js_declaration_single_params_add",
@@ -2707,8 +3228,7 @@
    "marker_screen_add",
    "marker_top",
    "promise_not_is",
-   "task_new",
-   "js_declaration_single_block_body_add"
+   "task_new"
   ],
   "async": [
    "app_new_step_3",
@@ -2738,6 +3258,7 @@
    "functions_combine",
    "function_list_generate",
    "js_declaration_single_block_body",
+   "js_declaration_single_block_body_add",
    "js_declaration_single_block_body_add_return",
    "js_declaration_to_block_body",
    "js_dollar_aa",
@@ -2747,8 +3268,7 @@
    "js_statement_return_empty_add",
    "marker_down_choices_lambda",
    "marker_functionize",
-   "task_new",
-   "js_declaration_single_block_body_add"
+   "task_new"
   ],
   "output": [
    "app_new_step_3",
@@ -2792,15 +3312,6 @@
    "marker_enter",
    "marker_functionize",
    "marker_top"
-  ],
-  "screen_name": [
-   "app_refresh",
-   "function_new_app_screen",
-   "html_button_screen",
-   "marker_screen_add",
-   "app_karate_home",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
   ],
   "screen": [
    "app_refresh"
@@ -2863,6 +3374,14 @@
    "app_screen_set",
    "html_button_screen"
   ],
+  "html_button": [
+   "app_replace_home",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "html_button",
+   "html_button_screen"
+  ],
   "app_replace_rule_sets": [
    "app_replace_home",
    "app_replace_rule_set",
@@ -2879,110 +3398,22 @@
    "app_replace_home",
    "app_replace_screens"
   ],
-  "rule_sets": [
-   "app_replace_home",
-   "app_replace_rule_set"
-  ],
-  "item": [
+  "lambda4": [
    "app_replace_home",
    "app_replace_rule_set",
    "app_reply_main",
-   "css_class_prefix_combine",
-   "data_file_update_inner",
-   "each",
-   "each_async",
-   "each_index",
-   "each_index_async",
-   "each_multiple",
-   "each_multiple_async",
-   "ebible_chapters",
-   "ebible_chapter_text",
-   "ebible_languages_to_bible_folders",
-   "ebible_versions_download",
-   "ebible_version_books_testament",
-   "folder_find_starts_with",
-   "functions_combine",
-   "function_wrap",
-   "html_display_none_or_block",
-   "html_parse_attr",
-   "html_parse_descendants_classes",
-   "html_parse_href",
-   "html_parse_href_text",
-   "html_parse_href_text_map",
-   "html_parse_text",
-   "html_p_text_multiple",
-   "js_declaration_param_add",
-   "js_declaration_param_add_node",
-   "js_dollar_a",
+   "ebible_references_parse_lines",
+   "function_params_new",
+   "js_await_add_inner",
    "js_expand_generic",
    "js_identifier_defineds",
-   "js_node_types_is",
-   "js_stack_filtered_multiple",
-   "js_statement_return",
-   "js_statement_return_empty",
-   "js_types_function_includes",
-   "keyboard_type_delay",
-   "lists_get",
-   "list_add",
-   "list_adder_async",
-   "list_adder_generic",
-   "list_adder_generic_async",
-   "list_add_first",
-   "list_add_if_not_includes",
-   "list_any_starts_with",
-   "list_concat_multiple",
-   "list_filter_empty_not_is",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "list_filter_starts_with",
-   "list_filter_starts_with_any",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_find_property",
-   "list_find_starts_with",
-   "list_get",
-   "list_get_end",
-   "list_get_end_3",
-   "list_includes",
-   "list_index_of",
-   "list_index_of_delta",
-   "list_index_of_delta_outside",
-   "list_index_of_last",
-   "list_index_of_next",
-   "list_index_of_next_outside",
-   "list_index_of_previous",
-   "list_last_is",
-   "list_last_or_null",
-   "list_map_index",
-   "list_map_path_join",
-   "list_map_prefix_any",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_map_property",
-   "list_map_property_to",
-   "list_map_split_space",
-   "list_next",
-   "list_next_index",
-   "list_next_try",
-   "list_previous",
-   "list_remove",
-   "list_remove_all",
-   "list_remove_if_exists",
-   "list_squash",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "list_unique",
-   "marker_down_choices",
-   "object_property_equals",
-   "object_property_equals_lambda",
-   "object_property_get_name",
-   "range_from",
-   "sandbox_4_a",
-   "string_ends_with_not",
-   "string_starts_with_not",
-   "tasks_run",
-   "js_declaration_single_block_body_add",
-   "string_includes_lambda"
+   "messenger_reply",
+   "messenger_reply_messages",
+   "promise_wrap"
+  ],
+  "rule_sets": [
+   "app_replace_home",
+   "app_replace_rule_set"
   ],
   "index": [
    "app_replace_home",
@@ -3203,64 +3634,6 @@
    "app_replace_rule_set",
    "app_replace_rule_valid"
   ],
-  "not": [
-   "app_replace_rule_set",
-   "app_reply_main",
-   "assert",
-   "assert_message",
-   "catch_only_run_async",
-   "data_all",
-   "equal_not",
-   "function_alias_change",
-   "function_alias_delete",
-   "function_alias_replace",
-   "function_list_generate",
-   "function_params_new",
-   "http",
-   "js_await_add_inner",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_declare_single",
-   "js_function_last_asyncify",
-   "js_if_blockify_generic",
-   "js_imports_declarations",
-   "js_let_add",
-   "js_marker_name_get",
-   "js_node_type_not_is",
-   "js_stack_list_block_is",
-   "js_statement_call_get",
-   "js_unparse",
-   "js_visit",
-   "js_visit_nodes",
-   "list_add_if_not_includes",
-   "list_difference",
-   "list_empty_not_is",
-   "list_index_of_delta",
-   "list_not_is",
-   "list_size_1_assert_message",
-   "list_unique",
-   "log_unparse_try",
-   "marker_functionize",
-   "marker_rename",
-   "not",
-   "object_property_exists_not",
-   "object_property_initialize",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "path_join",
-   "promise_not_is",
-   "roman_to_integer",
-   "string_empty_not_is",
-   "string_ends_with_not",
-   "string_prefix_without",
-   "string_skip_while",
-   "string_starts_with_not",
-   "string_suffix_without",
-   "string_trim_right",
-   "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_karate_email"
-  ],
   "html_enable_if": [
    "app_replace_rule_set",
    "html_enable_if"
@@ -3284,56 +3657,6 @@
   "list_map_index": [
    "app_replace_rule_set",
    "list_map_index"
-  ],
-  "each": [
-   "app_replace_rule_set",
-   "app_reply_main",
-   "bible_verses_encouragement_generate",
-   "data_file_update_inner",
-   "each",
-   "each_index",
-   "each_object",
-   "each_range",
-   "each_range_from",
-   "each_reverse",
-   "ebible_chapter_text",
-   "ebible_index_flat",
-   "function_alias_rename",
-   "function_identifier_replace",
-   "function_params_new",
-   "html_parse_descendants_classes",
-   "html_p_text_multiple",
-   "js_block_child_graph",
-   "js_declaration_single_params_add",
-   "js_dollar_a",
-   "js_dollar_s",
-   "js_expand_generic",
-   "js_identifier_defineds",
-   "js_imports_declarations",
-   "js_imports_fix",
-   "js_imports_paths_fix",
-   "js_imports_unused_remove",
-   "js_outside_move",
-   "js_stack_filtered_multiple_each",
-   "js_visit_each",
-   "lambda_invoke_multiple",
-   "list_concat_multiple",
-   "list_difference",
-   "list_intersect",
-   "list_remove_all_multiple",
-   "list_remove_multiple",
-   "list_squash",
-   "list_to_dictionary",
-   "list_unique",
-   "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply_unread_collect",
-   "object_merge_generic",
-   "object_properties_delete",
-   "object_properties_delete_all",
-   "object_properties_from",
-   "reduce",
-   "visit_filter_recursive",
-   "app_karate_email"
   ],
   "html_p": [
    "app_replace_rule_set",
@@ -3440,12 +3763,6 @@
    "app_replace_settings",
    "emoji_home"
   ],
-  "html_button_screen": [
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "html_button_screen",
-   "app_karate_button_screen_uncolored"
-  ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
    "app_replace_screens"
@@ -3526,6 +3843,35 @@
   ],
   "left_joined": [
    "app_replace_rule_set"
+  ],
+  "lambda3": [
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "ebible_versions_download",
+   "error_attention_set",
+   "function_list_generate",
+   "function_params_new",
+   "http",
+   "js_await_add_inner",
+   "js_calls_to_each",
+   "js_call_new_code",
+   "js_dollar_a",
+   "js_dollar_a_generic",
+   "js_expand_generic",
+   "js_identifiers_named_count",
+   "js_identifier_defineds",
+   "js_if_else_if_combine",
+   "js_log_remove",
+   "js_outside_move",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "marker_down_choices_lambda",
+   "marker_functionize",
+   "messenger_reply_messages",
+   "object_properties_from",
+   "puppeteer_hrefs",
+   "retry"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -4365,10 +4711,6 @@
    "marker_down_choices",
    "marker_down_choices_lambda",
    "marker_down_generic"
-  ],
-  "text2": [
-   "app_reply_main",
-   "app_karate_email"
   ],
   "letters": [
    "app_reply_main",
@@ -5897,27 +6239,6 @@
   "createInterface": [
    "command_line_read"
   ],
-  "input": [
-   "command_line_read",
-   "integer_to",
-   "list_map_lower",
-   "marker_call_atomize",
-   "marker_call_replace",
-   "marker_call_replace_generic",
-   "messenger_reply_playwright",
-   "reply",
-   "reply_test",
-   "roman_to_integer",
-   "string_suffix_change",
-   "string_to",
-   "app_karate_email",
-   "string_includes",
-   "string_includes_lambda",
-   "string_regex_match",
-   "string_regex_match_lambda",
-   "html_value_get",
-   "html_value_set"
-  ],
   "process": [
    "command_line_read",
    "exit",
@@ -5956,22 +6277,6 @@
   ],
   "lambda$c": [
    "counter"
-  ],
-  "c": [
-   "counter",
-   "ebible_languages_to_bible_folders",
-   "function_aliases_restore",
-   "function_name_to_path_import",
-   "html_parse_classes_preview",
-   "html_parse_descendants_classes",
-   "js_calls_to_each",
-   "js_dollar",
-   "js_identifiers_named_count",
-   "messenger_reply_messages",
-   "sandbox_2",
-   "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_karate_email"
   ],
   "css_class_prefix_combine": [
    "css_class_prefix_combine",
@@ -6408,54 +6713,6 @@
   "data_file_update": [
    "data_file_update",
    "watch"
-  ],
-  "object_property_set": [
-   "data_file_update_inner",
-   "data_transform",
-   "file_json_isolate",
-   "function_alias_add",
-   "function_alias_change",
-   "function_alias_rename",
-   "function_alias_replace",
-   "function_exists_inner",
-   "html_disable_set",
-   "js_arrow_to_function",
-   "js_assign_combine",
-   "js_await",
-   "js_await_wrap",
-   "js_declaration_asyncify",
-   "js_declare_assign",
-   "js_declare_init_set",
-   "js_dollar_ien_generic",
-   "js_dollar_if_call",
-   "js_dollar_r",
-   "js_function_id_add",
-   "js_function_last_asyncify",
-   "js_identifier_replace",
-   "js_if_else_if_combine",
-   "js_imports_paths_fix",
-   "js_left_right_set",
-   "js_return_code_replace",
-   "js_stack_declaration_asyncify",
-   "js_statement_return_add",
-   "js_string",
-   "list_empty",
-   "list_map_property_to",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "marker_if_test_replace",
-   "marker_next_await",
-   "messenger_reply",
-   "messenger_reply_messages_urls_add_multiple",
-   "object_merge_generic",
-   "object_property_from",
-   "object_property_initialize",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "object_property_set",
-   "object_property_set_exists_not",
-   "watch",
-   "html_value_set"
   ],
   "object_property_delete": [
    "data_file_update_inner",
@@ -7740,15 +7997,6 @@
   "verse_end": [
    "ebible_references_parse_lines"
   ],
-  "m": [
-   "ebible_references_parse_lines",
-   "function_aliases_restore",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "messenger_reply_unread_click",
-   "reply_test",
-   "string_regex_match_lambda"
-  ],
   "book2": [
    "ebible_references_parse_lines"
   ],
@@ -7782,16 +8030,6 @@
    "list_intersect",
    "list_squash",
    "marker_down_choices_lambda"
-  ],
-  "string_empty_not_is": [
-   "ebible_verses",
-   "file_root_exists",
-   "js_dollar",
-   "js_identifier_unique",
-   "list_filter_empty_not_is",
-   "string_empty_not_is",
-   "string_empty_not_is_assert",
-   "app_karate_email"
   ],
   "list_filter": [
    "ebible_verses",
@@ -9349,24 +9587,6 @@
   "lin": [
    "function_aliases_restore"
   ],
-  "li": [
-   "function_aliases_restore",
-   "app_karate_email"
-  ],
-  "l": [
-   "function_aliases_restore",
-   "js_dollar_a_generic",
-   "js_dollar_x",
-   "list_concat",
-   "list_difference",
-   "list_filter",
-   "list_intersect",
-   "list_is",
-   "list_squash",
-   "marker_down_choices",
-   "string_includes_lambda",
-   "string_regex_match_lambda"
-  ],
   "at": [
    "function_aliases_restore"
   ],
@@ -10142,12 +10362,6 @@
    "string_split_semicolon_space",
    "string_split_space"
   ],
-  "string_includes": [
-   "function_name_to_path",
-   "search_generic",
-   "string_includes",
-   "string_includes_lambda"
-  ],
   "previous2": [
    "function_name_to_path_import"
   ],
@@ -10844,6 +11058,11 @@
    "function_watch_ending_change",
    "string_suffix_change"
   ],
+  "js_declaration_single_block_body_add": [
+   "function_wrap",
+   "js_declaration_single_block_body_add",
+   "marker_screen_add"
+  ],
   "js_statement_return": [
    "function_wrap",
    "js_statement_return",
@@ -11083,38 +11302,6 @@
   "global_function_property_async": [
    "global_function_property_async"
   ],
-  "html_component_element_get": [
-   "html_attribute_set",
-   "html_component_element_get",
-   "html_disable_set",
-   "html_element",
-   "html_on",
-   "html_remove",
-   "html_style_assign",
-   "html_style_remove",
-   "html_style_set",
-   "html_text_set",
-   "html_value_get",
-   "html_value_set"
-  ],
-  "html_attribute_set": [
-   "html_attribute_set",
-   "html_meta_viewport",
-   "app_karate_email"
-  ],
-  "element": [
-   "html_attribute_set",
-   "html_clear",
-   "html_component_wrap",
-   "html_display_block",
-   "html_display_none",
-   "html_on",
-   "html_remove",
-   "html_text_set",
-   "html_component_element_get",
-   "html_value_get",
-   "html_value_set"
-  ],
   "setAttribute": [
    "html_attribute_set"
   ],
@@ -11125,17 +11312,6 @@
   "html_button_element": [
    "html_button",
    "html_button_element"
-  ],
-  "html_element": [
-   "html_button_element",
-   "html_div",
-   "html_document_root",
-   "html_element",
-   "html_meta_viewport",
-   "html_p",
-   "app_karate_email",
-   "html_span_text",
-   "html_em_text"
   ],
   "tag_name": [
    "html_button_element",
@@ -11178,6 +11354,9 @@
   "html_display_none": [
    "html_display_none",
    "html_display_none_or_block"
+  ],
+  "html_div_text": [
+   "html_div_text"
   ],
   "body_element": [
    "html_document_body"
@@ -11250,20 +11429,6 @@
   "html_update": [
    "html_new",
    "html_update"
-  ],
-  "html_on": [
-   "html_on",
-   "html_on_click",
-   "html_on_keydown",
-   "html_on_change",
-   "html_on_input"
-  ],
-  "name_event": [
-   "html_on",
-   "html_on_click",
-   "html_on_keydown",
-   "html_on_change",
-   "html_on_input"
   ],
   "addEventListener": [
    "html_on"
@@ -12653,15 +12818,6 @@
   "js_dollar_choice_arguments_names": [
    "js_dollar_choice_arguments_names"
   ],
-  "log": [
-   "js_dollar_g",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine",
-   "app_karate_email"
-  ],
   "list_first_remaining": [
    "js_dollar_g",
    "list_first_remaining"
@@ -13159,12 +13315,6 @@
    "js_stack_filtered_multiple",
    "js_visit_types",
    "log_unparse_try"
-  ],
-  "match": [
-   "js_node_types_is",
-   "log_unparse_try",
-   "roman_to_integer",
-   "string_regex_match"
   ],
   "js_node_type_is_assert": [
    "js_node_type_is_assert",
@@ -14158,11 +14308,6 @@
    "messenger_reply_messages",
    "messenger_reply_messages_urls_add"
   ],
-  "string_trim": [
-   "messenger_reply_messages",
-   "string_trim",
-   "app_karate_email"
-  ],
   "conversation": [
    "messenger_reply_messages"
   ],
@@ -14815,9 +14960,8 @@
    "string_includes",
    "string_is_assert_json"
   ],
-  "si": [
-   "string_is",
-   "string_includes_lambda"
+  "part": [
+   "string_includes"
   ],
   "string_is_assert_message": [
    "string_is_assert_json",
@@ -15009,157 +15153,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "js_declaration_single_block_body_add": [
-   "function_wrap",
-   "js_declaration_single_block_body_add",
-   "marker_screen_add"
-  ],
-  "container": [
-   "app_karate_home",
-   "html_span_text",
-   "html_em_text",
-   "app_karate_container_main",
-   "app_karate_email"
-  ],
-  "app_karate_container": [
-   "app_karate_home",
-   "app_karate_container",
-   "app_karate_email"
-  ],
-  "app_karate_margin_y": [
-   "app_karate_margin_y",
-   "app_karate_margin_y_set"
-  ],
-  "app_karate_button_screen_uncolored": [
-   "app_karate_button_screen_uncolored",
-   "app_karate_email",
-   "app_karate_button_screen_green"
-  ],
-  "emoji_arrow_left": [
-   "app_karate_email",
-   "emoji_arrow_left"
-  ],
-  "app_karate_style_control": [
-   "app_karate_button_screen_uncolored",
-   "app_karate_style_control",
-   "app_karate_email"
-  ],
-  "app_karate_green_dark": [
-   "app_karate_green_dark",
-   "app_karate_email",
-   "app_karate_button_screen_green"
-  ],
-  "app_karate_margin_y_set": [
-   "app_karate_style_control",
-   "app_karate_margin_y_set",
-   "app_karate_div"
-  ],
-  "margin_y": [
-   "app_karate_margin_y_set"
-  ],
-  "app_karate_div_text": [
-   "app_karate_div_text",
-   "app_karate_email"
-  ],
-  "emoji_email": [
-   "app_karate_email",
-   "emoji_email"
-  ],
-  "emoji": [
-   "emoji_email"
-  ],
-  "app_karate_button_screen_green": [
-   "app_karate_home",
-   "app_karate_button_screen_green",
-   "app_karate_email"
-  ],
-  "emoji_arrow_right": [
-   "app_karate_email",
-   "emoji_arrow_right"
-  ],
-  "app_karate_div": [
-   "app_karate_div_text",
-   "app_karate_div",
-   "app_karate_home",
-   "app_karate_email"
-  ],
-  "html_span_text": [
-   "app_karate_home",
-   "html_span_text"
-  ],
-  "span": [
-   "html_span_text",
-   "html_em_text"
-  ],
-  "html_em_text": [
-   "html_em_text"
-  ],
-  "app_karate_container_main": [
-   "app_karate_home",
-   "app_karate_container_main",
-   "app_karate_email"
-  ],
-  "check": [
-   "app_karate_email"
-  ],
-  "string_includes_lambda": [
-   "string_includes_lambda",
-   "app_karate_email"
-  ],
-  "part": [
-   "string_includes"
-  ],
-  "string_regex_match": [
-   "string_regex_match",
-   "string_regex_match_lambda"
-  ],
-  "regex": [
-   "string_regex_match",
-   "string_regex_match_lambda"
-  ],
-  "string_regex_match_lambda": [
-   "string_regex_match_lambda",
-   "app_karate_email"
-  ],
-  "string_includes_lambda_inner": [
-   "string_includes_lambda"
-  ],
-  "string_regex_match_lambda_inner": [
-   "string_regex_match_lambda"
-  ],
-  "checks": [
-   "app_karate_email"
-  ],
-  "html_on_change": [
-   "html_on_change"
-  ],
-  "html_value_get": [
-   "app_karate_email",
-   "html_value_get"
-  ],
-  "trimmed": [
-   "app_karate_email"
-  ],
-  "html_value_set": [
-   "html_value_set",
-   "app_karate_email"
-  ],
-  "div_checks": [
-   "app_karate_email"
-  ],
-  "check2": [
-   "app_karate_email"
-  ],
-  "ul": [
-   "app_karate_email"
-  ],
-  "html_on_input": [
-   "html_on_input",
-   "app_karate_email"
-  ],
-  "app_karate_container_centered": [
-   "app_karate_container_centered"
   ]
  },
  "functions": {
@@ -15168,6 +15161,80 @@
    "identifiers": [
     "app_main",
     "app_karate"
+   ]
+  },
+  "app_karate_button_screen_green": {
+   "async": false,
+   "identifiers": [
+    "app_karate_green_dark",
+    "html_style_assign",
+    "app_karate_button_screen_uncolored",
+    "app_karate_button_screen_green",
+    "div",
+    "text",
+    "context",
+    "screen_name",
+    "component",
+    "color"
+   ]
+  },
+  "app_karate_button_screen_uncolored": {
+   "async": false,
+   "identifiers": [
+    "app_karate_style_control",
+    "html_button_screen",
+    "app_karate_button_screen_uncolored",
+    "div",
+    "text",
+    "context",
+    "screen_name",
+    "component"
+   ]
+  },
+  "app_karate_container_centered": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_style_set",
+    "html_style_margin_y",
+    "html_style_assign",
+    "html_div",
+    "app_karate_container_centered",
+    "parent",
+    "div",
+    "padding"
+   ]
+  },
+  "app_karate_container_main": {
+   "async": false,
+   "identifiers": [
+    "html_style_set",
+    "html_div",
+    "app_karate_container_main",
+    "root",
+    "container"
+   ]
+  },
+  "app_karate_div": {
+   "async": false,
+   "identifiers": [
+    "app_karate_margin_y_set",
+    "html_div",
+    "app_karate_div",
+    "parent",
+    "div"
+   ]
+  },
+  "app_karate_div_text": {
+   "async": false,
+   "identifiers": [
+    "app_karate_div",
+    "html_text_set",
+    "marker",
+    "app_karate_div_text",
+    "parent",
+    "explanation",
+    "div"
    ]
   },
   "app_karate_email": {
@@ -15226,6 +15293,13 @@
     "li"
    ]
   },
+  "app_karate_green_dark": {
+   "async": false,
+   "identifiers": [
+    "app_karate_green_dark",
+    "v"
+   ]
+  },
   "app_karate_home": {
    "async": false,
    "identifiers": [
@@ -15275,6 +15349,23 @@
     "value"
    ]
   },
+  "app_karate_margin_y": {
+   "async": false,
+   "identifiers": [
+    "app_karate_margin_y",
+    "v"
+   ]
+  },
+  "app_karate_margin_y_set": {
+   "async": false,
+   "identifiers": [
+    "html_style_margin_y",
+    "app_karate_margin_y",
+    "app_karate_margin_y_set",
+    "component",
+    "margin_y"
+   ]
+  },
   "app_karate_screens": {
    "async": false,
    "identifiers": [
@@ -15287,57 +15378,143 @@
     "email"
    ]
   },
-  "emoji_add": {
+  "app_karate_style_control": {
    "async": false,
    "identifiers": [
-    "emoji_add",
+    "app_karate_margin_y_set",
+    "html_style_assign",
+    "app_karate_style_control",
+    "component",
+    "padding",
+    "width"
+   ]
+  },
+  "emoji_arrow_left": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_left",
     "v"
    ]
   },
-  "emoji_person_outline": {
+  "emoji_arrow_right": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_right",
+    "v"
+   ]
+  },
+  "emoji_email": {
+   "async": false,
+   "identifiers": [
+    "emoji_email",
+    "emoji"
+   ]
+  },
+  "html_em_text": {
    "async": false,
    "identifiers": [
     "marker",
-    "emoji_person_outline",
-    "v"
+    "html_text_set",
+    "html_element",
+    "html_em_text",
+    "container",
+    "text",
+    "span"
    ]
   },
-  "emoji_secure": {
+  "html_on_change": {
    "async": false,
    "identifiers": [
-    "emoji_secure",
-    "v"
+    "marker",
+    "html_on",
+    "html_on_change",
+    "component",
+    "lambda",
+    "name_event"
    ]
   },
-  "html_clear_context": {
+  "html_on_input": {
    "async": false,
    "identifiers": [
-    "html_clear",
-    "object_property_get",
-    "html_clear_context",
-    "context",
-    "root"
+    "marker",
+    "html_on",
+    "html_on_input",
+    "component",
+    "lambda",
+    "name_event"
    ]
   },
-  "html_div_text": {
+  "html_span_text": {
    "async": false,
    "identifiers": [
     "html_text_set",
-    "html_div",
-    "marker",
-    "html_div_text",
-    "root",
+    "html_element",
+    "html_span_text",
+    "container",
     "text",
-    "div"
+    "span"
    ]
   },
-  "html_style_margin_y": {
+  "html_value_get": {
    "async": false,
    "identifiers": [
-    "html_style_assign",
-    "html_style_margin_y",
-    "component",
+    "object_property_get",
+    "html_component_element_get",
+    "html_value_get",
+    "input",
+    "element",
     "value"
+   ]
+  },
+  "html_value_set": {
+   "async": false,
+   "identifiers": [
+    "assert_arguments",
+    "object_property_set",
+    "marker",
+    "html_component_element_get",
+    "html_value_set",
+    "input",
+    "value",
+    "arguments",
+    "element"
+   ]
+  },
+  "string_includes_lambda": {
+   "async": false,
+   "identifiers": [
+    "string_includes",
+    "marker",
+    "string_includes_lambda",
+    "item",
+    "l",
+    "string_includes_lambda_inner",
+    "input",
+    "si"
+   ]
+  },
+  "string_regex_match": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_regex_match",
+    "input",
+    "regex",
+    "v",
+    "match"
+   ]
+  },
+  "string_regex_match_lambda": {
+   "async": false,
+   "identifiers": [
+    "string_regex_match",
+    "marker",
+    "string_regex_match_lambda",
+    "regex",
+    "l",
+    "string_regex_match_lambda_inner",
+    "input",
+    "m"
    ]
   },
   "add": {
@@ -17939,6 +18116,13 @@
     "v"
    ]
   },
+  "emoji_add": {
+   "async": false,
+   "identifiers": [
+    "emoji_add",
+    "v"
+   ]
+  },
   "emoji_book_open": {
    "async": false,
    "identifiers": [
@@ -18044,6 +18228,14 @@
     "v"
    ]
   },
+  "emoji_person_outline": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "emoji_person_outline",
+    "v"
+   ]
+  },
   "emoji_phone": {
    "async": false,
    "identifiers": [
@@ -18077,6 +18269,13 @@
    "identifiers": [
     "emoji_rock",
     "v2"
+   ]
+  },
+  "emoji_secure": {
+   "async": false,
+   "identifiers": [
+    "emoji_secure",
+    "v"
    ]
   },
   "emoji_sleep_face": {
@@ -21630,6 +21829,16 @@
     "element"
    ]
   },
+  "html_clear_context": {
+   "async": false,
+   "identifiers": [
+    "html_clear",
+    "object_property_get",
+    "html_clear_context",
+    "context",
+    "root"
+   ]
+  },
   "html_code_script_module": {
    "async": false,
    "identifiers": [
@@ -21709,6 +21918,18 @@
     "html_element",
     "html_div",
     "root",
+    "div"
+   ]
+  },
+  "html_div_text": {
+   "async": false,
+   "identifiers": [
+    "html_text_set",
+    "html_div",
+    "marker",
+    "html_div_text",
+    "root",
+    "text",
     "div"
    ]
   },
@@ -22160,6 +22381,15 @@
     "html_style_set",
     "html_style_font_size",
     "html",
+    "value"
+   ]
+  },
+  "html_style_margin_y": {
+   "async": false,
+   "identifiers": [
+    "html_style_assign",
+    "html_style_margin_y",
+    "component",
     "value"
    ]
   },
@@ -23493,6 +23723,17 @@
     "js_declaration_single_block_body",
     "ast",
     "declaration",
+    "body_block"
+   ]
+  },
+  "js_declaration_single_block_body_add": {
+   "async": false,
+   "identifiers": [
+    "list_add",
+    "js_declaration_single_block_body",
+    "js_declaration_single_block_body_add",
+    "ast",
+    "item",
     "body_block"
    ]
   },
@@ -31266,266 +31507,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "js_declaration_single_block_body_add": {
-   "async": false,
-   "identifiers": [
-    "list_add",
-    "js_declaration_single_block_body",
-    "js_declaration_single_block_body_add",
-    "ast",
-    "item",
-    "body_block"
-   ]
-  },
-  "app_karate_container": {
-   "async": false,
-   "identifiers": [
-    "html_style_set",
-    "html_style_margin_y",
-    "html_style_assign",
-    "html_div",
-    "app_karate_container",
-    "parent",
-    "div",
-    "padding"
-   ]
-  },
-  "app_karate_margin_y": {
-   "async": false,
-   "identifiers": [
-    "app_karate_margin_y",
-    "v"
-   ]
-  },
-  "app_karate_button_screen_uncolored": {
-   "async": false,
-   "identifiers": [
-    "app_karate_style_control",
-    "html_button_screen",
-    "app_karate_button_screen_uncolored",
-    "div",
-    "text",
-    "context",
-    "screen_name",
-    "component"
-   ]
-  },
-  "emoji_arrow_left": {
-   "async": false,
-   "identifiers": [
-    "emoji_arrow_left",
-    "v"
-   ]
-  },
-  "app_karate_style_control": {
-   "async": false,
-   "identifiers": [
-    "app_karate_margin_y_set",
-    "html_style_assign",
-    "app_karate_style_control",
-    "component",
-    "padding",
-    "width"
-   ]
-  },
-  "app_karate_green_dark": {
-   "async": false,
-   "identifiers": [
-    "app_karate_green_dark",
-    "v"
-   ]
-  },
-  "app_karate_margin_y_set": {
-   "async": false,
-   "identifiers": [
-    "html_style_margin_y",
-    "app_karate_margin_y",
-    "app_karate_margin_y_set",
-    "component",
-    "margin_y"
-   ]
-  },
-  "app_karate_div_text": {
-   "async": false,
-   "identifiers": [
-    "app_karate_div",
-    "html_text_set",
-    "marker",
-    "app_karate_div_text",
-    "parent",
-    "explanation",
-    "div"
-   ]
-  },
-  "emoji_email": {
-   "async": false,
-   "identifiers": [
-    "emoji_email",
-    "emoji"
-   ]
-  },
-  "app_karate_button_screen_green": {
-   "async": false,
-   "identifiers": [
-    "app_karate_green_dark",
-    "html_style_assign",
-    "app_karate_button_screen_uncolored",
-    "app_karate_button_screen_green",
-    "div",
-    "text",
-    "context",
-    "screen_name",
-    "component",
-    "color"
-   ]
-  },
-  "emoji_arrow_right": {
-   "async": false,
-   "identifiers": [
-    "emoji_arrow_right",
-    "v"
-   ]
-  },
-  "app_karate_div": {
-   "async": false,
-   "identifiers": [
-    "app_karate_margin_y_set",
-    "html_div",
-    "app_karate_div",
-    "parent",
-    "div"
-   ]
-  },
-  "html_span_text": {
-   "async": false,
-   "identifiers": [
-    "html_text_set",
-    "html_element",
-    "html_span_text",
-    "container",
-    "text",
-    "span"
-   ]
-  },
-  "html_em_text": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "html_text_set",
-    "html_element",
-    "html_em_text",
-    "container",
-    "text",
-    "span"
-   ]
-  },
-  "app_karate_container_main": {
-   "async": false,
-   "identifiers": [
-    "html_style_set",
-    "html_div",
-    "app_karate_container_main",
-    "root",
-    "container"
-   ]
-  },
-  "string_includes_lambda": {
-   "async": false,
-   "identifiers": [
-    "string_includes",
-    "marker",
-    "string_includes_lambda",
-    "item",
-    "l",
-    "string_includes_lambda_inner",
-    "input",
-    "si"
-   ]
-  },
-  "string_regex_match": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "string_regex_match",
-    "input",
-    "regex",
-    "v",
-    "match"
-   ]
-  },
-  "string_regex_match_lambda": {
-   "async": false,
-   "identifiers": [
-    "string_regex_match",
-    "marker",
-    "string_regex_match_lambda",
-    "regex",
-    "l",
-    "string_regex_match_lambda_inner",
-    "input",
-    "m"
-   ]
-  },
-  "html_on_change": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "html_on",
-    "html_on_change",
-    "component",
-    "lambda",
-    "name_event"
-   ]
-  },
-  "html_value_get": {
-   "async": false,
-   "identifiers": [
-    "object_property_get",
-    "html_component_element_get",
-    "html_value_get",
-    "input",
-    "element",
-    "value"
-   ]
-  },
-  "html_value_set": {
-   "async": false,
-   "identifiers": [
-    "assert_arguments",
-    "object_property_set",
-    "marker",
-    "html_component_element_get",
-    "html_value_set",
-    "input",
-    "value",
-    "arguments",
-    "element"
-   ]
-  },
-  "html_on_input": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "html_on",
-    "html_on_input",
-    "component",
-    "lambda",
-    "name_event"
-   ]
-  },
-  "app_karate_container_centered": {
-   "async": false,
-   "identifiers": [
-    "html_style_set",
-    "html_style_margin_y",
-    "html_style_assign",
-    "html_div",
-    "app_karate_container_centered",
-    "parent",
-    "div",
-    "padding"
    ]
   }
  }
