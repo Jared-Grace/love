@@ -15082,6 +15082,9 @@
   ],
   "string_regex_match_lambda_inner": [
    "string_regex_match_lambda"
+  ],
+  "checks": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15121,6 +15124,7 @@
     "color",
     "div",
     "input",
+    "checks",
     "text",
     "check"
    ]
