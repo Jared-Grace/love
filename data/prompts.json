@@ -2473,7 +2473,6 @@
   "ff app_karate",
   "s html,public",
   "html_update_public karate",
-  "s index",
   "n html_index_generate",
   "html_index_generate",
   "apps_get",
@@ -2495,6 +2494,7 @@
   "fws firebase_promote_function app_karate_main",
   "u fp",
   "a fpk firebase_promote_function_app_karate_main",
-  "fpk"
+  "fpk",
+  "s index"
  ]
 }
