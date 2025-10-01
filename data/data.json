@@ -80,7 +80,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "app_karate_home"
   ],
   "context": [
    "app_karate_main",
@@ -2239,7 +2240,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "app_karate_home"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -30762,9 +30764,11 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "marker",
     "app_karate_home",
-    "context"
+    "context",
+    "root"
    ]
   }
  }
