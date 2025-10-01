@@ -2370,7 +2370,6 @@
   "u fd",
   "is app_new_assign",
   "s call,args",
-  "s main",
   "s code,string",
   "s call",
   "s js,call",
@@ -2431,6 +2430,7 @@
   "de app_karate_home",
   "msa home",
   "d",
-  "is app_main"
+  "is app_main",
+  "s main"
  ]
 }
