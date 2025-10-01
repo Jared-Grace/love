@@ -78,7 +78,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "firebase_storage_function_run"
   ],
   "context": [
    "app_karate_button_screen_green",
@@ -570,7 +571,8 @@
    "html_div_text",
    "html_p_text",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "firebase_storage_function_run"
   ],
   "app_karate_div_text": [
    "app_karate_div_text",
@@ -1108,8 +1110,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "firebase_storage_function_run"
+   "watch"
   ],
   "trimmed": [
    "app_karate_email"
@@ -4645,8 +4646,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "firebase_storage_function_run"
+   "storage_local_set_context"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -19131,6 +19131,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "html_text_set",
     "html_attribute_set",
     "html_element",
     "html_document_body",
@@ -19149,8 +19150,7 @@
     "body",
     "component",
     "component2",
-    "key",
-    "value",
+    "text",
     "eval"
    ]
   },
