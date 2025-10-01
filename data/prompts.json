@@ -2425,7 +2425,7 @@
   "s screens",
   "is app_replace_screens",
   "c app_replace_screens app_karate_screens",
-  "np",
-  "fld C:/Users/chris/repos/love/.git/index.lock"
+  "fld C:/Users/chris/repos/love/.git/index.lock",
+  "np"
  ]
 }
