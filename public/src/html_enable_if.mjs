@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_enable } from "../../../love/public/src/html_enable.mjs";
 export function html_enable_if(component, condition) {
@@ -7,5 +8,6 @@ export function html_enable_if(component, condition) {
   } else {
     fn = html_disable;
   }
+  log(message);
   fn(component);
 }
