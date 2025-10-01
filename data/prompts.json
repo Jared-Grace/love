@@ -2478,7 +2478,7 @@
   "firebase_deploy",
   "as firebase_deploy",
   "fb",
-  "p",
-  "ff app_karate_main"
+  "ff app_karate_main",
+  "p"
  ]
 }
