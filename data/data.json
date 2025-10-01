@@ -304,7 +304,6 @@
    "app_karate"
   ],
   "f_name": [
-   "app_karate",
    "app_replace",
    "app_reply",
    "command_line_node_g",
@@ -14745,8 +14744,7 @@
    "async": true,
    "identifiers": [
     "firebase_storage_function_run",
-    "app_karate",
-    "f_name"
+    "app_karate"
    ]
   },
   "app_karate_main": {
