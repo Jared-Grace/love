@@ -1312,7 +1312,6 @@
   ],
   "assign": [
    "app_new_assign",
-   "app_new_step_3",
    "js_declare",
    "js_dollar_g",
    "js_dollar_s",
@@ -1406,7 +1405,8 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_new_step_3"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_3",
@@ -13112,8 +13112,7 @@
    "list_add_multiple",
    "list_replace_all",
    "marker_functionize",
-   "reply",
-   "app_new_step_3"
+   "reply"
   ],
   "list_any_starts_with": [
    "list_any_starts_with",
@@ -14900,13 +14899,13 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "list_add",
     "log",
     "firebase_name_repo",
     "function_name_to_path_search",
     "js_parse_statement",
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
-    "list_add_multiple",
     "list_empty",
     "js_code_string",
     "marker",
@@ -14935,7 +14934,6 @@
     "code",
     "statement",
     "body_block",
-    "assign",
     "output"
    ]
   },
