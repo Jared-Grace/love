@@ -1401,8 +1401,7 @@
    "app_karate_margin_y",
    "emoji_arrow_left",
    "app_karate_green_dark",
-   "emoji_arrow_right",
-   "string_includes_lambda"
+   "emoji_arrow_right"
   ],
   "home": [
    "app_karate_screens",
@@ -9326,7 +9325,8 @@
    "list_intersect",
    "list_is",
    "list_squash",
-   "marker_down_choices"
+   "marker_down_choices",
+   "string_includes_lambda"
   ],
   "at": [
    "function_aliases_restore"
@@ -31310,7 +31310,7 @@
     "marker",
     "string_includes_lambda",
     "item",
-    "v",
+    "l",
     "input",
     "si"
    ]
