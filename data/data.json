@@ -2111,7 +2111,8 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "app_new_step_4"
   ],
   "contents": [
    "html_index_generate",
@@ -2400,7 +2401,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine"
+   "list_map_combine",
+   "app_new_step_4"
   ],
   "right": [
    "add",
@@ -2422,7 +2424,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "app_new_step_4"
   ],
   "sum": [
    "add",
@@ -2569,7 +2572,8 @@
    "function_wrap_suffix_add",
    "git_push_folder",
    "js_dollar_new_name",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_new_step_4"
   ],
   "name": [
    "app_name_prefixed",
@@ -31784,6 +31788,7 @@
   "app_new_step_4": {
    "async": true,
    "identifiers": [
+    "function_name_combine",
     "firebase_deploy_function_destination_latest",
     "marker",
     "app_new_step_3_generic",
@@ -31791,6 +31796,9 @@
     "app_new_step_4",
     "name",
     "a_name",
+    "combined",
+    "left",
+    "right",
     "version_get"
    ]
   }
