@@ -1967,7 +1967,6 @@
   "messenger_reply_puppeteer",
   "ar mr messenger_reply_puppeteer",
   "as adder",
-  "s trim",
   "rs messenger_reply playwright",
   "r messenger_reply_puppeteer messenger_reply",
   "r messenger_reply_puppeteer_unread_click messenger_reply_unread_click",
@@ -2467,6 +2466,7 @@
   "s _on_",
   "c html_on_click html_on_change",
   "s value",
-  "s html,get"
+  "s html,get",
+  "s trim"
  ]
 }
