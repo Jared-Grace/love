@@ -2400,7 +2400,6 @@
   "s app,main",
   "n app_main",
   "s search",
-  "p",
   "s storage,local",
   "s global",
   "c global_function_property_async global_function_property",
@@ -2436,6 +2435,7 @@
   "is function_import",
   "is function_run",
   "s width",
+  "p",
   "s emoji_add"
  ]
 }
