@@ -15117,7 +15117,8 @@
    "app_karate_email"
   ],
   "html_value_set": [
-   "html_value_set"
+   "html_value_set",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15131,6 +15132,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_value_set",
     "html_value_get",
     "string_trim",
     "html_on_change",
