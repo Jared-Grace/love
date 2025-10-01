@@ -311,7 +311,8 @@
    "html_em_text",
    "string_includes_lambda",
    "string_regex_match",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "html_on_change"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -31381,6 +31382,7 @@
   "html_on_change": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_on",
     "html_on_change",
     "component",
