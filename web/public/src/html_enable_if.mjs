@@ -8,6 +8,6 @@ export function html_enable_if(component, condition) {
   } else {
     fn = html_disable;
   }
-  log(message);
+  log(fn);
   fn(component);
 }
