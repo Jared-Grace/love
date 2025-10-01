@@ -14754,6 +14754,9 @@
   ],
   "global_function_property": [
    "global_function_property"
+  ],
+  "initial": [
+   "global_function_property"
   ]
  },
  "functions": {
@@ -30640,6 +30643,7 @@
     "fn",
     "property_name",
     "lambda",
+    "initial",
     "global",
     "fn_object",
     "name",
