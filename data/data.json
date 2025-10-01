@@ -2258,7 +2258,8 @@
    "repo_about_set",
    "repo_firebase_service_account_set",
    "storage_local_specify_set",
-   "global_function_property"
+   "global_function_property",
+   "firebase_name"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -10758,8 +10759,7 @@
   "fn_object": [
    "global_function_property_async",
    "global_function_property",
-   "global_function_initialize",
-   "firebase_name"
+   "global_function_initialize"
   ],
   "html_component_element_get": [
    "html_attribute_set",
@@ -30579,7 +30579,7 @@
     "firebase_name",
     "fn",
     "global",
-    "fn_object",
+    "value",
     "name",
     "repo_name",
     "default2"
