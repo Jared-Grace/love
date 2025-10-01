@@ -12,9 +12,9 @@ import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mj
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 export async function html_update_public(name) {
   let a_name = app_name_prefixed(name);
+  let file_path = html_name_to_path(name);
   let search = await function_name_to_path_search(a_name);
   let repo_name = object_property_get(search, "repo_name");
-  let file_path = html_name_to_path(name);
   let joined = repo_path_combine(repo_name, file_path);
   let code = await function_dependencies_code(a_name);
   let call = js_code_call_statement(a_name);
