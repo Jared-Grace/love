@@ -5200,7 +5200,8 @@
    "server",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "storage_local_get"
   ],
   "catch_call": [
    "catch_call",
@@ -29412,6 +29413,7 @@
     "localStorage",
     "getItem",
     "n",
+    "result",
     "value"
    ]
   },
