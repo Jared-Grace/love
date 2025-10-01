@@ -626,7 +626,8 @@
    "messenger_reply_messages",
    "object_properties_from",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "marker_screen_add"
   ],
   "component2": [
    "app_karate_home",
@@ -1577,7 +1578,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "firebase_name_value": [
    "app_main"
@@ -14908,6 +14910,9 @@
   "code_assign": [
    "js_code_let_assign",
    "marker_screen_add"
+  ],
+  "output2": [
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -28113,6 +28118,9 @@
     "code_assign",
     "statement",
     "output",
+    "output2",
+    "f_name",
+    "lambda3",
     "v2"
    ]
   },
