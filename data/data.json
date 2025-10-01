@@ -1843,7 +1843,8 @@
    "app_replace_main",
    "app_reply_main",
    "html_document_body",
-   "html_loading"
+   "html_loading",
+   "firebase_storage_function_run"
   ],
   "html_meta_viewport": [
    "app_karate_main",
@@ -3316,7 +3317,8 @@
    "js_parse_statement_module",
    "marker_enter",
    "marker_functionize",
-   "marker_top"
+   "marker_top",
+   "firebase_storage_function_run"
   ],
   "screen": [
    "app_refresh"
@@ -19123,6 +19125,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "html_document_body",
     "browser_is",
     "list_join_newline",
     "js_code_call_statement",
@@ -19135,6 +19138,7 @@
     "code",
     "call",
     "joined",
+    "body",
     "eval"
    ]
   },
