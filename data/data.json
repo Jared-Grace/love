@@ -1887,7 +1887,8 @@
    "firebase_deploy_function_destination"
   ],
   "firebase_deploy_function_destination_latest": [
-   "firebase_deploy_function_destination_latest"
+   "firebase_deploy_function_destination_latest",
+   "firebase_deploy_function"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -8734,7 +8735,6 @@
    "firebase_deploy"
   ],
   "firebase_deploy_function_destination_version": [
-   "firebase_deploy_function",
    "firebase_storage_function_run"
   ],
   "function_dependencies_code": [
@@ -18995,7 +18995,7 @@
   "firebase_deploy_function": {
    "async": true,
    "identifiers": [
-    "firebase_deploy_function_destination_version",
+    "firebase_deploy_function_destination_latest",
     "marker",
     "firebase_upload_object",
     "firebase_deploy_function_destination",
