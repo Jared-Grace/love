@@ -487,7 +487,6 @@
    "html_p_text_multiple"
   ],
   "text": [
-   "app_karate_home",
    "app_replace_rule_set",
    "app_reply_choices",
    "app_reply_main",
@@ -14839,8 +14838,7 @@
     "root",
     "lambda2",
     "component",
-    "parent",
-    "text"
+    "parent"
    ]
   },
   "app_karate_main": {
