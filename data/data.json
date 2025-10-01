@@ -2761,7 +2761,8 @@
    "marker_screen_add",
    "app_karate_home",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_email"
   ],
   "screen": [
    "app_refresh"
@@ -15000,7 +15001,8 @@
   ],
   "app_karate_button_screen_green": [
    "app_karate_home",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15014,6 +15016,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_button_screen_green",
     "html_attribute_set",
     "emoji_email",
     "app_karate_div_text",
@@ -15032,7 +15035,8 @@
     "component",
     "color",
     "div",
-    "input"
+    "input",
+    "screen_name"
    ]
   },
   "app_karate_home": {
