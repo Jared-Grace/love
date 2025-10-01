@@ -9273,7 +9273,8 @@
    "function_new_declaration",
    "repo_path_combine",
    "user_repo_path_combine",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "html_update_public"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -10711,8 +10712,7 @@
    "repos_paths_names_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine",
-   "html_update_public"
+   "repo_path_combine"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -21627,11 +21627,11 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "repo_path_combine",
     "js_code_braces_empty",
     "js_code_let_assign",
     "js_code_call_statement",
     "path_join",
-    "repo_path",
     "object_property_get",
     "file_open",
     "html_overwrite",
