@@ -1777,8 +1777,7 @@
    "whitespace_normalize",
    "app_karate_container_background",
    "app_karate_button_background",
-   "sandbox_3",
-   "firebase_deploy"
+   "sandbox_3"
   ],
   "html_span_text": [
    "app_karate_home",
@@ -6083,7 +6082,6 @@
    "command_line_node_g",
    "command_line_schtasks",
    "file_open_editor",
-   "firebase_deploy",
    "git_filter_repo_install",
    "git_repo_rename",
    "npm_install",
@@ -15193,6 +15191,9 @@
   ],
   "border_color": [
    "app_karate_email"
+  ],
+  "cwd": [
+   "firebase_deploy"
   ]
  },
  "functions": {
@@ -18891,12 +18892,11 @@
    "identifiers": [
     "user_repo_path_combine",
     "command_line_generic",
-    "command_line",
     "marker",
     "firebase_deploy",
     "combined",
-    "v",
-    "stdout"
+    "stdout",
+    "cwd"
    ]
   },
   "firebase_deploy_function": {
