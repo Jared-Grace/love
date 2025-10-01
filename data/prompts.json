@@ -2457,6 +2457,7 @@
   "c html_span_text html_em_text",
   "s karate",
   "s home",
-  "s email"
+  "s email",
+  "n string_includes_lambda"
  ]
 }
