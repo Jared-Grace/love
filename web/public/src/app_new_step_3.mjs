@@ -25,6 +25,7 @@ export async function app_new_step_3(name) {
     repo_name,
   });
   let default2 = await firebase_name_repo(repo_name);
+  let f_name = js_code_string(default2);
   let call_name = firebase_storage_function_run.name;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(call_name);
@@ -37,7 +38,7 @@ export async function app_new_step_3(name) {
     log(a_name_identifier);
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [a_name_identifier, main_name, default2],
+      [a_name_identifier, main_name, f_name],
       declaration_call,
     );
     let statement = js_parse_statement(code);
