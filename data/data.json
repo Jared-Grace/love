@@ -1402,7 +1402,8 @@
    "app_karate_margin_y",
    "emoji_arrow_left",
    "app_karate_green_dark",
-   "emoji_arrow_right"
+   "emoji_arrow_right",
+   "string_regex_match"
   ],
   "home": [
    "app_karate_screens",
@@ -31333,6 +31334,7 @@
     "string_regex_match",
     "input",
     "regex",
+    "v",
     "match"
    ]
   }
