@@ -2596,7 +2596,6 @@
    "function_transform_marker_specified",
    "function_wrap",
    "html_update_dev",
-   "html_update_public",
    "import_install",
    "js_auto_transform_new_inner",
    "js_bang_to_not",
@@ -3153,7 +3152,6 @@
    "equal_by",
    "equal_not",
    "function_name_combine",
-   "html_update_public",
    "js_block_child_graph",
    "js_code_assign",
    "js_code_dot",
@@ -3207,8 +3205,7 @@
    "function_copy",
    "function_open",
    "function_run_output_file_temp",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "app_html_open": [
    "app_html_open"
@@ -3422,7 +3419,6 @@
    "html_loading",
    "html_overwrite",
    "html_update_dev",
-   "html_update_public",
    "js_block_child_graph",
    "js_declaration_to_block_body",
    "js_if_blockify_generic",
@@ -3777,8 +3773,7 @@
   "middle": [
    "app_replace_rule_parse",
    "html_code_script_module",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
@@ -5241,7 +5236,6 @@
    "function_name_to_path_search",
    "git_push_folder",
    "html_update_dev",
-   "html_update_public",
    "http_firebase_file_path",
    "http_local_file_name",
    "js_code_call_args",
@@ -8829,8 +8823,7 @@
   "function_dependencies_code": [
    "firebase_deploy_function",
    "function_dependencies_code",
-   "function_dependencies_code_copy",
-   "html_update_public"
+   "function_dependencies_code_copy"
   ],
   "version": [
    "firebase_deploy_function"
@@ -9014,13 +9007,11 @@
   "js_code_call_statement": [
    "firebase_storage_function_run",
    "html_update_dev",
-   "html_update_public",
    "js_code_call_statement"
   ],
   "call": [
    "firebase_storage_function_run",
    "html_update_dev",
-   "html_update_public",
    "js_calls_to_each"
   ],
   "eval": [
@@ -10487,8 +10478,7 @@
   ],
   "function_name_repo_path_combine": [
    "function_name_repo_path_combine",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "list_join_empty": [
    "function_name_to_acronym",
@@ -11471,8 +11461,7 @@
   ],
   "html_code_script_module": [
    "html_code_script_module",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "html_component_wrap": [
    "html_component_wrap",
@@ -11578,8 +11567,7 @@
   ],
   "html_overwrite": [
    "html_overwrite",
-   "html_update_dev",
-   "html_update_public"
+   "html_update_dev"
   ],
   "cheerio": [
    "html_parse"
@@ -11714,20 +11702,15 @@
    "html_update_dev"
   ],
   "js_code_braces_empty": [
-   "html_update_public",
    "js_code_arrow",
    "js_code_braces_empty",
    "js_dollar_i"
   ],
   "js_code_let_assign": [
-   "html_update_public",
    "js_call_new",
    "js_code_let_assign",
    "js_declare",
    "marker_screen_add"
-  ],
-  "global_init": [
-   "html_update_public"
   ],
   "http_sleep": [
    "http",
@@ -15319,6 +15302,9 @@
   ],
   "html_name_to_path_staging": [
    "html_name_to_path_staging"
+  ],
+  "html_update_public_generic": [
+   "html_update_public"
   ]
  },
  "functions": {
@@ -22822,27 +22808,13 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
-    "function_name_repo_path_combine",
-    "js_code_braces_empty",
-    "js_code_let_assign",
-    "js_code_call_statement",
-    "file_open",
-    "html_overwrite",
-    "html_code_script_module",
-    "function_dependencies_code",
+    "html_update_public_generic",
     "app_name_prefixed",
     "html_name_to_path",
     "html_update_public",
     "name",
     "a_name",
-    "file_path",
-    "joined",
-    "code",
-    "call",
-    "right",
-    "global_init",
-    "middle",
-    "body"
+    "file_path"
    ]
   },
   "http": {
