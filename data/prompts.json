@@ -2376,7 +2376,6 @@
   "fd app_karate",
   "s exists,assert",
   "u fd",
-  "o an",
   "is app_new_assign",
   "s call,args",
   "s main",
@@ -2417,6 +2416,7 @@
   "s storage,local",
   "s global",
   "c global_function_property_async global_function_property",
-  "app_new_step_3 karate"
+  "app_new_step_3 karate",
+  "o an"
  ]
 }
