@@ -1,3 +1,4 @@
+import { html_clear_context } from "../../../karate_code/public/src/html_clear_context.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
@@ -25,7 +26,7 @@ export async function marker_screen_add(screen_name) {
     await function_new(combined_screen);
     await function_param_new_double("context");
     async function lambda2() {
-      let v = js_code_call_args(fn_name, args);
+      let v = js_code_call_args(html_clear_context.name, args);
     }
     let output = await function_transform(combined_screen, lambda2);
   }
