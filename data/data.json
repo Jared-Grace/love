@@ -18245,9 +18245,9 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "firebase_name_repo",
     "global_function_get",
     "browser_is",
-    "firebase_name_repo",
     "user_repo_get",
     "firebase_name",
     "value",
