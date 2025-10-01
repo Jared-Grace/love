@@ -2423,6 +2423,7 @@
   "de html_update_generic",
   "html_update_dev karate",
   "s karate",
-  "s screens"
+  "s screens",
+  "is app_replace_screens"
  ]
 }
