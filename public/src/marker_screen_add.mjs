@@ -1,3 +1,4 @@
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
 import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
@@ -23,7 +24,9 @@ export async function marker_screen_add(screen_name) {
     list_add(properties, p);
     await function_new(combined_screen);
     await function_param_new_double("context");
-    async function lambda2() {}
+    async function lambda2() {
+      let v = js_code_call_args(fn_name, args);
+    }
     let output = await function_transform(combined_screen, lambda2);
   }
   let v2 = await function_transform_marker_specified(
