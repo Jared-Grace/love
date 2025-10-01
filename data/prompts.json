@@ -2049,7 +2049,6 @@
   "r folder_read folder_read_files",
   "n folder_read",
   "n git_repo_clone",
-  "s param",
   "s each",
   "s js,type",
   "s js,each",
@@ -2429,6 +2428,7 @@
   "is marker_screen_add",
   "data_app_current_get",
   "as screen",
-  "msa home"
+  "msa home",
+  "s param"
  ]
 }
