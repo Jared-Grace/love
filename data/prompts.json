@@ -2485,6 +2485,7 @@
   "n html_index_generate",
   "html_index_generate",
   "apps_get",
-  "s file,html"
+  "s file,html",
+  "html_index_generate karate"
  ]
 }
