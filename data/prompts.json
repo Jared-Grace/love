@@ -2444,6 +2444,7 @@
   "s center",
   "u hd",
   "a hd html_div",
-  "fws html_div text"
+  "fws html_div text",
+  "msa email"
  ]
 }
