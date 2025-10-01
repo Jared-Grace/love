@@ -1816,7 +1816,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "marker_screen_add"
   ],
   "p": [
    "app_name_prefixed",
@@ -12232,8 +12233,7 @@
   ],
   "fn_name": [
    "js_code_call",
-   "js_code_call_args",
-   "marker_screen_add"
+   "js_code_call_args"
   ],
   "js_code_wrap_parenthesis": [
    "js_code_call_args",
@@ -14899,7 +14899,8 @@
   "html_clear_context": [
    "app_karate_home",
    "html_clear_context",
-   "app_karate_email"
+   "app_karate_email",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -28069,6 +28070,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "html_clear_context",
     "js_code_call_args",
     "function_transform",
     "function_param_new_double",
@@ -28096,7 +28098,7 @@
     "p",
     "lambda2",
     "v",
-    "fn_name",
+    "name",
     "args",
     "output",
     "v2"
