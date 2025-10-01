@@ -2027,7 +2027,8 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "html_update_public",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "firebase_name"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -6142,8 +6143,7 @@
    "messenger_reply_messages_urls_get",
    "object_invert",
    "object_property_initialize",
-   "global_function_initialize",
-   "firebase_name"
+   "global_function_initialize"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -14759,8 +14759,7 @@
   ],
   "initial": [
    "global_function_property",
-   "global_function_initialize",
-   "firebase_name"
+   "global_function_initialize"
   ],
   "global_function_initialize": [
    "global_function_property",
@@ -30572,7 +30571,7 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
-    "object_property_initialize",
+    "object_property_get",
     "global_get",
     "browser_is",
     "firebase_name_repo",
@@ -30582,7 +30581,6 @@
     "global",
     "fn_object",
     "name",
-    "initial",
     "repo_name",
     "default2"
    ]
