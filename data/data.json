@@ -508,7 +508,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "app_karate_home"
   ],
   "lambda2": [
    "app_karate_home",
@@ -3327,7 +3328,8 @@
    "messenger_reply_messages",
    "object_properties_from",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "app_karate_home"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -4112,7 +4114,8 @@
    "app_reply_main"
   ],
   "component2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "item2": [
    "app_reply_main",
@@ -14816,6 +14819,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "parent2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14838,7 +14844,11 @@
     "root",
     "lambda2",
     "component",
-    "parent"
+    "parent",
+    "component2",
+    "parent2",
+    "text",
+    "lambda3"
    ]
   },
   "app_karate_main": {
