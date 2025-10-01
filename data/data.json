@@ -2706,7 +2706,8 @@
    "firebase_deploy_function"
   ],
   "app_new_step_5": [
-   "app_new_step_5"
+   "app_new_step_5",
+   "app_new_update"
   ],
   "combined": [
    "app_new_step_5",
@@ -2742,7 +2743,6 @@
    "user_repo_path_combine"
   ],
   "app_new_step_4": [
-   "app_new_update",
    "app_new_step_2_next"
   ],
   "app_new_step_3": [
@@ -15631,7 +15631,7 @@
   "app_new_update": {
    "async": true,
    "identifiers": [
-    "app_new_step_4",
+    "app_new_step_5",
     "app_new_step_3",
     "html_update",
     "marker",
