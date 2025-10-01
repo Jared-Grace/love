@@ -473,7 +473,8 @@
    "html_parse_find_a_href_starts_with",
    "html_p_text",
    "html_div_text",
-   "html_clear_context"
+   "html_clear_context",
+   "app_karate_email"
   ],
   "lambda2": [
    "app_karate_home",
@@ -14890,7 +14891,8 @@
   ],
   "html_clear_context": [
    "app_karate_home",
-   "html_clear_context"
+   "html_clear_context",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -30929,9 +30931,11 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_clear_context",
     "marker",
     "app_karate_email",
-    "context"
+    "context",
+    "root"
    ]
   },
   "html_clear_context": {
