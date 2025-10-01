@@ -2463,6 +2463,7 @@
   "s reg",
   "n string_regex_match",
   "c string_includes_lambda string_regex_match_lambda",
-  "s on_"
+  "s on_",
+  "s _on_"
  ]
 }
