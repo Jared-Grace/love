@@ -313,7 +313,8 @@
    "string_regex_match",
    "string_regex_match_lambda",
    "html_on_change",
-   "html_value_set"
+   "html_value_set",
+   "html_on_input"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -549,7 +550,8 @@
    "app_karate_style_control",
    "app_karate_margin_y_set",
    "app_karate_button_screen_green",
-   "html_on_change"
+   "html_on_change",
+   "html_on_input"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -902,7 +904,8 @@
    "visit_unique_async",
    "watch",
    "html_on_change",
-   "app_karate_email"
+   "app_karate_email",
+   "html_on_input"
   ],
   "div": [
    "app_karate_home",
@@ -11243,13 +11246,15 @@
    "html_on",
    "html_on_click",
    "html_on_keydown",
-   "html_on_change"
+   "html_on_change",
+   "html_on_input"
   ],
   "name_event": [
    "html_on",
    "html_on_click",
    "html_on_keydown",
-   "html_on_change"
+   "html_on_change",
+   "html_on_input"
   ],
   "addEventListener": [
    "html_on"
@@ -15140,6 +15145,9 @@
   ],
   "ul": [
    "app_karate_email"
+  ],
+  "html_on_input": [
+   "html_on_input"
   ]
  },
  "functions": {
@@ -31480,6 +31488,17 @@
     "input",
     "value",
     "element"
+   ]
+  },
+  "html_on_input": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_on",
+    "html_on_input",
+    "component",
+    "lambda",
+    "name_event"
    ]
   }
  }
