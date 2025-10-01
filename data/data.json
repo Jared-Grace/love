@@ -1377,7 +1377,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "app_karate_margin_y"
   ],
   "home": [
    "app_karate_screens",
@@ -14934,7 +14935,8 @@
    "app_karate_email"
   ],
   "app_karate_margin_y": [
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_margin_y"
   ]
  },
  "functions": {
@@ -31030,6 +31032,13 @@
     "parent",
     "div",
     "padding"
+   ]
+  },
+  "app_karate_margin_y": {
+   "async": false,
+   "identifiers": [
+    "app_karate_margin_y",
+    "v"
    ]
   }
  }
