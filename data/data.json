@@ -1087,7 +1087,8 @@
    "repo_firebase_service_account_get",
    "firebase_service_account_love_generic",
    "js_keyword_default",
-   "js_identifier_unique"
+   "js_identifier_unique",
+   "storage_local_specify_set"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -2256,7 +2257,8 @@
    "repo_about_get",
    "repo_about_set",
    "repo_firebase_service_account_set",
-   "firebase_name"
+   "firebase_name",
+   "storage_local_specify_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -3366,7 +3368,8 @@
    "log_json",
    "sandbox_2",
    "string_is_assert_json",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "storage_local_specify_set"
   ],
   "equal_by": [
    "app_replace_rule_valid",
@@ -14414,10 +14417,12 @@
   ],
   "storage_local_key": [
    "storage_local_get",
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_specify_set"
   ],
   "localStorage": [
-   "storage_local_get"
+   "storage_local_get",
+   "storage_local_specify_set"
   ],
   "getItem": [
    "storage_local_get"
@@ -14737,7 +14742,11 @@
    "firebase_name_repo"
   ],
   "storage_local_specify_set": [
-   "storage_local_set"
+   "storage_local_set",
+   "storage_local_specify_set"
+  ],
+  "setItem": [
+   "storage_local_specify_set"
   ]
  },
  "functions": {
@@ -30606,6 +30615,18 @@
     "f",
     "projects",
     "default2"
+   ]
+  },
+  "storage_local_specify_set": {
+   "async": false,
+   "identifiers": [
+    "json_to",
+    "storage_local_specify_set",
+    "value",
+    "storage_local_key",
+    "v",
+    "localStorage",
+    "setItem"
    ]
   }
  }
