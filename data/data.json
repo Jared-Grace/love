@@ -2282,7 +2282,8 @@
    "folder_public_combine",
    "functions_path",
    "html_name_to_path",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_index_generate"
   ],
   "file_name_html": [
    "app_html_open",
@@ -7993,7 +7994,8 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash"
+   "string_split_dash",
+   "html_index_generate"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -10469,7 +10471,8 @@
   ],
   "combined2": [
    "function_new_js_name",
-   "js_dollar_new_name"
+   "js_dollar_new_name",
+   "html_index_generate"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -31609,9 +31612,12 @@
   "html_index_generate": {
    "async": true,
    "identifiers": [
+    "folder_public_combine",
     "user_repo_path_combine",
     "marker",
     "html_index_generate",
+    "combined2",
+    "second",
     "combined"
    ]
   }
