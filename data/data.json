@@ -14854,9 +14854,6 @@
   ],
   "explanation": [
    "app_karate_home"
-  ],
-  "solid": [
-   "app_karate_home"
   ]
  },
  "functions": {
@@ -14896,7 +14893,6 @@
     "lambda",
     "padding",
     "width",
-    "solid",
     "p"
    ]
   },
