@@ -6354,8 +6354,7 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set",
-   "html_index_generate"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -31617,8 +31616,7 @@
     "user_repo_path_combine",
     "marker",
     "html_index_generate",
-    "combined",
-    "f_path"
+    "combined"
    ]
   }
  }
