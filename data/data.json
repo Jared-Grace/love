@@ -1084,7 +1084,6 @@
    "repo_about_get",
    "repo_firebase_service_account_get",
    "firebase_service_account_love_generic",
-   "firebase_name",
    "js_keyword_default",
    "js_identifier_unique"
   ],
@@ -30536,8 +30535,7 @@
     "combined",
     "f",
     "projects",
-    "default2",
-    "v"
+    "default2"
    ]
   },
   "user_repo_path_combine": {
