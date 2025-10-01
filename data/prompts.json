@@ -1516,7 +1516,6 @@
   "s ;et",
   "s let",
   "cs list_index_of_next outside",
-  "s next",
   "is list_next_try",
   "s if",
   "s _if",
@@ -2453,6 +2452,7 @@
   "urg",
   "s home",
   "s mail",
-  "s ttri"
+  "s ttri",
+  "s next"
  ]
 }
