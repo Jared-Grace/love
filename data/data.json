@@ -3247,8 +3247,7 @@
   "html_p_text": [
    "app_replace_rule_set",
    "html_p_text",
-   "html_p_text_multiple",
-   "app_karate_home"
+   "html_p_text_multiple"
   ],
   "storage_local_get_context": [
    "app_replace_rule_set",
@@ -14857,6 +14856,9 @@
   ],
   "explanation": [
    "app_karate_home"
+  ],
+  "html_div_text": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14870,7 +14872,6 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "html_p_text",
     "html_div",
     "html_style_assign",
     "person_outline",
@@ -14899,7 +14900,8 @@
     "padding",
     "width",
     "color",
-    "p"
+    "p",
+    "html_div_text"
    ]
   },
   "app_karate_main": {
