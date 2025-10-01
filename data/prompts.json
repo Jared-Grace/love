@@ -2477,6 +2477,7 @@
   "p",
   "s3",
   "s repo_path",
-  "firebase_deploy"
+  "firebase_deploy",
+  "as firebase_deploy"
  ]
 }
