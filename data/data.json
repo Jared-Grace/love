@@ -5883,7 +5883,8 @@
    "string_suffix_change",
    "string_to",
    "app_karate_email",
-   "string_includes"
+   "string_includes",
+   "string_includes_lambda"
   ],
   "process": [
    "command_line_read",
@@ -14763,9 +14764,6 @@
   "string_is_assert_json": [
    "string_includes",
    "string_is_assert_json"
-  ],
-  "string": [
-   "string_includes_lambda"
   ],
   "si": [
    "string_is"
@@ -31311,9 +31309,9 @@
     "string_includes",
     "marker",
     "string_includes_lambda",
+    "input",
     "v",
     "v2",
-    "string",
     "item"
    ]
   }
