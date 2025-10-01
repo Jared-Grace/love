@@ -686,7 +686,8 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name_repo"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -2024,7 +2025,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public"
+   "html_update_public",
+   "firebase_name_repo"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -5685,7 +5687,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name_repo"
   ],
   "file_write": [
    "data_all",
@@ -5699,7 +5702,8 @@
    "file_json_transform",
    "file_read_json",
    "firebase_service_account",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "firebase_name_repo"
   ],
   "json_format_to": [
    "data_all",
@@ -8391,7 +8395,8 @@
    "js_stack_last_function",
    "marker_param_add",
    "sandbox_2",
-   "function_import"
+   "function_import",
+   "firebase_name_repo"
   ],
   "list_to": [
    "functions_combine",
@@ -9250,7 +9255,8 @@
   "repo_path_combine": [
    "function_new_declaration",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name_repo"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -9318,7 +9324,8 @@
    "repo_firebase_service_account_set",
    "user_repo_path_combine",
    "app_new_step_3",
-   "firebase_name"
+   "firebase_name",
+   "firebase_name_repo"
   ],
   "f_path_new": [
    "function_copy"
@@ -14711,7 +14718,8 @@
    "js_identifier_unique"
   ],
   "default2": [
-   "firebase_name"
+   "firebase_name",
+   "firebase_name_repo"
   ],
   "app_main": [
    "app_main"
@@ -14726,7 +14734,11 @@
    "app_new_step_3"
   ],
   "firebase_name_repo": [
-   "firebase_name"
+   "firebase_name",
+   "firebase_name_repo"
+  ],
+  "projects": [
+   "firebase_name_repo"
   ]
  },
  "functions": {
@@ -30579,6 +30591,21 @@
     "f_name",
     "firebase_name_value",
     "name"
+   ]
+  },
+  "firebase_name_repo": {
+   "async": true,
+   "identifiers": [
+    "object_property_get",
+    "file_read_json",
+    "repo_path_combine",
+    "firebase_name_repo",
+    "repo_name",
+    "f_path",
+    "combined",
+    "f",
+    "projects",
+    "default2"
    ]
   }
  }
