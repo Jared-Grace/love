@@ -2071,8 +2071,7 @@
    "html_update_dev",
    "html_update_public",
    "marker_screen_add",
-   "app_name_staging",
-   "html_update_staging"
+   "app_name_staging"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -15314,7 +15313,8 @@
   "app_name_staging": [
    "app_new_step_5",
    "app_name_staging",
-   "app_new_step_4"
+   "app_new_step_4",
+   "html_update_staging"
   ],
   "app_karate_staging": [
    "app_karate_staging"
@@ -31894,9 +31894,9 @@
   "html_update_staging": {
    "async": true,
    "identifiers": [
+    "app_name_staging",
     "marker",
     "html_update_public_generic",
-    "app_name_prefixed",
     "html_name_to_path",
     "html_update_staging",
     "name",
