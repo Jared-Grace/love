@@ -585,8 +585,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -15140,9 +15139,6 @@
   ],
   "ul": [
    "app_karate_email"
-  ],
-  "text3": [
-   "app_karate_email"
   ]
  },
  "functions": {
@@ -15205,9 +15201,7 @@
     "text2",
     "check2",
     "a",
-    "li",
-    "component2",
-    "text3"
+    "li"
    ]
   },
   "app_karate_home": {
