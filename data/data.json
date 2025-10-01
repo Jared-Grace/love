@@ -2534,13 +2534,13 @@
   "storage_local_initialize_context": [
    "app_replace_font_size",
    "app_replace_rule_set",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_karate_main"
   ],
   "app_replace_font_size": [
    "app_replace_font_size",
    "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
-   "app_karate_main"
+   "app_replace_font_size_refresh"
   ],
   "value2": [
    "app_replace_font_size",
@@ -14893,8 +14893,8 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
+    "storage_local_initialize_context",
     "html_style_font_size",
-    "app_replace_font_size",
     "html_document_root",
     "app_karate_screens",
     "app_karate",
