@@ -1908,7 +1908,6 @@
   "s function,ex",
   "u fe",
   "a fe function_exists",
-  "s body",
   "s clear",
   "as ope",
   "s return",
@@ -2445,6 +2444,7 @@
   "o msa",
   "s code,call",
   "s assign",
-  "s fill"
+  "s fill",
+  "s body"
  ]
 }
