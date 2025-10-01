@@ -2401,7 +2401,6 @@
   "rfsag",
   "function_name_unalias add",
   "function_alias_add_generic add",
-  "p",
   "o firebase_storage_url_project",
   "urg",
   "repo_path a",
@@ -2415,6 +2414,7 @@
   "n app_main",
   "s storage,local",
   "s search",
+  "p",
   "app_new_step_3 karate"
  ]
 }
