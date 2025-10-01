@@ -15017,6 +15017,9 @@
   ],
   "hst": [
    "app_karate_home"
+  ],
+  "span": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15076,6 +15079,7 @@
     "html_button_karate",
     "component2",
     "hst",
+    "span",
     "component3",
     "parent",
     "text",
