@@ -32,7 +32,7 @@ export async function js_dollar_g({
     ]);
     let parsed = js_parse_expression(code);
     if (js_node_type_is(stack1, "ExpressionStatement")) {
-      let unique = await js_identifier_unique_ast(ast, property_name);
+      let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_declare(unique, parsed);
       log("stack1");
       log(stack1);
