@@ -296,7 +296,8 @@
    "server",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "firebase_service_account_karate"
+   "firebase_service_account_karate",
+   "app_main"
   ],
   "app_karate": [
    "app_karate"
@@ -30554,6 +30555,7 @@
   "app_main": {
    "async": false,
    "identifiers": [
+    "marker",
     "app_main"
    ]
   }
