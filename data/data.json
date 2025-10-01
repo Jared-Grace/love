@@ -14856,6 +14856,12 @@
   ],
   "explanation": [
    "app_karate_home"
+  ],
+  "hd": [
+   "app_karate_home"
+  ],
+  "p2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14894,10 +14900,12 @@
     "text",
     "explanation",
     "lambda",
-    "p",
+    "hd",
     "padding",
     "width",
-    "color"
+    "color",
+    "p2",
+    "p"
    ]
   },
   "app_karate_main": {
