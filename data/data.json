@@ -1524,7 +1524,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "app_karate_email"
   ],
   "html_text_set": [
    "html_div_text",
@@ -11082,7 +11083,8 @@
    "html_on",
    "html_remove",
    "html_text_set",
-   "html_component_element_get"
+   "html_component_element_get",
+   "app_karate_email"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -15111,6 +15113,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "html_component_element_get",
     "html_on_change",
     "string_regex_match_lambda",
@@ -15140,8 +15143,9 @@
     "div",
     "input",
     "lambda2",
-    "value",
+    "element",
     "component2",
+    "value",
     "checks",
     "text",
     "check"
