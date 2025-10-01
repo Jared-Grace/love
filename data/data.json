@@ -2649,7 +2649,8 @@
    "js_identifier_defineds",
    "messenger_reply",
    "messenger_reply_messages",
-   "promise_wrap"
+   "promise_wrap",
+   "app_karate_home"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -4111,7 +4112,8 @@
    "app_reply_main"
   ],
   "component3": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "component2": [
    "app_reply_main",
@@ -14822,6 +14824,9 @@
   ],
   "parent2": [
    "app_karate_home"
+  ],
+  "parent3": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14848,7 +14853,10 @@
     "lambda3",
     "component2",
     "parent2",
-    "text"
+    "component3",
+    "parent3",
+    "text",
+    "lambda4"
    ]
   },
   "app_karate_main": {
