@@ -1,7 +1,6 @@
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
@@ -34,13 +33,9 @@ export async function app_new_step_3(name) {
     declaration.async = true;
     let value_string = app_name_main(name);
     let main_name = js_code_string(value_string);
-    let a_name_identifier = js_parse_expression(a_name);
-    log({
-      a_name_identifier,
-    });
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [a_name_identifier, main_name, f_name],
+      [a_name, main_name, f_name],
       declaration_call,
     );
     let statement = js_parse_statement(code);
