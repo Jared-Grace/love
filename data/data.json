@@ -2955,7 +2955,8 @@
    "string_includes",
    "string_starts_with_not",
    "tasks_run",
-   "js_declaration_single_block_body_add"
+   "js_declaration_single_block_body_add",
+   "string_includes_lambda"
   ],
   "index": [
    "app_replace_home",
@@ -4737,7 +4738,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "string_includes_lambda"
   ],
   "error": [
    "assert",
@@ -10104,7 +10106,8 @@
   "string_includes": [
    "function_name_to_path",
    "search_generic",
-   "string_includes"
+   "string_includes",
+   "string_includes_lambda"
   ],
   "previous2": [
    "function_name_to_path_import"
@@ -14762,7 +14765,8 @@
    "string_is_assert_json"
   ],
   "string": [
-   "string_includes"
+   "string_includes",
+   "string_includes_lambda"
   ],
   "si": [
    "string_is"
@@ -15051,9 +15055,6 @@
    "app_karate_email"
   ],
   "string_includes_lambda": [
-   "string_includes_lambda"
-  ],
-  "sin": [
    "string_includes_lambda"
   ]
  },
@@ -31305,10 +31306,13 @@
   "string_includes_lambda": {
    "async": false,
    "identifiers": [
+    "string_includes",
     "marker",
     "string_includes_lambda",
     "v",
-    "sin"
+    "v2",
+    "string",
+    "item"
    ]
   }
  }
