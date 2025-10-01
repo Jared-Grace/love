@@ -2357,7 +2357,8 @@
    "marker_screen_add",
    "repo_path_combine",
    "user_repo_path_combine",
-   "firebase_deploy"
+   "firebase_deploy",
+   "html_index_generate"
   ],
   "global_function_initialize": [
    "app_main",
@@ -6353,7 +6354,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "html_index_generate"
   ],
   "file_write": [
    "data_all",
@@ -9875,7 +9877,8 @@
   "user_repo_path_combine": [
    "function_copy",
    "user_repo_path_combine",
-   "firebase_deploy"
+   "firebase_deploy",
+   "html_index_generate"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -31609,10 +31612,13 @@
    ]
   },
   "html_index_generate": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "user_repo_path_combine",
     "marker",
-    "html_index_generate"
+    "html_index_generate",
+    "combined",
+    "f_path"
    ]
   }
  }
