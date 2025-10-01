@@ -570,7 +570,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "marker_screen_add"
   ],
   "component": [
    "app_karate_home",
@@ -1577,7 +1578,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "firebase_name_value": [
    "app_main"
@@ -2182,7 +2184,8 @@
    "marker_functionize",
    "marker_move",
    "marker_top",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "js_declaration_single_block_body": [
    "app_new_step_3",
@@ -2496,7 +2499,8 @@
    "js_function_last_asyncify",
    "js_unparse_inner",
    "marker_call",
-   "marker_call_replace_generic"
+   "marker_call_replace_generic",
+   "marker_screen_add"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -28062,6 +28066,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "function_transform",
     "function_param_new_double",
     "marker_next_declare_single_init",
     "function_new",
@@ -28085,6 +28090,9 @@
     "combined_screen",
     "value",
     "p",
+    "output",
+    "f_name",
+    "lambda2",
     "v2"
    ]
   },
