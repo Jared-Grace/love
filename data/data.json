@@ -15160,6 +15160,9 @@
   ],
   "validate": [
    "app_karate_email"
+  ],
+  "app_karate_container_background": [
+   "app_karate_container"
   ]
  },
  "functions": {
@@ -31517,6 +31520,7 @@
   "app_karate_container": {
    "async": false,
    "identifiers": [
+    "app_karate_container_background",
     "html_style_margin_y",
     "html_style_assign",
     "html_div",
