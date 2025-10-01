@@ -4710,8 +4710,7 @@
    "list_join_comma_space",
    "list_join_space",
    "list_replace_all",
-   "watch",
-   "marker_screen_add"
+   "watch"
   ],
   "count": [
    "assert_arguments",
@@ -28096,10 +28095,9 @@
     "combined_screen",
     "value",
     "p",
-    "lambda2",
     "v",
+    "lambda2",
     "name",
-    "args",
     "output",
     "v2"
    ]
