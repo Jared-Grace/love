@@ -604,7 +604,8 @@
    "html_button_screen",
    "html_element",
    "html_p_text_multiple",
-   "app_karate_container"
+   "app_karate_container",
+   "app_karate_div_text"
   ],
   "text": [
    "app_karate_home",
@@ -900,7 +901,6 @@
    "app_karate_container",
    "app_karate_email",
    "app_karate_button_screen_uncolored",
-   "app_karate_div_text",
    "app_karate_button_screen_green"
   ],
   "padding": [
@@ -31179,7 +31179,7 @@
     "marker",
     "app_karate_margin_y_set",
     "app_karate_div_text",
-    "div",
+    "parent",
     "explanation",
     "div2",
     "p"
