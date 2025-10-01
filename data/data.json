@@ -367,7 +367,8 @@
   "html_style_margin_y": [
    "app_karate_home",
    "html_style_margin_y",
-   "app_karate_container"
+   "app_karate_container",
+   "app_karate_margin_y_set"
   ],
   "html_div": [
    "app_karate_home",
@@ -537,7 +538,8 @@
    "html_button_screen",
    "app_karate_button_screen_uncolored",
    "app_karate_email",
-   "app_karate_style_control"
+   "app_karate_style_control",
+   "app_karate_margin_y_set"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -14948,7 +14950,8 @@
   ],
   "app_karate_margin_y": [
    "app_karate_home",
-   "app_karate_margin_y"
+   "app_karate_margin_y",
+   "app_karate_margin_y_set"
   ],
   "margin_y2": [
    "app_karate_home"
@@ -14973,7 +14976,11 @@
    "app_karate_email"
   ],
   "app_karate_margin_y_set": [
-   "app_karate_style_control"
+   "app_karate_style_control",
+   "app_karate_margin_y_set"
+  ],
+  "margin_y": [
+   "app_karate_margin_y_set"
   ]
  },
  "functions": {
@@ -31123,6 +31130,16 @@
    "identifiers": [
     "app_karate_green_dark",
     "v"
+   ]
+  },
+  "app_karate_margin_y_set": {
+   "async": false,
+   "identifiers": [
+    "html_style_margin_y",
+    "app_karate_margin_y",
+    "app_karate_margin_y_set",
+    "component",
+    "margin_y"
    ]
   }
  }
