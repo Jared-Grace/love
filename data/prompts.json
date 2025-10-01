@@ -2495,11 +2495,11 @@
   "s index",
   "s html,dev",
   "u hup",
-  "hup karate",
   "o firebase_storage_function_run",
   "o app_karate",
   "o an",
   "p",
-  "app_new_step_3 karate"
+  "app_new_step_3 karate",
+  "hup karate"
  ]
 }
