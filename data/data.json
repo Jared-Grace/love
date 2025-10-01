@@ -19603,12 +19603,12 @@
    "async": true,
    "identifiers": [
     "path_join",
-    "fileURLToPath",
     "function_name_unalias",
     "function_name_to_path_search",
     "folder_previous",
     "function_import",
     "f_name",
+    "fileURLToPath",
     "path",
     "__filename",
     "import",
