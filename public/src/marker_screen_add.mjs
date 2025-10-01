@@ -1,4 +1,4 @@
-import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { html_clear_context } from "../../../karate_code/public/src/html_clear_context.mjs";
@@ -33,7 +33,7 @@ export async function marker_screen_add(screen_name) {
       let code = js_code_call_args(html_clear_context.name, [v]);
       let code_assign = js_code_let_assign("root", code);
       let statement = js_parse_statement(code_assign);
-      let body_block = js_declaration_single_block_body(ast);
+      let body_block = js_declaration_single_block_body_add(ast);
       list_add(body_block, statement);
     }
     let output = await function_transform(combined_screen, lambda2);
