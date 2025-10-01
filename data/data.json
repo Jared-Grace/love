@@ -1830,7 +1830,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
-   "string_padded_is"
+   "string_padded_is",
+   "app_karate_home"
   ],
   "string_and_empty_not_is_assert": [
    "app_new",
@@ -14851,9 +14852,6 @@
   "ignoreInitial": [
    "watch"
   ],
-  "html_p_text_karate": [
-   "app_karate_home"
-  ],
   "explanation": [
    "app_karate_home"
   ]
@@ -14889,13 +14887,13 @@
     "component2",
     "lambda4",
     "component3",
-    "html_p_text_karate",
-    "text",
     "parent",
+    "text",
     "explanation",
     "lambda",
     "padding",
-    "width"
+    "width",
+    "p"
    ]
   },
   "app_karate_main": {
