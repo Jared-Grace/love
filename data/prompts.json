@@ -1397,7 +1397,6 @@
   "n string_replace",
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
-  "fb",
   "u ff",
   "fws firebase_deploy_function app_current",
   "a ffc firebase_deploy_function_app_current",
@@ -2478,6 +2477,7 @@
   "s3",
   "s repo_path",
   "firebase_deploy",
-  "as firebase_deploy"
+  "as firebase_deploy",
+  "fb"
  ]
 }
