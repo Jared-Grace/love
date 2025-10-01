@@ -1123,7 +1123,8 @@
    "user_repo_set",
    "watch",
    "app_karate_email",
-   "html_value_get"
+   "html_value_get",
+   "html_value_set"
   ],
   "v": [
    "app_karate_screens",
@@ -1525,7 +1526,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_value_get"
+   "html_value_get",
+   "html_value_set"
   ],
   "html_text_set": [
    "html_div_text",
@@ -5893,7 +5895,8 @@
    "string_includes_lambda",
    "string_regex_match",
    "string_regex_match_lambda",
-   "html_value_get"
+   "html_value_get",
+   "html_value_set"
   ],
   "process": [
    "command_line_read",
@@ -11068,7 +11071,8 @@
    "html_style_remove",
    "html_style_set",
    "html_text_set",
-   "html_value_get"
+   "html_value_get",
+   "html_value_set"
   ],
   "html_attribute_set": [
    "html_attribute_set",
@@ -11085,7 +11089,8 @@
    "html_remove",
    "html_text_set",
    "html_component_element_get",
-   "html_value_get"
+   "html_value_get",
+   "html_value_set"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -15109,6 +15114,9 @@
   ],
   "trimmed": [
    "app_karate_email"
+  ],
+  "html_value_set": [
+   "html_value_set"
   ]
  },
  "functions": {
@@ -31418,6 +31426,17 @@
     "object_property_get",
     "html_component_element_get",
     "html_value_get",
+    "input",
+    "element",
+    "value"
+   ]
+  },
+  "html_value_set": {
+   "async": false,
+   "identifiers": [
+    "object_property_get",
+    "html_component_element_get",
+    "html_value_set",
     "input",
     "element",
     "value"
