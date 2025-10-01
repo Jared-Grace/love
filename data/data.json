@@ -417,7 +417,8 @@
    "repos_gitignore_overwrite",
    "task_new",
    "function_exists_assert",
-   "app_main"
+   "app_main",
+   "app_new_step_3"
   ],
   "name": [
    "app_name_prefixed",
@@ -14926,6 +14927,7 @@
     "a_name",
     "repo_name",
     "default2",
+    "f_name",
     "call_name",
     "declaration",
     "declaration_call",
