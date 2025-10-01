@@ -2477,10 +2477,10 @@
   "as firebase_deploy",
   "fb",
   "ff app_karate_main",
-  "p",
   "s body",
   "ff app_karate",
   "s html,public",
+  "p",
   "html_update_public karate"
  ]
 }
