@@ -15230,6 +15230,9 @@
   ],
   "firebase_deploy_function_app_karate_main": [
    "firebase_deploy_function_app_karate_main"
+  ],
+  "firebase_promote_function": [
+   "firebase_promote_function"
   ]
  },
  "functions": {
@@ -31667,6 +31670,12 @@
     "firebase_deploy_function_app_karate_main",
     "v",
     "name"
+   ]
+  },
+  "firebase_promote_function": {
+   "async": false,
+   "identifiers": [
+    "firebase_promote_function"
    ]
   }
  }
