@@ -21,7 +21,7 @@ export async function marker_top() {
       return;
     }
     let names = list_map(markers, js_marker_name_get);
-    let name_next = await js_identifier_unique(names, "");
+    let name_next = js_identifier_unique(names, "");
     let body = js_declaration_single_block_body(ast);
     await js_marker_insert(name_next, body, 0);
     await js_imports_missing_add(ast);
