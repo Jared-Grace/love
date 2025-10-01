@@ -2387,7 +2387,6 @@
   "s brace",
   "oa karate",
   "s step",
-  "app_new_step_3 karate",
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
@@ -2482,7 +2481,6 @@
   "c firebase_deploy_function_destination_version firebase_deploy_function_destination_production",
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
   "ff app_karate_main",
-  "p",
   "fws firebase_deploy_function app_karate_main",
   "s import",
   "functions_names",
@@ -2500,6 +2498,8 @@
   "hup karate",
   "o firebase_storage_function_run",
   "o app_karate",
-  "o an"
+  "o an",
+  "p",
+  "app_new_step_3 karate"
  ]
 }
