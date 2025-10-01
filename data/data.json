@@ -15161,13 +15161,13 @@
     "component",
     "color",
     "div",
+    "checks",
+    "text",
+    "check",
     "input",
     "lambda2",
     "value",
-    "trimmed",
-    "checks",
-    "text",
-    "check"
+    "trimmed"
    ]
   },
   "app_karate_home": {
