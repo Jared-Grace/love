@@ -3531,7 +3531,8 @@
    "app_replace_settings"
   ],
   "home": [
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_screens"
   ],
   "rule_set": [
    "app_replace_screens"
@@ -14806,7 +14807,8 @@
    "watch"
   ],
   "app_karate_home": [
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_screens"
   ]
  },
  "functions": {
@@ -14836,9 +14838,11 @@
   "app_karate_screens": {
    "async": false,
    "identifiers": [
+    "app_karate_home",
     "marker",
     "app_karate_screens",
-    "v"
+    "v",
+    "home"
    ]
   },
   "add": {
