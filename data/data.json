@@ -1430,7 +1430,8 @@
    "app_refresh",
    "app_replace_rule_set",
    "app_reply_main",
-   "html_clear"
+   "html_clear",
+   "app_karate_email"
   ],
   "object_property_get": [
    "html_clear_context",
@@ -2966,8 +2967,7 @@
    "string_starts_with_not",
    "tasks_run",
    "js_declaration_single_block_body_add",
-   "string_includes_lambda",
-   "app_karate_email"
+   "string_includes_lambda"
   ],
   "index": [
    "app_replace_home",
@@ -4575,8 +4575,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_karate_email"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -11095,7 +11094,8 @@
    "html_text_set",
    "html_component_element_get",
    "html_value_get",
-   "html_value_set"
+   "html_value_set",
+   "app_karate_email"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -15140,6 +15140,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_clear",
     "each",
     "app_karate_div",
     "html_value_set",
@@ -15179,9 +15180,8 @@
     "lambda2",
     "value",
     "trimmed",
-    "lambda",
-    "item",
-    "list"
+    "element",
+    "lambda"
    ]
   },
   "app_karate_home": {
