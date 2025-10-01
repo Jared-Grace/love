@@ -305,7 +305,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "firebase_deploy_function_app_karate_main"
+   "firebase_deploy_function_app_karate_main",
+   "firebase_promote_function_app_karate_main"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -798,7 +799,8 @@
    "whitespace_normalize",
    "firebase_deploy_function_app_karate_main",
    "function_name_unalias",
-   "firebase_promote_function"
+   "firebase_promote_function",
+   "firebase_promote_function_app_karate_main"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -2015,7 +2017,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "firebase_promote_function"
+   "firebase_promote_function",
+   "firebase_promote_function_app_karate_main"
   ],
   "destination2": [
    "firebase_deploy_function_destination_latest",
@@ -15239,7 +15242,8 @@
    "firebase_deploy_function_app_karate_main"
   ],
   "firebase_promote_function": [
-   "firebase_promote_function"
+   "firebase_promote_function",
+   "firebase_promote_function_app_karate_main"
   ],
   "destination_production": [
    "firebase_promote_function"
@@ -31704,9 +31708,13 @@
    ]
   },
   "firebase_promote_function_app_karate_main": {
-   "async": false,
+   "async": true,
    "identifiers": [
-    "firebase_promote_function_app_karate_main"
+    "firebase_promote_function",
+    "marker",
+    "firebase_promote_function_app_karate_main",
+    "f_name",
+    "v"
    ]
   }
  }
