@@ -15257,7 +15257,8 @@
    "firebase_promote_function_app_karate_main"
   ],
   "version_get": [
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "app_main"
   ]
  },
  "functions": {
@@ -15754,7 +15755,8 @@
     "firebase_name",
     "app_main",
     "f_name",
-    "firebase_name_value"
+    "firebase_name_value",
+    "version_get"
    ]
   },
   "app_name_main": {
