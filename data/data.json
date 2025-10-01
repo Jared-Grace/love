@@ -2237,7 +2237,6 @@
    "object_property_set_exists_not",
    "promise_is",
    "repo_acronym_set",
-   "storage_local_get",
    "storage_local_get_context",
    "storage_local_initialize",
    "storage_local_initialize_context",
@@ -5314,8 +5313,7 @@
    "firebase_storage_download_property",
    "function_run_output_file_temp",
    "json_from",
-   "json_to",
-   "storage_local_get"
+   "json_to"
   ],
   "a2": [
    "catch_only_run_async",
@@ -7094,7 +7092,6 @@
    "puppeteer_matches",
    "round",
    "search_generic",
-   "storage_local_get",
    "storage_local_initialize"
   ],
   "verse_numbers": [
@@ -7923,8 +7920,7 @@
    "firebase_storage_download_json",
    "firebase_storage_download_property",
    "http_json",
-   "json_from",
-   "storage_local_get"
+   "json_from"
   ],
   "file_root_exists": [
    "file_root_exists",
@@ -11362,7 +11358,6 @@
    "js_dollar_s",
    "list_next_try",
    "null_is",
-   "storage_local_get",
    "storage_local_initialize"
   ],
   "list_get_end_1": [
@@ -14422,11 +14417,7 @@
    "storage_local_specify_set"
   ],
   "localStorage": [
-   "storage_local_get",
    "storage_local_specify_set"
-  ],
-  "getItem": [
-   "storage_local_get"
   ],
   "storage_local_set": [
    "storage_local_initialize",
@@ -14748,6 +14739,9 @@
   ],
   "setItem": [
    "storage_local_specify_set"
+  ],
+  "storage_local_specify_get": [
+   "storage_local_get"
   ]
  },
  "functions": {
@@ -29401,20 +29395,14 @@
   "storage_local_get": {
    "async": false,
    "identifiers": [
-    "null_is",
-    "json_from",
+    "storage_local_specify_get",
     "marker",
     "storage_local_key_get",
     "storage_local_get",
     "app_fn",
     "key",
     "storage_local_key",
-    "json",
-    "localStorage",
-    "getItem",
-    "n",
-    "result",
-    "value"
+    "result"
    ]
   },
   "storage_local_get_context": {
