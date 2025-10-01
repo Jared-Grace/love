@@ -1,3 +1,4 @@
+import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -18,6 +19,7 @@ export async function app_new_step_3(name) {
   marker("1");
   string_and_empty_not_is_assert(name);
   let { repo_name } = await function_name_to_path_search(name);
+  let default2 = await firebase_name_repo(repo_name);
   let call_name = firebase_storage_function_run.name;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(call_name);
