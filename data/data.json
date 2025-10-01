@@ -801,7 +801,8 @@
    "function_name_unalias",
    "firebase_promote_function",
    "firebase_promote_function_app_karate_main",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "app_karate"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -15261,6 +15262,7 @@
   "app_karate": {
    "async": true,
    "identifiers": [
+    "marker",
     "app_main",
     "app_karate"
    ]
