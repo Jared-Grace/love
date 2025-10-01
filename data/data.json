@@ -2289,7 +2289,8 @@
    "app_html_open",
    "file_name_html",
    "html_name_to_path",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_index_generate"
   ],
   "app_html_open": [
    "app_html_open"
@@ -7994,7 +7995,8 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash"
+   "string_split_dash",
+   "html_index_generate"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -31611,10 +31613,12 @@
   "html_index_generate": {
    "async": true,
    "identifiers": [
+    "file_name_html",
     "folder_public_combine",
     "user_repo_path_combine",
     "marker",
     "html_index_generate",
+    "second",
     "combined2",
     "combined"
    ]
