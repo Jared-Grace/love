@@ -4317,8 +4317,7 @@
    "string_starts_with_digit"
   ],
   "component4": [
-   "app_reply_main",
-   "app_karate_home"
+   "app_reply_main"
   ],
   "choices": [
    "app_reply_main",
@@ -4330,8 +4329,7 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main",
-   "app_karate_home"
+   "app_reply_main"
   ],
   "letters": [
    "app_reply_main",
@@ -15071,8 +15069,6 @@
     "container",
     "component",
     "html_button_karate",
-    "component4",
-    "text2",
     "component2",
     "component3",
     "parent",
