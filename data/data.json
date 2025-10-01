@@ -3177,7 +3177,8 @@
    "app_replace_rule_set",
    "app_reply_main",
    "html_p",
-   "html_p_text"
+   "html_p_text",
+   "app_karate_home"
   ],
   "html_disable": [
    "app_replace_rule_set",
@@ -3246,8 +3247,7 @@
   "html_p_text": [
    "app_replace_rule_set",
    "html_p_text",
-   "html_p_text_multiple",
-   "app_karate_home"
+   "html_p_text_multiple"
   ],
   "storage_local_get_context": [
    "app_replace_rule_set",
@@ -4016,7 +4016,8 @@
    "html_clear",
    "html_p_text",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_karate_home"
   ],
   "clipboard_copy": [
    "app_reply_main",
@@ -14855,6 +14856,9 @@
   ],
   "explanation": [
    "app_karate_home"
+  ],
+  "p2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14868,7 +14872,8 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "html_p_text",
+    "html_text_set",
+    "html_p",
     "html_style_assign",
     "person_outline",
     "emoji_secure",
@@ -14895,6 +14900,7 @@
     "padding",
     "width",
     "color",
+    "p2",
     "p"
    ]
   },
