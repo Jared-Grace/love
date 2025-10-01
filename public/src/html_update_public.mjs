@@ -1,3 +1,5 @@
+import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
+import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
@@ -18,7 +20,10 @@ export async function html_update_public(name) {
   let joined = path_join([r_path, file_path]);
   let code = await function_dependencies_code(a_name);
   let call = js_code_call_statement(a_name);
-  const middle = `${call}
+  let right = js_code_braces_empty();
+  let v = js_code_let_assign("global", right);
+  const middle = `${v}
+    ${call}
     ${code}`;
   let body = html_code_script_module(middle);
   await html_overwrite(name, joined, body);
