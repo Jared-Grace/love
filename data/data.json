@@ -15189,9 +15189,6 @@
   ],
   "border_color": [
    "app_karate_email"
-  ],
-  "cwd": [
-   "sandbox_3"
   ]
  },
  "functions": {
@@ -30346,8 +30343,7 @@
     "command_line_generic",
     "marker",
     "sandbox_3",
-    "v",
-    "cwd"
+    "v"
    ]
   },
   "sandbox_4_a": {
