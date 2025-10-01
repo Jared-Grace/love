@@ -15180,6 +15180,12 @@
   ],
   "button_background": [
    "app_karate_email"
+  ],
+  "font_color": [
+   "app_karate_email"
+  ],
+  "border_color": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15320,6 +15326,8 @@
     "check2",
     "a",
     "li",
+    "font_color",
+    "border_color",
     "background",
     "button_background"
    ]
