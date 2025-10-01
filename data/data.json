@@ -15218,7 +15218,7 @@
    ]
   },
   "app_replace_main": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "app_replace_font_size_refresh",
     "html_meta_viewport",
