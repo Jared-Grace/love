@@ -12714,8 +12714,7 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "js_dollar_g",
-   "app_new_step_3"
+   "js_dollar_g"
   ],
   "e2": [
    "js_log_remove",
@@ -14898,7 +14897,6 @@
    "async": true,
    "identifiers": [
     "list_add",
-    "log",
     "firebase_name_repo",
     "function_name_to_path_search",
     "js_parse_statement",
