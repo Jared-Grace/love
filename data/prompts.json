@@ -2465,6 +2465,7 @@
   "c string_includes_lambda string_regex_match_lambda",
   "s on_",
   "s _on_",
-  "c html_on_click html_on_change"
+  "c html_on_click html_on_change",
+  "s value"
  ]
 }
