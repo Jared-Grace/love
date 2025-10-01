@@ -2210,7 +2210,6 @@
    "app_name_prefixed",
    "app_new_step_1",
    "app_new_step_3",
-   "function_name_repo_path_combine",
    "function_new_app_screen",
    "function_open_app",
    "html_update_dev",
@@ -2364,7 +2363,8 @@
    "repos_gitignore_overwrite",
    "task_new",
    "html_update_public_generic",
-   "html_update_staging"
+   "html_update_staging",
+   "function_name_repo_path_combine"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -20781,7 +20781,7 @@
     "object_property_get",
     "function_name_to_path_search",
     "function_name_repo_path_combine",
-    "a_name",
+    "f_name",
     "file_path",
     "search",
     "repo_name",
