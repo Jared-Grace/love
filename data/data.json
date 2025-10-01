@@ -1347,7 +1347,8 @@
   ],
   "alert": [
    "app_code",
-   "app_replace_rule_set"
+   "app_replace_rule_set",
+   "app_karate_main"
   ],
   "file_open": [
    "app_html_open",
@@ -14908,7 +14909,8 @@
     "root",
     "context",
     "html",
-    "value"
+    "value",
+    "alert"
    ]
   },
   "app_karate_screens": {
