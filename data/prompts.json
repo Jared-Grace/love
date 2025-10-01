@@ -2384,7 +2384,6 @@
   "s call",
   "s js,call",
   "sps",
-  "app_new_step_3 karate",
   "functions_names",
   "fns",
   "of fns",
@@ -2415,6 +2414,7 @@
   "s app,main",
   "n app_main",
   "s storage,local",
-  "s search"
+  "s search",
+  "app_new_step_3 karate"
  ]
 }
