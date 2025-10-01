@@ -15032,8 +15032,7 @@
    "html_em_text"
   ],
   "html_em_text": [
-   "html_em_text",
-   "app_karate_home"
+   "html_em_text"
   ]
  },
  "functions": {
@@ -15073,7 +15072,6 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "html_em_text",
     "html_span_text",
     "html_text_set",
     "app_karate_div",
