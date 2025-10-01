@@ -2707,7 +2707,8 @@
   ],
   "app_new_step_5": [
    "app_new_step_5",
-   "app_new_update"
+   "app_new_update",
+   "app_new_step_2_next"
   ],
   "combined": [
    "app_new_step_5",
@@ -2741,9 +2742,6 @@
    "marker_screen_add",
    "repo_path_combine",
    "user_repo_path_combine"
-  ],
-  "app_new_step_4": [
-   "app_new_step_2_next"
   ],
   "app_new_step_3": [
    "app_new_update",
@@ -15986,7 +15984,7 @@
    "identifiers": [
     "function_new",
     "app_name_main",
-    "app_new_step_4",
+    "app_new_step_5",
     "app_new_step_2",
     "app_new_step_3",
     "marker",
