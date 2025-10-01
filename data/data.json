@@ -14730,6 +14730,9 @@
   ],
   "a_name_identifier": [
    "app_new_step_3"
+  ],
+  "$x": [
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30549,6 +30552,7 @@
     "file_read_json",
     "user_repo_path_combine",
     "firebase_name",
+    "$x",
     "combined",
     "f",
     "projects",
