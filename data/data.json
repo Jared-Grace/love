@@ -14719,7 +14719,8 @@
   ],
   "default2": [
    "firebase_name",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "app_new_step_3"
   ],
   "app_main": [
    "app_main"
@@ -14735,7 +14736,8 @@
   ],
   "firebase_name_repo": [
    "firebase_name",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "app_new_step_3"
   ],
   "projects": [
    "firebase_name_repo"
@@ -14900,6 +14902,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "firebase_name_repo",
     "function_name_to_path_search",
     "js_parse_expression",
     "js_parse_statement",
@@ -14919,6 +14922,7 @@
     "app_new_step_3",
     "name",
     "repo_name",
+    "default2",
     "call_name",
     "declaration",
     "declaration_call",
