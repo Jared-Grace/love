@@ -11057,7 +11057,8 @@
    "html_loading"
   ],
   "width": [
-   "html_loading"
+   "html_loading",
+   "app_karate_home"
   ],
   "height": [
    "html_loading"
@@ -14876,7 +14877,8 @@
     "parent",
     "text",
     "lambda",
-    "padding"
+    "padding",
+    "width"
    ]
   },
   "app_karate_main": {
