@@ -296,7 +296,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "app_karate_screens"
+   "app_karate_screens",
+   "app_karate_home"
   ],
   "app_karate_main": [
    "app_karate_main"
@@ -2816,7 +2817,8 @@
    "storage_local_get_context",
    "storage_local_initialize_context",
    "storage_local_set_context",
-   "app_karate_main"
+   "app_karate_main",
+   "app_karate_home"
   ],
   "app_fn": [
    "app_refresh",
@@ -30756,7 +30758,9 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "app_karate_home"
+    "marker",
+    "app_karate_home",
+    "context"
    ]
   }
  }
