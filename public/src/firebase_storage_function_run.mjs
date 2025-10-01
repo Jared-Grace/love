@@ -21,7 +21,7 @@ export async function firebase_storage_function_run(f_name) {
     let body = html_document_body();
     let component = html_element(body, "script");
     html_attribute_set(component, "type", "module");
-    html_text_set(component2, text);
+    html_text_set(component, joined);
     return;
   }
   eval(joined);
