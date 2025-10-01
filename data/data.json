@@ -2682,8 +2682,7 @@
   "html": [
    "app_replace_font_size_refresh",
    "html_document_root",
-   "html_style_font_size",
-   "app_karate_home"
+   "html_style_font_size"
   ],
   "emoji_gear": [
    "app_replace_home",
@@ -14875,8 +14874,7 @@
     "component3",
     "parent",
     "text",
-    "lambda",
-    "html"
+    "lambda"
    ]
   },
   "app_karate_main": {
