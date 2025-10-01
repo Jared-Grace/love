@@ -1563,7 +1563,6 @@
   "fws http firebase",
   "n file_path_safe_to",
   "n firebase_storage_exists",
-  "s download",
   "http_firebase https://wwww.google.com",
   "http https://www.google.com",
   "file_path_safe_to http://www.google.com",
@@ -2491,6 +2490,7 @@
   "s import",
   "functions_names",
   "o u",
-  "a fk firebase_deploy_function_app_karate_main"
+  "a fk firebase_deploy_function_app_karate_main",
+  "s download"
  ]
 }
