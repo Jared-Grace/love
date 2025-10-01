@@ -2682,7 +2682,8 @@
   "html": [
    "app_replace_font_size_refresh",
    "html_document_root",
-   "html_style_font_size"
+   "html_style_font_size",
+   "app_karate_home"
   ],
   "emoji_gear": [
    "app_replace_home",
@@ -11000,7 +11001,8 @@
    "html_display_none",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_home"
   ],
   "html_display_block": [
    "html_display_block",
@@ -14853,6 +14855,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "person_outline",
     "emoji_secure",
     "emoji_add",
@@ -14872,7 +14875,8 @@
     "component3",
     "parent",
     "text",
-    "lambda"
+    "lambda",
+    "html"
    ]
   },
   "app_karate_main": {
