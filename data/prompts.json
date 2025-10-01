@@ -2434,6 +2434,7 @@
   "s main",
   "is server",
   "is function_import",
-  "is function_run"
+  "is function_run",
+  "s width"
  ]
 }
