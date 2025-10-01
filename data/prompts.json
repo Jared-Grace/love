@@ -1329,7 +1329,6 @@
   "s single",
   "marker_screen_add t",
   "o marker_screen_add",
-  "s screens",
   "marker_screen_add rule_set",
   "de app_replace_refresh",
   "oa replace",
@@ -2423,6 +2422,7 @@
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
-  "s karate"
+  "s karate",
+  "s screens"
  ]
 }
