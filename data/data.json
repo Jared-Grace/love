@@ -298,7 +298,8 @@
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
    "firebase_service_account_karate",
-   "app_main"
+   "app_main",
+   "app_karate"
   ],
   "app_karate": [
    "app_karate"
@@ -14782,6 +14783,7 @@
   "app_karate": {
    "async": true,
    "identifiers": [
+    "marker",
     "firebase_storage_function_run",
     "app_karate"
    ]
