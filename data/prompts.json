@@ -2499,6 +2499,7 @@
   "s html,dev",
   "u hup",
   "hup karate",
-  "o firebase_storage_function_run"
+  "o firebase_storage_function_run",
+  "o app_karate"
  ]
 }
