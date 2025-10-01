@@ -294,7 +294,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "app_karate_screens"
   ],
   "app_karate_main": [
    "app_karate_main"
@@ -1856,7 +1857,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "app_karate_screens"
   ],
   "setItem": [
    "storage_local_specify_set"
@@ -2962,7 +2964,8 @@
   ],
   "app_replace_home": [
    "app_replace_home",
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_screens"
   ],
   "root": [
    "app_replace_home",
@@ -3670,7 +3673,8 @@
   ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_screens"
   ],
   "start": [
    "app_replace_rule_set",
@@ -4027,19 +4031,23 @@
   ],
   "app_replace_settings": [
    "app_replace_screens",
-   "app_replace_settings"
+   "app_replace_settings",
+   "app_karate_screens"
   ],
   "home": [
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_screens"
   ],
   "rule_set": [
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_screens"
   ],
   "settings": [
    "app_replace_screens",
    "firebase_upload_buffer",
    "firebase_upload_generic",
-   "firebase_upload_string"
+   "firebase_upload_string",
+   "app_karate_screens"
   ],
   "emoji_font_smaller": [
    "app_replace_settings",
@@ -14797,6 +14805,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "app_karate_screens": [
+   "app_karate_screens"
   ]
  },
  "functions": {
@@ -30735,6 +30746,20 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_karate_screens": {
+   "async": false,
+   "identifiers": [
+    "app_replace_settings",
+    "app_replace_rule_set",
+    "app_replace_home",
+    "marker",
+    "app_karate_screens",
+    "v",
+    "home",
+    "rule_set",
+    "settings"
    ]
   }
  }
