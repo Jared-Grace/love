@@ -5530,7 +5530,8 @@
   "color": [
    "chalk_color",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "app_karate_home"
   ],
   "prompt": [
    "chalk_color",
@@ -14893,6 +14894,7 @@
     "lambda",
     "padding",
     "width",
+    "color",
     "p"
    ]
   },
