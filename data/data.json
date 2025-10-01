@@ -2445,7 +2445,8 @@
    "marker_move",
    "marker_top",
    "promise_not_is",
-   "task_new"
+   "task_new",
+   "marker_screen_add"
   ],
   "async": [
    "app_new_step_3",
@@ -12076,8 +12077,7 @@
    "js_dollar_choice_arguments",
    "js_dollar_new",
    "js_parse_statement",
-   "js_statement_return",
-   "marker_screen_add"
+   "js_statement_return"
   ],
   "array_expression": [
    "js_calls_to_each",
@@ -28107,11 +28107,11 @@
     "p",
     "v",
     "lambda2",
+    "ast",
     "code",
     "name",
     "code_assign",
     "statement",
-    "code2",
     "output",
     "v2"
    ]
