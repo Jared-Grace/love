@@ -1775,7 +1775,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "app_karate_container_background"
+   "app_karate_container_background",
+   "app_karate_button_background"
   ],
   "html_span_text": [
    "app_karate_home",
@@ -15174,7 +15175,8 @@
    "app_karate_email"
   ],
   "app_karate_button_background": [
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_button_background"
   ]
  },
  "functions": {
@@ -31552,6 +31554,13 @@
    "async": false,
    "identifiers": [
     "app_karate_container_background",
+    "v"
+   ]
+  },
+  "app_karate_button_background": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_background",
     "v"
    ]
   }
