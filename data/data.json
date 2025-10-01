@@ -413,7 +413,6 @@
    "app_karate_screens"
   ],
   "lambda2": [
-   "app_karate_home",
    "app_replace_home",
    "app_replace_rule_set",
    "app_replace_settings",
@@ -570,7 +569,6 @@
    "app_reply_main"
   ],
   "lambda4": [
-   "app_karate_home",
    "app_replace_home",
    "app_replace_rule_set",
    "app_reply_main",
@@ -14975,12 +14973,10 @@
     "context",
     "root",
     "container",
-    "lambda2",
     "component",
     "html_button_karate",
     "lambda3",
     "component2",
-    "lambda4",
     "component3",
     "parent",
     "text",
