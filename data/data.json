@@ -638,7 +638,8 @@
    "function_open_app",
    "js_expand_generic",
    "marker_screen_add",
-   "html_update_public"
+   "html_update_public",
+   "function_name_repo_path_combine"
   ],
   "file_name": [
    "app_html_open",
@@ -2028,7 +2029,8 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "firebase_name_repo",
-   "global_function_get"
+   "global_function_get",
+   "function_name_repo_path_combine"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -4379,7 +4381,8 @@
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
    "function_name_to_path_search",
-   "html_update_public"
+   "html_update_public",
+   "function_name_repo_path_combine"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -4739,7 +4742,8 @@
    "firebase_service_account_love",
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
-   "firebase_service_account"
+   "firebase_service_account",
+   "function_name_repo_path_combine"
   ],
   "contents": [
    "bible_verses_encouragement_generate",
@@ -8621,7 +8625,8 @@
    "js_visit_match",
    "search_generic",
    "tasks_run",
-   "function_name_to_path_search"
+   "function_name_to_path_search",
+   "function_name_repo_path_combine"
   ],
   "function_open": [
    "functions_search_open",
@@ -9270,7 +9275,8 @@
    "function_new_declaration",
    "repo_path_combine",
    "user_repo_path_combine",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "function_name_repo_path_combine"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -9338,7 +9344,8 @@
    "user_repo_path_combine",
    "app_new_step_3",
    "firebase_name",
-   "firebase_name_repo"
+   "firebase_name_repo",
+   "function_name_repo_path_combine"
   ],
   "f_path_new": [
    "function_copy"
@@ -9538,7 +9545,8 @@
    "function_name_to_path_search",
    "function_name_to_path_unalias",
    "function_import",
-   "app_new_step_3"
+   "app_new_step_3",
+   "function_name_repo_path_combine"
   ],
   "function_exists_strict": [
    "function_exists_strict",
@@ -14791,7 +14799,8 @@
    "html_update_dev"
   ],
   "function_name_repo_path_combine": [
-   "html_update_public"
+   "html_update_public",
+   "function_name_repo_path_combine"
   ]
  },
  "functions": {
@@ -30716,6 +30725,20 @@
     "global",
     "value",
     "name"
+   ]
+  },
+  "function_name_repo_path_combine": {
+   "async": true,
+   "identifiers": [
+    "repo_path_combine",
+    "object_property_get",
+    "function_name_to_path_search",
+    "function_name_repo_path_combine",
+    "a_name",
+    "file_path",
+    "search",
+    "repo_name",
+    "joined"
    ]
   }
  }
