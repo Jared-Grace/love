@@ -15128,7 +15128,7 @@
    ]
   },
   "app_refresh": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "object_property_get",
     "storage_local_initialize",
