@@ -1116,8 +1116,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "string_includes_lambda"
+   "watch"
   ],
   "v": [
    "app_karate_screens",
@@ -11242,8 +11241,7 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message",
-   "string_includes_lambda"
+   "string_is_assert_message"
   ],
   "descendants": [
    "html_parse_descendants_classes"
@@ -15055,7 +15053,7 @@
   "string_includes_lambda": [
    "string_includes_lambda"
   ],
-  "si2": [
+  "sin": [
    "string_includes_lambda"
   ]
  },
@@ -31307,12 +31305,10 @@
   "string_includes_lambda": {
    "async": false,
    "identifiers": [
-    "string_is",
     "marker",
     "string_includes_lambda",
     "v",
-    "si2",
-    "value"
+    "sin"
    ]
   }
  }
