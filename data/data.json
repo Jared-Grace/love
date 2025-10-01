@@ -14843,6 +14843,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "hpt": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14870,6 +14873,7 @@
     "lambda2",
     "component",
     "html_button_karate",
+    "hpt",
     "lambda3",
     "component2",
     "lambda4",
