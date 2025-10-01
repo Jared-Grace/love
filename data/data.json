@@ -15027,11 +15027,11 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "emoji_email",
     "app_karate_div_text",
     "app_karate_green_dark",
     "app_karate_button_screen_uncolored",
     "app_karate_container",
-    "emoji_email",
     "emoji_person_outline",
     "emoji_add",
     "emoji_secure",
