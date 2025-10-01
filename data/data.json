@@ -479,7 +479,6 @@
    "html_text_set_if"
   ],
   "parent": [
-   "app_karate_home",
    "html_button",
    "html_button_element",
    "html_button_screen",
@@ -14821,10 +14820,7 @@
   "ignoreInitial": [
    "watch"
   ],
-  "parent2": [
-   "app_karate_home"
-  ],
-  "parent3": [
+  "emoji_add": [
    "app_karate_home"
   ]
  },
@@ -14839,6 +14835,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "emoji_add",
     "html_button",
     "object_property_get",
     "marker",
@@ -14848,13 +14845,10 @@
     "root",
     "lambda2",
     "component",
-    "parent",
     "lambda3",
     "component2",
-    "parent2",
     "lambda4",
-    "component3",
-    "parent3"
+    "component3"
    ]
   },
   "app_karate_main": {
