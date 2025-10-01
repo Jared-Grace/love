@@ -15853,8 +15853,8 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
-    "firebase_deploy_function_destination_production",
     "app_main",
+    "firebase_deploy_function_destination_production",
     "list_add",
     "firebase_name_repo",
     "function_name_to_path_search",
