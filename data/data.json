@@ -23,7 +23,8 @@
    "app_karate_style_control",
    "html_loading",
    "html_style_assign",
-   "html_style_margin_y"
+   "html_style_margin_y",
+   "app_karate_container"
   ],
   "app_karate_button_screen_uncolored": [
    "app_karate_button_screen_green",
@@ -46,7 +47,8 @@
    "app_replace_rule_set",
    "html_div",
    "html_div_text",
-   "html_loading"
+   "html_loading",
+   "app_karate_container"
   ],
   "text": [
    "app_karate_button_screen_green",
@@ -471,7 +473,8 @@
   ],
   "html_style_margin_y": [
    "app_karate_margin_y_set",
-   "html_style_margin_y"
+   "html_style_margin_y",
+   "app_karate_container"
   ],
   "html_div": [
    "app_karate_container_main",
@@ -479,7 +482,8 @@
    "app_replace_rule_set",
    "html_div",
    "html_div_text",
-   "html_loading"
+   "html_loading",
+   "app_karate_container"
   ],
   "app_karate_container_centered": [
    "app_karate_container_centered",
@@ -495,12 +499,14 @@
    "html_button_element",
    "html_button_screen",
    "html_element",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_karate_container"
   ],
   "padding": [
    "app_karate_style_control",
    "string_pad",
-   "string_padded_is"
+   "string_padded_is",
+   "app_karate_container"
   ],
   "app_karate_container_main": [
    "app_karate_container_main",
@@ -15149,7 +15155,8 @@
    "watch"
   ],
   "app_karate_container": [
-   "app_karate_container_centered"
+   "app_karate_container_centered",
+   "app_karate_container"
   ]
  },
  "functions": {
@@ -31501,6 +31508,18 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_karate_container": {
+   "async": false,
+   "identifiers": [
+    "html_style_margin_y",
+    "html_style_assign",
+    "html_div",
+    "app_karate_container",
+    "parent",
+    "div",
+    "padding"
    ]
   }
  }
