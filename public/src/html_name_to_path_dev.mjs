@@ -1,12 +1,8 @@
-import { path_join } from "../../../love/public/src/path_join.mjs";
+import { html_name_to_path_folder } from "../../../karate_code/public/src/html_name_to_path_folder.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { folder_public_combine } from "../../../love/public/src/folder_public_combine.mjs";
-import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
 export function html_name_to_path_dev(name) {
   marker("1");
   const folder = "dev";
-  let file_name = file_name_html(name);
-  let joined = path_join([folder, file_name]);
-  let file_path = folder_public_combine(joined);
+  let file_path = html_name_to_path_folder(name, folder);
   return file_path;
 }
