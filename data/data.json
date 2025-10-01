@@ -1894,8 +1894,7 @@
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
-   "firebase_storage_function_run",
-   "firebase_promote_function"
+   "firebase_storage_function_run"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -2021,7 +2020,8 @@
    "firebase_deploy_function_destination_production"
   ],
   "firebase_deploy_function_destination_production": [
-   "firebase_deploy_function_destination_production"
+   "firebase_deploy_function_destination_production",
+   "firebase_promote_function"
   ],
   "html_em_text": [
    "html_em_text"
@@ -31682,8 +31682,8 @@
    "async": true,
    "identifiers": [
     "firebase_upload_object",
-    "firebase_deploy_function_destination_latest",
     "marker",
+    "firebase_deploy_function_destination_production",
     "firebase_promote_function",
     "destination_version",
     "f_name",
