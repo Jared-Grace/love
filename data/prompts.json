@@ -2476,7 +2476,6 @@
   "s body",
   "ff app_karate",
   "s html,public",
-  "p",
   "html_update_public karate",
   "s index",
   "n html_index_generate",
@@ -2489,6 +2488,7 @@
   "c firebase_deploy_function_destination_version firebase_deploy_function_destination_production",
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
   "ff app_karate_main",
+  "p",
   "fws firebase_deploy_function app_karate_main"
  ]
 }
