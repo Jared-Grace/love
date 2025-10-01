@@ -1,4 +1,4 @@
-import { global_function_initialize } from "../../../karate_code/public/src/global_function_initialize.mjs";
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { firebase_storage_function_run } from "./firebase_storage_function_run.mjs";
 import { marker } from "./marker.mjs";
 import { firebase_name } from "./firebase_name.mjs";
