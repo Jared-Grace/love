@@ -2440,6 +2440,7 @@
   "s stylew",
   "s style",
   "u hpt",
-  "a hpt html_p_text"
+  "a hpt html_p_text",
+  "s center"
  ]
 }
