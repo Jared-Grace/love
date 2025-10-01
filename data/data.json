@@ -4797,7 +4797,6 @@
    "firebase_service_account",
    "global_function_property",
    "global_function_initialize",
-   "firebase_name",
    "global_function_get"
   ],
   "bible_folder": [
@@ -30582,7 +30581,6 @@
     "firebase_name_repo",
     "user_repo_get",
     "firebase_name",
-    "fn",
     "value",
     "repo_name",
     "default2"
