@@ -2005,7 +2005,6 @@
    "app_new_step_3_generic",
    "app_name_main",
    "app_new_step_2",
-   "app_new_step_2_next",
    "firebase_deploy_function_app_current",
    "html_update_dev"
   ],
@@ -2717,7 +2716,6 @@
    "app_name_main",
    "app_new_assign",
    "app_new_step_2",
-   "app_new_step_2_next",
    "ebible_chapters",
    "firebase_deploy",
    "firebase_deploy_function_app_current",
@@ -3386,7 +3384,6 @@
   "function_new": [
    "app_new_step_1",
    "app_new_step_2",
-   "app_new_step_2_next",
    "function_list_generate",
    "function_new",
    "function_new_aliased",
@@ -15296,6 +15293,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "app_new_step_4": [
+   "app_new_step_2_next"
   ]
  },
  "functions": {
@@ -15982,16 +15982,14 @@
   "app_new_step_2_next": {
    "async": true,
    "identifiers": [
-    "function_new",
-    "app_name_main",
+    "app_new_step_4",
     "app_new_step_5",
     "app_new_step_2",
     "app_new_step_3",
     "marker",
     "html_new",
     "app_new_step_2_next",
-    "name",
-    "combined"
+    "name"
    ]
   },
   "app_new_step_3": {
