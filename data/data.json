@@ -5326,8 +5326,7 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green",
-   "app_karate_home"
+   "trinity_green"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -15033,7 +15032,8 @@
    "html_em_text"
   ],
   "html_em_text": [
-   "html_em_text"
+   "html_em_text",
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15073,6 +15073,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_em_text",
     "html_span_text",
     "html_text_set",
     "app_karate_div",
@@ -15092,7 +15093,6 @@
     "component",
     "html_button_karate",
     "component2",
-    "s",
     "component3",
     "parent",
     "text",
