@@ -14937,6 +14937,9 @@
   "app_karate_margin_y": [
    "app_karate_home",
    "app_karate_margin_y"
+  ],
+  "margin_y2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14994,7 +14997,8 @@
     "width",
     "color",
     "margin_y",
-    "p"
+    "p",
+    "margin_y2"
    ]
   },
   "app_karate_main": {
