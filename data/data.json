@@ -307,7 +307,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "app_karate_div_text"
+   "app_karate_div_text",
+   "html_em_text"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -31257,6 +31258,7 @@
   "html_em_text": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_text_set",
     "html_element",
     "html_em_text",
