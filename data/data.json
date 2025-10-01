@@ -2677,8 +2677,7 @@
   "html_style_font_size": [
    "app_replace_font_size_refresh",
    "html_button",
-   "html_style_font_size",
-   "app_karate_main"
+   "html_style_font_size"
   ],
   "html_document_root": [
    "app_replace_font_size_refresh",
@@ -11008,7 +11007,8 @@
    "html_display_none",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_main"
   ],
   "html_display_block": [
    "html_display_block",
@@ -14894,8 +14894,8 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "storage_local_initialize_context",
-    "html_style_font_size",
     "html_document_root",
     "app_karate_screens",
     "app_karate",
