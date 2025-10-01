@@ -2406,7 +2406,6 @@
   "urs k",
   "ps",
   "fdf app_karate_main",
-  "s step",
   "s app,main",
   "n app_main",
   "s search",
@@ -2420,6 +2419,7 @@
   "s code,assign",
   "s brace",
   "html_update_public karate",
-  "oa karate"
+  "oa karate",
+  "s step"
  ]
 }
