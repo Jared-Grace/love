@@ -11094,8 +11094,7 @@
    "html_text_set",
    "html_component_element_get",
    "html_value_get",
-   "html_value_set",
-   "app_karate_email"
+   "html_value_set"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -15180,7 +15179,6 @@
     "lambda2",
     "value",
     "trimmed",
-    "element",
     "lambda"
    ]
   },
