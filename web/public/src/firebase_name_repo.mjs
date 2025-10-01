@@ -1,6 +1,6 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
-import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
+import { object_property_get } from "./object_property_get.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { repo_path_combine } from "./repo_path_combine.mjs";
 export async function firebase_name_repo(repo_name) {
   const f_path = ".firebaserc";
   let combined = repo_path_combine(repo_name, f_path);
