@@ -2396,7 +2396,6 @@
    "js_declaration_single_block_body_add_return",
    "js_dollar_aa",
    "js_return_name",
-   "marker_screen_add",
    "marker_top",
    "task_new",
    "js_declaration_single_block_body_add"
@@ -14916,7 +14915,8 @@
   ],
   "js_declaration_single_block_body_add": [
    "function_wrap",
-   "js_declaration_single_block_body_add"
+   "js_declaration_single_block_body_add",
+   "marker_screen_add"
   ]
  },
  "functions": {
@@ -28126,7 +28126,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
-    "js_declaration_single_block_body",
+    "js_declaration_single_block_body_add",
     "js_parse_statement",
     "js_code_let_assign",
     "html_clear_context",
