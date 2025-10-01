@@ -563,7 +563,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "html_update_public"
   ],
   "sum": [
    "add",
@@ -1089,7 +1090,8 @@
    "firebase_service_account_love_generic",
    "js_keyword_default",
    "js_identifier_unique",
-   "storage_local_specify_set"
+   "storage_local_specify_set",
+   "html_update_public"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -11946,7 +11948,8 @@
   "js_code_let_assign": [
    "js_call_new",
    "js_code_let_assign",
-   "js_declare"
+   "js_declare",
+   "html_update_public"
   ],
   "js_identifier_unique": [
    "js_call_new",
@@ -12029,7 +12032,8 @@
   "js_code_braces_empty": [
    "js_code_arrow",
    "js_code_braces_empty",
-   "js_dollar_i"
+   "js_dollar_i",
+   "html_update_public"
   ],
   "js_code_parenthesis_open_close": [
    "js_code_arrow",
@@ -21585,6 +21589,8 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
+    "js_code_braces_empty",
+    "js_code_let_assign",
     "js_code_call_statement",
     "path_join",
     "repo_path",
@@ -21606,6 +21612,8 @@
     "joined",
     "code",
     "call",
+    "right",
+    "v",
     "middle",
     "body"
    ]
