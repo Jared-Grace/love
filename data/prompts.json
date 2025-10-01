@@ -2414,9 +2414,9 @@
   "n app_main",
   "s search",
   "p",
-  "app_new_step_3 karate",
   "s storage,local",
   "s global",
-  "c global_function_property_async global_function_property"
+  "c global_function_property_async global_function_property",
+  "app_new_step_3 karate"
  ]
 }
