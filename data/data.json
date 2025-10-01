@@ -310,7 +310,8 @@
   ],
   "app_karate_email": [
    "app_karate_email",
-   "app_karate_screens"
+   "app_karate_screens",
+   "app_karate_home"
   ],
   "context": [
    "app_karate_email",
@@ -14942,6 +14943,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "app_karate_email",
     "emoji_person_outline",
     "emoji_add",
     "emoji_secure",
