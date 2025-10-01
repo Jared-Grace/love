@@ -2395,7 +2395,6 @@
   "oa karate",
   "s step",
   "app_new_step_3 karate",
-  "html_update_public karate",
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
@@ -2481,6 +2480,7 @@
   "p",
   "s body",
   "ff app_karate",
-  "s html,public"
+  "s html,public",
+  "html_update_public karate"
  ]
 }

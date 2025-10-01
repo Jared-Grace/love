@@ -1,4 +1,4 @@
-import { function_name_repo_path_combine } from "../../../karate_code/public/src/function_name_repo_path_combine.mjs";
+import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
