@@ -2497,6 +2497,7 @@
   "fpk",
   "s index",
   "s html,dev",
-  "u hup"
+  "u hup",
+  "hup karate"
  ]
 }
