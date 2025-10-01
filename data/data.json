@@ -14858,7 +14858,8 @@
    "app_karate_home"
   ],
   "html_div_text": [
-   "app_karate_home"
+   "app_karate_home",
+   "html_div_text"
   ]
  },
  "functions": {
@@ -30868,6 +30869,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "html_div_text": {
+   "async": false,
+   "identifiers": [
+    "html_div_text"
    ]
   }
  }
