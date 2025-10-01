@@ -367,8 +367,7 @@
   "html_style_margin_y": [
    "app_karate_home",
    "html_style_margin_y",
-   "app_karate_container",
-   "app_karate_style_control"
+   "app_karate_container"
   ],
   "html_div": [
    "app_karate_home",
@@ -14949,8 +14948,7 @@
   ],
   "app_karate_margin_y": [
    "app_karate_home",
-   "app_karate_margin_y",
-   "app_karate_style_control"
+   "app_karate_margin_y"
   ],
   "margin_y2": [
    "app_karate_home"
@@ -14974,7 +14972,7 @@
    "app_karate_green_dark",
    "app_karate_email"
   ],
-  "margin_y": [
+  "app_karate_margin_y_set": [
    "app_karate_style_control"
   ]
  },
@@ -31112,14 +31110,12 @@
   "app_karate_style_control": {
    "async": false,
    "identifiers": [
-    "html_style_margin_y",
-    "app_karate_margin_y",
+    "app_karate_margin_y_set",
     "html_style_assign",
     "app_karate_style_control",
     "component",
     "padding",
-    "width",
-    "margin_y"
+    "width"
    ]
   },
   "app_karate_green_dark": {
