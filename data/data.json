@@ -4331,8 +4331,7 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main",
-   "app_karate_home"
+   "app_reply_main"
   ],
   "letters": [
    "app_reply_main",
@@ -15025,9 +15024,6 @@
   ],
   "span": [
    "html_span_text"
-  ],
-  "container2": [
-   "app_karate_home"
   ]
  },
  "functions": {
@@ -15086,11 +15082,9 @@
     "component",
     "html_button_karate",
     "component2",
-    "container2",
-    "text2",
-    "text",
     "component3",
     "parent",
+    "text",
     "screen_name",
     "div"
    ]
