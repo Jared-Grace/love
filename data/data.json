@@ -2243,8 +2243,7 @@
   "folder_public": [
    "apps_get",
    "folder_public",
-   "folder_public_combine",
-   "server"
+   "folder_public_combine"
   ],
   "folder_read_files": [
    "apps_get",
@@ -5891,7 +5890,6 @@
    "repos_paths_names_map_unordered_combine",
    "retry",
    "search_generic",
-   "server",
    "storage_local_get",
    "storage_local_specify_get",
    "tasks_run",
@@ -30476,7 +30474,6 @@
     "express",
     "path",
     "fileURLToPath",
-    "folder_public",
     "server",
     "app",
     "port",
@@ -30486,7 +30483,6 @@
     "url",
     "__dirname",
     "dirname",
-    "result",
     "previous",
     "result2",
     "v",
