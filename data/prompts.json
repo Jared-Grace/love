@@ -2484,6 +2484,7 @@
   "s index",
   "n html_index_generate",
   "html_index_generate",
-  "apps_get"
+  "apps_get",
+  "s file,html"
  ]
 }
