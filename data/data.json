@@ -2884,7 +2884,8 @@
   ],
   "app_new_step_3": [
    "app_new_step_2_next",
-   "app_new_step_3"
+   "app_new_step_3",
+   "app_new_update"
   ],
   "html_new": [
    "app_new_step_2_next",
@@ -31763,6 +31764,7 @@
   "app_new_update": {
    "async": true,
    "identifiers": [
+    "app_new_step_3",
     "html_update",
     "marker",
     "app_new_update",
