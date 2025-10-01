@@ -2957,7 +2957,8 @@
    "string_starts_with_not",
    "tasks_run",
    "js_declaration_single_block_body_add",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "string_includes_lambda"
   ],
   "index": [
    "app_replace_home",
@@ -7715,8 +7716,7 @@
    "function_exists_inner",
    "function_name_to_path_search",
    "messenger_reply_unread_click",
-   "reply_test",
-   "string_includes_lambda"
+   "reply_test"
   ],
   "book2": [
    "ebible_references_parse_lines"
@@ -10114,7 +10114,8 @@
    "function_name_to_path",
    "search_generic",
    "string_includes",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "string_includes_lambda"
   ],
   "previous2": [
    "function_name_to_path_import"
@@ -14774,7 +14775,8 @@
   ],
   "si": [
    "string_is",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "string_includes_lambda"
   ],
   "string_is_assert_message": [
    "string_is_assert_json",
@@ -15067,12 +15069,10 @@
    "string_includes"
   ],
   "string_regex_match": [
-   "string_regex_match",
-   "string_includes_lambda"
+   "string_regex_match"
   ],
   "regex": [
-   "string_regex_match",
-   "string_includes_lambda"
+   "string_regex_match"
   ],
   "string_regex_match_lambda": [
    "string_regex_match_lambda"
@@ -31327,13 +31327,13 @@
   "string_includes_lambda": {
    "async": false,
    "identifiers": [
-    "string_regex_match",
+    "string_includes",
     "marker",
     "string_includes_lambda",
-    "regex",
+    "item",
     "l",
     "input",
-    "m"
+    "si"
    ]
   },
   "string_regex_match": {
