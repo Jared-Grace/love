@@ -2006,7 +2006,8 @@
    "app_name_main",
    "app_new_step_2",
    "firebase_deploy_function_app_current",
-   "html_update_dev"
+   "html_update_dev",
+   "app_new_step_4"
   ],
   "js_declaration_single": [
    "app_new_step_3_generic",
@@ -2183,7 +2184,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "app_new_step_4"
   ],
   "version_get": [
    "app_new_step_3_generic",
@@ -2739,7 +2741,8 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "app_new_step_4"
   ],
   "app_new_step_3": [
    "app_new_update",
@@ -3393,7 +3396,8 @@
    "function_param_swap_task_simple",
    "js_dollar_new",
    "marker_screen_add",
-   "task_new"
+   "task_new",
+   "app_new_step_4"
   ],
   "app_new_step_2": [
    "app_new_step_2",
@@ -15295,7 +15299,8 @@
    "watch"
   ],
   "app_new_step_4": [
-   "app_new_step_2_next"
+   "app_new_step_2_next",
+   "app_new_step_4"
   ]
  },
  "functions": {
@@ -31804,6 +31809,16 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_new_step_4": {
+   "async": true,
+   "identifiers": [
+    "function_new",
+    "app_name_main",
+    "app_new_step_4",
+    "name",
+    "combined"
    ]
   }
  }
