@@ -21,8 +21,8 @@ export async function function_wrap(f_name, f_name_wrapped) {
       arg_names,
       declaration_call,
     );
-    let body_block = js_declaration_single_block_body(ast);
     let item = js_statement_return(code);
+    let body_block = js_declaration_single_block_body(ast);
     list_add(body_block, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
