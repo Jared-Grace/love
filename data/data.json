@@ -308,7 +308,8 @@
    "watch",
    "whitespace_normalize",
    "app_karate_div_text",
-   "html_em_text"
+   "html_em_text",
+   "string_includes_lambda"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -31300,6 +31301,7 @@
   "string_includes_lambda": {
    "async": false,
    "identifiers": [
+    "marker",
     "string_includes_lambda"
    ]
   }
