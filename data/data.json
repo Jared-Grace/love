@@ -1209,7 +1209,8 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_if_test_replace",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_new_step_3"
   ],
   "js_code_dot": [
    "app_new_assign",
@@ -1307,7 +1308,8 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await"
+   "marker_next_await",
+   "app_new_step_3"
   ],
   "assign": [
    "app_new_assign",
@@ -11276,7 +11278,8 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression"
+   "js_parse_expression",
+   "app_new_step_3"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -14883,6 +14886,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "js_parse_expression",
     "js_parse_statement",
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
@@ -14909,6 +14913,8 @@
     "async",
     "value_string",
     "code_string",
+    "expression",
+    "code_expression",
     "code",
     "statement",
     "body_block",
