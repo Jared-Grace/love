@@ -1830,7 +1830,8 @@
    "object_properties_delete",
    "object_properties_delete_all",
    "repos_gitignore_overwrite",
-   "string_padded_is"
+   "string_padded_is",
+   "app_karate_home"
   ],
   "string_and_empty_not_is_assert": [
    "app_new",
@@ -3241,7 +3242,8 @@
   "html_p_text": [
    "app_replace_rule_set",
    "html_p_text",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_karate_home"
   ],
   "storage_local_get_context": [
    "app_replace_rule_set",
@@ -4212,7 +4214,8 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "letters": [
    "app_reply_main",
@@ -14844,7 +14847,7 @@
   "ignoreInitial": [
    "watch"
   ],
-  "hpt": [
+  "root2": [
    "app_karate_home"
   ]
  },
@@ -14859,6 +14862,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_p_text",
     "html_style_assign",
     "person_outline",
     "emoji_secure",
@@ -14873,7 +14877,9 @@
     "lambda2",
     "component",
     "html_button_karate",
-    "hpt",
+    "p",
+    "root2",
+    "text2",
     "lambda3",
     "component2",
     "lambda4",
