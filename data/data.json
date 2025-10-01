@@ -360,7 +360,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "app_karate_container_main"
   ],
   "html_div_text": [
    "html_div_text"
@@ -376,7 +377,8 @@
    "html_div",
    "html_loading",
    "app_karate_container",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_container_main"
   ],
   "html_style_assign": [
    "html_style_margin_y",
@@ -411,7 +413,8 @@
    "html_style_set",
    "html_style_set_or_remove",
    "app_karate_container",
-   "html_element"
+   "html_element",
+   "app_karate_container_main"
   ],
   "app_karate_home": [
    "app_karate_home",
@@ -14958,7 +14961,8 @@
   "container": [
    "app_karate_home",
    "html_span_text",
-   "html_em_text"
+   "html_em_text",
+   "app_karate_container_main"
   ],
   "app_karate_container": [
    "app_karate_home",
@@ -15033,7 +15037,8 @@
    "html_em_text"
   ],
   "app_karate_container_main": [
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_container_main"
   ]
  },
  "functions": {
@@ -31263,6 +31268,16 @@
     "container",
     "text",
     "span"
+   ]
+  },
+  "app_karate_container_main": {
+   "async": false,
+   "identifiers": [
+    "html_style_set",
+    "html_div",
+    "app_karate_container_main",
+    "root",
+    "container"
    ]
   }
  }
