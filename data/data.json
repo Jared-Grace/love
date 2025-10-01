@@ -14853,6 +14853,9 @@
   ],
   "html_p_text_karate": [
    "app_karate_home"
+  ],
+  "explanation": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14882,13 +14885,14 @@
     "lambda2",
     "component",
     "html_button_karate",
-    "html_p_text_karate",
     "lambda3",
     "component2",
     "lambda4",
     "component3",
+    "html_p_text_karate",
     "text",
     "parent",
+    "explanation",
     "lambda",
     "padding",
     "width"
