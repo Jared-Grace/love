@@ -2459,6 +2459,7 @@
   "s home",
   "s email",
   "n string_includes_lambda",
-  "a sin string_includes"
+  "a sin string_includes",
+  "s reg"
  ]
 }
