@@ -2255,8 +2255,7 @@
    "watch",
    "repo_about_get",
    "repo_about_set",
-   "repo_firebase_service_account_set",
-   "app_main"
+   "repo_firebase_service_account_set"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -30573,8 +30572,7 @@
     "app_fn",
     "f_name",
     "firebase_name_value",
-    "name",
-    "value"
+    "name"
    ]
   }
  }
