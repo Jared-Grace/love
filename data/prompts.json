@@ -2396,7 +2396,6 @@
   "c repo_acronym_set repo_firebase_service_account_set",
   "rfsas firebase_service_account_love",
   "s love",
-  "urs k",
   "c firebase_service_account_love firebase_service_account_karate",
   "rfsas firebase_service_account_karate",
   "s karate",
@@ -2411,6 +2410,7 @@
   "urg",
   "repo_path a",
   "urs l",
-  "is js_identifier_unique"
+  "is js_identifier_unique",
+  "urs k"
  ]
 }
