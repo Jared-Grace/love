@@ -2486,6 +2486,7 @@
   "s file,html",
   "html_index_generate karate",
   "fb",
-  "o ff"
+  "o ff",
+  "c firebase_deploy_function_destination_version firebase_deploy_function_destination_production"
  ]
 }
