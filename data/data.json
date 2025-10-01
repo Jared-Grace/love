@@ -5687,7 +5687,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "file_write": [
    "data_all",
@@ -14730,9 +14731,6 @@
   ],
   "a_name_identifier": [
    "app_new_step_3"
-  ],
-  "$x": [
-   "firebase_name"
   ]
  },
  "functions": {
@@ -30552,7 +30550,7 @@
     "file_read_json",
     "user_repo_path_combine",
     "firebase_name",
-    "$x",
+    "f_path",
     "combined",
     "f",
     "projects",
