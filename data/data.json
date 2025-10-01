@@ -1777,7 +1777,8 @@
    "whitespace_normalize",
    "app_karate_container_background",
    "app_karate_button_background",
-   "sandbox_3"
+   "sandbox_3",
+   "firebase_deploy"
   ],
   "html_span_text": [
    "app_karate_home",
@@ -6071,7 +6072,8 @@
    "command_line",
    "command_line_cmd",
    "command_line_generic",
-   "sandbox_3"
+   "sandbox_3",
+   "firebase_deploy"
   ],
   "command_line": [
    "command_line",
@@ -18885,9 +18887,11 @@
   "firebase_deploy": {
    "async": true,
    "identifiers": [
+    "command_line_generic",
     "command_line",
     "marker",
     "firebase_deploy",
+    "v",
     "stdout"
    ]
   },
