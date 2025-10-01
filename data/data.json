@@ -2351,7 +2351,8 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_deploy"
   ],
   "global_function_initialize": [
    "app_main",
@@ -6347,7 +6348,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "firebase_deploy"
   ],
   "file_write": [
    "data_all",
@@ -9869,7 +9871,8 @@
   ],
   "user_repo_path_combine": [
    "function_copy",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_deploy"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -18889,12 +18892,15 @@
   "firebase_deploy": {
    "async": true,
    "identifiers": [
+    "user_repo_path_combine",
     "user_repo_get",
     "command_line_generic",
     "command_line",
     "marker",
     "firebase_deploy",
     "repo_name",
+    "combined",
+    "f_path",
     "v",
     "stdout"
    ]
