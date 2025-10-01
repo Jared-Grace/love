@@ -613,7 +613,8 @@
    "html_p_text_multiple",
    "app_karate_container",
    "app_karate_div_text",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_email"
   ],
   "text": [
    "app_karate_home",
@@ -15056,7 +15057,8 @@
   "app_karate_div": [
    "app_karate_div_text",
    "app_karate_div",
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_email"
   ],
   "html_span_text": [
    "app_karate_home",
@@ -15119,6 +15121,9 @@
   "html_value_set": [
    "html_value_set",
    "app_karate_email"
+  ],
+  "div2": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15132,6 +15137,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_div",
     "html_value_set",
     "html_value_get",
     "string_trim",
@@ -15165,6 +15171,8 @@
     "check",
     "div",
     "input",
+    "div2",
+    "parent",
     "lambda2",
     "value",
     "trimmed"
