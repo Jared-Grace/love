@@ -2418,6 +2418,7 @@
   "c global_function_property_async global_function_property",
   "app_new_step_3 karate",
   "o an",
-  "html_new karate"
+  "html_new karate",
+  "s code,assign"
  ]
 }
