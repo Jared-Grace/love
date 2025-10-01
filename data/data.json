@@ -575,7 +575,8 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_email"
   ],
   "lambda4": [
    "app_replace_home",
@@ -1106,7 +1107,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "app_karate_email"
   ],
   "v": [
    "app_karate_screens",
@@ -4239,7 +4241,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_email"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -11036,7 +11039,8 @@
   ],
   "html_attribute_set": [
    "html_attribute_set",
-   "html_meta_viewport"
+   "html_meta_viewport",
+   "app_karate_email"
   ],
   "element": [
    "html_attribute_set",
@@ -15004,6 +15008,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_attribute_set",
     "emoji_email",
     "app_karate_div_text",
     "app_karate_green_dark",
@@ -15021,6 +15026,9 @@
     "component",
     "color",
     "div",
+    "component2",
+    "key",
+    "value",
     "input"
    ]
   },
