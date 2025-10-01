@@ -5,8 +5,8 @@ export async function functions_names() {
   marker("1");
   let squashed = await repos_paths_map_unordered_combine_squash(mapper);
   return squashed;
-  function mapper(joined) {
-    let f_names = functions_names_from_path(joined);
+  async function mapper(joined) {
+    let f_names = await functions_names_from_path(joined);
     return f_names;
   }
 }

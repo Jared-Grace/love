@@ -2435,6 +2435,7 @@
   "is server",
   "is function_import",
   "is function_run",
-  "s width"
+  "s width",
+  "s emoji_add"
  ]
 }
