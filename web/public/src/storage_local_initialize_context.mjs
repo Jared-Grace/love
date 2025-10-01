@@ -7,6 +7,6 @@ export async function storage_local_initialize_context(
 ) {
   marker("1");
   let { app_fn } = context;
-  let value = await storage_local_initialize(app_fn, key, value_initial);
+  let value = storage_local_initialize(app_fn, key, value_initial);
   return value;
 }
