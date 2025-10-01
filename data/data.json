@@ -14942,9 +14942,9 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "html_clear_context",
     "html_div_text",
     "html_style_margin_y",
+    "html_clear_context",
     "html_div",
     "html_style_assign",
     "emoji_person_outline",
