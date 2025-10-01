@@ -2027,8 +2027,7 @@
   ],
   "firebase_deploy_function_destination_production": [
    "firebase_deploy_function_destination_production",
-   "firebase_promote_function",
-   "firebase_storage_function_run"
+   "firebase_promote_function"
   ],
   "html_em_text": [
    "html_em_text"
@@ -15256,6 +15255,9 @@
   ],
   "firebase_promote_function_app_karate_main": [
    "firebase_promote_function_app_karate_main"
+  ],
+  "version_get": [
+   "firebase_storage_function_run"
   ]
  },
  "functions": {
@@ -19239,7 +19241,6 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
-    "firebase_deploy_function_destination_production",
     "marker",
     "html_text_set",
     "html_attribute_set",
@@ -19251,6 +19252,7 @@
     "firebase_storage_download_property",
     "firebase_storage_function_run",
     "f_name",
+    "version_get",
     "destination_version",
     "destination",
     "code",
