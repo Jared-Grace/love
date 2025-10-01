@@ -2443,6 +2443,7 @@
   "a hpt html_p_text",
   "s center",
   "u hd",
-  "a hd html_div"
+  "a hd html_div",
+  "fws html_div text"
  ]
 }
