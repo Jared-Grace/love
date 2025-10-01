@@ -13999,7 +13999,8 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction"
+   "newFunction",
+   "storage_local_set"
   ],
   "package_name": [
    "npm_install"
@@ -29459,7 +29460,7 @@
    ]
   },
   "storage_local_set": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "json_to",
     "storage_local_key_get",
@@ -29468,6 +29469,7 @@
     "key",
     "value",
     "storage_local_key",
+    "newFunction",
     "v",
     "localStorage",
     "setItem"
