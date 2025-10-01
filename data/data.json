@@ -459,7 +459,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "sandbox_3"
+   "sandbox_3",
+   "html_index_generate"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31610,6 +31611,7 @@
   "html_index_generate": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_index_generate"
    ]
   }
