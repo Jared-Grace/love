@@ -14269,7 +14269,8 @@
    "messenger_reply_wait"
   ],
   "newFunction": [
-   "newFunction"
+   "newFunction",
+   "app_karate_home"
   ],
   "package_name": [
    "npm_install"
@@ -15070,7 +15071,7 @@
    ]
   },
   "app_karate_home": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "html_span_text",
     "html_text_set",
@@ -15088,6 +15089,7 @@
     "context",
     "root",
     "container",
+    "newFunction",
     "component",
     "html_button_karate",
     "component2",
