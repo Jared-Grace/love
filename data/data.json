@@ -14802,6 +14802,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "app_karate_home": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -30748,6 +30751,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "app_karate_home": {
+   "async": false,
+   "identifiers": [
+    "app_karate_home"
    ]
   }
  }
