@@ -801,8 +801,7 @@
    "function_name_unalias",
    "firebase_promote_function",
    "firebase_promote_function_app_karate_main",
-   "firebase_storage_function_run",
-   "app_karate"
+   "firebase_storage_function_run"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -2028,7 +2027,8 @@
   "firebase_deploy_function_destination_production": [
    "firebase_deploy_function_destination_production",
    "firebase_promote_function",
-   "app_new_step_3"
+   "app_new_step_3",
+   "app_karate"
   ],
   "html_em_text": [
    "html_em_text"
@@ -15267,7 +15267,7 @@
   "app_karate": {
    "async": true,
    "identifiers": [
-    "marker",
+    "firebase_deploy_function_destination_production",
     "app_main",
     "app_karate"
    ]
