@@ -2466,6 +2466,7 @@
   "s on_",
   "s _on_",
   "c html_on_click html_on_change",
-  "s value"
+  "s value",
+  "s html,get"
  ]
 }
