@@ -13101,8 +13101,7 @@
   ],
   "v7": [
    "js_marker_name_get",
-   "string_trim",
-   "app_karate_email"
+   "string_trim"
   ],
   "a5": [
    "js_marker_name_get"
@@ -15107,6 +15106,9 @@
   "html_value_get": [
    "app_karate_email",
    "html_value_get"
+  ],
+  "trimmed": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15151,7 +15153,7 @@
     "input",
     "lambda2",
     "value",
-    "v7",
+    "trimmed",
     "checks",
     "text",
     "check"
