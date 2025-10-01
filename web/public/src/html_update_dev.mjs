@@ -1,4 +1,4 @@
-import { function_name_repo_path_combine } from "../../../karate_code/public/src/function_name_repo_path_combine.mjs";
+import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
