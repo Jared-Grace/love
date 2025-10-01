@@ -2490,6 +2490,7 @@
   "fws firebase_deploy_function app_karate_main",
   "s import",
   "functions_names",
-  "o u"
+  "o u",
+  "a fk firebase_deploy_function_app_karate_main"
  ]
 }
