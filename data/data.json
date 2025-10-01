@@ -2665,7 +2665,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "app_karate_main"
   ],
   "app_replace_font_size_factor": [
    "app_replace_font_size_factor",
@@ -2683,7 +2684,8 @@
   "html": [
    "app_replace_font_size_refresh",
    "html_document_root",
-   "html_style_font_size"
+   "html_style_font_size",
+   "app_karate_main"
   ],
   "emoji_gear": [
    "app_replace_home",
@@ -11002,7 +11004,8 @@
    "html_display_none",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_main"
   ],
   "html_display_block": [
    "html_display_block",
@@ -14888,6 +14891,7 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "app_karate_screens",
     "app_karate",
     "app_replace_font_size_refresh",
@@ -14898,7 +14902,9 @@
     "app_fn",
     "screens",
     "root",
-    "context"
+    "context",
+    "html",
+    "value"
    ]
   },
   "app_karate_screens": {
