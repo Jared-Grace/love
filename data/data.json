@@ -2492,7 +2492,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "html_index_generate"
+   "html_index_generate",
+   "firebase_deploy_function_destination_production"
   ],
   "firebase_name_value": [
    "app_main"
@@ -8672,7 +8673,8 @@
   "firebase_deploy_function_destination": [
    "firebase_deploy_function",
    "firebase_deploy_function_destination",
-   "firebase_deploy_function_destination_version"
+   "firebase_deploy_function_destination_version",
+   "firebase_deploy_function_destination_production"
   ],
   "function_dependencies_code": [
    "firebase_deploy_function",
@@ -8695,7 +8697,8 @@
    "firebase_deploy_function_app_current"
   ],
   "destination2": [
-   "firebase_deploy_function_destination_version"
+   "firebase_deploy_function_destination_version",
+   "firebase_deploy_function_destination_production"
   ],
   "global_function_get": [
    "firebase_name",
@@ -15214,6 +15217,9 @@
   ],
   "app_name": [
    "html_index_generate"
+  ],
+  "firebase_deploy_function_destination_production": [
+   "firebase_deploy_function_destination_production"
   ]
  },
  "functions": {
@@ -31629,6 +31635,15 @@
     "combined2",
     "combined",
     "contents"
+   ]
+  },
+  "firebase_deploy_function_destination_production": {
+   "async": false,
+   "identifiers": [
+    "firebase_deploy_function_destination",
+    "firebase_deploy_function_destination_production",
+    "f_name",
+    "destination2"
    ]
   }
  }
