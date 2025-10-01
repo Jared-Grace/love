@@ -2218,8 +2218,7 @@
    "js_expand_generic",
    "marker_screen_add",
    "app_name_staging",
-   "html_update_public_generic",
-   "html_update_staging"
+   "html_update_public_generic"
   ],
   "repo_name": [
    "app_new_step_3_generic",
@@ -2365,7 +2364,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "html_update_staging"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -31902,7 +31902,7 @@
     "html_name_to_path",
     "html_update_staging",
     "name",
-    "a_name",
+    "f_name",
     "file_path"
    ]
   }
