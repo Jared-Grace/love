@@ -1408,7 +1408,6 @@
   "is html_update",
   "cs html_name_to_path dev",
   "cs html_update dev",
-  "u fp",
   "html_name_to_path_dev replace",
   "html_update_dev replace",
   "rs html_update public",
@@ -2493,6 +2492,7 @@
   "a fk firebase_deploy_function_app_karate_main",
   "s download",
   "n firebase_promote_function",
-  "fws firebase_promote_function app_karate_main"
+  "fws firebase_promote_function app_karate_main",
+  "u fp"
  ]
 }
