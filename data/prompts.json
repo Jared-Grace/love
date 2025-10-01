@@ -1401,7 +1401,6 @@
   "is firebase_deploy_function_destination_version",
   "ff app_replace_main",
   "fb",
-  "data_app_current_get",
   "u ff",
   "fws firebase_deploy_function app_current",
   "a ffc firebase_deploy_function_app_current",
@@ -2427,6 +2426,7 @@
   "fld C:/Users/chris/repos/love/.git/index.lock",
   "np",
   "s screen",
-  "is marker_screen_add"
+  "is marker_screen_add",
+  "data_app_current_get"
  ]
 }
