@@ -1,7 +1,7 @@
+import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.mjs";
 import { app_main } from "../../../love/public/src/app_main.mjs";
 import { firebase_deploy_function_destination_production } from "../../../karate_code/public/src/firebase_deploy_function_destination_production.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
