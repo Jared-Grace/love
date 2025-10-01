@@ -8,7 +8,7 @@ export async function app_refresh(context) {
   let body = html_document_body();
   html_clear(body);
   marker("1");
-  let screen_name = await storage_local_initialize(app_fn, "screen", "home");
+  let screen_name = storage_local_initialize(app_fn, "screen", "home");
   let screen = object_property_get(screens, screen_name);
   screen(context);
 }
