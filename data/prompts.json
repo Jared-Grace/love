@@ -2436,6 +2436,7 @@
   "s width",
   "p",
   "s emoji_add",
-  "s emoji"
+  "s emoji",
+  "fws html_button s width"
  ]
 }
