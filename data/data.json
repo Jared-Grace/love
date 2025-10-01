@@ -11575,8 +11575,7 @@
   "html_name_to_path": [
    "html_name_to_path",
    "html_new",
-   "html_update_public",
-   "html_update_staging"
+   "html_update_public"
   ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
@@ -15325,7 +15324,8 @@
    "html_name_to_path_staging"
   ],
   "html_name_to_path_staging": [
-   "html_name_to_path_staging"
+   "html_name_to_path_staging",
+   "html_update_staging"
   ],
   "html_update_public_generic": [
    "html_update_public",
@@ -31896,10 +31896,10 @@
   "html_update_staging": {
    "async": true,
    "identifiers": [
+    "html_name_to_path_staging",
     "app_name_staging",
     "marker",
     "html_update_public_generic",
-    "html_name_to_path",
     "html_update_staging",
     "name",
     "f_name",
