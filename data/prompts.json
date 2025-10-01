@@ -2331,7 +2331,6 @@
   "s repos",
   "s sand",
   "a of function_run_output_file_temp",
-  "s index",
   "html_name_to_path karate",
   "s name,path",
   "function_name_to_path_search karate",
@@ -2481,6 +2480,7 @@
   "s html,public",
   "p",
   "html_update_public karate",
-  "fb"
+  "fb",
+  "s index"
  ]
 }
