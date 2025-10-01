@@ -7,8 +7,8 @@ import { function_name_folder_to_path } from "../../../love/public/src/function_
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function functions_names_to_paths() {
   marker("1");
-  function mapper(folder) {
-    let f_names = functions_names_from_path(folder);
+  async function mapper(folder) {
+    let f_names = await functions_names_from_path(folder);
     function lambda(f_name) {
       let joined = function_name_folder_to_path(f_name, folder);
       return joined;
