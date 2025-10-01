@@ -1308,8 +1308,7 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await",
-   "app_new_step_3"
+   "marker_next_await"
   ],
   "assign": [
    "app_new_assign",
@@ -11278,8 +11277,7 @@
    "js_await",
    "js_await_wrap",
    "js_if_else_if_combine",
-   "js_parse_expression",
-   "app_new_step_3"
+   "js_parse_expression"
   ],
   "args_expression": [
    "js_assert_arguments_args"
@@ -12115,8 +12113,7 @@
    "js_dollar_g",
    "js_dollar_new",
    "js_marker_insert",
-   "marker_assign_replace_string",
-   "app_new_step_3"
+   "marker_assign_replace_string"
   ],
   "declaration_id": [
    "js_declaration_name"
@@ -14725,6 +14722,12 @@
   ],
   "firebase_name_value": [
    "app_main"
+  ],
+  "main_name": [
+   "app_new_step_3"
+  ],
+  "a_name_identifier": [
+   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14912,9 +14915,8 @@
     "ast",
     "async",
     "value_string",
-    "code_string",
-    "expression",
-    "code_expression",
+    "main_name",
+    "a_name_identifier",
     "code",
     "statement",
     "body_block",
