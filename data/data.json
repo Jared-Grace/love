@@ -3506,7 +3506,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "app_karate_home"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -11258,14 +11259,16 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_home"
   ],
   "removeProperty": [
    "html_style_remove"
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_home"
   ],
   "innerHTML": [
    "html_text_set"
@@ -14917,10 +14920,7 @@
    "js_declaration_single_block_body_add",
    "marker_screen_add"
   ],
-  "div2": [
-   "app_karate_home"
-  ],
-  "root2": [
+  "container": [
    "app_karate_home"
   ]
  },
@@ -14959,8 +14959,10 @@
     "app_karate_home",
     "context",
     "root",
-    "div2",
-    "root2",
+    "container",
+    "b",
+    "style_key",
+    "style_value",
     "lambda2",
     "component",
     "html_button_karate",
