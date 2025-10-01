@@ -1121,7 +1121,6 @@
    "js_call_new_code",
    "js_code_await",
    "js_code_braces_empty",
-   "js_code_call_args",
    "js_code_export",
    "js_code_import_single",
    "js_code_let_assign",
@@ -1996,7 +1995,8 @@
    "marker_down_choices",
    "marker_functionize",
    "marker_next_await",
-   "marker_next_delete_multiple"
+   "marker_next_delete_multiple",
+   "js_code_call_args"
   ],
   "expression": [
    "app_new_assign",
@@ -22857,7 +22857,7 @@
     "fn_name",
     "args",
     "joined",
-    "v"
+    "code"
    ]
   },
   "js_code_call_args_await_maybe": {
