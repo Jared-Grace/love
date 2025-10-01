@@ -469,7 +469,8 @@
    "html_element",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_email"
   ],
   "html_style_margin_y": [
    "app_karate_margin_y_set",
@@ -3919,7 +3920,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "app_karate_email"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -11519,14 +11521,16 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_email"
   ],
   "removeProperty": [
    "html_style_remove"
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_email"
   ],
   "innerHTML": [
    "html_text_set"
@@ -15241,6 +15245,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "app_karate_container",
     "html_on_input",
     "log",
@@ -15283,6 +15288,9 @@
     "input",
     "div_checks",
     "ul",
+    "b",
+    "style_key",
+    "style_value",
     "lambda2",
     "value",
     "trimmed",
