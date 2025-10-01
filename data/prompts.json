@@ -1724,7 +1724,6 @@
   "ebible_verses_upload urdgvu",
   "s roc",
   "s ston",
-  "s emoji",
   "ebible_verses_upload yor",
   "ebible_version_books_testament_new engbsb",
   "s version",
@@ -2436,6 +2435,7 @@
   "is function_run",
   "s width",
   "p",
-  "s emoji_add"
+  "s emoji_add",
+  "s emoji"
  ]
 }
