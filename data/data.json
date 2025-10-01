@@ -4331,7 +4331,8 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "letters": [
    "app_reply_main",
@@ -15018,15 +15019,15 @@
    "app_karate_div",
    "app_karate_home"
   ],
-  "hst": [
-   "app_karate_home"
-  ],
   "html_span_text": [
    "app_karate_home",
    "html_span_text"
   ],
   "span": [
    "html_span_text"
+  ],
+  "container2": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15085,7 +15086,8 @@
     "component",
     "html_button_karate",
     "component2",
-    "hst",
+    "container2",
+    "text2",
     "text",
     "component3",
     "parent",
