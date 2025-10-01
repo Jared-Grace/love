@@ -1,7 +1,9 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
-export async function folder_read_files(path_folder) {
-  let fs = await import("fs");
+import fs from "fs";
+import { sleep } from "./sleep.mjs";
+export function folder_read_files(path_folder) {
+  sleep;
   marker("1");
   function lambda(file) {
     let result = path_join([path_folder, file]);
