@@ -1802,8 +1802,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "component3": [
    "app_karate_home",
@@ -14237,7 +14236,8 @@
   ],
   "focus": [
    "messenger_reply",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "app_karate_email"
   ],
   "keyboard": [
    "messenger_reply",
@@ -15335,7 +15335,7 @@
     "background",
     "button_background",
     "element",
-    "component2"
+    "focus"
    ]
   },
   "app_karate_green_dark": {
