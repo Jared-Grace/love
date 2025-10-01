@@ -15138,6 +15138,9 @@
   ],
   "ul": [
    "app_karate_email"
+  ],
+  "hts": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15199,7 +15202,8 @@
     "text2",
     "check2",
     "a",
-    "li"
+    "li",
+    "hts"
    ]
   },
   "app_karate_home": {
