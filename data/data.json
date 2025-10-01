@@ -1210,8 +1210,7 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_if_test_replace",
-   "marker_screen_add",
-   "app_new_step_3"
+   "marker_screen_add"
   ],
   "js_code_dot": [
    "app_new_assign",
@@ -14733,9 +14732,6 @@
   "main_name": [
    "app_new_step_3"
   ],
-  "a_name_identifier": [
-   "app_new_step_3"
-  ],
   "firebase_name_repo": [
    "firebase_name",
    "firebase_name_repo",
@@ -14907,7 +14903,6 @@
     "log",
     "firebase_name_repo",
     "function_name_to_path_search",
-    "js_parse_expression",
     "js_parse_statement",
     "js_code_call_args_await_maybe",
     "function_parse_declaration",
@@ -14937,7 +14932,6 @@
     "async",
     "value_string",
     "main_name",
-    "a_name_identifier",
     "code",
     "statement",
     "body_block",
