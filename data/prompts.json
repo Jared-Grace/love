@@ -2412,6 +2412,7 @@
   "urs k",
   "ps",
   "fdf app_karate_main",
-  "s step"
+  "s step",
+  "s app,main"
  ]
 }
