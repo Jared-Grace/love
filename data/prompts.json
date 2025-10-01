@@ -2481,6 +2481,7 @@
   "p",
   "html_update_public karate",
   "fb",
-  "s index"
+  "s index",
+  "n html_index_generate"
  ]
 }
