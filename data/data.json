@@ -14976,7 +14976,7 @@
    ]
   },
   "app_replace_font_size_adjust": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "app_replace_font_size_refresh",
     "storage_local_set_context",
