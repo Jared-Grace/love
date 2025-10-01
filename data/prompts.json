@@ -2350,7 +2350,6 @@
   "s3",
   "a of function_run_output_file_temp",
   "s index",
-  "s html",
   "html_name_to_path karate",
   "s name,path",
   "function_name_to_path_search karate",
@@ -2421,6 +2420,7 @@
   "s step",
   "app_new_step_3 karate",
   "html_update_public karate",
-  "s repo_path"
+  "s repo_path",
+  "s html"
  ]
 }
