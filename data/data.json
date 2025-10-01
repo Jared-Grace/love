@@ -2018,8 +2018,7 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "firebase_promote_function",
-   "firebase_promote_function_app_karate_main"
+   "firebase_promote_function"
   ],
   "destination2": [
    "firebase_deploy_function_destination_latest",
@@ -31716,7 +31715,6 @@
     "firebase_promote_function",
     "marker",
     "firebase_promote_function_app_karate_main",
-    "f_name",
     "v",
     "name"
    ]
