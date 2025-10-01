@@ -637,7 +637,6 @@
    "app_karate_button_screen_green"
   ],
   "explanation": [
-   "app_karate_home",
    "app_karate_div_text"
   ],
   "lambda": [
@@ -14992,7 +14991,6 @@
    "app_karate_margin_y_set"
   ],
   "app_karate_div_text": [
-   "app_karate_home",
    "app_karate_div_text",
    "app_karate_email"
   ],
@@ -15014,7 +15012,8 @@
   ],
   "app_karate_div": [
    "app_karate_div_text",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15054,8 +15053,8 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "app_karate_div",
     "app_karate_button_screen_green",
-    "app_karate_div_text",
     "app_karate_container",
     "app_karate_email",
     "emoji_person_outline",
@@ -15076,7 +15075,6 @@
     "component3",
     "parent",
     "text",
-    "explanation",
     "screen_name",
     "div"
    ]
