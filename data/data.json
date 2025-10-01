@@ -6354,7 +6354,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "folder_public_combine"
   ],
   "file_write": [
    "data_all",
@@ -7986,7 +7987,6 @@
   ],
   "second": [
    "ebible_references_parse_lines",
-   "folder_public_combine",
    "functions_path",
    "function_alias_add",
    "function_name_folder_to_path",
@@ -19330,7 +19330,7 @@
     "folder_public",
     "path_join",
     "folder_public_combine",
-    "second",
+    "f_path",
     "result",
     "combined"
    ]
