@@ -2270,7 +2270,6 @@
    "function_params_consolidate",
    "function_params_new",
    "function_run_line_parse",
-   "function_wrap",
    "js_auto_transform_new_inner",
    "js_bang_to_not",
    "js_declaration_param_add_node",
@@ -2392,7 +2391,6 @@
    "app_new_step_3",
    "functions_combine",
    "function_list_generate",
-   "function_wrap",
    "js_declaration_single_block_body",
    "js_declaration_single_block_body_add_return",
    "js_dollar_aa",
@@ -2675,7 +2673,6 @@
    "app_new_step_3",
    "functions_combine",
    "function_list_generate",
-   "function_wrap",
    "js_declaration_single_block_body",
    "js_declaration_single_block_body_add_return",
    "js_declaration_to_block_body",
@@ -14911,6 +14908,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "js_declaration_single_block_body_add": [
+   "function_wrap"
   ]
  },
  "functions": {
@@ -20891,8 +20891,8 @@
   "function_wrap": {
    "async": true,
    "identifiers": [
+    "js_declaration_single_block_body_add",
     "js_statement_return",
-    "js_declaration_single_block_body",
     "object_property_from",
     "js_declaration_asyncify",
     "js_code_call_args_await_maybe",
@@ -20900,7 +20900,6 @@
     "function_parse_declaration",
     "function_new_transform",
     "js_declaration_single",
-    "list_add",
     "js_imports_missing_add",
     "function_wrap",
     "f_name",
@@ -20913,8 +20912,7 @@
     "ast",
     "arg_names",
     "code",
-    "item",
-    "body_block"
+    "item"
    ]
   },
   "function_wrap_suffix_add": {
