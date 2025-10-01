@@ -268,7 +268,6 @@
   "ac mn mx",
   "c marker_next marker_new",
   "s call,ex",
-  "s code,call",
   "a mn marker_new",
   "s delim",
   "c function_current_set marker_current_set",
@@ -2445,6 +2444,7 @@
   "a hd html_div",
   "fws html_div text",
   "msa email",
-  "o msa"
+  "o msa",
+  "s code,call"
  ]
 }
