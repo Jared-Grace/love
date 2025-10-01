@@ -1,7 +1,7 @@
-import { global_function_get } from "../../../karate_code/public/src/global_function_get.mjs";
-import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { global_function_get } from "./global_function_get.mjs";
+import { browser_is } from "./browser_is.mjs";
 import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
-import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
+import { user_repo_get } from "./user_repo_get.mjs";
 export async function firebase_name() {
   if (browser_is()) {
     let value = global_function_get(firebase_name);
