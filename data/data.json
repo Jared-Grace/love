@@ -14741,6 +14741,9 @@
   ],
   "projects": [
    "firebase_name_repo"
+  ],
+  "main_nam": [
+   "app_new_step_3"
   ]
  },
  "functions": {
@@ -14935,6 +14938,7 @@
     "main_name",
     "a_name_identifier",
     "code",
+    "main_nam",
     "statement",
     "body_block",
     "assign",
