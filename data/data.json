@@ -311,8 +311,7 @@
   ],
   "app_karate_email": [
    "app_karate_email",
-   "app_karate_screens",
-   "app_karate_home"
+   "app_karate_screens"
   ],
   "context": [
    "app_karate_email",
@@ -547,7 +546,6 @@
    "app_karate_home"
   ],
   "lambda3": [
-   "app_karate_home",
    "app_replace_rule_set",
    "app_replace_settings",
    "app_reply_main",
@@ -15056,7 +15054,6 @@
     "app_karate_div",
     "app_karate_button_screen_green",
     "app_karate_container",
-    "app_karate_email",
     "emoji_person_outline",
     "emoji_add",
     "emoji_secure",
@@ -15070,7 +15067,6 @@
     "container",
     "component",
     "html_button_karate",
-    "lambda3",
     "component2",
     "component3",
     "parent",
