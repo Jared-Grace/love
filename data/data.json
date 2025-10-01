@@ -1894,7 +1894,8 @@
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "firebase_promote_function"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -2012,7 +2013,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "firebase_promote_function"
   ],
   "destination2": [
    "firebase_deploy_function_destination_latest",
@@ -7856,7 +7858,8 @@
   "firebase_upload_object": [
    "ebible_firebase_upload",
    "firebase_deploy_function",
-   "firebase_upload_object"
+   "firebase_upload_object",
+   "firebase_promote_function"
   ],
   "ebible_firebase_upload": [
    "ebible_firebase_upload",
@@ -8753,11 +8756,13 @@
    "firebase_deploy_function_app_karate_main"
   ],
   "version": [
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_promote_function"
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "firebase_storage_function_run"
+   "firebase_storage_function_run",
+   "firebase_promote_function"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -31674,10 +31679,15 @@
    ]
   },
   "firebase_promote_function": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "firebase_upload_object",
+    "firebase_deploy_function_destination_latest",
     "marker",
-    "firebase_promote_function"
+    "firebase_promote_function",
+    "destination_version",
+    "f_name",
+    "version"
    ]
   }
  }
