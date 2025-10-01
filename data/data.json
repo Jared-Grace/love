@@ -5025,7 +5025,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "function_new_app_screen"
   ],
   "error": [
    "assert",
@@ -13785,7 +13786,8 @@
    "marker_rename"
   ],
   "marker_screen_add": [
-   "marker_screen_add"
+   "marker_screen_add",
+   "function_new_app_screen"
   ],
   "combined_screen": [
    "marker_screen_add"
@@ -14804,6 +14806,9 @@
   "app_karate_screens": [
    "app_karate_screens",
    "app_karate_main"
+  ],
+  "screen_name2": [
+   "function_new_app_screen"
   ]
  },
  "functions": {
@@ -19978,6 +19983,7 @@
   "function_new_app_screen": {
    "async": true,
    "identifiers": [
+    "marker_screen_add",
     "data_app_current_get",
     "function_name_combine",
     "function_new",
@@ -19986,7 +19992,9 @@
     "screen_name",
     "a_name",
     "combined",
-    "v"
+    "v",
+    "v2",
+    "screen_name2"
    ]
   },
   "function_new_declaration": {
