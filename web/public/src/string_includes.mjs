@@ -1,7 +1,7 @@
 import { string_is_assert_json } from "../../../love/public/src/string_is_assert_json.mjs";
 export function string_includes(input, part) {
   const o = {
-    string: input,
+    input,
     part,
   };
   string_is_assert_json(input, o);
