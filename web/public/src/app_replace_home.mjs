@@ -16,7 +16,7 @@ export function app_replace_home(context) {
     let name2 = object_property_get(item, "name");
     html_button(root, name2, lambda);
     async function lambda() {
-      storage_local_set_context(context, "rule_set_index", index);
+      await storage_local_set_context(context, "rule_set_index", index);
       await app_screen_set(context, "rule_set");
     }
   }
