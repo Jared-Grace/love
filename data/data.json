@@ -5323,7 +5323,8 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green"
+   "trinity_green",
+   "app_karate_home"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -15082,6 +15083,7 @@
     "component",
     "html_button_karate",
     "component2",
+    "s",
     "component3",
     "parent",
     "text",
