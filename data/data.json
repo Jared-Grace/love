@@ -15013,6 +15013,9 @@
    "app_karate_div_text",
    "app_karate_div",
    "app_karate_home"
+  ],
+  "hst": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15070,6 +15073,7 @@
     "component",
     "html_button_karate",
     "component2",
+    "hst",
     "component3",
     "parent",
     "text",
