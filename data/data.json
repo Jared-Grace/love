@@ -140,7 +140,8 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "firebase_storage_function_run"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -500,7 +501,8 @@
    "html_button_screen",
    "html_element",
    "html_p_text_multiple",
-   "app_karate_container"
+   "app_karate_container",
+   "firebase_storage_function_run"
   ],
   "padding": [
    "app_karate_style_control",
@@ -869,7 +871,8 @@
    "html_document_root",
    "html_element",
    "html_meta_viewport",
-   "html_p"
+   "html_p",
+   "firebase_storage_function_run"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -11326,7 +11329,8 @@
    "html_button_element",
    "html_element",
    "messenger_reply_unread_click",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "firebase_storage_function_run"
   ],
   "html_code_script_module": [
    "html_code_script_module",
@@ -19125,6 +19129,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "html_element",
     "html_document_body",
     "browser_is",
     "list_join_newline",
@@ -19139,6 +19144,9 @@
     "call",
     "joined",
     "body",
+    "component",
+    "parent",
+    "tag_name",
     "eval"
    ]
   },
