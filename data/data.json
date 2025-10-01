@@ -811,7 +811,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "html_name_to_path_staging"
+   "html_name_to_path_staging",
+   "html_update_staging"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31893,6 +31894,7 @@
   "html_update_staging": {
    "async": true,
    "identifiers": [
+    "marker",
     "html_update_public_generic",
     "app_name_prefixed",
     "html_name_to_path",
