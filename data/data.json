@@ -31694,8 +31694,8 @@
     "marker",
     "firebase_deploy_function_destination_production",
     "firebase_promote_function",
-    "destination_latest",
     "f_name",
+    "destination_latest",
     "value",
     "destination_production"
    ]
