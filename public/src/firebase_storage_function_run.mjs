@@ -1,3 +1,4 @@
+import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
@@ -14,6 +15,7 @@ export async function firebase_storage_function_run(f_name) {
   let call = js_code_call_statement(f_name);
   let joined = list_join_newline([call, code]);
   if (browser_is()) {
+    let body = html_document_body();
     return;
   }
   eval(joined);
