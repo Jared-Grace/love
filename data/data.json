@@ -1396,8 +1396,7 @@
    "app_replace_screens"
   ],
   "email": [
-   "app_karate_screens",
-   "emoji_email"
+   "app_karate_screens"
   ],
   "emoji_person_outline": [
    "emoji_person_outline",
@@ -14989,6 +14988,9 @@
    "app_karate_email",
    "emoji_email",
    "app_karate_home"
+  ],
+  "emoji": [
+   "emoji_email"
   ]
  },
  "functions": {
@@ -31163,7 +31165,7 @@
    "async": false,
    "identifiers": [
     "emoji_email",
-    "email"
+    "emoji"
    ]
   }
  }
