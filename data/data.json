@@ -1090,8 +1090,7 @@
    "firebase_service_account_love_generic",
    "js_keyword_default",
    "js_identifier_unique",
-   "storage_local_specify_set",
-   "html_update_public"
+   "storage_local_specify_set"
   ],
   "function_name_combine": [
    "app_name_prefixed",
@@ -14774,6 +14773,9 @@
   "global_function_get": [
    "firebase_name",
    "global_function_get"
+  ],
+  "global_init": [
+   "html_update_public"
   ]
  },
  "functions": {
@@ -21613,7 +21615,7 @@
     "code",
     "call",
     "right",
-    "v",
+    "global_init",
     "middle",
     "body"
    ]
