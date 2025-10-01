@@ -23,7 +23,8 @@ export async function marker_screen_add(screen_name) {
     list_add(properties, p);
     await function_new(combined_screen);
     await function_param_new_double("context");
-    let output = await function_transform(f_name, async function lambda2() {});
+    async function lambda2() {}
+    let output = await function_transform(f_name, lambda2);
   }
   let v2 = await function_transform_marker_specified(
     combined,
