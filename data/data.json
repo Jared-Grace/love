@@ -2750,8 +2750,7 @@
    "html_button_screen",
    "marker_screen_add",
    "app_karate_home",
-   "app_karate_button_screen_uncolored",
-   "app_karate_email"
+   "app_karate_button_screen_uncolored"
   ],
   "screen": [
    "app_refresh"
@@ -14980,8 +14979,7 @@
     "root",
     "component",
     "div",
-    "text",
-    "screen_name"
+    "text"
    ]
   },
   "app_karate_home": {
