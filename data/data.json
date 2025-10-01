@@ -15222,6 +15222,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "firebase_deploy_function_app_karate_main": [
+   "firebase_deploy_function_app_karate_main"
   ]
  },
  "functions": {
@@ -31648,6 +31651,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "firebase_deploy_function_app_karate_main": {
+   "async": false,
+   "identifiers": [
+    "firebase_deploy_function_app_karate_main"
    ]
   }
  }
