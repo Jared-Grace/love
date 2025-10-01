@@ -2445,12 +2445,12 @@
   "s body",
   "p",
   "r person_outline emoji_person_outline",
-  "urg",
   "s home",
   "s back",
   "s rarow",
   "s arrpw",
   "s arrow",
-  "s html,input"
+  "s html,input",
+  "urg"
  ]
 }
