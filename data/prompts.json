@@ -2264,7 +2264,6 @@
   "o fns",
   "o functions_paths",
   "n test2",
-  "s import",
   "function_name_to_path_import test",
   "functions_paths",
   "s to,path",
@@ -2489,6 +2488,7 @@
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
   "ff app_karate_main",
   "p",
-  "fws firebase_deploy_function app_karate_main"
+  "fws firebase_deploy_function app_karate_main",
+  "s import"
  ]
 }
