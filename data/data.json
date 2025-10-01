@@ -15057,6 +15057,9 @@
   ],
   "part": [
    "string_includes"
+  ],
+  "string_regex_match": [
+   "string_regex_match"
   ]
  },
  "functions": {
@@ -31315,6 +31318,12 @@
     "l",
     "input",
     "si"
+   ]
+  },
+  "string_regex_match": {
+   "async": false,
+   "identifiers": [
+    "string_regex_match"
    ]
   }
  }
