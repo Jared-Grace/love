@@ -515,7 +515,8 @@
    "firebase_service_account_love_generic",
    "firebase_service_account_karate",
    "app_main",
-   "firebase_name"
+   "firebase_name",
+   "global_function_initialize"
   ],
   "add": [
    "add",
@@ -4794,7 +4795,8 @@
    "reply_on_match",
    "reply_sequence",
    "firebase_service_account",
-   "global_function_property"
+   "global_function_property",
+   "global_function_initialize"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6141,7 +6143,8 @@
    "messenger_reply_messages_transform",
    "messenger_reply_messages_urls_get",
    "object_invert",
-   "object_property_initialize"
+   "object_property_initialize",
+   "global_function_initialize"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -10728,12 +10731,14 @@
   "global_get": [
    "global_function_async",
    "global_function_property_async",
-   "global_get"
+   "global_get",
+   "global_function_initialize"
   ],
   "global": [
    "global_function_async",
    "global_function_property_async",
-   "global_get"
+   "global_get",
+   "global_function_initialize"
   ],
   "awaited": [
    "global_function_async",
@@ -10751,7 +10756,8 @@
   ],
   "fn_object": [
    "global_function_property_async",
-   "global_function_property"
+   "global_function_property",
+   "global_function_initialize"
   ],
   "html_component_element_get": [
    "html_attribute_set",
@@ -14752,10 +14758,12 @@
    "global_function_property"
   ],
   "initial": [
-   "global_function_property"
+   "global_function_property",
+   "global_function_initialize"
   ],
   "global_function_initialize": [
-   "global_function_property"
+   "global_function_property",
+   "global_function_initialize"
   ]
  },
  "functions": {
@@ -30644,6 +30652,19 @@
     "initial",
     "fn_object",
     "value"
+   ]
+  },
+  "global_function_initialize": {
+   "async": false,
+   "identifiers": [
+    "object_property_initialize",
+    "global_get",
+    "global_function_initialize",
+    "fn",
+    "initial",
+    "global",
+    "fn_object",
+    "name"
    ]
   }
  }
