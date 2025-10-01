@@ -802,7 +802,8 @@
    "firebase_promote_function_app_karate_main",
    "firebase_storage_function_run",
    "app_new_step_3_generic",
-   "app_new_update"
+   "app_new_update",
+   "app_new_step_4"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31783,6 +31784,7 @@
   "app_new_step_4": {
    "async": true,
    "identifiers": [
+    "marker",
     "app_new_step_3_generic",
     "firebase_deploy_function_destination_production",
     "app_name_prefixed",
