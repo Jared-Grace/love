@@ -4047,7 +4047,8 @@
    "app_replace_rule_set",
    "functions_names_includes",
    "js_call_fill",
-   "js_call_function_if"
+   "js_call_function_if",
+   "app_karate_email"
   ],
   "nn2": [
    "app_replace_rule_set"
@@ -15288,6 +15289,7 @@
     "validate",
     "value",
     "trimmed",
+    "valid",
     "lambda",
     "c",
     "text2",
