@@ -2445,6 +2445,7 @@
   "s code,call",
   "s assign",
   "s fill",
-  "s body"
+  "s body",
+  "r person_outline emoji_person_outline"
  ]
 }
