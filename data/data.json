@@ -5883,7 +5883,8 @@
    "string_to",
    "app_karate_email",
    "string_includes",
-   "string_includes_lambda"
+   "string_includes_lambda",
+   "string_regex_match"
   ],
   "process": [
    "command_line_read",
@@ -13115,7 +13116,8 @@
   "match": [
    "js_node_types_is",
    "log_unparse_try",
-   "roman_to_integer"
+   "roman_to_integer",
+   "string_regex_match"
   ],
   "js_node_type_is_assert": [
    "js_node_type_is_assert",
@@ -15060,6 +15062,9 @@
    "string_includes"
   ],
   "string_regex_match": [
+   "string_regex_match"
+  ],
+  "regex": [
    "string_regex_match"
   ]
  },
@@ -31325,7 +31330,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "string_regex_match"
+    "string_regex_match",
+    "input",
+    "regex",
+    "match"
    ]
   }
  }
