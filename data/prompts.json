@@ -2471,6 +2471,7 @@
   "c html_value_get html_value_set",
   "c html_on_change html_on_input",
   "rs app_karate_container centered",
-  "s font"
+  "s font",
+  "s enable"
  ]
 }
