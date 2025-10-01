@@ -460,7 +460,8 @@
    "watch",
    "whitespace_normalize",
    "sandbox_3",
-   "html_index_generate"
+   "html_index_generate",
+   "firebase_deploy_function_destination_production"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31640,6 +31641,7 @@
   "firebase_deploy_function_destination_production": {
    "async": false,
    "identifiers": [
+    "marker",
     "firebase_deploy_function_destination",
     "firebase_deploy_function_destination_production",
     "f_name",
