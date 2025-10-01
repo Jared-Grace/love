@@ -375,7 +375,8 @@
   "html_style_margin_y": [
    "html_style_margin_y",
    "app_karate_container",
-   "app_karate_margin_y_set"
+   "app_karate_margin_y_set",
+   "app_karate_container_centered"
   ],
   "html_div": [
    "html_div_text",
@@ -384,7 +385,8 @@
    "html_loading",
    "app_karate_container",
    "app_karate_div",
-   "app_karate_container_main"
+   "app_karate_container_main",
+   "app_karate_container_centered"
   ],
   "html_style_assign": [
    "html_style_margin_y",
@@ -393,7 +395,8 @@
    "app_karate_container",
    "app_karate_email",
    "app_karate_style_control",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_container_centered"
   ],
   "emoji_secure": [
    "app_karate_home",
@@ -420,7 +423,8 @@
    "html_style_set_or_remove",
    "app_karate_container",
    "html_element",
-   "app_karate_container_main"
+   "app_karate_container_main",
+   "app_karate_container_centered"
   ],
   "app_karate_home": [
    "app_karate_home",
@@ -615,7 +619,8 @@
    "html_p_text_multiple",
    "app_karate_container",
    "app_karate_div_text",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_container_centered"
   ],
   "text": [
    "app_karate_home",
@@ -918,13 +923,15 @@
    "app_karate_button_screen_uncolored",
    "app_karate_button_screen_green",
    "app_karate_div_text",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_container_centered"
   ],
   "padding": [
    "string_pad",
    "string_padded_is",
    "app_karate_container",
-   "app_karate_style_control"
+   "app_karate_style_control",
+   "app_karate_container_centered"
   ],
   "width": [
    "html_loading",
@@ -15150,6 +15157,9 @@
   "html_on_input": [
    "html_on_input",
    "app_karate_email"
+  ],
+  "app_karate_container_centered": [
+   "app_karate_container_centered"
   ]
  },
  "functions": {
@@ -31503,6 +31513,19 @@
     "component",
     "lambda",
     "name_event"
+   ]
+  },
+  "app_karate_container_centered": {
+   "async": false,
+   "identifiers": [
+    "html_style_set",
+    "html_style_margin_y",
+    "html_style_assign",
+    "html_div",
+    "app_karate_container_centered",
+    "parent",
+    "div",
+    "padding"
    ]
   }
  }
