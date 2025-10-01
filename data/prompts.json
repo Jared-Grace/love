@@ -2449,13 +2449,13 @@
   "s arrow",
   "s html,input",
   "urg",
-  "s home",
   "s mail",
   "s ttri",
   "s next",
   "u hst",
   "s span",
   "c html_span_text html_em_text",
-  "s karate"
+  "s karate",
+  "s home"
  ]
 }
