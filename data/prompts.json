@@ -2432,6 +2432,7 @@
   "d",
   "is app_main",
   "s main",
-  "is server"
+  "is server",
+  "is function_import"
  ]
 }
