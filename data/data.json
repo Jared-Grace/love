@@ -583,7 +583,6 @@
    "html_on_input"
   ],
   "log": [
-   "app_karate_email",
    "js_dollar_g",
    "js_log_remove",
    "log",
@@ -15247,7 +15246,6 @@
     "html_style_set",
     "app_karate_container",
     "html_on_input",
-    "log",
     "html_text_set",
     "not",
     "object_property_get",
