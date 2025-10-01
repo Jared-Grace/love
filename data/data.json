@@ -1298,8 +1298,7 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine",
-   "marker_screen_add"
+   "list_map_combine"
   ],
   "right": [
    "add",
@@ -1321,8 +1320,7 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try",
-   "marker_screen_add"
+   "log_unparse_try"
   ],
   "sum": [
    "add",
@@ -28106,8 +28104,6 @@
     "code",
     "name",
     "v3",
-    "left",
-    "right",
     "output",
     "v2"
    ]
