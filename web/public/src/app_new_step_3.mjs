@@ -36,7 +36,7 @@ export async function app_new_step_3(name) {
     let a_name_identifier = js_parse_expression(a_name);
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [a_name_identifier, main_nam, default2],
+      [a_name_identifier, main_name, default2],
       declaration_call,
     );
     let statement = js_parse_statement(code);
