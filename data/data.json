@@ -11059,7 +11059,8 @@
    "html_document_root",
    "html_element",
    "html_meta_viewport",
-   "html_p"
+   "html_p",
+   "app_karate_email"
   ],
   "tag_name": [
    "html_button_element",
@@ -14980,6 +14981,7 @@
     "app_karate_container",
     "html_clear_context",
     "marker",
+    "html_element",
     "app_karate_email",
     "context",
     "root",
