@@ -14840,6 +14840,9 @@
   ],
   "html_button_karate": [
    "app_karate_home"
+  ],
+  "html_button_s": [
+   "html_button_s"
   ]
  },
  "functions": {
@@ -30834,6 +30837,12 @@
    "identifiers": [
     "person_outline",
     "v"
+   ]
+  },
+  "html_button_s": {
+   "async": false,
+   "identifiers": [
+    "html_button_s"
    ]
   }
  }
