@@ -4,7 +4,7 @@ import { app_refresh } from "../../../love/public/src/app_refresh.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_replace_screens } from "../../../love/public/src/app_replace_screens.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
-export function app_replace_main() {
+export async function app_replace_main() {
   let app_fn = app_replace;
   let screens = app_replace_screens();
   html_meta_viewport();
@@ -14,6 +14,6 @@ export function app_replace_main() {
     screens,
     root: root,
   };
-  app_refresh(context);
+  await app_refresh(context);
   app_replace_font_size_refresh(context);
 }
