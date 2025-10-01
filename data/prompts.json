@@ -2429,6 +2429,7 @@
   "data_app_current_get",
   "as screen",
   "msa home",
-  "s param"
+  "s param",
+  "de app_karate_home"
  ]
 }
