@@ -1,3 +1,5 @@
+import { function_name_repo_path_combine } from "../../../karate_code/public/src/function_name_repo_path_combine.mjs";
+import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
@@ -14,6 +16,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_update_dev(name) {
   marker("1");
   let file_path = html_name_to_path_dev(name);
+  let a_name = app_name_prefixed(name);
+  let joined = await function_name_repo_path_combine(a_name, file_path);
   function paths_get(f_name_ext) {
     let src = folder_src();
     let previous = folder_previous();
