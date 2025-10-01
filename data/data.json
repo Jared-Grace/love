@@ -11281,16 +11281,14 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove",
-   "html_element"
+   "html_style_set_or_remove"
   ],
   "removeProperty": [
    "html_style_remove"
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove",
-   "html_element"
+   "html_style_set_or_remove"
   ],
   "innerHTML": [
    "html_text_set"
@@ -21554,9 +21552,7 @@
     "createElement",
     "appendChild",
     "component",
-    "b",
-    "style_key",
-    "style_value"
+    "b"
    ]
   },
   "html_enable": {
