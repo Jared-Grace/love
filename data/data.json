@@ -2061,7 +2061,6 @@
   ],
   "app_name_prefixed": [
    "app_new_step_3_generic",
-   "app_new_step_5",
    "app_name_main",
    "app_name_prefixed",
    "app_new_step_1",
@@ -2199,7 +2198,6 @@
   ],
   "a_name": [
    "app_new_step_3_generic",
-   "app_new_step_5",
    "app_html_open",
    "app_name_main",
    "app_name_prefixed",
@@ -2687,7 +2685,6 @@
    "marker_screen_add"
   ],
   "function_name_combine": [
-   "app_new_step_5",
    "app_name_prefixed",
    "function_copy_suffix_add",
    "function_identifier_replace_suffix_add",
@@ -15301,6 +15298,9 @@
   "app_new_step_4": [
    "app_new_step_2_next",
    "app_new_step_4"
+  ],
+  "app_name_staging": [
+   "app_new_step_5"
   ]
  },
  "functions": {
@@ -15619,14 +15619,12 @@
   "app_new_step_5": {
    "async": true,
    "identifiers": [
-    "function_name_combine",
+    "app_name_staging",
     "firebase_deploy_function_destination_latest",
     "marker",
     "app_new_step_3_generic",
-    "app_name_prefixed",
     "app_new_step_5",
     "name",
-    "a_name",
     "combined",
     "version_get"
    ]
