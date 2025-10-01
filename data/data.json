@@ -5632,7 +5632,8 @@
    "firebase_storage_download",
    "http",
    "js_dollar_ib",
-   "string_base64_to"
+   "string_base64_to",
+   "firebase_storage_function_run"
   ],
   "window": [
    "browser_is"
@@ -19122,6 +19123,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "browser_is",
     "list_join_newline",
     "js_code_call_statement",
     "firebase_storage_download_property",
