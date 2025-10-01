@@ -2295,7 +2295,8 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_declaration_single_block_body_add"
   ],
   "firebase_name_repo": [
    "app_new_step_3",
@@ -2397,7 +2398,8 @@
    "js_return_name",
    "marker_screen_add",
    "marker_top",
-   "task_new"
+   "task_new",
+   "js_declaration_single_block_body_add"
   ],
   "js_declaration_single": [
    "app_new_step_3",
@@ -2644,7 +2646,8 @@
    "marker_screen_add",
    "marker_top",
    "promise_not_is",
-   "task_new"
+   "task_new",
+   "js_declaration_single_block_body_add"
   ],
   "async": [
    "app_new_step_3",
@@ -2684,7 +2687,8 @@
    "marker_down_choices_lambda",
    "marker_functionize",
    "marker_screen_add",
-   "task_new"
+   "task_new",
+   "js_declaration_single_block_body_add"
   ],
   "output": [
    "app_new_step_3",
@@ -2914,7 +2918,8 @@
    "string_ends_with_not",
    "string_includes",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "js_declaration_single_block_body_add"
   ],
   "index": [
    "app_replace_home",
@@ -14910,7 +14915,8 @@
    "watch"
   ],
   "js_declaration_single_block_body_add": [
-   "function_wrap"
+   "function_wrap",
+   "js_declaration_single_block_body_add"
   ]
  },
  "functions": {
@@ -30978,6 +30984,17 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "js_declaration_single_block_body_add": {
+   "async": false,
+   "identifiers": [
+    "list_add",
+    "js_declaration_single_block_body",
+    "js_declaration_single_block_body_add",
+    "ast",
+    "item",
+    "body_block"
    ]
   }
  }
