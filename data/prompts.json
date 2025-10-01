@@ -2426,7 +2426,6 @@
   "is server",
   "is function_import",
   "is function_run",
-  "p",
   "s emoji_add",
   "s emoji",
   "fws html_button s width",
@@ -2446,6 +2445,7 @@
   "s assign",
   "s fill",
   "s body",
+  "p",
   "r person_outline emoji_person_outline"
  ]
 }
