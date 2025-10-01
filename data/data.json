@@ -588,7 +588,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "html_enable_if"
   ],
   "not": [
    "app_karate_email",
@@ -5292,7 +5293,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "html_enable_if"
   ],
   "assert_not": [
    "assert_not",
@@ -22017,12 +22019,14 @@
   "html_enable_if": {
    "async": false,
    "identifiers": [
+    "log",
     "html_disable",
     "html_enable",
     "html_enable_if",
     "component",
     "condition",
-    "fn"
+    "fn",
+    "message"
    ]
   },
   "html_loading": {
