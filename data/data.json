@@ -3673,8 +3673,7 @@
   ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
-   "app_replace_screens",
-   "app_karate_screens"
+   "app_replace_screens"
   ],
   "start": [
    "app_replace_rule_set",
@@ -4031,23 +4030,20 @@
   ],
   "app_replace_settings": [
    "app_replace_screens",
-   "app_replace_settings",
-   "app_karate_screens"
+   "app_replace_settings"
   ],
   "home": [
    "app_replace_screens",
    "app_karate_screens"
   ],
   "rule_set": [
-   "app_replace_screens",
-   "app_karate_screens"
+   "app_replace_screens"
   ],
   "settings": [
    "app_replace_screens",
    "firebase_upload_buffer",
    "firebase_upload_generic",
-   "firebase_upload_string",
-   "app_karate_screens"
+   "firebase_upload_string"
   ],
   "emoji_font_smaller": [
    "app_replace_settings",
@@ -30751,15 +30747,11 @@
   "app_karate_screens": {
    "async": false,
    "identifiers": [
-    "app_replace_settings",
-    "app_replace_rule_set",
     "app_replace_home",
     "marker",
     "app_karate_screens",
     "v",
-    "home",
-    "rule_set",
-    "settings"
+    "home"
    ]
   }
  }
