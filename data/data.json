@@ -14969,6 +14969,9 @@
    "app_karate_button_screen_uncolored",
    "app_karate_style_control",
    "app_karate_email"
+  ],
+  "app_karate_green_dark": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15002,6 +15005,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "app_karate_green_dark",
     "app_karate_button_screen_uncolored",
     "app_karate_margin_y",
     "app_karate_container",
