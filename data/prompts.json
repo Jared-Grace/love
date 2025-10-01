@@ -2475,6 +2475,7 @@
   "s focus",
   "s element,get",
   "s firebase",
-  "command_line dir"
+  "command_line dir",
+  "o s3"
  ]
 }
