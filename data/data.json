@@ -4613,7 +4613,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_new_step_3"
   ],
   "assert_not": [
    "assert_not",
@@ -12715,7 +12716,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "js_dollar_g"
+   "js_dollar_g",
+   "app_new_step_3"
   ],
   "e2": [
    "js_log_remove",
@@ -14905,6 +14907,7 @@
   "app_new_step_3": {
    "async": true,
    "identifiers": [
+    "log",
     "firebase_name_repo",
     "function_name_to_path_search",
     "js_parse_expression",
@@ -14925,6 +14928,7 @@
     "app_new_step_3",
     "name",
     "repo_name",
+    "message",
     "default2",
     "call_name",
     "declaration",
