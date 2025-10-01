@@ -207,6 +207,7 @@
   "fo": "file_overwrite",
   "si": "string_is",
   "of": "function_run_output_file_temp",
-  "hpt": "html_p_text"
+  "hpt": "html_p_text",
+  "hd": "html_div"
  }
 }
