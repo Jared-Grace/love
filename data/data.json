@@ -5293,8 +5293,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "html_enable_if"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -22025,8 +22024,7 @@
     "html_enable_if",
     "component",
     "condition",
-    "fn",
-    "message"
+    "fn"
    ]
   },
   "html_loading": {
