@@ -2455,6 +2455,7 @@
   "s ttri",
   "s next",
   "u hst",
-  "s span"
+  "s span",
+  "c html_span_text html_em_text"
  ]
 }
