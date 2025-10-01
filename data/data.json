@@ -15009,9 +15009,6 @@
   "emoji_arrow_right": [
    "app_karate_email",
    "emoji_arrow_right"
-  ],
-  "div2": [
-   "app_karate_div_text"
   ]
  },
  "functions": {
@@ -31181,7 +31178,6 @@
     "app_karate_div_text",
     "parent",
     "explanation",
-    "div2",
     "p"
    ]
   },
