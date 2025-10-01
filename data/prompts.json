@@ -2473,6 +2473,7 @@
   "rs app_karate_container centered",
   "s font",
   "s enable",
-  "s focus"
+  "s focus",
+  "s element,get"
  ]
 }
