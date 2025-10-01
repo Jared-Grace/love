@@ -7667,7 +7667,8 @@
    "ebible_chapter_classes",
    "ebible_chapter_text",
    "html_parse_classes_preview",
-   "html_parse_find_remove"
+   "html_parse_find_remove",
+   "firebase_deploy_function_app_karate_main"
   ],
   "classes": [
    "ebible_chapter_classes",
@@ -15228,6 +15229,9 @@
    "watch"
   ],
   "firebase_deploy_function_app_karate_main": [
+   "firebase_deploy_function_app_karate_main"
+  ],
+  "app_karate_code": [
    "firebase_deploy_function_app_karate_main"
   ]
  },
@@ -31664,7 +31668,9 @@
     "marker",
     "firebase_deploy_function_app_karate_main",
     "f_name",
-    "v"
+    "v",
+    "app_karate_code",
+    "main"
    ]
   }
  }
