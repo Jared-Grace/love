@@ -2308,7 +2308,6 @@
   "c functions_log_remove functions_imports_fix",
   "functions_imports_fix",
   "de t2",
-  "np",
   "file_delete C:/Users/chris/repos/love/.git/index.lock",
   "as delete",
   "de test2",
@@ -2425,6 +2424,8 @@
   "s karate",
   "s screens",
   "is app_replace_screens",
-  "c app_replace_screens app_karate_screens"
+  "c app_replace_screens app_karate_screens",
+  "np",
+  "fld C:/Users/chris/repos/love/.git/index.lock"
  ]
 }

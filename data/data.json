@@ -9,7 +9,8 @@
    "app_new_step_3"
   ],
   "app_karate": [
-   "app_karate"
+   "app_karate",
+   "app_karate_main"
   ],
   "marker": [
    "app_main",
@@ -2869,8 +2870,7 @@
   ],
   "app_replace": [
    "app_replace",
-   "app_replace_main",
-   "app_karate_main"
+   "app_replace_main"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -3276,8 +3276,7 @@
   ],
   "app_replace_screens": [
    "app_replace_main",
-   "app_replace_screens",
-   "app_karate_main"
+   "app_replace_screens"
   ],
   "list_skip": [
    "app_replace_rule_parse",
@@ -14803,7 +14802,8 @@
    "watch"
   ],
   "app_karate_screens": [
-   "app_karate_screens"
+   "app_karate_screens",
+   "app_karate_main"
   ]
  },
  "functions": {
@@ -14817,12 +14817,12 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
+    "app_karate_screens",
+    "app_karate",
     "app_replace_font_size_refresh",
     "app_refresh",
     "html_document_body",
     "html_meta_viewport",
-    "app_replace_screens",
-    "app_replace",
     "app_karate_main",
     "app_fn",
     "screens",
