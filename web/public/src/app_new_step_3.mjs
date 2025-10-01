@@ -16,7 +16,7 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 export async function app_new_step_3(name) {
-  let version_get = firebase_deploy_function_destination_production;
+  let version_get = firebase_deploy_function_destination_production.name;
   marker("1");
   string_and_empty_not_is_assert(name);
   let a_name = app_name_prefixed(name);
