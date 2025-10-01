@@ -2539,7 +2539,8 @@
   "app_replace_font_size": [
    "app_replace_font_size",
    "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh"
+   "app_replace_font_size_refresh",
+   "app_karate_main"
   ],
   "value2": [
    "app_replace_font_size",
@@ -2675,11 +2676,13 @@
   "html_style_font_size": [
    "app_replace_font_size_refresh",
    "html_button",
-   "html_style_font_size"
+   "html_style_font_size",
+   "app_karate_main"
   ],
   "html_document_root": [
    "app_replace_font_size_refresh",
-   "html_document_root"
+   "html_document_root",
+   "app_karate_main"
   ],
   "html": [
    "app_replace_font_size_refresh",
@@ -11004,8 +11007,7 @@
    "html_display_none",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove",
-   "app_karate_main"
+   "html_style_set_or_remove"
   ],
   "html_display_block": [
    "html_display_block",
@@ -14891,7 +14893,9 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
-    "html_style_set",
+    "html_style_font_size",
+    "app_replace_font_size",
+    "html_document_root",
     "app_karate_screens",
     "app_karate",
     "app_replace_font_size_refresh",
