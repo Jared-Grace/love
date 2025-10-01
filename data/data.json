@@ -14688,7 +14688,8 @@
   ],
   "padding": [
    "string_pad",
-   "string_padded_is"
+   "string_padded_is",
+   "app_karate_home"
   ],
   "padded": [
    "string_pad",
@@ -14874,7 +14875,8 @@
     "component3",
     "parent",
     "text",
-    "lambda"
+    "lambda",
+    "padding"
    ]
   },
   "app_karate_main": {
