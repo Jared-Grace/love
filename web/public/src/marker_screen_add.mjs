@@ -34,7 +34,7 @@ export async function marker_screen_add(screen_name) {
       let code_assign = js_code_let_assign("root", code);
       let statement = js_parse_statement(code_assign);
       let body_block = js_declaration_single_block_body(ast);
-      list_add(list, item);
+      list_add(body_block, statement);
     }
     let output = await function_transform(combined_screen, lambda2);
   }
