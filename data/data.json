@@ -15156,7 +15156,7 @@
    ]
   },
   "app_replace_font_size": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "storage_local_initialize_context",
     "app_replace_font_size",
