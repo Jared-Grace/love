@@ -29709,7 +29709,7 @@
    ]
   },
   "storage_local_initialize": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "storage_local_set",
     "null_is",
