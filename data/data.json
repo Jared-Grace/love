@@ -2110,7 +2110,8 @@
    "js_dollar_aa",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_value_set"
   ],
   "app_new_step_1": [
    "app_new",
@@ -2134,7 +2135,8 @@
    "marker_rename",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_value_set"
   ],
   "js_declare": [
    "app_new_assign",
@@ -31481,12 +31483,14 @@
   "html_value_set": {
    "async": false,
    "identifiers": [
+    "assert_arguments",
     "object_property_set",
     "marker",
     "html_component_element_get",
     "html_value_set",
     "input",
     "value",
+    "arguments",
     "element"
    ]
   },
