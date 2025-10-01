@@ -18639,13 +18639,13 @@
    ]
   },
   "folder_read_files": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
     "path_join",
-    "fs",
     "folder_read_files",
     "path_folder",
+    "fs",
     "lambda",
     "file",
     "result",
