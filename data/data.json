@@ -1266,7 +1266,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "marker_screen_add"
+   "marker_screen_add",
+   "emoji_person_outline"
   ],
   "home": [
    "app_karate_screens",
@@ -14910,6 +14911,9 @@
   "code_assign": [
    "js_code_let_assign",
    "marker_screen_add"
+  ],
+  "emoji_person_outline": [
+   "emoji_person_outline"
   ]
  },
  "functions": {
@@ -30978,6 +30982,13 @@
     "html_clear_context",
     "context",
     "root"
+   ]
+  },
+  "emoji_person_outline": {
+   "async": false,
+   "identifiers": [
+    "emoji_person_outline",
+    "v"
    ]
   }
  }
