@@ -7749,7 +7749,8 @@
    "js_identifier_unique",
    "list_filter_empty_not_is",
    "string_empty_not_is",
-   "string_empty_not_is_assert"
+   "string_empty_not_is_assert",
+   "app_karate_email"
   ],
   "list_filter": [
    "ebible_verses",
@@ -15042,6 +15043,9 @@
    "app_karate_home",
    "app_karate_container_main",
    "app_karate_email"
+  ],
+  "check": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15055,6 +15059,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "string_empty_not_is",
     "app_karate_container_main",
     "emoji_arrow_right",
     "app_karate_button_screen_green",
@@ -15078,7 +15083,8 @@
     "color",
     "div",
     "input",
-    "text"
+    "text",
+    "check"
    ]
   },
   "app_karate_home": {
