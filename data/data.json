@@ -575,8 +575,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -1107,8 +1106,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "app_karate_email"
+   "watch"
   ],
   "v": [
    "app_karate_screens",
@@ -4241,8 +4239,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_karate_email"
+   "storage_local_set_context"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -15026,9 +15023,6 @@
     "component",
     "color",
     "div",
-    "component2",
-    "key",
-    "value",
     "input"
    ]
   },
