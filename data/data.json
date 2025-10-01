@@ -1899,7 +1899,6 @@
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
    "firebase_deploy_function",
-   "firebase_storage_function_run",
    "firebase_promote_function"
   ],
   "f_name": [
@@ -2027,7 +2026,8 @@
   ],
   "firebase_deploy_function_destination_production": [
    "firebase_deploy_function_destination_production",
-   "firebase_promote_function"
+   "firebase_promote_function",
+   "firebase_storage_function_run"
   ],
   "html_em_text": [
    "html_em_text"
@@ -19237,6 +19237,7 @@
   "firebase_storage_function_run": {
    "async": true,
    "identifiers": [
+    "firebase_deploy_function_destination_production",
     "marker",
     "html_text_set",
     "html_attribute_set",
@@ -19246,7 +19247,6 @@
     "list_join_newline",
     "js_code_call_statement",
     "firebase_storage_download_property",
-    "firebase_deploy_function_destination_latest",
     "firebase_storage_function_run",
     "f_name",
     "destination_version",
