@@ -5871,7 +5871,6 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "html_update_public",
    "firebase_service_account_love_generic",
    "html_update_dev"
   ],
@@ -14106,8 +14105,7 @@
   "r_path": [
    "path_repo_combine",
    "repos_paths_names_map_unordered_combine",
-   "repo_path",
-   "html_update_public"
+   "repo_path"
   ],
   "then": [
    "promise_is"
@@ -21631,7 +21629,6 @@
     "js_code_braces_empty",
     "js_code_let_assign",
     "js_code_call_statement",
-    "path_join",
     "object_property_get",
     "file_open",
     "html_overwrite",
@@ -21645,7 +21642,6 @@
     "a_name",
     "search",
     "repo_name",
-    "r_path",
     "file_path",
     "joined",
     "code",
