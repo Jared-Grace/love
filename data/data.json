@@ -8763,8 +8763,7 @@
   ],
   "destination_version": [
    "firebase_deploy_function",
-   "firebase_storage_function_run",
-   "firebase_promote_function"
+   "firebase_storage_function_run"
   ],
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
@@ -15241,6 +15240,9 @@
    "firebase_deploy_function_app_karate_main"
   ],
   "firebase_promote_function": [
+   "firebase_promote_function"
+  ],
+  "destination_production": [
    "firebase_promote_function"
   ]
  },
@@ -31691,7 +31693,7 @@
     "firebase_promote_function",
     "index",
     "destination",
-    "destination_version",
+    "destination_production",
     "f_name",
     "version"
    ]
