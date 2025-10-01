@@ -33,7 +33,7 @@ import { html_button_screen } from "../../../love/public/src/html_button_screen.
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-export function app_replace_rule_set(context) {
+export async function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
   let index = storage_local_get_context(context, "rule_set_index");
@@ -42,7 +42,7 @@ export function app_replace_rule_set(context) {
   let { name } = item;
   html_p_text(root, "Rule set: " + name);
   let { start } = item;
-  let current = storage_local_initialize_context(
+  let current = await storage_local_initialize_context(
     context,
     "rule_set_start",
     start,
