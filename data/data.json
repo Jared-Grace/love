@@ -2217,8 +2217,7 @@
    "html_update_public",
    "js_expand_generic",
    "marker_screen_add",
-   "app_name_staging",
-   "html_update_public_generic"
+   "app_name_staging"
   ],
   "repo_name": [
    "app_new_step_3_generic",
@@ -31884,7 +31883,6 @@
     "file_path",
     "name",
     "joined",
-    "a_name",
     "code",
     "call",
     "right",
