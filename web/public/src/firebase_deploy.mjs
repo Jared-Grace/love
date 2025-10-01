@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function firebase_deploy() {
   marker("1");
   let combined = await user_repo_path_combine(".");
-  let stdout = await command_line_generic("dir", {
+  let stdout = await command_line_generic("firebase deploy", {
     cwd: combined,
   });
   return stdout;
