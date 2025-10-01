@@ -14709,6 +14709,9 @@
   ],
   "default2": [
    "firebase_name"
+  ],
+  "app_main": [
+   "app_main"
   ]
  },
  "functions": {
@@ -30546,6 +30549,12 @@
    "identifiers": [
     "js_keyword_default",
     "v"
+   ]
+  },
+  "app_main": {
+   "async": false,
+   "identifiers": [
+    "app_main"
    ]
   }
  }
