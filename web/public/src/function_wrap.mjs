@@ -1,4 +1,4 @@
-import { js_declaration_single_block_body_add } from "../../../karate_code/public/src/js_declaration_single_block_body_add.mjs";
+import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_statement_return } from "../../../love/public/src/js_statement_return.mjs";
 import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
 import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
