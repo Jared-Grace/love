@@ -2461,7 +2461,8 @@
    "app_replace_settings",
    "app_reply_main",
    "html_button",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_home"
   ],
   "app_replace_rule_sets": [
    "app_replace_home",
@@ -2589,7 +2590,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "app_karate_home"
   ],
   "item": [
    "app_replace_home",
@@ -3259,7 +3261,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "app_karate_home"
   ],
   "lambda3": [
    "app_replace_rule_set",
@@ -3433,7 +3436,8 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_karate_home"
   ],
   "lambda7": [
    "app_replace_rule_set",
@@ -10919,7 +10923,8 @@
    "html_button_element",
    "html_button_screen",
    "html_element",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_karate_home"
   ],
   "html_element": [
    "html_button_element",
@@ -30765,12 +30770,17 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_button",
     "object_property_get",
     "marker",
     "html_clear",
     "app_karate_home",
     "context",
-    "root"
+    "root",
+    "component",
+    "parent",
+    "text",
+    "lambda2"
    ]
   }
  }
