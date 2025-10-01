@@ -2421,6 +2421,7 @@
   "app_new_step_3 karate",
   "html_update_public karate",
   "s repo_path",
-  "s html"
+  "s html",
+  "de html_update_generic"
  ]
 }
