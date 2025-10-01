@@ -12,7 +12,6 @@
    "app_karate"
   ],
   "marker": [
-   "app_karate_main",
    "app_main",
    "firebase_service_account_karate",
    "apps_get",
@@ -301,7 +300,6 @@
    "app_karate_main"
   ],
   "alert": [
-   "app_karate_main",
    "app_code",
    "app_replace_rule_set"
   ],
@@ -2790,12 +2788,14 @@
    "app_replace_main",
    "app_reply_main",
    "html_document_body",
-   "html_loading"
+   "html_loading",
+   "app_karate_main"
   ],
   "app_refresh": [
    "app_refresh",
    "app_replace_main",
-   "app_screen_set"
+   "app_screen_set",
+   "app_karate_main"
   ],
   "context": [
    "app_refresh",
@@ -2812,7 +2812,8 @@
    "messenger_reply_playwright",
    "storage_local_get_context",
    "storage_local_initialize_context",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_main"
   ],
   "app_fn": [
    "app_refresh",
@@ -2823,11 +2824,13 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_main"
   ],
   "screens": [
    "app_refresh",
-   "app_replace_main"
+   "app_replace_main",
+   "app_karate_main"
   ],
   "body": [
    "app_refresh",
@@ -2864,7 +2867,8 @@
   ],
   "app_replace": [
    "app_replace",
-   "app_replace_main"
+   "app_replace_main",
+   "app_karate_main"
   ],
   "storage_local_initialize_context": [
    "app_replace_font_size",
@@ -2883,7 +2887,8 @@
   "app_replace_font_size_refresh": [
    "app_replace_font_size_adjust",
    "app_replace_font_size_refresh",
-   "app_replace_main"
+   "app_replace_main",
+   "app_karate_main"
   ],
   "storage_local_set_context": [
    "app_replace_font_size_adjust",
@@ -2977,7 +2982,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "app_karate_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -3262,11 +3268,13 @@
   ],
   "html_meta_viewport": [
    "app_replace_main",
-   "html_meta_viewport"
+   "html_meta_viewport",
+   "app_karate_main"
   ],
   "app_replace_screens": [
    "app_replace_main",
-   "app_replace_screens"
+   "app_replace_screens",
+   "app_karate_main"
   ],
   "list_skip": [
    "app_replace_rule_parse",
@@ -14802,9 +14810,17 @@
   "app_karate_main": {
    "async": false,
    "identifiers": [
-    "marker",
+    "app_replace_font_size_refresh",
+    "app_refresh",
+    "html_document_body",
+    "html_meta_viewport",
+    "app_replace_screens",
+    "app_replace",
     "app_karate_main",
-    "alert"
+    "app_fn",
+    "screens",
+    "root",
+    "context"
    ]
   },
   "app_main": {
