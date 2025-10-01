@@ -585,8 +585,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -614,8 +613,7 @@
    "html_p_text_multiple",
    "app_karate_container",
    "app_karate_div_text",
-   "app_karate_div",
-   "app_karate_email"
+   "app_karate_div"
   ],
   "text": [
    "app_karate_home",
@@ -9339,7 +9337,8 @@
    "function_aliases_restore"
   ],
   "li": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_karate_email"
   ],
   "l": [
    "function_aliases_restore",
@@ -11129,8 +11128,7 @@
    "html_button_element",
    "html_element",
    "messenger_reply_unread_click",
-   "puppeteer_matches",
-   "app_karate_email"
+   "puppeteer_matches"
   ],
   "html_code_script_module": [
    "html_code_script_module",
@@ -15201,9 +15199,7 @@
     "text2",
     "check2",
     "a",
-    "component2",
-    "parent",
-    "tag_name"
+    "li"
    ]
   },
   "app_karate_home": {
