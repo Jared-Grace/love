@@ -2414,6 +2414,7 @@
   "fdf app_karate_main",
   "s step",
   "s app,main",
-  "n app_main"
+  "n app_main",
+  "s storage,local"
  ]
 }
