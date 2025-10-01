@@ -127,7 +127,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "html_clear_context"
   ],
   "marker": [
    "app_karate_home",
@@ -422,7 +423,8 @@
    "app_refresh",
    "app_replace_rule_set",
    "app_reply_main",
-   "html_clear"
+   "html_clear",
+   "html_clear_context"
   ],
   "app_karate_home": [
    "app_karate_home",
@@ -446,7 +448,8 @@
    "storage_local_get_context",
    "storage_local_initialize_context",
    "storage_local_set_context",
-   "app_karate_email"
+   "app_karate_email",
+   "html_clear_context"
   ],
   "root": [
    "app_karate_home",
@@ -469,7 +472,8 @@
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
    "html_p_text",
-   "html_div_text"
+   "html_div_text",
+   "html_clear_context"
   ],
   "lambda2": [
    "app_karate_home",
@@ -14885,7 +14889,8 @@
    "app_karate_screens"
   ],
   "html_clear_context": [
-   "app_karate_home"
+   "app_karate_home",
+   "html_clear_context"
   ]
  },
  "functions": {
@@ -30927,6 +30932,16 @@
     "marker",
     "app_karate_email",
     "context"
+   ]
+  },
+  "html_clear_context": {
+   "async": false,
+   "identifiers": [
+    "html_clear",
+    "object_property_get",
+    "html_clear_context",
+    "context",
+    "root"
    ]
   }
  }
