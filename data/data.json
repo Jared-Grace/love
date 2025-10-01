@@ -4942,7 +4942,8 @@
    "firebase_storage_download",
    "http",
    "js_dollar_ib",
-   "string_base64_to"
+   "string_base64_to",
+   "firebase_name"
   ],
   "window": [
    "browser_is"
@@ -30550,6 +30551,7 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "browser_is",
     "firebase_name_repo",
     "user_repo_get",
     "firebase_name",
