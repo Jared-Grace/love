@@ -209,6 +209,7 @@
   "of": "function_run_output_file_temp",
   "hpt": "html_p_text",
   "hd": "html_div",
-  "sin": "string_includes"
+  "sin": "string_includes",
+  "fk": "firebase_deploy_function_app_karate_main"
  }
 }
