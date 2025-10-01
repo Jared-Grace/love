@@ -19,7 +19,8 @@ import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mj
 export async function app_new_step_3(name) {
   marker("1");
   string_and_empty_not_is_assert(name);
-  let { repo_name } = await function_name_to_path_search(name);
+  let a_name = app_name_prefixed(name);
+  let { repo_name } = await function_name_to_path_search(a_name);
   log({
     repo_name,
   });
@@ -27,7 +28,6 @@ export async function app_new_step_3(name) {
   let call_name = firebase_storage_function_run.name;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(call_name);
-  let a_name = app_name_prefixed(name);
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
