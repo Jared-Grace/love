@@ -24,11 +24,11 @@ export async function app_new_step_3(name) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;
     let value_string = app_name_main(name);
-    let code_string = js_code_string(value_string);
-    let expression = js_parse_expression(code_expression);
+    let main_name = js_code_string(value_string);
+    let a_name_identifier = js_parse_expression(a_name);
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [a_name, code_string],
+      [a_name_identifier, main_name],
       declaration_call,
     );
     let statement = js_parse_statement(code);
