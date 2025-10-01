@@ -1,5 +1,4 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -20,9 +19,6 @@ export async function app_new_step_3(name) {
   string_and_empty_not_is_assert(name);
   let a_name = app_name_prefixed(name);
   let { repo_name } = await function_name_to_path_search(a_name);
-  log({
-    repo_name,
-  });
   let default2 = await firebase_name_repo(repo_name);
   let f_name = js_code_string(default2);
   let call_name = firebase_storage_function_run.name;
