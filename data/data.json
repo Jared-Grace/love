@@ -686,8 +686,7 @@
    "list_map_combine",
    "marker_screen_add",
    "repo_path_combine",
-   "user_repo_path_combine",
-   "firebase_name"
+   "user_repo_path_combine"
   ],
   "function_name_combine_multiple": [
    "app_name_main",
@@ -2025,8 +2024,7 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public",
-   "firebase_name"
+   "html_update_public"
   ],
   "storage_local_initialize": [
    "app_refresh",
@@ -5687,8 +5685,7 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_set",
-   "user_repo_path_combine",
-   "firebase_name"
+   "user_repo_path_combine"
   ],
   "file_write": [
    "data_all",
@@ -5702,8 +5699,7 @@
    "file_json_transform",
    "file_read_json",
    "firebase_service_account",
-   "messenger_reply_playwright",
-   "firebase_name"
+   "messenger_reply_playwright"
   ],
   "json_format_to": [
    "data_all",
@@ -8395,8 +8391,7 @@
    "js_stack_last_function",
    "marker_param_add",
    "sandbox_2",
-   "function_import",
-   "firebase_name"
+   "function_import"
   ],
   "list_to": [
    "functions_combine",
@@ -9255,8 +9250,7 @@
   "repo_path_combine": [
    "function_new_declaration",
    "repo_path_combine",
-   "user_repo_path_combine",
-   "firebase_name"
+   "user_repo_path_combine"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -14716,9 +14710,6 @@
    "js_keyword_default",
    "js_identifier_unique"
   ],
-  "projects": [
-   "firebase_name"
-  ],
   "default2": [
    "firebase_name"
   ],
@@ -14733,6 +14724,9 @@
   ],
   "a_name_identifier": [
    "app_new_step_3"
+  ],
+  "firebase_name_repo": [
+   "firebase_name"
   ]
  },
  "functions": {
@@ -30548,16 +30542,10 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
-    "repo_path_combine",
+    "firebase_name_repo",
     "user_repo_get",
-    "object_property_get",
-    "file_read_json",
     "firebase_name",
     "repo_name",
-    "f_path",
-    "combined",
-    "f",
-    "projects",
     "default2"
    ]
   },
