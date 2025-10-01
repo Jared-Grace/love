@@ -6383,7 +6383,8 @@
    "repos_paths_map_unordered",
    "repos_paths_map_unordered_combine",
    "repo_acronym_to_path",
-   "sandbox_2"
+   "sandbox_2",
+   "html_name_to_path_dev"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -22375,6 +22376,7 @@
     "file_name_html",
     "html_name_to_path_dev",
     "name",
+    "folder",
     "file_name",
     "joined",
     "file_path"
