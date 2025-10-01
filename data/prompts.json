@@ -2474,6 +2474,7 @@
   "s enable",
   "s focus",
   "s element,get",
-  "s firebase"
+  "s firebase",
+  "command_line dir"
  ]
 }
