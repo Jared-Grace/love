@@ -2476,6 +2476,7 @@
   "o s3",
   "p",
   "s3",
-  "s repo_path"
+  "s repo_path",
+  "firebase_deploy"
  ]
 }
