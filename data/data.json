@@ -810,7 +810,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "html_name_to_path_staging"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -2186,7 +2187,8 @@
    "task_new",
    "watch",
    "app_new_step_4",
-   "app_name_staging"
+   "app_name_staging",
+   "html_name_to_path_staging"
   ],
   "version_get": [
    "app_new_step_3_generic",
@@ -5615,7 +5617,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "html_name_to_path_staging"
   ],
   "fns": [
    "bible_verses_encouragement_generate",
@@ -6380,7 +6383,8 @@
    "repos_paths_map_unordered_combine",
    "repo_acronym_to_path",
    "sandbox_2",
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_name_to_path_staging"
   ],
   "command_line_git_prefix": [
    "command_line_git_folder",
@@ -15310,7 +15314,11 @@
    "app_karate_staging"
   ],
   "html_name_to_path_folder": [
-   "html_name_to_path_dev"
+   "html_name_to_path_dev",
+   "html_name_to_path_staging"
+  ],
+  "html_name_to_path_staging": [
+   "html_name_to_path_staging"
   ]
  },
  "functions": {
@@ -31843,6 +31851,17 @@
     "firebase_deploy_function_destination_latest",
     "app_main",
     "app_karate_staging"
+   ]
+  },
+  "html_name_to_path_staging": {
+   "async": false,
+   "identifiers": [
+    "html_name_to_path_folder",
+    "marker",
+    "html_name_to_path_staging",
+    "name",
+    "folder",
+    "file_path"
    ]
   }
  }
