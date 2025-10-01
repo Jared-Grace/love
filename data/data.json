@@ -11075,8 +11075,7 @@
    "html_element",
    "html_meta_viewport",
    "html_p",
-   "app_karate_email",
-   "app_karate_home"
+   "app_karate_email"
   ],
   "tag_name": [
    "html_button_element",
@@ -15018,7 +15017,7 @@
   "hst": [
    "app_karate_home"
   ],
-  "span": [
+  "html_span_text": [
    "app_karate_home"
   ]
  },
@@ -15059,6 +15058,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_span_text",
     "html_text_set",
     "app_karate_div",
     "app_karate_button_screen_green",
@@ -15070,7 +15070,6 @@
     "html_div",
     "marker",
     "html_style_set",
-    "html_element",
     "app_karate_home",
     "context",
     "root",
@@ -15080,7 +15079,6 @@
     "component2",
     "hst",
     "text",
-    "span",
     "component3",
     "parent",
     "screen_name",
