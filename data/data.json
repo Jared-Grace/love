@@ -1298,7 +1298,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine"
+   "list_map_combine",
+   "marker_screen_add"
   ],
   "right": [
    "add",
@@ -1320,7 +1321,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "marker_screen_add"
   ],
   "sum": [
    "add",
@@ -5665,7 +5667,8 @@
    "js_statement_call_get",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "roman_to_integer"
+   "roman_to_integer",
+   "marker_screen_add"
   ],
   "exec": [
    "command_line_generic"
@@ -11281,7 +11284,8 @@
    "html_update_public",
    "js_call_new",
    "js_code_let_assign",
-   "js_declare"
+   "js_declare",
+   "marker_screen_add"
   ],
   "global_init": [
    "html_update_public"
@@ -28070,6 +28074,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_code_let_assign",
     "html_clear_context",
     "js_code_call_args",
     "function_transform",
@@ -28100,6 +28105,9 @@
     "lambda2",
     "code",
     "name",
+    "v3",
+    "left",
+    "right",
     "output",
     "v2"
    ]
