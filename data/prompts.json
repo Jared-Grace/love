@@ -2367,7 +2367,6 @@
   "fns",
   "of fns",
   "o v",
-  "s firebase",
   "s acro",
   "c repo_acronym_get repo_firebase_service_account_get",
   "c repo_acronym_set repo_firebase_service_account_set",
@@ -2474,6 +2473,7 @@
   "s font",
   "s enable",
   "s focus",
-  "s element,get"
+  "s element,get",
+  "s firebase"
  ]
 }
