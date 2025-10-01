@@ -4,11 +4,11 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 export function js_function_id_add(ast) {
-  async function lambda(v) {
+  function lambda(v) {
     let { node } = v;
     let id = object_property_get(node, "id");
     if (id === null) {
-      let unique = await js_identifier_unique_ast(ast, "lambda");
+      let unique = js_identifier_unique_ast(ast, "lambda");
       let value = js_parse_expression(unique);
       object_property_set(node, "id", value);
     }
