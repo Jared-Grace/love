@@ -2427,6 +2427,7 @@
   "np",
   "s screen",
   "is marker_screen_add",
-  "data_app_current_get"
+  "data_app_current_get",
+  "as screen"
  ]
 }
