@@ -15175,7 +15175,11 @@
   ],
   "app_karate_button_background": [
    "app_karate_button_screen_green",
-   "app_karate_button_background"
+   "app_karate_button_background",
+   "app_karate_email"
+  ],
+  "button_background": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15260,6 +15264,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_button_background",
     "html_enable_if",
     "app_karate_container_background",
     "html_style_set",
@@ -15315,7 +15320,8 @@
     "check2",
     "a",
     "li",
-    "background"
+    "background",
+    "button_background"
    ]
   },
   "app_karate_green_dark": {
