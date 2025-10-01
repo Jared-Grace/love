@@ -6,6 +6,6 @@ export function html_element(parent, tag_name) {
   const e = document.createElement(tag_name);
   parent_element.appendChild(e);
   let component = html_component_wrap(e);
-  html_style_set(b, style_key, style_value);
+  html_style_set(b, "box-sizing", "border-box");
   return component;
 }
