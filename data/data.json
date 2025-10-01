@@ -78,8 +78,7 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god",
-   "firebase_storage_function_run"
+   "urdu_allah_to_god"
   ],
   "context": [
    "app_karate_button_screen_green",
@@ -1809,8 +1808,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "firebase_storage_function_run"
+   "app_reply_main"
   ],
   "component3": [
    "app_karate_home",
@@ -19149,8 +19147,6 @@
     "joined",
     "body",
     "component",
-    "component2",
-    "text",
     "eval"
    ]
   },
