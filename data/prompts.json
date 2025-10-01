@@ -2498,6 +2498,7 @@
   "s index",
   "s html,dev",
   "u hup",
-  "hup karate"
+  "hup karate",
+  "o firebase_storage_function_run"
  ]
 }
