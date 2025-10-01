@@ -1801,8 +1801,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "component3": [
    "app_karate_home",
@@ -4757,8 +4756,7 @@
    "html_enable_if",
    "html_style_set_or_remove",
    "html_text_set_if",
-   "ternary",
-   "app_karate_email"
+   "ternary"
   ],
   "choice": [
    "app_reply_main"
@@ -15312,9 +15310,7 @@
     "check2",
     "a",
     "li",
-    "background",
-    "component2",
-    "condition"
+    "background"
    ]
   },
   "app_karate_green_dark": {
