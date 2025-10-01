@@ -4980,7 +4980,6 @@
    "functions_paths",
    "list_squash",
    "repos_paths_map_unordered_combine_squash",
-   "sandbox_3",
    "watch"
   ],
   "verse_texts": [
@@ -5956,7 +5955,6 @@
    "catch_log_async",
    "identity",
    "marker_above",
-   "sandbox_3",
    "watch"
   ],
   "catch_log_async": [
@@ -6071,7 +6069,8 @@
   "command_line_generic": [
    "command_line",
    "command_line_cmd",
-   "command_line_generic"
+   "command_line_generic",
+   "sandbox_3"
   ],
   "command_line": [
    "command_line",
@@ -9191,7 +9190,6 @@
    "functions_names_to_paths",
    "functions_paths",
    "repos_paths_map_unordered_combine_squash",
-   "sandbox_3",
    "watch"
   ],
   "functions_names_from_path": [
@@ -15190,6 +15188,9 @@
   ],
   "border_color": [
    "app_karate_email"
+  ],
+  "cwd": [
+   "sandbox_3"
   ]
  },
  "functions": {
@@ -30341,11 +30342,10 @@
   "sandbox_3": {
    "async": true,
    "identifiers": [
+    "command_line_generic",
     "marker",
-    "repos_paths_map_unordered_combine_squash",
-    "identity",
     "sandbox_3",
-    "squashed"
+    "cwd"
    ]
   },
   "sandbox_4_a": {
