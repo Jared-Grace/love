@@ -2382,7 +2382,6 @@
   "s storage,local",
   "s global",
   "c global_function_property_async global_function_property",
-  "o an",
   "html_new karate",
   "s code,assign",
   "s brace",
@@ -2500,6 +2499,7 @@
   "u hup",
   "hup karate",
   "o firebase_storage_function_run",
-  "o app_karate"
+  "o app_karate",
+  "o an"
  ]
 }
