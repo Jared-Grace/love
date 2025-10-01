@@ -4613,8 +4613,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_new_step_3"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -14937,7 +14936,6 @@
     "value_string",
     "main_name",
     "a_name_identifier",
-    "message",
     "code",
     "statement",
     "body_block",
