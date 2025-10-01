@@ -2485,7 +2485,7 @@
   "html_index_generate",
   "apps_get",
   "s file,html",
-  "html_index_generate karate",
-  "fb"
+  "fb",
+  "html_index_generate karate"
  ]
 }
