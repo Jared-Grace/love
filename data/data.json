@@ -797,7 +797,8 @@
    "watch",
    "whitespace_normalize",
    "firebase_deploy_function_app_karate_main",
-   "function_name_unalias"
+   "function_name_unalias",
+   "firebase_promote_function"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31675,6 +31676,7 @@
   "firebase_promote_function": {
    "async": false,
    "identifiers": [
+    "marker",
     "firebase_promote_function"
    ]
   }
