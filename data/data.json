@@ -7994,8 +7994,7 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash",
-   "html_index_generate"
+   "string_split_dash"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -31617,7 +31616,6 @@
     "marker",
     "html_index_generate",
     "combined2",
-    "second",
     "combined"
    ]
   }
