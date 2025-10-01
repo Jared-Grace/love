@@ -15201,6 +15201,9 @@
   ],
   "cwd": [
    "firebase_deploy"
+  ],
+  "html_index_generate": [
+   "html_index_generate"
   ]
  },
  "functions": {
@@ -31602,6 +31605,12 @@
    "identifiers": [
     "app_karate_button_background",
     "v"
+   ]
+  },
+  "html_index_generate": {
+   "async": false,
+   "identifiers": [
+    "html_index_generate"
    ]
   }
  }
