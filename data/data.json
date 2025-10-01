@@ -586,8 +586,7 @@
    "html_remove",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if",
-   "html_div_text"
+   "html_text_set_if"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -30886,9 +30885,8 @@
     "marker",
     "html_div_text",
     "root",
-    "div",
-    "component",
-    "text"
+    "text",
+    "div"
    ]
   }
  }
