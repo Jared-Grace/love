@@ -1973,7 +1973,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_karate_email"
   ],
   "app_name_prefix": [
    "app_name_prefix",
@@ -3244,7 +3245,8 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "app_karate_email"
   ],
   "html_enable_if": [
    "app_replace_rule_set",
@@ -15145,6 +15147,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "not",
     "object_property_get",
     "html_clear",
     "each",
@@ -15189,7 +15192,8 @@
     "lambda",
     "c",
     "text2",
-    "check2"
+    "check2",
+    "a"
    ]
   },
   "app_karate_home": {
