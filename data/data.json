@@ -9255,7 +9255,8 @@
   "repo_path_combine": [
    "function_new_declaration",
    "repo_path_combine",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -9263,7 +9264,8 @@
    "user_repo_set",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
-   "user_repo_path_combine"
+   "user_repo_path_combine",
+   "firebase_name"
   ],
   "js_identifier_replace": [
    "function_copy",
@@ -9321,7 +9323,8 @@
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
    "user_repo_path_combine",
-   "app_new_step_3"
+   "app_new_step_3",
+   "firebase_name"
   ],
   "f_path_new": [
    "function_copy"
@@ -14707,8 +14710,7 @@
   ],
   "user_repo_path_combine": [
    "function_copy",
-   "user_repo_path_combine",
-   "firebase_name"
+   "user_repo_path_combine"
   ],
   "js_keyword_default": [
    "js_keyword_default",
@@ -30546,11 +30548,13 @@
   "firebase_name": {
    "async": true,
    "identifiers": [
+    "repo_path_combine",
+    "user_repo_get",
     "object_property_get",
     "file_read_json",
-    "user_repo_path_combine",
     "firebase_name",
     "f_path",
+    "repo_name",
     "combined",
     "f",
     "projects",
