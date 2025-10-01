@@ -2402,7 +2402,6 @@
   "rfsag",
   "function_name_unalias add",
   "function_alias_add_generic add",
-  "s search",
   "p",
   "o firebase_storage_url_project",
   "urg",
@@ -2415,6 +2414,7 @@
   "s step",
   "s app,main",
   "n app_main",
-  "s storage,local"
+  "s storage,local",
+  "s search"
  ]
 }
