@@ -585,7 +585,8 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_email"
   ],
   "lambda4": [
    "app_replace_home",
@@ -1543,7 +1544,8 @@
    "app_karate_div_text",
    "app_karate_home",
    "html_span_text",
-   "html_em_text"
+   "html_em_text",
+   "app_karate_email"
   ],
   "add": [
    "add",
@@ -15139,7 +15141,7 @@
   "ul": [
    "app_karate_email"
   ],
-  "hts": [
+  "text3": [
    "app_karate_email"
   ]
  },
@@ -15154,6 +15156,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_text_set",
     "not",
     "object_property_get",
     "html_clear",
@@ -15203,7 +15206,8 @@
     "check2",
     "a",
     "li",
-    "hts"
+    "component2",
+    "text3"
    ]
   },
   "app_karate_home": {
