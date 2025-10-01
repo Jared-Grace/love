@@ -14973,7 +14973,8 @@
   ],
   "app_karate_green_dark": [
    "app_karate_home",
-   "app_karate_green_dark"
+   "app_karate_green_dark",
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -14987,6 +14988,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_green_dark",
     "app_karate_style_control",
     "emoji_arrow_left",
     "html_style_assign",
