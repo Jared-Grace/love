@@ -1123,7 +1123,6 @@
    "js_code_braces_empty",
    "js_code_export",
    "js_code_import_single",
-   "js_code_let_assign",
    "js_code_return",
    "js_code_return_empty",
    "js_code_statement",
@@ -14903,6 +14902,9 @@
    "html_clear_context",
    "app_karate_email",
    "marker_screen_add"
+  ],
+  "code_assign": [
+   "js_code_let_assign"
   ]
  },
  "functions": {
@@ -22953,7 +22955,7 @@
     "js_code_let_assign",
     "left",
     "right",
-    "v"
+    "code_assign"
    ]
   },
   "js_code_or": {
