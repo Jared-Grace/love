@@ -4613,8 +4613,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_new_step_3"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -14928,7 +14927,6 @@
     "app_new_step_3",
     "name",
     "repo_name",
-    "message",
     "default2",
     "call_name",
     "declaration",
