@@ -34,8 +34,6 @@ export async function marker_screen_add(screen_name) {
       let statement = js_parse_statement(code_assign);
     }
     let output = await function_transform(combined_screen, lambda2);
-    async function lambda3() {}
-    let output2 = await function_transform(f_name, lambda3);
   }
   let v2 = await function_transform_marker_specified(
     combined,
