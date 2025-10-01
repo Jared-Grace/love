@@ -14837,10 +14837,10 @@
     "app_karate_home",
     "context",
     "root",
+    "lambda2",
     "component",
     "parent",
-    "text",
-    "lambda2"
+    "text"
    ]
   },
   "app_karate_main": {
