@@ -15297,6 +15297,7 @@
     "input",
     "div_checks",
     "ul",
+    "button_next",
     "validate",
     "value",
     "trimmed",
@@ -15307,8 +15308,7 @@
     "check2",
     "a",
     "li",
-    "background",
-    "button_next"
+    "background"
    ]
   },
   "app_karate_green_dark": {
