@@ -3024,8 +3024,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set",
-   "firebase_deploy"
+   "user_repo_set"
   ],
   "default2": [
    "app_new_step_3",
@@ -6348,8 +6347,7 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set",
-   "firebase_deploy"
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -8700,8 +8698,7 @@
    "repo_firebase_service_account_set",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set",
-   "firebase_deploy"
+   "user_repo_set"
   ],
   "repo_path_combine": [
    "firebase_name_repo",
@@ -18893,14 +18890,11 @@
    "async": true,
    "identifiers": [
     "user_repo_path_combine",
-    "user_repo_get",
     "command_line_generic",
     "command_line",
     "marker",
     "firebase_deploy",
-    "repo_name",
     "combined",
-    "f_path",
     "v",
     "stdout"
    ]
