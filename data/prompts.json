@@ -2473,12 +2473,12 @@
   "s firebase",
   "command_line dir",
   "o s3",
-  "p",
   "s3",
   "s repo_path",
   "firebase_deploy",
   "as firebase_deploy",
   "fb",
+  "p",
   "ff app_karate_main"
  ]
 }
