@@ -2991,7 +2991,8 @@
   "html_div": [
    "app_replace_rule_set",
    "html_div",
-   "html_loading"
+   "html_loading",
+   "app_karate_home"
   ],
   "list_concat_multiple": [
    "app_replace_rule_set",
@@ -3423,7 +3424,8 @@
   "div": [
    "app_replace_rule_set",
    "html_div",
-   "html_loading"
+   "html_loading",
+   "app_karate_home"
   ],
   "current_list": [
    "app_replace_rule_set",
@@ -14857,10 +14859,10 @@
   "explanation": [
    "app_karate_home"
   ],
-  "hd": [
+  "p2": [
    "app_karate_home"
   ],
-  "p2": [
+  "root2": [
    "app_karate_home"
   ]
  },
@@ -14875,6 +14877,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "html_div",
     "html_text_set",
     "html_p",
     "html_style_assign",
@@ -14900,7 +14903,8 @@
     "text",
     "explanation",
     "lambda",
-    "hd",
+    "div",
+    "root2",
     "padding",
     "width",
     "color",
