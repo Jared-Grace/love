@@ -14990,10 +14990,10 @@
     "explanation",
     "screen_name",
     "div",
-    "margin_y",
     "padding",
     "width",
     "color",
+    "margin_y",
     "p"
    ]
   },
