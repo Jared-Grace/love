@@ -2358,7 +2358,6 @@
   "s call",
   "s js,call",
   "sps",
-  "functions_names",
   "fns",
   "of fns",
   "o v",
@@ -2489,6 +2488,7 @@
   "ff app_karate_main",
   "p",
   "fws firebase_deploy_function app_karate_main",
-  "s import"
+  "s import",
+  "functions_names"
  ]
 }
