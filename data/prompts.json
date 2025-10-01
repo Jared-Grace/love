@@ -2428,8 +2428,8 @@
   "is marker_screen_add",
   "data_app_current_get",
   "as screen",
-  "msa home",
   "s param",
-  "de app_karate_home"
+  "de app_karate_home",
+  "msa home"
  ]
 }
