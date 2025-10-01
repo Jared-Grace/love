@@ -14984,6 +14984,9 @@
    "app_karate_home",
    "app_karate_div_text",
    "app_karate_email"
+  ],
+  "emoji_email": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -14997,6 +15000,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "emoji_email",
     "app_karate_div_text",
     "app_karate_green_dark",
     "app_karate_style_control",
