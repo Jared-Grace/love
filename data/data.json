@@ -594,8 +594,7 @@
    "html_button_screen",
    "html_element",
    "html_p_text_multiple",
-   "app_karate_container",
-   "app_karate_email"
+   "app_karate_container"
   ],
   "text": [
    "app_karate_home",
@@ -14952,8 +14951,7 @@
     "app_karate_email",
     "context",
     "root",
-    "div",
-    "parent"
+    "div"
    ]
   },
   "app_karate_home": {
