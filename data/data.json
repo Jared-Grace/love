@@ -2494,7 +2494,8 @@
    "repos_gitignore_overwrite",
    "task_new",
    "html_index_generate",
-   "firebase_deploy_function_destination_production"
+   "firebase_deploy_function_destination_production",
+   "firebase_deploy_function_destination_latest"
   ],
   "firebase_name_value": [
    "app_main"
@@ -8675,7 +8676,8 @@
    "firebase_deploy_function",
    "firebase_deploy_function_destination",
    "firebase_deploy_function_destination_version",
-   "firebase_deploy_function_destination_production"
+   "firebase_deploy_function_destination_production",
+   "firebase_deploy_function_destination_latest"
   ],
   "function_dependencies_code": [
    "firebase_deploy_function",
@@ -8699,7 +8701,8 @@
   ],
   "destination2": [
    "firebase_deploy_function_destination_version",
-   "firebase_deploy_function_destination_production"
+   "firebase_deploy_function_destination_production",
+   "firebase_deploy_function_destination_latest"
   ],
   "global_function_get": [
    "firebase_name",
@@ -15221,6 +15224,9 @@
   ],
   "firebase_deploy_function_destination_production": [
    "firebase_deploy_function_destination_production"
+  ],
+  "firebase_deploy_function_destination_latest": [
+   "firebase_deploy_function_destination_latest"
   ]
  },
  "functions": {
@@ -31644,6 +31650,15 @@
     "marker",
     "firebase_deploy_function_destination",
     "firebase_deploy_function_destination_production",
+    "f_name",
+    "destination2"
+   ]
+  },
+  "firebase_deploy_function_destination_latest": {
+   "async": false,
+   "identifiers": [
+    "firebase_deploy_function_destination",
+    "firebase_deploy_function_destination_latest",
     "f_name",
     "destination2"
    ]
