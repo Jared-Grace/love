@@ -483,7 +483,8 @@
    "html_button_element",
    "html_button_screen",
    "html_element",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_karate_home"
   ],
   "text": [
    "app_replace_rule_set",
@@ -507,7 +508,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "app_karate_home"
   ],
   "lambda2": [
    "app_karate_home",
@@ -2234,7 +2236,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "app_karate_home"
   ],
   "ast": [
    "app_new_step_3",
@@ -14834,6 +14837,9 @@
   "person_outline": [
    "app_karate_home",
    "person_outline"
+  ],
+  "html_button_karate": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -14862,7 +14868,11 @@
     "lambda3",
     "component2",
     "lambda4",
-    "component3"
+    "component3",
+    "html_button_karate",
+    "parent",
+    "text",
+    "lambda"
    ]
   },
   "app_karate_main": {
