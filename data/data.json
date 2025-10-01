@@ -4317,7 +4317,8 @@
    "string_starts_with_digit"
   ],
   "component4": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "choices": [
    "app_reply_main",
@@ -4329,7 +4330,8 @@
    "marker_down_generic"
   ],
   "text2": [
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_home"
   ],
   "letters": [
    "app_reply_main",
@@ -15080,6 +15082,8 @@
     "component2",
     "hst",
     "span",
+    "component4",
+    "text2",
     "component3",
     "parent",
     "text",
