@@ -585,7 +585,8 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_email"
   ],
   "lambda4": [
    "app_replace_home",
@@ -613,7 +614,8 @@
    "html_p_text_multiple",
    "app_karate_container",
    "app_karate_div_text",
-   "app_karate_div"
+   "app_karate_div",
+   "app_karate_email"
   ],
   "text": [
    "app_karate_home",
@@ -11130,7 +11132,8 @@
    "html_button_element",
    "html_element",
    "messenger_reply_unread_click",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "app_karate_email"
   ],
   "html_code_script_module": [
    "html_code_script_module",
@@ -15190,6 +15193,9 @@
     "div",
     "input",
     "div_checks",
+    "component2",
+    "parent",
+    "tag_name",
     "lambda2",
     "value",
     "trimmed",
