@@ -1888,7 +1888,8 @@
   ],
   "firebase_deploy_function_destination_latest": [
    "firebase_deploy_function_destination_latest",
-   "firebase_deploy_function"
+   "firebase_deploy_function",
+   "firebase_storage_function_run"
   ],
   "f_name": [
    "firebase_deploy_function_destination_latest",
@@ -8733,9 +8734,6 @@
   ],
   "cwd": [
    "firebase_deploy"
-  ],
-  "firebase_deploy_function_destination_version": [
-   "firebase_storage_function_run"
   ],
   "function_dependencies_code": [
    "firebase_deploy_function",
@@ -19214,7 +19212,7 @@
     "list_join_newline",
     "js_code_call_statement",
     "firebase_storage_download_property",
-    "firebase_deploy_function_destination_version",
+    "firebase_deploy_function_destination_latest",
     "firebase_storage_function_run",
     "f_name",
     "destination_version",
