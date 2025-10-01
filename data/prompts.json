@@ -2467,6 +2467,7 @@
   "c html_on_click html_on_change",
   "s value",
   "s html,get",
-  "s trim"
+  "s trim",
+  "c html_value_get html_value_set"
  ]
 }
