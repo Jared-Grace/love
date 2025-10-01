@@ -2957,7 +2957,6 @@
    "string_starts_with_not",
    "tasks_run",
    "js_declaration_single_block_body_add",
-   "string_includes_lambda",
    "string_regex_match_lambda"
   ],
   "index": [
@@ -15072,7 +15071,8 @@
    "string_includes_lambda"
   ],
   "regex": [
-   "string_regex_match"
+   "string_regex_match",
+   "string_includes_lambda"
   ],
   "string_regex_match_lambda": [
    "string_regex_match_lambda"
@@ -31330,7 +31330,7 @@
     "string_regex_match",
     "marker",
     "string_includes_lambda",
-    "item",
+    "regex",
     "l",
     "input",
     "m"
