@@ -29436,7 +29436,7 @@
    ]
   },
   "storage_local_initialize_context": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "storage_local_initialize",
     "marker",
