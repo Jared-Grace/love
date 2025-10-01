@@ -2435,7 +2435,6 @@
   "s code,call",
   "s assign",
   "s fill",
-  "s body",
   "r person_outline emoji_person_outline",
   "s back",
   "s rarow",
@@ -2479,6 +2478,7 @@
   "as firebase_deploy",
   "fb",
   "ff app_karate_main",
-  "p"
+  "p",
+  "s body"
  ]
 }
