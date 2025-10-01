@@ -613,8 +613,7 @@
    "html_p_text_multiple",
    "app_karate_container",
    "app_karate_div_text",
-   "app_karate_div",
-   "app_karate_email"
+   "app_karate_div"
   ],
   "text": [
    "app_karate_home",
@@ -15122,7 +15121,7 @@
    "html_value_set",
    "app_karate_email"
   ],
-  "div2": [
+  "div_checks": [
    "app_karate_email"
   ]
  },
@@ -15171,8 +15170,7 @@
     "check",
     "div",
     "input",
-    "div2",
-    "parent",
+    "div_checks",
     "lambda2",
     "value",
     "trimmed"
