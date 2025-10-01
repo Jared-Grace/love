@@ -1051,7 +1051,6 @@
    "global_function_property",
    "global_function_property_async",
    "html_attribute_set",
-   "html_component_element_get",
    "html_style_font_size",
    "http_firebase",
    "integer_is",
@@ -11082,7 +11081,8 @@
    "html_display_none",
    "html_on",
    "html_remove",
-   "html_text_set"
+   "html_text_set",
+   "html_component_element_get"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -21565,7 +21565,7 @@
     "object_property_get",
     "html_component_element_get",
     "component",
-    "value"
+    "element"
    ]
   },
   "html_component_wrap": {
