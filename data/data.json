@@ -332,7 +332,8 @@
    "messenger_reply_playwright",
    "storage_local_get_context",
    "storage_local_initialize_context",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_button_screen_uncolored"
   ],
   "root": [
    "app_karate_email",
@@ -366,7 +367,8 @@
   "html_style_margin_y": [
    "app_karate_home",
    "html_style_margin_y",
-   "app_karate_container"
+   "app_karate_container",
+   "app_karate_button_screen_uncolored"
   ],
   "html_div": [
    "app_karate_home",
@@ -381,7 +383,8 @@
    "html_style_margin_y",
    "html_loading",
    "html_style_assign",
-   "app_karate_container"
+   "app_karate_container",
+   "app_karate_button_screen_uncolored"
   ],
   "emoji_secure": [
    "app_karate_home",
@@ -530,7 +533,8 @@
    "html_style_set_or_remove",
    "html_text_set",
    "html_text_set_if",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_button_screen_uncolored"
   ],
   "html_button_karate": [
    "app_karate_home"
@@ -619,7 +623,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "app_karate_button_screen_uncolored"
   ],
   "explanation": [
    "app_karate_home"
@@ -884,20 +889,24 @@
    "html_div",
    "html_loading",
    "app_karate_container",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_button_screen_uncolored"
   ],
   "padding": [
    "string_pad",
    "string_padded_is",
-   "app_karate_container"
+   "app_karate_container",
+   "app_karate_button_screen_uncolored"
   ],
   "width": [
-   "html_loading"
+   "html_loading",
+   "app_karate_button_screen_uncolored"
   ],
   "color": [
    "chalk_color",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "app_karate_button_screen_uncolored"
   ],
   "p": [
    "app_karate_home",
@@ -2737,7 +2746,8 @@
    "function_new_app_screen",
    "html_button_screen",
    "marker_screen_add",
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_button_screen_uncolored"
   ],
   "screen": [
    "app_refresh"
@@ -3378,7 +3388,8 @@
   "html_button_screen": [
    "app_replace_rule_set",
    "app_replace_settings",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_button_screen_uncolored"
   ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
@@ -14929,13 +14940,18 @@
   ],
   "app_karate_margin_y": [
    "app_karate_home",
-   "app_karate_margin_y"
+   "app_karate_margin_y",
+   "app_karate_button_screen_uncolored"
   ],
   "margin_y2": [
    "app_karate_home"
   ],
   "app_karate_button_screen_uncolored": [
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_button_screen_uncolored"
+  ],
+  "margin_y": [
+   "app_karate_button_screen_uncolored"
   ]
  },
  "functions": {
@@ -31035,6 +31051,25 @@
    "identifiers": [
     "app_karate_margin_y",
     "v"
+   ]
+  },
+  "app_karate_button_screen_uncolored": {
+   "async": false,
+   "identifiers": [
+    "html_style_margin_y",
+    "app_karate_margin_y",
+    "html_style_assign",
+    "html_button_screen",
+    "app_karate_button_screen_uncolored",
+    "div",
+    "text",
+    "context",
+    "screen_name",
+    "component",
+    "padding",
+    "width",
+    "color",
+    "margin_y"
    ]
   }
  }
