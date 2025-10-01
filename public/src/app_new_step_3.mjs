@@ -1,3 +1,4 @@
+import { firebase_deploy_function_destination_production } from "../../../karate_code/public/src/firebase_deploy_function_destination_production.mjs";
 import { app_main } from "../../../karate_code/public/src/app_main.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { firebase_name_repo } from "../../../karate_code/public/src/firebase_name_repo.mjs";
@@ -15,6 +16,7 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 export async function app_new_step_3(name) {
+  let version_get = firebase_deploy_function_destination_production;
   marker("1");
   string_and_empty_not_is_assert(name);
   let a_name = app_name_prefixed(name);
@@ -31,7 +33,7 @@ export async function app_new_step_3(name) {
     let main_name = js_code_string(value_string);
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [main_name, f_name],
+      [main_name, f_name, version_get],
       declaration_call,
     );
     let statement = js_parse_statement(code);
