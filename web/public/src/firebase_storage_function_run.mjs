@@ -1,4 +1,3 @@
-import { firebase_deploy_function_destination_production } from "../../../karate_code/public/src/firebase_deploy_function_destination_production.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
@@ -8,10 +7,9 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { firebase_storage_download_property } from "../../../love/public/src/firebase_storage_download_property.mjs";
-export async function firebase_storage_function_run(f_name) {
+export async function firebase_storage_function_run(f_name, version_get) {
   marker("1");
-  let destination_version =
-    firebase_deploy_function_destination_production(f_name);
+  let destination_version = version_get(f_name);
   let destination = await firebase_storage_download_property(
     destination_version,
     "destination",
