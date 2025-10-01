@@ -14956,6 +14956,9 @@
   ],
   "margin_y": [
    "app_karate_button_screen_uncolored"
+  ],
+  "emoji_arrow_left": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -14969,6 +14972,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "emoji_arrow_left",
     "html_style_assign",
     "app_karate_button_screen_uncolored",
     "app_karate_container",
