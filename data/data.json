@@ -14876,6 +14876,9 @@
   ],
   "margin_y": [
    "app_karate_home"
+  ],
+  "app_karate_email": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -30908,6 +30911,12 @@
     "html_style_margin_y",
     "component",
     "value"
+   ]
+  },
+  "app_karate_email": {
+   "async": false,
+   "identifiers": [
+    "app_karate_email"
    ]
   }
  }
