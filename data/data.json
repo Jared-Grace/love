@@ -1384,7 +1384,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "app_karate_margin_y"
+   "app_karate_margin_y",
+   "emoji_arrow_left"
   ],
   "home": [
    "app_karate_screens",
@@ -14958,7 +14959,8 @@
    "app_karate_button_screen_uncolored"
   ],
   "emoji_arrow_left": [
-   "app_karate_email"
+   "app_karate_email",
+   "emoji_arrow_left"
   ]
  },
  "functions": {
@@ -31082,6 +31084,13 @@
     "padding",
     "width",
     "margin_y"
+   ]
+  },
+  "emoji_arrow_left": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_left",
+    "v"
    ]
   }
  }
