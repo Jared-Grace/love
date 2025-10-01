@@ -2472,6 +2472,7 @@
   "c html_on_change html_on_input",
   "rs app_karate_container centered",
   "s font",
-  "s enable"
+  "s enable",
+  "s focus"
  ]
 }
