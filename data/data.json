@@ -20870,8 +20870,8 @@
     "ast",
     "arg_names",
     "code",
-    "body_block",
-    "item"
+    "item",
+    "body_block"
    ]
   },
   "function_wrap_suffix_add": {
