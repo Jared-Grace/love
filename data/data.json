@@ -2027,7 +2027,6 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "html_update_public",
    "firebase_name_repo",
    "global_function_get"
   ],
@@ -8622,8 +8621,7 @@
    "js_visit_match",
    "search_generic",
    "tasks_run",
-   "function_name_to_path_search",
-   "html_update_public"
+   "function_name_to_path_search"
   ],
   "function_open": [
    "functions_search_open",
@@ -9272,8 +9270,7 @@
    "function_new_declaration",
    "repo_path_combine",
    "user_repo_path_combine",
-   "firebase_name_repo",
-   "html_update_public"
+   "firebase_name_repo"
   ],
   "user_repo_get": [
    "function_new_declaration",
@@ -9336,7 +9333,6 @@
    "user_repo_set",
    "repos_paths_names_map_unordered_combine",
    "repos_paths_names_map_unordered",
-   "html_update_public",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
    "user_repo_path_combine",
@@ -9541,7 +9537,6 @@
    "function_exists_strict",
    "function_name_to_path_search",
    "function_name_to_path_unalias",
-   "html_update_public",
    "function_import",
    "app_new_step_3"
   ],
@@ -14794,6 +14789,9 @@
   ],
   "from_paths2": [
    "html_update_dev"
+  ],
+  "function_name_repo_path_combine": [
+   "html_update_public"
   ]
  },
  "functions": {
@@ -21625,24 +21623,20 @@
   "html_update_public": {
    "async": true,
    "identifiers": [
-    "repo_path_combine",
+    "function_name_repo_path_combine",
     "js_code_braces_empty",
     "js_code_let_assign",
     "js_code_call_statement",
-    "object_property_get",
     "file_open",
     "html_overwrite",
     "html_code_script_module",
     "function_dependencies_code",
-    "function_name_to_path_search",
     "app_name_prefixed",
     "html_name_to_path",
     "html_update_public",
     "name",
     "a_name",
     "file_path",
-    "search",
-    "repo_name",
     "joined",
     "code",
     "call",
