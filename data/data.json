@@ -15307,6 +15307,9 @@
    "app_new_step_5",
    "app_name_staging",
    "app_new_step_4"
+  ],
+  "app_karate_staging": [
+   "app_karate_staging"
   ]
  },
  "functions": {
@@ -31834,6 +31837,12 @@
     "name",
     "a_name",
     "combined"
+   ]
+  },
+  "app_karate_staging": {
+   "async": false,
+   "identifiers": [
+    "app_karate_staging"
    ]
   }
  }
