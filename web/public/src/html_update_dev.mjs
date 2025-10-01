@@ -23,7 +23,7 @@ export async function html_update_dev(name) {
   const name_prefixed = await app_name_main(name);
   let call = js_code_call_statement(name_prefixed);
   let f_name_ext2 = function_name_to_base(name_prefixed);
-  const from_paths2 = await paths_get(f_name_ext2);
+  const from_paths2 = paths_get(f_name_ext2);
   let f_path = path_join(from_paths2);
   const from = folder_current_join_code(f_path);
   let code = js_code_import_single(name_prefixed, from);
