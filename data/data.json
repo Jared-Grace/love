@@ -584,8 +584,7 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "app_karate_email"
+   "app_reply_main"
   ],
   "lambda4": [
    "app_replace_home",
@@ -4927,7 +4926,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_karate_email"
   ],
   "assert_not": [
    "assert_not",
@@ -13100,7 +13100,8 @@
   ],
   "v7": [
    "js_marker_name_get",
-   "string_trim"
+   "string_trim",
+   "app_karate_email"
   ],
   "a5": [
    "js_marker_name_get"
@@ -14128,7 +14129,8 @@
   ],
   "string_trim": [
    "messenger_reply_messages",
-   "string_trim"
+   "string_trim",
+   "app_karate_email"
   ],
   "conversation": [
    "messenger_reply_messages"
@@ -15113,6 +15115,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "string_trim",
     "object_property_get",
     "html_component_element_get",
     "html_on_change",
@@ -15144,8 +15147,9 @@
     "input",
     "lambda2",
     "element",
-    "component2",
     "value",
+    "v7",
+    "message",
     "checks",
     "text",
     "check"
