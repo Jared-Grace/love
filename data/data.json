@@ -415,7 +415,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "html_div_text"
   ],
   "html_clear": [
    "app_karate_home",
@@ -467,7 +468,8 @@
    "html_parse",
    "html_parse_find",
    "html_parse_find_a_href_starts_with",
-   "html_p_text"
+   "html_p_text",
+   "html_div_text"
   ],
   "lambda2": [
    "app_karate_home",
@@ -2992,7 +2994,8 @@
    "app_replace_rule_set",
    "html_div",
    "html_loading",
-   "app_karate_home"
+   "app_karate_home",
+   "html_div_text"
   ],
   "list_concat_multiple": [
    "app_replace_rule_set",
@@ -3424,7 +3427,8 @@
    "app_replace_rule_set",
    "html_div",
    "html_loading",
-   "app_karate_home"
+   "app_karate_home",
+   "html_div_text"
   ],
   "current_list": [
    "app_replace_rule_set",
@@ -30874,7 +30878,11 @@
   "html_div_text": {
    "async": false,
    "identifiers": [
-    "html_div_text"
+    "html_div",
+    "marker",
+    "html_div_text",
+    "root",
+    "div"
    ]
   }
  }
