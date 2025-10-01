@@ -376,8 +376,7 @@
    "app_replace_rule_set",
    "html_div",
    "html_loading",
-   "app_karate_container",
-   "app_karate_div_text"
+   "app_karate_container"
   ],
   "html_style_assign": [
    "html_style_margin_y",
@@ -14983,8 +14982,7 @@
   ],
   "app_karate_margin_y_set": [
    "app_karate_style_control",
-   "app_karate_margin_y_set",
-   "app_karate_div_text"
+   "app_karate_margin_y_set"
   ],
   "margin_y": [
    "app_karate_margin_y_set"
@@ -15009,6 +15007,9 @@
   "emoji_arrow_right": [
    "app_karate_email",
    "emoji_arrow_right"
+  ],
+  "app_karate_div": [
+   "app_karate_div_text"
   ]
  },
  "functions": {
@@ -31171,10 +31172,9 @@
   "app_karate_div_text": {
    "async": false,
    "identifiers": [
+    "app_karate_div",
     "html_text_set",
-    "html_div",
     "marker",
-    "app_karate_margin_y_set",
     "app_karate_div_text",
     "parent",
     "explanation",
