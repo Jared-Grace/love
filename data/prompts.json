@@ -2438,7 +2438,6 @@
   "s assign",
   "s fill",
   "s body",
-  "p",
   "r person_outline emoji_person_outline",
   "s back",
   "s rarow",
@@ -2476,6 +2475,7 @@
   "s firebase",
   "command_line dir",
   "o s3",
+  "p",
   "s3"
  ]
 }
