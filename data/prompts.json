@@ -2404,7 +2404,6 @@
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
-  "s karate",
   "s screens",
   "is app_replace_screens",
   "c app_replace_screens app_karate_screens",
@@ -2456,6 +2455,7 @@
   "s next",
   "u hst",
   "s span",
-  "c html_span_text html_em_text"
+  "c html_span_text html_em_text",
+  "s karate"
  ]
 }
