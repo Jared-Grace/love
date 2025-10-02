@@ -2294,8 +2294,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_karate_computer_save"
+   "storage_local_set_context"
   ],
   "screens": [
    "app_karate_main",
@@ -3705,14 +3704,14 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set",
-   "app_karate_computer_save"
+   "error_attention_set"
   ],
   "storage_local_set_context": [
    "app_replace_font_size_adjust",
    "app_replace_home",
    "app_screen_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_computer_save"
   ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
@@ -4985,8 +4984,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_karate_computer_save"
+   "storage_local_set_context"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -15395,8 +15393,7 @@
   "storage_local_set": [
    "storage_local_initialize",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_karate_computer_save"
+   "storage_local_set_context"
   ],
   "ley": [
    "storage_local_key_get"
@@ -15784,7 +15781,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "storage_local_set",
+    "storage_local_set_context",
     "app_karate_button_back",
     "html_rgba_to_rgb",
     "object_property_get",
@@ -15835,9 +15832,6 @@
     "lambda2",
     "r",
     "container2",
-    "app_fn",
-    "key",
-    "value2",
     "selected",
     "transform",
     "margin",
