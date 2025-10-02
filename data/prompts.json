@@ -1571,7 +1571,6 @@
   "s roudn",
   "s round",
   "n round",
-  "s base",
   "s 64",
   "s string_base64_to",
   "n string_base64_to",
@@ -2526,6 +2525,7 @@
   "n repo_function_move",
   "s repo_path",
   "repo_functions_path love",
-  "s function,name,path"
+  "s function,name,path",
+  "s base"
  ]
 }
