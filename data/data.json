@@ -5160,8 +5160,7 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "html_parse_find_a_href_starts_with",
-   "string_starts_with_not",
-   "repo_functions_move_if_starts_with_not"
+   "string_starts_with_not"
   ],
   "chapter_name": [
    "app_reply_main",
@@ -31937,8 +31936,7 @@
     "prefix",
     "f_names",
     "filtered",
-    "mapped",
-    "book_code"
+    "mapped"
    ]
   },
   "repo_functions_names": {
