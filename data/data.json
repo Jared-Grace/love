@@ -3847,8 +3847,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "app_karate_computer_save"
+   "string_replace"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -7951,8 +7950,7 @@
    "string_base64_to",
    "string_list_to",
    "string_replace",
-   "js_imports_paths_fix_inner",
-   "app_karate_computer_save"
+   "js_imports_paths_fix_inner"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -15592,9 +15590,6 @@
    "app_karate_computer_save"
   ],
   "radio": [
-   "app_karate_computer_save"
-  ],
-  "to2": [
    "app_karate_computer_save"
   ]
  },
@@ -32389,10 +32384,7 @@
     "transform",
     "margin",
     "s",
-    "div",
-    "to2",
-    "to",
-    "from"
+    "div"
    ]
   },
   "app_screen_set_lambda": {
