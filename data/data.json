@@ -3460,7 +3460,6 @@
    "reply",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "js_arrow_blockify",
    "js_if_blockify"
   ],
   "list_empty": [
@@ -23891,12 +23890,11 @@
    "async": true,
    "identifiers": [
     "js_if_blockify_generic",
-    "list_add",
+    "js_statement_return_add",
     "js_arrow_blockify",
     "ast",
     "type",
-    "property_name",
-    "js_statement_return_add"
+    "property_name"
    ]
   },
   "js_arrow_to_function": {
