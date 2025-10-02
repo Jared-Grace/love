@@ -6526,7 +6526,8 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green"
+   "trinity_green",
+   "app_karate_computer_save"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -32326,6 +32327,7 @@
     "container",
     "label",
     "input",
+    "s",
     "div"
    ]
   },
