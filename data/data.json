@@ -3410,7 +3410,8 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repo_functions_move"
   ],
   "part": [
    "list_filter_includes_not",
@@ -3518,7 +3519,8 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "repo_functions_move"
   ],
   "n": [
    "list_filter_includes_not",
@@ -4356,7 +4358,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "repo_functions_move"
   ],
   "index": [
    "app_replace_home",
@@ -4659,7 +4662,8 @@
    "range_from",
    "repos_gitignore_overwrite",
    "repos_paths_names_map_unordered_combine",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "repo_functions_move"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -8224,7 +8228,8 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "repo_functions_move"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -16050,6 +16055,7 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
+    "list_map",
     "data_identifiers_get",
     "list_map_unordered_async",
     "file_delete",
@@ -16072,6 +16078,10 @@
     "f_path",
     "waited",
     "identifiers",
+    "mapped",
+    "list2",
+    "lambda2",
+    "item",
     "list",
     "v"
    ]
