@@ -15621,9 +15621,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "div2": [
-   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15728,8 +15725,7 @@
     "margin",
     "s",
     "lambda5",
-    "component",
-    "div2"
+    "component"
    ]
   },
   "app_karate_container": {
