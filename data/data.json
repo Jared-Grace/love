@@ -1817,8 +1817,7 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch",
-   "list_filter"
+   "watch"
   ],
   "r": [
    "app_karate_computer_save",
@@ -2301,8 +2300,7 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "list_filter"
+   "visit_filter_recursive_async"
   ],
   "li": [
    "app_karate_email",
@@ -2804,8 +2802,7 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine",
-   "list_filter"
+   "list_map_combine"
   ],
   "right": [
    "add",
@@ -2827,8 +2824,7 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try",
-   "list_filter"
+   "log_unparse_try"
   ],
   "sum": [
    "add",
@@ -5963,8 +5959,7 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence",
-   "list_filter"
+   "reply_sequence"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6023,8 +6018,7 @@
   ],
   "bind": [
    "bind",
-   "bind_property",
-   "list_filter"
+   "bind_property"
   ],
   "bind_property": [
    "bind_property",
@@ -27609,7 +27603,6 @@
   "list_filter": {
    "async": false,
    "identifiers": [
-    "bind",
     "list_is",
     "assert",
     "list_filter",
@@ -27620,12 +27613,7 @@
     "item",
     "v",
     "filtered",
-    "filter",
-    "lambda2",
-    "a",
-    "fn",
-    "left",
-    "right"
+    "filter"
    ]
   },
   "list_filter_empty_not_is": {
