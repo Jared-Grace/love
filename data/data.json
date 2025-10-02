@@ -3519,8 +3519,7 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run",
-   "repo_functions_move"
+   "tasks_run"
   ],
   "n": [
    "list_filter_includes_not",
@@ -8228,8 +8227,7 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect",
-   "repo_functions_move"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -16079,10 +16077,8 @@
     "waited",
     "identifiers",
     "lambda2",
-    "item",
-    "mapped",
-    "list2",
     "list",
+    "mapped",
     "v"
    ]
   },
