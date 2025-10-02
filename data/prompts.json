@@ -2367,7 +2367,6 @@
   "fdf app_karate_main",
   "s app,main",
   "n app_main",
-  "s storage,local",
   "s global",
   "c global_function_property_async global_function_property",
   "html_new karate",
@@ -2552,6 +2551,7 @@
   "s back",
   "is app_karate_button_screen_uncolored",
   "s reply",
-  "au app_reply_main"
+  "au app_reply_main",
+  "s storage,local"
  ]
 }
