@@ -2547,6 +2547,7 @@
   "s return,add",
   "s if,js",
   "s statement",
-  "s screen"
+  "s screen",
+  "s function_is"
  ]
 }
