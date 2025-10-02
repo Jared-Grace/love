@@ -15688,6 +15688,9 @@
   "function_is_assert": [
    "html_on",
    "function_is_assert"
+  ],
+  "font_color": [
+   "app_karate_validate_style_assign"
   ]
  },
  "functions": {
@@ -32611,6 +32614,7 @@
     "border_color",
     "background",
     "button_background",
+    "font_color",
     "lambda",
     "div",
     "color"
