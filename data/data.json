@@ -20,18 +20,79 @@
    "app_karate_main",
    "repo_functions_move_if_includes_not_love_app_karate"
   ],
-  "app_karate_button_background": [
-   "app_karate_button_background",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_validate_style_assign"
+  "app_screen_set_lambda": [
+   "app_karate_button_back",
+   "app_karate_home",
+   "app_screen_set_lambda",
+   "html_button_screen"
+  ],
+  "emoji_arrow_left": [
+   "app_karate_button_back",
+   "emoji_arrow_left"
+  ],
+  "app_karate_button_screen_uncolored": [
+   "app_karate_button_back",
+   "app_karate_button_green",
+   "app_karate_button_screen_uncolored"
+  ],
+  "app_karate_button_back": [
+   "app_karate_button_back",
+   "app_karate_computer_save",
+   "app_karate_email"
+  ],
+  "container": [
+   "app_karate_button_back",
+   "app_karate_computer_save",
+   "app_karate_container_main",
+   "app_karate_email",
+   "app_karate_home",
+   "html_em_text",
+   "html_span_text"
+  ],
+  "context": [
+   "app_karate_button_back",
+   "app_karate_computer_save",
+   "app_karate_email",
+   "app_karate_home",
+   "app_karate_main",
+   "app_screen_set_lambda",
+   "app_refresh",
+   "app_replace_font_size",
+   "app_replace_font_size_adjust",
+   "app_replace_font_size_refresh",
+   "app_replace_home",
+   "app_replace_main",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_screen_set",
+   "html_button_screen",
+   "html_clear_context",
+   "messenger_reply_login",
+   "messenger_reply_playwright",
+   "storage_local_get_context",
+   "storage_local_initialize_context",
+   "storage_local_set_context"
+  ],
+  "screen_name": [
+   "app_karate_button_back",
+   "app_screen_set_lambda",
+   "app_refresh",
+   "function_new_app_screen",
+   "html_button_screen",
+   "marker_screen_add"
   ],
   "v": [
+   "app_karate_button_back",
    "app_karate_button_background",
+   "app_karate_button_background_invalid",
+   "app_karate_button_font_color",
+   "app_karate_button_uncolored_background_color",
    "app_karate_container_background",
    "app_karate_green_dark",
    "app_karate_margin_y",
    "app_karate_screens",
    "app_karate_style_control_font_size",
+   "date_hours_to_mins",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
    "app_name_prefix",
@@ -318,12 +379,28 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "app_karate_button_background_invalid",
+   "whitespace_normalize"
+  ],
+  "component2": [
    "app_karate_button_back",
+   "app_karate_computer_save",
+   "app_karate_home",
+   "html_input",
+   "app_reply_main"
+  ],
+  "app_karate_button_background": [
+   "app_karate_button_background",
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_validate_style_assign"
+  ],
+  "app_karate_button_background_invalid": [
+   "app_karate_button_background_invalid",
+   "app_karate_validate_style_assign"
+  ],
+  "app_karate_button_font_color": [
    "app_karate_button_font_color",
-   "app_karate_button_uncolored_background_color",
-   "date_hours_to_mins"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_validate_style_assign"
   ],
   "marker": [
    "app_karate_button_green",
@@ -336,6 +413,7 @@
    "app_karate_screens",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
+   "function_is",
    "html_checked_set",
    "apps_get",
    "app_code",
@@ -642,23 +720,17 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "function_is"
+   "whitespace_normalize"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
    "app_karate_button_screen_green_style_assign"
   ],
-  "app_karate_button_screen_uncolored": [
-   "app_karate_button_green",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_back"
-  ],
   "app_karate_button_green": [
    "app_karate_button_green",
-   "app_karate_home",
+   "app_karate_computer_save",
    "app_karate_email",
-   "app_karate_computer_save"
+   "app_karate_home"
   ],
   "div": [
    "app_karate_button_green",
@@ -669,6 +741,7 @@
    "app_karate_div",
    "app_karate_div_text",
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "html_centered",
    "html_font_size_1em",
    "html_input",
@@ -677,8 +750,7 @@
    "app_replace_rule_set",
    "html_div",
    "html_div_text",
-   "html_loading",
-   "app_karate_validate_style_assign"
+   "html_loading"
   ],
   "text": [
    "app_karate_button_green",
@@ -716,7 +788,9 @@
    "app_karate_button_screen_uncolored",
    "app_karate_computer_save",
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "app_screen_set_lambda",
+   "function_is_assert",
    "app_new_step_3_generic",
    "app_replace_home",
    "app_replace_rule_set",
@@ -972,9 +1046,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "app_karate_validate_style_assign",
-   "function_is_assert"
+   "watch"
   ],
   "component": [
    "app_karate_button_green",
@@ -1010,24 +1082,42 @@
   ],
   "html_style_assign": [
    "app_karate_button_screen_green_style_assign",
+   "app_karate_button_screen_uncolored",
    "app_karate_computer_save",
    "app_karate_container",
    "app_karate_email",
    "app_karate_style_control",
+   "app_karate_validate_style_assign",
    "html_font_size_1em",
    "html_loading",
    "html_style_assign",
-   "html_style_margin_y",
-   "app_karate_validate_style_assign",
-   "app_karate_button_screen_uncolored"
+   "html_style_margin_y"
   ],
   "color": [
    "app_karate_button_screen_green_style_assign",
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "chalk_color",
    "chalk_green",
-   "chalk_red",
-   "app_karate_validate_style_assign"
+   "chalk_red"
+  ],
+  "app_karate_button_uncolored_background_color": [
+   "app_karate_button_screen_uncolored",
+   "app_karate_button_uncolored_background_color"
+  ],
+  "assert_arguments": [
+   "app_karate_button_screen_uncolored",
+   "html_checked_set",
+   "app_new",
+   "assert_arguments",
+   "function_params_new",
+   "html_button",
+   "html_value_set",
+   "js_assert_arguments_args",
+   "js_dollar_aa",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
   ],
   "html_button": [
    "app_karate_button_screen_uncolored",
@@ -1044,25 +1134,36 @@
    "app_karate_email",
    "app_karate_style_control"
   ],
-  "html_centered": [
-   "app_karate_computer_save",
-   "app_karate_container_centered",
-   "html_centered"
-  ],
-  "html_checked_set": [
-   "app_karate_computer_save",
-   "html_checked_set"
-  ],
-  "html_on_click": [
-   "app_karate_computer_save",
+  "arguments": [
+   "app_karate_button_screen_uncolored",
+   "html_checked_set",
+   "app_new",
+   "catch_call",
+   "functions_combine",
+   "function_params_new",
    "html_button",
-   "html_on_click"
+   "html_value_set",
+   "js_expand_generic",
+   "js_marker_name_get",
+   "marker_call_replace_generic",
+   "marker_rename",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
   ],
-  "app_karate_container_background": [
-   "app_karate_container_background",
-   "app_karate_validate_style_assign"
+  "storage_local_set_context": [
+   "app_karate_computer_save",
+   "app_replace_font_size_adjust",
+   "app_replace_home",
+   "app_screen_set",
+   "storage_local_set_context"
+  ],
+  "html_rgba_to_rgb": [
+   "app_karate_computer_save",
+   "html_rgba_to_rgb"
   ],
   "object_property_get": [
+   "app_karate_computer_save",
    "app_karate_email",
    "app_refresh",
    "app_replace_home",
@@ -1160,8 +1261,49 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "repo_functions_move",
-   "app_karate_computer_save"
+   "repo_functions_move"
+  ],
+  "list_map_property": [
+   "app_karate_computer_save",
+   "app_reply_main",
+   "bible_verses_encouragement_generate",
+   "ebible_index",
+   "ebible_index_flat",
+   "ebible_references_parse_lines",
+   "functions_combine_name",
+   "function_dependencies_code",
+   "html_parse_find_a_href_starts_with",
+   "js_dollar_choice_arguments_names",
+   "js_identifiers_to_names",
+   "js_identifier_defineds",
+   "js_imports",
+   "js_imports_declarations",
+   "list_map_name",
+   "list_map_property",
+   "marker_down_choices",
+   "messenger_reply",
+   "reply",
+   "sandbox_2",
+   "sandbox_4_a"
+  ],
+  "app_karate_validate_style_assign": [
+   "app_karate_computer_save",
+   "app_karate_email",
+   "app_karate_validate_style_assign"
+  ],
+  "html_centered": [
+   "app_karate_computer_save",
+   "app_karate_container_centered",
+   "html_centered"
+  ],
+  "html_checked_set": [
+   "app_karate_computer_save",
+   "html_checked_set"
+  ],
+  "html_on_click": [
+   "app_karate_computer_save",
+   "html_button",
+   "html_on_click"
   ],
   "object_merge": [
    "app_karate_computer_save",
@@ -1191,6 +1333,7 @@
   "each": [
    "app_karate_computer_save",
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "app_replace_rule_set",
    "app_reply_main",
    "bible_verses_encouragement_generate",
@@ -1237,8 +1380,7 @@
    "object_properties_delete_all",
    "object_properties_from",
    "reduce",
-   "visit_filter_recursive",
-   "app_karate_validate_style_assign"
+   "visit_filter_recursive"
   ],
   "list_map": [
    "app_karate_computer_save",
@@ -1364,29 +1506,35 @@
    "app_karate_computer_save",
    "app_karate_screens"
   ],
-  "context": [
+  "root": [
    "app_karate_computer_save",
+   "app_karate_container_main",
    "app_karate_email",
    "app_karate_home",
    "app_karate_main",
-   "app_screen_set_lambda",
-   "app_refresh",
-   "app_replace_font_size",
-   "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
    "app_replace_home",
    "app_replace_main",
    "app_replace_rule_set",
    "app_replace_settings",
-   "app_screen_set",
-   "html_button_screen",
+   "app_reply_main",
+   "ebible_chapters",
+   "ebible_chapter_classes",
+   "ebible_chapter_text",
+   "ebible_versions",
+   "ebible_version_books_testament",
+   "file_root_exists",
+   "file_root_exists_assert",
    "html_clear_context",
-   "messenger_reply_login",
-   "messenger_reply_playwright",
-   "storage_local_get_context",
-   "storage_local_initialize_context",
-   "storage_local_set_context",
-   "app_karate_button_back"
+   "html_div",
+   "html_div_text",
+   "html_p",
+   "html_parse",
+   "html_parse_find",
+   "html_parse_find_a_href_starts_with",
+   "html_p_text"
+  ],
+  "container_main": [
+   "app_karate_computer_save"
   ],
   "choices": [
    "app_karate_computer_save",
@@ -1510,47 +1658,20 @@
   "details": [
    "app_karate_computer_save"
   ],
-  "root": [
+  "padding": [
    "app_karate_computer_save",
-   "app_karate_container_main",
-   "app_karate_email",
-   "app_karate_home",
-   "app_karate_main",
-   "app_replace_home",
-   "app_replace_main",
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_reply_main",
-   "ebible_chapters",
-   "ebible_chapter_classes",
-   "ebible_chapter_text",
-   "ebible_versions",
-   "ebible_version_books_testament",
-   "file_root_exists",
-   "file_root_exists_assert",
-   "html_clear_context",
-   "html_div",
-   "html_div_text",
-   "html_p",
-   "html_parse",
-   "html_parse_find",
-   "html_parse_find_a_href_starts_with",
-   "html_p_text"
-  ],
-  "container_main": [
-   "app_karate_computer_save"
+   "app_karate_container",
+   "app_karate_style_control",
+   "string_pad",
+   "string_padded_is"
   ],
   "radios": [
    "app_karate_computer_save"
   ],
-  "container": [
+  "button_next": [
    "app_karate_computer_save",
-   "app_karate_container_main",
    "app_karate_email",
-   "app_karate_home",
-   "html_em_text",
-   "html_span_text",
-   "app_karate_button_back"
+   "app_karate_validate_style_assign"
   ],
   "label": [
    "app_karate_computer_save"
@@ -1590,6 +1711,10 @@
    "object_properties_from",
    "puppeteer_hrefs",
    "retry"
+  ],
+  "validate": [
+   "app_karate_computer_save",
+   "app_karate_email"
   ],
   "lambda2": [
    "app_karate_computer_save",
@@ -1708,6 +1833,13 @@
    "reply",
    "sandbox"
   ],
+  "container2": [
+   "app_karate_computer_save"
+  ],
+  "selected": [
+   "app_karate_computer_save",
+   "html_rgba_to_rgb"
+  ],
   "transform": [
    "app_karate_computer_save",
    "messenger_reply_messages_transform",
@@ -1762,6 +1894,28 @@
    "string_upper_to",
    "trinity_green"
   ],
+  "lambda5": [
+   "app_karate_computer_save",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "ebible_references_parse_lines",
+   "function_params_new",
+   "js_identifier_defineds",
+   "messenger_reply_messages",
+   "sleep"
+  ],
+  "valid": [
+   "app_karate_computer_save",
+   "app_karate_email",
+   "app_karate_validate_style_assign",
+   "app_replace_rule_set",
+   "functions_names_includes",
+   "js_call_fill",
+   "js_call_function_if"
+  ],
+  "containers": [
+   "app_karate_computer_save"
+  ],
   "html_style_margin_y": [
    "app_karate_container",
    "app_karate_margin_y_set",
@@ -1793,12 +1947,9 @@
    "html_element",
    "html_p_text_multiple"
   ],
-  "padding": [
-   "app_karate_container",
-   "app_karate_style_control",
-   "string_pad",
-   "string_padded_is",
-   "app_karate_computer_save"
+  "app_karate_container_background": [
+   "app_karate_container_background",
+   "app_karate_validate_style_assign"
   ],
   "html_style_set": [
    "app_karate_container_main",
@@ -1865,17 +2016,13 @@
    "html_value_get",
    "html_value_set"
   ],
-  "html_enable_if": [
-   "app_replace_rule_set",
-   "html_enable_if",
-   "app_karate_validate_style_assign"
-  ],
   "html_on_input": [
    "app_karate_email",
    "html_on_input"
   ],
   "not": [
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "app_replace_rule_set",
    "app_reply_main",
    "assert",
@@ -1931,8 +2078,7 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "app_karate_validate_style_assign"
+   "visit_filter_recursive_async"
   ],
   "html_clear": [
    "app_karate_email",
@@ -1986,10 +2132,6 @@
    "app_karate_green_dark",
    "app_karate_validate_style_assign"
   ],
-  "emoji_arrow_left": [
-   "emoji_arrow_left",
-   "app_karate_button_back"
-  ],
   "app_karate_email": [
    "app_karate_email",
    "app_karate_screens"
@@ -2002,6 +2144,7 @@
   ],
   "input": [
    "app_karate_email",
+   "app_karate_validate_style_assign",
    "html_checked_set",
    "html_input_email",
    "html_input_type",
@@ -2022,8 +2165,7 @@
    "string_regex_match",
    "string_regex_match_lambda",
    "string_suffix_change",
-   "string_to",
-   "app_karate_validate_style_assign"
+   "string_to"
   ],
   "div_checks": [
    "app_karate_email"
@@ -2031,26 +2173,8 @@
   "ul": [
    "app_karate_email"
   ],
-  "button_next": [
-   "app_karate_email",
-   "app_karate_validate_style_assign",
-   "app_karate_computer_save"
-  ],
-  "validate": [
-   "app_karate_email",
-   "app_karate_computer_save"
-  ],
   "trimmed": [
    "app_karate_email"
-  ],
-  "valid": [
-   "app_karate_email",
-   "app_replace_rule_set",
-   "functions_names_includes",
-   "js_call_fill",
-   "js_call_function_if",
-   "app_karate_validate_style_assign",
-   "app_karate_computer_save"
   ],
   "c": [
    "app_karate_email",
@@ -2176,10 +2300,6 @@
    "app_karate_email",
    "function_aliases_restore"
   ],
-  "background": [
-   "html_loading",
-   "app_karate_validate_style_assign"
-  ],
   "element": [
    "app_karate_email",
    "html_checked_set",
@@ -2200,12 +2320,6 @@
    "messenger_reply",
    "messenger_reply_playwright"
   ],
-  "app_screen_set_lambda": [
-   "app_karate_home",
-   "app_screen_set_lambda",
-   "html_button_screen",
-   "app_karate_button_back"
-  ],
   "emoji_add": [
    "app_karate_home",
    "emoji_add"
@@ -2216,13 +2330,6 @@
   ],
   "html_button_karate_container_text_screen": [
    "app_karate_home"
-  ],
-  "component2": [
-   "app_karate_home",
-   "html_input",
-   "app_reply_main",
-   "app_karate_button_back",
-   "app_karate_computer_save"
   ],
   "component3": [
    "app_karate_home",
@@ -2338,26 +2445,92 @@
    "app_karate_style_control",
    "html_loading"
   ],
-  "log": [
-   "js_dollar_g",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+  "null_not_is": [
+   "app_karate_validate_style_assign",
+   "app_replace_rule_set",
+   "function_run_prompt",
+   "js_block_child_graph",
+   "marker_enter",
+   "null_not_is",
+   "null_not_is_assert"
+  ],
+  "html_enable_if": [
+   "app_karate_validate_style_assign",
+   "app_replace_rule_set",
+   "html_enable_if"
+  ],
+  "divs": [
+   "app_karate_validate_style_assign"
+  ],
+  "border_color": [
+   "app_karate_validate_style_assign"
+  ],
+  "background": [
+   "app_karate_validate_style_assign",
+   "html_loading"
+  ],
+  "button_background": [
+   "app_karate_validate_style_assign"
+  ],
+  "font_color": [
+   "app_karate_validate_style_assign"
   ],
   "app_screen_set": [
    "app_screen_set_lambda",
    "app_replace_home",
    "app_screen_set"
   ],
-  "screen_name": [
+  "l": [
    "app_screen_set_lambda",
-   "app_refresh",
-   "function_new_app_screen",
-   "html_button_screen",
-   "marker_screen_add",
-   "app_karate_button_back"
+   "function_aliases_restore",
+   "js_dollar_a_generic",
+   "js_dollar_x",
+   "list_concat",
+   "list_difference",
+   "list_filter",
+   "list_intersect",
+   "list_is",
+   "list_squash",
+   "marker_down_choices",
+   "string_includes_lambda",
+   "string_regex_match_lambda"
+  ],
+  "date_hours_to_mins": [
+   "date_diff_mins",
+   "date_hours_to_mins"
+  ],
+  "date_diff_hours": [
+   "date_diff_mins",
+   "date_diff_hours"
+  ],
+  "date_diff_mins": [
+   "date_diff_mins",
+   "git_push_folder"
+  ],
+  "now": [
+   "date_diff_mins",
+   "date_diff_hours",
+   "date_diff_ms",
+   "date_now",
+   "date_now_iso",
+   "git_push_folder"
+  ],
+  "before": [
+   "date_diff_mins",
+   "app_replace_rule_set",
+   "date_diff_hours",
+   "date_diff_ms",
+   "function_alias_rename",
+   "git_push_folder"
+  ],
+  "hours": [
+   "date_diff_mins",
+   "date_hours_to_mins",
+   "date_diff_hours"
+  ],
+  "mins": [
+   "date_diff_mins",
+   "git_push_folder"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function_app_karate_main",
@@ -2484,19 +2657,40 @@
   "firebase_promote_function_app_karate_main": [
    "firebase_promote_function_app_karate_main"
   ],
-  "assert_arguments": [
-   "html_checked_set",
-   "app_new",
-   "assert_arguments",
-   "function_params_new",
-   "html_button",
-   "html_value_set",
-   "js_assert_arguments_args",
-   "js_dollar_aa",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "app_karate_button_screen_uncolored"
+  "function_is": [
+   "function_is",
+   "function_is_assert"
+  ],
+  "f": [
+   "function_is",
+   "firebase_name_repo",
+   "folder_user",
+   "function_aliases_restore",
+   "function_import",
+   "js_await_add_inner",
+   "js_function_last_asyncify",
+   "js_stack_last_function",
+   "marker_param_add",
+   "sandbox_2"
+  ],
+  "fi": [
+   "function_is",
+   "function_is_assert"
+  ],
+  "assert_json": [
+   "function_is_assert",
+   "assert_json",
+   "file_root_exists_assert",
+   "function_current_set",
+   "http",
+   "integer_is_assert",
+   "js_node_atomize",
+   "list_empty_is_assert",
+   "list_is_assert"
+  ],
+  "function_is_assert": [
+   "function_is_assert",
+   "html_on"
   ],
   "object_property_set": [
    "html_checked_set",
@@ -2547,23 +2741,6 @@
    "object_property_set_exists_not",
    "watch"
   ],
-  "arguments": [
-   "html_checked_set",
-   "app_new",
-   "catch_call",
-   "functions_combine",
-   "function_params_new",
-   "html_button",
-   "html_value_set",
-   "js_expand_generic",
-   "js_marker_name_get",
-   "marker_call_replace_generic",
-   "marker_rename",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "app_karate_button_screen_uncolored"
-  ],
   "html_input": [
    "html_input",
    "html_input_type"
@@ -2571,6 +2748,19 @@
   "input_type": [
    "html_input_email",
    "html_input_type"
+  ],
+  "string_take": [
+   "html_rgba_to_rgb",
+   "ebible_chapter_code_to_book",
+   "string_take",
+   "string_take_less_1",
+   "string_trim_right"
+  ],
+  "taken": [
+   "html_rgba_to_rgb",
+   "ebible_version_books_testament",
+   "list_take",
+   "string_take"
   ],
   "repo_functions_move_if_includes_not": [
    "repo_functions_move_if_includes_not_love_app_karate",
@@ -2763,9 +2953,9 @@
   ],
   "global_function_initialize": [
    "app_main",
+   "app_reply_main",
    "global_function_initialize",
-   "global_function_property",
-   "app_reply_main"
+   "global_function_property"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -2775,9 +2965,9 @@
   ],
   "firebase_name": [
    "app_main",
+   "app_reply_main",
    "firebase_name",
-   "firebase_storage_url_project",
-   "app_reply_main"
+   "firebase_storage_url_project"
   ],
   "f_name": [
    "app_main",
@@ -3246,6 +3436,7 @@
    "js_expand_generic",
    "js_function_last_asyncify",
    "js_identifier_unique",
+   "js_if_blockify_generic",
    "js_property_parse_expression_add",
    "js_statement_return_add",
    "js_statement_return_empty_add",
@@ -3260,8 +3451,7 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "js_if_blockify_generic"
+   "visit_filter_recursive_async"
   ],
   "list_empty": [
    "app_new_step_3_generic",
@@ -3706,13 +3896,6 @@
    "app_replace_font_size",
    "error_attention_set"
   ],
-  "storage_local_set_context": [
-   "app_replace_font_size_adjust",
-   "app_replace_home",
-   "app_screen_set",
-   "storage_local_set_context",
-   "app_karate_computer_save"
-  ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
    "app_replace_settings"
@@ -4079,15 +4262,6 @@
    "app_replace_rule_set",
    "html_text_set_if"
   ],
-  "null_not_is": [
-   "app_replace_rule_set",
-   "function_run_prompt",
-   "js_block_child_graph",
-   "marker_enter",
-   "null_not_is",
-   "null_not_is_assert",
-   "app_karate_validate_style_assign"
-  ],
   "html_style_set_or_remove": [
    "app_replace_rule_set",
    "html_style_set_or_remove"
@@ -4307,16 +4481,6 @@
   "letter": [
    "app_replace_rule_set"
   ],
-  "lambda5": [
-   "app_replace_rule_set",
-   "app_reply_main",
-   "ebible_references_parse_lines",
-   "function_params_new",
-   "js_identifier_defineds",
-   "messenger_reply_messages",
-   "sleep",
-   "app_karate_computer_save"
-  ],
   "rule2": [
    "app_replace_rule_set"
   ],
@@ -4329,14 +4493,6 @@
    "equal_by_async",
    "js_calls_to_each",
    "js_if_else_if_combine"
-  ],
-  "before": [
-   "app_replace_rule_set",
-   "date_diff_hours",
-   "date_diff_ms",
-   "function_alias_rename",
-   "git_push_folder",
-   "date_diff_mins"
   ],
   "size": [
    "app_replace_rule_set",
@@ -4735,29 +4891,6 @@
    "app_reply_main",
    "ebible_verse",
    "ebible_verse_download"
-  ],
-  "list_map_property": [
-   "app_reply_main",
-   "bible_verses_encouragement_generate",
-   "ebible_index",
-   "ebible_index_flat",
-   "ebible_references_parse_lines",
-   "functions_combine_name",
-   "function_dependencies_code",
-   "html_parse_find_a_href_starts_with",
-   "js_dollar_choice_arguments_names",
-   "js_identifiers_to_names",
-   "js_identifier_defineds",
-   "js_imports",
-   "js_imports_declarations",
-   "list_map_name",
-   "list_map_property",
-   "marker_down_choices",
-   "messenger_reply",
-   "reply",
-   "sandbox_2",
-   "sandbox_4_a",
-   "app_karate_computer_save"
   ],
   "list_first": [
    "app_reply_main",
@@ -5588,17 +5721,6 @@
    "assert_message",
    "js_identifiers_to_names",
    "string_is_assert_message"
-  ],
-  "assert_json": [
-   "assert_json",
-   "file_root_exists_assert",
-   "function_current_set",
-   "http",
-   "integer_is_assert",
-   "js_node_atomize",
-   "list_empty_is_assert",
-   "list_is_assert",
-   "function_is_assert"
   ],
   "o": [
    "assert_json",
@@ -7383,28 +7505,11 @@
    "date_diff_hours",
    "date_diff_ms"
   ],
-  "date_diff_hours": [
-   "date_diff_hours",
-   "date_diff_mins"
-  ],
-  "now": [
-   "date_diff_hours",
-   "date_diff_ms",
-   "date_now",
-   "date_now_iso",
-   "git_push_folder",
-   "date_diff_mins"
-  ],
   "ms": [
    "date_diff_hours",
    "date_ms_to_hours",
    "function_aliases_restore",
    "sleep"
-  ],
-  "hours": [
-   "date_diff_hours",
-   "date_hours_to_mins",
-   "date_diff_mins"
   ],
   "Math": [
    "date_diff_ms",
@@ -7931,13 +8036,6 @@
    "function_name_to_path_unalias",
    "string_upper_to",
    "uuid"
-  ],
-  "string_take": [
-   "ebible_chapter_code_to_book",
-   "string_take",
-   "string_take_less_1",
-   "string_trim_right",
-   "html_rgba_to_rgb"
   ],
   "string_to": [
    "ebible_chapter_code_to_name",
@@ -8527,12 +8625,6 @@
    "html_parse_href_text",
    "puppeteer_hrefs"
   ],
-  "taken": [
-   "ebible_version_books_testament",
-   "list_take",
-   "string_take",
-   "html_rgba_to_rgb"
-  ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha",
    "sandbox_2"
@@ -9048,18 +9140,6 @@
    "repo_functions_path",
    "repo_path_combine",
    "user_repo_path_combine"
-  ],
-  "f": [
-   "firebase_name_repo",
-   "folder_user",
-   "function_aliases_restore",
-   "function_import",
-   "js_await_add_inner",
-   "js_function_last_asyncify",
-   "js_stack_last_function",
-   "marker_param_add",
-   "sandbox_2",
-   "function_is"
   ],
   "projects": [
    "firebase_name_repo"
@@ -9971,21 +10051,6 @@
   ],
   "lin": [
    "function_aliases_restore"
-  ],
-  "l": [
-   "function_aliases_restore",
-   "js_dollar_a_generic",
-   "js_dollar_x",
-   "list_concat",
-   "list_difference",
-   "list_filter",
-   "list_intersect",
-   "list_is",
-   "list_squash",
-   "marker_down_choices",
-   "string_includes_lambda",
-   "string_regex_match_lambda",
-   "app_screen_set_lambda"
   ],
   "at": [
    "function_aliases_restore"
@@ -13261,6 +13326,14 @@
   "js_dollar_choice_arguments_names": [
    "js_dollar_choice_arguments_names"
   ],
+  "log": [
+   "js_dollar_g",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "repos_paths_names_map_unordered_combine"
+  ],
   "list_first_remaining": [
    "js_dollar_g",
    "list_first_remaining"
@@ -15646,79 +15719,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "app_karate_button_background_invalid": [
-   "app_karate_button_background_invalid",
-   "app_karate_validate_style_assign"
-  ],
-  "app_karate_validate_style_assign": [
-   "app_karate_email",
-   "app_karate_validate_style_assign",
-   "app_karate_computer_save"
-  ],
-  "border_color": [
-   "app_karate_validate_style_assign"
-  ],
-  "button_background": [
-   "app_karate_validate_style_assign"
-  ],
-  "divs": [
-   "app_karate_validate_style_assign"
-  ],
-  "containers": [
-   "app_karate_computer_save"
-  ],
-  "selected": [
-   "app_karate_computer_save",
-   "html_rgba_to_rgb"
-  ],
-  "container2": [
-   "app_karate_computer_save"
-  ],
-  "html_rgba_to_rgb": [
-   "app_karate_computer_save",
-   "html_rgba_to_rgb"
-  ],
-  "app_karate_button_back": [
-   "app_karate_email",
-   "app_karate_button_back",
-   "app_karate_computer_save"
-  ],
-  "function_is": [
-   "function_is",
-   "function_is_assert"
-  ],
-  "fi": [
-   "function_is",
-   "function_is_assert"
-  ],
-  "function_is_assert": [
-   "html_on",
-   "function_is_assert"
-  ],
-  "font_color": [
-   "app_karate_validate_style_assign"
-  ],
-  "app_karate_button_font_color": [
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_button_font_color",
-   "app_karate_validate_style_assign"
-  ],
-  "app_karate_button_uncolored_background_color": [
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_uncolored_background_color"
-  ],
-  "date_hours_to_mins": [
-   "date_hours_to_mins",
-   "date_diff_mins"
-  ],
-  "date_diff_mins": [
-   "git_push_folder",
-   "date_diff_mins"
-  ],
-  "mins": [
-   "date_diff_mins",
-   "git_push_folder"
   ]
  },
  "functions": {
@@ -15730,10 +15730,38 @@
     "app_karate"
    ]
   },
+  "app_karate_button_back": {
+   "async": false,
+   "identifiers": [
+    "app_screen_set_lambda",
+    "emoji_arrow_left",
+    "app_karate_button_screen_uncolored",
+    "app_karate_button_back",
+    "container",
+    "context",
+    "screen_name",
+    "v",
+    "component2"
+   ]
+  },
   "app_karate_button_background": {
    "async": false,
    "identifiers": [
     "app_karate_button_background",
+    "v"
+   ]
+  },
+  "app_karate_button_background_invalid": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_background_invalid",
+    "v"
+   ]
+  },
+  "app_karate_button_font_color": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_font_color",
     "v"
    ]
   },
@@ -15776,6 +15804,13 @@
     "lambda",
     "arguments",
     "component"
+   ]
+  },
+  "app_karate_button_uncolored_background_color": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_uncolored_background_color",
+    "v"
    ]
   },
   "app_karate_computer_save": {
@@ -16082,6 +16117,33 @@
     "v"
    ]
   },
+  "app_karate_validate_style_assign": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_font_color",
+    "each",
+    "null_not_is",
+    "html_enable_if",
+    "html_style_assign",
+    "app_karate_button_background_invalid",
+    "not",
+    "app_karate_button_background",
+    "app_karate_container_background",
+    "app_karate_green_dark",
+    "app_karate_validate_style_assign",
+    "valid",
+    "divs",
+    "input",
+    "button_next",
+    "border_color",
+    "background",
+    "button_background",
+    "font_color",
+    "lambda",
+    "div",
+    "color"
+   ]
+  },
   "app_screen_set_lambda": {
    "async": false,
    "identifiers": [
@@ -16091,6 +16153,26 @@
     "screen_name",
     "l",
     "lambda"
+   ]
+  },
+  "date_diff_mins": {
+   "async": false,
+   "identifiers": [
+    "date_hours_to_mins",
+    "date_diff_hours",
+    "date_diff_mins",
+    "now",
+    "before",
+    "hours",
+    "mins"
+   ]
+  },
+  "date_hours_to_mins": {
+   "async": false,
+   "identifiers": [
+    "date_hours_to_mins",
+    "hours",
+    "v"
    ]
   },
   "firebase_deploy_function_app_karate_main": {
@@ -16113,6 +16195,25 @@
     "firebase_promote_function_app_karate_main",
     "v",
     "name"
+   ]
+  },
+  "function_is": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "function_is",
+    "f",
+    "fi"
+   ]
+  },
+  "function_is_assert": {
+   "async": false,
+   "identifiers": [
+    "function_is",
+    "assert_json",
+    "function_is_assert",
+    "lambda",
+    "fi"
    ]
   },
   "html_centered": {
@@ -16174,6 +16275,15 @@
     "div",
     "input_type",
     "input"
+   ]
+  },
+  "html_rgba_to_rgb": {
+   "async": false,
+   "identifiers": [
+    "string_take",
+    "html_rgba_to_rgb",
+    "selected",
+    "taken"
    ]
   },
   "repo_functions_move_if_includes_not_love_app_karate": {
@@ -32616,116 +32726,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "app_karate_button_background_invalid": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_background_invalid",
-    "v"
-   ]
-  },
-  "app_karate_validate_style_assign": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_font_color",
-    "each",
-    "null_not_is",
-    "html_enable_if",
-    "html_style_assign",
-    "app_karate_button_background_invalid",
-    "not",
-    "app_karate_button_background",
-    "app_karate_container_background",
-    "app_karate_green_dark",
-    "app_karate_validate_style_assign",
-    "valid",
-    "divs",
-    "input",
-    "button_next",
-    "border_color",
-    "background",
-    "button_background",
-    "font_color",
-    "lambda",
-    "div",
-    "color"
-   ]
-  },
-  "html_rgba_to_rgb": {
-   "async": false,
-   "identifiers": [
-    "string_take",
-    "html_rgba_to_rgb",
-    "selected",
-    "taken"
-   ]
-  },
-  "app_karate_button_back": {
-   "async": false,
-   "identifiers": [
-    "app_screen_set_lambda",
-    "emoji_arrow_left",
-    "app_karate_button_screen_uncolored",
-    "app_karate_button_back",
-    "container",
-    "context",
-    "screen_name",
-    "v",
-    "component2"
-   ]
-  },
-  "function_is": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "function_is",
-    "f",
-    "fi"
-   ]
-  },
-  "function_is_assert": {
-   "async": false,
-   "identifiers": [
-    "function_is",
-    "assert_json",
-    "function_is_assert",
-    "lambda",
-    "fi"
-   ]
-  },
-  "app_karate_button_font_color": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_font_color",
-    "v"
-   ]
-  },
-  "app_karate_button_uncolored_background_color": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_uncolored_background_color",
-    "v"
-   ]
-  },
-  "date_hours_to_mins": {
-   "async": false,
-   "identifiers": [
-    "date_hours_to_mins",
-    "hours",
-    "v"
-   ]
-  },
-  "date_diff_mins": {
-   "async": false,
-   "identifiers": [
-    "date_hours_to_mins",
-    "date_diff_hours",
-    "date_diff_mins",
-    "now",
-    "before",
-    "hours",
-    "mins"
    ]
   }
  }
