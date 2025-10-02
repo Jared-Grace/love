@@ -385,8 +385,7 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god",
-   "app_karate_computer_save"
+   "urdu_allah_to_god"
   ],
   "context": [
    "app_karate_email",
@@ -15545,9 +15544,6 @@
    "app_karate_computer_save"
   ],
   "container_main": [
-   "app_karate_computer_save"
-  ],
-  "root2": [
    "app_karate_computer_save"
   ]
  },
@@ -32317,9 +32313,7 @@
     "container",
     "label",
     "input",
-    "div",
-    "root2",
-    "text"
+    "div"
    ]
   },
   "app_screen_set_lambda": {
