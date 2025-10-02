@@ -1085,7 +1085,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "repo_function_move"
   ],
   "html_clear": [
    "app_karate_email",
@@ -2517,8 +2518,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "repo_function_move"
+   "task_new"
   ],
   "ast": [
    "app_new_step_3_generic",
@@ -6880,7 +6880,8 @@
    "user_repo_get",
    "user_repo_path",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_function_move"
   ],
   "file_write": [
    "data_all",
@@ -32043,6 +32044,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "function_name_to_path_search",
     "repo_functions_path",
     "marker",
@@ -32051,7 +32053,7 @@
     "to",
     "r_path",
     "search",
-    "unaliased"
+    "f_path"
    ]
   },
   "repo_functions_path": {
