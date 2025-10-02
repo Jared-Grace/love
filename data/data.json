@@ -3094,8 +3094,7 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip",
-   "repo_function_move"
+   "unzip"
   ],
   "html_name_to_path_staging": [
    "html_name_to_path_staging",
@@ -32075,8 +32074,7 @@
     "f_path_to",
     "search",
     "f_path",
-    "v",
-    "file_path"
+    "v"
    ]
   },
   "repo_functions_path": {
