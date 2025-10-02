@@ -7383,8 +7383,7 @@
    "date_diff_ms"
   ],
   "date_diff_hours": [
-   "date_diff_hours",
-   "git_push_folder"
+   "date_diff_hours"
   ],
   "now": [
    "date_diff_hours",
@@ -15706,12 +15705,11 @@
    "app_karate_button_screen_uncolored",
    "app_karate_button_uncolored_background_color"
   ],
-  "mins": [
-   "git_push_folder"
-  ],
   "date_hours_to_mins": [
-   "git_push_folder",
    "date_hours_to_mins"
+  ],
+  "date_diff_mins": [
+   "git_push_folder"
   ]
  },
  "functions": {
@@ -22372,13 +22370,12 @@
   "git_push_folder": {
    "async": true,
    "identifiers": [
-    "date_hours_to_mins",
+    "date_diff_mins",
     "path_join",
     "data_set",
     "lambda_get",
     "command_line_git_folder",
     "log_keep",
-    "date_diff_hours",
     "date_to",
     "data_property_get",
     "user_repo_path",
@@ -22402,7 +22399,6 @@
     "before_iso",
     "before",
     "hours",
-    "mins",
     "lambda$previous"
    ]
   },
