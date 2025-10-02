@@ -648,7 +648,7 @@
   "app_karate_button_screen_uncolored": [
    "app_karate_button_green",
    "app_karate_button_screen_uncolored",
-   "app_karate_email"
+   "app_karate_button_back"
   ],
   "app_karate_button_green": [
    "app_karate_button_green",
@@ -1379,7 +1379,8 @@
    "messenger_reply_playwright",
    "storage_local_get_context",
    "storage_local_initialize_context",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_button_back"
   ],
   "choices": [
    "app_karate_computer_save",
@@ -1542,7 +1543,8 @@
    "app_karate_email",
    "app_karate_home",
    "html_em_text",
-   "html_span_text"
+   "html_span_text",
+   "app_karate_button_back"
   ],
   "label": [
    "app_karate_computer_save"
@@ -1978,8 +1980,8 @@
    "app_karate_validate_style_assign"
   ],
   "emoji_arrow_left": [
-   "app_karate_email",
-   "emoji_arrow_left"
+   "emoji_arrow_left",
+   "app_karate_button_back"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -2210,7 +2212,8 @@
   "component2": [
    "app_karate_home",
    "html_input",
-   "app_reply_main"
+   "app_reply_main",
+   "app_karate_button_back"
   ],
   "component3": [
    "app_karate_home",
@@ -2221,7 +2224,8 @@
   ],
   "screen": [
    "app_karate_home",
-   "app_refresh"
+   "app_refresh",
+   "app_karate_button_back"
   ],
   "button": [
    "app_karate_home"
@@ -15656,6 +15660,10 @@
   "html_rgba_to_rgb": [
    "app_karate_computer_save",
    "html_rgba_to_rgb"
+  ],
+  "app_karate_button_back": [
+   "app_karate_email",
+   "app_karate_button_back"
   ]
  },
  "functions": {
@@ -15834,6 +15842,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_button_back",
     "app_karate_validate_style_assign",
     "html_input_email",
     "html_component_element_get",
@@ -15859,9 +15868,7 @@
     "app_karate_div_text",
     "app_karate_green_dark",
     "app_karate_style_control",
-    "emoji_arrow_left",
     "html_style_assign",
-    "app_karate_button_screen_uncolored",
     "html_clear_context",
     "marker",
     "html_element",
@@ -32585,6 +32592,18 @@
     "html_rgba_to_rgb",
     "selected",
     "taken"
+   ]
+  },
+  "app_karate_button_back": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_left",
+    "app_karate_button_screen_uncolored",
+    "app_karate_button_back",
+    "container",
+    "context",
+    "screen",
+    "component2"
    ]
   }
  }
