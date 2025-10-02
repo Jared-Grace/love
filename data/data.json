@@ -3770,7 +3770,6 @@
    "ternary"
   ],
   "user_repo_get": [
-   "repo_functions_move_if_includes_not",
    "firebase_name",
    "function_new_declaration",
    "repo_firebase_service_account_get",
@@ -14997,7 +14996,8 @@
   "repo_acronym_to_name": [
    "repo_acronym_to_name",
    "repo_acronym_to_path",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_functions_move_if_includes_not"
   ],
   "repos_matching": [
    "repo_acronym_to_name"
@@ -16122,10 +16122,10 @@
   "repo_functions_move_if_includes_not": {
    "async": true,
    "identifiers": [
+    "repo_acronym_to_name",
     "repo_functions_move",
     "marker",
     "list_filter_includes_not",
-    "user_repo_get",
     "repo_functions_names",
     "repo_functions_move_if_includes_not",
     "to",
