@@ -15706,6 +15706,9 @@
   ],
   "mins": [
    "git_push_folder"
+  ],
+  "date_hours_to_mins": [
+   "git_push_folder"
   ]
  },
  "functions": {
@@ -22366,6 +22369,7 @@
   "git_push_folder": {
    "async": true,
    "identifiers": [
+    "date_hours_to_mins",
     "path_join",
     "data_set",
     "lambda_get",
