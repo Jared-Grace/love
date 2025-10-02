@@ -1,4 +1,4 @@
-import { firebase_deploy_function_destination_latest } from "../../../karate_code/public/src/firebase_deploy_function_destination_latest.mjs";
+import { firebase_deploy_function_destination_latest } from "../../../love/public/src/firebase_deploy_function_destination_latest.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
 import { firebase_deploy_function_destination } from "../../../love/public/src/firebase_deploy_function_destination.mjs";
