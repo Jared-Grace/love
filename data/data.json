@@ -457,7 +457,8 @@
   "app_karate_style_control": [
    "app_karate_button_screen_uncolored",
    "app_karate_email",
-   "app_karate_style_control"
+   "app_karate_style_control",
+   "app_karate_computer_save"
   ],
   "html_button_screen": [
    "app_replace_rule_set",
@@ -32293,6 +32294,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "app_karate_style_control",
     "app_karate_container_centered",
     "log",
     "html_span_text",
