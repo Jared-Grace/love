@@ -2427,7 +2427,6 @@
   "u hst",
   "c html_span_text html_em_text",
   "s karate",
-  "s home",
   "n string_includes_lambda",
   "a sin string_includes",
   "s reg",
@@ -2541,6 +2540,7 @@
   "s screens",
   "s html_input_type",
   "o app_karate_computer_save",
-  "s span"
+  "s span",
+  "s home"
  ]
 }
