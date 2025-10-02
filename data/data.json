@@ -13150,7 +13150,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_screen_set_lambda"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -32308,6 +32309,7 @@
   "app_screen_set_lambda": {
    "async": false,
    "identifiers": [
+    "log",
     "app_screen_set",
     "app_screen_set_lambda",
     "context",
