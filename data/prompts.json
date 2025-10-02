@@ -2536,6 +2536,7 @@
   "a km repo_functions_move_if_includes_not_love_app_karate",
   "msa public",
   "s code,string",
-  "u jcs"
+  "u jcs",
+  "a jcs js_code_string"
  ]
 }
