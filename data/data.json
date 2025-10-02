@@ -450,8 +450,7 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if",
-   "app_karate_computer_save"
+   "html_text_set_if"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -1161,8 +1160,7 @@
    "object_properties_from",
    "reduce",
    "visit_filter_recursive",
-   "js_imports_paths_fix_inner",
-   "app_karate_computer_save"
+   "js_imports_paths_fix_inner"
   ],
   "html_value_set": [
    "app_karate_email",
@@ -3448,7 +3446,8 @@
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
    "sandbox_4_a",
-   "repo_functions_move"
+   "repo_functions_move",
+   "app_karate_computer_save"
   ],
   "part": [
    "list_filter_includes_not",
@@ -4706,7 +4705,8 @@
    "repos_gitignore_overwrite",
    "repos_paths_names_map_unordered_combine",
    "sandbox_4_a",
-   "repo_functions_move"
+   "repo_functions_move",
+   "app_karate_computer_save"
   ],
   "html_p_text": [
    "app_replace_rule_set",
@@ -32333,10 +32333,10 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "list_map",
     "html_on_input",
     "html_attribute_set",
     "emoji_secure",
-    "each",
     "emoji_person_outline",
     "app_karate_style_control_font_size",
     "html_style_assign",
@@ -32364,11 +32364,11 @@
     "radio_group_name",
     "input",
     "lambda3",
-    "component",
     "transform",
     "margin",
     "s",
-    "div"
+    "div",
+    "mapped"
    ]
   },
   "app_screen_set_lambda": {
