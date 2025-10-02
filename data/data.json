@@ -833,7 +833,6 @@
    "html_checked_set"
   ],
   "html_style_set": [
-   "app_karate_container_centered",
    "app_karate_container_main",
    "app_karate_email",
    "app_karate_main",
@@ -15611,6 +15610,9 @@
   "html_checked_set": [
    "html_checked_set",
    "app_karate_computer_save"
+  ],
+  "html_centered": [
+   "app_karate_container_centered"
   ]
  },
  "functions": {
@@ -15677,9 +15679,9 @@
   "app_karate_container_centered": {
    "async": false,
    "identifiers": [
+    "html_centered",
     "app_karate_container",
     "marker",
-    "html_style_set",
     "app_karate_container_centered",
     "parent",
     "div"
