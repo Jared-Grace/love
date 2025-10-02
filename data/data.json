@@ -379,8 +379,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "list_filter"
+   "whitespace_normalize"
   ],
   "component2": [
    "app_karate_button_back",
@@ -13853,7 +13852,8 @@
    "js_node_types_is",
    "log_unparse_try",
    "roman_to_integer",
-   "string_regex_match"
+   "string_regex_match",
+   "list_filter"
   ],
   "js_node_type_is_assert": [
    "js_node_type_is_assert",
@@ -27619,7 +27619,7 @@
     "l",
     "lambda",
     "item",
-    "v",
+    "match",
     "filtered",
     "filter"
    ]
