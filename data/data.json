@@ -3613,8 +3613,7 @@
    "repo_functions_move_if_includes_not"
   ],
   "repo_name_to": [
-   "repo_functions_move",
-   "repo_functions_move_if_includes_not"
+   "repo_functions_move"
   ],
   "r_path": [
    "repo_functions_move",
@@ -15464,9 +15463,6 @@
    "functions_imports_fix",
    "functions_imports_fix_list",
    "repo_functions_move"
-  ],
-  "f_names2": [
-   "repo_functions_move_if_includes_not"
   ]
  },
  "functions": {
@@ -16137,9 +16133,7 @@
     "repo_name",
     "f_names",
     "filtered",
-    "v",
-    "f_names2",
-    "repo_name_to"
+    "v"
    ]
   },
   "repo_functions_names": {
