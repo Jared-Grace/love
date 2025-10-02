@@ -2545,6 +2545,7 @@
   "s value_get",
   "c html_value_set html_checked_set",
   "r app_karate_button_screen_green app_karate_button_green",
-  "s null"
+  "s null",
+  "s return,add"
  ]
 }
