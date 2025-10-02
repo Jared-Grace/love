@@ -22,7 +22,8 @@
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_button_screen_green_style_assign"
   ],
   "v": [
    "app_karate_button_background",
@@ -328,7 +329,8 @@
    "html_style_assign",
    "html_style_margin_y",
    "html_font_size_1em",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_button_screen_green_style_assign"
   ],
   "app_karate_button_screen_uncolored": [
    "app_karate_button_screen_green",
@@ -448,13 +450,15 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_karate_button_screen_green_style_assign"
   ],
   "color": [
    "app_karate_email",
    "chalk_color",
    "chalk_green",
-   "chalk_red"
+   "chalk_red",
+   "app_karate_button_screen_green_style_assign"
   ],
   "app_karate_style_control": [
    "app_karate_button_screen_uncolored",
@@ -15595,7 +15599,8 @@
    "app_karate_computer_save"
   ],
   "app_karate_button_screen_green_style_assign": [
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_button_screen_green_style_assign"
   ]
  },
  "functions": {
@@ -32449,6 +32454,16 @@
    "identifiers": [
     "app_karate_style_control_font_size",
     "v"
+   ]
+  },
+  "app_karate_button_screen_green_style_assign": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_background",
+    "html_style_assign",
+    "app_karate_button_screen_green_style_assign",
+    "component",
+    "color"
    ]
   }
  }
