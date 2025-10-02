@@ -15885,7 +15885,7 @@
    ]
   },
   "app_karate_email": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "app_karate_button_back",
     "app_karate_validate_style_assign",
