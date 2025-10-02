@@ -8,7 +8,6 @@ import { true_is } from "../../../love/public/src/true_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { log_json } from "./log_json.mjs";
 export async function function_name_to_path_search(unaliased) {
   let f_path = function_name_to_path(unaliased);
   async function lambda(joined) {
@@ -24,11 +23,6 @@ export async function function_name_to_path_search(unaliased) {
     let mapped = object_property_get(m, "mapped");
     let exists2 = object_property_get(mapped, "exists");
     let ti2 = true_is(exists2);
-    log_json({
-      mapped,
-      exists2,
-      ti2,
-    });
     return ti2;
   }
   let filtered = list_filter(mapped, lambda2);
