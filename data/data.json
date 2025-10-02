@@ -14463,7 +14463,8 @@
    "repos_acronyms_to_names"
   ],
   "log_json": [
-   "log_json"
+   "log_json",
+   "function_name_to_path_search"
   ],
   "console": [
    "log_keep",
@@ -21504,6 +21505,7 @@
     "object_property_get",
     "file_exists",
     "function_name_to_path",
+    "log_json",
     "function_name_to_path_search",
     "unaliased",
     "f_path",
