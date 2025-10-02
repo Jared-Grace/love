@@ -11337,8 +11337,7 @@
   ],
   "repo_acronym_to_path": [
    "git_publish_initial",
-   "repo_acronym_to_path",
-   "repo_functions_names"
+   "repo_acronym_to_path"
   ],
   "list_map_combine": [
    "git_publish_initial",
@@ -11405,7 +11404,8 @@
    "repos_paths_names_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine"
+   "repo_path_combine",
+   "repo_functions_names"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -31944,10 +31944,10 @@
   "repo_functions_names": {
    "async": true,
    "identifiers": [
+    "repo_path",
     "functions_names_from_path",
     "path_join",
     "functions_path",
-    "repo_acronym_to_path",
     "repo_functions_names",
     "to",
     "r_path",
