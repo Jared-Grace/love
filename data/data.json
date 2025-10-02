@@ -829,7 +829,8 @@
    "whitespace_normalize",
    "js_imports_paths_fix_inner",
    "app_karate_computer_save",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "html_checked_set"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -935,7 +936,8 @@
    "html_style_assign",
    "html_style_remove",
    "html_style_set",
-   "html_text_set"
+   "html_text_set",
+   "html_checked_set"
   ],
   "html_enable_if": [
    "app_karate_email",
@@ -1273,7 +1275,8 @@
    "string_suffix_change",
    "string_to",
    "html_input_type",
-   "html_input_email"
+   "html_input_email",
+   "html_checked_set"
   ],
   "div_checks": [
    "app_karate_email"
@@ -1390,7 +1393,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "html_checked_set"
   ],
   "trimmed": [
    "app_karate_email"
@@ -1814,7 +1818,8 @@
    "html_display_none",
    "html_on",
    "html_remove",
-   "html_text_set"
+   "html_text_set",
+   "html_checked_set"
   ],
   "focus": [
    "app_karate_email",
@@ -3306,7 +3311,8 @@
    "path_join",
    "sandbox_5_a",
    "task_new",
-   "html_button"
+   "html_button",
+   "html_checked_set"
   ],
   "object_property_set": [
    "html_value_set",
@@ -3354,7 +3360,8 @@
    "object_property_set",
    "object_property_set_exists_not",
    "watch",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "html_checked_set"
   ],
   "arguments": [
    "html_value_set",
@@ -3369,7 +3376,8 @@
    "path_join",
    "sandbox_5_a",
    "task_new",
-   "html_button"
+   "html_button",
+   "html_checked_set"
   ],
   "string_includes_not": [
    "list_filter_includes_not",
@@ -15600,6 +15608,9 @@
   ],
   "checkbox": [
    "app_karate_computer_save"
+  ],
+  "html_checked_set": [
+   "html_checked_set"
   ]
  },
  "functions": {
@@ -32462,6 +32473,20 @@
     "app_karate_button_screen_green_style_assign",
     "component",
     "color"
+   ]
+  },
+  "html_checked_set": {
+   "async": false,
+   "identifiers": [
+    "assert_arguments",
+    "object_property_set",
+    "marker",
+    "html_component_element_get",
+    "html_checked_set",
+    "input",
+    "value",
+    "arguments",
+    "element"
    ]
   }
  }
