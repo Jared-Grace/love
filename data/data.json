@@ -1154,7 +1154,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "repo_functions_move"
+   "repo_functions_move",
+   "app_karate_computer_save"
   ],
   "object_merge": [
    "app_karate_computer_save",
@@ -15645,6 +15646,9 @@
   ],
   "selected": [
    "app_karate_computer_save"
+  ],
+  "container2": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15702,6 +15706,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "list_map_property",
     "app_karate_validate_style_assign",
     "app_karate_button_green",
@@ -15746,6 +15751,7 @@
     "validate",
     "lambda2",
     "r",
+    "container2",
     "selected",
     "containers",
     "transform",
