@@ -703,8 +703,7 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god",
-   "app_karate_computer_save"
+   "urdu_allah_to_god"
   ],
   "lambda": [
    "app_karate_button_green",
@@ -15730,8 +15729,7 @@
     "s",
     "lambda5",
     "component",
-    "div2",
-    "text"
+    "div2"
    ]
   },
   "app_karate_container": {
