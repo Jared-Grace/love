@@ -5263,7 +5263,8 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "repo_functions_move_if_starts_with_not"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -6709,7 +6710,8 @@
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server"
+   "server",
+   "repo_functions_move_if_starts_with_not"
   ],
   "file_copy": [
    "data_backup",
@@ -8288,7 +8290,8 @@
   "joined2": [
    "ebible_verses_upload",
    "ebible_version_download_path",
-   "local_function_path"
+   "local_function_path",
+   "repo_functions_move_if_starts_with_not"
   ],
   "tokens": [
    "ebible_verse_new",
@@ -9261,7 +9264,8 @@
    "js_expand_generic",
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
-   "string_split_comma"
+   "string_split_comma",
+   "repo_functions_move_if_starts_with_not"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -9362,7 +9366,8 @@
    "functions_names",
    "functions_names_from_path",
    "functions_names_to_paths",
-   "functions_paths"
+   "functions_paths",
+   "repo_functions_move_if_starts_with_not"
   ],
   "mapper": [
    "functions_names",
@@ -14697,7 +14702,8 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join"
+   "path_join",
+   "repo_functions_move_if_starts_with_not"
   ],
   "seg": [
    "path_join"
@@ -31917,6 +31923,8 @@
   "repo_functions_move_if_starts_with_not": {
    "async": true,
    "identifiers": [
+    "functions_names_from_path",
+    "path_join",
     "repo_acronym_to_path",
     "functions_path",
     "marker",
@@ -31924,7 +31932,11 @@
     "to",
     "prefix",
     "r_path",
-    "path"
+    "path",
+    "joined2",
+    "segments",
+    "f_names",
+    "joined"
    ]
   }
  }
