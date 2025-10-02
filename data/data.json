@@ -815,7 +815,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "repo_function_move"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -32035,6 +32036,7 @@
   "repo_function_move": {
    "async": false,
    "identifiers": [
+    "marker",
     "repo_function_move"
    ]
   }
