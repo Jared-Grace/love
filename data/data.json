@@ -812,8 +812,7 @@
    "watch",
    "whitespace_normalize",
    "html_name_to_path_staging",
-   "html_update_staging",
-   "repo_functions_move_if_starts_with_not"
+   "html_update_staging"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -31925,7 +31924,6 @@
     "path_join",
     "repo_acronym_to_path",
     "functions_path",
-    "marker",
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
