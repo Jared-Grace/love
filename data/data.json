@@ -463,7 +463,6 @@
    "app_karate_style_control"
   ],
   "html_button_screen": [
-   "app_karate_button_screen_uncolored",
    "app_replace_rule_set",
    "app_replace_settings",
    "html_button_screen"
@@ -1645,7 +1644,8 @@
    "js_imports_paths_fix_inner",
    "functions_transform_list",
    "functions_imports_fix_list",
-   "app_screen_set_lambda"
+   "app_screen_set_lambda",
+   "app_karate_button_screen_uncolored"
   ],
   "c": [
    "app_karate_email",
@@ -4248,7 +4248,8 @@
    "app_replace_settings",
    "app_reply_main",
    "html_button",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_button_screen_uncolored"
   ],
   "app_replace_rule_sets": [
    "app_replace_home",
@@ -15544,14 +15545,15 @@
   "app_karate_button_screen_uncolored": {
    "async": false,
    "identifiers": [
+    "html_button",
     "app_karate_style_control",
-    "html_button_screen",
     "app_karate_button_screen_uncolored",
     "div",
     "text",
     "context",
     "screen_name",
-    "component"
+    "component",
+    "lambda"
    ]
   },
   "app_karate_container": {
