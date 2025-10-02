@@ -2297,7 +2297,6 @@
   ],
   "repo_name": [
    "app_new_step_3_generic",
-   "repo_functions_move_if_includes_not",
    "repo_functions_names",
    "repo_functions_path",
    "firebase_name",
@@ -3613,7 +3612,8 @@
    "repo_functions_move_if_includes_not"
   ],
   "repo_name_to": [
-   "repo_functions_move"
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not"
   ],
   "r_path": [
    "repo_functions_move",
@@ -15402,8 +15402,7 @@
    "user_repo_set"
   ],
   "repo_name2": [
-   "user_repo_set",
-   "repo_functions_move_if_includes_not"
+   "user_repo_set"
   ],
   "uuidv4": [
    "uuid"
@@ -15465,6 +15464,9 @@
    "functions_imports_fix",
    "functions_imports_fix_list",
    "repo_functions_move"
+  ],
+  "repo_name_from": [
+   "repo_functions_move_if_includes_not"
   ]
  },
  "functions": {
@@ -16133,8 +16135,8 @@
     "repo_functions_move_if_includes_not",
     "to",
     "query",
-    "repo_name2",
-    "repo_name",
+    "repo_name_from",
+    "repo_name_to",
     "f_names",
     "filtered",
     "v"
