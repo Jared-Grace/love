@@ -2548,6 +2548,7 @@
   "s if,js",
   "s statement",
   "s screen",
-  "s function_is"
+  "s function_is",
+  "n function_is"
  ]
 }
