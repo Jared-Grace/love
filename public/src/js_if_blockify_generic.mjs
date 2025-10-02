@@ -6,6 +6,7 @@ import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { list_add } from "./list_add.mjs";
 export async function js_if_blockify_generic(ast, type, property_name) {
   async function lambda(v) {
     let { node } = v;
@@ -17,7 +18,7 @@ export async function js_if_blockify_generic(ast, type, property_name) {
       let includes = list_includes(["EmptyStatement"], nt);
       const bs_body = [];
       if (not(includes)) {
-        js_statement_add(copy, bs_body);
+        list_add(bs_body, copy);
       }
       object_replace(body, {
         type: "BlockStatement",
