@@ -1,3 +1,4 @@
+import { date_hours_to_mins } from "../../../karate_code/public/src/date_hours_to_mins.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
@@ -27,7 +28,7 @@ export async function git_push_folder(folder) {
     let before_iso = await data_property_get(property_name, joined);
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
-    let mins = hours * 60;
+    let mins = date_hours_to_mins(hours);
     if (hours < 1) {
       if (false) {
         log_keep("less than 1 hour:");
