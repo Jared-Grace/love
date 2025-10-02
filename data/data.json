@@ -84,7 +84,6 @@
    "function_new_app_screen",
    "html_button_screen",
    "marker_screen_add",
-   "app_karate_email",
    "app_karate_button_next_screen"
   ],
   "v": [
@@ -16039,7 +16038,6 @@
     "input",
     "div_checks",
     "ul",
-    "screen_name",
     "button_next",
     "validate",
     "value",
