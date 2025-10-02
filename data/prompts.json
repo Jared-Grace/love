@@ -2538,6 +2538,7 @@
   "s code,string",
   "u jcs",
   "a jcs js_code_string",
-  "msa computer_save"
+  "msa computer_save",
+  "s screen,lam"
  ]
 }
