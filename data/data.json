@@ -4235,8 +4235,7 @@
   ],
   "app_screen_set": [
    "app_replace_home",
-   "app_screen_set",
-   "html_button_screen"
+   "app_screen_set"
   ],
   "html_button": [
    "app_replace_home",
@@ -15500,6 +15499,9 @@
   ],
   "button_text": [
    "app_karate_home"
+  ],
+  "app_screen_set_lambda": [
+   "html_button_screen"
   ]
  },
  "functions": {
@@ -22515,15 +22517,15 @@
   "html_button_screen": {
    "async": false,
    "identifiers": [
-    "app_screen_set",
+    "app_screen_set_lambda",
     "html_button",
     "html_button_screen",
     "parent",
     "text",
     "context",
     "screen_name",
-    "component",
-    "lambda"
+    "lambda",
+    "component"
    ]
   },
   "html_clear": {
