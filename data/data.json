@@ -970,7 +970,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "app_karate_validate_style_assign"
+   "app_karate_validate_style_assign",
+   "function_is_assert"
   ],
   "component": [
    "app_karate_button_green",
@@ -5494,7 +5495,8 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert"
+   "string_is_assert",
+   "function_is_assert"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -15671,13 +15673,16 @@
    "app_karate_computer_save"
   ],
   "function_is": [
-   "function_is"
+   "function_is",
+   "function_is_assert"
   ],
   "fi": [
-   "function_is"
+   "function_is",
+   "function_is_assert"
   ],
   "function_is_assert": [
-   "html_on"
+   "html_on",
+   "function_is_assert"
   ]
  },
  "functions": {
@@ -32630,6 +32635,16 @@
     "marker",
     "function_is",
     "f",
+    "fi"
+   ]
+  },
+  "function_is_assert": {
+   "async": false,
+   "identifiers": [
+    "assert",
+    "function_is",
+    "function_is_assert",
+    "lambda",
     "fi"
    ]
   }
