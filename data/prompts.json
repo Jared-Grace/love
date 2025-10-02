@@ -2381,7 +2381,6 @@
   "s html",
   "de html_update_generic",
   "html_update_dev karate",
-  "s screens",
   "is app_replace_screens",
   "c app_replace_screens app_karate_screens",
   "fld C:/Users/chris/repos/love/.git/index.lock",
@@ -2539,6 +2538,7 @@
   "a jcs js_code_string",
   "msa computer_save",
   "s screen,lam",
-  "s search"
+  "s search",
+  "s screens"
  ]
 }
