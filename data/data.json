@@ -15703,6 +15703,7 @@
     "context",
     "root",
     "container",
+    "text",
     "component",
     "html_button_karate_container_text",
     "component2",
@@ -15710,8 +15711,7 @@
     "parent",
     "button_text",
     "screen_name",
-    "button",
-    "text"
+    "button"
    ]
   },
   "app_karate_main": {
