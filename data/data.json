@@ -5440,8 +5440,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "app_karate_validate_style_assign"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -32550,7 +32549,6 @@
     "background",
     "button_background",
     "v",
-    "v2",
     "color"
    ]
   }
