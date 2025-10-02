@@ -2243,7 +2243,8 @@
    "user_repo_path_combine",
    "user_repo_set",
    "repo_functions_move_if_starts_with_not",
-   "repo_functions_names"
+   "repo_functions_names",
+   "repo_functions_move_if_includes_not"
   ],
   "default2": [
    "app_new_step_3_generic",
@@ -7540,7 +7541,8 @@
    "range_from",
    "repos_gitignore_overwrite",
    "string_replace",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_move_if_includes_not"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -7676,7 +7678,8 @@
    "messenger_reply",
    "puppeteer_hrefs_starts_with",
    "repo_functions_move_if_starts_with_not",
-   "list_filter_includes_not"
+   "list_filter_includes_not",
+   "repo_functions_move_if_includes_not"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -8879,7 +8882,8 @@
    "user_repo_get",
    "user_repo_path_combine",
    "user_repo_set",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_move_if_includes_not"
   ],
   "repo_path_combine": [
    "firebase_name_repo",
@@ -9279,7 +9283,8 @@
    "repos_paths_map_unordered_combine",
    "string_split_comma",
    "repo_functions_move_if_starts_with_not",
-   "repo_functions_names"
+   "repo_functions_names",
+   "repo_functions_move_if_includes_not"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -11657,7 +11662,8 @@
   "query": [
    "html_parse_find_list_to",
    "html_parse_list_to",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_move_if_includes_not"
   ],
   "remove": [
    "html_parse_find_remove",
@@ -15371,15 +15377,20 @@
   ],
   "repo_functions_names": [
    "repo_functions_move_if_starts_with_not",
-   "repo_functions_names"
+   "repo_functions_names",
+   "repo_functions_move_if_includes_not"
   ],
   "list_filter_includes_not": [
    "list_filter_includes_not",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_move_if_includes_not"
   ],
   "string_includes_not": [
    "list_filter_includes_not",
    "string_includes_not"
+  ],
+  "repo_functions_move_if_includes_not": [
+   "repo_functions_move_if_includes_not"
   ]
  },
  "functions": {
@@ -32002,6 +32013,20 @@
     "part",
     "v",
     "n"
+   ]
+  },
+  "repo_functions_move_if_includes_not": {
+   "async": true,
+   "identifiers": [
+    "list_filter_includes_not",
+    "user_repo_get",
+    "repo_functions_names",
+    "repo_functions_move_if_includes_not",
+    "to",
+    "query",
+    "repo_name",
+    "f_names",
+    "filtered"
    ]
   }
  }
