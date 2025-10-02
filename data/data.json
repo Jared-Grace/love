@@ -1001,8 +1001,7 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if",
-   "app_karate_computer_save"
+   "html_text_set_if"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green_style_assign",
@@ -4221,8 +4220,7 @@
    "repos_paths_names_map_unordered_combine",
    "repo_functions_move",
    "sandbox_2",
-   "sandbox_4_a",
-   "app_karate_computer_save"
+   "sandbox_4_a"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -5270,8 +5268,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_karate_computer_save"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5956,8 +5953,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "app_karate_computer_save"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -15647,6 +15643,9 @@
   ],
   "divs": [
    "app_karate_validate_style_assign"
+  ],
+  "containers": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15749,15 +15748,12 @@
     "lambda2",
     "r",
     "container2",
-    "mapped",
-    "list",
-    "property_name",
+    "containers",
     "button_next",
     "transform",
     "margin",
     "s",
-    "lambda5",
-    "component"
+    "lambda5"
    ]
   },
   "app_karate_container": {
