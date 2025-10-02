@@ -5160,7 +5160,6 @@
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
    "html_parse_find_a_href_starts_with",
-   "list_filter_starts_with_not",
    "string_starts_with_not",
    "repo_functions_move_if_starts_with_not"
   ],
@@ -8965,7 +8964,8 @@
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
    "string_starts_with",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "list_filter_starts_with_not"
   ],
   "path_folder": [
    "firebase_service_account_love_generic",
@@ -26941,7 +26941,7 @@
     "list_filter",
     "list_filter_starts_with_not",
     "mapped",
-    "book_code",
+    "prefix",
     "lambda",
     "item",
     "sw",
