@@ -736,7 +736,6 @@
   ],
   "app_karate_button_green": [
    "app_karate_button_green",
-   "app_karate_computer_save",
    "app_karate_home",
    "app_karate_button_next"
   ],
@@ -15876,7 +15875,6 @@
     "object_property_get",
     "list_map_property",
     "app_karate_validate_style_assign",
-    "app_karate_button_green",
     "html_centered",
     "html_checked_set",
     "html_on_click",
