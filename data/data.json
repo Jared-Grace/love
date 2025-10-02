@@ -15762,7 +15762,7 @@
    ]
   },
   "app_karate_computer_save": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "app_karate_button_back",
     "html_rgba_to_rgb",
