@@ -3824,8 +3824,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "app_karate_home"
+   "string_replace"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -7918,8 +7917,7 @@
    "string_base64_to",
    "string_list_to",
    "string_replace",
-   "js_imports_paths_fix_inner",
-   "app_karate_home"
+   "js_imports_paths_fix_inner"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -15499,9 +15497,6 @@
   ],
   "html_button_karate_container": [
    "app_karate_home"
-  ],
-  "to2": [
-   "app_karate_home"
   ]
  },
  "functions": {
@@ -15712,10 +15707,7 @@
     "parent",
     "text",
     "screen_name",
-    "button",
-    "to2",
-    "to",
-    "from"
+    "button"
    ]
   },
   "app_karate_main": {
