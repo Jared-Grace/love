@@ -23,7 +23,8 @@
   "app_karate_button_background": [
    "app_karate_button_background",
    "app_karate_button_screen_green_style_assign",
-   "app_karate_validate_style_assign"
+   "app_karate_validate_style_assign",
+   "app_karate_computer_save"
   ],
   "v": [
    "app_karate_button_background",
@@ -15656,6 +15657,9 @@
   "html_rgba_to_rgb": [
    "app_karate_computer_save",
    "html_rgba_to_rgb"
+  ],
+  "selected2": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15713,6 +15717,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "app_karate_button_background",
     "html_rgba_to_rgb",
     "object_property_get",
     "list_map_property",
@@ -15761,6 +15766,7 @@
     "r",
     "container2",
     "selected",
+    "selected2",
     "containers",
     "transform",
     "margin",
