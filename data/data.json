@@ -2265,7 +2265,8 @@
    "function_import",
    "function_name_repo_path_combine",
    "function_name_to_path_search",
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "repo_function_move"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -2516,7 +2517,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "repo_function_move"
   ],
   "ast": [
    "app_new_step_3_generic",
@@ -9556,7 +9558,8 @@
    "function_name_to_path_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "repo_function_move"
   ],
   "function_open": [
    "functions_search_open",
@@ -32038,14 +32041,17 @@
    ]
   },
   "repo_function_move": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "function_name_to_path_search",
     "repo_functions_path",
     "marker",
     "repo_function_move",
     "f_name",
     "to",
-    "r_path"
+    "r_path",
+    "search",
+    "unaliased"
    ]
   },
   "repo_functions_path": {
