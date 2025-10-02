@@ -1630,7 +1630,8 @@
    "visit_unique_async",
    "watch",
    "repo_functions_move",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "functions_transform_list"
   ],
   "c": [
    "app_karate_email",
@@ -2129,7 +2130,8 @@
    "marker_move",
    "marker_screen_add",
    "marker_top",
-   "task_new"
+   "task_new",
+   "functions_transform_list"
   ],
   "list_add": [
    "app_new_step_3_generic",
@@ -2440,7 +2442,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform_list"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -2769,7 +2772,8 @@
    "js_unparse_inner",
    "marker_call",
    "marker_call_replace_generic",
-   "marker_screen_add"
+   "marker_screen_add",
+   "functions_transform_list"
   ],
   "function_new": [
    "app_new_step_4",
@@ -4355,7 +4359,8 @@
    "visit_unique_async",
    "watch",
    "repo_functions_move",
-   "functions_imports_fix"
+   "functions_imports_fix",
+   "functions_transform_list"
   ],
   "index": [
    "app_replace_home",
@@ -5414,7 +5419,8 @@
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
    "sandbox_4_a",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform_list"
   ],
   "en": [
    "app_reply_main",
@@ -5817,7 +5823,8 @@
    "string_list_to",
    "string_split_newline",
    "repo_functions_move",
-   "functions_transform"
+   "functions_transform",
+   "functions_transform_list"
   ],
   "book_code": [
    "app_reply_main",
@@ -10404,7 +10411,8 @@
    "list_map_unordered_async",
    "repos_gitignore_overwrite",
    "repo_functions_move",
-   "functions_transform"
+   "functions_transform",
+   "functions_transform_list"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -15442,7 +15450,8 @@
    "functions_imports_fix"
   ],
   "functions_transform_list": [
-   "functions_transform"
+   "functions_transform",
+   "functions_transform_list"
   ]
  },
  "functions": {
@@ -32141,6 +32150,20 @@
     "declaration",
     "from",
     "expression"
+   ]
+  },
+  "functions_transform_list": {
+   "async": true,
+   "identifiers": [
+    "list_map_unordered_async",
+    "function_transform",
+    "functions_transform_list",
+    "lambda",
+    "list",
+    "lambda2",
+    "f_name",
+    "output",
+    "waited"
    ]
   }
  }
