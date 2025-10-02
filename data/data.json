@@ -314,7 +314,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "functions_imports_fix_list"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -1630,7 +1631,8 @@
    "watch",
    "repo_functions_move",
    "js_imports_paths_fix_inner",
-   "functions_transform_list"
+   "functions_transform_list",
+   "functions_imports_fix_list"
   ],
   "c": [
    "app_karate_email",
@@ -2648,7 +2650,8 @@
    "marker_top",
    "promise_not_is",
    "task_new",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "functions_imports_fix_list"
   ],
   "async": [
    "app_new_step_3_generic",
@@ -4357,7 +4360,8 @@
    "visit_unique_async",
    "watch",
    "repo_functions_move",
-   "functions_transform_list"
+   "functions_transform_list",
+   "functions_imports_fix_list"
   ],
   "index": [
    "app_replace_home",
@@ -5822,7 +5826,8 @@
    "repo_functions_move",
    "functions_transform",
    "functions_transform_list",
-   "functions_imports_fix"
+   "functions_imports_fix",
+   "functions_imports_fix_list"
   ],
   "book_code": [
    "app_reply_main",
@@ -5951,7 +5956,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "functions_imports_fix_list"
   ],
   "error": [
    "assert",
@@ -8132,7 +8138,8 @@
    "list_to_dictionary",
    "list_to_dictionary_async",
    "repos_acronyms_to_names",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "functions_imports_fix_list"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -9602,7 +9609,8 @@
   "functions_names_to_paths": [
    "functions_names_to_paths",
    "function_imports_add",
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "functions_imports_fix_list"
   ],
   "search_generic": [
    "functions_search",
@@ -15441,14 +15449,17 @@
   ],
   "js_imports_paths_fix_inner": [
    "js_imports_paths_fix",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "functions_imports_fix_list"
   ],
   "functions_transform_list": [
    "functions_transform",
-   "functions_transform_list"
+   "functions_transform_list",
+   "functions_imports_fix_list"
   ],
   "functions_imports_fix_list": [
-   "functions_imports_fix"
+   "functions_imports_fix",
+   "functions_imports_fix_list"
   ]
  },
  "functions": {
@@ -32156,6 +32167,22 @@
     "f_name",
     "output",
     "waited"
+   ]
+  },
+  "functions_imports_fix_list": {
+   "async": true,
+   "identifiers": [
+    "functions_transform_list",
+    "js_imports_paths_fix_inner",
+    "functions_names_to_paths",
+    "functions_imports_fix_list",
+    "list",
+    "dictionary",
+    "lambda",
+    "lambda2",
+    "ast",
+    "v2",
+    "v"
    ]
   }
  }
