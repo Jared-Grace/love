@@ -15390,6 +15390,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "repo_function_move": [
+   "repo_function_move"
   ]
  },
  "functions": {
@@ -32027,6 +32030,12 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "repo_function_move": {
+   "async": false,
+   "identifiers": [
+    "repo_function_move"
    ]
   }
  }
