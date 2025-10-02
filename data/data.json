@@ -819,8 +819,7 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "js_imports_paths_fix_inner",
-   "repo_functions_move_if_includes_not_love_app_karate"
+   "js_imports_paths_fix_inner"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -32209,7 +32208,6 @@
    "identifiers": [
     "app_karate",
     "repo_functions_move_if_includes_not",
-    "marker",
     "repo_functions_move_if_includes_not_love_app_karate",
     "name"
    ]
