@@ -10189,7 +10189,8 @@
   ],
   "function_copy": [
    "function_copy",
-   "function_copy_suffix_add"
+   "function_copy_suffix_add",
+   "function_move"
   ],
   "f_name_old": [
    "function_copy",
@@ -10266,7 +10267,8 @@
   ],
   "function_delete": [
    "function_delete",
-   "function_delete_if_exists"
+   "function_delete_if_exists",
+   "function_move"
   ],
   "function_exists_assert": [
    "function_dependencies",
@@ -10965,12 +10967,14 @@
   "f_name_before": [
    "function_rename",
    "function_rename_identifiers",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "function_move"
   ],
   "f_name_after": [
    "function_rename",
    "function_rename_identifiers",
-   "function_rename_suffix_add"
+   "function_rename_suffix_add",
+   "function_move"
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers",
@@ -15413,7 +15417,8 @@
    "repo_function_move"
   ],
   "function_move": [
-   "function_rename"
+   "function_rename",
+   "function_move"
   ]
  },
  "functions": {
@@ -32077,6 +32082,16 @@
     "repo_name",
     "path",
     "r_path"
+   ]
+  },
+  "function_move": {
+   "async": true,
+   "identifiers": [
+    "function_delete",
+    "function_copy",
+    "function_move",
+    "f_name_before",
+    "f_name_after"
    ]
   }
  }
