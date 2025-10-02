@@ -4334,7 +4334,8 @@
    "date_diff_hours",
    "date_diff_ms",
    "function_alias_rename",
-   "git_push_folder"
+   "git_push_folder",
+   "date_diff_mins"
   ],
   "size": [
    "app_replace_rule_set",
@@ -7383,14 +7384,16 @@
    "date_diff_ms"
   ],
   "date_diff_hours": [
-   "date_diff_hours"
+   "date_diff_hours",
+   "date_diff_mins"
   ],
   "now": [
    "date_diff_hours",
    "date_diff_ms",
    "date_now",
    "date_now_iso",
-   "git_push_folder"
+   "git_push_folder",
+   "date_diff_mins"
   ],
   "ms": [
    "date_diff_hours",
@@ -7401,7 +7404,8 @@
   "hours": [
    "date_diff_hours",
    "git_push_folder",
-   "date_hours_to_mins"
+   "date_hours_to_mins",
+   "date_diff_mins"
   ],
   "Math": [
    "date_diff_ms",
@@ -15706,10 +15710,15 @@
    "app_karate_button_uncolored_background_color"
   ],
   "date_hours_to_mins": [
-   "date_hours_to_mins"
+   "date_hours_to_mins",
+   "date_diff_mins"
   ],
   "date_diff_mins": [
-   "git_push_folder"
+   "git_push_folder",
+   "date_diff_mins"
+  ],
+  "mins": [
+   "date_diff_mins"
   ]
  },
  "functions": {
@@ -32705,6 +32714,18 @@
     "date_hours_to_mins",
     "hours",
     "v"
+   ]
+  },
+  "date_diff_mins": {
+   "async": false,
+   "identifiers": [
+    "date_hours_to_mins",
+    "date_diff_hours",
+    "date_diff_mins",
+    "now",
+    "before",
+    "hours",
+    "mins"
    ]
   }
  }
