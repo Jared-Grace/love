@@ -498,8 +498,7 @@
    "html_button_element",
    "html_button_screen",
    "html_element",
-   "html_p_text_multiple",
-   "app_karate_computer_save"
+   "html_p_text_multiple"
   ],
   "padding": [
    "app_karate_container",
@@ -32302,7 +32301,6 @@
     "root",
     "container",
     "label",
-    "parent",
     "input"
    ]
   },
