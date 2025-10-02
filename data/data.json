@@ -5165,7 +5165,8 @@
    "app_reply_main",
    "list_map_squash",
    "list_squash",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "repo_functions_move"
   ],
   "bible_verses_encouragement": [
    "app_reply_main",
@@ -5859,7 +5860,8 @@
    "functions_paths",
    "list_squash",
    "repos_paths_map_unordered_combine_squash",
-   "watch"
+   "watch",
+   "repo_functions_move"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -8227,7 +8229,8 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "repo_functions_move"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -16053,6 +16056,7 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
+    "list_squash",
     "list_map",
     "data_identifiers_get",
     "list_map_unordered_async",
@@ -16079,6 +16083,8 @@
     "lambda2",
     "list",
     "mapped",
+    "squashed",
+    "list2",
     "v"
    ]
   },
