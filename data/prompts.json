@@ -2485,7 +2485,6 @@
   "u fk",
   "fb",
   "s email",
-  "fk",
   "as screen",
   "n repo_functions_move_if_starts_with_not",
   "s acronym",
@@ -2564,6 +2563,7 @@
   "pn add_copy list_add",
   "is js_if_blockify_generic",
   "s return,add",
-  "as firebase,karate"
+  "as firebase,karate",
+  "fk"
  ]
 }
