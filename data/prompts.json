@@ -2173,7 +2173,6 @@
   "pnd functions",
   "is js_function_last_asyncify",
   "s awawit",
-  "s await",
   "o functions_names",
   "s sleep",
   "is js_call_fill",
@@ -2552,6 +2551,7 @@
   "au app_reply_main",
   "s storage,local",
   "s push",
-  "d"
+  "d",
+  "s await"
  ]
 }
