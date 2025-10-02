@@ -3519,7 +3519,8 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "functions_transform"
   ],
   "n": [
    "list_filter_includes_not",
@@ -4760,7 +4761,8 @@
    "messenger_reply_messages",
    "object_properties_from",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "functions_transform"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -5418,7 +5420,8 @@
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
    "sandbox_4_a",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform"
   ],
   "en": [
    "app_reply_main",
@@ -5820,7 +5823,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform"
   ],
   "book_code": [
    "app_reply_main",
@@ -10404,7 +10408,8 @@
    "js_block_child_graph_unparse",
    "list_map_unordered_async",
    "repos_gitignore_overwrite",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -20199,6 +20204,7 @@
   "functions_transform": {
    "async": true,
    "identifiers": [
+    "list_map_unordered_async",
     "list_wait",
     "functions_names",
     "list_map",
@@ -20209,6 +20215,10 @@
     "f_name",
     "output",
     "mapped",
+    "waited",
+    "list",
+    "lambda3",
+    "item",
     "v"
    ]
   },
