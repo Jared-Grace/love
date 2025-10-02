@@ -2,5 +2,5 @@ import { js_if_blockify_generic } from "../../../love/public/src/js_if_blockify_
 export async function js_arrow_blockify(ast) {
   const type = "ArrowFunctionExpression";
   const property_name = "body";
-  await js_if_blockify_generic(ast, type, property_name);
+  await js_if_blockify_generic(ast, type, property_name, list_add);
 }
