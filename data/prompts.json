@@ -2476,7 +2476,6 @@
   "apps_get",
   "s file,html",
   "html_index_generate karate",
-  "fb",
   "o ff",
   "c firebase_deploy_function_destination_version firebase_deploy_function_destination_production",
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
@@ -2511,6 +2510,7 @@
   "function_name_repo_path_combine app_karate_staging index.html",
   "html_update_staging karate",
   "html_name_to_path_staging test",
-  "u fk"
+  "u fk",
+  "fb"
  ]
 }
