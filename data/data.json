@@ -451,7 +451,8 @@
    "html_style_set_or_remove",
    "html_text_set",
    "html_text_set_if",
-   "app_karate_button_screen_green_style_assign"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_computer_save"
   ],
   "color": [
    "app_karate_email",
@@ -15600,7 +15601,8 @@
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_screen_green",
-   "app_karate_button_screen_green_style_assign"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32351,6 +32353,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "app_karate_button_screen_green_style_assign",
     "app_karate_container_background",
     "object_property_get",
     "object_merge",
@@ -32393,6 +32396,7 @@
     "container2",
     "div",
     "value2",
+    "component",
     "transform",
     "margin",
     "s"
