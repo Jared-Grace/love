@@ -313,8 +313,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "list_filter_includes_not"
+   "whitespace_normalize"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -983,8 +982,7 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "list_filter_includes_not"
+   "visit_filter_recursive_async"
   ],
   "object_property_get": [
    "app_karate_email",
@@ -1243,8 +1241,7 @@
    "roman_to_integer",
    "string_includes",
    "string_suffix_change",
-   "string_to",
-   "list_filter_includes_not"
+   "string_to"
   ],
   "div_checks": [
    "app_karate_email"
@@ -2978,8 +2975,7 @@
    "string_includes_lambda",
    "function_name_to_path",
    "search_generic",
-   "string_includes",
-   "list_filter_includes_not"
+   "string_includes"
   ],
   "item": [
    "string_includes_lambda",
@@ -15373,6 +15369,9 @@
    "repo_functions_names"
   ],
   "list_filter_includes_not": [
+   "list_filter_includes_not"
+  ],
+  "string_includes_not": [
    "list_filter_includes_not"
   ]
  },
@@ -31974,8 +31973,7 @@
   "list_filter_includes_not": {
    "async": false,
    "identifiers": [
-    "not",
-    "string_includes",
+    "string_includes_not",
     "marker",
     "list_filter",
     "list_filter_includes_not",
@@ -31983,8 +31981,6 @@
     "part",
     "lambda",
     "item",
-    "v",
-    "input",
     "n",
     "filtered"
    ]
