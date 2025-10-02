@@ -15495,7 +15495,7 @@
   "button": [
    "app_karate_home"
   ],
-  "html_button_karate_container": [
+  "html_button_karate_container_text": [
    "app_karate_home"
   ]
  },
@@ -15701,7 +15701,7 @@
     "root",
     "container",
     "component",
-    "html_button_karate_container",
+    "html_button_karate_container_text",
     "component2",
     "component3",
     "parent",
