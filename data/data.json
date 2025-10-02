@@ -7529,7 +7529,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "repo_functions_move_if_starts_with_not"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -8957,7 +8958,8 @@
    "messenger_reply_unread_collect",
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
-   "string_starts_with"
+   "string_starts_with",
+   "repo_functions_move_if_starts_with_not"
   ],
   "path_folder": [
    "firebase_service_account_love_generic",
@@ -31912,7 +31914,9 @@
    "async": false,
    "identifiers": [
     "marker",
-    "repo_functions_move_if_starts_with_not"
+    "repo_functions_move_if_starts_with_not",
+    "to",
+    "prefix"
    ]
   }
  }
