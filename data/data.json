@@ -15691,6 +15691,9 @@
   ],
   "font_color": [
    "app_karate_validate_style_assign"
+  ],
+  "app_karate_button_font_color": [
+   "app_karate_button_screen_green_style_assign"
   ]
  },
  "functions": {
@@ -15725,6 +15728,7 @@
   "app_karate_button_screen_green_style_assign": {
    "async": false,
    "identifiers": [
+    "app_karate_button_font_color",
     "app_karate_button_background",
     "html_style_assign",
     "app_karate_button_screen_green_style_assign",
