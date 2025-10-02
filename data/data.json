@@ -327,7 +327,8 @@
    "app_karate_style_control",
    "html_loading",
    "html_style_assign",
-   "html_style_margin_y"
+   "html_style_margin_y",
+   "app_karate_computer_save"
   ],
   "app_karate_button_screen_uncolored": [
    "app_karate_button_screen_green",
@@ -32296,6 +32297,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_style_assign",
     "html_div_text",
     "app_karate_style_control",
     "app_karate_container_centered",
