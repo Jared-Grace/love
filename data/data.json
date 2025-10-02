@@ -9277,7 +9277,8 @@
   "f_name_ext": [
    "folder_current_join_code",
    "function_name_to_base",
-   "html_update_dev"
+   "html_update_dev",
+   "repo_function_move"
   ],
   "folder_delete": [
    "folder_delete",
@@ -10631,7 +10632,8 @@
   "function_name_to_base": [
    "function_name_folder_to_path",
    "function_name_to_base",
-   "html_update_dev"
+   "html_update_dev",
+   "repo_function_move"
   ],
   "base": [
    "function_name_folder_to_path"
@@ -10930,7 +10932,8 @@
    "function_param_swap_task_simple"
   ],
   "f_name2": [
-   "function_param_swap_task_simple"
+   "function_param_swap_task_simple",
+   "repo_function_move"
   ],
   "function_parse_declaration_inner": [
    "function_parse_declaration",
@@ -32044,6 +32047,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "function_name_to_base",
     "object_property_get",
     "function_name_to_path_search",
     "repo_functions_path",
@@ -32052,6 +32056,8 @@
     "f_name",
     "to",
     "r_path",
+    "f_name_ext",
+    "f_name2",
     "search",
     "f_path"
    ]
