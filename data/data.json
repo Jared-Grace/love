@@ -448,8 +448,7 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if",
-   "app_karate_computer_save"
+   "html_text_set_if"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -908,8 +907,7 @@
    "html_div_text",
    "html_p_text",
    "html_text_set",
-   "html_text_set_if",
-   "app_karate_computer_save"
+   "html_text_set_if"
   ],
   "app_karate_div_text": [
    "app_karate_div_text",
@@ -1827,15 +1825,11 @@
   ],
   "emoji_secure": [
    "app_karate_home",
-   "emoji_secure",
-   "app_karate_computer_save"
+   "emoji_secure"
   ],
   "app_karate_home": [
    "app_karate_home",
    "app_karate_screens"
-  ],
-  "html_button_karate": [
-   "app_karate_computer_save"
   ],
   "component2": [
    "app_karate_home",
@@ -32297,8 +32291,6 @@
     "html_span_text",
     "html_element",
     "html_input_type",
-    "html_text_set",
-    "emoji_secure",
     "app_karate_container_main",
     "html_clear_context",
     "marker",
@@ -32308,9 +32300,7 @@
     "container",
     "label",
     "parent",
-    "input",
-    "component",
-    "html_button_karate"
+    "input"
    ]
   },
   "app_screen_set_lambda": {
