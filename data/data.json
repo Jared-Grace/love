@@ -318,7 +318,8 @@
    "whitespace_normalize",
    "functions_imports_fix_list",
    "repo_functions_move_if_includes_not",
-   "app_screen_set_lambda"
+   "app_screen_set_lambda",
+   "app_karate_style_control_font_size"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -15553,7 +15554,8 @@
    "html_font_size_1em"
   ],
   "app_karate_style_control_font_size": [
-   "app_karate_style_control"
+   "app_karate_style_control",
+   "app_karate_style_control_font_size"
   ]
  },
  "functions": {
@@ -32376,6 +32378,13 @@
     "html_style_assign",
     "html_font_size_1em",
     "div"
+   ]
+  },
+  "app_karate_style_control_font_size": {
+   "async": false,
+   "identifiers": [
+    "app_karate_style_control_font_size",
+    "v"
    ]
   }
  }
