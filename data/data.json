@@ -2493,8 +2493,7 @@
    "list_squash",
    "marker_down_choices",
    "string_includes_lambda",
-   "string_regex_match_lambda",
-   "js_await_add_inner"
+   "string_regex_match_lambda"
   ],
   "date_hours_to_mins": [
    "date_diff_mins",
@@ -5764,7 +5763,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "js_await_add_inner"
   ],
   "assert_not": [
    "assert_not",
@@ -13333,7 +13333,8 @@
    "log",
    "log_keep",
    "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
+   "repos_paths_names_map_unordered_combine",
+   "js_await_add_inner"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -24080,6 +24081,7 @@
   "js_await_add_inner": {
    "async": true,
    "identifiers": [
+    "log",
     "js_visit_type_each_async",
     "js_call_function_if",
     "js_node_type_not_is_if",
@@ -24105,12 +24107,12 @@
     "f",
     "async_is",
     "n",
-    "l",
     "stack",
     "stack1",
     "lambda4",
     "copy",
-    "awaited"
+    "awaited",
+    "message"
    ]
   },
   "js_await_add_task_simple": {
