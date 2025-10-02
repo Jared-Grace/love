@@ -2524,7 +2524,6 @@
   "s function,name,path",
   "s base",
   "s function,base",
-  "repo_functions_move_if_includes_not l app_karate",
   "repo_function_move html_em_text love",
   "s file_",
   "o r",
@@ -2534,6 +2533,7 @@
   "r repo_function_move repo_functions_move",
   "o is",
   "s imports,fix",
-  "s repo,acr"
+  "s repo,acr",
+  "repo_functions_move_if_includes_not l app_karate"
  ]
 }
