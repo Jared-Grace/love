@@ -15745,6 +15745,9 @@
   ],
   "checkeds": [
    "app_karate_computer_save"
+  ],
+  "add_copy": [
+   "js_if_blockify_generic"
   ]
  },
  "functions": {
@@ -25882,6 +25885,7 @@
     "ast",
     "type",
     "property_name",
+    "add_copy",
     "lambda",
     "v",
     "node",
