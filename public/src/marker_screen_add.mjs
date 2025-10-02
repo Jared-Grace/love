@@ -1,3 +1,4 @@
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -21,7 +22,7 @@ export async function marker_screen_add(screen_name) {
   let combined = function_name_combine(prefixed, "screens");
   async function lambda(a) {
     let { properties } = marker_next_declare_single_init(a);
-    jcs;
+    let code_string = js_code_string(value_string);
     let key = js_parse_expression(screen_name);
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
