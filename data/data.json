@@ -1903,7 +1903,8 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green"
+   "trinity_green",
+   "function_import"
   ],
   "lambda5": [
    "app_karate_computer_save",
@@ -13356,7 +13357,8 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "js_await_add_inner"
+   "js_await_add_inner",
+   "function_import"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -21241,6 +21243,7 @@
     "function_name_unalias",
     "function_name_to_path_search",
     "folder_previous",
+    "log",
     "function_import",
     "f_name",
     "fileURLToPath",
@@ -21252,6 +21255,7 @@
     "__dirname",
     "dirname",
     "unaliased",
+    "s",
     "f_path",
     "f",
     "previous",
