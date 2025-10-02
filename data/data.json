@@ -2483,7 +2483,8 @@
   "app_screen_set": [
    "app_screen_set_lambda",
    "app_replace_home",
-   "app_screen_set"
+   "app_screen_set",
+   "app_karate_computer_save"
   ],
   "l": [
    "app_screen_set_lambda",
@@ -15740,6 +15741,12 @@
   ],
   "checkeds": [
    "app_karate_computer_save"
+  ],
+  "context2": [
+   "app_karate_computer_save"
+  ],
+  "value3": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15837,6 +15844,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "app_screen_set",
     "html_value_get",
     "list_single",
     "html_checked_get",
@@ -15900,6 +15908,8 @@
     "checkeds",
     "only",
     "value2",
+    "context2",
+    "value3",
     "valid",
     "containers"
    ]
