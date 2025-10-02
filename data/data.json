@@ -1650,8 +1650,7 @@
    "functions_imports_fix_list",
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "app_karate_home"
+   "app_karate_button_screen_green"
   ],
   "c": [
    "app_karate_email",
@@ -13152,8 +13151,7 @@
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
    "app_karate_computer_save",
-   "app_screen_set_lambda",
-   "app_karate_home"
+   "app_screen_set_lambda"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -15727,7 +15725,6 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
-    "log",
     "app_screen_set_lambda",
     "app_karate_container_main",
     "html_span_text",
@@ -15754,7 +15751,6 @@
     "button_text",
     "screen",
     "lambda2",
-    "lambda",
     "button"
    ]
   },
