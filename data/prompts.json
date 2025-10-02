@@ -2549,6 +2549,7 @@
   "s statement",
   "s screen",
   "s function_is",
-  "n function_is"
+  "n function_is",
+  "s app_screen_set_lambda"
  ]
 }
