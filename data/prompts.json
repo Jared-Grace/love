@@ -2562,6 +2562,7 @@
   "fs js_if_blockify_generic",
   "pn add_copy",
   "p",
-  "pn add_copy list_add"
+  "pn add_copy list_add",
+  "is js_if_blockify_generic"
  ]
 }
