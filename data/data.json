@@ -14797,8 +14797,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "repo_function_move"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -32061,7 +32060,6 @@
     "r_path",
     "f_name_ext",
     "joined",
-    "segments",
     "search",
     "f_path"
    ]
