@@ -1652,7 +1652,8 @@
    "functions_imports_fix_list",
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_home"
   ],
   "c": [
    "app_karate_email",
@@ -6167,7 +6168,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_karate_home"
   ],
   "assert_not": [
    "assert_not",
@@ -15755,6 +15757,8 @@
     "button_text",
     "screen",
     "lambda2",
+    "lambda",
+    "message",
     "button"
    ]
   },
