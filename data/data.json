@@ -387,7 +387,6 @@
    "urdu_allah_to_god"
   ],
   "context": [
-   "app_karate_button_screen_green",
    "app_karate_email",
    "app_karate_home",
    "app_karate_main",
@@ -15571,7 +15570,6 @@
     "text",
     "lambda",
     "component",
-    "context",
     "color"
    ]
   },
