@@ -5494,8 +5494,7 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert",
-   "html_on"
+   "string_is_assert"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -15672,11 +15671,12 @@
    "app_karate_computer_save"
   ],
   "function_is": [
-   "function_is",
-   "html_on"
+   "function_is"
   ],
   "fi": [
-   "function_is",
+   "function_is"
+  ],
+  "function_is_assert": [
    "html_on"
   ]
  },
@@ -22909,14 +22909,12 @@
   "html_on": {
    "async": false,
    "identifiers": [
-    "function_is",
-    "assert",
+    "function_is_assert",
     "html_component_element_get",
     "html_on",
     "component",
     "name_event",
     "lambda",
-    "fi",
     "element",
     "addEventListener"
    ]
