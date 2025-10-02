@@ -4358,7 +4358,8 @@
    "undefined_not_is_assert",
    "visit_unique_async",
    "watch",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_imports_fix"
   ],
   "index": [
    "app_replace_home",
@@ -5949,7 +5950,8 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert"
+   "undefined_not_is_assert",
+   "functions_imports_fix"
   ],
   "error": [
    "assert",
@@ -9550,7 +9552,6 @@
    "functions_transform"
   ],
   "js_imports_paths_fix": [
-   "functions_imports_fix",
    "function_rename_identifiers",
    "js_imports_paths_fix"
   ],
@@ -20071,11 +20072,12 @@
     "functions_names_to_paths",
     "functions_transform",
     "marker",
-    "js_imports_paths_fix",
     "functions_imports_fix",
     "dictionary",
     "ast",
     "lambda",
+    "lambda2",
+    "v2",
     "v"
    ]
   },
