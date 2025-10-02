@@ -2518,6 +2518,7 @@
   "o fns",
   "repo_functions_move_if_starts_with_not k",
   "s list,filter",
-  "repo_functions_move_if_starts_with_not l app_karate"
+  "repo_functions_move_if_starts_with_not l app_karate",
+  "s list,includes"
  ]
 }
