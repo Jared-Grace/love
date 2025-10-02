@@ -2399,7 +2399,6 @@
   "s param",
   "de app_karate_home",
   "msa home",
-  "d",
   "is app_main",
   "s main",
   "is server",
@@ -2522,6 +2521,7 @@
   "s list,includes",
   "c list_filter_starts_with_not list_filter_includes_not",
   "s includes,not",
-  "r repo_functions_move_if_starts_with_not repo_functions_move_if_includes_not"
+  "r repo_functions_move_if_starts_with_not repo_functions_move_if_includes_not",
+  "d"
  ]
 }
