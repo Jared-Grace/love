@@ -7198,7 +7198,8 @@
    "object_properties_delete",
    "object_properties_from",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "repo_function_move"
   ],
   "parsed": [
    "data_files_update",
@@ -7748,7 +7749,8 @@
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run"
+   "tasks_run",
+   "repo_function_move"
   ],
   "each_object": [
    "each_object",
@@ -14769,7 +14771,8 @@
   ],
   "obj": [
    "object_properties",
-   "object_properties_delete_all"
+   "object_properties_delete_all",
+   "repo_function_move"
   ],
   "getOwnPropertyNames": [
    "object_properties"
@@ -32060,6 +32063,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "object_properties",
     "data_identifiers_search",
     "file_delete",
     "file_copy",
@@ -32078,7 +32082,9 @@
     "search",
     "f_path",
     "v",
-    "result"
+    "result",
+    "properties",
+    "obj"
    ]
   },
   "repo_functions_path": {
