@@ -3623,8 +3623,7 @@
    "repos_paths_names_map_unordered",
    "repo_acronym_to_path",
    "repo_path",
-   "repo_path_combine",
-   "repo_function_move"
+   "repo_path_combine"
   ],
   "functions_names_from_path": [
    "repo_functions_names",
@@ -15396,6 +15395,9 @@
    "watch"
   ],
   "repo_function_move": [
+   "repo_function_move"
+  ],
+  "r_pathrepo_path": [
    "repo_function_move"
   ]
  },
@@ -32040,10 +32042,10 @@
    "async": false,
    "identifiers": [
     "marker",
-    "repo_path",
     "repo_function_move",
     "f_name",
-    "to"
+    "to",
+    "r_pathrepo_path"
    ]
   }
  }
