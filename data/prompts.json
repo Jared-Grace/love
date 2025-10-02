@@ -2541,6 +2541,7 @@
   "s html_input_type",
   "o app_karate_computer_save",
   "s span",
-  "s home"
+  "s home",
+  "o app_karate_button_screen_uncolored"
  ]
 }
