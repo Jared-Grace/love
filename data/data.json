@@ -7030,7 +7030,8 @@
    "data_backup",
    "data_copy",
    "file_copy",
-   "function_copy"
+   "function_copy",
+   "repo_function_move"
   ],
   "date_now_file": [
    "data_backup",
@@ -32056,6 +32057,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "file_copy",
     "path_join",
     "function_name_to_base",
     "object_property_get",
