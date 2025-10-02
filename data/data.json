@@ -23,8 +23,7 @@
   "app_karate_button_background": [
    "app_karate_button_background",
    "app_karate_email",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_computer_save"
+   "app_karate_button_screen_green_style_assign"
   ],
   "v": [
    "app_karate_button_background",
@@ -32354,7 +32353,6 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "app_karate_button_background",
     "app_karate_container_background",
     "object_property_get",
     "object_merge",
