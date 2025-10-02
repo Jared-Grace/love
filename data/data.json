@@ -5262,7 +5262,8 @@
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "html_update_public_generic"
+   "html_update_public_generic",
+   "repo_functions_names"
   ],
   "string_may_the_lord": [
    "app_reply_pray",
@@ -6708,7 +6709,8 @@
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server"
+   "server",
+   "repo_functions_names"
   ],
   "file_copy": [
    "data_backup",
@@ -7529,7 +7531,8 @@
    "range_from",
    "repos_gitignore_overwrite",
    "string_replace",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_names"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -8675,7 +8678,8 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "server",
-   "watch"
+   "watch",
+   "repo_functions_names"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -9260,7 +9264,8 @@
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
    "string_split_comma",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_names"
   ],
   "function_name_unalias": [
    "functions_combine_name",
@@ -9361,7 +9366,8 @@
    "functions_names",
    "functions_names_from_path",
    "functions_names_to_paths",
-   "functions_paths"
+   "functions_paths",
+   "repo_functions_names"
   ],
   "mapper": [
    "functions_names",
@@ -9399,7 +9405,8 @@
   "functions_path": [
    "functions_path",
    "function_name_to_path",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "repo_functions_names"
   ],
   "search_generic": [
    "functions_search",
@@ -11327,7 +11334,8 @@
   ],
   "repo_acronym_to_path": [
    "git_publish_initial",
-   "repo_acronym_to_path"
+   "repo_acronym_to_path",
+   "repo_functions_names"
   ],
   "list_map_combine": [
    "git_publish_initial",
@@ -14716,7 +14724,8 @@
   "r_path": [
    "path_repo_combine",
    "repos_paths_names_map_unordered_combine",
-   "repo_path"
+   "repo_path",
+   "repo_functions_names"
   ],
   "then": [
    "promise_is"
@@ -15344,7 +15353,8 @@
    "repo_functions_move_if_starts_with_not"
   ],
   "repo_functions_names": [
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_names"
   ]
  },
  "functions": {
@@ -31920,6 +31930,21 @@
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
+    "f_names"
+   ]
+  },
+  "repo_functions_names": {
+   "async": true,
+   "identifiers": [
+    "functions_names_from_path",
+    "path_join",
+    "functions_path",
+    "repo_acronym_to_path",
+    "repo_functions_names",
+    "to",
+    "r_path",
+    "path",
+    "joined",
     "f_names"
    ]
   }
