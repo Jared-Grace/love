@@ -6,13 +6,19 @@ import { log } from "./log.mjs";
 export async function function_import(f_name) {
   const { fileURLToPath } = await import("url");
   const path = await import("path");
-  const __filename = fileURLToPath((import.meta.url));
+  const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   let { unaliased } = await function_name_unalias(f_name);
   let s = await function_name_to_path_search(unaliased);
-  let { f_path: f } = s
+  let { f_path: f } = s;
   let previous = folder_previous();
-  const f_path = path_join([__dirname, previous, previous, f]);log({s,f_path,f,unaliased})
+  const f_path = path_join([__dirname, previous, previous, f]);
+  log({
+    s,
+    f_path,
+    f,
+    unaliased,
+  });
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
   if (typeof imported_fn !== "function") {
