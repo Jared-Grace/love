@@ -320,7 +320,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "app_karate_button_background_invalid"
+   "app_karate_button_background_invalid",
+   "app_karate_button_back"
   ],
   "marker": [
    "app_karate_button_green",
@@ -2198,7 +2199,8 @@
   "app_screen_set_lambda": [
    "app_karate_home",
    "app_screen_set_lambda",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_button_back"
   ],
   "emoji_add": [
    "app_karate_home",
@@ -2352,7 +2354,8 @@
    "app_refresh",
    "function_new_app_screen",
    "html_button_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_karate_button_back"
   ],
   "firebase_deploy_function": [
    "firebase_deploy_function_app_karate_main",
@@ -15682,6 +15685,9 @@
   "function_is_assert": [
    "html_on",
    "function_is_assert"
+  ],
+  "context2": [
+   "app_karate_button_back"
   ]
  },
  "functions": {
@@ -32618,12 +32624,16 @@
   "app_karate_button_back": {
    "async": false,
    "identifiers": [
+    "app_screen_set_lambda",
     "emoji_arrow_left",
     "app_karate_button_screen_uncolored",
     "app_karate_button_back",
     "container",
     "context",
     "screen",
+    "v",
+    "context2",
+    "screen_name",
     "component2"
    ]
   },
