@@ -1,3 +1,5 @@
+import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { bible_verses_encouragement } from "../../../love/public/src/bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -44,6 +46,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function app_reply_main() {
+  global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
   let languages = ebible_languages();
   list_remove_property(languages, "language_code", "en");
