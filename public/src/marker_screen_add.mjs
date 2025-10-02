@@ -1,7 +1,7 @@
+import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
-import { html_clear_context } from "../../../karate_code/public/src/html_clear_context.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
