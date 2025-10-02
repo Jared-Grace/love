@@ -5824,7 +5824,8 @@
    "string_split_newline",
    "repo_functions_move",
    "functions_transform",
-   "functions_transform_list"
+   "functions_transform_list",
+   "functions_imports_fix"
   ],
   "book_code": [
    "app_reply_main",
@@ -9544,13 +9545,13 @@
    "function_params_consolidate",
    "js_expand_generic",
    "js_imports_missing",
-   "marker_functionize"
+   "marker_functionize",
+   "functions_imports_fix"
   ],
   "functions_format": [
    "functions_format"
   ],
   "functions_transform": [
-   "functions_imports_fix",
    "functions_log_remove",
    "functions_transform"
   ],
@@ -15451,7 +15452,8 @@
   ],
   "functions_transform_list": [
    "functions_transform",
-   "functions_transform_list"
+   "functions_transform_list",
+   "functions_imports_fix"
   ]
  },
  "functions": {
@@ -20076,9 +20078,10 @@
   "functions_imports_fix": {
    "async": true,
    "identifiers": [
+    "functions_transform_list",
+    "functions_names",
     "js_imports_paths_fix_inner",
     "functions_names_to_paths",
-    "functions_transform",
     "marker",
     "functions_imports_fix",
     "dictionary",
@@ -20086,6 +20089,7 @@
     "lambda2",
     "ast",
     "v2",
+    "list",
     "v"
    ]
   },
