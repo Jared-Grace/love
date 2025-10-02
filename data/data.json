@@ -320,7 +320,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "app_karate_button_background_invalid"
+   "app_karate_button_background_invalid",
+   "function_is"
   ],
   "marker": [
    "app_karate_button_green",
@@ -32626,7 +32627,8 @@
    "identifiers": [
     "marker",
     "function_is",
-    "f"
+    "f",
+    "v"
    ]
   }
  }
