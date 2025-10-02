@@ -2369,7 +2369,6 @@
   "urs l",
   "is js_identifier_unique",
   "urs k",
-  "ps",
   "fdf app_karate_main",
   "s app,main",
   "n app_main",
@@ -2534,6 +2533,7 @@
   "s imports,fix",
   "s repo,acr",
   "p",
-  "repo_functions_move_if_includes_not l app_karate"
+  "repo_functions_move_if_includes_not l app_karate",
+  "ps"
  ]
 }
