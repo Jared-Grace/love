@@ -639,7 +639,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "function_is"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -32622,6 +32623,7 @@
   "function_is": {
    "async": false,
    "identifiers": [
+    "marker",
     "function_is"
    ]
   }
