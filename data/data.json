@@ -450,8 +450,7 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if",
-   "app_karate_computer_save"
+   "html_text_set_if"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -1387,8 +1386,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "app_karate_computer_save"
+   "watch"
   ],
   "trimmed": [
    "app_karate_email"
@@ -5560,8 +5558,7 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context",
-   "app_karate_computer_save"
+   "storage_local_set_context"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -15576,6 +15573,9 @@
    "app_karate_computer_save"
   ],
   "details": [
+   "app_karate_computer_save"
+  ],
+  "radio_group_name": [
    "app_karate_computer_save"
   ]
  },
@@ -32355,10 +32355,8 @@
     "lambda",
     "container",
     "label",
+    "radio_group_name",
     "input",
-    "component",
-    "key",
-    "value",
     "transform",
     "margin",
     "s",
