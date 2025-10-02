@@ -17,7 +17,8 @@
   ],
   "app_karate": [
    "app_karate",
-   "app_karate_main"
+   "app_karate_main",
+   "repo_functions_move_if_includes_not_love_app_karate"
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
@@ -2059,7 +2060,8 @@
    "string_empty_not_is",
    "task_new",
    "watch",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "repo_functions_move_if_includes_not_love_app_karate"
   ],
   "a_name": [
    "app_name_staging",
@@ -3814,14 +3816,12 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "repo_functions_move_if_includes_not_love_app_karate"
+   "string_replace"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
    "html_parse_find_list_to",
-   "html_parse_list_to",
-   "repo_functions_move_if_includes_not_love_app_karate"
+   "html_parse_list_to"
   ],
   "f_names": [
    "repo_functions_move_if_includes_not",
@@ -32207,11 +32207,11 @@
   "repo_functions_move_if_includes_not_love_app_karate": {
    "async": true,
    "identifiers": [
+    "app_karate",
     "repo_functions_move_if_includes_not",
     "marker",
     "repo_functions_move_if_includes_not_love_app_karate",
-    "to",
-    "query"
+    "name"
    ]
   }
  }
