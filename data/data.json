@@ -983,7 +983,8 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "list_filter_includes_not"
   ],
   "object_property_get": [
    "app_karate_email",
@@ -4955,8 +4956,7 @@
    "list_find_starts_with",
    "string_padded_is",
    "string_starts_with",
-   "string_starts_with_not",
-   "list_filter_includes_not"
+   "string_starts_with_not"
   ],
   "includes": [
    "app_reply_main",
@@ -7936,7 +7936,8 @@
    "round",
    "search_generic",
    "storage_local_initialize",
-   "storage_local_specify_get"
+   "storage_local_specify_get",
+   "list_filter_includes_not"
   ],
   "verse_numbers": [
    "ebible_chapter_text",
@@ -31973,6 +31974,7 @@
   "list_filter_includes_not": {
    "async": false,
    "identifiers": [
+    "not",
     "string_includes",
     "marker",
     "list_filter",
@@ -31983,7 +31985,7 @@
     "item",
     "v",
     "input",
-    "sw",
+    "n",
     "filtered"
    ]
   }
