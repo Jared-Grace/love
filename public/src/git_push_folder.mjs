@@ -28,10 +28,8 @@ export async function git_push_folder(folder) {
     let before = date_to(before_iso);
     const mins = date_diff_mins(now, before);
     if (mins < 5) {
-      if (false) {
-        log_keep("less than 1 hour:");
-        log_keep(hours);
-      }
+      log_keep("less than 5 mins:");
+      log_keep(mins);
       return;
     }
     await command_line_git_folder(folder, command_git);
