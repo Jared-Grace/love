@@ -15564,6 +15564,12 @@
   ],
   "margin": [
    "app_karate_computer_save"
+  ],
+  "title": [
+   "app_karate_computer_save"
+  ],
+  "details": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32339,7 +32345,9 @@
     "input",
     "transform",
     "margin",
+    "title",
     "s",
+    "details",
     "div"
    ]
   },
