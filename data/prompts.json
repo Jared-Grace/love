@@ -2526,6 +2526,7 @@
   "s repo_path",
   "repo_functions_path love",
   "s function,name,path",
-  "s base"
+  "s base",
+  "s function,base"
  ]
 }
