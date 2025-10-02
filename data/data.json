@@ -3631,7 +3631,6 @@
    "functions_paths"
   ],
   "functions_path": [
-   "repo_functions_names",
    "functions_path",
    "function_name_to_path",
    "repos_paths_map_unordered_combine_squash"
@@ -3644,7 +3643,6 @@
    "repo_function_move"
   ],
   "path": [
-   "repo_functions_names",
    "file_parent_exists_ensure",
    "file_root_exists",
    "firebase_path_fix",
@@ -9043,8 +9041,7 @@
    "function_name_repo_path_combine",
    "function_new_declaration",
    "repo_path_combine",
-   "user_repo_path_combine",
-   "repo_functions_names"
+   "user_repo_path_combine"
   ],
   "f": [
    "firebase_name_repo",
@@ -15396,6 +15393,9 @@
   ],
   "repo_function_move": [
    "repo_function_move"
+  ],
+  "repo_functions_path": [
+   "repo_functions_names"
   ]
  },
  "functions": {
@@ -16023,12 +16023,10 @@
   "repo_functions_names": {
    "async": true,
    "identifiers": [
-    "repo_path_combine",
+    "repo_functions_path",
     "functions_names_from_path",
-    "functions_path",
     "repo_functions_names",
     "repo_name",
-    "path",
     "r_path",
     "f_names"
    ]
