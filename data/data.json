@@ -2238,8 +2238,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set",
-   "repo_functions_move_if_starts_with_not"
+   "user_repo_set"
   ],
   "default2": [
    "app_new_step_3_generic",
@@ -14720,7 +14719,8 @@
   "r_path": [
    "path_repo_combine",
    "repos_paths_names_map_unordered_combine",
-   "repo_path"
+   "repo_path",
+   "repo_functions_move_if_starts_with_not"
   ],
   "then": [
    "promise_is"
@@ -31923,8 +31923,8 @@
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
-    "path",
-    "repo_name"
+    "r_path",
+    "path"
    ]
   }
  }
