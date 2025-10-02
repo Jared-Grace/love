@@ -3246,7 +3246,8 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_if_blockify_generic"
   ],
   "list_empty": [
    "app_new_step_3_generic",
@@ -15635,9 +15636,6 @@
   ],
   "button_background": [
    "app_karate_validate_style_assign"
-  ],
-  "js_statement_add": [
-   "js_if_blockify_generic"
   ]
  },
  "functions": {
@@ -25636,6 +25634,7 @@
     "object_copy",
     "js_node_type_not_is",
     "object_property_get",
+    "list_add",
     "js_if_blockify_generic",
     "ast",
     "type",
@@ -25648,8 +25647,7 @@
     "copy",
     "nt",
     "includes",
-    "bs_body",
-    "js_statement_add"
+    "bs_body"
    ]
   },
   "js_if_else_if_combine": {
