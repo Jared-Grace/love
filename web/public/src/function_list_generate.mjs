@@ -21,7 +21,7 @@ export async function function_list_generate(f_generate, list) {
     list_empty(body_block);
     let code = json_to(list);
     let expression = js_parse_expression(code);
-    js_statement_return_add(expression, body_block);
+    js_statement_return_add(body_block, expression);
   }
   let output = await function_transform(f_name, lambda3);
   await function_open(f_name);
