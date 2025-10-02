@@ -15560,6 +15560,9 @@
    "app_karate_style_control",
    "app_karate_style_control_font_size",
    "app_karate_computer_save"
+  ],
+  "margin": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32334,6 +32337,7 @@
     "input",
     "s",
     "transform",
+    "margin",
     "div"
    ]
   },
