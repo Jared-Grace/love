@@ -1159,7 +1159,8 @@
    "object_properties_from",
    "reduce",
    "visit_filter_recursive",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "app_karate_computer_save"
   ],
   "html_value_set": [
    "app_karate_email",
@@ -1656,7 +1657,8 @@
    "functions_imports_fix_list",
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_computer_save"
   ],
   "c": [
    "app_karate_email",
@@ -3549,7 +3551,8 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "app_karate_computer_save"
   ],
   "n": [
    "list_filter_includes_not",
@@ -5863,7 +5866,8 @@
    "functions_transform",
    "functions_transform_list",
    "functions_imports_fix",
-   "functions_imports_fix_list"
+   "functions_imports_fix_list",
+   "app_karate_computer_save"
   ],
   "book_code": [
    "app_reply_main",
@@ -32322,6 +32326,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "each",
     "emoji_person_outline",
     "app_karate_style_control_font_size",
     "html_style_assign",
@@ -32348,7 +32353,10 @@
     "transform",
     "margin",
     "s",
-    "div"
+    "div",
+    "list",
+    "lambda",
+    "item"
    ]
   },
   "app_screen_set_lambda": {
