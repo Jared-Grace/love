@@ -23,7 +23,8 @@
   "app_karate_button_background": [
    "app_karate_button_background",
    "app_karate_button_screen_green_style_assign",
-   "app_karate_validate_style_assign"
+   "app_karate_validate_style_assign",
+   "app_karate_button_screen_uncolored"
   ],
   "v": [
    "app_karate_button_background",
@@ -1015,7 +1016,8 @@
    "html_loading",
    "html_style_assign",
    "html_style_margin_y",
-   "app_karate_validate_style_assign"
+   "app_karate_validate_style_assign",
+   "app_karate_button_screen_uncolored"
   ],
   "color": [
    "app_karate_button_screen_green_style_assign",
@@ -15729,6 +15731,8 @@
   "app_karate_button_screen_uncolored": {
    "async": false,
    "identifiers": [
+    "app_karate_button_background",
+    "html_style_assign",
     "assert_arguments",
     "marker",
     "html_button",
