@@ -2516,6 +2516,7 @@
   "s acronym",
   "fns",
   "o fns",
-  "repo_functions_move_if_starts_with_not k"
+  "repo_functions_move_if_starts_with_not k",
+  "s list,filter"
  ]
 }
