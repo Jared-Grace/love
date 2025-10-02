@@ -1,4 +1,3 @@
-import { bind } from "../../../love/public/src/bind.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 export function list_filter(list, lambda$item) {
@@ -10,7 +9,4 @@ export function list_filter(list, lambda$item) {
   }
   let filtered = list.filter(lambda);
   return filtered;
-  (function lambda2(a) {
-    let fn = bind(left, right);
-  });
 }
