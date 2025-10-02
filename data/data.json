@@ -824,7 +824,8 @@
    "watch",
    "whitespace_normalize",
    "js_imports_paths_fix_inner",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_button_screen_uncolored"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -15573,6 +15574,7 @@
   "app_karate_button_screen_uncolored": {
    "async": false,
    "identifiers": [
+    "marker",
     "html_button",
     "app_karate_style_control",
     "app_karate_button_screen_uncolored",
