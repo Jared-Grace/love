@@ -3293,7 +3293,8 @@
    "js_dollar_aa",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_button"
   ],
   "object_property_set": [
    "html_value_set",
@@ -3355,7 +3356,8 @@
    "marker_rename",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_button"
   ],
   "string_includes_not": [
    "list_filter_includes_not",
@@ -22536,6 +22538,7 @@
   "html_button": {
    "async": false,
    "identifiers": [
+    "assert_arguments",
     "html_style_font_size",
     "html_on_click",
     "html_text_set",
@@ -22544,6 +22547,7 @@
     "parent",
     "text",
     "lambda",
+    "arguments",
     "component"
    ]
   },
