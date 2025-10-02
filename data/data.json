@@ -4221,7 +4221,8 @@
    "repos_paths_names_map_unordered_combine",
    "repo_functions_move",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "app_karate_computer_save"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4742,7 +4743,8 @@
    "messenger_reply",
    "reply",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "app_karate_computer_save"
   ],
   "list_first": [
    "app_reply_main",
@@ -5268,7 +5270,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "app_karate_computer_save"
   ],
   "book_code": [
    "app_reply_main",
@@ -5953,7 +5956,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "app_karate_computer_save"
   ],
   "browser_is": [
    "browser_is",
@@ -15700,6 +15704,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "list_map_property",
     "app_karate_validate_style_assign",
     "app_karate_button_green",
     "html_centered",
@@ -15744,6 +15749,9 @@
     "lambda2",
     "r",
     "container2",
+    "mapped",
+    "list",
+    "property_name",
     "button_next",
     "transform",
     "margin",
