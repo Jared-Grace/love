@@ -5,7 +5,7 @@ export function list_filter(list, lambda$item) {
   assert(l);
   function lambda(item) {
     let v = lambda$item(item);
-    v;
+    return v;
   }
   let filtered = list.filter(lambda);
   return filtered;
