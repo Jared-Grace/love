@@ -839,7 +839,8 @@
    "html_element",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_computer_save"
   ],
   "app_karate_container_centered": [
    "app_karate_container_centered",
@@ -4845,7 +4846,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "app_karate_computer_save"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -11868,14 +11870,16 @@
   "style_key": [
    "html_style_remove",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_computer_save"
   ],
   "removeProperty": [
    "html_style_remove"
   ],
   "style_value": [
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "app_karate_computer_save"
   ],
   "innerHTML": [
    "html_text_set"
@@ -32311,6 +32315,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_style_set",
     "app_karate_style_control_font_size",
     "html_style_assign",
     "html_font_size_1em",
@@ -32331,6 +32336,9 @@
     "container",
     "label",
     "input",
+    "b",
+    "style_key",
+    "style_value",
     "s",
     "div"
    ]
