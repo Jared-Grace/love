@@ -23,11 +23,15 @@ export async function function_name_to_path_search(unaliased) {
   function lambda2(m) {
     let mapped = object_property_get(m, "mapped");
     let exists2 = object_property_get(mapped, "exists");
-    let ti2 = true_is(exists2);log_json({mapped,exists2,ti2})
+    let ti2 = true_is(exists2);
+    log_json({
+      mapped,
+      exists2,
+      ti2,
+    });
     return ti2;
   }
   let filtered = list_filter(mapped, lambda2);
-  log_json({mapped,filtered})
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
   let search = {
