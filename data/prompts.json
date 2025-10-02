@@ -2554,6 +2554,7 @@
   "d",
   "s await",
   "c html_checked_set html_checked_get",
-  "s filter,list"
+  "s filter,list",
+  "as single"
  ]
 }
