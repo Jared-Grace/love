@@ -313,7 +313,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "string_includes_not"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -982,7 +983,8 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "string_includes_not"
   ],
   "object_property_get": [
    "app_karate_email",
@@ -2975,7 +2977,8 @@
    "string_includes_lambda",
    "function_name_to_path",
    "search_generic",
-   "string_includes"
+   "string_includes",
+   "string_includes_not"
   ],
   "item": [
    "string_includes_lambda",
@@ -3077,7 +3080,8 @@
    "string_ends_with_not",
    "string_starts_with_not",
    "tasks_run",
-   "list_filter_includes_not"
+   "list_filter_includes_not",
+   "string_includes_not"
   ],
   "l": [
    "string_includes_lambda",
@@ -7933,7 +7937,8 @@
    "search_generic",
    "storage_local_initialize",
    "storage_local_specify_get",
-   "list_filter_includes_not"
+   "list_filter_includes_not",
+   "string_includes_not"
   ],
   "verse_numbers": [
    "ebible_chapter_text",
@@ -15136,7 +15141,8 @@
   ],
   "part": [
    "string_includes",
-   "list_filter_includes_not"
+   "list_filter_includes_not",
+   "string_includes_not"
   ],
   "string_is_assert_message": [
    "string_is_assert_json",
@@ -15372,7 +15378,8 @@
    "list_filter_includes_not"
   ],
   "string_includes_not": [
-   "list_filter_includes_not"
+   "list_filter_includes_not",
+   "string_includes_not"
   ]
  },
  "functions": {
@@ -31983,6 +31990,18 @@
     "item",
     "n",
     "filtered"
+   ]
+  },
+  "string_includes_not": {
+   "async": false,
+   "identifiers": [
+    "not",
+    "string_includes",
+    "string_includes_not",
+    "item",
+    "part",
+    "v",
+    "n"
    ]
   }
  }
