@@ -1818,7 +1818,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "js_arrow_to_function"
   ],
   "r": [
    "app_karate_computer_save",
@@ -2197,7 +2198,8 @@
    "messenger_reply_messages",
    "sandbox_2",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_arrow_to_function"
   ],
   "text2": [
    "app_karate_email",
@@ -2301,7 +2303,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_arrow_to_function"
   ],
   "li": [
    "app_karate_email",
@@ -23906,7 +23909,10 @@
     "ast",
     "lambda",
     "v",
-    "node"
+    "node",
+    "lambda2",
+    "a",
+    "c"
    ]
   },
   "js_assert_arguments_args": {
