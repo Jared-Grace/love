@@ -8290,8 +8290,7 @@
   "joined2": [
    "ebible_verses_upload",
    "ebible_version_download_path",
-   "local_function_path",
-   "repo_functions_move_if_starts_with_not"
+   "local_function_path"
   ],
   "tokens": [
    "ebible_verse_new",
@@ -14702,8 +14701,7 @@
    "object_property_lambda_async"
   ],
   "segments": [
-   "path_join",
-   "repo_functions_move_if_starts_with_not"
+   "path_join"
   ],
   "seg": [
    "path_join"
@@ -31933,10 +31931,8 @@
     "prefix",
     "r_path",
     "path",
-    "joined2",
-    "segments",
-    "f_names",
-    "joined"
+    "joined",
+    "f_names"
    ]
   }
  }
