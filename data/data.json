@@ -1357,7 +1357,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "list_filter_includes_not"
   ],
   "trimmed": [
    "app_karate_email"
@@ -11629,7 +11630,8 @@
    "js_visit_children_get",
    "string_is",
    "string_is_assert",
-   "string_is_assert_message"
+   "string_is_assert_message",
+   "list_filter_includes_not"
   ],
   "descendants": [
    "html_parse_descendants_classes"
@@ -15370,6 +15372,9 @@
    "repo_functions_names"
   ],
   "list_filter_includes_not": [
+   "list_filter_includes_not"
+  ],
+  "si2": [
    "list_filter_includes_not"
   ]
  },
@@ -31971,6 +31976,7 @@
   "list_filter_includes_not": {
    "async": false,
    "identifiers": [
+    "string_is",
     "string_starts_with_not",
     "marker",
     "list_filter",
@@ -31979,6 +31985,8 @@
     "prefix",
     "lambda",
     "item",
+    "si2",
+    "value",
     "sw",
     "filtered"
    ]
