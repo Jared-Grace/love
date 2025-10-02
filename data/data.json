@@ -3958,8 +3958,7 @@
    "js_identifier_defineds",
    "messenger_reply",
    "messenger_reply_messages",
-   "promise_wrap",
-   "app_karate_computer_save"
+   "promise_wrap"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -4066,8 +4065,7 @@
    "string_includes_lambda",
    "string_includes_not",
    "string_starts_with_not",
-   "tasks_run",
-   "app_karate_computer_save"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -15734,7 +15732,8 @@
    "app_karate_computer_save"
   ],
   "html_checked_get": [
-   "html_checked_get"
+   "html_checked_get",
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15832,6 +15831,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_checked_get",
     "list_filter",
     "storage_local_set_context",
     "app_karate_button_back",
@@ -15889,8 +15889,6 @@
     "margin",
     "s",
     "lambda5",
-    "lambda4",
-    "item",
     "mapped",
     "valid",
     "containers"
