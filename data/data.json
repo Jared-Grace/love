@@ -32338,6 +32338,8 @@
     "marker",
     "app_karate_computer_save",
     "context",
+    "title",
+    "details",
     "root",
     "container_main",
     "container",
@@ -32345,9 +32347,7 @@
     "input",
     "transform",
     "margin",
-    "title",
     "s",
-    "details",
     "div"
    ]
   },
