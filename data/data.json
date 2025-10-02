@@ -358,7 +358,8 @@
    "html_input_type",
    "html_input_email",
    "app_karate_computer_save",
-   "html_font_size_1em"
+   "html_font_size_1em",
+   "html_centered"
   ],
   "text": [
    "app_karate_button_screen_green",
@@ -841,7 +842,8 @@
    "html_element",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove"
+   "html_style_set_or_remove",
+   "html_centered"
   ],
   "app_karate_container_centered": [
    "app_karate_container_centered",
@@ -15612,7 +15614,8 @@
    "app_karate_computer_save"
   ],
   "html_centered": [
-   "app_karate_container_centered"
+   "app_karate_container_centered",
+   "html_centered"
   ]
  },
  "functions": {
@@ -32489,6 +32492,14 @@
     "value",
     "arguments",
     "element"
+   ]
+  },
+  "html_centered": {
+   "async": false,
+   "identifiers": [
+    "html_style_set",
+    "html_centered",
+    "div"
    ]
   }
  }
