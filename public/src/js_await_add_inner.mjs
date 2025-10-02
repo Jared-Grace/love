@@ -26,6 +26,10 @@ export async function js_await_add_inner(functions, ast, visited) {
         marker("1");
         return;
       }
+      log({
+        name,
+        async_is,
+      });
       let stack = object_property_get(v, "stack");
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
       let stack1 = list_get_end_1(stack);
@@ -40,5 +44,4 @@ export async function js_await_add_inner(functions, ast, visited) {
   }
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
-  log(message);
 }
