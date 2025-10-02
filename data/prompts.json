@@ -2529,6 +2529,7 @@
   "s file_",
   "o r",
   "s import",
-  "functions_names_to_paths"
+  "functions_names_to_paths",
+  "is r"
  ]
 }
