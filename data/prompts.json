@@ -2557,6 +2557,7 @@
   "s screen",
   "s data_file_update",
   "function_name_to_path_search data_file_update",
-  "s arrow"
+  "s arrow",
+  "s add,return"
  ]
 }
