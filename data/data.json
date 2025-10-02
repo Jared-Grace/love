@@ -5495,8 +5495,7 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert",
-   "function_is_assert"
+   "string_is_assert"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -5588,7 +5587,8 @@
    "integer_is_assert",
    "js_node_atomize",
    "list_empty_is_assert",
-   "list_is_assert"
+   "list_is_assert",
+   "function_is_assert"
   ],
   "o": [
    "assert_json",
@@ -32641,8 +32641,8 @@
   "function_is_assert": {
    "async": false,
    "identifiers": [
-    "assert",
     "function_is",
+    "assert_json",
     "function_is_assert",
     "lambda",
     "fi"
