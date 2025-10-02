@@ -2523,7 +2523,6 @@
   "a jcs js_code_string",
   "msa computer_save",
   "s screen,lam",
-  "s search",
   "s screens",
   "s html_input_type",
   "o app_karate_computer_save",
@@ -2564,6 +2563,7 @@
   "is js_if_blockify_generic",
   "s return,add",
   "as firebase,karate",
-  "fk"
+  "fk",
+  "s search"
  ]
 }
