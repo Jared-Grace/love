@@ -28970,10 +28970,10 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "html_clear_context",
     "js_declaration_single_block_body_add",
     "js_parse_statement",
     "js_code_let_assign",
-    "html_clear_context",
     "js_code_call_args",
     "function_transform",
     "function_param_new_double",
