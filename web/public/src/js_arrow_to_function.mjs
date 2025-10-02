@@ -6,7 +6,4 @@ export function js_arrow_to_function(ast) {
     object_property_set(node, "type", "FunctionExpression");
   }
   js_visit_type(ast, "ArrowFunctionExpression", lambda);
-  (function lambda2(a) {
-    return c;
-  });
 }
