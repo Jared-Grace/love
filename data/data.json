@@ -839,8 +839,7 @@
    "html_element",
    "html_style_font_size",
    "html_style_set",
-   "html_style_set_or_remove",
-   "app_karate_computer_save"
+   "html_style_set_or_remove"
   ],
   "app_karate_container_centered": [
    "app_karate_container_centered",
@@ -14713,7 +14712,8 @@
   ],
   "transform": [
    "messenger_reply_messages_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "app_karate_computer_save"
   ],
   "messenger_reply_messages_urls_add_multiple": [
    "messenger_reply_messages_urls_add",
@@ -32312,7 +32312,6 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "html_style_set",
     "app_karate_style_control_font_size",
     "html_style_assign",
     "html_font_size_1em",
@@ -32334,6 +32333,7 @@
     "label",
     "input",
     "s",
+    "transform",
     "div"
    ]
   },
