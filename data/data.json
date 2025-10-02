@@ -1822,7 +1822,6 @@
    "app_karate_screens"
   ],
   "html_button_karate": [
-   "app_karate_home",
    "app_karate_computer_save"
   ],
   "component2": [
@@ -15492,6 +15491,9 @@
   ],
   "computer_save": [
    "app_karate_screens"
+  ],
+  "html_button_karate_text": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15695,7 +15697,7 @@
     "root",
     "container",
     "component",
-    "html_button_karate",
+    "html_button_karate_text",
     "component2",
     "component3",
     "parent",
