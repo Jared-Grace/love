@@ -2559,6 +2559,7 @@
   "function_name_to_path_search data_file_update",
   "s arrow",
   "s add,return",
-  "is js_statement_return_add"
+  "is js_statement_return_add",
+  "fs js_if_blockify_generic"
  ]
 }
