@@ -2226,8 +2226,7 @@
   "screen": [
    "app_karate_home",
    "app_refresh",
-   "app_karate_button_back",
-   "app_karate_computer_save"
+   "app_karate_button_back"
   ],
   "button": [
    "app_karate_home"
@@ -15667,12 +15666,6 @@
    "app_karate_email",
    "app_karate_button_back",
    "app_karate_computer_save"
-  ],
-  "container3": [
-   "app_karate_computer_save"
-  ],
-  "context2": [
-   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15759,16 +15752,13 @@
     "marker",
     "app_karate_computer_save",
     "context",
+    "root",
+    "container_main",
     "component2",
-    "container3",
-    "context2",
-    "screen",
     "choices",
     "value",
     "title",
     "details",
-    "root",
-    "container_main",
     "div",
     "radios",
     "button_next",
