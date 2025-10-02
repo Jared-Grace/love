@@ -4413,8 +4413,7 @@
    "repos_paths_names_map_unordered_combine",
    "repo_functions_move",
    "sandbox_2",
-   "sandbox_4_a",
-   "app_karate_computer_save"
+   "sandbox_4_a"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -15734,6 +15733,9 @@
   "html_checked_get": [
    "html_checked_get",
    "app_karate_computer_save"
+  ],
+  "checkeds": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15889,7 +15891,7 @@
     "margin",
     "s",
     "lambda5",
-    "mapped",
+    "checkeds",
     "valid",
     "containers"
    ]
