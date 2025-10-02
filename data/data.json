@@ -315,7 +315,8 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -817,7 +818,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -1087,7 +1089,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "html_clear": [
    "app_karate_email",
@@ -2268,7 +2271,8 @@
    "function_name_repo_path_combine",
    "function_name_to_path_search",
    "function_name_to_path_unalias",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -2442,7 +2446,8 @@
    "marker_top",
    "repos_gitignore_overwrite",
    "task_new",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -2948,7 +2953,8 @@
    "repo_path_combine",
    "sandbox_2",
    "server",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "html_name_to_path_folder": [
    "html_name_to_path_folder",
@@ -3645,7 +3651,8 @@
    "repos_paths_names_map_unordered_combine",
    "repo_path",
    "repo_function_move",
-   "repo_functions_path"
+   "repo_functions_path",
+   "repo_functions_move"
   ],
   "path": [
    "file_parent_exists_ensure",
@@ -6450,7 +6457,8 @@
    "tasks_run",
    "task_new",
    "ternary",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "catch_call": [
    "catch_call",
@@ -6883,7 +6891,8 @@
    "user_repo_path",
    "user_repo_path_combine",
    "user_repo_set",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "file_write": [
    "data_all",
@@ -7032,7 +7041,8 @@
    "data_copy",
    "file_copy",
    "function_copy",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "date_now_file": [
    "data_backup",
@@ -7066,7 +7076,8 @@
    "data_backup",
    "data_copy",
    "data_partition",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "data_set": [
    "data_boolean_set",
@@ -7449,7 +7460,8 @@
    "data_identifiers_search",
    "function_params_new",
    "js_function_last_asyncify",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -8734,7 +8746,8 @@
    "file_delete",
    "file_delete_if_exists",
    "function_delete",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "unlink": [
    "file_delete"
@@ -9284,7 +9297,8 @@
    "folder_current_join_code",
    "function_name_to_base",
    "html_update_dev",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "folder_delete": [
    "folder_delete",
@@ -9567,7 +9581,8 @@
    "js_visit_match",
    "search_generic",
    "tasks_run",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "function_open": [
    "functions_search_open",
@@ -10639,7 +10654,8 @@
    "function_name_folder_to_path",
    "function_name_to_base",
    "html_update_dev",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "base": [
    "function_name_folder_to_path"
@@ -15415,14 +15431,19 @@
   "repo_functions_path": [
    "repo_functions_names",
    "repo_functions_path",
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "repo_name_to": [
-   "repo_function_move"
+   "repo_function_move",
+   "repo_functions_move"
   ],
   "function_move": [
    "function_rename",
    "function_move"
+  ],
+  "repo_functions_move": [
+   "repo_functions_move"
   ]
  },
  "functions": {
@@ -32100,6 +32121,30 @@
     "function_move",
     "f_name_before",
     "f_name_after"
+   ]
+  },
+  "repo_functions_move": {
+   "async": true,
+   "identifiers": [
+    "data_identifiers_search",
+    "file_delete",
+    "file_copy",
+    "path_join",
+    "function_name_to_base",
+    "object_property_get",
+    "function_name_to_path_search",
+    "repo_functions_path",
+    "marker",
+    "repo_functions_move",
+    "f_name",
+    "repo_name_to",
+    "r_path",
+    "f_name_ext",
+    "f_path_to",
+    "search",
+    "f_path",
+    "v",
+    "result"
    ]
   }
  }
