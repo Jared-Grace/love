@@ -2437,7 +2437,8 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new"
+   "task_new",
+   "repo_function_move"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -32039,6 +32040,7 @@
    "identifiers": [
     "marker",
     "repo_function_move",
+    "f_name",
     "to"
    ]
   }
