@@ -32,7 +32,6 @@
    "app_karate_margin_y",
    "app_karate_screens",
    "app_karate_style_control_font_size",
-   "app_screen_set_lambda",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
    "app_name_prefix",
@@ -9974,7 +9973,8 @@
    "list_squash",
    "marker_down_choices",
    "string_includes_lambda",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "app_screen_set_lambda"
   ],
   "at": [
    "function_aliases_restore"
@@ -16048,7 +16048,7 @@
     "app_screen_set_lambda",
     "context",
     "screen_name",
-    "v",
+    "l",
     "lambda"
    ]
   },
