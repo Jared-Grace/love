@@ -503,7 +503,8 @@
    "html_button_element",
    "html_button_screen",
    "html_element",
-   "html_p_text_multiple"
+   "html_p_text_multiple",
+   "app_karate_computer_save"
   ],
   "padding": [
    "app_karate_container",
@@ -1231,7 +1232,8 @@
    "html_element",
    "html_meta_viewport",
    "html_p",
-   "html_input"
+   "html_input",
+   "app_karate_computer_save"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -1838,7 +1840,8 @@
   "component2": [
    "app_karate_home",
    "app_reply_main",
-   "html_input"
+   "html_input",
+   "app_karate_computer_save"
   ],
   "component3": [
    "app_karate_home",
@@ -11682,7 +11685,8 @@
    "html_button_element",
    "html_element",
    "messenger_reply_unread_click",
-   "puppeteer_matches"
+   "puppeteer_matches",
+   "app_karate_computer_save"
   ],
   "html_component_wrap": [
    "html_component_wrap",
@@ -32289,6 +32293,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_element",
     "html_input_type",
     "html_text_set",
     "emoji_secure",
@@ -32299,6 +32304,9 @@
     "context",
     "root",
     "container",
+    "component2",
+    "parent",
+    "tag_name",
     "input",
     "div",
     "component",
