@@ -2539,6 +2539,7 @@
   "msa computer_save",
   "s screen,lam",
   "s search",
-  "s screens"
+  "s screens",
+  "s html_input_type"
  ]
 }
