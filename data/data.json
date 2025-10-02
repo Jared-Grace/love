@@ -1832,7 +1832,8 @@
   ],
   "emoji_secure": [
    "app_karate_home",
-   "emoji_secure"
+   "emoji_secure",
+   "app_karate_computer_save"
   ],
   "app_karate_home": [
    "app_karate_home",
@@ -32324,6 +32325,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "emoji_secure",
     "each",
     "emoji_person_outline",
     "app_karate_style_control_font_size",
