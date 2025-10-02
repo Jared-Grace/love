@@ -32644,7 +32644,7 @@
    ]
   },
   "app_karate_button_back": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "app_screen_set_lambda",
     "emoji_arrow_left",
