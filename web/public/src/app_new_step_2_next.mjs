@@ -1,5 +1,5 @@
-import { app_new_step_4 } from "../../../karate_code/public/src/app_new_step_4.mjs";
-import { app_new_step_5 } from "../../../karate_code/public/src/app_new_step_5.mjs";
+import { app_new_step_4 } from "../../../love/public/src/app_new_step_4.mjs";
+import { app_new_step_5 } from "../../../love/public/src/app_new_step_5.mjs";
 import { app_new_step_2 } from "../../../love/public/src/app_new_step_2.mjs";
 import { app_new_step_3 } from "../../../love/public/src/app_new_step_3.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
