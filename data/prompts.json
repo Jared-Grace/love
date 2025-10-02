@@ -2441,7 +2441,6 @@
   "c html_span_text html_em_text",
   "s karate",
   "s home",
-  "s email",
   "n string_includes_lambda",
   "a sin string_includes",
   "s reg",
@@ -2511,6 +2510,7 @@
   "html_update_staging karate",
   "html_name_to_path_staging test",
   "u fk",
-  "fb"
+  "fb",
+  "s email"
  ]
 }
