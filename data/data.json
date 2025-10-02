@@ -1796,7 +1796,8 @@
    "app_karate_container",
    "app_karate_style_control",
    "string_pad",
-   "string_padded_is"
+   "string_padded_is",
+   "app_karate_computer_save"
   ],
   "html_style_set": [
    "app_karate_container_main",
@@ -15801,6 +15802,7 @@
     "title",
     "details",
     "div",
+    "padding",
     "radios",
     "button_next",
     "lambda",
