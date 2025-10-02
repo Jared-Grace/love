@@ -2425,7 +2425,6 @@
   "s ttri",
   "s next",
   "u hst",
-  "s span",
   "c html_span_text html_em_text",
   "s karate",
   "s home",
@@ -2541,6 +2540,7 @@
   "s search",
   "s screens",
   "s html_input_type",
-  "o app_karate_computer_save"
+  "o app_karate_computer_save",
+  "s span"
  ]
 }
