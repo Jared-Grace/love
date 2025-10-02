@@ -3446,8 +3446,7 @@
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
    "sandbox_4_a",
-   "repo_functions_move",
-   "app_karate_computer_save"
+   "repo_functions_move"
   ],
   "part": [
    "list_filter_includes_not",
@@ -15580,6 +15579,9 @@
    "app_karate_computer_save"
   ],
   "radio_group_name": [
+   "app_karate_computer_save"
+  ],
+  "radios": [
    "app_karate_computer_save"
   ]
  },
@@ -32358,6 +32360,7 @@
     "details",
     "root",
     "container_main",
+    "radios",
     "lambda",
     "container",
     "label",
@@ -32367,8 +32370,7 @@
     "transform",
     "margin",
     "s",
-    "div",
-    "mapped"
+    "div"
    ]
   },
   "app_screen_set_lambda": {
