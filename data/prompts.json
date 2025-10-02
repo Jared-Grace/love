@@ -2356,7 +2356,6 @@
   "s call",
   "s js,call",
   "sps",
-  "fns",
   "of fns",
   "o v",
   "s acro",
@@ -2515,6 +2514,7 @@
   "as screen",
   "msa public",
   "n repo_functions_move_if_starts_with_not",
-  "s acronym"
+  "s acronym",
+  "fns"
  ]
 }
