@@ -351,7 +351,8 @@
    "html_div",
    "html_div_text",
    "html_loading",
-   "html_input"
+   "html_input",
+   "html_input_type"
   ],
   "text": [
    "app_karate_button_screen_green",
@@ -1195,7 +1196,8 @@
    "app_karate_email",
    "firebase_storage_function_run",
    "html_attribute_set",
-   "html_meta_viewport"
+   "html_meta_viewport",
+   "html_input_type"
   ],
   "emoji_email": [
    "app_karate_email",
@@ -1258,7 +1260,8 @@
    "roman_to_integer",
    "string_includes",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "html_input_type"
   ],
   "div_checks": [
    "app_karate_email"
@@ -15517,13 +15520,16 @@
   ],
   "html_input": [
    "app_karate_email",
-   "html_input"
+   "html_input",
+   "html_input_type"
   ],
   "input_type": [
-   "app_karate_email"
+   "app_karate_email",
+   "html_input_type"
   ],
   "html_input_type": [
-   "app_karate_email"
+   "app_karate_email",
+   "html_input_type"
   ]
  },
  "functions": {
@@ -32309,6 +32315,17 @@
     "html_input",
     "div",
     "component2"
+   ]
+  },
+  "html_input_type": {
+   "async": false,
+   "identifiers": [
+    "html_attribute_set",
+    "html_input",
+    "html_input_type",
+    "div",
+    "input_type",
+    "input"
    ]
   }
  }
