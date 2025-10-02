@@ -9047,7 +9047,8 @@
    "js_function_last_asyncify",
    "js_stack_last_function",
    "marker_param_add",
-   "sandbox_2"
+   "sandbox_2",
+   "function_is"
   ],
   "projects": [
    "firebase_name_repo"
@@ -32624,7 +32625,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "function_is"
+    "function_is",
+    "f"
    ]
   }
  }
