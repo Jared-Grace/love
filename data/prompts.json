@@ -2534,6 +2534,7 @@
   "s repo,acr",
   "p",
   "repo_functions_move_if_includes_not l app_karate",
-  "ps"
+  "ps",
+  "n repo_functions_move_if_includes_not_love_app_karate"
  ]
 }
