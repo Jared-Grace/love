@@ -5821,7 +5821,8 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform"
   ],
   "book_code": [
    "app_reply_main",
@@ -20218,6 +20219,7 @@
     "function_transform",
     "functions_transform",
     "lambda",
+    "list",
     "lambda2",
     "f_name",
     "output",
