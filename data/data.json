@@ -722,7 +722,8 @@
    "user_repo_set",
    "watch",
    "whitespace_normalize",
-   "html_checked_get"
+   "html_checked_get",
+   "js_if_blockify_generic"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -25867,6 +25868,7 @@
   "js_if_blockify_generic": {
    "async": true,
    "identifiers": [
+    "marker",
     "not",
     "js_visit_type_each_async",
     "object_replace",
