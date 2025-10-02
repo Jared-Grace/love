@@ -2473,7 +2473,6 @@
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
   "ff app_karate_main",
   "fws firebase_deploy_function app_karate_main",
-  "s import",
   "functions_names",
   "o u",
   "a fk firebase_deploy_function_app_karate_main",
@@ -2529,6 +2528,7 @@
   "repo_functions_move_if_includes_not l app_karate",
   "repo_function_move html_em_text love",
   "s file_",
-  "o r"
+  "o r",
+  "s import"
  ]
 }
