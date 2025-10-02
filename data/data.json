@@ -15643,6 +15643,9 @@
   ],
   "containers": [
    "app_karate_computer_save"
+  ],
+  "selected": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15744,6 +15747,7 @@
     "validate",
     "lambda2",
     "r",
+    "selected",
     "containers",
     "transform",
     "margin",
