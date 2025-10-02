@@ -7916,7 +7916,8 @@
    "ebible_chapter_code_to_book",
    "string_take",
    "string_take_less_1",
-   "string_trim_right"
+   "string_trim_right",
+   "html_rgba_to_rgb"
   ],
   "string_to": [
    "ebible_chapter_code_to_name",
@@ -8509,7 +8510,8 @@
   "taken": [
    "ebible_version_books_testament",
    "list_take",
-   "string_take"
+   "string_take",
+   "html_rgba_to_rgb"
   ],
   "ebible_version_books_testament_apocrypha": [
    "ebible_version_books_testament_apocrypha",
@@ -15645,13 +15647,15 @@
    "app_karate_computer_save"
   ],
   "selected": [
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "html_rgba_to_rgb"
   ],
   "container2": [
    "app_karate_computer_save"
   ],
   "html_rgba_to_rgb": [
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "html_rgba_to_rgb"
   ]
  },
  "functions": {
@@ -32572,6 +32576,15 @@
     "lambda",
     "div",
     "color"
+   ]
+  },
+  "html_rgba_to_rgb": {
+   "async": false,
+   "identifiers": [
+    "string_take",
+    "html_rgba_to_rgb",
+    "selected",
+    "taken"
    ]
   }
  }
