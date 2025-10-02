@@ -409,7 +409,6 @@
    "app_screen_set_lambda"
   ],
   "screen_name": [
-   "app_karate_button_screen_green",
    "app_karate_button_screen_uncolored",
    "app_karate_home",
    "app_refresh",
@@ -1645,7 +1644,8 @@
    "functions_transform_list",
    "functions_imports_fix_list",
    "app_screen_set_lambda",
-   "app_karate_button_screen_uncolored"
+   "app_karate_button_screen_uncolored",
+   "app_karate_button_screen_green"
   ],
   "c": [
    "app_karate_email",
@@ -15537,7 +15537,7 @@
     "div",
     "text",
     "context",
-    "screen_name",
+    "lambda",
     "component",
     "color"
    ]
