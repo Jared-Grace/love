@@ -1630,8 +1630,7 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch",
-   "repo_function_move"
+   "watch"
   ],
   "c": [
    "app_karate_email",
@@ -3492,8 +3491,7 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run",
-   "repo_function_move"
+   "tasks_run"
   ],
   "n": [
    "list_filter_includes_not",
@@ -5208,8 +5206,7 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
-   "sandbox_4_a",
-   "repo_function_move"
+   "sandbox_4_a"
   ],
   "en": [
    "app_reply_main",
@@ -5610,8 +5607,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "repo_function_move"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -7202,8 +7198,7 @@
    "object_properties_delete",
    "object_properties_from",
    "reply_test",
-   "tasks_run",
-   "repo_function_move"
+   "tasks_run"
   ],
   "parsed": [
    "data_files_update",
@@ -7753,8 +7748,7 @@
    "object_properties",
    "object_properties_delete_all",
    "reply_test",
-   "tasks_run",
-   "repo_function_move"
+   "tasks_run"
   ],
   "each_object": [
    "each_object",
@@ -10375,8 +10369,7 @@
    "function_dependencies_code",
    "js_block_child_graph_unparse",
    "list_map_unordered_async",
-   "repos_gitignore_overwrite",
-   "repo_function_move"
+   "repos_gitignore_overwrite"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -32067,8 +32060,6 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
-    "list_map_unordered_async",
-    "object_properties",
     "data_identifiers_search",
     "file_delete",
     "file_copy",
@@ -32087,12 +32078,7 @@
     "search",
     "f_path",
     "v",
-    "result",
-    "properties",
-    "lambda",
-    "item",
-    "waited",
-    "list"
+    "result"
    ]
   },
   "repo_functions_path": {
