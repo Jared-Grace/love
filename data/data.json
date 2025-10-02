@@ -3460,7 +3460,9 @@
    "range",
    "reply",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "js_arrow_blockify",
+   "js_if_blockify"
   ],
   "list_empty": [
    "app_new_step_3_generic",
@@ -23889,7 +23891,8 @@
     "js_arrow_blockify",
     "ast",
     "type",
-    "property_name"
+    "property_name",
+    "list_add"
    ]
   },
   "js_arrow_to_function": {
@@ -25862,7 +25865,8 @@
     "js_if_blockify",
     "ast",
     "type",
-    "property_name"
+    "property_name",
+    "list_add"
    ]
   },
   "js_if_blockify_generic": {
