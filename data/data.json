@@ -8976,7 +8976,6 @@
    "puppeteer_hrefs_starts_with",
    "string_prefix_without",
    "string_starts_with",
-   "repo_functions_move_if_starts_with_not",
    "list_filter_starts_with_not"
   ],
   "path_folder": [
@@ -9441,7 +9440,8 @@
    "function_name_to_path_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "repo_functions_move_if_starts_with_not"
   ],
   "function_open": [
    "functions_search_open",
@@ -31956,7 +31956,7 @@
     "repo_functions_names",
     "repo_functions_move_if_starts_with_not",
     "to",
-    "prefix",
+    "search",
     "repo_name",
     "f_names",
     "filtered"
