@@ -3899,7 +3899,8 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set"
+   "error_attention_set",
+   "html_checked_get"
   ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
@@ -32760,7 +32761,8 @@
     "input",
     "value",
     "arguments",
-    "element"
+    "element",
+    "value2"
    ]
   }
  }
