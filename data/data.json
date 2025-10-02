@@ -4382,7 +4382,8 @@
    "watch",
    "repo_functions_move",
    "functions_transform_list",
-   "functions_imports_fix_list"
+   "functions_imports_fix_list",
+   "app_karate_home"
   ],
   "index": [
    "app_replace_home",
@@ -15699,6 +15700,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "app_screen_set_lambda",
     "app_karate_container_main",
     "html_span_text",
     "html_text_set",
@@ -15723,9 +15725,9 @@
     "parent",
     "button_text",
     "lambda",
-    "button",
-    "app_screen_set_lambda",
-    "screen"
+    "lambda2",
+    "screen",
+    "button"
    ]
   },
   "app_karate_main": {
