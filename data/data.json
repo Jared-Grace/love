@@ -450,7 +450,8 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_karate_computer_save"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -942,7 +943,8 @@
   ],
   "html_on_input": [
    "app_karate_email",
-   "html_on_input"
+   "html_on_input",
+   "app_karate_computer_save"
   ],
   "not": [
    "app_karate_email",
@@ -4802,7 +4804,8 @@
    "messenger_reply_messages",
    "object_properties_from",
    "puppeteer_hrefs",
-   "retry"
+   "retry",
+   "app_karate_computer_save"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -32330,6 +32333,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_on_input",
     "html_attribute_set",
     "emoji_secure",
     "each",
@@ -32359,6 +32363,8 @@
     "label",
     "radio_group_name",
     "input",
+    "lambda3",
+    "component",
     "transform",
     "margin",
     "s",
