@@ -1102,7 +1102,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "app_karate_computer_save"
   ],
   "html_clear": [
    "app_karate_email",
@@ -15590,6 +15591,9 @@
    "app_karate_computer_save"
   ],
   "radio": [
+   "app_karate_computer_save"
+  ],
+  "container2": [
    "app_karate_computer_save"
   ]
  },
@@ -32343,6 +32347,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "object_merge",
     "each",
     "html_value_get",
@@ -32380,6 +32385,7 @@
     "lambda3",
     "lambda2",
     "r",
+    "container2",
     "value2",
     "transform",
     "margin",
