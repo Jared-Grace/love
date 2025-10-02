@@ -1508,7 +1508,6 @@
   "atn calls_to_each",
   "ts",
   "ftc js_calls_to_each app_new",
-  "s null",
   "s ;et",
   "s let",
   "cs list_index_of_next outside",
@@ -2545,6 +2544,7 @@
   "o app_karate_button_screen_uncolored",
   "s value_get",
   "c html_value_set html_checked_set",
-  "r app_karate_button_screen_green app_karate_button_green"
+  "r app_karate_button_screen_green app_karate_button_green",
+  "s null"
  ]
 }
