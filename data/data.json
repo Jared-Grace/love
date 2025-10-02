@@ -1264,7 +1264,8 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "repo_functions_move"
+   "repo_functions_move",
+   "html_checked_get"
   ],
   "list_map_property": [
    "app_karate_computer_save",
@@ -2743,8 +2744,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "watch",
-   "html_checked_get"
+   "watch"
   ],
   "html_input": [
    "html_input",
@@ -32752,8 +32752,8 @@
   "html_checked_get": {
    "async": false,
    "identifiers": [
+    "object_property_get",
     "assert_arguments",
-    "object_property_set",
     "marker",
     "html_component_element_get",
     "html_checked_get",
