@@ -22,8 +22,7 @@
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_email"
+   "app_karate_button_screen_green_style_assign"
   ],
   "v": [
    "app_karate_button_background",
@@ -1052,8 +1051,7 @@
   "app_karate_container_background": [
    "app_karate_computer_save",
    "app_karate_container",
-   "app_karate_container_background",
-   "app_karate_email"
+   "app_karate_container_background"
   ],
   "object_property_get": [
    "app_karate_computer_save",
@@ -1858,7 +1856,6 @@
    "html_value_set"
   ],
   "html_enable_if": [
-   "app_karate_email",
    "app_replace_rule_set",
    "html_enable_if"
   ],
@@ -2160,15 +2157,8 @@
    "app_karate_email",
    "function_aliases_restore"
   ],
-  "border_color": [
-   "app_karate_email"
-  ],
   "background": [
-   "app_karate_email",
    "html_loading"
-  ],
-  "button_background": [
-   "app_karate_email"
   ],
   "element": [
    "app_karate_email",
@@ -15621,8 +15611,10 @@
    "watch"
   ],
   "app_karate_button_background_invalid": [
-   "app_karate_email",
    "app_karate_button_background_invalid"
+  ],
+  "app_karate_validate_style_assign": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15796,12 +15788,9 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
-    "app_karate_button_background_invalid",
+    "app_karate_validate_style_assign",
     "html_input_email",
     "html_component_element_get",
-    "app_karate_button_background",
-    "html_enable_if",
-    "app_karate_container_background",
     "html_style_set",
     "app_karate_container",
     "html_on_input",
@@ -15854,9 +15843,6 @@
     "check2",
     "a",
     "li",
-    "border_color",
-    "background",
-    "button_background",
     "element",
     "focus"
    ]
