@@ -2563,6 +2563,7 @@
   "p",
   "pn add_copy list_add",
   "is js_if_blockify_generic",
-  "s return,add"
+  "s return,add",
+  "as firebase,karate"
  ]
 }
