@@ -9048,7 +9048,8 @@
    "js_stack_last_function",
    "marker_param_add",
    "sandbox_2",
-   "function_is"
+   "function_is",
+   "html_on"
   ],
   "projects": [
    "firebase_name_repo"
@@ -15673,10 +15674,12 @@
    "app_karate_computer_save"
   ],
   "function_is": [
-   "function_is"
+   "function_is",
+   "html_on"
   ],
   "fi": [
-   "function_is"
+   "function_is",
+   "html_on"
   ]
  },
  "functions": {
@@ -22908,12 +22911,15 @@
   "html_on": {
    "async": false,
    "identifiers": [
+    "function_is",
     "assert",
     "html_component_element_get",
     "html_on",
     "component",
     "name_event",
     "lambda",
+    "fi",
+    "f",
     "b",
     "element",
     "addEventListener"
