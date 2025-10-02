@@ -32555,9 +32555,9 @@
     "border_color",
     "background",
     "button_background",
-    "list",
     "lambda",
     "item",
+    "list",
     "div",
     "color"
    ]
