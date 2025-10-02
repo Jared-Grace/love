@@ -3555,8 +3555,7 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run",
-   "app_karate_computer_save"
+   "tasks_run"
   ],
   "n": [
    "list_filter_includes_not",
@@ -4954,7 +4953,8 @@
    "marker_functionize",
    "range_from",
    "reply",
-   "sandbox"
+   "sandbox",
+   "app_karate_computer_save"
   ],
   "any": [
    "app_replace_rule_set",
@@ -5874,8 +5874,7 @@
    "functions_transform",
    "functions_transform_list",
    "functions_imports_fix",
-   "functions_imports_fix_list",
-   "app_karate_computer_save"
+   "functions_imports_fix_list"
   ],
   "book_code": [
    "app_reply_main",
@@ -32378,8 +32377,7 @@
     "radio",
     "lambda3",
     "lambda2",
-    "item",
-    "list",
+    "r",
     "value2",
     "transform",
     "margin",
