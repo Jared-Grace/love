@@ -651,7 +651,8 @@
   ],
   "app_karate_button_green": [
    "app_karate_button_green",
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_email"
   ],
   "div": [
    "app_karate_button_green",
@@ -1963,9 +1964,6 @@
   "emoji_arrow_right": [
    "app_karate_email",
    "emoji_arrow_right"
-  ],
-  "app_karate_button_screen_green": [
-   "app_karate_email"
   ],
   "emoji_email": [
    "app_karate_email",
@@ -15812,7 +15810,7 @@
     "string_empty_not_is",
     "app_karate_container_main",
     "emoji_arrow_right",
-    "app_karate_button_screen_green",
+    "app_karate_button_green",
     "emoji_email",
     "app_karate_div_text",
     "app_karate_green_dark",
