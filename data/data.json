@@ -6167,7 +6167,8 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_karate_home"
   ],
   "assert_not": [
    "assert_not",
@@ -13151,7 +13152,8 @@
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
    "app_karate_computer_save",
-   "app_screen_set_lambda"
+   "app_screen_set_lambda",
+   "app_karate_home"
   ],
   "list_first_remaining": [
    "js_dollar_g",
@@ -15727,6 +15729,7 @@
   "app_karate_home": {
    "async": false,
    "identifiers": [
+    "log",
     "app_screen_set_lambda",
     "app_karate_container_main",
     "html_span_text",
@@ -15752,6 +15755,7 @@
     "parent",
     "button_text",
     "screen",
+    "message",
     "lambda2",
     "button"
    ]
