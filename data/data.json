@@ -32391,10 +32391,11 @@
     "details",
     "root",
     "container_main",
+    "div",
+    "label",
     "radios",
     "lambda",
     "container",
-    "label",
     "radio_group_name",
     "checkbox",
     "lambda3",
@@ -32403,8 +32404,7 @@
     "container2",
     "transform",
     "margin",
-    "s",
-    "div"
+    "s"
    ]
   },
   "app_screen_set_lambda": {
