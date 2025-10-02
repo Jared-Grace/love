@@ -2259,7 +2259,8 @@
    "js_dollar_g",
    "js_dollar_new",
    "js_marker_insert",
-   "marker_assign_replace_string"
+   "marker_assign_replace_string",
+   "marker_screen_add"
   ],
   "firebase_name_repo": [
    "app_new_step_3_generic",
@@ -2664,7 +2665,8 @@
    "folder_current_join",
    "folder_current_join_code",
    "js_code_string",
-   "js_string"
+   "js_string",
+   "marker_screen_add"
   ],
   "main_name": [
    "app_new_step_3_generic"
@@ -12913,7 +12915,8 @@
    "js_dollar_g",
    "js_dollar_new",
    "js_marker_insert",
-   "marker_assign_replace_string"
+   "marker_assign_replace_string",
+   "marker_screen_add"
   ],
   "declaration_id": [
    "js_declaration_name"
@@ -15473,9 +15476,6 @@
   ],
   "repo_functions_move_if_includes_not_love_app_karate": [
    "repo_functions_move_if_includes_not_love_app_karate"
-  ],
-  "jcs": [
-   "marker_screen_add"
   ]
  },
  "functions": {
@@ -29297,6 +29297,7 @@
   "marker_screen_add": {
    "async": true,
    "identifiers": [
+    "js_code_string",
     "html_clear_context",
     "js_declaration_single_block_body_add",
     "js_parse_statement",
@@ -29322,7 +29323,8 @@
     "lambda",
     "a",
     "properties",
-    "jcs",
+    "code_string",
+    "value_string",
     "key",
     "combined_screen",
     "value",
