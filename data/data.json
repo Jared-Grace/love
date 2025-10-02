@@ -6167,8 +6167,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_karate_computer_save"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -32299,7 +32298,6 @@
     "marker",
     "app_karate_computer_save",
     "context",
-    "message",
     "root",
     "container",
     "label",
