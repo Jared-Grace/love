@@ -709,7 +709,6 @@
   "s size,assert",
   "n list_squash",
   "a er error",
-  "s statement",
   "nj dollar_f",
   "s parent",
   "s code,fn",
@@ -2547,6 +2546,7 @@
   "r app_karate_button_screen_green app_karate_button_green",
   "s null",
   "s return,add",
-  "s if,js"
+  "s if,js",
+  "s statement"
  ]
 }
