@@ -2286,7 +2286,8 @@
    "function_import",
    "function_name_repo_path_combine",
    "function_name_to_path_search",
-   "function_name_to_path_unalias"
+   "function_name_to_path_unalias",
+   "function_parse_strict"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -2536,7 +2537,8 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new"
+   "task_new",
+   "function_parse_strict"
   ],
   "ast": [
    "app_new_step_3_generic",
@@ -3659,7 +3661,8 @@
    "function_name_to_path_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run"
+   "tasks_run",
+   "function_parse_strict"
   ],
   "f_path": [
    "repo_functions_move",
@@ -21656,10 +21659,13 @@
   "function_parse_strict": {
    "async": true,
    "identifiers": [
+    "function_name_to_path_search",
     "file_js_parse",
     "function_name_to_path",
     "function_parse_strict",
     "f_name",
+    "search",
+    "unaliased",
     "f_path",
     "parsed"
    ]
