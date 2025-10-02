@@ -5421,8 +5421,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_karate_computer_save"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -8321,8 +8320,7 @@
    "js_dollar_r",
    "list_first_second",
    "list_second",
-   "sandbox_4_a",
-   "app_karate_computer_save"
+   "sandbox_4_a"
   ],
   "list_multiple_is": [
    "ebible_references_parse_lines",
@@ -8413,8 +8411,7 @@
    "list_first_second_generic",
    "list_second",
    "sandbox_4_a",
-   "string_split_dash",
-   "app_karate_computer_save"
+   "string_split_dash"
   ],
   "pad_count": [
    "ebible_references_parse_lines"
@@ -15739,6 +15736,9 @@
   ],
   "checkeds": [
    "app_karate_computer_save"
+  ],
+  "lsg": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15836,7 +15836,6 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "list_second",
     "html_checked_get",
     "list_filter",
     "storage_local_set_context",
@@ -15896,8 +15895,7 @@
     "s",
     "lambda5",
     "checkeds",
-    "second",
-    "list",
+    "lsg",
     "valid",
     "containers"
    ]
