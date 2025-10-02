@@ -2259,7 +2259,6 @@
   "function_parse_declaration_js_unparse test",
   "de s5_inner",
   "functions_path",
-  "o fns",
   "o functions_paths",
   "n test2",
   "function_name_to_path_import test",
@@ -2515,6 +2514,7 @@
   "msa public",
   "n repo_functions_move_if_starts_with_not",
   "s acronym",
-  "fns"
+  "fns",
+  "o fns"
  ]
 }
