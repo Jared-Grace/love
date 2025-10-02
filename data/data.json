@@ -314,7 +314,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "repo_function_move"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -32061,7 +32062,8 @@
     "f_name_ext",
     "joined",
     "search",
-    "f_path"
+    "f_path",
+    "v"
    ]
   },
   "repo_functions_path": {
