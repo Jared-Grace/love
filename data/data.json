@@ -1386,7 +1386,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "app_karate_computer_save"
   ],
   "trimmed": [
    "app_karate_email"
@@ -32351,6 +32352,7 @@
     "app_karate_computer_save",
     "context",
     "choices",
+    "value",
     "title",
     "details",
     "root",
