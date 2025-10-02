@@ -15551,6 +15551,9 @@
   "html_font_size_1em": [
    "app_karate_computer_save",
    "html_font_size_1em"
+  ],
+  "app_karate_style_control_font_size": [
+   "app_karate_style_control"
   ]
  },
  "functions": {
@@ -15829,6 +15832,7 @@
   "app_karate_style_control": {
    "async": false,
    "identifiers": [
+    "app_karate_style_control_font_size",
     "app_karate_margin_y_set",
     "html_style_assign",
     "app_karate_style_control",
