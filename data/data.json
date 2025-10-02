@@ -2329,7 +2329,6 @@
    "html_index_generate",
    "html_update_public_generic",
    "html_update_staging",
-   "repo_functions_move",
    "app_main",
    "app_replace",
    "app_reply",
@@ -3831,7 +3830,8 @@
    "js_expand_generic",
    "js_imports_missing",
    "repos_paths_map_unordered_combine",
-   "string_split_comma"
+   "string_split_comma",
+   "repo_functions_move"
   ],
   "functions_names_from_path": [
    "repo_functions_names",
@@ -16055,7 +16055,7 @@
     "repo_functions_path",
     "marker",
     "repo_functions_move",
-    "f_name",
+    "f_names",
     "repo_name_to",
     "r_path",
     "f_name_ext",
