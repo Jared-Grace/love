@@ -15494,6 +15494,9 @@
   ],
   "html_button_karate_text": [
    "app_karate_home"
+  ],
+  "button": [
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15703,6 +15706,7 @@
     "parent",
     "text",
     "screen_name",
+    "button",
     "div"
    ]
   },
