@@ -15577,6 +15577,9 @@
   ],
   "radio_group_name": [
    "app_karate_computer_save"
+  ],
+  "html_attribute_get": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32357,6 +32360,7 @@
     "label",
     "radio_group_name",
     "input",
+    "html_attribute_get",
     "transform",
     "margin",
     "s",
