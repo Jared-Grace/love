@@ -2514,7 +2514,6 @@
   "o is",
   "s imports,fix",
   "s repo,acr",
-  "p",
   "repo_functions_move_if_includes_not l app_karate",
   "ps",
   "n repo_functions_move_if_includes_not_love_app_karate",
@@ -2562,6 +2561,7 @@
   "is js_statement_return_add",
   "fs js_if_blockify_generic",
   "pn add_copy",
+  "p",
   "pn add_copy list_add"
  ]
 }
