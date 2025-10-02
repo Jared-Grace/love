@@ -1269,8 +1269,7 @@
    "string_suffix_change",
    "string_to",
    "html_input_type",
-   "html_input_email",
-   "app_karate_computer_save"
+   "html_input_email"
   ],
   "div_checks": [
    "app_karate_email"
@@ -15582,6 +15581,9 @@
    "app_karate_computer_save"
   ],
   "radios": [
+   "app_karate_computer_save"
+  ],
+  "radio": [
    "app_karate_computer_save"
   ]
  },
@@ -32365,7 +32367,7 @@
     "container",
     "label",
     "radio_group_name",
-    "input",
+    "radio",
     "lambda3",
     "transform",
     "margin",
