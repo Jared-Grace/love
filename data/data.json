@@ -346,7 +346,6 @@
    "app_karate_div",
    "app_karate_div_text",
    "app_karate_email",
-   "app_karate_home",
    "app_replace_rule_set",
    "html_div",
    "html_div_text",
@@ -3825,7 +3824,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "app_karate_home"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -4585,7 +4585,8 @@
    "marker_previous_index",
    "object_copy",
    "object_merge",
-   "object_replace"
+   "object_replace",
+   "app_karate_home"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -7917,7 +7918,8 @@
    "string_base64_to",
    "string_list_to",
    "string_replace",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "app_karate_home"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -15492,10 +15494,13 @@
   "computer_save": [
    "app_karate_screens"
   ],
-  "html_button_karate_text": [
+  "button": [
    "app_karate_home"
   ],
-  "button": [
+  "html_button_karate_container": [
+   "app_karate_home"
+  ],
+  "to2": [
    "app_karate_home"
   ]
  },
@@ -15695,19 +15700,22 @@
     "emoji_secure",
     "html_clear_context",
     "marker",
+    "object_merge",
     "app_karate_home",
     "context",
     "root",
     "container",
     "component",
-    "html_button_karate_text",
+    "html_button_karate_container",
     "component2",
     "component3",
     "parent",
     "text",
     "screen_name",
     "button",
-    "div"
+    "to2",
+    "to",
+    "from"
    ]
   },
   "app_karate_main": {
