@@ -2198,8 +2198,7 @@
   "app_screen_set_lambda": [
    "app_karate_home",
    "app_screen_set_lambda",
-   "html_button_screen",
-   "app_karate_button_back"
+   "html_button_screen"
   ],
   "emoji_add": [
    "app_karate_home",
@@ -32625,8 +32624,7 @@
     "container",
     "context",
     "screen",
-    "component2",
-    "app_screen_set_lambda"
+    "component2"
    ]
   },
   "function_is": {
