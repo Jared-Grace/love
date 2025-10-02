@@ -8229,8 +8229,7 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect",
-   "repo_functions_move"
+   "list_intersect"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -16088,7 +16087,6 @@
     "mapped",
     "squashed",
     "unique",
-    "list2",
     "v"
    ]
   },
