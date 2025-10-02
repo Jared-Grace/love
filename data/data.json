@@ -335,7 +335,8 @@
   "app_karate_button_screen_uncolored": [
    "app_karate_button_screen_green",
    "app_karate_button_screen_uncolored",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_button_green"
   ],
   "app_karate_button_screen_green": [
    "app_karate_button_screen_green",
@@ -359,7 +360,8 @@
    "html_input_email",
    "app_karate_computer_save",
    "html_font_size_1em",
-   "html_centered"
+   "html_centered",
+   "app_karate_button_green"
   ],
   "text": [
    "app_karate_button_screen_green",
@@ -390,7 +392,8 @@
    "messenger_reply_unread_click",
    "puppeteer_matches",
    "sandbox_2",
-   "urdu_allah_to_god"
+   "urdu_allah_to_god",
+   "app_karate_button_green"
   ],
   "context": [
    "app_karate_email",
@@ -452,7 +455,8 @@
    "html_style_set_or_remove",
    "html_text_set",
    "html_text_set_if",
-   "app_karate_button_screen_green_style_assign"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_button_green"
   ],
   "color": [
    "app_karate_email",
@@ -1667,7 +1671,8 @@
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
    "app_karate_button_screen_green",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_button_green"
   ],
   "c": [
    "app_karate_email",
@@ -15604,7 +15609,8 @@
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_screen_green",
-   "app_karate_button_screen_green_style_assign"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_button_green"
   ],
   "checkbox": [
    "app_karate_computer_save"
@@ -15617,6 +15623,9 @@
    "app_karate_container_centered",
    "html_centered",
    "app_karate_computer_save"
+  ],
+  "app_karate_button_green": [
+   "app_karate_button_green"
   ]
  },
  "functions": {
@@ -32502,6 +32511,18 @@
     "html_style_set",
     "html_centered",
     "div"
+   ]
+  },
+  "app_karate_button_green": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_screen_green_style_assign",
+    "app_karate_button_screen_uncolored",
+    "app_karate_button_green",
+    "div",
+    "text",
+    "lambda",
+    "component"
    ]
   }
  }
