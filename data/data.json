@@ -32354,9 +32354,9 @@
     "margin",
     "s",
     "div",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "list"
    ]
   },
   "app_screen_set_lambda": {
