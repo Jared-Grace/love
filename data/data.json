@@ -6168,8 +6168,7 @@
    "string_is_assert_json",
    "string_is_assert_message",
    "string_trim",
-   "undefined_not_is_assert_lambda",
-   "app_karate_home"
+   "undefined_not_is_assert_lambda"
   ],
   "assert_not": [
    "assert_not",
@@ -15758,7 +15757,6 @@
     "screen",
     "lambda2",
     "lambda",
-    "message",
     "button"
    ]
   },
