@@ -5,15 +5,15 @@
  "identifiers": {
   "firebase_deploy_function_destination_production": [
    "app_karate",
+   "app_new_step_3",
    "firebase_deploy_function_destination_production",
-   "firebase_promote_function",
-   "app_new_step_3"
+   "firebase_promote_function"
   ],
   "app_main": [
    "app_karate",
    "app_karate_staging",
-   "app_new_step_3_generic",
-   "app_main"
+   "app_main",
+   "app_new_step_3_generic"
   ],
   "app_karate": [
    "app_karate",
@@ -22,8 +22,8 @@
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
-   "app_karate_email",
-   "app_karate_button_screen_green_style_assign"
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_email"
   ],
   "v": [
    "app_karate_button_background",
@@ -31,13 +31,10 @@
    "app_karate_green_dark",
    "app_karate_margin_y",
    "app_karate_screens",
-   "emoji_arrow_left",
-   "emoji_arrow_right",
+   "app_karate_style_control_font_size",
+   "app_screen_set_lambda",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
-   "repo_functions_move",
-   "string_includes_not",
-   "string_regex_match",
    "app_name_prefix",
    "app_new_assign",
    "app_replace_font_size_factor",
@@ -77,6 +74,8 @@
    "ebible_version_books_upload_name",
    "emoji_100",
    "emoji_add",
+   "emoji_arrow_left",
+   "emoji_arrow_right",
    "emoji_book_open",
    "emoji_cross",
    "emoji_dove",
@@ -104,6 +103,7 @@
    "folder_read_async",
    "folder_read_files",
    "functions_imports_fix",
+   "functions_imports_fix_list",
    "functions_log_remove",
    "functions_paths",
    "function_acronym_to_name",
@@ -290,6 +290,8 @@
    "repo_about_get",
    "repo_acronym_get",
    "repo_firebase_service_account_get",
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not",
    "roman_to_integer",
    "sandbox",
    "sandbox_3",
@@ -302,10 +304,12 @@
    "string_dot",
    "string_empty",
    "string_includes",
+   "string_includes_not",
    "string_is_assert_message",
    "string_list_to",
    "string_lord_bless",
    "string_may_the_lord",
+   "string_regex_match",
    "string_size",
    "string_slice",
    "string_the_servant_of_god_is",
@@ -315,243 +319,29 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "functions_imports_fix_list",
-   "repo_functions_move_if_includes_not",
-   "app_screen_set_lambda",
-   "app_karate_style_control_font_size"
-  ],
-  "html_style_assign": [
-   "app_karate_container",
-   "app_karate_email",
-   "app_karate_style_control",
-   "html_loading",
-   "html_style_assign",
-   "html_style_margin_y",
-   "html_font_size_1em",
-   "app_karate_computer_save",
-   "app_karate_button_screen_green_style_assign"
-  ],
-  "app_karate_button_screen_uncolored": [
-   "app_karate_button_screen_green",
-   "app_karate_button_screen_uncolored",
-   "app_karate_email",
-   "app_karate_button_green"
-  ],
-  "app_karate_button_screen_green": [
-   "app_karate_button_screen_green",
-   "app_karate_email",
-   "app_karate_home"
-  ],
-  "div": [
-   "app_karate_button_screen_green",
-   "app_karate_button_screen_uncolored",
-   "app_karate_container",
-   "app_karate_container_centered",
-   "app_karate_div",
-   "app_karate_div_text",
-   "app_karate_email",
-   "app_replace_rule_set",
-   "html_div",
-   "html_div_text",
-   "html_loading",
-   "html_input",
-   "html_input_type",
-   "html_input_email",
-   "app_karate_computer_save",
-   "html_font_size_1em",
-   "html_centered",
-   "app_karate_button_green"
-  ],
-  "text": [
-   "app_karate_button_screen_green",
-   "app_karate_button_screen_uncolored",
-   "app_karate_email",
-   "app_karate_home",
-   "html_em_text",
-   "html_span_text",
-   "app_replace_rule_set",
-   "app_reply_choices",
-   "app_reply_main",
-   "app_reply_pray",
-   "clipboard_copy",
-   "ebible_chapter_text",
-   "ebible_verses",
-   "ebible_verse_new",
-   "ebible_versions",
-   "html_button",
-   "html_button_screen",
-   "html_div_text",
-   "html_parse_classes_preview",
-   "html_parse_href_text",
-   "html_parse_text",
-   "html_p_text",
-   "html_text_set",
-   "http_json",
-   "http_local_text",
-   "messenger_reply_unread_click",
-   "puppeteer_matches",
-   "sandbox_2",
-   "urdu_allah_to_god",
-   "app_karate_button_green"
-  ],
-  "context": [
-   "app_karate_email",
-   "app_karate_home",
-   "app_karate_main",
-   "app_refresh",
-   "app_replace_font_size",
-   "app_replace_font_size_adjust",
-   "app_replace_font_size_refresh",
-   "app_replace_home",
-   "app_replace_main",
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_screen_set",
-   "html_button_screen",
-   "html_clear_context",
-   "messenger_reply_login",
-   "messenger_reply_playwright",
-   "storage_local_get_context",
-   "storage_local_initialize_context",
-   "storage_local_set_context",
-   "app_karate_computer_save",
-   "app_screen_set_lambda"
-  ],
-  "screen_name": [
-   "app_refresh",
-   "function_new_app_screen",
-   "html_button_screen",
-   "marker_screen_add",
-   "app_screen_set_lambda"
-  ],
-  "component": [
-   "app_karate_button_screen_green",
-   "app_karate_button_screen_uncolored",
-   "app_karate_email",
-   "app_karate_home",
-   "app_karate_margin_y_set",
-   "app_karate_style_control",
-   "html_on_change",
-   "html_on_input",
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_reply_main",
-   "firebase_storage_function_run",
-   "html_attribute_set",
-   "html_button",
-   "html_button_screen",
-   "html_component_element_get",
-   "html_document_head",
-   "html_element",
-   "html_enable_if",
-   "html_meta_viewport",
-   "html_on",
-   "html_on_click",
-   "html_on_keydown",
-   "html_p",
-   "html_remove",
-   "html_style_margin_y",
-   "html_style_set_or_remove",
-   "html_text_set",
-   "html_text_set_if",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_button_green"
-  ],
-  "color": [
-   "app_karate_email",
-   "chalk_color",
-   "chalk_green",
-   "chalk_red",
-   "app_karate_button_screen_green_style_assign"
-  ],
-  "app_karate_style_control": [
-   "app_karate_button_screen_uncolored",
-   "app_karate_email",
-   "app_karate_style_control",
-   "app_karate_computer_save"
-  ],
-  "html_button_screen": [
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "html_button_screen"
-  ],
-  "app_karate_container_background": [
-   "app_karate_container",
-   "app_karate_container_background",
-   "app_karate_email",
-   "app_karate_computer_save"
-  ],
-  "html_style_margin_y": [
-   "app_karate_container",
-   "app_karate_margin_y_set",
-   "html_style_margin_y"
-  ],
-  "html_div": [
-   "app_karate_container",
-   "app_karate_container_main",
-   "app_karate_div",
-   "app_replace_rule_set",
-   "html_div",
-   "html_div_text",
-   "html_loading"
-  ],
-  "app_karate_container": [
-   "app_karate_container",
-   "app_karate_container_centered",
-   "app_karate_email"
-  ],
-  "parent": [
-   "app_karate_container",
-   "app_karate_container_centered",
-   "app_karate_div",
-   "app_karate_div_text",
-   "app_karate_home",
-   "html_button",
-   "html_button_element",
-   "html_button_screen",
-   "html_element",
-   "html_p_text_multiple"
-  ],
-  "padding": [
-   "app_karate_container",
-   "app_karate_style_control",
-   "string_pad",
-   "string_padded_is"
+   "whitespace_normalize"
   ],
   "marker": [
+   "app_karate_button_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_computer_save",
    "app_karate_container_centered",
    "app_karate_div_text",
    "app_karate_email",
    "app_karate_home",
    "app_karate_screens",
-   "app_new_step_3_generic",
-   "app_new_step_5",
-   "app_new_update",
    "firebase_deploy_function_app_karate_main",
-   "firebase_deploy_function_destination_latest",
-   "firebase_deploy_function_destination_production",
-   "firebase_promote_function",
    "firebase_promote_function_app_karate_main",
-   "html_em_text",
-   "html_index_generate",
-   "html_name_to_path_staging",
-   "html_on_change",
-   "html_on_input",
-   "html_update_staging",
-   "html_value_set",
-   "list_filter_includes_not",
-   "repo_functions_move",
-   "repo_functions_move_if_includes_not",
-   "string_includes_lambda",
-   "string_regex_match",
-   "string_regex_match_lambda",
+   "html_checked_set",
    "apps_get",
    "app_code",
    "app_html_open",
    "app_main",
    "app_new",
    "app_new_step_2_next",
+   "app_new_step_3_generic",
+   "app_new_step_5",
+   "app_new_update",
    "app_refresh",
    "app_replace",
    "app_replace_rule_set",
@@ -622,6 +412,9 @@
    "firebase_deploy",
    "firebase_deploy_function",
    "firebase_deploy_function_app_current",
+   "firebase_deploy_function_destination_latest",
+   "firebase_deploy_function_destination_production",
+   "firebase_promote_function",
    "firebase_service_account_karate",
    "firebase_storage_download",
    "firebase_storage_function_run",
@@ -684,9 +477,14 @@
    "html_document_body",
    "html_document_head",
    "html_document_root",
+   "html_em_text",
    "html_enable",
+   "html_index_generate",
    "html_loading",
    "html_name_to_path_dev",
+   "html_name_to_path_staging",
+   "html_on_change",
+   "html_on_input",
    "html_on_keydown",
    "html_parse_find_list_href_text",
    "html_parse_href",
@@ -694,6 +492,8 @@
    "html_style_assign",
    "html_style_remove",
    "html_update_dev",
+   "html_update_staging",
+   "html_value_set",
    "http_firebase_file_path",
    "http_json",
    "http_local",
@@ -726,6 +526,7 @@
    "js_dollar_x",
    "js_function_last_asyncify",
    "js_imports_declarations",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_log_remove",
@@ -744,6 +545,7 @@
    "list_any",
    "list_concat_multiple",
    "list_filter_ends_with_not_any",
+   "list_filter_includes_not",
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "list_find_starts_with",
@@ -808,6 +610,8 @@
    "repo_acronym_set",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not",
    "repo_path",
    "sandbox",
    "sandbox_2",
@@ -818,9 +622,12 @@
    "storage_local_initialize",
    "storage_local_initialize_context",
    "string_ends_with_space",
+   "string_includes_lambda",
    "string_is_assert_message",
    "string_letters_only",
    "string_lower_to",
+   "string_regex_match",
+   "string_regex_match_lambda",
    "string_replace",
    "string_split_newline",
    "string_split_semicolon",
@@ -831,191 +638,421 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "js_imports_paths_fix_inner",
-   "app_karate_computer_save",
+   "whitespace_normalize"
+  ],
+  "app_karate_button_screen_green_style_assign": [
+   "app_karate_button_green",
+   "app_karate_button_screen_green_style_assign"
+  ],
+  "app_karate_button_screen_uncolored": [
+   "app_karate_button_green",
    "app_karate_button_screen_uncolored",
-   "html_checked_set"
+   "app_karate_email"
   ],
-  "html_style_set": [
-   "app_karate_container_main",
-   "app_karate_email",
-   "app_karate_main",
-   "html_display_block",
-   "html_display_none",
-   "html_element",
-   "html_style_font_size",
-   "html_style_set",
-   "html_style_set_or_remove",
-   "html_centered"
+  "app_karate_button_green": [
+   "app_karate_button_green"
   ],
-  "app_karate_container_centered": [
+  "div": [
+   "app_karate_button_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_computer_save",
+   "app_karate_container",
    "app_karate_container_centered",
-   "app_karate_home",
-   "app_karate_computer_save"
+   "app_karate_div",
+   "app_karate_div_text",
+   "app_karate_email",
+   "html_centered",
+   "html_font_size_1em",
+   "html_input",
+   "html_input_email",
+   "html_input_type",
+   "app_replace_rule_set",
+   "html_div",
+   "html_div_text",
+   "html_loading"
   ],
-  "app_karate_container_main": [
-   "app_karate_container_main",
+  "text": [
+   "app_karate_button_green",
+   "app_karate_button_screen_uncolored",
    "app_karate_email",
    "app_karate_home",
-   "app_karate_computer_save"
+   "app_replace_rule_set",
+   "app_reply_choices",
+   "app_reply_main",
+   "app_reply_pray",
+   "clipboard_copy",
+   "ebible_chapter_text",
+   "ebible_verses",
+   "ebible_verse_new",
+   "ebible_versions",
+   "html_button",
+   "html_button_screen",
+   "html_div_text",
+   "html_em_text",
+   "html_parse_classes_preview",
+   "html_parse_href_text",
+   "html_parse_text",
+   "html_p_text",
+   "html_span_text",
+   "html_text_set",
+   "http_json",
+   "http_local_text",
+   "messenger_reply_unread_click",
+   "puppeteer_matches",
+   "sandbox_2",
+   "urdu_allah_to_god"
   ],
-  "root": [
-   "app_karate_container_main",
+  "lambda": [
+   "app_karate_button_green",
+   "app_karate_button_screen_uncolored",
+   "app_karate_computer_save",
    "app_karate_email",
-   "app_karate_home",
-   "app_karate_main",
+   "app_screen_set_lambda",
+   "app_new_step_3_generic",
    "app_replace_home",
-   "app_replace_main",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "bible_verses_encouragement_generate",
+   "catch_call",
+   "catch_ignore",
+   "catch_ignore_async",
+   "catch_log",
+   "catch_log_async",
+   "catch_only_async",
+   "catch_only_run_async",
+   "command_line_read",
+   "data_files_update",
+   "data_file_update_inner",
+   "data_function_current_restore",
+   "data_set",
+   "each_multiple",
+   "each_multiple_async",
+   "each_object",
+   "each_pair",
+   "each_pair_async",
+   "each_range",
+   "each_range_async",
+   "each_range_from",
+   "each_range_from_async",
+   "each_reverse",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters",
+   "ebible_chapters_each_verses_list",
+   "ebible_chapter_text",
+   "ebible_index_flat",
+   "ebible_references_parse_lines",
+   "ebible_verses",
+   "ebible_verses_upload",
+   "ebible_versions_download",
+   "ebible_version_books_testament",
+   "file_exists",
+   "file_json_isolate",
+   "file_json_property_delete",
+   "firebase_upload_generic",
+   "folder_find_starts_with",
+   "folder_read_async",
+   "folder_read_files",
+   "functions_combine",
+   "functions_imports_fix_list",
+   "functions_log_remove",
+   "functions_names_from_path",
+   "functions_names_to_paths",
+   "functions_transform",
+   "functions_transform_list",
+   "function_aliases_restore",
+   "function_aliases_search",
+   "function_alias_add",
+   "function_alias_change",
+   "function_alias_delete",
+   "function_alias_generic",
+   "function_alias_rename",
+   "function_alias_replace",
+   "function_copy",
+   "function_current_set",
+   "function_dependencies",
+   "function_exists_inner",
+   "function_identifier_replace",
+   "function_imports_add",
+   "function_name_to_path_search",
+   "function_new_js_inner",
+   "function_open_app",
+   "function_params_consolidate",
+   "function_params_new",
+   "function_param_swap",
+   "function_rename_identifiers",
+   "function_run_line_parse",
+   "function_run_output_file_temp",
+   "function_transform_current",
+   "function_transform_marker_all",
+   "function_transform_marker_specified",
+   "function_type_first",
+   "function_wrap",
+   "git_commit_folder",
+   "git_push_folder",
+   "global_function_async",
+   "global_function_property",
+   "global_function_property_async",
+   "html_button",
+   "html_button_screen",
+   "html_loading",
+   "html_on",
+   "html_on_change",
+   "html_on_click",
+   "html_on_input",
+   "html_on_keydown",
+   "html_parse_classes_preview",
+   "html_parse_descendants_classes",
+   "html_parse_href_text_map",
+   "http",
+   "js_arrow_to_function",
+   "js_assign_combine",
+   "js_atomize",
+   "js_atomize_function",
+   "js_auto",
+   "js_auto_transform_new_inner",
+   "js_await_add_inner",
+   "js_bang_to_not",
+   "js_block_child_graph",
+   "js_block_child_graph_unparse",
+   "js_calls_to_each",
+   "js_call_fill",
+   "js_call_new_code",
+   "js_declaration_single",
+   "js_declaration_single_params_add",
+   "js_declare_assign",
+   "js_declare_assign_null",
+   "js_dollar",
+   "js_dollar_a",
+   "js_dollar_a_generic",
+   "js_dollar_choice_arguments",
+   "js_dollar_f",
+   "js_dollar_g",
+   "js_dollar_new",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_function_id_add",
+   "js_function_last_asyncify",
+   "js_identifiers",
+   "js_identifiers_named",
+   "js_identifiers_names",
+   "js_identifier_defineds",
+   "js_identifier_replace",
+   "js_if_blockify_generic",
+   "js_if_else_if_combine",
+   "js_imports_declarations",
+   "js_imports_fix",
+   "js_imports_paths_fix_inner",
+   "js_imports_unused",
+   "js_imports_unused_remove",
+   "js_let_add",
+   "js_log_remove",
+   "js_marker_named_ast",
+   "js_node_atomize",
+   "js_node_types",
+   "js_node_type_is_if",
+   "js_node_type_is_if_async",
+   "js_node_type_not_is_if",
+   "js_outside_move",
+   "js_return_atomize",
+   "js_stack_filtered",
+   "js_stack_filtered_each",
+   "js_stack_filtered_multiple",
+   "js_type",
+   "js_unparse",
+   "js_visitors",
+   "js_visit_calls_named",
+   "js_visit_children_get",
+   "js_visit_each_async",
+   "js_visit_match",
+   "js_visit_nodes",
+   "js_visit_types",
+   "js_visit_type_each_async",
+   "keyboard_type_delay",
+   "lambda_invoke",
+   "lambda_value",
+   "lists_get",
+   "list_adder_generic",
+   "list_adder_generic_async",
+   "list_adder_unique",
+   "list_adder_unique_async",
+   "list_concat_multiple",
+   "list_difference",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "list_filter_includes_not",
+   "list_filter_starts_with",
+   "list_filter_starts_with_any",
+   "list_filter_starts_with_not",
+   "list_filter_starts_with_not_multiple",
+   "list_intersect",
+   "list_map_combine",
+   "list_map_index",
+   "list_map_path_join",
+   "list_map_prefix_any",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_map_property_to",
+   "list_map_split_space",
+   "list_remove_all_multiple",
+   "list_remove_multiple",
+   "list_sort_number_mapper",
+   "list_squash",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "list_unique",
+   "marker_above_delete",
+   "marker_above_generic",
+   "marker_assign_replace",
+   "marker_call",
+   "marker_call_atomize",
+   "marker_call_replace",
+   "marker_call_replace_generic",
+   "marker_current_set",
+   "marker_down_choices",
+   "marker_down_generic",
+   "marker_enter",
+   "marker_functionize",
+   "marker_if_test_replace",
+   "marker_leave",
+   "marker_new",
+   "marker_next",
+   "marker_next_await",
+   "marker_next_delete",
+   "marker_next_delete_multiple",
+   "marker_param_add",
+   "marker_remove",
+   "marker_rename",
+   "marker_screen_add",
+   "marker_top",
+   "messenger_reply",
+   "messenger_reply_messages",
+   "messenger_reply_messages_urls_add_multiple",
+   "messenger_reply_unread_collect",
+   "object_invert",
+   "object_merge_generic",
+   "object_properties_delete_all",
+   "object_property_equals_lambda",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "promise_wrap",
+   "puppeteer_hrefs",
+   "puppeteer_matches",
+   "range_from",
+   "reduce",
+   "reply",
+   "reply_sequence",
+   "reply_test",
+   "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repo_about_set",
+   "repo_functions_move",
+   "retry",
+   "retry_on_error",
+   "roman_to_integer",
+   "sandbox_2",
+   "sandbox_4_a",
+   "search_generic",
+   "server",
+   "string_list_to",
+   "tasks_run",
+   "task_new",
+   "throws_not_async",
+   "undefined_not_is_assert_lambda",
+   "user_repo_set",
+   "visit_filter_recursive",
+   "visit_filter_recursive_async",
+   "visit_unique_async",
+   "watch"
+  ],
+  "component": [
+   "app_karate_button_green",
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_button_screen_uncolored",
+   "app_karate_email",
+   "app_karate_home",
+   "app_karate_margin_y_set",
+   "app_karate_style_control",
    "app_replace_rule_set",
    "app_replace_settings",
    "app_reply_main",
-   "ebible_chapters",
-   "ebible_chapter_classes",
-   "ebible_chapter_text",
-   "ebible_versions",
-   "ebible_version_books_testament",
-   "file_root_exists",
-   "file_root_exists_assert",
-   "html_clear_context",
-   "html_div",
-   "html_div_text",
-   "html_p",
-   "html_parse",
-   "html_parse_find",
-   "html_parse_find_a_href_starts_with",
-   "html_p_text",
-   "app_karate_computer_save"
-  ],
-  "container": [
-   "app_karate_container_main",
-   "app_karate_email",
-   "app_karate_home",
-   "html_em_text",
-   "html_span_text",
-   "app_karate_computer_save"
-  ],
-  "app_karate_margin_y_set": [
-   "app_karate_div",
-   "app_karate_margin_y_set",
-   "app_karate_style_control"
-  ],
-  "app_karate_div": [
-   "app_karate_div",
-   "app_karate_div_text",
-   "app_karate_email",
-   "app_karate_home"
-  ],
-  "html_text_set": [
-   "app_karate_div_text",
-   "app_karate_email",
-   "app_karate_home",
-   "html_em_text",
-   "html_span_text",
-   "app_reply_main",
    "firebase_storage_function_run",
+   "html_attribute_set",
    "html_button",
-   "html_clear",
-   "html_div_text",
-   "html_p_text",
+   "html_button_screen",
+   "html_component_element_get",
+   "html_document_head",
+   "html_element",
+   "html_enable_if",
+   "html_meta_viewport",
+   "html_on",
+   "html_on_change",
+   "html_on_click",
+   "html_on_input",
+   "html_on_keydown",
+   "html_p",
+   "html_remove",
+   "html_style_margin_y",
+   "html_style_set_or_remove",
    "html_text_set",
    "html_text_set_if"
   ],
-  "app_karate_div_text": [
-   "app_karate_div_text",
-   "app_karate_email"
-  ],
-  "explanation": [
-   "app_karate_div_text"
-  ],
-  "html_component_element_get": [
+  "html_style_assign": [
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_computer_save",
+   "app_karate_container",
    "app_karate_email",
-   "html_value_get",
-   "html_value_set",
-   "html_attribute_set",
-   "html_component_element_get",
-   "html_disable_set",
-   "html_element",
-   "html_on",
-   "html_remove",
+   "app_karate_style_control",
+   "html_font_size_1em",
+   "html_loading",
    "html_style_assign",
-   "html_style_remove",
-   "html_style_set",
-   "html_text_set",
+   "html_style_margin_y"
+  ],
+  "color": [
+   "app_karate_button_screen_green_style_assign",
+   "app_karate_email",
+   "chalk_color",
+   "chalk_green",
+   "chalk_red"
+  ],
+  "html_button": [
+   "app_karate_button_screen_uncolored",
+   "app_replace_home",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "html_button",
+   "html_button_screen"
+  ],
+  "app_karate_style_control": [
+   "app_karate_button_screen_uncolored",
+   "app_karate_computer_save",
+   "app_karate_email",
+   "app_karate_style_control"
+  ],
+  "html_centered": [
+   "app_karate_computer_save",
+   "app_karate_container_centered",
+   "html_centered"
+  ],
+  "html_checked_set": [
+   "app_karate_computer_save",
    "html_checked_set"
   ],
-  "html_enable_if": [
-   "app_karate_email",
-   "app_replace_rule_set",
-   "html_enable_if"
+  "html_on_click": [
+   "app_karate_computer_save",
+   "html_button",
+   "html_on_click"
   ],
-  "html_on_input": [
-   "app_karate_email",
-   "html_on_input"
-  ],
-  "not": [
-   "app_karate_email",
-   "string_includes_not",
-   "app_replace_rule_set",
-   "app_reply_main",
-   "assert",
-   "assert_message",
-   "catch_only_run_async",
-   "data_all",
-   "equal_not",
-   "function_alias_change",
-   "function_alias_delete",
-   "function_alias_replace",
-   "function_list_generate",
-   "function_params_new",
-   "http",
-   "js_await_add_inner",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_declare_single",
-   "js_function_last_asyncify",
-   "js_if_blockify_generic",
-   "js_imports_declarations",
-   "js_let_add",
-   "js_marker_name_get",
-   "js_node_type_not_is",
-   "js_stack_list_block_is",
-   "js_statement_call_get",
-   "js_unparse",
-   "js_visit",
-   "js_visit_nodes",
-   "list_add_if_not_includes",
-   "list_difference",
-   "list_empty_not_is",
-   "list_index_of_delta",
-   "list_not_is",
-   "list_size_1_assert_message",
-   "list_unique",
-   "log_unparse_try",
-   "marker_functionize",
-   "marker_rename",
-   "not",
-   "object_property_exists_not",
-   "object_property_initialize",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "path_join",
-   "promise_not_is",
-   "roman_to_integer",
-   "string_empty_not_is",
-   "string_ends_with_not",
-   "string_prefix_without",
-   "string_skip_while",
-   "string_starts_with_not",
-   "string_suffix_without",
-   "string_trim_right",
-   "visit_filter_recursive",
-   "visit_filter_recursive_async"
+  "app_karate_container_background": [
+   "app_karate_computer_save",
+   "app_karate_container",
+   "app_karate_container_background",
+   "app_karate_email"
   ],
   "object_property_get": [
+   "app_karate_computer_save",
    "app_karate_email",
-   "html_value_get",
-   "repo_functions_move",
    "app_refresh",
    "app_replace_home",
    "app_replace_rule_set",
@@ -1052,6 +1089,7 @@
    "global_function_get",
    "html_clear_context",
    "html_component_element_get",
+   "html_value_get",
    "js_assign_combine",
    "js_await_add_inner",
    "js_bang_to_not",
@@ -1078,6 +1116,7 @@
    "js_if_blockify_generic",
    "js_if_else_if_combine",
    "js_imports_fix",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_let_add",
@@ -1110,18 +1149,35 @@
    "reply",
    "reply_sequence",
    "repo_acronym_to_name",
-   "js_imports_paths_fix_inner",
-   "app_karate_computer_save"
+   "repo_functions_move"
   ],
-  "html_clear": [
-   "app_karate_email",
-   "app_refresh",
+  "object_merge": [
+   "app_karate_computer_save",
+   "app_karate_home",
    "app_replace_rule_set",
-   "app_reply_main",
-   "html_clear",
-   "html_clear_context"
+   "command_line_generic",
+   "ebible_verses_upload",
+   "ebible_version_books_testament",
+   "firebase_upload_generic",
+   "functions_names_to_paths",
+   "function_exists_inner",
+   "function_imports_missing",
+   "function_name_to_path_unalias",
+   "function_parse",
+   "function_parse_declaration_inner",
+   "function_transform_marker_arg",
+   "js_imports_unused",
+   "marker_call_replace_generic",
+   "marker_index",
+   "marker_next_get",
+   "marker_next_index",
+   "marker_previous_index",
+   "object_copy",
+   "object_merge",
+   "object_replace"
   ],
   "each": [
+   "app_karate_computer_save",
    "app_karate_email",
    "app_replace_rule_set",
    "app_reply_main",
@@ -1148,6 +1204,7 @@
    "js_identifier_defineds",
    "js_imports_declarations",
    "js_imports_fix",
+   "js_imports_paths_fix_inner",
    "js_imports_unused_remove",
    "js_outside_move",
    "js_stack_filtered_multiple_each",
@@ -1168,138 +1225,170 @@
    "object_properties_delete_all",
    "object_properties_from",
    "reduce",
-   "visit_filter_recursive",
-   "js_imports_paths_fix_inner",
-   "app_karate_computer_save"
+   "visit_filter_recursive"
   ],
-  "html_value_set": [
-   "app_karate_email",
-   "html_value_set"
-  ],
-  "html_value_get": [
-   "app_karate_email",
-   "html_value_get"
-  ],
-  "string_trim": [
-   "app_karate_email",
-   "messenger_reply_messages",
-   "string_trim"
-  ],
-  "string_regex_match_lambda": [
-   "app_karate_email",
-   "string_regex_match_lambda"
-  ],
-  "string_includes_lambda": [
-   "app_karate_email",
-   "string_includes_lambda"
-  ],
-  "string_empty_not_is": [
-   "app_karate_email",
-   "ebible_verses",
-   "file_root_exists",
-   "js_dollar",
-   "js_identifier_unique",
-   "list_filter_empty_not_is",
-   "string_empty_not_is",
-   "string_empty_not_is_assert"
-  ],
-  "emoji_arrow_right": [
-   "app_karate_email",
-   "emoji_arrow_right"
+  "list_map": [
+   "app_karate_computer_save",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "bible_verses_encouragement_generate",
+   "ebible_chapters",
+   "ebible_chapter_text",
+   "ebible_languages_to_bible_folders",
+   "ebible_verses_upload",
+   "ebible_version_books_testament",
+   "functions_format",
+   "functions_names_from_path",
+   "functions_paths",
+   "function_dependencies_code",
+   "function_name_to_acronym",
+   "function_params_consolidate",
+   "html_parse_href_text_map",
+   "js_expand_generic",
+   "js_imports_unused",
+   "js_visit_children_get",
+   "lists_get",
+   "list_map",
+   "list_map_combine",
+   "list_map_filter_string_empty_not_is",
+   "list_map_first",
+   "list_map_index",
+   "list_map_lower",
+   "list_map_path_join",
+   "list_map_prefix_any",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_map_property",
+   "list_map_property_to",
+   "list_map_split_comma",
+   "list_map_split_space",
+   "list_map_squash",
+   "list_map_unordered_async",
+   "list_map_whitespace_normalize",
+   "marker_functionize",
+   "marker_top",
+   "messenger_reply",
+   "range_from",
+   "repos_gitignore_overwrite",
+   "repos_paths_names_map_unordered_combine",
+   "repo_functions_move",
+   "sandbox_4_a"
   ],
   "html_attribute_set": [
+   "app_karate_computer_save",
+   "html_input_email",
+   "html_input_type",
    "firebase_storage_function_run",
    "html_attribute_set",
-   "html_meta_viewport",
-   "html_input_type",
-   "html_input_email",
-   "app_karate_computer_save"
+   "html_meta_viewport"
   ],
-  "emoji_email": [
-   "app_karate_email",
-   "emoji_email"
-  ],
-  "app_karate_green_dark": [
-   "app_karate_email",
-   "app_karate_green_dark"
-  ],
-  "emoji_arrow_left": [
-   "app_karate_email",
-   "emoji_arrow_left"
-  ],
-  "html_clear_context": [
-   "app_karate_email",
+  "emoji_secure": [
+   "app_karate_computer_save",
    "app_karate_home",
-   "html_clear_context",
-   "marker_screen_add",
-   "app_karate_computer_save"
+   "emoji_secure"
+  ],
+  "emoji_person_outline": [
+   "app_karate_computer_save",
+   "app_karate_home",
+   "emoji_person_outline"
+  ],
+  "app_karate_style_control_font_size": [
+   "app_karate_computer_save",
+   "app_karate_style_control",
+   "app_karate_style_control_font_size"
+  ],
+  "html_font_size_1em": [
+   "app_karate_computer_save",
+   "html_font_size_1em"
+  ],
+  "html_div_text": [
+   "app_karate_computer_save",
+   "html_div_text"
+  ],
+  "app_karate_container_centered": [
+   "app_karate_computer_save",
+   "app_karate_container_centered",
+   "app_karate_home"
+  ],
+  "html_span_text": [
+   "app_karate_computer_save",
+   "app_karate_home",
+   "html_span_text"
   ],
   "html_element": [
+   "app_karate_computer_save",
    "app_karate_email",
-   "html_em_text",
-   "html_span_text",
+   "html_input",
    "firebase_storage_function_run",
    "html_button_element",
    "html_div",
    "html_document_root",
    "html_element",
+   "html_em_text",
    "html_meta_viewport",
    "html_p",
-   "html_input",
-   "app_karate_computer_save"
+   "html_span_text"
   ],
-  "app_karate_email": [
+  "html_input_type": [
+   "app_karate_computer_save",
+   "html_input_email",
+   "html_input_type"
+  ],
+  "app_karate_container_main": [
+   "app_karate_computer_save",
+   "app_karate_container_main",
    "app_karate_email",
+   "app_karate_home"
+  ],
+  "html_clear_context": [
+   "app_karate_computer_save",
+   "app_karate_email",
+   "app_karate_home",
+   "html_clear_context",
+   "marker_screen_add"
+  ],
+  "app_karate_computer_save": [
+   "app_karate_computer_save",
    "app_karate_screens"
   ],
-  "checks": [
-   "app_karate_email"
-  ],
-  "check": [
-   "app_karate_email"
-  ],
-  "input": [
+  "context": [
+   "app_karate_computer_save",
    "app_karate_email",
-   "html_value_get",
-   "html_value_set",
-   "string_includes_lambda",
-   "string_regex_match",
-   "string_regex_match_lambda",
-   "command_line_read",
-   "integer_to",
-   "list_map_lower",
-   "marker_call_atomize",
-   "marker_call_replace",
-   "marker_call_replace_generic",
+   "app_karate_home",
+   "app_karate_main",
+   "app_screen_set_lambda",
+   "app_refresh",
+   "app_replace_font_size",
+   "app_replace_font_size_adjust",
+   "app_replace_font_size_refresh",
+   "app_replace_home",
+   "app_replace_main",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_screen_set",
+   "html_button_screen",
+   "html_clear_context",
+   "messenger_reply_login",
    "messenger_reply_playwright",
-   "reply",
-   "reply_test",
-   "roman_to_integer",
-   "string_includes",
-   "string_suffix_change",
-   "string_to",
-   "html_input_type",
-   "html_input_email",
-   "html_checked_set"
+   "storage_local_get_context",
+   "storage_local_initialize_context",
+   "storage_local_set_context"
   ],
-  "div_checks": [
-   "app_karate_email"
-  ],
-  "ul": [
-   "app_karate_email"
-  ],
-  "button_next": [
-   "app_karate_email"
-  ],
-  "validate": [
-   "app_karate_email"
+  "choices": [
+   "app_karate_computer_save",
+   "app_reply_main",
+   "js_dollar",
+   "js_dollar_choices",
+   "marker_bottom",
+   "marker_down_choices",
+   "marker_down_choices_lambda",
+   "marker_down_generic"
   ],
   "value": [
+   "app_karate_computer_save",
    "app_karate_email",
    "app_karate_main",
-   "firebase_promote_function",
-   "html_value_get",
-   "html_value_set",
+   "html_checked_set",
    "app_replace_font_size_adjust",
    "app_replace_font_size_refresh",
    "app_replace_settings",
@@ -1315,6 +1404,7 @@
    "error_attention_set",
    "file_json_isolate",
    "firebase_name",
+   "firebase_promote_function",
    "firebase_storage_download_property",
    "function_aliases_search",
    "function_alias_add_generic",
@@ -1326,6 +1416,8 @@
    "html_attribute_set",
    "html_style_font_size",
    "html_style_margin_y",
+   "html_value_get",
+   "html_value_set",
    "http_firebase",
    "integer_is",
    "js_declaration_asyncify",
@@ -1396,9 +1488,542 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
+   "watch"
+  ],
+  "title": [
+   "app_karate_computer_save"
+  ],
+  "details": [
+   "app_karate_computer_save"
+  ],
+  "root": [
    "app_karate_computer_save",
-   "html_checked_set"
+   "app_karate_container_main",
+   "app_karate_email",
+   "app_karate_home",
+   "app_karate_main",
+   "app_replace_home",
+   "app_replace_main",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "ebible_chapters",
+   "ebible_chapter_classes",
+   "ebible_chapter_text",
+   "ebible_versions",
+   "ebible_version_books_testament",
+   "file_root_exists",
+   "file_root_exists_assert",
+   "html_clear_context",
+   "html_div",
+   "html_div_text",
+   "html_p",
+   "html_parse",
+   "html_parse_find",
+   "html_parse_find_a_href_starts_with",
+   "html_p_text"
+  ],
+  "container_main": [
+   "app_karate_computer_save"
+  ],
+  "radios": [
+   "app_karate_computer_save"
+  ],
+  "container": [
+   "app_karate_computer_save",
+   "app_karate_container_main",
+   "app_karate_email",
+   "app_karate_home",
+   "html_em_text",
+   "html_span_text"
+  ],
+  "label": [
+   "app_karate_computer_save"
+  ],
+  "radio_group_name": [
+   "app_karate_computer_save"
+  ],
+  "checkbox": [
+   "app_karate_computer_save"
+  ],
+  "lambda3": [
+   "app_karate_computer_save",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "ebible_versions_download",
+   "error_attention_set",
+   "function_list_generate",
+   "function_params_new",
+   "http",
+   "js_await_add_inner",
+   "js_calls_to_each",
+   "js_call_new_code",
+   "js_dollar_a",
+   "js_dollar_a_generic",
+   "js_expand_generic",
+   "js_identifiers_named_count",
+   "js_identifier_defineds",
+   "js_if_else_if_combine",
+   "js_log_remove",
+   "js_outside_move",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "marker_down_choices_lambda",
+   "marker_functionize",
+   "messenger_reply_messages",
+   "object_properties_from",
+   "puppeteer_hrefs",
+   "retry"
+  ],
+  "lambda2": [
+   "app_karate_computer_save",
+   "app_karate_home",
+   "app_replace_home",
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "app_reply_main",
+   "bible_verses_encouragement_generate",
+   "command_line_read",
+   "data_file_update_inner",
+   "each_index",
+   "each_index_async",
+   "each_multiple",
+   "each_multiple_async",
+   "each_object",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters",
+   "ebible_chapter_text",
+   "ebible_index_flat",
+   "ebible_languages_to_bible_folders",
+   "ebible_references_parse_lines",
+   "ebible_verses",
+   "file_root_exists",
+   "folder_read_async",
+   "functions_combine",
+   "functions_imports_fix_list",
+   "functions_paths",
+   "functions_transform_list",
+   "function_alias_rename",
+   "function_dependencies",
+   "function_exists_inner",
+   "function_identifier_replace",
+   "function_name_to_path_search",
+   "function_params_consolidate",
+   "function_rename_identifiers",
+   "function_transform_marker_specified",
+   "function_type_first",
+   "git_publish_initial",
+   "html_parse_descendants_classes",
+   "html_p_text_multiple",
+   "http",
+   "js_assert_arguments_args",
+   "js_block_child_graph",
+   "js_call_new_code",
+   "js_declaration_single",
+   "js_declare_assign",
+   "js_dollar",
+   "js_dollar_a",
+   "js_dollar_g",
+   "js_dollar_new",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_function_last_asyncify",
+   "js_identifiers",
+   "js_identifiers_named_count",
+   "js_identifiers_names",
+   "js_identifier_defineds",
+   "js_imports_declarations",
+   "js_node_types",
+   "js_node_types_is",
+   "js_outside_move",
+   "js_visit_each",
+   "js_visit_each_async",
+   "js_visit_match",
+   "js_visit_type_each_async",
+   "list_any_starts_with",
+   "list_difference",
+   "list_filter_starts_with_not_multiple",
+   "list_find_starts_with",
+   "list_intersect",
+   "list_squash",
+   "marker_assign_replace",
+   "marker_call",
+   "marker_call_replace_generic",
+   "marker_down_choices",
+   "marker_down_choices_lambda",
+   "marker_expand",
+   "marker_functionize",
+   "marker_next",
+   "marker_next_await",
+   "marker_next_delete",
+   "marker_param_add",
+   "marker_screen_add",
+   "messenger_reply",
+   "messenger_reply_messages",
+   "messenger_reply_playwright",
+   "messenger_reply_unread_collect",
+   "object_properties_delete",
+   "puppeteer_hrefs",
+   "repo_functions_move",
+   "retry",
+   "retry_on_error",
+   "sandbox_4_a",
+   "schtasks_query",
+   "search_generic",
+   "task_new",
+   "undefined_not_is_assert",
+   "visit_unique_async",
+   "watch"
+  ],
+  "r": [
+   "app_karate_computer_save",
+   "app_replace_rule_set",
+   "each_range_async",
+   "function_aliases_restore",
+   "function_format",
+   "integer_random",
+   "js_statement_return_add",
+   "js_statement_return_empty_add",
+   "list_random_item",
+   "list_remove_all_multiple",
+   "list_remove_multiple",
+   "marker_functionize",
+   "range_from",
+   "reply",
+   "sandbox"
+  ],
+  "container2": [
+   "app_karate_computer_save"
+  ],
+  "transform": [
+   "app_karate_computer_save",
+   "messenger_reply_messages_transform",
+   "messenger_reply_messages_urls_transform"
+  ],
+  "margin": [
+   "app_karate_computer_save"
+  ],
+  "s": [
+   "app_karate_computer_save",
+   "buffer_string_to",
+   "data_identifiers_search",
+   "ebible_chapter_code_to_name",
+   "firebase_storage_download_json",
+   "function_aliases_restore",
+   "html_loading",
+   "html_style_assign",
+   "js_dollar_s",
+   "js_string",
+   "marker_rename",
+   "messenger_reply",
+   "messenger_reply_wait",
+   "path_join",
+   "range_from",
+   "string_base64_to",
+   "string_empty_is",
+   "string_empty_not_is_assert",
+   "string_ends_with",
+   "string_ends_with_space",
+   "string_list_to",
+   "string_lower_to",
+   "string_pad",
+   "string_padded_is",
+   "string_prefix_without",
+   "string_replace",
+   "string_size",
+   "string_skip",
+   "string_skip_while",
+   "string_slice",
+   "string_split",
+   "string_split_empty",
+   "string_split_semicolon",
+   "string_split_semicolon_space",
+   "string_split_space",
+   "string_starts_with",
+   "string_starts_with_dot",
+   "string_starts_with_space",
+   "string_suffix_without",
+   "string_take",
+   "string_to",
+   "string_trim_right",
+   "string_upper_to",
+   "trinity_green"
+  ],
+  "html_style_margin_y": [
+   "app_karate_container",
+   "app_karate_margin_y_set",
+   "html_style_margin_y"
+  ],
+  "html_div": [
+   "app_karate_container",
+   "app_karate_container_main",
+   "app_karate_div",
+   "app_replace_rule_set",
+   "html_div",
+   "html_div_text",
+   "html_loading"
+  ],
+  "app_karate_container": [
+   "app_karate_container",
+   "app_karate_container_centered",
+   "app_karate_email"
+  ],
+  "parent": [
+   "app_karate_container",
+   "app_karate_container_centered",
+   "app_karate_div",
+   "app_karate_div_text",
+   "app_karate_home",
+   "html_button",
+   "html_button_element",
+   "html_button_screen",
+   "html_element",
+   "html_p_text_multiple"
+  ],
+  "padding": [
+   "app_karate_container",
+   "app_karate_style_control",
+   "string_pad",
+   "string_padded_is"
+  ],
+  "html_style_set": [
+   "app_karate_container_main",
+   "app_karate_email",
+   "app_karate_main",
+   "html_centered",
+   "html_display_block",
+   "html_display_none",
+   "html_element",
+   "html_style_font_size",
+   "html_style_set",
+   "html_style_set_or_remove"
+  ],
+  "app_karate_margin_y_set": [
+   "app_karate_div",
+   "app_karate_margin_y_set",
+   "app_karate_style_control"
+  ],
+  "app_karate_div": [
+   "app_karate_div",
+   "app_karate_div_text",
+   "app_karate_email",
+   "app_karate_home"
+  ],
+  "html_text_set": [
+   "app_karate_div_text",
+   "app_karate_email",
+   "app_karate_home",
+   "app_reply_main",
+   "firebase_storage_function_run",
+   "html_button",
+   "html_clear",
+   "html_div_text",
+   "html_em_text",
+   "html_p_text",
+   "html_span_text",
+   "html_text_set",
+   "html_text_set_if"
+  ],
+  "app_karate_div_text": [
+   "app_karate_div_text",
+   "app_karate_email"
+  ],
+  "explanation": [
+   "app_karate_div_text"
+  ],
+  "html_input_email": [
+   "app_karate_email",
+   "html_input_email"
+  ],
+  "html_component_element_get": [
+   "app_karate_email",
+   "html_checked_set",
+   "html_attribute_set",
+   "html_component_element_get",
+   "html_disable_set",
+   "html_element",
+   "html_on",
+   "html_remove",
+   "html_style_assign",
+   "html_style_remove",
+   "html_style_set",
+   "html_text_set",
+   "html_value_get",
+   "html_value_set"
+  ],
+  "html_enable_if": [
+   "app_karate_email",
+   "app_replace_rule_set",
+   "html_enable_if"
+  ],
+  "html_on_input": [
+   "app_karate_email",
+   "html_on_input"
+  ],
+  "not": [
+   "app_karate_email",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "assert",
+   "assert_message",
+   "catch_only_run_async",
+   "data_all",
+   "equal_not",
+   "function_alias_change",
+   "function_alias_delete",
+   "function_alias_replace",
+   "function_list_generate",
+   "function_params_new",
+   "http",
+   "js_await_add_inner",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_declare_single",
+   "js_function_last_asyncify",
+   "js_if_blockify_generic",
+   "js_imports_declarations",
+   "js_let_add",
+   "js_marker_name_get",
+   "js_node_type_not_is",
+   "js_stack_list_block_is",
+   "js_statement_call_get",
+   "js_unparse",
+   "js_visit",
+   "js_visit_nodes",
+   "list_add_if_not_includes",
+   "list_difference",
+   "list_empty_not_is",
+   "list_index_of_delta",
+   "list_not_is",
+   "list_size_1_assert_message",
+   "list_unique",
+   "log_unparse_try",
+   "marker_functionize",
+   "marker_rename",
+   "not",
+   "object_property_exists_not",
+   "object_property_initialize",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "path_join",
+   "promise_not_is",
+   "roman_to_integer",
+   "string_empty_not_is",
+   "string_ends_with_not",
+   "string_includes_not",
+   "string_prefix_without",
+   "string_skip_while",
+   "string_starts_with_not",
+   "string_suffix_without",
+   "string_trim_right",
+   "visit_filter_recursive",
+   "visit_filter_recursive_async"
+  ],
+  "html_clear": [
+   "app_karate_email",
+   "app_refresh",
+   "app_replace_rule_set",
+   "app_reply_main",
+   "html_clear",
+   "html_clear_context"
+  ],
+  "html_value_set": [
+   "app_karate_email",
+   "html_value_set"
+  ],
+  "html_value_get": [
+   "app_karate_email",
+   "html_value_get"
+  ],
+  "string_trim": [
+   "app_karate_email",
+   "messenger_reply_messages",
+   "string_trim"
+  ],
+  "string_regex_match_lambda": [
+   "app_karate_email",
+   "string_regex_match_lambda"
+  ],
+  "string_includes_lambda": [
+   "app_karate_email",
+   "string_includes_lambda"
+  ],
+  "string_empty_not_is": [
+   "app_karate_email",
+   "ebible_verses",
+   "file_root_exists",
+   "js_dollar",
+   "js_identifier_unique",
+   "list_filter_empty_not_is",
+   "string_empty_not_is",
+   "string_empty_not_is_assert"
+  ],
+  "emoji_arrow_right": [
+   "app_karate_email",
+   "emoji_arrow_right"
+  ],
+  "app_karate_button_screen_green": [
+   "app_karate_email",
+   "app_karate_home"
+  ],
+  "emoji_email": [
+   "app_karate_email",
+   "emoji_email"
+  ],
+  "app_karate_green_dark": [
+   "app_karate_email",
+   "app_karate_green_dark"
+  ],
+  "emoji_arrow_left": [
+   "app_karate_email",
+   "emoji_arrow_left"
+  ],
+  "app_karate_email": [
+   "app_karate_email",
+   "app_karate_screens"
+  ],
+  "checks": [
+   "app_karate_email"
+  ],
+  "check": [
+   "app_karate_email"
+  ],
+  "input": [
+   "app_karate_email",
+   "html_checked_set",
+   "html_input_email",
+   "html_input_type",
+   "command_line_read",
+   "html_value_get",
+   "html_value_set",
+   "integer_to",
+   "list_map_lower",
+   "marker_call_atomize",
+   "marker_call_replace",
+   "marker_call_replace_generic",
+   "messenger_reply_playwright",
+   "reply",
+   "reply_test",
+   "roman_to_integer",
+   "string_includes",
+   "string_includes_lambda",
+   "string_regex_match",
+   "string_regex_match_lambda",
+   "string_suffix_change",
+   "string_to"
+  ],
+  "div_checks": [
+   "app_karate_email"
+  ],
+  "ul": [
+   "app_karate_email"
+  ],
+  "button_next": [
+   "app_karate_email"
+  ],
+  "validate": [
+   "app_karate_email"
   ],
   "trimmed": [
    "app_karate_email"
@@ -1409,270 +2034,6 @@
    "functions_names_includes",
    "js_call_fill",
    "js_call_function_if"
-  ],
-  "lambda": [
-   "app_karate_email",
-   "app_new_step_3_generic",
-   "html_on_change",
-   "html_on_input",
-   "list_filter_includes_not",
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_reply_main",
-   "bible_verses_encouragement_generate",
-   "catch_call",
-   "catch_ignore",
-   "catch_ignore_async",
-   "catch_log",
-   "catch_log_async",
-   "catch_only_async",
-   "catch_only_run_async",
-   "command_line_read",
-   "data_files_update",
-   "data_file_update_inner",
-   "data_function_current_restore",
-   "data_set",
-   "each_multiple",
-   "each_multiple_async",
-   "each_object",
-   "each_pair",
-   "each_pair_async",
-   "each_range",
-   "each_range_async",
-   "each_range_from",
-   "each_range_from_async",
-   "each_reverse",
-   "ebible_books_to_chapter_codes",
-   "ebible_chapters",
-   "ebible_chapters_each_verses_list",
-   "ebible_chapter_text",
-   "ebible_index_flat",
-   "ebible_references_parse_lines",
-   "ebible_verses",
-   "ebible_verses_upload",
-   "ebible_versions_download",
-   "ebible_version_books_testament",
-   "file_exists",
-   "file_json_isolate",
-   "file_json_property_delete",
-   "firebase_upload_generic",
-   "folder_find_starts_with",
-   "folder_read_async",
-   "folder_read_files",
-   "functions_combine",
-   "functions_log_remove",
-   "functions_names_from_path",
-   "functions_names_to_paths",
-   "functions_transform",
-   "function_aliases_restore",
-   "function_aliases_search",
-   "function_alias_add",
-   "function_alias_change",
-   "function_alias_delete",
-   "function_alias_generic",
-   "function_alias_rename",
-   "function_alias_replace",
-   "function_copy",
-   "function_current_set",
-   "function_dependencies",
-   "function_exists_inner",
-   "function_identifier_replace",
-   "function_imports_add",
-   "function_name_to_path_search",
-   "function_new_js_inner",
-   "function_open_app",
-   "function_params_consolidate",
-   "function_params_new",
-   "function_param_swap",
-   "function_rename_identifiers",
-   "function_run_line_parse",
-   "function_run_output_file_temp",
-   "function_transform_current",
-   "function_transform_marker_all",
-   "function_transform_marker_specified",
-   "function_type_first",
-   "function_wrap",
-   "git_commit_folder",
-   "git_push_folder",
-   "global_function_async",
-   "global_function_property",
-   "global_function_property_async",
-   "html_button",
-   "html_button_screen",
-   "html_loading",
-   "html_on",
-   "html_on_click",
-   "html_on_keydown",
-   "html_parse_classes_preview",
-   "html_parse_descendants_classes",
-   "html_parse_href_text_map",
-   "http",
-   "js_arrow_to_function",
-   "js_assign_combine",
-   "js_atomize",
-   "js_atomize_function",
-   "js_auto",
-   "js_auto_transform_new_inner",
-   "js_await_add_inner",
-   "js_bang_to_not",
-   "js_block_child_graph",
-   "js_block_child_graph_unparse",
-   "js_calls_to_each",
-   "js_call_fill",
-   "js_call_new_code",
-   "js_declaration_single",
-   "js_declaration_single_params_add",
-   "js_declare_assign",
-   "js_declare_assign_null",
-   "js_dollar",
-   "js_dollar_a",
-   "js_dollar_a_generic",
-   "js_dollar_choice_arguments",
-   "js_dollar_f",
-   "js_dollar_g",
-   "js_dollar_new",
-   "js_dollar_s",
-   "js_expand_generic",
-   "js_function_id_add",
-   "js_function_last_asyncify",
-   "js_identifiers",
-   "js_identifiers_named",
-   "js_identifiers_names",
-   "js_identifier_defineds",
-   "js_identifier_replace",
-   "js_if_blockify_generic",
-   "js_if_else_if_combine",
-   "js_imports_declarations",
-   "js_imports_fix",
-   "js_imports_unused",
-   "js_imports_unused_remove",
-   "js_let_add",
-   "js_log_remove",
-   "js_marker_named_ast",
-   "js_node_atomize",
-   "js_node_types",
-   "js_node_type_is_if",
-   "js_node_type_is_if_async",
-   "js_node_type_not_is_if",
-   "js_outside_move",
-   "js_return_atomize",
-   "js_stack_filtered",
-   "js_stack_filtered_each",
-   "js_stack_filtered_multiple",
-   "js_type",
-   "js_unparse",
-   "js_visitors",
-   "js_visit_calls_named",
-   "js_visit_children_get",
-   "js_visit_each_async",
-   "js_visit_match",
-   "js_visit_nodes",
-   "js_visit_types",
-   "js_visit_type_each_async",
-   "keyboard_type_delay",
-   "lambda_invoke",
-   "lambda_value",
-   "lists_get",
-   "list_adder_generic",
-   "list_adder_generic_async",
-   "list_adder_unique",
-   "list_adder_unique_async",
-   "list_concat_multiple",
-   "list_difference",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "list_filter_starts_with",
-   "list_filter_starts_with_any",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_intersect",
-   "list_map_combine",
-   "list_map_index",
-   "list_map_path_join",
-   "list_map_prefix_any",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_map_property_to",
-   "list_map_split_space",
-   "list_remove_all_multiple",
-   "list_remove_multiple",
-   "list_sort_number_mapper",
-   "list_squash",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "list_unique",
-   "marker_above_delete",
-   "marker_above_generic",
-   "marker_assign_replace",
-   "marker_call",
-   "marker_call_atomize",
-   "marker_call_replace",
-   "marker_call_replace_generic",
-   "marker_current_set",
-   "marker_down_choices",
-   "marker_down_generic",
-   "marker_enter",
-   "marker_functionize",
-   "marker_if_test_replace",
-   "marker_leave",
-   "marker_new",
-   "marker_next",
-   "marker_next_await",
-   "marker_next_delete",
-   "marker_next_delete_multiple",
-   "marker_param_add",
-   "marker_remove",
-   "marker_rename",
-   "marker_screen_add",
-   "marker_top",
-   "messenger_reply",
-   "messenger_reply_messages",
-   "messenger_reply_messages_urls_add_multiple",
-   "messenger_reply_unread_collect",
-   "object_invert",
-   "object_merge_generic",
-   "object_properties_delete_all",
-   "object_property_equals_lambda",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "promise_wrap",
-   "puppeteer_hrefs",
-   "puppeteer_matches",
-   "range_from",
-   "reduce",
-   "reply",
-   "reply_sequence",
-   "reply_test",
-   "repos_gitignore_overwrite",
-   "repos_paths_map_unordered",
-   "repos_paths_names_map_unordered",
-   "repo_about_set",
-   "retry",
-   "retry_on_error",
-   "roman_to_integer",
-   "sandbox_2",
-   "sandbox_4_a",
-   "search_generic",
-   "server",
-   "string_list_to",
-   "tasks_run",
-   "task_new",
-   "throws_not_async",
-   "undefined_not_is_assert_lambda",
-   "user_repo_set",
-   "visit_filter_recursive",
-   "visit_filter_recursive_async",
-   "visit_unique_async",
-   "watch",
-   "repo_functions_move",
-   "js_imports_paths_fix_inner",
-   "functions_transform_list",
-   "functions_imports_fix_list",
-   "app_screen_set_lambda",
-   "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "app_karate_computer_save",
-   "app_karate_button_green"
   ],
   "c": [
    "app_karate_email",
@@ -1813,8 +2174,7 @@
   ],
   "element": [
    "app_karate_email",
-   "html_value_get",
-   "html_value_set",
+   "html_checked_set",
    "html_attribute_set",
    "html_clear",
    "html_component_element_get",
@@ -1824,44 +2184,48 @@
    "html_on",
    "html_remove",
    "html_text_set",
-   "html_checked_set"
+   "html_value_get",
+   "html_value_set"
   ],
   "focus": [
    "app_karate_email",
    "messenger_reply",
    "messenger_reply_playwright"
   ],
-  "html_span_text": [
+  "app_screen_set_lambda": [
    "app_karate_home",
-   "html_span_text",
-   "app_karate_computer_save"
-  ],
-  "emoji_person_outline": [
-   "app_karate_home",
-   "emoji_person_outline",
-   "app_karate_computer_save"
+   "app_screen_set_lambda",
+   "html_button_screen"
   ],
   "emoji_add": [
    "app_karate_home",
    "emoji_add"
   ],
-  "emoji_secure": [
-   "app_karate_home",
-   "emoji_secure",
-   "app_karate_computer_save"
-  ],
   "app_karate_home": [
    "app_karate_home",
    "app_karate_screens"
   ],
+  "html_button_karate_container_text_screen": [
+   "app_karate_home"
+  ],
   "component2": [
    "app_karate_home",
-   "app_reply_main",
-   "html_input"
+   "html_input",
+   "app_reply_main"
   ],
   "component3": [
    "app_karate_home",
    "app_reply_main"
+  ],
+  "button_text": [
+   "app_karate_home"
+  ],
+  "screen": [
+   "app_karate_home",
+   "app_refresh"
+  ],
+  "button": [
+   "app_karate_home"
   ],
   "storage_local_initialize_context": [
    "app_karate_main",
@@ -1946,12 +2310,15 @@
   "email": [
    "app_karate_screens"
   ],
+  "computer_save": [
+   "app_karate_screens"
+  ],
   "firebase_deploy_function_destination_latest": [
    "app_karate_staging",
    "app_new_step_5",
+   "firebase_deploy_function",
    "firebase_deploy_function_destination_latest",
-   "firebase_promote_function",
-   "firebase_deploy_function"
+   "firebase_promote_function"
   ],
   "app_karate_staging": [
    "app_karate_staging"
@@ -1960,56 +2327,50 @@
    "app_karate_style_control",
    "html_loading"
   ],
-  "function_name_combine": [
-   "app_name_staging",
-   "app_name_prefixed",
-   "function_copy_suffix_add",
-   "function_identifier_replace_suffix_add",
-   "function_name_combine",
+  "log": [
+   "app_screen_set_lambda",
+   "js_dollar_g",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "repos_paths_names_map_unordered_combine"
+  ],
+  "app_screen_set": [
+   "app_screen_set_lambda",
+   "app_replace_home",
+   "app_screen_set"
+  ],
+  "screen_name": [
+   "app_screen_set_lambda",
+   "app_refresh",
    "function_new_app_screen",
-   "function_new_js_name",
-   "function_rename_suffix_add",
-   "function_wrap_suffix_add",
-   "git_push_folder",
-   "js_dollar_new_name",
+   "html_button_screen",
    "marker_screen_add"
   ],
-  "app_name_prefixed": [
-   "app_name_staging",
-   "app_new_step_3_generic",
-   "app_name_main",
-   "app_name_prefixed",
-   "app_new_step_1",
-   "app_new_step_3",
-   "function_open_app",
-   "html_update_dev",
-   "html_update_public",
-   "marker_screen_add"
+  "firebase_deploy_function": [
+   "firebase_deploy_function_app_karate_main",
+   "firebase_deploy_function",
+   "firebase_deploy_function_app_current"
   ],
-  "app_name_staging": [
-   "app_name_staging",
-   "app_new_step_4",
-   "app_new_step_5",
-   "html_update_staging"
+  "firebase_deploy_function_app_karate_main": [
+   "firebase_deploy_function_app_karate_main"
   ],
   "name": [
-   "app_name_staging",
-   "app_new_step_3_generic",
-   "app_new_step_4",
-   "app_new_step_5",
-   "app_new_update",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
-   "html_name_to_path_folder",
-   "html_name_to_path_staging",
-   "html_update_public_generic",
-   "html_update_staging",
+   "repo_functions_move_if_includes_not_love_app_karate",
    "app_name_prefixed",
+   "app_name_staging",
    "app_new",
    "app_new_step_1",
    "app_new_step_2",
    "app_new_step_2_next",
    "app_new_step_3",
+   "app_new_step_3_generic",
+   "app_new_step_4",
+   "app_new_step_5",
+   "app_new_update",
    "app_replace",
    "app_replace_rule_set",
    "app_replace_rule_sets",
@@ -2038,6 +2399,8 @@
    "global_function_property_async",
    "html_name_to_path",
    "html_name_to_path_dev",
+   "html_name_to_path_folder",
+   "html_name_to_path_staging",
    "html_new",
    "html_overwrite",
    "html_parse_attr",
@@ -2045,6 +2408,8 @@
    "html_update",
    "html_update_dev",
    "html_update_public",
+   "html_update_public_generic",
+   "html_update_staging",
    "import_install",
    "js_assert_arguments_args",
    "js_assign_combine",
@@ -2076,6 +2441,7 @@
    "js_identifier_unique",
    "js_imports_declarations",
    "js_imports_missing",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "js_let_add",
    "js_log_remove",
@@ -2098,18 +2464,228 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch",
+   "watch"
+  ],
+  "firebase_promote_function": [
+   "firebase_promote_function_app_karate_main",
+   "firebase_promote_function"
+  ],
+  "firebase_promote_function_app_karate_main": [
+   "firebase_promote_function_app_karate_main"
+  ],
+  "assert_arguments": [
+   "html_checked_set",
+   "app_new",
+   "assert_arguments",
+   "function_params_new",
+   "html_button",
+   "html_value_set",
+   "js_assert_arguments_args",
+   "js_dollar_aa",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
+  ],
+  "object_property_set": [
+   "html_checked_set",
+   "data_file_update_inner",
+   "data_transform",
+   "file_json_isolate",
+   "function_alias_add",
+   "function_alias_change",
+   "function_alias_rename",
+   "function_alias_replace",
+   "function_exists_inner",
+   "html_disable_set",
+   "html_value_set",
+   "js_arrow_to_function",
+   "js_assign_combine",
+   "js_await",
+   "js_await_wrap",
+   "js_declaration_asyncify",
+   "js_declare_assign",
+   "js_declare_init_set",
+   "js_dollar_ien_generic",
+   "js_dollar_if_call",
+   "js_dollar_r",
+   "js_function_id_add",
+   "js_function_last_asyncify",
+   "js_identifier_replace",
+   "js_if_else_if_combine",
    "js_imports_paths_fix_inner",
+   "js_left_right_set",
+   "js_return_code_replace",
+   "js_stack_declaration_asyncify",
+   "js_statement_return_add",
+   "js_string",
+   "list_empty",
+   "list_map_property_to",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "marker_if_test_replace",
+   "marker_next_await",
+   "messenger_reply",
+   "messenger_reply_messages_urls_add_multiple",
+   "object_merge_generic",
+   "object_property_from",
+   "object_property_initialize",
+   "object_property_lambda",
+   "object_property_lambda_async",
+   "object_property_set",
+   "object_property_set_exists_not",
+   "watch"
+  ],
+  "arguments": [
+   "html_checked_set",
+   "app_new",
+   "catch_call",
+   "functions_combine",
+   "function_params_new",
+   "html_button",
+   "html_value_set",
+   "js_expand_generic",
+   "js_marker_name_get",
+   "marker_call_replace_generic",
+   "marker_rename",
+   "path_join",
+   "sandbox_5_a",
+   "task_new"
+  ],
+  "html_input": [
+   "html_input",
+   "html_input_type"
+  ],
+  "input_type": [
+   "html_input_email",
+   "html_input_type"
+  ],
+  "repo_functions_move_if_includes_not": [
+   "repo_functions_move_if_includes_not_love_app_karate",
+   "repo_functions_move_if_includes_not"
+  ],
+  "repo_functions_move_if_includes_not_love_app_karate": [
    "repo_functions_move_if_includes_not_love_app_karate"
   ],
+  "add": [
+   "add",
+   "add_1",
+   "range_from"
+  ],
+  "left": [
+   "add",
+   "add_1",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "app_replace_rule_valid",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "html_loading",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine"
+  ],
+  "right": [
+   "add",
+   "app_replace_rule_parse",
+   "app_replace_rule_set",
+   "bind",
+   "equal",
+   "equal_assert",
+   "equal_by",
+   "equal_not",
+   "function_name_combine",
+   "html_update_public_generic",
+   "js_block_child_graph",
+   "js_code_assign",
+   "js_code_dot",
+   "js_code_let_assign",
+   "js_code_or",
+   "js_left_right_set",
+   "js_let_add",
+   "list_map_combine",
+   "log_json",
+   "log_unparse_try"
+  ],
+  "sum": [
+   "add",
+   "add_1"
+  ],
+  "add_1": [
+   "add_1",
+   "marker_below"
+  ],
+  "folder_public": [
+   "apps_get",
+   "folder_public",
+   "folder_public_combine"
+  ],
+  "folder_read_files": [
+   "apps_get",
+   "folder_read_files",
+   "functions_names_from_path"
+  ],
+  "apps_get": [
+   "apps_get"
+  ],
+  "fop": [
+   "apps_get",
+   "function_aliases_restore"
+  ],
+  "fr": [
+   "apps_get",
+   "function_aliases_restore"
+  ],
+  "app_code": [
+   "app_code"
+  ],
+  "alert": [
+   "app_code",
+   "app_replace_rule_set"
+  ],
+  "file_open": [
+   "app_html_open",
+   "file_open",
+   "function_copy",
+   "function_open",
+   "function_run_output_file_temp",
+   "html_update_dev",
+   "html_update_public_generic"
+  ],
+  "folder_public_combine": [
+   "app_html_open",
+   "folder_public_combine",
+   "functions_path",
+   "html_index_generate",
+   "html_name_to_path",
+   "html_name_to_path_folder"
+  ],
+  "file_name_html": [
+   "app_html_open",
+   "file_name_html",
+   "html_index_generate",
+   "html_name_to_path",
+   "html_name_to_path_folder"
+  ],
+  "app_html_open": [
+   "app_html_open"
+  ],
   "a_name": [
-   "app_name_staging",
-   "app_new_step_3_generic",
    "app_html_open",
    "app_name_main",
    "app_name_prefixed",
+   "app_name_staging",
    "app_new_step_1",
    "app_new_step_3",
+   "app_new_step_3_generic",
    "function_new_app_screen",
    "function_open_app",
    "html_update_dev",
@@ -2117,15 +2693,35 @@
    "js_expand_generic",
    "marker_screen_add"
   ],
+  "file_name": [
+   "app_html_open",
+   "app_reply_main",
+   "ebible_firebase_upload",
+   "ebible_firebase_upload_path",
+   "ebible_index_flat_upload",
+   "ebible_index_flat_upload_name",
+   "ebible_index_upload",
+   "ebible_references_parse_god_created_man_why",
+   "ebible_version_books_upload",
+   "file_name_html",
+   "file_name_json",
+   "firebase_deploy_function_destination",
+   "firebase_storage_download_ebible",
+   "folder_user_docs_path",
+   "html_name_to_path",
+   "html_name_to_path_folder",
+   "http_firebase_file_path",
+   "http_local_file_name",
+   "local_function_path"
+  ],
   "combined": [
-   "app_name_staging",
-   "app_new_step_4",
-   "app_new_step_5",
-   "html_index_generate",
    "app_html_open",
    "app_name_main",
+   "app_name_staging",
    "app_new_assign",
    "app_new_step_2",
+   "app_new_step_4",
+   "app_new_step_5",
    "ebible_chapters",
    "firebase_deploy",
    "firebase_deploy_function_app_current",
@@ -2142,6 +2738,7 @@
    "function_new_js",
    "function_new_js_inner",
    "function_open_dollar_choice",
+   "html_index_generate",
    "js_auto_transform_new_inner",
    "js_dollar_new",
    "js_dollar_new_args",
@@ -2151,8 +2748,445 @@
    "repo_path_combine",
    "user_repo_path_combine"
   ],
+  "global_function_initialize": [
+   "app_main",
+   "global_function_initialize",
+   "global_function_property"
+  ],
+  "firebase_storage_function_run": [
+   "app_main",
+   "app_replace",
+   "app_reply",
+   "firebase_storage_function_run"
+  ],
+  "firebase_name": [
+   "app_main",
+   "firebase_name",
+   "firebase_storage_url_project"
+  ],
+  "f_name": [
+   "app_main",
+   "app_new_step_3_generic",
+   "app_replace",
+   "app_reply",
+   "command_line_node_g",
+   "data_file_update_inner",
+   "data_marker_current_get",
+   "data_path_generic",
+   "file_name_json_folder",
+   "firebase_deploy_function",
+   "firebase_deploy_function_destination",
+   "firebase_deploy_function_destination_latest",
+   "firebase_deploy_function_destination_production",
+   "firebase_promote_function",
+   "firebase_storage_function_run",
+   "functions_combine",
+   "functions_names_to_paths",
+   "functions_paths",
+   "functions_search_open",
+   "functions_transform_list",
+   "function_alias_add",
+   "function_alias_replace",
+   "function_auto",
+   "function_auto_path",
+   "function_current_set",
+   "function_current_set_task_new",
+   "function_current_set_task_new_simple",
+   "function_delete",
+   "function_delete_if_exists",
+   "function_dependencies",
+   "function_dependencies_code",
+   "function_dependencies_code_copy",
+   "function_exists",
+   "function_exists_assert",
+   "function_exists_strict",
+   "function_format",
+   "function_identifier_replace",
+   "function_import",
+   "function_imports",
+   "function_imports_fix",
+   "function_imports_missing",
+   "function_imports_missing_add",
+   "function_list_generate",
+   "function_name_folder_to_path",
+   "function_name_repo_path_combine",
+   "function_name_to_acronym",
+   "function_name_to_base",
+   "function_name_to_parts",
+   "function_name_to_path",
+   "function_name_to_path_unalias",
+   "function_name_unalias",
+   "function_new",
+   "function_new_aliased",
+   "function_new_transform",
+   "function_open",
+   "function_open_app",
+   "function_open_editor",
+   "function_params_consolidate",
+   "function_params_new",
+   "function_param_swap",
+   "function_param_swap_task_simple",
+   "function_parse",
+   "function_parse_declaration",
+   "function_parse_declaration_js_unparse",
+   "function_parse_strict",
+   "function_parse_strict_declaration",
+   "function_path_declaration_unparse",
+   "function_path_to_name",
+   "function_read",
+   "function_rename_identifiers",
+   "function_run",
+   "function_run_git",
+   "function_run_line",
+   "function_run_line_git",
+   "function_run_line_parse",
+   "function_run_log",
+   "function_run_output_file_temp",
+   "function_transform",
+   "function_transform_command",
+   "function_transform_command_self",
+   "function_transform_current",
+   "function_transform_marker",
+   "function_transform_marker_all",
+   "function_transform_marker_empty",
+   "function_transform_marker_specified",
+   "function_transform_result",
+   "function_types",
+   "function_type_first",
+   "function_watch_ending_change",
+   "function_wrap",
+   "function_wrap_suffix_add",
+   "git_acp_call",
+   "git_acp_call_folder",
+   "html_index_generate",
+   "html_update_public_generic",
+   "html_update_staging",
+   "js_call_insert",
+   "js_call_new_expression",
+   "js_code_call_statement",
+   "js_code_declaration",
+   "js_code_declaration_args",
+   "js_function_last_asyncify",
+   "js_marker_insert",
+   "js_outside_move",
+   "js_visit_calls_named",
+   "list_map_path_join",
+   "marker_assign_replace",
+   "marker_call_replace_generic",
+   "marker_down_choices",
+   "marker_expand",
+   "marker_functionize",
+   "marker_move",
+   "marker_new",
+   "marker_next",
+   "marker_next_await",
+   "marker_next_delete",
+   "marker_remove",
+   "marker_top",
+   "repos_gitignore_overwrite",
+   "repo_functions_move",
+   "task_new"
+  ],
+  "firebase_name_value": [
+   "app_main"
+  ],
+  "version_get": [
+   "app_main",
+   "app_new_step_3",
+   "app_new_step_3_generic",
+   "app_new_step_5",
+   "firebase_storage_function_run"
+  ],
+  "function_name_combine_multiple": [
+   "app_name_main",
+   "functions_combine_name",
+   "function_name_combine",
+   "function_name_combine_multiple",
+   "task_new"
+  ],
+  "app_name_prefixed": [
+   "app_name_main",
+   "app_name_prefixed",
+   "app_name_staging",
+   "app_new_step_1",
+   "app_new_step_3",
+   "app_new_step_3_generic",
+   "function_open_app",
+   "html_update_dev",
+   "html_update_public",
+   "marker_screen_add"
+  ],
+  "app_name_main": [
+   "app_name_main",
+   "app_new_step_2",
+   "app_new_step_3_generic",
+   "firebase_deploy_function_app_current",
+   "html_update_dev"
+  ],
+  "app_name_prefix": [
+   "app_name_prefix",
+   "app_name_prefixed"
+  ],
+  "function_name_combine": [
+   "app_name_prefixed",
+   "app_name_staging",
+   "function_copy_suffix_add",
+   "function_identifier_replace_suffix_add",
+   "function_name_combine",
+   "function_new_app_screen",
+   "function_new_js_name",
+   "function_rename_suffix_add",
+   "function_wrap_suffix_add",
+   "git_push_folder",
+   "js_dollar_new_name",
+   "marker_screen_add"
+  ],
+  "p": [
+   "app_name_prefixed",
+   "each_object",
+   "floor",
+   "folder_user_docs_path",
+   "functions_names_from_path",
+   "function_aliases_restore",
+   "function_rename_suffix_add",
+   "html_p_text",
+   "js_call_new_code",
+   "js_property",
+   "js_property_parse_expression",
+   "js_property_parse_expression_add",
+   "js_visit_children_get",
+   "list_random_item",
+   "marker_above_delete",
+   "marker_previous_index",
+   "marker_screen_add",
+   "messenger_reply",
+   "messenger_reply_playwright",
+   "object_properties_delete",
+   "object_properties_delete_all",
+   "repos_gitignore_overwrite",
+   "string_padded_is"
+  ],
+  "app_name_staging": [
+   "app_name_staging",
+   "app_new_step_4",
+   "app_new_step_5",
+   "html_update_staging"
+  ],
+  "string_and_empty_not_is_assert": [
+   "app_new",
+   "app_new_step_1",
+   "app_new_step_2",
+   "app_new_step_3_generic",
+   "string_and_empty_not_is_assert"
+  ],
+  "app_new_step_1": [
+   "app_new",
+   "app_new_step_1"
+  ],
+  "app_new_step_2_next": [
+   "app_new",
+   "app_new_step_2_next"
+  ],
+  "app_new": [
+   "app_new"
+  ],
+  "js_declare": [
+   "app_new_assign",
+   "js_declare",
+   "js_dollar_g",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_let_add",
+   "js_node_atomize"
+  ],
+  "js_parse_expression": [
+   "app_new_assign",
+   "functions_combine",
+   "function_identifier_replace",
+   "function_list_generate",
+   "function_params_new",
+   "js_assert_arguments_args",
+   "js_atomize_function",
+   "js_auto_transform_new_inner",
+   "js_await",
+   "js_await_wrap",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_call_new_expression",
+   "js_declaration_param_add",
+   "js_dollar_f",
+   "js_dollar_g",
+   "js_function_id_add",
+   "js_if_else_if_combine",
+   "js_imports_paths_fix_inner",
+   "js_node_atomize",
+   "js_null",
+   "js_parse_expression",
+   "js_property_identifier",
+   "js_property_parse_expression",
+   "js_return_code_replace",
+   "js_string",
+   "marker_assign_replace",
+   "marker_call_replace",
+   "marker_functionize",
+   "marker_if_test_replace",
+   "marker_screen_add"
+  ],
+  "js_code_dot": [
+   "app_new_assign",
+   "js_code_dot"
+  ],
+  "app_new_assign": [
+   "app_new_assign"
+  ],
+  "code": [
+   "app_new_assign",
+   "app_new_step_3_generic",
+   "file_js_parse",
+   "file_js_unparse",
+   "firebase_deploy_function",
+   "firebase_storage_function_run",
+   "function_dependencies_code",
+   "function_dependencies_code_copy",
+   "function_imports_add",
+   "function_list_generate",
+   "function_open_dollar_choice",
+   "function_transform_marker",
+   "function_transform_marker_specified",
+   "function_wrap",
+   "html_update_dev",
+   "html_update_public_generic",
+   "import_install",
+   "js_auto_transform_new_inner",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_call_insert",
+   "js_call_new",
+   "js_call_new_code",
+   "js_call_new_expression",
+   "js_code_arrow",
+   "js_code_assign",
+   "js_code_await",
+   "js_code_brackets_empty",
+   "js_code_call_args",
+   "js_code_call_args_await_maybe",
+   "js_code_call_statement",
+   "js_code_declaration",
+   "js_code_declaration_args",
+   "js_code_dot",
+   "js_code_return",
+   "js_code_statement",
+   "js_code_wrap_brackets",
+   "js_dollar_aa",
+   "js_dollar_f",
+   "js_dollar_g",
+   "js_dollar_new",
+   "js_dollar_new_args",
+   "js_dollar_new_name",
+   "js_dollar_rf",
+   "js_dollar_rt",
+   "js_dollar_s",
+   "js_format",
+   "js_parse",
+   "js_parse_statement",
+   "js_parse_statement_module",
+   "js_return_code_replace",
+   "js_return_empty",
+   "js_statement_return",
+   "js_unparse",
+   "log_unparse",
+   "marker_above",
+   "marker_above_generic",
+   "marker_below",
+   "marker_down_choices",
+   "marker_functionize",
+   "marker_next_await",
+   "marker_next_delete_multiple",
+   "marker_screen_add"
+  ],
+  "expression": [
+   "app_new_assign",
+   "function_list_generate",
+   "js_atomize_function",
+   "js_auto_transform_new_inner",
+   "js_await",
+   "js_await_wrap",
+   "js_bang_to_not",
+   "js_calls_to_each",
+   "js_call_callee_name",
+   "js_call_fill",
+   "js_call_new_expression",
+   "js_dollar_aa",
+   "js_dollar_ien_generic",
+   "js_dollar_if_call",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_if_else_if_combine",
+   "js_imports_paths_fix_inner",
+   "js_left_right_set",
+   "js_parse_expression",
+   "js_property_parse_expression",
+   "js_return_code_replace",
+   "js_statement_call_get",
+   "marker_call_replace_generic",
+   "marker_if_test_replace",
+   "marker_next_await"
+  ],
+  "assign": [
+   "app_new_assign",
+   "js_declare",
+   "js_dollar_g",
+   "js_dollar_s",
+   "js_expand_generic",
+   "js_let_add",
+   "js_node_atomize",
+   "object_assign"
+  ],
+  "function_new": [
+   "app_new_step_1",
+   "app_new_step_2",
+   "app_new_step_4",
+   "function_list_generate",
+   "function_new",
+   "function_new_aliased",
+   "function_new_app_screen",
+   "function_new_js_inner",
+   "function_new_transform",
+   "function_param_swap_task_simple",
+   "js_dollar_new",
+   "marker_screen_add",
+   "task_new"
+  ],
+  "app_new_step_2": [
+   "app_new_step_2",
+   "app_new_step_2_next"
+  ],
+  "app_new_step_4": [
+   "app_new_step_2_next",
+   "app_new_step_4"
+  ],
+  "app_new_step_5": [
+   "app_new_step_2_next",
+   "app_new_step_5",
+   "app_new_update"
+  ],
+  "app_new_step_3": [
+   "app_new_step_2_next",
+   "app_new_step_3",
+   "app_new_update"
+  ],
+  "html_new": [
+   "app_new_step_2_next",
+   "html_new"
+  ],
+  "app_new_step_3_generic": [
+   "app_new_step_3",
+   "app_new_step_3_generic",
+   "app_new_step_5"
+  ],
   "function_transform": [
    "app_new_step_3_generic",
+   "functions_transform_list",
    "function_auto",
    "function_copy",
    "function_identifier_replace",
@@ -2174,8 +3208,7 @@
    "marker_move",
    "marker_screen_add",
    "marker_top",
-   "task_new",
-   "functions_transform_list"
+   "task_new"
   ],
   "list_add": [
    "app_new_step_3_generic",
@@ -2257,13 +3290,6 @@
    "js_code_call_args_await_maybe",
    "marker_functionize"
   ],
-  "app_name_main": [
-   "app_new_step_3_generic",
-   "app_name_main",
-   "app_new_step_2",
-   "firebase_deploy_function_app_current",
-   "html_update_dev"
-  ],
   "js_declaration_single": [
    "app_new_step_3_generic",
    "data_file_update_inner",
@@ -2309,40 +3335,19 @@
   ],
   "function_name_to_path_search": [
    "app_new_step_3_generic",
-   "repo_functions_move",
    "function_exists_strict",
    "function_import",
    "function_name_repo_path_combine",
    "function_name_to_path_search",
    "function_name_to_path_unalias",
-   "function_parse_strict"
-  ],
-  "string_and_empty_not_is_assert": [
-   "app_new_step_3_generic",
-   "app_new",
-   "app_new_step_1",
-   "app_new_step_2",
-   "string_and_empty_not_is_assert"
-  ],
-  "app_new_step_3_generic": [
-   "app_new_step_3_generic",
-   "app_new_step_5",
-   "app_new_step_3"
-  ],
-  "version_get": [
-   "app_new_step_3_generic",
-   "app_new_step_5",
-   "app_main",
-   "app_new_step_3",
-   "firebase_storage_function_run"
+   "function_parse_strict",
+   "repo_functions_move"
   ],
   "f_name_transformed": [
    "app_new_step_3_generic"
   ],
   "repo_name": [
    "app_new_step_3_generic",
-   "repo_functions_names",
-   "repo_functions_path",
    "firebase_name",
    "firebase_name_repo",
    "function_name_repo_path_combine",
@@ -2356,6 +3361,8 @@
    "repo_exists_assert",
    "repo_firebase_service_account_get",
    "repo_firebase_service_account_set",
+   "repo_functions_names",
+   "repo_functions_path",
    "repo_path",
    "repo_path_combine",
    "user_repo_get",
@@ -2366,129 +3373,6 @@
    "app_new_step_3_generic",
    "firebase_name",
    "firebase_name_repo"
-  ],
-  "f_name": [
-   "app_new_step_3_generic",
-   "firebase_deploy_function_destination_latest",
-   "firebase_deploy_function_destination_production",
-   "firebase_promote_function",
-   "html_index_generate",
-   "html_update_public_generic",
-   "html_update_staging",
-   "app_main",
-   "app_replace",
-   "app_reply",
-   "command_line_node_g",
-   "data_file_update_inner",
-   "data_marker_current_get",
-   "data_path_generic",
-   "file_name_json_folder",
-   "firebase_deploy_function",
-   "firebase_deploy_function_destination",
-   "firebase_storage_function_run",
-   "functions_combine",
-   "functions_names_to_paths",
-   "functions_paths",
-   "functions_search_open",
-   "function_alias_add",
-   "function_alias_replace",
-   "function_auto",
-   "function_auto_path",
-   "function_current_set",
-   "function_current_set_task_new",
-   "function_current_set_task_new_simple",
-   "function_delete",
-   "function_delete_if_exists",
-   "function_dependencies",
-   "function_dependencies_code",
-   "function_dependencies_code_copy",
-   "function_exists",
-   "function_exists_assert",
-   "function_exists_strict",
-   "function_format",
-   "function_identifier_replace",
-   "function_import",
-   "function_imports",
-   "function_imports_fix",
-   "function_imports_missing",
-   "function_imports_missing_add",
-   "function_list_generate",
-   "function_name_folder_to_path",
-   "function_name_repo_path_combine",
-   "function_name_to_acronym",
-   "function_name_to_base",
-   "function_name_to_parts",
-   "function_name_to_path",
-   "function_name_to_path_unalias",
-   "function_name_unalias",
-   "function_new",
-   "function_new_aliased",
-   "function_new_transform",
-   "function_open",
-   "function_open_app",
-   "function_open_editor",
-   "function_params_consolidate",
-   "function_params_new",
-   "function_param_swap",
-   "function_param_swap_task_simple",
-   "function_parse",
-   "function_parse_declaration",
-   "function_parse_declaration_js_unparse",
-   "function_parse_strict",
-   "function_parse_strict_declaration",
-   "function_path_declaration_unparse",
-   "function_path_to_name",
-   "function_read",
-   "function_rename_identifiers",
-   "function_run",
-   "function_run_git",
-   "function_run_line",
-   "function_run_line_git",
-   "function_run_line_parse",
-   "function_run_log",
-   "function_run_output_file_temp",
-   "function_transform",
-   "function_transform_command",
-   "function_transform_command_self",
-   "function_transform_current",
-   "function_transform_marker",
-   "function_transform_marker_all",
-   "function_transform_marker_empty",
-   "function_transform_marker_specified",
-   "function_transform_result",
-   "function_types",
-   "function_type_first",
-   "function_watch_ending_change",
-   "function_wrap",
-   "function_wrap_suffix_add",
-   "git_acp_call",
-   "git_acp_call_folder",
-   "js_call_insert",
-   "js_call_new_expression",
-   "js_code_call_statement",
-   "js_code_declaration",
-   "js_code_declaration_args",
-   "js_function_last_asyncify",
-   "js_marker_insert",
-   "js_outside_move",
-   "js_visit_calls_named",
-   "list_map_path_join",
-   "marker_assign_replace",
-   "marker_call_replace_generic",
-   "marker_down_choices",
-   "marker_expand",
-   "marker_functionize",
-   "marker_move",
-   "marker_new",
-   "marker_next",
-   "marker_next_await",
-   "marker_next_delete",
-   "marker_remove",
-   "marker_top",
-   "repos_gitignore_overwrite",
-   "task_new",
-   "repo_functions_move",
-   "functions_transform_list"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -2530,6 +3414,7 @@
    "js_imports_declarations",
    "js_imports_fix",
    "js_imports_missing",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_node_atomize",
@@ -2537,8 +3422,7 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize",
-   "js_imports_paths_fix_inner"
+   "marker_functionize"
   ],
   "declaration_call": [
    "app_new_step_3_generic",
@@ -2573,6 +3457,7 @@
    "file_js_parse",
    "file_js_unparse",
    "functions_combine",
+   "functions_imports_fix_list",
    "function_copy",
    "function_identifier_replace",
    "function_imports",
@@ -2657,6 +3542,7 @@
    "js_imports_missing",
    "js_imports_missing_add",
    "js_imports_paths_fix",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "js_imports_unused_remove",
    "js_import_inside",
@@ -2693,9 +3579,7 @@
    "marker_screen_add",
    "marker_top",
    "promise_not_is",
-   "task_new",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix_list"
+   "task_new"
   ],
   "async": [
    "app_new_step_3_generic",
@@ -2710,71 +3594,6 @@
   ],
   "main_name": [
    "app_new_step_3_generic"
-  ],
-  "code": [
-   "app_new_step_3_generic",
-   "html_update_public_generic",
-   "app_new_assign",
-   "file_js_parse",
-   "file_js_unparse",
-   "firebase_deploy_function",
-   "firebase_storage_function_run",
-   "function_dependencies_code",
-   "function_dependencies_code_copy",
-   "function_imports_add",
-   "function_list_generate",
-   "function_open_dollar_choice",
-   "function_transform_marker",
-   "function_transform_marker_specified",
-   "function_wrap",
-   "html_update_dev",
-   "import_install",
-   "js_auto_transform_new_inner",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_call_insert",
-   "js_call_new",
-   "js_call_new_code",
-   "js_call_new_expression",
-   "js_code_arrow",
-   "js_code_assign",
-   "js_code_await",
-   "js_code_brackets_empty",
-   "js_code_call_args",
-   "js_code_call_args_await_maybe",
-   "js_code_call_statement",
-   "js_code_declaration",
-   "js_code_declaration_args",
-   "js_code_dot",
-   "js_code_return",
-   "js_code_statement",
-   "js_code_wrap_brackets",
-   "js_dollar_aa",
-   "js_dollar_f",
-   "js_dollar_g",
-   "js_dollar_new",
-   "js_dollar_new_args",
-   "js_dollar_new_name",
-   "js_dollar_rf",
-   "js_dollar_rt",
-   "js_dollar_s",
-   "js_format",
-   "js_parse",
-   "js_parse_statement",
-   "js_parse_statement_module",
-   "js_return_code_replace",
-   "js_return_empty",
-   "js_statement_return",
-   "js_unparse",
-   "log_unparse",
-   "marker_above",
-   "marker_above_generic",
-   "marker_below",
-   "marker_down_choices",
-   "marker_functionize",
-   "marker_next_await",
-   "marker_next_delete_multiple",
-   "marker_screen_add"
   ],
   "statement": [
    "app_new_step_3_generic",
@@ -2807,6 +3626,7 @@
    "command_line_node_g",
    "command_line_read",
    "file_open",
+   "functions_transform_list",
    "function_list_generate",
    "function_params_new",
    "function_parse_declaration_js_unparse",
@@ -2817,37 +3637,7 @@
    "js_unparse_inner",
    "marker_call",
    "marker_call_replace_generic",
-   "marker_screen_add",
-   "functions_transform_list"
-  ],
-  "function_new": [
-   "app_new_step_4",
-   "app_new_step_1",
-   "app_new_step_2",
-   "function_list_generate",
-   "function_new",
-   "function_new_aliased",
-   "function_new_app_screen",
-   "function_new_js_inner",
-   "function_new_transform",
-   "function_param_swap_task_simple",
-   "js_dollar_new",
-   "marker_screen_add",
-   "task_new"
-  ],
-  "app_new_step_4": [
-   "app_new_step_4",
-   "app_new_step_2_next"
-  ],
-  "app_new_step_5": [
-   "app_new_step_5",
-   "app_new_update",
-   "app_new_step_2_next"
-  ],
-  "app_new_step_3": [
-   "app_new_update",
-   "app_new_step_2_next",
-   "app_new_step_3"
+   "marker_screen_add"
   ],
   "html_update": [
    "app_new_update",
@@ -2857,433 +3647,12 @@
   "app_new_update": [
    "app_new_update"
   ],
-  "emoji": [
-   "emoji_email"
-  ],
-  "firebase_deploy_function": [
-   "firebase_deploy_function_app_karate_main",
-   "firebase_deploy_function",
-   "firebase_deploy_function_app_current"
-  ],
-  "firebase_deploy_function_app_karate_main": [
-   "firebase_deploy_function_app_karate_main"
-  ],
-  "firebase_deploy_function_destination": [
-   "firebase_deploy_function_destination_latest",
-   "firebase_deploy_function_destination_production",
-   "firebase_deploy_function",
-   "firebase_deploy_function_destination"
-  ],
-  "destination2": [
-   "firebase_deploy_function_destination_latest",
-   "firebase_deploy_function_destination_production"
-  ],
-  "firebase_storage_download_json": [
-   "firebase_promote_function",
-   "firebase_storage_download_ebible",
-   "firebase_storage_download_json"
-  ],
-  "firebase_upload_object": [
-   "firebase_promote_function",
-   "ebible_firebase_upload",
-   "firebase_deploy_function",
-   "firebase_upload_object"
-  ],
-  "firebase_promote_function": [
-   "firebase_promote_function",
-   "firebase_promote_function_app_karate_main"
-  ],
-  "destination_latest": [
-   "firebase_promote_function"
-  ],
-  "destination_production": [
-   "firebase_promote_function"
-  ],
-  "firebase_promote_function_app_karate_main": [
-   "firebase_promote_function_app_karate_main"
-  ],
-  "function_delete": [
-   "function_move",
-   "function_delete",
-   "function_delete_if_exists"
-  ],
-  "function_copy": [
-   "function_move",
-   "function_copy",
-   "function_copy_suffix_add"
-  ],
-  "function_move": [
-   "function_move",
-   "function_rename"
-  ],
-  "f_name_before": [
-   "function_move",
-   "function_rename",
-   "function_rename_identifiers",
-   "function_rename_suffix_add"
-  ],
-  "f_name_after": [
-   "function_move",
-   "function_rename",
-   "function_rename_identifiers",
-   "function_rename_suffix_add"
-  ],
-  "html_em_text": [
-   "html_em_text"
-  ],
-  "span": [
-   "html_em_text",
-   "html_span_text"
-  ],
-  "file_overwrite": [
-   "html_index_generate",
-   "file_js_unparse",
-   "file_overwrite",
-   "file_overwrite_json",
-   "file_write",
-   "function_format",
-   "function_run_output_file_temp",
-   "html_overwrite"
-  ],
-  "file_name_html": [
-   "html_index_generate",
-   "html_name_to_path_folder",
-   "app_html_open",
-   "file_name_html",
-   "html_name_to_path"
-  ],
-  "folder_public_combine": [
-   "html_index_generate",
-   "html_name_to_path_folder",
-   "app_html_open",
-   "folder_public_combine",
-   "functions_path",
-   "html_name_to_path"
-  ],
-  "user_repo_path_combine": [
-   "html_index_generate",
-   "firebase_deploy",
-   "function_copy",
-   "user_repo_path_combine"
-  ],
-  "html_index_generate": [
-   "html_index_generate"
-  ],
-  "app_name": [
-   "html_index_generate"
-  ],
-  "combined2": [
-   "html_index_generate",
-   "function_new_js_name",
-   "js_dollar_new_name"
-  ],
-  "contents": [
-   "html_index_generate",
-   "bible_verses_encouragement_generate",
-   "data_all",
-   "ebible_references_parse",
-   "file_overwrite",
-   "file_overwrite_buffer",
-   "file_read",
-   "file_write",
-   "file_write_buffer",
-   "file_write_generic",
-   "function_new_declaration",
-   "html_overwrite",
-   "html_parse",
-   "html_parse_read",
-   "sandbox_2",
-   "sandbox_4_a"
-  ],
-  "path_join": [
-   "html_name_to_path_folder",
-   "repo_functions_move",
-   "data_backup",
-   "ebible_version_books_testament",
-   "ebible_version_download_path_combine",
-   "file_name_json_folder",
-   "firebase_service_account_love_generic",
-   "folder_public_combine",
-   "folder_read_files",
-   "folder_user",
-   "folder_user_combine",
-   "function_import",
-   "function_name_folder_to_path",
-   "function_name_to_path_import",
-   "git_push_folder",
-   "html_update_dev",
-   "http_firebase_file_path",
-   "list_map_path_join",
-   "local_function_path",
-   "path_join",
-   "path_repo_combine",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_names_map_unordered_combine",
-   "repo_path",
-   "repo_path_combine",
-   "sandbox_2",
-   "server"
-  ],
-  "html_name_to_path_folder": [
-   "html_name_to_path_folder",
-   "html_name_to_path_staging",
-   "html_name_to_path_dev"
-  ],
-  "folder": [
-   "html_name_to_path_folder",
-   "html_name_to_path_staging",
-   "command_line_git",
-   "command_line_git_folder",
-   "data_path_generic",
-   "file_name_json_folder",
-   "firebase_storage_download_path",
-   "folder_user",
-   "folder_user_combine",
-   "functions_names_to_paths",
-   "functions_paths",
-   "function_name_folder_to_path",
-   "function_name_to_path",
-   "function_run_git",
-   "git_acp",
-   "git_acp_call",
-   "git_acp_call_folder",
-   "git_acp_folder",
-   "git_commit",
-   "git_commit_folder",
-   "git_publish_initial",
-   "git_push",
-   "git_push_folder",
-   "html_name_to_path_dev",
-   "repos_paths_map_unordered",
-   "repos_paths_map_unordered_combine",
-   "repo_acronym_to_path",
-   "sandbox_2"
-  ],
-  "file_name": [
-   "html_name_to_path_folder",
-   "app_html_open",
-   "app_reply_main",
-   "ebible_firebase_upload",
-   "ebible_firebase_upload_path",
-   "ebible_index_flat_upload",
-   "ebible_index_flat_upload_name",
-   "ebible_index_upload",
-   "ebible_references_parse_god_created_man_why",
-   "ebible_version_books_upload",
-   "file_name_html",
-   "file_name_json",
-   "firebase_deploy_function_destination",
-   "firebase_storage_download_ebible",
-   "folder_user_docs_path",
-   "html_name_to_path",
-   "http_firebase_file_path",
-   "http_local_file_name",
-   "local_function_path"
-  ],
-  "joined": [
-   "html_name_to_path_folder",
-   "html_update_public_generic",
-   "app_reply_main",
-   "data_backup",
-   "ebible_chapters",
-   "ebible_chapter_classes",
-   "ebible_chapter_text",
-   "ebible_firebase_upload_path",
-   "ebible_references_parse",
-   "ebible_verses_upload_name",
-   "ebible_verse_new",
-   "ebible_version_books_testament",
-   "ebible_version_download_path_combine",
-   "file_name_json_folder",
-   "firebase_storage_download_path",
-   "firebase_storage_function_run",
-   "folder_user_combine",
-   "functions_names",
-   "functions_names_to_paths",
-   "functions_path",
-   "function_exists_inner",
-   "function_name_folder_to_path",
-   "function_name_repo_path_combine",
-   "function_name_to_path_import",
-   "function_name_to_path_search",
-   "git_push_folder",
-   "html_update_dev",
-   "http_firebase_file_path",
-   "http_local_file_name",
-   "js_code_call_args",
-   "list_join",
-   "list_join_empty",
-   "list_join_newline",
-   "list_join_newline_2",
-   "list_join_slash_forward",
-   "list_join_space",
-   "list_map_path_join",
-   "messenger_reply",
-   "path_join",
-   "path_repo_combine",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_names_map_unordered_combine",
-   "sandbox_2"
-  ],
-  "file_path": [
-   "html_name_to_path_folder",
-   "html_name_to_path_staging",
-   "html_update_public_generic",
-   "html_update_staging",
-   "bible_verses_encouragement_generate",
-   "data_all",
-   "data_get",
-   "data_save",
-   "ebible_references_parse",
-   "ebible_references_parse_god_created_man_why",
-   "ebible_versions_download",
-   "ebible_version_books_testament",
-   "ebible_version_download",
-   "ebible_version_download_path_combine",
-   "file_delete",
-   "file_delete_if_exists",
-   "file_exists",
-   "file_overwrite",
-   "file_overwrite_buffer",
-   "file_overwrite_json",
-   "file_parent_exists_ensure",
-   "file_read",
-   "file_read_buffer",
-   "file_read_json",
-   "file_root_exists",
-   "file_root_exists_assert",
-   "file_write_json",
-   "firebase_service_account",
-   "firebase_service_account_karate",
-   "firebase_service_account_love",
-   "firebase_service_account_love_generic",
-   "function_alias_add_generic",
-   "function_name_repo_path_combine",
-   "html_name_to_path",
-   "html_name_to_path_dev",
-   "html_new",
-   "html_overwrite",
-   "html_parse_read",
-   "html_update_dev",
-   "html_update_public",
-   "path_name",
-   "sandbox_4_a",
-   "unzip"
-  ],
-  "html_name_to_path_staging": [
-   "html_name_to_path_staging",
-   "html_update_staging"
-  ],
-  "html_on": [
-   "html_on_change",
-   "html_on_input",
-   "html_on",
-   "html_on_click",
-   "html_on_keydown"
-  ],
-  "html_on_change": [
-   "html_on_change"
-  ],
-  "name_event": [
-   "html_on_change",
-   "html_on_input",
-   "html_on",
-   "html_on_click",
-   "html_on_keydown"
-  ],
-  "file_open": [
-   "html_update_public_generic",
-   "app_html_open",
-   "file_open",
-   "function_copy",
-   "function_open",
-   "function_run_output_file_temp",
-   "html_update_dev"
-  ],
-  "html_overwrite": [
-   "html_update_public_generic",
-   "html_overwrite",
-   "html_update_dev"
-  ],
-  "html_code_script_module": [
-   "html_update_public_generic",
-   "html_code_script_module",
-   "html_update_dev"
-  ],
-  "js_code_let_assign": [
-   "html_update_public_generic",
-   "js_call_new",
-   "js_code_let_assign",
-   "js_declare",
-   "marker_screen_add"
-  ],
-  "js_code_braces_empty": [
-   "html_update_public_generic",
-   "js_code_arrow",
-   "js_code_braces_empty",
-   "js_dollar_i"
-  ],
-  "js_code_call_statement": [
-   "html_update_public_generic",
-   "firebase_storage_function_run",
-   "html_update_dev",
-   "js_code_call_statement"
-  ],
-  "function_dependencies_code": [
-   "html_update_public_generic",
-   "firebase_deploy_function",
-   "function_dependencies_code",
-   "function_dependencies_code_copy"
-  ],
-  "function_name_repo_path_combine": [
-   "html_update_public_generic",
-   "function_name_repo_path_combine",
-   "html_update_dev"
-  ],
-  "html_update_public_generic": [
-   "html_update_public_generic",
-   "html_update_staging",
-   "html_update_public"
-  ],
-  "call": [
-   "html_update_public_generic",
-   "firebase_storage_function_run",
-   "html_update_dev",
-   "js_calls_to_each"
-  ],
-  "right": [
-   "html_update_public_generic",
-   "add",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine",
-   "log_json",
-   "log_unparse_try"
-  ],
-  "global_init": [
-   "html_update_public_generic"
-  ],
-  "middle": [
-   "html_update_public_generic",
-   "app_replace_rule_parse",
-   "html_code_script_module",
-   "html_update_dev"
+  "storage_local_initialize": [
+   "app_refresh",
+   "storage_local_initialize",
+   "storage_local_initialize_context"
   ],
   "body": [
-   "html_update_public_generic",
    "app_refresh",
    "firebase_storage_function_run",
    "function_imports_add",
@@ -3291,6 +3660,7 @@
    "html_loading",
    "html_overwrite",
    "html_update_dev",
+   "html_update_public_generic",
    "js_block_child_graph",
    "js_declaration_to_block_body",
    "js_if_blockify_generic",
@@ -3302,922 +3672,6 @@
    "marker_enter",
    "marker_functionize",
    "marker_top"
-  ],
-  "html_update_staging": [
-   "html_update_staging"
-  ],
-  "assert_arguments": [
-   "html_value_set",
-   "app_new",
-   "assert_arguments",
-   "function_params_new",
-   "js_assert_arguments_args",
-   "js_dollar_aa",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "html_button",
-   "html_checked_set"
-  ],
-  "object_property_set": [
-   "html_value_set",
-   "data_file_update_inner",
-   "data_transform",
-   "file_json_isolate",
-   "function_alias_add",
-   "function_alias_change",
-   "function_alias_rename",
-   "function_alias_replace",
-   "function_exists_inner",
-   "html_disable_set",
-   "js_arrow_to_function",
-   "js_assign_combine",
-   "js_await",
-   "js_await_wrap",
-   "js_declaration_asyncify",
-   "js_declare_assign",
-   "js_declare_init_set",
-   "js_dollar_ien_generic",
-   "js_dollar_if_call",
-   "js_dollar_r",
-   "js_function_id_add",
-   "js_function_last_asyncify",
-   "js_identifier_replace",
-   "js_if_else_if_combine",
-   "js_left_right_set",
-   "js_return_code_replace",
-   "js_stack_declaration_asyncify",
-   "js_statement_return_add",
-   "js_string",
-   "list_empty",
-   "list_map_property_to",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "marker_if_test_replace",
-   "marker_next_await",
-   "messenger_reply",
-   "messenger_reply_messages_urls_add_multiple",
-   "object_merge_generic",
-   "object_property_from",
-   "object_property_initialize",
-   "object_property_lambda",
-   "object_property_lambda_async",
-   "object_property_set",
-   "object_property_set_exists_not",
-   "watch",
-   "js_imports_paths_fix_inner",
-   "html_checked_set"
-  ],
-  "arguments": [
-   "html_value_set",
-   "app_new",
-   "catch_call",
-   "functions_combine",
-   "function_params_new",
-   "js_expand_generic",
-   "js_marker_name_get",
-   "marker_call_replace_generic",
-   "marker_rename",
-   "path_join",
-   "sandbox_5_a",
-   "task_new",
-   "html_button",
-   "html_checked_set"
-  ],
-  "string_includes_not": [
-   "list_filter_includes_not",
-   "string_includes_not"
-  ],
-  "list_filter": [
-   "list_filter_includes_not",
-   "ebible_verses",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "js_identifiers_named",
-   "js_markers",
-   "js_marker_named_ast",
-   "js_stack_filtered",
-   "js_stack_filtered_multiple",
-   "list_all",
-   "list_any",
-   "list_filter",
-   "list_filter_empty_not_is",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "list_filter_property",
-   "list_filter_starts_with",
-   "list_filter_starts_with_any",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_find",
-   "search_generic"
-  ],
-  "list_filter_includes_not": [
-   "list_filter_includes_not",
-   "repo_functions_move_if_includes_not"
-  ],
-  "mapped": [
-   "list_filter_includes_not",
-   "app_replace_rule_set",
-   "bible_verses_encouragement_generate",
-   "ebible_chapters",
-   "ebible_references_parse_lines",
-   "ebible_verses_upload",
-   "ebible_versions",
-   "ebible_version_books_testament",
-   "ebible_version_books_testament_new",
-   "ebible_version_books_testament_old",
-   "functions_format",
-   "functions_paths",
-   "function_dependencies_code",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "git_publish_initial",
-   "html_parse_find_a_href_starts_with",
-   "html_parse_find_list_href_text",
-   "html_parse_href_text_map",
-   "js_block_child_graph_unparse",
-   "js_dollar_choice_arguments_names",
-   "js_imports_declarations",
-   "js_imports_unused",
-   "js_visit_children_get",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_map",
-   "list_map_index",
-   "list_map_lower",
-   "list_map_prefix_any",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_map_property",
-   "list_map_property_to",
-   "list_map_squash",
-   "list_map_unordered_async",
-   "messenger_reply",
-   "range_from",
-   "reply",
-   "repos_gitignore_overwrite",
-   "repos_paths_map_unordered",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
-   "sandbox_2",
-   "sandbox_4_a",
-   "repo_functions_move"
-  ],
-  "part": [
-   "list_filter_includes_not",
-   "string_includes_not",
-   "string_includes"
-  ],
-  "item": [
-   "list_filter_includes_not",
-   "string_includes_lambda",
-   "string_includes_not",
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_reply_main",
-   "css_class_prefix_combine",
-   "data_file_update_inner",
-   "each",
-   "each_async",
-   "each_index",
-   "each_index_async",
-   "each_multiple",
-   "each_multiple_async",
-   "ebible_chapters",
-   "ebible_chapter_text",
-   "ebible_languages_to_bible_folders",
-   "ebible_versions_download",
-   "ebible_version_books_testament",
-   "folder_find_starts_with",
-   "functions_combine",
-   "function_wrap",
-   "html_display_none_or_block",
-   "html_parse_attr",
-   "html_parse_descendants_classes",
-   "html_parse_href",
-   "html_parse_href_text",
-   "html_parse_href_text_map",
-   "html_parse_text",
-   "html_p_text_multiple",
-   "js_declaration_param_add",
-   "js_declaration_param_add_node",
-   "js_declaration_single_block_body_add",
-   "js_dollar_a",
-   "js_expand_generic",
-   "js_identifier_defineds",
-   "js_node_types_is",
-   "js_stack_filtered_multiple",
-   "js_statement_return",
-   "js_statement_return_empty",
-   "js_types_function_includes",
-   "keyboard_type_delay",
-   "lists_get",
-   "list_add",
-   "list_adder_async",
-   "list_adder_generic",
-   "list_adder_generic_async",
-   "list_add_first",
-   "list_add_if_not_includes",
-   "list_any_starts_with",
-   "list_concat_multiple",
-   "list_filter_empty_not_is",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "list_filter_starts_with",
-   "list_filter_starts_with_any",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_find_property",
-   "list_find_starts_with",
-   "list_get",
-   "list_get_end",
-   "list_get_end_3",
-   "list_includes",
-   "list_index_of",
-   "list_index_of_delta",
-   "list_index_of_delta_outside",
-   "list_index_of_last",
-   "list_index_of_next",
-   "list_index_of_next_outside",
-   "list_index_of_previous",
-   "list_last_is",
-   "list_last_or_null",
-   "list_map_index",
-   "list_map_path_join",
-   "list_map_prefix_any",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_map_property",
-   "list_map_property_to",
-   "list_map_split_space",
-   "list_next",
-   "list_next_index",
-   "list_next_try",
-   "list_previous",
-   "list_remove",
-   "list_remove_all",
-   "list_remove_if_exists",
-   "list_squash",
-   "list_to_dictionary",
-   "list_to_dictionary_async",
-   "list_unique",
-   "marker_down_choices",
-   "object_property_equals",
-   "object_property_equals_lambda",
-   "object_property_get_name",
-   "range_from",
-   "sandbox_4_a",
-   "string_ends_with_not",
-   "string_starts_with_not",
-   "tasks_run"
-  ],
-  "n": [
-   "list_filter_includes_not",
-   "string_includes_not",
-   "ebible_chapter_text",
-   "ebible_verse_download",
-   "ebible_version_books",
-   "function_aliases_restore",
-   "function_aliases_search",
-   "function_alias_rename",
-   "js_await_add_inner",
-   "js_calls_to_each",
-   "js_declare_assign",
-   "js_node_is",
-   "js_node_type",
-   "js_null",
-   "js_stack_filtered",
-   "js_visit_children_get",
-   "js_visit_filter",
-   "marker_next_get",
-   "not",
-   "null_is",
-   "object_property_exists_not",
-   "promise_not_is",
-   "puppeteer_matches",
-   "round",
-   "search_generic",
-   "storage_local_initialize",
-   "storage_local_specify_get"
-  ],
-  "filtered": [
-   "list_filter_includes_not",
-   "repo_functions_move_if_includes_not",
-   "ebible_chapters",
-   "ebible_verses",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "html_parse_find_a_href_starts_with",
-   "js_marker_named_ast",
-   "js_stack_filtered",
-   "js_stack_filtered_multiple",
-   "js_stack_filtered_multiple_each",
-   "js_stack_last_multiple",
-   "list_all",
-   "list_any",
-   "list_filter",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "list_filter_property",
-   "list_filter_starts_with",
-   "list_filter_starts_with_not",
-   "list_filter_starts_with_not_multiple",
-   "list_find",
-   "messenger_reply",
-   "puppeteer_hrefs_starts_with"
-  ],
-  "data_identifiers_search": [
-   "data_identifiers_search",
-   "function_params_new",
-   "js_function_last_asyncify"
-  ],
-  "file_delete": [
-   "repo_functions_move",
-   "file_delete",
-   "file_delete_if_exists",
-   "function_delete"
-  ],
-  "file_copy": [
-   "repo_functions_move",
-   "data_backup",
-   "data_copy",
-   "file_copy",
-   "function_copy"
-  ],
-  "function_name_to_base": [
-   "repo_functions_move",
-   "function_name_folder_to_path",
-   "function_name_to_base",
-   "html_update_dev"
-  ],
-  "repo_functions_path": [
-   "repo_functions_move",
-   "repo_functions_names",
-   "repo_functions_path"
-  ],
-  "repo_functions_move": [
-   "repo_functions_move",
-   "repo_functions_move_if_includes_not"
-  ],
-  "repo_name_to": [
-   "repo_functions_move",
-   "repo_functions_move_if_includes_not"
-  ],
-  "r_path": [
-   "repo_functions_move",
-   "repo_functions_names",
-   "repo_functions_path",
-   "path_repo_combine",
-   "repos_paths_names_map_unordered_combine",
-   "repo_path"
-  ],
-  "f_name_ext": [
-   "repo_functions_move",
-   "folder_current_join_code",
-   "function_name_to_base",
-   "html_update_dev"
-  ],
-  "f_path_to": [
-   "repo_functions_move",
-   "data_backup",
-   "data_copy",
-   "data_partition"
-  ],
-  "search": [
-   "repo_functions_move",
-   "functions_search",
-   "functions_search_open",
-   "function_aliases_search",
-   "function_name_repo_path_combine",
-   "function_name_to_path_search",
-   "js_visit_match",
-   "search_generic",
-   "tasks_run"
-  ],
-  "f_path": [
-   "repo_functions_move",
-   "data_aliases_path",
-   "data_file_update",
-   "data_file_update_inner",
-   "data_path",
-   "data_path_generic",
-   "data_prompts_path",
-   "file_json_isolate",
-   "file_json_property_delete",
-   "file_json_transform",
-   "file_js_parse",
-   "file_js_unparse",
-   "file_name_json_folder",
-   "file_open",
-   "file_write",
-   "file_write_buffer",
-   "file_write_generic",
-   "firebase_name_repo",
-   "folder_public_combine",
-   "function_auto_path",
-   "function_copy",
-   "function_delete",
-   "function_exists_inner",
-   "function_format",
-   "function_import",
-   "function_name_to_path_search",
-   "function_new_declaration",
-   "function_open",
-   "function_open_editor",
-   "function_parse",
-   "function_parse_strict",
-   "function_path_declaration_unparse",
-   "function_path_to_name",
-   "function_read",
-   "git_history_delete",
-   "html_update_dev",
-   "js_outside_move",
-   "path_repo_about",
-   "path_repo_combine",
-   "repo_path_combine",
-   "user_repo_get",
-   "user_repo_path",
-   "user_repo_path_combine",
-   "user_repo_set"
-  ],
-  "result": [
-   "cache_generic",
-   "catch_call",
-   "command_line_node_g",
-   "data_identifiers_search",
-   "data_prompts",
-   "ebible_chapter_text",
-   "ebible_references_parse_lines",
-   "ebible_verse",
-   "file_temp",
-   "folder_current_join",
-   "folder_public_combine",
-   "folder_read_files",
-   "folder_user_combine",
-   "functions_combine_name",
-   "functions_search",
-   "functions_search_open",
-   "function_aliases_search",
-   "function_exists_inner",
-   "function_exists_strict",
-   "function_name_to_path_unalias",
-   "function_new_js_inner",
-   "function_params_consolidate",
-   "function_params_new",
-   "function_run",
-   "function_run_git",
-   "function_run_log",
-   "function_run_output_file_temp",
-   "function_transform_result",
-   "git_push_schedule_command",
-   "git_repo_rename_normalize",
-   "html_loading",
-   "html_parse",
-   "html_parse_find",
-   "html_parse_find_remove",
-   "http",
-   "http_firebase",
-   "http_local",
-   "js_code_call",
-   "js_code_call_statement",
-   "js_code_parenthesis_open_close",
-   "js_declaration_param_named",
-   "js_dollar_choice_arguments",
-   "js_function_last_asyncify",
-   "js_identifiers",
-   "js_marker_named_ast",
-   "js_node_types",
-   "js_stack_filtered_multiple",
-   "list_first_remaining",
-   "list_first_second",
-   "list_first_second_generic",
-   "list_is_assert",
-   "list_join_comma",
-   "list_last_or_null",
-   "list_map_name",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_range",
-   "list_slice_end",
-   "marker_functionize",
-   "messenger_reply_unreplied",
-   "object_property_exists_assert",
-   "object_property_exists_not",
-   "object_property_exists_not_assert",
-   "repos_paths_map_unordered",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
-   "retry",
-   "search_generic",
-   "storage_local_get",
-   "storage_local_specify_get",
-   "tasks_run",
-   "task_new",
-   "ternary"
-  ],
-  "user_repo_get": [
-   "firebase_name",
-   "function_new_declaration",
-   "repo_firebase_service_account_get",
-   "repo_firebase_service_account_set",
-   "user_repo_get",
-   "user_repo_path_combine",
-   "user_repo_set",
-   "repo_functions_move_if_includes_not"
-  ],
-  "repo_functions_names": [
-   "repo_functions_move_if_includes_not",
-   "repo_functions_names"
-  ],
-  "repo_functions_move_if_includes_not": [
-   "repo_functions_move_if_includes_not",
-   "repo_functions_move_if_includes_not_love_app_karate"
-  ],
-  "to": [
-   "repo_functions_move_if_includes_not",
-   "each_range_from",
-   "each_range_from_async",
-   "ebible_version_books_testament",
-   "function_imports_missing",
-   "function_name_to_path_unalias",
-   "function_parse",
-   "function_parse_declaration",
-   "function_parse_declaration_inner",
-   "function_parse_strict_declaration",
-   "git_repo_rename",
-   "js_dollar_r",
-   "js_imports_unused",
-   "marker_call_replace_generic",
-   "marker_next_get",
-   "marker_next_index",
-   "marker_rename",
-   "object_assign",
-   "object_merge",
-   "object_merge_generic",
-   "object_properties_from",
-   "object_property_from",
-   "object_replace",
-   "range_from",
-   "repos_gitignore_overwrite",
-   "string_replace"
-  ],
-  "query": [
-   "repo_functions_move_if_includes_not",
-   "html_parse_find_list_to",
-   "html_parse_list_to"
-  ],
-  "f_names": [
-   "repo_functions_move_if_includes_not",
-   "repo_functions_names",
-   "functions_combine",
-   "functions_combine_name",
-   "functions_names",
-   "functions_names_from_path",
-   "functions_names_to_paths",
-   "functions_paths",
-   "functions_search",
-   "function_names_to_acronyms",
-   "function_params_consolidate",
-   "function_rename_identifiers",
-   "js_expand_generic",
-   "js_imports_missing",
-   "repos_paths_map_unordered_combine",
-   "string_split_comma",
-   "repo_functions_move"
-  ],
-  "functions_names_from_path": [
-   "repo_functions_names",
-   "functions_names",
-   "functions_names_from_path",
-   "functions_names_to_paths",
-   "functions_paths"
-  ],
-  "repo_path_combine": [
-   "repo_functions_path",
-   "firebase_name_repo",
-   "function_name_repo_path_combine",
-   "function_new_declaration",
-   "repo_path_combine",
-   "user_repo_path_combine"
-  ],
-  "functions_path": [
-   "repo_functions_path",
-   "functions_path",
-   "function_name_to_path",
-   "repos_paths_map_unordered_combine_squash"
-  ],
-  "path": [
-   "repo_functions_path",
-   "file_parent_exists_ensure",
-   "file_root_exists",
-   "firebase_path_fix",
-   "firebase_storage_exists",
-   "folder_read_async",
-   "functions_names_from_path",
-   "function_import",
-   "messenger_reply_login",
-   "object_property_exists_equals",
-   "path_name",
-   "path_resolve",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
-   "server",
-   "watch"
-  ],
-  "string_includes": [
-   "string_includes_lambda",
-   "string_includes_not",
-   "function_name_to_path",
-   "search_generic",
-   "string_includes"
-  ],
-  "l": [
-   "string_includes_lambda",
-   "string_regex_match_lambda",
-   "function_aliases_restore",
-   "js_dollar_a_generic",
-   "js_dollar_x",
-   "list_concat",
-   "list_difference",
-   "list_filter",
-   "list_intersect",
-   "list_is",
-   "list_squash",
-   "marker_down_choices"
-  ],
-  "string_includes_lambda_inner": [
-   "string_includes_lambda"
-  ],
-  "si": [
-   "string_includes_lambda",
-   "string_is"
-  ],
-  "string_regex_match": [
-   "string_regex_match",
-   "string_regex_match_lambda"
-  ],
-  "regex": [
-   "string_regex_match",
-   "string_regex_match_lambda"
-  ],
-  "match": [
-   "string_regex_match",
-   "js_node_types_is",
-   "log_unparse_try",
-   "roman_to_integer"
-  ],
-  "string_regex_match_lambda_inner": [
-   "string_regex_match_lambda"
-  ],
-  "m": [
-   "string_regex_match_lambda",
-   "ebible_references_parse_lines",
-   "function_aliases_restore",
-   "function_exists_inner",
-   "function_name_to_path_search",
-   "messenger_reply_unread_click",
-   "reply_test"
-  ],
-  "add": [
-   "add",
-   "add_1",
-   "range_from"
-  ],
-  "left": [
-   "add",
-   "add_1",
-   "app_replace_rule_parse",
-   "app_replace_rule_set",
-   "app_replace_rule_valid",
-   "bind",
-   "equal",
-   "equal_assert",
-   "equal_by",
-   "equal_not",
-   "function_name_combine",
-   "html_loading",
-   "js_block_child_graph",
-   "js_code_assign",
-   "js_code_dot",
-   "js_code_let_assign",
-   "js_code_or",
-   "js_left_right_set",
-   "js_let_add",
-   "list_map_combine"
-  ],
-  "sum": [
-   "add",
-   "add_1"
-  ],
-  "add_1": [
-   "add_1",
-   "marker_below"
-  ],
-  "folder_public": [
-   "apps_get",
-   "folder_public",
-   "folder_public_combine"
-  ],
-  "folder_read_files": [
-   "apps_get",
-   "folder_read_files",
-   "functions_names_from_path"
-  ],
-  "apps_get": [
-   "apps_get"
-  ],
-  "fop": [
-   "apps_get",
-   "function_aliases_restore"
-  ],
-  "fr": [
-   "apps_get",
-   "function_aliases_restore"
-  ],
-  "app_code": [
-   "app_code"
-  ],
-  "alert": [
-   "app_code",
-   "app_replace_rule_set"
-  ],
-  "app_html_open": [
-   "app_html_open"
-  ],
-  "global_function_initialize": [
-   "app_main",
-   "global_function_initialize",
-   "global_function_property"
-  ],
-  "firebase_storage_function_run": [
-   "app_main",
-   "app_replace",
-   "app_reply",
-   "firebase_storage_function_run"
-  ],
-  "firebase_name": [
-   "app_main",
-   "firebase_name",
-   "firebase_storage_url_project"
-  ],
-  "firebase_name_value": [
-   "app_main"
-  ],
-  "function_name_combine_multiple": [
-   "app_name_main",
-   "functions_combine_name",
-   "function_name_combine",
-   "function_name_combine_multiple",
-   "task_new"
-  ],
-  "app_name_prefix": [
-   "app_name_prefix",
-   "app_name_prefixed"
-  ],
-  "p": [
-   "app_name_prefixed",
-   "each_object",
-   "floor",
-   "folder_user_docs_path",
-   "functions_names_from_path",
-   "function_aliases_restore",
-   "function_rename_suffix_add",
-   "html_p_text",
-   "js_call_new_code",
-   "js_property",
-   "js_property_parse_expression",
-   "js_property_parse_expression_add",
-   "js_visit_children_get",
-   "list_random_item",
-   "marker_above_delete",
-   "marker_previous_index",
-   "marker_screen_add",
-   "messenger_reply",
-   "messenger_reply_playwright",
-   "object_properties_delete",
-   "object_properties_delete_all",
-   "repos_gitignore_overwrite",
-   "string_padded_is"
-  ],
-  "app_new_step_1": [
-   "app_new",
-   "app_new_step_1"
-  ],
-  "app_new_step_2_next": [
-   "app_new",
-   "app_new_step_2_next"
-  ],
-  "app_new": [
-   "app_new"
-  ],
-  "js_declare": [
-   "app_new_assign",
-   "js_declare",
-   "js_dollar_g",
-   "js_dollar_s",
-   "js_expand_generic",
-   "js_let_add",
-   "js_node_atomize"
-  ],
-  "js_parse_expression": [
-   "app_new_assign",
-   "functions_combine",
-   "function_identifier_replace",
-   "function_list_generate",
-   "function_params_new",
-   "js_assert_arguments_args",
-   "js_atomize_function",
-   "js_auto_transform_new_inner",
-   "js_await",
-   "js_await_wrap",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_call_new_expression",
-   "js_declaration_param_add",
-   "js_dollar_f",
-   "js_dollar_g",
-   "js_function_id_add",
-   "js_if_else_if_combine",
-   "js_node_atomize",
-   "js_null",
-   "js_parse_expression",
-   "js_property_identifier",
-   "js_property_parse_expression",
-   "js_return_code_replace",
-   "js_string",
-   "marker_assign_replace",
-   "marker_call_replace",
-   "marker_functionize",
-   "marker_if_test_replace",
-   "marker_screen_add",
-   "js_imports_paths_fix_inner"
-  ],
-  "js_code_dot": [
-   "app_new_assign",
-   "js_code_dot"
-  ],
-  "app_new_assign": [
-   "app_new_assign"
-  ],
-  "expression": [
-   "app_new_assign",
-   "function_list_generate",
-   "js_atomize_function",
-   "js_auto_transform_new_inner",
-   "js_await",
-   "js_await_wrap",
-   "js_bang_to_not",
-   "js_calls_to_each",
-   "js_call_callee_name",
-   "js_call_fill",
-   "js_call_new_expression",
-   "js_dollar_aa",
-   "js_dollar_ien_generic",
-   "js_dollar_if_call",
-   "js_dollar_s",
-   "js_expand_generic",
-   "js_if_else_if_combine",
-   "js_left_right_set",
-   "js_parse_expression",
-   "js_property_parse_expression",
-   "js_return_code_replace",
-   "js_statement_call_get",
-   "marker_call_replace_generic",
-   "marker_if_test_replace",
-   "marker_next_await",
-   "js_imports_paths_fix_inner"
-  ],
-  "assign": [
-   "app_new_assign",
-   "js_declare",
-   "js_dollar_g",
-   "js_dollar_s",
-   "js_expand_generic",
-   "js_let_add",
-   "js_node_atomize",
-   "object_assign"
-  ],
-  "app_new_step_2": [
-   "app_new_step_2",
-   "app_new_step_2_next"
-  ],
-  "html_new": [
-   "app_new_step_2_next",
-   "html_new"
-  ],
-  "storage_local_initialize": [
-   "app_refresh",
-   "storage_local_initialize",
-   "storage_local_initialize_context"
-  ],
-  "screen": [
-   "app_refresh",
-   "app_karate_home"
   ],
   "app_replace_main": [
    "app_replace",
@@ -4272,20 +3726,6 @@
    "app_replace_home",
    "emoji_gear"
   ],
-  "app_screen_set": [
-   "app_replace_home",
-   "app_screen_set",
-   "app_screen_set_lambda"
-  ],
-  "html_button": [
-   "app_replace_home",
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_reply_main",
-   "html_button",
-   "html_button_screen",
-   "app_karate_button_screen_uncolored"
-  ],
   "app_replace_rule_sets": [
    "app_replace_home",
    "app_replace_rule_set",
@@ -4319,105 +3759,108 @@
    "app_replace_home",
    "app_replace_rule_set"
   ],
-  "lambda2": [
+  "item": [
    "app_replace_home",
    "app_replace_rule_set",
-   "app_replace_settings",
    "app_reply_main",
-   "bible_verses_encouragement_generate",
-   "command_line_read",
+   "css_class_prefix_combine",
    "data_file_update_inner",
+   "each",
+   "each_async",
    "each_index",
    "each_index_async",
    "each_multiple",
    "each_multiple_async",
-   "each_object",
-   "ebible_books_to_chapter_codes",
    "ebible_chapters",
    "ebible_chapter_text",
-   "ebible_index_flat",
    "ebible_languages_to_bible_folders",
-   "ebible_references_parse_lines",
-   "ebible_verses",
-   "file_root_exists",
-   "folder_read_async",
+   "ebible_versions_download",
+   "ebible_version_books_testament",
+   "folder_find_starts_with",
    "functions_combine",
-   "functions_paths",
-   "function_alias_rename",
-   "function_dependencies",
-   "function_exists_inner",
-   "function_identifier_replace",
-   "function_name_to_path_search",
-   "function_params_consolidate",
-   "function_rename_identifiers",
-   "function_transform_marker_specified",
-   "function_type_first",
-   "git_publish_initial",
+   "function_wrap",
+   "html_display_none_or_block",
+   "html_parse_attr",
    "html_parse_descendants_classes",
+   "html_parse_href",
+   "html_parse_href_text",
+   "html_parse_href_text_map",
+   "html_parse_text",
    "html_p_text_multiple",
-   "http",
-   "js_assert_arguments_args",
-   "js_block_child_graph",
-   "js_call_new_code",
-   "js_declaration_single",
-   "js_declare_assign",
-   "js_dollar",
+   "js_declaration_param_add",
+   "js_declaration_param_add_node",
+   "js_declaration_single_block_body_add",
    "js_dollar_a",
-   "js_dollar_g",
-   "js_dollar_new",
-   "js_dollar_s",
    "js_expand_generic",
-   "js_function_last_asyncify",
-   "js_identifiers",
-   "js_identifiers_named_count",
-   "js_identifiers_names",
    "js_identifier_defineds",
-   "js_imports_declarations",
-   "js_node_types",
    "js_node_types_is",
-   "js_outside_move",
-   "js_visit_each",
-   "js_visit_each_async",
-   "js_visit_match",
-   "js_visit_type_each_async",
+   "js_stack_filtered_multiple",
+   "js_statement_return",
+   "js_statement_return_empty",
+   "js_types_function_includes",
+   "keyboard_type_delay",
+   "lists_get",
+   "list_add",
+   "list_adder_async",
+   "list_adder_generic",
+   "list_adder_generic_async",
+   "list_add_first",
+   "list_add_if_not_includes",
    "list_any_starts_with",
-   "list_difference",
+   "list_concat_multiple",
+   "list_filter_empty_not_is",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "list_filter_includes_not",
+   "list_filter_starts_with",
+   "list_filter_starts_with_any",
+   "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
+   "list_find_property",
    "list_find_starts_with",
-   "list_intersect",
+   "list_get",
+   "list_get_end",
+   "list_get_end_3",
+   "list_includes",
+   "list_index_of",
+   "list_index_of_delta",
+   "list_index_of_delta_outside",
+   "list_index_of_last",
+   "list_index_of_next",
+   "list_index_of_next_outside",
+   "list_index_of_previous",
+   "list_last_is",
+   "list_last_or_null",
+   "list_map_index",
+   "list_map_path_join",
+   "list_map_prefix_any",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_map_property",
+   "list_map_property_to",
+   "list_map_split_space",
+   "list_next",
+   "list_next_index",
+   "list_next_try",
+   "list_previous",
+   "list_remove",
+   "list_remove_all",
+   "list_remove_if_exists",
    "list_squash",
-   "marker_assign_replace",
-   "marker_call",
-   "marker_call_replace_generic",
+   "list_to_dictionary",
+   "list_to_dictionary_async",
+   "list_unique",
    "marker_down_choices",
-   "marker_down_choices_lambda",
-   "marker_expand",
-   "marker_functionize",
-   "marker_next",
-   "marker_next_await",
-   "marker_next_delete",
-   "marker_param_add",
-   "marker_screen_add",
-   "messenger_reply",
-   "messenger_reply_messages",
-   "messenger_reply_playwright",
-   "messenger_reply_unread_collect",
-   "object_properties_delete",
-   "puppeteer_hrefs",
-   "retry",
-   "retry_on_error",
+   "object_property_equals",
+   "object_property_equals_lambda",
+   "object_property_get_name",
+   "range_from",
    "sandbox_4_a",
-   "schtasks_query",
-   "search_generic",
-   "task_new",
-   "undefined_not_is_assert",
-   "visit_unique_async",
-   "watch",
-   "repo_functions_move",
-   "functions_transform_list",
-   "functions_imports_fix_list",
-   "app_karate_home",
-   "app_karate_computer_save"
+   "string_ends_with_not",
+   "string_includes_lambda",
+   "string_includes_not",
+   "string_starts_with_not",
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -4560,6 +4003,12 @@
    "string_split_newline",
    "string_split_space"
   ],
+  "middle": [
+   "app_replace_rule_parse",
+   "html_code_script_module",
+   "html_update_dev",
+   "html_update_public_generic"
+  ],
   "object_property_set_exists_not": [
    "app_replace_rule_set",
    "app_reply_main",
@@ -4604,31 +4053,6 @@
    "list_size_1_assert",
    "list_skip",
    "list_slice_end"
-  ],
-  "object_merge": [
-   "app_replace_rule_set",
-   "command_line_generic",
-   "ebible_verses_upload",
-   "ebible_version_books_testament",
-   "firebase_upload_generic",
-   "functions_names_to_paths",
-   "function_exists_inner",
-   "function_imports_missing",
-   "function_name_to_path_unalias",
-   "function_parse",
-   "function_parse_declaration_inner",
-   "function_transform_marker_arg",
-   "js_imports_unused",
-   "marker_call_replace_generic",
-   "marker_index",
-   "marker_next_get",
-   "marker_next_index",
-   "marker_previous_index",
-   "object_copy",
-   "object_merge",
-   "object_replace",
-   "app_karate_home",
-   "app_karate_computer_save"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -4678,53 +4102,6 @@
    "messenger_reply",
    "sandbox_2"
   ],
-  "list_map": [
-   "app_replace_rule_set",
-   "app_reply_main",
-   "bible_verses_encouragement_generate",
-   "ebible_chapters",
-   "ebible_chapter_text",
-   "ebible_languages_to_bible_folders",
-   "ebible_verses_upload",
-   "ebible_version_books_testament",
-   "functions_format",
-   "functions_names_from_path",
-   "functions_paths",
-   "function_dependencies_code",
-   "function_name_to_acronym",
-   "function_params_consolidate",
-   "html_parse_href_text_map",
-   "js_expand_generic",
-   "js_imports_unused",
-   "js_visit_children_get",
-   "lists_get",
-   "list_map",
-   "list_map_combine",
-   "list_map_filter_string_empty_not_is",
-   "list_map_first",
-   "list_map_index",
-   "list_map_lower",
-   "list_map_path_join",
-   "list_map_prefix_any",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_map_property",
-   "list_map_property_to",
-   "list_map_split_comma",
-   "list_map_split_space",
-   "list_map_squash",
-   "list_map_unordered_async",
-   "list_map_whitespace_normalize",
-   "marker_functionize",
-   "marker_top",
-   "messenger_reply",
-   "range_from",
-   "repos_gitignore_overwrite",
-   "repos_paths_names_map_unordered_combine",
-   "sandbox_4_a",
-   "repo_functions_move",
-   "app_karate_computer_save"
-  ],
   "html_p_text": [
    "app_replace_rule_set",
    "html_p_text",
@@ -4760,6 +4137,11 @@
    "app_replace_settings",
    "emoji_home"
   ],
+  "html_button_screen": [
+   "app_replace_rule_set",
+   "app_replace_settings",
+   "html_button_screen"
+  ],
   "app_replace_rule_set": [
    "app_replace_rule_set",
    "app_replace_screens"
@@ -4788,41 +4170,59 @@
    "app_replace_rule_set",
    "app_replace_rule_sets"
   ],
+  "mapped": [
+   "app_replace_rule_set",
+   "bible_verses_encouragement_generate",
+   "ebible_chapters",
+   "ebible_references_parse_lines",
+   "ebible_verses_upload",
+   "ebible_versions",
+   "ebible_version_books_testament",
+   "ebible_version_books_testament_new",
+   "ebible_version_books_testament_old",
+   "functions_format",
+   "functions_paths",
+   "function_dependencies_code",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "git_publish_initial",
+   "html_parse_find_a_href_starts_with",
+   "html_parse_find_list_href_text",
+   "html_parse_href_text_map",
+   "js_block_child_graph_unparse",
+   "js_dollar_choice_arguments_names",
+   "js_imports_declarations",
+   "js_imports_unused",
+   "js_visit_children_get",
+   "list_filter_includes_not",
+   "list_filter_starts_with_not",
+   "list_filter_starts_with_not_multiple",
+   "list_map",
+   "list_map_index",
+   "list_map_lower",
+   "list_map_prefix_any",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_map_property",
+   "list_map_property_to",
+   "list_map_squash",
+   "list_map_unordered_async",
+   "messenger_reply",
+   "range_from",
+   "reply",
+   "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
+   "repo_functions_move",
+   "sandbox_2",
+   "sandbox_4_a"
+  ],
   "right_joined": [
    "app_replace_rule_set"
   ],
   "left_joined": [
    "app_replace_rule_set"
-  ],
-  "lambda3": [
-   "app_replace_rule_set",
-   "app_replace_settings",
-   "app_reply_main",
-   "ebible_versions_download",
-   "error_attention_set",
-   "function_list_generate",
-   "function_params_new",
-   "http",
-   "js_await_add_inner",
-   "js_calls_to_each",
-   "js_call_new_code",
-   "js_dollar_a",
-   "js_dollar_a_generic",
-   "js_expand_generic",
-   "js_identifiers_named_count",
-   "js_identifier_defineds",
-   "js_if_else_if_combine",
-   "js_log_remove",
-   "js_outside_move",
-   "list_filter_ends_with_any",
-   "list_filter_ends_with_not_any",
-   "marker_down_choices_lambda",
-   "marker_functionize",
-   "messenger_reply_messages",
-   "object_properties_from",
-   "puppeteer_hrefs",
-   "retry",
-   "app_karate_computer_save"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -4953,23 +4353,6 @@
   ],
   "size2": [
    "app_replace_rule_set"
-  ],
-  "r": [
-   "app_replace_rule_set",
-   "each_range_async",
-   "function_aliases_restore",
-   "function_format",
-   "integer_random",
-   "js_statement_return_add",
-   "js_statement_return_empty_add",
-   "list_random_item",
-   "list_remove_all_multiple",
-   "list_remove_multiple",
-   "marker_functionize",
-   "range_from",
-   "reply",
-   "sandbox",
-   "app_karate_computer_save"
   ],
   "any": [
    "app_replace_rule_set",
@@ -5471,6 +4854,7 @@
    "data_files_update",
    "ebible_references_parse_lines",
    "functions_combine_name",
+   "functions_transform_list",
    "function_dependencies_code",
    "js_block_child_graph_unparse",
    "js_call_new_code",
@@ -5480,9 +4864,8 @@
    "repos_gitignore_overwrite",
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
-   "sandbox_4_a",
    "repo_functions_move",
-   "functions_transform_list"
+   "sandbox_4_a"
   ],
   "en": [
    "app_reply_main",
@@ -5652,16 +5035,6 @@
   "component4": [
    "app_reply_main"
   ],
-  "choices": [
-   "app_reply_main",
-   "js_dollar",
-   "js_dollar_choices",
-   "marker_bottom",
-   "marker_down_choices",
-   "marker_down_choices_lambda",
-   "marker_down_generic",
-   "app_karate_computer_save"
-  ],
   "letters": [
    "app_reply_main",
    "function_name_to_acronym",
@@ -5747,7 +5120,11 @@
    "firebase_deploy_function_destination",
    "functions_combine",
    "functions_combine_test",
+   "functions_imports_fix",
+   "functions_imports_fix_list",
    "functions_names_includes",
+   "functions_transform",
+   "functions_transform_list",
    "function_acronym_to_names",
    "function_alias_add",
    "function_list_generate",
@@ -5879,17 +5256,13 @@
    "object_properties_delete_all",
    "reduce",
    "reply",
+   "repo_functions_move",
    "sandbox",
    "sandbox_2",
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "repo_functions_move",
-   "functions_transform",
-   "functions_transform_list",
-   "functions_imports_fix",
-   "functions_imports_fix_list"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -5929,8 +5302,8 @@
    "functions_paths",
    "list_squash",
    "repos_paths_map_unordered_combine_squash",
-   "watch",
-   "repo_functions_move"
+   "repo_functions_move",
+   "watch"
   ],
   "verse_texts": [
    "app_reply_main"
@@ -5962,6 +5335,51 @@
    "list_concat",
    "reply"
   ],
+  "joined": [
+   "app_reply_main",
+   "data_backup",
+   "ebible_chapters",
+   "ebible_chapter_classes",
+   "ebible_chapter_text",
+   "ebible_firebase_upload_path",
+   "ebible_references_parse",
+   "ebible_verses_upload_name",
+   "ebible_verse_new",
+   "ebible_version_books_testament",
+   "ebible_version_download_path_combine",
+   "file_name_json_folder",
+   "firebase_storage_download_path",
+   "firebase_storage_function_run",
+   "folder_user_combine",
+   "functions_names",
+   "functions_names_to_paths",
+   "functions_path",
+   "function_exists_inner",
+   "function_name_folder_to_path",
+   "function_name_repo_path_combine",
+   "function_name_to_path_import",
+   "function_name_to_path_search",
+   "git_push_folder",
+   "html_name_to_path_folder",
+   "html_update_dev",
+   "html_update_public_generic",
+   "http_firebase_file_path",
+   "http_local_file_name",
+   "js_code_call_args",
+   "list_join",
+   "list_join_empty",
+   "list_join_newline",
+   "list_join_newline_2",
+   "list_join_slash_forward",
+   "list_join_space",
+   "list_map_path_join",
+   "messenger_reply",
+   "path_join",
+   "path_repo_combine",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_names_map_unordered_combine",
+   "sandbox_2"
+  ],
   "string_may_the_lord": [
    "app_reply_pray",
    "string_lord_bless",
@@ -5989,6 +5407,7 @@
    "emoji_rock",
    "emoji_voice",
    "folder_read_async",
+   "functions_imports_fix_list",
    "function_aliases_restore",
    "function_dependencies",
    "function_identifier_replace",
@@ -6018,8 +5437,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "functions_imports_fix_list"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -6282,6 +5700,69 @@
   "bible_verses_encouragement_generate": [
    "bible_verses_encouragement_generate"
   ],
+  "file_path": [
+   "bible_verses_encouragement_generate",
+   "data_all",
+   "data_get",
+   "data_save",
+   "ebible_references_parse",
+   "ebible_references_parse_god_created_man_why",
+   "ebible_versions_download",
+   "ebible_version_books_testament",
+   "ebible_version_download",
+   "ebible_version_download_path_combine",
+   "file_delete",
+   "file_delete_if_exists",
+   "file_exists",
+   "file_overwrite",
+   "file_overwrite_buffer",
+   "file_overwrite_json",
+   "file_parent_exists_ensure",
+   "file_read",
+   "file_read_buffer",
+   "file_read_json",
+   "file_root_exists",
+   "file_root_exists_assert",
+   "file_write_json",
+   "firebase_service_account",
+   "firebase_service_account_karate",
+   "firebase_service_account_love",
+   "firebase_service_account_love_generic",
+   "function_alias_add_generic",
+   "function_name_repo_path_combine",
+   "html_name_to_path",
+   "html_name_to_path_dev",
+   "html_name_to_path_folder",
+   "html_name_to_path_staging",
+   "html_new",
+   "html_overwrite",
+   "html_parse_read",
+   "html_update_dev",
+   "html_update_public",
+   "html_update_public_generic",
+   "html_update_staging",
+   "path_name",
+   "sandbox_4_a",
+   "unzip"
+  ],
+  "contents": [
+   "bible_verses_encouragement_generate",
+   "data_all",
+   "ebible_references_parse",
+   "file_overwrite",
+   "file_overwrite_buffer",
+   "file_read",
+   "file_write",
+   "file_write_buffer",
+   "file_write_generic",
+   "function_new_declaration",
+   "html_index_generate",
+   "html_overwrite",
+   "html_parse",
+   "html_parse_read",
+   "sandbox_2",
+   "sandbox_4_a"
+  ],
   "fns": [
    "bible_verses_encouragement_generate",
    "function_aliases_restore"
@@ -6512,52 +5993,6 @@
    "http_local_text",
    "unzip"
   ],
-  "s": [
-   "buffer_string_to",
-   "data_identifiers_search",
-   "ebible_chapter_code_to_name",
-   "firebase_storage_download_json",
-   "function_aliases_restore",
-   "html_loading",
-   "html_style_assign",
-   "js_dollar_s",
-   "js_string",
-   "marker_rename",
-   "messenger_reply",
-   "messenger_reply_wait",
-   "path_join",
-   "range_from",
-   "string_base64_to",
-   "string_empty_is",
-   "string_empty_not_is_assert",
-   "string_ends_with",
-   "string_ends_with_space",
-   "string_list_to",
-   "string_lower_to",
-   "string_pad",
-   "string_padded_is",
-   "string_prefix_without",
-   "string_replace",
-   "string_size",
-   "string_skip",
-   "string_skip_while",
-   "string_slice",
-   "string_split",
-   "string_split_empty",
-   "string_split_semicolon",
-   "string_split_semicolon_space",
-   "string_split_space",
-   "string_starts_with",
-   "string_starts_with_dot",
-   "string_starts_with_space",
-   "string_suffix_without",
-   "string_take",
-   "string_to",
-   "string_trim_right",
-   "string_upper_to",
-   "trinity_green",
-   "app_karate_computer_save"
-  ],
   "ArrayBuffer": [
    "buffer_string_to"
   ],
@@ -6659,6 +6094,83 @@
    "string_empty_is",
    "throws_not_async"
   ],
+  "result": [
+   "cache_generic",
+   "catch_call",
+   "command_line_node_g",
+   "data_identifiers_search",
+   "data_prompts",
+   "ebible_chapter_text",
+   "ebible_references_parse_lines",
+   "ebible_verse",
+   "file_temp",
+   "folder_current_join",
+   "folder_public_combine",
+   "folder_read_files",
+   "folder_user_combine",
+   "functions_combine_name",
+   "functions_search",
+   "functions_search_open",
+   "function_aliases_search",
+   "function_exists_inner",
+   "function_exists_strict",
+   "function_name_to_path_unalias",
+   "function_new_js_inner",
+   "function_params_consolidate",
+   "function_params_new",
+   "function_run",
+   "function_run_git",
+   "function_run_log",
+   "function_run_output_file_temp",
+   "function_transform_result",
+   "git_push_schedule_command",
+   "git_repo_rename_normalize",
+   "html_loading",
+   "html_parse",
+   "html_parse_find",
+   "html_parse_find_remove",
+   "http",
+   "http_firebase",
+   "http_local",
+   "js_code_call",
+   "js_code_call_statement",
+   "js_code_parenthesis_open_close",
+   "js_declaration_param_named",
+   "js_dollar_choice_arguments",
+   "js_function_last_asyncify",
+   "js_identifiers",
+   "js_marker_named_ast",
+   "js_node_types",
+   "js_stack_filtered_multiple",
+   "list_first_remaining",
+   "list_first_second",
+   "list_first_second_generic",
+   "list_is_assert",
+   "list_join_comma",
+   "list_last_or_null",
+   "list_map_name",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_range",
+   "list_slice_end",
+   "marker_functionize",
+   "messenger_reply_unreplied",
+   "object_property_exists_assert",
+   "object_property_exists_not",
+   "object_property_exists_not_assert",
+   "repos_paths_map_unordered",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
+   "retry",
+   "search_generic",
+   "storage_local_get",
+   "storage_local_specify_get",
+   "tasks_run",
+   "task_new",
+   "ternary"
+  ],
   "catch_call": [
    "catch_call",
    "http"
@@ -6678,6 +6190,7 @@
    "js_expand_generic",
    "js_identifiers_named",
    "js_identifier_defineds",
+   "js_imports_paths_fix_inner",
    "js_imports_unused",
    "list_intersect_empty_is_assert",
    "marker_above_generic",
@@ -6685,8 +6198,7 @@
    "marker_index",
    "marker_up",
    "range",
-   "roman_to_integer",
-   "js_imports_paths_fix_inner"
+   "roman_to_integer"
   ],
   "inner": [
    "catch_call",
@@ -6943,6 +6455,36 @@
    "command_line_git_folder",
    "git_push_folder"
   ],
+  "folder": [
+   "command_line_git",
+   "command_line_git_folder",
+   "data_path_generic",
+   "file_name_json_folder",
+   "firebase_storage_download_path",
+   "folder_user",
+   "folder_user_combine",
+   "functions_names_to_paths",
+   "functions_paths",
+   "function_name_folder_to_path",
+   "function_name_to_path",
+   "function_run_git",
+   "git_acp",
+   "git_acp_call",
+   "git_acp_call_folder",
+   "git_acp_folder",
+   "git_commit",
+   "git_commit_folder",
+   "git_publish_initial",
+   "git_push",
+   "git_push_folder",
+   "html_name_to_path_dev",
+   "html_name_to_path_folder",
+   "html_name_to_path_staging",
+   "repos_paths_map_unordered",
+   "repos_paths_map_unordered_combine",
+   "repo_acronym_to_path",
+   "sandbox_2"
+  ],
   "command_line_git_prefix": [
    "command_line_git_folder",
    "command_line_git_prefix",
@@ -7045,6 +6587,52 @@
    "function_aliases_restore",
    "function_alias_add_generic",
    "function_alias_rename"
+  ],
+  "f_path": [
+   "data_aliases_path",
+   "data_file_update",
+   "data_file_update_inner",
+   "data_path",
+   "data_path_generic",
+   "data_prompts_path",
+   "file_json_isolate",
+   "file_json_property_delete",
+   "file_json_transform",
+   "file_js_parse",
+   "file_js_unparse",
+   "file_name_json_folder",
+   "file_open",
+   "file_write",
+   "file_write_buffer",
+   "file_write_generic",
+   "firebase_name_repo",
+   "folder_public_combine",
+   "function_auto_path",
+   "function_copy",
+   "function_delete",
+   "function_exists_inner",
+   "function_format",
+   "function_import",
+   "function_name_to_path_search",
+   "function_new_declaration",
+   "function_open",
+   "function_open_editor",
+   "function_parse",
+   "function_parse_strict",
+   "function_path_declaration_unparse",
+   "function_path_to_name",
+   "function_read",
+   "git_history_delete",
+   "html_update_dev",
+   "js_outside_move",
+   "path_repo_about",
+   "path_repo_combine",
+   "repo_functions_move",
+   "repo_path_combine",
+   "user_repo_get",
+   "user_repo_path",
+   "user_repo_path_combine",
+   "user_repo_set"
   ],
   "file_write": [
    "data_all",
@@ -7188,6 +6776,42 @@
    "git_push_folder",
    "marker_current_set"
   ],
+  "path_join": [
+   "data_backup",
+   "ebible_version_books_testament",
+   "ebible_version_download_path_combine",
+   "file_name_json_folder",
+   "firebase_service_account_love_generic",
+   "folder_public_combine",
+   "folder_read_files",
+   "folder_user",
+   "folder_user_combine",
+   "function_import",
+   "function_name_folder_to_path",
+   "function_name_to_path_import",
+   "git_push_folder",
+   "html_name_to_path_folder",
+   "html_update_dev",
+   "http_firebase_file_path",
+   "list_map_path_join",
+   "local_function_path",
+   "path_join",
+   "path_repo_combine",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_names_map_unordered_combine",
+   "repo_functions_move",
+   "repo_path",
+   "repo_path_combine",
+   "sandbox_2",
+   "server"
+  ],
+  "file_copy": [
+   "data_backup",
+   "data_copy",
+   "file_copy",
+   "function_copy",
+   "repo_functions_move"
+  ],
   "date_now_file": [
    "data_backup",
    "date_now_file",
@@ -7215,6 +6839,12 @@
    "data_backup",
    "data_copy",
    "data_partition"
+  ],
+  "f_path_to": [
+   "data_backup",
+   "data_copy",
+   "data_partition",
+   "repo_functions_move"
   ],
   "data_set": [
    "data_boolean_set",
@@ -7594,6 +7224,11 @@
    "list_to_dictionary",
    "search_generic"
   ],
+  "data_identifiers_search": [
+   "data_identifiers_search",
+   "function_params_new",
+   "js_function_last_asyncify"
+  ],
   "data_marker_current_get": [
    "data_marker_current_get",
    "function_transform_marker"
@@ -7948,6 +7583,7 @@
    "js_code_import_single",
    "js_dollar_i",
    "js_dollar_r",
+   "js_imports_paths_fix_inner",
    "js_return_code_replace",
    "js_return_empty",
    "list_to",
@@ -7963,8 +7599,35 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace",
-   "js_imports_paths_fix_inner"
+   "string_replace"
+  ],
+  "to": [
+   "each_range_from",
+   "each_range_from_async",
+   "ebible_version_books_testament",
+   "function_imports_missing",
+   "function_name_to_path_unalias",
+   "function_parse",
+   "function_parse_declaration",
+   "function_parse_declaration_inner",
+   "function_parse_strict_declaration",
+   "git_repo_rename",
+   "js_dollar_r",
+   "js_imports_unused",
+   "marker_call_replace_generic",
+   "marker_next_get",
+   "marker_next_index",
+   "marker_rename",
+   "object_assign",
+   "object_merge",
+   "object_merge_generic",
+   "object_properties_from",
+   "object_property_from",
+   "object_replace",
+   "range_from",
+   "repos_gitignore_overwrite",
+   "repo_functions_move_if_includes_not",
+   "string_replace"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -8075,6 +7738,32 @@
    "ebible_chapter_text",
    "ebible_version_books_testament",
    "html_parse_read"
+  ],
+  "filtered": [
+   "ebible_chapters",
+   "ebible_verses",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "html_parse_find_a_href_starts_with",
+   "js_marker_named_ast",
+   "js_stack_filtered",
+   "js_stack_filtered_multiple",
+   "js_stack_filtered_multiple_each",
+   "js_stack_last_multiple",
+   "list_all",
+   "list_any",
+   "list_filter",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "list_filter_includes_not",
+   "list_filter_property",
+   "list_filter_starts_with",
+   "list_filter_starts_with_not",
+   "list_filter_starts_with_not_multiple",
+   "list_find",
+   "messenger_reply",
+   "puppeteer_hrefs_starts_with",
+   "repo_functions_move_if_includes_not"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -8191,17 +7880,17 @@
   "dictionary": [
    "ebible_chapter_classes",
    "ebible_chapter_text",
+   "functions_imports_fix_list",
    "functions_names_to_paths",
    "function_imports_add",
    "function_names_to_acronyms",
    "function_name_to_path_import",
    "html_parse_classes_preview",
    "js_imports_paths_fix",
+   "js_imports_paths_fix_inner",
    "list_to_dictionary",
    "list_to_dictionary_async",
-   "repos_acronyms_to_names",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix_list"
+   "repos_acronyms_to_names"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -8311,6 +8000,35 @@
    "function_aliases_restore",
    "js_auto"
   ],
+  "n": [
+   "ebible_chapter_text",
+   "ebible_verse_download",
+   "ebible_version_books",
+   "function_aliases_restore",
+   "function_aliases_search",
+   "function_alias_rename",
+   "js_await_add_inner",
+   "js_calls_to_each",
+   "js_declare_assign",
+   "js_node_is",
+   "js_node_type",
+   "js_null",
+   "js_stack_filtered",
+   "js_visit_children_get",
+   "js_visit_filter",
+   "list_filter_includes_not",
+   "marker_next_get",
+   "not",
+   "null_is",
+   "object_property_exists_not",
+   "promise_not_is",
+   "puppeteer_matches",
+   "round",
+   "search_generic",
+   "storage_local_initialize",
+   "storage_local_specify_get",
+   "string_includes_not"
+  ],
   "verse_numbers": [
    "ebible_chapter_text",
    "ebible_index",
@@ -8336,6 +8054,12 @@
    "ebible_firebase_upload",
    "ebible_firebase_upload_path",
    "firebase_storage_download_ebible"
+  ],
+  "firebase_upload_object": [
+   "ebible_firebase_upload",
+   "firebase_deploy_function",
+   "firebase_promote_function",
+   "firebase_upload_object"
   ],
   "ebible_firebase_upload": [
    "ebible_firebase_upload",
@@ -8577,6 +8301,15 @@
   "verse_end": [
    "ebible_references_parse_lines"
   ],
+  "m": [
+   "ebible_references_parse_lines",
+   "function_aliases_restore",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "messenger_reply_unread_click",
+   "reply_test",
+   "string_regex_match_lambda"
+  ],
   "book2": [
    "ebible_references_parse_lines"
   ],
@@ -8610,6 +8343,30 @@
    "list_intersect",
    "list_squash",
    "marker_down_choices_lambda"
+  ],
+  "list_filter": [
+   "ebible_verses",
+   "function_exists_inner",
+   "function_name_to_path_search",
+   "js_identifiers_named",
+   "js_markers",
+   "js_marker_named_ast",
+   "js_stack_filtered",
+   "js_stack_filtered_multiple",
+   "list_all",
+   "list_any",
+   "list_filter",
+   "list_filter_empty_not_is",
+   "list_filter_ends_with_any",
+   "list_filter_ends_with_not_any",
+   "list_filter_includes_not",
+   "list_filter_property",
+   "list_filter_starts_with",
+   "list_filter_starts_with_any",
+   "list_filter_starts_with_not",
+   "list_filter_starts_with_not_multiple",
+   "list_find",
+   "search_generic"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -8793,6 +8550,9 @@
   "chapters_name": [
    "ebible_version_download_path_combine"
   ],
+  "emoji": [
+   "emoji_email"
+  ],
   "emoji_heart_fire": [
    "emoji_heart_fire",
    "emoji_trinity"
@@ -8876,6 +8636,12 @@
   "copyFile": [
    "file_copy_overwrite"
   ],
+  "file_delete": [
+   "file_delete",
+   "file_delete_if_exists",
+   "function_delete",
+   "repo_functions_move"
+  ],
   "unlink": [
    "file_delete"
   ],
@@ -8925,6 +8691,16 @@
    "js_parse",
    "js_parse_statement",
    "js_parse_statement_module"
+  ],
+  "file_overwrite": [
+   "file_js_unparse",
+   "file_overwrite",
+   "file_overwrite_json",
+   "file_write",
+   "function_format",
+   "function_run_output_file_temp",
+   "html_index_generate",
+   "html_overwrite"
   ],
   "js_unparse": [
    "file_js_unparse",
@@ -9016,6 +8792,26 @@
   "file_overwrite_buffer": [
    "file_overwrite_buffer",
    "file_write_buffer"
+  ],
+  "path": [
+   "file_parent_exists_ensure",
+   "file_root_exists",
+   "firebase_path_fix",
+   "firebase_storage_exists",
+   "folder_read_async",
+   "functions_names_from_path",
+   "function_import",
+   "messenger_reply_login",
+   "object_property_exists_equals",
+   "path_name",
+   "path_resolve",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
+   "repo_functions_path",
+   "server",
+   "watch"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -9168,11 +8964,29 @@
   "storage": [
    "firebase_bucket"
   ],
+  "user_repo_path_combine": [
+   "firebase_deploy",
+   "function_copy",
+   "html_index_generate",
+   "user_repo_path_combine"
+  ],
   "firebase_deploy": [
    "firebase_deploy"
   ],
   "cwd": [
    "firebase_deploy"
+  ],
+  "firebase_deploy_function_destination": [
+   "firebase_deploy_function",
+   "firebase_deploy_function_destination",
+   "firebase_deploy_function_destination_latest",
+   "firebase_deploy_function_destination_production"
+  ],
+  "function_dependencies_code": [
+   "firebase_deploy_function",
+   "function_dependencies_code",
+   "function_dependencies_code_copy",
+   "html_update_public_generic"
   ],
   "version": [
    "firebase_deploy_function"
@@ -9184,9 +8998,31 @@
   "firebase_deploy_function_app_current": [
    "firebase_deploy_function_app_current"
   ],
+  "destination2": [
+   "firebase_deploy_function_destination_latest",
+   "firebase_deploy_function_destination_production"
+  ],
   "global_function_get": [
    "firebase_name",
    "global_function_get"
+  ],
+  "user_repo_get": [
+   "firebase_name",
+   "function_new_declaration",
+   "repo_firebase_service_account_get",
+   "repo_firebase_service_account_set",
+   "repo_functions_move_if_includes_not",
+   "user_repo_get",
+   "user_repo_path_combine",
+   "user_repo_set"
+  ],
+  "repo_path_combine": [
+   "firebase_name_repo",
+   "function_name_repo_path_combine",
+   "function_new_declaration",
+   "repo_functions_path",
+   "repo_path_combine",
+   "user_repo_path_combine"
   ],
   "f": [
    "firebase_name_repo",
@@ -9222,6 +9058,17 @@
    "marker_call_replace",
    "marker_call_replace_generic",
    "string_replace"
+  ],
+  "firebase_storage_download_json": [
+   "firebase_promote_function",
+   "firebase_storage_download_ebible",
+   "firebase_storage_download_json"
+  ],
+  "destination_latest": [
+   "firebase_promote_function"
+  ],
+  "destination_production": [
+   "firebase_promote_function"
   ],
   "function_run": [
    "firebase_service_account",
@@ -9338,6 +9185,18 @@
    "firebase_storage_exists",
    "import_install"
   ],
+  "js_code_call_statement": [
+   "firebase_storage_function_run",
+   "html_update_dev",
+   "html_update_public_generic",
+   "js_code_call_statement"
+  ],
+  "call": [
+   "firebase_storage_function_run",
+   "html_update_dev",
+   "html_update_public_generic",
+   "js_calls_to_each"
+  ],
   "eval": [
    "firebase_storage_function_run"
   ],
@@ -9411,6 +9270,12 @@
   "folder_current_join_code": [
    "folder_current_join_code",
    "html_update_dev"
+  ],
+  "f_name_ext": [
+   "folder_current_join_code",
+   "function_name_to_base",
+   "html_update_dev",
+   "repo_functions_move"
   ],
   "folder_delete": [
    "folder_delete",
@@ -9546,6 +9411,25 @@
    "functions_combine_name",
    "functions_combine_test"
   ],
+  "f_names": [
+   "functions_combine",
+   "functions_combine_name",
+   "functions_names",
+   "functions_names_from_path",
+   "functions_names_to_paths",
+   "functions_paths",
+   "functions_search",
+   "function_names_to_acronyms",
+   "function_params_consolidate",
+   "function_rename_identifiers",
+   "js_expand_generic",
+   "js_imports_missing",
+   "repos_paths_map_unordered_combine",
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not",
+   "repo_functions_names",
+   "string_split_comma"
+  ],
   "function_name_unalias": [
    "functions_combine_name",
    "function_copy",
@@ -9601,6 +9485,7 @@
   ],
   "functions_names": [
    "functions_format",
+   "functions_imports_fix",
    "functions_names",
    "functions_names_includes",
    "functions_search",
@@ -9609,22 +9494,38 @@
    "function_params_consolidate",
    "js_expand_generic",
    "js_imports_missing",
-   "marker_functionize",
-   "functions_imports_fix"
+   "marker_functionize"
   ],
   "functions_format": [
    "functions_format"
   ],
-  "functions_transform": [
-   "functions_log_remove",
-   "functions_transform"
-  ],
-  "js_imports_paths_fix": [
-   "function_rename_identifiers",
-   "js_imports_paths_fix"
+  "functions_imports_fix_list": [
+   "functions_imports_fix",
+   "functions_imports_fix_list",
+   "repo_functions_move"
   ],
   "functions_imports_fix": [
    "functions_imports_fix"
+  ],
+  "functions_transform_list": [
+   "functions_imports_fix_list",
+   "functions_transform",
+   "functions_transform_list"
+  ],
+  "js_imports_paths_fix_inner": [
+   "functions_imports_fix_list",
+   "js_imports_paths_fix",
+   "js_imports_paths_fix_inner"
+  ],
+  "functions_names_to_paths": [
+   "functions_imports_fix_list",
+   "functions_names_to_paths",
+   "function_imports_add",
+   "js_imports_paths_fix"
+  ],
+  "functions_transform": [
+   "functions_log_remove",
+   "functions_transform"
   ],
   "js_log_remove": [
    "functions_log_remove",
@@ -9639,6 +9540,13 @@
    "functions_paths",
    "repos_paths_map_unordered_combine_squash",
    "watch"
+  ],
+  "functions_names_from_path": [
+   "functions_names",
+   "functions_names_from_path",
+   "functions_names_to_paths",
+   "functions_paths",
+   "repo_functions_names"
   ],
   "mapper": [
    "functions_names",
@@ -9668,11 +9576,11 @@
    "function_name_folder_to_path",
    "function_name_to_path"
   ],
-  "functions_names_to_paths": [
-   "functions_names_to_paths",
-   "function_imports_add",
-   "js_imports_paths_fix",
-   "functions_imports_fix_list"
+  "functions_path": [
+   "functions_path",
+   "function_name_to_path",
+   "repos_paths_map_unordered_combine_squash",
+   "repo_functions_path"
   ],
   "search_generic": [
    "functions_search",
@@ -9682,6 +9590,17 @@
   "functions_search": [
    "functions_search",
    "functions_search_open",
+   "tasks_run"
+  ],
+  "search": [
+   "functions_search",
+   "functions_search_open",
+   "function_aliases_search",
+   "function_name_repo_path_combine",
+   "function_name_to_path_search",
+   "js_visit_match",
+   "repo_functions_move",
+   "search_generic",
    "tasks_run"
   ],
   "function_open": [
@@ -9711,6 +9630,15 @@
   ],
   "functions_search_open": [
    "functions_search_open"
+  ],
+  "waited": [
+   "functions_transform",
+   "functions_transform_list",
+   "function_dependencies_code",
+   "js_block_child_graph_unparse",
+   "list_map_unordered_async",
+   "repos_gitignore_overwrite",
+   "repo_functions_move"
   ],
   "list_size_1": [
    "function_acronym_to_name",
@@ -10018,6 +9946,20 @@
   "lin": [
    "function_aliases_restore"
   ],
+  "l": [
+   "function_aliases_restore",
+   "js_dollar_a_generic",
+   "js_dollar_x",
+   "list_concat",
+   "list_difference",
+   "list_filter",
+   "list_intersect",
+   "list_is",
+   "list_squash",
+   "marker_down_choices",
+   "string_includes_lambda",
+   "string_regex_match_lambda"
+  ],
   "at": [
    "function_aliases_restore"
   ],
@@ -10306,6 +10248,11 @@
    "function_parse",
    "function_read"
   ],
+  "function_copy": [
+   "function_copy",
+   "function_copy_suffix_add",
+   "function_move"
+  ],
   "f_name_old": [
    "function_copy",
    "function_copy_suffix_add"
@@ -10378,6 +10325,11 @@
   ],
   "function_current_set_task_new_simple": [
    "function_current_set_task_new_simple"
+  ],
+  "function_delete": [
+   "function_delete",
+   "function_delete_if_exists",
+   "function_move"
   ],
   "function_exists_assert": [
    "function_dependencies",
@@ -10469,15 +10421,6 @@
   ],
   "ds": [
    "function_dependencies_code"
-  ],
-  "waited": [
-   "function_dependencies_code",
-   "js_block_child_graph_unparse",
-   "list_map_unordered_async",
-   "repos_gitignore_overwrite",
-   "repo_functions_move",
-   "functions_transform",
-   "functions_transform_list"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -10703,6 +10646,22 @@
   "f_generate_name": [
    "function_list_generate"
   ],
+  "function_move": [
+   "function_move",
+   "function_rename"
+  ],
+  "f_name_before": [
+   "function_move",
+   "function_rename",
+   "function_rename_identifiers",
+   "function_rename_suffix_add"
+  ],
+  "f_name_after": [
+   "function_move",
+   "function_rename",
+   "function_rename_identifiers",
+   "function_rename_suffix_add"
+  ],
   "function_name_to_acronym": [
    "function_names_to_acronyms",
    "function_name_to_acronym"
@@ -10743,8 +10702,19 @@
    "string_split_newline",
    "tasks_run"
   ],
+  "function_name_to_base": [
+   "function_name_folder_to_path",
+   "function_name_to_base",
+   "html_update_dev",
+   "repo_functions_move"
+  ],
   "base": [
    "function_name_folder_to_path"
+  ],
+  "function_name_repo_path_combine": [
+   "function_name_repo_path_combine",
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "list_join_empty": [
    "function_name_to_acronym",
@@ -10771,6 +10741,13 @@
    "string_split_semicolon",
    "string_split_semicolon_space",
    "string_split_space"
+  ],
+  "string_includes": [
+   "function_name_to_path",
+   "search_generic",
+   "string_includes",
+   "string_includes_lambda",
+   "string_includes_not"
   ],
   "previous2": [
    "function_name_to_path_import"
@@ -10862,6 +10839,11 @@
    "function_new_js_inner",
    "function_params_new",
    "js_declaration_single_params_add"
+  ],
+  "combined2": [
+   "function_new_js_name",
+   "html_index_generate",
+   "js_dollar_new_name"
   ],
   "lambda$ast": [
    "function_new_transform",
@@ -11074,6 +11056,10 @@
    "function_rename_identifiers",
    "list_remove_if_exists",
    "messenger_reply_messages_urls_add_page"
+  ],
+  "js_imports_paths_fix": [
+   "function_rename_identifiers",
+   "js_imports_paths_fix"
   ],
   "string_padded_is": [
    "function_rename_suffix_add",
@@ -11701,11 +11687,6 @@
   "setAttribute": [
    "html_attribute_set"
   ],
-  "html_on_click": [
-   "html_button",
-   "html_on_click",
-   "app_karate_computer_save"
-  ],
   "html_button_element": [
    "html_button",
    "html_button_element"
@@ -11715,6 +11696,11 @@
    "html_element",
    "messenger_reply_unread_click",
    "puppeteer_matches"
+  ],
+  "html_code_script_module": [
+   "html_code_script_module",
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "html_component_wrap": [
    "html_component_wrap",
@@ -11747,10 +11733,6 @@
    "html_display_none",
    "html_display_none_or_block"
   ],
-  "html_div_text": [
-   "html_div_text",
-   "app_karate_computer_save"
-  ],
   "body_element": [
    "html_document_body"
   ],
@@ -11774,9 +11756,22 @@
   "appendChild": [
    "html_element"
   ],
+  "html_em_text": [
+   "html_em_text"
+  ],
+  "span": [
+   "html_em_text",
+   "html_span_text"
+  ],
   "html_enable": [
    "html_enable",
    "html_enable_if"
+  ],
+  "html_index_generate": [
+   "html_index_generate"
+  ],
+  "app_name": [
+   "html_index_generate"
   ],
   "html_remove": [
    "html_loading",
@@ -11812,12 +11807,43 @@
    "html_new",
    "html_update_public"
   ],
+  "html_name_to_path_folder": [
+   "html_name_to_path_dev",
+   "html_name_to_path_folder",
+   "html_name_to_path_staging"
+  ],
   "html_name_to_path_dev": [
    "html_name_to_path_dev",
    "html_update_dev"
   ],
+  "html_name_to_path_staging": [
+   "html_name_to_path_staging",
+   "html_update_staging"
+  ],
+  "html_on": [
+   "html_on",
+   "html_on_change",
+   "html_on_click",
+   "html_on_input",
+   "html_on_keydown"
+  ],
+  "name_event": [
+   "html_on",
+   "html_on_change",
+   "html_on_click",
+   "html_on_input",
+   "html_on_keydown"
+  ],
   "addEventListener": [
    "html_on"
+  ],
+  "html_on_change": [
+   "html_on_change"
+  ],
+  "html_overwrite": [
+   "html_overwrite",
+   "html_update_dev",
+   "html_update_public_generic"
   ],
   "cheerio": [
    "html_parse"
@@ -11859,6 +11885,11 @@
   "html_parse_list_to": [
    "html_parse_find_list_to",
    "html_parse_list_to"
+  ],
+  "query": [
+   "html_parse_find_list_to",
+   "html_parse_list_to",
+   "repo_functions_move_if_includes_not"
   ],
   "remove": [
    "html_parse_find_remove",
@@ -11946,6 +11977,30 @@
   ],
   "from_paths2": [
    "html_update_dev"
+  ],
+  "html_update_public_generic": [
+   "html_update_public",
+   "html_update_public_generic",
+   "html_update_staging"
+  ],
+  "js_code_let_assign": [
+   "html_update_public_generic",
+   "js_call_new",
+   "js_code_let_assign",
+   "js_declare",
+   "marker_screen_add"
+  ],
+  "js_code_braces_empty": [
+   "html_update_public_generic",
+   "js_code_arrow",
+   "js_code_braces_empty",
+   "js_dollar_i"
+  ],
+  "global_init": [
+   "html_update_public_generic"
+  ],
+  "html_update_staging": [
+   "html_update_staging"
   ],
   "http_sleep": [
    "http",
@@ -13180,15 +13235,6 @@
   "js_dollar_choice_arguments_names": [
    "js_dollar_choice_arguments_names"
   ],
-  "log": [
-   "js_dollar_g",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine",
-   "app_screen_set_lambda"
-  ],
   "list_first_remaining": [
    "js_dollar_g",
    "list_first_remaining"
@@ -13499,8 +13545,8 @@
   "js_imports_declarations": [
    "js_imports",
    "js_imports_declarations",
-   "js_imports_unused",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "js_imports_unused"
   ],
   "imports_declarations": [
    "js_imports",
@@ -13686,6 +13732,12 @@
    "js_stack_filtered_multiple",
    "js_visit_types",
    "log_unparse_try"
+  ],
+  "match": [
+   "js_node_types_is",
+   "log_unparse_try",
+   "roman_to_integer",
+   "string_regex_match"
   ],
   "js_node_type_is_assert": [
    "js_node_type_is_assert",
@@ -14013,6 +14065,19 @@
   "ewn": [
    "list_filter_ends_with_not_any",
    "string_ends_with_not"
+  ],
+  "string_includes_not": [
+   "list_filter_includes_not",
+   "string_includes_not"
+  ],
+  "list_filter_includes_not": [
+   "list_filter_includes_not",
+   "repo_functions_move_if_includes_not"
+  ],
+  "part": [
+   "list_filter_includes_not",
+   "string_includes",
+   "string_includes_not"
   ],
   "object_property_equals_lambda": [
    "list_filter_property",
@@ -14738,11 +14803,6 @@
    "messenger_reply_messages_transform",
    "messenger_reply_messages_urls_transform"
   ],
-  "transform": [
-   "messenger_reply_messages_transform",
-   "messenger_reply_messages_urls_transform",
-   "app_karate_computer_save"
-  ],
   "messenger_reply_messages_urls_add_multiple": [
    "messenger_reply_messages_urls_add",
    "messenger_reply_messages_urls_add_multiple",
@@ -14927,6 +14987,14 @@
    "repo_about_get",
    "repo_about_set"
   ],
+  "r_path": [
+   "path_repo_combine",
+   "repos_paths_names_map_unordered_combine",
+   "repo_functions_move",
+   "repo_functions_names",
+   "repo_functions_path",
+   "repo_path"
+  ],
   "then": [
    "promise_is"
   ],
@@ -15062,8 +15130,8 @@
   "repo_acronym_to_name": [
    "repo_acronym_to_name",
    "repo_acronym_to_path",
-   "user_repo_set",
-   "repo_functions_move_if_includes_not"
+   "repo_functions_move_if_includes_not",
+   "user_repo_set"
   ],
   "repos_matching": [
    "repo_acronym_to_name"
@@ -15075,6 +15143,26 @@
   ],
   "repo_firebase_service_account_set": [
    "repo_firebase_service_account_set"
+  ],
+  "repo_functions_path": [
+   "repo_functions_move",
+   "repo_functions_names",
+   "repo_functions_path"
+  ],
+  "repo_functions_move": [
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not"
+  ],
+  "repo_name_to": [
+   "repo_functions_move",
+   "repo_functions_move_if_includes_not"
+  ],
+  "repo_functions_names": [
+   "repo_functions_move_if_includes_not",
+   "repo_functions_names"
+  ],
+  "repo_name_from": [
+   "repo_functions_move_if_includes_not"
   ],
   "wait": [
    "retry"
@@ -15324,6 +15412,13 @@
    "string_includes",
    "string_is_assert_json"
   ],
+  "string_includes_lambda_inner": [
+   "string_includes_lambda"
+  ],
+  "si": [
+   "string_includes_lambda",
+   "string_is"
+  ],
   "string_is_assert_message": [
    "string_is_assert_json",
    "string_is_assert_message"
@@ -15372,6 +15467,17 @@
   ],
   "skipped2": [
    "string_prefix_without"
+  ],
+  "string_regex_match": [
+   "string_regex_match",
+   "string_regex_match_lambda"
+  ],
+  "regex": [
+   "string_regex_match",
+   "string_regex_match_lambda"
+  ],
+  "string_regex_match_lambda_inner": [
+   "string_regex_match_lambda"
   ],
   "string_size_less_1": [
    "string_size_less_1",
@@ -15514,118 +15620,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "js_imports_paths_fix_inner": [
-   "js_imports_paths_fix",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix_list"
-  ],
-  "functions_transform_list": [
-   "functions_transform",
-   "functions_transform_list",
-   "functions_imports_fix_list"
-  ],
-  "functions_imports_fix_list": [
-   "functions_imports_fix",
-   "functions_imports_fix_list",
-   "repo_functions_move"
-  ],
-  "repo_name_from": [
-   "repo_functions_move_if_includes_not"
-  ],
-  "repo_functions_move_if_includes_not_love_app_karate": [
-   "repo_functions_move_if_includes_not_love_app_karate"
-  ],
-  "app_karate_computer_save": [
-   "app_karate_computer_save",
-   "app_karate_screens"
-  ],
-  "computer_save": [
-   "app_karate_screens"
-  ],
-  "button": [
-   "app_karate_home"
-  ],
-  "button_text": [
-   "app_karate_home"
-  ],
-  "app_screen_set_lambda": [
-   "html_button_screen",
-   "app_screen_set_lambda",
-   "app_karate_home"
-  ],
-  "html_button_karate_container_text_screen": [
-   "app_karate_home"
-  ],
-  "html_input": [
-   "html_input",
-   "html_input_type"
-  ],
-  "input_type": [
-   "html_input_type",
-   "html_input_email"
-  ],
-  "html_input_type": [
-   "html_input_type",
-   "html_input_email",
-   "app_karate_computer_save"
-  ],
-  "html_input_email": [
-   "app_karate_email",
-   "html_input_email"
-  ],
-  "label": [
-   "app_karate_computer_save"
-  ],
-  "container_main": [
-   "app_karate_computer_save"
-  ],
-  "html_font_size_1em": [
-   "app_karate_computer_save",
-   "html_font_size_1em"
-  ],
-  "app_karate_style_control_font_size": [
-   "app_karate_style_control",
-   "app_karate_style_control_font_size",
-   "app_karate_computer_save"
-  ],
-  "margin": [
-   "app_karate_computer_save"
-  ],
-  "title": [
-   "app_karate_computer_save"
-  ],
-  "details": [
-   "app_karate_computer_save"
-  ],
-  "radio_group_name": [
-   "app_karate_computer_save"
-  ],
-  "radios": [
-   "app_karate_computer_save"
-  ],
-  "container2": [
-   "app_karate_computer_save"
-  ],
-  "app_karate_button_screen_green_style_assign": [
-   "app_karate_button_screen_green",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_button_green"
-  ],
-  "checkbox": [
-   "app_karate_computer_save"
-  ],
-  "html_checked_set": [
-   "html_checked_set",
-   "app_karate_computer_save"
-  ],
-  "html_centered": [
-   "app_karate_container_centered",
-   "html_centered",
-   "app_karate_computer_save"
-  ],
-  "app_karate_button_green": [
-   "app_karate_button_green"
   ]
  },
  "functions": {
@@ -15644,16 +15638,27 @@
     "v"
    ]
   },
-  "app_karate_button_screen_green": {
+  "app_karate_button_green": {
    "async": false,
    "identifiers": [
+    "marker",
     "app_karate_button_screen_green_style_assign",
     "app_karate_button_screen_uncolored",
-    "app_karate_button_screen_green",
+    "app_karate_button_green",
     "div",
     "text",
     "lambda",
     "component"
+   ]
+  },
+  "app_karate_button_screen_green_style_assign": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_background",
+    "html_style_assign",
+    "app_karate_button_screen_green_style_assign",
+    "component",
+    "color"
    ]
   },
   "app_karate_button_screen_uncolored": {
@@ -15667,6 +15672,56 @@
     "text",
     "lambda",
     "component"
+   ]
+  },
+  "app_karate_computer_save": {
+   "async": false,
+   "identifiers": [
+    "html_centered",
+    "html_checked_set",
+    "html_on_click",
+    "app_karate_container_background",
+    "object_property_get",
+    "object_merge",
+    "each",
+    "list_map",
+    "html_attribute_set",
+    "emoji_secure",
+    "emoji_person_outline",
+    "app_karate_style_control_font_size",
+    "html_style_assign",
+    "html_font_size_1em",
+    "html_div_text",
+    "app_karate_style_control",
+    "app_karate_container_centered",
+    "html_span_text",
+    "html_element",
+    "html_input_type",
+    "app_karate_container_main",
+    "html_clear_context",
+    "marker",
+    "app_karate_computer_save",
+    "context",
+    "choices",
+    "value",
+    "title",
+    "details",
+    "root",
+    "container_main",
+    "div",
+    "radios",
+    "lambda",
+    "container",
+    "label",
+    "radio_group_name",
+    "checkbox",
+    "lambda3",
+    "lambda2",
+    "r",
+    "container2",
+    "transform",
+    "margin",
+    "s"
    ]
   },
   "app_karate_container": {
@@ -15911,112 +15966,23 @@
     "width"
    ]
   },
-  "app_name_staging": {
+  "app_karate_style_control_font_size": {
    "async": false,
    "identifiers": [
-    "function_name_combine",
-    "app_name_prefixed",
-    "app_name_staging",
-    "name",
-    "a_name",
-    "combined"
-   ]
-  },
-  "app_new_step_3_generic": {
-   "async": true,
-   "identifiers": [
-    "function_transform",
-    "list_add",
-    "list_empty",
-    "js_declaration_single_block_body",
-    "js_parse_statement",
-    "js_code_call_args_await_maybe",
-    "app_name_main",
-    "js_declaration_single",
-    "function_parse_declaration",
-    "app_main",
-    "js_code_string",
-    "firebase_name_repo",
-    "function_name_to_path_search",
-    "app_name_prefixed",
-    "string_and_empty_not_is_assert",
-    "marker",
-    "app_new_step_3_generic",
-    "name",
-    "version_get",
-    "f_name_transformed",
-    "a_name",
-    "repo_name",
-    "default2",
-    "f_name",
-    "call_name",
-    "declaration",
-    "declaration_call",
-    "unaliased",
-    "lambda",
-    "ast",
-    "async",
-    "value_string",
-    "main_name",
-    "code",
-    "statement",
-    "body_block",
-    "output"
-   ]
-  },
-  "app_new_step_4": {
-   "async": true,
-   "identifiers": [
-    "app_name_staging",
-    "function_new",
-    "app_new_step_4",
-    "name",
-    "combined"
-   ]
-  },
-  "app_new_step_5": {
-   "async": true,
-   "identifiers": [
-    "app_name_staging",
-    "firebase_deploy_function_destination_latest",
-    "marker",
-    "app_new_step_3_generic",
-    "app_new_step_5",
-    "name",
-    "combined",
-    "version_get"
-   ]
-  },
-  "app_new_update": {
-   "async": true,
-   "identifiers": [
-    "app_new_step_5",
-    "app_new_step_3",
-    "html_update",
-    "marker",
-    "app_new_update",
-    "name"
-   ]
-  },
-  "emoji_arrow_left": {
-   "async": false,
-   "identifiers": [
-    "emoji_arrow_left",
+    "app_karate_style_control_font_size",
     "v"
    ]
   },
-  "emoji_arrow_right": {
+  "app_screen_set_lambda": {
    "async": false,
    "identifiers": [
-    "emoji_arrow_right",
-    "v"
-   ]
-  },
-  "emoji_email": {
-   "async": false,
-   "identifiers": [
-    "emoji_email",
-    "emoji"
+    "log",
+    "app_screen_set",
+    "app_screen_set_lambda",
+    "context",
+    "screen_name",
+    "v",
+    "lambda"
    ]
   },
   "firebase_deploy_function_app_karate_main": {
@@ -16030,41 +15996,6 @@
     "name"
    ]
   },
-  "firebase_deploy_function_destination_latest": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "firebase_deploy_function_destination",
-    "firebase_deploy_function_destination_latest",
-    "f_name",
-    "destination2"
-   ]
-  },
-  "firebase_deploy_function_destination_production": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "firebase_deploy_function_destination",
-    "firebase_deploy_function_destination_production",
-    "f_name",
-    "destination2"
-   ]
-  },
-  "firebase_promote_function": {
-   "async": true,
-   "identifiers": [
-    "firebase_deploy_function_destination_latest",
-    "firebase_storage_download_json",
-    "firebase_upload_object",
-    "marker",
-    "firebase_deploy_function_destination_production",
-    "firebase_promote_function",
-    "f_name",
-    "destination_latest",
-    "value",
-    "destination_production"
-   ]
-  },
   "firebase_promote_function_app_karate_main": {
    "async": true,
    "identifiers": [
@@ -16076,304 +16007,74 @@
     "name"
    ]
   },
-  "function_move": {
-   "async": true,
-   "identifiers": [
-    "function_delete",
-    "function_copy",
-    "function_move",
-    "f_name_before",
-    "f_name_after"
-   ]
-  },
-  "html_em_text": {
+  "html_centered": {
    "async": false,
    "identifiers": [
-    "marker",
-    "html_text_set",
-    "html_element",
-    "html_em_text",
-    "container",
-    "text",
-    "span"
+    "html_style_set",
+    "html_centered",
+    "div"
    ]
   },
-  "html_index_generate": {
-   "async": true,
-   "identifiers": [
-    "file_overwrite",
-    "file_name_html",
-    "folder_public_combine",
-    "user_repo_path_combine",
-    "marker",
-    "html_index_generate",
-    "app_name",
-    "f_name",
-    "combined2",
-    "combined",
-    "contents"
-   ]
-  },
-  "html_name_to_path_folder": {
-   "async": false,
-   "identifiers": [
-    "folder_public_combine",
-    "path_join",
-    "file_name_html",
-    "html_name_to_path_folder",
-    "name",
-    "folder",
-    "file_name",
-    "joined",
-    "file_path"
-   ]
-  },
-  "html_name_to_path_staging": {
-   "async": false,
-   "identifiers": [
-    "html_name_to_path_folder",
-    "marker",
-    "html_name_to_path_staging",
-    "name",
-    "folder",
-    "file_path"
-   ]
-  },
-  "html_on_change": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "html_on",
-    "html_on_change",
-    "component",
-    "lambda",
-    "name_event"
-   ]
-  },
-  "html_on_input": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "html_on",
-    "html_on_input",
-    "component",
-    "lambda",
-    "name_event"
-   ]
-  },
-  "html_span_text": {
-   "async": false,
-   "identifiers": [
-    "html_text_set",
-    "html_element",
-    "html_span_text",
-    "container",
-    "text",
-    "span"
-   ]
-  },
-  "html_update_public_generic": {
-   "async": true,
-   "identifiers": [
-    "file_open",
-    "html_overwrite",
-    "html_code_script_module",
-    "js_code_let_assign",
-    "js_code_braces_empty",
-    "js_code_call_statement",
-    "function_dependencies_code",
-    "function_name_repo_path_combine",
-    "html_update_public_generic",
-    "f_name",
-    "file_path",
-    "name",
-    "joined",
-    "code",
-    "call",
-    "right",
-    "global_init",
-    "middle",
-    "body"
-   ]
-  },
-  "html_update_staging": {
-   "async": true,
-   "identifiers": [
-    "html_name_to_path_staging",
-    "app_name_staging",
-    "marker",
-    "html_update_public_generic",
-    "html_update_staging",
-    "name",
-    "f_name",
-    "file_path"
-   ]
-  },
-  "html_value_get": {
-   "async": false,
-   "identifiers": [
-    "object_property_get",
-    "html_component_element_get",
-    "html_value_get",
-    "input",
-    "element",
-    "value"
-   ]
-  },
-  "html_value_set": {
+  "html_checked_set": {
    "async": false,
    "identifiers": [
     "assert_arguments",
     "object_property_set",
     "marker",
     "html_component_element_get",
-    "html_value_set",
+    "html_checked_set",
     "input",
     "value",
     "arguments",
     "element"
    ]
   },
-  "list_filter_includes_not": {
+  "html_font_size_1em": {
    "async": false,
    "identifiers": [
-    "string_includes_not",
-    "marker",
-    "list_filter",
-    "list_filter_includes_not",
-    "mapped",
-    "part",
-    "lambda",
-    "item",
-    "n",
-    "filtered"
+    "html_style_assign",
+    "html_font_size_1em",
+    "div"
    ]
   },
-  "repo_functions_move": {
-   "async": true,
+  "html_input": {
+   "async": false,
    "identifiers": [
-    "functions_imports_fix_list",
-    "list_unique",
-    "list_squash",
-    "list_map",
-    "data_identifiers_get",
-    "list_map_unordered_async",
-    "file_delete",
-    "file_copy",
-    "path_join",
-    "function_name_to_base",
-    "object_property_get",
-    "function_name_to_path_search",
-    "repo_functions_path",
-    "marker",
-    "repo_functions_move",
-    "f_names",
-    "repo_name_to",
-    "lambda",
-    "f_name",
-    "r_path",
-    "f_name_ext",
-    "f_path_to",
-    "search",
-    "f_path",
-    "waited",
-    "identifiers",
-    "lambda2",
-    "list",
-    "mapped",
-    "squashed",
-    "unique",
-    "v"
+    "html_element",
+    "html_input",
+    "div",
+    "component2"
    ]
   },
-  "repo_functions_move_if_includes_not": {
+  "html_input_email": {
+   "async": false,
+   "identifiers": [
+    "html_attribute_set",
+    "html_input_type",
+    "html_input_email",
+    "div",
+    "input_type",
+    "input"
+   ]
+  },
+  "html_input_type": {
+   "async": false,
+   "identifiers": [
+    "html_attribute_set",
+    "html_input",
+    "html_input_type",
+    "div",
+    "input_type",
+    "input"
+   ]
+  },
+  "repo_functions_move_if_includes_not_love_app_karate": {
    "async": true,
    "identifiers": [
-    "user_repo_get",
-    "repo_acronym_to_name",
-    "repo_functions_move",
-    "marker",
-    "list_filter_includes_not",
-    "repo_functions_names",
+    "app_karate",
     "repo_functions_move_if_includes_not",
-    "to",
-    "query",
-    "repo_name_from",
-    "f_names",
-    "filtered",
-    "repo_name_to",
-    "v"
-   ]
-  },
-  "repo_functions_names": {
-   "async": true,
-   "identifiers": [
-    "repo_functions_path",
-    "functions_names_from_path",
-    "repo_functions_names",
-    "repo_name",
-    "r_path",
-    "f_names"
-   ]
-  },
-  "repo_functions_path": {
-   "async": false,
-   "identifiers": [
-    "repo_path_combine",
-    "functions_path",
-    "repo_functions_path",
-    "repo_name",
-    "path",
-    "r_path"
-   ]
-  },
-  "string_includes_lambda": {
-   "async": false,
-   "identifiers": [
-    "string_includes",
-    "marker",
-    "string_includes_lambda",
-    "item",
-    "l",
-    "string_includes_lambda_inner",
-    "input",
-    "si"
-   ]
-  },
-  "string_includes_not": {
-   "async": false,
-   "identifiers": [
-    "not",
-    "string_includes",
-    "string_includes_not",
-    "item",
-    "part",
-    "v",
-    "n"
-   ]
-  },
-  "string_regex_match": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "string_regex_match",
-    "input",
-    "regex",
-    "v",
-    "match"
-   ]
-  },
-  "string_regex_match_lambda": {
-   "async": false,
-   "identifiers": [
-    "string_regex_match",
-    "marker",
-    "string_regex_match_lambda",
-    "regex",
-    "l",
-    "string_regex_match_lambda_inner",
-    "input",
-    "m"
+    "repo_functions_move_if_includes_not_love_app_karate",
+    "name"
    ]
   },
   "add": {
@@ -16468,6 +16169,17 @@
     "a_name"
    ]
   },
+  "app_name_staging": {
+   "async": false,
+   "identifiers": [
+    "function_name_combine",
+    "app_name_prefixed",
+    "app_name_staging",
+    "name",
+    "a_name",
+    "combined"
+   ]
+  },
   "app_new": {
    "async": true,
    "identifiers": [
@@ -16540,6 +16252,82 @@
     "name",
     "a_name",
     "version_get"
+   ]
+  },
+  "app_new_step_3_generic": {
+   "async": true,
+   "identifiers": [
+    "function_transform",
+    "list_add",
+    "list_empty",
+    "js_declaration_single_block_body",
+    "js_parse_statement",
+    "js_code_call_args_await_maybe",
+    "app_name_main",
+    "js_declaration_single",
+    "function_parse_declaration",
+    "app_main",
+    "js_code_string",
+    "firebase_name_repo",
+    "function_name_to_path_search",
+    "app_name_prefixed",
+    "string_and_empty_not_is_assert",
+    "marker",
+    "app_new_step_3_generic",
+    "name",
+    "version_get",
+    "f_name_transformed",
+    "a_name",
+    "repo_name",
+    "default2",
+    "f_name",
+    "call_name",
+    "declaration",
+    "declaration_call",
+    "unaliased",
+    "lambda",
+    "ast",
+    "async",
+    "value_string",
+    "main_name",
+    "code",
+    "statement",
+    "body_block",
+    "output"
+   ]
+  },
+  "app_new_step_4": {
+   "async": true,
+   "identifiers": [
+    "app_name_staging",
+    "function_new",
+    "app_new_step_4",
+    "name",
+    "combined"
+   ]
+  },
+  "app_new_step_5": {
+   "async": true,
+   "identifiers": [
+    "app_name_staging",
+    "firebase_deploy_function_destination_latest",
+    "marker",
+    "app_new_step_3_generic",
+    "app_new_step_5",
+    "name",
+    "combined",
+    "version_get"
+   ]
+  },
+  "app_new_update": {
+   "async": true,
+   "identifiers": [
+    "app_new_step_5",
+    "app_new_step_3",
+    "html_update",
+    "marker",
+    "app_new_update",
+    "name"
    ]
   },
   "app_refresh": {
@@ -18957,6 +18745,20 @@
     "v"
    ]
   },
+  "emoji_arrow_left": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_left",
+    "v"
+   ]
+  },
+  "emoji_arrow_right": {
+   "async": false,
+   "identifiers": [
+    "emoji_arrow_right",
+    "v"
+   ]
+  },
   "emoji_book_open": {
    "async": false,
    "identifiers": [
@@ -18983,6 +18785,13 @@
    "identifiers": [
     "emoji_dove",
     "v"
+   ]
+  },
+  "emoji_email": {
+   "async": false,
+   "identifiers": [
+    "emoji_email",
+    "emoji"
    ]
   },
   "emoji_family": {
@@ -19726,6 +19535,26 @@
     "destination"
    ]
   },
+  "firebase_deploy_function_destination_latest": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "firebase_deploy_function_destination",
+    "firebase_deploy_function_destination_latest",
+    "f_name",
+    "destination2"
+   ]
+  },
+  "firebase_deploy_function_destination_production": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "firebase_deploy_function_destination",
+    "firebase_deploy_function_destination_production",
+    "f_name",
+    "destination2"
+   ]
+  },
   "firebase_name": {
    "async": true,
    "identifiers": [
@@ -19761,6 +19590,21 @@
     "firebase_path_fix",
     "path",
     "replaced"
+   ]
+  },
+  "firebase_promote_function": {
+   "async": true,
+   "identifiers": [
+    "firebase_deploy_function_destination_latest",
+    "firebase_storage_download_json",
+    "firebase_upload_object",
+    "marker",
+    "firebase_deploy_function_destination_production",
+    "firebase_promote_function",
+    "f_name",
+    "destination_latest",
+    "value",
+    "destination_production"
    ]
   },
   "firebase_service_account": {
@@ -20267,6 +20111,22 @@
     "v"
    ]
   },
+  "functions_imports_fix_list": {
+   "async": true,
+   "identifiers": [
+    "functions_transform_list",
+    "js_imports_paths_fix_inner",
+    "functions_names_to_paths",
+    "functions_imports_fix_list",
+    "list",
+    "dictionary",
+    "lambda",
+    "lambda2",
+    "ast",
+    "v2",
+    "v"
+   ]
+  },
   "functions_log_remove": {
    "async": true,
    "identifiers": [
@@ -20404,6 +20264,20 @@
     "functions_transform",
     "lambda",
     "list",
+    "waited"
+   ]
+  },
+  "functions_transform_list": {
+   "async": true,
+   "identifiers": [
+    "list_map_unordered_async",
+    "function_transform",
+    "functions_transform_list",
+    "lambda",
+    "list",
+    "lambda2",
+    "f_name",
+    "output",
     "waited"
    ]
   },
@@ -21213,6 +21087,16 @@
     "code",
     "expression",
     "output"
+   ]
+  },
+  "function_move": {
+   "async": true,
+   "identifiers": [
+    "function_delete",
+    "function_copy",
+    "function_move",
+    "f_name_before",
+    "f_name_after"
    ]
   },
   "function_names_to_acronyms": {
@@ -22817,6 +22701,18 @@
     "component"
    ]
   },
+  "html_em_text": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_text_set",
+    "html_element",
+    "html_em_text",
+    "container",
+    "text",
+    "span"
+   ]
+  },
   "html_enable": {
    "async": false,
    "identifiers": [
@@ -22836,6 +22732,22 @@
     "component",
     "condition",
     "fn"
+   ]
+  },
+  "html_index_generate": {
+   "async": true,
+   "identifiers": [
+    "file_overwrite",
+    "file_name_html",
+    "folder_public_combine",
+    "user_repo_path_combine",
+    "marker",
+    "html_index_generate",
+    "app_name",
+    "f_name",
+    "combined2",
+    "combined",
+    "contents"
    ]
   },
   "html_loading": {
@@ -22897,6 +22809,31 @@
     "file_path"
    ]
   },
+  "html_name_to_path_folder": {
+   "async": false,
+   "identifiers": [
+    "folder_public_combine",
+    "path_join",
+    "file_name_html",
+    "html_name_to_path_folder",
+    "name",
+    "folder",
+    "file_name",
+    "joined",
+    "file_path"
+   ]
+  },
+  "html_name_to_path_staging": {
+   "async": false,
+   "identifiers": [
+    "html_name_to_path_folder",
+    "marker",
+    "html_name_to_path_staging",
+    "name",
+    "folder",
+    "file_path"
+   ]
+  },
   "html_new": {
    "async": true,
    "identifiers": [
@@ -22920,11 +22857,33 @@
     "addEventListener"
    ]
   },
+  "html_on_change": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_on",
+    "html_on_change",
+    "component",
+    "lambda",
+    "name_event"
+   ]
+  },
   "html_on_click": {
    "async": false,
    "identifiers": [
     "html_on",
     "html_on_click",
+    "component",
+    "lambda",
+    "name_event"
+   ]
+  },
+  "html_on_input": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "html_on",
+    "html_on_input",
     "component",
     "lambda",
     "name_event"
@@ -23192,6 +23151,17 @@
     "remove"
    ]
   },
+  "html_span_text": {
+   "async": false,
+   "identifiers": [
+    "html_text_set",
+    "html_element",
+    "html_span_text",
+    "container",
+    "text",
+    "span"
+   ]
+  },
   "html_style_assign": {
    "async": false,
    "identifiers": [
@@ -23342,6 +23312,68 @@
     "name",
     "a_name",
     "file_path"
+   ]
+  },
+  "html_update_public_generic": {
+   "async": true,
+   "identifiers": [
+    "file_open",
+    "html_overwrite",
+    "html_code_script_module",
+    "js_code_let_assign",
+    "js_code_braces_empty",
+    "js_code_call_statement",
+    "function_dependencies_code",
+    "function_name_repo_path_combine",
+    "html_update_public_generic",
+    "f_name",
+    "file_path",
+    "name",
+    "joined",
+    "code",
+    "call",
+    "right",
+    "global_init",
+    "middle",
+    "body"
+   ]
+  },
+  "html_update_staging": {
+   "async": true,
+   "identifiers": [
+    "html_name_to_path_staging",
+    "app_name_staging",
+    "marker",
+    "html_update_public_generic",
+    "html_update_staging",
+    "name",
+    "f_name",
+    "file_path"
+   ]
+  },
+  "html_value_get": {
+   "async": false,
+   "identifiers": [
+    "object_property_get",
+    "html_component_element_get",
+    "html_value_get",
+    "input",
+    "element",
+    "value"
+   ]
+  },
+  "html_value_set": {
+   "async": false,
+   "identifiers": [
+    "assert_arguments",
+    "object_property_set",
+    "marker",
+    "html_component_element_get",
+    "html_value_set",
+    "input",
+    "value",
+    "arguments",
+    "element"
    ]
   },
   "http": {
@@ -25754,6 +25786,28 @@
     "dictionary"
    ]
   },
+  "js_imports_paths_fix_inner": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "each",
+    "object_property_set",
+    "js_parse_expression",
+    "function_name_to_path_import",
+    "object_property_get",
+    "js_imports_declarations",
+    "js_imports_paths_fix_inner",
+    "ast",
+    "dictionary",
+    "imports_declarations",
+    "lambda",
+    "i",
+    "name",
+    "declaration",
+    "from",
+    "expression"
+   ]
+  },
   "js_imports_unused": {
    "async": false,
    "identifiers": [
@@ -27349,6 +27403,21 @@
     "suffix",
     "ewn",
     "any",
+    "filtered"
+   ]
+  },
+  "list_filter_includes_not": {
+   "async": false,
+   "identifiers": [
+    "string_includes_not",
+    "marker",
+    "list_filter",
+    "list_filter_includes_not",
+    "mapped",
+    "part",
+    "lambda",
+    "item",
+    "n",
     "filtered"
    ]
   },
@@ -30915,6 +30984,84 @@
     "repo_name"
    ]
   },
+  "repo_functions_move": {
+   "async": true,
+   "identifiers": [
+    "functions_imports_fix_list",
+    "list_unique",
+    "list_squash",
+    "list_map",
+    "data_identifiers_get",
+    "list_map_unordered_async",
+    "file_delete",
+    "file_copy",
+    "path_join",
+    "function_name_to_base",
+    "object_property_get",
+    "function_name_to_path_search",
+    "repo_functions_path",
+    "marker",
+    "repo_functions_move",
+    "f_names",
+    "repo_name_to",
+    "lambda",
+    "f_name",
+    "r_path",
+    "f_name_ext",
+    "f_path_to",
+    "search",
+    "f_path",
+    "waited",
+    "identifiers",
+    "lambda2",
+    "list",
+    "mapped",
+    "squashed",
+    "unique",
+    "v"
+   ]
+  },
+  "repo_functions_move_if_includes_not": {
+   "async": true,
+   "identifiers": [
+    "user_repo_get",
+    "repo_acronym_to_name",
+    "repo_functions_move",
+    "marker",
+    "list_filter_includes_not",
+    "repo_functions_names",
+    "repo_functions_move_if_includes_not",
+    "to",
+    "query",
+    "repo_name_from",
+    "f_names",
+    "filtered",
+    "repo_name_to",
+    "v"
+   ]
+  },
+  "repo_functions_names": {
+   "async": true,
+   "identifiers": [
+    "repo_functions_path",
+    "functions_names_from_path",
+    "repo_functions_names",
+    "repo_name",
+    "r_path",
+    "f_names"
+   ]
+  },
+  "repo_functions_path": {
+   "async": false,
+   "identifiers": [
+    "repo_path_combine",
+    "functions_path",
+    "repo_functions_path",
+    "repo_name",
+    "path",
+    "r_path"
+   ]
+  },
   "repo_path": {
    "async": false,
    "identifiers": [
@@ -31460,6 +31607,31 @@
     "includes"
    ]
   },
+  "string_includes_lambda": {
+   "async": false,
+   "identifiers": [
+    "string_includes",
+    "marker",
+    "string_includes_lambda",
+    "item",
+    "l",
+    "string_includes_lambda_inner",
+    "input",
+    "si"
+   ]
+  },
+  "string_includes_not": {
+   "async": false,
+   "identifiers": [
+    "not",
+    "string_includes",
+    "string_includes_not",
+    "item",
+    "part",
+    "v",
+    "n"
+   ]
+  },
   "string_is": {
    "async": false,
    "identifiers": [
@@ -31610,6 +31782,30 @@
     "a",
     "skipped",
     "skipped2"
+   ]
+  },
+  "string_regex_match": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "string_regex_match",
+    "input",
+    "regex",
+    "v",
+    "match"
+   ]
+  },
+  "string_regex_match_lambda": {
+   "async": false,
+   "identifiers": [
+    "string_regex_match",
+    "marker",
+    "string_regex_match_lambda",
+    "regex",
+    "l",
+    "string_regex_match_lambda_inner",
+    "input",
+    "m"
    ]
   },
   "string_replace": {
@@ -32310,219 +32506,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "js_imports_paths_fix_inner": {
-   "async": false,
-   "identifiers": [
-    "marker",
-    "each",
-    "object_property_set",
-    "js_parse_expression",
-    "function_name_to_path_import",
-    "object_property_get",
-    "js_imports_declarations",
-    "js_imports_paths_fix_inner",
-    "ast",
-    "dictionary",
-    "imports_declarations",
-    "lambda",
-    "i",
-    "name",
-    "declaration",
-    "from",
-    "expression"
-   ]
-  },
-  "functions_transform_list": {
-   "async": true,
-   "identifiers": [
-    "list_map_unordered_async",
-    "function_transform",
-    "functions_transform_list",
-    "lambda",
-    "list",
-    "lambda2",
-    "f_name",
-    "output",
-    "waited"
-   ]
-  },
-  "functions_imports_fix_list": {
-   "async": true,
-   "identifiers": [
-    "functions_transform_list",
-    "js_imports_paths_fix_inner",
-    "functions_names_to_paths",
-    "functions_imports_fix_list",
-    "list",
-    "dictionary",
-    "lambda",
-    "lambda2",
-    "ast",
-    "v2",
-    "v"
-   ]
-  },
-  "repo_functions_move_if_includes_not_love_app_karate": {
-   "async": true,
-   "identifiers": [
-    "app_karate",
-    "repo_functions_move_if_includes_not",
-    "repo_functions_move_if_includes_not_love_app_karate",
-    "name"
-   ]
-  },
-  "app_karate_computer_save": {
-   "async": false,
-   "identifiers": [
-    "html_centered",
-    "html_checked_set",
-    "html_on_click",
-    "app_karate_container_background",
-    "object_property_get",
-    "object_merge",
-    "each",
-    "list_map",
-    "html_attribute_set",
-    "emoji_secure",
-    "emoji_person_outline",
-    "app_karate_style_control_font_size",
-    "html_style_assign",
-    "html_font_size_1em",
-    "html_div_text",
-    "app_karate_style_control",
-    "app_karate_container_centered",
-    "html_span_text",
-    "html_element",
-    "html_input_type",
-    "app_karate_container_main",
-    "html_clear_context",
-    "marker",
-    "app_karate_computer_save",
-    "context",
-    "choices",
-    "value",
-    "title",
-    "details",
-    "root",
-    "container_main",
-    "div",
-    "radios",
-    "lambda",
-    "container",
-    "label",
-    "radio_group_name",
-    "checkbox",
-    "lambda3",
-    "lambda2",
-    "r",
-    "container2",
-    "transform",
-    "margin",
-    "s"
-   ]
-  },
-  "app_screen_set_lambda": {
-   "async": false,
-   "identifiers": [
-    "log",
-    "app_screen_set",
-    "app_screen_set_lambda",
-    "context",
-    "screen_name",
-    "v",
-    "lambda"
-   ]
-  },
-  "html_input": {
-   "async": false,
-   "identifiers": [
-    "html_element",
-    "html_input",
-    "div",
-    "component2"
-   ]
-  },
-  "html_input_type": {
-   "async": false,
-   "identifiers": [
-    "html_attribute_set",
-    "html_input",
-    "html_input_type",
-    "div",
-    "input_type",
-    "input"
-   ]
-  },
-  "html_input_email": {
-   "async": false,
-   "identifiers": [
-    "html_attribute_set",
-    "html_input_type",
-    "html_input_email",
-    "div",
-    "input_type",
-    "input"
-   ]
-  },
-  "html_font_size_1em": {
-   "async": false,
-   "identifiers": [
-    "html_style_assign",
-    "html_font_size_1em",
-    "div"
-   ]
-  },
-  "app_karate_style_control_font_size": {
-   "async": false,
-   "identifiers": [
-    "app_karate_style_control_font_size",
-    "v"
-   ]
-  },
-  "app_karate_button_screen_green_style_assign": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_background",
-    "html_style_assign",
-    "app_karate_button_screen_green_style_assign",
-    "component",
-    "color"
-   ]
-  },
-  "html_checked_set": {
-   "async": false,
-   "identifiers": [
-    "assert_arguments",
-    "object_property_set",
-    "marker",
-    "html_component_element_get",
-    "html_checked_set",
-    "input",
-    "value",
-    "arguments",
-    "element"
-   ]
-  },
-  "html_centered": {
-   "async": false,
-   "identifiers": [
-    "html_style_set",
-    "html_centered",
-    "div"
-   ]
-  },
-  "app_karate_button_green": {
-   "async": false,
-   "identifiers": [
-    "app_karate_button_screen_green_style_assign",
-    "app_karate_button_screen_uncolored",
-    "app_karate_button_green",
-    "div",
-    "text",
-    "lambda",
-    "component"
    ]
   }
  }
