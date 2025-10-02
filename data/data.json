@@ -34,6 +34,7 @@
    "emoji_arrow_right",
    "firebase_deploy_function_app_karate_main",
    "firebase_promote_function_app_karate_main",
+   "repo_functions_move",
    "string_includes_not",
    "string_regex_match",
    "app_name_prefix",
@@ -314,9 +315,7 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize",
-   "repo_function_move",
-   "repo_functions_move"
+   "whitespace_normalize"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -527,6 +526,7 @@
    "html_update_staging",
    "html_value_set",
    "list_filter_includes_not",
+   "repo_functions_move",
    "repo_functions_move_if_includes_not",
    "string_includes_lambda",
    "string_regex_match",
@@ -817,9 +817,7 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize",
-   "repo_function_move",
-   "repo_functions_move"
+   "whitespace_normalize"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -994,6 +992,7 @@
   "object_property_get": [
    "app_karate_email",
    "html_value_get",
+   "repo_functions_move",
    "app_refresh",
    "app_replace_home",
    "app_replace_rule_set",
@@ -1088,9 +1087,7 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name",
-   "repo_function_move",
-   "repo_functions_move"
+   "repo_acronym_to_name"
   ],
   "html_clear": [
    "app_karate_email",
@@ -2266,13 +2263,12 @@
   ],
   "function_name_to_path_search": [
    "app_new_step_3_generic",
+   "repo_functions_move",
    "function_exists_strict",
    "function_import",
    "function_name_repo_path_combine",
    "function_name_to_path_search",
-   "function_name_to_path_unalias",
-   "repo_function_move",
-   "repo_functions_move"
+   "function_name_to_path_unalias"
   ],
   "string_and_empty_not_is_assert": [
    "app_new_step_3_generic",
@@ -2300,6 +2296,7 @@
    "app_new_step_3_generic",
    "repo_functions_move_if_includes_not",
    "repo_functions_names",
+   "repo_functions_path",
    "firebase_name",
    "firebase_name_repo",
    "function_name_repo_path_combine",
@@ -2317,8 +2314,7 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set",
-   "repo_functions_path"
+   "user_repo_set"
   ],
   "default2": [
    "app_new_step_3_generic",
@@ -2333,6 +2329,7 @@
    "html_index_generate",
    "html_update_public_generic",
    "html_update_staging",
+   "repo_functions_move",
    "app_main",
    "app_replace",
    "app_reply",
@@ -2445,9 +2442,7 @@
    "marker_remove",
    "marker_top",
    "repos_gitignore_overwrite",
-   "task_new",
-   "repo_function_move",
-   "repo_functions_move"
+   "task_new"
   ],
   "call_name": [
    "app_new_step_3_generic",
@@ -2859,6 +2854,32 @@
   "firebase_promote_function_app_karate_main": [
    "firebase_promote_function_app_karate_main"
   ],
+  "function_delete": [
+   "function_move",
+   "function_delete",
+   "function_delete_if_exists"
+  ],
+  "function_copy": [
+   "function_move",
+   "function_copy",
+   "function_copy_suffix_add"
+  ],
+  "function_move": [
+   "function_move",
+   "function_rename"
+  ],
+  "f_name_before": [
+   "function_move",
+   "function_rename",
+   "function_rename_identifiers",
+   "function_rename_suffix_add"
+  ],
+  "f_name_after": [
+   "function_move",
+   "function_rename",
+   "function_rename_identifiers",
+   "function_rename_suffix_add"
+  ],
   "html_em_text": [
    "html_em_text"
   ],
@@ -2928,6 +2949,7 @@
   ],
   "path_join": [
    "html_name_to_path_folder",
+   "repo_functions_move",
    "data_backup",
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
@@ -2952,9 +2974,7 @@
    "repo_path",
    "repo_path_combine",
    "sandbox_2",
-   "server",
-   "repo_function_move",
-   "repo_functions_move"
+   "server"
   ],
   "html_name_to_path_folder": [
    "html_name_to_path_folder",
@@ -3554,6 +3574,197 @@
    "messenger_reply",
    "puppeteer_hrefs_starts_with"
   ],
+  "data_identifiers_search": [
+   "repo_functions_move",
+   "data_identifiers_search",
+   "function_params_new",
+   "js_function_last_asyncify"
+  ],
+  "file_delete": [
+   "repo_functions_move",
+   "file_delete",
+   "file_delete_if_exists",
+   "function_delete"
+  ],
+  "file_copy": [
+   "repo_functions_move",
+   "data_backup",
+   "data_copy",
+   "file_copy",
+   "function_copy"
+  ],
+  "function_name_to_base": [
+   "repo_functions_move",
+   "function_name_folder_to_path",
+   "function_name_to_base",
+   "html_update_dev"
+  ],
+  "repo_functions_path": [
+   "repo_functions_move",
+   "repo_functions_names",
+   "repo_functions_path"
+  ],
+  "repo_functions_move": [
+   "repo_functions_move"
+  ],
+  "repo_name_to": [
+   "repo_functions_move"
+  ],
+  "r_path": [
+   "repo_functions_move",
+   "repo_functions_names",
+   "repo_functions_path",
+   "path_repo_combine",
+   "repos_paths_names_map_unordered_combine",
+   "repo_path"
+  ],
+  "f_name_ext": [
+   "repo_functions_move",
+   "folder_current_join_code",
+   "function_name_to_base",
+   "html_update_dev"
+  ],
+  "f_path_to": [
+   "repo_functions_move",
+   "data_backup",
+   "data_copy",
+   "data_partition"
+  ],
+  "search": [
+   "repo_functions_move",
+   "functions_search",
+   "functions_search_open",
+   "function_aliases_search",
+   "function_name_repo_path_combine",
+   "function_name_to_path_search",
+   "js_visit_match",
+   "search_generic",
+   "tasks_run"
+  ],
+  "f_path": [
+   "repo_functions_move",
+   "data_aliases_path",
+   "data_file_update",
+   "data_file_update_inner",
+   "data_path",
+   "data_path_generic",
+   "data_prompts_path",
+   "file_json_isolate",
+   "file_json_property_delete",
+   "file_json_transform",
+   "file_js_parse",
+   "file_js_unparse",
+   "file_name_json_folder",
+   "file_open",
+   "file_write",
+   "file_write_buffer",
+   "file_write_generic",
+   "firebase_name_repo",
+   "folder_public_combine",
+   "function_auto_path",
+   "function_copy",
+   "function_delete",
+   "function_exists_inner",
+   "function_format",
+   "function_import",
+   "function_name_to_path_search",
+   "function_new_declaration",
+   "function_open",
+   "function_open_editor",
+   "function_parse",
+   "function_parse_strict",
+   "function_path_declaration_unparse",
+   "function_path_to_name",
+   "function_read",
+   "git_history_delete",
+   "html_update_dev",
+   "js_outside_move",
+   "path_repo_about",
+   "path_repo_combine",
+   "repo_path_combine",
+   "user_repo_get",
+   "user_repo_path",
+   "user_repo_path_combine",
+   "user_repo_set"
+  ],
+  "result": [
+   "repo_functions_move",
+   "cache_generic",
+   "catch_call",
+   "command_line_node_g",
+   "data_identifiers_search",
+   "data_prompts",
+   "ebible_chapter_text",
+   "ebible_references_parse_lines",
+   "ebible_verse",
+   "file_temp",
+   "folder_current_join",
+   "folder_public_combine",
+   "folder_read_files",
+   "folder_user_combine",
+   "functions_combine_name",
+   "functions_search",
+   "functions_search_open",
+   "function_aliases_search",
+   "function_exists_inner",
+   "function_exists_strict",
+   "function_name_to_path_unalias",
+   "function_new_js_inner",
+   "function_params_consolidate",
+   "function_params_new",
+   "function_run",
+   "function_run_git",
+   "function_run_log",
+   "function_run_output_file_temp",
+   "function_transform_result",
+   "git_push_schedule_command",
+   "git_repo_rename_normalize",
+   "html_loading",
+   "html_parse",
+   "html_parse_find",
+   "html_parse_find_remove",
+   "http",
+   "http_firebase",
+   "http_local",
+   "js_code_call",
+   "js_code_call_statement",
+   "js_code_parenthesis_open_close",
+   "js_declaration_param_named",
+   "js_dollar_choice_arguments",
+   "js_function_last_asyncify",
+   "js_identifiers",
+   "js_marker_named_ast",
+   "js_node_types",
+   "js_stack_filtered_multiple",
+   "list_first_remaining",
+   "list_first_second",
+   "list_first_second_generic",
+   "list_is_assert",
+   "list_join_comma",
+   "list_last_or_null",
+   "list_map_name",
+   "list_map_prefix_without",
+   "list_map_prefix_without_any",
+   "list_range",
+   "list_slice_end",
+   "marker_functionize",
+   "messenger_reply_unreplied",
+   "object_property_exists_assert",
+   "object_property_exists_not",
+   "object_property_exists_not_assert",
+   "repos_paths_map_unordered",
+   "repos_paths_map_unordered_combine",
+   "repos_paths_map_unordered_combine_squash",
+   "repos_paths_names_map_unordered",
+   "repos_paths_names_map_unordered_combine",
+   "retry",
+   "search_generic",
+   "storage_local_get",
+   "storage_local_specify_get",
+   "tasks_run",
+   "task_new",
+   "ternary"
+  ],
   "user_repo_get": [
    "repo_functions_move_if_includes_not",
    "firebase_name",
@@ -3622,16 +3833,6 @@
    "repos_paths_map_unordered_combine",
    "string_split_comma"
   ],
-  "repo_path": [
-   "git_repo_clone",
-   "path_repo_combine",
-   "repos_gitignore_overwrite",
-   "repos_paths_map_unordered",
-   "repos_paths_names_map_unordered",
-   "repo_acronym_to_path",
-   "repo_path",
-   "repo_path_combine"
-  ],
   "functions_names_from_path": [
    "repo_functions_names",
    "functions_names",
@@ -3639,22 +3840,22 @@
    "functions_names_to_paths",
    "functions_paths"
   ],
+  "repo_path_combine": [
+   "repo_functions_path",
+   "firebase_name_repo",
+   "function_name_repo_path_combine",
+   "function_new_declaration",
+   "repo_path_combine",
+   "user_repo_path_combine"
+  ],
   "functions_path": [
+   "repo_functions_path",
    "functions_path",
    "function_name_to_path",
-   "repos_paths_map_unordered_combine_squash",
-   "repo_functions_path"
-  ],
-  "r_path": [
-   "repo_functions_names",
-   "path_repo_combine",
-   "repos_paths_names_map_unordered_combine",
-   "repo_path",
-   "repo_function_move",
-   "repo_functions_path",
-   "repo_functions_move"
+   "repos_paths_map_unordered_combine_squash"
   ],
   "path": [
+   "repo_functions_path",
    "file_parent_exists_ensure",
    "file_root_exists",
    "firebase_path_fix",
@@ -3671,8 +3872,7 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "server",
-   "watch",
-   "repo_functions_path"
+   "watch"
   ],
   "string_includes": [
    "string_includes_lambda",
@@ -6381,85 +6581,6 @@
    "string_empty_is",
    "throws_not_async"
   ],
-  "result": [
-   "cache_generic",
-   "catch_call",
-   "command_line_node_g",
-   "data_identifiers_search",
-   "data_prompts",
-   "ebible_chapter_text",
-   "ebible_references_parse_lines",
-   "ebible_verse",
-   "file_temp",
-   "folder_current_join",
-   "folder_public_combine",
-   "folder_read_files",
-   "folder_user_combine",
-   "functions_combine_name",
-   "functions_search",
-   "functions_search_open",
-   "function_aliases_search",
-   "function_exists_inner",
-   "function_exists_strict",
-   "function_name_to_path_unalias",
-   "function_new_js_inner",
-   "function_params_consolidate",
-   "function_params_new",
-   "function_run",
-   "function_run_git",
-   "function_run_log",
-   "function_run_output_file_temp",
-   "function_transform_result",
-   "git_push_schedule_command",
-   "git_repo_rename_normalize",
-   "html_loading",
-   "html_parse",
-   "html_parse_find",
-   "html_parse_find_remove",
-   "http",
-   "http_firebase",
-   "http_local",
-   "js_code_call",
-   "js_code_call_statement",
-   "js_code_parenthesis_open_close",
-   "js_declaration_param_named",
-   "js_dollar_choice_arguments",
-   "js_function_last_asyncify",
-   "js_identifiers",
-   "js_marker_named_ast",
-   "js_node_types",
-   "js_stack_filtered_multiple",
-   "list_first_remaining",
-   "list_first_second",
-   "list_first_second_generic",
-   "list_is_assert",
-   "list_join_comma",
-   "list_last_or_null",
-   "list_map_name",
-   "list_map_prefix_without",
-   "list_map_prefix_without_any",
-   "list_range",
-   "list_slice_end",
-   "marker_functionize",
-   "messenger_reply_unreplied",
-   "object_property_exists_assert",
-   "object_property_exists_not",
-   "object_property_exists_not_assert",
-   "repos_paths_map_unordered",
-   "repos_paths_map_unordered_combine",
-   "repos_paths_map_unordered_combine_squash",
-   "repos_paths_names_map_unordered",
-   "repos_paths_names_map_unordered_combine",
-   "retry",
-   "search_generic",
-   "storage_local_get",
-   "storage_local_specify_get",
-   "tasks_run",
-   "task_new",
-   "ternary",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
   "catch_call": [
    "catch_call",
    "http"
@@ -6847,53 +6968,6 @@
    "function_alias_add_generic",
    "function_alias_rename"
   ],
-  "f_path": [
-   "data_aliases_path",
-   "data_file_update",
-   "data_file_update_inner",
-   "data_path",
-   "data_path_generic",
-   "data_prompts_path",
-   "file_json_isolate",
-   "file_json_property_delete",
-   "file_json_transform",
-   "file_js_parse",
-   "file_js_unparse",
-   "file_name_json_folder",
-   "file_open",
-   "file_write",
-   "file_write_buffer",
-   "file_write_generic",
-   "firebase_name_repo",
-   "folder_public_combine",
-   "function_auto_path",
-   "function_copy",
-   "function_delete",
-   "function_exists_inner",
-   "function_format",
-   "function_import",
-   "function_name_to_path_search",
-   "function_new_declaration",
-   "function_open",
-   "function_open_editor",
-   "function_parse",
-   "function_parse_strict",
-   "function_path_declaration_unparse",
-   "function_path_to_name",
-   "function_read",
-   "git_history_delete",
-   "html_update_dev",
-   "js_outside_move",
-   "path_repo_about",
-   "path_repo_combine",
-   "repo_path_combine",
-   "user_repo_get",
-   "user_repo_path",
-   "user_repo_path_combine",
-   "user_repo_set",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
   "file_write": [
    "data_all",
    "file_write",
@@ -7036,14 +7110,6 @@
    "git_push_folder",
    "marker_current_set"
   ],
-  "file_copy": [
-   "data_backup",
-   "data_copy",
-   "file_copy",
-   "function_copy",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
   "date_now_file": [
    "data_backup",
    "date_now_file",
@@ -7071,13 +7137,6 @@
    "data_backup",
    "data_copy",
    "data_partition"
-  ],
-  "f_path_to": [
-   "data_backup",
-   "data_copy",
-   "data_partition",
-   "repo_function_move",
-   "repo_functions_move"
   ],
   "data_set": [
    "data_boolean_set",
@@ -7455,13 +7514,6 @@
    "html_parse_classes_preview",
    "list_to_dictionary",
    "search_generic"
-  ],
-  "data_identifiers_search": [
-   "data_identifiers_search",
-   "function_params_new",
-   "js_function_last_asyncify",
-   "repo_function_move",
-   "repo_functions_move"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -8742,13 +8794,6 @@
   "copyFile": [
    "file_copy_overwrite"
   ],
-  "file_delete": [
-   "file_delete",
-   "file_delete_if_exists",
-   "function_delete",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
   "unlink": [
    "file_delete"
   ],
@@ -9061,14 +9106,6 @@
    "firebase_name",
    "global_function_get"
   ],
-  "repo_path_combine": [
-   "firebase_name_repo",
-   "function_name_repo_path_combine",
-   "function_new_declaration",
-   "repo_path_combine",
-   "user_repo_path_combine",
-   "repo_functions_path"
-  ],
   "f": [
    "firebase_name_repo",
    "folder_user",
@@ -9292,13 +9329,6 @@
   "folder_current_join_code": [
    "folder_current_join_code",
    "html_update_dev"
-  ],
-  "f_name_ext": [
-   "folder_current_join_code",
-   "function_name_to_base",
-   "html_update_dev",
-   "repo_function_move",
-   "repo_functions_move"
   ],
   "folder_delete": [
    "folder_delete",
@@ -9571,18 +9601,6 @@
    "functions_search",
    "functions_search_open",
    "tasks_run"
-  ],
-  "search": [
-   "functions_search",
-   "functions_search_open",
-   "function_aliases_search",
-   "function_name_repo_path_combine",
-   "function_name_to_path_search",
-   "js_visit_match",
-   "search_generic",
-   "tasks_run",
-   "repo_function_move",
-   "repo_functions_move"
   ],
   "function_open": [
    "functions_search_open",
@@ -10206,11 +10224,6 @@
    "function_parse",
    "function_read"
   ],
-  "function_copy": [
-   "function_copy",
-   "function_copy_suffix_add",
-   "function_move"
-  ],
   "f_name_old": [
    "function_copy",
    "function_copy_suffix_add"
@@ -10283,11 +10296,6 @@
   ],
   "function_current_set_task_new_simple": [
    "function_current_set_task_new_simple"
-  ],
-  "function_delete": [
-   "function_delete",
-   "function_delete_if_exists",
-   "function_move"
   ],
   "function_exists_assert": [
    "function_dependencies",
@@ -10650,13 +10658,6 @@
    "string_split_newline",
    "tasks_run"
   ],
-  "function_name_to_base": [
-   "function_name_folder_to_path",
-   "function_name_to_base",
-   "html_update_dev",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
   "base": [
    "function_name_folder_to_path"
   ],
@@ -10983,18 +10984,6 @@
   "function_rename": [
    "function_rename",
    "function_rename_suffix_add"
-  ],
-  "f_name_before": [
-   "function_rename",
-   "function_rename_identifiers",
-   "function_rename_suffix_add",
-   "function_move"
-  ],
-  "f_name_after": [
-   "function_rename",
-   "function_rename_identifiers",
-   "function_rename_suffix_add",
-   "function_move"
   ],
   "list_remove_if_exists": [
    "function_rename_identifiers",
@@ -11547,6 +11536,16 @@
   ],
   "abortErr": [
    "git_rebase"
+  ],
+  "repo_path": [
+   "git_repo_clone",
+   "path_repo_combine",
+   "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repo_acronym_to_path",
+   "repo_path",
+   "repo_path_combine"
   ],
   "git_repo_clone": [
    "git_repo_clone"
@@ -15424,26 +15423,6 @@
   ],
   "ignoreInitial": [
    "watch"
-  ],
-  "repo_function_move": [
-   "repo_function_move"
-  ],
-  "repo_functions_path": [
-   "repo_functions_names",
-   "repo_functions_path",
-   "repo_function_move",
-   "repo_functions_move"
-  ],
-  "repo_name_to": [
-   "repo_function_move",
-   "repo_functions_move"
-  ],
-  "function_move": [
-   "function_rename",
-   "function_move"
-  ],
-  "repo_functions_move": [
-   "repo_functions_move"
   ]
  },
  "functions": {
@@ -15890,6 +15869,16 @@
     "name"
    ]
   },
+  "function_move": {
+   "async": true,
+   "identifiers": [
+    "function_delete",
+    "function_copy",
+    "function_move",
+    "f_name_before",
+    "f_name_after"
+   ]
+  },
   "html_em_text": {
    "async": false,
    "identifiers": [
@@ -16053,6 +16042,30 @@
     "filtered"
    ]
   },
+  "repo_functions_move": {
+   "async": true,
+   "identifiers": [
+    "data_identifiers_search",
+    "file_delete",
+    "file_copy",
+    "path_join",
+    "function_name_to_base",
+    "object_property_get",
+    "function_name_to_path_search",
+    "repo_functions_path",
+    "marker",
+    "repo_functions_move",
+    "f_name",
+    "repo_name_to",
+    "r_path",
+    "f_name_ext",
+    "f_path_to",
+    "search",
+    "f_path",
+    "v",
+    "result"
+   ]
+  },
   "repo_functions_move_if_includes_not": {
    "async": true,
    "identifiers": [
@@ -16077,6 +16090,17 @@
     "repo_name",
     "r_path",
     "f_names"
+   ]
+  },
+  "repo_functions_path": {
+   "async": false,
+   "identifiers": [
+    "repo_path_combine",
+    "functions_path",
+    "repo_functions_path",
+    "repo_name",
+    "path",
+    "r_path"
    ]
   },
   "string_includes_lambda": {
@@ -32076,75 +32100,6 @@
     "v",
     "replace",
     "trim"
-   ]
-  },
-  "repo_function_move": {
-   "async": true,
-   "identifiers": [
-    "data_identifiers_search",
-    "file_delete",
-    "file_copy",
-    "path_join",
-    "function_name_to_base",
-    "object_property_get",
-    "function_name_to_path_search",
-    "repo_functions_path",
-    "marker",
-    "repo_function_move",
-    "f_name",
-    "repo_name_to",
-    "r_path",
-    "f_name_ext",
-    "f_path_to",
-    "search",
-    "f_path",
-    "v",
-    "result"
-   ]
-  },
-  "repo_functions_path": {
-   "async": false,
-   "identifiers": [
-    "repo_path_combine",
-    "functions_path",
-    "repo_functions_path",
-    "repo_name",
-    "path",
-    "r_path"
-   ]
-  },
-  "function_move": {
-   "async": true,
-   "identifiers": [
-    "function_delete",
-    "function_copy",
-    "function_move",
-    "f_name_before",
-    "f_name_after"
-   ]
-  },
-  "repo_functions_move": {
-   "async": true,
-   "identifiers": [
-    "data_identifiers_search",
-    "file_delete",
-    "file_copy",
-    "path_join",
-    "function_name_to_base",
-    "object_property_get",
-    "function_name_to_path_search",
-    "repo_functions_path",
-    "marker",
-    "repo_functions_move",
-    "f_name",
-    "repo_name_to",
-    "r_path",
-    "f_name_ext",
-    "f_path_to",
-    "search",
-    "f_path",
-    "v",
-    "result"
    ]
   }
  }
