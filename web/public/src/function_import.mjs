@@ -2,7 +2,8 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { folder_previous } from "./folder_previous.mjs";
-export async function function_import(f_name) {
+import { log } from "./log.mjs";
+export async function function_import(f_name) {log({f_name})
   const { fileURLToPath } = await import("url");
   const path = await import("path");
   const __filename = fileURLToPath((import.meta.url));
