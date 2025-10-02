@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -8,6 +9,7 @@ import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_i
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export async function js_if_blockify_generic(ast, type, property_name) {
+  marker("1");
   async function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, property_name);
