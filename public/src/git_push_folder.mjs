@@ -3,7 +3,6 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
-import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { date_to } from "../../../love/public/src/date_to.mjs";
 import { data_property_get } from "../../../love/public/src/data_property_get.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
@@ -28,8 +27,6 @@ export async function git_push_folder(folder) {
     let before = date_to(before_iso);
     const mins = date_diff_mins(now, before);
     if (mins < 5) {
-      log_keep("less than 5 mins:");
-      log_keep(mins);
       return;
     }
     await command_line_git_folder(folder, command_git);
