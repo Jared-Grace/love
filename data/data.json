@@ -732,7 +732,6 @@
   "app_karate_button_green": [
    "app_karate_button_green",
    "app_karate_computer_save",
-   "app_karate_email",
    "app_karate_home"
   ],
   "div": [
@@ -2127,7 +2126,6 @@
    "string_empty_not_is_assert"
   ],
   "emoji_arrow_right": [
-   "app_karate_email",
    "emoji_arrow_right"
   ],
   "emoji_email": [
@@ -15751,6 +15749,9 @@
   ],
   "add_copy": [
    "js_if_blockify_generic"
+  ],
+  "app_karate_button_next": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15981,6 +15982,7 @@
   "app_karate_email": {
    "async": true,
    "identifiers": [
+    "app_karate_button_next",
     "app_screen_set_lambda",
     "app_karate_button_back",
     "app_karate_validate_style_assign",
@@ -16002,8 +16004,6 @@
     "string_includes_lambda",
     "string_empty_not_is",
     "app_karate_container_main",
-    "emoji_arrow_right",
-    "app_karate_button_green",
     "emoji_email",
     "app_karate_div_text",
     "app_karate_green_dark",
