@@ -3661,8 +3661,7 @@
    "function_name_to_path_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run",
-   "function_parse_strict"
+   "tasks_run"
   ],
   "f_path": [
    "repo_functions_move",
@@ -7545,7 +7544,6 @@
    "function_name_to_path",
    "function_name_to_path_search",
    "function_new_declaration",
-   "function_parse_strict",
    "js_outside_move"
   ],
   "list_to_dictionary": [
@@ -21661,12 +21659,10 @@
    "identifiers": [
     "function_name_to_path_search",
     "file_js_parse",
-    "function_name_to_path",
     "function_parse_strict",
     "f_name",
-    "search",
-    "unaliased",
     "f_path",
+    "unaliased",
     "parsed"
    ]
   },
