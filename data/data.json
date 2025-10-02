@@ -32089,10 +32089,10 @@
     "v",
     "result",
     "properties",
-    "waited",
-    "list",
     "lambda",
-    "item"
+    "item",
+    "waited",
+    "list"
    ]
   },
   "repo_functions_path": {
