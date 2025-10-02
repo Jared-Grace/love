@@ -10639,7 +10639,6 @@
   ],
   "js_statement_return_add": [
    "function_list_generate",
-   "js_if_blockify_generic",
    "js_statement_return_add"
   ],
   "f_generate": [
@@ -15636,6 +15635,9 @@
   ],
   "button_background": [
    "app_karate_validate_style_assign"
+  ],
+  "js_statement_add": [
+   "js_if_blockify_generic"
   ]
  },
  "functions": {
@@ -25626,7 +25628,6 @@
   "js_if_blockify_generic": {
    "async": true,
    "identifiers": [
-    "js_statement_return_add",
     "not",
     "js_visit_type_each_async",
     "object_replace",
@@ -25647,7 +25648,8 @@
     "copy",
     "nt",
     "includes",
-    "bs_body"
+    "bs_body",
+    "js_statement_add"
    ]
   },
   "js_if_else_if_combine": {
