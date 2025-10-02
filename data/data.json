@@ -15721,7 +15721,7 @@
    ]
   },
   "app_karate_button_green": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "marker",
     "app_karate_button_screen_green_style_assign",
