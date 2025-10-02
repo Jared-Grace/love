@@ -3519,8 +3519,7 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run",
-   "functions_transform"
+   "tasks_run"
   ],
   "n": [
    "list_filter_includes_not",
@@ -4630,7 +4629,6 @@
    "functions_format",
    "functions_names_from_path",
    "functions_paths",
-   "functions_transform",
    "function_dependencies_code",
    "function_name_to_acronym",
    "function_params_consolidate",
@@ -4761,8 +4759,7 @@
    "messenger_reply_messages",
    "object_properties_from",
    "puppeteer_hrefs",
-   "retry",
-   "functions_transform"
+   "retry"
   ],
   "refresh": [
    "app_replace_rule_set"
@@ -5823,8 +5820,7 @@
    "search_generic",
    "string_list_to",
    "string_split_newline",
-   "repo_functions_move",
-   "functions_transform"
+   "repo_functions_move"
   ],
   "book_code": [
    "app_reply_main",
@@ -10408,8 +10404,7 @@
    "js_block_child_graph_unparse",
    "list_map_unordered_async",
    "repos_gitignore_overwrite",
-   "repo_functions_move",
-   "functions_transform"
+   "repo_functions_move"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -20207,7 +20202,6 @@
     "list_map_unordered_async",
     "list_wait",
     "functions_names",
-    "list_map",
     "function_transform",
     "functions_transform",
     "lambda",
@@ -20215,10 +20209,6 @@
     "f_name",
     "output",
     "mapped",
-    "lambda3",
-    "item",
-    "waited",
-    "list",
     "v"
    ]
   },
