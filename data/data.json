@@ -15336,6 +15336,9 @@
   ],
   "html_update_staging": [
    "html_update_staging"
+  ],
+  "repo_functions_move_if_starts_with_not": [
+   "repo_functions_move_if_starts_with_not"
   ]
  },
  "functions": {
@@ -31902,6 +31905,12 @@
     "name",
     "f_name",
     "file_path"
+   ]
+  },
+  "repo_functions_move_if_starts_with_not": {
+   "async": false,
+   "identifiers": [
+    "repo_functions_move_if_starts_with_not"
    ]
   }
  }
