@@ -1168,7 +1168,8 @@
   ],
   "html_value_set": [
    "app_karate_email",
-   "html_value_set"
+   "html_value_set",
+   "app_karate_computer_save"
   ],
   "html_value_get": [
    "app_karate_email",
@@ -1274,7 +1275,8 @@
    "string_suffix_change",
    "string_to",
    "html_input_type",
-   "html_input_email"
+   "html_input_email",
+   "app_karate_computer_save"
   ],
   "div_checks": [
    "app_karate_email"
@@ -15600,6 +15602,9 @@
    "app_karate_button_screen_green_style_assign"
   ],
   "checkbox": [
+   "app_karate_computer_save"
+  ],
+  "value3": [
    "app_karate_computer_save"
   ]
  },
@@ -32351,6 +32356,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_value_set",
     "app_karate_container_background",
     "object_property_get",
     "object_merge",
@@ -32391,6 +32397,8 @@
     "lambda2",
     "r",
     "container2",
+    "input",
+    "value3",
     "value2",
     "transform",
     "margin",
