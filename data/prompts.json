@@ -2531,6 +2531,7 @@
   "s import",
   "functions_names_to_paths",
   "is r",
-  "r repo_function_move repo_functions_move"
+  "r repo_function_move repo_functions_move",
+  "o is"
  ]
 }
