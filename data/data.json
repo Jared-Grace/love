@@ -1665,9 +1665,6 @@
    "string_pad",
    "string_padded_is"
   ],
-  "radios": [
-   "app_karate_computer_save"
-  ],
   "button_next": [
    "app_karate_computer_save",
    "app_karate_email",
@@ -3953,7 +3950,8 @@
    "js_identifier_defineds",
    "messenger_reply",
    "messenger_reply_messages",
-   "promise_wrap"
+   "promise_wrap",
+   "app_karate_computer_save"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -4060,7 +4058,8 @@
    "string_includes_lambda",
    "string_includes_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "app_karate_computer_save"
   ],
   "index": [
    "app_replace_home",
@@ -4408,7 +4407,8 @@
    "repos_paths_names_map_unordered_combine",
    "repo_functions_move",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "app_karate_computer_save"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -5416,7 +5416,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "app_karate_computer_save"
   ],
   "book_code": [
    "app_reply_main",
@@ -15720,6 +15721,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "checkboxes": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15856,7 +15860,7 @@
     "details",
     "div",
     "padding",
-    "radios",
+    "checkboxes",
     "button_next",
     "radio_group_name",
     "lambda",
@@ -15873,6 +15877,10 @@
     "margin",
     "s",
     "lambda5",
+    "mapped",
+    "list",
+    "lambda4",
+    "item",
     "valid",
     "containers"
    ]
