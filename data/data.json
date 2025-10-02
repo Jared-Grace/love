@@ -15592,15 +15592,15 @@
   "radios": [
    "app_karate_computer_save"
   ],
-  "radio": [
-   "app_karate_computer_save"
-  ],
   "container2": [
    "app_karate_computer_save"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_screen_green",
    "app_karate_button_screen_green_style_assign"
+  ],
+  "checkbox": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32386,7 +32386,7 @@
     "container",
     "label",
     "radio_group_name",
-    "radio",
+    "checkbox",
     "lambda3",
     "lambda2",
     "r",
