@@ -15528,8 +15528,7 @@
   ],
   "input_type": [
    "html_input_type",
-   "html_input_email",
-   "app_karate_computer_save"
+   "html_input_email"
   ],
   "html_input_type": [
    "html_input_type",
@@ -32302,7 +32301,6 @@
     "container",
     "input",
     "div",
-    "input_type",
     "component",
     "html_button_karate"
    ]
