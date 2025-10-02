@@ -2310,7 +2310,6 @@
   "u fo",
   "a fo file_overwrite",
   "function_run_output_file_temp functions_names_to_paths\\",
-  "functions_names_to_paths",
   "s parse",
   "u si",
   "a si string_is",
@@ -2529,6 +2528,7 @@
   "repo_function_move html_em_text love",
   "s file_",
   "o r",
-  "s import"
+  "s import",
+  "functions_names_to_paths"
  ]
 }
