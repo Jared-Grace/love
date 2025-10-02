@@ -412,7 +412,6 @@
    "app_screen_set_lambda"
   ],
   "screen_name": [
-   "app_karate_button_screen_uncolored",
    "app_refresh",
    "function_new_app_screen",
    "html_button_screen",
@@ -15581,9 +15580,8 @@
     "div",
     "text",
     "context",
-    "screen_name",
-    "component",
-    "lambda"
+    "lambda",
+    "component"
    ]
   },
   "app_karate_container": {
