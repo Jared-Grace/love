@@ -3688,7 +3688,6 @@
    "user_repo_set"
   ],
   "result": [
-   "repo_functions_move",
    "cache_generic",
    "catch_call",
    "command_line_node_g",
@@ -7510,8 +7509,7 @@
    "function_name_to_path_search",
    "function_new_declaration",
    "function_parse_strict",
-   "js_outside_move",
-   "repo_functions_move"
+   "js_outside_move"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
@@ -7519,8 +7517,7 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic",
-   "repo_functions_move"
+   "search_generic"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -16053,8 +16050,6 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
-    "function_name_to_path",
-    "list_to_dictionary",
     "data_identifiers_get",
     "list_map_unordered_async",
     "file_delete",
@@ -16078,7 +16073,6 @@
     "waited",
     "identifiers",
     "list",
-    "result",
     "v"
    ]
   },
