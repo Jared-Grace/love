@@ -1424,7 +1424,6 @@
    "folder_read_async",
    "folder_read_files",
    "functions_combine",
-   "functions_imports_fix",
    "functions_log_remove",
    "functions_names_from_path",
    "functions_names_to_paths",
@@ -2649,8 +2648,7 @@
    "marker_top",
    "promise_not_is",
    "task_new",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix"
+   "js_imports_paths_fix_inner"
   ],
   "async": [
    "app_new_step_3_generic",
@@ -4359,7 +4357,6 @@
    "visit_unique_async",
    "watch",
    "repo_functions_move",
-   "functions_imports_fix",
    "functions_transform_list"
   ],
   "index": [
@@ -5954,8 +5951,7 @@
    "search_generic",
    "string_list_to",
    "string_the_servant_of_god",
-   "undefined_not_is_assert",
-   "functions_imports_fix"
+   "undefined_not_is_assert"
   ],
   "error": [
    "assert",
@@ -8136,8 +8132,7 @@
    "list_to_dictionary",
    "list_to_dictionary_async",
    "repos_acronyms_to_names",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix"
+   "js_imports_paths_fix_inner"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -9607,8 +9602,7 @@
   "functions_names_to_paths": [
    "functions_names_to_paths",
    "function_imports_add",
-   "js_imports_paths_fix",
-   "functions_imports_fix"
+   "js_imports_paths_fix"
   ],
   "search_generic": [
    "functions_search",
@@ -15447,12 +15441,13 @@
   ],
   "js_imports_paths_fix_inner": [
    "js_imports_paths_fix",
-   "js_imports_paths_fix_inner",
-   "functions_imports_fix"
+   "js_imports_paths_fix_inner"
   ],
   "functions_transform_list": [
    "functions_transform",
-   "functions_transform_list",
+   "functions_transform_list"
+  ],
+  "functions_imports_fix_list": [
    "functions_imports_fix"
   ]
  },
@@ -20078,18 +20073,11 @@
   "functions_imports_fix": {
    "async": true,
    "identifiers": [
-    "functions_transform_list",
+    "functions_imports_fix_list",
     "functions_names",
-    "js_imports_paths_fix_inner",
-    "functions_names_to_paths",
     "marker",
     "functions_imports_fix",
     "list",
-    "dictionary",
-    "lambda",
-    "lambda2",
-    "ast",
-    "v2",
     "v"
    ]
   },
