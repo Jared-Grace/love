@@ -2515,6 +2515,7 @@
   "n repo_functions_move_if_starts_with_not",
   "s acronym",
   "fns",
-  "o fns"
+  "o fns",
+  "repo_functions_move_if_starts_with_not k"
  ]
 }
