@@ -2463,7 +2463,6 @@
   "fws firebase_promote_function app_karate_main",
   "u fp",
   "a fpk firebase_promote_function_app_karate_main",
-  "fpk",
   "s index",
   "s html,dev",
   "u hup",
@@ -2564,6 +2563,7 @@
   "s return,add",
   "as firebase,karate",
   "fk",
-  "s search"
+  "s search",
+  "fpk"
  ]
 }
