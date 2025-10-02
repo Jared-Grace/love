@@ -5633,7 +5633,8 @@
    "marker_bottom",
    "marker_down_choices",
    "marker_down_choices_lambda",
-   "marker_down_generic"
+   "marker_down_generic",
+   "app_karate_computer_save"
   ],
   "letters": [
    "app_reply_main",
@@ -32336,6 +32337,7 @@
     "marker",
     "app_karate_computer_save",
     "context",
+    "choices",
     "title",
     "details",
     "root",
