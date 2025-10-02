@@ -2556,6 +2556,7 @@
   "as single",
   "s scren",
   "s screen",
-  "s data_file_update"
+  "s data_file_update",
+  "function_name_to_path_search data_file_update"
  ]
 }
