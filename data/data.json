@@ -4278,7 +4278,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "html_on"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -5493,7 +5494,8 @@
    "object_property_exists_assert",
    "object_property_exists_not_assert",
    "string_empty_not_is_assert",
-   "string_is_assert"
+   "string_is_assert",
+   "html_on"
   ],
   "equal_assert": [
    "assert_arguments",
@@ -22898,11 +22900,13 @@
   "html_on": {
    "async": false,
    "identifiers": [
+    "assert",
     "html_component_element_get",
     "html_on",
     "component",
     "name_event",
     "lambda",
+    "b",
     "element",
     "addEventListener"
    ]
