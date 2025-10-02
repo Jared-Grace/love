@@ -26955,8 +26955,8 @@
     "object_property_set",
     "js_statement_return_empty",
     "js_statement_return_add",
-    "argument",
     "list",
+    "argument",
     "r"
    ]
   },
