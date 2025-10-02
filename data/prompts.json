@@ -2551,6 +2551,7 @@
   "s app_screen_set_lambda",
   "s back",
   "is app_karate_button_screen_uncolored",
-  "s reply"
+  "s reply",
+  "au app_reply_main"
  ]
 }
