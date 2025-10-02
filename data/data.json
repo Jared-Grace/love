@@ -9440,8 +9440,7 @@
    "function_name_to_path_search",
    "js_visit_match",
    "search_generic",
-   "tasks_run",
-   "repo_functions_move_if_starts_with_not"
+   "tasks_run"
   ],
   "function_open": [
    "functions_search_open",
@@ -11657,7 +11656,8 @@
   ],
   "query": [
    "html_parse_find_list_to",
-   "html_parse_list_to"
+   "html_parse_list_to",
+   "repo_functions_move_if_starts_with_not"
   ],
   "remove": [
    "html_parse_find_remove",
@@ -31956,7 +31956,7 @@
     "repo_functions_names",
     "repo_functions_move_if_starts_with_not",
     "to",
-    "search",
+    "query",
     "repo_name",
     "f_names",
     "filtered"
