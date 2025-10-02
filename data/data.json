@@ -9527,8 +9527,7 @@
    "function_name_to_acronym",
    "git_publish_initial",
    "repo_acronym_to_name",
-   "repo_acronym_to_path",
-   "repo_functions_move_if_starts_with_not"
+   "repo_acronym_to_path"
   ],
   "function_alias_add_generic": [
    "function_aliases",
@@ -31921,8 +31920,7 @@
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
-    "repo_name",
-    "acronym"
+    "repo_name"
    ]
   }
  }
