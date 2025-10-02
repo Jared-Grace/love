@@ -2398,7 +2398,6 @@
   "s screen",
   "is marker_screen_add",
   "data_app_current_get",
-  "as screen",
   "s param",
   "de app_karate_home",
   "msa home",
@@ -2512,6 +2511,7 @@
   "u fk",
   "fb",
   "s email",
-  "fk"
+  "fk",
+  "as screen"
  ]
 }
