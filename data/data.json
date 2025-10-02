@@ -8229,7 +8229,8 @@
   "list2": [
    "ebible_chapter_text",
    "list_all",
-   "list_intersect"
+   "list_intersect",
+   "repo_functions_move"
   ],
   "selector2": [
    "ebible_chapter_text"
@@ -8591,7 +8592,8 @@
    "list_adder_unique",
    "list_adder_unique_async",
    "list_unique",
-   "list_unique_reverse"
+   "list_unique_reverse",
+   "repo_functions_move"
   ],
   "list_map_prefix_without": [
    "ebible_versions",
@@ -8624,7 +8626,8 @@
    "js_node_atomize",
    "list_adder_unique",
    "list_adder_unique_async",
-   "list_unique"
+   "list_unique",
+   "repo_functions_move"
   ],
   "ebible_versions_download": [
    "ebible_versions_download"
@@ -10392,8 +10395,7 @@
    "visit_filter_async",
    "visit_filter_recursive",
    "visit_filter_recursive_async",
-   "visit_unique_async",
-   "repo_functions_move"
+   "visit_unique_async"
   ],
   "ds": [
    "function_dependencies_code"
@@ -14214,8 +14216,7 @@
   ],
   "log_unparse": [
    "log_unparse",
-   "log_unparse_try",
-   "repo_functions_move"
+   "log_unparse_try"
   ],
   "marker_above_generic": [
    "marker_above",
@@ -16057,7 +16058,7 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
-    "log_unparse",
+    "list_unique",
     "list_squash",
     "list_map",
     "data_identifiers_get",
@@ -16086,7 +16087,8 @@
     "list",
     "mapped",
     "squashed",
-    "node",
+    "unique",
+    "list2",
     "v"
    ]
   },
