@@ -3847,7 +3847,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "app_karate_computer_save"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -4613,7 +4614,8 @@
    "object_copy",
    "object_merge",
    "object_replace",
-   "app_karate_home"
+   "app_karate_home",
+   "app_karate_computer_save"
   ],
   "app_replace_rule_valid": [
    "app_replace_rule_set",
@@ -7949,7 +7951,8 @@
    "string_base64_to",
    "string_list_to",
    "string_replace",
-   "js_imports_paths_fix_inner"
+   "js_imports_paths_fix_inner",
+   "app_karate_computer_save"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -15589,6 +15592,9 @@
    "app_karate_computer_save"
   ],
   "radio": [
+   "app_karate_computer_save"
+  ],
+  "to2": [
    "app_karate_computer_save"
   ]
  },
@@ -32342,6 +32348,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "object_merge",
     "each",
     "html_value_get",
     "list_map",
@@ -32382,7 +32389,10 @@
     "transform",
     "margin",
     "s",
-    "div"
+    "div",
+    "to2",
+    "to",
+    "from"
    ]
   },
   "app_screen_set_lambda": {
