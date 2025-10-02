@@ -1654,8 +1654,7 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch",
-   "html_checked_get"
+   "watch"
   ],
   "title": [
    "app_karate_computer_save"
@@ -32759,7 +32758,6 @@
     "html_component_element_get",
     "html_checked_get",
     "input",
-    "value",
     "arguments",
     "element",
     "value2"
