@@ -320,8 +320,7 @@
    "urdu_allah_to_god",
    "visit_unique_async",
    "whitespace_normalize",
-   "app_karate_button_background_invalid",
-   "app_karate_validate_style_assign"
+   "app_karate_button_background_invalid"
   ],
   "marker": [
    "app_karate_button_green",
@@ -4070,7 +4069,8 @@
    "js_block_child_graph",
    "marker_enter",
    "null_not_is",
-   "null_not_is_assert"
+   "null_not_is_assert",
+   "app_karate_validate_style_assign"
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set",
@@ -32531,6 +32531,7 @@
   "app_karate_validate_style_assign": {
    "async": false,
    "identifiers": [
+    "null_not_is",
     "html_enable_if",
     "html_style_assign",
     "app_karate_button_background_invalid",
@@ -32546,7 +32547,6 @@
     "border_color",
     "background",
     "button_background",
-    "v",
     "color"
    ]
   }
