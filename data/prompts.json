@@ -2542,6 +2542,7 @@
   "o app_karate_computer_save",
   "s span",
   "s home",
-  "o app_karate_button_screen_uncolored"
+  "o app_karate_button_screen_uncolored",
+  "s value_get"
  ]
 }
