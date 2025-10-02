@@ -2237,7 +2237,8 @@
    "repo_path_combine",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_functions_move_if_starts_with_not"
   ],
   "default2": [
    "app_new_step_3_generic",
@@ -8865,7 +8866,8 @@
    "repo_firebase_service_account_set",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_functions_move_if_starts_with_not"
   ],
   "repo_path_combine": [
    "firebase_name_repo",
@@ -31928,11 +31930,13 @@
   "repo_functions_move_if_starts_with_not": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "list_filter_starts_with_not",
     "repo_functions_names",
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
+    "repo_name",
     "f_names",
     "filtered"
    ]
