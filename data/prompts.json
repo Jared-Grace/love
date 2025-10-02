@@ -2501,7 +2501,6 @@
   "c list_filter_starts_with_not list_filter_includes_not",
   "s includes,not",
   "r repo_functions_move_if_starts_with_not repo_functions_move_if_includes_not",
-  "d",
   "n repo_function_move",
   "s repo_path",
   "repo_functions_path love",
@@ -2552,6 +2551,7 @@
   "s reply",
   "au app_reply_main",
   "s storage,local",
-  "s push"
+  "s push",
+  "d"
  ]
 }
