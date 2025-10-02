@@ -1169,8 +1169,7 @@
   ],
   "html_value_set": [
    "app_karate_email",
-   "html_value_set",
-   "app_karate_computer_save"
+   "html_value_set"
   ],
   "html_value_get": [
    "app_karate_email",
@@ -15610,7 +15609,8 @@
    "app_karate_computer_save"
   ],
   "html_checked_set": [
-   "html_checked_set"
+   "html_checked_set",
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32361,8 +32361,8 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_checked_set",
     "html_on_click",
-    "html_value_set",
     "app_karate_container_background",
     "object_property_get",
     "object_merge",
