@@ -15530,6 +15530,9 @@
   "html_input_type": [
    "app_karate_email",
    "html_input_type"
+  ],
+  "html_input_email": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15686,9 +15689,8 @@
     "text",
     "check",
     "div",
-    "input_type",
     "input",
-    "html_input_type",
+    "html_input_email",
     "div_checks",
     "ul",
     "button_next",
@@ -15708,6 +15710,8 @@
     "button_background",
     "element",
     "focus",
+    "input_type",
+    "html_input_type",
     "html_input"
    ]
   },
