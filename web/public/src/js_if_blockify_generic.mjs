@@ -8,12 +8,7 @@ import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add } from "./list_add.mjs";
-export async function js_if_blockify_generic(
-  ast,
-  type,
-  property_name,
-  add_copy,
-) {
+export async function js_if_blockify_generic(ast, type, property_name) {
   marker("1");
   async function lambda(v) {
     let { node } = v;
