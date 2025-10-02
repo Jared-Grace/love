@@ -4055,8 +4055,7 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "sandbox_4_a",
-   "repo_functions_move_if_starts_with_not"
+   "sandbox_4_a"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -31935,8 +31934,7 @@
     "to",
     "prefix",
     "f_names",
-    "filtered",
-    "mapped"
+    "filtered"
    ]
   },
   "repo_functions_names": {
