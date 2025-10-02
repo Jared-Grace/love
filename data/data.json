@@ -15851,10 +15851,10 @@
     "check2",
     "a",
     "li",
-    "font_color",
     "border_color",
     "background",
     "button_background",
+    "font_color",
     "element",
     "focus"
    ]
