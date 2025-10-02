@@ -16910,7 +16910,7 @@
    ]
   },
   "app_screen_set": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "storage_local_set_context",
     "app_refresh",
