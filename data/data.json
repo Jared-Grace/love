@@ -3863,8 +3863,7 @@
    "string_includes_lambda",
    "string_includes_not",
    "string_starts_with_not",
-   "tasks_run",
-   "app_karate_validate_style_assign"
+   "tasks_run"
   ],
   "index": [
    "app_replace_home",
@@ -5268,8 +5267,7 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline",
-   "app_karate_validate_style_assign"
+   "string_split_newline"
   ],
   "book_code": [
    "app_reply_main",
@@ -32556,8 +32554,6 @@
     "background",
     "button_background",
     "lambda",
-    "item",
-    "list",
     "div",
     "color"
    ]
