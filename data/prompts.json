@@ -818,7 +818,6 @@
   "oe mars",
   "s code,str",
   "oe u",
-  "u jcs",
   "oe marker_assign_replace_string",
   "fp data_terminal_get",
   "fw fp function_current_declaration_code",
@@ -2536,6 +2535,7 @@
   "n repo_functions_move_if_includes_not_love_app_karate",
   "a km repo_functions_move_if_includes_not_love_app_karate",
   "msa public",
-  "s code,string"
+  "s code,string",
+  "u jcs"
  ]
 }
