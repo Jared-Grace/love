@@ -379,7 +379,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "list_filter"
   ],
   "component2": [
    "app_karate_button_back",
@@ -1047,7 +1048,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "list_filter"
   ],
   "component": [
    "app_karate_button_green",
@@ -4068,7 +4070,8 @@
    "string_includes_lambda",
    "string_includes_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "list_filter"
   ],
   "index": [
    "app_replace_home",
@@ -27606,6 +27609,9 @@
     "list",
     "lambda$item",
     "l",
+    "lambda",
+    "item",
+    "v",
     "filtered",
     "filter"
    ]
