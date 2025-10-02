@@ -7916,8 +7916,7 @@
    "ebible_chapter_code_to_book",
    "string_take",
    "string_take_less_1",
-   "string_trim_right",
-   "app_karate_computer_save"
+   "string_trim_right"
   ],
   "string_to": [
    "ebible_chapter_code_to_name",
@@ -15650,6 +15649,9 @@
   ],
   "container2": [
    "app_karate_computer_save"
+  ],
+  "html_rgba_to_rgb": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15707,7 +15709,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "string_take",
+    "html_rgba_to_rgb",
     "object_property_get",
     "list_map_property",
     "app_karate_validate_style_assign",
