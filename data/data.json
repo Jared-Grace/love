@@ -2169,8 +2169,7 @@
    "string_regex_match_lambda",
    "string_suffix_change",
    "string_to",
-   "html_checked_get",
-   "app_karate_computer_save"
+   "html_checked_get"
   ],
   "div_checks": [
    "app_karate_email"
@@ -15901,7 +15900,6 @@
     "checkeds",
     "only",
     "value2",
-    "input",
     "valid",
     "containers"
    ]
