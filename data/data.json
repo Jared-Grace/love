@@ -350,7 +350,8 @@
    "app_replace_rule_set",
    "html_div",
    "html_div_text",
-   "html_loading"
+   "html_loading",
+   "html_input"
   ],
   "text": [
    "app_karate_button_screen_green",
@@ -1225,7 +1226,8 @@
    "html_document_root",
    "html_element",
    "html_meta_viewport",
-   "html_p"
+   "html_p",
+   "html_input"
   ],
   "app_karate_email": [
    "app_karate_email",
@@ -1828,7 +1830,8 @@
   ],
   "component2": [
    "app_karate_home",
-   "app_reply_main"
+   "app_reply_main",
+   "html_input"
   ],
   "component3": [
    "app_karate_home",
@@ -15513,7 +15516,8 @@
    "app_karate_home"
   ],
   "html_input": [
-   "app_karate_email"
+   "app_karate_email",
+   "html_input"
   ]
  },
  "functions": {
@@ -32288,6 +32292,15 @@
     "screen_name",
     "v",
     "lambda"
+   ]
+  },
+  "html_input": {
+   "async": false,
+   "identifiers": [
+    "html_element",
+    "html_input",
+    "div",
+    "component2"
    ]
   }
  }
