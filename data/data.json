@@ -7916,7 +7916,8 @@
    "ebible_chapter_code_to_book",
    "string_take",
    "string_take_less_1",
-   "string_trim_right"
+   "string_trim_right",
+   "app_karate_computer_save"
   ],
   "string_to": [
    "ebible_chapter_code_to_name",
@@ -15706,6 +15707,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "string_take",
     "object_property_get",
     "list_map_property",
     "app_karate_validate_style_assign",
