@@ -2493,7 +2493,8 @@
    "list_squash",
    "marker_down_choices",
    "string_includes_lambda",
-   "string_regex_match_lambda"
+   "string_regex_match_lambda",
+   "js_await_add_inner"
   ],
   "date_hours_to_mins": [
    "date_diff_mins",
@@ -24104,6 +24105,7 @@
     "f",
     "async_is",
     "n",
+    "l",
     "stack",
     "stack1",
     "lambda4",
