@@ -1,10 +1,9 @@
-import { date_hours_to_mins } from "../../../karate_code/public/src/date_hours_to_mins.mjs";
+import { date_diff_mins } from "../../../karate_code/public/src/date_diff_mins.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { date_diff_hours } from "../../../love/public/src/date_diff_hours.mjs";
 import { date_to } from "../../../love/public/src/date_to.mjs";
 import { data_property_get } from "../../../love/public/src/data_property_get.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
@@ -27,8 +26,7 @@ export async function git_push_folder(folder) {
     let joined = path_join([folder, d_path]);
     let before_iso = await data_property_get(property_name, joined);
     let before = date_to(before_iso);
-    const hours = date_diff_hours(now, before);
-    let mins = date_hours_to_mins(hours);
+    const hours = date_diff_mins(now, before);
     if (hours < 1) {
       if (false) {
         log_keep("less than 1 hour:");
