@@ -15621,6 +15621,9 @@
   ],
   "ignoreInitial": [
    "watch"
+  ],
+  "app_karate_button_background_invalid": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15794,6 +15797,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "app_karate_button_background_invalid",
     "html_input_email",
     "html_component_element_get",
     "app_karate_button_background",
