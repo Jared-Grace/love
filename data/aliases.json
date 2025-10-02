@@ -211,6 +211,7 @@
   "hd": "html_div",
   "sin": "string_includes",
   "fk": "firebase_deploy_function_app_karate_main",
-  "fpk": "firebase_promote_function_app_karate_main"
+  "fpk": "firebase_promote_function_app_karate_main",
+  "km": "repo_functions_move_if_includes_not_love_app_karate"
  }
 }

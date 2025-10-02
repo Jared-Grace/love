@@ -2535,6 +2535,7 @@
   "p",
   "repo_functions_move_if_includes_not l app_karate",
   "ps",
-  "n repo_functions_move_if_includes_not_love_app_karate"
+  "n repo_functions_move_if_includes_not_love_app_karate",
+  "a km repo_functions_move_if_includes_not_love_app_karate"
  ]
 }
