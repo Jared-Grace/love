@@ -6271,7 +6271,8 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green"
+   "trinity_green",
+   "repo_function_move"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -6449,7 +6450,8 @@
    "storage_local_specify_get",
    "tasks_run",
    "task_new",
-   "ternary"
+   "ternary",
+   "repo_function_move"
   ],
   "catch_call": [
    "catch_call",
@@ -7447,7 +7449,8 @@
   "data_identifiers_search": [
    "data_identifiers_search",
    "function_params_new",
-   "js_function_last_asyncify"
+   "js_function_last_asyncify",
+   "repo_function_move"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -32058,6 +32061,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "data_identifiers_search",
     "file_delete",
     "file_copy",
     "path_join",
@@ -32074,7 +32078,9 @@
     "f_path_to",
     "search",
     "f_path",
-    "v"
+    "v",
+    "result",
+    "s"
    ]
   },
   "repo_functions_path": {
