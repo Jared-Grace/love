@@ -7403,7 +7403,6 @@
   ],
   "hours": [
    "date_diff_hours",
-   "git_push_folder",
    "date_hours_to_mins",
    "date_diff_mins"
   ],
@@ -22409,7 +22408,6 @@
     "before_iso",
     "before",
     "mins",
-    "hours",
     "lambda$previous"
    ]
   },
