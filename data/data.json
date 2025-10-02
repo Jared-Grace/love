@@ -2537,8 +2537,7 @@
    "js_call_fill",
    "js_call_new_code",
    "js_code_call_args_await_maybe",
-   "task_new",
-   "function_parse_strict"
+   "task_new"
   ],
   "ast": [
    "app_new_step_3_generic",
@@ -21662,7 +21661,6 @@
     "function_parse_strict",
     "f_name",
     "f_path",
-    "unaliased",
     "parsed"
    ]
   },
