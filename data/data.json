@@ -15761,12 +15761,12 @@
   ],
   "app_karate_button_next": [
    "app_karate_button_next",
-   "app_karate_button_next_screen"
+   "app_karate_button_next_screen",
+   "app_karate_computer_save"
   ],
   "app_karate_button_next_screen": [
    "app_karate_email",
-   "app_karate_button_next_screen",
-   "app_karate_computer_save"
+   "app_karate_button_next_screen"
   ]
  },
  "functions": {
@@ -15864,7 +15864,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
-    "app_karate_button_next_screen",
+    "app_karate_button_next",
     "app_screen_set",
     "html_value_get",
     "list_single",
