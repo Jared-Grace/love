@@ -812,7 +812,8 @@
    "watch",
    "whitespace_normalize",
    "html_name_to_path_staging",
-   "html_update_staging"
+   "html_update_staging",
+   "list_filter_includes_not"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -1622,7 +1623,8 @@
    "visit_filter_recursive",
    "visit_filter_recursive_async",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "list_filter_includes_not"
   ],
   "c": [
    "app_karate_email",
@@ -3074,7 +3076,8 @@
    "sandbox_4_a",
    "string_ends_with_not",
    "string_starts_with_not",
-   "tasks_run"
+   "tasks_run",
+   "list_filter_includes_not"
   ],
   "l": [
    "string_includes_lambda",
@@ -4057,7 +4060,8 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "sandbox_2",
-   "sandbox_4_a"
+   "sandbox_4_a",
+   "list_filter_includes_not"
   ],
   "right_joined": [
    "app_replace_rule_set"
@@ -4948,7 +4952,8 @@
    "list_find_starts_with",
    "string_padded_is",
    "string_starts_with",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_filter_includes_not"
   ],
   "includes": [
    "app_reply_main",
@@ -7667,7 +7672,8 @@
    "list_find",
    "messenger_reply",
    "puppeteer_hrefs_starts_with",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "list_filter_includes_not"
   ],
   "prefixes": [
    "ebible_chapters",
@@ -8250,7 +8256,8 @@
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
    "list_find",
-   "search_generic"
+   "search_generic",
+   "list_filter_includes_not"
   ],
   "list_reverse": [
    "ebible_verses",
@@ -8965,7 +8972,8 @@
    "string_prefix_without",
    "string_starts_with",
    "repo_functions_move_if_starts_with_not",
-   "list_filter_starts_with_not"
+   "list_filter_starts_with_not",
+   "list_filter_includes_not"
   ],
   "path_folder": [
    "firebase_service_account_love_generic",
@@ -13827,7 +13835,8 @@
   "string_starts_with_not": [
    "list_filter_starts_with_not",
    "list_filter_starts_with_not_multiple",
-   "string_starts_with_not"
+   "string_starts_with_not",
+   "list_filter_includes_not"
   ],
   "list_filter_starts_with_not": [
    "list_filter_starts_with_not",
@@ -15359,6 +15368,9 @@
   "repo_functions_names": [
    "repo_functions_move_if_starts_with_not",
    "repo_functions_names"
+  ],
+  "list_filter_includes_not": [
+   "list_filter_includes_not"
   ]
  },
  "functions": {
@@ -31954,6 +31966,21 @@
     "path",
     "joined",
     "f_names"
+   ]
+  },
+  "list_filter_includes_not": {
+   "async": false,
+   "identifiers": [
+    "string_starts_with_not",
+    "marker",
+    "list_filter",
+    "list_filter_includes_not",
+    "mapped",
+    "prefix",
+    "lambda",
+    "item",
+    "sw",
+    "filtered"
    ]
   }
  }
