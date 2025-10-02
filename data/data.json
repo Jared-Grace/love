@@ -450,7 +450,8 @@
    "html_style_margin_y",
    "html_style_set_or_remove",
    "html_text_set",
-   "html_text_set_if"
+   "html_text_set_if",
+   "app_karate_computer_save"
   ],
   "color": [
    "app_karate_button_screen_green",
@@ -1202,7 +1203,8 @@
    "html_attribute_set",
    "html_meta_viewport",
    "html_input_type",
-   "html_input_email"
+   "html_input_email",
+   "app_karate_computer_save"
   ],
   "emoji_email": [
    "app_karate_email",
@@ -1385,7 +1387,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "app_karate_computer_save"
   ],
   "trimmed": [
    "app_karate_email"
@@ -5557,7 +5560,8 @@
    "storage_local_initialize_context",
    "storage_local_key_get",
    "storage_local_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_computer_save"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -32325,6 +32329,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_attribute_set",
     "emoji_secure",
     "each",
     "emoji_person_outline",
@@ -32351,6 +32356,9 @@
     "container",
     "label",
     "input",
+    "component",
+    "key",
+    "value",
     "transform",
     "margin",
     "s",
