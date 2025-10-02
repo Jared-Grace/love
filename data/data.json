@@ -3592,8 +3592,7 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace",
-   "repo_function_move"
+   "string_replace"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -15410,6 +15409,9 @@
   "repo_functions_path": [
    "repo_functions_names",
    "repo_functions_path",
+   "repo_function_move"
+  ],
+  "repo_name_to": [
    "repo_function_move"
   ]
  },
@@ -32057,7 +32059,7 @@
     "marker",
     "repo_function_move",
     "f_name",
-    "to",
+    "repo_name_to",
     "r_path",
     "f_name_ext",
     "joined",
