@@ -2521,12 +2521,12 @@
   "s includes,not",
   "r repo_functions_move_if_starts_with_not repo_functions_move_if_includes_not",
   "d",
-  "repo_functions_move_if_includes_not l app_karate",
   "n repo_function_move",
   "s repo_path",
   "repo_functions_path love",
   "s function,name,path",
   "s base",
-  "s function,base"
+  "s function,base",
+  "repo_functions_move_if_includes_not l app_karate"
  ]
 }
