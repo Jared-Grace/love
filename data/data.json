@@ -3576,7 +3576,6 @@
    "puppeteer_hrefs_starts_with"
   ],
   "data_identifiers_search": [
-   "repo_functions_move",
    "data_identifiers_search",
    "function_params_new",
    "js_function_last_asyncify"
@@ -5817,7 +5816,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "repo_functions_move"
   ],
   "book_code": [
    "app_reply_main",
@@ -7387,7 +7387,8 @@
    "js_expand_generic",
    "js_identifiers_named",
    "js_identifiers_to_names",
-   "js_imports_missing"
+   "js_imports_missing",
+   "repo_functions_move"
   ],
   "i_name": [
    "data_file_update_inner",
@@ -7498,7 +7499,8 @@
   "data_identifiers_get": [
    "data_identifiers_get",
    "data_identifiers_search",
-   "function_rename_identifiers"
+   "function_rename_identifiers",
+   "repo_functions_move"
   ],
   "function_name_to_path": [
    "data_identifiers_search",
@@ -7508,7 +7510,8 @@
    "function_name_to_path_search",
    "function_new_declaration",
    "function_parse_strict",
-   "js_outside_move"
+   "js_outside_move",
+   "repo_functions_move"
   ],
   "list_to_dictionary": [
    "data_identifiers_search",
@@ -7516,7 +7519,8 @@
    "function_names_to_acronyms",
    "html_parse_classes_preview",
    "list_to_dictionary",
-   "search_generic"
+   "search_generic",
+   "repo_functions_move"
   ],
   "data_marker_current_get": [
    "data_marker_current_get",
@@ -16049,8 +16053,10 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
+    "function_name_to_path",
+    "list_to_dictionary",
+    "data_identifiers_get",
     "list_map_unordered_async",
-    "data_identifiers_search",
     "file_delete",
     "file_copy",
     "path_join",
@@ -16070,6 +16076,8 @@
     "search",
     "f_path",
     "waited",
+    "identifiers",
+    "list",
     "result",
     "v"
    ]
