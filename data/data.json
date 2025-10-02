@@ -2760,7 +2760,8 @@
   "global_function_initialize": [
    "app_main",
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "app_reply_main"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -2771,7 +2772,8 @@
   "firebase_name": [
    "app_main",
    "firebase_name",
-   "firebase_storage_url_project"
+   "firebase_storage_url_project",
+   "app_reply_main"
   ],
   "f_name": [
    "app_main",
@@ -16740,6 +16742,8 @@
   "app_reply_main": {
    "async": true,
    "identifiers": [
+    "firebase_name",
+    "global_function_initialize",
     "list_squash",
     "bible_verses_encouragement",
     "ebible_references_parse_lines",
