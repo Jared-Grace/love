@@ -15467,6 +15467,9 @@
   ],
   "repo_name_from": [
    "repo_functions_move_if_includes_not"
+  ],
+  "repo_functions_move_if_includes_not_love_app_karate": [
+   "repo_functions_move_if_includes_not_love_app_karate"
   ]
  },
  "functions": {
@@ -32195,6 +32198,12 @@
     "ast",
     "v2",
     "v"
+   ]
+  },
+  "repo_functions_move_if_includes_not_love_app_karate": {
+   "async": false,
+   "identifiers": [
+    "repo_functions_move_if_includes_not_love_app_karate"
    ]
   }
  }
