@@ -451,8 +451,7 @@
    "html_style_set_or_remove",
    "html_text_set",
    "html_text_set_if",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_computer_save"
+   "app_karate_button_screen_green_style_assign"
   ],
   "color": [
    "app_karate_email",
@@ -32395,7 +32394,6 @@
     "container2",
     "color",
     "value2",
-    "component",
     "transform",
     "margin",
     "s",
