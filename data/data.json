@@ -1817,7 +1817,8 @@
    "task_new",
    "undefined_not_is_assert",
    "visit_unique_async",
-   "watch"
+   "watch",
+   "list_filter"
   ],
   "r": [
    "app_karate_computer_save",
@@ -2300,7 +2301,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "list_filter"
   ],
   "li": [
    "app_karate_email",
@@ -4474,7 +4476,8 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice"
+   "string_slice",
+   "list_filter"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -27613,7 +27616,10 @@
     "item",
     "v",
     "filtered",
-    "filter"
+    "filter",
+    "lambda2",
+    "a",
+    "b"
    ]
   },
   "list_filter_empty_not_is": {
