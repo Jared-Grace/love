@@ -388,7 +388,6 @@
   ],
   "context": [
    "app_karate_button_screen_green",
-   "app_karate_button_screen_uncolored",
    "app_karate_email",
    "app_karate_home",
    "app_karate_main",
@@ -15585,7 +15584,6 @@
     "app_karate_button_screen_uncolored",
     "div",
     "text",
-    "context",
     "lambda",
     "component"
    ]
