@@ -4182,7 +4182,8 @@
    "storage_local_initialize_context"
   ],
   "screen": [
-   "app_refresh"
+   "app_refresh",
+   "app_karate_home"
   ],
   "app_replace_main": [
    "app_replace",
@@ -15723,7 +15724,8 @@
     "button_text",
     "lambda",
     "button",
-    "app_screen_set_lambda"
+    "app_screen_set_lambda",
+    "screen"
    ]
   },
   "app_karate_main": {
