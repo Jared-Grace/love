@@ -4069,8 +4069,7 @@
    "js_block_child_graph",
    "marker_enter",
    "null_not_is",
-   "null_not_is_assert",
-   "app_karate_validate_style_assign"
+   "null_not_is_assert"
   ],
   "html_style_set_or_remove": [
    "app_replace_rule_set",
@@ -32532,7 +32531,6 @@
   "app_karate_validate_style_assign": {
    "async": false,
    "identifiers": [
-    "null_not_is",
     "html_enable_if",
     "html_style_assign",
     "app_karate_button_background_invalid",
