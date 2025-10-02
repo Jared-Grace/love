@@ -4279,8 +4279,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "html_on"
+   "string_slice"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -9048,8 +9047,7 @@
    "js_stack_last_function",
    "marker_param_add",
    "sandbox_2",
-   "function_is",
-   "html_on"
+   "function_is"
   ],
   "projects": [
    "firebase_name_repo"
@@ -22919,8 +22917,6 @@
     "name_event",
     "lambda",
     "fi",
-    "f",
-    "b",
     "element",
     "addEventListener"
    ]
