@@ -15703,6 +15703,9 @@
   "app_karate_button_uncolored_background_color": [
    "app_karate_button_screen_uncolored",
    "app_karate_button_uncolored_background_color"
+  ],
+  "mins": [
+   "git_push_folder"
   ]
  },
  "functions": {
@@ -22392,6 +22395,7 @@
     "before_iso",
     "before",
     "hours",
+    "mins",
     "lambda$previous"
    ]
   },
