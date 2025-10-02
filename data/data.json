@@ -317,7 +317,8 @@
    "visit_unique_async",
    "whitespace_normalize",
    "functions_imports_fix_list",
-   "repo_functions_move_if_includes_not"
+   "repo_functions_move_if_includes_not",
+   "app_screen_set_lambda"
   ],
   "html_style_assign": [
    "app_karate_button_screen_green",
@@ -404,7 +405,8 @@
    "storage_local_get_context",
    "storage_local_initialize_context",
    "storage_local_set_context",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_screen_set_lambda"
   ],
   "screen_name": [
    "app_karate_button_screen_green",
@@ -413,7 +415,8 @@
    "app_refresh",
    "function_new_app_screen",
    "html_button_screen",
-   "marker_screen_add"
+   "marker_screen_add",
+   "app_screen_set_lambda"
   ],
   "component": [
    "app_karate_button_screen_green",
@@ -1641,7 +1644,8 @@
    "repo_functions_move",
    "js_imports_paths_fix_inner",
    "functions_transform_list",
-   "functions_imports_fix_list"
+   "functions_imports_fix_list",
+   "app_screen_set_lambda"
   ],
   "c": [
    "app_karate_email",
@@ -4235,7 +4239,8 @@
   ],
   "app_screen_set": [
    "app_replace_home",
-   "app_screen_set"
+   "app_screen_set",
+   "app_screen_set_lambda"
   ],
   "html_button": [
    "app_replace_home",
@@ -15501,7 +15506,8 @@
    "app_karate_home"
   ],
   "app_screen_set_lambda": [
-   "html_button_screen"
+   "html_button_screen",
+   "app_screen_set_lambda"
   ]
  },
  "functions": {
@@ -32261,6 +32267,17 @@
     "container",
     "component",
     "html_button_karate"
+   ]
+  },
+  "app_screen_set_lambda": {
+   "async": false,
+   "identifiers": [
+    "app_screen_set",
+    "app_screen_set_lambda",
+    "context",
+    "screen_name",
+    "v",
+    "lambda"
    ]
   }
  }
