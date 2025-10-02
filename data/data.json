@@ -1644,8 +1644,7 @@
    "functions_imports_fix_list",
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green",
-   "app_karate_home"
+   "app_karate_button_screen_green"
   ],
   "c": [
    "app_karate_email",
@@ -15724,9 +15723,8 @@
     "component3",
     "parent",
     "button_text",
-    "lambda",
-    "lambda2",
     "screen",
+    "lambda2",
     "button"
    ]
   },
