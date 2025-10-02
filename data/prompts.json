@@ -2540,6 +2540,7 @@
   "s screen,lam",
   "s search",
   "s screens",
-  "s html_input_type"
+  "s html_input_type",
+  "o app_karate_computer_save"
  ]
 }
