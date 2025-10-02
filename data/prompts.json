@@ -2412,7 +2412,6 @@
   "s assign",
   "s fill",
   "r person_outline emoji_person_outline",
-  "s back",
   "s rarow",
   "s arrpw",
   "s arrow",
@@ -2550,6 +2549,7 @@
   "s screen",
   "s function_is",
   "n function_is",
-  "s app_screen_set_lambda"
+  "s app_screen_set_lambda",
+  "s back"
  ]
 }
