@@ -13159,7 +13159,6 @@
    "log_keep",
    "messenger_reply_playwright",
    "repos_paths_names_map_unordered_combine",
-   "app_karate_computer_save",
    "app_screen_set_lambda"
   ],
   "list_first_remaining": [
@@ -32329,7 +32328,6 @@
     "html_div_text",
     "app_karate_style_control",
     "app_karate_container_centered",
-    "log",
     "html_span_text",
     "html_element",
     "html_input_type",
