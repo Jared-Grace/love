@@ -815,7 +815,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "js_imports_paths_fix_inner"
   ],
   "html_style_set": [
    "app_karate_container_centered",
@@ -1084,7 +1085,8 @@
    "prompt_previous",
    "reply",
    "reply_sequence",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "js_imports_paths_fix_inner"
   ],
   "html_clear": [
    "app_karate_email",
@@ -1141,7 +1143,8 @@
    "object_properties_delete_all",
    "object_properties_from",
    "reduce",
-   "visit_filter_recursive"
+   "visit_filter_recursive",
+   "js_imports_paths_fix_inner"
   ],
   "html_value_set": [
    "app_karate_email",
@@ -1626,7 +1629,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "repo_functions_move"
+   "repo_functions_move",
+   "js_imports_paths_fix_inner"
   ],
   "c": [
    "app_karate_email",
@@ -2050,7 +2054,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "js_imports_paths_fix_inner"
   ],
   "a_name": [
    "app_name_staging",
@@ -2486,7 +2491,8 @@
    "js_statement_call_get",
    "marker_call",
    "marker_down_choices_lambda",
-   "marker_functionize"
+   "marker_functionize",
+   "js_imports_paths_fix_inner"
   ],
   "declaration_call": [
    "app_new_step_3_generic",
@@ -2641,7 +2647,8 @@
    "marker_screen_add",
    "marker_top",
    "promise_not_is",
-   "task_new"
+   "task_new",
+   "js_imports_paths_fix_inner"
   ],
   "async": [
    "app_new_step_3_generic",
@@ -3308,7 +3315,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "watch"
+   "watch",
+   "js_imports_paths_fix_inner"
   ],
   "arguments": [
    "html_value_set",
@@ -4091,7 +4099,8 @@
    "marker_call_replace",
    "marker_functionize",
    "marker_if_test_replace",
-   "marker_screen_add"
+   "marker_screen_add",
+   "js_imports_paths_fix_inner"
   ],
   "js_code_dot": [
    "app_new_assign",
@@ -4125,7 +4134,8 @@
    "js_statement_call_get",
    "marker_call_replace_generic",
    "marker_if_test_replace",
-   "marker_next_await"
+   "marker_next_await",
+   "js_imports_paths_fix_inner"
   ],
   "assign": [
    "app_new_assign",
@@ -6603,7 +6613,8 @@
    "marker_index",
    "marker_up",
    "range",
-   "roman_to_integer"
+   "roman_to_integer",
+   "js_imports_paths_fix_inner"
   ],
   "inner": [
    "catch_call",
@@ -7881,7 +7892,8 @@
    "repos_gitignore_overwrite",
    "string_base64_to",
    "string_list_to",
-   "string_replace"
+   "string_replace",
+   "js_imports_paths_fix_inner"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -8116,7 +8128,8 @@
    "js_imports_paths_fix",
    "list_to_dictionary",
    "list_to_dictionary_async",
-   "repos_acronyms_to_names"
+   "repos_acronyms_to_names",
+   "js_imports_paths_fix_inner"
   ],
   "string_upper_to": [
    "ebible_chapter_code_normalize",
@@ -10553,7 +10566,8 @@
   ],
   "function_name_to_path_import": [
    "function_imports_add",
-   "function_name_to_path_import"
+   "function_name_to_path_import",
+   "js_imports_paths_fix_inner"
   ],
   "js_code_import_single": [
    "function_imports_add",
@@ -13408,10 +13422,12 @@
   "js_imports_declarations": [
    "js_imports",
    "js_imports_declarations",
-   "js_imports_unused"
+   "js_imports_unused",
+   "js_imports_paths_fix_inner"
   ],
   "imports_declarations": [
-   "js_imports"
+   "js_imports",
+   "js_imports_paths_fix_inner"
   ],
   "js_imports_all": [
    "js_imports_all",
@@ -15421,7 +15437,8 @@
    "watch"
   ],
   "js_imports_paths_fix_inner": [
-   "js_imports_paths_fix"
+   "js_imports_paths_fix",
+   "js_imports_paths_fix_inner"
   ]
  },
  "functions": {
@@ -32096,6 +32113,28 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "js_imports_paths_fix_inner": {
+   "async": false,
+   "identifiers": [
+    "marker",
+    "each",
+    "object_property_set",
+    "js_parse_expression",
+    "function_name_to_path_import",
+    "object_property_get",
+    "js_imports_declarations",
+    "js_imports_paths_fix_inner",
+    "ast",
+    "dictionary",
+    "imports_declarations",
+    "lambda",
+    "i",
+    "name",
+    "declaration",
+    "from",
+    "expression"
    ]
   }
  }
