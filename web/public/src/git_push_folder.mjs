@@ -27,6 +27,7 @@ export async function git_push_folder(folder) {
     let before_iso = await data_property_get(property_name, joined);
     let before = date_to(before_iso);
     const hours = date_diff_hours(now, before);
+    let mins = hours * 60;
     if (hours < 1) {
       if (false) {
         log_keep("less than 1 hour:");
