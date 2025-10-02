@@ -720,7 +720,8 @@
    "user_repo_get",
    "user_repo_set",
    "watch",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "html_checked_get"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -1117,7 +1118,8 @@
    "js_dollar_aa",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_checked_get"
   ],
   "html_button": [
    "app_karate_button_screen_uncolored",
@@ -1149,7 +1151,8 @@
    "marker_rename",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "html_checked_get"
   ],
   "storage_local_set_context": [
    "app_karate_computer_save",
@@ -1650,7 +1653,8 @@
    "undefined_not_is_assert_lambda",
    "user_repo_get",
    "user_repo_set",
-   "watch"
+   "watch",
+   "html_checked_get"
   ],
   "title": [
    "app_karate_computer_save"
@@ -2011,7 +2015,8 @@
    "html_style_set",
    "html_text_set",
    "html_value_get",
-   "html_value_set"
+   "html_value_set",
+   "html_checked_get"
   ],
   "html_on_input": [
    "app_karate_email",
@@ -2162,7 +2167,8 @@
    "string_regex_match",
    "string_regex_match_lambda",
    "string_suffix_change",
-   "string_to"
+   "string_to",
+   "html_checked_get"
   ],
   "div_checks": [
    "app_karate_email"
@@ -2310,7 +2316,8 @@
    "html_remove",
    "html_text_set",
    "html_value_get",
-   "html_value_set"
+   "html_value_set",
+   "html_checked_get"
   ],
   "focus": [
    "app_karate_email",
@@ -2736,7 +2743,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "watch"
+   "watch",
+   "html_checked_get"
   ],
   "html_input": [
    "html_input",
@@ -15724,6 +15732,9 @@
   ],
   "checkboxes": [
    "app_karate_computer_save"
+  ],
+  "html_checked_get": [
+   "html_checked_get"
   ]
  },
  "functions": {
@@ -32736,6 +32747,20 @@
     "v",
     "replace",
     "trim"
+   ]
+  },
+  "html_checked_get": {
+   "async": false,
+   "identifiers": [
+    "assert_arguments",
+    "object_property_set",
+    "marker",
+    "html_component_element_get",
+    "html_checked_get",
+    "input",
+    "value",
+    "arguments",
+    "element"
    ]
   }
  }
