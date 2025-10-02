@@ -9,10 +9,8 @@ export async function functions_transform(lambda) {
     return output;
   }
   let mapped = list_map(await functions_names(), lambda2);
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda3(item) {},
-  );
+  async function lambda3(item) {}
+  let waited = await list_map_unordered_async(list, lambda3);
   let v = await list_wait(mapped);
   return v;
 }
