@@ -1053,7 +1053,6 @@
    "html_on_click"
   ],
   "app_karate_container_background": [
-   "app_karate_container",
    "app_karate_container_background",
    "app_karate_validate_style_assign"
   ],
@@ -15759,7 +15758,6 @@
   "app_karate_container": {
    "async": false,
    "identifiers": [
-    "app_karate_container_background",
     "html_style_margin_y",
     "html_style_assign",
     "html_div",
