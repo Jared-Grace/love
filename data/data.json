@@ -31569,7 +31569,7 @@
    ]
   },
   "storage_local_set_context": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "storage_local_set",
     "storage_local_set_context",
