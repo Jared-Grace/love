@@ -5421,7 +5421,8 @@
    "sandbox_4_a",
    "search_generic",
    "string_list_to",
-   "string_split_newline"
+   "string_split_newline",
+   "app_karate_computer_save"
   ],
   "book_code": [
    "app_reply_main",
@@ -9251,7 +9252,8 @@
    "function_exists_inner",
    "function_name_to_path_search",
    "list_find",
-   "list_single"
+   "list_single",
+   "app_karate_computer_save"
   ],
   "http": [
    "firebase_storage_download",
@@ -9738,7 +9740,8 @@
    "list_find",
    "list_single",
    "marker_rename",
-   "repo_acronym_to_name"
+   "repo_acronym_to_name",
+   "app_karate_computer_save"
   ],
   "functions_search_open": [
    "functions_search_open"
@@ -15736,9 +15739,6 @@
   ],
   "checkeds": [
    "app_karate_computer_save"
-  ],
-  "lsg": [
-   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15836,6 +15836,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "list_single",
     "html_checked_get",
     "list_filter",
     "storage_local_set_context",
@@ -15895,7 +15896,8 @@
     "s",
     "lambda5",
     "checkeds",
-    "lsg",
+    "only",
+    "list",
     "valid",
     "containers"
    ]
