@@ -2665,8 +2665,7 @@
    "folder_current_join",
    "folder_current_join_code",
    "js_code_string",
-   "js_string",
-   "marker_screen_add"
+   "js_string"
   ],
   "main_name": [
    "app_new_step_3_generic"
@@ -29324,7 +29323,6 @@
     "a",
     "properties",
     "code_string",
-    "value_string",
     "key",
     "combined_screen",
     "value",
