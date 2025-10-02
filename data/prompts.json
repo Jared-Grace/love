@@ -2530,6 +2530,7 @@
   "o r",
   "s import",
   "functions_names_to_paths",
-  "is r"
+  "is r",
+  "r repo_function_move repo_functions_move"
  ]
 }
