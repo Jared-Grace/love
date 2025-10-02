@@ -15741,12 +15741,6 @@
   ],
   "checkeds": [
    "app_karate_computer_save"
-  ],
-  "context2": [
-   "app_karate_computer_save"
-  ],
-  "value3": [
-   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15908,8 +15902,6 @@
     "checkeds",
     "only",
     "value2",
-    "context2",
-    "value3",
     "valid",
     "containers"
    ]
