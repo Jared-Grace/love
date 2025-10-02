@@ -8677,7 +8677,8 @@
    "repos_paths_names_map_unordered",
    "repos_paths_names_map_unordered_combine",
    "server",
-   "watch"
+   "watch",
+   "repo_functions_move_if_starts_with_not"
   ],
   "dir": [
    "file_parent_exists_ensure"
@@ -9400,7 +9401,8 @@
   "functions_path": [
    "functions_path",
    "function_name_to_path",
-   "repos_paths_map_unordered_combine_squash"
+   "repos_paths_map_unordered_combine_squash",
+   "repo_functions_move_if_starts_with_not"
   ],
   "search_generic": [
    "functions_search",
@@ -31915,11 +31917,13 @@
   "repo_functions_move_if_starts_with_not": {
    "async": true,
    "identifiers": [
+    "functions_path",
     "repo_acronym_to_name",
     "marker",
     "repo_functions_move_if_starts_with_not",
     "to",
     "prefix",
+    "path",
     "repo_name"
    ]
   }
