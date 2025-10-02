@@ -2348,7 +2348,6 @@
   "u fd",
   "is app_new_assign",
   "s call,args",
-  "s code,string",
   "s call",
   "s js,call",
   "sps",
@@ -2536,6 +2535,7 @@
   "ps",
   "n repo_functions_move_if_includes_not_love_app_karate",
   "a km repo_functions_move_if_includes_not_love_app_karate",
-  "msa public"
+  "msa public",
+  "s code,string"
  ]
 }
