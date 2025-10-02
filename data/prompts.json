@@ -428,7 +428,6 @@
   "au function_auto_path",
   "i watch",
   "n string_to",
-  "s push",
   "au git_push",
   "s ex",
   "au marker_first",
@@ -2552,6 +2551,7 @@
   "is app_karate_button_screen_uncolored",
   "s reply",
   "au app_reply_main",
-  "s storage,local"
+  "s storage,local",
+  "s push"
  ]
 }
