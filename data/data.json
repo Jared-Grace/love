@@ -2238,7 +2238,8 @@
    "user_repo_get",
    "user_repo_path_combine",
    "user_repo_set",
-   "repo_functions_move_if_starts_with_not"
+   "repo_functions_move_if_starts_with_not",
+   "repo_functions_names"
   ],
   "default2": [
    "app_new_step_3_generic",
@@ -7531,8 +7532,7 @@
    "range_from",
    "repos_gitignore_overwrite",
    "string_replace",
-   "repo_functions_move_if_starts_with_not",
-   "repo_functions_names"
+   "repo_functions_move_if_starts_with_not"
   ],
   "each_range_from_async": [
    "each_range_from_async",
@@ -31949,7 +31949,7 @@
     "path_join",
     "functions_path",
     "repo_functions_names",
-    "to",
+    "repo_name",
     "r_path",
     "path",
     "joined",
