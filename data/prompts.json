@@ -2535,7 +2535,6 @@
   "c html_value_set html_checked_set",
   "r app_karate_button_screen_green app_karate_button_green",
   "s null",
-  "s return,add",
   "s if,js",
   "s statement",
   "s function_is",
@@ -2563,6 +2562,7 @@
   "pn add_copy",
   "p",
   "pn add_copy list_add",
-  "is js_if_blockify_generic"
+  "is js_if_blockify_generic",
+  "s return,add"
  ]
 }
