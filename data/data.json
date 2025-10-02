@@ -3094,7 +3094,8 @@
    "html_update_public",
    "path_name",
    "sandbox_4_a",
-   "unzip"
+   "unzip",
+   "repo_function_move"
   ],
   "html_name_to_path_staging": [
    "html_name_to_path_staging",
@@ -8731,7 +8732,8 @@
   "file_delete": [
    "file_delete",
    "file_delete_if_exists",
-   "function_delete"
+   "function_delete",
+   "repo_function_move"
   ],
   "unlink": [
    "file_delete"
@@ -32057,6 +32059,7 @@
   "repo_function_move": {
    "async": true,
    "identifiers": [
+    "file_delete",
     "file_copy",
     "path_join",
     "function_name_to_base",
@@ -32072,7 +32075,8 @@
     "f_path_to",
     "search",
     "f_path",
-    "v"
+    "v",
+    "file_path"
    ]
   },
   "repo_functions_path": {
