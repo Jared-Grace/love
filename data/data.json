@@ -2229,8 +2229,7 @@
   ],
   "screen": [
    "app_karate_home",
-   "app_refresh",
-   "app_karate_button_back"
+   "app_refresh"
   ],
   "button": [
    "app_karate_home"
@@ -15685,9 +15684,6 @@
   "function_is_assert": [
    "html_on",
    "function_is_assert"
-  ],
-  "context2": [
-   "app_karate_button_back"
   ]
  },
  "functions": {
@@ -32630,10 +32626,8 @@
     "app_karate_button_back",
     "container",
     "context",
-    "screen",
-    "v",
-    "context2",
     "screen_name",
+    "v",
     "component2"
    ]
   },
