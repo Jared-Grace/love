@@ -2490,7 +2490,8 @@
    "js_dollar_aa",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "app_karate_button_screen_uncolored"
   ],
   "object_property_set": [
    "html_checked_set",
@@ -2555,7 +2556,8 @@
    "marker_rename",
    "path_join",
    "sandbox_5_a",
-   "task_new"
+   "task_new",
+   "app_karate_button_screen_uncolored"
   ],
   "html_input": [
    "html_input",
@@ -15727,6 +15729,7 @@
   "app_karate_button_screen_uncolored": {
    "async": false,
    "identifiers": [
+    "assert_arguments",
     "marker",
     "html_button",
     "app_karate_style_control",
@@ -15734,6 +15737,7 @@
     "div",
     "text",
     "lambda",
+    "arguments",
     "component"
    ]
   },
