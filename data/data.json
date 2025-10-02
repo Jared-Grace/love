@@ -15511,6 +15511,9 @@
   ],
   "html_button_karate_container_text_screen": [
    "app_karate_home"
+  ],
+  "html_input": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -15624,6 +15627,7 @@
   "app_karate_email": {
    "async": false,
    "identifiers": [
+    "html_input",
     "html_component_element_get",
     "app_karate_button_background",
     "html_enable_if",
