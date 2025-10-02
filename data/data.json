@@ -10745,7 +10745,8 @@
   ],
   "js_statement_return_add": [
    "function_list_generate",
-   "js_statement_return_add"
+   "js_statement_return_add",
+   "js_arrow_blockify"
   ],
   "f_generate": [
    "function_list_generate"
@@ -23894,7 +23895,8 @@
     "js_arrow_blockify",
     "ast",
     "type",
-    "property_name"
+    "property_name",
+    "js_statement_return_add"
    ]
   },
   "js_arrow_to_function": {
