@@ -3785,7 +3785,8 @@
    "repo_functions_names"
   ],
   "repo_functions_move_if_includes_not": [
-   "repo_functions_move_if_includes_not"
+   "repo_functions_move_if_includes_not",
+   "repo_functions_move_if_includes_not_love_app_karate"
   ],
   "to": [
    "repo_functions_move_if_includes_not",
@@ -3813,12 +3814,14 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "repo_functions_move_if_includes_not_love_app_karate"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
    "html_parse_find_list_to",
-   "html_parse_list_to"
+   "html_parse_list_to",
+   "repo_functions_move_if_includes_not_love_app_karate"
   ],
   "f_names": [
    "repo_functions_move_if_includes_not",
@@ -32202,10 +32205,13 @@
    ]
   },
   "repo_functions_move_if_includes_not_love_app_karate": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "repo_functions_move_if_includes_not",
     "marker",
-    "repo_functions_move_if_includes_not_love_app_karate"
+    "repo_functions_move_if_includes_not_love_app_karate",
+    "to",
+    "query"
    ]
   }
  }
