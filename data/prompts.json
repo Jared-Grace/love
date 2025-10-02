@@ -2560,6 +2560,7 @@
   "s arrow",
   "s add,return",
   "is js_statement_return_add",
-  "fs js_if_blockify_generic"
+  "fs js_if_blockify_generic",
+  "pn add_copy"
  ]
 }
