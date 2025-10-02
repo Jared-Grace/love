@@ -9,4 +9,7 @@ export function list_filter(list, lambda$item) {
   }
   let filtered = list.filter(lambda);
   return filtered;
+  (function lambda2(a) {
+    b;
+  });
 }
