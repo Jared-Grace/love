@@ -24,7 +24,8 @@
    "app_karate_button_back",
    "app_karate_home",
    "app_screen_set_lambda",
-   "html_button_screen"
+   "html_button_screen",
+   "app_karate_button_next_screen"
   ],
   "emoji_arrow_left": [
    "app_karate_button_back",
@@ -48,7 +49,8 @@
    "app_karate_home",
    "html_em_text",
    "html_span_text",
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "app_karate_button_next_screen"
   ],
   "context": [
    "app_karate_button_back",
@@ -72,7 +74,8 @@
    "messenger_reply_playwright",
    "storage_local_get_context",
    "storage_local_initialize_context",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "app_karate_button_next_screen"
   ],
   "screen_name": [
    "app_karate_button_back",
@@ -81,7 +84,8 @@
    "function_new_app_screen",
    "html_button_screen",
    "marker_screen_add",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_button_next_screen"
   ],
   "v": [
    "app_karate_button_back",
@@ -1677,7 +1681,8 @@
   "button_next": [
    "app_karate_computer_save",
    "app_karate_email",
-   "app_karate_validate_style_assign"
+   "app_karate_validate_style_assign",
+   "app_karate_button_next_screen"
   ],
   "label": [
    "app_karate_computer_save"
@@ -1821,7 +1826,8 @@
    "undefined_not_is_assert",
    "visit_unique_async",
    "watch",
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "app_karate_button_next_screen"
   ],
   "r": [
    "app_karate_computer_save",
@@ -15755,10 +15761,12 @@
    "js_if_blockify_generic"
   ],
   "app_karate_button_next": [
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "app_karate_button_next_screen"
   ],
   "app_karate_button_next_screen": [
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_button_next_screen"
   ]
  },
  "functions": {
@@ -32806,6 +32814,19 @@
     "container",
     "lambda2",
     "component2"
+   ]
+  },
+  "app_karate_button_next_screen": {
+   "async": false,
+   "identifiers": [
+    "app_karate_button_next",
+    "app_screen_set_lambda",
+    "app_karate_button_next_screen",
+    "context",
+    "screen_name",
+    "container",
+    "lambda2",
+    "button_next"
    ]
   }
  }
