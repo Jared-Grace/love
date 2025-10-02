@@ -410,7 +410,6 @@
   ],
   "screen_name": [
    "app_karate_button_screen_uncolored",
-   "app_karate_home",
    "app_refresh",
    "function_new_app_screen",
    "html_button_screen",
@@ -1645,7 +1644,8 @@
    "functions_imports_fix_list",
    "app_screen_set_lambda",
    "app_karate_button_screen_uncolored",
-   "app_karate_button_screen_green"
+   "app_karate_button_screen_green",
+   "app_karate_home"
   ],
   "c": [
    "app_karate_email",
@@ -15720,7 +15720,7 @@
     "component3",
     "parent",
     "button_text",
-    "screen_name",
+    "lambda",
     "button"
    ]
   },
