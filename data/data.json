@@ -458,8 +458,7 @@
    "chalk_color",
    "chalk_green",
    "chalk_red",
-   "app_karate_button_screen_green_style_assign",
-   "app_karate_computer_save"
+   "app_karate_button_screen_green_style_assign"
   ],
   "app_karate_style_control": [
    "app_karate_button_screen_uncolored",
@@ -32392,7 +32391,6 @@
     "lambda2",
     "r",
     "container2",
-    "color",
     "value2",
     "transform",
     "margin",
