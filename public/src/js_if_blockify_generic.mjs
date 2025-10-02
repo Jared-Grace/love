@@ -1,4 +1,3 @@
-import { js_statement_return_add } from "../../../love/public/src/js_statement_return_add.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -18,7 +17,7 @@ export async function js_if_blockify_generic(ast, type, property_name) {
       let includes = list_includes(["EmptyStatement"], nt);
       const bs_body = [];
       if (not(includes)) {
-        js_statement_return_add(copy, bs_body);
+        js_statement_add(copy, bs_body);
       }
       object_replace(body, {
         type: "BlockStatement",
