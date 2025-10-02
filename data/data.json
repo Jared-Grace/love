@@ -322,7 +322,8 @@
    "app_karate_button_background_invalid",
    "app_karate_button_back",
    "app_karate_button_font_color",
-   "app_karate_button_uncolored_background_color"
+   "app_karate_button_uncolored_background_color",
+   "date_hours_to_mins"
   ],
   "marker": [
    "app_karate_button_green",
@@ -7400,7 +7401,8 @@
   ],
   "hours": [
    "date_diff_hours",
-   "git_push_folder"
+   "git_push_folder",
+   "date_hours_to_mins"
   ],
   "Math": [
    "date_diff_ms",
@@ -15708,7 +15710,8 @@
    "git_push_folder"
   ],
   "date_hours_to_mins": [
-   "git_push_folder"
+   "git_push_folder",
+   "date_hours_to_mins"
   ]
  },
  "functions": {
@@ -32697,6 +32700,14 @@
    "async": false,
    "identifiers": [
     "app_karate_button_uncolored_background_color",
+    "v"
+   ]
+  },
+  "date_hours_to_mins": {
+   "async": false,
+   "identifiers": [
+    "date_hours_to_mins",
+    "hours",
     "v"
    ]
   }
