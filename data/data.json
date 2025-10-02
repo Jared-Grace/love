@@ -105,7 +105,6 @@
    "functions_imports_fix",
    "functions_log_remove",
    "functions_paths",
-   "functions_transform",
    "function_acronym_to_name",
    "function_aliases_restore",
    "function_alias_add_generic",
@@ -3377,7 +3376,6 @@
    "ebible_version_books_testament_old",
    "functions_format",
    "functions_paths",
-   "functions_transform",
    "function_dependencies_code",
    "function_exists_inner",
    "function_name_to_path_search",
@@ -8567,7 +8565,6 @@
   "list_wait": [
    "ebible_verses_upload",
    "functions_format",
-   "functions_transform",
    "function_dependencies_code",
    "list_map_unordered_async",
    "list_wait"
@@ -10404,7 +10401,8 @@
    "js_block_child_graph_unparse",
    "list_map_unordered_async",
    "repos_gitignore_overwrite",
-   "repo_functions_move"
+   "repo_functions_move",
+   "functions_transform"
   ],
   "waited2": [
    "function_dependencies_code"
@@ -20200,7 +20198,6 @@
    "async": true,
    "identifiers": [
     "list_map_unordered_async",
-    "list_wait",
     "functions_names",
     "function_transform",
     "functions_transform",
@@ -20208,8 +20205,7 @@
     "lambda2",
     "f_name",
     "output",
-    "mapped",
-    "v"
+    "waited"
    ]
   },
   "function_acronym_to_name": {
