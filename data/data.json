@@ -3049,8 +3049,7 @@
    "path_repo_combine",
    "repos_paths_map_unordered_combine",
    "repos_paths_names_map_unordered_combine",
-   "sandbox_2",
-   "repo_function_move"
+   "sandbox_2"
   ],
   "file_path": [
    "html_name_to_path_folder",
@@ -7064,7 +7063,8 @@
   "f_path_to": [
    "data_backup",
    "data_copy",
-   "data_partition"
+   "data_partition",
+   "repo_function_move"
   ],
   "data_set": [
    "data_boolean_set",
@@ -32062,7 +32062,7 @@
     "repo_name_to",
     "r_path",
     "f_name_ext",
-    "joined",
+    "f_path_to",
     "search",
     "f_path",
     "v"
