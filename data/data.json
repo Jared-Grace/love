@@ -15459,7 +15459,8 @@
   ],
   "functions_imports_fix_list": [
    "functions_imports_fix",
-   "functions_imports_fix_list"
+   "functions_imports_fix_list",
+   "repo_functions_move"
   ]
  },
  "functions": {
@@ -16082,6 +16083,7 @@
   "repo_functions_move": {
    "async": true,
    "identifiers": [
+    "functions_imports_fix_list",
     "list_unique",
     "list_squash",
     "list_map",
