@@ -15615,7 +15615,8 @@
   ],
   "html_centered": [
    "app_karate_container_centered",
-   "html_centered"
+   "html_centered",
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -32366,6 +32367,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_centered",
     "html_checked_set",
     "html_on_click",
     "app_karate_container_background",
