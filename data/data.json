@@ -15508,7 +15508,8 @@
   ],
   "app_screen_set_lambda": [
    "html_button_screen",
-   "app_screen_set_lambda"
+   "app_screen_set_lambda",
+   "app_karate_home"
   ]
  },
  "functions": {
@@ -15721,7 +15722,8 @@
     "parent",
     "button_text",
     "lambda",
-    "button"
+    "button",
+    "app_screen_set_lambda"
    ]
   },
   "app_karate_main": {
