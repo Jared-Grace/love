@@ -2108,7 +2108,6 @@
   ],
   "function_transform": [
    "app_new_step_3_generic",
-   "functions_transform",
    "function_auto",
    "function_copy",
    "function_identifier_replace",
@@ -2344,7 +2343,6 @@
    "functions_names_to_paths",
    "functions_paths",
    "functions_search_open",
-   "functions_transform",
    "function_alias_add",
    "function_alias_replace",
    "function_auto",
@@ -2761,7 +2759,6 @@
    "command_line_node_g",
    "command_line_read",
    "file_open",
-   "functions_transform",
    "function_list_generate",
    "function_params_new",
    "function_parse_declaration_js_unparse",
@@ -4287,7 +4284,6 @@
    "folder_read_async",
    "functions_combine",
    "functions_paths",
-   "functions_transform",
    "function_alias_rename",
    "function_dependencies",
    "function_exists_inner",
@@ -5418,8 +5414,7 @@
    "repos_paths_map_unordered",
    "repos_paths_names_map_unordered",
    "sandbox_4_a",
-   "repo_functions_move",
-   "functions_transform"
+   "repo_functions_move"
   ],
   "en": [
    "app_reply_main",
@@ -15445,6 +15440,9 @@
    "js_imports_paths_fix",
    "js_imports_paths_fix_inner",
    "functions_imports_fix"
+  ],
+  "functions_transform_list": [
+   "functions_transform"
   ]
  },
  "functions": {
@@ -20214,15 +20212,11 @@
   "functions_transform": {
    "async": true,
    "identifiers": [
-    "list_map_unordered_async",
+    "functions_transform_list",
     "functions_names",
-    "function_transform",
     "functions_transform",
     "lambda",
     "list",
-    "lambda2",
-    "f_name",
-    "output",
     "waited"
    ]
   },
