@@ -3776,7 +3776,8 @@
    "repo_firebase_service_account_set",
    "user_repo_get",
    "user_repo_path_combine",
-   "user_repo_set"
+   "user_repo_set",
+   "repo_functions_move_if_includes_not"
   ],
   "repo_functions_names": [
    "repo_functions_move_if_includes_not",
@@ -15401,7 +15402,8 @@
    "user_repo_set"
   ],
   "repo_name2": [
-   "user_repo_set"
+   "user_repo_set",
+   "repo_functions_move_if_includes_not"
   ],
   "uuidv4": [
    "uuid"
@@ -16122,6 +16124,7 @@
   "repo_functions_move_if_includes_not": {
    "async": true,
    "identifiers": [
+    "user_repo_get",
     "repo_acronym_to_name",
     "repo_functions_move",
     "marker",
@@ -16130,6 +16133,7 @@
     "repo_functions_move_if_includes_not",
     "to",
     "query",
+    "repo_name2",
     "repo_name",
     "f_names",
     "filtered",
