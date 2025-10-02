@@ -25,7 +25,7 @@ export async function js_if_blockify_generic(
       let includes = list_includes(["EmptyStatement"], nt);
       const bs_body = [];
       if (not(includes)) {
-        list_add(bs_body, copy);
+        add_copy(bs_body, copy);
       }
       object_replace(body, {
         type: "BlockStatement",
