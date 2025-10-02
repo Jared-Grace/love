@@ -2370,7 +2370,6 @@
   "fdf app_karate_main",
   "s app,main",
   "n app_main",
-  "s search",
   "s storage,local",
   "s global",
   "c global_function_property_async global_function_property",
@@ -2539,6 +2538,7 @@
   "u jcs",
   "a jcs js_code_string",
   "msa computer_save",
-  "s screen,lam"
+  "s screen,lam",
+  "s search"
  ]
 }
