@@ -2160,9 +2160,6 @@
    "app_karate_email",
    "function_aliases_restore"
   ],
-  "font_color": [
-   "app_karate_email"
-  ],
   "border_color": [
    "app_karate_email"
   ],
@@ -15860,7 +15857,6 @@
     "border_color",
     "background",
     "button_background",
-    "font_color",
     "element",
     "focus"
    ]
