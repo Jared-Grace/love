@@ -32625,8 +32625,8 @@
     "container",
     "context",
     "screen",
-    "app_screen_set_lambda",
-    "component2"
+    "component2",
+    "app_screen_set_lambda"
    ]
   },
   "function_is": {
