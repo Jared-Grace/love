@@ -2334,7 +2334,6 @@
    "html_loading"
   ],
   "log": [
-   "app_screen_set_lambda",
    "js_dollar_g",
    "js_log_remove",
    "log",
@@ -16043,7 +16042,6 @@
   "app_screen_set_lambda": {
    "async": false,
    "identifiers": [
-    "log",
     "app_screen_set",
     "app_screen_set_lambda",
     "context",
