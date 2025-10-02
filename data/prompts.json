@@ -2409,7 +2409,6 @@
   "r person_outline emoji_person_outline",
   "s rarow",
   "s arrpw",
-  "s arrow",
   "s html,input",
   "urg",
   "s mail",
@@ -2557,6 +2556,7 @@
   "s scren",
   "s screen",
   "s data_file_update",
-  "function_name_to_path_search data_file_update"
+  "function_name_to_path_search data_file_update",
+  "s arrow"
  ]
 }
