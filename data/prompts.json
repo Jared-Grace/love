@@ -2561,6 +2561,7 @@
   "s add,return",
   "is js_statement_return_add",
   "fs js_if_blockify_generic",
-  "pn add_copy"
+  "pn add_copy",
+  "pn add_copy list_add"
  ]
 }
