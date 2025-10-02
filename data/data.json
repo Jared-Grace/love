@@ -3587,7 +3587,8 @@
    "object_replace",
    "range_from",
    "repos_gitignore_overwrite",
-   "string_replace"
+   "string_replace",
+   "repo_function_move"
   ],
   "query": [
    "repo_functions_move_if_includes_not",
@@ -32037,7 +32038,8 @@
    "async": false,
    "identifiers": [
     "marker",
-    "repo_function_move"
+    "repo_function_move",
+    "to"
    ]
   }
  }
