@@ -2493,7 +2493,6 @@
   "c app_new_step_3 app_new_step_4",
   "r app_new_step_4 app_new_step_5",
   "app_new_step_4 karate",
-  "p",
   "anu karate",
   "c html_name_to_path_dev html_name_to_path_staging",
   "c html_update_public html_update_staging",
@@ -2534,6 +2533,7 @@
   "o is",
   "s imports,fix",
   "s repo,acr",
+  "p",
   "repo_functions_move_if_includes_not l app_karate"
  ]
 }
