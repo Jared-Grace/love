@@ -6271,8 +6271,7 @@
    "string_to",
    "string_trim_right",
    "string_upper_to",
-   "trinity_green",
-   "repo_function_move"
+   "trinity_green"
   ],
   "ArrayBuffer": [
    "buffer_string_to"
@@ -32079,8 +32078,7 @@
     "search",
     "f_path",
     "v",
-    "result",
-    "s"
+    "result"
    ]
   },
   "repo_functions_path": {
