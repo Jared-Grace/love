@@ -1172,8 +1172,7 @@
   ],
   "html_value_get": [
    "app_karate_email",
-   "html_value_get",
-   "app_karate_computer_save"
+   "html_value_get"
   ],
   "string_trim": [
    "app_karate_email",
@@ -4222,8 +4221,7 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set",
-   "app_karate_computer_save"
+   "error_attention_set"
   ],
   "storage_local_set_context": [
    "app_replace_font_size_adjust",
@@ -32358,7 +32356,6 @@
     "object_property_get",
     "object_merge",
     "each",
-    "html_value_get",
     "list_map",
     "html_attribute_set",
     "emoji_secure",
@@ -32393,7 +32390,6 @@
     "lambda2",
     "r",
     "container2",
-    "value2",
     "transform",
     "margin",
     "s",
