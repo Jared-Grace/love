@@ -2804,7 +2804,8 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine"
+   "list_map_combine",
+   "list_filter"
   ],
   "right": [
    "add",
@@ -2826,7 +2827,8 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try"
+   "log_unparse_try",
+   "list_filter"
   ],
   "sum": [
    "add",
@@ -4476,8 +4478,7 @@
    "string_is_assert",
    "string_is_assert_message",
    "string_skip",
-   "string_slice",
-   "list_filter"
+   "string_slice"
   ],
   "rules_buttons": [
    "app_replace_rule_set"
@@ -5962,7 +5963,8 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence"
+   "reply_sequence",
+   "list_filter"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6021,7 +6023,8 @@
   ],
   "bind": [
    "bind",
-   "bind_property"
+   "bind_property",
+   "list_filter"
   ],
   "bind_property": [
    "bind_property",
@@ -27606,6 +27609,7 @@
   "list_filter": {
    "async": false,
    "identifiers": [
+    "bind",
     "list_is",
     "assert",
     "list_filter",
@@ -27619,7 +27623,9 @@
     "filter",
     "lambda2",
     "a",
-    "b"
+    "fn",
+    "left",
+    "right"
    ]
   },
   "list_filter_empty_not_is": {
