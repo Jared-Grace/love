@@ -2520,6 +2520,7 @@
   "s list,filter",
   "repo_functions_move_if_starts_with_not l app_karate",
   "s list,includes",
-  "c list_filter_starts_with_not list_filter_includes_not"
+  "c list_filter_starts_with_not list_filter_includes_not",
+  "s includes,not"
  ]
 }
