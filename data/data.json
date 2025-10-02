@@ -2919,7 +2919,6 @@
   ],
   "path_join": [
    "html_name_to_path_folder",
-   "repo_functions_names",
    "data_backup",
    "ebible_version_books_testament",
    "ebible_version_download_path_combine",
@@ -3005,7 +3004,6 @@
   "joined": [
    "html_name_to_path_folder",
    "html_update_public_generic",
-   "repo_functions_names",
    "app_reply_main",
    "data_backup",
    "ebible_chapters",
@@ -16027,13 +16025,11 @@
    "identifiers": [
     "repo_path_combine",
     "functions_names_from_path",
-    "path_join",
     "functions_path",
     "repo_functions_names",
     "repo_name",
-    "r_path",
     "path",
-    "joined",
+    "r_path",
     "f_names"
    ]
   },
