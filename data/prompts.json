@@ -2459,7 +2459,6 @@
   "command_line dir",
   "o s3",
   "s3",
-  "s repo_path",
   "firebase_deploy",
   "as firebase_deploy",
   "s body",
@@ -2524,6 +2523,7 @@
   "r repo_functions_move_if_starts_with_not repo_functions_move_if_includes_not",
   "d",
   "repo_functions_move_if_includes_not l app_karate",
-  "n repo_function_move"
+  "n repo_function_move",
+  "s repo_path"
  ]
 }
