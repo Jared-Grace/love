@@ -6423,8 +6423,7 @@
    "js_statement_call_get",
    "messenger_reply_messages",
    "puppeteer_hrefs",
-   "roman_to_integer",
-   "app_karate_validate_style_assign"
+   "roman_to_integer"
   ],
   "exec": [
    "command_line_generic"
@@ -32552,8 +32551,7 @@
     "button_background",
     "v",
     "v2",
-    "color",
-    "v3"
+    "color"
    ]
   }
  }
