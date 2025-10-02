@@ -2524,6 +2524,7 @@
   "d",
   "repo_functions_move_if_includes_not l app_karate",
   "n repo_function_move",
-  "s repo_path"
+  "s repo_path",
+  "repo_functions_path love"
  ]
 }
