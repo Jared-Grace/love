@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -8,6 +9,10 @@ export async function functions_transform(lambda) {
     return output;
   }
   let mapped = list_map(await functions_names(), lambda2);
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda3(item) {},
+  );
   let v = await list_wait(mapped);
   return v;
 }
