@@ -1168,7 +1168,8 @@
   ],
   "html_value_get": [
    "app_karate_email",
-   "html_value_get"
+   "html_value_get",
+   "app_karate_computer_save"
   ],
   "string_trim": [
    "app_karate_email",
@@ -1269,7 +1270,8 @@
    "string_suffix_change",
    "string_to",
    "html_input_type",
-   "html_input_email"
+   "html_input_email",
+   "app_karate_computer_save"
   ],
   "div_checks": [
    "app_karate_email"
@@ -4217,7 +4219,8 @@
   ],
   "value2": [
    "app_replace_font_size",
-   "error_attention_set"
+   "error_attention_set",
+   "app_karate_computer_save"
   ],
   "storage_local_set_context": [
    "app_replace_font_size_adjust",
@@ -32337,6 +32340,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "html_value_get",
     "list_map",
     "html_on_input",
     "html_attribute_set",
@@ -32369,6 +32373,8 @@
     "radio_group_name",
     "radio",
     "lambda3",
+    "value2",
+    "input",
     "transform",
     "margin",
     "s",
