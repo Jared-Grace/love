@@ -2593,6 +2593,7 @@
   "s enable",
   "u ope",
   "u ope object_property_exists",
-  "o u"
+  "o u",
+  "a ope object_property_exists"
  ]
 }
