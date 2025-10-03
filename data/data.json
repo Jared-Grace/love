@@ -1167,8 +1167,7 @@
    "app_replace_font_size_adjust",
    "app_replace_home",
    "app_screen_set",
-   "storage_local_set_context",
-   "app_karate_email"
+   "storage_local_set_context"
   ],
   "html_rgba_to_rgb": [
    "app_karate_computer_save",
@@ -2368,8 +2367,7 @@
    "app_karate_main",
    "app_replace_font_size",
    "app_replace_rule_set",
-   "storage_local_initialize_context",
-   "app_karate_email"
+   "storage_local_initialize_context"
   ],
   "html_document_root": [
    "app_karate_main",
@@ -4530,8 +4528,7 @@
   "after": [
    "app_replace_rule_set",
    "function_alias_rename",
-   "js_dollar_a_generic",
-   "app_karate_email"
+   "js_dollar_a_generic"
   ],
   "nn": [
    "app_replace_rule_set",
@@ -15780,6 +15777,9 @@
   "html_focus": [
    "html_focus",
    "app_karate_email"
+  ],
+  "storage_local_transform_context": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -16010,8 +16010,7 @@
   "app_karate_email": {
    "async": true,
    "identifiers": [
-    "storage_local_initialize_context",
-    "storage_local_set_context",
+    "storage_local_transform_context",
     "app_screen_set",
     "app_karate_button_next",
     "html_focus",
@@ -16058,9 +16057,8 @@
     "lambda3",
     "key",
     "value_initial",
-    "before",
-    "after",
     "transform",
+    "before",
     "button_next",
     "validate",
     "value",
