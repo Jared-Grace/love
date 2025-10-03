@@ -36,7 +36,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let { root } = context;
   html_button_screen(root, emoji_home() + "Home", context, "home");
-  let index = storage_local_get_context(context, "rule_set_index");
+  let index = await storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
   let { name } = item;
