@@ -2581,6 +2581,7 @@
   "s move",
   "as repo,move",
   "km",
-  "s dependencies"
+  "s dependencies",
+  "c function_dependencies function_dependency_path"
  ]
 }
