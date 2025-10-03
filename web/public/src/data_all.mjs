@@ -5,6 +5,7 @@ import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
+import { data_path } from "./data_path.mjs";
 export async function data_all(file_path) {
   marker("1");
   let exists = await file_exists(file_path);
@@ -18,6 +19,7 @@ export async function data_all(file_path) {
     file_path,
   };
   return v;
-  if (equal(left, right)) {
+  let right = data_path();
+  if (equal(file_path, right)) {
   }
 }
