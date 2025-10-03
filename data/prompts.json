@@ -2412,7 +2412,6 @@
   "s next",
   "u hst",
   "c html_span_text html_em_text",
-  "s karate",
   "n string_includes_lambda",
   "a sin string_includes",
   "s reg",
@@ -2577,6 +2576,7 @@
   "s global",
   "p",
   "is test",
-  "s enabled"
+  "s enabled",
+  "s karate"
  ]
 }
