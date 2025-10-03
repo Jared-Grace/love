@@ -2598,6 +2598,7 @@
   "as slice",
   "as take",
   "a lt list_take",
-  "s prefix"
+  "s prefix",
+  "s function,name"
  ]
 }
