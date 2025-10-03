@@ -2204,7 +2204,6 @@
   "is data_functions_get",
   "function_name_unalias sleep",
   "functions_names_includes sleep",
-  "s data,update",
   "is data_file_update",
   "s overwrite",
   "fd watch",
@@ -2614,6 +2613,7 @@
   "s back",
   "s flow",
   "o app_karate_flow_sign_up_back_button",
-  "msa settings"
+  "msa settings",
+  "s data,update"
  ]
 }
