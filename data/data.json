@@ -10057,7 +10057,8 @@
    "function_aliases_restore"
   ],
   "st": [
-   "function_aliases_restore"
+   "function_aliases_restore",
+   "app_karate_email"
   ],
   "ntn": [
    "function_aliases_restore"
@@ -16068,6 +16069,7 @@
     "transform",
     "value",
     "user",
+    "st",
     "button_next",
     "validate",
     "trimmed",
