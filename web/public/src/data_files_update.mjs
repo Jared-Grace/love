@@ -5,6 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { data_save } from "../../../love/public/src/data_save.mjs";
 import { data_all } from "../../../love/public/src/data_all.mjs";
 export async function data_files_update() {
+  removeEventListener;
   marker("1");
   let d_path = data_path();
   var d = await data_all(d_path);
