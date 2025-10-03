@@ -15790,6 +15790,9 @@
   "storage_local_transform_context": [
    "app_karate_email",
    "storage_local_transform_context"
+  ],
+  "storage_local_disable": [
+   "storage_local_disable"
   ]
  },
  "functions": {
@@ -32879,6 +32882,12 @@
     "value_initial",
     "transform",
     "value"
+   ]
+  },
+  "storage_local_disable": {
+   "async": false,
+   "identifiers": [
+    "storage_local_disable"
    ]
   }
  }
