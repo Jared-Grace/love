@@ -1748,7 +1748,6 @@
   "cs each_index async",
   "ebible_verses_upload lug",
   "s inte",
-  "s find",
   "s urdu",
   "s map",
   "u lw",
@@ -2594,6 +2593,7 @@
   "u ope object_property_exists",
   "o u",
   "p",
-  "a ope object_property_exists"
+  "a ope object_property_exists",
+  "s find"
  ]
 }
