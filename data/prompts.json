@@ -2521,7 +2521,6 @@
   "s function_is",
   "n function_is",
   "s app_screen_set_lambda",
-  "s back",
   "is app_karate_button_screen_uncolored",
   "s reply",
   "au app_reply_main",
@@ -2612,6 +2611,7 @@
   "fws rr last",
   "s parts",
   "a rrl function_rename_replace_last",
-  "rrl app_karate_flow_sign_up_previous back"
+  "rrl app_karate_flow_sign_up_previous back",
+  "s back"
  ]
 }
