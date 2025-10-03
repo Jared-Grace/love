@@ -729,7 +729,8 @@
    "watch",
    "whitespace_normalize",
    "html_checked_get",
-   "js_if_blockify_generic"
+   "js_if_blockify_generic",
+   "storage_local_disable"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -32887,6 +32888,7 @@
   "storage_local_disable": {
    "async": false,
    "identifiers": [
+    "marker",
     "storage_local_disable"
    ]
   }
