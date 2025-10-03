@@ -1,3 +1,4 @@
+import { global_function_property } from "../../../love/public/src/global_function_property.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -21,5 +22,10 @@ export async function data_all(file_path) {
   return v;
   let right = data_path();
   if (equal(file_path, right)) {
+    let value = await global_function_property(
+      fn,
+      property_name,
+      async function lambda2() {},
+    );
   }
 }
