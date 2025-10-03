@@ -1,4 +1,4 @@
-import { data_generate } from "../../../karate_code/public/src/data_generate.mjs";
+import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { object_properties_delete } from "../../../love/public/src/object_properties_delete.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
