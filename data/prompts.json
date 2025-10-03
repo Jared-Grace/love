@@ -2041,7 +2041,6 @@
   "o data_property_get",
   "fs data_get",
   "pn d_path d_path",
-  "s combine",
   "s count",
   "fd git_repo_clone",
   "nd aa",
@@ -2600,6 +2599,7 @@
   "s function,name",
   "s without",
   "s prefix",
-  "s separator"
+  "s separator",
+  "s combine"
  ]
 }
