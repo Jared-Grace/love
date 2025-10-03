@@ -2612,7 +2612,6 @@
   "s3",
   "msa test",
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
-  "p",
   "s catch",
   "ps",
   "de app_karate_settings_computer_save",
@@ -2627,6 +2626,7 @@
   "as rename",
   "as rr",
   "o o",
+  "p",
   "np"
  ]
 }
