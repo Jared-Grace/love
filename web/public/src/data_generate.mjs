@@ -11,6 +11,5 @@ export async function data_generate(data) {
     data_file_update_inner(parsed, data);
   }
   each(parseds, lambda);
-  return;
   log("data_generate");
 }
