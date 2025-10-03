@@ -2568,13 +2568,13 @@
   "n storage_local_enabled",
   "c global_function_property global_function_property_get",
   "cs global_function_property set",
-  "s global",
   "np",
   "s await",
   "d",
   "s data_file_update_inner",
   "is data_file_update_inner",
   "s au",
-  "s data_get"
+  "s data_get",
+  "s global"
  ]
 }
