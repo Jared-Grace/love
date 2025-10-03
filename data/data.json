@@ -15842,7 +15842,8 @@
    "app_karate_computer_save"
   ],
   "storage_local_enabled": [
-   "storage_local_enabled"
+   "storage_local_enabled",
+   "storage_local_get"
   ],
   "enabled": [
    "storage_local_enabled"
@@ -31766,6 +31767,7 @@
   "storage_local_get": {
    "async": false,
    "identifiers": [
+    "storage_local_enabled",
     "storage_local_specify_get",
     "marker",
     "storage_local_key_get",
