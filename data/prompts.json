@@ -2566,6 +2566,7 @@
   "s storage,local",
   "s initialize",
   "n storage_local_disable",
-  "s global"
+  "s global",
+  "c global_function_initialize global_function_exists"
  ]
 }
