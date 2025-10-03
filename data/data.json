@@ -392,8 +392,7 @@
    "app_karate_home",
    "html_input",
    "app_reply_main",
-   "app_karate_button_next",
-   "app_karate_email"
+   "app_karate_button_next"
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
@@ -1847,8 +1846,7 @@
    "sandbox"
   ],
   "container2": [
-   "app_karate_computer_save",
-   "app_karate_email"
+   "app_karate_computer_save"
   ],
   "selected": [
    "app_karate_computer_save",
@@ -2498,7 +2496,8 @@
    "app_screen_set_lambda",
    "app_replace_home",
    "app_screen_set",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_email"
   ],
   "l": [
    "app_screen_set_lambda",
@@ -15769,7 +15768,6 @@
    "app_karate_email"
   ],
   "app_karate_button_next_screen": [
-   "app_karate_email",
    "app_karate_button_next_screen"
   ],
   "html_focus": [
@@ -16005,9 +16003,9 @@
   "app_karate_email": {
    "async": true,
    "identifiers": [
+    "app_screen_set",
     "app_karate_button_next",
     "html_focus",
-    "app_karate_button_next_screen",
     "app_karate_button_back",
     "app_karate_validate_style_assign",
     "html_input_email",
@@ -16048,10 +16046,8 @@
     "input",
     "div_checks",
     "ul",
-    "button_next",
     "lambda3",
-    "component2",
-    "container2",
+    "button_next",
     "validate",
     "value",
     "trimmed",
