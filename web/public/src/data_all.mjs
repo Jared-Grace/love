@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -31,4 +32,5 @@ export async function data_all(file_path) {
     file_path,
   };
   return v;
+  log(message);
 }
