@@ -1109,7 +1109,6 @@
   "r marker_delete_above marker_above_delete",
   "n function_alias_rename",
   "function_alias_rename",
-  "u ope",
   "de object_property_exists_not",
   "s data_tr",
   "c function_alias_rename function_aliases_restor",
@@ -2592,6 +2591,7 @@
   "s global",
   "c global_function_property_get global_function_property_exists",
   "s disable",
-  "s enable"
+  "s enable",
+  "u ope"
  ]
 }
