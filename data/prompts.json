@@ -2599,6 +2599,7 @@
   "a lt list_take",
   "s function,name",
   "s without",
-  "s prefix"
+  "s prefix",
+  "s separator"
  ]
 }
