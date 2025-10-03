@@ -732,7 +732,8 @@
    "js_if_blockify_generic",
    "storage_local_disable",
    "global_function_exists",
-   "global_function_set"
+   "global_function_set",
+   "storage_local_enable"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -1670,7 +1671,8 @@
    "storage_local_transform_context",
    "global_function_initialize",
    "storage_local_disable",
-   "global_function_set"
+   "global_function_set",
+   "storage_local_enable"
   ],
   "title": [
    "app_karate_computer_save"
@@ -2991,7 +2993,8 @@
    "app_reply_main",
    "global_function_initialize",
    "global_function_property",
-   "storage_local_disable"
+   "storage_local_disable",
+   "storage_local_enable"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -15829,6 +15832,9 @@
   ],
   "global_function_set": [
    "global_function_set"
+  ],
+  "storage_local_enable": [
+   "storage_local_enable"
   ]
  },
  "functions": {
@@ -32960,6 +32966,15 @@
     "value",
     "global",
     "name"
+   ]
+  },
+  "storage_local_enable": {
+   "async": false,
+   "identifiers": [
+    "global_function_initialize",
+    "marker",
+    "storage_local_enable",
+    "value"
    ]
   }
  }
