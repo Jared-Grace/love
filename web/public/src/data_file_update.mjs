@@ -5,10 +5,12 @@ import { data_all } from "../../../love/public/src/data_all.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function data_file_update(f_path) {
+  if (false) {
+  }
   let d_path = data_path();
   var d = await data_all(d_path);
   let parsed = await file_js_parse(f_path);
-   data_file_update_inner(parsed, d);
+  data_file_update_inner(parsed, d);
   await data_save(d);
   marker("1");
 }
