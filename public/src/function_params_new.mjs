@@ -1,3 +1,4 @@
+import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
@@ -25,6 +26,7 @@ export async function function_params_new(
   }
   let values_default = string_split(values_default_comma, ",");
   let f_name_current = await function_current_get();
+  list_intersect_empty_is_assert(include, exclude);
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
