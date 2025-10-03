@@ -1618,7 +1618,6 @@
   "c list_filter_starts_with list_filter_starts_with_not",
   "cs list_filter_starts_with_not multiple",
   "s http",
-  "s prefix",
   "as uni",
   "as unique",
   "s unique",
@@ -2598,6 +2597,7 @@
   "a lfd list_find",
   "as slice",
   "as take",
-  "a lt list_take"
+  "a lt list_take",
+  "s prefix"
  ]
 }
