@@ -2584,6 +2584,7 @@
   "s dependencies",
   "c function_dependencies function_dependency_path",
   "s less_t",
-  "n less_than_by"
+  "n less_than_by",
+  "function_dependency_path function_dependency_path assert"
  ]
 }
