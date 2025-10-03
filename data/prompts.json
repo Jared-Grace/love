@@ -2577,7 +2577,6 @@
   "s karate",
   "s move",
   "as repo,move",
-  "km",
   "s dependencies",
   "c function_dependencies function_dependency_path",
   "s less_t",
@@ -2589,6 +2588,7 @@
   "c js_parse js_parse_async",
   "ps",
   "p",
-  "fdp app_karate js_parse"
+  "fdp app_karate js_parse",
+  "km"
  ]
 }
