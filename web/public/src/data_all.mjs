@@ -14,17 +14,17 @@ export async function data_all(file_path) {
     let contents = json_format_to({});
     await file_write(file_path, contents);
   }
-  let data = await file_read_json(file_path);
+  let data = null;data=await file_read_json(file_path);
   let v = {
     data,
     file_path,
   };
   return v;
-  let right = data_path();
-  if (equal(file_path, right)) {
+  let d_path = data_path();
+  if (equal(file_path, d_path)) {
     let value = await global_function_property(
-      fn,
-      property_name,
+      data_all,
+      d_path,
       async function lambda2() {},
     );
   }
