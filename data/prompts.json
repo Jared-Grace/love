@@ -2422,7 +2422,6 @@
   "s element,get",
   "s firebase",
   "command_line dir",
-  "s3",
   "firebase_deploy",
   "as firebase_deploy",
   "s body",
@@ -2616,6 +2615,7 @@
   "de app_karate_settings",
   "msa settings",
   "o s3",
-  "ps"
+  "ps",
+  "s3"
  ]
 }
