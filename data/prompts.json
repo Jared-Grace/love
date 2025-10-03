@@ -2630,6 +2630,7 @@
   "s flow",
   "s invoke",
   "s storage,set",
-  "fs app_karate_computer_save_generic"
+  "fs app_karate_computer_save_generic",
+  "pn button_next app_karate_button_next"
  ]
 }
