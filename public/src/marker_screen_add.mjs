@@ -39,11 +39,11 @@ export async function marker_screen_add(screen_name) {
     }
     let output = await function_transform(combined_screen, lambda2);
   }
-  let v2 = await function_transform_marker_specified(
+  let result = await function_transform_marker_specified(
     combined,
     "screens",
     lambda,
   );
   marker("1");
-  return v2;
+  return result;
 }
