@@ -7183,16 +7183,6 @@
    "function_run_prompt",
    "marker_current_set"
   ],
-  "log": [
-   "data_all",
-   "js_await_add_inner",
-   "js_dollar_g",
-   "js_log_remove",
-   "log",
-   "log_keep",
-   "messenger_reply_playwright",
-   "repos_paths_names_map_unordered_combine"
-  ],
   "data_all": [
    "data_all",
    "data_files_update",
@@ -12857,6 +12847,15 @@
    "js_call_fill",
    "js_function_last_asyncify"
   ],
+  "log": [
+   "js_await_add_inner",
+   "js_dollar_g",
+   "js_log_remove",
+   "log",
+   "log_keep",
+   "messenger_reply_playwright",
+   "repos_paths_names_map_unordered_combine"
+  ],
   "js_visit_type_each_async": [
    "js_await_add_inner",
    "js_call_fill",
@@ -17834,7 +17833,6 @@
     "file_read_json",
     "json_format_to",
     "data_path",
-    "log",
     "data_all",
     "file_path",
     "data",
