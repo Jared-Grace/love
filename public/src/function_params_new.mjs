@@ -1,3 +1,4 @@
+import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
@@ -22,11 +23,12 @@ export async function function_params_new(
   let param_names = string_split(param_names_comma, ",");
   await function_transform_current(lambda1);
   function lambda1(ast) {
+    let names = js_identifiers_names(ast2);
+    list_intersect_empty_is_assert(include, exclude);
     js_declaration_single_params_add(ast, param_names);
   }
   let values_default = string_split(values_default_comma, ",");
   let f_name_current = await function_current_get();
-  list_intersect_empty_is_assert(include, exclude);
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
