@@ -2591,6 +2591,7 @@
   "km",
   "o storage_local_get",
   "o global_function_property_get",
-  "s global"
+  "s global",
+  "c global_function_property_get global_function_property_exists"
  ]
 }
