@@ -3986,7 +3986,8 @@
    "js_identifier_defineds",
    "messenger_reply",
    "messenger_reply_messages",
-   "promise_wrap"
+   "promise_wrap",
+   "app_karate_computer_save"
   ],
   "rule_sets": [
    "app_replace_home",
@@ -6895,7 +6896,8 @@
    "messenger_reply_messages_urls_get",
    "messenger_reply_messages_urls_transform",
    "messenger_reply_playwright",
-   "object_properties_delete"
+   "object_properties_delete",
+   "app_karate_computer_save"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -15981,6 +15983,8 @@
     "checkeds",
     "only",
     "value2",
+    "lambda4",
+    "data",
     "valid",
     "containers"
    ]
