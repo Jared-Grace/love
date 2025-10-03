@@ -15867,7 +15867,8 @@
    "storage_local_enabled"
   ],
   "global_function_property_get": [
-   "global_function_property_get"
+   "global_function_property_get",
+   "storage_local_get"
   ],
   "global_function_property_set": [
    "global_function_property_set"
@@ -31796,7 +31797,8 @@
     "app_fn",
     "key",
     "storage_local_key",
-    "result"
+    "result",
+    "global_function_property_get"
    ]
   },
   "storage_local_get_context": {
