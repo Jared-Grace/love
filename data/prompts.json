@@ -2426,7 +2426,6 @@
   "c html_on_change html_on_input",
   "rs app_karate_container centered",
   "s font",
-  "s enable",
   "s focus",
   "s element,get",
   "s firebase",
@@ -2592,6 +2591,7 @@
   "o global_function_property_get",
   "s global",
   "c global_function_property_get global_function_property_exists",
-  "s disable"
+  "s disable",
+  "s enable"
  ]
 }
