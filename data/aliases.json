@@ -217,6 +217,7 @@
   "ope": "object_property_exists",
   "lfd": "list_find",
   "lt": "list_take",
-  "rr": "function_rename_replace"
+  "rr": "function_rename_replace",
+  "rrl": "function_rename_replace_last"
  }
 }
