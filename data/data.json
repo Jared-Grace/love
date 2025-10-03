@@ -1668,7 +1668,8 @@
    "watch",
    "storage_local_transform_context",
    "global_function_initialize",
-   "storage_local_disable"
+   "storage_local_disable",
+   "global_function_set"
   ],
   "title": [
    "app_karate_computer_save"
@@ -2677,7 +2678,8 @@
    "string_empty_not_is",
    "task_new",
    "watch",
-   "global_function_exists"
+   "global_function_exists",
+   "global_function_set"
   ],
   "firebase_promote_function": [
    "firebase_promote_function_app_karate_main",
@@ -5988,7 +5990,8 @@
    "reply",
    "reply_on_match",
    "reply_sequence",
-   "global_function_exists"
+   "global_function_exists",
+   "global_function_set"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -7250,7 +7253,8 @@
    "messenger_reply_messages_urls_get",
    "object_invert",
    "object_property_initialize",
-   "app_karate_email"
+   "app_karate_email",
+   "global_function_set"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -11791,7 +11795,8 @@
    "global_function_initialize",
    "global_function_property_async",
    "global_get",
-   "global_function_exists"
+   "global_function_exists",
+   "global_function_set"
   ],
   "global": [
    "global_function_async",
@@ -11799,7 +11804,8 @@
    "global_function_initialize",
    "global_function_property_async",
    "global_get",
-   "global_function_exists"
+   "global_function_exists",
+   "global_function_set"
   ],
   "awaited": [
    "global_function_async",
@@ -11810,7 +11816,8 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "global_function_set"
   ],
   "fn_object": [
    "global_function_property",
@@ -15819,6 +15826,9 @@
   ],
   "on_next": [
    "app_karate_computer_save"
+  ],
+  "global_function_set": [
+   "global_function_set"
   ]
  },
  "functions": {
@@ -32936,6 +32946,19 @@
     "fn",
     "global",
     "exists",
+    "name"
+   ]
+  },
+  "global_function_set": {
+   "async": false,
+   "identifiers": [
+    "object_property_initialize",
+    "global_get",
+    "global_function_set",
+    "fn",
+    "initial",
+    "global",
+    "value",
     "name"
    ]
   }
