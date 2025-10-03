@@ -844,7 +844,6 @@
   "a mdc marker_down_choices",
   "dts 1",
   "dtg",
-  "o o",
   "oe o",
   "o p",
   "c marker_down_choices function_transform_marker_empty",
@@ -1807,7 +1806,6 @@
   "s new",
   "fw ebv ebible_verse",
   "o ebible_verse",
-  "as rename",
   "rs ebible_verse new",
   "fw ev ebible_verse",
   "s upper",
@@ -2546,7 +2544,6 @@
   "n storage_local_enabled",
   "c global_function_property global_function_property_get",
   "cs global_function_property set",
-  "np",
   "s await",
   "d",
   "s data_file_update_inner",
@@ -2623,6 +2620,13 @@
   "s button",
   "s emoji",
   "s uncolor",
-  "s uncol"
+  "s uncol",
+  "rr app_karate_button_screen_uncolored _screen_ __",
+  "o rr",
+  "a rename",
+  "as rename",
+  "as rr",
+  "o o",
+  "np"
  ]
 }
