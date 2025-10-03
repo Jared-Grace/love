@@ -385,7 +385,8 @@
    "undefined_is",
    "urdu_allah_to_god",
    "visit_unique_async",
-   "whitespace_normalize"
+   "whitespace_normalize",
+   "storage_local_enabled"
   ],
   "component2": [
    "app_karate_button_back",
@@ -32995,7 +32996,8 @@
     "not",
     "marker",
     "storage_local_enabled",
-    "a"
+    "a",
+    "v"
    ]
   }
  }
