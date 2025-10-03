@@ -2993,8 +2993,7 @@
    "app_reply_main",
    "global_function_initialize",
    "global_function_property",
-   "storage_local_disable",
-   "storage_local_enable"
+   "storage_local_disable"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -15831,7 +15830,8 @@
    "app_karate_computer_save"
   ],
   "global_function_set": [
-   "global_function_set"
+   "global_function_set",
+   "storage_local_enable"
   ],
   "storage_local_enable": [
    "storage_local_enable"
@@ -32971,7 +32971,7 @@
   "storage_local_enable": {
    "async": false,
    "identifiers": [
-    "global_function_initialize",
+    "global_function_set",
     "marker",
     "storage_local_enable",
     "value"
