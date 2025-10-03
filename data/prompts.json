@@ -2565,6 +2565,7 @@
   "s search",
   "fpk",
   "s storage,local",
-  "s initialize"
+  "s initialize",
+  "n storage_local_disable"
  ]
 }
