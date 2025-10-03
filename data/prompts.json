@@ -2576,6 +2576,7 @@
   "s data_get",
   "s global",
   "p",
-  "is test"
+  "is test",
+  "s enabled"
  ]
 }
