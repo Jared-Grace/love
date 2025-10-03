@@ -1995,7 +1995,6 @@
   "reply",
   "mr",
   "s language",
-  "as find",
   "a lfdp list_find_property",
   "n reply_on_match",
   "rt",
@@ -2594,6 +2593,7 @@
   "p",
   "a ope object_property_exists",
   "s find",
-  "s index"
+  "s index",
+  "as find"
  ]
 }
