@@ -84,7 +84,8 @@
    "function_new_app_screen",
    "html_button_screen",
    "marker_screen_add",
-   "app_karate_button_next_screen"
+   "app_karate_button_next_screen",
+   "app_karate_email"
   ],
   "v": [
    "app_karate_button_back",
@@ -1845,7 +1846,8 @@
    "sandbox"
   ],
   "container2": [
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_email"
   ],
   "selected": [
    "app_karate_computer_save",
@@ -15771,6 +15773,12 @@
   "html_focus": [
    "html_focus",
    "app_karate_email"
+  ],
+  "button_next2": [
+   "app_karate_email"
+  ],
+  "context2": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -16044,6 +16052,10 @@
     "div_checks",
     "ul",
     "button_next",
+    "button_next2",
+    "context2",
+    "screen_name",
+    "container2",
     "validate",
     "value",
     "trimmed",
