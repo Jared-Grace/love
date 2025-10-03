@@ -2825,8 +2825,7 @@
    "js_code_or",
    "js_left_right_set",
    "js_let_add",
-   "list_map_combine",
-   "app_karate_computer_save"
+   "list_map_combine"
   ],
   "right": [
    "add",
@@ -2848,8 +2847,7 @@
    "js_let_add",
    "list_map_combine",
    "log_json",
-   "log_unparse_try",
-   "app_karate_computer_save"
+   "log_unparse_try"
   ],
   "sum": [
    "add",
@@ -15804,7 +15802,8 @@
    "storage_local_transform_context"
   ],
   "storage_local_disable": [
-   "storage_local_disable"
+   "storage_local_disable",
+   "app_karate_computer_save"
   ],
   "global_function_exists": [
    "global_function_exists"
@@ -15914,6 +15913,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "storage_local_disable",
     "equal",
     "app_karate_button_next",
     "app_screen_set",
@@ -15981,8 +15981,6 @@
     "checkeds",
     "only",
     "value2",
-    "left",
-    "right",
     "valid",
     "containers"
    ]
