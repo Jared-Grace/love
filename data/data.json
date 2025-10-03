@@ -2998,8 +2998,7 @@
    "app_main",
    "app_reply_main",
    "global_function_initialize",
-   "global_function_property",
-   "global_function_property_set"
+   "global_function_property"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -9185,7 +9184,8 @@
    "firebase_name",
    "global_function_get",
    "storage_local_enabled",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "user_repo_get": [
    "firebase_name",
@@ -11832,8 +11832,7 @@
   "initial": [
    "global_function_initialize",
    "global_function_property",
-   "global_function_property_get",
-   "global_function_property_set"
+   "global_function_property_get"
   ],
   "fn_object": [
    "global_function_property",
@@ -33045,14 +33044,13 @@
   "global_function_property_set": {
    "async": true,
    "identifiers": [
+    "global_function_get",
     "object_property_set",
     "marker",
-    "global_function_initialize",
     "global_function_property_set",
     "fn",
     "property_name",
     "value",
-    "initial",
     "fn_object"
    ]
   }
