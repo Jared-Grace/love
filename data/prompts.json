@@ -2583,8 +2583,9 @@
   "c function_dependencies function_dependency_path",
   "s less_t",
   "n less_than_by",
-  "p",
   "function_dependency_path function_dependency_path assert",
-  "s unalias"
+  "s unalias",
+  "p",
+  "function_dependency_path app_karate_code path_name"
  ]
 }
