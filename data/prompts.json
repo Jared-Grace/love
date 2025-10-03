@@ -2574,6 +2574,7 @@
   "d",
   "s data_file_update_inner",
   "is data_file_update_inner",
-  "s au"
+  "s au",
+  "s data_get"
  ]
 }
