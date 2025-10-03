@@ -2632,6 +2632,7 @@
   "pn button_next app_karate_button_next",
   "o pn",
   "s inter",
-  "s js,ide"
+  "s js,ide",
+  "s save"
  ]
 }
