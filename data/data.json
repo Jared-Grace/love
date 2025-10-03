@@ -15836,6 +15836,9 @@
   "storage_local_enable": [
    "storage_local_enable",
    "app_karate_computer_save"
+  ],
+  "storage_local_enabled": [
+   "storage_local_enabled"
   ]
  },
  "functions": {
@@ -32977,6 +32980,12 @@
     "global_function_set",
     "marker",
     "storage_local_enable"
+   ]
+  },
+  "storage_local_enabled": {
+   "async": false,
+   "identifiers": [
+    "storage_local_enabled"
    ]
   }
  }
