@@ -662,7 +662,6 @@
   "s fil",
   "lmp",
   "a lmp list_map_property",
-  "s unalias",
   "fst function_alias_add_generic unalias_from_acronyms",
   "a fst function_current_set_task_new",
   "n function_name_to_acronym",
@@ -2585,6 +2584,7 @@
   "s less_t",
   "n less_than_by",
   "p",
-  "function_dependency_path function_dependency_path assert"
+  "function_dependency_path function_dependency_path assert",
+  "s unalias"
  ]
 }
