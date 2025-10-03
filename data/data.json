@@ -2985,7 +2985,8 @@
    "app_main",
    "app_reply_main",
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "storage_local_disable"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -5984,7 +5985,8 @@
    "reply",
    "reply_on_match",
    "reply_sequence",
-   "global_function_exists"
+   "global_function_exists",
+   "storage_local_disable"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -11805,12 +11807,14 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "storage_local_disable"
   ],
   "fn_object": [
    "global_function_initialize",
    "global_function_property",
-   "global_function_property_async"
+   "global_function_property_async",
+   "storage_local_disable"
   ],
   "global_function_property": [
    "global_function_property"
@@ -32898,8 +32902,12 @@
   "storage_local_disable": {
    "async": false,
    "identifiers": [
+    "global_function_initialize",
     "marker",
-    "storage_local_disable"
+    "storage_local_disable",
+    "fn_object",
+    "fn",
+    "initial"
    ]
   },
   "global_function_exists": {
