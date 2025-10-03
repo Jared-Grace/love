@@ -11,17 +11,6 @@ import { data_path } from "./data_path.mjs";
 export async function data_all(file_path) {
   marker("1");
   let data = {};
-  let exists = await file_exists(file_path);
-  if (not(exists)) {
-    let contents = json_format_to({});
-    await file_write(file_path, contents);
-  }
-  data = await file_read_json(file_path);
-  let v = {
-    data,
-    file_path,
-  };
-  return v;
   let d_path = data_path();
   if (equal(file_path, d_path)) {
     async function lambda2() {
@@ -29,5 +18,17 @@ export async function data_all(file_path) {
       return data;
     }
     data = await global_function_property_async(data_all, d_path, lambda2);
+  } else {
+    let exists = await file_exists(file_path);
+    if (not(exists)) {
+      let contents = json_format_to({});
+      await file_write(file_path, contents);
+    }
+    data = await file_read_json(file_path);
   }
+  let v = {
+    data,
+    file_path,
+  };
+  return v;
 }
