@@ -2572,6 +2572,7 @@
   "s disable",
   "n storage_local_enabled",
   "s global",
-  "c global_function_property global_function_property_get"
+  "c global_function_property global_function_property_get",
+  "cs global_function_property set"
  ]
 }
