@@ -23,8 +23,8 @@ export async function function_params_new(
   let param_names = string_split(param_names_comma, ",");
   await function_transform_current(lambda1);
   function lambda1(ast) {
-    let names = js_identifiers_names(ast2);
-    list_intersect_empty_is_assert(include, exclude);
+    let names = js_identifiers_names(ast);
+    list_intersect_empty_is_assert(names, param_names);
     js_declaration_single_params_add(ast, param_names);
   }
   let values_default = string_split(values_default_comma, ",");
