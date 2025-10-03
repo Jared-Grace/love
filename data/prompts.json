@@ -2594,6 +2594,7 @@
   "a ope object_property_exists",
   "s find",
   "s index",
-  "as find"
+  "as find",
+  "a lfd list_find"
  ]
 }
