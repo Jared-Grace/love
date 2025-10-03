@@ -2782,7 +2782,8 @@
    "watch",
    "app_karate_email",
    "app_karate_computer_save",
-   "global_function_set"
+   "global_function_set",
+   "global_function_property_set"
   ],
   "html_input": [
    "html_input",
@@ -11802,8 +11803,7 @@
   "object_property_lambda": [
    "global_function_async",
    "global_function_property",
-   "object_property_lambda",
-   "global_function_property_set"
+   "object_property_lambda"
   ],
   "global_get": [
    "global_function_async",
@@ -33046,9 +33046,9 @@
   "global_function_property_set": {
    "async": true,
    "identifiers": [
+    "object_property_set",
     "marker",
     "global_function_initialize",
-    "object_property_lambda",
     "global_function_property_set",
     "fn",
     "property_name",
