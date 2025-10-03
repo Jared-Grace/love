@@ -2606,6 +2606,7 @@
   "rs app_karate_button_back screen",
   "fws r replace",
   "s repalce",
-  "s repl"
+  "s repl",
+  "a rr function_rename_replace"
  ]
 }
