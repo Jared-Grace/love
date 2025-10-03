@@ -2448,7 +2448,6 @@
   "ff app_karate_main",
   "fws firebase_deploy_function app_karate_main",
   "functions_names",
-  "o u",
   "a fk firebase_deploy_function_app_karate_main",
   "s download",
   "n firebase_promote_function",
@@ -2593,6 +2592,7 @@
   "s disable",
   "s enable",
   "u ope",
-  "u ope object_property_exists"
+  "u ope object_property_exists",
+  "o u"
  ]
 }
