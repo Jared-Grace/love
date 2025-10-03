@@ -2560,7 +2560,6 @@
   "c global_function_initialize global_function_exists",
   "c global_function_initialize global_function_set",
   "c storage_local_disable storage_local_enable",
-  "s disable",
   "n storage_local_enabled",
   "c global_function_property global_function_property_get",
   "cs global_function_property set",
@@ -2592,6 +2591,7 @@
   "o storage_local_get",
   "o global_function_property_get",
   "s global",
-  "c global_function_property_get global_function_property_exists"
+  "c global_function_property_get global_function_property_exists",
+  "s disable"
  ]
 }
