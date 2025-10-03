@@ -1062,8 +1062,7 @@
    "visit_unique_async",
    "watch",
    "list_filter",
-   "app_karate_button_next",
-   "global_function_property_get"
+   "app_karate_button_next"
   ],
   "component": [
    "app_karate_button_green",
@@ -1281,7 +1280,8 @@
    "reply_sequence",
    "repo_acronym_to_name",
    "repo_functions_move",
-   "html_checked_get"
+   "html_checked_get",
+   "global_function_property_get"
   ],
   "list_map_property": [
    "app_karate_computer_save",
@@ -11796,8 +11796,7 @@
   "object_property_lambda": [
    "global_function_async",
    "global_function_property",
-   "object_property_lambda",
-   "global_function_property_get"
+   "object_property_lambda"
   ],
   "global_get": [
    "global_function_async",
@@ -33021,13 +33020,12 @@
   "global_function_property_get": {
    "async": true,
    "identifiers": [
+    "object_property_get",
     "marker",
     "global_function_initialize",
-    "object_property_lambda",
     "global_function_property_get",
     "fn",
     "property_name",
-    "lambda",
     "initial",
     "fn_object",
     "value"
