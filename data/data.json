@@ -15806,6 +15806,12 @@
   ],
   "global_function_exists": [
    "global_function_exists"
+  ],
+  "value_public": [
+   "app_karate_computer_save"
+  ],
+  "value_trusted": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15941,6 +15947,8 @@
     "root",
     "container_main",
     "component2",
+    "value_public",
+    "value_trusted",
     "choices",
     "value",
     "title",
