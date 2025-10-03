@@ -2614,10 +2614,10 @@
   "s settings",
   "de app_karate_settings",
   "msa settings",
-  "o s3",
   "ps",
   "s3",
   "s back,screen",
-  "msa settings_computer_save"
+  "msa settings_computer_save",
+  "o s3"
  ]
 }
