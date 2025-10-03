@@ -3,5 +3,5 @@ import { global_function_set } from "../../../love/public/src/global_function_se
 import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_enable() {
   marker("1");
-  global_function_set(storage_local_enabled, false);
+  global_function_set(storage_local_enabled, true);
 }
