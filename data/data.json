@@ -2675,7 +2675,8 @@
    "string_and_empty_not_is_assert",
    "string_empty_not_is",
    "task_new",
-   "watch"
+   "watch",
+   "global_function_exists"
   ],
   "firebase_promote_function": [
    "firebase_promote_function_app_karate_main",
@@ -5981,7 +5982,8 @@
    "messenger_reply_playwright",
    "reply",
    "reply_on_match",
-   "reply_sequence"
+   "reply_sequence",
+   "global_function_exists"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -7241,7 +7243,8 @@
    "messenger_reply_messages_urls_get",
    "object_invert",
    "object_property_initialize",
-   "app_karate_email"
+   "app_karate_email",
+   "global_function_exists"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -11780,14 +11783,16 @@
    "global_function_get",
    "global_function_initialize",
    "global_function_property_async",
-   "global_get"
+   "global_get",
+   "global_function_exists"
   ],
   "global": [
    "global_function_async",
    "global_function_get",
    "global_function_initialize",
    "global_function_property_async",
-   "global_get"
+   "global_get",
+   "global_function_exists"
   ],
   "awaited": [
    "global_function_async",
@@ -11798,12 +11803,14 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "global_function_exists"
   ],
   "fn_object": [
    "global_function_initialize",
    "global_function_property",
-   "global_function_property_async"
+   "global_function_property_async",
+   "global_function_exists"
   ],
   "global_function_property": [
    "global_function_property"
@@ -15794,6 +15801,9 @@
   ],
   "storage_local_disable": [
    "storage_local_disable"
+  ],
+  "global_function_exists": [
+   "global_function_exists"
   ]
  },
  "functions": {
@@ -32890,6 +32900,19 @@
    "identifiers": [
     "marker",
     "storage_local_disable"
+   ]
+  },
+  "global_function_exists": {
+   "async": false,
+   "identifiers": [
+    "object_property_initialize",
+    "global_get",
+    "global_function_exists",
+    "fn",
+    "initial",
+    "global",
+    "fn_object",
+    "name"
    ]
   }
  }
