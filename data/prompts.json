@@ -2610,6 +2610,7 @@
   "a rr function_rename_replace",
   "s previ",
   "fws rr last",
-  "s parts"
+  "s parts",
+  "a rrl function_rename_replace_last"
  ]
 }
