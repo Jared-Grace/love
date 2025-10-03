@@ -2605,6 +2605,7 @@
   "c app_karate_flow_sign_up_next app_karate_flow_sign_up_previous",
   "rs app_karate_button_back screen",
   "fws r replace",
-  "s repalce"
+  "s repalce",
+  "s repl"
  ]
 }
