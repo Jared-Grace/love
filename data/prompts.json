@@ -2597,8 +2597,8 @@
   "as slice",
   "as take",
   "a lt list_take",
-  "s prefix",
   "s function,name",
-  "s without"
+  "s without",
+  "s prefix"
  ]
 }
