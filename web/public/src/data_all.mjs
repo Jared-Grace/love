@@ -8,7 +8,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { data_path } from "./data_path.mjs";
-import { log } from "./log.mjs";
 export async function data_all(file_path) {
   marker("1");
   let data = {};
@@ -16,7 +15,6 @@ export async function data_all(file_path) {
   if (equal(file_path, d_path)) {
     async function lambda2() {
       await data_generate(data);
-      log("here");
       return data;
     }
     data = await global_function_property_async(data_all, d_path, lambda2);
