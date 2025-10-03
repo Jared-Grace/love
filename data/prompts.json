@@ -2613,7 +2613,6 @@
   "msa test",
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
   "s catch",
-  "ps",
   "de app_karate_settings_computer_save",
   "msa settings_computer_save",
   "s button",
@@ -2627,6 +2626,7 @@
   "as rr",
   "o o",
   "p",
-  "np"
+  "np",
+  "ps"
  ]
 }
