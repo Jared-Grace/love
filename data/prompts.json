@@ -2453,7 +2453,6 @@
   "fws firebase_promote_function app_karate_main",
   "u fp",
   "a fpk firebase_promote_function_app_karate_main",
-  "s index",
   "s html,dev",
   "u hup",
   "o firebase_storage_function_run",
@@ -2594,6 +2593,7 @@
   "o u",
   "p",
   "a ope object_property_exists",
-  "s find"
+  "s find",
+  "s index"
  ]
 }
