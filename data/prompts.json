@@ -2586,9 +2586,9 @@
   "s unalias",
   "p",
   "function_dependency_path app_karate_code path_name",
-  "ps",
   "function_dependency_path app_karate path_name",
   "fdp app_karate js_parse",
-  "c js_parse js_parse_async"
+  "c js_parse js_parse_async",
+  "ps"
  ]
 }
