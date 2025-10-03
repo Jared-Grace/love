@@ -10,7 +10,7 @@ import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_n
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
-export async function data_file_update_inner(parsed, d) {
+export  function data_file_update_inner(parsed, d) {
   let { f_path } = parsed;
   let f_name = function_path_to_name(f_path);
   let { data } = d;
