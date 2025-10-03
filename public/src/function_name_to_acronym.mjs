@@ -9,10 +9,10 @@ export function function_name_to_acronym(f_name) {
   try {
     letters = list_map(parts, list_first);
   } catch (e) {
-    throw new {
+    throw {
       e,
       f_name,
-    }();
+    };
   }
   let acronym = list_join_empty(letters);
   return acronym;
