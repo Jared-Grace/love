@@ -2296,7 +2296,6 @@
   "u si",
   "a si string_is",
   "u seni",
-  "s catch",
   "s throws",
   "is folder_user_combine",
   "s json",
@@ -2621,6 +2620,7 @@
   "de app_karate_settings_computer_save",
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
   "msa settings_computer_save",
-  "p"
+  "p",
+  "s catch"
  ]
 }
