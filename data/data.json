@@ -7364,9 +7364,6 @@
    "data_files_update",
    "function_delete"
   ],
-  "removeEventListener": [
-   "data_files_update"
-  ],
   "properties": [
    "data_files_update",
    "functions_search_open",
@@ -17910,7 +17907,6 @@
     "data_save",
     "data_all",
     "data_files_update",
-    "removeEventListener",
     "d_path",
     "d",
     "data",
