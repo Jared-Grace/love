@@ -2589,6 +2589,7 @@
   "ps",
   "p",
   "fdp app_karate js_parse",
-  "km"
+  "km",
+  "o storage_local_get"
  ]
 }
