@@ -26,7 +26,8 @@ export async function data_all(file_path) {
   if (equal(file_path, d_path)) {
     async function lambda2() {
       await data_generate(data);
+      return data;
     }
-    let value = await global_function_property_async(data_all, d_path, lambda2);
+    data = await global_function_property_async(data_all, d_path, lambda2);
   }
 }
