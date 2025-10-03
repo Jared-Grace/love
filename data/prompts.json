@@ -1322,7 +1322,6 @@
   "marker_screen_add rule_set",
   "de app_replace_refresh",
   "oa replace",
-  "s invoke",
   "n lambda_value",
   "s rule_set",
   "unlias s",
@@ -2628,6 +2627,7 @@
   "np",
   "ps",
   "rr app_karate_button_screen_uncolored _screen_ _",
-  "s flow"
+  "s flow",
+  "s invoke"
  ]
 }
