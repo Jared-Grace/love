@@ -2618,9 +2618,9 @@
   "msa test",
   "de app_karate_settings_computer_save",
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
-  "msa settings_computer_save",
   "p",
   "s catch",
-  "ps"
+  "ps",
+  "msa settings_computer_save"
  ]
 }
