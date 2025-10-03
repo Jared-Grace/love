@@ -2773,7 +2773,8 @@
    "object_property_set_exists_not",
    "watch",
    "app_karate_email",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "global_function_set"
   ],
   "html_input": [
    "html_input",
@@ -7254,8 +7255,7 @@
    "messenger_reply_messages_urls_get",
    "object_invert",
    "object_property_initialize",
-   "app_karate_email",
-   "global_function_set"
+   "app_karate_email"
   ],
   "js_identifiers_names": [
    "data_file_update_inner",
@@ -11817,8 +11817,7 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property",
-   "global_function_set"
+   "global_function_property"
   ],
   "fn_object": [
    "global_function_property",
@@ -32954,13 +32953,12 @@
    "async": false,
    "identifiers": [
     "marker",
-    "object_property_initialize",
     "global_get",
+    "object_property_set",
     "global_function_set",
     "fn",
-    "initial",
-    "global",
     "value",
+    "global",
     "name"
    ]
   }
