@@ -2630,7 +2630,7 @@
   "s storage,set",
   "fs app_karate_computer_save_generic",
   "p",
-  "pn button_next app_karate_button_next",
-  "ps"
+  "ps",
+  "pn button_next app_karate_button_next"
  ]
 }
