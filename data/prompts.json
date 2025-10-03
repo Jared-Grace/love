@@ -2612,7 +2612,6 @@
   "s settings",
   "de app_karate_settings",
   "msa settings",
-  "ps",
   "s back,screen",
   "o s3",
   "s3",
@@ -2621,6 +2620,7 @@
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
   "msa settings_computer_save",
   "p",
-  "s catch"
+  "s catch",
+  "ps"
  ]
 }
