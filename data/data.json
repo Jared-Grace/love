@@ -31801,7 +31801,7 @@
    ]
   },
   "storage_local_get_context": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "storage_local_get",
     "storage_local_get_context",
