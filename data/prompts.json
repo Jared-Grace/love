@@ -2612,7 +2612,6 @@
   "de app_karate_settings_computer_save",
   "msa settings_computer_save",
   "s button",
-  "s emoji",
   "s uncolor",
   "s uncol",
   "rr app_karate_button_screen_uncolored _screen_ __",
@@ -2633,6 +2632,7 @@
   "o pn",
   "s inter",
   "s js,ide",
-  "s save"
+  "s save",
+  "s emoji"
  ]
 }
