@@ -2573,6 +2573,7 @@
   "s global",
   "np",
   "s await",
-  "d"
+  "d",
+  "s data_file_update_inner"
  ]
 }
