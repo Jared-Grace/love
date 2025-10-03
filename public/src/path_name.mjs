@@ -1,5 +1,7 @@
-import path from "path";
 export function path_name(file_path) {
-  const name = path.parse(file_path).name;
+  const parts = file_path.split(/[/\\]/);
+  const filename = parts.pop();
+  let v = filename.lastIndexOf(".");
+  const name = filename.includes(".") ? filename.slice(0, v) : filename;
   return name;
 }
