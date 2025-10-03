@@ -1668,7 +1668,8 @@
    "user_repo_set",
    "watch",
    "storage_local_transform_context",
-   "global_function_initialize"
+   "global_function_initialize",
+   "storage_local_disable"
   ],
   "title": [
    "app_karate_computer_save"
@@ -11811,8 +11812,7 @@
   ],
   "fn_object": [
    "global_function_property",
-   "global_function_property_async",
-   "storage_local_disable"
+   "global_function_property_async"
   ],
   "global_function_property": [
    "global_function_property"
@@ -32903,7 +32903,7 @@
     "global_function_initialize",
     "marker",
     "storage_local_disable",
-    "fn_object"
+    "value"
    ]
   },
   "global_function_exists": {
