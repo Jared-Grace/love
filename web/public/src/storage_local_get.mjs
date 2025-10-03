@@ -1,3 +1,4 @@
+import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { global_function_property_get } from "../../../karate_code/public/src/global_function_property_get.mjs";
 import { storage_local_enabled } from "../../../karate_code/public/src/storage_local_enabled.mjs";
 import { storage_local_specify_get } from "./storage_local_specify_get.mjs";
@@ -10,6 +11,6 @@ export function storage_local_get(app_fn, key) {
     let result = storage_local_specify_get(storage_local_key);
     return result;
   }
-  let value = global_function_property_get(fn, property_name);
+  let value = global_function_property_get(storage_local_set, property_name);
   return value;
 }
