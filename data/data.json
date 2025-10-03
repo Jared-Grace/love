@@ -84,8 +84,7 @@
    "function_new_app_screen",
    "html_button_screen",
    "marker_screen_add",
-   "app_karate_button_next_screen",
-   "app_karate_email"
+   "app_karate_button_next_screen"
   ],
   "v": [
    "app_karate_button_back",
@@ -393,7 +392,8 @@
    "app_karate_home",
    "html_input",
    "app_reply_main",
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "app_karate_email"
   ],
   "app_karate_button_background": [
    "app_karate_button_background",
@@ -1826,7 +1826,8 @@
    "visit_unique_async",
    "watch",
    "app_karate_button_next",
-   "app_karate_button_next_screen"
+   "app_karate_button_next_screen",
+   "app_karate_email"
   ],
   "r": [
    "app_karate_computer_save",
@@ -15764,7 +15765,8 @@
   "app_karate_button_next": [
    "app_karate_button_next",
    "app_karate_button_next_screen",
-   "app_karate_computer_save"
+   "app_karate_computer_save",
+   "app_karate_email"
   ],
   "app_karate_button_next_screen": [
    "app_karate_email",
@@ -15772,12 +15774,6 @@
   ],
   "html_focus": [
    "html_focus",
-   "app_karate_email"
-  ],
-  "button_next2": [
-   "app_karate_email"
-  ],
-  "context2": [
    "app_karate_email"
   ]
  },
@@ -16009,6 +16005,7 @@
   "app_karate_email": {
    "async": true,
    "identifiers": [
+    "app_karate_button_next",
     "html_focus",
     "app_karate_button_next_screen",
     "app_karate_button_back",
@@ -16052,10 +16049,9 @@
     "div_checks",
     "ul",
     "button_next",
-    "button_next2",
-    "context2",
-    "screen_name",
+    "component2",
     "container2",
+    "lambda2",
     "validate",
     "value",
     "trimmed",
