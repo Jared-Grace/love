@@ -2572,7 +2572,6 @@
   "function_dependency_path app_karate_code path_name",
   "function_dependency_path app_karate path_name",
   "c js_parse js_parse_async",
-  "ps",
   "fdp app_karate js_parse",
   "km",
   "o storage_local_get",
@@ -2616,6 +2615,7 @@
   "msa settings",
   "s data,update",
   "s settings",
-  "de app_karate_settings"
+  "de app_karate_settings",
+  "ps"
  ]
 }
