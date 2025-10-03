@@ -16213,7 +16213,7 @@
    ]
   },
   "app_karate_main": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "html_style_set",
     "storage_local_initialize_context",
@@ -16813,7 +16813,7 @@
    ]
   },
   "app_replace_main": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "app_replace_font_size_refresh",
     "html_meta_viewport",
