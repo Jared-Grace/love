@@ -21,5 +21,5 @@ export async function function_new_declaration(declaration) {
   let repo_name = await user_repo_get();
   let combined = repo_path_combine(repo_name, f_path);
   await file_write(combined, formatted);
-  await data_file_update(f_path2);
+  await data_file_update(combined);
 }
