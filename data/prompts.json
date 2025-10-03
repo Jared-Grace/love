@@ -2529,7 +2529,6 @@
   "is js_if_blockify_generic",
   "s return,add",
   "as firebase,karate",
-  "fk",
   "s search",
   "fpk",
   "s storage,local",
@@ -2633,6 +2632,7 @@
   "s inter",
   "s js,ide",
   "s save",
-  "s emoji"
+  "s emoji",
+  "fk"
  ]
 }
