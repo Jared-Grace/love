@@ -733,7 +733,8 @@
    "storage_local_disable",
    "global_function_exists",
    "global_function_set",
-   "storage_local_enable"
+   "storage_local_enable",
+   "storage_local_enabled"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -32985,6 +32986,7 @@
   "storage_local_enabled": {
    "async": false,
    "identifiers": [
+    "marker",
     "storage_local_enabled"
    ]
   }
