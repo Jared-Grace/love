@@ -9,6 +9,6 @@ export function string_prefix_without(s, prefix) {
     error();
   }
   let skipped = string_size(prefix);
-  let skipped2 = string_skip(s, skipped);
-  return skipped2;
+  let without = string_skip(s, skipped);
+  return without;
 }
