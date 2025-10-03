@@ -18,7 +18,8 @@ export function storage_local_get(app_fn, key) {
     property_name,
   );
   if (not(exists)) {
-    return null;
+    let v = null;
+    return v;
   }
   let value = global_function_property_get(storage_local_set, key);
   return value;
