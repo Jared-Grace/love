@@ -5,7 +5,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { data_path } from "./data_path.mjs";
 export async function data_save(a) {
-  data_path();
+  let d_path = data_path();
   if (equal(file_path, d_path)) {
     async function lambda2() {
       await data_generate(data);
