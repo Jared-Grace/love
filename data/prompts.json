@@ -2615,6 +2615,7 @@
   "o app_karate_flow_sign_up_back_button",
   "msa settings",
   "s data,update",
-  "s settings"
+  "s settings",
+  "de app_karate_settings"
  ]
 }
