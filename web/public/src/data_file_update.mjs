@@ -4,8 +4,10 @@ import { data_save } from "../../../love/public/src/data_save.mjs";
 import { data_all } from "../../../love/public/src/data_all.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
+import { error } from "./error.mjs";
 export async function data_file_update(f_path) {
-  if (false) {
+  if (f_path.includes("app_karate_settings")) {
+    error();
   }
   let d_path = data_path();
   var d = await data_all(d_path);
