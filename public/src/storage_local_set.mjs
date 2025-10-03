@@ -6,6 +6,7 @@ export async function storage_local_set(app_fn, key, value) {
   let storage_local_key = storage_local_key_get(app_fn, key);
   if (storage_local_enabled()) {
     storage_local_specify_set(value, storage_local_key);
+    return;
   }
   global_function_property_set(storage_local_set, property_name, value);
 }
