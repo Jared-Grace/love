@@ -2374,7 +2374,6 @@
   "is function_import",
   "is function_run",
   "s emoji_add",
-  "s emoji",
   "fws html_button s width",
   "de html_button_s",
   "s width",
@@ -2621,6 +2620,7 @@
   "ps",
   "de app_karate_settings_computer_save",
   "msa settings_computer_save",
-  "s button"
+  "s button",
+  "s emoji"
  ]
 }
