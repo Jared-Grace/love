@@ -1,15 +1,6 @@
+import { js_parse_generic } from "../../../karate_code/public/src/js_parse_generic.mjs";
 import * as acorn from "acorn";
-import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_parse(code) {
-  let ast = null;
-  try {
-    ast = acorn.parse(code, {
-      ecmaVersion: 2020,
-      sourceType: "module",
-    });
-  } catch (e) {
-    log_keep(code);
-    throw e;
-  }
-  return ast;
+  let v = js_parse_generic(code);
+  return v;
 }
