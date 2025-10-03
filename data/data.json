@@ -1,7 +1,4 @@
 {
- "terminal": false,
- "error_attention": null,
- "marker_current": "1",
  "identifiers": {
   "firebase_deploy_function_destination_production": [
    "app_karate",
@@ -806,6 +803,7 @@
    "app_karate_email",
    "app_karate_validate_style_assign",
    "app_screen_set_lambda",
+   "data_generate",
    "function_is_assert",
    "app_new_step_3_generic",
    "app_replace_home",
@@ -820,7 +818,6 @@
    "catch_only_async",
    "catch_only_run_async",
    "command_line_read",
-   "data_files_update",
    "data_file_update_inner",
    "data_function_current_restore",
    "data_set",
@@ -1120,6 +1117,7 @@
    "app_reply_main",
    "bible_verses_encouragement_generate",
    "command_line_read",
+   "data_all",
    "data_file_update_inner",
    "each_index",
    "each_index_async",
@@ -1361,6 +1359,7 @@
   "equal": [
    "app_karate_computer_save",
    "app_reply_main",
+   "data_all",
    "ebible_references_parse_lines",
    "equal",
    "equal_assert",
@@ -1610,6 +1609,7 @@
    "app_karate_computer_save",
    "app_karate_email",
    "app_karate_validate_style_assign",
+   "data_generate",
    "app_replace_rule_set",
    "app_reply_main",
    "bible_verses_encouragement_generate",
@@ -2117,6 +2117,7 @@
   ],
   "data": [
    "app_karate_computer_save",
+   "data_generate",
    "data_all",
    "data_files_update",
    "data_file_update_inner",
@@ -2731,6 +2732,79 @@
    "marker_down_choices",
    "string_includes_lambda",
    "string_regex_match_lambda"
+  ],
+  "data_file_update_inner": [
+   "data_generate",
+   "data_file_update",
+   "data_file_update_inner"
+  ],
+  "file_js_parse": [
+   "data_generate",
+   "data_file_update",
+   "file_js_parse",
+   "function_parse",
+   "function_parse_strict"
+  ],
+  "list_map_unordered_async": [
+   "data_generate",
+   "app_reply_main",
+   "ebible_references_parse_lines",
+   "functions_combine_name",
+   "functions_transform_list",
+   "function_dependencies_code",
+   "js_block_child_graph_unparse",
+   "js_call_new_code",
+   "list_map_unordered_async",
+   "list_to_dictionary_async",
+   "marker_down_choices",
+   "repos_gitignore_overwrite",
+   "repos_paths_map_unordered",
+   "repos_paths_names_map_unordered",
+   "repo_functions_move",
+   "sandbox_4_a"
+  ],
+  "functions_paths": [
+   "data_generate",
+   "functions_paths"
+  ],
+  "data_generate": [
+   "data_generate",
+   "data_all",
+   "data_files_update"
+  ],
+  "f_paths": [
+   "data_generate"
+  ],
+  "parseds": [
+   "data_generate"
+  ],
+  "parsed": [
+   "data_generate",
+   "data_file_update",
+   "data_file_update_inner",
+   "file_js_parse",
+   "file_js_unparse",
+   "file_root_exists",
+   "function_imports_fix",
+   "function_imports_missing",
+   "function_imports_missing_add",
+   "function_parse",
+   "function_parse_declaration",
+   "function_parse_declaration_inner",
+   "function_parse_strict",
+   "function_parse_strict_declaration",
+   "function_transform_result",
+   "html_parse_read",
+   "http_json",
+   "js_calls_to_each",
+   "js_call_fill",
+   "js_call_insert",
+   "js_call_new",
+   "js_dollar_f",
+   "js_dollar_g",
+   "js_visit_nodes",
+   "marker_call",
+   "marker_functionize"
   ],
   "date_hours_to_mins": [
    "date_diff_mins",
@@ -5428,24 +5502,6 @@
    "ebible_references_parse",
    "function_dependencies_code_copy"
   ],
-  "list_map_unordered_async": [
-   "app_reply_main",
-   "data_files_update",
-   "ebible_references_parse_lines",
-   "functions_combine_name",
-   "functions_transform_list",
-   "function_dependencies_code",
-   "js_block_child_graph_unparse",
-   "js_call_new_code",
-   "list_map_unordered_async",
-   "list_to_dictionary_async",
-   "marker_down_choices",
-   "repos_gitignore_overwrite",
-   "repos_paths_map_unordered",
-   "repos_paths_names_map_unordered",
-   "repo_functions_move",
-   "sandbox_4_a"
-  ],
   "en": [
    "app_reply_main",
    "file_root_exists",
@@ -5562,7 +5618,6 @@
    "app_reply_main",
    "data_files_update",
    "data_file_update",
-   "data_file_update_inner",
    "data_transform",
    "date_iso_to",
    "digits",
@@ -7083,6 +7138,10 @@
    "user_repo_path_combine",
    "user_repo_set"
   ],
+  "global_function_property_async": [
+   "data_all",
+   "global_function_property_async"
+  ],
   "file_write": [
    "data_all",
    "file_write",
@@ -7108,12 +7167,57 @@
    "json_format_to",
    "js_declaration_params_names_node"
   ],
+  "data_path": [
+   "data_all",
+   "data_backup",
+   "data_boolean_set",
+   "data_copy",
+   "data_files_update",
+   "data_file_update",
+   "data_functions_get",
+   "data_identifiers_get",
+   "data_partition",
+   "data_path",
+   "data_terminal_get",
+   "error_attention_set",
+   "function_run_prompt",
+   "marker_current_set"
+  ],
   "data_all": [
    "data_all",
    "data_files_update",
    "data_file_update",
    "data_get",
    "data_value"
+  ],
+  "d_path": [
+   "data_all",
+   "data_app_current_get",
+   "data_boolean_set",
+   "data_files_update",
+   "data_file_update",
+   "data_functions_get",
+   "data_get",
+   "data_identifiers_get",
+   "data_marker_current_get",
+   "data_prompts",
+   "data_property_get",
+   "data_set",
+   "data_terminal_get",
+   "data_transform",
+   "data_value",
+   "data_watch_get",
+   "error_attention_set",
+   "function_aliases_restore",
+   "function_alias_add_generic",
+   "function_alias_rename",
+   "function_current_get",
+   "function_current_set",
+   "function_open_app",
+   "function_run_line_parse",
+   "function_run_prompt",
+   "git_push_folder",
+   "marker_current_set"
   ],
   "null_not_is_assert": [
    "data_app_current_get",
@@ -7147,34 +7251,6 @@
    "firebase_deploy_function_app_current",
    "function_new_app_screen",
    "marker_screen_add"
-  ],
-  "d_path": [
-   "data_app_current_get",
-   "data_boolean_set",
-   "data_files_update",
-   "data_file_update",
-   "data_functions_get",
-   "data_get",
-   "data_identifiers_get",
-   "data_marker_current_get",
-   "data_prompts",
-   "data_property_get",
-   "data_set",
-   "data_terminal_get",
-   "data_transform",
-   "data_value",
-   "data_watch_get",
-   "error_attention_set",
-   "function_aliases_restore",
-   "function_alias_add_generic",
-   "function_alias_rename",
-   "function_current_get",
-   "function_current_set",
-   "function_open_app",
-   "function_run_line_parse",
-   "function_run_prompt",
-   "git_push_folder",
-   "marker_current_set"
   ],
   "path_join": [
    "data_backup",
@@ -7216,21 +7292,6 @@
    "data_backup",
    "date_now_file",
    "firebase_deploy_function"
-  ],
-  "data_path": [
-   "data_backup",
-   "data_boolean_set",
-   "data_copy",
-   "data_files_update",
-   "data_file_update",
-   "data_functions_get",
-   "data_identifiers_get",
-   "data_partition",
-   "data_path",
-   "data_terminal_get",
-   "error_attention_set",
-   "function_run_prompt",
-   "marker_current_set"
   ],
   "data_backup": [
    "data_backup"
@@ -7292,13 +7353,6 @@
    "data_files_update",
    "object_properties_delete"
   ],
-  "file_js_parse": [
-   "data_files_update",
-   "data_file_update",
-   "file_js_parse",
-   "function_parse",
-   "function_parse_strict"
-  ],
   "data_save": [
    "data_files_update",
    "data_file_update",
@@ -7306,56 +7360,9 @@
    "data_transform",
    "function_alias_generic"
   ],
-  "data_file_update_inner": [
-   "data_files_update",
-   "data_file_update",
-   "data_file_update_inner"
-  ],
-  "functions_paths": [
-   "data_files_update",
-   "functions_paths"
-  ],
-  "each_async": [
-   "data_files_update",
-   "each_async",
-   "each_index_async",
-   "each_range_async",
-   "each_range_from_async",
-   "ebible_books_to_chapter_codes",
-   "ebible_chapters_each_verses_list",
-   "ebible_versions_download",
-   "functions_combine",
-   "function_imports_add",
-   "function_params_new",
-   "function_rename_identifiers",
-   "function_transform_marker_all",
-   "function_transform_marker_specified",
-   "git_publish_initial",
-   "js_atomize",
-   "js_atomize_function",
-   "js_auto",
-   "js_calls_to_each",
-   "js_call_new_code",
-   "js_dollar",
-   "js_function_last_asyncify",
-   "js_outside_move",
-   "js_return_atomize",
-   "js_visit_each_async",
-   "js_visit_type_each_async",
-   "keyboard_type_delay",
-   "sandbox_4_a",
-   "tasks_run",
-   "visit_filter_recursive_async"
-  ],
   "data_files_update": [
    "data_files_update",
    "function_delete"
-  ],
-  "f_paths": [
-   "data_files_update"
-  ],
-  "parseds": [
-   "data_files_update"
   ],
   "properties": [
    "data_files_update",
@@ -7377,34 +7384,6 @@
    "object_properties_from",
    "reply_test",
    "tasks_run"
-  ],
-  "parsed": [
-   "data_files_update",
-   "data_file_update",
-   "data_file_update_inner",
-   "file_js_parse",
-   "file_js_unparse",
-   "file_root_exists",
-   "function_imports_fix",
-   "function_imports_missing",
-   "function_imports_missing_add",
-   "function_parse",
-   "function_parse_declaration",
-   "function_parse_declaration_inner",
-   "function_parse_strict",
-   "function_parse_strict_declaration",
-   "function_transform_result",
-   "html_parse_read",
-   "http_json",
-   "js_calls_to_each",
-   "js_call_fill",
-   "js_call_insert",
-   "js_call_new",
-   "js_dollar_f",
-   "js_dollar_g",
-   "js_visit_nodes",
-   "marker_call",
-   "marker_functionize"
   ],
   "data_file_update": [
    "data_file_update",
@@ -7822,6 +7801,37 @@
    "list_sort_number_mapper",
    "list_to_dictionary",
    "list_to_dictionary_async"
+  ],
+  "each_async": [
+   "each_async",
+   "each_index_async",
+   "each_range_async",
+   "each_range_from_async",
+   "ebible_books_to_chapter_codes",
+   "ebible_chapters_each_verses_list",
+   "ebible_versions_download",
+   "functions_combine",
+   "function_imports_add",
+   "function_params_new",
+   "function_rename_identifiers",
+   "function_transform_marker_all",
+   "function_transform_marker_specified",
+   "git_publish_initial",
+   "js_atomize",
+   "js_atomize_function",
+   "js_auto",
+   "js_calls_to_each",
+   "js_call_new_code",
+   "js_dollar",
+   "js_function_last_asyncify",
+   "js_outside_move",
+   "js_return_atomize",
+   "js_visit_each_async",
+   "js_visit_type_each_async",
+   "keyboard_type_delay",
+   "sandbox_4_a",
+   "tasks_run",
+   "visit_filter_recursive_async"
   ],
   "lambda$item$index": [
    "each_index",
@@ -11922,9 +11932,6 @@
   "object_property_lambda_async": [
    "global_function_property_async",
    "object_property_lambda_async"
-  ],
-  "global_function_property_async": [
-   "global_function_property_async"
   ],
   "setAttribute": [
    "html_attribute_set"
@@ -16357,6 +16364,22 @@
     "lambda"
    ]
   },
+  "data_generate": {
+   "async": true,
+   "identifiers": [
+    "each",
+    "data_file_update_inner",
+    "file_js_parse",
+    "list_map_unordered_async",
+    "functions_paths",
+    "data_generate",
+    "data",
+    "f_paths",
+    "parseds",
+    "lambda",
+    "parsed"
+   ]
+  },
   "date_diff_mins": {
    "async": false,
    "identifiers": [
@@ -17800,17 +17823,23 @@
   "data_all": {
    "async": true,
    "identifiers": [
+    "data_generate",
+    "global_function_property_async",
+    "equal",
     "file_write",
     "not",
     "file_exists",
     "marker",
     "file_read_json",
     "json_format_to",
+    "data_path",
     "data_all",
     "file_path",
+    "data",
+    "d_path",
+    "lambda2",
     "exists",
     "contents",
-    "data",
     "v"
    ]
   },
@@ -17871,25 +17900,17 @@
   "data_files_update": {
    "async": true,
    "identifiers": [
+    "data_generate",
     "object_properties_delete",
     "data_path",
     "marker",
-    "file_js_parse",
-    "list_map_unordered_async",
     "data_save",
-    "data_file_update_inner",
     "data_all",
-    "functions_paths",
-    "each_async",
     "data_files_update",
     "d_path",
     "d",
     "data",
-    "f_paths",
-    "parseds",
-    "properties",
-    "lambda",
-    "parsed"
+    "properties"
    ]
   },
   "data_file_update": {
@@ -17909,7 +17930,7 @@
    ]
   },
   "data_file_update_inner": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "object_property_get",
     "js_declaration_single",
@@ -17925,10 +17946,9 @@
     "function_path_to_name",
     "data_file_update_inner",
     "parsed",
-    "d",
+    "data",
     "f_path",
     "f_name",
-    "data",
     "ast",
     "f_identifiers_new",
     "property_name",
@@ -22987,7 +23007,7 @@
    ]
   },
   "global_function_property": {
-   "async": true,
+   "async": false,
    "identifiers": [
     "global_function_initialize",
     "object_property_lambda",
