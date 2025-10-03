@@ -2571,6 +2571,7 @@
   "c storage_local_disable storage_local_enable",
   "s disable",
   "n storage_local_enabled",
-  "s global"
+  "s global",
+  "c global_function_property global_function_property_get"
  ]
 }
