@@ -11,6 +11,6 @@ export function storage_local_get(app_fn, key) {
     let result = storage_local_specify_get(storage_local_key);
     return result;
   }
-  let value = global_function_property_get(storage_local_set, property_name);
+  let value = global_function_property_get(storage_local_set, key);
   return value;
 }
