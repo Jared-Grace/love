@@ -2546,8 +2546,7 @@
    "date_diff_hours",
    "date_diff_ms",
    "function_alias_rename",
-   "git_push_folder",
-   "app_karate_email"
+   "git_push_folder"
   ],
   "hours": [
    "date_diff_mins",
@@ -7374,7 +7373,6 @@
    "object_property_initialize",
    "storage_local_initialize",
    "storage_local_initialize_context",
-   "app_karate_email",
    "storage_local_transform_context"
   ],
   "data_identifiers_get": [
@@ -16064,12 +16062,10 @@
     "ul",
     "lambda3",
     "key",
-    "value_initial",
     "transform",
-    "before",
+    "value",
     "button_next",
     "validate",
-    "value",
     "trimmed",
     "valid",
     "lambda",
