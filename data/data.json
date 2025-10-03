@@ -11831,8 +11831,7 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property",
-   "global_function_property_get"
+   "global_function_property"
   ],
   "fn_object": [
    "global_function_property",
@@ -33038,7 +33037,6 @@
     "global_function_property_get",
     "fn",
     "property_name",
-    "initial",
     "fn_object",
     "value"
    ]
