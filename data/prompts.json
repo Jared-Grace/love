@@ -2571,7 +2571,6 @@
   "is data_file_update_inner",
   "s au",
   "s data_get",
-  "s global",
   "is test",
   "s enabled",
   "s karate",
@@ -2591,6 +2590,7 @@
   "fdp app_karate js_parse",
   "km",
   "o storage_local_get",
-  "o global_function_property_get"
+  "o global_function_property_get",
+  "s global"
  ]
 }
