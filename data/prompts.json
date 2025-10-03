@@ -2575,6 +2575,7 @@
   "is data_file_update_inner",
   "s au",
   "s data_get",
-  "s global"
+  "s global",
+  "is test"
  ]
 }
