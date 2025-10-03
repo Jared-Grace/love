@@ -8,4 +8,6 @@ export function function_name_to_acronym(f_name) {
   let letters = list_map(parts, list_first);
   let acronym = list_join_empty(letters);
   return acronym;
+  let letterss = null;
+  letterss = list_map(parts, list_first);
 }
