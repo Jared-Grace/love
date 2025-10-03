@@ -6075,8 +6075,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "app_karate_computer_save"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -6132,8 +6131,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "app_karate_computer_save"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -15821,9 +15819,6 @@
   ],
   "on_next": [
    "app_karate_computer_save"
-  ],
-  "value3": [
-   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15992,9 +15987,6 @@
     "value2",
     "lambda4",
     "data",
-    "object",
-    "property_name",
-    "value3",
     "valid",
     "containers"
    ]
