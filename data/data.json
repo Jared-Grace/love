@@ -1062,7 +1062,8 @@
    "visit_unique_async",
    "watch",
    "list_filter",
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "global_function_property_set"
   ],
   "component": [
    "app_karate_button_green",
@@ -1674,7 +1675,8 @@
    "storage_local_transform_context",
    "global_function_initialize",
    "global_function_set",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "title": [
    "app_karate_computer_save"
@@ -2996,7 +2998,8 @@
    "app_reply_main",
    "global_function_initialize",
    "global_function_property",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -5999,7 +6002,8 @@
    "reply_sequence",
    "global_function_exists",
    "global_function_set",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6143,7 +6147,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "browser_is": [
    "browser_is",
@@ -11796,7 +11801,8 @@
   "object_property_lambda": [
    "global_function_async",
    "global_function_property",
-   "object_property_lambda"
+   "object_property_lambda",
+   "global_function_property_set"
   ],
   "global_get": [
    "global_function_async",
@@ -11826,12 +11832,14 @@
   "initial": [
    "global_function_initialize",
    "global_function_property",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "fn_object": [
    "global_function_property",
    "global_function_property_async",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "global_function_property": [
    "global_function_property"
@@ -15861,6 +15869,9 @@
   ],
   "global_function_property_get": [
    "global_function_property_get"
+  ],
+  "global_function_property_set": [
+   "global_function_property_set"
   ]
  },
  "functions": {
@@ -33026,6 +33037,20 @@
     "global_function_property_get",
     "fn",
     "property_name",
+    "initial",
+    "fn_object",
+    "value"
+   ]
+  },
+  "global_function_property_set": {
+   "async": true,
+   "identifiers": [
+    "global_function_initialize",
+    "object_property_lambda",
+    "global_function_property_set",
+    "fn",
+    "property_name",
+    "lambda",
     "initial",
     "fn_object",
     "value"
