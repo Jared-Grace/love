@@ -2578,6 +2578,7 @@
   "is test",
   "s enabled",
   "s karate",
-  "s move"
+  "s move",
+  "as repo,move"
  ]
 }
