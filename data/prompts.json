@@ -2540,7 +2540,6 @@
   "s reply",
   "au app_reply_main",
   "s push",
-  "d",
   "c html_checked_set html_checked_get",
   "s filter,list",
   "as single",
@@ -2573,6 +2572,7 @@
   "cs global_function_property set",
   "s global",
   "np",
-  "s await"
+  "s await",
+  "d"
  ]
 }
