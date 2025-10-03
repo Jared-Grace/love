@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export async function sandbox_3() {
-  marker("1");
+import { function_delete } from "../../../love/public/src/function_delete.mjs";
+export async function sandbox_3(f_path) {
+  await function_delete(f_name);
 }
