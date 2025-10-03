@@ -2507,7 +2507,6 @@
   "s imports,fix",
   "s repo,acr",
   "repo_functions_move_if_includes_not l app_karate",
-  "ps",
   "n repo_functions_move_if_includes_not_love_app_karate",
   "a km repo_functions_move_if_includes_not_love_app_karate",
   "msa public",
@@ -2586,6 +2585,7 @@
   "function_dependency_path function_dependency_path assert",
   "s unalias",
   "p",
-  "function_dependency_path app_karate_code path_name"
+  "function_dependency_path app_karate_code path_name",
+  "ps"
  ]
 }
