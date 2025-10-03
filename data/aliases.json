@@ -215,6 +215,7 @@
   "km": "repo_functions_move_if_includes_not_love_app_karate",
   "jcs": "js_code_string",
   "ope": "object_property_exists",
-  "lfd": "list_find"
+  "lfd": "list_find",
+  "lt": "list_take"
  }
 }
