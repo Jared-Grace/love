@@ -2574,7 +2574,6 @@
   "s au",
   "s data_get",
   "s global",
-  "p",
   "is test",
   "s enabled",
   "s karate",
@@ -2585,6 +2584,7 @@
   "c function_dependencies function_dependency_path",
   "s less_t",
   "n less_than_by",
+  "p",
   "function_dependency_path function_dependency_path assert"
  ]
 }
