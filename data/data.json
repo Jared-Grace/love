@@ -1166,7 +1166,6 @@
    "html_checked_get"
   ],
   "storage_local_set_context": [
-   "app_karate_computer_save",
    "app_replace_font_size_adjust",
    "app_replace_home",
    "app_screen_set",
@@ -15799,7 +15798,8 @@
   ],
   "storage_local_transform_context": [
    "app_karate_email",
-   "storage_local_transform_context"
+   "storage_local_transform_context",
+   "app_karate_computer_save"
   ],
   "storage_local_disable": [
    "storage_local_disable",
@@ -15913,6 +15913,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "storage_local_transform_context",
     "storage_local_disable",
     "equal",
     "app_karate_button_next",
@@ -15921,7 +15922,6 @@
     "list_single",
     "html_checked_get",
     "list_filter",
-    "storage_local_set_context",
     "app_karate_button_back",
     "html_rgba_to_rgb",
     "object_property_get",
