@@ -1916,7 +1916,6 @@
    "trinity_green"
   ],
   "lambda5": [
-   "app_karate_computer_save",
    "app_replace_rule_set",
    "app_reply_main",
    "ebible_references_parse_lines",
@@ -15812,6 +15811,9 @@
   ],
   "value_trusted": [
    "app_karate_computer_save"
+  ],
+  "on_next": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15971,7 +15973,7 @@
     "transform",
     "margin",
     "s",
-    "lambda5",
+    "on_next",
     "checkeds",
     "only",
     "value2",
