@@ -2026,7 +2026,8 @@
    "html_text_set",
    "html_value_get",
    "html_value_set",
-   "html_checked_get"
+   "html_checked_get",
+   "html_focus"
   ],
   "html_on_input": [
    "app_karate_email",
@@ -2179,7 +2180,8 @@
    "string_regex_match_lambda",
    "string_suffix_change",
    "string_to",
-   "html_checked_get"
+   "html_checked_get",
+   "html_focus"
   ],
   "div_checks": [
    "app_karate_email"
@@ -2328,12 +2330,14 @@
    "html_text_set",
    "html_value_get",
    "html_value_set",
-   "html_checked_get"
+   "html_checked_get",
+   "html_focus"
   ],
   "focus": [
    "app_karate_email",
    "messenger_reply",
-   "messenger_reply_playwright"
+   "messenger_reply_playwright",
+   "html_focus"
   ],
   "emoji_add": [
    "app_karate_home",
@@ -15766,6 +15770,9 @@
   "app_karate_button_next_screen": [
    "app_karate_email",
    "app_karate_button_next_screen"
+  ],
+  "html_focus": [
+   "html_focus"
   ]
  },
  "functions": {
@@ -32825,6 +32832,16 @@
     "container",
     "lambda2",
     "button_next"
+   ]
+  },
+  "html_focus": {
+   "async": false,
+   "identifiers": [
+    "html_component_element_get",
+    "html_focus",
+    "input",
+    "element",
+    "focus"
    ]
   }
  }
