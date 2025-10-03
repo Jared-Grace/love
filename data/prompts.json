@@ -2615,11 +2615,12 @@
   "msa settings",
   "ps",
   "s back,screen",
-  "msa settings_computer_save",
   "o s3",
-  "p",
   "s3",
   "msa test",
-  "de app_karate_settings_computer_save"
+  "de app_karate_settings_computer_save",
+  "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
+  "msa settings_computer_save",
+  "p"
  ]
 }
