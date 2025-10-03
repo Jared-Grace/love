@@ -1,4 +1,4 @@
-import { date_diff_mins } from "../../../karate_code/public/src/date_diff_mins.mjs";
+import { date_diff_mins } from "../../../love/public/src/date_diff_mins.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";

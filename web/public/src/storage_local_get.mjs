@@ -1,7 +1,7 @@
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
-import { global_function_property_get } from "../../../karate_code/public/src/global_function_property_get.mjs";
-import { storage_local_enabled } from "../../../karate_code/public/src/storage_local_enabled.mjs";
-import { storage_local_specify_get } from "./storage_local_specify_get.mjs";
+import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
+import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
+import { storage_local_specify_get } from "../../../love/public/src/storage_local_specify_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
 export function storage_local_get(app_fn, key) {
