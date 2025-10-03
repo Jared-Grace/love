@@ -2604,6 +2604,7 @@
   "is storage_local_get",
   "c app_karate_flow_sign_up_next app_karate_flow_sign_up_previous",
   "rs app_karate_button_back screen",
-  "fws r replace"
+  "fws r replace",
+  "s repalce"
  ]
 }
