@@ -2623,7 +2623,6 @@
   "as rename",
   "as rr",
   "o o",
-  "p",
   "np",
   "ps",
   "rr app_karate_button_screen_uncolored _screen_ _",
@@ -2631,6 +2630,7 @@
   "s invoke",
   "s storage,set",
   "fs app_karate_computer_save_generic",
+  "p",
   "pn button_next app_karate_button_next"
  ]
 }
