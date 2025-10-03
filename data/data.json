@@ -15834,7 +15834,8 @@
    "storage_local_enable"
   ],
   "storage_local_enable": [
-   "storage_local_enable"
+   "storage_local_enable",
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15932,6 +15933,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "storage_local_enable",
     "object_property_set",
     "storage_local_transform_context",
     "storage_local_disable",
