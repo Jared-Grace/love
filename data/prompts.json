@@ -2614,8 +2614,8 @@
   "s data,update",
   "s settings",
   "de app_karate_settings",
-  "ps",
   "msa settings",
-  "o s3"
+  "o s3",
+  "ps"
  ]
 }
