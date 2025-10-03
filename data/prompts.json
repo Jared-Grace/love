@@ -2595,6 +2595,7 @@
   "s find",
   "s index",
   "as find",
-  "a lfd list_find"
+  "a lfd list_find",
+  "as slice"
  ]
 }
