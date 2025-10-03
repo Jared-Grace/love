@@ -2587,8 +2587,8 @@
   "p",
   "function_dependency_path app_karate_code path_name",
   "function_dependency_path app_karate path_name",
-  "fdp app_karate js_parse",
   "c js_parse js_parse_async",
-  "ps"
+  "ps",
+  "fdp app_karate js_parse"
  ]
 }
