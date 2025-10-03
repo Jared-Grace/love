@@ -1061,7 +1061,8 @@
    "visit_unique_async",
    "watch",
    "list_filter",
-   "app_karate_button_next"
+   "app_karate_button_next",
+   "global_function_property_get"
   ],
   "component": [
    "app_karate_button_green",
@@ -1671,7 +1672,8 @@
    "watch",
    "storage_local_transform_context",
    "global_function_initialize",
-   "global_function_set"
+   "global_function_set",
+   "global_function_property_get"
   ],
   "title": [
    "app_karate_computer_save"
@@ -2992,7 +2994,8 @@
    "app_main",
    "app_reply_main",
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "global_function_property_get"
   ],
   "firebase_storage_function_run": [
    "app_main",
@@ -5994,7 +5997,8 @@
    "reply_on_match",
    "reply_sequence",
    "global_function_exists",
-   "global_function_set"
+   "global_function_set",
+   "global_function_property_get"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6137,7 +6141,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "global_function_property_get"
   ],
   "browser_is": [
    "browser_is",
@@ -11790,7 +11795,8 @@
   "object_property_lambda": [
    "global_function_async",
    "global_function_property",
-   "object_property_lambda"
+   "object_property_lambda",
+   "global_function_property_get"
   ],
   "global_get": [
    "global_function_async",
@@ -11819,11 +11825,13 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property"
+   "global_function_property",
+   "global_function_property_get"
   ],
   "fn_object": [
    "global_function_property",
-   "global_function_property_async"
+   "global_function_property_async",
+   "global_function_property_get"
   ],
   "global_function_property": [
    "global_function_property"
@@ -15850,6 +15858,9 @@
   ],
   "set": [
    "storage_local_enabled"
+  ],
+  "global_function_property_get": [
+   "global_function_property_get"
   ]
  },
  "functions": {
@@ -33004,6 +33015,20 @@
     "storage_local_enabled",
     "set",
     "enabled"
+   ]
+  },
+  "global_function_property_get": {
+   "async": true,
+   "identifiers": [
+    "global_function_initialize",
+    "object_property_lambda",
+    "global_function_property_get",
+    "fn",
+    "property_name",
+    "lambda",
+    "initial",
+    "fn_object",
+    "value"
    ]
   }
  }
