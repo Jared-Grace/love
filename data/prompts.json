@@ -2628,6 +2628,7 @@
   "ps",
   "rr app_karate_button_screen_uncolored _screen_ _",
   "s flow",
-  "s invoke"
+  "s invoke",
+  "s storage,set"
  ]
 }
