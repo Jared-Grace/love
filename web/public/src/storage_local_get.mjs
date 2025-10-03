@@ -1,4 +1,4 @@
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../karate_code/public/src/global_function_property_exists.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
@@ -17,7 +17,8 @@ export function storage_local_get(app_fn, key) {
     storage_local_set,
     property_name,
   );
-  if (equal_not(left, right)) {
+  if (not(exists)) {
+    return null;
   }
   let value = global_function_property_get(storage_local_set, key);
   return value;
