@@ -2600,6 +2600,7 @@
   "s without",
   "s prefix",
   "s separator",
-  "s combine"
+  "s combine",
+  "is storage_local_get"
  ]
 }
