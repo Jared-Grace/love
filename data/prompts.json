@@ -2580,6 +2580,7 @@
   "s karate",
   "s move",
   "as repo,move",
-  "km"
+  "km",
+  "s dependencies"
  ]
 }
