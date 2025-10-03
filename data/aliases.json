@@ -216,6 +216,7 @@
   "jcs": "js_code_string",
   "ope": "object_property_exists",
   "lfd": "list_find",
-  "lt": "list_take"
+  "lt": "list_take",
+  "rr": "function_rename_replace"
  }
 }
