@@ -1412,7 +1412,6 @@
   "as marker_screen_add",
   "as marker",
   "a msa marker_screen_add",
-  "msa settings",
   "s app,repla",
   "s setting",
   "s rule,set",
@@ -2614,6 +2613,7 @@
   "rrl app_karate_flow_sign_up_previous back",
   "s back",
   "s flow",
-  "o app_karate_flow_sign_up_back_button"
+  "o app_karate_flow_sign_up_back_button",
+  "msa settings"
  ]
 }
