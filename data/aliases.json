@@ -214,6 +214,7 @@
   "fpk": "firebase_promote_function_app_karate_main",
   "km": "repo_functions_move_if_includes_not_love_app_karate",
   "jcs": "js_code_string",
-  "ope": "object_property_exists"
+  "ope": "object_property_exists",
+  "lfd": "list_find"
  }
 }
