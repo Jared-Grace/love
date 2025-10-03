@@ -18,6 +18,7 @@ export function storage_local_get(app_fn, key) {
     property_name,
   );
   if (not(exists)) {
+    ("localStorage has this behavior, so the in-memory version also mirrors api");
     let v = null;
     return v;
   }
