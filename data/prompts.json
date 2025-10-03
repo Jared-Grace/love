@@ -2364,7 +2364,6 @@
   "fdf app_karate_main",
   "s app,main",
   "n app_main",
-  "s global",
   "c global_function_property_async global_function_property",
   "html_new karate",
   "s code,assign",
@@ -2566,6 +2565,7 @@
   "fpk",
   "s storage,local",
   "s initialize",
-  "n storage_local_disable"
+  "n storage_local_disable",
+  "s global"
  ]
 }
