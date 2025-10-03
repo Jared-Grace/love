@@ -955,7 +955,6 @@
   "n not",
   "s js_keyword_arguments",
   "fts jbtn",
-  "s au",
   "s js_block_child_graph",
   "s atom",
   "o ",
@@ -2574,6 +2573,7 @@
   "s await",
   "d",
   "s data_file_update_inner",
-  "is data_file_update_inner"
+  "is data_file_update_inner",
+  "s au"
  ]
 }
