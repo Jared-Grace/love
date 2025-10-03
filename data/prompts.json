@@ -2619,6 +2619,7 @@
   "o s3",
   "p",
   "s3",
-  "msa test"
+  "msa test",
+  "de app_karate_settings_computer_save"
  ]
 }
