@@ -5985,8 +5985,7 @@
    "reply",
    "reply_on_match",
    "reply_sequence",
-   "global_function_exists",
-   "storage_local_disable"
+   "global_function_exists"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -11807,8 +11806,7 @@
   ],
   "initial": [
    "global_function_initialize",
-   "global_function_property",
-   "storage_local_disable"
+   "global_function_property"
   ],
   "fn_object": [
    "global_function_initialize",
@@ -32905,9 +32903,7 @@
     "global_function_initialize",
     "marker",
     "storage_local_disable",
-    "fn_object",
-    "fn",
-    "initial"
+    "fn_object"
    ]
   },
   "global_function_exists": {
