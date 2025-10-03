@@ -1055,7 +1055,8 @@
    "visit_filter_recursive_async",
    "visit_unique_async",
    "watch",
-   "list_filter"
+   "list_filter",
+   "app_karate_button_next"
   ],
   "component": [
    "app_karate_button_green",
@@ -1825,7 +1826,6 @@
    "undefined_not_is_assert",
    "visit_unique_async",
    "watch",
-   "app_karate_button_next",
    "app_karate_button_next_screen",
    "app_karate_email"
   ],
@@ -32821,7 +32821,7 @@
     "app_karate_button_green",
     "app_karate_button_next",
     "container",
-    "lambda2",
+    "lambda",
     "component2"
    ]
   },
