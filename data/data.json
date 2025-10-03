@@ -2769,7 +2769,8 @@
    "object_property_set",
    "object_property_set_exists_not",
    "watch",
-   "app_karate_email"
+   "app_karate_email",
+   "app_karate_computer_save"
   ],
   "html_input": [
    "html_input",
@@ -6074,7 +6075,8 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda"
+   "undefined_not_is_assert_lambda",
+   "app_karate_computer_save"
   ],
   "property_name": [
    "bind_property",
@@ -6130,7 +6132,8 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not"
+   "object_property_set_exists_not",
+   "app_karate_computer_save"
   ],
   "browser_is": [
    "browser_is",
@@ -15818,6 +15821,9 @@
   ],
   "on_next": [
    "app_karate_computer_save"
+  ],
+  "value3": [
+   "app_karate_computer_save"
   ]
  },
  "functions": {
@@ -15915,6 +15921,7 @@
   "app_karate_computer_save": {
    "async": false,
    "identifiers": [
+    "object_property_set",
     "storage_local_transform_context",
     "storage_local_disable",
     "equal",
@@ -15985,6 +15992,9 @@
     "value2",
     "lambda4",
     "data",
+    "object",
+    "property_name",
+    "value3",
     "valid",
     "containers"
    ]
