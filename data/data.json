@@ -730,7 +730,8 @@
    "whitespace_normalize",
    "html_checked_get",
    "js_if_blockify_generic",
-   "storage_local_disable"
+   "storage_local_disable",
+   "global_function_exists"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -32905,6 +32906,7 @@
   "global_function_exists": {
    "async": false,
    "identifiers": [
+    "marker",
     "object_property_initialize",
     "global_get",
     "global_function_exists",
