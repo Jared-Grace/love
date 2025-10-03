@@ -1676,7 +1676,8 @@
    "global_function_initialize",
    "global_function_set",
    "global_function_property_get",
-   "global_function_property_set"
+   "global_function_property_set",
+   "storage_local_get"
   ],
   "title": [
    "app_karate_computer_save"
@@ -6002,7 +6003,8 @@
    "global_function_exists",
    "global_function_set",
    "global_function_property_get",
-   "global_function_property_set"
+   "global_function_property_set",
+   "storage_local_get"
   ],
   "bible_folder": [
    "bible_verses_encouragement_generate",
@@ -6147,7 +6149,8 @@
    "object_property_set",
    "object_property_set_exists_not",
    "global_function_property_get",
-   "global_function_property_set"
+   "global_function_property_set",
+   "storage_local_get"
   ],
   "browser_is": [
    "browser_is",
@@ -31786,8 +31789,9 @@
    ]
   },
   "storage_local_get": {
-   "async": false,
+   "async": true,
    "identifiers": [
+    "global_function_property_get",
     "storage_local_enabled",
     "storage_local_specify_get",
     "marker",
@@ -31797,7 +31801,9 @@
     "key",
     "storage_local_key",
     "result",
-    "global_function_property_get"
+    "value",
+    "fn",
+    "property_name"
    ]
   },
   "storage_local_get_context": {
@@ -31827,7 +31833,7 @@
    ]
   },
   "storage_local_initialize_context": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "storage_local_initialize",
     "marker",
