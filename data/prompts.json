@@ -2550,7 +2550,6 @@
   "is js_statement_return_add",
   "fs js_if_blockify_generic",
   "pn add_copy",
-  "p",
   "pn add_copy list_add",
   "is js_if_blockify_generic",
   "s return,add",
@@ -2576,6 +2575,7 @@
   "s au",
   "s data_get",
   "s global",
+  "p",
   "is test"
  ]
 }
