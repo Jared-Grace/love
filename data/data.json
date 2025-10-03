@@ -75,7 +75,8 @@
    "storage_local_get_context",
    "storage_local_initialize_context",
    "storage_local_set_context",
-   "app_karate_button_next_screen"
+   "app_karate_button_next_screen",
+   "storage_local_transform_context"
   ],
   "screen_name": [
    "app_karate_button_back",
@@ -1167,7 +1168,8 @@
    "app_replace_font_size_adjust",
    "app_replace_home",
    "app_screen_set",
-   "storage_local_set_context"
+   "storage_local_set_context",
+   "storage_local_transform_context"
   ],
   "html_rgba_to_rgb": [
    "app_karate_computer_save",
@@ -1856,7 +1858,8 @@
    "app_karate_computer_save",
    "messenger_reply_messages_transform",
    "messenger_reply_messages_urls_transform",
-   "app_karate_email"
+   "app_karate_email",
+   "storage_local_transform_context"
   ],
   "margin": [
    "app_karate_computer_save"
@@ -2367,7 +2370,8 @@
    "app_karate_main",
    "app_replace_font_size",
    "app_replace_rule_set",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "storage_local_transform_context"
   ],
   "html_document_root": [
    "app_karate_main",
@@ -2542,7 +2546,8 @@
    "date_diff_ms",
    "function_alias_rename",
    "git_push_folder",
-   "app_karate_email"
+   "app_karate_email",
+   "storage_local_transform_context"
   ],
   "hours": [
    "date_diff_mins",
@@ -4528,7 +4533,8 @@
   "after": [
    "app_replace_rule_set",
    "function_alias_rename",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "storage_local_transform_context"
   ],
   "nn": [
    "app_replace_rule_set",
@@ -5142,7 +5148,8 @@
    "storage_local_key_get",
    "storage_local_set",
    "storage_local_set_context",
-   "app_karate_email"
+   "app_karate_email",
+   "storage_local_transform_context"
   ],
   "buttons_refresh": [
    "app_reply_main"
@@ -7368,7 +7375,8 @@
    "object_property_initialize",
    "storage_local_initialize",
    "storage_local_initialize_context",
-   "app_karate_email"
+   "app_karate_email",
+   "storage_local_transform_context"
   ],
   "data_identifiers_get": [
    "data_identifiers_get",
@@ -15779,7 +15787,8 @@
    "app_karate_email"
   ],
   "storage_local_transform_context": [
-   "app_karate_email"
+   "app_karate_email",
+   "storage_local_transform_context"
   ]
  },
  "functions": {
@@ -32854,6 +32863,20 @@
     "input",
     "element",
     "focus"
+   ]
+  },
+  "storage_local_transform_context": {
+   "async": false,
+   "identifiers": [
+    "storage_local_set_context",
+    "storage_local_initialize_context",
+    "storage_local_transform_context",
+    "context",
+    "key",
+    "value_initial",
+    "transform",
+    "before",
+    "after"
    ]
   }
  }
