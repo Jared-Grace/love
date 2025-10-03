@@ -735,7 +735,8 @@
    "global_function_set",
    "storage_local_enable",
    "storage_local_enabled",
-   "global_function_property_get"
+   "global_function_property_get",
+   "global_function_property_set"
   ],
   "app_karate_button_screen_green_style_assign": [
    "app_karate_button_green",
@@ -33045,6 +33046,7 @@
   "global_function_property_set": {
    "async": true,
    "identifiers": [
+    "marker",
     "global_function_initialize",
     "object_property_lambda",
     "global_function_property_set",
