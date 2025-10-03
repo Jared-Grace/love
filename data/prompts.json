@@ -1406,7 +1406,6 @@
   "html_update_dev replace",
   "rs html_update public",
   "html_update replace",
-  "s button",
   "o app_replace_screens",
   "s roo",
   "as marker_screen_add",
@@ -2621,6 +2620,7 @@
   "s catch",
   "ps",
   "de app_karate_settings_computer_save",
-  "msa settings_computer_save"
+  "msa settings_computer_save",
+  "s button"
  ]
 }
