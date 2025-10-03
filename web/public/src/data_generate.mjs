@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { file_js_parse } from "../../../love/public/src/file_js_parse.mjs";
@@ -11,5 +10,4 @@ export async function data_generate(data) {
     data_file_update_inner(parsed, data);
   }
   each(parseds, lambda);
-  log("data_generate");
 }
