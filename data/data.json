@@ -2101,7 +2101,8 @@
    "string_suffix_without",
    "string_trim_right",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "storage_local_enabled"
   ],
   "html_clear": [
    "app_karate_email",
@@ -2320,7 +2321,8 @@
    "string_starts_with_not",
    "string_suffix_without",
    "visit_filter_recursive",
-   "visit_filter_recursive_async"
+   "visit_filter_recursive_async",
+   "storage_local_enabled"
   ],
   "li": [
    "app_karate_email",
@@ -9171,7 +9173,8 @@
   ],
   "global_function_get": [
    "firebase_name",
-   "global_function_get"
+   "global_function_get",
+   "storage_local_enabled"
   ],
   "user_repo_get": [
    "firebase_name",
@@ -15814,10 +15817,12 @@
   "storage_local_disable": [
    "storage_local_disable",
    "app_karate_computer_save",
-   "storage_local_enable"
+   "storage_local_enable",
+   "storage_local_enabled"
   ],
   "global_function_exists": [
-   "global_function_exists"
+   "global_function_exists",
+   "storage_local_enabled"
   ],
   "value_public": [
    "app_karate_computer_save"
@@ -32984,8 +32989,13 @@
   "storage_local_enabled": {
    "async": false,
    "identifiers": [
+    "global_function_get",
+    "storage_local_disable",
+    "global_function_exists",
+    "not",
     "marker",
-    "storage_local_enabled"
+    "storage_local_enabled",
+    "a"
    ]
   }
  }
