@@ -4,6 +4,8 @@ import { storage_local_key_get } from "../../../love/public/src/storage_local_ke
 export function storage_local_get(app_fn, key) {
   marker("1");
   let storage_local_key = storage_local_key_get(app_fn, key);
+  if (false) {
+  }
   let result = storage_local_specify_get(storage_local_key);
   return result;
 }
