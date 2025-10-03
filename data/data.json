@@ -1063,8 +1063,7 @@
    "visit_unique_async",
    "watch",
    "list_filter",
-   "app_karate_button_next",
-   "global_function_property_set"
+   "app_karate_button_next"
   ],
   "component": [
    "app_karate_button_green",
@@ -33052,10 +33051,9 @@
     "global_function_property_set",
     "fn",
     "property_name",
-    "lambda",
+    "value",
     "initial",
-    "fn_object",
-    "value"
+    "fn_object"
    ]
   }
  }
