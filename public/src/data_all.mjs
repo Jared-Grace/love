@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -17,4 +18,6 @@ export async function data_all(file_path) {
     file_path,
   };
   return v;
+  if (equal(left, right)) {
+  }
 }
