@@ -3921,8 +3921,7 @@
    "app_replace_font_size",
    "error_attention_set",
    "html_checked_get",
-   "app_karate_computer_save",
-   "app_karate_email"
+   "app_karate_computer_save"
   ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
@@ -6066,8 +6065,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "app_karate_email"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -6123,8 +6121,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "app_karate_email"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -7377,8 +7374,7 @@
    "object_property_initialize",
    "storage_local_initialize",
    "storage_local_initialize_context",
-   "storage_local_transform_context",
-   "app_karate_email"
+   "storage_local_transform_context"
   ],
   "data_identifiers_get": [
    "data_identifiers_get",
@@ -11656,7 +11652,8 @@
   "user": [
    "git_history_delete",
    "git_repo_clone",
-   "git_repo_url"
+   "git_repo_url",
+   "app_karate_email"
   ],
   "repo": [
    "git_history_delete",
@@ -16070,10 +16067,7 @@
     "key",
     "transform",
     "value",
-    "value2",
-    "object",
-    "property_name",
-    "value_initial",
+    "user",
     "button_next",
     "validate",
     "trimmed",
