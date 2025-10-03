@@ -2449,7 +2449,8 @@
    "app_replace_screens"
   ],
   "email": [
-   "app_karate_screens"
+   "app_karate_screens",
+   "app_karate_email"
   ],
   "computer_save": [
    "app_karate_screens"
@@ -3922,8 +3923,7 @@
    "app_replace_font_size",
    "error_attention_set",
    "html_checked_get",
-   "app_karate_computer_save",
-   "app_karate_email"
+   "app_karate_computer_save"
   ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
@@ -6067,8 +6067,7 @@
    "object_property_lambda_async",
    "object_property_set",
    "object_property_set_exists_not",
-   "undefined_not_is_assert_lambda",
-   "app_karate_email"
+   "undefined_not_is_assert_lambda"
   ],
   "property_name": [
    "bind_property",
@@ -6124,8 +6123,7 @@
    "object_property_lambda",
    "object_property_lambda_async",
    "object_property_set",
-   "object_property_set_exists_not",
-   "app_karate_email"
+   "object_property_set_exists_not"
   ],
   "browser_is": [
    "browser_is",
@@ -16073,9 +16071,7 @@
     "transform",
     "value",
     "user",
-    "object",
-    "property_name",
-    "value2",
+    "email",
     "button_next",
     "validate",
     "trimmed",
