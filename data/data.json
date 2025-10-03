@@ -2367,7 +2367,8 @@
    "app_karate_main",
    "app_replace_font_size",
    "app_replace_rule_set",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_karate_email"
   ],
   "html_document_root": [
    "app_karate_main",
@@ -7367,7 +7368,8 @@
    "data_transform",
    "object_property_initialize",
    "storage_local_initialize",
-   "storage_local_initialize_context"
+   "storage_local_initialize_context",
+   "app_karate_email"
   ],
   "data_identifiers_get": [
    "data_identifiers_get",
@@ -15779,6 +15781,12 @@
   ],
   "context2": [
    "app_karate_email"
+  ],
+  "value3": [
+   "app_karate_email"
+  ],
+  "key2": [
+   "app_karate_email"
   ]
  },
  "functions": {
@@ -16009,6 +16017,7 @@
   "app_karate_email": {
    "async": true,
    "identifiers": [
+    "storage_local_initialize_context",
     "storage_local_set_context",
     "app_screen_set",
     "app_karate_button_next",
@@ -16054,7 +16063,10 @@
     "div_checks",
     "ul",
     "lambda3",
+    "value3",
     "context2",
+    "key2",
+    "value_initial",
     "key",
     "value2",
     "button_next",
