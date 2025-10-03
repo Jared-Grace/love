@@ -1856,7 +1856,8 @@
   "transform": [
    "app_karate_computer_save",
    "messenger_reply_messages_transform",
-   "messenger_reply_messages_urls_transform"
+   "messenger_reply_messages_urls_transform",
+   "app_karate_email"
   ],
   "margin": [
    "app_karate_computer_save"
@@ -2542,7 +2543,8 @@
    "date_diff_hours",
    "date_diff_ms",
    "function_alias_rename",
-   "git_push_folder"
+   "git_push_folder",
+   "app_karate_email"
   ],
   "hours": [
    "date_diff_mins",
@@ -3917,8 +3919,7 @@
    "app_replace_font_size",
    "error_attention_set",
    "html_checked_get",
-   "app_karate_computer_save",
-   "app_karate_email"
+   "app_karate_computer_save"
   ],
   "app_replace_font_size_adjust": [
    "app_replace_font_size_adjust",
@@ -4529,7 +4530,8 @@
   "after": [
    "app_replace_rule_set",
    "function_alias_rename",
-   "js_dollar_a_generic"
+   "js_dollar_a_generic",
+   "app_karate_email"
   ],
   "nn": [
    "app_replace_rule_set",
@@ -15778,15 +15780,6 @@
   "html_focus": [
    "html_focus",
    "app_karate_email"
-  ],
-  "context2": [
-   "app_karate_email"
-  ],
-  "value3": [
-   "app_karate_email"
-  ],
-  "key2": [
-   "app_karate_email"
   ]
  },
  "functions": {
@@ -16063,12 +16056,11 @@
     "div_checks",
     "ul",
     "lambda3",
-    "value3",
-    "context2",
-    "key2",
-    "value_initial",
     "key",
-    "value2",
+    "value_initial",
+    "before",
+    "after",
+    "transform",
     "button_next",
     "validate",
     "value",
