@@ -15,5 +15,5 @@ export async function app_replace_main() {
     root: root,
   };
   await app_refresh(context);
-  app_replace_font_size_refresh(context);
+  await app_replace_font_size_refresh(context);
 }
