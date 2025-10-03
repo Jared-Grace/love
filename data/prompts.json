@@ -2579,6 +2579,7 @@
   "s enabled",
   "s karate",
   "s move",
-  "as repo,move"
+  "as repo,move",
+  "km"
  ]
 }
