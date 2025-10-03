@@ -2568,6 +2568,7 @@
   "n storage_local_disable",
   "s global",
   "c global_function_initialize global_function_exists",
-  "c global_function_initialize global_function_set"
+  "c global_function_initialize global_function_set",
+  "c storage_local_disable storage_local_enable"
  ]
 }
