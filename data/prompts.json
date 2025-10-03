@@ -224,7 +224,6 @@
   "ir suffix_to_add ending_to_remove",
   "n js_atomize",
   "pn as",
-  "o pn",
   "pn ast",
   "ir ast2 ast",
   "fw object_merge object_copy",
@@ -2631,6 +2630,7 @@
   "fs app_karate_computer_save_generic",
   "p",
   "ps",
-  "pn button_next app_karate_button_next"
+  "pn button_next app_karate_button_next",
+  "o pn"
  ]
 }
