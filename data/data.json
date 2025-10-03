@@ -32960,7 +32960,7 @@
    ]
   },
   "storage_local_transform_context": {
-   "async": false,
+   "async": true,
    "identifiers": [
     "storage_local_set_context",
     "storage_local_initialize_context",
