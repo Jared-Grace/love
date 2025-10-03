@@ -13,12 +13,18 @@ export function storage_local_get(app_fn, key) {
     let result = storage_local_specify_get(storage_local_key);
     return result;
   }
-  let exists = global_function_property_exists(storage_local_set, key);
+  let exists = global_function_property_exists(
+    storage_local_set,
+    storage_local_key,
+  );
   if (not(exists)) {
     ("localStorage has this behavior, so the in-memory version also mirrors api");
     let v = null;
     return v;
   }
-  let value = global_function_property_get(storage_local_set, key);
+  let value = global_function_property_get(
+    storage_local_set,
+    storage_local_key,
+  );
   return value;
 }
