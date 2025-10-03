@@ -2592,6 +2592,7 @@
   "c global_function_property_get global_function_property_exists",
   "s disable",
   "s enable",
-  "u ope"
+  "u ope",
+  "u ope object_property_exists"
  ]
 }
