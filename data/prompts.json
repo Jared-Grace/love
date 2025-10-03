@@ -2601,6 +2601,7 @@
   "s prefix",
   "s separator",
   "s combine",
-  "is storage_local_get"
+  "is storage_local_get",
+  "c app_karate_flow_sign_up_next app_karate_flow_sign_up_previous"
  ]
 }
