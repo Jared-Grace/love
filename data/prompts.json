@@ -2585,7 +2585,7 @@
   "function_dependency_path function_dependency_path assert",
   "s unalias",
   "p",
-  "function_dependency_path app_karate_code path_name",
-  "ps"
+  "ps",
+  "function_dependency_path app_karate_code path_name"
  ]
 }
