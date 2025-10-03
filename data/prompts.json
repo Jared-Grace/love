@@ -2564,6 +2564,7 @@
   "fk",
   "s search",
   "fpk",
-  "s storage,local"
+  "s storage,local",
+  "s initialize"
  ]
 }
