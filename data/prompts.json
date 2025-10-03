@@ -1691,7 +1691,6 @@
   "r html_style_merge html_style_assign ",
   "s remo",
   "s size",
-  "s inter",
   "ebible_verses_upload swhonen",
   "n urdu_allah_to_god",
   "ebible_verses urdgvu JHN07",
@@ -2631,6 +2630,7 @@
   "p",
   "ps",
   "pn button_next app_karate_button_next",
-  "o pn"
+  "o pn",
+  "s inter"
  ]
 }
