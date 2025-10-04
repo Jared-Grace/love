@@ -2601,7 +2601,6 @@
   "de app_karate_settings",
   "msa settings",
   "s back,screen",
-  "s3",
   "msa test",
   "msa   let v2 = await marker_screen_add(\"settings_computer_save\");",
   "s catch",
@@ -2634,6 +2633,7 @@
   "s prefix",
   "s without",
   "msa email_verify",
-  "o s3"
+  "o s3",
+  "s3"
  ]
 }
