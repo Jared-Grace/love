@@ -2639,6 +2639,7 @@
   "pnd input_get",
   "fs app_karate_data_get",
   "pnd value_initial",
-  "is app_karate_data_get"
+  "is app_karate_data_get",
+  "o app_karate_email"
  ]
 }
