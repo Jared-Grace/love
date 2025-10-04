@@ -1,3 +1,4 @@
+import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
