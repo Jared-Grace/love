@@ -1,3 +1,5 @@
+import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
+import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
 import { app_screen_set } from "../../../love/public/src/app_screen_set.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -8,7 +10,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {
-    app_screen_set(context, "settings");
+    app_screen_set(context, app_replace_settings);
   }
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
@@ -17,7 +19,7 @@ export function app_replace_home(context) {
     html_button(root, name2, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
-      app_screen_set(context, "rule_set");
+      app_screen_set(context, app_replace_rule_set);
     }
   }
   each_index(rule_sets, lambda2);
