@@ -2494,7 +2494,6 @@
   "a jcs js_code_string",
   "msa computer_save",
   "s screen,lam",
-  "s screens",
   "s html_input_type",
   "o app_karate_computer_save",
   "s span",
@@ -2634,6 +2633,7 @@
   "s without",
   "msa email_verify",
   "o s3",
-  "s3"
+  "s3",
+  "s screens"
  ]
 }
