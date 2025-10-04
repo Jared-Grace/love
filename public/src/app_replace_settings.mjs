@@ -1,3 +1,4 @@
+import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
 import { html_button_screen } from "../../../love/public/src/html_button_screen.mjs";
 import { app_replace_font_size_adjust } from "../../../love/public/src/app_replace_font_size_adjust.mjs";
@@ -9,7 +10,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_replace_settings(context) {
   marker("1");
   let { root } = context;
-  html_button_screen(root, emoji_home() + "Home", context, "home");
+  html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
   async function lambda2() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
