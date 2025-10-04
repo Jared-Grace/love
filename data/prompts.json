@@ -2634,6 +2634,7 @@
   "msa email_verify",
   "o s3",
   "s3",
-  "s screens"
+  "s screens",
+  "fs app_karate_screen_input"
  ]
 }
