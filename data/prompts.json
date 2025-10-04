@@ -2638,6 +2638,7 @@
   "fs app_karate_screen_input",
   "pnd input_get",
   "fs app_karate_data_get",
-  "pnd value_initial"
+  "pnd value_initial",
+  "is app_karate_data_get"
  ]
 }
