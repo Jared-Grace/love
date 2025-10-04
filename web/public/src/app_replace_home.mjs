@@ -7,17 +7,17 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
-  async function lambda4() {
-    await app_screen_set(context, "settings");
+  function lambda4() {
+    app_screen_set(context, "settings");
   }
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = object_property_get(item, "name");
     html_button(root, name2, lambda);
-    async function lambda() {
+    function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
-      await app_screen_set(context, "rule_set");
+      app_screen_set(context, "rule_set");
     }
   }
   each_index(rule_sets, lambda2);
