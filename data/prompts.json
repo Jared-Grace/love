@@ -2636,6 +2636,7 @@
   "s3",
   "s screens",
   "fs app_karate_screen_input",
-  "pnd input_get"
+  "pnd input_get",
+  "fs app_karate_data_get"
  ]
 }
