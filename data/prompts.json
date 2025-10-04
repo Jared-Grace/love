@@ -2580,7 +2580,6 @@
   "as take",
   "a lt list_take",
   "s function,name",
-  "s without",
   "s separator",
   "s combine",
   "is storage_local_get",
@@ -2633,6 +2632,7 @@
   "s save",
   "s emoji",
   "fk",
-  "s prefix"
+  "s prefix",
+  "s without"
  ]
 }
