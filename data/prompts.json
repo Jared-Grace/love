@@ -2633,6 +2633,7 @@
   "s emoji",
   "fk",
   "s prefix",
-  "s without"
+  "s without",
+  "msa email_verify"
  ]
 }
