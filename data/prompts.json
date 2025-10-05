@@ -2645,6 +2645,7 @@
   "s index_of",
   "u cr",
   "fws c replace",
-  "s bible,version"
+  "s bible,version",
+  "s bible,verse"
  ]
 }
