@@ -14,7 +14,8 @@ export async function firebase_storage_function_run(f_name, version_get) {
   let call = js_code_call_statement(f_name);
   let joined = list_join_newline([call, code]);
   if (browser_is()) {
-    eval(joined);
+    const fn = new Function(joined);
+    fn();
     return;
   }
   eval(joined);
