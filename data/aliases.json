@@ -219,6 +219,7 @@
   "lt": "list_take",
   "rr": "function_rename_replace",
   "rrl": "function_rename_replace_last",
-  "lto": "list_to"
+  "lto": "list_to",
+  "lkp": "log_keep"
  }
 }
