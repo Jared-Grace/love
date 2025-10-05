@@ -2660,6 +2660,7 @@
   "ff sandbox_3",
   "s firebase",
   "is firebase_storage_download_json",
-  "s main"
+  "s main",
+  "s sandbox"
  ]
 }
