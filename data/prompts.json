@@ -2682,6 +2682,7 @@
   "s3a",
   "o ff",
   "s firebase,upload",
-  "fw r prefix_add"
+  "fw r prefix_add",
+  "r prefix_add function_rename_prefix_add"
  ]
 }
