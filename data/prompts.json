@@ -2653,6 +2653,7 @@
   "p",
   "ebible_version_books engbsb",
   "s assert",
-  "cs assert_message get"
+  "cs assert_message get",
+  "fw assert_message_get assert_json_get"
  ]
 }
