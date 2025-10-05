@@ -2283,7 +2283,6 @@
   "function_run_output_file_temp functions_names_to_paths",
   "o w",
   "s repos",
-  "s sand",
   "a of function_run_output_file_temp",
   "html_name_to_path karate",
   "s name,path",
@@ -2699,6 +2698,7 @@
   "o s3",
   "ff s3",
   "p",
-  "fd s3a"
+  "fd s3a",
+  "s sand"
  ]
 }
