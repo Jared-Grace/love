@@ -2686,6 +2686,7 @@
   "o function_rename_suffix_add_generic",
   "is function_rename_suffix_add_generic",
   "ps",
-  "a rp function_rename_prefix_add"
+  "a rp function_rename_prefix_add",
+  "rp repo_firebase_service_account_get user"
  ]
 }
