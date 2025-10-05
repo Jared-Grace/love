@@ -1014,7 +1014,6 @@
   "s data,udpate",
   "c fws function_watch_suffix_change",
   "r function_watch_suffix_change function_watch_ending_change",
-  "s suffix",
   "a fwc function_watch_ending_change",
   "fwc error_attention_set set clear",
   "s update",
@@ -2683,6 +2682,7 @@
   "o ff",
   "s firebase,upload",
   "fw r prefix_add",
-  "r prefix_add function_rename_prefix_add"
+  "r prefix_add function_rename_prefix_add",
+  "s suffix"
  ]
 }
