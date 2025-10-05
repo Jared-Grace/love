@@ -2662,7 +2662,6 @@
   "s production",
   "s firebase_deploy_function_destination_production",
   "s firebase_deploy_function_destination_",
-  "u cr",
   "s replace",
   "fws c replace",
   "a cr function_copy_replace",
@@ -2670,6 +2669,7 @@
   "fws cr last",
   "ps",
   "o fws",
-  "s function_copy_replace"
+  "s function_copy_replace",
+  "u cr"
  ]
 }
