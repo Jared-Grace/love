@@ -2688,12 +2688,12 @@
   "is firebase_admin",
   "is firebase_bucket",
   "urs l",
-  "ff s3",
   "s3a",
   "urg",
   "firebase_service_account",
   "p",
   "firebase_storage_url_project",
-  "firebase_admin_get"
+  "firebase_admin_get",
+  "ff s3"
  ]
 }
