@@ -2691,9 +2691,9 @@
   "p",
   "firebase_storage_url_project",
   "firebase_admin_get",
-  "ff s3",
   "s3a",
   "o ff",
-  "s unalias"
+  "s unalias",
+  "ff s3"
  ]
 }
