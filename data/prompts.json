@@ -2630,7 +2630,6 @@
   "o app_karate_email",
   "s index,last",
   "s index_of",
-  "fws c replace",
   "s bible,version",
   "s bible,verse",
   "as bible",
@@ -2666,6 +2665,7 @@
   "s firebase_deploy_function_destination_production",
   "s firebase_deploy_function_destination_",
   "u cr",
-  "s replace"
+  "s replace",
+  "fws c replace"
  ]
 }
