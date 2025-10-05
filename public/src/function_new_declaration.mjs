@@ -11,8 +11,8 @@ import { js_declaration_name } from "../../../love/public/src/js_declaration_nam
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
-  let name = js_declaration_name(declaration);
-  const f_path = function_name_to_path(name);
+  let f_name = js_declaration_name(declaration);
+  const f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
   let ast = js_parse(contents);
@@ -24,5 +24,5 @@ export async function function_new_declaration(declaration) {
   await file_write(combined, formatted);
   await data_file_update(combined);
   return;
-  let u = await function_exists(f_name);
+  let { exists } = await function_exists(f_name);
 }
