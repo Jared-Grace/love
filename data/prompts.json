@@ -2658,6 +2658,7 @@
   "p",
   "mr",
   "o s3",
-  "as deploy"
+  "as deploy",
+  "ff sandbox_3"
  ]
 }
