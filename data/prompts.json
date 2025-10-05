@@ -2666,6 +2666,7 @@
   "s firebase_deploy_function_destination_",
   "u cr",
   "s replace",
-  "fws c replace"
+  "fws c replace",
+  "a cr function_copy_replace"
  ]
 }
