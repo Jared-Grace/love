@@ -2659,6 +2659,7 @@
   "o s3",
   "as deploy",
   "ff sandbox_3",
-  "s firebase"
+  "s firebase",
+  "is firebase_storage_download_json"
  ]
 }
