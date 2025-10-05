@@ -2653,11 +2653,11 @@
   "bible_verse_grace 2 Corinthians 7:10",
   "s messenger",
   "o messenger_reply",
-  "p",
   "messenger_reply",
   "n sleep_forever",
   "as log",
   "a lkp log_keep",
+  "p",
   "mr"
  ]
 }
