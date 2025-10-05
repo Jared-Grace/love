@@ -2538,7 +2538,6 @@
   "s less_t",
   "n less_than_by",
   "function_dependency_path function_dependency_path assert",
-  "s unalias",
   "function_dependency_path app_karate_code path_name",
   "function_dependency_path app_karate path_name",
   "c js_parse js_parse_async",
@@ -2694,6 +2693,7 @@
   "firebase_admin_get",
   "ff s3",
   "s3a",
-  "o ff"
+  "o ff",
+  "s unalias"
  ]
 }
