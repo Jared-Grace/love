@@ -1,3 +1,4 @@
+import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
@@ -21,5 +22,7 @@ export async function function_new_declaration(declaration) {
   let repo_name = await user_repo_get();
   let combined = repo_path_combine(repo_name, f_path);
   await file_write(combined, formatted);
-  await data_file_update(combined);return;function_exists
+  await data_file_update(combined);
+  return;
+  let u = await function_exists(f_name);
 }
