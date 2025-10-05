@@ -2647,6 +2647,7 @@
   "fws c replace",
   "s bible,version",
   "s bible,verse",
-  "as bible"
+  "as bible",
+  "s bible,parse"
  ]
 }
