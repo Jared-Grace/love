@@ -2619,7 +2619,6 @@
   "s invoke",
   "s storage,set",
   "fs app_karate_computer_save_generic",
-  "ps",
   "pn button_next app_karate_button_next",
   "o pn",
   "s inter",
@@ -2652,6 +2651,7 @@
   "a lto list_to",
   "bible_verse_grace 2 Corinthians 7:10",
   "p",
-  "ebible_version_books engbsb"
+  "ebible_version_books engbsb",
+  "ps"
  ]
 }
