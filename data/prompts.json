@@ -2675,7 +2675,6 @@
   "sandbox_3_a",
   "s run,firebase",
   "p",
-  "s3a",
   "o ff",
   "s firebase,upload",
   "fw r prefix_add",
@@ -2691,6 +2690,7 @@
   "is firebase_admin",
   "is firebase_bucket",
   "urs l",
+  "s3a",
   "ff s3"
  ]
 }
