@@ -7,7 +7,6 @@ import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
-import { app_main } from "../../../love/public/src/app_main.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -25,7 +24,7 @@ export async function app_new_step_3_generic(
   let { repo_name } = await function_name_to_path_search(a_name);
   let default2 = await firebase_name_repo(repo_name);
   let f_name = js_code_string(default2);
-  let call_name = app_main.name;
+  let call_name = fn_call.name;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(call_name);
   async function lambda(ast) {
@@ -35,7 +34,7 @@ export async function app_new_step_3_generic(
     let main_name = js_code_string(value_string);
     let code = js_code_call_args_await_maybe(
       unaliased,
-      [main_name, f_name, version_get],
+      [main_name, f_name],
       declaration_call,
     );
     let statement = js_parse_statement(code);
