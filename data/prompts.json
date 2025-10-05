@@ -2671,7 +2671,6 @@
   "s last",
   "ps",
   "a crl function_copy_replace_last",
-  "p",
   "crl app_main_production latest",
   "is app_new_step_3_generic",
   "s staging",
@@ -2679,6 +2678,7 @@
   "s main",
   "ff s3",
   "sandbox_3_a",
+  "p",
   "s run,firebase"
  ]
 }
