@@ -2649,6 +2649,7 @@
   "s bible,verse",
   "as bible",
   "s bible,parse",
-  "n bible_verse_grace"
+  "n bible_verse_grace",
+  "bible_verse_grace 2 Corinthians 7:10"
  ]
 }
