@@ -2650,8 +2650,8 @@
   "as bible",
   "s bible,parse",
   "n bible_verse_grace",
-  "bible_verse_grace 2 Corinthians 7:10",
   "a l2 list_to",
-  "a lto list_to"
+  "a lto list_to",
+  "bible_verse_grace 2 Corinthians 7:10"
  ]
 }
