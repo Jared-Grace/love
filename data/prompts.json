@@ -2375,7 +2375,6 @@
   "s rarow",
   "s arrpw",
   "s html,input",
-  "urg",
   "s mail",
   "s ttri",
   "s next",
@@ -2690,7 +2689,8 @@
   "is firebase_admin",
   "is firebase_bucket",
   "urs l",
+  "ff s3",
   "s3a",
-  "ff s3"
+  "urg"
  ]
 }
