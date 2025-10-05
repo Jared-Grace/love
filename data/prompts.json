@@ -2672,6 +2672,7 @@
   "s last,replace",
   "s last",
   "ps",
-  "a crl function_copy_replace_last"
+  "a crl function_copy_replace_last",
+  "crl app_main_production latest"
  ]
 }
