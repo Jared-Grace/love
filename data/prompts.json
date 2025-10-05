@@ -2673,6 +2673,7 @@
   "ps",
   "a crl function_copy_replace_last",
   "p",
-  "crl app_main_production latest"
+  "crl app_main_production latest",
+  "is app_new_step_3_generic"
  ]
 }
