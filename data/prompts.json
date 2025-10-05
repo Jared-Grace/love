@@ -2643,6 +2643,7 @@
   "o app_karate_email",
   "s index,last",
   "s index_of",
-  "u cr"
+  "u cr",
+  "fws c replace"
  ]
 }
