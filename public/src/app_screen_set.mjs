@@ -1,5 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { function_name_prefix_without } from "../../../karate_code/public/src/function_name_prefix_without.mjs";
+import { function_name_prefix_without } from "../../../love/public/src/function_name_prefix_without.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_refresh } from "../../../love/public/src/app_refresh.mjs";
 export function app_screen_set(context, fn) {

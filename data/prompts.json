@@ -2558,7 +2558,6 @@
   "function_dependency_path app_karate path_name",
   "c js_parse js_parse_async",
   "fdp app_karate js_parse",
-  "km",
   "o storage_local_get",
   "o global_function_property_get",
   "s global",
@@ -2654,6 +2653,7 @@
   "ebible_version_books engbsb",
   "s assert",
   "cs assert_message get",
-  "fw assert_message_get assert_json_get"
+  "fw assert_message_get assert_json_get",
+  "km"
  ]
 }

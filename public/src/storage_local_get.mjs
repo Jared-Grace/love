@@ -1,5 +1,5 @@
 import { not } from "../../../love/public/src/not.mjs";
-import { global_function_property_exists } from "../../../karate_code/public/src/global_function_property_exists.mjs";
+import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
