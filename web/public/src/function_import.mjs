@@ -1,4 +1,6 @@
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { folder_previous } from "./folder_previous.mjs";
