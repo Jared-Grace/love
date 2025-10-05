@@ -2693,6 +2693,7 @@
   "urg",
   "firebase_service_account",
   "p",
-  "firebase_storage_url_project"
+  "firebase_storage_url_project",
+  "firebase_admin_get"
  ]
 }
