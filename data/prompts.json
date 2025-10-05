@@ -2646,6 +2646,7 @@
   "u cr",
   "fws c replace",
   "s bible,version",
-  "s bible,verse"
+  "s bible,verse",
+  "as bible"
  ]
 }
