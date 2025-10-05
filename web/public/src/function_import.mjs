@@ -14,6 +14,7 @@ export async function function_import(f_name) {
   const f_path = path_join([__dirname, previous, previous, f]);
   log({
     f_path,
+    __dirname,
   });
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
