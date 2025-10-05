@@ -2701,6 +2701,7 @@
   "km",
   "repo_functions_move_if_includes_not_filtered app_karate",
   "repo_functions_names karate_code",
-  "user_repo_get"
+  "user_repo_get",
+  "o km"
  ]
 }
