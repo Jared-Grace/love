@@ -1496,7 +1496,6 @@
   "ts",
   "ftc js_calls_to_each app_new",
   "s ;et",
-  "s let",
   "cs list_index_of_next outside",
   "is list_next_try",
   "s if",
@@ -2703,6 +2702,7 @@
   "o km",
   "km",
   "u s4",
-  "o s4"
+  "o s4",
+  "s let"
  ]
 }
