@@ -2645,7 +2645,6 @@
   "n sleep_forever",
   "as log",
   "a lkp log_keep",
-  "p",
   "mr",
   "o s3",
   "as deploy",
@@ -2673,6 +2672,7 @@
   "s last",
   "ps",
   "a crl function_copy_replace_last",
+  "p",
   "crl app_main_production latest"
  ]
 }
