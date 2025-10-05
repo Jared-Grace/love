@@ -2700,6 +2700,7 @@
   "s sand",
   "p",
   "km",
-  "repo_functions_names karate_code"
+  "repo_functions_names karate_code",
+  "repo_functions_move_if_includes_not_filtered app_karate"
  ]
 }
