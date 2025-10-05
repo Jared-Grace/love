@@ -2666,7 +2666,6 @@
   "o fws",
   "o n",
   "s exists",
-  "s main",
   "fws cr last",
   "s last,replace",
   "s last",
@@ -2676,6 +2675,7 @@
   "crl app_main_production latest",
   "is app_new_step_3_generic",
   "s staging",
-  "n sandbox_3_a"
+  "n sandbox_3_a",
+  "s main"
  ]
 }
