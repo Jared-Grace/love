@@ -1981,7 +1981,6 @@
   "a ei each_index",
   "s refer",
   "reply",
-  "mr",
   "s language",
   "a lfdp list_find_property",
   "n reply_on_match",
@@ -2656,6 +2655,7 @@
   "o messenger_reply",
   "p",
   "messenger_reply",
-  "n sleep_forever"
+  "n sleep_forever",
+  "mr"
  ]
 }
