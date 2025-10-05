@@ -2696,6 +2696,7 @@
   "s3a",
   "fd sandbox_3_a",
   "s repo,path",
-  "user_repo_path"
+  "user_repo_path",
+  "repo_path love"
  ]
 }
