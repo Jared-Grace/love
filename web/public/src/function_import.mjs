@@ -1,3 +1,4 @@
+import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
@@ -25,4 +26,5 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
+  let v = await path_resolve(paths);
 }
