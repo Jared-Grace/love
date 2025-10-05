@@ -4,7 +4,6 @@ export function list_is_assert(list) {
   let result = list_is(list);
   let type = typeof list;
   assert_json(result, {
-    list,
     type,
   });
   return;
