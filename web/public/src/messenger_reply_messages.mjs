@@ -1,3 +1,4 @@
+import { sleep_forever } from "../../../karate_code/public/src/sleep_forever.mjs";
 import { messenger_reply_messages_message } from "../../../love/public/src/messenger_reply_messages_message.mjs";
 import { messenger_reply_messages_name } from "../../../love/public/src/messenger_reply_messages_name.mjs";
 import { messenger_reply_messages_me } from "../../../love/public/src/messenger_reply_messages_me.mjs";
@@ -11,6 +12,7 @@ export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   await messenger_reply_messages_urls_add(url);
   await messenger_reply_wait(page);
+  let v = await sleep_forever();
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
