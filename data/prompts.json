@@ -2667,9 +2667,9 @@
   "a cr function_copy_replace",
   "fws last cr",
   "fws cr last",
-  "ps",
   "o fws",
   "s function_copy_replace",
-  "u cr"
+  "u cr",
+  "ps"
  ]
 }
