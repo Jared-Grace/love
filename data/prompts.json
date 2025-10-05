@@ -2664,6 +2664,7 @@
   "s sandbox",
   "n sandbox_4",
   "fws app_main production",
-  "s production"
+  "s production",
+  "s firebase_deploy_function_destination_production"
  ]
 }
