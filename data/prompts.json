@@ -1957,7 +1957,6 @@
   "export async function messenger_reply_messages(page, url) {",
   "ac ll lfl",
   "a ll list_last",
-  "s last",
   "n reply",
   "s normal",
   "a str string_trim",
@@ -2671,6 +2670,7 @@
   "s main",
   "ps",
   "fws cr last",
-  "s last,replace"
+  "s last,replace",
+  "s last"
  ]
 }
