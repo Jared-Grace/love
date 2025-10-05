@@ -23,7 +23,7 @@ import { keyboard_type_delay } from "../../../love/public/src/keyboard_type_dela
 export async function messenger_reply() {
   marker("1");
   async function lambda2(page) {
-    await sleep(ms);
+    await sleep(10000);
     let messages_urls = null;
     await messenger_reply_messages_urls_transform(transform_inner);
     function transform_inner(mu) {
