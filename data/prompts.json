@@ -2688,6 +2688,7 @@
   "ps",
   "a rp function_rename_prefix_add",
   "rp repo_firebase_service_account_get user",
-  "is firebase_service_account"
+  "is firebase_service_account",
+  "is firebase_admin_get"
  ]
 }
