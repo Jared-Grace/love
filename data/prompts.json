@@ -2703,6 +2703,7 @@
   "km",
   "u s4",
   "o s4",
-  "s let"
+  "s let",
+  "n js_interpreter"
  ]
 }
