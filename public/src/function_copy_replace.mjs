@@ -4,6 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_copy_replace(f_name_old, from, to) {
   marker("1");
   let replaced = string_replace(s, from, to);
-  let v = await function_copy(f_name_old, f_name_new);
+  let v = await function_copy(f_name_old, replaced);
   return v;
 }
