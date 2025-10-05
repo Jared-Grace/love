@@ -220,6 +220,7 @@
   "rr": "function_rename_replace",
   "rrl": "function_rename_replace_last",
   "lto": "list_to",
-  "lkp": "log_keep"
+  "lkp": "log_keep",
+  "cr": "function_copy_replace"
  }
 }
