@@ -5,6 +5,6 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 export async function bible_verse_grace(reference) {
   let args = list_to(arguments);
   let joined = list_join_space(args);
-  let v = await ebible_references_parse_lines(["engbsb"], [joined]);
+  let v = await ebible_references_parse_lines(["cebulb", "tglulb"], [joined]);
   log(v);
 }
