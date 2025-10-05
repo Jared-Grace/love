@@ -1937,7 +1937,6 @@
   "n bind_property",
   "s doc",
   "ar mr messenger_reply",
-  "s messenger",
   "messenger_reply",
   "s equal",
   "messenger_reply_puppeteer",
@@ -2654,6 +2653,7 @@
   "km",
   "ps",
   "p",
-  "bible_verse_grace 2 Corinthians 7:10"
+  "bible_verse_grace 2 Corinthians 7:10",
+  "s messenger"
  ]
 }
