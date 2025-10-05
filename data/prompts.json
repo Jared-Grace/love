@@ -2679,6 +2679,7 @@
   "ff s3",
   "sandbox_3_a",
   "p",
-  "s run,firebase"
+  "s run,firebase",
+  "s3a"
  ]
 }
