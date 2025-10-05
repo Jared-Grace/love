@@ -2681,6 +2681,7 @@
   "ff s3",
   "s3a",
   "o ff",
-  "s firebase,upload"
+  "s firebase,upload",
+  "fw r prefix_add"
  ]
 }
