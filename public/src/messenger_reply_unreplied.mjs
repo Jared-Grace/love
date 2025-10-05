@@ -1,4 +1,4 @@
-import { sleep_forever } from "../../../karate_code/public/src/sleep_forever.mjs";
+import { sleep_forever } from "../../../love/public/src/sleep_forever.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
