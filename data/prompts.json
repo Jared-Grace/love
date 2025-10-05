@@ -2648,6 +2648,7 @@
   "s bible,version",
   "s bible,verse",
   "as bible",
-  "s bible,parse"
+  "s bible,parse",
+  "n bible_verse_grace"
  ]
 }
