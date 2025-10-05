@@ -1911,7 +1911,6 @@
   "o app_reply",
   "s deply",
   "s deploy",
-  "as deploy",
   "firebase_deploy_function app_reply_main",
   "messenger_reply_user_data_path",
   "pp",
@@ -2658,6 +2657,7 @@
   "a lkp log_keep",
   "p",
   "mr",
-  "o s3"
+  "o s3",
+  "as deploy"
  ]
 }
