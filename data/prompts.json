@@ -2675,6 +2675,7 @@
   "p",
   "crl app_main_production latest",
   "is app_new_step_3_generic",
-  "s staging"
+  "s staging",
+  "n sandbox_3_a"
  ]
 }
