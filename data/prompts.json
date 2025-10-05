@@ -413,7 +413,6 @@
   "fw au path",
   "de path",
   "de au_path",
-  "o fws",
   "i function_wrap_suffix_add",
   "fws au path",
   "s path,name",
@@ -2669,6 +2668,8 @@
   "a cr function_copy_replace",
   "fws last cr",
   "fws cr last",
-  "ps"
+  "ps",
+  "o fws",
+  "s function_copy_replace"
  ]
 }
