@@ -2673,7 +2673,6 @@
   "s main",
   "sandbox_3_a",
   "s run,firebase",
-  "p",
   "o ff",
   "s firebase,upload",
   "fw r prefix_add",
@@ -2693,6 +2692,7 @@
   "s3a",
   "urg",
   "firebase_service_account",
+  "p",
   "firebase_storage_url_project"
  ]
 }
