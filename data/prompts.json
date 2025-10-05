@@ -2641,6 +2641,7 @@
   "pnd value_initial",
   "is app_karate_data_get",
   "o app_karate_email",
-  "s index,last"
+  "s index,last",
+  "s index_of"
  ]
 }
