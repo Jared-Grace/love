@@ -2667,7 +2667,6 @@
   "fws cr last",
   "s last,replace",
   "s last",
-  "ps",
   "a crl function_copy_replace_last",
   "crl app_main_production latest",
   "is app_new_step_3_generic",
@@ -2685,6 +2684,7 @@
   "r prefix_add function_rename_prefix_add",
   "s suffix",
   "o function_rename_suffix_add_generic",
-  "is function_rename_suffix_add_generic"
+  "is function_rename_suffix_add_generic",
+  "ps"
  ]
 }
