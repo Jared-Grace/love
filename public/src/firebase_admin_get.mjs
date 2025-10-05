@@ -7,7 +7,9 @@ export async function firebase_admin_get() {
   marker("1");
   let service_account = await firebase_service_account();
   const sb = await firebase_storage_url_project();
-  log(message);
+  log({
+    sb,
+  });
   admin.initializeApp({
     credential: admin.credential.cert(service_account),
     storageBucket: sb,
