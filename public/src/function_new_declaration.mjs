@@ -10,7 +10,7 @@ import { js_declaration_name } from "../../../love/public/src/js_declaration_nam
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
-  let name = js_declaration_name(declaration);
+  let name = js_declaration_name(declaration);function_exists
   const f_path = function_name_to_path(name);
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
