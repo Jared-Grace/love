@@ -1,3 +1,4 @@
+import { function_new } from "../../../love/public/src/function_new.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
@@ -12,6 +13,8 @@ import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
   let f_name = js_declaration_name(declaration);
+  let { exists } = await function_exists(f_name);
+  await function_new(f_name2);
   const f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
@@ -24,5 +27,4 @@ export async function function_new_declaration(declaration) {
   await file_write(combined, formatted);
   await data_file_update(combined);
   return;
-  let { exists } = await function_exists(f_name);
 }
