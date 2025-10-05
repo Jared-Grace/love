@@ -2655,6 +2655,7 @@
   "s messenger",
   "o messenger_reply",
   "p",
-  "messenger_reply"
+  "messenger_reply",
+  "n sleep_forever"
  ]
 }
