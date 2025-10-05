@@ -2039,7 +2039,6 @@
   "s decl,sing",
   "n assert_arguments",
   "a eq equal",
-  "s assert",
   "r assert_equal equal_assert",
   "s auto",
   "as auto",
@@ -2652,6 +2651,7 @@
   "bible_verse_grace 2 Corinthians 7:10",
   "ps",
   "p",
-  "ebible_version_books engbsb"
+  "ebible_version_books engbsb",
+  "s assert"
  ]
 }
