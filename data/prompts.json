@@ -2115,7 +2115,6 @@
   "s invert",
   "s undefined",
   "export async function git_publish_initial(acronym) {",
-  "user_repo_path",
   "git_publish_initial k",
   "s gitignore",
   "n repos_gitignore_overwrite",
@@ -2696,6 +2695,7 @@
   "ff s3",
   "s3a",
   "fd sandbox_3_a",
-  "s repo,path"
+  "s repo,path",
+  "user_repo_path"
  ]
 }
