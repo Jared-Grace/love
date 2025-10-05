@@ -2696,9 +2696,10 @@
   "s3a",
   "o s3",
   "ff s3",
-  "p",
   "fd s3a",
   "s sand",
-  "km"
+  "p",
+  "km",
+  "repo_functions_names karate_code"
  ]
 }
