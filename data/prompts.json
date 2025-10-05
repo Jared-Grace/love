@@ -2172,7 +2172,6 @@
   "is git_acp_folder",
   "is git_acp_call_folder",
   "repos_names",
-  "user_repo_get",
   "o git_acp_folder",
   "o urg",
   "s includes",
@@ -2701,6 +2700,7 @@
   "p",
   "km",
   "repo_functions_move_if_includes_not_filtered app_karate",
-  "repo_functions_names karate_code"
+  "repo_functions_names karate_code",
+  "user_repo_get"
  ]
 }
