@@ -2671,6 +2671,7 @@
   "fws cr last",
   "s last,replace",
   "s last",
-  "ps"
+  "ps",
+  "a crl function_copy_replace_last"
  ]
 }
