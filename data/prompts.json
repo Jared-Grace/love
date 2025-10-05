@@ -2673,7 +2673,6 @@
   "s main",
   "sandbox_3_a",
   "s run,firebase",
-  "o ff",
   "s firebase,upload",
   "fw r prefix_add",
   "r prefix_add function_rename_prefix_add",
@@ -2688,12 +2687,13 @@
   "is firebase_admin",
   "is firebase_bucket",
   "urs l",
-  "s3a",
   "urg",
   "firebase_service_account",
   "p",
   "firebase_storage_url_project",
   "firebase_admin_get",
-  "ff s3"
+  "ff s3",
+  "s3a",
+  "o ff"
  ]
 }
