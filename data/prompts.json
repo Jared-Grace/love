@@ -2653,7 +2653,6 @@
   "ff sandbox_3",
   "s firebase",
   "is firebase_storage_download_json",
-  "s main",
   "s sandbox",
   "n sandbox_4",
   "fws app_main production",
@@ -2670,6 +2669,7 @@
   "o n",
   "s exists",
   "ps",
-  "fws cr last"
+  "fws cr last",
+  "s main"
  ]
 }
