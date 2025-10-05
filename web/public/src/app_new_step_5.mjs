@@ -1,4 +1,4 @@
-import { app_main_latest } from "../../../karate_code/public/src/app_main_latest.mjs";
+import { app_main_latest } from "../../../love/public/src/app_main_latest.mjs";
 import { app_name_staging } from "../../../love/public/src/app_name_staging.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_new_step_3_generic } from "../../../love/public/src/app_new_step_3_generic.mjs";

@@ -1,4 +1,4 @@
-import { function_exists_not_assert } from "../../../karate_code/public/src/function_exists_not_assert.mjs";
+import { function_exists_not_assert } from "../../../love/public/src/function_exists_not_assert.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
