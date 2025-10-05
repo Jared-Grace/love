@@ -1,4 +1,3 @@
-import { html_script } from "../../../love/public/src/html_script.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -15,7 +14,6 @@ export async function firebase_storage_function_run(f_name, version_get) {
   let call = js_code_call_statement(f_name);
   let joined = list_join_newline([call, code]);
   if (browser_is()) {
-    html_script(joined);
     eval(joined);
     return;
   }
