@@ -2668,9 +2668,9 @@
   "o n",
   "s exists",
   "s main",
-  "ps",
   "fws cr last",
   "s last,replace",
-  "s last"
+  "s last",
+  "ps"
  ]
 }
