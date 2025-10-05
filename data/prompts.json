@@ -2690,7 +2690,6 @@
   "firebase_admin_get",
   "o ff",
   "s unalias",
-  "ff s3",
   "s3a",
   "fd sandbox_3_a",
   "s repo,path",
@@ -2698,6 +2697,7 @@
   "repo_path love",
   "s path,re",
   "p",
-  "np"
+  "np",
+  "ff s3"
  ]
 }
