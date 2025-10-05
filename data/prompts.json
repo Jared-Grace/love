@@ -2624,7 +2624,6 @@
   "s prefix",
   "s without",
   "msa email_verify",
-  "o s3",
   "s3",
   "s screens",
   "fs app_karate_screen_input",
@@ -2658,6 +2657,7 @@
   "as log",
   "a lkp log_keep",
   "p",
-  "mr"
+  "mr",
+  "o s3"
  ]
 }
