@@ -2695,6 +2695,7 @@
   "s unalias",
   "ff s3",
   "s3a",
-  "fd sandbox_3_a"
+  "fd sandbox_3_a",
+  "s repo,path"
  ]
 }
