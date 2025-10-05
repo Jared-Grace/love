@@ -1,3 +1,4 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
@@ -22,6 +23,7 @@ import { keyboard_type_delay } from "../../../love/public/src/keyboard_type_dela
 export async function messenger_reply() {
   marker("1");
   async function lambda2(page) {
+    await sleep(ms);
     let messages_urls = null;
     await messenger_reply_messages_urls_transform(transform_inner);
     function transform_inner(mu) {
