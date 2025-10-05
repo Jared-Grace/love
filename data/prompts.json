@@ -2692,6 +2692,7 @@
   "ff s3",
   "s3a",
   "urg",
-  "firebase_service_account"
+  "firebase_service_account",
+  "firebase_storage_url_project"
  ]
 }
