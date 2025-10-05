@@ -2594,7 +2594,6 @@
   "as rename",
   "as rr",
   "o o",
-  "np",
   "rr app_karate_button_screen_uncolored _screen_ _",
   "s flow",
   "s invoke",
@@ -2698,6 +2697,7 @@
   "s repo,path",
   "user_repo_path",
   "repo_path love",
-  "s path,re"
+  "s path,re",
+  "np"
  ]
 }
