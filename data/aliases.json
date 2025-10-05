@@ -221,6 +221,7 @@
   "rrl": "function_rename_replace_last",
   "lto": "list_to",
   "lkp": "log_keep",
-  "cr": "function_copy_replace"
+  "cr": "function_copy_replace",
+  "crl": "function_copy_replace_last"
  }
 }
