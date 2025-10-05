@@ -1854,7 +1854,6 @@
   "rs sandbox_4 a",
   "o rs",
   "n sandbox",
-  "o s4",
   "s digit",
   "string_starts_with_digit tt",
   "string_starts_with_digit 5t",
@@ -2703,6 +2702,7 @@
   "user_repo_get",
   "o km",
   "km",
-  "u s4"
+  "u s4",
+  "o s4"
  ]
 }
