@@ -12,6 +12,5 @@ export async function firebase_storage_function_run(f_name, version_get) {
   let code = await firebase_storage_download_property(destination, "code");
   let call = js_code_call_statement(f_name);
   let joined = list_join_newline([call, code]);
-  const fn = new Function(joined);
-  fn();
+  eval(joined);
 }
