@@ -2656,6 +2656,7 @@
   "p",
   "messenger_reply",
   "n sleep_forever",
-  "mr"
+  "mr",
+  "as log"
  ]
 }
