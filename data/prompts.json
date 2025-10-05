@@ -2629,7 +2629,6 @@
   "s assert",
   "cs assert_message get",
   "fw assert_message_get assert_json_get",
-  "km",
   "bible_verse_grace 2 Corinthians 7:10",
   "s messenger",
   "o messenger_reply",
@@ -2699,6 +2698,7 @@
   "ff s3",
   "p",
   "fd s3a",
-  "s sand"
+  "s sand",
+  "km"
  ]
 }
