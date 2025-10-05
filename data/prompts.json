@@ -1816,7 +1816,6 @@
   "s ps",
   "ev ur,en MAT01 1",
   "s books",
-  "ebible_version_books engbsb",
   "fws ebible_version_books upload",
   "ev en,lug EZK16:36",
   "o ev",
@@ -2652,6 +2651,7 @@
   "a l2 list_to",
   "a lto list_to",
   "p",
-  "bible_verse_grace 2 Corinthians 7:10"
+  "bible_verse_grace 2 Corinthians 7:10",
+  "ebible_version_books engbsb"
  ]
 }
