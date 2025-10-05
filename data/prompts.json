@@ -2213,7 +2213,6 @@
   "function_exists sb",
   "u rs",
   "n test",
-  "s exists",
   "is function_name_to_path_unalias",
   "function_name_to_path_unalias test",
   "is function_exists_inner",
@@ -2670,6 +2669,7 @@
   "u cr",
   "ps",
   "o fws",
-  "o n"
+  "o n",
+  "s exists"
  ]
 }
