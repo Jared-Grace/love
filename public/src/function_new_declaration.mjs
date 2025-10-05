@@ -1,6 +1,5 @@
+import { function_exists_not } from "../../../karate_code/public/src/function_exists_not.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
@@ -14,9 +13,8 @@ import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
   let f_name = js_declaration_name(declaration);
-  let { exists } = await function_exists(f_name);
-  let n = not(exists);
-  assert(b);
+  let n = await function_exists_not(f_name);
+  assert(n);
   const f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
