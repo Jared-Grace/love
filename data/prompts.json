@@ -2358,7 +2358,6 @@
   "de app_karate_home",
   "msa home",
   "is app_main",
-  "s main",
   "is server",
   "is function_import",
   "is function_run",
@@ -2660,6 +2659,7 @@
   "as deploy",
   "ff sandbox_3",
   "s firebase",
-  "is firebase_storage_download_json"
+  "is firebase_storage_download_json",
+  "s main"
  ]
 }
