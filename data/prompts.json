@@ -2677,7 +2677,8 @@
   "s staging",
   "n sandbox_3_a",
   "s main",
+  "ff s3",
   "sandbox_3_a",
-  "ff s3"
+  "s run,firebase"
  ]
 }
