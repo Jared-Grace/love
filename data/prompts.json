@@ -2694,11 +2694,11 @@
   "user_repo_path",
   "repo_path love",
   "s path,re",
-  "p",
   "np",
   "s3a",
   "o s3",
   "ff s3",
+  "p",
   "fd s3a"
  ]
 }
