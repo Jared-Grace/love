@@ -2663,6 +2663,7 @@
   "s main",
   "s sandbox",
   "n sandbox_4",
-  "fws app_main production"
+  "fws app_main production",
+  "s production"
  ]
 }
