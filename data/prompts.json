@@ -2406,7 +2406,6 @@
   "s font",
   "s focus",
   "s element,get",
-  "s firebase",
   "command_line dir",
   "firebase_deploy",
   "as firebase_deploy",
@@ -2659,6 +2658,7 @@
   "mr",
   "o s3",
   "as deploy",
-  "ff sandbox_3"
+  "ff sandbox_3",
+  "s firebase"
  ]
 }
