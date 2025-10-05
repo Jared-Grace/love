@@ -2328,7 +2328,6 @@
   "function_alias_add_generic add",
   "o firebase_storage_url_project",
   "repo_path a",
-  "urs l",
   "is js_identifier_unique",
   "urs k",
   "fdf app_karate_main",
@@ -2691,6 +2690,7 @@
   "is firebase_service_account",
   "is firebase_admin_get",
   "is firebase_admin",
-  "is firebase_bucket"
+  "is firebase_bucket",
+  "urs l"
  ]
 }
