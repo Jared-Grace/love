@@ -2064,7 +2064,6 @@
   "as copy",
   "a flc file_copy",
   "data_backup",
-  "o n",
   "db",
   "a fld file_delete",
   "t",
@@ -2667,9 +2666,10 @@
   "a cr function_copy_replace",
   "fws last cr",
   "fws cr last",
-  "o fws",
   "s function_copy_replace",
   "u cr",
-  "ps"
+  "ps",
+  "o fws",
+  "o n"
  ]
 }
