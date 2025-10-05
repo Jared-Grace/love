@@ -8,6 +8,6 @@ export async function bible_verse_grace(reference) {
   let joined = list_join_space(args);
   let v = await ebible_references_parse_lines(["cebulb", "tglulb"], [joined]);
   let mapped = list_map_property(v, "text");
-  return mapped;
+  return ljn;
   log(v);
 }
