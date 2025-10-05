@@ -7,8 +7,10 @@ import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { sleep } from "./sleep.mjs";
 export async function messenger_reply_messages(page, url) {
   await page.goto(url);
+  await sleep(10000);
   await messenger_reply_messages_urls_add(url);
   await messenger_reply_wait(page);
   let conversation = await page.$(
