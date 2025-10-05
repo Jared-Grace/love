@@ -2704,6 +2704,7 @@
   "u s4",
   "o s4",
   "s let",
-  "n js_interpreter"
+  "n js_interpreter",
+  "js_interpreter"
  ]
 }
