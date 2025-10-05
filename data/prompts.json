@@ -2000,7 +2000,6 @@
   "s git,rename",
   "n git_repo_rename",
   "fws git_repo_rename normalize",
-  "s replace",
   "git_repo_rename_normalize karate-code",
   "grrn Jared-Grace karate-code",
   "n repos",
@@ -2666,6 +2665,7 @@
   "s production",
   "s firebase_deploy_function_destination_production",
   "s firebase_deploy_function_destination_",
-  "u cr"
+  "u cr",
+  "s replace"
  ]
 }
