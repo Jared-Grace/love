@@ -2664,12 +2664,12 @@
   "fws c replace",
   "a cr function_copy_replace",
   "fws last cr",
-  "fws cr last",
   "s function_copy_replace",
   "u cr",
   "o fws",
   "o n",
   "s exists",
-  "ps"
+  "ps",
+  "fws cr last"
  ]
 }
