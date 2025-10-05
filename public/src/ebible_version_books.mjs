@@ -20,8 +20,8 @@ export async function ebible_version_books(bible_folder) {
   }
   const n = ebible_class_new();
   let o = ebible_class_old();
-  let v = ebible_class_apocrypha();
-  let classes = list_join_comma_space([o, v, n]);
+  let a = ebible_class_apocrypha();
+  let classes = list_join_comma_space([o, a, n]);
   let books = await ebible_version_books_testament(bible_folder, classes);
   return books;
 }
