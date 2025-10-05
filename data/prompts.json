@@ -2656,8 +2656,8 @@
   "p",
   "messenger_reply",
   "n sleep_forever",
-  "mr",
   "as log",
-  "a lkp log_keep"
+  "a lkp log_keep",
+  "mr"
  ]
 }
