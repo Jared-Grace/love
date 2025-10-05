@@ -13,7 +13,7 @@ export async function function_import(f_name) {
   let { f_path: f } = await function_name_to_path_search(unaliased);
   let previous = folder_previous();
   const f_path = path_join([__dirname, previous, previous, f]);
-  let v = await path_resolve(f);
+  let v = await path_resolve([f]);
   log({
     f_path,
     __dirname,
