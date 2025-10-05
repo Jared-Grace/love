@@ -4,5 +4,6 @@ export function list_is_assert(list) {
   let result = list_is(list);
   assert_json(result, {
     list,
+    result,
   });
 }
