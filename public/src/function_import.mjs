@@ -1,6 +1,4 @@
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { folder_previous } from "./folder_previous.mjs";
@@ -12,14 +10,7 @@ export async function function_import(f_name) {
   let { unaliased } = await function_name_unalias(f_name);
   let { f_path: f } = await function_name_to_path_search(unaliased);
   let previous = folder_previous();
-  const f_path = path_join([__dirname, previous, previous, f]);
-  let v = await path_resolve([f]);
-  log({
-    f_path,
-    __dirname,
-    f,
-    v,
-  });
+  let f_path = await path_resolve(f);
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
   if (typeof imported_fn !== "function") {
