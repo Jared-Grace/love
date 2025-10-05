@@ -3,8 +3,12 @@ import { list_is } from "../../../love/public/src/list_is.mjs";
 export function list_is_assert(list) {
   let result = list_is(list);
   let type = typeof list;
-  assert_json_get(result, ()=>({
-    type,
-  }));
+  function lambda() {
+    let v = {
+      type,
+    };
+    return v;
+  }
+  assert_json_get(result, lambda);
   return;
 }
