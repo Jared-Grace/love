@@ -4,9 +4,6 @@ import { function_name_to_path_search } from "../../../love/public/src/function_
 import { folder_previous } from "./folder_previous.mjs";
 export async function function_import(f_name) {
   const { fileURLToPath } = await import("url");
-  const path = await import("path");
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
   let { unaliased } = await function_name_unalias(f_name);
   let { f_path: f } = await function_name_to_path_search(unaliased);
   let previous = folder_previous();
