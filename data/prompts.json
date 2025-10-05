@@ -2639,7 +2639,6 @@
   "as log",
   "a lkp log_keep",
   "mr",
-  "o s3",
   "as deploy",
   "ff sandbox_3",
   "s firebase",
@@ -2699,6 +2698,7 @@
   "np",
   "s3a",
   "ff s3",
-  "fd s3a"
+  "fd s3a",
+  "o s3"
  ]
 }
