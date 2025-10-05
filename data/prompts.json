@@ -2412,7 +2412,6 @@
   "apps_get",
   "s file,html",
   "html_index_generate karate",
-  "o ff",
   "c firebase_deploy_function_destination_version firebase_deploy_function_destination_production",
   "r firebase_deploy_function_destination_version firebase_deploy_function_destination_latest",
   "ff app_karate_main",
@@ -2679,7 +2678,8 @@
   "sandbox_3_a",
   "s run,firebase",
   "p",
+  "ff s3",
   "s3a",
-  "ff s3"
+  "o ff"
  ]
 }
