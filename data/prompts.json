@@ -2685,6 +2685,7 @@
   "s suffix",
   "o function_rename_suffix_add_generic",
   "is function_rename_suffix_add_generic",
-  "ps"
+  "ps",
+  "a rp function_rename_prefix_add"
  ]
 }
