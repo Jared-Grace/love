@@ -2690,6 +2690,7 @@
   "rp repo_firebase_service_account_get user",
   "is firebase_service_account",
   "is firebase_admin_get",
-  "is firebase_admin"
+  "is firebase_admin",
+  "is firebase_bucket"
  ]
 }
