@@ -13,10 +13,12 @@ export async function function_import(f_name) {
   let { f_path: f } = await function_name_to_path_search(unaliased);
   let previous = folder_previous();
   const f_path = path_join([__dirname, previous, previous, f]);
+  let v = await path_resolve(f);
   log({
     f_path,
     __dirname,
     f,
+    v,
   });
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
@@ -26,5 +28,4 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
-  let v = await path_resolve(paths);
 }
