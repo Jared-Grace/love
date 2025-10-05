@@ -16,7 +16,7 @@ import { string_and_empty_not_is_assert } from "../../../love/public/src/string_
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_new_step_3_generic(
   name,
-  version_get,
+  fn_call,
   f_name_transformed,
 ) {
   marker("1");
