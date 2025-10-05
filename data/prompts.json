@@ -2642,7 +2642,6 @@
   "cs assert_message get",
   "fw assert_message_get assert_json_get",
   "km",
-  "ps",
   "bible_verse_grace 2 Corinthians 7:10",
   "s messenger",
   "o messenger_reply",
@@ -2667,6 +2666,8 @@
   "u cr",
   "s replace",
   "fws c replace",
-  "a cr function_copy_replace"
+  "a cr function_copy_replace",
+  "fws last cr",
+  "ps"
  ]
 }
