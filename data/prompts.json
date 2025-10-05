@@ -2644,6 +2644,7 @@
   "s index,last",
   "s index_of",
   "u cr",
-  "fws c replace"
+  "fws c replace",
+  "s bible,version"
  ]
 }
