@@ -2647,13 +2647,13 @@
   "n bible_verse_grace",
   "a l2 list_to",
   "a lto list_to",
-  "p",
   "ebible_version_books engbsb",
   "s assert",
   "cs assert_message get",
   "fw assert_message_get assert_json_get",
   "km",
   "ps",
+  "p",
   "bible_verse_grace 2 Corinthians 7:10"
  ]
 }
