@@ -12,7 +12,7 @@ export async function messenger_reply_messages(page, url) {
   await page.goto(url);
   await messenger_reply_messages_urls_add(url);
   await messenger_reply_wait(page);
-  let v = await sleep_forever();
+  await sleep_forever();
   let conversation = await page.$(
     '[aria-label^="Messages in conversation with"]',
   );
