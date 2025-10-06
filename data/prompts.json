@@ -2723,6 +2723,7 @@
   "n storage_local_keys",
   "s range",
   "cs each_range index",
-  "s starts,with"
+  "s starts,with",
+  "fw list_filter_starts_with storage_local_keys_starts_with"
  ]
 }
