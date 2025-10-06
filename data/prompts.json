@@ -2423,7 +2423,6 @@
   "c html_name_to_path_dev html_name_to_path_staging",
   "c html_update_public html_update_staging",
   "function_name_repo_path_combine app_karate_staging index.html",
-  "html_update_staging karate",
   "html_name_to_path_staging test",
   "fb",
   "s email",
@@ -2718,6 +2717,7 @@
   "o html_new",
   "r html_update html_app_update",
   "html_app_update karate",
-  "s staging"
+  "s staging",
+  "html_update_staging karate"
  ]
 }
