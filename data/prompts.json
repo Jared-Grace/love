@@ -2718,6 +2718,7 @@
   "r html_update html_app_update",
   "html_app_update karate",
   "s staging",
-  "html_update_staging karate"
+  "html_update_staging karate",
+  "as firebase"
  ]
 }
