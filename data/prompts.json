@@ -2093,7 +2093,6 @@
   "user_repo_set love",
   "repos",
   "n repo_acronym_set",
-  "s data",
   "s lambda",
   "c user_repo_set user_repo_get",
   "repo_acronym_set l",
@@ -2707,6 +2706,7 @@
   "urs k",
   "oa karate",
   "o app_karate_main",
-  "s data,get"
+  "s data,get",
+  "s data"
  ]
 }
