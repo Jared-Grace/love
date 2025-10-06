@@ -2571,7 +2571,6 @@
   "as rr",
   "o o",
   "rr app_karate_button_screen_uncolored _screen_ _",
-  "s invoke",
   "s storage,set",
   "fs app_karate_computer_save_generic",
   "pn button_next app_karate_button_next",
@@ -2737,6 +2736,7 @@
   "u ac",
   "o ac",
   "ar each_object",
-  "a eo each_object"
+  "a eo each_object",
+  "s invoke"
  ]
 }
