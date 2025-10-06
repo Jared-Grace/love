@@ -2496,7 +2496,6 @@
   "s return,add",
   "as firebase,karate",
   "s search",
-  "s storage,local",
   "s initialize",
   "n storage_local_disable",
   "c global_function_initialize global_function_exists",
@@ -2720,6 +2719,7 @@
   "fk",
   "fpk",
   "s flow",
-  "s screen"
+  "s screen",
+  "s storage,local"
  ]
 }
