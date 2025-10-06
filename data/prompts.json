@@ -2729,6 +2729,7 @@
   "s key,stor",
   "n storage_local_keys_global",
   "fws storage_local_keys_global starts_with",
-  "n storage_local_keys_global_app"
+  "n storage_local_keys_global_app",
+  "s stor,app"
  ]
 }
