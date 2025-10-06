@@ -2719,6 +2719,7 @@
   "s staging",
   "html_update_staging karate",
   "as firebase",
-  "fb"
+  "fb",
+  "as karate"
  ]
 }
