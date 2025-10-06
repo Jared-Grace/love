@@ -2000,7 +2000,6 @@
   "r folder_read folder_read_files",
   "n folder_read",
   "n git_repo_clone",
-  "s each",
   "s js,type",
   "s js,each",
   "data_identifiers_search a",
@@ -2732,6 +2731,7 @@
   "s enabled",
   "s _app",
   "s storage_local",
-  "s diction"
+  "s diction",
+  "s each"
  ]
 }
