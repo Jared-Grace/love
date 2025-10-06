@@ -90,7 +90,6 @@
   "n function_dependencies_code_copy",
   "s clipboard",
   "i function_dependencies_code_copy",
-  "u ac",
   "a ad function_alias_delete",
   "c function_alias_change function_alias_replace",
   "a ar function_alias_replace",
@@ -2736,6 +2735,7 @@
   "",
   "a eo each_object",
   "ac eo each_object",
-  "u eo"
+  "u eo",
+  "u ac"
  ]
 }
