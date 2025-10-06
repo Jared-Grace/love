@@ -2727,6 +2727,7 @@
   "fw list_filter_starts_with storage_local_keys_starts_with",
   "fw storage_local_keys_starts_with storage_local_keys_app",
   "s key,stor",
-  "n storage_local_keys_global"
+  "n storage_local_keys_global",
+  "fws storage_local_keys_global starts_with"
  ]
 }
