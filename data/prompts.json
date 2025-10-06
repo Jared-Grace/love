@@ -2722,6 +2722,7 @@
   "s storage,local",
   "n storage_local_keys",
   "s range",
-  "cs each_range index"
+  "cs each_range index",
+  "s starts,with"
  ]
 }
