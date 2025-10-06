@@ -2731,6 +2731,7 @@
   "n storage_local_keys_global_app",
   "s stor,app",
   "s enabled",
-  "s _app"
+  "s _app",
+  "s storage_local"
  ]
 }
