@@ -224,6 +224,7 @@
   "cr": "function_copy_replace",
   "crl": "function_copy_replace_last",
   "rp": "function_rename_prefix_add",
-  "hp": "html_p"
+  "hp": "html_p",
+  "eo": "import"
  }
 }
