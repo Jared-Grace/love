@@ -2721,6 +2721,7 @@
   "s screen",
   "s storage,local",
   "n storage_local_keys",
-  "s range"
+  "s range",
+  "cs each_range index"
  ]
 }
