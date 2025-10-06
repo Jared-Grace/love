@@ -2711,6 +2711,7 @@
   "s string,index",
   "n string_index_of_last",
   "u hp",
-  "a hp html_p"
+  "a hp html_p",
+  "s ha"
  ]
 }
