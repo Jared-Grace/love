@@ -2510,7 +2510,6 @@
   "s au",
   "s data_get",
   "is test",
-  "s enabled",
   "s karate",
   "s move",
   "as repo,move",
@@ -2730,6 +2729,7 @@
   "n storage_local_keys_global",
   "fws storage_local_keys_global starts_with",
   "n storage_local_keys_global_app",
-  "s stor,app"
+  "s stor,app",
+  "s enabled"
  ]
 }
