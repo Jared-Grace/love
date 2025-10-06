@@ -2708,6 +2708,7 @@
   "s data,get",
   "s data",
   "s last",
-  "s string,index"
+  "s string,index",
+  "n string_index_of_last"
  ]
 }
