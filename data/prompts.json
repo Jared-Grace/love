@@ -2331,7 +2331,6 @@
   "html_new karate",
   "s code,assign",
   "s brace",
-  "oa karate",
   "s step",
   "s html",
   "de html_update_generic",
@@ -2706,6 +2705,7 @@
   "n js_interpreter",
   "js_interpreter",
   "s4",
-  "urs k"
+  "urs k",
+  "oa karate"
  ]
 }
