@@ -2740,6 +2740,7 @@
   "s invoke",
   "fws lambda_invoke if_function",
   "u fi",
-  "s dollar,new"
+  "s dollar,new",
+  "nd in"
  ]
 }
