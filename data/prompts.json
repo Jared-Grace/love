@@ -2424,7 +2424,6 @@
   "c html_update_public html_update_staging",
   "function_name_repo_path_combine app_karate_staging index.html",
   "html_name_to_path_staging test",
-  "fb",
   "s email",
   "as screen",
   "n repo_functions_move_if_starts_with_not",
@@ -2719,6 +2718,7 @@
   "html_app_update karate",
   "s staging",
   "html_update_staging karate",
-  "as firebase"
+  "as firebase",
+  "fb"
  ]
 }
