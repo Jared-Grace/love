@@ -2326,7 +2326,6 @@
   "s app,main",
   "n app_main",
   "c global_function_property_async global_function_property",
-  "html_new karate",
   "s code,assign",
   "s brace",
   "s step",
@@ -2715,6 +2714,7 @@
   "p",
   "fk",
   "s html",
-  "o an"
+  "o an",
+  "html_new karate"
  ]
 }
