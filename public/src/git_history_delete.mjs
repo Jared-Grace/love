@@ -1,3 +1,4 @@
+import { git_push } from "../../../love/public/src/git_push.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
@@ -5,6 +6,7 @@ import { command_line_git } from "../../../love/public/src/command_line_git.mjs"
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function git_history_delete(user, repo, f_path) {
+  await git_push();
   marker("1");
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
   ("make sure this is run from the correct directory");
