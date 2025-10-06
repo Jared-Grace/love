@@ -2497,7 +2497,6 @@
   "s return,add",
   "as firebase,karate",
   "s search",
-  "fpk",
   "s storage,local",
   "s initialize",
   "n storage_local_disable",
@@ -2720,6 +2719,7 @@
   "html_update_staging karate",
   "as firebase",
   "fb",
-  "as karate"
+  "as karate",
+  "fpk"
  ]
 }
