@@ -2714,6 +2714,7 @@
   "a hp html_p",
   "s ha",
   "u ha",
-  "u crl"
+  "u crl",
+  "crl html_input_email text"
  ]
 }
