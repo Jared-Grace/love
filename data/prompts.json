@@ -2724,6 +2724,7 @@
   "s range",
   "cs each_range index",
   "s starts,with",
-  "fw list_filter_starts_with storage_local_keys_starts_with"
+  "fw list_filter_starts_with storage_local_keys_starts_with",
+  "fw storage_local_keys_starts_with storage_local_keys_app"
  ]
 }
