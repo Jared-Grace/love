@@ -6,10 +6,8 @@ import { uuid } from "../../../love/public/src/uuid.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function git_history_delete(user, repo, f_path) {
   marker("1");
-  comment(
-    "make sure all changes are in repo first like pushing; may need to coordinate with other users",
-  );
-  comment("make sure this is run from the correct directory");
+  ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
+  ("make sure this is run from the correct directory");
   const url = git_repo_url(user, repo);
   const repo_folder = repo + "-clean-" + (await uuid()) + ".git";
   let stdout = await command_line_git(
