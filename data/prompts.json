@@ -2648,7 +2648,6 @@
   "a crl function_copy_replace_last",
   "crl app_main_production latest",
   "is app_new_step_3_generic",
-  "s staging",
   "n sandbox_3_a",
   "s main",
   "sandbox_3_a",
@@ -2718,6 +2717,7 @@
   "urg",
   "o html_new",
   "r html_update html_app_update",
-  "html_app_update karate"
+  "html_app_update karate",
+  "s staging"
  ]
 }
