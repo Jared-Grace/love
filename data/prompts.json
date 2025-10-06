@@ -2159,7 +2159,6 @@
   "o s5",
   "o s5_inner",
   "s function,new",
-  "",
   "export async function user_repo_get() {",
   "s git",
   "si git_acp_folder",
@@ -2733,6 +2732,9 @@
   "s storage_local",
   "s diction",
   "s each",
-  "a eo import { each } from \"../../../love/public/src/each.mjs\";"
+  "a eo import { each } from \"../../../love/public/src/each.mjs\";",
+  "",
+  "a eo each_object",
+  "u eo"
  ]
 }
