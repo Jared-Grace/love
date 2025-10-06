@@ -2158,7 +2158,6 @@
   "o s5_inner",
   "s function,new",
   "export async function user_repo_get() {",
-  "s git",
   "si git_acp_folder",
   "is git_acp_folder",
   "is git_acp_call_folder",
@@ -2743,6 +2742,7 @@
   "s dollar,new",
   "nd in",
   "s _ie",
-  "s keys"
+  "s keys",
+  "s git"
  ]
 }
