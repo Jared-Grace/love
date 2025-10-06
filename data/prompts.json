@@ -2706,6 +2706,7 @@
   "js_interpreter",
   "s4",
   "urs k",
-  "oa karate"
+  "oa karate",
+  "o app_karate_main"
  ]
 }
