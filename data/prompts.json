@@ -2596,7 +2596,6 @@
   "s js,ide",
   "s save",
   "s emoji",
-  "fk",
   "s prefix",
   "s without",
   "msa email_verify",
@@ -2715,6 +2714,7 @@
   "u crl",
   "crl html_input_email text",
   "s screens",
-  "u fk"
+  "u fk",
+  "fk"
  ]
 }
