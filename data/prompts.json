@@ -2717,6 +2717,7 @@
   "html_new karate",
   "urg",
   "o html_new",
-  "r html_update html_app_update"
+  "r html_update html_app_update",
+  "html_app_update karate"
  ]
 }
