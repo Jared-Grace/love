@@ -2735,6 +2735,7 @@
   "a eo import { each } from \"../../../love/public/src/each.mjs\";",
   "",
   "a eo each_object",
-  "u eo"
+  "u eo",
+  "ac eo each_object"
  ]
 }
