@@ -2720,6 +2720,7 @@
   "fpk",
   "s flow",
   "s screen",
-  "s storage,local"
+  "s storage,local",
+  "n storage_local_keys"
  ]
 }
