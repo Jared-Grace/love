@@ -2710,6 +2710,7 @@
   "s last",
   "s string,index",
   "n string_index_of_last",
-  "u hp"
+  "u hp",
+  "a hp html_p"
  ]
 }
