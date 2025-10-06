@@ -17,7 +17,10 @@ export async function git_history_delete(user, repo, f_path) {
   );
   process.chdir(repo_folder);
   let stdout3 = await command_line("dir");
-  log(message);
+  log({
+    stdout3,
+  });
+  return;
   let stdout2 = await command_line_git("remote add origin " + url);
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
