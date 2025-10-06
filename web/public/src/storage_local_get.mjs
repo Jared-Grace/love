@@ -8,6 +8,9 @@ import { storage_local_specify_get } from "../../../love/public/src/storage_loca
 import { marker } from "../../../love/public/src/marker.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
 export function storage_local_get(app_fn, key) {
+  log({
+    key,
+  });
   marker("1");
   let storage_local_key = storage_local_key_get(app_fn, key);
   if (storage_local_enabled()) {
@@ -27,9 +30,5 @@ export function storage_local_get(app_fn, key) {
     storage_local_set,
     storage_local_key,
   );
-  log({
-    value,
-    key,
-  });
   return value;
 }
