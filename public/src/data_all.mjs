@@ -13,6 +13,8 @@ export async function data_all(file_path) {
   let data = {};
   let d_path = data_path();
   if (equal(file_path, d_path)) {
+    await data_generate(data);
+    return;
     async function lambda2() {
       await data_generate(data);
       return data;
