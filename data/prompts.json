@@ -2579,7 +2579,6 @@
   "as rr",
   "o o",
   "rr app_karate_button_screen_uncolored _screen_ _",
-  "s flow",
   "s invoke",
   "s storage,set",
   "fs app_karate_computer_save_generic",
@@ -2720,6 +2719,7 @@
   "as karate",
   "fk",
   "fpk",
-  "s screen"
+  "s screen",
+  "s flow"
  ]
 }
