@@ -1,3 +1,4 @@
+import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -16,7 +17,8 @@ export async function firebase_storage_function_run(f_name, version_get) {
   );
   let code = await firebase_storage_download_property(destination, "code");
   let call = js_code_call_statement(f_name);
-  let joined = list_join_newline([call, code]);
+  let global_init = js_code_global_init();
+  let joined = list_join_newline([global_init, call, code]);
   if (browser_is()) {
     let body = html_document_body();
     let component = html_element(body, "script");
