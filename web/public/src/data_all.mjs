@@ -14,12 +14,13 @@ export async function data_all(file_path) {
   let d_path = data_path();
   if (equal(file_path, d_path)) {
     await data_generate(data);
-    return;
-    async function lambda2() {
-      await data_generate(data);
-      return data;
+    if (false) {
+      async function lambda2() {
+        await data_generate(data);
+        return data;
+      }
+      data = await global_function_property_async(data_all, d_path, lambda2);
     }
-    data = await global_function_property_async(data_all, d_path, lambda2);
   } else {
     let exists = await file_exists(file_path);
     if (not(exists)) {
