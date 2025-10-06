@@ -1,5 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
@@ -16,11 +14,6 @@ export async function git_history_delete(user, repo, f_path) {
     "clone --mirror " + url + " " + repo_folder,
   );
   process.chdir(repo_folder);
-  let stdout3 = await command_line("dir");
-  log({
-    stdout3,
-  });
-  return;
   let stdout2 = await command_line_git("remote add origin " + url);
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
