@@ -2707,7 +2707,6 @@
   "s screens",
   "u fk",
   "p",
-  "fk",
   "s html",
   "o an",
   "html_new karate",
@@ -2720,6 +2719,7 @@
   "as firebase",
   "fb",
   "as karate",
-  "fpk"
+  "fpk",
+  "fk"
  ]
 }
