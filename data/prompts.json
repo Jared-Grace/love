@@ -2226,7 +2226,6 @@
   "n t2",
   "c functions_paths functions_names_to_paths",
   "s dictionary",
-  "s diction",
   "n reduce",
   "s pair",
   "is js_imports_paths_fix",
@@ -2732,6 +2731,7 @@
   "s stor,app",
   "s enabled",
   "s _app",
-  "s storage_local"
+  "s storage_local",
+  "s diction"
  ]
 }
