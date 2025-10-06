@@ -1082,7 +1082,6 @@
   "c marker_above marker_below",
   "n add",
   "fws add 1",
-  "s data,get",
   "mc dpg",
   "s ident,repl",
   "irs functions",
@@ -2707,6 +2706,7 @@
   "s4",
   "urs k",
   "oa karate",
-  "o app_karate_main"
+  "o app_karate_main",
+  "s data,get"
  ]
 }
