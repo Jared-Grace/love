@@ -2736,6 +2736,7 @@
   "ac eo each_object",
   "u eo",
   "u ac",
-  "o ac"
+  "o ac",
+  "ar each_object"
  ]
 }
