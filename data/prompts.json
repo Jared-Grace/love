@@ -2738,6 +2738,7 @@
   "ar each_object",
   "a eo each_object",
   "s invoke",
-  "fws lambda_invoke if_function"
+  "fws lambda_invoke if_function",
+  "u fi"
  ]
 }
