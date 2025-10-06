@@ -2330,7 +2330,6 @@
   "s code,assign",
   "s brace",
   "s step",
-  "s html",
   "de html_update_generic",
   "html_update_dev karate",
   "is app_replace_screens",
@@ -2715,6 +2714,7 @@
   "s screens",
   "u fk",
   "p",
-  "fk"
+  "fk",
+  "s html"
  ]
 }
