@@ -2651,7 +2651,6 @@
   "s exists",
   "fws cr last",
   "s last,replace",
-  "s last",
   "a crl function_copy_replace_last",
   "crl app_main_production latest",
   "is app_new_step_3_generic",
@@ -2707,6 +2706,7 @@
   "oa karate",
   "o app_karate_main",
   "s data,get",
-  "s data"
+  "s data",
+  "s last"
  ]
 }
