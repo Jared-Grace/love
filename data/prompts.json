@@ -2602,7 +2602,6 @@
   "s without",
   "msa email_verify",
   "s3",
-  "s screens",
   "fs app_karate_screen_input",
   "pnd input_get",
   "fs app_karate_data_get",
@@ -2715,6 +2714,7 @@
   "s ha",
   "u ha",
   "u crl",
-  "crl html_input_email text"
+  "crl html_input_email text",
+  "s screens"
  ]
 }
