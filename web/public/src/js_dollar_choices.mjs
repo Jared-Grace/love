@@ -1,3 +1,4 @@
+import { js_dollar_in } from "../../../karate_code/public/src/js_dollar_in.mjs";
 import { js_dollar_aa } from "../../../love/public/src/js_dollar_aa.mjs";
 import { js_dollar_ine } from "../../../love/public/src/js_dollar_ine.mjs";
 import { js_dollar_ib } from "../../../love/public/src/js_dollar_ib.mjs";
@@ -81,6 +82,10 @@ export function js_dollar_choices() {
     {
       name: "aa",
       fn: js_dollar_aa,
+    },
+    {
+      name: "in",
+      fn: js_dollar_in,
     },
   ];
   return choices;
