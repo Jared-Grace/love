@@ -225,6 +225,6 @@
   "crl": "function_copy_replace_last",
   "rp": "function_rename_prefix_add",
   "hp": "html_p",
-  "eo": "import"
+  "each_object": "import"
  }
 }
