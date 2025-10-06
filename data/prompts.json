@@ -2707,6 +2707,7 @@
   "o app_karate_main",
   "s data,get",
   "s data",
-  "s last"
+  "s last",
+  "s string,index"
  ]
 }
