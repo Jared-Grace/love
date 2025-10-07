@@ -1,3 +1,4 @@
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
@@ -17,6 +18,10 @@ export function storage_local_get(app_fn, key) {
     let result = storage_local_specify_get(storage_local_key);
     return result;
   }
+  let fn_object = global_function_initialize(fn, {});
+  log({
+    fn_object,
+  });
   let exists = global_function_property_exists(
     storage_local_set,
     storage_local_key,
