@@ -30,5 +30,6 @@ export function storage_local_get(app_fn, key) {
     storage_local_set,
     storage_local_key,
   );
+  log(message);
   return value;
 }
