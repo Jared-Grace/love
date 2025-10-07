@@ -18,7 +18,7 @@ export function storage_local_get(app_fn, key) {
     let result = storage_local_specify_get(storage_local_key);
     return result;
   }
-  let fn_object = global_function_initialize(fn, {});
+  let fn_object = global_function_initialize(storage_local_set, {});
   log({
     fn_object,
   });
