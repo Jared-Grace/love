@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
 import { emoji_email } from "../../../love/public/src/emoji_email.mjs";
@@ -30,6 +31,7 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
+  let div3 = html_div(root2);
   let button_send = app_karate_button_green(
     div,
     emoji_email() + " Send",
