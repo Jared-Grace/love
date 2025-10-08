@@ -31,6 +31,6 @@ export function app_message_main() {
   let component2 = app_karate_button_green(
     div,
     emoji_email() + " Send",
-    lambda,
+    () => {},
   );
 }
