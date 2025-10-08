@@ -1,3 +1,4 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
@@ -25,6 +26,7 @@ export function app_message_main() {
   };
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
+  let value = storage_local_get_context(context2, key);
   function lambda2(item) {}
   each(list, lambda2);
   let div = app_karate_container(root);
