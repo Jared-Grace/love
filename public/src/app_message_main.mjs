@@ -67,5 +67,6 @@ export function app_message_main() {
     let value2 = html_value_get(textarea);
     list_add(messages, value2);
     storage_local_set_context(context, property, messages);
+    refresh();
   }
 }
