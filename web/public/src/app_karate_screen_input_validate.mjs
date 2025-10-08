@@ -19,8 +19,8 @@ export function app_karate_screen_input_validate(
   div,
   div_checks,
   input,
-  checks,
   button_below,
+  checks,
 ) {
   app_karate_style_control(input);
   const border_color = app_karate_green_dark();
