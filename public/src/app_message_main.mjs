@@ -28,9 +28,10 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
+  function lambda() {}
   let component2 = app_karate_button_green(
     div,
     emoji_email() + " Send",
-    () => {},
+    lambda,
   );
 }
