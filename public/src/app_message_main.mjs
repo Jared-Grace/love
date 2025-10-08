@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
@@ -24,6 +25,7 @@ export function app_message_main() {
   };
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
+  each(list, function lambda2(item) {});
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_element(div, "textarea");
