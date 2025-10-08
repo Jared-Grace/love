@@ -31,7 +31,7 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
-  let div3 = html_div(root2);
+  let div_checks = html_div(div);
   let button_send = app_karate_button_green(
     div,
     emoji_email() + " Send",
