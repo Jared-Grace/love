@@ -15,7 +15,12 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_green_dark } from "../../../karate_code/public/src/app_karate_green_dark.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-export function app_karate_screen_input_validate(div_checks, input, checks) {
+export function app_karate_screen_input_validate(
+  div,
+  div_checks,
+  input,
+  checks,
+) {
   app_karate_style_control(input);
   const border_color = app_karate_green_dark();
   app_karate_style_control_border(input, border_color);
