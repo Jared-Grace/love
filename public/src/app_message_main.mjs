@@ -25,6 +25,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_message_main() {
   marker("1");
   const property = "messages";
+  storage_local_initialize_context(context, property, []);
   let app_fn = app_message_main;
   const root = html_document_body();
   const context = {
