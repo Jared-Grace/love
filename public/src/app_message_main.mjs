@@ -27,8 +27,8 @@ export async function app_message_main() {
   marker("1");
   const messages_property = "messages";
   let u = await uuid();
-  const user_id__property = "user_id";
-  storage_local_initialize_context(context, user_id__property, u);
+  const user_id_property = "user_id";
+  storage_local_initialize_context(context, user_id_property, u);
   let app_fn = app_message_main;
   const root = html_document_body();
   const context = {
