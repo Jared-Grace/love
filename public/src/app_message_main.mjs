@@ -1,6 +1,6 @@
+import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
@@ -47,7 +47,7 @@ export function app_message_main() {
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
   function refresh() {
     html_clear(div_messages);
-    let messages = storage_local_get_context(context, "messages");
+    let messages = storage_local_initialize_context(context, "messages", []);
     function lambda2(message) {
       let div_message = app_karate_container(div_messages);
       html_text_set(div_message, message);
