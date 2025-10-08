@@ -1,3 +1,5 @@
+import { emoji_email } from "../../../love/public/src/emoji_email.mjs";
+import { app_karate_button_green } from "../../../karate_code/public/src/app_karate_button_green.mjs";
 import { html_font_san_serif } from "../../../love/public/src/html_font_san_serif.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
@@ -26,4 +28,9 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
+  let component2 = app_karate_button_green(
+    div,
+    emoji_email() + " Send",
+    lambda,
+  );
 }
