@@ -1,3 +1,4 @@
+import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 export function html_input_email(div) {
@@ -5,6 +6,6 @@ export function html_input_email(div) {
   let input = html_input_type(div, input_type);
   html_attribute_set(input, "autocomplete", "email");
   const placeholder = "you@example.com";
-  html_attribute_set(input, "placeholder", placeholder);
+  html_placeholder(input, placeholder);
   return input;
 }
