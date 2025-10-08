@@ -23,6 +23,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_message_main() {
   marker("1");
+  const property = "messages";
   let app_fn = app_message_main;
   const root = html_document_body();
   const context = {
@@ -57,7 +58,6 @@ export function app_message_main() {
     }
     each(messages, lambda2);
   }
-  const property = "messages";
   function messages_get() {
     let value = storage_local_initialize_context(context, property, []);
     return value;
