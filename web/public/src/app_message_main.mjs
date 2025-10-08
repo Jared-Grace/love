@@ -22,4 +22,5 @@ export function app_message_main() {
   html_placeholder(textarea, "Please enter your message here");
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
+  hf;
 }
