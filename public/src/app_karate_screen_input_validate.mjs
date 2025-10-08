@@ -20,6 +20,7 @@ export function app_karate_screen_input_validate(
   div_checks,
   input,
   checks,
+  button_below,
 ) {
   app_karate_style_control(input);
   const border_color = app_karate_green_dark();
@@ -47,7 +48,7 @@ export function app_karate_screen_input_validate(
       }
     }
     each(checks, lambda);
-    app_karate_validate_style_assign(valid, [div], input, button_next);
+    app_karate_validate_style_assign(valid, [div], input, button_below);
   }
   validate();
   html_focus(input);
