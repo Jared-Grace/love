@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -30,6 +31,7 @@ export function app_message_main() {
   let messages = storage_local_get_context(context, "messages");
   function lambda2(message) {
     let div_message = app_karate_container(div_messages);
+    html_text_set(component, text);
   }
   each(list, lambda2);
   let div = app_karate_container(root);
