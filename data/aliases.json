@@ -225,6 +225,7 @@
   "crl": "function_copy_replace_last",
   "rp": "function_rename_prefix_add",
   "hp": "html_p",
-  "eo": "each_object"
+  "eo": "each_object",
+  "hf": "html_focus"
  }
 }
