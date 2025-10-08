@@ -57,14 +57,15 @@ export function app_message_main() {
     }
     each(messages, lambda2);
   }
+  const property = "messages";
   function messages_get() {
-    let value = storage_local_initialize_context(context, "messages", []);
+    let value = storage_local_initialize_context(context, property, []);
     return value;
   }
   function on_send() {
     let messages = messages_get();
     let value2 = html_value_get(textarea);
     list_add(messages, value2);
-    storage_local_set_context(context2, key, value3);
+    storage_local_set_context(context, property, messages);
   }
 }
