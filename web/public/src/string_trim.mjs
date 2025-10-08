@@ -1,4 +1,4 @@
 export function string_trim(message) {
-  let v7 = message.trim();
-  return v7;
+  let trimmed = message.trim();
+  return trimmed;
 }
