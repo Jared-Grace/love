@@ -41,7 +41,7 @@ export function app_message_main() {
   let button_send = app_karate_button_green(
     div,
     emoji_email() + " Send",
-    lambda,
+    on_send,
   );
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
@@ -58,5 +58,7 @@ export function app_message_main() {
     let value = storage_local_initialize_context(context, "messages", []);
     return value;
   }
-  function lambda() {}
+  function on_send() {
+    let messages = messages_get();
+  }
 }
