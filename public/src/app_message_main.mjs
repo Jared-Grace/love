@@ -28,12 +28,7 @@ export function app_message_main() {
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
   let div_messages = html_div(root);
-  let messages = storage_local_get_context(context, "messages");
-  function lambda2(message) {
-    let div_message = app_karate_container(div_messages);
-    html_text_set(component, text);
-  }
-  each(list, lambda2);
+  messages_refresh();
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_element(div, "textarea");
@@ -49,5 +44,13 @@ export function app_message_main() {
   );
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
+  function messages_refresh() {
+    let messages = storage_local_get_context(context, "messages");
+    function lambda2(message) {
+      let div_message = app_karate_container(div_messages);
+      html_text_set(div_message, message);
+    }
+    each(messages, lambda2);
+  }
   function lambda() {}
 }
