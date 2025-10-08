@@ -1,3 +1,4 @@
+import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
 import { emoji_email } from "../../../love/public/src/emoji_email.mjs";
 import { app_karate_button_green } from "../../../karate_code/public/src/app_karate_button_green.mjs";
@@ -29,7 +30,8 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
-  app_karate_screen_input_validate(textarea, checks);
+  let v = html_check_empty_not();
+  app_karate_screen_input_validate(textarea, [v]);
   function lambda() {}
   let component2 = app_karate_button_green(
     div,
