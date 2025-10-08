@@ -226,6 +226,7 @@
   "rp": "function_rename_prefix_add",
   "hp": "html_p",
   "eo": "each_object",
-  "hf": "html_focus"
+  "hf": "html_focus",
+  "hc": "html_clear"
  }
 }
