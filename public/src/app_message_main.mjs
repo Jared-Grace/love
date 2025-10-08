@@ -1,3 +1,4 @@
+import { uuid } from "../../../love/public/src/uuid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -22,9 +23,10 @@ import { app_karate_style_control } from "../../../karate_code/public/src/app_ka
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_message_main() {
+export async function app_message_main() {
   marker("1");
   const property = "messages";
+  let u = await uuid();
   storage_local_initialize_context(context, property, []);
   let app_fn = app_message_main;
   const root = html_document_body();
