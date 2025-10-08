@@ -12,15 +12,13 @@ import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
-import { app_karate_div } from "../../../karate_code/public/src/app_karate_div.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_green_dark } from "../../../karate_code/public/src/app_karate_green_dark.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-export function app_karate_screen_input_validate(div, input, checks) {
+export function app_karate_screen_input_validate(div_checks, input, checks) {
   app_karate_style_control(input);
   const border_color = app_karate_green_dark();
   app_karate_style_control_border(input, border_color);
-  let div_checks = app_karate_div(div);
   let ul = html_element(div_checks, "ul");
   html_style_assign(ul, {
     color: "#872121ff",
