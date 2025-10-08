@@ -1,3 +1,4 @@
+import { html_font_san_serif } from "../../../love/public/src/html_font_san_serif.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -17,6 +18,7 @@ export function app_message_main() {
     root: root,
   };
   app_replace_font_size_refresh(context);
+  html_font_san_serif(context);
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_element(div, "textarea");
