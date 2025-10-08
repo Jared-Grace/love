@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -61,6 +62,7 @@ export function app_message_main() {
   }
   function on_send() {
     let messages = messages_get();
+    let value2 = html_value_get(input);
     list_add(list, item);
   }
 }
