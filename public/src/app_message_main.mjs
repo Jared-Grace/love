@@ -57,6 +57,7 @@ export function app_message_main() {
       let div_message = app_karate_container(div_messages);
       html_style_assign(div_message, {
         width: "80%",
+        "margin-left": "auto",
       });
       html_text_set(div_message, message);
     }
