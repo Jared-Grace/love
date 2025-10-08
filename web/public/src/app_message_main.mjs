@@ -7,13 +7,12 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_message_main() {
   marker("1");
   let app_fn = app_message_main;
+  const root = html_document_body();
   const context = {
     app_fn,
-    screens,
     root: root,
   };
   app_replace_font_size_refresh(context);
-  const root = html_document_body();
   let component = html_element(root, "textarea");
   app_karate_style_control(component);
   app_karate_style_control_border(component, "gray");
