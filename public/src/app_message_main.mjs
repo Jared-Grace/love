@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -54,6 +55,7 @@ export function app_message_main() {
     let messages = messages_get();
     function lambda2(message) {
       let div_message = app_karate_container(div_messages);
+      html_style_set(b, style_key, style_value);
       html_text_set(div_message, message);
     }
     each(messages, lambda2);
