@@ -27,7 +27,9 @@ export function app_message_main() {
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
   let messages = storage_local_get_context(context, "messages");
-  function lambda2(item) {}
+  function lambda2(message) {
+    let div_message = app_karate_container(root);
+  }
   each(list, lambda2);
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
