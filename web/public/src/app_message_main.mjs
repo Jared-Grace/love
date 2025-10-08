@@ -1,3 +1,4 @@
+import { app_karate_container } from "../../../karate_code/public/src/app_karate_container.mjs";
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
@@ -13,7 +14,8 @@ export function app_message_main() {
     root: root,
   };
   app_replace_font_size_refresh(context);
-  let component = html_element(root, "textarea");
+  let div = app_karate_container(root);
+  let component = html_element(div, "textarea");
   app_karate_style_control(component);
   app_karate_style_control_border(component, "gray");
 }
