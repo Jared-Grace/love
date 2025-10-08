@@ -55,7 +55,9 @@ export function app_message_main() {
     let messages = messages_get();
     function lambda2(message) {
       let div_message = app_karate_container(div_messages);
-      html_style_assign(b, s);
+      html_style_assign(div_message, {
+        width: "80%",
+      });
       html_text_set(div_message, message);
     }
     each(messages, lambda2);
