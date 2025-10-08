@@ -1,3 +1,4 @@
+import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_karate_container } from "../../../karate_code/public/src/app_karate_container.mjs";
@@ -22,5 +23,5 @@ export function app_message_main() {
   html_placeholder(textarea, "Please enter your message here");
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
-  hf;
+  html_focus(input);
 }
