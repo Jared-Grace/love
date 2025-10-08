@@ -30,12 +30,12 @@ export function app_message_main() {
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
-  let v = html_check_empty_not();
-  app_karate_screen_input_validate(div, textarea, [v]);
-  function lambda() {}
-  let component2 = app_karate_button_green(
+  let button_send = app_karate_button_green(
     div,
     emoji_email() + " Send",
     lambda,
   );
+  let v = html_check_empty_not();
+  app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
+  function lambda() {}
 }
