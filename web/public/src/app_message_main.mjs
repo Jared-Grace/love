@@ -19,7 +19,7 @@ export function app_message_main() {
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_element(div, "textarea");
-  html_placeholder(textarea, "");
+  html_placeholder(textarea, "Please enter your message here");
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
 }
