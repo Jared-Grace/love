@@ -25,9 +25,10 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_message_main() {
   marker("1");
-  const property = "messages";
+  const messages_property = "messages";
   let u = await uuid();
-  storage_local_initialize_context(context, "user_id", u);
+  const user_id__property = "user_id";
+  storage_local_initialize_context(context, user_id__property, u);
   let app_fn = app_message_main;
   const root = html_document_body();
   const context = {
@@ -67,14 +68,18 @@ export async function app_message_main() {
     each(messages, lambda2);
   }
   function messages_get() {
-    let value = storage_local_initialize_context(context, property, []);
+    let value = storage_local_initialize_context(
+      context,
+      messages_property,
+      [],
+    );
     return value;
   }
   function on_send() {
     let messages = messages_get();
     let value2 = html_value_get(textarea);
     list_add(messages, value2);
-    storage_local_set_context(context, property, messages);
+    storage_local_set_context(context, messages_property, messages);
     refresh();
   }
 }
