@@ -29,7 +29,7 @@ export function app_message_main() {
   let div_messages = html_div(root);
   let messages = storage_local_get_context(context, "messages");
   function lambda2(message) {
-    let div_message = app_karate_container(root);
+    let div_message = app_karate_container(div_messages);
   }
   each(list, lambda2);
   let div = app_karate_container(root);
