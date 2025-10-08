@@ -6,5 +6,5 @@ export function app_message_main() {
   marker("1");
   const root = html_document_body();
   let component = html_element(root, "textarea");
-  app_karate_style_control(component2);
+  app_karate_style_control(component);
 }
