@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -60,5 +61,6 @@ export function app_message_main() {
   }
   function on_send() {
     let messages = messages_get();
+    list_add(list, item);
   }
 }
