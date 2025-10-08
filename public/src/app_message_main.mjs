@@ -26,6 +26,7 @@ export function app_message_main() {
   };
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
+  let div3 = html_div(root2);
   let messages = storage_local_get_context(context, "messages");
   function lambda2(message) {
     let div_message = app_karate_container(root);
