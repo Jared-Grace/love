@@ -36,6 +36,11 @@ export function app_message_main() {
     lambda,
   );
   let v = html_check_empty_not();
-  app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
+  let div_checks = app_karate_screen_input_validate(
+    div,
+    textarea,
+    button_send,
+    [v],
+  );
   function lambda() {}
 }
