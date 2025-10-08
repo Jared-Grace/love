@@ -46,7 +46,7 @@ export function app_message_main() {
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
   function refresh() {
-    html_clear(element);
+    html_clear(div_messages);
     let messages = storage_local_get_context(context, "messages");
     function lambda2(message) {
       let div_message = app_karate_container(div_messages);
