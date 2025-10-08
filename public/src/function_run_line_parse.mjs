@@ -7,7 +7,7 @@ export async function function_run_line_parse(line) {
   let trimmed = string_trim(line);
   const [f_name, ...args] = trimmed.split(" ");
   function lambda(previous) {
-    list_add(previous, line);
+    list_add(previous, trimmed);
     let unique = list_unique_reverse(previous);
     return unique;
   }
