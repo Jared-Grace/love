@@ -3,6 +3,7 @@ import { firebase_config_get } from "../../../love/public/src/firebase_config_ge
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 export async function firebase_upload_string(content, destination) {
+  const contentType = "text/plain";
   if (browser_is()) {
     const firebase = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
@@ -23,7 +24,7 @@ export async function firebase_upload_string(content, destination) {
   }
   let buffer = Buffer.from(content);
   const settings = {
-    contentType: "text/plain",
+    contentType: contentType,
     gzip: true,
   };
   await firebase_upload_generic(destination, settings, buffer);
