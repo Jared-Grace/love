@@ -20,8 +20,7 @@ export async function firebase_upload_string(content, destination) {
       active: true,
     };
     const jsonRef = ref(storage, destination);
-    let v = JSON.stringify(object);
-    await uploadString(jsonRef, v, "raw", {
+    await uploadString(jsonRef, content, "raw", {
       contentType: "application/json",
     });
     console.log("✅ JSON uploaded successfully");
