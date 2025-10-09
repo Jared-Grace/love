@@ -20,8 +20,8 @@ export async function firebase_upload_object(object, destination) {
       age: 42,
       active: true,
     };
-    const jsonRef = ref(storage, "data/user.json");
-    let v = JSON.stringify(data);
+    const jsonRef = ref(storage, destination);
+    let v = JSON.stringify(object);
     await uploadString(jsonRef, v, "raw", {
       contentType: "application/json",
     });
