@@ -19,6 +19,7 @@ export async function firebase_upload_string(content, destination) {
       contentType: "application/json",
     });
     console.log("✅ JSON uploaded successfully");
+    return;
   }
   let buffer = Buffer.from(content);
   const settings = {
