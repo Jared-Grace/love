@@ -1,3 +1,4 @@
+import { date_now_iso } from "../../../love/public/src/date_now_iso.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
@@ -85,6 +86,7 @@ export async function app_message_main() {
     await firebase_upload_object(
       {
         message,
+        when: date_now_iso(),
       },
       file_path,
     );
