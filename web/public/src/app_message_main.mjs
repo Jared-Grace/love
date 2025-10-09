@@ -80,7 +80,7 @@ export async function app_message_main() {
   async function on_send() {
     let value2 = html_value_get(textarea);
     let message_id = await uuid();
-    const file_name = "user/uuid/" + id + "/" + message_id;
+    const file_name = "user/uuid/" + u + "/" + message_id;
     let file_path = file_name_json(file_name);
     await firebase_upload_object(object, file_path);
     let messages = messages_get();
