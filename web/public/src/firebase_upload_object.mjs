@@ -3,6 +3,12 @@ import { log } from "../../../love/public/src/log.mjs";
 import { firebase_upload_string } from "../../../love/public/src/firebase_upload_string.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function firebase_upload_object(object, destination) {
+  const firebase = await import(
+    "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
+  );
+  const storageMod = await import(
+    "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
+  );
   let firebase_config = firebase_config_get();
   const app = firebase.initializeApp(firebase_config);
   const storage = storageMod.getStorage(app);
