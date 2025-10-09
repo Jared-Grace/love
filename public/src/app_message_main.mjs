@@ -79,9 +79,10 @@ export async function app_message_main() {
   }
   async function on_send() {
     let value2 = html_value_get(textarea);
-    const newLocal = "user/uuid/" + id;
-    let file_name = file_name_json(name);
-    let destination2 = await firebase_upload_object(object, newLocal);
+    let u2 = await uuid();
+    const newLocal = "user/uuid/" + id + "/";
+    let file_name = file_name_json(newLocal);
+    let destination2 = await firebase_upload_object(object, file_name);
     let messages = messages_get();
     list_add(messages, value2);
     storage_local_set_context(context, messages_property, messages);
