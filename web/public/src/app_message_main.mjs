@@ -78,13 +78,18 @@ export async function app_message_main() {
     return value;
   }
   async function on_send() {
-    let value2 = html_value_get(textarea);
+    let message = html_value_get(textarea);
     let message_id = await uuid();
     const file_name = "user/uuid/" + u + "/" + message_id;
     let file_path = file_name_json(file_name);
-    await firebase_upload_object(object, file_path);
+    await firebase_upload_object(
+      {
+        message,
+      },
+      file_path,
+    );
     let messages = messages_get();
-    list_add(messages, value2);
+    list_add(messages, message);
     storage_local_set_context(context, messages_property, messages);
     refresh();
   }
