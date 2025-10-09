@@ -1,3 +1,4 @@
+import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -75,9 +76,10 @@ export async function app_message_main() {
     );
     return value;
   }
-  function on_send() {
-    let messages = messages_get();
+  async function on_send() {
     let value2 = html_value_get(textarea);
+    let destination2 = await firebase_upload_object(object, destination);
+    let messages = messages_get();
     list_add(messages, value2);
     storage_local_set_context(context, messages_property, messages);
     refresh();
