@@ -4,7 +4,7 @@ import { firebase_upload_string } from "../../../love/public/src/firebase_upload
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function firebase_upload_object(object, destination) {
   let firebase_config = firebase_config_get();
-  const app = firebase.initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebase_config);
   const storage = storageMod.getStorage(app);
   const data = {
     name: "J",
