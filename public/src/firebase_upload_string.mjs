@@ -14,11 +14,6 @@ export async function firebase_upload_string(content, destination) {
     let firebase_config = firebase_config_get();
     const app = firebase.initializeApp(firebase_config);
     const storage = storageMod.getStorage(app);
-    const data = {
-      name: "J",
-      age: 42,
-      active: true,
-    };
     const jsonRef = ref(storage, destination);
     await uploadString(jsonRef, content, "raw", {
       contentType: "application/json",
