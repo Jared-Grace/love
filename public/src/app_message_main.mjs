@@ -30,13 +30,13 @@ export async function app_message_main() {
   const messages_property = "messages";
   let u = await uuid();
   const user_id_property = "user_id";
-  storage_local_initialize_context(context, user_id_property, u);
   let app_fn = app_message_main;
   const root = html_document_body();
   const context = {
     app_fn,
     root: root,
   };
+  storage_local_initialize_context(context, user_id_property, u);
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
   let div_messages = html_div(root);
