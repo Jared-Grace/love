@@ -14,7 +14,7 @@ export async function firebase_upload_string_generic(
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
     );
-    const { ref, uploadString } = firebaseStorage;
+    const { ref, uploadString } = firebase;
     let firebase_config = firebase_config_get();
     const app = firebase.initializeApp(firebase_config);
     const storage = storageMod.getStorage(app);
