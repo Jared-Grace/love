@@ -5,27 +5,27 @@ import { firebase_upload_string } from "../../../love/public/src/firebase_upload
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function firebase_upload_object(object, destination) {
   if (browser_is()) {
+    const firebase = await import(
+      "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
+    );
+    const storageMod = await import(
+      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
+    );
+    let firebase_config = firebase_config_get();
+    const app = firebase.initializeApp(firebase_config);
+    const storage = storageMod.getStorage(app);
+    const data = {
+      name: "J",
+      age: 42,
+      active: true,
+    };
+    const jsonRef = ref(storage, "data/user.json");
+    let v = JSON.stringify(data);
+    await uploadString(jsonRef, v, "raw", {
+      contentType: "application/json",
+    });
+    console.log("✅ JSON uploaded successfully");
   }
-  const firebase = await import(
-    "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
-  );
-  const storageMod = await import(
-    "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
-  );
-  let firebase_config = firebase_config_get();
-  const app = firebase.initializeApp(firebase_config);
-  const storage = storageMod.getStorage(app);
-  const data = {
-    name: "J",
-    age: 42,
-    active: true,
-  };
-  const jsonRef = ref(storage, "data/user.json");
-  let v = JSON.stringify(data);
-  await uploadString(jsonRef, v, "raw", {
-    contentType: "application/json",
-  });
-  console.log("✅ JSON uploaded successfully");
   let content = json_to(object);
   await firebase_upload_string(content, destination);
 }
