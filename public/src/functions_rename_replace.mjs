@@ -13,8 +13,9 @@ export async function functions_rename_replace(from) {
     let includes = list_includes(parts, from);
     let n = not(includes);
     if (n) {
-      let v = await function_rename_replace(f_name_before, from, to);
+      return;
     }
+    let v = await function_rename_replace(f_name_before, from, to);
   }
   await each_async(f_names, lambda);
 }
