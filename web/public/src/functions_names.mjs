@@ -3,10 +3,10 @@ import { functions_names_from_path } from "../../../love/public/src/functions_na
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_names() {
   marker("1");
-  let squashed = await repos_paths_map_unordered_combine_squash(mapper);
-  return squashed;
+  let f_names = await repos_paths_map_unordered_combine_squash(mapper);
   async function mapper(joined) {
     let f_names = await functions_names_from_path(joined);
     return f_names;
   }
+  return f_names;
 }
