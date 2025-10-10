@@ -227,6 +227,7 @@
   "hp": "html_p",
   "eo": "each_object",
   "hf": "html_focus",
-  "hc": "html_clear"
+  "hc": "html_clear",
+  "fps": "functions_path"
  }
 }
