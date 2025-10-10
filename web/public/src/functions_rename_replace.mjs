@@ -7,7 +7,9 @@ export async function functions_rename_replace() {
   marker("1");
   let f_names = await functions_names();
   async function lambda(f_name) {
-    let parts = function_name_to_parts(f_name2);
+    let parts = function_name_to_parts(f_name);
+    if (false) {
+    }
     let v = await function_rename_replace(f_name_before, from, to);
   }
   await each_async(f_names, lambda);
