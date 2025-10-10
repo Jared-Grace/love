@@ -7,6 +7,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
+  if (false) {
+  }
   let f_names = object_property_get(identifiers, f_name_before);
   list_remove_if_exists(f_names, f_name_before);
   async function lambda(f_name) {
