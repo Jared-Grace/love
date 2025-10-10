@@ -229,7 +229,7 @@
   "hf": "html_focus",
   "hc": "html_clear",
   "fps": "functions_path",
-  "ahu": "html_app_update",
+  "ahu": "app_new_html_update",
   "rrl2": "function_rename_replace_last_2"
  }
 }
