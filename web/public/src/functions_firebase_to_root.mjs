@@ -9,7 +9,6 @@ import { string_split_slash_forward } from "../../../love/public/src/string_spli
 import { log } from "../../../love/public/src/log.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_firebase_to_root() {
   marker("1");
@@ -25,7 +24,5 @@ export async function functions_firebase_to_root() {
     log(joined);
     let result = await file_copy_overwrite(joined, f_path);
   }
-  await each_async(f_names, lambda);
-  async function lambda2(item) {}
-  let waited = await list_map_unordered_async(list, lambda2);
+  await list_map_unordered_async(f_names, lambda);
 }
