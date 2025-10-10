@@ -1,8 +1,4 @@
-import { app_reply_main } from "../../../love/public/src/app_reply_main.mjs";
-import { firebase_storage_function_run } from "../../../love/public/src/firebase_storage_function_run.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
+import { app_main_production } from "../../../love/public/src/app_main_production.mjs";
 export async function app_reply() {
-  marker("1");
-  let f_name = app_reply_main.name;
-  await firebase_storage_function_run(f_name);
+  await app_main_production("app_reply_main", "jared-grace");
 }
