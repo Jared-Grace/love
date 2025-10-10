@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -8,6 +9,7 @@ export async function functions_firebase_to_root() {
   let f_names = await functions_names();
   async function lambda(f_name) {
     let { f_path } = await function_name_to_path_search(f_name);
+    let split = string_split(s, separator);
     log(f_path);
   }
   await each_async(f_names, lambda);
