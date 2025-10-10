@@ -15,7 +15,7 @@ export async function functions_firebase_to_root() {
     let split = string_split_slash_forward(f_path);
     let sliced = list_slice(split, 0, 2);
     let src = folder_src();
-    list_add(list, item);
+    list_add(sliced, src);
     log(sliced);
   }
   await each_async(f_names, lambda);
