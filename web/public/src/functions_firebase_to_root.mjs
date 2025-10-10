@@ -5,5 +5,5 @@ export async function functions_firebase_to_root() {
   marker("1");
   let f_names = await functions_names();
   async function lambda(item) {}
-  await each_async(list, lambda);
+  await each_async(f_names, lambda);
 }
