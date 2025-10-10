@@ -6,7 +6,6 @@ import { list_join_slash_forward } from "../../../love/public/src/list_join_slas
 import { folder_js } from "../../../love/public/src/folder_js.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,7 +20,6 @@ export async function functions_firebase_to_root() {
     let f_name_ext = function_name_to_base(f_name);
     list_add_multiple(sliced, [js, f_name_ext]);
     let joined = list_join_slash_forward(sliced);
-    log(joined);
     let result = await file_copy_overwrite(joined, f_path);
   }
   await list_map_unordered_async(f_names, lambda);
