@@ -11,9 +11,9 @@
     async function app_message() {
   await app_main_production("app_message_main", "jared-grace");
 }
-async function app_main_production(f_name) {
+async function app_main_production(f_name, firebase_name_value) {
   marker("1");
-  let v = await app_main(f_name, firebase_deploy_function_destination_production);
+  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_production);
   return v;
 }
 function firebase_deploy_function_destination_production(f_name) {
@@ -1465,12 +1465,12 @@ function list_to_dictionary(list, lambda$item) {
 }
 async function functions_names() {
   marker("1");
-  let squashed = await repos_paths_map_unordered_combine_squash(mapper);
-  return squashed;
+  let f_names = await repos_paths_map_unordered_combine_squash(mapper);
   async function mapper(joined) {
     let f_names = await functions_names_from_path(joined);
     return f_names;
   }
+  return f_names;
 }
 async function function_alias_add_generic(alias) {
   let unaliased = null;
