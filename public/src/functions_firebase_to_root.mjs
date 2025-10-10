@@ -14,8 +14,8 @@ export async function functions_firebase_to_root() {
     let { f_path } = await function_name_to_path_search(f_name);
     let split = string_split_slash_forward(f_path);
     let sliced = list_slice(split, 0, 2);
-    let src = folder_js();
-    list_add(sliced, src);
+    let js = folder_js();
+    list_add(sliced, js);
     log(sliced);
   }
   await each_async(f_names, lambda);
