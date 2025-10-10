@@ -8,7 +8,7 @@ export async function functions_firebase_to_root() {
   let f_names = await functions_names();
   async function lambda(f_name) {
     let { f_path } = await function_name_to_path_search(f_name);
-    log(message);
+    log(f_path);
   }
   await each_async(f_names, lambda);
 }
