@@ -1,4 +1,4 @@
-import { list_get } from "../../../love/public/src/list_get.mjs";
+import { list_second } from "../../../love/public/src/list_second.mjs";
 import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -11,7 +11,7 @@ export async function functions_firebase_to_root() {
   async function lambda(f_name) {
     let { f_path } = await function_name_to_path_search(f_name);
     let split = string_split_slash_forward(f_path);
-    let item = list_get(list, index);
+    let second = list_second(list);
     log(split);
   }
   await each_async(f_names, lambda);
