@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrite.mjs";
 import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -25,4 +26,8 @@ export async function functions_firebase_to_root() {
     let result = await file_copy_overwrite(joined, f_path);
   }
   await each_async(f_names, lambda);
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda2(item) {},
+  );
 }
