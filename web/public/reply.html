@@ -11,158 +11,73 @@
     async function app_reply() {
   await app_main_production("app_reply_main", "jared-grace");
 }
-async function app_reply_main() {
-  global_function_initialize(firebase_name, "jared-grace");
-  let en = ebible_folder_english();
-  let languages = ebible_languages();
-  list_remove_property(languages, "language_code", "en");
-  let file_name = ebible_index_flat_upload_name();
-  let index = await firebase_storage_download_ebible(en, file_name);
-  let books = await ebible_version_books(en);
-  let verses_list = null;
-  await verse_random_reset();
-  const root = html_document_body();
-  let copied = [];
-  let languages_chosens = [];
-  let buttons = null;
-  let preview = null;
-  let chosens = [];
-  let typed = "";
-  async function verse_random_reset() {
-    let encouragement = bible_verses_encouragement();
-    let reference = list_random_item(encouragement);
-    let verses = await ebible_references_parse_lines([en], [reference]);
-    verses_list = [{
-      verses,
-      reference
-    }];
-  }
-  function lambda6(event) {
-    let key = object_property_get(event, "key");
-    if (equal(key, "Backspace")) {
-      typed = string_take_less_1(typed);
-    } else {
-      typed += key;
-    }
-    buttons_refresh();
-  }
-  html_on_keydown(root, lambda6);
-  async function lambda4() {
-    await verse_random_reset();
-    list_empty(copied);
-    list_empty(chosens);
-    list_empty(languages_chosens);
-    typed = "";
-    buttons_refresh();
-    preview_refresh();
-  }
-  let component3 = html_button(root, "Reset", lambda4);
-  let component2 = html_button(root, "Copy", preview_refresh);
-  function lambda5(item2) {
-    let name2 = object_property_get(item2, "name");
-    let bible_folder2 = object_property_get(item2, "bible_folder");
-    let language_code = object_property_get(item2, "language_code");
-    async function lambda7() {
-      let verses_list_first = list_first(verses_list);
-      let verses2 = object_property_get(verses_list_first, "verses");
-      let reference = object_property_get(verses_list_first, "reference");
-      async function lambda8(verse) {
-        let chapter_code2 = object_property_get(verse, "chapter_code");
-        let verse_number2 = object_property_get(verse, "verse_number");
-        let d = await ebible_verse_download(bible_folder2, chapter_code2, verse_number2);
-        return d;
-      }
-      let verses = await list_map_unordered_async(verses2, lambda8);
-      list_add_first(verses_list, {
-        verses,
-        reference
-      });
-      list_add_first(languages_chosens, language_code);
-      preview_refresh();
-    }
-    let component4 = html_button(root, name2, lambda7);
-  }
-  each(languages, lambda5);
+function marker(marker_name) {
+  noop();
+}
+function noop() {}
+async function app_main_production(f_name) {
   marker("1");
-  let choices = app_reply_choices();
-  function buttons_refresh() {
-    function lambda2(item) {
-      let text2 = object_property_get(item, "text");
-      let letters = string_letters_only(text2);
-      let lower = string_lower_to(letters);
-      let sw = string_starts_with(lower, typed);
-      let includes = list_includes(chosens, item);
-      const condition = includes || not(sw);
-      html_display_none_or_block(condition, item);
-    }
-    each(buttons, lambda2);
-  }
-  function lambda(choice) {
-    let response2 = object_property_get(choice, "response");
-    let text = object_property_get(choice, "text");
-    let component = html_button(root, text, lambda3);
-    object_property_set_exists_not(component, "text", text);
-    async function lambda3() {
-      list_add(copied, response2);
-      await preview_refresh();
-      list_add(chosens, component);
-      typed = "";
-      buttons_refresh();
-    }
-    return component;
-  }
-  buttons = list_map(choices, lambda);
-  preview = html_p(root);
-  preview_refresh();
-  buttons_refresh();
-  async function preview_refresh() {
-    let verses_list_first = list_first(verses_list);
-    let reference = object_property_get(verses_list_first, "reference");
-    if (false) {
-      function lambda9(item3) {}
-      each(list, lambda9);
-      let chapter_code2 = object_property_get(verse, "chapter_code");
-      let book_code = ebible_chapter_code_to_book(chapter_code2);
-      let chapter_name = ebible_chapter_code_to_name(chapter_code2);
-      let book = list_find_property(books, "book_code", book_code);
-      let book_name = object_property_get(book, "text");
-      let verse_number2 = object_property_get(verse, "verse_number");
-      let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
-    }
-    let verses = list_map_property(verses_list, "verses");
-    let squashed = list_squash(verses);
-    let verse_texts = list_map_property(squashed, "text");
-    list_add_first(verse_texts, reference);
-    let verse_text = list_join_newline_2(verse_texts);
-    const other = [verse_text];
-    let ne = list_empty_not_is(languages_chosens);
-    if (ne) {
-      list_add(other, languages_chosens);
-    }
-    let concated = list_concat(copied, other);
-    let joined = list_join_newline_2(concated);
-    html_clear(preview);
-    html_p_text_multiple(preview, concated);
-    html_text_set(preview, joined);
-    await clipboard_copy(joined);
+  let v = await app_main(f_name, firebase_deploy_function_destination_production);
+  return v;
+}
+function firebase_deploy_function_destination_production(f_name) {
+  marker("1");
+  let destination2 = firebase_deploy_function_destination("version_production", f_name);
+  return destination2;
+}
+function firebase_deploy_function_destination(name, f_name) {
+  let file_name = file_name_json(name);
+  const list = ["function", f_name, file_name];
+  let destination = list_join_slash_forward(list);
+  return destination;
+}
+function list_join_slash_forward(list) {
+  let joined = list_join(list, "/");
+  return joined;
+}
+function list_join(list, separator) {
+  let joined = list.join(separator);
+  return joined;
+}
+function file_name_json(name) {
+  let file_name = name + ".json";
+  return file_name;
+}
+async function app_main(f_name, firebase_name_value, version_get) {
+  marker("1");
+  global_function_initialize(firebase_name, firebase_name_value);
+  await firebase_storage_function_run(f_name, version_get);
+}
+function global_function_initialize(fn, initial) {
+  assert_arguments(arguments, 2);
+  let global = global_get();
+  let value = object_property_initialize(global, fn.name, initial);
+  return value;
+}
+function assert_arguments(args, count) {
+  let length = object_property_get(args, "length");
+  equal_assert(length, count);
+}
+function equal_assert(left, right) {
+  marker("1");
+  let eq = equal(left, right);
+  assert(eq);
+}
+function assert(b) {
+  if (not(b)) {
+    error();
   }
 }
-async function firebase_name() {
-  if (browser_is()) {
-    let value = global_function_get(firebase_name);
-    return value;
-  }
-  let repo_name = await user_repo_get();
-  let default2 = await firebase_name_repo(repo_name);
-  return default2;
+function not(a) {
+  let n = !a;
+  return n;
 }
-async function firebase_name_repo(repo_name) {
-  const f_path = ".firebaserc";
-  let combined = repo_path_combine(repo_name, f_path);
-  let f = await file_read_json(combined);
-  let projects = object_property_get(f, "projects");
-  let default2 = object_property_get(projects, "default");
-  return default2;
+function error(message) {
+  throw new Error(message);
+}
+function equal(left, right) {
+  let eq = left === right;
+  return eq;
 }
 function object_property_get(object, property_name) {
   let value = object[property_name];
@@ -183,9 +98,6 @@ function undefined_not_is_assert_lambda(value, lambda) {
     error(message);
   }
 }
-function error(message) {
-  throw new Error(message);
-}
 function json_to(object) {
   let json = JSON.stringify(object);
   return json;
@@ -193,6 +105,400 @@ function json_to(object) {
 function undefined_is(value) {
   let v = typeof value === "undefined";
   return v;
+}
+function object_property_initialize(object, property_name, value_initial) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    object_property_set(object, property_name, value_initial);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
+}
+function object_property_set(object, property_name, value) {
+  object[property_name] = value;
+}
+function object_property_exists(object, property_name) {
+  const exists = object && Object.hasOwn(object, property_name);
+  return exists;
+}
+function global_get() {
+  marker("1");
+  return global;
+}
+async function firebase_storage_function_run(f_name, version_get) {
+  marker("1");
+  let destination_version = version_get(f_name);
+  let destination = await firebase_storage_download_property(destination_version, "destination");
+  let code = await firebase_storage_download_property(destination, "code");
+  let call = js_code_call_statement(f_name);
+  let global_init = js_code_global_init();
+  let joined = list_join_newline([global_init, call, code]);
+  if (browser_is()) {
+    let body = html_document_body();
+    let component = html_element(body, "script");
+    html_attribute_set(component, "type", "module");
+    html_text_set(component, joined);
+    return;
+  }
+  eval(joined);
+}
+function js_code_global_init() {
+  let right = js_code_braces_empty();
+  let code_assign = js_code_let_assign("global", right);
+  return code_assign;
+}
+function js_code_let_assign(left, right) {
+  let code_assign = js_keyword_let() + " " + js_code_assign(left, right) + ";";
+  return code_assign;
+}
+function js_code_assign(left, right) {
+  const code = left + " = " + right;
+  return code;
+}
+function js_keyword_let() {
+  let v = "let";
+  return v;
+}
+function js_code_braces_empty() {
+  let v = js_code_wrap_braces("");
+  return v;
+}
+function js_code_wrap_braces(inside) {
+  let v = "{" + inside + "}";
+  return v;
+}
+function html_text_set(component, text) {
+  let element = html_component_element_get(component);
+  element.innerHTML = text;
+}
+function html_component_element_get(component) {
+  let element = object_property_get(component, "element");
+  return element;
+}
+function html_attribute_set(component, key, value) {
+  let element = html_component_element_get(component);
+  element.setAttribute(key, value);
+}
+function html_element(parent, tag_name) {
+  let parent_element = html_component_element_get(parent);
+  const e = document.createElement(tag_name);
+  parent_element.appendChild(e);
+  let component = html_component_wrap(e);
+  html_style_set(component, "box-sizing", "border-box");
+  return component;
+}
+function html_style_set(b, style_key, style_value) {
+  let b_element = html_component_element_get(b);
+  b_element.style[style_key] = style_value;
+}
+function html_component_wrap(element) {
+  let v = {
+    element
+  };
+  return v;
+}
+function html_document_body() {
+  marker("1");
+  let body_element = document.body;
+  let body = html_component_wrap(body_element);
+  return body;
+}
+function browser_is() {
+  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
+  return b;
+}
+function list_join_newline(list) {
+  let separator = newline();
+  let joined = list_join(list, separator);
+  return joined;
+}
+function newline() {
+  let v = "\n";
+  return v;
+}
+function js_code_call_statement(f_name) {
+  let code = js_code_call(f_name);
+  let result = js_code_statement(code);
+  return result;
+}
+function js_code_call(fn_name) {
+  let args = [];
+  let result = js_code_call_args(fn_name, args);
+  return result;
+}
+function js_code_call_args(fn_name, args) {
+  let joined = list_join_comma_space(args);
+  let code = fn_name + js_code_wrap_parenthesis(joined);
+  return code;
+}
+function js_code_wrap_parenthesis(inside) {
+  let v = "( " + inside + " )";
+  return v;
+}
+function list_join_comma_space(args) {
+  let v = list_join(args, ", ");
+  return v;
+}
+function js_code_statement(code) {
+  let v = code + ";";
+  return v;
+}
+async function firebase_storage_download_property(storage_path, property_name) {
+  let buffer = await firebase_storage_download(storage_path);
+  const json = buffer_string_to(buffer);
+  let o = json_from(json);
+  let value = object_property_get(o, property_name);
+  return value;
+}
+function json_from(json) {
+  let v = JSON.parse(json);
+  return v;
+}
+function buffer_string_to(buffer) {
+  let s = null;
+  let b = browser_is();
+  if (b) {
+    if (buffer instanceof ArrayBuffer) {
+      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
+    } else if (buffer instanceof Uint8Array) {
+      s = new TextDecoder("utf-8").decode(buffer);
+    } else {
+      throw new Error("Unsupported buffer type");
+    }
+  } else {
+    s = buffer.toString("utf8");
+  }
+  return s;
+}
+async function firebase_storage_download(destination) {
+  marker("1");
+  destination = firebase_path_fix(destination);
+  let b = browser_is();
+  if (b) {
+    let url = await firebase_storage_url(destination);
+    let buffer = await http(url);
+    return buffer;
+  }
+  const bucket = await firebase_bucket();
+  let [buffer] = await bucket.file(destination).download();
+  return buffer;
+}
+async function http(url) {
+  let b = browser_is();
+  if (b) {
+    async function lambda3() {
+      const response = await fetch(url);
+      if (not(response.ok)) {
+        error("Failed to fetch file");
+      }
+      const buf = await response.arrayBuffer();
+      return buf;
+    }
+    let v = await html_loading(lambda3);
+    return v;
+  }
+  await http_sleep();
+  let h = null;
+  let sw = string_starts_with(url, "https://");
+  if (sw) {
+    h = await import("https");
+  }
+  let buffer = await promise_wrap(lambda);
+  function lambda(resolve, reject) {
+    function lambda2(res) {
+      const chunks = [];
+      function on_data(chunk) {
+        let v2 = chunks.push(chunk);
+        return v2;
+      }
+      let result = catch_call(reject, on_data);
+      res.on("data", result);
+      function on_end() {
+        const {statusCode} = res;
+        const d = statusCode / 100;
+        const rounded = round(d);
+        assert_json(rounded === 2, {
+          url
+        });
+        let v3 = Buffer.concat(chunks);
+        resolve(v3);
+      }
+      let result2 = catch_call(reject, on_end);
+      res.on("end", result2);
+    }
+    h.get(url, lambda2).on("error", reject);
+  }
+  return buffer;
+}
+async function http_sleep() {
+  await sleep(integer_random(5, 8) * 1000);
+}
+function integer_random(min, max) {
+  let r = floor(random() * (max - min + 1)) + min;
+  return r;
+}
+function random() {
+  let v = Math.random();
+  return v;
+}
+function floor(p) {
+  let floored = Math.floor(p);
+  return floored;
+}
+async function sleep(ms) {
+  await new Promise(function lambda5(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
+}
+async function html_loading(lambda) {
+  marker("1");
+  let body = html_document_body();
+  let div = html_div(body);
+  let s = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    background: "rgba(0, 0, 0, 0.6)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "1000"
+  };
+  html_style_assign(div, s);
+  let result = await lambda();
+  html_remove(div);
+  return result;
+}
+function html_remove(component) {
+  marker("1");
+  let element = html_component_element_get(component);
+  element.remove();
+}
+function html_style_assign(b, s) {
+  marker("1");
+  let b_element = html_component_element_get(b);
+  object_assign(b_element.style, s);
+}
+function object_assign(to, from) {
+  marker("1");
+  let a = Object.assign(to, from);
+  return a;
+}
+function html_div(root) {
+  let div = html_element(root, "div");
+  return div;
+}
+function catch_call(reject, lambda) {
+  let i = function inner() {
+    let result = null;
+    try {
+      result = lambda(...arguments);
+    } catch (e) {
+      reject(e);
+    }
+    marker("1");
+    return result;
+  };
+  return i;
+}
+function promise_wrap(lambda) {
+  let v = new Promise(function lambda4(resolve, reject) {
+    try {
+      lambda(resolve, reject);
+    } catch (e) {
+      reject(e);
+    }
+  });
+  return v;
+}
+function round(n) {
+  let rounded = Math.round(n);
+  return rounded;
+}
+function string_starts_with(s, prefix) {
+  let sw = s.startsWith(prefix);
+  return sw;
+}
+function assert_json(b, o) {
+  let message = json_to(o);
+  assert_message(b, message);
+}
+function assert_message(b, message) {
+  if (not(b)) {
+    error(message);
+  }
+}
+async function firebase_bucket() {
+  const admin = await firebase_admin();
+  const bucket = admin.storage().bucket();
+  return bucket;
+}
+async function firebase_admin() {
+  let admin = await global_function_async(firebase_admin, firebase_admin_get);
+  return admin;
+}
+async function global_function_async(fn, lambda) {
+  let global = global_get();
+  marker("1");
+  let value = object_property_lambda(global, fn.name, lambda);
+  let awaited = await value;
+  return awaited;
+}
+function object_property_lambda(object, property_name, lambda) {
+  marker("1");
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = lambda();
+    object_property_set(object, property_name, value_set);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
+}
+async function firebase_admin_get() {
+  const admin = (await import("firebase-admin")).default;
+  marker("1");
+  let service_account = await firebase_service_account();
+  const sb = await firebase_storage_url_project();
+  log({
+    sb
+  });
+  admin.initializeApp({
+    credential: admin.credential.cert(service_account),
+    storageBucket: sb
+  });
+  return admin;
+}
+function log(message) {
+  log_keep(message);
+}
+function log_keep(message) {
+  console.log(message);
+}
+async function firebase_storage_url_project() {
+  marker("1");
+  const prefix = await firebase_name();
+  let url = prefix + ".firebasestorage.app";
+  return url;
+}
+async function firebase_name() {
+  if (browser_is()) {
+    let value = global_function_get(firebase_name);
+    return value;
+  }
+  let repo_name = await user_repo_get();
+  let default2 = await firebase_name_repo(repo_name);
+  return default2;
+}
+async function firebase_name_repo(repo_name) {
+  const f_path = ".firebaserc";
+  let combined = repo_path_combine(repo_name, f_path);
+  let f = await file_read_json(combined);
+  let projects = object_property_get(f, "projects");
+  let default2 = object_property_get(projects, "default");
+  return default2;
 }
 async function file_read_json(file_path) {
   let json = await file_read(file_path);
@@ -203,10 +509,6 @@ async function file_read(file_path) {
   let fs = await import("fs");
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;
-}
-function json_from(json) {
-  let v = JSON.parse(json);
-  return v;
 }
 function repo_path_combine(repo_name, f_path) {
   let folder_name = repo_path(repo_name);
@@ -240,32 +542,6 @@ function path_join(segments) {
   let joined = parts.join("/");
   return joined;
 }
-function assert_arguments(args, count) {
-  let length = object_property_get(args, "length");
-  equal_assert(length, count);
-}
-function equal_assert(left, right) {
-  marker("1");
-  let eq = equal(left, right);
-  assert(eq);
-}
-function marker(marker_name) {
-  noop();
-}
-function noop() {}
-function assert(b) {
-  if (not(b)) {
-    error();
-  }
-}
-function not(a) {
-  let n = !a;
-  return n;
-}
-function equal(left, right) {
-  let eq = left === right;
-  return eq;
-}
 function folder_previous() {
   let previous = "..";
   return previous;
@@ -284,14 +560,6 @@ function global_function_get(fn) {
   let global = global_get();
   let value = object_property_get(global, fn.name);
   return value;
-}
-function global_get() {
-  marker("1");
-  return global;
-}
-function browser_is() {
-  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
-  return b;
 }
 async function user_repo_get() {
   marker("1");
@@ -519,15 +787,6 @@ function integer_is_assert(index) {
     index
   });
 }
-function assert_json(b, o) {
-  let message = json_to(o);
-  assert_message(b, message);
-}
-function assert_message(b, message) {
-  if (not(b)) {
-    error(message);
-  }
-}
 function integer_is(value) {
   marker("1");
   let ii = Number.isInteger(value);
@@ -586,10 +845,6 @@ function js_node_type_is(node, type) {
 function js_node_is(n) {
   const ni = object_property_exists(n, "type");
   return ni;
-}
-function object_property_exists(object, property_name) {
-  const exists = object && Object.hasOwn(object, property_name);
-  return exists;
 }
 function js_node_type(n) {
   const nt = object_property_get(n, "type");
@@ -676,9 +931,6 @@ function js_visit_filter(n) {
   let v = js_node_is(n) || list_is(n);
   return v;
 }
-function object_property_set(object, property_name, value) {
-  object[property_name] = value;
-}
 function object_property_delete(object, property_name) {
   delete object[property_name];
 }
@@ -732,14 +984,6 @@ function list_add_if_not_includes(list, item) {
   if (not(exists)) {
     list_add(list, item);
   }
-}
-function object_property_initialize(object, property_name, value_initial) {
-  const exists = object_property_exists(object, property_name);
-  if (not(exists)) {
-    object_property_set(object, property_name, value_initial);
-  }
-  let value = object_property_get(object, property_name);
-  return value;
 }
 function js_identifiers_names(ast) {
   function lambda2(la) {
@@ -808,12 +1052,6 @@ function js_parse_generic(acorn, code) {
     throw e;
   }
   return ast;
-}
-function log_keep(message) {
-  console.log(message);
-}
-function log(message) {
-  log_keep(message);
 }
 async function list_map_unordered_async(list, lambda$item) {
   let mapped = list_map(list, lambda$item);
@@ -1081,10 +1319,6 @@ function file_name_json_folder(folder, f_name) {
   let f_path = file_name_json(joined);
   return f_path;
 }
-function file_name_json(name) {
-  let file_name = name + ".json";
-  return file_name;
-}
 function user_repo_path() {
   const name = "user";
   let f_path = file_name_json_folder_gitignore(name);
@@ -1093,340 +1327,6 @@ function user_repo_path() {
 function file_name_json_folder_gitignore(name) {
   let f_path2 = file_name_json_folder("gitignore", name);
   return f_path2;
-}
-function global_function_initialize(fn, initial) {
-  assert_arguments(arguments, 2);
-  let global = global_get();
-  let value = object_property_initialize(global, fn.name, initial);
-  return value;
-}
-function bible_verses_encouragement() {
-  marker("1");
-  let encouragement = ["Deuteronomy 31:6", "Deuteronomy 31:8", "Joshua 1:9", "Proverbs 3:5-6", "Proverbs 12:25", "Proverbs 29:25", "Isaiah 26:3", "Isaiah 35:4", "Isaiah 40:31", "Isaiah 41:10", "Isaiah 41:13", "Isaiah 43:1", "Jeremiah 29:11", "Zephaniah 3:17", "Matthew 11:28-30", "Mark 5:36", "John 14:1", "John 14:27", "John 16:33", "Romans 8:38-39", "Colossians 3:15", "Philippians 4:6-9", "Philippians 4:13", "1 Peter 5:6-8", "2 Timothy 1:7", "1 John 4:18", "Revelation 1:17"];
-  return encouragement;
-}
-async function ebible_references_parse_lines(bible_folders, lines) {
-  let bible_folder = ebible_folder_english();
-  let books_all = await list_map_unordered_async(bible_folders, ebible_version_books);
-  let books = await ebible_version_books(bible_folder);
-  let mapped = list_map_property(books, "text");
-  let verse_references = list_filter_starts_with_any(mapped, lines);
-  let book_names = list_map_prefix_any(verse_references, mapped);
-  let mapped2 = list_map_prefix_without_any(verse_references, mapped);
-  let mapped3 = list_map_split_space(mapped2);
-  let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let chapter_verses_list = list_map_first(mapped4);
-  async function lambda2(la) {
-    async function lambda(book_name, chapter_verses) {
-      let book = list_find_property(books, "text", book_name);
-      let book_code = object_property_get(book, "book_code");
-      let split2 = string_split_colon(chapter_verses);
-      let {first: chapter_name, second} = list_first_second(split2);
-      let pad_count = 2;
-      if (equal(book_code, "PSA")) {
-        pad_count = 3;
-      }
-      let chapter_padded = number_pad(chapter_name, pad_count);
-      let chapter_code = book_code + chapter_padded;
-      let verse_range = string_split_dash(second);
-      let verse_start = list_first(verse_range);
-      let verse_end = null;
-      let m = list_multiple_is(verse_range);
-      if (m) {
-        verse_end = list_second(verse_range);
-      } else {
-        verse_end = verse_start;
-      }
-      let index = list_index_of(books, book);
-      async function lambda5(bible_folder, books) {
-        let book2 = list_get(books, index);
-        let book_name = object_property_get(book2, "text");
-        async function lambda4(verse_number) {
-          verse_number = string_to(verse_number);
-          let result = await ebible_verse(bible_folder, chapter_code, verse_number);
-          la(result);
-        }
-        await each_range_from_async(verse_start, verse_end, lambda4);
-      }
-      await each_pair_async(bible_folders, books_all, lambda5);
-    }
-    await each_pair_async(book_names, chapter_verses_list, lambda);
-  }
-  let list = await list_adder_async(lambda2);
-  return list;
-}
-async function ebible_verse(bible_folder, chapter_code, verse_number) {
-  marker("1");
-  let b = browser_is();
-  if (b) {
-    let verse = await ebible_verse_download(bible_folder, chapter_code, verse_number);
-    return verse;
-  }
-  let verses = await ebible_verses(bible_folder, chapter_code);
-  let result = list_find_property(verses, "verse_number", verse_number);
-  return result;
-}
-async function ebible_verse_download(bible_folder, chapter_code, verse_number) {
-  let n = ebible_verses_upload_name(chapter_code, verse_number);
-  let index = await firebase_storage_download_ebible(bible_folder, n);
-  return index;
-}
-async function firebase_storage_download_ebible(en, file_name) {
-  let destination = ebible_firebase_upload_path(en, file_name);
-  let index = await firebase_storage_download_json(destination);
-  return index;
-}
-async function firebase_storage_download_json(destination) {
-  let s = await firebase_storage_download_string(destination);
-  let index = json_from(s);
-  return index;
-}
-async function firebase_storage_download_string(destination) {
-  let buffer = await firebase_storage_download(destination);
-  let s = buffer_string_to(buffer);
-  return s;
-}
-function buffer_string_to(buffer) {
-  let s = null;
-  let b = browser_is();
-  if (b) {
-    if (buffer instanceof ArrayBuffer) {
-      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
-    } else if (buffer instanceof Uint8Array) {
-      s = new TextDecoder("utf-8").decode(buffer);
-    } else {
-      throw new Error("Unsupported buffer type");
-    }
-  } else {
-    s = buffer.toString("utf8");
-  }
-  return s;
-}
-async function firebase_storage_download(destination) {
-  marker("1");
-  destination = firebase_path_fix(destination);
-  let b = browser_is();
-  if (b) {
-    let url = await firebase_storage_url(destination);
-    let buffer = await http(url);
-    return buffer;
-  }
-  const bucket = await firebase_bucket();
-  let [buffer] = await bucket.file(destination).download();
-  return buffer;
-}
-async function http(url) {
-  let b = browser_is();
-  if (b) {
-    async function lambda3() {
-      const response = await fetch(url);
-      if (not(response.ok)) {
-        error("Failed to fetch file");
-      }
-      const buf = await response.arrayBuffer();
-      return buf;
-    }
-    let v = await html_loading(lambda3);
-    return v;
-  }
-  await http_sleep();
-  let h = null;
-  let sw = string_starts_with(url, "https://");
-  if (sw) {
-    h = await import("https");
-  }
-  let buffer = await promise_wrap(lambda);
-  function lambda(resolve, reject) {
-    function lambda2(res) {
-      const chunks = [];
-      function on_data(chunk) {
-        let v2 = chunks.push(chunk);
-        return v2;
-      }
-      let result = catch_call(reject, on_data);
-      res.on("data", result);
-      function on_end() {
-        const {statusCode} = res;
-        const d = statusCode / 100;
-        const rounded = round(d);
-        assert_json(rounded === 2, {
-          url
-        });
-        let v3 = Buffer.concat(chunks);
-        resolve(v3);
-      }
-      let result2 = catch_call(reject, on_end);
-      res.on("end", result2);
-    }
-    h.get(url, lambda2).on("error", reject);
-  }
-  return buffer;
-}
-async function http_sleep() {
-  await sleep(integer_random(5, 8) * 1000);
-}
-function integer_random(min, max) {
-  let r = floor(random() * (max - min + 1)) + min;
-  return r;
-}
-function random() {
-  let v = Math.random();
-  return v;
-}
-function floor(p) {
-  let floored = Math.floor(p);
-  return floored;
-}
-async function sleep(ms) {
-  await new Promise(function lambda5(resolve) {
-    let v = setTimeout(resolve, ms);
-    return v;
-  });
-}
-async function html_loading(lambda) {
-  marker("1");
-  let body = html_document_body();
-  let div = html_div(body);
-  let s = {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0, 0, 0, 0.6)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: "1000"
-  };
-  html_style_assign(div, s);
-  let result = await lambda();
-  html_remove(div);
-  return result;
-}
-function html_remove(component) {
-  marker("1");
-  let element = html_component_element_get(component);
-  element.remove();
-}
-function html_component_element_get(component) {
-  let element = object_property_get(component, "element");
-  return element;
-}
-function html_style_assign(b, s) {
-  marker("1");
-  let b_element = html_component_element_get(b);
-  object_assign(b_element.style, s);
-}
-function object_assign(to, from) {
-  marker("1");
-  let a = Object.assign(to, from);
-  return a;
-}
-function html_div(root) {
-  let div = html_element(root, "div");
-  return div;
-}
-function html_element(parent, tag_name) {
-  let parent_element = html_component_element_get(parent);
-  const e = document.createElement(tag_name);
-  parent_element.appendChild(e);
-  let component = html_component_wrap(e);
-  html_style_set(component, "box-sizing", "border-box");
-  return component;
-}
-function html_style_set(b, style_key, style_value) {
-  let b_element = html_component_element_get(b);
-  b_element.style[style_key] = style_value;
-}
-function html_component_wrap(element) {
-  let v = {
-    element
-  };
-  return v;
-}
-function html_document_body() {
-  marker("1");
-  let body_element = document.body;
-  let body = html_component_wrap(body_element);
-  return body;
-}
-function catch_call(reject, lambda) {
-  let i = function inner() {
-    let result = null;
-    try {
-      result = lambda(...arguments);
-    } catch (e) {
-      reject(e);
-    }
-    marker("1");
-    return result;
-  };
-  return i;
-}
-function promise_wrap(lambda) {
-  let v = new Promise(function lambda4(resolve, reject) {
-    try {
-      lambda(resolve, reject);
-    } catch (e) {
-      reject(e);
-    }
-  });
-  return v;
-}
-function round(n) {
-  let rounded = Math.round(n);
-  return rounded;
-}
-function string_starts_with(s, prefix) {
-  let sw = s.startsWith(prefix);
-  return sw;
-}
-async function firebase_bucket() {
-  const admin = await firebase_admin();
-  const bucket = admin.storage().bucket();
-  return bucket;
-}
-async function firebase_admin() {
-  let admin = await global_function_async(firebase_admin, firebase_admin_get);
-  return admin;
-}
-async function global_function_async(fn, lambda) {
-  let global = global_get();
-  marker("1");
-  let value = object_property_lambda(global, fn.name, lambda);
-  let awaited = await value;
-  return awaited;
-}
-function object_property_lambda(object, property_name, lambda) {
-  marker("1");
-  const exists = object_property_exists(object, property_name);
-  if (not(exists)) {
-    let value_set = lambda();
-    object_property_set(object, property_name, value_set);
-  }
-  let value = object_property_get(object, property_name);
-  return value;
-}
-async function firebase_admin_get() {
-  const admin = (await import("firebase-admin")).default;
-  marker("1");
-  let service_account = await firebase_service_account();
-  const sb = await firebase_storage_url_project();
-  log({
-    sb
-  });
-  admin.initializeApp({
-    credential: admin.credential.cert(service_account),
-    storageBucket: sb
-  });
-  return admin;
-}
-async function firebase_storage_url_project() {
-  marker("1");
-  const prefix = await firebase_name();
-  let url = prefix + ".firebasestorage.app";
-  return url;
 }
 async function firebase_service_account() {
   let f_name = await user_repo_firebase_service_account_get();
@@ -1535,10 +1435,6 @@ function function_name_to_acronym(f_name) {
 function list_join_empty(letters) {
   const e = string_empty();
   let joined = list_join(letters, e);
-  return joined;
-}
-function list_join(list, separator) {
-  let joined = list.join(separator);
   return joined;
 }
 function string_empty() {
@@ -1738,1466 +1634,6 @@ async function firebase_storage_url(storage_path) {
   let replaced = string_replace(storage_path, "/", "%2F");
   let url = "https://firebasestorage.googleapis.com/v0/b/" + await firebase_storage_url_project() + "/o/" + replaced + "?alt=media";
   return url;
-}
-function ebible_firebase_upload_path(bible_folder, file_name) {
-  let file_name_with_extension = file_name_json(file_name);
-  let joined = list_join_slash_forward(["bible", bible_folder]);
-  let destination = list_join_slash_forward([joined, file_name_with_extension]);
-  return destination;
-}
-function list_join_slash_forward(list) {
-  let joined = list_join(list, "/");
-  return joined;
-}
-function ebible_verses_upload_name(chapter_code, verse_number) {
-  let joined = list_join_slash_forward([chapter_code, verse_number]);
-  return joined;
-}
-function list_find_property(list, property_name, property_value) {
-  let filter = object_property_equals_lambda(property_name, property_value);
-  let item = list_find(list, filter);
-  return item;
-}
-function object_property_equals_lambda(property_name, property_value) {
-  let v2 = function lambda(item) {
-    let v = object_property_equals(item, property_name, property_value);
-    return v;
-  };
-  return v2;
-}
-function object_property_equals(item, property_name, property_value) {
-  let v = object_property_get(item, property_name) === property_value;
-  return v;
-}
-function list_find(list, lambda$item) {
-  let filtered = list_filter(list, lambda$item);
-  let only = list_single(filtered);
-  return only;
-}
-async function ebible_verses(bible_folder, chapter_code) {
-  marker("1");
-  let {verse_numbers, text} = await ebible_chapter_text(bible_folder, chapter_code);
-  text = whitespace_normalize(text);
-  text = urdu_allah_to_god(text);
-  let split = string_split_space(text);
-  let filtered = list_filter(split, string_empty_not_is);
-  function lambda(la) {
-    function lambda2(verse_number) {
-      verse_number += "";
-      let index = list_index_of_last(filtered, verse_number);
-      let skipped = list_skip(filtered, index + 1);
-      const v = ebible_verse_new(skipped, verse_number);
-      la(v);
-      filtered = list_take(filtered, index);
-    }
-    each_reverse(verse_numbers, lambda2);
-  }
-  let list = list_adder(lambda);
-  let ne = list_empty_not_is(filtered);
-  if (ne) {
-    const v = ebible_verse_new(filtered, "0");
-    list_add(list, v);
-  }
-  list_reverse(list);
-  return list;
-}
-function urdu_allah_to_god(text) {
-  let v = text.replace(/الله/g, "خدا");
-  return v;
-}
-function list_index_of_last(list, item) {
-  marker("1");
-  let index = list.lastIndexOf(item);
-  if (index <= -1) {
-    error_json({
-      list,
-      item,
-      index
-    });
-  }
-  return index;
-}
-function ebible_verse_new(tokens, verse_number) {
-  marker("1");
-  let joined = list_join_space(tokens);
-  const v = {
-    verse_number,
-    text: joined
-  };
-  return v;
-}
-function list_join_space(args) {
-  let joined = list_join(args, " ");
-  return joined;
-}
-function list_take(list, count) {
-  marker("1");
-  let taken = list_slice(list, 0, count);
-  return taken;
-}
-function list_slice(list, a, b) {
-  let sliced = list.slice(a, b);
-  return sliced;
-}
-function list_skip(list, skip_count) {
-  let b = list_size(list);
-  const skipped = list_slice(list, skip_count, b);
-  return skipped;
-}
-function each_reverse(list, lambda) {
-  let reversed = list_copy_reverse(list);
-  each(reversed, lambda);
-}
-function list_copy_reverse(previous) {
-  let copy = list_copy(previous);
-  list_reverse(copy);
-  return copy;
-}
-function list_reverse(list) {
-  list.reverse();
-}
-function whitespace_normalize(str) {
-  marker("1");
-  let v = str.replace(/\s+/g, " ").trim();
-  return v;
-}
-function string_split_space(s) {
-  let split = string_split(s, " ");
-  return split;
-}
-async function ebible_chapter_text(bible_folder, chapter_code) {
-  marker("1");
-  let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
-  let {d, root} = await html_parse_read(joined);
-  let main = html_parse_find(root, ".main");
-  let classes = html_parse_descendants_classes(main, d);
-  let include = ebible_verses_include();
-  let exclude = ebible_verses_exclude();
-  list_intersect_empty_is_assert(include, exclude);
-  let list2 = list_difference(classes, include);
-  let extra = list_difference(list2, exclude);
-  let dictionary = html_parse_classes_preview(main, d, extra);
-  list_empty_is_assert(extra, {
-    extra,
-    dictionary
-  });
-  function lambda(item) {
-    let selector2 = css_class_prefix_combine(item);
-    html_parse_find_remove(main, selector2);
-  }
-  each(exclude, lambda);
-  let list = html_parse_find_list_to(main, ".verse");
-  function lambda2(item) {
-    let t = html_parse_text(d, item);
-    let n = whitespace_normalize(t);
-    return n;
-  }
-  let verse_numbers = list_map(list, lambda2);
-  verse_numbers = list_map(verse_numbers, roman_to_integer);
-  let text = html_parse_text(d, main);
-  let result = {
-    verse_numbers,
-    text
-  };
-  return result;
-}
-function roman_to_integer(input) {
-  function unicodeToAscii(roman) {
-    const map = {
-      Ⅰ: "I",
-      Ⅱ: "II",
-      Ⅲ: "III",
-      Ⅳ: "IV",
-      Ⅴ: "V",
-      Ⅵ: "VI",
-      Ⅶ: "VII",
-      Ⅷ: "VIII",
-      Ⅸ: "IX",
-      Ⅹ: "X",
-      Ⅺ: "XI",
-      Ⅻ: "XII",
-      Ⅼ: "L",
-      Ⅽ: "C",
-      Ⅾ: "D",
-      Ⅿ: "M"
-    };
-    function lambda(ch) {
-      let v = map[ch] ?? ch;
-      return v;
-    }
-    let v3 = roman.split("").map(lambda).join("");
-    return v3;
-  }
-  function romanToInt(roman) {
-    const values = {
-      I: 1,
-      V: 5,
-      X: 10,
-      L: 50,
-      C: 100,
-      D: 500,
-      M: 1000
-    };
-    let total = 0;
-    for (let i = 0; i < roman.length; i++) {
-      const v1 = values[roman[i]];
-      const v2 = values[roman[i + 1]] || 0;
-      total += v1 < v2 ? -v1 : v1;
-    }
-    return total;
-  }
-  function parseRomanOrInteger(input) {
-    const match = input.match(/^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯIVXLCDM]+)([a-zA-Z]*)$/);
-    if (not(match)) {
-      return input;
-    }
-    const romanPart = match[1];
-    const suffix = match[2] || "";
-    const asciiRoman = unicodeToAscii(romanPart);
-    let v5 = romanToInt(asciiRoman) + suffix;
-    return v5;
-  }
-  let v6 = parseRomanOrInteger(input);
-  return v6;
-}
-function list_intersect_empty_is_assert(include, exclude) {
-  let i = list_intersect(include, exclude);
-  list_empty_is_assert(i, {
-    include,
-    exclude
-  });
-}
-function list_empty_is_assert(extra, j) {
-  let e = list_empty_is(extra);
-  assert_json(e, j);
-}
-function list_intersect(list, other) {
-  function lambda2(la) {
-    function lambda(l) {
-      if (list_includes(other, l)) {
-        la(l);
-      }
-    }
-    each(list, lambda);
-  }
-  let list2 = list_adder(lambda2);
-  return list2;
-}
-function html_parse_find_list_to(bl, selector) {
-  let query = html_parse_find(bl, selector);
-  let list = html_parse_list_to(query);
-  return list;
-}
-function html_parse_list_to(query) {
-  let v = query.get();
-  return v;
-}
-function html_parse_find(root, selector) {
-  let result = root.find(selector);
-  return result;
-}
-function html_parse_text(d, item) {
-  let text = d(item).text();
-  return text;
-}
-function css_class_prefix_combine(item) {
-  let v = "." + item;
-  return v;
-}
-function ebible_verses_exclude() {
-  let v = ["b", "bdit", "chapterlabel", "copyright", "f", "fq", "fqa", "fr", "footnote", "fl", "ft", "fv", "iex", "im", "imt", "is", "io", "ior", "iot", "io2", "ip", "k", "mt", "mt3", "mr", "ms", "ms2", "mt2", "nb", "notebackref", "notemark", "popup", "qa", "qd", "r", "rq", "s", "s2", "s3", "sp", "tl", "tnav", "x", "xo", "xt"];
-  return v;
-}
-function ebible_verses_include() {
-  let v = ["bd", "bk", "d", "em", "fk", "it", "li", "li2", "li3", "li4", "m", "mi", "nd", "p", "pi", "pc", "pm", "pmc", "pmo", "pmr", "sc", "q", "q2", "q3", "q4", "qc", "qm", "qm2", "qr", "qs", "verse", "wj"];
-  return v;
-}
-function html_parse_descendants_classes(item, d) {
-  let descendants = html_parse_find_list_to(item, "*");
-  function lambda2(la) {
-    function lambda(item) {
-      let c = html_parse_attr(d, item, "class");
-      if (string_is(c)) {
-        let split = string_split(c, " ");
-        each(split, la);
-      }
-    }
-    each(descendants, lambda);
-  }
-  let list = list_adder(lambda2);
-  let classes = list_unique(list);
-  list_sort_string(classes);
-  return classes;
-}
-function list_sort_string(list) {
-  list.sort();
-}
-function html_parse_attr(d, item, name) {
-  let v = d(item).attr(name);
-  return v;
-}
-function html_parse_find_remove(main, selector) {
-  let result = html_parse_find(main, selector);
-  result.remove();
-}
-function html_parse_classes_preview(main, d, classes) {
-  function lambda(c) {
-    let e = html_parse_find(main, "." + c);
-    let text = html_parse_text(d, e);
-    return text;
-  }
-  let dictionary = list_to_dictionary(classes, lambda);
-  return dictionary;
-}
-async function html_parse_read(file_path) {
-  let contents = await file_read(file_path);
-  let parsed = await html_parse(contents);
-  return parsed;
-}
-async function html_parse(contents) {
-  let cheerio = await import_install("cheerio");
-  let d = cheerio.load(contents);
-  let root = d("html");
-  let result = {
-    d,
-    root
-  };
-  return result;
-}
-async function import_install(name) {
-  try {
-    let v = await import(name);
-    return v;
-  } catch (err) {
-    if (err.code === "ERR_MODULE_NOT_FOUND" || err.code === "MODULE_NOT_FOUND") {
-      await npm_install(name);
-      let v2 = await import(name);
-      return v2;
-    }
-    throw err;
-  }
-}
-async function npm_install(package_name) {
-  await command_line("npm install " + package_name + "@latest");
-}
-async function command_line(command) {
-  marker("1");
-  let extra = {};
-  const stdout = await command_line_generic(command, extra);
-  return stdout;
-}
-async function command_line_generic(command, extra) {
-  const {exec} = await import("child_process");
-  const {promisify} = await import("util");
-  const execAsync = promisify(exec);
-  const options = {
-    encoding: "utf8"
-  };
-  object_merge(options, extra);
-  const stdout = await execAsync(command, options);
-  return stdout;
-}
-function object_merge(to, from) {
-  let strict = true;
-  object_merge_generic(strict, to, from);
-  return to;
-}
-function object_merge_generic(strict, to, from) {
-  function lambda(property_name) {
-    if (strict) {
-      if (object_property_exists(to, property_name)) {
-        error_json({
-          to,
-          from,
-          property_name
-        });
-      }
-    }
-    let value = object_property_get(from, property_name);
-    object_property_set(to, property_name, value);
-  }
-  let list = object_properties(from);
-  each(list, lambda);
-}
-function ebible_version_download_path_combine(bible_folder, book_code) {
-  let chapters_name = book_code + ".htm";
-  let file_path = ebible_version_download_path(bible_folder);
-  let joined = path_join([file_path, chapters_name]);
-  return joined;
-}
-function ebible_version_download_path(bible_folder) {
-  let joined2 = local_function_path(ebible_version_download, bible_folder);
-  return joined2;
-}
-async function ebible_version_download(bible_folder) {
-  marker("1");
-  let url = "https://ebible.org/Scriptures/" + bible_folder + "_html.zip";
-  let buffer = await http_local(url);
-  let file_path = ebible_version_download_path(bible_folder);
-  await unzip(file_path, buffer);
-  return file_path;
-}
-async function unzip(file_path, buffer) {
-  const AdmZip = (await import_install("adm-zip")).default;
-  const zip = new AdmZip(buffer);
-  zip.extractAllTo(file_path, true);
-}
-async function http_local(url) {
-  marker("1");
-  let key_get = http_local_file_name;
-  let cached_exists = file_exists;
-  let cached_get = file_read_buffer;
-  let value_get = http_firebase;
-  let cache_save = file_write_buffer;
-  let result = await cache_generic(key_get, url, cached_exists, cached_get, value_get, cache_save);
-  return result;
-}
-async function file_write_buffer(f_path, contents) {
-  await file_write_generic(f_path, file_overwrite_buffer, contents);
-}
-async function file_overwrite_buffer(file_path, contents) {
-  marker("1");
-  let fs = await import("fs");
-  await file_parent_exists_ensure(file_path);
-  await fs.promises.writeFile(file_path, contents);
-}
-async function file_read_buffer(file_path) {
-  marker("1");
-  let fs = await import("fs");
-  let v = await fs.promises.readFile(file_path);
-  return v;
-}
-function http_local_file_name(url) {
-  let file_name = http_firebase_file_name(url);
-  let fn = http_local;
-  let joined = local_function_path(fn, file_name);
-  return joined;
-}
-function local_function_path(fn, file_name) {
-  let joined2 = path_join(["D:\\user\\storage\\function", fn.name, file_name]);
-  return joined2;
-}
-function http_firebase_file_name(url) {
-  let safe = string_base64_to(url);
-  return safe;
-}
-function string_base64_to(s) {
-  let b = browser_is();
-  if (b) {
-    const b64 = btoa(s);
-    return b64;
-  }
-  const b64node = Buffer.from(s, "utf-8").toString("base64");
-  return b64node;
-}
-async function http_firebase(url) {
-  let key_get = http_firebase_file_path;
-  let cached_exists = firebase_storage_exists;
-  let cached_get = firebase_storage_download;
-  let value_get = http;
-  async function cache_save(key, value) {
-    await firebase_upload_buffer(value, key);
-  }
-  let result = await cache_generic(key_get, url, cached_exists, cached_get, value_get, cache_save);
-  return result;
-}
-async function firebase_upload_buffer(content, destination) {
-  marker("1");
-  let buffer = Buffer.from(content);
-  const settings = {
-    contentType: "application/octet-stream",
-    resumable: false
-  };
-  await firebase_upload_generic(destination, settings, buffer);
-  return destination;
-}
-async function firebase_upload_generic(destination, settings, buffer) {
-  destination = firebase_path_fix(destination);
-  const bucket = await firebase_bucket();
-  const file = bucket.file(destination);
-  let merged = object_merge({
-    metadata: {
-      cacheControl: "no-cache"
-    }
-  }, settings);
-  await retry(5, lambda);
-  log_keep(`Uploaded data to ${destination}`);
-  const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
-  log_keep("Accessible at:" + url);
-  async function lambda() {
-    await file.save(buffer, merged);
-  }
-}
-async function retry(count, lambda) {
-  let wait = 1000;
-  let result = null;
-  let success = false;
-  async function lambda3(la) {
-    async function lambda2() {
-      try {
-        result = await lambda();
-        success = true;
-        return success;
-      } catch (e) {
-        log_keep({
-          e
-        });
-        la(e);
-        await sleep(wait);
-        wait *= 2;
-      }
-    }
-    await each_range_async(count, lambda2);
-  }
-  let errors = await list_adder_async(lambda3);
-  if (success) {
-    return result;
-  }
-  error_json({
-    errors
-  });
-}
-async function list_adder_async(lambda$la) {
-  let list = [];
-  function list_adder_inner(item) {
-    list_add(list, item);
-  }
-  await lambda$la(list_adder_inner);
-  return list;
-}
-async function each_range_async(count, lambda) {
-  let r = range(count);
-  await each_async(r, lambda);
-}
-async function each_async(list, lambda$item) {
-  for (let item of list) {
-    if (await lambda$item(item) === true) {
-      break;
-    }
-  }
-}
-function range(count) {
-  marker("1");
-  let rr = [];
-  for (let i = 0; i < count; i++) {
-    list_add(rr, i);
-  }
-  return rr;
-}
-async function cache_generic(key_get, url, cached_exists, cached_get, value_get, cache_save) {
-  let key = key_get(url);
-  let e = await cached_exists(key);
-  let result = null;
-  if (e) {
-    result = await cached_get(key);
-  } else {
-    let value = await value_get(url);
-    await cache_save(key, value);
-    result = await cached_get(key);
-  }
-  return result;
-}
-function http_firebase_file_path(url) {
-  marker("1");
-  let file_name = http_firebase_file_name(url);
-  let joined = path_join(["http", file_name]);
-  joined = firebase_path_fix(joined);
-  return joined;
-}
-async function firebase_storage_exists(path) {
-  path = firebase_path_fix(path);
-  const bucket = await firebase_bucket();
-  const file = bucket.file(path);
-  let exists = null;
-  try {
-    const [e] = await file.exists();
-    exists = e;
-  } catch (err) {
-    error(err);
-    exists = false;
-  }
-  return exists;
-}
-async function each_pair_async(list_a, list_b, lambda$a$b) {
-  marker("1");
-  let lists = [list_a, list_b];
-  await each_multiple_async(lists, lambda);
-  async function lambda(items) {
-    let [a, b] = items;
-    await lambda$a$b(a, b);
-  }
-}
-async function each_multiple_async(lists, lambda) {
-  marker("1");
-  let first = list_first(lists);
-  async function lambda2(item, index) {
-    let items = lists_get(lists, index);
-    await lambda(items);
-  }
-  await each_index_async(first, lambda2);
-}
-async function each_index_async(list, lambda$item$index) {
-  marker("1");
-  let index = 0;
-  async function lambda2(item) {
-    await lambda$item$index(item, index);
-    index++;
-  }
-  await each_async(list, lambda2);
-}
-function lists_get(lists, index) {
-  function lambda(list) {
-    let item = list_get(list, index);
-    return item;
-  }
-  const items = list_map(lists, lambda);
-  return items;
-}
-async function each_range_from_async(from, to, lambda) {
-  marker("1");
-  let list = range_from(from, to);
-  await each_async(list, lambda);
-}
-function range_from(from, to) {
-  from = integer_to(from);
-  to = integer_to(to);
-  marker("1");
-  let count = to - from + 1;
-  let r = range(count);
-  function lambda(item) {
-    let s = add(from, item);
-    return s;
-  }
-  let mapped = list_map(r, lambda);
-  return mapped;
-}
-function integer_to(input) {
-  let i = parseInt(input, 10);
-  if (Number.isNaN(i)) {
-    let v = null;
-    return v;
-  }
-  return i;
-}
-function add(left, right) {
-  const sum = left + right;
-  return sum;
-}
-function list_second(list) {
-  const index = 1;
-  const second = list_get(list, index);
-  return second;
-}
-function string_split_dash(second) {
-  let split4 = string_split(second, "-");
-  return split4;
-}
-function number_pad(num, count) {
-  marker("1");
-  let v = String(num).padStart(count, "0");
-  return v;
-}
-function list_first_second(list) {
-  const property_name = "second";
-  let value_get = list_second;
-  let result = list_first_second_generic(list, value_get, property_name);
-  return result;
-}
-function list_first_second_generic(list, value_get, property_name) {
-  let first = null;
-  let second = null;
-  if (list_empty_not_is(list)) {
-    first = list_first(list);
-    if (list_multiple_is(list)) {
-      second = value_get(list);
-    }
-  }
-  let result = {
-    first,
-    [property_name]: second
-  };
-  return result;
-}
-function string_split_colon(chapter_verses) {
-  let split3 = string_split(chapter_verses, ":");
-  return split3;
-}
-function list_map_first(mapped4) {
-  let mapped6 = list_map(mapped4, list_first);
-  return mapped6;
-}
-function list_map_filter_string_empty_not_is(list) {
-  marker("1");
-  let mapped4 = list_map(list, list_filter_empty_not_is);
-  return mapped4;
-}
-function list_filter_empty_not_is(item) {
-  let filtered2 = list_filter(item, string_empty_not_is);
-  return filtered2;
-}
-function list_map_split_space(mapped2) {
-  function lambda(item) {
-    let split2 = string_split_space(item);
-    return split2;
-  }
-  let mapped3 = list_map(mapped2, lambda);
-  return mapped3;
-}
-function list_map_prefix_without_any(list, prefixes) {
-  marker("1");
-  function lambda(item) {
-    let prefix = list_find_starts_with(item, prefixes);
-    let result = string_prefix_without(item, prefix);
-    return result;
-  }
-  let mapped = list_map(list, lambda);
-  return mapped;
-}
-function list_find_starts_with(item, prefixes) {
-  marker("1");
-  function lambda2(item2) {
-    let sw = string_starts_with(item, item2);
-    return sw;
-  }
-  let any = list_find(prefixes, lambda2);
-  return any;
-}
-function string_prefix_without(s, prefix) {
-  let a = string_starts_with(s, prefix);
-  if (not(a)) {
-    error();
-  }
-  let skipped = string_size(prefix);
-  let without = string_skip(s, skipped);
-  return without;
-}
-function string_skip(s, skip_count) {
-  let b = string_size(s);
-  const skipped = string_slice(s, skip_count, b);
-  return skipped;
-}
-function list_map_prefix_any(list, prefixes) {
-  marker("1");
-  function lambda(item) {
-    let prefix = list_find_starts_with(item, prefixes);
-    return prefix;
-  }
-  let mapped = list_map(list, lambda);
-  return mapped;
-}
-function list_filter_starts_with_any(prefixes, list) {
-  function lambda(item) {
-    let any = list_any_starts_with(item, prefixes);
-    return any;
-  }
-  let verse_references = list_filter(list, lambda);
-  return verse_references;
-}
-function list_any_starts_with(item, prefixes) {
-  function lambda2(item2) {
-    let sw = string_starts_with(item, item2);
-    return sw;
-  }
-  let any = list_any(prefixes, lambda2);
-  return any;
-}
-function list_map_property(list, property_name) {
-  function list_map_property_lambda(item) {
-    let value = object_property_get(item, property_name);
-    return value;
-  }
-  let mapped = list_map(list, list_map_property_lambda);
-  return mapped;
-}
-async function ebible_version_books(bible_folder) {
-  marker("1");
-  let b = browser_is();
-  if (b) {
-    let file_name2 = ebible_version_books_upload_name();
-    let {books} = await firebase_storage_download_ebible(bible_folder, file_name2);
-    return books;
-  }
-  const n = ebible_class_new();
-  let o = ebible_class_old();
-  let a = ebible_class_apocrypha();
-  let classes = list_join_comma_space([o, a, n]);
-  let books = await ebible_version_books_testament(bible_folder, classes);
-  return books;
-}
-function ebible_version_books_upload_name() {
-  let v = "books";
-  return v;
-}
-function ebible_class_apocrypha() {
-  let v = ".aa";
-  return v;
-}
-async function ebible_version_books_testament(bible_folder, selector) {
-  let file_path = await ebible_version_download(bible_folder);
-  let joined = path_join([file_path, "index.htm"]);
-  let {d, root} = await html_parse_read(joined);
-  let bl = html_parse_find(root, ".bookList");
-  let mapped = html_parse_find_list_href_text(bl, selector, d);
-  function lambda(item) {
-    let href = object_property_get(item, "href");
-    let taken = ebible_chapter_code_to_book(href);
-    let to = object_merge({
-      book_code: taken
-    }, item);
-    return to;
-  }
-  let mapped2 = list_map(mapped, lambda);
-  return mapped2;
-}
-function ebible_chapter_code_to_book(chapter_code) {
-  marker("1");
-  let count = ebible_book_code_size();
-  let book_code = string_take(chapter_code, count);
-  return book_code;
-}
-function ebible_book_code_size() {
-  let v = 3;
-  return v;
-}
-function string_take(s, count) {
-  let taken = string_slice(s, 0, count);
-  return taken;
-}
-function html_parse_find_list_href_text(bl, selector, d) {
-  marker("1");
-  let list = html_parse_find_list_to(bl, selector);
-  let mapped = html_parse_href_text_map(d, list);
-  return mapped;
-}
-function html_parse_href_text_map(d, list) {
-  function lambda(item) {
-    let both = html_parse_href_text(d, item);
-    return both;
-  }
-  let mapped = list_map(list, lambda);
-  return mapped;
-}
-function html_parse_href_text(d, item) {
-  let text = html_parse_text(d, item);
-  let href = html_parse_href(d, item);
-  let both = {
-    text,
-    href
-  };
-  return both;
-}
-function html_parse_href(d, item) {
-  marker("1");
-  const name = "href";
-  let href = html_parse_attr(d, item, name);
-  return href;
-}
-function list_join_comma_space(args) {
-  let v = list_join(args, ", ");
-  return v;
-}
-function ebible_class_old() {
-  let v = ".oo";
-  return v;
-}
-function ebible_class_new() {
-  let v = ".nn";
-  return v;
-}
-function ebible_folder_english() {
-  let v = "engbsb";
-  return v;
-}
-function html_display_none_or_block(condition, item) {
-  if (condition) {
-    html_display_none(item);
-  } else {
-    html_display_block(item);
-  }
-}
-function html_display_block(element) {
-  marker("1");
-  html_style_set(element, "display", "block");
-}
-function html_display_none(element) {
-  marker("1");
-  html_style_set(element, "display", "none");
-}
-function ebible_chapter_code_to_name(chapter_code) {
-  let count = ebible_book_code_size();
-  let s = string_skip(chapter_code, count);
-  let i = integer_to(s);
-  let chapter_name = string_to(i);
-  return chapter_name;
-}
-function list_remove_property(languages, property_name, en) {
-  let found = list_find_property(languages, property_name, en);
-  list_remove(languages, found);
-}
-function ebible_languages() {
-  let languages = [{
-    name: "English",
-    bible_folder: ebible_folder_english(),
-    language_code: "en"
-  }, {
-    name: "Urdu",
-    bible_folder: ebible_folder_urdu(),
-    language_code: "ur"
-  }, {
-    name: "Swahili",
-    bible_folder: "swhonen",
-    language_code: "swh"
-  }, {
-    name: "Luganda",
-    bible_folder: "lug",
-    language_code: "lug"
-  }, {
-    name: "Bengali",
-    bible_folder: "benirv",
-    language_code: "ben"
-  }, {
-    name: "Telugu",
-    bible_folder: "tel2017",
-    language_code: "tel"
-  }, {
-    name: "Yoruba",
-    bible_folder: "yor",
-    language_code: "yor"
-  }, {
-    name: "Hindi",
-    bible_folder: "hin2017",
-    language_code: "hin"
-  }, {
-    name: "Arabic",
-    bible_folder: "arbnav",
-    language_code: "arb"
-  }, {
-    name: "Ekegusii",
-    bible_folder: "guz",
-    language_code: "guz"
-  }, {
-    name: "Cebuano",
-    bible_folder: "cebulb",
-    language_code: "ceb"
-  }, {
-    name: "Tagalog",
-    bible_folder: "tglulb",
-    language_code: "tgl"
-  }];
-  return languages;
-}
-function ebible_folder_urdu() {
-  let v2 = "urdgvu";
-  return v2;
-}
-function string_take_less_1(typed) {
-  const sz1 = string_size_less_1(typed);
-  typed = string_take(typed, sz1);
-  return typed;
-}
-function string_size_less_1(typed) {
-  let sz = string_size(typed);
-  const sz1 = sz - 1;
-  return sz1;
-}
-function list_add_first(list, item) {
-  list_insert(list, 0, item);
-}
-function list_insert(list, index, value) {
-  const delete_count = 0;
-  list_insert_generic(index, list, delete_count, value);
-}
-function list_insert_generic(index, list, delete_count, value) {
-  let b = number_is(index);
-  assert(b);
-  list_splice(list, index, delete_count, value);
-}
-function list_splice(list, index, delete_count, value) {
-  list.splice(index, delete_count, value);
-}
-function number_is(value) {
-  let v = typeof value === "number" && isFinite(value);
-  return v;
-}
-function ebible_index_flat_upload_name() {
-  let v = ebible_index_upload_name();
-  let file_name = list_join_slash_forward([v, "flat"]);
-  return file_name;
-}
-function ebible_index_upload_name() {
-  let v = "index";
-  return v;
-}
-function string_lower_to(s) {
-  marker("1");
-  let lower = s.toLowerCase();
-  return lower;
-}
-function html_on_keydown(component, lambda) {
-  marker("1");
-  const name_event = "keydown";
-  html_on(component, name_event, lambda);
-}
-function html_on(component, name_event, lambda) {
-  function_is_assert(lambda);
-  let element = html_component_element_get(component);
-  element.addEventListener(name_event, lambda);
-}
-function function_is_assert(lambda) {
-  let fi = function_is(lambda);
-  assert_json(fi, {
-    lambda
-  });
-}
-function function_is(f) {
-  marker("1");
-  let fi = typeof f === "function";
-  return fi;
-}
-function string_letters_only(str) {
-  marker("1");
-  let letters = str.replace(/[^a-zA-Z]/g, "");
-  return letters;
-}
-function object_property_set_exists_not(object, property_name, value) {
-  object_property_exists_not_assert(object, property_name);
-  object_property_set(object, property_name, value);
-}
-function object_property_exists_not_assert(object, property_name) {
-  marker("1");
-  let result = object_property_exists_not(object, property_name);
-  assert(result);
-}
-function object_property_exists_not(object, property_name) {
-  let result = object_property_exists(object, property_name);
-  let n = not(result);
-  return n;
-}
-function list_concat(a, b) {
-  let l = list_is(a);
-  assert(l);
-  let concated = a.concat(b);
-  return concated;
-}
-function list_random_item(arr) {
-  const p = random() * list_size(arr);
-  let index = floor(p);
-  let r = list_get(arr, index);
-  return r;
-}
-function html_p_text_multiple(parent, list) {
-  function lambda2(item) {
-    html_p_text(parent, item);
-  }
-  each(list, lambda2);
-}
-function html_p_text(root, text) {
-  let p = html_p(root);
-  html_text_set(p, text);
-  return p;
-}
-function html_text_set(component, text) {
-  let element = html_component_element_get(component);
-  element.innerHTML = text;
-}
-function html_p(root) {
-  let component = html_element(root, "p");
-  return component;
-}
-function html_clear(element) {
-  html_text_set(element, "");
-}
-function app_reply_choices() {
-  let education = app_reply_pray("Education", "provide education to those in need 🏫");
-  let heal = app_reply_pray("Heal", "heal the sick");
-  let job = app_reply_pray("Job", "provide you with a good job");
-  let provide = app_reply_pray("Provide", "provide what is needed");
-  let travel_pray = app_reply_pray("Travel pray", "give you safe travels " + emoji_dove());
-  let will = app_reply_pray("Will", "have His will done " + emoji_dove());
-  let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
-  let v = [{
-    text: emoji_pray() + " Amen",
-    response: prayer_end()
-  }, {
-    text: emoji_question() + " Ask",
-    response: "What are you asking me to do?"
-  }, {
-    text: emoji_pray() + " Bless",
-    response: prayer_start() + string_lord_bless() + "you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " + prayer_end()
-  }, {
-    text: emoji_pray() + " Bless short",
-    response: "God bless" + prayer_end()
-  }, {
-    text: emoji_phone() + " Call why?",
-    response: emoji_phone() + " Why did you call me? What did you want to talk about?"
-  }, {
-    text: emoji_phone() + " Call no",
-    response: emoji_phone() + " No video call"
-  }, {
-    text: emoji_pray() + " Church",
-    response: emoji_pray() + string_lord_bless_your() + "church " + emoji_church()
-  }, education, {
-    text: emoji_pray() + " Family",
-    response: emoji_pray() + string_lord_bless_your() + "family " + emoji_family()
-  }, {
-    text: emoji_pray() + " Future",
-    response: emoji_pray() + "God knows the future. I do not know the future." + emoji_question()
-  }, {
-    text: emoji_fire() + " Glory",
-    response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! "
-  }, {
-    text: emoji_pray() + " Give",
-    response: emoji_pray() + " Sorry, I have nothing to give you at this time. According to the desire of the LORD: May the LORD provide and may the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask."
-  }, {
-    text: emoji_wave() + " Greetings",
-    response: emoji_wave() + emoji_smile() + " Greetings in the name of our LORD Jesus Christ! " + emoji_cross()
-  }, {
-    text: emoji_hands_raising() + " Hallelujah",
-    response: emoji_hands_raising() + " Hallelujah! Hallelujah! Hallelujah! " + emoji_pray()
-  }, heal, {
-    text: emoji_pray() + " Health",
-    response: emoji_pray() + " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine."
-  }, {
-    text: emoji_pray() + " Help",
-    response: "God help us" + prayer_end()
-  }, {
-    text: emoji_question() + " Help what",
-    response: emoji_pray() + "What help are you asking for? What are you asking me to do?"
-  }, {
-    text: emoji_ok() + " How day",
-    response: emoji_ok() + " The day of the " + string_the_servant_of_god_is() + " doing good " + emoji_100() + " through the grace of God, because " + emoji_book_open() + " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However please pray that the servant of God will stop hearing demons" + emoji_pray()
-  }, {
-    text: emoji_pray() + " How family",
-    response: emoji_pray() + "Please pray for my family"
-  }, {
-    text: emoji_ok() + "How r u",
-    response: emoji_ok() + " " + string_the_servant_of_god_is() + " doing good " + emoji_100() + " through the grace of God, because " + emoji_book_open() + " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However please pray that the servant of God will stop hearing demons" + emoji_pray()
-  }, {
-    text: emoji_pray() + " Invite",
-    response: emoji_pray() + "If the LORD makes a way, then I will travel to you. However at this time I have no money to travel."
-  }, job, {
-    text: emoji_globe_americas() + " Language",
-    response: emoji_globe_americas() + " " + string_the_servant_of_god() + " speaks English. " + emoji_pray()
-  }, {
-    text: emoji_question() + " Languages",
-    response: "Do you speak any languages besides English?"
-  }, {
-    text: emoji_globe_americas() + " Location",
-    response: emoji_globe_americas() + " " + string_the_servant_of_god_is() + " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " + emoji_pray()
-  }, {
-    text: emoji_wave() + " Meet",
-    response: emoji_pray() + " Nice to meet you! " + emoji_handshake()
-  }, {
-    text: emoji_wave() + " Name",
-    response: emoji_pray() + " " + string_the_servant_of_god_is() + " called Jared Patten Mathis " + emoji_handshake()
-  }, {
-    text: emoji_ok() + "Okay",
-    response: emoji_ok() + " " + string_the_servant_of_god_is() + " okay, yes " + emoji_100() + " " + emoji_pray()
-  }, {
-    text: emoji_dove() + " Peace",
-    response: emoji_dove() + " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with all of you " + emoji_rainbow()
-  }, {
-    text: "🎵 Praise",
-    response: " 🎵 " + emoji_voice() + " Praise the LORD our God in the name of Jesus Christ! 🎶"
-  }, {
-    text: emoji_pray() + " Pray",
-    response: prayer_start()
-  }, {
-    text: emoji_pray() + " Preach",
-    response: emoji_pray() + "If God wills, then yes I will preach. I am not available 10 am to 12 pm every day EST. Do you have a day and time?"
-  }, {
-    text: emoji_pray() + " " + "Prayers",
-    response: emoji_pray() + "According to the desire of God, may there be prayer"
-  }, {
-    text: emoji_pray() + " " + "Programming",
-    response: emoji_pray() + "I have been computer programming 💻"
-  }, {
-    text: emoji_pray() + " " + "Replying",
-    response: emoji_pray() + "I have been replying to messages 📨"
-  }, {
-    text: emoji_pray() + " Share",
-    response: emoji_pray() + " What day and time are you asking me to share the word of God? " + emoji_book_open()
-  }, provide, {
-    text: emoji_pray() + " Sleep",
-    response: emoji_pray() + emoji_sleep_z() + " " + string_lord_bless_your() + "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. " + emoji_sleep_face()
-  }, {
-    text: "Song",
-    response: "https://youtu.be/rNhSoUKPgMQ" + newline() + newline() + " Jesus gave me the grace to write this song"
-  }, {
-    text: emoji_pray() + " Testimony",
-    response: emoji_pray() + " Jesus died for my sins. " + emoji_cross() + " Jesus was buried. " + emoji_rock() + " Jesus rose to life. " + emoji_pray() + emoji_church() + " I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to ministry. " + emoji_cross() + emoji_smile()
-  }, {
-    text: emoji_pray() + " Thank God",
-    response: emoji_pray() + " Thank the LORD, our God! " + emoji_smile()
-  }, {
-    text: emoji_pray() + " Thank you",
-    response: emoji_pray() + " Thank you very much! " + emoji_smile()
-  }, {
-    text: emoji_pray() + " Travel ask",
-    response: emoji_pray() + "No money for travel"
-  }, travel_pray, {
-    text: emoji_question() + " What",
-    response: emoji_pray() + "What do you mean?"
-  }, {
-    text: emoji_phone() + " WhatsApp",
-    response: emoji_phone() + " WhatsApp: +1-904-314-4052"
-  }, will, {
-    text: emoji_pray() + " Wills",
-    response: emoji_pray() + " If God wills, yes"
-  }, with2];
-  return v;
-}
-function emoji_handshake() {
-  let v2 = "🤝";
-  return v2;
-}
-function newline() {
-  let v = "\n";
-  return v;
-}
-function emoji_rock() {
-  let v2 = "🪨";
-  return v2;
-}
-function emoji_rainbow() {
-  let v2 = "🌈";
-  return v2;
-}
-function string_the_servant_of_god() {
-  let v2 = "The servant of God";
-  return v2;
-}
-function emoji_question() {
-  let v2 = "❓";
-  return v2;
-}
-function emoji_dove() {
-  let v = "🕊️";
-  return v;
-}
-function app_reply_pray(pray_title, pray_request) {
-  let v2 = {
-    text: emoji_pray() + " " + pray_title,
-    response: emoji_pray() + string_may_the_lord() + pray_request
-  };
-  return v2;
-}
-function string_may_the_lord() {
-  let v = "May the LORD ";
-  return v;
-}
-function emoji_pray() {
-  let v = "🙏";
-  return v;
-}
-function emoji_family() {
-  let v2 = "👨‍👩‍👧‍👦";
-  return v2;
-}
-function emoji_voice() {
-  let v2 = "🗣️";
-  return v2;
-}
-function emoji_hands_raising() {
-  let v2 = "🙌";
-  return v2;
-}
-function emoji_church() {
-  let v2 = "⛪";
-  return v2;
-}
-function string_lord_bless() {
-  let v = string_may_the_lord() + "bless ";
-  return v;
-}
-function string_lord_bless_your() {
-  let blessing = string_lord_bless() + "your ";
-  return blessing;
-}
-function emoji_phone() {
-  let v2 = "📞";
-  return v2;
-}
-function emoji_sleep_face() {
-  let v = "😴";
-  return v;
-}
-function emoji_sleep_z() {
-  let v = "💤";
-  return v;
-}
-function emoji_globe_americas() {
-  let v = "🌎";
-  return v;
-}
-function emoji_book_open() {
-  let v = "📖";
-  return v;
-}
-function emoji_100() {
-  let v = "💯";
-  return v;
-}
-function string_the_servant_of_god_is() {
-  let v = string_the_servant_of_god() + " is";
-  return v;
-}
-function emoji_ok() {
-  let v = "👌";
-  return v;
-}
-function emoji_cross() {
-  let v = "✝️";
-  return v;
-}
-function emoji_smile() {
-  let v = "😁";
-  return v;
-}
-function emoji_wave() {
-  let v = "👋";
-  return v;
-}
-function emoji_trinity() {
-  let v = emoji_heart_fire() + emoji_cross() + emoji_dove();
-  return v;
-}
-function emoji_heart_fire() {
-  let v2 = "❤️‍🔥";
-  return v2;
-}
-function emoji_fire() {
-  let v = "🔥";
-  return v;
-}
-function prayer_start() {
-  let v = "🙇 In the name of the Father, and of the Son, and of the Holy Spirit" + " " + emoji_trinity() + " : ";
-  return v;
-}
-function prayer_end() {
-  marker("1");
-  let v = " Amen! " + emoji_pray();
-  return v;
-}
-function list_empty(list) {
-  object_property_set(list, "length", 0);
-}
-function list_join_newline_2(list) {
-  marker("1");
-  let separator = newline();
-  let joined = list_join(list, separator + separator);
-  return joined;
-}
-async function clipboard_copy(text) {
-  let b = browser_is();
-  if (b) {
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-  const clipboard = await import("clipboardy");
-  await clipboard.default.write(text);
-}
-function html_button(parent, text, lambda) {
-  assert_arguments(arguments, 3);
-  let component = html_button_element(parent);
-  html_text_set(component, text);
-  html_on_click(component, lambda);
-  html_style_font_size(component, "inherit");
-  return component;
-}
-function html_style_font_size(html, value) {
-  html_style_set(html, "font-size", value);
-}
-function html_on_click(component, lambda) {
-  const name_event = "click";
-  html_on(component, name_event, lambda);
-}
-function html_button_element(parent) {
-  marker("1");
-  const tag_name = "button";
-  let b = html_element(parent, tag_name);
-  return b;
-}
-async function firebase_storage_function_run(f_name, version_get) {
-  marker("1");
-  let destination_version = version_get(f_name);
-  let destination = await firebase_storage_download_property(destination_version, "destination");
-  let code = await firebase_storage_download_property(destination, "code");
-  let call = js_code_call_statement(f_name);
-  let global_init = js_code_global_init();
-  let joined = list_join_newline([global_init, call, code]);
-  if (browser_is()) {
-    let body = html_document_body();
-    let component = html_element(body, "script");
-    html_attribute_set(component, "type", "module");
-    html_text_set(component, joined);
-    return;
-  }
-  eval(joined);
-}
-function js_code_global_init() {
-  let right = js_code_braces_empty();
-  let code_assign = js_code_let_assign("global", right);
-  return code_assign;
-}
-function js_code_let_assign(left, right) {
-  let code_assign = js_keyword_let() + " " + js_code_assign(left, right) + ";";
-  return code_assign;
-}
-function js_code_assign(left, right) {
-  const code = left + " = " + right;
-  return code;
-}
-function js_keyword_let() {
-  let v = "let";
-  return v;
-}
-function js_code_braces_empty() {
-  let v = js_code_wrap_braces("");
-  return v;
-}
-function js_code_wrap_braces(inside) {
-  let v = "{" + inside + "}";
-  return v;
-}
-function html_attribute_set(component, key, value) {
-  let element = html_component_element_get(component);
-  element.setAttribute(key, value);
-}
-function list_join_newline(list) {
-  let separator = newline();
-  let joined = list_join(list, separator);
-  return joined;
-}
-function js_code_call_statement(f_name) {
-  let code = js_code_call(f_name);
-  let result = js_code_statement(code);
-  return result;
-}
-function js_code_call(fn_name) {
-  let args = [];
-  let result = js_code_call_args(fn_name, args);
-  return result;
-}
-function js_code_call_args(fn_name, args) {
-  let joined = list_join_comma_space(args);
-  let code = fn_name + js_code_wrap_parenthesis(joined);
-  return code;
-}
-function js_code_wrap_parenthesis(inside) {
-  let v = "( " + inside + " )";
-  return v;
-}
-function js_code_statement(code) {
-  let v = code + ";";
-  return v;
-}
-async function firebase_storage_download_property(storage_path, property_name) {
-  let buffer = await firebase_storage_download(storage_path);
-  const json = buffer_string_to(buffer);
-  let o = json_from(json);
-  let value = object_property_get(o, property_name);
-  return value;
 }
   </script>
 </body>
