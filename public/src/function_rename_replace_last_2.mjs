@@ -7,7 +7,7 @@ export async function function_rename_replace_last_2(f_name_before, to) {
   marker("1");
   let parts = function_name_to_parts(f_name_before);
   let result = list_slice_end(parts, 2);
-  let combined = function_name_combine_multiple(result);
+  let from = function_name_combine_multiple(result);
   let v = await function_rename_replace(f_name_before, from, to);
   return v;
 }
