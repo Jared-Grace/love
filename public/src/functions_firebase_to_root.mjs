@@ -22,7 +22,7 @@ export async function functions_firebase_to_root() {
     list_add_multiple(sliced, [js, f_name_ext]);
     let joined = list_join_slash_forward(sliced);
     log(joined);
-    let result = await file_copy_overwrite(file_path, contents);
+    let result = await file_copy_overwrite(joined, f_path);
   }
   await each_async(f_names, lambda);
 }
