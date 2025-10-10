@@ -1,3 +1,4 @@
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,6 +13,7 @@ export async function functions_firebase_to_root() {
     let { f_path } = await function_name_to_path_search(f_name);
     let split = string_split_slash_forward(f_path);
     let second = list_second(split);
+    let sliced = list_slice(list, a, b);
     log(second);
   }
   await each_async(f_names, lambda);
