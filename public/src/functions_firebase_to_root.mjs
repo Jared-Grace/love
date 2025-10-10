@@ -17,7 +17,7 @@ export async function functions_firebase_to_root() {
     let sliced = list_slice(split, 0, 2);
     let js = folder_js();
     list_add(sliced, js);
-    let joined = list_join_slash_forward(list);
+    let joined = list_join_slash_forward(sliced);
     log(sliced);
   }
   await each_async(f_names, lambda);
