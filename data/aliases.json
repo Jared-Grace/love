@@ -231,6 +231,7 @@
   "ahu": "app_new_html_update",
   "rrl2": "function_rename_replace_last_2",
   "ao": "function_auto",
-  "au": "app_update"
+  "au": "app_update",
+  "rrm": "function_replace_rename_multiple"
  }
 }
