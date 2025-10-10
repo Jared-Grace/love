@@ -1,5 +1,5 @@
+import { folder_js } from "../../../love/public/src/folder_js.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { folder_src } from "../../../love/public/src/folder_src.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -14,7 +14,7 @@ export async function functions_firebase_to_root() {
     let { f_path } = await function_name_to_path_search(f_name);
     let split = string_split_slash_forward(f_path);
     let sliced = list_slice(split, 0, 2);
-    let src = folder_src();
+    let src = folder_js();
     list_add(sliced, src);
     log(sliced);
   }
