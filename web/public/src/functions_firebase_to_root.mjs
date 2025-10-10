@@ -26,8 +26,6 @@ export async function functions_firebase_to_root() {
     let result = await file_copy_overwrite(joined, f_path);
   }
   await each_async(f_names, lambda);
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda2(item) {},
-  );
+  async function lambda2(item) {}
+  let waited = await list_map_unordered_async(list, lambda2);
 }
