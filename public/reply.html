@@ -11,13 +11,9 @@
     async function app_reply() {
   await app_main_production("app_reply_main", "jared-grace");
 }
-function marker(marker_name) {
-  noop();
-}
-function noop() {}
-async function app_main_production(f_name) {
+async function app_main_production(f_name, firebase_name_value) {
   marker("1");
-  let v = await app_main(f_name, firebase_deploy_function_destination_production);
+  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_production);
   return v;
 }
 function firebase_deploy_function_destination_production(f_name) {
@@ -25,6 +21,10 @@ function firebase_deploy_function_destination_production(f_name) {
   let destination2 = firebase_deploy_function_destination("version_production", f_name);
   return destination2;
 }
+function marker(marker_name) {
+  noop();
+}
+function noop() {}
 function firebase_deploy_function_destination(name, f_name) {
   let file_name = file_name_json(name);
   const list = ["function", f_name, file_name];
