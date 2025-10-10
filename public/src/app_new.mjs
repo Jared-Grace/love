@@ -1,6 +1,4 @@
-import { app_new_html_update } from "../../../love/public/src/app_new_html_update.mjs";
-import { app_new_staging_update } from "../../../love/public/src/app_new_staging_update.mjs";
-import { app_new_production_update } from "../../../love/public/src/app_new_production_update.mjs";
+import { app_update } from "../../../love/public/src/app_update.mjs";
 import { app_new_step_4 } from "../../../love/public/src/app_new_step_4.mjs";
 import { app_new_step_2 } from "../../../love/public/src/app_new_step_2.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
@@ -14,7 +12,5 @@ export async function app_new(name) {
   await app_new_fn(name);
   await app_new_step_2(name);
   await app_new_step_4(name);
-  await app_new_production_update(name);
-  await app_new_staging_update(name);
-  await app_new_html_update(name);
+  await app_update(name);
 }
