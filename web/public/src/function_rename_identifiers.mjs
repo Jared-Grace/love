@@ -1,4 +1,4 @@
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -8,7 +8,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
-  let exists = object_property_exists(object, property_name);
+  let exists = object_property_exists_not(object, property_name);
   if (false) {
   }
   let f_names = object_property_get(identifiers, f_name_before);
