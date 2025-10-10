@@ -11,8 +11,8 @@ export async function functions_firebase_to_root() {
   async function lambda(f_name) {
     let { f_path } = await function_name_to_path_search(f_name);
     let split = string_split_slash_forward(f_path);
-    let second = list_second(list);
-    log(split);
+    let second = list_second(split);
+    log(second);
   }
   await each_async(f_names, lambda);
 }
