@@ -31,7 +31,6 @@
   "fd": "function_dependencies_code_copy",
   "de": "function_delete",
   "ir": "function_identifier_replace",
-  "au": "function_auto",
   "fw": "function_wrap",
   "sb": "sandbox",
   "psn": "function_params_new",
@@ -230,6 +229,7 @@
   "hc": "html_clear",
   "fps": "functions_path",
   "ahu": "app_new_html_update",
-  "rrl2": "function_rename_replace_last_2"
+  "rrl2": "function_rename_replace_last_2",
+  "ao": "function_auto"
  }
 }
