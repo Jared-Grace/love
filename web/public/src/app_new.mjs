@@ -17,4 +17,5 @@ export async function app_new(name) {
   await app_new_production_update(name);
   await app_new_staging_update(name);
   await html_app_update(name);
+  html_update;
 }
