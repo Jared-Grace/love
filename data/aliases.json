@@ -230,6 +230,7 @@
   "fps": "functions_path",
   "ahu": "app_new_html_update",
   "rrl2": "function_rename_replace_last_2",
-  "ao": "function_auto"
+  "ao": "function_auto",
+  "au": "app_new"
  }
 }
