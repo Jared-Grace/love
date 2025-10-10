@@ -3,6 +3,7 @@ import { function_rename_replace } from "../../../love/public/src/function_renam
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_rename_replace() {
   marker("1");
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   let v = await function_rename_replace(f_name_before, from, to);
 }
