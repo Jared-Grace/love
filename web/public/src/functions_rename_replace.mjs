@@ -5,7 +5,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_rename_replace() {
   marker("1");
   let f_names = await functions_names();
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  let v = await function_rename_replace(f_name_before, from, to);
+  async function lambda(f_name) {
+    let v = await function_rename_replace(f_name_before, from, to);
+  }
+  await each_async(f_names, lambda);
 }
