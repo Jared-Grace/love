@@ -7,18 +7,18 @@
 <body>
   <script type="module"> 
     let global = {};
-    app_message(  );
-    async function app_message() {
-  await app_main_production("app_message_main", "jared-grace");
+    app_message_latest(  );
+    async function app_message_latest() {
+  await app_main_latest("app_message_main", "jared-grace");
 }
-async function app_main_production(f_name, firebase_name_value) {
+async function app_main_latest(f_name, firebase_name_value) {
   marker("1");
-  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_production);
+  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_latest);
   return v;
 }
-function firebase_deploy_function_destination_production(f_name) {
+function firebase_deploy_function_destination_latest(f_name) {
   marker("1");
-  let destination2 = firebase_deploy_function_destination("version_production", f_name);
+  let destination2 = firebase_deploy_function_destination("version_latest", f_name);
   return destination2;
 }
 function marker(marker_name) {
