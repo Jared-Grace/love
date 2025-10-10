@@ -11,10 +11,10 @@ export async function functions_rename_replace(from) {
   async function lambda(f_name) {
     let parts = function_name_to_parts(f_name);
     let includes = list_includes(parts, from);
-    let n = not(a);
-    if (false) {
+    let n = not(includes);
+    if (n) {
+      let v = await function_rename_replace(f_name_before, from, to);
     }
-    let v = await function_rename_replace(f_name_before, from, to);
   }
   await each_async(f_names, lambda);
 }
