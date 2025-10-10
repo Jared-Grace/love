@@ -9,9 +9,7 @@
     let global = {};
     app_reply(  );
     async function app_reply() {
-  marker("1");
-  let f_name = app_reply_main.name;
-  await firebase_storage_function_run(f_name);
+  await app_main_production("app_reply_main", "jared-grace");
 }
 async function app_reply_main() {
   global_function_initialize(firebase_name, "jared-grace");
