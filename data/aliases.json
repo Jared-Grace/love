@@ -228,6 +228,7 @@
   "eo": "each_object",
   "hf": "html_focus",
   "hc": "html_clear",
-  "fps": "functions_path"
+  "fps": "functions_path",
+  "ahu": "html_app_update"
  }
 }
