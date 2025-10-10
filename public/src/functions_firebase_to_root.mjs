@@ -6,8 +6,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_firebase_to_root() {
   marker("1");
   let f_names = await functions_names();
-  async function lambda(item) {
-    let search = await function_name_to_path_search(unaliased);
+  async function lambda(f_name) {
+    let search = await function_name_to_path_search(f_name);
     let joined = await functions_paths();
   }
   await each_async(f_names, lambda);
