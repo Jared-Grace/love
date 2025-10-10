@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_join_slash_forward } from "../../../love/public/src/list_join_slash_forward.mjs";
 import { folder_js } from "../../../love/public/src/folder_js.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -17,6 +18,7 @@ export async function functions_firebase_to_root() {
     let sliced = list_slice(split, 0, 2);
     let js = folder_js();
     list_add(sliced, js);
+    list_add_multiple(list, items);
     let joined = list_join_slash_forward(sliced);
     log(joined);
   }
