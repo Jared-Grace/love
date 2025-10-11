@@ -62,6 +62,11 @@ export function ebible_languages() {
       bible_folder: "tglulb",
       language_code: "tgl",
     },
+    {
+      name: "Spanish",
+      bible_folder: "spablm",
+      language_code: "tgl",
+    },
   ];
   return languages;
 }
