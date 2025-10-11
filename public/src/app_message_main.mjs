@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
 import { date_now_iso } from "../../../love/public/src/date_now_iso.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
@@ -66,6 +67,9 @@ export async function app_message_main() {
         "right",
         "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
       );
+      html_style_assign(div_message, {
+        "background-color": app_karate_button_uncolored_background_color(),
+      });
     }
     each(messages, lambda2);
   }
