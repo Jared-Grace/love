@@ -68,9 +68,9 @@ export function ebible_languages() {
       language_code: "es",
     },
     {
-      name: "Spanish",
-      bible_folder: "spablm",
-      language_code: "es",
+      name: "French",
+      bible_folder: "frasbl",
+      language_code: "fr",
     },
   ];
   return languages;
