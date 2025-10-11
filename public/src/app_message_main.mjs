@@ -60,21 +60,20 @@ export async function app_message_main() {
   function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
-    function lambda2(message) {$a
-      const direction = "left";
-      message_display(direction, message);
+    function lambda2(message) {
+      $a;
+      message_display("left", message);
     }
     each(messages, lambda2);
   }
-    function message_display(direction, message) {
-        let div_message = app_karate_container(div_messages);
-        html_style_assign(div_message, {
-            width: "80%",
-            ["margin-" + direction]: "auto",
-        });
-        html_text_set(div_message, message);
-    }
-
+  function message_display(direction, message) {
+    let div_message = app_karate_container(div_messages);
+    html_style_assign(div_message, {
+      width: "80%",
+      ["margin-" + direction]: "auto",
+    });
+    html_text_set(div_message, message);
+  }
   function messages_get() {
     let value = storage_local_initialize_context(
       context,
