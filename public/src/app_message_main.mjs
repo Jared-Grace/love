@@ -62,7 +62,7 @@ export async function app_message_main() {
     let messages = messages_get();
     function lambda2(message) {
       message_display("left", message);
-      message_display(
+      let div_message = message_display(
         "right",
         "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
       );
