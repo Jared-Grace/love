@@ -61,10 +61,11 @@ export async function app_message_main() {
     html_clear(div_messages);
     let messages = messages_get();
     function lambda2(message) {
+      const direction = "left";
       let div_message = app_karate_container(div_messages);
       html_style_assign(div_message, {
         width: "80%",
-        ["margin-" + "left"]: "auto",
+        ["margin-" + direction]: "auto",
       });
       html_text_set(div_message, message);
     }
