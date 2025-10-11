@@ -76,6 +76,7 @@ export async function app_message_main() {
       ["margin-" + direction]: "auto",
     });
     html_text_set(div_message, message);
+    return div_message;
   }
   function messages_get() {
     let value = storage_local_initialize_context(
