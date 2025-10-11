@@ -61,7 +61,6 @@ export async function app_message_main() {
     html_clear(div_messages);
     let messages = messages_get();
     function lambda2(message) {
-      $a;
       message_display("left", message);
     }
     each(messages, lambda2);
