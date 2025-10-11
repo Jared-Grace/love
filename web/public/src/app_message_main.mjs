@@ -1,3 +1,4 @@
+import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
 import { date_now_iso } from "../../../love/public/src/date_now_iso.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
@@ -93,7 +94,7 @@ export async function app_message_main() {
   async function on_send() {
     let message = html_value_get(textarea);
     let message_id = await uuid();
-    const file_name = "user/uuid/" + u + "/" + message_id;
+    const file_name = app_message_firebase_path() + u + "/" + message_id;
     let file_path = file_name_json(file_name);
     await firebase_upload_object(
       {
