@@ -1,1 +1,4 @@
-export function app_message_download() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function app_message_download() {
+  marker("1");
+}
