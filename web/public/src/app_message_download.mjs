@@ -10,7 +10,8 @@ export async function app_message_download() {
   const [files] = await bucket.getFiles({
     prefix: app_message_firebase_path(),
   });
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   for (const file of files) {
     console.log(file.name);
     let buffer = await firebase_storage_download(destination);
