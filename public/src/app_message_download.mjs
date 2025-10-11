@@ -17,11 +17,8 @@ export async function app_message_download() {
     let name2 = object_property_get(item, "name");
     let buffer = await firebase_storage_download(name2);
     let s = buffer_string_to(buffer);
-    let json = json_to(object);
-    console.log(file.name);
+    let json = json_to(s);
+    console.log(json);
   }
   await each_async(list, lambda);
-  for (const file of files) {
-    console.log(file.name);
-  }
 }
