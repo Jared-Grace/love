@@ -20,5 +20,5 @@ export async function app_message_download() {
     let json = json_to(s);
     console.log(json);
   }
-  await each_async(list, lambda);
+  await each_async(files, lambda);
 }
