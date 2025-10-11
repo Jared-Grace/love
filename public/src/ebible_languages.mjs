@@ -67,6 +67,11 @@ export function ebible_languages() {
       bible_folder: "spablm",
       language_code: "es",
     },
+    {
+      name: "Spanish",
+      bible_folder: "spablm",
+      language_code: "es",
+    },
   ];
   return languages;
 }
