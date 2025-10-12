@@ -16,6 +16,7 @@ export async function app_message_reply() {
   );
   let o = json_from(result);
   let properties = object_properties(o);
+  let index = 0;
   marker("1");
   return o;
 }
