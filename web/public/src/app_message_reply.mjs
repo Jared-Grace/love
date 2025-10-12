@@ -1,3 +1,4 @@
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
@@ -14,6 +15,7 @@ export async function app_message_reply() {
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
   let v = json_from(result);
+  let properties = object_properties(obj);
   marker("1");
   return v;
 }
