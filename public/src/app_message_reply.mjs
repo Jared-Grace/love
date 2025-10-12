@@ -3,6 +3,6 @@ import { app_message_download } from "../../../love/public/src/app_message_downl
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(downloads, "message");
   marker("1");
 }
