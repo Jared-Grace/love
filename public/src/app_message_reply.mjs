@@ -1,4 +1,4 @@
-import { json_to } from "../../../love/public/src/json_to.mjs";
+import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -13,7 +13,7 @@ export async function app_message_reply() {
   let result = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
-  let json = json_to(object);
+  let v = json_from(json);
   marker("1");
   return result;
 }
