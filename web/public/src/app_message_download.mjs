@@ -19,5 +19,6 @@ export async function app_message_download() {
     let json = json_to(s);
     console.log(json);
   }
-  return await list_map_async(files, lambda);
+  let v = await list_map_async(files, lambda);
+  return v;
 }
