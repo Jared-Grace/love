@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
-  let first = list_first(list);
+  let first = list_first(mapped);
   marker("1");
   return mapped;
 }
