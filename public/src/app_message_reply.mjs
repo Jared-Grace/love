@@ -9,7 +9,9 @@ export async function app_message_reply() {
   let mapped = list_map_property(downloads, "message");
   let first = list_first(mapped);
   let lower = string_lower_to(first);
-  let result = await http_local(url);
+  let result = await http_local(
+    "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
+  );
   marker("1");
-  return first;
+  return result;
 }
