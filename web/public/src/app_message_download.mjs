@@ -1,7 +1,6 @@
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { buffer_string_to } from "../../../love/public/src/buffer_string_to.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { firebase_storage_download } from "../../../love/public/src/firebase_storage_download.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
@@ -20,5 +19,5 @@ export async function app_message_download() {
     let json = json_to(s);
     console.log(json);
   }
-  await each_async(files, lambda);
+  return await list_map_async(files, lambda);
 }
