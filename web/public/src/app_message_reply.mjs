@@ -13,7 +13,7 @@ export async function app_message_reply() {
   let result = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
-  let v = json_from(json);
+  let v = json_from(result);
   marker("1");
-  return result;
+  return v;
 }
