@@ -233,6 +233,7 @@
   "ao": "function_auto",
   "au": "app_update",
   "rrm": "function_replace_rename_multiple",
-  "ap": "app_promote"
+  "ap": "app_promote",
+  "slt": "string_lower_to"
  }
 }
