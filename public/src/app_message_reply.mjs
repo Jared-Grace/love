@@ -5,4 +5,5 @@ export async function app_message_reply() {
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
   marker("1");
+  return mapped;
 }
