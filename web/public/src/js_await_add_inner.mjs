@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { js_call_function_if } from "../../../love/public/src/js_call_function_if.mjs";
 import { js_node_type_not_is_if } from "../../../love/public/src/js_node_type_not_is_if.mjs";
@@ -26,10 +25,6 @@ export async function js_await_add_inner(functions, ast, visited) {
         marker("1");
         return;
       }
-      log({
-        name,
-        async_is,
-      });
       let stack = object_property_get(v, "stack");
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
       let stack1 = list_get_end_1(stack);
