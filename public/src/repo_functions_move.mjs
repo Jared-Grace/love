@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { functions_imports_fix_list } from "../../../love/public/src/functions_imports_fix_list.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -21,10 +20,6 @@ export async function repo_functions_move(f_names, repo_name_to) {
     let f_path_to = path_join([r_path, f_name_ext]);
     let search = await function_name_to_path_search(f_name);
     let f_path = object_property_get(search, "f_path");
-    log({
-      f_path,
-      f_path_to,
-    });
     await file_copy(f_path, f_path_to);
     await file_delete(f_path);
   }
