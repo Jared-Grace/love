@@ -234,6 +234,7 @@
   "au": "app_update",
   "rrm": "function_replace_rename_multiple",
   "ap": "app_promote",
-  "slt": "string_lower_to"
+  "slt": "string_lower_to",
+  "aa": "function_alias_add_auto"
  }
 }
