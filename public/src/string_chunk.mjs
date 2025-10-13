@@ -8,6 +8,7 @@ import { string_slice } from "../../../love/public/src/string_slice.mjs";
 export function string_chunk(input, dictionary, index_left, result, current) {
   let index_last = string_size(input);
   if (index_left === index_last) {
+    list_add(list, item);
   }
   marker("1");
   function lambda3(index_right) {
