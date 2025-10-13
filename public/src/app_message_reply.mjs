@@ -1,5 +1,5 @@
 import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
-import { string_chunk } from "../../../love/public/src/string_chunk.mjs";
+import { string_chunk_recursive } from "../../../love/public/src/string_chunk_recursive.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
@@ -23,7 +23,7 @@ export async function app_message_reply() {
   let index_left = 0;
   let result = [];
   let current = [];
-  string_chunk(lower, o, index_left, result, current);
+  string_chunk_recursive(lower, o, index_left, result, current);
   return result;
   marker("1");
 }
