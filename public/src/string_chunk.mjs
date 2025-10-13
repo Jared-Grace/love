@@ -1,3 +1,4 @@
+import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -22,6 +23,7 @@ export function string_chunk(input, dictionary, index_left, result, current) {
         sliced,
       });
       string_chunk(input, dictionary, index_right, result, current);
+      let v = list_pop(list);
     }
   }
   each_range_from(index_left + 1, index_last, lambda3);
