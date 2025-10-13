@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { each_index } from "../../../love/public/src/each_index.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
@@ -18,7 +18,7 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index = 0;
-  error(message);
+  each_index(list, function lambda(item, index2) {});
   marker("1");
   return o;
 }
