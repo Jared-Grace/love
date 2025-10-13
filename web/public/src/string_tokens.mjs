@@ -3,8 +3,14 @@ import { string_tokens_recursive } from "../../../love/public/src/string_tokens_
 export function string_tokens(input, dictionary) {
   marker("1");
   let index_left = 0;
-  let result = [];
+  let tokens_matches = [];
   let current = [];
-  string_tokens_recursive(input, dictionary, index_left, result, current);
-  return result;
+  string_tokens_recursive(
+    input,
+    dictionary,
+    index_left,
+    tokens_matches,
+    current,
+  );
+  return tokens_matches;
 }
