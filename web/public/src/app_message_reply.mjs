@@ -7,7 +7,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
@@ -26,7 +25,6 @@ export async function app_message_reply() {
   let o = json_from(text);
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(o, excludes);
-  let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   let tokens = list_last(tokens_matches);
   async function lambda(a) {
