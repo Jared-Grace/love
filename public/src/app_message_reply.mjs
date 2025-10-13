@@ -1,4 +1,4 @@
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
@@ -45,7 +45,6 @@ export async function app_message_reply() {
     return a;
   }
   let mapped2 = list_map(list, lambda2);
-  function lambda3(item2) {}
-  let filtered = list_filter(list2, lambda3);
+  let filtered = list_filter_property(list2, property_name, property_value);
   return a;
 }
