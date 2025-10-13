@@ -45,6 +45,7 @@ export async function app_message_reply() {
     return a;
   }
   let mapped2 = list_map(list, lambda2);
-  let filtered = list_filter(list2, function lambda3(item2) {});
+  function lambda3(item2) {}
+  let filtered = list_filter(list2, lambda3);
   return a;
 }
