@@ -18,7 +18,7 @@ export async function app_message_reply() {
   );
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
-  object_property_delete_multiple(o);
+  object_property_delete_multiple(o, excludes);
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
