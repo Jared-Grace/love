@@ -25,11 +25,11 @@ export async function app_message_reply() {
   let index_left = 0;
   function lambda3(index_right) {
     let sliced = string_slice(lower, index_left, index_right);
-    log({
-      sliced,
-    });
     let exists = object_property_exists(o, sliced);
     if (exists) {
+      log({
+        sliced,
+      });
     }
   }
   each_range_from(index_left, index_last, lambda3);
