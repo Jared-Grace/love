@@ -6,7 +6,9 @@ export function reply_choice(choices) {
     let matches = false;
     function lambda(choice) {
       matches = choice(a);
-      if (false) {
+      if (matches) {
+        let v = true;
+        return v;
       }
     }
     each(choices, lambda);
