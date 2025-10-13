@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { string_chunk } from "../../../love/public/src/string_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
@@ -17,7 +18,7 @@ export async function app_message_reply() {
   );
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
-  $e;
+  each(list, function lambda(item) {});
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
