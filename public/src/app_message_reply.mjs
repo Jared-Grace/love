@@ -27,8 +27,6 @@ export async function app_message_reply() {
     let lower = string_lower_to(message);
     let tokens_matches = string_tokens(lower, dictionary);
     let result = {
-      tokens,
-      outputs: [],
       success: false,
     };
     function lambda2(tokens) {
@@ -37,9 +35,8 @@ export async function app_message_reply() {
       const a = {
         tokens,
         outputs: [],
-        success: false,
       };
-      let to2 = object_merge(to, from);
+      object_merge(a, result);
       r(a);
       return a;
     }
