@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -20,7 +21,9 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let index_left = 0;
   let lower_size = string_size(lower);
-  function lambda3(index_right) {}
+  function lambda3(index_right) {
+    let split = string_split(s, separator);
+  }
   each_range(lower_size, lambda3);
   marker("1");
   return o;
