@@ -50,6 +50,6 @@ export async function app_message_reply() {
     }
   }
   function lambda3(item) {}
-  let filtered2 = list_filter(list, lambda3);
+  let filtered2 = list_filter(messages, lambda3);
   each(messages, lambda);
 }
