@@ -1,3 +1,4 @@
+import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -6,6 +7,7 @@ export function reply_sequence(sequence) {
     let tokens = object_property_get(a, "tokens");
     let matches = true;
     if (false) {
+      list_size_less_than(stack, result);
     }
     function lambda(sequence_item, index) {
       let token = list_get(tokens, index);
