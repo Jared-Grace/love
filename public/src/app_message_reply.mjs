@@ -20,7 +20,7 @@ export async function app_message_reply() {
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
   function lambda(item) {
-    object_property_delete(object, property_name);
+    object_property_delete(o, item);
   }
   each(list, lambda);
   let properties = object_properties(o);
