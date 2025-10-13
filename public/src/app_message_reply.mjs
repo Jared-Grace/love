@@ -1,7 +1,6 @@
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
-import { list_last } from "../../../love/public/src/list_last.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -27,7 +26,7 @@ export async function app_message_reply() {
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(o, excludes);
   let tokens_matches = string_tokens(lower, o);
-  function lambda2(item2) {
+  function lambda2(tokens) {
     async function lambda(a) {
       let outputs = object_property_get(a, "outputs");
       let item = app_reply_response_how_r_u();
@@ -44,6 +43,5 @@ export async function app_message_reply() {
     r(a);
   }
   each(list, lambda2);
-  let tokens = list_last(tokens_matches);
   return a;
 }
