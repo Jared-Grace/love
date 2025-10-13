@@ -14,13 +14,14 @@ export async function app_message_reply() {
   let dictionary = json_from(text);
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
-  let first = list_first(mapped);
-  let lower = string_lower_to(first);
   let text = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
+  $e;
+  let first = list_first(mapped);
+  let lower = string_lower_to(first);
   let tokens_matches = string_tokens(lower, dictionary);
   function lambda2(tokens) {
     let r = app_message_reply_choices();
