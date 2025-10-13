@@ -45,10 +45,9 @@ export async function app_message_reply() {
     let filtered = list_filter_property(mapped2, "success", true);
     let ne = list_empty_not_is(filtered);
     if (ne) {
-      return result;
+      result = list_first(filtered);
     }
-    result = list_first(filtered);
-    log(first2);
+    log(result);
   }
   each(messages, lambda);
 }
