@@ -5,15 +5,15 @@ export function reply_choice(choices) {
     let matches = false;
     function lambda(choice) {
       matches = choice(a);
+      log({
+        matches,
+      });
       if (matches) {
         let v = true;
         return v;
       }
     }
     each(choices, lambda);
-    log({
-      matches,
-    });
     return matches;
   };
   return fn;
