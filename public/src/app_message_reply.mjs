@@ -33,4 +33,7 @@ export async function app_message_reply() {
   }
   let r = reply_on_match(fn, lambda);
   marker("1");
+  r({
+    input,
+  });
 }
