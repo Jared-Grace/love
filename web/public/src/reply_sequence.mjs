@@ -10,9 +10,6 @@ export function reply_sequence(sequence) {
     if (list_size_less_than(tokens, sequence)) {
       matches = false;
     } else {
-      log({
-        sequence,
-      });
       function lambda(sequence_item, index) {
         let token = list_get(tokens, index);
         if (sequence_item !== token) {
@@ -20,6 +17,11 @@ export function reply_sequence(sequence) {
         }
       }
       each_index(sequence, lambda);
+      log({
+        sequence,
+        matches,
+        tokens,
+      });
     }
     return matches;
   };
