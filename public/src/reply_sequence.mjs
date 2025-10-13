@@ -8,14 +8,15 @@ export function reply_sequence(sequence) {
     let matches = true;
     if (list_size_less_than(tokens, sequence)) {
       matches = false;
-    }
-    function lambda(sequence_item, index) {
-      let token = list_get(tokens, index);
-      if (sequence_item !== token) {
-        matches = false;
+    } else {
+      function lambda(sequence_item, index) {
+        let token = list_get(tokens, index);
+        if (sequence_item !== token) {
+          matches = false;
+        }
       }
+      each_index(sequence, lambda);
     }
-    each_index(sequence, lambda);
     return matches;
   };
   return fn;
