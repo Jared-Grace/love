@@ -48,6 +48,7 @@ export async function app_message_reply() {
       result = list_first(filtered);
     }
   }
+  let mapped = list_map(list, function lambda3(item) {});
   let filtered2 = list_filter_property(mapped2, "success", false);
   log(filtered2);
 }
