@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -47,7 +48,7 @@ export async function app_message_reply() {
       return result;
     }
     let first2 = list_first(filtered);
-    return first2;
+    log(message2);
   }
   each(messages, lambda);
 }
