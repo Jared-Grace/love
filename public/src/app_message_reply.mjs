@@ -35,5 +35,6 @@ export async function app_message_reply() {
   marker("1");
   r({
     input,
+    outputs: [],
   });
 }
