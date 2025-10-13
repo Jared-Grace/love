@@ -22,6 +22,7 @@ export async function app_message_reply() {
   object_property_delete_multiple(o, excludes);
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
+  let first2 = list_first(list);
   await reply({
     input,
   });
