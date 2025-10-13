@@ -235,6 +235,7 @@
   "rrm": "function_replace_rename_multiple",
   "ap": "app_promote",
   "slt": "string_lower_to",
-  "aa": "function_alias_add_auto"
+  "aa": "function_alias_add_auto",
+  "ssl": "string_slice"
  }
 }
