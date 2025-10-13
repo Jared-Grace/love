@@ -17,12 +17,12 @@ export function reply_sequence(sequence) {
         }
       }
       each_index(sequence, lambda);
-      log({
-        sequence,
-        matches,
-        tokens,
-      });
     }
+    log({
+      sequence,
+      matches,
+      tokens,
+    });
     return matches;
   };
   return fn;
