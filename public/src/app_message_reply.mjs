@@ -16,6 +16,7 @@ export async function app_message_reply() {
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
   let o = json_from(text);
+  let excludes = ["h", "w", "e"];
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
