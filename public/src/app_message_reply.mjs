@@ -19,6 +19,6 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
-  string_chunk(lower, o, index_left);
+  string_chunk(lower, o, index_left, result);
   marker("1");
 }
