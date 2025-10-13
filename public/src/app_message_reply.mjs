@@ -22,7 +22,7 @@ export async function app_message_reply() {
   let index_left = 0;
   let lower_size = string_size(lower);
   function lambda3(index_right) {
-    let v = string_slice(s, a, b);
+    let v = string_slice(lower, index_left, index_right);
   }
   each_range(lower_size, lambda3);
   marker("1");
