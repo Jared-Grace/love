@@ -236,6 +236,7 @@
   "ap": "app_promote",
   "slt": "string_lower_to",
   "aa": "function_alias_add_auto",
-  "ssl": "string_slice"
+  "ssl": "string_slice",
+  "lcp": "list_copy"
  }
 }
