@@ -6,6 +6,7 @@ export function reply_choice(choices) {
     function lambda(choice) {
       matches = choice(a);
       log({
+        h: "h",
         matches,
       });
       if (matches) {
