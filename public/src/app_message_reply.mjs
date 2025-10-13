@@ -50,5 +50,5 @@ export async function app_message_reply() {
   }
   function lambda3(item) {}
   let filtered2 = list_filter_property(mapped2, "success", false);
-  log(message2);
+  log(filtered2);
 }
