@@ -1,6 +1,6 @@
+import { string_index_of_last } from "../../../karate_code/public/src/string_index_of_last.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
-import { string_size } from "../../../love/public/src/string_size.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
@@ -20,11 +20,11 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index_left = 0;
-  let lower_size = string_size(lower);
+  let lower_size = string_index_of_last(lower);
   function lambda3(index_right) {
     let v = string_slice(lower, index_left, index_right);
   }
-  each_range_from(index_left, index_right, lambda3);
+  each_range_from(index_left, lower_size, lambda3);
   marker("1");
   return o;
 }
