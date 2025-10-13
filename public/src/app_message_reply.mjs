@@ -1,10 +1,5 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
-import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
-import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
@@ -28,14 +23,7 @@ export async function app_message_reply() {
   object_property_delete_multiple(o, excludes);
   let tokens_matches = string_tokens(lower, o);
   function lambda2(tokens) {
-    async function lambda(a) {
-      let outputs = object_property_get(a, "outputs");
-      let item = app_reply_response_how_r_u();
-      list_add(outputs, item);
-      object_property_set(a, "success", true);
-    }
-    let fn = reply_sequence(["how", "are", "you"]);
-    let r = reply_on_match(fn, lambda);
+    let r = app_message_reply_choices();
     marker("1");
     const a = {
       tokens,
