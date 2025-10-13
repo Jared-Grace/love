@@ -9,13 +9,13 @@ export function string_tokens_recursive(
   input,
   dictionary,
   index_left,
-  result,
+  tokens_matches,
   current,
 ) {
   let index_last = string_size(input);
   if (index_left === index_last) {
     let copy = list_copy(current);
-    list_add(result, copy);
+    list_add(tokens_matches, copy);
   }
   marker("1");
   function lambda3(index_right) {
@@ -24,7 +24,13 @@ export function string_tokens_recursive(
     if (exists) {
       let copy2 = list_copy(current);
       list_add(copy2, sliced);
-      string_tokens_recursive(input, dictionary, index_right, result, copy2);
+      string_tokens_recursive(
+        input,
+        dictionary,
+        index_right,
+        tokens_matches,
+        copy2,
+      );
     }
   }
   each_range_from(index_left + 1, index_last, lambda3);
