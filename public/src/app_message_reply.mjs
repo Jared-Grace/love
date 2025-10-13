@@ -1,3 +1,4 @@
+import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -27,6 +28,7 @@ export async function app_message_reply() {
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
+    let value = reply_last();
     function lambda3(item) {}
     each(list, lambda3);
     let result = {
