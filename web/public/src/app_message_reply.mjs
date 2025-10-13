@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -48,5 +49,6 @@ export async function app_message_reply() {
       result = list_first(filtered);
     }
   }
+  let filtered2 = list_filter(list, function lambda3(item) {});
   each(messages, lambda);
 }
