@@ -20,7 +20,7 @@ export async function app_message_reply() {
   let index_left = 0;
   let result = [];
   let current = [];
-  let v = string_chunk(lower, o, index_left, result, current);
-  return v;
+  string_chunk(lower, o, index_left, result, current);
+  return result;
   marker("1");
 }
