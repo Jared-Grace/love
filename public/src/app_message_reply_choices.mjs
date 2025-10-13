@@ -11,7 +11,7 @@ export function app_message_reply_choices() {
   let fn3 = reply_sequence(["hi"]);
   let item = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, item);
-  let fn2 = reply_choice([v2, fn3]);
+  let fn2 = reply_choice([fn4, fn3]);
   function lambda(a) {
     object_property_set(a, "success", true);
   }
