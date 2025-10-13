@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
@@ -8,7 +9,7 @@ import { string_slice } from "../../../love/public/src/string_slice.mjs";
 export function string_chunk(input, dictionary, index_left, result, current) {
   let index_last = string_size(input);
   if (index_left === index_last) {
-    lcp;
+    let copy = list_copy(original);
     list_add(result, current);
   }
   marker("1");
