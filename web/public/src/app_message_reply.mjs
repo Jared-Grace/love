@@ -28,13 +28,13 @@ export async function app_message_reply() {
     let lower = string_lower_to(message);
     let tokens_matches = string_tokens(lower, dictionary);
     let result = {
+      tokens,
       success: false,
     };
     function lambda2(tokens) {
       let r = app_message_reply_choices();
       marker("1");
       const a = {
-        tokens,
         outputs: [],
       };
       object_merge(a, result);
