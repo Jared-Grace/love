@@ -19,7 +19,7 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
-  let chunks = [];
-  string_chunk(lower, o, index_left, result, chunks);
+  let current = [];
+  string_chunk(lower, o, index_left, result, current);
   marker("1");
 }
