@@ -27,7 +27,8 @@ export async function app_message_reply() {
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(o, excludes);
   let tokens_matches = string_tokens(lower, o);
-  await each_async(list, async function lambda2(item2) {});
+  async function lambda2(item2) {}
+  await each_async(list, lambda2);
   let tokens = list_last(tokens_matches);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
