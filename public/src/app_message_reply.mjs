@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
@@ -33,13 +34,14 @@ export async function app_message_reply() {
         outputs: [],
         success: false,
       };
+      let to2 = object_merge(to, from);
       r(a);
       return a;
     }
     let mapped2 = list_map(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
-    let e = list_empty_is(list);
-    if (false) {
+    let e = list_empty_is(filtered);
+    if (e) {
     }
     let first2 = list_first(filtered);
     return first2;
