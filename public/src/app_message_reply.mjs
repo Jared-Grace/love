@@ -1,4 +1,7 @@
-import { reply } from "../../../love/public/src/reply.mjs";
+import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -23,11 +26,11 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   let input = list_first(tokens_matches);
-  return input;
-  let r = await reply({
-    input,
-    language_codes: ["en"],
-  });
-  return r;
+  let fn = reply_sequence(["good", "evening"]);
+  async function lambda(a) {
+    let outputs = object_property_get(a, "outputs");
+    list_add(outputs, "God");
+  }
+  let r = reply_on_match(fn, lambda);
   marker("1");
 }
