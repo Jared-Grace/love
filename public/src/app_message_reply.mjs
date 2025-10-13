@@ -27,11 +27,11 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   let tokens = list_last(tokens_matches);
-  let fn = reply_sequence(["how", "are", "you"]);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
     list_add(outputs, "God");
   }
+  let fn = reply_sequence(["how", "are", "you"]);
   let r = reply_on_match(fn, lambda);
   marker("1");
   const a = {
