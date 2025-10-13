@@ -10,8 +10,7 @@ export function app_message_reply_choices() {
   let fn = reply_sequence(["how", "are", "you"]);
   let fn3 = reply_sequence(["hi"]);
   let item = app_reply_response_how_r_u();
-  let fn4 = reply_on_match_output(item2);
-  let v2 = reply_on_match_output(fn, item);
+  let fn4 = reply_on_match_output(fn, item);
   let fn2 = reply_choice([v2, fn3]);
   function lambda(a) {
     object_property_set(a, "success", true);
