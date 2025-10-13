@@ -48,7 +48,7 @@ export async function app_message_reply() {
       return result;
     }
     let first2 = list_first(filtered);
-    log(message2);
+    log(first2);
   }
   each(messages, lambda);
 }
