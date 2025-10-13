@@ -1,3 +1,4 @@
+import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -29,7 +30,8 @@ export async function app_message_reply() {
   let tokens = list_last(tokens_matches);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
-    list_add(outputs, "God");
+    let item = app_reply_response_how_r_u();
+    list_add(outputs, item);
   }
   let fn = reply_sequence(["how", "are", "you"]);
   let r = reply_on_match(fn, lambda);
