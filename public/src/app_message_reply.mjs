@@ -44,7 +44,7 @@ export async function app_message_reply() {
     r(a);
     return a;
   }
-  let mapped2 = list_map(list, lambda2);
+  let mapped2 = list_map(tokens_matches, lambda2);
   let filtered = list_filter_property(mapped2, "success", true);
   let first2 = list_first(filtered);
   return first2;
