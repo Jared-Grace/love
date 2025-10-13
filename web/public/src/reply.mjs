@@ -13,7 +13,6 @@ export async function reply(a) {
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
     list_add(outputs, "God");
-    return list;
   }
   let r = reply_on_match(fn, lambda);
   input = whitespace_normalize(input);
