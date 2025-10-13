@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -29,7 +30,9 @@ export async function app_message_reply() {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
     let value = reply_last();
-    function lambda3(item) {}
+    function lambda3(item) {
+      list_add(list2, item2);
+    }
     each(list, lambda3);
     let result = {
       input,
