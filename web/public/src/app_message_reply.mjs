@@ -25,16 +25,17 @@ export async function app_message_reply() {
   object_property_delete_multiple(dictionary, excludes);
   let includes = [];
   function lambda(message) {
-    let lower = string_lower_to(message);
-    let tokens_matches = string_tokens(lower, dictionary);
+    let input = string_lower_to(message);
+    let tokens_matches = string_tokens(input, dictionary);
     let result = {
-      tokens,
       success: false,
     };
     function lambda2(tokens) {
       let r = app_message_reply_choices();
       marker("1");
       const a = {
+        input,
+        tokens,
         outputs: [],
       };
       object_merge(a, result);
