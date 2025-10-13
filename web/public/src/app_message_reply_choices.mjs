@@ -4,6 +4,7 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { reply_choice } from "./reply_choice.mjs";
 export function app_message_reply_choices() {
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
@@ -12,6 +13,7 @@ export function app_message_reply_choices() {
     object_property_set(a, "success", true);
   }
   let fn = reply_sequence(["how", "are", "you"]);
+  let fn2 = reply_choice(choices);
   let r = reply_on_match(fn, lambda);
   return r;
 }
