@@ -1,5 +1,4 @@
 import { each_range } from "../../../love/public/src/each_range.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
@@ -19,10 +18,8 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index_left = 0;
-  function lambda3() {}
+  function lambda3(index_right) {}
   each_range(count, lambda3);
-  function lambda(letter, index_right) {}
-  each_index(lower, lambda);
   marker("1");
   return o;
 }
