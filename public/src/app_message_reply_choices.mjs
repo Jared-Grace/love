@@ -6,9 +6,9 @@ import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_r
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function app_message_reply_choices() {
-  async function lambda(a) {
+  let item = app_reply_response_how_r_u();
+  function lambda(a) {
     let outputs = object_property_get(a, "outputs");
-    let item = app_reply_response_how_r_u();
     list_add(outputs, item);
     object_property_set(a, "success", true);
   }
