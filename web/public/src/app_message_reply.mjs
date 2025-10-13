@@ -34,5 +34,4 @@ export async function app_message_reply() {
   }
   each_range_from(index_left, index_last, lambda3);
   marker("1");
-  return o;
 }
