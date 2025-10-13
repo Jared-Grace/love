@@ -9,14 +9,17 @@ import { reply_choice } from "./reply_choice.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let item = app_reply_response_how_r_u();
-  function lambda(a) {
-    let outputs = object_property_get(a, "outputs");
-    list_add(outputs, item);
-    object_property_set(a, "success", true);
+  function reply_on_match_output(item) {
+    return function lambda(a) {
+      let outputs = object_property_get(a, "outputs");
+      list_add(outputs, item);
+      object_property_set(a, "success", true);
+    };
   }
   let fn = reply_sequence(["how", "are", "you"]);
   let fn3 = reply_sequence(["hi"]);
-  let fn2 = reply_choice([fn, fn3]);
+  let v = reply_on_match_output(fn);
+  let fn2 = reply_choice([v, fn3]);
   let r = reply_on_match(fn2, lambda);
   return r;
 }
