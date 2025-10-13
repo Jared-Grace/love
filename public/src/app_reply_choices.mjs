@@ -1,3 +1,4 @@
+import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { emoji_rock } from "../../../love/public/src/emoji_rock.mjs";
@@ -152,16 +153,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_ok() + "How r u",
-      response:
-        emoji_ok() +
-        " " +
-        string_the_servant_of_god_is() +
-        " doing good " +
-        emoji_100() +
-        " through the grace of God, because " +
-        emoji_book_open() +
-        " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However please pray that the servant of God will stop hearing demons" +
-        emoji_pray(),
+      response: app_reply_response_how_r_u(),
     },
     {
       text: emoji_pray() + " Invite",
