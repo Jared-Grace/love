@@ -33,8 +33,10 @@ export async function app_message_reply() {
   }
   let r = reply_on_match(fn, lambda);
   marker("1");
-  r({
+  const a = {
     input,
     outputs: [],
-  });
+  };
+  r(a);
+  return a;
 }
