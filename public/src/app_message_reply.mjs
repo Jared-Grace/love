@@ -23,9 +23,9 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   let input = list_first(tokens_matches);
-  await reply({
+  let r = await reply({
     input,
   });
-  return tokens_matches;
+  return r;
   marker("1");
 }
