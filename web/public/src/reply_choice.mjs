@@ -8,6 +8,7 @@ export function reply_choice(choices) {
       log({
         h: "h",
         matches,
+        choice,
       });
       if (matches) {
         let v = true;
