@@ -1,3 +1,4 @@
+import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_chunk } from "../../../love/public/src/string_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -19,7 +20,7 @@ export async function app_message_reply() {
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
   function lambda(item) {
-    opr;
+    object_property_delete(object, property_name);
   }
   each(list, lambda);
   let properties = object_properties(o);
