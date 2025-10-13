@@ -9,10 +9,10 @@ export function string_chunk(input, dictionary, index_left) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
-      string_chunk(input, dictionary, index_right);
       log({
         sliced,
       });
+      string_chunk(input, dictionary, index_right);
     }
   }
   each_range_from(index_left + 1, index_last, lambda3);
