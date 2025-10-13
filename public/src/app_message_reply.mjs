@@ -24,7 +24,7 @@ export async function app_message_reply() {
   function lambda3(index_right) {
     let v = string_slice(lower, index_left, index_right);
   }
-  each_range_from(lower_size, lambda3);
+  each_range_from(index_left, index_right, lambda3);
   marker("1");
   return o;
 }
