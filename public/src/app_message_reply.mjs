@@ -20,7 +20,8 @@ export async function app_message_reply() {
   );
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let first = list_first(mapped);
   let lower = string_lower_to(first);
   let tokens_matches = string_tokens(lower, dictionary);
