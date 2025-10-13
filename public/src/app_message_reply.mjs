@@ -29,11 +29,11 @@ export async function app_message_reply() {
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
-    let value = reply_last();
-    function lambda3(item) {
-      list_add(list2, item2);
+    let last = reply_last();
+    function lambda3(tokens) {
+      list_add(tokens, last);
     }
-    each(list, lambda3);
+    each(tokens_matches, lambda3);
     let result = {
       input,
       success: false,
