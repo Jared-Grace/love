@@ -1,7 +1,6 @@
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
@@ -50,6 +49,6 @@ export async function app_message_reply() {
     }
   }
   function lambda3(item) {}
-  let filtered2 = list_filter(messages, lambda3);
-  each(messages, lambda);
+  let filtered2 = list_filter_property(mapped2, "success", false);
+  log(message2);
 }
