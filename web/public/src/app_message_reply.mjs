@@ -27,7 +27,9 @@ export async function app_message_reply() {
     let sliced = string_slice(lower, index_left, index_right);
     let exists = object_property_exists(o, sliced);
     if (exists) {
-      log(message);
+      log({
+        sliced,
+      });
     }
   }
   each_range_from(index_left, index_last, lambda3);
