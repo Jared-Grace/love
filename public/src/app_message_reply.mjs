@@ -44,7 +44,7 @@ export async function app_message_reply() {
     let filtered = list_filter_property(mapped2, "success", true);
     let e = list_empty_is(filtered);
     if (e) {
-      result;
+      return result;
     }
     let first2 = list_first(filtered);
     return first2;
