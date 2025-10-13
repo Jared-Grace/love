@@ -5,6 +5,8 @@ export function reply_sequence(sequence) {
   let fn = function reply_sequence_matches(a) {
     let tokens = object_property_get(a, "tokens");
     let matches = true;
+    if (false) {
+    }
     function lambda(sequence_item, index) {
       let token = list_get(tokens, index);
       if (sequence_item !== token) {
