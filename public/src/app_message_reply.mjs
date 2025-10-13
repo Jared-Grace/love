@@ -25,7 +25,7 @@ export async function app_message_reply() {
   object_property_delete_multiple(o, excludes);
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
-  let input = list_first(tokens_matches);
+  let tokens = list_first(tokens_matches);
   let fn = reply_sequence(["good", "evening"]);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
@@ -34,7 +34,7 @@ export async function app_message_reply() {
   let r = reply_on_match(fn, lambda);
   marker("1");
   const a = {
-    input,
+    tokens,
     outputs: [],
   };
   r(a);
