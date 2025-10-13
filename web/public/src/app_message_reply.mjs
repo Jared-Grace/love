@@ -19,6 +19,7 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index_last = string_size(lower);
+  let index_left = 0;
   string_chunk(lower, o, index_last);
   marker("1");
 }
