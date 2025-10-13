@@ -7,9 +7,9 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 export function app_message_reply_choices() {
   marker("1");
-  let item = app_reply_response_how_r_u();
   let fn = reply_sequence(["how", "are", "you"]);
   let fn3 = reply_sequence(["hi"]);
+  let item = app_reply_response_how_r_u();
   let v2 = reply_on_match_output(fn, item);
   let fn2 = reply_choice([v2, fn3]);
   function lambda(a) {
