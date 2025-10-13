@@ -33,7 +33,7 @@ export async function app_message_reply() {
     let outputs = object_property_get(a, "outputs");
     let item = app_reply_response_how_r_u();
     list_add(outputs, item);
-    object_property_set(object, property_name, value);
+    object_property_set(a, "success", true);
   }
   let fn = reply_sequence(["how", "are", "you"]);
   let r = reply_on_match(fn, lambda);
