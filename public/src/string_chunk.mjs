@@ -9,7 +9,7 @@ export function string_chunk(input, dictionary, index_left) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
-      string_chunk(input, dictionary, index_last);
+      string_chunk(input, dictionary, index_right);
       log({
         sliced,
       });
