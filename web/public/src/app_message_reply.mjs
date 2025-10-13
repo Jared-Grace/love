@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
@@ -14,6 +13,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_message_download } from "../../../love/public/src/app_message_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_map } from "./list_map.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
@@ -41,7 +41,8 @@ export async function app_message_reply() {
       outputs: [],
     };
     r(a);
+    return a;
   }
-  each(list, lambda2);
+  list_map(list, lambda2);
   return a;
 }
