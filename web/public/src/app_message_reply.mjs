@@ -14,30 +14,30 @@ import { list_map } from "./list_map.mjs";
 export async function app_message_reply() {
   let dictionary = json_from(text);
   let downloads = await app_message_download();
-  let mapped = list_map_property(downloads, "message");
+  let messages = list_map_property(downloads, "message");
   let text = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
-  function lambda(item) {}
-  each(list, lambda);
-  let first = list_first(mapped);
-  let lower = string_lower_to(first);
-  let tokens_matches = string_tokens(lower, dictionary);
-  function lambda2(tokens) {
-    let r = app_message_reply_choices();
-    marker("1");
-    const a = {
-      tokens,
-      outputs: [],
-      success: false,
-    };
-    r(a);
-    return a;
+  function lambda(message) {
+    let lower = string_lower_to(message);
+    let tokens_matches = string_tokens(lower, dictionary);
+    function lambda2(tokens) {
+      let r = app_message_reply_choices();
+      marker("1");
+      const a = {
+        tokens,
+        outputs: [],
+        success: false,
+      };
+      r(a);
+      return a;
+    }
+    let mapped2 = list_map(tokens_matches, lambda2);
+    let filtered = list_filter_property(mapped2, "success", true);
+    let first2 = list_first(filtered);
+    return first2;
   }
-  let mapped2 = list_map(tokens_matches, lambda2);
-  let filtered = list_filter_property(mapped2, "success", true);
-  let first2 = list_first(filtered);
-  return first2;
+  each(messages, lambda);
 }
