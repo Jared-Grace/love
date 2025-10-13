@@ -20,7 +20,7 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let index_left = 0;
   function lambda3(index_right) {}
-  let v = string_size(s);
+  let lower_size = string_size(lower);
   each_range(count, lambda3);
   marker("1");
   return o;
