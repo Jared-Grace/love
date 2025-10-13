@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -9,6 +10,7 @@ export function reply_sequence(sequence) {
     if (list_size_less_than(tokens, sequence)) {
       matches = false;
     } else {
+      log(message);
       function lambda(sequence_item, index) {
         let token = list_get(tokens, index);
         if (sequence_item !== token) {
