@@ -1,6 +1,5 @@
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
-import { each_range } from "../../../love/public/src/each_range.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
@@ -24,7 +23,7 @@ export async function app_message_reply() {
   function lambda3(index_right) {
     let v = string_slice(lower, index_left, index_right);
   }
-  each_range(lower_size, lambda3);
+  index_right(lower_size, lambda3);
   marker("1");
   return o;
 }
