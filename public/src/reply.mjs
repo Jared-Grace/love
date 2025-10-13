@@ -15,7 +15,6 @@ import { whitespace_normalize } from "../../../love/public/src/whitespace_normal
 export async function reply(a) {
   let input = object_property_get(a, "input");
   let language_codes = object_property_get(a, "language_codes");
-  let reference = "Isaiah 26:9";
   let b = ["en"];
   let concated = list_concat(language_codes, b);
   let bible_folders = ebible_languages_to_bible_folders(concated);
