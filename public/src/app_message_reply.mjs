@@ -1,5 +1,5 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -32,7 +32,7 @@ export async function app_message_reply() {
       let outputs = object_property_get(a, "outputs");
       let item = app_reply_response_how_r_u();
       list_add(outputs, item);
-      object_property_set_exists_not(a, "success", true);
+      object_property_set(a, "success", true);
     }
     let fn = reply_sequence(["how", "are", "you"]);
     let r = reply_on_match(fn, lambda);
@@ -40,6 +40,7 @@ export async function app_message_reply() {
     const a = {
       tokens,
       outputs: [],
+      success: false,
     };
     r(a);
     return a;
