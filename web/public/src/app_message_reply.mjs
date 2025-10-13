@@ -49,6 +49,7 @@ export async function app_message_reply() {
       result = list_first(filtered);
     }
   }
-  let filtered2 = list_filter(list, function lambda3(item) {});
+  function lambda3(item) {}
+  let filtered2 = list_filter(list, lambda3);
   each(messages, lambda);
 }
