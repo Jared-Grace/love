@@ -1,4 +1,3 @@
-import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
@@ -11,6 +10,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_message_download } from "../../../love/public/src/app_message_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { string_size } from "./string_size.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
@@ -21,7 +21,7 @@ export async function app_message_reply() {
   );
   let o = json_from(result);
   let properties = object_properties(o);
-  let index_last = string_index_last(lower);
+  let index_last = string_size(lower);
   let index_left = 0;
   function lambda3(index_right) {
     let sliced = string_slice(lower, index_left, index_right);
@@ -32,6 +32,6 @@ export async function app_message_reply() {
       });
     }
   }
-  each_range_from(index_left, index_last, lambda3);
+  each_range_from(index_left + 1, index_last, lambda3);
   marker("1");
 }
