@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
@@ -32,6 +33,7 @@ export async function app_message_reply() {
     let outputs = object_property_get(a, "outputs");
     let item = app_reply_response_how_r_u();
     list_add(outputs, item);
+    object_property_set(object, property_name, value);
   }
   let fn = reply_sequence(["how", "are", "you"]);
   let r = reply_on_match(fn, lambda);
