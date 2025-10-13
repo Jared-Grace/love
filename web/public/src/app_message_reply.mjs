@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { string_index_of_last } from "../../../karate_code/public/src/string_index_of_last.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
@@ -26,6 +27,7 @@ export async function app_message_reply() {
     let sliced = string_slice(lower, index_left, index_right);
     let exists = object_property_exists(o, sliced);
     if (exists) {
+      log(message);
     }
   }
   each_range_from(index_left, index_last, lambda3);
