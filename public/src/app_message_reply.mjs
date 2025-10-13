@@ -1,3 +1,4 @@
+import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -23,7 +24,7 @@ export async function app_message_reply() {
   function lambda3(index_right) {
     let v = string_slice(lower, index_left, index_right);
   }
-  index_right(lower_size, lambda3);
+  each_range_from(lower_size, lambda3);
   marker("1");
   return o;
 }
