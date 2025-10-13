@@ -52,5 +52,5 @@ export async function app_message_reply() {
   messages = ["howareyou"];
   let mapped = list_map(messages, lambda);
   let filtered2 = list_filter_property(mapped, "success", false);
-  log(filtered2);
+  log(mapped);
 }
