@@ -20,7 +20,8 @@ export async function app_message_reply() {
   let dictionary = json_from(text);
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
-  let includes = function lambda(message) {
+  let includes = [];
+  function lambda(message) {
     let lower = string_lower_to(message);
     let tokens_matches = string_tokens(lower, dictionary);
     function lambda2(tokens) {
@@ -38,6 +39,6 @@ export async function app_message_reply() {
     let filtered = list_filter_property(mapped2, "success", true);
     let first2 = list_first(filtered);
     return first2;
-  };
+  }
   each(messages, lambda);
 }
