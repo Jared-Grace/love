@@ -25,7 +25,7 @@ export async function app_message_reply() {
   let input = list_first(tokens_matches);
   let r = await reply({
     input,
-    language_codes: "en",
+    language_codes: ["en"],
   });
   return r;
   marker("1");
