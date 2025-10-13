@@ -37,6 +37,8 @@ export async function app_message_reply() {
     }
     let mapped2 = list_map(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
+    if (false) {
+    }
     let first2 = list_first(filtered);
     return first2;
   }
