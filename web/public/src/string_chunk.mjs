@@ -1,4 +1,3 @@
-import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -17,9 +16,9 @@ export function string_chunk(input, dictionary, index_left, result, current) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
-      list_add(current, sliced);
-      string_chunk(input, dictionary, index_right, result, current);
-      let v = list_pop(list);
+      let copy2 = list_copy(current);
+      list_add(copy2, sliced);
+      string_chunk(input, dictionary, index_right, result, copy2);
     }
   }
   each_range_from(index_left + 1, index_last, lambda3);
