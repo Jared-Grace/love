@@ -10,11 +10,12 @@ export function app_message_reply_choices() {
   marker("1");
   let item = app_reply_response_how_r_u();
   function reply_on_match_output(item) {
-    return function lambda(a) {
+    let v2 = function lambda(a) {
       let outputs = object_property_get(a, "outputs");
       list_add(outputs, item);
       object_property_set(a, "success", true);
     };
+    return v2;
   }
   let fn = reply_sequence(["how", "are", "you"]);
   let fn3 = reply_sequence(["hi"]);
