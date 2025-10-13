@@ -4,7 +4,7 @@ import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
-export function string_chunk(input, dictionary, index_left, result) {
+export function string_chunk(input, dictionary, index_left, result, chunks) {
   marker("1");
   let index_last = string_size(input);
   function lambda3(index_right) {
@@ -14,7 +14,7 @@ export function string_chunk(input, dictionary, index_left, result) {
       log({
         sliced,
       });
-      string_chunk(input, dictionary, index_right, result);
+      string_chunk(input, dictionary, index_right, result, chunks);
     }
   }
   each_range_from(index_left + 1, index_last, lambda3);
