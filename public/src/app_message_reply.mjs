@@ -1,4 +1,4 @@
-import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
+import { reply } from "../../../love/public/src/reply.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -22,7 +22,9 @@ export async function app_message_reply() {
   object_property_delete_multiple(o, excludes);
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
-  let fn = reply_sequence(sequence);
+  await reply({
+    input,
+  });
   return tokens_matches;
   marker("1");
 }
