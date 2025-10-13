@@ -26,7 +26,6 @@ export async function app_message_reply() {
   object_property_delete_multiple(o, excludes);
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
-  return tokens_matches;
   let tokens = list_last(tokens_matches);
   let fn = reply_sequence(["how", "are", "you"]);
   async function lambda(a) {
