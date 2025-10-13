@@ -1,4 +1,3 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_chunk } from "../../../love/public/src/string_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -19,8 +18,10 @@ export async function app_message_reply() {
   );
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
-  function lambda(item) {}
-  each(list, list_size);
+  function lambda(item) {
+    opr;
+  }
+  each(list, lambda);
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
