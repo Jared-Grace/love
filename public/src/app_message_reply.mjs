@@ -26,6 +26,7 @@ export async function app_message_reply() {
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
+    let mapped3 = list_map(list, function lambda3(item) {});
     let result = {
       input,
       success: false,
