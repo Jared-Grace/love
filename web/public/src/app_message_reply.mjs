@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -26,7 +27,7 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   return tokens_matches;
-  let tokens = list_first(tokens_matches);
+  let tokens = list_last(tokens_matches);
   let fn = reply_sequence(["how", "are", "you"]);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
