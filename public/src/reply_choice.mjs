@@ -4,7 +4,8 @@ export function reply_choice(choices) {
   let fn = function reply_sequence_matches(a) {
     let tokens = object_property_get(a, "tokens");
     let matches = true;
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
     return matches;
   };
   return fn;
