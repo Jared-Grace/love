@@ -4,6 +4,7 @@ export function reply_on_match(fn, on_match) {
     if (matches) {
       on_match(a);
     }
+    return matches;
   };
   return matcher;
 }
