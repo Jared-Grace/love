@@ -26,6 +26,11 @@ export async function app_message_reply() {
   function lambda(message) {
     let lower = string_lower_to(message);
     let tokens_matches = string_tokens(lower, dictionary);
+    let result = {
+      tokens,
+      outputs: [],
+      success: false,
+    };
     function lambda2(tokens) {
       let r = app_message_reply_choices();
       marker("1");
