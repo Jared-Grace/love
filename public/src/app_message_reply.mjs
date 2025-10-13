@@ -12,13 +12,13 @@ export async function app_message_reply() {
   let mapped = list_map_property(downloads, "message");
   let first = list_first(mapped);
   let lower = string_lower_to(first);
-  let result = await http_local_text(
+  let text = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
-  let o = json_from(result);
+  let o = json_from(text);
   let properties = object_properties(o);
   let index_left = 0;
-  result = [];
+  let result = [];
   string_chunk(lower, o, index_left);
   marker("1");
 }
