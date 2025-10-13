@@ -15,7 +15,7 @@ export async function reply(a) {
   let fn = reply_sequence(["good", "evening"]);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
-    list_add(outputs);
+    list_add(outputs, "God");
     let list = await ebible_references_parse_lines(bible_folders, [reference]);
     let mapped = list_map_property(list, "text");
     list_add_multiple(mapped, items);
