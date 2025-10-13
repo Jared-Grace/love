@@ -7,6 +7,7 @@ export function reply_sequence(sequence) {
     let tokens = object_property_get(a, "tokens");
     let matches = true;
     if (list_size_less_than(tokens, sequence)) {
+      matches = false;
     }
     function lambda(sequence_item, index) {
       let token = list_get(tokens, index);
