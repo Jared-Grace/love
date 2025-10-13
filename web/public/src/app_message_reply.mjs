@@ -18,8 +18,8 @@ export async function app_message_reply() {
   let o = json_from(text);
   let properties = object_properties(o);
   let index_left = 0;
-  let chunk = [];
+  let result = [];
   let chunks = [];
-  string_chunk(lower, o, index_left, chunk, chunks);
+  string_chunk(lower, o, index_left, result, chunks);
   marker("1");
 }
