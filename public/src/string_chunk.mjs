@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
@@ -11,6 +12,7 @@ export function string_chunk(input, dictionary, index_left, result, current) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
+      list_add(list, item);
       log({
         sliced,
       });
