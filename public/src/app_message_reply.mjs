@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -26,8 +27,7 @@ export async function app_message_reply() {
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
-    function lambda3(item) {}
-    let mapped3 = list_map(list, lambda3);
+    each(list, function lambda3(item) {});
     let result = {
       input,
       success: false,
