@@ -43,6 +43,6 @@ export async function app_message_reply() {
     r(a);
     return a;
   }
-  list_map(list, lambda2);
+  mapped = list_map(list, lambda2);
   return a;
 }
