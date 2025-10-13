@@ -7,7 +7,8 @@ import { object_property_exists } from "../../../love/public/src/object_property
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
 export function string_chunk(input, dictionary, index_left, result, current) {
   let index_last = string_size(input);
-  if (index_left === index_last) {lcp
+  if (index_left === index_last) {
+    lcp;
     list_add(result, current);
   }
   marker("1");
