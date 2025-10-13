@@ -19,9 +19,6 @@ export function string_chunk(input, dictionary, index_left, result, current) {
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
       list_add(current, sliced);
-      log({
-        sliced,
-      });
       string_chunk(input, dictionary, index_right, result, current);
       let v = list_pop(list);
     }
