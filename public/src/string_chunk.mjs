@@ -12,7 +12,7 @@ export function string_chunk(input, dictionary, index_left, result, current) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);
     if (exists) {
-      list_add(list, item);
+      list_add(current, sliced);
       log({
         sliced,
       });
