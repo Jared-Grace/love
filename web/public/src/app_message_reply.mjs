@@ -1,4 +1,4 @@
-import { string_split } from "../../../love/public/src/string_split.mjs";
+import { string_slice } from "../../../love/public/src/string_slice.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -22,7 +22,7 @@ export async function app_message_reply() {
   let index_left = 0;
   let lower_size = string_size(lower);
   function lambda3(index_right) {
-    let split = string_split(s, separator);
+    let v = string_slice(s, a, b);
   }
   each_range(lower_size, lambda3);
   marker("1");
