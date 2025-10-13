@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
@@ -8,7 +9,8 @@ import { string_slice } from "../../../love/public/src/string_slice.mjs";
 export function string_chunk(input, dictionary, index_left, result, current) {
   let index_last = string_size(input);
   if (index_left === index_last) {
-    list_add(list, item);
+    let concated = list_concat(a, b);
+    list_add(result, current);
   }
   marker("1");
   function lambda3(index_right) {
