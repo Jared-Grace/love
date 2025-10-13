@@ -18,7 +18,8 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index = 0;
-  each_index(list, function lambda(item, index2) {});
+  function lambda(item, index2) {}
+  each_index(list, lambda);
   marker("1");
   return o;
 }
