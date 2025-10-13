@@ -19,12 +19,12 @@ export async function app_message_reply() {
   );
   let o = json_from(result);
   let properties = object_properties(o);
+  let index_last = string_index_of_last(lower);
   let index_left = 0;
-  let lower_size = string_index_of_last(lower);
   function lambda3(index_right) {
     let v = string_slice(lower, index_left, index_right);
   }
-  each_range_from(index_left, lower_size, lambda3);
+  each_range_from(index_left, index_last, lambda3);
   marker("1");
   return o;
 }
