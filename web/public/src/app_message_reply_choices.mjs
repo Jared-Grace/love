@@ -15,6 +15,6 @@ export function app_message_reply_choices() {
   let fn = reply_sequence(["how", "are", "you"]);
   let fn3 = reply_sequence(["hi"]);
   let fn2 = reply_choice([fn, fn3]);
-  let r = reply_on_match(fn, lambda);
+  let r = reply_on_match(fn2, lambda);
   return r;
 }
