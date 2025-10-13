@@ -26,7 +26,7 @@ export async function app_message_reply() {
   let properties = object_properties(o);
   let tokens_matches = string_tokens(lower, o);
   let tokens = list_first(tokens_matches);
-  let fn = reply_sequence(["good", "evening"]);
+  let fn = reply_sequence(["how", "are", "you"]);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
     list_add(outputs, "God");
