@@ -7,7 +7,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_message_download } from "../../../love/public/src/app_message_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { string_size } from "./string_size.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let mapped = list_map_property(downloads, "message");
@@ -18,7 +17,6 @@ export async function app_message_reply() {
   );
   let o = json_from(result);
   let properties = object_properties(o);
-  let index_last = string_size(lower);
   let index_left = 0;
   string_chunk(lower, o, index_last);
   marker("1");
