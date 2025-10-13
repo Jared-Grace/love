@@ -238,6 +238,7 @@
   "aa": "function_alias_add_auto",
   "ssl": "string_slice",
   "lcp": "list_copy",
-  "lp": "list_pop"
+  "lp": "list_pop",
+  "rsq": "reply_sequence"
  }
 }
