@@ -19,7 +19,8 @@ export async function app_message_reply() {
   let o = json_from(result);
   let properties = object_properties(o);
   let index_left = 0;
-  each_range(count, function lambda3() {});
+  function lambda3() {}
+  each_range(count, lambda3);
   function lambda(letter, index_right) {}
   each_index(lower, lambda);
   marker("1");
