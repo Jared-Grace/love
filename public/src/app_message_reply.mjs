@@ -12,12 +12,12 @@ import { app_message_download } from "../../../love/public/src/app_message_downl
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "./list_map.mjs";
 export async function app_message_reply() {
-  let dictionary = json_from(text);
   let downloads = await app_message_download();
   let messages = list_map_property(downloads, "message");
   let text = await http_local_text(
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
+  let dictionary = json_from(text);
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
   function lambda(message) {
