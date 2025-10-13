@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
@@ -19,7 +20,7 @@ export async function app_message_reply() {
   );
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
-  $e;
+  each(list, function lambda(item) {});
   let first = list_first(mapped);
   let lower = string_lower_to(first);
   let tokens_matches = string_tokens(lower, dictionary);
