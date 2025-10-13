@@ -1,5 +1,4 @@
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
@@ -48,7 +47,6 @@ export async function app_message_reply() {
     if (ne) {
       result = list_first(filtered);
     }
-    log(result);
   }
   each(messages, lambda);
 }
