@@ -18,7 +18,8 @@ export async function app_message_reply() {
   );
   let o = json_from(text);
   let excludes = ["h", "w", "e"];
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let properties = object_properties(o);
   let index_left = 0;
   let result = [];
