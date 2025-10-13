@@ -1,4 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -27,8 +27,7 @@ export async function app_message_reply() {
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(o, excludes);
   let tokens_matches = string_tokens(lower, o);
-  async function lambda2(item2) {}
-  await each_async(list, lambda2);
+  each(list, function lambda2(item2) {});
   let tokens = list_last(tokens_matches);
   async function lambda(a) {
     let outputs = object_property_get(a, "outputs");
