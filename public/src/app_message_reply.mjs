@@ -20,6 +20,6 @@ export async function app_message_reply() {
   let index_left = 0;
   let chunk = [];
   let chunks = [];
-  string_chunk(lower, o, index_left, chunk);
+  string_chunk(lower, o, index_left, chunk, chunks);
   marker("1");
 }
