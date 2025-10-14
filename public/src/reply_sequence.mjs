@@ -25,8 +25,8 @@ export function reply_sequence(sequence_fns) {
           }
           each(possibilities, lambda2);
         };
-        let p = sequence_fn(p);
       }
+      possibilities = sequence_fn(possibilities);
     }
     each(sequence_fns, lambda);
   };
