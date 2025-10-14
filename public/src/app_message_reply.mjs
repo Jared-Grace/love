@@ -16,6 +16,7 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { app_message_download } from "../../../love/public/src/app_message_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_map_squash } from "./list_map_squash.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let messages = list_map_property(downloads, "message");
@@ -52,7 +53,7 @@ export async function app_message_reply() {
       possibilities = r(possibilities);
       return possibilities;
     }
-    let mapped2 = list_map(tokens_matches, lambda2);
+    let mapped2 = list_map_squash(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
     let ne = list_empty_not_is(filtered);
     if (ne) {
