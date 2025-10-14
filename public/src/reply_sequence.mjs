@@ -7,8 +7,8 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 export function reply_sequence(sequence) {
   let fn = function reply_sequence_matches(a) {
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(ai) {}
+    each(a, lambda2);
     let index_start = object_property_get(a, "index");
     let tokens = object_property_get(a, "tokens");
     let matches = true;
