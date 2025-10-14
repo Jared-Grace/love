@@ -1,3 +1,4 @@
+import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -22,6 +23,8 @@ export function match_wrap_invoke(item, possibilities) {
       each(possibilities, lambda2);
     };
   }
+  list_is_assert(possibilities);
   possibilities = item(possibilities);
+  list_is_assert(possibilities);
   return possibilities;
 }
