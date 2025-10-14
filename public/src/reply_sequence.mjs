@@ -14,8 +14,9 @@ export function reply_sequence(sequence_fns) {
         if (not(fi)) {
           sequence_fn = function reply_wrap_inner(p) {
             let index_start = object_property_get(p, "index");
+            let matches_previous = object_property_get(p, "matches");
             let token = list_get(tokens, index_start);
-            let matches = sequence_fn === token;
+            let matches = matches_previous && sequence_fn === token;
             let r = {
               matches,
               index: index_start + 1,
