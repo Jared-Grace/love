@@ -19,7 +19,7 @@ export function reply_sequence(sequence_fns) {
         function lambda(sequence_fn, index) {
           let fi = function_is(sequence_fn);
           if (not(fi)) {
-            sequence_fn = function lambda3(a) {
+            sequence_fn = function reply_wrap(a) {
               let index_start = object_property_get(a, "index");
               let token = list_get(tokens, index + index_start);
               matches = sequence_fn === token;
@@ -30,7 +30,7 @@ export function reply_sequence(sequence_fns) {
               object_assign(ai, r);
             };
           }
-          let r = sequence_fn(ai);
+          ai = sequence_fn(ai);
         }
         each_index(sequence_fns, lambda);
       }
