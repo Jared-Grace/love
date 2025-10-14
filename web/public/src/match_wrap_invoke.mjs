@@ -31,6 +31,7 @@ export function match_wrap_invoke(item, possibilities) {
     let v = {
       possibilities,
       item,
+      result,
     };
     return v;
   }
