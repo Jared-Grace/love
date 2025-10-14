@@ -14,6 +14,7 @@ export function reply_sequence(sequence_fns) {
       }
     }
     each(sequence_fns, lambda);
+    return possibilities;
   };
   return fn;
 }
