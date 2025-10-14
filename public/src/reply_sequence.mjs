@@ -27,10 +27,10 @@ export function reply_sequence(sequence) {
       }
       each_index(sequence, lambda);
     }
-    let v = {
+    let r = {
       matches,
     };
-    return v;
+    return r;
   };
   return fn;
 }
