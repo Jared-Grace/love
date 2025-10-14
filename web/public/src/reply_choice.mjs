@@ -1,3 +1,4 @@
+import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { match_wrap_invoke } from "../../../love/public/src/match_wrap_invoke.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -7,6 +8,7 @@ export function reply_choice(choices) {
   let fn = function reply_choice_matches(possibilities) {
     list_is_assert(possibilities);
     function lambda(choice) {
+      let copy = json_copy(o);
       possibilities = match_wrap_invoke(choice, possibilities);
       return possibilities;
     }
