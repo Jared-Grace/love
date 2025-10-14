@@ -6,7 +6,7 @@ export function reply_on_match(fn, on_match) {
   let matcher = function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     possibilities = fn(possibilities);
-    log(message);
+    log(fn.name);
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
     if (ne) {
