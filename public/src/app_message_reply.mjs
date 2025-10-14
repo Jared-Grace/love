@@ -9,12 +9,15 @@ import { list_filter_property } from "../../../love/public/src/list_filter_prope
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_message_download } from "../../../love/public/src/app_message_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_squash } from "./list_map_squash.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
+  let messages = list_map_property(downloads, "message");
+  messages = ["howareyou"];
   let dictionary = await reply_dictionary();
   let start = app_message_reply_choices();
   function lambda(message) {
@@ -49,7 +52,7 @@ export async function app_message_reply() {
     }
     return result;
   }
-  let mapped = list_map(["howareyou"], lambda);
+  let mapped = list_map(messages, lambda);
   let filtered2 = list_filter_property(mapped, "success", false);
   log(mapped);
 }
