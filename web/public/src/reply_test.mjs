@@ -1,7 +1,7 @@
 import { reply_messages } from "../../../love/public/src/reply_messages.mjs";
-import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
 export async function reply_test() {
-  let messages = ["howareyou"];
-  let start = app_message_reply_choices();
+  let messages = ["a"];
+  let start = reply_sequence(["a"]);
   let result = await reply_messages(messages, start);
 }
