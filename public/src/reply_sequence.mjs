@@ -27,8 +27,8 @@ export function reply_sequence(sequence_fns) {
         };
         let p = sequence_fn(p);
       }
-      each(sequence_fns, lambda);
     }
+    each(sequence_fns, lambda);
   };
   return fn;
 }
