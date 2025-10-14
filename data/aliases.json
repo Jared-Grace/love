@@ -239,6 +239,7 @@
   "ssl": "string_slice",
   "lcp": "list_copy",
   "lp": "list_pop",
-  "rsq": "reply_sequence"
+  "rsq": "reply_sequence",
+  "fi": "function_is"
  }
 }
