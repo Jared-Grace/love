@@ -9,12 +9,12 @@ export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
     function lambda2(p) {
       let tokens = object_property_get(p, "tokens");
-      function lambda(sequence_fn, index) {
+      function lambda(sequence_fn, sequence_index) {
         let fi = function_is(sequence_fn);
         if (not(fi)) {
           sequence_fn = function reply_wrap_inner(p) {
             let index_start = object_property_get(p, "index");
-            let token = list_get(tokens, index + index_start);
+            let token = list_get(tokens, sequence_index + index_start);
             let matches = sequence_fn === token;
             let r = {
               matches,
