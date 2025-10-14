@@ -45,6 +45,7 @@ export async function app_message_reply() {
         tokens,
         outputs: [],
         index: 0,
+        matches: true,
       };
       object_merge(a, result);
       r([a]);
