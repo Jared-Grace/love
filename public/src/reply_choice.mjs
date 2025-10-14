@@ -4,7 +4,7 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
   let fn = function reply_sequence_matches(possibilities) {
     log({
-      possbilities: possibilities,
+      possibilities,
       a: "a",
     });
     function lambda(choice) {
