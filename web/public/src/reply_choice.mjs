@@ -5,8 +5,8 @@ export function reply_choice(choices) {
     function lambda(choice) {
       let { matches } = choice(a);
       if (matches) {
-        matches_result = v;
         let v = true;
+        matches_result = v;
         return v;
       }
     }
