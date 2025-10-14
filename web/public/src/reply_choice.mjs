@@ -1,16 +1,20 @@
 import { each } from "../../../love/public/src/each.mjs";
 export function reply_choice(choices) {
   let fn = function reply_sequence_matches(a) {
-    let matches = false;
+    let matches_result = false;
     function lambda(choice) {
-      matches = choice(a);
+      let { matches } = choice(a);
       if (matches) {
+        matches_result = v;
         let v = true;
         return v;
       }
     }
     each(choices, lambda);
-    return matches;
+    let v2 = {
+      matches: matches_result,
+    };
+    return v2;
   };
   return fn;
 }
