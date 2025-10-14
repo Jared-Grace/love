@@ -21,16 +21,17 @@ export function reply_sequence(sequence) {
           let token = list_get(tokens, index + index_start);
           let fi = function_is(sequence_item);
           if (not(fi)) {
-            sequence_item = function lambda3() {};
+            sequence_item = function lambda3() {
+              if (sequence_item !== token) {
+                log({
+                  sequence_item,
+                  token,
+                });
+                matches = false;
+              }
+            };
           }
           let r = sequence_item(a);
-          if (sequence_item !== token) {
-            log({
-              sequence_item,
-              token,
-            });
-            matches = false;
-          }
         }
         each_index(sequence, lambda);
       }
