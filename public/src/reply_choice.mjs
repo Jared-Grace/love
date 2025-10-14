@@ -7,8 +7,9 @@ export function reply_choice(choices) {
       possbilities = choice(possbilities);
     }
     let mapped = list_map(choices, lambda);
-    let squashed = list_squash(list);
-    let filtered = reply_matches(possbilities);
+    ("maybe only need flatten one level, squash save time");
+    let squashed = list_squash(mapped);
+    let filtered = reply_matches(squashed);
     return filtered;
   };
   return fn;
