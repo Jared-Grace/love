@@ -26,6 +26,7 @@ export async function app_message_reply() {
   let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
   let includes = [];
+  let start = app_message_reply_choices();
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
@@ -33,12 +34,13 @@ export async function app_message_reply() {
       list_add(tokens, last);
     }
     each(tokens_matches, lambda3);
+    let result = {
+      input,
+      success: false,
+    };
     function lambda2(tokens) {
-      let r = app_message_reply_choices();
       marker("1");
       const possbilitiy_start = {
-        input,
-        success: false,
         tokens,
         outputs: [],
         index: 0,
@@ -46,14 +48,14 @@ export async function app_message_reply() {
       };
       object_merge(possbilitiy_start, result);
       let possibilities = [possbilitiy_start];
-      possibilities = r(possibilities);
+      possibilities = start(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
     let ne = list_empty_not_is(filtered);
     if (ne) {
-      let result = list_first(filtered);
+      result = list_first(filtered);
     }
     return result;
   }
