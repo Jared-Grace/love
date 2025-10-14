@@ -30,6 +30,10 @@ export function match_wrap_invoke(item, possibilities) {
     possibilities,
   });
   let result = item(possibilities);
+  log({
+    result,
+    item,
+  });
   function lambda() {
     let v = {
       possibilities,
