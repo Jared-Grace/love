@@ -23,6 +23,7 @@ export function match_wrap_invoke(item, possibilities) {
         object_assign(p, r);
       }
       each(possibilities, lambda2);
+      return possibilities;
     };
   }
   list_is_assert(possibilities);
