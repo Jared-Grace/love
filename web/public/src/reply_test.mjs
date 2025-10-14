@@ -13,6 +13,6 @@ export async function reply_test() {
   async function lambda(item) {
     let result = await reply_messages(messages, start);
   }
-  await each_async(list, lambda);
+  await each_async(cases, lambda);
   return result;
 }
