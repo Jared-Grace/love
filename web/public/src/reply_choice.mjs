@@ -4,10 +4,10 @@ export function reply_choice(choices) {
   let fn = function reply_sequence_matches(possbilities) {
     function lambda(choice) {
       possbilities = choice(possbilities);
-      let filtered = reply_matches(possbilities);
-      return filtered;
     }
     let mapped = list_map(choices, lambda);
+    let filtered = reply_matches(possbilities);
+    return filtered;
   };
   return fn;
 }
