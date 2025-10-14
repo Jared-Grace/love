@@ -33,7 +33,7 @@ export async function app_message_reply() {
     let tokens_matches = string_tokens(input, dictionary);
     let last = reply_last();
     let last2 = reply_last();
-    assert(b);
+    assert(last === last2);
     function lambda3(tokens) {
       list_add(tokens, last);
     }
