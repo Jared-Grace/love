@@ -18,10 +18,10 @@ export function reply_sequence(sequence) {
         matches = false;
       } else {
         function lambda(sequence_item, index) {
-          let token = list_get(tokens, index + index_start);
           let fi = function_is(sequence_item);
           if (not(fi)) {
-            sequence_item = function lambda3() {
+            sequence_item = function lambda3(a) {
+              let token = list_get(tokens, index + index_start);
               if (sequence_item !== token) {
                 log({
                   sequence_item,
