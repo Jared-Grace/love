@@ -10,7 +10,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
-export async function reply_messages(messages) {
+export async function reply_messages(messages, start) {
   let dictionary = await reply_dictionary();
   function lambda(message) {
     let input = string_lower_to(message);
