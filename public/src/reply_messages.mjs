@@ -41,7 +41,7 @@ export async function reply_messages(messages, start) {
       };
       object_merge(possbilitiy_start, result);
       let possibilities = [possbilitiy_start];
-      possibilities = start(possibilities);
+      possibilities = r(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
