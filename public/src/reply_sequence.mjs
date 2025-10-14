@@ -10,11 +10,12 @@ export function reply_sequence(sequence) {
     let index_start = object_property_get(a, "index");
     let tokens = object_property_get(a, "tokens");
     let matches = true;
+    let sequence_size = list_size(sequence);
     if (list_size_less_than(tokens, sequence)) {
       matches = false;
     } else {
       function lambda(sequence_item, index) {
-        let token = list_get(tokens, index);
+        let token = list_get(tokens, index + index_start);
         let fi = function_is(sequence_item);
         if (fi) {
           let r = sequence_item(a);
