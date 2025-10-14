@@ -53,6 +53,6 @@ export async function app_message_reply() {
     return result;
   }
   let mapped = list_map(messages, lambda);
-  let filtered2 = list_filter_property(mapped, "success", true);
-  log(filtered2);
+  let result = list_filter_property(mapped, "success", true);
+  log(result);
 }
