@@ -14,10 +14,10 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
 import { reply_last } from "./reply_last.mjs";
 export async function reply_messages(messages, start) {
-  function lambda(a) {
+  function lambda2(a) {
     object_property_set(a, "success", true);
   }
-  let r = reply_on_match(start, lambda);
+  let r = reply_on_match(start, lambda2);
   let last = reply_last();
   let dictionary = await reply_dictionary();
   function lambda(message) {
