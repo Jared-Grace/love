@@ -37,11 +37,11 @@ export function match_wrap_invoke(item, possibilities) {
     };
   }
   list_is_assert(possibilities);
-  let result = item(possibilities);
+  let result = wrapped(possibilities);
   function lambda() {
     let v = {
       possibilities,
-      item,
+      wrapped,
       result,
     };
     return v;
