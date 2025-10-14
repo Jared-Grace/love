@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -31,6 +32,8 @@ export async function app_message_reply() {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
     let last = reply_last();
+    let last2 = reply_last();
+    assert(b);
     function lambda3(tokens) {
       list_add(tokens, last);
     }
