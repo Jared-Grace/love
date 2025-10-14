@@ -48,8 +48,9 @@ export async function app_message_reply() {
         matches: true,
       };
       object_merge(possbilitiy_start, result);
-      r([possbilitiy_start]);
-      return possbilitiy_start;
+      let possibilities = [possbilitiy_start];
+      possibilities = r(possibilities);
+      return possibilities;
     }
     let mapped2 = list_map(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
