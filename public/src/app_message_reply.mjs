@@ -52,6 +52,6 @@ export async function app_message_reply() {
     }
     return result;
   }
-  let mapped = list_map(messages, lambda);
-  log(mapped);
+  let result = list_map(messages, lambda);
+  log(result);
 }
