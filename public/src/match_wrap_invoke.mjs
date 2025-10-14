@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -16,7 +17,8 @@ export function match_wrap_invoke(item, possibilities) {
         let token = list_get(tokens, index_start);
         let matches_previous = object_property_get(p, "matches");
         let matches = matches_previous && item === token;
-        if (false) {
+        if (not(matches)) {
+          log(message);
         }
         let r = {
           matches,
