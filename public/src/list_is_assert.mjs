@@ -3,7 +3,6 @@ export function list_is_assert(list) {
   function lambda() {
     let v = {
       n: "test",
-      list,
     };
     return v;
   }
