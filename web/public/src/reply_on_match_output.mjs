@@ -6,10 +6,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function reply_on_match_output(fn_a, item) {
   assert_arguments(arguments, 2);
   function lambda(possibilities) {
-    function lambda2(item2) {}
-    each(list, lambda2);
-    let outputs = object_property_get(a, "outputs");
-    list_add(outputs, item);
+    function lambda2(p) {
+      let outputs = object_property_get(p, "outputs");
+      list_add(outputs, item);
+    }
+    each(possibilities, lambda2);
   }
   let fn = reply_on_match(fn_a, lambda);
   return fn;
