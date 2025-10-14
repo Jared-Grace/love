@@ -13,7 +13,10 @@ export function reply_sequence(sequence) {
       function lambda(sequence_item, index) {
         let token = list_get(tokens, index);
         if (sequence_item !== token) {
-          log(message);
+          log({
+            sequence_item,
+            token,
+          });
           matches = false;
         }
       }
