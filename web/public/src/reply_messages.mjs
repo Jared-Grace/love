@@ -1,5 +1,3 @@
-import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -12,13 +10,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
-import { reply_last } from "./reply_last.mjs";
 export async function reply_messages(messages, start) {
-  function lambda2(a) {
-    object_property_set(a, "success", true);
-  }
-  let r = reply_on_match(start, lambda2);
-  let last = reply_last();
   let dictionary = await reply_dictionary();
   function lambda(message) {
     let input = string_lower_to(message);
@@ -41,7 +33,7 @@ export async function reply_messages(messages, start) {
       };
       object_merge(possbilitiy_start, result);
       let possibilities = [possbilitiy_start];
-      possibilities = r(possibilities);
+      possibilities = start(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
