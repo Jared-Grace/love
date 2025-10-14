@@ -41,15 +41,15 @@ export async function app_message_reply() {
     function lambda2(tokens) {
       let r = app_message_reply_choices();
       marker("1");
-      const a = {
+      const possbilitiy_start = {
         tokens,
         outputs: [],
         index: 0,
         matches: true,
       };
-      object_merge(a, result);
-      r([a]);
-      return a;
+      object_merge(possbilitiy_start, result);
+      r([possbilitiy_start]);
+      return possbilitiy_start;
     }
     let mapped2 = list_map(tokens_matches, lambda2);
     let filtered = list_filter_property(mapped2, "success", true);
