@@ -18,7 +18,10 @@ export function match_wrap_invoke(item, possibilities) {
         let matches_previous = object_property_get(p, "matches");
         let matches = matches_previous && item === token;
         if (not(matches)) {
-          log(message);
+          log({
+            item,
+            token,
+          });
         }
         let r = {
           matches,
