@@ -57,7 +57,7 @@ export async function app_message_reply() {
     }
     return result;
   }
-  let mapped = list_map(messages, lambda);
+  let mapped = list_map(["howareyou"], lambda);
   let filtered2 = list_filter_property(mapped, "success", false);
   log(mapped);
 }
