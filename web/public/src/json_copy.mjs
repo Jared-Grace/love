@@ -1,4 +1,6 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function json_copy() {
-  marker("1");
+import { json_from } from "./json_from.mjs";
+import { json_to } from "./json_to.mjs";
+export function json_copy(o) {
+  let json = json_to(o);
+  return json_from(json);
 }
