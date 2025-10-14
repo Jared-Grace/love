@@ -8,9 +8,9 @@ export function reply_choice(choices) {
   let fn = function reply_choice_matches(possibilities) {
     list_is_assert(possibilities);
     function lambda(choice) {
-      let copy = json_copy(o);
-      possibilities = match_wrap_invoke(choice, possibilities);
-      return possibilities;
+      let copy = json_copy(possibilities);
+      copy = match_wrap_invoke(choice, copy);
+      return copy;
     }
     ("maybe only need flatten one level, squash save time");
     let squashed = list_map_squash(choices, lambda);
