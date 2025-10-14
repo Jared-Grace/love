@@ -14,7 +14,8 @@ export function match_wrap_invoke(item, possibilities) {
         let tokens = object_property_get(p, "tokens");
         let index_start = object_property_get(p, "index");
         let token = list_get(tokens, index_start);
-        let matches = item === token;
+        let matches_previous = object_property_get(p, "matches");
+        let matches = matches_previous && item === token;
         let r = {
           matches,
           index: index_start + 1,
