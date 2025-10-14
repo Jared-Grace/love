@@ -18,6 +18,6 @@ export function app_message_reply_choices() {
   function lambda(a) {
     object_property_set(a, "success", true);
   }
-  let r = reply_on_match(fn2, lambda);
+  let r = reply_on_match(fn5, lambda);
   return r;
 }
