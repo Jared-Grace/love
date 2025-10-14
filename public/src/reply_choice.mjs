@@ -11,10 +11,10 @@ export function reply_choice(choices) {
       }
     }
     each(choices, lambda);
-    let v2 = {
+    let r = {
       matches: matches_result,
     };
-    return v2;
+    return r;
   };
   return fn;
 }
