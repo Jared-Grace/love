@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
@@ -31,6 +32,7 @@ export function reply_sequence(sequence) {
         }
         each_index(sequence, lambda);
       }
+      object_property_set(object, property_name, value);
       let r = {
         matches,
         index: index_start + sequence_size,
