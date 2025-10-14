@@ -9,11 +9,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
-import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
 export async function reply_messages(messages) {
   let dictionary = await reply_dictionary();
-  let start = app_message_reply_choices();
   function lambda(message) {
     let input = string_lower_to(message);
     let tokens_matches = string_tokens(input, dictionary);
