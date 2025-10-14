@@ -1,4 +1,4 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -7,8 +7,9 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_get } from "../../../love/public/src/list_get.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
-    log_json({
-      possibilities,
+    log({
+      possbilities,
+      a: "b",
     });
     function lambda2(p) {
       let tokens = object_property_get(p, "tokens");
