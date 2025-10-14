@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_map } from "./list_map.mjs";
 export function reply_choice(choices) {
@@ -6,6 +7,7 @@ export function reply_choice(choices) {
       possbilities = choice(possbilities);
     }
     let mapped = list_map(choices, lambda);
+    let squashed = list_squash(list);
     let filtered = reply_matches(possbilities);
     return filtered;
   };
