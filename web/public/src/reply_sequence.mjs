@@ -8,7 +8,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
     log({
-      possbilities,
+      possibilities,
       a: "b",
     });
     function lambda2(p) {
