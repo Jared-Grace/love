@@ -33,14 +33,12 @@ export async function app_message_reply() {
       list_add(tokens, last);
     }
     each(tokens_matches, lambda3);
-    let result = {
-      input,
-      success: false,
-    };
     function lambda2(tokens) {
       let r = app_message_reply_choices();
       marker("1");
       const possbilitiy_start = {
+        input,
+        success: false,
         tokens,
         outputs: [],
         index: 0,
@@ -55,7 +53,7 @@ export async function app_message_reply() {
     let filtered = list_filter_property(mapped2, "success", true);
     let ne = list_empty_not_is(filtered);
     if (ne) {
-      result = list_first(filtered);
+      let result = list_first(filtered);
     }
     return result;
   }
