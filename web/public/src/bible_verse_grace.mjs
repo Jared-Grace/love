@@ -1,6 +1,5 @@
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_to } from "../../../love/public/src/list_to.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -11,5 +10,4 @@ export async function bible_verse_grace(reference) {
   let mapped = list_map_property(v, "text");
   let joined2 = list_join_newline(mapped);
   return joined2;
-  log(v);
 }
