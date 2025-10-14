@@ -10,8 +10,9 @@ export async function reply_test() {
       start: reply_sequence(["a"]),
     },
   ];
-  async function lambda(item) {}
+  async function lambda(item) {
+    let result = await reply_messages(messages, start);
+  }
   await each_async(list, lambda);
-  let result = await reply_messages(messages, start);
   return result;
 }
