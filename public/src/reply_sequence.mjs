@@ -8,7 +8,9 @@ export function reply_sequence(sequence_fns) {
     list_is_assert(possibilities);
     function lambda(sequence_fn) {
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
-      log(message);
+      log({
+        possibilities,
+      });
       let e = list_empty_is(possibilities);
       if (e) {
         let v = true;
