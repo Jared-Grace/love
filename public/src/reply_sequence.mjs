@@ -15,7 +15,7 @@ export function reply_sequence(sequence) {
         let token = list_get(tokens, index);
         let fi = function_is(sequence_item);
         if (fi) {
-          sequence_item = sequence_item(a);
+          let r = sequence_item(a);
         }
         if (sequence_item !== token) {
           log({
@@ -27,7 +27,10 @@ export function reply_sequence(sequence) {
       }
       each_index(sequence, lambda);
     }
-    return matches;
+    let v = {
+      matches,
+    };
+    return v;
   };
   return fn;
 }
