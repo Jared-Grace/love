@@ -7,7 +7,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
-    function lambda2(ai) {
+    function lambda2(p) {
       function lambda(sequence_fn, index) {
         let fi = function_is(sequence_fn);
         if (not(fi)) {
@@ -19,10 +19,10 @@ export function reply_sequence(sequence_fns) {
               matches,
               index: index_start + 1,
             };
-            object_assign(ai, r);
+            object_assign(p, r);
           };
         }
-        ai = sequence_fn(ai);
+        p = sequence_fn(p);
       }
       each_index(sequence_fns, lambda);
     }
