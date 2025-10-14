@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -35,7 +34,6 @@ export async function reply_messages(messages, start) {
       object_merge(possbilitiy_start, base);
       let possibilities = [possbilitiy_start];
       possibilities = start(possibilities);
-      log(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
