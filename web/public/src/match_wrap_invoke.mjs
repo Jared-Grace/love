@@ -22,6 +22,7 @@ export function match_wrap_invoke(item, possibilities) {
         log({
           matches_previous,
           matches,
+          item,
         });
         let r = {
           matches,
