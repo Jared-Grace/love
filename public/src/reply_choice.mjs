@@ -5,8 +5,7 @@ import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
   let fn = function reply_choice_matches(possibilities) {
-    let l = list_is(value);
-    assert(b);
+    list_is_assert(possibilities);
     log({
       possibilities,
       a: "a",
@@ -22,3 +21,8 @@ export function reply_choice(choices) {
   };
   return fn;
 }
+function list_is_assert(possibilities) {
+  let l = list_is(possibilities);
+  assert(l);
+}
+
