@@ -9,6 +9,7 @@ export function reply_on_match(fn, on_match) {
     let filtered = reply_matches(possibilities);
     log({
       filtered,
+      possibilities,
     });
     let ne = list_empty_not_is(filtered);
     if (ne) {
