@@ -6,10 +6,6 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
   let fn = function reply_choice_matches(possibilities) {
     list_is_assert(possibilities);
-    log({
-      possibilities,
-      a: "a",
-    });
     function lambda(choice) {
       let v = choice(possibilities);
       return v;
