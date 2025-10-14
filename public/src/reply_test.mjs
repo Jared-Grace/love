@@ -1,4 +1,7 @@
-import { match_wrap_invoke } from "../../../love/public/src/match_wrap_invoke.mjs";
+import { reply_messages } from "../../../love/public/src/reply_messages.mjs";
+import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 export async function reply_test() {
-  match_wrap_invoke(sequence_fn, possibilities);
+  let messages = ["howareyou"];
+  let start = app_message_reply_choices();
+  let result = await reply_messages(messages, start);
 }
