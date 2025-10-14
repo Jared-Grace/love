@@ -39,7 +39,7 @@ export async function reply_messages(messages, start) {
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
-    let result = list_filter_property(mapped2, "success", true);
+    let result = list_filter_property(mapped2, "matches", true);
     let ne = list_empty_not_is(result);
     if (ne) {
       result = list_first(result);
