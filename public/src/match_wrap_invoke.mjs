@@ -5,7 +5,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 export function match_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
@@ -20,12 +19,11 @@ export function match_wrap_invoke(item, possibilities) {
         let token = list_get(tokens, index_start);
         let matches_previous = object_property_get(p, "matches");
         let matches = matches_previous && item === token;
-        if (not(matches)) {
-          log({
-            item,
-            token,
-          });
-        }
+        log({
+          item,
+          token,
+          index_start,
+        });
         let r = {
           matches,
           index: index_start + 1,
