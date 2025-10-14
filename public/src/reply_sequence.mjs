@@ -8,12 +8,12 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
     list_is_assert(possibilities);
-    function lambda2(p) {
-      let tokens = object_property_get(p, "tokens");
-      function lambda(sequence_fn) {
-        let fi = function_is(sequence_fn);
-        if (not(fi)) {
-          sequence_fn = function reply_wrap_inner(p) {
+    let tokens = object_property_get(p, "tokens");
+    function lambda(sequence_fn) {
+      let fi = function_is(sequence_fn);
+      if (not(fi)) {
+        sequence_fn = function reply_wrap_inner(possibilities) {
+          function lambda2(p) {
             let index_start = object_property_get(p, "index");
             let token = list_get(tokens, index_start);
             let matches = sequence_fn === token;
@@ -22,13 +22,13 @@ export function reply_sequence(sequence_fns) {
               index: index_start + 1,
             };
             object_assign(p, r);
-          };
-        }
-        p = sequence_fn(p);
+            each(possibilities, lambda2);
+          }
+        };
+        let p = sequence_fn(p);
       }
       each(sequence_fns, lambda);
     }
-    each(possibilities, lambda2);
   };
   return fn;
 }
