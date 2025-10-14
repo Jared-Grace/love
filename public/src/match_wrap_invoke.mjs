@@ -19,11 +19,6 @@ export function match_wrap_invoke(item, possibilities) {
         let token = list_get(tokens, index_start);
         let matches_previous = object_property_get(p, "matches");
         let matches = matches_previous && item === token;
-        log({
-          item,
-          token,
-          index_start,
-        });
         let r = {
           matches,
           index: index_start + 1,
@@ -45,5 +40,8 @@ export function match_wrap_invoke(item, possibilities) {
     return v;
   }
   list_is_assert_json(result, lambda);
+  log({
+    result,
+  });
   return result;
 }
