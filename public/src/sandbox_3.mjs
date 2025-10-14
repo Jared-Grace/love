@@ -5,5 +5,4 @@ export async function sandbox_3() {
   if (browser_is()) {
     alert(messenger);
   }
-  log(messenger);
 }
