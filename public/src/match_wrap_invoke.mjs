@@ -36,6 +36,5 @@ export function match_wrap_invoke(item, possibilities) {
     return v;
   }
   list_is_assert_json(result, lambda);
-  return;
   return result;
 }
