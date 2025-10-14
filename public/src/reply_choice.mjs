@@ -11,8 +11,10 @@ export function reply_choice(choices) {
     }
     ("maybe only need flatten one level, squash save time");
     let squashed = list_map_squash(choices, lambda);
+    log({
+      squashed,
+    });
     let filtered = reply_matches(squashed);
-    log(filtered);
     return filtered;
   };
   return fn;
