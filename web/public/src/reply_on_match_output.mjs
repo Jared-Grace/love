@@ -6,7 +6,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function reply_on_match_output(fn_a, item) {
   assert_arguments(arguments, 2);
   function lambda(possibilities) {
-    each(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    each(list, lambda2);
     let outputs = object_property_get(a, "outputs");
     list_add(outputs, item);
   }
