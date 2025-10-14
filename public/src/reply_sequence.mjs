@@ -8,8 +8,8 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 export function reply_sequence(sequence) {
   let fn = function reply_sequence_matches(a) {
     function lambda2(ai) {
-      let index_start = object_property_get(a, "index");
-      let tokens = object_property_get(a, "tokens");
+      let index_start = object_property_get(ai, "index");
+      let tokens = object_property_get(ai, "tokens");
       let matches = true;
       let sequence_size = list_size(sequence);
       if (list_size(tokens) - index_start < sequence_size) {
