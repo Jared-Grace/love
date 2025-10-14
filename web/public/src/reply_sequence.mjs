@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -26,6 +27,7 @@ export function reply_sequence(sequence_fns) {
       }
       each(sequence_fns, lambda);
     }
+    log(message);
     each(possibilities, lambda2);
   };
   return fn;
