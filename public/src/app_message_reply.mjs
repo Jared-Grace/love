@@ -1,3 +1,4 @@
+import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -6,9 +7,6 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
-import { object_property_delete_multiple } from "../../../love/public/src/object_property_delete_multiple.mjs";
-import { json_from } from "../../../love/public/src/json_from.mjs";
-import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -19,13 +17,7 @@ import { list_map_squash } from "./list_map_squash.mjs";
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let messages = list_map_property(downloads, "message");
-  let text = await http_local_text(
-    "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
-  );
-  let dictionary = json_from(text);
-  let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
-  object_property_delete_multiple(dictionary, excludes);
-  let includes = [];
+  let dictionary = await reply_dictionary();
   let start = app_message_reply_choices();
   function lambda(message) {
     let input = string_lower_to(message);
