@@ -47,7 +47,7 @@ export async function app_message_reply() {
         index: 0,
       };
       object_merge(a, result);
-      r(a);
+      r([a]);
       return a;
     }
     let mapped2 = list_map(tokens_matches, lambda2);
