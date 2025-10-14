@@ -23,6 +23,7 @@ export function match_wrap_invoke(item, possibilities) {
           matches_previous,
           matches,
           item,
+          token,
         });
         let r = {
           matches,
