@@ -1,6 +1,4 @@
-import { assert } from "../../../love/public/src/assert.mjs";
-import { list_is } from "../../../love/public/src/list_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
+import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
@@ -17,8 +15,3 @@ export function reply_choice(choices) {
   };
   return fn;
 }
-function list_is_assert(possibilities) {
-  let l = list_is(possibilities);
-  assert(l);
-}
-
