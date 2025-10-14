@@ -1,5 +1,4 @@
 import { function_is } from "../../../love/public/src/function_is.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,8 +13,9 @@ export function reply_sequence(sequence) {
     } else {
       function lambda(sequence_item, index) {
         let token = list_get(tokens, index);
-        let fi = function_is(f);
-        if (not(a2)) {
+        let fi = function_is(sequence_item);
+        if (fi) {
+          sequence_item = sequence_item(a);
         }
         if (sequence_item !== token) {
           log({
