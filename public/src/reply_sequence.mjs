@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -19,9 +20,10 @@ export function reply_sequence(sequence) {
         function lambda(sequence_item, index) {
           let token = list_get(tokens, index + index_start);
           let fi = function_is(sequence_item);
-          if (fi) {
-            let r = sequence_item(a);
+          if (not(fi)) {
+            sequence_item = function lambda3() {};
           }
+          let r = sequence_item(a);
           if (sequence_item !== token) {
             log({
               sequence_item,
