@@ -1,4 +1,3 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { match_wrap_invoke } from "../../../love/public/src/match_wrap_invoke.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -8,9 +7,6 @@ export function reply_sequence(sequence_fns) {
     list_is_assert(possibilities);
     function lambda(sequence_fn) {
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
-      log_json({
-        possibilities,
-      });
       let e = list_empty_is(possibilities);
       if (e) {
         let v = true;
