@@ -1,7 +1,6 @@
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -11,7 +10,7 @@ export function reply_sequence(sequence) {
     let tokens = object_property_get(a, "tokens");
     let matches = true;
     let sequence_size = list_size(sequence);
-    if (list_size_less_than(tokens, sequence)) {
+    if (list_size(tokens) - index_start < sequence_size) {
       matches = false;
     } else {
       function lambda(sequence_item, index) {
@@ -32,7 +31,7 @@ export function reply_sequence(sequence) {
     }
     let r = {
       matches,
-      index: index_start + list_size(sequence),
+      index: index_start + sequence_size,
     };
     return r;
   };
