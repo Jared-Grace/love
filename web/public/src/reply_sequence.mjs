@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -7,10 +7,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_get } from "../../../love/public/src/list_get.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
-    log({
-      possibilities,
-      a: "b",
-    });
+    list_is_assert(possibilities);
     function lambda2(p) {
       let tokens = object_property_get(p, "tokens");
       function lambda(sequence_fn) {
