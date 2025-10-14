@@ -4,7 +4,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
@@ -26,7 +25,6 @@ export async function reply_messages(messages, start) {
       success: false,
     };
     function lambda2(tokens) {
-      marker("1");
       const possbilitiy_start = {
         tokens,
         outputs: [],
