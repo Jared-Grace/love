@@ -29,6 +29,7 @@ export function match_wrap_invoke(item, possibilities) {
   function lambda() {
     let v = {
       possibilities,
+      item,
     };
     return v;
   }
