@@ -1,3 +1,4 @@
+import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -25,6 +26,13 @@ export function match_wrap_invoke(item, possibilities) {
   }
   list_is_assert(possibilities);
   let result = item(possibilities);
-  list_is_assert(possibilities);
+  function lambda() {
+    let v = {
+      possibilities,
+    };
+    return v;
+  }
+  list_is_assert_json(possibilities, lambda);
+  return;
   return result;
 }
