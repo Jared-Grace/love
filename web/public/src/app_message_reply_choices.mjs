@@ -1,3 +1,4 @@
+import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -12,7 +13,8 @@ export function app_message_reply_choices() {
   let item = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, item);
   let fn2 = reply_choice([fn4, fn3]);
-  let fn5 = reply_sequence(sequence);
+  let last = reply_last();
+  let fn5 = reply_sequence([fn2, last]);
   function lambda(a) {
     object_property_set(a, "success", true);
   }
