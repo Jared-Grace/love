@@ -7,6 +7,9 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_get } from "../../../love/public/src/list_get.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
+    log({
+      possibilities,
+    });
     function lambda2(p) {
       let tokens = object_property_get(p, "tokens");
       function lambda(sequence_fn) {
@@ -14,9 +17,8 @@ export function reply_sequence(sequence_fns) {
         if (not(fi)) {
           sequence_fn = function reply_wrap_inner(p) {
             let index_start = object_property_get(p, "index");
-            let matches_previous = object_property_get(p, "matches");
             let token = list_get(tokens, index_start);
-            let matches = matches_previous && sequence_fn === token;
+            let matches = sequence_fn === token;
             let r = {
               matches,
               index: index_start + 1,
@@ -28,9 +30,6 @@ export function reply_sequence(sequence_fns) {
       }
       each(sequence_fns, lambda);
     }
-    log({
-      possibilities,
-    });
     each(possibilities, lambda2);
   };
   return fn;
