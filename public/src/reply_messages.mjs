@@ -25,14 +25,14 @@ export async function reply_messages(messages, start) {
       success: false,
     };
     function lambda2(tokens) {
-      const possbilitiy_start = {
+      const possbility_start = {
         tokens,
         outputs: [],
         index: 0,
         matches: true,
       };
-      object_merge(possbilitiy_start, base);
-      let possibilities = [possbilitiy_start];
+      object_merge(possbility_start, base);
+      let possibilities = [possbility_start];
       possibilities = start(possibilities);
       return possibilities;
     }
