@@ -20,7 +20,7 @@ export async function reply_messages(messages, start) {
       list_add(tokens, last);
     }
     each(tokens_matches, lambda3);
-    let result = {
+    let base = {
       input,
       success: false,
     };
@@ -31,16 +31,16 @@ export async function reply_messages(messages, start) {
         index: 0,
         matches: true,
       };
-      object_merge(possbilitiy_start, result);
+      object_merge(possbilitiy_start, base);
       let possibilities = [possbilitiy_start];
       possibilities = start(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
-    let filtered = list_filter_property(mapped2, "success", true);
-    let ne = list_empty_not_is(filtered);
+    let result = list_filter_property(mapped2, "success", true);
+    let ne = list_empty_not_is(result);
     if (ne) {
-      result = list_first(filtered);
+      result = list_first(result);
     }
     return result;
   }
