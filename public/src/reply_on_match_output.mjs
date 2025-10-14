@@ -11,6 +11,7 @@ export function reply_on_match_output(fn_a, item) {
       list_add(outputs, item);
     }
     each(possibilities, lambda2);
+    return possibilities;
   }
   let fn = reply_on_match(fn_a, lambda);
   return fn;
