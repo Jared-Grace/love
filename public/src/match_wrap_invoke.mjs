@@ -24,7 +24,7 @@ export function match_wrap_invoke(item, possibilities) {
     };
   }
   list_is_assert(possibilities);
-  possibilities = item(possibilities);
+  let result = item(possibilities);
   list_is_assert(possibilities);
-  return possibilities;
+  return result;
 }
