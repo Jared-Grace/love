@@ -27,7 +27,9 @@ export function reply_sequence(sequence_fns) {
       }
       each(sequence_fns, lambda);
     }
-    log(message);
+    log({
+      possibilities,
+    });
     each(possibilities, lambda2);
   };
   return fn;
