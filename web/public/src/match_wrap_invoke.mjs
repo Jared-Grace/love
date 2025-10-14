@@ -26,7 +26,9 @@ export function match_wrap_invoke(item, possibilities) {
     };
   }
   list_is_assert(possibilities);
-  log(message);
+  log({
+    possibilities,
+  });
   let result = item(possibilities);
   function lambda() {
     let v = {
