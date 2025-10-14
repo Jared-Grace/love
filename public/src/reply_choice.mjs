@@ -3,7 +3,8 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
   let fn = function reply_sequence_matches(possbilities) {
     function lambda(choice) {
-      return choice(possbilities);
+      let v = choice(possbilities);
+      return v;
     }
     ("maybe only need flatten one level, squash save time");
     let squashed = list_map_squash(choices, lambda);
