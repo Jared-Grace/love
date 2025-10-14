@@ -21,6 +21,7 @@ export function reply_sequence(sequence_fns) {
           let fi = function_is(sequence_fn);
           if (not(fi)) {
             sequence_fn = function lambda3(a) {
+              let index_start = object_property_get(a, "index");
               let token = list_get(tokens, index + index_start);
               if (sequence_fn !== token) {
                 log({
@@ -28,6 +29,11 @@ export function reply_sequence(sequence_fns) {
                   token,
                 });
                 matches = false;
+                let r = {
+                  matches,
+                  index: index_start + 1,
+                };
+                object_assign(ai, r);
               }
             };
           }
