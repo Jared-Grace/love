@@ -22,8 +22,8 @@ export function reply_sequence(sequence_fns) {
               index: index_start + 1,
             };
             object_assign(p, r);
-            each(possibilities, lambda2);
           }
+          each(possibilities, lambda2);
         };
         let p = sequence_fn(p);
       }
