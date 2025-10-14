@@ -22,7 +22,6 @@ export async function reply_messages(messages, start) {
     each(tokens_matches, lambda3);
     let base = {
       input,
-      success: false,
     };
     function lambda2(tokens) {
       const possbility_start = {
