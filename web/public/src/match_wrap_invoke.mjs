@@ -9,8 +9,9 @@ import { not } from "../../../love/public/src/not.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 export function match_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
-  if (not(fi)) {$s
-    let wrapped = function reply_wrap_inner(possibilities) {
+  if (not(fi)) {
+    let wrapped = null;
+    wrapped = function reply_wrap_inner(possibilities) {
       function lambda2(p) {
         let tokens = object_property_get(p, "tokens");
         let index_start = object_property_get(p, "index");
