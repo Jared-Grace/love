@@ -12,7 +12,7 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
 import { reply_last } from "./reply_last.mjs";
 export async function reply_messages(messages, start) {
-  let last2 = reply_last();
+  let last = reply_last();
   let dictionary = await reply_dictionary();
   function lambda(message) {
     let input = string_lower_to(message);
