@@ -13,6 +13,7 @@ export function reply_sequence(sequence) {
     } else {
       function lambda(sequence_item, index) {
         let token = list_get(tokens, index);
+        fi;
         if (not(a2)) {
         }
         if (sequence_item !== token) {
