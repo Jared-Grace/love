@@ -44,6 +44,7 @@ export async function app_message_reply() {
       const a = {
         tokens,
         outputs: [],
+        index: 0,
       };
       object_merge(a, result);
       r(a);
