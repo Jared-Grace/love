@@ -35,7 +35,7 @@ export async function reply_messages(messages, start) {
       object_merge(possbilitiy_start, base);
       let possibilities = [possbilitiy_start];
       possibilities = start(possibilities);
-      log(message2);
+      log(possibilities);
       return possibilities;
     }
     let mapped2 = list_map_squash(tokens_matches, lambda2);
