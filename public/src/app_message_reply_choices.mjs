@@ -40,6 +40,7 @@ export function app_message_reply_choices() {
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
   let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
+  let rs2 = reply_sequence(sequence_fns);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
