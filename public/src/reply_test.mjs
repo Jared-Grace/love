@@ -1,3 +1,4 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_messages } from "../../../love/public/src/reply_messages.mjs";
@@ -18,7 +19,8 @@ export async function reply_test() {
     },
   ];
   async function lambda(item) {
-    let result = await reply_messages(messages, start);
+    let actual = await reply_messages(messages, start);
+    let eq2 = json_equal(left, sliced);
   }
   await each_async(cases, lambda);
   return result;
