@@ -33,7 +33,8 @@ export function app_message_reply_choices() {
   let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
-  let fn2 = reply_on_match_output("jesus", "✝️ Jesus is Lord! 👑");
+  const jesus = "jesus";
+  let fn2 = reply_on_match_output(jesus, "✝️ Jesus is Lord! 👑");
   const god = "god";
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn11 = reply_optional("i");
