@@ -5,7 +5,6 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
