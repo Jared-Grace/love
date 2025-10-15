@@ -36,7 +36,11 @@ export function reply_messages_inner(message, dictionary, start) {
     possibilities = start(possibilities);
     return possibilities;
   }
+  log("here2");
   let mapped2 = list_map_squash(tokens_matches, lambda2);
+  log({
+    mapped2,
+  });
   let result = reply_matches(mapped2);
   let e = list_empty_is(result);
   if (e) {
