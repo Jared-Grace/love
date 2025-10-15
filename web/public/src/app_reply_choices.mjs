@@ -1,3 +1,4 @@
+import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
@@ -104,11 +105,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_wave() + " Greetings",
-      response:
-        emoji_wave() +
-        emoji_smile() +
-        " Greetings in the name of our LORD Jesus Christ! " +
-        emoji_cross(),
+      response: app_reply_response_greetings(),
     },
     {
       text: emoji_hands_raising() + " Hallelujah",
