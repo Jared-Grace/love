@@ -16,6 +16,6 @@ export function reply_roads() {
     "street",
     "way",
   ]);
-  let fn4 = reply_sequence(sequence_fns);
-  return fn3;
+  let fn4 = reply_sequence([fn3, fn5]);
+  return fn4;
 }
