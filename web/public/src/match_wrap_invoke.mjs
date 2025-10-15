@@ -25,25 +25,25 @@ export function match_wrap_invoke(item, possibilities) {
         wrapped = reply_sequence(split);
       }
     }
-    if (null_is(value)) {
+    if (null_is(wrapped)) {
+      wrapped = function reply_wrap_inner(possibilities) {
+        function lambda2(p) {
+          let tokens = object_property_get(p, "tokens");
+          let index_start = object_property_get(p, "index");
+          let token = list_get(tokens, index_start);
+          let matches_previous = object_property_get(p, "matches");
+          let e = json_equal(item, token);
+          let matches = matches_previous && e;
+          let r = {
+            matches,
+            index: index_start + 1,
+          };
+          object_assign(p, r);
+        }
+        each(possibilities, lambda2);
+        return possibilities;
+      };
     }
-    wrapped = function reply_wrap_inner(possibilities) {
-      function lambda2(p) {
-        let tokens = object_property_get(p, "tokens");
-        let index_start = object_property_get(p, "index");
-        let token = list_get(tokens, index_start);
-        let matches_previous = object_property_get(p, "matches");
-        let e = json_equal(item, token);
-        let matches = matches_previous && e;
-        let r = {
-          matches,
-          index: index_start + 1,
-        };
-        object_assign(p, r);
-      }
-      each(possibilities, lambda2);
-      return possibilities;
-    };
   }
   list_is_assert(possibilities);
   let result = wrapped(possibilities);
