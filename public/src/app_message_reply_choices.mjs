@@ -54,8 +54,9 @@ export function app_message_reply_choices() {
     "teacher",
   ]);
   let rs = reply_sequence([iam, rc2]);
+  let fn25 = reply_optional(item);
   let ro = reply_optional("ing");
-  let fn24 = reply_sequence(sequence_fns);
+  let fn24 = reply_sequence(["request", ro]);
   let fn5 = reply_sequence([iam, "request", ro]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19]);
   let room = reply_once_or_more(choices_main);
