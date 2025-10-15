@@ -93,7 +93,7 @@ export function app_message_reply_choices() {
   let split = digits();
   let fn26 = reply_choice(split);
   let room2 = reply_once_or_more(fn26);
-  let fn24 = reply_sequence(["contact"]);
+  let fn24 = reply_sequence(["contact", room2]);
   let choices_main = reply_choice([
     fn4,
     fn6,
@@ -105,6 +105,7 @@ export function app_message_reply_choices() {
     fn5,
     fn12,
     thanks,
+    fn24,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
