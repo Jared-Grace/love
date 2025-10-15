@@ -242,6 +242,7 @@
   "rsq": "reply_sequence",
   "fi": "function_is",
   "fslr": "functions_log_remove",
-  "rc": "reply_choice"
+  "rc": "reply_choice",
+  "lrv": "list_reverse"
  }
 }
