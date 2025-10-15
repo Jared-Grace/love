@@ -308,7 +308,7 @@ export function reply_test() {
       },
     },
     {
-      message: "himydearinjesus",
+      message: "hi my dear in jesus",
       start: app_message_reply_choices(),
       expected: {
         tokens: [
