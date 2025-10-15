@@ -12,6 +12,7 @@ export async function reply_test() {
   let last = reply_last();
   marker("1");
   const choice_a_k = reply_choice(["a", "k"]);
+  const choice_a_empty = reply_choice(["a", ""]);
   let seq_a_k = reply_sequence(["a", "k"]);
   let seq_k_a = reply_sequence(["k", "a"]);
   let cases = [
@@ -222,6 +223,22 @@ export async function reply_test() {
     {
       message: "a",
       start: reply_sequence([choice_a_k, last]),
+      expected: {
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
+        outputs: [],
+        index: 2,
+        matches: true,
+        input: "a",
+      },
+    },
+    {
+      message: "a",
+      start: reply_sequence(["a", choice_a_empty, last]),
       expected: {
         tokens: [
           "a",
