@@ -25,7 +25,7 @@ export function app_message_reply_choices() {
   const sequence = [choices_main];
   let fn10 = reply_sequence(sequence);
   let fn11 = reply_optional(fn10);
-  list_add(list, item);
+  list_add(sequence, fn11);
   let last = reply_last();
   let fn5 = reply_sequence([choices_main, last]);
   return fn5;
