@@ -41,7 +41,7 @@ export function match_wrap_invoke(item, possibilities) {
             integer_is_assert(size);
             delta = size;
           }
-          let matches = matches_previous && e;
+          let matches = matches_previous && (e || empty);
           let r = {
             matches,
             index: index_start + delta,
