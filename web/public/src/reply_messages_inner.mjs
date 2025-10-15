@@ -17,19 +17,15 @@ export function reply_messages_inner(message, dictionary, start) {
   let base = {
     input,
   };
-  function lambda2(tokens) {
-    const possbility_start = {
-      tokens,
-      outputs: [],
-      index: 0,
-      matches: true,
-    };
-    object_merge(possbility_start, base);
-    let possibilities = [possbility_start];
-    possibilities = start(possibilities);
-    return possibilities;
-  }
-  log("here2");
+  const possbility_start = {
+    tokens,
+    outputs: [],
+    index: 0,
+    matches: true,
+  };
+  object_merge(possbility_start, base);
+  let possibilities = [possbility_start];
+  possibilities = start(possibilities);
   let mapped2 = list_map_squash(tokens_matches, lambda2);
   log({
     mapped2,
