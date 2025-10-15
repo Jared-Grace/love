@@ -67,11 +67,11 @@ export async function reply_test() {
       start: reply_choice(["a", "k"]),
       expected: [
         {
-          tokens: ["a", {}],
+          tokens: ["k", {}],
           outputs: [],
           index: 1,
           matches: true,
-          input: "a",
+          input: "k",
         },
       ],
     },
