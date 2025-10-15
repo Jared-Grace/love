@@ -21,7 +21,8 @@ export function app_message_reply_choices() {
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_on_match_output("jesus", "✝️ Jesus is Lord! 👑");
   let fn7 = reply_on_match_output("god", "❤️‍🔥 God is love! ✝️");
-  let fn10 = reply_sequence(["praise", "god"]);
+  let fn11 = reply_optional("i");
+  let fn10 = reply_sequence(["prai", fn11, "se", "god"]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
