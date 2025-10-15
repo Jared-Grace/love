@@ -32,9 +32,8 @@ export function app_message_reply_choices() {
   let my_dear_brother = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, my_dear_brother]);
   let fn6 = reply_on_match_output(fn3, greetings);
-  const you = "you";
-  let fn9 = reply_sequence(sequence_fns);
-  let fn = reply_sequence(["how", "are", you, my_dear_brother]);
+  let fn9 = reply_sequence(["you", my_dear_brother]);
+  let fn = reply_sequence(["how", "are", fn9]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_on_match_output(fn13, "✝️ Jesus is Lord! 👑");
