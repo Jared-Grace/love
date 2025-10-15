@@ -154,14 +154,14 @@ export async function reply_test() {
       expected: [],
     },
     {
-      message: "ak",
+      message: "a",
       start: reply_sequence([choice_a_k, last]),
       expected: {
         tokens: ["a", "k", {}],
         outputs: [],
         index: 2,
         matches: true,
-        input: "ak",
+        input: "a",
       },
     },
   ];
