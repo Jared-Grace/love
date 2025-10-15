@@ -21,6 +21,7 @@ export async function reply_test() {
   async function lambda(item) {
     let actual = await reply_messages(messages, start);
     let eq2 = json_equal(left, sliced);
+    T;
   }
   await each_async(cases, lambda);
   return result;
