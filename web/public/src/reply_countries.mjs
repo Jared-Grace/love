@@ -4,5 +4,5 @@ export function reply_countries() {
   marker("1");
   let v = ["kenya", "pakistan"];
   let fn = reply_sequence(sequence_fns);
-  return v;
+  return fn;
 }
