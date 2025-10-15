@@ -32,8 +32,8 @@ export function app_message_reply_choices() {
   let my_dear_brother = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, my_dear_brother]);
   let fn6 = reply_on_match_output(fn3, greetings);
-  let fn9 = reply_sequence(["you", my_dear_brother]);
-  let fn = reply_sequence(["how", "are", fn9]);
+  let you = reply_sequence(["you", my_dear_brother]);
+  let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_on_match_output(fn13, "✝️ Jesus is Lord! 👑");
@@ -57,7 +57,7 @@ export function app_message_reply_choices() {
   let rs = reply_sequence([iam, rc2]);
   let fn25 = reply_optional("ing");
   let fn24 = reply_sequence(["request", fn25]);
-  let fn5 = reply_sequence([iam, fn24, "you"]);
+  let fn5 = reply_sequence([iam, fn24, you]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
