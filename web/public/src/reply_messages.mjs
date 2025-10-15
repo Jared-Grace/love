@@ -26,7 +26,7 @@ export function reply_messages(messages, start) {
           return value;
         }
       }
-      each(list, lambda2);
+      each(r, lambda2);
     }
     return result;
   }
