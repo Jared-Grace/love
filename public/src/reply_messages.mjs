@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -8,7 +9,6 @@ import { list_filter_property } from "../../../love/public/src/list_filter_prope
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_take } from "./string_take.mjs";
-import { object_property_set_exists_not } from "./object_property_set_exists_not.mjs";
 export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
@@ -22,7 +22,7 @@ export function reply_messages(messages, start) {
         let result_loop = reply_messages_inner(taken, start);
         value = object_property_get(result_loop, "matches");
         if (equal(value, true)) {
-          object_property_set_exists_not(result, "longest", result_loop);
+          log(message2);
           return value;
         }
       }
