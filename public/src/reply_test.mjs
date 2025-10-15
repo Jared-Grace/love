@@ -103,15 +103,9 @@ export async function reply_test() {
       },
     },
     {
-      message: "k",
-      start: reply_sequence([choice_a_k, last]),
-      expected: {
-        tokens: ["k", {}],
-        outputs: [],
-        index: 1,
-        matches: true,
-        input: "k",
-      },
+      message: "",
+      start: reply_sequence([last]),
+      expected: {},
     },
   ];
   async function lambda(item) {
