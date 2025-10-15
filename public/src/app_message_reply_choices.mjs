@@ -103,8 +103,8 @@ export function app_message_reply_choices() {
   let digits_oom = reply_once_or_more(rc_digits);
   let r_roads = reply_roads();
   let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
-  let fn26 = reply_choice_optional(["'", "no"]);
-  let fn20 = reply_sequence(["can", fn26, "t"]);
+  let cannot_middle = reply_choice_optional(["'", "no"]);
+  let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   let choices_main = reply_choice([
     fn4,
     fn6,
