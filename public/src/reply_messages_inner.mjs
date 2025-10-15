@@ -37,5 +37,6 @@ export function reply_messages_inner(message, dictionary, start) {
   if (ne) {
     result = list_first(result);
   }
+  $el;
   return result;
 }
