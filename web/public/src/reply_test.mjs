@@ -13,6 +13,8 @@ export async function reply_test() {
   let last = reply_last();
   marker("1");
   const choice_a_k = reply_choice(["a", "k"]);
+  let fn = reply_sequence(["a", "k"]);
+  let fn2 = reply_sequence(["k", "a"]);
   let cases = [
     {
       message: "a",
@@ -126,7 +128,7 @@ export async function reply_test() {
     },
     {
       message: "a",
-      start: reply_sequence([choice_a_k, last]),
+      start: reply_choice([fn, fn2]),
       expected: {
         tokens: ["a", {}],
         outputs: [],
