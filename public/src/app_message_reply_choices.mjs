@@ -89,18 +89,7 @@ export function app_message_reply_choices() {
   ]);
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
-  let choices_main = reply_choice([
-    fn4,
-    fn6,
-    fn2,
-    fn7,
-    fn10,
-    title,
-    titled_name,
-    fn5,
-    fn12,
-    thanks,
-  ]);
+  let choices_main = reply_choice([]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
   let r = reply_sequence([room, last]);
