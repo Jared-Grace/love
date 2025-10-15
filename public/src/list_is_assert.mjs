@@ -7,5 +7,4 @@ export function list_is_assert(list) {
     return v;
   }
   list_is_assert_json(list, lambda);
-  return;
 }
