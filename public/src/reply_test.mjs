@@ -21,8 +21,8 @@ export async function reply_test() {
       ],
     },
     {
-      messages: ["a", "i"],
-      start: reply_sequence(["a", "i"]),
+      messages: ["a", "k"],
+      start: reply_sequence(["a", "k"]),
       expected: [
         {
           tokens: ["a", {}],
