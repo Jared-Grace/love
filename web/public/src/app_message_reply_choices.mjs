@@ -47,7 +47,7 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let rs = reply_sequence(sequence_fns);
+  let rs = reply_sequence([iam, rc]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
