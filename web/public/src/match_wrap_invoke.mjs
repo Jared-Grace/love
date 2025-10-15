@@ -6,6 +6,7 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
+import { reply_last } from "./reply_last.mjs";
 export function match_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
   let wrapped = null;
@@ -27,6 +28,8 @@ export function match_wrap_invoke(item, possibilities) {
         log({
           item,
           token,
+          i: item === reply_last(),
+          t: token === reply_last(),
           r,
           e,
         });
