@@ -240,6 +240,7 @@
   "lcp": "list_copy",
   "lp": "list_pop",
   "rsq": "reply_sequence",
-  "fi": "function_is"
+  "fi": "function_is",
+  "fslr": "functions_log_remove"
  }
 }
