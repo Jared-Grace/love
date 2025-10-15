@@ -9,6 +9,7 @@ import { reply_choice } from "./reply_choice.mjs";
 export async function reply_test() {
   let last = reply_last();
   marker("1");
+  const choice_a_k = reply_choice(["a", "k"]);
   let cases = [
     {
       messages: ["a"],
@@ -64,7 +65,7 @@ export async function reply_test() {
     },
     {
       messages: ["k"],
-      start: reply_choice(["a", "k"]),
+      start: choice_a_k,
       expected: [
         {
           tokens: ["k", {}],
@@ -72,6 +73,19 @@ export async function reply_test() {
           index: 1,
           matches: true,
           input: "k",
+        },
+      ],
+    },
+    {
+      messages: ["a"],
+      start: reply_sequence([choice_a_k, last]),
+      expected: [
+        {
+          tokens: ["a", {}],
+          outputs: [],
+          index: 2,
+          matches: true,
+          input: "a",
         },
       ],
     },
