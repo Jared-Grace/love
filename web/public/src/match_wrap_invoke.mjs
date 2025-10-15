@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { string_is } from "../../../love/public/src/string_is.mjs";
@@ -21,8 +22,10 @@ export function match_wrap_invoke(item, possibilities) {
       let size = string_size(item);
       if (size > 1) {
         let split = string_split_space(item);
-        reply_sequence(split);
+        wrapped = reply_sequence(split);
       }
+    }
+    if (null_is(value)) {
     }
     wrapped = function reply_wrap_inner(possibilities) {
       function lambda2(p) {
