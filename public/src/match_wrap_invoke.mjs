@@ -37,7 +37,7 @@ export function match_wrap_invoke(item, possibilities) {
           let e = json_equal(item, token);
           let delta = 1;
           if (si2) {
-            integer_is_assert(index2);
+            integer_is_assert(size);
             delta = size;
           }
           let matches = matches_previous && e;
