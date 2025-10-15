@@ -1,3 +1,4 @@
+import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
@@ -18,8 +19,8 @@ export function match_wrap_invoke(item, possibilities) {
     wrapped = item;
   } else {
     let si2 = string_is(item);
+    let size = null;
     if (si2) {
-      let size = null;
       size = string_size(item);
       if (size > 1) {
         let split = string_split_empty(item);
@@ -36,7 +37,8 @@ export function match_wrap_invoke(item, possibilities) {
           let e = json_equal(item, token);
           let delta = 1;
           if (si2) {
-            delta = 1;
+            integer_is_assert(index2);
+            delta = size;
           }
           let matches = matches_previous && e;
           let r = {
