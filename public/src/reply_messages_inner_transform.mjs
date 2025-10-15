@@ -8,7 +8,7 @@ export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
   let string_includes_curry_right = string_includes_curry_right_get("'");
-  const choices = [string_letters_is];
+  const choices = [string_letters_is, string_includes_curry_right];
   function lambda(item) {
     function lambda2(fn) {
       let v = fn(item);
