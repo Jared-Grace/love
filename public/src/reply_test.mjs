@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,6 +22,7 @@ export async function reply_test() {
   async function lambda(item) {
     let actual = await reply_messages(messages, start);
     let eq2 = json_equal(left, sliced);
+    assert(b);
     T;
   }
   await each_async(cases, lambda);
