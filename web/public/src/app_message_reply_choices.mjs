@@ -8,6 +8,7 @@ import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_r
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
+import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
@@ -34,7 +35,8 @@ export function app_message_reply_choices() {
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
   let fn20 = reply_cities();
-  let fn19 = reply_sequence(["am", "from", fn20, "in"]);
+  let v = reply_countries();
+  let fn19 = reply_sequence(["am", "from", fn20, "in", v]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
