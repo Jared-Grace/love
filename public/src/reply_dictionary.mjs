@@ -6,7 +6,7 @@ export async function reply_dictionary() {
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json",
   );
   let dictionary = json_from(text);
-  let excludes = ["h", "w", "e", "wa", "ey", "ar", "ware", "re"];
+  let excludes = ["h", "l", "w", "e", "wa", "ey", "ar", "ware", "re"];
   object_property_delete_multiple(dictionary, excludes);
   let includes = [];
   return dictionary;
