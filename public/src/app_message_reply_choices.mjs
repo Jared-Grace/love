@@ -7,10 +7,10 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 export function app_message_reply_choices() {
   marker("1");
-  let fn = reply_sequence(["how", "are", "you"]);
   let greetings = app_reply_response_greetings();
-  let fn3 = reply_sequence(["hi"]);
+  let fn3 = reply_choice(["hi", "hello"]);
   let fn6 = reply_on_match_output(fn3, greetings);
+  let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_choice([fn4, fn6]);
