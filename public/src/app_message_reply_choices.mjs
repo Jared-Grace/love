@@ -57,6 +57,6 @@ export function app_message_reply_choices() {
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
-  let a = reply_sequence([room, last]);
-  return a;
+  let r = reply_sequence([room, last]);
+  return r;
 }
