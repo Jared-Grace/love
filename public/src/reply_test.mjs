@@ -102,6 +102,19 @@ export async function reply_test() {
         },
       ],
     },
+    {
+      messages: ["k"],
+      start: reply_sequence([choice_a_k, last]),
+      expected: [
+        {
+          tokens: ["k", {}],
+          outputs: [],
+          index: 1,
+          matches: true,
+          input: "k",
+        },
+      ],
+    },
   ];
   async function lambda(item) {
     let messages2 = object_property_get(item, "messages");
