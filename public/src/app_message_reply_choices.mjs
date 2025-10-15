@@ -1,3 +1,4 @@
+import { digits } from "../../../love/public/src/digits.mjs";
 import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
@@ -89,6 +90,8 @@ export function app_message_reply_choices() {
   ]);
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
+  let split = digits();
+  let fn26 = reply_choice(choices2);
   let fn24 = reply_sequence(["contact"]);
   let choices_main = reply_choice([
     fn4,
