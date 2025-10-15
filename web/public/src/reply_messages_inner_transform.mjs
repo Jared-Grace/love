@@ -1,4 +1,3 @@
-import { digits } from "../../../love/public/src/digits.mjs";
 import { string_includes_curry_right_get } from "../../../love/public/src/string_includes_curry_right_get.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
@@ -8,9 +7,7 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
-  let string_includes_curry_right = string_includes_curry_right_get(
-    "'" + digits(),
-  );
+  let string_includes_curry_right = string_includes_curry_right_get("'");
   const choices = [string_letters_is, string_includes_curry_right];
   function lambda(item) {
     function lambda2(fn) {
