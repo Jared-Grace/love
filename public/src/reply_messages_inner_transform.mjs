@@ -9,7 +9,8 @@ export function reply_messages_inner_transform(message) {
   function lambda(item) {
     let li = string_letters_is(item);
     function lambda2(fn) {
-      return fn(item);
+      let v = fn(item);
+      return v;
     }
     let any = list_any([string_letters_is], lambda2);
   }
