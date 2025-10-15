@@ -238,9 +238,6 @@ export async function reply_test() {
     let message = object_property_get(item, "message");
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
-    log({
-      message,
-    });
     let actual = reply_messages_inner(message, dictionary, start2);
     json_equal_assert(actual, expected);
   }
