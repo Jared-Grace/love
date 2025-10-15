@@ -14,7 +14,7 @@ export function app_message_reply_choices() {
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let fn9 = reply_optional("brother");
   let fn3 = reply_sequence([hi_word, fn9]);
-  let fn6 = reply_on_match_output(hi_word, greetings);
+  let fn6 = reply_on_match_output(fn3, greetings);
   let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
