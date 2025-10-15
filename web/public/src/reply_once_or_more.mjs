@@ -3,8 +3,8 @@ import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 export function reply_once_or_more(item) {
   const sequence = [item];
-  let rs = reply_sequence(sequence);
-  let ro = reply_optional(rs);
+  let room = reply_sequence(sequence);
+  let ro = reply_optional(room);
   list_add(sequence, ro);
-  return rs;
+  return room;
 }
