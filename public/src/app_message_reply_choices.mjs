@@ -45,8 +45,8 @@ export function app_message_reply_choices() {
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
-  let fn20 = reply_cities();
-  let countries = reply_countries();
+  let r_cities = reply_cities();
+  let r_countries = reply_countries();
   let fn21 = reply_optional("i");
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
@@ -63,7 +63,14 @@ export function app_message_reply_choices() {
   let title = reply_sequence([iam, fn9, titles]);
   let titled_name = reply_sequence_optional([titles, names_once_or_more]);
   let fn18 = reply_optional("in");
-  let fn19 = reply_sequence([iam, titled_name, "from", fn20, fn18, countries]);
+  let fn19 = reply_sequence([
+    iam,
+    titled_name,
+    "from",
+    r_cities,
+    fn18,
+    r_countries,
+  ]);
   let fn25 = reply_optional("ing");
   let requesting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -94,8 +101,8 @@ export function app_message_reply_choices() {
   let d = digits();
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);
-  let fn32 = reply_roads();
-  let fn24 = reply_sequence(["contact", digits_oom, fn32, fn20]);
+  let r_roads = reply_roads();
+  let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let choices_main = reply_choice([
     fn4,
     fn6,
