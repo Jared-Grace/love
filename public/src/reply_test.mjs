@@ -137,6 +137,17 @@ export async function reply_test() {
         input: "ak",
       },
     },
+    {
+      message: "ka",
+      start: reply_choice([seq_a_k, seq_k_a]),
+      expected: {
+        tokens: ["k", "a", {}],
+        outputs: [],
+        index: 2,
+        matches: true,
+        input: "ka",
+      },
+    },
   ];
   async function lambda(item) {
     let message = object_property_get(item, "message");
