@@ -7,9 +7,9 @@ export function reply_choice(choices) {
   list_is_assert(choices);
   let fn = function reply_choice_matches(possibilities) {
     list_is_assert(possibilities);
-    function lambda(choice) {
+    async function lambda(choice) {
       let copy = json_copy(possibilities);
-      copy = reply_wrap_invoke(choice, copy);
+      copy = await reply_wrap_invoke(choice, copy);
       return copy;
     }
     ("maybe only need flatten one level, squash save time");
