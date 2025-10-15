@@ -48,7 +48,6 @@ export function app_message_reply_choices() {
   let fn21 = reply_optional("i");
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
-  let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
   let titles = reply_choice([
     "apostle",
     "evangelist",
@@ -58,9 +57,10 @@ export function app_message_reply_choices() {
   ]);
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
-  let title = reply_sequence([iam, fn9, titles]);
   let fn9 = reply_optional("a");
-  let intro = reply_sequence([iam, fn9, titles, names_once_or_more]);
+  let title = reply_sequence([iam, fn9, titles]);
+  let titled_name = reply_sequence([titles, names_once_or_more]);
+  let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -95,7 +95,7 @@ export function app_message_reply_choices() {
     fn7,
     fn10,
     title,
-    intro,
+    titled_name,
     fn19,
     fn5,
     fn12,
