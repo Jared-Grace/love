@@ -8,6 +8,7 @@ export async function sandbox() {
     "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/exports/json/?lang=en&timezone=America%2FNew_York";
   let list = await http_local_json(url);
   let mapped = list_map_property(list, "ascii_name");
-  let mapped2 = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped2 = list_map(list2, lambda);
   return mapped;
 }
