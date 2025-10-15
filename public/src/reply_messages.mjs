@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
@@ -9,7 +10,9 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
-    let value = object_property_get(object, property_name);
+    let value = object_property_get(object, "matches");
+    if (equal(left, right)) {
+    }
     let size = string_size(message);
     let r = range(size);
     list_reverse(r);
