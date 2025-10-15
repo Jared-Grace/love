@@ -21,7 +21,7 @@ export async function reply_test() {
       ],
     },
     {
-      messages: ["a", "k"],
+      messages: ["ak"],
       start: reply_sequence(["a", "k"]),
       expected: [
         {
