@@ -59,6 +59,7 @@ export function app_message_reply_choices() {
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   let o_us = reply_optional("us");
+  let fn9 = reply_sequence(sequence_fns);
   let fn5 = reply_sequence([
     iam,
     supporting,
