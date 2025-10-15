@@ -9,9 +9,12 @@ export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
   let input = "'";
-  function string_includes_curry_right(part) {
-    let i = string_includes(input, part);
-    return i;
+  function string_includes_curry_right_get(input) {
+    function string_includes_curry_right(part) {
+      let i = string_includes(input, part);
+      return i;
+    }
+    return string_includes_curry_right;
   }
   log(i);
   const choices = [string_letters_is];
