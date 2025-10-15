@@ -1,4 +1,3 @@
-import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
@@ -48,20 +47,15 @@ export function app_message_reply_choices() {
   let fn21 = reply_optional("i");
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
-  let titles = reply_choice([
+  let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
+  let rc2 = reply_choice([
     "apostle",
     "evangelist",
     "pastor",
     "preacher",
     "teacher",
   ]);
-  let names = reply_names();
-  let names_once_or_more = reply_once_or_more(names);
-  let fn9 = reply_optional("a");
-  let title = reply_sequence([iam, fn9, titles]);
-  let titled_name = reply_sequence_optional([titles, names_once_or_more]);
-  let fn18 = reply_optional("in");
-  let fn19 = reply_sequence([iam, "from", fn20, fn18, countries]);
+  let rs = reply_sequence([iam, rc2]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -87,20 +81,16 @@ export function app_message_reply_choices() {
     us,
     according_to_gods_will,
   ]);
-  let thank_you = reply_sequence(["thank", "you"]);
-  let thanks = reply_choice(["thanks", thank_you]);
   let choices_main = reply_choice([
     fn4,
     fn6,
     fn2,
     fn7,
     fn10,
-    title,
-    titled_name,
+    rs,
     fn19,
     fn5,
     fn12,
-    thanks,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
