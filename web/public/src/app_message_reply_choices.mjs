@@ -92,8 +92,8 @@ export function app_message_reply_choices() {
   let thanks = reply_choice(["thanks", thank_you]);
   let d = digits();
   let rc_d = reply_choice(d);
-  let d_oom = reply_once_or_more(rc_d);
-  let fn24 = reply_sequence(["contact", d_oom]);
+  let digits_oom = reply_once_or_more(rc_d);
+  let fn24 = reply_sequence(["contact", digits_oom]);
   let choices_main = reply_choice([
     fn4,
     fn6,
