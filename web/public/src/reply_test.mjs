@@ -283,7 +283,7 @@ export function reply_test() {
           },
         ],
         outputs: [],
-        index: 4,
+        index: 3,
         matches: true,
         input: "aaa",
       },
