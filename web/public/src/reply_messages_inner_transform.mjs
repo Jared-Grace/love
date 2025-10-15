@@ -8,8 +8,10 @@ export function reply_messages_inner_transform(message) {
   let tokens = string_split_empty(lower);
   function lambda(item) {
     let li = string_letters_is(item);
-    function lambda2(item2) {}
-    let any = list_any(list, lambda2);
+    function lambda2(fn) {
+      return fn(item);
+    }
+    let any = list_any([string_letters_is], lambda2);
   }
   let filtered = list_filter(tokens, lambda);
   return filtered;
