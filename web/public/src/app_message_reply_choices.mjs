@@ -9,11 +9,11 @@ export function app_message_reply_choices() {
   marker("1");
   let fn = reply_sequence(["how", "are", "you"]);
   let greetings = app_reply_response_greetings();
-  let fn6 = reply_on_match_output(fn, greetings);
   let fn3 = reply_sequence(["hi"]);
+  let fn6 = reply_on_match_output(fn3, greetings);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
-  let fn2 = reply_choice([fn4, fn3]);
+  let fn2 = reply_choice([fn4, fn6]);
   let last = reply_last();
   let fn5 = reply_sequence([fn2, last]);
   return fn5;
