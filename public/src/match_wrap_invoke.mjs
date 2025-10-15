@@ -9,6 +9,7 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
 export function match_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
   let wrapped = null;
@@ -19,7 +20,8 @@ export function match_wrap_invoke(item, possibilities) {
     if (si2) {
       let size = string_size(item);
       if (size > 1) {
-        let split = string_split_space(s);
+        let split = string_split_space(item);
+        reply_sequence(split);
       }
     }
     wrapped = function reply_wrap_inner(possibilities) {
