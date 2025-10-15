@@ -25,11 +25,11 @@ export async function reply_test() {
       start: reply_sequence(["a", "k"]),
       expected: [
         {
-          tokens: ["a", {}],
+          tokens: ["a", "k", {}],
           outputs: [],
-          index: 1,
+          index: 2,
           matches: true,
-          input: "a",
+          input: "ak",
         },
       ],
     },
