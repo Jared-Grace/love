@@ -15,7 +15,8 @@ export function reply_messages_inner(message, dictionary, start) {
   let input = string_lower_to(message);
   log("here");
   let tokens_matches = string_tokens(input, dictionary);
-  let split = string_split_space(s);
+  let split = string_split_space(input);
+  tokens_matches = [split];
   log({
     tokens_matches,
   });
