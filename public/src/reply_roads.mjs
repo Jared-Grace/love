@@ -1,6 +1,8 @@
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { reply_optional } from "./reply_optional.mjs";
 export function reply_roads() {
   marker("1");
-  let fn = reply_sequence(["w", "walta"]);
+  let fn2 = reply_optional("w");
+  let fn = reply_sequence([fn2, "walta"]);
 }
