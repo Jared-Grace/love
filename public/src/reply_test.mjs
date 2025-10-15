@@ -122,9 +122,10 @@ export async function reply_test() {
     let messages2 = object_property_get(item, "messages");
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
-    function lambda2(item2) {}
+    function lambda2(messages2) {
+      let result = reply_messages_inner(messages2, dictionary, start);
+    }
     each(list, lambda2);
-    let result = reply_messages_inner(messages2, dictionary, start);
     let actual = await reply_messages(messages2, start2);
     json_equal_assert(actual, expected);
   }
