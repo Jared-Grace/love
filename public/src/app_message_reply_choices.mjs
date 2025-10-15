@@ -8,7 +8,7 @@ import { reply_on_match_output } from "./reply_on_match_output.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
-  let fn3 = reply_choice(["hi", "hello"]);
+  let fn3 = reply_choice(["hi", "hello", "hey"]);
   let fn6 = reply_on_match_output(fn3, greetings);
   let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
