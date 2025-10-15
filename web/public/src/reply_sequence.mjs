@@ -1,4 +1,3 @@
-import { uuid } from "../../../love/public/src/uuid.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { reply_wrap_invoke } from "../../../love/public/src/reply_wrap_invoke.mjs";
@@ -7,7 +6,6 @@ import { each } from "../../../love/public/src/each.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = async function reply_sequence_matches(possibilities) {
     list_is_assert(possibilities);
-    let u = await uuid();
     function lambda(sequence_fn) {
       possibilities = reply_wrap_invoke(sequence_fn, possibilities);
       possibilities = reply_matches(possibilities);
