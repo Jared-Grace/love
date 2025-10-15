@@ -22,7 +22,9 @@ export function reply_messages(messages, start) {
         let result_loop = reply_messages_inner(taken, start);
         value = object_property_get(result_loop, "matches");
         if (equal(value, true)) {
-          log(message2);
+          log({
+            result_loop,
+          });
           return value;
         }
       }
