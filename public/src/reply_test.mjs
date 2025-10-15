@@ -39,6 +39,17 @@ export async function reply_test() {
       },
     },
     {
+      message: "",
+      start: reply_sequence([last]),
+      expected: {
+        tokens: [{}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "",
+      },
+    },
+    {
       message: "a",
       start: reply_sequence(["a", last]),
       expected: {
@@ -102,17 +113,6 @@ export async function reply_test() {
         index: 2,
         matches: true,
         input: "kk",
-      },
-    },
-    {
-      message: "",
-      start: reply_sequence([last]),
-      expected: {
-        tokens: [{}],
-        outputs: [],
-        index: 1,
-        matches: true,
-        input: "",
       },
     },
     {
