@@ -38,6 +38,7 @@ export function reply_messages_inner(message, dictionary, start) {
     result = {
       matches: false,
     };
+    object_merge(result, base);
   } else {
     result = list_first(result);
   }
