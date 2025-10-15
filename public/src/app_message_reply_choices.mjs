@@ -8,10 +8,11 @@ import { reply_on_match_output } from "./reply_on_match_output.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let fn = reply_sequence(["how", "are", "you"]);
+  let fn6 = reply_on_match_output(fn_a, item);
   let fn3 = reply_sequence(["hi"]);
-  let v2 = app_reply_response_greetings();
-  let item = app_reply_response_how_r_u();
-  let fn4 = reply_on_match_output(fn, item);
+  let greetings = app_reply_response_greetings();
+  let hru = app_reply_response_how_r_u();
+  let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_choice([fn4, fn3]);
   let last = reply_last();
   let fn5 = reply_sequence([fn2, last]);
