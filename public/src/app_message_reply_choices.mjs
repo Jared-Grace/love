@@ -57,8 +57,8 @@ export function app_message_reply_choices() {
     "teacher",
   ]);
   let names = reply_names();
-  let room2 = reply_once_or_more(names);
-  let title = reply_sequence([iam, titles, room2]);
+  let names_one_or_more = reply_once_or_more(names);
+  let title = reply_sequence([iam, titles, names_one_or_more]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
