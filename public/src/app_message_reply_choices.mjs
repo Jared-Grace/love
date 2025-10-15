@@ -64,14 +64,14 @@ export function app_message_reply_choices() {
   let fn18 = reply_optional("in");
   let fn19 = reply_sequence([iam, titled_name, "from", fn20, fn18, countries]);
   let fn25 = reply_optional("ing");
-  let supporting = reply_sequence(["request", fn25]);
+  let requesting = reply_sequence(["request", fn25]);
   const us = "us";
   let o_us = reply_optional(us);
   let fn14 = reply_sequence_optional(["according", "to"]);
   let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
   let fn5 = reply_sequence([
     iam,
-    supporting,
+    requesting,
     you,
     "to",
     "support",
