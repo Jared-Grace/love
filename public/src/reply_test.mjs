@@ -127,14 +127,14 @@ export async function reply_test() {
       },
     },
     {
-      message: "a",
+      message: "ak",
       start: reply_choice([seq_a_k, seq_k_a]),
       expected: {
-        tokens: ["a", {}],
+        tokens: ["a", "k", {}],
         outputs: [],
         index: 2,
         matches: true,
-        input: "a",
+        input: "ak",
       },
     },
   ];
