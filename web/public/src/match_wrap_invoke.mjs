@@ -23,7 +23,9 @@ export function match_wrap_invoke(item, possibilities) {
           matches,
           index: index_start + 1,
         };
-        log(message);
+        log({
+          r,
+        });
         object_assign(p, r);
       }
       each(possibilities, lambda2);
