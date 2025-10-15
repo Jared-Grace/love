@@ -12,7 +12,8 @@ export async function reply_test() {
   let last = reply_last();
   marker("1");
   const choice_a_k = reply_choice(["a", "k"]);
-  const choice_a_empty = reply_choice(["a", ""]);
+  const item = "a";
+  const choice_a_empty = reply_choice([item, ""]);
   let seq_a_k = reply_sequence(["a", "k"]);
   let seq_k_a = reply_sequence(["k", "a"]);
   let cases = [
