@@ -14,7 +14,8 @@ export function app_message_reply_choices() {
   const hello = reply_sequence(["hell", fn8]);
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let fn13 = reply_sequence(["dear"]);
-  let fn14 = reply_choice(choices);
+  let fn15 = reply_optional("y");
+  let fn14 = reply_sequence(["m", fn15]);
   let fn12 = reply_choice(["brother", fn13, "my"]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
