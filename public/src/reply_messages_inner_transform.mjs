@@ -9,8 +9,11 @@ export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
   let input = "'";
-  let i = string_includes(input, part);
-  log(message2);
+  function string_includes_curry_right(part) {
+    let i = string_includes(input, part);
+    return i;
+  }
+  log(i);
   const choices = [string_letters_is];
   function lambda(item) {
     function lambda2(fn) {
