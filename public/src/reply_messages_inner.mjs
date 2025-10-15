@@ -32,10 +32,10 @@ export function reply_messages_inner(message, dictionary, start) {
     return possibilities;
   }
   let mapped2 = list_map_squash(tokens_matches, lambda2);
-  let filtered2 = reply_matches(possbilities);
-  let ne = list_empty_not_is(result);
+  let result = reply_matches(mapped2);
+  let ne = list_empty_not_is(filtered2);
   if (ne) {
-    let result = list_first(result);
+    result = list_first(result);
   }
   return result;
 }
