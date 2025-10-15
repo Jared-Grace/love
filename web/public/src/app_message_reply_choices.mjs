@@ -48,14 +48,14 @@ export function app_message_reply_choices() {
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
   let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
-  let rc2 = reply_choice([
+  let titles = reply_choice([
     "apostle",
     "evangelist",
     "pastor",
     "preacher",
     "teacher",
   ]);
-  let title = reply_sequence([iam, rc2]);
+  let title = reply_sequence([iam, titles]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -89,7 +89,6 @@ export function app_message_reply_choices() {
     fn2,
     fn7,
     fn10,
-    title,
     fn19,
     fn5,
     fn12,
