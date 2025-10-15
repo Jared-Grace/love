@@ -105,7 +105,13 @@ export async function reply_test() {
     {
       message: "",
       start: reply_sequence([last]),
-      expected: {},
+      expected: {
+        tokens: [{}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "",
+      },
     },
   ];
   async function lambda(item) {
