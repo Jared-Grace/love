@@ -19,9 +19,8 @@ export function match_wrap_invoke(item, possibilities) {
   } else {
     let si2 = string_is(item);
     if (si2) {
-      if (false) {
-      }
-      let size = string_size(item);
+      let size = null;
+      size = string_size(item);
       if (size > 1) {
         let split = string_split_empty(item);
         wrapped = reply_sequence(split);
