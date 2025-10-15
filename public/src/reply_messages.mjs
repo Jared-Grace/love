@@ -1,8 +1,8 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -28,7 +28,7 @@ export function reply_messages(messages, start) {
           return value;
         }
       }
-      each(r, lambda2);
+      await each_async(r, lambda2);
     }
     return result;
   }
