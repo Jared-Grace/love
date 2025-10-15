@@ -17,10 +17,10 @@ export function app_message_reply_choices() {
   let my = reply_sequence(["m", fn15]);
   let fn14 = reply_optional(my);
   let fn13 = reply_optional("dear");
-  let fn18 = reply_sequence(sequence_fns);
-  let fn17 = reply_optional(item);
-  let fn16 = reply_sequence([fn14, fn13, "brother"]);
-  let fn12 = reply_choice([fn16, fn13, my]);
+  let fn18 = reply_sequence(["in", "christ"]);
+  let fn17 = reply_optional(fn18);
+  let fn16 = reply_sequence([fn14, fn13, "brother", fn17]);
+  let fn12 = reply_choice([fn16, my]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
   let fn6 = reply_on_match_output(fn3, greetings);
