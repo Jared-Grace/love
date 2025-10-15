@@ -21,6 +21,7 @@ export async function reply_test() {
   ];
   async function lambda(item) {
     let messages2 = object_property_get(item, "messages");
+    let start2 = object_property_get(item, "start");
     let actual = await reply_messages(messages2, start);
     json_equal_assert(actual);
   }
