@@ -9,6 +9,7 @@ export async function reply_messages(messages, start) {
     return result;
   }
   let result = list_map(messages, lambda);
-  let filtered = list_filter(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let filtered = list_filter(list, lambda2);
   return result;
 }
