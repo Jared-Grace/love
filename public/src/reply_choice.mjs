@@ -4,7 +4,7 @@ import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 export function reply_choice(choices) {
-  let rc = function reply_choice_matches(possibilities) {
+  let fn = function reply_choice_matches(possibilities) {
     list_is_assert(possibilities);
     function lambda(choice) {
       let copy = json_copy(possibilities);
@@ -16,5 +16,5 @@ export function reply_choice(choices) {
     let filtered = reply_matches(squashed);
     return filtered;
   };
-  return rc;
+  return fn;
 }
