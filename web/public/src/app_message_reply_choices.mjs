@@ -40,7 +40,7 @@ export function app_message_reply_choices() {
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
   let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
-  let rs2 = reply_choice([
+  let rc = reply_choice([
     "apostle",
     "evangelist",
     "pastor",
