@@ -214,7 +214,10 @@ export async function reply_test() {
     {
       message: "ak",
       start: reply_sequence([choice_a_k, "l"]),
-      expected: [],
+      expected: {
+        matches: false,
+        input: "ak",
+      },
     },
     {
       message: "a",
