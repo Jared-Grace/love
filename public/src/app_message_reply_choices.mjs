@@ -12,6 +12,7 @@ export function app_message_reply_choices() {
   let fn8 = reply_optional("o");
   const hello = reply_sequence(["hell", fn8]);
   let hi_word = reply_choice(["hi", hello, "hey"]);
+  let fn3 = reply_sequence(sequence_fns);
   let fn6 = reply_on_match_output(hi_word, greetings);
   let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
