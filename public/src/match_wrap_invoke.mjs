@@ -12,6 +12,8 @@ export function match_wrap_invoke(item, possibilities) {
   if (fi) {
     wrapped = item;
   } else {
+    if (false) {
+    }
     wrapped = function reply_wrap_inner(possibilities) {
       function lambda2(p) {
         let tokens = object_property_get(p, "tokens");
