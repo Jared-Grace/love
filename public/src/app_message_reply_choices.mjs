@@ -81,6 +81,7 @@ export function app_message_reply_choices() {
     us,
     according_to_gods_will,
   ]);
+  let fn9 = reply_sequence(sequence_fns);
   let choices_main = reply_choice([
     fn4,
     fn6,
