@@ -33,7 +33,7 @@ export function reply_messages_inner(message, dictionary, start) {
   }
   let mapped2 = list_map_squash(tokens_matches, lambda2);
   let result = reply_matches(mapped2);
-  let ne = list_empty_not_is(filtered2);
+  let ne = list_empty_not_is(result);
   if (ne) {
     result = list_first(result);
   }
