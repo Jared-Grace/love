@@ -1,3 +1,4 @@
+import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
@@ -28,8 +29,8 @@ export function app_message_reply_choices() {
   let both = reply_sequence([dear, brother]);
   let fn23 = reply_choice([dear, brother, both]);
   let fn16 = reply_sequence([my, fn23, fn17]);
-  let fn12 = reply_choice([fn16, my]);
-  let my_dear_brother = reply_optional(fn12);
+  const choices = [fn16, my];
+  let my_dear_brother = reply_choice_optional(choices);
   let fn3 = reply_sequence([hi_word, my_dear_brother]);
   let fn6 = reply_on_match_output(fn3, greetings);
   let you = reply_sequence(["you", my_dear_brother]);
