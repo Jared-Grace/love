@@ -83,7 +83,7 @@ export async function reply_test() {
         {
           tokens: ["a", {}],
           outputs: [],
-          index: 2,
+          index: 1,
           matches: true,
           input: "a",
         },
