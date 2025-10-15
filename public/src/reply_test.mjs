@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { reply_dictionary } from "../../../love/public/src/reply_dictionary.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
