@@ -105,7 +105,6 @@ export function app_message_reply_choices() {
     fn5,
     fn12,
     thanks,
-    fn24,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
