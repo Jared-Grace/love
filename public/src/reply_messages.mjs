@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -21,6 +22,7 @@ export function reply_messages(messages, start) {
         let taken = string_take(message, t);
         let result = reply_messages_inner(taken, start);
         value = object_property_get(result, "matches");
+        log(message2);
         if (equal(value, true)) {
           object_property_set_exists_not(result, "longest", value);
           return value;
