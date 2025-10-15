@@ -24,8 +24,6 @@ export function match_wrap_invoke(item, possibilities) {
           index: index_start + 1,
         };
         log({
-          item,
-          token,
           r,
         });
         object_assign(p, r);
