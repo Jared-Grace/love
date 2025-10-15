@@ -11,13 +11,13 @@ export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
     let value = object_property_get(object, "matches");
-    if (equal(left, right)) {
+    if (equal(value, false)) {
+      let size = string_size(message);
+      let r = range(size);
+      list_reverse(r);
+      function lambda2(item) {}
+      each(list, lambda2);
     }
-    let size = string_size(message);
-    let r = range(size);
-    list_reverse(r);
-    function lambda2(item) {}
-    each(list, lambda2);
     return result;
   }
   let result = list_map(messages, lambda);
