@@ -7,12 +7,12 @@ export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
   function lambda(item) {
-    let li = string_letters_is(item);
     function lambda2(fn) {
       let v = fn(item);
       return v;
     }
     let any = list_any([string_letters_is], lambda2);
+    return any;
   }
   let filtered = list_filter(tokens, lambda);
   return filtered;
