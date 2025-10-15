@@ -1,3 +1,4 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -19,6 +20,7 @@ export function match_wrap_invoke(item, possibilities) {
         let index_start = object_property_get(p, "index");
         let token = list_get(tokens, index_start);
         let matches_previous = object_property_get(p, "matches");
+        let eq2 = json_equal(left, sliced);
         const e = item === token;
         let matches = matches_previous && e;
         let r = {
