@@ -1,3 +1,4 @@
+import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
@@ -32,7 +33,8 @@ export function app_message_reply_choices() {
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
-  let fn19 = reply_sequence(sequence_fns);
+  let fn20 = reply_choice(reply_cities);
+  let fn19 = reply_sequence(["am", "from", fn20]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
