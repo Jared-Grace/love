@@ -16,8 +16,9 @@ export function app_message_reply_choices() {
   let fn15 = reply_optional("y");
   let my = reply_sequence(["m", fn15]);
   let fn14 = reply_optional(my);
-  let fn13 = reply_sequence([fn14, "dear"]);
-  let fn16 = reply_sequence([fn13, "brother"]);
+  let fn13 = reply_optional("dear");
+  let fn17 = reply_optional(item);
+  let fn16 = reply_sequence([fn14, fn13, "brother"]);
   let fn12 = reply_choice([fn16, fn13, my]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
