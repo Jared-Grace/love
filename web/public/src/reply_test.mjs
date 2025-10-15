@@ -258,12 +258,13 @@ export async function reply_test() {
       expected: {
         tokens: [
           "a",
+          "a",
           {
             namespace: "reply_last",
           },
         ],
         outputs: [],
-        index: 2,
+        index: 3,
         matches: true,
         input: "aa",
       },
