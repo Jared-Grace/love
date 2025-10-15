@@ -19,13 +19,12 @@ export function app_message_reply_choices() {
   let my = reply_sequence(["m", fn15]);
   let fn14 = reply_optional(my);
   const dear = "dear";
-  let fn13 = reply_optional(dear);
   let fn18 = reply_sequence(["in", "christ"]);
   let fn17 = reply_optional(fn18);
   const brother = "brother";
   let both = reply_sequence([dear, brother]);
   let fn23 = reply_choice([dear, brother, both]);
-  let fn16 = reply_sequence([fn14, both, fn17]);
+  let fn16 = reply_sequence([fn14, fn23, fn17]);
   let fn12 = reply_choice([fn16, my]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
