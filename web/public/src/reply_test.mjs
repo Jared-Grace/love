@@ -1,3 +1,4 @@
+import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
@@ -308,7 +309,7 @@ export function reply_test() {
     },
     {
       message: "himydearinjesus",
-      start: reply_once_or_more(choice_a_k),
+      start: app_message_reply_choices(),
       expected: {
         tokens: [
           "a",
