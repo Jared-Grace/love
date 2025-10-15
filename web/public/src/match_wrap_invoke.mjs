@@ -33,10 +33,13 @@ export function match_wrap_invoke(item, possibilities) {
           let token = list_get(tokens, index_start);
           let matches_previous = object_property_get(p, "matches");
           let e = json_equal(item, token);
+          if (si2) {
+          }
           let matches = matches_previous && e;
+          const delta = 1;
           let r = {
             matches,
-            index: index_start + 1,
+            index: index_start + delta,
           };
           object_assign(p, r);
         }
