@@ -61,7 +61,7 @@ export function app_message_reply_choices() {
   const us = "us";
   let o_us = reply_optional(us);
   let fn14 = reply_sequence_optional(["according", "to"]);
-  let fn9 = reply_sequence([fn14, "god's", "will"]);
+  let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
   let fn5 = reply_sequence([
     iam,
     supporting,
@@ -71,9 +71,16 @@ export function app_message_reply_choices() {
     o_us,
     "in",
     "ministry",
-    fn9,
+    according_to_gods_will,
   ]);
-  let fn12 = reply_sequence(["come", "and", "fellowship", "with", us, fn5]);
+  let fn12 = reply_sequence([
+    "come",
+    "and",
+    "fellowship",
+    "with",
+    us,
+    according_to_gods_will,
+  ]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19, fn5]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
