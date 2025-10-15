@@ -36,7 +36,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let ne = list_empty_not_is(result);
   if (ne) {
     result = list_first(result);
+  } else {
   }
-  $el;
   return result;
 }
