@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,7 +13,7 @@ export async function reply_test() {
   const choice_a_k = reply_choice(["a", "k"]);
   let cases = [
     {
-      messages: "a",
+      message: "a",
       start: reply_sequence(["a"]),
       expected: {
         tokens: ["a", {}],
@@ -25,7 +24,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "ak",
+      message: "ak",
       start: reply_sequence(["a", "k"]),
       expected: {
         tokens: ["a", "k", {}],
@@ -36,7 +35,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "a",
+      message: "a",
       start: reply_sequence(["a", last]),
       expected: {
         tokens: ["a", {}],
@@ -47,7 +46,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "a",
+      message: "a",
       start: reply_choice(["a", "k"]),
       expected: {
         tokens: ["a", {}],
@@ -58,7 +57,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "k",
+      message: "k",
       start: choice_a_k,
       expected: {
         tokens: ["k", {}],
@@ -69,7 +68,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "a",
+      message: "a",
       start: reply_sequence([choice_a_k]),
       expected: {
         tokens: ["a", {}],
@@ -80,7 +79,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "k",
+      message: "k",
       start: reply_sequence([choice_a_k]),
       expected: {
         tokens: ["k", {}],
@@ -91,7 +90,7 @@ export async function reply_test() {
       },
     },
     {
-      messages: "k",
+      message: "k",
       start: reply_sequence([choice_a_k, last]),
       expected: {
         tokens: ["k", {}],
@@ -103,13 +102,10 @@ export async function reply_test() {
     },
   ];
   async function lambda(item) {
-    let messages2 = object_property_get(item, "messages");
+    let message = object_property_get(item, "message");
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
-    function lambda2(messages2) {
-      let result = reply_messages_inner(messages2, dictionary, start2);
-    }
-    each(list, lambda2);
+    let result = reply_messages_inner(message, dictionary, start2);
     let actual = await reply_messages(messages2, start2);
     json_equal_assert(actual, expected);
   }
