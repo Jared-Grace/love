@@ -19,7 +19,10 @@ export function reply_messages(messages, start) {
       list_reverse(r);
       function lambda2(t) {
         let taken = string_take(message, t);
-        let result = reply_messages_inner(message, start);
+        let result = reply_messages_inner(longest, start);
+        value = object_property_get(object, "matches");
+        if (equal(value, false)) {
+        }
       }
       each(list, lambda2);
     }
