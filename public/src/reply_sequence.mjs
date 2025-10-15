@@ -6,7 +6,9 @@ export function reply_sequence(sequence_fns) {
   let fn = function reply_sequence_matches(possibilities) {
     list_is_assert(possibilities);
     function lambda(sequence_fn) {
-      log(message);
+      log({
+        possibilities,
+      });
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
     }
     each(sequence_fns, lambda);
