@@ -243,6 +243,7 @@
   "fi": "function_is",
   "fslr": "functions_log_remove",
   "rc": "reply_choice",
-  "lrv": "list_reverse"
+  "lrv": "list_reverse",
+  "lia": "list_is_assert"
  }
 }
