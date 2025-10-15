@@ -9,8 +9,9 @@ export function reply_sequence(sequence_fns) {
     function lambda(sequence_fn) {
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
       possibilities = reply_matches(possibilities);
-      let e = list_empty_is(list);
-      if (false) {
+      let e = list_empty_is(possibilities);
+      if (e) {
+        return true;
       }
     }
     each(sequence_fns, lambda);
