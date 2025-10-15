@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -22,6 +23,7 @@ export function match_wrap_invoke(item, possibilities) {
           matches,
           index: index_start + 1,
         };
+        log(message);
         object_assign(p, r);
       }
       each(possibilities, lambda2);
