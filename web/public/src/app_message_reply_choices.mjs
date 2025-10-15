@@ -23,9 +23,9 @@ export function app_message_reply_choices() {
   let fn18 = reply_sequence(["in", "christ"]);
   let fn17 = reply_optional(fn18);
   const brother = "brother";
-  let rs2 = reply_sequence([dear, brother]);
-  let fn23 = reply_choice([dear, brother, rs2]);
-  let fn16 = reply_sequence([fn14, rs2, fn17]);
+  let both = reply_sequence([dear, brother]);
+  let fn23 = reply_choice([dear, brother, both]);
+  let fn16 = reply_sequence([fn14, both, fn17]);
   let fn12 = reply_choice([fn16, my]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
