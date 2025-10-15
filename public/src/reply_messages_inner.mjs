@@ -1,6 +1,6 @@
+import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
-import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -32,10 +32,10 @@ export function reply_messages_inner(message, dictionary, start) {
     return possibilities;
   }
   let mapped2 = list_map_squash(tokens_matches, lambda2);
-  let result = list_filter_property(mapped2, "matches", true);
+  let filtered2 = reply_matches(possbilities);
   let ne = list_empty_not_is(result);
   if (ne) {
-    result = list_first(result);
+    let result = list_first(result);
   }
   return result;
 }
