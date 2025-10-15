@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -12,6 +13,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let last = reply_last();
   let input = string_lower_to(message);
   let tokens_matches = string_tokens(input, dictionary);
+  log(message2);
   function lambda3(tokens) {
     list_add(tokens, last);
   }
