@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -15,7 +16,9 @@ export function reply_messages(messages, start) {
       let size = string_size(message);
       let r = range_1(size);
       list_reverse(r);
-      function lambda2(item) {}
+      function lambda2(taken) {
+        let taken2 = list_take(list2, count);
+      }
       each(list, lambda2);
     }
     return result;
