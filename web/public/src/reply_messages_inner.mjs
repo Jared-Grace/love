@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -13,10 +12,6 @@ export function reply_messages_inner(message, dictionary, start) {
   let last = reply_last();
   let input = string_lower_to(message);
   let tokens_matches = string_tokens(input, dictionary);
-  log({
-    tokens_matches,
-    e: last === reply_last(),
-  });
   function lambda3(tokens) {
     list_add(tokens, last);
   }
