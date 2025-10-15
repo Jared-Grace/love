@@ -1,4 +1,4 @@
-import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
+import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
@@ -15,7 +15,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let input = string_lower_to(message);
   log("here");
   let tokens_matches = string_tokens(input, dictionary);
-  let split = string_split_space(input);
+  let split = string_split_empty(input);
   tokens_matches = [split];
   log({
     tokens_matches,
