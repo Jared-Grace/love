@@ -19,7 +19,8 @@ export function app_message_reply_choices() {
   let my = reply_sequence(["m", fn15]);
   let fn14 = reply_optional(my);
   const dear = "dear";
-  let fn18 = reply_sequence(["in", "christ"]);
+  const christ = "christ";
+  let fn18 = reply_sequence(["in", christ]);
   let fn17 = reply_optional(fn18);
   const brother = "brother";
   let both = reply_sequence([dear, brother]);
