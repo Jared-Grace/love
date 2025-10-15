@@ -15,7 +15,6 @@ export function reply_messages_inner(message, dictionary, start) {
   log("here");
   let tokens = string_split_empty(input);
   list_add(tokens, last);
-  each(tokens_matches, lambda3);
   let base = {
     input,
   };
