@@ -8,6 +8,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
+    opb;
     let size = string_size(message);
     let r = range(size);
     list_reverse(r);
