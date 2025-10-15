@@ -1,4 +1,3 @@
-import { function_rename_suffix_add } from "../../../love/public/src/function_rename_suffix_add.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
@@ -8,7 +7,7 @@ import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_r
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-export async function app_message_reply_choices() {
+export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
   let fn8 = reply_optional("o");
@@ -22,7 +21,7 @@ export async function app_message_reply_choices() {
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_on_match_output("jesus", "✝️ Jesus is Lord! 👑");
   let fn7 = reply_on_match_output("god", "❤️‍🔥 God is love! ✝️");
-  let v = await function_rename_suffix_add(f_name_before, suffix);
+  let fn10 = reply_sequence(sequence_fns);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
