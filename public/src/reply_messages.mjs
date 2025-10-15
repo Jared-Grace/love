@@ -11,7 +11,8 @@ export function reply_messages(messages, start) {
     let size = string_size(message);
     let r = range(size);
     list_reverse(r);
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     return result;
   }
   let result = list_map(messages, lambda);
