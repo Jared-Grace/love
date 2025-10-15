@@ -55,7 +55,7 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let rs = reply_sequence([iam, rc2]);
+  let title = reply_sequence([iam, rc2]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -81,18 +81,19 @@ export function app_message_reply_choices() {
     us,
     according_to_gods_will,
   ]);
-  let fn9 = reply_sequence(["thank", "you"]);
+  let thank_you = reply_sequence(["thank", "you"]);
+  let thanks = reply_choice(["thanks", thank_you]);
   let choices_main = reply_choice([
     fn4,
     fn6,
     fn2,
     fn7,
     fn10,
-    rs,
+    title,
     fn19,
     fn5,
     fn12,
-    fn9,
+    thanks,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
