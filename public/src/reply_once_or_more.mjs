@@ -6,4 +6,5 @@ export function reply_once_or_more(item) {
   let rs = reply_sequence(sequence);
   let ro = reply_optional(rs);
   list_add(sequence, ro);
+  return rs;
 }
