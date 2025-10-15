@@ -56,7 +56,7 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let v = reply_names();
+  let fn9 = reply_names();
   let room2 = reply_once_or_more(choices_main);
   let title = reply_sequence([iam, titles, room2]);
   let fn25 = reply_optional("ing");
