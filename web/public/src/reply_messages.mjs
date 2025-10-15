@@ -12,7 +12,7 @@ export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
     let value = object_property_get(object, "matches");
-    longest;
+    let longest = null;
     if (equal(value, false)) {
       let size = string_size(message);
       let r = range_1(size);
