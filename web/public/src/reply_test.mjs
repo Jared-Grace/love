@@ -14,7 +14,7 @@ export async function reply_test() {
   marker("1");
   const choice_a_k = reply_choice(["a", "k"]);
   const item = "a";
-  const choice_a_empty = reply_optional(item);
+  const optional_a = reply_optional(item);
   let seq_a_k = reply_sequence(["a", "k"]);
   let seq_k_a = reply_sequence(["k", "a"]);
   let cases = [
@@ -240,7 +240,7 @@ export async function reply_test() {
     },
     {
       message: "a",
-      start: reply_sequence(["a", choice_a_empty, last]),
+      start: reply_sequence(["a", optional_a, last]),
       expected: {
         tokens: [
           "a",
@@ -256,7 +256,7 @@ export async function reply_test() {
     },
     {
       message: "aa",
-      start: reply_sequence(["a", choice_a_empty, last]),
+      start: reply_sequence(["a", optional_a, last]),
       expected: {
         tokens: [
           "a",
