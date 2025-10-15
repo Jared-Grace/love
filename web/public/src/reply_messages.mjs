@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -9,7 +10,8 @@ export function reply_messages(messages, start) {
     let result = reply_messages_inner(message, start);
     let size = string_size(message);
     let r = range(size);
-    list_reverse(list);
+    list_reverse(r);
+    each(list, function lambda2(item) {});
     return result;
   }
   let result = list_map(messages, lambda);
