@@ -7,16 +7,14 @@ import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 export function reply_messages_inner(message, dictionary, start) {
   let last = reply_last();
   let input = string_lower_to(message);
   log("here");
-  let tokens_matches = string_tokens(input, dictionary);
   let split = string_split_empty(input);
-  tokens_matches = [split];
+  let tokens_matches = [split];
   log({
     tokens_matches,
   });
