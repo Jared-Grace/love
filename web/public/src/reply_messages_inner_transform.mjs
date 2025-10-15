@@ -5,6 +5,6 @@ export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
   function lambda(item) {}
-  let filtered = list_filter(list, lambda);
-  return tokens;
+  let filtered = list_filter(tokens, lambda);
+  return filtered;
 }
