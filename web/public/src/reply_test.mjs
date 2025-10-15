@@ -14,108 +14,92 @@ export async function reply_test() {
   const choice_a_k = reply_choice(["a", "k"]);
   let cases = [
     {
-      messages: ["a"],
+      messages: "a",
       start: reply_sequence(["a"]),
-      expected: [
-        {
-          tokens: ["a", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "a",
-        },
-      ],
+      expected: {
+        tokens: ["a", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "a",
+      },
     },
     {
-      messages: ["ak"],
+      messages: "ak",
       start: reply_sequence(["a", "k"]),
-      expected: [
-        {
-          tokens: ["a", "k", {}],
-          outputs: [],
-          index: 2,
-          matches: true,
-          input: "ak",
-        },
-      ],
+      expected: {
+        tokens: ["a", "k", {}],
+        outputs: [],
+        index: 2,
+        matches: true,
+        input: "ak",
+      },
     },
     {
-      messages: ["a"],
+      messages: "a",
       start: reply_sequence(["a", last]),
-      expected: [
-        {
-          tokens: ["a", {}],
-          outputs: [],
-          index: 2,
-          matches: true,
-          input: "a",
-        },
-      ],
+      expected: {
+        tokens: ["a", {}],
+        outputs: [],
+        index: 2,
+        matches: true,
+        input: "a",
+      },
     },
     {
-      messages: ["a"],
+      messages: "a",
       start: reply_choice(["a", "k"]),
-      expected: [
-        {
-          tokens: ["a", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "a",
-        },
-      ],
+      expected: {
+        tokens: ["a", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "a",
+      },
     },
     {
-      messages: ["k"],
+      messages: "k",
       start: choice_a_k,
-      expected: [
-        {
-          tokens: ["k", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "k",
-        },
-      ],
+      expected: {
+        tokens: ["k", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "k",
+      },
     },
     {
-      messages: ["a"],
+      messages: "a",
       start: reply_sequence([choice_a_k]),
-      expected: [
-        {
-          tokens: ["a", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "a",
-        },
-      ],
+      expected: {
+        tokens: ["a", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "a",
+      },
     },
     {
-      messages: ["k"],
+      messages: "k",
       start: reply_sequence([choice_a_k]),
-      expected: [
-        {
-          tokens: ["k", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "k",
-        },
-      ],
+      expected: {
+        tokens: ["k", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "k",
+      },
     },
     {
-      messages: ["k"],
+      messages: "k",
       start: reply_sequence([choice_a_k, last]),
-      expected: [
-        {
-          tokens: ["k", {}],
-          outputs: [],
-          index: 1,
-          matches: true,
-          input: "k",
-        },
-      ],
+      expected: {
+        tokens: ["k", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "k",
+      },
     },
   ];
   async function lambda(item) {
@@ -123,7 +107,7 @@ export async function reply_test() {
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
     function lambda2(messages2) {
-      let result = reply_messages_inner(messages2, dictionary, start);
+      let result = reply_messages_inner(messages2, dictionary, start2);
     }
     each(list, lambda2);
     let actual = await reply_messages(messages2, start2);
