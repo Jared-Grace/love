@@ -42,7 +42,7 @@ export async function reply_test() {
         {
           tokens: ["a", {}],
           outputs: [],
-          index: 1,
+          index: 2,
           matches: true,
           input: "a",
         },
