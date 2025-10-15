@@ -81,7 +81,17 @@ export function app_message_reply_choices() {
     us,
     according_to_gods_will,
   ]);
-  let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19, fn5]);
+  let choices_main = reply_choice([
+    fn4,
+    fn6,
+    fn2,
+    fn7,
+    fn10,
+    rs,
+    fn19,
+    fn5,
+    fn12,
+  ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
   let r = reply_sequence([room, last]);
