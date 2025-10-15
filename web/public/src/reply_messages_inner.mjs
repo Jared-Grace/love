@@ -36,7 +36,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let e = list_empty_is(result);
   if (e) {
     result = {
-      matches: true,
+      matches: false,
     };
   } else {
     result = list_first(result);
