@@ -58,7 +58,20 @@ export function app_message_reply_choices() {
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   let o_us = reply_optional("us");
-  let fn5 = reply_sequence([iam, supporting, you, "to", "support", o_us]);
+  let fn5 = reply_sequence([
+    iam,
+    supporting,
+    you,
+    "to",
+    "support",
+    o_us,
+    "in",
+    "ministry",
+    "according",
+    "to",
+    "god's",
+    "will",
+  ]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19, fn5]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
