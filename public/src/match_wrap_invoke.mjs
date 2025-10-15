@@ -35,6 +35,7 @@ export function match_wrap_invoke(item, possibilities) {
           let token = list_get(tokens, index_start);
           let matches_previous = object_property_get(p, "matches");
           let e = json_equal(item, token);
+          let empty = item === "";
           let delta = 1;
           if (si2) {
             integer_is_assert(size);
