@@ -1,3 +1,4 @@
+import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
@@ -47,7 +48,6 @@ export function app_message_reply_choices() {
   let fn21 = reply_optional("i");
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
-  let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
   let titles = reply_choice([
     "apostle",
     "evangelist",
@@ -55,8 +55,13 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let room2 = reply_once_or_more(choices_main);
-  let title = reply_sequence([iam, titles, room2]);
+  let names = reply_names();
+  let names_once_or_more = reply_once_or_more(names);
+  let fn9 = reply_optional("a");
+  let title = reply_sequence([iam, fn9, titles]);
+  let titled_name = reply_sequence_optional([titles, names_once_or_more]);
+  let fn18 = reply_optional("in");
+  let fn19 = reply_sequence([iam, "from", fn20, fn18, countries]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -91,6 +96,7 @@ export function app_message_reply_choices() {
     fn7,
     fn10,
     title,
+    titled_name,
     fn19,
     fn5,
     fn12,
