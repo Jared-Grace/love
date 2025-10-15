@@ -55,7 +55,7 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let rs = reply_sequence([iam, rc2]);
+  let title = reply_sequence([iam, rc2]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
@@ -89,7 +89,7 @@ export function app_message_reply_choices() {
     fn2,
     fn7,
     fn10,
-    rs,
+    title,
     fn19,
     fn5,
     fn12,
