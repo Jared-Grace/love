@@ -13,7 +13,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
-export function reply_wrap_invoke(item, possibilities) {
+export async function reply_wrap_invoke(item, possibilities) {
   marker("1");
   let fi = function_is(item);
   let wrapped = null;
@@ -56,7 +56,7 @@ export function reply_wrap_invoke(item, possibilities) {
     }
   }
   list_is_assert(possibilities);
-  let result = wrapped(possibilities);
+  let result = await wrapped(possibilities);
   function lambda() {
     let v = {
       possibilities,
