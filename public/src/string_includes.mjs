@@ -6,6 +6,6 @@ export function string_includes(input, part) {
   };
   string_is_assert_json(input, o);
   string_is_assert_json(part, o);
-  let v = input.includes(part);
-  return v;
+  let i = input.includes(part);
+  return i;
 }
