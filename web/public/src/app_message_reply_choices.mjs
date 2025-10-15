@@ -1,3 +1,4 @@
+import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
@@ -22,8 +23,8 @@ export function app_message_reply_choices() {
   const christ = "christ";
   const jesus = "jesus";
   let fn13 = reply_choice([jesus, christ]);
-  let fn18 = reply_sequence(["in", fn13]);
-  let fn17 = reply_optional(fn18);
+  const sequence = ["in", fn13];
+  let fn17 = reply_sequence_optional(sequence);
   const brother = "brother";
   let both = reply_sequence([dear, brother]);
   let fn23 = reply_choice([dear, brother, both]);
