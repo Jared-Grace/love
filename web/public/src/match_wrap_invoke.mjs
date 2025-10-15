@@ -19,6 +19,8 @@ export function match_wrap_invoke(item, possibilities) {
   } else {
     let si2 = string_is(item);
     if (si2) {
+      if (false) {
+      }
       let size = string_size(item);
       if (size > 1) {
         let split = string_split_empty(item);
@@ -33,10 +35,11 @@ export function match_wrap_invoke(item, possibilities) {
           let token = list_get(tokens, index_start);
           let matches_previous = object_property_get(p, "matches");
           let e = json_equal(item, token);
+          let delta = 1;
           if (si2) {
+            delta = 1;
           }
           let matches = matches_previous && e;
-          const delta = 1;
           let r = {
             matches,
             index: index_start + delta,
