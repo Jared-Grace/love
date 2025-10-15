@@ -13,11 +13,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let last = reply_last();
   let input = string_lower_to(message);
   log("here");
-  let split = string_split_empty(input);
-  let tokens_matches = [split];
-  log({
-    tokens_matches,
-  });
+  let tokens = string_split_empty(input);
   function lambda3(tokens) {
     list_add(tokens, last);
   }
