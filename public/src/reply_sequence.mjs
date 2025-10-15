@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { match_wrap_invoke } from "../../../love/public/src/match_wrap_invoke.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -8,6 +9,7 @@ export function reply_sequence(sequence_fns) {
     function lambda(sequence_fn) {
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
       possibilities = reply_matches(possibilities);
+      let e = list_empty_is(list);
     }
     each(sequence_fns, lambda);
     return possibilities;
