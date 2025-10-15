@@ -6,8 +6,8 @@ import { each_async } from "./each_async.mjs";
 export function reply_sequence(sequence_fns) {
   let fn = async function reply_sequence_matches(possibilities) {
     list_is_assert(possibilities);
-    function lambda(sequence_fn) {
-      possibilities = reply_wrap_invoke(sequence_fn, possibilities);
+    async function lambda(sequence_fn) {
+      possibilities = await reply_wrap_invoke(sequence_fn, possibilities);
       possibilities = reply_matches(possibilities);
       let e = list_empty_is(possibilities);
       if (e) {
