@@ -15,6 +15,7 @@ export function reply_messages_inner(message, dictionary, start) {
   let tokens_matches = string_tokens(input, dictionary);
   log({
     tokens_matches,
+    e: last === reply_last(),
   });
   function lambda3(tokens) {
     list_add(tokens, last);
