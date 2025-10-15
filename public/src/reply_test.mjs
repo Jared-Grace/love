@@ -247,7 +247,7 @@ export async function reply_test() {
           },
         ],
         outputs: [],
-        index: 2,
+        index: 1,
         matches: true,
         input: "a",
       },
