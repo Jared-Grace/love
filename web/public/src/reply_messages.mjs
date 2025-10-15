@@ -19,9 +19,11 @@ export function reply_messages(messages, start) {
       list_reverse(r);
       function lambda2(t) {
         let taken = string_take(message, t);
-        let result = reply_messages_inner(longest, start);
-        value = object_property_get(object, "matches");
-        if (equal(value, false)) {
+        let result = reply_messages_inner(taken, start);
+        value = object_property_get(result, "matches");
+        if (equal(value, true)) {
+          longest=
+          $r,value
         }
       }
       each(list, lambda2);
