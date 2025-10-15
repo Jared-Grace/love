@@ -10,13 +10,15 @@ export async function reply_test() {
     {
       messages: ["a"],
       start: reply_sequence(["a"]),
-      expected: {
-        tokens: ["a", {}],
-        outputs: [],
-        index: 1,
-        matches: true,
-        input: "a",
-      },
+      expected: [
+        {
+          tokens: ["a", {}],
+          outputs: [],
+          index: 1,
+          matches: true,
+          input: "a",
+        },
+      ],
     },
   ];
   async function lambda(item) {
