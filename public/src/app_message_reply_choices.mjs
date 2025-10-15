@@ -89,6 +89,7 @@ export function app_message_reply_choices() {
   ]);
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
+  let fn24 = reply_sequence(sequence_fns);
   let choices_main = reply_choice([
     fn4,
     fn6,
