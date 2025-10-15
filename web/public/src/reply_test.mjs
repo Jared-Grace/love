@@ -265,7 +265,7 @@ export async function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "a",
+        input: "aa",
       },
     },
   ];
