@@ -60,6 +60,7 @@ export function app_message_reply_choices() {
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
   let o_us = reply_optional(us);
+  let fn14 = reply_sequence_optional(sequence2);
   let fn9 = reply_sequence(["according", "to", "god's", "will"]);
   let fn5 = reply_sequence([
     iam,
