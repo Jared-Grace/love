@@ -20,7 +20,12 @@ export async function reply_test() {
       message: "a",
       start: reply_sequence(["a"]),
       expected: {
-        tokens: ["a", {}],
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
@@ -31,7 +36,13 @@ export async function reply_test() {
       message: "ak",
       start: reply_sequence(["a", "k"]),
       expected: {
-        tokens: ["a", "k", {}],
+        tokens: [
+          "a",
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
@@ -53,7 +64,12 @@ export async function reply_test() {
       message: "a",
       start: reply_sequence(["a", last]),
       expected: {
-        tokens: ["a", {}],
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
@@ -64,7 +80,12 @@ export async function reply_test() {
       message: "a",
       start: reply_choice(["a", "k"]),
       expected: {
-        tokens: ["a", {}],
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
@@ -75,7 +96,12 @@ export async function reply_test() {
       message: "k",
       start: choice_a_k,
       expected: {
-        tokens: ["k", {}],
+        tokens: [
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
@@ -86,7 +112,12 @@ export async function reply_test() {
       message: "a",
       start: reply_sequence([choice_a_k]),
       expected: {
-        tokens: ["a", {}],
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
@@ -97,7 +128,12 @@ export async function reply_test() {
       message: "k",
       start: reply_sequence([choice_a_k]),
       expected: {
-        tokens: ["k", {}],
+        tokens: [
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
@@ -108,7 +144,13 @@ export async function reply_test() {
       message: "kk",
       start: reply_sequence([choice_a_k, choice_a_k]),
       expected: {
-        tokens: ["k", "k", {}],
+        tokens: [
+          "k",
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
@@ -119,7 +161,13 @@ export async function reply_test() {
       message: "ak",
       start: reply_choice([seq_a_k, seq_k_a]),
       expected: {
-        tokens: ["a", "k", {}],
+        tokens: [
+          "a",
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
@@ -130,7 +178,13 @@ export async function reply_test() {
       message: "ka",
       start: reply_choice([seq_a_k, seq_k_a]),
       expected: {
-        tokens: ["k", "a", {}],
+        tokens: [
+          "k",
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
@@ -141,7 +195,13 @@ export async function reply_test() {
       message: "ak",
       start: reply_sequence([choice_a_k, "k"]),
       expected: {
-        tokens: ["a", "k", {}],
+        tokens: [
+          "a",
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 2,
         matches: true,
