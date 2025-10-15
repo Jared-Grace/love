@@ -81,6 +81,7 @@ export function app_message_reply_choices() {
     us,
     according_to_gods_will,
   ]);
+  let fn9 = reply_sequence(["thank", "you"]);
   let choices_main = reply_choice([
     fn4,
     fn6,
@@ -91,6 +92,7 @@ export function app_message_reply_choices() {
     fn19,
     fn5,
     fn12,
+    fn9,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
