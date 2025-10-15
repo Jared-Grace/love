@@ -37,6 +37,7 @@ export function app_message_reply_choices() {
   let fn20 = reply_cities();
   let v = reply_countries();
   const iam = "am";
+  let fn21 = reply_sequence(sequence_fns);
   let fn19 = reply_sequence([iam, "from", fn20, "in", v]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let rs = reply_once_or_more(choices_main);
