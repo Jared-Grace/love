@@ -5,10 +5,12 @@ import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
+import { reply_optional } from "./reply_optional.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
-  const hello = "hello";
+  let fn8 = reply_optional("o");
+  const hello = reply_sequence(["hell", fn8]);
   let fn3 = reply_choice(["hi", hello, "hey"]);
   let fn6 = reply_on_match_output(fn3, greetings);
   let fn = reply_sequence(["how", "are", "you"]);
