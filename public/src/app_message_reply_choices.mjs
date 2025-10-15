@@ -17,7 +17,7 @@ export function app_message_reply_choices() {
   const hello = reply_sequence(["hell", fn8]);
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let fn15 = reply_optional("y");
-  let fn14 = reply_sequence_optional(["m", fn15]);
+  let my = reply_sequence_optional(["m", fn15]);
   const dear = "dear";
   const christ = "christ";
   const jesus = "jesus";
@@ -27,7 +27,7 @@ export function app_message_reply_choices() {
   const brother = "brother";
   let both = reply_sequence([dear, brother]);
   let fn23 = reply_choice([dear, brother, both]);
-  let fn16 = reply_sequence([fn14, fn23, fn17]);
+  let fn16 = reply_sequence([my, fn23, fn17]);
   let fn12 = reply_choice([fn16, my]);
   let my_dear_brother = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, my_dear_brother]);
