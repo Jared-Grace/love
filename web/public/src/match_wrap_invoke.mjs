@@ -1,3 +1,4 @@
+import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { string_is } from "../../../love/public/src/string_is.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
@@ -18,6 +19,7 @@ export function match_wrap_invoke(item, possibilities) {
     if (si2) {
       let size = string_size(item);
       if (size > 1) {
+        let split = string_split_space(s);
       }
     }
     wrapped = function reply_wrap_inner(possibilities) {
