@@ -10,6 +10,8 @@ export function reply_sequence(sequence_fns) {
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
       possibilities = reply_matches(possibilities);
       let e = list_empty_is(list);
+      if (false) {
+      }
     }
     each(sequence_fns, lambda);
     return possibilities;
