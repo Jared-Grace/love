@@ -5,7 +5,6 @@ import { app_message_download } from "../../../love/public/src/app_message_downl
 export async function app_message_reply() {
   let downloads = await app_message_download();
   let messages = list_map_property(downloads, "message");
-  messages = ["howareyou"];
   let start = app_message_reply_choices();
   let result = await reply_messages(messages, start);
   return result;
