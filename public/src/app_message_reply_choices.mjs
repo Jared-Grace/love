@@ -58,7 +58,7 @@ export function app_message_reply_choices() {
   let fn25 = reply_optional("ing");
   let fn24 = reply_sequence(["request", fn25]);
   let fn5 = reply_sequence([iam, fn24, you]);
-  let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19]);
+  let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19, fn5]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
   let r = reply_sequence([room, last]);
