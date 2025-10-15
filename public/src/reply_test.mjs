@@ -152,7 +152,7 @@ export async function reply_test() {
       message: "ak",
       start: reply_sequence([choice_a_k, "k"]),
       expected: {
-        tokens: ["a", {}],
+        tokens: ["a", "k", {}],
         outputs: [],
         index: 2,
         matches: true,
