@@ -6,7 +6,7 @@ export function reply_roads() {
   marker("1");
   let fn2 = reply_optional("w");
   let fn = reply_sequence([fn2, "walta"]);
-  let fn3 = reply_choice(fn);
+  let fn3 = reply_choice([fn]);
   let fn5 = reply_choice([
     "avenue",
     "blvd",
