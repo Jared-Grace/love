@@ -22,7 +22,7 @@ export function reply_messages(messages, start) {
         let taken = string_take(message, t);
         let result = reply_messages_inner(taken, start);
         value = object_property_get(result, "matches");
-        log(message2);
+        log(result);
         if (equal(value, true)) {
           object_property_set_exists_not(result, "longest", value);
           return value;
