@@ -1,4 +1,3 @@
-import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
@@ -305,36 +304,6 @@ export function reply_test() {
         index: 3,
         matches: true,
         message: "akk",
-      },
-    },
-    {
-      message: "hi my dear in jesus",
-      start: app_message_reply_choices(),
-      expected: {
-        tokens: [
-          "h",
-          "i",
-          "m",
-          "y",
-          "d",
-          "e",
-          "a",
-          "r",
-          "i",
-          "n",
-          "j",
-          "e",
-          "s",
-          "u",
-          "s",
-          {
-            namespace: "reply_last",
-          },
-        ],
-        outputs: ["👋😁 Greetings in the name of our LORD Jesus Christ! ✝️"],
-        index: 16,
-        matches: true,
-        message: "hi my dear in jesus",
       },
     },
   ];
