@@ -71,6 +71,7 @@ export function app_message_reply_choices() {
     "ministry",
     fn9,
   ]);
+  let fn12 = reply_sequence(sequence_fns);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs, fn19, fn5]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
