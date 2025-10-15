@@ -12,7 +12,7 @@ import { object_property_set_exists_not } from "./object_property_set_exists_not
 export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
-    let value = object_property_get(object, "matches");
+    let value = object_property_get(result, "matches");
     if (equal(value, false)) {
       let size = string_size(message);
       let r = range_1(size);
