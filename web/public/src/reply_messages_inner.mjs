@@ -12,7 +12,7 @@ import { reply_last } from "../../../love/public/src/reply_last.mjs";
 export function reply_messages_inner(message, dictionary, start) {
   let last = reply_last();
   let input = string_lower_to(message);
-  log(message2);
+  log("here");
   let tokens_matches = string_tokens(input, dictionary);
   log({
     tokens_matches,
