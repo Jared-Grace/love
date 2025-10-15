@@ -37,7 +37,7 @@ export async function reply_test() {
     },
     {
       messages: ["a"],
-      start: reply_sequence(["a"]),
+      start: reply_sequence(["a", last]),
       expected: [
         {
           tokens: ["a", {}],
