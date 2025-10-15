@@ -288,6 +288,24 @@ export function reply_test() {
         input: "aaa",
       },
     },
+    {
+      message: "akk",
+      start: reply_once_or_more(choice_a_k),
+      expected: {
+        tokens: [
+          "a",
+          "k",
+          "k",
+          {
+            namespace: "reply_last",
+          },
+        ],
+        outputs: [],
+        index: 3,
+        matches: true,
+        input: "akk",
+      },
+    },
   ];
   function lambda(item) {
     let message = object_property_get(item, "message");
