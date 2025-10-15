@@ -1,3 +1,4 @@
+import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
@@ -267,6 +268,24 @@ export function reply_test() {
         index: 3,
         matches: true,
         input: "aa",
+      },
+    },
+    {
+      message: "aaa",
+      start: reply_once_or_more("a"),
+      expected: {
+        tokens: [
+          "a",
+          "a",
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
+        outputs: [],
+        index: 4,
+        matches: true,
+        input: "aaa",
       },
     },
   ];
