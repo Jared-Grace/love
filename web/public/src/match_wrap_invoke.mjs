@@ -1,3 +1,4 @@
+import { string_is } from "../../../love/public/src/string_is.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -12,6 +13,7 @@ export function match_wrap_invoke(item, possibilities) {
   if (fi) {
     wrapped = item;
   } else {
+    let si2 = string_is(value);
     if (false) {
     }
     wrapped = function reply_wrap_inner(possibilities) {
