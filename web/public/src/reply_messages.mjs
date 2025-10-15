@@ -7,9 +7,9 @@ import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_take } from "./string_take.mjs";
-export function reply_messages(messages, start) {
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+export async function reply_messages(messages, start) {
   async function lambda(message) {
     let result = await reply_messages_inner(message, start);
     let value = object_property_get(result, "matches");
@@ -32,7 +32,7 @@ export function reply_messages(messages, start) {
     }
     return result;
   }
-  let result = list_map(messages, lambda);
+  let result = await list_map_unordered_async(messages, lambda);
   let filtered = list_filter_property(result, "matches", false);
   return filtered;
 }
