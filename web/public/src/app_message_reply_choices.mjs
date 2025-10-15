@@ -23,7 +23,7 @@ export function app_message_reply_choices() {
   let fn18 = reply_sequence(["in", "christ"]);
   let fn17 = reply_optional(fn18);
   const brother = "brother";
-  rc;
+  rc2;
   let fn16 = reply_sequence([fn14, fn13, brother, fn17]);
   let fn12 = reply_choice([fn16, my]);
   let fn9 = reply_optional(fn12);
@@ -43,14 +43,14 @@ export function app_message_reply_choices() {
   let fn22 = reply_sequence([fn21, "am"]);
   let iam = reply_choice(["i'm", fn22]);
   let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
-  let rc = reply_choice([
+  let rc2 = reply_choice([
     "apostle",
     "evangelist",
     "pastor",
     "preacher",
     "teacher",
   ]);
-  let rs = reply_sequence([iam, rc]);
+  let rs = reply_sequence([iam, rc2]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10, rs]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
