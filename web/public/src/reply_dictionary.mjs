@@ -8,7 +8,7 @@ export async function reply_dictionary() {
   let dictionary = json_from(text);
   let excludes_letters = ["h", "e", "d", "l", "w"];
   object_property_delete_multiple(dictionary, excludes_letters);
-  let excludes_pairs = ["ar", "ey", "re", "wa"];
+  let excludes_pairs = ["ar", "ii", "ey", "pr", "re", "wa"];
   object_property_delete_multiple(dictionary, excludes_pairs);
   let excludes = ["ware"];
   object_property_delete_multiple(dictionary, excludes);
