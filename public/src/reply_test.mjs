@@ -117,9 +117,9 @@ export async function reply_test() {
       message: "a",
       start: reply_sequence(["a", last]),
       expected: {
-        tokens: [{}],
+        tokens: ["a", {}],
         outputs: [],
-        index: 1,
+        index: 2,
         matches: true,
         input: "a",
       },
