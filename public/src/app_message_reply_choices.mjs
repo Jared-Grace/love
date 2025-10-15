@@ -1,3 +1,4 @@
+import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
@@ -93,7 +94,8 @@ export function app_message_reply_choices() {
   let d = digits();
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);
-  let fn24 = reply_sequence(["contact", digits_oom]);
+  let fn32 = reply_roads();
+  let fn24 = reply_sequence(["contact", digits_oom, fn32, fn20]);
   let choices_main = reply_choice([
     fn4,
     fn6,
