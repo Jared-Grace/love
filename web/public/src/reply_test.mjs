@@ -92,6 +92,17 @@ export async function reply_test() {
       },
     },
     {
+      message: "kk",
+      start: reply_sequence([choice_a_k, choice_a_k]),
+      expected: {
+        tokens: ["k", "k", {}],
+        outputs: [],
+        index: 1,
+        matches: true,
+        input: "kk",
+      },
+    },
+    {
       message: "k",
       start: reply_sequence([choice_a_k, last]),
       expected: {
