@@ -24,6 +24,6 @@ export function app_message_reply_choices() {
   let choices_main = reply_choice([fn4, fn6, fn2, fn7]);
   let rs = reply_once_or_more(choices_main);
   let last = reply_last();
-  let fn5 = reply_sequence([choices_main, last]);
+  let fn5 = reply_sequence([rs, last]);
   return fn5;
 }
