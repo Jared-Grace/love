@@ -4,6 +4,7 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 export function reply_messages_inner_transform(message) {
   let lower = string_lower_to(message);
   let tokens = string_split_empty(lower);
-  let filtered = list_filter(list, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   return tokens;
 }
