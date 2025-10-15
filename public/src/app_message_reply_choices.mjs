@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,8 +22,10 @@ export function app_message_reply_choices() {
   let fn2 = reply_on_match_output("jesus", "✝️ Jesus is Lord! 👑");
   let fn7 = reply_on_match_output("god", "❤️‍🔥 God is love! ✝️");
   let choices_main = reply_choice([fn4, fn6, fn2, fn7]);
+  const sequence = [choices_main];
+  let fn10 = reply_sequence(sequence);
   let fn11 = reply_optional(fn10);
-  let fn10 = reply_sequence([choices_main, fn11]);
+  list_add(list, item);
   let last = reply_last();
   let fn5 = reply_sequence([choices_main, last]);
   return fn5;
