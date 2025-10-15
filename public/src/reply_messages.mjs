@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -12,7 +13,6 @@ export function reply_messages(messages, start) {
   function lambda(message) {
     let result = reply_messages_inner(message, start);
     let value = object_property_get(object, "matches");
-    let longest = null;
     if (equal(value, false)) {
       let size = string_size(message);
       let r = range_1(size);
@@ -22,8 +22,8 @@ export function reply_messages(messages, start) {
         let result = reply_messages_inner(taken, start);
         value = object_property_get(result, "matches");
         if (equal(value, true)) {
-          longest=
-          $r,value
+          object_property_set(object2, property_name, value2);
+          return value;
         }
       }
       each(list, lambda2);
