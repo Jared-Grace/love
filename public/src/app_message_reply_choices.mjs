@@ -60,7 +60,7 @@ export function app_message_reply_choices() {
   let fn9 = reply_optional("a");
   let title = reply_sequence([iam, fn9, titles]);
   let titled_name = reply_sequence([titles, names_once_or_more]);
-  let fn19 = reply_sequence([iam, "from", fn20, "in", countries]);
+  let fn19 = reply_sequence([iam, titled_name, "from", fn20, "in", countries]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
