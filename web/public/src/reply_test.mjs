@@ -29,5 +29,4 @@ export async function reply_test() {
     json_equal_assert(actual, expected);
   }
   await each_async(cases, lambda);
-  return result;
 }
