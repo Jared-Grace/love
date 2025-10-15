@@ -7,7 +7,15 @@ export function reply_roads() {
   let fn2 = reply_optional("w");
   let fn = reply_sequence([fn2, "walta"]);
   let fn3 = reply_choice(fn);
-  let fn5 = reply_choice(choices);
+  let fn5 = reply_choice([
+    "avenue",
+    "blvd",
+    "circle",
+    "lane",
+    "road",
+    "street",
+    "way",
+  ]);
   let fn4 = reply_sequence(sequence_fns);
   return fn3;
 }
