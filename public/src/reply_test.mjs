@@ -30,7 +30,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -47,7 +47,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "ak",
+        message: "ak",
       },
     },
     {
@@ -62,7 +62,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "",
+        message: "",
       },
     },
     {
@@ -78,7 +78,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -94,7 +94,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -110,7 +110,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "k",
+        message: "k",
       },
     },
     {
@@ -126,7 +126,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -142,7 +142,7 @@ export function reply_test() {
         outputs: [],
         index: 1,
         matches: true,
-        input: "k",
+        message: "k",
       },
     },
     {
@@ -159,7 +159,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "kk",
+        message: "kk",
       },
     },
     {
@@ -176,7 +176,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "ak",
+        message: "ak",
       },
     },
     {
@@ -193,7 +193,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "ka",
+        message: "ka",
       },
     },
     {
@@ -210,7 +210,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "ak",
+        message: "ak",
       },
     },
     {
@@ -218,7 +218,7 @@ export function reply_test() {
       start: reply_sequence([choice_a_k, "l"]),
       expected: {
         matches: false,
-        input: "ak",
+        message: "ak",
       },
     },
     {
@@ -234,7 +234,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -250,7 +250,7 @@ export function reply_test() {
         outputs: [],
         index: 2,
         matches: true,
-        input: "a",
+        message: "a",
       },
     },
     {
@@ -267,7 +267,7 @@ export function reply_test() {
         outputs: [],
         index: 3,
         matches: true,
-        input: "aa",
+        message: "aa",
       },
     },
     {
@@ -285,7 +285,7 @@ export function reply_test() {
         outputs: [],
         index: 3,
         matches: true,
-        input: "aaa",
+        message: "aaa",
       },
     },
     {
@@ -303,7 +303,7 @@ export function reply_test() {
         outputs: [],
         index: 3,
         matches: true,
-        input: "akk",
+        message: "akk",
       },
     },
   ];
