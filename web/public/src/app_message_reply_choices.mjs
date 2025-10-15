@@ -13,8 +13,8 @@ export function app_message_reply_choices() {
   let fn = reply_sequence(["how", "are", "you"]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
-  let fn2 = reply_choice([fn4, fn6]);
+  let choices_main = reply_choice([fn4, fn6]);
   let last = reply_last();
-  let fn5 = reply_sequence([fn2, last]);
+  let fn5 = reply_sequence([choices_main, last]);
   return fn5;
 }
