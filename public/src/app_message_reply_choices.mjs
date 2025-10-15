@@ -44,8 +44,8 @@ export function app_message_reply_choices() {
     "apostle",
     "evangelist",
     "pastor",
-    "teacher",
     "preacher",
+    "teacher",
   ]);
   let choices_main = reply_choice([fn4, fn6, fn2, fn7, fn10]);
   let rs = reply_once_or_more(choices_main);
