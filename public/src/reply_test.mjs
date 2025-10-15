@@ -1,3 +1,4 @@
+import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
@@ -120,6 +121,7 @@ export async function reply_test() {
     let messages2 = object_property_get(item, "messages");
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
+    let result = reply_messages_inner(message, dictionary, start);
     let actual = await reply_messages(messages2, start2);
     json_equal_assert(actual, expected);
   }
