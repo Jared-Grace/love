@@ -13,7 +13,7 @@ export function app_message_reply_choices() {
   let fn8 = reply_optional("o");
   const hello = reply_sequence(["hell", fn8]);
   let hi_word = reply_choice(["hi", hello, "hey"]);
-  let fn12 = reply_choice(["brother"]);
+  let fn12 = reply_choice(["brother", "dear"]);
   let fn9 = reply_optional(fn12);
   let fn3 = reply_sequence([hi_word, fn9]);
   let fn6 = reply_on_match_output(fn3, greetings);
