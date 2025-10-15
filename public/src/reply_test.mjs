@@ -53,7 +53,11 @@ export async function reply_test() {
       message: "",
       start: reply_sequence([last]),
       expected: {
-        tokens: [{}],
+        tokens: [
+          {
+            namespace: "reply_last",
+          },
+        ],
         outputs: [],
         index: 1,
         matches: true,
