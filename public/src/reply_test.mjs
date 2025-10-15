@@ -5,6 +5,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_messages } from "../../../love/public/src/reply_messages.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_choice } from "./reply_choice.mjs";
 export async function reply_test() {
   let last = reply_last();
   marker("1");
@@ -43,6 +44,19 @@ export async function reply_test() {
           tokens: ["a", {}],
           outputs: [],
           index: 2,
+          matches: true,
+          input: "a",
+        },
+      ],
+    },
+    {
+      messages: ["a"],
+      start: reply_choice(["a", "k"]),
+      expected: [
+        {
+          tokens: ["a", {}],
+          outputs: [],
+          index: 1,
           matches: true,
           input: "a",
         },
