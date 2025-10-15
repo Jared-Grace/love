@@ -6,7 +6,7 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
-export function reply_messages_inner(message, dictionary, start) {
+export function reply_messages_inner(message, start) {
   let last = reply_last();
   let input = string_lower_to(message);
   let tokens = string_split_empty(input);
