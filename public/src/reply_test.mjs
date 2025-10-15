@@ -247,7 +247,23 @@ export async function reply_test() {
           },
         ],
         outputs: [],
-        index: 1,
+        index: 2,
+        matches: true,
+        input: "a",
+      },
+    },
+    {
+      message: "aa",
+      start: reply_sequence(["a", choice_a_empty, last]),
+      expected: {
+        tokens: [
+          "a",
+          {
+            namespace: "reply_last",
+          },
+        ],
+        outputs: [],
+        index: 2,
         matches: true,
         input: "a",
       },
