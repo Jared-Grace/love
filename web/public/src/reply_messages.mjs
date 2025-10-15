@@ -10,16 +10,16 @@ import { reply_messages_inner } from "../../../love/public/src/reply_messages_in
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_take } from "./string_take.mjs";
 export function reply_messages(messages, start) {
-  function lambda(message) {
-    let result = reply_messages_inner(message, start);
+  async function lambda(message) {
+    let result = await reply_messages_inner(message, start);
     let value = object_property_get(result, "matches");
     if (equal(value, false)) {
       let size = string_size(message);
       let r = range_1(size);
       list_reverse(r);
-      function lambda2(t) {
+      async function lambda2(t) {
         let taken = string_take(message, t);
-        let result_loop = reply_messages_inner(taken, start);
+        let result_loop = await reply_messages_inner(taken, start);
         value = object_property_get(result_loop, "matches");
         if (equal(value, true)) {
           log({
