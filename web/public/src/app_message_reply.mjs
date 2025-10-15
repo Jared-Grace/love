@@ -8,4 +8,5 @@ export async function app_message_reply() {
   messages = ["howareyou"];
   let start = app_message_reply_choices();
   let result = await reply_messages(messages, start);
+  return result;
 }
