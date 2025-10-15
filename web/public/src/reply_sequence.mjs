@@ -10,6 +10,10 @@ export function reply_sequence(sequence_fns) {
         possibilities,
       });
       possibilities = match_wrap_invoke(sequence_fn, possibilities);
+      log_json({
+        possibilities,
+        after: 0,
+      });
     }
     each(sequence_fns, lambda);
     return possibilities;
