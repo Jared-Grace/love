@@ -12,7 +12,7 @@ export function reply_messages_inner(message, start) {
   let tokens = string_split_empty(input);
   list_add(tokens, last);
   let base = {
-    input,
+    message,
   };
   const possbility_start = {
     tokens,
