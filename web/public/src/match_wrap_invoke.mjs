@@ -17,7 +17,7 @@ export function match_wrap_invoke(item, possibilities) {
     let si2 = string_is(item);
     if (si2) {
       let size = string_size(item);
-      if (false) {
+      if (size > 1) {
       }
     }
     wrapped = function reply_wrap_inner(possibilities) {
