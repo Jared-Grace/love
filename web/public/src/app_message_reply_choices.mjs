@@ -1,3 +1,4 @@
+import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
@@ -55,7 +56,9 @@ export function app_message_reply_choices() {
     "preacher",
     "teacher",
   ]);
-  let title = reply_sequence([iam, titles]);
+  let v = reply_names();
+  let room2 = reply_once_or_more(choices_main);
+  let title = reply_sequence([iam, titles, room2]);
   let fn25 = reply_optional("ing");
   let supporting = reply_sequence(["request", fn25]);
   const us = "us";
