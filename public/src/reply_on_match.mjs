@@ -27,7 +27,7 @@ export function reply_on_match(fn, on_match) {
     capture(filtered, "after");
     let ne = list_empty_not_is(filtered);
     if (ne) {
-      on_match(filtered);
+      on_match(filtered, u);
     }
     return filtered;
   };
