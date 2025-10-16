@@ -18,6 +18,7 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_countries } from "./reply_countries.mjs";
+import { string_slice } from "./string_slice.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
@@ -111,10 +112,11 @@ export function app_message_reply_choices() {
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
     function lambda2(item) {
-      let { data } = item;
+      let { data, message } = item;
       let value = object_property_get(data, u);
+      let before = value;
       log({
-        value,
+        value: string_slice(),
       });
     }
     each(filtered, lambda2);
