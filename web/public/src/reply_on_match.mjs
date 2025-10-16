@@ -16,9 +16,8 @@ export function reply_on_match(fn, on_match) {
       function lambda(item) {
         let index = object_property_get(item, "index");
         let d = object_property_initialize(item, "data", {});
-        object_property_set(d, u, {
-          [property]: index,
-        });
+        let o = object_property_initialize(d, u, {});
+        object_property_set(o, property, index);
       }
       each(possibilities, lambda);
     }
