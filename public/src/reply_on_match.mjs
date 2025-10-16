@@ -12,7 +12,7 @@ export function reply_on_match(fn, on_match) {
     function lambda(item) {
       object_property_set(object, property_name, value);
     }
-    let mapped = list_map(list, lambda);
+    let mapped = list_map(possibilities, lambda);
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
