@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -106,7 +107,9 @@ export function app_message_reply_choices() {
   let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
-  function lambda() {}
+  function lambda(filtered, u) {
+    log(message);
+  }
   let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
     fn4,
