@@ -1,6 +1,6 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { reply_wrap_invoke } from "../../../love/public/src/reply_wrap_invoke.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -18,7 +18,7 @@ export function reply_on_match(fn, on_match) {
         index_before: index,
       });
     }
-    let mapped = list_map(possibilities, lambda);
+    each(possibilities, lambda);
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
