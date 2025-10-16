@@ -12,14 +12,7 @@ export function reply_on_match(fn, on_match) {
     list_is_assert(possibilities);
     let u = await uuid();
     let property = "before";
-    function lambda(item) {
-      let index = object_property_get(item, "index");
-      let d = object_property_initialize(item, "data", {});
-      object_property_set(d, u, {
-        [property]: index,
-      });
-    }
-    each(possibilities, lambda);
+    capture(u, property, possibilities);
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
@@ -29,4 +22,14 @@ export function reply_on_match(fn, on_match) {
     return filtered;
   };
   return matcher;
+  function capture(u, property, possibilities) {
+    function lambda(item) {
+      let index = object_property_get(item, "index");
+      let d = object_property_initialize(item, "data", {});
+      object_property_set(d, u, {
+        [property]: index,
+      });
+    }
+    each(possibilities, lambda);
+  }
 }
