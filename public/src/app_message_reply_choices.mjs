@@ -108,7 +108,7 @@ export function app_message_reply_choices() {
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
-    log(message);
+    log({filtered, u});
   }
   let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
