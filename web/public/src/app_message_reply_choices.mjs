@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
@@ -108,6 +109,7 @@ export function app_message_reply_choices() {
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
+    each(list, function lambda2(item) {});
     log({
       filtered,
       u,
