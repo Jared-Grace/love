@@ -24,7 +24,6 @@ export function reply_on_match(fn, on_match) {
     }
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
-    capture(filtered, "after");
     let ne = list_empty_not_is(filtered);
     if (ne) {
       on_match(filtered, u);
