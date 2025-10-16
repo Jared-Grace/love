@@ -11,12 +11,12 @@ export function reply_on_match(fn, on_match) {
   let matcher = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
-    let suffix = "before";
+    let property = "before";
     function lambda(item) {
       let index = object_property_get(item, "index");
       let d = object_property_initialize(item, "data", {});
       object_property_set(d, u, {
-        index_before: index,
+        [property]: index,
       });
     }
     each(possibilities, lambda);
