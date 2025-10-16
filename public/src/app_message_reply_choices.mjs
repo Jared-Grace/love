@@ -106,7 +106,8 @@ export function app_message_reply_choices() {
   let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
-  let matcher = reply_on_match(fn26, () => {});
+  function lambda() {}
+  let matcher = reply_on_match(fn26, lambda);
   let choices_main = reply_choice([
     fn4,
     fn6,
