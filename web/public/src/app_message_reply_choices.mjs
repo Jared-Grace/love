@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
@@ -110,7 +111,8 @@ export function app_message_reply_choices() {
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
     function lambda2(item) {
-      let data = item;
+      let { data } = item;
+      let value = object_property_get(object, property_name);
     }
     each(filtered, lambda2);
     log({
