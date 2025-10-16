@@ -109,8 +109,10 @@ export function app_message_reply_choices() {
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(item) {
+      let data = item;
+    }
+    each(filtered, lambda2);
     log({
       filtered,
       u,
