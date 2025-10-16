@@ -107,7 +107,7 @@ export function app_message_reply_choices() {
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda() {}
-  let matcher = reply_on_match(fn26, lambda);
+  let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
     fn4,
     fn6,
@@ -120,7 +120,7 @@ export function app_message_reply_choices() {
     fn12,
     thanks,
     fn24,
-    fn20,
+    matcher,
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
