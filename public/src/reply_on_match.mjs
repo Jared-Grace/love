@@ -11,9 +11,19 @@ export function reply_on_match(fn, on_match) {
   let matcher = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
-    let property = "before";
-    capture(u, property, possibilities);
+    capture("before");
+    function capture(property) {
+      function lambda(item) {
+        let index = object_property_get(item, "index");
+        let d = object_property_initialize(item, "data", {});
+        object_property_set(d, u, {
+          [property]: index,
+        });
+      }
+      each(possibilities, lambda);
+    }
     possibilities = await reply_wrap_invoke(fn, possibilities);
+    capture("after");
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
     if (ne) {
@@ -22,14 +32,4 @@ export function reply_on_match(fn, on_match) {
     return filtered;
   };
   return matcher;
-  function capture(u, property, possibilities) {
-    function lambda(item) {
-      let index = object_property_get(item, "index");
-      let d = object_property_initialize(item, "data", {});
-      object_property_set(d, u, {
-        [property]: index,
-      });
-    }
-    each(possibilities, lambda);
-  }
 }
