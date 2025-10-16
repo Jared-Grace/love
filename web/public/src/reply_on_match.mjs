@@ -8,7 +8,8 @@ export function reply_on_match(fn, on_match) {
   let matcher = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
-    let mapped = list_map(list, function lambda(item) {});
+    function lambda(item) {}
+    let mapped = list_map(list, lambda);
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
