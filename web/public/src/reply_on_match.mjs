@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { reply_wrap_invoke } from "../../../love/public/src/reply_wrap_invoke.mjs";
@@ -8,7 +9,9 @@ export function reply_on_match(fn, on_match) {
   let matcher = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
-    function lambda(item) {}
+    function lambda(item) {
+      object_property_set(object, property_name, value);
+    }
     let mapped = list_map(list, lambda);
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
