@@ -112,13 +112,12 @@ export function app_message_reply_choices() {
   function lambda(filtered, u) {
     function lambda2(item) {
       let { data } = item;
-      let value = object_property_get(object, property_name);
+      let value = object_property_get(data, u);
+      log({
+        value,
+      });
     }
     each(filtered, lambda2);
-    log({
-      filtered,
-      u,
-    });
   }
   let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
