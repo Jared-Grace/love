@@ -15,7 +15,7 @@ export function reply_on_match(fn, on_match) {
       let index = object_property_get(item, "index");
       let d = object_property_initialize(item, "data", {});
       object_property_set(d, u, {
-        index_before,
+        index_before: index,
       });
     }
     let mapped = list_map(possibilities, lambda);
