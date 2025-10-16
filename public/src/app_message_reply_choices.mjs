@@ -115,8 +115,9 @@ export function app_message_reply_choices() {
       let { data, message } = item;
       let value = object_property_get(data, u);
       let { before, after } = value;
+      const sliced = string_slice(message, before + 2, after + 2);
       log({
-        value: string_slice(message, before + 2, after + 2),
+        value: sliced,
       });
     }
     each(filtered, lambda2);
