@@ -114,9 +114,9 @@ export function app_message_reply_choices() {
     function lambda2(item) {
       let { data, message } = item;
       let value = object_property_get(data, u);
-      let before = value;
+      let { before, after } = value;
       log({
-        value: string_slice(),
+        value: string_slice(message, before, after),
       });
     }
     each(filtered, lambda2);
