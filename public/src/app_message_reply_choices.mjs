@@ -49,6 +49,7 @@ export function app_message_reply_choices() {
   let fn2 = reply_on_match_output(fn13, "✝️ Jesus is Lord! 👑");
   const god = "god";
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
+  let fn26 = reply_on_match_output(fn_a, item);
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
   let r_cities = reply_cities();
