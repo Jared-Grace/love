@@ -1,3 +1,4 @@
+import { reply_either_both } from "../../../love/public/src/reply_either_both.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
@@ -36,8 +37,7 @@ export function app_message_reply_choices() {
   const sequence = ["in", fn13];
   let fn17 = reply_sequence_optional(sequence);
   const brother = "brother";
-  let both = reply_sequence([dear, brother]);
-  let fn23 = reply_choice([dear, brother, both]);
+  let fn23 = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
