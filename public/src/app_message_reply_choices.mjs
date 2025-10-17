@@ -112,14 +112,10 @@ export function app_message_reply_choices() {
     ],
     item,
   );
-  let fn12 = reply_sequence([
-    "come",
-    "and",
-    "fellowship",
-    "with",
-    us,
-    according_to_gods_will,
-  ]);
+  let fn12 = reply_sequence_output(
+    ["come", "and", "fellowship", "with", us, according_to_gods_will],
+    "If God wills! Right now no money for travel",
+  );
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
   let d = digits();
