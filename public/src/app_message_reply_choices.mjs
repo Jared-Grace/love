@@ -1,3 +1,4 @@
+import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { reply_sequence_outputs } from "../../../love/public/src/reply_sequence_outputs.mjs";
@@ -89,17 +90,21 @@ export function app_message_reply_choices() {
   let o_us = reply_optional(us);
   let fn14 = reply_sequence_optional(["according", "to"]);
   let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
-  let fn5 = reply_sequence([
-    iam,
-    requesting,
-    you,
-    "to",
-    "support",
-    o_us,
-    "in",
-    "ministry",
-    according_to_gods_will,
-  ]);
+  let greetings2 = app_reply_choices_give();
+  let fn5 = reply_sequence_output(
+    [
+      iam,
+      requesting,
+      you,
+      "to",
+      "support",
+      o_us,
+      "in",
+      "ministry",
+      according_to_gods_will,
+    ],
+    greetings2,
+  );
   let fn12 = reply_sequence([
     "come",
     "and",
