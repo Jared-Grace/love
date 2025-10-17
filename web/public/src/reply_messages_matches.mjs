@@ -4,6 +4,6 @@ import { list_filter_property } from "../../../love/public/src/list_filter_prope
 export async function reply_messages_matches(messages, start) {
   marker("1");
   let result = await reply_messages_all(start, messages);
-  let filtered = list_filter_property(result, "matches", false);
+  let filtered = list_filter_property(result, "matches", true);
   return filtered;
 }
