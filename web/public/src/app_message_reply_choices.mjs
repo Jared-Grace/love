@@ -140,7 +140,7 @@ export function app_message_reply_choices() {
       let quote = list_join_empty(sliced);
       reply_on_match_output_add(
         possibility,
-        "If you want, please change the wording of this and send me another message:",
+        "If you want, please change the wording of what you said and send me another message. Here is what you said: ",
       );
       reply_on_match_output_add(possibility, quote);
     }
