@@ -116,8 +116,8 @@ export function app_message_reply_choices() {
       let { data, tokens } = item;
       let { before, after } = object_property_get(data, u);
       const sliced = list_slice(tokens, before, after);
-      let joined = list_join_empty(sliced);
-      reply_on_match_output_add(possibility, item);
+      let quote = list_join_empty(sliced);
+      reply_on_match_output_add(possibility, quote);
     }
     each(filtered, lambda2);
   }
