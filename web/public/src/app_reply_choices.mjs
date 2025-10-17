@@ -1,3 +1,4 @@
+import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
@@ -14,7 +15,6 @@ import { app_reply_pray } from "../../../love/public/src/app_reply_pray.mjs";
 import { emoji_family } from "../../../love/public/src/emoji_family.mjs";
 import { emoji_hands_raising } from "../../../love/public/src/emoji_hands_raising.mjs";
 import { emoji_church } from "../../../love/public/src/emoji_church.mjs";
-import { string_lord_bless } from "../../../love/public/src/string_lord_bless.mjs";
 import { string_lord_bless_your } from "../../../love/public/src/string_lord_bless_your.mjs";
 import { emoji_phone } from "../../../love/public/src/emoji_phone.mjs";
 import { emoji_sleep_face } from "../../../love/public/src/emoji_sleep_face.mjs";
@@ -58,12 +58,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Bless",
-      response:
-        prayer_start() +
-        string_lord_bless() +
-        blessed +
-        " exceedingly abundantly more than anyone can ask or think " +
-        prayer_end(),
+      response: prayer_blessing(blessed),
     },
     {
       text: emoji_pray() + " Bless short",
