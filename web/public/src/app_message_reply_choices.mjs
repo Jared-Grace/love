@@ -118,6 +118,7 @@ export function app_message_reply_choices() {
       const sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
       reply_on_match_output_add(possibility, quote);
+      reply_on_match_output_add(possibility, quote);
     }
     each(filtered, lambda2);
   }
