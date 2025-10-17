@@ -60,7 +60,8 @@ export function app_reply_choices() {
       response:
         prayer_start() +
         string_lord_bless() +
-        "you, your family, your church and your country exceedingly abundantly more than anyone can ask or think " +
+        "you, your family, your church and your country" +
+        " exceedingly abundantly more than anyone can ask or think " +
         prayer_end(),
     },
     {
