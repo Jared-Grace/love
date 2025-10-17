@@ -121,7 +121,7 @@ export function app_message_reply_choices() {
     item5,
   );
   let thank_you = reply_sequence(["thank", "you"]);
-  let thanks = reply_choice(["thanks", thank_you]);
+  let thanks = reply_choice_output(["thanks", thank_you]);
   let d = digits();
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);
