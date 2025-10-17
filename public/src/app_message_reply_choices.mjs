@@ -90,7 +90,7 @@ export function app_message_reply_choices() {
   let o_us = reply_optional(us);
   let fn14 = reply_sequence_optional(["according", "to"]);
   let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
-  let greetings2 = app_reply_choices_give();
+  let item = app_reply_choices_give();
   let fn5 = reply_sequence_output(
     [
       iam,
@@ -103,7 +103,7 @@ export function app_message_reply_choices() {
       "ministry",
       according_to_gods_will,
     ],
-    greetings2,
+    item,
   );
   let fn12 = reply_sequence([
     "come",
