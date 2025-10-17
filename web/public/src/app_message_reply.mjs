@@ -8,6 +8,6 @@ export async function app_message_reply() {
   let downloads = await app_message_download();
   let messages = list_map_property(downloads, "message");
   let start = app_message_reply_choices();
-  let result = reply_messages_matches_not(messages, start);
+  let result = await reply_messages_matches_not(messages, start);
   return result;
 }
