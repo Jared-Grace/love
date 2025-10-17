@@ -117,6 +117,9 @@ export function app_message_reply_choices() {
       let value = object_property_get(data, u);
       let { before, after } = value;
       const sliced = list_slice(message, before, after);
+      log({
+        sliced,
+      });
       let joined = list_join_empty(sliced);
       log({
         value: joined,
