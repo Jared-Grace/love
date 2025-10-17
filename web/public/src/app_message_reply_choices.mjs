@@ -1,3 +1,4 @@
+import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_either_both } from "../../../love/public/src/reply_either_both.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -41,8 +42,7 @@ export function app_message_reply_choices() {
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
   const sequence = [hi_word, my_dear_brother];
-  let fn3 = reply_sequence(sequence);
-  let fn6 = reply_on_match_output(fn3, greetings);
+  let fn6 = reply_sequence_output(sequence, greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
