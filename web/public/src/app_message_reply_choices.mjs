@@ -1,3 +1,4 @@
+import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
@@ -78,9 +79,10 @@ export function app_message_reply_choices() {
   let title = reply_sequence([iam, fn9, titles]);
   let item3 = prayer_blessing("your ministry");
   let fn3 = reply_on_match_output(title, item3);
-  let iam_titled_name = reply_sequence_outputs(
+  let item4 = app_reply_choices_name();
+  let iam_titled_name = reply_sequence_output(
     [iam, titles, names_once_or_more],
-    [],
+    item4,
   );
   let fn18 = reply_optional("in");
   let item2 = app_reply_choices_location();
