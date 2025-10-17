@@ -48,7 +48,7 @@ export function app_reply_choices() {
   );
   let pray_request = app_reply_choices_will_done_fragment();
   let will = app_reply_pray("Will", pray_request);
-  let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
+  let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   const blessed = "you, your family, your church and your country";
   let v = [
     {
