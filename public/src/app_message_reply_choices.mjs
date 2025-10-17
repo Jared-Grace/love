@@ -33,7 +33,7 @@ export function app_message_reply_choices() {
   const christ = "christ";
   const jesus = "jesus";
   const god = "god";
-  let fn13 = reply_choice([jesus, christ]);
+  let fn13 = reply_either_both(jesus, christ);
   const sequence = ["in", fn13];
   let fn17 = reply_sequence_optional(sequence);
   const brother = "brother";
