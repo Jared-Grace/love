@@ -112,8 +112,8 @@ export function app_message_reply_choices() {
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
-    function lambda2(item) {
-      let { data, tokens } = item;
+    function lambda2(possibility) {
+      let { data, tokens } = possibility;
       let { before, after } = object_property_get(data, u);
       const sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
