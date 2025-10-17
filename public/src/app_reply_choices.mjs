@@ -1,3 +1,4 @@
+import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
@@ -99,9 +100,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Give",
-      response:
-        emoji_pray() +
-        " Sorry, I have nothing to give you at this time. According to the desire of the LORD: May the LORD provide and may the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask.",
+      response: app_reply_choices_give(),
     },
     {
       text: emoji_wave() + " Greetings",
