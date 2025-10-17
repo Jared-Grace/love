@@ -1,3 +1,4 @@
+import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
@@ -76,14 +77,11 @@ export function app_message_reply_choices() {
   let title = reply_sequence([iam, fn9, titles]);
   let titled_name = reply_sequence_optional([titles, names_once_or_more]);
   let fn18 = reply_optional("in");
-  let fn19 = reply_sequence([
-    iam,
-    titled_name,
-    "from",
-    r_cities,
-    fn18,
-    r_countries,
-  ]);
+  let item2 = app_reply_choices_location();
+  let fn19 = reply_sequence_output(
+    [iam, titled_name, "from", r_cities, fn18, r_countries],
+    item2,
+  );
   let fn25 = reply_optional("ing");
   let requesting = reply_sequence(["request", fn25]);
   const us = "us";
