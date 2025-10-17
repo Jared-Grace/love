@@ -118,7 +118,7 @@ export function app_message_reply_choices() {
   let item5 = app_reply_pray_response(pray_request);
   let fn12 = reply_sequence_output(
     ["come", "and", "fellowship", "with", us, according_to_gods_will],
-    item5,
+    "testtt",
   );
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
