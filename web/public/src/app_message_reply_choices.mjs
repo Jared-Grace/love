@@ -34,14 +34,14 @@ export function app_message_reply_choices() {
   const jesus = "jesus";
   const god = "god";
   let fn13 = reply_either_both(jesus, christ);
-  const sequence = ["in", fn13];
-  let fn17 = reply_sequence_optional(sequence);
+  let fn17 = reply_sequence_optional(["in", fn13]);
   const brother = "brother";
   let fn23 = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
-  let fn3 = reply_sequence([hi_word, my_dear_brother]);
+  const newLocal = [hi_word, my_dear_brother];
+  let fn3 = reply_sequence(newLocal);
   let fn6 = reply_on_match_output(fn3, greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
