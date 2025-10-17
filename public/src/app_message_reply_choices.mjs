@@ -1,3 +1,5 @@
+import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
+import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
@@ -112,9 +114,11 @@ export function app_message_reply_choices() {
     ],
     item,
   );
+  let pray_request = app_reply_choices_will_done_fragment();
+  let item5 = app_reply_pray_response(pray_request);
   let fn12 = reply_sequence_output(
     ["come", "and", "fellowship", "with", us, according_to_gods_will],
-    "If God wills! ",
+    item5,
   );
   let thank_you = reply_sequence(["thank", "you"]);
   let thanks = reply_choice(["thanks", thank_you]);
