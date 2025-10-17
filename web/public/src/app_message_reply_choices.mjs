@@ -50,7 +50,7 @@ export function app_message_reply_choices() {
   const god = "god";
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
-  let fn27 = reply_choice(choices2);
+  let fn27 = reply_choice([]);
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
   let r_cities = reply_cities();
