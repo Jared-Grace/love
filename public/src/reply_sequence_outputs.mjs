@@ -1,3 +1,4 @@
+import { reply_on_match_output_multiple } from "../../../love/public/src/reply_on_match_output_multiple.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 export function reply_sequence_outputs(sequence, greetings) {
