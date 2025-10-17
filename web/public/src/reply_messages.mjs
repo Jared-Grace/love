@@ -1,6 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -24,9 +23,6 @@ export async function reply_messages(messages, start) {
         let result_loop = await reply_messages_inner(taken, start);
         value = object_property_get(result_loop, "matches");
         if (equal(value, true)) {
-          log({
-            result_loop,
-          });
           return value;
         }
       }
