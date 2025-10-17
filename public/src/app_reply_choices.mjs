@@ -1,3 +1,4 @@
+import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
@@ -29,7 +30,6 @@ import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 import { emoji_cross } from "../../../love/public/src/emoji_cross.mjs";
 import { emoji_smile } from "../../../love/public/src/emoji_smile.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
-import { emoji_trinity } from "../../../love/public/src/emoji_trinity.mjs";
 import { emoji_fire } from "../../../love/public/src/emoji_fire.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
@@ -97,7 +97,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_fire() + " Glory",
-      response: emoji_pray() + " All glory to God " + emoji_trinity() + " ! ",
+      response: app_reply_choices_glory(),
     },
     {
       text: emoji_pray() + " Give",
