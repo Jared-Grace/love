@@ -1,3 +1,4 @@
+import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
@@ -45,7 +46,8 @@ export function app_reply_choices() {
     "Travel pray",
     "give you safe travels " + emoji_dove(),
   );
-  let will = app_reply_pray("Will", "have His will done " + emoji_dove());
+  let pray_request = app_reply_choices_will_done_fragment();
+  let will = app_reply_pray("Will", pray_request);
   let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
   const blessed = "you, your family, your church and your country";
   let v = [
