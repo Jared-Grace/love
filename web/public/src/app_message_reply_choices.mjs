@@ -40,8 +40,8 @@ export function app_message_reply_choices() {
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
-  const newLocal = [hi_word, my_dear_brother];
-  let fn3 = reply_sequence(newLocal);
+  const sequence = [hi_word, my_dear_brother];
+  let fn3 = reply_sequence(sequence);
   let fn6 = reply_on_match_output(fn3, greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
