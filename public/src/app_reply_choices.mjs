@@ -1,3 +1,4 @@
+import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
@@ -173,12 +174,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_globe_americas() + " Location",
-      response:
-        emoji_globe_americas() +
-        " " +
-        string_the_servant_of_god_is() +
-        " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. " +
-        emoji_pray(),
+      response: app_reply_choices_location(),
     },
     {
       text: emoji_wave() + " Meet",
