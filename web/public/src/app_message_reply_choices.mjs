@@ -56,7 +56,7 @@ export function app_message_reply_choices() {
   let fn11 = reply_optional("i");
   let v = prayer_end();
   let v2 = app_reply_choices_praise();
-  let fn10 = reply_sequence_outputs(["prai", fn11, "se", god], [v, v2]);
+  let fn10 = reply_sequence_outputs(["prai", fn11, "se", god], [v2, v]);
   let r_cities = reply_cities();
   let r_countries = reply_countries();
   let fn21 = reply_optional("i");
