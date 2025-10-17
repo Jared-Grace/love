@@ -78,10 +78,13 @@ export function app_message_reply_choices() {
   let title = reply_sequence([iam, fn9, titles]);
   let item3 = prayer_blessing("your ministry");
   let fn3 = reply_on_match_output(title, item3);
-  let titled_name = reply_sequence([iam, titles, names_once_or_more]);
+  let iam_titled_name = reply_sequence_outputs(
+    [iam, titles, names_once_or_more],
+    [],
+  );
   let fn18 = reply_optional("in");
   let item2 = app_reply_choices_location();
-  let fn27 = reply_choice([iam, titled_name]);
+  let fn27 = reply_choice([iam, iam_titled_name]);
   let fn19 = reply_sequence_output(
     [fn27, "from", r_cities, fn18, r_countries],
     item2,
