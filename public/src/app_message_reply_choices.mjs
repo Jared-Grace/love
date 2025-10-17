@@ -78,7 +78,7 @@ export function app_message_reply_choices() {
   let title = reply_sequence([iam, fn9, titles]);
   let item3 = prayer_blessing("your ministry");
   let fn3 = reply_on_match_output(title, item3);
-  let titled_name = reply_sequence_optional([titles, names_once_or_more]);
+  let titled_name = reply_sequence([titles, names_once_or_more]);
   let fn18 = reply_optional("in");
   let item2 = app_reply_choices_location();
   let fn19 = reply_sequence_output(
