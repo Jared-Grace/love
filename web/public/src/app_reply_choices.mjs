@@ -1,3 +1,4 @@
+import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
@@ -179,12 +180,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_wave() + " Name",
-      response:
-        emoji_pray() +
-        " " +
-        string_the_servant_of_god_is() +
-        " called Jared Patten Mathis " +
-        emoji_handshake(),
+      response: app_reply_choices_name(),
     },
     {
       text: emoji_ok() + "Okay",
