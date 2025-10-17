@@ -8,6 +8,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_unique } from "./list_unique.mjs";
 export async function reply_messages_all(start, messages) {
   marker("1");
   async function lambda(message) {
@@ -29,6 +30,7 @@ export async function reply_messages_all(start, messages) {
     }
     return result;
   }
+  messages = list_unique(messages);
   let result = await list_map_unordered_async(messages, lambda);
   return result;
 }
