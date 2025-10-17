@@ -1,3 +1,4 @@
+import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
@@ -122,7 +123,8 @@ export function app_message_reply_choices() {
     item5,
   );
   let thank_you = reply_sequence(["thank", "you"]);
-  let thanks = reply_choice_output(["thanks", thank_you],app_reply_choices_glory());
+  let item6 = app_reply_choices_glory();
+  let thanks = reply_choice_output(["thanks", thank_you], item6);
   let d = digits();
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);
