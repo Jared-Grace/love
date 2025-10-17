@@ -50,7 +50,7 @@ export function app_message_reply_choices() {
   let fn2 = reply_on_match_output(fn13, "✝️ Jesus is Lord! 👑");
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
-  let words_single = reply_choice([fn2, fn7, fn26]);
+  let phrases_single = reply_choice([fn2, fn7, fn26]);
   let fn11 = reply_optional("i");
   let fn10 = reply_sequence(["prai", fn11, "se", god]);
   let r_cities = reply_cities();
@@ -131,7 +131,7 @@ export function app_message_reply_choices() {
   let choices_main = reply_choice([
     fn4,
     fn6,
-    words_single,
+    phrases_single,
     fn10,
     title,
     fn19,
