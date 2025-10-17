@@ -113,7 +113,7 @@ export function app_message_reply_choices() {
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
     function lambda2(item) {
-      let { data, message, tokens } = item;
+      let { data, tokens } = item;
       let value = object_property_get(data, u);
       let { before, after } = value;
       const sliced = list_slice(tokens, before, after);
