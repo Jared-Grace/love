@@ -1,3 +1,5 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -18,7 +20,6 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_countries } from "./reply_countries.mjs";
-import { string_slice } from "./string_slice.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greetings = app_reply_response_greetings();
@@ -115,9 +116,12 @@ export function app_message_reply_choices() {
       let { data, message } = item;
       let value = object_property_get(data, u);
       let { before, after } = value;
-      const sliced = list_slice(message, before, after);lje
+      const sliced = list_slice(message, before, after);
+      let joined = list_join_empty(letters);
       log({
-        value: sliced,message,item
+        value: sliced,
+        message,
+        item,
       });
     }
     each(filtered, lambda2);
