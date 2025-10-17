@@ -1,8 +1,8 @@
+import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -114,13 +114,10 @@ export function app_message_reply_choices() {
   function lambda(filtered, u) {
     function lambda2(item) {
       let { data, tokens } = item;
-      let value = object_property_get(data, u);
-      let { before, after } = value;
+      let { before, after } = object_property_get(data, u);
       const sliced = list_slice(tokens, before, after);
       let joined = list_join_empty(sliced);
-      log({
-        value: joined,
-      });
+      reply_on_match_output_add(possibility, item);
     }
     each(filtered, lambda2);
   }
