@@ -132,6 +132,7 @@ export function app_message_reply_choices() {
     fn6,
     fn2,
     fn7,
+    fn26,
     fn10,
     title,
     fn19,
