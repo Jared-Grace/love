@@ -31,6 +31,7 @@ export function app_message_reply_choices() {
   const dear = "dear";
   const christ = "christ";
   const jesus = "jesus";
+  const god = "god";
   let fn13 = reply_choice([jesus, christ]);
   const sequence = ["in", fn13];
   let fn17 = reply_sequence_optional(sequence);
@@ -47,7 +48,6 @@ export function app_message_reply_choices() {
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
   let fn2 = reply_on_match_output(fn13, "✝️ Jesus is Lord! 👑");
-  const god = "god";
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
   let words_single = reply_choice([fn2, fn7, fn26]);
