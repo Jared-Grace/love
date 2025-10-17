@@ -75,6 +75,7 @@ export function app_message_reply_choices() {
   let names_once_or_more = reply_once_or_more(names);
   let fn9 = reply_optional("a");
   let title = reply_sequence([iam, fn9, titles]);
+  let fn3 = reply_on_match_output(fn_a, item3);
   let titled_name = reply_sequence_optional([titles, names_once_or_more]);
   let fn18 = reply_optional("in");
   let item2 = app_reply_choices_location();
