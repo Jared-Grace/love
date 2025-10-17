@@ -1,3 +1,4 @@
+import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
@@ -9,7 +10,6 @@ import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { emoji_dove } from "../../../love/public/src/emoji_dove.mjs";
 import { app_reply_pray } from "../../../love/public/src/app_reply_pray.mjs";
 import { emoji_family } from "../../../love/public/src/emoji_family.mjs";
-import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
 import { emoji_hands_raising } from "../../../love/public/src/emoji_hands_raising.mjs";
 import { emoji_church } from "../../../love/public/src/emoji_church.mjs";
 import { string_lord_bless } from "../../../love/public/src/string_lord_bless.mjs";
@@ -214,10 +214,7 @@ export function app_reply_choices() {
     },
     {
       text: "🎵 Praise",
-      response:
-        " 🎵 " +
-        emoji_voice() +
-        " Praise the LORD our God in the name of Jesus Christ! 🎶",
+      response: app_reply_choices_praise(),
     },
     {
       text: emoji_pray() + " Pray",
