@@ -46,6 +46,7 @@ export function app_reply_choices() {
   );
   let will = app_reply_pray("Will", "have His will done " + emoji_dove());
   let with2 = app_reply_pray("With", "always be with you " + emoji_dove());
+  const object = "you, your family, your church and your country";
   let v = [
     {
       text: emoji_pray() + " Amen",
@@ -60,7 +61,7 @@ export function app_reply_choices() {
       response:
         prayer_start() +
         string_lord_bless() +
-        "you, your family, your church and your country" +
+        object +
         " exceedingly abundantly more than anyone can ask or think " +
         prayer_end(),
     },
