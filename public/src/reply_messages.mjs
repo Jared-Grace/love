@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -10,6 +11,7 @@ import { reply_messages_inner } from "../../../love/public/src/reply_messages_in
 import { string_take } from "./string_take.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function reply_messages(messages, start) {
+  marker("1");
   async function lambda(message) {
     let result = await reply_messages_inner(message, start);
     let value = object_property_get(result, "matches");
