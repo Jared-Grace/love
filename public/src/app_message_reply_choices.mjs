@@ -1,3 +1,4 @@
+import { reply_sequence_outputs } from "../../../love/public/src/reply_sequence_outputs.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_either_both } from "../../../love/public/src/reply_either_both.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
@@ -51,7 +52,7 @@ export function app_message_reply_choices() {
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
   let phrases_single = reply_choice([fn2, fn7, fn26]);
   let fn11 = reply_optional("i");
-  let fn10 = reply_sequence_output(["prai", fn11, "se", god]);
+  let fn10 = reply_sequence_outputs(["prai", fn11, "se", god], []);
   let r_cities = reply_cities();
   let r_countries = reply_countries();
   let fn21 = reply_optional("i");
