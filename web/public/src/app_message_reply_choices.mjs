@@ -1,3 +1,4 @@
+import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.mjs";
 import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
 import { reply_word_brother } from "../../../love/public/src/reply_word_brother.mjs";
 import { reply_word_hello } from "../../../love/public/src/reply_word_hello.mjs";
@@ -43,9 +44,7 @@ export function app_message_reply_choices() {
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
-  const jesus = "jesus";
-  const christ = "christ";
-  let phrase_jesus = reply_either_both(jesus, christ);
+  let phrase_jesus = reply_phrase_jesus();
   let fn17 = reply_sequence_optional(["in", phrase_jesus]);
   const brother = reply_word_brother();
   const dear = "dear";
