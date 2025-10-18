@@ -1,6 +1,4 @@
-import { app_message_reply_trust } from "../../../love/public/src/app_message_reply_trust.mjs";
-import { app_message_reply_god } from "../../../love/public/src/app_message_reply_god.mjs";
-import { app_message_reply_jesus } from "../../../love/public/src/app_message_reply_jesus.mjs";
+import { app_message_reply_phrases_single } from "../../../love/public/src/app_message_reply_phrases_single.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
@@ -42,10 +40,7 @@ export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
-  let fn2 = app_message_reply_jesus();
-  let fn7 = app_message_reply_god();
-  let fn26 = app_message_reply_trust();
-  let phrases_single = reply_choice([fn2, fn7, fn26]);
+  let phrases_single = app_message_reply_phrases_single();
   let fn11 = reply_optional("i");
   let v = prayer_end();
   let v2 = app_reply_choices_praise();
