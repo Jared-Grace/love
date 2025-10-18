@@ -46,9 +46,10 @@ export function app_message_reply_choices() {
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus = reply_phrase_jesus();
-  let phrase_jesus2 = reply_phrase_jesus();
   let n = reply_word_in();
-  let in_christ = reply_sequence_optional([n, phrase_jesus2]);
+  let phrase_jesus2 = reply_phrase_jesus();
+  let n2 = reply_word_in();
+  let in_christ = reply_sequence_optional([n2, phrase_jesus2]);
   const brother = reply_word_brother();
   const dear = "dear";
   let db = reply_either_both(dear, brother);
