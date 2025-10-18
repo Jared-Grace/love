@@ -42,14 +42,13 @@ export function app_message_reply_choices() {
   let greetings = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
-  let phrase_jesus = reply_phrase_jesus();
-  let n = reply_word_in();
   let my_dear_brother = reply_phrase_my_dear_brother();
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
+  let phrase_jesus = reply_phrase_jesus();
   let fn2 = reply_on_match_output(phrase_jesus, "✝️ Jesus is Lord! 👑");
   const god = reply_word_god();
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
@@ -82,6 +81,7 @@ export function app_message_reply_choices() {
     [iam, titles, names_once_or_more],
     item4,
   );
+  let n = reply_word_in();
   let fn18 = reply_optional(n);
   let item2 = app_reply_choices_location();
   let fn27 = reply_choice([iam, iam_titled_name]);
