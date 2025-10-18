@@ -39,7 +39,6 @@ import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
-  let you = reply_phrase_you();
   let hru = app_message_reply_how_r_u();
   let phrase_jesus = reply_phrase_jesus();
   let fn2 = reply_on_match_output(phrase_jesus, "✝️ Jesus is Lord! 👑");
@@ -89,6 +88,7 @@ export function app_message_reply_choices() {
   let fn14 = reply_sequence_optional(["according", "to"]);
   let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
   let item = app_reply_choices_give();
+  let you = reply_phrase_you();
   let fn5 = reply_sequence_output(
     [
       iam,
