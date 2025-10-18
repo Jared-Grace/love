@@ -1,5 +1,5 @@
+import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
-import { reply_phrase_my_dear_brother } from "../../../love/public/src/reply_phrase_my_dear_brother.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
 import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.mjs";
 import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
@@ -39,8 +39,7 @@ import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
-  let my_dear_brother = reply_phrase_my_dear_brother();
-  let you = reply_sequence(["you", my_dear_brother]);
+  let you = reply_phrase_you();
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
   let fn4 = reply_on_match_output(fn, hru);
