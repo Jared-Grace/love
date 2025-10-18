@@ -53,8 +53,8 @@ export function app_message_reply_choices() {
   ]);
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
-  let fn9 = reply_optional("a");
-  let title = reply_sequence([iam, fn9, titles]);
+  let o_a = reply_optional("a");
+  let title = reply_sequence([iam, o_a, titles]);
   let item3 = prayer_blessing("your ministry");
   let fn3 = reply_on_match_output(title, item3);
   let item4 = app_reply_choices_name();
