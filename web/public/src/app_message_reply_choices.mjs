@@ -41,13 +41,14 @@ export function app_message_reply_choices() {
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let fn2 = app_message_reply_jesus();
-  const god = reply_word_god();
-  let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
+  const god1 = reply_word_god();
+  let fn7 = reply_on_match_output(god1, "❤️‍🔥 God is love! ✝️");
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
   let phrases_single = reply_choice([fn2, fn7, fn26]);
   let fn11 = reply_optional("i");
   let v = prayer_end();
   let v2 = app_reply_choices_praise();
+  const god = reply_word_god();
   let fn10 = reply_sequence_outputs(["prai", fn11, "se", god], [v2, v]);
   let r_cities = reply_cities();
   let r_countries = reply_countries();
