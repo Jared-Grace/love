@@ -6,6 +6,5 @@ export async function prompt_previous_open() {
   marker("1");
   let previous = await prompt_previous_get();
   let { f_name } = await function_run_line_parse(previous);
-  await function_open(f_name2);
-  return v;
+  await function_open(f_name);
 }
