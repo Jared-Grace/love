@@ -45,11 +45,11 @@ export function app_message_reply_choices() {
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus = reply_phrase_jesus();
-  let fn17 = reply_sequence_optional(["in", phrase_jesus]);
+  let in_christ = reply_sequence_optional(["in", phrase_jesus]);
   const brother = reply_word_brother();
   const dear = "dear";
   let db = reply_either_both(dear, brother);
-  let fn16 = reply_sequence([my, db, fn17]);
+  let fn16 = reply_sequence([my, db, in_christ]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
