@@ -1,3 +1,4 @@
+import { app_message_reply_god } from "../../../love/public/src/app_message_reply_god.mjs";
 import { app_message_reply_jesus } from "../../../love/public/src/app_message_reply_jesus.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
@@ -41,8 +42,7 @@ export function app_message_reply_choices() {
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let fn2 = app_message_reply_jesus();
-  const god1 = reply_word_god();
-  let fn7 = reply_on_match_output(god1, "❤️‍🔥 God is love! ✝️");
+  let fn7 = app_message_reply_god();
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
   let phrases_single = reply_choice([fn2, fn7, fn26]);
   let fn11 = reply_optional("i");
