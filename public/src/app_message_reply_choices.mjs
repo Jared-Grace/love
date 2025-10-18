@@ -47,8 +47,8 @@ export function app_message_reply_choices() {
   let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus = reply_phrase_jesus();
   let phrase_jesus2 = reply_phrase_jesus();
-  let v3 = reply_word_in();
-  let in_christ = reply_sequence_optional([v3, phrase_jesus2]);
+  let n = reply_word_in();
+  let in_christ = reply_sequence_optional([n, phrase_jesus2]);
   const brother = reply_word_brother();
   const dear = "dear";
   let db = reply_either_both(dear, brother);
@@ -93,7 +93,7 @@ export function app_message_reply_choices() {
     [iam, titles, names_once_or_more],
     item4,
   );
-  let fn18 = reply_optional("in");
+  let fn18 = reply_optional(n);
   let item2 = app_reply_choices_location();
   let fn27 = reply_choice([iam, iam_titled_name]);
   let fn19 = reply_sequence_output(
@@ -115,7 +115,7 @@ export function app_message_reply_choices() {
       "to",
       "support",
       o_us,
-      "in",
+      n,
       "ministry",
       according_to_gods_will,
     ],
