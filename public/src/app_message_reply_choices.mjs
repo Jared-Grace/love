@@ -42,13 +42,13 @@ export function app_message_reply_choices() {
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
-  const dear = "dear";
   const christ = "christ";
   const jesus = "jesus";
   const god = "god";
   let fn13 = reply_either_both(jesus, christ);
   let fn17 = reply_sequence_optional(["in", fn13]);
   const brother = reply_word_brother();
+  const dear = "dear";
   let fn23 = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
