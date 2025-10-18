@@ -39,6 +39,7 @@ export function app_message_reply_choices() {
   let greetings = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
+  let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
   const dear = "dear";
@@ -52,7 +53,6 @@ export function app_message_reply_choices() {
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
-  let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
