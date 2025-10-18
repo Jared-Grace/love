@@ -298,9 +298,9 @@ export function app_reply_choices() {
     },
     with2,
     {
-      text: emoji_phone() + " Word",
+      text: emoji_pray() + " Word",
       response:
-        emoji_phone() +
+        emoji_pray() +
         " Behold, I am an unworthy servant of the LORD. May the word of the LORD come true!",
     },
   ];
