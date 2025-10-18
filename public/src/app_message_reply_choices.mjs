@@ -42,7 +42,7 @@ export function app_message_reply_choices() {
   let you = reply_phrase_you();
   let fn = reply_sequence(["how", "are", you]);
   let hru_response = app_reply_response_how_r_u();
-  let fn4 = reply_on_match_output(fn, hru_response);
+  let hru = reply_on_match_output(fn, hru_response);
   let phrase_jesus = reply_phrase_jesus();
   let fn2 = reply_on_match_output(phrase_jesus, "✝️ Jesus is Lord! 👑");
   const god = reply_word_god();
@@ -137,7 +137,7 @@ export function app_message_reply_choices() {
   }
   let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
-    fn4,
+    hru,
     greeting,
     phrases_single,
     fn10,
