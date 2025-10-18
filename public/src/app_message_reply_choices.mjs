@@ -1,8 +1,8 @@
+import { app_message_reply_jesus } from "../../../love/public/src/app_message_reply_jesus.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
-import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.mjs";
 import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
@@ -40,8 +40,7 @@ export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
-  let phrase_jesus = reply_phrase_jesus();
-  let fn2 = reply_on_match_output(phrase_jesus, "✝️ Jesus is Lord! 👑");
+  let fn2 = app_message_reply_jesus();
   const god = reply_word_god();
   let fn7 = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
   let fn26 = reply_on_match_output("trust", "✝️ Love always trusts! 🙏");
