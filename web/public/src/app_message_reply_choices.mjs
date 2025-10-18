@@ -1,7 +1,7 @@
+import { reply_phrase_my_dear_brother } from "../../../love/public/src/reply_phrase_my_dear_brother.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
 import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.mjs";
 import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
-import { reply_word_brother } from "../../../love/public/src/reply_word_brother.mjs";
 import { reply_word_hello } from "../../../love/public/src/reply_word_hello.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
@@ -15,7 +15,6 @@ import { app_reply_choices_praise } from "../../../love/public/src/app_reply_cho
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { reply_sequence_outputs } from "../../../love/public/src/reply_sequence_outputs.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
-import { reply_either_both } from "../../../love/public/src/reply_either_both.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
@@ -45,18 +44,7 @@ export function app_message_reply_choices() {
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let phrase_jesus = reply_phrase_jesus();
   let n = reply_word_in();
-  let fn15 = reply_optional("y");
-  let my = reply_sequence_optional(["m", fn15]);
-  let phrase_jesus2 = reply_phrase_jesus();
-  let n2 = reply_word_in();
-  let in_christ = reply_sequence_optional([n2, phrase_jesus2]);
-  const brother = reply_word_brother();
-  const dear = "dear";
-  let db = reply_either_both(dear, brother);
-  let fn16 = reply_sequence([my, db, in_christ]);
-  const choices = [fn16, my];
-  let c = reply_choice(choices);
-  let my_dear_brother = reply_optional(c);
+  let my_dear_brother = reply_phrase_my_dear_brother();
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
