@@ -244,6 +244,7 @@
   "fslr": "functions_log_remove",
   "rc": "reply_choice",
   "lrv": "list_reverse",
-  "lia": "list_is_assert"
+  "lia": "list_is_assert",
+  "po": "prompt_previous_open"
  }
 }
