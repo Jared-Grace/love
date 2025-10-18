@@ -38,7 +38,7 @@ export function app_message_reply_choices() {
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
-  let fn10 = app_message_reply_praise_god();
+  let praise_god = app_message_reply_praise_god();
   let r_cities = reply_cities();
   let r_countries = reply_countries();
   let fn21 = reply_optional("i");
@@ -127,7 +127,7 @@ export function app_message_reply_choices() {
     hru,
     greeting,
     phrases_single,
-    fn10,
+    praise_god,
     fn3,
     fn19,
     fn5,
