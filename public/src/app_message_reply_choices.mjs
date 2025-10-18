@@ -1,3 +1,4 @@
+import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
@@ -31,7 +32,6 @@ import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
-import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
@@ -40,10 +40,7 @@ export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
   let you = reply_phrase_you();
-  let you2 = reply_phrase_you();
-  let fn = reply_sequence(["how", "are", you2]);
-  let hru_response = app_reply_response_how_r_u();
-  let hru = reply_on_match_output(fn, hru_response);
+  let hru = app_message_reply_how_r_u();
   let phrase_jesus = reply_phrase_jesus();
   let fn2 = reply_on_match_output(phrase_jesus, "✝️ Jesus is Lord! 👑");
   const god = reply_word_god();
