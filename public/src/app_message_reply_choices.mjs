@@ -39,11 +39,14 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
-  let greetings = app_reply_response_greetings();
+  let greeting_response = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let my_dear_brother = reply_phrase_my_dear_brother();
-  let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
+  let greeting = reply_sequence_output(
+    [hi_word, my_dear_brother],
+    greeting_response,
+  );
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
@@ -143,7 +146,7 @@ export function app_message_reply_choices() {
   let matcher = reply_on_match(fn20, lambda);
   let choices_main = reply_choice([
     fn4,
-    fn6,
+    greeting,
     phrases_single,
     fn10,
     fn3,
