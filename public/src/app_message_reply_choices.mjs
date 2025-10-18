@@ -43,10 +43,10 @@ export function app_message_reply_choices() {
   let greetings = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
-  let fn15 = reply_optional("y");
-  let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus = reply_phrase_jesus();
   let n = reply_word_in();
+  let fn15 = reply_optional("y");
+  let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus2 = reply_phrase_jesus();
   let n2 = reply_word_in();
   let in_christ = reply_sequence_optional([n2, phrase_jesus2]);
