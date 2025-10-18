@@ -1,3 +1,4 @@
+import { reply_word_brother } from "../../../love/public/src/reply_word_brother.mjs";
 import { reply_word_hello } from "../../../love/public/src/reply_word_hello.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
@@ -39,7 +40,6 @@ export function app_message_reply_choices() {
   let greetings = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
-  let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
   const dear = "dear";
@@ -48,11 +48,12 @@ export function app_message_reply_choices() {
   const god = "god";
   let fn13 = reply_either_both(jesus, christ);
   let fn17 = reply_sequence_optional(["in", fn13]);
-  const brother = "brother";
+  const brother = reply_word_brother();
   let fn23 = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, fn23, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
+  let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
   let hru = app_reply_response_how_r_u();
