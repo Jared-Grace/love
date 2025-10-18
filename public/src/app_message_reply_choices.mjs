@@ -49,8 +49,8 @@ export function app_message_reply_choices() {
   let fn17 = reply_sequence_optional(["in", fn13]);
   const brother = reply_word_brother();
   const dear = "dear";
-  let fn23 = reply_either_both(dear, brother);
-  let fn16 = reply_sequence([my, fn23, fn17]);
+  let db = reply_either_both(dear, brother);
+  let fn16 = reply_sequence([my, db, fn17]);
   const choices = [fn16, my];
   let my_dear_brother = reply_choice_optional(choices);
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
