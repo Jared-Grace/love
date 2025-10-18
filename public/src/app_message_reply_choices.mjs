@@ -51,7 +51,8 @@ export function app_message_reply_choices() {
   let db = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, db, in_christ]);
   const choices = [fn16, my];
-  let my_dear_brother = reply_choice_optional(choices);
+  let c = reply_choice(choices);
+  let my_dear_brother = reply_optional(c);
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
