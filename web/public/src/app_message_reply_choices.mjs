@@ -44,8 +44,7 @@ export function app_message_reply_choices() {
   let hi_word = reply_choice(["hi", hello, "hey"]);
   let phrase_jesus = reply_phrase_jesus();
   let n = reply_word_in();
-  let c = reply_phrase_my_dear_brother();
-  let my_dear_brother = reply_optional(c);
+  let my_dear_brother = reply_phrase_my_dear_brother();
   let fn6 = reply_sequence_output([hi_word, my_dear_brother], greetings);
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
