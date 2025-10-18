@@ -40,7 +40,8 @@ export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
   let you = reply_phrase_you();
-  let fn = reply_sequence(["how", "are", you]);
+  let you2 = reply_phrase_you();
+  let fn = reply_sequence(["how", "are", you2]);
   let hru_response = app_reply_response_how_r_u();
   let hru = reply_on_match_output(fn, hru_response);
   let phrase_jesus = reply_phrase_jesus();
