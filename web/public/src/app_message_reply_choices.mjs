@@ -1,8 +1,8 @@
+import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
 import { reply_phrase_my_dear_brother } from "../../../love/public/src/reply_phrase_my_dear_brother.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
 import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.mjs";
 import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
-import { reply_word_hello } from "../../../love/public/src/reply_word_hello.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
@@ -28,7 +28,6 @@ import { reply_choice_optional } from "../../../love/public/src/reply_choice_opt
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
-import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
@@ -39,14 +38,7 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
-  let greeting_response = app_reply_response_greetings();
-  const hello = reply_word_hello();
-  let hi_word = reply_choice(["hi", hello, "hey"]);
-  let my_dear_brother2 = reply_phrase_my_dear_brother();
-  let greeting = reply_sequence_output(
-    [hi_word, my_dear_brother2],
-    greeting_response,
-  );
+  let greeting = app_message_reply_greeting();
   let my_dear_brother = reply_phrase_my_dear_brother();
   let you = reply_sequence(["you", my_dear_brother]);
   let fn = reply_sequence(["how", "are", you]);
