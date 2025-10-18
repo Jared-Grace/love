@@ -1,9 +1,9 @@
+import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
 import { app_message_reply_phrases_single } from "../../../love/public/src/app_message_reply_phrases_single.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
 import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
-import { reply_word_god } from "../../../love/public/src/reply_word_god.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
@@ -12,9 +12,6 @@ import { app_reply_choices_name } from "../../../love/public/src/app_reply_choic
 import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
-import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
-import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
-import { reply_sequence_outputs } from "../../../love/public/src/reply_sequence_outputs.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -41,11 +38,7 @@ export function app_message_reply_choices() {
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
-  let v = prayer_end();
-  let v2 = app_reply_choices_praise();
-  const god = reply_word_god();
-  let fn11 = reply_optional("i");
-  let fn10 = reply_sequence_outputs(["prai", fn11, "se", god], [v2, v]);
+  let fn10 = app_message_reply_praise_god();
   let r_cities = reply_cities();
   let r_countries = reply_countries();
   let fn21 = reply_optional("i");
