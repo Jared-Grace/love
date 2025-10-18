@@ -297,6 +297,12 @@ export function app_reply_choices() {
       response: emoji_pray() + " If God wills, yes",
     },
     with2,
+    {
+      text: emoji_phone() + " Word",
+      response:
+        emoji_phone() +
+        " Behold, I am an unworthy servant of the LORD. May the word of the LORD come true!",
+    },
   ];
   return v;
 }
