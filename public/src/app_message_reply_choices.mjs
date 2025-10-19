@@ -56,7 +56,7 @@ export function app_message_reply_choices() {
   let fn18 = reply_optional(n);
   let item2 = app_reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
-  let fn19 = reply_sequence_output(
+  let from_city_country = reply_sequence_output(
     [iam_o_titled_name, "from", r_cities, fn18, r_countries],
     item2,
   );
@@ -119,7 +119,7 @@ export function app_message_reply_choices() {
     phrases_single,
     praise_god,
     minister,
-    fn19,
+    from_city_country,
     fn5,
     fn12,
     thanks,
