@@ -13,7 +13,7 @@ export function app_sandbox_main() {
     let button2 = app_karate_button_back(parent, noop);
     return button2;
   };
-  let button = app_karate_button_back(parent, lambda5);
+  let top_text = "top";
   html_checkboxes(
     context,
     button_back,
