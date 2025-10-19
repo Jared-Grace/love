@@ -1,4 +1,4 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_sandbox() {
-  marker("1");
+export async function app_sandbox() {
+  await app_main_production("app_sandbox_main", "jared-grace");
 }
