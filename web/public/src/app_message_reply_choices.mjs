@@ -30,7 +30,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
@@ -41,7 +40,6 @@ export function app_message_reply_choices() {
   let iam = reply_phrase_i_am();
   let from_city_country = app_message_reply_from_city_country();
   let n = reply_word_in();
-  let r_countries = reply_countries();
   let r_cities = reply_cities();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
