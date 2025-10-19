@@ -67,7 +67,6 @@ export async function app_message_main() {
     let messages = messages_get();
     async function lambda2(message) {
       message_display("left", message);
-      let result = await reply_messages_all(start, [message]);
       let div_message = message_display(
         "right",
         "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
@@ -75,6 +74,7 @@ export async function app_message_main() {
       html_style_assign(div_message, {
         "background-color": app_karate_button_uncolored_background_color(),
       });
+      let result = await reply_messages_all(start, [message]);
     }
     await each_async(messages, lambda2);
   }
