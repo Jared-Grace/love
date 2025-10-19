@@ -1,6 +1,6 @@
+import { reply_on_match_output_codes_multiple } from "../../../love/public/src/reply_on_match_output_codes_multiple.mjs";
 import { reply_on_match_capture } from "../../../love/public/src/reply_on_match_capture.mjs";
 import { reply_on_match_output_add_multiple } from "../../../love/public/src/reply_on_match_output_add_multiple.mjs";
-import { reply_on_match_output } from "../../../love/public/src/reply_on_match_output.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { visit } from "../../../love/public/src/visit.mjs";
@@ -53,7 +53,7 @@ export function app_message_reply_choices() {
     us,
     o_according_to_gods_will,
   ]);
-  let o = reply_on_match_output(s, will_be_done);
+  let o = reply_on_match_output_codes_multiple(s, will_be_done);
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
   let item6 = app_reply_choices_glory();
