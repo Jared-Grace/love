@@ -1,3 +1,4 @@
+import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -92,6 +93,7 @@ export async function app_message_main() {
       return next;
     }
     let nexts = list_map(messages, lambda2);
+    let v2 = await list_wait(list);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
