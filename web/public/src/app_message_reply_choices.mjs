@@ -44,11 +44,11 @@ export function app_message_reply_choices() {
   let n2 = reply_word_in();
   let r_countries2 = reply_countries();
   let r_cities2 = reply_cities();
-  let o_n = reply_optional(n);
+  let o_n = reply_optional(n2);
   let item2 = app_reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
   let from_city_country = reply_sequence_output(
-    [iam_o_titled_name, "from", r_cities, o_n, r_countries],
+    [iam_o_titled_name, "from", r_cities2, o_n, r_countries2],
     item2,
   );
   let n = reply_word_in();
