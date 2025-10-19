@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { lambda_invoke } from "../../../love/public/src/lambda_invoke.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -115,6 +116,7 @@ export async function app_message_main() {
     return value;
   }
   async function on_send() {
+    log(message2);
     let message = html_value_get(textarea);
     let results = await reply_messages_matches([message], start);
     let ei = list_empty_is(results);
