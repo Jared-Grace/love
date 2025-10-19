@@ -45,9 +45,11 @@ export function app_message_reply_choices() {
   let r_countries = reply_countries();
   let iam = reply_phrase_i_am();
   let titles = reply_titles_ministry();
+  let iam2 = reply_phrase_i_am();
+  let titles2 = reply_titles_ministry();
   let o_n = reply_optional("n");
   let o_a_an = reply_sequence_optional(["a", o_n]);
-  let title = reply_sequence([iam, o_a_an, titles]);
+  let title = reply_sequence([iam2, o_a_an, titles2]);
   let item3 = prayer_blessing("your ministry");
   let minister = reply_on_match_output(title, item3);
   let item4 = app_reply_choices_name();
