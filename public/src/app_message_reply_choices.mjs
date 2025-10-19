@@ -57,7 +57,7 @@ export function app_message_reply_choices() {
   let o_a_an = reply_sequence_optional(["a", o_n]);
   let title = reply_sequence([iam, o_a_an, titles]);
   let item3 = prayer_blessing("your ministry");
-  let fn3 = reply_on_match_output(title, item3);
+  let minister = reply_on_match_output(title, item3);
   let item4 = app_reply_choices_name();
   let iam_titled_name = reply_sequence_output(
     [iam, titles, names_once_or_more],
@@ -129,7 +129,7 @@ export function app_message_reply_choices() {
     greeting,
     phrases_single,
     praise_god,
-    fn3,
+    minister,
     fn19,
     fn5,
     fn12,
