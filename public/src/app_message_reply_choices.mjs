@@ -40,22 +40,22 @@ export function app_message_reply_choices() {
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
-  let r_cities = reply_cities();
   let r_countries = reply_countries();
   let minister = app_message_reply_minister();
-  let item4 = app_reply_choices_name();
+  let response = app_reply_choices_name();
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
   let iam = reply_phrase_i_am();
   let titles = reply_titles_ministry();
   let iam_titled_name = reply_sequence_output(
     [iam, titles, names_once_or_more],
-    item4,
+    response,
   );
   let n = reply_word_in();
   let o_n = reply_optional(n);
   let item2 = app_reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
+  let r_cities = reply_cities();
   let from_city_country = reply_sequence_output(
     [iam_o_titled_name, "from", r_cities, o_n, r_countries],
     item2,
