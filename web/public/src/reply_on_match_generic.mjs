@@ -14,7 +14,8 @@ export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
     if (ne) {
       let args = [filtered];
       on_args(args);
-      each(list, function lambda2(item) {});
+      function lambda2(item) {}
+      each(list, lambda2);
       lambda(...args);
     }
     return filtered;
