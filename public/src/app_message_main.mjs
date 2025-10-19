@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { reply_messages_matches } from "../../../love/public/src/reply_messages_matches.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -78,9 +79,9 @@ export async function app_message_main() {
         "background-color": app_karate_button_uncolored_background_color(),
       });
       let results = await reply_messages_matches([message], start);
-      let ne = list_empty_not_is(list);
-      let matches = object_property_get(result, "matches");
-      if (matches === true) {
+      let ne = list_empty_not_is(results);
+      if (ne) {
+        let first = list_first(list);
         let outputs = object_property_get(result, "outputs");
         html_clear(right);
         html_p_text_multiple(right, outputs);
