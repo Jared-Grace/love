@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -109,7 +110,7 @@ export async function app_message_main() {
   async function on_send() {
     let message = html_value_get(textarea);
     let results = await reply_messages_matches([message], start);
-    let ne = list_empty_not_is(results);
+    list_empty_is(results);
     if (false) {
     }
     let message_id = await uuid();
