@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -9,7 +10,7 @@ export function app_sandbox_main() {
     root,
   };
   let button_back = function lambda(context, parent) {
-    let button2 = app_karate_button_back();
+    let button2 = app_karate_button_back(parent, noop);
     return button2;
   };
   let button = app_karate_button_back(parent, lambda5);
