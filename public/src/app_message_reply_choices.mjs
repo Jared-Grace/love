@@ -1,3 +1,4 @@
+import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
 import { reply_titles_ministry } from "../../../love/public/src/reply_titles_ministry.mjs";
 import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
 import { app_message_reply_phrases_single } from "../../../love/public/src/app_message_reply_phrases_single.mjs";
@@ -42,9 +43,7 @@ export function app_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let r_cities = reply_cities();
   let r_countries = reply_countries();
-  let o_i = reply_optional("i");
-  let i_am = reply_sequence([o_i, "am"]);
-  let iam = reply_choice(["i'm", i_am]);
+  let iam = reply_phrase_i_am();
   let titles = reply_titles_ministry();
   let o_n = reply_optional("n");
   let o_a_an = reply_sequence_optional(["a", o_n]);
