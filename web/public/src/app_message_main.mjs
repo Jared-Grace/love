@@ -80,7 +80,8 @@ export async function app_message_main() {
       let matches = object_property_get(result, "matches");
       if (matches === true) {
         let outputs = object_property_get(result, "outputs");
-        each(list, function lambda(item) {});
+        function lambda(item) {}
+        each(list, lambda);
       }
     }
     await each_async(messages, lambda2);
