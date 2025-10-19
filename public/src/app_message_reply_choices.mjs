@@ -40,12 +40,12 @@ export function app_message_reply_choices() {
   let from_city_country = app_message_reply_from_city_country();
   let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
-  let fn = reply_optional(item);
+  let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
   let visit = reply_sequence_output(
-    ["come", "and", "fellowship", "with", us, according_to_gods_will],
+    ["come", "and", "fellowship", "with", us, o_according_to_gods_will],
     item5,
   );
   let you2 = reply_phrase_you();
