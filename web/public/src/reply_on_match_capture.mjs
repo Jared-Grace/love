@@ -25,7 +25,7 @@ export function reply_on_match_capture(fn, lambda) {
     capture(possibilities, "before", u);
     return u;
   };
-  let after = function lambda3() {};
+  let after = function lambda3(filtered, b) {};
   let on_args = noop;
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
