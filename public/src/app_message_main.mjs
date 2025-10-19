@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { reply_messages_all } from "../../../love/public/src/reply_messages_all.mjs";
@@ -75,6 +76,7 @@ export async function app_message_main() {
         "background-color": app_karate_button_uncolored_background_color(),
       });
       let result = await reply_messages_all(start, [message]);
+      let matches = object_property_get(result, "matches");
     }
     await each_async(messages, lambda2);
   }
