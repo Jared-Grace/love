@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { reply_on_match_generic } from "../../../love/public/src/reply_on_match_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -27,7 +28,9 @@ export function reply_on_match_capture(fn, lambda) {
   let after = function lambda3(filtered, u) {
     capture(filtered, "after", u);
   };
-  let on_args = function lambda4() {};
+  let on_args = function lambda4(args) {
+    list_add(list, item2);
+  };
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
   marker("1");
