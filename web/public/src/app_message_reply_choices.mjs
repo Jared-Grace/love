@@ -1,4 +1,4 @@
-import { reply_on_match_output_codes_multiple } from "../../../love/public/src/reply_on_match_output_codes_multiple.mjs";
+import { reply_on_match_outputs_codes_multiple } from "../../../love/public/src/reply_on_match_outputs_codes_multiple.mjs";
 import { reply_on_match_capture } from "../../../love/public/src/reply_on_match_capture.mjs";
 import { reply_on_match_output_add_multiple } from "../../../love/public/src/reply_on_match_output_add_multiple.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
@@ -30,7 +30,7 @@ import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
-import { reply_choice } from "./reply_choice.mjs";
+import { reply_choice } from "../../../love/public/src/reply_choice.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
@@ -53,7 +53,7 @@ export function app_message_reply_choices() {
     us,
     o_according_to_gods_will,
   ]);
-  let o = reply_on_match_output_codes_multiple(s, will_be_done);
+  let o = reply_on_match_outputs_codes_multiple(s, will_be_done);
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
   let item6 = app_reply_choices_glory();
