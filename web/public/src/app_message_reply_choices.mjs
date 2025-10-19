@@ -42,12 +42,12 @@ export function app_message_reply_choices() {
   let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
-  let fn = reply_sequence_optional(["come", "and"]);
+  let o_come_and = reply_sequence_optional(["come", "and"]);
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
   let visit = reply_sequence_output(
-    [fn, "fellowship", "with", us, o_according_to_gods_will],
+    [o_come_and, "fellowship", "with", us, o_according_to_gods_will],
     item5,
   );
   let you2 = reply_phrase_you();
