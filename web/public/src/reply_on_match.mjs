@@ -10,7 +10,7 @@ export function reply_on_match(fn, lambda) {
     let ne = list_empty_not_is(filtered);
     if (ne) {
       let args = [filtered];
-      lambda(filtered);
+      lambda(...args);
     }
     return filtered;
   };
