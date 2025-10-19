@@ -1,5 +1,4 @@
 import { reply_on_match_generic } from "../../../love/public/src/reply_on_match_generic.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -28,7 +27,7 @@ export function reply_on_match_capture(fn, lambda) {
   let after = function lambda3(filtered, u) {
     capture(filtered, "after", u);
   };
-  let on_args = noop;
+  let on_args = () => {};
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
   marker("1");
