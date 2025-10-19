@@ -1,3 +1,5 @@
+import { reply_on_match_generic } from "../../../love/public/src/reply_on_match_generic.mjs";
+import { noop } from "../../../love/public/src/noop.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -9,8 +11,13 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
+  let before = noop;
+  let after = noop;
+  let on_args = noop;
+  let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
+  return matcher;
   marker("1");
-  let matcher = async function reply_on_match_inner(possibilities) {
+  async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
     capture(possibilities, "before");
@@ -31,6 +38,6 @@ export function reply_on_match_capture(fn, lambda) {
       lambda(filtered, u);
     }
     return filtered;
-  };
+  }
   return matcher;
 }
