@@ -245,6 +245,7 @@
   "rc": "reply_choice",
   "lrv": "list_reverse",
   "lia": "list_is_assert",
-  "po": "prompt_previous_open"
+  "po": "prompt_previous_open",
+  "rso": "reply_sequence_optional"
  }
 }
