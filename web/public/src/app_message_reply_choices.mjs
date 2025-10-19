@@ -44,8 +44,8 @@ export function app_message_reply_choices() {
   let n = reply_word_in();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
-  const us = reply_word_us();
-  let o_us = reply_optional(us);
+  const us2 = reply_word_us();
+  let o_us = reply_optional(us2);
   let according_to_gods_will2 = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
@@ -67,6 +67,7 @@ export function app_message_reply_choices() {
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
+  const us = reply_word_us();
   let fn12 = reply_sequence_output(
     ["come", "and", "fellowship", "with", us, according_to_gods_will],
     item5,
