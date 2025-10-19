@@ -1,3 +1,4 @@
+import { reply_phrase_according_to_gods_will } from "../../../love/public/src/reply_phrase_according_to_gods_will.mjs";
 import { app_message_reply_from_city_country } from "../../../love/public/src/app_message_reply_from_city_country.mjs";
 import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
 import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
@@ -22,7 +23,6 @@ import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
-import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
@@ -40,17 +40,11 @@ export function app_message_reply_choices() {
   let from_city_country = app_message_reply_from_city_country();
   let iam = reply_phrase_i_am();
   let n = reply_word_in();
-  let r_cities = reply_cities();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
   const us = "us";
   let o_us = reply_optional(us);
-  let o_according_to = reply_sequence_optional(["according", "to"]);
-  let according_to_gods_will = reply_sequence([
-    o_according_to,
-    "god's",
-    "will",
-  ]);
+  let according_to_gods_will = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
   let give = reply_sequence_output(
@@ -80,6 +74,7 @@ export function app_message_reply_choices() {
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);
   let r_roads = reply_roads();
+  let r_cities = reply_cities();
   let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
