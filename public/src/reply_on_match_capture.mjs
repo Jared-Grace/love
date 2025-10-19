@@ -11,7 +11,9 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
-  let before = noop;
+  let before = async function lambda2(possibilities) {
+    let u = await uuid();
+  };
   let after = noop;
   let on_args = noop;
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
