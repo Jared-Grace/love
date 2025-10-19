@@ -93,7 +93,7 @@ export async function app_message_main() {
       return next;
     }
     let nexts = list_map(messages, lambda2);
-    let v2 = await list_wait(list);
+    await list_wait(nexts);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
