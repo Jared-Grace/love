@@ -51,13 +51,13 @@ export function app_message_reply_choices() {
     [iam_o_titled_name, "from", r_cities, o_n, r_countries],
     item2,
   );
-  let fn25 = reply_optional("ing");
-  let requesting = reply_sequence(["request", fn25]);
+  let o_ing = reply_optional("ing");
+  let requesting = reply_sequence(["request", o_ing]);
   const us = "us";
   let o_us = reply_optional(us);
-  let o_accordint_to = reply_sequence_optional(["according", "to"]);
+  let o_according_to = reply_sequence_optional(["according", "to"]);
   let according_to_gods_will = reply_sequence([
-    o_accordint_to,
+    o_according_to,
     "god's",
     "will",
   ]);
