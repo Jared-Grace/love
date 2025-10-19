@@ -1,5 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function emoji_check() {
   marker("1");
-  return "✅";
+  let v = "✅";
+  return v;
 }
