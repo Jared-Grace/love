@@ -15,7 +15,8 @@ export function app_sandbox_main() {
   };
   let top_text = "top";
   let value_previous_get = function lambda2() {
-    return null;
+    let v = null;
+    return v;
   };
   html_checkboxes(
     context,
