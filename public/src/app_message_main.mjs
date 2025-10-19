@@ -111,21 +111,21 @@ export async function app_message_main() {
     let message = html_value_get(textarea);
     let results = await reply_messages_matches([message], start);
     let ei = list_empty_is(results);
-    if (false) {
+    if (ei) {
+      let message_id = await uuid();
+      const file_name = app_message_firebase_path() + u + "/" + message_id;
+      let file_path = file_name_json(file_name);
+      await firebase_upload_object(
+        {
+          message,
+          when: date_now_iso(),
+        },
+        file_path,
+      );
+      let messages = messages_get();
+      list_add(messages, message);
+      storage_local_set_context(context, messages_property, messages);
+      await refresh();
     }
-    let message_id = await uuid();
-    const file_name = app_message_firebase_path() + u + "/" + message_id;
-    let file_path = file_name_json(file_name);
-    await firebase_upload_object(
-      {
-        message,
-        when: date_now_iso(),
-      },
-      file_path,
-    );
-    let messages = messages_get();
-    list_add(messages, message);
-    storage_local_set_context(context, messages_property, messages);
-    await refresh();
   }
 }
