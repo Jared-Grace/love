@@ -42,8 +42,8 @@ export function app_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let r_cities = reply_cities();
   let r_countries = reply_countries();
-  let fn21 = reply_optional("i");
-  let i_am = reply_sequence([fn21, "am"]);
+  let o_i = reply_optional("i");
+  let i_am = reply_sequence([o_i, "am"]);
   let iam = reply_choice(["i'm", i_am]);
   let titles = reply_titles_ministry();
   let o_n = reply_optional("n");
