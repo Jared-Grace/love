@@ -1,3 +1,4 @@
+import { reply_on_match_output_add_multiple } from "../../../love/public/src/reply_on_match_output_add_multiple.mjs";
 import { reply_on_match_output } from "../../../love/public/src/reply_on_match_output.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
@@ -16,7 +17,6 @@ import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choi
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
-import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -72,11 +72,10 @@ export function app_message_reply_choices() {
       let { before, after } = object_property_get(data, u);
       const sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
-      reply_on_match_output_add(
-        possibility,
+      reply_on_match_output_add_multiple(possibility, [
         "If you want, please change the wording of what you said and send me another message. Here is what you said: ",
-      );
-      reply_on_match_output_add(possibility, quote);
+        quote,
+      ]);
     }
     each(filtered, lambda2);
   }
