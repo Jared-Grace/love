@@ -39,6 +39,7 @@ export function app_message_reply_choices() {
   let from_city_country = app_message_reply_from_city_country();
   let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
+  mo;
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
