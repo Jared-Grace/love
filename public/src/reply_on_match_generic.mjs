@@ -1,8 +1,9 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { reply_wrap_invoke } from "../../../love/public/src/reply_wrap_invoke.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
-export function reply_on_match_generic(fn, before, after, on_args, lambda) {
+export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
   let v = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     possibilities = await reply_wrap_invoke(fn, possibilities);
@@ -13,6 +14,7 @@ export function reply_on_match_generic(fn, before, after, on_args, lambda) {
     if (ne) {
       let args = [filtered];
       on_args(args);
+      each(list, function lambda2(item) {});
       lambda(...args);
     }
     return filtered;
