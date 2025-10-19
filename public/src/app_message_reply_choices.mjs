@@ -44,11 +44,11 @@ export function app_message_reply_choices() {
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let o_come_and = reply_sequence_optional(["come", "and"]);
   let pray_request = app_reply_choices_will_done_fragment();
-  let item5 = app_reply_pray_response(pray_request);
+  let will_be_done = app_reply_pray_response(pray_request);
   const us = reply_word_us();
   let visit = reply_sequence_output(
     [o_come_and, "fellowship", "with", us, o_according_to_gods_will],
-    item5,
+    will_be_done,
   );
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
