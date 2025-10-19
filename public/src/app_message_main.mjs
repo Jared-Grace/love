@@ -1,3 +1,4 @@
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -77,6 +78,8 @@ export async function app_message_main() {
       });
       let result = await reply_messages_all(start, [message]);
       let matches = object_property_get(result, "matches");
+      if (browser_is()) {
+      }
     }
     await each_async(messages, lambda2);
   }
