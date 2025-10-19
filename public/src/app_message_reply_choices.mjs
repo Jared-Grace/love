@@ -1,19 +1,17 @@
+import { app_message_reply_give } from "../../../love/public/src/app_message_reply_give.mjs";
 import { reply_word_us } from "../../../love/public/src/reply_word_us.mjs";
 import { reply_phrase_according_to_gods_will } from "../../../love/public/src/reply_phrase_according_to_gods_will.mjs";
 import { app_message_reply_from_city_country } from "../../../love/public/src/app_message_reply_from_city_country.mjs";
 import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
-import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
 import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
 import { app_message_reply_phrases_single } from "../../../love/public/src/app_message_reply_phrases_single.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
 import { reply_phrase_you } from "../../../love/public/src/reply_phrase_you.mjs";
 import { app_message_reply_greeting } from "../../../love/public/src/app_message_reply_greeting.mjs";
-import { reply_word_in } from "../../../love/public/src/reply_word_in.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
-import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -30,8 +28,6 @@ import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
-import { reply_optional } from "./reply_optional.mjs";
-import { reply_word_to } from "./reply_word_to.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
@@ -40,30 +36,7 @@ export function app_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let minister = app_message_reply_minister();
   let from_city_country = app_message_reply_from_city_country();
-  let iam = reply_phrase_i_am();
-  let n = reply_word_in();
-  let o_ing = reply_optional("ing");
-  let requesting = reply_sequence(["request", o_ing]);
-  const us2 = reply_word_us();
-  let o_us = reply_optional(us2);
-  let according_to_gods_will2 = reply_phrase_according_to_gods_will();
-  let item = app_reply_choices_give();
-  let you = reply_phrase_you();
-  let to = reply_word_to();
-  let give = reply_sequence_output(
-    [
-      iam,
-      requesting,
-      you,
-      to,
-      "support",
-      o_us,
-      n,
-      "ministry",
-      according_to_gods_will2,
-    ],
-    item,
-  );
+  let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
