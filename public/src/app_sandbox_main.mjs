@@ -1,5 +1,4 @@
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
-import { app_karate_flow_sign_up_back_button } from "../../../karate_code/public/src/app_karate_flow_sign_up_back_button.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -9,7 +8,10 @@ export function app_sandbox_main() {
   let context = {
     root,
   };
-  let button_back = app_karate_flow_sign_up_back_button;
+  let button_back = function lambda(context, parent) {
+    let button2 = app_karate_button_back();
+    return button2;
+  };
   let button = app_karate_button_back(parent, lambda5);
   html_checkboxes(
     context,
