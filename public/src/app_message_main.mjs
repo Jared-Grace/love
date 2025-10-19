@@ -76,7 +76,7 @@ export async function app_message_main() {
       html_style_assign(right, {
         "background-color": app_karate_button_uncolored_background_color(),
       });
-      let results = await reply_messages_matches(start, [message]);
+      let results = await reply_messages_matches([message], start);
       let matches = object_property_get(result, "matches");
       if (matches === true) {
         let outputs = object_property_get(result, "outputs");
