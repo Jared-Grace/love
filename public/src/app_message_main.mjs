@@ -82,10 +82,12 @@ export async function app_message_main() {
       async function next() {
         let results = await reply_messages_matches([message], start);
         let e = list_empty_is(results);
+        html_clear(right);
         if (e) {
+          html_text_set(component, text);
+        } else {
           let first = list_first(results);
           let outputs = object_property_get(first, "outputs");
-          html_clear(right);
           html_div_text_multiple(right, outputs);
         }
       }
