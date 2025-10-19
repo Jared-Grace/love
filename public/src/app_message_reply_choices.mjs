@@ -1,3 +1,4 @@
+import { visit } from "../../../love/public/src/visit.mjs";
 import { app_message_reply_give } from "../../../love/public/src/app_message_reply_give.mjs";
 import { reply_word_us } from "../../../love/public/src/reply_word_us.mjs";
 import { reply_phrase_according_to_gods_will } from "../../../love/public/src/reply_phrase_according_to_gods_will.mjs";
@@ -41,7 +42,7 @@ export function app_message_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
-  let fn12 = reply_sequence_output(
+  let visit = reply_sequence_output(
     ["come", "and", "fellowship", "with", us, according_to_gods_will],
     item5,
   );
@@ -80,7 +81,7 @@ export function app_message_reply_choices() {
     minister,
     from_city_country,
     give,
-    fn12,
+    visit,
     thanks,
     fn24,
     matcher,
