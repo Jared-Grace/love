@@ -29,7 +29,7 @@ export function reply_on_match_capture(fn, lambda) {
     capture(filtered, "after", u);
   };
   let on_args = function lambda4(args) {
-    list_add(list, item2);
+    list_add(args, u);
   };
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
