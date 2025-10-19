@@ -44,7 +44,7 @@ export function app_message_reply_choices() {
   let requesting = reply_sequence(["request", o_ing]);
   const us = "us";
   let o_us = reply_optional(us);
-  let according_to_gods_will = reply_phrase_according_to_gods_will();
+  let according_to_gods_will2 = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
   let give = reply_sequence_output(
@@ -57,10 +57,11 @@ export function app_message_reply_choices() {
       o_us,
       n,
       "ministry",
-      according_to_gods_will,
+      according_to_gods_will2,
     ],
     item,
   );
+  let according_to_gods_will = reply_phrase_according_to_gods_will();
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   let fn12 = reply_sequence_output(
