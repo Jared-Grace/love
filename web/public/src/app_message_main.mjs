@@ -1,5 +1,4 @@
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { lambda_invoke } from "../../../love/public/src/lambda_invoke.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -117,7 +116,6 @@ export async function app_message_main() {
     return value;
   }
   async function on_send() {
-    log("here");
     let message = html_value_get(textarea);
     html_value_set(textarea, "");
     let results = await reply_messages_matches([message], start);
