@@ -8,7 +8,7 @@ export function reply_on_match_generic(fn, before, after, on_args, lambda) {
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let b = before(possibilities);
     let filtered = reply_matches(possibilities);
-    after(filtered);
+    after(filtered, b);
     let ne = list_empty_not_is(filtered);
     if (ne) {
       let args = [filtered];
