@@ -12,6 +12,6 @@ export function reply_on_match_output_codes_multiple(fn_a, outputs, codes) {
     property_name,
     codes,
   );
-  let fn = reply_on_match(fn_a, [on_match_outputs]);
+  let fn = reply_on_match(fn_a, [on_match_outputs, on_match_codes]);
   return fn;
 }
