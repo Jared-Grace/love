@@ -131,10 +131,10 @@ export async function app_message_main() {
         },
         file_path,
       );
-      let messages = messages_get();
-      list_add(messages, message);
-      storage_local_set_context(context, messages_property, messages);
     }
+    let messages = messages_get();
+    list_add(messages, message);
+    storage_local_set_context(context, messages_property, messages);
     await refresh();
   }
 }
