@@ -78,6 +78,7 @@ export async function app_message_main() {
       let result = await reply_messages_all(start, [message]);
       let matches = object_property_get(result, "matches");
       if (matches === true) {
+        let outputs = object_property_get(result, "outputs");
       }
     }
     await each_async(messages, lambda2);
