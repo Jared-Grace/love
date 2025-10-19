@@ -110,7 +110,7 @@ export async function app_message_main() {
   async function on_send() {
     let message = html_value_get(textarea);
     let results = await reply_messages_matches([message], start);
-    list_empty_is(results);
+    let ei = list_empty_is(results);
     if (false) {
     }
     let message_id = await uuid();
