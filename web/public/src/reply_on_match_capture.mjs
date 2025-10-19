@@ -11,12 +11,21 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
+  function capture(possibilities, property, u) {
+    function lambda(item) {
+      let index = object_property_get(item, "index");
+      let d = object_property_initialize(item, "data", {});
+      let o = object_property_initialize(d, u, {});
+      object_property_set(o, property, index);
+    }
+    each(possibilities, lambda);
+  }
   let before = async function lambda2(possibilities) {
     let u = await uuid();
-    capture(possibilities, "before");
+    capture(possibilities, "before", u);
     return u;
   };
-  let after = noop;
+  let after = () => {};
   let on_args = noop;
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
@@ -25,15 +34,6 @@ export function reply_on_match_capture(fn, lambda) {
     list_is_assert(possibilities);
     let u = await uuid();
     capture(possibilities, "before");
-    function capture(possibilities, property) {
-      function lambda(item) {
-        let index = object_property_get(item, "index");
-        let d = object_property_initialize(item, "data", {});
-        let o = object_property_initialize(d, u, {});
-        object_property_set(o, property, index);
-      }
-      each(possibilities, lambda);
-    }
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     capture(filtered, "after");
