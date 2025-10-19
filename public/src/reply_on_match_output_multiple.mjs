@@ -13,6 +13,6 @@ export function reply_on_match_output_multiple(fn_a, items) {
     each(possibilities, lambda2);
     return possibilities;
   }
-  let fn = reply_on_match(fn_a, on_match);
+  let fn = reply_on_match(fn_a, [on_match]);
   return fn;
 }
