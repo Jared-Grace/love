@@ -1,3 +1,4 @@
+import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
 import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
 import { reply_titles_ministry } from "../../../love/public/src/reply_titles_ministry.mjs";
 import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
@@ -11,7 +12,6 @@ import { reply_choice_output } from "../../../love/public/src/reply_choice_outpu
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
-import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
@@ -32,7 +32,6 @@ import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
-import { reply_on_match_output } from "./reply_on_match_output.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_countries } from "./reply_countries.mjs";
 export function app_message_reply_choices() {
@@ -45,13 +44,7 @@ export function app_message_reply_choices() {
   let r_countries = reply_countries();
   let iam = reply_phrase_i_am();
   let titles = reply_titles_ministry();
-  let iam2 = reply_phrase_i_am();
-  let titles2 = reply_titles_ministry();
-  let o_n = reply_optional("n");
-  let o_a_an = reply_sequence_optional(["a", o_n]);
-  let title = reply_sequence([iam2, o_a_an, titles2]);
-  let item3 = prayer_blessing("your ministry");
-  let minister = reply_on_match_output(title, item3);
+  let minister = app_message_reply_minister();
   let item4 = app_reply_choices_name();
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
