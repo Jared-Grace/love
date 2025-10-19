@@ -116,7 +116,7 @@ export async function app_message_main() {
     return value;
   }
   async function on_send() {
-    log(message2);
+    log("here");
     let message = html_value_get(textarea);
     let results = await reply_messages_matches([message], start);
     let ei = list_empty_is(results);
