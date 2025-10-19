@@ -26,6 +26,6 @@ export function reply_on_match_capture(fn, lambda) {
   let on_args = function lambda4(args) {
     list_add(args, u);
   };
-  let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
+  let matcher = reply_on_match_generic(fn, before, after, on_args, [lambda]);
   return matcher;
 }
