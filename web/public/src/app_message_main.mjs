@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -81,8 +81,7 @@ export async function app_message_main() {
       if (matches === true) {
         html_clear(right);
         let outputs = object_property_get(result, "outputs");
-        function lambda(output) {}
-        each(outputs, lambda);
+        html_p_text_multiple(parent, list);
       }
     }
     await each_async(messages, lambda2);
