@@ -81,7 +81,7 @@ export async function app_message_main() {
       let results = await reply_messages_matches([message], start);
       let ne = list_empty_not_is(results);
       if (ne) {
-        let first = list_first(ne);
+        let first = list_first(results);
         let outputs = object_property_get(first, "outputs");
         html_clear(right);
         html_p_text_multiple(right, outputs);
