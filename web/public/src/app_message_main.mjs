@@ -119,7 +119,7 @@ export async function app_message_main() {
   async function on_send() {
     log("here");
     let message = html_value_get(textarea);
-    html_value_set(input, value2);
+    html_value_set(textarea, "");
     let results = await reply_messages_matches([message], start);
     let ei = list_empty_is(results);
     if (ei) {
