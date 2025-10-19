@@ -1,4 +1,4 @@
-import { app_message_reply_iam_titled_name } from "../../../love/public/src/app_message_reply_iam_titled_name.mjs";
+import { app_message_reply_from_city_country } from "../../../love/public/src/app_message_reply_from_city_country.mjs";
 import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
 import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
 import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
@@ -11,7 +11,6 @@ import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choi
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
-import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
@@ -39,18 +38,8 @@ export function app_message_reply_choices() {
   let phrases_single = app_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
   let minister = app_message_reply_minister();
-  let iam_titled_name = app_message_reply_iam_titled_name();
   let iam = reply_phrase_i_am();
-  let n2 = reply_word_in();
-  let r_countries2 = reply_countries();
-  let r_cities2 = reply_cities();
-  let o_n = reply_optional(n2);
-  let item2 = app_reply_choices_location();
-  let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
-  let from_city_country = reply_sequence_output(
-    [iam_o_titled_name, "from", r_cities2, o_n, r_countries2],
-    item2,
-  );
+  let from_city_country = app_message_reply_from_city_country();
   let n = reply_word_in();
   let r_countries = reply_countries();
   let r_cities = reply_cities();
