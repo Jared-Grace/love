@@ -15,7 +15,6 @@ import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choi
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
-import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
 import { reply_on_match_output_add } from "../../../love/public/src/reply_on_match_output_add.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
@@ -46,7 +45,7 @@ export function app_message_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let will_be_done = app_reply_pray_response(pray_request);
   const us = reply_word_us();
-  let visit = reply_sequence_output(
+  let visit = reply_sequence(
     [o_come_and, "fellowship", "with", us, o_according_to_gods_will],
     will_be_done,
   );
