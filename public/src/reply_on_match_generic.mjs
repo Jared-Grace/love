@@ -6,7 +6,7 @@ export function reply_on_match_generic(fn, before, after, on_args, lambda) {
   let v = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     possibilities = await reply_wrap_invoke(fn, possibilities);
-    before(possibilities);
+    let b = before(possibilities);
     let filtered = reply_matches(possibilities);
     after(filtered);
     let ne = list_empty_not_is(filtered);
