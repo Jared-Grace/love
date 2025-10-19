@@ -72,10 +72,7 @@ export async function app_message_main() {
     let messages = messages_get();
     function lambda2(message) {
       message_display("left", message);
-      let right = message_display(
-        "right",
-        "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
-      );
+      let right = message_display("right", "(Loading...)");
       html_style_assign(right, {
         "background-color": app_karate_button_uncolored_background_color(),
       });
@@ -84,7 +81,10 @@ export async function app_message_main() {
         let e = list_empty_is(results);
         html_clear(right);
         if (e) {
-          html_text_set(component, text);
+          html_text_set(
+            right,
+            "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
+          );
         } else {
           let first = list_first(results);
           let outputs = object_property_get(first, "outputs");
