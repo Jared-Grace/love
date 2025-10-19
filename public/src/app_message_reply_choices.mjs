@@ -37,8 +37,8 @@ export function app_message_reply_choices() {
   let phrases_single = app_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
   let minister = app_message_reply_minister();
-  let iam = reply_phrase_i_am();
   let from_city_country = app_message_reply_from_city_country();
+  let iam = reply_phrase_i_am();
   let n = reply_word_in();
   let r_cities = reply_cities();
   let o_ing = reply_optional("ing");
