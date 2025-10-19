@@ -108,6 +108,10 @@ export async function app_message_main() {
   }
   async function on_send() {
     let message = html_value_get(textarea);
+    let results = await reply_messages_matches([message], start);
+    let ne = list_empty_not_is(results);
+    if (false) {
+    }
     let message_id = await uuid();
     const file_name = app_message_firebase_path() + u + "/" + message_id;
     let file_path = file_name_json(file_name);
