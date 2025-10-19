@@ -1,3 +1,4 @@
+import { reply_on_match_output } from "../../../love/public/src/reply_on_match_output.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { visit } from "../../../love/public/src/visit.mjs";
@@ -45,10 +46,14 @@ export function app_message_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let will_be_done = app_reply_pray_response(pray_request);
   const us = reply_word_us();
-  let visit = reply_sequence(
-    [o_come_and, "fellowship", "with", us, o_according_to_gods_will],
-    will_be_done,
-  );
+  let visit = reply_sequence([
+    o_come_and,
+    "fellowship",
+    "with",
+    us,
+    o_according_to_gods_will,
+  ]);
+  let o = reply_on_match_output(s, item);
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
   let item6 = app_reply_choices_glory();
