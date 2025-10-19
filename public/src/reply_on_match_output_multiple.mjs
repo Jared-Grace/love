@@ -6,13 +6,13 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 export function reply_on_match_output_multiple(fn_a, items) {
   marker("1");
   assert_arguments(arguments, 2);
-  function on_match(possibilities) {
+  let on_match = function lambda(possibilities) {
     function lambda2(possibility) {
       reply_on_match_output_add_multiple(possibility, items);
     }
     each(possibilities, lambda2);
     return possibilities;
-  }
+  };
   let fn = reply_on_match(fn_a, [on_match]);
   return fn;
 }
