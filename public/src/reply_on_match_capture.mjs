@@ -13,6 +13,8 @@ import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
   let before = async function lambda2(possibilities) {
     let u = await uuid();
+    capture(possibilities, "before");
+    return u;
   };
   let after = noop;
   let on_args = noop;
