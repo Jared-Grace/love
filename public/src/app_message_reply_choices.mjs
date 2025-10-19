@@ -46,14 +46,14 @@ export function app_message_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let will_be_done = app_reply_pray_response(pray_request);
   const us = reply_word_us();
-  let visit = reply_sequence([
+  let s_visit = reply_sequence([
     o_come_and,
     "fellowship",
     "with",
     us,
     o_according_to_gods_will,
   ]);
-  let o = reply_on_match_output_code(s, will_be_done, "todo()");
+  let visit = reply_on_match_output_code(s_visit, will_be_done, "todo()");
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
   let item6 = app_reply_choices_glory();
