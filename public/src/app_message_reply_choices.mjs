@@ -55,8 +55,12 @@ export function app_message_reply_choices() {
   let requesting = reply_sequence(["request", fn25]);
   const us = "us";
   let o_us = reply_optional(us);
-  let fn14 = reply_sequence_optional(["according", "to"]);
-  let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
+  let o_accordint_to = reply_sequence_optional(["according", "to"]);
+  let according_to_gods_will = reply_sequence([
+    o_accordint_to,
+    "god's",
+    "will",
+  ]);
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
   let give = reply_sequence_output(
