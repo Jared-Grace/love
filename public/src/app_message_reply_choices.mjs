@@ -59,7 +59,7 @@ export function app_message_reply_choices() {
   let according_to_gods_will = reply_sequence([fn14, "god's", "will"]);
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
-  let fn5 = reply_sequence_output(
+  let give = reply_sequence_output(
     [
       iam,
       requesting,
@@ -111,7 +111,7 @@ export function app_message_reply_choices() {
     praise_god,
     minister,
     from_city_country,
-    fn5,
+    give,
     fn12,
     thanks,
     fn24,
