@@ -38,15 +38,15 @@ export function app_message_reply_choices() {
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
-  let r_countries = reply_countries();
   let minister = app_message_reply_minister();
   let iam_titled_name = app_message_reply_iam_titled_name();
   let iam = reply_phrase_i_am();
   let n = reply_word_in();
+  let r_countries = reply_countries();
+  let r_cities = reply_cities();
   let o_n = reply_optional(n);
   let item2 = app_reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
-  let r_cities = reply_cities();
   let from_city_country = reply_sequence_output(
     [iam_o_titled_name, "from", r_cities, o_n, r_countries],
     item2,
