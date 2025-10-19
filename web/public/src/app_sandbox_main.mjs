@@ -1,3 +1,5 @@
+import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
+import { emoji_secure } from "../../../love/public/src/emoji_secure.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
@@ -13,17 +15,30 @@ export function app_sandbox_main() {
     let button2 = app_karate_button_back(parent, noop);
     return button2;
   };
-  let top_text = "top";
+  let top_text = "Will you pay for all of my travel?";
   let value_previous_get = function lambda2() {
     let v = null;
     return v;
   };
+  const choices = [
+    {
+      value: "no",
+      title:
+        emoji_secure() + " I cannot agree to pay for your travel at this time",
+      details: "",
+    },
+    {
+      value: "yes",
+      title: emoji_check() + " Yes, I will pay for all of your travel",
+      details: "",
+    },
+  ];
   html_checkboxes(
     context,
     button_back,
     top_text,
     value_previous_get,
-    checkbox_name,
+    "agree",
     choices,
     on_next,
     button_next,
