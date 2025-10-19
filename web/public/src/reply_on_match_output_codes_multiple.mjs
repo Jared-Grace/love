@@ -6,12 +6,12 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 export function reply_on_match_output_codes_multiple(fn_a, outputs, codes) {
   marker("1");
   assert_arguments(arguments, 3);
-  let on_match = reply_on_match_output_multiple_lambda(outputs);
+  let on_match_outputs = reply_on_match_output_multiple_lambda(outputs);
   const property_name = "codes";
-  let on_match2 = reply_on_match_property_multiple_lambda(
+  let on_matchcodes = reply_on_match_property_multiple_lambda(
     property_name,
-    outputs,
+    codes,
   );
-  let fn = reply_on_match(fn_a, [on_match]);
+  let fn = reply_on_match(fn_a, [on_match_outputs]);
   return fn;
 }
