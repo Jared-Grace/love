@@ -5,7 +5,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { reply_messages_matches } from "../../../love/public/src/reply_messages_matches.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
 import { date_now_iso } from "../../../love/public/src/date_now_iso.mjs";
@@ -35,6 +34,7 @@ import { app_karate_style_control } from "../../../karate_code/public/src/app_ka
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_map } from "./list_map.mjs";
 export async function app_message_main() {
   marker("1");
   const messages_property = "messages";
@@ -70,7 +70,7 @@ export async function app_message_main() {
   async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
-    async function lambda2(message) {
+    function lambda2(message) {
       message_display("left", message);
       let right = message_display(
         "right",
@@ -79,16 +79,18 @@ export async function app_message_main() {
       html_style_assign(right, {
         "background-color": app_karate_button_uncolored_background_color(),
       });
-      let results = await reply_messages_matches([message], start);
-      let ne = list_empty_not_is(results);
-      if (ne) {
-        let first = list_first(results);
-        let outputs = object_property_get(first, "outputs");
-        html_clear(right);
-        html_div_text_multiple(right, outputs);
+      async function next() {
+        let results = await reply_messages_matches([message], start);
+        let ne = list_empty_not_is(results);
+        if (ne) {
+          let first = list_first(results);
+          let outputs = object_property_get(first, "outputs");
+          html_clear(right);
+          html_div_text_multiple(right, outputs);
+        }
       }
     }
-    await each_async(messages, lambda2);
+    let nexts = list_map(messages, lambda2);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
