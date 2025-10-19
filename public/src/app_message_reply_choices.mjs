@@ -1,3 +1,4 @@
+import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { visit } from "../../../love/public/src/visit.mjs";
 import { app_message_reply_give } from "../../../love/public/src/app_message_reply_give.mjs";
@@ -41,7 +42,7 @@ export function app_message_reply_choices() {
   let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
-  rso;
+  let fn = reply_sequence_optional(sequence);
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
