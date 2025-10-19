@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -8,6 +9,7 @@ import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
+  marker("1");
   let matcher = async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
     let u = await uuid();
