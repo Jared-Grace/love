@@ -1,7 +1,6 @@
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { reply_messages_matches } from "../../../love/public/src/reply_messages_matches.mjs";
-import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -84,7 +83,7 @@ export async function app_message_main() {
         let first = list_first(results);
         let outputs = object_property_get(first, "outputs");
         html_clear(right);
-        html_p_text_multiple(right, outputs);
+        html_div_text_multiple(right, outputs);
       }
     }
     await each_async(messages, lambda2);
