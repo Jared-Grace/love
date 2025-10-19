@@ -1,3 +1,4 @@
+import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { reply_messages_all } from "../../../love/public/src/reply_messages_all.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
@@ -60,12 +61,13 @@ export async function app_message_main() {
   );
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
+  let start = app_message_reply_choices();
   async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
     async function lambda2(message) {
       message_display("left", message);
-      let result = await reply_messages_all(start, messages);
+      let result = await reply_messages_all(start, [message]);
       let div_message = message_display(
         "right",
         "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
