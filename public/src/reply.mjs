@@ -1,6 +1,5 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
+import { reply_on_match_output } from "../../../love/public/src/reply_on_match_output.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
-import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { list_map_lower } from "../../../love/public/src/list_map_lower.mjs";
@@ -10,11 +9,7 @@ import { whitespace_normalize } from "../../../love/public/src/whitespace_normal
 export async function reply(a) {
   let input = object_property_get(a, "input");
   let fn = reply_sequence(["good", "evening"]);
-  async function lambda(a) {
-    let outputs = object_property_get(a, "outputs");
-    list_add(outputs, "God");
-  }
-  let r = reply_on_match(fn, lambda);
+  let r = reply_on_match_output(fn, "God");
   input = whitespace_normalize(input);
   input = string_split_space(input);
   input = list_filter_empty_not_is(input);
