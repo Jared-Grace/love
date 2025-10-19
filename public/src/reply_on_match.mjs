@@ -4,6 +4,6 @@ export function reply_on_match(fn, lambda) {
   let before = noop;
   let after = noop;
   let on_args = noop;
-  let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
+  let matcher = reply_on_match_generic(fn, before, after, on_args, [lambda]);
   return matcher;
 }
