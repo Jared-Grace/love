@@ -9,7 +9,8 @@ export function reply_on_match(fn, lambda) {
     let filtered = reply_matches(possibilities);
     let ne = list_empty_not_is(filtered);
     if (ne) {
-      lambda(filtered, u);
+      let args = [filtered];
+      lambda(filtered);
     }
     return filtered;
   };
