@@ -43,8 +43,8 @@ export function app_message_reply_choices() {
   let r_cities = reply_cities();
   let r_countries = reply_countries();
   let fn21 = reply_optional("i");
-  let fn22 = reply_sequence([fn21, "am"]);
-  let iam = reply_choice(["i'm", fn22]);
+  let i_am = reply_sequence([fn21, "am"]);
+  let iam = reply_choice(["i'm", i_am]);
   let titles = reply_titles_ministry();
   let o_n = reply_optional("n");
   let o_a_an = reply_sequence_optional(["a", o_n]);
