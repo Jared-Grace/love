@@ -89,6 +89,7 @@ export async function app_message_main() {
           html_div_text_multiple(right, outputs);
         }
       }
+      return next;
     }
     let nexts = list_map(messages, lambda2);
   }
