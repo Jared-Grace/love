@@ -44,7 +44,7 @@ export async function app_message_main() {
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
   let div_messages = html_div(root);
-  refresh();
+  await refresh();
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_element(div, "textarea");
@@ -108,6 +108,6 @@ export async function app_message_main() {
     let messages = messages_get();
     list_add(messages, message);
     storage_local_set_context(context, messages_property, messages);
-    refresh();
+    await refresh();
   }
 }
