@@ -1,6 +1,6 @@
+import { app_message_reply_iam_titled_name } from "../../../love/public/src/app_message_reply_iam_titled_name.mjs";
 import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
 import { reply_phrase_i_am } from "../../../love/public/src/reply_phrase_i_am.mjs";
-import { reply_titles_ministry } from "../../../love/public/src/reply_titles_ministry.mjs";
 import { app_message_reply_praise_god } from "../../../love/public/src/app_message_reply_praise_god.mjs";
 import { app_message_reply_phrases_single } from "../../../love/public/src/app_message_reply_phrases_single.mjs";
 import { app_message_reply_how_r_u } from "../../../love/public/src/app_message_reply_how_r_u.mjs";
@@ -11,7 +11,6 @@ import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choi
 import { reply_choice_output } from "../../../love/public/src/reply_choice_output.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
-import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { reply_sequence_output } from "../../../love/public/src/reply_sequence_output.mjs";
@@ -23,7 +22,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { reply_names } from "../../../love/public/src/reply_names.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
@@ -42,15 +40,8 @@ export function app_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let r_countries = reply_countries();
   let minister = app_message_reply_minister();
-  let response = app_reply_choices_name();
-  let names = reply_names();
-  let names_once_or_more = reply_once_or_more(names);
-  let titles = reply_titles_ministry();
+  let iam_titled_name = app_message_reply_iam_titled_name();
   let iam = reply_phrase_i_am();
-  let iam_titled_name = reply_sequence_output(
-    [iam, titles, names_once_or_more],
-    response,
-  );
   let n = reply_word_in();
   let o_n = reply_optional(n);
   let item2 = app_reply_choices_location();
