@@ -1,3 +1,4 @@
+import { reply_on_match_capture } from "../../../love/public/src/reply_on_match_capture.mjs";
 import { reply_on_match_output_add_multiple } from "../../../love/public/src/reply_on_match_output_add_multiple.mjs";
 import { reply_on_match_output } from "../../../love/public/src/reply_on_match_output.mjs";
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
@@ -21,7 +22,6 @@ import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { reply_choice_optional } from "../../../love/public/src/reply_choice_optional.mjs";
@@ -79,7 +79,7 @@ export function app_message_reply_choices() {
     }
     each(filtered, lambda2);
   }
-  let matcher = reply_on_match(fn20, lambda);
+  let matcher = reply_on_match_capture(fn20, lambda);
   let choices_main = reply_choice([
     hru,
     greeting,
