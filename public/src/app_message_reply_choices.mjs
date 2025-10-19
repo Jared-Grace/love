@@ -53,7 +53,7 @@ export function app_message_reply_choices() {
     us,
     o_according_to_gods_will,
   ]);
-  let o = reply_on_match_output(s, item);
+  let o = reply_on_match_output(s, will_be_done);
   let you2 = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you2]);
   let item6 = app_reply_choices_glory();
