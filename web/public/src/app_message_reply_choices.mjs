@@ -42,12 +42,12 @@ export function app_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let r_cities = reply_cities();
   let r_countries = reply_countries();
-  let iam = reply_phrase_i_am();
-  let titles = reply_titles_ministry();
   let minister = app_message_reply_minister();
   let item4 = app_reply_choices_name();
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
+  let iam = reply_phrase_i_am();
+  let titles = reply_titles_ministry();
   let iam_titled_name = reply_sequence_output(
     [iam, titles, names_once_or_more],
     item4,
