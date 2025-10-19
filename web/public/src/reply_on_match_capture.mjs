@@ -25,15 +25,15 @@ export function reply_on_match_capture(fn, lambda) {
     capture(possibilities, "before", u);
     return u;
   };
-  let after = function lambda3(filtered, b) {};
+  let after = function lambda3(filtered, u) {
+    capture(filtered, "after", u);
+  };
   let on_args = noop;
   let matcher = reply_on_match_generic(fn, before, after, on_args, lambda);
   return matcher;
   marker("1");
   async function reply_on_match_inner(possibilities) {
     list_is_assert(possibilities);
-    let u = await uuid();
-    capture(possibilities, "before");
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let filtered = reply_matches(possibilities);
     capture(filtered, "after");
