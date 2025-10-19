@@ -41,6 +41,7 @@ export function app_message_reply_choices() {
   let give = app_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
+  let fn = reply_optional(item);
   let pray_request = app_reply_choices_will_done_fragment();
   let item5 = app_reply_pray_response(pray_request);
   const us = reply_word_us();
