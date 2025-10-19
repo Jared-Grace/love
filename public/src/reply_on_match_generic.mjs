@@ -14,9 +14,10 @@ export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
     if (ne) {
       let args = [filtered];
       on_args(args);
-      function lambda2(item) {}
-      each(list, lambda2);
-      lambda(...args);
+      function lambda2(lambda) {
+        lambda(...args);
+      }
+      each(lambdas, lambda2);
     }
     return filtered;
   };
