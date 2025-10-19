@@ -45,6 +45,7 @@ export async function app_message_main() {
   app_replace_font_size_refresh(context);
   html_font_san_serif(context);
   let div_messages = html_div(root);
+  let start = app_message_reply_choices();
   await refresh();
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
@@ -61,7 +62,6 @@ export async function app_message_main() {
   );
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
-  let start = app_message_reply_choices();
   async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
