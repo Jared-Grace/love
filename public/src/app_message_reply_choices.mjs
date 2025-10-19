@@ -31,6 +31,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_optional } from "./reply_optional.mjs";
+import { reply_word_to } from "./reply_word_to.mjs";
 export function app_message_reply_choices() {
   marker("1");
   let greeting = app_message_reply_greeting();
@@ -48,12 +49,13 @@ export function app_message_reply_choices() {
   let according_to_gods_will2 = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
+  let to = reply_word_to();
   let give = reply_sequence_output(
     [
       iam,
       requesting,
       you,
-      "to",
+      to,
       "support",
       o_us,
       n,
