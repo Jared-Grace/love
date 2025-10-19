@@ -41,9 +41,9 @@ export function app_message_reply_choices() {
   let minister = app_message_reply_minister();
   let iam_titled_name = app_message_reply_iam_titled_name();
   let iam = reply_phrase_i_am();
-  let n = reply_word_in();
-  let r_countries = reply_countries();
-  let r_cities = reply_cities();
+  let n2 = reply_word_in();
+  let r_countries2 = reply_countries();
+  let r_cities2 = reply_cities();
   let o_n = reply_optional(n);
   let item2 = app_reply_choices_location();
   let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
@@ -51,6 +51,9 @@ export function app_message_reply_choices() {
     [iam_o_titled_name, "from", r_cities, o_n, r_countries],
     item2,
   );
+  let n = reply_word_in();
+  let r_countries = reply_countries();
+  let r_cities = reply_cities();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
   const us = "us";
