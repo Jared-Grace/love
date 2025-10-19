@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { reply_messages_all } from "../../../love/public/src/reply_messages_all.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
@@ -12,7 +13,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
@@ -60,7 +60,7 @@ export async function app_message_main() {
   );
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
-  function refresh() {
+  async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
     async function lambda2(message) {
@@ -74,7 +74,7 @@ export async function app_message_main() {
         "background-color": app_karate_button_uncolored_background_color(),
       });
     }
-    each(messages, lambda2);
+    await each_async(messages, lambda2);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
