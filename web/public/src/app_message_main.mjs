@@ -2,7 +2,6 @@ import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { reply_messages_matches } from "../../../love/public/src/reply_messages_matches.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
@@ -82,8 +81,8 @@ export async function app_message_main() {
       });
       async function next() {
         let results = await reply_messages_matches([message], start);
-        let ne = list_empty_not_is(results);
-        if (ne) {
+        let e = list_empty_is(results);
+        if (e) {
           let first = list_first(results);
           let outputs = object_property_get(first, "outputs");
           html_clear(right);
