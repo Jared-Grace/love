@@ -55,9 +55,9 @@ export function app_message_reply_choices() {
   let n = reply_word_in();
   let fn18 = reply_optional(n);
   let item2 = app_reply_choices_location();
-  let fn27 = reply_choice([iam, iam_titled_name]);
+  let iam_o_titled_name = reply_choice([iam, iam_titled_name]);
   let fn19 = reply_sequence_output(
-    [fn27, "from", r_cities, fn18, r_countries],
+    [iam_o_titled_name, "from", r_cities, fn18, r_countries],
     item2,
   );
   let fn25 = reply_optional("ing");
