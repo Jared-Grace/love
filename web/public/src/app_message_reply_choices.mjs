@@ -1,3 +1,4 @@
+import { reply_word_us } from "../../../love/public/src/reply_word_us.mjs";
 import { reply_phrase_according_to_gods_will } from "../../../love/public/src/reply_phrase_according_to_gods_will.mjs";
 import { app_message_reply_from_city_country } from "../../../love/public/src/app_message_reply_from_city_country.mjs";
 import { app_message_reply_minister } from "../../../love/public/src/app_message_reply_minister.mjs";
@@ -42,7 +43,7 @@ export function app_message_reply_choices() {
   let n = reply_word_in();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
-  const us = "us";
+  const us = reply_word_us();
   let o_us = reply_optional(us);
   let according_to_gods_will2 = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
