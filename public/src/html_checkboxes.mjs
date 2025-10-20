@@ -69,14 +69,14 @@ export function html_checkboxes(
       html_checked_set(checkbox, true);
       const selected = "#5ffb84ff";
       await sleep_0();
-      let v2 = valid_get(checkboxes);
-      validate(v2);
+      let valid = valid_get(checkboxes);
+      validate(valid);
       html_style_assign(container, {
         "background-color": selected,
         "box-shadow":
-          "inset 0 0 0 .15em " +
-          html_rgba_to_rgb("#4ad66bff") +
-          ", inset 0 0 0 .3em white",
+          "inset 0 0 0 .15em " + valid
+            ? html_rgba_to_rgb("#4ad66bff")
+            : html_rgba_to_rgb("#4ad66bff") + ", inset 0 0 0 .3em white",
       });
     }
     html_on_click(container, on_click);
