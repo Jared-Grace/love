@@ -18,7 +18,7 @@ export function app_sandbox_main() {
     return button2;
   };
   let top_text =
-    "Will you pay for all of my travel? Please choose one of the following:";
+    "Will you provide for all of my travel? Please choose one of the following:";
   let value_previous_get = function lambda2() {
     let v = null;
     return v;
@@ -28,15 +28,15 @@ export function app_sandbox_main() {
       value: "no",
       title:
         emoji_secure() +
-        " I cannot agree to pay for all of your travel at this time",
+        " I cannot agree to provide for all of your travel at this time",
       details:
-        'If you cannot pay for all of my travel, then I have no money to pay for my travel to you. Please choose "' +
+        'If you cannot provide for all of my travel, then I have no money to pay for my travel to you. Please choose "' +
         app_karate_button_back_text() +
         '"',
     },
     {
       value: "yes",
-      title: emoji_check() + " Yes, I will pay for all of your travel",
+      title: emoji_check() + " Yes, I will provide for all of your travel",
       details:
         "May God you reap abundant blessings from your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
     },
