@@ -44,7 +44,7 @@ export function app_sandbox_main() {
         "May God you reap abundant blessings from your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
     },
   ];
-  let on_next = noop;
+  let on_next = () => {};
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     function lambda4(item) {
