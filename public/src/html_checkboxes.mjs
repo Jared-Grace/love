@@ -72,8 +72,8 @@ export function html_checkboxes(
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
-      let selected2 = html_border_invalid_color();
-      const c = valid ? "#4ad66bff" : selected2;
+      let ci = html_border_invalid_color();
+      const c = valid ? "#4ad66bff" : ci;
       html_style_assign(container, {
         "background-color": selected,
         "box-shadow":
