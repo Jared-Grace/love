@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
@@ -58,6 +59,7 @@ export function html_checkboxes(
     let checkbox = html_input_type(label, "checkbox");
     function lambda3(event) {
       event.stopPropagation();
+      log(message);
     }
     html_on_click(checkbox, lambda3);
     function on_click() {
