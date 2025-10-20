@@ -32,6 +32,7 @@ export function html_checkboxes(
   choices,
   on_next,
   button_next,
+  valid_get,
 ) {
   let root = html_clear_context(context);
   let container_main = app_karate_container_main(root);
@@ -55,7 +56,8 @@ export function html_checkboxes(
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     function on_click() {
-      validate(true);
+      let v2 = valid_get();
+      validate(v2);
       function lambda2(r) {
         let container2 = object_property_get(r, "container");
         html_style_assign(container2, {
