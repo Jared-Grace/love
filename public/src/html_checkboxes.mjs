@@ -56,7 +56,8 @@ export function html_checkboxes(
     app_karate_style_control(container);
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
-    html_on_click(checkbox, () => {});
+    function lambda3() {}
+    html_on_click(checkbox, lambda3);
     function on_click() {
       let v2 = valid_get(checkboxes);
       validate(v2);
