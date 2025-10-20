@@ -49,7 +49,8 @@ export function app_sandbox_main() {
   let valid_get = function lambda3(checkboxes) {
     function lambda4(item) {
       let value2 = html_attribute_get(item, "name");
-      return value2 === yes;
+      let v2 = value2 === yes;
+      return v2;
     }
     let only = list_find(checkboxes, lambda4);
   };
