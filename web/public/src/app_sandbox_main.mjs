@@ -1,3 +1,4 @@
+import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { emoji_secure } from "../../../love/public/src/emoji_secure.mjs";
@@ -27,7 +28,9 @@ export function app_sandbox_main() {
       title:
         emoji_secure() + " I cannot agree to pay for your travel at this time",
       details:
-        'If you cannot pay for my travel, I have no money to pay for my travel. Please choose "Back"',
+        'If you cannot pay for my travel, I have no money to pay for my travel. Please choose "' +
+        app_karate_button_back_text() +
+        '"',
     },
     {
       value: "yes",
