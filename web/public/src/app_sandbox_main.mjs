@@ -43,6 +43,7 @@ export function app_sandbox_main() {
   ];
   let on_next = noop;
   let button_next = app_karate_button_next;
+  let valid_get = () => {};
   html_checkboxes(
     context,
     button_back,
@@ -52,5 +53,6 @@ export function app_sandbox_main() {
     choices,
     on_next,
     button_next,
+    valid_get,
   );
 }
