@@ -47,8 +47,7 @@ export function app_sandbox_main() {
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     let value_checked = html_checkboxes_checked_value_get(checkboxes);
-    if (value_checked === yes) {
-    }
+    return value_checked === yes;
   };
   html_checkboxes(
     context,
