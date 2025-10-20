@@ -1,4 +1,4 @@
-import { sleep } from "../../../love/public/src/sleep.mjs";
+import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
@@ -58,7 +58,7 @@ export function html_checkboxes(
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     async function on_click() {
-      await sleep(0);
+      await sleep_0();
       let v2 = valid_get(checkboxes);
       validate(v2);
       function lambda2(r) {
