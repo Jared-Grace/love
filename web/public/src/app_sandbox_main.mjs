@@ -17,7 +17,8 @@ export function app_sandbox_main() {
     let button2 = app_karate_button_back(parent, noop);
     return button2;
   };
-  let top_text = "Will you pay for all of my travel?";
+  let top_text =
+    "Will you pay for all of my travel? Please choose one of the following:";
   let value_previous_get = function lambda2() {
     let v = null;
     return v;
