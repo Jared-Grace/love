@@ -25,6 +25,7 @@ export function app_sandbox_main() {
     let v = null;
     return v;
   };
+  const yes = "yes";
   const choices = [
     {
       value: "no",
@@ -37,7 +38,7 @@ export function app_sandbox_main() {
         '"',
     },
     {
-      value: "yes",
+      value: yes,
       title: emoji_check() + " Yes, I will provide for all of your travel",
       details:
         "May God you reap abundant blessings from your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
@@ -47,9 +48,10 @@ export function app_sandbox_main() {
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     function lambda4(item) {
-      let value2 = html_attribute_get(component, key);
+      let value2 = html_attribute_get(item, "name");
+      return value2 === yes;
     }
-    let only = list_find(list, lambda4);
+    let only = list_find(checkboxes, lambda4);
   };
   html_checkboxes(
     context,
