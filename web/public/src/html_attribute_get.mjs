@@ -3,5 +3,6 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 export function html_attribute_get(component, key, value) {
   marker("1");
   let element = html_component_element_get(component);
-  return element.getAttribute(key);
+  let v = element.getAttribute(key);
+  return v;
 }
