@@ -1,3 +1,4 @@
+import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { emoji_secure } from "../../../love/public/src/emoji_secure.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -34,6 +35,7 @@ export function app_sandbox_main() {
     },
   ];
   let on_next = noop;
+  let button_next = app_karate_button_next;
   html_checkboxes(
     context,
     button_back,
