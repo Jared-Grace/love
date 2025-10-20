@@ -56,6 +56,7 @@ export function html_checkboxes(
     app_karate_style_control(container);
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
+    html_on_click(checkbox, () => {});
     function on_click() {
       let v2 = valid_get(checkboxes);
       validate(v2);
@@ -77,6 +78,7 @@ export function html_checkboxes(
           ", inset 0 0 0 .3em white",
       });
     }
+    event.stopPropagation();
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
       list_add(afters, on_click);
