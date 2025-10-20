@@ -35,7 +35,7 @@ export function app_sandbox_main() {
     {
       value: "yes",
       title: emoji_check() + " Yes, I will pay for all of your travel",
-      details: "",
+      details: "May God fully repay",
     },
   ];
   let on_next = noop;
