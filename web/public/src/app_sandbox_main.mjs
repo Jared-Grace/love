@@ -40,7 +40,7 @@ export function app_sandbox_main() {
       value: yes,
       title: emoji_check() + " Yes, I will provide for all of your travel",
       details:
-        "May God you reap abundant blessings from your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
+        "May you reap abundant blessings from God for your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
     },
   ];
   let on_next = noop;
