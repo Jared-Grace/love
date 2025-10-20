@@ -1,3 +1,4 @@
+import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -71,12 +72,13 @@ export function html_checkboxes(
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
+      let selected2 = html_border_invalid_color();
       html_style_assign(container, {
         "background-color": selected,
         "box-shadow":
           "inset 0 0 0 .15em " + valid
             ? html_rgba_to_rgb("#4ad66bff")
-            : html_rgba_to_rgb("#4ad66bff") + ", inset 0 0 0 .3em white",
+            : html_rgba_to_rgb(selected2) + ", inset 0 0 0 .3em white",
       });
     }
     html_on_click(container, on_click);
