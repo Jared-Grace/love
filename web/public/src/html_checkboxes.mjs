@@ -1,4 +1,4 @@
-import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
+import { app_karate_button_background_invalid } from "../../../karate_code/public/src/app_karate_button_background_invalid.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -75,7 +75,7 @@ export function html_checkboxes(
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
-      let ci = html_border_invalid_color();
+      let ci = app_karate_button_background_invalid();
       const c = valid ? "#4ad66bff" : ci;
       html_style_assign(container, {
         "box-shadow":
