@@ -27,7 +27,8 @@ export function app_sandbox_main() {
     {
       value: "no",
       title:
-        emoji_secure() + " I cannot agree to pay for your travel at this time",
+        emoji_secure() +
+        " I cannot agree to pay for all of your travel at this time",
       details:
         'If you cannot pay for my travel, I have no money to pay for my travel. Please choose "' +
         app_karate_button_back_text() +
