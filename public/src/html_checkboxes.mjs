@@ -59,7 +59,7 @@ export function html_checkboxes(
     let checkbox = html_input_type(label, "checkbox");
     function lambda3(event) {
       event.stopPropagation();
-      log(message);
+      log("event");
     }
     html_on_click(checkbox, lambda3);
     function on_click() {
