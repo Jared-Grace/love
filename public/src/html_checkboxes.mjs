@@ -68,6 +68,9 @@ export function html_checkboxes(
       each(checkboxes, lambda2);
       html_checked_set(checkbox, true);
       const selected = "#5ffb84ff";
+      await sleep_0();
+      let v2 = valid_get(checkboxes);
+      validate(v2);
       html_style_assign(container, {
         "background-color": selected,
         "box-shadow":
@@ -75,9 +78,6 @@ export function html_checkboxes(
           html_rgba_to_rgb("#4ad66bff") +
           ", inset 0 0 0 .3em white",
       });
-      await sleep_0();
-      let v2 = valid_get(checkboxes);
-      validate(v2);
     }
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
