@@ -1,3 +1,4 @@
+import { html_attribute_get } from "../../../love/public/src/html_attribute_get.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
@@ -46,7 +47,7 @@ export function app_sandbox_main() {
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     function lambda4(item) {
-      html_attribute_get;
+      let value2 = html_attribute_get(component, key);
     }
     let only = list_find(list, lambda4);
   };
