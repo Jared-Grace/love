@@ -43,7 +43,7 @@ export function app_sandbox_main() {
   ];
   let on_next = noop;
   let button_next = app_karate_button_next;
-  let valid_get = function lambda3() {};
+  let valid_get = function lambda3(checkboxes) {};
   html_checkboxes(
     context,
     button_back,
