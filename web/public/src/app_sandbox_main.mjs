@@ -1,4 +1,4 @@
-import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
@@ -45,7 +45,7 @@ export function app_sandbox_main() {
   let on_next = noop;
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
-    let first = list_first(list);
+    let only = list_find(list, function lambda4(item) {});
   };
   html_checkboxes(
     context,
