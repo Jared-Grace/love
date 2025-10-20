@@ -69,13 +69,15 @@ export function html_checkboxes(
       each(checkboxes, lambda2);
       html_checked_set(checkbox, true);
       const selected = "#5ffb84ff";
+      html_style_assign(container, {
+        "background-color": selected,
+      });
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
       let ci = html_border_invalid_color();
       const c = valid ? "#4ad66bff" : ci;
       html_style_assign(container, {
-        "background-color": selected,
         "box-shadow":
           "inset 0 0 0 .15em " +
           html_rgba_to_rgb(c) +
