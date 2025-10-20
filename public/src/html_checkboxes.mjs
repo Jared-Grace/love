@@ -56,7 +56,7 @@ export function html_checkboxes(
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     function on_click() {
-      let v2 = valid_get();
+      let v2 = valid_get(checkboxes);
       validate(v2);
       function lambda2(r) {
         let container2 = object_property_get(r, "container");
