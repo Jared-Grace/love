@@ -33,6 +33,7 @@ export function app_sandbox_main() {
       details: "",
     },
   ];
+  let on_next = noop;
   html_checkboxes(
     context,
     button_back,
