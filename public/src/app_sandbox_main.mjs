@@ -1,5 +1,4 @@
-import { html_attribute_get } from "../../../love/public/src/html_attribute_get.mjs";
-import { list_find } from "../../../love/public/src/list_find.mjs";
+import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
@@ -44,15 +43,12 @@ export function app_sandbox_main() {
         "May God you reap abundant blessings from your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
     },
   ];
-  let on_next = function lambda5({ value_checked }) {};
+  let on_next = noop;
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
-    function lambda4(item) {
-      let value2 = html_attribute_get(item, "name");
-      let v2 = value2 === yes;
-      return v2;
+    let value_checked = html_checkboxes_checked_value_get(checkboxes);
+    if (false) {
     }
-    let only = list_find(checkboxes, lambda4);
   };
   html_checkboxes(
     context,
