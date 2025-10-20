@@ -73,12 +73,13 @@ export function html_checkboxes(
       let valid = valid_get(checkboxes);
       validate(valid);
       let selected2 = html_border_invalid_color();
+      const c = valid ? "#4ad66bff" : selected2;
       html_style_assign(container, {
         "background-color": selected,
         "box-shadow":
-          "inset 0 0 0 .15em " + valid
-            ? html_rgba_to_rgb("#4ad66bff")
-            : html_rgba_to_rgb(selected2) + ", inset 0 0 0 .3em white",
+          "inset 0 0 0 .15em " +
+          html_rgba_to_rgb(c) +
+          ", inset 0 0 0 .3em white",
       });
     }
     html_on_click(container, on_click);
