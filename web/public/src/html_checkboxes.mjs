@@ -1,7 +1,4 @@
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
-import { html_checked_get } from "../../../love/public/src/html_checked_get.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -102,9 +99,7 @@ export function html_checkboxes(
   }
   checkboxes = list_map(choices, lambda);
   function lambda6() {
-    let checkeds = list_filter(checkboxes, html_checked_get);
-    let only = list_single(checkeds);
-    let value_checked = html_value_get(only);
+    let value_checked = html_checkboxes_checked_value_get(checkboxes);
     let v = on_next({
       value_checked,
     });
