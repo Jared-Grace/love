@@ -58,9 +58,6 @@ export function html_checkboxes(
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     async function on_click() {
-      await sleep_0();
-      let v2 = valid_get(checkboxes);
-      validate(v2);
       function lambda2(r) {
         let container2 = object_property_get(r, "container");
         html_style_assign(container2, {
@@ -78,6 +75,9 @@ export function html_checkboxes(
           html_rgba_to_rgb("#4ad66bff") +
           ", inset 0 0 0 .3em white",
       });
+      await sleep_0();
+      let v2 = valid_get(checkboxes);
+      validate(v2);
     }
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
