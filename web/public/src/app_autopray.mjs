@@ -1,4 +1,4 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_autopray() {
-  marker("1");
+export async function app_autopray() {
+  await app_main_production("app_autopray_main", "jared-grace");
 }
