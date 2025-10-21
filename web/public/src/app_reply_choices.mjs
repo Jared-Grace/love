@@ -133,16 +133,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_ok() + " How day",
-      response:
-        emoji_ok() +
-        " The day of the " +
-        string_the_servant_of_god_is() +
-        " doing good " +
-        emoji_100() +
-        " through the grace of God, because " +
-        emoji_book_open() +
-        " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28)" +
-        emoji_pray(),
+      response: emoji_ok() + " The day of the " + app_reply_response_how_r_u(),
     },
     {
       text: emoji_pray() + " How family",
