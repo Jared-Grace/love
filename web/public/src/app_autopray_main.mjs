@@ -25,5 +25,7 @@ export async function app_autopray_main() {
     ]);
     await sleep(66);
   }
-  while (true) await each_object_async(v, lambda2);
+  while (true) {
+    await each_object_async(v, lambda2);
+  }
 }
