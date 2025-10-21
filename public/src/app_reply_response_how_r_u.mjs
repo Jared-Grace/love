@@ -1,9 +1,11 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { string_the_servant_of_god_is } from "../../../love/public/src/string_the_servant_of_god_is.mjs";
 import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 export function app_reply_response_how_r_u() {
+  marker("1");
   let hru =
     emoji_ok() +
     " " +
