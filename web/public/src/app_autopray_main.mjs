@@ -10,7 +10,7 @@ export async function app_autopray_main() {
   async function lambda2(verse_text, verse_reference) {
     html_clear(body);
     html_p_text_multiple(body, [verse_text, verse_reference]);
-    await sleep(10);
+    await sleep(77);
   }
   await each_object_async(v, lambda2);
 }
