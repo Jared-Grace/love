@@ -6,6 +6,7 @@ export function string_first_lower_to(s) {
   marker("1");
   let split = string_split_empty(s);
   let { first, remaining } = list_first_remaining(split);
-  let lower = string_lower_to(s);
-  return lower;
+  let lower = string_lower_to(first);
+  let v = "" + lower + remaining;
+  return v;
 }
