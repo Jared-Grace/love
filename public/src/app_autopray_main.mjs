@@ -2,6 +2,6 @@ import { each_object_async } from "../../../love/public/src/each_object_async.mj
 import { kjv } from "../../../love/public/src/kjv.mjs";
 export async function app_autopray_main() {
   let v = kjv();
-  function lambda2(verse_text, verse_reference) {}
+  async function lambda2(verse_text, verse_reference) {}
   await each_object_async(object, lambda2);
 }
