@@ -1,7 +1,7 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function kjv() {
   marker("1");
-  let v = {
+  let verses = {
     "Genesis 1:1": "In the beginning God created the heaven and the earth.",
     "Genesis 1:2":
       "And the earth was without form, and void; and darkness [was] upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
@@ -60783,5 +60783,5 @@ export function kjv() {
     "Revelation 22:21":
       "The grace of our Lord Jesus Christ [be] with you all. Amen.",
   };
-  return v;
+  return verses;
 }
