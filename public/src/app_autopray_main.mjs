@@ -1,3 +1,4 @@
+import { string_may_the_lord } from "../../../love/public/src/string_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -13,7 +14,15 @@ export async function app_autopray_main() {
     html_clear(body);
     let v2 = prayer_start();
     let v3 = prayer_end();
-    html_p_text_multiple(body, [v2, verse_text, verse_reference, v3]);
+    let v4 = string_may_the_lord();
+    html_p_text_multiple(body, [
+      v2,
+      v4,
+      "lead all creation to hear, believe and obey the word of God:",
+      verse_text,
+      verse_reference,
+      v3,
+    ]);
     await sleep(66);
   }
   await each_object_async(v, lambda2);
