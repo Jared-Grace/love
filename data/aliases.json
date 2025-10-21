@@ -247,6 +247,6 @@
   "lia": "list_is_assert",
   "po": "prompt_previous_open",
   "rso": "reply_sequence_optional",
-  "hdb": "html_document_body'"
+  "hdb": "html_document_body"
  }
 }
