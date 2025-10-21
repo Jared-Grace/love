@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { kjv } from "../../../love/public/src/kjv.mjs";
 export function app_autopray_main() {
-  marker("1");
+  let v = kjv();
 }
