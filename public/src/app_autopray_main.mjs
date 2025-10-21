@@ -8,7 +8,7 @@ export async function app_autopray_main() {
   let body = html_document_body();
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
-    html_clear(element);
+    html_clear(body);
     html_p_text_multiple(body, [verse_text, verse_reference]);
     await sleep(10);
   }
