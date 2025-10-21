@@ -1,7 +1,9 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function each_object_async(object, lambda) {
+  marker("1");
   function lambda2(property) {
     let value = object_property_get(object, property);
     lambda(value, property);
