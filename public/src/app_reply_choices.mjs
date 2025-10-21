@@ -1,3 +1,4 @@
+import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
@@ -133,7 +134,8 @@ export function app_reply_choices() {
     },
     {
       text: emoji_ok() + " How day",
-      response: emoji_ok() + " The day of the " + app_reply_response_how_r_u(),
+      response:
+        emoji_ok() + " The day of the " + app_reply_response_how_r_u_skip(),
     },
     {
       text: emoji_pray() + " How family",
