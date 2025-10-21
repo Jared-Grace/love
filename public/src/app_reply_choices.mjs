@@ -141,7 +141,7 @@ export function app_reply_choices() {
         emoji_100() +
         " through the grace of God, because " +
         emoji_book_open() +
-        " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However please pray that the servant of God will stop hearing demons" +
+        " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28)" +
         emoji_pray(),
     },
     {
