@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
@@ -7,6 +8,7 @@ export function string_first_lower_to(s) {
   let split = string_split_empty(s);
   let { first, remaining } = list_first_remaining(split);
   let lower = string_lower_to(first);
+  let joined = list_join_empty(letters);
   let v = "" + lower + remaining;
   return v;
 }
