@@ -1,3 +1,4 @@
+import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
 import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
@@ -51,6 +52,7 @@ export function app_reply_choices() {
   let will = app_reply_pray("Will", pray_request);
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   const blessed = "you, your family, your church and your country";
+  let s = app_reply_response_how_r_u_skip();
   let v = [
     {
       text: emoji_pray() + " Amen",
@@ -134,8 +136,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_ok() + " How day",
-      response:
-        emoji_ok() + " The day of the " + app_reply_response_how_r_u_skip(),
+      response: emoji_ok() + " The day of the " + string_first_lower_to(s),
     },
     {
       text: emoji_pray() + " How family",
