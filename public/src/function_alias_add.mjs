@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { undefined_not_is_assert } from "../../../love/public/src/undefined_not_is_assert.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_sort_string_size } from "../../../love/public/src/list_sort_string_size.mjs";
@@ -9,6 +10,7 @@ export async function function_alias_add(first, second) {
   let list = [first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
+  let expression = js_parse_expression(code_expression);
   undefined_not_is_assert(f_name);
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
