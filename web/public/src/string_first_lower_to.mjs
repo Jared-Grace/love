@@ -8,7 +8,7 @@ export function string_first_lower_to(s) {
   let split = string_split_empty(s);
   let { first, remaining } = list_first_remaining(split);
   let lower = string_lower_to(first);
-  let joined = list_join_empty(letters);
-  let v = "" + lower + remaining;
+  let joined = list_join_empty(remaining);
+  let v = "" + lower + joined;
   return v;
 }
