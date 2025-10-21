@@ -4,8 +4,8 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function string_first_lower_to(s) {
   marker("1");
-  let split = string_split_empty(s2);
-  let result = list_first_remaining(list);
+  let split = string_split_empty(s);
+  let { first, remaining } = list_first_remaining(split);
   let lower = string_lower_to(s);
   return lower;
 }
