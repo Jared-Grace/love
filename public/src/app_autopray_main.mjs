@@ -2,9 +2,10 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { kjv } from "../../../love/public/src/kjv.mjs";
 export async function app_autopray_main() {
+  hdb;
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
-    html_p_text_multiple(parent, list);
+    html_p_text_multiple(parent, [verse_text, verse_reference]);
   }
   await each_object_async(v, lambda2);
 }
