@@ -18,7 +18,7 @@ export async function app_autopray_main() {
     html_p_text_multiple(body, [
       v2,
       v4,
-      "lead all creation to hear, believe and obey the word of God:",
+      "lead all creation to hear, believe, obey and enjoy the word of God:",
       verse_text,
       verse_reference,
       v3,
