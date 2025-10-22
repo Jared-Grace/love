@@ -4,5 +4,5 @@ export function app_message_provide_travel(context) {
   let category = "travel";
   let verse1 =
     "knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!";
-  app_message_provide_generic(category, emoji, context);
+  app_message_provide_generic(category, emoji, context, verse);
 }
