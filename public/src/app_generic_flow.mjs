@@ -1,4 +1,4 @@
-import { app_screen_set } from "../../../love/public/src/app_screen_set.mjs";
+import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -33,5 +33,5 @@ export function app_generic_flow(context, screens, before_or_after, find) {
   let filtered = list_filter(ba, lambda4);
   let first = find(filtered);
   let name2 = object_property_get(first, "fn");
-  app_screen_set(context, name2);
+  app_generic_screen_set(context, name2);
 }
