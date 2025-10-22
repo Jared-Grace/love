@@ -48,7 +48,7 @@ export function app_message_provide_travel(context) {
       title:
         emoji_check() + " Yes, I will provide for all of your travel " + emoji,
       details:
-        "May you reap abundant blessings from God for your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
+        "May you reap abundant blessings from God for your generosity: ...whoever sows generously will also reap generously (Corinthians 9:6)",
     },
   ];
   let on_next = function lambda4() {
