@@ -6,8 +6,9 @@ import { html_document_body } from "./html_document_body.mjs";
 export function app_sandbox_main() {
   let root = html_document_body();
   marker("1");
+  let app_fn = app_message;
   let context = {
-    app_fn: app_message,
+    app_fn,
     root,
   };
   let screen_name = storage_local_initialize(
