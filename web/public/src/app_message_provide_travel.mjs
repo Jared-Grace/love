@@ -10,12 +10,15 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 export function app_message_provide_travel(context) {
   let emoji = "🛬";
+  let category = "travel";
   let button_back = function lambda(context, parent) {
     let button2 = app_karate_button_back(parent, noop);
     return button2;
   };
   let top_text =
-    "Will you provide for all of my travel? " +
+    "Will you provide for all of my " +
+    category +
+    "? " +
     emoji +
     " Please choose one of the following:";
   let value_previous_get = function lambda2() {
