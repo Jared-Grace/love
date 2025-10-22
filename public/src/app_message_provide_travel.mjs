@@ -1,3 +1,4 @@
+import { emoji_x_purple } from "../../../love/public/src/emoji_x_purple.mjs";
 import { app_message_flow_travel } from "../../../love/public/src/app_message_flow_travel.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
@@ -23,7 +24,8 @@ export function app_message_provide_travel(context) {
     {
       value: "no",
       title:
-        "✖️" + " I cannot agree to provide for all of your travel at this time",
+        emoji_x_purple() +
+        " I cannot agree to provide for all of your travel at this time",
       details:
         'If you cannot provide for all of my travel, then I have no money to pay for my travel to you. Please choose "' +
         app_karate_button_back_text() +
