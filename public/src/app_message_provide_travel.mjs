@@ -42,6 +42,9 @@ export function app_message_provide_travel(context) {
       {
         fn: app_message_provide_travel,
       },
+      {
+        fn: app_message_provide_travel,
+      },
     ];
     app_generic_flow_next(context, screens);
   };
