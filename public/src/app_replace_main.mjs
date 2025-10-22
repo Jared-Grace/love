@@ -1,6 +1,6 @@
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
-import { app_refresh } from "../../../love/public/src/app_refresh.mjs";
+import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_replace_screens } from "../../../love/public/src/app_replace_screens.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -14,6 +14,6 @@ export async function app_replace_main() {
     screens,
     root: root,
   };
-  await app_refresh(context);
+  await app_generic_refresh(context);
   await app_replace_font_size_refresh(context);
 }
