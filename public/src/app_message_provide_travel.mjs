@@ -5,7 +5,6 @@ import { app_karate_button_next } from "../../../karate_code/public/src/app_kara
 import { app_generic_flow_next } from "../../../love/public/src/app_generic_flow_next.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
-import { emoji_secure } from "../../../love/public/src/emoji_secure.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 export function app_message_provide_travel(context) {
@@ -24,8 +23,7 @@ export function app_message_provide_travel(context) {
     {
       value: "no",
       title:
-        emoji_secure() +
-        " I cannot agree to provide for all of your travel at this time",
+        "✖️" + " I cannot agree to provide for all of your travel at this time",
       details:
         'If you cannot provide for all of my travel, then I have no money to pay for my travel to you. Please choose "' +
         app_karate_button_back_text() +
