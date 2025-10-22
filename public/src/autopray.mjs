@@ -5,6 +5,7 @@ import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { kjv } from "../../../love/public/src/kjv.mjs";
+import { sleep } from "./sleep.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export async function autopray() {
   marker("1");
@@ -22,6 +23,9 @@ export async function autopray() {
       v3,
     ]);
     log(p);
+    return;
+    const isaiah_chapters_count = 66;
+    await sleep(isaiah_chapters_count);
   }
   while (true) {
     await each_object_async(v, lambda2);
