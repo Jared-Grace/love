@@ -31,9 +31,15 @@ export function app_message_provide_travel(context) {
       value: "no",
       title:
         emoji_x_purple() +
-        " I cannot agree to provide for all of your travel at this time",
+        " I cannot agree to provide for all of your " +
+        category +
+        " at this time",
       details:
-        'If you cannot provide for all of my travel, then I have no money to pay for my travel to you. Please choose "' +
+        "If you cannot provide for all of my " +
+        category +
+        ", then I have no money to pay for my " +
+        category +
+        ' to you. Please choose "' +
         app_karate_button_back_text() +
         '"',
     },
