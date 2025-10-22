@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { string_may_the_lord } from "../../../love/public/src/string_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
@@ -13,14 +14,15 @@ export async function autopray() {
     let v2 = prayer_start();
     let v3 = prayer_end();
     let v4 = string_may_the_lord();
-    list_join_newline([
-      (p = v2),
+    let p = list_join_newline([
+      v2,
       v4,
       "lead all creation to hear, believe, obey, enjoy and proclaim the word of God:",
       verse_text,
       verse_reference,
       v3,
     ]);
+    log(message);
     const isaiah_chapters_count = 66;
     await sleep(isaiah_chapters_count);
   }
