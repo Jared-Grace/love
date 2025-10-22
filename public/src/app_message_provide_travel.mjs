@@ -9,6 +9,7 @@ import { app_karate_button_back_text } from "../../../love/public/src/app_karate
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 export function app_message_provide_travel(context) {
+  let emoji = "🛬";
   let button_back = function lambda(context, parent) {
     let button2 = app_karate_button_back(parent, noop);
     return button2;
