@@ -1,3 +1,4 @@
+import { app_message_flow_travel } from "../../../love/public/src/app_message_flow_travel.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
@@ -38,14 +39,7 @@ export function app_message_provide_travel(context) {
     },
   ];
   let on_next = function lambda4() {
-    let screens = [
-      {
-        fn: app_message_provide_travel,
-      },
-      {
-        fn: app_message_provide_travel,
-      },
-    ];
+    let screens = app_message_flow_travel();
     app_generic_flow_next(context, screens);
   };
   let button_next = app_karate_button_next;
