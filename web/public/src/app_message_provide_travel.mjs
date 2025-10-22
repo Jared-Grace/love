@@ -15,7 +15,9 @@ export function app_message_provide_travel(context) {
     return button2;
   };
   let top_text =
-    "Will you provide for all of my travel? 🛬 Please choose one of the following:";
+    "Will you provide for all of my travel? " +
+    emoji +
+    " Please choose one of the following:";
   let value_previous_get = function lambda2() {
     let v = null;
     return v;
@@ -34,7 +36,8 @@ export function app_message_provide_travel(context) {
     },
     {
       value: yes,
-      title: emoji_check() + " Yes, I will provide for all of your travel 🛬",
+      title:
+        emoji_check() + " Yes, I will provide for all of your travel " + emoji,
       details:
         "May you reap abundant blessings from God for your generosity: knowing that whatever good anyone does, he will receive the same from the Lord, whether he is slave or free (Ephesians 6:8)!",
     },
