@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { string_may_the_lord } from "../../../love/public/src/string_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
@@ -8,6 +9,7 @@ import { each_object_async } from "../../../love/public/src/each_object_async.mj
 import { kjv } from "../../../love/public/src/kjv.mjs";
 import { sleep } from "./sleep.mjs";
 export async function autopray() {
+  marker("1");
   let body = html_document_body();
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
