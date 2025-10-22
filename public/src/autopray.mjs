@@ -13,8 +13,8 @@ export async function autopray() {
     let v2 = prayer_start();
     let v3 = prayer_end();
     let v4 = string_may_the_lord();
-    list_join_newline(body, [
-      v2,
+    list_join_newline([
+      (p = v2),
       v4,
       "lead all creation to hear, believe, obey, enjoy and proclaim the word of God:",
       verse_text,
