@@ -23,7 +23,8 @@ export async function app_autopray_main() {
       verse_reference,
       v3,
     ]);
-    await sleep(66);
+    const isaiah_chapters_count = 66;
+    await sleep(isaiah_chapters_count);
   }
   while (true) {
     await each_object_async(v, lambda2);
