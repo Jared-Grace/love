@@ -40,7 +40,7 @@ export function app_message_provide_travel(context) {
   let on_next = function lambda4() {
     let screens = [
       {
-        fn,
+        fn: app_message_provide_travel,
       },
     ];
     app_generic_flow_next(context, screens);
