@@ -22,7 +22,7 @@ export async function autopray() {
       verse_reference,
       v3,
     ]);
-    log(message);
+    log(p);
     const isaiah_chapters_count = 66;
     await sleep(isaiah_chapters_count);
   }
