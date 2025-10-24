@@ -1,3 +1,4 @@
+import { app_generic_flow_back } from "../../../love/public/src/app_generic_flow_back.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
@@ -13,7 +14,7 @@ export function app_message_provide_generic(category, emoji, context, verse) {
   let button_back = function lambda(context, parent) {
     function lambda5() {
       let screens = app_message_flow_travel();
-      app_generic_flow_next(context, screens);
+      app_generic_flow_back(context, screens);
     }
     let button2 = app_karate_button_back(parent, lambda5);
     return button2;
