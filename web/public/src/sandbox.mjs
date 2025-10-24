@@ -17,8 +17,7 @@ export async function sandbox() {
   let s = {};
   let localStorage = {
     getItem: function getItem(storage_local_key) {
-      let exists_not = null;
-      let value3 = object_property_get_or(exists_not, s, storage_local_key);
+      let value3 = object_property_get_or(null, s, storage_local_key);
       return value3;
     },
     setItem: function setItem(storage_local_key, v) {
