@@ -35,8 +35,7 @@ export function app_karate_screen_input_validate(
     html_style_set(ul, "margin", "0");
     function validate_all() {
       each(inputs, validate_input);
-      function lambda3(item) {}
-      let mapped = list_map(list, lambda3);
+      let mapped = list_map(list, validate_input);
     }
     html_on_input(input, validate_all);
     function validate_input() {
