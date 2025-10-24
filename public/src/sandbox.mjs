@@ -16,8 +16,9 @@ export async function sandbox() {
         return v2;
       }
     },
-    setItem: function setItem() {
+    setItem: function setItem(storage_local_key, v) {
       object_property_set(object, property_name, value3);
+      object_property_set(s, storage_local_key, v);
     },
   };
   global.localStorage = localStorage;
