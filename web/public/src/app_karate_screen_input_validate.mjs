@@ -53,8 +53,8 @@ export function app_karate_screen_input_validate(
       app_karate_validate_style_assign(valid, [div], input, button_below);
     }
     validate();
-    html_focus(input);
   }
   each(inputs, lambda2);
-  let first = list_first(list);
+  let first = list_first(inputs);
+  html_focus(first);
 }
