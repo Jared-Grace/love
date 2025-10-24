@@ -32,7 +32,9 @@ export function app_karate_screen_input_validate(
       color: "#872121ff",
     });
     html_style_set(ul, "margin", "0");
-    function validate_all() {}
+    function validate_all() {
+      each(list, function lambda3(item) {});
+    }
     html_on_input(input, validate_all);
     function validate_input() {
       let value = html_value_get(input);
