@@ -1,3 +1,4 @@
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { storage_local_keys_app } from "../../../karate_code/public/src/storage_local_keys_app.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_disable } from "../../../love/public/src/storage_local_disable.mjs";
@@ -29,6 +30,9 @@ export async function sandbox() {
     setItem: function setItem(storage_local_key, v) {
       v = string_to(v);
       object_property_set(s, storage_local_key, v);
+    },
+    get length() {
+      let properties = object_properties(obj);
     },
   };
   global.localStorage = localStorage;
