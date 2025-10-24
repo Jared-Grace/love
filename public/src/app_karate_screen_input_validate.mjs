@@ -18,6 +18,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_green_dark } from "../../../karate_code/public/src/app_karate_green_dark.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
+import { true_is } from "./true_is.mjs";
 export function app_karate_screen_input_validate(
   div,
   div_checks,
@@ -37,8 +38,7 @@ export function app_karate_screen_input_validate(
     function validate_all() {
       each(inputs, validate_input);
       let mapped = list_map(inputs, validate_input);
-      function lambda3(item) {}
-      list_all(list, lambda3);
+      list_all(mapped, true_is);
       app_karate_validate_style_assign(valid, [div], input, button_below);
     }
     html_on_input(input, validate_all);
