@@ -18,7 +18,7 @@ export async function sandbox() {
       }
     },
     setItem: function setItem(storage_local_key, v) {
-      let s2 = string_to(input);
+      v = string_to(v);
       object_property_set(s, storage_local_key, v);
     },
   };
