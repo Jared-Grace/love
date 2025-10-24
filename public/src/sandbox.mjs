@@ -10,5 +10,6 @@ export async function sandbox() {
   let value = storage_local_get(app_fn, key);
   let n = null_is(value);
   assert(n);
-  storage_local_set(app_fn, key, 123);
+  const v = 123;
+  storage_local_set(app_fn, key, v);
 }
