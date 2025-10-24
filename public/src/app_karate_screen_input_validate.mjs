@@ -55,8 +55,8 @@ export function app_karate_screen_input_validate(
         }
       }
       each(checks, lambda);
+      app_karate_validate_style_assign(valid, [div], input, null);
       return valid;
-      app_karate_validate_style_assign(valid, [div], input, button_below);
     }
     validate_input();
   }
