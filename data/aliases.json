@@ -248,6 +248,7 @@
   "po": "prompt_previous_open",
   "rso": "reply_sequence_optional",
   "hdb": "html_document_body",
-  "apr": "autopray"
+  "apr": "autopray",
+  "sto": "string_to"
  }
 }
