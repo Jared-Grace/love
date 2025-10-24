@@ -9,6 +9,8 @@ export function app_generic_screen_set(context, fn) {
   let app_fn = object_property_get(context, "app_fn");
   let without = function_name_prefix_without(fn, app_fn);
   storage_local_set_context(context, "screen", without);
-  log(message);
+  log({
+    without,
+  });
   app_generic_refresh(context);
 }
