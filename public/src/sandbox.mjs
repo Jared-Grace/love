@@ -1,4 +1,4 @@
-import { npm_install } from "../../../love/public/src/npm_install.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
@@ -8,7 +8,7 @@ export async function sandbox() {
   let app_fn = sandbox;
   const key = "test";
   let value = storage_local_get(app_fn, key);
-  await npm_install(package_name);
+  let n = null_is(value2);
   assert(b);
   storage_local_set(app_fn, key, 123);
 }
