@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
@@ -15,7 +16,9 @@ export async function sandbox() {
         return v2;
       }
     },
-    setItem: function lambda() {},
+    setItem: function setItem() {
+      object_property_set(object, property_name, value3);
+    },
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
