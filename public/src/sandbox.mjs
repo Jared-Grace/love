@@ -7,7 +7,6 @@ import { storage_local_enabled } from "../../../love/public/src/storage_local_en
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
@@ -19,14 +18,11 @@ export async function sandbox() {
   let s = {};
   let localStorage = {
     getItem: function getItem(storage_local_key) {
-      let exists_not = null;
-      let exists = object_property_exists(s, storage_local_key);
-      if (not(exists)) {
-        let v2 = null;
-        return v2;
-      }
       let value3 = null;
-      value3 = object_property_get(s, storage_local_key);
+      let exists = object_property_exists(s, storage_local_key);
+      if (exists) {
+        value3 = object_property_get(s, storage_local_key);
+      }
       return value3;
     },
     setItem: function setItem(storage_local_key, v) {
