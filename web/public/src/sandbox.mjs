@@ -6,6 +6,7 @@ import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { object_property_get } from "./object_property_get.mjs";
 export async function sandbox() {
   marker("1");
   let s = {};
@@ -16,6 +17,7 @@ export async function sandbox() {
         let v2 = null;
         return v2;
       }
+      let value3 = object_property_get(object, property_name);
     },
     setItem: function setItem(storage_local_key, v) {
       v = string_to(v);
