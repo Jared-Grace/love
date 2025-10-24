@@ -4,6 +4,7 @@ import { storage_local_set } from "../../../love/public/src/storage_local_set.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
+  let localStorage = {};
   let app_fn = sandbox;
   const key = "test";
   let value = storage_local_get(app_fn, key);
