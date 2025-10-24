@@ -1,3 +1,4 @@
+import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -37,4 +38,5 @@ export async function sandbox() {
   storage_local_set(app_fn, key, v);
   let value2 = storage_local_get(app_fn, key);
   equal_assert(v, value2);
+  let enabled = storage_local_enabled();
 }
