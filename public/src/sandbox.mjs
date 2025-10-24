@@ -16,6 +16,7 @@ export async function sandbox() {
       }
     },
   };
+  global.localStorage = localStorage;
   let app_fn = sandbox;
   const key = "test";
   let value = storage_local_get(app_fn, key);
