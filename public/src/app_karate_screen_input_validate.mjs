@@ -18,40 +18,41 @@ import { app_karate_style_control } from "../../../karate_code/public/src/app_ka
 export function app_karate_screen_input_validate(
   div,
   div_checks,
-  input,
+  inputs,
   button_below,
   checks,
 ) {
-  function lambda2(item) {}
-  each(list, lambda2);
-  app_karate_style_control(input);
-  const border_color = app_karate_green_dark();
-  app_karate_style_control_border(input, border_color);
-  let ul = html_element(div_checks, "ul");
-  html_style_assign(ul, {
-    color: "#872121ff",
-  });
-  html_style_set(ul, "margin", "0");
-  html_on_input(input, validate);
-  function validate() {
-    let value = html_value_get(input);
-    let trimmed = string_trim(value);
-    html_value_set(input, trimmed);
-    html_clear(ul);
-    let valid = true;
-    function lambda(c) {
-      let text2 = object_property_get(c, "text");
-      let check2 = object_property_get(c, "check");
-      let a = check2(trimmed);
-      if (not(a)) {
-        let li = html_element(ul, "li");
-        html_text_set(li, text2);
-        valid = false;
+  function lambda2(input) {
+    app_karate_style_control(input);
+    const border_color = app_karate_green_dark();
+    app_karate_style_control_border(input, border_color);
+    let ul = html_element(div_checks, "ul");
+    html_style_assign(ul, {
+      color: "#872121ff",
+    });
+    html_style_set(ul, "margin", "0");
+    html_on_input(input, validate);
+    function validate() {
+      let value = html_value_get(input);
+      let trimmed = string_trim(value);
+      html_value_set(input, trimmed);
+      html_clear(ul);
+      let valid = true;
+      function lambda(c) {
+        let text2 = object_property_get(c, "text");
+        let check2 = object_property_get(c, "check");
+        let a = check2(trimmed);
+        if (not(a)) {
+          let li = html_element(ul, "li");
+          html_text_set(li, text2);
+          valid = false;
+        }
       }
+      each(checks, lambda);
+      app_karate_validate_style_assign(valid, [div], input, button_below);
     }
-    each(checks, lambda);
-    app_karate_validate_style_assign(valid, [div], input, button_below);
+    validate();
+    html_focus(input);
   }
-  validate();
-  html_focus(input);
+  each(inputs, lambda2);
 }
