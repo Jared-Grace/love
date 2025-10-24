@@ -35,6 +35,7 @@ export async function sandbox() {
     get length() {
       let properties = object_properties(s);
       let size = list_size(list);
+      return size;
     },
   };
   global.localStorage = localStorage;
