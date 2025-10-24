@@ -14,7 +14,7 @@ export function app_sandbox_main() {
     root,
     screens: {
       provide_travel: app_message_provide_travel,
-      app_message_provide_food: app_message_provide_food,
+      provide_food: app_message_provide_food,
     },
   };
   let screen_name = storage_local_initialize(
