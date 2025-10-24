@@ -1,4 +1,3 @@
-import { app_message_provide_housing } from "../../../love/public/src/app_message_provide_housing.mjs";
 import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 import { app_message } from "../../../love/public/src/app_message.mjs";
 import { app_message_provide_travel } from "../../../love/public/src/app_message_provide_travel.mjs";
@@ -15,7 +14,6 @@ export function app_sandbox_main() {
     screens: {
       provide_travel: app_message_provide_travel,
       provide_food: app_message_provide_food,
-      provide_housing: app_message_provide_housing,
     },
   };
   app_generic_refresh(context);
