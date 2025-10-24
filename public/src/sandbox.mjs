@@ -45,6 +45,8 @@ export async function sandbox() {
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   let keys = storage_local_keys_global_app(context);
-  log({keys});
+  log({
+    keys,
+  });
   storage_local_disable();
 }
