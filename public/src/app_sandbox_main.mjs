@@ -1,3 +1,4 @@
+import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 import { storage_local_initialize } from "../../../love/public/src/storage_local_initialize.mjs";
 import { app_message } from "../../../love/public/src/app_message.mjs";
 import { app_message_provide_travel } from "../../../love/public/src/app_message_provide_travel.mjs";
@@ -21,5 +22,6 @@ export function app_sandbox_main() {
     "screen",
     "provide_travel",
   );
+  app_generic_refresh(context);
   app_message_provide_travel(context);
 }
