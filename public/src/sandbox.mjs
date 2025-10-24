@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
@@ -6,7 +7,9 @@ export async function sandbox() {
   marker("1");
   let s = {};
   let localStorage = {
-    getItem: function getItem() {},
+    getItem: function getItem() {
+      let exists = object_property_exists(object, property_name);
+    },
   };
   let app_fn = sandbox;
   const key = "test";
