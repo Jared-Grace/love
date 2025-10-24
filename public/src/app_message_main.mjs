@@ -68,7 +68,9 @@ export async function app_message_main() {
     on_send,
   );
   let v = html_check_empty_not();
-  app_karate_screen_input_validate(div, div_checks, textarea, button_send, [v]);
+  app_karate_screen_input_validate(div, div_checks, [textarea], button_send, [
+    v,
+  ]);
   async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
