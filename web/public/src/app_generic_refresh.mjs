@@ -8,7 +8,7 @@ export function app_generic_refresh(context) {
   let body = html_document_body();
   html_clear(body);
   marker("1");
-  let screen_name = storage_local_initialize_context(app_fn, "screen", "home");
+  let screen_name = storage_local_initialize_context(context, "screen", "home");
   let screen = object_property_get(screens, screen_name);
   screen(context);
 }
