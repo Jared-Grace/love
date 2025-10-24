@@ -17,7 +17,8 @@ export async function sandbox() {
         let v2 = null;
         return v2;
       }
-      let value3 = object_property_get(object, property_name);
+      let value3 = object_property_get(s, storage_local_key);
+      return value3;
     },
     setItem: function setItem(storage_local_key, v) {
       v = string_to(v);
