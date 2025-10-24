@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -55,4 +56,5 @@ export function app_karate_screen_input_validate(
     html_focus(input);
   }
   each(inputs, lambda2);
+  let first = list_first(list);
 }
