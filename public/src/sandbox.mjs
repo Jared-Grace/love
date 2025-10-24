@@ -1,4 +1,4 @@
-import { equal } from "../../../love/public/src/equal.mjs";
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -36,5 +36,5 @@ export async function sandbox() {
   const v = 123;
   storage_local_set(app_fn, key, v);
   let value2 = storage_local_get(app_fn, key);
-  let eq2 = equal(left, right);
+  equal_assert(left, right);
 }
