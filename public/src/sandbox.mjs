@@ -27,6 +27,7 @@ export async function sandbox() {
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
+  ("returns null");
   const key = "test";
   let value = storage_local_get(app_fn, key);
   null_is_assert(value);
