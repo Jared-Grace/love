@@ -1,3 +1,4 @@
+import { string_to } from "../../../love/public/src/string_to.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -17,6 +18,7 @@ export async function sandbox() {
       }
     },
     setItem: function setItem(storage_local_key, v) {
+      let s2 = string_to(input);
       object_property_set(s, storage_local_key, v);
     },
   };
