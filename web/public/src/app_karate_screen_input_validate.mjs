@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
@@ -34,6 +35,7 @@ export function app_karate_screen_input_validate(
     html_style_set(ul, "margin", "0");
     function validate_all() {
       each(inputs, validate_input);
+      let mapped = list_map(list, function lambda3(item) {});
     }
     html_on_input(input, validate_all);
     function validate_input() {
