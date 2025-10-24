@@ -22,7 +22,8 @@ export function app_karate_screen_input_validate(
   button_below,
   checks,
 ) {
-  each(list, function lambda2(item) {});
+  function lambda2(item) {}
+  each(list, lambda2);
   app_karate_style_control(input);
   const border_color = app_karate_green_dark();
   app_karate_style_control_border(input, border_color);
