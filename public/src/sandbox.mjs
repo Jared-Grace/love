@@ -28,7 +28,7 @@ export async function sandbox() {
       let size = object_properties_size(s);
       return size;
     },
-    key: () => {},
+    key: function lambda2() {},
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
