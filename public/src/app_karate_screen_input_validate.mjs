@@ -33,8 +33,7 @@ export function app_karate_screen_input_validate(
     });
     html_style_set(ul, "margin", "0");
     function validate_all() {
-      function lambda3(item) {}
-      each(list, lambda3);
+      each(inputs, validate_input);
     }
     html_on_input(input, validate_all);
     function validate_input() {
