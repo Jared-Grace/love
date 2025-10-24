@@ -32,8 +32,8 @@ export function app_karate_screen_input_validate(
       color: "#872121ff",
     });
     html_style_set(ul, "margin", "0");
-    html_on_input(input, validate);
-    function validate() {
+    html_on_input(input, validate_input);
+    function validate_input() {
       let value = html_value_get(input);
       let trimmed = string_trim(value);
       html_value_set(input, trimmed);
@@ -52,7 +52,7 @@ export function app_karate_screen_input_validate(
       each(checks, lambda);
       app_karate_validate_style_assign(valid, [div], input, button_below);
     }
-    validate();
+    validate_input();
   }
   each(inputs, lambda2);
   let first = list_first(inputs);
