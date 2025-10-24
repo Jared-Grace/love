@@ -249,6 +249,7 @@
   "rso": "reply_sequence_optional",
   "hdb": "html_document_body",
   "apr": "autopray",
-  "sto": "string_to"
+  "sto": "string_to",
+  "eqa": "equal_assert"
  }
 }
