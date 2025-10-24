@@ -15,7 +15,7 @@ export async function sandbox() {
         return v2;
       }
     },
-    setItem: localStorage.setItem(storage_local_key, v),
+    setItem: () => {},
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
