@@ -1,3 +1,4 @@
+import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -26,6 +27,7 @@ export function app_karate_screen_input_validate(
   button_below,
   checks,
 ) {
+  list_is_assert(list);
   function lambda2(input) {
     app_karate_style_control(input);
     const border_color = app_karate_green_dark();
