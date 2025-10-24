@@ -36,5 +36,5 @@ export async function sandbox() {
   const v = 123;
   storage_local_set(app_fn, key, v);
   let value2 = storage_local_get(app_fn, key);
-  equal_assert(left, right);
+  equal_assert(v, value2);
 }
