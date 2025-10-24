@@ -1,3 +1,4 @@
+import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -10,6 +11,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 export function app_generic_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
+  string_is_assert(value);
   function lambda(item2) {
     let fn2 = object_property_get(item2, "fn");
     let self = function_name_prefix_without_app_fn(context, fn2);
