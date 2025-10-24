@@ -19,6 +19,7 @@ export async function sandbox() {
   let s = {};
   let localStorage = {
     getItem: function getItem(storage_local_key) {
+      let exists_not = null;
       let exists = object_property_exists(s, storage_local_key);
       if (not(exists)) {
         let v2 = null;
