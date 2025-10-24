@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { storage_local_keys_app } from "../../../karate_code/public/src/storage_local_keys_app.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -32,7 +33,8 @@ export async function sandbox() {
       object_property_set(s, storage_local_key, v);
     },
     get length() {
-      let properties = object_properties(obj);
+      let properties = object_properties(s);
+      let size = list_size(list);
     },
   };
   global.localStorage = localStorage;
