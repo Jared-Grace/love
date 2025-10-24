@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { true_is } from "../../../love/public/src/true_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
@@ -42,6 +43,7 @@ export async function sandbox() {
   equal_assert(v, value2);
   let enabled = storage_local_enabled();
   let ti2 = true_is(enabled);
+  assert(b);
   log({
     enabled,
   });
