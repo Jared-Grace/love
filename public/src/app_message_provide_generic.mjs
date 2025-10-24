@@ -11,7 +11,10 @@ import { app_karate_button_back } from "../../../karate_code/public/src/app_kara
 export function app_message_provide_generic(category, emoji, context, verse) {
   marker("1");
   let button_back = function lambda(context, parent) {
-    function lambda5() {}
+    function lambda5() {
+      let screens = app_message_flow_travel();
+      app_generic_flow_next(context, screens);
+    }
     let button2 = app_karate_button_back(parent, lambda5);
     return button2;
   };
