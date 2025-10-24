@@ -46,7 +46,11 @@ export function app_message_provide_generic(category, emoji, context, verse) {
     {
       value: yes,
       title:
-        emoji_check() + " Yes, I will provide for all of your travel " + emoji,
+        emoji_check() +
+        " Yes, I will provide for all of your " +
+        category +
+        " " +
+        emoji,
       details:
         "May you reap abundant blessings from God for your generosity: " +
         verse,
