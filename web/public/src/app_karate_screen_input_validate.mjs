@@ -32,7 +32,7 @@ export function app_karate_screen_input_validate(
       color: "#872121ff",
     });
     html_style_set(ul, "margin", "0");
-    html_on_input(input, validate_input);
+    html_on_input(input, () => {});
     function validate_input() {
       let value = html_value_get(input);
       let trimmed = string_trim(value);
