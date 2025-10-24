@@ -41,7 +41,7 @@ export async function sandbox() {
   let value2 = storage_local_get(app_fn, key);
   equal_assert(v, value2);
   let enabled = storage_local_enabled();
-  let ti2 = true_is(value4);
+  let ti2 = true_is(enabled);
   log({
     enabled,
   });
