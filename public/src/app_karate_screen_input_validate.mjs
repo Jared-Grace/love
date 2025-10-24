@@ -27,7 +27,7 @@ export function app_karate_screen_input_validate(
   button_below,
   checks,
 ) {
-  list_is_assert(list);
+  list_is_assert(inputs);
   function lambda2(input) {
     app_karate_style_control(input);
     const border_color = app_karate_green_dark();
