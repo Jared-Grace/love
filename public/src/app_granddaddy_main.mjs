@@ -7,11 +7,11 @@ export function app_granddaddy_main() {
   let body = html_document_body();
   let component2 = html_input(body);
   let component3 = html_input(body);
+  let component4 = null;
   function lambda2() {
     let value2 = html_value_get(component2);
     let value3 = html_value_get(component3);
   }
   let component = html_button(body, "add", lambda2);
-  let component4 = null;
   component4 = html_p(body);
 }
