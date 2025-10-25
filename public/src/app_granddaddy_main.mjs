@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -12,7 +13,8 @@ export function app_granddaddy_main() {
   function lambda2() {
     let value2 = html_value_get(component2);
     let value3 = html_value_get(component3);
-    let sum = add(left, right);
+    let sum = add(value2, value3);
+    html_text_set(component5, text);
   }
   let component = html_button(body, "add", lambda2);
   component4 = html_p(body);
