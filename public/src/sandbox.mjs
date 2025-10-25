@@ -30,7 +30,7 @@ export async function sandbox() {
       let size = object_properties_size(s);
       return size;
     },
-    key: function lambda2() {
+    key: function lambda2(i) {
       let properties = object_properties(s);
       let size = list_size(properties);
     },
