@@ -53,6 +53,7 @@ export async function sandbox() {
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   let keys = storage_local_keys_app(context);
-  each(list, function lambda3(item2) {});
+  function lambda3(item2) {}
+  each(list, lambda3);
   storage_local_disable();
 }
