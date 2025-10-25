@@ -21,6 +21,7 @@ export function storage_local_get(app_fn, key) {
     ("localStorage has this behavior, so the in-memory version also mirrors api");
     let v = null;
     return v;
+  } else {
   }
   let value = global_function_property_get(
     storage_local_set,
