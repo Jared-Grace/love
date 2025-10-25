@@ -4,7 +4,7 @@ import { log } from "../../../love/public/src/log.mjs";
 export function granddad() {
   let r = range_1(5);
   function lambda(item) {
-    log(item);
+    log(item * item);
   }
   each(r, lambda);
 }
