@@ -70,5 +70,5 @@ export async function sandbox() {
   };
   let storage_local_key = storage_local_key_get(app_fn, key);
   let value3 = storage_local_get_global(storage_local_key);
-  return v2;
+  return value3;
 }
