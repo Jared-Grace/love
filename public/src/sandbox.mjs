@@ -3,7 +3,6 @@ import { object_properties } from "../../../love/public/src/object_properties.mj
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { object_properties_size } from "../../../love/public/src/object_properties_size.mjs";
 import { storage_local_keys_app } from "../../../karate_code/public/src/storage_local_keys_app.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_disable } from "../../../love/public/src/storage_local_disable.mjs";
 import { true_is_assert } from "../../../love/public/src/true_is_assert.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
@@ -53,8 +52,5 @@ export async function sandbox() {
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   let keys = storage_local_keys_app(context);
-  log({
-    keys,
-  });
   storage_local_disable();
 }
