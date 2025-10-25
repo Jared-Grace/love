@@ -11,6 +11,7 @@ export function app_granddaddy_main() {
   function lambda2() {
     let value2 = html_value_get(component2);
     let value3 = html_value_get(component3);
+    sum;
   }
   let component = html_button(body, "add", lambda2);
   component4 = html_p(body);
