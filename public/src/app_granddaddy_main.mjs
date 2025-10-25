@@ -2,6 +2,8 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_granddaddy_main() {
   let body = html_document_body();
-  function lambda2() {}
-  let component = html_button(parent, text, lambda2);
+  function lambda2() {
+    alert("JESUS");
+  }
+  let component = html_button(body, "hello", lambda2);
 }
