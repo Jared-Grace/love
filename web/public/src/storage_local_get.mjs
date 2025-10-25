@@ -17,12 +17,10 @@ export function storage_local_get(app_fn, key) {
     storage_local_set,
     storage_local_key,
   );
+  let value = null;
   if (not(exists)) {
     ("localStorage has this behavior, so the in-memory version also mirrors api");
-    let v = null;
-    return v;
   } else {
-    let value = null;
     value = global_function_property_get(storage_local_set, storage_local_key);
   }
   return value;
