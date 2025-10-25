@@ -1,4 +1,1 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function granddad() {
-  marker("1");
-}
+export function granddad() {}
