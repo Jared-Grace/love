@@ -1,3 +1,5 @@
+import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
+import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { storage_local_keys_values } from "../../../karate_code/public/src/storage_local_keys_values.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -66,5 +68,7 @@ export async function sandbox() {
     dictionary,
     dictionary2,
   };
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  let value3 = storage_local_get_global(storage_local_key);
   return v2;
 }
