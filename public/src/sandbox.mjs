@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -57,6 +58,7 @@ export async function sandbox() {
   true_is_assert(enabled);
   let keys = storage_local_keys_app(context);
   let dictionary1 = storage_local_keys_values(context, keys);
+  each(list, function lambda3(item2) {});
   storage_local_disable();
   let dictionary = storage_local_keys_values(context, keys);
   function lambda4(object, property) {
