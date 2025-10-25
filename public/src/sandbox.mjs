@@ -1,5 +1,4 @@
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { object_properties_size } from "../../../love/public/src/object_properties_size.mjs";
@@ -31,10 +30,10 @@ export async function sandbox() {
       let size = object_properties_size(s);
       return size;
     },
-    key: function lambda2(i) {
+    key: function lambda2(index) {
       let properties = object_properties(s);
-      let item = list_get(list, index);
-      let size = list_size(properties);
+      let item = list_get(properties, index);
+      return item;
     },
   };
   global.localStorage = localStorage;
