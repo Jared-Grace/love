@@ -22,10 +22,8 @@ export function storage_local_get(app_fn, key) {
     let v = null;
     return v;
   } else {
+    let value = null;
+    value = global_function_property_get(storage_local_set, storage_local_key);
   }
-  let value = global_function_property_get(
-    storage_local_set,
-    storage_local_key,
-  );
   return value;
 }
