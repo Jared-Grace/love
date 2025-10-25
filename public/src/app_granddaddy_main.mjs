@@ -13,8 +13,9 @@ export function app_granddaddy_main() {
   let component4 = null;
   function lambda2() {
     let value2 = html_value_get(component2);
-    let i = integer_to(input);
+    let i = integer_to(value2);
     let value3 = html_value_get(component3);
+    let i2 = integer_to(input);
     let sum = add(value2, value3);
     html_text_set(component4, sum);
   }
