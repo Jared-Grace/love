@@ -62,5 +62,9 @@ export async function sandbox() {
   }
   each_object(dictionary1, lambda4);
   let dictionary2 = storage_local_keys_values(context, keys);
-  return dictionary1;
+  let v2 = {
+    dictionary,
+    dictionary2,
+  };
+  return v2;
 }
