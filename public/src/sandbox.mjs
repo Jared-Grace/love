@@ -56,6 +56,7 @@ export async function sandbox() {
   true_is_assert(enabled);
   let dictionary1 = storage_local_keys_values(context, keys);
   storage_local_disable();
-  each_object(object, function lambda4() {});
+  function lambda4() {}
+  each_object(object, lambda4);
   return dictionary1;
 }
