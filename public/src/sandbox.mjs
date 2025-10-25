@@ -49,11 +49,11 @@ export async function sandbox() {
   const v = 123;
   storage_local_set(app_fn, key, v);
   let keys = storage_local_keys_app(context);
-  let dictionary1 = storage_local_keys_values(context, keys);
   let value2 = storage_local_get(app_fn, key);
   equal_assert(v, value2);
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   storage_local_disable();
+  let dictionary1 = storage_local_keys_values(context, keys);
   return dictionary1;
 }
