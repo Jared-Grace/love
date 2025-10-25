@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
@@ -11,7 +12,7 @@ export function app_granddaddy_main() {
   function lambda2() {
     let value2 = html_value_get(component2);
     let value3 = html_value_get(component3);
-    sum;
+    let sum = add(left, right);
   }
   let component = html_button(body, "add", lambda2);
   component4 = html_p(body);
