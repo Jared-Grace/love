@@ -53,7 +53,7 @@ export async function sandbox() {
   equal_assert(v, value2);
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
-  storage_local_disable();
   let dictionary1 = storage_local_keys_values(context, keys);
+  storage_local_disable();
   return dictionary1;
 }
