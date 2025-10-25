@@ -15,8 +15,8 @@ export function app_granddaddy_main() {
     let value2 = html_value_get(component2);
     let i = integer_to(value2);
     let value3 = html_value_get(component3);
-    let i2 = integer_to(input);
-    let sum = add(value2, value3);
+    let i2 = integer_to(value3);
+    let sum = add(i, i2);
     html_text_set(component4, sum);
   }
   let component = html_button(body, "add", lambda2);
