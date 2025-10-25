@@ -1,5 +1,4 @@
 import { storage_local_keys_values } from "../../../karate_code/public/src/storage_local_keys_values.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
@@ -55,7 +54,6 @@ export async function sandbox() {
   true_is_assert(enabled);
   let keys = storage_local_keys_app(context);
   let dictionary1 = storage_local_keys_values(context, keys);
-  function lambda3(key) {}
-  each(keys, lambda3);
   storage_local_disable();
+  return dictionary1;
 }
