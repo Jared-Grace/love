@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
@@ -32,6 +33,7 @@ export async function sandbox() {
     },
     key: function lambda2(i) {
       let properties = object_properties(s);
+      let item = list_get(list, index);
       let size = list_size(properties);
     },
   };
