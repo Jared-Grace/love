@@ -29,10 +29,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda2(nn) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
-      let verse_number = "";
-      let index = list_index_of_last(filtered, verse_number);
+      let index = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
-      const v = ebible_verse_new(skipped, verse_number);
+      const v = ebible_verse_new(skipped, number);
       la(v);
       filtered = list_take(filtered, index);
     }
