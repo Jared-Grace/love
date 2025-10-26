@@ -45,8 +45,8 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     let t = html_parse_text(d, item);
     const name = "id";
     let id = html_parse_attr(d, item, name);
-    let without = string_prefix_without(s, prefix);
-    let n = whitespace_normalize(t);
+    let without = string_prefix_without(id, "V");
+    let n = whitespace_normalize(without);
     return n;
   }
   let verse_numbers = list_map(list, lambda2);
