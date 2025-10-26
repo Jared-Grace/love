@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
@@ -25,8 +26,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
-    function lambda2(verse_number) {
-      verse_number += "";
+    function lambda2(nn) {
+      let name = object_property_get(nn, "name");
+      let number = object_property_get(nn, "number");
+      let verse_number = "";
       let index = list_index_of_last(filtered, verse_number);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, verse_number);
