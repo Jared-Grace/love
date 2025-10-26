@@ -72,6 +72,11 @@ export function ebible_languages() {
       bible_folder: "frasbl",
       language_code: "fr",
     },
+    {
+      name: "Amharic",
+      bible_folder: "amh",
+      language_code: "am",
+    },
   ];
   return languages;
 }
