@@ -1,3 +1,4 @@
+import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
 import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
@@ -44,7 +45,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     let t = html_parse_text(d, item);
     const name = "id";
     let id = html_parse_attr(d, item, name);
-    spr;
+    let without = string_prefix_without(s, prefix);
     let n = whitespace_normalize(t);
     return n;
   }
