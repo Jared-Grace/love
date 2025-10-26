@@ -43,7 +43,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   function lambda2(item) {
     let t = html_parse_text(d, item);
     const name = "id";
-    let href = html_parse_attr(d, item, name);
+    let id = html_parse_attr(d, item, name);
     let n = whitespace_normalize(t);
     return n;
   }
