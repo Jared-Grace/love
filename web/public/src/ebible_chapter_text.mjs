@@ -46,6 +46,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     const name = "id";
     let id = html_parse_attr(d, item, name);
     let without = string_prefix_without(id, "V");
+    let v6 = roman_to_integer(input);
     let n = whitespace_normalize(t);
     let v = {
       number: without,
