@@ -4,7 +4,10 @@ export function object_property_exists_assert(object, property_name) {
   let result = object_property_exists(object, property_name);
   return;
   function lambda() {
-    return object;
+    return {
+      object,
+      property_name,
+    };
   }
   assert_json_get(result, lambda);
 }
