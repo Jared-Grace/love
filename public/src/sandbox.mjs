@@ -66,7 +66,7 @@ export async function sandbox() {
     test: 123,
   });
   function lambda3(item2) {
-    storage_local_remove(key2);
+    storage_local_remove(app_fn, key2);
   }
   each(list, lambda3);
   storage_local_disable();
