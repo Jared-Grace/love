@@ -1,3 +1,4 @@
+import { storage_local_remove } from "../../../love/public/src/storage_local_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
@@ -64,7 +65,9 @@ export async function sandbox() {
   json_equal_assert(local_enabled, {
     test: 123,
   });
-  function lambda3(item2) {}
+  function lambda3(item2) {
+    storage_local_remove(key2);
+  }
   each(list, lambda3);
   storage_local_disable();
   let keys_disabled = storage_local_keys_app(context);
