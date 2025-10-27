@@ -41,6 +41,7 @@ export async function sandbox() {
       let item = list_get(properties, index);
       return item;
     },
+    removeItem: () => {},
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
