@@ -65,6 +65,7 @@ export async function sandbox() {
   true_is_assert(enabled);
   ("migrating from local storage to global");
   let keys = storage_local_keys_app(context);
+  ("confirm local storage values");
   let local_enabled = storage_local_keys_values(context, keys);
   const expected = {
     test: v,
