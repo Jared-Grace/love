@@ -1,3 +1,4 @@
+import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -59,6 +60,7 @@ export async function sandbox() {
   ("migrating from local storage to global");
   let keys = storage_local_keys_app(context);
   let local_enabled = storage_local_keys_values(context, keys);
+  json_equal_assert(left, right);
   storage_local_disable();
   let local_disabled = storage_local_keys_values(context, keys);
   function lambda4(object, property) {
