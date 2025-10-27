@@ -76,7 +76,7 @@ export async function sandbox() {
   each(keys, lambda3);
   storage_local_disable();
   let keys_disabled = storage_local_keys_app(context);
-  json_equal_assert(left, right);
+  json_equal_assert(keys_disabled, []);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
   }
