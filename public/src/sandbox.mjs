@@ -60,7 +60,9 @@ export async function sandbox() {
   ("migrating from local storage to global");
   let keys = storage_local_keys_app(context);
   let local_enabled = storage_local_keys_values(context, keys);
-  json_equal_assert(left, right);
+  json_equal_assert(local_enabled, {
+    test: 123,
+  });
   storage_local_disable();
   let local_disabled = storage_local_keys_values(context, keys);
   function lambda4(object, property) {
