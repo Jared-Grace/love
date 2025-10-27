@@ -65,10 +65,10 @@ export async function sandbox() {
   json_equal_assert(local_enabled, {
     test: 123,
   });
-  function lambda3(item2) {
-    storage_local_remove(app_fn, key2);
+  function lambda3(key) {
+    storage_local_remove(app_fn, key);
   }
-  each(list, lambda3);
+  each(keys, lambda3);
   storage_local_disable();
   let keys_disabled = storage_local_keys_app(context);
   let local_disabled = storage_local_keys_values(context, keys);
