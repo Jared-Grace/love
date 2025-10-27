@@ -4,10 +4,11 @@ export function object_property_exists_assert(object, property_name) {
   let result = object_property_exists(object, property_name);
   return;
   function lambda() {
-    return {
+    let v = {
       object,
       property_name,
     };
+    return v;
   }
   assert_json_get(result, lambda);
 }
