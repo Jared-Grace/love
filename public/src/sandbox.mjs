@@ -87,4 +87,7 @@ export async function sandbox() {
   let storage_local_key = storage_local_key_get(app_fn, key);
   let value_global = storage_local_get_global(storage_local_key);
   equal_assert(value_global, v);
+  return {
+    local_disabled_after_migrate,
+  };
 }
