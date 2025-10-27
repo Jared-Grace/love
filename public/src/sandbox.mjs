@@ -20,6 +20,7 @@ import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { object_property_delete } from "./object_property_delete.mjs";
 export async function sandbox() {
   marker("1");
   let s = {};
@@ -41,7 +42,9 @@ export async function sandbox() {
       let item = list_get(properties, index);
       return item;
     },
-    removeItem: function lambda5() {},
+    removeItem: function lambda5(storage_local_key) {
+      object_property_delete(s, storage_local_key);
+    },
   };
   global.localStorage = localStorage;
   let app_fn = sandbox;
