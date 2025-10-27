@@ -59,20 +59,20 @@ export async function sandbox() {
   true_is_assert(enabled);
   ("migrating from local storage to global");
   let keys = storage_local_keys_app(context);
-  let dictionary1 = storage_local_keys_values(context, keys);
+  let local_enabled = storage_local_keys_values(context, keys);
   function lambda3(key) {}
   each(keys, lambda3);
   storage_local_disable();
-  let dictionary = storage_local_keys_values(context, keys);
+  let local_disabled = storage_local_keys_values(context, keys);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
   }
-  each_object(dictionary1, lambda4);
+  each_object(local_enabled, lambda4);
   let dictionary2 = storage_local_keys_values(context, keys);
   let storage_local_key = storage_local_key_get(app_fn, key);
   let value3 = storage_local_get_global(storage_local_key);
   let v2 = {
-    dictionary,
+    dictionary: local_disabled,
     dictionary2,
     value3,
   };
