@@ -66,6 +66,7 @@ export async function sandbox() {
   function lambda4(object, property) {}
   each_object(local_enabled, lambda4);
   storage_local_disable();
+  let keys_disabled = storage_local_keys_app(context);
   let local_disabled = storage_local_keys_values(context, keys);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
@@ -79,6 +80,7 @@ export async function sandbox() {
     local_disabled,
     local_disabled_after_migrate,
     value_global,
+    keys_disabled,
   };
   return v2;
 }
