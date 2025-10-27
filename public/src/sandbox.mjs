@@ -74,7 +74,7 @@ export async function sandbox() {
   let value3 = storage_local_get_global(storage_local_key);
   let v2 = {
     local_disabled,
-    local_disabled_after_copy: local_disabled_after_migrate,
+    local_disabled_after_migrate,
     value3,
   };
   return v2;
