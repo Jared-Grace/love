@@ -71,11 +71,11 @@ export async function sandbox() {
   let local_disabled_after_migrate = storage_local_keys_values(context, keys);
   ("global actually uses global");
   let storage_local_key = storage_local_key_get(app_fn, key);
-  let value3 = storage_local_get_global(storage_local_key);
+  let value_global = storage_local_get_global(storage_local_key);
   let v2 = {
     local_disabled,
     local_disabled_after_migrate,
-    value3,
+    value_global,
   };
   return v2;
 }
