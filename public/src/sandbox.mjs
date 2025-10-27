@@ -57,6 +57,7 @@ export async function sandbox() {
   ("by default local storage is enabled");
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
+  ("migrating to global");
   let keys = storage_local_keys_app(context);
   let dictionary1 = storage_local_keys_values(context, keys);
   function lambda3(key) {}
