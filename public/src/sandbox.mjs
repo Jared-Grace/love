@@ -72,6 +72,7 @@ export async function sandbox() {
     storage_local_remove(app_fn, key);
   }
   each(keys, lambda3);
+  let properties2 = object_properties(obj);
   const expected = {
     test: v,
   };
