@@ -12,10 +12,9 @@ export function js_dollar_e({
   afters,
 }) {
   marker("1");
-  let previous = list_previous(stack2, stack1);
-  let alternate = null;
+  let alternate = list_previous(stack2, stack1);
   while (alternate !== null) {
-    alternate = object_property_get(previous, "alternate");
+    alternate = object_property_get(alternate, "alternate");
   }
   log({
     previous,
