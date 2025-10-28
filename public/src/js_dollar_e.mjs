@@ -19,7 +19,7 @@ export function js_dollar_e({
     alternate = object_property_get(alternate, "alternate");
   }
   log({
-    alternate,
+    previous,
   });
   return;
 }
