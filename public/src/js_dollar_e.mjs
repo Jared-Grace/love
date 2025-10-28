@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -12,6 +13,7 @@ export function js_dollar_e({
 }) {
   marker("1");
   let previous = list_previous(stack2, stack1);
+  let alternate = object_property_get(previous, "alternate");
   log({
     previous,
   });
