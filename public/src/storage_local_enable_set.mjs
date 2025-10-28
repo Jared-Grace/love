@@ -6,4 +6,5 @@ export function storage_local_enable_set(v) {
   let dictionary = storage_local_remove_app(context);
   global_function_set(storage_local_enabled, v);
   storage_local_set_dictionary(context, dictionary);
+  return dictionary;
 }
