@@ -1,3 +1,4 @@
+import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_dollar_e({
@@ -10,6 +11,7 @@ export function js_dollar_e({
   afters,
 }) {
   marker("1");
+  let previous = list_previous(list, item);
   log({
     stack2,
   });
