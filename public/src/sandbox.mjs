@@ -70,6 +70,7 @@ export async function sandbox() {
   ("migrating from local storage to global");
   let prefix = storage_local_key_prefix(context);
   marker("1");
+  let enabled2 = storage_local_enabled();
   let keys3 = storage_local_keys_browser();
   let keys2 = list_filter_starts_with(keys3, prefix);
   let keys = list_map_prefix_without(keys2, prefix);
