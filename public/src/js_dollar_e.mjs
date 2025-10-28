@@ -1,7 +1,7 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_statement_block_new } from "../../../love/public/src/js_statement_block_new.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_dollar_e({
   remaining,
@@ -19,9 +19,7 @@ export function js_dollar_e({
     previous = alternate;
     alternate = object_property_get(alternate, "alternate");
   }
-  js_statement_block_new([]);
-  log({
-    previous,
-  });
+  let b = js_statement_block_new([]);
+  object_property_set(object, property_name, value);
   return;
 }
