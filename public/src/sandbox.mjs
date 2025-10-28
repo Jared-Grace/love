@@ -86,5 +86,5 @@ export async function sandbox() {
   let dictionary2 = storage_local_remove_app(context);
   let keys2 = object_properties(dictionary);
   storage_local_enable();
-  storage_local_set_dictionary(context2, dictionary3);
+  storage_local_set_dictionary(context, dictionary);
 }
