@@ -63,7 +63,7 @@ export async function sandbox() {
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   let dictionary = storage_local_remove_app(context);
-  let properties2 = object_properties(dictionary);
+  let keys = object_properties(dictionary);
   const expected = {
     test: v,
   };
@@ -75,10 +75,7 @@ export async function sandbox() {
     storage_local_set(app_fn, property, object);
   }
   each_object(dictionary, lambda4);
-  let local_disabled_after_migrate = storage_local_keys_values(
-    context,
-    properties2,
-  );
+  let local_disabled_after_migrate = storage_local_keys_values(context, keys);
   json_equal_assert(local_disabled_after_migrate, expected);
   ("global actually uses global");
   let storage_local_key = storage_local_key_get(app_fn, key);
