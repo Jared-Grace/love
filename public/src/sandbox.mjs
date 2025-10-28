@@ -75,6 +75,7 @@ export async function sandbox() {
   if (enabled2) {
     keys3 = storage_local_keys_browser();
   }
+  $e;
   let keys2 = list_filter_starts_with(keys3, prefix);
   let keys = list_map_prefix_without(keys2, prefix);
   ("confirm local storage values");
