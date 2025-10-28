@@ -1,3 +1,4 @@
+import { js_statement_block_new } from "../../../love/public/src/js_statement_block_new.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
@@ -26,10 +27,8 @@ export async function js_if_blockify_generic(
       if (not(includes)) {
         add_copy(bs_body, copy);
       }
-      object_replace(body, {
-        type: "BlockStatement",
-        body: bs_body,
-      });
+      let from = js_statement_block_new(bs_body);
+      object_replace(body, from);
     }
   }
   await js_visit_type_each_async(ast, type, lambda);
