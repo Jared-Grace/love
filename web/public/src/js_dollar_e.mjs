@@ -10,6 +10,8 @@ export function js_dollar_e({
   afters,
 }) {
   marker("1");
-  log(message);
+  log({
+    stack1,
+  });
   return;
 }
