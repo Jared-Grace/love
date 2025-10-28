@@ -1,7 +1,7 @@
+import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
-import { storage_local_keys_browser_context } from "../../../love/public/src/storage_local_keys_browser_context.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
@@ -70,9 +70,9 @@ export async function sandbox() {
     test: v,
   };
   json_equal_assert(dictionary, expected);
-  storage_local_disable();
-  let keys_disabled = storage_local_keys_browser_context(context);
+  let keys_disabled = storage_local_keys_context(context);
   json_equal_assert(keys_disabled, []);
+  storage_local_disable();
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
   }
