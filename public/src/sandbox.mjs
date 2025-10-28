@@ -1,3 +1,4 @@
+import { storage_local_keys_global } from "../../../karate_code/public/src/storage_local_keys_global.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { storage_local_keys_browser } from "../../../love/public/src/storage_local_keys_browser.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -75,6 +76,7 @@ export async function sandbox() {
   if (enabled2) {
     keys3 = storage_local_keys_browser();
   } else {
+    keys3 = storage_local_keys_global();
   }
   let keys2 = list_filter_starts_with(keys3, prefix);
   let keys = list_map_prefix_without(keys2, prefix);
