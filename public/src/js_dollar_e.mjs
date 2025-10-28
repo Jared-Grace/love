@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_dollar_e({
   remaining,
@@ -9,5 +10,6 @@ export function js_dollar_e({
   afters,
 }) {
   marker("1");
+  log(message);
   return;
 }
