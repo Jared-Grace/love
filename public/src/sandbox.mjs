@@ -13,7 +13,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { object_properties_size } from "../../../love/public/src/object_properties_size.mjs";
-import { storage_local_keys_app } from "../../../karate_code/public/src/storage_local_keys_app.mjs";
+import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
 import { storage_local_disable } from "../../../love/public/src/storage_local_disable.mjs";
 import { true_is_assert } from "../../../love/public/src/true_is_assert.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
@@ -24,7 +24,7 @@ import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_delete } from "./object_property_delete.mjs";
+import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
 export async function sandbox() {
   marker("1");
   let s = {};
@@ -84,7 +84,7 @@ export async function sandbox() {
   };
   json_equal_assert(local_enabled, expected);
   storage_local_disable();
-  let keys_disabled = storage_local_keys_app(context);
+  let keys_disabled = storage_local_keys_context(context);
   json_equal_assert(keys_disabled, []);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
