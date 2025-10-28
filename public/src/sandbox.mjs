@@ -1,3 +1,4 @@
+import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { storage_local_keys_browser_context } from "../../../love/public/src/storage_local_keys_browser_context.mjs";
@@ -86,4 +87,5 @@ export async function sandbox() {
   false_is_assert(enabled2);
   let dictionary2 = storage_local_remove_app(context);
   let keys2 = object_properties(dictionary);
+  storage_local_enable();
 }
