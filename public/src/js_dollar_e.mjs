@@ -11,9 +11,9 @@ export function js_dollar_e({
   afters,
 }) {
   marker("1");
-  let previous = list_previous(list, item);
+  let previous = list_previous(stack2, stack1);
   log({
-    stack2,
+    previous,
   });
   return;
 }
