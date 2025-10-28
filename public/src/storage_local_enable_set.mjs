@@ -6,5 +6,9 @@ export function storage_local_enable_set(value_new) {
   let dictionary = storage_local_remove_app(context);
   global_function_set(storage_local_enabled, value_new);
   storage_local_set_dictionary(context, dictionary);
-  return dictionary;
+  let v = {
+    enabled: value_new,
+    dictionary,
+  };
+  return v;
 }
