@@ -1,4 +1,4 @@
-import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
+import { storage_local_keys_browser_context } from "../../../love/public/src/storage_local_keys_browser_context.mjs";
 import { storage_local_keys } from "../../../love/public/src/storage_local_keys.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -24,7 +24,7 @@ import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_delete } from "./object_property_delete.mjs";
+import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
 export async function sandbox() {
   marker("1");
   let s = {};
@@ -84,7 +84,7 @@ export async function sandbox() {
   };
   json_equal_assert(local_enabled, expected);
   storage_local_disable();
-  let keys_disabled = storage_local_keys_context(context);
+  let keys_disabled = storage_local_keys_browser_context(context);
   json_equal_assert(keys_disabled, []);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
