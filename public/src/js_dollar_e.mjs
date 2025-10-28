@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_statement_block_new } from "../../../love/public/src/js_statement_block_new.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -21,5 +22,6 @@ export function js_dollar_e({
   }
   let b = js_statement_block_new([]);
   object_property_set(previous, "alternate", b);
+  list_remove(list, item);
   return;
 }
