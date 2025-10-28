@@ -11,7 +11,7 @@ export function js_dollar_e({
 }) {
   marker("1");
   log({
-    stack1,
+    stack2,
   });
   return;
 }
