@@ -1,3 +1,4 @@
+import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { storage_local_keys_browser_context } from "../../../love/public/src/storage_local_keys_browser_context.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
@@ -82,5 +83,5 @@ export async function sandbox() {
   let value_global = storage_local_get_global(storage_local_key);
   equal_assert(value_global, v);
   let enabled2 = storage_local_enabled();
-  true_is_assert(enabled2);
+  false_is_assert(enabled2);
 }
