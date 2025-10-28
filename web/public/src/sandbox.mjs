@@ -84,4 +84,6 @@ export async function sandbox() {
   equal_assert(value_global, v);
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
+  let dictionary2 = storage_local_remove_app(context);
+  let keys2 = object_properties(dictionary);
 }
