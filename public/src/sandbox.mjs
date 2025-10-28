@@ -1,3 +1,4 @@
+import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
@@ -71,7 +72,7 @@ export async function sandbox() {
   };
   json_equal_assert(dictionary, expected);
   let keys_disabled = storage_local_keys_context(context);
-  json_equal_assert(keys_disabled, []);
+  list_empty_is_assert(keys_disabled);
   storage_local_disable();
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
