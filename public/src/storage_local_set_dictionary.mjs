@@ -1,1 +1,4 @@
-export function storage_local_set_dictionary() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function storage_local_set_dictionary() {
+  marker("1");
+}
