@@ -20,6 +20,6 @@ export function js_dollar_e({
     alternate = object_property_get(alternate, "alternate");
   }
   let b = js_statement_block_new([]);
-  object_property_set(object, property_name, value);
+  object_property_set(previous, "alternate", b);
   return;
 }
