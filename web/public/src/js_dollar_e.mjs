@@ -23,5 +23,4 @@ export function js_dollar_e({
   let b = js_statement_block_new([]);
   object_property_set(previous, "alternate", b);
   list_remove(stack2, stack1);
-  return;
 }
