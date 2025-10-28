@@ -8,5 +8,5 @@ export function storage_local_remove(app_fn, key) {
     localStorage.removeItem(storage_local_key);
     return;
   }
-  global_function_property_delete(storage_local_set, storage_local_key, value);
+  global_function_property_delete(storage_local_set, storage_local_key);
 }
