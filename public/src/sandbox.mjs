@@ -1,3 +1,6 @@
+import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
+import { storage_local_keys_starts_with } from "../../../karate_code/public/src/storage_local_keys_starts_with.mjs";
+import { storage_local_key_prefix } from "../../../karate_code/public/src/storage_local_key_prefix.mjs";
 import { storage_local_remove } from "../../../love/public/src/storage_local_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
@@ -64,7 +67,9 @@ export async function sandbox() {
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
   ("migrating from local storage to global");
-  let keys = storage_local_keys_app(context);
+  let prefix = storage_local_key_prefix(context);
+  let keys2 = storage_local_keys_starts_with(prefix);
+  let keys = list_map_prefix_without(keys2, prefix);
   ("confirm local storage values");
   let local_enabled = storage_local_keys_values(context, keys);
   function lambda3(key) {
