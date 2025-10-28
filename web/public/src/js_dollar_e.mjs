@@ -14,8 +14,9 @@ export function js_dollar_e({
   marker("1");
   let previous = list_previous(stack2, stack1);
   let alternate = null;
-  alternate = object_property_get(previous, "alternate");
-  while (alternate !== null) {}
+  while (alternate !== null) {
+    alternate = object_property_get(previous, "alternate");
+  }
   log({
     previous,
   });
