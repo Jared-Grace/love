@@ -74,7 +74,8 @@ export async function sandbox() {
   let enabled2 = storage_local_enabled();
   if (browser_is()) {
   }
-  let keys3 = storage_local_keys_browser();
+  let keys3 = null;
+  keys3 = storage_local_keys_browser();
   let keys2 = list_filter_starts_with(keys3, prefix);
   let keys = list_map_prefix_without(keys2, prefix);
   ("confirm local storage values");
