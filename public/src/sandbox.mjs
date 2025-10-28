@@ -1,7 +1,5 @@
-import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
+import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { storage_local_keys_browser_context } from "../../../love/public/src/storage_local_keys_browser_context.mjs";
-import { storage_local_remove } from "../../../love/public/src/storage_local_remove.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
@@ -64,15 +62,8 @@ export async function sandbox() {
   ("by default local storage is enabled");
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
-  ("migrating from local storage to global");
-  let keys = storage_local_keys_context(context);
-  ("confirm local storage values");
-  let dictionary = storage_local_keys_values(context, keys);
-  function lambda3(key) {
-    storage_local_remove(app_fn, key);
-  }
-  each(keys, lambda3);
-  let properties2 = object_properties(obj);
+  let dictionary = storage_local_remove_app(context);
+  let properties2 = object_properties(dictionary);
   const expected = {
     test: v,
   };
@@ -84,7 +75,10 @@ export async function sandbox() {
     storage_local_set(app_fn, property, object);
   }
   each_object(dictionary, lambda4);
-  let local_disabled_after_migrate = storage_local_keys_values(context, keys);
+  let local_disabled_after_migrate = storage_local_keys_values(
+    context,
+    properties2,
+  );
   json_equal_assert(local_disabled_after_migrate, expected);
   ("global actually uses global");
   let storage_local_key = storage_local_key_get(app_fn, key);
