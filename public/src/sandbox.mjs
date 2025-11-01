@@ -63,6 +63,7 @@ export async function sandbox() {
   ("by default local storage is enabled");
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
+  let dictionary = storage_local_remove_app(context);
   let keys = object_properties(dictionary);
   const expected = {
     test: v,
